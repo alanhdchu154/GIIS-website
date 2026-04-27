@@ -49,7 +49,6 @@ export default function ModulePage({ language }) {
 
   const [mod, setMod] = useState(null);
   const [course, setCourse] = useState(null);
-  const [enrollment, setEnrollment] = useState(null);
 
   // Quiz state
   const [quizQuestions, setQuizQuestions] = useState([]);
@@ -73,7 +72,6 @@ export default function ModulePage({ language }) {
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d) => {
         setCourse(d.course);
-        setEnrollment(d.enrollment);
         const m = (d.course?.modules || []).find((x) => x.order === moduleOrder);
         if (!m) { navigate(`/learn/${slug}`, { replace: true }); return; }
         setMod(m);

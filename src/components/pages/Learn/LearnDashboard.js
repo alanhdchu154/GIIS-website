@@ -21,7 +21,6 @@ function useCourses() {
 
 function useEnrollments() {
   const [enrollments, setEnrollments] = useState(null);
-  const [error, setError] = useState('');
   const reload = () => {
     fetch(`${API}/api/enrollments`, { credentials: 'include' })
       .then((r) => (r.ok ? r.json() : null))
@@ -29,7 +28,7 @@ function useEnrollments() {
       .catch(() => setEnrollments([]));
   };
   useEffect(reload, []);
-  return { enrollments, error, reload };
+  return { enrollments, reload };
 }
 
 function ProgressBar({ completed, total }) {
