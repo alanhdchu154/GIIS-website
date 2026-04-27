@@ -39,12 +39,12 @@ export function getNavStrings(language) {
     dropdownAdmission: en
       ? [
           { label: 'Apply Now',      to: '/admission' },
-          { label: 'Tuition & Fees', to: '/admission' },
+          { label: 'Tuition & Pricing', to: '/pricing' },
           { label: 'FAQ',            to: '/admission' },
         ]
       : [
           { label: '立即申请',   to: '/admission' },
-          { label: '学费与费用', to: '/admission' },
+          { label: '学费与价格', to: '/pricing' },
           { label: '常见问题',   to: '/admission' },
         ],
     dropdownSupport: en

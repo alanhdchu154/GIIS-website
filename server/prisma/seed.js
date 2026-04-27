@@ -392,6 +392,7 @@ async function seedCourses() {
   for (const file of files) {
     const data = JSON.parse(fs.readFileSync(file, 'utf8'));
     const { modules, questions, quizQuestions, ...meta } = data;
+    const cleanQuizQuestions = (quizQuestions || []).map(({ type: _t, ...q }) => q);
     const existing = await prisma.course.findUnique({ where: { slug: meta.slug } });
     if (existing) await prisma.course.delete({ where: { slug: meta.slug } });
     await prisma.course.create({
@@ -399,7 +400,7 @@ async function seedCourses() {
         ...meta,
         modules: { create: modules },
         questions: { create: questions || [] },
-        quizQuestions: { create: quizQuestions || [] },
+        quizQuestions: { create: cleanQuizQuestions },
       },
     });
     console.log(`Seeded: ${meta.name} (${modules.length} modules, ${(questions || []).length} exam q, ${(quizQuestions || []).length} quiz q)`);

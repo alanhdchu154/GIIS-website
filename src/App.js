@@ -39,6 +39,7 @@ const ExamPage = lazy(() => import('./components/pages/Learn/ExamPage'));
 const GradesPage = lazy(() => import('./components/pages/Learn/GradesPage'));
 const SyllabusPage = lazy(() => import('./components/pages/Learn/SyllabusPage'));
 const ProfilePage = lazy(() => import('./components/pages/Profile/ProfilePage'));
+const PricingPage = lazy(() => import('./components/pages/Pricing/PricingPage'));
 
 const LANGUAGE_STORAGE_KEY = 'giis-language';
 
@@ -128,6 +129,7 @@ function App() {
          <Route path="/learn/:slug/grades" element={<GradesPage language={language} />} />
          <Route path="/learn/:slug/syllabus" element={<SyllabusPage language={language} />} />
          <Route path="/profile" element={<ProfilePage language={language} />} />
+         <Route path="/pricing" element={<PricingPage language={language} />} />
          <Route path="/privacy" element={<PrivacyPolicy language={language} />} />
          <Route path="/terms" element={<TermsOfUse language={language} />} />
          <Route path="*" element={<NotFound language={language} />} />

@@ -150,6 +150,76 @@ export default function AdmissionMain({ language, toggleLanguage }) {
         </div>
       </div>
 
+      {/* Credentials & Recognition */}
+      <div style={{ background: '#f4f6fa', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
+          <h2 style={{ fontSize: '48px', fontWeight: 800, lineHeight: 1, marginBottom: '12px' }}>
+            {isEn ? 'DIPLOMA &' : '文凭认可'}
+          </h2>
+          <h2 style={{ fontSize: '48px', fontWeight: 800, lineHeight: 1, marginBottom: '16px', color: '#2b3d6d' }}>
+            {isEn ? 'RECOGNITION' : ''}
+          </h2>
+          <p style={{ fontSize: '16px', color: '#555', maxWidth: '620px', lineHeight: 1.7, marginBottom: '44px' }}>
+            {isEn
+              ? 'GIIS diplomas are issued under the Florida private school framework — the same legal basis used by US private high schools recognized by colleges nationwide.'
+              : 'GIIS 文凭依据 Florida 私立学校框架颁发，与全美大学所认可的美国私立高中具备相同的法律依据。'}
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginBottom: '40px' }}>
+            {[
+              {
+                icon: '🏛️',
+                title: { en: 'Florida Registered', zh: 'Florida 注册学校' },
+                body: { en: 'GIIS is a registered Florida private school operating under Florida Statute 1002.42 — the same statute governing all Florida private K-12 schools.', zh: 'GIIS 依据 Florida 法规 1002.42 运营，该法规适用于所有 Florida K-12 私立学校。' },
+              },
+              {
+                icon: '📋',
+                title: { en: '24-Credit Framework', zh: '24 学分毕业框架' },
+                body: { en: 'Our graduation requirements follow the Florida 24-credit diploma standard — the same framework used by Florida public and private high schools for college admissions.', zh: '我们的毕业要求遵循 Florida 24 学分文凭标准，该标准被 Florida 公立与私立高中广泛用于大学申请。' },
+              },
+              {
+                icon: '🎓',
+                title: { en: 'Accepted by US Universities', zh: '美国大学认可' },
+                body: { en: 'Class of 2026 graduates have been accepted to UCSB, The Ohio State University, UC Davis, Syracuse University, and NJIT.', zh: '2026 届毕业生已获 UCSB、俄亥俄州立大学、UC Davis、雪城大学及 NJIT 录取。' },
+              },
+              {
+                icon: '✅',
+                title: { en: 'Cognia Accreditation (In Progress)', zh: 'Cognia 认证（申请中）' },
+                body: { en: 'GIIS is currently pursuing Cognia (formerly AdvancED) accreditation — the most widely recognized K-12 accreditation body in the United States.', zh: 'GIIS 正在申请 Cognia（前身为 AdvancED）认证——美国最广泛认可的 K-12 教育认证机构。' },
+              },
+            ].map((item) => (
+              <div key={item.icon} style={{
+                background: '#fff', border: '1px solid #e0e6f0',
+                borderTop: '4px solid #2b3d6d',
+                borderRadius: '12px', padding: '28px 24px',
+              }}>
+                <div style={{ fontSize: '28px', marginBottom: '14px' }}>{item.icon}</div>
+                <h3 style={{ fontSize: '15px', fontWeight: 800, color: '#1a1a2e', margin: '0 0 10px' }}>
+                  {isEn ? item.title.en : item.title.zh}
+                </h3>
+                <p style={{ fontSize: '13px', color: '#555', lineHeight: 1.65, margin: 0 }}>
+                  {isEn ? item.body.en : item.body.zh}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ background: '#fff', border: '1px solid #c8e6c9', borderLeft: '4px solid #2e7d32', borderRadius: '10px', padding: '20px 24px', display: 'flex', alignItems: 'flex-start', gap: '14px', maxWidth: '720px' }}>
+            <span style={{ fontSize: '22px', flexShrink: 0 }}>🎉</span>
+            <div>
+              <p style={{ margin: '0 0 4px', fontWeight: 800, fontSize: '14px', color: '#1b5e20' }}>
+                {isEn ? 'Proven Results — Class of 2026' : '真实成果 · 2026 届'}
+              </p>
+              <p style={{ margin: 0, fontSize: '13px', color: '#2e7d32', lineHeight: 1.7 }}>
+                {isEn
+                  ? 'Yunfan Yang accepted to UC Santa Barbara, Ohio State, UC Davis (Kinesiology). Baoyi Lu accepted to Syracuse University SIT and NJIT.'
+                  : '杨芸帆已获 UC Santa Barbara、俄亥俄州立大学、UC Davis（运动科学）录取。卢抱一已获雪城大学信息研究学院及 NJIT 录取。'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Tuition */}
       <div style={{ background: 'rgba(43,61,109,1)', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>

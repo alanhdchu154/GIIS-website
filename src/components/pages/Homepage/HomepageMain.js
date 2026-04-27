@@ -8,6 +8,7 @@ import Introduction from './Homepage/Introduction';
 import Testimonial from './Homepage/Testimonial.js';
 import FacultyGraduates from './Homepage/FacultyGraduates.js';
 import ContactForm from './Homepage/ContactForm';
+import SuccessStories from './Homepage/SuccessStories';
 
 const PATHWAY_HIGHLIGHTS = [
   { emoji: '💻', en: 'CS & Engineering',      zh: '计算机科学',        color: '#1565C0', to: '/pathways/cs' },
@@ -115,6 +116,9 @@ function HomepageMain({ language, toggleLanguage }) {
 
       {/* 10 Pathways showcase */}
       <HomepagePathways language={language} />
+
+      {/* Student success stories */}
+      <SuccessStories language={language} />
 
       {/* Testimonials */}
       <div className="card mb-0" id="testimonials">
