@@ -1,0 +1,1790 @@
+{
+  "slug": "english-iv-writing",
+  "name": "English IV - Writing & Communication",
+  "nameZh": "英语四（写作与沟通）",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "Senior-level writing and communication — college essay writing, professional communication, advanced rhetoric, multimedia presentations, debate, and portfolio development for college and career readiness.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Voice & Authentic Writing",
+      "titleZh": "写作声音与真实性",
+      "objectives": "Identify the elements that make up a distinctive writer's voice — diction, syntax, tone, and perspective; understand the difference between performing a persona and writing authentically; practice freewriting techniques to discover and develop a personal voice.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/index.html",
+      "readingNote": "Purdue OWL — The Writing Process: Finding Your Voice and Purpose",
+      "videoUrl": "https://www.youtube.com/watch?v=9tuQFah4WM8",
+      "videoNote": "TED Talk — Chimamanda Ngozi Adichie: 'The Danger of a Single Story' (on authentic voice and perspective)",
+      "video2Url": "https://www.youtube.com/watch?v=0KSOMA3QBU0",
+      "video2Note": "Crash Course English Language — Style, Tone, and Voice in Writing",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/prewriting_invention/index.html",
+      "practiceNote": "Purdue OWL — Prewriting and Invention Strategies (freewriting, brainstorming, clustering)",
+      "assignment": "Complete three 10-minute freewriting sessions on topics of deep personal significance. Then analyze your writing: (1) underline five words or phrases that feel uniquely 'you,' (2) identify your natural sentence rhythm (short and punchy vs. long and flowing), (3) note recurring themes or obsessions. Finally, write a 300-word reflective piece describing your writer's voice — what it sounds like and where it comes from. Submit all three freewrites and the reflection.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 2,
+      "title": "The College Application Essay",
+      "titleZh": "大学申请文书",
+      "objectives": "Understand the purpose and audience of the Common App personal statement; analyze what makes college essays effective; apply the principles of showing vs. telling; draft and revise a personal essay using storytelling techniques.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html",
+      "readingNote": "Purdue OWL — Revision Strategies for Personal and College Writing",
+      "videoUrl": "https://www.youtube.com/watch?v=VzmXCqlMffs",
+      "videoNote": "Khan Academy — How to Write a Great College Application Essay",
+      "video2Url": "https://www.youtube.com/watch?v=BOy4mX91MKM",
+      "video2Note": "Crash Course — Narrative Writing: Showing vs. Telling",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/college-admissions/making-your-application-stand-out/college-essay/a/the-college-application-essay",
+      "practiceNote": "Khan Academy — The College Application Essay: Prompts, Strategy, and Examples",
+      "assignment": "Select one Common App prompt and write a full draft (550–650 words) of your college essay. The essay must: (1) open with an in-scene anecdote (showing, not telling), (2) connect the specific story to a broader insight about yourself, (3) maintain a consistent and authentic voice throughout, and (4) avoid clichés and generic themes. Submit a first draft and a revised second draft with a brief revision memo explaining your three most significant changes.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 3,
+      "title": "Professional & Business Writing",
+      "titleZh": "职业与商务写作",
+      "objectives": "Compose professional emails, memos, and cover letters using appropriate format, tone, and conventions; understand the difference between formal and informal register; recognize the importance of audience awareness and clarity in workplace communication.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/email_etiquette_for_students.html",
+      "readingNote": "Purdue OWL — Email Etiquette for Students and Professionals",
+      "videoUrl": "https://www.youtube.com/watch?v=eLh5IYKFKag",
+      "videoNote": "TED Talk — Communication at Work: How to Write Emails That Get Results",
+      "video2Url": "https://www.youtube.com/watch?v=5WMVHkD7KIE",
+      "video2Note": "Crash Course Business — Professional Writing: Emails, Memos, and Reports",
+      "practiceUrl": "https://owl.purdue.edu/owl/job_search_writing/job_search_letters/cover_letters_1_quick_tips.html",
+      "practiceNote": "Purdue OWL — Cover Letters: Quick Tips and Full Examples",
+      "assignment": "Complete three professional writing tasks: (1) Write a formal email (150–200 words) to a university professor requesting a letter of recommendation — include a clear subject line, proper salutation, context, specific request, and professional closing. (2) Write a workplace memo (200 words) announcing a policy change to a team. (3) Write a cover letter (300–350 words) for a real internship or job you would actually apply for. For each document, annotate the key formatting features you used.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 4,
+      "title": "Advanced Rhetoric: Analysis & Production",
+      "titleZh": "高级修辞：分析与创作",
+      "objectives": "Identify the rhetorical situation (speaker, audience, purpose, context, constraints); analyze how writers use ethos, pathos, and logos; understand kairos (timeliness) and its role in persuasion; apply rhetorical principles to produce a persuasive piece of writing.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/rhetorical_situation/index.html",
+      "readingNote": "Purdue OWL — The Rhetorical Situation: Speaker, Audience, Purpose, and Context",
+      "videoUrl": "https://www.youtube.com/watch?v=c9YHnMrj4G8",
+      "videoNote": "Crash Course English Language — Rhetoric: Ethos, Pathos, and Logos",
+      "video2Url": "https://www.youtube.com/watch?v=pGnI4e57hRs",
+      "video2Note": "TED Talk — The Art of Rhetoric (persuasion in public discourse)",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "practiceNote": "Purdue OWL — Argumentative Writing and Rhetorical Strategy",
+      "assignment": "Choose a published opinion piece or speech (e.g., from The New York Times, NPR, or a TED Talk transcript). Write a 400–500 word rhetorical analysis that identifies: (1) the full rhetorical situation, (2) three specific uses of ethos, pathos, or logos with textual evidence, (3) any use of kairos, and (4) how arrangement (organization) contributes to the argument's effectiveness. Then write a 250-word persuasive paragraph on any current issue, deliberately employing all three appeals and annotating where each appears.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 5,
+      "title": "Debate & Argumentation",
+      "titleZh": "辩论与论证",
+      "objectives": "Understand formal debate structure (Oxford, Lincoln-Douglas, or parliamentary formats); evaluate evidence quality and relevance; craft strong rebuttals; identify and name common logical fallacies; apply argumentation skills in written position papers.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "readingNote": "Purdue OWL — Argumentative Essays: Evidence, Rebuttals, and Logical Fallacies",
+      "videoUrl": "https://www.youtube.com/watch?v=zskYhFPaYR4",
+      "videoNote": "Crash Course Philosophy — Logical Fallacies (Part 1): Ad Hominem, Straw Man, False Dilemma",
+      "video2Url": "https://www.youtube.com/watch?v=8J0L4w3Uyms",
+      "video2Note": "TED Talk — How to Win an Argument: Evidence, Rebuttal, and Logic",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/a/identifying-logical-fallacies",
+      "practiceNote": "Khan Academy — Identifying Logical Fallacies in Arguments",
+      "assignment": "Prepare for and participate in a structured class debate on an assigned resolution (e.g., 'Standardized testing should be eliminated from college admissions'). Written components: (1) a 300-word constructive speech in favor of your assigned side, with three distinct arguments each backed by cited evidence; (2) a 200-word anticipatory rebuttal addressing the three strongest opposing arguments; (3) a post-debate reflection (200 words) analyzing which logical fallacies appeared during the debate and how they affected the arguments.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 6,
+      "title": "Public Speaking & Presentation",
+      "titleZh": "公共演讲与演示",
+      "objectives": "Structure an effective speech with a clear opening hook, organized body, and memorable conclusion; apply delivery techniques including eye contact, pacing, vocal variety, and purposeful gesture; handle Q&A professionally; evaluate speeches using standardized criteria.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/index.html",
+      "readingNote": "Purdue OWL — Speech Writing: Structure, Delivery, and Audience Engagement",
+      "videoUrl": "https://www.youtube.com/watch?v=JZJK6Mk0Pg4",
+      "videoNote": "TED Talk — Chris Anderson: TED's Secret to Great Public Speaking",
+      "video2Url": "https://www.youtube.com/watch?v=oRDJJLGjrPg",
+      "video2Note": "Crash Course — Public Speaking: Delivery, Body Language, and Managing Nerves",
+      "practiceUrl": "https://www.ted.com/talks",
+      "practiceNote": "TED Talks — Model speeches for structure and delivery analysis",
+      "assignment": "Deliver a 4–5 minute informative or persuasive speech on a topic you care about. Written components: (1) a full typed outline of the speech showing introduction, three main points with transitions, and conclusion; (2) a self-assessment (200 words) evaluating your delivery on five criteria — eye contact, vocal variety, pacing, body language, and Q&A response — and identifying one area for improvement. Peer evaluations will also be submitted for two classmates' speeches.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 7,
+      "title": "Multimedia Communication",
+      "titleZh": "多媒体沟通",
+      "objectives": "Understand principles of visual rhetoric and slide design; write scripts for podcast-style audio and short video productions; analyze how medium shapes message; produce a multimodal communication piece that combines text, image, and/or audio effectively.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/index.html",
+      "readingNote": "Purdue OWL — Multimodal Writing and Digital Communication Strategies",
+      "videoUrl": "https://www.youtube.com/watch?v=Iwpi1Lm6dFo",
+      "videoNote": "TED Talk — David JP Phillips: How to Avoid Death by PowerPoint (slide design principles)",
+      "video2Url": "https://www.youtube.com/watch?v=SzOXCNGiVVA",
+      "video2Note": "Crash Course — Media Literacy: Understanding Digital Storytelling and Visual Rhetoric",
+      "practiceUrl": "https://www.khanacademy.org/partner-content/media-smarts",
+      "practiceNote": "Khan Academy — Media Literacy: Analyzing and Creating Digital Media",
+      "assignment": "Create a 3–5 minute multimedia presentation on any issue of personal or academic significance. Options: a video essay, an annotated slide deck with a recorded voiceover, or a podcast-style audio piece. Required components: (1) a written script or detailed outline (400+ words); (2) attention to visual or audio design choices (at least five deliberate design decisions explained in a production note); (3) a works cited page for all sources and images used. Submit the script, the final product, and the production notes.",
+      "estimatedHrs": 5.5
+    },
+    {
+      "order": 8,
+      "title": "Technical Writing",
+      "titleZh": "技术写作",
+      "objectives": "Understand the hallmarks of effective technical writing: clarity, precision, conciseness, and document design; write a set of instructions, a formal report, and a brief proposal; format documents using headers, numbered lists, and visual aids appropriately.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/index.html",
+      "readingNote": "Purdue OWL — Technical Writing: Instructions, Reports, and Document Design",
+      "videoUrl": "https://www.youtube.com/watch?v=RFVs5BJGPME",
+      "videoNote": "Crash Course Business — Technical Writing: Reports, Proposals, and Instructions",
+      "video2Url": "https://www.youtube.com/watch?v=cFKzDpjVNSg",
+      "video2Note": "TED Talk — Plain Language and Technical Communication: Why Clarity Matters",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/memos/index.html",
+      "practiceNote": "Purdue OWL — Technical Memos, Proposals, and Report Formats with Examples",
+      "assignment": "Complete two technical writing tasks: (1) Write a set of step-by-step instructions (300 words minimum) for a process you know well — include a clear title, safety warnings if needed, numbered steps, and at least one labeled diagram or visual aid. (2) Write a one-page formal report (350–400 words) on a school or community problem, including: an executive summary, problem statement, findings, and two concrete recommendations with rationale. Both documents must demonstrate consistent formatting with headers and appropriate visual organization.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 9,
+      "title": "Grant & Scholarship Writing",
+      "titleZh": "申请文书与奖学金写作",
+      "objectives": "Understand the genre conventions of scholarship and grant applications; analyze prompts carefully to align responses with reviewers' expectations; write persuasively while demonstrating impact, need, and fit; tailor writing to specific audiences and purposes.",
+      "readingUrl": "https://owl.purdue.edu/owl/job_search_writing/index.html",
+      "readingNote": "Purdue OWL — Writing for Applications: Scholarships, Grants, and Personal Statements",
+      "videoUrl": "https://www.youtube.com/watch?v=bXvMurLnXNs",
+      "videoNote": "Khan Academy — How to Write a Scholarship Essay: Strategy and Examples",
+      "video2Url": "https://www.youtube.com/watch?v=6qLIKRDhIYs",
+      "video2Note": "TED Talk — The Science of Persuasive Applications (what reviewers look for)",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/college-admissions/making-your-application-stand-out/scholarships-and-financial-aid/a/scholarship-essay-tips",
+      "practiceNote": "Khan Academy — Scholarship Essay Tips: Audience, Evidence, and Impact",
+      "assignment": "Select a real scholarship or grant opportunity relevant to your goals. Write a full application response (400–550 words) that: (1) directly and specifically addresses the prompt, (2) tells a focused story with concrete evidence of impact or achievement, (3) makes a compelling case for why you are the right candidate, and (4) closes with a forward-looking statement connecting your goals to the award's mission. Submit the original prompt alongside your essay and a brief audience analysis (100 words) explaining how you tailored the piece for the reviewers.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 10,
+      "title": "Literary Analysis at the College Level",
+      "titleZh": "大学水平的文学分析",
+      "objectives": "Write literary analysis essays for a scholarly audience using formal academic register; integrate secondary sources and critical perspectives; use MLA citation correctly for both primary and secondary sources; develop and sustain an arguable interpretive thesis across multiple paragraphs.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html",
+      "readingNote": "Purdue OWL — Writing in Literature: Analysis, Argumentation, and Secondary Sources",
+      "videoUrl": "https://www.youtube.com/watch?v=jlj6MkA8wbQ",
+      "videoNote": "Crash Course Literature — How to Write a College-Level Literary Analysis Essay",
+      "video2Url": "https://www.youtube.com/watch?v=hfwW5sJAOGs",
+      "video2Note": "Crash Course Literature — Using Secondary Sources and Critical Perspectives in Analysis",
+      "practiceUrl": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_page_books.html",
+      "practiceNote": "Purdue OWL — MLA Works Cited: Primary and Secondary Sources in Literary Analysis",
+      "assignment": "Write a 600–750 word literary analysis essay on a text you have studied this year. The essay must: (1) open with an arguable interpretive thesis that goes beyond plot summary, (2) develop the argument across at least three body paragraphs, each with a topic sentence, textual evidence (quoted and cited in MLA), and analysis, (3) incorporate at least one secondary source (a critical essay or scholarly article) that supports your interpretation, and (4) include a correctly formatted MLA Works Cited page. Submit a thesis workshop draft (thesis + two-sentence justification) one week before the final essay.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 11,
+      "title": "Creative Writing: Fiction",
+      "titleZh": "创意写作：小说",
+      "objectives": "Apply the elements of short fiction craft — scene, summary, point of view, dialogue, interiority, and compression; write a complete flash fiction piece; participate constructively in a workshop-style peer review process using craft vocabulary.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/creative_writing/index.html",
+      "readingNote": "Purdue OWL — Creative Writing: Flash Fiction, Short Story Craft, and Workshop Conventions",
+      "videoUrl": "https://www.youtube.com/watch?v=BO-E7TqUU4U",
+      "videoNote": "Crash Course Literature — Elements of Fiction: Craft and Technique in the Short Story",
+      "video2Url": "https://www.youtube.com/watch?v=4wKo1UXdvg0",
+      "video2Note": "TED Talk — How Great Stories Are Built: Scene, Tension, and Surprise",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:narrative-techniques/v/narrative-techniques",
+      "practiceNote": "Khan Academy — Narrative Techniques: Scene, Summary, Interiority, and Dialogue",
+      "assignment": "Write a complete flash fiction piece of 400–600 words. Requirements: (1) a defined protagonist with a clear desire or problem, (2) at least one scene (rendered in real time with sensory detail) vs. summary (compressed background), (3) a moment of tension or complication, (4) an ending that surprises or resonates without being predictable. Workshop participation: provide written peer feedback (150 words each) on two classmates' stories using craft vocabulary (scene, summary, tension, voice, compression). Submit your story and your two peer feedback responses.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 12,
+      "title": "Creative Writing: Poetry & Essay",
+      "titleZh": "创意写作：诗歌与散文",
+      "objectives": "Understand and write in hybrid and experimental forms including the lyric essay and prose poem; explore the use of white space, fragmentation, braiding, and image as structuring principles; read contemporary models of creative nonfiction and hybrid work.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/creative_writing/poetry/index.html",
+      "readingNote": "Purdue OWL — Creative Writing: Poetry Forms, Lyric Essay, and Hybrid Genres",
+      "videoUrl": "https://www.youtube.com/watch?v=JwhouCNq-Fc",
+      "videoNote": "Crash Course Literature — Poetry, Form, and the Lyric Tradition",
+      "video2Url": "https://www.youtube.com/watch?v=4GK2ouXFIBo",
+      "video2Note": "TED Talk — Ocean Vuong: A Letter to My Mother That She Will Never Read (lyric essay and memory)",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:poetry-analysis/v/analyzing-tone-and-mood-in-poetry",
+      "practiceNote": "Khan Academy — Poetry Analysis: Tone, Mood, Imagery, and Form",
+      "assignment": "Complete two creative pieces: (1) Write a prose poem (150–250 words) on a sensory memory or place. It should read as prose but use compression, imagery, and figurative language with the intentionality of poetry. No forced rhyme. (2) Write a lyric essay (350–500 words) that braids two or more strands of thought — a memory, a research fact, a meditation — to explore a question without resolving it neatly. Annotate each piece with a craft note (100 words) explaining two specific formal choices you made and why.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 13,
+      "title": "Editing & Publishing",
+      "titleZh": "编辑与发表",
+      "objectives": "Apply editorial thinking at the line, paragraph, and structural levels; understand the distinction between content editing and copyediting; learn conventions for submitting work for publication; research literary magazines, essay contests, and platforms appropriate for student writers.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html",
+      "readingNote": "Purdue OWL — Editing, Proofreading, and Preparing Work for Publication",
+      "videoUrl": "https://www.youtube.com/watch?v=7UeEjclYmKQ",
+      "videoNote": "Crash Course English Language — The Editing Process: From Manuscript to Publication",
+      "video2Url": "https://www.youtube.com/watch?v=cJLMo6RBqIg",
+      "video2Note": "TED Talk — The Editorial Eye: How Editors Shape Great Writing",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/grammar/common_errors/index.html",
+      "practiceNote": "Purdue OWL — Common Errors to Catch in Copyediting: Grammar, Style, and Mechanics",
+      "assignment": "Select one piece from your previous work in this course for editorial revision and mock submission. Complete: (1) a content edit pass — restructure, cut, or expand as needed, annotating every major change and explaining why; (2) a copyedit pass — correct all grammar, punctuation, and style errors, tracking changes; (3) research three real publications that accept student writing, and draft a 75-word cover letter for one of them introducing your piece. Submit the original, the edited version with tracked changes, the cover letter, and the three publication listings with brief notes on submission guidelines.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 14,
+      "title": "Senior Capstone: Communication Portfolio",
+      "titleZh": "高年级顶石项目：沟通作品集",
+      "objectives": "Curate a portfolio of 4–6 pieces representing growth across multiple writing genres and communication modes studied during the course; write a reflective introduction that analyzes development as a writer; present the portfolio and defend choices in a culminating conference or class showcase.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/index.html",
+      "readingNote": "Purdue OWL — Portfolio Writing: Selection, Reflection, and Presentation",
+      "videoUrl": "https://www.youtube.com/watch?v=gMalKqb8j1s",
+      "videoNote": "TED Talk — Ira Glass: On Good Taste, Storytelling, and Creative Development (on growth as a writer)",
+      "video2Url": "https://www.youtube.com/watch?v=y7BHX_5GR-8",
+      "video2Note": "Crash Course — Capstone Projects and Portfolios: How to Showcase Your Best Work",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/index.html",
+      "practiceNote": "Purdue OWL — Reflective Writing: Analyzing Your Own Growth and Process",
+      "assignment": "Assemble a Communication Portfolio with: (1) 4–6 polished, revised pieces drawn from Modules 1–13, spanning at least three different genres or modes (e.g., college essay, rhetorical analysis, flash fiction, multimedia script, scholarship essay); (2) a Reflective Introduction (500–600 words) that analyzes your development as a writer — discuss what you struggled with, how you grew, what you are most proud of, and what you would revise further given more time; (3) a brief headnote (50–75 words) for each piece explaining why you selected it and what it demonstrates. Present your portfolio in a 5-minute class showcase defending your curation choices.",
+      "estimatedHrs": 6.0
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "A writer's voice is best described as:",
+      "options": [
+        "The grammatical correctness of their sentences",
+        "The distinctive combination of diction, syntax, tone, and perspective that makes their writing recognizable",
+        "The genre they write in most often",
+        "The length of their typical sentences"
+      ],
+      "answer": "The distinctive combination of diction, syntax, tone, and perspective that makes their writing recognizable",
+      "explanation": "Voice is the sum of stylistic choices — word selection, sentence rhythm, attitude, and perspective — that give writing its unique character and make one writer distinguishable from another.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "In a college application essay, 'showing' rather than 'telling' means:",
+      "options": [
+        "Using longer sentences to describe events",
+        "Presenting specific scenes, sensory details, and action instead of abstract summary statements",
+        "Telling the admissions officer your GPA and test scores",
+        "Writing as many words as possible within the limit"
+      ],
+      "answer": "Presenting specific scenes, sensory details, and action instead of abstract summary statements",
+      "explanation": "'Showing' renders experience vividly through concrete detail and scene so readers draw their own conclusions. 'Telling' makes abstract statements like 'I am passionate' without evidence.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Which of the following is the most professional subject line for an email to a professor?",
+      "options": [
+        "hey",
+        "Question",
+        "Request for Letter of Recommendation — [Your Name], Class of 2026",
+        "IMPORTANT PLEASE READ"
+      ],
+      "answer": "Request for Letter of Recommendation — [Your Name], Class of 2026",
+      "explanation": "Professional email subject lines are specific, informative, and respectful. Vague or all-caps subject lines are unprofessional and make it hard for the recipient to prioritize or file the message.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "In rhetoric, ethos is an appeal to:",
+      "options": [
+        "The audience's emotions",
+        "Logic and evidence",
+        "The speaker's credibility and character",
+        "The urgency of the moment"
+      ],
+      "answer": "The speaker's credibility and character",
+      "explanation": "Ethos establishes the speaker's trustworthiness, expertise, and moral character. When audiences believe in the speaker's credibility, they are more likely to be persuaded by the argument.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Kairos in rhetoric refers to:",
+      "options": [
+        "The use of statistics and data",
+        "The emotional appeals in a speech",
+        "The opportune moment or timeliness that makes a message most effective",
+        "The logical structure of an argument"
+      ],
+      "answer": "The opportune moment or timeliness that makes a message most effective",
+      "explanation": "Kairos is the Greek concept of the 'right time' — the context and moment in which a message will have maximum impact. A perfectly worded argument delivered at the wrong moment loses its persuasive power.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A debater uses a straw man fallacy when they:",
+      "options": [
+        "Cite a weak source",
+        "Misrepresent the opponent's position by exaggerating or distorting it, then argue against that distortion",
+        "Repeat the same point three times in a row",
+        "Appeal to the audience's emotions instead of facts"
+      ],
+      "answer": "Misrepresent the opponent's position by exaggerating or distorting it, then argue against that distortion",
+      "explanation": "The straw man fallacy involves attacking a weakened or caricatured version of the opponent's argument rather than their actual position, making it easier to knock down.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Which of the following is the best opening for a 4-minute informative speech?",
+      "options": [
+        "'Today I will tell you about climate change.'",
+        "'My topic is very interesting and I hope you enjoy it.'",
+        "'Every year, plastic the size of a garbage truck enters the ocean every single minute — that's what brought me here today.'",
+        "'Hello, my name is Alex and I will be talking for four minutes.'"
+      ],
+      "answer": "'Every year, plastic the size of a garbage truck enters the ocean every single minute — that's what brought me here today.'",
+      "explanation": "Effective speech openings use a hook — a striking statistic, story, or question — to capture attention immediately. Announcing your topic or name first wastes the crucial opening seconds.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "In multimedia communication, visual rhetoric refers to:",
+      "options": [
+        "Using as many images as possible on a slide",
+        "The way visual elements (images, color, layout, typography) are used to convey meaning and persuade an audience",
+        "Reading the text directly from the slides",
+        "Making slides with bright colors only"
+      ],
+      "answer": "The way visual elements (images, color, layout, typography) are used to convey meaning and persuade an audience",
+      "explanation": "Visual rhetoric is the study and practice of how non-textual elements communicate and persuade — just as written words do. Color, image choice, and layout all carry rhetorical weight.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Which is the most important quality of effective technical writing?",
+      "options": [
+        "Creative metaphors and figurative language",
+        "A personal and conversational tone",
+        "Clarity and precision that allows the reader to complete a task without confusion",
+        "Long, detailed sentences that cover every possible scenario"
+      ],
+      "answer": "Clarity and precision that allows the reader to complete a task without confusion",
+      "explanation": "Technical writing exists to communicate information or instructions so readers can act on them. Clarity and precision — using exact, unambiguous language — are the primary goals.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "When writing a scholarship essay, the most important principle is to:",
+      "options": [
+        "Write about the most impressive achievement possible, even if it's exaggerated",
+        "Use sophisticated vocabulary to impress the readers",
+        "Directly address the prompt and tailor your story to the specific award's mission and audience",
+        "Copy a successful essay from a previous applicant and change the name"
+      ],
+      "answer": "Directly address the prompt and tailor your story to the specific award's mission and audience",
+      "explanation": "Reviewers immediately notice when essays are generic or off-prompt. Addressing the specific prompt and connecting your story to the scholarship's values demonstrates genuine engagement and fit.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "In a college-level literary analysis essay, the thesis should be:",
+      "options": [
+        "A summary of the plot of the text",
+        "A statement of fact about the author's life",
+        "An arguable interpretive claim about the text that the essay will support with evidence",
+        "A question that the essay will try to answer"
+      ],
+      "answer": "An arguable interpretive claim about the text that the essay will support with evidence",
+      "explanation": "A literary analysis thesis makes an interpretive claim — an assertion about meaning, technique, or theme that another reasonable reader could disagree with. It must be arguable, not simply a fact.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "In flash fiction, compression means:",
+      "options": [
+        "Writing very short sentences",
+        "Fitting the complexity, implication, and emotional weight of a full story into a very small word count",
+        "Using only action and no dialogue",
+        "Summarizing a longer story into a paragraph"
+      ],
+      "answer": "Fitting the complexity, implication, and emotional weight of a full story into a very small word count",
+      "explanation": "Compression is the craft principle of doing more with less — every word must earn its place. Flash fiction achieves full narrative impact through suggestion, implication, and precise detail rather than expansion.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "A prose poem differs from a conventional poem primarily because:",
+      "options": [
+        "It uses only rhyming lines",
+        "It is written in paragraph form without line breaks but uses the compression and imagery of poetry",
+        "It tells a story with characters and plot",
+        "It is longer than a traditional poem"
+      ],
+      "answer": "It is written in paragraph form without line breaks but uses the compression and imagery of poetry",
+      "explanation": "Prose poems look like prose on the page but operate with the density, imagery, and music of poetry. They reject line breaks in favor of the flowing syntax of prose while maintaining poetic intensity.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Explain the difference between ethos, pathos, and logos. Give one original example of a persuasive sentence that uses each appeal.",
+      "options": null,
+      "answer": "Ethos: credibility/authority appeal. Example: 'As a doctor with twenty years of experience, I can tell you this treatment works.' Pathos: emotional appeal. Example: 'Imagine your child going to bed hungry tonight.' Logos: logical/evidence appeal. Example: 'Studies show a 40% reduction in accidents when speed limits are lowered.'",
+      "explanation": "The three classical appeals are the foundation of rhetoric. Effective arguments typically blend all three, adjusting emphasis based on audience and context.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "What makes a college application essay 'authentic'? Describe two common mistakes students make that undermine authenticity, and explain how to avoid them.",
+      "options": null,
+      "answer": "Authenticity means writing in a genuine voice about something that truly matters to the writer, rather than what they think sounds impressive. Common mistakes: (1) Writing about a 'big' achievement instead of a meaningful personal moment — fix by choosing a specific, small story that reveals character. (2) Using overly formal language that doesn't sound like the writer — fix by writing conversationally, as if telling the story to a trusted adult.",
+      "explanation": "Admissions readers review thousands of essays and can detect inauthenticity immediately. Voice, specificity, and genuine reflection distinguish memorable essays from forgettable ones.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Freewriting is most useful for developing voice because it:",
+      "options": [
+        "Produces a polished draft in one sitting",
+        "Removes self-censorship and allows the writer's natural rhythm and thought patterns to emerge",
+        "Eliminates grammatical errors",
+        "Ensures the writing follows a formal structure"
+      ],
+      "answer": "Removes self-censorship and allows the writer's natural rhythm and thought patterns to emerge",
+      "explanation": "Freewriting's value lies in bypassing the inner critic. By writing without stopping to correct or judge, writers access their authentic voice and discover what they actually want to say.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "The Common App personal statement word limit is approximately:",
+      "options": [
+        "250 words",
+        "350 words",
+        "650 words",
+        "1000 words"
+      ],
+      "answer": "650 words",
+      "explanation": "The Common App personal statement has a 650-word maximum. This limit forces writers to be selective and precise — every sentence must serve the essay's central purpose.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "In professional communication, 'register' refers to:",
+      "options": [
+        "The font size used in a document",
+        "The level of formality and language style appropriate to a given audience and context",
+        "The number of paragraphs in a document",
+        "The filing system for business emails"
+      ],
+      "answer": "The level of formality and language style appropriate to a given audience and context",
+      "explanation": "Register is the sociolinguistic concept of adjusting language — vocabulary, syntax, and tone — to suit the situation. A text to a friend uses informal register; an email to an employer requires formal register.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "The rhetorical concept of 'arrangement' refers to:",
+      "options": [
+        "The fonts and visual design of a document",
+        "The logical organization and sequencing of ideas in an argument",
+        "The emotional impact of a speech",
+        "The speaker's body language during delivery"
+      ],
+      "answer": "The logical organization and sequencing of ideas in an argument",
+      "explanation": "Arrangement is one of the five canons of rhetoric. It concerns how a writer or speaker organizes ideas — what comes first, what is emphasized, and how structure affects persuasiveness.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "An ad hominem fallacy attacks:",
+      "options": [
+        "A weak source",
+        "The person making an argument rather than the argument itself",
+        "An oversimplified version of the opposing view",
+        "A conclusion that doesn't follow from the premises"
+      ],
+      "answer": "The person making an argument rather than the argument itself",
+      "explanation": "Ad hominem (Latin: 'to the man') means attacking the character, motive, or personal attributes of the opponent instead of engaging with the substance of their argument.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Vocal variety in public speaking refers to intentional changes in:",
+      "options": [
+        "The vocabulary used in a speech",
+        "Pitch, pace, volume, and pausing to emphasize meaning and maintain audience engagement",
+        "The accent of the speaker",
+        "The number of transitions used between points"
+      ],
+      "answer": "Pitch, pace, volume, and pausing to emphasize meaning and maintain audience engagement",
+      "explanation": "Effective speakers vary their vocal delivery — speaking faster to build excitement, slower for emphasis, louder to command attention, softer to draw listeners in — to prevent monotony and underscore meaning.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "According to effective slide design principles, each slide in a presentation should:",
+      "options": [
+        "Contain every detail the speaker will say",
+        "Have at least five bullet points per slide",
+        "Support and enhance what the speaker is saying, not duplicate it word for word",
+        "Use as many colors as possible to maintain visual interest"
+      ],
+      "answer": "Support and enhance what the speaker is saying, not duplicate it word for word",
+      "explanation": "Slides are a visual aid, not a script. When speakers read their slides verbatim, audiences stop listening. Slides should provide images, key words, or data that complement the spoken message.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Which of the following is a hallmark of effective technical instructions?",
+      "options": [
+        "Personal anecdotes explaining why the process matters",
+        "Passive voice throughout to sound objective",
+        "Numbered sequential steps using second-person imperative verbs (e.g., 'Press the button')",
+        "Literary metaphors to make the text engaging"
+      ],
+      "answer": "Numbered sequential steps using second-person imperative verbs (e.g., 'Press the button')",
+      "explanation": "Effective instructions use numbered steps (for sequence clarity), second person ('you'), and imperative verbs (direct commands) so the reader knows exactly what action to take at each step.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "A scholarship essay demonstrates 'fit' by:",
+      "options": [
+        "Using the scholarship organization's name as many times as possible",
+        "Showing how the writer's goals, values, or background align specifically with the award's mission",
+        "Listing every award and achievement the writer has received",
+        "Writing the maximum number of words allowed"
+      ],
+      "answer": "Showing how the writer's goals, values, or background align specifically with the award's mission",
+      "explanation": "Reviewers award scholarships to candidates who demonstrate genuine alignment with the organization's mission. Generic essays that could apply to any scholarship fail to establish this crucial connection.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "When integrating a secondary source into a literary analysis, the writer should primarily use it to:",
+      "options": [
+        "Replace their own analysis with the critic's conclusions",
+        "Show off how many sources they found",
+        "Support, extend, or provide a contrasting perspective on the writer's own interpretive argument",
+        "Summarize the plot of the text being analyzed"
+      ],
+      "answer": "Support, extend, or provide a contrasting perspective on the writer's own interpretive argument",
+      "explanation": "Secondary sources serve the writer's argument — they are evidence, not substitutes for thinking. The writer's own analysis must remain central; the critic's voice supports rather than supplants it.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "In a short story workshop, constructive feedback focuses on:",
+      "options": [
+        "Whether you personally liked the story",
+        "Correcting every grammatical error",
+        "How specific craft elements (scene, voice, tension, compression) are working or not working",
+        "Rewriting the story as you would have written it"
+      ],
+      "answer": "How specific craft elements (scene, voice, tension, compression) are working or not working",
+      "explanation": "Workshop feedback uses craft vocabulary to identify what is and isn't working on the page, helping the writer understand their piece from a reader's perspective without subjective judgment.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "A lyric essay is best described as a piece that:",
+      "options": [
+        "Analyzes song lyrics",
+        "Tells a story in chronological order with a clear resolution",
+        "Braids multiple strands of thought or material to explore a question without a definitive answer",
+        "Argues a single thesis through structured paragraphs"
+      ],
+      "answer": "Braids multiple strands of thought or material to explore a question without a definitive answer",
+      "explanation": "The lyric essay is a hybrid form that weaves together personal narrative, research, meditation, and image to circle around a subject — it enacts inquiry rather than delivering conclusions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "The difference between content editing and copyediting is that content editing addresses:",
+      "options": [
+        "Spelling and punctuation errors",
+        "Capitalization and formatting",
+        "Big-picture issues such as structure, argumentation, clarity, and pacing",
+        "Font size and margin width"
+      ],
+      "answer": "Big-picture issues such as structure, argumentation, clarity, and pacing",
+      "explanation": "Content editing (also called developmental editing) addresses whether the piece works — its ideas, organization, and effectiveness. Copyediting is a later-stage pass for surface errors in grammar and mechanics.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "A reflective introduction to a writing portfolio should primarily:",
+      "options": [
+        "Summarize the contents of each piece in the portfolio",
+        "Analyze the writer's growth, challenges, and development as a communicator across the pieces included",
+        "Argue that the portfolio is better than other students' portfolios",
+        "List every assignment completed during the course"
+      ],
+      "answer": "Analyze the writer's growth, challenges, and development as a communicator across the pieces included",
+      "explanation": "A portfolio reflective introduction is metacognitive — the writer looks back on their process and progress, identifying what they learned, what they struggled with, and how they changed as a writer.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "A cover letter for a job application is most effective when it:",
+      "options": [
+        "Lists the same information as the resume in paragraph form",
+        "Explains why the applicant wants a high salary",
+        "Connects the applicant's specific skills and experiences to the needs of the particular employer",
+        "Is exactly one page with no white space"
+      ],
+      "answer": "Connects the applicant's specific skills and experiences to the needs of the particular employer",
+      "explanation": "An effective cover letter is tailored — it shows the employer that you understand their needs and demonstrates, with specific examples, how you can meet them. Generic cover letters that could apply anywhere are ineffective.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which of the following best describes the false dilemma (either/or) fallacy?",
+      "options": [
+        "Claiming that because two events happened in sequence, one caused the other",
+        "Presenting only two options as if no other possibilities exist, when in fact more options are available",
+        "Appealing to the popularity of a position as proof of its truth",
+        "Attacking the speaker's personal character instead of their argument"
+      ],
+      "answer": "Presenting only two options as if no other possibilities exist, when in fact more options are available",
+      "explanation": "The false dilemma reduces complex situations to a forced choice between two extremes, ignoring the middle ground and other alternatives. Example: 'You're either with us or against us.'",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "In fiction writing, interiority refers to:",
+      "options": [
+        "The indoor setting of a scene",
+        "A character's internal thoughts, feelings, and perceptions rendered on the page",
+        "The use of first-person narration",
+        "The backstory of a character"
+      ],
+      "answer": "A character's internal thoughts, feelings, and perceptions rendered on the page",
+      "explanation": "Interiority is what distinguishes prose fiction from other storytelling forms — the writer can take readers directly inside a character's mind, revealing consciousness as it happens.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "When curating a writing portfolio, the most important criterion for selecting pieces is:",
+      "options": [
+        "Including only the pieces that received the highest grades",
+        "Including the longest pieces you wrote",
+        "Choosing pieces that together demonstrate range, growth, and your strongest capabilities as a writer",
+        "Including only pieces written in the last month of the course"
+      ],
+      "answer": "Choosing pieces that together demonstrate range, growth, and your strongest capabilities as a writer",
+      "explanation": "A portfolio is a curated argument about who you are as a writer. It should show breadth across genres and modes, evidence of growth and revision, and your most powerful work.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Describe the key differences between a formal business memo and a professional email. When would you use each format, and what are two features unique to each?",
+      "options": null,
+      "answer": "A memo is an internal document typically distributed within an organization, formatted with TO/FROM/DATE/SUBJECT headers, used for policy announcements or formal internal communications. An email is used for both internal and external communication, includes a subject line, salutation, and signature, and allows for more direct and interactive correspondence. Unique to memos: block format with routing headers, no greeting. Unique to emails: subject line visible before opening, interactive reply thread.",
+      "explanation": "Understanding genre conventions in professional writing ensures that documents reach the right audiences with appropriate formality and format — a memo to an external client or an informal email announcing a policy change would both miss the mark.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "What is the reflective introduction in a writing portfolio designed to demonstrate? What should a strong reflective introduction include, and why is metacognitive writing valuable for a senior writer?",
+      "options": null,
+      "answer": "The reflective introduction demonstrates the writer's ability to think critically about their own growth and process as a communicator. It should include: analysis of at least one specific challenge and how it was overcome, discussion of how the writer's approach to writing changed over the course, identification of the strongest pieces and explanation of why, and a forward-looking statement about goals. Metacognitive writing develops self-awareness about process, which is essential for continuous improvement as a writer and communicator beyond high school.",
+      "explanation": "Self-reflection is a higher-order thinking skill. Writers who can articulate what they are doing and why are better equipped to diagnose weaknesses, build on strengths, and adapt to new writing contexts in college and professional life.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "type": "mc",
+      "question": "Which element contributes most directly to a writer's distinctive voice?",
+      "options": [
+        "Word choice (diction) and sentence rhythm",
+        "The number of sources cited",
+        "The length of the essay",
+        "Using a formal academic register at all times"
+      ],
+      "answer": "Word choice (diction) and sentence rhythm",
+      "explanation": "Voice emerges from the specific words a writer chooses and the rhythms their sentences create. These choices, made consistently, produce a recognizable style.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "type": "mc",
+      "question": "Authenticity in personal writing is best achieved by:",
+      "options": [
+        "Writing about whatever topic sounds most impressive",
+        "Imitating the style of a writer you admire",
+        "Writing about what genuinely matters to you in your real voice",
+        "Using sophisticated vocabulary to sound mature"
+      ],
+      "answer": "Writing about what genuinely matters to you in your real voice",
+      "explanation": "Authentic writing rings true because it comes from the writer's actual experience and perspective. Performing a voice or choosing topics for effect produces writing that readers — including admissions officers — can detect as inauthentic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "type": "mc",
+      "question": "Freewriting means:",
+      "options": [
+        "Writing without paying for a subscription",
+        "Writing continuously for a set time without stopping to edit or judge",
+        "Writing with no assigned topic",
+        "Writing only in lowercase letters"
+      ],
+      "answer": "Writing continuously for a set time without stopping to edit or judge",
+      "explanation": "Freewriting is a prewriting technique in which the writer writes without pausing, correcting, or censoring. The goal is to bypass the inner critic and generate raw material.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following best represents an authentic opening line for a personal essay?",
+      "options": [
+        "'Throughout my life, I have always been passionate about helping others.'",
+        "'Webster's Dictionary defines leadership as...'",
+        "'The summer I was eleven, I dropped my grandmother's handmade quilt into the river and watched it disappear.'",
+        "'I am a hardworking, dedicated student who always gives 110 percent.'"
+      ],
+      "answer": "'The summer I was eleven, I dropped my grandmother's handmade quilt into the river and watched it disappear.'",
+      "explanation": "Authentic, specific, in-scene opening lines engage readers immediately. Generic phrases like 'I have always been passionate' or dictionary definitions are clichéd and signal inauthenticity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "type": "mc",
+      "question": "Tone in writing refers to:",
+      "options": [
+        "The loudness of the writer's voice when read aloud",
+        "The writer's attitude toward the subject and audience, conveyed through word choice",
+        "The number of exclamation points used",
+        "Whether the writing is typed or handwritten"
+      ],
+      "answer": "The writer's attitude toward the subject and audience, conveyed through word choice",
+      "explanation": "Tone is the emotional attitude embedded in writing — melancholy, ironic, enthusiastic, reverent, etc. It is created through diction, imagery, and syntax, not volume.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "type": "mc",
+      "question": "The Common App personal statement allows a maximum of approximately how many words?",
+      "options": ["250", "500", "650", "1000"],
+      "answer": "650",
+      "explanation": "The Common Application personal statement has a 650-word maximum. Writers must be selective and precise within this limit.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is an example of 'showing' rather than 'telling' in a college essay?",
+      "options": [
+        "'I am a very determined person.'",
+        "'I have always loved science.'",
+        "'At 2 a.m., my hands still smelled of motor oil as I finally heard the engine turn over for the first time in three months.'",
+        "'This experience taught me the value of hard work.'"
+      ],
+      "answer": "'At 2 a.m., my hands still smelled of motor oil as I finally heard the engine turn over for the first time in three months.'",
+      "explanation": "Showing places the reader inside the experience through sensory detail and action. The other options are abstract summary statements that tell the reader what to conclude without evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "type": "mc",
+      "question": "A college essay revision strategy of 'cutting your first paragraph' often works because:",
+      "options": [
+        "Introductions are never needed in personal essays",
+        "First drafts often begin with warm-up sentences before reaching the real story",
+        "Shorter essays are always stronger",
+        "Admissions officers skip the first paragraph anyway"
+      ],
+      "answer": "First drafts often begin with warm-up sentences before reaching the real story",
+      "explanation": "Writers often take a paragraph or more to 'clear their throat' before getting to the compelling content. Starting the essay at the second or third paragraph frequently produces a stronger, more immediate opening.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "type": "mc",
+      "question": "When choosing a college essay topic, the best approach is to:",
+      "options": [
+        "Pick the topic that sounds most impressive to adults",
+        "Write about a major award or championship you have won",
+        "Choose a specific, personally meaningful experience that reveals character, even if it seems small",
+        "Avoid anything that involves failure or difficulty"
+      ],
+      "answer": "Choose a specific, personally meaningful experience that reveals character, even if it seems small",
+      "explanation": "Admissions officers are looking for genuine insight into who the applicant is. Small, specific stories told with authenticity are far more memorable than grandiose achievements described without depth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "type": "mc",
+      "question": "A revision memo in an essay revision process serves to:",
+      "options": [
+        "List every grammar error found",
+        "Explain the writer's most significant content and structural changes and the reasons behind them",
+        "Summarize the essay's main argument",
+        "Describe the sources used"
+      ],
+      "answer": "Explain the writer's most significant content and structural changes and the reasons behind them",
+      "explanation": "A revision memo documents the writer's decision-making process — it shows that revision was intentional and thoughtful rather than random word-swapping.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is NOT a feature of a well-formatted professional email?",
+      "options": [
+        "A specific and informative subject line",
+        "A professional salutation and closing",
+        "Emojis and informal abbreviations throughout",
+        "A clear statement of purpose in the first sentence"
+      ],
+      "answer": "Emojis and informal abbreviations throughout",
+      "explanation": "Professional emails use formal register — appropriate vocabulary, complete sentences, proper salutation, and a respectful tone. Emojis and abbreviations (like 'lol' or 'thx') are appropriate only in informal contexts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "type": "mc",
+      "question": "The purpose of a workplace memo is to:",
+      "options": [
+        "Apply for a job",
+        "Communicate information formally within an organization",
+        "Persuade a customer to buy a product",
+        "Write a complaint to a government agency"
+      ],
+      "answer": "Communicate information formally within an organization",
+      "explanation": "Memos are internal documents — they go from one person or department to others within the same organization. They are used for announcements, policy updates, meeting summaries, and requests.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "type": "mc",
+      "question": "A cover letter should be tailored to each specific employer because:",
+      "options": [
+        "It saves the employer the trouble of reading the resume",
+        "It shows the employer you understand their needs and have researched their organization",
+        "Generic letters are considered unethical",
+        "It fills up space on the page"
+      ],
+      "answer": "It shows the employer you understand their needs and have researched their organization",
+      "explanation": "A tailored cover letter demonstrates genuine interest and self-awareness. Employers can easily tell when a letter is generic — specific references to the role and company stand out.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "type": "mc",
+      "question": "The appropriate closing for a professional email to a teacher you have never met is:",
+      "options": [
+        "'Later!'",
+        "'Yours forever,'",
+        "'Sincerely,' or 'Best regards,'",
+        "'See ya,'"
+      ],
+      "answer": "'Sincerely,' or 'Best regards,'",
+      "explanation": "'Sincerely' and 'Best regards' are standard professional email closings appropriate for formal contexts. Informal closings like 'Later' or 'See ya' are inappropriate in professional communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "type": "mc",
+      "question": "Audience awareness in professional writing means:",
+      "options": [
+        "Writing for the largest possible audience",
+        "Adjusting content, tone, vocabulary, and format based on who will read the document and why",
+        "Using technical jargon to sound knowledgeable",
+        "Always writing in the third person"
+      ],
+      "answer": "Adjusting content, tone, vocabulary, and format based on who will read the document and why",
+      "explanation": "Effective professional writing is always audience-centered — what is appropriate for a CEO memo differs from what is appropriate for a customer email or a peer message.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "type": "mc",
+      "question": "The rhetorical situation includes which of the following elements?",
+      "options": [
+        "Font, margin, and color scheme",
+        "Speaker, audience, purpose, context, and constraints",
+        "Introduction, body, and conclusion",
+        "Thesis, evidence, and conclusion"
+      ],
+      "answer": "Speaker, audience, purpose, context, and constraints",
+      "explanation": "The rhetorical situation is the complete context in which communication occurs — who is speaking, to whom, for what purpose, under what circumstances, and with what limitations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "type": "mc",
+      "question": "Logos in rhetoric appeals to:",
+      "options": [
+        "The audience's emotions and sympathies",
+        "The speaker's authority and trustworthiness",
+        "Logic, reason, and evidence",
+        "The visual design of the argument"
+      ],
+      "answer": "Logic, reason, and evidence",
+      "explanation": "Logos (Greek for 'word' or 'reason') involves persuasion through logical reasoning, statistics, data, examples, and well-constructed arguments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "type": "mc",
+      "question": "Pathos is most effectively used when the writer:",
+      "options": [
+        "Lists credentials and professional experience",
+        "Presents statistics from peer-reviewed research",
+        "Uses vivid, emotionally resonant stories or language to connect with the audience's values and feelings",
+        "Cites multiple opposing viewpoints"
+      ],
+      "answer": "Uses vivid, emotionally resonant stories or language to connect with the audience's values and feelings",
+      "explanation": "Pathos works by engaging the audience's emotions — making them feel concern, hope, outrage, or compassion — so they are more receptive to the argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "type": "mc",
+      "question": "Kairos is best illustrated by which of the following situations?",
+      "options": [
+        "A climate scientist citing carbon data in a research paper",
+        "A student giving a speech about fire safety the day after a school fire drill",
+        "An advertiser using a celebrity endorsement",
+        "A politician listing their policy achievements"
+      ],
+      "answer": "A student giving a speech about fire safety the day after a school fire drill",
+      "explanation": "Kairos is the art of timing — the speech about fire safety is maximally relevant the day after the drill because the audience's attention and concern are already primed by the recent experience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "type": "mc",
+      "question": "A rhetorical analysis essay examines:",
+      "options": [
+        "Whether the writer's argument is factually correct",
+        "How the writer uses rhetorical strategies to achieve a persuasive effect on their audience",
+        "The plot and characters of the text",
+        "The grammar and spelling in the text"
+      ],
+      "answer": "How the writer uses rhetorical strategies to achieve a persuasive effect on their audience",
+      "explanation": "Rhetorical analysis does not judge whether an argument is right or wrong — it examines how the writer constructs the argument and what techniques they use to persuade a specific audience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "type": "mc",
+      "question": "In a formal debate, the constructive speech serves to:",
+      "options": [
+        "Respond to the opposing team's arguments",
+        "Present the team's main arguments and supporting evidence for the first time",
+        "Summarize the debate at the end",
+        "Ask clarifying questions of the opposing team"
+      ],
+      "answer": "Present the team's main arguments and supporting evidence for the first time",
+      "explanation": "The constructive speech is the opening argument in formal debate — it establishes the team's position, outlines their case, and presents the primary evidence. Rebuttals respond to opposing arguments in later rounds.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "type": "mc",
+      "question": "When evaluating evidence in a debate, the highest quality evidence is:",
+      "options": [
+        "A personal story from a teammate",
+        "A widely shared social media post",
+        "A statistic from a peer-reviewed study by a credentialed expert",
+        "An opinion from a popular celebrity"
+      ],
+      "answer": "A statistic from a peer-reviewed study by a credentialed expert",
+      "explanation": "The strongest debate evidence comes from credible, verifiable sources — peer-reviewed research, government data, or expert testimony. Personal stories and social media posts are anecdotal and easily challenged.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "type": "mc",
+      "question": "An effective rebuttal in a debate should:",
+      "options": [
+        "Simply repeat your original argument louder",
+        "Insult the opposing team's presentation style",
+        "Directly address and refute the specific claims made by the opposing team with counter-evidence or reasoning",
+        "Introduce a completely new argument unrelated to the opponent's points"
+      ],
+      "answer": "Directly address and refute the specific claims made by the opposing team with counter-evidence or reasoning",
+      "explanation": "A strong rebuttal engages specifically with what the opponents said — naming their argument, explaining why it is flawed, and presenting evidence or reasoning that undermines it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "type": "mc",
+      "question": "The slippery slope fallacy assumes that:",
+      "options": [
+        "Two similar events must have the same cause",
+        "A small first step will inevitably lead to extreme and usually negative consequences, without demonstrating how or why",
+        "A popular opinion must be correct",
+        "Only two choices exist in a situation"
+      ],
+      "answer": "A small first step will inevitably lead to extreme and usually negative consequences, without demonstrating how or why",
+      "explanation": "Slippery slope argues that A will cause B, which will cause C, and so on to a terrible outcome — without evidence that each link in the chain is likely. Example: 'If we allow X, it will eventually lead to Z disaster.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "type": "mc",
+      "question": "A position paper in debate differs from a speech because a position paper:",
+      "options": [
+        "Uses bullet points instead of full sentences",
+        "Is longer and more comprehensive",
+        "Presents a written argument with cited evidence meant to be read and evaluated rather than heard",
+        "Is delivered to a live audience"
+      ],
+      "answer": "Presents a written argument with cited evidence meant to be read and evaluated rather than heard",
+      "explanation": "Position papers are formal written arguments, typically with in-text citations and references, structured for a reader. Speeches are oral performances designed for a live audience with different pacing and rhetorical choices.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "type": "mc",
+      "question": "The most effective opening hook for a speech is one that:",
+      "options": [
+        "States the speaker's name and topic",
+        "Apologizes for the speaker's nervousness",
+        "Immediately grabs attention with a surprising fact, question, story, or provocative statement",
+        "Thanks the audience for coming"
+      ],
+      "answer": "Immediately grabs attention with a surprising fact, question, story, or provocative statement",
+      "explanation": "Audiences form their impression of a speaker in the first 30 seconds. A compelling hook — a striking statistic, a rhetorical question, or an in-scene anecdote — captures attention before it can drift.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "type": "mc",
+      "question": "Effective eye contact during a speech primarily serves to:",
+      "options": [
+        "Show the speaker has memorized their notes",
+        "Build connection with the audience and convey confidence and credibility",
+        "Help the speaker remember what to say next",
+        "Intimidate opposing debaters"
+      ],
+      "answer": "Build connection with the audience and convey confidence and credibility",
+      "explanation": "Eye contact is one of the most powerful non-verbal communication tools. It signals confidence, helps the speaker gauge audience response, and creates a sense of direct personal engagement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "type": "mc",
+      "question": "A speaker who uses a pause before an important point does so to:",
+      "options": [
+        "Indicate they have forgotten what comes next",
+        "Fill silence with a nervous habit",
+        "Create anticipation and signal to the audience that something significant is about to be said",
+        "Give the audience time to take notes"
+      ],
+      "answer": "Create anticipation and signal to the audience that something significant is about to be said",
+      "explanation": "Strategic pauses are powerful rhetorical tools — they create suspense, emphasize the coming statement, and give the audience time to process what was just said.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "type": "mc",
+      "question": "When answering a Q&A question you don't know the answer to, the most professional response is:",
+      "options": [
+        "Make up a plausible answer and state it confidently",
+        "Ignore the question and redirect to a point you want to make",
+        "Honestly acknowledge you don't know and offer to find out or suggest where the questioner might look",
+        "End the presentation immediately"
+      ],
+      "answer": "Honestly acknowledge you don't know and offer to find out or suggest where the questioner might look",
+      "explanation": "Intellectual honesty is more credible than bluffing. Admitting you don't know while offering a constructive next step maintains the audience's trust and demonstrates professionalism.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "type": "mc",
+      "question": "A speech outline serves to:",
+      "options": [
+        "Replace the need to practice the speech",
+        "Provide a word-for-word script to be read aloud",
+        "Organize main points, transitions, and supporting material so the speaker can deliver fluidly without reading",
+        "List every source the speaker consulted"
+      ],
+      "answer": "Organize main points, transitions, and supporting material so the speaker can deliver fluidly without reading",
+      "explanation": "An effective speech outline captures structure and key points rather than full sentences — it guides the speaker's memory without locking them into reading, enabling more natural delivery.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "type": "mc",
+      "question": "In slide design, the principle of 'one idea per slide' means:",
+      "options": [
+        "Each slide should have exactly one word",
+        "Each slide should focus on a single concept so the audience can absorb it without cognitive overload",
+        "Presenters should only create one slide per presentation",
+        "Slides should never have images"
+      ],
+      "answer": "Each slide should focus on a single concept so the audience can absorb it without cognitive overload",
+      "explanation": "Cognitive load theory shows that audiences cannot simultaneously read dense slides and listen to a speaker. Limiting each slide to one idea prevents information overload.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "type": "mc",
+      "question": "A podcast script differs from a presentation script primarily because it must:",
+      "options": [
+        "Include visual aids descriptions",
+        "Be written entirely in bullet points",
+        "Sound conversational and engaging when heard without any visuals to support it",
+        "Be shorter than 30 seconds"
+      ],
+      "answer": "Sound conversational and engaging when heard without any visuals to support it",
+      "explanation": "Podcast scripts are written for the ear, not the eye. The language must carry full meaning through sound alone — word choice, sentence rhythm, and clarity become especially important without visual support.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "type": "mc",
+      "question": "Digital storytelling combines which of the following elements?",
+      "options": [
+        "Only text and data",
+        "Spoken or written narrative with images, audio, video, or other multimedia elements",
+        "Only photographs and music",
+        "Computer programming and mathematics"
+      ],
+      "answer": "Spoken or written narrative with images, audio, video, or other multimedia elements",
+      "explanation": "Digital storytelling is a mode of communication that combines traditional narrative with digital media — photos, video, audio, animation — to create multimodal meaning-making experiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "type": "mc",
+      "question": "Visual rhetoric is the study of how:",
+      "options": [
+        "Writers use color to decorate their documents",
+        "Images, layout, typography, and design choices communicate meaning and can persuade an audience",
+        "Speakers use their hands while talking",
+        "Fonts affect the length of a document"
+      ],
+      "answer": "Images, layout, typography, and design choices communicate meaning and can persuade an audience",
+      "explanation": "Visual rhetoric recognizes that non-verbal elements communicate — an image of a starving child persuades through pathos; a clean, authoritative layout suggests credibility. All visual choices carry rhetorical weight.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "type": "mc",
+      "question": "Why is it important to include a works cited page even for images used in a multimedia presentation?",
+      "options": [
+        "Images do not require attribution",
+        "Only text sources need to be cited",
+        "Images are intellectual property; failing to credit their creators is plagiarism and may violate copyright",
+        "It is optional depending on the class"
+      ],
+      "answer": "Images are intellectual property; failing to credit their creators is plagiarism and may violate copyright",
+      "explanation": "Photographs, illustrations, and graphics are protected intellectual property. Using them without attribution is both academic plagiarism and a potential copyright violation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "type": "mc",
+      "question": "In technical writing, precision means:",
+      "options": [
+        "Using elegant metaphors to describe processes",
+        "Using exact, unambiguous language so the reader knows exactly what to do or understand",
+        "Keeping all documents under one page",
+        "Writing in a friendly, casual tone"
+      ],
+      "answer": "Using exact, unambiguous language so the reader knows exactly what to do or understand",
+      "explanation": "Precision in technical writing eliminates guesswork. Ambiguous instructions — 'add some water' vs. 'add 250 mL of cold water' — can lead to errors, especially in safety-critical contexts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "type": "mc",
+      "question": "Numbered steps are used in technical instructions because they:",
+      "options": [
+        "Look more professional than paragraphs",
+        "Make the document longer",
+        "Clearly indicate the required sequence and allow the reader to track their progress",
+        "Replace the need for a visual aid"
+      ],
+      "answer": "Clearly indicate the required sequence and allow the reader to track their progress",
+      "explanation": "Sequential tasks require numbered steps so users know the exact order and can easily find their place if interrupted. Paragraph form buries sequential information and increases errors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "type": "mc",
+      "question": "An executive summary in a formal report provides:",
+      "options": [
+        "The writer's personal opinion about the findings",
+        "A brief overview of the report's purpose, key findings, and recommendations for readers who may not read the full report",
+        "A list of all sources used",
+        "A detailed explanation of the methodology"
+      ],
+      "answer": "A brief overview of the report's purpose, key findings, and recommendations for readers who may not read the full report",
+      "explanation": "Executive summaries allow busy decision-makers to grasp the most important information quickly. They appear at the beginning of the report and stand alone as a condensed version of the whole.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "type": "mc",
+      "question": "Headers and subheadings in technical documents serve to:",
+      "options": [
+        "Make the document look longer",
+        "Help readers navigate the document and locate specific sections quickly",
+        "Replace topic sentences in body paragraphs",
+        "Indicate which parts the writer found most interesting"
+      ],
+      "answer": "Help readers navigate the document and locate specific sections quickly",
+      "explanation": "Technical document readers often need to find specific information rather than read linearly. Headers create a visual hierarchy and serve as a navigation system, especially in longer documents.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "type": "mc",
+      "question": "Plain language in technical writing means:",
+      "options": [
+        "Avoiding all specialized vocabulary",
+        "Using everyday words and clear sentence structure so documents are accessible to the intended reader",
+        "Writing at a fifth-grade level regardless of audience",
+        "Never using graphics or visual aids"
+      ],
+      "answer": "Using everyday words and clear sentence structure so documents are accessible to the intended reader",
+      "explanation": "Plain language does not mean dumbing down — it means eliminating unnecessary jargon, passive constructions, and complexity so the intended reader can understand the document efficiently.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "type": "mc",
+      "question": "The most important thing to do before writing a scholarship essay is to:",
+      "options": [
+        "Look for sample essays online to copy the structure from",
+        "Carefully read and analyze the prompt and research the scholarship organization's mission",
+        "Write a long draft as quickly as possible",
+        "Ask a parent to write a first draft"
+      ],
+      "answer": "Carefully read and analyze the prompt and research the scholarship organization's mission",
+      "explanation": "Scholarship essays must respond directly to the prompt and align with the organization's values. Missing the prompt's actual question — no matter how well-written the response — is the most common and costly mistake.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "type": "mc",
+      "question": "In a scholarship essay, 'demonstrating impact' means:",
+      "options": [
+        "Listing every award you have received",
+        "Using big numbers to impress reviewers",
+        "Providing specific, concrete evidence of the difference your actions made to others or to your community",
+        "Telling the committee you want to change the world"
+      ],
+      "answer": "Providing specific, concrete evidence of the difference your actions made to others or to your community",
+      "explanation": "Scholarship reviewers are looking for evidence of real impact — numbers, stories, and outcomes show that the applicant's activities had genuine effects, not just good intentions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "type": "mc",
+      "question": "A forward-looking statement at the end of a scholarship essay should:",
+      "options": [
+        "Thank the committee for their time",
+        "Repeat the essay's main story",
+        "Connect the applicant's future goals to the scholarship's purpose, showing how the award will help them achieve those goals",
+        "List the other scholarships the applicant has applied for"
+      ],
+      "answer": "Connect the applicant's future goals to the scholarship's purpose, showing how the award will help them achieve those goals",
+      "explanation": "Scholarship committees invest in students they believe will create future impact. A forward-looking close demonstrates that you have a clear vision and that their investment will be meaningful.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "type": "mc",
+      "question": "An audience analysis before writing a scholarship essay involves:",
+      "options": [
+        "Researching who else is applying for the scholarship",
+        "Understanding who the reviewers are, what they value, and what they are looking for in an applicant",
+        "Counting the number of words in the prompt",
+        "Deciding what font to use"
+      ],
+      "answer": "Understanding who the reviewers are, what they value, and what they are looking for in an applicant",
+      "explanation": "Knowing your audience allows you to tailor your message. A scholarship given by a STEM organization calls for a different emphasis than one given by a community arts foundation — even if the prompt wording is similar.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "type": "mc",
+      "question": "Why is using concrete, specific details more effective than vague claims in a scholarship essay?",
+      "options": [
+        "Reviewers prefer longer sentences with more detail",
+        "Specific details are harder to fact-check",
+        "Concrete details prove claims and make the essay memorable; vague claims are forgettable and unprovable",
+        "Scholarship committees require a minimum number of proper nouns"
+      ],
+      "answer": "Concrete details prove claims and make the essay memorable; vague claims are forgettable and unprovable",
+      "explanation": "'I volunteered in my community' is forgettable. 'I tutored twelve third-graders in reading for two years, and seven of them tested above grade level by May' is specific, credible, and memorable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "type": "mc",
+      "question": "A literary analysis thesis is 'arguable' if:",
+      "options": [
+        "It is a fact found in the text",
+        "Another reasonable reader could interpret the text differently and disagree",
+        "The teacher agrees with the interpretation",
+        "It is longer than two sentences"
+      ],
+      "answer": "Another reasonable reader could interpret the text differently and disagree",
+      "explanation": "An arguable thesis takes a position on meaning or technique that is supported by but not self-evident from the text. If no one could disagree with it, it is a statement of fact, not an argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "type": "mc",
+      "question": "In literary analysis, a topic sentence in a body paragraph should:",
+      "options": [
+        "Quote a long passage from the text",
+        "Summarize the events of the chapter",
+        "State the specific claim that paragraph will prove in support of the essay's thesis",
+        "Introduce the author's biography"
+      ],
+      "answer": "State the specific claim that paragraph will prove in support of the essay's thesis",
+      "explanation": "Topic sentences are mini-theses — they announce what the paragraph will argue and how that argument connects to the essay's overall thesis. Every sentence in the paragraph should support this claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "type": "mc",
+      "question": "When integrating a quotation into a literary analysis, the writer should always:",
+      "options": [
+        "Let the quotation speak for itself without any explanation",
+        "Introduce, quote, and then analyze how the quotation supports the paragraph's claim",
+        "Put the quotation in a separate paragraph",
+        "Avoid quotations and only paraphrase"
+      ],
+      "answer": "Introduce, quote, and then analyze how the quotation supports the paragraph's claim",
+      "explanation": "The 'sandwich' method — introduce the quote with context, present it, then analyze its significance — ensures quotations are never 'dropped in' without explanation of how they support the argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "type": "mc",
+      "question": "A secondary source in a literary analysis is:",
+      "options": [
+        "The primary text being analyzed",
+        "A dictionary definition of a word",
+        "A critical essay, scholarly article, or published interpretation about the primary text",
+        "A secondary character in the story"
+      ],
+      "answer": "A critical essay, scholarly article, or published interpretation about the primary text",
+      "explanation": "Secondary sources are works about the primary text — criticism, analysis, and scholarship. They provide critical perspectives that writers can engage with to deepen or complicate their own argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "type": "mc",
+      "question": "The difference between literary analysis and a book report is that literary analysis:",
+      "options": [
+        "Is longer and has more pages",
+        "Focuses on plot summary and character descriptions",
+        "Makes an interpretive argument about meaning and uses textual evidence to support it",
+        "Must include the author's biography"
+      ],
+      "answer": "Makes an interpretive argument about meaning and uses textual evidence to support it",
+      "explanation": "A book report describes what happened. Literary analysis argues about what it means, why it matters, or how it achieves its effects — it is interpretive and argumentative, not descriptive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "type": "mc",
+      "question": "In fiction writing, a 'scene' is best described as:",
+      "options": [
+        "A chapter break in a novel",
+        "A moment rendered in real time with sensory detail and action so the reader feels present",
+        "A description of the setting at the opening of a story",
+        "Any dialogue between characters"
+      ],
+      "answer": "A moment rendered in real time with sensory detail and action so the reader feels present",
+      "explanation": "A scene shows events as they happen, moment by moment — the reader experiences time passing and is immersed in the action. It contrasts with summary, which compresses events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "type": "mc",
+      "question": "Summary in fiction writing is useful for:",
+      "options": [
+        "The most emotionally important moments of the story",
+        "Compressing time and providing background information that does not need to be dramatized in full",
+        "All dialogue between characters",
+        "The climax of the story"
+      ],
+      "answer": "Compressing time and providing background information that does not need to be dramatized in full",
+      "explanation": "Summary moves quickly through events or time that are necessary for understanding but not worth dramatizing in full. Scene is reserved for the most significant moments; summary handles the connective tissue.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "type": "mc",
+      "question": "Flash fiction typically falls within what word count range?",
+      "options": [
+        "50–100 words",
+        "100–1,000 words",
+        "2,000–5,000 words",
+        "10,000–20,000 words"
+      ],
+      "answer": "100–1,000 words",
+      "explanation": "Flash fiction is the term for very short complete stories, typically under 1,000 words. Some definitions are stricter (under 500 or even under 100 words for 'micro fiction'), but the range of 100–1,000 words is broadly accepted.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "type": "mc",
+      "question": "In a workshop peer review, the most useful feedback:",
+      "options": [
+        "Tells the writer whether you personally enjoyed the story",
+        "Points to specific moments on the page where something is or isn't working, using craft vocabulary",
+        "Corrects every spelling and grammar error",
+        "Rewrites the ending the reviewer preferred"
+      ],
+      "answer": "Points to specific moments on the page where something is or isn't working, using craft vocabulary",
+      "explanation": "Craft-based feedback — 'The scene on page 2 slows down because the summary compresses three days into one sentence without any scene' — gives writers specific, actionable information they can use in revision.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "type": "mc",
+      "question": "A protagonist's desire or goal in a flash fiction story is important because:",
+      "options": [
+        "It ensures the story has a happy ending",
+        "It creates the narrative engine — tension arises when something stands between the character and what they want",
+        "It tells readers what genre the story is",
+        "It replaces the need for a setting"
+      ],
+      "answer": "It creates the narrative engine — tension arises when something stands between the character and what they want",
+      "explanation": "Story is driven by desire and obstacle. When a character wants something and faces resistance, tension is created. Without a clear desire, a story has no momentum and feels aimless.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "type": "mc",
+      "question": "A lyric essay is defined primarily by:",
+      "options": [
+        "Strict adherence to the five-paragraph format",
+        "A focus on analyzing song lyrics",
+        "Its associative, non-linear structure that explores a question through braided strands of thought",
+        "A clear argument and refutation of counterarguments"
+      ],
+      "answer": "Its associative, non-linear structure that explores a question through braided strands of thought",
+      "explanation": "The lyric essay is a hybrid genre that combines elements of poetry and personal essay — it moves by association rather than linear logic, circling its subject without delivering a neat answer.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "type": "mc",
+      "question": "'Braiding' in a lyric essay means:",
+      "options": [
+        "Alternating between rhyming and non-rhyming stanzas",
+        "Weaving together two or more distinct strands — a memory, a research fact, a meditation — so they illuminate each other",
+        "Editing out all transitional sentences",
+        "Writing each paragraph in a different voice"
+      ],
+      "answer": "Weaving together two or more distinct strands — a memory, a research fact, a meditation — so they illuminate each other",
+      "explanation": "Braiding is a structural technique where distinct threads of material alternate and interweave, creating meaning through juxtaposition — the strands comment on and enrich each other.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "type": "mc",
+      "question": "A prose poem uses the paragraph form of prose but shares which quality with poetry?",
+      "options": [
+        "Rhyme and meter",
+        "Characters and plot",
+        "Compression, intense imagery, and attention to the music of language",
+        "A clear thesis and supporting evidence"
+      ],
+      "answer": "Compression, intense imagery, and attention to the music of language",
+      "explanation": "Prose poems sacrifice line breaks but retain the poetic qualities of compression (saying much in few words), imagery, and sonic awareness — each sentence carries the weight and care of a poetic line.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "type": "mc",
+      "question": "White space and fragmentation in a lyric essay are used to:",
+      "options": [
+        "Make the essay appear longer",
+        "Create visual interest and signal transitions, pauses, or gaps in thought that are meaningful",
+        "Save the writer from writing additional content",
+        "Replace punctuation"
+      ],
+      "answer": "Create visual interest and signal transitions, pauses, or gaps in thought that are meaningful",
+      "explanation": "In hybrid forms, white space is not emptiness — it is a deliberate formal choice that creates silence, signals a shift in strand or time, and invites readers to make their own connections.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "type": "mc",
+      "question": "A craft annotation on a creative piece serves to:",
+      "options": [
+        "Summarize the piece for the reader",
+        "Explain the writer's intentional formal choices and the reasoning behind them",
+        "Correct errors the writer noticed after submission",
+        "Provide a bibliography of influences"
+      ],
+      "answer": "Explain the writer's intentional formal choices and the reasoning behind them",
+      "explanation": "Craft annotations demonstrate metacognitive awareness — the writer explains why they made specific choices (form, structure, imagery, sentence rhythm), showing that the decisions were deliberate rather than accidental.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "type": "mc",
+      "question": "Content editing addresses which of the following?",
+      "options": [
+        "Spelling and punctuation errors",
+        "Capitalization and formatting",
+        "Structure, argumentation, clarity, pacing, and whether the piece achieves its purpose",
+        "Font size and line spacing"
+      ],
+      "answer": "Structure, argumentation, clarity, pacing, and whether the piece achieves its purpose",
+      "explanation": "Content editing (developmental editing) is a big-picture pass that evaluates whether the piece works as a whole — is the argument compelling? Does the structure serve the content? Is anything missing or extraneous?",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "type": "mc",
+      "question": "Copyediting is best defined as:",
+      "options": [
+        "Completely rewriting a draft to improve it",
+        "A final check for errors in grammar, punctuation, spelling, and consistency",
+        "Evaluating whether the argument is convincing",
+        "Designing the visual layout of a document"
+      ],
+      "answer": "A final check for errors in grammar, punctuation, spelling, and consistency",
+      "explanation": "Copyediting is a surface-level pass that occurs after the content is finalized. It catches mechanical errors — typos, inconsistent capitalization, missing commas, incorrect word forms — without changing meaning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "type": "mc",
+      "question": "A submission cover letter to a literary magazine should include:",
+      "options": [
+        "A detailed summary of every piece in the submission",
+        "A brief, professional introduction of the writer and the work being submitted, following the publication's guidelines",
+        "A list of every previous rejection the writer has received",
+        "A request for the editor's personal email address"
+      ],
+      "answer": "A brief, professional introduction of the writer and the work being submitted, following the publication's guidelines",
+      "explanation": "Literary magazine cover letters are typically brief (75–150 words) — title of piece, genre and word count, one or two relevant biographical notes, and a professional closing. Editors value brevity and professionalism.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "type": "mc",
+      "question": "Tracking changes in a document during the editing process is useful because it:",
+      "options": [
+        "Makes the document longer",
+        "Allows the writer and editor to see every change made and accept or reject each one",
+        "Automatically corrects grammar errors",
+        "Formats the document for publication"
+      ],
+      "answer": "Allows the writer and editor to see every change made and accept or reject each one",
+      "explanation": "Tracked changes create a transparent revision record — the original text is preserved alongside proposed changes so the writer retains final authority over every alteration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "type": "mc",
+      "question": "When researching publications for submitting student work, the most important information to find is:",
+      "options": [
+        "How many subscribers the publication has",
+        "Whether the editor has a social media presence",
+        "The submission guidelines: what genres and lengths they accept, whether they accept student work, and how to format and send submissions",
+        "The publication's founding year"
+      ],
+      "answer": "The submission guidelines: what genres and lengths they accept, whether they accept student work, and how to format and send submissions",
+      "explanation": "Submissions that don't follow a publication's guidelines are rejected immediately without being read. Following submission guidelines precisely is the first test of professionalism a writer faces.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "type": "mc",
+      "question": "The primary purpose of a writing portfolio is to:",
+      "options": [
+        "Collect every assignment completed during the course in one place",
+        "Present a curated selection of work that demonstrates the writer's range, growth, and strongest capabilities",
+        "Show which assignments received the highest grades",
+        "Provide a backup copy of all coursework"
+      ],
+      "answer": "Present a curated selection of work that demonstrates the writer's range, growth, and strongest capabilities",
+      "explanation": "A portfolio is a deliberate, curated argument — it is not a folder of everything. The act of selection itself communicates the writer's judgment about their own strengths and development.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "type": "mc",
+      "question": "A headnote for a portfolio piece serves to:",
+      "options": [
+        "Summarize the plot or argument of the piece",
+        "Briefly explain why the piece was selected and what it demonstrates about the writer's skills or growth",
+        "Provide the grade received on the piece",
+        "List the sources used in the piece"
+      ],
+      "answer": "Briefly explain why the piece was selected and what it demonstrates about the writer's skills or growth",
+      "explanation": "Headnotes frame the reader's experience of each piece — they show the writer's metacognitive awareness by explaining what the piece is meant to demonstrate in the context of the portfolio as a whole.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "type": "mc",
+      "question": "A strong reflective introduction to a portfolio is metacognitive, meaning it:",
+      "options": [
+        "Summarizes the content of each piece in sequence",
+        "Lists all of the skills taught in the course",
+        "Demonstrates the writer's ability to think critically about their own process, growth, and challenges as a writer",
+        "Argues that the portfolio deserves a high grade"
+      ],
+      "answer": "Demonstrates the writer's ability to think critically about their own process, growth, and challenges as a writer",
+      "explanation": "Metacognition is thinking about thinking. A reflective introduction shows self-awareness about the writing process — not just what was done, but how and why, and what the writer learned.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "type": "mc",
+      "question": "When curating a portfolio, selecting pieces that represent 'range' means:",
+      "options": [
+        "Choosing pieces from different months of the school year",
+        "Including pieces of different lengths",
+        "Including pieces that show you can write competently across multiple genres, modes, and purposes",
+        "Selecting pieces with different word counts"
+      ],
+      "answer": "Including pieces that show you can write competently across multiple genres, modes, and purposes",
+      "explanation": "Range demonstrates versatility — that the writer can move between personal essay and rhetorical analysis, between creative fiction and technical writing, adapting voice and approach to different contexts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "type": "mc",
+      "question": "The purpose of a portfolio showcase or presentation is to:",
+      "options": [
+        "Read every piece aloud in full",
+        "Defend and articulate the curation choices and growth demonstrated in the portfolio, communicating its argument to an audience",
+        "Receive a grade from the audience",
+        "Compare your portfolio to classmates' portfolios"
+      ],
+      "answer": "Defend and articulate the curation choices and growth demonstrated in the portfolio, communicating its argument to an audience",
+      "explanation": "A showcase presentation integrates public speaking and writing — the writer communicates not just what the portfolio contains but why those pieces were chosen and what together they demonstrate.",
+      "points": 1
+    }
+  ]
+}

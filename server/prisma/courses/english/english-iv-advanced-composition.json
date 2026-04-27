@@ -1,0 +1,1770 @@
+{
+  "slug": "english-iv-advanced-composition",
+  "name": "English IV - Advanced Composition",
+  "nameZh": "英语四（高级写作）",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "Senior-level advanced composition — college-level analytical and argumentative writing, research synthesis, AP Language-style essays, grammar at the sentence level, and preparation for college writing.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "College-Level Academic Writing",
+      "titleZh": "大学学术写作",
+      "objectives": "Understand the expectations of college-level writing; develop academic voice distinct from casual or high-school writing; construct thesis-driven arguments; recognize genre differences among academic essay types.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/index.html",
+      "readingNote": "Purdue OWL — Academic Writing: Overview of Expectations and Conventions",
+      "videoUrl": "https://www.youtube.com/watch?v=Y5RlAI8YJSE",
+      "videoNote": "Crash Course English Language — Academic Writing and Voice",
+      "video2Url": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:writing-and-language/x0a8c2e5f:style-tone-and-mood/v/style-and-tone-sat-reading",
+      "video2Note": "Khan Academy — Style, Tone, and Academic Voice in Writing",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html",
+      "practiceNote": "Purdue OWL — Establishing Arguments: Thesis Statements and Academic Claims",
+      "assignment": "Write a 500-word reflection comparing a piece of your high-school writing to a college-level sample provided by the instructor. Identify: (1) differences in voice and formality, (2) the quality and specificity of the thesis, (3) use of evidence and reasoning, and (4) three specific changes you would make to the high-school sample to elevate it to college-level writing. Use academic voice throughout your reflection.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 2,
+      "title": "AP Language: Rhetorical Analysis",
+      "titleZh": "AP语言：修辞分析",
+      "objectives": "Apply the SOAPSTone framework (Speaker, Occasion, Audience, Purpose, Subject, Tone) to analyze nonfiction texts; identify and explain rhetorical strategies including ethos, pathos, logos, and stylistic devices; write a timed rhetorical analysis essay.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_rhetoric/index.html",
+      "readingNote": "Purdue OWL — Writing About Rhetoric: Rhetorical Analysis Guide",
+      "videoUrl": "https://www.youtube.com/watch?v=BdvSBpBIFuU",
+      "videoNote": "Crash Course English Language — Rhetorical Analysis and Persuasion",
+      "video2Url": "https://apclassroom.collegeboard.org/8/home",
+      "video2Note": "AP Classroom College Board — AP Language and Composition: Rhetorical Analysis Unit",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/ap-english-language/x5c3f3b0f8e3a5c1c:foundations-of-ap-english-language/x5c3f3b0f8e3a5c1c:rhetorical-situation/a/the-rhetorical-situation",
+      "practiceNote": "Khan Academy AP English Language — The Rhetorical Situation and SOAPSTone",
+      "assignment": "Select one of the provided AP Language nonfiction passages (e.g., a presidential speech, an editorial, or a literary essay). Complete a SOAPSTone chart, then write a 400–500 word timed rhetorical analysis essay that identifies the author's purpose, audience, and at least three specific rhetorical strategies, explaining how each contributes to the argument. Follow the AP essay format: introduction with defensible thesis, body paragraphs with evidence and commentary, conclusion.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 3,
+      "title": "AP Language: Argumentation",
+      "titleZh": "AP语言：论证写作",
+      "objectives": "Construct a clear line of reasoning to support a complex argument; qualify claims with appropriate concessions; write effective rebuttals; craft nuanced argumentation that acknowledges complexity and avoids oversimplification.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html",
+      "readingNote": "Purdue OWL — Establishing Arguments: Claim, Evidence, and Reasoning",
+      "videoUrl": "https://www.youtube.com/watch?v=eWULMONvKBk",
+      "videoNote": "Crash Course English Language — Argumentation and Line of Reasoning",
+      "video2Url": "https://apclassroom.collegeboard.org/8/home",
+      "video2Note": "AP Classroom College Board — AP Language and Composition: Argumentation Unit",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/ap-english-language/x5c3f3b0f8e3a5c1c:foundations-of-ap-english-language/x5c3f3b0f8e3a5c1c:claims-and-evidence/a/claims-and-evidence",
+      "practiceNote": "Khan Academy AP English Language — Claims, Evidence, and Argumentation",
+      "assignment": "Write a 500–600 word AP-style argument essay responding to the following prompt: 'To what extent should individuals prioritize personal success over collective well-being?' Develop a defensible thesis, construct a clear line of reasoning across at least three body paragraphs, qualify your claim in at least one place, and include a paragraph that addresses and rebuts the strongest counterargument. Underline your thesis and circle each qualifying word or phrase.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 4,
+      "title": "AP Language: Synthesis Essay",
+      "titleZh": "AP语言：综合写作",
+      "objectives": "Read and synthesize six or more sources to support an original argument; enter a scholarly conversation by responding to multiple perspectives; cite sources within an AP synthesis essay using proper attribution; avoid over-reliance on any single source.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/synthesis/index.html",
+      "readingNote": "Purdue OWL — Writing a Synthesis: Entering the Scholarly Conversation",
+      "videoUrl": "https://www.youtube.com/watch?v=LJE0Y8t5h3Q",
+      "videoNote": "Crash Course English Language — The Synthesis Essay: Combining Sources",
+      "video2Url": "https://apclassroom.collegeboard.org/8/home",
+      "video2Note": "AP Classroom College Board — AP Language and Composition: Synthesis Essay Unit",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/ap-english-language/x5c3f3b0f8e3a5c1c:foundations-of-ap-english-language/x5c3f3b0f8e3a5c1c:synthesis/a/the-synthesis-essay",
+      "practiceNote": "Khan Academy AP English Language — Synthesis Essay: Strategies and Practice",
+      "assignment": "Using the six provided sources on the topic of artificial intelligence in education, write a 600–700 word synthesis essay arguing your own position. Your essay must reference at least four of the six sources, use at least one direct quotation and two paraphrases with attribution, present a clear argumentative thesis, and demonstrate that you are engaging with multiple perspectives rather than simply summarizing sources. Label each source reference in the margin.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 5,
+      "title": "Grammar for Clarity & Style",
+      "titleZh": "清晰表达与文风语法",
+      "objectives": "Vary sentence syntax for rhetorical effect; revise for concision by eliminating wordiness; apply parallel structure in lists, comparisons, and series; identify and correct common sentence-level errors including dangling modifiers, misplaced modifiers, and faulty parallelism.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/parallel_structure.html",
+      "readingNote": "Purdue OWL — Parallel Structure: Rules and Examples",
+      "videoUrl": "https://www.youtube.com/watch?v=RFqNkFRnCFo",
+      "videoNote": "Crash Course English Language — Sentence Style, Clarity, and Concision",
+      "video2Url": "https://www.khanacademy.org/humanities/grammar/syntax-sentences-and-clauses/parallel-structure/v/parallel-structure-syntax-khan-academy",
+      "video2Note": "Khan Academy — Parallel Structure in Writing",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/grammar/conciseness/index.html",
+      "practiceNote": "Purdue OWL — Conciseness: Eliminating Wordiness and Redundancy",
+      "assignment": "Complete four style-editing tasks: (1) Rewrite ten provided wordy sentences to be concise without losing meaning. (2) Correct eight sentences with faulty parallel structure. (3) Identify and fix six dangling or misplaced modifiers. (4) Take one of your previous essays and revise two paragraphs for syntax variety — ensure you use at least one short sentence (under 10 words), one complex sentence, and one sentence with an embedded clause in each paragraph. Annotate every change you make.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 6,
+      "title": "Academic Research: Advanced",
+      "titleZh": "高级学术研究",
+      "objectives": "Distinguish primary from secondary sources; locate peer-reviewed journal articles using academic databases; evaluate sources using advanced SIFT and lateral reading strategies; develop a focused research question that leads to an argumentative thesis.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/index.html",
+      "readingNote": "Purdue OWL — Conducting Research: Finding Primary and Secondary Sources",
+      "videoUrl": "https://www.youtube.com/watch?v=SkOPMBvBkgM",
+      "videoNote": "Crash Course — Navigating Digital Information: Lateral Reading and Source Verification",
+      "video2Url": "https://www.youtube.com/watch?v=unFsl6THsq8",
+      "video2Note": "Crash Course — Evaluating Sources with the SIFT Method",
+      "practiceUrl": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/research_overview/index.html",
+      "practiceNote": "Purdue OWL — Research Overview: Developing a Research Question and Search Strategy",
+      "assignment": "Select a topic of your choice for your Module 13 research paper. (1) Write a focused research question and explain how it differs from a topic. (2) Locate three peer-reviewed articles using Google Scholar or JSTOR — screenshot the database search and record your search terms. (3) For each article, complete a source evaluation form: title, author credentials, publication, date, relevance, bias assessment using lateral reading. (4) Write a preliminary thesis statement based on what you have found so far.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 7,
+      "title": "Citation & Academic Integrity",
+      "titleZh": "引用与学术诚信",
+      "objectives": "Apply APA, MLA, and Chicago citation formats for common source types; distinguish paraphrase from direct quotation and use both correctly; understand what constitutes plagiarism including patchwriting; understand the ethical and practical importance of academic integrity.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/using_research/avoiding_plagiarism/index.html",
+      "readingNote": "Purdue OWL — Avoiding Plagiarism: Quoting, Paraphrasing, and Summarizing",
+      "videoUrl": "https://www.youtube.com/watch?v=ySxnIXnSN6k",
+      "videoNote": "Crash Course — Academic Integrity and Avoiding Plagiarism",
+      "video2Url": "https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/index.html",
+      "video2Note": "Purdue OWL — APA 7th Edition: Formatting and Citation Guide",
+      "practiceUrl": "https://owl.purdue.edu/owl/research_and_citation/chicago_manual_17th_edition/index.html",
+      "practiceNote": "Purdue OWL — Chicago Manual of Style 17th Edition: Notes and Bibliography",
+      "assignment": "Using the same source (a provided journal article excerpt), complete three citation tasks: (1) Create a full citation for the article in MLA, APA, and Chicago format. (2) Write one paragraph that quotes directly from the source with correct in-text citation in each style. (3) Write a second paragraph that paraphrases the same ideas with correct in-text citation in each style. (4) In two sentences each, define patchwriting and explain why it is considered a form of plagiarism even when the writer does not intend to plagiarize.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 8,
+      "title": "The Analytical Essay",
+      "titleZh": "分析性论文",
+      "objectives": "Write a college-level literary or cultural analysis essay with a complex, arguable thesis; use textual evidence strategically to support claims; analyze rather than summarize; develop multi-paragraph arguments with clear topic sentences and transitions.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html",
+      "readingNote": "Purdue OWL — Writing About Literature: The Literary Analysis Essay",
+      "videoUrl": "https://www.youtube.com/watch?v=Y9j4EQm3--c",
+      "videoNote": "Crash Course Literature — Writing the Literary Analysis Essay",
+      "video2Url": "https://www.khanacademy.org/test-prep/ap-english-literature/x4c3be640f7:ap-lit-reading-and-writing-skills/x4c3be640f7:writing-about-literature/v/writing-about-literature-khan-academy",
+      "video2Note": "Khan Academy — Writing About Literature: Analysis vs. Summary",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html",
+      "practiceNote": "Purdue OWL — Writing About Fiction: Close Reading and Argument",
+      "assignment": "Write a 600–750 word analytical essay on a literary or cultural text of your choice (a short story, poem, film, advertisement, or news media piece). Your essay must: (1) open with a hook and a complex, arguable thesis that makes a claim about how the text works or what it means, (2) include three body paragraphs each with a topic sentence, embedded evidence (quote or detail), analysis (not summary), and a transition, and (3) conclude by reflecting on the broader significance of your argument. Do not retell the plot — every sentence must analyze.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 9,
+      "title": "The Personal Statement (College App)",
+      "titleZh": "个人陈述（大学申请）",
+      "objectives": "Understand the purpose and audience of the college application personal statement; apply principles of authentic voice, specificity, and meaningful reflection; use narrative techniques within a nonfiction form; revise through multiple drafts toward a polished final statement.",
+      "readingUrl": "https://owl.purdue.edu/owl/job_application_materials/personal_statements/index.html",
+      "readingNote": "Purdue OWL — Writing Personal Statements: Purpose, Structure, and Strategy",
+      "videoUrl": "https://www.youtube.com/watch?v=Fkz2PiJnZPg",
+      "videoNote": "TED-Ed — How to Write a Great College Application Essay",
+      "video2Url": "https://www.khanacademy.org/college-careers-more/college-admissions/making-the-most-of-your-college-application/college-application-essays-a/a/the-college-essay",
+      "video2Note": "Khan Academy College Admissions — Writing the College Essay: Strategy and Authenticity",
+      "practiceUrl": "https://apclassroom.collegeboard.org/8/home",
+      "practiceNote": "AP Classroom — AP Language: Narrative Techniques for Nonfiction Writing",
+      "assignment": "Write a complete personal statement of 500–650 words responding to one of the current Common App prompts (provided by instructor). Draft 1: freewrite with no editing for authenticity. Draft 2: revise for structure — ensure a compelling opening, a clear central insight or theme, specific details (not generalizations), and a conclusion that circles back to the opening. Draft 3: revise for voice and language — every sentence should sound like you. Submit all three drafts with a one-paragraph reflection on how your essay changed across drafts.",
+      "estimatedHrs": 6.0
+    },
+    {
+      "order": 10,
+      "title": "Comparative Analysis Across Texts",
+      "titleZh": "跨文本比较分析",
+      "objectives": "Compare and contrast arguments, styles, and historical perspectives across two or more texts; identify points of agreement, disagreement, and complexity between authors; write a comparative thesis that addresses both texts simultaneously.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/index.html",
+      "readingNote": "Purdue OWL — Comparison and Contrast Essays: Organization and Thesis",
+      "videoUrl": "https://www.youtube.com/watch?v=lGGD6E1VG7k",
+      "videoNote": "Crash Course English Language — Comparative Analysis: Writing Across Texts",
+      "video2Url": "https://www.khanacademy.org/test-prep/ap-english-language/x5c3f3b0f8e3a5c1c:foundations-of-ap-english-language/x5c3f3b0f8e3a5c1c:synthesis/a/comparing-across-texts",
+      "video2Note": "Khan Academy AP English Language — Comparing Arguments and Perspectives Across Texts",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/synthesis/index.html",
+      "practiceNote": "Purdue OWL — Synthesis and Comparison: Integrating Multiple Sources into an Argument",
+      "assignment": "Read the two provided nonfiction essays on a shared topic (e.g., education, technology, justice). Write a 500–600 word comparative analysis essay. Your thesis must make a claim about both texts simultaneously (not just one at a time). Use a point-by-point organizational structure and address: (1) how each author constructs their argument, (2) where the texts agree and disagree, and (3) which argument you find more persuasive and why. Cite both texts throughout.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 11,
+      "title": "Writing Across Disciplines",
+      "titleZh": "跨学科写作",
+      "objectives": "Recognize and apply the genre conventions of academic writing in science (lab reports, abstracts), social science (analytical essays with APA citations), and humanities (literary analysis, MLA); adapt vocabulary, evidence type, and tone to disciplinary expectations.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/index.html",
+      "readingNote": "Purdue OWL — Subject-Specific Writing: Writing Across the Disciplines",
+      "videoUrl": "https://www.youtube.com/watch?v=QpBTM3bRBOM",
+      "videoNote": "Crash Course Study Skills — Writing for Different Academic Disciplines",
+      "video2Url": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:writing-and-language/x0a8c2e5f:effective-language-use/v/precision-and-concision-sat-writing",
+      "video2Note": "Khan Academy — Precision and Concision: Writing for Academic Audiences",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_the_social_sciences/index.html",
+      "practiceNote": "Purdue OWL — Writing in the Social Sciences: APA Format and Genre Conventions",
+      "assignment": "Complete three short writing tasks, each in a different disciplinary genre: (1) Write a 200-word abstract for an imaginary science experiment on a topic of your choice — follow the standard format: background, method, results, conclusion. (2) Write a 250-word social science paragraph analyzing a social trend (e.g., smartphone use) using APA in-text citations for two provided sources. (3) Write a 200-word humanities analysis paragraph on a poem or short story using MLA citation. For each task, annotate two genre conventions you are following.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 12,
+      "title": "Peer Review Workshop",
+      "titleZh": "同伴评审工作坊",
+      "objectives": "Provide specific, actionable written feedback on a peer's draft at the levels of argument, evidence, organization, style, and mechanics; receive and interpret feedback constructively; revise a draft purposefully in response to peer comments; understand workshop etiquette and ethics.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/peer_review_workshop/index.html",
+      "readingNote": "Purdue OWL — Peer Review Workshop: Giving and Receiving Feedback",
+      "videoUrl": "https://www.youtube.com/watch?v=8V-crAK2Nak",
+      "videoNote": "TED-Ed — The Writing Process: Why Revision and Feedback Matter",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:the-writing-process/v/revision-strategies",
+      "video2Note": "Khan Academy — Revision Strategies: Using Feedback to Strengthen Writing",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html",
+      "practiceNote": "Purdue OWL — Proofreading and Revision: Strategies for the Final Polish",
+      "assignment": "Bring your Module 8 analytical essay draft to workshop. (1) Exchange drafts with two classmates. (2) Complete the structured peer-review form for each draft, addressing: thesis clarity (is it arguable and specific?), evidence use (quoted and analyzed — not summarized?), organization (do topic sentences connect to the thesis?), style (any sentences unclear or wordy?), and mechanics (patterns of error?). (3) Write a 200-word 'Editor's Letter' to each writer summarizing your feedback. (4) Revise your own essay in response to the feedback you received and submit a one-paragraph reflection explaining which changes you made and why.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 13,
+      "title": "The Research-Based Argument",
+      "titleZh": "基于研究的论证文章",
+      "objectives": "Plan, draft, and revise a sustained 10-page argument paper using academic sources; create an annotated bibliography with evaluative annotations; incorporate sources ethically and effectively; revise across multiple drafts with attention to argument, evidence, and style.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/writing_a_research_paper/index.html",
+      "readingNote": "Purdue OWL — Writing a Research Paper: From Question to Argument",
+      "videoUrl": "https://www.youtube.com/watch?v=5otFmPWs7aQ",
+      "videoNote": "Crash Course — Research Methods: Planning and Drafting a Research Paper",
+      "video2Url": "https://www.youtube.com/watch?v=KKDkNjBhFAw",
+      "video2Note": "Purdue OWL YouTube — Annotated Bibliography: Purpose, Format, and Writing Process",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/annotated_bibliographies/index.html",
+      "practiceNote": "Purdue OWL — Annotated Bibliographies: Examples in MLA, APA, and Chicago",
+      "assignment": "This is a multi-week project. Deliverables: (1) Week 1 — Submit a 1-page research proposal: your topic, research question, preliminary thesis, and list of 5 potential sources. (2) Week 2 — Submit an annotated bibliography of 6–8 sources; each annotation must summarize the source, evaluate its credibility, and explain how you will use it. (3) Week 3 — Submit a detailed outline of your 10-page argument paper. (4) Week 4 — Submit a complete draft (minimum 8 pages) for peer review. (5) Final — Submit your polished 10-page argument paper with a works cited page. Each submission will be reviewed before you proceed to the next stage.",
+      "estimatedHrs": 12.0
+    },
+    {
+      "order": 14,
+      "title": "Senior Portfolio & Reflection",
+      "titleZh": "毕业作品集与反思",
+      "objectives": "Select, curate, and present a portfolio of best writing from the year; write a reflective introduction that articulates growth as a writer; present and defend writing choices to an audience; understand the portfolio as a metacognitive and professional practice.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/index.html",
+      "readingNote": "Purdue OWL — The Writing Process: Reflection and Metacognition in Writing",
+      "videoUrl": "https://www.youtube.com/watch?v=QpBTM3bRBOM",
+      "videoNote": "TED-Ed — The Importance of Self-Reflection in the Writing Process",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:the-writing-process/v/revision-strategies",
+      "video2Note": "Khan Academy — The Writing Process: Revision, Editing, and Metacognition",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/index.html",
+      "practiceNote": "Purdue OWL — Academic Writing: Reflecting on Growth and Development as a Writer",
+      "assignment": "Compile your Senior Writing Portfolio: (1) Select 4–5 pieces of your best writing from this course (from any module), including at least one revised draft showing your revision process. (2) Write a 600–800 word reflective introduction addressed to an academic audience that: identifies your most significant growth as a writer this year, analyzes two specific skills you have developed (with examples from your portfolio), acknowledges one area you are still working to improve, and explains what college-level writing means to you after completing this course. (3) Present your portfolio to the class or a faculty panel in a 5-minute presentation, reading one excerpt and explaining your editorial choices.",
+      "estimatedHrs": 5.0
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes 'academic voice' in college-level writing?",
+      "options": [
+        "Informal, conversational language that connects with a broad audience",
+        "Formal, objective, and precise language that foregrounds ideas over personal feelings",
+        "Passive voice used in every sentence to sound professional",
+        "Vocabulary that is as complex as possible to impress the reader"
+      ],
+      "answer": "Formal, objective, and precise language that foregrounds ideas over personal feelings",
+      "explanation": "Academic voice is characterized by formality, objectivity, and precision. It places emphasis on ideas and evidence rather than on the writer's personal feelings or casual expressions.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "In the SOAPSTone framework, the 'O' stands for Occasion. What does Occasion refer to in rhetorical analysis?",
+      "options": [
+        "The writer's overall opinion on the subject",
+        "The immediate context or event that prompted the text to be written",
+        "The organizational structure of the essay",
+        "The outcome the writer hopes to achieve"
+      ],
+      "answer": "The immediate context or event that prompted the text to be written",
+      "explanation": "Occasion refers to the time, place, and circumstances that motivated the author to write — the immediate rhetorical context. Understanding occasion helps explain why the text exists and shapes interpretation of its purpose.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "A politician cites peer-reviewed medical statistics to support a health policy argument. Which rhetorical appeal does this primarily represent?",
+      "options": ["Pathos", "Ethos", "Logos", "Kairos"],
+      "answer": "Logos",
+      "explanation": "Logos is the appeal to logic and reason, including the use of data, facts, statistics, and research. Citing peer-reviewed studies to support a claim is a classic logos strategy.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is an example of a 'qualified claim' in argumentation?",
+      "options": [
+        "Social media is always harmful to teenagers.",
+        "Social media has no positive effects on young people.",
+        "While social media can provide valuable connection, its unregulated use poses significant mental health risks for teenagers.",
+        "Social media companies must be shut down immediately."
+      ],
+      "answer": "While social media can provide valuable connection, its unregulated use poses significant mental health risks for teenagers.",
+      "explanation": "A qualified claim acknowledges complexity and nuance — it concedes one point ('can provide valuable connection') while still asserting a position ('poses significant mental health risks'). Absolute claims ('always,' 'no positive effects') are unqualified.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "In an AP Language synthesis essay, the primary goal is to:",
+      "options": [
+        "Summarize each of the provided sources in order",
+        "Choose the best source and argue that it is correct",
+        "Develop your own argument using multiple sources as evidence",
+        "Compare and contrast the sources without taking a position"
+      ],
+      "answer": "Develop your own argument using multiple sources as evidence",
+      "explanation": "The synthesis essay requires students to take their own argumentative position and use the provided sources as evidence — not to summarize sources or simply agree with one of them.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following sentences demonstrates faulty parallel structure?",
+      "options": [
+        "She enjoys reading, writing, and hiking.",
+        "The report was thorough, accurate, and it was well-organized.",
+        "He wanted to travel, to learn, and to grow.",
+        "The candidate is intelligent, experienced, and compassionate."
+      ],
+      "answer": "The report was thorough, accurate, and it was well-organized.",
+      "explanation": "Parallel structure requires that items in a series use the same grammatical form. 'Thorough' and 'accurate' are adjectives, but 'it was well-organized' is a clause — breaking the parallel pattern.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "What is the key difference between a primary source and a secondary source?",
+      "options": [
+        "Primary sources are always more credible than secondary sources.",
+        "A primary source is original firsthand evidence; a secondary source analyzes or interprets primary sources.",
+        "Primary sources are from the 19th century; secondary sources are modern.",
+        "A primary source is a book; a secondary source is a website."
+      ],
+      "answer": "A primary source is original firsthand evidence; a secondary source analyzes or interprets primary sources.",
+      "explanation": "Primary sources are original materials (letters, data, speeches, literary texts, experiments). Secondary sources analyze, interpret, or comment on primary sources (literary criticism, history textbooks, review articles).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Which citation format is most commonly used in the humanities (literature, history, philosophy)?",
+      "options": ["APA", "MLA", "Chicago author-date", "IEEE"],
+      "answer": "MLA",
+      "explanation": "MLA (Modern Language Association) format is standard in the humanities. APA is used in the social sciences; Chicago is used in history and some humanities; IEEE is used in engineering.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "'Patchwriting' — changing a few words of the original without truly paraphrasing — is problematic primarily because:",
+      "options": [
+        "It uses too many quotation marks",
+        "It is considered a form of plagiarism even when the source is cited",
+        "It makes the writing too informal",
+        "It violates parallel structure"
+      ],
+      "answer": "It is considered a form of plagiarism even when the source is cited",
+      "explanation": "Patchwriting closely mirrors the original sentence structure with only minor word substitutions. Even with citation, it fails to demonstrate genuine comprehension and is widely considered a form of academic dishonesty.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Which sentence is the most concise revision of: 'Due to the fact that the weather was cold, we decided that we would not go outside'?",
+      "options": [
+        "Because the weather was cold, we decided not to go outside.",
+        "We decided, due to the cold weather, not to go to the outside area.",
+        "Given the fact that it was cold weather, we made the decision to not go outside.",
+        "The cold weather was the reason that we decided we would not go outside."
+      ],
+      "answer": "Because the weather was cold, we decided not to go outside.",
+      "explanation": "'Due to the fact that' is verbose; 'because' conveys the same meaning concisely. 'Would not go outside' is condensed to 'not to go outside.' The revised sentence eliminates redundancy without losing meaning.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The SIFT method for evaluating online sources stands for Stop, Investigate the source, Find better coverage, and:",
+      "options": ["Think about your bias", "Trace claims to their origin", "Test the information", "Talk to an expert"],
+      "answer": "Trace claims to their origin",
+      "explanation": "SIFT = Stop (don't react immediately), Investigate the source (who is behind it?), Find better coverage (look for other reporting), Trace claims (find the original source of the claim). It is a lateral-reading approach to source evaluation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "In a college-level analytical essay, which of the following is the MOST problematic approach?",
+      "options": [
+        "Embedding a quotation with a signal phrase before analyzing it",
+        "Opening body paragraphs with a topic sentence that connects to the thesis",
+        "Retelling the plot of the text as the primary content of body paragraphs",
+        "Qualifying a claim by acknowledging a counterexample"
+      ],
+      "answer": "Retelling the plot of the text as the primary content of body paragraphs",
+      "explanation": "Summary replaces analysis. College-level analytical writing requires interpreting, arguing, and explaining — not retelling. Every body paragraph should analyze how the text works or what it means, not just what happens.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "A dangling modifier is best described as:",
+      "options": [
+        "A modifier placed between a subject and its verb",
+        "An introductory phrase whose implied subject does not match the sentence's actual subject",
+        "A phrase with too many adjectives",
+        "A modifier written in passive voice"
+      ],
+      "answer": "An introductory phrase whose implied subject does not match the sentence's actual subject",
+      "explanation": "A dangling modifier occurs when an introductory phrase implies a subject that is absent or different from the sentence's grammatical subject. Example: 'Running down the hall, the book fell.' (The book cannot run — the modifier dangles.)",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Explain the difference between ethos, pathos, and logos. Give one original example of each as it might appear in a persuasive speech or essay.",
+      "options": null,
+      "answer": "Ethos: appeal to the speaker's credibility or character (e.g., 'As a licensed physician with 20 years of experience, I urge you to follow this treatment plan.'). Pathos: appeal to emotion (e.g., 'Imagine your child going to bed hungry every night — this is the reality for 1 in 6 American children.'). Logos: appeal to logic, data, and reason (e.g., 'A 2023 Stanford study found that students who sleep 8 hours perform 23% better on standardized tests.').",
+      "explanation": "The three classical rhetorical appeals, articulated by Aristotle: ethos (character), pathos (emotion), and logos (logic). Effective argumentation often combines all three.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "What is a 'line of reasoning' in AP Language argumentation, and how does it differ from simply having a thesis?",
+      "options": null,
+      "answer": "A thesis states the writer's position. A line of reasoning is the sequence of logically connected claims that explain WHY the thesis is true. Each body paragraph should introduce one step in the reasoning chain, building toward the thesis rather than presenting isolated or disconnected points. A strong line of reasoning shows that the argument is structured and progressive, not merely a list of examples.",
+      "explanation": "AP Language scoring distinguishes between a thesis (the claim) and the line of reasoning (the logical structure of the argument). A high-scoring essay shows that each step in the argument builds on the previous one.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes the purpose of a thesis statement in a college-level essay?",
+      "options": [
+        "To announce the topic the essay will discuss",
+        "To provide background information for the reader",
+        "To make a specific, arguable claim that the essay will support through evidence and reasoning",
+        "To summarize all the sources the writer consulted"
+      ],
+      "answer": "To make a specific, arguable claim that the essay will support through evidence and reasoning",
+      "explanation": "A thesis makes a specific, debatable claim — not just an announcement of topic or a summary of sources. It establishes what the writer will argue and provides direction for the entire essay.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "In the SOAPSTone framework, 'Tone' refers to:",
+      "options": [
+        "The sound of the text when read aloud",
+        "The author's attitude toward the subject and audience, conveyed through word choice",
+        "The topic sentence of each paragraph",
+        "The number of emotional appeals in the text"
+      ],
+      "answer": "The author's attitude toward the subject and audience, conveyed through word choice",
+      "explanation": "Tone in rhetorical analysis is the author's attitude — sardonic, earnest, urgent, celebratory, etc. It is revealed primarily through diction (word choice) and rhetorical strategies, not simply volume or delivery.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "A writer who opens an essay with a shocking personal anecdote about losing a family member to gun violence before arguing for gun control legislation is primarily using:",
+      "options": ["Logos", "Ethos", "Pathos", "Kairos"],
+      "answer": "Pathos",
+      "explanation": "Opening with an emotionally charged personal narrative is designed to elicit empathy and emotional engagement from the reader — a classic pathos strategy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "In an AP synthesis essay, 'entering the scholarly conversation' means:",
+      "options": [
+        "Agreeing with the majority of sources provided",
+        "Citing every source at least once",
+        "Positioning your own argument in relation to the perspectives expressed across the sources",
+        "Writing about each source in the order it is presented"
+      ],
+      "answer": "Positioning your own argument in relation to the perspectives expressed across the sources",
+      "explanation": "Entering the scholarly conversation means developing your own claim and showing how the sources — some supporting, some complicating, some opposing — relate to your argument. It is dialogic, not merely additive.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is an example of correct parallel structure?",
+      "options": [
+        "She wanted to travel, learning new cultures, and to meet interesting people.",
+        "The policy is efficient, it is fair, and also it is sustainable.",
+        "The program offers mentorship, internships, and networking opportunities.",
+        "He studied diligently, with focus, and he was being persistent."
+      ],
+      "answer": "The program offers mentorship, internships, and networking opportunities.",
+      "explanation": "'Mentorship,' 'internships,' and 'networking opportunities' are all nouns in the same grammatical form — correctly parallel. The other options mix verb forms, clauses, and nouns within a series.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following best describes what peer-reviewed research means?",
+      "options": [
+        "The article was reviewed by popular opinion online",
+        "The article was written collaboratively by multiple authors",
+        "The article was evaluated by other experts in the field before publication",
+        "The article has been cited more than 100 times"
+      ],
+      "answer": "The article was evaluated by other experts in the field before publication",
+      "explanation": "Peer review is a pre-publication process in which independent experts assess the research methodology, findings, and conclusions. It is the academic standard for verifying the credibility and quality of research.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "An APA in-text citation for a quotation from page 47 of a 2021 article by Dr. Kim reads:",
+      "options": [
+        "(Kim 47)",
+        "(Kim, 2021, p. 47)",
+        "(Kim, 2021)",
+        "[Kim, page 47, 2021]"
+      ],
+      "answer": "(Kim, 2021, p. 47)",
+      "explanation": "APA 7th edition in-text citations for direct quotations include: last name, year, and page number with 'p.' separated by commas — (Kim, 2021, p. 47). MLA would be (Kim 47) without year or 'p.'",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Which of the following best characterizes the difference between an analytical essay and a summary?",
+      "options": [
+        "An analytical essay is longer than a summary.",
+        "A summary retells what a text says; an analysis interprets how and why the text works.",
+        "An analytical essay uses fewer quotations than a summary.",
+        "A summary always uses first person; an analytical essay never does."
+      ],
+      "answer": "A summary retells what a text says; an analysis interprets how and why the text works.",
+      "explanation": "Summary recounts the content ('what happened'). Analysis argues about meaning, purpose, technique, or effect ('how does this work, and why does it matter'). College-level essays require analysis, not summary.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "The personal statement differs from an academic analytical essay primarily in that it:",
+      "options": [
+        "Does not require a thesis",
+        "Uses a more personal, authentic voice and narrative structure",
+        "Is always longer than a standard essay",
+        "Requires no revision"
+      ],
+      "answer": "Uses a more personal, authentic voice and narrative structure",
+      "explanation": "The personal statement draws on the applicant's individual voice, experiences, and reflection. While it should still be structured and purposeful, it differs from analytical essays in its personal, narrative quality and audience (admissions readers).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "A comparative analysis essay that uses the 'point-by-point' organizational structure would:",
+      "options": [
+        "Discuss all features of Text A, then all features of Text B",
+        "Alternate between Text A and Text B for each point of comparison",
+        "Summarize both texts and then give the writer's opinion",
+        "Discuss only the differences, not the similarities"
+      ],
+      "answer": "Alternate between Text A and Text B for each point of comparison",
+      "explanation": "Point-by-point organization addresses one feature at a time, discussing both texts within each paragraph. The block method, by contrast, covers all of one text first, then all of the other.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which of the following is a characteristic specific to scientific writing (as opposed to humanities writing)?",
+      "options": [
+        "The use of first-person perspective throughout",
+        "Heavy reliance on close textual quotation",
+        "Passive voice and objective, impersonal tone to describe methods and results",
+        "MLA citation format"
+      ],
+      "answer": "Passive voice and objective, impersonal tone to describe methods and results",
+      "explanation": "Scientific writing traditionally uses passive voice ('the solution was heated') and objective, impersonal tone to emphasize the experiment over the experimenter. Humanities writing uses active voice, first person, and MLA citation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "When giving peer feedback in a writing workshop, the most effective comment is:",
+      "options": [
+        "'This paragraph is confusing.'",
+        "'This paragraph is great!'",
+        "'The topic sentence in paragraph 3 does not clearly connect to your thesis — consider revising it to explicitly state the relationship between privacy concerns and data regulation.'",
+        "'I don't agree with your argument.'"
+      ],
+      "answer": "'The topic sentence in paragraph 3 does not clearly connect to your thesis — consider revising it to explicitly state the relationship between privacy concerns and data regulation.'",
+      "explanation": "Effective peer feedback is specific (identifies the exact location and problem), descriptive (explains what the issue is), and actionable (suggests how to improve). Vague praise or criticism ('confusing,' 'great') gives the writer nothing to work with.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "An annotated bibliography differs from a standard Works Cited page because it:",
+      "options": [
+        "Uses a different citation format",
+        "Lists only primary sources",
+        "Includes a brief evaluative summary after each citation describing the source's content and usefulness",
+        "Is alphabetized differently"
+      ],
+      "answer": "Includes a brief evaluative summary after each citation describing the source's content and usefulness",
+      "explanation": "An annotated bibliography adds a paragraph (the annotation) after each citation that summarizes the source, evaluates its credibility, and explains how it will be used in the research. A standard Works Cited lists only the citations.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "In a senior portfolio's reflective introduction, the primary purpose is to:",
+      "options": [
+        "List every assignment completed during the course",
+        "Argue that all your writing was excellent",
+        "Articulate your growth as a writer, analyze specific skills developed, and explain the choices behind your curation",
+        "Summarize the plot of each piece included in the portfolio"
+      ],
+      "answer": "Articulate your growth as a writer, analyze specific skills developed, and explain the choices behind your curation",
+      "explanation": "The reflective introduction is a metacognitive essay: it demonstrates self-awareness about one's development as a writer by analyzing specific changes, challenges, and growth over the course of the year.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Which AP Language essay type primarily asks students to explain how an author builds an argument?",
+      "options": [
+        "Synthesis essay",
+        "Argumentation essay",
+        "Rhetorical analysis essay",
+        "Personal narrative essay"
+      ],
+      "answer": "Rhetorical analysis essay",
+      "explanation": "The AP Language rhetorical analysis essay asks students to analyze how an author uses rhetorical strategies — appeals, syntax, diction, evidence — to persuade an audience. The argumentation essay asks students to argue their own position; the synthesis essay asks them to use sources.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which of the following research behaviors exemplifies 'lateral reading'?",
+      "options": [
+        "Reading a website thoroughly from top to bottom before evaluating it",
+        "Opening multiple tabs to investigate what other sources say about the website or its author",
+        "Searching only within the website for an 'About Us' page",
+        "Using the website's own references to verify its claims"
+      ],
+      "answer": "Opening multiple tabs to investigate what other sources say about the website or its author",
+      "explanation": "Lateral reading means leaving a site quickly to consult what other credible sites say about it — checking the source against external references rather than trusting the site's self-presentation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "A misplaced modifier makes a sentence ambiguous or unintentionally humorous. Which sentence contains a misplaced modifier?",
+      "options": [
+        "Running late, she called a taxi.",
+        "She served sandwiches to the children on paper plates.",
+        "Because it was raining, we stayed indoors.",
+        "He revised his essay carefully before submitting it."
+      ],
+      "answer": "She served sandwiches to the children on paper plates.",
+      "explanation": "The phrase 'on paper plates' is ambiguous — it seems to modify 'children' rather than 'sandwiches.' The intended meaning (sandwiches on plates) is obscured by the modifier's placement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Writing for social science disciplines most commonly uses which citation style and what kind of evidence?",
+      "options": [
+        "MLA style; close reading of literary texts",
+        "Chicago footnotes; archival primary sources",
+        "APA style; quantitative data, surveys, and peer-reviewed empirical studies",
+        "IEEE style; technical specifications and engineering reports"
+      ],
+      "answer": "APA style; quantitative data, surveys, and peer-reviewed empirical studies",
+      "explanation": "Social sciences (psychology, sociology, economics, political science) use APA style and rely heavily on empirical evidence — data, statistics, research studies, and surveys — rather than literary close reading.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Describe two specific strategies you would use to revise a research paper at the 'argument' level (not grammar or mechanics). Explain why each strategy strengthens the paper.",
+      "options": null,
+      "answer": "Examples: (1) Check that every body paragraph's topic sentence explicitly connects to the thesis — this ensures all evidence is subordinated to the central argument rather than existing as isolated points. (2) Test the 'so what?' of each paragraph — after reading each paragraph, ask whether the analysis explains the significance of the evidence to the argument; if not, add a sentence of explanation. Other valid strategies include: adding or strengthening rebuttals, reviewing the line of reasoning for logical gaps, ensuring the conclusion extends rather than merely restates the thesis.",
+      "explanation": "Argument-level revision focuses on the strength and clarity of the claim, the logic of the reasoning, the quality of evidence use, and the integration of counterarguments — distinct from sentence-level editing.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "What makes a college application personal statement effective? Name three specific qualities and explain each briefly.",
+      "options": null,
+      "answer": "Three key qualities: (1) Specificity — concrete, vivid details rather than vague generalizations make the essay memorable and believable. (2) Authentic voice — the essay should sound genuinely like the applicant, not formal or generic; admissions readers read thousands of essays and notice when voice is forced. (3) Meaningful reflection — the essay should not just narrate an event but explain what the writer learned or how they changed; the 'so what?' is more important than the 'what happened.'",
+      "explanation": "An effective personal statement is specific, authentic, and reflective. It differentiates the applicant through genuine voice and meaningful insight rather than listing achievements or retelling an event without analysis.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is a characteristic of college-level academic writing?",
+      "options": [
+        "Frequent use of slang and contractions",
+        "Thesis-driven argument supported by evidence and analysis",
+        "Personal diary entries and emotional venting",
+        "Plot summaries of assigned readings"
+      ],
+      "answer": "Thesis-driven argument supported by evidence and analysis",
+      "explanation": "College-level writing centers on a defensible thesis, well-chosen evidence, and analytical reasoning. It avoids casual language, unsupported opinion, and summary without argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "type": "mc",
+      "question": "Academic voice is best described as:",
+      "options": [
+        "Using the longest, most complex words available",
+        "Writing in a style that is formal, precise, and idea-centered",
+        "Always writing in passive voice",
+        "Avoiding all first-person pronouns"
+      ],
+      "answer": "Writing in a style that is formal, precise, and idea-centered",
+      "explanation": "Academic voice prioritizes clarity and precision. While it avoids informality, it does not require passive voice or word complexity for its own sake — the goal is rigorous thinking expressed clearly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "type": "mc",
+      "question": "A thesis statement is ineffective if it:",
+      "options": [
+        "Takes a specific, arguable position",
+        "Announces what the essay will do rather than making a claim",
+        "Addresses the complexity of the issue",
+        "Connects clearly to the body paragraphs"
+      ],
+      "answer": "Announces what the essay will do rather than making a claim",
+      "explanation": "A meta-announcement ('This essay will discuss...') is not a thesis. A thesis makes a specific, arguable claim — not a description of the essay's content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "type": "mc",
+      "question": "Genre awareness in academic writing means:",
+      "options": [
+        "Knowing whether to write fiction or nonfiction",
+        "Understanding the conventions, expectations, and purpose of different types of academic writing",
+        "Always following the five-paragraph essay format",
+        "Writing differently on social media versus in a diary"
+      ],
+      "answer": "Understanding the conventions, expectations, and purpose of different types of academic writing",
+      "explanation": "Different academic genres (lab report, literary analysis, argumentative essay, personal statement) have distinct conventions. Genre awareness means adjusting your writing to meet the expectations of the form and audience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "type": "mc",
+      "question": "Which revision most effectively improves the thesis 'Technology affects students in many ways'?",
+      "options": [
+        "Technology has many effects on many students in schools today.",
+        "This essay will argue that technology affects students.",
+        "Unregulated smartphone use in classrooms undermines student focus and should be restricted during instructional time.",
+        "Technology can be good or bad depending on how it is used."
+      ],
+      "answer": "Unregulated smartphone use in classrooms undermines student focus and should be restricted during instructional time.",
+      "explanation": "This thesis narrows the topic (smartphone use in classrooms), makes a specific arguable claim (undermines focus), and proposes a solution (should be restricted). The original is too vague to guide an argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "type": "mc",
+      "question": "In the SOAPSTone framework, 'Speaker' refers to:",
+      "options": [
+        "The loudest character in the text",
+        "The person or persona who is giving voice to the text",
+        "The intended audience of the text",
+        "The main subject of the text"
+      ],
+      "answer": "The person or persona who is giving voice to the text",
+      "explanation": "Speaker is the voice behind the text — who is speaking, what their perspective is, and how their identity or role shapes the message. It is not always the same as the author.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "type": "mc",
+      "question": "A writer who says 'As a Nobel Prize-winning economist, I urge you to consider the data carefully' is primarily using:",
+      "options": ["Logos", "Pathos", "Ethos", "Syntax"],
+      "answer": "Ethos",
+      "explanation": "Citing credentials (Nobel Prize winner) to establish trustworthiness and expertise is an appeal to ethos — the rhetorical strategy based on the speaker's character and authority.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "type": "mc",
+      "question": "The 'Purpose' in SOAPSTone refers to:",
+      "options": [
+        "The grammar rules followed by the writer",
+        "What the writer wants the audience to think, feel, or do as a result of the text",
+        "The publisher of the text",
+        "The number of rhetorical strategies used"
+      ],
+      "answer": "What the writer wants the audience to think, feel, or do as a result of the text",
+      "explanation": "Purpose is the writer's goal — to inform, persuade, entertain, call to action, memorialize, etc. Identifying purpose is central to understanding why specific rhetorical strategies were chosen.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "type": "mc",
+      "question": "A rhetorical analysis essay that earns the highest scores must:",
+      "options": [
+        "Agree with the author's argument",
+        "List every rhetorical device present in the text",
+        "Explain how specific rhetorical choices contribute to the author's purpose",
+        "Summarize the text before analyzing it"
+      ],
+      "answer": "Explain how specific rhetorical choices contribute to the author's purpose",
+      "explanation": "AP scoring rewards analysis of effect and purpose — not mere identification of devices. The essay must explain HOW and WHY each rhetorical choice works to achieve the author's goal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is an example of logos in a speech about climate change?",
+      "options": [
+        "Imagine the world your children will inherit if we do nothing.",
+        "I have dedicated my life to environmental science for thirty years.",
+        "NASA data shows that global average temperatures have risen 1.1 degrees Celsius since the pre-industrial era.",
+        "We must act now before it is too late."
+      ],
+      "answer": "NASA data shows that global average temperatures have risen 1.1 degrees Celsius since the pre-industrial era.",
+      "explanation": "Citing verifiable data from a credible scientific source (NASA) to support a claim is an appeal to logos — reason and evidence. The other options use pathos (imagination/fear), ethos (credentials), or an emotional appeal without evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "type": "mc",
+      "question": "A 'line of reasoning' in an argument is best described as:",
+      "options": [
+        "A single sentence that states the writer's opinion",
+        "The sequence of logically connected claims that explains why the thesis is true",
+        "The list of sources used in the essay",
+        "The counterargument section of the essay"
+      ],
+      "answer": "The sequence of logically connected claims that explains why the thesis is true",
+      "explanation": "A line of reasoning is the logical architecture of an argument — a progression of connected claims, each building toward the thesis, so the reader can follow the writer's thinking step by step.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following best represents a 'qualified claim'?",
+      "options": [
+        "Technology is ruining society.",
+        "Technology has no benefits whatsoever.",
+        "While technology has transformed communication positively, its role in spreading misinformation presents a serious democratic risk.",
+        "Everyone should use technology responsibly."
+      ],
+      "answer": "While technology has transformed communication positively, its role in spreading misinformation presents a serious democratic risk.",
+      "explanation": "A qualified claim acknowledges complexity — it concedes a counterpoint ('transformed communication positively') while still asserting a specific argumentative position. Absolute claims ('ruining society,' 'no benefits') are unqualified.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "type": "mc",
+      "question": "An effective rebuttal in an argument:",
+      "options": [
+        "Simply restates your original thesis",
+        "Ignores the opposing view to avoid confusion",
+        "Acknowledges the counterargument's strongest point and then explains why your argument prevails nonetheless",
+        "Uses emotional language to discredit the opposing side"
+      ],
+      "answer": "Acknowledges the counterargument's strongest point and then explains why your argument prevails nonetheless",
+      "explanation": "A strong rebuttal engages fairly with the opposing view, conceding what is valid, then explains — with reasoning and evidence — why the original argument still holds. Ignoring or dismissing counterarguments weakens credibility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "type": "mc",
+      "question": "Nuanced argumentation means:",
+      "options": [
+        "Taking the most extreme position on an issue to be memorable",
+        "Acknowledging complexity, exceptions, and limitations rather than treating an issue as black-and-white",
+        "Using more vocabulary words per sentence",
+        "Writing longer essays with more body paragraphs"
+      ],
+      "answer": "Acknowledging complexity, exceptions, and limitations rather than treating an issue as black-and-white",
+      "explanation": "Nuanced argumentation recognizes that most issues are complex and avoids oversimplification. It qualifies claims, acknowledges counterexamples, and presents a more sophisticated understanding of the issue.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is the strongest argumentative thesis?",
+      "options": [
+        "There are many arguments for and against lowering the voting age.",
+        "This essay will discuss whether the voting age should be lowered.",
+        "The voting age should be lowered to 16 because adolescents demonstrate sufficient civic knowledge and are directly affected by policy decisions.",
+        "Some people think the voting age should be changed."
+      ],
+      "answer": "The voting age should be lowered to 16 because adolescents demonstrate sufficient civic knowledge and are directly affected by policy decisions.",
+      "explanation": "This thesis makes a specific, arguable claim with stated reasons — the hallmarks of a strong argumentative thesis. It tells the reader what the writer will argue and why, giving the essay clear direction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "type": "mc",
+      "question": "In a synthesis essay, you should reference multiple sources primarily in order to:",
+      "options": [
+        "Show the reader how many sources you found",
+        "Demonstrate that you agree with all the authors",
+        "Support, complicate, or nuance your own argument with evidence from different perspectives",
+        "Fill the required word count"
+      ],
+      "answer": "Support, complicate, or nuance your own argument with evidence from different perspectives",
+      "explanation": "Sources in a synthesis essay serve your argument — they are not ends in themselves. You select and integrate sources to provide evidence, introduce counterpoints, or add complexity to your claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is the most effective way to attribute a source in a synthesis essay?",
+      "options": [
+        "According to Source B, ...",
+        "One source says ...",
+        "As historian Dr. Maria Rodriguez argues in her 2022 study on urban inequality, ...",
+        "Somebody once wrote that ..."
+      ],
+      "answer": "As historian Dr. Maria Rodriguez argues in her 2022 study on urban inequality, ...",
+      "explanation": "Effective attribution identifies the author's name, credentials, and the context of the source. This establishes the ethos of the source and helps the reader evaluate its relevance and credibility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "type": "mc",
+      "question": "Over-reliance on a single source in a synthesis essay is problematic because:",
+      "options": [
+        "It makes citations too complicated",
+        "It suggests the writer has not engaged with the full complexity of the issue and multiple perspectives",
+        "It means the essay will be too long",
+        "It violates APA citation rules"
+      ],
+      "answer": "It suggests the writer has not engaged with the full complexity of the issue and multiple perspectives",
+      "explanation": "Synthesis requires engaging with multiple sources representing different angles on an issue. Over-relying on one source suggests the writer is summarizing rather than synthesizing and has not fully entered the scholarly conversation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "type": "mc",
+      "question": "What distinguishes a synthesis essay from a research report?",
+      "options": [
+        "A synthesis essay uses fewer sources.",
+        "A research report is always longer.",
+        "A synthesis essay develops the writer's own argumentative thesis using sources as evidence, rather than just reporting information.",
+        "A research report must use APA; a synthesis essay uses MLA."
+      ],
+      "answer": "A synthesis essay develops the writer's own argumentative thesis using sources as evidence, rather than just reporting information.",
+      "explanation": "A synthesis essay is argument-driven: the writer takes a position and uses sources to support it. A research report compiles and presents information without necessarily arguing a specific claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "type": "mc",
+      "question": "In a synthesis essay, 'entering the scholarly conversation' means the writer:",
+      "options": [
+        "Agrees with everything the sources say",
+        "Summarizes each source in turn",
+        "Takes a position in relation to the multiple perspectives present in the sources",
+        "Only uses sources that support their argument"
+      ],
+      "answer": "Takes a position in relation to the multiple perspectives present in the sources",
+      "explanation": "Scholarly conversation is dialogic — the writer responds to what others have said by agreeing, disagreeing, qualifying, or extending. A synthesis essay positions the writer's argument within the existing conversation rather than standing apart from it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "type": "mc",
+      "question": "Faulty parallel structure occurs when:",
+      "options": [
+        "A sentence has too many adjectives",
+        "Items in a series or list are in different grammatical forms",
+        "A sentence is too long",
+        "A modifier is placed at the beginning of a sentence"
+      ],
+      "answer": "Items in a series or list are in different grammatical forms",
+      "explanation": "Parallel structure requires consistent grammatical form across items in a list, pair, or series. Mixing verb forms, nouns, and clauses disrupts rhythm and creates confusion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "type": "mc",
+      "question": "Which revision most effectively eliminates wordiness?",
+      "options": [
+        "'At this point in time, it is the case that the situation has changed.'",
+        "'The situation has changed.'",
+        "'The situation, as it currently stands, has undergone a process of change.'",
+        "'Due to the fact that things change, the situation has now changed.'"
+      ],
+      "answer": "'The situation has changed.'",
+      "explanation": "Wordiness is any language that adds words without adding meaning. 'The situation has changed' states the same meaning as all the other options in four words rather than twelve or more.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "type": "mc",
+      "question": "Which sentence contains a dangling modifier?",
+      "options": [
+        "After finishing the report, she submitted it online.",
+        "Running through the rain, the umbrella was left behind.",
+        "Exhausted from the hike, he sat down to rest.",
+        "Although nervous, the student delivered a strong presentation."
+      ],
+      "answer": "Running through the rain, the umbrella was left behind.",
+      "explanation": "The introductory phrase 'Running through the rain' implies a human subject, but the grammatical subject of the sentence is 'the umbrella' — which cannot run. The modifier dangles because no logical subject is present.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "type": "mc",
+      "question": "Varying sentence syntax in a paragraph primarily helps the writer:",
+      "options": [
+        "Use more vocabulary words",
+        "Avoid citations",
+        "Create rhythm and emphasize key ideas through contrast in sentence length and structure",
+        "Make the essay easier to outline"
+      ],
+      "answer": "Create rhythm and emphasize key ideas through contrast in sentence length and structure",
+      "explanation": "Mixing short, punchy sentences with longer, complex ones creates rhetorical rhythm. A short sentence after a long one creates emphasis. Uniform sentence structure produces monotony.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "type": "mc",
+      "question": "Which sentence is grammatically parallel?",
+      "options": [
+        "She loves to swim, hiking, and to cook.",
+        "He was known for his humor, his generosity, and being kind.",
+        "The best leaders listen carefully, communicate clearly, and act decisively.",
+        "Her hobbies include painting, to write, and she also jogs."
+      ],
+      "answer": "The best leaders listen carefully, communicate clearly, and act decisively.",
+      "explanation": "Three parallel verb phrases — 'listen carefully,' 'communicate clearly,' 'act decisively' — maintain consistent grammatical form. The other options mix infinitives, gerunds, and clauses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "type": "mc",
+      "question": "A primary source is best described as:",
+      "options": [
+        "A source published before 1900",
+        "The most important source in your bibliography",
+        "Original, firsthand evidence such as a diary, speech, experiment, or work of literature",
+        "A source written by a professor or expert"
+      ],
+      "answer": "Original, firsthand evidence such as a diary, speech, experiment, or work of literature",
+      "explanation": "Primary sources are original materials created at the time of the event or by direct participants — diaries, speeches, photographs, data, novels, lab results. Secondary sources interpret or analyze primary sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is a secondary source?",
+      "options": [
+        "Martin Luther King Jr.'s 'Letter from Birmingham Jail'",
+        "Raw data from a 2020 census survey",
+        "A historian's analysis of the causes of the Civil War",
+        "A photograph taken at the March on Washington in 1963"
+      ],
+      "answer": "A historian's analysis of the causes of the Civil War",
+      "explanation": "A secondary source analyzes, interprets, or discusses primary sources. The historian's analysis evaluates and synthesizes primary evidence (documents, records, letters) rather than being a firsthand account.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "type": "mc",
+      "question": "Which of the following is an example of using lateral reading to evaluate a source?",
+      "options": [
+        "Reading the entire article to see if it seems credible",
+        "Checking the 'About Us' page of the website",
+        "Opening other websites to see what they say about the source or its publisher",
+        "Counting the number of citations in the article"
+      ],
+      "answer": "Opening other websites to see what they say about the source or its publisher",
+      "explanation": "Lateral reading means leaving the source immediately to consult external sites and check what others say about the publisher, author, or claim — rather than relying only on what the source says about itself.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "type": "mc",
+      "question": "A strong research question is one that:",
+      "options": [
+        "Can be answered with a simple 'yes' or 'no'",
+        "Is broad enough to cover every aspect of a topic",
+        "Is focused, debatable, and leads to genuine inquiry and argumentation",
+        "Asks only for a definition of a term"
+      ],
+      "answer": "Is focused, debatable, and leads to genuine inquiry and argumentation",
+      "explanation": "A strong research question is specific and open-ended — it cannot be answered with a dictionary lookup or a yes/no and it points toward a genuine arguable thesis rather than a mere report.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is the most reliable source for peer-reviewed academic research?",
+      "options": [
+        "Wikipedia",
+        "A company's press release",
+        "A personal blog with citations",
+        "JSTOR or Google Scholar"
+      ],
+      "answer": "JSTOR or Google Scholar",
+      "explanation": "JSTOR and Google Scholar provide access to peer-reviewed journal articles and academic publications. Wikipedia, press releases, and blogs are not peer-reviewed and should not be used as primary academic sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following correctly lists the three major citation styles and their primary discipline?",
+      "options": [
+        "MLA — sciences; APA — humanities; Chicago — social sciences",
+        "MLA — humanities; APA — social sciences; Chicago — history and some humanities",
+        "APA — humanities; Chicago — sciences; MLA — social sciences",
+        "Chicago — sciences; MLA — education; APA — literature"
+      ],
+      "answer": "MLA — humanities; APA — social sciences; Chicago — history and some humanities",
+      "explanation": "MLA is standard in English and the humanities; APA is used in psychology, education, and the social sciences; Chicago style is common in history and some humanities disciplines.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "type": "mc",
+      "question": "What is 'patchwriting' and why is it a problem?",
+      "options": [
+        "Writing that uses too many metaphors; it makes writing hard to follow",
+        "Changing only a few words from the original source while keeping the same sentence structure; it is a form of plagiarism",
+        "Writing that patches together unrelated arguments; it weakens the essay",
+        "Using too many sources in one paragraph; it is a citation error"
+      ],
+      "answer": "Changing only a few words from the original source while keeping the same sentence structure; it is a form of plagiarism",
+      "explanation": "Patchwriting is close paraphrase that merely substitutes synonyms without genuine restatement. Because it does not demonstrate real comprehension, it is considered academically dishonest even when the source is cited.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "type": "mc",
+      "question": "Which APA in-text citation is correctly formatted for a paraphrase from a 2019 article by Park?",
+      "options": [
+        "(Park, 2019)",
+        "(Park 2019)",
+        "(Park, p. 2019)",
+        "[Park 2019]"
+      ],
+      "answer": "(Park, 2019)",
+      "explanation": "APA paraphrase citations include last name and year in parentheses separated by a comma — (Park, 2019). A page number (p. X) is recommended but optional for paraphrases; it is required for direct quotations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "type": "mc",
+      "question": "Academic integrity in writing requires that you:",
+      "options": [
+        "Only cite sources in the bibliography, not in the text",
+        "Cite all ideas, data, and language that are not your own, whether quoted or paraphrased",
+        "Rewrite every source completely so no citation is needed",
+        "Cite only sources you disagree with"
+      ],
+      "answer": "Cite all ideas, data, and language that are not your own, whether quoted or paraphrased",
+      "explanation": "Academic integrity requires giving credit whenever you use someone else's intellectual work — ideas, data, language, or findings — regardless of whether you quote or paraphrase.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "type": "mc",
+      "question": "Common knowledge is information that:",
+      "options": [
+        "Can be found on Wikipedia",
+        "Is widely known and undisputed, requiring no citation",
+        "Comes from a personal interview",
+        "Has been cited more than 50 times"
+      ],
+      "answer": "Is widely known and undisputed, requiring no citation",
+      "explanation": "Common knowledge — facts that are general knowledge (e.g., 'World War II ended in 1945') — does not need a citation. If you are unsure whether something qualifies, cite it to be safe.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "type": "mc",
+      "question": "The key difference between a summary and an analysis in an essay is:",
+      "options": [
+        "A summary is longer than an analysis.",
+        "An analysis restates what a text says; a summary interprets what it means.",
+        "A summary retells content; an analysis interprets meaning, technique, or effect.",
+        "Only a summary requires evidence from the text."
+      ],
+      "answer": "A summary retells content; an analysis interprets meaning, technique, or effect.",
+      "explanation": "Summary answers 'what?' Analysis answers 'how?' and 'why?' In college-level analytical writing, every body paragraph should analyze — not just retell — the text.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "type": "mc",
+      "question": "A 'complex, arguable thesis' for a literary analysis essay means the thesis:",
+      "options": [
+        "Uses very difficult vocabulary",
+        "Makes a debatable interpretive claim about how or why the text works",
+        "Summarizes the entire text in one sentence",
+        "States a fact that everyone would agree with"
+      ],
+      "answer": "Makes a debatable interpretive claim about how or why the text works",
+      "explanation": "An arguable thesis takes a position that is open to debate and requires evidence to support it. A 'complex' thesis acknowledges nuance or makes a non-obvious claim — not just a plot statement or a fact.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "type": "mc",
+      "question": "When you 'embed' a quotation in an analytical paragraph, you should:",
+      "options": [
+        "Place it in the middle of a paragraph with no introduction",
+        "Drop it in as a standalone sentence without analysis",
+        "Introduce it with a signal phrase, quote it accurately, and immediately analyze its significance",
+        "Paraphrase it after writing it out word for word"
+      ],
+      "answer": "Introduce it with a signal phrase, quote it accurately, and immediately analyze its significance",
+      "explanation": "Effective quotation embedding = signal phrase (who says it and in what context) + accurate quotation + analysis of what the quotation reveals or demonstrates. Dropped quotes without analysis weaken an essay.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "type": "mc",
+      "question": "The topic sentence of a body paragraph in an analytical essay should:",
+      "options": [
+        "Introduce a new unrelated idea",
+        "Summarize the previous paragraph",
+        "State the paragraph's central claim and show how it connects to the essay's thesis",
+        "Begin with a quotation from the text"
+      ],
+      "answer": "State the paragraph's central claim and show how it connects to the essay's thesis",
+      "explanation": "Topic sentences function as mini-theses for each paragraph. They introduce the paragraph's argument and signal to the reader how this point supports the essay's overall thesis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "type": "mc",
+      "question": "A literary analysis essay on a film, advertisement, or news article is appropriate because:",
+      "options": [
+        "These texts are easier to analyze than books.",
+        "Any text — written, visual, or multimodal — can be analyzed for how it constructs meaning.",
+        "Only novels can be analyzed in English class.",
+        "Films do not require citation."
+      ],
+      "answer": "Any text — written, visual, or multimodal — can be analyzed for how it constructs meaning.",
+      "explanation": "The concept of 'text' in college-level analysis extends to any artifact that communicates meaning — films, ads, photographs, websites, speeches. Analytical skills transfer across media.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "type": "mc",
+      "question": "A college application personal statement primarily differs from an academic essay because it:",
+      "options": [
+        "Does not need an argument or central idea",
+        "Is written in first person with personal, authentic voice and narrative structure",
+        "Should use formal academic vocabulary throughout",
+        "Must cite at least three sources"
+      ],
+      "answer": "Is written in first person with personal, authentic voice and narrative structure",
+      "explanation": "The personal statement uses first-person narration and is grounded in personal experience and reflection. While it should have a clear purpose and structure, it is a narrative nonfiction genre, not a formal academic argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "type": "mc",
+      "question": "Which Common App prompt asks students to reflect on an obstacle or failure?",
+      "options": [
+        "Describe a problem you've solved or a problem you'd like to solve.",
+        "The lessons we take from obstacles we encounter can be fundamental to later success.",
+        "Discuss an accomplishment, event, or realization that sparked a period of personal growth.",
+        "Share an essay on any topic of your choice."
+      ],
+      "answer": "The lessons we take from obstacles we encounter can be fundamental to later success.",
+      "explanation": "This is one of the official Common App prompts specifically about obstacles, challenges, and failure — asking students to reflect on what they learned rather than simply what went wrong.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "type": "mc",
+      "question": "Specificity is important in a personal statement because:",
+      "options": [
+        "It makes the essay longer and more impressive.",
+        "Admissions readers are looking for a required word count.",
+        "Concrete, specific details make the essay vivid and memorable; vague generalizations are forgettable.",
+        "It allows the writer to avoid a thesis."
+      ],
+      "answer": "Concrete, specific details make the essay vivid and memorable; vague generalizations are forgettable.",
+      "explanation": "Admissions readers read thousands of essays. Specific details — a particular moment, a specific conversation, a vivid sensory image — distinguish a compelling essay from a generic one.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "type": "mc",
+      "question": "The 'so what?' of a personal statement refers to:",
+      "options": [
+        "Why the topic is relevant to current events",
+        "The word count requirement",
+        "The reflection or insight: what did this experience teach you and why does it matter?",
+        "The grammatical correctness of the essay"
+      ],
+      "answer": "The reflection or insight: what did this experience teach you and why does it matter?",
+      "explanation": "The 'so what?' is the analytical heart of the personal statement. Narrating an event is not enough — the essay must show what the writer learned, how they changed, or what the experience reveals about who they are.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "type": "mc",
+      "question": "Multiple drafts are important in the personal statement writing process primarily because:",
+      "options": [
+        "The first draft is always wrong and must be completely rewritten.",
+        "Revision allows the writer to move from finding authentic content to refining voice, structure, and language.",
+        "Admissions committees require evidence of drafting.",
+        "Each draft must use a different prompt."
+      ],
+      "answer": "Revision allows the writer to move from finding authentic content to refining voice, structure, and language.",
+      "explanation": "The drafting process for a personal statement moves from freewriting and discovering what you truly want to say, through structural revision, to fine-tuning voice and language. Each draft serves a different purpose in the development of the final essay.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "type": "mc",
+      "question": "A comparative thesis statement must:",
+      "options": [
+        "Summarize both texts separately",
+        "Make a claim about only one of the two texts",
+        "Address both texts simultaneously in a single arguable claim",
+        "List every similarity and difference between the texts"
+      ],
+      "answer": "Address both texts simultaneously in a single arguable claim",
+      "explanation": "A comparative thesis makes a claim about the relationship between two texts — not a separate summary of each. It should articulate what the comparison reveals or argues.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "type": "mc",
+      "question": "The 'point-by-point' method of organization in a comparative essay means:",
+      "options": [
+        "Discussing all of Text A, then all of Text B",
+        "Alternating between both texts within each paragraph organized around a single point of comparison",
+        "Listing every point of comparison in bullet form",
+        "Writing one paragraph per text and then a comparison paragraph"
+      ],
+      "answer": "Alternating between both texts within each paragraph organized around a single point of comparison",
+      "explanation": "Point-by-point organization structures each paragraph around one feature (argument style, use of evidence, historical context, etc.) and discusses both texts within that paragraph — keeping comparisons tight and clear.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "type": "mc",
+      "question": "When two authors 'agree in spirit but disagree on method,' a comparative essay should:",
+      "options": [
+        "Conclude that both are saying the same thing",
+        "Ignore the methodological difference to simplify the comparison",
+        "Acknowledge the shared concern while analyzing the significance of their different approaches",
+        "Argue that one author is right and the other is wrong"
+      ],
+      "answer": "Acknowledge the shared concern while analyzing the significance of their different approaches",
+      "explanation": "Sophisticated comparative analysis explores nuance — agreement and disagreement are rarely absolute. Recognizing partial agreement alongside meaningful difference demonstrates analytical depth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "type": "mc",
+      "question": "When comparing texts from different historical periods on the same topic, what additional factor must the writer consider?",
+      "options": [
+        "The length of each text",
+        "The number of authors",
+        "The historical and cultural context in which each text was produced and how it shapes the argument",
+        "Whether both texts use the same citation style"
+      ],
+      "answer": "The historical and cultural context in which each text was produced and how it shapes the argument",
+      "explanation": "Comparative analysis of texts from different eras requires contextual awareness — understanding how historical circumstances shaped the author's argument, audience, and choices, and how that differs across time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "type": "mc",
+      "question": "Which sentence is the most effective comparative thesis?",
+      "options": [
+        "Both Orwell and Huxley wrote dystopian novels.",
+        "1984 is better than Brave New World.",
+        "While both Orwell and Huxley warn against totalitarian control, Orwell emphasizes external oppression through surveillance while Huxley depicts a more insidious threat through pleasure and conditioning.",
+        "Orwell and Huxley have some similarities and some differences."
+      ],
+      "answer": "While both Orwell and Huxley warn against totalitarian control, Orwell emphasizes external oppression through surveillance while Huxley depicts a more insidious threat through pleasure and conditioning.",
+      "explanation": "This thesis acknowledges shared ground, then draws a specific, analytical distinction between the two works — making an arguable comparative claim that could structure a comparative essay.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "type": "mc",
+      "question": "Which genre convention distinguishes scientific writing from humanities writing?",
+      "options": [
+        "Scientific writing uses metaphors; humanities writing uses data.",
+        "Scientific writing uses passive voice and objective tone to describe methods; humanities writing uses active voice and interpretive argument.",
+        "Scientific writing always uses footnotes; humanities writing never does.",
+        "Humanities writing is shorter than scientific writing."
+      ],
+      "answer": "Scientific writing uses passive voice and objective tone to describe methods; humanities writing uses active voice and interpretive argument.",
+      "explanation": "Scientific writing foregrounds the experiment over the experimenter ('the solution was heated') and is objective. Humanities writing is interpretive and argumentative, often using active voice and first-person analysis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "type": "mc",
+      "question": "A social science research paper would most likely cite evidence from:",
+      "options": [
+        "Close reading of a poem's imagery",
+        "A primary archival letter from 1850",
+        "A peer-reviewed psychological study with sample sizes and statistical data",
+        "A personal interview with a novelist"
+      ],
+      "answer": "A peer-reviewed psychological study with sample sizes and statistical data",
+      "explanation": "Social sciences rely on empirical evidence — data, surveys, experiments, statistical analyses. APA citation format is used, and evidence tends to be quantitative or observational rather than literary.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "type": "mc",
+      "question": "An abstract in scientific writing should include:",
+      "options": [
+        "A list of all sources cited in the paper",
+        "A condensed summary of background, method, results, and conclusion",
+        "A personal reflection on the experiment's significance",
+        "The full introduction copied in abbreviated form"
+      ],
+      "answer": "A condensed summary of background, method, results, and conclusion",
+      "explanation": "A scientific abstract briefly covers all four key components of the study: the background/context, the method used, the key results, and the main conclusion — typically in 150–250 words.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following demonstrates genre awareness in academic writing?",
+      "options": [
+        "Using the same format for a lab report and a personal statement",
+        "Switching from APA to MLA within the same paper",
+        "Adapting vocabulary, evidence type, citation style, and tone to the specific disciplinary genre",
+        "Writing every assignment in passive voice"
+      ],
+      "answer": "Adapting vocabulary, evidence type, citation style, and tone to the specific disciplinary genre",
+      "explanation": "Genre awareness means understanding that different academic disciplines have distinct conventions and adapting your writing accordingly — not applying a one-size-fits-all approach.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "type": "mc",
+      "question": "A humanities essay analyzing a poem would most appropriately use which type of evidence?",
+      "options": [
+        "Statistical data from a survey",
+        "A peer-reviewed psychology study",
+        "Direct quotations and close readings of specific lines, images, and language from the poem",
+        "A laboratory experimental result"
+      ],
+      "answer": "Direct quotations and close readings of specific lines, images, and language from the poem",
+      "explanation": "Humanities essays rely on close textual analysis — direct quotation, attention to diction, imagery, structure, and form. This is evidence drawn from the primary text itself, interpreted through analytical reading.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "type": "mc",
+      "question": "Effective peer feedback is characterized by:",
+      "options": [
+        "Telling the writer everything is perfect",
+        "Rewriting the writer's paragraphs for them",
+        "Providing specific, location-based comments that identify problems and suggest improvements",
+        "Only marking grammatical errors"
+      ],
+      "answer": "Providing specific, location-based comments that identify problems and suggest improvements",
+      "explanation": "Effective feedback is specific (identifies exactly where the issue is), descriptive (explains the problem), and actionable (suggests how to improve). Vague or general comments give the writer nothing to work with.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "type": "mc",
+      "question": "Workshop etiquette requires that when receiving feedback, the writer should:",
+      "options": [
+        "Immediately argue against all feedback they disagree with",
+        "Accept all feedback and make every change suggested",
+        "Listen actively, take notes, and decide thoughtfully which feedback to incorporate during revision",
+        "Leave the room while the peer reviewer speaks"
+      ],
+      "answer": "Listen actively, take notes, and decide thoughtfully which feedback to incorporate during revision",
+      "explanation": "The writer's role in workshop is to listen, not defend. After gathering feedback, the writer exercises judgment about which changes strengthen the work — not all feedback must be followed, but all deserves consideration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "type": "mc",
+      "question": "In a peer review, which level of feedback should be prioritized first?",
+      "options": [
+        "Spelling errors",
+        "Font and formatting",
+        "The strength and clarity of the argument and thesis",
+        "The number of quotations used"
+      ],
+      "answer": "The strength and clarity of the argument and thesis",
+      "explanation": "Effective revision moves from global (big-picture argument, thesis, organization) to local (sentences and evidence) to surface (mechanics). Fixing spelling before the argument is clear wastes time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "type": "mc",
+      "question": "Why is revision considered more important than initial drafting in college-level writing?",
+      "options": [
+        "Because the first draft is always wrong",
+        "Because professors grade revision, not drafts",
+        "Because strong writing emerges through multiple cycles of reconsidering, restructuring, and refining — not from a single pass",
+        "Because revision is faster than drafting"
+      ],
+      "answer": "Because strong writing emerges through multiple cycles of reconsidering, restructuring, and refining — not from a single pass",
+      "explanation": "Professional writers and scholars view revision as the central activity of writing. The first draft discovers what you want to say; subsequent drafts make the argument clearer, more precise, and more persuasive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "type": "mc",
+      "question": "An 'Editor's Letter' to a peer during workshop is most effective when it:",
+      "options": [
+        "Lists every grammar error found in the draft",
+        "Grades the essay with a letter grade",
+        "Summarizes key strengths and the two or three most important areas for revision, with specific reasons",
+        "Rewrites the introduction for the author"
+      ],
+      "answer": "Summarizes key strengths and the two or three most important areas for revision, with specific reasons",
+      "explanation": "An Editor's Letter gives the writer a holistic picture of the draft's strengths and its most pressing revision priorities. It is more useful than an exhaustive error list because it helps the writer see the essay as a reader does.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "type": "mc",
+      "question": "An annotated bibliography annotation should include:",
+      "options": [
+        "Only the full citation in the correct format",
+        "A paragraph that summarizes the source, evaluates its credibility, and explains how it will be used in the paper",
+        "A one-word description of the source's topic",
+        "The page numbers of relevant sections"
+      ],
+      "answer": "A paragraph that summarizes the source, evaluates its credibility, and explains how it will be used in the paper",
+      "explanation": "A strong annotation does three things: summarizes the source's content, evaluates its reliability and authority, and explains its relevance to the specific research argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "type": "mc",
+      "question": "A research proposal is valuable because:",
+      "options": [
+        "It counts as half the final paper's word count",
+        "It forces the writer to clarify the question, thesis, and approach before investing in a full draft",
+        "It is required for APA format",
+        "It allows the writer to use informal language before switching to academic style"
+      ],
+      "answer": "It forces the writer to clarify the question, thesis, and approach before investing in a full draft",
+      "explanation": "A research proposal surfaces problems early — a vague question, a weak thesis, limited sources — so the writer can redirect before committing to an entire draft. It is a planning and thinking tool.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "type": "mc",
+      "question": "The purpose of using 6–8 sources in a research paper is to:",
+      "options": [
+        "Pad the bibliography to reach the required length",
+        "Show the instructor you used a library database",
+        "Build a credible, multi-perspective argument by drawing on diverse evidence",
+        "Replace the writer's own analysis with others' opinions"
+      ],
+      "answer": "Build a credible, multi-perspective argument by drawing on diverse evidence",
+      "explanation": "Multiple sources allow the writer to triangulate evidence, address different aspects of the question, acknowledge counterarguments, and demonstrate genuine engagement with the topic — not just report what one source says.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "type": "mc",
+      "question": "In a research-based argument paper, every body paragraph should:",
+      "options": [
+        "Begin with a direct quotation from a source",
+        "Summarize all the sources used in the paper so far",
+        "Make a claim that advances the thesis, provide evidence, analyze the evidence, and connect back to the thesis",
+        "Be exactly the same length as every other paragraph"
+      ],
+      "answer": "Make a claim that advances the thesis, provide evidence, analyze the evidence, and connect back to the thesis",
+      "explanation": "A well-constructed body paragraph follows PEEL or a similar structure: Point (topic sentence/claim), Evidence (quotation or data), Explanation/Analysis (your interpretation), and Link back to thesis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "type": "mc",
+      "question": "Revising 'across drafts' in a research paper means:",
+      "options": [
+        "Correcting spelling in every draft",
+        "Changing only the introduction each time",
+        "Reconsidering the argument, evidence, and structure at a global level with each revision pass",
+        "Adding more sources until the bibliography is long enough"
+      ],
+      "answer": "Reconsidering the argument, evidence, and structure at a global level with each revision pass",
+      "explanation": "Substantive revision means returning to the thesis, the line of reasoning, the quality of evidence, and the paragraph organization — not simply polishing surface errors — with each draft.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "type": "mc",
+      "question": "Curating a portfolio means:",
+      "options": [
+        "Submitting every assignment from the year",
+        "Selecting the pieces that best demonstrate your growth, skills, and voice as a writer",
+        "Choosing only the assignments that received the highest grades",
+        "Printing all your essays and putting them in a binder"
+      ],
+      "answer": "Selecting the pieces that best demonstrate your growth, skills, and voice as a writer",
+      "explanation": "Curation is a deliberate, reflective act of selection. A portfolio is not a complete archive — it is a curated argument about who you are as a writer, made through careful choice of what to include and why.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "type": "mc",
+      "question": "The reflective introduction of a senior portfolio is primarily a form of:",
+      "options": [
+        "Plot summary of the pieces included",
+        "Metacognitive writing — thinking and writing about your own growth and process as a writer",
+        "A persuasive essay arguing that you deserve an A",
+        "A list of the assignments completed and their grades"
+      ],
+      "answer": "Metacognitive writing — thinking and writing about your own growth and process as a writer",
+      "explanation": "Metacognition is thinking about thinking. The reflective introduction asks you to step back and analyze your own development — what you learned, how you changed, what skills you built — using your portfolio as evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "type": "mc",
+      "question": "Including a revised draft alongside the original in a portfolio is valuable because:",
+      "options": [
+        "It makes the portfolio longer.",
+        "It shows the instructor you made changes.",
+        "It demonstrates the revision process and documents growth from an earlier stage of writing to a stronger one.",
+        "It is required by all universities."
+      ],
+      "answer": "It demonstrates the revision process and documents growth from an earlier stage of writing to a stronger one.",
+      "explanation": "Showing an original draft beside a revision makes the process of growth visible. It demonstrates that writing is iterative — that strong writing is built through revision, not produced perfectly the first time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "type": "mc",
+      "question": "When presenting your portfolio to a faculty panel, which approach is most effective?",
+      "options": [
+        "Reading the entire portfolio aloud from beginning to end",
+        "Apologizing for the weaknesses in your writing",
+        "Selecting a representative excerpt, reading it clearly, and explaining your editorial choices and what the piece reveals about your growth",
+        "Describing what grade you received on each piece"
+      ],
+      "answer": "Selecting a representative excerpt, reading it clearly, and explaining your editorial choices and what the piece reveals about your growth",
+      "explanation": "An effective portfolio presentation is selective and analytical. You choose a passage that represents your best or most developed writing, read it with clarity, and explain why you made the choices you did — demonstrating metacognitive awareness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "type": "mc",
+      "question": "A strong reflective introduction should acknowledge an area of continued growth because:",
+      "options": [
+        "It lowers the grader's expectations.",
+        "All introductions must be self-critical.",
+        "Honest self-assessment demonstrates intellectual maturity and shows the writer understands writing as an ongoing, lifelong process.",
+        "It is a required section in all portfolio formats."
+      ],
+      "answer": "Honest self-assessment demonstrates intellectual maturity and shows the writer understands writing as an ongoing, lifelong process.",
+      "explanation": "Acknowledging what you are still working to improve is not a weakness — it is a sign of genuine metacognitive awareness and intellectual honesty. Readers and instructors value writers who understand their own development honestly.",
+      "points": 1
+    }
+  ]
+}

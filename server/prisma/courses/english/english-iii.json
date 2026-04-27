@@ -1,0 +1,1795 @@
+{
+  "slug": "english-iii",
+  "name": "English III",
+  "nameZh": "英语三",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "Grade 11 English — American literature and rhetoric, advanced analytical and argumentative writing, AP-level close reading, synthesis essays, and independent research.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "American Literature: Colonial to Romantic",
+      "titleZh": "美国文学：殖民地至浪漫主义时期",
+      "objectives": "Trace the development of American literature from Puritan writing through transcendentalism; analyze the spiritual and philosophical themes of Emerson, Thoreau, Whitman, and Dickinson; identify how historical context shapes literary form and content.",
+      "readingUrl": "https://www.commonlit.org/en/texts/self-reliance",
+      "readingNote": "CommonLit — Excerpt from 'Self-Reliance' by Ralph Waldo Emerson (with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=F3GmHFNhLXg",
+      "videoNote": "Crash Course Literature — Transcendentalism and American Romanticism",
+      "video2Url": "https://www.khanacademy.org/humanities/us-history/period-4/american-romanticism/a/american-romanticism",
+      "video2Note": "Khan Academy — American Romanticism and the Transcendentalist Movement",
+      "practiceUrl": "https://www.commonlit.org/en/texts/walden",
+      "practiceNote": "CommonLit — Excerpt from 'Walden' by Henry David Thoreau (annotated with discussion questions)",
+      "assignment": "Read the assigned excerpts from Emerson's 'Self-Reliance' and Thoreau's 'Walden.' Then read two poems by Whitman ('O Captain! My Captain!' and 'Song of Myself,' section 1) and two by Dickinson ('Because I could not stop for Death' and 'I'm Nobody! Who are you?'). Write a 500-word comparative essay: (1) identify one key transcendentalist idea shared across at least three of these works, (2) analyze how each author expresses this idea using specific textual evidence, and (3) explain how the Puritan emphasis on duty and community contrasts with the Romantic emphasis on individual experience.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 2,
+      "title": "American Realism & Naturalism",
+      "titleZh": "美国现实主义与自然主义",
+      "objectives": "Define realism and naturalism as literary movements; analyze how Mark Twain, Kate Chopin, and Stephen Crane use fiction to critique society; identify techniques such as local color, dialect, and determinism in American realist fiction.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-story-of-an-hour",
+      "readingNote": "CommonLit — 'The Story of an Hour' by Kate Chopin (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=i3SPGnjwMdI",
+      "videoNote": "Crash Course Literature — Realism and Naturalism in American Fiction",
+      "video2Url": "https://www.khanacademy.org/humanities/us-history/gilded-age/gilded-age/a/mark-twain-and-the-gilded-age",
+      "video2Note": "Khan Academy — Mark Twain and the Gilded Age: Social Critique in Literature",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-open-boat",
+      "practiceNote": "CommonLit — Excerpt from 'The Open Boat' by Stephen Crane (naturalism and determinism)",
+      "assignment": "Read 'The Story of an Hour' by Kate Chopin and an excerpt from 'The Open Boat' by Stephen Crane. Write a 400–500 word analysis comparing how each author uses the realist or naturalist technique to make a social or philosophical statement. Address: (1) What does each text say about individual freedom or human powerlessness? (2) How does the setting function as more than a backdrop? (3) What specific realist or naturalist techniques (dialect, local color, determinism, irony) does each author use? Support all claims with quoted evidence.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 3,
+      "title": "The American Dream in Literature",
+      "titleZh": "文学中的美国梦",
+      "objectives": "Analyze the critique of the American Dream in The Great Gatsby and Death of a Salesman; examine how Fitzgerald and Miller portray wealth, class, and disillusionment; identify symbols and motifs that reinforce thematic meaning.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-great-gatsby-chapter-1",
+      "readingNote": "CommonLit — Excerpt from 'The Great Gatsby' Chapter 1 by F. Scott Fitzgerald",
+      "videoUrl": "https://www.youtube.com/watch?v=xppwx-G7sDM",
+      "videoNote": "Crash Course Literature — The Great Gatsby and the American Dream",
+      "video2Url": "https://www.youtube.com/watch?v=qCHSGdaOHRg",
+      "video2Note": "TED-Ed — What Makes 'The Great Gatsby' Great? (symbolism and the American Dream)",
+      "practiceUrl": "https://www.commonlit.org/en/texts/death-of-a-salesman-act-i",
+      "practiceNote": "CommonLit — Excerpt from 'Death of a Salesman' Act I by Arthur Miller",
+      "assignment": "After reading the assigned excerpts from both texts, write a 500-word thematic analysis essay: (1) Define the American Dream as presented by each author — is it the same dream? (2) Analyze how Gatsby and Willy Loman are both destroyed by their pursuit of this dream, using at least two pieces of textual evidence per character. (3) Identify one major symbol in each text (e.g., the green light, the stockings) and explain how it embodies the theme of disillusionment. Conclude with a reflection on what these texts collectively argue about the myth of American success.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 4,
+      "title": "Rhetoric & Argumentation",
+      "titleZh": "修辞与论证",
+      "objectives": "Identify and apply the three Aristotelian appeals — ethos, pathos, and logos; analyze how speakers and writers use rhetorical strategies to persuade audiences; recognize logical fallacies that weaken arguments.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/rhetorical_strategies.html",
+      "readingNote": "Purdue OWL — Rhetorical Strategies: Ethos, Pathos, and Logos",
+      "videoUrl": "https://www.youtube.com/watch?v=qOP2V_np2c0",
+      "videoNote": "TED-Ed — How to Use Rhetoric to Get What You Want (Aristotle's appeals)",
+      "video2Url": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:reading-and-writing/x0a8c2e5f:rhetoric/a/rhetoric-overview",
+      "video2Note": "Khan Academy SAT — Rhetoric Overview: Ethos, Pathos, Logos",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/logic_in_argumentative_writing.html",
+      "practiceNote": "Purdue OWL — Logic in Argumentative Writing and Common Logical Fallacies",
+      "assignment": "Select a print advertisement, political speech excerpt, or editorial of your choice. Write a 400-word rhetorical analysis: (1) Identify the author/speaker, audience, purpose, and context (SOAP). (2) Locate at least one example each of ethos, pathos, and logos with direct quotation or description. (3) Evaluate which appeal is most dominant and why. (4) Identify at least one logical fallacy present (or explain why the argument is logically sound). Conclude with a judgment on the overall effectiveness of the rhetoric.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 5,
+      "title": "Analyzing Non-Fiction & Speeches",
+      "titleZh": "非虚构文本与演讲分析",
+      "objectives": "Annotate and evaluate arguments in non-fiction texts; assess the quality of evidence and reasoning; analyze the rhetorical choices and persuasive strategies in Lincoln's Gettysburg Address, MLK's 'I Have a Dream,' and JFK's Inaugural Address.",
+      "readingUrl": "https://www.commonlit.org/en/texts/i-have-a-dream",
+      "readingNote": "CommonLit — 'I Have a Dream' by Dr. Martin Luther King Jr. (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=3vDWWy4CMhE",
+      "videoNote": "TED-Ed — Why is the 'I Have a Dream' Speech so Powerful? (rhetorical analysis)",
+      "video2Url": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:reading-and-writing/x0a8c2e5f:rhetoric/a/analyzing-arguments",
+      "video2Note": "Khan Academy SAT — Analyzing Arguments in Non-Fiction Texts",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/evidence.html",
+      "practiceNote": "Purdue OWL — Using Evidence Effectively in Argument",
+      "assignment": "Read all three speeches: Lincoln's Gettysburg Address, MLK's 'I Have a Dream,' and JFK's Inaugural Address. Complete a close-reading annotation of one assigned speech, marking: (1) at least three rhetorical devices (anaphora, parallelism, allusion, metaphor, antithesis) with labels and brief explanations, (2) one example each of ethos, pathos, and logos, and (3) the central claim and how the structure supports it. Then write a 300-word reflection comparing the rhetorical purpose and primary appeal of all three speeches.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 6,
+      "title": "The Research Essay",
+      "titleZh": "研究性论文",
+      "objectives": "Synthesize information from multiple credible sources into a coherent argument; construct an annotated bibliography; write a thesis-driven research essay with proper MLA or APA documentation.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "readingNote": "Purdue OWL — Research and Argumentative Essays: Synthesis and Documentation",
+      "videoUrl": "https://www.youtube.com/watch?v=9n5SJ1YBqvw",
+      "videoNote": "Crash Course — How to Write a Research Paper (navigating sources and thesis development)",
+      "video2Url": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_general_format.html",
+      "video2Note": "Purdue OWL — MLA General Format and Works Cited Guide (video walkthrough)",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/index.html",
+      "practiceNote": "Purdue OWL — Annotated Bibliographies: Format and Examples",
+      "assignment": "Write a 700–900 word research essay on a topic related to American literature or society (e.g., censorship of classic novels, the American Dream today, the Harlem Renaissance's influence on modern culture). Requirements: (1) a clear, arguable thesis, (2) at least four credible sources (two academic, one journalistic, one primary), (3) an annotated bibliography entry for each source (2–3 sentences each: summary + evaluation of credibility), (4) correct MLA in-text citations throughout, and (5) a Works Cited page. Your essay must synthesize — not simply list — sources in service of your argument.",
+      "estimatedHrs": 6.0
+    },
+    {
+      "order": 7,
+      "title": "Advanced Grammar & Style",
+      "titleZh": "高级语法与写作风格",
+      "objectives": "Vary sentence structure for rhetorical effect using subordination and coordination; recognize and eliminate wordiness, redundancy, and weak passive constructions; use punctuation (semicolons, colons, dashes) to control pacing and emphasis.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/sentences/sentence_variety.html",
+      "readingNote": "Purdue OWL — Sentence Variety: Subordination, Coordination, and Concision",
+      "videoUrl": "https://www.youtube.com/watch?v=RFdK-8OGY1M",
+      "videoNote": "Crash Course English Language — Advanced Sentence Structure and Style",
+      "video2Url": "https://www.khanacademy.org/humanities/grammar/syntax-sentences-and-clauses/subordinate-clauses/v/subordinate-clauses",
+      "video2Note": "Khan Academy — Subordinate Clauses and Sentence Variety",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/grammar/conciseness/index.html",
+      "practiceNote": "Purdue OWL — Conciseness: Eliminating Wordiness and Redundancy",
+      "assignment": "Complete three style exercises: (1) Rewrite 8 provided wordy or passive sentences to make them concise and active, explaining each change. (2) Combine 5 pairs of choppy simple sentences into one sophisticated complex or compound-complex sentence each, using varied subordinating or coordinating conjunctions. (3) Write an original paragraph of at least 200 words on any topic, deliberately using at least: one semicolon, one colon, one em dash, one participial phrase opener, and two different subordinating conjunctions. Underline and label each stylistic device.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 8,
+      "title": "The Harlem Renaissance",
+      "titleZh": "哈莱姆文艺复兴",
+      "objectives": "Analyze the historical context and cultural significance of the Harlem Renaissance; examine themes of identity, racial pride, and the African American experience in poetry and prose by Hughes, Hurston, and Cullen; connect literary works to the social conditions that produced them.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-weary-blues",
+      "readingNote": "CommonLit — 'The Weary Blues' by Langston Hughes (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=nqM9IfXjQh0",
+      "videoNote": "Crash Course Literature — The Harlem Renaissance: Hughes, Hurston, and Identity",
+      "video2Url": "https://www.khanacademy.org/humanities/us-history/period-7/the-harlem-renaissance/a/the-harlem-renaissance",
+      "video2Note": "Khan Academy — The Harlem Renaissance: Art, Literature, and Cultural Identity",
+      "practiceUrl": "https://www.commonlit.org/en/texts/how-it-feels-to-be-colored-me",
+      "practiceNote": "CommonLit — 'How It Feels to Be Colored Me' by Zora Neale Hurston",
+      "assignment": "Read 'The Weary Blues' and 'Mother to Son' by Langston Hughes, 'How It Feels to Be Colored Me' by Zora Neale Hurston, and 'Yet Do I Marvel' by Countee Cullen. Write a 500-word essay: (1) Identify a common theme across at least three of the works, using specific textual evidence. (2) Analyze how each author uses voice, form, or figurative language differently to express this theme. (3) Connect this literature to one specific historical event or social condition of the 1920s–1930s. Conclude with a reflection on why the Harlem Renaissance is considered a turning point in American literary history.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 9,
+      "title": "Modernist Literature",
+      "titleZh": "现代主义文学",
+      "objectives": "Define modernist literary techniques including stream of consciousness, fragmentation, and the unreliable narrator; analyze how Hemingway's iceberg theory and Faulkner's complex syntax reflect modernist aesthetics; connect formal experimentation to post-WWI disillusionment.",
+      "readingUrl": "https://www.commonlit.org/en/texts/hills-like-white-elephants",
+      "readingNote": "CommonLit — 'Hills Like White Elephants' by Ernest Hemingway (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=Ge5xJKKC_OQ",
+      "videoNote": "Crash Course Literature — Modernism: Hemingway, Faulkner, and the Lost Generation",
+      "video2Url": "https://www.youtube.com/watch?v=5ZQtWMqmMSg",
+      "video2Note": "TED-Ed — Ernest Hemingway's Iceberg Theory: What Lies Beneath",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/literary_criticism/literary_movements.html",
+      "practiceNote": "Purdue OWL — Literary Movements: Modernism, Stream of Consciousness, and Formalism",
+      "assignment": "Read 'Hills Like White Elephants' by Hemingway and a short excerpt from Faulkner's 'The Sound and the Fury.' Write a 450-word comparative analysis: (1) Explain how Hemingway's iceberg theory operates in 'Hills Like White Elephants' — what is NOT said and why does it matter? Support with specific dialogue evidence. (2) Describe how Faulkner's stream-of-consciousness technique and fragmented syntax create a different kind of modernist difficulty. (3) What do both texts suggest about communication, truth, and the experience of post-WWI characters? Conclude with a reflection on which technique you find more effective and why.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 10,
+      "title": "AP-Style Close Reading",
+      "titleZh": "AP风格细读",
+      "objectives": "Perform AP-level prose analysis identifying rhetorical choices (diction, syntax, tone, imagery, figurative language) and their cumulative effects; write a timed analytical paragraph and full prose analysis essay; evaluate how an author's choices contribute to meaning.",
+      "readingUrl": "https://www.khanacademy.org/test-prep/ap-english-language/ap-english-language-units/ap-english-language-unit-1/a/prose-analysis-essay-overview",
+      "readingNote": "Khan Academy AP English Language — Prose Analysis Essay Overview and Strategy",
+      "videoUrl": "https://www.youtube.com/watch?v=NiUWCFBf_m0",
+      "videoNote": "Crash Course — How to Analyze Prose for AP English Language and Composition",
+      "video2Url": "https://www.khanacademy.org/test-prep/ap-english-language/ap-english-language-units/ap-english-language-unit-1/a/close-reading-strategies",
+      "video2Note": "Khan Academy AP English Language — Close Reading Strategies for Prose Analysis",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_literature/index.html",
+      "practiceNote": "Purdue OWL — Writing About Literature: Close Reading and Analysis",
+      "assignment": "Perform a timed close reading of the provided unseen prose passage (400–600 words from an American literary work). In 40 minutes write a full prose analysis essay that: (1) identifies a defensible thesis about how the author's rhetorical choices develop a central idea, (2) selects and analyzes evidence from throughout the passage — not just surface features, (3) addresses at least four specific techniques (diction, syntax, tone, figurative language, imagery, structure) and explains how each contributes to meaning, and (4) maintains a formal, analytical register throughout. Self-assess your essay using the AP 6-point rubric provided.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 11,
+      "title": "The Argumentative Synthesis Essay",
+      "titleZh": "议论性综合作文",
+      "objectives": "Synthesize evidence from 4–6 sources to support a nuanced, arguable claim; acknowledge complexity and counterclaims while maintaining a coherent argument; write a college-level synthesis essay that avoids the fallacy of oversimplification.",
+      "readingUrl": "https://www.khanacademy.org/test-prep/ap-english-language/ap-english-language-units/ap-english-language-unit-3/a/synthesis-essay-overview",
+      "readingNote": "Khan Academy AP English Language — Synthesis Essay Overview and Strategy",
+      "videoUrl": "https://www.youtube.com/watch?v=KP56QHYL9_Y",
+      "videoNote": "Crash Course — How to Write a Synthesis Essay for AP English Language",
+      "video2Url": "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/using_research_and_evidence.html",
+      "video2Note": "Purdue OWL — Using Research and Multiple Sources in Argumentative Writing",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "practiceNote": "Purdue OWL — Argumentative Essays: Synthesis, Counterargument, and Nuance",
+      "assignment": "Using the provided source packet (5–6 documents on a topic such as social media regulation, affirmative action, or environmental policy), write a 600–800 word synthesis essay: (1) develop a thesis that takes a nuanced position — not simply 'for' or 'against' but one that acknowledges complexity, (2) cite and integrate evidence from at least four of the provided sources (not merely mentioning them, but using them to develop your argument), (3) address at least one significant counterargument and provide a thoughtful rebuttal, and (4) avoid logical fallacies. Attribute all sources using parenthetical notation (Source A), (Source B), etc.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 12,
+      "title": "Drama: American Theater",
+      "titleZh": "戏剧：美国剧场",
+      "objectives": "Analyze dramatic structure, dramatic irony, and social commentary in Death of a Salesman or A Raisin in the Sun; examine how playwrights use stagecraft, dialogue, and symbol to convey theme; compare reading a play to seeing it performed.",
+      "readingUrl": "https://www.commonlit.org/en/texts/a-raisin-in-the-sun-act-i",
+      "readingNote": "CommonLit — 'A Raisin in the Sun' Act I by Lorraine Hansberry (full act with questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=eaUCWDYXaLY",
+      "videoNote": "Crash Course Literature — Death of a Salesman and the American Tragedy",
+      "video2Url": "https://www.youtube.com/watch?v=PGdDEKCRfg0",
+      "video2Note": "TED-Ed — A Raisin in the Sun: Dreams, Race, and the American Family",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_plays/index.html",
+      "practiceNote": "Purdue OWL — Writing About Plays: Dramatic Analysis and Conventions",
+      "assignment": "Read the full assigned play (Death of a Salesman or A Raisin in the Sun). Write a 550-word analytical essay: (1) Identify the central social critique — what does the play argue about American society? Provide three pieces of evidence. (2) Analyze one symbol in the play (e.g., the seeds in Death of a Salesman; the plant in A Raisin in the Sun) and explain how it develops across multiple scenes. (3) Identify two instances of dramatic irony and explain the effect on the audience. (4) Reflect on how a staged performance (lighting, blocking, actors' delivery) would intensify or change your reading of one key scene.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 13,
+      "title": "Contemporary American Voices",
+      "titleZh": "当代美国文学声音",
+      "objectives": "Read and analyze fiction and non-fiction by diverse 21st-century American authors; examine how identity, immigration, race, and belonging are portrayed in contemporary literature; connect personal narrative and social commentary in modern American writing.",
+      "readingUrl": "https://www.commonlit.org/en/texts/everyday-use",
+      "readingNote": "CommonLit — 'Everyday Use' by Alice Walker (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=lWuPNLBkuCA",
+      "videoNote": "TED-Ed — The Danger of a Single Story: Chimamanda Ngozi Adichie (identity and narrative)",
+      "video2Url": "https://www.youtube.com/watch?v=3pBnGKKNhKg",
+      "video2Note": "TED-Ed — America's Founding Ideals and Contemporary Identity in Literature",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-border-a-double-sonnet",
+      "practiceNote": "CommonLit — 'The Border: A Double Sonnet' by Alberto Rios (immigration and identity)",
+      "assignment": "Read 'Everyday Use' by Alice Walker, 'The Border: A Double Sonnet' by Alberto Rios, and one additional 21st-century text of your choice from CommonLit featuring a diverse American voice. Write a 450-word essay: (1) Identify a common theme across all three texts related to identity, heritage, or belonging. (2) Analyze how each author uses a specific literary technique — dialogue, imagery, form, or irony — to explore that theme. (3) Discuss whose stories have historically been centered in American literature and what is gained by expanding that canon. Include at least two quotes from each of two works.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 14,
+      "title": "Independent Reading & Seminar",
+      "titleZh": "独立阅读与研讨会",
+      "objectives": "Select and read a full-length work of American literature independently; produce a literary analysis of a student-chosen text; participate in a Socratic seminar, constructing questions and engaging in evidence-based discussion.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_literature/index.html",
+      "readingNote": "Purdue OWL — Writing About Literature: Literary Analysis Structure and Strategy",
+      "videoUrl": "https://www.youtube.com/watch?v=qCHSGdaOHRg",
+      "videoNote": "Crash Course Literature — How to Write a Literary Analysis Essay",
+      "video2Url": "https://www.khanacademy.org/test-prep/ap-english-literature/ap-english-lit-units/ap-english-lit-unit-1/a/literary-analysis-overview",
+      "video2Note": "Khan Academy AP English Literature — Literary Analysis: From Claim to Evidence",
+      "practiceUrl": "https://www.commonlit.org/en/library",
+      "practiceNote": "CommonLit — Full Library (student selects an American literary work for independent reading)",
+      "assignment": "Read a full-length American literary work of your choice (novel, play, or memoir) approved by your instructor. Complete three tasks: (1) Write a 600-word literary analysis essay with a clear, arguable thesis about theme, character, or symbol — supported by at least five specific quotations from the text. (2) Prepare three open-ended Socratic discussion questions about your book, each written with a brief explanation of why the question matters. (3) During the class seminar, participate actively: ask at least two questions, respond substantively to two classmates, and use at least three text citations in your contributions. Submit a self-assessment after the seminar reflecting on the quality of your participation.",
+      "estimatedHrs": 6.0
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Transcendentalism, as expressed by Emerson and Thoreau, is best characterized by:",
+      "options": [
+        "A belief in the inherent corruption of human nature",
+        "A faith in the divine authority of the church and scripture",
+        "A belief in the individual's ability to find truth through nature and intuition",
+        "A rejection of all spiritual ideas in favor of science"
+      ],
+      "answer": "A belief in the individual's ability to find truth through nature and intuition",
+      "explanation": "Transcendentalism held that individuals could transcend the material world through intuition and connection with nature, discovering spiritual truth independent of institutions.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "In 'The Story of an Hour,' Kate Chopin's portrayal of Mrs. Mallard's reaction to news of her husband's death is primarily an example of which literary movement?",
+      "options": [
+        "Transcendentalism",
+        "Puritan allegory",
+        "American Realism",
+        "Modernist fragmentation"
+      ],
+      "answer": "American Realism",
+      "explanation": "Chopin's unflinching depiction of a woman's complex emotional reality — including suppressed desire for freedom — is characteristic of American Realism's focus on authentic, sometimes uncomfortable, social truths.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "The green light at the end of Daisy's dock in The Great Gatsby primarily symbolizes:",
+      "options": [
+        "Gatsby's jealousy of Tom Buchanan",
+        "The corruption of the East Coast elite",
+        "Gatsby's longing for an unattainable dream",
+        "The environmental destruction caused by industrialization"
+      ],
+      "answer": "Gatsby's longing for an unattainable dream",
+      "explanation": "The green light represents Gatsby's hopes and dreams — specifically his desire for Daisy and, by extension, the American Dream itself, always visible but perpetually out of reach.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Which Aristotelian appeal relies primarily on the speaker's credibility and trustworthiness?",
+      "options": [
+        "Logos",
+        "Pathos",
+        "Ethos",
+        "Kairos"
+      ],
+      "answer": "Ethos",
+      "explanation": "Ethos is the appeal to the speaker's character and credibility. A persuasive speaker establishes ethos by demonstrating expertise, fairness, and trustworthiness.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "In MLK's 'I Have a Dream' speech, the repeated phrase 'I have a dream' at the beginning of successive sentences is an example of:",
+      "options": [
+        "Antithesis",
+        "Allusion",
+        "Anaphora",
+        "Hyperbole"
+      ],
+      "answer": "Anaphora",
+      "explanation": "Anaphora is the rhetorical device of repeating a word or phrase at the beginning of successive clauses or sentences. It creates rhythm and emphasis — as in MLK's repeated 'I have a dream.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "An annotated bibliography entry differs from a standard Works Cited entry because it also includes:",
+      "options": [
+        "The author's academic credentials",
+        "A brief summary and evaluation of the source",
+        "A list of page numbers used",
+        "The full text of the article"
+      ],
+      "answer": "A brief summary and evaluation of the source",
+      "explanation": "An annotated bibliography adds an annotation — typically 2–5 sentences that summarize the source's content and evaluate its credibility, relevance, and usefulness for the research project.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Which of the following is an example of a WORDY sentence that should be revised for concision?",
+      "options": [
+        "She revised the draft twice.",
+        "Due to the fact that he was tired, he slept.",
+        "The storm knocked out the power.",
+        "They disagreed on the solution."
+      ],
+      "answer": "Due to the fact that he was tired, he slept.",
+      "explanation": "'Due to the fact that' is a wordy phrase that should be replaced with the single word 'Because.' Concise revision: 'Because he was tired, he slept.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Naturalism, as seen in Stephen Crane's fiction, differs from Realism primarily in its emphasis on:",
+      "options": [
+        "Local color and regional dialect",
+        "The role of divine providence in human life",
+        "Determinism — the idea that heredity and environment control human fate",
+        "The psychological inner life of upper-class characters"
+      ],
+      "answer": "Determinism — the idea that heredity and environment control human fate",
+      "explanation": "Naturalism extends Realism by incorporating a deterministic worldview: characters are shaped by forces (biology, class, chance) beyond their control, often leading to tragic outcomes.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "In an argumentative essay, synthesizing sources means:",
+      "options": [
+        "Quoting each source at length in separate paragraphs",
+        "Summarizing sources one by one in the order they were read",
+        "Weaving multiple sources together to build and support a single argument",
+        "Paraphrasing only one source per body paragraph"
+      ],
+      "answer": "Weaving multiple sources together to build and support a single argument",
+      "explanation": "Synthesis means integrating multiple sources into a unified argument — putting them in conversation with each other — rather than treating each source separately.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Willy Loman in Death of a Salesman and Jay Gatsby in The Great Gatsby are similar because both characters:",
+      "options": [
+        "Come from wealthy East Coast families",
+        "Are destroyed by their inability to accept reality and let go of an illusory dream",
+        "Find redemption through hard work and self-reliance",
+        "Succeed financially but fail emotionally"
+      ],
+      "answer": "Are destroyed by their inability to accept reality and let go of an illusory dream",
+      "explanation": "Both Gatsby and Willy Loman cling to versions of the American Dream that are ultimately illusory. Their inability to confront reality — Gatsby's idealization of Daisy, Willy's belief in personality over competence — leads to their destruction.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "A participial phrase opener in a sentence begins with:",
+      "options": [
+        "A subordinating conjunction (because, although, when)",
+        "A verb ending in -ing or -ed used to modify the subject",
+        "A coordinating conjunction (but, and, so)",
+        "An adverb (quickly, silently, often)"
+      ],
+      "answer": "A verb ending in -ing or -ed used to modify the subject",
+      "explanation": "A participial phrase begins with a participle (e.g., 'Running down the hall' or 'Exhausted from the climb') and modifies the subject of the main clause. It adds syntactic variety when placed at the start of a sentence.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Henry David Thoreau's 'Walden' argues most centrally that:",
+      "options": [
+        "Society's rules are necessary for moral order",
+        "Individuals should simplify their lives and live deliberately in nature",
+        "Economic success is the truest measure of a life well lived",
+        "Religious scripture is the source of all moral guidance"
+      ],
+      "answer": "Individuals should simplify their lives and live deliberately in nature",
+      "explanation": "In 'Walden,' Thoreau advocates for deliberate, simplified living — withdrawing from the noise of society to discover what is essential. His famous aim was 'to live deliberately, to front only the essential facts of life.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "A logical fallacy called 'ad hominem' attacks:",
+      "options": [
+        "The evidence used in an argument",
+        "The structure of the argument",
+        "The person making the argument rather than the argument itself",
+        "The emotional appeal of the argument"
+      ],
+      "answer": "The person making the argument rather than the argument itself",
+      "explanation": "Ad hominem is a logical fallacy in which a person attacks their opponent's character, background, or motives rather than addressing the substance of their argument.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Explain the difference between ethos, pathos, and logos. Give one specific example of each from any speech or text you have studied this semester.",
+      "options": null,
+      "answer": "Ethos appeals to the speaker's credibility (e.g., MLK citing scripture and the Constitution establishes his moral authority). Pathos appeals to the audience's emotions (e.g., MLK's vivid imagery of children judged by character rather than color). Logos appeals to logic and evidence (e.g., Lincoln citing the date 'four score and seven years ago' as a factual anchor for his argument about founding ideals).",
+      "explanation": "The three Aristotelian appeals form the foundation of rhetoric. Effective persuasion typically combines all three, though different contexts may call for different emphases.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "Choose one American literary text studied in Modules 1–3. Identify one symbol in that text and explain what it represents and how it develops across the work to reinforce a theme.",
+      "options": null,
+      "answer": "Example: In The Great Gatsby, the green light at the end of Daisy's dock first appears as a symbol of Gatsby's longing for Daisy. By the novel's end, Nick reveals that the green light represents the broader American Dream — an ideal always visible but forever receding, showing that the Dream is ultimately illusory and corrupted by the pursuit of wealth.",
+      "explanation": "Effective symbol analysis traces the symbol through the text, showing how its meaning deepens or changes, and connects it explicitly to a theme.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "The Harlem Renaissance was significant in American literary history primarily because it:",
+      "options": [
+        "Established English as the national language of the United States",
+        "Celebrated African American art, identity, and intellectual life at a time of widespread racial oppression",
+        "Introduced the naturalist technique of determinism to American fiction",
+        "Marked the beginning of the transcendentalist movement"
+      ],
+      "answer": "Celebrated African American art, identity, and intellectual life at a time of widespread racial oppression",
+      "explanation": "The Harlem Renaissance of the 1920s–1930s was a flowering of African American cultural production — literature, music, visual art — that asserted Black dignity and identity during the Jim Crow era.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Hemingway's 'iceberg theory' of fiction holds that:",
+      "options": [
+        "Fictional narratives should include detailed backstory for every character",
+        "The true meaning of a story lies beneath the surface — what is omitted is as important as what is stated",
+        "Stream of consciousness should be used to reveal every character's thoughts",
+        "Symbolism should be explained explicitly in the text"
+      ],
+      "answer": "The true meaning of a story lies beneath the surface — what is omitted is as important as what is stated",
+      "explanation": "Hemingway believed that a writer's knowledge of a subject could be omitted from the surface of a story and the reader would still feel its presence — just as seven-eighths of an iceberg is submerged.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "In a prose analysis essay, a 'defensible thesis' about a text must:",
+      "options": [
+        "State only the subject of the passage",
+        "Summarize the plot or argument of the passage",
+        "Make an arguable interpretive claim about how the author's choices create meaning",
+        "List all the literary devices found in the passage"
+      ],
+      "answer": "Make an arguable interpretive claim about how the author's choices create meaning",
+      "explanation": "An AP-level thesis must be defensible (supported by evidence) and interpretive (making a specific claim about meaning, not simply describing content). It should answer: How do the author's choices work together to convey what idea?",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Stream of consciousness as a modernist technique is best described as:",
+      "options": [
+        "A third-person omniscient narrator describing events in chronological order",
+        "A narrative technique that mimics the continuous, associative flow of a character's thoughts",
+        "Dialogue written without quotation marks",
+        "A method of foreshadowing future events through a character's dreams"
+      ],
+      "answer": "A narrative technique that mimics the continuous, associative flow of a character's thoughts",
+      "explanation": "Stream of consciousness presents a character's thoughts as they occur — associative, fragmented, and non-linear — as in Faulkner's Benjy section in 'The Sound and the Fury.'",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "In a synthesis essay, citing a source 'attributively' means:",
+      "options": [
+        "Placing the citation only in the Works Cited",
+        "Introducing the source's idea with a signal phrase that names the source",
+        "Using only direct quotations, never paraphrase",
+        "Summarizing the entire source before quoting from it"
+      ],
+      "answer": "Introducing the source's idea with a signal phrase that names the source",
+      "explanation": "Attributive citation (e.g., 'According to Source C...' or 'As Smith argues...') integrates the source into the sentence and makes the attribution clear at the moment the idea appears.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Lorraine Hansberry's A Raisin in the Sun takes its title from a Langston Hughes poem. The central question of that poem — what happens to a dream deferred? — most directly connects to:",
+      "options": [
+        "The Younger family's investment in Walter's liquor store business",
+        "The broader theme of how systemic racism delays and distorts the American dreams of Black Americans",
+        "Beneatha's plan to become a doctor",
+        "Ruth's pregnancy and her decision about the future"
+      ],
+      "answer": "The broader theme of how systemic racism delays and distorts the American dreams of Black Americans",
+      "explanation": "Hughes' poem frames the play's central thematic question: what happens to Black Americans' aspirations when racial discrimination blocks access to the American Dream? The Younger family's struggles embody each answer Hughes proposes.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Which of the following describes an 'unreliable narrator'?",
+      "options": [
+        "A narrator who tells the story from a third-person omniscient perspective",
+        "A narrator whose credibility is compromised — by bias, limited knowledge, or mental state — so the reader cannot fully trust their account",
+        "A narrator who skips chapters and omits key events",
+        "A narrator who changes point of view mid-story"
+      ],
+      "answer": "A narrator whose credibility is compromised — by bias, limited knowledge, or mental state — so the reader cannot fully trust their account",
+      "explanation": "An unreliable narrator has a distorted or limited view of events, requiring the reader to read between the lines to construct a fuller truth. Examples include Holden Caulfield in 'The Catcher in the Rye' and Quentin Compson in Faulkner's work.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "A Socratic seminar is best characterized by:",
+      "options": [
+        "The teacher lecturing while students take notes",
+        "Students debating to determine a single 'winner' of the argument",
+        "An open, student-led discussion using open-ended questions to explore a text collaboratively",
+        "Students presenting pre-written speeches on assigned positions"
+      ],
+      "answer": "An open, student-led discussion using open-ended questions to explore a text collaboratively",
+      "explanation": "Socratic seminars are text-based discussions driven by open questions that have no single correct answer — participants build understanding collaboratively by questioning, listening, and building on each other's ideas.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Countee Cullen's poem 'Yet Do I Marvel' ends with the couplet: 'Yet do I marvel at this curious thing: / To make a poet black, and bid him sing!' The primary irony in these lines is that:",
+      "options": [
+        "Cullen cannot actually write poetry",
+        "God is being praised for creating Black poets",
+        "God has given a Black man the gift of poetry in a society that simultaneously oppresses him",
+        "The speaker admires birds more than human beings"
+      ],
+      "answer": "God has given a Black man the gift of poetry in a society that simultaneously oppresses him",
+      "explanation": "Cullen ironically juxtaposes divine gifts with social reality: God creates a Black poet but places him in a world hostile to his existence. The form (a Shakespearean sonnet) itself is part of the irony — mastering the European tradition while questioning it.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "When writing a literary analysis essay, embedding a quotation effectively means:",
+      "options": [
+        "Placing the quotation at the very beginning of a paragraph",
+        "Using the quotation alone as a complete sentence without commentary",
+        "Introducing the quotation with context, quoting it, and then analyzing its significance",
+        "Paraphrasing the quotation instead of quoting directly"
+      ],
+      "answer": "Introducing the quotation with context, quoting it, and then analyzing its significance",
+      "explanation": "The quote sandwich (introduce → quote → analyze) ensures quotations do not appear without context or commentary. Evidence alone does not make an argument — analysis explains how the evidence supports the claim.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "The primary distinction between the Puritan literary tradition and Transcendentalism is that Puritanism emphasized:",
+      "options": [
+        "Individual intuition as the path to truth",
+        "The beauty and spiritual power of the natural world",
+        "Collective religious duty, divine authority, and human sinfulness",
+        "Social progress through political reform"
+      ],
+      "answer": "Collective religious duty, divine authority, and human sinfulness",
+      "explanation": "Puritan writing centered on divine authority (the Bible), communal covenant, and the consciousness of sin. Transcendentalism, in contrast, celebrated individual intuition, nature, and the inherent goodness of human beings.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Which technique is characteristic of AP-level prose analysis but NOT of a basic summary?",
+      "options": [
+        "Identifying the author and title",
+        "Describing what happens in the passage",
+        "Analyzing how specific word choices and syntax work together to create a particular effect",
+        "Noting the length of the passage"
+      ],
+      "answer": "Analyzing how specific word choices and syntax work together to create a particular effect",
+      "explanation": "AP prose analysis goes beyond content — it examines HOW an author's craft (diction, syntax, structure, tone) creates meaning and effect. Summary only describes WHAT is said.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "When Zora Neale Hurston writes in 'How It Feels to Be Colored Me,' 'I do not belong to the sobbing school of Negrohood,' she is primarily using:",
+      "options": [
+        "Logos — a statistical argument about race",
+        "A direct allusion to Langston Hughes' poetry",
+        "Ethos and confident first-person voice to reject a victim narrative and assert self-definition",
+        "An appeal to pathos through grief and suffering"
+      ],
+      "answer": "Ethos and confident first-person voice to reject a victim narrative and assert self-definition",
+      "explanation": "Hurston refuses the identity of victim and asserts a self-determined, joyful identity. Her confident, ironic voice is itself an ethical and rhetorical stance — claiming the right to define herself on her own terms.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "The term 'canon' in literary studies refers to:",
+      "options": [
+        "The chronological order in which books were published",
+        "The set of texts traditionally considered the most important or representative of a culture or period",
+        "A list of books that have been banned",
+        "Books written exclusively by authors of a single nationality"
+      ],
+      "answer": "The set of texts traditionally considered the most important or representative of a culture or period",
+      "explanation": "The literary canon is the body of texts judged to be central to a tradition. Critics debate who controls this selection and whose voices have been historically excluded from it — a central concern of contemporary American literature study.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "In a synthesis essay, the most important difference between a strong and weak use of a source is:",
+      "options": [
+        "Strong essays use longer quotations",
+        "Strong essays use the source to support the writer's own argument; weak essays merely describe what the source says",
+        "Strong essays cite only academic sources",
+        "Strong essays mention every source at least three times"
+      ],
+      "answer": "Strong essays use the source to support the writer's own argument; weak essays merely describe what the source says",
+      "explanation": "Synthesis requires using sources as evidence for your argument, not as the argument itself. Strong synthesis essays subordinate sources to the writer's thesis rather than reporting what each source says in sequence.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which of the following sentences uses an em dash correctly for emphasis?",
+      "options": [
+        "She studied hard — but still failed the test — because she was nervous.",
+        "She studied hard, but still failed—",
+        "She studied—hard.",
+        "She had one goal—to pass the AP exam—and she pursued it relentlessly."
+      ],
+      "answer": "She had one goal—to pass the AP exam—and she pursued it relentlessly.",
+      "explanation": "Em dashes can set off an interrupting phrase or amplification. Here, '—to pass the AP exam—' interrupts and emphasizes the goal, which is a correct and stylistically effective use.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Antithesis, a rhetorical device used prominently in JFK's Inaugural Address ('Ask not what your country can do for you — ask what you can do for your country'), works by:",
+      "options": [
+        "Repeating the same word at the beginning of multiple sentences",
+        "Placing contrasting ideas in parallel grammatical structure to highlight the contrast",
+        "Referring to a well-known historical event or text",
+        "Using exaggeration to make a point memorable"
+      ],
+      "answer": "Placing contrasting ideas in parallel grammatical structure to highlight the contrast",
+      "explanation": "Antithesis sets opposing ideas side by side in parallel structure. JFK's sentence mirrors itself ('what your country can do for you' vs. 'what you can do for your country'), making the contrast vivid and memorable.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which description best captures the thematic concern of contemporary American literature studied in Module 13?",
+      "options": [
+        "The importance of individual economic success",
+        "The universality of the Puritan work ethic",
+        "The diversity of American identity — exploring how race, immigration, and heritage shape experience",
+        "The decline of the novel as a literary form"
+      ],
+      "answer": "The diversity of American identity — exploring how race, immigration, and heritage shape experience",
+      "explanation": "Contemporary American literature increasingly centers voices previously marginalized in the canon — authors exploring immigration, racial identity, and the complexity of belonging in a pluralistic society.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Choose one modernist technique studied in Module 9 (stream of consciousness, fragmentation, or the unreliable narrator). Define the technique and explain how it reflects the historical and cultural context of the post-WWI period.",
+      "options": null,
+      "answer": "Stream of consciousness (or fragmentation, or unreliable narrator) is a modernist technique that rejects linear, orderly narrative in favor of psychological complexity and uncertainty. After WWI, writers like Hemingway and Faulkner rejected the Victorian belief in order and moral certainty — the war had shattered confidence in stable truths. Stream of consciousness mirrors the traumatized, fragmented mind; the unreliable narrator reflects the modernist idea that truth is subjective and no single perspective is authoritative.",
+      "explanation": "Strong answers connect form to historical context, showing how modernist techniques are not arbitrary but reflect the disillusionment and psychological damage of the WWI generation.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "Reflect on your independent reading experience in Module 14. Name your chosen text and author, state your analytical thesis about the work, and explain what participating in the Socratic seminar added to your understanding that reading alone could not provide.",
+      "options": null,
+      "answer": "Answers will vary. A strong response names a specific American literary work, articulates a defensible thesis (e.g., 'In Toni Morrison's Beloved, the supernatural functions as a metaphor for the psychological haunting of slavery that cannot be escaped even after legal freedom'), and reflects specifically on how the seminar — hearing classmates' interpretations, being challenged on assumptions, encountering readings they had not considered — deepened or changed their understanding of the text.",
+      "explanation": "This question assesses both the quality of the student's literary analysis and their metacognitive reflection on collaborative learning. Strong responses show how dialogue with peers produces interpretive insight beyond solitary reading.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "type": "mc",
+      "question": "Ralph Waldo Emerson's 'Self-Reliance' argues most directly that individuals should:",
+      "options": [
+        "Follow the guidance of religious institutions",
+        "Trust their own instincts and resist social conformity",
+        "Work hard to accumulate wealth and status",
+        "Obey civic laws to maintain social order"
+      ],
+      "answer": "Trust their own instincts and resist social conformity",
+      "explanation": "Emerson's central argument in 'Self-Reliance' is that individuals should trust their own intuition and reject conformity to societal expectations — the foundation of transcendentalist philosophy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "type": "mc",
+      "question": "Puritan writing in early American literature was primarily characterized by:",
+      "options": [
+        "Celebration of nature and individual intuition",
+        "Political critiques of the English monarchy",
+        "A focus on divine providence, sin, and the covenant with God",
+        "Romantic idealism and the beauty of the wilderness"
+      ],
+      "answer": "A focus on divine providence, sin, and the covenant with God",
+      "explanation": "Puritan writing — sermons, diaries, poetry — centered on God's will, human sinfulness, and the community's covenant with God. Works like Jonathan Edwards' sermons exemplify this tradition.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "type": "mc",
+      "question": "Walt Whitman's 'Song of Myself' is notable for its use of:",
+      "options": [
+        "Strict sonnet form with ABAB rhyme scheme",
+        "Free verse and a expansive, democratic speaker who embraces all of humanity",
+        "Gothic imagery and dark supernatural themes",
+        "Puritan allegory and biblical allusions"
+      ],
+      "answer": "Free verse and a expansive, democratic speaker who embraces all of humanity",
+      "explanation": "Whitman broke from traditional poetic forms, using free verse to create a speaker who contains multitudes — celebrating America's diversity and democratic ideals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "type": "mc",
+      "question": "Emily Dickinson's poetry is characterized by all of the following EXCEPT:",
+      "options": [
+        "Slant rhyme and unconventional punctuation (dashes)",
+        "Compressed, cryptic language and unusual capitalization",
+        "Themes of death, immortality, and the inner life",
+        "Long, flowing free verse celebrating nature and democracy"
+      ],
+      "answer": "Long, flowing free verse celebrating nature and democracy",
+      "explanation": "Dickinson's poems are typically short, compressed, and formally unconventional — using hymn meter, slant rhyme, and dashes. Long, expansive free verse celebrating democracy is characteristic of Whitman, not Dickinson.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "type": "mc",
+      "question": "Transcendentalism emerged as a reaction against which intellectual tradition?",
+      "options": [
+        "Romanticism",
+        "Lockean empiricism and Calvinist theology",
+        "Marxist materialism",
+        "Enlightenment optimism about science"
+      ],
+      "answer": "Lockean empiricism and Calvinist theology",
+      "explanation": "Transcendentalists rejected both the rigid Calvinist view of human depravity and the Lockean idea that all knowledge comes only from sensory experience, arguing instead for intuition as a path to truth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "type": "mc",
+      "question": "American Realism as a literary movement is best described as:",
+      "options": [
+        "An escapist literature that imagines ideal worlds",
+        "A movement depicting life as it actually is, especially for ordinary and marginalized people",
+        "A style focused on supernatural and Gothic elements",
+        "A tradition of allegorical stories with clear moral lessons"
+      ],
+      "answer": "A movement depicting life as it actually is, especially for ordinary and marginalized people",
+      "explanation": "American Realism (roughly 1865–1910) rejected Romantic idealism and depicted everyday life — including social problems, class struggle, and authentic regional speech — with fidelity and honesty.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "type": "mc",
+      "question": "In Kate Chopin's 'The Story of an Hour,' Louise Mallard's initial reaction to her husband's death is best described as:",
+      "options": [
+        "Grief and despair",
+        "Numbness and confusion",
+        "A complex mix of sorrow and an emerging sense of freedom",
+        "Anger and resentment toward the messenger"
+      ],
+      "answer": "A complex mix of sorrow and an emerging sense of freedom",
+      "explanation": "Chopin portrays Louise's psychology with nuance — she feels genuine grief, but as the news sinks in, she also feels a liberating sense of autonomy and future possibility that she acknowledges despite feeling guilty about it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "type": "mc",
+      "question": "Naturalism extends Realism by adding the idea that characters are:",
+      "options": [
+        "Free to choose their own destinies through willpower",
+        "Controlled primarily by heredity, environment, and chance — forces beyond their control",
+        "Morally responsible for all outcomes in their lives",
+        "Guided by divine providence toward a predetermined spiritual fate"
+      ],
+      "answer": "Controlled primarily by heredity, environment, and chance — forces beyond their control",
+      "explanation": "Naturalism applies a Darwinian worldview to fiction: characters are shaped by forces they did not choose and often cannot overcome. The result is frequently tragic or pessimistic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "type": "mc",
+      "question": "Mark Twain's use of dialect in his fiction (e.g., Huck Finn's speech) is primarily an example of which realist technique?",
+      "options": [
+        "Stream of consciousness",
+        "Dramatic irony",
+        "Local color and regionalism",
+        "Allegory"
+      ],
+      "answer": "Local color and regionalism",
+      "explanation": "Local color uses regional dialect, customs, and settings to ground a story in a specific time and place. Twain's use of Southern dialect authenticates the Mississippi River setting and social world of Huck Finn.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "type": "mc",
+      "question": "In 'The Open Boat,' the four survivors' experience at sea most directly illustrates which naturalist idea?",
+      "options": [
+        "Nature is inherently moral and rewards the virtuous",
+        "Human beings are rational agents who can master their environment",
+        "Nature is indifferent to human suffering and survival is largely a matter of chance",
+        "Hard work always leads to eventual success"
+      ],
+      "answer": "Nature is indifferent to human suffering and survival is largely a matter of chance",
+      "explanation": "Crane's story dramatizes naturalist determinism: the sea does not care about the men's suffering or effort. The arbitrary death of the strongest oiler, Billie, emphasizes that fate — not virtue — determines survival.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "type": "mc",
+      "question": "The American Dream, as critiqued in The Great Gatsby, is portrayed as:",
+      "options": [
+        "A reliable path to happiness through hard work",
+        "An illusion corrupted by materialism and the impossibility of recapturing the past",
+        "A spiritual journey toward self-knowledge and simplicity",
+        "A political ideal that motivates civic participation"
+      ],
+      "answer": "An illusion corrupted by materialism and the impossibility of recapturing the past",
+      "explanation": "Fitzgerald critiques the American Dream as hollow: Gatsby's wealth cannot buy acceptance or recapture his past with Daisy. The novel argues the Dream is corrupted by the values — greed, class snobbery — needed to pursue it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "type": "mc",
+      "question": "Willy Loman's tragedy in Death of a Salesman stems primarily from his belief that:",
+      "options": [
+        "Education and skill are less important than being well-liked and personally attractive",
+        "Hard manual labor is the only path to dignity",
+        "His sons have betrayed him and ruined his career",
+        "The Great Depression destroyed all chances of American success"
+      ],
+      "answer": "Education and skill are less important than being well-liked and personally attractive",
+      "explanation": "Willy's delusion is that personal charm and likability — not competence or skill — are the keys to success. This false belief leads him to raise his sons on the same fantasy and ultimately destroys his life.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "type": "mc",
+      "question": "Which of the following best describes 'disillusionment' as a theme in American literature of the 1920s–1930s?",
+      "options": [
+        "A renewed faith in the American Dream after the hardships of WWI",
+        "The discovery that widely held beliefs — especially about success and freedom — are false or unattainable",
+        "The celebration of individual achievement in the face of social obstacles",
+        "A turn toward religious faith as a source of meaning"
+      ],
+      "answer": "The discovery that widely held beliefs — especially about success and freedom — are false or unattainable",
+      "explanation": "Post-WWI American literature is marked by disillusionment: the war, Prohibition, and the growing gap between rich and poor revealed the gap between American ideals and American reality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "type": "mc",
+      "question": "The Valley of Ashes in The Great Gatsby symbolizes:",
+      "options": [
+        "The beauty of the American Midwest",
+        "The literal aftermath of a volcanic eruption",
+        "The moral decay and poverty left behind by the rich in their pursuit of wealth",
+        "Gatsby's childhood home and humble origins"
+      ],
+      "answer": "The moral decay and poverty left behind by the rich in their pursuit of wealth",
+      "explanation": "The Valley of Ashes — an industrial wasteland between West Egg and New York City — symbolizes the underside of the American Dream: the human cost borne by the poor while the wealthy pursue pleasure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "type": "mc",
+      "question": "Both Gatsby and Willy Loman can be classified as 'tragic heroes' in the modern sense because:",
+      "options": [
+        "They are noble-born figures brought down by fate",
+        "They are ordinary people destroyed by a fatal flaw — an inability to accept reality",
+        "They are morally corrupt characters who receive just punishment",
+        "They triumph over adversity before dying peacefully"
+      ],
+      "answer": "They are ordinary people destroyed by a fatal flaw — an inability to accept reality",
+      "explanation": "Arthur Miller redefined tragedy as the province of the common man — Willy and Gatsby are modern tragic heroes whose downfall stems from their inability to abandon destructive illusions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "type": "mc",
+      "question": "Logos, as an Aristotelian appeal, persuades through:",
+      "options": [
+        "Emotional stories and vivid imagery",
+        "The speaker's reputation and expertise",
+        "Facts, statistics, data, and logical reasoning",
+        "Appeals to shared cultural values"
+      ],
+      "answer": "Facts, statistics, data, and logical reasoning",
+      "explanation": "Logos appeals to reason and logic — using evidence, data, and sound reasoning to persuade. It answers the question: Is this argument logically sound and well-supported?",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "type": "mc",
+      "question": "A speaker who begins an argument by sharing a personal story about losing a loved one to a disease is primarily using:",
+      "options": [
+        "Logos",
+        "Ethos",
+        "Kairos",
+        "Pathos"
+      ],
+      "answer": "Pathos",
+      "explanation": "Appealing to the audience's emotions — grief, fear, sympathy, hope — is pathos. A personal tragedy story creates emotional connection that makes the audience receptive to the speaker's argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "type": "mc",
+      "question": "The straw man fallacy occurs when a speaker:",
+      "options": [
+        "Uses too much emotional language",
+        "Attacks the opponent's character instead of their argument",
+        "Misrepresents the opposing view to make it easier to attack",
+        "Uses statistics to mislead the audience"
+      ],
+      "answer": "Misrepresents the opposing view to make it easier to attack",
+      "explanation": "The straw man fallacy involves exaggerating or distorting the opposing argument into a weaker version ('a straw man') that is easier to knock down, rather than engaging with the actual position.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "type": "mc",
+      "question": "Rhetorical analysis differs from a simple reading response because it focuses on:",
+      "options": [
+        "Whether you agree or disagree with the author",
+        "How the author uses specific techniques to achieve a persuasive purpose",
+        "Summarizing the main argument of the text",
+        "Identifying the author's biography and historical context"
+      ],
+      "answer": "How the author uses specific techniques to achieve a persuasive purpose",
+      "explanation": "Rhetorical analysis examines HOW a text persuades — focusing on strategies, devices, and choices — rather than what the text says or whether the reader agrees with it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "type": "mc",
+      "question": "Kairos, a less commonly taught but important rhetorical concept, refers to:",
+      "options": [
+        "The speaker's emotional appeal",
+        "The logical structure of the argument",
+        "The right or opportune moment to deliver a message for maximum effect",
+        "The speaker's level of education"
+      ],
+      "answer": "The right or opportune moment to deliver a message for maximum effect",
+      "explanation": "Kairos is the concept of timeliness — delivering an argument at the right moment when the audience is most receptive. MLK's 1963 speech during the March on Washington is a classic example of kairos.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "type": "mc",
+      "question": "Annotating a text for rhetoric means marking:",
+      "options": [
+        "Every word you do not understand",
+        "Only the quotes you plan to use in an essay",
+        "Rhetorical devices, appeals, and strategies — with brief notes on their effect",
+        "The parts of the text you find most interesting"
+      ],
+      "answer": "Rhetorical devices, appeals, and strategies — with brief notes on their effect",
+      "explanation": "Rhetorical annotation is purposeful: you mark techniques (anaphora, antithesis, allusion), label appeals (ethos/pathos/logos), and briefly note why these choices are effective or significant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "type": "mc",
+      "question": "Lincoln's Gettysburg Address is notable for its use of allusion. When Lincoln references 'four score and seven years ago,' he is alluding to:",
+      "options": [
+        "The signing of the Emancipation Proclamation",
+        "The American Revolution and the founding of the United States in 1776",
+        "The Battle of Gettysburg itself",
+        "The Declaration of Independence's specific language about slavery"
+      ],
+      "answer": "The American Revolution and the founding of the United States in 1776",
+      "explanation": "'Four score and seven years ago' = 87 years before 1863 = 1776. Lincoln anchors the Civil War's meaning in the founding ideals of liberty and equality, arguing the war is a test of whether those ideals can survive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "type": "mc",
+      "question": "Evaluating evidence in a persuasive text involves asking all of the following EXCEPT:",
+      "options": [
+        "Is the evidence relevant to the claim being made?",
+        "Is the source of the evidence credible and current?",
+        "Does the evidence emotionally move me?",
+        "Is the evidence sufficient to support the claim?"
+      ],
+      "answer": "Does the evidence emotionally move me?",
+      "explanation": "Critical evaluation of evidence focuses on relevance, credibility, and sufficiency — not personal emotional response. Being moved by evidence is irrelevant to whether it is logically valid or factually accurate.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "type": "mc",
+      "question": "MLK's 'I Have a Dream' speech uses extended metaphor when it describes the Declaration of Independence and Constitution as:",
+      "options": [
+        "Laws that have been fully honored since the founding",
+        "A 'promissory note' that America has defaulted on for Black citizens",
+        "Outdated documents that must be replaced",
+        "European traditions imposed on American democracy"
+      ],
+      "answer": "A 'promissory note' that America has defaulted on for Black citizens",
+      "explanation": "MLK uses the metaphor of a bad check / promissory note to describe the gap between America's founding ideals and the lived reality of Black Americans — turning an economic concept into a powerful moral indictment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "type": "mc",
+      "question": "Parallelism as a rhetorical device involves:",
+      "options": [
+        "Contrasting two opposite ideas in consecutive sentences",
+        "Repeating a grammatical structure across multiple phrases or clauses for rhythm and emphasis",
+        "Referring to a historical event to add authority",
+        "Using exaggeration to create a vivid impression"
+      ],
+      "answer": "Repeating a grammatical structure across multiple phrases or clauses for rhythm and emphasis",
+      "explanation": "Parallelism uses repeated grammatical structures to create rhythm, balance, and emphasis. JFK's 'ask not what your country can do for you — ask what you can do for your country' is a famous parallel structure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "type": "mc",
+      "question": "Synthesizing sources in a research essay means:",
+      "options": [
+        "Listing sources in alphabetical order in your bibliography",
+        "Quoting each source in a separate paragraph",
+        "Integrating ideas from multiple sources to develop your own argument",
+        "Finding sources that all agree with your thesis"
+      ],
+      "answer": "Integrating ideas from multiple sources to develop your own argument",
+      "explanation": "Synthesis means putting sources in conversation — comparing, contrasting, building on, and connecting their ideas — to support your own original argument, rather than simply reporting each source separately.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "type": "mc",
+      "question": "A thesis-driven research essay differs from a report because:",
+      "options": [
+        "A report uses sources; an essay does not",
+        "An essay makes and defends an arguable claim; a report describes information neutrally",
+        "A report is longer than an essay",
+        "An essay uses personal pronouns; a report uses academic vocabulary"
+      ],
+      "answer": "An essay makes and defends an arguable claim; a report describes information neutrally",
+      "explanation": "A research essay centers on an arguable thesis that the writer supports and defends using evidence. A report primarily informs — presenting information without taking a debatable position.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "type": "mc",
+      "question": "An annotated bibliography entry should include:",
+      "options": [
+        "Only the citation in correct MLA format",
+        "The full text of the source",
+        "A citation plus a brief summary and evaluation of the source's credibility and usefulness",
+        "A list of all quotations you plan to use from the source"
+      ],
+      "answer": "A citation plus a brief summary and evaluation of the source's credibility and usefulness",
+      "explanation": "An annotation follows the citation and provides: (1) a summary of the source's main ideas and (2) an evaluation of its credibility, relevance, and usefulness for the research project.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is the strongest thesis for a research essay about the Harlem Renaissance?",
+      "options": [
+        "The Harlem Renaissance happened in the 1920s.",
+        "Many famous African American writers lived in Harlem.",
+        "The Harlem Renaissance transformed American culture by asserting Black artistic and intellectual identity at a time when political equality remained out of reach.",
+        "This essay will discuss the Harlem Renaissance."
+      ],
+      "answer": "The Harlem Renaissance transformed American culture by asserting Black artistic and intellectual identity at a time when political equality remained out of reach.",
+      "explanation": "This thesis makes a specific, arguable claim (transformation of American culture) with a nuanced qualifier (when political equality was out of reach). The other options are facts, lists, or announcements.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "type": "mc",
+      "question": "When integrating a direct quotation into a research essay, you should:",
+      "options": [
+        "Place the quote at the beginning of the paragraph with no introduction",
+        "Let the quote speak for itself without commentary",
+        "Introduce the quote with a signal phrase, include the quote, then analyze its significance",
+        "Always paraphrase instead of quoting directly"
+      ],
+      "answer": "Introduce the quote with a signal phrase, include the quote, then analyze its significance",
+      "explanation": "Quotations should be embedded using the quote sandwich: (1) introduction/context, (2) the quotation with citation, (3) analysis explaining how it supports your argument. Quotes without context or analysis are ineffective.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is an example of a WEAK passive construction that should be revised?",
+      "options": [
+        "She argued persuasively.",
+        "The committee rejected the proposal.",
+        "Mistakes were made by the committee.",
+        "The novel explores themes of identity."
+      ],
+      "answer": "Mistakes were made by the committee.",
+      "explanation": "'Mistakes were made by the committee' is a passive construction that buries the agent and is wordier than the active alternative: 'The committee made mistakes.' Passive voice often weakens clarity and directness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "type": "mc",
+      "question": "Subordination in sentence writing means:",
+      "options": [
+        "Combining two equal independent clauses with a coordinating conjunction",
+        "Making one idea grammatically dependent on another to show their logical relationship",
+        "Eliminating all adjectives and adverbs",
+        "Beginning every sentence with the subject"
+      ],
+      "answer": "Making one idea grammatically dependent on another to show their logical relationship",
+      "explanation": "Subordination uses subordinating conjunctions (because, although, when, since) to create complex sentences that clarify relationships between ideas — cause, contrast, condition, time, etc.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "type": "mc",
+      "question": "A colon is correctly used to:",
+      "options": [
+        "Join two independent clauses of equal weight",
+        "Introduce a list, explanation, or quotation that follows a complete independent clause",
+        "Show a pause shorter than a period",
+        "Separate the parts of a compound-complex sentence"
+      ],
+      "answer": "Introduce a list, explanation, or quotation that follows a complete independent clause",
+      "explanation": "A colon says 'here comes more': it introduces material (a list, explanation, example, or quotation) that expands on the complete clause that precedes it. Example: 'She needed three things: time, money, and courage.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "type": "mc",
+      "question": "Which revision of the following wordy sentence is MOST concise? Original: 'At this point in time, it is important to note that many students who are enrolled in the class have not yet completed the assignment.'",
+      "options": [
+        "At this point, it is important that many students in the class haven't done the assignment.",
+        "Many enrolled students have not yet completed the assignment.",
+        "It should be noted that many of the students currently enrolled have not completed the assignment at this time.",
+        "As of now, a significant number of students who are in the class have failed to complete the assigned work."
+      ],
+      "answer": "Many enrolled students have not yet completed the assignment.",
+      "explanation": "The most concise revision cuts all deadwood phrases ('at this point in time,' 'it is important to note that,' 'who are enrolled in the class') while preserving all essential information.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "type": "mc",
+      "question": "Sentence variety in formal writing is best achieved by:",
+      "options": [
+        "Using only short, simple sentences for clarity",
+        "Always beginning sentences with the subject followed by the verb",
+        "Mixing sentence lengths and types, and varying sentence openings",
+        "Using the longest sentences possible to demonstrate sophistication"
+      ],
+      "answer": "Mixing sentence lengths and types, and varying sentence openings",
+      "explanation": "Effective prose varies sentence length (short for emphasis, longer for elaboration), type (simple, compound, complex), and opening (participial phrase, subordinate clause, adverb, subject). Monotony results from following only one pattern.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "type": "mc",
+      "question": "The Harlem Renaissance took place primarily during:",
+      "options": [
+        "The Civil War era of the 1860s",
+        "The Reconstruction period of the 1870s–1880s",
+        "The 1920s and 1930s",
+        "The Civil Rights Movement of the 1960s"
+      ],
+      "answer": "The 1920s and 1930s",
+      "explanation": "The Harlem Renaissance was a cultural flowering centered in Harlem, New York City during the 1920s–1930s, producing major works in literature, music, and visual art.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "type": "mc",
+      "question": "Langston Hughes' 'The Weary Blues' is notable for its incorporation of:",
+      "options": [
+        "Puritan hymn structure and biblical allusions",
+        "Jazz and blues rhythms and African American vernacular music traditions",
+        "Shakespearean sonnet form",
+        "Transcendentalist imagery of nature and solitude"
+      ],
+      "answer": "Jazz and blues rhythms and African American vernacular music traditions",
+      "explanation": "Hughes deliberately incorporated the rhythms and language of blues and jazz music into his poetry — celebrating African American vernacular culture and rejecting European literary forms as the only standard.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "type": "mc",
+      "question": "Zora Neale Hurston's 'How It Feels to Be Colored Me' is best characterized as:",
+      "options": [
+        "A tragic account of racial trauma and suffering",
+        "A confident, ironic assertion of Black identity and joy that resists the victim narrative",
+        "A political essay demanding equal rights through logical argument",
+        "A narrative poem in blues tradition"
+      ],
+      "answer": "A confident, ironic assertion of Black identity and joy that resists the victim narrative",
+      "explanation": "Hurston's essay is distinctive for its refusal to center pain or victimhood — instead asserting a joyful, self-defined Black identity. Her tone is witty, confident, and unapologetically celebratory.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "type": "mc",
+      "question": "Countee Cullen's 'Yet Do I Marvel' uses the Shakespearean sonnet form — a traditionally European form — to:",
+      "options": [
+        "Celebrate European literary traditions",
+        "Argue that African Americans should abandon European influences",
+        "Create ironic tension between the form's cultural associations and the Black experience it describes",
+        "Explore the natural world through Romantic imagery"
+      ],
+      "answer": "Create ironic tension between the form's cultural associations and the Black experience it describes",
+      "explanation": "Cullen's mastery of the European sonnet form is itself a statement: the poem's formal perfection exists alongside its ironic subject — God's curious choice to make a Black poet sing in a society that denies his humanity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "type": "mc",
+      "question": "Which theme is MOST central to the Harlem Renaissance literary works studied in this module?",
+      "options": [
+        "The individual's transcendence of society through solitude in nature",
+        "The disillusionment of WWI veterans returning to a changed America",
+        "The affirmation of African American identity, culture, and dignity in the face of racism",
+        "The corruption of the American Dream by materialism"
+      ],
+      "answer": "The affirmation of African American identity, culture, and dignity in the face of racism",
+      "explanation": "The Harlem Renaissance was fundamentally about cultural self-determination — Black artists asserting the richness of African American culture at a time when Jim Crow laws enforced their political and social oppression.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "type": "mc",
+      "question": "Hemingway's 'iceberg theory' is sometimes called the 'theory of omission.' In practice, this means:",
+      "options": [
+        "Writers should avoid all symbolism and figurative language",
+        "Writers should describe setting in great detail but omit character psychology",
+        "Writers leave much unstated beneath the surface; meaning emerges from what is implied, not said",
+        "Stories should begin in medias res and omit all exposition"
+      ],
+      "answer": "Writers leave much unstated beneath the surface; meaning emerges from what is implied, not said",
+      "explanation": "Hemingway omitted explicit statement of theme, emotion, and backstory, trusting that his careful selection of surface details would convey the deeper meaning — just as most of an iceberg is invisible below water.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "type": "mc",
+      "question": "In 'Hills Like White Elephants,' the couple's conversation is largely about what topic that is NEVER directly named?",
+      "options": [
+        "Their financial debt",
+        "An abortion",
+        "Whether to get married",
+        "Moving to a new country"
+      ],
+      "answer": "An abortion",
+      "explanation": "The couple discusses 'the operation' throughout the story but never names it directly. Hemingway's iceberg theory is fully operative: the reader must infer from the dialogue's subtext that they are discussing abortion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "type": "mc",
+      "question": "Stream of consciousness as used by Faulkner differs from standard first-person narration primarily in that it:",
+      "options": [
+        "Uses third-person omniscient perspective",
+        "Presents thoughts in perfectly logical, chronological order",
+        "Mimics the non-linear, associative, and sometimes irrational flow of actual thought",
+        "Focuses exclusively on external action and dialogue"
+      ],
+      "answer": "Mimics the non-linear, associative, and sometimes irrational flow of actual thought",
+      "explanation": "Stream of consciousness abandons conventional narrative logic — thoughts associate freely, time shifts without warning, and rational transitions are absent. Faulkner's Benjy section is a defining example.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "type": "mc",
+      "question": "Modernist literature is often described as reflecting post-WWI 'disillusionment.' This means modernist writers:",
+      "options": [
+        "Were optimistic about technology and progress",
+        "Celebrated the heroism of soldiers who died in WWI",
+        "Rejected the Victorian belief in moral certainty, order, and progress after the war's devastation",
+        "Returned to Romantic idealism and nature as sources of hope"
+      ],
+      "answer": "Rejected the Victorian belief in moral certainty, order, and progress after the war's devastation",
+      "explanation": "WWI shattered faith in the institutions — government, church, reason — that Victorians believed guaranteed progress. Modernist literature reflects this disillusionment through fragmentation, ambiguity, and irony.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "type": "mc",
+      "question": "An unreliable narrator requires the reader to:",
+      "options": [
+        "Trust the narrator's account completely",
+        "Read between the lines and reconstruct a more accurate version of events",
+        "Stop reading when the narrative becomes confusing",
+        "Accept the narrator's version as the only possible truth"
+      ],
+      "answer": "Read between the lines and reconstruct a more accurate version of events",
+      "explanation": "An unreliable narrator invites — even requires — the reader to be an active interpreter, detecting distortions, gaps, and contradictions in the narrator's account to reach a fuller understanding.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "type": "mc",
+      "question": "In AP-style prose analysis, 'diction' refers to:",
+      "options": [
+        "The physical layout of the text on the page",
+        "The author's choice of specific words and their connotative effects",
+        "The length and structure of sentences",
+        "The use of dialogue in a narrative"
+      ],
+      "answer": "The author's choice of specific words and their connotative effects",
+      "explanation": "Diction is word choice — and in analysis, we examine not just what words mean but what they suggest (connotation), how formal or informal they are, and why those specific words were chosen over alternatives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "type": "mc",
+      "question": "In prose analysis, analyzing 'syntax' means examining:",
+      "options": [
+        "The author's use of rhyme and meter",
+        "The organization of the entire essay",
+        "How sentences are structured — their length, complexity, and grammatical arrangement — and the effect this creates",
+        "The author's biographical background"
+      ],
+      "answer": "How sentences are structured — their length, complexity, and grammatical arrangement — and the effect this creates",
+      "explanation": "Syntax in literary analysis focuses on sentence structure: Are sentences long and flowing or short and abrupt? Does the structure mirror the content? How does sentence arrangement affect pacing and emphasis?",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "type": "mc",
+      "question": "An AP prose analysis thesis should do which of the following?",
+      "options": [
+        "List all the literary devices found in the passage",
+        "State the author's name and title only",
+        "Make a specific, defensible claim about how the author's choices work together to convey a central idea",
+        "Summarize what the passage is about"
+      ],
+      "answer": "Make a specific, defensible claim about how the author's choices work together to convey a central idea",
+      "explanation": "An AP thesis goes beyond identifying techniques — it argues for a particular interpretation of how those techniques function together to create meaning. It is specific (names choices), arguable, and connected to meaning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "type": "mc",
+      "question": "When analyzing tone in a prose passage, you should focus on:",
+      "options": [
+        "How loud or quiet the characters speak",
+        "The author's attitude toward the subject as revealed through word choice and detail selection",
+        "The themes stated explicitly in the first paragraph",
+        "The physical setting of the passage"
+      ],
+      "answer": "The author's attitude toward the subject as revealed through word choice and detail selection",
+      "explanation": "Tone is the author's (or speaker's) emotional attitude — melancholic, ironic, reverent, satirical, detached, urgent. It is inferred from diction, imagery, and what details the author chooses to include or omit.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is a comment about EFFECT — appropriate for prose analysis — rather than just identification of a device?",
+      "options": [
+        "The author uses a simile in the third paragraph.",
+        "The passage contains several examples of imagery.",
+        "By comparing the character's grief to a 'stone dropping into still water,' the author suggests that loss spreads outward invisibly, affecting everything.",
+        "There is a metaphor on page two."
+      ],
+      "answer": "By comparing the character's grief to a 'stone dropping into still water,' the author suggests that loss spreads outward invisibly, affecting everything.",
+      "explanation": "Analysis names the technique AND explains its effect on meaning. Simply identifying a device ('there is a simile') is observation, not analysis. Strong analysis connects technique to theme or effect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "type": "mc",
+      "question": "A 'nuanced' thesis in a synthesis essay means one that:",
+      "options": [
+        "Argues in favor of one source and against all others",
+        "Takes an oversimplified pro/con position",
+        "Acknowledges complexity and qualifies the argument, avoiding absolute claims",
+        "Uses the most emotional source as the primary evidence"
+      ],
+      "answer": "Acknowledges complexity and qualifies the argument, avoiding absolute claims",
+      "explanation": "A nuanced thesis accounts for exceptions, qualifications, and competing considerations. Instead of 'Social media is harmful,' a nuanced thesis might argue 'While social media connects communities, its unregulated spread of misinformation poses risks that outweigh its benefits in political contexts.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "type": "mc",
+      "question": "When acknowledging a counterargument in a synthesis essay, you should:",
+      "options": [
+        "Ignore it and repeat your thesis more forcefully",
+        "Concede that the counterargument is completely correct",
+        "Fairly represent the opposing view and then explain why your argument is still more convincing",
+        "Only mention counterarguments in the conclusion"
+      ],
+      "answer": "Fairly represent the opposing view and then explain why your argument is still more convincing",
+      "explanation": "Acknowledging a counterargument honestly — then rebutting it — strengthens your credibility and demonstrates intellectual honesty. Dismissing or ignoring opposing views undermines the quality of the argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "type": "mc",
+      "question": "In an AP synthesis essay, using '(Source C)' as attribution means:",
+      "options": [
+        "The source is the third most important in the packet",
+        "You are crediting the third author alphabetically",
+        "You are identifying the source document by its label in the provided source packet",
+        "The source appears on page C of the reading"
+      ],
+      "answer": "You are identifying the source document by its label in the provided source packet",
+      "explanation": "AP synthesis essays use parenthetical source labels — (Source A), (Source B), etc. — to attribute ideas to specific documents in the provided source packet, since full citations are not required in the exam context.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "type": "mc",
+      "question": "The most common weakness in student synthesis essays is:",
+      "options": [
+        "Using too many direct quotations",
+        "Having a thesis that is too specific",
+        "Patchwriting — stitching together summaries of each source without developing an original argument",
+        "Using informal language in one paragraph"
+      ],
+      "answer": "Patchwriting — stitching together summaries of each source without developing an original argument",
+      "explanation": "Patchwriting (stringing source summaries together) produces a report, not a synthesis essay. Strong synthesis subordinates sources to the writer's own argument, using them as evidence rather than as the content itself.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following sentences BEST demonstrates synthesis (rather than mere summary) of two sources?",
+      "options": [
+        "Source A says social media is harmful. Source B says it is beneficial.",
+        "According to Source A, social media increases anxiety. Source B also discusses social media.",
+        "While Source A's data shows increased anxiety in teen social media users, Source B's longitudinal study complicates this picture by demonstrating that moderated use correlates with stronger social connections.",
+        "Source A and Source B both discuss social media and its effects on teenagers."
+      ],
+      "answer": "While Source A's data shows increased anxiety in teen social media users, Source B's longitudinal study complicates this picture by demonstrating that moderated use correlates with stronger social connections.",
+      "explanation": "This sentence puts sources in active conversation — using Source A to make a point and Source B to qualify or complicate it — rather than summarizing them separately.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "type": "mc",
+      "question": "Dramatic irony in A Raisin in the Sun or Death of a Salesman occurs when:",
+      "options": [
+        "Two characters misunderstand each other in a comic scene",
+        "The audience understands the full tragic significance of events that the characters do not yet grasp",
+        "A character makes a sarcastic remark that another character takes literally",
+        "The ending surprises both the characters and the audience equally"
+      ],
+      "answer": "The audience understands the full tragic significance of events that the characters do not yet grasp",
+      "explanation": "Dramatic irony in tragedy often means the audience can see the character's doom approaching while the character remains unaware — creating tension, pathos, and a sense of inevitability.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "type": "mc",
+      "question": "The seeds that Willy Loman plants in Death of a Salesman most powerfully symbolize:",
+      "options": [
+        "His love of gardening as a hobby",
+        "His desire to leave something tangible behind — proof that his life had value and produced something real",
+        "The corruption of the American Dream by materialism",
+        "His relationship with his neighbor Charley"
+      ],
+      "answer": "His desire to leave something tangible behind — proof that his life had value and produced something real",
+      "explanation": "Willy plants seeds in the dark — a futile act since nothing can grow there — but it reveals his desperate need for legacy and proof of his existence. The seeds embody his fear of having lived an inconsequential life.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "type": "mc",
+      "question": "Arthur Miller argued that tragedy can belong to the common man, not just kings and nobles. This idea suggests that:",
+      "options": [
+        "Only historical figures deserve tragic treatment in drama",
+        "The struggle for dignity and self-definition is universal — ordinary people are capable of tragic greatness",
+        "Working-class characters are not interesting enough to sustain full-length plays",
+        "Tragedy requires a supernatural element to be authentic"
+      ],
+      "answer": "The struggle for dignity and self-definition is universal — ordinary people are capable of tragic greatness",
+      "explanation": "Miller's 'Tragedy and the Common Man' (1949) argued that the willingness to fight for one's sense of personal dignity — even at the cost of everything — is the essence of tragic heroism, available to any person.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "type": "mc",
+      "question": "Social commentary in American drama refers to:",
+      "options": [
+        "A play's description of social events in the characters' lives",
+        "The playwright's use of characters and plot to critique or reveal problems in society",
+        "The audience's reaction to a play's political themes",
+        "A review of a play published in a newspaper"
+      ],
+      "answer": "The playwright's use of characters and plot to critique or reveal problems in society",
+      "explanation": "Both Miller and Hansberry use drama as a vehicle for social critique — Death of a Salesman critiques the myth of the American Dream; A Raisin in the Sun critiques housing segregation and systemic racism.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "type": "mc",
+      "question": "Reading a play script differs from watching a performance primarily because:",
+      "options": [
+        "Scripts contain more detailed descriptions of the plot",
+        "A reader must imaginatively construct elements (lighting, blocking, actors' interpretations) that a performance makes concrete",
+        "Scripts are always longer than performances",
+        "Performance adds themes that are not present in the script"
+      ],
+      "answer": "A reader must imaginatively construct elements (lighting, blocking, actors' interpretations) that a performance makes concrete",
+      "explanation": "Reading a play is an act of imaginative collaboration — the reader must fill in all the theatrical elements a director and actors would embody. Performance makes choices explicit; reading leaves them open to interpretation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "type": "mc",
+      "question": "In 'Everyday Use' by Alice Walker, the central conflict over the quilts represents a larger debate about:",
+      "options": [
+        "Whether Mama prefers Dee or Maggie",
+        "The monetary value of handmade crafts",
+        "Whether heritage should be displayed as art or lived as daily practice",
+        "Dee's decision to change her name"
+      ],
+      "answer": "Whether heritage should be displayed as art or lived as daily practice",
+      "explanation": "The quilts embody the story's central thematic question: Is cultural heritage honored by preserving it as artifact (Dee's view) or by continuing to use it as part of living tradition (Maggie and Mama's view)?",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "type": "mc",
+      "question": "The concept of the 'literary canon' is significant in contemporary literary studies because:",
+      "options": [
+        "It lists all books published in the United States",
+        "It reflects decisions — often influenced by race, class, and gender — about whose stories are deemed important",
+        "It establishes objective standards for literary quality",
+        "It includes only texts written before 1900"
+      ],
+      "answer": "It reflects decisions — often influenced by race, class, and gender — about whose stories are deemed important",
+      "explanation": "The canon is not neutral — it has historically centered white, male, Western authors. Contemporary scholars and educators have expanded the canon to include diverse voices, arguing that who is included shapes what students see as 'literature.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "type": "mc",
+      "question": "Alberto Rios's 'The Border: A Double Sonnet' uses the form of two connected sonnets to mirror:",
+      "options": [
+        "The two sides of a political debate about immigration policy",
+        "The two nations, two languages, and two identities that exist at and across a border",
+        "Two different speakers arguing about the same event",
+        "Two different time periods in the speaker's life"
+      ],
+      "answer": "The two nations, two languages, and two identities that exist at and across a border",
+      "explanation": "Rios's double sonnet form enacts the poem's theme — the border as a space of duality. The paired poems mirror the two sides (nations, languages, identities) that the border both separates and brings into contact.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "type": "mc",
+      "question": "Chimamanda Ngozi Adichie's TED Talk 'The Danger of a Single Story' argues that:",
+      "options": [
+        "Literature should focus only on universal human experiences",
+        "Reducing any group to a single narrative strips away complexity and perpetuates stereotypes",
+        "Immigration stories are too personal to be political",
+        "American literature should be studied only through its canonical texts"
+      ],
+      "answer": "Reducing any group to a single narrative strips away complexity and perpetuates stereotypes",
+      "explanation": "Adichie warns that when a single story defines a person, group, or place — especially a story told by outsiders — it creates incomplete and often harmful representations. Multiple, diverse stories are necessary for full humanity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "type": "mc",
+      "question": "Contemporary American literature's focus on identity, immigration, and race is significant to literary study because:",
+      "options": [
+        "These topics are more commercially successful than traditional literary themes",
+        "It reflects a broadening of whose experiences are considered worthy of literary representation",
+        "Contemporary works are easier to read than classical American literature",
+        "Immigration is only a recent phenomenon in American history"
+      ],
+      "answer": "It reflects a broadening of whose experiences are considered worthy of literary representation",
+      "explanation": "The growing presence of diverse voices in American literature represents a democratic expansion of what stories matter — challenging the historical exclusions of the traditional canon.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "type": "mc",
+      "question": "An open-ended Socratic seminar question is one that:",
+      "options": [
+        "Has a single correct factual answer",
+        "Asks students to memorize key vocabulary",
+        "Invites multiple interpretations and requires evidence from the text to explore",
+        "Asks whether students liked or disliked the book"
+      ],
+      "answer": "Invites multiple interpretations and requires evidence from the text to explore",
+      "explanation": "Socratic seminar questions should be genuinely open — without a predetermined right answer — and should generate discussion that requires participants to return to the text for evidence and reconsider their assumptions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "type": "mc",
+      "question": "A literary analysis essay differs from a book report because it:",
+      "options": [
+        "Summarizes the plot in detail",
+        "Lists the characters and their traits",
+        "Makes and defends an arguable interpretive claim about the text",
+        "Describes the author's biography and historical context"
+      ],
+      "answer": "Makes and defends an arguable interpretive claim about the text",
+      "explanation": "Literary analysis argues an interpretation — not what happens, but what it means and how the author creates that meaning. Evidence from the text supports the analytical claim, not just the plot summary.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "type": "mc",
+      "question": "When participating in a Socratic seminar, the most productive contribution is one that:",
+      "options": [
+        "Repeats what a previous speaker said to show agreement",
+        "Introduces a personal anecdote unrelated to the text",
+        "Builds on or respectfully challenges a previous idea using specific text evidence",
+        "Summarizes the entire plot of the book for the group"
+      ],
+      "answer": "Builds on or respectfully challenges a previous idea using specific text evidence",
+      "explanation": "Productive seminar participation advances the group's thinking — by extending an idea further, complicating it with a counterexample, or connecting it to another part of the text. Text evidence grounds the discussion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "type": "mc",
+      "question": "Independent reading of a self-chosen text develops a reader's ability to:",
+      "options": [
+        "Memorize literary terms for standardized tests",
+        "Transfer analytical skills to unfamiliar texts and sustain independent literary inquiry",
+        "Write book reports in the correct five-paragraph format",
+        "Find texts that confirm what they already believe"
+      ],
+      "answer": "Transfer analytical skills to unfamiliar texts and sustain independent literary inquiry",
+      "explanation": "Independent reading — choosing one's own text and applying analytical tools without teacher scaffolding — develops the most important long-term reader skill: the ability to approach any text independently and analytically.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "type": "mc",
+      "question": "When writing an independent reading literary analysis, which of the following would constitute a WEAK thesis?",
+      "options": [
+        "In Toni Morrison's Beloved, the supernatural figure of Beloved represents the return of the repressed trauma of slavery that cannot be outrun even after legal freedom.",
+        "Sandra Cisneros uses the house as a recurring symbol in The House on Mango Street to show the gap between Esperanza's dreams and the limitations imposed by poverty and gender.",
+        "My book was very interesting and I thought the main character was relatable.",
+        "In The Kite Runner, Hosseini uses Amir's guilt over Hassan's assault to argue that redemption requires active sacrifice, not merely passive regret."
+      ],
+      "answer": "My book was very interesting and I thought the main character was relatable.",
+      "explanation": "This is not a literary thesis — it expresses personal reaction without making an arguable interpretive claim about how the author creates meaning. A thesis must be specific, analytical, and supportable with textual evidence.",
+      "points": 1
+    }
+  ]
+}

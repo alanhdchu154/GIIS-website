@@ -1,0 +1,1705 @@
+{
+  "slug": "english-i-writing",
+  "name": "English I - Writing",
+  "nameZh": "英语一（写作）",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "A writing-focused companion to English I — developing craft across personal narrative, descriptive, expository, argumentative, and research writing, with emphasis on the writing process and revision.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "The Writing Process",
+      "titleZh": "写作过程",
+      "objectives": "Understand and apply the five stages of the writing process: prewriting, drafting, revising, editing, and publishing; use graphic organizers and outlines during prewriting; distinguish revising from editing.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/index.html",
+      "readingNote": "Purdue OWL — The Writing Process: Overview of All Five Stages",
+      "videoUrl": "https://www.youtube.com/watch?v=s7Roh3_HFPg",
+      "videoNote": "Crash Course Study Skills — The Writing Process (prewriting to publishing)",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:the-writing-process/v/introduction-to-the-writing-process",
+      "video2Note": "Khan Academy — Introduction to the Writing Process",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/prewriting_invention/index.html",
+      "practiceNote": "Purdue OWL — Prewriting Strategies: Brainstorming, Freewriting, and Outlining",
+      "assignment": "Choose any topic that interests you. Complete all five stages of the writing process and submit evidence of each: (1) a prewriting graphic organizer or outline, (2) a rough draft (at least 300 words), (3) a revised draft with changes highlighted or annotated, (4) a proofread final draft with a list of at least five corrections you made, and (5) a brief reflection (100 words) on what you learned through this process.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 2,
+      "title": "Sentence Variety & Style",
+      "titleZh": "句子多样性与写作风格",
+      "objectives": "Combine short, choppy sentences into fluent, varied ones; recognize and apply parallel structure; vary sentence openings and lengths to create rhythm and emphasis in writing.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/parallel_structure.html",
+      "readingNote": "Purdue OWL — Parallel Structure: Rules and Examples",
+      "videoUrl": "https://www.youtube.com/watch?v=GwCV2pmxldo",
+      "videoNote": "Crash Course English Language — Sentence Fluency and Variety",
+      "video2Url": "https://www.khanacademy.org/humanities/grammar/syntax-sentences-and-clauses/x3db8f6a7e7a5c715:sentence-variety/v/varying-sentence-structure",
+      "video2Note": "Khan Academy — Varying Sentence Structure for Style",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/grammar/sentence_clarity.html",
+      "practiceNote": "Purdue OWL — Sentence Clarity and Conciseness Exercises",
+      "assignment": "Take a provided passage of 10 simple, repetitive sentences and rewrite it into a polished paragraph using at least three different sentence types (simple, compound, complex), varied openings (prepositional phrase, adverb, participial phrase), and parallel structure in at least one sentence. Write a second original paragraph (150 words) on any topic, deliberately showcasing sentence variety. Label and annotate your techniques.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 3,
+      "title": "Personal Narrative Essay",
+      "titleZh": "个人叙事文",
+      "objectives": "Write a structured personal narrative using a clear anecdote; apply show-don't-tell techniques; develop a distinctive voice; organize the narrative with an engaging introduction, developed middle, and reflective conclusion.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/creative_writing/narrative_essay.html",
+      "readingNote": "Purdue OWL — Writing the Personal Narrative Essay",
+      "videoUrl": "https://www.youtube.com/watch?v=5cn32B1tVhw",
+      "videoNote": "Crash Course Literature — Story Structure and Personal Narrative Craft",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:narrative-writing/v/personal-narrative-essay",
+      "video2Note": "Khan Academy — Writing a Personal Narrative Essay",
+      "practiceUrl": "https://www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story",
+      "practiceNote": "TED-Ed — Chimamanda Ngozi Adichie: 'The Danger of a Single Story' (model of personal narrative voice)",
+      "assignment": "Write a personal narrative essay of at least 600 words about a significant memory or turning point in your life. Requirements: (1) an engaging hook that drops the reader into a scene, (2) at least two show-don't-tell moments (no 'I felt sad' — show it through action, dialogue, or body language), (3) at least three lines of dialogue, (4) a clear sense of voice and perspective throughout, and (5) a conclusion that reflects on the meaning of the experience. Submit your prewriting outline alongside the final essay.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 4,
+      "title": "Descriptive Essay",
+      "titleZh": "描述性文章",
+      "objectives": "Write a descriptive essay using spatial organization; create a dominant impression through carefully selected details; employ sensory language from all five senses to paint a vivid picture for the reader.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/descriptive_essays.html",
+      "readingNote": "Purdue OWL — Descriptive Essays: Purpose, Structure, and Techniques",
+      "videoUrl": "https://www.youtube.com/watch?v=5I4dSBTuUOA",
+      "videoNote": "Crash Course Literature — Descriptive Writing and Creating a Dominant Impression",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:informative-explanatory-writing/v/descriptive-writing-techniques",
+      "video2Note": "Khan Academy — Descriptive Writing Techniques and Spatial Organization",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/organization_and_structure.html",
+      "practiceNote": "Purdue OWL — Organization and Structure: Spatial, Chronological, and Order of Importance",
+      "assignment": "Write a descriptive essay of 400–500 words about a meaningful place (a room, a neighborhood, a natural setting). Use spatial organization (near to far, left to right, or top to bottom — state which you are using at the top). Your essay must: (1) open with a sentence establishing the dominant impression, (2) include sensory details from at least four of the five senses, (3) use at least one simile and one metaphor, and (4) end with a sentence that reinforces the dominant impression. Underline and label each sensory detail.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 5,
+      "title": "Figurative Language in Writing",
+      "titleZh": "写作中的修辞手法",
+      "objectives": "Identify and use metaphor, simile, personification, hyperbole, and imagery effectively in original writing; understand how each device creates meaning and mood; avoid clichés and craft fresh, original figurative language.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/figurative_language.html",
+      "readingNote": "Purdue OWL — Figurative Language: Definitions and Examples",
+      "videoUrl": "https://www.youtube.com/watch?v=YS5MrNSgUa4",
+      "videoNote": "TED-Ed — James Herrick: 'How to Use Rhetoric to Get What You Want' (figurative language in action)",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:figurative-language/v/figurative-language-overview",
+      "video2Note": "Khan Academy — Figurative Language Overview: Simile, Metaphor, Personification, Hyperbole",
+      "practiceUrl": "https://www.youtube.com/watch?v=rGCPU_HMjXs",
+      "practiceNote": "TED-Ed — 'How to Build a Fictional World' (imagery and figurative language in creative writing)",
+      "assignment": "Complete a figurative language writing workshop: (1) Write one original sentence for each of the five devices (metaphor, simile, personification, hyperbole, imagery) — 5 sentences. (2) Write a single descriptive paragraph (150 words) about a stormy night that naturally incorporates all five devices — label each one in the margin. (3) Find three clichés (e.g., 'raining cats and dogs') and rewrite each as an original, fresh figurative expression. (4) Write a brief reflection (75 words) on which device you find most powerful and why.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 6,
+      "title": "Paragraph Development",
+      "titleZh": "段落发展",
+      "objectives": "Write well-developed paragraphs using the T-E-E-L or T-E-A structure (Topic sentence, Evidence/Example, Explanation/Analysis, Link); craft strong topic sentences; use effective transitions within and between paragraphs; write clear concluding sentences.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/paragraphs_and_paragraphing/index.html",
+      "readingNote": "Purdue OWL — Paragraphing: Topic Sentences, Unity, and Coherence",
+      "videoUrl": "https://www.youtube.com/watch?v=5onyM_s3vkQ",
+      "videoNote": "Crash Course English Language — How to Write a Strong Paragraph",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:the-writing-process/v/paragraph-structure",
+      "video2Note": "Khan Academy — Paragraph Structure: Topic Sentence, Support, Conclusion",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/transition_words_and_phrases.html",
+      "practiceNote": "Purdue OWL — Transition Words and Phrases for Paragraph Coherence",
+      "assignment": "Write three fully developed body paragraphs on three different topics of your choice, each following the T-E-E-L structure explicitly: (1) label the Topic Sentence, Evidence, Explanation, and Link sentence in each paragraph, (2) each paragraph must be 100–150 words, (3) use at least two transition words within each paragraph (underline them), and (4) ensure each paragraph's concluding sentence connects back to or echoes the topic sentence. Finally, write one transition sentence that could bridge any two of your three paragraphs.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 7,
+      "title": "Compare & Contrast Essay",
+      "titleZh": "比较与对比文章",
+      "objectives": "Organize a compare and contrast essay using either point-by-point or block structure; use appropriate transition words for comparison and contrast; develop a clear thesis that establishes the basis for comparison.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/compare_and_contrast_essays.html",
+      "readingNote": "Purdue OWL — Compare and Contrast Essays: Point-by-Point vs. Block Organization",
+      "videoUrl": "https://www.youtube.com/watch?v=8qSXLMbHNHY",
+      "videoNote": "Crash Course English Language — Compare and Contrast Essay Structure",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:informative-explanatory-writing/v/compare-contrast-essay-structure",
+      "video2Note": "Khan Academy — Compare and Contrast Essay: Choosing the Right Structure",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/transition_words_and_phrases.html",
+      "practiceNote": "Purdue OWL — Transition Words for Compare and Contrast Writing",
+      "assignment": "Write a 4–5 paragraph compare and contrast essay (minimum 450 words) comparing two subjects of your choice (e.g., two books, two historical figures, two sports, two cities). Requirements: (1) state in your thesis which organizational structure you are using (point-by-point or block) and the basis of comparison, (2) include at least three points of comparison, (3) use at least five comparison/contrast transition words (underline them), and (4) write a conclusion that goes beyond summary — state which subject you recommend or prefer, and why. Submit a planning T-chart or Venn diagram with your essay.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 8,
+      "title": "Cause & Effect Essay",
+      "titleZh": "因果关系文章",
+      "objectives": "Identify causal chains (cause → effect → further effect); distinguish immediate causes from root causes; use signal words for cause and effect; write a logically sequenced cause and effect essay with a clear thesis.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/expository_essays.html",
+      "readingNote": "Purdue OWL — Expository Essays: Cause and Effect Structure",
+      "videoUrl": "https://www.youtube.com/watch?v=2XDqDFPbpHs",
+      "videoNote": "Crash Course English Language — Cause and Effect Essay Writing",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:informative-explanatory-writing/v/cause-and-effect-writing",
+      "video2Note": "Khan Academy — Cause and Effect Writing: Signal Words and Logical Sequencing",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/transition_words_and_phrases.html",
+      "practiceNote": "Purdue OWL — Cause and Effect Transition Words and Phrases",
+      "assignment": "Write a 4–5 paragraph cause and effect essay (minimum 450 words) on a topic of your choice (e.g., effects of social media on teenagers, causes of a historical event, effects of climate change on a specific region). Requirements: (1) a thesis that clearly states whether you are focusing on causes, effects, or both, (2) at least one causal chain showing multiple links (A causes B, which causes C), (3) at least six cause/effect signal words underlined, (4) distinguish at least one immediate cause from one root cause, and (5) a conclusion that considers implications or calls the reader to awareness. Submit a causal chain diagram as prewriting.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 9,
+      "title": "Argumentative Essay",
+      "titleZh": "议论文",
+      "objectives": "Write a complete argumentative essay including a clear thesis/claim, body paragraphs with evidence and reasoning, a counterargument with rebuttal, and a strong conclusion; evaluate the quality of evidence; distinguish fact from opinion.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "readingNote": "Purdue OWL — Argumentative Essays: Thesis, Evidence, Counterargument, and Conclusion",
+      "videoUrl": "https://www.youtube.com/watch?v=nLMnzBZLRKY",
+      "videoNote": "Crash Course English Language — How to Write an Argumentative Essay",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/v/writing-a-claim-and-thesis",
+      "video2Note": "Khan Academy — Writing a Claim, Thesis, and Argumentative Body Paragraph",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/e/identifying-claims-and-evidence",
+      "practiceNote": "Khan Academy — Identifying Claims, Evidence, and Reasoning Practice",
+      "assignment": "Write a 5-paragraph argumentative essay (minimum 550 words) on a debatable school or community issue. Requirements: (1) an arguable thesis that takes a clear stance, (2) two body paragraphs each with a claim, at least two pieces of evidence (at least one must be a statistic or expert quote), and explanation of how the evidence supports the claim, (3) one body paragraph presenting the strongest counterargument and your rebuttal, (4) a conclusion that restates the thesis in new words and issues a call to action. Circle your thesis; box each piece of evidence; underline your rebuttal.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 10,
+      "title": "Persuasive Techniques & Rhetoric",
+      "titleZh": "说服技巧与修辞",
+      "objectives": "Identify and apply Aristotle's rhetorical appeals — ethos (credibility), pathos (emotion), and logos (logic/evidence); recognize common rhetorical devices including anaphora, rhetorical questions, and loaded language; analyze and produce persuasive writing using these tools.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/rhetorical_appeals.html",
+      "readingNote": "Purdue OWL — Rhetorical Appeals: Ethos, Pathos, and Logos",
+      "videoUrl": "https://www.youtube.com/watch?v=YS5MrNSgUa4",
+      "videoNote": "TED-Ed — James Herrick: 'How to Use Rhetoric to Get What You Want' (ethos, pathos, logos in practice)",
+      "video2Url": "https://www.youtube.com/watch?v=3klMM9BkW5o",
+      "video2Note": "Crash Course English Language — Persuasion and Rhetorical Devices",
+      "practiceUrl": "https://www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story",
+      "practiceNote": "TED Talk — Chimamanda Ngozi Adichie: 'The Danger of a Single Story' (analyze rhetorical appeals used)",
+      "assignment": "Part A: Watch or read a famous speech of your choice (e.g., MLK's 'I Have a Dream,' Malala Yousafzai's UN speech). Write a 250-word rhetorical analysis identifying at least two examples each of ethos, pathos, and logos, and one rhetorical device (anaphora, rhetorical question, or loaded language) — quote directly from the speech for each. Part B: Write your own 200-word persuasive paragraph on a topic of your choice, deliberately using all three appeals and at least one rhetorical device. Label each technique in the margin.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 11,
+      "title": "Research Writing",
+      "titleZh": "研究性写作",
+      "objectives": "Develop a focused, researchable question; evaluate sources using the CRAAP test; take organized notes while avoiding plagiarism; distinguish between primary and secondary sources; plan a research essay using an outline.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/index.html",
+      "readingNote": "Purdue OWL — Conducting Research: Developing a Question and Evaluating Sources",
+      "videoUrl": "https://www.youtube.com/watch?v=unFsl6THsq8",
+      "videoNote": "Crash Course — Navigating Digital Information (evaluating sources and avoiding misinformation)",
+      "video2Url": "https://www.youtube.com/watch?v=SKxm2HF5GHs",
+      "video2Note": "Crash Course — How to Research: From Question to Outline",
+      "practiceUrl": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/research_methods/primary_and_secondary_sources.html",
+      "practiceNote": "Purdue OWL — Primary vs. Secondary Sources: Definitions and Examples",
+      "assignment": "Choose a topic that genuinely interests you and complete the research planning process: (1) Write three possible research questions, then narrow to one specific, focused question. (2) Find four sources (at least one primary, at least one academic/peer-reviewed) and evaluate each using the CRAAP test — fill out a CRAAP evaluation form for all four. (3) Take structured notes from each source (paraphrase + one direct quote per source), clearly recording source information. (4) Write a research essay outline with thesis, three body paragraph topics, and planned evidence. Do not yet write the essay.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 12,
+      "title": "MLA Citations & Works Cited",
+      "titleZh": "MLA引用格式与参考文献",
+      "objectives": "Format in-text citations correctly in MLA 9th edition style; construct a properly formatted Works Cited page for books, websites, and articles; distinguish between quoting and paraphrasing; integrate quotations smoothly using signal phrases.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_general_format.html",
+      "readingNote": "Purdue OWL — MLA 9th Edition: General Format and Works Cited Guide",
+      "videoUrl": "https://www.youtube.com/watch?v=KKDkNjBhFAw",
+      "videoNote": "Purdue OWL YouTube — MLA 9th Edition: In-Text Citations and Works Cited Page",
+      "video2Url": "https://www.youtube.com/watch?v=RhLFNWHD7LY",
+      "video2Note": "Crash Course — Citing Sources: Why and How (MLA in-text and Works Cited)",
+      "practiceUrl": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_page_books.html",
+      "practiceNote": "Purdue OWL — MLA Works Cited: Books, Articles, and Websites (with templates and examples)",
+      "assignment": "Using the four sources from Module 11, write a 350-word informational essay section on your research topic. Requirements: (1) include at least three in-text citations (mix of direct quotes and paraphrases, all with signal phrases), (2) at least one block quotation (if source warrants it) or one integrated short quotation with a signal phrase, (3) attach a correctly formatted MLA Works Cited page listing all four sources alphabetically in hanging indent format, (4) write a citation checklist at the end confirming each element (author, title, publisher, date, URL/page) is present for each source.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 13,
+      "title": "Informative/Explanatory Essay",
+      "titleZh": "说明性/解释性文章",
+      "objectives": "Write a complete informative or explanatory essay tailored to a specific audience and purpose; use effective organization (thesis → topic sentences → evidence → conclusion); maintain a formal, objective tone; define technical terms for the intended reader.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/expository_essays.html",
+      "readingNote": "Purdue OWL — Expository/Explanatory Essays: Audience, Purpose, and Organization",
+      "videoUrl": "https://www.youtube.com/watch?v=_9bwZ2n7CK8",
+      "videoNote": "Crash Course English Language — Informative and Explanatory Writing",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:informative-explanatory-writing/v/informative-essay-structure",
+      "video2Note": "Khan Academy — Informative Essay Structure: Thesis, Organization, and Clarity",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/organization_and_structure.html",
+      "practiceNote": "Purdue OWL — Organization and Structure for Explanatory Writing",
+      "assignment": "Write a full 5-paragraph informative essay (minimum 550 words) explaining a topic, process, or concept of your choice to a specific audience (identify your audience in a header note). Requirements: (1) a thesis that states what you will explain and why it matters, (2) three body paragraphs each with a clear topic sentence, at least two pieces of factual support (with MLA in-text citations), and explanation, (3) define at least two technical or specialized terms for your audience, (4) a formal, objective tone throughout (no first-person 'I'), and (5) a conclusion that synthesizes the information and provides a broader takeaway. Attach a brief Works Cited with at least three sources used.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 14,
+      "title": "Portfolio & Revision Workshop",
+      "titleZh": "写作集与修改工坊",
+      "objectives": "Select, revise, and polish writing from the course into a final portfolio; conduct meaningful self-assessment using a rubric; give and receive structured peer feedback; reflect on growth as a writer over the course.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html",
+      "readingNote": "Purdue OWL — Proofreading, Revision, and Creating a Writing Portfolio",
+      "videoUrl": "https://www.youtube.com/watch?v=7UeEjclYmKQ",
+      "videoNote": "Crash Course English Language — Revision Strategies and Building a Writing Portfolio",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:the-writing-process/v/revision-strategies",
+      "video2Note": "Khan Academy — Revision Strategies: Global, Local, and Surface-Level Revision",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/grammar/common_errors/index.html",
+      "practiceNote": "Purdue OWL — Common Grammar and Mechanical Errors Checklist for Final Editing",
+      "assignment": "Compile a writing portfolio for this course: (1) Select three essays written during the course (at least one must be argumentative and one narrative) and revise each through at least two revision passes — global revision (content and organization) and surface revision (grammar and mechanics). (2) For each revised essay, write a 100-word self-assessment explaining what you changed and why, and what you would still improve with more time. (3) Exchange your portfolio with a peer and provide written feedback (at least 150 words per essay) on strengths and one area for improvement each. (4) Write a 300-word reflective letter addressed to your future self, describing how your writing has grown this semester and setting two writing goals for next year.",
+      "estimatedHrs": 5.0
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "During which stage of the writing process does a writer focus on getting ideas on paper without worrying about perfection?",
+      "options": ["Prewriting", "Drafting", "Revising", "Editing"],
+      "answer": "Drafting",
+      "explanation": "Drafting is the stage where the writer gets ideas down in sentence and paragraph form without stopping to fix errors. Perfectionism during drafting slows progress — revising comes later.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is a prewriting strategy?",
+      "options": ["Proofreading for comma errors", "Writing the final draft", "Creating a mind map or outline of ideas", "Publishing the essay online"],
+      "answer": "Creating a mind map or outline of ideas",
+      "explanation": "Prewriting strategies help the writer generate and organize ideas before drafting. Mind maps, outlines, freewriting, and brainstorming are all prewriting techniques.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Parallel structure means that items in a list or series should:",
+      "options": [
+        "Be placed in alphabetical order",
+        "Use the same grammatical form",
+        "Alternate between long and short phrases",
+        "Always begin with a verb"
+      ],
+      "answer": "Use the same grammatical form",
+      "explanation": "Parallel structure requires that words or phrases joined in a list share the same grammatical form. Example: 'She enjoys reading, writing, and drawing' (all gerunds) — not 'reading, to write, and draws.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "In a personal narrative, 'show, don't tell' means:",
+      "options": [
+        "Use dialogue instead of description",
+        "Summarize emotions rather than describing actions",
+        "Use specific actions, details, and dialogue to let readers feel the emotion rather than naming it",
+        "Add more paragraphs to the essay"
+      ],
+      "answer": "Use specific actions, details, and dialogue to let readers feel the emotion rather than naming it",
+      "explanation": "Show-don't-tell replaces vague emotional labels ('I was scared') with vivid concrete details that allow readers to experience the emotion themselves ('My hands shook; I couldn't breathe').",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "The dominant impression in a descriptive essay is:",
+      "options": [
+        "The longest paragraph in the essay",
+        "The overall feeling or mood the writer creates about the subject",
+        "The conclusion sentence",
+        "A list of facts about the subject"
+      ],
+      "answer": "The overall feeling or mood the writer creates about the subject",
+      "explanation": "The dominant impression is the central feeling, mood, or idea the writer wants the reader to take away — all details in the descriptive essay should support and reinforce this single impression.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following is an example of hyperbole?",
+      "options": [
+        "The moon smiled down at us.",
+        "Her voice was as smooth as silk.",
+        "I have told you a million times to clean your room.",
+        "The river was a silver ribbon through the valley."
+      ],
+      "answer": "I have told you a million times to clean your room.",
+      "explanation": "Hyperbole is deliberate, extreme exaggeration used for emphasis or humor. 'A million times' is not literal — it exaggerates to express frustration. The other options are personification, simile, and metaphor.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Which component of a body paragraph presents the main point of that paragraph?",
+      "options": ["Evidence", "Topic sentence", "Transition word", "Concluding sentence"],
+      "answer": "Topic sentence",
+      "explanation": "The topic sentence is the first (or sometimes second) sentence of a body paragraph. It states the paragraph's main point and connects to the essay's thesis.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Which transition word best signals a comparison between two ideas?",
+      "options": ["However", "Similarly", "Therefore", "Nevertheless"],
+      "answer": "Similarly",
+      "explanation": "'Similarly' introduces a comparison — it signals that what follows is like or related to what was previously stated. 'However' and 'nevertheless' signal contrast; 'therefore' signals cause and effect.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "In a compare and contrast essay using the block method, the writer:",
+      "options": [
+        "Alternates between subjects for each point of comparison",
+        "Discusses all features of Subject A, then all features of Subject B",
+        "Discusses only similarities, not differences",
+        "Writes one paragraph for each point of comparison"
+      ],
+      "answer": "Discusses all features of Subject A, then all features of Subject B",
+      "explanation": "The block method divides the essay into two blocks: all information about the first subject, then all information about the second. Point-by-point alternates between subjects within each paragraph.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Which of the following best describes 'voice' in writing?",
+      "options": [
+        "The volume at which the text is read aloud",
+        "The writer's distinct personality, tone, and style as expressed through word choice and sentence rhythm",
+        "The number of sentences in a paragraph",
+        "The use of dialogue in a narrative"
+      ],
+      "answer": "The writer's distinct personality, tone, and style as expressed through word choice and sentence rhythm",
+      "explanation": "Voice is the unique quality that makes a piece of writing sound like a specific person. It includes word choice (diction), sentence rhythm, tone, and attitude — the sense that a real, individual person is behind the words.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Spatial organization in a descriptive essay means the writer describes the subject:",
+      "options": [
+        "In the order events happened",
+        "From most important to least important",
+        "According to physical location or position (near to far, left to right, top to bottom, etc.)",
+        "Using alphabetical order"
+      ],
+      "answer": "According to physical location or position (near to far, left to right, top to bottom, etc.)",
+      "explanation": "Spatial organization arranges details according to their physical position in space, guiding the reader's eye through the scene. It is most common in descriptive writing about places or objects.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "short",
+      "question": "Describe the difference between a topic sentence and a thesis statement. Write one original example of each.",
+      "options": null,
+      "answer": "A thesis statement controls the entire essay — it states the essay's main argument or purpose and appears in the introduction (e.g., 'Social media has transformed how teenagers communicate, for better and worse'). A topic sentence controls a single body paragraph — it states that paragraph's main point and connects to the thesis (e.g., 'One major benefit of social media is that it allows teenagers to maintain long-distance friendships').",
+      "explanation": "The thesis is the essay's master claim; each topic sentence is a sub-claim that supports it. Every body paragraph should have its own topic sentence that can be traced back to the thesis.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Which sentence opening creates the most sentence variety when added to a paragraph of sentences beginning with the subject?",
+      "options": [
+        "She decided to leave early.",
+        "Running to catch the last bus, she nearly dropped her bag.",
+        "She was in a hurry.",
+        "She left because she was late."
+      ],
+      "answer": "Running to catch the last bus, she nearly dropped her bag.",
+      "explanation": "Opening with a participial phrase ('Running to catch the last bus') varies sentence rhythm by placing a modifying phrase before the subject. The other options all begin with the subject 'she.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Explain the difference between revising and editing. Give one example of a task you would do during each stage.",
+      "options": null,
+      "answer": "Revising focuses on improving the content, organization, and clarity of ideas at a global level (e.g., adding evidence to a weak paragraph, reorganizing the order of body paragraphs, strengthening the thesis). Editing focuses on correcting surface-level errors in grammar, spelling, punctuation, and mechanics (e.g., fixing a comma splice, correcting a misspelled word, adding a missing apostrophe).",
+      "explanation": "Revising is a big-picture process; editing is a surface-level process. Effective writers always revise before they edit, because paragraphs being deleted or rewritten don't need to be edited first.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "Write an original sentence using personification and another using hyperbole. Label each one and explain what makes it an example of that device.",
+      "options": null,
+      "answer": "Personification example: 'The old house groaned and sighed as the winter wind pushed through its cracks.' (The house is given the human qualities of groaning and sighing.) Hyperbole example: 'I was so embarrassed I wanted to disappear into the floor and never come back.' (This is a wild exaggeration of embarrassment for emphasis — the speaker does not literally disappear.)",
+      "explanation": "Personification gives human traits to non-human things. Hyperbole is deliberate exaggeration for effect. Both devices add vividness and emotional resonance to writing.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which stage of the writing process comes immediately after drafting?",
+      "options": ["Prewriting", "Editing", "Publishing", "Revising"],
+      "answer": "Revising",
+      "explanation": "The five stages in order are: prewriting → drafting → revising → editing → publishing. Revising (improving content and organization) comes before editing (fixing surface errors).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following sentences demonstrates correct parallel structure?",
+      "options": [
+        "She likes hiking, to swim, and running.",
+        "She likes hiking, swimming, and running.",
+        "She likes to hike, swimming, and she runs.",
+        "She likes hiking and to also swim and she runs."
+      ],
+      "answer": "She likes hiking, swimming, and running.",
+      "explanation": "All three items in the series use the same form (gerunds: hiking, swimming, running). The other options mix infinitives, gerunds, and clauses, breaking parallel structure.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "In a personal narrative, an anecdote is best described as:",
+      "options": [
+        "A long fictional story",
+        "A brief, specific story from personal experience used to illustrate a point",
+        "A list of facts about the writer",
+        "A summary of the essay's main idea"
+      ],
+      "answer": "A brief, specific story from personal experience used to illustrate a point",
+      "explanation": "An anecdote is a short, real personal story that brings abstract ideas to life with specific detail and emotion. In personal narrative, the anecdote is the heart of the essay.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "'The tree arms reached out to shelter us from the rain' is an example of:",
+      "options": ["Simile", "Hyperbole", "Personification", "Metaphor"],
+      "answer": "Personification",
+      "explanation": "The tree is given human body parts ('arms') and a human protective action ('to shelter us') — attributing human qualities to a non-human thing is personification.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "In the T-E-E-L paragraph structure, the second 'E' stands for:",
+      "options": ["Evidence", "Example", "Explanation or Analysis", "Effect"],
+      "answer": "Explanation or Analysis",
+      "explanation": "T-E-E-L = Topic sentence, Evidence (quote or data), Explanation/Analysis (why the evidence supports the topic sentence), Link (connecting sentence to thesis). The two E's are Evidence and Explanation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which structure would work best for an essay titled 'Living in a City vs. Living in the Countryside'?",
+      "options": ["Cause and effect", "Compare and contrast", "Problem and solution", "Narrative"],
+      "answer": "Compare and contrast",
+      "explanation": "The essay examines two subjects (city vs. countryside) and explores their similarities and differences — the defining purpose of a compare and contrast essay.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "In an argumentative essay, a rebuttal is:",
+      "options": [
+        "A summary of the essay",
+        "The writer's response to the counterargument, explaining why the original claim still holds",
+        "An additional piece of supporting evidence",
+        "The thesis statement restated in the conclusion"
+      ],
+      "answer": "The writer's response to the counterargument, explaining why the original claim still holds",
+      "explanation": "After presenting the counterargument (the opposing view), the writer uses the rebuttal to refute it — showing why the opposing view is flawed or incomplete and why the writer's position is still correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Ethos as a rhetorical appeal refers to:",
+      "options": [
+        "Appealing to the audience's emotions",
+        "Using logical evidence and reasoning",
+        "Establishing the speaker's credibility and trustworthiness",
+        "Using exaggeration for effect"
+      ],
+      "answer": "Establishing the speaker's credibility and trustworthiness",
+      "explanation": "Ethos (Greek for 'character') establishes that the speaker or writer is qualified and trustworthy. Writers use ethos by citing credentials, demonstrating expertise, or presenting themselves as fair and ethical.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "A research question is most effective when it is:",
+      "options": [
+        "Answered with a simple 'yes' or 'no'",
+        "Broad enough to cover an entire encyclopedia entry",
+        "Specific and focused, requiring investigation and analysis to answer",
+        "Already answered by a single Wikipedia article"
+      ],
+      "answer": "Specific and focused, requiring investigation and analysis to answer",
+      "explanation": "An effective research question is narrow enough to explore in depth but complex enough to require research. Yes/no questions and overly broad questions do not yield meaningful essays.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "In MLA format, how should a Works Cited page be formatted?",
+      "options": [
+        "Numbered list, single-spaced, with entries in order of citation in the text",
+        "Alphabetical by author's last name, double-spaced, with hanging indent",
+        "Alphabetical by title, single-spaced, no indentation",
+        "Numbered by source type (books, then websites, then articles)"
+      ],
+      "answer": "Alphabetical by author's last name, double-spaced, with hanging indent",
+      "explanation": "MLA Works Cited pages are alphabetized by authors' last names, double-spaced throughout, and use a hanging indent (first line flush left, subsequent lines indented half an inch).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which of the following is an example of pathos in a persuasive essay about animal shelters?",
+      "options": [
+        "Statistics showing that 6.5 million animals enter shelters each year",
+        "A quote from the American Humane Society recommending adoption",
+        "A vivid story about a scared puppy waiting alone in a shelter cage",
+        "An explanation of the low cost of adoption compared to buying from a breeder"
+      ],
+      "answer": "A vivid story about a scared puppy waiting alone in a shelter cage",
+      "explanation": "Pathos appeals to emotion. A heartbreaking story is designed to make readers feel empathy and sadness, motivating action through emotional connection — that is the definition of a pathetic appeal.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "An informative essay differs from an argumentative essay because an informative essay:",
+      "options": [
+        "Uses evidence and quotations",
+        "Has a thesis statement",
+        "Presents information objectively without taking a personal stance",
+        "Has an introduction and conclusion"
+      ],
+      "answer": "Presents information objectively without taking a personal stance",
+      "explanation": "An informative essay aims to explain and educate — the writer presents facts, definitions, and explanations without advocating for one side. An argumentative essay takes a position and defends it.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "When incorporating a direct quotation into an essay, a signal phrase serves to:",
+      "options": [
+        "Replace the need for an in-text citation",
+        "Introduce the quotation and credit the source before or within it",
+        "Begin the Works Cited entry",
+        "Paraphrase the quotation"
+      ],
+      "answer": "Introduce the quotation and credit the source before or within it",
+      "explanation": "Signal phrases (e.g., 'According to Smith,' 'As Brown argues,') smoothly introduce quotations by identifying who is speaking and establishing their authority before the quoted text appears.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Which rhetorical device repeats the same words or phrase at the beginning of successive sentences or clauses?",
+      "options": ["Logos", "Anaphora", "Hyperbole", "Ethos"],
+      "answer": "Anaphora",
+      "explanation": "Anaphora is the repetition of a word or phrase at the start of consecutive clauses for emphasis and rhythm. Martin Luther King Jr.'s 'I have a dream...' is the most famous example.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Self-assessment in a writing portfolio is valuable because it helps the writer:",
+      "options": [
+        "Avoid peer feedback",
+        "Reflect on their growth and identify areas for continued improvement",
+        "Ensure every essay is the same length",
+        "Replace the teacher's rubric with their own grade"
+      ],
+      "answer": "Reflect on their growth and identify areas for continued improvement",
+      "explanation": "Self-assessment develops metacognitive awareness — the ability to think about one's own thinking and writing. It helps writers recognize progress, understand their strengths, and set meaningful goals.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which of the following best describes an immediate cause vs. a root cause?",
+      "options": [
+        "An immediate cause is always more important than a root cause.",
+        "An immediate cause is the direct trigger of an event; a root cause is the deeper, underlying reason.",
+        "A root cause always happens after the immediate cause.",
+        "They are two terms for the same concept."
+      ],
+      "answer": "An immediate cause is the direct trigger of an event; a root cause is the deeper, underlying reason.",
+      "explanation": "The immediate cause is what directly preceded the effect (a spark starts the fire). The root cause is the underlying condition that made the effect possible (a gas leak). Root causes are often more important for understanding a problem.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "A primary source is best described as:",
+      "options": [
+        "A source written for children",
+        "An original, first-hand account or document (diary, interview, original data, speech)",
+        "A textbook that synthesizes research",
+        "A website with links to other sources"
+      ],
+      "answer": "An original, first-hand account or document (diary, interview, original data, speech)",
+      "explanation": "Primary sources are original materials created at the time of study or by participants — diaries, speeches, photographs, raw data, interviews. Secondary sources analyze or interpret primary sources.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "short",
+      "question": "Identify and explain the three Aristotelian rhetorical appeals. Give one original example of how each could be used in a persuasive essay arguing that students should have longer lunch breaks.",
+      "options": null,
+      "answer": "Ethos (credibility): cite a nutritionist or health organization to show the argument is grounded in expert knowledge — e.g., 'According to the American Academy of Pediatrics, students need at least 20 uninterrupted minutes to eat.' Pathos (emotion): tell a story about a student who skips lunch because the break is too short and suffers from low energy all afternoon — evoking sympathy. Logos (logic/evidence): present statistics — e.g., 'Studies show students who take breaks of 30+ minutes score 15% higher on afternoon assessments than those with 15-minute breaks' — using data and reasoning.",
+      "explanation": "Ethos builds trust through authority, pathos creates emotional engagement, and logos persuades through facts and reasoning. Effective persuasive writing combines all three for maximum impact.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Describe the difference between point-by-point and block organization in a compare and contrast essay. Which would you choose to compare two very different novels, and why?",
+      "options": null,
+      "answer": "Point-by-point organization alternates between the two subjects within each paragraph, discussing one feature at a time (e.g., paragraph 1: setting of Novel A vs. Novel B; paragraph 2: characters of Novel A vs. Novel B). Block organization dedicates the first half of the essay to Novel A (all its features) and the second half to Novel B. For two very different novels, point-by-point is often clearer because it keeps the comparison directly in front of the reader — they don't have to hold all of Novel A in memory while reading about Novel B.",
+      "explanation": "Both structures are valid. Block works well when subjects are complex or when you want to give each subject its own identity. Point-by-point works better for direct, clear comparisons because each paragraph keeps both subjects in view.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "What is plagiarism and why is it a serious academic issue? Name two strategies a writer can use to avoid plagiarism when using sources.",
+      "options": null,
+      "answer": "Plagiarism is presenting someone else's words, ideas, or data as your own without proper attribution. It is serious because it is a form of intellectual dishonesty and theft that undermines trust, academic integrity, and the writer's own development. Two strategies to avoid it: (1) Always cite sources — provide in-text citations every time you quote or paraphrase someone else's ideas. (2) When paraphrasing, completely restate ideas in your own words and sentence structure, rather than just swapping synonyms into the original sentence.",
+      "explanation": "Accidental plagiarism is still plagiarism. Taking careful notes, recording source information from the start, and understanding the difference between a genuine paraphrase and a near-copy are essential research skills.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "type": "mc",
+      "question": "What is the correct order of the five stages of the writing process?",
+      "options": [
+        "Drafting → Prewriting → Revising → Editing → Publishing",
+        "Prewriting → Drafting → Revising → Editing → Publishing",
+        "Prewriting → Editing → Drafting → Revising → Publishing",
+        "Revising → Prewriting → Drafting → Editing → Publishing"
+      ],
+      "answer": "Prewriting → Drafting → Revising → Editing → Publishing",
+      "explanation": "The five stages flow in this order: generate ideas (prewriting), write a rough draft (drafting), improve content and organization (revising), fix surface errors (editing), share the finished piece (publishing).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is NOT a prewriting strategy?",
+      "options": ["Freewriting", "Brainstorming", "Creating an outline", "Proofreading for spelling errors"],
+      "answer": "Proofreading for spelling errors",
+      "explanation": "Proofreading is an editing/publishing activity — it comes at the end of the writing process. Freewriting, brainstorming, and outlining are all prewriting techniques used to generate and organize ideas before drafting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "type": "mc",
+      "question": "The main goal of the revising stage is to:",
+      "options": [
+        "Fix spelling and grammar errors",
+        "Share your writing with an audience",
+        "Improve content, organization, and clarity of ideas",
+        "Write the rough draft for the first time"
+      ],
+      "answer": "Improve content, organization, and clarity of ideas",
+      "explanation": "Revising focuses on higher-level concerns: Does the essay have a clear thesis? Are ideas developed? Is the organization logical? Fixing spelling is editing, not revising.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "type": "mc",
+      "question": "During the drafting stage, a writer should:",
+      "options": [
+        "Fix every grammar error immediately",
+        "Get ideas onto the page without stopping to perfect each sentence",
+        "Publish the essay to the class",
+        "Delete anything that does not seem perfect"
+      ],
+      "answer": "Get ideas onto the page without stopping to perfect each sentence",
+      "explanation": "Drafting is about generating a rough version of the essay. Stopping to fix every error during drafting interrupts the creative flow. Revision and editing come after the draft is complete.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "type": "mc",
+      "question": "Publishing as the final stage of the writing process means:",
+      "options": [
+        "Submitting a book to a publisher",
+        "Sharing the finished, polished piece with its intended audience",
+        "Printing the rough draft",
+        "Starting a new essay"
+      ],
+      "answer": "Sharing the finished, polished piece with its intended audience",
+      "explanation": "Publishing does not only mean professional publication. For students, it means sharing the final, polished work — presenting it to the class, submitting it, posting it on a class blog, or creating a portfolio.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following pairs of sentences demonstrates the best use of sentence combining?",
+      "options": [
+        "The dog barked. The dog was loud. The dog was brown.",
+        "The loud brown dog barked ferociously at the stranger.",
+        "The dog that was brown was loud and it was barking.",
+        "The dog barked and the dog was brown and it was loud."
+      ],
+      "answer": "The loud brown dog barked ferociously at the stranger.",
+      "explanation": "Effective sentence combining merges the information from multiple short sentences into one fluent sentence using adjectives, adverbs, and precise verbs — eliminating repetition and improving flow.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "type": "mc",
+      "question": "Which sentence contains faulty parallel structure?",
+      "options": [
+        "The coach told us to run faster, jump higher, and work harder.",
+        "She enjoys painting, reading novels, and hiking on weekends.",
+        "He wanted to travel, learning new languages, and meet people.",
+        "The plan was simple: arrive early, set up, and greet guests."
+      ],
+      "answer": "He wanted to travel, learning new languages, and meet people.",
+      "explanation": "'travel' (infinitive) and 'meet' (infinitive) are parallel, but 'learning' (gerund) breaks the pattern. Correct parallel structure: 'travel, learn new languages, and meet people.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "type": "mc",
+      "question": "Varying sentence openings in a paragraph serves primarily to:",
+      "options": [
+        "Make the paragraph shorter",
+        "Prevent monotony and create a more engaging reading rhythm",
+        "Increase the number of sentences",
+        "Eliminate the need for transition words"
+      ],
+      "answer": "Prevent monotony and create a more engaging reading rhythm",
+      "explanation": "When every sentence begins with the subject, the writing sounds repetitive and dull. Opening with prepositional phrases, participial phrases, adverbs, or subordinate clauses creates variety and rhythm.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "type": "mc",
+      "question": "Sentence fluency refers to:",
+      "options": [
+        "Using only long, complex sentences",
+        "The natural, rhythmic flow and readability of writing across sentences",
+        "The absence of transition words",
+        "Keeping all sentences the same length"
+      ],
+      "answer": "The natural, rhythmic flow and readability of writing across sentences",
+      "explanation": "Sentence fluency is a writing trait that measures how well the writing flows when read aloud. Fluent writing mixes sentence lengths and types, uses effective transitions, and sounds natural.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "type": "mc",
+      "question": "Which revision best improves sentence variety in the following passage: 'Maria went to school. She had a test. She studied the night before. She felt confident.'?",
+      "options": [
+        "Maria went to school. She had a test. She had studied the night before. She was confident.",
+        "Having studied the night before, Maria walked into school feeling confident about the test.",
+        "Maria went to school and she had a test and she studied the night before and she felt confident.",
+        "Maria. School. Test. Studied. Confident."
+      ],
+      "answer": "Having studied the night before, Maria walked into school feeling confident about the test.",
+      "explanation": "This revision combines four short sentences into one fluid sentence using a participial phrase opener, which adds variety and eliminates repetition of 'She' as every sentence's subject.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "type": "mc",
+      "question": "The hook of a personal narrative essay should:",
+      "options": [
+        "Begin with 'In this essay, I will tell you about...'",
+        "State the thesis immediately in the first sentence",
+        "Drop the reader into the middle of an action or scene to create immediate interest",
+        "Provide background history about the writer's life"
+      ],
+      "answer": "Drop the reader into the middle of an action or scene to create immediate interest",
+      "explanation": "An effective narrative hook pulls the reader in immediately — starting in the middle of action (in medias res), with surprising dialogue, or with a compelling detail. Announcing the essay's purpose is not a hook.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is the best example of 'show, don't tell'?",
+      "options": [
+        "I was nervous before the performance.",
+        "She felt excited about the news.",
+        "His palms were sweaty, and he kept checking his watch as the curtain rose.",
+        "The experience was very emotional and meaningful."
+      ],
+      "answer": "His palms were sweaty, and he kept checking his watch as the curtain rose.",
+      "explanation": "Show-don't-tell replaces emotion labels with concrete sensory details and actions that make the reader feel the emotion. Sweaty palms and checking the watch show nervousness without naming it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "type": "mc",
+      "question": "In a personal narrative, voice is best described as:",
+      "options": [
+        "The grammatical correctness of the writing",
+        "The unique, individual personality of the writer that comes through in word choice and tone",
+        "The use of first-person pronouns",
+        "The length of the essay"
+      ],
+      "answer": "The unique, individual personality of the writer that comes through in word choice and tone",
+      "explanation": "Voice is what makes a piece of writing sound distinctly like one person and no one else. It's a combination of diction, sentence rhythm, attitude, and perspective — the 'fingerprint' of the writer.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "type": "mc",
+      "question": "The conclusion of a personal narrative should ideally:",
+      "options": [
+        "Introduce a new anecdote",
+        "List the main events of the story in order",
+        "Reflect on the meaning of the experience and its impact on the writer",
+        "Repeat the opening paragraph word for word"
+      ],
+      "answer": "Reflect on the meaning of the experience and its impact on the writer",
+      "explanation": "A personal narrative conclusion goes beyond summary — it reflects on what the experience meant, what the writer learned, or how it changed them. This gives the essay purpose and emotional resonance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "type": "mc",
+      "question": "Dialogue in a personal narrative primarily helps to:",
+      "options": [
+        "Increase the word count",
+        "Replace description",
+        "Reveal character and create a sense of real, lived experience",
+        "Summarize the story's events"
+      ],
+      "answer": "Reveal character and create a sense of real, lived experience",
+      "explanation": "Dialogue makes narrative feel immediate and authentic — it reveals how people speak, think, and relate to each other. It also breaks up narration and draws the reader into the scene.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "type": "mc",
+      "question": "The dominant impression in a descriptive essay is established by:",
+      "options": [
+        "Using the most transition words possible",
+        "Selecting only details that support a single overall feeling or mood",
+        "Describing everything about the subject in equal detail",
+        "Using the longest possible sentences"
+      ],
+      "answer": "Selecting only details that support a single overall feeling or mood",
+      "explanation": "Every detail in a descriptive essay should contribute to one central impression. Random or contradictory details confuse the reader. Good descriptive writers are selective — they choose what to include and exclude based on the dominant impression.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "type": "mc",
+      "question": "Spatial organization in a descriptive essay means organizing details:",
+      "options": [
+        "From most important to least important",
+        "According to physical location (near to far, left to right, top to bottom, etc.)",
+        "In the order they were experienced over time",
+        "Alphabetically by noun"
+      ],
+      "answer": "According to physical location (near to far, left to right, top to bottom, etc.)",
+      "explanation": "Spatial organization guides the reader's eye through physical space in a logical, consistent direction. It is the most natural organizational pattern for descriptions of places, rooms, or landscapes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "type": "mc",
+      "question": "Which of the following sentences best demonstrates strong sensory language?",
+      "options": [
+        "The market was busy and nice.",
+        "There were many things to see at the market.",
+        "The market smelled of roasting chestnuts and rain-soaked cobblestones, and vendors' shouts cut through the cold morning air.",
+        "I liked the market a lot."
+      ],
+      "answer": "The market smelled of roasting chestnuts and rain-soaked cobblestones, and vendors' shouts cut through the cold morning air.",
+      "explanation": "This sentence appeals to smell (roasting chestnuts, rain-soaked cobblestones), hearing (vendors' shouts), and touch (cold air) — creating a vivid, immersive scene through specific sensory details.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "type": "mc",
+      "question": "Which transition word would best introduce a spatial shift from describing the exterior to the interior of a building?",
+      "options": ["Furthermore", "However", "Stepping inside", "As a result"],
+      "answer": "Stepping inside",
+      "explanation": "'Stepping inside' is a spatial transition phrase that guides the reader's attention from outside to inside, mirroring the physical movement through space. It is the most appropriate for spatial organization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "type": "mc",
+      "question": "In a descriptive essay, sensory language that appeals to taste would most logically appear when describing:",
+      "options": [
+        "A cityscape at night",
+        "A grandmother's kitchen during a holiday meal",
+        "A silent library",
+        "A mountain summit"
+      ],
+      "answer": "A grandmother's kitchen during a holiday meal",
+      "explanation": "Taste is most naturally evoked in contexts involving food. A kitchen during a meal provides the richest opportunity for taste imagery, though skilled writers can connect taste to memory and emotion in many settings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "type": "mc",
+      "question": "'Life is a journey with no map' is an example of:",
+      "options": ["Simile", "Hyperbole", "Metaphor", "Personification"],
+      "answer": "Metaphor",
+      "explanation": "A metaphor directly equates two unlike things without 'like' or 'as.' Life is stated to BE a journey — this is a direct comparison, not a simile (which would say 'life is LIKE a journey').",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "type": "mc",
+      "question": "Which sentence is an example of effective imagery?",
+      "options": [
+        "It was a nice day.",
+        "The weather was pleasant.",
+        "The afternoon sun pressed down like a warm hand, and the air smelled of cut grass and sunscreen.",
+        "The day was hot and sunny and the grass was green."
+      ],
+      "answer": "The afternoon sun pressed down like a warm hand, and the air smelled of cut grass and sunscreen.",
+      "explanation": "This sentence uses a simile ('like a warm hand') plus sensory imagery appealing to touch (pressed down, warm) and smell (cut grass, sunscreen) — creating a specific, vivid mental picture.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "type": "mc",
+      "question": "Which of the following is an example of a cliché — a figurative expression so overused it has lost its impact?",
+      "options": [
+        "The moon hung like a cracked eggshell above the city.",
+        "Her voice was a door left ajar in winter.",
+        "Every cloud has a silver lining.",
+        "His laughter scattered like startled birds."
+      ],
+      "answer": "Every cloud has a silver lining.",
+      "explanation": "A cliché is a figurative expression that has been used so frequently it no longer creates a fresh mental image. 'Every cloud has a silver lining' is a classic cliché. The other options are original figurative expressions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "type": "mc",
+      "question": "'I'm so hungry I could eat a horse' is an example of:",
+      "options": ["Metaphor", "Personification", "Simile", "Hyperbole"],
+      "answer": "Hyperbole",
+      "explanation": "Hyperbole is deliberate, wild exaggeration for emphasis or humor. No one can literally eat a horse — this is an exaggeration to express extreme hunger.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "type": "mc",
+      "question": "When writing original figurative language, writers should aim to:",
+      "options": [
+        "Use as many devices as possible in every sentence",
+        "Avoid all figurative language to keep writing clear",
+        "Create fresh, specific comparisons rather than repeating familiar clichés",
+        "Only use similes because they are easiest to identify"
+      ],
+      "answer": "Create fresh, specific comparisons rather than repeating familiar clichés",
+      "explanation": "The goal of figurative language is to create new ways of seeing or feeling. Fresh, original comparisons (e.g., 'her grief was a stone in her shoe') are far more powerful than worn-out clichés.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "type": "mc",
+      "question": "The topic sentence of a body paragraph should:",
+      "options": [
+        "Be the longest sentence in the paragraph",
+        "State the main point of that paragraph and connect to the essay's thesis",
+        "Begin with 'I think' or 'I believe'",
+        "Summarize the entire essay"
+      ],
+      "answer": "State the main point of that paragraph and connect to the essay's thesis",
+      "explanation": "The topic sentence is the controlling idea of a paragraph — it tells the reader what this paragraph is about and how it supports the essay's overall thesis. It is usually the first sentence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "type": "mc",
+      "question": "The concluding sentence of a body paragraph should:",
+      "options": [
+        "Introduce the next paragraph's topic immediately",
+        "Repeat the topic sentence word for word",
+        "Synthesize the paragraph's ideas and connect back to the thesis or transition to the next paragraph",
+        "Add a new piece of evidence"
+      ],
+      "answer": "Synthesize the paragraph's ideas and connect back to the thesis or transition to the next paragraph",
+      "explanation": "A concluding sentence wraps up the paragraph's argument and either links back to the thesis to reinforce the essay's purpose, or provides a smooth bridge to the next paragraph.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "type": "mc",
+      "question": "In the T-E-E-L structure, after presenting evidence, the writer should:",
+      "options": [
+        "Move immediately to the next piece of evidence",
+        "Begin a new paragraph",
+        "Explain how and why the evidence supports the topic sentence",
+        "Restate the thesis of the essay"
+      ],
+      "answer": "Explain how and why the evidence supports the topic sentence",
+      "explanation": "Evidence alone does not prove a point — the writer must provide explanation (analysis/commentary) that connects the evidence to the paragraph's claim and shows why it is relevant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "type": "mc",
+      "question": "Which transition word would best introduce additional supporting evidence in a body paragraph?",
+      "options": ["However", "In contrast", "Furthermore", "Nevertheless"],
+      "answer": "Furthermore",
+      "explanation": "'Furthermore' signals that additional, related information is being added — it is perfect for introducing a second or third piece of evidence in support of the same point.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "type": "mc",
+      "question": "Paragraph unity means that:",
+      "options": [
+        "The paragraph has both a long and a short sentence",
+        "Every sentence in the paragraph relates to and supports the topic sentence",
+        "The paragraph begins and ends with the same sentence",
+        "The paragraph discusses more than one main idea"
+      ],
+      "answer": "Every sentence in the paragraph relates to and supports the topic sentence",
+      "explanation": "Unity means all sentences serve the paragraph's central purpose. Sentences that go off-topic or introduce a new idea break unity and should be removed or placed in a new paragraph.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "type": "mc",
+      "question": "In a compare and contrast essay, the 'basis of comparison' refers to:",
+      "options": [
+        "The number of paragraphs in the essay",
+        "The feature or criterion used to compare the two subjects",
+        "The subject that the writer prefers",
+        "The transition words used in the essay"
+      ],
+      "answer": "The feature or criterion used to compare the two subjects",
+      "explanation": "The basis of comparison is the logical ground on which two subjects can meaningfully be compared — for example, comparing two novels on the basis of their themes, settings, or characters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "type": "mc",
+      "question": "Which transition phrase best signals a contrast in a compare and contrast essay?",
+      "options": ["Likewise", "In the same way", "On the other hand", "Additionally"],
+      "answer": "On the other hand",
+      "explanation": "'On the other hand' introduces a contrasting or opposing point. 'Likewise' and 'in the same way' signal similarity; 'additionally' adds information without contrasting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "type": "mc",
+      "question": "The point-by-point organizational structure in a compare and contrast essay means:",
+      "options": [
+        "Discussing all features of Subject A, then all features of Subject B",
+        "Writing one paragraph per point, comparing both subjects within each paragraph",
+        "Discussing only one subject throughout the essay",
+        "Listing points in bullet form rather than in paragraphs"
+      ],
+      "answer": "Writing one paragraph per point, comparing both subjects within each paragraph",
+      "explanation": "Point-by-point alternates between subjects within each body paragraph, organized by the feature being compared. Each paragraph = one point of comparison for both subjects.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "type": "mc",
+      "question": "A Venn diagram is useful for compare and contrast prewriting because it:",
+      "options": [
+        "Automatically writes the essay's thesis",
+        "Visually separates unique features of each subject and identifies shared features in the overlapping section",
+        "Lists transition words for the essay",
+        "Shows the cause and effect relationship between two subjects"
+      ],
+      "answer": "Visually separates unique features of each subject and identifies shared features in the overlapping section",
+      "explanation": "A Venn diagram uses two overlapping circles — each outer section lists what is unique to that subject, while the overlapping center section shows what the subjects share. It is ideal for generating comparison material.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "type": "mc",
+      "question": "The thesis of a compare and contrast essay should state:",
+      "options": [
+        "Only the names of the two subjects being compared",
+        "The subjects, the basis of comparison, and the writer's main point or judgment about them",
+        "A list of all the similarities and differences",
+        "Which subject is better without any reasoning"
+      ],
+      "answer": "The subjects, the basis of comparison, and the writer's main point or judgment about them",
+      "explanation": "A strong compare and contrast thesis does more than name the subjects — it tells the reader what is being compared and why it matters, often including the writer's overall conclusion or perspective.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is a signal word for a cause and effect relationship?",
+      "options": ["Similarly", "However", "Consequently", "In contrast"],
+      "answer": "Consequently",
+      "explanation": "'Consequently' signals that what follows is a result of what was just stated — a cause and effect relationship. 'Similarly' signals comparison; 'however' and 'in contrast' signal contrast.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "type": "mc",
+      "question": "A root cause differs from an immediate cause because a root cause is:",
+      "options": [
+        "The most recent event before an effect",
+        "The deeper, underlying condition or reason that made an event possible",
+        "The most obvious reason for an event",
+        "A cause that happens after the effect"
+      ],
+      "answer": "The deeper, underlying condition or reason that made an event possible",
+      "explanation": "The immediate cause is the proximate trigger (what directly caused the effect). The root cause is the deeper underlying reason — often more significant for understanding why something happened.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "type": "mc",
+      "question": "A cause and effect essay focusing primarily on effects would have a thesis that:",
+      "options": [
+        "Lists all the causes of a phenomenon",
+        "Identifies what resulted from a specific event or condition",
+        "Compares two different phenomena",
+        "Proposes a solution to a problem"
+      ],
+      "answer": "Identifies what resulted from a specific event or condition",
+      "explanation": "An effects-focused cause and effect essay uses one known cause and explores its multiple results. An effects thesis might read: 'The invention of smartphones has transformed how people communicate, socialize, and consume information.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "type": "mc",
+      "question": "In a causal chain, what does the arrow (→) represent?",
+      "options": [
+        "A contrast between two events",
+        "The direction of cause leading to effect",
+        "A similarity between events",
+        "The conclusion of the essay"
+      ],
+      "answer": "The direction of cause leading to effect",
+      "explanation": "In a causal chain diagram (A → B → C), the arrow shows the cause-and-effect direction: A causes B, which then causes C. Each effect becomes the cause of the next event in the chain.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "type": "mc",
+      "question": "Which sentence correctly uses a cause and effect signal word?",
+      "options": [
+        "She studied for three hours; however, she passed the exam.",
+        "She studied for three hours; similarly, she passed the exam.",
+        "She studied for three hours; as a result, she passed the exam.",
+        "She studied for three hours; on the other hand, she passed the exam."
+      ],
+      "answer": "She studied for three hours; as a result, she passed the exam.",
+      "explanation": "'As a result' correctly signals that passing the exam was a consequence (effect) of studying (cause). The other options use contrast or comparison transitions, which do not fit the logical relationship.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "type": "mc",
+      "question": "An effective argumentative thesis must be:",
+      "options": [
+        "A statement of fact that everyone agrees with",
+        "A debatable claim that the writer will support with evidence",
+        "A question the writer will answer",
+        "A general statement about a broad topic"
+      ],
+      "answer": "A debatable claim that the writer will support with evidence",
+      "explanation": "A thesis in an argumentative essay must stake a position — one that reasonable people could disagree with. Facts are not arguments; a debatable claim gives the essay a purpose and direction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "type": "mc",
+      "question": "In an argumentative body paragraph, 'reasoning' refers to:",
+      "options": [
+        "Copying a quote from a source",
+        "Restating the thesis",
+        "Explaining how and why the evidence supports the claim",
+        "Summarizing the opposing view"
+      ],
+      "answer": "Explaining how and why the evidence supports the claim",
+      "explanation": "Reasoning (also called analysis or commentary) is the writer's explanation of how the evidence connects to the claim. Without reasoning, evidence is just a quote or statistic with no logical bridge.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "type": "mc",
+      "question": "Acknowledging a counterargument in an argumentative essay is important because it:",
+      "options": [
+        "Weakens the writer's argument",
+        "Shows the writer understands the issue fully and increases credibility",
+        "Takes up space that should be used for evidence",
+        "Replaces the thesis"
+      ],
+      "answer": "Shows the writer understands the issue fully and increases credibility",
+      "explanation": "Addressing the counterargument demonstrates intellectual honesty and strengthens credibility (ethos). A writer who ignores opposing views seems uninformed; one who addresses and refutes them appears confident and thorough.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "type": "mc",
+      "question": "Which type of evidence is generally considered strongest in an argumentative essay?",
+      "options": [
+        "A personal anecdote from the writer",
+        "A general opinion from a friend",
+        "A statistic from a peer-reviewed study",
+        "A claim with no source"
+      ],
+      "answer": "A statistic from a peer-reviewed study",
+      "explanation": "Peer-reviewed research is the gold standard for evidence because it has been validated by experts. Personal anecdotes and unsupported opinions are weaker because they are not independently verifiable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "type": "mc",
+      "question": "The conclusion of an argumentative essay should:",
+      "options": [
+        "Introduce a new argument not mentioned in the essay",
+        "Simply repeat the introduction word for word",
+        "Restate the thesis in new words and reinforce the significance of the argument",
+        "List all the evidence used in the essay"
+      ],
+      "answer": "Restate the thesis in new words and reinforce the significance of the argument",
+      "explanation": "An effective argumentative conclusion restates the thesis (in fresh language), synthesizes the key supporting points, and often broadens to the larger significance — a call to action or statement of implications.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "type": "mc",
+      "question": "Ethos, as a rhetorical appeal, is best used by:",
+      "options": [
+        "Telling an emotional story about a personal hardship",
+        "Citing a relevant expert, credential, or authoritative source",
+        "Using statistics and data to prove a point",
+        "Repeating the same phrase three times for emphasis"
+      ],
+      "answer": "Citing a relevant expert, credential, or authoritative source",
+      "explanation": "Ethos builds the speaker's or writer's credibility and trustworthiness. Citing an expert, mentioning credentials, or aligning with a respected institution are all ethos strategies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "type": "mc",
+      "question": "Logos as a rhetorical appeal means persuading through:",
+      "options": [
+        "Emotional stories and vivid description",
+        "The writer's personal reputation",
+        "Logic, facts, statistics, and reasoned argument",
+        "Repetition of the same emotional appeal"
+      ],
+      "answer": "Logic, facts, statistics, and reasoned argument",
+      "explanation": "Logos (Greek for 'word' or 'reason') is the appeal to logic. It persuades through evidence, data, clear reasoning, and sound argument structure — rather than emotion or authority.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "type": "mc",
+      "question": "A rhetorical question is a question that:",
+      "options": [
+        "Requires the audience to write an answer",
+        "Is asked for effect and implies an obvious answer without expecting a response",
+        "Is asked only in writing, not in speech",
+        "Is used in the introduction of an essay to state the thesis"
+      ],
+      "answer": "Is asked for effect and implies an obvious answer without expecting a response",
+      "explanation": "Rhetorical questions engage the audience, provoke thought, or make a point dramatically. Example: 'If we don't act on climate change now, when will we?' No answer is expected — the point is made through the question itself.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "type": "mc",
+      "question": "Anaphora is most effective in persuasive writing because it:",
+      "options": [
+        "Speeds up the pacing of the essay",
+        "Creates emphasis and rhythm through the repetition of a phrase at the start of successive sentences",
+        "Introduces a counterargument",
+        "Replaces the need for evidence"
+      ],
+      "answer": "Creates emphasis and rhythm through the repetition of a phrase at the start of successive sentences",
+      "explanation": "Anaphora (e.g., MLK's 'I have a dream...') builds emotional intensity and memorability through repetition. The repeated phrase acts as an anchor that gives the passage power and momentum.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "type": "mc",
+      "question": "When analyzing a speech for rhetorical appeals, a student should look for:",
+      "options": [
+        "Only the ethos appeals, since they are most important",
+        "Grammar and spelling errors",
+        "How the speaker uses credibility, emotion, and logic to influence the audience",
+        "The length of the speech"
+      ],
+      "answer": "How the speaker uses credibility, emotion, and logic to influence the audience",
+      "explanation": "Rhetorical analysis examines the full range of persuasive strategies — ethos, pathos, and logos working together. Skilled communicators blend all three rather than relying on only one.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "type": "mc",
+      "question": "A good research question is one that:",
+      "options": [
+        "Can be answered with 'yes' or 'no'",
+        "Requires investigation, analysis, and synthesis of multiple sources to answer",
+        "Is already fully answered on the first page of a Google search",
+        "Is so broad it could fill an entire encyclopedia"
+      ],
+      "answer": "Requires investigation, analysis, and synthesis of multiple sources to answer",
+      "explanation": "A strong research question demands genuine inquiry — it should be narrow enough to be answerable in the given scope but complex enough to require multiple sources and critical thinking.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "type": "mc",
+      "question": "The 'R' in the CRAAP test stands for Relevance, which asks:",
+      "options": [
+        "Who wrote the source?",
+        "When was the source published?",
+        "Does the source relate to your research question?",
+        "Why was the source created?"
+      ],
+      "answer": "Does the source relate to your research question?",
+      "explanation": "Relevance asks: Is this source directly related to your topic? Does it help answer your research question? Is it written at an appropriate level for your purpose? Even a credible source is useless if it's not relevant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "type": "mc",
+      "question": "A primary source is best exemplified by:",
+      "options": [
+        "A textbook chapter summarizing the Civil Rights Movement",
+        "A documentary about World War II",
+        "Martin Luther King Jr.'s 'Letter from Birmingham Jail' (the original document)",
+        "A Wikipedia article about Martin Luther King Jr."
+      ],
+      "answer": "Martin Luther King Jr.'s 'Letter from Birmingham Jail' (the original document)",
+      "explanation": "A primary source is an original document, first-hand account, or artifact created at the time of the event or by the person involved. The letter itself is primary; a textbook or documentary discussing it is secondary.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "type": "mc",
+      "question": "Taking notes in your own words while recording the source information is important because it:",
+      "options": [
+        "Makes the notes longer",
+        "Helps avoid plagiarism and makes it easier to integrate ideas into your own writing",
+        "Eliminates the need for citations",
+        "Allows you to copy the notes directly into your essay"
+      ],
+      "answer": "Helps avoid plagiarism and makes it easier to integrate ideas into your own writing",
+      "explanation": "Paraphrased notes in your own words are already partially integrated into your voice, making writing easier. They also help you avoid accidentally copying source language into your draft without citation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "type": "mc",
+      "question": "To avoid plagiarism, you must cite a source when you:",
+      "options": [
+        "Only use direct quotations",
+        "Use common knowledge (e.g., water boils at 100°C)",
+        "Paraphrase, quote, or use someone else's ideas or data in any form",
+        "Mention an author's name in passing"
+      ],
+      "answer": "Paraphrase, quote, or use someone else's ideas or data in any form",
+      "explanation": "Citation is required any time you use another person's intellectual property — their words, ideas, arguments, or data — regardless of whether you quote or paraphrase. Common knowledge does not need citation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "type": "mc",
+      "question": "In MLA format, the correct way to write an in-text citation for a quote from page 12 by author James Lee is:",
+      "options": [
+        "(James Lee, p. 12)",
+        "(Lee, 12)",
+        "(Lee 12)",
+        "[Lee: page 12]"
+      ],
+      "answer": "(Lee 12)",
+      "explanation": "MLA in-text citations use the author's last name and page number in parentheses with no comma and no 'p.' abbreviation: (Lee 12). This distinguishes MLA from APA format.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "type": "mc",
+      "question": "A Works Cited page in MLA format is organized:",
+      "options": [
+        "In the order sources are mentioned in the essay",
+        "By source type (books first, then websites, then articles)",
+        "Alphabetically by the author's last name",
+        "By publication date, oldest to newest"
+      ],
+      "answer": "Alphabetically by the author's last name",
+      "explanation": "MLA Works Cited pages are organized alphabetically by the first word of each entry — usually the author's last name. This makes it easy for readers to locate specific sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "type": "mc",
+      "question": "A signal phrase before a quotation serves to:",
+      "options": [
+        "Replace the in-text citation",
+        "Introduce the quote and identify who said or wrote it",
+        "Put the quotation in block format",
+        "Indicate that the writer disagrees with the source"
+      ],
+      "answer": "Introduce the quote and identify who said or wrote it",
+      "explanation": "Signal phrases (e.g., 'As Rodriguez explains,' 'According to the CDC,') smoothly introduce quotations and provide context about the source, making citations feel integrated rather than dropped in abruptly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "type": "mc",
+      "question": "The 'hanging indent' format for Works Cited entries means:",
+      "options": [
+        "The entire entry is indented",
+        "Only the title is indented",
+        "The first line is flush with the margin; all subsequent lines are indented half an inch",
+        "The last line is indented"
+      ],
+      "answer": "The first line is flush with the margin; all subsequent lines are indented half an inch",
+      "explanation": "A hanging indent is the reverse of a standard paragraph indent. In MLA Works Cited, the first line starts at the margin, and all following lines of the same entry are indented half an inch, making entries easy to scan.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "type": "mc",
+      "question": "When you paraphrase a source in MLA style, you must:",
+      "options": [
+        "Use quotation marks around your paraphrase",
+        "Still provide an in-text citation, because the idea is not yours",
+        "Not cite the source, since you used your own words",
+        "Add the word 'paraphrase' before the sentence"
+      ],
+      "answer": "Still provide an in-text citation, because the idea is not yours",
+      "explanation": "Even if you restate an idea completely in your own words, the idea originated with someone else and must be cited. Paraphrasing without citation is still plagiarism.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "type": "mc",
+      "question": "When writing an informative essay, the writer's tone should be:",
+      "options": [
+        "Emotional and passionate",
+        "Formal and objective — presenting information without personal bias",
+        "Casual and conversational, as if talking to a friend",
+        "Humorous to keep the reader engaged"
+      ],
+      "answer": "Formal and objective — presenting information without personal bias",
+      "explanation": "Informative writing aims to educate, not persuade or entertain. A formal, objective tone ensures the information is credible and trustworthy. First-person and emotional language shift the purpose toward argument or narrative.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is the most appropriate thesis for an informative essay about the water cycle?",
+      "options": [
+        "The water cycle is very important.",
+        "Everyone should care about the water cycle.",
+        "The water cycle is a continuous process involving evaporation, condensation, and precipitation that sustains all life on Earth.",
+        "Water is amazing and we should protect it."
+      ],
+      "answer": "The water cycle is a continuous process involving evaporation, condensation, and precipitation that sustains all life on Earth.",
+      "explanation": "An informative thesis states clearly what the essay will explain and why it matters — without taking an argumentative stance or using vague language. This option gives specific information and significance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "type": "mc",
+      "question": "Identifying your audience before writing an informative essay helps the writer decide:",
+      "options": [
+        "How many paragraphs to write",
+        "How much prior knowledge to assume and which terms to define",
+        "Which font size to use",
+        "How many quotations to include"
+      ],
+      "answer": "How much prior knowledge to assume and which terms to define",
+      "explanation": "Audience awareness determines vocabulary level, amount of background explanation, and which terms need to be defined. Writing for a specialist audience is very different from writing for elementary school students.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "type": "mc",
+      "question": "In an informative essay, defining specialized terms serves to:",
+      "options": [
+        "Make the essay seem more academic",
+        "Increase the word count",
+        "Ensure the intended audience can understand and follow the explanation",
+        "Replace the need for evidence"
+      ],
+      "answer": "Ensure the intended audience can understand and follow the explanation",
+      "explanation": "Technical or specialized terms that the audience may not know must be defined so that the explanation is clear and accessible. Undefined jargon creates confusion and undermines the essay's purpose.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "type": "mc",
+      "question": "The conclusion of an informative essay should:",
+      "options": [
+        "Introduce new information not covered in the body",
+        "Take a strong argumentative stance not present in the rest of the essay",
+        "Synthesize the main points and leave the reader with a broader understanding or takeaway",
+        "List all the sources used"
+      ],
+      "answer": "Synthesize the main points and leave the reader with a broader understanding or takeaway",
+      "explanation": "An informative conclusion does not argue — it synthesizes. It brings the reader's understanding together, often broadening to the real-world significance of the information presented.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following BEST describes the purpose of a writing portfolio?",
+      "options": [
+        "A collection of every draft a student wrote, including rough drafts",
+        "A curated collection of a writer's best or most significant work, showing growth and skill",
+        "A list of grammar rules the student has memorized",
+        "A record of every grade the student received in the course"
+      ],
+      "answer": "A curated collection of a writer's best or most significant work, showing growth and skill",
+      "explanation": "A portfolio is a thoughtful, selective showcase. Students choose which pieces to include, revise them, and reflect on their development — it demonstrates growth over time, not just a snapshot of one assignment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "type": "mc",
+      "question": "A self-assessment reflection in a writing portfolio should:",
+      "options": [
+        "Simply list what the essay is about",
+        "Provide a summary of the feedback received from the teacher",
+        "Honestly analyze what the writer did well, what they revised, and what they would still improve",
+        "Be written in third person to sound more professional"
+      ],
+      "answer": "Honestly analyze what the writer did well, what they revised, and what they would still improve",
+      "explanation": "Self-assessment requires metacognitive honesty — the writer must genuinely evaluate their own work, not just praise it. Reflecting on limitations is just as important as recognizing strengths.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "type": "mc",
+      "question": "Effective peer feedback during a revision workshop should be:",
+      "options": [
+        "Vague so as not to hurt the writer's feelings",
+        "Only positive, because the writer worked hard",
+        "Specific, constructive, and balanced — noting both strengths and areas for improvement",
+        "Limited to grammar and spelling corrections"
+      ],
+      "answer": "Specific, constructive, and balanced — noting both strengths and areas for improvement",
+      "explanation": "Helpful feedback is actionable — it tells the writer exactly what works and what doesn't, and offers suggestions for improvement. Vague praise ('good job!') and only negative comments are both unhelpful.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "type": "mc",
+      "question": "When polishing a piece of writing for a portfolio, a writer should revise in this order:",
+      "options": [
+        "Fix spelling first, then organize paragraphs, then improve the thesis",
+        "Global revision (content and structure) → local revision (sentences) → surface editing (mechanics)",
+        "Edit grammar first, then add more content, then fix spelling",
+        "Submit the rough draft since the ideas are what matter"
+      ],
+      "answer": "Global revision (content and structure) → local revision (sentences) → surface editing (mechanics)",
+      "explanation": "Revision should move from largest to smallest concerns. Fixing spelling errors in a paragraph you later delete wastes time. Global (thesis, logic, organization) → local (sentences, transitions, word choice) → surface (grammar, punctuation, spelling).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "type": "mc",
+      "question": "Writing a reflective letter about your growth as a writer is valuable because it helps you:",
+      "options": [
+        "Avoid writing more essays",
+        "Identify patterns in your strengths and weaknesses and set meaningful goals",
+        "Earn extra credit automatically",
+        "Convince the teacher to raise your grade"
+      ],
+      "answer": "Identify patterns in your strengths and weaknesses and set meaningful goals",
+      "explanation": "Reflective writing develops metacognition — the awareness of one's own learning process. Identifying recurring strengths and challenges allows the writer to set specific, achievable goals for future growth.",
+      "points": 1
+    }
+  ]
+}

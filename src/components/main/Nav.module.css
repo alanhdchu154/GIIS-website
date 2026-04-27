@@ -1,0 +1,276 @@
+/* ─── Bar ─────────────────────────────────────────────────────────────────── */
+
+.customBackground {
+    background-color: rgba(43, 61, 109, 0.85);
+    height: 70px;
+}
+
+@media (max-width: 768px) {
+    .customBackground {
+        height: 50px;
+    }
+}
+
+/* ─── Desktop nav ─────────────────────────────────────────────────────────── */
+
+.desktopNav {
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    gap: 4px;
+}
+
+.navItem {
+    position: relative;
+    height: 70px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 20px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+html[lang="zh"] .navItem {
+    font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+    .navItem {
+        font-size: 16px;
+        padding: 0 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navItem {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+}
+
+.navLink {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 6px;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.35);
+    transition: width 0.25s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+/* ─── Dropdown ────────────────────────────────────────────────────────────── */
+
+.dropdown {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    min-width: 240px;
+    background: rgba(43, 61, 109, 1);
+    border-left: 5px solid rgba(213, 168, 54, 1);
+    padding: 12px 0 12px 14px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 300;
+    font-size: 15px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+html[lang="zh"] .dropdown {
+    font-size: 17px;
+}
+
+.dropdownRight {
+    left: auto;
+    right: 0;
+}
+
+.navItem:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ─── Mega menu (Academics) ───────────────────────────────────────────────── */
+
+.megaMenu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 560px;
+    background: rgba(43, 61, 109, 1);
+    border-left: 5px solid rgba(213, 168, 54, 1);
+    padding: 20px 24px 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 300;
+    font-family: Inter, sans-serif;
+}
+
+.navItem:hover .megaMenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.megaCatalogLink {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 14px;
+    transition: color 0.15s;
+}
+
+.megaCatalogLink:hover {
+    color: rgba(213, 168, 54, 1);
+}
+
+.megaSection {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(213, 168, 54, 0.9);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.megaGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 16px;
+    margin-bottom: 14px;
+}
+
+.megaCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.megaColLabel {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+}
+
+.megaPathLink {
+    display: block;
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.15s;
+}
+
+.megaPathLink:hover {
+    color: rgba(213, 168, 54, 1);
+}
+
+.megaAllLink {
+    display: block;
+    color: rgba(213, 168, 54, 0.85);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    padding-top: 12px;
+    letter-spacing: 0.3px;
+    transition: color 0.15s;
+}
+
+.megaAllLink:hover {
+    color: rgba(213, 168, 54, 1);
+}
+
+/* ─── Mobile menu ─────────────────────────────────────────────────────────── */
+
+.mobileMenu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 200;
+    border-bottom: 6px solid rgba(43, 61, 109, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.mobileItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileItems li {
+    position: relative;
+    padding: 16px 24px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+html[lang="zh"] .mobileItems li {
+    font-size: 20px;
+}
+
+.mobileItems li:hover {
+    color: rgba(43, 61, 109, 0.75);
+    background: #f5f6fa;
+}
+
+.mobileItems li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+.topButton {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 600 !important;
+}
+
+.topButton:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}

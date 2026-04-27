@@ -1,0 +1,1220 @@
+{
+  "slug": "business-strategy-writing",
+  "name": "Business Strategy & Writing",
+  "nameZh": "商业战略与写作",
+  "credits": 0.5,
+  "department": "Electives",
+  "type": "Elective",
+  "description": "Combines strategic business thinking with professional writing — corporate strategy frameworks, competitive analysis, strategic planning documents, business cases, and writing that drives decisions.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "What Is Strategy?",
+      "titleZh": "什么是战略？",
+      "objectives": "Distinguish strategy from tactics; identify the three levels of strategy (corporate, business, functional); articulate strategic intent and why it matters.",
+      "readingUrl": "https://hbr.org/1996/11/what-is-strategy",
+      "readingNote": "Harvard Business Review — Michael Porter: What Is Strategy? (1996)",
+      "videoUrl": "https://www.youtube.com/watch?v=mYF2_FBCvXw",
+      "videoNote": "TED-Ed Business — What Is Strategy? (Animated Overview)",
+      "video2Url": "https://www.youtube.com/watch?v=iuYlGRnC7J8",
+      "video2Note": "FourWeekMBA — Corporate vs Business vs Functional Strategy Explained",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
+      "practiceNote": "Khan Academy — Entrepreneurship & Business Fundamentals (review strategic concepts)",
+      "assignment": "Find a company you admire. In 300 words, describe its strategic intent and identify one corporate-level, one business-level, and one functional-level strategy it uses. Cite at least one public source.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "External Analysis",
+      "titleZh": "外部分析",
+      "objectives": "Apply the PESTLE framework to map macro-environmental forces; use Porter's Five Forces to assess industry attractiveness; identify key opportunities and threats.",
+      "readingUrl": "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy",
+      "readingNote": "Harvard Business Review — Porter: The Five Competitive Forces That Shape Strategy (2008)",
+      "videoUrl": "https://www.youtube.com/watch?v=mYF2_FBCvXw",
+      "videoNote": "FourWeekMBA — Porter's Five Forces Model Explained",
+      "video2Url": "https://www.youtube.com/watch?v=s24DP3yvNQg",
+      "video2Note": "Crash Course Business — Industry Analysis & PESTLE",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/competitive-markets-u",
+      "practiceNote": "Khan Academy — Competitive Markets (background on market forces)",
+      "assignment": "Choose an industry (e.g. streaming, electric vehicles, fast food). Complete a full PESTLE analysis (6 factors, 2–3 points each) and a Porter's Five Forces analysis. Summarize the top 3 opportunities and top 3 threats.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 3,
+      "title": "Internal Analysis",
+      "titleZh": "内部分析",
+      "objectives": "Conduct a deep SWOT analysis; apply the resource-based view to identify core competencies; map a company's value chain to find areas of advantage.",
+      "readingUrl": "https://hbr.org/1990/05/the-core-competence-of-the-corporation",
+      "readingNote": "Harvard Business Review — Prahalad & Hamel: The Core Competence of the Corporation (1990)",
+      "videoUrl": "https://www.youtube.com/watch?v=NVwQNOIu808",
+      "videoNote": "FourWeekMBA — SWOT Analysis Deep Dive",
+      "video2Url": "https://www.youtube.com/watch?v=J7mFv3sBFXk",
+      "video2Note": "Crash Course Business — Internal Analysis & Value Chain",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
+      "practiceNote": "Khan Academy — Business Strategy Fundamentals",
+      "assignment": "Pick a publicly traded company. Complete a SWOT analysis with at least 4 points per quadrant. Then identify 2 core competencies using the resource-based view and explain how they create value chain advantages.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 4,
+      "title": "Competitive Advantage",
+      "titleZh": "竞争优势",
+      "objectives": "Define competitive advantage; compare cost leadership, differentiation, and focus strategies; explain Blue Ocean Strategy and how it differs from competing in existing market space.",
+      "readingUrl": "https://hbr.org/2004/10/blue-ocean-strategy",
+      "readingNote": "Harvard Business Review — Kim & Mauborgne: Blue Ocean Strategy (2004)",
+      "videoUrl": "https://www.youtube.com/watch?v=QaHsOBe-P0I",
+      "videoNote": "FourWeekMBA — Porter's Generic Strategies: Cost Leadership, Differentiation, Focus",
+      "video2Url": "https://www.youtube.com/watch?v=Qz5bBfHITSM",
+      "video2Note": "TED-Ed Business — Blue Ocean Strategy Explained",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit",
+      "practiceNote": "Khan Academy — Firm Strategy & Economic Profit",
+      "assignment": "Compare two direct competitors (e.g. Apple vs Samsung, McDonald's vs Chipotle). In 400 words, identify which generic strategy each pursues and evaluate which has a more sustainable competitive advantage. Argue your position.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 5,
+      "title": "Corporate Strategy",
+      "titleZh": "公司战略",
+      "objectives": "Explain diversification strategies and when they create vs destroy value; analyze vertical integration decisions; evaluate M&A rationale; apply portfolio analysis frameworks (BCG matrix).",
+      "readingUrl": "https://hbr.org/1987/05/the-state-of-strategy",
+      "readingNote": "Harvard Business Review — Corporate Strategy & Portfolio Analysis",
+      "videoUrl": "https://www.youtube.com/watch?v=GZlS-I5kHeI",
+      "videoNote": "FourWeekMBA — BCG Matrix & Corporate Portfolio Strategy",
+      "video2Url": "https://www.youtube.com/watch?v=1RBFdFkjMEA",
+      "video2Note": "Crash Course Business — Mergers, Acquisitions & Corporate Strategy",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/mergers-acquisitions",
+      "practiceNote": "Khan Academy — Mergers & Acquisitions Basics",
+      "assignment": "Research a real merger or acquisition from the past 5 years. In 350 words, explain the strategic rationale, assess whether it was a related or unrelated diversification, and give your verdict on whether it created shareholder value. Use at least 2 sources.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 6,
+      "title": "Strategy Execution",
+      "titleZh": "战略执行",
+      "objectives": "Translate strategy into actionable plans using OKRs and the Balanced Scorecard; identify common execution failures; design accountability structures that connect daily work to strategic goals.",
+      "readingUrl": "https://hbr.org/2005/10/the-office-of-strategy-management",
+      "readingNote": "Harvard Business Review — Kaplan & Norton: The Office of Strategy Management (2005)",
+      "videoUrl": "https://www.youtube.com/watch?v=L4N1q4RNi9I",
+      "videoNote": "FourWeekMBA — OKRs vs Balanced Scorecard: Strategy Execution Tools",
+      "video2Url": "https://www.youtube.com/watch?v=EIcMT0m7juo",
+      "video2Note": "Crash Course Business — Implementing and Executing Strategy",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
+      "practiceNote": "Khan Academy — Business Planning & Execution",
+      "assignment": "Write OKRs for a fictional company's next quarter: 3 Objectives, each with 3 Key Results (9 KRs total). Then draft one Balanced Scorecard perspective (financial, customer, internal process, or learning & growth) with 3 measures and targets.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 7,
+      "title": "Writing the Strategic Plan",
+      "titleZh": "撰写战略计划",
+      "objectives": "Structure a complete strategic plan document; write a compelling executive summary; draft strategic objectives and initiatives; include a high-level financial projections overview.",
+      "readingUrl": "https://hbr.org/2000/07/having-trouble-with-your-strategy-then-map-it",
+      "readingNote": "Harvard Business Review — Kaplan & Norton: Having Trouble with Your Strategy? Then Map It (2000)",
+      "videoUrl": "https://www.youtube.com/watch?v=_SfkYAkFQ4g",
+      "videoNote": "FourWeekMBA — How to Write a Strategic Plan",
+      "video2Url": "https://www.youtube.com/watch?v=SWRBE2OIeJU",
+      "video2Note": "Crash Course Business — Business Writing: Strategic Documents",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
+      "practiceNote": "Khan Academy — Business Plans & Financial Projections",
+      "assignment": "Draft a 2-page strategic plan for a fictional company of your choice. Include: executive summary (100 words), 3 strategic objectives, 2 initiatives per objective, and a one-paragraph financial projections overview with projected revenue range and key assumptions.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 8,
+      "title": "The Business Case",
+      "titleZh": "商业案例",
+      "objectives": "Explain the purpose and structure of a business case; build a financial justification using ROI and payback period; conduct a risk analysis; write a clear recommendation section.",
+      "readingUrl": "https://hbr.org/2019/04/what-makes-a-good-business-case",
+      "readingNote": "Harvard Business Review — What Makes a Good Business Case? (2019)",
+      "videoUrl": "https://www.youtube.com/watch?v=HmFBr8BW9EA",
+      "videoNote": "FourWeekMBA — How to Write a Business Case",
+      "video2Url": "https://www.youtube.com/watch?v=XKy2oyCSdBs",
+      "video2Note": "Crash Course Business — Financial Justification & ROI Analysis",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial",
+      "practiceNote": "Khan Academy — Interest & Return on Investment Basics",
+      "assignment": "Write a business case (1.5–2 pages) for a capital investment or new initiative (e.g. launching a new product line, opening a new office, adopting new software). Include: problem statement, proposed solution, financial analysis (cost, expected return, ROI), risk matrix (3 risks × likelihood/impact), and recommendation.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 9,
+      "title": "Competitive Intelligence Reports",
+      "titleZh": "竞争情报报告",
+      "objectives": "Research competitors systematically using primary and secondary sources; synthesize qualitative and quantitative findings; write a professional competitive intelligence (CI) report.",
+      "readingUrl": "https://hbr.org/2003/04/turn-your-competitors-blind-side-into-yours",
+      "readingNote": "Harvard Business Review — Competitive Intelligence & Strategic Surveillance",
+      "videoUrl": "https://www.youtube.com/watch?v=RYYoBHoKlTQ",
+      "videoNote": "FourWeekMBA — Competitive Analysis Frameworks",
+      "video2Url": "https://www.youtube.com/watch?v=3b2lKdFrwQQ",
+      "video2Note": "Crash Course Business — Market Research & Competitive Intelligence",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/competitive-markets-u",
+      "practiceNote": "Khan Academy — Market Structures & Competition",
+      "assignment": "Write a 2-page competitive intelligence report on two companies competing in the same market. Cover: company overview, product/service comparison, pricing, market share estimate, recent strategic moves, and a summary of competitive positioning. Use at least 4 real sources.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 10,
+      "title": "Stakeholder Communication",
+      "titleZh": "利益相关者沟通",
+      "objectives": "Tailor strategic messages for different audiences (board, investors, employees); structure an effective board presentation; write a concise investor update; draft a strategic memo.",
+      "readingUrl": "https://hbr.org/2015/05/what-great-listeners-actually-do",
+      "readingNote": "Harvard Business Review — Communicating Strategy to Stakeholders",
+      "videoUrl": "https://www.youtube.com/watch?v=lmyZMtPVodo",
+      "videoNote": "TED-Ed Business — How to Make a Great Presentation",
+      "video2Url": "https://www.youtube.com/watch?v=IuFlFrRQBMI",
+      "video2Note": "Crash Course Business — Business Communication Essentials",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
+      "practiceNote": "Khan Academy — Communication & Investor Relations",
+      "assignment": "You are the CEO of a mid-size company that missed Q3 revenue targets by 12% but has a strong Q4 pipeline. Write: (1) a 1-page board memo explaining the miss and the plan forward, and (2) a 5-bullet investor update email. Both must be professional, honest, and forward-looking.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 11,
+      "title": "Crisis Strategy & Communication",
+      "titleZh": "危机战略与沟通",
+      "objectives": "Identify triggers for strategic pivots; develop a crisis communication framework; analyze real turnaround strategies; write a crisis communication plan.",
+      "readingUrl": "https://hbr.org/2007/07/managing-through-crisis",
+      "readingNote": "Harvard Business Review — Managing Through Crisis",
+      "videoUrl": "https://www.youtube.com/watch?v=5xCwFoiH5JQ",
+      "videoNote": "TED-Ed Business — Crisis Communication Strategies",
+      "video2Url": "https://www.youtube.com/watch?v=HlG5rKO3r2A",
+      "video2Note": "FourWeekMBA — Strategic Pivot & Turnaround Strategy",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
+      "practiceNote": "Khan Academy — Business Risk Management",
+      "assignment": "Research a real company that faced a public crisis (e.g. product recall, data breach, leadership scandal). In 400 words: (1) describe the crisis, (2) evaluate the company's strategic and communication response, (3) recommend 2 improvements they could have made.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 12,
+      "title": "Innovation Strategy",
+      "titleZh": "创新战略",
+      "objectives": "Distinguish sustaining from disruptive innovation; apply design thinking to strategic problem-solving; design a strategic experiment using a lean testing approach.",
+      "readingUrl": "https://hbr.org/2015/12/what-is-disruptive-innovation",
+      "readingNote": "Harvard Business Review — Christensen: What Is Disruptive Innovation? (2015)",
+      "videoUrl": "https://www.youtube.com/watch?v=mbcMa8s6cKc",
+      "videoNote": "TED-Ed Business — Disruptive Innovation Explained",
+      "video2Url": "https://www.youtube.com/watch?v=4rKD7-_ulE0",
+      "video2Note": "Crash Course Business — Design Thinking & Innovation Strategy",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
+      "practiceNote": "Khan Academy — Entrepreneurship & Innovation",
+      "assignment": "Choose a traditional industry being disrupted by technology (e.g. banking by fintech, taxis by rideshare, hotels by Airbnb). Write a 300-word analysis: (1) classify the disruption type, (2) describe the incumbent's strategic response, (3) propose one strategic experiment the incumbent should run with a success metric.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 13,
+      "title": "Global Strategy",
+      "titleZh": "全球战略",
+      "objectives": "Analyze internationalization drivers and entry mode options; compare global vs multi-domestic strategy; evaluate cultural dimensions in strategy formulation.",
+      "readingUrl": "https://hbr.org/2011/03/the-big-idea-the-age-of-hyperspecialization",
+      "readingNote": "Harvard Business Review — Global Strategy & Internationalization Frameworks",
+      "videoUrl": "https://www.youtube.com/watch?v=Xe7RBNz3AIM",
+      "videoNote": "FourWeekMBA — Global Strategy: Entry Modes & Internationalization",
+      "video2Url": "https://www.youtube.com/watch?v=Q2KYZPF3kB4",
+      "video2Note": "Crash Course Business — International Business Strategy",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/international-trade-and-finance-ap",
+      "practiceNote": "Khan Academy — International Trade & Finance",
+      "assignment": "Select a company that has expanded internationally (e.g. Starbucks, IKEA, McDonald's, BYD). In 400 words: (1) describe two countries they entered and the entry mode used, (2) assess whether they used a global or multi-domestic approach, (3) identify one cultural adaptation they made and evaluate its effectiveness.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 14,
+      "title": "Capstone: Strategic Analysis",
+      "titleZh": "综合项目：战略分析",
+      "objectives": "Conduct and write a complete strategic analysis for a real company, integrating external analysis, internal analysis, competitive advantage assessment, and strategic recommendations.",
+      "readingUrl": "https://hbr.org/topic/subject/strategy",
+      "readingNote": "Harvard Business Review — Strategy Topic Hub (reference for research)",
+      "videoUrl": "https://www.youtube.com/watch?v=cFDTzRMRnC0",
+      "videoNote": "FourWeekMBA — Full Strategic Analysis Walkthrough",
+      "video2Url": "https://www.youtube.com/watch?v=XWJD7wNsMEA",
+      "video2Note": "Crash Course Business — Putting It All Together: Strategic Planning",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
+      "practiceNote": "Khan Academy — Business Strategy Capstone Review",
+      "assignment": "Write a 4–5 page strategic analysis for a publicly traded company of your choice. Required sections: (1) Executive Summary, (2) PESTLE Analysis, (3) Porter's Five Forces, (4) SWOT Analysis, (5) Competitive Advantage Assessment, (6) Current Strategy Evaluation, (7) Strategic Recommendations (at least 3, with rationale and risks). Cite at least 6 sources.",
+      "estimatedHrs": 6.0
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes the difference between strategy and tactics?",
+      "options": ["Strategy is short-term; tactics are long-term", "Strategy sets the overall direction and goals; tactics are the specific actions taken to achieve them", "Strategy is developed by frontline employees; tactics are set by executives", "Strategy and tactics mean the same thing in business"],
+      "answer": "Strategy sets the overall direction and goals; tactics are the specific actions taken to achieve them",
+      "explanation": "Strategy answers 'where do we want to go and why?'; tactics answer 'how do we get there?'. Strategy is long-term and directional; tactics are short-term and operational.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "In the PESTLE framework, what does the 'L' stand for?",
+      "options": ["Logistics", "Leadership", "Legal", "Labor"],
+      "answer": "Legal",
+      "explanation": "PESTLE stands for Political, Economic, Social, Technological, Legal, and Environmental. Legal factors include regulations, employment law, consumer protection, and industry-specific compliance.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Porter's Five Forces framework is used primarily to:",
+      "options": ["Analyze a company's internal strengths and weaknesses", "Assess industry attractiveness and competitive intensity", "Plan the organizational structure of a firm", "Determine a company's marketing budget"],
+      "answer": "Assess industry attractiveness and competitive intensity",
+      "explanation": "Porter's Five Forces examines: threat of new entrants, bargaining power of suppliers, bargaining power of buyers, threat of substitutes, and competitive rivalry — all of which determine how attractive and profitable an industry is.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "The resource-based view of the firm argues that competitive advantage comes from:",
+      "options": ["Having the largest market share", "Possessing valuable, rare, inimitable, and non-substitutable resources", "Charging the lowest prices in the industry", "Operating in the fewest markets possible"],
+      "answer": "Possessing valuable, rare, inimitable, and non-substitutable resources",
+      "explanation": "The resource-based view (RBV) holds that sustainable competitive advantage stems from a firm's unique internal resources and capabilities — often summarized with the VRIN framework.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "A company pursuing a differentiation strategy aims to:",
+      "options": ["Produce goods at the lowest possible cost and pass savings to customers", "Offer products or services perceived as unique and worth a premium price", "Serve only a narrow customer segment at the lowest cost", "Avoid competing with other firms entirely"],
+      "answer": "Offer products or services perceived as unique and worth a premium price",
+      "explanation": "Differentiation strategy creates value by offering something distinct — quality, brand, features, design — that allows the firm to charge a premium. The goal is perceived uniqueness, not just low cost.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "In the BCG Matrix, a 'Cash Cow' is a business unit with:",
+      "options": ["High market growth and high relative market share", "Low market growth and high relative market share", "High market growth and low relative market share", "Low market growth and low relative market share"],
+      "answer": "Low market growth and high relative market share",
+      "explanation": "Cash Cows are in slow-growing, mature markets but hold dominant market share. They generate more cash than they consume, which companies use to fund other units.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "OKRs (Objectives and Key Results) are primarily used to:",
+      "options": ["Set accounting standards for financial reporting", "Align organizational goals and measure progress toward them", "Evaluate employee personalities and communication styles", "Design product packaging and marketing materials"],
+      "answer": "Align organizational goals and measure progress toward them",
+      "explanation": "OKRs connect ambitious qualitative objectives with specific, measurable key results. They cascade from company to team to individual, ensuring everyone works toward the same strategic direction.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Which section of a strategic plan is read first and typically written last?",
+      "options": ["Strategic objectives", "Executive summary", "Financial projections", "Risk analysis"],
+      "answer": "Executive summary",
+      "explanation": "The executive summary appears first in the document and synthesizes the entire plan in 1–2 pages. It is written last because it summarizes content that has already been developed.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "When conducting a SWOT analysis, which two categories relate to the external environment?",
+      "options": ["Strengths and Weaknesses", "Opportunities and Threats", "Strengths and Opportunities", "Weaknesses and Threats"],
+      "answer": "Opportunities and Threats",
+      "explanation": "In SWOT: Strengths and Weaknesses are internal factors the organization controls. Opportunities and Threats are external forces from the market, competition, and macro-environment.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Blue Ocean Strategy encourages companies to:",
+      "options": ["Compete more aggressively in existing markets", "Create uncontested market space and make the competition irrelevant", "Copy best practices from industry leaders", "Reduce costs by eliminating all premium features"],
+      "answer": "Create uncontested market space and make the competition irrelevant",
+      "explanation": "Blue Ocean Strategy (Kim & Mauborgne) focuses on creating new demand in an uncontested market space ('blue ocean') rather than competing in saturated 'red oceans' where rivalry drives down profits.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "A business case document differs from a strategic plan because it:",
+      "options": ["Covers the entire company's direction over 3–5 years", "Justifies a specific investment or decision with financial evidence", "Is only written by the finance department", "Does not include any risk analysis"],
+      "answer": "Justifies a specific investment or decision with financial evidence",
+      "explanation": "A business case is a document built to support a specific decision — it includes problem statement, solution options, financial analysis (ROI, payback), risk assessment, and a clear recommendation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Return on Investment (ROI) is calculated as:",
+      "options": ["(Net Profit / Revenue) × 100", "(Net Benefit − Cost of Investment) / Cost of Investment × 100", "Total Revenue / Total Costs", "(Operating Income / Total Assets) × 100"],
+      "answer": "(Net Benefit − Cost of Investment) / Cost of Investment × 100",
+      "explanation": "ROI measures the efficiency of an investment relative to its cost. The formula is: ROI = (Net Benefit − Cost) / Cost × 100. A positive ROI indicates the investment generates more value than it costs.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Vertical integration refers to a company:",
+      "options": ["Expanding into completely unrelated industries", "Acquiring suppliers or distributors in its own supply chain", "Copying a competitor's product design", "Hiring more employees at each management level"],
+      "answer": "Acquiring suppliers or distributors in its own supply chain",
+      "explanation": "Vertical integration means a company takes control of stages in its supply chain — either backward (toward suppliers) or forward (toward customers/distribution). It reduces dependence on external parties.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "A startup is deciding whether to enter the electric scooter rental market. Identify two forces from Porter's Five Forces that are most relevant to this decision and briefly explain why each matters.",
+      "options": null,
+      "answer": "Sample answer: Threat of new entrants (low capital barriers and app technology make it easy for new competitors to enter); Competitive rivalry (existing players like Lime and Bird already compete intensely on pricing and city contracts, making profitability difficult).",
+      "explanation": "Any two well-reasoned forces with clear explanation earn full credit. Strong answers name the force, explain the mechanism, and tie it to the scooter market specifically.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "A company's Balanced Scorecard includes the metric 'Employee training hours per quarter.' Which Balanced Scorecard perspective does this belong to, and why is it strategically important?",
+      "options": null,
+      "answer": "Learning & Growth perspective. It measures the organization's capacity to improve and innovate. Strategically, investing in employee skills builds the capabilities needed to execute strategy and improve performance in other perspectives (customer, process, financial) over time.",
+      "explanation": "The four Balanced Scorecard perspectives are: Financial, Customer, Internal Business Process, and Learning & Growth. Training hours directly measure organizational capability development.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Strategic intent, as defined by Hamel and Prahalad, refers to:",
+      "options": ["A company's annual profit target", "An obsessive, long-term ambition that stretches the organization beyond its current capabilities", "The legal filings required to operate a business", "A short-term operational goal set by middle management"],
+      "answer": "An obsessive, long-term ambition that stretches the organization beyond its current capabilities",
+      "explanation": "Strategic intent describes a desired leadership position that represents a significant stretch from the current state. It provides direction and motivates employees to strive toward a long-horizon goal (e.g. 'Crush Adidas' for Nike in the 1960s).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Which PESTLE factor would include a government's decision to raise the corporate tax rate?",
+      "options": ["Social", "Technological", "Environmental", "Political"],
+      "answer": "Political",
+      "explanation": "Government policy decisions — including tax rates, trade tariffs, subsidies, and regulatory changes — fall under the Political factor of PESTLE analysis.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "High bargaining power of suppliers in Porter's Five Forces typically leads to:",
+      "options": ["Lower input costs for companies in the industry", "Reduced profitability for companies in the industry", "Easier entry for new competitors", "Higher customer satisfaction"],
+      "answer": "Reduced profitability for companies in the industry",
+      "explanation": "When suppliers have high bargaining power, they can raise prices or reduce quality, squeezing the margins of companies that depend on them. This reduces industry profitability.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "A company's value chain consists of:",
+      "options": ["The sequence of activities that create value for the customer and generate profit", "The stock market valuation of the company over time", "The list of investors who own shares in the company", "The company's pricing structure from wholesale to retail"],
+      "answer": "The sequence of activities that create value for the customer and generate profit",
+      "explanation": "Porter's value chain maps primary activities (inbound logistics, operations, outbound logistics, marketing & sales, service) and support activities (infrastructure, HR, technology, procurement) that collectively create value.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Cost leadership strategy is most effective when:",
+      "options": ["Customers prioritize brand prestige above price", "Price-sensitive customers make purchase decisions primarily on cost", "The market is small and highly specialized", "The company has a unique technology no one else can replicate"],
+      "answer": "Price-sensitive customers make purchase decisions primarily on cost",
+      "explanation": "Cost leadership is most powerful in price-sensitive, commodity-like markets where customers see little differentiation between products. The cost leader can undercut rivals and still earn a profit.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Unrelated diversification means a company expands into:",
+      "options": ["A new geographic market with the same product", "An industry with no significant strategic fit with its current businesses", "The same industry with a slightly modified product", "A supplier's business in its existing industry"],
+      "answer": "An industry with no significant strategic fit with its current businesses",
+      "explanation": "Unrelated (conglomerate) diversification involves entering industries unrelated to current operations. It may spread risk but often fails to create value because there are no synergies between businesses.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "A Key Result in an OKR framework must be:",
+      "options": ["Qualitative and inspirational", "Specific and measurable with a defined target", "Approved by the board of directors", "Set only at the company level, not team level"],
+      "answer": "Specific and measurable with a defined target",
+      "explanation": "Key Results are quantitative measures of progress toward an Objective. They must include a specific metric and target (e.g. 'Increase NPS from 42 to 60 by Q4') so progress can be objectively assessed.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The executive summary of a strategic plan should:",
+      "options": ["Include every detail from all sections of the plan", "Be written first and provide a detailed financial model", "Concisely capture the most critical points so busy readers can grasp the plan quickly", "Only be read by the finance team"],
+      "answer": "Concisely capture the most critical points so busy readers can grasp the plan quickly",
+      "explanation": "An executive summary is a distilled version of the full plan — usually 1–2 pages — that enables executives and board members to understand the strategy without reading every section. It is written last but placed first.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "In a business case, a risk matrix typically evaluates each identified risk by:",
+      "options": ["Its financial cost alone", "Its likelihood of occurrence and its potential impact", "The seniority of the manager responsible for it", "Its relationship to past failures only"],
+      "answer": "Its likelihood of occurrence and its potential impact",
+      "explanation": "A risk matrix plots risks on two axes: probability (likelihood) and impact (severity). This helps prioritize which risks need mitigation plans and how much attention they deserve.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "When writing a competitive intelligence report, primary sources would include:",
+      "options": ["Wikipedia articles about the competitor", "Direct interviews with competitor customers or industry experts", "News articles summarizing competitor earnings", "Academic papers about industry trends"],
+      "answer": "Direct interviews with competitor customers or industry experts",
+      "explanation": "Primary sources are original, first-hand data — interviews, surveys, direct observation, or customer conversations. Secondary sources (news, reports, articles) synthesize information that already exists.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "When communicating a strategic update to a board of directors, the most appropriate tone is:",
+      "options": ["Informal and conversational to build rapport", "Highly technical with maximum detail on every metric", "Clear, evidence-based, and focused on decision-relevant information", "Motivational and emotional to inspire confidence"],
+      "answer": "Clear, evidence-based, and focused on decision-relevant information",
+      "explanation": "Board members need accurate, concise information to make decisions and provide oversight. Communication should be direct, supported by data, and framed around strategic implications rather than operational minutiae.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "During a crisis, the first priority in strategic communication should be:",
+      "options": ["Protecting the company's stock price at all costs", "Acknowledging the situation and demonstrating that the company is taking it seriously", "Avoiding all public statements until a full investigation is complete", "Blaming external factors to protect the company's reputation"],
+      "answer": "Acknowledging the situation and demonstrating that the company is taking it seriously",
+      "explanation": "Effective crisis communication begins with transparency and accountability. Silence or deflection erodes trust. Companies that acknowledge issues quickly and show they are addressing them preserve stakeholder confidence better.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Disruptive innovation, as defined by Clayton Christensen, typically begins by:",
+      "options": ["Targeting the most profitable, demanding customers first", "Serving overlooked or low-end market segments with simpler, cheaper solutions", "Investing exclusively in high-end research and development", "Immediately competing with market leaders on all product features"],
+      "answer": "Serving overlooked or low-end market segments with simpler, cheaper solutions",
+      "explanation": "Disruptive innovations start by addressing customers ignored by incumbents — often with inferior but cheaper products. Over time, they improve and move upmarket, eventually displacing established players.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "A multi-domestic strategy differs from a global strategy in that it:",
+      "options": ["Standardizes products and processes across all countries", "Adapts products and strategies to fit each local market", "Avoids entering markets outside the home country", "Uses only one currency for all international operations"],
+      "answer": "Adapts products and strategies to fit each local market",
+      "explanation": "A multi-domestic strategy treats each country as distinct, adapting products, marketing, and operations to local tastes and conditions. A global strategy seeks efficiency through standardization across markets.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "When selecting a market entry mode for international expansion, a joint venture offers which key advantage?",
+      "options": ["Full control over all operations and profits", "Access to local partner's knowledge, networks, and shared risk", "Zero upfront investment required", "Guaranteed profitability within the first year"],
+      "answer": "Access to local partner's knowledge, networks, and shared risk",
+      "explanation": "A joint venture partners a foreign company with a local firm, providing market knowledge, established relationships, and distribution channels while sharing investment costs and risks.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "A strategic analysis capstone project should demonstrate all of the following EXCEPT:",
+      "options": ["Integration of external and internal analysis", "Clear strategic recommendations with rationale", "Memorization of the textbook's exact definitions", "Evidence-based reasoning supported by real sources"],
+      "answer": "Memorization of the textbook's exact definitions",
+      "explanation": "A strategic analysis tests analytical thinking, synthesis, and judgment — not memorization. Strong capstone work integrates frameworks, applies them to real data, and makes reasoned recommendations.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Which of the following is the best example of a 'Star' in the BCG Matrix?",
+      "options": ["A legacy product with stable sales in a stagnant market", "A new product in a fast-growing market where the company holds the leading share", "A product losing money with no clear growth path", "A product with low sales in an emerging but competitive market"],
+      "answer": "A new product in a fast-growing market where the company holds the leading share",
+      "explanation": "Stars have high market growth AND high relative market share. They require significant investment to maintain leadership but have strong profit potential and may become Cash Cows as the market matures.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "The Balanced Scorecard's Financial Perspective typically measures:",
+      "options": ["Customer satisfaction scores and Net Promoter Score", "Revenue, profit margins, return on investment, and economic value added", "Number of training hours and employee retention rates", "Process cycle time and defect rates"],
+      "answer": "Revenue, profit margins, return on investment, and economic value added",
+      "explanation": "The Financial Perspective tracks traditional accounting measures: revenue growth, profitability, ROI, and EVA — answering 'How do we look to shareholders?'",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "A global consumer electronics company is deciding whether to enter the Indian market through exporting, a wholly owned subsidiary, or a joint venture with a local firm. What factors should influence this decision, and which mode would you recommend? Justify your answer.",
+      "options": null,
+      "answer": "Key factors: level of country risk and political stability, importance of local market knowledge and relationships (high in India due to regulatory complexity and diverse consumer preferences), desired level of control over operations and IP, capital available, and speed to market. A joint venture is generally recommended for India due to: complex regulatory environment (FDI restrictions in some sectors), need for local distribution networks, and cultural diversity across states. A local partner reduces risk and accelerates market entry, though the company must carefully manage IP protection and governance.",
+      "explanation": "Strong answers identify at least 3 relevant factors, make a clear recommendation, and provide specific justification tied to the India context. Generic answers without India-specific reasoning receive partial credit.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "A company that dominated the DVD rental market failed to transition successfully to streaming. Using at least two strategy frameworks from this course, explain why incumbents often fail to respond to disruptive innovation.",
+      "options": null,
+      "answer": "Using Christensen's Disruptive Innovation theory: the incumbent focused on its most profitable customers (frequent renters) and dismissed streaming as inferior (low quality, limited titles). Its core competency (physical logistics and store network) became a liability rather than an asset in a digital world. Using Porter's Five Forces: the threat of substitutes (streaming) was underestimated; the incumbent's high fixed costs in physical infrastructure made pivoting expensive. Using the resource-based view: the company's VRIN resources (store locations, supply chain relationships) were not transferable to streaming, and new entrants built different, superior capabilities. Incumbents fail because they are optimized for the current market, have sunk cost commitments, and their success actually blinds them to disruptive signals.",
+      "explanation": "Full credit requires naming at least 2 frameworks, explaining the mechanism of failure through each framework's logic, and connecting the frameworks to the specific situation. Partial credit for one framework used well.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Strategy is best defined as:",
+      "options": ["A detailed daily task list", "A plan that defines goals and how to achieve them over the long term", "A budget forecast for the next quarter", "An employee performance review system"],
+      "answer": "A plan that defines goals and how to achieve them over the long term",
+      "explanation": "Strategy defines where an organization wants to go and the choices it makes to get there — it is directional, long-term, and involves trade-offs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which of the following is an example of a tactical decision?",
+      "options": ["Deciding to expand into the Asian market", "Choosing which social media platform to advertise on this month", "Setting a 5-year revenue growth target", "Acquiring a competitor company"],
+      "answer": "Choosing which social media platform to advertise on this month",
+      "explanation": "Tactics are specific, short-term actions that implement strategy. Choosing a social media platform for this month's campaign is tactical; the strategic decision would be 'we will grow brand awareness in the 18–24 demographic.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Corporate-level strategy addresses:",
+      "options": ["How a single business unit competes in its market", "Which markets and industries the overall corporation will participate in", "How the marketing team will launch a new product", "Day-to-day operational decisions by frontline managers"],
+      "answer": "Which markets and industries the overall corporation will participate in",
+      "explanation": "Corporate-level strategy sets the overall scope of the corporation — which businesses to own, which markets to enter or exit, and how to allocate resources across business units.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Strategic intent is best described as:",
+      "options": ["A legal statement of company ownership", "An aspirational long-term goal that stretches the organization significantly", "The quarterly earnings guidance given to investors", "A detailed operational procedure manual"],
+      "answer": "An aspirational long-term goal that stretches the organization significantly",
+      "explanation": "Strategic intent (Hamel & Prahalad) is an ambitious, inspiring goal that requires the organization to build new capabilities. It provides focus and motivation over a long time horizon.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Functional-level strategy is developed by:",
+      "options": ["The CEO and board of directors", "Departmental leaders (e.g. marketing, HR, finance) to support business-level strategy", "External consultants hired for one-time projects", "Government regulators"],
+      "answer": "Departmental leaders (e.g. marketing, HR, finance) to support business-level strategy",
+      "explanation": "Functional-level strategy is department-specific — how marketing, operations, HR, or finance will contribute to achieving the business-level strategy. It is the most operational of the three levels.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "In PESTLE analysis, rising inflation and interest rates would be classified under:",
+      "options": ["Political", "Economic", "Social", "Technological"],
+      "answer": "Economic",
+      "explanation": "Inflation, interest rates, exchange rates, unemployment, and GDP growth are all Economic factors in the PESTLE framework.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Porter's Five Forces that specifically examines the threat from completely different types of products or services is:",
+      "options": ["Competitive rivalry", "Threat of new entrants", "Threat of substitutes", "Bargaining power of buyers"],
+      "answer": "Threat of substitutes",
+      "explanation": "Threat of substitutes measures the risk that customers will switch to alternative products that fulfill the same need — e.g., streaming services as a substitute for movie theaters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Which of the following would INCREASE the threat of new entrants in an industry?",
+      "options": ["High capital requirements to enter the market", "Strong customer loyalty to existing brands", "Low economies of scale advantages", "Strict government licensing requirements"],
+      "answer": "Low economies of scale advantages",
+      "explanation": "When incumbents have no significant scale advantages, new entrants can compete on equal footing from a smaller size, making entry easier. High barriers (capital, loyalty, licensing) reduce entry threat.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "An opportunity identified in external analysis is best described as:",
+      "options": ["An internal process that the company does better than competitors", "A favorable external condition the company could exploit to its advantage", "A regulatory risk that must be mitigated", "A cost reduction that can be achieved internally"],
+      "answer": "A favorable external condition the company could exploit to its advantage",
+      "explanation": "Opportunities are external — they arise from the environment: market growth, emerging customer needs, regulatory changes that favor the company, or competitor weaknesses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "The 'T' in PESTLE refers to Technological factors. Which of the following is a Technological factor?",
+      "options": ["A new data privacy law passed by Congress", "The rise of artificial intelligence automating customer service", "A demographic shift toward an older population", "A trade tariff imposed on imported goods"],
+      "answer": "The rise of artificial intelligence automating customer service",
+      "explanation": "Technological factors include innovation rates, automation, research & development activity, and disruptive technologies that change how industries operate.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "In a SWOT analysis, 'Strengths' refers to:",
+      "options": ["External market conditions favoring the company", "Internal capabilities and resources the company does exceptionally well", "Competitive threats from rival firms", "Regulatory gaps the company can exploit"],
+      "answer": "Internal capabilities and resources the company does exceptionally well",
+      "explanation": "Strengths are internal positive attributes — brand reputation, proprietary technology, skilled workforce, strong cash flow, or superior processes — that give the company an advantage.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Core competencies, according to Prahalad and Hamel, must satisfy which criteria?",
+      "options": ["They must be easy to imitate so competitors can benchmark them", "They must provide potential access to a wide variety of markets, contribute to customer benefits, and be difficult for competitors to imitate", "They must be focused exclusively on cost reduction", "They must be owned by only one department within the firm"],
+      "answer": "They must provide potential access to a wide variety of markets, contribute to customer benefits, and be difficult for competitors to imitate",
+      "explanation": "Prahalad & Hamel's three tests for a core competency: (1) provides access to multiple markets, (2) makes a significant contribution to customer value, and (3) is difficult to imitate.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Porter's value chain divides company activities into primary activities and support activities. Which of the following is a PRIMARY activity?",
+      "options": ["Human resource management", "Firm infrastructure", "Inbound logistics", "Technology development"],
+      "answer": "Inbound logistics",
+      "explanation": "Primary activities in Porter's value chain are: Inbound Logistics, Operations, Outbound Logistics, Marketing & Sales, and Service. Support activities (HR, infrastructure, technology, procurement) enable the primary activities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "A SWOT analysis is most useful when it:",
+      "options": ["Lists only positive factors to motivate the team", "Systematically evaluates internal and external factors to inform strategy", "Is created by one person to avoid disagreement", "Focuses exclusively on financial metrics"],
+      "answer": "Systematically evaluates internal and external factors to inform strategy",
+      "explanation": "SWOT's value lies in combining internal (Strengths/Weaknesses) with external (Opportunities/Threats) factors to identify strategic options: leverage strengths to seize opportunities, address weaknesses, and defend against threats.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "According to the resource-based view, for a resource to be a source of sustainable competitive advantage it must be:",
+      "options": ["Widely available and affordable for all competitors", "Publicly disclosed in the company's annual report", "Valuable, Rare, Inimitable, and Non-substitutable (VRIN)", "Owned exclusively by government-regulated companies"],
+      "answer": "Valuable, Rare, Inimitable, and Non-substitutable (VRIN)",
+      "explanation": "The VRIN framework: Valuable (creates customer value), Rare (not widely held by competitors), Inimitable (difficult to copy or replicate), Non-substitutable (no equivalent alternative exists).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Porter's three generic strategies are:",
+      "options": ["Growth, Stability, and Retrenchment", "Cost Leadership, Differentiation, and Focus", "Market Penetration, Development, and Diversification", "Innovation, Imitation, and Cost Cutting"],
+      "answer": "Cost Leadership, Differentiation, and Focus",
+      "explanation": "Porter's Generic Strategies: Cost Leadership (compete on lowest cost), Differentiation (compete on uniqueness/premium), and Focus (serve a narrow segment with either cost or differentiation).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "A company 'stuck in the middle' in Porter's framework refers to a firm that:",
+      "options": ["Operates in the middle market segment geographically", "Has not committed to any one generic strategy and therefore achieves mediocre performance", "Generates average returns consistent with industry norms", "Pursues a focused differentiation strategy effectively"],
+      "answer": "Has not committed to any one generic strategy and therefore achieves mediocre performance",
+      "explanation": "Porter warned that firms trying to be 'all things to all customers' — pursuing both low cost and differentiation without focus — end up stuck in the middle: not the cheapest, not the most differentiated, with poor profitability.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Blue Ocean Strategy's 'Eliminate-Reduce-Raise-Create' grid helps companies:",
+      "options": ["Manage employee performance reviews", "Redesign their value proposition by questioning all industry assumptions", "Calculate their cost of goods sold", "Plan their quarterly marketing budget"],
+      "answer": "Redesign their value proposition by questioning all industry assumptions",
+      "explanation": "The ERRC grid forces companies to decide: what factors to eliminate (industry assumptions), reduce (below standard), raise (above standard), and create (new, never before offered) — reconstructing value in an uncontested space.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Which company is most commonly cited as a successful cost leadership example?",
+      "options": ["Apple", "Rolex", "Walmart", "Tesla"],
+      "answer": "Walmart",
+      "explanation": "Walmart built its competitive advantage on cost leadership: massive purchasing scale, efficient supply chain, low overhead, and 'Everyday Low Prices.' It achieves the lowest costs in retail to offer the lowest prices profitably.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Differentiation strategy is undermined when:",
+      "options": ["Customers no longer value the features that make the product unique", "The company's prices are lower than competitors'", "The company achieves significant economies of scale", "The company enters new geographic markets"],
+      "answer": "Customers no longer value the features that make the product unique",
+      "explanation": "Differentiation depends on customers perceiving and valuing uniqueness enough to pay a premium. If customer preferences shift (e.g. they stop caring about the differentiating feature), the strategy loses its effectiveness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Related diversification occurs when a company expands into:",
+      "options": ["Businesses that share strategic fit with existing operations", "Any industry with high growth potential regardless of connection", "International markets for the first time", "A joint venture with a direct competitor"],
+      "answer": "Businesses that share strategic fit with existing operations",
+      "explanation": "Related diversification leverages shared capabilities, customers, technology, or distribution channels. Strategic fit allows synergies that can lower costs or increase revenue beyond what either business could achieve alone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Backward vertical integration means a company:",
+      "options": ["Moves into distributing and selling its products directly to consumers", "Acquires or develops control over its input suppliers", "Exits the market and outsources all production", "Diversifies into an unrelated industry"],
+      "answer": "Acquires or develops control over its input suppliers",
+      "explanation": "Backward integration moves 'upstream' in the supply chain toward raw materials or component suppliers. Forward integration moves 'downstream' toward distribution or retail.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "In the BCG Matrix, a 'Dog' business unit has:",
+      "options": ["High market share in a fast-growing market", "Low market share in a high-growth market", "High market share in a slow-growth market", "Low market share in a slow-growth market"],
+      "answer": "Low market share in a slow-growth market",
+      "explanation": "Dogs have both low relative market share and low market growth. They typically generate little cash and may be candidates for divestiture unless they serve a strategic niche purpose.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "The primary strategic rationale for mergers and acquisitions is often:",
+      "options": ["To reduce the company's tax obligations exclusively", "To achieve synergies — cost savings or revenue gains that exceed what each company achieves independently", "To comply with government anti-trust requirements", "To reduce the number of employees and cut costs immediately"],
+      "answer": "To achieve synergies — cost savings or revenue gains that exceed what each company achieves independently",
+      "explanation": "M&A synergies can be cost synergies (eliminating duplicate functions, shared infrastructure) or revenue synergies (cross-selling, new markets, combined R&D). '2 + 2 = 5' is the synergy logic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Which of the following is a risk of unrelated diversification?",
+      "options": ["Too much focus on a single core competency", "Management lacks expertise to run businesses in unrelated industries", "Excess synergies making the company too profitable too quickly", "Inability to raise capital from investors"],
+      "answer": "Management lacks expertise to run businesses in unrelated industries",
+      "explanation": "Unrelated diversification spreads management attention and expertise thinly across very different industries. Without industry knowledge, it is difficult to add value — often destroying more value than it creates.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The most common reason strategies fail at the execution stage is:",
+      "options": ["The strategy was too innovative", "Poor alignment between strategy and day-to-day operations, incentives, and accountability", "Executives spent too much time planning", "The strategy targeted too profitable a market"],
+      "answer": "Poor alignment between strategy and day-to-day operations, incentives, and accountability",
+      "explanation": "Research shows 60–90% of strategies fail in execution. The most common causes: employees don't understand the strategy, incentives don't align with it, and no one is accountable for results.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "The Balanced Scorecard's four perspectives are:",
+      "options": ["Planning, Organizing, Leading, Controlling", "Financial, Customer, Internal Process, Learning & Growth", "Revenue, Costs, Assets, Equity", "Vision, Mission, Values, Goals"],
+      "answer": "Financial, Customer, Internal Process, Learning & Growth",
+      "explanation": "Kaplan & Norton's Balanced Scorecard balances financial measures with operational drivers: Financial (shareholder view), Customer (customer experience), Internal Process (operational efficiency), and Learning & Growth (capability building).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "An OKR Objective should be:",
+      "options": ["Numerical and expressed as a percentage", "Qualitative, inspirational, and describe the desired outcome", "Limited to the finance department", "Set quarterly by the board of directors"],
+      "answer": "Qualitative, inspirational, and describe the desired outcome",
+      "explanation": "In the OKR framework, the Objective is the qualitative, motivating description of what you want to achieve ('Become the most loved brand in our category'). The Key Results are the quantitative measures of success.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "A strategy map, as used with the Balanced Scorecard, shows:",
+      "options": ["A geographic map of the company's office locations", "Cause-and-effect relationships between strategic objectives across the four BSC perspectives", "A flowchart of the company's production process", "The organization's reporting hierarchy"],
+      "answer": "Cause-and-effect relationships between strategic objectives across the four BSC perspectives",
+      "explanation": "A strategy map visualizes how learning & growth capabilities enable better internal processes, which drive better customer outcomes, which ultimately deliver financial results — showing the logic of the strategy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Which of the following is a well-written Key Result in an OKR?",
+      "options": ["Improve customer satisfaction", "Increase NPS from 38 to 55 by end of Q3", "Work harder on customer service initiatives", "Think about ways to grow revenue"],
+      "answer": "Increase NPS from 38 to 55 by end of Q3",
+      "explanation": "Good Key Results are specific, measurable, time-bound, and have a clear baseline and target. 'Improve customer satisfaction' is vague; 'Increase NPS from 38 to 55 by Q3' is a strong Key Result.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The correct order of sections in a well-structured strategic plan is typically:",
+      "options": ["Financial projections → Executive Summary → Objectives → Initiatives", "Executive Summary → Situation Analysis → Strategic Objectives → Initiatives → Financials", "Initiatives → Objectives → Financial Projections → Executive Summary", "Mission Statement → Tactics → Budget → Executive Summary"],
+      "answer": "Executive Summary → Situation Analysis → Strategic Objectives → Initiatives → Financials",
+      "explanation": "A strategic plan flows logically: executive summary (overview) → situation analysis (where we are) → strategic objectives (where we want to go) → initiatives (how we'll get there) → financial projections (what it will cost and return).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "An executive summary in a strategic plan should typically be:",
+      "options": ["20–30 pages covering every detail of the plan", "1–2 pages that capture the most critical points for busy decision-makers", "Written by the legal team for regulatory compliance", "A verbatim copy of the mission statement"],
+      "answer": "1–2 pages that capture the most critical points for busy decision-makers",
+      "explanation": "Executive summaries are concise by design — senior stakeholders often read only the executive summary and expect it to provide enough insight to understand the strategy and make decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Strategic initiatives in a plan are best described as:",
+      "options": ["Vague aspirational statements about company culture", "Specific programs and projects designed to achieve strategic objectives", "The company's history and founding story", "Financial ratios like ROE and EBITDA"],
+      "answer": "Specific programs and projects designed to achieve strategic objectives",
+      "explanation": "Initiatives are the 'how' — concrete actions, projects, and programs with owners, timelines, and budgets that move the organization toward its strategic objectives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "A financial projections overview in a strategic plan should include:",
+      "options": ["Detailed individual employee salary information", "Key assumptions, projected revenue ranges, and major cost drivers", "Only past financial performance data", "Marketing campaign creative briefs"],
+      "answer": "Key assumptions, projected revenue ranges, and major cost drivers",
+      "explanation": "Financial projections give stakeholders a quantitative view of the strategy's expected outcomes. They must be grounded in clearly stated assumptions so readers can evaluate the credibility of the numbers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Why is the executive summary written LAST even though it appears FIRST in the document?",
+      "options": ["It is the easiest section to write", "It synthesizes content from all other sections, which must exist before they can be summarized", "The executive summary is always written by a different team", "It is required by accounting standards to be completed after financials"],
+      "answer": "It synthesizes content from all other sections, which must exist before they can be summarized",
+      "explanation": "You cannot effectively summarize what hasn't yet been written. Writing the executive summary last ensures it accurately reflects the final strategy, objectives, initiatives, and financial outlook in the complete plan.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "The primary purpose of a business case document is to:",
+      "options": ["Provide a detailed history of the company's past decisions", "Persuade decision-makers to approve a specific investment or course of action", "Replace the annual strategic plan", "Satisfy external audit requirements"],
+      "answer": "Persuade decision-makers to approve a specific investment or course of action",
+      "explanation": "A business case is a persuasive document that justifies why a particular investment or decision should be made, using evidence: problem analysis, solution options, financial justification, risk assessment, and a clear recommendation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Payback period in a business case refers to:",
+      "options": ["The time required for an investment to generate enough returns to recover its initial cost", "The interest rate on a company's debt", "The number of months until a new hire becomes fully productive", "The penalty for breaking a supplier contract early"],
+      "answer": "The time required for an investment to generate enough returns to recover its initial cost",
+      "explanation": "Payback period = Initial Investment / Annual Net Cash Flow. It answers: 'How long until we get our money back?' Shorter payback periods indicate lower risk.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "In a risk matrix, a risk with HIGH likelihood and HIGH impact should be:",
+      "options": ["Accepted without a mitigation plan", "Ignored since all risks eventually resolve themselves", "Prioritized for immediate mitigation planning", "Disclosed only to external auditors"],
+      "answer": "Prioritized for immediate mitigation planning",
+      "explanation": "High-likelihood, high-impact risks represent the greatest threats to a project or investment. They require active mitigation strategies, contingency plans, and close monitoring.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "The recommendation section of a business case should be:",
+      "options": ["Vague to allow decision-makers maximum flexibility", "Clear, specific, and supported directly by the analysis presented earlier in the document", "Limited to one sentence with no context", "Written before the financial analysis section"],
+      "answer": "Clear, specific, and supported directly by the analysis presented earlier in the document",
+      "explanation": "The recommendation is the conclusion the entire business case builds toward. It must be unambiguous ('We recommend approving Option B') and directly reference the financial and risk evidence that justifies it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Which of the following would make a business case WEAKER?",
+      "options": ["Including multiple solution options with comparative analysis", "Presenting realistic financial projections with clearly stated assumptions", "Ignoring risks and presenting only the benefits of the recommended option", "Citing data sources and market research"],
+      "answer": "Ignoring risks and presenting only the benefits of the recommended option",
+      "explanation": "A one-sided business case that ignores risks loses credibility. Decision-makers need balanced information — benefits AND risks — to make informed decisions. Omitting risks raises red flags about analytical rigor.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Competitive intelligence (CI) is best defined as:",
+      "options": ["Illegally accessing a competitor's internal data", "The systematic process of gathering, analyzing, and using information about competitors to support strategic decisions", "Copying a competitor's marketing materials", "Surveying only your own customers about their satisfaction"],
+      "answer": "The systematic process of gathering, analyzing, and using information about competitors to support strategic decisions",
+      "explanation": "CI is legal, ethical, and systematic. It draws on publicly available data — financial reports, press releases, industry databases, customer reviews, job postings, and expert interviews — to understand competitive dynamics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Which source would be considered a SECONDARY source in competitive research?",
+      "options": ["An interview with a former employee of the competitor", "A conversation with a competitor's customer", "An industry analyst report about the competitor", "Direct observation of a competitor's trade show booth"],
+      "answer": "An industry analyst report about the competitor",
+      "explanation": "Secondary sources are published materials that synthesize or report on existing information: analyst reports, news articles, academic studies, government data. Primary sources involve direct, original data collection.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "A competitive intelligence report's 'findings' section should:",
+      "options": ["List raw data with no interpretation", "Synthesize research into meaningful insights about competitive positioning and strategic implications", "Include only financial statements", "Be limited to 50 words"],
+      "answer": "Synthesize research into meaningful insights about competitive positioning and strategic implications",
+      "explanation": "The findings section transforms data into intelligence — it tells the reader what the data means strategically, not just what the numbers are. Good CI writing connects dots across multiple data points.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Job posting analysis is a useful CI technique because:",
+      "options": ["It is always cheaper than reading financial statements", "Job postings reveal which capabilities a competitor is building and where they are investing", "It is the most accurate measure of a competitor's revenue", "Job postings are legally required to be shared with competitors"],
+      "answer": "Job postings reveal which capabilities a competitor is building and where they are investing",
+      "explanation": "When a competitor posts many roles in AI engineering or opens a new regional office, it signals strategic intent. Job postings are public, legal, and highly informative CI sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Competitive positioning in a CI report compares competitors on dimensions such as:",
+      "options": ["Employee birthdays and tenure", "Price point, product features, market segment, and key differentiators", "Number of office plants and square footage", "Historical weather patterns near headquarters"],
+      "answer": "Price point, product features, market segment, and key differentiators",
+      "explanation": "Competitive positioning maps where each competitor stands relative to others on the dimensions that matter most to customers and to strategy — helping identify gaps, whitespace, and competitive threats.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "When presenting strategy to a board of directors, the most important principle is:",
+      "options": ["Include every operational detail to demonstrate thoroughness", "Tailor content to be concise, decision-focused, and supported by evidence", "Speak informally to seem approachable", "Avoid showing financial data to prevent sensitive information leaks"],
+      "answer": "Tailor content to be concise, decision-focused, and supported by evidence",
+      "explanation": "Board members have limited time and need information that enables governance and decision-making. Strategic presentations should prioritize what they need to approve, oversee, and advise — not operational minutiae.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "An investor update letter should primarily focus on:",
+      "options": ["Internal organizational disputes and personnel issues", "Progress against key metrics, significant developments, and forward-looking priorities", "Detailed technical specifications of the product", "Only negative news to demonstrate transparency"],
+      "answer": "Progress against key metrics, significant developments, and forward-looking priorities",
+      "explanation": "Investors need to know: how the business is performing against plan, what has changed since the last update, and what to expect next. Good investor updates are honest, metric-driven, and forward-looking.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "A strategic memo differs from an email in that it:",
+      "options": ["Is always longer and includes attachments", "Has a formal structure with subject, background, analysis, and recommendation sections", "Is only sent within the finance department", "Requires legal review before sending"],
+      "answer": "Has a formal structure with subject, background, analysis, and recommendation sections",
+      "explanation": "A strategic memo follows a deliberate structure designed to communicate a decision or position efficiently. It provides context, reasoning, and a clear ask — unlike a conversational email.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "When communicating the same strategic information to employees vs. investors, you should:",
+      "options": ["Use identical content and language for both audiences", "Adapt the message — employees need operational context; investors need financial and competitive framing", "Only communicate to investors; employees don't need strategy updates", "Ask employees to read the investor report"],
+      "answer": "Adapt the message — employees need operational context; investors need financial and competitive framing",
+      "explanation": "Effective strategic communication is audience-specific. Employees need to understand how strategy affects their work and priorities. Investors need to understand financial performance, competitive positioning, and growth trajectory.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "The 'Pyramid Principle' in business writing recommends:",
+      "options": ["Always ending the document with the main point as a surprise", "Starting with the main conclusion, then supporting it with evidence and reasoning", "Burying important information in footnotes", "Writing in order of the research process rather than reader needs"],
+      "answer": "Starting with the main conclusion, then supporting it with evidence and reasoning",
+      "explanation": "Barbara Minto's Pyramid Principle (used by McKinsey and leading consulting firms) argues that business readers want the conclusion first. Lead with the answer, then provide the supporting arguments and evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "A strategic pivot is best defined as:",
+      "options": ["A minor adjustment to a quarterly budget", "A fundamental change in a company's business model or strategy in response to new information or market conditions", "Rotating leadership roles within the executive team", "Moving the company's headquarters to a new city"],
+      "answer": "A fundamental change in a company's business model or strategy in response to new information or market conditions",
+      "explanation": "A strategic pivot — popularized in startup contexts — is a deliberate, significant shift in direction when evidence shows the current strategy isn't working. Famous examples: Netflix from DVDs to streaming, Instagram from a location app to a photo platform.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "In a corporate crisis, the worst communication mistake is typically:",
+      "options": ["Acknowledging the problem publicly within 24 hours", "Issuing frequent updates even with incomplete information", "Staying silent or denying the problem while evidence mounts publicly", "Expressing empathy for affected stakeholders"],
+      "answer": "Staying silent or denying the problem while evidence mounts publicly",
+      "explanation": "Silence in a crisis allows rumors and speculation to fill the void, eroding trust. Denial that is later contradicted by facts destroys credibility. Transparent, early acknowledgment — even before all facts are known — preserves stakeholder trust.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "A turnaround strategy is most appropriate when:",
+      "options": ["A company is performing well but wants to grow faster", "A company faces declining performance, financial distress, or existential threats and needs fundamental change", "A company has just made a highly profitable acquisition", "A company wants to enter a new international market"],
+      "answer": "A company faces declining performance, financial distress, or existential threats and needs fundamental change",
+      "explanation": "Turnaround strategy — cost restructuring, asset divestiture, leadership change, business model revision — is a response to crisis or sustained underperformance. It is not incremental improvement; it is fundamental transformation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "During a product recall crisis, the company's first communication priority should be:",
+      "options": ["Protecting the company's stock price", "Alerting affected customers and explaining what action to take", "Briefing the media with a detailed technical report", "Filing insurance claims before any public statements"],
+      "answer": "Alerting affected customers and explaining what action to take",
+      "explanation": "In product safety crises, customer safety is the first priority. Early, clear communication — what the problem is, who is affected, and what customers should do — demonstrates responsibility and reduces harm.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Which of the following is an effective element of a crisis communication plan?",
+      "options": ["Waiting until the crisis fully develops before drafting any messages", "A pre-designated spokesperson with media training and clear message authority", "Delegating all communication to junior employees to protect senior leadership", "Issuing only one statement and then going silent"],
+      "answer": "A pre-designated spokesperson with media training and clear message authority",
+      "explanation": "Crisis communication plans should designate trained spokespersons in advance, establish message approval protocols, and define communication cadences — so the organization can respond quickly, consistently, and credibly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Sustaining innovation improves existing products for existing customers, while disruptive innovation:",
+      "options": ["Also improves existing products but at lower cost", "Initially serves overlooked segments with simpler products before eventually displacing incumbents", "Only occurs in the technology sector", "Requires massive R&D investment from the start"],
+      "answer": "Initially serves overlooked segments with simpler products before eventually displacing incumbents",
+      "explanation": "Christensen's disruption theory: disruptors begin with inferior but cheaper/simpler products for low-end or new customers. As they improve, they move upmarket and eventually displace incumbents who were focused on their best customers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Design thinking applied to strategy involves:",
+      "options": ["Designing the company's logo and brand identity", "Using empathy, ideation, prototyping, and testing to solve complex strategic problems", "Delegating all decisions to the design department", "Following a rigid, linear planning process"],
+      "answer": "Using empathy, ideation, prototyping, and testing to solve complex strategic problems",
+      "explanation": "Design thinking brings human-centered, iterative problem-solving into strategy: deeply understand stakeholders (empathy), generate diverse options (ideate), build low-cost tests (prototype), and learn rapidly (test).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "A strategic experiment should include:",
+      "options": ["An unlimited budget and no time constraints", "A clear hypothesis, defined success metrics, a minimum viable test, and a decision rule for scaling or stopping", "Input from every employee in the company", "A guarantee of positive results before launching"],
+      "answer": "A clear hypothesis, defined success metrics, a minimum viable test, and a decision rule for scaling or stopping",
+      "explanation": "Strategic experiments apply scientific rigor: form a hypothesis ('If we offer free trials, conversion will increase by 15%'), define how you'll measure it, run the smallest test possible, and decide in advance what results will trigger scale-up or pivot.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Which of the following is an example of disruptive innovation?",
+      "options": ["Apple releasing a new iPhone model with a faster processor", "Netflix replacing Blockbuster video rental stores", "Toyota improving fuel efficiency in its existing Camry model", "McDonald's adding a new menu item"],
+      "answer": "Netflix replacing Blockbuster video rental stores",
+      "explanation": "Netflix initially offered an inferior but more convenient (mail-order) DVD service targeting customers Blockbuster ignored. It then disrupted the entire industry by pioneering streaming — a fundamentally different business model.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "The 'innovator's dilemma' describes the challenge that:",
+      "options": ["Innovating is too expensive for large companies", "Successful companies are often disrupted because their focus on existing profitable customers blinds them to disruptive entrants", "Only small startups can innovate effectively", "Innovation always requires government funding"],
+      "answer": "Successful companies are often disrupted because their focus on existing profitable customers blinds them to disruptive entrants",
+      "explanation": "Christensen's 'Innovator's Dilemma': doing everything right for your best customers (rational short-term behavior) can lead to missing disruptive technology that initially serves low-end or non-customers — a long-term strategic trap.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "A company using a greenfield investment strategy for international entry:",
+      "options": ["Acquires an existing local company", "Licenses its brand to a local operator", "Builds new operations from scratch in the foreign country", "Sells products through an export distributor only"],
+      "answer": "Builds new operations from scratch in the foreign country",
+      "explanation": "Greenfield investment involves establishing a new wholly-owned facility in a foreign country. It offers full control but requires significant capital, time, and local market knowledge.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "A global strategy prioritizes:",
+      "options": ["Full adaptation of products and practices to each local market", "Standardization and cost efficiency across all international markets", "Avoiding all international markets to protect domestic profits", "Acquiring a local partner in every country entered"],
+      "answer": "Standardization and cost efficiency across all international markets",
+      "explanation": "Global strategy treats the world as one market, standardizing products, processes, and branding to achieve maximum scale economies. Multi-domestic strategy does the opposite — adapting heavily to local markets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Hofstede's cultural dimensions are useful in global strategy because they help companies:",
+      "options": ["Calculate currency exchange rates for international pricing", "Understand how cultural values affect business practices, communication, and decision-making in different countries", "Determine the best shipping routes for export", "Measure GDP and economic output of target countries"],
+      "answer": "Understand how cultural values affect business practices, communication, and decision-making in different countries",
+      "explanation": "Hofstede's dimensions (Power Distance, Individualism, Uncertainty Avoidance, Long-Term Orientation, etc.) help strategists anticipate how cultural values influence consumer behavior, management approaches, and negotiation styles.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Licensing as an international entry mode involves:",
+      "options": ["The company building and owning all operations in the foreign market", "Granting a foreign company the right to use intellectual property in exchange for royalties", "Two companies merging their international operations", "Exporting products through the company's own sales force"],
+      "answer": "Granting a foreign company the right to use intellectual property in exchange for royalties",
+      "explanation": "Licensing allows rapid international expansion with low capital investment. The risk is loss of control over quality and brand, and potential for the licensee to become a future competitor.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "When comparing global vs. multi-domestic strategy, the key trade-off is between:",
+      "options": ["Profitability and employee satisfaction", "Global efficiency (standardization) and local responsiveness (customization)", "Technology investment and human capital", "Short-term and long-term financial returns"],
+      "answer": "Global efficiency (standardization) and local responsiveness (customization)",
+      "explanation": "The Integration-Responsiveness framework captures this tension: global strategy emphasizes integration/efficiency; multi-domestic emphasizes local responsiveness. Transnational strategy attempts both simultaneously, which is difficult to execute.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "In a capstone strategic analysis, the section most important for making the case actionable is:",
+      "options": ["The company history section", "Strategic recommendations with clear rationale and risk assessment", "The financial statement footnotes", "The bibliography and citations list"],
+      "answer": "Strategic recommendations with clear rationale and risk assessment",
+      "explanation": "Strategic analysis without recommendations is description, not strategy. The recommendations section translates all prior analysis into concrete, prioritized actions — making the document useful to decision-makers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "When selecting a company for a strategic analysis, publicly traded companies are often preferred because:",
+      "options": ["They are always more profitable than private companies", "They are required to disclose financial statements, strategic reports, and risk factors publicly", "Their strategies are simpler and easier to analyze", "Public companies are regulated to share their strategic plans directly"],
+      "answer": "They are required to disclose financial statements, strategic reports, and risk factors publicly",
+      "explanation": "Public companies file 10-K (annual), 10-Q (quarterly), and proxy reports with regulators. These documents contain strategy discussions, risk factors, MD&A (Management Discussion & Analysis), and financial data — rich material for strategic analysis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "A well-integrated strategic analysis connects external and internal analysis by:",
+      "options": ["Simply listing PESTLE factors and then separately listing SWOT factors with no connection", "Showing how external opportunities and threats directly relate to the company's internal strengths and weaknesses", "Skipping internal analysis when external data is available", "Using internal analysis only for financial metrics"],
+      "answer": "Showing how external opportunities and threats directly relate to the company's internal strengths and weaknesses",
+      "explanation": "Integration is the mark of sophisticated strategic thinking. A strong analysis explains how a specific strength positions the company to capture a specific opportunity, or how a weakness makes the company vulnerable to a specific threat.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Which of the following would most strengthen a capstone strategic recommendation?",
+      "options": ["Making the recommendation vague to hedge against being wrong", "Supporting the recommendation with data from the analysis, acknowledging the main risk, and proposing a mitigation", "Recommending the most expensive option to show ambition", "Copying the strategy of a competitor without adapting it"],
+      "answer": "Supporting the recommendation with data from the analysis, acknowledging the main risk, and proposing a mitigation",
+      "explanation": "Strong recommendations are evidence-based (tied to the analysis), intellectually honest (acknowledging risks), and actionable (with a risk mitigation plan). Vague or unsupported recommendations undermine the entire analysis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Using at least 6 sources in a strategic analysis capstone project primarily demonstrates:",
+      "options": ["That you can use a library database", "Thoroughness, intellectual rigor, and that your analysis is grounded in evidence rather than opinion alone", "That the analysis took a very long time to complete", "Compliance with a formatting requirement only"],
+      "answer": "Thoroughness, intellectual rigor, and that your analysis is grounded in evidence rather than opinion alone",
+      "explanation": "Multi-source analysis builds credibility. Different sources (company filings, industry reports, HBR articles, news, analyst data) corroborate findings, reveal different perspectives, and demonstrate that conclusions are not based on a single data point.",
+      "points": 1
+    }
+  ]
+}

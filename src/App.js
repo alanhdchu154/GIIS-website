@@ -20,6 +20,26 @@ const NotFound = lazy(() => import('./components/pages/NotFound'));
 const PrivacyPolicy = lazy(() => import('./components/pages/PrivacyPolicy'));
 const TermsOfUse = lazy(() => import('./components/pages/TermsOfUse'));
 
+// Pathways
+const PathwaysHub = lazy(() => import('./components/pages/Pathways/PathwaysHub'));
+const PsychologyPathway = lazy(() => import('./components/pages/Pathways/PsychologyPathway'));
+const CSPathway = lazy(() => import('./components/pages/Pathways/CSPathway'));
+const BusinessPathway = lazy(() => import('./components/pages/Pathways/BusinessPathway'));
+const EconomicsPathway = lazy(() => import('./components/pages/Pathways/EconomicsPathway'));
+const EngineeringPathway = lazy(() => import('./components/pages/Pathways/EngineeringPathway'));
+const MathDataPathway = lazy(() => import('./components/pages/Pathways/MathDataPathway'));
+const CommunicationsPathway = lazy(() => import('./components/pages/Pathways/CommunicationsPathway'));
+const ArtsDesignPathway = lazy(() => import('./components/pages/Pathways/ArtsDesignPathway'));
+
+// Learning portal
+const LearnDashboard = lazy(() => import('./components/pages/Learn/LearnDashboard'));
+const CoursePage = lazy(() => import('./components/pages/Learn/CoursePage'));
+const ModulePage = lazy(() => import('./components/pages/Learn/ModulePage'));
+const ExamPage = lazy(() => import('./components/pages/Learn/ExamPage'));
+const GradesPage = lazy(() => import('./components/pages/Learn/GradesPage'));
+const SyllabusPage = lazy(() => import('./components/pages/Learn/SyllabusPage'));
+const ProfilePage = lazy(() => import('./components/pages/Profile/ProfilePage'));
+
 const LANGUAGE_STORAGE_KEY = 'giis-language';
 
 function readInitialLanguage() {
@@ -65,7 +85,9 @@ function App() {
   const location = useLocation();
   const isTranscript = location.pathname === '/transcript';
   const isAdmin = location.pathname.startsWith('/admin');
-  const hideChrome = isTranscript || isAdmin;
+  const isLearn = location.pathname.startsWith('/learn');
+  const isProfile = location.pathname === '/profile';
+  const hideChrome = isTranscript || isAdmin || isLearn || isProfile;
 
   return (
      <>
@@ -87,6 +109,25 @@ function App() {
          <Route path="/admin/login" element={<AdminLogin />} />
          <Route path="/admin" element={<AdminDashboard language={language} />} />
          <Route path="/admin/transcript/:studentId" element={<AdminTranscriptPage language={language} />} />
+         {/* Pathways hub */}
+         <Route path="/pathways" element={<PathwaysHub language={language} />} />
+         {/* Individual pathways */}
+         <Route path="/pathways/psychology" element={<PsychologyPathway />} />
+         <Route path="/pathways/cs" element={<CSPathway />} />
+         <Route path="/pathways/business" element={<BusinessPathway />} />
+         <Route path="/pathways/economics" element={<EconomicsPathway />} />
+         <Route path="/pathways/engineering" element={<EngineeringPathway />} />
+         <Route path="/pathways/math" element={<MathDataPathway />} />
+         <Route path="/pathways/communications" element={<CommunicationsPathway />} />
+         <Route path="/pathways/arts" element={<ArtsDesignPathway />} />
+         {/* Learning portal */}
+         <Route path="/learn" element={<LearnDashboard language={language} />} />
+         <Route path="/learn/:slug" element={<CoursePage language={language} />} />
+         <Route path="/learn/:slug/module/:order" element={<ModulePage language={language} />} />
+         <Route path="/learn/:slug/exam" element={<ExamPage language={language} />} />
+         <Route path="/learn/:slug/grades" element={<GradesPage language={language} />} />
+         <Route path="/learn/:slug/syllabus" element={<SyllabusPage language={language} />} />
+         <Route path="/profile" element={<ProfilePage language={language} />} />
          <Route path="/privacy" element={<PrivacyPolicy language={language} />} />
          <Route path="/terms" element={<TermsOfUse language={language} />} />
          <Route path="*" element={<NotFound language={language} />} />

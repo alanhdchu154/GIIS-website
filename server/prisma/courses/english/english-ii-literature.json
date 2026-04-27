@@ -1,0 +1,1795 @@
+{
+  "slug": "english-ii-literature",
+  "name": "English II - Literature",
+  "nameZh": "英语二（文学）",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "A literature-focused Grade 10 course exploring world literary traditions — novels, short stories, poetry, and drama — with emphasis on close reading, literary criticism, cultural context, and analytical writing.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Close Reading & Annotation",
+      "titleZh": "精读与批注",
+      "objectives": "Mark up a text actively by underlining key passages, circling unfamiliar words, and writing marginal notes; identify literary devices (imagery, irony, tone) on first encounter; formulate analytical questions that push beyond plot summary toward interpretation.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/reading_literature/index.html",
+      "readingNote": "Purdue OWL — Reading Literature: Strategies for Close Reading and Annotation",
+      "videoUrl": "https://www.youtube.com/watch?v=E0oX1-eRl_E",
+      "videoNote": "Crash Course Literature — How to Read and Annotate a Text",
+      "video2Url": "https://www.youtube.com/watch?v=OvMBM0VF1H8",
+      "video2Note": "TED-Ed — How to Read More Effectively (active reading strategies)",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-tell-tale-heart",
+      "practiceNote": "CommonLit — 'The Tell-Tale Heart' by Edgar Allan Poe (annotate for tone, diction, and imagery)",
+      "assignment": "Select a passage of at least 300 words from any text you are currently reading. Annotate it fully: (1) underline at least five key phrases with a one-line note explaining significance, (2) identify and label at least four distinct literary devices, (3) write three analytical questions about the passage that cannot be answered with a simple yes/no. Submit the annotated passage along with a 150-word reflection on how annotation changed your understanding of the text.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 2,
+      "title": "The Short Story: Craft & Technique",
+      "titleZh": "短篇小说：技巧与手法",
+      "objectives": "Distinguish narrative point of view and its effect on reader sympathy; identify situational, dramatic, and verbal irony; recognize the epiphany as a structural device; analyze how beginning a story in medias res creates immediate engagement.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-most-dangerous-game",
+      "readingNote": "CommonLit — 'The Most Dangerous Game' by Richard Connell (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=MSYw502dJNY",
+      "videoNote": "Crash Course Literature — Short Story Craft: Point of View and Irony",
+      "video2Url": "https://www.youtube.com/watch?v=WraHhM9HCXI",
+      "video2Note": "TED-Ed — What Makes a Good Short Story? (craft elements explained)",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-gift-of-the-magi",
+      "practiceNote": "CommonLit — 'The Gift of the Magi' by O. Henry (model for irony and epiphany)",
+      "assignment": "Read 'The Most Dangerous Game.' Write a 400-word craft analysis: (1) identify the point of view and explain how it shapes reader sympathy, (2) locate one example each of situational and dramatic irony and explain their effects, (3) identify the protagonist's epiphany and explain what he realizes and when, (4) discuss how the story begins in medias res and how this technique creates tension from the opening.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 3,
+      "title": "World Poetry: Voice & Culture",
+      "titleZh": "世界诗歌：声音与文化",
+      "objectives": "Analyze poems from African, Asian, Latin American, and European traditions; identify the speaker's voice and cultural identity within a poem; examine how historical and cultural context shapes poetic meaning; compare how poets from different traditions treat universal themes.",
+      "readingUrl": "https://www.commonlit.org/en/texts/mother-to-son",
+      "readingNote": "CommonLit — 'Mother to Son' by Langston Hughes and related world poetry selections",
+      "videoUrl": "https://www.youtube.com/watch?v=JwhouCNq-Fc",
+      "videoNote": "Crash Course Literature — Poetry, Voice, and Cultural Identity",
+      "video2Url": "https://www.youtube.com/watch?v=tJjh8a8rfCg",
+      "video2Note": "TED-Ed — How to Analyze Poetry from Different Cultures",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:poetry-analysis/v/analyzing-tone-and-mood-in-poetry",
+      "practiceNote": "Khan Academy — Analyzing Tone and Mood in Poetry (applicable to world poetry)",
+      "assignment": "Select one poem from each of two different cultural traditions (e.g., one from Africa and one from Latin America, or one from Asia and one from Europe). For each poem write a 200-word analysis covering: (1) the speaker's voice and cultural identity, (2) how the cultural/historical context shapes meaning, (3) one or two key literary devices, and (4) the central theme. Then write a 150-word comparison identifying one similarity and one key difference in how the two poems approach their themes.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 4,
+      "title": "The Novel: Setting & Atmosphere",
+      "titleZh": "小说中的环境与氛围",
+      "objectives": "Explain how setting functions beyond mere backdrop to create mood and foreshadow events; analyze pathetic fallacy — the attribution of human emotions to nature or the environment; identify symbolic settings and explain their thematic significance.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-yellow-wallpaper",
+      "readingNote": "CommonLit — 'The Yellow Wallpaper' by Charlotte Perkins Gilman (model for symbolic setting)",
+      "videoUrl": "https://www.youtube.com/watch?v=r6jTCYF5b7o",
+      "videoNote": "Crash Course Literature — Setting, Atmosphere, and Pathetic Fallacy",
+      "video2Url": "https://www.youtube.com/watch?v=bOrMw_qdSmE",
+      "video2Note": "TED-Ed — Why Is Setting Important in Literature?",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:narrative-techniques/v/point-of-view",
+      "practiceNote": "Khan Academy — Narrative Techniques: Setting and Mood",
+      "assignment": "Read 'The Yellow Wallpaper.' Write a 450-word analysis focusing on setting: (1) describe the room setting and explain how it creates mood — use at least three quotations, (2) identify two examples of pathetic fallacy and explain what emotion is being projected onto the environment, (3) argue that the wallpaper is a symbolic setting — what does it symbolize and how does that symbolism support the story's themes, (4) how does the setting change or stay the same as the narrator's mental state deteriorates?",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 5,
+      "title": "Character Psychology",
+      "titleZh": "人物心理",
+      "objectives": "Analyze a character's motivation by examining backstory, desire, and fear; trace internal conflict through a character's thoughts, speech, and actions; identify foil characters and explain what they reveal by contrast; chart a character arc from beginning to end.",
+      "readingUrl": "https://www.commonlit.org/en/texts/flowers-for-algernon",
+      "readingNote": "CommonLit — 'Flowers for Algernon' by Daniel Keyes (model for complex character psychology)",
+      "videoUrl": "https://www.youtube.com/watch?v=L5Ls5HJiAgg",
+      "videoNote": "Crash Course Literature — Character Analysis: Motivation, Conflict, and Arc",
+      "video2Url": "https://www.youtube.com/watch?v=uDg-NOSmfco",
+      "video2Note": "TED-Ed — The Psychology Behind Great Literary Characters",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:analyzing-character/v/character-analysis",
+      "practiceNote": "Khan Academy — Character Analysis: Motivation and Internal Conflict",
+      "assignment": "Choose any literary character from a text you have read this year. Write a 500-word character psychology essay: (1) identify and explain their core motivation — what do they want, and why?, (2) trace their primary internal conflict with at least three textual examples, (3) identify a foil character and write a paragraph explaining what the contrast reveals about your chosen character, (4) chart the character arc — how have they changed from the beginning to the end, and what caused that change?",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 6,
+      "title": "Theme & Universal Questions",
+      "titleZh": "主题与普世问题",
+      "objectives": "Distinguish between topic and theme; identify multiple interlocking themes in a single text; explain how literature raises moral and philosophical questions without providing simple answers; write a theme statement that applies beyond the specific text.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-lottery",
+      "readingNote": "CommonLit — 'The Lottery' by Shirley Jackson (rich text for examining multiple themes)",
+      "videoUrl": "https://www.youtube.com/watch?v=E9msD1O3Mig",
+      "videoNote": "Crash Course Literature — Theme and the Moral Questions Literature Asks",
+      "video2Url": "https://www.youtube.com/watch?v=LmygkO_q5GU",
+      "video2Note": "TED-Ed — How to Find Themes in Literature",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:theme/e/identifying-theme",
+      "practiceNote": "Khan Academy — Identifying Theme Practice Exercises",
+      "assignment": "Read 'The Lottery' by Shirley Jackson. Identify three distinct themes present in the story. For each theme: (1) write a theme statement (a complete sentence, not a single word), (2) provide two pieces of textual evidence with brief analysis, (3) explain what moral or philosophical question the theme raises — what is the story really asking us to think about? Finally, write a 100-word reflection on which theme feels most relevant to the modern world and why.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 7,
+      "title": "Writing a Literary Analysis Essay",
+      "titleZh": "文学分析论文写作",
+      "objectives": "Write a focused, arguable literary thesis; select and integrate textual evidence using the quote-sandwich method; write analysis that moves beyond plot summary to interpret meaning; maintain formal academic tone throughout a multi-paragraph essay.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html",
+      "readingNote": "Purdue OWL — Writing About Fiction: Literary Analysis Essay Structure and Strategies",
+      "videoUrl": "https://www.youtube.com/watch?v=0WE2JBvoCTk",
+      "videoNote": "Crash Course Literature — How to Write a Literary Analysis Essay",
+      "video2Url": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_poetry/index.html",
+      "video2Note": "Purdue OWL — Writing About Poetry: Thesis and Evidence for Poem Analysis",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/v/writing-a-claim-and-thesis",
+      "practiceNote": "Khan Academy — Writing a Literary Claim and Thesis Statement",
+      "assignment": "Write a 600-word literary analysis essay on a text of your choice from this course. Requirements: (1) an introductory paragraph ending with a clear, arguable thesis about the text's meaning or craft, (2) two body paragraphs each beginning with a topic sentence, containing at least two integrated quotes using the quote-sandwich method, and ending with analysis connecting evidence back to the thesis, (3) a conclusion that extends your argument rather than merely restating it, (4) no plot summary — every sentence must be analytical. Self-assess with the provided rubric before submitting.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 8,
+      "title": "Greek Mythology & Classical Allusion",
+      "titleZh": "希腊神话与经典典故",
+      "objectives": "Identify and summarize major Greek myths (Prometheus, Icarus, Narcissus, Orpheus, Medusa, the Trojan War); define allusion and explain how recognizing allusions deepens literary meaning; trace classical allusions in modern literature and popular culture.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-myth-of-prometheus",
+      "readingNote": "CommonLit — The Myth of Prometheus (full text with guided questions on theme and symbolism)",
+      "videoUrl": "https://www.youtube.com/watch?v=Ri-AoKE42rQ",
+      "videoNote": "Crash Course Mythology — Greek Mythology Overview (Olympian gods, major heroes, key myths)",
+      "video2Url": "https://www.youtube.com/watch?v=VgRjfmDpbvM",
+      "video2Note": "TED-Ed — The myth of Icarus and Daedalus (and how allusion works in context)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/world-history/world-history-beginnings/x04ed08a3:mythology-and-religion/a/greek-mythology",
+      "practiceNote": "Khan Academy — Greek Mythology: Major Gods, Heroes, and Myths",
+      "assignment": "Part A: Create a myth reference sheet — for each of six myths (Prometheus, Icarus, Narcissus, Orpheus, Midas, Pandora), write: the characters involved, a two-sentence plot summary, and the moral or theme. Part B: Find two allusions to Greek mythology in modern texts, films, or advertisements. For each allusion write a 150-word explanation of: what myth is being referenced, what the original myth means, and how the modern allusion uses that meaning for a specific effect.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 9,
+      "title": "Drama: Greek Tragedy",
+      "titleZh": "戏剧：希腊悲剧",
+      "objectives": "Define the characteristics of a tragic hero (hamartia, hubris, anagnorisis, peripeteia); explain catharsis and its function in Greek tragedy; read and analyze excerpts from Sophocles with attention to the chorus, dramatic irony, and fate vs. free will.",
+      "readingUrl": "https://www.commonlit.org/en/texts/oedipus-rex",
+      "readingNote": "CommonLit — Excerpts from 'Oedipus Rex' by Sophocles (guided reading with comprehension and analysis questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=PdKBzY3yoOc",
+      "videoNote": "Crash Course Theater — Greek Tragedy: Tragedy, Catharsis, and the Tragic Hero",
+      "video2Url": "https://www.youtube.com/watch?v=H8F4ySfmCDg",
+      "video2Note": "TED-Ed — Fate vs. Free Will in Greek Tragedy",
+      "practiceUrl": "https://www.khanacademy.org/humanities/world-history/world-history-beginnings/x04ed08a3:classical-greece/a/greek-theater",
+      "practiceNote": "Khan Academy — Greek Theater: Tragedy, Comedy, and the Theater of Dionysus",
+      "assignment": "Read the assigned excerpts from 'Oedipus Rex.' Write a 500-word analysis: (1) identify Oedipus's hamartia (tragic flaw) and provide two textual examples that demonstrate it, (2) explain one moment of dramatic irony — what does the audience know that Oedipus does not, and what effect does this create?, (3) describe the role of the Chorus in one scene — what function does it serve for the audience?, (4) argue whether Oedipus's fate is the result of destiny or his own free choices, supporting your position with evidence from the text.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 10,
+      "title": "The Bildungsroman",
+      "titleZh": "成长小说",
+      "objectives": "Define the bildungsroman as a coming-of-age genre and identify its structural conventions (naïve protagonist, initiation experience, loss of innocence, new identity); analyze how identity, belonging, and moral growth function in coming-of-age narratives; connect the genre to adolescent experience.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-outsiders",
+      "readingNote": "CommonLit — Excerpt from 'The Outsiders' by S.E. Hinton (model for coming-of-age identity and belonging)",
+      "videoUrl": "https://www.youtube.com/watch?v=oWKEA_lJdFg",
+      "videoNote": "Crash Course Literature — The Bildungsroman: Coming of Age in Literature",
+      "video2Url": "https://www.youtube.com/watch?v=_ooeTNdAGFg",
+      "video2Note": "TED-Ed — Why Do We Love Coming-of-Age Stories?",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:analyzing-character/v/static-vs-dynamic-characters",
+      "practiceNote": "Khan Academy — Static vs. Dynamic Characters (key to analyzing bildungsroman protagonists)",
+      "assignment": "Write a 500-word essay analyzing a coming-of-age text you have read (any novel, short story, or film). Address: (1) the protagonist's naïve self at the beginning — what do they believe about the world?, (2) the central initiation experience or loss of innocence — what event forces them to grow?, (3) how their identity shifts by the end — what do they know or believe now that they did not before?, (4) what universal truth about growing up does the text suggest? Support each point with specific evidence.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 11,
+      "title": "Postcolonial Literature",
+      "titleZh": "后殖民文学",
+      "objectives": "Define postcolonial literature and its major concerns: colonial legacy, cultural identity, hybridity, and resistance; analyze how Chinua Achebe and Ngũgĩ wa Thiong'o engage with questions of language, identity, and power; examine how literature written by formerly colonized peoples challenges dominant narratives.",
+      "readingUrl": "https://www.commonlit.org/en/texts/things-fall-apart",
+      "readingNote": "CommonLit — Excerpt from 'Things Fall Apart' by Chinua Achebe (with guided analysis questions on culture and colonialism)",
+      "videoUrl": "https://www.youtube.com/watch?v=NJFT_LAj4C4",
+      "videoNote": "Crash Course Literature — Postcolonial Literature: Identity, Language, and Power",
+      "video2Url": "https://www.youtube.com/watch?v=oFBsOQMNf3E",
+      "video2Note": "TED-Ed — Chinua Achebe and Why Stories Matter in African Literature",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/literary_theory_and_schools_of_criticism/postcolonial_criticism.html",
+      "practiceNote": "Purdue OWL — Postcolonial Criticism: Key Concepts and Reading Strategies",
+      "assignment": "Read the excerpt from 'Things Fall Apart.' Write a 500-word response: (1) describe Igbo culture as Achebe presents it before colonialism — give three specific details, (2) analyze one passage where Achebe uses language to assert African cultural value against a colonial gaze, (3) explain the significance of Achebe writing in English — why might a postcolonial author choose the colonizer's language, and what are the tensions in that choice?, (4) how does this text challenge or complicate a single, unified version of history?",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 12,
+      "title": "Literary Criticism Approaches",
+      "titleZh": "文学批评方法",
+      "objectives": "Describe the key assumptions and questions of five critical lenses: biographical, historical, feminist, Marxist, and reader-response; apply at least two different lenses to the same passage and explain how each produces a different reading; understand that no single critical approach captures all of a text's meaning.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/literary_theory_and_schools_of_criticism/index.html",
+      "readingNote": "Purdue OWL — Literary Theory and Schools of Criticism (biographical, historical, feminist, Marxist, reader-response)",
+      "videoUrl": "https://www.youtube.com/watch?v=_GSdFt_MbHU",
+      "videoNote": "Crash Course Literature — Literary Theory: A Crash Course in Critical Lenses",
+      "video2Url": "https://www.youtube.com/watch?v=DT7tRiJCZ98",
+      "video2Note": "TED-Ed — How to Use Literary Criticism to Read More Deeply",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:analyzing-character/v/character-analysis",
+      "practiceNote": "Khan Academy — Character Analysis (practice applying a feminist or biographical lens)",
+      "assignment": "Select a passage of 150–200 words from any text studied this semester. Apply three different critical lenses to the same passage. For each lens: (1) state the key question that lens asks (e.g., feminist: 'How does the text portray gender roles?'), (2) apply the lens to produce a 150-word reading of the passage, (3) identify one thing this lens reveals that others might miss. Conclude with a 100-word reflection: which lens felt most useful for this particular passage, and why?",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 13,
+      "title": "Satire & Social Commentary",
+      "titleZh": "讽刺与社会评论",
+      "objectives": "Distinguish Horatian (gentle) from Juvenalian (harsh) satire; identify satirical techniques: irony, exaggeration (hyperbole), reversal, understatement, and parody; analyze how satire uses humor to expose and critique social flaws, institutions, or human behavior.",
+      "readingUrl": "https://www.commonlit.org/en/texts/a-modest-proposal",
+      "readingNote": "CommonLit — 'A Modest Proposal' by Jonathan Swift (foundational satirical text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=mAxuqoxJcOY",
+      "videoNote": "Crash Course Literature — Satire: Horatian vs. Juvenalian and How Satire Works",
+      "video2Url": "https://www.youtube.com/watch?v=9Zrpx8NRREA",
+      "video2Note": "TED-Ed — How Does Satire Use Irony to Critique Society?",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html",
+      "practiceNote": "Purdue OWL — Analyzing Tone and Irony in Satirical Fiction",
+      "assignment": "Read 'A Modest Proposal' by Jonathan Swift. Write a 450-word satirical analysis: (1) explain Swift's actual argument — what social problem is he really criticizing, and who is his real target?, (2) identify three specific satirical techniques (label each: irony, exaggeration, etc.) with brief quotations and explain the effect of each, (3) classify the satire as Horatian or Juvenalian and justify your classification with evidence, (4) explain why Swift uses an ironic persona (the 'proposer') rather than speaking directly — what does the mask achieve?",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 14,
+      "title": "Culminating Essay & Seminar",
+      "titleZh": "终结性论文与研讨会",
+      "objectives": "Write an extended (800-word) analytical essay synthesizing skills from the entire course; participate in a Socratic seminar by presenting and defending a literary interpretation; give and receive constructive academic feedback; demonstrate command of literary terminology developed throughout the course.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html",
+      "readingNote": "Purdue OWL — Writing About Fiction: Extended Literary Analysis and Argumentation",
+      "videoUrl": "https://www.youtube.com/watch?v=0WE2JBvoCTk",
+      "videoNote": "Crash Course Literature — Putting It All Together: Writing and Defending a Literary Argument",
+      "video2Url": "https://www.youtube.com/watch?v=g_biAQkgSiY",
+      "video2Note": "TED-Ed — How to Have a Better Academic Discussion (Socratic seminar skills)",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html",
+      "practiceNote": "Purdue OWL — Proofreading and Final Revision for Extended Essays",
+      "assignment": "Extended Culminating Essay (800 words minimum): Choose one text from the course and write a full literary analysis essay applying at least two of the critical approaches studied. Your essay must include: a focused, arguable thesis; at least four integrated quotations with analysis; engagement with at least two literary devices; a paragraph applying a named critical lens (feminist, Marxist, postcolonial, etc.); and a conclusion that extends your argument to a broader universal significance. Socratic Seminar: Prepare three discussion questions based on your essay argument. During the seminar, present your thesis, respond to peers' interpretations, and build on others' ideas. Peer-evaluate two classmates using the provided seminar rubric.",
+      "estimatedHrs": 6.0
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which annotation practice best moves a reader beyond passive reading toward active literary analysis?",
+      "options": [
+        "Highlighting every sentence",
+        "Writing marginal notes that ask 'why' and 'how' questions about authorial choices",
+        "Looking up every unfamiliar word in a dictionary",
+        "Copying the passage into a notebook"
+      ],
+      "answer": "Writing marginal notes that ask 'why' and 'how' questions about authorial choices",
+      "explanation": "Analytical annotation focuses on interpretation — asking why an author made specific choices — rather than merely recording comprehension. This pushes the reader into critical engagement with the text.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "A story that begins at a critical moment of action, with backstory revealed later through flashback or dialogue, is said to begin:",
+      "options": [
+        "In chronological order",
+        "With an exposition",
+        "In medias res",
+        "With a frame narrative"
+      ],
+      "answer": "In medias res",
+      "explanation": "In medias res (Latin: 'in the middle of things') is a narrative technique in which the story begins at a crucial point of action, creating immediate engagement. Backstory is provided afterward.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "In a short story, an epiphany is best described as:",
+      "options": [
+        "The climax of physical conflict",
+        "The moment a character gains sudden insight or understanding",
+        "The exposition of the setting",
+        "The death of the antagonist"
+      ],
+      "answer": "The moment a character gains sudden insight or understanding",
+      "explanation": "An epiphany (associated with James Joyce's short fiction) is a moment of sudden revelation or deep understanding that changes how a character sees themselves or the world.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "When a speaker in a poem says 'The city is a prison that holds us all,' this is an example of:",
+      "options": [
+        "Simile",
+        "Personification",
+        "Metaphor",
+        "Alliteration"
+      ],
+      "answer": "Metaphor",
+      "explanation": "A metaphor makes a direct comparison by stating one thing IS another. 'The city is a prison' directly equates the city to a prison without using 'like' or 'as.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Pathetic fallacy is a literary technique in which:",
+      "options": [
+        "A character makes a logical error in reasoning",
+        "The weather or natural environment reflects or amplifies a character's emotions",
+        "The narrator speaks directly to the reader",
+        "Two characters have contrasting personalities"
+      ],
+      "answer": "The weather or natural environment reflects or amplifies a character's emotions",
+      "explanation": "Pathetic fallacy projects human emotions onto nature or the environment — stormy weather during a tense scene, sunshine during a joyful one. It reinforces mood and atmosphere.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A foil character is used in literature primarily to:",
+      "options": [
+        "Replace the protagonist in the final act",
+        "Reveal traits of another character by contrast",
+        "Provide comic relief",
+        "Serve as the story's narrator"
+      ],
+      "answer": "Reveal traits of another character by contrast",
+      "explanation": "A foil character has qualities that contrast sharply with another character (usually the protagonist), making the other character's traits more vivid and noticeable to the reader.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Which of the following is a theme statement (not merely a topic)?",
+      "options": [
+        "Courage",
+        "The story is about war.",
+        "War destroys the innocence of those who survive it.",
+        "The main character is a soldier."
+      ],
+      "answer": "War destroys the innocence of those who survive it.",
+      "explanation": "A theme is a complete statement expressing a universal idea. 'Courage' is a topic; 'The story is about war' is a plot description. A theme must make a claim about the human experience.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "In a literary analysis essay, the quote-sandwich method requires the writer to:",
+      "options": [
+        "Use three quotations per paragraph",
+        "Introduce the quotation, present it, and then analyze its significance",
+        "Paraphrase rather than quote directly",
+        "Place quotations only in the introduction"
+      ],
+      "answer": "Introduce the quotation, present it, and then analyze its significance",
+      "explanation": "The quote-sandwich method: introduce the quote (who says it / what context), present the quote, then analyze what it means and how it supports your argument. Evidence without analysis is incomplete.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Which Greek myth involves a craftsman's son who flew too close to the sun on wings made of wax and feathers?",
+      "options": [
+        "Prometheus",
+        "Narcissus",
+        "Orpheus",
+        "Icarus"
+      ],
+      "answer": "Icarus",
+      "explanation": "In Greek mythology, Daedalus made wings of wax and feathers for himself and his son Icarus. Despite warnings, Icarus flew too high; the sun melted his wings and he fell into the sea. The myth is often an allusion to hubris and the danger of overreach.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "In Greek tragedy, hubris refers to:",
+      "options": [
+        "The moment of the tragic hero's self-discovery",
+        "The audience's emotional release at the end of the play",
+        "Excessive pride or arrogance that leads to the hero's downfall",
+        "The tragic flaw caused by a mistaken judgment"
+      ],
+      "answer": "Excessive pride or arrogance that leads to the hero's downfall",
+      "explanation": "Hubris is extreme arrogance — the tragic hero's belief that they are above the laws of gods or fate. It is typically the catalyst that triggers the sequence of events leading to their destruction.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The bildungsroman is a genre characterized by:",
+      "options": [
+        "A detective solving a mystery",
+        "A hero's journey from naivety to maturity through formative experiences",
+        "A satire of political institutions",
+        "A tragic hero's rise and fall"
+      ],
+      "answer": "A hero's journey from naivety to maturity through formative experiences",
+      "explanation": "The bildungsroman (German: 'novel of formation') follows a protagonist's psychological and moral development from youth to adulthood, typically through experiences that cause a loss of innocence.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Which of the following best describes the purpose of a literary thesis statement?",
+      "options": [
+        "To summarize the plot of the work",
+        "To state a debatable interpretive claim about the text's meaning or craft",
+        "To list all the literary devices in the text",
+        "To describe the author's biography"
+      ],
+      "answer": "To state a debatable interpretive claim about the text's meaning or craft",
+      "explanation": "A literary thesis makes an arguable claim — an interpretation that must be supported with evidence. It is not a fact, a summary, or an announcement of topic.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "A poet from a postcolonial nation writes in English rather than her native language. Which tension does this most directly reflect?",
+      "options": [
+        "The tension between rhyme and free verse",
+        "The tension between using the colonizer's language to assert a decolonized identity",
+        "The tension between lyric and narrative poetry",
+        "The tension between historical and biographical criticism"
+      ],
+      "answer": "The tension between using the colonizer's language to assert a decolonized identity",
+      "explanation": "A central debate in postcolonial literature is whether writing in the colonizer's language (English, French, etc.) perpetuates colonial power or can be reclaimed as a tool of resistance and expression.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Explain the difference between a topic and a theme in literature. Then write an original theme statement about the topic of 'power.'",
+      "options": null,
+      "answer": "A topic is a subject (e.g., 'power'); a theme is a complete statement expressing a universal idea about that subject (e.g., 'Unchecked power corrupts those who possess it and destroys those they rule'). The theme must make a claim applicable beyond any single text.",
+      "explanation": "Topics are single words or phrases (friendship, loss, justice). Themes are full sentences that express what the text says about that topic — the author's insight about the human condition.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "Define catharsis in the context of Greek tragedy and explain why Aristotle believed it was one of the most important effects of watching a tragedy.",
+      "options": null,
+      "answer": "Catharsis is the emotional purging or release experienced by the audience at the end of a tragedy — a mixture of pity (for the hero's suffering) and fear (that such suffering could befall anyone). Aristotle believed catharsis was therapeutic: it allowed audiences to safely experience and process powerful emotions, leaving them feeling cleansed and emotionally balanced rather than overwhelmed.",
+      "explanation": "Aristotle defined catharsis in his 'Poetics' as the purification of emotions of pity and fear through art. The audience projects emotions onto the tragic hero and experiences a safe emotional release.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which annotation note is most analytically useful?",
+      "options": [
+        "\"This paragraph is long.\"",
+        "\"I don't understand this word.\"",
+        "\"Irony — the narrator trusts the man who will betray him; dramatic tension.\"",
+        "\"Good description here.\""
+      ],
+      "answer": "\"Irony — the narrator trusts the man who will betray him; dramatic tension.\"",
+      "explanation": "Effective annotation names a literary device, explains its function, and connects it to the text's larger meaning or effect. Vague or purely comprehension-based notes do not advance analysis.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Situational irony occurs when:",
+      "options": [
+        "A character says the opposite of what they mean",
+        "The audience knows something a character does not",
+        "The outcome of a situation is the opposite of what was expected",
+        "The narrator directly addresses the audience"
+      ],
+      "answer": "The outcome of a situation is the opposite of what was expected",
+      "explanation": "Situational irony is the gap between expectation and reality — when what happens is the reverse of what was anticipated. It differs from dramatic irony (audience vs. character knowledge) and verbal irony (saying the opposite of what is meant).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "In world poetry, the concept of 'voice' refers to:",
+      "options": [
+        "The volume at which the poem is read",
+        "The use of rhyme and meter",
+        "The distinct personality, perspective, and cultural identity of the speaker",
+        "The number of stanzas in the poem"
+      ],
+      "answer": "The distinct personality, perspective, and cultural identity of the speaker",
+      "explanation": "Voice in poetry encompasses the speaker's unique personality, tone, attitude, and the cultural identity embedded in their perspective. Voice is what makes each poet's expression distinctively their own.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "In 'The Yellow Wallpaper,' the symbolic setting of the room most directly represents:",
+      "options": [
+        "The narrator's love of interior design",
+        "The patriarchal confinement of women in the 19th century",
+        "The dangers of rural living",
+        "The narrator's physical illness"
+      ],
+      "answer": "The patriarchal confinement of women in the 19th century",
+      "explanation": "The locked room and restrictive 'rest cure' symbolize the broader social and domestic imprisonment of women in 19th-century society. The narrator's deterioration parallels the suffocating limits placed on her autonomy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "A character arc describes:",
+      "options": [
+        "The physical journey a character takes across the plot",
+        "The pattern of change or growth a character undergoes from beginning to end",
+        "The number of scenes in which a character appears",
+        "A character's relationship to the narrator"
+      ],
+      "answer": "The pattern of change or growth a character undergoes from beginning to end",
+      "explanation": "A character arc tracks the internal transformation of a character — how their beliefs, values, or emotional state shift as a result of the story's events.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following questions is most characteristic of a feminist critical reading?",
+      "options": [
+        "How does the author's childhood affect the text's imagery?",
+        "How does the text portray gender roles and power dynamics between men and women?",
+        "What were the economic conditions of the period in which the text was written?",
+        "How does the reader's own background shape their interpretation?"
+      ],
+      "answer": "How does the text portray gender roles and power dynamics between men and women?",
+      "explanation": "Feminist criticism examines how gender shapes representation, power, and identity in literature — asking whose voices are centered, how women are portrayed, and what assumptions about gender the text reinforces or challenges.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "In Jonathan Swift's 'A Modest Proposal,' the 'modest proposer' seriously suggests eating Irish babies. This is an example of:",
+      "options": [
+        "Horatian satire — gentle mockery meant to entertain",
+        "Juvenalian satire — bitter, harsh attack meant to provoke outrage and reform",
+        "Parody — imitating Swift's own earlier work",
+        "Allegory — a story with a hidden moral meaning"
+      ],
+      "answer": "Juvenalian satire — bitter, harsh attack meant to provoke outrage and reform",
+      "explanation": "Juvenalian satire is dark, biting, and morally outraged, designed to shock readers into recognizing serious social injustice. Swift's savage proposal about eating babies is intended to expose British indifference to Irish suffering.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Chinua Achebe wrote 'Things Fall Apart' in English partly to:",
+      "options": [
+        "Appeal to a wider international audience and challenge Western narratives about Africa from within",
+        "Demonstrate his mastery of colonial literature",
+        "Prove that Igbo culture was inferior to British culture",
+        "Translate existing Igbo oral literature into English"
+      ],
+      "answer": "Appeal to a wider international audience and challenge Western narratives about Africa from within",
+      "explanation": "Achebe made a deliberate choice to write in English to reach global readers and directly counter colonial representations of Africa — such as those in Conrad's 'Heart of Darkness' — using the colonizer's own literary forms to assert African humanity and complexity.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "The tragic hero's hamartia is:",
+      "options": [
+        "Their greatest strength",
+        "The moment of self-recognition near the end of the tragedy",
+        "Their tragic flaw or error of judgment that contributes to their downfall",
+        "The chorus's warning about fate"
+      ],
+      "answer": "Their tragic flaw or error of judgment that contributes to their downfall",
+      "explanation": "Hamartia (from Greek: 'error') is the fatal flaw or misjudgment of the tragic hero — the weakness (often hubris) that sets the chain of events leading to their destruction in motion.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "In a Socratic seminar, a student who says 'I agree with what Mei said, and I want to add that the setting also reinforces this' is demonstrating:",
+      "options": [
+        "Off-topic digression",
+        "Building on a peer's idea to extend the discussion collaboratively",
+        "Summarizing the text",
+        "Disagreeing with the facilitator"
+      ],
+      "answer": "Building on a peer's idea to extend the discussion collaboratively",
+      "explanation": "Effective Socratic seminar participation involves listening actively and building on others' contributions. Connecting one's own interpretation to a peer's idea moves the discussion forward collaboratively.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Reader-response criticism focuses primarily on:",
+      "options": [
+        "The author's intentions when writing the text",
+        "The historical context in which the text was produced",
+        "The meaning a text produces through the interaction between text and individual reader",
+        "The economic class of the characters in the text"
+      ],
+      "answer": "The meaning a text produces through the interaction between text and individual reader",
+      "explanation": "Reader-response theory argues that meaning is not fixed in the text alone but is created in the act of reading — shaped by the reader's own experiences, values, and cultural background.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Which of the following allusions would most likely invoke themes of dangerous ambition and overreach?",
+      "options": [
+        "A reference to Narcissus",
+        "A reference to Icarus",
+        "A reference to Orpheus",
+        "A reference to Pandora"
+      ],
+      "answer": "A reference to Icarus",
+      "explanation": "The myth of Icarus, who ignored warnings and flew too close to the sun, is a classical allusion for dangerous pride and overambition. Narcissus alludes to self-obsession; Orpheus to love and loss; Pandora to curiosity and unintended consequences.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "The Chorus in a Greek tragedy serves to:",
+      "options": [
+        "Provide comic relief for the audience",
+        "Act as the main antagonist opposing the hero",
+        "Comment on the action, voice communal values, and guide the audience's emotional response",
+        "Deliver the final resolution of the conflict"
+      ],
+      "answer": "Comment on the action, voice communal values, and guide the audience's emotional response",
+      "explanation": "The Chorus in Greek tragedy represents the community, commenting on events, questioning the hero's choices, and helping the audience process the moral and emotional meaning of what they are witnessing.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Which critical lens would most directly examine how economic class shapes a character's opportunities and limitations in a novel?",
+      "options": [
+        "Biographical criticism",
+        "Feminist criticism",
+        "Marxist criticism",
+        "Reader-response criticism"
+      ],
+      "answer": "Marxist criticism",
+      "explanation": "Marxist criticism analyzes literature through the lens of class struggle, economic power, and the relationship between dominant and marginalized groups — asking how capitalism, wealth, and class shape characters' lives and the text's ideology.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "What distinguishes a postcolonial literary concern from a historical one?",
+      "options": [
+        "Postcolonial criticism ignores history entirely",
+        "Postcolonial criticism centers the voices and experiences of formerly colonized peoples, questioning whose history is told and from whose perspective",
+        "Historical criticism focuses only on the author's life; postcolonial criticism focuses on the plot",
+        "They are identical approaches"
+      ],
+      "answer": "Postcolonial criticism centers the voices and experiences of formerly colonized peoples, questioning whose history is told and from whose perspective",
+      "explanation": "While historical criticism examines the time period in which a text was written, postcolonial criticism specifically interrogates the power dynamics of colonialism and asks how colonial and imperial histories shape identity, language, and narrative.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which technique is a defining feature of the bildungsroman genre?",
+      "options": [
+        "The protagonist's death at the end",
+        "A narrator who is omniscient and removed from the action",
+        "A protagonist who undergoes moral, emotional, or psychological growth from youth to adulthood",
+        "A setting in ancient Greece or Rome"
+      ],
+      "answer": "A protagonist who undergoes moral, emotional, or psychological growth from youth to adulthood",
+      "explanation": "The bildungsroman traces a young protagonist's formation — their development of identity, values, and worldview through formative experiences, often involving loss of innocence and hard-won self-knowledge.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "An allusion to Narcissus in a modern novel most likely suggests the character is:",
+      "options": [
+        "Overly ambitious and prone to hubris",
+        "Obsessively self-absorbed or unable to connect with others",
+        "Tragically in love with someone he cannot reach",
+        "Curious and responsible for unleashing suffering"
+      ],
+      "answer": "Obsessively self-absorbed or unable to connect with others",
+      "explanation": "Narcissus fell so deeply in love with his own reflection that he could not turn away from it and wasted away. An allusion to Narcissus signals narcissism — excessive self-love or an inability to see beyond oneself.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "When a literary analysis essay avoids plot summary and instead focuses on interpretation, it means the writer is:",
+      "options": [
+        "Retelling the story event by event",
+        "Explaining what happens in each chapter",
+        "Arguing what events, images, or words mean and why the author made those choices",
+        "Listing characters and their traits"
+      ],
+      "answer": "Arguing what events, images, or words mean and why the author made those choices",
+      "explanation": "Literary analysis moves beyond recounting what happens to interpreting significance — explaining how and why an author's choices create meaning, emotion, or thematic depth.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Choose one of the five critical lenses studied this semester (biographical, historical, feminist, Marxist, reader-response). Explain the core question it asks of a text and give one specific example of how you would apply it to any literary work you have read this year.",
+      "options": null,
+      "answer": "Responses will vary. Example (Feminist): The core question is 'How does the text portray gender roles and power relations between men and women?' Applied to 'The Yellow Wallpaper': a feminist reading examines how the male narrator/husband restricts the female narrator's freedom under the guise of medical treatment, and how the story critiques the erasure of women's intellectual and creative lives in 19th-century society.",
+      "explanation": "Each critical lens has a central question that guides interpretation. Applying the lens means reading the text through that specific set of concerns rather than accepting a single, neutral interpretation.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "Explain the difference between Horatian and Juvenalian satire, and argue which type better describes 'A Modest Proposal' by Jonathan Swift. Support your answer with one specific detail from the text.",
+      "options": null,
+      "answer": "Horatian satire is gentle, good-humored, and gently mocks human folly to amuse. Juvenalian satire is bitter, harsh, and morally outraged, designed to provoke anger and demand change. 'A Modest Proposal' is clearly Juvenalian: Swift's 'solution' to Irish poverty — proposing that the English eat Irish babies — is so extreme and savage that it is designed to horrify readers into recognizing the callous indifference of British colonial policy toward the Irish poor.",
+      "explanation": "The distinction between the two types of satire rests on tone and intent. Swift's proposal is not playfully witty — it is deliberately shocking and morally scathing, placing it firmly in the Juvenalian tradition.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "type": "mc",
+      "question": "What is the primary goal of active annotation while reading a literary text?",
+      "options": [
+        "To count how many pages you have read",
+        "To record plot events in order",
+        "To engage critically with the text by noting literary choices, patterns, and questions",
+        "To copy quotations for later memorization"
+      ],
+      "answer": "To engage critically with the text by noting literary choices, patterns, and questions",
+      "explanation": "Active annotation is a form of dialogue with the text — recording observations about how and why an author writes as they do, not merely what happens.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is the most analytically useful margin note?",
+      "options": [
+        "\"Long paragraph\"",
+        "\"Repetition of 'dark' — reinforces the narrator's fear and isolation\"",
+        "\"Don't understand\"",
+        "\"Good sentence\""
+      ],
+      "answer": "\"Repetition of 'dark' — reinforces the narrator's fear and isolation\"",
+      "explanation": "A useful annotation identifies a literary device, names it, and explains its effect on the reader or its contribution to theme. Vague observations add no analytical value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "type": "mc",
+      "question": "An analytical question about a text asks:",
+      "options": [
+        "\"What happened in this chapter?\"",
+        "\"Who is the main character?\"",
+        "\"Why does the author choose to withhold the character's name until the final paragraph?\"",
+        "\"How many pages is the story?\""
+      ],
+      "answer": "\"Why does the author choose to withhold the character's name until the final paragraph?\"",
+      "explanation": "Analytical questions push beyond plot and comprehension to consider an author's intentional craft decisions and their effects on meaning. 'Why' and 'how' questions are the hallmarks of analytical thinking.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "type": "mc",
+      "question": "When annotating for literary devices, a reader who writes 'simile — comparing grief to a stone, suggests weight and numbness' is doing what?",
+      "options": [
+        "Summarizing the paragraph",
+        "Identifying and analyzing a literary device",
+        "Writing a personal reaction",
+        "Listing characters"
+      ],
+      "answer": "Identifying and analyzing a literary device",
+      "explanation": "This annotation names the device (simile), identifies the comparison, and explains the effect (suggests weight and numbness). It connects the device to interpretation — the goal of analytical annotation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "type": "mc",
+      "question": "Which question would best guide close reading of a poem's opening line?",
+      "options": [
+        "How long is the poem?",
+        "Does the poem rhyme?",
+        "What tone does the first line establish, and what word choices create that tone?",
+        "Who is the poet?"
+      ],
+      "answer": "What tone does the first line establish, and what word choices create that tone?",
+      "explanation": "Close reading focuses on specific language choices and their effects. Asking how diction creates tone in the opening line directs the reader to analyze the craft of language.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "type": "mc",
+      "question": "Which narrative point of view gives the reader access to only one character's thoughts and feelings?",
+      "options": [
+        "Second person",
+        "Third-person omniscient",
+        "Third-person limited",
+        "First person plural"
+      ],
+      "answer": "Third-person limited",
+      "explanation": "Third-person limited narration uses 'he/she/they' but restricts the reader's knowledge to the inner life of one character. Third-person omniscient allows access to all characters' minds.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "type": "mc",
+      "question": "When a character receives a gift that he secretly wished he could return, unaware that the giver sold her most precious possession to buy it, this is an example of:",
+      "options": [
+        "Verbal irony",
+        "Situational irony",
+        "Dramatic irony",
+        "Cosmic irony"
+      ],
+      "answer": "Situational irony",
+      "explanation": "Situational irony is when events turn out opposite to what is expected or intended. Both characters sacrifice their most precious things to buy gifts for the other, rendering both gifts useless — the classic situational irony of O. Henry's 'The Gift of the Magi.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "type": "mc",
+      "question": "In medias res as a narrative technique is best described as:",
+      "options": [
+        "Ending the story at the climax",
+        "Beginning the story at a point of action, with backstory provided later",
+        "Telling the story in strictly chronological order",
+        "Using multiple narrators to tell the same events"
+      ],
+      "answer": "Beginning the story at a point of action, with backstory provided later",
+      "explanation": "In medias res plunges the reader into an exciting or critical moment before the background is established. This technique creates immediate engagement and suspense.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "type": "mc",
+      "question": "An epiphany in a short story typically occurs:",
+      "options": [
+        "At the very beginning, to hook the reader",
+        "In the exposition, when the setting is described",
+        "Near the climax or end, when a character suddenly understands something important",
+        "In the rising action, before any conflict develops"
+      ],
+      "answer": "Near the climax or end, when a character suddenly understands something important",
+      "explanation": "An epiphany is a moment of sudden revelation or insight. In short stories (especially those by James Joyce), it typically arrives at or near the climax, transforming the character's understanding.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is an example of verbal irony?",
+      "options": [
+        "A fire station burns down.",
+        "The audience knows the letter is forged, but the character believes it is genuine.",
+        "After failing a test, a student says, 'Well, that went brilliantly.'",
+        "A character intended to do good but accidentally caused harm."
+      ],
+      "answer": "After failing a test, a student says, 'Well, that went brilliantly.'",
+      "explanation": "Verbal irony occurs when a speaker says the opposite of what they mean — often sarcasm. The student clearly did not do well, so 'brilliantly' is the verbal opposite of the truth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "type": "mc",
+      "question": "When analyzing a world poem, 'cultural context' refers to:",
+      "options": [
+        "The number of languages the poet speaks",
+        "The rhyme scheme of the poem",
+        "The historical, social, and cultural conditions that shaped the poem's creation and meaning",
+        "The length of the poem"
+      ],
+      "answer": "The historical, social, and cultural conditions that shaped the poem's creation and meaning",
+      "explanation": "Cultural context encompasses the political history, social norms, traditions, and lived experiences of the culture from which the poem emerges — all of which shape its imagery, themes, and voice.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "type": "mc",
+      "question": "The speaker of a poem is:",
+      "options": [
+        "Always the poet themselves",
+        "The implied voice that narrates the poem, which may or may not be the author",
+        "The character being described in the poem",
+        "The reader of the poem"
+      ],
+      "answer": "The implied voice that narrates the poem, which may or may not be the author",
+      "explanation": "The speaker (or poetic persona) is the voice that 'speaks' the poem. Like a narrator in fiction, the speaker is a construct — sometimes autobiographical, sometimes entirely fictional.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "type": "mc",
+      "question": "A poem by a Kenyan poet referencing the 'borrowed tongue' of English most directly speaks to:",
+      "options": [
+        "The poet's difficulty learning grammar",
+        "The tension of expressing indigenous identity through a colonial language",
+        "The poet's preference for spoken rather than written poetry",
+        "A complaint about translation quality"
+      ],
+      "answer": "The tension of expressing indigenous identity through a colonial language",
+      "explanation": "The phrase 'borrowed tongue' is a common metaphor in African and postcolonial poetry for the complex relationship between indigenous identity and the English language imposed through colonialism.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "type": "mc",
+      "question": "When comparing poems from two different cultural traditions, which approach is most analytically valuable?",
+      "options": [
+        "Deciding which culture is superior based on the poems",
+        "Identifying how both poems treat a shared theme and what each reveals about its own cultural context",
+        "Counting the total syllables in each poem",
+        "Determining which poem rhymes more consistently"
+      ],
+      "answer": "Identifying how both poems treat a shared theme and what each reveals about its own cultural context",
+      "explanation": "Comparative analysis of world poetry examines how different cultural traditions approach universal themes — revealing both shared human experience and the distinctive values and perspectives of each culture.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "type": "mc",
+      "question": "A recurring image of a caged bird in poems from the African diaspora most likely symbolizes:",
+      "options": [
+        "The poet's love of nature",
+        "Confinement, oppression, and the longing for freedom",
+        "The beauty of the natural world",
+        "A literal pet bird"
+      ],
+      "answer": "Confinement, oppression, and the longing for freedom",
+      "explanation": "The caged bird is a powerful symbol of constraint and silenced voice in African-American and African diaspora poetry — most famously in the works of Maya Angelou and Paul Laurence Dunbar.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "type": "mc",
+      "question": "Which statement best describes how setting functions in literary fiction?",
+      "options": [
+        "Setting only tells the reader when and where the story takes place",
+        "Setting creates mood, influences character behavior, and can carry symbolic meaning",
+        "Setting is less important than dialogue in revealing character",
+        "Setting is only relevant in realistic fiction, not fantasy"
+      ],
+      "answer": "Setting creates mood, influences character behavior, and can carry symbolic meaning",
+      "explanation": "In skilled literary fiction, setting is far more than backdrop. It establishes atmosphere, reflects character psychology, creates tension, and can embody the story's themes symbolically.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "type": "mc",
+      "question": "Pathetic fallacy is the technique of:",
+      "options": [
+        "A character making an emotional decision that leads to harm",
+        "Attributing human emotions or responses to nature or the environment",
+        "A narrator describing events with excessive sentimentality",
+        "Using weather to advance the plot rather than set mood"
+      ],
+      "answer": "Attributing human emotions or responses to nature or the environment",
+      "explanation": "Pathetic fallacy (coined by John Ruskin) occurs when an author projects human feelings onto the natural world — 'the angry sea,' 'the weeping sky.' It reinforces emotional atmosphere.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "type": "mc",
+      "question": "A symbolic setting is one that:",
+      "options": [
+        "Describes a real historical location accurately",
+        "Changes multiple times throughout the narrative",
+        "Carries meaning beyond its literal description, embodying a theme or idea",
+        "Is described in exhaustive physical detail"
+      ],
+      "answer": "Carries meaning beyond its literal description, embodying a theme or idea",
+      "explanation": "A symbolic setting has resonance beyond the literal — a prison symbolizes confinement of spirit, a garden symbolizes paradise or lost innocence, a locked room can symbolize repression.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "type": "mc",
+      "question": "In 'The Yellow Wallpaper,' the narrator's increasing obsession with the wallpaper's pattern is best interpreted as:",
+      "options": [
+        "Evidence that she is bored and needs decoration advice",
+        "A symbol of her deteriorating mental state and desire to break free from confinement",
+        "A realistic depiction of interior design preferences",
+        "An allusion to a specific historical event"
+      ],
+      "answer": "A symbol of her deteriorating mental state and desire to break free from confinement",
+      "explanation": "The wallpaper's creeping, imprisoned figures mirror the narrator's own psychological imprisonment. Her fixation on liberating the figure in the wallpaper represents her own suppressed desire for freedom.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "type": "mc",
+      "question": "When a story set in winter uses images of frost, bare trees, and short days to reflect the protagonist's despair, this is an example of:",
+      "options": [
+        "Foreshadowing",
+        "Pathetic fallacy and atmosphere",
+        "A symbolic name",
+        "First-person narration"
+      ],
+      "answer": "Pathetic fallacy and atmosphere",
+      "explanation": "The winter imagery mirrors and amplifies the protagonist's inner emotional state, making nature an external reflection of character psychology — this is the defining feature of pathetic fallacy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "type": "mc",
+      "question": "A character's motivation is best determined by examining:",
+      "options": [
+        "How many pages of dialogue they have",
+        "Their physical description",
+        "Their goals, fears, and desires as revealed through actions, thoughts, and speech",
+        "The chapter in which they first appear"
+      ],
+      "answer": "Their goals, fears, and desires as revealed through actions, thoughts, and speech",
+      "explanation": "Motivation is the 'why' behind a character's behavior. Readers infer motivation from what characters want, what they fear, the choices they make, and how they react under pressure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "type": "mc",
+      "question": "An internal conflict is a struggle that occurs:",
+      "options": [
+        "Between the protagonist and the antagonist",
+        "Within a character's own mind — between competing desires, beliefs, or loyalties",
+        "Between a character and a natural disaster",
+        "Between two minor characters"
+      ],
+      "answer": "Within a character's own mind — between competing desires, beliefs, or loyalties",
+      "explanation": "Internal conflict (person vs. self) is psychological — a character torn between two choices, wrestling with guilt or fear, or questioning their own values and identity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "type": "mc",
+      "question": "A foil character is most useful to the author because it:",
+      "options": [
+        "Takes over the protagonist's role in the final act",
+        "Provides comic relief in tense scenes",
+        "Highlights the protagonist's qualities through sharp contrast",
+        "Serves as the main source of external conflict"
+      ],
+      "answer": "Highlights the protagonist's qualities through sharp contrast",
+      "explanation": "A foil's contrasting traits (cowardly vs. brave, dishonest vs. principled) make the protagonist's character more visible and vivid. The contrast illuminates what defines each character.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following best demonstrates a character undergoing a meaningful character arc?",
+      "options": [
+        "A character who remains cynical and isolated from beginning to end",
+        "A character who appears in every chapter",
+        "A character who begins the story believing no one can be trusted and ends it by risking everything to save a friend",
+        "A character who is described in great physical detail"
+      ],
+      "answer": "A character who begins the story believing no one can be trusted and ends it by risking everything to save a friend",
+      "explanation": "A character arc requires meaningful change in beliefs, values, or emotional state. Moving from radical mistrust to self-sacrifice is a complete, transformative arc driven by the story's events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "type": "mc",
+      "question": "Which type of evidence best supports a claim about a character's psychology?",
+      "options": [
+        "A description of the setting in the opening chapter",
+        "A direct quotation of the character's thoughts, words, or actions from the text",
+        "A summary of the plot",
+        "A quotation from a review of the novel"
+      ],
+      "answer": "A direct quotation of the character's thoughts, words, or actions from the text",
+      "explanation": "Character analysis must be grounded in textual evidence. A character's own words, thoughts, and actions are the most direct window into their psychology and motivation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is a theme statement (not a topic)?",
+      "options": [
+        "Loyalty",
+        "The story is about family.",
+        "Family loyalty can both protect and imprison individuals who prioritize it above their own freedom.",
+        "There are many characters in the story."
+      ],
+      "answer": "Family loyalty can both protect and imprison individuals who prioritize it above their own freedom.",
+      "explanation": "A theme is a complete sentence expressing a universal insight. 'Loyalty' is a topic. 'The story is about family' is a plot description. The theme must make an arguable claim about the topic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "type": "mc",
+      "question": "When a text raises a moral question without resolving it, this suggests the author intends to:",
+      "options": [
+        "Leave the reader confused",
+        "Indicate the story is unfinished",
+        "Engage the reader in active ethical reflection rather than providing easy answers",
+        "Show that the characters are morally weak"
+      ],
+      "answer": "Engage the reader in active ethical reflection rather than providing easy answers",
+      "explanation": "Great literature often presents moral complexity without resolution, forcing readers to grapple with difficult questions themselves. This is one of literature's most important functions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "type": "mc",
+      "question": "In 'The Lottery' by Shirley Jackson, the villagers' unquestioning compliance with the lottery ritual most directly supports which theme?",
+      "options": [
+        "The importance of community celebrations",
+        "The danger of blindly following tradition without moral reflection",
+        "The value of democratic decision-making",
+        "The innocence of rural communities"
+      ],
+      "answer": "The danger of blindly following tradition without moral reflection",
+      "explanation": "The lottery continues year after year simply because 'there's always been a lottery.' The story critiques the human tendency to follow tradition without questioning its morality or purpose.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "type": "mc",
+      "question": "A text can contain multiple themes simultaneously because:",
+      "options": [
+        "Authors accidentally include extra ideas",
+        "Long texts need more content to fill pages",
+        "Human experience is complex, and meaningful literature reflects multiple dimensions of that complexity",
+        "Themes are randomly distributed through a text"
+      ],
+      "answer": "Human experience is complex, and meaningful literature reflects multiple dimensions of that complexity",
+      "explanation": "Rich literary texts address multiple interrelated human concerns simultaneously — a single story can explore loyalty, justice, identity, and mortality without contradiction, just as real life involves all these at once.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "type": "mc",
+      "question": "Which universal philosophical question is most directly raised by a story about a scientist who creates life without considering the consequences?",
+      "options": [
+        "Is it more important to be loved or to be feared?",
+        "What is the moral responsibility that comes with the power to create or destroy?",
+        "How do people form communities?",
+        "Is loyalty to family more important than loyalty to society?"
+      ],
+      "answer": "What is the moral responsibility that comes with the power to create or destroy?",
+      "explanation": "Stories like 'Frankenstein' raise the philosophical question of human responsibility when wielding extraordinary power — a question that resonates from Greek myths to modern science.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "type": "mc",
+      "question": "A literary thesis statement must be:",
+      "options": [
+        "A question the essay will answer",
+        "A summary of the story's plot",
+        "An arguable interpretive claim that can be supported with textual evidence",
+        "A statement of fact that everyone agrees on"
+      ],
+      "answer": "An arguable interpretive claim that can be supported with textual evidence",
+      "explanation": "A literary thesis takes a debatable interpretive position. 'The novel was written in 1900' is a fact, not a thesis. 'The novel critiques capitalism through its portrait of inherited wealth' is an arguable claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "type": "mc",
+      "question": "In the quote-sandwich method, what comes immediately AFTER the quotation?",
+      "options": [
+        "Another quotation",
+        "A plot summary of the chapter",
+        "Analysis explaining what the quotation means and how it supports the thesis",
+        "The author's biography"
+      ],
+      "answer": "Analysis explaining what the quotation means and how it supports the thesis",
+      "explanation": "The quote-sandwich structure: introduction (context) → quotation → analysis (interpretation). Analysis is the most important part — it tells the reader what to take from the evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "type": "mc",
+      "question": "Which sentence is plot summary, not analysis?",
+      "options": [
+        "The crumbling house symbolizes the Usher family's genetic and psychological decay.",
+        "In the story, Roderick Usher lives in a decaying house with his sister.",
+        "Poe uses the house as an externalization of Roderick's deteriorating mental state.",
+        "The house's reflection in the tarn suggests an inescapable double, trapping Roderick in his own image."
+      ],
+      "answer": "In the story, Roderick Usher lives in a decaying house with his sister.",
+      "explanation": "Plot summary recounts what happens. Analysis explains the significance of what happens — why the author made a choice and what it means. 'Roderick lives in a decaying house' states a fact; the other options interpret meaning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is the strongest literary thesis statement?",
+      "options": [
+        "Shakespeare wrote 'Hamlet' in approximately 1600.",
+        "This essay will discuss the themes in 'Hamlet.'",
+        "Hamlet is a very complex character with many problems.",
+        "Through Hamlet's paralyzing indecision, Shakespeare argues that excessive self-analysis can be as destructive as reckless action."
+      ],
+      "answer": "Through Hamlet's paralyzing indecision, Shakespeare argues that excessive self-analysis can be as destructive as reckless action.",
+      "explanation": "This thesis makes a specific, arguable interpretive claim about the text's meaning and connects a character trait to a broader argument. The others are facts, vague generalizations, or topic announcements.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "type": "mc",
+      "question": "The conclusion of a literary analysis essay should primarily:",
+      "options": [
+        "Repeat the thesis word for word",
+        "Summarize all the evidence from the body paragraphs",
+        "Extend the argument to a broader significance — why does this literary interpretation matter?",
+        "Introduce a new piece of evidence not discussed in the essay"
+      ],
+      "answer": "Extend the argument to a broader significance — why does this literary interpretation matter?",
+      "explanation": "An effective conclusion goes beyond restating or summarizing. It zooms out to ask: what does this interpretation reveal about human experience, the author's world, or the reader's world today?",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "type": "mc",
+      "question": "An allusion is a literary device in which an author:",
+      "options": [
+        "Describes a setting in vivid detail",
+        "Makes an indirect reference to a person, event, myth, or other text",
+        "Compares two unlike things using 'like' or 'as'",
+        "Repeats a consonant sound at the beginning of words"
+      ],
+      "answer": "Makes an indirect reference to a person, event, myth, or other text",
+      "explanation": "Allusion enriches meaning by borrowing the associations of the referenced source — a reference to Sisyphus suggests futile, endless labor; to Eden, lost innocence or paradise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "type": "mc",
+      "question": "In Greek mythology, Prometheus is primarily associated with:",
+      "options": [
+        "Falling in love with his own reflection",
+        "Stealing fire from the gods to give to humanity and suffering eternal punishment for it",
+        "Flying too close to the sun on wax wings",
+        "Opening a box that released all the world's evils"
+      ],
+      "answer": "Stealing fire from the gods to give to humanity and suffering eternal punishment for it",
+      "explanation": "Prometheus stole fire from Olympus to give to humans, defying Zeus. As punishment, he was chained to a rock where an eagle devoured his liver daily. His myth alludes to themes of creative defiance and the cost of knowledge.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "type": "mc",
+      "question": "If a modern novelist describes a character as 'a modern-day Midas,' the allusion suggests the character:",
+      "options": [
+        "Is extremely artistic and creative",
+        "Has a golden touch — everything they pursue turns to wealth but loses human warmth",
+        "Is cursed to wander without a home",
+        "Is a musician who can charm anyone"
+      ],
+      "answer": "Has a golden touch — everything they pursue turns to wealth but loses human warmth",
+      "explanation": "King Midas was granted the wish that everything he touched turn to gold — including his food and his daughter. A Midas allusion suggests wealth or success achieved at the cost of what matters most.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "type": "mc",
+      "question": "Recognizing a classical allusion in a text is useful because it:",
+      "options": [
+        "Tells you how old the book is",
+        "Helps you understand the author's hometown",
+        "Layers additional meaning onto the text by importing associations from the referenced myth or work",
+        "Indicates the text was written for scholars only"
+      ],
+      "answer": "Layers additional meaning onto the text by importing associations from the referenced myth or work",
+      "explanation": "Allusions create economy of meaning — by referencing a familiar story, an author can invoke a whole network of themes and associations without having to explain them in full.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "type": "mc",
+      "question": "The myth of Orpheus, who descended into the underworld to retrieve his wife Eurydice but lost her by looking back, is most often used as an allusion to:",
+      "options": [
+        "The futility of political ambition",
+        "The power of music to overcome any obstacle",
+        "The tragedy of love that is lost through doubt or the inability to trust",
+        "The danger of excessive pride"
+      ],
+      "answer": "The tragedy of love that is lost through doubt or the inability to trust",
+      "explanation": "Orpheus was forbidden to look back but could not resist — losing Eurydice forever. His myth alludes to love undone by doubt, impatience, or the inability to surrender control.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "type": "mc",
+      "question": "In Greek tragedy, a character's hamartia refers to:",
+      "options": [
+        "Their greatest achievement",
+        "Their fatal flaw or error of judgment",
+        "The climax of the play",
+        "The song sung by the Chorus"
+      ],
+      "answer": "Their fatal flaw or error of judgment",
+      "explanation": "Hamartia is the characteristic weakness (most often hubris — excessive pride) or mistake in judgment that sets the tragic hero on the path to their downfall.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "type": "mc",
+      "question": "Catharsis, as Aristotle defined it in relation to Greek tragedy, is:",
+      "options": [
+        "The physical cleansing of the stage between acts",
+        "The audience's emotional purging of pity and fear through the experience of watching the tragedy",
+        "The hero's final victory over the antagonist",
+        "The chorus's final song"
+      ],
+      "answer": "The audience's emotional purging of pity and fear through the experience of watching the tragedy",
+      "explanation": "Aristotle argued in the 'Poetics' that tragedy produces catharsis — a release of pity (for the hero's suffering) and fear (that such suffering could befall anyone) — leaving the audience feeling cleansed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "type": "mc",
+      "question": "In 'Oedipus Rex,' the audience knows from the beginning that Oedipus has unknowingly killed his father and married his mother, while Oedipus does not. This is an example of:",
+      "options": [
+        "Situational irony",
+        "Verbal irony",
+        "Dramatic irony",
+        "Cosmic irony"
+      ],
+      "answer": "Dramatic irony",
+      "explanation": "Dramatic irony occurs when the audience possesses information that one or more characters do not. In 'Oedipus Rex,' the audience knows the terrible truth while Oedipus investigates the very crime he unknowingly committed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "type": "mc",
+      "question": "The Chorus in Greek tragedy serves which primary function?",
+      "options": [
+        "To narrate events the audience cannot see on stage",
+        "To represent the antagonist's perspective",
+        "To reflect communal values, comment on the action, and guide the audience's emotional response",
+        "To provide a subplot separate from the main action"
+      ],
+      "answer": "To reflect communal values, comment on the action, and guide the audience's emotional response",
+      "explanation": "The Chorus represents the community's voice — expressing conventional wisdom, warning the hero, lamenting their choices, and helping the audience process the moral weight of events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "type": "mc",
+      "question": "The central debate in 'Oedipus Rex' between fate and free will asks:",
+      "options": [
+        "Whether gods exist",
+        "Whether Oedipus is guilty of intentional murder",
+        "Whether humans can escape a destiny determined by the gods, or whether their own choices fulfill it",
+        "Whether democracy or monarchy is a better form of government"
+      ],
+      "answer": "Whether humans can escape a destiny determined by the gods, or whether their own choices fulfill it",
+      "explanation": "Oedipus's parents tried to escape the oracle's prophecy, yet their very attempts to avoid it set the events in motion. The play explores whether human agency is meaningful when fate seems predetermined.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "type": "mc",
+      "question": "The defining structural feature of the bildungsroman is:",
+      "options": [
+        "A story told in reverse chronological order",
+        "A young protagonist's psychological and moral development from naivety to maturity",
+        "A romantic plot between two adult characters",
+        "A detective investigating a series of crimes"
+      ],
+      "answer": "A young protagonist's psychological and moral development from naivety to maturity",
+      "explanation": "The bildungsroman (novel of formation) traces a young person's growth through formative experiences — loss of innocence, moral tests, self-discovery — that transform them from naïve youth to mature adult.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "type": "mc",
+      "question": "In the bildungsroman, the 'loss of innocence' typically refers to:",
+      "options": [
+        "A character making a small mistake",
+        "A character discovering that the world is more complex, unjust, or painful than they had believed",
+        "A character forgetting their childhood",
+        "A character moving to a new city"
+      ],
+      "answer": "A character discovering that the world is more complex, unjust, or painful than they had believed",
+      "explanation": "Loss of innocence in the bildungsroman is a pivotal moment — an experience that shatters the protagonist's naïve worldview and forces them to reckon with reality's complexity and moral ambiguity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "type": "mc",
+      "question": "Which of the following is the best example of a bildungsroman protagonist?",
+      "options": [
+        "An all-knowing narrator who observes events from a distance",
+        "A mature adult who reflects on a decision made years ago",
+        "A young person who begins the story sheltered and naïve and emerges with hard-won self-knowledge",
+        "A villain whose motivation is revealed in a flashback"
+      ],
+      "answer": "A young person who begins the story sheltered and naïve and emerges with hard-won self-knowledge",
+      "explanation": "The bildungsroman centers on a youthful protagonist's journey of formation — moving from innocence and ignorance through challenging experiences to a more complex, self-aware identity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "type": "mc",
+      "question": "What universal truth about adolescence do most bildungsromans explore?",
+      "options": [
+        "That young people are always wrong and adults are always right",
+        "That growing up requires confronting painful truths and making difficult choices about identity",
+        "That success depends entirely on social class",
+        "That friendship is more important than family"
+      ],
+      "answer": "That growing up requires confronting painful truths and making difficult choices about identity",
+      "explanation": "At their core, coming-of-age narratives explore the universal experience of adolescent formation — the painful but necessary process of testing one's values, confronting reality, and constructing an adult identity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "type": "mc",
+      "question": "In S.E. Hinton's 'The Outsiders,' Ponyboy's shifting understanding of the Socs and Greasers is best described as:",
+      "options": [
+        "A static character trait — he thinks the same way throughout",
+        "A bildungsroman arc — moving from a black-and-white view of class divisions to seeing shared humanity",
+        "Situational irony in the plot",
+        "A satirical commentary on gang culture"
+      ],
+      "answer": "A bildungsroman arc — moving from a black-and-white view of class divisions to seeing shared humanity",
+      "explanation": "Ponyboy begins the novel with a rigid us-vs-them worldview. Through loss and experience, he grows to recognize the shared humanity between Socs and Greasers — a classic bildungsroman transformation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "type": "mc",
+      "question": "Postcolonial literature is primarily concerned with:",
+      "options": [
+        "Stories set during World War II",
+        "The experiences, identities, and cultural legacies of peoples who lived under colonial rule",
+        "Science fiction set in colonized planets",
+        "Ancient myths from colonial empires"
+      ],
+      "answer": "The experiences, identities, and cultural legacies of peoples who lived under colonial rule",
+      "explanation": "Postcolonial literature examines the ongoing effects of colonialism on culture, identity, language, and power — giving voice to perspectives that were historically suppressed by colonial narratives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "type": "mc",
+      "question": "Chinua Achebe wrote 'Things Fall Apart' partly as a direct response to which type of colonial narrative?",
+      "options": [
+        "Romantic poetry about the English countryside",
+        "Western fiction that portrayed Africa as primitive, dark, and without culture",
+        "Greek mythology about heroic quests",
+        "American novels about the frontier"
+      ],
+      "answer": "Western fiction that portrayed Africa as primitive, dark, and without culture",
+      "explanation": "Achebe explicitly criticized Joseph Conrad's 'Heart of Darkness' for its dehumanizing portrayal of Africa. 'Things Fall Apart' was written to show the richness and complexity of Igbo culture before colonization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "type": "mc",
+      "question": "The concept of 'cultural hybridity' in postcolonial literature refers to:",
+      "options": [
+        "A character who speaks two languages",
+        "The blending of colonizer and colonized cultures to form new, complex identities",
+        "A plot that combines elements of two different genres",
+        "A novel translated from one language to another"
+      ],
+      "answer": "The blending of colonizer and colonized cultures to form new, complex identities",
+      "explanation": "Cultural hybridity (theorized by Homi Bhabha) describes the mixed, in-between identities that emerge from colonial contact — neither purely indigenous nor purely colonial, but something new and complex.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "type": "mc",
+      "question": "Ngũgĩ wa Thiong'o's decision to stop writing in English and write only in Gikuyu represents:",
+      "options": [
+        "A protest against the difficulty of English grammar",
+        "An act of cultural and political resistance — reclaiming the indigenous language as the rightful vehicle of African literature",
+        "A marketing decision to reach a local audience",
+        "A response to poor sales of his English-language novels"
+      ],
+      "answer": "An act of cultural and political resistance — reclaiming the indigenous language as the rightful vehicle of African literature",
+      "explanation": "Ngũgĩ argued in 'Decolonising the Mind' that African writers must write in African languages to truly decolonize their literature. His switch to Gikuyu was a deliberate political and cultural act of resistance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "type": "mc",
+      "question": "In 'Things Fall Apart,' the arrival of Christian missionaries most directly represents:",
+      "options": [
+        "A welcome improvement to Igbo society",
+        "The beginning of a slow, systematic dismantling of Igbo cultural, spiritual, and social structures",
+        "A neutral historical event with no cultural impact",
+        "Okonkwo's opportunity to modernize his community"
+      ],
+      "answer": "The beginning of a slow, systematic dismantling of Igbo cultural, spiritual, and social structures",
+      "explanation": "The missionaries in the novel represent the broader colonial project — first converting individuals, then undermining indigenous institutions, and ultimately replacing Igbo governance with British administration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "type": "mc",
+      "question": "Biographical criticism reads a literary text primarily by:",
+      "options": [
+        "Examining the economic class of the characters",
+        "Asking how the text portrays gender",
+        "Connecting the text to the author's own life experiences and historical context",
+        "Focusing on the reader's emotional response"
+      ],
+      "answer": "Connecting the text to the author's own life experiences and historical context",
+      "explanation": "Biographical criticism looks for connections between the author's biography — their experiences, relationships, traumas, and beliefs — and the themes, characters, and situations in their work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "type": "mc",
+      "question": "Marxist literary criticism examines a text by focusing on:",
+      "options": [
+        "The author's religious beliefs",
+        "Class structure, economic power, and how wealth and labor shape characters' lives",
+        "The psychological development of the protagonist",
+        "The reader's personal history"
+      ],
+      "answer": "Class structure, economic power, and how wealth and labor shape characters' lives",
+      "explanation": "Marxist criticism applies Karl Marx's ideas about class struggle and economic systems to literature, asking how class determines opportunity, how the wealthy exploit the poor, and what ideology the text promotes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "type": "mc",
+      "question": "Reader-response criticism holds that the meaning of a text:",
+      "options": [
+        "Is fixed permanently by the author's intention",
+        "Can only be determined by expert scholars",
+        "Is created through the interaction between the text and each individual reader",
+        "Does not exist until a film adaptation is made"
+      ],
+      "answer": "Is created through the interaction between the text and each individual reader",
+      "explanation": "Reader-response theory argues that a text has no single, fixed meaning — meaning is co-created in the reading act, shaped by each reader's experiences, values, and cultural background.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "type": "mc",
+      "question": "Which critical lens would most directly ask: 'How does the text challenge or reinforce assumptions about what women can do and be?'",
+      "options": [
+        "Marxist criticism",
+        "Biographical criticism",
+        "Historical criticism",
+        "Feminist criticism"
+      ],
+      "answer": "Feminist criticism",
+      "explanation": "Feminist criticism examines how gender operates in literature — analyzing representations of women and men, questioning patriarchal assumptions, and recovering marginalized female voices.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "type": "mc",
+      "question": "Why is it valuable to apply multiple critical lenses to the same text?",
+      "options": [
+        "Because one lens is always correct and the others are always wrong",
+        "Because each lens reveals different aspects of meaning, producing a richer, more complete understanding",
+        "Because scholars must use all lenses simultaneously to avoid bias",
+        "Because longer essays receive better grades"
+      ],
+      "answer": "Because each lens reveals different aspects of meaning, producing a richer, more complete understanding",
+      "explanation": "No single critical approach captures all of a text's meaning. Each lens illuminates certain features while leaving others in shadow. Using multiple lenses produces a more layered interpretation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "type": "mc",
+      "question": "Horatian satire is best characterized as:",
+      "options": [
+        "Bitter, angry, and morally outraged",
+        "Gentle, witty, and designed to amuse while gently mocking human folly",
+        "Focused on political assassination of specific figures",
+        "A form of parody that directly imitates another work"
+      ],
+      "answer": "Gentle, witty, and designed to amuse while gently mocking human folly",
+      "explanation": "Horatian satire (named after the Roman poet Horace) is light and humorous — it laughs at human weaknesses with affection rather than outrage, aiming to entertain and gently reform.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "type": "mc",
+      "question": "Juvenalian satire is distinguished from Horatian satire primarily by its:",
+      "options": [
+        "Use of rhyming couplets",
+        "Tendency to praise rather than criticize",
+        "Bitter, harsh tone designed to provoke moral outrage and demand serious social change",
+        "Focus on romantic relationships"
+      ],
+      "answer": "Bitter, harsh tone designed to provoke moral outrage and demand serious social change",
+      "explanation": "Juvenalian satire (named after Roman satirist Juvenal) is savage and morally indignant — targeting serious social injustices with the aim of shocking readers into demanding reform.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "type": "mc",
+      "question": "In 'A Modest Proposal,' Swift proposes eating Irish babies to solve poverty. The real target of his satire is:",
+      "options": [
+        "The Irish poor themselves",
+        "Child-rearing practices of the 18th century",
+        "British colonial indifference to the suffering of the Irish people",
+        "Overpopulation in European cities"
+      ],
+      "answer": "British colonial indifference to the suffering of the Irish people",
+      "explanation": "Swift uses the shocking, extreme 'proposal' to expose how British policies treated the Irish as less than human. The real object of attack is English exploitation of Ireland, not the Irish poor.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "type": "mc",
+      "question": "Parody as a satirical technique involves:",
+      "options": [
+        "Making an argument in favor of the thing being criticized",
+        "Imitating the style of a specific work or genre in an exaggerated way to mock it",
+        "Using understatement to minimize a serious issue",
+        "Telling a story from a non-human point of view"
+      ],
+      "answer": "Imitating the style of a specific work or genre in an exaggerated way to mock it",
+      "explanation": "Parody mimics the form, style, or conventions of a known text or genre and exaggerates them for comic or critical effect — audiences laugh at the gap between the imitation and the original.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "type": "mc",
+      "question": "Why does satire often use an ironic persona (a speaker who is not the author's real voice)?",
+      "options": [
+        "To confuse the reader about the author's identity",
+        "Because it is easier to write in a persona than in one's own voice",
+        "To create distance between the author and the critique, allowing more extreme exaggeration while implicating complicit readers",
+        "To comply with censorship laws"
+      ],
+      "answer": "To create distance between the author and the critique, allowing more extreme exaggeration while implicating complicit readers",
+      "explanation": "An ironic persona allows the satirist to say outrageous things 'seriously,' forcing readers to recognize the absurdity themselves. It also implicates readers who initially agree with the persona before realizing they have been taken in.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "type": "mc",
+      "question": "An extended literary analysis essay (800+ words) differs from a short paragraph response primarily in:",
+      "options": [
+        "Using fewer quotations",
+        "Having no thesis statement",
+        "Developing multiple lines of argument and synthesizing evidence across the text with greater depth",
+        "Being written in informal language"
+      ],
+      "answer": "Developing multiple lines of argument and synthesizing evidence across the text with greater depth",
+      "explanation": "An extended essay allows deeper exploration — multiple body paragraphs, integration of a critical lens, consideration of counterinterpretations, and a conclusion that extends beyond the text to broader significance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "type": "mc",
+      "question": "In a Socratic seminar, which behavior best demonstrates active listening?",
+      "options": [
+        "Preparing your next point while a classmate speaks",
+        "Responding to a classmate's idea directly by building on, questioning, or respectfully disagreeing with it",
+        "Waiting silently until the facilitator calls on you",
+        "Repeating your original point more loudly"
+      ],
+      "answer": "Responding to a classmate's idea directly by building on, questioning, or respectfully disagreeing with it",
+      "explanation": "Active listening in a Socratic seminar means genuinely engaging with what others say — building on their ideas, asking clarifying questions, or offering a respectful counter-interpretation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "type": "mc",
+      "question": "When writing an essay that applies a named critical lens, the writer should:",
+      "options": [
+        "Mention the lens once in the introduction and then forget about it",
+        "Apply the lens's key question consistently throughout the analysis to interpret the text",
+        "Argue that the lens is the only valid way to read the text",
+        "Replace the thesis with a definition of the critical lens"
+      ],
+      "answer": "Apply the lens's key question consistently throughout the analysis to interpret the text",
+      "explanation": "Applying a critical lens means letting its central question guide your reading and interpretation throughout the essay — not just labeling it in the introduction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "type": "mc",
+      "question": "The conclusion of an extended literary essay should ideally:",
+      "options": [
+        "Introduce new quotations not mentioned in the body",
+        "Restate the introduction paragraph word for word",
+        "Extend the argument's significance — connecting the literary interpretation to a broader human truth or contemporary relevance",
+        "List all the literary devices used in the essay"
+      ],
+      "answer": "Extend the argument's significance — connecting the literary interpretation to a broader human truth or contemporary relevance",
+      "explanation": "A strong conclusion zooms out from the specific text to ask: 'So what?' It connects the literary argument to larger questions about human experience, society, or the reader's own world.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "type": "mc",
+      "question": "When presenting a literary interpretation in a Socratic seminar, a student should be prepared to:",
+      "options": [
+        "Read their essay aloud verbatim without pausing",
+        "Defend their interpretation with textual evidence when challenged by peers",
+        "Change their interpretation immediately if anyone disagrees",
+        "Avoid making any claims that could be questioned"
+      ],
+      "answer": "Defend their interpretation with textual evidence when challenged by peers",
+      "explanation": "A Socratic seminar is a scholarly discussion, not a debate to win. Participants are expected to support their interpretations with evidence and engage thoughtfully with challenges — being open to revision but grounded in the text.",
+      "points": 1
+    }
+  ]
+}

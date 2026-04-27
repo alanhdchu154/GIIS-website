@@ -1,0 +1,1725 @@
+{
+  "slug": "organizational-behavior-communication",
+  "name": "Organizational Behavior & Communication",
+  "nameZh": "组织行为与沟通",
+  "credits": 0.5,
+  "department": "Electives",
+  "type": "Elective",
+  "description": "An introduction to how people and groups behave in organizations — motivation, team dynamics, leadership, organizational culture, change management, and effective workplace communication.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to Organizational Behavior",
+      "titleZh": "组织行为学导论",
+      "objectives": "Define organizational behavior; explain why OB matters for managers and employees; identify the three levels of analysis — individual, group, and organization.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/1-1-the-nature-of-work",
+      "readingNote": "OpenStax Organizational Behavior — Ch 1.1: The Nature of Work",
+      "videoUrl": "https://www.youtube.com/watch?v=QGpGf18pHYY",
+      "videoNote": "Crash Course Business — Organizational Behavior #1: What Is Organizational Behavior?",
+      "video2Url": "https://www.youtube.com/watch?v=2HMYIpA7GDo",
+      "video2Note": "TED-Ed — What makes a good life? Lessons from the longest study on happiness (relevance to wellbeing at work)",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2",
+      "practiceNote": "Khan Academy — Entrepreneurship & Work Fundamentals (background reading)",
+      "assignment": "Write a 1-page reflection: describe one organization you belong to (school, sports team, club). Identify at least one behavior or pattern you notice at the individual, group, and organizational level.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Individual Differences & Personality",
+      "titleZh": "个体差异与人格特质",
+      "objectives": "Describe the Big Five personality dimensions (OCEAN); discuss how Myers-Briggs types differ from the Big Five; explain how personality traits predict workplace behavior.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/2-2-personality-and-work-behavior",
+      "readingNote": "OpenStax Organizational Behavior — Ch 2.2: Personality and Work Behavior",
+      "videoUrl": "https://www.youtube.com/watch?v=b4Ly2GQvpKk",
+      "videoNote": "Crash Course Business — Personality #2: The Big Five Personality Traits",
+      "video2Url": "https://www.youtube.com/watch?v=75i5VmTI6A0",
+      "video2Note": "TED-Ed — What is the Myers-Briggs personality test?",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/lsat/lsat-lessons/critical-thinking-skills/a/inference-questions-with-quantifiers",
+      "practiceNote": "Khan Academy — Critical Thinking: Inference Practice (applied to OB readings)",
+      "assignment": "Research the Big Five personality model. For each of the five dimensions, write one workplace scenario where that trait would be an advantage and one where it could be a disadvantage.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 3,
+      "title": "Perception & Attribution",
+      "titleZh": "知觉与归因",
+      "objectives": "Identify common perceptual errors (halo effect, stereotyping, projection); apply attribution theory to explain how people interpret behavior as internal or external; recognize how first impressions affect workplace decisions.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/3-1-the-perceptual-process",
+      "readingNote": "OpenStax Organizational Behavior — Ch 3.1: The Perceptual Process",
+      "videoUrl": "https://www.youtube.com/watch?v=UB3tW8szAO0",
+      "videoNote": "Crash Course Business — Perception & Bias #3",
+      "video2Url": "https://www.youtube.com/watch?v=wupToqz1e2g",
+      "video2Note": "TED-Ed — What is the halo effect?",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/lsat/lsat-lessons/critical-thinking-skills/a/argument-evaluation",
+      "practiceNote": "Khan Academy — Argument Evaluation (bias detection in reasoning)",
+      "assignment": "Find a news article about a workplace event or hiring decision. Analyze it using attribution theory: is the behavior explained internally (dispositional) or externally (situational)? Identify at least two possible perceptual errors at play.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 4,
+      "title": "Motivation Theories",
+      "titleZh": "激励理论",
+      "objectives": "Summarize Maslow's Hierarchy of Needs, Herzberg's Two-Factor Theory, Expectancy Theory, and Self-Determination Theory; apply each theory to a real workplace scenario.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/5-1-early-theories-of-motivation",
+      "readingNote": "OpenStax Organizational Behavior — Ch 5.1–5.3: Motivation Theories",
+      "videoUrl": "https://www.youtube.com/watch?v=3g1_9d_Yx-g",
+      "videoNote": "Crash Course Business — Motivation #4: Maslow's Hierarchy & Other Theories",
+      "video2Url": "https://www.youtube.com/watch?v=u6XAPnuFjJc",
+      "video2Note": "TED — Dan Pink: The Puzzle of Motivation",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-consumer-theory/ap-marginal-utility-lesson/v/marginal-utility",
+      "practiceNote": "Khan Academy — Marginal Utility (related concept: diminishing returns on rewards)",
+      "assignment": "Choose a real organization (school, company, sports team). Write a 1.5-page memo to the manager recommending at least three specific motivational strategies. Cite at least two of the motivation theories from this module and explain why each applies.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 5,
+      "title": "Job Design & Work Engagement",
+      "titleZh": "工作设计与工作投入",
+      "objectives": "Explain Hackman & Oldham's Job Characteristics Model; define skill variety, task identity, task significance, autonomy, and feedback; distinguish between work engagement and burnout.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/6-1-work-behaviors",
+      "readingNote": "OpenStax Organizational Behavior — Ch 6.1: Work Behaviors & Job Design",
+      "videoUrl": "https://www.youtube.com/watch?v=VQqoKRhGvS0",
+      "videoNote": "Crash Course Business — Job Design & Engagement #5",
+      "video2Url": "https://www.youtube.com/watch?v=fLJsdqxnZb0",
+      "video2Note": "TED — Arianna Huffington: How to Succeed? Get More Sleep (burnout and recovery)",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/what-is-management",
+      "practiceNote": "Khan Academy — What Is Management? (context for job design decisions)",
+      "assignment": "Evaluate two jobs (one that seems engaging, one that seems repetitive) using the Job Characteristics Model. Score each on the five core dimensions (1–5 scale) and calculate the Motivating Potential Score (MPS). Recommend one redesign change for the low-MPS job.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 6,
+      "title": "Group Dynamics & Teamwork",
+      "titleZh": "群体动态与团队协作",
+      "objectives": "Describe Tuckman's five stages of team development; identify common team roles; recognize groupthink and its symptoms; apply strategies for building high-performance teams.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/9-1-work-groups-and-work-teams",
+      "readingNote": "OpenStax Organizational Behavior — Ch 9.1–9.2: Work Groups and Work Teams",
+      "videoUrl": "https://www.youtube.com/watch?v=B0bqFH5FMPM",
+      "videoNote": "Crash Course Business — Teamwork #6: Group Dynamics",
+      "video2Url": "https://www.youtube.com/watch?v=v2PaZ8Nl2xs",
+      "video2Note": "TED — Margaret Heffernan: Why It's Time to Forget the Pecking Order at Work",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/what-is-leadership",
+      "practiceNote": "Khan Academy — What Is Leadership? (context for team leadership roles)",
+      "assignment": "Think of a group project you have participated in. Write a journal entry tracing the group through Tuckman's five stages. Identify which stage was most difficult and explain what the group could have done differently.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 7,
+      "title": "Leadership in Organizations",
+      "titleZh": "组织中的领导力",
+      "objectives": "Compare transformational and transactional leadership; apply situational leadership theory; explain distributed (shared) leadership and its relevance in flat organizations.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/12-1-the-nature-of-leadership",
+      "readingNote": "OpenStax Organizational Behavior — Ch 12.1–12.3: The Nature of Leadership",
+      "videoUrl": "https://www.youtube.com/watch?v=pHi6BZJgJjM",
+      "videoNote": "Crash Course Business — Leadership #7: Transformational vs. Transactional",
+      "video2Url": "https://www.youtube.com/watch?v=SAUnCKSnmAs",
+      "video2Note": "TED-Ed — What makes a truly great leader?",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/leadership-styles",
+      "practiceNote": "Khan Academy — Leadership Styles Overview",
+      "assignment": "Research one well-known business leader (e.g., Satya Nadella, Indra Nooyi). Write a 1-page analysis: classify their leadership style, provide at least two specific examples from their leadership record, and evaluate the effectiveness of their style using one leadership theory.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 8,
+      "title": "Organizational Communication",
+      "titleZh": "组织沟通",
+      "objectives": "Distinguish formal from informal communication channels; describe common organizational communication networks; identify barriers to effective communication; demonstrate active listening techniques.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/15-1-communication-in-organizations",
+      "readingNote": "OpenStax Organizational Behavior — Ch 15.1–15.3: Communication in Organizations",
+      "videoUrl": "https://www.youtube.com/watch?v=v1MqPvfBImg",
+      "videoNote": "Crash Course Business — Communication #8: Organizational Communication",
+      "video2Url": "https://www.youtube.com/watch?v=saXfavo1OQo",
+      "video2Note": "TED — Julian Treasure: How to Speak So That People Want to Listen",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/career-content/career-content-college-and-career/communicating-at-work/v/communication-in-the-workplace",
+      "practiceNote": "Khan Academy — Communication in the Workplace",
+      "assignment": "Map the communication networks in a real or hypothetical organization (chain, wheel, circle, all-channel). Create a diagram for two different networks and write a paragraph for each explaining which situations it is best suited for and what its weaknesses are.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 9,
+      "title": "Conflict & Negotiation in Organizations",
+      "titleZh": "组织中的冲突与谈判",
+      "objectives": "Identify common sources of workplace conflict; apply the Thomas-Kilmann five conflict resolution styles; demonstrate basic negotiation strategies including BATNA and interest-based bargaining.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/14-1-conflict-in-organizations",
+      "readingNote": "OpenStax Organizational Behavior — Ch 14.1–14.2: Conflict in Organizations",
+      "videoUrl": "https://www.youtube.com/watch?v=8pO3qzVsChU",
+      "videoNote": "Crash Course Business — Conflict & Negotiation #9",
+      "video2Url": "https://www.youtube.com/watch?v=OoGnQ3QcZeU",
+      "video2Note": "TED-Ed — How to negotiate (and why it matters)",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-game-theory-and-imperfect-competition/ap-introduction-to-game-theory/v/game-theory-overview",
+      "practiceNote": "Khan Academy — Game Theory Overview (strategic thinking in negotiation)",
+      "assignment": "Role-play scenario: Two teammates disagree on who should present a project. Write a 1-page script showing two different ways the conflict is handled — one using an ineffective style and one using a constructive resolution style. Identify the styles by name and explain why one is more effective.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 10,
+      "title": "Organizational Culture",
+      "titleZh": "组织文化",
+      "objectives": "Define organizational culture and its components (values, norms, artifacts); explain how culture forms and changes; evaluate the link between culture and organizational performance; assess the concept of cultural fit.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/16-1-organizational-culture",
+      "readingNote": "OpenStax Organizational Behavior — Ch 16.1–16.3: Organizational Culture",
+      "videoUrl": "https://www.youtube.com/watch?v=CBKtFCKR0WE",
+      "videoNote": "Crash Course Business — Organizational Culture #10",
+      "video2Url": "https://www.youtube.com/watch?v=RyTQ5-SQYTo",
+      "video2Note": "TED-Ed — What is organizational culture?",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/organizational-culture",
+      "practiceNote": "Khan Academy — Organizational Culture Reading",
+      "assignment": "Select a well-known company (e.g., Google, Amazon, Patagonia). Research and write a cultural profile: describe the company's core values, visible artifacts (office design, dress code, rituals), and underlying assumptions. Then assess whether the culture supports or hinders employee performance and well-being.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 11,
+      "title": "Power & Politics in Organizations",
+      "titleZh": "组织中的权力与政治",
+      "objectives": "Identify French and Raven's five bases of power; explain organizational politics and influence tactics; evaluate ethical boundaries in the use of organizational power.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/13-1-power-and-leadership",
+      "readingNote": "OpenStax Organizational Behavior — Ch 13.1–13.2: Power and Leadership",
+      "videoUrl": "https://www.youtube.com/watch?v=M_sGXDkX3IY",
+      "videoNote": "Crash Course Business — Power & Politics #11",
+      "video2Url": "https://www.youtube.com/watch?v=0j-pLLuoarY",
+      "video2Note": "TED-Ed — The psychology of power",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-basic-economics-concepts/macro-intro-to-economics/v/introduction-to-economics",
+      "practiceNote": "Khan Academy — Introduction to Economic Incentives (applying incentive thinking to power structures)",
+      "assignment": "Describe a situation (real or fictional) where organizational power was used — once effectively and once unethically. For each situation, identify the type of power, the influence tactic used, and the outcome. Reflect on what distinguishes appropriate influence from manipulation.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 12,
+      "title": "Organizational Structure & Design",
+      "titleZh": "组织结构与设计",
+      "objectives": "Compare mechanistic and organic organizational structures; distinguish flat, hierarchical, and matrix structures; explain how structure affects communication, decision-making, and innovation.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/10-1-organizational-structures",
+      "readingNote": "OpenStax Organizational Behavior — Ch 10.1–10.3: Organizational Structures",
+      "videoUrl": "https://www.youtube.com/watch?v=sSmFMlHOECE",
+      "videoNote": "Crash Course Business — Organizational Structure #12",
+      "video2Url": "https://www.youtube.com/watch?v=E1gfbVe1Z9A",
+      "video2Note": "TED-Ed — Why hierarchy works (and when it doesn't)",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/organizational-structure",
+      "practiceNote": "Khan Academy — Organizational Structure Overview",
+      "assignment": "Draw organizational charts for two different companies: one tall/hierarchical and one flat/organic. For each, write a paragraph explaining how the structure affects: (1) how quickly decisions get made and (2) how well employees can communicate across teams.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 13,
+      "title": "Change Management",
+      "titleZh": "变革管理",
+      "objectives": "Apply Kotter's 8-Step Model for leading change; identify common sources of resistance to change; design a communication plan that supports a major organizational change initiative.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/18-1-organizational-change",
+      "readingNote": "OpenStax Organizational Behavior — Ch 18.1–18.3: Organizational Change",
+      "videoUrl": "https://www.youtube.com/watch?v=TKe-Ur7a-sE",
+      "videoNote": "Crash Course Business — Change Management #13: Kotter's 8 Steps",
+      "video2Url": "https://www.youtube.com/watch?v=hVe9bDgtP6I",
+      "video2Note": "TED-Ed — Why do humans resist change? The psychology behind it",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/managing-organizational-change",
+      "practiceNote": "Khan Academy — Managing Organizational Change",
+      "assignment": "A school is switching from paper gradebooks to an entirely digital platform. Apply Kotter's 8-Step Model to this scenario: for each step, write two to three specific actions the school leadership should take to manage this change successfully.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 14,
+      "title": "The Future of Work",
+      "titleZh": "未来的工作方式",
+      "objectives": "Evaluate the organizational challenges of remote and hybrid work; assess the impact of AI and automation on jobs and workplace culture; explain why diversity, equity, and inclusion (DEI) initiatives matter for organizational effectiveness.",
+      "readingUrl": "https://openstax.org/books/organizational-behavior/pages/1-5-characteristics-of-the-contemporary-business-environment",
+      "readingNote": "OpenStax Organizational Behavior — Ch 1.5: The Contemporary Business Environment",
+      "videoUrl": "https://www.youtube.com/watch?v=RUwS1197FQo",
+      "videoNote": "Crash Course Business — The Future of Work #14: AI, Remote Work, and Inclusion",
+      "video2Url": "https://www.youtube.com/watch?v=2VBR8LePqew",
+      "video2Note": "TED — Priya Parker: How to Have Better Conversations (remote and in-person)",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/the-future-of-business",
+      "practiceNote": "Khan Academy — The Future of Business and Work",
+      "assignment": "Write a 1.5-page opinion essay: In your view, what is the single most important challenge facing organizations in the next ten years — AI/automation, remote-work culture, or building inclusive teams? Use at least two pieces of evidence from this module to support your argument.",
+      "estimatedHrs": 3.5
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best defines organizational behavior (OB)?",
+      "options": [
+        "The study of how organizations manage their finances",
+        "The study of how people and groups act within organizations",
+        "The study of organizational charts and reporting structures",
+        "The study of laws governing workplace safety"
+      ],
+      "answer": "The study of how people and groups act within organizations",
+      "explanation": "OB is a field that investigates the impact of individuals, groups, and structure on behavior within organizations, with the goal of improving organizational effectiveness.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The three levels of analysis in organizational behavior are:",
+      "options": [
+        "Individual, group, and organizational",
+        "Employee, manager, and executive",
+        "Input, process, and output",
+        "Personality, perception, and motivation"
+      ],
+      "answer": "Individual, group, and organizational",
+      "explanation": "OB examines behavior at the individual level (personality, motivation), group level (team dynamics, leadership), and organizational level (culture, structure).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "According to the Big Five personality model, which trait reflects a tendency to be organized, dependable, and goal-directed?",
+      "options": [
+        "Openness to Experience",
+        "Neuroticism",
+        "Conscientiousness",
+        "Agreeableness"
+      ],
+      "answer": "Conscientiousness",
+      "explanation": "Conscientiousness (the 'C' in OCEAN) captures self-discipline, organization, and reliability — consistently one of the strongest Big Five predictors of job performance.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "The 'halo effect' in perception refers to:",
+      "options": [
+        "Judging someone based on the group they belong to",
+        "Letting one positive trait color your overall impression of a person",
+        "Attributing behavior to external causes",
+        "The tendency to remember first impressions more than later ones"
+      ],
+      "answer": "Letting one positive trait color your overall impression of a person",
+      "explanation": "The halo effect occurs when a single positive characteristic (e.g., physical attractiveness or a good first presentation) causes us to assume the person is positive in other, unrelated areas.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Attribution theory proposes that when we observe behavior, we try to determine whether it is caused by:",
+      "options": [
+        "Cultural norms or organizational rules",
+        "Internal (dispositional) or external (situational) factors",
+        "Conscious or unconscious motives",
+        "Reinforcement or punishment"
+      ],
+      "answer": "Internal (dispositional) or external (situational) factors",
+      "explanation": "Attribution theory (Kelley, Weiner) examines how people explain the causes of behavior — attributing it to stable personal traits (internal) or circumstances (external).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "In Maslow's Hierarchy of Needs, which need must be satisfied before 'esteem needs' can become motivating?",
+      "options": [
+        "Self-actualization needs",
+        "Safety needs",
+        "Social/belonging needs",
+        "Physiological needs"
+      ],
+      "answer": "Social/belonging needs",
+      "explanation": "Maslow's hierarchy (bottom to top): Physiological → Safety → Social/Belonging → Esteem → Self-Actualization. Lower-order needs must be sufficiently met before higher-order needs motivate behavior.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "According to Herzberg's Two-Factor Theory, which of the following is a 'motivator' (not just a hygiene factor)?",
+      "options": [
+        "Salary and pay",
+        "Safe working conditions",
+        "Recognition and achievement",
+        "Company policy"
+      ],
+      "answer": "Recognition and achievement",
+      "explanation": "Herzberg found that motivators (achievement, recognition, the work itself, responsibility, advancement) drive job satisfaction, while hygiene factors (pay, conditions, policy) only prevent dissatisfaction.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "The Job Characteristics Model identifies autonomy as important because it increases an employee's sense of:",
+      "options": [
+        "Pay equity",
+        "Social belonging",
+        "Experienced responsibility for outcomes",
+        "Skill variety"
+      ],
+      "answer": "Experienced responsibility for outcomes",
+      "explanation": "In Hackman & Oldham's model, autonomy leads to the psychological state of 'experienced responsibility for work outcomes,' which in turn drives motivation, satisfaction, and performance.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Tuckman's model of team development includes which of the following stages in order?",
+      "options": [
+        "Forming, Norming, Storming, Performing, Adjourning",
+        "Forming, Storming, Norming, Performing, Adjourning",
+        "Storming, Forming, Performing, Norming, Adjourning",
+        "Forming, Storming, Performing, Norming, Adjourning"
+      ],
+      "answer": "Forming, Storming, Norming, Performing, Adjourning",
+      "explanation": "Tuckman's five stages proceed: Forming (orientation), Storming (conflict), Norming (cohesion), Performing (productive work), Adjourning (dissolution).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Groupthink is most likely to occur when a team:",
+      "options": [
+        "Has high diversity of perspectives",
+        "Regularly invites outside critique",
+        "Places harmony and consensus above critical evaluation",
+        "Has members with different personality types"
+      ],
+      "answer": "Places harmony and consensus above critical evaluation",
+      "explanation": "Groupthink arises when the desire for group cohesion overrides realistic appraisal of alternatives; symptoms include illusion of invulnerability, self-censorship, and pressure on dissenters.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Transformational leadership primarily motivates followers by:",
+      "options": [
+        "Offering tangible rewards for meeting performance targets",
+        "Inspiring a shared vision and appealing to higher ideals",
+        "Closely monitoring tasks and correcting deviations",
+        "Applying strict rules and procedures"
+      ],
+      "answer": "Inspiring a shared vision and appealing to higher ideals",
+      "explanation": "Transformational leaders inspire followers to transcend self-interest for the collective good, stimulate intellectual growth, and create a compelling vision — contrasted with transactional leaders who use reward/punishment.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Situational Leadership Theory suggests that the best leadership style depends on:",
+      "options": [
+        "The leader's personality type",
+        "The follower's readiness and competence level",
+        "The size of the organization",
+        "The industry the organization operates in"
+      ],
+      "answer": "The follower's readiness and competence level",
+      "explanation": "Situational Leadership (Hersey & Blanchard) argues leaders should adapt their style (directing, coaching, supporting, delegating) to match follower development level — task competence and commitment.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "short",
+      "question": "Explain the difference between internal and external attribution. Give one workplace example of each, and describe one error people commonly make when using attribution.",
+      "options": null,
+      "answer": "Internal attribution assigns behavior to personal traits (e.g., 'She succeeded because she is talented'). External attribution assigns behavior to situational factors (e.g., 'He failed because the project requirements were unclear'). The fundamental attribution error is the tendency to overestimate internal causes and underestimate situational ones when explaining others' behavior.",
+      "explanation": "A complete answer defines both attribution types with clear workplace examples and correctly names (and briefly explains) at least one common attribution error such as the fundamental attribution error or self-serving bias.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Describe Expectancy Theory. Name its three components and explain how a manager could use this theory to improve employee motivation.",
+      "options": null,
+      "answer": "Expectancy Theory (Vroom) states motivation = Expectancy × Instrumentality × Valence. Expectancy: belief that effort leads to performance. Instrumentality: belief that performance leads to a reward. Valence: value the employee places on the reward. A manager can improve motivation by ensuring employees have the skills/training to perform (expectancy), creating clear links between performance and rewards (instrumentality), and offering rewards employees actually value (valence).",
+      "explanation": "A complete answer correctly names and explains all three components and provides practical, specific managerial actions tied to each component.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Which Big Five personality dimension is most closely associated with creativity, curiosity, and a willingness to try new experiences?",
+      "options": [
+        "Conscientiousness",
+        "Extraversion",
+        "Openness to Experience",
+        "Agreeableness"
+      ],
+      "answer": "Openness to Experience",
+      "explanation": "Openness to Experience captures imagination, curiosity, aesthetic sensitivity, and intellectual flexibility — traits strongly linked to creative thinking and adaptability in the workplace.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is an example of the 'fundamental attribution error'?",
+      "options": [
+        "Blaming a traffic jam for being late to work",
+        "Assuming a coworker who missed a deadline is lazy, without considering that they may have had a family emergency",
+        "Crediting your own success to your hard work",
+        "Noticing that a colleague's accent matches their cultural background"
+      ],
+      "answer": "Assuming a coworker who missed a deadline is lazy, without considering that they may have had a family emergency",
+      "explanation": "The fundamental attribution error is the tendency to overemphasize dispositional (internal) explanations and underestimate situational (external) factors when explaining others' behavior.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Self-Determination Theory argues that intrinsic motivation is supported by satisfying which three psychological needs?",
+      "options": [
+        "Safety, esteem, and self-actualization",
+        "Autonomy, competence, and relatedness",
+        "Expectancy, instrumentality, and valence",
+        "Achievement, power, and affiliation"
+      ],
+      "answer": "Autonomy, competence, and relatedness",
+      "explanation": "Deci and Ryan's Self-Determination Theory identifies autonomy (sense of volition), competence (feeling effective), and relatedness (connected to others) as the three innate psychological needs that support intrinsic motivation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "In Hackman & Oldham's Job Characteristics Model, which core job dimension gives workers the feeling that their work matters and has a significant impact?",
+      "options": [
+        "Skill variety",
+        "Autonomy",
+        "Task significance",
+        "Feedback"
+      ],
+      "answer": "Task significance",
+      "explanation": "Task significance — the degree to which a job has a substantial impact on the lives of other people (inside or outside the organization) — produces the psychological state of 'experienced meaningfulness.'",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "A team in the 'Storming' stage would most likely exhibit:",
+      "options": [
+        "High productivity and clear role division",
+        "Polite, get-to-know-you interactions",
+        "Conflict over roles, decisions, and leadership",
+        "Reflection and farewell activities"
+      ],
+      "answer": "Conflict over roles, decisions, and leadership",
+      "explanation": "In the Storming stage, initial enthusiasm fades and interpersonal conflicts emerge as members compete for status, challenge the leader, and struggle to agree on goals and working methods.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Which communication network is most efficient for simple, routine tasks because one central person controls all information flow?",
+      "options": [
+        "Circle",
+        "All-channel",
+        "Chain",
+        "Wheel"
+      ],
+      "answer": "Wheel",
+      "explanation": "In a wheel network, one central hub person communicates with all others but they cannot communicate with each other directly. This is fast and efficient for simple tasks but limits creativity and satisfaction.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of French and Raven's bases of power derives from expertise and specialized knowledge?",
+      "options": [
+        "Legitimate power",
+        "Referent power",
+        "Expert power",
+        "Reward power"
+      ],
+      "answer": "Expert power",
+      "explanation": "Expert power comes from possessing specialized knowledge, skills, or information that others value and need — it does not depend on formal position.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "An organization with a flat structure is characterized by:",
+      "options": [
+        "Many levels of management and narrow spans of control",
+        "Few levels of management and wide spans of control",
+        "Functional departments with strict reporting chains",
+        "A dual reporting structure for each employee"
+      ],
+      "answer": "Few levels of management and wide spans of control",
+      "explanation": "Flat (organic) organizations have few hierarchical layers, wide spans of control, and decentralized decision-making — enabling faster communication and greater employee autonomy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The first step in Kotter's 8-Step Change Model is:",
+      "options": [
+        "Creating a guiding coalition",
+        "Developing a vision for change",
+        "Establishing a sense of urgency",
+        "Generating short-term wins"
+      ],
+      "answer": "Establishing a sense of urgency",
+      "explanation": "Kotter's model begins by making clear why change is necessary and urgent — without this, employees tend to maintain the status quo.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Which Thomas-Kilmann conflict resolution style is high in both assertiveness and cooperativeness — seeking a solution that fully satisfies all parties?",
+      "options": [
+        "Avoiding",
+        "Accommodating",
+        "Compromising",
+        "Collaborating"
+      ],
+      "answer": "Collaborating",
+      "explanation": "The collaborating style (win-win) involves working with the other party to find a solution that fully meets both parties' concerns — it requires significant time and openness but produces the most durable outcomes.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Organizational culture is most accurately described as:",
+      "options": [
+        "The formal rules and policies written in an employee handbook",
+        "The shared values, beliefs, and assumptions that guide behavior in an organization",
+        "The organizational chart that shows who reports to whom",
+        "The financial performance targets set by senior leadership"
+      ],
+      "answer": "The shared values, beliefs, and assumptions that guide behavior in an organization",
+      "explanation": "Organizational culture consists of deep-level assumptions and values (often implicit) that shape how members perceive, think, and behave — visible in artifacts, espoused values, and basic assumptions (Schein's model).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which of the following best describes a 'grapevine' in organizational communication?",
+      "options": [
+        "The official chain-of-command communication path",
+        "A digital newsletter sent to all employees",
+        "The informal communication network through which rumors and gossip travel",
+        "The weekly team meeting agenda"
+      ],
+      "answer": "The informal communication network through which rumors and gossip travel",
+      "explanation": "The grapevine is an informal communication network that operates outside official channels — it is fast and carries emotional content, but can also spread inaccurate information.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "In the context of negotiation, BATNA stands for:",
+      "options": [
+        "Best Alternative To a Negotiated Agreement",
+        "Balanced Approach To Negotiating All parties",
+        "Basic Argument for The Negotiation Advantage",
+        "Bilateral Agreement Through Negotiation and Arbitration"
+      ],
+      "answer": "Best Alternative To a Negotiated Agreement",
+      "explanation": "BATNA (Fisher & Ury, Getting to Yes) is the course of action a party will take if negotiations fail — knowing your BATNA determines your reservation point and negotiating power.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Remote and hybrid work arrangements primarily challenge organizations in which of the following areas?",
+      "options": [
+        "Reducing operational costs",
+        "Maintaining team cohesion, communication, and organizational culture",
+        "Attracting highly skilled technical employees",
+        "Complying with environmental regulations"
+      ],
+      "answer": "Maintaining team cohesion, communication, and organizational culture",
+      "explanation": "Research consistently shows that distance work strains informal communication, weakens interpersonal trust, and makes it harder to transmit and reinforce organizational culture.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "A matrix organizational structure is unique because:",
+      "options": [
+        "It has no managers and relies entirely on self-managed teams",
+        "Employees report to both a functional manager and a project manager simultaneously",
+        "It groups all employees by geography only",
+        "Decision-making is centralized at the very top of the hierarchy"
+      ],
+      "answer": "Employees report to both a functional manager and a project manager simultaneously",
+      "explanation": "A matrix structure overlays functional and project-based reporting lines, enabling resource flexibility across projects — but it can create role conflict and power struggles between managers.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Referent power — one of French and Raven's five bases — is derived from:",
+      "options": [
+        "The ability to control rewards and resources",
+        "Holding a formal title or position",
+        "Admiration and identification: others want to be like the powerholder",
+        "Specialized technical knowledge"
+      ],
+      "answer": "Admiration and identification: others want to be like the powerholder",
+      "explanation": "Referent power arises from personal charisma, likability, and the desire of others to identify with or emulate the individual — it is the foundation of charismatic leadership.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which of the following is a symptom of groupthink?",
+      "options": [
+        "Encouraging devil's advocate roles in discussions",
+        "Frequently re-evaluating group assumptions",
+        "The illusion of invulnerability and shared over-optimism",
+        "Actively seeking outside expert opinions"
+      ],
+      "answer": "The illusion of invulnerability and shared over-optimism",
+      "explanation": "Groupthink symptoms include the illusion of invulnerability (excessive optimism), collective rationalization, belief in the group's inherent morality, stereotyping outsiders, and self-censorship.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "An organization that is described as 'mechanistic' would most likely have:",
+      "options": [
+        "Loosely defined roles, flat hierarchies, and decentralized decisions",
+        "High employee autonomy and flexible job descriptions",
+        "Rigid rules, clear hierarchies, centralized authority, and narrow spans of control",
+        "Informal communication and project-based team structures"
+      ],
+      "answer": "Rigid rules, clear hierarchies, centralized authority, and narrow spans of control",
+      "explanation": "Mechanistic structures (Burns & Stalker) are highly formalized and centralized — effective in stable, predictable environments but slower to adapt to change compared to organic structures.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Diversity, equity, and inclusion (DEI) initiatives benefit organizations primarily by:",
+      "options": [
+        "Reducing the need for training programs",
+        "Lowering overall compensation costs",
+        "Broadening perspectives, improving problem-solving, and increasing access to talent",
+        "Standardizing employee behavior and cultural norms"
+      ],
+      "answer": "Broadening perspectives, improving problem-solving, and increasing access to talent",
+      "explanation": "Research shows diverse and inclusive teams generate more innovative solutions, avoid blind spots, and attract a wider talent pool — contributing to sustained competitive advantage.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Describe Kotter's 8-Step Change Model. Choose any four steps and explain specifically what a school principal would do at each of those steps when introducing a new all-digital grading system.",
+      "options": null,
+      "answer": "Kotter's 8 steps: (1) Create urgency, (2) Build guiding coalition, (3) Develop vision, (4) Communicate the vision, (5) Empower broad-based action, (6) Generate short-term wins, (7) Sustain acceleration, (8) Institute change. Example application for a school: Step 1 — the principal shares data showing grading errors and time wasted on paper. Step 3 — a clear vision is articulated: 'All grades accessible to students and parents in real time.' Step 5 — IT training is provided to remove barriers for less tech-confident teachers. Step 6 — the first department to go fully digital is publicly recognized.",
+      "explanation": "A complete answer names all 8 steps (or at least the 4 chosen) and provides specific, realistic actions a school principal would take — not generic descriptions.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "Compare transformational and transactional leadership. Give a specific example of each style in action, and explain which style you think would be more effective for managing a creative team working on a long-term innovation project. Justify your answer.",
+      "options": null,
+      "answer": "Transformational leadership: inspires followers through vision, intellectual stimulation, and individualized consideration (e.g., a CEO who rallies the team around a mission to make education accessible globally). Transactional leadership: motivates through contingent rewards and management by exception (e.g., a supervisor who promises bonuses for hitting weekly quotas and corrects employees who miss targets). For a creative innovation team, transformational leadership is typically more effective because intrinsic motivation, psychological safety, and purpose-driven work drive creativity better than external rewards alone.",
+      "explanation": "A complete answer correctly defines both styles, provides distinct and appropriate examples, and gives a reasoned, evidence-linked justification for the chosen style in the innovation context.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Organizational behavior (OB) is primarily concerned with:",
+      "options": [
+        "Marketing strategies for growing a business",
+        "How people and groups behave in organizations",
+        "Financial accounting and budgeting",
+        "Legal compliance in the workplace"
+      ],
+      "answer": "How people and groups behave in organizations",
+      "explanation": "OB studies individual, group, and organizational factors that influence behavior — with the goal of improving organizational effectiveness and employee well-being.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which is NOT one of the three levels of analysis in OB?",
+      "options": [
+        "Individual",
+        "Group",
+        "Market",
+        "Organizational"
+      ],
+      "answer": "Market",
+      "explanation": "The three levels are individual, group, and organizational. 'Market' is a unit of analysis in economics and marketing, not in OB.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "A manager who studies OB would most likely use the knowledge to:",
+      "options": [
+        "Design financial statements",
+        "Understand and predict employee behavior",
+        "Develop marketing campaigns",
+        "Write legal contracts"
+      ],
+      "answer": "Understand and predict employee behavior",
+      "explanation": "OB provides frameworks for understanding why people behave as they do at work, helping managers motivate employees, resolve conflict, and improve performance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Team dynamics and group cohesion are analyzed at which OB level?",
+      "options": [
+        "Individual",
+        "Group",
+        "Organizational",
+        "Societal"
+      ],
+      "answer": "Group",
+      "explanation": "Group-level OB analysis focuses on how teams interact, communicate, develop norms, and make decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Organizational culture and structure are best analyzed at which OB level?",
+      "options": [
+        "Individual",
+        "Group",
+        "Organizational",
+        "Environmental"
+      ],
+      "answer": "Organizational",
+      "explanation": "The organizational level of OB analysis examines firm-wide phenomena such as culture, structure, climate, and change processes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "What does the 'O' in the Big Five OCEAN model stand for?",
+      "options": [
+        "Optimism",
+        "Openness to Experience",
+        "Objectivity",
+        "Orderliness"
+      ],
+      "answer": "Openness to Experience",
+      "explanation": "OCEAN: Openness to Experience, Conscientiousness, Extraversion, Agreeableness, Neuroticism.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Which Big Five trait is the strongest overall predictor of job performance across occupations?",
+      "options": [
+        "Extraversion",
+        "Agreeableness",
+        "Conscientiousness",
+        "Neuroticism"
+      ],
+      "answer": "Conscientiousness",
+      "explanation": "Meta-analyses consistently show that conscientiousness (dependability, organization, goal-directedness) predicts job performance across virtually all job types.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Myers-Briggs Type Indicator (MBTI) differs from the Big Five in that MBTI:",
+      "options": [
+        "Uses a continuous trait scale rather than categories",
+        "Classifies people into distinct types rather than measuring traits on a spectrum",
+        "Has stronger scientific validation as a predictor of job performance",
+        "Is based on Maslow's Hierarchy of Needs"
+      ],
+      "answer": "Classifies people into distinct types rather than measuring traits on a spectrum",
+      "explanation": "MBTI places people into 16 discrete types (e.g., INTJ, ENFP). The Big Five measures each trait on a continuous scale and has substantially stronger empirical support for predicting workplace behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "A person who scores high on Neuroticism is most likely to:",
+      "options": [
+        "Remain calm and stable under pressure",
+        "Be highly organized and punctual",
+        "Experience anxiety, moodiness, and emotional instability",
+        "Seek out new and creative challenges"
+      ],
+      "answer": "Experience anxiety, moodiness, and emotional instability",
+      "explanation": "High Neuroticism is associated with negative emotional reactivity — including anxiety, irritability, and vulnerability to stress — which can affect workplace relationships and performance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "High Agreeableness in the workplace is most associated with:",
+      "options": [
+        "Creative and unconventional thinking",
+        "Cooperative behavior, trust, and concern for others",
+        "High discipline and goal achievement",
+        "Risk-taking and entrepreneurial behavior"
+      ],
+      "answer": "Cooperative behavior, trust, and concern for others",
+      "explanation": "Agreeable individuals tend to be cooperative, empathetic, and conflict-averse — strengths in team-based and customer-facing roles, though very high agreeableness may hinder assertiveness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Stereotyping in the workplace is an example of:",
+      "options": [
+        "Accurate performance evaluation",
+        "A perceptual shortcut that groups people by category",
+        "Applying attribution theory correctly",
+        "Internal attribution"
+      ],
+      "answer": "A perceptual shortcut that groups people by category",
+      "explanation": "Stereotyping assigns traits to individuals based on the group they belong to — it is a cognitive shortcut that often leads to biased and inaccurate judgments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "The 'self-serving bias' in attribution means people tend to:",
+      "options": [
+        "Credit successes to external factors and blame failures on themselves",
+        "Credit successes to themselves and blame failures on external factors",
+        "Attribute all behavior to situational causes",
+        "Underestimate how much luck influences outcomes"
+      ],
+      "answer": "Credit successes to themselves and blame failures on external factors",
+      "explanation": "Self-serving bias protects self-esteem: we take credit internally for good outcomes ('I worked hard') and externally for bad ones ('The project conditions were impossible').",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "A manager who assumes an employee's entire work performance is poor because they made one visible mistake is demonstrating the:",
+      "options": [
+        "Recency effect",
+        "Halo effect",
+        "Horn effect",
+        "Projection"
+      ],
+      "answer": "Horn effect",
+      "explanation": "The horn effect (reverse halo) is when one negative trait or event causes an overall negative assessment of a person, distorting objective evaluation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "First impressions in the workplace are significant primarily because they:",
+      "options": [
+        "Are always accurate reflections of personality",
+        "Activate schemas that influence all subsequent information about that person",
+        "Can be completely revised after a single meeting",
+        "Have no effect on hiring decisions"
+      ],
+      "answer": "Activate schemas that influence all subsequent information about that person",
+      "explanation": "First impressions create mental schemas (cognitive frameworks) that act as filters — subsequent information is often interpreted through the lens of that initial impression, even when contradictory.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Kelley's attribution theory suggests we assess 'consensus' when making attributions. Consensus refers to:",
+      "options": [
+        "Whether everyone agrees with the decision",
+        "Whether other people in the same situation behave the same way",
+        "Whether the behavior is consistent over time",
+        "Whether the behavior is unique to this specific task"
+      ],
+      "answer": "Whether other people in the same situation behave the same way",
+      "explanation": "Kelley's covariation model uses consensus (do others act the same way?), consistency (does this person act the same way over time?), and distinctiveness (does the person act differently in other situations?) to determine attribution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "According to Maslow, which need is at the very top of the hierarchy?",
+      "options": [
+        "Esteem",
+        "Safety",
+        "Self-actualization",
+        "Belonging"
+      ],
+      "answer": "Self-actualization",
+      "explanation": "Self-actualization — realizing one's full potential and becoming the best version of oneself — sits at the pinnacle of Maslow's five-level hierarchy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "In Herzberg's Two-Factor Theory, hygiene factors are described as:",
+      "options": [
+        "Factors that create job satisfaction when present",
+        "Factors whose absence causes dissatisfaction, but whose presence does not create satisfaction",
+        "Factors identical to motivators",
+        "Factors related only to intrinsic rewards"
+      ],
+      "answer": "Factors whose absence causes dissatisfaction, but whose presence does not create satisfaction",
+      "explanation": "Hygiene factors (salary, working conditions, job security, company policy) prevent dissatisfaction when adequate — but they do not drive active motivation or satisfaction the way motivators do.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Expectancy Theory's 'instrumentality' component refers to the belief that:",
+      "options": [
+        "Effort will lead to successful performance",
+        "Performance will lead to a desired reward",
+        "The reward is personally valuable",
+        "The task is intrinsically interesting"
+      ],
+      "answer": "Performance will lead to a desired reward",
+      "explanation": "Instrumentality is the perceived probability that performing well will actually result in the promised outcome (reward or recognition) — broken promises destroy instrumentality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Self-Determination Theory distinguishes intrinsic motivation from extrinsic motivation. Intrinsic motivation means:",
+      "options": [
+        "Doing something to earn money or avoid punishment",
+        "Doing something because it is inherently interesting and satisfying",
+        "Doing something because others expect it",
+        "Doing something to meet a deadline"
+      ],
+      "answer": "Doing something because it is inherently interesting and satisfying",
+      "explanation": "Intrinsic motivation arises from within — curiosity, enjoyment, and personal meaning. SDT research shows it produces higher creativity, persistence, and well-being than extrinsic motivation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "McClelland's Theory of Needs identifies three core motivators. Which need drives people to influence and lead others?",
+      "options": [
+        "Need for Achievement (nAch)",
+        "Need for Affiliation (nAff)",
+        "Need for Power (nPow)",
+        "Need for Autonomy"
+      ],
+      "answer": "Need for Power (nPow)",
+      "explanation": "McClelland's nPow reflects the desire to make an impact, control, and influence others — high nPow individuals are often drawn to leadership and managerial roles.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The Job Characteristics Model was developed by:",
+      "options": [
+        "Maslow and Herzberg",
+        "Hackman and Oldham",
+        "Tuckman and Vroom",
+        "French and Raven"
+      ],
+      "answer": "Hackman and Oldham",
+      "explanation": "Richard Hackman and Greg Oldham developed the Job Characteristics Model in the 1970s, identifying five core job dimensions that produce three critical psychological states.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Which core job dimension refers to the degree to which a job requires a variety of different skills and activities?",
+      "options": [
+        "Task identity",
+        "Skill variety",
+        "Autonomy",
+        "Feedback"
+      ],
+      "answer": "Skill variety",
+      "explanation": "Skill variety is the extent to which a job requires diverse skills and talents — a monotonous, repetitive job has low skill variety and produces low experienced meaningfulness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Work engagement is best defined as:",
+      "options": [
+        "The number of hours an employee works per week",
+        "A positive, fulfilling work-related state of vigor, dedication, and absorption",
+        "An employee's compliance with company rules",
+        "The frequency with which an employee attends meetings"
+      ],
+      "answer": "A positive, fulfilling work-related state of vigor, dedication, and absorption",
+      "explanation": "Schaufeli's engagement model defines engaged employees as energetic (vigor), involved and enthusiastic (dedication), and deeply concentrated on their work (absorption).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Burnout is primarily caused by:",
+      "options": [
+        "Too much autonomy and decision-making authority",
+        "Chronic workplace stress that is not successfully managed",
+        "High skill variety and frequent feedback",
+        "Strong social support from colleagues"
+      ],
+      "answer": "Chronic workplace stress that is not successfully managed",
+      "explanation": "Burnout (Maslach) results from prolonged exposure to demanding job conditions — characterized by exhaustion, cynicism, and reduced professional efficacy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Task identity — one of the five job dimensions — means that a job:",
+      "options": [
+        "Has a significant impact on the lives of others",
+        "Requires the worker to complete a whole and identifiable piece of work from beginning to end",
+        "Provides direct and clear information about performance effectiveness",
+        "Allows workers to make decisions about how to do the work"
+      ],
+      "answer": "Requires the worker to complete a whole and identifiable piece of work from beginning to end",
+      "explanation": "Task identity creates a sense of ownership and pride — for example, a craftsperson who builds a chair entirely from scratch has higher task identity than an assembly-line worker who only attaches legs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "In which stage of Tuckman's model do team members get to know each other and roles are still unclear?",
+      "options": [
+        "Storming",
+        "Norming",
+        "Forming",
+        "Performing"
+      ],
+      "answer": "Forming",
+      "explanation": "In the Forming stage, team members are polite and tentative, trying to understand the group's purpose, structure, and leadership — conflict is minimal because people are still getting acquainted.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "A key symptom of groupthink is 'mindguarding,' which means:",
+      "options": [
+        "Appointing someone to play devil's advocate in meetings",
+        "Group members actively shield the group from information that challenges its decisions",
+        "Rotating leadership roles to prevent dominance",
+        "Using anonymous voting to reduce social pressure"
+      ],
+      "answer": "Group members actively shield the group from information that challenges its decisions",
+      "explanation": "Mindguards protect the group from dissenting views — they filter outside information and discourage members who express doubts, reinforcing the illusion of unanimity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Which strategy is most effective for preventing groupthink?",
+      "options": [
+        "Increasing group size to over 20 members",
+        "Assigning a devil's advocate to challenge assumptions",
+        "Removing all deadlines so the group can think carefully",
+        "Ensuring the group leader speaks first to set direction"
+      ],
+      "answer": "Assigning a devil's advocate to challenge assumptions",
+      "explanation": "A devil's advocate deliberately argues against the group's preferred option, surfacing overlooked risks — Janis recommended this as one of the most practical groupthink countermeasures.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Social loafing in teams refers to:",
+      "options": [
+        "Individuals working harder when part of a group than alone",
+        "The tendency for individuals to exert less effort when working in a group than alone",
+        "Groups making riskier decisions than individuals",
+        "Teams spending too much time on social activities"
+      ],
+      "answer": "The tendency for individuals to exert less effort when working in a group than alone",
+      "explanation": "Social loafing (Ringelmann effect) occurs because individual accountability is diffused in groups — clear individual roles and accountability reduce it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "In Tuckman's model, the 'Norming' stage is characterized by:",
+      "options": [
+        "Conflict over leadership and roles",
+        "High productivity with clearly defined goals",
+        "The team dissolving after completing its task",
+        "The development of cohesion, shared norms, and agreed roles"
+      ],
+      "answer": "The development of cohesion, shared norms, and agreed roles",
+      "explanation": "In the Norming stage, the team resolves earlier conflict, establishes working agreements, and builds trust — setting the foundation for the productive Performing stage.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Transactional leadership primarily motivates through:",
+      "options": [
+        "Inspiring followers with a compelling vision",
+        "Contingent rewards and corrective action",
+        "Empowering followers to lead themselves",
+        "Building deep personal relationships with each follower"
+      ],
+      "answer": "Contingent rewards and corrective action",
+      "explanation": "Transactional leaders use exchange relationships — rewarding good performance and correcting (or punishing) poor performance — effective for routine, structured tasks.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Which leadership style adapts to the follower's development level, moving from 'directing' for novices to 'delegating' for experts?",
+      "options": [
+        "Transformational leadership",
+        "Laissez-faire leadership",
+        "Situational leadership",
+        "Servant leadership"
+      ],
+      "answer": "Situational leadership",
+      "explanation": "Situational Leadership (Hersey & Blanchard) prescribes directing for low-development followers, coaching for those with growing competence, supporting for the capable-but-uncertain, and delegating for the highly competent and confident.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Distributed (shared) leadership means:",
+      "options": [
+        "The CEO delegates tasks downward through a chain of command",
+        "Leadership functions are spread across multiple team members rather than concentrated in one person",
+        "A single leader manages multiple teams simultaneously",
+        "Leadership is outsourced to external consultants"
+      ],
+      "answer": "Leadership functions are spread across multiple team members rather than concentrated in one person",
+      "explanation": "Distributed leadership emerges when different individuals take the lead for different tasks or phases — common in flat organizations, agile teams, and knowledge-intensive work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Which leadership approach is most associated with high levels of employee creativity and innovation?",
+      "options": [
+        "Autocratic leadership",
+        "Transactional leadership",
+        "Transformational leadership",
+        "Laissez-faire leadership"
+      ],
+      "answer": "Transformational leadership",
+      "explanation": "Transformational leaders stimulate creative thinking, encourage risk-taking, and create psychological safety — conditions consistently linked to innovation in research.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Individualized consideration — a component of transformational leadership — means the leader:",
+      "options": [
+        "Sets individual performance targets and monitors achievement",
+        "Treats each follower as a unique individual, providing mentoring and coaching tailored to their needs",
+        "Assigns individual tasks rather than group projects",
+        "Evaluates each employee using a standardized performance rubric"
+      ],
+      "answer": "Treats each follower as a unique individual, providing mentoring and coaching tailored to their needs",
+      "explanation": "Individualized consideration (Bass & Avolio) is one of the four 'I's of transformational leadership — leaders act as mentors and coaches, attending to each follower's personal development needs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Formal communication in an organization refers to:",
+      "options": [
+        "Communication that follows officially sanctioned channels and reporting lines",
+        "Messages sent via email between friends at work",
+        "Rumors and gossip circulating through the office",
+        "Face-to-face communication only"
+      ],
+      "answer": "Communication that follows officially sanctioned channels and reporting lines",
+      "explanation": "Formal communication travels through prescribed organizational channels — upward (employee to supervisor), downward (management directives), and horizontal (peers in different departments).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Which communication barrier occurs when a receiver interprets a message differently from what the sender intended due to different cultural backgrounds?",
+      "options": [
+        "Information overload",
+        "Filtering",
+        "Semantic differences",
+        "Channel noise"
+      ],
+      "answer": "Semantic differences",
+      "explanation": "Semantic barriers arise when words carry different meanings for sender and receiver — cultural background, jargon, and technical vocabulary can all create semantic gaps.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Active listening involves:",
+      "options": [
+        "Preparing your response while the other person speaks",
+        "Giving full attention, paraphrasing, and asking clarifying questions",
+        "Agreeing with everything the speaker says",
+        "Speaking quickly to keep the conversation moving"
+      ],
+      "answer": "Giving full attention, paraphrasing, and asking clarifying questions",
+      "explanation": "Active listening requires suspending judgment, providing nonverbal acknowledgment, reflecting back what is heard, and asking questions to confirm understanding.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "In an 'all-channel' communication network, information flows:",
+      "options": [
+        "Only from the top down through a chain of command",
+        "Through a single central hub person",
+        "Freely among all group members in every direction",
+        "In a sequential circle from person to person"
+      ],
+      "answer": "Freely among all group members in every direction",
+      "explanation": "All-channel networks allow every member to communicate with every other member — providing maximum information sharing and high member satisfaction, ideal for complex, creative tasks.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "'Information overload' as a communication barrier means:",
+      "options": [
+        "Employees receive too little information to make decisions",
+        "The grapevine carries more information than official channels",
+        "Recipients receive more information than they can effectively process",
+        "Managers filter out too much information before sharing it"
+      ],
+      "answer": "Recipients receive more information than they can effectively process",
+      "explanation": "Information overload — exacerbated by email, messaging apps, and data-rich reports — causes people to selectively ignore messages, reducing the effectiveness of organizational communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Which Thomas-Kilmann conflict style is low in both assertiveness and cooperativeness — the person neither pursues their own goals nor helps others achieve theirs?",
+      "options": [
+        "Collaborating",
+        "Competing",
+        "Avoiding",
+        "Accommodating"
+      ],
+      "answer": "Avoiding",
+      "explanation": "The avoiding style (unassertive and uncooperative) involves sidestepping or postponing conflict — appropriate for trivial issues, but problematic for important decisions that require resolution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Interest-based bargaining (integrative negotiation) differs from positional bargaining in that it:",
+      "options": [
+        "Focuses on the demands each party states publicly",
+        "Seeks to understand underlying needs and create solutions that satisfy both parties",
+        "Requires a neutral arbitrator to impose a decision",
+        "Uses only monetary offers to reach agreement"
+      ],
+      "answer": "Seeks to understand underlying needs and create solutions that satisfy both parties",
+      "explanation": "Integrative (interest-based) negotiation focuses on underlying interests rather than stated positions — often enabling win-win solutions that positional bargaining misses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Task conflict in organizations (conflict over work content and goals) can sometimes be beneficial because it:",
+      "options": [
+        "Increases personal animosity among team members",
+        "Encourages critical examination of ideas and higher-quality decisions",
+        "Reduces the need for communication",
+        "Eliminates the need for a team leader"
+      ],
+      "answer": "Encourages critical examination of ideas and higher-quality decisions",
+      "explanation": "Moderate task conflict stimulates debate, surfaces diverse perspectives, and prevents groupthink — unlike relationship conflict, which primarily harms team functioning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "A person's BATNA in a negotiation is important because it:",
+      "options": [
+        "Sets the upper limit on any offer they will make",
+        "Determines the minimum acceptable outcome and their walk-away point",
+        "Forces the other party to make the first offer",
+        "Eliminates all forms of compromise"
+      ],
+      "answer": "Determines the minimum acceptable outcome and their walk-away point",
+      "explanation": "Your BATNA is your best outside option if talks fail — a strong BATNA gives you leverage; a weak BATNA may force concessions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "The 'compromising' conflict resolution style is best described as:",
+      "options": [
+        "One party fully satisfying the other's needs at the expense of their own",
+        "Both parties giving up something to reach an acceptable middle-ground solution",
+        "Both parties fully satisfying their mutual needs",
+        "One party overpowering the other to win"
+      ],
+      "answer": "Both parties giving up something to reach an acceptable middle-ground solution",
+      "explanation": "Compromising is moderately assertive and cooperative — each side concedes something, reaching a 'good enough' agreement, though it may leave value on the table compared to a collaborative solution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "According to Edgar Schein's model of organizational culture, what are 'artifacts'?",
+      "options": [
+        "The deepest underlying beliefs and assumptions, often unconscious",
+        "The values that the organization publicly states it believes in",
+        "The visible, tangible elements of culture such as dress code, office layout, and rituals",
+        "The formal strategic goals of the organization"
+      ],
+      "answer": "The visible, tangible elements of culture such as dress code, office layout, and rituals",
+      "explanation": "Schein's three levels of culture: artifacts (observable), espoused values (stated beliefs), and basic underlying assumptions (taken-for-granted beliefs). Artifacts are the most visible but least informative layer.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Organizational culture most directly affects:",
+      "options": [
+        "The physical location of company offices",
+        "Employee behavior, decision-making norms, and how work gets done",
+        "The company's tax obligations",
+        "The technical skills required for each job"
+      ],
+      "answer": "Employee behavior, decision-making norms, and how work gets done",
+      "explanation": "Culture operates as an invisible guide — shaping what behaviors are rewarded or punished, how decisions are made, and what the 'right' way to do things looks like.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Cultural change in an organization is generally considered difficult because:",
+      "options": [
+        "Culture is too visible and easy for employees to understand",
+        "Basic assumptions are deeply held and largely unconscious, making them resistant to change",
+        "Leaders have little influence over organizational culture",
+        "Strong cultures are legally protected from change"
+      ],
+      "answer": "Basic assumptions are deeply held and largely unconscious, making them resistant to change",
+      "explanation": "Schein argues that the deepest level — basic assumptions — is taken for granted and rarely questioned, making fundamental cultural change slow and requiring sustained leadership commitment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Which type of organizational culture, characterized by innovation, risk-taking, and creative freedom, is most aligned with a start-up environment?",
+      "options": [
+        "Hierarchy culture",
+        "Market culture",
+        "Adhocracy culture",
+        "Clan culture"
+      ],
+      "answer": "Adhocracy culture",
+      "explanation": "In the Competing Values Framework (Quinn), adhocracy culture values flexibility, creativity, and experimentation — ideal for start-ups and rapidly changing industries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "'Cultural fit' during hiring refers to:",
+      "options": [
+        "Ensuring all new hires have the exact same technical skills",
+        "Assessing whether a candidate's values and behaviors align with the organization's culture",
+        "Hiring only people from the same national background as the founding team",
+        "Evaluating candidates based solely on academic credentials"
+      ],
+      "answer": "Assessing whether a candidate's values and behaviors align with the organization's culture",
+      "explanation": "Cultural fit assesses value alignment — but overemphasizing it can reduce diversity. Many organizations now use 'culture add' (does this person bring something new?) alongside 'culture fit.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Legitimate power is based on:",
+      "options": [
+        "Personal charisma and likeability",
+        "Expertise and specialized knowledge",
+        "The formal authority granted by an organizational position or title",
+        "Control over rewards such as bonuses and promotions"
+      ],
+      "answer": "The formal authority granted by an organizational position or title",
+      "explanation": "Legitimate power (French & Raven) derives from the formal role a person holds — a manager has legitimate power because of their position, not their personal qualities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Coercive power involves:",
+      "options": [
+        "The ability to provide bonuses and promotions",
+        "The ability to punish or threaten negative consequences",
+        "Admiration and personal identification",
+        "Specialized technical expertise"
+      ],
+      "answer": "The ability to punish or threaten negative consequences",
+      "explanation": "Coercive power relies on the ability to impose unpleasant outcomes (demotion, dismissal, public criticism) — it creates compliance through fear but can harm motivation and trust.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Which influence tactic involves making someone feel obligated to comply by first doing them a favor?",
+      "options": [
+        "Legitimating",
+        "Reciprocity (ingratiation)",
+        "Coalition building",
+        "Pressure"
+      ],
+      "answer": "Reciprocity (ingratiation)",
+      "explanation": "The reciprocity principle (Cialdini) creates a sense of obligation to return favors — often used in organizational influence, sales, and negotiation to lower resistance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Organizational politics refers to:",
+      "options": [
+        "Activities strictly required by an employee's formal job description",
+        "Actions people take to acquire and use power to pursue their own agenda in the organization",
+        "Official governance policies set by the board of directors",
+        "A company's stance on government policy and legislation"
+      ],
+      "answer": "Actions people take to acquire and use power to pursue their own agenda in the organization",
+      "explanation": "Organizational politics involves self-interested behaviors not formally sanctioned — such as forming alliances, impression management, and information control — which can be constructive or destructive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Expert power is typically strongest when:",
+      "options": [
+        "Many people in the organization share the same knowledge",
+        "The knowledge is rare, critical, and not easily replaceable",
+        "The organization is large and highly bureaucratic",
+        "The expert also holds a senior formal title"
+      ],
+      "answer": "The knowledge is rare, critical, and not easily replaceable",
+      "explanation": "Expert power is amplified by scarcity — a data scientist with unique AI skills in a company dependent on AI has enormous influence regardless of their formal position.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "An organic organizational structure is best suited for:",
+      "options": [
+        "Stable, predictable environments where efficiency is paramount",
+        "Dynamic, uncertain environments requiring rapid adaptation and innovation",
+        "Military and government organizations with strict command and control",
+        "Manufacturing plants focused on cost reduction"
+      ],
+      "answer": "Dynamic, uncertain environments requiring rapid adaptation and innovation",
+      "explanation": "Organic structures (low formalization, decentralized decisions, flexible roles) thrive in turbulent environments where quick adaptation is more important than efficiency.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "A 'span of control' refers to:",
+      "options": [
+        "The number of direct reports a manager is responsible for",
+        "The geographic range over which a company operates",
+        "The number of products a company sells",
+        "The level of decision-making authority held by frontline employees"
+      ],
+      "answer": "The number of direct reports a manager is responsible for",
+      "explanation": "Span of control determines how many subordinates a manager directly supervises — wide spans produce flatter organizations; narrow spans produce taller, more hierarchical ones.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "In a matrix structure, a major potential disadvantage is:",
+      "options": [
+        "Employees having too much specialization",
+        "Role conflict from reporting to two managers simultaneously",
+        "Lack of project-specific focus",
+        "Excessive centralization of decision-making"
+      ],
+      "answer": "Role conflict from reporting to two managers simultaneously",
+      "explanation": "The dual reporting lines of a matrix structure can create role ambiguity, conflicting priorities, and power struggles between functional and project managers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Decentralization in organizational design means:",
+      "options": [
+        "All important decisions are made at the top of the hierarchy",
+        "Decision-making authority is distributed to lower levels of the organization",
+        "All departments are located in one central office",
+        "The organization has only one product line"
+      ],
+      "answer": "Decision-making authority is distributed to lower levels of the organization",
+      "explanation": "Decentralization pushes decision-making down the hierarchy — enabling faster local responses and higher employee empowerment, but requiring strong coordination mechanisms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Compared to a tall, hierarchical structure, a flat organization typically produces:",
+      "options": [
+        "Slower communication and more bureaucracy",
+        "More rigid job roles and narrower spans of control",
+        "Faster communication, more autonomy, and less management overhead",
+        "Greater specialization and stricter adherence to procedures"
+      ],
+      "answer": "Faster communication, more autonomy, and less management overhead",
+      "explanation": "Flat structures reduce management layers — enabling information to travel faster, employees to make more decisions autonomously, and the organization to react more quickly to change.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Step 1 of Kotter's 8-Step Change Model requires leaders to:",
+      "options": [
+        "Celebrate early victories to build momentum",
+        "Create a sense of urgency about the need for change",
+        "Develop a detailed implementation timeline",
+        "Empower employees by removing bureaucratic barriers"
+      ],
+      "answer": "Create a sense of urgency about the need for change",
+      "explanation": "Without urgency, employees have little motivation to abandon comfortable routines — Kotter argues that at least 75% of management must feel that the status quo is unsustainable before change can succeed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Resistance to change in organizations most commonly stems from:",
+      "options": [
+        "Employees who are too experienced",
+        "Fear of the unknown, loss of control, or concern about competence in the new system",
+        "Organizations growing too quickly",
+        "Managers who support the change too enthusiastically"
+      ],
+      "answer": "Fear of the unknown, loss of control, or concern about competence in the new system",
+      "explanation": "Resistance is a natural psychological response — people resist when they fear job loss, skill obsolescence, disrupted routines, or loss of status under the new system.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Which Kotter step involves celebrating early successes to sustain commitment to the change?",
+      "options": [
+        "Step 3: Develop a vision and strategy",
+        "Step 5: Enable action by removing barriers",
+        "Step 6: Generate short-term wins",
+        "Step 8: Anchor changes in the culture"
+      ],
+      "answer": "Step 6: Generate short-term wins",
+      "explanation": "Short-term wins demonstrate that the change is working, reward early adopters, silence critics, and sustain momentum — critical because major change efforts often take years.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Effective change communication should:",
+      "options": [
+        "Be delivered once at the start of the initiative and then left to employees to absorb",
+        "Be repeated through multiple channels, address employee concerns, and clearly explain the 'why'",
+        "Focus exclusively on the technical details of the new system",
+        "Be limited to senior leadership to prevent rumors"
+      ],
+      "answer": "Be repeated through multiple channels, address employee concerns, and clearly explain the 'why'",
+      "explanation": "Research shows that single-channel, one-time communications fail — effective change communication is multi-channel, two-way, empathetic, and consistently reinforces the rationale and vision.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "The final step in Kotter's model — 'anchoring changes in the culture' — is important because:",
+      "options": [
+        "It marks the official end of the project timeline",
+        "It ensures new behaviors become embedded in norms and systems, preventing regression",
+        "It allows managers to stop monitoring the change process",
+        "It triggers automatic financial bonuses for all employees"
+      ],
+      "answer": "It ensures new behaviors become embedded in norms and systems, preventing regression",
+      "explanation": "Without cultural anchoring, organizations frequently revert to old ways once pressure from the change initiative relaxes — success must be linked to the culture through stories, values, and hiring/promotion decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Which of the following is a well-documented challenge of remote work for organizational culture?",
+      "options": [
+        "Employees having too much structure and oversight",
+        "Difficulty transmitting tacit cultural norms and maintaining informal social bonds",
+        "Increased face-to-face communication between departments",
+        "Reduced use of digital communication tools"
+      ],
+      "answer": "Difficulty transmitting tacit cultural norms and maintaining informal social bonds",
+      "explanation": "Remote work weakens the spontaneous, informal interactions (hallway conversations, shared meals) through which organizational culture is transmitted — leaders must deliberately create virtual substitutes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "AI and automation are most likely to displace jobs that involve:",
+      "options": [
+        "Complex ethical judgment and emotional intelligence",
+        "Creative problem-solving and interdisciplinary collaboration",
+        "Routine, rule-based, and predictable tasks",
+        "High-level strategic planning and vision-setting"
+      ],
+      "answer": "Routine, rule-based, and predictable tasks",
+      "explanation": "Research (Frey & Osborne, 2013; McKinsey Global Institute) shows automation disproportionately impacts repetitive, structured work — while tasks requiring creativity, social skills, and judgment are more resistant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Psychological safety in the workplace, particularly important for hybrid and remote teams, means:",
+      "options": [
+        "Employees feel physically safe from hazards in their work environment",
+        "Team members can speak up, share ideas, and make mistakes without fear of punishment or ridicule",
+        "Workers are insured against occupational accidents",
+        "Employees do not experience any stress or pressure"
+      ],
+      "answer": "Team members can speak up, share ideas, and make mistakes without fear of punishment or ridicule",
+      "explanation": "Amy Edmondson's research shows psychological safety is the #1 predictor of team learning and innovation — critical for distributed teams where trust is harder to build than in co-located environments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Diversity, equity, and inclusion (DEI) initiatives benefit organizations primarily by:",
+      "options": [
+        "Reducing the total number of employees needed",
+        "Standardizing behavior and reducing individualism",
+        "Broadening perspectives, reducing blind spots, and attracting a wider talent pool",
+        "Decreasing the need for conflict resolution processes"
+      ],
+      "answer": "Broadening perspectives, reducing blind spots, and attracting a wider talent pool",
+      "explanation": "Diverse and inclusive organizations consistently outperform less diverse peers on innovation, problem-solving, and profitability — McKinsey's Diversity Wins (2020) found strong correlations between inclusion and financial performance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "The concept of 'hybrid work' refers to:",
+      "options": [
+        "Employees who hold two different job titles simultaneously",
+        "A work arrangement combining some in-office days with some remote workdays",
+        "Hiring a mix of full-time and contract employees",
+        "Companies that operate in both manufacturing and service sectors"
+      ],
+      "answer": "A work arrangement combining some in-office days with some remote workdays",
+      "explanation": "Hybrid work has become the dominant model in knowledge-work industries post-2020, requiring organizations to redesign meeting norms, office space, and communication practices to support both in-person and remote employees equitably.",
+      "points": 1
+    }
+  ]
+}

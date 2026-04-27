@@ -1,0 +1,1595 @@
+{
+  "slug": "english-i",
+  "name": "English I",
+  "nameZh": "英语一",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "Foundations of English language arts — reading literary and informational texts, grammar, vocabulary, and writing across narrative, descriptive, expository, and argumentative modes.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Reading Comprehension Strategies",
+      "titleZh": "阅读理解策略",
+      "objectives": "Identify main idea and supporting details; make inferences from text; recognize common text structures; summarize literary and informational passages accurately.",
+      "readingUrl": "https://www.khanacademy.org/ela/cc-2nd-reading-foundations/cc-2nd-reading-informational-text/a/main-idea-and-supporting-details-informational-text",
+      "readingNote": "Khan Academy — Main Idea and Supporting Details in Informational Text",
+      "videoUrl": "https://www.youtube.com/watch?v=T2vHdnEWaos",
+      "videoNote": "Crash Course Study Skills — Reading Assignments (strategies for comprehension)",
+      "video2Url": "https://www.khanacademy.org/humanities/grammar/grammar-reading/a/making-inferences",
+      "video2Note": "Khan Academy — Making Inferences from Text",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-tell-tale-heart",
+      "practiceNote": "CommonLit — 'The Tell-Tale Heart' by Edgar Allan Poe (guided reading with questions)",
+      "assignment": "Read one short informational article and one short story of your choice from CommonLit. For each: (1) write a one-paragraph summary in your own words, (2) identify the main idea and three supporting details, (3) make two inferences supported with text evidence, and (4) identify the text structure used.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 2,
+      "title": "Parts of Speech & Grammar Foundations",
+      "titleZh": "词类与语法基础",
+      "objectives": "Identify and correctly use the eight parts of speech — nouns, pronouns, verbs, adjectives, adverbs, prepositions, conjunctions, and interjections — in sentences.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/parts_of_speech_overview.html",
+      "readingNote": "Purdue OWL — Parts of Speech Overview",
+      "videoUrl": "https://www.youtube.com/watch?v=7c8pSNHPHiE",
+      "videoNote": "Crash Course English Language — The Parts of Speech",
+      "video2Url": "https://www.khanacademy.org/humanities/grammar/partsofspeech",
+      "video2Note": "Khan Academy — Parts of Speech unit (nouns, verbs, adjectives, adverbs, pronouns)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/partsofspeech/the-noun/e/recognizing-nouns",
+      "practiceNote": "Khan Academy — Parts of Speech Practice Exercises",
+      "assignment": "Write 10 original sentences (at least one per part of speech). Then label every word in each sentence with its part of speech. Finally, find a paragraph from a book or article you are reading and annotate each word with its part of speech.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 3,
+      "title": "Sentence Structure & Syntax",
+      "titleZh": "句子结构与句法",
+      "objectives": "Identify and write simple, compound, complex, and compound-complex sentences; recognize and correct sentence fragments and run-on sentences; use appropriate conjunctions and punctuation.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/sentences/index.html",
+      "readingNote": "Purdue OWL — Sentence Structure (simple, compound, complex, compound-complex)",
+      "videoUrl": "https://www.youtube.com/watch?v=ukm2zxMBfAs",
+      "videoNote": "Crash Course English Language — Sentence Types and Structure",
+      "video2Url": "https://www.khanacademy.org/humanities/grammar/syntax-sentences-and-clauses",
+      "video2Note": "Khan Academy — Syntax: Sentences and Clauses unit",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/syntax-sentences-and-clauses/sentences/e/identifying-simple-and-compound-sentences",
+      "practiceNote": "Khan Academy — Identifying Simple, Compound, and Complex Sentences Practice",
+      "assignment": "Write 5 examples of each sentence type (simple, compound, complex, compound-complex) on topics of your choice. Then revise 10 provided fragments and run-ons into correct sentences. Explain what made each original sentence incorrect.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 4,
+      "title": "Vocabulary in Context & Word Study",
+      "titleZh": "语境词汇与词语研究",
+      "objectives": "Use context clues to determine word meanings; analyze Greek and Latin roots, prefixes, and suffixes to decode unfamiliar words; distinguish between connotation and denotation.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/word_choice/index.html",
+      "readingNote": "Purdue OWL — Word Choice: Connotation and Denotation",
+      "videoUrl": "https://www.youtube.com/watch?v=rLKbkOC_9_g",
+      "videoNote": "Crash Course English Language — Connotation and Denotation",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-informational-texts/x3db8f6a7e7a5c715:determining-word-meaning/v/word-meaning-and-context-clues",
+      "video2Note": "Khan Academy — Word Meaning and Context Clues",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-informational-texts/x3db8f6a7e7a5c715:determining-word-meaning/e/vocabulary-in-context",
+      "practiceNote": "Khan Academy — Vocabulary in Context Practice",
+      "assignment": "Choose 15 unfamiliar words from your current reading. For each: (1) write the sentence from the text, (2) use context clues to infer the meaning, (3) identify any roots/prefixes/suffixes, (4) look up the dictionary definition, and (5) write a sentence using the word with a positive vs. negative connotation.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Narrative Writing",
+      "titleZh": "叙事写作",
+      "objectives": "Understand story structure (exposition, rising action, climax, falling action, resolution); identify and apply point of view; use narrative techniques such as dialogue, pacing, and description; plan and draft a personal narrative.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/index.html",
+      "readingNote": "Purdue OWL — The Writing Process (planning, drafting, revising for narrative)",
+      "videoUrl": "https://www.youtube.com/watch?v=5cn32B1tVhw",
+      "videoNote": "Crash Course Literature — Story Structure and Plot",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:narrative-techniques/v/point-of-view",
+      "video2Note": "Khan Academy — Point of View in Narrative Writing",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-road-not-taken",
+      "practiceNote": "CommonLit — 'The Road Not Taken' by Robert Frost (model for narrative perspective)",
+      "assignment": "Write a personal narrative of at least 500 words about a meaningful experience. Include: a clear story arc (all 5 plot stages), first-person point of view, at least three instances of dialogue, sensory details, and a reflection on what the experience meant to you. Submit a pre-writing outline with your draft.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 6,
+      "title": "Descriptive Writing",
+      "titleZh": "描述性写作",
+      "objectives": "Use precise sensory details (sight, sound, smell, taste, touch) to create vivid descriptions; employ figurative language including simile, metaphor, and personification effectively.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/index.html",
+      "readingNote": "Purdue OWL — Descriptive Writing Strategies",
+      "videoUrl": "https://www.youtube.com/watch?v=5I4dSBTuUOA",
+      "videoNote": "Crash Course Literature — Figurative Language: Simile, Metaphor, and Personification",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:figurative-language/v/similes-metaphors-and-analogies",
+      "video2Note": "Khan Academy — Similes, Metaphors, and Analogies",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-scarlet-ibis",
+      "practiceNote": "CommonLit — 'The Scarlet Ibis' by James Hurst (model of descriptive language)",
+      "assignment": "Write two descriptive paragraphs (each at least 150 words): one describing a place and one describing a person. Each paragraph must include at least two similes, one metaphor, one instance of personification, and details from at least three of the five senses. Underline and label each figurative language device.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 7,
+      "title": "Short Story Analysis",
+      "titleZh": "短篇小说分析",
+      "objectives": "Analyze the elements of fiction: plot (stages), character (protagonist, antagonist, motivation), setting (time, place, atmosphere), conflict (internal vs. external), and theme (universal message).",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-lottery",
+      "readingNote": "CommonLit — 'The Lottery' by Shirley Jackson (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=qY_hKVqHFE0",
+      "videoNote": "Crash Course Literature — How to Analyze a Short Story",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:analyzing-character/v/character-analysis",
+      "video2Note": "Khan Academy — Character Analysis and Development",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-gift-of-the-magi",
+      "practiceNote": "CommonLit — 'The Gift of the Magi' by O. Henry (annotated with discussion questions)",
+      "assignment": "Read 'The Lottery' by Shirley Jackson (available on CommonLit). Write a 400–500 word literary analysis that identifies: (1) each stage of the plot, (2) the protagonist and antagonist with their motivations, (3) the setting and its role in the story, (4) the central conflict (type and description), and (5) at least two themes with supporting evidence from the text.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 8,
+      "title": "Poetry: Forms & Interpretation",
+      "titleZh": "诗歌：形式与解读",
+      "objectives": "Identify elements of poetry including rhyme scheme, meter, stanza, tone, and imagery; analyze lyric and narrative poems; interpret figurative language and theme in poetry.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/creative_writing/poetry/index.html",
+      "readingNote": "Purdue OWL — Introduction to Poetry: Forms and Elements",
+      "videoUrl": "https://www.youtube.com/watch?v=JwhouCNq-Fc",
+      "videoNote": "Crash Course Literature — Poetry, Rhyme, and Meter",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:poetry-analysis/v/analyzing-tone-and-mood-in-poetry",
+      "video2Note": "Khan Academy — Analyzing Tone and Mood in Poetry",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-road-not-taken",
+      "practiceNote": "CommonLit — 'The Road Not Taken' by Robert Frost and 'O Captain! My Captain!' by Walt Whitman",
+      "assignment": "Analyze two poems of your choice (at least one must be a lyric poem and one a narrative poem). For each poem write a 200–300 word analysis covering: rhyme scheme (labelled ABAB etc.), type and effect of meter, tone and how it shifts, at least two examples of imagery, and the central theme. Include the poem text with your annotations.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 9,
+      "title": "Drama & Theater Texts",
+      "titleZh": "戏剧与剧本文本",
+      "objectives": "Read and interpret a play script; understand stage directions and their purpose; analyze dialogue as character and plot development; identify dramatic irony and its effect on the audience.",
+      "readingUrl": "https://www.commonlit.org/en/texts/a-raisin-in-the-sun-act-i",
+      "readingNote": "CommonLit — Excerpt from 'A Raisin in the Sun' by Lorraine Hansberry (Act I)",
+      "videoUrl": "https://www.youtube.com/watch?v=7cIbHDG5rFg",
+      "videoNote": "Crash Course Theater — Introduction to Reading Drama and Plays",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:drama-and-theater/v/dramatic-irony",
+      "video2Note": "Khan Academy — Dramatic Irony: Definition and Examples",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-miracle-worker",
+      "practiceNote": "CommonLit — Excerpt from 'The Miracle Worker' by William Gibson",
+      "assignment": "Read the assigned excerpt from 'A Raisin in the Sun.' Write a 350–450 word response that: (1) explains what the stage directions reveal about setting and mood, (2) analyzes how dialogue reveals character, (3) identifies one example of dramatic irony and explains the effect on the audience, and (4) compares how reading a play differs from reading a short story.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 10,
+      "title": "Novel Study: Character & Theme",
+      "titleZh": "小说研究：人物与主题",
+      "objectives": "Trace character development across a novel; distinguish static from dynamic characters; identify and analyze major themes; use textual evidence to support literary analysis.",
+      "readingUrl": "https://www.commonlit.org/en/texts/flowers-for-algernon",
+      "readingNote": "CommonLit — 'Flowers for Algernon' by Daniel Keyes (short story version, full text)",
+      "videoUrl": "https://www.youtube.com/watch?v=L5Ls5HJiAgg",
+      "videoNote": "Crash Course Literature — Character Development and Theme",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:analyzing-character/v/static-vs-dynamic-characters",
+      "video2Note": "Khan Academy — Static vs. Dynamic Characters",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:theme/e/identifying-theme",
+      "practiceNote": "Khan Academy — Identifying Theme Practice",
+      "assignment": "Read 'Flowers for Algernon' (short story version). Write a 500-word character analysis essay on Charlie Gordon: (1) trace his development from beginning to end with at least four quoted examples, (2) classify him as static or dynamic and justify, (3) identify two major themes and explain how Charlie's journey illustrates each, and (4) explain what the author might be saying about intelligence and humanity.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 11,
+      "title": "Argumentative Writing & Evidence",
+      "titleZh": "议论性写作与证据",
+      "objectives": "Understand the structure of an argument (claim, evidence, reasoning); write a clear thesis statement; incorporate and cite evidence; address counterarguments and write a rebuttal.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "readingNote": "Purdue OWL — Argumentative Essays: Structure and Strategy",
+      "videoUrl": "https://www.youtube.com/watch?v=nLMnzBZLRKY",
+      "videoNote": "Crash Course English Language — Argumentative Writing",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/v/writing-a-claim-and-thesis",
+      "video2Note": "Khan Academy — Writing a Claim and Thesis Statement",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/e/identifying-claims-and-evidence",
+      "practiceNote": "Khan Academy — Identifying Claims and Evidence Practice",
+      "assignment": "Write a 4–5 paragraph argumentative essay on a topic of your choice (e.g., school uniforms, social media age limits, year-round school). Include: a thesis statement, two body paragraphs each with a claim + two pieces of evidence + reasoning, one counterargument paragraph with a rebuttal, and a conclusion. Underline your thesis and circle your evidence.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 12,
+      "title": "Expository & Informational Writing",
+      "titleZh": "说明性与信息性写作",
+      "objectives": "Write expository essays using compare/contrast, cause/effect, and problem/solution organizational structures; use appropriate transitions; maintain formal, objective tone.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/expository_essays.html",
+      "readingNote": "Purdue OWL — Expository Essays: Types and Structure",
+      "videoUrl": "https://www.youtube.com/watch?v=_9bwZ2n7CK8",
+      "videoNote": "Crash Course English Language — Expository and Informational Writing",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:informative-explanatory-writing/v/compare-contrast-essay-structure",
+      "video2Note": "Khan Academy — Compare and Contrast Essay Structure",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/transition_words_and_phrases.html",
+      "practiceNote": "Purdue OWL — Transition Words and Phrases for Expository Writing",
+      "assignment": "Write three short expository paragraphs (150 words each), one using each structure: (1) compare/contrast two books, films, or historical events you have studied, (2) cause/effect of a social or natural phenomenon, (3) problem/solution for a school or community issue. Each paragraph must include at least three appropriate transition words, which you should underline.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 13,
+      "title": "Research Skills & MLA Basics",
+      "titleZh": "研究技能与MLA基础",
+      "objectives": "Evaluate sources for credibility using CRAAP criteria; distinguish paraphrasing from quoting; incorporate in-text citations; format a Works Cited page in MLA style.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_general_format.html",
+      "readingNote": "Purdue OWL — MLA General Format and Works Cited Guide",
+      "videoUrl": "https://www.youtube.com/watch?v=unFsl6THsq8",
+      "videoNote": "Crash Course — Navigating Digital Information (evaluating sources)",
+      "video2Url": "https://www.youtube.com/watch?v=KKDkNjBhFAw",
+      "video2Note": "Purdue OWL YouTube — MLA 9th Edition: In-Text Citations and Works Cited",
+      "practiceUrl": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_page_books.html",
+      "practiceNote": "Purdue OWL — MLA Works Cited: Books, Articles, and Websites (with examples)",
+      "assignment": "Research a topic of your choice (minimum 3 sources: one book/ebook, one website, one article). Write a 300-word informational paragraph that paraphrases at least two sources and directly quotes at least one, all with correct MLA in-text citations. Attach a properly formatted MLA Works Cited page with all three sources.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 14,
+      "title": "Revision, Editing & Style",
+      "titleZh": "修改、编辑与写作风格",
+      "objectives": "Apply revision strategies at the content, organization, and sentence levels; proofread for grammar and mechanics errors; distinguish style choices from grammatical errors; conduct productive peer editing using a rubric.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html",
+      "readingNote": "Purdue OWL — Proofreading and Revision Strategies",
+      "videoUrl": "https://www.youtube.com/watch?v=7UeEjclYmKQ",
+      "videoNote": "Crash Course English Language — Revision and Editing Strategies",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:the-writing-process/v/revision-strategies",
+      "video2Note": "Khan Academy — Revision Strategies for Strong Writing",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/grammar/common_errors/index.html",
+      "practiceNote": "Purdue OWL — Common Grammar and Mechanical Errors to Catch When Editing",
+      "assignment": "Take the personal narrative you wrote in Module 5 and put it through a full revision cycle: (1) revise for content and organization (add/move/cut details), (2) revise for sentence variety (vary lengths and types), (3) proofread for grammar/mechanics errors and list every correction made, (4) exchange with a classmate and complete a peer-editing form covering clarity, evidence, grammar, and style. Submit both your original draft and final revised version.",
+      "estimatedHrs": 4.0
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which strategy involves identifying what a text is mostly about, stated in one or two sentences?",
+      "options": ["Inference", "Summarizing", "Identifying main idea", "Analyzing text structure"],
+      "answer": "Identifying main idea",
+      "explanation": "The main idea is the central point of a passage, stated concisely. Summarizing covers the whole passage; inference draws conclusions not stated directly.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "A reader concludes that a character feels guilty based on the character's nervous behavior, even though guilt is never stated. This is an example of:",
+      "options": ["Finding the main idea", "Making an inference", "Identifying text structure", "Summarizing"],
+      "answer": "Making an inference",
+      "explanation": "An inference is a conclusion drawn from text evidence plus background knowledge, not stated explicitly in the text.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "In the sentence 'The exhausted hikers slowly climbed the steep mountain,' the word 'slowly' is a(n):",
+      "options": ["Adjective", "Noun", "Adverb", "Preposition"],
+      "answer": "Adverb",
+      "explanation": "'Slowly' modifies the verb 'climbed,' describing how the action is performed. Words that modify verbs are adverbs.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is a compound sentence?",
+      "options": [
+        "She ran to the store.",
+        "Although it was raining, she went outside.",
+        "She wanted coffee, but the cafe was closed.",
+        "Running through the park, she saw a deer."
+      ],
+      "answer": "She wanted coffee, but the cafe was closed.",
+      "explanation": "A compound sentence contains two independent clauses joined by a coordinating conjunction (FANBOYS). 'She wanted coffee' and 'the cafe was closed' are both independent clauses joined by 'but.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "The word 'incredible' contains the prefix 'in-' meaning 'not' and the root 'cred' meaning 'believe.' What does 'incredible' most likely mean?",
+      "options": ["Very believable", "Not believable or extraordinary", "Easy to understand", "Related to credit"],
+      "answer": "Not believable or extraordinary",
+      "explanation": "Using prefix meaning 'not' + root 'cred' (believe): 'incredible' = not believable, or so extraordinary as to be hard to believe.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Which sentence contains a sentence fragment?",
+      "options": [
+        "The dog barked loudly all night.",
+        "Because the storm was coming.",
+        "She finished her homework before dinner.",
+        "They arrived early and found good seats."
+      ],
+      "answer": "Because the storm was coming.",
+      "explanation": "'Because the storm was coming' is a dependent clause — it cannot stand alone as a sentence because it begins with a subordinating conjunction and has no independent clause to complete it.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "In narrative writing, which stage of plot structure introduces the main characters and setting?",
+      "options": ["Rising action", "Climax", "Exposition", "Resolution"],
+      "answer": "Exposition",
+      "explanation": "The exposition is the opening of a story where characters, setting, and background information are introduced to orient the reader.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Which of the following is a simile?",
+      "options": [
+        "The moon is a silver lantern.",
+        "The wind whispered through the trees.",
+        "Her smile was as bright as the sun.",
+        "Fear gripped his heart."
+      ],
+      "answer": "Her smile was as bright as the sun.",
+      "explanation": "A simile makes a comparison using 'like' or 'as.' 'As bright as the sun' uses 'as' to compare her smile to the sun.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "In 'The Lottery' by Shirley Jackson, the lottery is revealed to be a ritualized stoning. This shocking ending is best described as which type of conflict?",
+      "options": ["Person vs. person", "Person vs. self", "Person vs. society", "Person vs. nature"],
+      "answer": "Person vs. society",
+      "explanation": "The central conflict is between the individual and the traditions/norms of the village community — a classic person vs. society conflict.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "What is the denotation of the word 'home'?",
+      "options": [
+        "A place of warmth, love, and safety",
+        "A building where a person lives",
+        "A feeling of belonging and comfort",
+        "A cherished memory from childhood"
+      ],
+      "answer": "A building where a person lives",
+      "explanation": "Denotation is the literal, dictionary definition of a word. 'Home' literally means a place where one lives. The other options describe connotations — emotional associations.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Which point of view uses 'I' and 'me' and is told from the narrator's own perspective?",
+      "options": ["Second person", "Third-person omniscient", "Third-person limited", "First person"],
+      "answer": "First person",
+      "explanation": "First-person narration uses first-person pronouns (I, me, my, we) and tells the story from the narrator's own point of view.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "A theme is best described as:",
+      "options": [
+        "A summary of the plot",
+        "The main character's name",
+        "A universal message or insight about life conveyed by the story",
+        "The setting of the story"
+      ],
+      "answer": "A universal message or insight about life conveyed by the story",
+      "explanation": "Theme is the central message, lesson, or insight about human experience that a literary work communicates — not a summary of events.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Which figurative language device gives human qualities to a non-human thing?",
+      "options": ["Simile", "Metaphor", "Personification", "Hyperbole"],
+      "answer": "Personification",
+      "explanation": "Personification attributes human characteristics (thoughts, emotions, actions) to animals, objects, or abstract ideas. Example: 'The trees danced in the wind.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Identify one internal conflict and one external conflict that could exist in the same story. Give an example of each.",
+      "options": null,
+      "answer": "Internal: person vs. self (e.g., a character struggling with guilt or a difficult decision). External: person vs. person, vs. society, vs. nature, or vs. technology (e.g., a character fighting an antagonist or surviving a storm).",
+      "explanation": "Internal conflict occurs within a character's mind; external conflict occurs between a character and an outside force.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "Write an original complex sentence using a subordinating conjunction, and identify the independent clause and the dependent clause.",
+      "options": null,
+      "answer": "Example: 'Although the test was difficult, she remained calm.' Independent clause: 'she remained calm.' Dependent clause: 'Although the test was difficult.'",
+      "explanation": "A complex sentence contains one independent clause and at least one dependent clause introduced by a subordinating conjunction (although, because, since, when, etc.).",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "A text about the causes of the American Revolution lists one cause, then another, then another, using signal words like 'first,' 'second,' and 'additionally.' What text structure is being used?",
+      "options": ["Cause and effect", "Problem and solution", "Sequence/list", "Compare and contrast"],
+      "answer": "Sequence/list",
+      "explanation": "Listing information in a specific order with signal words like 'first,' 'second,' and 'additionally' indicates a sequence or list text structure.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is an example of a run-on sentence?",
+      "options": [
+        "After the rain stopped, we went outside.",
+        "We went to the park we had a great time.",
+        "She studied hard for the test.",
+        "Although tired, he kept working."
+      ],
+      "answer": "We went to the park we had a great time.",
+      "explanation": "A run-on sentence incorrectly joins two independent clauses without proper punctuation or a conjunction. 'We went to the park' and 'we had a great time' are fused without a comma or conjunction.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "In poetry, the repetition of the same end sounds in two or more lines is called:",
+      "options": ["Meter", "Stanza", "Rhyme", "Alliteration"],
+      "answer": "Rhyme",
+      "explanation": "Rhyme is the repetition of similar end sounds in lines of poetry (e.g., 'day' and 'way'). Meter refers to the rhythmic pattern of stressed and unstressed syllables.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Stage directions in a play script serve primarily to:",
+      "options": [
+        "Provide the plot summary",
+        "Tell actors how to move and speak, and describe the setting",
+        "List the themes of the play",
+        "Indicate which characters are most important"
+      ],
+      "answer": "Tell actors how to move and speak, and describe the setting",
+      "explanation": "Stage directions (written in italics or brackets) guide actors' movements and expressions and describe the physical setting, props, and atmosphere of the scene.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "A dynamic character is one who:",
+      "options": [
+        "Appears in every scene",
+        "Has the most dialogue",
+        "Undergoes significant change during the story",
+        "Remains the same throughout the story"
+      ],
+      "answer": "Undergoes significant change during the story",
+      "explanation": "A dynamic character grows, changes beliefs, or is transformed by events. A static character remains essentially unchanged from beginning to end.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "In an argumentative essay, a counterargument is most effectively followed by:",
+      "options": [
+        "Another supporting point for your claim",
+        "A rebuttal that explains why your original claim still stands",
+        "A new thesis statement",
+        "A quotation from the opposing side"
+      ],
+      "answer": "A rebuttal that explains why your original claim still stands",
+      "explanation": "After acknowledging a counterargument, an effective writer provides a rebuttal — a response that refutes the opposing view and reinforces the writer's own claim.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Which organizational structure would work best for an essay explaining why school lunches should be healthier?",
+      "options": ["Compare and contrast", "Cause and effect", "Problem and solution", "Chronological order"],
+      "answer": "Problem and solution",
+      "explanation": "The essay identifies a problem (unhealthy school lunches) and proposes solutions (improvements). Problem-solution structure is ideal for this type of argument.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Which of the following is the BEST thesis statement for an argumentative essay?",
+      "options": [
+        "Social media is used by billions of people around the world.",
+        "Some people think social media is good; others think it is bad.",
+        "Social media companies should be required to implement age verification to protect children from harmful content.",
+        "This essay will discuss the pros and cons of social media."
+      ],
+      "answer": "Social media companies should be required to implement age verification to protect children from harmful content.",
+      "explanation": "An effective thesis makes a specific, arguable claim. The other options are facts, vague observations, or announcements of topic — not debatable positions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "When evaluating a source for research, the CRAAP test stands for Currency, Relevance, Authority, Accuracy, and:",
+      "options": ["Appeal", "Purpose", "Power", "Position"],
+      "answer": "Purpose",
+      "explanation": "CRAAP = Currency, Relevance, Authority, Accuracy, Purpose. 'Purpose' asks why the source was created — to inform, persuade, sell, or entertain — which affects its reliability.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Which is an example of correct MLA in-text citation for a direct quote?",
+      "options": [
+        "(Jackson, Shirley, page 3)",
+        "(Jackson 3)",
+        "[Jackson, p. 3]",
+        "(Shirley Jackson, 2023, p. 3)"
+      ],
+      "answer": "(Jackson 3)",
+      "explanation": "MLA in-text citations use the author's last name and page number in parentheses with no comma: (Jackson 3). APA style uses a comma and 'p.' — not MLA.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Dramatic irony occurs when:",
+      "options": [
+        "A character says something sarcastic",
+        "The audience knows something a character does not",
+        "Two characters have opposing views",
+        "The ending is unexpected"
+      ],
+      "answer": "The audience knows something a character does not",
+      "explanation": "Dramatic irony creates tension or humor because the audience has information that one or more characters in the story lack.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "In 'Flowers for Algernon,' Charlie Gordon changes from having an intellectual disability to genius-level intelligence and then declines again. He is best classified as a:",
+      "options": ["Static character", "Flat character", "Dynamic character", "Minor character"],
+      "answer": "Dynamic character",
+      "explanation": "Charlie undergoes profound psychological and intellectual change throughout the story, making him a dynamic character — one who is significantly transformed by the events of the narrative.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "During the revision process, which level of revision should you address FIRST?",
+      "options": [
+        "Fixing spelling errors",
+        "Correcting comma placement",
+        "Improving content and organization",
+        "Adjusting font and formatting"
+      ],
+      "answer": "Improving content and organization",
+      "explanation": "Effective revision moves from global (big-picture content and structure) to local (sentences) to surface (mechanics). Fixing spelling before reorganizing content wastes time.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Which sentence uses the word 'snake' with a negative connotation?",
+      "options": [
+        "The snake slid smoothly across the warm rock.",
+        "The biologist studied the snake's scales.",
+        "He was a snake who betrayed all his friends.",
+        "The children learned about snakes at the zoo."
+      ],
+      "answer": "He was a snake who betrayed all his friends.",
+      "explanation": "Using 'snake' to describe a person who betrays others carries negative connotations of deceit and treachery, going beyond the literal meaning of the animal.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "A poem with the rhyme scheme ABAB CDCD EFEF GG is most likely a:",
+      "options": ["Haiku", "Free verse poem", "Shakespearean sonnet", "Limerick"],
+      "answer": "Shakespearean sonnet",
+      "explanation": "The Shakespearean (or English) sonnet follows the rhyme scheme ABAB CDCD EFEF GG — three quatrains and a closing couplet, totaling 14 lines.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which transition word signals a contrast between two ideas?",
+      "options": ["Furthermore", "In addition", "However", "Consequently"],
+      "answer": "However",
+      "explanation": "'However' signals a contrasting or opposing idea. 'Furthermore' and 'in addition' add information; 'consequently' shows cause and effect.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "In the sentence 'The ancient, crumbling castle loomed over the foggy valley,' the primary effect created by the descriptive language is:",
+      "options": ["Humor", "Suspense and gloom", "Celebration", "Confusion"],
+      "answer": "Suspense and gloom",
+      "explanation": "Words like 'ancient,' 'crumbling,' 'loomed,' and 'foggy' evoke a dark, ominous atmosphere that creates suspense and gloom.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which of the following is the correct way to paraphrase a source?",
+      "options": [
+        "Copy the original text word for word and add quotation marks.",
+        "Change a few words from the original while keeping the same sentence structure.",
+        "Restate the author's ideas entirely in your own words and sentence structure.",
+        "Summarize the whole article in one word."
+      ],
+      "answer": "Restate the author's ideas entirely in your own words and sentence structure.",
+      "explanation": "Paraphrasing means expressing another person's ideas in your own words and structure — not copying the original or just replacing a few words (which is plagiarism).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Explain the difference between a metaphor and a simile. Give one original example of each.",
+      "options": null,
+      "answer": "A simile compares two things using 'like' or 'as' (e.g., 'Her voice was like music'). A metaphor states directly that one thing IS another without using 'like' or 'as' (e.g., 'Her voice was music to my ears').",
+      "explanation": "Both are figures of speech that make comparisons, but similes use 'like' or 'as' while metaphors make a direct identification between two unlike things.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "What is the difference between revising and editing? Name one task you would do during revision and one task you would do during editing.",
+      "options": null,
+      "answer": "Revising focuses on content, ideas, and organization (e.g., adding evidence, reorganizing paragraphs). Editing focuses on correctness at the surface level (e.g., fixing grammar, spelling, and punctuation errors).",
+      "explanation": "Revision is a global process of improving meaning and structure; editing is a local process of correcting errors in mechanics and language conventions.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "type": "mc",
+      "question": "What is the main idea of a passage?",
+      "options": [
+        "The first sentence of the passage",
+        "The most important point the author wants to convey",
+        "A specific detail that supports the author's argument",
+        "A quotation from an expert"
+      ],
+      "answer": "The most important point the author wants to convey",
+      "explanation": "The main idea is the central, overarching point of the passage — what the entire text is mostly about.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "type": "mc",
+      "question": "Making an inference means:",
+      "options": [
+        "Looking up a word in the dictionary",
+        "Drawing a conclusion from clues in the text and your own knowledge",
+        "Copying a sentence directly from the text",
+        "Finding the title of the text"
+      ],
+      "answer": "Drawing a conclusion from clues in the text and your own knowledge",
+      "explanation": "An inference is a logical conclusion based on text evidence combined with prior knowledge — going beyond what is directly stated.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "type": "mc",
+      "question": "A text that presents a problem and then describes ways to fix it is using which text structure?",
+      "options": ["Cause and effect", "Compare and contrast", "Problem and solution", "Chronological order"],
+      "answer": "Problem and solution",
+      "explanation": "Problem-solution structure presents an issue and one or more ways to address it. Signal words include 'the problem is,' 'one solution,' and 'as a result.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "type": "mc",
+      "question": "A good summary of a passage should include:",
+      "options": [
+        "Only the first and last sentences of the passage",
+        "The main idea and key supporting details, in your own words",
+        "Every detail from the passage, word for word",
+        "The author's name and publication year only"
+      ],
+      "answer": "The main idea and key supporting details, in your own words",
+      "explanation": "A summary condenses the passage into its essential points — the main idea and most important details — restated in the reader's own words.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "type": "mc",
+      "question": "Which signal word indicates a cause-and-effect text structure?",
+      "options": ["However", "Similarly", "Therefore", "For example"],
+      "answer": "Therefore",
+      "explanation": "'Therefore' signals that what follows is a result or consequence of what was stated before — a classic cause-and-effect signal word.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "type": "mc",
+      "question": "In the sentence 'They quickly ran to the bright red car,' which word is a pronoun?",
+      "options": ["Quickly", "Ran", "They", "Bright"],
+      "answer": "They",
+      "explanation": "'They' is a personal pronoun that replaces a noun (the names of specific people). Pronouns stand in for nouns.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "type": "mc",
+      "question": "Which part of speech modifies a noun or pronoun?",
+      "options": ["Adverb", "Verb", "Adjective", "Conjunction"],
+      "answer": "Adjective",
+      "explanation": "Adjectives describe or modify nouns and pronouns, answering questions like 'which one?', 'what kind?', and 'how many?'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "type": "mc",
+      "question": "In the sentence 'She placed the book on the table,' the word 'on' is a:",
+      "options": ["Verb", "Adjective", "Preposition", "Conjunction"],
+      "answer": "Preposition",
+      "explanation": "'On' shows the relationship between 'book' and 'table,' indicating position. Prepositions show relationships of place, time, or direction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is a proper noun?",
+      "options": ["city", "teacher", "Tokyo", "mountain"],
+      "answer": "Tokyo",
+      "explanation": "Proper nouns name specific people, places, or things and are always capitalized. 'Tokyo' is the specific name of a city.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "type": "mc",
+      "question": "What is the function of a conjunction in a sentence?",
+      "options": [
+        "To show action",
+        "To describe a noun",
+        "To join words, phrases, or clauses",
+        "To replace a noun"
+      ],
+      "answer": "To join words, phrases, or clauses",
+      "explanation": "Conjunctions connect words, phrases, or clauses. Coordinating conjunctions (FANBOYS: for, and, nor, but, or, yet, so) join equal elements; subordinating conjunctions join dependent clauses to independent clauses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is a simple sentence?",
+      "options": [
+        "She sang and danced.",
+        "Although he was tired, he finished his work.",
+        "She studied, and he slept.",
+        "Because it rained, the game was cancelled, and we went home."
+      ],
+      "answer": "She sang and danced.",
+      "explanation": "A simple sentence has one independent clause. 'She sang and danced' has one subject ('She') and a compound predicate ('sang and danced') — still one independent clause.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "type": "mc",
+      "question": "A complex sentence contains:",
+      "options": [
+        "Two independent clauses joined by a comma",
+        "One independent clause and one or more dependent clauses",
+        "Only a subject and a verb",
+        "Two independent clauses and two dependent clauses"
+      ],
+      "answer": "One independent clause and one or more dependent clauses",
+      "explanation": "A complex sentence has one independent clause (can stand alone) plus one or more dependent clauses (introduced by subordinating conjunctions like 'although,' 'because,' 'when,' etc.).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "type": "mc",
+      "question": "Identify the type of sentence: 'She loves to read, and her brother prefers to draw.'",
+      "options": ["Simple", "Complex", "Compound", "Compound-complex"],
+      "answer": "Compound",
+      "explanation": "A compound sentence joins two independent clauses with a coordinating conjunction. 'She loves to read' + 'and' + 'her brother prefers to draw' = compound sentence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is a sentence fragment?",
+      "options": [
+        "The dog ran across the yard.",
+        "Running as fast as she could.",
+        "We arrived before noon.",
+        "The storm passed quickly."
+      ],
+      "answer": "Running as fast as she could.",
+      "explanation": "'Running as fast as she could' is a phrase — it has no subject performing the action and cannot stand alone as a complete sentence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "type": "mc",
+      "question": "Which punctuation mark correctly fixes this run-on: 'I love summer I go to the beach every day'?",
+      "options": [
+        "I love summer, I go to the beach every day.",
+        "I love summer; I go to the beach every day.",
+        "I love summer: I go to the beach every day.",
+        "I love summer — I go to the beach every day I swim."
+      ],
+      "answer": "I love summer; I go to the beach every day.",
+      "explanation": "A semicolon correctly joins two closely related independent clauses without a conjunction. A comma alone (option A) creates a comma splice, which is still incorrect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "type": "mc",
+      "question": "Read this sentence: 'The frugal man never spent money unnecessarily.' Using context clues, 'frugal' most likely means:",
+      "options": ["Generous", "Careless with money", "Careful and sparing with money", "Wealthy"],
+      "answer": "Careful and sparing with money",
+      "explanation": "The context clue 'never spent money unnecessarily' suggests the person is careful with money. 'Frugal' means economical, avoiding waste.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "type": "mc",
+      "question": "The prefix 'mis-' in 'misunderstand' means:",
+      "options": ["Again", "Not or wrongly", "Before", "After"],
+      "answer": "Not or wrongly",
+      "explanation": "The prefix 'mis-' means wrong or badly (misunderstand = understand wrongly). Other examples: misspell, misuse, mislead.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "type": "mc",
+      "question": "The Latin root 'port' means 'carry.' Which of the following words comes from this root?",
+      "options": ["Portion", "Portal", "Transport", "Portrait"],
+      "answer": "Transport",
+      "explanation": "'Transport' = trans (across) + port (carry) = carry across. Other 'port' root words: import, export, portable, report.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "type": "mc",
+      "question": "Which sentence uses the word 'cheap' with a negative connotation?",
+      "options": [
+        "This store sells cheap goods at low prices.",
+        "He found a cheap deal on airline tickets.",
+        "She is too cheap to leave a tip at the restaurant.",
+        "The thrift store has cheap clothing options."
+      ],
+      "answer": "She is too cheap to leave a tip at the restaurant.",
+      "explanation": "Here 'cheap' is used to suggest the person is stingy or selfish — a negative social judgment, not just a neutral reference to low cost.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "type": "mc",
+      "question": "Which strategy is most helpful when you encounter an unknown word in a text?",
+      "options": [
+        "Skip the word and keep reading",
+        "Look at the surrounding sentences for clues to meaning",
+        "Replace the word with a simpler word",
+        "Stop reading the passage"
+      ],
+      "answer": "Look at the surrounding sentences for clues to meaning",
+      "explanation": "Using context clues — words, phrases, and ideas surrounding an unknown word — is the most effective first strategy for determining meaning without interrupting reading.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "type": "mc",
+      "question": "In narrative story structure, the climax is:",
+      "options": [
+        "The introduction of the characters",
+        "The moment of highest tension or the turning point",
+        "The solution to the conflict",
+        "The background information"
+      ],
+      "answer": "The moment of highest tension or the turning point",
+      "explanation": "The climax is the most exciting or intense moment in the story — the point at which the central conflict reaches its peak and begins to resolve.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "type": "mc",
+      "question": "Which point of view uses 'you' and directly addresses the reader?",
+      "options": ["First person", "Second person", "Third-person limited", "Third-person omniscient"],
+      "answer": "Second person",
+      "explanation": "Second-person narration uses 'you' to address the reader directly, as if placing them in the story. It is uncommon in fiction but used in instruction and some experimental literature.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "type": "mc",
+      "question": "Which narrative technique involves slowing down time to describe a moment in great detail?",
+      "options": ["Flashback", "Pacing", "Foreshadowing", "Resolution"],
+      "answer": "Pacing",
+      "explanation": "Pacing controls the speed of a narrative. Slowing down to describe details creates tension or significance; speeding up moves through less important events quickly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "type": "mc",
+      "question": "A personal narrative is primarily written in which tense?",
+      "options": ["Future tense", "Present tense only", "Past tense", "Conditional tense"],
+      "answer": "Past tense",
+      "explanation": "Personal narratives recount past experiences, so they are typically written in past tense (walked, felt, said). Present tense can be used for vivid effect, but past tense is the default.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "type": "mc",
+      "question": "In a narrative, dialogue serves to:",
+      "options": [
+        "List facts about the setting",
+        "Reveal character personality and advance the plot",
+        "Provide a bibliography",
+        "Define unfamiliar vocabulary"
+      ],
+      "answer": "Reveal character personality and advance the plot",
+      "explanation": "Dialogue shows how characters speak and interact, revealing their personalities, relationships, and motivations while also moving the story forward.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "type": "mc",
+      "question": "Which sentence contains the most effective sensory detail?",
+      "options": [
+        "The food was good.",
+        "She ate dinner.",
+        "The warm, buttery croissant crackled as she bit into its flaky layers.",
+        "There was food on the table."
+      ],
+      "answer": "The warm, buttery croissant crackled as she bit into its flaky layers.",
+      "explanation": "This sentence appeals to touch (warm), taste (buttery), sound (crackled), and texture (flaky layers) — specific, sensory language that creates a vivid impression.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "type": "mc",
+      "question": "'Life is a rollercoaster' is an example of:",
+      "options": ["Simile", "Personification", "Metaphor", "Alliteration"],
+      "answer": "Metaphor",
+      "explanation": "A metaphor directly states that one thing IS another without using 'like' or 'as.' Life is directly equated to a rollercoaster to suggest its ups and downs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "type": "mc",
+      "question": "'The stars winked at us from the dark sky' is an example of:",
+      "options": ["Simile", "Metaphor", "Personification", "Hyperbole"],
+      "answer": "Personification",
+      "explanation": "'Winked' is a human action attributed to stars — giving a non-human thing (stars) a human quality. This is personification.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "type": "mc",
+      "question": "'Her laugh was like a melody floating through the room' is an example of:",
+      "options": ["Metaphor", "Personification", "Hyperbole", "Simile"],
+      "answer": "Simile",
+      "explanation": "This sentence uses 'like' to compare her laugh to a melody — the defining feature of a simile. A metaphor would say 'Her laugh was a melody.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "type": "mc",
+      "question": "Which sensory detail appeals to the sense of hearing?",
+      "options": [
+        "The velvet curtains felt soft against her hand.",
+        "The gym smelled of sweat and rubber.",
+        "The thunder rumbled and crashed overhead.",
+        "The sunset turned the sky orange and pink."
+      ],
+      "answer": "The thunder rumbled and crashed overhead.",
+      "explanation": "'Rumbled and crashed' are sound words (auditory). Velvet/soft = touch; smelled/sweat = smell; sunset/orange = sight.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "type": "mc",
+      "question": "In a short story, the antagonist is:",
+      "options": [
+        "Always a villain",
+        "The force or character that opposes the protagonist",
+        "The narrator of the story",
+        "The character who solves the conflict"
+      ],
+      "answer": "The force or character that opposes the protagonist",
+      "explanation": "The antagonist creates obstacles for the protagonist. It can be a person, a force of nature, society, or even an internal struggle — not necessarily a 'villain.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "type": "mc",
+      "question": "Which element of fiction describes the time and place in which a story occurs?",
+      "options": ["Theme", "Plot", "Setting", "Conflict"],
+      "answer": "Setting",
+      "explanation": "Setting includes the time period, physical location, and atmosphere/mood of a story. Setting can influence character behavior and the believability of the plot.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "type": "mc",
+      "question": "An internal conflict is best described as:",
+      "options": [
+        "A battle between two characters",
+        "A character struggling with a decision or feeling within themselves",
+        "A conflict between a character and nature",
+        "A conflict between a character and society"
+      ],
+      "answer": "A character struggling with a decision or feeling within themselves",
+      "explanation": "Internal conflict (person vs. self) occurs inside the character's mind — involving emotions, moral dilemmas, or difficult choices.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "type": "mc",
+      "question": "A theme is different from a topic because a theme:",
+      "options": [
+        "Names the subject of the story",
+        "States a universal message or insight about the subject",
+        "Summarizes the plot in one sentence",
+        "Lists the characters and their traits"
+      ],
+      "answer": "States a universal message or insight about the subject",
+      "explanation": "A topic is a subject (e.g., 'love'). A theme is a message about that subject (e.g., 'True love requires sacrifice'). Themes are statements, not single words.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "type": "mc",
+      "question": "In story structure, what happens during the falling action?",
+      "options": [
+        "The main conflict is introduced",
+        "The characters are introduced",
+        "Events begin to wind down after the climax",
+        "The main conflict is first revealed"
+      ],
+      "answer": "Events begin to wind down after the climax",
+      "explanation": "Falling action follows the climax. Tensions ease, loose ends begin to tie up, and the story moves toward the resolution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "type": "mc",
+      "question": "What does a poem's rhyme scheme describe?",
+      "options": [
+        "The number of syllables per line",
+        "The pattern of end rhymes in a poem, labeled with letters",
+        "The speed at which the poem should be read",
+        "The subject matter of the poem"
+      ],
+      "answer": "The pattern of end rhymes in a poem, labeled with letters",
+      "explanation": "Rhyme scheme tracks which lines end with rhyming sounds, labeled with consecutive letters (ABAB, AABB, etc.). It reveals the poem's structure and musicality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "type": "mc",
+      "question": "A poem's tone refers to:",
+      "options": [
+        "The loudness of the poem when read aloud",
+        "The author's attitude toward the subject or audience",
+        "The number of stanzas",
+        "The rhyme scheme"
+      ],
+      "answer": "The author's attitude toward the subject or audience",
+      "explanation": "Tone reflects the poet's emotional attitude — melancholy, celebratory, ironic, hopeful, etc. Tone is conveyed through word choice (diction) and imagery.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "type": "mc",
+      "question": "A lyric poem differs from a narrative poem because a lyric poem:",
+      "options": [
+        "Tells a story with characters and plot",
+        "Expresses personal emotions or reflections",
+        "Always rhymes",
+        "Has exactly 14 lines"
+      ],
+      "answer": "Expresses personal emotions or reflections",
+      "explanation": "Lyric poems express the speaker's feelings, thoughts, or observations — they are personal and emotional. Narrative poems tell stories with events and characters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "type": "mc",
+      "question": "Imagery in poetry refers to:",
+      "options": [
+        "The physical appearance of the poem on the page",
+        "Descriptive language that appeals to the senses",
+        "The use of rhyme",
+        "The number of syllables"
+      ],
+      "answer": "Descriptive language that appeals to the senses",
+      "explanation": "Imagery uses vivid, descriptive language — especially details of sight, sound, smell, taste, and touch — to create mental pictures and emotional responses in the reader.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "type": "mc",
+      "question": "A stanza in poetry is comparable to which element in prose writing?",
+      "options": ["A sentence", "A chapter", "A paragraph", "A page"],
+      "answer": "A paragraph",
+      "explanation": "A stanza is a grouped set of lines in a poem, separated by blank lines — much like how a paragraph groups related sentences in prose.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "type": "mc",
+      "question": "Stage directions in a play are typically written in:",
+      "options": [
+        "Bold and all caps",
+        "Italics or brackets, separate from dialogue",
+        "The same format as dialogue",
+        "The first line of every scene"
+      ],
+      "answer": "Italics or brackets, separate from dialogue",
+      "explanation": "Stage directions guide actors and readers about movement, expression, and setting. They are visually distinct from dialogue, typically in italics or enclosed in brackets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "type": "mc",
+      "question": "Dramatic irony occurs when:",
+      "options": [
+        "A character says something funny",
+        "Two characters have a misunderstanding",
+        "The audience knows something important that a character does not",
+        "The ending is ironic and unexpected"
+      ],
+      "answer": "The audience knows something important that a character does not",
+      "explanation": "Dramatic irony creates tension or suspense because the audience has knowledge that one or more characters in the play lack — they can see what the character cannot.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "type": "mc",
+      "question": "How does reading a play differ from reading a novel?",
+      "options": [
+        "Plays have no characters",
+        "Plays rely on dialogue and stage directions rather than a narrator's descriptions",
+        "Plays are always shorter than novels",
+        "Novels use dialogue but plays do not"
+      ],
+      "answer": "Plays rely on dialogue and stage directions rather than a narrator's descriptions",
+      "explanation": "Novels use a narrator to describe scenes, thoughts, and feelings in depth. Plays convey most information through characters' dialogue and brief stage directions — the reader must infer more.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "type": "mc",
+      "question": "When a character in a play says one thing but means the opposite, this is called:",
+      "options": ["Foreshadowing", "Dramatic irony", "Verbal irony", "Soliloquy"],
+      "answer": "Verbal irony",
+      "explanation": "Verbal irony (including sarcasm) occurs when a character says the opposite of what they mean. Dramatic irony involves the audience knowing more than a character, not a character's words.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "type": "mc",
+      "question": "A speech given by a character alone on stage, revealing their inner thoughts to the audience, is called a:",
+      "options": ["Aside", "Dialogue", "Soliloquy", "Monologue directed at another character"],
+      "answer": "Soliloquy",
+      "explanation": "A soliloquy is a speech delivered by a character alone on stage, revealing their private thoughts and feelings — as if thinking aloud. The character speaks to the audience, not to other characters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "type": "mc",
+      "question": "A static character is one who:",
+      "options": [
+        "Changes dramatically by the end of the story",
+        "Has many layers and internal conflicts",
+        "Remains essentially unchanged throughout the story",
+        "Appears in every scene"
+      ],
+      "answer": "Remains essentially unchanged throughout the story",
+      "explanation": "A static character does not experience significant change or growth. They serve a consistent role and do not undergo a meaningful transformation as a result of the story's events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is the best piece of evidence to support a character analysis claim?",
+      "options": [
+        "A general description of the story's setting",
+        "A direct quote from the text showing the character's words or actions",
+        "The author's biography",
+        "A summary of a different book"
+      ],
+      "answer": "A direct quote from the text showing the character's words or actions",
+      "explanation": "Textual evidence — especially direct quotations showing what a character says, does, or thinks — is the strongest support for claims in literary analysis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "type": "mc",
+      "question": "A character's motivation refers to:",
+      "options": [
+        "Their physical appearance",
+        "The reasons behind their actions and decisions",
+        "Their relationship to the narrator",
+        "The number of scenes they appear in"
+      ],
+      "answer": "The reasons behind their actions and decisions",
+      "explanation": "Motivation explains why a character does what they do — their goals, fears, desires, and values that drive their behavior throughout the story.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is an example of a theme statement (not just a topic)?",
+      "options": [
+        "Friendship",
+        "The story is about loyalty.",
+        "True friendship requires honesty, even when the truth is painful.",
+        "The main character has a best friend."
+      ],
+      "answer": "True friendship requires honesty, even when the truth is painful.",
+      "explanation": "A theme is a complete statement expressing a universal idea. 'Friendship' is a topic; the theme must make a claim about that topic that applies beyond the story.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "type": "mc",
+      "question": "In 'Flowers for Algernon,' Charlie's intelligence increases dramatically after his surgery. This change makes him a:",
+      "options": ["Static character", "Flat character", "Dynamic character", "Minor character"],
+      "answer": "Dynamic character",
+      "explanation": "Charlie undergoes profound intellectual and emotional transformation — he is the quintessential dynamic character because the story traces his dramatic change from beginning to end.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "type": "mc",
+      "question": "In an argument, the claim is:",
+      "options": [
+        "A fact everyone agrees on",
+        "A debatable position the writer takes and will defend",
+        "A quotation from an expert",
+        "The conclusion of the essay"
+      ],
+      "answer": "A debatable position the writer takes and will defend",
+      "explanation": "A claim (or thesis) in an argument is the writer's position on an issue — it must be arguable (not simply a fact) and is the central point the entire essay will support.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is the weakest type of evidence for an argument?",
+      "options": [
+        "A statistic from a peer-reviewed study",
+        "A direct quote from an expert in the field",
+        "A personal opinion with no supporting data",
+        "A real-world example from a credible news source"
+      ],
+      "answer": "A personal opinion with no supporting data",
+      "explanation": "Anecdotal or unsupported personal opinions are the weakest form of evidence. Strong arguments rely on facts, data, expert testimony, and documented examples.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "type": "mc",
+      "question": "A counterargument in an essay serves to:",
+      "options": [
+        "Weaken the writer's own position",
+        "Acknowledge the opposing view before refuting it",
+        "Introduce a new topic",
+        "Summarize the essay"
+      ],
+      "answer": "Acknowledge the opposing view before refuting it",
+      "explanation": "Acknowledging a counterargument shows the writer understands the full issue and strengthens credibility. The writer then provides a rebuttal to explain why their position is still correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "type": "mc",
+      "question": "In the Toulmin model of argument, the 'warrant' refers to:",
+      "options": [
+        "The claim",
+        "The evidence",
+        "The logical connection explaining why the evidence supports the claim",
+        "The conclusion"
+      ],
+      "answer": "The logical connection explaining why the evidence supports the claim",
+      "explanation": "The warrant (or reasoning) bridges the gap between evidence and claim, explaining why the evidence actually proves the point. Without a clear warrant, evidence may seem irrelevant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is the strongest thesis statement for an argumentative essay about homework?",
+      "options": [
+        "Many students have homework every night.",
+        "Homework is sometimes too much.",
+        "Excessive homework harms students' mental health and should be limited to one hour per night.",
+        "This essay will argue that homework is bad."
+      ],
+      "answer": "Excessive homework harms students' mental health and should be limited to one hour per night.",
+      "explanation": "This thesis makes a specific, arguable claim with a proposed solution. The other options are vague, factual, or are meta-announcements rather than genuine arguments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "type": "mc",
+      "question": "Which organizational structure presents two subjects by discussing all features of one, then all features of the other?",
+      "options": [
+        "Point-by-point",
+        "Block method",
+        "Problem-solution",
+        "Chronological order"
+      ],
+      "answer": "Block method",
+      "explanation": "The block method of compare-contrast organizes all information about Subject A first, then all information about Subject B. The point-by-point method alternates between subjects for each feature.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "type": "mc",
+      "question": "Which transition word best signals a cause-and-effect relationship?",
+      "options": ["However", "Similarly", "As a result", "In contrast"],
+      "answer": "As a result",
+      "explanation": "'As a result' introduces an effect/consequence — it signals that what follows was caused by what was just stated. 'However' and 'in contrast' signal contrast; 'similarly' signals comparison.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "type": "mc",
+      "question": "An expository essay is primarily meant to:",
+      "options": [
+        "Persuade the reader to change their mind",
+        "Entertain the reader with a story",
+        "Inform or explain a topic clearly and objectively",
+        "Express the writer's personal feelings"
+      ],
+      "answer": "Inform or explain a topic clearly and objectively",
+      "explanation": "Expository writing exposes information — its purpose is to explain, describe, or inform without the writer expressing a strong personal opinion or trying to persuade.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "type": "mc",
+      "question": "Which transition word would best introduce a contrasting idea?",
+      "options": ["Furthermore", "In addition", "On the other hand", "Consequently"],
+      "answer": "On the other hand",
+      "explanation": "'On the other hand' signals a shift to a contrasting or opposing viewpoint. 'Furthermore' and 'in addition' add information; 'consequently' shows cause and effect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "type": "mc",
+      "question": "Which organizational structure works best for an essay about why teen obesity has increased and what consequences it has?",
+      "options": ["Compare and contrast", "Cause and effect", "Problem and solution", "Chronological order"],
+      "answer": "Cause and effect",
+      "explanation": "The essay examines the causes of a phenomenon (increased obesity) and its effects (health consequences) — a natural fit for cause-and-effect organization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is the most credible source for a research paper on climate science?",
+      "options": [
+        "A personal blog post from an anonymous author",
+        "A peer-reviewed journal article published in Nature",
+        "A social media post with many likes",
+        "A company's promotional website"
+      ],
+      "answer": "A peer-reviewed journal article published in Nature",
+      "explanation": "Peer-reviewed academic journals are considered highly credible because other experts have reviewed and approved the research before publication. Blogs, social media, and promotional sites lack this verification.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "type": "mc",
+      "question": "Paraphrasing a source means:",
+      "options": [
+        "Copying the original text in quotation marks",
+        "Restating the author's ideas in your own words and sentence structure",
+        "Summarizing the entire book in one sentence",
+        "Using the author's exact words without citation"
+      ],
+      "answer": "Restating the author's ideas in your own words and sentence structure",
+      "explanation": "Paraphrasing requires a genuine restatement — new words AND new sentence structure. Simply substituting synonyms while keeping the original structure is still considered plagiarism.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "type": "mc",
+      "question": "In MLA format, an in-text citation for a quote from page 45 of a book by author Maria Santos looks like:",
+      "options": [
+        "(Santos, 45)",
+        "(Santos 45)",
+        "(Maria Santos p. 45)",
+        "[Santos, page 45]"
+      ],
+      "answer": "(Santos 45)",
+      "explanation": "MLA in-text citations use the author's last name and page number in parentheses, with no comma and no 'p.' — for example (Santos 45).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "type": "mc",
+      "question": "The 'A' in the CRAAP test stands for 'Authority,' which asks you to evaluate:",
+      "options": [
+        "When the source was published",
+        "Who wrote or published the source and their qualifications",
+        "Whether the information is accurate",
+        "Why the source was created"
+      ],
+      "answer": "Who wrote or published the source and their qualifications",
+      "explanation": "Authority asks: Who is the author? What are their credentials? Is the publisher reputable? An anonymous or unqualified author reduces a source's credibility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "type": "mc",
+      "question": "When must you cite a source in your paper?",
+      "options": [
+        "Only when you use a direct quotation",
+        "Only when you paraphrase",
+        "Whenever you use another person's ideas, words, or data, whether quoted or paraphrased",
+        "Only for information from books, not websites"
+      ],
+      "answer": "Whenever you use another person's ideas, words, or data, whether quoted or paraphrased",
+      "explanation": "Any time you use someone else's ideas — whether you quote them exactly or put their ideas in your own words — you must give credit with a citation to avoid plagiarism.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "type": "mc",
+      "question": "Which level of revision should be addressed FIRST when revising a draft?",
+      "options": [
+        "Fixing spelling errors",
+        "Correcting punctuation",
+        "Improving content, ideas, and overall organization",
+        "Checking for run-on sentences"
+      ],
+      "answer": "Improving content, ideas, and overall organization",
+      "explanation": "Revision moves from global (big picture) to local (surface). Addressing content and structure first prevents wasting time perfecting sentences that may later be deleted or reorganized.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "type": "mc",
+      "question": "Proofreading is different from revising because proofreading focuses on:",
+      "options": [
+        "Reorganizing paragraphs",
+        "Adding more evidence",
+        "Correcting surface errors in grammar, spelling, and punctuation",
+        "Strengthening the thesis statement"
+      ],
+      "answer": "Correcting surface errors in grammar, spelling, and punctuation",
+      "explanation": "Proofreading is the final check for mechanical errors (typos, misspellings, missing commas, capitalization). Revising addresses deeper issues of content, clarity, and organization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "type": "mc",
+      "question": "Which of the following is an example of a STYLE choice rather than a grammatical error?",
+      "options": [
+        "Using 'their' instead of 'there'",
+        "Writing a sentence fragment intentionally for dramatic effect",
+        "Forgetting to capitalize the first word of a sentence",
+        "Using the wrong verb tense"
+      ],
+      "answer": "Writing a sentence fragment intentionally for dramatic effect",
+      "explanation": "Professional writers sometimes intentionally break grammar rules for stylistic effect. An intentional fragment used for emphasis is a style choice; unintentional fragments are errors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "type": "mc",
+      "question": "During peer editing, a constructive comment is one that:",
+      "options": [
+        "Only tells the writer what they did well",
+        "Points out errors without suggesting how to fix them",
+        "Provides specific feedback on both strengths and areas for improvement",
+        "Rewrites the entire essay for the writer"
+      ],
+      "answer": "Provides specific feedback on both strengths and areas for improvement",
+      "explanation": "Effective peer feedback is specific and balanced — acknowledging what works while clearly identifying what can be improved and suggesting how to do so.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "type": "mc",
+      "question": "Sentence variety is important in writing because:",
+      "options": [
+        "Longer sentences are always better",
+        "Shorter sentences are always clearer",
+        "Mixing sentence lengths and types creates rhythm and keeps the reader engaged",
+        "All sentences should follow the same structure for consistency"
+      ],
+      "answer": "Mixing sentence lengths and types creates rhythm and keeps the reader engaged",
+      "explanation": "Varied sentence structure — mixing short, punchy sentences with longer, complex ones — creates a natural rhythm, emphasizes key ideas, and prevents monotony.",
+      "points": 1
+    }
+  ]
+}

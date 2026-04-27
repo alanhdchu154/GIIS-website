@@ -17,6 +17,9 @@ const rateLimit = require('express-rate-limit');
 const cookieParser = require('cookie-parser');
 const authRoutes = require('./routes/auth');
 const studentRoutes = require('./routes/students');
+const courseRoutes = require('./routes/courses');
+const enrollmentRoutes = require('./routes/enrollments');
+const meRoutes = require('./routes/me');
 
 if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 16) {
   console.warn('[warn] Set a strong JWT_SECRET in .env (16+ chars) before production.');
@@ -86,6 +89,9 @@ const authLimiter = rateLimit({
 
 app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/students', studentRoutes);
+app.use('/api/courses', courseRoutes);
+app.use('/api/enrollments', enrollmentRoutes);
+app.use('/api/me', meRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found', path: req.path });

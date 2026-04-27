@@ -1,0 +1,1790 @@
+{
+  "slug": "english-ii",
+  "name": "English II",
+  "nameZh": "英语二",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "Grade 10 English — deepening literary analysis, advancing grammar and composition skills, exploring world literature, and developing argumentative and analytical writing with textual evidence.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Literary Analysis Fundamentals",
+      "titleZh": "文学分析基础",
+      "objectives": "Identify and analyze theme, symbolism, motif, and allegory in literary texts; understand and explain the author's purpose and how it shapes the text; support interpretations with textual evidence.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_literature/index.html",
+      "readingNote": "Purdue OWL — Writing About Literature: Theme, Symbolism, and Author's Purpose",
+      "videoUrl": "https://www.youtube.com/watch?v=e8In2V1CZKY",
+      "videoNote": "Crash Course Literature — Symbolism and Allegory in Literature",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:theme/v/identifying-theme",
+      "video2Note": "Khan Academy — Identifying Theme in Literary Texts",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-metamorphosis",
+      "practiceNote": "CommonLit — 'The Metamorphosis' by Franz Kafka (excerpts with guided analysis questions on symbolism and theme)",
+      "assignment": "Read an assigned excerpt and identify: (1) the central theme and two pieces of textual evidence supporting it, (2) one symbol and explain what it represents, (3) one recurring motif and its significance, (4) whether the text is allegorical and, if so, what real-world concept the story represents, and (5) the author's purpose. Write a 400-word response integrating all five elements with quotations.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 2,
+      "title": "Grammar: Clauses & Phrases",
+      "titleZh": "语法：从句与短语",
+      "objectives": "Identify and correctly use subordinate clauses; distinguish and apply participial, infinitive, and gerund phrases; recognize and correctly punctuate appositive phrases; use these structures to add variety and precision to writing.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/phrases_and_clauses/index.html",
+      "readingNote": "Purdue OWL — Phrases and Clauses: Participial, Infinitive, Gerund, and Appositive",
+      "videoUrl": "https://www.youtube.com/watch?v=d_JmAMCqrMU",
+      "videoNote": "Crash Course English Language — Phrases and Clauses",
+      "video2Url": "https://www.khanacademy.org/humanities/grammar/syntax-sentences-and-clauses/subordinate-clauses/v/subordinate-clauses-syntax-khan-academy",
+      "video2Note": "Khan Academy — Subordinate Clauses and Phrases Unit",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/syntax-sentences-and-clauses/phrases/e/identifying-phrases",
+      "practiceNote": "Khan Academy — Identifying Phrases Practice (participial, gerund, infinitive)",
+      "assignment": "Write 15 original sentences that each feature at least one of the following: a subordinate clause, a participial phrase, an infinitive phrase, a gerund phrase, or an appositive phrase. Label each structure. Then revise five plain sentences by adding one of these structures to each, explaining how the revision improves the sentence.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 3,
+      "title": "Tone, Mood & Style",
+      "titleZh": "语气、氛围与风格",
+      "objectives": "Distinguish between tone (author's attitude) and mood (reader's emotional response); analyze how diction, syntax, and rhetorical choices shape both tone and mood; identify an author's distinctive style and explain how stylistic choices create meaning.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_literature/style_tone_and_voice.html",
+      "readingNote": "Purdue OWL — Style, Tone, and Voice in Literary Writing",
+      "videoUrl": "https://www.youtube.com/watch?v=L2wODcb8CjQ",
+      "videoNote": "Crash Course Literature — Tone and Mood in Literature",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:analyzing-tone-and-mood/v/analyzing-tone-and-mood-in-poetry",
+      "video2Note": "Khan Academy — Analyzing Tone and Mood in Literature",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-raven",
+      "practiceNote": "CommonLit — 'The Raven' by Edgar Allan Poe (analyzing diction and tone)",
+      "assignment": "Select two passages from different texts — one with a formal, serious tone and one with an informal or ironic tone. For each passage: (1) identify the tone and mood, (2) list five diction choices that create the tone, (3) analyze one syntactic pattern (e.g., short vs. long sentences) and its effect, and (4) explain one rhetorical choice. Write a 300-word comparative paragraph linking both analyses.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 4,
+      "title": "World Literature: Short Fiction",
+      "titleZh": "世界文学：短篇小说",
+      "objectives": "Read and analyze short stories from global literary traditions; identify cultural context and how it influences character, conflict, and theme; compare storytelling conventions across traditions.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-necklace",
+      "readingNote": "CommonLit — 'The Necklace' by Guy de Maupassant (French); 'The Fun They Had' by Isaac Asimov; paired world fiction readings",
+      "videoUrl": "https://www.youtube.com/watch?v=A_hSvhYlOqA",
+      "videoNote": "TED-Ed — The Wicked Wit of 'The Necklace' (analyzing world short fiction)",
+      "video2Url": "https://www.youtube.com/watch?v=d1c8zUfmhKs",
+      "video2Note": "Crash Course Literature — Reading World Literature: Context and Culture",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-fun-they-had",
+      "practiceNote": "CommonLit — 'The Fun They Had' by Isaac Asimov (guided reading with annotation tools)",
+      "assignment": "Read two assigned short stories from different global traditions. For each story write a 250-word analysis covering: (1) the cultural setting and its influence on the plot, (2) the central conflict and how cultural values shape it, (3) a theme and how it is universally relevant, and (4) one literary technique (irony, symbolism, etc.) and its effect. Then write a 200-word comparison paragraph connecting both stories.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 5,
+      "title": "World Literature: Poetry",
+      "titleZh": "世界文学：诗歌",
+      "objectives": "Analyze poems from diverse global cultures; examine poetic form, speaker, and tone; identify how cultural and historical context shapes meaning; compare poems from different traditions.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_poetry/index.html",
+      "readingNote": "Purdue OWL — Writing About Poetry: Form, Speaker, and Cross-Cultural Analysis",
+      "videoUrl": "https://www.youtube.com/watch?v=JwhouCNq-Fc",
+      "videoNote": "Crash Course Literature — Poetry Across Cultures: Form and Meaning",
+      "video2Url": "https://www.youtube.com/watch?v=UbgSLaJCNEA",
+      "video2Note": "TED-Ed — What Makes a Poem a Poem? (form, speaker, tone across global poetry)",
+      "practiceUrl": "https://www.commonlit.org/en/texts/still-i-rise",
+      "practiceNote": "CommonLit — 'Still I Rise' by Maya Angelou and world poetry selections (speaker, tone, cultural context)",
+      "assignment": "Read three poems from three different cultures or literary traditions (one must be non-Western). For each poem: (1) identify the speaker and their perspective, (2) describe the tone and how it shifts, (3) analyze the poetic form and its effect, (4) explain how cultural or historical context shapes the poem's meaning, and (5) identify one example of figurative language. Write a 200-word analysis for each, then a 150-word paragraph comparing all three.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 6,
+      "title": "The Novel: Conflict & Character",
+      "titleZh": "小说：冲突与人物",
+      "objectives": "Analyze internal and external conflict in a novel; distinguish round from flat characters and static from dynamic characters; identify protagonist and antagonist and examine the nature of their opposition; trace how conflict drives character development.",
+      "readingUrl": "https://www.commonlit.org/en/texts/of-mice-and-men-chapter-1",
+      "readingNote": "CommonLit — Excerpt from 'Of Mice and Men' by John Steinbeck (conflict, round vs. flat characters)",
+      "videoUrl": "https://www.youtube.com/watch?v=DHeVilTuVhM",
+      "videoNote": "Crash Course Literature — Of Mice and Men: Character and Conflict",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-literature/x3db8f6a7e7a5c715:analyzing-character/v/static-vs-dynamic-characters",
+      "video2Note": "Khan Academy — Round vs. Flat and Static vs. Dynamic Characters",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-most-dangerous-game",
+      "practiceNote": "CommonLit — 'The Most Dangerous Game' by Richard Connell (protagonist/antagonist conflict analysis)",
+      "assignment": "Using your novel or an assigned text, write a 500-word character-and-conflict analysis: (1) identify the protagonist and antagonist and describe the nature of their conflict, (2) classify each as round/flat and static/dynamic with textual evidence, (3) trace one internal conflict the protagonist faces and how it evolves, (4) explain how the central conflict drives the protagonist's development, and (5) predict or explain how the conflict is ultimately resolved.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 7,
+      "title": "Analytical Writing: Body Paragraphs",
+      "titleZh": "分析性写作：正文段落",
+      "objectives": "Write well-structured analytical body paragraphs using the PEEL structure (Point, Evidence, Explanation, Link); integrate direct quotations smoothly with appropriate signal phrases; choose and analyze textual evidence effectively.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/index.html",
+      "readingNote": "Purdue OWL — Writing Analytical Body Paragraphs with Evidence",
+      "videoUrl": "https://www.youtube.com/watch?v=VGZdqIQCMKU",
+      "videoNote": "Crash Course English Language — Writing Strong Body Paragraphs with Evidence",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/v/integrating-textual-evidence",
+      "video2Note": "Khan Academy — Integrating Textual Evidence and Writing with Quotations",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/quoting_paraphrasing_and_summarizing/index.html",
+      "practiceNote": "Purdue OWL — Quoting, Paraphrasing, and Summarizing in Academic Writing",
+      "assignment": "Write three PEEL body paragraphs on three different aspects of a literary text you have read (character, theme, and symbol/motif). Each paragraph must: open with a clear analytical claim (Point), integrate at least two direct quotations with signal phrases (Evidence), explain how each quotation supports your claim (Explanation), and conclude with a link to the essay's thesis (Link). After writing, annotate each paragraph labeling the P, E, E, and L.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 8,
+      "title": "Comparative Analysis Essay",
+      "titleZh": "比较分析论文",
+      "objectives": "Write a comparative literary analysis essay examining two texts by theme, structure, or narrative perspective; develop a comparative thesis; organize a comparison using either the block or point-by-point method; use transitions to signal comparisons and contrasts.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/expository_essays.html",
+      "readingNote": "Purdue OWL — Comparative Essays: Thesis, Organization, and Transitions",
+      "videoUrl": "https://www.youtube.com/watch?v=nTiMSRBNZsE",
+      "videoNote": "Crash Course Literature — How to Write a Comparative Essay",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:informative-explanatory-writing/v/compare-contrast-essay-structure",
+      "video2Note": "Khan Academy — Compare and Contrast Essay Structure and Organization",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/transition_words_and_phrases.html",
+      "practiceNote": "Purdue OWL — Transition Words for Comparison and Contrast in Academic Essays",
+      "assignment": "Write a 600–800 word comparative analysis essay examining two texts from this course. Your essay must: (1) include a comparative thesis that names both texts and the specific point of comparison (theme, structure, or perspective), (2) use either block or point-by-point organization (state your choice), (3) integrate at least four direct quotations across body paragraphs, (4) use appropriate compare/contrast transitions, and (5) conclude by explaining what the comparison reveals about both texts. Submit your outline with the final draft.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 9,
+      "title": "Drama: Shakespeare Introduction",
+      "titleZh": "戏剧：莎士比亚入门",
+      "objectives": "Read and interpret Early Modern English in Shakespeare's plays and sonnets; understand the Shakespearean sonnet form (14 lines, ABAB CDCD EFEF GG, iambic pentameter, volta); identify dramatic structure in a Shakespearean play; analyze soliloquy and aside as dramatic devices.",
+      "readingUrl": "https://www.commonlit.org/en/texts/romeo-and-juliet-act-ii-scene-ii",
+      "readingNote": "CommonLit — Shakespeare's 'Romeo and Juliet' Act II, Scene ii (balcony scene with annotation tools)",
+      "videoUrl": "https://www.youtube.com/watch?v=rVZEpLKHeco",
+      "videoNote": "Crash Course Literature — Romeo and Juliet: Language and Dramatic Structure",
+      "video2Url": "https://www.youtube.com/watch?v=d5cQ4K13r_Y",
+      "video2Note": "TED-Ed — How to Read Shakespeare's Sonnets (form, volta, iambic pentameter)",
+      "practiceUrl": "https://www.commonlit.org/en/texts/sonnet-18",
+      "practiceNote": "CommonLit — Shakespeare's Sonnet 18 ('Shall I compare thee to a summer's day?') with guided questions",
+      "assignment": "Read Sonnet 18 and the assigned act excerpt. For the sonnet: (1) label the rhyme scheme (ABAB CDCD EFEF GG), (2) identify and explain the volta, (3) paraphrase each of the three quatrains and the couplet in modern English. For the dramatic excerpt: (4) identify one soliloquy or aside and explain its dramatic effect, (5) translate 5 archaic words using context clues, and (6) describe the dramatic structure of the scene. Total response: 450–550 words.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 10,
+      "title": "Informational Texts & Nonfiction",
+      "titleZh": "信息性文本与非虚构作品",
+      "objectives": "Analyze arguments in nonfiction and informational texts; evaluate the strength and credibility of evidence; identify bias, perspective, and rhetorical appeals (ethos, pathos, logos); distinguish fact from opinion.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/rhetorical_situation/index.html",
+      "readingNote": "Purdue OWL — Rhetorical Appeals: Ethos, Pathos, Logos in Nonfiction",
+      "videoUrl": "https://www.youtube.com/watch?v=VDLVWGZ_yrg",
+      "videoNote": "Crash Course English Language — Analyzing Nonfiction and Rhetoric",
+      "video2Url": "https://www.youtube.com/watch?v=sLDnXvBaEYg",
+      "video2Note": "TED-Ed — How to Spot a Misleading Graph (evaluating evidence and bias in nonfiction)",
+      "practiceUrl": "https://www.commonlit.org/en/texts/i-have-a-dream",
+      "practiceNote": "CommonLit — 'I Have a Dream' by Martin Luther King Jr. (analyzing rhetorical appeals and argument structure)",
+      "assignment": "Read one nonfiction persuasive text and one informational article on the same topic. For each: (1) identify the central argument or main idea, (2) locate one example of ethos, one of pathos, and one of logos with explanation, (3) identify one piece of strong evidence and one piece of weak evidence and explain the difference, (4) identify the author's perspective and any detectable bias. Write a 200-word evaluation for each, then a 150-word paragraph comparing how the two texts approach the same topic.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 11,
+      "title": "Research Paper: Outline & Drafting",
+      "titleZh": "研究论文：提纲与起草",
+      "objectives": "Develop a focused, arguable research thesis; construct a detailed outline with organized body sections and clear transitions; write a complete research paper draft integrating multiple sources coherently.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/developing_an_outline/index.html",
+      "readingNote": "Purdue OWL — Developing an Outline for a Research Paper",
+      "videoUrl": "https://www.youtube.com/watch?v=nLMnzBZLRKY",
+      "videoNote": "Crash Course English Language — Research Writing: Thesis and Outline",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/v/writing-a-claim-and-thesis",
+      "video2Note": "Khan Academy — Writing a Research Thesis and Planning Your Draft",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/prewriting_invention/index.html",
+      "practiceNote": "Purdue OWL — Prewriting and Outlining Strategies for Research Papers",
+      "assignment": "Choose a researchable question on a topic of your interest. (1) Write a one-sentence research thesis that makes an arguable claim. (2) Create a full-sentence outline with at least three body sections, each including a topic sentence, two supporting sub-points, and transitions. (3) Write a complete first draft (minimum 700 words) integrating at least four sources. (4) Highlight every place you use a source and note whether you used a quote, paraphrase, or summary.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 12,
+      "title": "Research Paper: Documentation",
+      "titleZh": "研究论文：文献引用",
+      "objectives": "Format MLA in-text citations for direct quotes, paraphrases, and summaries; construct a properly formatted MLA Works Cited page for books, websites, and journal articles; understand academic integrity and how to avoid plagiarism.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_general_format.html",
+      "readingNote": "Purdue OWL — MLA 9th Edition: In-Text Citations and Works Cited Page",
+      "videoUrl": "https://www.youtube.com/watch?v=KKDkNjBhFAw",
+      "videoNote": "Purdue OWL YouTube — MLA 9th Edition: Full Citation Guide (books, articles, websites)",
+      "video2Url": "https://www.youtube.com/watch?v=unFsl6THsq8",
+      "video2Note": "Crash Course — Navigating Digital Information and Academic Integrity",
+      "practiceUrl": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_page_books.html",
+      "practiceNote": "Purdue OWL — MLA Works Cited: Books, Articles, and Websites (with full examples)",
+      "assignment": "Revise the research paper draft from Module 11: (1) add MLA in-text citations to every source use (quote, paraphrase, summary), (2) create a properly formatted MLA Works Cited page listing all four or more sources in alphabetical order, (3) write a 100-word reflection on academic integrity explaining what plagiarism is and how your citations prevent it, and (4) peer-review a classmate's Works Cited page for formatting errors and list three corrections with explanations.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 13,
+      "title": "Vocabulary & Context: Academic Word List",
+      "titleZh": "词汇与语境：学术词汇表",
+      "objectives": "Recognize and use Tier 2 and Tier 3 academic vocabulary from the Academic Word List; apply morphological analysis (prefixes, suffixes, roots) to decode unfamiliar words; use contextual inference strategies to determine meaning.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/grammar/word_choice/index.html",
+      "readingNote": "Purdue OWL — Academic Word Choice: Tier 2/3 Vocabulary and Precision",
+      "videoUrl": "https://www.youtube.com/watch?v=rLKbkOC_9_g",
+      "videoNote": "Crash Course English Language — Academic Vocabulary and Morphology",
+      "video2Url": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-informational-texts/x3db8f6a7e7a5c715:determining-word-meaning/v/word-meaning-and-context-clues",
+      "video2Note": "Khan Academy — Determining Word Meaning: Context Clues and Morphology",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:reading-informational-texts/x3db8f6a7e7a5c715:determining-word-meaning/e/vocabulary-in-context",
+      "practiceNote": "Khan Academy — Academic Vocabulary in Context Practice",
+      "assignment": "Choose 20 words from the Academic Word List that appear in texts you have read this semester. For each word: (1) write the sentence from the text, (2) identify any prefix, root, or suffix and their meanings, (3) write your contextual inference, (4) write the dictionary definition, and (5) write two original sentences — one using the word in an academic context and one in an everyday context. Finally, group your 20 words into five thematic clusters and explain each cluster's connection.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 14,
+      "title": "Seminar Discussion & Oral Presentation",
+      "titleZh": "研讨讨论与口头报告",
+      "objectives": "Participate effectively in Socratic seminar discussions by building on others' ideas, asking clarifying questions, and supporting claims with evidence; prepare and deliver a structured oral presentation with a clear argument; practice active listening skills.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/oral_presentations/index.html",
+      "readingNote": "Purdue OWL — Oral Presentations: Structure, Delivery, and Audience Engagement",
+      "videoUrl": "https://www.youtube.com/watch?v=V8eLdbKXGzE",
+      "videoNote": "TED-Ed — How to Speak So That People Want to Listen (public speaking and oral argument)",
+      "video2Url": "https://www.youtube.com/watch?v=7hUt4mV_CzM",
+      "video2Note": "Crash Course Study Skills — Presentations and Public Speaking",
+      "practiceUrl": "https://www.khanacademy.org/ela/cc-9-10-ela/x3db8f6a7e7a5c715:writing/x3db8f6a7e7a5c715:argumentative-writing/v/writing-a-claim-and-thesis",
+      "practiceNote": "Khan Academy — Building and Presenting an Oral Argument with Evidence",
+      "assignment": "Prepare and deliver a 5–7 minute oral presentation on a literary or thematic topic from this course. Your presentation must: (1) begin with a clear thesis/argument, (2) include at least three supporting points each backed by textual evidence, (3) address one counterargument, and (4) conclude with a synthesis statement. Additionally, participate in one Socratic seminar: make at least three substantive contributions, reference the text twice, and ask one clarifying question. Submit a written outline of your presentation and a self-evaluation rubric.",
+      "estimatedHrs": 4.5
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "A symbol in a literary text is best described as:",
+      "options": [
+        "A character's name that has a hidden meaning",
+        "An object, person, or event that represents something beyond its literal meaning",
+        "A comparison using 'like' or 'as'",
+        "The resolution of a conflict"
+      ],
+      "answer": "An object, person, or event that represents something beyond its literal meaning",
+      "explanation": "A symbol carries both a literal identity and a deeper representational meaning — for example, a broken mirror might symbolize shattered dreams.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "An allegory is a narrative in which:",
+      "options": [
+        "Characters speak to the audience directly",
+        "The story has no conflict",
+        "People, places, and events symbolically represent abstract ideas or real-world concepts",
+        "Every sentence contains a simile"
+      ],
+      "answer": "People, places, and events symbolically represent abstract ideas or real-world concepts",
+      "explanation": "Allegories operate on two levels simultaneously — the literal story and the symbolic layer. Animal Farm, for example, allegorically represents the Soviet Revolution.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "In the sentence 'Exhausted by the long journey, the travelers collapsed at the inn,' the phrase 'Exhausted by the long journey' is a:",
+      "options": [
+        "Gerund phrase",
+        "Infinitive phrase",
+        "Participial phrase",
+        "Subordinate clause"
+      ],
+      "answer": "Participial phrase",
+      "explanation": "A participial phrase begins with a past or present participle (here 'Exhausted') and modifies a noun. It acts as an adjective, describing 'the travelers.'",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Which sentence correctly uses an appositive phrase?",
+      "options": [
+        "Running quickly, she missed the bus.",
+        "She wanted to succeed, but she was afraid.",
+        "Mrs. Lee, our school's librarian, recommended the book.",
+        "To finish the assignment, he stayed up late."
+      ],
+      "answer": "Mrs. Lee, our school's librarian, recommended the book.",
+      "explanation": "An appositive phrase renames or describes the noun immediately before it and is set off by commas. 'Our school's librarian' is an appositive identifying Mrs. Lee.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Tone in a literary text refers to:",
+      "options": [
+        "The emotional atmosphere the reader feels",
+        "The author's attitude toward the subject or audience",
+        "The number of characters in the story",
+        "The pace at which events unfold"
+      ],
+      "answer": "The author's attitude toward the subject or audience",
+      "explanation": "Tone reflects the writer's feelings or perspective — such as ironic, melancholy, celebratory, or critical. Mood, by contrast, is the emotional atmosphere the reader experiences.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "How does diction primarily shape tone in a text?",
+      "options": [
+        "By controlling the length of paragraphs",
+        "By choosing words with specific connotations that convey the author's attitude",
+        "By deciding the order of events in the plot",
+        "By determining how many characters appear"
+      ],
+      "answer": "By choosing words with specific connotations that convey the author's attitude",
+      "explanation": "Diction — the author's word choice — is the primary tool for establishing tone. Words with negative connotations create a critical or somber tone; positive, uplifting words create an enthusiastic or celebratory tone.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Which of the following best describes a motif in literature?",
+      "options": [
+        "A character who appears in every chapter",
+        "A recurring element — image, phrase, or idea — that contributes to the theme",
+        "The setting of the story",
+        "The climax of the plot"
+      ],
+      "answer": "A recurring element — image, phrase, or idea — that contributes to the theme",
+      "explanation": "A motif is a repeated element (image, concept, symbol, phrase) throughout a work that reinforces the theme. Unlike a symbol, a motif must recur multiple times.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "When analyzing world literature, understanding the cultural context of a story helps readers:",
+      "options": [
+        "Memorize the author's biography",
+        "Understand why characters behave as they do and what values the text reflects",
+        "Identify the number of setting changes",
+        "Count the chapters more easily"
+      ],
+      "answer": "Understand why characters behave as they do and what values the text reflects",
+      "explanation": "Cultural context illuminates characters' motivations, social norms, and the values embedded in the story — elements that may differ significantly from the reader's own culture.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "A round character is best described as one who:",
+      "options": [
+        "Appears in a circular story structure",
+        "Is fully developed with complex, sometimes contradictory traits",
+        "Never changes throughout the narrative",
+        "Always serves as the narrator"
+      ],
+      "answer": "Is fully developed with complex, sometimes contradictory traits",
+      "explanation": "Round characters feel realistic because they have multiple dimensions — strengths, weaknesses, contradictions, and inner conflicts. Flat characters have only one or two defining traits.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "In a PEEL body paragraph, the 'E' for 'Explanation' requires the writer to:",
+      "options": [
+        "Simply copy a quotation from the text",
+        "Restate the topic sentence",
+        "Analyze how the evidence supports the claim",
+        "Write a new thesis statement"
+      ],
+      "answer": "Analyze how the evidence supports the claim",
+      "explanation": "The Explanation component is where the writer unpacks the quoted evidence — explaining why it proves the point. Without explanation, evidence appears without analytical context.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Which of the following is the best way to introduce a direct quotation in an analytical essay?",
+      "options": [
+        "Just paste the quote with quotation marks and no introduction.",
+        "Use a signal phrase such as 'According to' or 'As the author states,' followed by the quotation.",
+        "Put the quotation at the beginning of the paragraph before any context.",
+        "Write 'Quote:' before the quotation."
+      ],
+      "answer": "Use a signal phrase such as 'According to' or 'As the author states,' followed by the quotation.",
+      "explanation": "Signal phrases smoothly integrate quotations into your own prose, providing context about who said the words and how they connect to your argument.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Which of the following is an example of a gerund phrase functioning as the subject of a sentence?",
+      "options": [
+        "She hoped to finish the essay by noon.",
+        "To read every day is her goal.",
+        "Analyzing literature carefully improves critical thinking.",
+        "He studied after the game ended."
+      ],
+      "answer": "Analyzing literature carefully improves critical thinking.",
+      "explanation": "'Analyzing literature carefully' is a gerund phrase (gerund + object + modifier) functioning as the subject of the sentence. Gerund phrases use the -ing form of a verb as a noun.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "The speaker in a poem is:",
+      "options": [
+        "Always the poet themselves",
+        "The voice that narrates or delivers the poem, which may or may not be the poet",
+        "The main character of the poem's story",
+        "The person the poem is dedicated to"
+      ],
+      "answer": "The voice that narrates or delivers the poem, which may or may not be the poet",
+      "explanation": "The speaker is the persona or voice in the poem. Authors often create a speaker who is distinct from themselves — assuming a character, persona, or perspective for artistic purposes.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Explain the difference between a symbol and a motif. Give one example of each from any literary text you have studied.",
+      "options": null,
+      "answer": "A symbol is a single object, person, or event that represents something beyond its literal meaning (e.g., the green light in The Great Gatsby symbolizes Gatsby's dreams). A motif is a recurring element — image, phrase, or idea — that appears multiple times and contributes to the theme (e.g., the repeated appearance of birds in 'The Scarlet Ibis' as a motif connecting the brother to Doodle).",
+      "explanation": "Symbols carry dual meaning; motifs gain meaning through repetition. A symbol can become a motif if it recurs throughout a text.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "Write one PEEL body paragraph (4–6 sentences) analyzing a theme in any literary text you have read this semester. Label each component: P, E, E, and L.",
+      "options": null,
+      "answer": "Example: [P] In 'The Necklace,' Maupassant argues that pride and vanity lead to self-destruction. [E] When Mathilde borrows the necklace and loses it, she sacrifices ten years of her life in poverty, as the narrator observes: 'She had aged, now she had become the woman of impoverished households — strong and hard and rough' (Maupassant). [E] This transformation directly results from her desire to appear wealthy, demonstrating how vanity imprisons rather than elevates. [L] Maupassant therefore uses Mathilde's fate to reinforce the story's central theme that false pride destroys authentic happiness.",
+      "explanation": "PEEL = Point (analytical claim), Evidence (textual quotation with citation), Explanation (analysis of how evidence supports the claim), Link (connection back to the thesis or theme).",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "The author's purpose in a literary text most directly shapes:",
+      "options": [
+        "The number of characters",
+        "The length of the text",
+        "The choices the author makes about what to include, emphasize, and how to present the material",
+        "The publisher who releases the book"
+      ],
+      "answer": "The choices the author makes about what to include, emphasize, and how to present the material",
+      "explanation": "Author's purpose (to inform, entertain, persuade, or reflect) influences every decision — tone, structure, characterization, and what details are foregrounded or omitted.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "A comparative thesis for an essay about 'Still I Rise' and 'The Raven' should:",
+      "options": [
+        "Simply name both poems without making an argument",
+        "Summarize each poem separately",
+        "Make a specific, arguable claim about how the two poems differ or are similar in a particular way",
+        "Describe the biographies of both poets"
+      ],
+      "answer": "Make a specific, arguable claim about how the two poems differ or are similar in a particular way",
+      "explanation": "A comparative thesis identifies both texts and makes a debatable interpretive claim about their relationship — not just 'these poems are different' but how and why that difference is meaningful.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "In Shakespeare's sonnets, the volta is:",
+      "options": [
+        "The first four lines of the sonnet",
+        "The rhyme scheme of the final couplet",
+        "A shift or turn in the poem's argument, tone, or perspective",
+        "A type of metaphor unique to Shakespeare"
+      ],
+      "answer": "A shift or turn in the poem's argument, tone, or perspective",
+      "explanation": "The volta ('turn' in Italian) is a structural and thematic pivot — in a Shakespearean sonnet it typically occurs at the final couplet (GG), where the poem's argument shifts or resolves.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "The rhetorical appeal of logos relies on:",
+      "options": [
+        "The speaker's credibility and trustworthiness",
+        "Emotional connection with the audience",
+        "Logic, reason, facts, and evidence",
+        "The audience's cultural background"
+      ],
+      "answer": "Logic, reason, facts, and evidence",
+      "explanation": "Logos appeals to the audience's reason. It uses data, statistics, logical arguments, and examples to persuade. Ethos = credibility; Pathos = emotion; Logos = logic.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "A research thesis is weakest when it:",
+      "options": [
+        "Takes a clear, arguable position",
+        "Is supported by multiple credible sources",
+        "States an obvious fact that no one would dispute",
+        "Identifies the specific focus of the paper"
+      ],
+      "answer": "States an obvious fact that no one would dispute",
+      "explanation": "A research thesis must be arguable — not a statement of fact. 'Water is essential for life' cannot be argued; 'Stricter water regulations are necessary to prevent public health crises' is arguable.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "In MLA format, the Works Cited page should be:",
+      "options": [
+        "Numbered with Roman numerals at the top",
+        "Listed in the order sources are cited in the paper",
+        "Alphabetized by the author's last name",
+        "Separated by type of source (books, then websites)"
+      ],
+      "answer": "Alphabetized by the author's last name",
+      "explanation": "MLA Works Cited pages list all sources alphabetically by the first word of each entry (usually the author's last name). If no author is given, alphabetize by the title.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Identifying bias in a nonfiction text means recognizing:",
+      "options": [
+        "Whether the text is interesting to read",
+        "The author's length of experience",
+        "An unfair or one-sided presentation that favors a particular perspective",
+        "The number of sources the author cited"
+      ],
+      "answer": "An unfair or one-sided presentation that favors a particular perspective",
+      "explanation": "Bias occurs when an author presents information selectively or uses language that unfairly favors one side. Recognizing bias helps readers evaluate the reliability of a source.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "A Socratic seminar differs from a standard class discussion because it:",
+      "options": [
+        "Has a teacher who lectures the whole time",
+        "Requires students to read a prepared speech",
+        "Is student-led, inquiry-based, and relies on questioning and building on each other's ideas",
+        "Focuses only on grammar and vocabulary"
+      ],
+      "answer": "Is student-led, inquiry-based, and relies on questioning and building on each other's ideas",
+      "explanation": "Socratic seminars are structured conversations led by students, driven by open-ended questions. Participants analyze texts collaboratively by exploring multiple interpretations rather than seeking a single right answer.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Tier 2 academic vocabulary words are best described as:",
+      "options": [
+        "Basic everyday words known by young children",
+        "Highly technical terms used only in one specific subject",
+        "High-frequency words used across multiple academic subjects, such as 'analyze,' 'significant,' and 'evidence'",
+        "Slang terms used in informal contexts"
+      ],
+      "answer": "High-frequency words used across multiple academic subjects, such as 'analyze,' 'significant,' and 'evidence'",
+      "explanation": "Tier 2 words appear across disciplines and academic texts — they are essential for academic success. Tier 1 = everyday words; Tier 3 = domain-specific technical terms.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "When a poem's cultural or historical context changes, what is most likely to change for the reader?",
+      "options": [
+        "The rhyme scheme",
+        "The number of stanzas",
+        "The meaning, resonance, and significance of the poem's imagery and symbols",
+        "The poet's nationality"
+      ],
+      "answer": "The meaning, resonance, and significance of the poem's imagery and symbols",
+      "explanation": "Context shapes interpretation. A poem written during war carries different weight for readers familiar with that conflict. Historical and cultural context reveals layers of meaning that would otherwise be invisible.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "In a Shakespearean sonnet written in iambic pentameter, each line contains:",
+      "options": [
+        "6 syllables in alternating stressed and unstressed patterns",
+        "10 syllables alternating unstressed-stressed (da-DUM), making 5 iambs per line",
+        "14 stressed syllables",
+        "8 syllables with a fixed pause in the middle"
+      ],
+      "answer": "10 syllables alternating unstressed-stressed (da-DUM), making 5 iambs per line",
+      "explanation": "Iambic pentameter = 5 iambs (unstressed + stressed = da-DUM) per line = 10 syllables. It creates a natural, speech-like rhythm that Shakespeare used throughout his sonnets and plays.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Morphological analysis helps readers determine word meaning by examining:",
+      "options": [
+        "The font and layout of the word on the page",
+        "How the word sounds when spoken aloud",
+        "The word's prefixes, roots, and suffixes to decode meaning",
+        "Whether the word appears in the dictionary"
+      ],
+      "answer": "The word's prefixes, roots, and suffixes to decode meaning",
+      "explanation": "Morphology is the study of word parts. Knowing that 'mal-' means 'bad,' '-volent' relates to 'wish,' and '-ence' forms a noun allows you to deduce that 'malevolence' means 'a wish to do evil.'",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Which organizational method in a comparative essay discusses all of Text A first, then all of Text B?",
+      "options": [
+        "Point-by-point method",
+        "Block method",
+        "Chronological method",
+        "Problem-solution method"
+      ],
+      "answer": "Block method",
+      "explanation": "The block method dedicates a full section to one subject before moving to the next. The point-by-point method alternates between subjects for each shared criterion.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Academic integrity in research writing primarily means:",
+      "options": [
+        "Using only online sources",
+        "Writing a paper without consulting any outside sources",
+        "Giving proper credit to all sources used and representing others' ideas honestly",
+        "Submitting the same paper for multiple classes"
+      ],
+      "answer": "Giving proper credit to all sources used and representing others' ideas honestly",
+      "explanation": "Academic integrity requires citing all borrowed ideas, quotes, and data, and ensuring that the work you submit accurately represents your own thinking — not someone else's.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Which of the following sentences best demonstrates a sophisticated use of a subordinate clause to convey complex ideas?",
+      "options": [
+        "The book was good. I liked it.",
+        "She read the book and she liked it a lot.",
+        "Although the novel ends ambiguously, its exploration of identity resonates with readers who have experienced cultural displacement.",
+        "The novel is about identity, and it also talks about culture."
+      ],
+      "answer": "Although the novel ends ambiguously, its exploration of identity resonates with readers who have experienced cultural displacement.",
+      "explanation": "This sentence uses a subordinate clause ('Although the novel ends ambiguously') to concede a point while making a complex analytical claim — characteristic of sophisticated academic prose.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "The ethos appeal in an argument is most clearly demonstrated when:",
+      "options": [
+        "The author cites statistics from a scientific study",
+        "The author uses vivid personal stories to move readers emotionally",
+        "The author establishes their expertise, qualifications, or trustworthiness",
+        "The author presents a logical sequence of causes and effects"
+      ],
+      "answer": "The author establishes their expertise, qualifications, or trustworthiness",
+      "explanation": "Ethos persuades through the credibility and character of the speaker. Mentioning credentials, citing respected institutions, or demonstrating fairness all build ethos.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Which element most distinguishes a Socratic seminar contribution from a simple comment?",
+      "options": [
+        "Speaking loudly and confidently",
+        "Agreeing with everything that has been said",
+        "Building on a classmate's idea and supporting your point with textual evidence",
+        "Asking the teacher for the answer"
+      ],
+      "answer": "Building on a classmate's idea and supporting your point with textual evidence",
+      "explanation": "Strong Socratic seminar contributions extend the conversation — they reference what others have said, add new textual evidence, and advance the group's understanding rather than standing alone.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "short",
+      "question": "Explain the difference between tone and mood. Then, using a text you have studied this year, give one example of each and explain what specific language choices create them.",
+      "options": null,
+      "answer": "Tone is the author's attitude toward the subject (e.g., ironic, mournful, celebratory). Mood is the emotional atmosphere the reader experiences. Example from 'The Raven': Poe's tone is mournful and obsessive — created by diction choices like 'nevermore,' 'lost Lenore,' and 'bleak December.' The mood is one of dread and despair, created by the dark imagery of a raven in a dark room and repetitive refrain that makes the reader feel trapped alongside the narrator.",
+      "explanation": "Tone = writer's attitude (craft choice); Mood = reader's emotional response (effect). Both are produced primarily through diction, imagery, and syntax.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Write a research thesis statement on the topic of social media and mental health. Then briefly explain (2–3 sentences) what a research paper using this thesis would need to prove and what kinds of sources would best support it.",
+      "options": null,
+      "answer": "Thesis: Although social media platforms provide valuable community-building opportunities, excessive use among adolescents is linked to increased rates of anxiety and depression, and platforms should be required to implement stronger usage limits. A paper with this thesis would need to prove a causal or correlational relationship between heavy social media use and mental health decline, and refute the argument that benefits outweigh harms. The best supporting sources would be peer-reviewed psychology studies, data from health organizations (e.g., WHO, CDC), and expert commentary — not blogs or social media posts.",
+      "explanation": "A strong research thesis is arguable, specific, and forecasts the paper's content. The sources needed should match the nature of the claim (empirical claims need empirical evidence).",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "Choose two texts you have studied from different cultures or time periods. Write a 4–6 sentence comparative analysis paragraph using the point-by-point method, focusing on how each text treats a shared theme.",
+      "options": null,
+      "answer": "Example: Both 'The Necklace' by Guy de Maupassant and 'Still I Rise' by Maya Angelou explore the theme of identity and social pressure, but they arrive at opposing conclusions. In 'The Necklace,' Mathilde's obsession with appearing wealthier than she is destroys her authentic self — Maupassant writes that she 'had aged,' suggesting that the performance of identity exacts a devastating cost. By contrast, Angelou's speaker in 'Still I Rise' refuses to let external oppression define her, declaring 'I rise' repeatedly — a motif of defiant self-affirmation. While Maupassant uses his protagonist's downfall to warn against false identity, Angelou celebrates the power of claiming one's true self against social pressure. Together, these texts suggest that social identity expectations can either crush or be triumphantly resisted depending on whether one internalizes or rejects them.",
+      "explanation": "Point-by-point comparison alternates between texts for each criterion, using transitions like 'by contrast,' 'while,' and 'similarly' to signal relationships.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes a theme in a literary work?",
+      "options": [
+        "A summary of the plot from beginning to end",
+        "The name of the main character",
+        "A universal message or insight about human experience conveyed by the text",
+        "The physical setting of the story"
+      ],
+      "answer": "A universal message or insight about human experience conveyed by the text",
+      "explanation": "Theme is the central idea or message — a statement about life, human nature, or society that the text communicates through its characters, conflicts, and events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "type": "mc",
+      "question": "A symbol in literature is an object, person, or event that:",
+      "options": [
+        "Appears only once in the text",
+        "Carries a literal meaning and a deeper representational meaning",
+        "Is invented by the reader and not the author",
+        "Must always be a physical object like a ring or a key"
+      ],
+      "answer": "Carries a literal meaning and a deeper representational meaning",
+      "explanation": "A symbol functions on two levels: what it literally is and what it stands for. A dove is literally a bird but commonly symbolizes peace.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "type": "mc",
+      "question": "Which statement best describes the difference between a symbol and a motif?",
+      "options": [
+        "A motif is a single image; a symbol repeats throughout a text.",
+        "A symbol has one meaning; a motif has no meaning.",
+        "A motif is a recurring element; a symbol may appear only once but carries deep meaning.",
+        "They are identical — there is no difference."
+      ],
+      "answer": "A motif is a recurring element; a symbol may appear only once but carries deep meaning.",
+      "explanation": "Motifs gain their significance through repetition. Symbols can appear once and carry profound meaning. Both contribute to a text's themes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "type": "mc",
+      "question": "An allegory is best understood as a text that:",
+      "options": [
+        "Has no characters",
+        "Uses extended symbolism to represent a real-world concept, historical event, or moral idea",
+        "Is written in verse",
+        "Contains exactly one symbol"
+      ],
+      "answer": "Uses extended symbolism to represent a real-world concept, historical event, or moral idea",
+      "explanation": "Allegories operate on two complete levels: the surface narrative and the symbolic layer. Every major character or event represents something beyond the story itself.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "type": "mc",
+      "question": "The author's purpose in a text primarily influences:",
+      "options": [
+        "The color of the book's cover",
+        "What the author chooses to include, how the text is structured, and what message is conveyed",
+        "The number of pages in the book",
+        "How quickly the reader finishes the text"
+      ],
+      "answer": "What the author chooses to include, how the text is structured, and what message is conveyed",
+      "explanation": "Author's purpose — to inform, persuade, entertain, or express — shapes every craft decision: what details are highlighted, whose perspective is centered, and what theme emerges.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "type": "mc",
+      "question": "A subordinate clause differs from an independent clause because a subordinate clause:",
+      "options": [
+        "Has no subject",
+        "Can stand alone as a complete sentence",
+        "Cannot stand alone and depends on an independent clause for meaning",
+        "Is always placed at the end of a sentence"
+      ],
+      "answer": "Cannot stand alone and depends on an independent clause for meaning",
+      "explanation": "A subordinate (dependent) clause has a subject and verb but begins with a subordinating conjunction (although, because, when, since) that makes it incomplete on its own.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "type": "mc",
+      "question": "In the sentence 'Swimming every morning keeps her healthy,' the phrase 'Swimming every morning' functions as:",
+      "options": [
+        "A participial phrase (adjective)",
+        "An infinitive phrase",
+        "A gerund phrase (noun — subject of the sentence)",
+        "An appositive phrase"
+      ],
+      "answer": "A gerund phrase (noun — subject of the sentence)",
+      "explanation": "A gerund phrase uses the -ing form of a verb as a noun. Here 'Swimming every morning' is the subject of the sentence — asking 'What keeps her healthy?' reveals the gerund phrase as the subject.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "type": "mc",
+      "question": "Which sentence contains an infinitive phrase?",
+      "options": [
+        "Laughing loudly, the children ran across the yard.",
+        "She tried to memorize every capital city.",
+        "The teacher, a former athlete, coached the team.",
+        "Having read the chapter, he answered all the questions."
+      ],
+      "answer": "She tried to memorize every capital city.",
+      "explanation": "An infinitive phrase begins with 'to' + verb. 'To memorize every capital city' is an infinitive phrase functioning as the object of 'tried.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "type": "mc",
+      "question": "An appositive phrase is correctly punctuated with:",
+      "options": [
+        "A semicolon before and after it",
+        "Commas to set it off from the rest of the sentence",
+        "Quotation marks around it",
+        "A colon before it"
+      ],
+      "answer": "Commas to set it off from the rest of the sentence",
+      "explanation": "Appositive phrases rename or describe the noun immediately before them and are set off with commas (or dashes for emphasis). Example: 'The coach, a former Olympian, trained the team.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following contains a participial phrase?",
+      "options": [
+        "To become a doctor is her dream.",
+        "Frightened by the noise, the cat hid under the bed.",
+        "Reading novels is her favorite hobby.",
+        "She wants to travel the world."
+      ],
+      "answer": "Frightened by the noise, the cat hid under the bed.",
+      "explanation": "'Frightened by the noise' is a participial phrase beginning with a past participle. It modifies 'the cat' — describing its condition — and is set off with a comma.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "type": "mc",
+      "question": "Mood in a literary text refers to:",
+      "options": [
+        "The author's attitude toward the subject",
+        "The emotional atmosphere or feeling the reader experiences",
+        "The main character's feelings",
+        "The conflict in the story"
+      ],
+      "answer": "The emotional atmosphere or feeling the reader experiences",
+      "explanation": "Mood is the emotional effect created for the reader — feelings of suspense, joy, melancholy, etc. Tone is the author's attitude; mood is what the reader feels.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "type": "mc",
+      "question": "Which word choice would most effectively create an ominous, threatening tone?",
+      "options": [
+        "Walked, happy, bright",
+        "Crept, malevolent, shadows",
+        "Ran, cheerful, sunny",
+        "Skipped, laughed, bloomed"
+      ],
+      "answer": "Crept, malevolent, shadows",
+      "explanation": "'Crept' implies stealth; 'malevolent' means evil; 'shadows' suggest darkness. These words carry connotations that combine to create an ominous tone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "type": "mc",
+      "question": "An author's style includes all of the following EXCEPT:",
+      "options": [
+        "The length and structure of sentences (syntax)",
+        "The author's word choices (diction)",
+        "The year the text was published",
+        "The use of figurative language"
+      ],
+      "answer": "The year the text was published",
+      "explanation": "Style encompasses diction, syntax, figurative language, tone, and other craft choices that make an author's writing distinctive. Publication year is a bibliographic fact, not a stylistic element.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "type": "mc",
+      "question": "When an author uses short, fragmented sentences repeatedly, the most likely effect is:",
+      "options": [
+        "A relaxed, unhurried pace",
+        "A sense of urgency, tension, or panic",
+        "A formal, academic tone",
+        "A humorous, lighthearted mood"
+      ],
+      "answer": "A sense of urgency, tension, or panic",
+      "explanation": "Short sentences speed up the narrative pace and mirror the fragmented thoughts of a stressed or panicked mind, creating urgency. Long, flowing sentences tend to slow the pace and create a reflective mood.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following best describes how diction shapes tone?",
+      "options": [
+        "Diction determines the plot structure of the text.",
+        "Word choice carries connotations that signal the author's attitude toward the subject.",
+        "Diction refers only to grammar correctness.",
+        "The number of words in a sentence is the primary driver of tone."
+      ],
+      "answer": "Word choice carries connotations that signal the author's attitude toward the subject.",
+      "explanation": "Every word choice signals tone. 'The politician explained his position' is neutral. 'The politician defended his excuses' is critical. The connotations of 'explained vs. defended' and 'position vs. excuses' shift the tone entirely.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "type": "mc",
+      "question": "When reading literature from another culture, why is cultural context important?",
+      "options": [
+        "It tells you the author's birth date",
+        "It helps readers understand characters' values, social norms, and the meaning of events",
+        "It provides a glossary of vocabulary",
+        "It explains the publisher's marketing strategy"
+      ],
+      "answer": "It helps readers understand characters' values, social norms, and the meaning of events",
+      "explanation": "Cultural context reveals the beliefs, customs, and social structures that shape characters' choices and the story's conflicts — without it, readers may misinterpret behavior or miss thematic significance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "type": "mc",
+      "question": "In Guy de Maupassant's 'The Necklace,' Mathilde's unhappiness stems primarily from:",
+      "options": [
+        "A genuine inability to afford basic necessities",
+        "Her husband's cruelty toward her",
+        "Her desire to appear wealthier and more prestigious than she actually is",
+        "A physical illness that limits her activities"
+      ],
+      "answer": "Her desire to appear wealthier and more prestigious than she actually is",
+      "explanation": "'The Necklace' explores themes of vanity and false pride — Mathilde's suffering is self-inflicted, rooted in her obsession with appearing to belong to a social class above her own.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "type": "mc",
+      "question": "Which of the following is an example of situational irony in short fiction?",
+      "options": [
+        "A character says 'What lovely weather' during a storm.",
+        "The reader knows a bomb is under the table but the characters do not.",
+        "A fire station burns down.",
+        "A character has a dream that foreshadows the ending."
+      ],
+      "answer": "A fire station burns down.",
+      "explanation": "Situational irony occurs when the outcome is the opposite of what is expected. A fire station — the place meant to prevent fires — burning down is the classic example of situational irony.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "type": "mc",
+      "question": "How can the same theme (e.g., 'the consequences of pride') appear in stories from different global traditions?",
+      "options": [
+        "It cannot — themes are culture-specific and never universal.",
+        "Writers from different cultures plagiarize each other's themes.",
+        "Certain themes reflect shared human experiences that transcend cultural differences.",
+        "Themes only appear in Western literature."
+      ],
+      "answer": "Certain themes reflect shared human experiences that transcend cultural differences.",
+      "explanation": "Universal themes — love, loss, justice, identity, pride — appear across world literature because they reflect fundamental human concerns that all cultures grapple with, regardless of historical period or geography.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "type": "mc",
+      "question": "In analyzing a short story from another culture, a reader should primarily avoid:",
+      "options": [
+        "Noting similarities to stories from their own tradition",
+        "Identifying the genre and structure",
+        "Judging all cultural practices in the story using only their own culture's values",
+        "Connecting the story to real-world issues"
+      ],
+      "answer": "Judging all cultural practices in the story using only their own culture's values",
+      "explanation": "Ethnocentrism — evaluating other cultures solely by the standards of one's own — leads to misinterpretation. Effective global literary analysis requires understanding practices within their cultural context.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "type": "mc",
+      "question": "The speaker in a poem is:",
+      "options": [
+        "Always the poet writing the poem",
+        "The imaginary or real voice delivering the poem, which may differ from the poet",
+        "The main character of a narrative embedded in the poem",
+        "The person being addressed in the poem"
+      ],
+      "answer": "The imaginary or real voice delivering the poem, which may differ from the poet",
+      "explanation": "Poets often adopt a persona or speaker distinct from themselves. Analyzing the speaker — who they are, their perspective, their emotional state — is essential to interpreting a poem.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "type": "mc",
+      "question": "In Maya Angelou's 'Still I Rise,' the repeated refrain 'I rise' primarily functions as:",
+      "options": [
+        "A symbol for physical height",
+        "A motif of defiant resilience and self-affirmation despite oppression",
+        "An example of alliteration",
+        "A transition between stanzas with no thematic significance"
+      ],
+      "answer": "A motif of defiant resilience and self-affirmation despite oppression",
+      "explanation": "The repetition of 'I rise' creates a powerful motif — a recurring element that accumulates meaning with each repetition, ultimately becoming the poem's central statement of triumph over oppression.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "type": "mc",
+      "question": "Analyzing a poem's form means examining:",
+      "options": [
+        "Only the content and imagery",
+        "The author's biography",
+        "The structural elements — number of stanzas, line length, rhyme scheme, meter — and how they contribute to meaning",
+        "The color of the book in which the poem was published"
+      ],
+      "answer": "The structural elements — number of stanzas, line length, rhyme scheme, meter — and how they contribute to meaning",
+      "explanation": "Form analysis asks: How is the poem built, and why does that structure matter? A free-verse poem signals one set of meanings; a tightly rhymed sonnet signals another.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "type": "mc",
+      "question": "When a poem from a non-Western tradition does not follow rhyme or meter conventions familiar to Western readers, the most appropriate response is to:",
+      "options": [
+        "Conclude that it is not really poetry",
+        "Mark it as inferior to Western poetic forms",
+        "Recognize that different traditions have their own aesthetic conventions and analyze it within its own framework",
+        "Ignore the poem's structure entirely"
+      ],
+      "answer": "Recognize that different traditions have their own aesthetic conventions and analyze it within its own framework",
+      "explanation": "World poetry uses many different forms — haiku, ghazal, pantoum, griot oral poetry — each with its own aesthetic rules. Imposing a single cultural standard misreads the poem's craft.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "type": "mc",
+      "question": "How does historical context shape a poem's meaning?",
+      "options": [
+        "It does not — poems should be read without any outside information.",
+        "It provides the background events and social conditions that give the poem's images and themes specific significance.",
+        "It only matters for poems written before the 20th century.",
+        "It tells the reader how long the poem took to write."
+      ],
+      "answer": "It provides the background events and social conditions that give the poem's images and themes specific significance.",
+      "explanation": "Context enriches interpretation. A poem written during the Civil Rights Movement carries different weight than the same words written in a different era — the historical moment shapes which images resonate and why.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "type": "mc",
+      "question": "Internal conflict in a novel is most accurately described as:",
+      "options": [
+        "A battle between two characters fighting physically",
+        "A character's struggle with a dilemma, emotion, or moral choice within themselves",
+        "The conflict between a character and a force of nature",
+        "The conflict between the narrator and the author"
+      ],
+      "answer": "A character's struggle with a dilemma, emotion, or moral choice within themselves",
+      "explanation": "Internal conflict (person vs. self) is psychological — it involves a character wrestling with their own fears, desires, guilt, or values. It is often what makes literary characters feel human and complex.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "type": "mc",
+      "question": "A flat character differs from a round character because a flat character:",
+      "options": [
+        "Appears on every page",
+        "Is the most important character in the story",
+        "Has only one or two defining traits and lacks psychological complexity",
+        "Always changes significantly by the end of the story"
+      ],
+      "answer": "Has only one or two defining traits and lacks psychological complexity",
+      "explanation": "Flat characters are simple, often serving as a type or stereotype. They function in the story without the layered motivation, contradiction, or development of round characters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "type": "mc",
+      "question": "How does a central conflict drive character development?",
+      "options": [
+        "It does not — character and conflict are unrelated in novels.",
+        "It forces characters into situations that test and reveal their values, leading to growth or change.",
+        "It slows the plot so characters have more time to talk.",
+        "It replaces the theme as the text's main focus."
+      ],
+      "answer": "It forces characters into situations that test and reveal their values, leading to growth or change.",
+      "explanation": "Conflict is the engine of character development. How a character responds to obstacles — with courage, fear, adaptability, or rigidity — reveals who they are and may transform who they become.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "type": "mc",
+      "question": "In 'The Most Dangerous Game,' General Zaroff is best classified as:",
+      "options": [
+        "A flat, static antagonist who never changes",
+        "A round, dynamic protagonist",
+        "An internal conflict",
+        "A symbol of nature's power"
+      ],
+      "answer": "A flat, static antagonist who never changes",
+      "explanation": "Zaroff is a type — the villain — defined by arrogance and cruelty. He does not grow or change during the story, making him flat and static. He opposes Rainsford as the antagonist.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "type": "mc",
+      "question": "Which phrase best describes the relationship between the protagonist and antagonist?",
+      "options": [
+        "The protagonist is always the hero; the antagonist is always a villain.",
+        "The protagonist drives the story's main goal; the antagonist creates the central obstacle to that goal.",
+        "The protagonist and antagonist must be two different people.",
+        "The antagonist is always the character who speaks the most."
+      ],
+      "answer": "The protagonist drives the story's main goal; the antagonist creates the central obstacle to that goal.",
+      "explanation": "Protagonist = drives the main action; Antagonist = opposes it. Neither must be morally good or evil — the antagonist can be a society, a force of nature, or even the protagonist's own self.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "type": "mc",
+      "question": "In the PEEL structure, the 'P' (Point) should be:",
+      "options": [
+        "A direct quotation from the text",
+        "A plot summary of the entire story",
+        "A clear analytical claim that states what the paragraph will prove",
+        "A transition sentence that looks back at the previous paragraph"
+      ],
+      "answer": "A clear analytical claim that states what the paragraph will prove",
+      "explanation": "The Point (topic sentence) opens the paragraph with a specific, arguable analytical claim. Everything that follows — evidence and explanation — supports this claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "type": "mc",
+      "question": "When integrating a quotation with a signal phrase, which example is correctly formatted in MLA style?",
+      "options": [
+        "Jackson writes, (The villagers gathered in the square) (Jackson 1).",
+        "According to Jackson, 'The villagers gathered in the square' (1).",
+        "Jackson — 'The villagers gathered in the square' — page 1.",
+        "The villagers gathered in the square. (Jackson, page 1)"
+      ],
+      "answer": "According to Jackson, 'The villagers gathered in the square' (1).",
+      "explanation": "MLA format: signal phrase + comma + opening quotation mark + quote + closing quotation mark + space + parenthetical citation (last name, page number, no comma). Period goes after the closing parenthesis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "type": "mc",
+      "question": "The 'Link' in a PEEL paragraph serves to:",
+      "options": [
+        "Introduce the next piece of evidence",
+        "Restate the quotation",
+        "Connect the paragraph's analysis back to the essay's thesis and transition to the next idea",
+        "Summarize the plot of the text"
+      ],
+      "answer": "Connect the paragraph's analysis back to the essay's thesis and transition to the next idea",
+      "explanation": "The Link closes the paragraph by showing how this paragraph's evidence and analysis advance the overall argument — maintaining essay coherence and signaling the reader about what follows.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "type": "mc",
+      "question": "Why is explanation (analysis) essential after presenting a quotation?",
+      "options": [
+        "It is not needed — the quotation speaks for itself.",
+        "It tells the reader the author's biography.",
+        "Without analysis, the reader cannot see how the evidence supports your argument.",
+        "It repeats the quotation in different words."
+      ],
+      "answer": "Without analysis, the reader cannot see how the evidence supports your argument.",
+      "explanation": "Evidence must be unpacked. Analytical explanation bridges the gap between the quotation and your claim — it shows the reader exactly how this piece of text proves your point.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is the best opening sentence (Point) for a body paragraph analyzing the theme of loss in a poem?",
+      "options": [
+        "This poem was written in 1945.",
+        "The poem has a sad tone.",
+        "Through the imagery of empty rooms and faded photographs, the speaker conveys that loss permanently alters one's sense of identity.",
+        "The poet uses many interesting words throughout the poem."
+      ],
+      "answer": "Through the imagery of empty rooms and faded photographs, the speaker conveys that loss permanently alters one's sense of identity.",
+      "explanation": "A strong analytical point sentence names the literary technique used, identifies what the author does, and makes an interpretive claim about meaning — all three elements are present here.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "type": "mc",
+      "question": "A comparative thesis must do more than just name two texts. It must:",
+      "options": [
+        "Summarize both texts in one sentence",
+        "State which text is better",
+        "Make a specific arguable claim about a meaningful similarity or difference between the two texts",
+        "List all the literary devices used in both texts"
+      ],
+      "answer": "Make a specific arguable claim about a meaningful similarity or difference between the two texts",
+      "explanation": "A strong comparative thesis identifies both texts, names the basis of comparison (theme, structure, perspective), and makes an interpretive claim that the essay will support with evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "type": "mc",
+      "question": "In the point-by-point method of comparison, the essay:",
+      "options": [
+        "Discusses all features of Text A in one section, then all features of Text B",
+        "Alternates between both texts for each point of comparison throughout the essay",
+        "Only discusses one text per paragraph",
+        "Presents the two texts chronologically by date of publication"
+      ],
+      "answer": "Alternates between both texts for each point of comparison throughout the essay",
+      "explanation": "Point-by-point organization compares both texts together for each criterion — e.g., one paragraph covers how both texts handle conflict, another covers how both handle character, etc.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "type": "mc",
+      "question": "Which transition best signals a contrast in a comparative essay?",
+      "options": [
+        "Furthermore",
+        "Similarly",
+        "In addition",
+        "However"
+      ],
+      "answer": "However",
+      "explanation": "'However' signals a shift to a contrasting or opposing point — essential for signaling to the reader that you are now discussing a difference rather than a similarity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "type": "mc",
+      "question": "A comparative analysis focuses on theme comparison when it examines:",
+      "options": [
+        "How two texts were published in different countries",
+        "The message or insight about life that both texts convey and how they are similar or different in that message",
+        "The number of characters in each text",
+        "The length of each text"
+      ],
+      "answer": "The message or insight about life that both texts convey and how they are similar or different in that message",
+      "explanation": "Thematic comparison asks: What does each text say about a subject (e.g., justice, identity, love), and how do those messages converge or diverge?",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "type": "mc",
+      "question": "Why is submitting a writing outline alongside a comparative essay useful?",
+      "options": [
+        "It replaces the need to write the actual essay.",
+        "It shows the organizational plan and demonstrates that the comparison is systematic and intentional.",
+        "It proves the writer did internet research.",
+        "It fills space to meet the page requirement."
+      ],
+      "answer": "It shows the organizational plan and demonstrates that the comparison is systematic and intentional.",
+      "explanation": "An outline reveals the essay's logic and structure — how evidence is organized, how transitions will work, and whether the comparative argument is balanced between both texts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "type": "mc",
+      "question": "The rhyme scheme of a Shakespearean sonnet is:",
+      "options": [
+        "AABB CCDD EEFF GG",
+        "ABBA ABBA CDC DCD",
+        "ABAB CDCD EFEF GG",
+        "AAAA BBBB CCCC DD"
+      ],
+      "answer": "ABAB CDCD EFEF GG",
+      "explanation": "The Shakespearean sonnet consists of three quatrains (ABAB CDCD EFEF) and a closing couplet (GG), totaling 14 lines typically written in iambic pentameter.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "type": "mc",
+      "question": "In Shakespeare's plays, a soliloquy allows the audience to:",
+      "options": [
+        "Watch two characters argue with each other",
+        "Hear a character's private thoughts directly, creating dramatic irony or intimacy",
+        "Read the stage directions spoken aloud",
+        "See the backstage preparations of the actors"
+      ],
+      "answer": "Hear a character's private thoughts directly, creating dramatic irony or intimacy",
+      "explanation": "A soliloquy is a speech delivered by a character alone on stage — their inner voice made audible. This technique reveals motivation and can create dramatic irony when the audience knows more than other characters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "type": "mc",
+      "question": "The volta in a Shakespearean sonnet typically occurs:",
+      "options": [
+        "At the end of the first quatrain",
+        "In the middle of the second quatrain",
+        "At the beginning of the final couplet",
+        "In every single line"
+      ],
+      "answer": "At the beginning of the final couplet",
+      "explanation": "In the Shakespearean sonnet, the volta (turn) marks a shift in the argument's direction, resolution, or tone. It most commonly occurs at line 13 — the opening of the final couplet.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "type": "mc",
+      "question": "Iambic pentameter consists of:",
+      "options": [
+        "Five stressed syllables per line",
+        "Ten syllables alternating unstressed-stressed, making five iambic feet",
+        "Fourteen syllables in a fixed pattern",
+        "Eight syllables with two stressed syllables at the end"
+      ],
+      "answer": "Ten syllables alternating unstressed-stressed, making five iambic feet",
+      "explanation": "An iamb = unstressed + stressed syllable (da-DUM). Pentameter = five iambs per line. 5 x 2 syllables = 10 syllables per line. This creates a rhythm that mimics natural speech patterns.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "type": "mc",
+      "question": "Reading Early Modern English in Shakespeare requires readers to:",
+      "options": [
+        "Ignore unfamiliar words and focus only on the action",
+        "Use context clues, footnotes, and knowledge of archaic vocabulary to decode meaning",
+        "Translate every word literally into a modern dictionary definition",
+        "Read only the modern English translations and skip the original text"
+      ],
+      "answer": "Use context clues, footnotes, and knowledge of archaic vocabulary to decode meaning",
+      "explanation": "Early Modern English includes archaic words (thou, dost, hath), inverted syntax, and unfamiliar expressions. Readers use context, annotations, and glossaries to build comprehension without losing the original language's richness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "type": "mc",
+      "question": "The rhetorical appeal of ethos convinces an audience by:",
+      "options": [
+        "Using logical reasoning and data",
+        "Appealing to the audience's emotions",
+        "Establishing the speaker's credibility and trustworthiness",
+        "Using vivid imagery and storytelling"
+      ],
+      "answer": "Establishing the speaker's credibility and trustworthiness",
+      "explanation": "Ethos = credibility. An author builds ethos by demonstrating expertise, citing respected sources, being fair to opposing views, or referencing their own relevant experience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "type": "mc",
+      "question": "When evaluating evidence in a nonfiction text, which question is MOST important to ask?",
+      "options": [
+        "Is the sentence short and easy to read?",
+        "Does the evidence come from a credible, relevant source and actually support the claim?",
+        "Is the evidence presented in bullet points?",
+        "Did the author include the evidence in the introduction?"
+      ],
+      "answer": "Does the evidence come from a credible, relevant source and actually support the claim?",
+      "explanation": "Strong evidence is both credible (from a reliable source) and relevant (directly supports the claim being made). Evidence can be credible but irrelevant, or relevant but from a poor source.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "type": "mc",
+      "question": "Identifying an author's perspective in a nonfiction text means:",
+      "options": [
+        "Finding out when the author was born",
+        "Recognizing the author's point of view and the position from which they are interpreting events",
+        "Counting the number of facts in the text",
+        "Deciding whether you personally agree with the author"
+      ],
+      "answer": "Recognizing the author's point of view and the position from which they are interpreting events",
+      "explanation": "Perspective is shaped by the author's background, values, and purpose. Recognizing it helps readers evaluate whether information is presented fully and fairly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is an example of pathos in a nonfiction argument about hunger?",
+      "options": [
+        "Statistics showing 828 million people face food insecurity globally",
+        "A quote from a Nobel Prize-winning economist",
+        "A vivid personal story about a child going to school without breakfast",
+        "A logical explanation of how food supply chains work"
+      ],
+      "answer": "A vivid personal story about a child going to school without breakfast",
+      "explanation": "Pathos appeals to emotions. A specific, humanizing story about a child evokes sympathy and motivates the reader emotionally in a way that statistics and logic alone do not.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "type": "mc",
+      "question": "The key difference between a fact and an opinion in a nonfiction text is:",
+      "options": [
+        "Facts are interesting; opinions are boring.",
+        "Facts can be verified through evidence; opinions reflect a person's beliefs or judgments.",
+        "Opinions are always wrong; facts are always right.",
+        "Facts appear in parentheses; opinions do not."
+      ],
+      "answer": "Facts can be verified through evidence; opinions reflect a person's beliefs or judgments.",
+      "explanation": "Facts are objectively verifiable (e.g., 'The Earth orbits the Sun'). Opinions are subjective judgments (e.g., 'Space exploration is a waste of money'). Distinguishing between them is essential for evaluating arguments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "type": "mc",
+      "question": "A research thesis is considered weak if it:",
+      "options": [
+        "Takes a clear debatable position",
+        "Is specific enough to be fully addressed in the paper",
+        "States a well-known fact that cannot be disputed",
+        "Forecasts the paper's main argument and scope"
+      ],
+      "answer": "States a well-known fact that cannot be disputed",
+      "explanation": "Research theses must be arguable — they assert a position that can be supported, challenged, or analyzed. An undisputable fact offers nothing to prove and cannot anchor a research argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "type": "mc",
+      "question": "A research paper outline is useful primarily because it:",
+      "options": [
+        "Replaces the need to write the full draft",
+        "Provides a roadmap that organizes ideas logically before drafting begins",
+        "Is required by publishers but not by teachers",
+        "Only lists the sources the writer will use"
+      ],
+      "answer": "Provides a roadmap that organizes ideas logically before drafting begins",
+      "explanation": "An outline structures the paper's argument before writing, preventing disorganized drafts. It maps how body sections relate to the thesis and ensures smooth transitions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "type": "mc",
+      "question": "When integrating multiple sources in a research paper, it is important to:",
+      "options": [
+        "Copy each source verbatim without citation",
+        "Use only one source per paragraph to avoid confusion",
+        "Synthesize sources — connecting their ideas to each other and to your thesis — rather than simply listing them",
+        "Place all quotations at the end of the paper"
+      ],
+      "answer": "Synthesize sources — connecting their ideas to each other and to your thesis — rather than simply listing them",
+      "explanation": "Synthesis goes beyond summary or quotation stacking. It shows how multiple sources together build the research argument, revealing connections, patterns, agreements, or disagreements between them.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following is the best research thesis about screen time and children?",
+      "options": [
+        "Children use screens every day.",
+        "Screen time can be good or bad.",
+        "Limiting screen time to two hours per day for children under 12 improves both academic focus and sleep quality.",
+        "This essay discusses the effects of screen time."
+      ],
+      "answer": "Limiting screen time to two hours per day for children under 12 improves both academic focus and sleep quality.",
+      "explanation": "This thesis is specific (under 12, 2 hours), makes a debatable causal claim (improves focus and sleep), and clearly signals what the paper will prove through research evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "type": "mc",
+      "question": "When a writer highlights every use of a source in their draft, what are they most likely checking for?",
+      "options": [
+        "Whether the quotations are long enough",
+        "That every borrowed idea — quoted, paraphrased, or summarized — is properly attributed",
+        "Whether the paper meets the word count",
+        "Whether every paragraph begins with a quotation"
+      ],
+      "answer": "That every borrowed idea — quoted, paraphrased, or summarized — is properly attributed",
+      "explanation": "Tracking source use during drafting helps writers ensure all borrowed material is cited, preventing accidental plagiarism and making the citation process more efficient during revision.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "type": "mc",
+      "question": "In MLA format, an in-text citation for a paraphrase from page 22 of a book by author James Lee looks like:",
+      "options": [
+        "(James Lee, p. 22)",
+        "(Lee, 22)",
+        "(Lee 22)",
+        "[Lee page 22]"
+      ],
+      "answer": "(Lee 22)",
+      "explanation": "MLA in-text citations use the author's last name and page number in parentheses with no comma, no 'p.', and no extra punctuation: (Lee 22). This applies to both quotations and paraphrases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "type": "mc",
+      "question": "Academic plagiarism includes which of the following actions?",
+      "options": [
+        "Citing a source after using a direct quotation",
+        "Paraphrasing an author's idea and giving them credit",
+        "Using another person's exact words without quotation marks or citation",
+        "Summarizing a source and including an in-text citation"
+      ],
+      "answer": "Using another person's exact words without quotation marks or citation",
+      "explanation": "Plagiarism means presenting someone else's words or ideas as your own. Direct quotation without quotation marks and citation is one of the most clear-cut forms of academic dishonesty.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "type": "mc",
+      "question": "In a correctly formatted MLA Works Cited entry for a book, what comes first?",
+      "options": [
+        "The title of the book",
+        "The publisher's name",
+        "The author's last name, followed by a comma and their first name",
+        "The year of publication"
+      ],
+      "answer": "The author's last name, followed by a comma and their first name",
+      "explanation": "MLA Works Cited entries for books begin: Last name, First name. Title of Book. Publisher, Year. Each entry is alphabetized by last name on the Works Cited page.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "type": "mc",
+      "question": "Why must a writer cite a paraphrase, not just a direct quotation?",
+      "options": [
+        "Paraphrases do not need to be cited because the words are different.",
+        "Both quotations and paraphrases use another person's ideas, so both require citation to avoid plagiarism.",
+        "Only quotations from books need to be cited.",
+        "Paraphrases are always common knowledge."
+      ],
+      "answer": "Both quotations and paraphrases use another person's ideas, so both require citation to avoid plagiarism.",
+      "explanation": "The original idea still belongs to the source author, whether you use their exact words or restate the idea. Citation credits the source of the intellectual content, not just the words.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "type": "mc",
+      "question": "On a Works Cited page, entries are formatted with a hanging indent. This means:",
+      "options": [
+        "The first line of each entry is indented, and subsequent lines are flush left",
+        "All lines of each entry are indented equally",
+        "The first line is flush left, and any continuation lines are indented",
+        "Only the author's name is indented"
+      ],
+      "answer": "The first line is flush left, and any continuation lines are indented",
+      "explanation": "A hanging indent (reverse indent) means the first line starts at the left margin, and any additional lines of the same entry are indented 0.5 inches. This makes it easy to scan by author name.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "type": "mc",
+      "question": "Tier 2 vocabulary words are most useful to teach because they:",
+      "options": [
+        "Are only needed for standardized tests",
+        "Are basic words already known by all native speakers",
+        "Appear frequently across academic subjects and are essential for understanding complex texts",
+        "Are technical terms used only in science"
+      ],
+      "answer": "Appear frequently across academic subjects and are essential for understanding complex texts",
+      "explanation": "Tier 2 words — like 'analyze,' 'evaluate,' 'significant,' 'controversial' — appear in textbooks, essays, and tests across all subjects. Mastering them dramatically improves academic reading and writing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "type": "mc",
+      "question": "The Latin root 'dict' means 'say' or 'speak.' Which word below comes from this root?",
+      "options": [
+        "Dictionary",
+        "Dictate",
+        "Diction",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Dictionary (a book of words that 'says' their meanings), dictate (to 'speak' aloud for someone to write down), and diction (manner of 'speaking' or word choice) all derive from the Latin 'dict/dic' root.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "type": "mc",
+      "question": "When you encounter an unfamiliar academic word, the most effective first strategy is to:",
+      "options": [
+        "Skip the word and assume it is unimportant",
+        "Replace it with a simpler word without checking the meaning",
+        "Examine the surrounding sentences and any morphological clues (prefixes, roots, suffixes)",
+        "Close the book and consult a tutor"
+      ],
+      "answer": "Examine the surrounding sentences and any morphological clues (prefixes, roots, suffixes)",
+      "explanation": "Context clues and morphological analysis together are the most efficient first-response strategies. They allow readers to decode meaning independently without interrupting the reading flow.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "type": "mc",
+      "question": "The suffix '-ology' means 'the study of.' Which of the following correctly uses this knowledge?",
+      "options": [
+        "Anthropology = the study of distance",
+        "Psychology = the study of the mind",
+        "Biology = the study of books",
+        "Technology = the study of trees"
+      ],
+      "answer": "Psychology = the study of the mind",
+      "explanation": "Psyche (Greek) = mind/soul + -ology = the study of. Psychology is the scientific study of the mind and behavior. Similarly, biology = study of life (bio); anthropology = study of humans (anthropos).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "type": "mc",
+      "question": "Contextual inference means:",
+      "options": [
+        "Looking a word up in a dictionary",
+        "Asking a teacher for the definition",
+        "Using the words and ideas surrounding an unfamiliar word to deduce its meaning",
+        "Translating the word from another language"
+      ],
+      "answer": "Using the words and ideas surrounding an unfamiliar word to deduce its meaning",
+      "explanation": "Contextual inference is a reading strategy that uses surrounding text — synonyms, antonyms, examples, or explanations near the unknown word — to infer its meaning without consulting external sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "type": "mc",
+      "question": "In a Socratic seminar, a high-quality contribution involves:",
+      "options": [
+        "Repeating what the previous speaker said",
+        "Raising your hand and waiting to be called on by the teacher",
+        "Building on a classmate's idea and supporting your point with textual evidence",
+        "Reading aloud from the text without adding analysis"
+      ],
+      "answer": "Building on a classmate's idea and supporting your point with textual evidence",
+      "explanation": "Socratic seminars value collaborative inquiry — participants advance understanding by extending each other's thinking and grounding interpretations in the text.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "type": "mc",
+      "question": "Active listening in a seminar is best demonstrated by:",
+      "options": [
+        "Looking at your notes the entire time",
+        "Talking as much as possible so others know you have ideas",
+        "Making eye contact with speakers, nodding, and then responding directly to what was said",
+        "Waiting silently and never contributing"
+      ],
+      "answer": "Making eye contact with speakers, nodding, and then responding directly to what was said",
+      "explanation": "Active listening means giving full attention to the speaker and demonstrating comprehension through engagement. Responding directly to what was said proves you were genuinely listening, not just waiting for your turn.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "type": "mc",
+      "question": "An oral presentation is most effective when the presenter:",
+      "options": [
+        "Reads every word from a script without looking up",
+        "Uses complex vocabulary in every sentence regardless of audience",
+        "Maintains eye contact, varies their pace and volume, and organizes their argument clearly",
+        "Speaks as fast as possible to cover all the content"
+      ],
+      "answer": "Maintains eye contact, varies their pace and volume, and organizes their argument clearly",
+      "explanation": "Effective oral presentation combines strong delivery (eye contact, pacing, voice variation) with clear organization. These elements hold audience attention and make the argument easy to follow.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "type": "mc",
+      "question": "Addressing a counterargument in an oral presentation demonstrates that the presenter:",
+      "options": [
+        "Is unsure of their own position",
+        "Has a weak argument that needs defending",
+        "Has considered multiple perspectives and can defend their position against opposing views",
+        "Is changing their argument during the presentation"
+      ],
+      "answer": "Has considered multiple perspectives and can defend their position against opposing views",
+      "explanation": "Acknowledging and rebutting a counterargument shows intellectual maturity and rhetorical sophistication — it strengthens rather than weakens a presentation by demonstrating that the argument holds even under scrutiny.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "type": "mc",
+      "question": "A synthesis statement at the end of an oral presentation or Socratic seminar should:",
+      "options": [
+        "Simply repeat the opening thesis word for word",
+        "List all the evidence presented without commentary",
+        "Draw together the key ideas discussed and articulate a broader insight or takeaway",
+        "Introduce a brand new argument not previously discussed"
+      ],
+      "answer": "Draw together the key ideas discussed and articulate a broader insight or takeaway",
+      "explanation": "A synthesis statement does more than summarize — it shows how the parts combine into a larger understanding. It answers the implied question: 'So what does all of this mean?'",
+      "points": 1
+    }
+  ]
+}

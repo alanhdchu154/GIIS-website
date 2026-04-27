@@ -1,0 +1,1730 @@
+{
+  "slug": "business-media-literacy",
+  "name": "Business Media Literacy",
+  "nameZh": "商业媒体素养",
+  "credits": 0.5,
+  "department": "Electives",
+  "type": "Elective",
+  "description": "Develop critical thinking about media, information, and communication in business contexts — evaluating sources, understanding media influence, content creation, and navigating the digital information landscape.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "What Is Media Literacy?",
+      "titleZh": "什么是媒体素养？",
+      "objectives": "Define media literacy; identify types of media and media ownership structures; describe the information ecosystem and explain why media literacy matters in personal and professional life.",
+      "readingUrl": "https://newslit.org/educators/resources/what-is-news-literacy/",
+      "readingNote": "News Literacy Project — What Is News Literacy?",
+      "videoUrl": "https://www.youtube.com/watch?v=pkI1zVDTMpg",
+      "videoNote": "Crash Course Media Literacy #1 — Media Literacy",
+      "video2Url": "https://www.youtube.com/watch?v=EJMTCfVEAoU",
+      "video2Note": "TED-Ed — How to choose your news",
+      "practiceUrl": "https://newslit.org/tips-tools/checkology/",
+      "practiceNote": "News Literacy Project — Checkology Virtual Classroom (free modules)",
+      "assignment": "Map your personal information ecosystem: list every media source you used in the past week (social media, TV, podcasts, websites). Categorize each by type and identify who owns it. Write a 200-word reflection on what this reveals.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "How Media Messages Are Constructed",
+      "titleZh": "媒体信息的构建方式",
+      "objectives": "Explain framing, agenda-setting, and gatekeeping; identify media bias in news stories; distinguish spin from factual reporting.",
+      "readingUrl": "https://newslit.org/educators/resources/",
+      "readingNote": "News Literacy Project — Resource Library (Bias & Framing resources)",
+      "videoUrl": "https://www.youtube.com/watch?v=Rn1yeRM5U9Q",
+      "videoNote": "Crash Course Media Literacy #2 — Influence & Persuasion",
+      "video2Url": "https://www.youtube.com/watch?v=pAiOaKNHE_A",
+      "video2Note": "TED-Ed — How false news can spread",
+      "practiceUrl": "https://www.allsides.com/media-bias/ratings",
+      "practiceNote": "AllSides Media Bias Ratings — Compare coverage of the same story across outlets",
+      "assignment": "Select one current news story and find three articles covering it from outlets with different bias ratings. Identify framing choices, loaded language, and what facts each article omits. Write a 250-word analysis.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 3,
+      "title": "Evaluating Sources & Fact-Checking",
+      "titleZh": "评估信息来源与事实核查",
+      "objectives": "Apply the SIFT method (Stop, Investigate, Find better coverage, Trace claims); use lateral reading and fact-checking tools to verify information; distinguish news from opinion.",
+      "readingUrl": "https://newslit.org/tips-tools/sift/",
+      "readingNote": "News Literacy Project — The SIFT Method",
+      "videoUrl": "https://www.khanacademy.org/partner-content/learnstorm-growth-mindset-activities-us/learnstorm-literacy/a/evaluating-sources-in-a-data-driven-world",
+      "videoNote": "Khan Academy — Evaluating Sources in a Data-Driven World",
+      "video2Url": "https://www.youtube.com/watch?v=2Y5K5TZ6K7U",
+      "video2Note": "Crash Course Media Literacy #3 — Navigating Digital Information",
+      "practiceUrl": "https://www.factcheck.org/",
+      "practiceNote": "FactCheck.org — Practice lateral reading with current fact-checks",
+      "assignment": "Use SIFT to evaluate five claims you encounter online this week. For each, document your investigation steps, the fact-checking tools used, and your conclusion about reliability. Submit a one-page report.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 4,
+      "title": "Misinformation & Disinformation",
+      "titleZh": "错误信息与虚假信息",
+      "objectives": "Distinguish misinformation from disinformation and malinformation; identify fake news characteristics, deepfake red flags, and propaganda techniques; analyze how misinformation goes viral.",
+      "readingUrl": "https://newslit.org/tips-tools/misinformation/",
+      "readingNote": "News Literacy Project — Understanding Misinformation",
+      "videoUrl": "https://www.youtube.com/watch?v=GOwHpzMFXr0",
+      "videoNote": "Crash Course Media Literacy #4 — Misinformation & Disinformation",
+      "video2Url": "https://www.youtube.com/watch?v=WwEE2o8nAag",
+      "video2Note": "TED-Ed — How to spot a misleading graph",
+      "practiceUrl": "https://www.getbadnews.com/",
+      "practiceNote": "Bad News Game — Interactive simulation of building a disinformation campaign",
+      "assignment": "Research one viral misinformation case (e.g., a health myth, a stock market rumor). Trace how it spread, identify the propaganda techniques used, and explain what a business professional should do before sharing such content.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 5,
+      "title": "Advertising & Persuasion Techniques",
+      "titleZh": "广告与说服技巧",
+      "objectives": "Identify common advertising appeals (ethos, pathos, logos); recognize emotional manipulation and native advertising; analyze influencer marketing ethics.",
+      "readingUrl": "https://newslit.org/tips-tools/advertising/",
+      "readingNote": "News Literacy Project — Advertising & Sponsored Content",
+      "videoUrl": "https://www.youtube.com/watch?v=0EUMplIhMM4",
+      "videoNote": "Crash Course Media Literacy #5 — Advertising",
+      "video2Url": "https://www.youtube.com/watch?v=8JHLsHbdMdI",
+      "video2Note": "TED-Ed — How the food industry tricks you with science",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f3b39c3bc:sat-reading-and-writing/x0a8c2e5f3b39c3bc:craft-and-structure/a/analyzing-purpose-and-point-of-view",
+      "practiceNote": "Khan Academy — Analyzing Purpose and Point of View in texts",
+      "assignment": "Collect five ads from different media channels. For each, identify the appeal type, target audience, persuasion technique, and whether it is transparent about being an advertisement. Present findings in a comparison table.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Social Media Algorithms & Filter Bubbles",
+      "titleZh": "社交媒体算法与信息茧房",
+      "objectives": "Explain how recommendation algorithms shape content feeds; define echo chambers and filter bubbles; analyze the link between algorithmic curation and political polarization.",
+      "readingUrl": "https://newslit.org/tips-tools/social-media/",
+      "readingNote": "News Literacy Project — Social Media & Algorithms",
+      "videoUrl": "https://www.youtube.com/watch?v=Ks60_6jHvEs",
+      "videoNote": "Crash Course Media Literacy #6 — Social Media",
+      "video2Url": "https://www.youtube.com/watch?v=PMotykw0SIk",
+      "video2Note": "TED-Ed — Beware online filter bubbles (Eli Pariser)",
+      "practiceUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:digital-footprint/a/your-digital-footprint",
+      "practiceNote": "Khan Academy — Your Digital Footprint",
+      "assignment": "Conduct a one-week algorithm audit on one social media platform. Note the types of content recommended to you, how recommendations shift when you interact with different content, and write a 200-word reflection on your personal filter bubble.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 7,
+      "title": "Business News & Financial Media",
+      "titleZh": "商业新闻与财经媒体",
+      "objectives": "Read and interpret financial news articles and analyst reports; understand how earnings calls are communicated; critically compare media narratives to actual financial data.",
+      "readingUrl": "https://newslit.org/educators/resources/",
+      "readingNote": "News Literacy Project — Reading Business and Financial News Critically",
+      "videoUrl": "https://www.youtube.com/watch?v=tRJMbqn3YY8",
+      "videoNote": "Crash Course Business: Finance #1 — Introduction to Business Finance",
+      "video2Url": "https://www.youtube.com/watch?v=PHe0bXAIuk0",
+      "video2Note": "TED-Ed — How does the stock market work?",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds",
+      "practiceNote": "Khan Academy — Stocks and Bonds (Core Finance)",
+      "assignment": "Find a recent earnings report from a publicly traded company. Read the CFO's press release, then find two news articles covering the same earnings. Write a 300-word comparison analyzing whether the media coverage accurately reflects the actual data.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 8,
+      "title": "Data Journalism & Infographics",
+      "titleZh": "数据新闻与信息图表",
+      "objectives": "Explain how data is used in journalistic storytelling; identify misleading data visualizations; create and evaluate responsible infographics.",
+      "readingUrl": "https://newslit.org/tips-tools/data-literacy/",
+      "readingNote": "News Literacy Project — Data Literacy & Visualizations",
+      "videoUrl": "https://www.youtube.com/watch?v=Zi8vJ_ysKoY",
+      "videoNote": "Crash Course Statistics #7 — Data Visualization",
+      "video2Url": "https://www.youtube.com/watch?v=E91bGT9BjYk",
+      "video2Note": "TED-Ed — How to spot a misleading graph",
+      "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/displaying-describing-data",
+      "practiceNote": "Khan Academy — Displaying and Describing Data",
+      "assignment": "Find three infographics from business news websites. For each, identify the data source, assess whether the visualization is misleading, and suggest one improvement. Then create your own simple infographic on a business topic of your choice.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 9,
+      "title": "Corporate Communications & PR",
+      "titleZh": "企业传播与公共关系",
+      "objectives": "Analyze the structure and purpose of press releases; explain media relations strategies; evaluate crisis communication responses; identify brand messaging techniques.",
+      "readingUrl": "https://newslit.org/educators/resources/",
+      "readingNote": "News Literacy Project — Identifying PR and Sponsored Content",
+      "videoUrl": "https://www.youtube.com/watch?v=9DaJkb5CWmI",
+      "videoNote": "Crash Course Business: Entrepreneurship #13 — Marketing & PR",
+      "video2Url": "https://www.youtube.com/watch?v=mJMfGSN0We0",
+      "video2Note": "TED-Ed — The manipulation of choice (and how to avoid it)",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2",
+      "practiceNote": "Khan Academy — Entrepreneurship — Marketing and Communications modules",
+      "assignment": "Find a real corporate crisis from the last five years (e.g., a product recall, a CEO scandal). Analyze the company's press statements and media response using the four-step crisis communication model. Write a 300-word evaluation.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 10,
+      "title": "Content Creation for Business",
+      "titleZh": "商业内容创作",
+      "objectives": "Apply web writing best practices; understand basic SEO principles; craft a business blog post and thought leadership article for a target audience.",
+      "readingUrl": "https://newslit.org/tips-tools/",
+      "readingNote": "News Literacy Project — Creating Credible Content",
+      "videoUrl": "https://www.youtube.com/watch?v=3Sk7HbrKiZM",
+      "videoNote": "Crash Course Business: Entrepreneurship — Content Marketing Overview",
+      "video2Url": "https://www.youtube.com/watch?v=xJ9GpfvZSp8",
+      "video2Note": "TED-Ed — What makes something go viral?",
+      "practiceUrl": "https://www.khanacademy.org/computing/computer-programming/html-css",
+      "practiceNote": "Khan Academy — Intro to HTML/CSS (understanding how web content is structured)",
+      "assignment": "Write a 400-word blog post for a hypothetical business audience on a topic related to your career interests. Include a headline, subheadings, a call to action, and identify three keywords you would optimize for.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 11,
+      "title": "Podcasting & Video as Business Tools",
+      "titleZh": "播客与视频作为商业工具",
+      "objectives": "Explain why podcasting and video are effective business communication channels; analyze a business podcast episode for storytelling technique; outline a video marketing script.",
+      "readingUrl": "https://newslit.org/tips-tools/",
+      "readingNote": "News Literacy Project — Audio and Video Media Literacy",
+      "videoUrl": "https://www.youtube.com/watch?v=AR5FtbZXV8A",
+      "videoNote": "Crash Course Media Literacy #7 — Film & Visual Media",
+      "video2Url": "https://www.youtube.com/watch?v=RQSOeGKL_-s",
+      "video2Note": "TED-Ed — What makes a truly great logo (visual communication)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/art-history/art-history-basics/v/how-to-do-visual-analysis-basic",
+      "practiceNote": "Khan Academy — How to do visual analysis",
+      "assignment": "Listen to one episode of a well-known business podcast (e.g., How I Built This, Planet Money, Masters of Scale). Identify the narrative arc, persuasion techniques, and guest credibility. Then write a 150-word script for a 60-second video pitch for a product or service.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 12,
+      "title": "Legal & Ethical Issues in Media",
+      "titleZh": "媒体的法律与伦理问题",
+      "objectives": "Define copyright, fair use, defamation, and privacy in media contexts; explain the ethical responsibilities of content creators; identify violations in real business scenarios.",
+      "readingUrl": "https://newslit.org/tips-tools/ethics/",
+      "readingNote": "News Literacy Project — Journalism Ethics and Standards",
+      "videoUrl": "https://www.youtube.com/watch?v=mPIAm0iAUb4",
+      "videoNote": "Crash Course Intellectual Property #1 — Copyright Basics",
+      "video2Url": "https://www.youtube.com/watch?v=ZvpCTnMOhyM",
+      "video2Note": "TED-Ed — The ethical dilemma of self-driving cars (ethics framework)",
+      "practiceUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:digital-footprint/a/how-search-engines-use-your-data",
+      "practiceNote": "Khan Academy — How Search Engines Use Your Data (privacy module)",
+      "assignment": "Review three pieces of social media content created by real businesses. For each, identify any potential copyright issues, privacy concerns, or ethical problems. Propose how each could be corrected and document your reasoning.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 13,
+      "title": "Cross-Cultural Media Literacy",
+      "titleZh": "跨文化媒体素养",
+      "objectives": "Compare how media norms and communication styles differ across cultures; analyze how international business communication must adapt to different media landscapes; identify culturally biased framing.",
+      "readingUrl": "https://newslit.org/educators/resources/",
+      "readingNote": "News Literacy Project — Global Perspectives on Media Literacy",
+      "videoUrl": "https://www.youtube.com/watch?v=YMyofREc5Jk",
+      "videoNote": "Crash Course Media Literacy #8 — Global Media",
+      "video2Url": "https://www.youtube.com/watch?v=LwII9DmrDVk",
+      "video2Note": "TED-Ed — Don't insist on English (cross-cultural communication)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/world-history/global-19th-c-crisis/print-culture/v/print-revolution",
+      "practiceNote": "Khan Academy — The Print Revolution and Global Communication",
+      "assignment": "Compare how the same major business story (e.g., a tech giant's expansion into a new market) is reported in media from three different countries. Analyze differences in framing, language, and cultural assumptions. Write a 250-word reflection.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 14,
+      "title": "Media Literacy Project",
+      "titleZh": "媒体素养综合项目",
+      "objectives": "Apply all course skills to analyze a real media campaign or news story for bias, accuracy, persuasion techniques, and overall communication strategy.",
+      "readingUrl": "https://newslit.org/educators/resources/",
+      "readingNote": "News Literacy Project — Full Resource Library (review all applicable tools)",
+      "videoUrl": "https://www.youtube.com/watch?v=pkI1zVDTMpg",
+      "videoNote": "Crash Course Media Literacy — Full Series Playlist (review key episodes)",
+      "video2Url": "https://www.youtube.com/watch?v=GOwHpzMFXr0",
+      "video2Note": "TED-Ed — How to choose your news (review)",
+      "practiceUrl": "https://newslit.org/tips-tools/checkology/",
+      "practiceNote": "News Literacy Project — Checkology (complete remaining modules as reference)",
+      "assignment": "Select a real media campaign or extended news story from the past year. Produce a 600-word analysis covering: (1) source credibility, (2) framing and bias, (3) persuasion and advertising techniques, (4) data accuracy, (5) ethical considerations, and (6) what a business professional should take away from this story. Include at least three citations.",
+      "estimatedHrs": 5
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best defines media literacy?",
+      "options": [
+        "The ability to read and write printed text",
+        "The ability to access, analyze, evaluate, and create media in various forms",
+        "Knowing how to operate media equipment",
+        "Following verified news accounts on social media"
+      ],
+      "answer": "The ability to access, analyze, evaluate, and create media in various forms",
+      "explanation": "Media literacy encompasses accessing, analyzing, evaluating, and creating media — not just consuming it.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Agenda-setting theory suggests that media:",
+      "options": [
+        "Tells audiences what to think",
+        "Tells audiences what to think about",
+        "Creates all public events",
+        "Accurately reflects public opinion"
+      ],
+      "answer": "Tells audiences what to think about",
+      "explanation": "Agenda-setting refers to media's power to influence which issues the public considers important, not the specific opinions held.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "The SIFT method's 'I' stands for:",
+      "options": [
+        "Identify the author",
+        "Investigate the source",
+        "Ignore unreliable content",
+        "Interpret the data"
+      ],
+      "answer": "Investigate the source",
+      "explanation": "SIFT: Stop, Investigate the source, Find better coverage, Trace claims to the original context.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "What distinguishes disinformation from misinformation?",
+      "options": [
+        "Disinformation is always online; misinformation is in print",
+        "Disinformation is deliberately false; misinformation is false but shared without intent to deceive",
+        "Misinformation is more dangerous than disinformation",
+        "There is no meaningful difference between the two"
+      ],
+      "answer": "Disinformation is deliberately false; misinformation is false but shared without intent to deceive",
+      "explanation": "The key distinction is intent: disinformation is created and spread purposefully, while misinformation is shared without knowing it is false.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Which advertising appeal primarily uses logic, statistics, and evidence to persuade?",
+      "options": [
+        "Pathos",
+        "Ethos",
+        "Logos",
+        "Kairos"
+      ],
+      "answer": "Logos",
+      "explanation": "Logos appeals to reason and logic; pathos appeals to emotion; ethos appeals to credibility.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A filter bubble is best described as:",
+      "options": [
+        "A government censorship tool",
+        "A personalized information environment that limits exposure to diverse viewpoints",
+        "A software tool that blocks spam",
+        "A fact-checking browser extension"
+      ],
+      "answer": "A personalized information environment that limits exposure to diverse viewpoints",
+      "explanation": "Filter bubbles are created by algorithms that tailor content to past behavior, narrowing the range of perspectives a user sees.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "When reading a company's earnings press release, a media-literate professional should:",
+      "options": [
+        "Accept the figures as fully objective facts",
+        "Only read the headline number",
+        "Cross-reference with the actual financial filing and independent analyst reports",
+        "Avoid financial media entirely as it is always biased"
+      ],
+      "answer": "Cross-reference with the actual financial filing and independent analyst reports",
+      "explanation": "Press releases are crafted by corporate communications teams and may emphasize favorable data; independent sources provide a more complete picture.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Native advertising differs from traditional advertising primarily because it:",
+      "options": [
+        "Is always free for consumers",
+        "Is designed to resemble editorial or organic content",
+        "Only appears on mobile devices",
+        "Is regulated more strictly than banner ads"
+      ],
+      "answer": "Is designed to resemble editorial or organic content",
+      "explanation": "Native advertising mimics the look and feel of non-advertising content, making it harder for audiences to identify as paid promotion.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Which technique is lateral reading?",
+      "options": [
+        "Reading an article from top to bottom slowly",
+        "Opening new browser tabs to check what others say about a source",
+        "Reading the same article multiple times",
+        "Comparing the article to your prior knowledge"
+      ],
+      "answer": "Opening new browser tabs to check what others say about a source",
+      "explanation": "Lateral reading means leaving the source to quickly search what credible third parties say about it — a key skill used by professional fact-checkers.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "A news article that selectively presents facts to support one conclusion is using:",
+      "options": [
+        "Lateral reading",
+        "Framing",
+        "Gatekeeping",
+        "Spin"
+      ],
+      "answer": "Framing",
+      "explanation": "Framing involves emphasizing certain aspects of a story to promote a particular interpretation while downplaying others.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Echo chambers on social media primarily result from:",
+      "options": [
+        "Users being blocked by platform moderators",
+        "Algorithms and user choices that reinforce existing beliefs",
+        "Too many news sources being available",
+        "Advertisements targeted by location"
+      ],
+      "answer": "Algorithms and user choices that reinforce existing beliefs",
+      "explanation": "Echo chambers form when algorithms promote content aligned with existing preferences, and users actively seek confirming views, creating self-reinforcing information loops.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Which of the following would raise the most concern about a news source's credibility?",
+      "options": [
+        "The article has a clear byline and date",
+        "The website has no 'About Us' page and no citations",
+        "The article quotes two named experts",
+        "The outlet has a stated editorial policy"
+      ],
+      "answer": "The website has no 'About Us' page and no citations",
+      "explanation": "Absence of transparency about authorship, ownership, and sources is a major credibility red flag.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Which statement about opinion pieces is correct?",
+      "options": [
+        "Opinion pieces follow the same fact-checking standards as news reports",
+        "Opinion pieces express the author's viewpoint and are not held to the same objectivity standards as news reports",
+        "Opinion pieces are always labeled as advertisements",
+        "Opinion pieces are only found in broadcast media"
+      ],
+      "answer": "Opinion pieces express the author's viewpoint and are not held to the same objectivity standards as news reports",
+      "explanation": "News reports aim for objectivity; opinion pieces are explicitly subjective and represent the author's or publication's perspective.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Gatekeeping in journalism refers to:",
+      "options": [
+        "Blocking readers from accessing paywalled content",
+        "The process by which editors and platforms decide what information reaches the public",
+        "Verifying user identities on social media platforms",
+        "Copyright enforcement for media content"
+      ],
+      "answer": "The process by which editors and platforms decide what information reaches the public",
+      "explanation": "Gatekeeping is the selection process — editors, algorithms, and platforms act as 'gatekeepers' controlling which stories get published and amplified.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "A colleague forwards you a viral social media post claiming a major company is about to go bankrupt, with no source cited. Describe the steps you would take using the SIFT method before deciding whether to share or act on this information.",
+      "options": null,
+      "answer": "Stop before sharing or acting; Investigate the source of the post and the claim; Find better coverage by searching reputable financial news outlets and the company's investor relations page; Trace the claim to its original context to see if it is based on real financial data or is fabricated.",
+      "explanation": "SIFT provides a systematic framework for evaluating unverified claims before spreading or acting on potentially false information.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "The information ecosystem refers to:",
+      "options": [
+        "Only digital news platforms",
+        "The complete network of people, platforms, and practices that produce and distribute information",
+        "Social media algorithms exclusively",
+        "Government-controlled broadcasting systems"
+      ],
+      "answer": "The complete network of people, platforms, and practices that produce and distribute information",
+      "explanation": "The information ecosystem includes all producers, distributors, and consumers of information across all media types.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is an example of agenda-setting?",
+      "options": [
+        "A newspaper endorsing a political candidate",
+        "A TV network devoting 80% of its coverage to inflation, making viewers rank it as the top national issue",
+        "A reporter giving false information about a corporation",
+        "A social media platform removing violent content"
+      ],
+      "answer": "A TV network devoting 80% of its coverage to inflation, making viewers rank it as the top national issue",
+      "explanation": "Agenda-setting occurs when media emphasis on a topic increases the public's perceived importance of that topic.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Which resource is best suited for lateral reading when fact-checking a news claim?",
+      "options": [
+        "Reading the same article more carefully",
+        "Checking the article's comment section",
+        "Searching what other credible outlets and fact-checkers report about the same claim",
+        "Asking a friend for their opinion"
+      ],
+      "answer": "Searching what other credible outlets and fact-checkers report about the same claim",
+      "explanation": "Lateral reading means stepping outside the source to verify it through independent, credible third parties.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "A deepfake poses a significant business risk primarily because:",
+      "options": [
+        "They are too expensive to produce",
+        "They can fabricate realistic audio or video of executives making false statements",
+        "They only affect government officials",
+        "They are easily detectable by all viewers"
+      ],
+      "answer": "They can fabricate realistic audio or video of executives making false statements",
+      "explanation": "Deepfakes can damage corporate reputations by spreading convincing but entirely fabricated content, making verification skills essential.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "An influencer posts a glowing review of a product without disclosing they were paid. This violates:",
+      "options": [
+        "Copyright law",
+        "FTC endorsement guidelines requiring disclosure of material connections",
+        "The First Amendment",
+        "Data privacy law"
+      ],
+      "answer": "FTC endorsement guidelines requiring disclosure of material connections",
+      "explanation": "The FTC requires influencers to clearly disclose paid partnerships; failure to do so is deceptive advertising.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Recommendation algorithms primarily optimize for:",
+      "options": [
+        "Accuracy of information",
+        "User engagement (clicks, watch time, shares)",
+        "Equal representation of all viewpoints",
+        "Content published by verified journalists"
+      ],
+      "answer": "User engagement (clicks, watch time, shares)",
+      "explanation": "Recommendation algorithms are designed to maximize engagement metrics, which can favor sensational or emotionally triggering content over accuracy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "When a company's stock drops 5% the day after a strong earnings report, a media-literate investor would first:",
+      "options": [
+        "Assume the media is wrong and hold the stock",
+        "Sell immediately based on the news headline",
+        "Investigate whether the market had priced in higher expectations",
+        "Only read the CEO's statement"
+      ],
+      "answer": "Investigate whether the market had priced in higher expectations",
+      "explanation": "Stock prices reflect expectations, not just results. Media-literate investors look beyond headlines to understand market context.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "A bar chart that starts its y-axis at 80 instead of 0 is an example of:",
+      "options": [
+        "Responsible data journalism",
+        "A misleading visualization that exaggerates differences",
+        "Lateral reading",
+        "Native advertising"
+      ],
+      "answer": "A misleading visualization that exaggerates differences",
+      "explanation": "Truncating a y-axis makes small differences appear dramatically larger than they are, misleading the audience.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "A well-crafted corporate press release in a crisis situation should:",
+      "options": [
+        "Deny all wrongdoing and blame the media",
+        "Acknowledge the issue, express concern, and outline steps being taken",
+        "Remain silent until investigations are complete",
+        "Only communicate via social media"
+      ],
+      "answer": "Acknowledge the issue, express concern, and outline steps being taken",
+      "explanation": "Effective crisis communication involves transparency, accountability, and a clear action plan to maintain stakeholder trust.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Which SEO practice is most ethical and sustainable for business content?",
+      "options": [
+        "Keyword stuffing every paragraph",
+        "Buying links from unrelated sites",
+        "Creating genuinely useful, well-researched content that earns organic links",
+        "Copying competitors' top-ranked articles"
+      ],
+      "answer": "Creating genuinely useful, well-researched content that earns organic links",
+      "explanation": "Ethical SEO (also called 'white hat' SEO) focuses on quality content that earns rankings naturally rather than manipulating algorithms.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which characteristic makes podcasting effective as a business communication tool?",
+      "options": [
+        "It is entirely free to produce",
+        "It builds intimate, long-form relationships with an audience through voice and storytelling",
+        "It reaches more people than any other medium",
+        "It requires no planning or scripting"
+      ],
+      "answer": "It builds intimate, long-form relationships with an audience through voice and storytelling",
+      "explanation": "Podcasts are consumed during commutes and leisure time, creating a personal connection that builds brand loyalty and thought leadership.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Using a copyrighted image in a business blog post without permission or attribution is:",
+      "options": [
+        "Acceptable as long as the image is credited",
+        "Legal under all fair use provisions",
+        "Potentially copyright infringement",
+        "Acceptable if the post is non-commercial"
+      ],
+      "answer": "Potentially copyright infringement",
+      "explanation": "Copyright law protects original works; using them without license or qualifying fair use is infringement regardless of commercial intent or credit.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "A global marketing team discovers that a campaign effective in the US is seen as offensive in Japan. This illustrates the importance of:",
+      "options": [
+        "Using only English-language media worldwide",
+        "Cross-cultural media literacy and cultural sensitivity in communications",
+        "Avoiding international markets entirely",
+        "Translating content word-for-word without adaptation"
+      ],
+      "answer": "Cross-cultural media literacy and cultural sensitivity in communications",
+      "explanation": "Media norms, humor, and messaging that resonate in one culture can fail or offend in another; culturally literate teams adapt strategies accordingly.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "In the final Media Literacy Project, a student analyzing a company's PR campaign should prioritize:",
+      "options": [
+        "Judging whether the product is good quality",
+        "Evaluating source credibility, framing, persuasion techniques, and accuracy of data claims",
+        "Counting how many times the brand name appears",
+        "Determining which platform had the most followers"
+      ],
+      "answer": "Evaluating source credibility, framing, persuasion techniques, and accuracy of data claims",
+      "explanation": "Comprehensive media analysis applies the full toolkit of media literacy: source credibility, framing, rhetorical techniques, and data verification.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Propaganda techniques often exploit:",
+      "options": [
+        "Logical arguments and peer-reviewed data",
+        "Emotional appeals, repetition, and in-group versus out-group thinking",
+        "Transparent source disclosure",
+        "Consumer surveys and focus groups"
+      ],
+      "answer": "Emotional appeals, repetition, and in-group versus out-group thinking",
+      "explanation": "Propaganda bypasses critical thinking by targeting emotions and tribal identities, often repeating simple messages to make them feel true.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which statement about data journalism is most accurate?",
+      "options": [
+        "Data is always objective and cannot be manipulated in journalism",
+        "Choosing what data to highlight and how to visualize it involves editorial judgment that can mislead",
+        "Infographics are always more accurate than written reports",
+        "Data journalism only applies to financial news"
+      ],
+      "answer": "Choosing what data to highlight and how to visualize it involves editorial judgment that can mislead",
+      "explanation": "Data selection, framing, and visualization design are all editorial choices that can distort meaning even when the numbers themselves are accurate.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Media consolidation — when a few large corporations own most media outlets — is a concern for media literacy because it:",
+      "options": [
+        "Increases the diversity of editorial perspectives available",
+        "Can reduce the range of viewpoints and create conflicts of interest in coverage",
+        "Improves journalism quality through greater resources",
+        "Has no effect on news content"
+      ],
+      "answer": "Can reduce the range of viewpoints and create conflicts of interest in coverage",
+      "explanation": "When a handful of owners control most outlets, certain perspectives may be systematically promoted or suppressed, limiting true editorial independence.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Defamation in a business media context occurs when:",
+      "options": [
+        "A journalist writes a negative but factually accurate story about a company",
+        "A false statement of fact is published that damages a person's or company's reputation",
+        "A company refuses to comment on a news story",
+        "An opinion piece criticizes a CEO's leadership style"
+      ],
+      "answer": "A false statement of fact is published that damages a person's or company's reputation",
+      "explanation": "Defamation requires a false statement of fact (not opinion), published to third parties, causing reputational harm. Truth is an absolute defense.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "A startup you work for is releasing a new product next month. Your manager asks you to develop a content plan covering a blog post, a short video, and a social media strategy. Outline the key considerations for each format, including audience, tone, SEO, and ethical transparency.",
+      "options": null,
+      "answer": "Blog post: write for the target customer, use keywords naturally, structure with headings for SEO, cite sources, and clearly label any sponsored content. Short video: hook viewers in the first 5 seconds, tell a story rather than just listing features, include captions for accessibility, disclose if paid endorsers appear. Social media: tailor message length and tone to each platform's norms, disclose any paid partnerships per FTC rules, and engage authentically rather than using automated deceptive tactics.",
+      "explanation": "Effective business content creation requires audience awareness, format-specific best practices, and ethical transparency across all channels.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "You are preparing a market research report for your team and want to include data from three different countries. Describe two specific challenges cross-cultural media literacy poses for interpreting international business data and explain how you would address each challenge.",
+      "options": null,
+      "answer": "Challenge 1: Cultural framing — data may be presented through a local lens that reflects different values or economic priorities. Address by finding primary sources (government statistics, local industry bodies) rather than relying solely on Western-media interpretations. Challenge 2: Language and translation bias — key terms may not translate directly, and machine translation can lose nuance. Address by consulting bilingual professionals or localized market research firms to ensure accurate interpretation.",
+      "explanation": "Cross-cultural media literacy requires recognizing that information is always embedded in cultural context, and that accurate international analysis demands culturally-informed sourcing and interpretation.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Media literacy is best defined as the ability to:",
+      "options": [
+        "Operate cameras and recording equipment",
+        "Access, analyze, evaluate, and create media",
+        "Read printed newspapers",
+        "Follow news accounts on social media"
+      ],
+      "answer": "Access, analyze, evaluate, and create media",
+      "explanation": "Media literacy is a set of skills for engaging critically with all forms of media, not just consuming them.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which of the following is NOT a type of media?",
+      "options": [
+        "Podcasts",
+        "Billboards",
+        "Text messages",
+        "Conversation between two friends with no recording"
+      ],
+      "answer": "Conversation between two friends with no recording",
+      "explanation": "Media involves channels that store or transmit messages to audiences; a private unrecorded conversation is interpersonal communication, not media.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Media ownership matters because owners can:",
+      "options": [
+        "Guarantee complete objectivity in all reporting",
+        "Influence editorial decisions and which stories get covered",
+        "Prevent any bias from entering news content",
+        "Ensure all journalists are equally paid"
+      ],
+      "answer": "Influence editorial decisions and which stories get covered",
+      "explanation": "Owners set the editorial direction and business model of a media outlet, which can shape what is reported and how.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "The information ecosystem includes:",
+      "options": [
+        "Only professional journalists",
+        "All sources, platforms, and people involved in producing and sharing information",
+        "Only government-approved news sources",
+        "Only digital media platforms"
+      ],
+      "answer": "All sources, platforms, and people involved in producing and sharing information",
+      "explanation": "The information ecosystem is the full network of actors, institutions, and technologies that create and distribute information.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Why is media literacy especially important in a business context?",
+      "options": [
+        "Businesses never use media to communicate",
+        "Professionals must evaluate information to make sound decisions, avoid scams, and communicate credibly",
+        "Only journalists need to understand media",
+        "Business decisions are never affected by media narratives"
+      ],
+      "answer": "Professionals must evaluate information to make sound decisions, avoid scams, and communicate credibly",
+      "explanation": "Media literacy helps business professionals verify information, protect their organizations from misinformation, and build credible communications.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Framing in media refers to:",
+      "options": [
+        "The physical borders around a TV screen",
+        "Emphasizing certain aspects of a story to shape how audiences interpret it",
+        "Photographing subjects for news articles",
+        "Writing balanced reports with no opinions"
+      ],
+      "answer": "Emphasizing certain aspects of a story to shape how audiences interpret it",
+      "explanation": "Framing involves selecting which facts to highlight and how to contextualize them, influencing the audience's understanding without necessarily lying.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Agenda-setting theory argues that media primarily:",
+      "options": [
+        "Tells people what opinions to hold",
+        "Determines which topics people consider important",
+        "Creates all news events",
+        "Is always biased toward governments"
+      ],
+      "answer": "Determines which topics people consider important",
+      "explanation": "Agenda-setting theory holds that media does not tell us what to think, but it does influence what we think about by choosing what to cover.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Gatekeeping in journalism is the process of:",
+      "options": [
+        "Blocking journalists from government buildings",
+        "Selecting which information gets published or broadcast",
+        "Verifying all facts before publication",
+        "Charging subscription fees for news access"
+      ],
+      "answer": "Selecting which information gets published or broadcast",
+      "explanation": "Gatekeepers — editors, platform algorithms, and publishers — decide what content reaches audiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Spin is best described as:",
+      "options": [
+        "Factual, balanced reporting",
+        "Deliberately presenting information in the most favorable possible light, minimizing negatives",
+        "A type of investigative journalism",
+        "A statistical technique used in data journalism"
+      ],
+      "answer": "Deliberately presenting information in the most favorable possible light, minimizing negatives",
+      "explanation": "Spin is a persuasive PR or political communication strategy that selects and frames facts to serve the communicator's interests.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Two headlines about the same event: 'Economy adds 200,000 jobs' vs. 'Unemployment remains above pre-pandemic levels.' This is an example of:",
+      "options": [
+        "Defamation",
+        "Lateral reading",
+        "Framing",
+        "Deepfake manipulation"
+      ],
+      "answer": "Framing",
+      "explanation": "Both headlines can be simultaneously true, but each emphasizes a different aspect of the same data to create a different impression — a textbook example of framing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The 'S' in the SIFT method stands for:",
+      "options": [
+        "Search",
+        "Stop",
+        "Share",
+        "Scrutinize"
+      ],
+      "answer": "Stop",
+      "explanation": "SIFT: Stop before sharing, Investigate the source, Find better coverage, Trace claims to their original context.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Lateral reading involves:",
+      "options": [
+        "Reading an article from the bottom up",
+        "Leaving the source page to check what others say about it",
+        "Comparing two articles on the same page",
+        "Re-reading an article multiple times"
+      ],
+      "answer": "Leaving the source page to check what others say about it",
+      "explanation": "Professional fact-checkers use lateral reading to quickly verify sources by searching for third-party information about them.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "FactCheck.org, Snopes, and PolitiFact are examples of:",
+      "options": [
+        "Advertising platforms",
+        "Independent fact-checking organizations",
+        "Government propaganda outlets",
+        "Social media companies"
+      ],
+      "answer": "Independent fact-checking organizations",
+      "explanation": "These are established fact-checking platforms that independently verify claims made in news and social media.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Which of the following is a red flag that a source may be unreliable?",
+      "options": [
+        "The article is clearly dated and has a byline",
+        "The website ends in .com",
+        "The article uses all-caps headlines and has no named author",
+        "The article links to original sources"
+      ],
+      "answer": "The article uses all-caps headlines and has no named author",
+      "explanation": "All-caps sensational headlines and anonymous authorship are strong indicators of low-credibility or clickbait content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "The difference between a news article and an opinion piece is that:",
+      "options": [
+        "News articles are always longer",
+        "Opinion pieces are clearly labeled and express the author's viewpoint, not objective reporting",
+        "Opinion pieces must be fact-checked",
+        "News articles can contain personal opinions freely"
+      ],
+      "answer": "Opinion pieces are clearly labeled and express the author's viewpoint, not objective reporting",
+      "explanation": "Responsible news outlets clearly label opinion and editorial content to distinguish it from fact-based reporting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Misinformation is defined as false information that is shared:",
+      "options": [
+        "Intentionally to cause harm",
+        "Without knowing it is false",
+        "Only on social media",
+        "By government agencies"
+      ],
+      "answer": "Without knowing it is false",
+      "explanation": "Misinformation is false information spread without deliberate intent to deceive, unlike disinformation which is intentionally deceptive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Disinformation differs from misinformation in that it is:",
+      "options": [
+        "Always harmless",
+        "Deliberately created and spread to deceive",
+        "Only found in academic papers",
+        "Always about politics"
+      ],
+      "answer": "Deliberately created and spread to deceive",
+      "explanation": "Disinformation is intentionally false content created to mislead, manipulate, or harm — intent is the key distinguishing factor.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Which of the following is a propaganda technique?",
+      "options": [
+        "Presenting multiple credible expert opinions",
+        "Using fear appeals and us-versus-them messaging",
+        "Citing peer-reviewed research",
+        "Disclosing the author's potential conflicts of interest"
+      ],
+      "answer": "Using fear appeals and us-versus-them messaging",
+      "explanation": "Fear appeals and in-group/out-group thinking are classic propaganda tools that bypass rational analysis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Deepfakes are a concern in business because they can:",
+      "options": [
+        "Improve video production quality",
+        "Fabricate convincing false statements by real executives or public figures",
+        "Only affect entertainment media",
+        "Be detected instantly by all modern devices"
+      ],
+      "answer": "Fabricate convincing false statements by real executives or public figures",
+      "explanation": "Deepfakes use AI to create realistic but fabricated audio or video, which can spread market-moving or reputation-damaging misinformation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Misinformation about a company's financial health going viral could directly:",
+      "options": [
+        "Improve the company's stock price",
+        "Trigger a bank run or stock sell-off before the truth is established",
+        "Have no effect on business operations",
+        "Only affect small businesses"
+      ],
+      "answer": "Trigger a bank run or stock sell-off before the truth is established",
+      "explanation": "Financial misinformation can cause real economic harm quickly — markets react to information before corrections can spread.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "An ad showing a celebrity endorsing a product uses which appeal?",
+      "options": [
+        "Logos",
+        "Kairos",
+        "Ethos",
+        "Pathos"
+      ],
+      "answer": "Ethos",
+      "explanation": "Ethos appeals to credibility or authority — using a trusted or famous figure to lend credibility to a product.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Native advertising is content that:",
+      "options": [
+        "Is produced by local media outlets only",
+        "Is paid advertising designed to look like editorial content",
+        "Targets indigenous language speakers",
+        "Appears only in print newspapers"
+      ],
+      "answer": "Is paid advertising designed to look like editorial content",
+      "explanation": "Native advertising blends in with non-advertising content in style and format, making it harder for readers to recognize as paid promotion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "An ad showing a family laughing and sharing a meal to sell insurance is using:",
+      "options": [
+        "Logos",
+        "Ethos",
+        "Pathos",
+        "None of the above"
+      ],
+      "answer": "Pathos",
+      "explanation": "Pathos appeals to emotion — showing happiness, fear, love, or nostalgia to create an emotional connection with the product.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Under FTC rules, influencers who are paid to promote products must:",
+      "options": [
+        "Only disclose the partnership if asked",
+        "Clearly disclose the paid relationship in their post",
+        "Never accept payment for promotions",
+        "Register with the FTC before posting"
+      ],
+      "answer": "Clearly disclose the paid relationship in their post",
+      "explanation": "FTC guidelines require clear and conspicuous disclosure of material connections — such as payment, free products, or business relationships.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "An ad claiming '9 out of 10 dentists recommend this toothpaste' is using:",
+      "options": [
+        "Pathos",
+        "Logos",
+        "Ethos",
+        "Fear appeal"
+      ],
+      "answer": "Logos",
+      "explanation": "Using statistics and data to support a claim is a logos appeal — it persuades through apparent logic and evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "A filter bubble is created when:",
+      "options": [
+        "A user blocks all political content",
+        "Algorithms show users only content that aligns with their past behavior and preferences",
+        "A platform bans certain users",
+        "A firewall restricts internet access"
+      ],
+      "answer": "Algorithms show users only content that aligns with their past behavior and preferences",
+      "explanation": "Filter bubbles are algorithmic environments that reduce exposure to diverse perspectives by personalizing content based on engagement history.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "An echo chamber primarily reinforces:",
+      "options": [
+        "A wide range of political views",
+        "Existing beliefs by surrounding the user with like-minded content and people",
+        "Critical thinking skills",
+        "Access to expert opinions"
+      ],
+      "answer": "Existing beliefs by surrounding the user with like-minded content and people",
+      "explanation": "Echo chambers, whether digital or social, amplify existing beliefs by limiting exposure to contradicting viewpoints.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Social media algorithms primarily optimize content recommendations for:",
+      "options": [
+        "Educational value",
+        "User engagement metrics like clicks and watch time",
+        "Political neutrality",
+        "Verified news sources"
+      ],
+      "answer": "User engagement metrics like clicks and watch time",
+      "explanation": "Engagement-based algorithms prioritize content that keeps users active on the platform, regardless of accuracy or quality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Polarization linked to social media algorithms occurs because:",
+      "options": [
+        "Algorithms deliberately promote political extremism",
+        "Emotionally charged and divisive content tends to generate more engagement, so it gets amplified",
+        "Social media bans moderate viewpoints",
+        "Users always prefer balanced news coverage"
+      ],
+      "answer": "Emotionally charged and divisive content tends to generate more engagement, so it gets amplified",
+      "explanation": "Outrage and divisive content drive higher engagement; algorithms amplify it without regard for its social effects.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Which strategy helps break out of a filter bubble?",
+      "options": [
+        "Using only one social media platform",
+        "Actively seeking out news sources with different perspectives and viewpoints",
+        "Posting more content to grow your audience",
+        "Increasing the time you spend on social media"
+      ],
+      "answer": "Actively seeking out news sources with different perspectives and viewpoints",
+      "explanation": "Deliberately consuming diverse, cross-ideological sources helps counteract the homogenizing effect of algorithmic curation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "A company reports $1 billion in revenue but a $200 million net loss. A media-literate reader would:",
+      "options": [
+        "Conclude the company is performing excellently based on revenue",
+        "Look at both revenue and profitability, and understand the difference between them",
+        "Assume the report is fraudulent",
+        "Only trust the CEO's statement about the results"
+      ],
+      "answer": "Look at both revenue and profitability, and understand the difference between them",
+      "explanation": "Revenue (total sales) and net profit (revenue minus all costs) are very different metrics; a business can have high revenue and still be unprofitable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "An analyst report has a 'Buy' rating on a stock, but the firm also has an investment banking relationship with that company. This is a:",
+      "options": [
+        "Standard practice with no concerns",
+        "Potential conflict of interest that could bias the recommendation",
+        "Sign the analyst is highly credible",
+        "Legal violation in all circumstances"
+      ],
+      "answer": "Potential conflict of interest that could bias the recommendation",
+      "explanation": "Investment banking relationships create incentives for analysts to issue favorable ratings, which is a documented source of bias in financial media.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Earnings calls are primarily intended for:",
+      "options": [
+        "General consumers buying products",
+        "Investors, analysts, and financial media seeking to understand company performance",
+        "Employees reviewing their salaries",
+        "Government tax authorities"
+      ],
+      "answer": "Investors, analysts, and financial media seeking to understand company performance",
+      "explanation": "Earnings calls are quarterly events where companies report financial results and management discusses strategy with the investment community.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Which is the most reliable primary source for a company's financial performance?",
+      "options": [
+        "A tweet from the CEO",
+        "The company's SEC filing (10-K or 10-Q)",
+        "A news article summarizing the earnings",
+        "A social media post from a financial influencer"
+      ],
+      "answer": "The company's SEC filing (10-K or 10-Q)",
+      "explanation": "SEC filings are audited, legally required disclosures that provide the most complete and verifiable picture of a company's financials.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Financial media sometimes uses dramatic language like 'crash,' 'surge,' or 'crisis.' A media-literate professional should:",
+      "options": [
+        "Accept these terms as precise financial measurements",
+        "Recognize they are designed to generate emotional engagement and verify the actual data",
+        "Immediately sell all investments when 'crash' is used",
+        "Dismiss financial media entirely"
+      ],
+      "answer": "Recognize they are designed to generate emotional engagement and verify the actual data",
+      "explanation": "Sensational language in financial media drives clicks but can distort the actual magnitude of market movements; data should always be checked.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A y-axis that begins at 50 instead of 0 on a bar chart will make differences look:",
+      "options": [
+        "Smaller than they actually are",
+        "Larger than they actually are",
+        "Proportionally accurate",
+        "Invisible to the reader"
+      ],
+      "answer": "Larger than they actually are",
+      "explanation": "Truncating the y-axis compresses the scale and exaggerates the visual difference between bars.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Data journalism uses data to:",
+      "options": [
+        "Replace all written reporting",
+        "Support, illustrate, and tell evidence-based news stories",
+        "Avoid using expert sources",
+        "Generate automated articles without human oversight"
+      ],
+      "answer": "Support, illustrate, and tell evidence-based news stories",
+      "explanation": "Data journalism combines statistical analysis with narrative storytelling to make complex information accessible and verifiable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "When evaluating an infographic, which question is most important to ask first?",
+      "options": [
+        "Is the design colorful enough?",
+        "Where does the data come from, and is the source credible?",
+        "Does it match my existing beliefs?",
+        "Was it shared by a popular account?"
+      ],
+      "answer": "Where does the data come from, and is the source credible?",
+      "explanation": "Source credibility is the foundation of evaluating any data visualization — even perfectly designed infographics can mislead with faulty data.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Correlation shown in a chart means:",
+      "options": [
+        "One variable definitely causes the other",
+        "Two variables move together, but this does not prove causation",
+        "The data is perfectly accurate",
+        "The relationship is always statistically significant"
+      ],
+      "answer": "Two variables move together, but this does not prove causation",
+      "explanation": "Correlation describes a relationship between variables; causation requires additional evidence, such as controlled experiments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Responsible data visualization should:",
+      "options": [
+        "Always start the y-axis at zero for bar charts and use clear labels and cited sources",
+        "Use as many colors as possible to be engaging",
+        "Avoid showing any negative trends",
+        "Simplify by removing data points that don't fit the narrative"
+      ],
+      "answer": "Always start the y-axis at zero for bar charts and use clear labels and cited sources",
+      "explanation": "Responsible visualization presents data accurately, with proper scaling, labels, and source attribution so audiences can verify and interpret correctly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "A corporate press release about a product recall that says 'We are proactively reaching out to customers as part of our commitment to safety' is an example of:",
+      "options": [
+        "Investigative journalism",
+        "Spin — using positive language to frame a negative event",
+        "Defamation",
+        "Native advertising"
+      ],
+      "answer": "Spin — using positive language to frame a negative event",
+      "explanation": "Framing a mandated recall as a 'proactive commitment' softens the negative reality through careful language choice.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "The primary purpose of a press release is to:",
+      "options": [
+        "Provide completely unbiased news reporting",
+        "Control the narrative by presenting a company's message to media and the public",
+        "Replace formal financial filings",
+        "Allow journalists to ask questions directly"
+      ],
+      "answer": "Control the narrative by presenting a company's message to media and the public",
+      "explanation": "Press releases are created by communications teams to promote a company's preferred framing of events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Effective crisis communication typically involves:",
+      "options": [
+        "Remaining silent until all facts are known",
+        "Acknowledging the issue quickly, expressing concern, and outlining corrective actions",
+        "Blaming third parties immediately",
+        "Only communicating through lawyers"
+      ],
+      "answer": "Acknowledging the issue quickly, expressing concern, and outlining corrective actions",
+      "explanation": "Speed, accountability, and clarity are the pillars of crisis communication that preserve trust.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Media relations refers to:",
+      "options": [
+        "A company's social media follower count",
+        "The management of a company's relationships and communications with journalists and news outlets",
+        "Advertising purchased in newspapers",
+        "The legal department's role in approving press releases"
+      ],
+      "answer": "The management of a company's relationships and communications with journalists and news outlets",
+      "explanation": "Media relations is the PR function of building working relationships with journalists to earn fair and accurate coverage.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Brand messaging is designed to:",
+      "options": [
+        "Provide fully objective information about a product",
+        "Consistently communicate the company's values, identity, and value proposition to its audience",
+        "Replace customer service interactions",
+        "Comply with SEC regulations"
+      ],
+      "answer": "Consistently communicate the company's values, identity, and value proposition to its audience",
+      "explanation": "Brand messaging is a strategic, intentional communication system designed to shape how stakeholders perceive an organization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "SEO stands for:",
+      "options": [
+        "Social Engagement Optimization",
+        "Search Engine Optimization",
+        "Structured Editorial Output",
+        "Sponsored Editorial Opportunity"
+      ],
+      "answer": "Search Engine Optimization",
+      "explanation": "SEO is the practice of improving content so it ranks higher in search engine results pages, increasing organic traffic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Writing for the web differs from print because online readers tend to:",
+      "options": [
+        "Read every word carefully from top to bottom",
+        "Scan content using headlines, bullet points, and bolded text",
+        "Prefer very long paragraphs with dense text",
+        "Avoid clicking on links within articles"
+      ],
+      "answer": "Scan content using headlines, bullet points, and bolded text",
+      "explanation": "Web usability research shows most online readers scan rather than read linearly, so structure and formatting are critical.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Thought leadership content is valuable to a business because it:",
+      "options": [
+        "Sells products directly to customers",
+        "Establishes executives or brands as credible, knowledgeable authorities in their industry",
+        "Replaces the need for advertising budgets",
+        "Focuses only on product features"
+      ],
+      "answer": "Establishes executives or brands as credible, knowledgeable authorities in their industry",
+      "explanation": "Thought leadership builds trust and brand reputation by sharing expert perspectives rather than direct selling.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "A call to action (CTA) in business content is:",
+      "options": [
+        "A statement that concludes the article",
+        "A specific instruction that prompts the reader to take a next step",
+        "A copyright notice at the bottom of the page",
+        "A headline that summarizes the article"
+      ],
+      "answer": "A specific instruction that prompts the reader to take a next step",
+      "explanation": "CTAs guide readers toward desired actions — 'Download the report,' 'Schedule a demo,' or 'Subscribe to our newsletter.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Keyword stuffing in an article means:",
+      "options": [
+        "Using relevant keywords naturally to improve readability",
+        "Excessively repeating keywords to manipulate search rankings, harming readability",
+        "Adding a keyword glossary at the end of an article",
+        "Translating content into multiple languages"
+      ],
+      "answer": "Excessively repeating keywords to manipulate search rankings, harming readability",
+      "explanation": "Keyword stuffing is an unethical, black-hat SEO technique penalized by search engines and damaging to reader experience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Business podcasts are effective for audience building because they:",
+      "options": [
+        "Replace the need for a company website",
+        "Create an intimate, long-form connection with audiences who listen during daily activities",
+        "Require no production effort",
+        "Are consumed exclusively by executives"
+      ],
+      "answer": "Create an intimate, long-form connection with audiences who listen during daily activities",
+      "explanation": "Podcasts are consumed during commutes and routines, building loyal audiences through consistent, personal audio content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The first few seconds of a business video are most important because:",
+      "options": [
+        "Viewers decide whether to continue watching based on the opening hook",
+        "Search engines only index the beginning of videos",
+        "Sponsors appear first in all videos",
+        "Captions are only available in the first segment"
+      ],
+      "answer": "Viewers decide whether to continue watching based on the opening hook",
+      "explanation": "Most video platforms show that viewers drop off rapidly in the first 15-30 seconds; a strong hook is essential to retain attention.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Video marketing on YouTube works best for businesses when:",
+      "options": [
+        "Videos are as long as possible to increase watch time",
+        "Content provides genuine value to the target audience and is consistent in publishing schedule",
+        "Only product demonstrations are posted",
+        "Videos avoid all calls to action"
+      ],
+      "answer": "Content provides genuine value to the target audience and is consistent in publishing schedule",
+      "explanation": "YouTube's algorithm rewards watch time and consistent uploads; content that genuinely serves the audience builds loyal subscribers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Which statement about video accessibility is most important for ethical content creation?",
+      "options": [
+        "Videos do not need captions if the speaker is clear",
+        "Adding captions and transcripts makes content accessible to deaf and hard-of-hearing viewers and improves SEO",
+        "Accessibility features reduce video quality",
+        "Only government agencies are required to provide captions"
+      ],
+      "answer": "Adding captions and transcripts makes content accessible to deaf and hard-of-hearing viewers and improves SEO",
+      "explanation": "Captions serve both an ethical imperative (accessibility) and a practical benefit (search indexing of spoken content).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "A business podcast that features industry expert interviews primarily builds credibility through:",
+      "options": [
+        "Pathos — emotional storytelling",
+        "Ethos — associating the brand with recognized authorities",
+        "Logos — presenting statistical data",
+        "Native advertising disclosures"
+      ],
+      "answer": "Ethos — associating the brand with recognized authorities",
+      "explanation": "Featuring respected experts transfers their credibility to the hosting brand, building authority through association.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Copyright law protects:",
+      "options": [
+        "Ideas and facts",
+        "Original creative works fixed in a tangible medium",
+        "Company names and logos only",
+        "Any content posted online"
+      ],
+      "answer": "Original creative works fixed in a tangible medium",
+      "explanation": "Copyright protects original expression (text, images, music, video) once created in a fixed form — not ideas or facts themselves.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Fair use allows limited use of copyrighted material without permission for purposes such as:",
+      "options": [
+        "Commercial advertising",
+        "Commentary, criticism, education, and parody",
+        "Reselling the content",
+        "Any purpose as long as credit is given"
+      ],
+      "answer": "Commentary, criticism, education, and parody",
+      "explanation": "Fair use is a legal doctrine that permits limited use of copyrighted works for transformative, educational, or commentary purposes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Defamation in a business context requires which element?",
+      "options": [
+        "A negative opinion about a company",
+        "A false statement of fact published to third parties that damages reputation",
+        "A satirical article about a CEO",
+        "Criticism of a company's products"
+      ],
+      "answer": "A false statement of fact published to third parties that damages reputation",
+      "explanation": "Defamation requires (1) a false statement presented as fact, (2) publication to others, and (3) resulting reputational harm. True statements and opinions are generally protected.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "An ethical content creator gives proper attribution because it:",
+      "options": [
+        "Is always legally required under all circumstances",
+        "Respects the original creator's work and helps readers trace primary sources",
+        "Increases the article's word count",
+        "Improves SEO regardless of the links"
+      ],
+      "answer": "Respects the original creator's work and helps readers trace primary sources",
+      "explanation": "Attribution is an ethical standard in journalism and content creation that respects intellectual property and supports transparency.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "A company that collects customer data and sells it to third parties without user consent likely violates:",
+      "options": [
+        "Copyright law",
+        "Data privacy regulations such as GDPR or CCPA",
+        "Defamation law",
+        "FTC advertising standards only"
+      ],
+      "answer": "Data privacy regulations such as GDPR or CCPA",
+      "explanation": "GDPR (EU) and CCPA (California) require informed consent for data collection and restrict selling personal data without explicit permission.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Cross-cultural media literacy is important in business because:",
+      "options": [
+        "All countries use identical media formats and norms",
+        "Media norms, communication styles, and information values differ significantly across cultures",
+        "English is the only business language worldwide",
+        "International news is always neutral and objective"
+      ],
+      "answer": "Media norms, communication styles, and information values differ significantly across cultures",
+      "explanation": "What is considered credible, persuasive, or appropriate in media varies by culture — business professionals must understand this to communicate globally.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "A business campaign that succeeds in the US but offends audiences in another country most likely failed due to:",
+      "options": [
+        "Poor SEO strategy",
+        "Insufficient translation and lack of cultural adaptation",
+        "Using too many visual elements",
+        "Relying on logos appeals"
+      ],
+      "answer": "Insufficient translation and lack of cultural adaptation",
+      "explanation": "Effective global communication requires more than word-for-word translation — it requires cultural adaptation of imagery, tone, values, and humor.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "News coverage of an international business event may differ across countries primarily because:",
+      "options": [
+        "All governments control their local news",
+        "Journalists apply their own cultural frames and national perspectives when selecting and framing stories",
+        "International events are only covered in one language",
+        "Business news is always identical globally"
+      ],
+      "answer": "Journalists apply their own cultural frames and national perspectives when selecting and framing stories",
+      "explanation": "Journalists are embedded in cultural contexts that shape what they consider newsworthy and how they interpret global events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Which approach best helps a business researcher understand international media coverage accurately?",
+      "options": [
+        "Relying only on English-language sources about other countries",
+        "Consulting media from the region itself, ideally with bilingual expertise",
+        "Translating content using only automated tools",
+        "Avoiding any non-US media sources"
+      ],
+      "answer": "Consulting media from the region itself, ideally with bilingual expertise",
+      "explanation": "Primary regional sources, interpreted by people with language and cultural knowledge, provide the most accurate picture of local media landscapes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "High-context communication cultures tend to:",
+      "options": [
+        "Rely heavily on explicit, direct verbal statements",
+        "Communicate meaning through context, relationships, and implicit signals rather than direct words",
+        "Prefer the loudest and most assertive speakers",
+        "Avoid all visual media"
+      ],
+      "answer": "Communicate meaning through context, relationships, and implicit signals rather than direct words",
+      "explanation": "High-context cultures (common in Japan, China, and Arab countries) embed meaning in relationships and nonverbal cues, contrasting with low-context cultures that favor directness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "In your media literacy project analysis, which question should you ask FIRST when examining a media campaign?",
+      "options": [
+        "How many followers does the brand have?",
+        "Who created this content and what is their purpose?",
+        "Is the design aesthetically pleasing?",
+        "How long is the campaign?"
+      ],
+      "answer": "Who created this content and what is their purpose?",
+      "explanation": "Identifying the creator and their intent is the foundational media literacy question — it frames all subsequent analysis of bias, technique, and accuracy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "A strong final media literacy analysis should include:",
+      "options": [
+        "Only a description of what was seen or read",
+        "Critical evaluation of source credibility, framing, persuasion techniques, data accuracy, and ethical considerations",
+        "A personal endorsement of the campaign",
+        "Only the number of social media shares the campaign received"
+      ],
+      "answer": "Critical evaluation of source credibility, framing, persuasion techniques, data accuracy, and ethical considerations",
+      "explanation": "A rigorous media literacy analysis applies the full course toolkit — not just description but systematic critical evaluation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "When citing sources in your media literacy project, you should:",
+      "options": [
+        "Only cite sources that support your argument",
+        "Cite all sources used, including primary documents, news articles, and fact-checking sites",
+        "Avoid citing sources to appear more authoritative",
+        "Only cite academic journals"
+      ],
+      "answer": "Cite all sources used, including primary documents, news articles, and fact-checking sites",
+      "explanation": "Transparent sourcing is a core media literacy principle — it allows readers to verify your analysis and demonstrates academic integrity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Analyzing a news story for accuracy means checking:",
+      "options": [
+        "Whether the story is entertaining",
+        "Whether factual claims are verifiable through primary sources and are reported without distortion",
+        "Whether the headline is clickable",
+        "Whether the journalist has many followers"
+      ],
+      "answer": "Whether factual claims are verifiable through primary sources and are reported without distortion",
+      "explanation": "Accuracy analysis requires tracing claims back to original, verifiable sources and assessing whether they have been represented fairly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "The most important takeaway from a business media literacy course is that professionals should:",
+      "options": [
+        "Trust all content from large media brands without question",
+        "Apply critical thinking to all information consumed and created in professional contexts",
+        "Avoid all social media and news sources",
+        "Only use information they personally created"
+      ],
+      "answer": "Apply critical thinking to all information consumed and created in professional contexts",
+      "explanation": "Media literacy is ultimately a mindset — the habit of questioning sources, checking facts, and thinking critically about information regardless of where it comes from.",
+      "points": 1
+    }
+  ]
+}

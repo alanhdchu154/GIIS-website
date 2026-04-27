@@ -1,0 +1,1782 @@
+{
+  "slug": "english-iii-literature",
+  "name": "English III - Literature",
+  "nameZh": "英语三（文学）",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "A deep literary study companion to English III — close reading of American and world literature with emphasis on literary criticism, thematic analysis, cultural context, and extended analytical writing.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Literary Theory Overview",
+      "titleZh": "文学理论概述",
+      "objectives": "Understand major schools of literary criticism — formalism, reader-response, new historicism, feminist criticism, and postcolonialism — and apply at least two frameworks to analyze a single literary text.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/literary_theory_and_schools_of_criticism/index.html",
+      "readingNote": "Purdue OWL — Literary Theory and Schools of Criticism: Overview",
+      "videoUrl": "https://www.youtube.com/watch?v=t1nt3lS41oQ",
+      "videoNote": "Crash Course Literature — How to Use Literary Theory",
+      "video2Url": "https://www.youtube.com/watch?v=3_MLVLlVN8Q",
+      "video2Note": "TED-Ed — What is Literary Theory?",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/literary_theory_and_schools_of_criticism/formalist_criticism.html",
+      "practiceNote": "Purdue OWL — Formalist Criticism: Close Reading and Textual Analysis",
+      "assignment": "Select a poem or short story of your choice. Write a 400–500 word analysis applying TWO different critical lenses (e.g., formalist and feminist). For each lens: (1) briefly define the theory (2–3 sentences), (2) identify what that lens focuses attention on in the text, and (3) draw one original interpretive claim supported by textual evidence. Conclude with a paragraph reflecting on how each lens changes your reading of the same text.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 2,
+      "title": "American Poetry: From Whitman to the Beats",
+      "titleZh": "美国诗歌：从惠特曼到垮掉派",
+      "objectives": "Trace the development of American poetic tradition from Whitman's free verse through confessional poetry and the Beat Generation; identify characteristics of each movement; analyze poems for voice, form, and cultural significance.",
+      "readingUrl": "https://www.commonlit.org/en/texts/o-captain-my-captain",
+      "readingNote": "CommonLit — 'O Captain! My Captain!' by Walt Whitman (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=DPnFKmdwIgQ",
+      "videoNote": "Crash Course Literature — Walt Whitman and Emily Dickinson",
+      "video2Url": "https://www.youtube.com/watch?v=m2j3mPM6oyU",
+      "video2Note": "TED-Ed — The History of the Beat Generation and Its Poetry",
+      "practiceUrl": "https://www.khanacademy.org/humanities/us-history/rise-to-world-power/1920s-america/a/the-harlem-renaissance",
+      "practiceNote": "Khan Academy — American Poetry and Cultural Context: Harlem Renaissance and Beyond",
+      "assignment": "Read one poem each from Walt Whitman, Sylvia Plath, and Allen Ginsberg (all available on Poetry Foundation or CommonLit). Write a comparative analysis (600 words) that: (1) identifies the defining features of each poet's movement (free verse / confessional / Beat), (2) compares how each poet uses voice and form, (3) examines what social or historical forces shaped each poem, and (4) explains which poet you find most compelling and why, with textual evidence.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 3,
+      "title": "The American Novel: Identity & Society",
+      "titleZh": "美国小说：身份认同与社会",
+      "objectives": "Analyze how the American novel reflects and critiques national identity, class, race, and the American Dream; trace the development of the novel as a social document from the 19th to 21st centuries.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-great-gatsby-chapter-1",
+      "readingNote": "CommonLit — The Great Gatsby, Chapter 1 by F. Scott Fitzgerald (with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=xILKdoRZBw4",
+      "videoNote": "Crash Course Literature — The Great Gatsby",
+      "video2Url": "https://www.youtube.com/watch?v=rVs0s1Qkupw",
+      "video2Note": "TED-Ed — The American Dream in Literature",
+      "practiceUrl": "https://www.khanacademy.org/humanities/us-history/the-gilded-age/american-identity/a/the-american-dream",
+      "practiceNote": "Khan Academy — The American Dream: History and Literature",
+      "assignment": "After reading Chapter 1 of The Great Gatsby and reviewing the historical context of the 1920s, write a 500-word analysis that: (1) identifies at least two ways the novel reflects anxieties or values of its era, (2) examines how class and wealth are portrayed through setting and character, (3) evaluates to what extent the American Dream is presented as attainable or illusory in Chapter 1, and (4) connects the novel's themes to at least one modern issue or text.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 4,
+      "title": "Satire in American Literature",
+      "titleZh": "美国文学中的讽刺",
+      "objectives": "Define satire, parody, dark comedy, and absurdism; identify satirical techniques such as irony, exaggeration, and incongruity; analyze how Heller and Vonnegut use satire to critique war and modern society.",
+      "readingUrl": "https://www.commonlit.org/en/texts/harrison-bergeron",
+      "readingNote": "CommonLit — 'Harrison Bergeron' by Kurt Vonnegut (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=I3WKXQdSXnE",
+      "videoNote": "Crash Course Literature — Slaughterhouse-Five and the Satire of War",
+      "video2Url": "https://www.youtube.com/watch?v=nSp5lW7KTSA",
+      "video2Note": "TED-Ed — What Makes Something Satirical?",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/genre_writing_in_literature/satire.html",
+      "practiceNote": "Purdue OWL — Writing About Satire: Identifying and Analyzing Satirical Devices",
+      "assignment": "Read 'Harrison Bergeron' by Kurt Vonnegut. Write a 450–550 word literary analysis that: (1) defines the satirical target (what is being criticized), (2) identifies three specific satirical techniques used in the story with textual evidence, (3) analyzes how absurdism heightens the satirical message, and (4) explains whether you believe the satire is still relevant today, with a real-world connection.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 5,
+      "title": "The Short Story Tradition",
+      "titleZh": "短篇小说传统",
+      "objectives": "Examine the short story as a distinct literary form; analyze the craft elements that distinguish masterful short fiction — compression, epiphany, ambiguity, and the unexpected ending; compare the styles of O. Henry, Flannery O'Connor, and Raymond Carver.",
+      "readingUrl": "https://www.commonlit.org/en/texts/a-good-man-is-hard-to-find",
+      "readingNote": "CommonLit — 'A Good Man Is Hard to Find' by Flannery O'Connor (with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=HJYisAtjGVA",
+      "videoNote": "Crash Course Literature — Flannery O'Connor and Southern Gothic",
+      "video2Url": "https://www.youtube.com/watch?v=XVejh7K5XSg",
+      "video2Note": "TED-Ed — What Makes a Great Short Story?",
+      "practiceUrl": "https://www.commonlit.org/en/texts/the-gift-of-the-magi",
+      "practiceNote": "CommonLit — 'The Gift of the Magi' by O. Henry (annotated with discussion questions)",
+      "assignment": "Read 'A Good Man Is Hard to Find' by Flannery O'Connor. Then select one additional short story from O. Henry or Raymond Carver. Write a 500-word comparative analysis that: (1) identifies one defining craft technique in each story (e.g., the twist ending, minimalist dialogue, or grace through violence), (2) analyzes how each author uses compression — saying much with little, (3) examines the theme of each story with supporting evidence, and (4) argues which author's approach you find more effective and why.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 6,
+      "title": "Gender & Literature",
+      "titleZh": "性别与文学",
+      "objectives": "Apply feminist literary criticism to canonical and contemporary texts; trace the evolution of women's voices in American literature; examine how gender roles and expectations are reinforced or challenged in literary works.",
+      "readingUrl": "https://www.commonlit.org/en/texts/the-yellow-wallpaper",
+      "readingNote": "CommonLit — 'The Yellow Wallpaper' by Charlotte Perkins Gilman (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=PSFB7wHxgGI",
+      "videoNote": "Crash Course Literature — The Yellow Wallpaper and Feminist Literary Criticism",
+      "video2Url": "https://www.youtube.com/watch?v=v8OZPZ_bheY",
+      "video2Note": "TED-Ed — A Feminist Reading of Literature",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/literary_theory_and_schools_of_criticism/feminist_criticism.html",
+      "practiceNote": "Purdue OWL — Feminist Criticism: Key Questions and Approaches",
+      "assignment": "Read 'The Yellow Wallpaper' by Charlotte Perkins Gilman. Write a 500–600 word feminist analysis that: (1) describes the power dynamic between the narrator and her husband using specific textual evidence, (2) identifies how the setting (the room, the wallpaper) symbolizes patriarchal control, (3) interprets the narrator's descent as either tragedy or liberation — or both — with evidence, and (4) connects the story's themes to the broader history of women's rights in 19th-century America.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 7,
+      "title": "Race & Literature in America",
+      "titleZh": "美国文学中的种族",
+      "objectives": "Survey the African American literary tradition from the Harlem Renaissance to contemporary voices; examine Native American and Latinx perspectives in American literature; apply postcolonial and race-conscious critical frameworks to literary analysis.",
+      "readingUrl": "https://www.commonlit.org/en/texts/i-too",
+      "readingNote": "CommonLit — 'I, Too' by Langston Hughes and selected Harlem Renaissance poems (with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=Sj2rMDFqSog",
+      "videoNote": "Crash Course Literature — African American Literature and the Harlem Renaissance",
+      "video2Url": "https://www.youtube.com/watch?v=3k2vYiRNXS0",
+      "video2Note": "TED-Ed — How Literature Can Change the Way We See Race",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/literary_theory_and_schools_of_criticism/postcolonial_criticism.html",
+      "practiceNote": "Purdue OWL — Postcolonial Criticism: Key Questions and Approaches",
+      "assignment": "Read at least two poems or short texts from two different traditions (e.g., Langston Hughes + Sherman Alexie, or Langston Hughes + Sandra Cisneros). Write a 600-word comparative analysis that: (1) identifies each author's cultural context and how it shapes their literary voice, (2) examines at least one shared theme (e.g., identity, belonging, resistance) across both texts with evidence, (3) applies either postcolonial or race-conscious criticism to each work, explaining what the lens reveals, and (4) reflects on what these texts collectively add to the American literary conversation.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 8,
+      "title": "Dystopian Fiction",
+      "titleZh": "反乌托邦小说",
+      "objectives": "Identify the conventions of dystopian fiction; analyze how authors use dystopian settings to critique contemporary society; examine themes of power, surveillance, conformity, and resistance across canonical dystopian texts.",
+      "readingUrl": "https://www.commonlit.org/en/texts/harrison-bergeron",
+      "readingNote": "CommonLit — 'Harrison Bergeron' by Kurt Vonnegut (revisit for dystopian conventions analysis)",
+      "videoUrl": "https://www.youtube.com/watch?v=ZM-rsfNqfJI",
+      "videoNote": "Crash Course Literature — 1984 by George Orwell",
+      "video2Url": "https://www.youtube.com/watch?v=yp5JWhPDi0Q",
+      "video2Note": "TED-Ed — What Orwell's 1984 Tells Us About Today",
+      "practiceUrl": "https://www.khanacademy.org/humanities/us-history/postwar-era/1950s-america/a/the-red-scare-and-american-culture",
+      "practiceNote": "Khan Academy — Cold War Context and Dystopian Literature (historical background)",
+      "assignment": "Choose one of the following: 1984 (Orwell), Brave New World (Huxley), or The Handmaid's Tale (Atwood). Read at least two chapters of your chosen novel. Write a 500–600 word analysis that: (1) identifies three hallmarks of dystopian fiction present in your text with evidence, (2) explains the specific real-world conditions or fears the author was responding to, (3) analyzes how the protagonist's relationship to power and resistance is developed, and (4) argues whether the novel's warnings feel relevant to the contemporary world.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 9,
+      "title": "Magical Realism",
+      "titleZh": "魔幻现实主义",
+      "objectives": "Define magical realism as a literary mode; analyze how Latin American authors blend the fantastical with everyday reality; examine the cultural, political, and philosophical purposes magical realism serves in the works of Marquez and Allende.",
+      "readingUrl": "https://www.commonlit.org/en/texts/a-very-old-man-with-enormous-wings",
+      "readingNote": "CommonLit — 'A Very Old Man with Enormous Wings' by Gabriel García Márquez (full text with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=EoVj8LqnEoE",
+      "videoNote": "Crash Course Literature — Gabriel García Márquez and Magical Realism",
+      "video2Url": "https://www.youtube.com/watch?v=5oBIiSEyBqc",
+      "video2Note": "TED-Ed — What Is Magical Realism?",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/genre_writing_in_literature/magical_realism.html",
+      "practiceNote": "Purdue OWL — Writing About Magical Realism: Genre Conventions and Techniques",
+      "assignment": "Read 'A Very Old Man with Enormous Wings' by García Márquez. Write a 450–550 word literary analysis that: (1) identifies at least three moments where the magical and realistic coexist and explains how they are presented matter-of-factly, (2) analyzes what the villagers' reactions to the angel reveal about human nature and social behavior, (3) examines how the story uses magical elements to critique organized religion, greed, or curiosity, and (4) explains how this story differs in effect from a traditional fantasy story.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 10,
+      "title": "Memoir & Autobiographical Writing",
+      "titleZh": "回忆录与自传写作",
+      "objectives": "Analyze memoir as a literary form; examine how memoirists construct narrative, select detail, and shape truth; read and discuss the ethical questions of personal narrative; compare techniques in selected memoirs.",
+      "readingUrl": "https://www.commonlit.org/en/texts/i-know-why-the-caged-bird-sings",
+      "readingNote": "CommonLit — Excerpt from I Know Why the Caged Bird Sings by Maya Angelou (with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=n5SdHRVBHKg",
+      "videoNote": "Crash Course Literature — Maya Angelou and Autobiographical Writing",
+      "video2Url": "https://www.youtube.com/watch?v=eIho2S0ZahI",
+      "video2Note": "TED-Ed — The Power of Personal Narrative in Memoir",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/creative_writing/creative_nonfiction/memoir_writing.html",
+      "practiceNote": "Purdue OWL — Memoir Writing: Truth, Craft, and Voice",
+      "assignment": "Read the excerpt from I Know Why the Caged Bird Sings. Then write your own memoir excerpt (400–500 words) about a meaningful personal experience, consciously applying at least three techniques you observed in Angelou's writing (e.g., sensory detail, retrospective reflection, dialogue, metaphor). Attach a 150-word craft reflection explaining which techniques you borrowed, where you used them, and why.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 11,
+      "title": "Drama: Tragedy & Comedy",
+      "titleZh": "戏剧：悲剧与喜剧",
+      "objectives": "Distinguish classical and modern tragedy; identify the tragic hero and hamartia; compare Aristotle's definition of tragedy to 20th-century dramatic theory; analyze absurdist theater through Beckett and Ionesco.",
+      "readingUrl": "https://www.commonlit.org/en/texts/death-of-a-salesman-act-1",
+      "readingNote": "CommonLit — Excerpt from Death of a Salesman by Arthur Miller (Act 1, with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=CubzPFcAKU8",
+      "videoNote": "Crash Course Theater — Tragedy: From Aristotle to Arthur Miller",
+      "video2Url": "https://www.youtube.com/watch?v=3NrJqScXQ_s",
+      "video2Note": "TED-Ed — Waiting for Godot and Absurdist Theater",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/genre_writing_in_literature/drama.html",
+      "practiceNote": "Purdue OWL — Writing About Drama: Tragedy, Comedy, and Dramatic Conventions",
+      "assignment": "Read the excerpt from Death of a Salesman. Write a 500-word analysis that: (1) argues whether Willy Loman qualifies as a modern tragic hero using Aristotle's definition of hamartia and anagnorisis, (2) identifies the central conflict and how it reflects the American Dream, (3) examines how Miller uses the technique of memory/flashback to create dramatic effect, and (4) connects Miller's tragedy to one element of absurdist theater (the futile pursuit of meaning) as described by Beckett.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 12,
+      "title": "Literary Journalism & Creative Nonfiction",
+      "titleZh": "文学新闻与创意非虚构",
+      "objectives": "Understand the conventions of literary journalism and creative nonfiction; identify narrative techniques borrowed from fiction — scene-setting, characterization, point of view, and the telling detail; analyze essays by Tom Wolfe and Joan Didion.",
+      "readingUrl": "https://www.commonlit.org/en/texts/slouching-towards-bethlehem",
+      "readingNote": "CommonLit — Excerpt from 'Slouching Towards Bethlehem' by Joan Didion (with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=bNqMxE-MaJE",
+      "videoNote": "Crash Course Literature — The New Journalism: Tom Wolfe and Joan Didion",
+      "video2Url": "https://www.youtube.com/watch?v=6Uf4sLF5Lm8",
+      "video2Note": "TED-Ed — The Art of the Personal Essay and Literary Nonfiction",
+      "practiceUrl": "https://owl.purdue.edu/owl/subject_specific_writing/creative_writing/creative_nonfiction/index.html",
+      "practiceNote": "Purdue OWL — Creative Nonfiction: Conventions, Techniques, and Truth",
+      "assignment": "Read the excerpt from Joan Didion's 'Slouching Towards Bethlehem.' Then write a 400–500 word piece of literary journalism or creative nonfiction about a place, event, or person you know well. Use at least three techniques from Didion's essay: immersive scene-setting, a distinctive first-person voice, specific concrete detail, or cultural observation. Attach a 150-word craft note explaining your technique choices.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 13,
+      "title": "The Essay as Literature",
+      "titleZh": "作为文学的散文",
+      "objectives": "Trace the essay form from Montaigne to James Baldwin; distinguish the personal essay from the argumentative essay; analyze how essayists use the self as a lens for exploring universal ideas; write an extended personal-argumentative essay.",
+      "readingUrl": "https://www.commonlit.org/en/texts/notes-of-a-native-son",
+      "readingNote": "CommonLit — Excerpt from 'Notes of a Native Son' by James Baldwin (with guided questions)",
+      "videoUrl": "https://www.youtube.com/watch?v=SBBzs7vWlEk",
+      "videoNote": "Crash Course Literature — James Baldwin and the Essay Form",
+      "video2Url": "https://www.youtube.com/watch?v=T_XolTc2G3E",
+      "video2Note": "TED-Ed — How the Personal Essay Became an Art Form",
+      "practiceUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "practiceNote": "Purdue OWL — The Personal-Argumentative Essay: Blending Voice with Evidence",
+      "assignment": "Read the excerpt from Baldwin's 'Notes of a Native Son.' Write a 600–700 word personal-argumentative essay on a topic you care deeply about. The essay must: (1) open with a personal anecdote or scene that grounds the argument, (2) move outward from the personal to a larger social or ethical claim, (3) acknowledge a counterargument and respond to it, (4) use at least one extended metaphor or analogy, and (5) end with a resonant, reflective conclusion. Include a 100-word craft reflection on how Baldwin's technique influenced your approach.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 14,
+      "title": "Senior Synthesis: Critical Research Paper",
+      "titleZh": "高年级综合：批评性研究论文",
+      "objectives": "Write a full argument-driven literary research paper (8–10 sources) on a topic of the student's choosing; integrate secondary critical sources alongside primary texts; apply one or more critical theories; demonstrate mastery of MLA citation, literary analysis, and academic voice.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_general_format.html",
+      "readingNote": "Purdue OWL — MLA General Format: Research Paper Structure and Citation",
+      "videoUrl": "https://www.youtube.com/watch?v=wOKDCkFHyKY",
+      "videoNote": "Crash Course — Writing a Research Paper (Argument, Evidence, and Organization)",
+      "video2Url": "https://www.youtube.com/watch?v=KKDkNjBhFAw",
+      "video2Note": "Purdue OWL YouTube — MLA 9th Edition: In-Text Citations and Works Cited",
+      "practiceUrl": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/research_overview/index.html",
+      "practiceNote": "Purdue OWL — Research Overview: Finding, Evaluating, and Using Sources",
+      "assignment": "Write a 1,200–1,500 word argument-driven literary research paper on a topic of your choosing from any module in this course. Requirements: (1) a clear, arguable thesis that makes a critical claim about a literary text or literary tradition, (2) at least 8–10 sources (minimum 2 primary literary texts, minimum 5 peer-reviewed or scholarly secondary sources), (3) application of at least one critical theory studied this semester, explicitly named and explained, (4) correct MLA in-text citations throughout, (5) a properly formatted MLA Works Cited page. Submit a pre-writing outline and annotated bibliography (one sentence per source) one week before the final paper.",
+      "estimatedHrs": 8.0
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Formalist literary criticism focuses primarily on:",
+      "options": [
+        "The author's biography and historical context",
+        "The reader's emotional response to the text",
+        "The internal elements of the text itself — structure, language, and form",
+        "The political power structures embedded in the text"
+      ],
+      "answer": "The internal elements of the text itself — structure, language, and form",
+      "explanation": "Formalism (New Criticism) holds that a text should be analyzed as a self-contained object. Critics focus on internal literary devices, structure, and language rather than biography or context.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Walt Whitman's poetry is considered revolutionary primarily because he:",
+      "options": [
+        "Used strict rhyme schemes and regular meter",
+        "Wrote only about religious themes",
+        "Abandoned traditional verse forms and used free verse to celebrate American democracy and the self",
+        "Focused exclusively on nature and avoided human subjects"
+      ],
+      "answer": "Abandoned traditional verse forms and used free verse to celebrate American democracy and the self",
+      "explanation": "Whitman's Leaves of Grass broke from the formal poetic conventions of his era, using expansive free verse to celebrate democratic ideals, the body, and individual identity.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "In The Great Gatsby, the green light at the end of Daisy's dock most commonly symbolizes:",
+      "options": [
+        "Daisy's jealousy",
+        "Gatsby's hope and longing for an idealized future",
+        "Tom Buchanan's wealth",
+        "The corruption of Wall Street"
+      ],
+      "answer": "Gatsby's hope and longing for an idealized future",
+      "explanation": "The green light is a central symbol representing Gatsby's desire — both for Daisy and for the unattainable ideal of reinvention and success that defines the American Dream.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Satire uses which primary techniques to critique its subject?",
+      "options": [
+        "Sentimentality and romance",
+        "Irony, exaggeration, and incongruity",
+        "Stream of consciousness and interior monologue",
+        "Magical elements and folklore"
+      ],
+      "answer": "Irony, exaggeration, and incongruity",
+      "explanation": "Satire exposes human folly through irony (saying the opposite of what is meant), exaggeration (hyperbolizing flaws), and incongruity (placing ideas in absurd contexts that reveal their ridiculousness).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following best describes the style of Raymond Carver's short fiction?",
+      "options": [
+        "Gothic darkness with supernatural elements",
+        "Lyrical and ornate prose celebrating the natural world",
+        "Minimalist style depicting ordinary working-class life with compressed, suggestive language",
+        "Satirical exaggeration of political institutions"
+      ],
+      "answer": "Minimalist style depicting ordinary working-class life with compressed, suggestive language",
+      "explanation": "Carver is associated with minimalism — spare, unadorned prose that leaves much unsaid. His stories focus on working-class characters and relationships under stress, relying on subtext rather than explanation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "In 'The Yellow Wallpaper,' the narrator's obsession with the wallpaper can be interpreted through a feminist lens as representing:",
+      "options": [
+        "Her love of interior decoration",
+        "Her suppressed creativity and desire to escape patriarchal confinement",
+        "Her fear of the dark",
+        "Her longing for a different house"
+      ],
+      "answer": "Her suppressed creativity and desire to escape patriarchal confinement",
+      "explanation": "Feminist critics read the wallpaper as a symbol of the domestic prison constructed by her husband's medical authority. The woman trapped behind the wallpaper mirrors the narrator's own psychological imprisonment.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "The Harlem Renaissance was significant to American literature because it:",
+      "options": [
+        "Focused exclusively on Southern plantation life",
+        "Marked the first emergence of satire in American writing",
+        "Produced a flourishing of African American art, literature, and intellectual life that challenged racial stereotypes",
+        "Introduced the novel form to the United States"
+      ],
+      "answer": "Produced a flourishing of African American art, literature, and intellectual life that challenged racial stereotypes",
+      "explanation": "The Harlem Renaissance (1920s–1930s) saw a cultural explosion of Black literary and artistic achievement that asserted African American identity, history, and humanity against racist stereotypes.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Reader-response criticism differs from formalism in that reader-response holds that:",
+      "options": [
+        "Only the author's intent determines a text's meaning",
+        "Meaning is produced in the interaction between the text and its readers",
+        "Political context is the only valid lens for interpretation",
+        "Texts have no meaning at all"
+      ],
+      "answer": "Meaning is produced in the interaction between the text and its readers",
+      "explanation": "Reader-response criticism argues that meaning is not fixed in the text but is created by individual readers bringing their experiences and perspectives to the reading. Different readers may produce different valid meanings.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Free verse poetry is defined by:",
+      "options": [
+        "A strict ABAB rhyme scheme",
+        "Exactly fourteen lines",
+        "The absence of regular meter and end rhyme, relying on natural speech rhythms",
+        "A haiku-like syllable structure"
+      ],
+      "answer": "The absence of regular meter and end rhyme, relying on natural speech rhythms",
+      "explanation": "Free verse abandons strict formal constraints of traditional poetry — no fixed rhyme scheme or metrical pattern. It achieves musicality through repetition, parallelism, and the natural rhythms of speech.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "In 'Harrison Bergeron,' the government's enforcement of absolute equality is an example of:",
+      "options": [
+        "A utopian ideal that succeeds",
+        "A critique of communism that Vonnegut endorses",
+        "Absurdist satire of totalitarianism and the fear of mediocrity",
+        "A realistic depiction of future American policy"
+      ],
+      "answer": "Absurdist satire of totalitarianism and the fear of mediocrity",
+      "explanation": "Vonnegut's story uses absurd exaggeration — handicapping the gifted — to satirize conformist pressures and warn against governments that suppress excellence in the name of equality.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Which short story master is best known for the 'twist ending' or 'O. Henry ending'?",
+      "options": ["Raymond Carver", "Flannery O'Connor", "O. Henry", "Kurt Vonnegut"],
+      "answer": "O. Henry",
+      "explanation": "William Sydney Porter (O. Henry) is famous for his surprise endings, in which a final ironic twist reframes the entire story. 'The Gift of the Magi' is his most celebrated example.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Confessional poetry, as practiced by Sylvia Plath and Anne Sexton, is characterized by:",
+      "options": [
+        "Formal rhyme schemes and classical allusions",
+        "Impersonal, objective observation of the natural world",
+        "Intensely personal subject matter — trauma, mental illness, domestic life — delivered in first person",
+        "Political manifestos against war and capitalism"
+      ],
+      "answer": "Intensely personal subject matter — trauma, mental illness, domestic life — delivered in first person",
+      "explanation": "Confessional poets of the 1950s–60s broke taboos by writing directly about personal suffering, psychological breakdown, and private life — subjects previously considered inappropriate for poetry.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "In postcolonial literary criticism, 'the Other' refers to:",
+      "options": [
+        "The protagonist of a story",
+        "A supernatural element in a narrative",
+        "Groups who are marginalized and constructed as inferior by a dominant culture",
+        "The narrator who is unreliable"
+      ],
+      "answer": "Groups who are marginalized and constructed as inferior by a dominant culture",
+      "explanation": "Postcolonial theory examines how colonizing cultures define colonized peoples as 'Other' — foreign, primitive, and inferior — to justify domination. Literature by colonized writers reclaims identity against this framing.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short",
+      "question": "Choose any ONE of the following critical lenses: feminist criticism, reader-response, or new historicism. Define it in 2–3 sentences and explain one question a critic using that lens would ask when reading a literary text.",
+      "options": null,
+      "answer": "Feminist criticism examines how gender roles and power imbalances are constructed and reinforced in literature. It challenges texts that marginalize women's voices. A feminist critic might ask: 'How does this text portray women — as agents or as objects?' / Reader-response holds that meaning is created between text and reader. Critics ask: 'How does my personal experience change my interpretation?' / New historicism reads texts as products of specific historical moments, asking: 'What cultural anxieties or power structures does this text reflect?'",
+      "explanation": "Each critical theory provides a distinct interpretive framework. Students should be able to define a theory concisely and articulate the kinds of questions it generates.",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "Identify one way that F. Scott Fitzgerald's The Great Gatsby critiques the American Dream. Use at least one specific detail from the novel (character, symbol, or setting) to support your answer.",
+      "options": null,
+      "answer": "Fitzgerald critiques the American Dream as hollow and corrupted by wealth. For example, the Valley of Ashes — the industrial wasteland between West Egg and New York — symbolizes the forgotten poor who are destroyed by the pursuit of wealth. Gatsby himself embodies the Dream's failure: despite acquiring wealth, he cannot recapture his past or win Daisy, and he dies alone and betrayed.",
+      "explanation": "The novel uses setting and character to show that the American Dream produces disillusionment, moral decay, and inequality rather than genuine fulfillment.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Dystopian fiction typically features all of the following EXCEPT:",
+      "options": [
+        "A repressive government or social system that controls citizens",
+        "A protagonist who questions or rebels against the system",
+        "A utopian ending in which society is perfected",
+        "Themes of surveillance, conformity, and loss of individual freedom"
+      ],
+      "answer": "A utopian ending in which society is perfected",
+      "explanation": "Dystopian narratives do not resolve happily — they typically end in tragedy, ambiguity, or the protagonist's defeat, reinforcing the hopelessness or danger of the world the author is warning against.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "In Gabriel García Márquez's 'A Very Old Man with Enormous Wings,' the matter-of-fact narrative tone when describing miraculous events is a defining feature of:",
+      "options": [
+        "Gothic fiction",
+        "Magical realism",
+        "Naturalism",
+        "Stream of consciousness"
+      ],
+      "answer": "Magical realism",
+      "explanation": "Magical realism presents extraordinary or supernatural events in the same calm, matter-of-fact tone as ordinary events. The contrast between the miraculous content and the mundane tone is the genre's defining characteristic.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "The primary purpose of memoir as a literary form is to:",
+      "options": [
+        "Present objective historical facts",
+        "Argue a political position using research and data",
+        "Reconstruct and reflect on personal experience to create meaning and insight",
+        "Invent fictional characters based loosely on real people"
+      ],
+      "answer": "Reconstruct and reflect on personal experience to create meaning and insight",
+      "explanation": "Memoir is literary nonfiction that uses personal memory, narrative craft, and reflection to explore the significance of lived experience. It is shaped by the writer's perspective and may not be strictly factual.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Aristotle's concept of hamartia, central to classical tragedy, refers to:",
+      "options": [
+        "The moment of recognition when a character understands the truth",
+        "A character's fatal flaw or error in judgment that leads to their downfall",
+        "The final resolution of the conflict",
+        "The chorus's commentary on the action"
+      ],
+      "answer": "A character's fatal flaw or error in judgment that leads to their downfall",
+      "explanation": "Hamartia (often translated as 'tragic flaw') is the characteristic or mistake in the tragic hero that triggers the chain of events leading to catastrophe. In modern tragedy, Arthur Miller argued this could be a social or psychological flaw, not just a moral one.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Literary journalism, as practiced by Tom Wolfe and Joan Didion, is distinguished from standard journalism by:",
+      "options": [
+        "Its exclusive use of official government sources",
+        "Its reliance on fictional characters and invented dialogue",
+        "Its use of narrative techniques from fiction — scene, characterization, and voice — while reporting facts",
+        "Its avoidance of any personal perspective or first-person voice"
+      ],
+      "answer": "Its use of narrative techniques from fiction — scene, characterization, and voice — while reporting facts",
+      "explanation": "The New Journalism of the 1960s–70s borrowed fictional craft — scene-setting, immersive description, point of view, and dialogue — to report real events, blurring the line between journalism and literature.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "James Baldwin's essays are notable for combining which two elements?",
+      "options": [
+        "Scientific data and literary quotation",
+        "Personal experience and broader social and political argument",
+        "Fictional narrative and poetic meter",
+        "Historical chronology and economic analysis"
+      ],
+      "answer": "Personal experience and broader social and political argument",
+      "explanation": "Baldwin uses his own experience as a Black man in America as the starting point for expansive meditations on race, religion, and democracy — the hallmark of the personal-argumentative essay as a literary form.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "In a literary research paper, secondary sources are:",
+      "options": [
+        "The primary literary texts being studied",
+        "The student's own analysis and interpretation",
+        "Scholarly criticism, essays, and analyses written about a literary work",
+        "Newspaper reviews published the year a book came out"
+      ],
+      "answer": "Scholarly criticism, essays, and analyses written about a literary work",
+      "explanation": "Secondary sources are works of criticism and scholarship that analyze, interpret, or discuss a primary text. They provide critical context and conversation into which the student's own argument enters.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Absurdist theater, as represented by Samuel Beckett's Waiting for Godot, is characterized by:",
+      "options": [
+        "Realistic dialogue and linear plot structure",
+        "Historical accuracy and documentary staging",
+        "Circular, repetitive plots that dramatize the meaninglessness of human existence",
+        "Happy endings that affirm traditional values"
+      ],
+      "answer": "Circular, repetitive plots that dramatize the meaninglessness of human existence",
+      "explanation": "Absurdist theater mirrors the existentialist idea that life lacks inherent meaning. Plays like Waiting for Godot use repetitive, unresolved action and illogical dialogue to enact — rather than just describe — absurdity.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Postcolonial criticism applied to a novel like Things Fall Apart by Chinua Achebe would primarily ask:",
+      "options": [
+        "What is the poem's rhyme scheme?",
+        "How does the text represent and challenge colonial power structures and the erasure of indigenous culture?",
+        "Did the author have a happy childhood?",
+        "What is the book's sales ranking?"
+      ],
+      "answer": "How does the text represent and challenge colonial power structures and the erasure of indigenous culture?",
+      "explanation": "Postcolonial criticism examines literature in relation to colonization — how texts either reinforce or resist colonial ideologies, and how writers from colonized cultures reclaim identity and narrative.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "A memoir differs from an autobiography primarily in that a memoir:",
+      "options": [
+        "Covers the author's entire life from birth to present",
+        "Is always written in third person",
+        "Focuses on a specific period, theme, or set of experiences rather than a comprehensive life story",
+        "Cannot use literary techniques like metaphor or dialogue"
+      ],
+      "answer": "Focuses on a specific period, theme, or set of experiences rather than a comprehensive life story",
+      "explanation": "Memoir is thematically or temporally focused — it explores a particular aspect of a life (childhood, illness, identity) with literary craft. Autobiography typically aims to document a full life chronologically.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "In dystopian fiction, the protagonist's primary narrative function is often to:",
+      "options": [
+        "Defend the existing social order",
+        "Serve as the reader's guide into the world, questioning and testing its rules",
+        "Accept the system and find happiness within it",
+        "Represent the government's perspective"
+      ],
+      "answer": "Serve as the reader's guide into the world, questioning and testing its rules",
+      "explanation": "The dystopian protagonist is usually the point of entry and critique — their questioning of the regime mirrors and guides the reader's growing horror at the world being depicted.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Maya Angelou's I Know Why the Caged Bird Sings gets its title from a poem by Paul Laurence Dunbar. The 'caged bird' is a recurring symbol in African American literature that most commonly represents:",
+      "options": [
+        "Love of nature and animals",
+        "The beauty of song and music",
+        "The longing for freedom under racial oppression",
+        "The dangers of the natural world"
+      ],
+      "answer": "The longing for freedom under racial oppression",
+      "explanation": "The caged bird is a powerful metaphor for African Americans' experience of restriction, oppression, and the persistent desire for freedom and self-expression despite confinement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "The Montaigne essay tradition — continued by Baldwin and other essayists — uses the essay form to:",
+      "options": [
+        "Present a purely objective, impersonal analysis of a topic",
+        "Follow a strict five-paragraph structure",
+        "Think through a problem openly, using the self as both subject and instrument of inquiry",
+        "Argue a political position using exclusively statistical evidence"
+      ],
+      "answer": "Think through a problem openly, using the self as both subject and instrument of inquiry",
+      "explanation": "Montaigne invented the essay as a form of self-examination ('essai' means 'attempt' in French). The essay enacts thinking rather than presenting polished conclusions — it is exploratory, associative, and honest about uncertainty.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Which element is essential in an argument-driven literary research paper that is NOT typically required in a personal essay?",
+      "options": [
+        "A clear thesis statement",
+        "Personal reflection and voice",
+        "Integration of peer-reviewed secondary sources with MLA citations",
+        "Use of figurative language"
+      ],
+      "answer": "Integration of peer-reviewed secondary sources with MLA citations",
+      "explanation": "A research paper requires engagement with scholarly criticism and proper documentation. Personal essays are driven by the writer's voice and experience rather than academic source integration.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "The Latin American literary tradition of magical realism is particularly associated with which political and cultural purpose?",
+      "options": [
+        "Celebrating the achievements of colonial governments",
+        "Escaping from political reality into pure fantasy",
+        "Processing historical trauma and political repression through mythic and fantastical narrative",
+        "Promoting scientific rationalism over superstition"
+      ],
+      "answer": "Processing historical trauma and political repression through mythic and fantastical narrative",
+      "explanation": "Magical realism emerged in a context of dictatorship, violence, and colonial legacy in Latin America. Authors used fantastical elements to speak metaphorically about realities too dangerous or traumatic to address directly.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Arthur Miller argued that Death of a Salesman qualifies as tragedy because:",
+      "options": [
+        "Willy Loman is of noble birth and dies in battle",
+        "The ordinary man's struggle against forces that deny his dignity is as tragic as any king's fall",
+        "The play follows all of Aristotle's classical rules without modification",
+        "Willy Loman achieves self-knowledge and is redeemed"
+      ],
+      "answer": "The ordinary man's struggle against forces that deny his dignity is as tragic as any king's fall",
+      "explanation": "In 'Tragedy and the Common Man,' Miller argued that the common person striving to attain personal dignity against social forces that deny it is the essential material of modern tragedy — not noble birth.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Which of the following best describes the Beat Generation's contribution to American poetry?",
+      "options": [
+        "Returning to strict formal verse and classical subjects",
+        "Celebrating corporate America and Cold War values",
+        "Rejecting mainstream conformity through spontaneous, jazz-influenced verse and countercultural subject matter",
+        "Introducing haiku and other Japanese forms into American poetry"
+      ],
+      "answer": "Rejecting mainstream conformity through spontaneous, jazz-influenced verse and countercultural subject matter",
+      "explanation": "Beat poets like Allen Ginsberg and Jack Kerouac rejected 1950s conformity, drawing on jazz improvisation, Eastern spirituality, and frank treatment of taboo subjects to create a rebellious, spontaneous literary voice.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Flannery O'Connor's fiction is associated with the Southern Gothic tradition, which typically features:",
+      "options": [
+        "Idyllic portrayals of antebellum Southern life",
+        "Grotesque characters, moral decay, and moments of violent grace in the American South",
+        "Realistic depictions of urban Northern cities",
+        "Satire of the Puritans in New England"
+      ],
+      "answer": "Grotesque characters, moral decay, and moments of violent grace in the American South",
+      "explanation": "Southern Gothic uses dark, grotesque elements — flawed and disturbing characters, decaying settings — to examine the legacy of slavery, racism, and religious hypocrisy. O'Connor often delivers shocking 'moments of grace' through violence.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Explain the difference between a primary source and a secondary source in literary research. Give one example of each for a research paper about The Great Gatsby.",
+      "options": null,
+      "answer": "A primary source is the original literary text being studied (e.g., The Great Gatsby by F. Scott Fitzgerald). A secondary source is scholarly criticism or analysis written about that text (e.g., a peer-reviewed article about the symbolism of the green light in Gatsby). In literary research, the primary text is the object of study, while secondary sources provide critical frameworks, historical context, and scholarly conversation the paper enters.",
+      "explanation": "Distinguishing primary from secondary sources is fundamental to academic literary research. Both are required in a research paper — the primary text as the subject, secondary sources as critical interlocutors.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "Choose ONE dystopian novel from the course (1984, Brave New World, or The Handmaid's Tale) and identify one specific technique the author uses to create a sense of totalitarian control. Explain how that technique functions in the text.",
+      "options": null,
+      "answer": "In 1984, Orwell uses the concept of 'Newspeak' — a deliberately impoverished language designed to eliminate thought-crime by removing words for dissent. By controlling language, the Party controls thought itself, making rebellion literally unthinkable. / In Brave New World, Huxley uses conditioning and pleasure (soma, promiscuity, consumerism) to make citizens voluntarily embrace their own enslavement — control through happiness rather than fear. / In The Handmaid's Tale, Atwood uses the Handmaids' red uniforms and enforced silence to control identity — stripping women of names and voices to eliminate individual selfhood.",
+      "explanation": "Each dystopian author uses a distinct mechanism of control that reflects their particular social critique — linguistic, hedonistic, or identity-based. Students should demonstrate understanding of how the technique works textually.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "type": "mc",
+      "question": "Which critical theory analyzes a text by focusing solely on its internal elements — language, structure, and literary devices — without reference to the author's biography or historical context?",
+      "options": ["Reader-response criticism", "Formalism (New Criticism)", "Postcolonial criticism", "Feminist criticism"],
+      "answer": "Formalism (New Criticism)",
+      "explanation": "Formalism holds that the text is a self-sufficient object. New Critics practice 'close reading' — scrutinizing the text's internal elements — and famously argued for the 'intentional fallacy' (the author's intent is irrelevant to meaning).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "type": "mc",
+      "question": "Reader-response criticism argues that meaning in a literary text:",
+      "options": [
+        "Is fixed and singular, determined solely by the author",
+        "Does not exist until a reader engages with the text",
+        "Can only be found through historical research",
+        "Is irrelevant to the reading experience"
+      ],
+      "answer": "Does not exist until a reader engages with the text",
+      "explanation": "Reader-response theory, associated with critics like Stanley Fish and Louise Rosenblatt, holds that a text has no meaning on its own — meaning is created in the transaction between text and reader.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "type": "mc",
+      "question": "New historicism, as a critical approach, reads literary texts as:",
+      "options": [
+        "Timeless expressions of universal truth",
+        "Pure formal structures with no social content",
+        "Products and producers of the historical moment and power structures in which they were created",
+        "Personal expressions of the author's emotions only"
+      ],
+      "answer": "Products and producers of the historical moment and power structures in which they were created",
+      "explanation": "New historicism insists that literature both reflects and shapes historical reality. Critics examine the political and social forces at work in and around a text, reading literature alongside non-literary documents of the same era.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "type": "mc",
+      "question": "Feminist literary criticism primarily asks:",
+      "options": [
+        "What is the text's rhyme scheme?",
+        "How are women represented, and how does the text reinforce or challenge gender roles and power structures?",
+        "What was the author's childhood like?",
+        "What is the economic background of the characters?"
+      ],
+      "answer": "How are women represented, and how does the text reinforce or challenge gender roles and power structures?",
+      "explanation": "Feminist criticism examines the construction of gender in literary texts — analyzing how women are portrayed, whose voices are privileged, and how literature reflects or resists patriarchal ideologies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "type": "mc",
+      "question": "Postcolonial criticism is most concerned with:",
+      "options": [
+        "The formal structure of epic poetry",
+        "How colonialism and its legacy affect literary representation, identity, and power",
+        "The psychology of individual characters",
+        "The use of magical elements in fiction"
+      ],
+      "answer": "How colonialism and its legacy affect literary representation, identity, and power",
+      "explanation": "Postcolonial theory (Fanon, Said, Spivak, Bhabha) examines how colonizing cultures represent colonized peoples, how colonized writers reclaim voice, and how the legacy of empire shapes identity and narrative.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "type": "mc",
+      "question": "Walt Whitman's 'Song of Myself' is an example of free verse, which means it:",
+      "options": [
+        "Follows a strict ABAB rhyme scheme",
+        "Contains exactly 14 lines",
+        "Uses no fixed meter or end rhyme, relying instead on anaphora and natural rhythm",
+        "Is written entirely in iambic pentameter"
+      ],
+      "answer": "Uses no fixed meter or end rhyme, relying instead on anaphora and natural rhythm",
+      "explanation": "Free verse abandons conventional metrical patterns and rhyme. Whitman's signature technique was anaphora (repetition of phrases at the start of lines) and long, flowing lines that mimicked natural speech and democratic inclusivity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "type": "mc",
+      "question": "The Beat Generation poets of the 1950s were primarily responding to:",
+      "options": [
+        "The trauma of World War I",
+        "Post-WWII suburban conformity, consumerism, and Cold War anxiety",
+        "The end of the Civil War and Reconstruction",
+        "The Romantic movement in British poetry"
+      ],
+      "answer": "Post-WWII suburban conformity, consumerism, and Cold War anxiety",
+      "explanation": "Beat writers like Ginsberg, Kerouac, and Burroughs rebelled against the conformist culture of 1950s America — the pressure to conform to suburban domesticity and anticommunist orthodoxy — through spontaneous, experimental writing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "type": "mc",
+      "question": "Confessional poetry is best characterized by:",
+      "options": [
+        "Impersonal observation of nature",
+        "Highly personal subject matter including mental illness, trauma, and domestic life",
+        "Epic narratives of mythological heroes",
+        "Satirical attacks on political figures"
+      ],
+      "answer": "Highly personal subject matter including mental illness, trauma, and domestic life",
+      "explanation": "Confessional poets (Plath, Sexton, Lowell) broke taboos by writing directly about personal suffering and private life — their work blurred the line between the speaker and the biographical poet.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "type": "mc",
+      "question": "Anaphora, a technique frequently used by Whitman, is defined as:",
+      "options": [
+        "Comparing two unlike things using 'like' or 'as'",
+        "The repetition of a word or phrase at the beginning of successive lines or clauses",
+        "Giving human qualities to non-human things",
+        "A reference to a well-known person, place, or event"
+      ],
+      "answer": "The repetition of a word or phrase at the beginning of successive lines or clauses",
+      "explanation": "Anaphora creates rhythm, emphasis, and a sense of accumulation. Whitman's 'I celebrate myself, and sing myself' and Martin Luther King's 'I have a dream' are famous examples.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "type": "mc",
+      "question": "Spoken word poetry, which emerged from the Beat tradition, is primarily distinguished by its:",
+      "options": [
+        "Strict adherence to classical meter",
+        "Performance element — the poem is designed to be heard and experienced live",
+        "Focus on nature imagery",
+        "Use of formal diction and elevated language"
+      ],
+      "answer": "Performance element — the poem is designed to be heard and experienced live",
+      "explanation": "Spoken word poetry prioritizes performance — rhythm, repetition, vocal dynamics, and audience engagement — over the visual experience of words on a page. It descends from the Beat poetry readings of the 1950s.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "type": "mc",
+      "question": "The American Dream, as explored in novels like The Great Gatsby, most commonly refers to:",
+      "options": [
+        "The belief that anyone, regardless of origin, can achieve success and prosperity through determination",
+        "The geographic westward expansion of the United States",
+        "The historical abolition of slavery",
+        "The ideal of isolationism in foreign policy"
+      ],
+      "answer": "The belief that anyone, regardless of origin, can achieve success and prosperity through determination",
+      "explanation": "The American Dream is the cultural promise that hard work and ambition can lead to upward mobility and success. American novels frequently interrogate whether this promise is real or illusory.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "type": "mc",
+      "question": "In The Great Gatsby, East Egg and West Egg represent:",
+      "options": [
+        "Good versus evil",
+        "Old inherited wealth versus new self-made money, and the social divide between them",
+        "Urban and rural ways of life",
+        "American and European cultures"
+      ],
+      "answer": "Old inherited wealth versus new self-made money, and the social divide between them",
+      "explanation": "East Egg represents the established aristocracy (Tom and Daisy), while West Egg represents nouveau riche outsiders like Gatsby. The geography embodies the class distinctions that define who truly belongs in America's upper class.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "type": "mc",
+      "question": "The American novel as a form frequently uses which technique to reflect on national values?",
+      "options": [
+        "Magical realism borrowed from Latin America",
+        "The protagonist's journey as a lens through which to examine and critique social structures",
+        "Strict adherence to classical Greek narrative conventions",
+        "Avoiding any reference to politics or history"
+      ],
+      "answer": "The protagonist's journey as a lens through which to examine and critique social structures",
+      "explanation": "American novels often track a protagonist's quest — for wealth, identity, freedom, or belonging — and use that journey to interrogate race, class, gender, and the gap between American ideals and reality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "type": "mc",
+      "question": "Nick Carraway serves as the narrator of The Great Gatsby. His narrative role is best described as:",
+      "options": [
+        "An omniscient narrator who knows everyone's thoughts",
+        "An unreliable first-person narrator who is both participant in and observer of events",
+        "A third-person narrator who remains completely detached",
+        "A second-person narrator who addresses the reader directly"
+      ],
+      "answer": "An unreliable first-person narrator who is both participant in and observer of events",
+      "explanation": "Nick is a first-person narrator who is simultaneously inside and outside the action. His stated reliability ('I'm one of the few honest people I have ever known') is itself ironic — readers must question his judgments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is a major anxiety about American identity that the American novel frequently explores?",
+      "options": [
+        "Whether the United States should adopt a monarchy",
+        "The tension between individual freedom and conformity to social expectations",
+        "The proper way to conduct foreign diplomacy",
+        "The correct interpretation of the Bible"
+      ],
+      "answer": "The tension between individual freedom and conformity to social expectations",
+      "explanation": "A recurring tension in American literature is between the ideal of rugged individualism and the social pressures that enforce conformity — class, race, gender, and community norms that restrict the self-made individual.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "type": "mc",
+      "question": "The primary purpose of satire in literature is to:",
+      "options": [
+        "Entertain readers with a romantic love story",
+        "Expose and critique human folly, vice, or social institutions through humor and irony",
+        "Provide an objective, factual account of historical events",
+        "Celebrate the virtues of a heroic figure"
+      ],
+      "answer": "Expose and critique human folly, vice, or social institutions through humor and irony",
+      "explanation": "Satire uses humor, irony, and exaggeration not merely to entertain but to provoke critical thought and social change — it is fundamentally corrective in intent.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "type": "mc",
+      "question": "Absurdism in literature, as seen in Vonnegut and Catch-22, presents situations that are:",
+      "options": [
+        "Perfectly rational and logically consistent",
+        "Illogical and meaningless in ways that highlight the absurdity of real-world systems",
+        "Purely fantastic with no connection to reality",
+        "Romantic and optimistic about human nature"
+      ],
+      "answer": "Illogical and meaningless in ways that highlight the absurdity of real-world systems",
+      "explanation": "Absurdism presents irrational, contradictory situations as normal — the 'Catch-22' logic (you must be crazy to fly but asking to stop is sane, so you must fly) uses absurdity to expose the insanity of bureaucracy and war.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "type": "mc",
+      "question": "In 'Harrison Bergeron,' the Handicapper General's office represents a satire of:",
+      "options": [
+        "The free market economy",
+        "Religious institutions",
+        "Totalitarian enforcement of equality that crushes excellence and freedom",
+        "The education system"
+      ],
+      "answer": "Totalitarian enforcement of equality that crushes excellence and freedom",
+      "explanation": "The Handicapper General satirizes the absurd extreme of forced equality — using physical and mental handicaps to bring everyone to the same level — as a critique of both government overreach and the fear of mediocrity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "type": "mc",
+      "question": "Dark comedy, as used by Vonnegut in Slaughterhouse-Five, treats horrific subject matter (like the Dresden firebombing) by:",
+      "options": [
+        "Depicting it with solemn, reverent seriousness",
+        "Avoiding it entirely out of respect for the dead",
+        "Finding comedy and irony in tragedy to process and critique what defies rational explanation",
+        "Arguing that the bombing was historically justified"
+      ],
+      "answer": "Finding comedy and irony in tragedy to process and critique what defies rational explanation",
+      "explanation": "Dark comedy uses humor to confront horror and suffering. Vonnegut's 'So it goes' refrain after every death is darkly comic — its repetition satirizes the dehumanizing volume of war deaths.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "type": "mc",
+      "question": "Political satire attacks its targets most effectively through which technique?",
+      "options": [
+        "Direct, straightforward accusation",
+        "Factual reporting of statistics",
+        "Irony — saying the opposite of what is meant to expose hypocrisy or folly",
+        "Extended metaphors comparing politicians to animals"
+      ],
+      "answer": "Irony — saying the opposite of what is meant to expose hypocrisy or folly",
+      "explanation": "Irony is satire's most powerful weapon. By praising what deserves criticism or describing atrocity in calm, approving tones (as Swift does in 'A Modest Proposal'), satire creates a critical gap between what is said and what is meant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "type": "mc",
+      "question": "O. Henry's short stories are famous for their:",
+      "options": [
+        "Minimalist style and ambiguous endings",
+        "Gothic darkness and Southern setting",
+        "Surprise twist endings that reframe the entire story",
+        "Stream-of-consciousness narrative technique"
+      ],
+      "answer": "Surprise twist endings that reframe the entire story",
+      "explanation": "The 'O. Henry ending' is a dramatic, unexpected reversal at the conclusion of a story. In 'The Gift of the Magi,' each protagonist sacrifices their most precious possession to buy a gift for the other — rendering each gift useless.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "type": "mc",
+      "question": "Flannery O'Connor's fiction is associated with which literary movement?",
+      "options": [
+        "Beat Generation", "Harlem Renaissance", "Southern Gothic", "Romanticism"
+      ],
+      "answer": "Southern Gothic",
+      "explanation": "O'Connor's work employs grotesque characters, moral decay, and violent epiphanies set in the American South. Her Catholic faith shapes her fiction's focus on sin, grace, and redemption through shocking moments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "type": "mc",
+      "question": "Raymond Carver's minimalist style is sometimes called 'dirty realism.' This term refers to fiction that:",
+      "options": [
+        "Contains graphic violence and explicit language",
+        "Depicts ordinary, unglamorous working-class life with spare, unadorned prose",
+        "Uses magical elements set in gritty urban environments",
+        "Focuses on the corruption of political institutions"
+      ],
+      "answer": "Depicts ordinary, unglamorous working-class life with spare, unadorned prose",
+      "explanation": "Dirty realism strips away sentimentality and ornament to present working-class characters struggling with addiction, poverty, failed relationships — in plain, precise language that lets the situation speak for itself.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "type": "mc",
+      "question": "Compression in the short story form means that short story writers must:",
+      "options": [
+        "Include as many characters as possible",
+        "Write stories that are at least 500 pages long",
+        "Make every word count — implying far more than is stated explicitly",
+        "Avoid conflict so the story can be told quickly"
+      ],
+      "answer": "Make every word count — implying far more than is stated explicitly",
+      "explanation": "The short story's brevity demands compression — the iceberg theory (Hemingway) suggests that the bulk of meaning lies beneath the surface. A short story must do in 10 pages what a novel does in 300.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "type": "mc",
+      "question": "An epiphany in a short story refers to:",
+      "options": [
+        "The opening hook of the story",
+        "A moment of sudden insight or revelation, often near the end, in which a character (or reader) understands something new",
+        "The climax of the external conflict",
+        "A flashback to the character's childhood"
+      ],
+      "answer": "A moment of sudden insight or revelation, often near the end, in which a character (or reader) understands something new",
+      "explanation": "James Joyce popularized the term 'epiphany' in fiction — a moment when a small, ordinary event triggers a flash of profound understanding. Many modern short stories build toward an epiphany rather than a dramatic climax.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "type": "mc",
+      "question": "In 'The Yellow Wallpaper,' the narrator's husband John represents:",
+      "options": [
+        "A loving and fully supportive partner",
+        "The medical and patriarchal authority that confines and dismisses women",
+        "The narrator's imaginary companion",
+        "A symbol of the industrial revolution"
+      ],
+      "answer": "The medical and patriarchal authority that confines and dismisses women",
+      "explanation": "John is both the narrator's husband and her physician. His 'rest cure' prescription — forbidding her from writing or working — is a literal and symbolic enactment of how patriarchal authority silences and confines women.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "type": "mc",
+      "question": "The 'rest cure' prescribed to the narrator in 'The Yellow Wallpaper' was a real Victorian treatment for women diagnosed with 'neurasthenia.' Its literary significance is that it:",
+      "options": [
+        "Symbolizes the healing power of medicine",
+        "Represents how medical authority was used to suppress women's intellectual and creative lives",
+        "Demonstrates that John is an incompetent doctor",
+        "Foreshadows the narrator's physical recovery"
+      ],
+      "answer": "Represents how medical authority was used to suppress women's intellectual and creative lives",
+      "explanation": "Charlotte Perkins Gilman herself was subjected to the rest cure and wrote the story in protest. The cure — total inactivity and no intellectual stimulation — drove women into the very madness it claimed to cure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "type": "mc",
+      "question": "The evolution of women's voices in American literature from the 19th to the 20th century can best be described as a movement from:",
+      "options": [
+        "Realism to magical realism",
+        "Silence and domestic confinement toward assertion, protest, and reclamation of public voice",
+        "Lyric poetry to the novel form",
+        "Regional to international subject matter"
+      ],
+      "answer": "Silence and domestic confinement toward assertion, protest, and reclamation of public voice",
+      "explanation": "19th-century women writers often published anonymously or wrote within 'acceptable' domestic subjects. The suffrage movement, then second-wave feminism, enabled women to write openly about sexuality, ambition, anger, and political life.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "type": "mc",
+      "question": "A feminist reading of a text would be most interested in which of the following?",
+      "options": [
+        "The rhyme scheme of the poem",
+        "Which characters are denied agency and why, and what the text says about gender roles",
+        "The historical accuracy of the setting",
+        "The author's use of foreshadowing"
+      ],
+      "answer": "Which characters are denied agency and why, and what the text says about gender roles",
+      "explanation": "Feminist critics focus on representations of gender — who has power, whose voice is heard, who is marginalized — and on how texts reinforce or resist patriarchal norms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "type": "mc",
+      "question": "The wallpaper in 'The Yellow Wallpaper' functions as a symbol of the narrator's mental state primarily because:",
+      "options": [
+        "It is a beautiful pattern that makes her feel happy",
+        "It reflects her growing rebellion against confinement — the woman she sees trapped within it mirrors her own imprisoned self",
+        "It represents her love of art and decoration",
+        "It is a historical artifact from Colonial America"
+      ],
+      "answer": "It reflects her growing rebellion against confinement — the woman she sees trapped within it mirrors her own imprisoned self",
+      "explanation": "The wallpaper becomes a projection of the narrator's psyche. The woman creeping behind its bars represents the narrator's own desire to escape, and tearing the paper down is simultaneously liberation and breakdown.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "type": "mc",
+      "question": "Langston Hughes and the Harlem Renaissance writers used literature primarily to:",
+      "options": [
+        "Celebrate the history of European colonialism",
+        "Assert Black dignity, beauty, and cultural identity against white supremacist narratives",
+        "Argue for a return to African traditional practices",
+        "Promote integration through assimilation to white American culture"
+      ],
+      "answer": "Assert Black dignity, beauty, and cultural identity against white supremacist narratives",
+      "explanation": "The Harlem Renaissance was a cultural and political project: affirming Black excellence, reclaiming African heritage, and challenging racist stereotypes through art, literature, and music.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "type": "mc",
+      "question": "In Hughes's poem 'I, Too,' the speaker's declaration 'I, too, am America' is primarily a claim about:",
+      "options": [
+        "Geographic citizenship",
+        "The speaker's legal right to vote",
+        "The full humanity and belonging of Black Americans who have been excluded from the national narrative",
+        "The speaker's desire to leave America"
+      ],
+      "answer": "The full humanity and belonging of Black Americans who have been excluded from the national narrative",
+      "explanation": "Hughes's poem responds to Whitman's 'I Hear America Singing' — asserting that the 'darker brother' who is sent to eat in the kitchen is also America, and that recognition is coming.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "type": "mc",
+      "question": "Native American literature in the United States frequently engages with which central theme?",
+      "options": [
+        "The celebration of Western frontier expansion",
+        "The tension between indigenous identity, land, and the legacy of colonization and forced assimilation",
+        "The experience of immigration from Europe",
+        "The achievements of the Industrial Revolution"
+      ],
+      "answer": "The tension between indigenous identity, land, and the legacy of colonization and forced assimilation",
+      "explanation": "Native American writers like Sherman Alexie and Leslie Marmon Silko grapple with the destruction of indigenous culture, the trauma of boarding schools, reservation life, and the struggle to maintain identity against colonial erasure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "type": "mc",
+      "question": "Latinx literature in the United States often explores the experience of:",
+      "options": [
+        "Life in the antebellum South",
+        "Navigating identity between two cultures — the culture of origin and American mainstream culture",
+        "Urban factory life during the Industrial Revolution",
+        "Space exploration and scientific discovery"
+      ],
+      "answer": "Navigating identity between two cultures — the culture of origin and American mainstream culture",
+      "explanation": "Latinx literature frequently explores the hyphenated identity — Mexican-American, Cuban-American, Puerto Rican — and the tension, creativity, and loss involved in living between two languages and cultural worlds.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "type": "mc",
+      "question": "Applying a postcolonial lens to African American literature, one would focus on:",
+      "options": [
+        "The formal poetry techniques used by Black writers",
+        "How slavery and its legacy function as a form of internal colonialism, shaping Black identity and literary expression",
+        "The geographical locations where Black authors lived",
+        "The sales figures and publishing history of Black authors"
+      ],
+      "answer": "How slavery and its legacy function as a form of internal colonialism, shaping Black identity and literary expression",
+      "explanation": "Postcolonial theory applied to African American literature examines how the structures of racial capitalism and white supremacy — rooted in the colonial project — continue to shape Black experience and literary representation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is a defining convention of dystopian fiction?",
+      "options": [
+        "A perfect society where all citizens are happy and free",
+        "A repressive totalitarian state that controls citizens through surveillance, propaganda, or force",
+        "A medieval setting with kings and knights",
+        "A love story between characters from different social classes"
+      ],
+      "answer": "A repressive totalitarian state that controls citizens through surveillance, propaganda, or force",
+      "explanation": "Dystopias depict societies that have gone terribly wrong — typically through authoritarian control, loss of individual freedom, enforced conformity, and the suppression of truth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "type": "mc",
+      "question": "In Orwell's 1984, the concept of 'doublethink' means:",
+      "options": [
+        "The ability to think twice before speaking",
+        "The capacity to hold two contradictory beliefs simultaneously and accept both as true",
+        "A method of rapid information processing",
+        "A form of telepathy developed by the Party"
+      ],
+      "answer": "The capacity to hold two contradictory beliefs simultaneously and accept both as true",
+      "explanation": "Doublethink is a mechanism of totalitarian control: citizens are conditioned to believe contradictions (e.g., 'War is Peace, Freedom is Slavery') without registering the contradiction. It makes critical thought impossible.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "type": "mc",
+      "question": "Brave New World by Aldous Huxley differs from 1984 in its vision of control because in Huxley's world, citizens are controlled through:",
+      "options": [
+        "Fear, torture, and military force",
+        "Pleasure, conditioning, and the drug soma — making them willingly embrace their own enslavement",
+        "Religion and the threat of eternal damnation",
+        "Geographic isolation from one another"
+      ],
+      "answer": "Pleasure, conditioning, and the drug soma — making them willingly embrace their own enslavement",
+      "explanation": "Huxley's dystopia is controlled by pleasure rather than pain. Citizens are kept content and conformist through conditioning from birth, promiscuity, consumerism, and soma — they are too comfortable to rebel.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "type": "mc",
+      "question": "The Handmaid's Tale by Margaret Atwood is particularly relevant to feminist literary criticism because it:",
+      "options": [
+        "Is set in a world where women have complete political power",
+        "Depicts a theocratic patriarchy that enslaves women's bodies for reproduction and strips them of all rights",
+        "Is written from a male first-person narrator's perspective",
+        "Celebrates religious fundamentalism as a solution to social problems"
+      ],
+      "answer": "Depicts a theocratic patriarchy that enslaves women's bodies for reproduction and strips them of all rights",
+      "explanation": "Atwood's Gilead extrapolates real patriarchal structures to their extreme — using religious ideology to justify controlling women's bodies and erasing their identities — making it a central feminist dystopian text.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "type": "mc",
+      "question": "A key function of the dystopian protagonist is to:",
+      "options": [
+        "Actively support and strengthen the regime",
+        "Act as a reader surrogate who questions, explores, and ultimately confronts the system",
+        "Remain passive and accepting of society's rules",
+        "Provide comic relief within the oppressive world"
+      ],
+      "answer": "Act as a reader surrogate who questions, explores, and ultimately confronts the system",
+      "explanation": "The dystopian hero guides readers into the world by questioning what others accept. Their rebellion — however doomed — gives the reader a critical vantage point from which to see the horror of the system.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "type": "mc",
+      "question": "Magical realism is primarily characterized by:",
+      "options": [
+        "Fantastical events presented in a separate, clearly fictional realm",
+        "Strictly realistic depictions of everyday life with no fantastical elements",
+        "Supernatural or magical events integrated seamlessly into ordinary reality and treated as unremarkable",
+        "Science fiction technology used to explain magical occurrences"
+      ],
+      "answer": "Supernatural or magical events integrated seamlessly into ordinary reality and treated as unremarkable",
+      "explanation": "In magical realism, the magical is not presented as strange or dreamlike — it coexists with the mundane as a matter of course. This matter-of-fact presentation distinguishes magical realism from fantasy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "type": "mc",
+      "question": "Gabriel García Márquez's magical realism is rooted in the traditions of:",
+      "options": [
+        "British Romanticism and the Gothic novel",
+        "Latin American oral storytelling, folklore, and the political reality of dictatorship",
+        "French existentialism and absurdism",
+        "Japanese haiku and Zen Buddhist philosophy"
+      ],
+      "answer": "Latin American oral storytelling, folklore, and the political reality of dictatorship",
+      "explanation": "Márquez drew on Caribbean and Colombian oral traditions, indigenous myth, and the surreal political violence of Latin American dictatorships. The fantastical in his work often encodes real historical and political content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "type": "mc",
+      "question": "In 'A Very Old Man with Enormous Wings,' the villagers' treatment of the angel can be interpreted as a critique of:",
+      "options": [
+        "The dangers of air travel",
+        "Human indifference to the miraculous, and the way religion commodifies the sacred",
+        "The isolation of rural life",
+        "The dangers of immigration"
+      ],
+      "answer": "Human indifference to the miraculous, and the way religion commodifies the sacred",
+      "explanation": "The villagers exploit the angel as a circus attraction rather than reverencing him. Márquez satirizes the Church's authority (the priest dismisses the angel) and human greed and curiosity that turns wonder into spectacle.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "type": "mc",
+      "question": "Isabel Allende's magical realism in The House of the Spirits uses fantastical elements primarily to:",
+      "options": [
+        "Provide entertainment through exciting supernatural adventures",
+        "Chronicle the multigenerational saga of a family and the political trauma of Chilean history through mythic narrative",
+        "Argue against belief in magic and superstition",
+        "Create a purely imaginary world with no connection to real history"
+      ],
+      "answer": "Chronicle the multigenerational saga of a family and the political trauma of Chilean history through mythic narrative",
+      "explanation": "Allende uses magical realism to narrate Chile's history — including the 1973 coup — through a family saga where the magical elements carry emotional and political truth that realist narrative alone could not convey.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "type": "mc",
+      "question": "What makes magical realism different from traditional fantasy fiction?",
+      "options": [
+        "Magical realism has no magical elements",
+        "In magical realism, magic occurs in a realistic setting and is treated as ordinary by the characters, rather than as exceptional",
+        "Fantasy is more politically engaged than magical realism",
+        "Magical realism always has a happy ending"
+      ],
+      "answer": "In magical realism, magic occurs in a realistic setting and is treated as ordinary by the characters, rather than as exceptional",
+      "explanation": "Fantasy creates an entirely separate world with its own rules. Magical realism is set in the real world, where the impossible occurs without surprise — characters accept it as part of daily life, which is the genre's defining strangeness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "type": "mc",
+      "question": "A memoir is distinguished from a novel primarily because:",
+      "options": [
+        "Memoir uses third-person narration",
+        "Memoir is based on the author's own lived experience and is a work of nonfiction",
+        "Memoir never uses literary techniques like dialogue or metaphor",
+        "Memoir must cover the author's entire life"
+      ],
+      "answer": "Memoir is based on the author's own lived experience and is a work of nonfiction",
+      "explanation": "Memoir draws from real experience — the author is both narrator and subject. While memoir uses literary craft, it is grounded in actual events, unlike the invented world of a novel.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "type": "mc",
+      "question": "Maya Angelou's writing in I Know Why the Caged Bird Sings is notable for its:",
+      "options": [
+        "Minimalist, impersonal style",
+        "Rich, lyrical prose that celebrates Black language, culture, and resilience in the face of racism and trauma",
+        "Strict adherence to chronological plot structure",
+        "Avoidance of first-person narration"
+      ],
+      "answer": "Rich, lyrical prose that celebrates Black language, culture, and resilience in the face of racism and trauma",
+      "explanation": "Angelou's memoir is celebrated for its voice — musical, precise, and deeply personal — and its unflinching portrayal of childhood trauma alongside the beauty and strength of Black community and culture.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "type": "mc",
+      "question": "The Glass Castle by Jeannette Walls and I Know Why the Caged Bird Sings both use memoir to explore:",
+      "options": [
+        "Political careers and public achievement",
+        "Childhood trauma, survival, and the complex relationship between memory and identity",
+        "Scientific discoveries and academic success",
+        "Travel narratives across foreign countries"
+      ],
+      "answer": "Childhood trauma, survival, and the complex relationship between memory and identity",
+      "explanation": "Both memoirs examine difficult childhoods — poverty, neglect, abuse, racism — and how their authors processed and survived those experiences. Both use retrospective adult narration to understand a younger self.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "type": "mc",
+      "question": "One ethical question unique to memoir as a literary form is:",
+      "options": [
+        "Whether the author used correct MLA citations",
+        "Whether the author's account is entirely accurate and whether real people portrayed in the memoir were treated fairly",
+        "Whether the memoir uses enough figurative language",
+        "Whether the memoir has enough chapters"
+      ],
+      "answer": "Whether the author's account is entirely accurate and whether real people portrayed in the memoir were treated fairly",
+      "explanation": "Memoir raises ethical questions about truth, memory, and consent. Memory is fallible; other people in the memoir may have different recollections; private individuals may not wish to be portrayed publicly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "type": "mc",
+      "question": "In memoir, retrospective narration means that the narrator is:",
+      "options": [
+        "Telling the story as it happens in real time",
+        "Looking back on past events from the vantage point of the present, often adding adult understanding to childhood experiences",
+        "Describing events that have not yet happened",
+        "Reporting events from another person's perspective"
+      ],
+      "answer": "Looking back on past events from the vantage point of the present, often adding adult understanding to childhood experiences",
+      "explanation": "Retrospective narration creates a double consciousness in memoir — the experiencing 'I' (the child in the past) and the narrating 'I' (the adult reflecting). The gap between these two selves is often where the memoir's meaning lives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "type": "mc",
+      "question": "In Aristotle's definition of tragedy, anagnorisis refers to:",
+      "options": [
+        "The tragic hero's fatal flaw",
+        "The moment of recognition or discovery in which the hero understands the truth of their situation",
+        "The chorus's final song",
+        "The physical setting of the tragedy"
+      ],
+      "answer": "The moment of recognition or discovery in which the hero understands the truth of their situation",
+      "explanation": "Anagnorisis (recognition) is the turning point at which the tragic hero realizes the truth — often their own role in their destruction. It typically accompanies peripeteia (reversal of fortune).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "type": "mc",
+      "question": "Arthur Miller argued in 'Tragedy and the Common Man' that modern tragedy requires a protagonist who:",
+      "options": [
+        "Is of noble birth and royal blood",
+        "Is willing to lay down their life to preserve their personal dignity against forces that deny it",
+        "Speaks in verse throughout the play",
+        "Dies in a battle rather than at home"
+      ],
+      "answer": "Is willing to lay down their life to preserve their personal dignity against forces that deny it",
+      "explanation": "Miller democratized tragedy: he argued that the ordinary person's struggle against systems that deny their dignity and worth is the authentic subject of modern tragedy — not nobility of birth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "type": "mc",
+      "question": "Absurdist theater, as in Beckett's Waiting for Godot, is formally distinctive because:",
+      "options": [
+        "It follows classical three-act structure with clear resolution",
+        "It features no dialogue, only physical action",
+        "Its plot is circular and repetitive, and characters wait endlessly for meaning that never arrives",
+        "It is always performed without an audience"
+      ],
+      "answer": "Its plot is circular and repetitive, and characters wait endlessly for meaning that never arrives",
+      "explanation": "In Godot, Vladimir and Estragon wait for someone who never comes. Nothing happens; then it happens again. The repetitive, circular structure formally enacts the absurdist philosophy that life lacks inherent meaning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "type": "mc",
+      "question": "In Death of a Salesman, Willy Loman's tragic flaw is best described as:",
+      "options": [
+        "His extreme generosity",
+        "His loyalty to his family",
+        "His self-deception and refusal to confront the gap between his dreams and reality",
+        "His excessive ambition for political power"
+      ],
+      "answer": "His self-deception and refusal to confront the gap between his dreams and reality",
+      "explanation": "Willy builds his identity on a false belief in success and popularity. His inability to reconcile the American Dream's promises with his actual life — and his refusal to accept failure — drives the play's tragedy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "type": "mc",
+      "question": "Classical Greek tragedy differed from modern tragedy in that it typically featured:",
+      "options": [
+        "Ordinary middle-class protagonists with relatable domestic problems",
+        "Heroes of noble birth whose fall affected the entire community, accompanied by a chorus",
+        "Happy endings that resolved all conflicts",
+        "No supernatural or divine elements"
+      ],
+      "answer": "Heroes of noble birth whose fall affected the entire community, accompanied by a chorus",
+      "explanation": "Greek tragedy (Sophocles, Aeschylus) featured royal or heroic protagonists whose downfall had cosmic and communal consequences. The chorus provided commentary and represented the community's perspective.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "type": "mc",
+      "question": "Literary journalism, associated with the New Journalism movement of the 1960s–70s, is distinguished from standard reporting by its use of:",
+      "options": [
+        "Exclusively official sources and press releases",
+        "Narrative techniques from fiction — scene-setting, immersive description, and a distinctive authorial voice",
+        "Strictly objective, third-person, impersonal prose",
+        "Only statistical data and expert interviews"
+      ],
+      "answer": "Narrative techniques from fiction — scene-setting, immersive description, and a distinctive authorial voice",
+      "explanation": "New Journalists like Wolfe, Didion, and Hunter S. Thompson brought novelistic craft to reporting — immersive scenes, vivid characters, interior monologue, and a distinctive 'I' — while reporting on real events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "type": "mc",
+      "question": "Joan Didion's essay style is particularly known for:",
+      "options": [
+        "Objective, impersonal reporting free of personal opinion",
+        "Dense academic prose filled with theoretical jargon",
+        "Cool, precise observation that exposes the gap between cultural myths and lived reality",
+        "Humorous satire of political figures"
+      ],
+      "answer": "Cool, precise observation that exposes the gap between cultural myths and lived reality",
+      "explanation": "Didion uses her sharp, controlled prose to dissect the disintegration of the 1960s counterculture and American social myths — her detached, precise style gives her cultural criticism its particular authority and dread.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "type": "mc",
+      "question": "The 'telling detail' in creative nonfiction is a technique that refers to:",
+      "options": [
+        "A lengthy list of facts about a subject",
+        "A single specific, concrete detail that illuminates character, place, or theme more powerfully than a general description",
+        "A direct quote from an expert source",
+        "A summary of the article's main argument"
+      ],
+      "answer": "A single specific, concrete detail that illuminates character, place, or theme more powerfully than a general description",
+      "explanation": "Literary journalists and creative nonfiction writers select details that do double work — the right specific detail reveals not just what something looks like but what it means.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "type": "mc",
+      "question": "Tom Wolfe's New Journalism technique of saturation reporting meant that he:",
+      "options": [
+        "Published more articles than any other journalist",
+        "Immersed himself so deeply in a subject that he could reconstruct scenes, dialogue, and interior states with novelistic vividness",
+        "Wrote only about cultural elites",
+        "Used only anonymous sources"
+      ],
+      "answer": "Immersed himself so deeply in a subject that he could reconstruct scenes, dialogue, and interior states with novelistic vividness",
+      "explanation": "Wolfe spent extended time with his subjects — observing, listening, and documenting — until he could reconstruct their world with the detail and immediacy of a novel, while remaining factually accurate.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "type": "mc",
+      "question": "Creative nonfiction differs from traditional academic writing primarily in its:",
+      "options": [
+        "Refusal to make any argumentative claims",
+        "Use of narrative, voice, scene, and literary craft to engage readers while remaining factually true",
+        "Exclusive use of footnotes and bibliographies",
+        "Avoidance of first-person perspective"
+      ],
+      "answer": "Use of narrative, voice, scene, and literary craft to engage readers while remaining factually true",
+      "explanation": "Creative nonfiction deploys the tools of literary fiction — compelling narrative, distinctive voice, scene-setting, imagery — in service of factual reporting. It aims to be both true and beautifully written.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "type": "mc",
+      "question": "Montaigne, the inventor of the essay form, conceived the essay as:",
+      "options": [
+        "A formal, impersonal academic argument",
+        "An 'attempt' — a form of exploratory, personal thinking that does not pretend to reach final conclusions",
+        "A political manifesto calling for social change",
+        "A scientific method for testing hypotheses"
+      ],
+      "answer": "An 'attempt' — a form of exploratory, personal thinking that does not pretend to reach final conclusions",
+      "explanation": "The word 'essay' comes from the French 'essai,' meaning attempt or try. Montaigne's essays were personal explorations of ideas — honest, curious, and comfortable with uncertainty rather than authoritative.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "type": "mc",
+      "question": "James Baldwin's essays are considered masterpieces because they:",
+      "options": [
+        "Present statistical analyses of racial inequality",
+        "Use purely objective, impersonal argument",
+        "Fuse personal experience with searching social and moral argument in prose of extraordinary clarity and force",
+        "Avoid discussing race to appeal to a broader audience"
+      ],
+      "answer": "Fuse personal experience with searching social and moral argument in prose of extraordinary clarity and force",
+      "explanation": "Baldwin uses his experience as a Black American man as the foundation for devastating moral analysis of white American society. The personal and the political are inseparable in his essays.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "type": "mc",
+      "question": "The personal essay differs from the argumentative essay primarily in that the personal essay:",
+      "options": [
+        "Never makes any argument or claim",
+        "Uses the writer's self and experience as both subject and instrument of inquiry, exploring rather than proving",
+        "Is always shorter than an argumentative essay",
+        "Requires more sources than an argumentative essay"
+      ],
+      "answer": "Uses the writer's self and experience as both subject and instrument of inquiry, exploring rather than proving",
+      "explanation": "The personal essay is exploratory and associative — it thinks through an idea rather than arguing a predetermined position. The 'I' is both narrator and analytical lens.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "type": "mc",
+      "question": "An extended metaphor in an essay serves to:",
+      "options": [
+        "Distract the reader with irrelevant comparisons",
+        "Provide a sustained analogy that organizes and illuminates the essay's central idea across multiple paragraphs",
+        "Replace the thesis statement",
+        "Add word count without adding content"
+      ],
+      "answer": "Provide a sustained analogy that organizes and illuminates the essay's central idea across multiple paragraphs",
+      "explanation": "Extended metaphors carry a single comparison throughout an essay, giving it structural coherence and emotional resonance. Baldwin uses extended metaphors of fire, churches, and inheritance to explore race in America.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "type": "mc",
+      "question": "In the personal-argumentative essay tradition, moving from the personal to the universal means:",
+      "options": [
+        "Starting with private experience and generalizing outward to broader social, ethical, or political claims",
+        "Beginning with global statistics and narrowing down to a personal anecdote",
+        "Avoiding personal experience entirely to achieve universality",
+        "Writing in second person to address all possible readers"
+      ],
+      "answer": "Starting with private experience and generalizing outward to broader social, ethical, or political claims",
+      "explanation": "Baldwin's method — and the tradition he exemplifies — uses the particular (a specific memory, encounter, or observation) as a gateway to the universal. The personal authenticates and humanizes the larger argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "type": "mc",
+      "question": "An annotated bibliography, required as part of a research paper process, is a Works Cited list in which each entry:",
+      "options": [
+        "Includes only the title and author, with no additional information",
+        "Is accompanied by a brief summary and evaluation of the source's relevance and credibility",
+        "Is formatted in APA rather than MLA",
+        "Only includes primary literary texts"
+      ],
+      "answer": "Is accompanied by a brief summary and evaluation of the source's relevance and credibility",
+      "explanation": "An annotated bibliography adds a short annotation to each citation — typically summarizing the source's argument and assessing its usefulness for the paper. It demonstrates engagement with sources before writing begins.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "type": "mc",
+      "question": "In a literary research paper, the thesis must be:",
+      "options": [
+        "A statement of fact that everyone already agrees with",
+        "A summary of the plot of the literary work",
+        "An arguable, specific critical claim about a literary text that the paper will defend with evidence",
+        "A question the paper will attempt to answer"
+      ],
+      "answer": "An arguable, specific critical claim about a literary text that the paper will defend with evidence",
+      "explanation": "A literary research paper thesis is an interpretive claim — it takes a debatable position on what a text means, how it works, or what it does — and signals the argument the paper will make.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "type": "mc",
+      "question": "When you integrate a scholarly secondary source into your literary research paper, your primary goal is to:",
+      "options": [
+        "Replace your own analysis with the critic's argument",
+        "Fill space in the paper with quotations",
+        "Enter a conversation with existing criticism — agreeing, disagreeing, or building on scholars' arguments",
+        "Prove that you read the source"
+      ],
+      "answer": "Enter a conversation with existing criticism — agreeing, disagreeing, or building on scholars' arguments",
+      "explanation": "Academic writing is a conversation. Secondary sources provide the critical context your paper responds to — you synthesize, extend, or challenge existing scholarship rather than simply reporting it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "type": "mc",
+      "question": "Applying a critical theory to a research paper (e.g., feminist criticism to The Handmaid's Tale) means that you:",
+      "options": [
+        "Simply describe what happens in the novel",
+        "Use the theory as an interpretive framework that guides your questions and shapes your argument about the text",
+        "Argue that only one interpretation of the text is correct",
+        "Replace close reading with biographical information about the author"
+      ],
+      "answer": "Use the theory as an interpretive framework that guides your questions and shapes your argument about the text",
+      "explanation": "Critical theories are lenses — they direct attention to particular aspects of a text and generate particular kinds of questions. Applying a theory explicitly means naming it, explaining it, and showing how it illuminates the text.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "type": "mc",
+      "question": "A properly formatted MLA Works Cited page appears:",
+      "options": [
+        "At the beginning of the paper, before the introduction",
+        "Embedded within the body of the paper after each quote",
+        "On a new page at the end of the paper, with entries in alphabetical order by author's last name",
+        "In a footnote at the bottom of each page"
+      ],
+      "answer": "On a new page at the end of the paper, with entries in alphabetical order by author's last name",
+      "explanation": "MLA Works Cited pages appear at the end of the document on a separate page. Entries are listed alphabetically by the author's last name (or title if no author). Each entry uses hanging indent format.",
+      "points": 1
+    }
+  ]
+}

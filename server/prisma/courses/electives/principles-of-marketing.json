@@ -1,0 +1,1725 @@
+{
+  "slug": "principles-of-marketing",
+  "name": "Principles of Marketing",
+  "nameZh": "市场营销原理",
+  "credits": 0.5,
+  "department": "Electives",
+  "type": "Elective",
+  "description": "A systematic study of marketing principles — strategic marketing planning, consumer insights, brand management, integrated marketing communications, pricing strategy, and global marketing.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Marketing Strategy & Planning",
+      "titleZh": "市场营销战略与规划",
+      "objectives": "Define marketing strategy; articulate a company mission; conduct a SWOT analysis; establish SMART marketing objectives and KPIs; map the strategic planning process.",
+      "readingUrl": "https://academy.hubspot.com/courses/marketing-hub-overview",
+      "readingNote": "HubSpot Academy — Marketing Hub Overview (strategy fundamentals)",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/enterprise-value/ev-tutorial/v/marketing-overview",
+      "videoNote": "Khan Academy — Marketing Overview",
+      "video2Url": "https://www.youtube.com/watch?v=pjCMW2pJJcU",
+      "video2Note": "Crash Course Business: Marketing #1 — What is Marketing?",
+      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "practiceNote": "HubSpot Academy — Marketing Strategy Course",
+      "assignment": "Draft a one-page marketing plan for a hypothetical product: write a mission statement, complete a SWOT table, set three SMART marketing objectives, and identify two KPIs for each objective.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 2,
+      "title": "Consumer Insights & Research",
+      "titleZh": "消费者洞察与市场调研",
+      "objectives": "Distinguish qualitative and quantitative research methods; design a basic consumer survey; conduct and analyze a focus group scenario; interpret market research data to generate actionable insights.",
+      "readingUrl": "https://academy.hubspot.com/courses/understanding-buyer-personas",
+      "readingNote": "HubSpot Academy — Understanding Buyer Personas",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/enterprise-value/ev-tutorial/v/marketing-research",
+      "videoNote": "Khan Academy — Market Research Basics",
+      "video2Url": "https://www.youtube.com/watch?v=zFMgpxG-chM",
+      "video2Note": "Crash Course Business: Marketing #2 — Market Research",
+      "practiceUrl": "https://academy.hubspot.com/courses/inbound-marketing",
+      "practiceNote": "HubSpot Academy — Inbound Marketing (consumer journey section)",
+      "assignment": "Design a 10-question consumer survey for a product of your choice. Write three open-ended questions suitable for a focus group and explain what insight each question is intended to reveal.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 3,
+      "title": "Segmentation, Targeting & Positioning (STP)",
+      "titleZh": "市场细分、目标选择与定位（STP）",
+      "objectives": "Apply demographic, psychographic, behavioral, and geographic segmentation; evaluate targeting strategies; construct detailed buyer personas; draw and interpret perceptual maps; recommend repositioning strategies.",
+      "readingUrl": "https://academy.hubspot.com/courses/understanding-buyer-personas",
+      "readingNote": "HubSpot Academy — Buyer Personas & Segmentation",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/enterprise-value/ev-tutorial/v/target-markets",
+      "videoNote": "Khan Academy — Target Markets",
+      "video2Url": "https://www.youtube.com/watch?v=dkL5VXdHNhw",
+      "video2Note": "Crash Course Business: Marketing #3 — Segmentation & Targeting",
+      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "practiceNote": "HubSpot Academy — STP Framework Activities",
+      "assignment": "Choose a brand and identify three distinct market segments it could target. Create a detailed buyer persona for each segment and draw a perceptual map placing the brand against four competitors on two attributes you select.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 4,
+      "title": "Brand Management",
+      "titleZh": "品牌管理",
+      "objectives": "Define brand equity and its components; analyze brand architecture models; evaluate the risks and benefits of brand extensions; develop strategies for managing a brand across its lifecycle.",
+      "readingUrl": "https://academy.hubspot.com/courses/brand-storytelling",
+      "readingNote": "HubSpot Academy — Brand Storytelling",
+      "videoUrl": "https://www.youtube.com/watch?v=KlsO4z_l8Lc",
+      "videoNote": "Philip Kotler — Brand Equity and Management",
+      "video2Url": "https://www.youtube.com/watch?v=ue1oaGOXqvU",
+      "video2Note": "Crash Course Business: Marketing #4 — Branding",
+      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "practiceNote": "HubSpot Academy — Brand Strategy Module",
+      "assignment": "Select a global brand and assess its brand equity using Keller's Customer-Based Brand Equity (CBBE) model. Propose one brand extension and justify it with market reasoning. Identify one past brand extension that failed and explain why.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 5,
+      "title": "Product Strategy",
+      "titleZh": "产品战略",
+      "objectives": "Outline the new product development process; classify products within a portfolio using the BCG matrix; apply innovation frameworks; manage products through life cycle stages; evaluate product-line decisions.",
+      "readingUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "readingNote": "HubSpot Academy — Product Marketing Strategy",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/enterprise-value/ev-tutorial/v/product-development",
+      "videoNote": "Khan Academy — New Product Development",
+      "video2Url": "https://www.youtube.com/watch?v=9BfnMoGPbec",
+      "video2Note": "Crash Course Business: Marketing #5 — Products & Services",
+      "practiceUrl": "https://academy.hubspot.com/courses/product-marketing",
+      "practiceNote": "HubSpot Academy — Product Marketing Fundamentals",
+      "assignment": "Plot four real products from a single company on a BCG matrix, justifying each placement with market share and growth data. Then outline the NPD process stages for one hypothetical new product the company could launch.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 6,
+      "title": "Pricing Strategy (Advanced)",
+      "titleZh": "高级定价策略",
+      "objectives": "Contrast cost-based, competition-based, and value-based pricing; apply dynamic pricing and price discrimination models; explain psychological pricing tactics; calculate price elasticity of demand.",
+      "readingUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "readingNote": "HubSpot Academy — Pricing Strategy Section",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-imperfect-competition/ap-price-discrimination/v/price-discrimination",
+      "videoNote": "Khan Academy — Price Discrimination",
+      "video2Url": "https://www.youtube.com/watch?v=1JZl3OyK01k",
+      "video2Note": "Crash Course Business: Marketing #6 — Pricing Strategies",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-consumer-producer-surplus/ap-price-elasticity/v/price-elasticity-of-demand",
+      "practiceNote": "Khan Academy — Price Elasticity of Demand Practice",
+      "assignment": "Research the pricing strategy of one subscription-based company (e.g., Netflix, Spotify). Identify which pricing model(s) they use. Calculate a hypothetical price elasticity scenario and recommend whether they should raise or lower prices based on your calculation.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 7,
+      "title": "Distribution & Channel Strategy",
+      "titleZh": "分销与渠道战略",
+      "objectives": "Design a distribution channel; compare direct vs. indirect channels; evaluate omnichannel and multichannel strategies; explain logistics and supply chain roles in delivering customer value.",
+      "readingUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "readingNote": "HubSpot Academy — Distribution & Sales Channel Strategy",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/enterprise-value/ev-tutorial/v/distribution-channels",
+      "videoNote": "Khan Academy — Distribution Channels Overview",
+      "video2Url": "https://www.youtube.com/watch?v=X8BoMhSqWlA",
+      "video2Note": "Crash Course Business: Marketing #7 — Distribution & Place",
+      "practiceUrl": "https://academy.hubspot.com/courses/sales-enablement",
+      "practiceNote": "HubSpot Academy — Sales & Channel Enablement",
+      "assignment": "Map the distribution channel for two contrasting products: one luxury good and one FMCG item. Diagram each channel (manufacturer → intermediaries → consumer). Evaluate whether an omnichannel strategy would benefit each product and justify your recommendation.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 8,
+      "title": "Integrated Marketing Communications (IMC)",
+      "titleZh": "整合营销传播（IMC）",
+      "objectives": "Define IMC and explain why consistent messaging matters; coordinate advertising, PR, digital, and events into a unified campaign; create a basic IMC brief; measure communication effectiveness.",
+      "readingUrl": "https://academy.hubspot.com/courses/digital-marketing",
+      "readingNote": "HubSpot Academy — Digital Marketing Certification (IMC section)",
+      "videoUrl": "https://www.youtube.com/watch?v=k8NbQRRkips",
+      "videoNote": "Philip Kotler — Integrated Marketing Communications",
+      "video2Url": "https://www.youtube.com/watch?v=cPAi9pHVjqM",
+      "video2Note": "Crash Course Business: Marketing #8 — Promotion & IMC",
+      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "practiceNote": "HubSpot Academy — Campaign Planning Module",
+      "assignment": "Develop a one-page IMC brief for a product launch. Specify the target audience, core message, and how you will coordinate at least four channels (e.g., TV ad, social media, PR event, email) to deliver a consistent message. Explain how you will measure success for each channel.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 9,
+      "title": "Advertising Strategy",
+      "titleZh": "广告战略",
+      "objectives": "Write a creative brief; develop a media plan specifying reach, frequency, and media mix; evaluate advertising effectiveness using recall, engagement, and conversion metrics.",
+      "readingUrl": "https://academy.hubspot.com/courses/digital-advertising",
+      "readingNote": "HubSpot Academy — Digital Advertising Certification",
+      "videoUrl": "https://www.youtube.com/watch?v=8bSMjGfVOkk",
+      "videoNote": "Philip Kotler — Advertising Strategy and Media Planning",
+      "video2Url": "https://www.youtube.com/watch?v=yR8m5a7T5Nk",
+      "video2Note": "Crash Course Business: Marketing #9 — Advertising",
+      "practiceUrl": "https://academy.hubspot.com/courses/digital-advertising",
+      "practiceNote": "HubSpot Academy — Advertising Certification Practice",
+      "assignment": "Write a full creative brief for a 30-second TV advertisement for a product of your choice. Then build a media plan spreadsheet allocating a $100,000 budget across at least three media channels, justifying reach and frequency targets for each.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 10,
+      "title": "Digital & Social Media Strategy",
+      "titleZh": "数字与社交媒体战略",
+      "objectives": "Plan a digital marketing campaign; define content mix and posting cadence; manage community engagement; interpret analytics dashboards; apply A/B testing principles.",
+      "readingUrl": "https://academy.hubspot.com/courses/social-media-marketing",
+      "readingNote": "HubSpot Academy — Social Media Marketing Certification",
+      "videoUrl": "https://www.youtube.com/watch?v=DvwS7cV9GmQ",
+      "videoNote": "Philip Kotler — Digital Marketing Strategy",
+      "video2Url": "https://www.youtube.com/watch?v=7NRaM_wD4rU",
+      "video2Note": "Crash Course Business: Marketing #10 — Digital & Social Media",
+      "practiceUrl": "https://academy.hubspot.com/courses/social-media-marketing",
+      "practiceNote": "HubSpot Academy — Social Media Certification Practice",
+      "assignment": "Create a 4-week social media content calendar for a brand on two platforms. Include content type, post timing, caption copy samples, and hashtags. Define two KPIs and explain how you would use analytics to improve the campaign after week 2.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 11,
+      "title": "Sales & Customer Relationship Management",
+      "titleZh": "销售与客户关系管理",
+      "objectives": "Map the sales process from prospecting to close; explain CRM system functions; calculate customer lifetime value (CLV); develop customer retention strategies.",
+      "readingUrl": "https://academy.hubspot.com/courses/sales-enablement",
+      "readingNote": "HubSpot Academy — Sales Enablement Certification",
+      "videoUrl": "https://www.youtube.com/watch?v=6tQBPaUbHk8",
+      "videoNote": "Philip Kotler — CRM and Customer Value",
+      "video2Url": "https://www.youtube.com/watch?v=YVIQ8hQdHnM",
+      "video2Note": "Crash Course Business: Marketing #11 — Sales & CRM",
+      "practiceUrl": "https://academy.hubspot.com/courses/hubspot-crm",
+      "practiceNote": "HubSpot Academy — HubSpot CRM Free Course",
+      "assignment": "Map the 7-stage sales process for a B2B software company. Calculate CLV for a customer who pays $200/month, stays for 3 years, and has a 20% profit margin. Propose three CRM-driven retention strategies to increase their tenure by 6 months.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 12,
+      "title": "Global Marketing",
+      "titleZh": "全球市场营销",
+      "objectives": "Compare standardization vs. adaptation strategies; analyze cultural factors affecting consumer behavior; evaluate international market entry modes; design a market entry plan for one new country.",
+      "readingUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "readingNote": "HubSpot Academy — Global Marketing Strategy",
+      "videoUrl": "https://www.youtube.com/watch?v=xF7yEPaWWIo",
+      "videoNote": "Philip Kotler — Global Marketing Strategies",
+      "video2Url": "https://www.youtube.com/watch?v=pHGp8H4jfSA",
+      "video2Note": "Crash Course Business: Marketing #12 — Global Marketing",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/enterprise-value/ev-tutorial/v/international-business",
+      "practiceNote": "Khan Academy — International Business Fundamentals",
+      "assignment": "Select a U.S. brand that has not yet entered China or Brazil. Write a market entry plan: choose an entry mode (exporting, licensing, joint venture, or wholly owned subsidiary), explain cultural adaptations needed for the marketing mix, and identify two risks with mitigation strategies.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 13,
+      "title": "Sustainable & Ethical Marketing",
+      "titleZh": "可持续与道德营销",
+      "objectives": "Define green marketing and cause marketing; apply marketing ethics frameworks; identify and avoid greenwashing; evaluate CSR initiatives as marketing strategy.",
+      "readingUrl": "https://academy.hubspot.com/courses/digital-marketing",
+      "readingNote": "HubSpot Academy — Ethical & Sustainable Marketing Section",
+      "videoUrl": "https://www.youtube.com/watch?v=HsMQLpEJKkY",
+      "videoNote": "Philip Kotler — Marketing Ethics and Societal Marketing",
+      "video2Url": "https://www.youtube.com/watch?v=Ag7EfRFpEF8",
+      "video2Note": "Crash Course Business: Marketing #13 — Ethical Marketing",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/enterprise-value/ev-tutorial/v/business-ethics",
+      "practiceNote": "Khan Academy — Business Ethics Overview",
+      "assignment": "Find a real example of greenwashing by a major brand. Analyze how it violates marketing ethics principles and what the brand should have done differently. Then find a genuine green marketing campaign and explain what makes it credible and effective.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 14,
+      "title": "Marketing Capstone",
+      "titleZh": "市场营销综合项目",
+      "objectives": "Synthesize all course concepts to develop a comprehensive, professional-quality marketing strategy; present findings with clear rationale and supporting data.",
+      "readingUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "readingNote": "HubSpot Academy — Full Marketing Strategy Certification Review",
+      "videoUrl": "https://www.youtube.com/watch?v=sIlFFqKPpQU",
+      "videoNote": "Philip Kotler — Developing a Complete Marketing Plan",
+      "video2Url": "https://www.youtube.com/watch?v=qKgFBRPgh9U",
+      "video2Note": "Crash Course Business: Marketing #14 — Putting It All Together",
+      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "practiceNote": "HubSpot Academy — Capstone Project Guidelines",
+      "assignment": "Develop a comprehensive marketing strategy for a real product or service of your choice. Include: executive summary, SWOT analysis, STP framework, marketing mix (4Ps), IMC plan across three channels, a 12-month roadmap with KPIs, and a budget overview. Present as a 10-slide deck or 1,500-word report.",
+      "estimatedHrs": 5
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes a SWOT analysis?",
+      "options": [
+        "A financial statement summarizing company revenues",
+        "A framework analyzing Strengths, Weaknesses, Opportunities, and Threats",
+        "A pricing model based on competitor benchmarks",
+        "A customer satisfaction measurement tool"
+      ],
+      "answer": "A framework analyzing Strengths, Weaknesses, Opportunities, and Threats",
+      "explanation": "SWOT stands for Strengths, Weaknesses, Opportunities, and Threats — a foundational strategic planning tool.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "A SMART marketing objective must be:",
+      "options": [
+        "Simple, Measurable, Actionable, Relevant, Timely",
+        "Specific, Measurable, Achievable, Relevant, Time-bound",
+        "Strategic, Marketing-focused, Attainable, Reviewed, Tested",
+        "Scalable, Manageable, Affordable, Realistic, Tactical"
+      ],
+      "answer": "Specific, Measurable, Achievable, Relevant, Time-bound",
+      "explanation": "SMART objectives are Specific, Measurable, Achievable, Relevant, and Time-bound — ensuring clarity and accountability.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Which research method collects non-numerical data through open-ended discussions?",
+      "options": [
+        "Quantitative survey",
+        "Regression analysis",
+        "Qualitative research",
+        "A/B testing"
+      ],
+      "answer": "Qualitative research",
+      "explanation": "Qualitative research (e.g., focus groups, in-depth interviews) gathers descriptive, non-numerical data to explore motivations and opinions.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "A perceptual map is used to:",
+      "options": [
+        "Track a product's profit margins over time",
+        "Visualize how consumers perceive brands relative to each other on key attributes",
+        "Measure employee satisfaction within a marketing department",
+        "Plot sales revenue by geographic region"
+      ],
+      "answer": "Visualize how consumers perceive brands relative to each other on key attributes",
+      "explanation": "Perceptual maps display brand positions on two axes (e.g., price vs. quality) to reveal competitive gaps and opportunities.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Psychographic segmentation divides markets based on:",
+      "options": [
+        "Age, gender, and income",
+        "Geographic location",
+        "Lifestyle, values, and personality",
+        "Purchase frequency and brand loyalty"
+      ],
+      "answer": "Lifestyle, values, and personality",
+      "explanation": "Psychographic segmentation focuses on psychological characteristics — lifestyle, interests, values, and attitudes.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Brand equity refers to:",
+      "options": [
+        "The total dollar value of a company's inventory",
+        "The additional value a brand name adds to a product beyond its functional attributes",
+        "The number of SKUs in a product line",
+        "The cost to register a trademark"
+      ],
+      "answer": "The additional value a brand name adds to a product beyond its functional attributes",
+      "explanation": "Brand equity is the premium consumers are willing to pay or the loyalty they show due to the brand name itself.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "The BCG matrix classifies products into four categories. Which category has HIGH market share but LOW growth?",
+      "options": [
+        "Star",
+        "Question Mark",
+        "Cash Cow",
+        "Dog"
+      ],
+      "answer": "Cash Cow",
+      "explanation": "Cash Cows have high relative market share in a low-growth market — they generate steady cash with minimal investment needed.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Value-based pricing sets price based on:",
+      "options": [
+        "Total production cost plus a fixed markup",
+        "What competitors charge in the same category",
+        "The perceived value customers place on the product",
+        "The company's target profit margin"
+      ],
+      "answer": "The perceived value customers place on the product",
+      "explanation": "Value-based pricing anchors price to customers' willingness to pay, not to cost or competition.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Price discrimination involves:",
+      "options": [
+        "Charging all customers the same price regardless of location",
+        "Charging different prices to different customer segments for the same product",
+        "Lowering prices uniformly to increase market share",
+        "Matching the lowest competitor price"
+      ],
+      "answer": "Charging different prices to different customer segments for the same product",
+      "explanation": "Price discrimination captures more consumer surplus by charging each segment closer to its maximum willingness to pay.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "An omnichannel distribution strategy focuses on:",
+      "options": [
+        "Selling only through a single retail chain",
+        "Providing a seamless customer experience across all physical and digital channels",
+        "Exporting products to multiple countries simultaneously",
+        "Reducing distribution costs by cutting intermediaries"
+      ],
+      "answer": "Providing a seamless customer experience across all physical and digital channels",
+      "explanation": "Omnichannel integrates all channels so customers move fluidly between them (online, in-store, mobile) with a consistent experience.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Which of the following is an internal factor in a SWOT analysis?",
+      "options": [
+        "A new government regulation affecting the industry",
+        "An emerging competitor entering the market",
+        "The company's proprietary technology platform",
+        "A shift in consumer preferences toward sustainability"
+      ],
+      "answer": "The company's proprietary technology platform",
+      "explanation": "Internal factors (Strengths and Weaknesses) are within the company's control — such as resources, capabilities, and processes.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Which targeting strategy focuses on one segment with a single marketing mix?",
+      "options": [
+        "Undifferentiated marketing",
+        "Concentrated (niche) marketing",
+        "Differentiated marketing",
+        "Micromarketing"
+      ],
+      "answer": "Concentrated (niche) marketing",
+      "explanation": "Concentrated marketing targets one specific segment intensively, ideal for companies with limited resources seeking a strong niche position.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "short",
+      "question": "Explain the difference between market segmentation and market targeting, and give one example of each for a fitness apparel brand.",
+      "options": null,
+      "answer": "Segmentation divides the total market into distinct groups (e.g., amateur runners, professional athletes, yoga practitioners). Targeting selects which segment(s) to pursue (e.g., the brand decides to focus on amateur runners aged 18–35 as its primary target).",
+      "explanation": "Segmentation identifies 'who exists in the market'; targeting decides 'who we will serve.'",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Psychological pricing (e.g., $9.99 instead of $10.00) works primarily because:",
+      "options": [
+        "It reduces company tax liability",
+        "Consumers perceive prices ending in .99 as significantly lower",
+        "It signals higher product quality",
+        "It is required by retail pricing regulations"
+      ],
+      "answer": "Consumers perceive prices ending in .99 as significantly lower",
+      "explanation": "The left-digit effect causes consumers to anchor on the first digit, making $9.99 feel much cheaper than $10 despite a $0.01 difference.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "A coffee brand sells its premium beans at $30/lb. Identify one cost-based and one value-based pricing argument for this price, and state which approach you think is more appropriate for a premium brand and why.",
+      "options": null,
+      "answer": "Cost-based: if production, sourcing, and overhead cost $15/lb, a 100% markup yields $30. Value-based: customers who associate the brand with exclusive single-origin beans are willing to pay $30 for the experience and status. A premium brand should favor value-based pricing because it aligns price with perceived quality and maintains brand equity.",
+      "explanation": "Premium brands risk undermining their positioning if they price purely on cost, ignoring the value perception they have built.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which step comes FIRST in the strategic marketing planning process?",
+      "options": [
+        "Set marketing objectives",
+        "Define the target market",
+        "Conduct a situational/SWOT analysis",
+        "Develop the marketing mix"
+      ],
+      "answer": "Conduct a situational/SWOT analysis",
+      "explanation": "Strategic planning begins with a situational analysis to understand the internal and external environment before setting objectives.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "A KPI (Key Performance Indicator) is best described as:",
+      "options": [
+        "A qualitative statement of company values",
+        "A measurable metric used to evaluate progress toward a specific objective",
+        "The total budget allocated to a marketing campaign",
+        "A list of competitor weaknesses"
+      ],
+      "answer": "A measurable metric used to evaluate progress toward a specific objective",
+      "explanation": "KPIs are quantifiable measures that track performance against stated goals (e.g., website conversion rate, cost per acquisition).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "A focus group is MOST useful for:",
+      "options": [
+        "Measuring the statistical significance of consumer preferences",
+        "Exploring consumer attitudes and motivations in depth",
+        "Calculating market size for a new product category",
+        "Projecting annual sales revenue"
+      ],
+      "answer": "Exploring consumer attitudes and motivations in depth",
+      "explanation": "Focus groups are qualitative tools — they surface rich verbal and emotional data, not statistically representative conclusions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Repositioning a brand means:",
+      "options": [
+        "Changing the physical location of company headquarters",
+        "Shifting how the target market perceives the brand relative to competitors",
+        "Replacing the entire product line with new SKUs",
+        "Reducing the price to capture a lower-income segment"
+      ],
+      "answer": "Shifting how the target market perceives the brand relative to competitors",
+      "explanation": "Repositioning alters the brand's perceived place in consumers' minds — often to reach a new segment or respond to competitive pressure.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Which Keller CBBE model layer represents the functional benefits a brand delivers?",
+      "options": [
+        "Brand Identity (Salience)",
+        "Brand Meaning (Performance & Imagery)",
+        "Brand Response (Judgments & Feelings)",
+        "Brand Relationships (Resonance)"
+      ],
+      "answer": "Brand Meaning (Performance & Imagery)",
+      "explanation": "The second level of CBBE — Brand Meaning — covers what the brand delivers: performance (functional) and imagery (psychological).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "A product in the BCG 'Dog' quadrant should typically be:",
+      "options": [
+        "Invested in heavily to grow market share",
+        "Turned into a Star through aggressive promotion",
+        "Divested, discontinued, or managed for residual cash",
+        "Repositioned as a premium offering"
+      ],
+      "answer": "Divested, discontinued, or managed for residual cash",
+      "explanation": "Dogs have low share in low-growth markets — they generate little return and often drain resources, making divestment the rational choice.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Price elasticity of demand (PED) greater than 1 (|PED| > 1) indicates:",
+      "options": [
+        "Demand is inelastic — price changes have little effect on quantity demanded",
+        "Demand is elastic — consumers are highly sensitive to price changes",
+        "The product is a luxury good with exclusive demand",
+        "Supply increases faster than demand"
+      ],
+      "answer": "Demand is elastic — consumers are highly sensitive to price changes",
+      "explanation": "When |PED| > 1, a 1% price increase causes more than a 1% drop in quantity demanded — consumers are price-sensitive.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "An indirect distribution channel includes:",
+      "options": [
+        "A manufacturer selling directly to consumers via its own website",
+        "A producer using wholesalers and retailers to reach end consumers",
+        "A company delivering products through its own fleet",
+        "A subscription box shipped factory-direct"
+      ],
+      "answer": "A producer using wholesalers and retailers to reach end consumers",
+      "explanation": "Indirect channels involve one or more intermediaries (wholesalers, distributors, retailers) between producer and consumer.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "The primary goal of Integrated Marketing Communications (IMC) is to:",
+      "options": [
+        "Maximize spending across all media channels equally",
+        "Deliver a consistent, unified message across all marketing channels",
+        "Replace traditional advertising with digital-only campaigns",
+        "Reduce the number of channels to simplify messaging"
+      ],
+      "answer": "Deliver a consistent, unified message across all marketing channels",
+      "explanation": "IMC ensures that all communications — ads, PR, digital, events — speak with one voice to reinforce the same core message.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "In advertising, 'reach' refers to:",
+      "options": [
+        "The number of times an average person sees an ad",
+        "The total number of unique individuals exposed to an ad",
+        "The geographic territory covered by a campaign",
+        "The creative length of a video advertisement"
+      ],
+      "answer": "The total number of unique individuals exposed to an ad",
+      "explanation": "Reach measures how many different people are exposed to a message at least once; frequency measures how often.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "A/B testing in digital marketing involves:",
+      "options": [
+        "Comparing two versions of a campaign element to determine which performs better",
+        "Testing a product in two countries before global launch",
+        "Running ads on two platforms simultaneously with the same creative",
+        "Comparing two fiscal quarters of marketing spend"
+      ],
+      "answer": "Comparing two versions of a campaign element to determine which performs better",
+      "explanation": "A/B testing isolates one variable (e.g., email subject line, ad image) and measures which version drives better results.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Customer Lifetime Value (CLV) is calculated as:",
+      "options": [
+        "Total revenue in the first year of a customer relationship",
+        "Average purchase value × purchase frequency × average customer lifespan × profit margin",
+        "Number of customers × average order value",
+        "Annual revenue divided by total customer count"
+      ],
+      "answer": "Average purchase value × purchase frequency × average customer lifespan × profit margin",
+      "explanation": "CLV estimates the net profit attributed to the entire future relationship with a customer, guiding acquisition cost decisions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "The standardization strategy in global marketing means:",
+      "options": [
+        "Adapting the product and promotion to each local market",
+        "Using the same product, branding, and marketing mix worldwide",
+        "Entering only markets with similar languages",
+        "Setting a uniform price in all countries"
+      ],
+      "answer": "Using the same product, branding, and marketing mix worldwide",
+      "explanation": "Standardization leverages scale and consistency; adaptation tailors the mix to local cultures and preferences.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Greenwashing occurs when a company:",
+      "options": [
+        "Accurately communicates verified environmental benefits of its products",
+        "Misleads consumers by making false or exaggerated environmental claims",
+        "Donates a portion of profits to environmental charities",
+        "Reduces carbon emissions in its supply chain"
+      ],
+      "answer": "Misleads consumers by making false or exaggerated environmental claims",
+      "explanation": "Greenwashing damages consumer trust and violates ethical marketing principles by overstating environmental credentials.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Cause marketing differs from corporate philanthropy because:",
+      "options": [
+        "Cause marketing only benefits non-profit organizations",
+        "Cause marketing links a company's commercial activity directly to a social cause for mutual benefit",
+        "Corporate philanthropy is illegal in some markets",
+        "Cause marketing focuses on B2B transactions only"
+      ],
+      "answer": "Cause marketing links a company's commercial activity directly to a social cause for mutual benefit",
+      "explanation": "In cause marketing both the brand and the cause gain — e.g., 'we donate $1 for every product sold' — unlike pure philanthropy with no commercial link.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "In the new product development process, which stage immediately precedes commercialization?",
+      "options": [
+        "Idea generation",
+        "Concept testing",
+        "Test marketing",
+        "Business analysis"
+      ],
+      "answer": "Test marketing",
+      "explanation": "Test marketing introduces the product in a limited area to gauge real-world performance before full-scale commercialization.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Dynamic pricing adjusts prices based on:",
+      "options": [
+        "The cost of raw materials at the time of production",
+        "Real-time market demand, competition, and other variables",
+        "The consumer's household income level",
+        "Seasonal advertising budgets"
+      ],
+      "answer": "Real-time market demand, competition, and other variables",
+      "explanation": "Dynamic pricing (e.g., airline seats, ride-sharing) uses algorithms to fluctuate prices in response to supply, demand, and competitive signals.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "A joint venture as a global market entry mode means:",
+      "options": [
+        "A company acquires 100% ownership of a foreign firm",
+        "A domestic company licenses its brand to a foreign partner",
+        "Two companies share ownership and control of a new entity in the foreign market",
+        "A company sells its products through a foreign agent without equity investment"
+      ],
+      "answer": "Two companies share ownership and control of a new entity in the foreign market",
+      "explanation": "A joint venture combines resources and local knowledge while sharing risk — a common entry mode in markets with regulatory barriers.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "A local gym chain is launching a new premium yoga class. Describe how you would apply the STP framework (Segmentation, Targeting, Positioning) to market this class. Include one specific example for each step.",
+      "options": null,
+      "answer": "Segmentation: divide the market by demographics and lifestyle — e.g., working professionals aged 25–45 with disposable income, beginners vs. experienced practitioners. Targeting: select experienced practitioners aged 28–40 who value stress relief and premium experiences. Positioning: position the class as 'the city's most restorative yoga experience' — premium instructors, small class sizes, high-end studio environment — differentiating from budget gyms.",
+      "explanation": "STP moves from 'who is in the market' → 'who we serve' → 'how we want to be perceived' by that chosen audience.",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short",
+      "question": "A tech startup is accused of greenwashing after claiming its packaging is '100% eco-friendly.' What questions would you ask to investigate this claim, and what would an ethical, credible alternative campaign look like?",
+      "options": null,
+      "answer": "Investigation questions: Is the claim verified by a third-party certification (e.g., FSC, B Corp)? What percentage of the packaging is actually recyclable or compostable? Are supply chain emissions considered? What is the lifecycle impact vs. conventional packaging? Ethical alternative: obtain third-party certification, share specific data (e.g., '80% recycled content, certified by XYZ'), acknowledge limitations honestly, and invite consumers to participate in take-back programs — building credibility through transparency rather than vague claims.",
+      "explanation": "Ethical marketing requires truthfulness and substantiation; vague 'green' language without evidence is a hallmark of greenwashing.",
+      "points": 2
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which of the following is an example of an external opportunity in a SWOT analysis?",
+      "options": [
+        "A skilled internal marketing team",
+        "A competitor exiting the market",
+        "High employee turnover",
+        "An outdated company website"
+      ],
+      "answer": "A competitor exiting the market",
+      "explanation": "Opportunities are external factors the company can exploit — a competitor leaving the market opens up market share.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which of the following is a KPI for a brand awareness campaign?",
+      "options": [
+        "Number of employees hired",
+        "Unaided brand recall rate",
+        "Production cost per unit",
+        "Supplier lead time"
+      ],
+      "answer": "Unaided brand recall rate",
+      "explanation": "Unaided brand recall measures how many consumers think of the brand without prompting — directly tied to awareness objectives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "A company mission statement should primarily describe:",
+      "options": [
+        "The company's annual revenue targets",
+        "The company's purpose and reason for existing",
+        "The CEO's personal career goals",
+        "The company's short-term sales tactics"
+      ],
+      "answer": "The company's purpose and reason for existing",
+      "explanation": "A mission statement articulates why the company exists, who it serves, and what value it creates.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Which of the following is a SMART objective?",
+      "options": [
+        "Increase brand awareness",
+        "Grow social media followers by 20% within 6 months",
+        "Do more digital marketing next year",
+        "Sell more products to new customers"
+      ],
+      "answer": "Grow social media followers by 20% within 6 months",
+      "explanation": "This objective is Specific (social media followers), Measurable (20%), Achievable, Relevant, and Time-bound (6 months).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "In marketing strategy, 'positioning' refers to:",
+      "options": [
+        "The physical location of a store",
+        "How a brand wants to be perceived in the minds of its target consumers",
+        "The placement of products on store shelves",
+        "The order in which ads are shown online"
+      ],
+      "answer": "How a brand wants to be perceived in the minds of its target consumers",
+      "explanation": "Positioning defines the distinctive place a brand occupies in consumer perception relative to competitors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Which of the following is a quantitative research method?",
+      "options": [
+        "In-depth interviews",
+        "Ethnographic observation",
+        "Online survey with Likert-scale questions",
+        "Focus group discussion"
+      ],
+      "answer": "Online survey with Likert-scale questions",
+      "explanation": "Quantitative research collects numerical data that can be statistically analyzed — surveys with rating scales are a primary example.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "A focus group typically consists of:",
+      "options": [
+        "100–200 randomly selected consumers completing a written survey",
+        "6–10 participants discussing a topic guided by a moderator",
+        "One researcher conducting deep one-on-one interviews",
+        "A team of executives brainstorming product ideas"
+      ],
+      "answer": "6–10 participants discussing a topic guided by a moderator",
+      "explanation": "Focus groups bring together a small number of representative consumers to explore attitudes, perceptions, and motivations in guided discussion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Secondary market research uses data that:",
+      "options": [
+        "Is collected directly from consumers for the first time",
+        "Already exists and was gathered for another purpose",
+        "Can only be obtained through focus groups",
+        "Requires a minimum sample size of 1,000 respondents"
+      ],
+      "answer": "Already exists and was gathered for another purpose",
+      "explanation": "Secondary research draws from existing sources (industry reports, government statistics, published studies) vs. primary research collected firsthand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Which question type best captures qualitative consumer insight?",
+      "options": [
+        "On a scale of 1–5, how satisfied are you?",
+        "How many times per week do you use this product?",
+        "What emotions do you associate with this brand, and why?",
+        "What is your annual household income?"
+      ],
+      "answer": "What emotions do you associate with this brand, and why?",
+      "explanation": "Open-ended 'why' and 'how' questions elicit rich, descriptive responses that reveal motivations — the hallmark of qualitative inquiry.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Sample size in a quantitative consumer survey should be:",
+      "options": [
+        "As small as possible to save budget",
+        "Large enough to be statistically representative of the target population",
+        "Exactly 10 respondents for reliability",
+        "Determined by the number of focus group participants"
+      ],
+      "answer": "Large enough to be statistically representative of the target population",
+      "explanation": "Larger, well-randomized samples reduce margin of error and improve confidence in findings that generalize to the wider population.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Behavioral segmentation divides the market based on:",
+      "options": [
+        "Consumers' physical location",
+        "Consumers' age and gender",
+        "Usage rate, loyalty, and purchase occasion",
+        "Consumers' values and lifestyle preferences"
+      ],
+      "answer": "Usage rate, loyalty, and purchase occasion",
+      "explanation": "Behavioral segmentation groups consumers by how they interact with a product — heavy/light users, brand loyalists, occasion-based buyers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "A buyer persona is:",
+      "options": [
+        "A legal document representing a consumer complaint",
+        "A semi-fictional profile representing a typical target customer",
+        "A database of all current customers' contact information",
+        "A demographic breakdown of an entire country"
+      ],
+      "answer": "A semi-fictional profile representing a typical target customer",
+      "explanation": "Personas synthesize research into a vivid character — name, goals, pain points, behaviors — to guide marketing decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Differentiated targeting means a company:",
+      "options": [
+        "Targets the entire market with one offering",
+        "Targets multiple segments with distinct marketing mixes for each",
+        "Targets only one narrow niche segment",
+        "Personalizes messaging to every individual customer"
+      ],
+      "answer": "Targets multiple segments with distinct marketing mixes for each",
+      "explanation": "Differentiated (multi-segment) targeting tailors the product, price, promotion, and distribution to each chosen segment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "A perceptual map with axes 'Price' (low to high) and 'Quality' (low to high) shows an empty space in the 'high quality, low price' quadrant. This suggests:",
+      "options": [
+        "No consumers exist in that space",
+        "A potential market gap a new brand could fill",
+        "The market is already saturated",
+        "Quality and price are unrelated attributes"
+      ],
+      "answer": "A potential market gap a new brand could fill",
+      "explanation": "Empty spaces on perceptual maps signal underserved positioning — an opportunity for differentiation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Geographic segmentation is MOST relevant for:",
+      "options": [
+        "A global software platform accessible from anywhere",
+        "A regional food brand selling spicy flavors popular in the Southwest U.S.",
+        "A streaming service with identical content worldwide",
+        "A luxury watch brand targeting ultra-high-net-worth individuals globally"
+      ],
+      "answer": "A regional food brand selling spicy flavors popular in the Southwest U.S.",
+      "explanation": "Geographic segmentation tailors products or messaging to climate, region, culture, or density — most critical when preferences vary by location.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Brand architecture refers to:",
+      "options": [
+        "The physical design of a company's office buildings",
+        "The structure that organizes a company's portfolio of brands and products",
+        "The font and color palette used in brand identity",
+        "The number of employees in the marketing department"
+      ],
+      "answer": "The structure that organizes a company's portfolio of brands and products",
+      "explanation": "Brand architecture defines how a parent brand and sub-brands relate — e.g., branded house (Virgin), house of brands (Procter & Gamble).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "A brand extension is MOST risky when:",
+      "options": [
+        "The new product category is closely related to the parent brand's core",
+        "The extension leverages existing brand equity with the same consumers",
+        "The new category is far removed from the parent brand's identity and competency",
+        "The parent brand has strong awareness and loyalty"
+      ],
+      "answer": "The new category is far removed from the parent brand's identity and competency",
+      "explanation": "Distant extensions can dilute brand equity and confuse consumers — e.g., a luxury fashion brand launching fast food.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Brand equity can be built through:",
+      "options": [
+        "Frequent price discounting to attract new customers",
+        "Consistent messaging, quality, and positive consumer experiences over time",
+        "Changing the brand name and logo every year to stay fresh",
+        "Copying competitor brand strategies"
+      ],
+      "answer": "Consistent messaging, quality, and positive consumer experiences over time",
+      "explanation": "Brand equity accumulates through repeated, reliable, and positive brand interactions that build awareness, associations, and loyalty.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Which of the following is an example of a 'house of brands' architecture?",
+      "options": [
+        "Apple, which brands all products under the Apple name",
+        "Google, which uses the Google brand for all services",
+        "Procter & Gamble, which markets Tide, Pampers, and Gillette as separate brands",
+        "Virgin, which names all ventures with the Virgin prefix"
+      ],
+      "answer": "Procter & Gamble, which markets Tide, Pampers, and Gillette as separate brands",
+      "explanation": "A house of brands keeps parent company identity in the background; each brand is independent with its own positioning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Brand resonance, the top of Keller's CBBE pyramid, represents:",
+      "options": [
+        "The brand's logo and visual identity",
+        "The deepest level of loyalty — active engagement, community, and advocacy",
+        "Awareness that the brand exists",
+        "The functional performance of the product"
+      ],
+      "answer": "The deepest level of loyalty — active engagement, community, and advocacy",
+      "explanation": "Resonance is achieved when customers feel a deep psychological bond — they actively engage, recommend, and identify with the brand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "In the BCG matrix, a 'Star' product is characterized by:",
+      "options": [
+        "Low market share and high market growth",
+        "High market share and low market growth",
+        "High market share and high market growth",
+        "Low market share and low market growth"
+      ],
+      "answer": "High market share and high market growth",
+      "explanation": "Stars lead in fast-growing markets — they require investment to sustain growth but have the potential to become Cash Cows.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "The product life cycle stage with the fastest sales growth and increasing competition is:",
+      "options": [
+        "Introduction",
+        "Growth",
+        "Maturity",
+        "Decline"
+      ],
+      "answer": "Growth",
+      "explanation": "In the growth stage, early adopters spread the word, sales accelerate, and competitors enter — requiring investment in differentiation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "The first stage of the new product development (NPD) process is:",
+      "options": [
+        "Product testing",
+        "Business analysis",
+        "Idea generation",
+        "Commercialization"
+      ],
+      "answer": "Idea generation",
+      "explanation": "NPD begins with systematically generating product ideas from internal R&D, customers, competitors, or market trends.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "A 'Question Mark' in the BCG matrix requires a strategic decision because:",
+      "options": [
+        "It already generates excess cash for the company",
+        "It has high share in a growing market needing no investment",
+        "It operates in a growing market but lacks strong share — invest or divest?",
+        "It is in decline with no strategic value remaining"
+      ],
+      "answer": "It operates in a growing market but lacks strong share — invest or divest?",
+      "explanation": "Question Marks could become Stars with investment or Dogs without — management must assess whether the opportunity justifies the cost.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Product line depth refers to:",
+      "options": [
+        "The number of different product lines a company offers",
+        "The number of variants within a single product line (e.g., sizes, flavors)",
+        "The geographic reach of a product",
+        "The number of distribution channels used"
+      ],
+      "answer": "The number of variants within a single product line (e.g., sizes, flavors)",
+      "explanation": "Depth = variety within a line (e.g., 10 shampoo formulas); width = number of different product lines.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Cost-plus pricing sets the selling price by:",
+      "options": [
+        "Surveying what customers are willing to pay",
+        "Adding a fixed markup percentage to the cost of production",
+        "Matching the leading competitor's price",
+        "Using demand forecasts to maximize revenue"
+      ],
+      "answer": "Adding a fixed markup percentage to the cost of production",
+      "explanation": "Cost-plus pricing: Price = Cost + (Cost × Markup%). Simple to apply but ignores market demand and perceived value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Price elasticity of demand (PED) = −2 means:",
+      "options": [
+        "A 1% price increase leads to a 2% decrease in quantity demanded",
+        "A 1% price increase leads to a 0.5% decrease in quantity demanded",
+        "Price has no effect on demand",
+        "Demand increases as price increases"
+      ],
+      "answer": "A 1% price increase leads to a 2% decrease in quantity demanded",
+      "explanation": "PED = % change in quantity demanded ÷ % change in price. PED = −2 means demand is elastic — very sensitive to price.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "A strategy where airlines charge more for last-minute bookings than for early purchases is an example of:",
+      "options": [
+        "Cost-plus pricing",
+        "Penetration pricing",
+        "Dynamic pricing",
+        "Bundle pricing"
+      ],
+      "answer": "Dynamic pricing",
+      "explanation": "Dynamic pricing adjusts prices in real time based on demand signals — airlines, hotels, and ride-shares use this routinely.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "A movie theater charging lower prices for children, students, and seniors is practicing:",
+      "options": [
+        "Psychological pricing",
+        "Price discrimination",
+        "Skimming pricing",
+        "Economy pricing"
+      ],
+      "answer": "Price discrimination",
+      "explanation": "Price discrimination charges different groups different prices for the same service based on their willingness to pay.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "A new tech company sets a very low launch price to quickly gain market share and discourage competitors. This is called:",
+      "options": [
+        "Price skimming",
+        "Premium pricing",
+        "Penetration pricing",
+        "Value-based pricing"
+      ],
+      "answer": "Penetration pricing",
+      "explanation": "Penetration pricing sacrifices early margins to build volume and market share rapidly — the opposite of skimming.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Which distribution intensity strategy uses ONLY ONE retailer per geographic area?",
+      "options": [
+        "Intensive distribution",
+        "Selective distribution",
+        "Exclusive distribution",
+        "Direct distribution"
+      ],
+      "answer": "Exclusive distribution",
+      "explanation": "Exclusive distribution gives a single retailer or dealer exclusive rights in a territory — common for luxury and specialty brands.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Disintermediation in a distribution channel means:",
+      "options": [
+        "Adding more intermediaries to increase market coverage",
+        "Removing intermediaries so producers sell directly to consumers",
+        "Switching from online to physical retail",
+        "Outsourcing logistics to a third-party provider"
+      ],
+      "answer": "Removing intermediaries so producers sell directly to consumers",
+      "explanation": "Disintermediation (e.g., brand selling via its own website) reduces costs and increases margin but requires new capabilities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "A multichannel strategy differs from an omnichannel strategy because:",
+      "options": [
+        "Multichannel uses only digital channels; omnichannel uses physical channels",
+        "Multichannel offers multiple independent channels; omnichannel integrates them for a seamless experience",
+        "Omnichannel is only for luxury brands",
+        "There is no practical difference between the two"
+      ],
+      "answer": "Multichannel offers multiple independent channels; omnichannel integrates them for a seamless experience",
+      "explanation": "Omnichannel synchronizes inventory, data, and experience across all channels; multichannel may operate each channel in silos.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "A wholesaler in a distribution channel primarily serves as:",
+      "options": [
+        "The end consumer who buys for personal use",
+        "An intermediary who buys in bulk from producers and sells to retailers",
+        "A marketing agency creating promotional materials",
+        "A financial institution providing product financing"
+      ],
+      "answer": "An intermediary who buys in bulk from producers and sells to retailers",
+      "explanation": "Wholesalers break bulk, warehouse goods, and redistribute smaller quantities to retailers — performing a key sorting function.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Which factor would push a company toward a DIRECT distribution channel?",
+      "options": [
+        "The product requires complex technical support and customer education",
+        "The product has a very long shelf life and wide mass market appeal",
+        "The company wants to minimize contact with end customers",
+        "The company lacks manufacturing facilities"
+      ],
+      "answer": "The product requires complex technical support and customer education",
+      "explanation": "When products need customization, demonstrations, or expert support, direct channels allow better control over the customer experience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "The 'promotional mix' in IMC typically includes which of the following elements?",
+      "options": [
+        "Product, Price, Place, Promotion",
+        "Advertising, Public Relations, Personal Selling, Sales Promotion, Direct Marketing",
+        "Reach, Frequency, Impressions, Conversions",
+        "Mission, Vision, Values, Strategy"
+      ],
+      "answer": "Advertising, Public Relations, Personal Selling, Sales Promotion, Direct Marketing",
+      "explanation": "The promotional mix (part of the 4Ps' Promotion) combines these tools to communicate the brand message to the target audience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Message consistency across all IMC channels is critical because:",
+      "options": [
+        "It reduces the number of employees needed in marketing",
+        "Inconsistent messages confuse consumers and erode brand trust",
+        "Regulations require identical messages on all platforms",
+        "It eliminates the need for a marketing budget"
+      ],
+      "answer": "Inconsistent messages confuse consumers and erode brand trust",
+      "explanation": "When different channels send conflicting signals, consumers lose confidence in the brand — IMC ensures a coherent, reinforcing narrative.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Public Relations (PR) in an IMC campaign is most valuable for:",
+      "options": [
+        "Directly selling products through a sales force",
+        "Building credibility and managing brand reputation through earned media",
+        "Running paid display ads on social media platforms",
+        "Setting the product's retail price"
+      ],
+      "answer": "Building credibility and managing brand reputation through earned media",
+      "explanation": "PR earns media coverage through newsworthy stories — third-party editorial endorsement carries more credibility than paid advertising.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Sales promotion tools are designed primarily to:",
+      "options": [
+        "Build long-term brand equity through emotional storytelling",
+        "Encourage immediate purchase action through short-term incentives",
+        "Manage a brand crisis through stakeholder communication",
+        "Conduct ethnographic consumer research"
+      ],
+      "answer": "Encourage immediate purchase action through short-term incentives",
+      "explanation": "Sales promotions (coupons, BOGO, limited offers) create urgency — they drive short-term spikes in sales rather than long-term brand building.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "An IMC campaign 'creative brief' should include:",
+      "options": [
+        "The company's balance sheet and income statement",
+        "Target audience, key message, tone, objectives, and call to action",
+        "A list of all employees involved in production",
+        "The competitor's media spend breakdown"
+      ],
+      "answer": "Target audience, key message, tone, objectives, and call to action",
+      "explanation": "The creative brief is the strategic foundation for all creative work — it ensures alignment between strategy and execution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "A creative brief for an advertisement should specify:",
+      "options": [
+        "The exact wording of every line in the ad",
+        "The target audience, key message, tone of voice, and desired consumer action",
+        "The technical specifications for video file format",
+        "The number of employees who will view the ad internally"
+      ],
+      "answer": "The target audience, key message, tone of voice, and desired consumer action",
+      "explanation": "A creative brief provides strategic direction to creative teams — who we're talking to, what we're saying, and what we want them to do.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "In media planning, 'frequency' refers to:",
+      "options": [
+        "The total number of unique people who see an ad",
+        "How often the average target audience member sees the ad",
+        "The number of media channels used in a campaign",
+        "The speed at which an ad loads on a webpage"
+      ],
+      "answer": "How often the average target audience member sees the ad",
+      "explanation": "Frequency measures repetition — how many times on average a person in the target audience is exposed to the ad during the campaign.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Cost Per Thousand (CPM) is a media planning metric that measures:",
+      "options": [
+        "The cost to reach 1,000 unique target consumers",
+        "The cost of producing 1,000 ad units",
+        "The number of conversions per 1,000 ad impressions",
+        "The profit generated per 1,000 product sales"
+      ],
+      "answer": "The cost to reach 1,000 unique target consumers",
+      "explanation": "CPM = (total media cost ÷ total impressions) × 1,000. It's a standard metric for comparing media efficiency across channels.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Ad recall is a measure of advertising effectiveness that tracks:",
+      "options": [
+        "How many products were sold as a result of the advertisement",
+        "Whether consumers remember seeing or hearing the advertisement after exposure",
+        "The return on investment of the media buy",
+        "The click-through rate on digital banner ads"
+      ],
+      "answer": "Whether consumers remember seeing or hearing the advertisement after exposure",
+      "explanation": "Ad recall (aided or unaided) gauges how memorable an ad is — high recall indicates effective creative and sufficient frequency.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "A company with a limited budget and a niche professional target audience would most efficiently allocate ad spend to:",
+      "options": [
+        "National broadcast television",
+        "LinkedIn sponsored content targeting by job title and industry",
+        "Billboard advertising in major city centers",
+        "Mass-market radio during morning drive time"
+      ],
+      "answer": "LinkedIn sponsored content targeting by job title and industry",
+      "explanation": "LinkedIn allows precise professional targeting — minimizing waste when reaching a specific professional niche with a modest budget.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Which social media metric measures the percentage of your followers who see your post?",
+      "options": [
+        "Engagement rate",
+        "Organic reach rate",
+        "Click-through rate",
+        "Share of voice"
+      ],
+      "answer": "Organic reach rate",
+      "explanation": "Organic reach rate = (organic reach ÷ total followers) × 100. It shows what portion of your audience the algorithm surfaces your content to.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "A content mix for a brand's social media should typically balance:",
+      "options": [
+        "100% promotional content to maximize sales",
+        "Educational, entertaining, and promotional content",
+        "Only user-generated content to reduce costs",
+        "Only long-form video content for maximum engagement"
+      ],
+      "answer": "Educational, entertaining, and promotional content",
+      "explanation": "A balanced content mix (e.g., the 80/20 rule: 80% value-adding, 20% promotional) maintains audience interest and trust.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Community management on social media primarily involves:",
+      "options": [
+        "Purchasing followers to grow account size quickly",
+        "Responding to comments, engaging with mentions, and nurturing the brand's online community",
+        "Blocking negative comments to protect brand image",
+        "Posting only once a month to avoid over-saturation"
+      ],
+      "answer": "Responding to comments, engaging with mentions, and nurturing the brand's online community",
+      "explanation": "Community management builds relationships and trust — responsive brands signal that they value their audience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "In a digital campaign, A/B testing an email subject line involves:",
+      "options": [
+        "Sending two different full campaigns to all subscribers simultaneously",
+        "Sending version A to one half of the audience and version B to the other to see which drives higher open rates",
+        "Testing the email in two different email clients",
+        "A and B referring to morning and afternoon send times"
+      ],
+      "answer": "Sending version A to one half of the audience and version B to the other to see which drives higher open rates",
+      "explanation": "A/B testing isolates one variable — subject line — holding all else constant, to identify what drives better performance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Engagement rate on a social media post is calculated as:",
+      "options": [
+        "Total followers ÷ total posts",
+        "(Total engagements ÷ total reach or followers) × 100",
+        "Number of ads run ÷ total budget",
+        "Revenue generated ÷ number of posts"
+      ],
+      "answer": "(Total engagements ÷ total reach or followers) × 100",
+      "explanation": "Engagement rate measures how actively the audience interacts with content — likes, comments, shares, and saves relative to exposure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The first stage of a typical sales process is:",
+      "options": [
+        "Closing the deal",
+        "Handling objections",
+        "Prospecting and qualifying leads",
+        "Delivering the proposal"
+      ],
+      "answer": "Prospecting and qualifying leads",
+      "explanation": "The sales process begins with identifying and qualifying potential customers (prospects) who have a need and the ability to buy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Customer Lifetime Value (CLV) is important to marketers because:",
+      "options": [
+        "It measures how long a customer has lived",
+        "It helps determine how much to spend acquiring and retaining a customer",
+        "It calculates the tax owed on customer transactions",
+        "It tracks the number of customer service calls received"
+      ],
+      "answer": "It helps determine how much to spend acquiring and retaining a customer",
+      "explanation": "CLV sets the economic ceiling for customer acquisition cost (CAC) — you should not spend more to acquire a customer than their lifetime value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "A CRM (Customer Relationship Management) system is primarily used to:",
+      "options": [
+        "Design product packaging and branding",
+        "Store, track, and analyze customer interactions and data to improve relationships and sales",
+        "Set product pricing based on competitor data",
+        "Create advertising creative and copy"
+      ],
+      "answer": "Store, track, and analyze customer interactions and data to improve relationships and sales",
+      "explanation": "CRM systems centralize customer data, enabling personalized outreach, sales pipeline management, and retention strategies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Which customer retention strategy focuses on rewarding repeat purchases?",
+      "options": [
+        "Lead scoring",
+        "Content marketing",
+        "Loyalty program",
+        "Cold calling"
+      ],
+      "answer": "Loyalty program",
+      "explanation": "Loyalty programs (points, tiers, rewards) incentivize repeat purchases, increasing purchase frequency and customer lifetime value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Churn rate in a subscription business measures:",
+      "options": [
+        "The percentage of new customers acquired each month",
+        "The percentage of customers who cancel or do not renew their subscription",
+        "The average revenue per user",
+        "The number of customer support tickets resolved"
+      ],
+      "answer": "The percentage of customers who cancel or do not renew their subscription",
+      "explanation": "Churn rate = (customers lost ÷ customers at start of period) × 100. Lower churn means better retention and higher CLV.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Which global market entry mode involves the LOWEST level of control and risk?",
+      "options": [
+        "Wholly owned subsidiary (greenfield)",
+        "Joint venture",
+        "Franchising",
+        "Exporting"
+      ],
+      "answer": "Exporting",
+      "explanation": "Exporting requires minimal investment and carries the least risk — but also offers the least control over marketing and distribution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Hofstede's cultural dimensions model is used in global marketing to:",
+      "options": [
+        "Calculate exchange rate risk for international pricing",
+        "Understand cultural differences (e.g., individualism, power distance) that affect consumer behavior and marketing",
+        "Translate advertising copy into multiple languages",
+        "Determine import tariffs on exported goods"
+      ],
+      "answer": "Understand cultural differences (e.g., individualism, power distance) that affect consumer behavior and marketing",
+      "explanation": "Hofstede's dimensions quantify cultural values — marketers use them to adapt messaging, imagery, and strategy to each market.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "A global adaptation strategy requires a company to:",
+      "options": [
+        "Use the exact same marketing mix in every country",
+        "Modify the product, pricing, promotion, or distribution for each local market",
+        "Enter only markets with identical consumer preferences",
+        "Standardize all manufacturing processes globally"
+      ],
+      "answer": "Modify the product, pricing, promotion, or distribution for each local market",
+      "explanation": "Adaptation tailors the marketing mix to local culture, regulations, preferences, and competitive dynamics — at higher cost but greater relevance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "McDonald's offering McAloo Tikki in India and Teriyaki Burgers in Japan is an example of:",
+      "options": [
+        "Product standardization",
+        "Price discrimination across geographies",
+        "Product adaptation for local tastes",
+        "Market segmentation by income level"
+      ],
+      "answer": "Product adaptation for local tastes",
+      "explanation": "McDonald's adapts its menu to local preferences and cultural norms — a classic global adaptation strategy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Which entry mode gives a company the HIGHEST level of control over its foreign operations?",
+      "options": [
+        "Licensing",
+        "Exporting through an agent",
+        "Franchising",
+        "Wholly owned subsidiary"
+      ],
+      "answer": "Wholly owned subsidiary",
+      "explanation": "A wholly owned subsidiary (100% ownership) gives full control over strategy, operations, and brand — but requires the highest investment and risk.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Which of the following is an example of greenwashing?",
+      "options": [
+        "A company certified by a third-party environmental body promoting its verified recycled packaging",
+        "A company claiming its product is 'all natural' without any substantiation or certification",
+        "A brand accurately reporting its carbon emissions reduction progress",
+        "A company funding verified reforestation projects and communicating the measurable impact"
+      ],
+      "answer": "A company claiming its product is 'all natural' without any substantiation or certification",
+      "explanation": "Greenwashing = vague, unsubstantiated, or misleading environmental claims designed to appear eco-friendly without genuine commitment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Cause marketing is MOST effective when:",
+      "options": [
+        "The cause is unrelated to the brand's products or customers",
+        "The cause aligns authentically with the brand's values and its customers' interests",
+        "The brand donates anonymously without publicizing the partnership",
+        "The campaign runs only on social media"
+      ],
+      "answer": "The cause aligns authentically with the brand's values and its customers' interests",
+      "explanation": "Authentic alignment makes cause marketing credible — when the cause fits naturally, consumers see it as genuine rather than opportunistic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "The principle of marketing ethics most relevant to advertising to children is:",
+      "options": [
+        "Maximizing shareholder value",
+        "Protecting vulnerable consumers from manipulation and exploitation",
+        "Optimizing click-through rates on digital platforms",
+        "Ensuring competitive pricing against other children's brands"
+      ],
+      "answer": "Protecting vulnerable consumers from manipulation and exploitation",
+      "explanation": "Children are a vulnerable group with limited ability to evaluate advertising critically — ethical marketing imposes higher standards in this context.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Green marketing involves:",
+      "options": [
+        "Using green colors in brand identity and packaging design",
+        "Developing and promoting products with genuine environmental benefits",
+        "Charging premium prices for standard products with no environmental features",
+        "Only marketing to environmentally conscious consumers in wealthy countries"
+      ],
+      "answer": "Developing and promoting products with genuine environmental benefits",
+      "explanation": "Authentic green marketing involves real changes to products, processes, or supply chains — not just superficial eco-imagery.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Corporate Social Responsibility (CSR) as a marketing strategy can:",
+      "options": [
+        "Only benefit non-profit organizations, not for-profit companies",
+        "Strengthen brand reputation, attract ethical consumers, and improve employee retention",
+        "Replace the need for traditional advertising entirely",
+        "Guarantee immunity from negative press or consumer backlash"
+      ],
+      "answer": "Strengthen brand reputation, attract ethical consumers, and improve employee retention",
+      "explanation": "Authentic CSR creates shared value — brands that genuinely contribute to society build goodwill among customers, employees, and investors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "A marketing capstone project should demonstrate mastery of the marketing mix (4Ps). The '4Ps' are:",
+      "options": [
+        "People, Process, Physical Evidence, Positioning",
+        "Product, Price, Place, Promotion",
+        "Planning, Positioning, Personas, Performance",
+        "Profit, Publicity, PR, Partnerships"
+      ],
+      "answer": "Product, Price, Place, Promotion",
+      "explanation": "The classic marketing mix — Product, Price, Place (distribution), and Promotion — provides the framework for how a company goes to market.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "An executive summary in a marketing plan should:",
+      "options": [
+        "Include every detail from all sections of the plan",
+        "Be written first before any other section is drafted",
+        "Provide a concise overview of the plan's key objectives, strategies, and expected outcomes",
+        "Focus exclusively on the financial budget allocations"
+      ],
+      "answer": "Provide a concise overview of the plan's key objectives, strategies, and expected outcomes",
+      "explanation": "The executive summary is a high-level snapshot — written last but placed first — giving busy stakeholders the essentials at a glance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "In a 12-month marketing roadmap, milestones should be:",
+      "options": [
+        "Vague enough to allow flexibility throughout the year",
+        "Specific, time-bound checkpoints tied to measurable KPIs",
+        "Set at the end of the year to evaluate total results",
+        "Based only on financial targets, not marketing activities"
+      ],
+      "answer": "Specific, time-bound checkpoints tied to measurable KPIs",
+      "explanation": "Milestones break the annual plan into manageable checkpoints — enabling course correction when performance deviates from targets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Which section of a comprehensive marketing plan outlines how the budget is allocated across channels and activities?",
+      "options": [
+        "SWOT analysis",
+        "Positioning statement",
+        "Budget and resource allocation",
+        "Competitive analysis"
+      ],
+      "answer": "Budget and resource allocation",
+      "explanation": "The budget section specifies spending across each tactic (digital ads, events, PR, etc.) and links investment to expected returns.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "The primary purpose of a marketing plan's evaluation and control section is to:",
+      "options": [
+        "Describe the company's history and founding story",
+        "Set the initial marketing budget for approval",
+        "Define how performance will be monitored and what actions will be taken if results fall short",
+        "List all vendors and agency partners involved in execution"
+      ],
+      "answer": "Define how performance will be monitored and what actions will be taken if results fall short",
+      "explanation": "Evaluation and control closes the loop — specifying KPIs, review cadence, and contingency responses to keep the plan on track.",
+      "points": 1
+    }
+  ]
+}
