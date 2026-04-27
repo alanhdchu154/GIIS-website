@@ -34,9 +34,10 @@ model Student {
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
-  account    StudentAccount?
-  semesters  Semester[]
-  auditLogs  AuditLog[]
+  account     StudentAccount?
+  semesters   Semester[]
+  auditLogs   AuditLog[]
+  enrollments Enrollment[]
 }
 
 /// Self-service student login (one account per student record).
@@ -75,6 +76,132 @@ model CourseRow {
   letterGrade   String   @default("")
   weightedGpa   Decimal?
   unweightedGpa Decimal?
+}
+
+// ─── Course content models ────────────────────────────────────────────────────
+
+model Course {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  nameZh      String   @default("")
+  credits     Decimal  @db.Decimal(4, 1)
+  department  String
+  type        String   @default("Core")     // Core | AP | Elective
+  description String   @default("")
+  isPublished Boolean  @default(false)
+  modules         CourseModule[]
+  questions       ExamQuestion[]
+  quizQuestions   ModuleQuizQuestion[]
+  enrollments     Enrollment[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CourseModule {
+  id           String  @id @default(cuid())
+  courseId     String
+  course       Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  order        Int
+  title        String
+  titleZh      String  @default("")
+  objectives   String  @default("")
+  readingUrl   String  @default("")
+  readingNote  String  @default("")
+  videoUrl     String  @default("")
+  videoNote    String  @default("")
+  video2Url    String  @default("")
+  video2Note   String  @default("")
+  practiceUrl  String  @default("")
+  practiceNote String  @default("")
+  assignment   String  @default("")
+  estimatedHrs Decimal @default(3) @db.Decimal(4, 1)
+
+  @@unique([courseId, order])
+}
+
+model ExamQuestion {
+  id          String  @id @default(cuid())
+  courseId    String
+  course      Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  examType    String  @default("final")  // "midterm" | "final"
+  order       Int     @default(0)
+  question    String
+  type        String  @default("mc")   // mc | short
+  options     Json?
+  answer      String
+  explanation String  @default("")
+  points      Int     @default(1)
+}
+
+model Enrollment {
+  id               String    @id @default(cuid())
+  studentId        String
+  student          Student   @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  courseId         String
+  course           Course    @relation(fields: [courseId], references: [id])
+  enrolledAt       DateTime  @default(now())
+  completedModules Int[]     @default([])
+  creditEarned     Boolean   @default(false)
+  creditEarnedAt   DateTime?
+  examAttempts     ExamAttempt[]
+  quizAttempts     ModuleQuizAttempt[]
+  assignments      AssignmentSubmission[]
+
+  @@unique([studentId, courseId])
+}
+
+model ExamAttempt {
+  id           String     @id @default(cuid())
+  enrollmentId String
+  enrollment   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  examType     String     @default("final")  // "midterm" | "final"
+  startedAt    DateTime   @default(now())
+  submittedAt  DateTime?
+  score        Decimal?   @db.Decimal(5, 2)
+  passed       Boolean?
+  answers      Json?
+}
+
+model ModuleQuizQuestion {
+  id          String  @id @default(cuid())
+  courseId    String
+  course      Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  moduleOrder Int
+  order       Int
+  question    String
+  options     Json?
+  answer      String
+  explanation String  @default("")
+  points      Int     @default(1)
+
+  @@unique([courseId, moduleOrder, order])
+}
+
+model ModuleQuizAttempt {
+  id           String     @id @default(cuid())
+  enrollmentId String
+  enrollment   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  moduleOrder  Int
+  submittedAt  DateTime   @default(now())
+  score        Decimal    @db.Decimal(5, 2)
+  passed       Boolean    @default(false)
+  answers      Json?
+
+  @@unique([enrollmentId, moduleOrder])
+}
+
+model AssignmentSubmission {
+  id           String   @id @default(cuid())
+  enrollmentId String
+  enrollment   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  moduleOrder  Int
+  submittedAt  DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  content      String
+  feedback     String   @default("")
+
+  @@unique([enrollmentId, moduleOrder])
 }
 
 /// Immutable record of admin/student actions on student data.

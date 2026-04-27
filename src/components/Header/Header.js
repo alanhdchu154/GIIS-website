@@ -19,10 +19,6 @@ function Header({ language,toggleLanguage }) {
                 <div className= "col-2 d-flex justify-content-center flex-wrap gap-1" >
                     {/* <Link to="/contact" className="btn btn-link px-2">Contact Us</Link> */}
                     <Link to="/login" className={`btn btn-link px-2 ${styles.button}`}>{t.signIn}</Link>
-                    <a href="https://moodles.genesisideas.school" target="_blank" rel="noopener noreferrer" className={`btn btn-link px-2 ${styles.button}`} >Moodle</a>
-                    <button type="button" className={`btn btn-link px-2 ${styles.button2}`} onClick={toggleLanguage} aria-label={t.langToggleAria}>
-                        {language === 'en' ? '中文' : 'English'}
-                    </button>
                 </div>
             </div> 
         </header>

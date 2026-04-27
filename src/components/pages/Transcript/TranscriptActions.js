@@ -20,8 +20,8 @@ function TranscriptActions({ canSave, canExport, remoteSaving, profile, language
           }}
         >
           {remoteSaving
-            ? (language === 'en' ? 'Saving…' : '儲存中…')
-            : (language === 'en' ? 'Save transcript' : '儲存成績單')}
+            ? (language === 'en' ? 'Saving…' : '储存中…')
+            : (language === 'en' ? 'Save transcript' : '储存成绩单')}
         </button>
       )}
       {canExport && (

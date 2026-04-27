@@ -48,7 +48,16 @@ function Nav({ language }) {
                     {t.discovery}
                    </Link>
                 </li>
-                <p>{t.academics}</p>
+                <li onClick={() => navigate("/academics")}>
+                  <Link to="/academics" onClick={(e) => e.preventDefault()}>
+                    {t.academics}
+                  </Link>
+                </li>
+                <li onClick={() => navigate("/pathways/psychology")}>
+                  <Link to="/pathways/psychology" onClick={(e) => e.preventDefault()}>
+                    {language === 'en' ? 'Psychology Pathway' : '心理学路径'}
+                  </Link>
+                </li>
                 <li onClick={() => navigate("/admission")}>
                     <Link to="/admission" onClick={(e) => e.preventDefault()}>
                         {t.admission}
@@ -73,7 +82,14 @@ function Nav({ language }) {
                     ))}
                   </ul>
                 </li>
-                <p className={`${styles.navitem2} ${styles.navText}`}>{t.academics}</p>
+                <li className={styles.navitem}>
+                  <Link className={styles.navLink} to="/academics">{t.academics}</Link>
+                  <ul className={styles.dropdownMenu}>
+                    {t.dropdownAcademics.map((item) => (
+                      <li key={item.label}><Link to={item.to} style={{ color: 'inherit', textDecoration: 'none' }}>{item.label}</Link></li>
+                    ))}
+                  </ul>
+                </li>
                 <li className={styles.navitem}>
                    <Link className={styles.navLink} to="/admission">{t.admission}</Link>
                    <ul className={styles.dropdownMenu}>

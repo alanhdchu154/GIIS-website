@@ -14,7 +14,7 @@ export default function TermsOfUse({ language }) {
           content={
             isEn
               ? 'Terms of use for the Genesis of Ideas International School website and student portal.'
-              : '創思國際學校網站與學生專區之使用條款。'
+              : '艾迪尔国际学校网站与学生专区之使用条款。'
           }
         />
         <link rel="canonical" href="https://genesisideas.school/terms" />

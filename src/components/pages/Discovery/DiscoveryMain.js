@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Nav from './DiscoveryHeader/Nav.js';
+import Nav from '../../main/Nav.js';
 import img from '../../../img/Homepage/homepage3.png';
 import DiscoveryIntroduction from'./Discovery/DiscoveryIntroduction.js';
 import DiscoveryIntroduction2 from'./Discovery/DiscoveryIntroduction2.js';
@@ -11,7 +11,7 @@ function DiscoveryMain({ language , toggleLanguage }) {
         position: 'relative',
         display: 'flex',
         justifyContent: 'center', // 水平居中
-        marginTop: '0', // 與導航欄保持距離
+        marginTop: '0', // 与导航欄保持距离
         width: '100%',
     };
 
@@ -23,7 +23,7 @@ function DiscoveryMain({ language , toggleLanguage }) {
 
         const textOverlayStyle = {
         position: 'absolute',
-        bottom: '-70px', // 固定在圖片底部
+        bottom: '-70px', // 固定在图片底部
         backgroundColor: 'rgba(0, 0, 0, 0.8)', // 半透明黑色背景
         color: 'white',
         width: language === 'en' ? '50%' : '35%',
@@ -44,9 +44,9 @@ function DiscoveryMain({ language , toggleLanguage }) {
     };
 
         const cardStyle = {
-        position: 'relative', // 需要設置 position 來使 z-index 生效
-        zIndex: '10', // 調整層級
-        marginTop: '0', // 保持一些間距
+        position: 'relative', // 需要设置 position 来使 z-index 生效
+        zIndex: '10', // 调整層级
+        marginTop: '0', // 保持一些间距
         backgroundColor: 'rgba(43, 61, 109, 1)',
         borderBottom: '20px solid rgba(213, 168, 54, 1)',
     };
@@ -59,7 +59,7 @@ function DiscoveryMain({ language , toggleLanguage }) {
             name="description"
             content={language === 'en'
               ? 'Explore Genesis of Ideas International School — community, learning culture, and what makes us unique.'
-              : '了解創思國際學校的校園與學習文化。'}
+              : '了解艾迪尔国际学校的校園与学习文化。'}
           />
         </Helmet>
         <div className="row">

@@ -65,7 +65,7 @@ function DiscoveryIntroduction({ language }) {
       height: '30%',
       wordWrap: 'break-word',// 父元素高度
       color: 'rgba(255, 255, 255, 0.8)',
-      fontFamily: 'Arial, sans-serif', /* 可選：字體樣式 */
+      fontFamily: 'Arial, sans-serif', /* 可选：字体样式 */
       fontSize: '25px',
     };
 
@@ -76,7 +76,7 @@ function DiscoveryIntroduction({ language }) {
       height: '300px',  
       wordWrap: 'break-word',// 父元素高度
       color: 'rgba(255, 255, 255, 0.8)',
-      fontFamily: 'Arial, sans-serif', /* 可選：字體樣式 */
+      fontFamily: 'Arial, sans-serif', /* 可选：字体样式 */
       fontSize: '25px',
     };
 

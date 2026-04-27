@@ -1,39 +1,39 @@
 import React from 'react';
 
 const AP_COURSES = [
-  { code: 'AP Statistics',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '數據分析與統計推論' } },
-  { code: 'AP Biology',         icon: '🧬', desc: { en: 'College-level life sciences', zh: '大學程度生命科學' } },
-  { code: 'AP Psychology',      icon: '🧠', desc: { en: 'Behavior & mental processes', zh: '行為與心理歷程' } },
-  { code: 'AP Human Geography', icon: '🌏', desc: { en: 'Patterns of human society', zh: '人文地理與全球視野' } },
+  { code: 'AP Statistics',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '数據分析与统计推论' } },
+  { code: 'AP Biology',         icon: '🧬', desc: { en: 'College-level life sciences', zh: '大学程度生命科学' } },
+  { code: 'AP Psychology',      icon: '🧠', desc: { en: 'Behavior & mental processes', zh: '行为与心理历程' } },
+  { code: 'AP Human Geography', icon: '🌏', desc: { en: 'Patterns of human society', zh: '人文地理与全球视野' } },
 ];
 
 const PROGRAMS = [
   {
     id: 'diploma',
     icon: '🎓',
-    title: { en: 'US Diploma Program', zh: '美國高中文憑課程' },
-    tag: { en: '24 Credits · Florida Accredited', zh: '24 學分 · Florida 認證' },
+    title: { en: 'US Diploma Program', zh: '美国高中文凭课程' },
+    tag: { en: '24 Credits · Florida Registered', zh: '24 学分 · Florida 注册私立学校' },
     body: {
-      en: 'GIIS follows the Florida 24-credit graduation framework — the same standard used by accredited US private high schools. Our diploma is designed to be recognized by US colleges during international student admissions review.',
-      zh: 'GIIS 遵循 Florida 24 學分畢業框架，與美國認證私立高中標準一致。我們的文憑在美國大學審核國際學生申請時具備完整的學術效力。',
+      en: 'GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the same standard followed by US private high schools and recognized by US colleges for international student admissions.',
+      zh: 'GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭，与美国私立高中标准一致，在美国大学审核国际学生申请时具备完整的学术效力。',
     },
     points: {
       en: ['English Language Arts — 4 credits', 'Mathematics — 4 credits', 'Science — 3 credits', 'Social Studies — 3 credits', 'PE & Health — 1 credit', 'Electives — 8.5 credits'],
-      zh: ['英語語言藝術 — 4 學分', '數學 — 4 學分', '自然科學 — 3 學分', '社會科學 — 3 學分', '體育與健康 — 1 學分', '選修課程 — 8.5 學分'],
+      zh: ['英语语言艺术 — 4 学分', '数学 — 4 学分', '自然科学 — 3 学分', '社会科学 — 3 学分', '体育与健康 — 1 学分', '选修课程 — 8.5 学分'],
     },
   },
   {
     id: 'electives',
     icon: '🗂️',
-    title: { en: 'Elective Concentration Tracks', zh: '選修方向規劃' },
-    tag: { en: 'Tailored to College Major Goals', zh: '依申請方向量身規劃' },
+    title: { en: 'Elective Concentration Tracks', zh: '选修方向规划' },
+    tag: { en: 'Tailored to College Major Goals', zh: '依申请方向量身规划' },
     body: {
-      en: 'Beyond core requirements, GIIS offers three elective concentration tracks. Students build a cohesive course history that demonstrates depth and direction — exactly what US admissions officers look for.',
-      zh: '在必修科目之外，GIIS 提供三大選修方向。學生可建立一致且有深度的選課紀錄，展現出明確的學術方向——這正是美國大學申請審核最重視的要素。',
+      en: 'Beyond core requirements, GIIS offers 8 academic pathways across STEM, Business, and the Arts. Students build a cohesive course history that demonstrates depth and direction — exactly what US admissions officers look for.',
+      zh: '在必修科目之外，GIIS 提供横跨 STEM、商业与艺术的 8 条学习路径。学生可建立一致且有深度的选课记录，展现出明确的学术方向——这正是美国大学申请审核最重视的要素。',
     },
     points: {
-      en: ['Business & Finance — entrepreneurship, marketing, corporate finance', 'Psychology & Behavioral Science — from intro to AP & capstone', 'Communication & Research — writing, public speaking, media literacy'],
-      zh: ['商業與財務 — 創業、行銷、企業財務', '心理學與行為科學 — 從入門到 AP 與研究專題', '溝通與研究方法 — 學術寫作、演說、媒體素養'],
+      en: ['Psychology & Behavioral Science — from intro to AP Psychology & capstone', 'CS & Engineering — programming, data structures, AP CS A, and ML', 'Business & Marketing — entrepreneurship, marketing, consumer behavior', 'Economics & Finance — micro/macro economics, financial markets, 2 AP courses'],
+      zh: ['心理学与行为科学 — 从入门到 AP 心理学与研究专题', '计算机科学与工程 — 编程、数据结构、AP CS A 与机器学习', '商业与市场营销 — 创业、营销、消费者行为', '经济与金融 — 微观/宏观经济学、金融市场，含两门 AP 课程'],
     },
   },
 ];
@@ -47,15 +47,15 @@ export default function Academicsintroduction2({ language }) {
       <div style={{ padding: '80px 0 60px', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
           <h2 style={{ fontSize: '70px', fontWeight: 800, lineHeight: 1, marginBottom: '16px' }}>
-            {isEn ? 'OUR' : '課程'}
+            {isEn ? 'OUR' : '课程'}
           </h2>
           <h2 style={{ fontSize: '70px', fontWeight: 800, lineHeight: 1, marginBottom: '40px' }}>
-            {isEn ? 'PROGRAMS' : '架構'}
+            {isEn ? 'PROGRAMS' : '架构'}
           </h2>
           <p style={{ fontSize: '20px', color: '#555', maxWidth: '640px', lineHeight: 1.7, marginBottom: '56px' }}>
             {isEn
-              ? 'GIIS offers a US-accredited high school diploma program built on the Florida 24-credit framework, with elective tracks designed specifically for Chinese students targeting US university admissions.'
-              : 'GIIS 提供以 Florida 24 學分框架為基礎的美國認證高中文憑課程，並為目標申請美國大學的中國學生設計了專屬的選修方向。'}
+              ? 'GIIS offers a US high school diploma program built on the Florida 24-credit framework, with 8 elective pathways designed specifically for Chinese students targeting US university admissions.'
+              : 'GIIS 提供以 Florida 24 学分框架为基础的美国高中文凭课程，并为目标申请美国大学的中国学生设计了 8 条专属选修路径。'}
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
@@ -104,12 +104,12 @@ export default function Academicsintroduction2({ language }) {
       <div style={{ background: '#2b3d6d', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
           <h2 style={{ fontSize: '60px', fontWeight: 800, color: '#fff', lineHeight: 1, marginBottom: '12px' }}>
-            {isEn ? 'AP COURSES' : 'AP 進階課程'}
+            {isEn ? 'AP COURSES' : 'AP 进阶课程'}
           </h2>
           <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.7)', maxWidth: '580px', lineHeight: 1.7, marginBottom: '48px' }}>
             {isEn
               ? 'AP (Advanced Placement) courses are college-level classes offered in high school. Strong AP performance — especially exam scores of 4 or 5 — is one of the most effective signals of academic readiness for competitive US universities.'
-              : 'AP（Advanced Placement）是高中階段提供的大學程度課程。優異的 AP 成績（尤其是 4 或 5 分）是向美國頂尖大學展示學術能力最有效的指標之一。'}
+              : 'AP（Advanced Placement）是高中阶段提供的大学程度课程。优异的 AP 成绩（尤其是 4 或 5 分）是向美国顶尖大学展示学术能力最有效的指标之一。'}
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
@@ -133,7 +133,7 @@ export default function Academicsintroduction2({ language }) {
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.45)', marginTop: '32px' }}>
             {isEn
               ? 'AP exams are administered by the College Board each May. GIIS prepares students throughout the year with coursework aligned to the official AP curriculum framework.'
-              : 'AP 考試由 College Board 每年五月舉辦。GIIS 全年以對應官方 AP 課綱的課程為學生備考。'}
+              : 'AP 考试由 College Board 每年五月举办。GIIS 全年以对应官方 AP 课纲的课程为学生备考。'}
           </p>
         </div>
       </div>

@@ -67,26 +67,26 @@ function Academicsintroduction({ language }) {
   return (
     <>
       <div style={headlineStyle}>
-        <p>{isEn ? 'WHAT MAKES GIIS' : '創思國際學校'}</p>
+        <p>{isEn ? 'WHAT MAKES GIIS' : '艾迪尔国际学校'}</p>
         <p>{isEn ? 'DIFFERENT?' : '有何不同？'}</p>
       </div>
 
       <div style={introductionStyle}>
-        <p>{isEn ? 'The GIIS Difference' : '我們的與眾不同'}</p>
+        <p>{isEn ? 'The GIIS Difference' : '我们的与众不同'}</p>
       </div>
 
       {/* Point 1: US Accredited Diploma */}
       <div style={containerheading}>
         <p style={textStyle}>
           <span style={{ position: 'absolute', left: '0' }}>•</span>
-          {isEn ? 'US-Accredited High School Diploma' : '美國認證高中文憑'}
+          {isEn ? 'US High School Diploma' : '美国高中文凭'}
         </p>
       </div>
       <div style={container}>
         <p>
           {isEn
-            ? 'GIIS issues a Florida-accredited US high school diploma following the 24-credit graduation framework — the standard recognized by US colleges and universities for international student admissions.'
-            : 'GIIS 提供符合 Florida 24 學分畢業標準的美國認證高中文憑，是美國大學在審核國際學生申請時所認可的學術資歷。'}
+            ? 'GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the standard recognized by US colleges and universities for international student admissions.'
+            : 'GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭，是美国大学在审核国际学生申请时所认可的学术资历。'}
         </p>
       </div>
 
@@ -94,14 +94,14 @@ function Academicsintroduction({ language }) {
       <div style={containerheading}>
         <p style={textStyle}>
           <span style={{ position: 'absolute', left: '0' }}>•</span>
-          {isEn ? 'Immersive Learning with AI and Advanced Technologies' : '人工智慧與先進技術的沉浸式學習'}
+          {isEn ? 'Immersive Learning with AI and Advanced Technologies' : '人工智慧与先进技术的沉浸式学习'}
         </p>
       </div>
       <div style={container}>
         <p>
           {isEn
             ? 'By integrating AI and cutting-edge technologies into teaching, we create immersive learning experiences that make the curriculum more engaging, adaptive, and interactive.'
-            : '透過將 AI 和尖端科技整合到教學中，我們打造身臨其境的學習體驗，讓課程更具吸引力、適應性與互動性。'}
+            : '透过將 AI 和尖端科技整合到教学中，我们打造身臨其境的学习体验，让课程更具吸引力、适应性与互动性。'}
         </p>
       </div>
 
@@ -109,14 +109,14 @@ function Academicsintroduction({ language }) {
       <div style={containerheading}>
         <p style={textStyle}>
           <span style={{ position: 'absolute', left: '0' }}>•</span>
-          {isEn ? 'Personalized Learning and Holistic Development' : '個人化學習與全人發展'}
+          {isEn ? 'Personalized Learning and Holistic Development' : '个人化学习与全人发展'}
         </p>
       </div>
       <div style={container2}>
         <p>
           {isEn
-            ? 'We emphasize personalized instruction with diverse elective tracks — Business & Finance, Psychology, and Communication — tailored to each student\'s college major aspirations and career goals.'
-            : '我們以因材施教為核心，提供商業財務、心理學、溝通研究等多元選修方向，依據每位學生的大學申請目標與職涯規劃量身設計。'}
+            ? 'We emphasize personalized instruction with four academic pathways — Psychology, CS & Engineering, Business & Marketing, and Economics & Finance — each designed to match a student\'s college major aspirations.'
+            : '我们以因材施教为核心，提供心理学、计算机科学、商业市场营销、经济与金融四大学习路径，根据每位学生的大学申请目标量身设计。'}
         </p>
       </div>
     </>

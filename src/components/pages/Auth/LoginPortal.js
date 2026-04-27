@@ -81,7 +81,7 @@ export default function LoginPortal({ language }) {
       }
       if (data.role === 'student' && data.student) {
         setStudentSession(data.token, data.student);
-        navigate('/transcript', { replace: true });
+        navigate('/learn', { replace: true });
         return;
       }
       throw new Error(t.unexpectedLogin);

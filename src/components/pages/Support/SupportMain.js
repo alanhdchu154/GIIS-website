@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Nav from '../Homepage/HomepageHeader/Nav.js';
+import Nav from '../../main/Nav.js';
 import heroImg from '../../../img/Homepage/homepage5.png';
 
 const SCHOOL_PHONE = '+1 (813) 501-5756';
@@ -10,50 +10,50 @@ const MOODLE_URL = 'https://moodles.genesisideas.school/';
 const SERVICES = [
   {
     icon: '📚',
-    title: { en: 'Academic Advising', zh: '學業輔導' },
+    title: { en: 'Academic Advising', zh: '学业辅导' },
     body: {
       en: 'Our advisors work with each student to design a personalized course plan aligned with their college major goals and graduation requirements.',
-      zh: '我們的輔導師與每位學生合作，依據其大學申請目標與畢業要求，量身規劃個人化選課計畫。',
+      zh: '我们的辅导师与每位学生合作，依据其大学申请目标与毕业要求，量身规划个人化选课计划。',
     },
   },
   {
     icon: '🎯',
-    title: { en: 'College Application Guidance', zh: '大學申請指導' },
+    title: { en: 'College Application Guidance', zh: '大学申请指导' },
     body: {
       en: 'We support students through the US college application process — including course selection strategy, timeline planning, and application review.',
-      zh: '我們協助學生完成美國大學申請的每個環節，包含選課策略、時程規劃與申請文件審閱。',
+      zh: '我们协助学生完成美国大学申请的每个环节，包含选课策略、时程规划与申请文件审阅。',
     },
   },
   {
     icon: '💬',
-    title: { en: 'Progress Check-ins', zh: '學習進度追蹤' },
+    title: { en: 'Progress Check-ins', zh: '学习进度追蹤' },
     body: {
       en: 'Regular one-on-one check-ins help students stay on track, address challenges early, and maintain momentum throughout the school year.',
-      zh: '定期一對一的進度確認，幫助學生保持學習節奏、提早發現問題，讓整個學年都能穩健前進。',
+      zh: '定期一对一的进度确认，帮助学生保持学习节奏、提早发现问题，让整个学年都能稳健前进。',
     },
   },
   {
     icon: '🧘',
-    title: { en: 'Wellbeing & Life Counseling', zh: '身心健康與生活輔導' },
+    title: { en: 'Wellbeing & Life Counseling', zh: '身心健康与生活辅导' },
     body: {
       en: 'Online learning can be challenging. Our counselors provide emotional support and connect students with wellness resources when needed.',
-      zh: '線上學習有時不易堅持。輔導老師提供情緒支持，並在需要時為學生媒合身心健康相關資源。',
+      zh: '线上学习有时不易坚持。辅导老师提供情绪支持，并在需要时为学生媒合身心健康相关资源。',
     },
   },
   {
     icon: '🛠️',
-    title: { en: 'Technical & Platform Support', zh: '技術與平台協助' },
+    title: { en: 'Technical & Platform Support', zh: '技术与平台协助' },
     body: {
       en: 'Get help with Moodle access, coursework submission, or any technical issues — so nothing gets in the way of your learning.',
-      zh: '協助解決 Moodle 登入、作業繳交或任何技術問題，確保學習不受阻礙。',
+      zh: '协助解决 Moodle 登入、作业提交或任何技术问题，确保学习不受阻礙。',
     },
   },
   {
     icon: '📖',
-    title: { en: 'Study Skills & Resources', zh: '學習方法與資源' },
+    title: { en: 'Study Skills & Resources', zh: '学习方法与资源' },
     body: {
       en: 'We share strategies for time management, academic writing, research, and exam preparation tailored to an online learning environment.',
-      zh: '提供適合線上學習的時間管理、學術寫作、研究方法與考試準備技巧與資源。',
+      zh: '提供适合线上学习的时间管理、学术写作、研究方法与考试准备技巧与资源。',
     },
   },
 ];
@@ -64,12 +64,12 @@ export default function SupportMain({ language, toggleLanguage }) {
   return (
     <>
       <Helmet>
-        <title>{isEn ? 'Student Support' : '學生支持'} | Genesis of Ideas International School</title>
+        <title>{isEn ? 'Student Support' : '学生支持'} | Genesis of Ideas International School</title>
         <meta
           name="description"
           content={isEn
             ? 'Student support services at Genesis of Ideas International School — advising, counseling, and academic resources.'
-            : '創思國際學校學生支持服務：學業輔導、身心健康諮詢與資源說明。'}
+            : '艾迪尔国际学校学生支持服务：学业辅导、身心健康諮詢与资源说明。'}
         />
       </Helmet>
 
@@ -87,12 +87,12 @@ export default function SupportMain({ language, toggleLanguage }) {
           padding: '48px 10%',
         }}>
           <h1 style={{ color: '#fff', fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '56px', margin: 0, lineHeight: 1 }}>
-            {isEn ? 'STUDENT SUPPORT' : '學生支持'}
+            {isEn ? 'STUDENT SUPPORT' : '学生支持'}
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontFamily: 'Inter, sans-serif', fontSize: '18px', marginTop: '12px', maxWidth: '540px' }}>
             {isEn
               ? 'We are with you every step of the way — academically and personally.'
-              : '無論是學業還是生活，我們始終陪伴在你身旁。'}
+              : '无论是学业还是生活，我们始终陪伴在你身旁。'}
           </p>
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function SupportMain({ language, toggleLanguage }) {
       <div style={{ background: 'rgba(43,61,109,1)', padding: '80px 0', borderBottom: '8px solid rgba(213,168,54,1)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%', fontFamily: 'Inter, sans-serif' }}>
           <h2 style={{ color: '#fff', fontSize: '56px', fontWeight: 800, lineHeight: 1, marginBottom: '12px' }}>
-            {isEn ? 'HOW WE' : '我們提供'}
+            {isEn ? 'HOW WE' : '我们提供'}
           </h2>
           <h2 style={{ color: '#fff', fontSize: '56px', fontWeight: 800, lineHeight: 1, marginBottom: '48px' }}>
             {isEn ? 'SUPPORT YOU' : '哪些支持'}
@@ -138,12 +138,12 @@ export default function SupportMain({ language, toggleLanguage }) {
           }}>
             <div style={{ flex: 1, minWidth: '200px' }}>
               <h3 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px' }}>
-                {isEn ? 'Learning Platform — Moodle' : '學習平台 — Moodle'}
+                {isEn ? 'Learning Platform — Moodle' : '学习平台 — Moodle'}
               </h3>
               <p style={{ fontSize: '15px', color: '#555', lineHeight: 1.7, margin: 0 }}>
                 {isEn
                   ? 'All coursework, assignments, and teacher communication happen through Moodle. Log in with the credentials provided at enrollment.'
-                  : '所有課程內容、作業繳交及師生溝通皆透過 Moodle 進行。請使用入學時提供的帳號登入。'}
+                  : '所有课程内容、作业提交及师生沟通均通过 Moodle 进行。请使用入学时提供的账号登入。'}
               </p>
             </div>
             <a
@@ -171,20 +171,20 @@ export default function SupportMain({ language, toggleLanguage }) {
       <div style={{ background: '#f4f6fa', padding: '60px 0' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%', fontFamily: 'Inter, sans-serif' }}>
           <h2 style={{ fontSize: '36px', fontWeight: 800, marginBottom: '32px' }}>
-            {isEn ? 'Get in Touch' : '聯絡我們'}
+            {isEn ? 'Get in Touch' : '联络我们'}
           </h2>
           <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ fontSize: '24px' }}>📞</span>
               <div>
-                <div style={{ fontSize: '12px', color: '#888', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>{isEn ? 'Phone' : '電話'}</div>
+                <div style={{ fontSize: '12px', color: '#888', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>{isEn ? 'Phone' : '电话'}</div>
                 <a href={`tel:${SCHOOL_PHONE.replace(/\s/g,'')}`} style={{ fontSize: '17px', fontWeight: 600, color: '#2b3d6d', textDecoration: 'none' }}>{SCHOOL_PHONE}</a>
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ fontSize: '24px' }}>✉️</span>
               <div>
-                <div style={{ fontSize: '12px', color: '#888', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>{isEn ? 'Email' : '電子郵件'}</div>
+                <div style={{ fontSize: '12px', color: '#888', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>{isEn ? 'Email' : '电子邮件'}</div>
                 <a href={`mailto:${SCHOOL_EMAIL}`} style={{ fontSize: '17px', fontWeight: 600, color: '#2b3d6d', textDecoration: 'none' }}>{SCHOOL_EMAIL}</a>
               </div>
             </div>

@@ -14,7 +14,7 @@ export default function PrivacyPolicy({ language }) {
           content={
             isEn
               ? 'Privacy policy for the Genesis of Ideas International School website and student portal.'
-              : '創思國際學校網站與學生專區之隱私權政策。'
+              : '艾迪尔国际学校网站与学生专区之隐私权政策。'
           }
         />
         <link rel="canonical" href="https://genesisideas.school/privacy" />

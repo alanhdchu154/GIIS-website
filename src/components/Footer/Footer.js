@@ -11,18 +11,18 @@ function Footer({ language }) {
                 {en ? (
                   <>Copyright © {new Date().getFullYear()} Genesis of Ideas International School. All rights reserved.</>
                 ) : (
-                  <>版权所有 © {new Date().getFullYear()} Genesis of Ideas International School（创思国际学校）。保留所有权利。</>
+                  <>版权所有 © {new Date().getFullYear()} Genesis of Ideas International School（艾迪尔国际学校）。保留所有权利。</>
                 )}
               </div>
-              <nav className={styles.footerLinks} aria-label={en ? 'Legal' : '法律資訊'}>
+              <nav className={styles.footerLinks} aria-label={en ? 'Legal' : '法律资讯'}>
                 <Link className={styles.footerLink} to="/privacy">
-                  {en ? 'Privacy' : '隱私'}
+                  {en ? 'Privacy' : '隐私'}
                 </Link>
                 <span className={styles.sep} aria-hidden="true">
                   ·
                 </span>
                 <Link className={styles.footerLink} to="/terms">
-                  {en ? 'Terms' : '條款'}
+                  {en ? 'Terms' : '条款'}
                 </Link>
               </nav>
             </div>

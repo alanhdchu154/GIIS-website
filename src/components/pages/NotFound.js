@@ -8,18 +8,18 @@ function NotFound({ language }) {
     <>
       <Helmet>
         <title>
-          {isEn ? 'Page not found' : '找不到頁面'} | Genesis of Ideas International School
+          {isEn ? 'Page not found' : '找不到页面'} | Genesis of Ideas International School
         </title>
-        <meta name="description" content={isEn ? 'The page you requested does not exist.' : '您要找的頁面不存在。'} />
+        <meta name="description" content={isEn ? 'The page you requested does not exist.' : '您要找的页面不存在。'} />
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="container py-5 text-center">
         <h1 className="display-4">404</h1>
         <p className="lead mb-4">
-          {isEn ? 'We could not find that page.' : '找不到此頁面。'}
+          {isEn ? 'We could not find that page.' : '找不到此页面。'}
         </p>
         <Link to="/" className="btn btn-primary">
-          {isEn ? 'Back to home' : '返回首頁'}
+          {isEn ? 'Back to home' : '返回首页'}
         </Link>
       </div>
     </>

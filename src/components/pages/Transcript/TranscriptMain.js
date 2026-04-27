@@ -20,18 +20,18 @@ function TranscriptMain({ language }) {
           content={
             isEn
               ? 'Transcript and grading information for Genesis of Ideas International School students.'
-              : '創思國際學校成績單與評分說明。'
+              : '艾迪尔国际学校成绩单与评分说明。'
           }
         />
       </Helmet>
       <div className="container">
         {!session?.token ? (
           <div className="py-5" style={{ maxWidth: 520 }}>
-            <h1 className="h5 mb-3">{isEn ? 'Transcript access' : '成績單登入'}</h1>
+            <h1 className="h5 mb-3">{isEn ? 'Transcript access' : '成绩单登入'}</h1>
             <p className="text-muted">
               {isEn
                 ? 'Students: register or sign in to load and save your transcript from our server.'
-                : '學生請先註冊或登入，以載入並儲存你的成績單資料。'}
+                : '学生请先註冊或登入，以载入並储存你的成绩单资料。'}
             </p>
             <div className="d-flex flex-wrap gap-2 mt-3">
               <Link to="/login?tab=register" className="btn btn-primary">
