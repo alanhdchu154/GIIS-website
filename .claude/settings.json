@@ -1,9 +1,32 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node --check src/routes/students.js)",
-      "Bash(node --check src/routes/auth.js)",
-      "Bash(node --check src/index.js)"
+      "Bash(node --check *)",
+      "Bash(brew list *)",
+      "Bash(brew services list)",
+      "Bash(npm run build)",
+      "Bash(npm run db:seed)",
+      "Bash(npm run db:push)",
+      "Bash(npm run dev)",
+      "Bash(npm start)",
+      "Bash(mv *)",
+      "Bash(mkdir -p *)",
+      "Bash(brew fetch *)",
+      "Bash(sw_vers -productVersion)",
+      "Bash(HOMEBREW_NO_BUILD_FROM_SOURCE=1 brew install postgresql@14)",
+      "Bash(pkill -f \"postgresql@14\")",
+      "Bash(rm -f /usr/local/Cellar/postgresql@14/.*.lock /usr/local/locks/postgresql@14)",
+      "Bash(rm -rf /usr/local/Cellar/postgresql@14)",
+      "Bash(rm -f /usr/local/var/homebrew/locks/postgresql@14)",
+      "Bash(export PATH=\"/usr/local/opt/postgresql@14/bin:$PATH\")",
+      "Bash(curl -L --max-time 120 -o /tmp/Postgres.dmg \"https://github.com/PostgresApp/PostgresApp/releases/download/v2.7.7/Postgres-2.7.7-14-15-16-17.dmg\")",
+      "Read(//private/tmp/**)",
+      "Bash(sw_vers)",
+      "Bash(node prisma/seed.js)",
+      "Bash(/usr/local/Cellar/postgresql@14/14.22/bin/pg_ctl -D /usr/local/var/postgresql@14 -l /tmp/postgres.log start)",
+      "Bash(/usr/local/Cellar/postgresql@14/14.22/bin/pg_ctl -D /usr/local/var/postgresql@14 status)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
