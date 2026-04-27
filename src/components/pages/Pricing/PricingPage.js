@@ -45,7 +45,7 @@ const FAQS = [
   },
 ];
 
-export default function PricingPage({ language }) {
+export default function PricingPage({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
 
   return (
@@ -60,7 +60,7 @@ export default function PricingPage({ language }) {
         />
       </Helmet>
 
-      <div className="row"><Nav language={language} /></div>
+      <div className="row"><Nav language={language} toggleLanguage={toggleLanguage} /></div>
 
       {/* Hero */}
       <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #2b3d6d 100%)', padding: '80px 0 72px', fontFamily: 'Inter, sans-serif' }}>

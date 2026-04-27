@@ -98,7 +98,7 @@ export default function ExamPage({ language }) {
           {' → '}
           <Link to={`/learn/${slug}`} style={{ color: '#2b3d6d', textDecoration: 'none' }}>{courseName}</Link>
           {' → '}
-          <span style={{ color: '#444' }}>{isEn ? 'Final Exam' : '期末考试'}</span>
+          <span style={{ color: '#444' }}>{isEn ? (examType === 'midterm' ? 'Midterm Exam' : 'Final Exam') : (examType === 'midterm' ? '期中考试' : '期末考试')}</span>
         </p>
 
         {error && (
@@ -174,7 +174,7 @@ export default function ExamPage({ language }) {
           <>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
               <h1 style={{ fontSize: '26px', fontWeight: 800, color: '#1a1a2e', margin: 0 }}>
-                {isEn ? 'Final Exam' : '期末考试'}
+                {isEn ? (examType === 'midterm' ? 'Midterm Exam' : 'Final Exam') : (examType === 'midterm' ? '期中考试' : '期末考试')}
               </h1>
               <span style={{ fontSize: '13px', color: '#888', fontWeight: 600 }}>
                 {answeredCount}/{questions.length} {isEn ? 'answered' : '已作答'}

@@ -182,11 +182,6 @@ export default function AdmissionMain({ language, toggleLanguage }) {
                 title: { en: 'Accepted by US Universities', zh: '美国大学认可' },
                 body: { en: 'Class of 2026 graduates have been accepted to UCSB, The Ohio State University, UC Davis, Syracuse University, and NJIT.', zh: '2026 届毕业生已获 UCSB、俄亥俄州立大学、UC Davis、雪城大学及 NJIT 录取。' },
               },
-              {
-                icon: '✅',
-                title: { en: 'Cognia Accreditation (In Progress)', zh: 'Cognia 认证（申请中）' },
-                body: { en: 'GIIS is currently pursuing Cognia (formerly AdvancED) accreditation — the most widely recognized K-12 accreditation body in the United States.', zh: 'GIIS 正在申请 Cognia（前身为 AdvancED）认证——美国最广泛认可的 K-12 教育认证机构。' },
-              },
             ].map((item) => (
               <div key={item.icon} style={{
                 background: '#fff', border: '1px solid #e0e6f0',
@@ -341,7 +336,7 @@ export default function AdmissionMain({ language, toggleLanguage }) {
               },
               {
                 q: { en: 'Is the diploma recognized by US universities?', zh: '这个文凭被美国大学认可吗？' },
-                a: { en: 'Yes. GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the same standard followed by US private high schools. Our diploma is designed to be recognized by US colleges during international student admissions review. GIIS is currently pursuing Cognia accreditation.', zh: '是的。GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭——与美国私立高中标准一致。我们的文凭在美国大学国际学生申请审核中具备完整的学术效力。GIIS 目前正在申请 Cognia 认证。' },
+                a: { en: 'Yes. GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the same standard followed by US private high schools. Our diploma is designed to be recognized by US colleges during international student admissions review.', zh: '是的。GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭——与美国私立高中标准一致。我们的文凭在美国大学国际学生申请审核中具备完整的学術效力。' },
               },
               {
                 q: { en: 'How long does the program take?', zh: '课程需要多长时间完成？' },

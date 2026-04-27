@@ -129,7 +129,7 @@ function App() {
          <Route path="/learn/:slug/grades" element={<GradesPage language={language} />} />
          <Route path="/learn/:slug/syllabus" element={<SyllabusPage language={language} />} />
          <Route path="/profile" element={<ProfilePage language={language} />} />
-         <Route path="/pricing" element={<PricingPage language={language} />} />
+         <Route path="/pricing" element={<PricingPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/privacy" element={<PrivacyPolicy language={language} />} />
          <Route path="/terms" element={<TermsOfUse language={language} />} />
          <Route path="*" element={<NotFound language={language} />} />
