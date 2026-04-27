@@ -99,43 +99,33 @@ function HomepageMain({ language, toggleLanguage }) {
         <Nav language={language} toggleLanguage={toggleLanguage} />
       </div>
 
-      {/* Hero slider + slogan */}
-      <div className="card mb-0" id="homepage">
-        <div className="container-fluid">
-          <ImgSlider />
-          <div className="card-body">
-            <Slogan language={language} />
-          </div>
-        </div>
+      {/* Hero slider */}
+      <div id="homepage">
+        <ImgSlider />
       </div>
+
+      {/* CTA strip */}
+      <Slogan language={language} />
 
       {/* Why GIIS — 4 pillar cards */}
       <div id="about" style={{ background: '#f4f6fb' }}>
         <Introduction language={language} />
       </div>
 
-      {/* 10 Pathways showcase */}
+      {/* 8 Pathways showcase */}
       <HomepagePathways language={language} />
 
       {/* Student success stories */}
       <SuccessStories language={language} />
 
       {/* Testimonials */}
-      <div className="card mb-0" id="testimonials">
-        <div className="container-fluid">
-          <div className="card-body">
-            <Testimonial language={language} />
-          </div>
-        </div>
+      <div id="testimonials">
+        <Testimonial language={language} />
       </div>
 
-      {/* Faculty */}
-      <div className="card mb-0" id="faculty">
-        <div className="container-fluid">
-          <div className="card-body">
-            <FacultyGraduates language={language} />
-          </div>
-        </div>
+      {/* Where our students go */}
+      <div id="faculty">
+        <FacultyGraduates language={language} />
       </div>
 
       {/* Contact/inquiry form */}
