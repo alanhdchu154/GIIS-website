@@ -5,7 +5,6 @@ import Nav from '../../main/Nav.js';
 import ImgSlider from './Homepage/ImgSlider.js';
 import Slogan from './Homepage/Slogan';
 import Introduction from './Homepage/Introduction';
-import Testimonial from './Homepage/Testimonial.js';
 import FacultyGraduates from './Homepage/FacultyGraduates.js';
 import ContactForm from './Homepage/ContactForm';
 import SuccessStories from './Homepage/SuccessStories';
@@ -117,11 +116,6 @@ function HomepageMain({ language, toggleLanguage }) {
 
       {/* Student success stories */}
       <SuccessStories language={language} />
-
-      {/* Testimonials */}
-      <div id="testimonials">
-        <Testimonial language={language} />
-      </div>
 
       {/* Where our students go */}
       <div id="faculty">
