@@ -46,11 +46,11 @@ export default function Academicsintroduction2({ language }) {
       {/* ── Section 1: OUR PROGRAMS ─────────────────────────────── */}
       <div style={{ padding: '80px 0 60px', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
-          <h2 style={{ fontSize: '70px', fontWeight: 800, lineHeight: 1, marginBottom: '16px' }}>
-            {isEn ? 'OUR' : '课程'}
-          </h2>
-          <h2 style={{ fontSize: '70px', fontWeight: 800, lineHeight: 1, marginBottom: '40px' }}>
-            {isEn ? 'PROGRAMS' : '架构'}
+          <p style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
+            {isEn ? 'Curriculum Structure' : '课程架构'}
+          </p>
+          <h2 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 800, lineHeight: 1.05, marginBottom: '16px', color: '#1a1a2e' }}>
+            {isEn ? 'Our Programs' : '课程体系'}
           </h2>
           <p style={{ fontSize: '20px', color: '#555', maxWidth: '640px', lineHeight: 1.7, marginBottom: '56px' }}>
             {isEn

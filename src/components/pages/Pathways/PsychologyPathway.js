@@ -485,6 +485,6 @@ const COURSES = [
   },
 ];
 
-export default function PsychologyPathway() {
-  return <PathwayPage meta={META} schedule={SCHEDULE} courses={COURSES} />;
+export default function PsychologyPathway({ language, toggleLanguage }) {
+  return <PathwayPage meta={META} schedule={SCHEDULE} courses={COURSES} language={language} toggleLanguage={toggleLanguage} />;
 }

@@ -1,57 +1,13 @@
-.pageFooter {
-    background-color: rgba(43, 61, 109, 1); 
-    color: #ffffff; 
-    display: flex;
-    align-items: center;
-    height: 50px;
-    width: 100%; 
-    font-size: 18px;
+/* Footer styles handled inline; only responsive overrides here */
+
+@media (max-width: 768px) {
+  footer > div:first-child {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
 
-.footerInner {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 0 16px;
-}
-
-.footerCopy {
-  min-width: 0;
-}
-
-.footerLinks {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  font-size: 14px;
-}
-
-.footerLink {
-  color: #ffffff;
-  text-decoration: none;
-  opacity: 0.9;
-}
-
-.footerLink:hover {
-  text-decoration: underline;
-  opacity: 1;
-}
-
-.sep {
-  opacity: 0.7;
-}
-
-@media (orientation: landscape) and (max-width: 736px) {
- .pageFooter{
-    font-size: 14px !important; 
- }
-}
-
-@media (orientation: portrait) and (max-width: 736px) {
- .pageFooter{
-    font-size: 12px !important; 
- }
+@media (max-width: 480px) {
+  footer > div:first-child {
+    grid-template-columns: 1fr !important;
+  }
 }

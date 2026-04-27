@@ -379,6 +379,6 @@ const COURSES = [
   },
 ];
 
-export default function EngineeringPathway() {
-  return <PathwayPage meta={META} schedule={SCHEDULE} courses={COURSES} />;
+export default function EngineeringPathway({ language, toggleLanguage }) {
+  return <PathwayPage meta={META} schedule={SCHEDULE} courses={COURSES} language={language} toggleLanguage={toggleLanguage} />;
 }

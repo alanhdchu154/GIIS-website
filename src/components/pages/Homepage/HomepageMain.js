@@ -52,7 +52,7 @@ function HomepagePathways({ language }) {
           </Link>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '10px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px' }}>
           {PATHWAY_HIGHLIGHTS.map((p) => (
             <Link key={p.to} to={p.to} style={{ textDecoration: 'none' }}>
               <div style={{

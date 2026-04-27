@@ -53,7 +53,7 @@ export default function ContactForm({ language = 'en' }) {
       fontFamily: 'Inter, sans-serif',
     }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '64px', alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '48px', alignItems: 'start' }}>
 
           {/* Left: info */}
           <div>

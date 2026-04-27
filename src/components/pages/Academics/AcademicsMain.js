@@ -18,7 +18,7 @@ const PATHWAYS = [
   { title: 'Arts & Design',         titleZh: '艺术与设计',       color: '#6A1B9A', emoji: '🎨', to: '/pathways/arts',           ap: 1 },
 ];
 
-function AcademicsMain({ language }) {
+function AcademicsMain({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
 
   return (
@@ -34,7 +34,7 @@ function AcademicsMain({ language }) {
       </Helmet>
 
       <div className="row">
-        <Nav language={language} />
+        <Nav language={language} toggleLanguage={toggleLanguage} />
       </div>
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
@@ -60,16 +60,11 @@ function AcademicsMain({ language }) {
       </div>
 
       {/* ── What Makes GIIS Different ─────────────────────────────────── */}
-      <div className="card mt-0" id="introduction2" style={{
-        position: 'relative', zIndex: 10,
+      <div id="introduction2" style={{
         backgroundColor: 'rgba(43, 61, 109, 1)',
-        borderBottom: '20px solid rgba(213, 168, 54, 1)',
+        borderBottom: '6px solid rgba(213, 168, 54, 1)',
       }}>
-        <div className="container">
-          <div className="card-body">
-            <AcademicsIntroduction language={language} />
-          </div>
-        </div>
+        <AcademicsIntroduction language={language} />
       </div>
 
       {/* ── Our Programs + AP Courses ─────────────────────────────────── */}
@@ -110,7 +105,7 @@ function AcademicsMain({ language }) {
             </Link>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '10px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px' }}>
             {PATHWAYS.map((p) => (
               <Link key={p.to} to={p.to} style={{ textDecoration: 'none' }}>
                 <div style={{

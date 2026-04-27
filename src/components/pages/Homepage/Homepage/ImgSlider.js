@@ -28,12 +28,11 @@ function ImgSlider() {
     return (
         <Slider {...settings}>
             {images.map((image, index) => (
-                <div key={index} className="card-body">
+                <div key={index}>
                     <img
                         src={image.src}
                         alt={image.alt}
-                        className="d-block h-100"
-                        style={{ width: '100%', objectFit: 'cover' }}
+                        style={{ width: '100%', height: '520px', objectFit: 'cover', display: 'block' }}
                         loading={index === 0 ? 'eager' : 'lazy'}
                         decoding="async"
                     />

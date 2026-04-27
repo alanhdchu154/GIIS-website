@@ -370,6 +370,6 @@ const COURSES = [
   },
 ];
 
-export default function EconomicsPathway() {
-  return <PathwayPage meta={META} schedule={SCHEDULE} courses={COURSES} />;
+export default function EconomicsPathway({ language, toggleLanguage }) {
+  return <PathwayPage meta={META} schedule={SCHEDULE} courses={COURSES} language={language} toggleLanguage={toggleLanguage} />;
 }

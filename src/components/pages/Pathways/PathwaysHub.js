@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Nav from '../../main/Nav.js';
 
 const CATEGORIES = [
   {
@@ -164,7 +165,7 @@ function PathwayCard({ p, isEn }) {
   );
 }
 
-export default function PathwaysHub({ language }) {
+export default function PathwaysHub({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
 
   return (
@@ -179,11 +180,8 @@ export default function PathwaysHub({ language }) {
         />
       </Helmet>
 
-      {/* Back bar */}
-      <div style={{ background: '#1a1a2e', padding: '10px 32px' }}>
-        <Link to="/academics" style={{ color: '#9b9fc5', fontSize: 13, textDecoration: 'none', fontWeight: 500 }}>
-          ← {isEn ? 'Academics' : '学术'}
-        </Link>
+      <div className="row">
+        <Nav language={language} toggleLanguage={toggleLanguage} />
       </div>
 
       {/* Hero */}
@@ -196,8 +194,8 @@ export default function PathwaysHub({ language }) {
         </h1>
         <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '17px', maxWidth: '640px', lineHeight: 1.7, margin: '0 0 36px' }}>
           {isEn
-            ? 'Ten 4-year elective sequences built around the top US university majors chosen by Chinese international students. Each pathway includes a complete course schedule, full syllabi, curated resources, and interactive quizzes.'
-            : '围绕中国留学生最热门的美国大学申请专业方向，精心设计的十条四年选修课程序列。每条路径均含完整课程安排、详细大纲、精选学习资源与互动测验。'}
+            ? '8 four-year elective sequences built around the top US university majors chosen by Chinese international students. Each pathway includes a complete course schedule, full syllabi, curated resources, and interactive quizzes.'
+            : '围绕中国留学生最热门的美国大学申请专业方向，精心设计的八条四年选修课程序列。每条路径均含完整课程安排、详细大纲、精选学习资源与互动测验。'}
         </p>
         <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
           {[
@@ -230,7 +228,7 @@ export default function PathwaysHub({ language }) {
                   {isEn ? cat.desc : cat.descZh}
                 </p>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cat.pathways.length}, 1fr)`, gap: '18px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '18px' }}>
                 {cat.pathways.map(p => (
                   <PathwayCard key={p.to} p={p} isEn={isEn} />
                 ))}

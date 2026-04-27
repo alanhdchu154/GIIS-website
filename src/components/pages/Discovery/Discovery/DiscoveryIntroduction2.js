@@ -1,148 +1,107 @@
 import React from 'react';
-import FacultyGraduates from './FacultyGraduates.js';
+
+const VALUES = [
+  {
+    emoji: '🎯',
+    titleEn: 'Personalized Learning',
+    titleZh: '个性化学习',
+    bodyEn: 'Every student chooses their academic pathway based on their target US university major. Advisors track progress each semester to keep students on course.',
+    bodyZh: '每位学生根据目标美国大学专业选择学习路径，顾问每学期跟踪进度，确保学生始终方向明确。',
+  },
+  {
+    emoji: '🌏',
+    titleEn: 'International Perspective',
+    titleZh: '国际视野',
+    bodyEn: 'Our curriculum is designed around US university admissions standards — building the academic profile that top US programs are looking for.',
+    bodyZh: '我们的课程围绕美国大学招生标准设计，帮助学生建立顶尖美国院校所期望的学术背景。',
+  },
+  {
+    emoji: '📈',
+    titleEn: 'Comprehensive Development',
+    titleZh: '全面发展',
+    bodyEn: 'Beyond academics, we emphasize leadership, critical thinking, and entrepreneurial spirit — preparing students to thrive in university and beyond.',
+    bodyZh: '超越学术本身，我们注重培养领导力、批判性思维和创业精神，让学生在大学及未来的道路上充分发展。',
+  },
+];
+
+const MISSION_POINTS = [
+  { en: 'Personalized advisor support every semester', zh: '每学期提供个性化顾问支持' },
+  { en: 'Curriculum built around US university admissions', zh: '课程围绕美国大学申请标准设计' },
+  { en: 'Global citizens with a strong sense of responsibility', zh: '培养具有社会责任感的全球公民' },
+  { en: 'Leadership and entrepreneurial spirit development', zh: '领导力与创业精神培养' },
+];
 
 function DiscoveryIntroduction2({ language }) {
-
-    const headlineStyle = {
-        marginTop: '60px',
-        color: 'rgba(0, 0, 0, 1)',
-        width: '60%',
-        paddingLeft: '12%',
-        fontFamily: 'Inter, sans-serif',
-        fontWeight: 'bold',
-        fontSize: '55px',
-    };
- 
-    const headlineStyle2 = {
-        marginTop: '60px',
-        color: 'rgba(0, 0, 0, 1)',
-        width: '60%',
-        paddingLeft: '12%',
-        fontFamily: 'Inter, sans-serif',
-        fontWeight: 'bold',
-        fontSize: '55px',
-    };
-
-
-    const headlineStyle3 = {
-        marginTop: '60px',
-        color: 'rgba(0, 0, 0, 1)',
-        width: '100%',
-        paddingLeft: '12%',
-        fontFamily: 'Inter, sans-serif',
-        fontWeight: 'bold',
-        fontSize: '55px',
-    };
-
-    const container = {
-        color: 'rgba(0, 0, 0, 1)',
-        width: '90%',
-        height: '50%',
-        paddingLeft: '12%',
-        fontFamily: 'Inter, sans-serif',
-        fontSize: '30px',
-        wordWrap: 'break-word',
-        lineHeight: '1.25',
-    };
-
-    const container2 = {
-        color: 'rgba(0, 0, 0, 0.8)',
-        width: '85%',
-        height: '50%',
-        paddingLeft: '12%',
-        fontFamily: 'Inter, sans-serif',
-        fontSize: '25px',
-        wordWrap: 'break-word',
-    };
-
-    const container3 = {
-        marginTop: '40px',
-        color: 'rgba(0, 0, 0, 0.8)',
-        width: '85%',
-        height: '50%',
-        paddingLeft: '12%',
-        fontFamily: 'Inter, sans-serif',
-        fontSize: '25px',
-        wordWrap: 'break-word',
-    };
-
-    const container4 = {
-        marginTop: '40px',
-        color: 'rgba(0, 0, 0, 0.8)',
-        width: '85%',
-        height: '70%',
-        paddingLeft: '12%',
-        fontFamily: 'Inter, sans-serif',
-        fontSize: '25px',
-        wordWrap: 'break-word',
-        marginBottom: '55px',
-    };
-
-    
-    return (
-      <>
-        <div style={headlineStyle}>
-          <p>Core values</p>
-        </div>
-
-        <div style={container}>
-          <p>{language === 'en' ? 'PERSONALIZED LEARNING' : '个人化学习'}</p>  
-          <p>{language === 'en' ? 'COMPREHENSIVE DEVELOPMENT' : '全面性发展'}</p>
-          <p>{language === 'en' ? 'INTERNATIONAL PERSPECTIVE' : '国际视野'}</p>
-        </div>
-
-        <div style={headlineStyle2}>
-          <p>Mission</p>
-        </div>
-
-        <div style={container2}>
-          {language === 'zh' ? (
-                    <p>
-                        GIIS的教育理念是启发潜能并培养领袖。我们重视学生的个人发展和全面成长，提供多样化的学习机会。透过提供丰富的资源并鼓励积极探索，我们营造出一个让学生茁壮成长的学习环境。
-                    </p>
-                ) : (
-                    <p>
-                        GIIS's educational philosophy is to inspire potential and cultivate leaders. We prioritize individual student development and overall growth, offering a diverse range of learning opportunities. By providing abundant resources and encouraging active exploration, we foster a learning environment where students can thrive.
-                    </p>
-                )}
-        </div>
-
-        <div style={container3}>
-          {language === 'zh' ? (
-                    <p>
-                        透过密切的师生互动，学生们获得个性化的指导与支持。我们也强调领导力、全球视野和创业精神的培养，以装备学生应对未来的挑战。我们相信，在这样一个充满关怀的环境中，学生们将成为具备强烈社会责任感的全球公民。
-                    </p>
-                ) : (
-                    <p>
-                        Through close teacher-student interactions, students receive personalized guidance and support. We also emphasize the development of leadership, global vision, and entrepreneurial spirit to equip our students for the challenges of the future. We believe that in this nurturing environment, our students will become global citizens with a strong sense of social responsibility.
-
-                    </p>
-                )}
-        </div>
-
-        <div style={headlineStyle3}>
-          <p>{language === 'zh' ? '教师与毕业生' : 'Faculty & Graduates'}</p>
-        </div>
-                    
-        <div className="container-fluid">
-          <div className="card-body">
-             <FacultyGraduates />
+  const isEn = language !== 'zh';
+  return (
+    <>
+      {/* Core Values */}
+      <section style={{ background: '#f4f6fb', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
+          <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
+            {isEn ? 'What We Stand For' : '我们的理念'}
+          </p>
+          <h2 style={{ fontSize: 'clamp(28px, 4vw, 46px)', fontWeight: 800, color: '#1a1a2e', margin: '0 0 48px', lineHeight: 1.05 }}>
+            {isEn ? 'Our Core Values' : '核心价值观'}
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px' }}>
+            {VALUES.map((v) => (
+              <div key={v.titleEn} style={{
+                background: '#fff', borderRadius: '12px',
+                border: '1px solid #e0e6f5', padding: '28px',
+                borderTop: '4px solid #2b3d6d',
+              }}>
+                <div style={{ fontSize: '28px', marginBottom: '14px' }}>{v.emoji}</div>
+                <h3 style={{ margin: '0 0 10px', fontSize: '17px', fontWeight: 700, color: '#1a1a2e' }}>
+                  {isEn ? v.titleEn : v.titleZh}
+                </h3>
+                <p style={{ margin: 0, fontSize: '14px', color: '#555', lineHeight: 1.75 }}>
+                  {isEn ? v.bodyEn : v.bodyZh}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div style={container4}>
-           {language === 'zh' ? (
-                    <p>
-                        我们的师资和毕业生来自全球顶尖学府。这些世界一流大学的联系，不仅彰显了我们师资的卓越，也展现了我们毕业生的非凡成就。我们致力于汇聚来自这些著名学府的专家与学者，为学生提供最高品质的教育体验。
-                    </p>
-                ) : (
-                    <p>
-                        Our faculty and graduates come from leading institutions around the world. This connection to world-class universities not only highlights the excellence of our faculty but also reflects the remarkable achievements of our graduates. We are committed to bringing together experts and scholars from these prestigious institutions to provide our students with the highest-quality educational experience.
-                    </p>
-                )}
-        </div>   
-      </>
-   );
+      {/* Mission */}
+      <section style={{ background: '#fff', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '60px', alignItems: 'center' }}>
+            <div>
+              <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
+                {isEn ? 'Our Mission' : '我们的使命'}
+              </p>
+              <h2 style={{ fontSize: 'clamp(26px, 3.5vw, 42px)', fontWeight: 800, color: '#1a1a2e', margin: '0 0 20px', lineHeight: 1.1 }}>
+                {isEn ? 'Inspire Potential,\nCultivate Leaders' : '启发潜能，培养领袖'}
+              </h2>
+              <p style={{ fontSize: '15px', color: '#555', lineHeight: 1.8, margin: 0 }}>
+                {isEn
+                  ? "GIIS's mission is to inspire potential and cultivate the next generation of leaders. We prioritize individual student development through personalized guidance and abundant learning resources, creating an environment where every student can thrive."
+                  : 'GIIS 的使命是启发潜能、培育新一代领袖。我们通过个性化指导和丰富的学习资源，优先关注每位学生的个人发展，打造一个让每个人都能蓬勃成长的环境。'}
+              </p>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {MISSION_POINTS.map((item, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                  <div style={{
+                    flexShrink: 0, width: '20px', height: '20px', borderRadius: '50%',
+                    background: '#2b3d6d', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    marginTop: '2px',
+                  }}>
+                    <span style={{ color: '#fff', fontSize: '10px', fontWeight: 800 }}>✓</span>
+                  </div>
+                  <p style={{ margin: 0, fontSize: '14px', color: '#333', lineHeight: 1.6 }}>
+                    {isEn ? item.en : item.zh}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default DiscoveryIntroduction2;

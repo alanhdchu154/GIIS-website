@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Nav from '../../main/Nav.js';
 
 // ─── Schedule helpers ─────────────────────────────────────────────────────────
 
@@ -221,7 +221,7 @@ export function ScheduleGrid({ schedule, color, onCourseClick }) {
 
 // ─── PathwayPage (full template) ──────────────────────────────────────────────
 
-export function PathwayPage({ meta, schedule, courses }) {
+export function PathwayPage({ meta, schedule, courses, language, toggleLanguage }) {
   const { color, title, subtitle, emoji: pathEmoji, heroDescription, targets, courseEmoji, collegeNote, stats: extraStats } = meta;
 
   function scrollToCourse(courseId) {
@@ -255,9 +255,8 @@ export function PathwayPage({ meta, schedule, courses }) {
         <meta name="description" content={`Complete 4-year ${title} pathway at GIIS — full schedule, syllabi, resources, and quizzes.`} />
       </Helmet>
 
-      {/* Back to hub */}
-      <div style={{ background: '#1a1a2e', padding: '10px 32px' }}>
-        <Link to="/academics" style={{ color: '#9b9fc5', fontSize: 13, textDecoration: 'none', fontWeight: 500 }}>← Academics</Link>
+      <div className="row">
+        <Nav language={language} toggleLanguage={toggleLanguage} />
       </div>
 
       {/* Hero */}

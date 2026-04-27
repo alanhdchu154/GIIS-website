@@ -85,6 +85,9 @@ function Nav({ language, toggleLanguage }) {
                                 <li onClick={() => go('/admission')}>
                                     <Link to="/admission" onClick={e => e.preventDefault()}>{t.admission}</Link>
                                 </li>
+                                <li onClick={() => go('/pricing')}>
+                                    <Link to="/pricing" onClick={e => e.preventDefault()}>{isEn ? 'Tuition & Pricing' : '学费'}</Link>
+                                </li>
                                 <li onClick={() => go('/support')}>
                                     <Link to="/support" onClick={e => e.preventDefault()}>{t.support}</Link>
                                 </li>

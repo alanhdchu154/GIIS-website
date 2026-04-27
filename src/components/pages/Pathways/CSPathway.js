@@ -377,6 +377,6 @@ const COURSES = [
   },
 ];
 
-export default function CSPathway() {
-  return <PathwayPage meta={META} schedule={SCHEDULE} courses={COURSES} />;
+export default function CSPathway({ language, toggleLanguage }) {
+  return <PathwayPage meta={META} schedule={SCHEDULE} courses={COURSES} language={language} toggleLanguage={toggleLanguage} />;
 }

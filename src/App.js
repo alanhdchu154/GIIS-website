@@ -101,7 +101,7 @@ function App() {
        <Routes>
          <Route path="/" element={<Homepage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/discovery" element={<Discovery language={language} toggleLanguage={toggleLanguage}  />} />
-         <Route path="/academics" element={<Academics language={language}/>} />
+         <Route path="/academics" element={<Academics language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/admission" element={<Admission language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/support" element={<Support language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/transcript" element={<Transcript language={language}/>}/>
@@ -111,16 +111,16 @@ function App() {
          <Route path="/admin" element={<AdminDashboard language={language} />} />
          <Route path="/admin/transcript/:studentId" element={<AdminTranscriptPage language={language} />} />
          {/* Pathways hub */}
-         <Route path="/pathways" element={<PathwaysHub language={language} />} />
+         <Route path="/pathways" element={<PathwaysHub language={language} toggleLanguage={toggleLanguage} />} />
          {/* Individual pathways */}
-         <Route path="/pathways/psychology" element={<PsychologyPathway />} />
-         <Route path="/pathways/cs" element={<CSPathway />} />
-         <Route path="/pathways/business" element={<BusinessPathway />} />
-         <Route path="/pathways/economics" element={<EconomicsPathway />} />
-         <Route path="/pathways/engineering" element={<EngineeringPathway />} />
-         <Route path="/pathways/math" element={<MathDataPathway />} />
-         <Route path="/pathways/communications" element={<CommunicationsPathway />} />
-         <Route path="/pathways/arts" element={<ArtsDesignPathway />} />
+         <Route path="/pathways/psychology" element={<PsychologyPathway language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/pathways/cs" element={<CSPathway language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/pathways/business" element={<BusinessPathway language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/pathways/economics" element={<EconomicsPathway language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/pathways/engineering" element={<EngineeringPathway language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/pathways/math" element={<MathDataPathway language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/pathways/communications" element={<CommunicationsPathway language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/pathways/arts" element={<ArtsDesignPathway language={language} toggleLanguage={toggleLanguage} />} />
          {/* Learning portal */}
          <Route path="/learn" element={<LearnDashboard language={language} />} />
          <Route path="/learn/:slug" element={<CoursePage language={language} />} />
