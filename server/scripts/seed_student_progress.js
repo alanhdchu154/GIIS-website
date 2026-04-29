@@ -192,7 +192,7 @@ async function seedStudent(student) {
       enrollment = await db.enrollment.create({
         data: { studentId: student.id, courseId: course.id, semesterLabel },
       });
-    } else if (!enrollment.semesterLabel) {
+    } else {
       enrollment = await db.enrollment.update({
         where: { id: enrollment.id },
         data: { semesterLabel },
