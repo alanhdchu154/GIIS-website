@@ -38,7 +38,7 @@ const DEPT_TO_PATHWAY = {
 
 const PATHWAY_ORDER = ['Math & Data','Science','Communications','Social Studies','Psychology','Business','Technology','PE & Sports','Electives'];
 
-function fmt1(v) { return v != null ? parseFloat(v).toFixed(1) : null; }
+function fmt2(v) { return v != null ? parseFloat(v).toFixed(2) : null; }
 
 const LETTER_TO_GPA = {
   'A': 4.0, 'A-': 3.7, 'B+': 3.3, 'B': 3.0, 'B-': 2.7,
@@ -236,7 +236,7 @@ export default function LearnDashboard({ language }) {
   const allCourses = useCourses();
   const [enrolling, setEnrolling] = useState(null);
   const [enrollErr, setEnrollErr] = useState('');
-  const [pathwayFilter, setPathwayFilter] = useState('All');
+  const [pathwayFilter, setPathwayFilter] = useState(null); // null = auto-detect
   const [expandedSems, setExpandedSems] = useState(new Set());
 
   function toggleSem(sem) {
@@ -311,7 +311,7 @@ export default function LearnDashboard({ language }) {
   )];
   const catalogCourses = (allCourses || []).filter((c) => {
     if (enrolledSlugs.has(c.slug)) return false;
-    if (pathwayFilter !== 'All' && DEPT_TO_PATHWAY[c.department]?.label !== pathwayFilter) return false;
+    if (activePathwayFilter !== 'All' && DEPT_TO_PATHWAY[c.department]?.label !== activePathwayFilter) return false;
     return true;
   });
 
@@ -320,6 +320,9 @@ export default function LearnDashboard({ language }) {
   myEnrollments.forEach((e) => { const d = e.course.department; deptCount[d] = (deptCount[d] || 0) + 1; });
   const topDept = Object.entries(deptCount).sort((a, b) => b[1] - a[1])[0]?.[0];
   const detectedPathway = topDept ? DEPT_TO_PATHWAY[topDept] : null;
+
+  // Default pathway filter to student's top pathway on first render
+  const activePathwayFilter = pathwayFilter ?? (detectedPathway?.label || 'All');
 
   return (
     <>
@@ -363,7 +366,7 @@ export default function LearnDashboard({ language }) {
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px' }}>
             <StatCard label={isEn ? 'Credits Earned' : '已获学分'} value={creditsEarned % 1 === 0 ? creditsEarned : creditsEarned.toFixed(1)} sub={`/ ${GRAD_CREDITS} ${isEn ? 'to graduate' : '毕业学分'}`} />
             <StatCard label={isEn ? 'Completed' : '已完成'} value={completed.length} sub={isEn ? `of ${myEnrollments.length} courses` : `共 ${myEnrollments.length} 门`} />
-            <StatCard label="GPA (UW)" value={fmt1(gpa) ?? '—'} sub={isEn ? '4.0 scale' : '4.0 制'} />
+            <StatCard label="GPA (UW)" value={fmt2(gpa) ?? '—'} sub={isEn ? '4.0 scale' : '4.0 制'} />
             <StatCard label={isEn ? 'In Progress' : '进行中'} value={inProgress.length} sub={isEn ? 'active courses' : '门进行中'} />
           </div>
         )}
@@ -479,12 +482,21 @@ export default function LearnDashboard({ language }) {
                   const g = label.match(/Grade (\d+)/); const grade = g ? parseInt(g[1]) : 99;
                   return grade * 2 + (label.toLowerCase().includes('fall') ? 0 : 1);
                 };
-                const semesters = Object.keys(semMap).sort((a, b) => sortKey(a) - sortKey(b));
-                const currentSem = semesters[semesters.length - 1];
+                // Sort ascending to compute cumulative GPA, then display descending
+                const semestersAsc = Object.keys(semMap).sort((a, b) => sortKey(a) - sortKey(b));
+                const currentSem = semestersAsc[semestersAsc.length - 1];
+                // Pre-compute cumulative GPA per semester (oldest→newest)
+                const cumulativeGPAMap = {};
+                const cumAcc = [];
+                for (const sem of semestersAsc) {
+                  cumAcc.push(...semMap[sem]);
+                  cumulativeGPAMap[sem] = computeSemGPAs([...cumAcc]);
+                }
+                const semesters = [...semestersAsc].reverse(); // display newest first
                 return semesters.map((sem) => {
                   const semEnrs = semMap[sem];
+                  const semGPA = cumulativeGPAMap[sem];
                   const semCredits = semEnrs.reduce((s, e) => s + Number(e.course.credits), 0).toFixed(1);
-                  const semGPA = computeSemGPAs(semEnrs);
                   const isCurrent = sem === currentSem;
                   const isOpen = isCurrent || expandedSems.has(sem);
                   return (
@@ -511,7 +523,7 @@ export default function LearnDashboard({ language }) {
                       </span>
                       {semGPA.weighted && (
                         <span style={{ fontSize: '11px', color: '#555', fontWeight: 700 }}>
-                          {isEn ? 'W' : '加权'} {fmt1(semGPA.weighted)} · {isEn ? 'UW' : '非加权'} {fmt1(semGPA.unweighted)}
+                          {isEn ? 'W' : '加权'} {fmt2(semGPA.weighted)} · {isEn ? 'UW' : '非加权'} {fmt2(semGPA.unweighted)}
                         </span>
                       )}
                     </div>
@@ -552,8 +564,8 @@ export default function LearnDashboard({ language }) {
             {availablePathways.map((p) => (
               <button key={p} onClick={() => setPathwayFilter(p)} style={{
                 fontSize: '11px', fontWeight: 600, padding: '4px 12px', borderRadius: '20px', cursor: 'pointer',
-                background: pathwayFilter === p ? '#1a1a2e' : '#f0f2f8',
-                color: pathwayFilter === p ? '#fff' : '#444', border: 'none',
+                background: activePathwayFilter === p ? '#1a1a2e' : '#f0f2f8',
+                color: activePathwayFilter === p ? '#fff' : '#444', border: 'none',
               }}>{p}</button>
             ))}
           </div>

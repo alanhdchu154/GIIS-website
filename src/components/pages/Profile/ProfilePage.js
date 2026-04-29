@@ -94,6 +94,19 @@ export default function ProfilePage({ language }) {
 
   const enrollments = profile.enrollments || [];
 
+  // Group enrollments by semester, descending order
+  const semMap = {};
+  enrollments.forEach(enr => {
+    const label = enr.semesterLabel || 'Other';
+    if (!semMap[label]) semMap[label] = [];
+    semMap[label].push(enr);
+  });
+  const semSortKey = (label) => {
+    const g = label.match(/Grade (\d+)/); const grade = g ? parseInt(g[1]) : 99;
+    return grade * 2 + (label.toLowerCase().includes('fall') ? 0 : 1);
+  };
+  const sortedSemesters = Object.keys(semMap).sort((a, b) => semSortKey(b) - semSortKey(a));
+
   return (
     <>
       <Helmet>
@@ -177,29 +190,39 @@ export default function ProfilePage({ language }) {
               {enrollments.length === 0 ? (
                 <p style={{ fontSize: '14px', color: '#888' }}>{isEn ? 'No courses yet.' : '暂未报名课程。'} <Link to="/learn" style={{ color: '#2b3d6d' }}>{isEn ? 'Browse courses' : '浏览课程'}</Link></p>
               ) : (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  {enrollments.map(enr => {
-                    const quizCount = (enr.quizAttempts || []).length;
-                    const midAttempt = (enr.examAttempts || []).find(a => a.examType === 'midterm' && a.submittedAt);
-                    const finalAttempt = (enr.examAttempts || []).find(a => a.examType === 'final' && a.submittedAt);
-                    return (
-                      <Link key={enr.id} to={`/learn/${enr.course.slug}`} style={{ textDecoration: 'none' }}>
-                        <div style={{ padding: '14px 16px', background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: '8px', transition: 'border-color 0.15s' }}
-                          onMouseEnter={e => e.currentTarget.style.borderColor = '#2b3d6d'}
-                          onMouseLeave={e => e.currentTarget.style.borderColor = '#e0e6f0'}>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <p style={{ margin: 0, fontSize: '14px', fontWeight: 700, color: '#1a1a2e' }}>{isEn ? enr.course.name : (enr.course.nameZh || enr.course.name)}</p>
-                            {enr.creditEarned && <span style={{ fontSize: '11px', background: '#e8f5e9', color: '#2e7d32', padding: '2px 8px', borderRadius: '20px', fontWeight: 700 }}>🎓 {isEn ? 'Credit' : '已获学分'}</span>}
-                          </div>
-                          <p style={{ margin: '4px 0 0', fontSize: '12px', color: '#888' }}>
-                            {quizCount} {isEn ? 'quizzes done' : '测验已完成'}
-                            {midAttempt && ` · Mid ${Math.round(Number(midAttempt.score))}%`}
-                            {finalAttempt && ` · Final ${Math.round(Number(finalAttempt.score))}%`}
-                          </p>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  {sortedSemesters.map((sem, si) => (
+                    <div key={sem}>
+                      <p style={{ margin: '0 0 6px', fontSize: '10px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
+                        {sem}{si === 0 && <span style={{ marginLeft: '6px', background: '#2b3d6d', color: '#fff', fontSize: '9px', padding: '1px 5px', borderRadius: '8px' }}>{isEn ? 'LATEST' : '最新'}</span>}
+                      </p>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                        {semMap[sem].map(enr => {
+                          const midAttempt = (enr.examAttempts || []).find(a => a.examType === 'midterm' && a.submittedAt);
+                          const finalAttempt = (enr.examAttempts || []).find(a => a.examType === 'final' && a.submittedAt);
+                          return (
+                            <Link key={enr.id} to={`/learn/${enr.course.slug}`} style={{ textDecoration: 'none' }}>
+                              <div style={{ padding: '10px 14px', background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: '8px' }}
+                                onMouseEnter={e => e.currentTarget.style.borderColor = '#2b3d6d'}
+                                onMouseLeave={e => e.currentTarget.style.borderColor = '#e0e6f0'}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                  <p style={{ margin: 0, fontSize: '13px', fontWeight: 700, color: '#1a1a2e' }}>{isEn ? enr.course.name : (enr.course.nameZh || enr.course.name)}</p>
+                                  {enr.creditEarned && <span style={{ fontSize: '10px', background: '#e8f5e9', color: '#2e7d32', padding: '2px 8px', borderRadius: '20px', fontWeight: 700 }}>✓ {isEn ? 'Credit' : '已获学分'}</span>}
+                                </div>
+                                {(midAttempt || finalAttempt) && (
+                                  <p style={{ margin: '3px 0 0', fontSize: '11px', color: '#888' }}>
+                                    {midAttempt && `Mid ${Math.round(Number(midAttempt.score))}%`}
+                                    {midAttempt && finalAttempt && ' · '}
+                                    {finalAttempt && `Final ${Math.round(Number(finalAttempt.score))}%`}
+                                  </p>
+                                )}
+                              </div>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               )}
             </div>

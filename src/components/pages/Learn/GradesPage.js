@@ -68,26 +68,23 @@ function ScorePill({ score, total, label, weight, color }) {
 
 function ExamReviewPanel({ slug, examType, isEn }) {
   const [review, setReview] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [open, setOpen] = useState(true);
 
-  async function load() {
-    if (review) { setOpen(o => !o); return; }
-    setLoading(true);
-    const r = await fetch(`${API}/api/enrollments/${slug}/exam/review?type=${examType}`, { credentials: 'include' });
-    setLoading(false);
-    if (!r.ok) return;
-    setReview(await r.json());
-    setOpen(true);
-  }
+  useEffect(() => {
+    fetch(`${API}/api/enrollments/${slug}/exam/review?type=${examType}`, { credentials: 'include' })
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (d) setReview(d); })
+      .finally(() => setLoading(false));
+  }, [slug, examType]);
 
   return (
-    <div style={{ marginTop: '8px' }}>
-      <button onClick={load} disabled={loading} style={{
+    <div style={{ marginTop: '12px' }}>
+      <button onClick={() => setOpen(o => !o)} style={{
         fontSize: '11px', fontWeight: 700, color: '#2b3d6d', background: '#f0f4ff',
         border: '1px solid #c5d0f0', borderRadius: '6px', padding: '4px 12px', cursor: 'pointer',
       }}>
-        {loading ? '…' : open ? (isEn ? 'Hide Review ▲' : '收起 ▲') : (isEn ? 'Review Questions ▼' : '查看考题 ▼')}
+        {loading ? '…' : open ? (isEn ? 'Hide Questions ▲' : '收起考题 ▲') : (isEn ? `Show ${review?.questions?.length || ''} Questions ▼` : `查看考题 ▼`)}
       </button>
 
       {open && review && (
