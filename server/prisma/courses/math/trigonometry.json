@@ -2,7 +2,7 @@
   "slug": "trigonometry",
   "name": "Trigonometry",
   "nameZh": "三角函数",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Mathematics",
   "type": "Core",
   "description": "A rigorous study of trigonometric functions, identities, and their applications. Topics include the unit circle, right-triangle and circular definitions, graphing, inverse functions, trigonometric equations, the Laws of Sines and Cosines, polar coordinates, vectors, and complex numbers — providing the mathematical foundation for calculus and physics.",
@@ -13,7 +13,7 @@
       "title": "The Unit Circle",
       "titleZh": "单位圆",
       "objectives": "Define the unit circle; convert between degrees and radians; identify coordinates of standard angles (0°, 30°, 45°, 60°, 90°, and their multiples).",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-1-angles",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 7.1: Angles",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:unit-circle/v/unit-circle-definition-of-trig-functions-1",
       "videoNote": "Khan Academy — Unit Circle Definition of Trig Functions",
@@ -22,14 +22,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:unit-circle/e/unit-circle",
       "practiceNote": "Khan Academy — Unit Circle Practice (20 problems)",
       "assignment": "Memorize all standard angles and their coordinates on the unit circle. Create a labeled unit circle diagram from memory and verify 10 angle coordinates.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 2,
       "title": "Trigonometric Functions",
       "titleZh": "三角函数的定义",
       "objectives": "Define sin, cos, tan, csc, sec, cot using the unit circle; evaluate trig functions at standard angles; understand the domain and range of each function.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 7.2–7.3: Trig Functions",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:trig-values-special-angles/v/trig-values-of-special-angles",
       "videoNote": "Khan Academy — Trig Values of Special Angles",
@@ -45,7 +45,7 @@
       "title": "Graphs of Trigonometric Functions",
       "titleZh": "三角函数的图像",
       "objectives": "Identify amplitude, period, phase shift, and vertical shift; graph y = A sin(Bx + C) + D and y = A cos(Bx + C) + D; sketch tan and cot graphs.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-1-graphs-of-the-sine-and-cosine-functions",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 8.1–8.2: Graphs of Trig Functions",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:amplitude/v/determining-the-amplitude-of-a-sinusoidal-function",
       "videoNote": "Khan Academy — Amplitude of Sinusoidal Functions",
@@ -61,7 +61,7 @@
       "title": "Trigonometric Identities",
       "titleZh": "三角恒等式",
       "objectives": "State and prove the Pythagorean, reciprocal, and quotient identities; use identities to simplify trig expressions and verify equations.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-1-verifying-trigonometric-identities-and-using-trigonometric-identities-to-simplify-trigonometric-expressions",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 9.1: Verifying Trigonometric Identities",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:trig-identities-intro/v/pythagorean-identity",
       "videoNote": "Khan Academy — Pythagorean Identity",
@@ -70,14 +70,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:trig-identities-intro/e/applying-the-pythagorean-identities",
       "practiceNote": "Khan Academy — Applying Pythagorean Identities (15 problems)",
       "assignment": "Verify 8 trigonometric identities step by step. Simplify 6 complex trig expressions using fundamental identities.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 5,
       "title": "Sum & Difference Formulas",
       "titleZh": "和差公式",
       "objectives": "Apply sum and difference identities for sine, cosine, and tangent; evaluate trig functions at non-standard angles using these formulas.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-2-sum-and-difference-identities",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 9.2: Sum and Difference Identities",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:angle-addition/v/proof-angle-addition-cosine",
       "videoNote": "Khan Academy — Proof: Angle Addition for Cosine",
@@ -86,14 +86,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:angle-addition/e/sum-and-difference-formulas",
       "practiceNote": "Khan Academy — Sum and Difference Identities Practice (15 problems)",
       "assignment": "Use sum/difference formulas to find exact values of sin(75°), cos(15°), tan(105°), and 5 more. Verify two identities using these formulas.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 6,
       "title": "Double-Angle & Half-Angle Formulas",
       "titleZh": "二倍角与半角公式",
       "objectives": "Derive and apply double-angle formulas for sin, cos, and tan; use half-angle formulas to find exact values; simplify expressions using power-reducing formulas.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-3-double-angle-half-angle-and-reduction-formulas",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 9.3: Double-Angle, Half-Angle, and Reduction Formulas",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:double-and-half-angle-identities/v/double-angle-formula",
       "videoNote": "Khan Academy — Double Angle Formula for Sine",
@@ -102,14 +102,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:double-and-half-angle-identities/e/double-angle-identities",
       "practiceNote": "Khan Academy — Double Angle Identities Practice (15 problems)",
       "assignment": "Use double-angle formulas to find sin(2theta), cos(2theta) given sin(theta) or cos(theta) for 6 cases. Use half-angle formulas to evaluate 4 exact values.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 7,
       "title": "Inverse Trigonometric Functions",
       "titleZh": "反三角函数",
       "objectives": "Define arcsin, arccos, and arctan with their restricted domains and ranges; evaluate inverse trig expressions; compose trig and inverse trig functions.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-3-inverse-trigonometric-functions",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 8.3: Inverse Trigonometric Functions",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:inverse-trig/v/inverse-trig-functions",
       "videoNote": "Khan Academy — Intro to Arcsin, Arccos, Arctan",
@@ -118,14 +118,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:inverse-trig/e/inverse_trig_functions",
       "practiceNote": "Khan Academy — Inverse Trig Functions Practice (20 problems)",
       "assignment": "Evaluate 10 inverse trig expressions exactly. Solve 5 equations using inverse trig functions and verify by substitution.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 8,
       "title": "Right Triangle Trigonometry",
       "titleZh": "直角三角形三角学",
       "objectives": "Apply SOH-CAH-TOA to right triangles; find unknown sides and angles; solve real-world problems involving angles of elevation and depression.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 7.2: Right Triangle Trigonometry",
       "videoUrl": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/v/basic-trigonometry",
       "videoNote": "Khan Academy — Basic Trigonometry: SOH-CAH-TOA",
@@ -141,7 +141,7 @@
       "title": "Law of Sines",
       "titleZh": "正弦定理",
       "objectives": "State and derive the Law of Sines; apply it to solve ASA, AAS, and SSA (ambiguous case) triangles; determine the number of solutions in the ambiguous case.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-1-non-right-triangles-law-of-sines",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.1: Law of Sines",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:law-of-sines/v/law-of-sines",
       "videoNote": "Khan Academy — Law of Sines",
@@ -157,7 +157,7 @@
       "title": "Law of Cosines",
       "titleZh": "余弦定理",
       "objectives": "State and derive the Law of Cosines; apply it to SAS and SSS triangles; find the area of a triangle using Heron's formula.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-2-non-right-triangles-law-of-cosines",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.2: Law of Cosines",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:law-of-cosines/v/law-of-cosines",
       "videoNote": "Khan Academy — Law of Cosines",
@@ -173,7 +173,7 @@
       "title": "Polar Coordinates",
       "titleZh": "极坐标",
       "objectives": "Convert between rectangular and polar coordinates; graph polar equations; identify common polar curves (roses, limacons, circles, spirals).",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-3-polar-coordinates",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.3: Polar Coordinates",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:polar-coordinates/x9e81a4f98389efdf:polar-coordinates/v/polar-coordinates-intro",
       "videoNote": "Khan Academy — Polar Coordinates Introduction",
@@ -189,7 +189,7 @@
       "title": "Vectors",
       "titleZh": "向量",
       "objectives": "Define vectors in component and magnitude-direction form; perform vector addition, subtraction, and scalar multiplication; compute dot products and find angles between vectors.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-8-vectors",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.8: Vectors",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors/x9e81a4f98389efdf:vectors-intro/v/intro-to-vectors-and-scalars",
       "videoNote": "Khan Academy — Intro to Vectors and Scalars",
@@ -198,14 +198,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors/x9e81a4f98389efdf:vectors-intro/e/add-vectors",
       "practiceNote": "Khan Academy — Vector Addition Practice (20 problems)",
       "assignment": "Perform 8 vector operations (addition, subtraction, scalar multiplication). Calculate dot products and angles between 4 pairs of vectors. Solve 2 force/velocity application problems.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 13,
       "title": "Complex Numbers in Trigonometric Form",
       "titleZh": "复数的三角形式",
       "objectives": "Write complex numbers in polar/trigonometric form; apply De Moivre's Theorem to find powers and roots of complex numbers.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-5-polar-form-of-complex-numbers",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.5: Polar Form of Complex Numbers",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:complex/x9e81a4f98389efdf:complex-mul-div-polar/v/multiplying-complex-numbers-in-polar-form",
       "videoNote": "Khan Academy — Complex Numbers in Polar Form",
@@ -221,7 +221,7 @@
       "title": "Applications of Trigonometry",
       "titleZh": "三角函数的实际应用",
       "objectives": "Model periodic phenomena with sinusoidal functions; solve applied problems involving navigation, physics, engineering, and harmonic motion.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-1-graphs-of-the-sine-and-cosine-functions",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-introduction",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 8.1 Applications: Modeling with Sinusoidal Functions",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:modeling-with-trig/v/trig-word-problem-modeling-daily-temperature",
       "videoNote": "Khan Academy — Modeling with Trig: Daily Temperature",
@@ -230,7 +230,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:modeling-with-trig/e/modeling-with-trig-functions",
       "practiceNote": "Khan Academy — Modeling with Trig Functions (15 problems)",
       "assignment": "Build sinusoidal models for 3 real-world datasets (tides, temperature, sound). Solve 3 navigation problems using bearings and trig. Write a 1-page reflection on where trig appears in your daily life.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     }
   ],
   "quizQuestions": [
@@ -238,7 +238,12 @@
       "moduleOrder": 1,
       "order": 1,
       "question": "How many radians are in 180 degrees?",
-      "options": ["pi/2", "pi", "2pi", "3pi/2"],
+      "options": [
+        "pi/2",
+        "pi",
+        "2pi",
+        "3pi/2"
+      ],
       "answer": "pi",
       "explanation": "180 degrees = pi radians is the fundamental degree-radian conversion.",
       "points": 1
@@ -247,7 +252,12 @@
       "moduleOrder": 1,
       "order": 2,
       "question": "What are the coordinates of the point at 60 degrees on the unit circle?",
-      "options": ["(1/2, sqrt(3)/2)", "(sqrt(3)/2, 1/2)", "(sqrt(2)/2, sqrt(2)/2)", "(0, 1)"],
+      "options": [
+        "(1/2, sqrt(3)/2)",
+        "(sqrt(3)/2, 1/2)",
+        "(sqrt(2)/2, sqrt(2)/2)",
+        "(0, 1)"
+      ],
       "answer": "(1/2, sqrt(3)/2)",
       "explanation": "At 60 degrees, x = cos(60) = 1/2 and y = sin(60) = sqrt(3)/2.",
       "points": 1
@@ -256,7 +266,12 @@
       "moduleOrder": 1,
       "order": 3,
       "question": "Convert 270 degrees to radians.",
-      "options": ["pi/2", "pi", "3pi/2", "2pi"],
+      "options": [
+        "pi/2",
+        "pi",
+        "3pi/2",
+        "2pi"
+      ],
       "answer": "3pi/2",
       "explanation": "270 * (pi/180) = 270pi/180 = 3pi/2.",
       "points": 1
@@ -265,7 +280,12 @@
       "moduleOrder": 1,
       "order": 4,
       "question": "What is the radius of the unit circle?",
-      "options": ["0", "1/2", "1", "2"],
+      "options": [
+        "0",
+        "1/2",
+        "1",
+        "2"
+      ],
       "answer": "1",
       "explanation": "By definition, the unit circle has radius 1 centered at the origin.",
       "points": 1
@@ -274,7 +294,12 @@
       "moduleOrder": 1,
       "order": 5,
       "question": "What are the coordinates at 150 degrees on the unit circle?",
-      "options": ["(-sqrt(3)/2, 1/2)", "(sqrt(3)/2, 1/2)", "(-1/2, sqrt(3)/2)", "(1/2, -sqrt(3)/2)"],
+      "options": [
+        "(-sqrt(3)/2, 1/2)",
+        "(sqrt(3)/2, 1/2)",
+        "(-1/2, sqrt(3)/2)",
+        "(1/2, -sqrt(3)/2)"
+      ],
       "answer": "(-sqrt(3)/2, 1/2)",
       "explanation": "150 degrees is in Quadrant II. cos(150) = -sqrt(3)/2 and sin(150) = 1/2.",
       "points": 1
@@ -283,7 +308,12 @@
       "moduleOrder": 2,
       "order": 1,
       "question": "What is sin(pi/6)?",
-      "options": ["sqrt(3)/2", "1/2", "sqrt(2)/2", "1"],
+      "options": [
+        "sqrt(3)/2",
+        "1/2",
+        "sqrt(2)/2",
+        "1"
+      ],
       "answer": "1/2",
       "explanation": "sin(30 degrees) = sin(pi/6) = 1/2 from the unit circle.",
       "points": 1
@@ -292,7 +322,12 @@
       "moduleOrder": 2,
       "order": 2,
       "question": "What is the domain of f(x) = tan(x)?",
-      "options": ["All real numbers", "x not equal to n*pi", "x not equal to pi/2 + n*pi", "-1 <= x <= 1"],
+      "options": [
+        "All real numbers",
+        "x not equal to n*pi",
+        "x not equal to pi/2 + n*pi",
+        "-1 <= x <= 1"
+      ],
       "answer": "x not equal to pi/2 + n*pi",
       "explanation": "tan(x) = sin(x)/cos(x) is undefined where cos(x) = 0, i.e., at x = pi/2 + n*pi.",
       "points": 1
@@ -301,7 +336,12 @@
       "moduleOrder": 2,
       "order": 3,
       "question": "What is cos(pi)?",
-      "options": ["0", "1", "-1", "sqrt(2)/2"],
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "sqrt(2)/2"
+      ],
       "answer": "-1",
       "explanation": "The point at angle pi (180 degrees) on the unit circle is (-1, 0), so cos(pi) = -1.",
       "points": 1
@@ -310,7 +350,12 @@
       "moduleOrder": 2,
       "order": 4,
       "question": "What is the range of the sine function?",
-      "options": ["[0, 1]", "[-1, 1]", "(-inf, inf)", "[0, inf)"],
+      "options": [
+        "[0, 1]",
+        "[-1, 1]",
+        "(-inf, inf)",
+        "[0, inf)"
+      ],
       "answer": "[-1, 1]",
       "explanation": "The y-coordinates on the unit circle range from -1 to 1, so sin(x) is in [-1, 1].",
       "points": 1
@@ -319,7 +364,12 @@
       "moduleOrder": 2,
       "order": 5,
       "question": "If sin(theta) = 3/5 and theta is in Quadrant II, what is cos(theta)?",
-      "options": ["4/5", "-4/5", "3/4", "-3/4"],
+      "options": [
+        "4/5",
+        "-4/5",
+        "3/4",
+        "-3/4"
+      ],
       "answer": "-4/5",
       "explanation": "Using sin^2 + cos^2 = 1: cos^2 = 1 - 9/25 = 16/25, so cos = +/-4/5. In QII, cosine is negative, so cos(theta) = -4/5.",
       "points": 1
@@ -328,7 +378,12 @@
       "moduleOrder": 3,
       "order": 1,
       "question": "What is the period of y = sin(2x)?",
-      "options": ["pi/2", "pi", "2pi", "4pi"],
+      "options": [
+        "pi/2",
+        "pi",
+        "2pi",
+        "4pi"
+      ],
       "answer": "pi",
       "explanation": "The period of y = sin(Bx) is 2pi/B = 2pi/2 = pi.",
       "points": 1
@@ -337,7 +392,12 @@
       "moduleOrder": 3,
       "order": 2,
       "question": "What is the amplitude of y = -3cos(x)?",
-      "options": ["-3", "1/3", "3", "9"],
+      "options": [
+        "-3",
+        "1/3",
+        "3",
+        "9"
+      ],
       "answer": "3",
       "explanation": "Amplitude is |A| = |-3| = 3. Amplitude is always positive.",
       "points": 1
@@ -346,7 +406,12 @@
       "moduleOrder": 3,
       "order": 3,
       "question": "What is the phase shift of y = sin(x - pi/4)?",
-      "options": ["pi/4 to the left", "pi/4 to the right", "pi/2 to the right", "pi/4 upward"],
+      "options": [
+        "pi/4 to the left",
+        "pi/4 to the right",
+        "pi/2 to the right",
+        "pi/4 upward"
+      ],
       "answer": "pi/4 to the right",
       "explanation": "y = sin(x - C) shifts the graph C units to the right. Here C = pi/4.",
       "points": 1
@@ -355,7 +420,12 @@
       "moduleOrder": 3,
       "order": 4,
       "question": "What is the vertical shift of y = cos(x) + 3?",
-      "options": ["3 units downward", "3 units upward", "3 units to the right", "No vertical shift"],
+      "options": [
+        "3 units downward",
+        "3 units upward",
+        "3 units to the right",
+        "No vertical shift"
+      ],
       "answer": "3 units upward",
       "explanation": "The +3 at the end shifts the entire graph 3 units upward.",
       "points": 1
@@ -364,7 +434,12 @@
       "moduleOrder": 3,
       "order": 5,
       "question": "What is the period of y = tan(pi*x)?",
-      "options": ["pi", "1", "2", "2pi"],
+      "options": [
+        "pi",
+        "1",
+        "2",
+        "2pi"
+      ],
       "answer": "1",
       "explanation": "The period of y = tan(Bx) is pi/B = pi/pi = 1.",
       "points": 1
@@ -373,7 +448,12 @@
       "moduleOrder": 4,
       "order": 1,
       "question": "Which identity states that sin^2(theta) + cos^2(theta) = 1?",
-      "options": ["Reciprocal identity", "Quotient identity", "Pythagorean identity", "Even-odd identity"],
+      "options": [
+        "Reciprocal identity",
+        "Quotient identity",
+        "Pythagorean identity",
+        "Even-odd identity"
+      ],
       "answer": "Pythagorean identity",
       "explanation": "sin^2(theta) + cos^2(theta) = 1 is derived from the Pythagorean theorem applied to the unit circle.",
       "points": 1
@@ -382,7 +462,12 @@
       "moduleOrder": 4,
       "order": 2,
       "question": "Simplify: (1 - cos^2(theta)) / sin(theta)",
-      "options": ["sin(theta)", "cos(theta)", "tan(theta)", "1"],
+      "options": [
+        "sin(theta)",
+        "cos(theta)",
+        "tan(theta)",
+        "1"
+      ],
       "answer": "sin(theta)",
       "explanation": "1 - cos^2(theta) = sin^2(theta), so the expression becomes sin^2/sin = sin(theta).",
       "points": 1
@@ -391,7 +476,12 @@
       "moduleOrder": 4,
       "order": 3,
       "question": "What is tan(theta) in terms of sin and cos?",
-      "options": ["cos/sin", "sin/cos", "sin * cos", "1/sin"],
+      "options": [
+        "cos/sin",
+        "sin/cos",
+        "sin * cos",
+        "1/sin"
+      ],
       "answer": "sin/cos",
       "explanation": "By the quotient identity, tan(theta) = sin(theta) / cos(theta).",
       "points": 1
@@ -400,7 +490,12 @@
       "moduleOrder": 4,
       "order": 4,
       "question": "Which of the following equals 1 + tan^2(theta)?",
-      "options": ["sin^2(theta)", "sec^2(theta)", "csc^2(theta)", "cos^2(theta)"],
+      "options": [
+        "sin^2(theta)",
+        "sec^2(theta)",
+        "csc^2(theta)",
+        "cos^2(theta)"
+      ],
       "answer": "sec^2(theta)",
       "explanation": "Dividing sin^2 + cos^2 = 1 by cos^2 gives tan^2 + 1 = sec^2.",
       "points": 1
@@ -409,7 +504,12 @@
       "moduleOrder": 4,
       "order": 5,
       "question": "Simplify: sec(theta) * sin(theta)",
-      "options": ["tan(theta)", "cot(theta)", "cos(theta)", "csc(theta)"],
+      "options": [
+        "tan(theta)",
+        "cot(theta)",
+        "cos(theta)",
+        "csc(theta)"
+      ],
       "answer": "tan(theta)",
       "explanation": "sec(theta) * sin(theta) = (1/cos) * sin = sin/cos = tan(theta).",
       "points": 1
@@ -418,7 +518,12 @@
       "moduleOrder": 5,
       "order": 1,
       "question": "What is sin(A + B)?",
-      "options": ["sinA cosB - cosA sinB", "sinA cosB + cosA sinB", "cosA cosB - sinA sinB", "cosA cosB + sinA sinB"],
+      "options": [
+        "sinA cosB - cosA sinB",
+        "sinA cosB + cosA sinB",
+        "cosA cosB - sinA sinB",
+        "cosA cosB + sinA sinB"
+      ],
       "answer": "sinA cosB + cosA sinB",
       "explanation": "The sum formula for sine is sin(A + B) = sinA cosB + cosA sinB.",
       "points": 1
@@ -427,7 +532,12 @@
       "moduleOrder": 5,
       "order": 2,
       "question": "Using the sum formula, what is cos(90 degrees)?",
-      "options": ["1", "0", "-1", "sqrt(2)/2"],
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "sqrt(2)/2"
+      ],
       "answer": "0",
       "explanation": "cos(90) = cos(45+45) = cos^2(45) - sin^2(45) = (sqrt(2)/2)^2 - (sqrt(2)/2)^2 = 0.",
       "points": 1
@@ -436,7 +546,12 @@
       "moduleOrder": 5,
       "order": 3,
       "question": "What is cos(A - B)?",
-      "options": ["cosA cosB - sinA sinB", "cosA cosB + sinA sinB", "sinA cosB - cosA sinB", "sinA cosB + cosA sinB"],
+      "options": [
+        "cosA cosB - sinA sinB",
+        "cosA cosB + sinA sinB",
+        "sinA cosB - cosA sinB",
+        "sinA cosB + cosA sinB"
+      ],
       "answer": "cosA cosB + sinA sinB",
       "explanation": "The difference formula for cosine is cos(A - B) = cosA cosB + sinA sinB.",
       "points": 1
@@ -445,7 +560,12 @@
       "moduleOrder": 5,
       "order": 4,
       "question": "Find the exact value of sin(75 degrees).",
-      "options": ["(sqrt(6)+sqrt(2))/4", "(sqrt(6)-sqrt(2))/4", "(sqrt(2)+sqrt(3))/4", "(sqrt(3)-1)/4"],
+      "options": [
+        "(sqrt(6)+sqrt(2))/4",
+        "(sqrt(6)-sqrt(2))/4",
+        "(sqrt(2)+sqrt(3))/4",
+        "(sqrt(3)-1)/4"
+      ],
       "answer": "(sqrt(6)+sqrt(2))/4",
       "explanation": "sin(75) = sin(45+30) = sin45*cos30 + cos45*sin30 = (sqrt(2)/2)(sqrt(3)/2)+(sqrt(2)/2)(1/2) = (sqrt(6)+sqrt(2))/4.",
       "points": 1
@@ -454,7 +574,12 @@
       "moduleOrder": 5,
       "order": 5,
       "question": "What is tan(A + B)?",
-      "options": ["(tanA + tanB)/(1 + tanA tanB)", "(tanA + tanB)/(1 - tanA tanB)", "(tanA - tanB)/(1 + tanA tanB)", "tanA tanB - 1"],
+      "options": [
+        "(tanA + tanB)/(1 + tanA tanB)",
+        "(tanA + tanB)/(1 - tanA tanB)",
+        "(tanA - tanB)/(1 + tanA tanB)",
+        "tanA tanB - 1"
+      ],
       "answer": "(tanA + tanB)/(1 - tanA tanB)",
       "explanation": "The sum formula for tangent is tan(A + B) = (tanA + tanB)/(1 - tanA tanB).",
       "points": 1
@@ -463,7 +588,12 @@
       "moduleOrder": 6,
       "order": 1,
       "question": "What is sin(2theta) in terms of sin and cos?",
-      "options": ["2*sin(theta)", "sin^2+cos^2", "2*sin*cos", "2cos^2 - 1"],
+      "options": [
+        "2*sin(theta)",
+        "sin^2+cos^2",
+        "2*sin*cos",
+        "2cos^2 - 1"
+      ],
       "answer": "2*sin*cos",
       "explanation": "The double-angle formula: sin(2theta) = 2*sin(theta)*cos(theta).",
       "points": 1
@@ -472,7 +602,12 @@
       "moduleOrder": 6,
       "order": 2,
       "question": "Which is NOT a valid form of cos(2theta)?",
-      "options": ["cos^2 - sin^2", "2cos^2 - 1", "1 - 2sin^2", "2*sin*cos"],
+      "options": [
+        "cos^2 - sin^2",
+        "2cos^2 - 1",
+        "1 - 2sin^2",
+        "2*sin*cos"
+      ],
       "answer": "2*sin*cos",
       "explanation": "2*sin*cos = sin(2theta), not cos(2theta). The three valid forms are cos^2-sin^2, 2cos^2-1, and 1-2sin^2.",
       "points": 1
@@ -481,7 +616,12 @@
       "moduleOrder": 6,
       "order": 3,
       "question": "If sin(theta) = 3/5 and theta is in QI, what is sin(2theta)?",
-      "options": ["6/5", "24/25", "7/25", "12/25"],
+      "options": [
+        "6/5",
+        "24/25",
+        "7/25",
+        "12/25"
+      ],
       "answer": "24/25",
       "explanation": "cos(theta) = 4/5 (QI). sin(2theta) = 2*(3/5)*(4/5) = 24/25.",
       "points": 1
@@ -490,7 +630,12 @@
       "moduleOrder": 6,
       "order": 4,
       "question": "What is sin(theta/2) in terms of cos(theta)?",
-      "options": ["sqrt((1+cos)/2)", "sqrt((1-cos)/2)", "(1-cos)/2", "(1+cos)/2"],
+      "options": [
+        "sqrt((1+cos)/2)",
+        "sqrt((1-cos)/2)",
+        "(1-cos)/2",
+        "(1+cos)/2"
+      ],
       "answer": "sqrt((1-cos)/2)",
       "explanation": "The half-angle formula: sin(theta/2) = +/- sqrt((1 - cos(theta))/2).",
       "points": 1
@@ -499,7 +644,12 @@
       "moduleOrder": 6,
       "order": 5,
       "question": "Use the double-angle formula to find cos(60) from cos(30) = sqrt(3)/2.",
-      "options": ["1/2", "sqrt(3)/2", "0", "-1/2"],
+      "options": [
+        "1/2",
+        "sqrt(3)/2",
+        "0",
+        "-1/2"
+      ],
       "answer": "1/2",
       "explanation": "cos(60) = 2cos^2(30) - 1 = 2*(3/4) - 1 = 3/2 - 1 = 1/2.",
       "points": 1
@@ -508,7 +658,12 @@
       "moduleOrder": 7,
       "order": 1,
       "question": "What is the range of arcsin(x)?",
-      "options": ["[0, pi]", "[-pi, pi]", "[-pi/2, pi/2]", "(-pi/2, pi/2)"],
+      "options": [
+        "[0, pi]",
+        "[-pi, pi]",
+        "[-pi/2, pi/2]",
+        "(-pi/2, pi/2)"
+      ],
       "answer": "[-pi/2, pi/2]",
       "explanation": "The range of arcsin is restricted to [-pi/2, pi/2] to ensure it is a function.",
       "points": 1
@@ -517,7 +672,12 @@
       "moduleOrder": 7,
       "order": 2,
       "question": "Evaluate arccos(-1).",
-      "options": ["0", "pi/2", "pi", "-pi"],
+      "options": [
+        "0",
+        "pi/2",
+        "pi",
+        "-pi"
+      ],
       "answer": "pi",
       "explanation": "arccos(-1) = pi because cos(pi) = -1 and pi is in the range [0, pi] of arccos.",
       "points": 1
@@ -526,7 +686,12 @@
       "moduleOrder": 7,
       "order": 3,
       "question": "What is the domain of arcsin(x)?",
-      "options": ["(-inf, inf)", "[0, 1]", "[-1, 1]", "[0, pi]"],
+      "options": [
+        "(-inf, inf)",
+        "[0, 1]",
+        "[-1, 1]",
+        "[0, pi]"
+      ],
       "answer": "[-1, 1]",
       "explanation": "arcsin is the inverse of sin, so its domain equals the range of sin, which is [-1, 1].",
       "points": 1
@@ -535,7 +700,12 @@
       "moduleOrder": 7,
       "order": 4,
       "question": "Evaluate arctan(1).",
-      "options": ["pi/6", "pi/4", "pi/3", "pi/2"],
+      "options": [
+        "pi/6",
+        "pi/4",
+        "pi/3",
+        "pi/2"
+      ],
       "answer": "pi/4",
       "explanation": "arctan(1) = pi/4 because tan(pi/4) = 1 and pi/4 is in the range (-pi/2, pi/2) of arctan.",
       "points": 1
@@ -544,7 +714,12 @@
       "moduleOrder": 7,
       "order": 5,
       "question": "Simplify sin(arccos(x)).",
-      "options": ["x", "1 - x", "sqrt(1 - x^2)", "1/x"],
+      "options": [
+        "x",
+        "1 - x",
+        "sqrt(1 - x^2)",
+        "1/x"
+      ],
       "answer": "sqrt(1 - x^2)",
       "explanation": "Let theta = arccos(x), so cos(theta) = x. By the Pythagorean identity, sin(theta) = sqrt(1 - x^2) (positive since arccos gives angles in [0, pi]).",
       "points": 1
@@ -553,7 +728,12 @@
       "moduleOrder": 8,
       "order": 1,
       "question": "In a right triangle, what does SOH stand for?",
-      "options": ["Sin = Opposite/Adjacent", "Sin = Opposite/Hypotenuse", "Sin = Adjacent/Hypotenuse", "Sin = Hypotenuse/Opposite"],
+      "options": [
+        "Sin = Opposite/Adjacent",
+        "Sin = Opposite/Hypotenuse",
+        "Sin = Adjacent/Hypotenuse",
+        "Sin = Hypotenuse/Opposite"
+      ],
       "answer": "Sin = Opposite/Hypotenuse",
       "explanation": "SOH: Sine = Opposite/Hypotenuse. CAH: Cosine = Adjacent/Hypotenuse. TOA: Tangent = Opposite/Adjacent.",
       "points": 1
@@ -562,7 +742,12 @@
       "moduleOrder": 8,
       "order": 2,
       "question": "A 10-meter ladder leans against a wall at 60 degrees with the ground. How high does it reach?",
-      "options": ["5 m", "5*sqrt(3) m", "10*sqrt(3) m", "10/sqrt(3) m"],
+      "options": [
+        "5 m",
+        "5*sqrt(3) m",
+        "10*sqrt(3) m",
+        "10/sqrt(3) m"
+      ],
       "answer": "5*sqrt(3) m",
       "explanation": "Height = 10 * sin(60) = 10 * (sqrt(3)/2) = 5*sqrt(3) meters.",
       "points": 1
@@ -571,7 +756,12 @@
       "moduleOrder": 8,
       "order": 3,
       "question": "In a right triangle with hypotenuse 13 and one leg 5, what is the sine of the angle opposite the 5-unit leg?",
-      "options": ["5/12", "12/13", "5/13", "13/5"],
+      "options": [
+        "5/12",
+        "12/13",
+        "5/13",
+        "13/5"
+      ],
       "answer": "5/13",
       "explanation": "sin(theta) = opposite/hypotenuse = 5/13.",
       "points": 1
@@ -580,7 +770,12 @@
       "moduleOrder": 8,
       "order": 4,
       "question": "What is the angle of elevation to the top of a 100 m tower from a point 100 m away?",
-      "options": ["30 degrees", "45 degrees", "60 degrees", "90 degrees"],
+      "options": [
+        "30 degrees",
+        "45 degrees",
+        "60 degrees",
+        "90 degrees"
+      ],
       "answer": "45 degrees",
       "explanation": "tan(theta) = 100/100 = 1, so theta = arctan(1) = 45 degrees.",
       "points": 1
@@ -589,7 +784,12 @@
       "moduleOrder": 8,
       "order": 5,
       "question": "If cos(theta) = 7/25, find sin(theta) in a right triangle.",
-      "options": ["24/25", "7/24", "25/7", "24/7"],
+      "options": [
+        "24/25",
+        "7/24",
+        "25/7",
+        "24/7"
+      ],
       "answer": "24/25",
       "explanation": "sin^2 + cos^2 = 1 -> sin^2 = 1 - 49/625 = 576/625 -> sin = 24/25.",
       "points": 1
@@ -598,7 +798,12 @@
       "moduleOrder": 9,
       "order": 1,
       "question": "State the Law of Sines.",
-      "options": ["a/sinA = b/sinB = c/sinC", "a^2 = b^2 + c^2 - 2bc*cosA", "sinA/a = sinB/b + sinC/c", "a + b + c = 180"],
+      "options": [
+        "a/sinA = b/sinB = c/sinC",
+        "a^2 = b^2 + c^2 - 2bc*cosA",
+        "sinA/a = sinB/b + sinC/c",
+        "a + b + c = 180"
+      ],
       "answer": "a/sinA = b/sinB = c/sinC",
       "explanation": "The Law of Sines states that the ratio of each side to the sine of its opposite angle is constant.",
       "points": 1
@@ -607,7 +812,12 @@
       "moduleOrder": 9,
       "order": 2,
       "question": "In triangle ABC, A = 40 degrees, B = 75 degrees, a = 10. Find b (approximately).",
-      "options": ["b = 14.4", "b = 7.0", "b = 12.3", "b = 9.1"],
+      "options": [
+        "b = 14.4",
+        "b = 7.0",
+        "b = 12.3",
+        "b = 9.1"
+      ],
       "answer": "b = 14.4",
       "explanation": "b/sin(75) = 10/sin(40), so b = 10*sin(75)/sin(40) = 10*0.966/0.643 = 15.0. Closest is 14.4.",
       "points": 1
@@ -616,7 +826,12 @@
       "moduleOrder": 9,
       "order": 3,
       "question": "The ambiguous case (SSA) can have how many possible triangles?",
-      "options": ["Always exactly one", "0, 1, or 2", "Always 2", "Always 0"],
+      "options": [
+        "Always exactly one",
+        "0, 1, or 2",
+        "Always 2",
+        "Always 0"
+      ],
       "answer": "0, 1, or 2",
       "explanation": "In the SSA configuration, there may be 0, 1, or 2 valid triangles — this is the ambiguous case.",
       "points": 1
@@ -625,7 +840,12 @@
       "moduleOrder": 9,
       "order": 4,
       "question": "In triangle ABC, A = 30 degrees, a = 6, b = 12. How many triangles are possible?",
-      "options": ["0", "1", "2", "Infinitely many"],
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Infinitely many"
+      ],
       "answer": "1",
       "explanation": "Height h = b*sinA = 12*sin(30) = 6 = a. When a equals the height, exactly one right triangle is formed.",
       "points": 1
@@ -634,7 +854,12 @@
       "moduleOrder": 9,
       "order": 5,
       "question": "Which case can be solved directly using Law of Sines without ambiguity?",
-      "options": ["SSA", "SSS", "AAS", "SAS"],
+      "options": [
+        "SSA",
+        "SSS",
+        "AAS",
+        "SAS"
+      ],
       "answer": "AAS",
       "explanation": "AAS (two angles and a non-included side) has exactly one solution and is solved directly by the Law of Sines.",
       "points": 1
@@ -643,7 +868,12 @@
       "moduleOrder": 10,
       "order": 1,
       "question": "State the Law of Cosines for side a.",
-      "options": ["a^2 = b^2 + c^2", "a^2 = b^2 + c^2 + 2bc*cosA", "a^2 = b^2 + c^2 - 2bc*cosA", "a = b*cosC + c*cosB"],
+      "options": [
+        "a^2 = b^2 + c^2",
+        "a^2 = b^2 + c^2 + 2bc*cosA",
+        "a^2 = b^2 + c^2 - 2bc*cosA",
+        "a = b*cosC + c*cosB"
+      ],
       "answer": "a^2 = b^2 + c^2 - 2bc*cosA",
       "explanation": "The Law of Cosines: a^2 = b^2 + c^2 - 2bc*cosA, relating all three sides and one angle.",
       "points": 1
@@ -652,7 +882,12 @@
       "moduleOrder": 10,
       "order": 2,
       "question": "In triangle ABC, a = 8, b = 6, C = 90 degrees. Find c.",
-      "options": ["10", "14", "sqrt(28)", "7"],
+      "options": [
+        "10",
+        "14",
+        "sqrt(28)",
+        "7"
+      ],
       "answer": "10",
       "explanation": "c^2 = 64 + 36 - 2*8*6*cos(90) = 100 - 0 = 100, so c = 10. This is the Pythagorean theorem.",
       "points": 1
@@ -661,7 +896,12 @@
       "moduleOrder": 10,
       "order": 3,
       "question": "In Heron's formula, what is s?",
-      "options": ["s = a + b + c", "s = (a + b + c)/2", "s = (a + b - c)/2", "s = a*b*c"],
+      "options": [
+        "s = a + b + c",
+        "s = (a + b + c)/2",
+        "s = (a + b - c)/2",
+        "s = a*b*c"
+      ],
       "answer": "s = (a + b + c)/2",
       "explanation": "s is the semi-perimeter: s = (a + b + c)/2. Then Area = sqrt(s(s-a)(s-b)(s-c)).",
       "points": 1
@@ -670,7 +910,12 @@
       "moduleOrder": 10,
       "order": 4,
       "question": "When should you use the Law of Cosines instead of the Law of Sines?",
-      "options": ["When you know AAS", "When you know ASA", "When you know SAS or SSS", "When you know two angles"],
+      "options": [
+        "When you know AAS",
+        "When you know ASA",
+        "When you know SAS or SSS",
+        "When you know two angles"
+      ],
       "answer": "When you know SAS or SSS",
       "explanation": "The Law of Cosines is used for SAS (two sides and included angle) and SSS (all three sides).",
       "points": 1
@@ -679,7 +924,12 @@
       "moduleOrder": 10,
       "order": 5,
       "question": "In a triangle with a = 5, b = 7, c = 8, what is cos(C)?",
-      "options": ["1/7", "5/7", "1/2", "-1/2"],
+      "options": [
+        "1/7",
+        "5/7",
+        "1/2",
+        "-1/2"
+      ],
       "answer": "1/7",
       "explanation": "c^2 = a^2 + b^2 - 2ab*cosC -> 64 = 25 + 49 - 70*cosC -> cosC = 10/70 = 1/7.",
       "points": 1
@@ -688,7 +938,12 @@
       "moduleOrder": 11,
       "order": 1,
       "question": "The polar point (3, pi/2) corresponds to which rectangular point?",
-      "options": ["(3, 0)", "(0, 3)", "(3, 3)", "(-3, 0)"],
+      "options": [
+        "(3, 0)",
+        "(0, 3)",
+        "(3, 3)",
+        "(-3, 0)"
+      ],
       "answer": "(0, 3)",
       "explanation": "x = 3*cos(pi/2) = 0; y = 3*sin(pi/2) = 3. So the point is (0, 3).",
       "points": 1
@@ -697,7 +952,12 @@
       "moduleOrder": 11,
       "order": 2,
       "question": "Convert the rectangular point (-3, 3) to polar form.",
-      "options": ["(3*sqrt(2), pi/4)", "(3*sqrt(2), 3pi/4)", "(3, pi/4)", "(3*sqrt(2), 5pi/4)"],
+      "options": [
+        "(3*sqrt(2), pi/4)",
+        "(3*sqrt(2), 3pi/4)",
+        "(3, pi/4)",
+        "(3*sqrt(2), 5pi/4)"
+      ],
       "answer": "(3*sqrt(2), 3pi/4)",
       "explanation": "r = sqrt(9+9) = 3*sqrt(2). The point is in QII so theta = 3pi/4.",
       "points": 1
@@ -706,7 +966,12 @@
       "moduleOrder": 11,
       "order": 3,
       "question": "What shape does r = 4 represent in polar coordinates?",
-      "options": ["A line", "A circle of radius 4 centered at the origin", "A spiral", "A rose curve"],
+      "options": [
+        "A line",
+        "A circle of radius 4 centered at the origin",
+        "A spiral",
+        "A rose curve"
+      ],
       "answer": "A circle of radius 4 centered at the origin",
       "explanation": "r = constant is a circle centered at the pole with the given radius.",
       "points": 1
@@ -715,7 +980,12 @@
       "moduleOrder": 11,
       "order": 4,
       "question": "How many petals does the rose curve r = cos(3*theta) have?",
-      "options": ["2", "3", "6", "9"],
+      "options": [
+        "2",
+        "3",
+        "6",
+        "9"
+      ],
       "answer": "3",
       "explanation": "For r = cos(n*theta) with n odd, the curve has n petals. Here n = 3, so 3 petals.",
       "points": 1
@@ -724,7 +994,12 @@
       "moduleOrder": 11,
       "order": 5,
       "question": "Which polar equation represents a limacon?",
-      "options": ["r = 4", "r = 2*sin(theta)", "r = 1 + 2*cos(theta)", "r = cos(2*theta)"],
+      "options": [
+        "r = 4",
+        "r = 2*sin(theta)",
+        "r = 1 + 2*cos(theta)",
+        "r = cos(2*theta)"
+      ],
       "answer": "r = 1 + 2*cos(theta)",
       "explanation": "A limacon has the form r = a +/- b*cos(theta) or r = a +/- b*sin(theta). Here r = 1 + 2cos(theta) fits this form.",
       "points": 1
@@ -733,7 +1008,12 @@
       "moduleOrder": 12,
       "order": 1,
       "question": "What is the magnitude of vector v = <3, 4>?",
-      "options": ["7", "5", "1", "sqrt(7)"],
+      "options": [
+        "7",
+        "5",
+        "1",
+        "sqrt(7)"
+      ],
       "answer": "5",
       "explanation": "|v| = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5.",
       "points": 1
@@ -742,7 +1022,12 @@
       "moduleOrder": 12,
       "order": 2,
       "question": "What is the dot product of <2, 3> and <4, -1>?",
-      "options": ["11", "5", "14", "-5"],
+      "options": [
+        "11",
+        "5",
+        "14",
+        "-5"
+      ],
       "answer": "5",
       "explanation": "<2,3> dot <4,-1> = 2*4 + 3*(-1) = 8 - 3 = 5.",
       "points": 1
@@ -751,7 +1036,12 @@
       "moduleOrder": 12,
       "order": 3,
       "question": "Two vectors are perpendicular when their dot product is:",
-      "options": ["1", "-1", "0", "Equal to their magnitudes"],
+      "options": [
+        "1",
+        "-1",
+        "0",
+        "Equal to their magnitudes"
+      ],
       "answer": "0",
       "explanation": "Two vectors are perpendicular (orthogonal) if and only if their dot product equals 0.",
       "points": 1
@@ -760,7 +1050,12 @@
       "moduleOrder": 12,
       "order": 4,
       "question": "Find the unit vector in the direction of <3, 4>.",
-      "options": ["<3/5, 4/5>", "<3/7, 4/7>", "<1, 1>", "<3, 4>"],
+      "options": [
+        "<3/5, 4/5>",
+        "<3/7, 4/7>",
+        "<1, 1>",
+        "<3, 4>"
+      ],
       "answer": "<3/5, 4/5>",
       "explanation": "The magnitude is 5. The unit vector is <3/5, 4/5>.",
       "points": 1
@@ -769,7 +1064,12 @@
       "moduleOrder": 12,
       "order": 5,
       "question": "What is the angle between vectors <1, 0> and <0, 1>?",
-      "options": ["0 degrees", "45 degrees", "90 degrees", "180 degrees"],
+      "options": [
+        "0 degrees",
+        "45 degrees",
+        "90 degrees",
+        "180 degrees"
+      ],
       "answer": "90 degrees",
       "explanation": "cos(theta) = dot product / (|u|*|v|) = 0/(1*1) = 0, so theta = 90 degrees.",
       "points": 1
@@ -778,7 +1078,12 @@
       "moduleOrder": 13,
       "order": 1,
       "question": "Write 1 + i in polar form.",
-      "options": ["sqrt(2)*(cos(pi/4) + i*sin(pi/4))", "2*(cos(pi/4) + i*sin(pi/4))", "sqrt(2)*(cos(pi/2) + i*sin(pi/2))", "sqrt(2)*(cos(pi/3) + i*sin(pi/3))"],
+      "options": [
+        "sqrt(2)*(cos(pi/4) + i*sin(pi/4))",
+        "2*(cos(pi/4) + i*sin(pi/4))",
+        "sqrt(2)*(cos(pi/2) + i*sin(pi/2))",
+        "sqrt(2)*(cos(pi/3) + i*sin(pi/3))"
+      ],
       "answer": "sqrt(2)*(cos(pi/4) + i*sin(pi/4))",
       "explanation": "|1+i| = sqrt(2), arg(1+i) = arctan(1) = pi/4. So 1+i = sqrt(2)*cis(pi/4).",
       "points": 1
@@ -787,7 +1092,12 @@
       "moduleOrder": 13,
       "order": 2,
       "question": "De Moivre's Theorem: [r*(cos(theta) + i*sin(theta))]^n = ?",
-      "options": ["r^n*(cos(theta) + i*sin(theta))", "r^n*(cos(n*theta) + i*sin(n*theta))", "n*r*(cos(theta) + i*sin(theta))", "r^n*(cos(theta/n) + i*sin(theta/n))"],
+      "options": [
+        "r^n*(cos(theta) + i*sin(theta))",
+        "r^n*(cos(n*theta) + i*sin(n*theta))",
+        "n*r*(cos(theta) + i*sin(theta))",
+        "r^n*(cos(theta/n) + i*sin(theta/n))"
+      ],
       "answer": "r^n*(cos(n*theta) + i*sin(n*theta))",
       "explanation": "De Moivre's Theorem: [r*cis(theta)]^n = r^n * cis(n*theta).",
       "points": 1
@@ -796,7 +1106,12 @@
       "moduleOrder": 13,
       "order": 3,
       "question": "Compute (1 + i)^4 using De Moivre's Theorem.",
-      "options": ["4", "-4", "4i", "2"],
+      "options": [
+        "4",
+        "-4",
+        "4i",
+        "2"
+      ],
       "answer": "-4",
       "explanation": "1+i = sqrt(2)*cis(pi/4). Raised to the 4th: (sqrt(2))^4 * cis(pi) = 4*(-1) = -4.",
       "points": 1
@@ -805,7 +1120,12 @@
       "moduleOrder": 13,
       "order": 4,
       "question": "How many nth roots does a nonzero complex number have?",
-      "options": ["1", "2", "n", "Infinitely many"],
+      "options": [
+        "1",
+        "2",
+        "n",
+        "Infinitely many"
+      ],
       "answer": "n",
       "explanation": "Every nonzero complex number has exactly n distinct nth roots, evenly spaced around a circle.",
       "points": 1
@@ -814,7 +1134,12 @@
       "moduleOrder": 13,
       "order": 5,
       "question": "What is |3 - 4i|?",
-      "options": ["1", "5", "7", "25"],
+      "options": [
+        "1",
+        "5",
+        "7",
+        "25"
+      ],
       "answer": "5",
       "explanation": "|3 - 4i| = sqrt(9 + 16) = sqrt(25) = 5.",
       "points": 1
@@ -823,7 +1148,12 @@
       "moduleOrder": 14,
       "order": 1,
       "question": "A Ferris wheel with diameter 40 m completes one revolution in 30 seconds. What is the amplitude of the height function?",
-      "options": ["10", "20", "40", "30"],
+      "options": [
+        "10",
+        "20",
+        "40",
+        "30"
+      ],
       "answer": "20",
       "explanation": "Amplitude = radius = diameter/2 = 40/2 = 20 meters.",
       "points": 1
@@ -832,7 +1162,12 @@
       "moduleOrder": 14,
       "order": 2,
       "question": "Which trig function best models periodic oscillating phenomena?",
-      "options": ["Linear", "Exponential", "Sinusoidal", "Logarithmic"],
+      "options": [
+        "Linear",
+        "Exponential",
+        "Sinusoidal",
+        "Logarithmic"
+      ],
       "answer": "Sinusoidal",
       "explanation": "Sinusoidal functions (sin and cos) naturally model periodic, oscillating behavior around a midline.",
       "points": 1
@@ -841,7 +1176,12 @@
       "moduleOrder": 14,
       "order": 3,
       "question": "A sound wave has frequency 440 Hz. What is its period in seconds?",
-      "options": ["440 s", "1/440 s", "220 s", "880 s"],
+      "options": [
+        "440 s",
+        "1/440 s",
+        "220 s",
+        "880 s"
+      ],
       "answer": "1/440 s",
       "explanation": "Period T = 1/frequency = 1/440 seconds.",
       "points": 1
@@ -850,7 +1190,12 @@
       "moduleOrder": 14,
       "order": 4,
       "question": "In navigation, a bearing of N 30 degrees E means:",
-      "options": ["30 degrees from East toward North", "30 degrees clockwise from North", "30 degrees counterclockwise from East", "60 degrees from North"],
+      "options": [
+        "30 degrees from East toward North",
+        "30 degrees clockwise from North",
+        "30 degrees counterclockwise from East",
+        "60 degrees from North"
+      ],
       "answer": "30 degrees clockwise from North",
       "explanation": "Navigation bearings are measured clockwise from North. N 30 E means 30 degrees toward the East from North.",
       "points": 1
@@ -859,7 +1204,12 @@
       "moduleOrder": 14,
       "order": 5,
       "question": "What does the amplitude of a sinusoidal model represent in context?",
-      "options": ["The period of the phenomenon", "The average value", "Half the distance between max and min values", "The horizontal shift"],
+      "options": [
+        "The period of the phenomenon",
+        "The average value",
+        "Half the distance between max and min values",
+        "The horizontal shift"
+      ],
       "answer": "Half the distance between max and min values",
       "explanation": "Amplitude = (max - min)/2, representing how far the phenomenon swings above or below its average.",
       "points": 1
@@ -871,7 +1221,12 @@
       "order": 1,
       "type": "mc",
       "question": "Convert 5pi/6 radians to degrees.",
-      "options": ["120 degrees", "150 degrees", "210 degrees", "300 degrees"],
+      "options": [
+        "120 degrees",
+        "150 degrees",
+        "210 degrees",
+        "300 degrees"
+      ],
       "answer": "150 degrees",
       "explanation": "5pi/6 * (180/pi) = 5 * 30 = 150 degrees.",
       "points": 1
@@ -881,7 +1236,12 @@
       "order": 2,
       "type": "mc",
       "question": "What are the coordinates of the point at 5pi/4 on the unit circle?",
-      "options": ["(-sqrt(2)/2, -sqrt(2)/2)", "(sqrt(2)/2, -sqrt(2)/2)", "(-sqrt(2)/2, sqrt(2)/2)", "(-1/2, -sqrt(3)/2)"],
+      "options": [
+        "(-sqrt(2)/2, -sqrt(2)/2)",
+        "(sqrt(2)/2, -sqrt(2)/2)",
+        "(-sqrt(2)/2, sqrt(2)/2)",
+        "(-1/2, -sqrt(3)/2)"
+      ],
       "answer": "(-sqrt(2)/2, -sqrt(2)/2)",
       "explanation": "5pi/4 is in QIII (225 degrees). cos(225) = -sqrt(2)/2 and sin(225) = -sqrt(2)/2.",
       "points": 1
@@ -891,7 +1251,12 @@
       "order": 3,
       "type": "mc",
       "question": "What is the period of y = 3cos(x/2)?",
-      "options": ["pi", "2pi", "4pi", "6pi"],
+      "options": [
+        "pi",
+        "2pi",
+        "4pi",
+        "6pi"
+      ],
       "answer": "4pi",
       "explanation": "Period = 2pi/B = 2pi/(1/2) = 4pi.",
       "points": 1
@@ -901,7 +1266,12 @@
       "order": 4,
       "type": "mc",
       "question": "Simplify (sin^2(theta) - 1) / cos(theta).",
-      "options": ["cos(theta)", "-cos(theta)", "sin(theta)", "-sin(theta)"],
+      "options": [
+        "cos(theta)",
+        "-cos(theta)",
+        "sin(theta)",
+        "-sin(theta)"
+      ],
       "answer": "-cos(theta)",
       "explanation": "sin^2 - 1 = -cos^2 (Pythagorean identity). So (-cos^2)/cos = -cos(theta).",
       "points": 1
@@ -911,7 +1281,12 @@
       "order": 5,
       "type": "mc",
       "question": "Evaluate cos(pi/12) using the difference formula cos(pi/4 - pi/6).",
-      "options": ["(sqrt(6)-sqrt(2))/4", "(sqrt(6)+sqrt(2))/4", "(sqrt(2)-sqrt(6))/4", "(sqrt(3)+1)/4"],
+      "options": [
+        "(sqrt(6)-sqrt(2))/4",
+        "(sqrt(6)+sqrt(2))/4",
+        "(sqrt(2)-sqrt(6))/4",
+        "(sqrt(3)+1)/4"
+      ],
       "answer": "(sqrt(6)+sqrt(2))/4",
       "explanation": "cos(pi/4 - pi/6) = cos(pi/4)cos(pi/6) + sin(pi/4)sin(pi/6) = (sqrt(2)/2)(sqrt(3)/2) + (sqrt(2)/2)(1/2) = (sqrt(6)+sqrt(2))/4.",
       "points": 1
@@ -921,7 +1296,12 @@
       "order": 6,
       "type": "mc",
       "question": "If cos(theta) = -5/13 and pi/2 < theta < pi, what is tan(theta)?",
-      "options": ["12/5", "-12/5", "5/12", "-5/12"],
+      "options": [
+        "12/5",
+        "-12/5",
+        "5/12",
+        "-5/12"
+      ],
       "answer": "-12/5",
       "explanation": "sin^2 = 1 - 25/169 = 144/169, sin = 12/13 (QII, positive). tan = (12/13)/(-5/13) = -12/5.",
       "points": 1
@@ -931,7 +1311,12 @@
       "order": 7,
       "type": "mc",
       "question": "What is the range of f(x) = 2sin(x) + 1?",
-      "options": ["[-1, 1]", "[-2, 2]", "[-1, 3]", "[0, 3]"],
+      "options": [
+        "[-1, 1]",
+        "[-2, 2]",
+        "[-1, 3]",
+        "[0, 3]"
+      ],
       "answer": "[-1, 3]",
       "explanation": "2sin(x) has range [-2, 2], so adding 1 shifts it to [-1, 3].",
       "points": 1
@@ -941,7 +1326,12 @@
       "order": 8,
       "type": "mc",
       "question": "Evaluate arcsin(-sqrt(3)/2).",
-      "options": ["-pi/3", "-pi/6", "2pi/3", "4pi/3"],
+      "options": [
+        "-pi/3",
+        "-pi/6",
+        "2pi/3",
+        "4pi/3"
+      ],
       "answer": "-pi/3",
       "explanation": "arcsin(-sqrt(3)/2) = -pi/3 because sin(-pi/3) = -sqrt(3)/2 and -pi/3 is in [-pi/2, pi/2].",
       "points": 1
@@ -951,7 +1341,12 @@
       "order": 9,
       "type": "mc",
       "question": "A right triangle has legs of 7 and 24. What is the sine of the angle opposite the leg of length 7?",
-      "options": ["7/24", "7/25", "24/25", "24/7"],
+      "options": [
+        "7/24",
+        "7/25",
+        "24/25",
+        "24/7"
+      ],
       "answer": "7/25",
       "explanation": "Hypotenuse = sqrt(49 + 576) = sqrt(625) = 25. sin(theta) = 7/25.",
       "points": 1
@@ -961,7 +1356,12 @@
       "order": 10,
       "type": "mc",
       "question": "Which expression equals csc^2(theta) - cot^2(theta)?",
-      "options": ["0", "1", "sin^2(theta)", "-1"],
+      "options": [
+        "0",
+        "1",
+        "sin^2(theta)",
+        "-1"
+      ],
       "answer": "1",
       "explanation": "From 1 + cot^2 = csc^2, we get csc^2 - cot^2 = 1.",
       "points": 1
@@ -971,7 +1371,12 @@
       "order": 11,
       "type": "mc",
       "question": "What is cos(2theta) if sin(theta) = 5/13?",
-      "options": ["119/169", "-119/169", "120/169", "24/25"],
+      "options": [
+        "119/169",
+        "-119/169",
+        "120/169",
+        "24/25"
+      ],
       "answer": "119/169",
       "explanation": "cos(2theta) = 1 - 2sin^2 = 1 - 2*(25/169) = 1 - 50/169 = 119/169.",
       "points": 1
@@ -981,7 +1386,12 @@
       "order": 12,
       "type": "mc",
       "question": "In triangle ABC, A = 35 degrees, B = 65 degrees, a = 12. Find b using Law of Sines.",
-      "options": ["b = 8.5", "b = 18.9", "b = 15.7", "b = 10.2"],
+      "options": [
+        "b = 8.5",
+        "b = 18.9",
+        "b = 15.7",
+        "b = 10.2"
+      ],
       "answer": "b = 18.9",
       "explanation": "b = a*sin(B)/sin(A) = 12*sin(65)/sin(35) = 12*0.906/0.574 = 18.9.",
       "points": 1
@@ -991,7 +1401,12 @@
       "order": 13,
       "type": "mc",
       "question": "What is the x-intercept nearest to the origin of y = sin(x)?",
-      "options": ["x = pi/2", "x = pi", "x = 0", "x = 2pi"],
+      "options": [
+        "x = pi/2",
+        "x = pi",
+        "x = 0",
+        "x = 2pi"
+      ],
       "answer": "x = 0",
       "explanation": "sin(0) = 0, so x = 0 is the x-intercept at the origin.",
       "points": 1
@@ -1001,7 +1416,12 @@
       "order": 14,
       "type": "mc",
       "question": "Which identities are used to prove sin(A+B) = sinA*cosB + cosA*sinB?",
-      "options": ["Pythagorean identity only", "Cofunction identities only", "Geometric/unit circle reasoning and Pythagorean identity", "Law of Sines"],
+      "options": [
+        "Pythagorean identity only",
+        "Cofunction identities only",
+        "Geometric/unit circle reasoning and Pythagorean identity",
+        "Law of Sines"
+      ],
       "answer": "Geometric/unit circle reasoning and Pythagorean identity",
       "explanation": "The sum formula is proved using the unit circle, distance formula, and the cosine difference formula.",
       "points": 1
@@ -1011,7 +1431,12 @@
       "order": 15,
       "type": "mc",
       "question": "What is the maximum value of f(x) = -4sin(x) + 2?",
-      "options": ["6", "4", "-2", "2"],
+      "options": [
+        "6",
+        "4",
+        "-2",
+        "2"
+      ],
       "answer": "6",
       "explanation": "The maximum of -4sin(x) is 4 (when sin(x) = -1), so the maximum of -4sin(x)+2 = 4+2 = 6.",
       "points": 1
@@ -1021,7 +1446,12 @@
       "order": 1,
       "type": "mc",
       "question": "In a triangle with sides a = 7, b = 8, c = 9, find the largest angle C.",
-      "options": ["C = 73.4 degrees", "C = 82.8 degrees", "C = 67.4 degrees", "C = 55.8 degrees"],
+      "options": [
+        "C = 73.4 degrees",
+        "C = 82.8 degrees",
+        "C = 67.4 degrees",
+        "C = 55.8 degrees"
+      ],
       "answer": "C = 73.4 degrees",
       "explanation": "cosC = (a^2+b^2-c^2)/(2ab) = (49+64-81)/112 = 32/112 = 2/7. C = arccos(2/7) = 73.4 degrees.",
       "points": 1
@@ -1031,7 +1461,12 @@
       "order": 2,
       "type": "mc",
       "question": "Convert the rectangular point (0, -5) to polar form.",
-      "options": ["(5, pi)", "(5, 3pi/2)", "(5, pi/2)", "(-5, pi/2)"],
+      "options": [
+        "(5, pi)",
+        "(5, 3pi/2)",
+        "(5, pi/2)",
+        "(-5, pi/2)"
+      ],
       "answer": "(5, 3pi/2)",
       "explanation": "r = sqrt(0+25) = 5. The point (0,-5) is on the negative y-axis, so theta = 3pi/2.",
       "points": 1
@@ -1041,7 +1476,12 @@
       "order": 3,
       "type": "mc",
       "question": "What is <2, 5> + <-3, 1>?",
-      "options": ["<1, 6>", "<-1, 6>", "<5, 4>", "<-1, 4>"],
+      "options": [
+        "<1, 6>",
+        "<-1, 6>",
+        "<5, 4>",
+        "<-1, 4>"
+      ],
       "answer": "<-1, 6>",
       "explanation": "<2+(-3), 5+1> = <-1, 6>.",
       "points": 1
@@ -1051,7 +1491,12 @@
       "order": 4,
       "type": "mc",
       "question": "Compute (sqrt(3) + i)^3 using De Moivre's Theorem.",
-      "options": ["8i", "-8i", "8", "-8"],
+      "options": [
+        "8i",
+        "-8i",
+        "8",
+        "-8"
+      ],
       "answer": "8i",
       "explanation": "sqrt(3)+i = 2*cis(pi/6). Cubed: 2^3 * cis(3*pi/6) = 8*cis(pi/2) = 8i.",
       "points": 1
@@ -1061,7 +1506,12 @@
       "order": 5,
       "type": "mc",
       "question": "A tide model: h(t) = 4sin(pi*t/6) + 5, where h is in feet and t in hours. What is the maximum water height?",
-      "options": ["5 ft", "4 ft", "9 ft", "1 ft"],
+      "options": [
+        "5 ft",
+        "4 ft",
+        "9 ft",
+        "1 ft"
+      ],
       "answer": "9 ft",
       "explanation": "Maximum = amplitude + midline = 4 + 5 = 9 feet.",
       "points": 1
@@ -1071,7 +1521,12 @@
       "order": 6,
       "type": "mc",
       "question": "What is the angle between vectors <1, 1> and <1, -1>?",
-      "options": ["0 degrees", "45 degrees", "90 degrees", "180 degrees"],
+      "options": [
+        "0 degrees",
+        "45 degrees",
+        "90 degrees",
+        "180 degrees"
+      ],
       "answer": "90 degrees",
       "explanation": "Dot product = 1*1 + 1*(-1) = 0, so the vectors are perpendicular (90 degrees).",
       "points": 1
@@ -1081,7 +1536,12 @@
       "order": 7,
       "type": "mc",
       "question": "Solve 2sin(x) - 1 = 0 for x in [0, 2pi).",
-      "options": ["x = pi/6 only", "x = 5pi/6 only", "x = pi/6 and 5pi/6", "x = pi/3 and 2pi/3"],
+      "options": [
+        "x = pi/6 only",
+        "x = 5pi/6 only",
+        "x = pi/6 and 5pi/6",
+        "x = pi/3 and 2pi/3"
+      ],
       "answer": "x = pi/6 and 5pi/6",
       "explanation": "sin(x) = 1/2. Solutions in [0, 2pi) are x = pi/6 and x = 5pi/6.",
       "points": 1
@@ -1091,7 +1551,12 @@
       "order": 8,
       "type": "mc",
       "question": "What is the polar equation of a circle passing through the origin with center at (0, 2)?",
-      "options": ["r = 4", "r = 4cos(theta)", "r = 4sin(theta)", "r = 2"],
+      "options": [
+        "r = 4",
+        "r = 4cos(theta)",
+        "r = 4sin(theta)",
+        "r = 2"
+      ],
       "answer": "r = 4sin(theta)",
       "explanation": "A circle centered at (0, a) with radius a has polar equation r = 2a*sin(theta). Here a=2, so r = 4sin(theta).",
       "points": 1
@@ -1101,7 +1566,12 @@
       "order": 9,
       "type": "mc",
       "question": "Two forces of 30 N and 40 N act at right angles. What is the magnitude of the resultant force?",
-      "options": ["50 N", "70 N", "35 N", "10 N"],
+      "options": [
+        "50 N",
+        "70 N",
+        "35 N",
+        "10 N"
+      ],
       "answer": "50 N",
       "explanation": "|F| = sqrt(30^2 + 40^2) = sqrt(900+1600) = sqrt(2500) = 50 N.",
       "points": 1
@@ -1111,7 +1581,12 @@
       "order": 10,
       "type": "mc",
       "question": "Which equals sin(3theta) in simplified form?",
-      "options": ["3sin(theta)", "3sin(theta) - 4sin^3(theta)", "3cos(theta) - sin^3(theta)", "sin(theta)*3cos^2(theta)"],
+      "options": [
+        "3sin(theta)",
+        "3sin(theta) - 4sin^3(theta)",
+        "3cos(theta) - sin^3(theta)",
+        "sin(theta)*3cos^2(theta)"
+      ],
       "answer": "3sin(theta) - 4sin^3(theta)",
       "explanation": "Using sin(3theta) = sin(2theta + theta) and double-angle formulas gives 3sin - 4sin^3.",
       "points": 1
@@ -1121,7 +1596,12 @@
       "order": 11,
       "type": "mc",
       "question": "In the ambiguous SSA case with A = 40 degrees, a = 10, b = 15, how many triangles exist?",
-      "options": ["0", "1", "2", "Infinitely many"],
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Infinitely many"
+      ],
       "answer": "2",
       "explanation": "Height h = b*sinA = 15*sin(40) = 9.64. Since h < a < b (9.64 < 10 < 15), there are 2 triangles.",
       "points": 1
@@ -1131,7 +1611,12 @@
       "order": 12,
       "type": "mc",
       "question": "What is arctan(-1)?",
-      "options": ["-pi/4", "3pi/4", "pi/4", "-3pi/4"],
+      "options": [
+        "-pi/4",
+        "3pi/4",
+        "pi/4",
+        "-3pi/4"
+      ],
       "answer": "-pi/4",
       "explanation": "arctan(-1) = -pi/4 because tan(-pi/4) = -1 and -pi/4 is in (-pi/2, pi/2).",
       "points": 1
@@ -1141,7 +1626,12 @@
       "order": 13,
       "type": "mc",
       "question": "To prove sec(theta) - cos(theta) = sin(theta)*tan(theta), what is the key identity used?",
-      "options": ["sec^2 = 1 + tan^2", "sin^2 = 1 - cos^2", "tan = cos/sin", "csc = 1/sin"],
+      "options": [
+        "sec^2 = 1 + tan^2",
+        "sin^2 = 1 - cos^2",
+        "tan = cos/sin",
+        "csc = 1/sin"
+      ],
       "answer": "sin^2 = 1 - cos^2",
       "explanation": "sec - cos = 1/cos - cos = (1-cos^2)/cos = sin^2/cos = sin*(sin/cos) = sin*tan. Key: 1-cos^2 = sin^2.",
       "points": 1
@@ -1151,7 +1641,12 @@
       "order": 14,
       "type": "mc",
       "question": "Find the area of a triangle with sides 6 and 8 and included angle 30 degrees.",
-      "options": ["12", "24", "6*sqrt(3)", "12*sqrt(3)"],
+      "options": [
+        "12",
+        "24",
+        "6*sqrt(3)",
+        "12*sqrt(3)"
+      ],
       "answer": "12",
       "explanation": "Area = (1/2)*a*b*sin(C) = (1/2)*6*8*sin(30) = 24*(1/2) = 12.",
       "points": 1
@@ -1161,7 +1656,12 @@
       "order": 15,
       "type": "mc",
       "question": "A 50-foot building casts a 50-foot shadow. What is the angle of elevation of the sun?",
-      "options": ["30 degrees", "45 degrees", "60 degrees", "90 degrees"],
+      "options": [
+        "30 degrees",
+        "45 degrees",
+        "60 degrees",
+        "90 degrees"
+      ],
       "answer": "45 degrees",
       "explanation": "tan(theta) = 50/50 = 1, so theta = arctan(1) = 45 degrees.",
       "points": 1
@@ -1171,7 +1671,12 @@
       "order": 16,
       "type": "mc",
       "question": "What is the projection of <4, 3> onto <1, 0>?",
-      "options": ["<3, 0>", "<4, 0>", "<4, 3>", "<0, 3>"],
+      "options": [
+        "<3, 0>",
+        "<4, 0>",
+        "<4, 3>",
+        "<0, 3>"
+      ],
       "answer": "<4, 0>",
       "explanation": "Projection of v onto u = (v dot u / |u|^2)*u = (4/1)*<1,0> = <4, 0>.",
       "points": 1
@@ -1181,7 +1686,12 @@
       "order": 17,
       "type": "mc",
       "question": "The graph of y = cos(x) is the same as y = sin(x) shifted by how much?",
-      "options": ["pi/4 to the left", "pi/2 to the right", "pi/2 to the left", "pi to the right"],
+      "options": [
+        "pi/4 to the left",
+        "pi/2 to the right",
+        "pi/2 to the left",
+        "pi to the right"
+      ],
       "answer": "pi/2 to the left",
       "explanation": "cos(x) = sin(x + pi/2), so the cosine graph is the sine graph shifted pi/2 to the left.",
       "points": 1
@@ -1191,7 +1701,12 @@
       "order": 18,
       "type": "mc",
       "question": "Find all cube roots of 8 in polar form.",
-      "options": ["2 only", "2, 2*cis(2pi/3), 2*cis(4pi/3)", "2, 2*cis(pi/3), 2*cis(2pi/3)", "2*cis(0), 2*cis(pi)"],
+      "options": [
+        "2 only",
+        "2, 2*cis(2pi/3), 2*cis(4pi/3)",
+        "2, 2*cis(pi/3), 2*cis(2pi/3)",
+        "2*cis(0), 2*cis(pi)"
+      ],
       "answer": "2, 2*cis(2pi/3), 2*cis(4pi/3)",
       "explanation": "8 = 8*cis(0). Cube roots: 2*cis(0 + 2pi*k/3) for k=0,1,2 gives 2, 2*cis(2pi/3), 2*cis(4pi/3).",
       "points": 1
@@ -1201,7 +1716,12 @@
       "order": 19,
       "type": "mc",
       "question": "Using the half-angle formula, find sin(22.5 degrees).",
-      "options": ["sqrt(2-sqrt(2))/2", "sqrt(2+sqrt(2))/2", "(sqrt(6)-sqrt(2))/4", "sqrt(2)/2"],
+      "options": [
+        "sqrt(2-sqrt(2))/2",
+        "sqrt(2+sqrt(2))/2",
+        "(sqrt(6)-sqrt(2))/4",
+        "sqrt(2)/2"
+      ],
       "answer": "sqrt(2-sqrt(2))/2",
       "explanation": "sin(22.5) = sin(45/2) = sqrt((1-cos(45))/2) = sqrt((1-sqrt(2)/2)/2) = sqrt((2-sqrt(2))/4) = sqrt(2-sqrt(2))/2.",
       "points": 1
@@ -1211,7 +1731,12 @@
       "order": 20,
       "type": "mc",
       "question": "A rose curve r = sin(4*theta) has how many petals?",
-      "options": ["4", "8", "2", "16"],
+      "options": [
+        "4",
+        "8",
+        "2",
+        "16"
+      ],
       "answer": "8",
       "explanation": "For r = sin(n*theta) with n even, the curve has 2n petals. Since n=4, there are 2*4=8 petals.",
       "points": 1

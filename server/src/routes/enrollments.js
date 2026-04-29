@@ -82,7 +82,7 @@ router.get('/', authenticate, requireStudent, async (req, res) => {
   const enrollments = await prisma.enrollment.findMany({
     where: { studentId: req.auth.studentId },
     include: {
-      course: { select: { slug: true, name: true, nameZh: true, credits: true, department: true, _count: { select: { modules: true } } } },
+      course: { select: { slug: true, name: true, nameZh: true, credits: true, department: true, type: true, _count: { select: { modules: true } } } },
       quizAttempts: { select: { moduleOrder: true, score: true } },
       examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
     },

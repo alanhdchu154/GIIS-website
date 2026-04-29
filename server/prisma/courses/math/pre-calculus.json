@@ -2,7 +2,7 @@
   "slug": "pre-calculus",
   "name": "Pre-Calculus",
   "nameZh": "预备微积分",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Mathematics",
   "type": "Core",
   "description": "Bridges Algebra II and Calculus — covering advanced functions, trigonometry, vectors, parametric equations, polar coordinates, conic sections, and an introduction to limits.",
@@ -13,7 +13,7 @@
       "title": "Functions: Review & Advanced Concepts",
       "titleZh": "函数：复习与进阶概念",
       "objectives": "Review domain and range; compose and invert functions; analyze piecewise functions and transformations.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/1-1-functions-and-function-notation",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/1-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 1.1–1.4: Functions, Domain, Range, and Inverses",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:composing-functions/x9e81a4f98389efdf:composing-functions-intro/v/function-composition",
       "videoNote": "Khan Academy — Introduction to Function Composition",
@@ -22,14 +22,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:composing-functions/x9e81a4f98389efdf:composing-functions-intro/e/composing-functions",
       "practiceNote": "Khan Academy — Function Composition Practice",
       "assignment": "For 5 pairs of functions find f(g(x)) and g(f(x)). Find the inverse of 4 functions and verify by showing f(f⁻¹(x)) = x. Graph 2 piecewise functions and state their domain and range.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 2,
       "title": "Polynomial & Rational Functions",
       "titleZh": "多项式与有理函数",
       "objectives": "Graph polynomial functions using end behavior and zeros; identify holes versus vertical asymptotes; construct sign charts for rational functions.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/3-1-complex-numbers",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/3-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 3.3–3.7: Polynomial and Rational Functions",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:rational-functions/x9e81a4f98389efdf:intro-to-rational-functions/v/asymptotes-of-rational-functions",
       "videoNote": "Khan Academy — Asymptotes of Rational Functions",
@@ -38,14 +38,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:rational-functions/x9e81a4f98389efdf:end-behavior-of-rational-functions/e/end-behavior-of-polynomial-functions",
       "practiceNote": "Khan Academy — End Behavior and Rational Functions Practice",
       "assignment": "Graph 4 polynomial functions, identifying all zeros and describing end behavior. Analyze 4 rational functions: find all asymptotes, holes, intercepts, and sketch the graph using a sign chart.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 3,
       "title": "Exponential & Logarithmic Functions",
       "titleZh": "指数与对数函数",
       "objectives": "Apply properties of exponents and logarithms; solve exponential and logarithmic equations; model logistic growth; use the change-of-base formula.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/4-1-exponential-functions",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/4-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 4.1–4.7: Exponential and Logarithmic Functions",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:logarithms/x9e81a4f98389efdf:intro-to-logarithms/v/logarithms",
       "videoNote": "Khan Academy — Introduction to Logarithms",
@@ -61,7 +61,7 @@
       "title": "Right Triangle Trigonometry",
       "titleZh": "直角三角形三角学",
       "objectives": "Apply SOH-CAH-TOA to find missing sides and angles; use special angles (30-60-90, 45-45-90); apply inverse trig functions; solve real-world elevation and depression problems.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/5-1-angles",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/5-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 5.1–5.2: Right Triangle Trigonometry",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:intro-to-trig-ratios/v/basic-trigonometry",
       "videoNote": "Khan Academy — Introduction to Trigonometric Ratios (SOH-CAH-TOA)",
@@ -70,14 +70,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:trig-in-right-triangles/e/trigonometry_1",
       "practiceNote": "Khan Academy — Trig Ratios in Right Triangles Practice",
       "assignment": "Solve 10 right triangles (find all missing sides and angles). Solve 3 angle-of-elevation/depression application problems. Verify the exact values for all special-angle trig ratios from memory.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 5,
       "title": "Unit Circle & Radian Measure",
       "titleZh": "单位圆与弧度",
       "objectives": "Convert between degrees and radians; locate reference angles; recall exact trig values from the unit circle; compute arc length and sector area.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/5-2-unit-circle-sine-and-cosine-functions",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/5-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 5.2: Unit Circle, Sine, and Cosine",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:unit-circle/v/unit-circle-definition-of-trig-functions-1",
       "videoNote": "Khan Academy — Unit Circle Definition of Trig Functions",
@@ -93,7 +93,7 @@
       "title": "Graphs of Trig Functions",
       "titleZh": "三角函数图像",
       "objectives": "Graph sine, cosine, and tangent functions; identify amplitude, period, phase shift, and vertical shift; write equations from graphs.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/6-1-graphs-of-the-sine-and-cosine-functions",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/6-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 6.1–6.2: Graphs of Sine, Cosine, and Tangent",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:sinusoidal-models/v/amplitude-midline-and-period-of-sinusoidal-functions",
       "videoNote": "Khan Academy — Amplitude, Midline, and Period of Sinusoidal Functions",
@@ -102,14 +102,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:graphs-of-sin-cos-and-tan/e/trigonometric-functions-and-their-graphs",
       "practiceNote": "Khan Academy — Trig Functions and Their Graphs Practice",
       "assignment": "Graph 6 sinusoidal functions (identifying amplitude, period, phase shift, and vertical shift). Write equations to match 4 given sinusoidal graphs. Use Desmos to verify all graphs.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 7,
       "title": "Trig Identities & Equations",
       "titleZh": "三角恒等式与方程",
       "objectives": "Verify Pythagorean, reciprocal, and quotient identities; apply sum/difference and double-angle formulas; solve trigonometric equations on a given interval.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/7-1-solving-trigonometric-equations-with-identities",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/7-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 7.1–7.3: Trig Identities and Equations",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:trig-identities-precalc/v/pythagorean-trig-identities-from-soh-cah-toa",
       "videoNote": "Khan Academy — Pythagorean Trig Identities",
@@ -125,7 +125,7 @@
       "title": "Law of Sines & Cosines",
       "titleZh": "正弦定理与余弦定理",
       "objectives": "Solve oblique triangles using Law of Sines and Law of Cosines; analyze the ambiguous case (SSA); compute triangle area using Heron's formula and the ½ab sin C formula.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/8-1-non-right-triangles-law-of-sines",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/8-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 8.1–8.2: Law of Sines and Law of Cosines",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:law-of-sines/v/law-of-sines",
       "videoNote": "Khan Academy — Law of Sines",
@@ -134,14 +134,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:law-of-cosines/e/law_of_cosines",
       "practiceNote": "Khan Academy — Law of Cosines Practice",
       "assignment": "Solve 6 triangles using Law of Sines and 4 using Law of Cosines. Analyze 3 ambiguous SSA cases — determine how many triangles exist. Compute the area of each solved triangle.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 9,
       "title": "Vectors",
       "titleZh": "向量",
       "objectives": "Represent vectors in component form; compute magnitude and direction angle; perform vector addition and scalar multiplication; calculate the dot product and determine orthogonality.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/8-8-vectors",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/8-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 8.8: Vectors in Two Dimensions",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors/x9e81a4f98389efdf:vectors-intro/v/introduction-to-vectors-and-scalars",
       "videoNote": "Khan Academy — Introduction to Vectors and Scalars",
@@ -150,14 +150,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors/x9e81a4f98389efdf:magnitude-of-vectors/e/vector-magnitude",
       "practiceNote": "Khan Academy — Vector Magnitude and Direction Practice",
       "assignment": "Write 6 vectors in component form from magnitude/direction and vice versa. Perform vector addition, subtraction, and scalar multiplication for 4 sets of vectors. Compute 4 dot products and determine whether each pair of vectors is orthogonal.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 10,
       "title": "Parametric Equations & Polar Coordinates",
       "titleZh": "参数方程与极坐标",
       "objectives": "Graph parametric curves by eliminating the parameter; convert between rectangular and polar coordinates; graph polar equations; recognize common polar curves.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/8-6-parametric-equations",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/8-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 8.6–8.7: Parametric Equations and Polar Coordinates",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:parametric/x9e81a4f98389efdf:parametric-equations-intro/v/parametric-equations-1",
       "videoNote": "Khan Academy — Introduction to Parametric Equations",
@@ -166,14 +166,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:polar-coordinates/x9e81a4f98389efdf:polar-coordinate-intro/e/polar-and-rectangular",
       "practiceNote": "Khan Academy — Polar and Rectangular Coordinates Practice",
       "assignment": "Graph 4 parametric curves by hand and verify using Desmos. Convert 6 points from polar to rectangular and 6 from rectangular to polar. Identify and sketch 3 common polar curves (circle, cardioid, rose).",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 11,
       "title": "Conic Sections (Advanced)",
       "titleZh": "圆锥曲线（进阶）",
       "objectives": "Write and graph conic sections in standard and general form; identify focus, directrix, vertices, and eccentricity for parabolas, ellipses, and hyperbolas; classify conics from the general equation.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/10-3-the-parabola",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/10-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 10.3–10.5: Parabola, Ellipse, Hyperbola",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:conics/x9e81a4f98389efdf:conics-intro/v/introduction-to-conic-sections",
       "videoNote": "Khan Academy — Introduction to Conic Sections",
@@ -189,7 +189,7 @@
       "title": "Sequences, Series & Mathematical Induction",
       "titleZh": "数列、级数与数学归纳法",
       "objectives": "Identify and generate arithmetic and geometric sequences; compute partial sums of arithmetic and geometric series; prove statements using mathematical induction.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/11-1-sequences-and-their-notations",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/11-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 11.1–11.4: Sequences, Series, and Mathematical Induction",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:series/x9e81a4f98389efdf:geometric-series/v/geometric-series-intro",
       "videoNote": "Khan Academy — Geometric Series Introduction",
@@ -198,14 +198,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:series/x9e81a4f98389efdf:arithmetic-series/e/arithmetic_sequences_2",
       "practiceNote": "Khan Academy — Arithmetic and Geometric Series Practice",
       "assignment": "Find the nth term and the sum of the first 10 terms for 4 arithmetic sequences and 4 geometric sequences. Write and complete 2 proofs by mathematical induction (e.g., sum of first n integers, divisibility).",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 13,
       "title": "Probability & Combinatorics (Advanced)",
       "titleZh": "概率与组合数学（进阶）",
       "objectives": "Count arrangements using permutations and combinations; expand binomials using the Binomial Theorem and Pascal's triangle; compute theoretical probability for multi-step experiments.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/11-5-counting-principles",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/11-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 11.5–11.7: Counting, Binomial Theorem, Probability",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:combinations/v/combination-formula",
       "videoNote": "Khan Academy — Combination Formula",
@@ -214,14 +214,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:combinations/e/combinations_1",
       "practiceNote": "Khan Academy — Combinations Practice",
       "assignment": "Solve 6 permutation and 6 combination problems. Expand 4 binomial expressions using the Binomial Theorem. Use Pascal's triangle to find a specific term in a binomial expansion. Solve 3 probability problems involving combinations.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 14,
       "title": "Introduction to Limits",
       "titleZh": "极限入门",
       "objectives": "Describe the intuitive definition of a limit; evaluate limits graphically and numerically; compute one-sided limits; apply the basic limit laws; determine continuity at a point.",
-      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/12-1-finding-limits-numerical-and-graphical-approaches",
+      "readingUrl": "https://openstax.org/books/precalculus-2e/pages/12-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 12.1–12.4: Limits and Continuity",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:limits-and-continuity/x9e81a4f98389efdf:estimating-limits-from-graphs/v/introduction-to-limits-hd",
       "videoNote": "Khan Academy — Introduction to Limits",
@@ -230,7 +230,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:limits-and-continuity/x9e81a4f98389efdf:estimating-limits-from-graphs/e/limits_from_graphs",
       "practiceNote": "Khan Academy — Estimating Limits from Graphs Practice",
       "assignment": "Evaluate 8 limits graphically. Compute 8 limits algebraically using limit laws (direct substitution, factoring, rationalizing). Identify 3 points of discontinuity on given graphs and classify each as removable, jump, or infinite.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     }
   ],
   "questions": [
@@ -239,7 +239,12 @@
       "order": 1,
       "type": "mc",
       "question": "If f(x) = 2x + 1 and g(x) = x², what is f(g(3))?",
-      "options": ["19", "49", "37", "10"],
+      "options": [
+        "19",
+        "49",
+        "37",
+        "10"
+      ],
       "answer": "19",
       "explanation": "g(3) = 9. f(9) = 2(9) + 1 = 19.",
       "points": 1
@@ -249,7 +254,12 @@
       "order": 2,
       "type": "mc",
       "question": "Which of the following is the inverse of f(x) = (x − 3)/2?",
-      "options": ["f⁻¹(x) = 2x + 3", "f⁻¹(x) = 2x − 3", "f⁻¹(x) = (x + 3)/2", "f⁻¹(x) = 2/(x − 3)"],
+      "options": [
+        "f⁻¹(x) = 2x + 3",
+        "f⁻¹(x) = 2x − 3",
+        "f⁻¹(x) = (x + 3)/2",
+        "f⁻¹(x) = 2/(x − 3)"
+      ],
       "answer": "f⁻¹(x) = 2x + 3",
       "explanation": "Swap x and y: x = (y − 3)/2 → 2x = y − 3 → y = 2x + 3.",
       "points": 1
@@ -259,7 +269,12 @@
       "order": 3,
       "type": "mc",
       "question": "A rational function has a hole at x = 2. This means the factor (x − 2) appears in:",
-      "options": ["The numerator only", "The denominator only", "Both numerator and denominator", "Neither numerator nor denominator"],
+      "options": [
+        "The numerator only",
+        "The denominator only",
+        "Both numerator and denominator",
+        "Neither numerator nor denominator"
+      ],
       "answer": "Both numerator and denominator",
       "explanation": "A hole (removable discontinuity) occurs when a common factor cancels from both numerator and denominator.",
       "points": 1
@@ -269,7 +284,12 @@
       "order": 4,
       "type": "mc",
       "question": "Solve for x: log₂(x) = 5.",
-      "options": ["x = 10", "x = 32", "x = 25", "x = 64"],
+      "options": [
+        "x = 10",
+        "x = 32",
+        "x = 25",
+        "x = 64"
+      ],
       "answer": "x = 32",
       "explanation": "log₂(x) = 5 means 2⁵ = x = 32.",
       "points": 1
@@ -279,7 +299,12 @@
       "order": 5,
       "type": "mc",
       "question": "In a right triangle, if the angle θ = 30° and the hypotenuse = 10, what is the side opposite to θ?",
-      "options": ["5", "5√3", "10√3", "√3/2"],
+      "options": [
+        "5",
+        "5√3",
+        "10√3",
+        "√3/2"
+      ],
       "answer": "5",
       "explanation": "sin 30° = opposite/hypotenuse = ½. Opposite = 10 × ½ = 5.",
       "points": 1
@@ -289,7 +314,12 @@
       "order": 6,
       "type": "mc",
       "question": "Convert 270° to radians.",
-      "options": ["π/2", "3π/2", "2π", "3π/4"],
+      "options": [
+        "π/2",
+        "3π/2",
+        "2π",
+        "3π/4"
+      ],
       "answer": "3π/2",
       "explanation": "270° × (π/180°) = 270π/180 = 3π/2.",
       "points": 1
@@ -299,7 +329,12 @@
       "order": 7,
       "type": "mc",
       "question": "What is the amplitude of y = −4 sin(2x + π)?",
-      "options": ["−4", "4", "2", "π"],
+      "options": [
+        "−4",
+        "4",
+        "2",
+        "π"
+      ],
       "answer": "4",
       "explanation": "Amplitude is the absolute value of the coefficient of sine: |−4| = 4.",
       "points": 1
@@ -309,7 +344,12 @@
       "order": 8,
       "type": "mc",
       "question": "Which identity is the double-angle formula for cos(2θ)?",
-      "options": ["cos²θ + sin²θ", "2sinθcosθ", "cos²θ − sin²θ", "1 − cos²θ"],
+      "options": [
+        "cos²θ + sin²θ",
+        "2sinθcosθ",
+        "cos²θ − sin²θ",
+        "1 − cos²θ"
+      ],
       "answer": "cos²θ − sin²θ",
       "explanation": "The double-angle formula: cos(2θ) = cos²θ − sin²θ (also equals 2cos²θ − 1 or 1 − 2sin²θ).",
       "points": 1
@@ -319,7 +359,12 @@
       "order": 9,
       "type": "mc",
       "question": "Solve sin(x) = √2/2 on [0, 2π).",
-      "options": ["x = π/4 only", "x = π/4 and x = 3π/4", "x = π/3 and x = 2π/3", "x = π/6 and x = 5π/6"],
+      "options": [
+        "x = π/4 only",
+        "x = π/4 and x = 3π/4",
+        "x = π/3 and x = 2π/3",
+        "x = π/6 and x = 5π/6"
+      ],
       "answer": "x = π/4 and x = 3π/4",
       "explanation": "sin(x) = √2/2 at x = π/4 (Q1) and x = π − π/4 = 3π/4 (Q2).",
       "points": 1
@@ -329,7 +374,12 @@
       "order": 10,
       "type": "mc",
       "question": "A triangle has sides a = 7, b = 10, and angle A = 40°. Using the Law of Sines, which expression gives angle B?",
-      "options": ["sin B = (10 sin 40°)/7", "sin B = (7 sin 40°)/10", "sin B = sin 40°/(7 × 10)", "sin B = 7/(10 sin 40°)"],
+      "options": [
+        "sin B = (10 sin 40°)/7",
+        "sin B = (7 sin 40°)/10",
+        "sin B = sin 40°/(7 × 10)",
+        "sin B = 7/(10 sin 40°)"
+      ],
       "answer": "sin B = (10 sin 40°)/7",
       "explanation": "Law of Sines: a/sin A = b/sin B → sin B = b·sin A / a = (10 sin 40°)/7.",
       "points": 1
@@ -339,7 +389,12 @@
       "order": 11,
       "type": "mc",
       "question": "Given vectors u = ⟨3, −1⟩ and v = ⟨2, 4⟩, find u · v (dot product).",
-      "options": ["10", "2", "−10", "14"],
+      "options": [
+        "10",
+        "2",
+        "−10",
+        "14"
+      ],
       "answer": "2",
       "explanation": "u · v = (3)(2) + (−1)(4) = 6 − 4 = 2.",
       "points": 1
@@ -349,7 +404,12 @@
       "order": 12,
       "type": "mc",
       "question": "The period of y = 3 cos(πx) is:",
-      "options": ["π", "2", "3", "1/π"],
+      "options": [
+        "π",
+        "2",
+        "3",
+        "1/π"
+      ],
       "answer": "2",
       "explanation": "Period = 2π/|B| = 2π/π = 2.",
       "points": 1
@@ -389,7 +449,12 @@
       "order": 1,
       "type": "mc",
       "question": "If f(x) = x² − 1 and g(x) = √x, what is the domain of g(f(x))?",
-      "options": ["x ≥ 0", "x ≤ −1 or x ≥ 1", "all real numbers", "x ≥ 1"],
+      "options": [
+        "x ≥ 0",
+        "x ≤ −1 or x ≥ 1",
+        "all real numbers",
+        "x ≥ 1"
+      ],
       "answer": "x ≤ −1 or x ≥ 1",
       "explanation": "g(f(x)) = √(x² − 1). We need x² − 1 ≥ 0 → x² ≥ 1 → x ≤ −1 or x ≥ 1.",
       "points": 1
@@ -399,7 +464,12 @@
       "order": 2,
       "type": "mc",
       "question": "Which of the following polynomial end behaviors describes f(x) = −2x⁴ + 3x² − 1?",
-      "options": ["Up on left, up on right", "Down on left, up on right", "Down on left, down on right", "Up on left, down on right"],
+      "options": [
+        "Up on left, up on right",
+        "Down on left, up on right",
+        "Down on left, down on right",
+        "Up on left, down on right"
+      ],
       "answer": "Down on left, down on right",
       "explanation": "The leading term is −2x⁴ (negative, even degree), so f(x) → −∞ as x → ±∞.",
       "points": 1
@@ -409,7 +479,12 @@
       "order": 3,
       "type": "mc",
       "question": "Solve: 3^(2x−1) = 27.",
-      "options": ["x = 2", "x = 3/2", "x = 1", "x = 5/2"],
+      "options": [
+        "x = 2",
+        "x = 3/2",
+        "x = 1",
+        "x = 5/2"
+      ],
       "answer": "x = 2",
       "explanation": "27 = 3³, so 2x − 1 = 3 → 2x = 4 → x = 2.",
       "points": 1
@@ -419,7 +494,12 @@
       "order": 4,
       "type": "mc",
       "question": "An observer 50 m from the base of a building measures the angle of elevation to the top as 65°. Which expression gives the building's height?",
-      "options": ["50 tan 65°", "50 / tan 65°", "50 sin 65°", "50 cos 65°"],
+      "options": [
+        "50 tan 65°",
+        "50 / tan 65°",
+        "50 sin 65°",
+        "50 cos 65°"
+      ],
       "answer": "50 tan 65°",
       "explanation": "tan 65° = height/50 → height = 50 tan 65°.",
       "points": 1
@@ -429,7 +509,12 @@
       "order": 5,
       "type": "mc",
       "question": "What is the reference angle for 5π/6?",
-      "options": ["π/6", "π/3", "π/4", "5π/6"],
+      "options": [
+        "π/6",
+        "π/3",
+        "π/4",
+        "5π/6"
+      ],
       "answer": "π/6",
       "explanation": "5π/6 is in Q2. Reference angle = π − 5π/6 = π/6.",
       "points": 1
@@ -439,7 +524,12 @@
       "order": 6,
       "type": "mc",
       "question": "The graph of y = 2sin(3x − π/2) + 1 has a phase shift of:",
-      "options": ["π/6 to the right", "π/2 to the right", "π/6 to the left", "π/2 to the left"],
+      "options": [
+        "π/6 to the right",
+        "π/2 to the right",
+        "π/6 to the left",
+        "π/2 to the left"
+      ],
       "answer": "π/6 to the right",
       "explanation": "Phase shift = (π/2)/3 = π/6. Since the form is sin(3(x − π/6)), the shift is π/6 to the right.",
       "points": 1
@@ -449,7 +539,12 @@
       "order": 7,
       "type": "mc",
       "question": "Use the sum formula to find the exact value of sin(75°).",
-      "options": ["(√6 + √2)/4", "(√6 − √2)/4", "(√3 + 1)/4", "(√3 − 1)/4"],
+      "options": [
+        "(√6 + √2)/4",
+        "(√6 − √2)/4",
+        "(√3 + 1)/4",
+        "(√3 − 1)/4"
+      ],
       "answer": "(√6 + √2)/4",
       "explanation": "sin(75°) = sin(45° + 30°) = sin45°cos30° + cos45°sin30° = (√2/2)(√3/2) + (√2/2)(1/2) = (√6 + √2)/4.",
       "points": 1
@@ -459,7 +554,12 @@
       "order": 8,
       "type": "mc",
       "question": "In triangle ABC, a = 8, b = 11, c = 6. Using the Law of Cosines, which expression gives cos A?",
-      "options": ["(64 − 121 − 36)/(−2 × 11 × 6)", "(121 + 36 − 64)/(2 × 11 × 6)", "(64 + 121 − 36)/(2 × 8 × 11)", "(64 + 36 − 121)/(2 × 8 × 6)"],
+      "options": [
+        "(64 − 121 − 36)/(−2 × 11 × 6)",
+        "(121 + 36 − 64)/(2 × 11 × 6)",
+        "(64 + 121 − 36)/(2 × 8 × 11)",
+        "(64 + 36 − 121)/(2 × 8 × 6)"
+      ],
       "answer": "(121 + 36 − 64)/(2 × 11 × 6)",
       "explanation": "Law of Cosines: a² = b² + c² − 2bc cos A → cos A = (b² + c² − a²)/(2bc) = (121 + 36 − 64)/(2 × 11 × 6).",
       "points": 1
@@ -469,7 +569,12 @@
       "order": 9,
       "type": "mc",
       "question": "Vector v has magnitude 5 and direction angle 53° from the positive x-axis. What is its component form?",
-      "options": ["⟨3, 4⟩", "⟨4, 3⟩", "⟨5cos53°, 5sin53°⟩ ≈ ⟨3, 4⟩", "⟨5, 53⟩"],
+      "options": [
+        "⟨3, 4⟩",
+        "⟨4, 3⟩",
+        "⟨5cos53°, 5sin53°⟩ ≈ ⟨3, 4⟩",
+        "⟨5, 53⟩"
+      ],
       "answer": "⟨5cos53°, 5sin53°⟩ ≈ ⟨3, 4⟩",
       "explanation": "Component form: ⟨|v|cosθ, |v|sinθ⟩ = ⟨5cos53°, 5sin53°⟩ ≈ ⟨3, 4⟩.",
       "points": 1
@@ -479,7 +584,12 @@
       "order": 10,
       "type": "mc",
       "question": "The parametric equations x = 2t, y = t² describe which curve?",
-      "options": ["A line", "A circle", "A parabola", "An ellipse"],
+      "options": [
+        "A line",
+        "A circle",
+        "A parabola",
+        "An ellipse"
+      ],
       "answer": "A parabola",
       "explanation": "Eliminate t: t = x/2, so y = (x/2)² = x²/4. This is a parabola.",
       "points": 1
@@ -489,7 +599,12 @@
       "order": 11,
       "type": "mc",
       "question": "Convert the polar point (4, π/3) to rectangular coordinates.",
-      "options": ["(2, 2√3)", "(4√3, 4)", "(2√3, 2)", "(1, √3)"],
+      "options": [
+        "(2, 2√3)",
+        "(4√3, 4)",
+        "(2√3, 2)",
+        "(1, √3)"
+      ],
       "answer": "(2, 2√3)",
       "explanation": "x = 4cos(π/3) = 4(1/2) = 2. y = 4sin(π/3) = 4(√3/2) = 2√3.",
       "points": 1
@@ -499,7 +614,12 @@
       "order": 12,
       "type": "mc",
       "question": "Which equation represents an ellipse with semi-major axis 5 along the x-axis and semi-minor axis 3?",
-      "options": ["x²/9 + y²/25 = 1", "x²/25 + y²/9 = 1", "x²/5 + y²/3 = 1", "(x/5)² − (y/3)² = 1"],
+      "options": [
+        "x²/9 + y²/25 = 1",
+        "x²/25 + y²/9 = 1",
+        "x²/5 + y²/3 = 1",
+        "(x/5)² − (y/3)² = 1"
+      ],
       "answer": "x²/25 + y²/9 = 1",
       "explanation": "Standard ellipse: x²/a² + y²/b² = 1, a = 5 along x-axis, b = 3. So x²/25 + y²/9 = 1.",
       "points": 1
@@ -509,7 +629,12 @@
       "order": 13,
       "type": "mc",
       "question": "The 5th term of the geometric sequence 3, 6, 12, 24, … is:",
-      "options": ["36", "48", "96", "48"],
+      "options": [
+        "36",
+        "48",
+        "96",
+        "48"
+      ],
       "answer": "48",
       "explanation": "First term a₁ = 3, common ratio r = 2. a₅ = 3 × 2⁴ = 3 × 16 = 48.",
       "points": 1
@@ -519,7 +644,12 @@
       "order": 14,
       "type": "mc",
       "question": "How many ways can a committee of 3 be chosen from 8 people?",
-      "options": ["24", "56", "336", "512"],
+      "options": [
+        "24",
+        "56",
+        "336",
+        "512"
+      ],
       "answer": "56",
       "explanation": "C(8,3) = 8!/(3! × 5!) = (8 × 7 × 6)/(3 × 2 × 1) = 56.",
       "points": 1
@@ -529,7 +659,12 @@
       "order": 15,
       "type": "mc",
       "question": "What is the coefficient of x³ in the expansion of (x + 2)⁵?",
-      "options": ["40", "80", "10", "32"],
+      "options": [
+        "40",
+        "80",
+        "10",
+        "32"
+      ],
       "answer": "40",
       "explanation": "Use the Binomial Theorem: the x³ term has k=2, giving C(5,2)·x³·2² = 10·4 = 40.",
       "points": 1
@@ -539,7 +674,12 @@
       "order": 16,
       "type": "mc",
       "question": "Evaluate lim(x→3) (x² − 9)/(x − 3).",
-      "options": ["0", "3", "6", "undefined"],
+      "options": [
+        "0",
+        "3",
+        "6",
+        "undefined"
+      ],
       "answer": "6",
       "explanation": "Factor: (x²−9)/(x−3) = (x+3)(x−3)/(x−3) = x+3. As x→3, limit = 3+3 = 6.",
       "points": 1
@@ -549,7 +689,12 @@
       "order": 17,
       "type": "mc",
       "question": "Which of the following is NOT a condition for f(x) to be continuous at x = a?",
-      "options": ["f(a) is defined", "lim(x→a) f(x) exists", "lim(x→a) f(x) = f(a)", "f(a) = 0"],
+      "options": [
+        "f(a) is defined",
+        "lim(x→a) f(x) exists",
+        "lim(x→a) f(x) = f(a)",
+        "f(a) = 0"
+      ],
       "answer": "f(a) = 0",
       "explanation": "Continuity requires: f(a) defined, the limit exists, and limit equals f(a). There is no requirement that f(a) = 0.",
       "points": 1
@@ -586,75 +731,985 @@
     }
   ],
   "quizQuestions": [
-    { "moduleOrder": 1, "order": 1, "question": "If f(x) = 3x − 2 and g(x) = x + 5, what is (f ∘ g)(x)?", "options": ["3x + 13", "3x + 3", "3x − 7", "x + 1"], "answer": "3x + 13", "explanation": "f(g(x)) = f(x+5) = 3(x+5) − 2 = 3x + 15 − 2 = 3x + 13.", "points": 1 },
-    { "moduleOrder": 1, "order": 2, "question": "Which of the following functions does NOT have an inverse that is also a function?", "options": ["f(x) = 3x + 1", "f(x) = x²", "f(x) = x³", "f(x) = 1/x"], "answer": "f(x) = x²", "explanation": "f(x) = x² fails the horizontal line test over all reals, so its inverse is not a function.", "points": 1 },
-    { "moduleOrder": 1, "order": 3, "question": "The domain of f(x) = √(x − 4) is:", "options": ["x > 4", "x ≥ 4", "x ≤ 4", "all real numbers"], "answer": "x ≥ 4", "explanation": "The radicand must be non-negative: x − 4 ≥ 0 → x ≥ 4.", "points": 1 },
-    { "moduleOrder": 1, "order": 4, "question": "If f(x) = 2x + 6, what is f⁻¹(x)?", "options": ["(x − 6)/2", "(x + 6)/2", "2x − 6", "(x/2) + 6"], "answer": "(x − 6)/2", "explanation": "Swap x and y: x = 2y + 6 → 2y = x − 6 → y = (x − 6)/2.", "points": 1 },
-    { "moduleOrder": 1, "order": 5, "question": "A piecewise function is defined as f(x) = x + 1 for x < 2 and f(x) = x² for x ≥ 2. What is f(2) + f(0)?", "options": ["5", "6", "4", "3"], "answer": "5", "explanation": "f(2) = 2² = 4 (second piece). f(0) = 0 + 1 = 1 (first piece). Sum = 5.", "points": 1 },
-    { "moduleOrder": 2, "order": 1, "question": "What does the end behavior of f(x) = 5x³ − 2x + 1 look like?", "options": ["Up on both ends", "Down on both ends", "Down on left, up on right", "Up on left, down on right"], "answer": "Down on left, up on right", "explanation": "Odd degree with positive leading coefficient: falls to −∞ on left, rises to +∞ on right.", "points": 1 },
-    { "moduleOrder": 2, "order": 2, "question": "How many real zeros can a polynomial of degree 4 have at most?", "options": ["2", "3", "4", "5"], "answer": "4", "explanation": "By the Fundamental Theorem of Algebra, a degree-4 polynomial has at most 4 real zeros.", "points": 1 },
-    { "moduleOrder": 2, "order": 3, "question": "The rational function f(x) = (x − 3)/((x − 3)(x + 2)) has:", "options": ["A vertical asymptote at x = 3 and x = −2", "A hole at x = 3 and a vertical asymptote at x = −2", "A hole at x = −2 and a vertical asymptote at x = 3", "No asymptotes"], "answer": "A hole at x = 3 and a vertical asymptote at x = −2", "explanation": "The factor (x − 3) cancels, creating a hole at x = 3. The factor (x + 2) remains in the denominator, giving a vertical asymptote at x = −2.", "points": 1 },
-    { "moduleOrder": 2, "order": 4, "question": "For f(x) = 1/(x + 4), what is the horizontal asymptote?", "options": ["y = 4", "y = 1", "y = 0", "x = −4"], "answer": "y = 0", "explanation": "Degree of numerator (0) is less than degree of denominator (1), so the horizontal asymptote is y = 0.", "points": 1 },
-    { "moduleOrder": 2, "order": 5, "question": "Which polynomial has zeros at x = −1, x = 2, and x = 5?", "options": ["f(x) = (x+1)(x−2)(x−5)", "f(x) = (x−1)(x+2)(x+5)", "f(x) = (x+1)(x+2)(x+5)", "f(x) = (x−1)(x−2)(x−5)"], "answer": "f(x) = (x+1)(x−2)(x−5)", "explanation": "Setting each factor to zero gives x = −1, x = 2, x = 5.", "points": 1 },
-    { "moduleOrder": 3, "order": 1, "question": "Simplify: log₃(27).", "options": ["3", "9", "1/3", "27"], "answer": "3", "explanation": "log₃(27) = log₃(3³) = 3.", "points": 1 },
-    { "moduleOrder": 3, "order": 2, "question": "Which property allows you to write log(AB) as log A + log B?", "options": ["Power Rule", "Product Rule", "Quotient Rule", "Change-of-Base"], "answer": "Product Rule", "explanation": "The Product Rule: logₐ(MN) = logₐ M + logₐ N.", "points": 1 },
-    { "moduleOrder": 3, "order": 3, "question": "Solve: e^x = 15. Which expression gives the exact answer?", "options": ["x = log 15", "x = ln 15", "x = 15e", "x = e¹⁵"], "answer": "x = ln 15", "explanation": "Taking the natural log of both sides: ln(eˣ) = ln 15 → x = ln 15.", "points": 1 },
-    { "moduleOrder": 3, "order": 4, "question": "Using change-of-base, log₇(50) equals:", "options": ["log 50 / log 7", "log 7 / log 50", "ln 7 / ln 50", "50/7"], "answer": "log 50 / log 7", "explanation": "Change-of-base formula: logₐ(b) = log(b)/log(a) = log(50)/log(7).", "points": 1 },
-    { "moduleOrder": 3, "order": 5, "question": "A population grows logistically and approaches a carrying capacity of 10,000. Which best describes the long-term behavior?", "options": ["The population grows without bound", "The population oscillates", "The population levels off near 10,000", "The population decreases to zero"], "answer": "The population levels off near 10,000", "explanation": "Logistic growth has an upper limit (carrying capacity). The population approaches but never exceeds 10,000.", "points": 1 },
-    { "moduleOrder": 4, "order": 1, "question": "In a right triangle with legs 5 and 12, what is sin of the angle opposite the leg of length 5?", "options": ["5/13", "12/13", "5/12", "12/5"], "answer": "5/13", "explanation": "Hypotenuse = √(25 + 144) = 13. sin = opposite/hypotenuse = 5/13.", "points": 1 },
-    { "moduleOrder": 4, "order": 2, "question": "What is the exact value of tan(45°)?", "options": ["√2/2", "1", "√3", "√3/2"], "answer": "1", "explanation": "In a 45-45-90 triangle, both legs are equal, so tan(45°) = opposite/adjacent = 1.", "points": 1 },
-    { "moduleOrder": 4, "order": 3, "question": "If cos θ = 5/13 in a right triangle, what is tan θ?", "options": ["12/5", "5/12", "13/5", "12/13"], "answer": "12/5", "explanation": "cos θ = adjacent/hypotenuse = 5/13, so opposite = √(13² − 5²) = 12. tan θ = 12/5.", "points": 1 },
-    { "moduleOrder": 4, "order": 4, "question": "The inverse trig function sin⁻¹(0.5) gives an angle of:", "options": ["60°", "45°", "30°", "90°"], "answer": "30°", "explanation": "sin(30°) = 0.5, so sin⁻¹(0.5) = 30°.", "points": 1 },
-    { "moduleOrder": 4, "order": 5, "question": "In a 30-60-90 triangle with hypotenuse 2, what is the side opposite the 60° angle?", "options": ["1", "√3", "2√3", "√2"], "answer": "√3", "explanation": "In a 30-60-90 triangle, sides are 1, √3, 2. With hypotenuse 2, the side opposite 60° is √3.", "points": 1 },
-    { "moduleOrder": 5, "order": 1, "question": "Convert 5π/4 radians to degrees.", "options": ["135°", "150°", "225°", "270°"], "answer": "225°", "explanation": "5π/4 × (180/π) = 5 × 45 = 225°.", "points": 1 },
-    { "moduleOrder": 5, "order": 2, "question": "What is the reference angle for 7π/6?", "options": ["π/6", "π/3", "5π/6", "7π/6"], "answer": "π/6", "explanation": "7π/6 is in Q3. Reference angle = 7π/6 − π = π/6.", "points": 1 },
-    { "moduleOrder": 5, "order": 3, "question": "On the unit circle, what are the coordinates at angle π/3?", "options": ["(1/2, √3/2)", "(√3/2, 1/2)", "(√2/2, √2/2)", "(1/2, 1/2)"], "answer": "(1/2, √3/2)", "explanation": "At π/3 (60°): cos(60°) = 1/2, sin(60°) = √3/2. Coordinates: (1/2, √3/2).", "points": 1 },
-    { "moduleOrder": 5, "order": 4, "question": "Arc length formula is:", "options": ["s = r + θ", "s = rθ", "s = r/θ", "s = θ/r"], "answer": "s = rθ", "explanation": "Arc length: s = rθ, where θ must be in radians and r is the radius.", "points": 1 },
-    { "moduleOrder": 5, "order": 5, "question": "In which quadrant is sin negative and cos positive?", "options": ["Quadrant I", "Quadrant II", "Quadrant III", "Quadrant IV"], "answer": "Quadrant IV", "explanation": "In Q4: x > 0 (cos positive), y < 0 (sin negative).", "points": 1 },
-    { "moduleOrder": 6, "order": 1, "question": "What is the period of y = sin(4x)?", "options": ["4π", "2π", "π/2", "π"], "answer": "π/2", "explanation": "Period = 2π/|B| = 2π/4 = π/2.", "points": 1 },
-    { "moduleOrder": 6, "order": 2, "question": "What is the amplitude of y = −5 cos(x)?", "options": ["−5", "5", "1", "π"], "answer": "5", "explanation": "Amplitude = |−5| = 5. It is always a positive value.", "points": 1 },
-    { "moduleOrder": 6, "order": 3, "question": "The graph of y = sin(x − π/4) is the graph of y = sin(x) shifted:", "options": ["π/4 to the left", "π/4 to the right", "π/4 upward", "π/4 downward"], "answer": "π/4 to the right", "explanation": "Replacing x with (x − π/4) shifts the graph π/4 units to the right.", "points": 1 },
-    { "moduleOrder": 6, "order": 4, "question": "Where does the graph of y = tan(x) have vertical asymptotes?", "options": ["x = nπ", "x = π/2 + nπ", "x = π/4 + nπ", "x = 2nπ"], "answer": "x = π/2 + nπ", "explanation": "tan(x) = sin(x)/cos(x) is undefined when cos(x) = 0, at x = π/2 + nπ.", "points": 1 },
-    { "moduleOrder": 6, "order": 5, "question": "A sinusoidal model has maximum value 7 and minimum value −1. What is the amplitude and midline?", "options": ["Amplitude 4, midline y = 3", "Amplitude 8, midline y = 3", "Amplitude 4, midline y = 4", "Amplitude 3, midline y = 4"], "answer": "Amplitude 4, midline y = 3", "explanation": "Amplitude = (max − min)/2 = (7 − (−1))/2 = 4. Midline = (max + min)/2 = (7 + (−1))/2 = 3.", "points": 1 },
-    { "moduleOrder": 7, "order": 1, "question": "Which of the following is a Pythagorean identity?", "options": ["sin²θ + cos²θ = 1", "sinθ/cosθ = 1", "sin(2θ) = 2sinθ", "tan²θ − 1 = sec²θ"], "answer": "sin²θ + cos²θ = 1", "explanation": "The fundamental Pythagorean identity is sin²θ + cos²θ = 1.", "points": 1 },
-    { "moduleOrder": 7, "order": 2, "question": "Simplify: sin²x/(1 − cos²x).", "options": ["1", "sinx", "cosx", "tanx"], "answer": "1", "explanation": "1 − cos²x = sin²x by Pythagorean identity. So sin²x/sin²x = 1.", "points": 1 },
-    { "moduleOrder": 7, "order": 3, "question": "What is sin(A + B)?", "options": ["sinA cosB + cosA sinB", "sinA cosB − cosA sinB", "sinA sinB + cosA cosB", "cosA cosB − sinA sinB"], "answer": "sinA cosB + cosA sinB", "explanation": "Sum formula: sin(A + B) = sinA cosB + cosA sinB.", "points": 1 },
-    { "moduleOrder": 7, "order": 4, "question": "Solve: 2cos(x) = √2 on [0, 2π).", "options": ["x = π/4 and x = 7π/4", "x = π/3 and x = 5π/3", "x = π/6 and x = 11π/6", "x = π/4 and x = 3π/4"], "answer": "x = π/4 and x = 7π/4", "explanation": "cos(x) = √2/2 at x = π/4 (Q1) and x = 7π/4 (Q4).", "points": 1 },
-    { "moduleOrder": 7, "order": 5, "question": "The double-angle formula sin(2θ) equals:", "options": ["sin²θ − cos²θ", "2sinθcosθ", "1 − 2sin²θ", "2cos²θ − 1"], "answer": "2sinθcosθ", "explanation": "sin(2θ) = sin(θ + θ) = sinθcosθ + cosθsinθ = 2sinθcosθ.", "points": 1 },
-    { "moduleOrder": 8, "order": 1, "question": "Which law should you use to solve a triangle when given two sides and the angle between them (SAS)?", "options": ["Law of Sines", "Law of Cosines", "Pythagorean Theorem", "SOHCAHTOA"], "answer": "Law of Cosines", "explanation": "The Law of Cosines is used for SAS and SSS cases in oblique triangles.", "points": 1 },
-    { "moduleOrder": 8, "order": 2, "question": "In the ambiguous case (SSA), how many triangles exist if the given side opposite the angle is greater than the other given side?", "options": ["0", "1", "2", "Infinite"], "answer": "1", "explanation": "When a > b (the side opposite the given angle is larger than the other given side), exactly one triangle is formed.", "points": 1 },
-    { "moduleOrder": 8, "order": 3, "question": "The area of a triangle with sides a = 6, b = 8, and included angle C = 30° is:", "options": ["24", "12", "48", "6√3"], "answer": "12", "explanation": "Area = ½ab sin C = ½(6)(8) sin 30° = ½(48)(0.5) = 12.", "points": 1 },
-    { "moduleOrder": 8, "order": 4, "question": "Law of Cosines: c² = a² + b² − 2ab cos C. If C = 90°, this reduces to:", "options": ["c² = a² + b²", "c² = a² − b²", "c² = 2ab", "c = a + b"], "answer": "c² = a² + b²", "explanation": "cos(90°) = 0, so 2ab cos(90°) = 0. The formula becomes c² = a² + b² — the Pythagorean Theorem.", "points": 1 },
-    { "moduleOrder": 8, "order": 5, "question": "In triangle ABC, A = 30°, a = 5, b = 8. The angle B is found using Law of Sines. How many solutions exist?", "options": ["0", "1", "2", "Cannot be determined"], "answer": "2", "explanation": "SSA with a < b: sin B = b sinA / a = 8(0.5)/5 = 0.8. Since 0.8 < 1, sin B has two angles on [0°, 180°), giving 2 triangles.", "points": 1 },
-    { "moduleOrder": 9, "order": 1, "question": "What is the magnitude of vector v = ⟨−3, 4⟩?", "options": ["1", "7", "5", "25"], "answer": "5", "explanation": "|v| = √((-3)² + 4²) = √(9 + 16) = √25 = 5.", "points": 1 },
-    { "moduleOrder": 9, "order": 2, "question": "Two vectors u and v are orthogonal if:", "options": ["u + v = 0", "u · v = 0", "|u| = |v|", "u = −v"], "answer": "u · v = 0", "explanation": "Vectors are orthogonal (perpendicular) if and only if their dot product equals zero.", "points": 1 },
-    { "moduleOrder": 9, "order": 3, "question": "Find the dot product of u = ⟨2, 5⟩ and v = ⟨−1, 3⟩.", "options": ["13", "17", "−13", "7"], "answer": "13", "explanation": "u · v = (2)(−1) + (5)(3) = −2 + 15 = 13.", "points": 1 },
-    { "moduleOrder": 9, "order": 4, "question": "Which of the following is a scalar quantity?", "options": ["Force", "Velocity", "Speed", "Displacement"], "answer": "Speed", "explanation": "Speed has only magnitude (no direction), making it a scalar. The others are vectors.", "points": 1 },
-    { "moduleOrder": 9, "order": 5, "question": "A vector with magnitude 1 is called:", "options": ["A zero vector", "A unit vector", "A position vector", "An orthogonal vector"], "answer": "A unit vector", "explanation": "A unit vector has magnitude 1. Any vector can be normalized by dividing by its magnitude.", "points": 1 },
-    { "moduleOrder": 10, "order": 1, "question": "The parametric equations x = cos t, y = sin t for t ∈ [0, 2π) describe:", "options": ["A parabola", "An ellipse", "A unit circle", "A line"], "answer": "A unit circle", "explanation": "x² + y² = cos²t + sin²t = 1. This is the equation of a unit circle.", "points": 1 },
-    { "moduleOrder": 10, "order": 2, "question": "Convert the rectangular point (−1, √3) to polar coordinates (r, θ).", "options": ["(2, 2π/3)", "(2, π/3)", "(√3, 2π/3)", "(2, 5π/6)"], "answer": "(2, 2π/3)", "explanation": "r = √(1 + 3) = 2. θ = arctan(√3/−1); since the point is in Q2, θ = π − π/3 = 2π/3.", "points": 1 },
-    { "moduleOrder": 10, "order": 3, "question": "Which of the following is the polar equation of a circle of radius 5 centered at the origin?", "options": ["r = 5 cos θ", "r = 5", "θ = 5", "r² = 5"], "answer": "r = 5", "explanation": "A circle of radius 5 centered at the origin has the simple polar equation r = 5.", "points": 1 },
-    { "moduleOrder": 10, "order": 4, "question": "Eliminate the parameter from x = t + 1, y = 2t − 3 to get the rectangular equation.", "options": ["y = 2x − 5", "y = 2x + 5", "y = x − 2", "y = 2x − 1"], "answer": "y = 2x − 5", "explanation": "t = x − 1. Substitute: y = 2(x − 1) − 3 = 2x − 2 − 3 = 2x − 5.", "points": 1 },
-    { "moduleOrder": 10, "order": 5, "question": "The polar equation r = 1 − cos θ represents which type of curve?", "options": ["A circle", "A lemniscate", "A cardioid", "A rose curve"], "answer": "A cardioid", "explanation": "r = 1 ± cos θ and r = 1 ± sin θ are cardioids — heart-shaped polar curves.", "points": 1 },
-    { "moduleOrder": 11, "order": 1, "question": "The parabola x² = 12y opens:", "options": ["To the right", "To the left", "Upward", "Downward"], "answer": "Upward", "explanation": "The form x² = 4py with p > 0 opens upward. Here 4p = 12 → p = 3 > 0.", "points": 1 },
-    { "moduleOrder": 11, "order": 2, "question": "For the ellipse x²/16 + y²/9 = 1, the length of the major axis is:", "options": ["3", "4", "6", "8"], "answer": "8", "explanation": "a² = 16 → a = 4. Major axis length = 2a = 8.", "points": 1 },
-    { "moduleOrder": 11, "order": 3, "question": "What is the eccentricity of a circle?", "options": ["0", "1", "Greater than 1", "Less than 0"], "answer": "0", "explanation": "A circle has eccentricity e = 0. Ellipses: 0 < e < 1. Parabolas: e = 1. Hyperbolas: e > 1.", "points": 1 },
-    { "moduleOrder": 11, "order": 4, "question": "Which conic section has two branches?", "options": ["Circle", "Parabola", "Ellipse", "Hyperbola"], "answer": "Hyperbola", "explanation": "A hyperbola consists of two separate branches opening in opposite directions.", "points": 1 },
-    { "moduleOrder": 11, "order": 5, "question": "Completing the square in x² + 6x + y² − 4y = 12 yields a circle with center:", "options": ["(3, −2)", "(−3, 2)", "(6, −4)", "(−6, 4)"], "answer": "(−3, 2)", "explanation": "(x+3)² + (y−2)² = 12 + 9 + 4 = 25. Center: (−3, 2), radius: 5.", "points": 1 },
-    { "moduleOrder": 12, "order": 1, "question": "Find the common difference of the arithmetic sequence: 7, 11, 15, 19, …", "options": ["3", "4", "7", "2"], "answer": "4", "explanation": "Common difference d = 11 − 7 = 4.", "points": 1 },
-    { "moduleOrder": 12, "order": 2, "question": "What is the 10th term of the geometric sequence 2, 6, 18, …?", "options": ["2 × 3⁹", "2 × 10³", "6⁹", "3¹⁰"], "answer": "2 × 3⁹", "explanation": "a₁ = 2, r = 3. aₙ = 2 × 3^(n−1). a₁₀ = 2 × 3⁹.", "points": 1 },
-    { "moduleOrder": 12, "order": 3, "question": "The sum of the first n terms of an arithmetic series with first term a₁ and last term aₙ is:", "options": ["n·a₁", "n(a₁ + aₙ)/2", "a₁ + (n−1)d", "n²d/2"], "answer": "n(a₁ + aₙ)/2", "explanation": "Arithmetic series sum: Sₙ = n(a₁ + aₙ)/2.", "points": 1 },
-    { "moduleOrder": 12, "order": 4, "question": "In a mathematical induction proof, what are the two required steps?", "options": ["Hypothesis and conclusion", "Base case and inductive step", "Theorem and corollary", "Definition and lemma"], "answer": "Base case and inductive step", "explanation": "Proof by induction requires: (1) Base case (usually n=1) and (2) Inductive step (assume true for n=k, prove for n=k+1).", "points": 1 },
-    { "moduleOrder": 12, "order": 5, "question": "A geometric series has first term 5 and common ratio 1/2. The sum of the infinite series is:", "options": ["5", "10", "∞", "2.5"], "answer": "10", "explanation": "Infinite geometric series: S = a₁/(1 − r) = 5/(1 − 1/2) = 5/(1/2) = 10, since |r| < 1.", "points": 1 },
-    { "moduleOrder": 13, "order": 1, "question": "How many ways can 5 books be arranged on a shelf?", "options": ["25", "120", "60", "10"], "answer": "120", "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120 (permutations of 5 distinct items).", "points": 1 },
-    { "moduleOrder": 13, "order": 2, "question": "How many ways can a president and vice president be chosen from a club of 10 members?", "options": ["10", "20", "45", "90"], "answer": "90", "explanation": "Order matters (positions are distinct): P(10, 2) = 10 × 9 = 90.", "points": 1 },
-    { "moduleOrder": 13, "order": 3, "question": "What is C(7, 3)?", "options": ["21", "35", "42", "210"], "answer": "35", "explanation": "C(7,3) = 7!/(3! × 4!) = (7 × 6 × 5)/(3 × 2 × 1) = 210/6 = 35.", "points": 1 },
-    { "moduleOrder": 13, "order": 4, "question": "In the expansion of (a + b)⁴, the coefficient of a²b² (from Pascal's triangle) is:", "options": ["4", "6", "12", "16"], "answer": "6", "explanation": "Row 4 of Pascal's triangle: 1, 4, 6, 4, 1. The middle term coefficient is 6 = C(4,2).", "points": 1 },
-    { "moduleOrder": 13, "order": 5, "question": "A bag has 4 red and 6 blue marbles. The probability of drawing 2 red marbles without replacement is:", "options": ["4/10 × 3/9", "4/10 × 4/10", "C(4,2)/C(10,2)", "Both A and C"], "answer": "Both A and C", "explanation": "P = (4/10)(3/9) = 12/90 = 2/15. Also C(4,2)/C(10,2) = 6/45 = 2/15. Both methods give the same answer.", "points": 1 },
-    { "moduleOrder": 14, "order": 1, "question": "What does lim(x→2) f(x) = 5 mean?", "options": ["f(2) = 5", "f approaches 5 as x approaches 2 from the right only", "f(x) gets arbitrarily close to 5 as x gets close to 2 from either side", "f(x) = 5 for all x near 2"], "answer": "f(x) gets arbitrarily close to 5 as x gets close to 2 from either side", "explanation": "A limit describes the behavior of f(x) as x approaches a value, not necessarily the function value at that point.", "points": 1 },
-    { "moduleOrder": 14, "order": 2, "question": "Evaluate: lim(x→4) (2x + 1).", "options": ["7", "8", "9", "10"], "answer": "9", "explanation": "By direct substitution (polynomial): 2(4) + 1 = 9.", "points": 1 },
-    { "moduleOrder": 14, "order": 3, "question": "A function f has lim(x→3⁻) f(x) = 4 and lim(x→3⁺) f(x) = 7. What is lim(x→3) f(x)?", "options": ["4", "7", "5.5", "The limit does not exist"], "answer": "The limit does not exist", "explanation": "The two-sided limit exists only if both one-sided limits are equal. Since 4 ≠ 7, the limit does not exist.", "points": 1 },
-    { "moduleOrder": 14, "order": 4, "question": "What type of discontinuity does f(x) = 1/x have at x = 0?", "options": ["Removable", "Jump", "Infinite", "None"], "answer": "Infinite", "explanation": "As x → 0, f(x) = 1/x → ±∞. This is an infinite (or essential) discontinuity.", "points": 1 },
-    { "moduleOrder": 14, "order": 5, "question": "lim(x→0) (sin x)/x equals:", "options": ["0", "∞", "1", "undefined"], "answer": "1", "explanation": "This is a fundamental limit in calculus: lim(x→0) (sin x)/x = 1. It is proved using the squeeze theorem.", "points": 1 }
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "If f(x) = 3x − 2 and g(x) = x + 5, what is (f ∘ g)(x)?",
+      "options": [
+        "3x + 13",
+        "3x + 3",
+        "3x − 7",
+        "x + 1"
+      ],
+      "answer": "3x + 13",
+      "explanation": "f(g(x)) = f(x+5) = 3(x+5) − 2 = 3x + 15 − 2 = 3x + 13.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which of the following functions does NOT have an inverse that is also a function?",
+      "options": [
+        "f(x) = 3x + 1",
+        "f(x) = x²",
+        "f(x) = x³",
+        "f(x) = 1/x"
+      ],
+      "answer": "f(x) = x²",
+      "explanation": "f(x) = x² fails the horizontal line test over all reals, so its inverse is not a function.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "The domain of f(x) = √(x − 4) is:",
+      "options": [
+        "x > 4",
+        "x ≥ 4",
+        "x ≤ 4",
+        "all real numbers"
+      ],
+      "answer": "x ≥ 4",
+      "explanation": "The radicand must be non-negative: x − 4 ≥ 0 → x ≥ 4.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "If f(x) = 2x + 6, what is f⁻¹(x)?",
+      "options": [
+        "(x − 6)/2",
+        "(x + 6)/2",
+        "2x − 6",
+        "(x/2) + 6"
+      ],
+      "answer": "(x − 6)/2",
+      "explanation": "Swap x and y: x = 2y + 6 → 2y = x − 6 → y = (x − 6)/2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "A piecewise function is defined as f(x) = x + 1 for x < 2 and f(x) = x² for x ≥ 2. What is f(2) + f(0)?",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "answer": "5",
+      "explanation": "f(2) = 2² = 4 (second piece). f(0) = 0 + 1 = 1 (first piece). Sum = 5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "What does the end behavior of f(x) = 5x³ − 2x + 1 look like?",
+      "options": [
+        "Up on both ends",
+        "Down on both ends",
+        "Down on left, up on right",
+        "Up on left, down on right"
+      ],
+      "answer": "Down on left, up on right",
+      "explanation": "Odd degree with positive leading coefficient: falls to −∞ on left, rises to +∞ on right.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "How many real zeros can a polynomial of degree 4 have at most?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "4",
+      "explanation": "By the Fundamental Theorem of Algebra, a degree-4 polynomial has at most 4 real zeros.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The rational function f(x) = (x − 3)/((x − 3)(x + 2)) has:",
+      "options": [
+        "A vertical asymptote at x = 3 and x = −2",
+        "A hole at x = 3 and a vertical asymptote at x = −2",
+        "A hole at x = −2 and a vertical asymptote at x = 3",
+        "No asymptotes"
+      ],
+      "answer": "A hole at x = 3 and a vertical asymptote at x = −2",
+      "explanation": "The factor (x − 3) cancels, creating a hole at x = 3. The factor (x + 2) remains in the denominator, giving a vertical asymptote at x = −2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "For f(x) = 1/(x + 4), what is the horizontal asymptote?",
+      "options": [
+        "y = 4",
+        "y = 1",
+        "y = 0",
+        "x = −4"
+      ],
+      "answer": "y = 0",
+      "explanation": "Degree of numerator (0) is less than degree of denominator (1), so the horizontal asymptote is y = 0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Which polynomial has zeros at x = −1, x = 2, and x = 5?",
+      "options": [
+        "f(x) = (x+1)(x−2)(x−5)",
+        "f(x) = (x−1)(x+2)(x+5)",
+        "f(x) = (x+1)(x+2)(x+5)",
+        "f(x) = (x−1)(x−2)(x−5)"
+      ],
+      "answer": "f(x) = (x+1)(x−2)(x−5)",
+      "explanation": "Setting each factor to zero gives x = −1, x = 2, x = 5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Simplify: log₃(27).",
+      "options": [
+        "3",
+        "9",
+        "1/3",
+        "27"
+      ],
+      "answer": "3",
+      "explanation": "log₃(27) = log₃(3³) = 3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Which property allows you to write log(AB) as log A + log B?",
+      "options": [
+        "Power Rule",
+        "Product Rule",
+        "Quotient Rule",
+        "Change-of-Base"
+      ],
+      "answer": "Product Rule",
+      "explanation": "The Product Rule: logₐ(MN) = logₐ M + logₐ N.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Solve: e^x = 15. Which expression gives the exact answer?",
+      "options": [
+        "x = log 15",
+        "x = ln 15",
+        "x = 15e",
+        "x = e¹⁵"
+      ],
+      "answer": "x = ln 15",
+      "explanation": "Taking the natural log of both sides: ln(eˣ) = ln 15 → x = ln 15.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Using change-of-base, log₇(50) equals:",
+      "options": [
+        "log 50 / log 7",
+        "log 7 / log 50",
+        "ln 7 / ln 50",
+        "50/7"
+      ],
+      "answer": "log 50 / log 7",
+      "explanation": "Change-of-base formula: logₐ(b) = log(b)/log(a) = log(50)/log(7).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "A population grows logistically and approaches a carrying capacity of 10,000. Which best describes the long-term behavior?",
+      "options": [
+        "The population grows without bound",
+        "The population oscillates",
+        "The population levels off near 10,000",
+        "The population decreases to zero"
+      ],
+      "answer": "The population levels off near 10,000",
+      "explanation": "Logistic growth has an upper limit (carrying capacity). The population approaches but never exceeds 10,000.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "In a right triangle with legs 5 and 12, what is sin of the angle opposite the leg of length 5?",
+      "options": [
+        "5/13",
+        "12/13",
+        "5/12",
+        "12/5"
+      ],
+      "answer": "5/13",
+      "explanation": "Hypotenuse = √(25 + 144) = 13. sin = opposite/hypotenuse = 5/13.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "What is the exact value of tan(45°)?",
+      "options": [
+        "√2/2",
+        "1",
+        "√3",
+        "√3/2"
+      ],
+      "answer": "1",
+      "explanation": "In a 45-45-90 triangle, both legs are equal, so tan(45°) = opposite/adjacent = 1.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "If cos θ = 5/13 in a right triangle, what is tan θ?",
+      "options": [
+        "12/5",
+        "5/12",
+        "13/5",
+        "12/13"
+      ],
+      "answer": "12/5",
+      "explanation": "cos θ = adjacent/hypotenuse = 5/13, so opposite = √(13² − 5²) = 12. tan θ = 12/5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "The inverse trig function sin⁻¹(0.5) gives an angle of:",
+      "options": [
+        "60°",
+        "45°",
+        "30°",
+        "90°"
+      ],
+      "answer": "30°",
+      "explanation": "sin(30°) = 0.5, so sin⁻¹(0.5) = 30°.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "In a 30-60-90 triangle with hypotenuse 2, what is the side opposite the 60° angle?",
+      "options": [
+        "1",
+        "√3",
+        "2√3",
+        "√2"
+      ],
+      "answer": "√3",
+      "explanation": "In a 30-60-90 triangle, sides are 1, √3, 2. With hypotenuse 2, the side opposite 60° is √3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Convert 5π/4 radians to degrees.",
+      "options": [
+        "135°",
+        "150°",
+        "225°",
+        "270°"
+      ],
+      "answer": "225°",
+      "explanation": "5π/4 × (180/π) = 5 × 45 = 225°.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "What is the reference angle for 7π/6?",
+      "options": [
+        "π/6",
+        "π/3",
+        "5π/6",
+        "7π/6"
+      ],
+      "answer": "π/6",
+      "explanation": "7π/6 is in Q3. Reference angle = 7π/6 − π = π/6.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "On the unit circle, what are the coordinates at angle π/3?",
+      "options": [
+        "(1/2, √3/2)",
+        "(√3/2, 1/2)",
+        "(√2/2, √2/2)",
+        "(1/2, 1/2)"
+      ],
+      "answer": "(1/2, √3/2)",
+      "explanation": "At π/3 (60°): cos(60°) = 1/2, sin(60°) = √3/2. Coordinates: (1/2, √3/2).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Arc length formula is:",
+      "options": [
+        "s = r + θ",
+        "s = rθ",
+        "s = r/θ",
+        "s = θ/r"
+      ],
+      "answer": "s = rθ",
+      "explanation": "Arc length: s = rθ, where θ must be in radians and r is the radius.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "In which quadrant is sin negative and cos positive?",
+      "options": [
+        "Quadrant I",
+        "Quadrant II",
+        "Quadrant III",
+        "Quadrant IV"
+      ],
+      "answer": "Quadrant IV",
+      "explanation": "In Q4: x > 0 (cos positive), y < 0 (sin negative).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "What is the period of y = sin(4x)?",
+      "options": [
+        "4π",
+        "2π",
+        "π/2",
+        "π"
+      ],
+      "answer": "π/2",
+      "explanation": "Period = 2π/|B| = 2π/4 = π/2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "What is the amplitude of y = −5 cos(x)?",
+      "options": [
+        "−5",
+        "5",
+        "1",
+        "π"
+      ],
+      "answer": "5",
+      "explanation": "Amplitude = |−5| = 5. It is always a positive value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "The graph of y = sin(x − π/4) is the graph of y = sin(x) shifted:",
+      "options": [
+        "π/4 to the left",
+        "π/4 to the right",
+        "π/4 upward",
+        "π/4 downward"
+      ],
+      "answer": "π/4 to the right",
+      "explanation": "Replacing x with (x − π/4) shifts the graph π/4 units to the right.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Where does the graph of y = tan(x) have vertical asymptotes?",
+      "options": [
+        "x = nπ",
+        "x = π/2 + nπ",
+        "x = π/4 + nπ",
+        "x = 2nπ"
+      ],
+      "answer": "x = π/2 + nπ",
+      "explanation": "tan(x) = sin(x)/cos(x) is undefined when cos(x) = 0, at x = π/2 + nπ.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "A sinusoidal model has maximum value 7 and minimum value −1. What is the amplitude and midline?",
+      "options": [
+        "Amplitude 4, midline y = 3",
+        "Amplitude 8, midline y = 3",
+        "Amplitude 4, midline y = 4",
+        "Amplitude 3, midline y = 4"
+      ],
+      "answer": "Amplitude 4, midline y = 3",
+      "explanation": "Amplitude = (max − min)/2 = (7 − (−1))/2 = 4. Midline = (max + min)/2 = (7 + (−1))/2 = 3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Which of the following is a Pythagorean identity?",
+      "options": [
+        "sin²θ + cos²θ = 1",
+        "sinθ/cosθ = 1",
+        "sin(2θ) = 2sinθ",
+        "tan²θ − 1 = sec²θ"
+      ],
+      "answer": "sin²θ + cos²θ = 1",
+      "explanation": "The fundamental Pythagorean identity is sin²θ + cos²θ = 1.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Simplify: sin²x/(1 − cos²x).",
+      "options": [
+        "1",
+        "sinx",
+        "cosx",
+        "tanx"
+      ],
+      "answer": "1",
+      "explanation": "1 − cos²x = sin²x by Pythagorean identity. So sin²x/sin²x = 1.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "What is sin(A + B)?",
+      "options": [
+        "sinA cosB + cosA sinB",
+        "sinA cosB − cosA sinB",
+        "sinA sinB + cosA cosB",
+        "cosA cosB − sinA sinB"
+      ],
+      "answer": "sinA cosB + cosA sinB",
+      "explanation": "Sum formula: sin(A + B) = sinA cosB + cosA sinB.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Solve: 2cos(x) = √2 on [0, 2π).",
+      "options": [
+        "x = π/4 and x = 7π/4",
+        "x = π/3 and x = 5π/3",
+        "x = π/6 and x = 11π/6",
+        "x = π/4 and x = 3π/4"
+      ],
+      "answer": "x = π/4 and x = 7π/4",
+      "explanation": "cos(x) = √2/2 at x = π/4 (Q1) and x = 7π/4 (Q4).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "The double-angle formula sin(2θ) equals:",
+      "options": [
+        "sin²θ − cos²θ",
+        "2sinθcosθ",
+        "1 − 2sin²θ",
+        "2cos²θ − 1"
+      ],
+      "answer": "2sinθcosθ",
+      "explanation": "sin(2θ) = sin(θ + θ) = sinθcosθ + cosθsinθ = 2sinθcosθ.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Which law should you use to solve a triangle when given two sides and the angle between them (SAS)?",
+      "options": [
+        "Law of Sines",
+        "Law of Cosines",
+        "Pythagorean Theorem",
+        "SOHCAHTOA"
+      ],
+      "answer": "Law of Cosines",
+      "explanation": "The Law of Cosines is used for SAS and SSS cases in oblique triangles.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "In the ambiguous case (SSA), how many triangles exist if the given side opposite the angle is greater than the other given side?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Infinite"
+      ],
+      "answer": "1",
+      "explanation": "When a > b (the side opposite the given angle is larger than the other given side), exactly one triangle is formed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "The area of a triangle with sides a = 6, b = 8, and included angle C = 30° is:",
+      "options": [
+        "24",
+        "12",
+        "48",
+        "6√3"
+      ],
+      "answer": "12",
+      "explanation": "Area = ½ab sin C = ½(6)(8) sin 30° = ½(48)(0.5) = 12.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Law of Cosines: c² = a² + b² − 2ab cos C. If C = 90°, this reduces to:",
+      "options": [
+        "c² = a² + b²",
+        "c² = a² − b²",
+        "c² = 2ab",
+        "c = a + b"
+      ],
+      "answer": "c² = a² + b²",
+      "explanation": "cos(90°) = 0, so 2ab cos(90°) = 0. The formula becomes c² = a² + b² — the Pythagorean Theorem.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "In triangle ABC, A = 30°, a = 5, b = 8. The angle B is found using Law of Sines. How many solutions exist?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Cannot be determined"
+      ],
+      "answer": "2",
+      "explanation": "SSA with a < b: sin B = b sinA / a = 8(0.5)/5 = 0.8. Since 0.8 < 1, sin B has two angles on [0°, 180°), giving 2 triangles.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "What is the magnitude of vector v = ⟨−3, 4⟩?",
+      "options": [
+        "1",
+        "7",
+        "5",
+        "25"
+      ],
+      "answer": "5",
+      "explanation": "|v| = √((-3)² + 4²) = √(9 + 16) = √25 = 5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Two vectors u and v are orthogonal if:",
+      "options": [
+        "u + v = 0",
+        "u · v = 0",
+        "|u| = |v|",
+        "u = −v"
+      ],
+      "answer": "u · v = 0",
+      "explanation": "Vectors are orthogonal (perpendicular) if and only if their dot product equals zero.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Find the dot product of u = ⟨2, 5⟩ and v = ⟨−1, 3⟩.",
+      "options": [
+        "13",
+        "17",
+        "−13",
+        "7"
+      ],
+      "answer": "13",
+      "explanation": "u · v = (2)(−1) + (5)(3) = −2 + 15 = 13.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Which of the following is a scalar quantity?",
+      "options": [
+        "Force",
+        "Velocity",
+        "Speed",
+        "Displacement"
+      ],
+      "answer": "Speed",
+      "explanation": "Speed has only magnitude (no direction), making it a scalar. The others are vectors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "A vector with magnitude 1 is called:",
+      "options": [
+        "A zero vector",
+        "A unit vector",
+        "A position vector",
+        "An orthogonal vector"
+      ],
+      "answer": "A unit vector",
+      "explanation": "A unit vector has magnitude 1. Any vector can be normalized by dividing by its magnitude.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "The parametric equations x = cos t, y = sin t for t ∈ [0, 2π) describe:",
+      "options": [
+        "A parabola",
+        "An ellipse",
+        "A unit circle",
+        "A line"
+      ],
+      "answer": "A unit circle",
+      "explanation": "x² + y² = cos²t + sin²t = 1. This is the equation of a unit circle.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Convert the rectangular point (−1, √3) to polar coordinates (r, θ).",
+      "options": [
+        "(2, 2π/3)",
+        "(2, π/3)",
+        "(√3, 2π/3)",
+        "(2, 5π/6)"
+      ],
+      "answer": "(2, 2π/3)",
+      "explanation": "r = √(1 + 3) = 2. θ = arctan(√3/−1); since the point is in Q2, θ = π − π/3 = 2π/3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Which of the following is the polar equation of a circle of radius 5 centered at the origin?",
+      "options": [
+        "r = 5 cos θ",
+        "r = 5",
+        "θ = 5",
+        "r² = 5"
+      ],
+      "answer": "r = 5",
+      "explanation": "A circle of radius 5 centered at the origin has the simple polar equation r = 5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Eliminate the parameter from x = t + 1, y = 2t − 3 to get the rectangular equation.",
+      "options": [
+        "y = 2x − 5",
+        "y = 2x + 5",
+        "y = x − 2",
+        "y = 2x − 1"
+      ],
+      "answer": "y = 2x − 5",
+      "explanation": "t = x − 1. Substitute: y = 2(x − 1) − 3 = 2x − 2 − 3 = 2x − 5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "The polar equation r = 1 − cos θ represents which type of curve?",
+      "options": [
+        "A circle",
+        "A lemniscate",
+        "A cardioid",
+        "A rose curve"
+      ],
+      "answer": "A cardioid",
+      "explanation": "r = 1 ± cos θ and r = 1 ± sin θ are cardioids — heart-shaped polar curves.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The parabola x² = 12y opens:",
+      "options": [
+        "To the right",
+        "To the left",
+        "Upward",
+        "Downward"
+      ],
+      "answer": "Upward",
+      "explanation": "The form x² = 4py with p > 0 opens upward. Here 4p = 12 → p = 3 > 0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "For the ellipse x²/16 + y²/9 = 1, the length of the major axis is:",
+      "options": [
+        "3",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": "8",
+      "explanation": "a² = 16 → a = 4. Major axis length = 2a = 8.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "What is the eccentricity of a circle?",
+      "options": [
+        "0",
+        "1",
+        "Greater than 1",
+        "Less than 0"
+      ],
+      "answer": "0",
+      "explanation": "A circle has eccentricity e = 0. Ellipses: 0 < e < 1. Parabolas: e = 1. Hyperbolas: e > 1.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Which conic section has two branches?",
+      "options": [
+        "Circle",
+        "Parabola",
+        "Ellipse",
+        "Hyperbola"
+      ],
+      "answer": "Hyperbola",
+      "explanation": "A hyperbola consists of two separate branches opening in opposite directions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Completing the square in x² + 6x + y² − 4y = 12 yields a circle with center:",
+      "options": [
+        "(3, −2)",
+        "(−3, 2)",
+        "(6, −4)",
+        "(−6, 4)"
+      ],
+      "answer": "(−3, 2)",
+      "explanation": "(x+3)² + (y−2)² = 12 + 9 + 4 = 25. Center: (−3, 2), radius: 5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Find the common difference of the arithmetic sequence: 7, 11, 15, 19, …",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "2"
+      ],
+      "answer": "4",
+      "explanation": "Common difference d = 11 − 7 = 4.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "What is the 10th term of the geometric sequence 2, 6, 18, …?",
+      "options": [
+        "2 × 3⁹",
+        "2 × 10³",
+        "6⁹",
+        "3¹⁰"
+      ],
+      "answer": "2 × 3⁹",
+      "explanation": "a₁ = 2, r = 3. aₙ = 2 × 3^(n−1). a₁₀ = 2 × 3⁹.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "The sum of the first n terms of an arithmetic series with first term a₁ and last term aₙ is:",
+      "options": [
+        "n·a₁",
+        "n(a₁ + aₙ)/2",
+        "a₁ + (n−1)d",
+        "n²d/2"
+      ],
+      "answer": "n(a₁ + aₙ)/2",
+      "explanation": "Arithmetic series sum: Sₙ = n(a₁ + aₙ)/2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "In a mathematical induction proof, what are the two required steps?",
+      "options": [
+        "Hypothesis and conclusion",
+        "Base case and inductive step",
+        "Theorem and corollary",
+        "Definition and lemma"
+      ],
+      "answer": "Base case and inductive step",
+      "explanation": "Proof by induction requires: (1) Base case (usually n=1) and (2) Inductive step (assume true for n=k, prove for n=k+1).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "A geometric series has first term 5 and common ratio 1/2. The sum of the infinite series is:",
+      "options": [
+        "5",
+        "10",
+        "∞",
+        "2.5"
+      ],
+      "answer": "10",
+      "explanation": "Infinite geometric series: S = a₁/(1 − r) = 5/(1 − 1/2) = 5/(1/2) = 10, since |r| < 1.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "How many ways can 5 books be arranged on a shelf?",
+      "options": [
+        "25",
+        "120",
+        "60",
+        "10"
+      ],
+      "answer": "120",
+      "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120 (permutations of 5 distinct items).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "How many ways can a president and vice president be chosen from a club of 10 members?",
+      "options": [
+        "10",
+        "20",
+        "45",
+        "90"
+      ],
+      "answer": "90",
+      "explanation": "Order matters (positions are distinct): P(10, 2) = 10 × 9 = 90.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "What is C(7, 3)?",
+      "options": [
+        "21",
+        "35",
+        "42",
+        "210"
+      ],
+      "answer": "35",
+      "explanation": "C(7,3) = 7!/(3! × 4!) = (7 × 6 × 5)/(3 × 2 × 1) = 210/6 = 35.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "In the expansion of (a + b)⁴, the coefficient of a²b² (from Pascal's triangle) is:",
+      "options": [
+        "4",
+        "6",
+        "12",
+        "16"
+      ],
+      "answer": "6",
+      "explanation": "Row 4 of Pascal's triangle: 1, 4, 6, 4, 1. The middle term coefficient is 6 = C(4,2).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "A bag has 4 red and 6 blue marbles. The probability of drawing 2 red marbles without replacement is:",
+      "options": [
+        "4/10 × 3/9",
+        "4/10 × 4/10",
+        "C(4,2)/C(10,2)",
+        "Both A and C"
+      ],
+      "answer": "Both A and C",
+      "explanation": "P = (4/10)(3/9) = 12/90 = 2/15. Also C(4,2)/C(10,2) = 6/45 = 2/15. Both methods give the same answer.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "What does lim(x→2) f(x) = 5 mean?",
+      "options": [
+        "f(2) = 5",
+        "f approaches 5 as x approaches 2 from the right only",
+        "f(x) gets arbitrarily close to 5 as x gets close to 2 from either side",
+        "f(x) = 5 for all x near 2"
+      ],
+      "answer": "f(x) gets arbitrarily close to 5 as x gets close to 2 from either side",
+      "explanation": "A limit describes the behavior of f(x) as x approaches a value, not necessarily the function value at that point.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Evaluate: lim(x→4) (2x + 1).",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "9",
+      "explanation": "By direct substitution (polynomial): 2(4) + 1 = 9.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "A function f has lim(x→3⁻) f(x) = 4 and lim(x→3⁺) f(x) = 7. What is lim(x→3) f(x)?",
+      "options": [
+        "4",
+        "7",
+        "5.5",
+        "The limit does not exist"
+      ],
+      "answer": "The limit does not exist",
+      "explanation": "The two-sided limit exists only if both one-sided limits are equal. Since 4 ≠ 7, the limit does not exist.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "What type of discontinuity does f(x) = 1/x have at x = 0?",
+      "options": [
+        "Removable",
+        "Jump",
+        "Infinite",
+        "None"
+      ],
+      "answer": "Infinite",
+      "explanation": "As x → 0, f(x) = 1/x → ±∞. This is an infinite (or essential) discontinuity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "lim(x→0) (sin x)/x equals:",
+      "options": [
+        "0",
+        "∞",
+        "1",
+        "undefined"
+      ],
+      "answer": "1",
+      "explanation": "This is a fundamental limit in calculus: lim(x→0) (sin x)/x = 1. It is proved using the squeeze theorem.",
+      "points": 1
+    }
   ]
 }

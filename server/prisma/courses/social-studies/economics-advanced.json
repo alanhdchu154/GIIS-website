@@ -2,7 +2,7 @@
   "slug": "economics-advanced",
   "name": "Economics Advanced",
   "nameZh": "高级经济学",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Social Studies",
   "type": "Core",
   "description": "A rigorous exploration of microeconomic and macroeconomic theory, including market structures, game theory, fiscal and monetary policy, international trade, and development economics.",
@@ -13,7 +13,7 @@
       "title": "Advanced Demand Theory",
       "titleZh": "高级需求理论",
       "objectives": "Analyze consumer preferences using indifference curves and budget constraints; derive demand curves from utility maximization; distinguish income and substitution effects.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/6-1-consumption-choices",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/6-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 6 — Consumption Choices",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-consumer-producer-surplus/ap-demand-curve-tutorial/v/demand-curve-as-marginal-benefit-curve",
       "videoNote": "Khan Academy — Demand Curve as Marginal Benefit",
@@ -29,7 +29,7 @@
       "title": "Advanced Supply & Production Theory",
       "titleZh": "高级供给与生产理论",
       "objectives": "Apply production functions to analyze short-run and long-run costs; distinguish diminishing marginal returns from economies of scale; derive a firm's supply curve from marginal cost.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/7-1-explicit-and-implicit-costs-and-accounting-and-economic-profit",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/7-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 7 — Production, Costs, and Industry Structure",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/production-cost-and-the-perfect-competition-model/production-and-costs/v/production-possibilities-frontier",
       "videoNote": "Khan Academy — Production and Costs",
@@ -45,7 +45,7 @@
       "title": "Market Structures: Perfect Competition",
       "titleZh": "市场结构：完全竞争",
       "objectives": "Define the characteristics of perfectly competitive markets; determine the profit-maximizing output using MR = MC; analyze short-run and long-run equilibrium outcomes.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/8-1-perfect-competition-and-why-it-matters",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/8-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 8 — Perfect Competition",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/production-cost-and-the-perfect-competition-model/perfect-competition/v/perfect-competition",
       "videoNote": "Khan Academy — Perfect Competition Overview",
@@ -54,14 +54,14 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/production-cost-and-the-perfect-competition-model/perfect-competition/e/perfect-competition",
       "practiceNote": "Khan Academy — Perfect Competition Practice",
       "assignment": "Using a given cost schedule, determine the profit-maximizing quantity and economic profit or loss for a perfectly competitive firm at three different market prices; explain the long-run adjustment process.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 4,
       "title": "Monopoly & Monopolistic Competition",
       "titleZh": "垄断与垄断竞争",
       "objectives": "Explain how a monopolist maximizes profit by setting MR = MC and charging above marginal cost; analyze monopolistic competition in the short and long run; evaluate welfare losses from market power.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/9-1-how-monopolies-form-barriers-to-entry",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/9-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 9 — Monopoly and Ch 10 — Monopolistic Competition",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/imperfect-competition/monopoly-tutorial/v/monopoly-basics",
       "videoNote": "Khan Academy — Monopoly Basics",
@@ -77,7 +77,7 @@
       "title": "Oligopoly & Game Theory",
       "titleZh": "寡头垄断与博弈论",
       "objectives": "Describe the characteristics of oligopoly; apply game theory concepts including the prisoner's dilemma and Nash equilibrium to business strategy; analyze cartel behavior and anti-trust policy.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/10-2-oligopoly",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/10-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 10.2 — Oligopoly",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/imperfect-competition/oligopoly-and-game-theory/v/oligopolies-and-duopolies",
       "videoNote": "Khan Academy — Oligopolies and Game Theory",
@@ -93,7 +93,7 @@
       "title": "Factor Markets: Labor & Capital",
       "titleZh": "要素市场：劳动力与资本",
       "objectives": "Analyze labor demand as a derived demand using marginal revenue product; explain wage determination in competitive and monopsonistic labor markets; discuss the role of capital markets in investment decisions.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/14-1-the-theory-of-labor-markets",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/14-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 14 — Labor Markets and Income",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/factor-markets/labor-market-ap/v/labor-market",
       "videoNote": "Khan Academy — Labor Markets",
@@ -102,14 +102,14 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/factor-markets/labor-market-ap/e/labor-market",
       "practiceNote": "Khan Academy — Labor Market Practice",
       "assignment": "Using a marginal revenue product table, determine how many workers a profit-maximizing firm will hire at various wage rates; graphically illustrate the effect of a minimum wage on employment in a competitive labor market.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 7,
       "title": "Market Failures & Externalities",
       "titleZh": "市场失灵与外部性",
       "objectives": "Identify sources of market failure; analyze negative and positive externalities using supply-demand diagrams; evaluate government interventions including taxes, subsidies, regulations, and cap-and-trade systems.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/12-1-why-the-private-sector-under-invests-in-innovation",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/12-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 12 — Environmental Protection and Negative Externalities",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/market-failure-and-the-role-of-government/externalities-ap/v/externalities",
       "videoNote": "Khan Academy — Externalities",
@@ -125,7 +125,7 @@
       "title": "Public Goods & Information Economics",
       "titleZh": "公共物品与信息经济学",
       "objectives": "Distinguish public goods from private goods using non-excludability and non-rivalry; explain the free-rider problem; analyze how asymmetric information creates adverse selection and moral hazard.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/13-1-public-goods",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/13-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 13 — Public Goods and Common Resources",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/market-failure-and-the-role-of-government/public-goods-ap/v/public-goods",
       "videoNote": "Khan Academy — Public Goods",
@@ -134,14 +134,14 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/market-failure-and-the-role-of-government/public-goods-ap/e/public-goods",
       "practiceNote": "Khan Academy — Public Goods Practice",
       "assignment": "Classify ten goods/services as private goods, public goods, club goods, or common resources; write a paragraph explaining how adverse selection in health insurance markets can lead to market failure.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 9,
       "title": "Macroeconomic Measurement",
       "titleZh": "宏观经济测量",
       "objectives": "Calculate GDP using expenditure and income approaches; distinguish real from nominal GDP; interpret GDP deflator and CPI; analyze limitations of GDP as a measure of welfare.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/19-1-measuring-the-size-of-the-economy-gross-domestic-product",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/19-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 19 — Measuring the Size of the Economy: GDP",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/gdp-tutorial/v/gdp-and-the-circular-flow-of-income",
       "videoNote": "Khan Academy — GDP and the Circular Flow of Income",
@@ -150,14 +150,14 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/gdp-tutorial/e/calculating-gdp",
       "practiceNote": "Khan Academy — Calculating GDP Practice",
       "assignment": "Using provided national income data, calculate nominal GDP, real GDP (using a base year), and the GDP deflator; write a critical analysis of why GDP may not fully capture a nation's standard of living.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 10,
       "title": "Business Cycles & Growth Theory",
       "titleZh": "商业周期与增长理论",
       "objectives": "Identify the phases of the business cycle and leading/lagging economic indicators; explain the Solow growth model and its predictions regarding capital accumulation and technological progress; discuss causes of long-run economic growth.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/25-1-components-of-economic-growth",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/25-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 25 — Economic Growth",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/economic-indicators-and-the-business-cycle/business-cycles/v/business-cycle",
       "videoNote": "Khan Academy — Business Cycles",
@@ -173,7 +173,7 @@
       "title": "Fiscal Policy",
       "titleZh": "财政政策",
       "objectives": "Explain how government spending and taxation affect aggregate demand; analyze expansionary and contractionary fiscal policy using the AD-AS model; evaluate the multiplier effect, crowding out, and automatic stabilizers.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/30-1-the-annual-federal-budget",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/30-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 30 — Government Budgets and Fiscal Policy",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/aggregate-supply-demand-topic/aggregate-demand-tutorial/v/aggregate-demand",
       "videoNote": "Khan Academy — Fiscal Policy and Aggregate Demand",
@@ -189,7 +189,7 @@
       "title": "Monetary Policy & Central Banking",
       "titleZh": "货币政策与中央银行",
       "objectives": "Describe the Federal Reserve's structure and tools; explain how open market operations affect the money supply and interest rates; analyze the transmission mechanism from monetary policy to real GDP and inflation.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/28-1-what-is-money",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/28-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 28 — The Money Supply and the Federal Reserve",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/monetary-system-topic/monetary-policy-tutorial/v/the-federal-reserve",
       "videoNote": "Khan Academy — The Federal Reserve and Monetary Policy",
@@ -205,7 +205,7 @@
       "title": "International Trade Theory",
       "titleZh": "国际贸易理论",
       "objectives": "Apply comparative advantage to explain gains from trade; analyze the effects of tariffs and quotas on domestic consumers, producers, and government revenue; evaluate the arguments for and against free trade.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/33-1-absolute-and-comparative-advantage",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/33-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 33 — International Trade",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/forex-trade-topic/trade-and-specialization-tutorial/v/comparative-advantage-specialization-and-gains-from-trade",
       "videoNote": "Khan Academy — Comparative Advantage and Gains from Trade",
@@ -221,7 +221,7 @@
       "title": "Development Economics & Global Inequality",
       "titleZh": "发展经济学与全球不平等",
       "objectives": "Distinguish developed from developing economies using key indicators; analyze barriers to economic development; evaluate the role of institutions, foreign aid, and trade in poverty reduction.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/35-1-the-diversity-of-countries-and-economies-across-the-world",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/35-introduction",
       "readingNote": "OpenStax Principles of Economics 2e Ch 35 — Poverty and Economic Inequality",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/income-and-wealth-distribution-topic/income-inequality-tutorial/v/income-inequality",
       "videoNote": "Khan Academy — Income Inequality and Development",
@@ -230,7 +230,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/income-and-wealth-distribution-topic/income-inequality-tutorial/e/income-inequality",
       "practiceNote": "Khan Academy — Income Inequality Practice",
       "assignment": "Compare two countries at different stages of development using HDI, Gini coefficient, and GDP per capita data; write a policy brief recommending three evidence-based strategies for sustainable economic development.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     }
   ],
   "quizQuestions": [
@@ -238,7 +238,12 @@
       "moduleOrder": 1,
       "order": 1,
       "question": "When the price of a good rises and a consumer buys less of it because it is relatively more expensive than substitutes, this is called the:",
-      "options": ["Income effect", "Substitution effect", "Price effect", "Wealth effect"],
+      "options": [
+        "Income effect",
+        "Substitution effect",
+        "Price effect",
+        "Wealth effect"
+      ],
       "answer": "Substitution effect",
       "explanation": "The substitution effect refers to the change in quantity demanded caused by a change in the relative price of a good, holding real income constant.",
       "points": 1
@@ -247,7 +252,12 @@
       "moduleOrder": 1,
       "order": 2,
       "question": "On an indifference curve diagram, the slope of the budget constraint represents:",
-      "options": ["The marginal utility of Good X", "The ratio of prices (Px/Py)", "The consumer's marginal rate of substitution", "The income of the consumer"],
+      "options": [
+        "The marginal utility of Good X",
+        "The ratio of prices (Px/Py)",
+        "The consumer's marginal rate of substitution",
+        "The income of the consumer"
+      ],
       "answer": "The ratio of prices (Px/Py)",
       "explanation": "The budget constraint's slope equals the negative price ratio (−Px/Py), reflecting the market trade-off between the two goods.",
       "points": 1
@@ -256,7 +266,12 @@
       "moduleOrder": 1,
       "order": 3,
       "question": "A consumer is in equilibrium when:",
-      "options": ["Total utility is maximized and the budget is exhausted", "MUx/Px > MUy/Py", "Marginal utility of each good equals its price", "The indifference curve intersects the budget line"],
+      "options": [
+        "Total utility is maximized and the budget is exhausted",
+        "MUx/Px > MUy/Py",
+        "Marginal utility of each good equals its price",
+        "The indifference curve intersects the budget line"
+      ],
       "answer": "Total utility is maximized and the budget is exhausted",
       "explanation": "Consumer equilibrium occurs where the highest attainable indifference curve is tangent to the budget constraint, maximizing total utility given the budget.",
       "points": 1
@@ -265,7 +280,12 @@
       "moduleOrder": 1,
       "order": 4,
       "question": "For a normal good, when income increases, the demand curve:",
-      "options": ["Shifts left", "Shifts right", "Remains unchanged", "Becomes flatter"],
+      "options": [
+        "Shifts left",
+        "Shifts right",
+        "Remains unchanged",
+        "Becomes flatter"
+      ],
       "answer": "Shifts right",
       "explanation": "A normal good is one for which demand increases as income increases, shifting the demand curve to the right.",
       "points": 1
@@ -274,7 +294,12 @@
       "moduleOrder": 1,
       "order": 5,
       "question": "Giffen goods are unusual because they:",
-      "options": ["Have perfectly elastic demand", "Violate the law of demand — quantity demanded rises when price rises", "Always have positive cross-price elasticity", "Are always inferior goods with downward-sloping demand"],
+      "options": [
+        "Have perfectly elastic demand",
+        "Violate the law of demand — quantity demanded rises when price rises",
+        "Always have positive cross-price elasticity",
+        "Are always inferior goods with downward-sloping demand"
+      ],
       "answer": "Violate the law of demand — quantity demanded rises when price rises",
       "explanation": "Giffen goods are inferior goods for which the income effect dominates the substitution effect so strongly that demand increases when price rises.",
       "points": 1
@@ -283,7 +308,12 @@
       "moduleOrder": 2,
       "order": 1,
       "question": "The law of diminishing marginal returns states that as more units of a variable input are added to fixed inputs:",
-      "options": ["Total product always decreases", "Marginal product eventually decreases", "Average product always increases", "Fixed costs increase"],
+      "options": [
+        "Total product always decreases",
+        "Marginal product eventually decreases",
+        "Average product always increases",
+        "Fixed costs increase"
+      ],
       "answer": "Marginal product eventually decreases",
       "explanation": "Diminishing marginal returns occur in the short run when each additional unit of the variable input adds less to total output than the previous unit.",
       "points": 1
@@ -292,7 +322,12 @@
       "moduleOrder": 2,
       "order": 2,
       "question": "In the short run, which of the following costs does NOT change with output?",
-      "options": ["Variable costs", "Marginal costs", "Fixed costs", "Total costs"],
+      "options": [
+        "Variable costs",
+        "Marginal costs",
+        "Fixed costs",
+        "Total costs"
+      ],
       "answer": "Fixed costs",
       "explanation": "Fixed costs, such as rent or equipment leases, remain constant in the short run regardless of the level of output produced.",
       "points": 1
@@ -301,7 +336,12 @@
       "moduleOrder": 2,
       "order": 3,
       "question": "The marginal cost curve intersects the average total cost curve at:",
-      "options": ["The minimum point of ATC", "The maximum point of ATC", "The point where ATC equals AFC", "The shutdown point"],
+      "options": [
+        "The minimum point of ATC",
+        "The maximum point of ATC",
+        "The point where ATC equals AFC",
+        "The shutdown point"
+      ],
       "answer": "The minimum point of ATC",
       "explanation": "When MC is below ATC, ATC is falling; when MC is above ATC, ATC is rising. Therefore, MC crosses ATC at its minimum point.",
       "points": 1
@@ -310,7 +350,12 @@
       "moduleOrder": 2,
       "order": 4,
       "question": "Economies of scale occur when a firm's long-run average cost:",
-      "options": ["Increases as output increases", "Decreases as output increases", "Remains constant as output increases", "Fluctuates with variable inputs"],
+      "options": [
+        "Increases as output increases",
+        "Decreases as output increases",
+        "Remains constant as output increases",
+        "Fluctuates with variable inputs"
+      ],
       "answer": "Decreases as output increases",
       "explanation": "Economies of scale exist when expanding output reduces long-run average total cost, often due to specialization, bulk purchasing, or spreading fixed costs.",
       "points": 1
@@ -319,7 +364,12 @@
       "moduleOrder": 2,
       "order": 5,
       "question": "A firm's short-run supply curve is its:",
-      "options": ["Entire marginal cost curve", "Marginal cost curve above average variable cost", "Average total cost curve above minimum ATC", "Marginal revenue curve"],
+      "options": [
+        "Entire marginal cost curve",
+        "Marginal cost curve above average variable cost",
+        "Average total cost curve above minimum ATC",
+        "Marginal revenue curve"
+      ],
       "answer": "Marginal cost curve above average variable cost",
       "explanation": "A competitive firm will produce as long as price exceeds AVC; therefore the supply curve is the segment of the MC curve above the minimum AVC (the shutdown point).",
       "points": 1
@@ -328,7 +378,12 @@
       "moduleOrder": 3,
       "order": 1,
       "question": "In a perfectly competitive market, an individual firm is a price-taker because:",
-      "options": ["It sells a differentiated product", "It has market power", "It is one of many sellers of an identical product", "The government sets the price"],
+      "options": [
+        "It sells a differentiated product",
+        "It has market power",
+        "It is one of many sellers of an identical product",
+        "The government sets the price"
+      ],
       "answer": "It is one of many sellers of an identical product",
       "explanation": "With many identical sellers, no single firm can influence the market price; each must accept the equilibrium price as given.",
       "points": 1
@@ -337,7 +392,12 @@
       "moduleOrder": 3,
       "order": 2,
       "question": "For a perfectly competitive firm, price equals:",
-      "options": ["Marginal cost only at the profit-maximizing output", "Average revenue and marginal revenue at all output levels", "Marginal revenue only when profits are zero", "Average total cost at all output levels"],
+      "options": [
+        "Marginal cost only at the profit-maximizing output",
+        "Average revenue and marginal revenue at all output levels",
+        "Marginal revenue only when profits are zero",
+        "Average total cost at all output levels"
+      ],
       "answer": "Average revenue and marginal revenue at all output levels",
       "explanation": "Because a competitive firm is a price-taker, P = AR = MR at every level of output.",
       "points": 1
@@ -346,7 +406,12 @@
       "moduleOrder": 3,
       "order": 3,
       "question": "A perfectly competitive firm should shut down in the short run if:",
-      "options": ["Price is less than average total cost", "Price is less than average variable cost", "Economic profit is negative", "Marginal cost exceeds marginal revenue"],
+      "options": [
+        "Price is less than average total cost",
+        "Price is less than average variable cost",
+        "Economic profit is negative",
+        "Marginal cost exceeds marginal revenue"
+      ],
       "answer": "Price is less than average variable cost",
       "explanation": "A firm shuts down when it cannot cover variable costs — if P < AVC, losses from producing exceed losses from shutting down (which equal fixed costs).",
       "points": 1
@@ -355,7 +420,12 @@
       "moduleOrder": 3,
       "order": 4,
       "question": "In the long run, perfectly competitive markets tend toward zero economic profit because:",
-      "options": ["Government regulations prevent profits", "Entry of new firms drives price down to minimum ATC", "Firms collude to keep prices stable", "Technology improvements eliminate profit"],
+      "options": [
+        "Government regulations prevent profits",
+        "Entry of new firms drives price down to minimum ATC",
+        "Firms collude to keep prices stable",
+        "Technology improvements eliminate profit"
+      ],
       "answer": "Entry of new firms drives price down to minimum ATC",
       "explanation": "Positive economic profits attract new entrants, increasing supply, lowering price, and eliminating profit until P = minimum ATC.",
       "points": 1
@@ -364,7 +434,12 @@
       "moduleOrder": 3,
       "order": 5,
       "question": "Productive efficiency in perfect competition is achieved because in long-run equilibrium:",
-      "options": ["Firms produce at minimum average total cost", "Firms earn positive economic profit", "Price exceeds marginal cost", "There are barriers to entry"],
+      "options": [
+        "Firms produce at minimum average total cost",
+        "Firms earn positive economic profit",
+        "Price exceeds marginal cost",
+        "There are barriers to entry"
+      ],
       "answer": "Firms produce at minimum average total cost",
       "explanation": "In the long-run perfectly competitive equilibrium, P = MC = minimum ATC, ensuring productive efficiency — goods are produced at the lowest possible cost.",
       "points": 1
@@ -373,7 +448,12 @@
       "moduleOrder": 4,
       "order": 1,
       "question": "A monopolist maximizes profit by producing where:",
-      "options": ["Price equals marginal cost", "Marginal revenue equals marginal cost", "Total revenue is maximized", "Average revenue equals average total cost"],
+      "options": [
+        "Price equals marginal cost",
+        "Marginal revenue equals marginal cost",
+        "Total revenue is maximized",
+        "Average revenue equals average total cost"
+      ],
       "answer": "Marginal revenue equals marginal cost",
       "explanation": "Like all profit-maximizing firms, a monopolist produces where MR = MC, but unlike competitive firms, it then charges a price above MC as determined by the demand curve.",
       "points": 1
@@ -382,7 +462,12 @@
       "moduleOrder": 4,
       "order": 2,
       "question": "For a monopolist, marginal revenue is less than price because:",
-      "options": ["The monopolist has many competitors", "Selling one more unit requires lowering price on all units sold", "The demand curve is perfectly elastic", "Fixed costs are very high"],
+      "options": [
+        "The monopolist has many competitors",
+        "Selling one more unit requires lowering price on all units sold",
+        "The demand curve is perfectly elastic",
+        "Fixed costs are very high"
+      ],
       "answer": "Selling one more unit requires lowering price on all units sold",
       "explanation": "A monopolist faces a downward-sloping demand curve; to sell an additional unit it must lower price for all units, making MR < P.",
       "points": 1
@@ -391,7 +476,12 @@
       "moduleOrder": 4,
       "order": 3,
       "question": "Deadweight loss under monopoly arises because the monopolist:",
-      "options": ["Produces too much at too low a price", "Produces too little at too high a price", "Earns zero economic profit in the long run", "Has no barriers to entry"],
+      "options": [
+        "Produces too much at too low a price",
+        "Produces too little at too high a price",
+        "Earns zero economic profit in the long run",
+        "Has no barriers to entry"
+      ],
       "answer": "Produces too little at too high a price",
       "explanation": "The monopolist restricts output below the competitive level and charges a price above MC, creating a deadweight loss — transactions that would benefit both buyer and seller do not occur.",
       "points": 1
@@ -400,7 +490,12 @@
       "moduleOrder": 4,
       "order": 4,
       "question": "Which of the following is a key characteristic of monopolistic competition?",
-      "options": ["Homogeneous products and price-taking behavior", "Differentiated products and many sellers", "A single seller with high barriers to entry", "Strategic interdependence among a few firms"],
+      "options": [
+        "Homogeneous products and price-taking behavior",
+        "Differentiated products and many sellers",
+        "A single seller with high barriers to entry",
+        "Strategic interdependence among a few firms"
+      ],
       "answer": "Differentiated products and many sellers",
       "explanation": "Monopolistic competition involves many sellers each selling differentiated products, giving each firm some pricing power while still facing competition.",
       "points": 1
@@ -409,7 +504,12 @@
       "moduleOrder": 4,
       "order": 5,
       "question": "In long-run monopolistic competition equilibrium, firms earn:",
-      "options": ["Positive economic profit", "Zero economic profit", "Negative economic profit", "Maximum accounting profit"],
+      "options": [
+        "Positive economic profit",
+        "Zero economic profit",
+        "Negative economic profit",
+        "Maximum accounting profit"
+      ],
       "answer": "Zero economic profit",
       "explanation": "Entry and exit drive economic profit to zero in the long run, as in perfect competition, but firms produce on the downward-sloping portion of ATC — not at minimum ATC.",
       "points": 1
@@ -418,7 +518,12 @@
       "moduleOrder": 5,
       "order": 1,
       "question": "Which of the following best describes an oligopoly?",
-      "options": ["A market with many small firms selling identical products", "A market dominated by a few interdependent firms", "A single seller with no close substitutes", "A market with free entry and differentiated products"],
+      "options": [
+        "A market with many small firms selling identical products",
+        "A market dominated by a few interdependent firms",
+        "A single seller with no close substitutes",
+        "A market with free entry and differentiated products"
+      ],
       "answer": "A market dominated by a few interdependent firms",
       "explanation": "Oligopoly is characterized by a small number of firms whose pricing and output decisions are mutually interdependent.",
       "points": 1
@@ -427,7 +532,12 @@
       "moduleOrder": 5,
       "order": 2,
       "question": "In a prisoner's dilemma game, the Nash equilibrium is often a poor outcome because:",
-      "options": ["Both players cooperate and maximize joint profits", "Each player's dominant strategy leads to a worse collective outcome", "One player always defects while the other cooperates", "Government intervention always prevents the game from being played"],
+      "options": [
+        "Both players cooperate and maximize joint profits",
+        "Each player's dominant strategy leads to a worse collective outcome",
+        "One player always defects while the other cooperates",
+        "Government intervention always prevents the game from being played"
+      ],
       "answer": "Each player's dominant strategy leads to a worse collective outcome",
       "explanation": "In the prisoner's dilemma, individual rationality (choosing the dominant strategy) leads to a collectively suboptimal equilibrium.",
       "points": 1
@@ -436,7 +546,12 @@
       "moduleOrder": 5,
       "order": 3,
       "question": "A Nash equilibrium is a situation where:",
-      "options": ["All players earn maximum possible profit", "No player can improve their outcome by unilaterally changing strategy", "All players choose to cooperate", "Government enforces a price ceiling"],
+      "options": [
+        "All players earn maximum possible profit",
+        "No player can improve their outcome by unilaterally changing strategy",
+        "All players choose to cooperate",
+        "Government enforces a price ceiling"
+      ],
       "answer": "No player can improve their outcome by unilaterally changing strategy",
       "explanation": "At a Nash equilibrium, each player is choosing the best response to the other players' strategies, so no one has an incentive to deviate.",
       "points": 1
@@ -445,7 +560,12 @@
       "moduleOrder": 5,
       "order": 4,
       "question": "A cartel is an arrangement where oligopolistic firms:",
-      "options": ["Compete aggressively on price", "Agree to coordinate output and pricing like a monopolist", "Merge into a single firm", "Reduce production costs through economies of scale"],
+      "options": [
+        "Compete aggressively on price",
+        "Agree to coordinate output and pricing like a monopolist",
+        "Merge into a single firm",
+        "Reduce production costs through economies of scale"
+      ],
       "answer": "Agree to coordinate output and pricing like a monopolist",
       "explanation": "A cartel involves firms colluding to restrict output and raise prices, effectively acting as a joint monopoly. Cartels are illegal under US antitrust law.",
       "points": 1
@@ -454,7 +574,12 @@
       "moduleOrder": 5,
       "order": 5,
       "question": "The kinked demand curve model in oligopoly predicts that:",
-      "options": ["Prices will change frequently in response to cost changes", "Prices tend to be rigid because rivals match price cuts but not increases", "Firms will always cooperate to maximize joint profits", "Entry is unrestricted so profits are zero in the long run"],
+      "options": [
+        "Prices will change frequently in response to cost changes",
+        "Prices tend to be rigid because rivals match price cuts but not increases",
+        "Firms will always cooperate to maximize joint profits",
+        "Entry is unrestricted so profits are zero in the long run"
+      ],
       "answer": "Prices tend to be rigid because rivals match price cuts but not increases",
       "explanation": "In the kinked demand model, if a firm raises price, rivals don't follow (demand is elastic above kink), but if it cuts price, rivals match (demand is inelastic below kink), creating price stickiness.",
       "points": 1
@@ -463,7 +588,12 @@
       "moduleOrder": 6,
       "order": 1,
       "question": "A firm's demand for labor is derived from:",
-      "options": ["The supply of capital", "The market wage rate", "The demand for the good or service the labor produces", "The number of workers in the labor force"],
+      "options": [
+        "The supply of capital",
+        "The market wage rate",
+        "The demand for the good or service the labor produces",
+        "The number of workers in the labor force"
+      ],
       "answer": "The demand for the good or service the labor produces",
       "explanation": "Labor demand is derived demand — firms hire workers not for labor itself but to produce goods and services consumers want.",
       "points": 1
@@ -472,7 +602,12 @@
       "moduleOrder": 6,
       "order": 2,
       "question": "Marginal revenue product of labor (MRPL) is calculated as:",
-      "options": ["Wage × number of workers", "Marginal product of labor × price of output", "Total revenue ÷ number of workers", "Change in total cost ÷ change in labor"],
+      "options": [
+        "Wage × number of workers",
+        "Marginal product of labor × price of output",
+        "Total revenue ÷ number of workers",
+        "Change in total cost ÷ change in labor"
+      ],
       "answer": "Marginal product of labor × price of output",
       "explanation": "MRPL = MPL × P (in a competitive output market), representing the additional revenue generated by hiring one more worker.",
       "points": 1
@@ -481,7 +616,12 @@
       "moduleOrder": 6,
       "order": 3,
       "question": "A profit-maximizing firm hires workers until:",
-      "options": ["Total revenue equals total cost", "MRPL equals the wage rate", "Average revenue product equals the wage rate", "The last worker hired earns zero marginal product"],
+      "options": [
+        "Total revenue equals total cost",
+        "MRPL equals the wage rate",
+        "Average revenue product equals the wage rate",
+        "The last worker hired earns zero marginal product"
+      ],
       "answer": "MRPL equals the wage rate",
       "explanation": "Firms maximize profit in labor markets by hiring up to the point where MRPL = W, the same MR = MC logic applied to factor markets.",
       "points": 1
@@ -490,7 +630,12 @@
       "moduleOrder": 6,
       "order": 4,
       "question": "A monopsony in the labor market refers to:",
-      "options": ["A labor market with many competing employers", "A single employer who has market power over wages", "A union that sets wages above equilibrium", "A government-mandated minimum wage"],
+      "options": [
+        "A labor market with many competing employers",
+        "A single employer who has market power over wages",
+        "A union that sets wages above equilibrium",
+        "A government-mandated minimum wage"
+      ],
       "answer": "A single employer who has market power over wages",
       "explanation": "A monopsonist is the sole employer (or dominant buyer of labor) in a market, giving it the power to pay wages below the competitive level.",
       "points": 1
@@ -499,7 +644,12 @@
       "moduleOrder": 6,
       "order": 5,
       "question": "Human capital refers to:",
-      "options": ["The physical machines used in production", "The investment workers make in education and skills", "The financial capital raised by firms", "The number of workers in an economy"],
+      "options": [
+        "The physical machines used in production",
+        "The investment workers make in education and skills",
+        "The financial capital raised by firms",
+        "The number of workers in an economy"
+      ],
       "answer": "The investment workers make in education and skills",
       "explanation": "Human capital is the stock of knowledge, skills, and health that workers accumulate through education, training, and experience, which enhances their productivity.",
       "points": 1
@@ -508,7 +658,12 @@
       "moduleOrder": 7,
       "order": 1,
       "question": "A negative externality occurs when a market transaction:",
-      "options": ["Creates benefits for third parties not involved in the transaction", "Imposes costs on third parties not involved in the transaction", "Results in a price below equilibrium", "Causes the supply curve to shift right"],
+      "options": [
+        "Creates benefits for third parties not involved in the transaction",
+        "Imposes costs on third parties not involved in the transaction",
+        "Results in a price below equilibrium",
+        "Causes the supply curve to shift right"
+      ],
       "answer": "Imposes costs on third parties not involved in the transaction",
       "explanation": "A negative externality (e.g., pollution) means the social cost of production exceeds the private cost, causing overproduction from a social welfare perspective.",
       "points": 1
@@ -517,7 +672,12 @@
       "moduleOrder": 7,
       "order": 2,
       "question": "When a market has a negative externality, the socially optimal quantity is:",
-      "options": ["Greater than the market equilibrium quantity", "Equal to the market equilibrium quantity", "Less than the market equilibrium quantity", "Zero"],
+      "options": [
+        "Greater than the market equilibrium quantity",
+        "Equal to the market equilibrium quantity",
+        "Less than the market equilibrium quantity",
+        "Zero"
+      ],
       "answer": "Less than the market equilibrium quantity",
       "explanation": "With a negative externality, social marginal cost exceeds private marginal cost, so the free market overproduces. The socially optimal quantity is lower.",
       "points": 1
@@ -526,7 +686,12 @@
       "moduleOrder": 7,
       "order": 3,
       "question": "A Pigouvian tax is designed to:",
-      "options": ["Subsidize firms that produce positive externalities", "Correct a negative externality by making the producer internalize the social cost", "Raise government revenue without affecting market outcomes", "Eliminate all forms of market failure"],
+      "options": [
+        "Subsidize firms that produce positive externalities",
+        "Correct a negative externality by making the producer internalize the social cost",
+        "Raise government revenue without affecting market outcomes",
+        "Eliminate all forms of market failure"
+      ],
       "answer": "Correct a negative externality by making the producer internalize the social cost",
       "explanation": "A Pigouvian tax equal to the external cost per unit aligns private incentives with social costs, leading firms to produce the socially optimal quantity.",
       "points": 1
@@ -535,7 +700,12 @@
       "moduleOrder": 7,
       "order": 4,
       "question": "Education is often cited as an example of a positive externality because:",
-      "options": ["It is provided only by the government", "Educated individuals generate benefits for society beyond what they capture personally", "It reduces income inequality directly", "The government can produce it at zero cost"],
+      "options": [
+        "It is provided only by the government",
+        "Educated individuals generate benefits for society beyond what they capture personally",
+        "It reduces income inequality directly",
+        "The government can produce it at zero cost"
+      ],
       "answer": "Educated individuals generate benefits for society beyond what they capture personally",
       "explanation": "Education benefits not just the individual (higher wages) but also society through increased productivity, lower crime rates, and civic participation — benefits the private market undersupplies.",
       "points": 1
@@ -544,7 +714,12 @@
       "moduleOrder": 7,
       "order": 5,
       "question": "The Coase Theorem argues that externalities can be resolved without government intervention when:",
-      "options": ["There are many parties involved and high transaction costs", "Property rights are well-defined and transaction costs are low", "The externality is a public bad", "The government sets the correct Pigouvian tax"],
+      "options": [
+        "There are many parties involved and high transaction costs",
+        "Property rights are well-defined and transaction costs are low",
+        "The externality is a public bad",
+        "The government sets the correct Pigouvian tax"
+      ],
       "answer": "Property rights are well-defined and transaction costs are low",
       "explanation": "The Coase Theorem states that when property rights are clear and bargaining is costless, private parties will negotiate to achieve the efficient outcome regardless of who holds the rights.",
       "points": 1
@@ -553,7 +728,12 @@
       "moduleOrder": 8,
       "order": 1,
       "question": "A public good is characterized by:",
-      "options": ["Excludability and rivalry", "Non-excludability and non-rivalry", "High marginal cost of provision", "Being provided exclusively by private firms"],
+      "options": [
+        "Excludability and rivalry",
+        "Non-excludability and non-rivalry",
+        "High marginal cost of provision",
+        "Being provided exclusively by private firms"
+      ],
       "answer": "Non-excludability and non-rivalry",
       "explanation": "Public goods are non-excludable (you cannot prevent non-payers from consuming them) and non-rival (one person's use does not reduce availability to others).",
       "points": 1
@@ -562,7 +742,12 @@
       "moduleOrder": 8,
       "order": 2,
       "question": "The free-rider problem arises because:",
-      "options": ["Public goods are too expensive to produce", "People can consume a public good without paying for it", "Private firms always over-provide public goods", "Government cannot efficiently produce goods"],
+      "options": [
+        "Public goods are too expensive to produce",
+        "People can consume a public good without paying for it",
+        "Private firms always over-provide public goods",
+        "Government cannot efficiently produce goods"
+      ],
       "answer": "People can consume a public good without paying for it",
       "explanation": "Since public goods are non-excludable, individuals can benefit without paying, leading private markets to underprovide them.",
       "points": 1
@@ -571,7 +756,12 @@
       "moduleOrder": 8,
       "order": 3,
       "question": "Adverse selection in insurance markets occurs when:",
-      "options": ["Insurers can perfectly observe policyholders' risk levels", "High-risk individuals are more likely to purchase insurance than low-risk individuals", "Insurance companies collude to raise premiums", "Government mandates make insurance unprofitable"],
+      "options": [
+        "Insurers can perfectly observe policyholders' risk levels",
+        "High-risk individuals are more likely to purchase insurance than low-risk individuals",
+        "Insurance companies collude to raise premiums",
+        "Government mandates make insurance unprofitable"
+      ],
       "answer": "High-risk individuals are more likely to purchase insurance than low-risk individuals",
       "explanation": "Adverse selection results from asymmetric information: high-risk individuals seek insurance more than low-risk individuals, leading insurers to face a riskier-than-average pool.",
       "points": 1
@@ -580,7 +770,12 @@
       "moduleOrder": 8,
       "order": 4,
       "question": "Moral hazard refers to the tendency for people to:",
-      "options": ["Misrepresent information before entering a contract", "Take on more risk after being insured or protected from consequences", "Cooperate to achieve mutually beneficial outcomes", "Save more when interest rates are high"],
+      "options": [
+        "Misrepresent information before entering a contract",
+        "Take on more risk after being insured or protected from consequences",
+        "Cooperate to achieve mutually beneficial outcomes",
+        "Save more when interest rates are high"
+      ],
       "answer": "Take on more risk after being insured or protected from consequences",
       "explanation": "Moral hazard occurs when having insurance (or other protection) changes behavior — a person may take greater risks because they bear less of the cost of bad outcomes.",
       "points": 1
@@ -589,7 +784,12 @@
       "moduleOrder": 8,
       "order": 5,
       "question": "Common resources (like fisheries) are prone to overuse because they are:",
-      "options": ["Non-excludable but rival", "Non-excludable and non-rival", "Excludable and non-rival", "Excludable and rival"],
+      "options": [
+        "Non-excludable but rival",
+        "Non-excludable and non-rival",
+        "Excludable and non-rival",
+        "Excludable and rival"
+      ],
       "answer": "Non-excludable but rival",
       "explanation": "Common resources are rival (one person's use depletes what is available) but non-excludable (you cannot prevent people from using them), leading to the tragedy of the commons.",
       "points": 1
@@ -598,7 +798,12 @@
       "moduleOrder": 9,
       "order": 1,
       "question": "GDP measures the:",
-      "options": ["Total income earned by a country's citizens abroad and domestically", "Total market value of all final goods and services produced within a country in a given period", "Total value of all goods produced, including intermediate goods", "Total government spending within a country"],
+      "options": [
+        "Total income earned by a country's citizens abroad and domestically",
+        "Total market value of all final goods and services produced within a country in a given period",
+        "Total value of all goods produced, including intermediate goods",
+        "Total government spending within a country"
+      ],
       "answer": "Total market value of all final goods and services produced within a country in a given period",
       "explanation": "GDP is the monetary value of all final goods and services produced within a nation's borders during a specific time period, typically one year.",
       "points": 1
@@ -607,7 +812,12 @@
       "moduleOrder": 9,
       "order": 2,
       "question": "In the expenditure approach to GDP, the four components are:",
-      "options": ["Wages, rent, interest, and profit", "Consumption, investment, government spending, and net exports", "Taxes, subsidies, exports, and imports", "Production, distribution, retail, and consumption"],
+      "options": [
+        "Wages, rent, interest, and profit",
+        "Consumption, investment, government spending, and net exports",
+        "Taxes, subsidies, exports, and imports",
+        "Production, distribution, retail, and consumption"
+      ],
       "answer": "Consumption, investment, government spending, and net exports",
       "explanation": "GDP = C + I + G + (X - M), where C is consumption, I is investment, G is government spending, and (X - M) is net exports.",
       "points": 1
@@ -616,7 +826,12 @@
       "moduleOrder": 9,
       "order": 3,
       "question": "The GDP deflator is used to:",
-      "options": ["Measure the unemployment rate", "Convert nominal GDP into real GDP by adjusting for price level changes", "Calculate the balance of trade", "Determine the money supply"],
+      "options": [
+        "Measure the unemployment rate",
+        "Convert nominal GDP into real GDP by adjusting for price level changes",
+        "Calculate the balance of trade",
+        "Determine the money supply"
+      ],
       "answer": "Convert nominal GDP into real GDP by adjusting for price level changes",
       "explanation": "The GDP deflator = (Nominal GDP / Real GDP) × 100, allowing economists to separate changes in output from changes in prices.",
       "points": 1
@@ -625,7 +840,12 @@
       "moduleOrder": 9,
       "order": 4,
       "question": "Which of the following is NOT included in GDP calculations?",
-      "options": ["New car purchases by households", "Government expenditure on roads", "Purchase of a new home", "Purchase of stocks on the stock market"],
+      "options": [
+        "New car purchases by households",
+        "Government expenditure on roads",
+        "Purchase of a new home",
+        "Purchase of stocks on the stock market"
+      ],
       "answer": "Purchase of stocks on the stock market",
       "explanation": "Purchasing stocks is a financial transaction — a transfer of existing assets — not the production of a new good or service, so it is excluded from GDP.",
       "points": 1
@@ -634,7 +854,12 @@
       "moduleOrder": 9,
       "order": 5,
       "question": "If nominal GDP grows by 5% and the price level rises by 3%, then real GDP grew by approximately:",
-      "options": ["8%", "5%", "3%", "2%"],
+      "options": [
+        "8%",
+        "5%",
+        "3%",
+        "2%"
+      ],
       "answer": "2%",
       "explanation": "Real GDP growth ≈ Nominal GDP growth − Inflation rate = 5% − 3% = 2%. This separates actual production growth from inflation.",
       "points": 1
@@ -643,7 +868,12 @@
       "moduleOrder": 10,
       "order": 1,
       "question": "The four phases of the business cycle in order are:",
-      "options": ["Expansion, recession, trough, peak", "Expansion, peak, contraction, trough", "Trough, peak, expansion, recession", "Recession, recovery, boom, bust"],
+      "options": [
+        "Expansion, recession, trough, peak",
+        "Expansion, peak, contraction, trough",
+        "Trough, peak, expansion, recession",
+        "Recession, recovery, boom, bust"
+      ],
       "answer": "Expansion, peak, contraction, trough",
       "explanation": "The business cycle moves from expansion (growth) to peak (maximum output) to contraction/recession (declining output) to trough (minimum output) and then back to expansion.",
       "points": 1
@@ -652,7 +882,12 @@
       "moduleOrder": 10,
       "order": 2,
       "question": "According to the Solow growth model, long-run per capita growth is driven by:",
-      "options": ["Increases in the savings rate", "Population growth", "Technological progress", "Capital accumulation alone"],
+      "options": [
+        "Increases in the savings rate",
+        "Population growth",
+        "Technological progress",
+        "Capital accumulation alone"
+      ],
       "answer": "Technological progress",
       "explanation": "In the Solow model, capital accumulation and labor force growth have only level effects; only technological progress generates sustained long-run per capita economic growth.",
       "points": 1
@@ -661,7 +896,12 @@
       "moduleOrder": 10,
       "order": 3,
       "question": "A leading economic indicator is one that:",
-      "options": ["Moves in the same direction as the economy at the same time", "Changes after the economy has already changed", "Changes before the economy as a whole changes", "Measures current economic output"],
+      "options": [
+        "Moves in the same direction as the economy at the same time",
+        "Changes after the economy has already changed",
+        "Changes before the economy as a whole changes",
+        "Measures current economic output"
+      ],
       "answer": "Changes before the economy as a whole changes",
       "explanation": "Leading indicators — like stock prices, building permits, and new orders — tend to predict future economic activity and change before the economy turns.",
       "points": 1
@@ -670,7 +910,12 @@
       "moduleOrder": 10,
       "order": 4,
       "question": "According to the Solow model, poorer countries tend to grow faster than richer countries because of:",
-      "options": ["Lower savings rates", "Diminishing returns to capital", "Higher population growth", "More advanced technology"],
+      "options": [
+        "Lower savings rates",
+        "Diminishing returns to capital",
+        "Higher population growth",
+        "More advanced technology"
+      ],
       "answer": "Diminishing returns to capital",
       "explanation": "Diminishing returns to capital mean each additional unit of capital adds less output. Poor countries with less capital per worker gain more from each new unit — predicting convergence.",
       "points": 1
@@ -679,7 +924,12 @@
       "moduleOrder": 10,
       "order": 5,
       "question": "Which of the following would most likely be a lagging economic indicator?",
-      "options": ["Stock market prices", "Building permits issued", "Unemployment rate", "Manufacturing orders"],
+      "options": [
+        "Stock market prices",
+        "Building permits issued",
+        "Unemployment rate",
+        "Manufacturing orders"
+      ],
       "answer": "Unemployment rate",
       "explanation": "The unemployment rate is a lagging indicator — firms typically wait to hire or fire until they are confident about economic conditions, so unemployment peaks after the recession's trough.",
       "points": 1
@@ -688,7 +938,12 @@
       "moduleOrder": 11,
       "order": 1,
       "question": "Expansionary fiscal policy involves:",
-      "options": ["Raising taxes and cutting government spending", "Cutting taxes and increasing government spending", "Raising interest rates", "Selling government bonds"],
+      "options": [
+        "Raising taxes and cutting government spending",
+        "Cutting taxes and increasing government spending",
+        "Raising interest rates",
+        "Selling government bonds"
+      ],
       "answer": "Cutting taxes and increasing government spending",
       "explanation": "Expansionary fiscal policy increases aggregate demand to stimulate the economy during a recession by reducing taxes (boosting disposable income) and/or increasing government spending.",
       "points": 1
@@ -697,7 +952,12 @@
       "moduleOrder": 11,
       "order": 2,
       "question": "If the marginal propensity to consume (MPC) is 0.75, the spending multiplier equals:",
-      "options": ["1.75", "2.5", "4", "0.75"],
+      "options": [
+        "1.75",
+        "2.5",
+        "4",
+        "0.75"
+      ],
       "answer": "4",
       "explanation": "Spending multiplier = 1 / (1 - MPC) = 1 / (1 - 0.75) = 1 / 0.25 = 4. An initial increase in spending cycles through the economy four times.",
       "points": 1
@@ -706,7 +966,12 @@
       "moduleOrder": 11,
       "order": 3,
       "question": "Crowding out occurs when government borrowing:",
-      "options": ["Increases the money supply", "Raises interest rates and reduces private investment", "Decreases the national debt", "Stimulates consumer confidence"],
+      "options": [
+        "Increases the money supply",
+        "Raises interest rates and reduces private investment",
+        "Decreases the national debt",
+        "Stimulates consumer confidence"
+      ],
       "answer": "Raises interest rates and reduces private investment",
       "explanation": "When the government borrows heavily, it competes with private borrowers, pushing up interest rates and reducing private investment — partially offsetting the stimulus effect.",
       "points": 1
@@ -715,7 +980,12 @@
       "moduleOrder": 11,
       "order": 4,
       "question": "Automatic stabilizers are government programs that:",
-      "options": ["Require Congressional approval each year", "Automatically increase spending or cut taxes during recessions without new legislation", "Are always pro-cyclical", "Apply only to monetary policy"],
+      "options": [
+        "Require Congressional approval each year",
+        "Automatically increase spending or cut taxes during recessions without new legislation",
+        "Are always pro-cyclical",
+        "Apply only to monetary policy"
+      ],
       "answer": "Automatically increase spending or cut taxes during recessions without new legislation",
       "explanation": "Programs like unemployment insurance and progressive income taxes automatically expand during downturns and contract during booms, smoothing the business cycle.",
       "points": 1
@@ -724,7 +994,12 @@
       "moduleOrder": 11,
       "order": 5,
       "question": "A recessionary gap occurs when:",
-      "options": ["Actual GDP exceeds potential GDP", "Actual GDP is less than potential GDP", "The economy is at full employment", "The price level is rising too quickly"],
+      "options": [
+        "Actual GDP exceeds potential GDP",
+        "Actual GDP is less than potential GDP",
+        "The economy is at full employment",
+        "The price level is rising too quickly"
+      ],
       "answer": "Actual GDP is less than potential GDP",
       "explanation": "A recessionary gap exists when the economy produces less than its full-employment potential output, typically associated with high unemployment.",
       "points": 1
@@ -733,7 +1008,12 @@
       "moduleOrder": 12,
       "order": 1,
       "question": "When the Federal Reserve buys government securities in the open market, it:",
-      "options": ["Decreases the money supply and raises interest rates", "Increases the money supply and lowers interest rates", "Has no effect on bank reserves", "Increases the reserve requirement"],
+      "options": [
+        "Decreases the money supply and raises interest rates",
+        "Increases the money supply and lowers interest rates",
+        "Has no effect on bank reserves",
+        "Increases the reserve requirement"
+      ],
       "answer": "Increases the money supply and lowers interest rates",
       "explanation": "Open market purchases inject reserves into the banking system, expanding the money supply and lowering interest rates — an expansionary monetary policy action.",
       "points": 1
@@ -742,7 +1022,12 @@
       "moduleOrder": 12,
       "order": 2,
       "question": "The discount rate is the interest rate that:",
-      "options": ["Banks charge their best customers", "The Federal Reserve charges banks for short-term loans", "The federal government pays on Treasury bonds", "Consumers pay on credit card balances"],
+      "options": [
+        "Banks charge their best customers",
+        "The Federal Reserve charges banks for short-term loans",
+        "The federal government pays on Treasury bonds",
+        "Consumers pay on credit card balances"
+      ],
       "answer": "The Federal Reserve charges banks for short-term loans",
       "explanation": "The discount rate is the rate the Fed charges depository institutions for borrowing reserves directly from the Federal Reserve's discount window.",
       "points": 1
@@ -751,7 +1036,12 @@
       "moduleOrder": 12,
       "order": 3,
       "question": "If the Fed raises the federal funds rate, the expected result is:",
-      "options": ["Increased borrowing and higher inflation", "Decreased borrowing, lower investment, and reduced inflationary pressure", "A larger money supply and lower unemployment", "Higher government spending"],
+      "options": [
+        "Increased borrowing and higher inflation",
+        "Decreased borrowing, lower investment, and reduced inflationary pressure",
+        "A larger money supply and lower unemployment",
+        "Higher government spending"
+      ],
       "answer": "Decreased borrowing, lower investment, and reduced inflationary pressure",
       "explanation": "Higher interest rates make borrowing more expensive, reducing consumption and investment, slowing aggregate demand and cooling inflation.",
       "points": 1
@@ -760,7 +1050,12 @@
       "moduleOrder": 12,
       "order": 4,
       "question": "The money multiplier is equal to:",
-      "options": ["1 divided by the reserve requirement", "Reserve requirement divided by 1", "Marginal propensity to consume ÷ (1 − MPC)", "Total deposits divided by the monetary base"],
+      "options": [
+        "1 divided by the reserve requirement",
+        "Reserve requirement divided by 1",
+        "Marginal propensity to consume ÷ (1 − MPC)",
+        "Total deposits divided by the monetary base"
+      ],
       "answer": "1 divided by the reserve requirement",
       "explanation": "Money multiplier = 1 / reserve requirement ratio. If banks must hold 10% in reserves, the multiplier is 10, meaning $1 of new reserves can generate $10 in new deposits.",
       "points": 1
@@ -769,7 +1064,12 @@
       "moduleOrder": 12,
       "order": 5,
       "question": "Quantitative easing (QE) is a monetary policy tool used when:",
-      "options": ["Inflation is too high and rates must be raised quickly", "Interest rates are already near zero and traditional tools are insufficient", "The government needs to reduce its debt", "Commercial banks are holding excess reserves"],
+      "options": [
+        "Inflation is too high and rates must be raised quickly",
+        "Interest rates are already near zero and traditional tools are insufficient",
+        "The government needs to reduce its debt",
+        "Commercial banks are holding excess reserves"
+      ],
       "answer": "Interest rates are already near zero and traditional tools are insufficient",
       "explanation": "QE involves the central bank purchasing longer-term assets to inject liquidity when conventional interest rate reductions have reached their lower bound.",
       "points": 1
@@ -778,7 +1078,12 @@
       "moduleOrder": 13,
       "order": 1,
       "question": "Comparative advantage is based on:",
-      "options": ["Absolute productivity differences between countries", "Relative opportunity costs of production between countries", "The total amount of resources a country possesses", "The exchange rate between two currencies"],
+      "options": [
+        "Absolute productivity differences between countries",
+        "Relative opportunity costs of production between countries",
+        "The total amount of resources a country possesses",
+        "The exchange rate between two currencies"
+      ],
       "answer": "Relative opportunity costs of production between countries",
       "explanation": "A country has a comparative advantage in producing a good if it can do so at a lower opportunity cost than another country, regardless of absolute productivity.",
       "points": 1
@@ -787,7 +1092,12 @@
       "moduleOrder": 13,
       "order": 2,
       "question": "The gains from trade based on comparative advantage allow countries to:",
-      "options": ["Become self-sufficient in all goods", "Consume beyond their individual production possibilities", "Eliminate trade deficits", "Avoid all currency exchange risk"],
+      "options": [
+        "Become self-sufficient in all goods",
+        "Consume beyond their individual production possibilities",
+        "Eliminate trade deficits",
+        "Avoid all currency exchange risk"
+      ],
       "answer": "Consume beyond their individual production possibilities",
       "explanation": "By specializing in goods where they have comparative advantage and trading, countries can consume combinations of goods outside their own production possibility frontier.",
       "points": 1
@@ -796,7 +1106,12 @@
       "moduleOrder": 13,
       "order": 3,
       "question": "A tariff on imported steel will most directly:",
-      "options": ["Lower prices for domestic consumers of steel", "Benefit domestic steel producers and harm domestic steel consumers", "Increase the quantity of steel imported", "Improve the efficiency of resource allocation"],
+      "options": [
+        "Lower prices for domestic consumers of steel",
+        "Benefit domestic steel producers and harm domestic steel consumers",
+        "Increase the quantity of steel imported",
+        "Improve the efficiency of resource allocation"
+      ],
       "answer": "Benefit domestic steel producers and harm domestic steel consumers",
       "explanation": "A tariff raises the price of imported steel, protecting domestic producers but forcing domestic consumers (including manufacturers who use steel) to pay higher prices.",
       "points": 1
@@ -805,7 +1120,12 @@
       "moduleOrder": 13,
       "order": 4,
       "question": "A quota is a trade restriction that:",
-      "options": ["Places a tax on imported goods", "Limits the quantity of a good that can be imported", "Subsidizes domestic exporters", "Devalues a country's currency"],
+      "options": [
+        "Places a tax on imported goods",
+        "Limits the quantity of a good that can be imported",
+        "Subsidizes domestic exporters",
+        "Devalues a country's currency"
+      ],
       "answer": "Limits the quantity of a good that can be imported",
       "explanation": "An import quota sets a maximum quantity limit on imports. Like tariffs, quotas raise domestic prices, benefit domestic producers, and harm consumers.",
       "points": 1
@@ -814,7 +1134,12 @@
       "moduleOrder": 13,
       "order": 5,
       "question": "The infant industry argument for trade protection holds that:",
-      "options": ["Old, established industries need permanent protection", "New domestic industries may need temporary protection to develop competitive advantage", "All industries benefit from free trade without exception", "Tariffs always improve the terms of trade"],
+      "options": [
+        "Old, established industries need permanent protection",
+        "New domestic industries may need temporary protection to develop competitive advantage",
+        "All industries benefit from free trade without exception",
+        "Tariffs always improve the terms of trade"
+      ],
       "answer": "New domestic industries may need temporary protection to develop competitive advantage",
       "explanation": "The infant industry argument suggests that new industries in developing countries may need temporary protection from international competition until they achieve economies of scale.",
       "points": 1
@@ -823,7 +1148,12 @@
       "moduleOrder": 14,
       "order": 1,
       "question": "The Human Development Index (HDI) measures a country's development using:",
-      "options": ["GDP alone", "Life expectancy, education, and GNI per capita", "Export volumes and trade balances", "Population size and urbanization rate"],
+      "options": [
+        "GDP alone",
+        "Life expectancy, education, and GNI per capita",
+        "Export volumes and trade balances",
+        "Population size and urbanization rate"
+      ],
       "answer": "Life expectancy, education, and GNI per capita",
       "explanation": "The HDI combines health (life expectancy at birth), education (mean and expected years of schooling), and standard of living (GNI per capita) into a composite index.",
       "points": 1
@@ -832,7 +1162,12 @@
       "moduleOrder": 14,
       "order": 2,
       "question": "The Gini coefficient measures:",
-      "options": ["Economic growth rate", "Income inequality within a country", "The balance of payments", "Inflation over time"],
+      "options": [
+        "Economic growth rate",
+        "Income inequality within a country",
+        "The balance of payments",
+        "Inflation over time"
+      ],
       "answer": "Income inequality within a country",
       "explanation": "The Gini coefficient ranges from 0 (perfect equality) to 1 (perfect inequality) and summarizes the income distribution across a population.",
       "points": 1
@@ -841,7 +1176,12 @@
       "moduleOrder": 14,
       "order": 3,
       "question": "Which of the following is considered a major barrier to economic development?",
-      "options": ["High trade volumes", "Weak institutions and property rights", "Low savings rates accompanied by high investment", "Strong rule of law"],
+      "options": [
+        "High trade volumes",
+        "Weak institutions and property rights",
+        "Low savings rates accompanied by high investment",
+        "Strong rule of law"
+      ],
       "answer": "Weak institutions and property rights",
       "explanation": "Weak legal institutions, corruption, and poorly defined property rights discourage investment and entrepreneurship, limiting economic development.",
       "points": 1
@@ -850,7 +1190,12 @@
       "moduleOrder": 14,
       "order": 4,
       "question": "The Washington Consensus generally recommended that developing nations:",
-      "options": ["Increase trade barriers and nationalize industries", "Pursue fiscal discipline, market liberalization, and privatization", "Adopt fixed exchange rates permanently", "Focus on import substitution industrialization"],
+      "options": [
+        "Increase trade barriers and nationalize industries",
+        "Pursue fiscal discipline, market liberalization, and privatization",
+        "Adopt fixed exchange rates permanently",
+        "Focus on import substitution industrialization"
+      ],
       "answer": "Pursue fiscal discipline, market liberalization, and privatization",
       "explanation": "The Washington Consensus was a set of economic policies advocated by international institutions emphasizing free markets, fiscal austerity, and trade and financial liberalization.",
       "points": 1
@@ -859,7 +1204,12 @@
       "moduleOrder": 14,
       "order": 5,
       "question": "Foreign direct investment (FDI) in developing countries is generally expected to:",
-      "options": ["Reduce technology transfer", "Increase unemployment in the host country", "Contribute to capital formation, employment, and technology transfer", "Worsen income inequality without exception"],
+      "options": [
+        "Reduce technology transfer",
+        "Increase unemployment in the host country",
+        "Contribute to capital formation, employment, and technology transfer",
+        "Worsen income inequality without exception"
+      ],
       "answer": "Contribute to capital formation, employment, and technology transfer",
       "explanation": "FDI can benefit developing economies by bringing capital, creating jobs, transferring technology and management practices, and integrating local firms into global supply chains.",
       "points": 1
@@ -871,7 +1221,12 @@
       "order": 1,
       "type": "mc",
       "question": "On an indifference curve diagram, a point inside the budget constraint indicates:",
-      "options": ["The consumer is maximizing utility", "The consumer is spending more than their income", "The consumer is not spending all available income", "Goods are free"],
+      "options": [
+        "The consumer is maximizing utility",
+        "The consumer is spending more than their income",
+        "The consumer is not spending all available income",
+        "Goods are free"
+      ],
       "answer": "The consumer is not spending all available income",
       "explanation": "A point inside (below) the budget constraint means the consumer is not fully utilizing their income, so they could reach a higher indifference curve.",
       "points": 1
@@ -881,7 +1236,12 @@
       "order": 2,
       "type": "mc",
       "question": "When a firm experiences diseconomies of scale, its long-run average total cost:",
-      "options": ["Falls as output rises", "Rises as output rises", "Remains constant", "Equals marginal cost"],
+      "options": [
+        "Falls as output rises",
+        "Rises as output rises",
+        "Remains constant",
+        "Equals marginal cost"
+      ],
       "answer": "Rises as output rises",
       "explanation": "Diseconomies of scale occur when expansion leads to coordination problems, bureaucracy, or other inefficiencies that raise average costs.",
       "points": 1
@@ -891,7 +1251,12 @@
       "order": 3,
       "type": "mc",
       "question": "For a perfectly competitive firm in short-run equilibrium producing at a loss, the firm should continue producing as long as:",
-      "options": ["Price exceeds average total cost", "Price exceeds average variable cost", "Economic profit is positive", "Marginal revenue equals average total cost"],
+      "options": [
+        "Price exceeds average total cost",
+        "Price exceeds average variable cost",
+        "Economic profit is positive",
+        "Marginal revenue equals average total cost"
+      ],
       "answer": "Price exceeds average variable cost",
       "explanation": "As long as revenue covers variable costs (P > AVC), the firm minimizes losses by producing rather than shutting down, because fixed costs must still be paid.",
       "points": 1
@@ -901,7 +1266,12 @@
       "order": 4,
       "type": "mc",
       "question": "Price discrimination by a monopolist involves:",
-      "options": ["Charging the same price to all consumers", "Charging different prices to different consumers based on willingness to pay", "Lowering price to increase market share", "Setting price equal to marginal cost"],
+      "options": [
+        "Charging the same price to all consumers",
+        "Charging different prices to different consumers based on willingness to pay",
+        "Lowering price to increase market share",
+        "Setting price equal to marginal cost"
+      ],
       "answer": "Charging different prices to different consumers based on willingness to pay",
       "explanation": "Price discrimination allows a monopolist to capture consumer surplus by charging each consumer or group the maximum they are willing to pay.",
       "points": 1
@@ -911,7 +1281,12 @@
       "order": 5,
       "type": "mc",
       "question": "In a duopoly Cournot game, each firm chooses its output assuming:",
-      "options": ["The other firm will match any price change", "The other firm's output remains constant", "The firms will collude to maximize joint profits", "The government will regulate the market"],
+      "options": [
+        "The other firm will match any price change",
+        "The other firm's output remains constant",
+        "The firms will collude to maximize joint profits",
+        "The government will regulate the market"
+      ],
       "answer": "The other firm's output remains constant",
       "explanation": "In the Cournot model, each firm maximizes profit by choosing output while treating the other firm's output as fixed, leading to a Nash equilibrium.",
       "points": 1
@@ -921,7 +1296,12 @@
       "order": 6,
       "type": "mc",
       "question": "If an increase in the wage rate shifts the labor supply curve to the left, this is most consistent with:",
-      "options": ["A backward-bending labor supply curve", "An increase in labor demand", "Technological unemployment", "A minimum wage below equilibrium"],
+      "options": [
+        "A backward-bending labor supply curve",
+        "An increase in labor demand",
+        "Technological unemployment",
+        "A minimum wage below equilibrium"
+      ],
       "answer": "A backward-bending labor supply curve",
       "explanation": "At higher wages, workers may work fewer hours (the income effect dominates the substitution effect), creating a backward-bending supply curve.",
       "points": 1
@@ -931,7 +1311,12 @@
       "order": 7,
       "type": "mc",
       "question": "The tragedy of the commons refers to:",
-      "options": ["The tendency for governments to underprovide public goods", "The overexploitation of common resources due to lack of property rights", "The inefficiency of monopoly pricing", "Market failure caused by asymmetric information"],
+      "options": [
+        "The tendency for governments to underprovide public goods",
+        "The overexploitation of common resources due to lack of property rights",
+        "The inefficiency of monopoly pricing",
+        "Market failure caused by asymmetric information"
+      ],
       "answer": "The overexploitation of common resources due to lack of property rights",
       "explanation": "Without ownership of shared resources (fisheries, grazing land), individuals have incentives to overuse them, depleting them below the socially optimal level.",
       "points": 1
@@ -941,7 +1326,12 @@
       "order": 8,
       "type": "mc",
       "question": "A subsidy given to firms with positive externalities is intended to:",
-      "options": ["Decrease production and raise prices", "Increase production toward the socially optimal level", "Eliminate competition in the market", "Reduce government tax revenue"],
+      "options": [
+        "Decrease production and raise prices",
+        "Increase production toward the socially optimal level",
+        "Eliminate competition in the market",
+        "Reduce government tax revenue"
+      ],
       "answer": "Increase production toward the socially optimal level",
       "explanation": "A subsidy lowers production costs, shifting supply right and increasing output to close the gap between market equilibrium and the socially optimal quantity.",
       "points": 1
@@ -951,7 +1341,12 @@
       "order": 9,
       "type": "mc",
       "question": "Signaling in labor markets (e.g., college education) is used to address which information problem?",
-      "options": ["Moral hazard", "Adverse selection", "The free-rider problem", "Externalities"],
+      "options": [
+        "Moral hazard",
+        "Adverse selection",
+        "The free-rider problem",
+        "Externalities"
+      ],
       "answer": "Adverse selection",
       "explanation": "Signaling — sending observable, credible signals of unobservable quality — helps employers distinguish high-productivity from low-productivity workers, mitigating adverse selection.",
       "points": 1
@@ -961,7 +1356,12 @@
       "order": 10,
       "type": "mc",
       "question": "Compared to perfect competition, monopolistic competition results in:",
-      "options": ["Lower prices and greater efficiency", "Excess capacity and product variety", "Productive efficiency with no excess capacity", "Zero economic profit achieved at minimum ATC"],
+      "options": [
+        "Lower prices and greater efficiency",
+        "Excess capacity and product variety",
+        "Productive efficiency with no excess capacity",
+        "Zero economic profit achieved at minimum ATC"
+      ],
       "answer": "Excess capacity and product variety",
       "explanation": "In long-run monopolistic competition equilibrium, firms produce on the downward-sloping part of ATC (not minimum ATC), resulting in excess capacity but offering consumers product variety.",
       "points": 1
@@ -971,7 +1371,12 @@
       "order": 11,
       "type": "mc",
       "question": "Which market structure is most likely to engage in non-price competition (advertising, product differentiation)?",
-      "options": ["Perfect competition", "Monopoly", "Monopolistic competition and oligopoly", "Monopsony"],
+      "options": [
+        "Perfect competition",
+        "Monopoly",
+        "Monopolistic competition and oligopoly",
+        "Monopsony"
+      ],
       "answer": "Monopolistic competition and oligopoly",
       "explanation": "Firms in monopolistic competition and oligopoly sell differentiated products and compete heavily on advertising, quality, and branding in addition to price.",
       "points": 1
@@ -981,7 +1386,12 @@
       "order": 12,
       "type": "mc",
       "question": "An increase in consumer income causes the demand for an inferior good to:",
-      "options": ["Increase", "Decrease", "Remain unchanged", "Become perfectly inelastic"],
+      "options": [
+        "Increase",
+        "Decrease",
+        "Remain unchanged",
+        "Become perfectly inelastic"
+      ],
       "answer": "Decrease",
       "explanation": "An inferior good is one for which demand falls as income rises — consumers switch to higher-quality substitutes when they can afford to.",
       "points": 1
@@ -991,7 +1401,12 @@
       "order": 13,
       "type": "mc",
       "question": "The minimum point of the average variable cost (AVC) curve is known as the:",
-      "options": ["Break-even point", "Shutdown point", "Profit-maximizing point", "Equilibrium point"],
+      "options": [
+        "Break-even point",
+        "Shutdown point",
+        "Profit-maximizing point",
+        "Equilibrium point"
+      ],
       "answer": "Shutdown point",
       "explanation": "The minimum AVC is the shutdown point — if market price falls below this level, the firm minimizes losses by producing nothing in the short run.",
       "points": 1
@@ -1001,7 +1416,12 @@
       "order": 14,
       "type": "mc",
       "question": "Game theory's concept of a dominant strategy means that:",
-      "options": ["A player always wins the game", "A strategy is best regardless of what the other player does", "Both players always cooperate", "The government dictates optimal strategies"],
+      "options": [
+        "A player always wins the game",
+        "A strategy is best regardless of what the other player does",
+        "Both players always cooperate",
+        "The government dictates optimal strategies"
+      ],
       "answer": "A strategy is best regardless of what the other player does",
       "explanation": "A dominant strategy yields the highest payoff for a player no matter what strategies the other players choose.",
       "points": 1
@@ -1011,7 +1431,12 @@
       "order": 15,
       "type": "mc",
       "question": "Consumer surplus is the area:",
-      "options": ["Below the supply curve and above the price", "Below the demand curve and above the equilibrium price", "Between the supply and demand curves at any quantity", "Equal to total revenue minus total cost"],
+      "options": [
+        "Below the supply curve and above the price",
+        "Below the demand curve and above the equilibrium price",
+        "Between the supply and demand curves at any quantity",
+        "Equal to total revenue minus total cost"
+      ],
       "answer": "Below the demand curve and above the equilibrium price",
       "explanation": "Consumer surplus represents the benefit consumers receive beyond what they pay — it is the area below the demand curve and above the market price.",
       "points": 1
@@ -1021,7 +1446,12 @@
       "order": 1,
       "type": "mc",
       "question": "A price ceiling set below the equilibrium price will cause:",
-      "options": ["A surplus", "A shortage", "No change in quantity supplied", "An increase in supply"],
+      "options": [
+        "A surplus",
+        "A shortage",
+        "No change in quantity supplied",
+        "An increase in supply"
+      ],
       "answer": "A shortage",
       "explanation": "A binding price ceiling below equilibrium reduces quantity supplied and increases quantity demanded, creating a shortage (excess demand).",
       "points": 1
@@ -1031,7 +1461,12 @@
       "order": 2,
       "type": "mc",
       "question": "The income effect of a wage increase predicts that workers will:",
-      "options": ["Always work more hours", "Work fewer hours because they can afford more leisure", "Supply more labor as wages rise indefinitely", "Shift to non-market activities"],
+      "options": [
+        "Always work more hours",
+        "Work fewer hours because they can afford more leisure",
+        "Supply more labor as wages rise indefinitely",
+        "Shift to non-market activities"
+      ],
       "answer": "Work fewer hours because they can afford more leisure",
       "explanation": "The income effect of a wage rise means workers can achieve their target income with fewer hours, potentially reducing labor supply — contributing to the backward-bending supply curve.",
       "points": 1
@@ -1041,7 +1476,12 @@
       "order": 3,
       "type": "mc",
       "question": "Nominal GDP in Year 1 is $10 trillion and in Year 2 is $11 trillion. If the price level rose by 5%, real GDP growth was approximately:",
-      "options": ["10%", "5%", "4.76%", "15%"],
+      "options": [
+        "10%",
+        "5%",
+        "4.76%",
+        "15%"
+      ],
       "answer": "4.76%",
       "explanation": "Real GDP Year 2 = $11T / 1.05 ≈ $10.476T. Growth ≈ ($10.476T − $10T) / $10T ≈ 4.76%.",
       "points": 1
@@ -1051,7 +1491,12 @@
       "order": 4,
       "type": "mc",
       "question": "During a recession, automatic stabilizers cause the federal budget to:",
-      "options": ["Move toward surplus automatically", "Move toward deficit automatically", "Remain balanced", "Reduce the money supply"],
+      "options": [
+        "Move toward surplus automatically",
+        "Move toward deficit automatically",
+        "Remain balanced",
+        "Reduce the money supply"
+      ],
       "answer": "Move toward deficit automatically",
       "explanation": "During recessions, unemployment insurance payouts rise and tax revenues fall, automatically increasing the budget deficit without new legislation.",
       "points": 1
@@ -1061,7 +1506,12 @@
       "order": 5,
       "type": "mc",
       "question": "In the AD-AS model, a supply shock that increases production costs would:",
-      "options": ["Shift aggregate demand right", "Shift aggregate supply left, raising prices and lowering output", "Shift aggregate supply right", "Shift aggregate demand left"],
+      "options": [
+        "Shift aggregate demand right",
+        "Shift aggregate supply left, raising prices and lowering output",
+        "Shift aggregate supply right",
+        "Shift aggregate demand left"
+      ],
       "answer": "Shift aggregate supply left, raising prices and lowering output",
       "explanation": "A negative supply shock (e.g., rising oil prices) raises production costs, shifting the short-run aggregate supply curve left — causing stagflation (higher prices and lower output).",
       "points": 1
@@ -1071,7 +1521,12 @@
       "order": 6,
       "type": "mc",
       "question": "If the reserve requirement is 20%, the money multiplier is:",
-      "options": ["2", "4", "5", "20"],
+      "options": [
+        "2",
+        "4",
+        "5",
+        "20"
+      ],
       "answer": "5",
       "explanation": "Money multiplier = 1 / reserve requirement = 1 / 0.20 = 5.",
       "points": 1
@@ -1081,7 +1536,12 @@
       "order": 7,
       "type": "mc",
       "question": "An expansionary inflationary gap in the AD-AS model would be best addressed by:",
-      "options": ["Increasing government spending", "Decreasing taxes", "The Fed raising interest rates or Congress cutting spending", "Buying government bonds in the open market"],
+      "options": [
+        "Increasing government spending",
+        "Decreasing taxes",
+        "The Fed raising interest rates or Congress cutting spending",
+        "Buying government bonds in the open market"
+      ],
       "answer": "The Fed raising interest rates or Congress cutting spending",
       "explanation": "An inflationary gap (actual GDP > potential) requires contractionary policy — the Fed can raise interest rates or the government can cut spending/raise taxes to reduce aggregate demand.",
       "points": 1
@@ -1091,7 +1551,12 @@
       "order": 8,
       "type": "mc",
       "question": "Country A can produce 100 units of wheat or 50 units of cloth. Country B can produce 60 units of wheat or 60 units of cloth. Country A has comparative advantage in:",
-      "options": ["Both goods", "Cloth", "Wheat", "Neither good"],
+      "options": [
+        "Both goods",
+        "Cloth",
+        "Wheat",
+        "Neither good"
+      ],
       "answer": "Wheat",
       "explanation": "A's opportunity cost of wheat: 0.5 cloth. B's opportunity cost of wheat: 1 cloth. A has the lower opportunity cost for wheat, so A has comparative advantage in wheat.",
       "points": 1
@@ -1101,7 +1566,12 @@
       "order": 9,
       "type": "mc",
       "question": "Tariffs benefit which group in the importing country?",
-      "options": ["Domestic consumers", "Foreign exporters", "Domestic producers of the protected good", "All domestic workers equally"],
+      "options": [
+        "Domestic consumers",
+        "Foreign exporters",
+        "Domestic producers of the protected good",
+        "All domestic workers equally"
+      ],
       "answer": "Domestic producers of the protected good",
       "explanation": "Tariffs raise the domestic price, harming consumers but shielding domestic producers from foreign competition, allowing them to sell more at higher prices.",
       "points": 1
@@ -1111,7 +1581,12 @@
       "order": 10,
       "type": "mc",
       "question": "The Phillips Curve represents the short-run trade-off between:",
-      "options": ["GDP growth and the budget deficit", "Inflation and unemployment", "Interest rates and investment", "Trade balance and exchange rates"],
+      "options": [
+        "GDP growth and the budget deficit",
+        "Inflation and unemployment",
+        "Interest rates and investment",
+        "Trade balance and exchange rates"
+      ],
       "answer": "Inflation and unemployment",
       "explanation": "The short-run Phillips Curve shows an inverse relationship between inflation and unemployment — expansionary policy lowers unemployment but raises inflation.",
       "points": 1
@@ -1121,7 +1596,12 @@
       "order": 11,
       "type": "mc",
       "question": "A country that exports more than it imports has a:",
-      "options": ["Trade deficit", "Trade surplus", "Balanced budget", "Current account deficit"],
+      "options": [
+        "Trade deficit",
+        "Trade surplus",
+        "Balanced budget",
+        "Current account deficit"
+      ],
       "answer": "Trade surplus",
       "explanation": "A trade surplus (positive net exports) occurs when the value of exports exceeds the value of imports.",
       "points": 1
@@ -1131,7 +1611,12 @@
       "order": 12,
       "type": "mc",
       "question": "According to the Solow model, an increase in the savings rate will:",
-      "options": ["Permanently increase the long-run growth rate", "Raise the steady-state level of capital and output per worker", "Have no effect on capital accumulation", "Decrease long-run per capita income"],
+      "options": [
+        "Permanently increase the long-run growth rate",
+        "Raise the steady-state level of capital and output per worker",
+        "Have no effect on capital accumulation",
+        "Decrease long-run per capita income"
+      ],
       "answer": "Raise the steady-state level of capital and output per worker",
       "explanation": "A higher savings rate increases investment, raising capital per worker until a new, higher steady state is reached — but the long-run growth rate is unchanged (still driven by tech progress).",
       "points": 1
@@ -1141,7 +1626,12 @@
       "order": 13,
       "type": "mc",
       "question": "Which policy would MOST directly reduce income inequality in a developing country?",
-      "options": ["Imposing import tariffs on all goods", "Investing in universal primary education and healthcare", "Devaluing the national currency", "Eliminating all taxes on capital income"],
+      "options": [
+        "Imposing import tariffs on all goods",
+        "Investing in universal primary education and healthcare",
+        "Devaluing the national currency",
+        "Eliminating all taxes on capital income"
+      ],
       "answer": "Investing in universal primary education and healthcare",
       "explanation": "Broad investments in human capital through education and healthcare expand opportunity and productivity for lower-income populations, directly reducing inequality.",
       "points": 1
@@ -1151,7 +1641,12 @@
       "order": 14,
       "type": "mc",
       "question": "The concept of 'creative destruction' as described by Schumpeter refers to:",
-      "options": ["Government regulation destroying inefficient monopolies", "New innovations displacing old industries and firms, driving long-run growth", "Consumer boycotts disrupting market equilibrium", "Central bank policy that destroys inflationary expectations"],
+      "options": [
+        "Government regulation destroying inefficient monopolies",
+        "New innovations displacing old industries and firms, driving long-run growth",
+        "Consumer boycotts disrupting market equilibrium",
+        "Central bank policy that destroys inflationary expectations"
+      ],
       "answer": "New innovations displacing old industries and firms, driving long-run growth",
       "explanation": "Schumpeter argued that capitalism advances through creative destruction — new technologies and firms continuously replace old ones, fueling economic growth.",
       "points": 1
@@ -1161,7 +1656,12 @@
       "order": 15,
       "type": "mc",
       "question": "A country running a large current account deficit is most likely:",
-      "options": ["Saving more than it invests", "Importing more than it exports and borrowing from abroad", "Running a budget surplus", "Experiencing deflation"],
+      "options": [
+        "Saving more than it invests",
+        "Importing more than it exports and borrowing from abroad",
+        "Running a budget surplus",
+        "Experiencing deflation"
+      ],
       "answer": "Importing more than it exports and borrowing from abroad",
       "explanation": "A current account deficit means a country's imports exceed exports; it must finance the gap by borrowing from or selling assets to foreigners (capital account surplus).",
       "points": 1
@@ -1171,7 +1671,12 @@
       "order": 16,
       "type": "mc",
       "question": "In the long-run Phillips Curve framework, attempts to keep unemployment below the natural rate will result in:",
-      "options": ["Permanently lower unemployment", "Accelerating inflation with no long-run reduction in unemployment", "Deflation", "Increased productivity"],
+      "options": [
+        "Permanently lower unemployment",
+        "Accelerating inflation with no long-run reduction in unemployment",
+        "Deflation",
+        "Increased productivity"
+      ],
       "answer": "Accelerating inflation with no long-run reduction in unemployment",
       "explanation": "The long-run Phillips Curve is vertical at the natural rate of unemployment. Attempts to reduce unemployment below this level lead only to ever-increasing inflation.",
       "points": 1
@@ -1181,7 +1686,12 @@
       "order": 17,
       "type": "mc",
       "question": "Which of the following best describes the role of institutions in economic development?",
-      "options": ["Institutions are irrelevant; only natural resources determine development", "Strong institutions (rule of law, property rights, anti-corruption) underpin sustained growth", "Institutions matter only for political outcomes, not economic ones", "Economic growth automatically produces good institutions without effort"],
+      "options": [
+        "Institutions are irrelevant; only natural resources determine development",
+        "Strong institutions (rule of law, property rights, anti-corruption) underpin sustained growth",
+        "Institutions matter only for political outcomes, not economic ones",
+        "Economic growth automatically produces good institutions without effort"
+      ],
       "answer": "Strong institutions (rule of law, property rights, anti-corruption) underpin sustained growth",
       "explanation": "Economists like Acemoglu and Robinson show that inclusive economic and political institutions are fundamental to long-run prosperity, as they encourage investment and innovation.",
       "points": 1
@@ -1191,7 +1701,12 @@
       "order": 18,
       "type": "mc",
       "question": "If the Federal Reserve wants to stimulate the economy, it would most likely:",
-      "options": ["Increase the reserve requirement", "Sell government securities on the open market", "Lower the federal funds rate target", "Raise the discount rate"],
+      "options": [
+        "Increase the reserve requirement",
+        "Sell government securities on the open market",
+        "Lower the federal funds rate target",
+        "Raise the discount rate"
+      ],
       "answer": "Lower the federal funds rate target",
       "explanation": "Lowering the federal funds rate encourages borrowing and investment, expanding aggregate demand — a standard expansionary monetary policy action.",
       "points": 1
@@ -1201,7 +1716,12 @@
       "order": 19,
       "type": "mc",
       "question": "Which of the following is the BEST example of a positive externality?",
-      "options": ["A factory emitting CO₂", "A homeowner maintaining a beautiful garden that neighbors enjoy", "A driver causing congestion", "A firm dumping waste into a river"],
+      "options": [
+        "A factory emitting CO₂",
+        "A homeowner maintaining a beautiful garden that neighbors enjoy",
+        "A driver causing congestion",
+        "A firm dumping waste into a river"
+      ],
       "answer": "A homeowner maintaining a beautiful garden that neighbors enjoy",
       "explanation": "The homeowner's private action generates an uncompensated benefit for neighbors — a classic positive externality — meaning the market undersupplies it.",
       "points": 1
@@ -1211,7 +1731,12 @@
       "order": 20,
       "type": "mc",
       "question": "In an economy with MPC = 0.8, if the government increases spending by $50 billion, the total increase in GDP (assuming no crowding out) will be:",
-      "options": ["$50 billion", "$80 billion", "$250 billion", "$400 billion"],
+      "options": [
+        "$50 billion",
+        "$80 billion",
+        "$250 billion",
+        "$400 billion"
+      ],
       "answer": "$250 billion",
       "explanation": "Multiplier = 1 / (1 − 0.8) = 5. Total change in GDP = 5 × $50B = $250 billion.",
       "points": 1

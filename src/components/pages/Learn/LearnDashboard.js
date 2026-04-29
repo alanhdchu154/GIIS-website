@@ -58,6 +58,23 @@ function computeGPA(enrollments) {
   return cSum > 0 ? (wSum / cSum).toFixed(2) : null;
 }
 
+function computeSemGPAs(enrollments) {
+  let wS = 0, wC = 0, uS = 0, uC = 0;
+  for (const enr of enrollments) {
+    if (!enr.creditEarned || !enr.grade?.letter) continue;
+    const gpa = LETTER_TO_GPA[enr.grade.letter] ?? null;
+    if (gpa === null) continue;
+    const cr = Number(enr.course.credits) || 1;
+    const apBonus = enr.course?.type === 'AP' ? 1.0 : 0;
+    wS += (gpa + apBonus) * cr; wC += cr;
+    uS += gpa * cr; uC += cr;
+  }
+  return {
+    weighted: wC > 0 ? (wS / wC).toFixed(2) : null,
+    unweighted: uC > 0 ? (uS / uC).toFixed(2) : null,
+  };
+}
+
 function passedModuleSet(enr) {
   return new Set(
     (enr.quizAttempts || []).filter((a) => Number(a.score) >= 60).map((a) => a.moduleOrder)
@@ -420,21 +437,33 @@ export default function LearnDashboard({ language }) {
                   return grade * 2 + (label.toLowerCase().includes('fall') ? 0 : 1);
                 };
                 const semesters = Object.keys(semMap).sort((a, b) => sortKey(a) - sortKey(b));
-                return semesters.map((sem) => (
+                return semesters.map((sem) => {
+                  const semEnrs = semMap[sem];
+                  const semCredits = semEnrs.reduce((s, e) => s + Number(e.course.credits), 0).toFixed(1);
+                  const semGPA = computeSemGPAs(semEnrs);
+                  return (
                   <div key={sem} style={{ marginBottom: '28px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '10px', flexWrap: 'wrap' }}>
                       <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: 0 }}>
                         {sem}
                       </p>
                       <span style={{ fontSize: '11px', color: '#aaa' }}>
-                        {semMap[sem].length} {isEn ? 'courses' : '门课'} · {semMap[sem].reduce((s, e) => s + Number(e.course.credits), 0).toFixed(1)} {isEn ? 'credits' : '学分'}
+                        {semEnrs.length} {isEn ? 'courses' : '门课'} · {semCredits} {isEn ? 'cr' : '学分'}
                       </span>
+                      {semGPA.weighted && (
+                        <span style={{ fontSize: '11px', color: '#555', fontWeight: 600 }}>
+                          {isEn ? 'W-GPA' : '加权GPA'} {semGPA.weighted}
+                          {semGPA.unweighted && semGPA.unweighted !== semGPA.weighted
+                            ? ` · ${isEn ? 'UW-GPA' : '非加权'} ${semGPA.unweighted}` : ''}
+                        </span>
+                      )}
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '12px' }}>
-                      {semMap[sem].map((enr) => <CourseCard key={enr.id} enr={enr} isEn={isEn} />)}
+                      {semEnrs.map((enr) => <CourseCard key={enr.id} enr={enr} isEn={isEn} />)}
                     </div>
                   </div>
-                ));
+                  );
+                });
               })()}
             </>
           )}

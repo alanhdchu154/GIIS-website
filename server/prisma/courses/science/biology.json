@@ -2,7 +2,7 @@
   "slug": "biology",
   "name": "Biology",
   "nameZh": "生物学",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Science",
   "type": "Core",
   "description": "An introduction to living systems — from cell biology and genetics to evolution, ecology, and the diversity of life on Earth.",
@@ -22,7 +22,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/chemistry-of-life/elements-of-life/e/biological-macromolecules",
       "practiceNote": "Khan Academy — Biological Macromolecules practice",
       "assignment": "Build a concept map showing how each of the four macromolecules (carbs, lipids, proteins, nucleic acids) relates to its monomer and main function.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 2,
@@ -38,7 +38,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/cell-structure-and-function/cell-structures/e/cell-structure-review",
       "practiceNote": "Khan Academy — Cell Structure Review",
       "assignment": "Draw and label a eukaryotic cell. For each organelle, write one sentence on its function using an analogy.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 3,
@@ -54,7 +54,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/cell-structure-and-function/membrane-transport/e/passive-transport",
       "practiceNote": "Khan Academy — Passive Transport practice",
       "assignment": "Design an experiment to demonstrate osmosis using potato cubes in different salt solutions. Predict and explain expected results.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 4,
@@ -86,7 +86,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/cellular-energetics/photosynthesis/e/photosynthesis",
       "practiceNote": "Khan Academy — Photosynthesis practice",
       "assignment": "Write the overall equation for photosynthesis. Explain what would happen to a plant placed in complete darkness for two weeks.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 6,
@@ -134,7 +134,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/replication/e/dna-replication",
       "practiceNote": "Khan Academy — DNA Replication practice",
       "assignment": "Given a template DNA strand, write out the complementary strand. Then show the two daughter strands after replication.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 9,
@@ -166,7 +166,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/natural-selection/natural-selection-ap/e/natural-selection",
       "practiceNote": "Khan Academy — Natural Selection practice",
       "assignment": "Describe a real-world example of natural selection (e.g., antibiotic resistance). Explain how each of the four conditions of natural selection applies.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 11,
@@ -182,7 +182,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/natural-selection/phylogeny/e/phylogenetic-trees",
       "practiceNote": "Khan Academy — Phylogenetic Trees practice",
       "assignment": "Classify 5 organisms (from a provided list) using domain, kingdom, phylum, class, order, family, genus, species.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 12,
@@ -198,14 +198,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/plant-biology/plant-structure-and-function/e/plant-structures-and-functions",
       "practiceNote": "Khan Academy — Plant Structures & Functions practice",
       "assignment": "Label a diagram of a flower showing all major structures. Explain the role of each in reproduction.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 13,
       "title": "Human Body Systems",
       "titleZh": "人体系统",
       "objectives": "Describe the major organ systems and explain how they interact to maintain homeostasis.",
-      "readingUrl": "https://openstax.org/books/biology-2e/pages/16-5-ribosomes-and-protein-synthesis",
+      "readingUrl": "https://openstax.org/books/biology-2e/pages/16-introduction",
       "readingNote": "OpenStax Biology 2e — Ch 33: Animal Form & Function",
       "videoUrl": "https://www.khanacademy.org/science/ap-biology/animal-structure-and-function/body-structure/v/overview-of-animal-tissues",
       "videoNote": "Khan Academy AP Biology — Animal Tissues",
@@ -214,7 +214,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/animal-structure-and-function/body-structure/e/animal-form-and-function",
       "practiceNote": "Khan Academy — Animal Form & Function practice",
       "assignment": "Choose any three organ systems. For each, name the major organs and describe one way it interacts with another system.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 14,
@@ -234,112 +234,1512 @@
     }
   ],
   "questions": [
-    { "examType": "midterm", "order": 1, "type": "mc", "question": "Which macromolecule serves as the primary energy source for cells?", "options": ["Proteins", "Lipids", "Carbohydrates", "Nucleic acids"], "answer": "Carbohydrates", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 2, "type": "mc", "question": "The powerhouse of the cell is the:", "options": ["Nucleus", "Ribosome", "Mitochondrion", "Golgi apparatus"], "answer": "Mitochondrion", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 3, "type": "mc", "question": "Which type of transport requires no energy?", "options": ["Active transport", "Endocytosis", "Passive transport (diffusion)", "Exocytosis"], "answer": "Passive transport (diffusion)", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 4, "type": "mc", "question": "The net ATP yield from one glucose molecule in aerobic respiration is approximately:", "options": ["2 ATP", "4 ATP", "30–32 ATP", "100 ATP"], "answer": "30–32 ATP", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 5, "type": "mc", "question": "In photosynthesis, what molecule absorbs light energy?", "options": ["Glucose", "ATP", "Chlorophyll", "NADPH"], "answer": "Chlorophyll", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 6, "type": "mc", "question": "Mitosis results in:", "options": ["Two genetically identical daughter cells", "Four haploid cells", "Two haploid cells", "Four identical cells"], "answer": "Two genetically identical daughter cells", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 7, "type": "mc", "question": "In a monohybrid cross of two heterozygous parents (Aa × Aa), the expected phenotype ratio is:", "options": ["1:1", "3:1", "1:2:1", "2:1"], "answer": "3:1", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 8, "type": "mc", "question": "A prokaryotic cell differs from a eukaryotic cell in that it:", "options": ["Has mitochondria", "Has a nucleus", "Lacks a membrane-bound nucleus", "Lacks ribosomes"], "answer": "Lacks a membrane-bound nucleus", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 9, "type": "mc", "question": "Osmosis is defined as:", "options": ["Movement of solutes across a membrane", "Movement of water across a semipermeable membrane from low to high solute", "Active transport of water", "Movement of proteins through channels"], "answer": "Movement of water across a semipermeable membrane from low to high solute", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 10, "type": "mc", "question": "The Krebs cycle takes place in the:", "options": ["Cytoplasm", "Nucleus", "Mitochondrial matrix", "Chloroplast"], "answer": "Mitochondrial matrix", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 11, "type": "mc", "question": "Meiosis is necessary for:", "options": ["Growth and repair", "Sexual reproduction (forming gametes)", "Asexual reproduction", "Cell replacement"], "answer": "Sexual reproduction (forming gametes)", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 12, "type": "mc", "question": "Dominant alleles are represented by:", "options": ["Lowercase letters", "Uppercase letters", "Numbers", "Symbols"], "answer": "Uppercase letters", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 13, "type": "mc", "question": "The light reactions of photosynthesis occur in the:", "options": ["Stroma", "Thylakoid membrane", "Cytoplasm", "Mitochondria"], "answer": "Thylakoid membrane", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 14, "type": "mc", "question": "The Calvin cycle produces:", "options": ["Oxygen", "Water", "G3P (used to build glucose)", "ATP only"], "answer": "G3P (used to build glucose)", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 15, "type": "mc", "question": "Enzymes function as biological catalysts by:", "options": ["Increasing the activation energy", "Decreasing the activation energy of reactions", "Providing energy for reactions", "Changing the products of reactions"], "answer": "Decreasing the activation energy of reactions", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 1, "type": "mc", "question": "Which bond holds the two strands of DNA together?", "options": ["Ionic bonds", "Covalent bonds", "Hydrogen bonds", "Peptide bonds"], "answer": "Hydrogen bonds", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 2, "type": "mc", "question": "DNA replication is described as semi-conservative because:", "options": ["Only half the DNA is copied", "Each new double helix contains one old and one new strand", "The process is only 50% accurate", "Half the cell's DNA is conserved"], "answer": "Each new double helix contains one old and one new strand", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 3, "type": "mc", "question": "During transcription, DNA is used to produce:", "options": ["Proteins", "mRNA", "tRNA", "Ribosomes"], "answer": "mRNA", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 4, "type": "mc", "question": "A codon consists of:", "options": ["One nucleotide", "Two nucleotides", "Three nucleotides on mRNA", "Four nucleotides"], "answer": "Three nucleotides on mRNA", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 5, "type": "mc", "question": "Darwin's theory of natural selection requires all EXCEPT:", "options": ["Variation in a population", "Inheritance of traits", "Intentional adaptation by individuals", "Differential reproductive success"], "answer": "Intentional adaptation by individuals", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 6, "type": "mc", "question": "Binomial nomenclature uses which two classification levels?", "options": ["Family and Order", "Kingdom and Phylum", "Genus and Species", "Class and Family"], "answer": "Genus and Species", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 7, "type": "mc", "question": "Xylem and phloem are plant tissues responsible for:", "options": ["Photosynthesis", "Reproduction", "Transporting water/minerals and sugars respectively", "Providing structural support only"], "answer": "Transporting water/minerals and sugars respectively", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 8, "type": "mc", "question": "Homeostasis refers to:", "options": ["The body's ability to maintain stable internal conditions", "The growth of organisms", "Genetic mutations", "Ecosystem balance"], "answer": "The body's ability to maintain stable internal conditions", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 9, "type": "mc", "question": "In an ecological food web, producers are typically:", "options": ["Herbivores", "Carnivores", "Plants and photosynthetic organisms", "Decomposers"], "answer": "Plants and photosynthetic organisms", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 10, "type": "mc", "question": "A mutation in a somatic cell:", "options": ["Can be passed to offspring", "Cannot be passed to offspring", "Always causes cancer", "Is beneficial"], "answer": "Cannot be passed to offspring", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 11, "type": "mc", "question": "The three domains of life are:", "options": ["Plants, Animals, Fungi", "Bacteria, Archaea, Eukarya", "Prokaryotes, Eukaryotes, Viruses", "Animalia, Plantae, Protista"], "answer": "Bacteria, Archaea, Eukarya", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 12, "type": "mc", "question": "Antibiotic resistance in bacteria is an example of:", "options": ["Artificial selection", "Natural selection in action", "Genetic engineering", "Random mutation only"], "answer": "Natural selection in action", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 13, "type": "mc", "question": "The primary function of the cell membrane is:", "options": ["Energy production", "Protein synthesis", "Regulating what enters and exits the cell", "DNA storage"], "answer": "Regulating what enters and exits the cell", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 14, "type": "mc", "question": "Which process breaks down glucose in the absence of oxygen?", "options": ["Aerobic respiration", "Photosynthesis", "Fermentation (anaerobic respiration)", "Transcription"], "answer": "Fermentation (anaerobic respiration)", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 15, "type": "mc", "question": "The human nervous system consists of:", "options": ["The brain and spinal cord only", "The central and peripheral nervous systems", "Only peripheral nerves", "The brain, heart, and lungs"], "answer": "The central and peripheral nervous systems", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 16, "type": "mc", "question": "Hardy-Weinberg equilibrium requires:", "options": ["Natural selection occurring", "No mutation, migration, selection, or genetic drift (large random mating population)", "Small population size", "Environmental changes"], "answer": "No mutation, migration, selection, or genetic drift (large random mating population)", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 17, "type": "mc", "question": "Which organelle is responsible for protein synthesis?", "options": ["Lysosome", "Mitochondrion", "Ribosome", "Vacuole"], "answer": "Ribosome", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 18, "type": "mc", "question": "Crossing over during meiosis increases:", "options": ["The number of chromosomes", "Genetic diversity in offspring", "Cell size", "Mutation rates"], "answer": "Genetic diversity in offspring", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 19, "type": "mc", "question": "An organism with two identical alleles for a trait is called:", "options": ["Heterozygous", "Homozygous", "Codominant", "Hemizygous"], "answer": "Homozygous", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 20, "type": "mc", "question": "The 10% rule in ecology states that:", "options": ["10% of organisms survive predation", "Only 10% of energy transfers to the next trophic level", "10% of species are endangered", "Ecosystems use 10% of sunlight"], "answer": "Only 10% of energy transfers to the next trophic level", "explanation": "", "points": 1 }
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which macromolecule serves as the primary energy source for cells?",
+      "options": [
+        "Proteins",
+        "Lipids",
+        "Carbohydrates",
+        "Nucleic acids"
+      ],
+      "answer": "Carbohydrates",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The powerhouse of the cell is the:",
+      "options": [
+        "Nucleus",
+        "Ribosome",
+        "Mitochondrion",
+        "Golgi apparatus"
+      ],
+      "answer": "Mitochondrion",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Which type of transport requires no energy?",
+      "options": [
+        "Active transport",
+        "Endocytosis",
+        "Passive transport (diffusion)",
+        "Exocytosis"
+      ],
+      "answer": "Passive transport (diffusion)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "The net ATP yield from one glucose molecule in aerobic respiration is approximately:",
+      "options": [
+        "2 ATP",
+        "4 ATP",
+        "30–32 ATP",
+        "100 ATP"
+      ],
+      "answer": "30–32 ATP",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "In photosynthesis, what molecule absorbs light energy?",
+      "options": [
+        "Glucose",
+        "ATP",
+        "Chlorophyll",
+        "NADPH"
+      ],
+      "answer": "Chlorophyll",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Mitosis results in:",
+      "options": [
+        "Two genetically identical daughter cells",
+        "Four haploid cells",
+        "Two haploid cells",
+        "Four identical cells"
+      ],
+      "answer": "Two genetically identical daughter cells",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "In a monohybrid cross of two heterozygous parents (Aa × Aa), the expected phenotype ratio is:",
+      "options": [
+        "1:1",
+        "3:1",
+        "1:2:1",
+        "2:1"
+      ],
+      "answer": "3:1",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "A prokaryotic cell differs from a eukaryotic cell in that it:",
+      "options": [
+        "Has mitochondria",
+        "Has a nucleus",
+        "Lacks a membrane-bound nucleus",
+        "Lacks ribosomes"
+      ],
+      "answer": "Lacks a membrane-bound nucleus",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Osmosis is defined as:",
+      "options": [
+        "Movement of solutes across a membrane",
+        "Movement of water across a semipermeable membrane from low to high solute",
+        "Active transport of water",
+        "Movement of proteins through channels"
+      ],
+      "answer": "Movement of water across a semipermeable membrane from low to high solute",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "The Krebs cycle takes place in the:",
+      "options": [
+        "Cytoplasm",
+        "Nucleus",
+        "Mitochondrial matrix",
+        "Chloroplast"
+      ],
+      "answer": "Mitochondrial matrix",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Meiosis is necessary for:",
+      "options": [
+        "Growth and repair",
+        "Sexual reproduction (forming gametes)",
+        "Asexual reproduction",
+        "Cell replacement"
+      ],
+      "answer": "Sexual reproduction (forming gametes)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Dominant alleles are represented by:",
+      "options": [
+        "Lowercase letters",
+        "Uppercase letters",
+        "Numbers",
+        "Symbols"
+      ],
+      "answer": "Uppercase letters",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "The light reactions of photosynthesis occur in the:",
+      "options": [
+        "Stroma",
+        "Thylakoid membrane",
+        "Cytoplasm",
+        "Mitochondria"
+      ],
+      "answer": "Thylakoid membrane",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "The Calvin cycle produces:",
+      "options": [
+        "Oxygen",
+        "Water",
+        "G3P (used to build glucose)",
+        "ATP only"
+      ],
+      "answer": "G3P (used to build glucose)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Enzymes function as biological catalysts by:",
+      "options": [
+        "Increasing the activation energy",
+        "Decreasing the activation energy of reactions",
+        "Providing energy for reactions",
+        "Changing the products of reactions"
+      ],
+      "answer": "Decreasing the activation energy of reactions",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which bond holds the two strands of DNA together?",
+      "options": [
+        "Ionic bonds",
+        "Covalent bonds",
+        "Hydrogen bonds",
+        "Peptide bonds"
+      ],
+      "answer": "Hydrogen bonds",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "DNA replication is described as semi-conservative because:",
+      "options": [
+        "Only half the DNA is copied",
+        "Each new double helix contains one old and one new strand",
+        "The process is only 50% accurate",
+        "Half the cell's DNA is conserved"
+      ],
+      "answer": "Each new double helix contains one old and one new strand",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "During transcription, DNA is used to produce:",
+      "options": [
+        "Proteins",
+        "mRNA",
+        "tRNA",
+        "Ribosomes"
+      ],
+      "answer": "mRNA",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "A codon consists of:",
+      "options": [
+        "One nucleotide",
+        "Two nucleotides",
+        "Three nucleotides on mRNA",
+        "Four nucleotides"
+      ],
+      "answer": "Three nucleotides on mRNA",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Darwin's theory of natural selection requires all EXCEPT:",
+      "options": [
+        "Variation in a population",
+        "Inheritance of traits",
+        "Intentional adaptation by individuals",
+        "Differential reproductive success"
+      ],
+      "answer": "Intentional adaptation by individuals",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Binomial nomenclature uses which two classification levels?",
+      "options": [
+        "Family and Order",
+        "Kingdom and Phylum",
+        "Genus and Species",
+        "Class and Family"
+      ],
+      "answer": "Genus and Species",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Xylem and phloem are plant tissues responsible for:",
+      "options": [
+        "Photosynthesis",
+        "Reproduction",
+        "Transporting water/minerals and sugars respectively",
+        "Providing structural support only"
+      ],
+      "answer": "Transporting water/minerals and sugars respectively",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Homeostasis refers to:",
+      "options": [
+        "The body's ability to maintain stable internal conditions",
+        "The growth of organisms",
+        "Genetic mutations",
+        "Ecosystem balance"
+      ],
+      "answer": "The body's ability to maintain stable internal conditions",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "In an ecological food web, producers are typically:",
+      "options": [
+        "Herbivores",
+        "Carnivores",
+        "Plants and photosynthetic organisms",
+        "Decomposers"
+      ],
+      "answer": "Plants and photosynthetic organisms",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "A mutation in a somatic cell:",
+      "options": [
+        "Can be passed to offspring",
+        "Cannot be passed to offspring",
+        "Always causes cancer",
+        "Is beneficial"
+      ],
+      "answer": "Cannot be passed to offspring",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "The three domains of life are:",
+      "options": [
+        "Plants, Animals, Fungi",
+        "Bacteria, Archaea, Eukarya",
+        "Prokaryotes, Eukaryotes, Viruses",
+        "Animalia, Plantae, Protista"
+      ],
+      "answer": "Bacteria, Archaea, Eukarya",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Antibiotic resistance in bacteria is an example of:",
+      "options": [
+        "Artificial selection",
+        "Natural selection in action",
+        "Genetic engineering",
+        "Random mutation only"
+      ],
+      "answer": "Natural selection in action",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "The primary function of the cell membrane is:",
+      "options": [
+        "Energy production",
+        "Protein synthesis",
+        "Regulating what enters and exits the cell",
+        "DNA storage"
+      ],
+      "answer": "Regulating what enters and exits the cell",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Which process breaks down glucose in the absence of oxygen?",
+      "options": [
+        "Aerobic respiration",
+        "Photosynthesis",
+        "Fermentation (anaerobic respiration)",
+        "Transcription"
+      ],
+      "answer": "Fermentation (anaerobic respiration)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "The human nervous system consists of:",
+      "options": [
+        "The brain and spinal cord only",
+        "The central and peripheral nervous systems",
+        "Only peripheral nerves",
+        "The brain, heart, and lungs"
+      ],
+      "answer": "The central and peripheral nervous systems",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Hardy-Weinberg equilibrium requires:",
+      "options": [
+        "Natural selection occurring",
+        "No mutation, migration, selection, or genetic drift (large random mating population)",
+        "Small population size",
+        "Environmental changes"
+      ],
+      "answer": "No mutation, migration, selection, or genetic drift (large random mating population)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Which organelle is responsible for protein synthesis?",
+      "options": [
+        "Lysosome",
+        "Mitochondrion",
+        "Ribosome",
+        "Vacuole"
+      ],
+      "answer": "Ribosome",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Crossing over during meiosis increases:",
+      "options": [
+        "The number of chromosomes",
+        "Genetic diversity in offspring",
+        "Cell size",
+        "Mutation rates"
+      ],
+      "answer": "Genetic diversity in offspring",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "An organism with two identical alleles for a trait is called:",
+      "options": [
+        "Heterozygous",
+        "Homozygous",
+        "Codominant",
+        "Hemizygous"
+      ],
+      "answer": "Homozygous",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "The 10% rule in ecology states that:",
+      "options": [
+        "10% of organisms survive predation",
+        "Only 10% of energy transfers to the next trophic level",
+        "10% of species are endangered",
+        "Ecosystems use 10% of sunlight"
+      ],
+      "answer": "Only 10% of energy transfers to the next trophic level",
+      "explanation": "",
+      "points": 1
+    }
   ],
   "quizQuestions": [
-    { "moduleOrder": 1, "order": 1, "question": "Which element is the backbone of all organic molecules?", "options": ["Oxygen", "Nitrogen", "Carbon", "Hydrogen"], "answer": "Carbon", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 2, "question": "Proteins are polymers of:", "options": ["Glucose", "Fatty acids", "Amino acids", "Nucleotides"], "answer": "Amino acids", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 3, "question": "Lipids are primarily used for:", "options": ["Energy storage and membrane structure", "Carrying genetic information", "Catalyzing reactions", "Building cell walls"], "answer": "Energy storage and membrane structure", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 4, "question": "DNA and RNA are examples of:", "options": ["Carbohydrates", "Nucleic acids", "Lipids", "Proteins"], "answer": "Nucleic acids", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 5, "question": "A hydrogen bond is:", "options": ["A bond within a water molecule", "A weak attraction between a H atom and an electronegative atom", "A bond in carbohydrates", "A covalent bond in proteins"], "answer": "A weak attraction between a H atom and an electronegative atom", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 1, "question": "Which organelle contains the cell's genetic material?", "options": ["Mitochondrion", "Nucleus", "Ribosome", "Lysosome"], "answer": "Nucleus", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 2, "question": "Ribosomes are sites of:", "options": ["Energy production", "Protein synthesis", "Lipid synthesis", "DNA replication"], "answer": "Protein synthesis", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 3, "question": "The Golgi apparatus:", "options": ["Produces energy", "Modifies and packages proteins for export", "Digests old organelles", "Controls cell division"], "answer": "Modifies and packages proteins for export", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 4, "question": "Which structure is found in plant cells but NOT animal cells?", "options": ["Mitochondrion", "Nucleus", "Cell wall and chloroplast", "Ribosome"], "answer": "Cell wall and chloroplast", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 5, "question": "Lysosomes contain:", "options": ["Chlorophyll", "Digestive enzymes", "DNA", "Glucose"], "answer": "Digestive enzymes", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 1, "question": "The cell membrane is composed of a:", "options": ["Single lipid layer", "Phospholipid bilayer", "Protein sheet", "Cellulose wall"], "answer": "Phospholipid bilayer", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 2, "question": "Diffusion moves molecules:", "options": ["Against the concentration gradient", "From high to low concentration", "Using ATP energy", "Only through protein channels"], "answer": "From high to low concentration", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 3, "question": "A cell placed in a hypotonic solution will:", "options": ["Shrink", "Remain the same", "Swell and potentially burst (lyse)", "Divide"], "answer": "Swell and potentially burst (lyse)", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 4, "question": "Active transport differs from passive transport in that it:", "options": ["Requires a concentration gradient", "Uses ATP energy", "Only moves small molecules", "Does not require proteins"], "answer": "Uses ATP energy", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 5, "question": "The sodium-potassium pump is an example of:", "options": ["Osmosis", "Facilitated diffusion", "Active transport", "Endocytosis"], "answer": "Active transport", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 1, "question": "Glycolysis occurs in the:", "options": ["Mitochondria", "Nucleus", "Cytoplasm", "Chloroplast"], "answer": "Cytoplasm", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 2, "question": "The overall equation for cellular respiration shows glucose being converted to:", "options": ["Oxygen and water", "CO₂, water, and ATP", "Sugar and oxygen", "Lactic acid only"], "answer": "CO₂, water, and ATP", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 3, "question": "The electron transport chain is located on the:", "options": ["Outer mitochondrial membrane", "Cristae (inner mitochondrial membrane)", "Cytoplasm", "Nucleus"], "answer": "Cristae (inner mitochondrial membrane)", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 4, "question": "Fermentation is used when:", "options": ["Oxygen is abundant", "Oxygen is absent or limited", "Glucose is unavailable", "Light is available"], "answer": "Oxygen is absent or limited", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 5, "question": "ATP stands for:", "options": ["Adenine Triphosphate", "Adenosine Triphosphate", "Amino Triphosphate", "Adenosine Trisphosphate"], "answer": "Adenosine Triphosphate", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 1, "question": "The overall equation for photosynthesis shows:", "options": ["Glucose + O₂ → CO₂ + H₂O", "CO₂ + H₂O + light → glucose + O₂", "Glucose → CO₂ + ATP", "H₂O + CO₂ → ATP + protein"], "answer": "CO₂ + H₂O + light → glucose + O₂", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 2, "question": "Chlorophyll absorbs light primarily in which colors?", "options": ["Green", "Yellow", "Red and blue", "UV only"], "answer": "Red and blue", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 3, "question": "The light-independent reactions (Calvin cycle) take place in the:", "options": ["Thylakoid", "Stroma of the chloroplast", "Nucleus", "Cell membrane"], "answer": "Stroma of the chloroplast", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 4, "question": "Oxygen is released as a byproduct of:", "options": ["The Calvin cycle", "The light reactions (water splitting)", "Glycolysis", "Cellular respiration"], "answer": "The light reactions (water splitting)", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 5, "question": "Which gas do plants absorb for photosynthesis?", "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], "answer": "Carbon dioxide", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 1, "question": "The correct order of mitosis phases is:", "options": ["Metaphase, Prophase, Anaphase, Telophase", "Prophase, Metaphase, Anaphase, Telophase", "Anaphase, Metaphase, Prophase, Telophase", "Telophase, Prophase, Metaphase, Anaphase"], "answer": "Prophase, Metaphase, Anaphase, Telophase", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 2, "question": "During anaphase, sister chromatids:", "options": ["Align at the cell equator", "Are pulled to opposite poles", "Condense for the first time", "Reform into nuclear envelopes"], "answer": "Are pulled to opposite poles", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 3, "question": "Meiosis II is most similar to:", "options": ["DNA replication", "Mitosis", "Meiosis I", "Fertilization"], "answer": "Mitosis", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 4, "question": "How many haploid cells result from one round of meiosis?", "options": ["2", "3", "4", "8"], "answer": "4", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 5, "question": "Cytokinesis refers to:", "options": ["DNA replication", "The division of the cytoplasm", "Chromosome condensation", "Spindle formation"], "answer": "The division of the cytoplasm", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 1, "question": "Gregor Mendel conducted his genetics experiments on:", "options": ["Fruit flies", "Mice", "Pea plants", "Bacteria"], "answer": "Pea plants", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 2, "question": "A heterozygous genotype contains:", "options": ["Two dominant alleles", "Two recessive alleles", "One dominant and one recessive allele", "No alleles"], "answer": "One dominant and one recessive allele", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 3, "question": "The law of segregation states that:", "options": ["Alleles for different traits assort independently", "Each gamete receives one allele for each trait", "Dominant traits always appear", "Offspring are identical to parents"], "answer": "Each gamete receives one allele for each trait", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 4, "question": "If Tt × Tt, what fraction of offspring will be homozygous recessive (tt)?", "options": ["1/4", "1/2", "3/4", "0"], "answer": "1/4", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 5, "question": "Incomplete dominance results in:", "options": ["Only dominant phenotype", "A blended phenotype (intermediate)", "Both phenotypes expressed equally", "Recessive phenotype"], "answer": "A blended phenotype (intermediate)", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 1, "question": "The base pairing rule in DNA is:", "options": ["A-G and T-C", "A-T and G-C", "A-C and G-T", "A-U and G-C"], "answer": "A-T and G-C", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 2, "question": "DNA helicase unwinds the double helix by:", "options": ["Adding new nucleotides", "Breaking hydrogen bonds between base pairs", "Sealing the sugar-phosphate backbone", "Transcribing DNA to RNA"], "answer": "Breaking hydrogen bonds between base pairs", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 3, "question": "DNA polymerase adds nucleotides in which direction?", "options": ["3' to 5'", "5' to 3'", "Both directions equally", "Direction depends on the strand"], "answer": "5' to 3'", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 4, "question": "The sugar in DNA is:", "options": ["Ribose", "Deoxyribose", "Glucose", "Fructose"], "answer": "Deoxyribose", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 5, "question": "Adenine always pairs with which base in DNA?", "options": ["Guanine", "Cytosine", "Thymine", "Uracil"], "answer": "Thymine", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 1, "question": "The central dogma of molecular biology is:", "options": ["Protein → RNA → DNA", "DNA → RNA → Protein", "RNA → Protein → DNA", "DNA → Protein → RNA"], "answer": "DNA → RNA → Protein", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 2, "question": "Transcription occurs in the:", "options": ["Ribosome", "Nucleus", "Cytoplasm", "Mitochondria"], "answer": "Nucleus", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 3, "question": "In mRNA, thymine (T) is replaced by:", "options": ["Adenine", "Cytosine", "Guanine", "Uracil"], "answer": "Uracil", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 4, "question": "tRNA carries:", "options": ["DNA instructions to the ribosome", "Amino acids to the ribosome during translation", "mRNA to the nucleus", "Enzymes to the Golgi"], "answer": "Amino acids to the ribosome during translation", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 5, "question": "A stop codon signals:", "options": ["The beginning of translation", "Addition of a specific amino acid", "The end of the protein chain", "The start of transcription"], "answer": "The end of the protein chain", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 1, "question": "Darwin's book proposing evolution by natural selection was called:", "options": ["Principia Mathematica", "On the Origin of Species", "The Descent of Man", "The Selfish Gene"], "answer": "On the Origin of Species", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 2, "question": "Fitness in evolutionary terms means:", "options": ["Physical strength", "Ability to survive and reproduce successfully", "Intelligence", "Disease resistance only"], "answer": "Ability to survive and reproduce successfully", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 3, "question": "Vestigial structures are:", "options": ["New adaptations", "Remnants of structures that served a function in ancestors", "Organs used for reproduction", "Homologous structures"], "answer": "Remnants of structures that served a function in ancestors", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 4, "question": "Genetic drift has the greatest effect in:", "options": ["Large populations", "Small populations", "Populations with high mutation rates", "Tropical populations"], "answer": "Small populations", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 5, "question": "Speciation occurs when:", "options": ["Two populations interbreed freely", "Populations become reproductively isolated and diverge", "Mutation rates increase", "Environments stay identical"], "answer": "Populations become reproductively isolated and diverge", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 1, "question": "The correct order of taxonomic hierarchy from broadest to most specific is:", "options": ["Species, Genus, Family, Order, Class, Phylum, Kingdom, Domain", "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species", "Kingdom, Domain, Phylum, Class, Order, Family, Genus, Species", "Domain, Phylum, Kingdom, Class, Order, Family, Genus, Species"], "answer": "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 2, "question": "In Homo sapiens, \"sapiens\" is the:", "options": ["Genus", "Family", "Species", "Kingdom"], "answer": "Species", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 3, "question": "Archaea are similar to bacteria in that they are both:", "options": ["Eukaryotes", "Multicellular", "Prokaryotes", "Photosynthetic"], "answer": "Prokaryotes", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 4, "question": "A phylogenetic tree shows:", "options": ["Geographic distribution of organisms", "Evolutionary relationships among organisms", "Anatomical structure", "Ecological niches"], "answer": "Evolutionary relationships among organisms", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 5, "question": "Fungi differ from plants in that fungi:", "options": ["Perform photosynthesis", "Absorb nutrients from their environment (heterotrophs)", "Have cell walls", "Are multicellular"], "answer": "Absorb nutrients from their environment (heterotrophs)", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 1, "question": "Xylem transports:", "options": ["Sugars from leaves to roots", "Water and minerals from roots upward", "Carbon dioxide into leaves", "Hormones only"], "answer": "Water and minerals from roots upward", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 2, "question": "Stomata are openings that:", "options": ["Absorb water", "Regulate gas exchange in leaves", "Anchor the plant", "Produce seeds"], "answer": "Regulate gas exchange in leaves", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 3, "question": "The reproductive structures of a flowering plant are found in the:", "options": ["Stem", "Roots", "Flower", "Leaves"], "answer": "Flower", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 4, "question": "Pollination is the transfer of:", "options": ["Eggs from pistil to stamen", "Pollen from stamen to pistil", "Water through xylem", "Nutrients through phloem"], "answer": "Pollen from stamen to pistil", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 5, "question": "Phloem transports:", "options": ["Water upward", "Sugars (products of photosynthesis) throughout the plant", "Minerals from soil", "Hormones only"], "answer": "Sugars (products of photosynthesis) throughout the plant", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 1, "question": "The primary function of the respiratory system is:", "options": ["Pumping blood", "Gas exchange (O₂ in, CO₂ out)", "Digesting food", "Filtering blood"], "answer": "Gas exchange (O₂ in, CO₂ out)", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 2, "question": "The site of gas exchange in the lungs is the:", "options": ["Bronchi", "Trachea", "Alveoli", "Diaphragm"], "answer": "Alveoli", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 3, "question": "Insulin is produced by the pancreas to:", "options": ["Break down fats", "Lower blood glucose levels", "Raise blood glucose levels", "Stimulate growth"], "answer": "Lower blood glucose levels", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 4, "question": "The function of red blood cells is to:", "options": ["Fight infections", "Carry oxygen via hemoglobin", "Produce antibodies", "Form blood clots"], "answer": "Carry oxygen via hemoglobin", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 5, "question": "Neurons transmit signals via:", "options": ["Hormones in the bloodstream", "Electrical impulses and neurotransmitters", "Muscular contractions", "Lymph fluid"], "answer": "Electrical impulses and neurotransmitters", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 1, "question": "Producers in an ecosystem are:", "options": ["Organisms that eat herbivores", "Organisms that make their own food via photosynthesis", "Organisms that decompose dead matter", "Animals that eat producers"], "answer": "Organisms that make their own food via photosynthesis", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 2, "question": "The 10% energy rule means:", "options": ["10% of organisms survive", "Only 10% of energy passes to the next trophic level", "Ecosystems are 10% efficient", "10% of species are producers"], "answer": "Only 10% of energy passes to the next trophic level", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 3, "question": "A niche is best described as:", "options": ["An organism's physical location", "An organism's role and resource use in its ecosystem", "The number of organisms in a habitat", "A type of food web"], "answer": "An organism's role and resource use in its ecosystem", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 4, "question": "Biodiversity is important because:", "options": ["It makes ecosystems simpler", "Greater diversity increases ecosystem stability and resilience", "It reduces competition", "It speeds up evolution"], "answer": "Greater diversity increases ecosystem stability and resilience", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 5, "question": "Decomposers play a critical role by:", "options": ["Producing oxygen", "Recycling nutrients back into the ecosystem", "Preying on herbivores", "Fixing nitrogen in soil"], "answer": "Recycling nutrients back into the ecosystem", "explanation": "", "points": 1 }
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which element is the backbone of all organic molecules?",
+      "options": [
+        "Oxygen",
+        "Nitrogen",
+        "Carbon",
+        "Hydrogen"
+      ],
+      "answer": "Carbon",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Proteins are polymers of:",
+      "options": [
+        "Glucose",
+        "Fatty acids",
+        "Amino acids",
+        "Nucleotides"
+      ],
+      "answer": "Amino acids",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Lipids are primarily used for:",
+      "options": [
+        "Energy storage and membrane structure",
+        "Carrying genetic information",
+        "Catalyzing reactions",
+        "Building cell walls"
+      ],
+      "answer": "Energy storage and membrane structure",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "DNA and RNA are examples of:",
+      "options": [
+        "Carbohydrates",
+        "Nucleic acids",
+        "Lipids",
+        "Proteins"
+      ],
+      "answer": "Nucleic acids",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "A hydrogen bond is:",
+      "options": [
+        "A bond within a water molecule",
+        "A weak attraction between a H atom and an electronegative atom",
+        "A bond in carbohydrates",
+        "A covalent bond in proteins"
+      ],
+      "answer": "A weak attraction between a H atom and an electronegative atom",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Which organelle contains the cell's genetic material?",
+      "options": [
+        "Mitochondrion",
+        "Nucleus",
+        "Ribosome",
+        "Lysosome"
+      ],
+      "answer": "Nucleus",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Ribosomes are sites of:",
+      "options": [
+        "Energy production",
+        "Protein synthesis",
+        "Lipid synthesis",
+        "DNA replication"
+      ],
+      "answer": "Protein synthesis",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The Golgi apparatus:",
+      "options": [
+        "Produces energy",
+        "Modifies and packages proteins for export",
+        "Digests old organelles",
+        "Controls cell division"
+      ],
+      "answer": "Modifies and packages proteins for export",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Which structure is found in plant cells but NOT animal cells?",
+      "options": [
+        "Mitochondrion",
+        "Nucleus",
+        "Cell wall and chloroplast",
+        "Ribosome"
+      ],
+      "answer": "Cell wall and chloroplast",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Lysosomes contain:",
+      "options": [
+        "Chlorophyll",
+        "Digestive enzymes",
+        "DNA",
+        "Glucose"
+      ],
+      "answer": "Digestive enzymes",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The cell membrane is composed of a:",
+      "options": [
+        "Single lipid layer",
+        "Phospholipid bilayer",
+        "Protein sheet",
+        "Cellulose wall"
+      ],
+      "answer": "Phospholipid bilayer",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Diffusion moves molecules:",
+      "options": [
+        "Against the concentration gradient",
+        "From high to low concentration",
+        "Using ATP energy",
+        "Only through protein channels"
+      ],
+      "answer": "From high to low concentration",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "A cell placed in a hypotonic solution will:",
+      "options": [
+        "Shrink",
+        "Remain the same",
+        "Swell and potentially burst (lyse)",
+        "Divide"
+      ],
+      "answer": "Swell and potentially burst (lyse)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Active transport differs from passive transport in that it:",
+      "options": [
+        "Requires a concentration gradient",
+        "Uses ATP energy",
+        "Only moves small molecules",
+        "Does not require proteins"
+      ],
+      "answer": "Uses ATP energy",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "The sodium-potassium pump is an example of:",
+      "options": [
+        "Osmosis",
+        "Facilitated diffusion",
+        "Active transport",
+        "Endocytosis"
+      ],
+      "answer": "Active transport",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Glycolysis occurs in the:",
+      "options": [
+        "Mitochondria",
+        "Nucleus",
+        "Cytoplasm",
+        "Chloroplast"
+      ],
+      "answer": "Cytoplasm",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "The overall equation for cellular respiration shows glucose being converted to:",
+      "options": [
+        "Oxygen and water",
+        "CO₂, water, and ATP",
+        "Sugar and oxygen",
+        "Lactic acid only"
+      ],
+      "answer": "CO₂, water, and ATP",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "The electron transport chain is located on the:",
+      "options": [
+        "Outer mitochondrial membrane",
+        "Cristae (inner mitochondrial membrane)",
+        "Cytoplasm",
+        "Nucleus"
+      ],
+      "answer": "Cristae (inner mitochondrial membrane)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Fermentation is used when:",
+      "options": [
+        "Oxygen is abundant",
+        "Oxygen is absent or limited",
+        "Glucose is unavailable",
+        "Light is available"
+      ],
+      "answer": "Oxygen is absent or limited",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "ATP stands for:",
+      "options": [
+        "Adenine Triphosphate",
+        "Adenosine Triphosphate",
+        "Amino Triphosphate",
+        "Adenosine Trisphosphate"
+      ],
+      "answer": "Adenosine Triphosphate",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The overall equation for photosynthesis shows:",
+      "options": [
+        "Glucose + O₂ → CO₂ + H₂O",
+        "CO₂ + H₂O + light → glucose + O₂",
+        "Glucose → CO₂ + ATP",
+        "H₂O + CO₂ → ATP + protein"
+      ],
+      "answer": "CO₂ + H₂O + light → glucose + O₂",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Chlorophyll absorbs light primarily in which colors?",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red and blue",
+        "UV only"
+      ],
+      "answer": "Red and blue",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "The light-independent reactions (Calvin cycle) take place in the:",
+      "options": [
+        "Thylakoid",
+        "Stroma of the chloroplast",
+        "Nucleus",
+        "Cell membrane"
+      ],
+      "answer": "Stroma of the chloroplast",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Oxygen is released as a byproduct of:",
+      "options": [
+        "The Calvin cycle",
+        "The light reactions (water splitting)",
+        "Glycolysis",
+        "Cellular respiration"
+      ],
+      "answer": "The light reactions (water splitting)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Which gas do plants absorb for photosynthesis?",
+      "options": [
+        "Oxygen",
+        "Nitrogen",
+        "Carbon dioxide",
+        "Hydrogen"
+      ],
+      "answer": "Carbon dioxide",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The correct order of mitosis phases is:",
+      "options": [
+        "Metaphase, Prophase, Anaphase, Telophase",
+        "Prophase, Metaphase, Anaphase, Telophase",
+        "Anaphase, Metaphase, Prophase, Telophase",
+        "Telophase, Prophase, Metaphase, Anaphase"
+      ],
+      "answer": "Prophase, Metaphase, Anaphase, Telophase",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "During anaphase, sister chromatids:",
+      "options": [
+        "Align at the cell equator",
+        "Are pulled to opposite poles",
+        "Condense for the first time",
+        "Reform into nuclear envelopes"
+      ],
+      "answer": "Are pulled to opposite poles",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Meiosis II is most similar to:",
+      "options": [
+        "DNA replication",
+        "Mitosis",
+        "Meiosis I",
+        "Fertilization"
+      ],
+      "answer": "Mitosis",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "How many haploid cells result from one round of meiosis?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": "4",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Cytokinesis refers to:",
+      "options": [
+        "DNA replication",
+        "The division of the cytoplasm",
+        "Chromosome condensation",
+        "Spindle formation"
+      ],
+      "answer": "The division of the cytoplasm",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Gregor Mendel conducted his genetics experiments on:",
+      "options": [
+        "Fruit flies",
+        "Mice",
+        "Pea plants",
+        "Bacteria"
+      ],
+      "answer": "Pea plants",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "A heterozygous genotype contains:",
+      "options": [
+        "Two dominant alleles",
+        "Two recessive alleles",
+        "One dominant and one recessive allele",
+        "No alleles"
+      ],
+      "answer": "One dominant and one recessive allele",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "The law of segregation states that:",
+      "options": [
+        "Alleles for different traits assort independently",
+        "Each gamete receives one allele for each trait",
+        "Dominant traits always appear",
+        "Offspring are identical to parents"
+      ],
+      "answer": "Each gamete receives one allele for each trait",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "If Tt × Tt, what fraction of offspring will be homozygous recessive (tt)?",
+      "options": [
+        "1/4",
+        "1/2",
+        "3/4",
+        "0"
+      ],
+      "answer": "1/4",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Incomplete dominance results in:",
+      "options": [
+        "Only dominant phenotype",
+        "A blended phenotype (intermediate)",
+        "Both phenotypes expressed equally",
+        "Recessive phenotype"
+      ],
+      "answer": "A blended phenotype (intermediate)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "The base pairing rule in DNA is:",
+      "options": [
+        "A-G and T-C",
+        "A-T and G-C",
+        "A-C and G-T",
+        "A-U and G-C"
+      ],
+      "answer": "A-T and G-C",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "DNA helicase unwinds the double helix by:",
+      "options": [
+        "Adding new nucleotides",
+        "Breaking hydrogen bonds between base pairs",
+        "Sealing the sugar-phosphate backbone",
+        "Transcribing DNA to RNA"
+      ],
+      "answer": "Breaking hydrogen bonds between base pairs",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "DNA polymerase adds nucleotides in which direction?",
+      "options": [
+        "3' to 5'",
+        "5' to 3'",
+        "Both directions equally",
+        "Direction depends on the strand"
+      ],
+      "answer": "5' to 3'",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "The sugar in DNA is:",
+      "options": [
+        "Ribose",
+        "Deoxyribose",
+        "Glucose",
+        "Fructose"
+      ],
+      "answer": "Deoxyribose",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Adenine always pairs with which base in DNA?",
+      "options": [
+        "Guanine",
+        "Cytosine",
+        "Thymine",
+        "Uracil"
+      ],
+      "answer": "Thymine",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "The central dogma of molecular biology is:",
+      "options": [
+        "Protein → RNA → DNA",
+        "DNA → RNA → Protein",
+        "RNA → Protein → DNA",
+        "DNA → Protein → RNA"
+      ],
+      "answer": "DNA → RNA → Protein",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Transcription occurs in the:",
+      "options": [
+        "Ribosome",
+        "Nucleus",
+        "Cytoplasm",
+        "Mitochondria"
+      ],
+      "answer": "Nucleus",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "In mRNA, thymine (T) is replaced by:",
+      "options": [
+        "Adenine",
+        "Cytosine",
+        "Guanine",
+        "Uracil"
+      ],
+      "answer": "Uracil",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "tRNA carries:",
+      "options": [
+        "DNA instructions to the ribosome",
+        "Amino acids to the ribosome during translation",
+        "mRNA to the nucleus",
+        "Enzymes to the Golgi"
+      ],
+      "answer": "Amino acids to the ribosome during translation",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "A stop codon signals:",
+      "options": [
+        "The beginning of translation",
+        "Addition of a specific amino acid",
+        "The end of the protein chain",
+        "The start of transcription"
+      ],
+      "answer": "The end of the protein chain",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Darwin's book proposing evolution by natural selection was called:",
+      "options": [
+        "Principia Mathematica",
+        "On the Origin of Species",
+        "The Descent of Man",
+        "The Selfish Gene"
+      ],
+      "answer": "On the Origin of Species",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Fitness in evolutionary terms means:",
+      "options": [
+        "Physical strength",
+        "Ability to survive and reproduce successfully",
+        "Intelligence",
+        "Disease resistance only"
+      ],
+      "answer": "Ability to survive and reproduce successfully",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Vestigial structures are:",
+      "options": [
+        "New adaptations",
+        "Remnants of structures that served a function in ancestors",
+        "Organs used for reproduction",
+        "Homologous structures"
+      ],
+      "answer": "Remnants of structures that served a function in ancestors",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Genetic drift has the greatest effect in:",
+      "options": [
+        "Large populations",
+        "Small populations",
+        "Populations with high mutation rates",
+        "Tropical populations"
+      ],
+      "answer": "Small populations",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Speciation occurs when:",
+      "options": [
+        "Two populations interbreed freely",
+        "Populations become reproductively isolated and diverge",
+        "Mutation rates increase",
+        "Environments stay identical"
+      ],
+      "answer": "Populations become reproductively isolated and diverge",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The correct order of taxonomic hierarchy from broadest to most specific is:",
+      "options": [
+        "Species, Genus, Family, Order, Class, Phylum, Kingdom, Domain",
+        "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species",
+        "Kingdom, Domain, Phylum, Class, Order, Family, Genus, Species",
+        "Domain, Phylum, Kingdom, Class, Order, Family, Genus, Species"
+      ],
+      "answer": "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "In Homo sapiens, \"sapiens\" is the:",
+      "options": [
+        "Genus",
+        "Family",
+        "Species",
+        "Kingdom"
+      ],
+      "answer": "Species",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Archaea are similar to bacteria in that they are both:",
+      "options": [
+        "Eukaryotes",
+        "Multicellular",
+        "Prokaryotes",
+        "Photosynthetic"
+      ],
+      "answer": "Prokaryotes",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "A phylogenetic tree shows:",
+      "options": [
+        "Geographic distribution of organisms",
+        "Evolutionary relationships among organisms",
+        "Anatomical structure",
+        "Ecological niches"
+      ],
+      "answer": "Evolutionary relationships among organisms",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Fungi differ from plants in that fungi:",
+      "options": [
+        "Perform photosynthesis",
+        "Absorb nutrients from their environment (heterotrophs)",
+        "Have cell walls",
+        "Are multicellular"
+      ],
+      "answer": "Absorb nutrients from their environment (heterotrophs)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Xylem transports:",
+      "options": [
+        "Sugars from leaves to roots",
+        "Water and minerals from roots upward",
+        "Carbon dioxide into leaves",
+        "Hormones only"
+      ],
+      "answer": "Water and minerals from roots upward",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Stomata are openings that:",
+      "options": [
+        "Absorb water",
+        "Regulate gas exchange in leaves",
+        "Anchor the plant",
+        "Produce seeds"
+      ],
+      "answer": "Regulate gas exchange in leaves",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "The reproductive structures of a flowering plant are found in the:",
+      "options": [
+        "Stem",
+        "Roots",
+        "Flower",
+        "Leaves"
+      ],
+      "answer": "Flower",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Pollination is the transfer of:",
+      "options": [
+        "Eggs from pistil to stamen",
+        "Pollen from stamen to pistil",
+        "Water through xylem",
+        "Nutrients through phloem"
+      ],
+      "answer": "Pollen from stamen to pistil",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Phloem transports:",
+      "options": [
+        "Water upward",
+        "Sugars (products of photosynthesis) throughout the plant",
+        "Minerals from soil",
+        "Hormones only"
+      ],
+      "answer": "Sugars (products of photosynthesis) throughout the plant",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "The primary function of the respiratory system is:",
+      "options": [
+        "Pumping blood",
+        "Gas exchange (O₂ in, CO₂ out)",
+        "Digesting food",
+        "Filtering blood"
+      ],
+      "answer": "Gas exchange (O₂ in, CO₂ out)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "The site of gas exchange in the lungs is the:",
+      "options": [
+        "Bronchi",
+        "Trachea",
+        "Alveoli",
+        "Diaphragm"
+      ],
+      "answer": "Alveoli",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Insulin is produced by the pancreas to:",
+      "options": [
+        "Break down fats",
+        "Lower blood glucose levels",
+        "Raise blood glucose levels",
+        "Stimulate growth"
+      ],
+      "answer": "Lower blood glucose levels",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "The function of red blood cells is to:",
+      "options": [
+        "Fight infections",
+        "Carry oxygen via hemoglobin",
+        "Produce antibodies",
+        "Form blood clots"
+      ],
+      "answer": "Carry oxygen via hemoglobin",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Neurons transmit signals via:",
+      "options": [
+        "Hormones in the bloodstream",
+        "Electrical impulses and neurotransmitters",
+        "Muscular contractions",
+        "Lymph fluid"
+      ],
+      "answer": "Electrical impulses and neurotransmitters",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Producers in an ecosystem are:",
+      "options": [
+        "Organisms that eat herbivores",
+        "Organisms that make their own food via photosynthesis",
+        "Organisms that decompose dead matter",
+        "Animals that eat producers"
+      ],
+      "answer": "Organisms that make their own food via photosynthesis",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "The 10% energy rule means:",
+      "options": [
+        "10% of organisms survive",
+        "Only 10% of energy passes to the next trophic level",
+        "Ecosystems are 10% efficient",
+        "10% of species are producers"
+      ],
+      "answer": "Only 10% of energy passes to the next trophic level",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "A niche is best described as:",
+      "options": [
+        "An organism's physical location",
+        "An organism's role and resource use in its ecosystem",
+        "The number of organisms in a habitat",
+        "A type of food web"
+      ],
+      "answer": "An organism's role and resource use in its ecosystem",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Biodiversity is important because:",
+      "options": [
+        "It makes ecosystems simpler",
+        "Greater diversity increases ecosystem stability and resilience",
+        "It reduces competition",
+        "It speeds up evolution"
+      ],
+      "answer": "Greater diversity increases ecosystem stability and resilience",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Decomposers play a critical role by:",
+      "options": [
+        "Producing oxygen",
+        "Recycling nutrients back into the ecosystem",
+        "Preying on herbivores",
+        "Fixing nitrogen in soil"
+      ],
+      "answer": "Recycling nutrients back into the ecosystem",
+      "explanation": "",
+      "points": 1
+    }
   ]
 }

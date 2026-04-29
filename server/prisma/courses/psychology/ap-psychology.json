@@ -2,7 +2,7 @@
   "slug": "ap-psychology",
   "name": "AP Psychology",
   "nameZh": "AP 心理学",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Psychology",
   "type": "Core",
   "description": "Comprehensive study of human behavior and mental processes aligned with the College Board AP Psychology curriculum. Topics span biological bases, sensation, perception, learning, memory, cognition, development, personality, disorders, and treatment, preparing students for the AP exam and college-level psychology.",
@@ -13,7 +13,7 @@
       "title": "History & Approaches in Psychology",
       "titleZh": "心理学历史与研究途径",
       "objectives": "Trace the history of psychology from its philosophical roots; compare major theoretical approaches including behavioral, cognitive, biological, humanistic, and sociocultural.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-1-what-is-psychology",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 1.1–1.3: What is Psychology & History",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:perspectives-in-psychology/x2f5a736cf99e6b15:history-of-psychology/v/history-of-psychology",
       "videoNote": "Khan Academy AP Psychology — History of Psychology",
@@ -22,14 +22,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:perspectives-in-psychology/x2f5a736cf99e6b15:history-of-psychology/e/history-of-psychology",
       "practiceNote": "Khan Academy — History of Psychology Practice",
       "assignment": "Compare three major psychological perspectives (behavioral, cognitive, humanistic) using a real-world example of your choice. Write 300–400 words.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 2,
       "title": "Research Methods",
       "titleZh": "研究方法",
       "objectives": "Distinguish experimental from correlational research; identify independent, dependent, and confounding variables; interpret statistical concepts including mean, correlation, and statistical significance.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-1-why-is-research-important",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 2.1–2.4: Research Methods",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:research-methods-in-psychology/x2f5a736cf99e6b15:introduction-to-research-methods/v/the-scientific-method",
       "videoNote": "Khan Academy AP Psychology — Research Methods Overview",
@@ -45,7 +45,7 @@
       "title": "Biological Bases of Behavior",
       "titleZh": "行为的生物学基础",
       "objectives": "Identify major brain structures and their functions; explain how neurons communicate; describe the role of the endocrine system and genetics in behavior.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/3-1-human-genetics",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/3-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 3.1–3.5: Biological Bases of Behavior",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:biological-bases-of-behavior/x2f5a736cf99e6b15:the-neuron-and-neural-firing/v/neuron-structure",
       "videoNote": "Khan Academy AP Psychology — Neurons & Neural Firing",
@@ -61,7 +61,7 @@
       "title": "Sensation & Perception",
       "titleZh": "感觉与知觉",
       "objectives": "Distinguish sensation from perception; explain signal detection theory, Weber's Law, and sensory adaptation; describe perceptual principles including Gestalt laws.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/5-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 5.1–5.6: Sensation & Perception",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:sensation-and-perception/x2f5a736cf99e6b15:introduction-to-sensation-and-perception/v/sensation-and-perception",
       "videoNote": "Khan Academy AP Psychology — Sensation & Perception Intro",
@@ -70,14 +70,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:sensation-and-perception/x2f5a736cf99e6b15:vision/e/vision",
       "practiceNote": "Khan Academy — Vision & Perception Practice",
       "assignment": "Analyze three optical illusions using Gestalt principles or top-down vs. bottom-up processing. Explain what each illusion tells us about human perception. (350 words)",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 5,
       "title": "States of Consciousness",
       "titleZh": "意识状态",
       "objectives": "Describe the stages of sleep and their functions; explain theories of dreaming; discuss the effects of psychoactive drugs on consciousness.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/4-1-what-is-consciousness",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/4-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 4.1–4.5: States of Consciousness",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:states-of-consciousness/x2f5a736cf99e6b15:sleep/v/stages-of-sleep",
       "videoNote": "Khan Academy AP Psychology — Stages of Sleep",
@@ -86,14 +86,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:states-of-consciousness/x2f5a736cf99e6b15:sleep/e/sleep",
       "practiceNote": "Khan Academy — Sleep & Consciousness Practice",
       "assignment": "Keep a sleep log for one week. Analyze your patterns and connect them to the psychological research on sleep deprivation and cognitive performance. (400 words)",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 6,
       "title": "Learning & Conditioning",
       "titleZh": "学习与条件反射",
       "objectives": "Explain classical and operant conditioning with real-world examples; distinguish reinforcement from punishment; describe observational learning and its applications.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-1-what-is-learning",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 6.1–6.5: Learning",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:learning/x2f5a736cf99e6b15:classical-conditioning/v/classical-conditioning",
       "videoNote": "Khan Academy AP Psychology — Classical Conditioning",
@@ -109,7 +109,7 @@
       "title": "Memory",
       "titleZh": "记忆",
       "objectives": "Describe the multi-store model of memory; explain encoding, storage, and retrieval; identify factors that cause forgetting; discuss strategies to improve memory.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/8-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 8.1–8.4: Memory",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:memory/x2f5a736cf99e6b15:memory-encoding-and-storage/v/memory-and-storage",
       "videoNote": "Khan Academy AP Psychology — Memory Encoding & Storage",
@@ -118,14 +118,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:memory/x2f5a736cf99e6b15:forgetting-and-amnesia/e/forgetting-and-amnesia",
       "practiceNote": "Khan Academy — Forgetting & Amnesia Practice",
       "assignment": "Design a memory experiment using the serial position effect. Predict results, explain what they reveal about memory architecture. (300–400 words)",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 8,
       "title": "Cognition & Language",
       "titleZh": "认知与语言",
       "objectives": "Explain cognitive processes including concepts, problem solving, and decision making; describe language development and the Whorfian hypothesis.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-1-what-is-cognition",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 7.1–7.4: Cognition & Language",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:cognition/x2f5a736cf99e6b15:problem-solving-and-creativity/v/problem-solving-and-creativity",
       "videoNote": "Khan Academy AP Psychology — Problem Solving & Cognition",
@@ -134,14 +134,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:cognition/x2f5a736cf99e6b15:language/e/language",
       "practiceNote": "Khan Academy — Language Development Practice",
       "assignment": "Analyze a case of a cognitive bias (e.g., confirmation bias or availability heuristic) from a news article. How does this bias affect decision-making? (350 words)",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 9,
       "title": "Motivation & Emotion",
       "titleZh": "动机与情绪",
       "objectives": "Compare theories of motivation including drive-reduction, Maslow's hierarchy, and self-determination; explain theories of emotion including James-Lange and Cannon-Bard.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/10-1-motivation",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/10-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 10.1–10.4: Motivation & Emotion",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:motivation-and-emotion/x2f5a736cf99e6b15:theories-of-motivation/v/theories-of-motivation",
       "videoNote": "Khan Academy AP Psychology — Theories of Motivation",
@@ -150,14 +150,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:motivation-and-emotion/x2f5a736cf99e6b15:hunger-and-eating/e/hunger-and-eating",
       "practiceNote": "Khan Academy — Motivation Practice",
       "assignment": "Apply Maslow's hierarchy of needs to analyze a character from a novel, film, or real-life story. Identify at which level their primary motivation operates. (350 words)",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 10,
       "title": "Developmental Psychology",
       "titleZh": "发展心理学",
       "objectives": "Describe physical, cognitive, and social-emotional development across the lifespan; apply Piaget's stages, Vygotsky's ZPD, and Erikson's stages.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-1-what-is-lifespan-development",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 9.1–9.5: Developmental Psychology",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:developmental-psychology/x2f5a736cf99e6b15:physical-cognitive-social-emotional-development/v/piaget-stages-of-cognitive-development",
       "videoNote": "Khan Academy AP Psychology — Piaget's Stages",
@@ -173,7 +173,7 @@
       "title": "Personality",
       "titleZh": "人格",
       "objectives": "Compare psychoanalytic, humanistic, trait, and social-cognitive theories of personality; evaluate assessment tools including projective tests and inventories.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/11-1-what-is-personality",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/11-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 11.1–11.6: Personality",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:personality/x2f5a736cf99e6b15:psychoanalytic-theories-of-personality/v/freudian-theory-and-dreams",
       "videoNote": "Khan Academy AP Psychology — Personality Theories",
@@ -182,14 +182,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:personality/x2f5a736cf99e6b15:trait-theories-of-personality/e/trait-theories-of-personality",
       "practiceNote": "Khan Academy — Personality Trait Theories Practice",
       "assignment": "Evaluate yourself using the Big Five personality dimensions. Reflect on how each trait influences your academic and social behavior. (400 words)",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 12,
       "title": "Testing & Intelligence",
       "titleZh": "测验与智力",
       "objectives": "Define and distinguish reliability, validity, and standardization; compare theories of intelligence including Spearman's g, Gardner's multiple intelligences, and Sternberg's triarchic theory.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-5-problem-solving",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 7.5–7.7: Intelligence & Testing",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:testing-and-individual-differences/x2f5a736cf99e6b15:intelligence/v/what-is-intelligence",
       "videoNote": "Khan Academy AP Psychology — Intelligence",
@@ -198,14 +198,14 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:testing-and-individual-differences/x2f5a736cf99e6b15:intelligence/e/intelligence",
       "practiceNote": "Khan Academy — Intelligence Practice",
       "assignment": "Critically evaluate one theory of intelligence (e.g., Gardner's MI). What are its strengths and weaknesses as a framework for education? (350 words)",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 13,
       "title": "Abnormal Psychology",
       "titleZh": "异常心理学",
       "objectives": "Define psychological disorder and apply the DSM-5 framework; describe major categories including anxiety, mood, schizophrenia, and personality disorders.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/15-1-what-are-psychological-disorders",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/15-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 15.1–15.7: Psychological Disorders",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:psychological-disorders/x2f5a736cf99e6b15:introduction-to-psychological-disorders/v/what-is-a-psychological-disorder",
       "videoNote": "Khan Academy AP Psychology — Psychological Disorders Intro",
@@ -221,7 +221,7 @@
       "title": "Treatment of Psychological Disorders",
       "titleZh": "心理障碍的治疗",
       "objectives": "Describe major therapeutic approaches including psychoanalytic, behavioral, cognitive-behavioral, humanistic, and biomedical treatments; evaluate their effectiveness.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/16-1-mental-health-treatment-past-and-present",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/16-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 16.1–16.5: Treatment of Disorders",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:introduction-to-treatment/v/treatment-of-psychological-disorders",
       "videoNote": "Khan Academy AP Psychology — Treatment Overview",
@@ -234,112 +234,1512 @@
     }
   ],
   "quizQuestions": [
-    {"moduleOrder": 1, "order": 1, "question": "Who is considered the founder of the first psychology laboratory?", "options": ["Sigmund Freud", "Wilhelm Wundt", "William James", "John Watson"], "answer": "Wilhelm Wundt", "explanation": "Wilhelm Wundt established the first experimental psychology laboratory in Leipzig, Germany in 1879.", "points": 1},
-    {"moduleOrder": 1, "order": 2, "question": "Which psychological approach focuses on observable behavior and environmental stimuli?", "options": ["Humanistic", "Psychoanalytic", "Behaviorism", "Cognitive"], "answer": "Behaviorism", "explanation": "Behaviorism, championed by Watson and Skinner, focuses solely on observable behavior and its environmental determinants.", "points": 1},
-    {"moduleOrder": 1, "order": 3, "question": "The term 'psychology' is derived from the Greek words for:", "options": ["Brain and learning", "Mind and study", "Behavior and science", "Thought and measurement"], "answer": "Mind and study", "explanation": "Psychology comes from 'psyche' (mind/soul) and 'logos' (study).", "points": 1},
-    {"moduleOrder": 1, "order": 4, "question": "Which approach emphasizes unconscious processes and early childhood experiences?", "options": ["Cognitive", "Behavioral", "Psychoanalytic", "Biological"], "answer": "Psychoanalytic", "explanation": "Freud's psychoanalytic approach centers on the unconscious mind and how early experiences shape personality.", "points": 1},
-    {"moduleOrder": 1, "order": 5, "question": "The humanistic approach in psychology was pioneered by:", "options": ["B.F. Skinner", "Abraham Maslow and Carl Rogers", "Ivan Pavlov", "Albert Bandura"], "answer": "Abraham Maslow and Carl Rogers", "explanation": "Maslow and Rogers founded humanistic psychology, emphasizing human potential and self-actualization.", "points": 1},
-    {"moduleOrder": 2, "order": 1, "question": "In an experiment, the variable that the researcher manipulates is called the:", "options": ["Dependent variable", "Confounding variable", "Independent variable", "Control variable"], "answer": "Independent variable", "explanation": "The independent variable is the one the experimenter deliberately changes to observe its effect.", "points": 1},
-    {"moduleOrder": 2, "order": 2, "question": "A correlation coefficient of –0.85 indicates:", "options": ["A weak positive relationship", "A strong negative relationship", "No relationship", "A moderate positive relationship"], "answer": "A strong negative relationship", "explanation": "A correlation near –1 indicates a strong negative (inverse) relationship between two variables.", "points": 1},
-    {"moduleOrder": 2, "order": 3, "question": "The placebo effect is best controlled by using:", "options": ["A larger sample", "A double-blind procedure", "Random assignment only", "Operational definitions"], "answer": "A double-blind procedure", "explanation": "In a double-blind study, neither participants nor researchers know who receives the treatment, controlling for placebo effects.", "points": 1},
-    {"moduleOrder": 2, "order": 4, "question": "Which research method best establishes cause-and-effect relationships?", "options": ["Case study", "Survey", "Naturalistic observation", "Experiment"], "answer": "Experiment", "explanation": "Experiments with random assignment and manipulation of variables are the only method that can establish causation.", "points": 1},
-    {"moduleOrder": 2, "order": 5, "question": "Institutional Review Boards (IRBs) primarily ensure that research:", "options": ["Produces statistically significant results", "Is ethically conducted", "Uses random sampling", "Is peer-reviewed before starting"], "answer": "Is ethically conducted", "explanation": "IRBs review research proposals to protect participants from harm and ensure ethical standards are met.", "points": 1},
-    {"moduleOrder": 3, "order": 1, "question": "Neurotransmitters are released from the:", "options": ["Dendrites", "Cell body", "Axon terminals (synaptic knobs)", "Myelin sheath"], "answer": "Axon terminals (synaptic knobs)", "explanation": "Neurotransmitters are stored in vesicles at the axon terminals and released into the synapse.", "points": 1},
-    {"moduleOrder": 3, "order": 2, "question": "Which brain structure is called the 'emotional center' and is key to fear responses?", "options": ["Hippocampus", "Amygdala", "Cerebellum", "Thalamus"], "answer": "Amygdala", "explanation": "The amygdala processes emotions, especially fear and aggression, and is part of the limbic system.", "points": 1},
-    {"moduleOrder": 3, "order": 3, "question": "The myelin sheath speeds up neural transmission by:", "options": ["Increasing neurotransmitter production", "Insulating the axon and enabling saltatory conduction", "Widening the synapse", "Activating more dendrites"], "answer": "Insulating the axon and enabling saltatory conduction", "explanation": "Myelin insulates the axon, allowing the electrical signal to jump between nodes of Ranvier (saltatory conduction).", "points": 1},
-    {"moduleOrder": 3, "order": 4, "question": "Dopamine is most closely associated with:", "options": ["Sleep regulation", "Reward and pleasure pathways", "Fight-or-flight response", "Digestive function"], "answer": "Reward and pleasure pathways", "explanation": "Dopamine plays a major role in the brain's reward system and is linked to motivation and pleasure.", "points": 1},
-    {"moduleOrder": 3, "order": 5, "question": "The corpus callosum connects:", "options": ["The cerebellum to the brainstem", "The left and right cerebral hemispheres", "The thalamus to the cortex", "The frontal and occipital lobes"], "answer": "The left and right cerebral hemispheres", "explanation": "The corpus callosum is a band of nerve fibers allowing communication between the two cerebral hemispheres.", "points": 1},
-    {"moduleOrder": 4, "order": 1, "question": "The minimum stimulation needed to detect a stimulus 50% of the time is the:", "options": ["Difference threshold", "Signal detection point", "Absolute threshold", "Sensory adaptation level"], "answer": "Absolute threshold", "explanation": "The absolute threshold is the minimum level of stimulation required to detect a stimulus half the time.", "points": 1},
-    {"moduleOrder": 4, "order": 2, "question": "Weber's Law states that the just noticeable difference is:", "options": ["Always the same absolute amount", "A constant proportion of the original stimulus", "Only detectable in vision and hearing", "Equal to the absolute threshold"], "answer": "A constant proportion of the original stimulus", "explanation": "Weber's Law states that the JND is a constant fraction (ratio) of the original stimulus intensity.", "points": 1},
-    {"moduleOrder": 4, "order": 3, "question": "The visual cliff experiment was designed to study:", "options": ["Color perception", "Depth perception in infants", "Visual acuity", "Peripheral vision"], "answer": "Depth perception in infants", "explanation": "Eleanor Gibson and Richard Walk's visual cliff study showed that even young infants perceive depth.", "points": 1},
-    {"moduleOrder": 4, "order": 4, "question": "Top-down processing in perception refers to:", "options": ["Processing that begins with sensory data", "Knowledge and expectations influencing perception", "Processing from the retina upward", "Unconscious sensory filtering"], "answer": "Knowledge and expectations influencing perception", "explanation": "Top-down processing uses prior knowledge, context, and expectations to interpret sensory information.", "points": 1},
-    {"moduleOrder": 4, "order": 5, "question": "Which Gestalt principle states we perceive objects close together as belonging to the same group?", "options": ["Similarity", "Closure", "Proximity", "Continuity"], "answer": "Proximity", "explanation": "The Gestalt principle of proximity says elements that are near each other are perceived as a group.", "points": 1},
-    {"moduleOrder": 5, "order": 1, "question": "REM sleep is characterized by:", "options": ["Slow delta waves and deep sleep", "Rapid eye movements and vivid dreaming", "Muscle activity and sleepwalking", "No brain activity"], "answer": "Rapid eye movements and vivid dreaming", "explanation": "REM (Rapid Eye Movement) sleep is associated with dreaming, brain activity similar to waking, and temporary muscle paralysis.", "points": 1},
-    {"moduleOrder": 5, "order": 2, "question": "The activation-synthesis hypothesis proposes that dreams are:", "options": ["Wish fulfillments from the unconscious", "Random neural signals interpreted by the brain", "Messages from the future", "Replays of daily memories"], "answer": "Random neural signals interpreted by the brain", "explanation": "Hobson and McCarley's activation-synthesis model suggests dreams result from the brain trying to make sense of random neural activity.", "points": 1},
-    {"moduleOrder": 5, "order": 3, "question": "Which drug type slows down the central nervous system?", "options": ["Stimulants", "Hallucinogens", "Depressants", "Opiates only"], "answer": "Depressants", "explanation": "Depressants (e.g., alcohol, barbiturates) slow CNS activity, reducing arousal and impairing coordination.", "points": 1},
-    {"moduleOrder": 5, "order": 4, "question": "Narcolepsy is a disorder characterized by:", "options": ["Inability to enter REM sleep", "Sudden uncontrollable sleep attacks", "Chronic insomnia", "Sleepwalking during NREM sleep"], "answer": "Sudden uncontrollable sleep attacks", "explanation": "Narcolepsy causes sudden, irresistible episodes of falling asleep, sometimes with cataplexy.", "points": 1},
-    {"moduleOrder": 5, "order": 5, "question": "Hypnosis is best described as:", "options": ["A state of unconsciousness", "A heightened state of suggestibility", "Deep REM sleep", "A form of meditation"], "answer": "A heightened state of suggestibility", "explanation": "Hypnosis involves a state of focused attention and heightened suggestibility, but subjects retain some awareness.", "points": 1},
-    {"moduleOrder": 6, "order": 1, "question": "In Pavlov's experiment, the bell (after conditioning) is the:", "options": ["Unconditioned stimulus", "Conditioned stimulus", "Unconditioned response", "Neutral stimulus still"], "answer": "Conditioned stimulus", "explanation": "After pairing with food, the bell becomes a conditioned stimulus that elicits salivation on its own.", "points": 1},
-    {"moduleOrder": 6, "order": 2, "question": "Negative reinforcement involves:", "options": ["Adding a pleasant stimulus", "Removing an unpleasant stimulus to increase behavior", "Punishing unwanted behavior", "Ignoring a behavior until it stops"], "answer": "Removing an unpleasant stimulus to increase behavior", "explanation": "Negative reinforcement increases behavior by removing something aversive (e.g., taking medicine to remove pain).", "points": 1},
-    {"moduleOrder": 6, "order": 3, "question": "Albert Bandura's Bobo doll experiment demonstrated:", "options": ["Classical conditioning", "Observational learning (modeling)", "Operant extinction", "Latent inhibition"], "answer": "Observational learning (modeling)", "explanation": "Children who watched adults hit a Bobo doll tended to imitate that aggression, showing observational learning.", "points": 1},
-    {"moduleOrder": 6, "order": 4, "question": "A variable-ratio schedule of reinforcement produces:", "options": ["Slow, steady responding", "High, steady rates of responding resistant to extinction", "Responding only at fixed time intervals", "Rapid extinction when rewards stop"], "answer": "High, steady rates of responding resistant to extinction", "explanation": "Variable-ratio schedules (like slot machines) produce high, persistent response rates because reinforcement is unpredictable.", "points": 1},
-    {"moduleOrder": 6, "order": 5, "question": "The process by which a conditioned response weakens when the CS is repeatedly presented without the US is called:", "options": ["Discrimination", "Generalization", "Extinction", "Spontaneous recovery"], "answer": "Extinction", "explanation": "Extinction occurs when the conditioned stimulus is repeatedly presented without the unconditioned stimulus, weakening the conditioned response.", "points": 1},
-    {"moduleOrder": 7, "order": 1, "question": "The working memory model was proposed by:", "options": ["Atkinson and Shiffrin", "Baddeley and Hitch", "Ebbinghaus", "Tulving"], "answer": "Baddeley and Hitch", "explanation": "Baddeley and Hitch proposed the working memory model with components including the phonological loop and visuospatial sketchpad.", "points": 1},
-    {"moduleOrder": 7, "order": 2, "question": "The serial position effect refers to:", "options": ["Better memory for emotionally charged events", "Better recall of items at the beginning and end of a list", "Memory being affected by interference", "Interference between similar memories"], "answer": "Better recall of items at the beginning and end of a list", "explanation": "The primacy effect (beginning) and recency effect (end) together create the serial position effect in memory recall.", "points": 1},
-    {"moduleOrder": 7, "order": 3, "question": "Elizabeth Loftus's research on the misinformation effect showed that:", "options": ["Memory is always accurate", "Leading questions can alter memories of events", "Flashbulb memories are completely reliable", "Long-term memory has unlimited capacity"], "answer": "Leading questions can alter memories of events", "explanation": "Loftus demonstrated that post-event information (like misleading questions) can distort eyewitness memory.", "points": 1},
-    {"moduleOrder": 7, "order": 4, "question": "Procedural memory (knowing how to ride a bike) is stored in:", "options": ["Episodic memory", "Semantic memory", "Implicit (nondeclarative) memory", "Working memory"], "answer": "Implicit (nondeclarative) memory", "explanation": "Procedural memory for skills and habits is a type of implicit (nondeclarative) memory, not requiring conscious recall.", "points": 1},
-    {"moduleOrder": 7, "order": 5, "question": "The tip-of-the-tongue phenomenon illustrates:", "options": ["Proactive interference", "A retrieval failure", "Encoding failure", "Storage decay"], "answer": "A retrieval failure", "explanation": "The tip-of-the-tongue state occurs when information is stored but cannot be retrieved at that moment — a retrieval failure.", "points": 1},
-    {"moduleOrder": 8, "order": 1, "question": "A mental shortcut or rule of thumb used in decision making is called a:", "options": ["Algorithm", "Heuristic", "Schema", "Concept"], "answer": "Heuristic", "explanation": "Heuristics are cognitive shortcuts that allow quick decision making but can lead to systematic errors.", "points": 1},
-    {"moduleOrder": 8, "order": 2, "question": "The tendency to search for information confirming one's existing beliefs is:", "options": ["Framing effect", "Confirmation bias", "Anchoring bias", "Availability heuristic"], "answer": "Confirmation bias", "explanation": "Confirmation bias is the tendency to favor information that confirms our preconceptions and ignore contradictory evidence.", "points": 1},
-    {"moduleOrder": 8, "order": 3, "question": "Chomsky's concept of a language acquisition device (LAD) suggests:", "options": ["Language is entirely learned through reinforcement", "Humans are biologically predisposed to acquire language", "Animals can learn human language fully", "Language develops only in social contexts"], "answer": "Humans are biologically predisposed to acquire language", "explanation": "Chomsky proposed that humans have an innate LAD that facilitates rapid language acquisition in children.", "points": 1},
-    {"moduleOrder": 8, "order": 4, "question": "The Whorfian (Sapir-Whorf) hypothesis states that:", "options": ["Language is universal across cultures", "Language influences thought and perception of reality", "Thought is independent of language", "Language develops before thought"], "answer": "Language influences thought and perception of reality", "explanation": "The linguistic relativity hypothesis proposes that the language we speak shapes how we think and perceive the world.", "points": 1},
-    {"moduleOrder": 8, "order": 5, "question": "Mental fixation (functional fixedness) refers to:", "options": ["The inability to see new uses for familiar objects", "Enhanced creativity under pressure", "Memory for problem-solving strategies", "Using algorithms instead of heuristics"], "answer": "The inability to see new uses for familiar objects", "explanation": "Functional fixedness is a cognitive bias where people can only see objects as used in their traditional way.", "points": 1},
-    {"moduleOrder": 9, "order": 1, "question": "Maslow placed which need at the top of his hierarchy?", "options": ["Safety", "Love and belonging", "Self-actualization", "Esteem"], "answer": "Self-actualization", "explanation": "Self-actualization — realizing one's full potential — is the highest level of Maslow's hierarchy of needs.", "points": 1},
-    {"moduleOrder": 9, "order": 2, "question": "The James-Lange theory of emotion states that:", "options": ["Emotions precede physiological arousal", "We experience emotions because we notice our physiological responses", "Emotions and arousal occur simultaneously", "Cognitive labels determine emotions"], "answer": "We experience emotions because we notice our physiological responses", "explanation": "James-Lange theory: we see a stimulus, have a physiological response, then interpret the response as an emotion.", "points": 1},
-    {"moduleOrder": 9, "order": 3, "question": "Intrinsic motivation refers to engaging in an activity:", "options": ["For external rewards", "Out of internal interest or enjoyment", "To avoid punishment", "Because others expect it"], "answer": "Out of internal interest or enjoyment", "explanation": "Intrinsic motivation comes from within — doing something because it is inherently interesting or enjoyable.", "points": 1},
-    {"moduleOrder": 9, "order": 4, "question": "The Yerkes-Dodson law suggests that performance is best at:", "options": ["Very low arousal", "Very high arousal", "Moderate levels of arousal", "Zero arousal"], "answer": "Moderate levels of arousal", "explanation": "The Yerkes-Dodson law describes an inverted-U relationship between arousal and performance — optimal at moderate levels.", "points": 1},
-    {"moduleOrder": 9, "order": 5, "question": "The facial feedback hypothesis proposes that:", "options": ["Facial expressions result from emotions only", "Facial expressions can influence the emotions we feel", "Emotions are culturally determined", "Only voluntary expressions reflect true emotion"], "answer": "Facial expressions can influence the emotions we feel", "explanation": "The facial feedback hypothesis suggests that our facial expressions can trigger or amplify corresponding emotional experiences.", "points": 1},
-    {"moduleOrder": 10, "order": 1, "question": "Piaget's stage where children cannot yet take another person's perspective is the:", "options": ["Sensorimotor stage", "Formal operational stage", "Preoperational stage", "Concrete operational stage"], "answer": "Preoperational stage", "explanation": "In Piaget's preoperational stage (ages 2–7), children are egocentric and cannot yet take others' perspectives.", "points": 1},
-    {"moduleOrder": 10, "order": 2, "question": "Object permanence develops in the:", "options": ["Preoperational stage", "Sensorimotor stage", "Formal operational stage", "Concrete operational stage"], "answer": "Sensorimotor stage", "explanation": "Object permanence develops during Piaget's sensorimotor stage (birth to age 2).", "points": 1},
-    {"moduleOrder": 10, "order": 3, "question": "Vygotsky's zone of proximal development (ZPD) refers to:", "options": ["Tasks a child can do independently", "Tasks too difficult even with help", "Tasks a child can do with guidance but not yet alone", "The gap between emotional and cognitive development"], "answer": "Tasks a child can do with guidance but not yet alone", "explanation": "The ZPD is the range of tasks a learner can accomplish with scaffolding from a more knowledgeable person.", "points": 1},
-    {"moduleOrder": 10, "order": 4, "question": "According to Erikson, the central conflict of adolescence is:", "options": ["Industry vs. Inferiority", "Autonomy vs. Shame", "Identity vs. Role Confusion", "Intimacy vs. Isolation"], "answer": "Identity vs. Role Confusion", "explanation": "Erikson's fifth stage (adolescence) centers on developing a coherent sense of identity.", "points": 1},
-    {"moduleOrder": 10, "order": 5, "question": "Secure attachment in infancy is associated with:", "options": ["An unresponsive caregiver", "Consistent and sensitive caregiving", "Frequent separation from caregivers", "Inconsistent caregiving patterns"], "answer": "Consistent and sensitive caregiving", "explanation": "Ainsworth found that securely attached infants have caregivers who are consistently sensitive and responsive to their needs.", "points": 1},
-    {"moduleOrder": 11, "order": 1, "question": "Freud's concept of the 'id' refers to:", "options": ["The moral conscience", "The rational decision-making self", "Primitive instincts seeking immediate gratification", "The conscious awareness"], "answer": "Primitive instincts seeking immediate gratification", "explanation": "Freud's id operates on the pleasure principle, seeking immediate satisfaction of instinctual drives.", "points": 1},
-    {"moduleOrder": 11, "order": 2, "question": "The Big Five personality factors include all EXCEPT:", "options": ["Openness", "Psychoticism", "Agreeableness", "Conscientiousness"], "answer": "Psychoticism", "explanation": "The Big Five are Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN). Psychoticism is from Eysenck's model.", "points": 1},
-    {"moduleOrder": 11, "order": 3, "question": "The Rorschach inkblot test is an example of a:", "options": ["Self-report inventory", "Projective test", "Behavioral observation measure", "Neuropsychological assessment"], "answer": "Projective test", "explanation": "The Rorschach is a projective test where ambiguous stimuli are used to reveal unconscious thoughts and feelings.", "points": 1},
-    {"moduleOrder": 11, "order": 4, "question": "Carl Rogers emphasized which condition for therapeutic personality change?", "options": ["Strict behavioral contracts", "Unconditional positive regard", "Insight into unconscious conflicts", "Systematic desensitization"], "answer": "Unconditional positive regard", "explanation": "Rogers believed that unconditional positive regard — accepting clients without judgment — is essential for growth.", "points": 1},
-    {"moduleOrder": 11, "order": 5, "question": "According to social-cognitive theory, behavior is best predicted by:", "options": ["Unconscious drives alone", "Traits alone", "The interaction of person, behavior, and environment", "Fixed genetic predispositions"], "answer": "The interaction of person, behavior, and environment", "explanation": "Bandura's reciprocal determinism posits that behavior, personal factors, and environment mutually influence one another.", "points": 1},
-    {"moduleOrder": 12, "order": 1, "question": "A test that measures what it intends to measure has:", "options": ["High reliability", "High validity", "Good standardization", "Good norming"], "answer": "High validity", "explanation": "Validity refers to whether a test actually measures what it claims to measure.", "points": 1},
-    {"moduleOrder": 12, "order": 2, "question": "Spearman's 'g' refers to:", "options": ["Genetic influence on intelligence", "A general factor underlying all intellectual abilities", "Grade-point-average as intelligence", "Crystallized intelligence only"], "answer": "A general factor underlying all intellectual abilities", "explanation": "Spearman proposed 'g' — a general intelligence factor — that underlies performance across different cognitive tasks.", "points": 1},
-    {"moduleOrder": 12, "order": 3, "question": "The Flynn Effect refers to:", "options": ["Declining intelligence over generations", "Rising average IQ scores over time worldwide", "Bias in standardized testing", "The heritability of intelligence"], "answer": "Rising average IQ scores over time worldwide", "explanation": "The Flynn Effect describes the observed rise in average IQ scores across generations in many countries.", "points": 1},
-    {"moduleOrder": 12, "order": 4, "question": "A standardized test has a mean of 100 and SD of 15. A score of 130 is:", "options": ["At the 50th percentile", "Two standard deviations above the mean", "Within the normal range", "Below average"], "answer": "Two standard deviations above the mean", "explanation": "130 – 100 = 30 points above the mean, and 30/15 = 2 standard deviations above.", "points": 1},
-    {"moduleOrder": 12, "order": 5, "question": "Gardner's theory of multiple intelligences was criticized primarily because:", "options": ["It ignored academic ability", "It lacked consistent empirical support from factor analysis", "It was too narrow in scope", "It only applied to Western cultures"], "answer": "It lacked consistent empirical support from factor analysis", "explanation": "Critics argue Gardner's intelligences may be better described as talents or abilities, lacking strong psychometric evidence.", "points": 1},
-    {"moduleOrder": 13, "order": 1, "question": "The DSM-5 is used primarily to:", "options": ["Prescribe medication for disorders", "Classify and diagnose mental disorders", "Provide therapeutic techniques", "Measure intelligence quotients"], "answer": "Classify and diagnose mental disorders", "explanation": "The DSM-5 is the American Psychiatric Association's manual for classifying and diagnosing mental disorders.", "points": 1},
-    {"moduleOrder": 13, "order": 2, "question": "Schizophrenia is characterized by positive symptoms that include:", "options": ["Flat affect and withdrawal", "Hallucinations and delusions", "Depression and anhedonia", "Loss of cognitive abilities only"], "answer": "Hallucinations and delusions", "explanation": "Positive symptoms of schizophrenia (added experiences) include hallucinations, delusions, and disorganized thinking.", "points": 1},
-    {"moduleOrder": 13, "order": 3, "question": "Major depressive disorder differs from bipolar disorder in that it:", "options": ["Involves episodes of mania", "Only includes depressive episodes without mania", "Is caused solely by genetics", "Responds only to lithium treatment"], "answer": "Only includes depressive episodes without mania", "explanation": "Major depressive disorder involves depressive episodes without manic or hypomanic episodes, distinguishing it from bipolar disorder.", "points": 1},
-    {"moduleOrder": 13, "order": 4, "question": "Obsessive-compulsive disorder (OCD) involves:", "options": ["Persistent flashbacks of trauma", "Intrusive thoughts (obsessions) and repetitive behaviors (compulsions)", "Sudden panic attacks without a trigger", "Dissociation from reality"], "answer": "Intrusive thoughts (obsessions) and repetitive behaviors (compulsions)", "explanation": "OCD is characterized by unwanted, intrusive obsessions and repetitive compulsions performed to reduce anxiety.", "points": 1},
-    {"moduleOrder": 13, "order": 5, "question": "The diathesis-stress model proposes that disorders result from:", "options": ["Only genetic predispositions", "Only environmental stressors", "An interaction between genetic vulnerability and environmental stress", "A purely neurochemical imbalance"], "answer": "An interaction between genetic vulnerability and environmental stress", "explanation": "The diathesis-stress model says disorders develop when a genetic predisposition (diathesis) interacts with environmental stressors.", "points": 1},
-    {"moduleOrder": 14, "order": 1, "question": "Cognitive-behavioral therapy (CBT) focuses on:", "options": ["Exploring childhood trauma only", "Changing maladaptive thought patterns and behaviors", "Providing empathy and unconditional regard", "Using medication alongside talk therapy"], "answer": "Changing maladaptive thought patterns and behaviors", "explanation": "CBT targets the relationship between thoughts, feelings, and behaviors to change maladaptive patterns.", "points": 1},
-    {"moduleOrder": 14, "order": 2, "question": "Systematic desensitization is a behavioral treatment for:", "options": ["Schizophrenia", "Depression", "Phobias and anxiety", "Personality disorders"], "answer": "Phobias and anxiety", "explanation": "Systematic desensitization pairs relaxation techniques with gradual exposure to feared stimuli to treat phobias.", "points": 1},
-    {"moduleOrder": 14, "order": 3, "question": "Which medication type is most commonly prescribed for depression?", "options": ["Antipsychotics", "Benzodiazepines", "Selective serotonin reuptake inhibitors (SSRIs)", "Mood stabilizers"], "answer": "Selective serotonin reuptake inhibitors (SSRIs)", "explanation": "SSRIs (e.g., fluoxetine) are the first-line pharmacological treatment for depression due to their safety profile.", "points": 1},
-    {"moduleOrder": 14, "order": 4, "question": "Free association is a technique used in:", "options": ["Cognitive therapy", "Behavior modification", "Psychoanalysis", "Humanistic therapy"], "answer": "Psychoanalysis", "explanation": "Free association, developed by Freud, involves patients saying whatever comes to mind to reveal unconscious material.", "points": 1},
-    {"moduleOrder": 14, "order": 5, "question": "Meta-analyses of psychotherapy research generally show that:", "options": ["No therapy is effective", "Most established therapies produce similar positive outcomes", "Only CBT is effective", "Drug therapy always outperforms psychotherapy"], "answer": "Most established therapies produce similar positive outcomes", "explanation": "The 'Dodo bird verdict' — most bona fide therapies are roughly equally effective according to meta-analytic studies.", "points": 1}
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Who is considered the founder of the first psychology laboratory?",
+      "options": [
+        "Sigmund Freud",
+        "Wilhelm Wundt",
+        "William James",
+        "John Watson"
+      ],
+      "answer": "Wilhelm Wundt",
+      "explanation": "Wilhelm Wundt established the first experimental psychology laboratory in Leipzig, Germany in 1879.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which psychological approach focuses on observable behavior and environmental stimuli?",
+      "options": [
+        "Humanistic",
+        "Psychoanalytic",
+        "Behaviorism",
+        "Cognitive"
+      ],
+      "answer": "Behaviorism",
+      "explanation": "Behaviorism, championed by Watson and Skinner, focuses solely on observable behavior and its environmental determinants.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "The term 'psychology' is derived from the Greek words for:",
+      "options": [
+        "Brain and learning",
+        "Mind and study",
+        "Behavior and science",
+        "Thought and measurement"
+      ],
+      "answer": "Mind and study",
+      "explanation": "Psychology comes from 'psyche' (mind/soul) and 'logos' (study).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Which approach emphasizes unconscious processes and early childhood experiences?",
+      "options": [
+        "Cognitive",
+        "Behavioral",
+        "Psychoanalytic",
+        "Biological"
+      ],
+      "answer": "Psychoanalytic",
+      "explanation": "Freud's psychoanalytic approach centers on the unconscious mind and how early experiences shape personality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "The humanistic approach in psychology was pioneered by:",
+      "options": [
+        "B.F. Skinner",
+        "Abraham Maslow and Carl Rogers",
+        "Ivan Pavlov",
+        "Albert Bandura"
+      ],
+      "answer": "Abraham Maslow and Carl Rogers",
+      "explanation": "Maslow and Rogers founded humanistic psychology, emphasizing human potential and self-actualization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "In an experiment, the variable that the researcher manipulates is called the:",
+      "options": [
+        "Dependent variable",
+        "Confounding variable",
+        "Independent variable",
+        "Control variable"
+      ],
+      "answer": "Independent variable",
+      "explanation": "The independent variable is the one the experimenter deliberately changes to observe its effect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "A correlation coefficient of –0.85 indicates:",
+      "options": [
+        "A weak positive relationship",
+        "A strong negative relationship",
+        "No relationship",
+        "A moderate positive relationship"
+      ],
+      "answer": "A strong negative relationship",
+      "explanation": "A correlation near –1 indicates a strong negative (inverse) relationship between two variables.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The placebo effect is best controlled by using:",
+      "options": [
+        "A larger sample",
+        "A double-blind procedure",
+        "Random assignment only",
+        "Operational definitions"
+      ],
+      "answer": "A double-blind procedure",
+      "explanation": "In a double-blind study, neither participants nor researchers know who receives the treatment, controlling for placebo effects.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Which research method best establishes cause-and-effect relationships?",
+      "options": [
+        "Case study",
+        "Survey",
+        "Naturalistic observation",
+        "Experiment"
+      ],
+      "answer": "Experiment",
+      "explanation": "Experiments with random assignment and manipulation of variables are the only method that can establish causation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Institutional Review Boards (IRBs) primarily ensure that research:",
+      "options": [
+        "Produces statistically significant results",
+        "Is ethically conducted",
+        "Uses random sampling",
+        "Is peer-reviewed before starting"
+      ],
+      "answer": "Is ethically conducted",
+      "explanation": "IRBs review research proposals to protect participants from harm and ensure ethical standards are met.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Neurotransmitters are released from the:",
+      "options": [
+        "Dendrites",
+        "Cell body",
+        "Axon terminals (synaptic knobs)",
+        "Myelin sheath"
+      ],
+      "answer": "Axon terminals (synaptic knobs)",
+      "explanation": "Neurotransmitters are stored in vesicles at the axon terminals and released into the synapse.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Which brain structure is called the 'emotional center' and is key to fear responses?",
+      "options": [
+        "Hippocampus",
+        "Amygdala",
+        "Cerebellum",
+        "Thalamus"
+      ],
+      "answer": "Amygdala",
+      "explanation": "The amygdala processes emotions, especially fear and aggression, and is part of the limbic system.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "The myelin sheath speeds up neural transmission by:",
+      "options": [
+        "Increasing neurotransmitter production",
+        "Insulating the axon and enabling saltatory conduction",
+        "Widening the synapse",
+        "Activating more dendrites"
+      ],
+      "answer": "Insulating the axon and enabling saltatory conduction",
+      "explanation": "Myelin insulates the axon, allowing the electrical signal to jump between nodes of Ranvier (saltatory conduction).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Dopamine is most closely associated with:",
+      "options": [
+        "Sleep regulation",
+        "Reward and pleasure pathways",
+        "Fight-or-flight response",
+        "Digestive function"
+      ],
+      "answer": "Reward and pleasure pathways",
+      "explanation": "Dopamine plays a major role in the brain's reward system and is linked to motivation and pleasure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "The corpus callosum connects:",
+      "options": [
+        "The cerebellum to the brainstem",
+        "The left and right cerebral hemispheres",
+        "The thalamus to the cortex",
+        "The frontal and occipital lobes"
+      ],
+      "answer": "The left and right cerebral hemispheres",
+      "explanation": "The corpus callosum is a band of nerve fibers allowing communication between the two cerebral hemispheres.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "The minimum stimulation needed to detect a stimulus 50% of the time is the:",
+      "options": [
+        "Difference threshold",
+        "Signal detection point",
+        "Absolute threshold",
+        "Sensory adaptation level"
+      ],
+      "answer": "Absolute threshold",
+      "explanation": "The absolute threshold is the minimum level of stimulation required to detect a stimulus half the time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Weber's Law states that the just noticeable difference is:",
+      "options": [
+        "Always the same absolute amount",
+        "A constant proportion of the original stimulus",
+        "Only detectable in vision and hearing",
+        "Equal to the absolute threshold"
+      ],
+      "answer": "A constant proportion of the original stimulus",
+      "explanation": "Weber's Law states that the JND is a constant fraction (ratio) of the original stimulus intensity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "The visual cliff experiment was designed to study:",
+      "options": [
+        "Color perception",
+        "Depth perception in infants",
+        "Visual acuity",
+        "Peripheral vision"
+      ],
+      "answer": "Depth perception in infants",
+      "explanation": "Eleanor Gibson and Richard Walk's visual cliff study showed that even young infants perceive depth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Top-down processing in perception refers to:",
+      "options": [
+        "Processing that begins with sensory data",
+        "Knowledge and expectations influencing perception",
+        "Processing from the retina upward",
+        "Unconscious sensory filtering"
+      ],
+      "answer": "Knowledge and expectations influencing perception",
+      "explanation": "Top-down processing uses prior knowledge, context, and expectations to interpret sensory information.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Which Gestalt principle states we perceive objects close together as belonging to the same group?",
+      "options": [
+        "Similarity",
+        "Closure",
+        "Proximity",
+        "Continuity"
+      ],
+      "answer": "Proximity",
+      "explanation": "The Gestalt principle of proximity says elements that are near each other are perceived as a group.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "REM sleep is characterized by:",
+      "options": [
+        "Slow delta waves and deep sleep",
+        "Rapid eye movements and vivid dreaming",
+        "Muscle activity and sleepwalking",
+        "No brain activity"
+      ],
+      "answer": "Rapid eye movements and vivid dreaming",
+      "explanation": "REM (Rapid Eye Movement) sleep is associated with dreaming, brain activity similar to waking, and temporary muscle paralysis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "The activation-synthesis hypothesis proposes that dreams are:",
+      "options": [
+        "Wish fulfillments from the unconscious",
+        "Random neural signals interpreted by the brain",
+        "Messages from the future",
+        "Replays of daily memories"
+      ],
+      "answer": "Random neural signals interpreted by the brain",
+      "explanation": "Hobson and McCarley's activation-synthesis model suggests dreams result from the brain trying to make sense of random neural activity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Which drug type slows down the central nervous system?",
+      "options": [
+        "Stimulants",
+        "Hallucinogens",
+        "Depressants",
+        "Opiates only"
+      ],
+      "answer": "Depressants",
+      "explanation": "Depressants (e.g., alcohol, barbiturates) slow CNS activity, reducing arousal and impairing coordination.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Narcolepsy is a disorder characterized by:",
+      "options": [
+        "Inability to enter REM sleep",
+        "Sudden uncontrollable sleep attacks",
+        "Chronic insomnia",
+        "Sleepwalking during NREM sleep"
+      ],
+      "answer": "Sudden uncontrollable sleep attacks",
+      "explanation": "Narcolepsy causes sudden, irresistible episodes of falling asleep, sometimes with cataplexy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Hypnosis is best described as:",
+      "options": [
+        "A state of unconsciousness",
+        "A heightened state of suggestibility",
+        "Deep REM sleep",
+        "A form of meditation"
+      ],
+      "answer": "A heightened state of suggestibility",
+      "explanation": "Hypnosis involves a state of focused attention and heightened suggestibility, but subjects retain some awareness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "In Pavlov's experiment, the bell (after conditioning) is the:",
+      "options": [
+        "Unconditioned stimulus",
+        "Conditioned stimulus",
+        "Unconditioned response",
+        "Neutral stimulus still"
+      ],
+      "answer": "Conditioned stimulus",
+      "explanation": "After pairing with food, the bell becomes a conditioned stimulus that elicits salivation on its own.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Negative reinforcement involves:",
+      "options": [
+        "Adding a pleasant stimulus",
+        "Removing an unpleasant stimulus to increase behavior",
+        "Punishing unwanted behavior",
+        "Ignoring a behavior until it stops"
+      ],
+      "answer": "Removing an unpleasant stimulus to increase behavior",
+      "explanation": "Negative reinforcement increases behavior by removing something aversive (e.g., taking medicine to remove pain).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Albert Bandura's Bobo doll experiment demonstrated:",
+      "options": [
+        "Classical conditioning",
+        "Observational learning (modeling)",
+        "Operant extinction",
+        "Latent inhibition"
+      ],
+      "answer": "Observational learning (modeling)",
+      "explanation": "Children who watched adults hit a Bobo doll tended to imitate that aggression, showing observational learning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "A variable-ratio schedule of reinforcement produces:",
+      "options": [
+        "Slow, steady responding",
+        "High, steady rates of responding resistant to extinction",
+        "Responding only at fixed time intervals",
+        "Rapid extinction when rewards stop"
+      ],
+      "answer": "High, steady rates of responding resistant to extinction",
+      "explanation": "Variable-ratio schedules (like slot machines) produce high, persistent response rates because reinforcement is unpredictable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "The process by which a conditioned response weakens when the CS is repeatedly presented without the US is called:",
+      "options": [
+        "Discrimination",
+        "Generalization",
+        "Extinction",
+        "Spontaneous recovery"
+      ],
+      "answer": "Extinction",
+      "explanation": "Extinction occurs when the conditioned stimulus is repeatedly presented without the unconditioned stimulus, weakening the conditioned response.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The working memory model was proposed by:",
+      "options": [
+        "Atkinson and Shiffrin",
+        "Baddeley and Hitch",
+        "Ebbinghaus",
+        "Tulving"
+      ],
+      "answer": "Baddeley and Hitch",
+      "explanation": "Baddeley and Hitch proposed the working memory model with components including the phonological loop and visuospatial sketchpad.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "The serial position effect refers to:",
+      "options": [
+        "Better memory for emotionally charged events",
+        "Better recall of items at the beginning and end of a list",
+        "Memory being affected by interference",
+        "Interference between similar memories"
+      ],
+      "answer": "Better recall of items at the beginning and end of a list",
+      "explanation": "The primacy effect (beginning) and recency effect (end) together create the serial position effect in memory recall.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Elizabeth Loftus's research on the misinformation effect showed that:",
+      "options": [
+        "Memory is always accurate",
+        "Leading questions can alter memories of events",
+        "Flashbulb memories are completely reliable",
+        "Long-term memory has unlimited capacity"
+      ],
+      "answer": "Leading questions can alter memories of events",
+      "explanation": "Loftus demonstrated that post-event information (like misleading questions) can distort eyewitness memory.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Procedural memory (knowing how to ride a bike) is stored in:",
+      "options": [
+        "Episodic memory",
+        "Semantic memory",
+        "Implicit (nondeclarative) memory",
+        "Working memory"
+      ],
+      "answer": "Implicit (nondeclarative) memory",
+      "explanation": "Procedural memory for skills and habits is a type of implicit (nondeclarative) memory, not requiring conscious recall.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "The tip-of-the-tongue phenomenon illustrates:",
+      "options": [
+        "Proactive interference",
+        "A retrieval failure",
+        "Encoding failure",
+        "Storage decay"
+      ],
+      "answer": "A retrieval failure",
+      "explanation": "The tip-of-the-tongue state occurs when information is stored but cannot be retrieved at that moment — a retrieval failure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A mental shortcut or rule of thumb used in decision making is called a:",
+      "options": [
+        "Algorithm",
+        "Heuristic",
+        "Schema",
+        "Concept"
+      ],
+      "answer": "Heuristic",
+      "explanation": "Heuristics are cognitive shortcuts that allow quick decision making but can lead to systematic errors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "The tendency to search for information confirming one's existing beliefs is:",
+      "options": [
+        "Framing effect",
+        "Confirmation bias",
+        "Anchoring bias",
+        "Availability heuristic"
+      ],
+      "answer": "Confirmation bias",
+      "explanation": "Confirmation bias is the tendency to favor information that confirms our preconceptions and ignore contradictory evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Chomsky's concept of a language acquisition device (LAD) suggests:",
+      "options": [
+        "Language is entirely learned through reinforcement",
+        "Humans are biologically predisposed to acquire language",
+        "Animals can learn human language fully",
+        "Language develops only in social contexts"
+      ],
+      "answer": "Humans are biologically predisposed to acquire language",
+      "explanation": "Chomsky proposed that humans have an innate LAD that facilitates rapid language acquisition in children.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "The Whorfian (Sapir-Whorf) hypothesis states that:",
+      "options": [
+        "Language is universal across cultures",
+        "Language influences thought and perception of reality",
+        "Thought is independent of language",
+        "Language develops before thought"
+      ],
+      "answer": "Language influences thought and perception of reality",
+      "explanation": "The linguistic relativity hypothesis proposes that the language we speak shapes how we think and perceive the world.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Mental fixation (functional fixedness) refers to:",
+      "options": [
+        "The inability to see new uses for familiar objects",
+        "Enhanced creativity under pressure",
+        "Memory for problem-solving strategies",
+        "Using algorithms instead of heuristics"
+      ],
+      "answer": "The inability to see new uses for familiar objects",
+      "explanation": "Functional fixedness is a cognitive bias where people can only see objects as used in their traditional way.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Maslow placed which need at the top of his hierarchy?",
+      "options": [
+        "Safety",
+        "Love and belonging",
+        "Self-actualization",
+        "Esteem"
+      ],
+      "answer": "Self-actualization",
+      "explanation": "Self-actualization — realizing one's full potential — is the highest level of Maslow's hierarchy of needs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "The James-Lange theory of emotion states that:",
+      "options": [
+        "Emotions precede physiological arousal",
+        "We experience emotions because we notice our physiological responses",
+        "Emotions and arousal occur simultaneously",
+        "Cognitive labels determine emotions"
+      ],
+      "answer": "We experience emotions because we notice our physiological responses",
+      "explanation": "James-Lange theory: we see a stimulus, have a physiological response, then interpret the response as an emotion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Intrinsic motivation refers to engaging in an activity:",
+      "options": [
+        "For external rewards",
+        "Out of internal interest or enjoyment",
+        "To avoid punishment",
+        "Because others expect it"
+      ],
+      "answer": "Out of internal interest or enjoyment",
+      "explanation": "Intrinsic motivation comes from within — doing something because it is inherently interesting or enjoyable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "The Yerkes-Dodson law suggests that performance is best at:",
+      "options": [
+        "Very low arousal",
+        "Very high arousal",
+        "Moderate levels of arousal",
+        "Zero arousal"
+      ],
+      "answer": "Moderate levels of arousal",
+      "explanation": "The Yerkes-Dodson law describes an inverted-U relationship between arousal and performance — optimal at moderate levels.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "The facial feedback hypothesis proposes that:",
+      "options": [
+        "Facial expressions result from emotions only",
+        "Facial expressions can influence the emotions we feel",
+        "Emotions are culturally determined",
+        "Only voluntary expressions reflect true emotion"
+      ],
+      "answer": "Facial expressions can influence the emotions we feel",
+      "explanation": "The facial feedback hypothesis suggests that our facial expressions can trigger or amplify corresponding emotional experiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Piaget's stage where children cannot yet take another person's perspective is the:",
+      "options": [
+        "Sensorimotor stage",
+        "Formal operational stage",
+        "Preoperational stage",
+        "Concrete operational stage"
+      ],
+      "answer": "Preoperational stage",
+      "explanation": "In Piaget's preoperational stage (ages 2–7), children are egocentric and cannot yet take others' perspectives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Object permanence develops in the:",
+      "options": [
+        "Preoperational stage",
+        "Sensorimotor stage",
+        "Formal operational stage",
+        "Concrete operational stage"
+      ],
+      "answer": "Sensorimotor stage",
+      "explanation": "Object permanence develops during Piaget's sensorimotor stage (birth to age 2).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Vygotsky's zone of proximal development (ZPD) refers to:",
+      "options": [
+        "Tasks a child can do independently",
+        "Tasks too difficult even with help",
+        "Tasks a child can do with guidance but not yet alone",
+        "The gap between emotional and cognitive development"
+      ],
+      "answer": "Tasks a child can do with guidance but not yet alone",
+      "explanation": "The ZPD is the range of tasks a learner can accomplish with scaffolding from a more knowledgeable person.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "According to Erikson, the central conflict of adolescence is:",
+      "options": [
+        "Industry vs. Inferiority",
+        "Autonomy vs. Shame",
+        "Identity vs. Role Confusion",
+        "Intimacy vs. Isolation"
+      ],
+      "answer": "Identity vs. Role Confusion",
+      "explanation": "Erikson's fifth stage (adolescence) centers on developing a coherent sense of identity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Secure attachment in infancy is associated with:",
+      "options": [
+        "An unresponsive caregiver",
+        "Consistent and sensitive caregiving",
+        "Frequent separation from caregivers",
+        "Inconsistent caregiving patterns"
+      ],
+      "answer": "Consistent and sensitive caregiving",
+      "explanation": "Ainsworth found that securely attached infants have caregivers who are consistently sensitive and responsive to their needs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Freud's concept of the 'id' refers to:",
+      "options": [
+        "The moral conscience",
+        "The rational decision-making self",
+        "Primitive instincts seeking immediate gratification",
+        "The conscious awareness"
+      ],
+      "answer": "Primitive instincts seeking immediate gratification",
+      "explanation": "Freud's id operates on the pleasure principle, seeking immediate satisfaction of instinctual drives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The Big Five personality factors include all EXCEPT:",
+      "options": [
+        "Openness",
+        "Psychoticism",
+        "Agreeableness",
+        "Conscientiousness"
+      ],
+      "answer": "Psychoticism",
+      "explanation": "The Big Five are Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (OCEAN). Psychoticism is from Eysenck's model.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "The Rorschach inkblot test is an example of a:",
+      "options": [
+        "Self-report inventory",
+        "Projective test",
+        "Behavioral observation measure",
+        "Neuropsychological assessment"
+      ],
+      "answer": "Projective test",
+      "explanation": "The Rorschach is a projective test where ambiguous stimuli are used to reveal unconscious thoughts and feelings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Carl Rogers emphasized which condition for therapeutic personality change?",
+      "options": [
+        "Strict behavioral contracts",
+        "Unconditional positive regard",
+        "Insight into unconscious conflicts",
+        "Systematic desensitization"
+      ],
+      "answer": "Unconditional positive regard",
+      "explanation": "Rogers believed that unconditional positive regard — accepting clients without judgment — is essential for growth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "According to social-cognitive theory, behavior is best predicted by:",
+      "options": [
+        "Unconscious drives alone",
+        "Traits alone",
+        "The interaction of person, behavior, and environment",
+        "Fixed genetic predispositions"
+      ],
+      "answer": "The interaction of person, behavior, and environment",
+      "explanation": "Bandura's reciprocal determinism posits that behavior, personal factors, and environment mutually influence one another.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "A test that measures what it intends to measure has:",
+      "options": [
+        "High reliability",
+        "High validity",
+        "Good standardization",
+        "Good norming"
+      ],
+      "answer": "High validity",
+      "explanation": "Validity refers to whether a test actually measures what it claims to measure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Spearman's 'g' refers to:",
+      "options": [
+        "Genetic influence on intelligence",
+        "A general factor underlying all intellectual abilities",
+        "Grade-point-average as intelligence",
+        "Crystallized intelligence only"
+      ],
+      "answer": "A general factor underlying all intellectual abilities",
+      "explanation": "Spearman proposed 'g' — a general intelligence factor — that underlies performance across different cognitive tasks.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "The Flynn Effect refers to:",
+      "options": [
+        "Declining intelligence over generations",
+        "Rising average IQ scores over time worldwide",
+        "Bias in standardized testing",
+        "The heritability of intelligence"
+      ],
+      "answer": "Rising average IQ scores over time worldwide",
+      "explanation": "The Flynn Effect describes the observed rise in average IQ scores across generations in many countries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "A standardized test has a mean of 100 and SD of 15. A score of 130 is:",
+      "options": [
+        "At the 50th percentile",
+        "Two standard deviations above the mean",
+        "Within the normal range",
+        "Below average"
+      ],
+      "answer": "Two standard deviations above the mean",
+      "explanation": "130 – 100 = 30 points above the mean, and 30/15 = 2 standard deviations above.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Gardner's theory of multiple intelligences was criticized primarily because:",
+      "options": [
+        "It ignored academic ability",
+        "It lacked consistent empirical support from factor analysis",
+        "It was too narrow in scope",
+        "It only applied to Western cultures"
+      ],
+      "answer": "It lacked consistent empirical support from factor analysis",
+      "explanation": "Critics argue Gardner's intelligences may be better described as talents or abilities, lacking strong psychometric evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "The DSM-5 is used primarily to:",
+      "options": [
+        "Prescribe medication for disorders",
+        "Classify and diagnose mental disorders",
+        "Provide therapeutic techniques",
+        "Measure intelligence quotients"
+      ],
+      "answer": "Classify and diagnose mental disorders",
+      "explanation": "The DSM-5 is the American Psychiatric Association's manual for classifying and diagnosing mental disorders.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Schizophrenia is characterized by positive symptoms that include:",
+      "options": [
+        "Flat affect and withdrawal",
+        "Hallucinations and delusions",
+        "Depression and anhedonia",
+        "Loss of cognitive abilities only"
+      ],
+      "answer": "Hallucinations and delusions",
+      "explanation": "Positive symptoms of schizophrenia (added experiences) include hallucinations, delusions, and disorganized thinking.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Major depressive disorder differs from bipolar disorder in that it:",
+      "options": [
+        "Involves episodes of mania",
+        "Only includes depressive episodes without mania",
+        "Is caused solely by genetics",
+        "Responds only to lithium treatment"
+      ],
+      "answer": "Only includes depressive episodes without mania",
+      "explanation": "Major depressive disorder involves depressive episodes without manic or hypomanic episodes, distinguishing it from bipolar disorder.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Obsessive-compulsive disorder (OCD) involves:",
+      "options": [
+        "Persistent flashbacks of trauma",
+        "Intrusive thoughts (obsessions) and repetitive behaviors (compulsions)",
+        "Sudden panic attacks without a trigger",
+        "Dissociation from reality"
+      ],
+      "answer": "Intrusive thoughts (obsessions) and repetitive behaviors (compulsions)",
+      "explanation": "OCD is characterized by unwanted, intrusive obsessions and repetitive compulsions performed to reduce anxiety.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "The diathesis-stress model proposes that disorders result from:",
+      "options": [
+        "Only genetic predispositions",
+        "Only environmental stressors",
+        "An interaction between genetic vulnerability and environmental stress",
+        "A purely neurochemical imbalance"
+      ],
+      "answer": "An interaction between genetic vulnerability and environmental stress",
+      "explanation": "The diathesis-stress model says disorders develop when a genetic predisposition (diathesis) interacts with environmental stressors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Cognitive-behavioral therapy (CBT) focuses on:",
+      "options": [
+        "Exploring childhood trauma only",
+        "Changing maladaptive thought patterns and behaviors",
+        "Providing empathy and unconditional regard",
+        "Using medication alongside talk therapy"
+      ],
+      "answer": "Changing maladaptive thought patterns and behaviors",
+      "explanation": "CBT targets the relationship between thoughts, feelings, and behaviors to change maladaptive patterns.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Systematic desensitization is a behavioral treatment for:",
+      "options": [
+        "Schizophrenia",
+        "Depression",
+        "Phobias and anxiety",
+        "Personality disorders"
+      ],
+      "answer": "Phobias and anxiety",
+      "explanation": "Systematic desensitization pairs relaxation techniques with gradual exposure to feared stimuli to treat phobias.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Which medication type is most commonly prescribed for depression?",
+      "options": [
+        "Antipsychotics",
+        "Benzodiazepines",
+        "Selective serotonin reuptake inhibitors (SSRIs)",
+        "Mood stabilizers"
+      ],
+      "answer": "Selective serotonin reuptake inhibitors (SSRIs)",
+      "explanation": "SSRIs (e.g., fluoxetine) are the first-line pharmacological treatment for depression due to their safety profile.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Free association is a technique used in:",
+      "options": [
+        "Cognitive therapy",
+        "Behavior modification",
+        "Psychoanalysis",
+        "Humanistic therapy"
+      ],
+      "answer": "Psychoanalysis",
+      "explanation": "Free association, developed by Freud, involves patients saying whatever comes to mind to reveal unconscious material.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Meta-analyses of psychotherapy research generally show that:",
+      "options": [
+        "No therapy is effective",
+        "Most established therapies produce similar positive outcomes",
+        "Only CBT is effective",
+        "Drug therapy always outperforms psychotherapy"
+      ],
+      "answer": "Most established therapies produce similar positive outcomes",
+      "explanation": "The 'Dodo bird verdict' — most bona fide therapies are roughly equally effective according to meta-analytic studies.",
+      "points": 1
+    }
   ],
   "questions": [
-    {"examType": "midterm", "order": 1, "type": "mc", "question": "Who established the first experimental psychology laboratory in 1879?", "options": ["William James", "Wilhelm Wundt", "Sigmund Freud", "John Watson"], "answer": "Wilhelm Wundt", "explanation": "Wundt opened the first formal psychology lab in Leipzig, Germany, marking psychology's birth as a science.", "points": 1},
-    {"examType": "midterm", "order": 2, "type": "mc", "question": "In a psychology experiment, the researcher changes the amount of sleep participants get. Sleep is the:", "options": ["Dependent variable", "Control variable", "Independent variable", "Confounding variable"], "answer": "Independent variable", "explanation": "The independent variable is the factor the researcher manipulates — in this case, hours of sleep.", "points": 1},
-    {"examType": "midterm", "order": 3, "type": "mc", "question": "Which neurotransmitter is most associated with mood regulation and depression?", "options": ["Dopamine", "Acetylcholine", "Serotonin", "GABA"], "answer": "Serotonin", "explanation": "Low serotonin levels are associated with depression; SSRIs increase serotonin availability.", "points": 1},
-    {"examType": "midterm", "order": 4, "type": "mc", "question": "The absolute threshold is the minimum stimulus intensity that can be detected:", "options": ["100% of the time", "75% of the time", "50% of the time", "25% of the time"], "answer": "50% of the time", "explanation": "By definition, the absolute threshold is the stimulus level detectable exactly 50% of the time.", "points": 1},
-    {"examType": "midterm", "order": 5, "type": "mc", "question": "REM sleep occurs approximately every:", "options": ["30 minutes", "60 minutes", "90 minutes", "120 minutes"], "answer": "90 minutes", "explanation": "Sleep cycles of approximately 90 minutes each include increasing periods of REM as the night progresses.", "points": 1},
-    {"examType": "midterm", "order": 6, "type": "mc", "question": "In Pavlov's experiments, salivation to the bell (after conditioning) is the:", "options": ["Unconditioned response", "Conditioned response", "Unconditioned stimulus", "Neutral response"], "answer": "Conditioned response", "explanation": "After conditioning, the bell (CS) elicits salivation (CR) — a learned response.", "points": 1},
-    {"examType": "midterm", "order": 7, "type": "mc", "question": "The part of long-term memory that stores facts and general knowledge is called:", "options": ["Procedural memory", "Episodic memory", "Semantic memory", "Working memory"], "answer": "Semantic memory", "explanation": "Semantic memory contains general factual knowledge about the world, independent of personal experience.", "points": 1},
-    {"examType": "midterm", "order": 8, "type": "mc", "question": "Framing effect refers to:", "options": ["The tendency to judge based on the first piece of information received", "How the presentation of information influences decision making", "Using past experiences to solve new problems", "The inability to change mental sets"], "answer": "How the presentation of information influences decision making", "explanation": "The framing effect shows that how choices are worded or presented significantly affects decisions.", "points": 1},
-    {"examType": "midterm", "order": 9, "type": "mc", "question": "According to drive-reduction theory, hunger is a:", "options": ["Secondary drive", "Primary drive", "Cognitive drive", "Social drive"], "answer": "Primary drive", "explanation": "Primary drives like hunger and thirst arise from biological needs and motivate behavior to restore homeostasis.", "points": 1},
-    {"examType": "midterm", "order": 10, "type": "mc", "question": "Conservation — understanding that quantity remains the same despite changes in shape — develops in Piaget's:", "options": ["Sensorimotor stage", "Preoperational stage", "Concrete operational stage", "Formal operational stage"], "answer": "Concrete operational stage", "explanation": "Children gain conservation (e.g., liquid, number) during the concrete operational stage (ages 7–11).", "points": 1},
-    {"examType": "midterm", "order": 11, "type": "mc", "question": "The superego in Freud's model represents:", "options": ["Unconscious desires", "The rational self", "Internalized moral standards", "Defense mechanisms only"], "answer": "Internalized moral standards", "explanation": "The superego represents internalized societal and parental rules, acting as the conscience.", "points": 1},
-    {"examType": "midterm", "order": 12, "type": "mc", "question": "A test is reliable if it:", "options": ["Measures what it claims to measure", "Produces consistent results across time", "Has been standardized on a large sample", "Predicts real-world performance"], "answer": "Produces consistent results across time", "explanation": "Reliability means consistency — a test produces similar scores when repeated under similar conditions.", "points": 1},
-    {"examType": "midterm", "order": 13, "type": "mc", "question": "The brain structure critical for forming new long-term declarative memories is the:", "options": ["Amygdala", "Hypothalamus", "Hippocampus", "Thalamus"], "answer": "Hippocampus", "explanation": "The hippocampus is critical for forming new long-term memories (declarative/explicit memory).", "points": 1},
-    {"examType": "midterm", "order": 14, "type": "mc", "question": "Gestalt psychology emphasized that:", "options": ["The whole is less than the sum of its parts", "The whole is greater than the sum of its parts", "Parts must be studied independently first", "Behavior is purely stimulus-response"], "answer": "The whole is greater than the sum of its parts", "explanation": "Gestalt psychologists argued that perception involves organizing elements into unified wholes that transcend individual parts.", "points": 1},
-    {"examType": "midterm", "order": 15, "type": "mc", "question": "Which schedule of reinforcement produces the slowest rate of extinction?", "options": ["Fixed-ratio", "Fixed-interval", "Variable-ratio", "Variable-interval"], "answer": "Variable-ratio", "explanation": "Variable-ratio schedules are most resistant to extinction because reinforcement is unpredictable.", "points": 1},
-    {"examType": "final", "order": 1, "type": "mc", "question": "The diathesis-stress model explains psychological disorders as resulting from:", "options": ["Only biological factors", "Only environmental trauma", "Genetic vulnerability interacting with environmental stress", "Purely cognitive distortions"], "answer": "Genetic vulnerability interacting with environmental stress", "explanation": "The diathesis-stress model proposes disorders emerge from the interaction of predisposition and stressful life events.", "points": 1},
-    {"examType": "final", "order": 2, "type": "mc", "question": "Systematic desensitization involves:", "options": ["Flooding patients with feared stimuli immediately", "Gradually pairing relaxation with increasing anxiety-provoking stimuli", "Cognitive restructuring of fearful thoughts", "Medication to reduce physiological arousal"], "answer": "Gradually pairing relaxation with increasing anxiety-provoking stimuli", "explanation": "Systematic desensitization uses a fear hierarchy, pairing relaxation with progressively feared stimuli.", "points": 1},
-    {"examType": "final", "order": 3, "type": "mc", "question": "Positive symptoms of schizophrenia include:", "options": ["Social withdrawal and flat affect", "Hallucinations and delusions", "Poverty of speech", "Loss of motivation"], "answer": "Hallucinations and delusions", "explanation": "Positive symptoms add to normal experience: hallucinations, delusions, and disorganized speech/behavior.", "points": 1},
-    {"examType": "final", "order": 4, "type": "mc", "question": "Observational learning requires all EXCEPT:", "options": ["Attention", "Retention", "Direct reinforcement of the observer", "Motor reproduction"], "answer": "Direct reinforcement of the observer", "explanation": "Bandura's observational learning (attention, retention, reproduction, motivation) does not require direct reinforcement of the learner.", "points": 1},
-    {"examType": "final", "order": 5, "type": "mc", "question": "The Big Five personality trait that predicts academic and occupational success most consistently is:", "options": ["Extraversion", "Openness", "Conscientiousness", "Agreeableness"], "answer": "Conscientiousness", "explanation": "Research consistently shows conscientiousness (organization, discipline, goal-directedness) predicts success across domains.", "points": 1},
-    {"examType": "final", "order": 6, "type": "mc", "question": "Electroconvulsive therapy (ECT) is most effective for:", "options": ["Schizophrenia", "Severe, treatment-resistant depression", "Anxiety disorders", "Antisocial personality disorder"], "answer": "Severe, treatment-resistant depression", "explanation": "ECT is used for severe depression that has not responded to other treatments and can produce rapid improvement.", "points": 1},
-    {"examType": "final", "order": 7, "type": "mc", "question": "The availability heuristic leads people to:", "options": ["Rely on the first piece of information encountered", "Judge likelihood based on how easily examples come to mind", "Seek information confirming existing beliefs", "Overestimate their own competence"], "answer": "Judge likelihood based on how easily examples come to mind", "explanation": "The availability heuristic estimates probability by how easily relevant examples are retrieved from memory.", "points": 1},
-    {"examType": "final", "order": 8, "type": "mc", "question": "Broca's area, when damaged, results in:", "options": ["Inability to understand language", "Difficulty producing speech", "Loss of long-term memory", "Visual processing deficits"], "answer": "Difficulty producing speech", "explanation": "Broca's area in the left frontal lobe is critical for speech production; damage causes expressive (Broca's) aphasia.", "points": 1},
-    {"examType": "final", "order": 9, "type": "mc", "question": "The two-factor theory of emotion (Schachter-Singer) proposes that emotion requires:", "options": ["Only physiological arousal", "Physiological arousal plus a cognitive label", "Only cognitive appraisal", "Facial expression to precede feeling"], "answer": "Physiological arousal plus a cognitive label", "explanation": "Schachter and Singer proposed that we experience emotion when arousal is attributed to a specific cause through cognitive labeling.", "points": 1},
-    {"examType": "final", "order": 10, "type": "mc", "question": "A psychologist using a projective test believes it reveals:", "options": ["Standardized trait scores", "Unconscious thoughts projected onto ambiguous stimuli", "Behavior-environment contingencies", "Neurological functioning"], "answer": "Unconscious thoughts projected onto ambiguous stimuli", "explanation": "Projective tests (e.g., TAT, Rorschach) assume people project unconscious feelings onto ambiguous images or scenarios.", "points": 1},
-    {"examType": "final", "order": 11, "type": "mc", "question": "Social-cognitive theorist Albert Bandura introduced the concept of:", "options": ["Unconditional positive regard", "Self-efficacy", "Collective unconscious", "Operant conditioning"], "answer": "Self-efficacy", "explanation": "Bandura proposed self-efficacy — belief in one's ability to perform behaviors — as a key predictor of achievement.", "points": 1},
-    {"examType": "final", "order": 12, "type": "mc", "question": "The Flynn Effect most likely reflects:", "options": ["Genetic improvement in intelligence", "Improved nutrition, education, and test-taking familiarity", "Changes in test design only", "Declining genetic diversity"], "answer": "Improved nutrition, education, and test-taking familiarity", "explanation": "Environmental factors such as better nutrition, education quality, and familiarity with standardized testing explain the Flynn Effect.", "points": 1},
-    {"examType": "final", "order": 13, "type": "mc", "question": "Erikson's stage of 'Generativity vs. Stagnation' occurs during:", "options": ["Adolescence", "Early adulthood", "Middle adulthood", "Late adulthood"], "answer": "Middle adulthood", "explanation": "During middle adulthood, people focus on contributing to society and future generations (generativity) vs. feeling unproductive.", "points": 1},
-    {"examType": "final", "order": 14, "type": "mc", "question": "The hindbrain structure most responsible for balance and coordinated movement is the:", "options": ["Medulla oblongata", "Reticular formation", "Cerebellum", "Pons"], "answer": "Cerebellum", "explanation": "The cerebellum coordinates voluntary movements, balance, and fine motor skills.", "points": 1},
-    {"examType": "final", "order": 15, "type": "mc", "question": "Which psychological disorder is characterized by alternating episodes of depression and mania?", "options": ["Schizophrenia", "Major depressive disorder", "Bipolar disorder", "Cyclothymia only"], "answer": "Bipolar disorder", "explanation": "Bipolar disorder involves cycling between depressive episodes and manic (or hypomanic) episodes.", "points": 1},
-    {"examType": "final", "order": 16, "type": "mc", "question": "Proactive interference occurs when:", "options": ["New learning disrupts old memories", "Old learning interferes with new memories", "Memories fade due to disuse", "Retrieval cues are absent"], "answer": "Old learning interferes with new memories", "explanation": "Proactive interference: previously learned information interferes with the ability to remember new information.", "points": 1},
-    {"examType": "final", "order": 17, "type": "mc", "question": "The hormone cortisol is primarily released during:", "options": ["Deep sleep", "Orgasm", "Stress responses", "Digestion"], "answer": "Stress responses", "explanation": "Cortisol is the primary stress hormone, released by the adrenal glands as part of the HPA axis response.", "points": 1},
-    {"examType": "final", "order": 18, "type": "mc", "question": "Which therapy technique involves exposing patients to their fears without relaxation until anxiety diminishes?", "options": ["Systematic desensitization", "Flooding (implosion therapy)", "Cognitive restructuring", "Aversion therapy"], "answer": "Flooding (implosion therapy)", "explanation": "Flooding exposes clients to maximum feared stimuli immediately, relying on extinction of the fear response.", "points": 1},
-    {"examType": "final", "order": 19, "type": "mc", "question": "The social-cognitive concept of 'reciprocal determinism' means:", "options": ["Social environments fully determine personality", "Genes and environment equally determine behavior", "Behavior, personal factors, and environment mutually influence each other", "Culture determines individual cognition"], "answer": "Behavior, personal factors, and environment mutually influence each other", "explanation": "Bandura's reciprocal determinism holds that behavior, internal personal factors, and external environment all interact bidirectionally.", "points": 1},
-    {"examType": "final", "order": 20, "type": "mc", "question": "The most scientifically supported explanation for phobias is:", "options": ["Unconscious death wish", "Conditioning and avoidance learning", "Cognitive distortions only", "Brain lesions"], "answer": "Conditioning and avoidance learning", "explanation": "Phobias develop through classical conditioning (fear association) and are maintained by operant avoidance behaviors.", "points": 1}
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Who established the first experimental psychology laboratory in 1879?",
+      "options": [
+        "William James",
+        "Wilhelm Wundt",
+        "Sigmund Freud",
+        "John Watson"
+      ],
+      "answer": "Wilhelm Wundt",
+      "explanation": "Wundt opened the first formal psychology lab in Leipzig, Germany, marking psychology's birth as a science.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "In a psychology experiment, the researcher changes the amount of sleep participants get. Sleep is the:",
+      "options": [
+        "Dependent variable",
+        "Control variable",
+        "Independent variable",
+        "Confounding variable"
+      ],
+      "answer": "Independent variable",
+      "explanation": "The independent variable is the factor the researcher manipulates — in this case, hours of sleep.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Which neurotransmitter is most associated with mood regulation and depression?",
+      "options": [
+        "Dopamine",
+        "Acetylcholine",
+        "Serotonin",
+        "GABA"
+      ],
+      "answer": "Serotonin",
+      "explanation": "Low serotonin levels are associated with depression; SSRIs increase serotonin availability.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "The absolute threshold is the minimum stimulus intensity that can be detected:",
+      "options": [
+        "100% of the time",
+        "75% of the time",
+        "50% of the time",
+        "25% of the time"
+      ],
+      "answer": "50% of the time",
+      "explanation": "By definition, the absolute threshold is the stimulus level detectable exactly 50% of the time.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "REM sleep occurs approximately every:",
+      "options": [
+        "30 minutes",
+        "60 minutes",
+        "90 minutes",
+        "120 minutes"
+      ],
+      "answer": "90 minutes",
+      "explanation": "Sleep cycles of approximately 90 minutes each include increasing periods of REM as the night progresses.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "In Pavlov's experiments, salivation to the bell (after conditioning) is the:",
+      "options": [
+        "Unconditioned response",
+        "Conditioned response",
+        "Unconditioned stimulus",
+        "Neutral response"
+      ],
+      "answer": "Conditioned response",
+      "explanation": "After conditioning, the bell (CS) elicits salivation (CR) — a learned response.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "The part of long-term memory that stores facts and general knowledge is called:",
+      "options": [
+        "Procedural memory",
+        "Episodic memory",
+        "Semantic memory",
+        "Working memory"
+      ],
+      "answer": "Semantic memory",
+      "explanation": "Semantic memory contains general factual knowledge about the world, independent of personal experience.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Framing effect refers to:",
+      "options": [
+        "The tendency to judge based on the first piece of information received",
+        "How the presentation of information influences decision making",
+        "Using past experiences to solve new problems",
+        "The inability to change mental sets"
+      ],
+      "answer": "How the presentation of information influences decision making",
+      "explanation": "The framing effect shows that how choices are worded or presented significantly affects decisions.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "According to drive-reduction theory, hunger is a:",
+      "options": [
+        "Secondary drive",
+        "Primary drive",
+        "Cognitive drive",
+        "Social drive"
+      ],
+      "answer": "Primary drive",
+      "explanation": "Primary drives like hunger and thirst arise from biological needs and motivate behavior to restore homeostasis.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Conservation — understanding that quantity remains the same despite changes in shape — develops in Piaget's:",
+      "options": [
+        "Sensorimotor stage",
+        "Preoperational stage",
+        "Concrete operational stage",
+        "Formal operational stage"
+      ],
+      "answer": "Concrete operational stage",
+      "explanation": "Children gain conservation (e.g., liquid, number) during the concrete operational stage (ages 7–11).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The superego in Freud's model represents:",
+      "options": [
+        "Unconscious desires",
+        "The rational self",
+        "Internalized moral standards",
+        "Defense mechanisms only"
+      ],
+      "answer": "Internalized moral standards",
+      "explanation": "The superego represents internalized societal and parental rules, acting as the conscience.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "A test is reliable if it:",
+      "options": [
+        "Measures what it claims to measure",
+        "Produces consistent results across time",
+        "Has been standardized on a large sample",
+        "Predicts real-world performance"
+      ],
+      "answer": "Produces consistent results across time",
+      "explanation": "Reliability means consistency — a test produces similar scores when repeated under similar conditions.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "The brain structure critical for forming new long-term declarative memories is the:",
+      "options": [
+        "Amygdala",
+        "Hypothalamus",
+        "Hippocampus",
+        "Thalamus"
+      ],
+      "answer": "Hippocampus",
+      "explanation": "The hippocampus is critical for forming new long-term memories (declarative/explicit memory).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Gestalt psychology emphasized that:",
+      "options": [
+        "The whole is less than the sum of its parts",
+        "The whole is greater than the sum of its parts",
+        "Parts must be studied independently first",
+        "Behavior is purely stimulus-response"
+      ],
+      "answer": "The whole is greater than the sum of its parts",
+      "explanation": "Gestalt psychologists argued that perception involves organizing elements into unified wholes that transcend individual parts.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Which schedule of reinforcement produces the slowest rate of extinction?",
+      "options": [
+        "Fixed-ratio",
+        "Fixed-interval",
+        "Variable-ratio",
+        "Variable-interval"
+      ],
+      "answer": "Variable-ratio",
+      "explanation": "Variable-ratio schedules are most resistant to extinction because reinforcement is unpredictable.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "The diathesis-stress model explains psychological disorders as resulting from:",
+      "options": [
+        "Only biological factors",
+        "Only environmental trauma",
+        "Genetic vulnerability interacting with environmental stress",
+        "Purely cognitive distortions"
+      ],
+      "answer": "Genetic vulnerability interacting with environmental stress",
+      "explanation": "The diathesis-stress model proposes disorders emerge from the interaction of predisposition and stressful life events.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Systematic desensitization involves:",
+      "options": [
+        "Flooding patients with feared stimuli immediately",
+        "Gradually pairing relaxation with increasing anxiety-provoking stimuli",
+        "Cognitive restructuring of fearful thoughts",
+        "Medication to reduce physiological arousal"
+      ],
+      "answer": "Gradually pairing relaxation with increasing anxiety-provoking stimuli",
+      "explanation": "Systematic desensitization uses a fear hierarchy, pairing relaxation with progressively feared stimuli.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Positive symptoms of schizophrenia include:",
+      "options": [
+        "Social withdrawal and flat affect",
+        "Hallucinations and delusions",
+        "Poverty of speech",
+        "Loss of motivation"
+      ],
+      "answer": "Hallucinations and delusions",
+      "explanation": "Positive symptoms add to normal experience: hallucinations, delusions, and disorganized speech/behavior.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Observational learning requires all EXCEPT:",
+      "options": [
+        "Attention",
+        "Retention",
+        "Direct reinforcement of the observer",
+        "Motor reproduction"
+      ],
+      "answer": "Direct reinforcement of the observer",
+      "explanation": "Bandura's observational learning (attention, retention, reproduction, motivation) does not require direct reinforcement of the learner.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "The Big Five personality trait that predicts academic and occupational success most consistently is:",
+      "options": [
+        "Extraversion",
+        "Openness",
+        "Conscientiousness",
+        "Agreeableness"
+      ],
+      "answer": "Conscientiousness",
+      "explanation": "Research consistently shows conscientiousness (organization, discipline, goal-directedness) predicts success across domains.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Electroconvulsive therapy (ECT) is most effective for:",
+      "options": [
+        "Schizophrenia",
+        "Severe, treatment-resistant depression",
+        "Anxiety disorders",
+        "Antisocial personality disorder"
+      ],
+      "answer": "Severe, treatment-resistant depression",
+      "explanation": "ECT is used for severe depression that has not responded to other treatments and can produce rapid improvement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "The availability heuristic leads people to:",
+      "options": [
+        "Rely on the first piece of information encountered",
+        "Judge likelihood based on how easily examples come to mind",
+        "Seek information confirming existing beliefs",
+        "Overestimate their own competence"
+      ],
+      "answer": "Judge likelihood based on how easily examples come to mind",
+      "explanation": "The availability heuristic estimates probability by how easily relevant examples are retrieved from memory.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Broca's area, when damaged, results in:",
+      "options": [
+        "Inability to understand language",
+        "Difficulty producing speech",
+        "Loss of long-term memory",
+        "Visual processing deficits"
+      ],
+      "answer": "Difficulty producing speech",
+      "explanation": "Broca's area in the left frontal lobe is critical for speech production; damage causes expressive (Broca's) aphasia.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "The two-factor theory of emotion (Schachter-Singer) proposes that emotion requires:",
+      "options": [
+        "Only physiological arousal",
+        "Physiological arousal plus a cognitive label",
+        "Only cognitive appraisal",
+        "Facial expression to precede feeling"
+      ],
+      "answer": "Physiological arousal plus a cognitive label",
+      "explanation": "Schachter and Singer proposed that we experience emotion when arousal is attributed to a specific cause through cognitive labeling.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "A psychologist using a projective test believes it reveals:",
+      "options": [
+        "Standardized trait scores",
+        "Unconscious thoughts projected onto ambiguous stimuli",
+        "Behavior-environment contingencies",
+        "Neurological functioning"
+      ],
+      "answer": "Unconscious thoughts projected onto ambiguous stimuli",
+      "explanation": "Projective tests (e.g., TAT, Rorschach) assume people project unconscious feelings onto ambiguous images or scenarios.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Social-cognitive theorist Albert Bandura introduced the concept of:",
+      "options": [
+        "Unconditional positive regard",
+        "Self-efficacy",
+        "Collective unconscious",
+        "Operant conditioning"
+      ],
+      "answer": "Self-efficacy",
+      "explanation": "Bandura proposed self-efficacy — belief in one's ability to perform behaviors — as a key predictor of achievement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "The Flynn Effect most likely reflects:",
+      "options": [
+        "Genetic improvement in intelligence",
+        "Improved nutrition, education, and test-taking familiarity",
+        "Changes in test design only",
+        "Declining genetic diversity"
+      ],
+      "answer": "Improved nutrition, education, and test-taking familiarity",
+      "explanation": "Environmental factors such as better nutrition, education quality, and familiarity with standardized testing explain the Flynn Effect.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Erikson's stage of 'Generativity vs. Stagnation' occurs during:",
+      "options": [
+        "Adolescence",
+        "Early adulthood",
+        "Middle adulthood",
+        "Late adulthood"
+      ],
+      "answer": "Middle adulthood",
+      "explanation": "During middle adulthood, people focus on contributing to society and future generations (generativity) vs. feeling unproductive.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "The hindbrain structure most responsible for balance and coordinated movement is the:",
+      "options": [
+        "Medulla oblongata",
+        "Reticular formation",
+        "Cerebellum",
+        "Pons"
+      ],
+      "answer": "Cerebellum",
+      "explanation": "The cerebellum coordinates voluntary movements, balance, and fine motor skills.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Which psychological disorder is characterized by alternating episodes of depression and mania?",
+      "options": [
+        "Schizophrenia",
+        "Major depressive disorder",
+        "Bipolar disorder",
+        "Cyclothymia only"
+      ],
+      "answer": "Bipolar disorder",
+      "explanation": "Bipolar disorder involves cycling between depressive episodes and manic (or hypomanic) episodes.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Proactive interference occurs when:",
+      "options": [
+        "New learning disrupts old memories",
+        "Old learning interferes with new memories",
+        "Memories fade due to disuse",
+        "Retrieval cues are absent"
+      ],
+      "answer": "Old learning interferes with new memories",
+      "explanation": "Proactive interference: previously learned information interferes with the ability to remember new information.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "The hormone cortisol is primarily released during:",
+      "options": [
+        "Deep sleep",
+        "Orgasm",
+        "Stress responses",
+        "Digestion"
+      ],
+      "answer": "Stress responses",
+      "explanation": "Cortisol is the primary stress hormone, released by the adrenal glands as part of the HPA axis response.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which therapy technique involves exposing patients to their fears without relaxation until anxiety diminishes?",
+      "options": [
+        "Systematic desensitization",
+        "Flooding (implosion therapy)",
+        "Cognitive restructuring",
+        "Aversion therapy"
+      ],
+      "answer": "Flooding (implosion therapy)",
+      "explanation": "Flooding exposes clients to maximum feared stimuli immediately, relying on extinction of the fear response.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "The social-cognitive concept of 'reciprocal determinism' means:",
+      "options": [
+        "Social environments fully determine personality",
+        "Genes and environment equally determine behavior",
+        "Behavior, personal factors, and environment mutually influence each other",
+        "Culture determines individual cognition"
+      ],
+      "answer": "Behavior, personal factors, and environment mutually influence each other",
+      "explanation": "Bandura's reciprocal determinism holds that behavior, internal personal factors, and external environment all interact bidirectionally.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "The most scientifically supported explanation for phobias is:",
+      "options": [
+        "Unconscious death wish",
+        "Conditioning and avoidance learning",
+        "Cognitive distortions only",
+        "Brain lesions"
+      ],
+      "answer": "Conditioning and avoidance learning",
+      "explanation": "Phobias develop through classical conditioning (fear association) and are maintained by operant avoidance behaviors.",
+      "points": 1
+    }
   ]
 }

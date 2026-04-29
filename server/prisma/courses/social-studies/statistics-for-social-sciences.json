@@ -2,7 +2,7 @@
   "slug": "statistics-for-social-sciences",
   "name": "Statistics for Social Sciences",
   "nameZh": "社会科学统计学",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Social Studies",
   "type": "Core",
   "description": "Applied statistics for understanding social phenomena — data collection, survey design, descriptive and inferential statistics, correlation, regression, and critically reading quantitative social research.",
@@ -29,7 +29,7 @@
       "title": "Types of Data & Measurement",
       "titleZh": "数据类型与测量层次",
       "objectives": "Distinguish between nominal, ordinal, interval, and ratio levels of measurement; explain operationalization of social concepts.",
-      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-1-definitions-of-statistics-probability-and-key-terms",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 1.1: Definitions and Key Terms",
       "videoUrl": "https://www.khanacademy.org/math/statistics-probability/designing-studies/statistics-overview/v/individuals-variables-and-categorical-quantitative-data",
       "videoNote": "Khan Academy — Categorical and Quantitative Data",
@@ -45,7 +45,7 @@
       "title": "Survey Design & Sampling",
       "titleZh": "问卷设计与抽样方法",
       "objectives": "Construct well-designed survey questions; compare sampling methods; identify sources of bias and their effects on results.",
-      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-2-data-sampling-and-variation-in-data-and-sampling",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 1.2: Data, Sampling, and Variation",
       "videoUrl": "https://www.khanacademy.org/math/statistics-probability/designing-studies/sampling-methods-stats/v/techniques-for-random-sampling-and-avoiding-bias",
       "videoNote": "Khan Academy — Sampling Methods and Avoiding Bias",
@@ -54,7 +54,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/designing-studies/sampling-methods-stats/e/identifying-sampling-methods",
       "practiceNote": "Khan Academy — Identifying Sampling Methods",
       "assignment": "Design a 5-question survey on a social issue of your choice. For each question, identify potential bias and revise it. Specify the sampling method you would use and explain why.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 4,
@@ -70,14 +70,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/displaying-describing-data/quantitative-data-graphs/e/creating-histograms",
       "practiceNote": "Khan Academy — Creating and Interpreting Histograms",
       "assignment": "Using publicly available data (e.g., Census income data), create a frequency table and histogram. Describe the shape of the distribution and what it tells you about inequality.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 5,
       "title": "Measures of Center & Spread",
       "titleZh": "集中趋势与离散趋势的度量",
       "objectives": "Calculate and interpret mean, median, mode, variance, standard deviation, and IQR; choose the appropriate measure for different data types.",
-      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/2-3-measures-of-the-location-of-the-data",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/2-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 2.3–2.7: Measures of Center and Spread",
       "videoUrl": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/statistics-intro-mean-median-and-mode",
       "videoNote": "Khan Academy — Mean, Median, and Mode",
@@ -86,7 +86,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/e/variance",
       "practiceNote": "Khan Academy — Calculating Variance and Standard Deviation",
       "assignment": "Given a dataset of household incomes in a neighborhood, calculate mean, median, and standard deviation. Explain why the median is often preferred over the mean for income data.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 6,
@@ -102,7 +102,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/probability-library/basic-theoretical-probability/e/probability",
       "practiceNote": "Khan Academy — Probability Practice",
       "assignment": "A news headline states: 'People who drink coffee are 50% more likely to develop anxiety.' Evaluate this claim. Compute a hypothetical relative risk and odds ratio using made-up but realistic numbers, and explain the base rate fallacy in this context.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 7,
@@ -118,7 +118,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/normal-distributions-library/e/empirical-rule",
       "practiceNote": "Khan Academy — Empirical Rule Practice",
       "assignment": "A standardized test has a mean of 500 and SD of 100. Calculate z-scores for scores of 350, 500, and 650. Determine the percentile for each and explain what this tells us about the test-takers.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 8,
@@ -134,14 +134,14 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/scatterplots-and-correlation/e/correlation-intuition",
       "practiceNote": "Khan Academy — Correlation Intuition",
       "assignment": "Find or generate a dataset with two social variables (e.g., education years and income). Create a scatterplot, estimate the direction and strength of correlation, and write a paragraph explaining what conclusions you can and cannot draw.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 9,
       "title": "Simple Linear Regression",
       "titleZh": "简单线性回归",
       "objectives": "Interpret the regression equation, slope, and intercept; use regression to make predictions; evaluate model fit using R².",
-      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/12-3-the-regression-equation",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/12-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 12.3: The Regression Equation",
       "videoUrl": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/regression-library/v/regression-line-example",
       "videoNote": "Khan Academy — Regression Line Example",
@@ -166,7 +166,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/regression-library/e/calculating-and-interpreting-residuals",
       "practiceNote": "Khan Academy — Residuals Practice",
       "assignment": "A researcher regresses income on education alone (r² = 0.25), then adds age and gender to get r² = 0.48. Explain in 200 words what changed and why controlling for confounders matters in social research.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 11,
@@ -182,7 +182,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/estimating-population-proportion/e/calculating-confidence-intervals-for-proportions",
       "practiceNote": "Khan Academy — Calculating Confidence Intervals",
       "assignment": "A political poll reports 52% support for a candidate with a ±3% margin of error at 95% confidence. Explain what this means, what it does not mean, and how you would correctly report this finding to a general audience.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 12,
@@ -205,7 +205,7 @@
       "title": "Critically Reading Research",
       "titleZh": "批判性阅读研究报告",
       "objectives": "Evaluate study design quality; spot misleading statistics and data visualizations; assess how media reports quantitative findings.",
-      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-3-frequency-relative-frequency-and-cumulative-frequency",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 1.3: Frequency and Data Presentation",
       "videoUrl": "https://www.khanacademy.org/math/statistics-probability/designing-studies/experiments-stats/v/identifying-controlled-experiment-vs-observational-study",
       "videoNote": "Khan Academy — Experiment vs. Observational Study",
@@ -214,7 +214,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/designing-studies/experiments-stats/e/observational-studies-and-experiments",
       "practiceNote": "Khan Academy — Observational Studies vs. Experiments",
       "assignment": "Find a news article reporting a scientific or social study. Evaluate: (1) Was it experimental or observational? (2) Is causation claimed from correlation? (3) Is the sample representative? (4) Is the graph (if any) misleading? Write a 300-word critique.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 14,
@@ -230,116 +230,1501 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/two-way-tables-for-categorical-data/e/interpreting-two-way-tables",
       "practiceNote": "Khan Academy — Interpreting Two-Way Tables",
       "assignment": "Final project: Choose a social issue (e.g., gender pay gap, school funding inequality, housing costs). Collect or download real data, produce at least two visualizations, compute relevant descriptive statistics, run a correlation or regression, and write a 500-word report interpreting your findings and their policy implications.",
-      "estimatedHrs": 5.0
+      "estimatedHrs": 5
     }
   ],
   "questions": [
-    { "examType": "midterm", "order": 1, "type": "mc", "question": "Which of the following is the best reason social scientists use statistics?", "options": ["To make research sound more scientific", "To systematically describe patterns and test hypotheses about social behavior", "To replace qualitative methods entirely", "To avoid interviewing people"], "answer": "To systematically describe patterns and test hypotheses about social behavior", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 2, "type": "mc", "question": "A researcher measures 'political ideology' on a scale of 1 (far left) to 7 (far right). This is best classified as:", "options": ["Nominal", "Ratio", "Ordinal", "Interval"], "answer": "Ordinal", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 3, "type": "mc", "question": "Which level of measurement has a meaningful true zero?", "options": ["Nominal", "Ordinal", "Interval", "Ratio"], "answer": "Ratio", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 4, "type": "mc", "question": "Operationalization refers to:", "options": ["Conducting a military-style study", "Defining how an abstract concept will be measured in practice", "Removing outliers from a dataset", "Choosing a sample size"], "answer": "Defining how an abstract concept will be measured in practice", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 5, "type": "mc", "question": "In random sampling, every member of the population:", "options": ["Must be surveyed", "Has an equal chance of being selected", "Is grouped by characteristic first", "Is selected by convenience"], "answer": "Has an equal chance of being selected", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 6, "type": "mc", "question": "A histogram with its tail extending to the right is described as:", "options": ["Negatively skewed", "Symmetric", "Positively skewed", "Bimodal"], "answer": "Positively skewed", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 7, "type": "mc", "question": "Which measure of center is most affected by extreme outliers?", "options": ["Median", "Mode", "Mean", "IQR"], "answer": "Mean", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 8, "type": "mc", "question": "The interquartile range (IQR) is defined as:", "options": ["The range between the minimum and maximum", "Q3 minus Q1", "The standard deviation squared", "The mean minus the median"], "answer": "Q3 minus Q1", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 9, "type": "mc", "question": "If a disease affects 2 out of 1000 people in a general population, and 4 out of 1000 smokers, the relative risk for smokers is:", "options": ["0.5", "1.0", "2.0", "4.0"], "answer": "2.0", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 10, "type": "mc", "question": "The base rate fallacy occurs when:", "options": ["A researcher uses too large a sample", "A test has a very high false positive rate", "People ignore the underlying frequency of an event when evaluating probability", "Survey questions are biased"], "answer": "People ignore the underlying frequency of an event when evaluating probability", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 11, "type": "mc", "question": "In a normal distribution, approximately what percentage of data falls within one standard deviation of the mean?", "options": ["50%", "68%", "95%", "99.7%"], "answer": "68%", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 12, "type": "mc", "question": "A z-score of -1.5 indicates that an observation is:", "options": ["1.5 standard deviations above the mean", "1.5 standard deviations below the mean", "In the 85th percentile", "An outlier by definition"], "answer": "1.5 standard deviations below the mean", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 13, "type": "mc", "question": "Which of the following survey questions is most clearly biased?", "options": ["How often do you vote?", "Do you support the irresponsible decision to cut school funding?", "What is your annual household income?", "How many hours per week do you work?"], "answer": "Do you support the irresponsible decision to cut school funding?", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 14, "type": "mc", "question": "Stratified sampling involves:", "options": ["Selecting every 10th person on a list", "Dividing the population into subgroups and sampling from each", "Asking volunteers to participate", "Selecting the most accessible respondents"], "answer": "Dividing the population into subgroups and sampling from each", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 15, "type": "short-answer", "question": "Explain the difference between a population parameter and a sample statistic. Give one example of each in the context of social research on unemployment rates.", "options": null, "answer": "A population parameter is a numerical value describing the entire population (e.g., the true national unemployment rate). A sample statistic is a value computed from a subset (e.g., the unemployment rate found in a survey of 2,000 workers, used to estimate the national rate).", "explanation": "", "points": 2 },
-    { "examType": "final", "order": 1, "type": "mc", "question": "Which of the following is a ratio-level variable?", "options": ["Religion (Catholic, Protestant, Other)", "Temperature in Celsius", "Number of years of education", "Satisfaction rating (1–5)"], "answer": "Number of years of education", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 2, "type": "mc", "question": "A frequency table showing the proportion of each category is called a:", "options": ["Cumulative frequency table", "Relative frequency table", "Cross-tabulation", "Contingency matrix"], "answer": "Relative frequency table", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 3, "type": "mc", "question": "Which statistic is most appropriate for describing the center of a strongly skewed income distribution?", "options": ["Mean", "Standard deviation", "Median", "Variance"], "answer": "Median", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 4, "type": "mc", "question": "A Pearson correlation of r = -0.82 indicates:", "options": ["A weak negative relationship", "A strong positive relationship", "A strong negative relationship", "No relationship"], "answer": "A strong negative relationship", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 5, "type": "mc", "question": "Spearman's rho is preferred over Pearson r when:", "options": ["Sample sizes are very large", "Data are normally distributed", "Data are ordinal or not normally distributed", "You are predicting a ratio-level outcome"], "answer": "Data are ordinal or not normally distributed", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 6, "type": "mc", "question": "In a regression equation ŷ = 2.5x + 10, the slope of 2.5 means:", "options": ["The predicted value of y when x = 0 is 2.5", "For each one-unit increase in x, y is predicted to increase by 2.5", "There is a 2.5% chance of the relationship being real", "The correlation coefficient is 2.5"], "answer": "For each one-unit increase in x, y is predicted to increase by 2.5", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 7, "type": "mc", "question": "R² = 0.36 in a regression model means:", "options": ["The slope is 0.36", "36% of the variance in the outcome is explained by the predictor(s)", "There is a 36% chance the model is correct", "The correlation is 0.36"], "answer": "36% of the variance in the outcome is explained by the predictor(s)", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 8, "type": "mc", "question": "A confounder in regression analysis is:", "options": ["A variable with no effect on the outcome", "A variable that is related to both the predictor and the outcome, potentially distorting results", "The intercept of the regression line", "An observation with a very high residual"], "answer": "A variable that is related to both the predictor and the outcome, potentially distorting results", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 9, "type": "mc", "question": "A 95% confidence interval for a mean means:", "options": ["There is a 95% probability the true mean is in this specific interval", "If we repeated sampling many times, 95% of the intervals constructed would contain the true mean", "5% of the data falls outside the interval", "The sample mean has a 95% chance of being correct"], "answer": "If we repeated sampling many times, 95% of the intervals constructed would contain the true mean", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 10, "type": "mc", "question": "As sample size increases, the margin of error in a confidence interval:", "options": ["Increases", "Stays the same", "Decreases", "Becomes negative"], "answer": "Decreases", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 11, "type": "mc", "question": "A p-value of 0.04 means:", "options": ["There is a 4% probability the null hypothesis is true", "If the null hypothesis were true, there is a 4% chance of observing results this extreme or more", "The effect size is 4%", "The study is 96% reliable"], "answer": "If the null hypothesis were true, there is a 4% chance of observing results this extreme or more", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 12, "type": "mc", "question": "A chi-square test is used to:", "options": ["Compare means between two groups", "Test relationships between two categorical variables", "Calculate correlation between two continuous variables", "Estimate a regression slope"], "answer": "Test relationships between two categorical variables", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 13, "type": "mc", "question": "The replication crisis in social science refers to:", "options": ["The difficulty of collecting data twice", "The widespread failure to reproduce many published study findings", "Researchers copying each other's results", "Too many studies using the same dataset"], "answer": "The widespread failure to reproduce many published study findings", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 14, "type": "mc", "question": "A graph that starts its y-axis at 70 instead of 0 for data ranging from 72% to 78% is an example of:", "options": ["A valid zoom-in technique", "A misleading visualization that exaggerates differences", "Standard practice in research", "A logarithmic scale"], "answer": "A misleading visualization that exaggerates differences", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 15, "type": "mc", "question": "Which study design best establishes causation?", "options": ["A cross-sectional survey", "A case study", "A randomized controlled experiment", "A correlational analysis"], "answer": "A randomized controlled experiment", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 16, "type": "mc", "question": "When ice cream sales and drowning rates are positively correlated, the most likely explanation is:", "options": ["Ice cream causes drowning", "Drowning causes people to eat ice cream", "A third variable (hot weather) causes both", "The correlation is purely coincidental and meaningless"], "answer": "A third variable (hot weather) causes both", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 17, "type": "mc", "question": "Publication bias in social science means:", "options": ["Journals are biased against certain topics", "Studies with significant results are more likely to be published than null results", "Researchers publish only positive reviews", "Data is biased by the publication format"], "answer": "Studies with significant results are more likely to be published than null results", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 18, "type": "mc", "question": "Which of the following is the best indicator that a data project is rigorous?", "options": ["The conclusions confirm what the researcher expected", "The sample is large, representative, and the analysis matches the research question", "The report uses complex statistical jargon", "The dataset comes from a government source"], "answer": "The sample is large, representative, and the analysis matches the research question", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 19, "type": "short-answer", "question": "A researcher finds that countries with more TVs per capita have lower infant mortality rates. Explain why this correlation does not mean TVs reduce infant mortality. What concept explains this relationship, and what would a better study design look like?", "options": null, "answer": "TVs per capita is a proxy for overall wealth; wealthier countries both own more TVs and have better healthcare. The concept is confounding: a third variable (national wealth) causes both outcomes. A better design would control for GDP per capita or use a natural experiment comparing regions with and without TV access while holding economic conditions constant.", "explanation": "", "points": 2 },
-    { "examType": "final", "order": 20, "type": "short-answer", "question": "You are hired to study whether a new after-school tutoring program improves test scores. Describe how you would design this study to produce valid, generalizable results. Identify the key statistical tools you would use from this course.", "options": null, "answer": "I would randomly assign students to a treatment group (tutoring) and a control group (no tutoring) to ensure causal inference. I would use a large, representative sample from the target population. Pre- and post-test scores would be compared using a t-test for independent samples to assess significance, a confidence interval to estimate the effect size range, and a regression controlling for prior achievement and socioeconomic status to isolate the program's effect. R² would indicate how much variance in scores the model explains.", "explanation": "", "points": 2 }
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is the best reason social scientists use statistics?",
+      "options": [
+        "To make research sound more scientific",
+        "To systematically describe patterns and test hypotheses about social behavior",
+        "To replace qualitative methods entirely",
+        "To avoid interviewing people"
+      ],
+      "answer": "To systematically describe patterns and test hypotheses about social behavior",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "A researcher measures 'political ideology' on a scale of 1 (far left) to 7 (far right). This is best classified as:",
+      "options": [
+        "Nominal",
+        "Ratio",
+        "Ordinal",
+        "Interval"
+      ],
+      "answer": "Ordinal",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Which level of measurement has a meaningful true zero?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "answer": "Ratio",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Operationalization refers to:",
+      "options": [
+        "Conducting a military-style study",
+        "Defining how an abstract concept will be measured in practice",
+        "Removing outliers from a dataset",
+        "Choosing a sample size"
+      ],
+      "answer": "Defining how an abstract concept will be measured in practice",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "In random sampling, every member of the population:",
+      "options": [
+        "Must be surveyed",
+        "Has an equal chance of being selected",
+        "Is grouped by characteristic first",
+        "Is selected by convenience"
+      ],
+      "answer": "Has an equal chance of being selected",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A histogram with its tail extending to the right is described as:",
+      "options": [
+        "Negatively skewed",
+        "Symmetric",
+        "Positively skewed",
+        "Bimodal"
+      ],
+      "answer": "Positively skewed",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Which measure of center is most affected by extreme outliers?",
+      "options": [
+        "Median",
+        "Mode",
+        "Mean",
+        "IQR"
+      ],
+      "answer": "Mean",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "The interquartile range (IQR) is defined as:",
+      "options": [
+        "The range between the minimum and maximum",
+        "Q3 minus Q1",
+        "The standard deviation squared",
+        "The mean minus the median"
+      ],
+      "answer": "Q3 minus Q1",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "If a disease affects 2 out of 1000 people in a general population, and 4 out of 1000 smokers, the relative risk for smokers is:",
+      "options": [
+        "0.5",
+        "1.0",
+        "2.0",
+        "4.0"
+      ],
+      "answer": "2.0",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "The base rate fallacy occurs when:",
+      "options": [
+        "A researcher uses too large a sample",
+        "A test has a very high false positive rate",
+        "People ignore the underlying frequency of an event when evaluating probability",
+        "Survey questions are biased"
+      ],
+      "answer": "People ignore the underlying frequency of an event when evaluating probability",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "In a normal distribution, approximately what percentage of data falls within one standard deviation of the mean?",
+      "options": [
+        "50%",
+        "68%",
+        "95%",
+        "99.7%"
+      ],
+      "answer": "68%",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "A z-score of -1.5 indicates that an observation is:",
+      "options": [
+        "1.5 standard deviations above the mean",
+        "1.5 standard deviations below the mean",
+        "In the 85th percentile",
+        "An outlier by definition"
+      ],
+      "answer": "1.5 standard deviations below the mean",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Which of the following survey questions is most clearly biased?",
+      "options": [
+        "How often do you vote?",
+        "Do you support the irresponsible decision to cut school funding?",
+        "What is your annual household income?",
+        "How many hours per week do you work?"
+      ],
+      "answer": "Do you support the irresponsible decision to cut school funding?",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Stratified sampling involves:",
+      "options": [
+        "Selecting every 10th person on a list",
+        "Dividing the population into subgroups and sampling from each",
+        "Asking volunteers to participate",
+        "Selecting the most accessible respondents"
+      ],
+      "answer": "Dividing the population into subgroups and sampling from each",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short-answer",
+      "question": "Explain the difference between a population parameter and a sample statistic. Give one example of each in the context of social research on unemployment rates.",
+      "options": null,
+      "answer": "A population parameter is a numerical value describing the entire population (e.g., the true national unemployment rate). A sample statistic is a value computed from a subset (e.g., the unemployment rate found in a survey of 2,000 workers, used to estimate the national rate).",
+      "explanation": "",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is a ratio-level variable?",
+      "options": [
+        "Religion (Catholic, Protestant, Other)",
+        "Temperature in Celsius",
+        "Number of years of education",
+        "Satisfaction rating (1–5)"
+      ],
+      "answer": "Number of years of education",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "A frequency table showing the proportion of each category is called a:",
+      "options": [
+        "Cumulative frequency table",
+        "Relative frequency table",
+        "Cross-tabulation",
+        "Contingency matrix"
+      ],
+      "answer": "Relative frequency table",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Which statistic is most appropriate for describing the center of a strongly skewed income distribution?",
+      "options": [
+        "Mean",
+        "Standard deviation",
+        "Median",
+        "Variance"
+      ],
+      "answer": "Median",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "A Pearson correlation of r = -0.82 indicates:",
+      "options": [
+        "A weak negative relationship",
+        "A strong positive relationship",
+        "A strong negative relationship",
+        "No relationship"
+      ],
+      "answer": "A strong negative relationship",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Spearman's rho is preferred over Pearson r when:",
+      "options": [
+        "Sample sizes are very large",
+        "Data are normally distributed",
+        "Data are ordinal or not normally distributed",
+        "You are predicting a ratio-level outcome"
+      ],
+      "answer": "Data are ordinal or not normally distributed",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "In a regression equation ŷ = 2.5x + 10, the slope of 2.5 means:",
+      "options": [
+        "The predicted value of y when x = 0 is 2.5",
+        "For each one-unit increase in x, y is predicted to increase by 2.5",
+        "There is a 2.5% chance of the relationship being real",
+        "The correlation coefficient is 2.5"
+      ],
+      "answer": "For each one-unit increase in x, y is predicted to increase by 2.5",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "R² = 0.36 in a regression model means:",
+      "options": [
+        "The slope is 0.36",
+        "36% of the variance in the outcome is explained by the predictor(s)",
+        "There is a 36% chance the model is correct",
+        "The correlation is 0.36"
+      ],
+      "answer": "36% of the variance in the outcome is explained by the predictor(s)",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "A confounder in regression analysis is:",
+      "options": [
+        "A variable with no effect on the outcome",
+        "A variable that is related to both the predictor and the outcome, potentially distorting results",
+        "The intercept of the regression line",
+        "An observation with a very high residual"
+      ],
+      "answer": "A variable that is related to both the predictor and the outcome, potentially distorting results",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "A 95% confidence interval for a mean means:",
+      "options": [
+        "There is a 95% probability the true mean is in this specific interval",
+        "If we repeated sampling many times, 95% of the intervals constructed would contain the true mean",
+        "5% of the data falls outside the interval",
+        "The sample mean has a 95% chance of being correct"
+      ],
+      "answer": "If we repeated sampling many times, 95% of the intervals constructed would contain the true mean",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "As sample size increases, the margin of error in a confidence interval:",
+      "options": [
+        "Increases",
+        "Stays the same",
+        "Decreases",
+        "Becomes negative"
+      ],
+      "answer": "Decreases",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "A p-value of 0.04 means:",
+      "options": [
+        "There is a 4% probability the null hypothesis is true",
+        "If the null hypothesis were true, there is a 4% chance of observing results this extreme or more",
+        "The effect size is 4%",
+        "The study is 96% reliable"
+      ],
+      "answer": "If the null hypothesis were true, there is a 4% chance of observing results this extreme or more",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "A chi-square test is used to:",
+      "options": [
+        "Compare means between two groups",
+        "Test relationships between two categorical variables",
+        "Calculate correlation between two continuous variables",
+        "Estimate a regression slope"
+      ],
+      "answer": "Test relationships between two categorical variables",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "The replication crisis in social science refers to:",
+      "options": [
+        "The difficulty of collecting data twice",
+        "The widespread failure to reproduce many published study findings",
+        "Researchers copying each other's results",
+        "Too many studies using the same dataset"
+      ],
+      "answer": "The widespread failure to reproduce many published study findings",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "A graph that starts its y-axis at 70 instead of 0 for data ranging from 72% to 78% is an example of:",
+      "options": [
+        "A valid zoom-in technique",
+        "A misleading visualization that exaggerates differences",
+        "Standard practice in research",
+        "A logarithmic scale"
+      ],
+      "answer": "A misleading visualization that exaggerates differences",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Which study design best establishes causation?",
+      "options": [
+        "A cross-sectional survey",
+        "A case study",
+        "A randomized controlled experiment",
+        "A correlational analysis"
+      ],
+      "answer": "A randomized controlled experiment",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "When ice cream sales and drowning rates are positively correlated, the most likely explanation is:",
+      "options": [
+        "Ice cream causes drowning",
+        "Drowning causes people to eat ice cream",
+        "A third variable (hot weather) causes both",
+        "The correlation is purely coincidental and meaningless"
+      ],
+      "answer": "A third variable (hot weather) causes both",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Publication bias in social science means:",
+      "options": [
+        "Journals are biased against certain topics",
+        "Studies with significant results are more likely to be published than null results",
+        "Researchers publish only positive reviews",
+        "Data is biased by the publication format"
+      ],
+      "answer": "Studies with significant results are more likely to be published than null results",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which of the following is the best indicator that a data project is rigorous?",
+      "options": [
+        "The conclusions confirm what the researcher expected",
+        "The sample is large, representative, and the analysis matches the research question",
+        "The report uses complex statistical jargon",
+        "The dataset comes from a government source"
+      ],
+      "answer": "The sample is large, representative, and the analysis matches the research question",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short-answer",
+      "question": "A researcher finds that countries with more TVs per capita have lower infant mortality rates. Explain why this correlation does not mean TVs reduce infant mortality. What concept explains this relationship, and what would a better study design look like?",
+      "options": null,
+      "answer": "TVs per capita is a proxy for overall wealth; wealthier countries both own more TVs and have better healthcare. The concept is confounding: a third variable (national wealth) causes both outcomes. A better design would control for GDP per capita or use a natural experiment comparing regions with and without TV access while holding economic conditions constant.",
+      "explanation": "",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short-answer",
+      "question": "You are hired to study whether a new after-school tutoring program improves test scores. Describe how you would design this study to produce valid, generalizable results. Identify the key statistical tools you would use from this course.",
+      "options": null,
+      "answer": "I would randomly assign students to a treatment group (tutoring) and a control group (no tutoring) to ensure causal inference. I would use a large, representative sample from the target population. Pre- and post-test scores would be compared using a t-test for independent samples to assess significance, a confidence interval to estimate the effect size range, and a regression controlling for prior achievement and socioeconomic status to isolate the program's effect. R² would indicate how much variance in scores the model explains.",
+      "explanation": "",
+      "points": 2
+    }
   ],
   "quizQuestions": [
-    { "moduleOrder": 1, "order": 1, "question": "What is the primary purpose of statistics in social science?", "options": ["To prove that researchers are right", "To describe patterns and test claims about social phenomena systematically", "To replace common sense with math", "To collect more data than needed"], "answer": "To describe patterns and test claims about social phenomena systematically", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 2, "question": "Which of the following is an example of statistics influencing public policy?", "options": ["A journalist writing an opinion piece", "A government using crime rate data to allocate police resources", "A politician making a speech", "A citizen filing a complaint"], "answer": "A government using crime rate data to allocate police resources", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 3, "question": "A 'statistic' in the technical sense refers to:", "options": ["Any numerical fact", "A value calculated from a sample to estimate a population characteristic", "An opinion backed by evidence", "A government report"], "answer": "A value calculated from a sample to estimate a population characteristic", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 4, "question": "Descriptive statistics are used to:", "options": ["Make predictions about unseen data", "Summarize and describe the features of a dataset", "Test causal hypotheses", "Prove that samples are representative"], "answer": "Summarize and describe the features of a dataset", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 5, "question": "Inferential statistics allow researchers to:", "options": ["Describe only the data they have", "Draw conclusions about a population from a sample", "Visualize data in graphs", "Eliminate all error in measurement"], "answer": "Draw conclusions about a population from a sample", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 1, "question": "Race (e.g., Asian, Black, White, Other) is an example of which level of measurement?", "options": ["Nominal", "Ordinal", "Interval", "Ratio"], "answer": "Nominal", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 2, "question": "Educational attainment coded as 1=Less than HS, 2=HS diploma, 3=Some college, 4=Bachelor's, 5=Graduate is:", "options": ["Nominal", "Ordinal", "Interval", "Ratio"], "answer": "Ordinal", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 3, "question": "Temperature measured in Celsius is at which level of measurement?", "options": ["Nominal", "Ordinal", "Interval", "Ratio"], "answer": "Interval", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 4, "question": "Which of the following allows meaningful statements like 'twice as much'?", "options": ["Nominal", "Ordinal", "Interval", "Ratio"], "answer": "Ratio", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 5, "question": "Operationalizing 'social class' by annual income in dollars converts it to which level of measurement?", "options": ["Nominal", "Ordinal", "Interval", "Ratio"], "answer": "Ratio", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 1, "question": "Which sampling method gives every member of the population an equal chance of selection?", "options": ["Convenience sampling", "Purposive sampling", "Simple random sampling", "Snowball sampling"], "answer": "Simple random sampling", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 2, "question": "Systematic sampling selects respondents by:", "options": ["Random number generator", "Choosing every nth person from a list", "Stratifying by income", "Asking friends to refer others"], "answer": "Choosing every nth person from a list", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 3, "question": "A leading question in a survey is one that:", "options": ["Requires a long answer", "Nudges the respondent toward a particular answer", "Has too many answer choices", "Is written in unclear language"], "answer": "Nudges the respondent toward a particular answer", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 4, "question": "Non-response bias occurs when:", "options": ["The sample is too large", "People who do not respond differ systematically from those who do", "All survey questions are answered", "The researcher forgets to include all variables"], "answer": "People who do not respond differ systematically from those who do", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 5, "question": "Cluster sampling is most useful when:", "options": ["The population is small and homogeneous", "A complete list of individuals does not exist but groups do", "You want to oversample a minority group", "The research question requires random assignment"], "answer": "A complete list of individuals does not exist but groups do", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 1, "question": "A frequency table shows:", "options": ["The relationship between two variables", "How many times each value or category occurs in the data", "The predicted values from a regression", "The probability of each outcome"], "answer": "How many times each value or category occurs in the data", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 2, "question": "A histogram is best used to display:", "options": ["Categorical data with few categories", "Continuous or interval/ratio data grouped into bins", "Proportions of a whole", "Rankings of countries"], "answer": "Continuous or interval/ratio data grouped into bins", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 3, "question": "Positive skewness in a distribution means:", "options": ["The mean is less than the median", "The tail extends to the right, with most data clustered on the left", "The data is symmetric", "There are no outliers"], "answer": "The tail extends to the right, with most data clustered on the left", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 4, "question": "In a negatively skewed distribution of incomes, we would expect:", "options": ["Mean > Median", "Mean = Median", "Mean < Median", "No relationship between mean and median"], "answer": "Mean < Median", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 5, "question": "High kurtosis (leptokurtic) in a distribution indicates:", "options": ["A flat distribution with thin tails", "Heavy tails and a sharp peak — more extreme values than a normal distribution", "Perfectly symmetric data", "Bimodal data"], "answer": "Heavy tails and a sharp peak — more extreme values than a normal distribution", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 1, "question": "In a dataset of {2, 3, 3, 4, 8}, the median is:", "options": ["3", "3.5", "4", "8"], "answer": "3", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 2, "question": "The mode of a dataset is:", "options": ["The average of all values", "The middle value when sorted", "The most frequently occurring value", "The difference between max and min"], "answer": "The most frequently occurring value", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 3, "question": "Variance is defined as:", "options": ["The square root of the standard deviation", "The average squared deviation from the mean", "The range divided by four", "The difference between Q1 and Q3"], "answer": "The average squared deviation from the mean", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 4, "question": "The standard deviation is preferred over variance for reporting because:", "options": ["It is always smaller", "It is in the same units as the original data", "It is harder to calculate", "It ignores outliers"], "answer": "It is in the same units as the original data", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 5, "question": "Why is the median often preferred for reporting typical household income?", "options": ["It is easier to calculate", "It is not influenced by extremely high incomes that pull the mean upward", "It equals the mode in most income datasets", "Government reports always use the median"], "answer": "It is not influenced by extremely high incomes that pull the mean upward", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 1, "question": "The probability of flipping a fair coin and getting heads is:", "options": ["0.25", "0.5", "0.75", "1.0"], "answer": "0.5", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 2, "question": "Relative risk compares:", "options": ["Two standard deviations", "The probability of an outcome in one group to its probability in another group", "The odds of two unrelated events", "Sample size across two studies"], "answer": "The probability of an outcome in one group to its probability in another group", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 3, "question": "An odds ratio of 1.0 indicates:", "options": ["A doubling of risk", "No difference in odds between the two groups", "A 100% increase in probability", "Statistical significance"], "answer": "No difference in odds between the two groups", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 4, "question": "The base rate fallacy leads people to:", "options": ["Overestimate sample sizes", "Ignore how common an event is when judging its probability", "Use the wrong statistical test", "Confuse correlation with causation"], "answer": "Ignore how common an event is when judging its probability", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 5, "question": "If a disease has a 1% prevalence and a test is 90% accurate, a positive test result:", "options": ["Definitely means the person has the disease", "May still be more likely to be a false positive than a true positive", "Is always a true positive", "Means the person has a 90% chance of having the disease"], "answer": "May still be more likely to be a false positive than a true positive", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 1, "question": "The normal distribution is sometimes called the 'bell curve' because:", "options": ["It was invented by Alexander Graham Bell", "It is shaped symmetrically like a bell, with most data near the mean", "Its area sums to the number of bells in a dataset", "Data always follows this distribution"], "answer": "It is shaped symmetrically like a bell, with most data near the mean", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 2, "question": "A z-score converts a raw score by expressing it as:", "options": ["A percentage of the mean", "The number of standard deviations above or below the mean", "A rank within the dataset", "A value between 0 and 1"], "answer": "The number of standard deviations above or below the mean", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 3, "question": "According to the empirical rule, approximately 95% of data in a normal distribution falls within:", "options": ["One standard deviation of the mean", "Two standard deviations of the mean", "Three standard deviations of the mean", "The IQR"], "answer": "Two standard deviations of the mean", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 4, "question": "If a student scores at the 84th percentile on a test, this means:", "options": ["They scored 84%", "They scored higher than 84% of test-takers", "Their z-score is 0.84", "They missed 16 questions"], "answer": "They scored higher than 84% of test-takers", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 5, "question": "Standardizing scores using z-scores is useful in social research because it allows:", "options": ["Direct comparison of values from different scales or populations", "The elimination of outliers", "Conversion of ordinal data to ratio data", "Proof of causal relationships"], "answer": "Direct comparison of values from different scales or populations", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 1, "question": "A scatterplot displaying a pattern from lower-left to upper-right indicates:", "options": ["A negative correlation", "No correlation", "A positive correlation", "A perfect correlation of 1.0"], "answer": "A positive correlation", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 2, "question": "Pearson r ranges from:", "options": ["0 to 1", "-1 to 0", "-1 to +1", "0 to 100"], "answer": "-1 to +1", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 3, "question": "A Pearson r of 0.05 indicates:", "options": ["A strong negative relationship", "A weak or negligible relationship", "A strong positive relationship", "Statistical significance"], "answer": "A weak or negligible relationship", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 4, "question": "Spearman's rho is an appropriate correlation measure when:", "options": ["Both variables are ratio level and normally distributed", "Variables are ordinal or when assumptions of Pearson r are violated", "You have more than two variables", "The sample size exceeds 1,000"], "answer": "Variables are ordinal or when assumptions of Pearson r are violated", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 5, "question": "The statement 'correlation does not imply causation' means:", "options": ["Correlated variables are never causally related", "Finding a correlation alone is not sufficient evidence that one variable causes another", "Causation can never be proven statistically", "Only experiments can show correlations"], "answer": "Finding a correlation alone is not sufficient evidence that one variable causes another", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 1, "question": "In the regression equation ŷ = b₀ + b₁x, b₀ represents:", "options": ["The slope", "The predicted change in y per unit of x", "The y-intercept — the predicted value of y when x = 0", "The correlation coefficient"], "answer": "The y-intercept — the predicted value of y when x = 0", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 2, "question": "The slope in a simple linear regression tells us:", "options": ["How scattered the data are around the line", "The predicted change in y for each one-unit increase in x", "The percentage of variance explained", "The correlation between x and y squared"], "answer": "The predicted change in y for each one-unit increase in x", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 3, "question": "R² = 0.64 means:", "options": ["The correlation is 0.64", "64% of the variance in y is explained by the regression model", "There is a 64% chance the slope is non-zero", "The intercept is 0.64"], "answer": "64% of the variance in y is explained by the regression model", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 4, "question": "A residual in regression is:", "options": ["The slope of the line", "The predicted value of y", "The difference between an observed value and its predicted value", "The y-intercept"], "answer": "The difference between an observed value and its predicted value", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 5, "question": "Extrapolating a regression line far beyond the range of observed data is problematic because:", "options": ["It requires more data points", "The relationship may not hold outside the observed range", "R² becomes meaningless", "The slope changes sign"], "answer": "The relationship may not hold outside the observed range", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 1, "question": "Multiple regression differs from simple regression in that it:", "options": ["Uses a different formula for the intercept", "Includes two or more predictor variables simultaneously", "Only works with categorical outcomes", "Replaces correlation analysis"], "answer": "Includes two or more predictor variables simultaneously", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 2, "question": "In multiple regression, 'controlling for a variable' means:", "options": ["Removing it from the dataset", "Holding it constant statistically while examining other relationships", "Making it the dependent variable", "Squaring its coefficient"], "answer": "Holding it constant statistically while examining other relationships", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 3, "question": "A confounder is a variable that:", "options": ["Has no relationship with the outcome", "Is the main predictor of interest", "Is related to both the predictor and the outcome, creating a spurious association", "Increases R² without adding predictive value"], "answer": "Is related to both the predictor and the outcome, creating a spurious association", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 4, "question": "Adding predictors to a regression model generally:", "options": ["Always improves prediction in new samples", "Increases R² in the sample but may reduce generalizability if irrelevant predictors are added", "Decreases the intercept proportionally", "Has no effect unless predictors are correlated"], "answer": "Increases R² in the sample but may reduce generalizability if irrelevant predictors are added", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 5, "question": "Why might gender be included as a control variable in a study of wages and education?", "options": ["Because gender predicts education perfectly", "Because gender is related to both wages and education, and omitting it could bias the estimate", "Because it is required by survey methodology", "Because gender is a ratio-level variable"], "answer": "Because gender is related to both wages and education, and omitting it could bias the estimate", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 1, "question": "A confidence interval provides:", "options": ["The exact population parameter", "A range of plausible values for the population parameter", "The probability that the sample is representative", "A single best-guess estimate with no uncertainty"], "answer": "A range of plausible values for the population parameter", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 2, "question": "The margin of error in a poll is directly related to:", "options": ["The number of questions in the survey", "The sample size — larger samples produce smaller margins of error", "The political topic being studied", "The response rate of the poll"], "answer": "The sample size — larger samples produce smaller margins of error", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 3, "question": "A 95% CI of [48%, 56%] for candidate support means:", "options": ["The candidate will definitely win", "We are 95% confident the true level of support is between 48% and 56%", "There is a 95% chance the candidate has exactly 52% support", "The margin of error is 8%"], "answer": "We are 95% confident the true level of support is between 48% and 56%", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 4, "question": "Increasing the confidence level from 95% to 99% (holding sample size fixed) will:", "options": ["Narrow the confidence interval", "Widen the confidence interval", "Have no effect on the interval width", "Change the point estimate"], "answer": "Widen the confidence interval", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 5, "question": "Two candidates receive 51% and 49% support in a poll with a ±4% margin of error. Which conclusion is most appropriate?", "options": ["Candidate 1 is winning decisively", "The race is within the margin of error and too close to call", "Candidate 2 has no chance", "The poll is invalid"], "answer": "The race is within the margin of error and too close to call", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 1, "question": "The null hypothesis (H₀) in social research typically states:", "options": ["That the researcher's prediction is correct", "That there is no effect or no difference", "That the sample is biased", "That results are statistically significant"], "answer": "That there is no effect or no difference", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 2, "question": "A p-value of 0.001 compared to 0.04 indicates:", "options": ["Weaker evidence against the null hypothesis", "Stronger evidence against the null hypothesis", "A larger effect size", "A larger sample size"], "answer": "Stronger evidence against the null hypothesis", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 3, "question": "A t-test is used to:", "options": ["Compare variances between groups", "Test whether two group means are significantly different", "Measure correlation between two variables", "Assess distribution of categorical data"], "answer": "Test whether two group means are significantly different", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 4, "question": "The replication crisis in social science is partly explained by:", "options": ["Researchers using too large samples", "Overreliance on p-values and publication bias against null results", "The complexity of statistical software", "Too few studies being conducted"], "answer": "Overreliance on p-values and publication bias against null results", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 5, "question": "Statistical significance (p < 0.05) tells us:", "options": ["The result is large and important", "The result is unlikely to be due to chance alone, given the sample size", "The null hypothesis is proven false", "The effect will hold in every future study"], "answer": "The result is unlikely to be due to chance alone, given the sample size", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 1, "question": "An observational study differs from an experiment because:", "options": ["It never uses statistics", "Researchers observe without manipulating variables, so causal inference is limited", "It always has a control group", "The sample is always larger"], "answer": "Researchers observe without manipulating variables, so causal inference is limited", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 2, "question": "A graph that omits the zero baseline on the y-axis can be misleading because:", "options": ["It changes the scale to ratio level", "It makes small differences appear much larger than they are", "It removes outliers from view", "It converts frequency to percentage"], "answer": "It makes small differences appear much larger than they are", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 3, "question": "When a study reports that 'participants who ate breakfast scored 10% higher,' the most important question to ask is:", "options": ["What brand of breakfast cereal was used?", "Was this a randomized experiment or were breakfast-eaters self-selected?", "How many calories were in breakfast?", "What country did the study take place in?"], "answer": "Was this a randomized experiment or were breakfast-eaters self-selected?", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 4, "question": "Cherry-picking data in a research report refers to:", "options": ["Sampling only from rural areas", "Selectively reporting only results that support the desired conclusion", "Using only cherry-growers in the sample", "Excluding statistical outliers using accepted methods"], "answer": "Selectively reporting only results that support the desired conclusion", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 5, "question": "When a journalist writes 'Study proves coffee prevents cancer,' the most critical flaw is likely:", "options": ["Using the word 'coffee'", "Inferring causation from a correlational or observational study", "Reporting the finding at all", "Not citing the journal"], "answer": "Inferring causation from a correlational or observational study", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 1, "question": "In a social issue data project, the first step should be:", "options": ["Running a regression immediately", "Defining a clear research question and identifying relevant variables", "Calculating the p-value", "Creating a pie chart"], "answer": "Defining a clear research question and identifying relevant variables", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 2, "question": "When presenting data visualizations in a project, which practice is considered best?", "options": ["Using 3D charts for visual impact", "Choosing the chart type that best matches the data type and message", "Including as many variables as possible in one chart", "Always using pie charts for percentages"], "answer": "Choosing the chart type that best matches the data type and message", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 3, "question": "Which statistic is most useful for summarizing the relationship between two continuous variables in a data project?", "options": ["The mode", "The chi-square statistic", "The Pearson correlation coefficient", "The frequency table"], "answer": "The Pearson correlation coefficient", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 4, "question": "When discussing policy implications of a data project, a student should:", "options": ["Assert that their findings prove the policy is definitely correct", "Use cautious language acknowledging the limitations of observational data", "Ignore the limitations section to appear more confident", "Only report findings that support a single policy solution"], "answer": "Use cautious language acknowledging the limitations of observational data", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 5, "question": "A student finds r = 0.72 between poverty rates and high school dropout rates across 50 school districts. The most appropriate conclusion is:", "options": ["Poverty causes students to drop out", "There is a strong positive association between poverty rates and dropout rates across these districts", "All poor students will drop out", "School funding should be cut in wealthy districts"], "answer": "There is a strong positive association between poverty rates and dropout rates across these districts", "explanation": "", "points": 1 }
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "What is the primary purpose of statistics in social science?",
+      "options": [
+        "To prove that researchers are right",
+        "To describe patterns and test claims about social phenomena systematically",
+        "To replace common sense with math",
+        "To collect more data than needed"
+      ],
+      "answer": "To describe patterns and test claims about social phenomena systematically",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which of the following is an example of statistics influencing public policy?",
+      "options": [
+        "A journalist writing an opinion piece",
+        "A government using crime rate data to allocate police resources",
+        "A politician making a speech",
+        "A citizen filing a complaint"
+      ],
+      "answer": "A government using crime rate data to allocate police resources",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "A 'statistic' in the technical sense refers to:",
+      "options": [
+        "Any numerical fact",
+        "A value calculated from a sample to estimate a population characteristic",
+        "An opinion backed by evidence",
+        "A government report"
+      ],
+      "answer": "A value calculated from a sample to estimate a population characteristic",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Descriptive statistics are used to:",
+      "options": [
+        "Make predictions about unseen data",
+        "Summarize and describe the features of a dataset",
+        "Test causal hypotheses",
+        "Prove that samples are representative"
+      ],
+      "answer": "Summarize and describe the features of a dataset",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Inferential statistics allow researchers to:",
+      "options": [
+        "Describe only the data they have",
+        "Draw conclusions about a population from a sample",
+        "Visualize data in graphs",
+        "Eliminate all error in measurement"
+      ],
+      "answer": "Draw conclusions about a population from a sample",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Race (e.g., Asian, Black, White, Other) is an example of which level of measurement?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "answer": "Nominal",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Educational attainment coded as 1=Less than HS, 2=HS diploma, 3=Some college, 4=Bachelor's, 5=Graduate is:",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "answer": "Ordinal",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Temperature measured in Celsius is at which level of measurement?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "answer": "Interval",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Which of the following allows meaningful statements like 'twice as much'?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "answer": "Ratio",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Operationalizing 'social class' by annual income in dollars converts it to which level of measurement?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "answer": "Ratio",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Which sampling method gives every member of the population an equal chance of selection?",
+      "options": [
+        "Convenience sampling",
+        "Purposive sampling",
+        "Simple random sampling",
+        "Snowball sampling"
+      ],
+      "answer": "Simple random sampling",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Systematic sampling selects respondents by:",
+      "options": [
+        "Random number generator",
+        "Choosing every nth person from a list",
+        "Stratifying by income",
+        "Asking friends to refer others"
+      ],
+      "answer": "Choosing every nth person from a list",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "A leading question in a survey is one that:",
+      "options": [
+        "Requires a long answer",
+        "Nudges the respondent toward a particular answer",
+        "Has too many answer choices",
+        "Is written in unclear language"
+      ],
+      "answer": "Nudges the respondent toward a particular answer",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Non-response bias occurs when:",
+      "options": [
+        "The sample is too large",
+        "People who do not respond differ systematically from those who do",
+        "All survey questions are answered",
+        "The researcher forgets to include all variables"
+      ],
+      "answer": "People who do not respond differ systematically from those who do",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Cluster sampling is most useful when:",
+      "options": [
+        "The population is small and homogeneous",
+        "A complete list of individuals does not exist but groups do",
+        "You want to oversample a minority group",
+        "The research question requires random assignment"
+      ],
+      "answer": "A complete list of individuals does not exist but groups do",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "A frequency table shows:",
+      "options": [
+        "The relationship between two variables",
+        "How many times each value or category occurs in the data",
+        "The predicted values from a regression",
+        "The probability of each outcome"
+      ],
+      "answer": "How many times each value or category occurs in the data",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "A histogram is best used to display:",
+      "options": [
+        "Categorical data with few categories",
+        "Continuous or interval/ratio data grouped into bins",
+        "Proportions of a whole",
+        "Rankings of countries"
+      ],
+      "answer": "Continuous or interval/ratio data grouped into bins",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Positive skewness in a distribution means:",
+      "options": [
+        "The mean is less than the median",
+        "The tail extends to the right, with most data clustered on the left",
+        "The data is symmetric",
+        "There are no outliers"
+      ],
+      "answer": "The tail extends to the right, with most data clustered on the left",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "In a negatively skewed distribution of incomes, we would expect:",
+      "options": [
+        "Mean > Median",
+        "Mean = Median",
+        "Mean < Median",
+        "No relationship between mean and median"
+      ],
+      "answer": "Mean < Median",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "High kurtosis (leptokurtic) in a distribution indicates:",
+      "options": [
+        "A flat distribution with thin tails",
+        "Heavy tails and a sharp peak — more extreme values than a normal distribution",
+        "Perfectly symmetric data",
+        "Bimodal data"
+      ],
+      "answer": "Heavy tails and a sharp peak — more extreme values than a normal distribution",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "In a dataset of {2, 3, 3, 4, 8}, the median is:",
+      "options": [
+        "3",
+        "3.5",
+        "4",
+        "8"
+      ],
+      "answer": "3",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "The mode of a dataset is:",
+      "options": [
+        "The average of all values",
+        "The middle value when sorted",
+        "The most frequently occurring value",
+        "The difference between max and min"
+      ],
+      "answer": "The most frequently occurring value",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Variance is defined as:",
+      "options": [
+        "The square root of the standard deviation",
+        "The average squared deviation from the mean",
+        "The range divided by four",
+        "The difference between Q1 and Q3"
+      ],
+      "answer": "The average squared deviation from the mean",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "The standard deviation is preferred over variance for reporting because:",
+      "options": [
+        "It is always smaller",
+        "It is in the same units as the original data",
+        "It is harder to calculate",
+        "It ignores outliers"
+      ],
+      "answer": "It is in the same units as the original data",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Why is the median often preferred for reporting typical household income?",
+      "options": [
+        "It is easier to calculate",
+        "It is not influenced by extremely high incomes that pull the mean upward",
+        "It equals the mode in most income datasets",
+        "Government reports always use the median"
+      ],
+      "answer": "It is not influenced by extremely high incomes that pull the mean upward",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The probability of flipping a fair coin and getting heads is:",
+      "options": [
+        "0.25",
+        "0.5",
+        "0.75",
+        "1.0"
+      ],
+      "answer": "0.5",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Relative risk compares:",
+      "options": [
+        "Two standard deviations",
+        "The probability of an outcome in one group to its probability in another group",
+        "The odds of two unrelated events",
+        "Sample size across two studies"
+      ],
+      "answer": "The probability of an outcome in one group to its probability in another group",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "An odds ratio of 1.0 indicates:",
+      "options": [
+        "A doubling of risk",
+        "No difference in odds between the two groups",
+        "A 100% increase in probability",
+        "Statistical significance"
+      ],
+      "answer": "No difference in odds between the two groups",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "The base rate fallacy leads people to:",
+      "options": [
+        "Overestimate sample sizes",
+        "Ignore how common an event is when judging its probability",
+        "Use the wrong statistical test",
+        "Confuse correlation with causation"
+      ],
+      "answer": "Ignore how common an event is when judging its probability",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "If a disease has a 1% prevalence and a test is 90% accurate, a positive test result:",
+      "options": [
+        "Definitely means the person has the disease",
+        "May still be more likely to be a false positive than a true positive",
+        "Is always a true positive",
+        "Means the person has a 90% chance of having the disease"
+      ],
+      "answer": "May still be more likely to be a false positive than a true positive",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The normal distribution is sometimes called the 'bell curve' because:",
+      "options": [
+        "It was invented by Alexander Graham Bell",
+        "It is shaped symmetrically like a bell, with most data near the mean",
+        "Its area sums to the number of bells in a dataset",
+        "Data always follows this distribution"
+      ],
+      "answer": "It is shaped symmetrically like a bell, with most data near the mean",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "A z-score converts a raw score by expressing it as:",
+      "options": [
+        "A percentage of the mean",
+        "The number of standard deviations above or below the mean",
+        "A rank within the dataset",
+        "A value between 0 and 1"
+      ],
+      "answer": "The number of standard deviations above or below the mean",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "According to the empirical rule, approximately 95% of data in a normal distribution falls within:",
+      "options": [
+        "One standard deviation of the mean",
+        "Two standard deviations of the mean",
+        "Three standard deviations of the mean",
+        "The IQR"
+      ],
+      "answer": "Two standard deviations of the mean",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "If a student scores at the 84th percentile on a test, this means:",
+      "options": [
+        "They scored 84%",
+        "They scored higher than 84% of test-takers",
+        "Their z-score is 0.84",
+        "They missed 16 questions"
+      ],
+      "answer": "They scored higher than 84% of test-takers",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Standardizing scores using z-scores is useful in social research because it allows:",
+      "options": [
+        "Direct comparison of values from different scales or populations",
+        "The elimination of outliers",
+        "Conversion of ordinal data to ratio data",
+        "Proof of causal relationships"
+      ],
+      "answer": "Direct comparison of values from different scales or populations",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A scatterplot displaying a pattern from lower-left to upper-right indicates:",
+      "options": [
+        "A negative correlation",
+        "No correlation",
+        "A positive correlation",
+        "A perfect correlation of 1.0"
+      ],
+      "answer": "A positive correlation",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Pearson r ranges from:",
+      "options": [
+        "0 to 1",
+        "-1 to 0",
+        "-1 to +1",
+        "0 to 100"
+      ],
+      "answer": "-1 to +1",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "A Pearson r of 0.05 indicates:",
+      "options": [
+        "A strong negative relationship",
+        "A weak or negligible relationship",
+        "A strong positive relationship",
+        "Statistical significance"
+      ],
+      "answer": "A weak or negligible relationship",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Spearman's rho is an appropriate correlation measure when:",
+      "options": [
+        "Both variables are ratio level and normally distributed",
+        "Variables are ordinal or when assumptions of Pearson r are violated",
+        "You have more than two variables",
+        "The sample size exceeds 1,000"
+      ],
+      "answer": "Variables are ordinal or when assumptions of Pearson r are violated",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "The statement 'correlation does not imply causation' means:",
+      "options": [
+        "Correlated variables are never causally related",
+        "Finding a correlation alone is not sufficient evidence that one variable causes another",
+        "Causation can never be proven statistically",
+        "Only experiments can show correlations"
+      ],
+      "answer": "Finding a correlation alone is not sufficient evidence that one variable causes another",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "In the regression equation ŷ = b₀ + b₁x, b₀ represents:",
+      "options": [
+        "The slope",
+        "The predicted change in y per unit of x",
+        "The y-intercept — the predicted value of y when x = 0",
+        "The correlation coefficient"
+      ],
+      "answer": "The y-intercept — the predicted value of y when x = 0",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "The slope in a simple linear regression tells us:",
+      "options": [
+        "How scattered the data are around the line",
+        "The predicted change in y for each one-unit increase in x",
+        "The percentage of variance explained",
+        "The correlation between x and y squared"
+      ],
+      "answer": "The predicted change in y for each one-unit increase in x",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "R² = 0.64 means:",
+      "options": [
+        "The correlation is 0.64",
+        "64% of the variance in y is explained by the regression model",
+        "There is a 64% chance the slope is non-zero",
+        "The intercept is 0.64"
+      ],
+      "answer": "64% of the variance in y is explained by the regression model",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "A residual in regression is:",
+      "options": [
+        "The slope of the line",
+        "The predicted value of y",
+        "The difference between an observed value and its predicted value",
+        "The y-intercept"
+      ],
+      "answer": "The difference between an observed value and its predicted value",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Extrapolating a regression line far beyond the range of observed data is problematic because:",
+      "options": [
+        "It requires more data points",
+        "The relationship may not hold outside the observed range",
+        "R² becomes meaningless",
+        "The slope changes sign"
+      ],
+      "answer": "The relationship may not hold outside the observed range",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Multiple regression differs from simple regression in that it:",
+      "options": [
+        "Uses a different formula for the intercept",
+        "Includes two or more predictor variables simultaneously",
+        "Only works with categorical outcomes",
+        "Replaces correlation analysis"
+      ],
+      "answer": "Includes two or more predictor variables simultaneously",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "In multiple regression, 'controlling for a variable' means:",
+      "options": [
+        "Removing it from the dataset",
+        "Holding it constant statistically while examining other relationships",
+        "Making it the dependent variable",
+        "Squaring its coefficient"
+      ],
+      "answer": "Holding it constant statistically while examining other relationships",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "A confounder is a variable that:",
+      "options": [
+        "Has no relationship with the outcome",
+        "Is the main predictor of interest",
+        "Is related to both the predictor and the outcome, creating a spurious association",
+        "Increases R² without adding predictive value"
+      ],
+      "answer": "Is related to both the predictor and the outcome, creating a spurious association",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Adding predictors to a regression model generally:",
+      "options": [
+        "Always improves prediction in new samples",
+        "Increases R² in the sample but may reduce generalizability if irrelevant predictors are added",
+        "Decreases the intercept proportionally",
+        "Has no effect unless predictors are correlated"
+      ],
+      "answer": "Increases R² in the sample but may reduce generalizability if irrelevant predictors are added",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Why might gender be included as a control variable in a study of wages and education?",
+      "options": [
+        "Because gender predicts education perfectly",
+        "Because gender is related to both wages and education, and omitting it could bias the estimate",
+        "Because it is required by survey methodology",
+        "Because gender is a ratio-level variable"
+      ],
+      "answer": "Because gender is related to both wages and education, and omitting it could bias the estimate",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "A confidence interval provides:",
+      "options": [
+        "The exact population parameter",
+        "A range of plausible values for the population parameter",
+        "The probability that the sample is representative",
+        "A single best-guess estimate with no uncertainty"
+      ],
+      "answer": "A range of plausible values for the population parameter",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The margin of error in a poll is directly related to:",
+      "options": [
+        "The number of questions in the survey",
+        "The sample size — larger samples produce smaller margins of error",
+        "The political topic being studied",
+        "The response rate of the poll"
+      ],
+      "answer": "The sample size — larger samples produce smaller margins of error",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "A 95% CI of [48%, 56%] for candidate support means:",
+      "options": [
+        "The candidate will definitely win",
+        "We are 95% confident the true level of support is between 48% and 56%",
+        "There is a 95% chance the candidate has exactly 52% support",
+        "The margin of error is 8%"
+      ],
+      "answer": "We are 95% confident the true level of support is between 48% and 56%",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Increasing the confidence level from 95% to 99% (holding sample size fixed) will:",
+      "options": [
+        "Narrow the confidence interval",
+        "Widen the confidence interval",
+        "Have no effect on the interval width",
+        "Change the point estimate"
+      ],
+      "answer": "Widen the confidence interval",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Two candidates receive 51% and 49% support in a poll with a ±4% margin of error. Which conclusion is most appropriate?",
+      "options": [
+        "Candidate 1 is winning decisively",
+        "The race is within the margin of error and too close to call",
+        "Candidate 2 has no chance",
+        "The poll is invalid"
+      ],
+      "answer": "The race is within the margin of error and too close to call",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "The null hypothesis (H₀) in social research typically states:",
+      "options": [
+        "That the researcher's prediction is correct",
+        "That there is no effect or no difference",
+        "That the sample is biased",
+        "That results are statistically significant"
+      ],
+      "answer": "That there is no effect or no difference",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "A p-value of 0.001 compared to 0.04 indicates:",
+      "options": [
+        "Weaker evidence against the null hypothesis",
+        "Stronger evidence against the null hypothesis",
+        "A larger effect size",
+        "A larger sample size"
+      ],
+      "answer": "Stronger evidence against the null hypothesis",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "A t-test is used to:",
+      "options": [
+        "Compare variances between groups",
+        "Test whether two group means are significantly different",
+        "Measure correlation between two variables",
+        "Assess distribution of categorical data"
+      ],
+      "answer": "Test whether two group means are significantly different",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "The replication crisis in social science is partly explained by:",
+      "options": [
+        "Researchers using too large samples",
+        "Overreliance on p-values and publication bias against null results",
+        "The complexity of statistical software",
+        "Too few studies being conducted"
+      ],
+      "answer": "Overreliance on p-values and publication bias against null results",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Statistical significance (p < 0.05) tells us:",
+      "options": [
+        "The result is large and important",
+        "The result is unlikely to be due to chance alone, given the sample size",
+        "The null hypothesis is proven false",
+        "The effect will hold in every future study"
+      ],
+      "answer": "The result is unlikely to be due to chance alone, given the sample size",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "An observational study differs from an experiment because:",
+      "options": [
+        "It never uses statistics",
+        "Researchers observe without manipulating variables, so causal inference is limited",
+        "It always has a control group",
+        "The sample is always larger"
+      ],
+      "answer": "Researchers observe without manipulating variables, so causal inference is limited",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "A graph that omits the zero baseline on the y-axis can be misleading because:",
+      "options": [
+        "It changes the scale to ratio level",
+        "It makes small differences appear much larger than they are",
+        "It removes outliers from view",
+        "It converts frequency to percentage"
+      ],
+      "answer": "It makes small differences appear much larger than they are",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "When a study reports that 'participants who ate breakfast scored 10% higher,' the most important question to ask is:",
+      "options": [
+        "What brand of breakfast cereal was used?",
+        "Was this a randomized experiment or were breakfast-eaters self-selected?",
+        "How many calories were in breakfast?",
+        "What country did the study take place in?"
+      ],
+      "answer": "Was this a randomized experiment or were breakfast-eaters self-selected?",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Cherry-picking data in a research report refers to:",
+      "options": [
+        "Sampling only from rural areas",
+        "Selectively reporting only results that support the desired conclusion",
+        "Using only cherry-growers in the sample",
+        "Excluding statistical outliers using accepted methods"
+      ],
+      "answer": "Selectively reporting only results that support the desired conclusion",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "When a journalist writes 'Study proves coffee prevents cancer,' the most critical flaw is likely:",
+      "options": [
+        "Using the word 'coffee'",
+        "Inferring causation from a correlational or observational study",
+        "Reporting the finding at all",
+        "Not citing the journal"
+      ],
+      "answer": "Inferring causation from a correlational or observational study",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "In a social issue data project, the first step should be:",
+      "options": [
+        "Running a regression immediately",
+        "Defining a clear research question and identifying relevant variables",
+        "Calculating the p-value",
+        "Creating a pie chart"
+      ],
+      "answer": "Defining a clear research question and identifying relevant variables",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "When presenting data visualizations in a project, which practice is considered best?",
+      "options": [
+        "Using 3D charts for visual impact",
+        "Choosing the chart type that best matches the data type and message",
+        "Including as many variables as possible in one chart",
+        "Always using pie charts for percentages"
+      ],
+      "answer": "Choosing the chart type that best matches the data type and message",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Which statistic is most useful for summarizing the relationship between two continuous variables in a data project?",
+      "options": [
+        "The mode",
+        "The chi-square statistic",
+        "The Pearson correlation coefficient",
+        "The frequency table"
+      ],
+      "answer": "The Pearson correlation coefficient",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "When discussing policy implications of a data project, a student should:",
+      "options": [
+        "Assert that their findings prove the policy is definitely correct",
+        "Use cautious language acknowledging the limitations of observational data",
+        "Ignore the limitations section to appear more confident",
+        "Only report findings that support a single policy solution"
+      ],
+      "answer": "Use cautious language acknowledging the limitations of observational data",
+      "explanation": "",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "A student finds r = 0.72 between poverty rates and high school dropout rates across 50 school districts. The most appropriate conclusion is:",
+      "options": [
+        "Poverty causes students to drop out",
+        "There is a strong positive association between poverty rates and dropout rates across these districts",
+        "All poor students will drop out",
+        "School funding should be cut in wealthy districts"
+      ],
+      "answer": "There is a strong positive association between poverty rates and dropout rates across these districts",
+      "explanation": "",
+      "points": 1
+    }
   ]
 }
