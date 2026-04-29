@@ -21,6 +21,15 @@ function letterGrade(pct) {
   return 'F';
 }
 
+const LETTER_TO_GPA = { 'A': 4.0, 'A-': 3.7, 'B+': 3.3, 'B': 3.0, 'B-': 2.7, 'C+': 2.3, 'C': 2.0, 'C-': 1.7, 'D+': 1.3, 'D': 1.0, 'F': 0.0 };
+
+function computeCourseGPA(letter, courseType) {
+  const base = LETTER_TO_GPA[letter] ?? null;
+  if (base === null) return { weighted: null, unweighted: null };
+  const apBonus = courseType === 'AP' ? 1.0 : 0;
+  return { weighted: +(base + apBonus).toFixed(2), unweighted: +base.toFixed(2) };
+}
+
 function pct(val) { return val !== null ? `${Math.round(val * 10) / 10}%` : '—'; }
 
 function StatusBadge({ score, passed, submitted }) {
@@ -140,6 +149,8 @@ export default function GradesPage({ language }) {
   if (!data) return <div style={{ padding: '80px 10%', fontFamily: 'Inter', color: '#888' }}>{isEn ? 'Loading…' : '加载中…'}</div>;
 
   const { grade, quizRows, midterm, final: finalData, creditEarned } = data;
+  const effectiveLetter = grade.letter || (grade.currentGrade !== null ? letterGrade(grade.currentGrade) : null);
+  const gpa = effectiveLetter ? computeCourseGPA(effectiveLetter, data.course.type) : { weighted: null, unweighted: null };
 
   return (
     <>
@@ -190,6 +201,29 @@ export default function GradesPage({ language }) {
                 : `还有 ${100 - grade.gradedWeight}% 尚未评分，继续加油！`}
             </p>
           )}
+
+          {/* GPA chips */}
+          {(gpa.weighted !== null || gpa.unweighted !== null) && (
+            <div style={{ display: 'flex', gap: '10px', marginTop: '16px', flexWrap: 'wrap' }}>
+              {gpa.unweighted !== null && (
+                <div style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', padding: '6px 14px' }}>
+                  <p style={{ margin: 0, fontSize: '10px', fontWeight: 700, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                    {isEn ? 'Unweighted GPA' : '未加权 GPA'}
+                  </p>
+                  <p style={{ margin: 0, fontSize: '20px', fontWeight: 800, color: '#fff' }}>{gpa.unweighted.toFixed(1)}</p>
+                </div>
+              )}
+              {gpa.weighted !== null && (
+                <div style={{ background: 'rgba(213,168,54,0.2)', border: '1px solid rgba(213,168,54,0.4)', borderRadius: '8px', padding: '6px 14px' }}>
+                  <p style={{ margin: 0, fontSize: '10px', fontWeight: 700, color: 'rgba(213,168,54,0.8)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                    {isEn ? 'Weighted GPA' : '加权 GPA'}{data.course.type === 'AP' ? ' (AP +1.0)' : ''}
+                  </p>
+                  <p style={{ margin: 0, fontSize: '20px', fontWeight: 800, color: '#f5c842' }}>{gpa.weighted.toFixed(1)}</p>
+                </div>
+              )}
+            </div>
+          )}
+
           {creditEarned && (
             <div style={{ marginTop: '16px', display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(46,125,50,0.3)', border: '1px solid rgba(165,214,167,0.5)', padding: '8px 16px', borderRadius: '8px' }}>
               <span style={{ fontSize: '16px' }}>🎓</span>

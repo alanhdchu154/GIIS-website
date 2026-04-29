@@ -177,7 +177,7 @@ router.get('/:slug/grades', authenticate, requireStudent, async (req, res) => {
   });
 
   res.json({
-    course: { slug: course.slug, name: course.name, nameZh: course.nameZh },
+    course: { slug: course.slug, name: course.name, nameZh: course.nameZh, type: course.type, credits: Number(course.credits) },
     grade,
     weights: { quiz: W_QUIZ, midterm: W_MID, final: W_FINAL },
     quizRows,
