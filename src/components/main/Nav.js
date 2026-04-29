@@ -94,10 +94,21 @@ function Nav({ language, toggleLanguage }) {
                             </ul>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                            <a href="https://moodles.genesisideas.school" target="_blank" rel="noopener noreferrer"
-                                className={`btn btn-link px-2 ${styles.topButton}`}>
-                                Moodle
-                            </a>
+                            {studentSession ? (
+                                <>
+                                    <Link to="/learn" className={`btn btn-link px-2 ${styles.topButton}`}>
+                                        {language === 'en' ? 'Dashboard' : '学习中心'}
+                                    </Link>
+                                    <Link to="/profile" className={`btn btn-link px-2 ${styles.topButton}`}>
+                                        {language === 'en' ? 'Profile' : '我的档案'}
+                                    </Link>
+                                </>
+                            ) : (
+                                <a href="https://moodles.genesisideas.school" target="_blank" rel="noopener noreferrer"
+                                    className={`btn btn-link px-2 ${styles.topButton}`}>
+                                    Moodle
+                                </a>
+                            )}
                             {toggleLanguage && (
                                 <button type="button" className={`btn btn-link px-2 ${styles.topButton}`}
                                     onClick={toggleLanguage} aria-label={t.langToggleAria}>
