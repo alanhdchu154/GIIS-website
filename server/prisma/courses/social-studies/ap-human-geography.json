@@ -1,0 +1,1745 @@
+{
+  "slug": "ap-human-geography",
+  "name": "AP Human Geography",
+  "nameZh": "AP人文地理",
+  "credits": 1,
+  "department": "Social Studies",
+  "type": "Core",
+  "description": "A college-level course examining how humans shape and are shaped by their environments — exploring population patterns, cultural diffusion, political boundaries, urban systems, economic development, and the geographic tools used to analyze our world.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Geographic Thinking & Maps",
+      "titleZh": "地理思维与地图",
+      "objectives": "Explain the nature and perspectives of geography; distinguish between absolute and relative location; compare map projections and their distortions; describe how geographers use scale, region, and place as analytical concepts.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Ch 1: Introduction to Geography; supplemented with National Geographic Education resources",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-1-thinking-geographically/unit-1-lesson-1/v/introduction-to-ap-human-geography",
+      "videoNote": "Khan Academy AP Human Geography — Unit 1: Thinking Geographically",
+      "video2Url": "https://www.youtube.com/watch?v=EPIBxHkPFAo",
+      "video2Note": "YouTube — Map Projections: Crash Course Geography",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-1-thinking-geographically",
+      "practiceNote": "Complete Khan Academy Unit 1 practice questions on geographic concepts and map reading",
+      "assignment": "Select two different map projections (e.g., Mercator vs. Peters/Gall-Peters). In 350 words, compare what each distorts and what it preserves (shape, area, distance, direction). Explain which projection you would use to show global disease distribution and why, and which you would use for navigation — supporting each choice with geographic reasoning.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 2,
+      "title": "Population Distribution & Density",
+      "titleZh": "人口分布与密度",
+      "objectives": "Describe global patterns of population distribution and density; distinguish between arithmetic, physiological, and agricultural density; explain why certain regions are densely or sparsely populated using environmental, historical, and economic factors.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Population Distribution chapter; AP Human Geography: A Study Guide for Population",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes/unit-2-lesson-1/v/population-distribution",
+      "videoNote": "Khan Academy AP Human Geography — Population Distribution",
+      "video2Url": "https://www.youtube.com/watch?v=VcSX4ytEfcE",
+      "video2Note": "YouTube — Population Distribution: Crash Course Geography",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes",
+      "practiceNote": "Analyze population distribution maps of South Asia and Europe; compare arithmetic vs. physiological density for Egypt",
+      "assignment": "Using population data from the World Bank or UN, identify two of the world's most densely populated regions and two of the most sparsely populated. Write a 350-word analysis explaining the geographic, historical, and economic factors that produced each pattern. Include at least one comparison between arithmetic and physiological density.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 3,
+      "title": "Population Change & Migration",
+      "titleZh": "人口变迁与移民",
+      "objectives": "Explain the demographic transition model and its four stages; calculate and interpret natural increase rate, total fertility rate, and doubling time; describe push and pull factors for migration and distinguish voluntary from forced migration.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Demographic Transition and Migration chapters",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes/unit-2-lesson-2/v/demographic-transition-model",
+      "videoNote": "Khan Academy AP Human Geography — Demographic Transition Model",
+      "video2Url": "https://www.youtube.com/watch?v=QsBT5EQt348",
+      "video2Note": "YouTube — Demographic Transition Model Explained (Mr. Sinn)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes",
+      "practiceNote": "Place Germany, Nigeria, and the United States in the correct DTM stage and justify your answer with data",
+      "assignment": "Research the current Syrian refugee crisis. Write a 350-word analysis using geographic migration concepts: (1) identify the push and pull factors driving displacement, (2) distinguish forced from voluntary migration in this case, (3) describe the geographic pattern of where refugees went, and (4) assess the economic and cultural impacts on destination countries.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 4,
+      "title": "Cultural Patterns & Cultural Diffusion",
+      "titleZh": "文化模式与文化扩散",
+      "objectives": "Define culture and its components (language, religion, ethnicity, customs); explain the three types of cultural diffusion (relocation, expansion, hierarchical, contagious, stimulus); analyze how globalization shapes cultural convergence and divergence.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Cultural Geography chapter; AP Human Geography Culture & Identity readings",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-3-cultural-patterns-and-processes/unit-3-lesson-1/v/culture-and-cultural-diffusion",
+      "videoNote": "Khan Academy AP Human Geography — Culture and Cultural Diffusion",
+      "video2Url": "https://www.youtube.com/watch?v=0OVtMOAGnNs",
+      "video2Note": "YouTube — Cultural Diffusion: Crash Course Geography",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-3-cultural-patterns-and-processes",
+      "practiceNote": "Trace the diffusion of Islam from Arabia (7th century) across North Africa and Southeast Asia using the diffusion typology",
+      "assignment": "Choose a cultural practice or product that has spread globally (e.g., hip-hop music, Buddhism, soccer/football, or the internet). In 350 words, trace its diffusion: identify its hearth (origin), describe which type(s) of diffusion carried it, explain what barriers it faced or overcame, and discuss whether it underwent cultural assimilation or remained distinct in new locations.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 5,
+      "title": "Political Geography & Boundaries",
+      "titleZh": "政治地理与边界",
+      "objectives": "Explain the types of political boundaries (natural, geometric, cultural) and how they are drawn; describe how boundaries affect access to resources and conflict; analyze concepts of centripetal and centrifugal forces in states.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Political Geography chapter",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-4-political-patterns-and-processes/unit-4-lesson-1/v/political-geography-and-boundaries",
+      "videoNote": "Khan Academy AP Human Geography — Political Geography",
+      "video2Url": "https://www.youtube.com/watch?v=G5T_sXDhGH0",
+      "video2Note": "YouTube — Political Boundaries: Crash Course Geography",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-4-political-patterns-and-processes",
+      "practiceNote": "Classify the boundaries between the US and Canada, India and Pakistan, and within Africa as natural, geometric, or cultural",
+      "assignment": "Analyze the borders drawn in Africa during the Berlin Conference (1884–85). In 350 words, explain: (1) how the borders were drawn (geometric vs. natural vs. cultural), (2) how they ignored existing ethnic and cultural patterns, (3) at least two contemporary African conflicts that can be traced to colonial-era border drawing, and (4) why changing these borders is politically difficult today.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 6,
+      "title": "Agricultural Patterns & Land Use",
+      "titleZh": "农业模式与土地利用",
+      "objectives": "Compare subsistence and commercial agriculture; explain von Thünen's model of agricultural land use; describe the Green Revolution and its geographic impacts; analyze how climate, soil, and technology shape where different types of agriculture occur.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Agriculture and Food chapter",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-5-agriculture-and-rural-land-use-patterns-and-processes/unit-5-lesson-1/v/agriculture-and-rural-land-use",
+      "videoNote": "Khan Academy AP Human Geography — Agriculture and Rural Land Use",
+      "video2Url": "https://www.youtube.com/watch?v=uSDnGGxDhg0",
+      "video2Note": "YouTube — Von Thünen's Model of Agricultural Land Use (Mr. Sinn)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-5-agriculture-and-rural-land-use-patterns-and-processes",
+      "practiceNote": "Apply von Thünen's model to explain why dairy farms cluster near cities while wheat fields are farther away",
+      "assignment": "Compare subsistence agriculture in sub-Saharan Africa with commercial agriculture in the US Midwest. In 350 words, discuss: (1) the key differences in technology, scale, crop choice, and market orientation, (2) how globalization has affected each system, (3) one environmental challenge facing each system, and (4) what the Green Revolution did and did not accomplish for African smallholder farmers.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 7,
+      "title": "Industrialization & Economic Development",
+      "titleZh": "工业化与经济发展",
+      "objectives": "Trace the history of industrialization from Britain's Industrial Revolution to global manufacturing shifts; compare development measures (GDP per capita, HDI, GNI); distinguish core from periphery using Wallerstein's World Systems Theory; explain why some regions industrialized and others did not.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Industrialization and Economic Development chapter",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-7-industrial-and-economic-development-patterns-and-processes/unit-7-lesson-1/v/industrialization-and-development",
+      "videoNote": "Khan Academy AP Human Geography — Industrialization and Development",
+      "video2Url": "https://www.youtube.com/watch?v=8Zu7OeVNRwU",
+      "video2Note": "YouTube — World Systems Theory Explained (Crash Course)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-7-industrial-and-economic-development-patterns-and-processes",
+      "practiceNote": "Classify 10 countries as core, semi-periphery, or periphery using HDI and economic data",
+      "assignment": "Compare industrialization in South Korea (a successful newly industrialized country) with a Sub-Saharan African nation of your choice. In 350 words, explain: (1) the geographic and historical advantages South Korea leveraged, (2) the role of state policy and foreign investment, (3) what barriers the African nation faces, and (4) what World Systems Theory predicts about periphery nations' development prospects.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 8,
+      "title": "Urbanization & City Models",
+      "titleZh": "城镇化与城市模型",
+      "objectives": "Describe global urbanization trends and their causes; explain concentric zone, sector, and multiple nuclei models of urban structure; compare urban patterns in MDCs vs. LDCs; define and explain gentrification, suburbanization, urban sprawl, and urban primacy.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Urbanization chapter",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-6-cities-and-urban-land-use-patterns-and-processes/unit-6-lesson-1/v/urbanization-and-cities",
+      "videoNote": "Khan Academy AP Human Geography — Urbanization and Cities",
+      "video2Url": "https://www.youtube.com/watch?v=LS3SS_6IG6A",
+      "video2Note": "YouTube — Urban Land Use Models (Mr. Sinn AP Human Geography)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-6-cities-and-urban-land-use-patterns-and-processes",
+      "practiceNote": "Apply the concentric zone model and the sector model to describe the spatial organization of Chicago",
+      "assignment": "Choose one megacity in the Global South (e.g., Lagos, Mexico City, Mumbai, or Jakarta). In 350 words, analyze: (1) the factors driving rapid urbanization there, (2) the spatial patterns of wealth and poverty in the city (using an urban model if applicable), (3) challenges the city faces (infrastructure, housing, pollution), and (4) whether 'urban primacy' applies and what problems that creates.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 9,
+      "title": "Globalization & Geographies",
+      "titleZh": "全球化与地理",
+      "objectives": "Explain how globalization reshapes economic geographies, creating new patterns of production, distribution, and consumption; analyze the role of transnational corporations; evaluate uneven geographic impacts of globalization on regions and cities.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Globalization chapter",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/international-trade-topic/globalization/v/introduction-to-globalization",
+      "videoNote": "Khan Academy — Introduction to Globalization",
+      "video2Url": "https://www.youtube.com/watch?v=JJ0nFD19eT8",
+      "video2Note": "YouTube — Globalization Explained (Explainity)",
+      "practiceUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "practiceNote": "Trace the global supply chain of a smartphone, identifying the geographic locations of raw material sourcing, manufacturing, assembly, and retail",
+      "assignment": "Identify a transnational corporation (Apple, Nike, Toyota, or similar). In 350 words, map its global geography: where is it headquartered? Where does it source materials? Where are products manufactured and assembled? Where are they sold? Analyze whether globalization has created more or less inequality across the geographic chain, and identify at least one place that has clearly benefited and one that has been disadvantaged.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 10,
+      "title": "Language & Religion Geography",
+      "titleZh": "语言与宗教地理",
+      "objectives": "Describe the global distribution of major language families and world religions; explain how language and religion shape cultural landscapes; analyze conflicts arising from linguistic and religious diversity within states.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Language and Religion chapters",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-3-cultural-patterns-and-processes/unit-3-lesson-2/v/language-geography",
+      "videoNote": "Khan Academy AP Human Geography — Language Geography",
+      "video2Url": "https://www.youtube.com/watch?v=8ZiPOTUVBgo",
+      "video2Note": "YouTube — Religion Geography: Where Do the World's Religions Come From?",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-3-cultural-patterns-and-processes",
+      "practiceNote": "Map the hearths and diffusion paths of Christianity, Islam, Hinduism, and Buddhism",
+      "assignment": "Pick one country with significant linguistic or religious diversity (India, Nigeria, Belgium, or Switzerland). In 350 words, describe: (1) the main languages or religions present and their geographic distribution, (2) how the state manages this diversity (official language policy, federalism, or religious accommodation), (3) a specific conflict or tension that arose from diversity, and (4) whether the geographic distribution of groups contributed to the conflict.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 11,
+      "title": "Environmental & Resource Geography",
+      "titleZh": "环境与资源地理",
+      "objectives": "Explain the geographic distribution of key natural resources (oil, water, arable land); describe environmental issues created by resource extraction and land use change; analyze the concept of environmental justice and how vulnerable communities bear disproportionate environmental burdens.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Environment and Natural Resources chapter",
+      "videoUrl": "https://www.khanacademy.org/science/biology/ecology/biogeochemical-cycles/v/carbon-cycle",
+      "videoNote": "Khan Academy — Environmental Systems and Resources",
+      "video2Url": "https://www.youtube.com/watch?v=04_FBuDWkSk",
+      "video2Note": "YouTube — Water Scarcity: A Global Crisis (DW Documentary)",
+      "practiceUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "practiceNote": "Map the geographic distribution of freshwater stress regions and identify the political boundaries that create transboundary water conflicts",
+      "assignment": "Research a transboundary environmental issue (Nile River water rights dispute, Aral Sea collapse, or Amazon deforestation). In 350 words, analyze: (1) the geographic scope and the countries involved, (2) the human and economic activities driving the problem, (3) environmental consequences across the region, and (4) international or domestic policy responses and their effectiveness.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 12,
+      "title": "Development Theories",
+      "titleZh": "发展理论",
+      "objectives": "Compare modernization theory, dependency theory, and world systems theory as explanations for global inequality; evaluate the role of gender equality, education, and governance in development; analyze the limitations of GDP as a development measure and alternatives like the HDI.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Development Theories chapter",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-7-industrial-and-economic-development-patterns-and-processes/unit-7-lesson-2/v/development-theory",
+      "videoNote": "Khan Academy AP Human Geography — Development Theory",
+      "video2Url": "https://www.youtube.com/watch?v=8Zu7OeVNRwU",
+      "video2Note": "YouTube — Dependency Theory vs. Modernization Theory Explained",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-7-industrial-and-economic-development-patterns-and-processes",
+      "practiceNote": "Apply modernization theory and dependency theory to explain why Haiti and the Dominican Republic — sharing the same island — have such different development levels",
+      "assignment": "Compare GDP per capita and the Human Development Index (HDI) as measures of development. In 350 words: (1) explain what each measure captures and what it misses, (2) give an example of a country ranked very differently on GDP vs. HDI and explain why, (3) evaluate which development theory (modernization, dependency, or world systems) best explains global inequality today, and (4) propose one additional indicator you believe should be included in measuring development.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 13,
+      "title": "Geographic Tools (GIS, Remote Sensing)",
+      "titleZh": "地理工具：地理信息系统与遥感",
+      "objectives": "Describe how Geographic Information Systems (GIS) layer spatial data to analyze geographic patterns; explain how remote sensing satellites collect geographic data; identify real-world applications of GIS in urban planning, disaster response, agriculture, and environmental monitoring.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Geographic Tools appendix; ESRI GIS educational resources",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-1-thinking-geographically/unit-1-lesson-3/v/gis-and-geographic-tools",
+      "videoNote": "Khan Academy AP Human Geography — GIS and Geographic Tools",
+      "video2Url": "https://www.youtube.com/watch?v=LHDCRjAxpI0",
+      "video2Note": "YouTube — What is GIS? (ESRI)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-1-thinking-geographically",
+      "practiceNote": "Explore ArcGIS Online StoryMaps and identify two real-world applications of GIS that address geographic problems",
+      "assignment": "Research one specific real-world use of GIS or remote sensing technology (e.g., tracking deforestation in the Amazon, mapping flood risk after a hurricane, optimizing food distribution in a city, or monitoring refugee camp growth via satellite). In 350 words, describe: (1) the specific geographic problem being addressed, (2) what data layers or satellite imagery was used, (3) how the GIS analysis improved decision-making, and (4) limitations of using this technology.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 14,
+      "title": "Contemporary Human Geography Issues",
+      "titleZh": "当代人文地理问题",
+      "objectives": "Synthesize key human geography concepts to analyze contemporary issues including climate migration, smart cities, food security, and indigenous land rights; apply geographic reasoning to evaluate policy responses to these challenges.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Contemporary Issues chapter",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes",
+      "videoNote": "Khan Academy AP Human Geography — Contemporary Migration Issues",
+      "video2Url": "https://www.youtube.com/watch?v=G4H1N_yXBiA",
+      "video2Note": "YouTube — Climate Change and Human Migration (TED-Ed)",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography",
+      "practiceNote": "Complete a full AP Human Geography practice free-response question synthesizing population, culture, and development concepts",
+      "assignment": "Write a 400-word capstone essay on one of the following contemporary geographic challenges: (a) climate-driven migration — which populations are most at risk, where will they move, and what policies are needed; (b) food security — how geography, climate, and globalization interact to create food insecurity, and where the worst gaps exist; or (c) smart cities — how technology is changing urban geography and what equity concerns arise. Use at least three geographic concepts from different course modules in your analysis.",
+      "estimatedHrs": 3.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which type of location describes a place's position relative to other places (e.g., 'north of Chicago')?",
+      "options": [
+        "Absolute location",
+        "Relative location",
+        "Nominal location",
+        "Spatial location"
+      ],
+      "answer": "B",
+      "explanation": "Relative location describes where a place is in relation to other places, as opposed to absolute location, which uses coordinates like latitude and longitude.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "The Mercator projection distorts which geographic attribute near the poles?",
+      "options": [
+        "Direction",
+        "Shape",
+        "Area (size)",
+        "Color"
+      ],
+      "answer": "C",
+      "explanation": "The Mercator projection preserves shape (conformal) but greatly exaggerates the size of land masses near the poles — making Greenland appear as large as Africa, when Africa is actually 14 times larger.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "A 'region' in geography is defined as:",
+      "options": [
+        "Only a country's political boundaries",
+        "An area that shares at least one common characteristic, whether physical or human",
+        "Any area with more than 1 million people",
+        "A zone defined solely by climate"
+      ],
+      "answer": "B",
+      "explanation": "A region is an area defined by shared characteristics — physical (climate zone, landform), cultural (language, religion), or functional (economic market area).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "The concept of 'sense of place' refers to:",
+      "options": [
+        "The coordinates of a location",
+        "The subjective feelings and meanings people attach to specific locations",
+        "The administrative boundaries of a city",
+        "The economic function of a geographic area"
+      ],
+      "answer": "B",
+      "explanation": "Sense of place is the subjective, emotional, and cultural attachment that people develop toward specific locations, giving those places meaning beyond their physical attributes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Geographic scale in map analysis refers to:",
+      "options": [
+        "The color scheme used on a map",
+        "The level of zoom or detail at which geographic phenomena are analyzed",
+        "The physical size of a paper map",
+        "The number of countries shown on a map"
+      ],
+      "answer": "B",
+      "explanation": "Scale in geography refers to the spatial extent of analysis — local, regional, national, or global — which affects what patterns are visible and what conclusions can be drawn.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Arithmetic population density is calculated as:",
+      "options": [
+        "Total population divided by total land area",
+        "Total population divided by arable farmland area",
+        "Number of farmers divided by farmland area",
+        "Urban population divided by city area"
+      ],
+      "answer": "A",
+      "explanation": "Arithmetic (crude) density = total population ÷ total land area, giving an overall average that doesn't account for how much land is actually habitable or farmable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Why is physiological density often a more meaningful measure than arithmetic density for countries like Egypt?",
+      "options": [
+        "Egypt has a very small total population",
+        "Egypt's population is almost entirely concentrated on the small fraction of arable land along the Nile",
+        "Egypt has equal population distribution across its territory",
+        "Egypt lacks the data needed for arithmetic density"
+      ],
+      "answer": "B",
+      "explanation": "Egypt's vast desert means almost all of its population lives in the Nile valley and delta — physiological density (population per arable land) reveals the extreme pressure on that small productive zone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Which of the following best explains why the North China Plain is one of the world's most densely populated regions?",
+      "options": [
+        "It has vast mineral resources",
+        "It has fertile soils, flat terrain, adequate rainfall, and a long history of agricultural civilization",
+        "It is the only habitable region in East Asia",
+        "It became densely populated only in the 20th century due to industrialization"
+      ],
+      "answer": "B",
+      "explanation": "The North China Plain's fertile yellow river soils, flat land, monsoon rainfall, and thousands of years of agricultural history have made it one of the most productive and densely settled areas on Earth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Which of the following regions is MOST sparsely populated due to extreme environmental conditions?",
+      "options": [
+        "Western Europe",
+        "The Sahara Desert",
+        "Coastal South Asia",
+        "The Mississippi River Valley"
+      ],
+      "answer": "B",
+      "explanation": "The Sahara's extreme heat, lack of water, and minimal arable land make permanent large-scale settlement nearly impossible, resulting in very low population density.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "The concept of 'ecumene' refers to:",
+      "options": [
+        "The total area of Earth's oceans",
+        "The permanently inhabited portion of Earth's surface",
+        "The political boundaries of a country",
+        "The areas where agriculture is practiced"
+      ],
+      "answer": "B",
+      "explanation": "The ecumene is the portion of Earth that is permanently settled or inhabited by humans — roughly 30% of the total land area.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "In Stage 2 of the Demographic Transition Model, population grows rapidly because:",
+      "options": [
+        "Birth rates rise while death rates remain low",
+        "Death rates fall while birth rates remain high",
+        "Both birth rates and death rates fall simultaneously",
+        "Immigration dramatically increases the population"
+      ],
+      "answer": "B",
+      "explanation": "Stage 2 is characterized by improving medicine and sanitation that reduce death rates, while birth rates remain high due to continued cultural norms — resulting in rapid natural increase.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "The Total Fertility Rate (TFR) needed for a population to replace itself (replacement level) is approximately:",
+      "options": [
+        "1.0 children per woman",
+        "1.5 children per woman",
+        "2.1 children per woman",
+        "3.0 children per woman"
+      ],
+      "answer": "C",
+      "explanation": "Replacement fertility is approximately 2.1 children per woman in developed countries (slightly higher in developing countries due to higher child mortality), accounting for child mortality before reproductive age.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Which of the following is a PUSH factor driving emigration?",
+      "options": [
+        "Higher wages in the destination country",
+        "Political violence and civil war in the home country",
+        "Better schools in the receiving country",
+        "Family reunification opportunities abroad"
+      ],
+      "answer": "B",
+      "explanation": "Push factors are negative conditions in the origin location that drive people to leave — political violence, war, famine, persecution, and poverty are classic push factors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Ravenstein's 'Laws of Migration' suggest that most migrants travel:",
+      "options": [
+        "Long distances to the most prosperous countries",
+        "Short distances and toward the nearest large urban center",
+        "Randomly without geographic pattern",
+        "Only within their country of origin"
+      ],
+      "answer": "B",
+      "explanation": "Ravenstein found that most migration occurs over short distances and is step-by-step (rural to small town to large city), a pattern still evident in developing world urbanization today.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Countries like Germany and Japan, with sub-replacement fertility rates and aging populations, face which demographic challenge?",
+      "options": [
+        "Overpopulation and strain on food supplies",
+        "Shrinking workforce and increasing pension/healthcare costs for an aging population",
+        "Rapid urban growth beyond housing capacity",
+        "Declining infant mortality causing population explosion"
+      ],
+      "answer": "B",
+      "explanation": "Sub-replacement fertility leads to population aging: fewer working-age people must support a growing elderly population, straining pension systems, healthcare, and economic productivity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "The 'hearth' of a cultural trait refers to:",
+      "options": [
+        "The location where a culture's religion originated",
+        "The geographic origin point from which a cultural trait or practice spread",
+        "The center of a country's political power",
+        "A region where multiple cultures are in conflict"
+      ],
+      "answer": "B",
+      "explanation": "The hearth is the place of origin of a cultural trait, practice, idea, or innovation, from which it subsequently diffuses outward.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "When a cultural trait spreads from cities to rural areas (rather than person-to-person contact), this is called:",
+      "options": [
+        "Relocation diffusion",
+        "Contagious diffusion",
+        "Hierarchical diffusion",
+        "Stimulus diffusion"
+      ],
+      "answer": "C",
+      "explanation": "Hierarchical diffusion spreads through an ordered sequence — typically from large cities to smaller cities to rural areas — rather than spreading equally in all directions from person to person.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Cultural convergence, accelerated by globalization, refers to:",
+      "options": [
+        "The strengthening of local cultural identities in response to global pressures",
+        "Cultures becoming more similar as they adopt shared practices, media, and consumer goods",
+        "The extinction of minority languages due to forced assimilation",
+        "The spread of religions through military conquest"
+      ],
+      "answer": "B",
+      "explanation": "Cultural convergence describes how globalization — through media, trade, and migration — leads to shared cultural practices (English as lingua franca, global fast food, Hollywood films) across diverse societies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Which type of diffusion occurs when a migrant population brings its cultural practices to a new location?",
+      "options": [
+        "Hierarchical diffusion",
+        "Contagious diffusion",
+        "Relocation diffusion",
+        "Stimulus diffusion"
+      ],
+      "answer": "C",
+      "explanation": "Relocation diffusion occurs when people physically move to a new area and bring their cultural practices with them — e.g., Mexican immigrants bringing quinceañera traditions to the United States.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "The term 'cultural landscape' was introduced by Carl Sauer to describe:",
+      "options": [
+        "The natural environment before human settlement",
+        "The visible imprint of human culture on the physical environment",
+        "The geographic distribution of ethnic groups",
+        "The boundaries between different cultural regions"
+      ],
+      "answer": "B",
+      "explanation": "Sauer defined cultural landscape as the visible, human-modified landscape — buildings, roads, field patterns, sacred sites — that reflects the culture of the people who created it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "A 'geometric boundary' in political geography is one that:",
+      "options": [
+        "Follows a river or mountain range",
+        "Follows lines of latitude or longitude regardless of physical or cultural features",
+        "Is negotiated based on ethnic distribution",
+        "Is defined by ocean coastlines"
+      ],
+      "answer": "B",
+      "explanation": "Geometric boundaries are straight lines drawn along latitude/longitude or at regular angles — common in Africa and the American West — often ignoring physical terrain and cultural settlement patterns.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "'Centripetal forces' in a state are those that:",
+      "options": [
+        "Cause the state to break apart into smaller units",
+        "Unify and bind people together, strengthening national identity and political cohesion",
+        "Create ethnic conflict within state borders",
+        "Lead to territorial expansion and imperialism"
+      ],
+      "answer": "B",
+      "explanation": "Centripetal forces — like shared language, national identity, religious unity, or strong institutions — hold a state together, as opposed to centrifugal forces that pull it apart.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "The concept of 'devolution' in political geography refers to:",
+      "options": [
+        "The expansion of a state's territory through conquest",
+        "The transfer of power from a central government to regional or subnational governments",
+        "The collapse of a state due to civil war",
+        "The process of international recognition of new states"
+      ],
+      "answer": "B",
+      "explanation": "Devolution is the process by which central governments grant greater political and economic autonomy to regions — as in Scotland, Catalonia, or Quebec — often driven by ethnic or cultural regional identities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "The Berlin Conference (1884–85) is geographically significant because it:",
+      "options": [
+        "Created the United Nations to resolve colonial disputes",
+        "European powers divided Africa among themselves with boundaries that ignored African ethnic and political realities",
+        "Established the borders of Germany after World War I",
+        "Resulted in the decolonization of British territories in Asia"
+      ],
+      "answer": "B",
+      "explanation": "European powers drew African boundaries at Berlin to avoid conflict among themselves, creating geometric borders that cut across existing African kingdoms, ethnic groups, and cultural territories — contributing to post-independence conflicts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "A 'stateless nation' is best defined as:",
+      "options": [
+        "A failed state with no functioning government",
+        "A group of people sharing national identity without having their own internationally recognized sovereign state",
+        "A country that has been expelled from the UN",
+        "A state that has no military forces"
+      ],
+      "answer": "B",
+      "explanation": "Stateless nations — like the Kurds, Palestinians, or Basques — share a distinct national identity, culture, and territorial claims but do not have their own internationally recognized sovereign state.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Subsistence agriculture differs from commercial agriculture primarily in that:",
+      "options": [
+        "Subsistence farmers use more technology",
+        "Subsistence farmers grow food primarily for their own consumption rather than for sale in markets",
+        "Commercial farmers grow food for their own families",
+        "Subsistence farming is more common in temperate climates"
+      ],
+      "answer": "B",
+      "explanation": "Subsistence farmers grow food to feed themselves and their families, with little or no surplus for markets; commercial farmers produce crops specifically for sale in national or global markets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Von Thünen's model of agricultural land use predicts that which crop type would be produced closest to the market city?",
+      "options": [
+        "Grain for bread",
+        "Cattle ranching for beef",
+        "Dairy products and market vegetables",
+        "Forestry for timber"
+      ],
+      "answer": "C",
+      "explanation": "Von Thünen's concentric rings place perishable, high-value products (dairy, vegetables) closest to the market because they must be delivered quickly and cannot bear high transport costs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "The Green Revolution of the 1960s–1980s primarily achieved:",
+      "options": [
+        "A shift from commercial to subsistence farming in Asia",
+        "Introduction of high-yield crop varieties, irrigation, and fertilizers that dramatically increased food production",
+        "The elimination of pesticide use in global agriculture",
+        "Universal food security for all developing nations"
+      ],
+      "answer": "B",
+      "explanation": "The Green Revolution introduced high-yield wheat and rice varieties, synthetic fertilizers, irrigation, and pesticides — dramatically increasing food production in South Asia, Mexico, and parts of Southeast Asia.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Which of the following best describes 'shifting cultivation' (swidden agriculture)?",
+      "options": [
+        "Permanently farming the same plot with crop rotation",
+        "Moving between multiple plots, clearing vegetation by burning, farming briefly, then allowing land to fallow and regenerate",
+        "Irrigation-based rice farming in river deltas",
+        "Large-scale mechanized grain production"
+      ],
+      "answer": "B",
+      "explanation": "Shifting cultivation (slash-and-burn) involves clearing vegetation by fire, farming for a few seasons, then abandoning the plot and moving on — allowing natural regeneration before returning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "A major criticism of the Green Revolution's impact in sub-Saharan Africa is that:",
+      "options": [
+        "It increased food production too dramatically, causing prices to collapse",
+        "Its crop varieties and infrastructure requirements were poorly suited to African growing conditions, and benefits were concentrated among wealthier farmers",
+        "It prioritized subsistence farming over commercial exports",
+        "Africa did not need the Green Revolution because it already had food security"
+      ],
+      "answer": "B",
+      "explanation": "Green Revolution technologies were developed for South Asian and Latin American conditions; African soils, rainfall patterns, and smallholder farm structures meant adoption was limited, and benefits skewed to larger, wealthier farmers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The Industrial Revolution began in which country in the late 18th century?",
+      "options": [
+        "France",
+        "Germany",
+        "Great Britain",
+        "United States"
+      ],
+      "answer": "C",
+      "explanation": "Britain industrialized first (1760s–1840s), driven by coal and iron resources, colonial markets, technological innovation (steam engine), and financial capital.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "The Human Development Index (HDI) measures a country's development using which three dimensions?",
+      "options": [
+        "GDP, military strength, and population size",
+        "Life expectancy, education (literacy and schooling), and income (GNI per capita)",
+        "Trade balance, political freedom, and urbanization rate",
+        "Population growth, agricultural output, and internet access"
+      ],
+      "answer": "B",
+      "explanation": "The HDI combines life expectancy (health), mean and expected years of schooling (education), and GNI per capita (income/standard of living) into a composite development score.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Wallerstein's World Systems Theory classifies countries as 'core,' 'semi-periphery,' or 'periphery.' A 'periphery' country is characterized by:",
+      "options": [
+        "Dominating global trade and controlling financial markets",
+        "Producing high-value manufactured goods for export to developing nations",
+        "Exporting raw materials and cheap labor to core countries while remaining economically dependent",
+        "Having the world's highest per capita income"
+      ],
+      "answer": "C",
+      "explanation": "Periphery countries in World Systems Theory are economically dependent, specializing in raw material extraction and low-wage manufacturing that primarily benefits core countries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Which of the following best explains why South Korea successfully industrialized in the 20th century?",
+      "options": [
+        "South Korea had vast natural resource deposits",
+        "Strong state investment in education and targeted industrial policy, combined with export-oriented manufacturing and foreign investment",
+        "South Korea received permanent free aid from the United States",
+        "South Korea's large population provided consumer demand"
+      ],
+      "answer": "B",
+      "explanation": "South Korea's 'economic miracle' (1960s–90s) resulted from state-directed industrial policy (chaebols), high educational investment, export promotion, and integration into global production networks.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Special Economic Zones (SEZs) as used in China were designed to:",
+      "options": [
+        "Restrict foreign investment to protect domestic industries",
+        "Create geographically defined areas with reduced regulations and taxes to attract foreign investment and promote export manufacturing",
+        "Provide free housing and education to rural migrants",
+        "Replace state-owned enterprises with worker cooperatives"
+      ],
+      "answer": "B",
+      "explanation": "China's SEZs (starting with Shenzhen in 1980) offered preferential tax rates, streamlined regulations, and export infrastructure to attract transnational corporations and stimulate export-led industrial growth.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "The global population living in urban areas surpassed 50% for the first time around:",
+      "options": [
+        "1900",
+        "1950",
+        "2008",
+        "2025"
+      ],
+      "answer": "C",
+      "explanation": "According to UN data, 2008 was the year humanity crossed the threshold of having more people living in urban than rural areas for the first time in history.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "The Concentric Zone Model (Burgess, 1925) describes cities as organized into:",
+      "options": [
+        "Sectors radiating outward from the CBD along transportation axes",
+        "A series of rings expanding outward from the central business district",
+        "Multiple unconnected urban nuclei within a metropolitan area",
+        "A grid pattern with equal residential and commercial zones"
+      ],
+      "answer": "B",
+      "explanation": "Burgess's Concentric Zone Model depicts cities as a series of concentric rings: CBD at center, surrounded by a zone of transition, then working-class housing, better residential, and the commuter zone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "'Urban primacy' describes a situation where:",
+      "options": [
+        "A country has many medium-sized cities of roughly equal size",
+        "One city is disproportionately large compared to all others in the country, dominating economic and political life",
+        "All cities grow at the same rate",
+        "The capital city is located in the geographic center of the country"
+      ],
+      "answer": "B",
+      "explanation": "Urban primacy (e.g., Bangkok in Thailand, Buenos Aires in Argentina) occurs when one city is many times larger than the second city, concentrating economic activity, media, and political power.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Gentrification in urban geography refers to:",
+      "options": [
+        "Wealthy residents leaving cities for suburbs",
+        "The influx of wealthier residents and businesses into previously low-income urban neighborhoods, often displacing existing residents",
+        "Government demolition of slums and construction of public housing",
+        "The construction of new high-tech infrastructure in suburban areas"
+      ],
+      "answer": "B",
+      "explanation": "Gentrification transforms low-income neighborhoods as wealthier newcomers move in, renovate properties, and attract new businesses — raising housing costs and often displacing lower-income long-term residents.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "In cities of the Global South, informal settlements (squatter settlements/favelas) are typically located:",
+      "options": [
+        "In the most desirable urban locations near parks and amenities",
+        "On peripheral, hazardous, or otherwise undesirable land (steep hillsides, floodplains, polluted areas)",
+        "In the central business district",
+        "In established middle-class residential zones"
+      ],
+      "answer": "B",
+      "explanation": "Migrants and poor urban residents in developing cities often occupy marginal, undesirable land on urban peripheries — steep slopes prone to landslides, flood plains, or areas near landfills — as these are the only unoccupied or unclaimed areas.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "A 'transnational corporation' (TNC) is primarily characterized by:",
+      "options": [
+        "Being owned by a national government",
+        "Operating production, distribution, or service facilities in multiple countries",
+        "Selling products only in its home country",
+        "Employing workers exclusively from its country of origin"
+      ],
+      "answer": "B",
+      "explanation": "TNCs operate across national borders with headquarters typically in a core country and production or sourcing spread across multiple countries to take advantage of geographic differences in costs and regulations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "The geographic concept of 'time-space compression' (Harvey) refers to:",
+      "options": [
+        "The physical shrinking of the Earth's surface over time",
+        "How transportation and communication technologies reduce the effective distance between places, making the world feel smaller",
+        "The compression of urban space due to high-rise buildings",
+        "Geographic contraction of national borders"
+      ],
+      "answer": "B",
+      "explanation": "Time-space compression describes how technologies (internet, air travel, container shipping) have dramatically reduced the time and cost of moving goods, people, and information, effectively shrinking perceived distances.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Which term describes the process by which economic activities previously done inside a firm are contracted out to external providers, often in other countries?",
+      "options": [
+        "Nationalization",
+        "Outsourcing (offshoring)",
+        "Import substitution",
+        "Vertical integration"
+      ],
+      "answer": "B",
+      "explanation": "Outsourcing/offshoring moves business processes (manufacturing, call centers, software development) to other countries where labor or operational costs are lower, reshaping global economic geographies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "A 'global city' (Sassen) is defined primarily by:",
+      "options": [
+        "Being the most populous city in its country",
+        "Serving as a command and control center for the global economy through concentrations of finance, media, and professional services",
+        "Having the highest standard of living",
+        "Being located on a major ocean coastline"
+      ],
+      "answer": "B",
+      "explanation": "Global cities (New York, London, Tokyo, Shanghai) are major nodes of the world economy — concentrating headquarters of major firms, financial markets, media, and international institutions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Economic 'race to the bottom' in globalization refers to:",
+      "options": [
+        "Competition among workers to accept the lowest wages",
+        "Countries competing by lowering labor, environmental, and tax standards to attract foreign investment",
+        "Global prices declining due to overproduction",
+        "Developing countries becoming permanently poorer despite economic growth"
+      ],
+      "answer": "B",
+      "explanation": "The race to the bottom occurs when governments lower wages, weaken labor and environmental protections, or cut taxes to attract mobile capital — benefiting corporations at the expense of workers and the environment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "The Indo-European language family is notable because:",
+      "options": [
+        "It is spoken only in Europe",
+        "It includes the most widely spoken languages in the world, from English and Spanish to Hindi and Persian",
+        "All languages in this family are mutually intelligible",
+        "It originated in Australia"
+      ],
+      "answer": "B",
+      "explanation": "Indo-European is the world's largest language family, spanning most of Europe, Iran, and South Asia — including English, Spanish, French, Hindi, Bengali, Russian, and many others.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "A 'lingua franca' is best defined as:",
+      "options": [
+        "The official language of France",
+        "A language used as a common means of communication between speakers of different native languages",
+        "A dead language no longer spoken natively",
+        "A language with more than 1 billion speakers"
+      ],
+      "answer": "B",
+      "explanation": "A lingua franca is a common language used for communication between people who do not share a native language — English is the dominant contemporary global lingua franca.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "The hearth of Islam is located in:",
+      "options": [
+        "Egypt and the Nile Valley",
+        "The Arabian Peninsula (modern-day Saudi Arabia)",
+        "Persia (modern-day Iran)",
+        "East Africa"
+      ],
+      "answer": "B",
+      "explanation": "Islam originated in the 7th century CE in the Arabian Peninsula, specifically Mecca and Medina, before spreading rapidly through conquest, trade, and missionary activity across the Middle East, North Africa, Central Asia, and Southeast Asia.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Which of the following is a 'universalizing religion' that actively seeks converts worldwide?",
+      "options": [
+        "Hinduism",
+        "Judaism",
+        "Shintoism",
+        "Christianity"
+      ],
+      "answer": "D",
+      "explanation": "Universalizing religions (Christianity, Islam, Buddhism) actively proselytize and seek converts globally, in contrast to ethnic religions (Hinduism, Judaism, Shintoism) tied to specific ethnic or cultural groups.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Belgium's political tensions between Dutch-speaking Flemish and French-speaking Walloon communities illustrate which geographic concept?",
+      "options": [
+        "Environmental determinism",
+        "Cultural convergence",
+        "Centrifugal force based on linguistic regionalism",
+        "Urban primacy"
+      ],
+      "answer": "C",
+      "explanation": "Belgium's linguistic divide creates centrifugal forces that pull the state apart — the Flemish and Walloon regions have deeply different political, economic, and cultural identities, repeatedly threatening national cohesion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Which geographic concept describes the unequal distribution of environmental hazards, with low-income and minority communities bearing disproportionate exposure?",
+      "options": [
+        "Environmental determinism",
+        "Environmental justice",
+        "Resource curse",
+        "Ecological footprint"
+      ],
+      "answer": "B",
+      "explanation": "Environmental justice examines how environmental burdens (pollution, toxic waste sites, flood risk) are unevenly distributed geographically, often concentrated in poor and minority communities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The 'resource curse' (paradox of plenty) refers to:",
+      "options": [
+        "Countries with abundant resources that export too many goods, creating inflation",
+        "Countries rich in natural resources that paradoxically experience slower economic growth, more conflict, and weaker governance than resource-poor countries",
+        "Environmental damage caused by excessive resource extraction",
+        "The depletion of fossil fuels causing economic collapse"
+      ],
+      "answer": "B",
+      "explanation": "Resource-rich countries (Nigeria, Venezuela, DRC) often experience weaker development than resource-poor peers due to commodity price volatility, corruption, neglect of non-resource sectors, and conflict over resource control.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Freshwater scarcity is most acute in which of the following regions?",
+      "options": [
+        "Northern Europe",
+        "The Amazon Basin",
+        "Sub-Saharan Africa and the Middle East/North Africa region",
+        "Southeast Asia"
+      ],
+      "answer": "C",
+      "explanation": "Sub-Saharan Africa and MENA face the most severe freshwater stress — driven by arid climates, population growth, poor infrastructure, and climate change reducing already scarce rainfall.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Deforestation in the Amazon Basin primarily threatens which global environmental function?",
+      "options": [
+        "Global ocean current regulation",
+        "Carbon storage and global climate regulation, plus biodiversity",
+        "Arctic ice sheet stability",
+        "Pacific Ocean fishery productivity"
+      ],
+      "answer": "B",
+      "explanation": "Amazon forests store vast amounts of carbon (their destruction releases CO2 into the atmosphere) and host an estimated 10% of all species on Earth — deforestation threatens both global climate and biodiversity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Transboundary environmental problems — like shared river systems — are difficult to manage because:",
+      "options": [
+        "Environmental problems rarely cross national borders",
+        "Each state has sovereign control over its portion and different interests, making cooperation challenging",
+        "International environmental law fully resolves all such disputes",
+        "Only small countries are affected by transboundary environmental issues"
+      ],
+      "answer": "B",
+      "explanation": "When rivers or ecosystems cross multiple nations (e.g., Nile, Mekong, Amazon), each state acts according to its own national interest, often creating upstream-downstream conflicts over extraction, pollution, and dam construction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Modernization theory of development argues that all countries progress through similar stages and that:",
+      "options": [
+        "The global economic system permanently traps poor countries in poverty",
+        "Traditional societies can develop by adopting the capital, technology, and institutions of already-developed countries",
+        "Development is determined solely by geographic location",
+        "Colonial history is the primary cause of underdevelopment"
+      ],
+      "answer": "B",
+      "explanation": "Modernization theory (W.W. Rostow) argues that development follows universal stages from traditional society to high mass consumption, and that foreign aid and technology transfer can accelerate the process.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Dependency theory argues that underdevelopment in the Global South is caused by:",
+      "options": [
+        "Lack of natural resources in developing countries",
+        "The structural exploitation of peripheral countries by core countries through colonial and neocolonial economic relationships",
+        "Rapid population growth overwhelming economic capacity",
+        "Failure of developing countries to adopt free market policies"
+      ],
+      "answer": "B",
+      "explanation": "Dependency theorists (Frank, Prebisch) argue that the global capitalist system is structured to transfer wealth from periphery to core — perpetuating poverty through unequal terms of trade and debt.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "A country with a high GDP per capita but a low HDI ranking is likely characterized by:",
+      "options": [
+        "Strong public education and healthcare systems",
+        "Extreme inequality where oil or resource wealth is concentrated among elites, with poor health and education outcomes for the general population",
+        "A large, highly educated middle class",
+        "A small population with high literacy rates"
+      ],
+      "answer": "B",
+      "explanation": "Some Gulf oil states have high GNI per capita but rank lower on HDI due to inequality, poor health and education outcomes for migrant workers and lower-income citizens.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Microfinance programs (like Grameen Bank in Bangladesh) address development primarily by:",
+      "options": [
+        "Providing large government loans to major corporations",
+        "Giving small loans to poor entrepreneurs (especially women) who lack access to conventional banking",
+        "Subsidizing agricultural exports in developing countries",
+        "Building major infrastructure like dams and highways"
+      ],
+      "answer": "B",
+      "explanation": "Microfinance provides small loans and financial services to low-income individuals — especially women — who cannot access traditional credit, enabling entrepreneurship and income generation at the household level.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "The gender gap in development is significant because research consistently shows that:",
+      "options": [
+        "Closing the gender gap in education and employment reduces economic growth",
+        "Investing in women's education and economic participation has strong multiplier effects on development outcomes for families and communities",
+        "Gender equality is only relevant to political development, not economic development",
+        "Development levels are unrelated to gender inequality"
+      ],
+      "answer": "B",
+      "explanation": "Evidence consistently shows that educating women and girls reduces fertility rates, improves child health and nutrition, increases household income, and boosts national economic productivity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Geographic Information Systems (GIS) are best described as:",
+      "options": [
+        "Satellite navigation systems for mobile phones",
+        "Computer-based tools that capture, store, analyze, and display geographically referenced (spatial) data in layers",
+        "Weather forecasting models",
+        "Digital archives of historical maps"
+      ],
+      "answer": "B",
+      "explanation": "GIS integrates multiple layers of spatial data (land use, population, infrastructure, elevation) to enable geographic analysis, visualization, and decision support.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Remote sensing in geography refers to:",
+      "options": [
+        "Conducting surveys in remote, uninhabited areas",
+        "Collecting geographic data about Earth's surface from a distance using satellites or aircraft",
+        "Using telephone surveys to gather geographic data",
+        "Studying places geographers cannot physically visit"
+      ],
+      "answer": "B",
+      "explanation": "Remote sensing uses electromagnetic radiation detected by satellite or aerial sensors to collect information about Earth's surface — land cover, temperature, vegetation health, urban extent, etc.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "GPS (Global Positioning System) contributes to geographic analysis by:",
+      "options": [
+        "Processing geographic data in layers on a computer",
+        "Providing precise absolute location data (coordinates) for objects and places on Earth's surface",
+        "Interpreting satellite imagery of land cover changes",
+        "Creating three-dimensional terrain models"
+      ],
+      "answer": "B",
+      "explanation": "GPS satellites triangulate precise location coordinates for any point on Earth, providing the absolute location data that GIS, navigation, and field data collection rely on.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Which of the following is a practical application of GIS in urban planning?",
+      "options": [
+        "Predicting stock market trends",
+        "Identifying neighborhoods lacking grocery stores ('food deserts') to prioritize where new markets should be opened",
+        "Designing aircraft flight paths",
+        "Monitoring ocean temperatures"
+      ],
+      "answer": "B",
+      "explanation": "GIS can overlay layers of grocery store locations, population density, and income levels to reveal geographic gaps in food access, helping planners and policymakers target interventions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "A significant ethical concern associated with widespread geographic data collection and GIS use is:",
+      "options": [
+        "Maps will become too accurate to be useful",
+        "Privacy issues — detailed location tracking and surveillance of individuals without their informed consent",
+        "GIS data is too expensive for governments to use",
+        "Geographic data is unreliable because it changes too quickly"
+      ],
+      "answer": "B",
+      "explanation": "As location data becomes more detailed and pervasive (smartphones, satellites, street cameras), questions of who controls that data, how it is used, and whether surveillance is consensual become pressing ethical issues.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Climate-driven migration refers to:",
+      "options": [
+        "Governments relocating populations for economic development projects",
+        "People forced to move because climate change has made their home locations uninhabitable or economically unviable",
+        "Migration due to political persecution in climate-policy-related disputes",
+        "Seasonal agricultural migration that has always occurred"
+      ],
+      "answer": "B",
+      "explanation": "Climate migration is driven by sea level rise, desertification, drought, and extreme weather events making regions uninhabitable — particularly threatening low-lying Pacific island states, coastal Bangladesh, and the Sahel.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Food security, as defined by the FAO, requires that all people have:",
+      "options": [
+        "Access to a supermarket within 5 miles",
+        "Physical, social, and economic access to sufficient, safe, and nutritious food at all times",
+        "Government food rations supplied weekly",
+        "At least 50% of food produced domestically"
+      ],
+      "answer": "B",
+      "explanation": "The FAO's definition encompasses four dimensions: availability (enough food exists), access (people can obtain it), utilization (food is nutritious and safe), and stability (access is reliable over time).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "A 'smart city' in contemporary geography refers to:",
+      "options": [
+        "A city with a very high HDI ranking",
+        "An urban area that uses digital technology, data, and sensors to improve infrastructure, services, and quality of life",
+        "A city governed by an artificial intelligence",
+        "A planned city built entirely from scratch in the 21st century"
+      ],
+      "answer": "B",
+      "explanation": "Smart cities integrate digital infrastructure (sensors, data networks, AI analytics) to optimize traffic, energy, waste management, public safety, and civic participation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "The 'digital divide' in geographic context refers to:",
+      "options": [
+        "The gap between analog and digital map-making techniques",
+        "The unequal access to digital technology and internet connectivity between and within countries, often correlating with income and geography",
+        "The separation of digital from physical commercial spaces",
+        "Legal restrictions on internet content in authoritarian countries"
+      ],
+      "answer": "B",
+      "explanation": "The digital divide maps unequal access to broadband internet, smartphones, and digital services — with stark gaps between urban/rural areas, wealthy/poor countries, and different income groups within countries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Indigenous land rights disputes are geographically significant because:",
+      "options": [
+        "Indigenous peoples have no historical connection to their claimed territories",
+        "They involve competing claims over territory between states and indigenous communities whose historical occupancy and cultural ties predate colonial borders",
+        "All indigenous land claims have been legally resolved globally",
+        "They only matter in small island states"
+      ],
+      "answer": "B",
+      "explanation": "Indigenous land rights conflicts involve geographic claims by peoples whose presence predates colonialism — including sacred sites, traditional territories, and resource rights — often in tension with state sovereignty and extractive industries.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes 'relative location'?",
+      "options": [
+        "The precise latitude and longitude of a place",
+        "A place's position in relation to other places or features",
+        "The size of a geographic region",
+        "The administrative classification of a place"
+      ],
+      "answer": "B",
+      "explanation": "Relative location describes where a place is relative to other known places — e.g., 'north of Mexico City' — rather than an absolute coordinate.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The Mercator map projection is best suited for:",
+      "options": [
+        "Showing accurate relative sizes of continents",
+        "Marine navigation because it preserves compass direction (rhumb lines)",
+        "Illustrating population distribution",
+        "Political boundary mapping"
+      ],
+      "answer": "B",
+      "explanation": "The Mercator projection is conformal (preserves shape and direction), making it ideal for navigation, but it severely distorts the area of high-latitude land masses.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Physiological population density measures population relative to:",
+      "options": [
+        "Total land area",
+        "Arable (farmable) land area",
+        "Urban land area only",
+        "National territory including territorial waters"
+      ],
+      "answer": "B",
+      "explanation": "Physiological density = population ÷ arable land area, revealing pressure on food-producing land rather than spreading population over all land including deserts and mountains.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "In the Demographic Transition Model, Stage 4 is characterized by:",
+      "options": [
+        "High birth rates and high death rates",
+        "High birth rates and falling death rates",
+        "Low birth rates and low death rates, with slow or zero population growth",
+        "Rapidly rising population due to immigration"
+      ],
+      "answer": "C",
+      "explanation": "Stage 4 countries (most developed nations) have achieved low birth and death rates, resulting in stable or slowly declining natural population growth.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "The 'hearth' of a cultural trait refers to:",
+      "options": [
+        "The place where a culture's religion is practiced most intensely",
+        "The geographic origin point from which a cultural innovation or practice spreads",
+        "The center of a country's political power",
+        "The region most resistant to cultural change"
+      ],
+      "answer": "B",
+      "explanation": "The hearth is the origin location of a cultural trait from which diffusion occurs — e.g., Mesopotamia as a hearth of writing, or the Arabian Peninsula as the hearth of Islam.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Hierarchical cultural diffusion is best illustrated by:",
+      "options": [
+        "A contagious disease spreading equally in all directions from an origin point",
+        "A fashion trend spreading from major cities to smaller towns to rural areas",
+        "A language spreading only through military conquest",
+        "Immigrants bringing cultural practices to new settlement locations"
+      ],
+      "answer": "B",
+      "explanation": "Hierarchical diffusion follows an ordered sequence — typically from higher-status or larger urban centers downward to smaller cities and rural areas, rather than spreading uniformly.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "The Berlin Conference (1884–85) primarily affected Africa's political geography by:",
+      "options": [
+        "Creating the African Union",
+        "Establishing the borders of apartheid South Africa",
+        "European powers dividing Africa with geometric borders that ignored African ethnic and cultural boundaries",
+        "Ending the slave trade in West Africa"
+      ],
+      "answer": "C",
+      "explanation": "European colonial powers drew Africa's boundaries to avoid conflict among themselves, creating geometric borders that fragmented ethnic groups and lumped incompatible populations together — contributing to post-independence instability.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Von Thünen's agricultural model predicts that which type of farming would occur closest to the central market city?",
+      "options": [
+        "Extensive grain farming",
+        "Sheep ranching for wool",
+        "Dairy and market gardening (perishables)",
+        "Timber/forestry"
+      ],
+      "answer": "C",
+      "explanation": "Perishable, high-value products like fresh milk and vegetables must reach the market quickly and cannot bear high transportation costs, placing dairy and market gardening in the innermost ring of von Thünen's model.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Wallerstein's World Systems Theory places most of Sub-Saharan Africa in the:",
+      "options": [
+        "Core — dominating global finance and manufacturing",
+        "Semi-periphery — transitioning between core and periphery",
+        "Periphery — dependent on raw material exports and low-wage labor",
+        "Supercore — controlling global technology"
+      ],
+      "answer": "C",
+      "explanation": "Most Sub-Saharan African countries are classified as periphery in World Systems Theory — economically dependent, exporting raw materials at low prices and importing manufactured goods at higher prices.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "The Burgess Concentric Zone Model was developed based on observations of which US city?",
+      "options": [
+        "New York City",
+        "Los Angeles",
+        "Chicago",
+        "Boston"
+      ],
+      "answer": "C",
+      "explanation": "E.W. Burgess developed the concentric zone model in 1925 based on his analysis of Chicago's spatial growth pattern, organized in rings outward from the CBD.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Which of the following best characterizes a 'push factor' for migration?",
+      "options": [
+        "Higher wages available in destination country",
+        "Better universities in destination country",
+        "Political persecution and violence in the origin country",
+        "Cultural ties to a diaspora community in another country"
+      ],
+      "answer": "C",
+      "explanation": "Push factors are negative conditions in the origin location — violence, persecution, poverty, environmental disaster — that compel people to leave, as opposed to pull factors attracting them to a destination.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "The Human Development Index (HDI) is a better measure than GDP per capita because it:",
+      "options": [
+        "Measures only economic output without social factors",
+        "Incorporates health (life expectancy) and education alongside income, giving a more complete picture of well-being",
+        "Measures a country's military power relative to its income",
+        "Only measures the richest 10% of the population's income"
+      ],
+      "answer": "B",
+      "explanation": "HDI adds life expectancy and education to the income measure, revealing that high income does not automatically translate to high health and education outcomes.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Cultural convergence accelerated by globalization is best exemplified by:",
+      "options": [
+        "The revival of traditional indigenous languages worldwide",
+        "Global spread of English, American fast food chains, and Hollywood entertainment across diverse cultures",
+        "The development of regional dialects in previously unified language areas",
+        "Increasing cultural isolation of rural communities"
+      ],
+      "answer": "B",
+      "explanation": "Cultural convergence through globalization is seen in the worldwide spread of consumer brands, English as lingua franca, and American/Western media forms — making diverse cultures more similar in surface practices.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Which statement best describes the 'replacement fertility rate'?",
+      "options": [
+        "A TFR of 3.0 needed for population growth",
+        "A TFR of approximately 2.1 children per woman, sufficient to maintain a stable population size without immigration",
+        "A TFR of 1.0 needed to slow population growth",
+        "A TFR of 4.0 required for economic growth in developing countries"
+      ],
+      "answer": "B",
+      "explanation": "Replacement fertility (~2.1) means each woman has enough children to replace herself and her partner, accounting for childhood mortality before reproductive age — maintaining population stability.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "A 'stateless nation' refers to a group that:",
+      "options": [
+        "Has lost its citizenship in a country through legal process",
+        "Shares a national identity and territorial claims but lacks its own internationally recognized sovereign state",
+        "Is too small in population to qualify for UN membership",
+        "Lives entirely as nomads without permanent territory"
+      ],
+      "answer": "B",
+      "explanation": "Stateless nations — the Kurds, Palestinians, and Tibetans are common examples — have a distinct national identity and often a claimed homeland but are not recognized as sovereign states in the international system.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which map projection preserves area (equal-area) at the cost of distorting shape?",
+      "options": [
+        "Mercator",
+        "Robinson",
+        "Peters (Gall-Peters)",
+        "Azimuthal equidistant"
+      ],
+      "answer": "C",
+      "explanation": "The Gall-Peters projection is an equal-area projection — land masses are shown in their correct relative sizes — but shapes are distorted, making countries appear stretched or compressed.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following is the best example of 'relocation diffusion'?",
+      "options": [
+        "Hip-hop music spreading from US cities to suburbs, then rural areas",
+        "Islam spreading outward from Arabia through conquest and trade",
+        "Buddhism spreading to new countries as monks traveled the Silk Road",
+        "English spreading through social media across the globe"
+      ],
+      "answer": "C",
+      "explanation": "Relocation diffusion occurs when people physically move and carry cultural practices with them — monks traveling (relocating) and establishing Buddhist communities in new regions is a classic example.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "The 'resource curse' is most likely to affect a country that:",
+      "options": [
+        "Has diverse export sectors and strong institutions",
+        "Relies heavily on a single primary commodity export with weak governance and high inequality",
+        "Has invested heavily in manufacturing and education",
+        "Has achieved Stage 4 of the demographic transition"
+      ],
+      "answer": "B",
+      "explanation": "Countries heavily dependent on one resource (oil, diamonds, copper) with weak institutions are most vulnerable to the resource curse — commodity price swings, elite capture, and neglect of other economic sectors.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Urban primacy is most likely to cause which of the following problems?",
+      "options": [
+        "Balanced regional development across the country",
+        "Concentration of investment and talent in one city while other regions are starved of resources",
+        "Population dispersal from the capital to smaller cities",
+        "Decline of immigration into the largest city"
+      ],
+      "answer": "B",
+      "explanation": "Urban primacy leads to over-concentration of economic activity, political attention, and skilled workers in the primate city, while peripheral regions stagnate and receive inadequate public investment.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "The 'Green Revolution' of the 1960s–70s primarily increased food production through:",
+      "options": [
+        "Expanding farmland by clearing forests",
+        "Introduction of high-yield crop varieties combined with irrigation, fertilizers, and pesticides",
+        "Reducing meat consumption globally",
+        "Shifting from subsistence to urban food production"
+      ],
+      "answer": "B",
+      "explanation": "The Green Revolution's productivity gains came from high-yielding wheat and rice varieties combined with irrigation, synthetic fertilizers, and pesticides — dramatically increasing yields on existing farmland.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Dependency theory attributes poverty in developing countries primarily to:",
+      "options": [
+        "Geographic isolation from global markets",
+        "Historical and ongoing structural exploitation through unequal economic relationships with wealthy countries",
+        "Failure to adopt democratic institutions",
+        "Overpopulation relative to available resources"
+      ],
+      "answer": "B",
+      "explanation": "Dependency theorists argue that colonial and neocolonial economic structures transferred wealth from periphery to core through unequal trade, debt, and continued economic dependence.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "GIS (Geographic Information Systems) is primarily used to:",
+      "options": [
+        "Navigate ships using star positions",
+        "Capture, analyze, and display layered spatial data to support geographic decision-making",
+        "Predict weather patterns using atmospheric models",
+        "Survey land for agricultural productivity using soil samples"
+      ],
+      "answer": "B",
+      "explanation": "GIS integrates layers of geographic data (population, land use, infrastructure, environmental data) to enable spatial analysis — supporting urban planning, disaster response, resource management, and policy decisions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Climate migration is primarily driven by:",
+      "options": [
+        "Political instability caused by oil price fluctuations",
+        "Environmental changes (sea level rise, desertification, extreme weather) making home regions uninhabitable or economically nonviable",
+        "Cultural attraction to wealthier nations",
+        "Global labor market demand for migrants"
+      ],
+      "answer": "B",
+      "explanation": "Climate migration results directly from environmental changes — including flooding of coastal areas, prolonged drought, intensifying storms, and desertification — that undermine agriculture and habitability.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Environmental justice as a geographic concept focuses on:",
+      "options": [
+        "Using courts to prosecute pollution by corporations",
+        "The unequal geographic distribution of environmental hazards, which disproportionately burden low-income and minority communities",
+        "International agreements on carbon emissions reduction",
+        "Protecting wilderness areas from any human use"
+      ],
+      "answer": "B",
+      "explanation": "Environmental justice examines the spatial correlation between socioeconomic vulnerability and exposure to pollution, toxic waste, climate risk, and other environmental hazards.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "A 'lingua franca' serves which geographic function?",
+      "options": [
+        "It preserves minority languages from extinction",
+        "It provides a common language for communication among speakers of different native languages, facilitating trade, diplomacy, and cultural exchange",
+        "It replaces all local languages with a global standard",
+        "It is used only in international diplomatic settings"
+      ],
+      "answer": "B",
+      "explanation": "Lingua francas — Swahili in East Africa, English globally — enable communication across language boundaries, facilitating trade, governance, and cultural exchange across diverse regions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Gentrification in urban geography is most associated with:",
+      "options": [
+        "Suburban sprawl replacing farmland",
+        "The influx of wealthier residents and businesses into lower-income urban neighborhoods, raising housing costs and often displacing existing residents",
+        "Government construction of affordable public housing in wealthy neighborhoods",
+        "Industrial development of former residential areas"
+      ],
+      "answer": "B",
+      "explanation": "Gentrification reshapes urban neighborhoods as higher-income residents move in, property values rise, local character changes, and lower-income residents are often priced out and displaced.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "The digital divide in human geography refers to:",
+      "options": [
+        "The gap between analog and digital cartographic techniques",
+        "Unequal access to internet and digital technology between and within countries, often correlated with income and urban/rural location",
+        "Legal restrictions on internet freedom in authoritarian countries",
+        "Competition between tech companies in global markets"
+      ],
+      "answer": "B",
+      "explanation": "The digital divide maps unequal connectivity — separating urban from rural areas, wealthy from poor countries, and high from low-income households within countries — with major implications for economic opportunity.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Transnational corporations (TNCs) most directly contribute to which geographic process?",
+      "options": [
+        "Strengthening national economic self-sufficiency",
+        "Global economic integration through dispersed production, sourcing, and marketing across multiple countries",
+        "Reducing income inequality between core and periphery nations",
+        "Strengthening local cultural identities"
+      ],
+      "answer": "B",
+      "explanation": "TNCs drive economic globalization by distributing their supply chains, production facilities, and markets across many countries, making national economies increasingly interdependent.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Food deserts are geographic areas characterized by:",
+      "options": [
+        "Agricultural land left fallow for ecological recovery",
+        "Limited access to affordable, nutritious food — often in low-income urban or rural areas with few supermarkets",
+        "Regions with extreme drought preventing agriculture",
+        "Areas where fast food restaurants are banned"
+      ],
+      "answer": "B",
+      "explanation": "Food deserts are typically low-income urban or rural areas lacking full-service grocery stores within reasonable distance, forcing residents to rely on fast food or convenience stores for nutrition.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Remote sensing satellites most directly support geographic analysis by:",
+      "options": [
+        "Providing real-time GPS navigation for travelers",
+        "Collecting spectral and image data from Earth's surface without direct physical contact, enabling monitoring of land cover, vegetation, and environmental change",
+        "Processing census data from national governments",
+        "Conducting soil and water quality tests in the field"
+      ],
+      "answer": "B",
+      "explanation": "Remote sensing detects electromagnetic radiation reflected or emitted from Earth's surface, producing images and data used to monitor deforestation, urban growth, crop health, glacial retreat, and disaster damage.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Devolution in political geography refers to:",
+      "options": [
+        "The military conquest of territory by a stronger state",
+        "The transfer of power from a central government to regional or subnational governments",
+        "The dissolution of a state due to civil war",
+        "International recognition of a new sovereign state"
+      ],
+      "answer": "B",
+      "explanation": "Devolution grants greater autonomy to regions — as with Scotland, Catalonia, or Quebec — often driven by regional ethnic, cultural, or economic distinctiveness from the national core.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "The Von Thünen model of agricultural land use assumes which central organizing principle?",
+      "options": [
+        "Agricultural zones are determined primarily by soil type",
+        "Farmers locate activities to minimize transportation costs to the market city, creating concentric rings of land use",
+        "Climate zones determine all agricultural patterns globally",
+        "Government policy assigns crops to specific geographic zones"
+      ],
+      "answer": "B",
+      "explanation": "Von Thünen's model shows that transportation cost to market — not soil or climate — determines which crops are grown where: high-value perishables near the city, extensive crops farther away.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which of the following best describes a 'universalizing religion'?",
+      "options": [
+        "A religion tied to a specific ethnic group and geographic homeland",
+        "A religion that actively seeks converts across all ethnic and cultural groups worldwide",
+        "A religion with no formal doctrine or organization",
+        "A religion only practiced in urbanized societies"
+      ],
+      "answer": "B",
+      "explanation": "Universalizing religions — Christianity, Islam, Buddhism — seek to convert all of humanity regardless of ethnicity or nationality, and have spread globally through missionary activity, trade, and conquest.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "The concept of 'time-space compression' (Harvey) in geographic globalization refers to:",
+      "options": [
+        "The physical shrinking of continents over geologic time",
+        "Transportation and communication technology reducing the effective distance and time between places, making the world feel smaller",
+        "The compression of urban space due to high-rise development",
+        "Standardizing time zones globally"
+      ],
+      "answer": "B",
+      "explanation": "Time-space compression captures how technologies — internet, air travel, container shipping — have dramatically reduced the cost and time of moving goods, people, and information across geographic space.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Which geographic concept best explains why Pacific Island nations like Kiribati face an existential threat from climate change?",
+      "options": [
+        "Urban primacy concentrating population in a single vulnerable city",
+        "Sea level rise threatening the habitability of low-lying atoll territories, potentially requiring complete national relocation",
+        "Rapid population growth overwhelming island resources",
+        "Colonial land use patterns causing deforestation"
+      ],
+      "answer": "B",
+      "explanation": "Low-lying atoll islands sit only a meter or two above sea level; projected sea level rise threatens inundation of entire national territories, potentially making them uninhabitable — raising unprecedented questions of statelessness and climate migration.",
+      "points": 1
+    }
+  ]
+}

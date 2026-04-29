@@ -1,0 +1,1220 @@
+{
+  "slug": "fitness-leadership",
+  "name": "Fitness Leadership",
+  "nameZh": "健身领导力",
+  "credits": 0.5,
+  "department": "Physical Education",
+  "type": "Elective",
+  "description": "Prepares students to lead fitness activities, design exercise programs, and communicate health and wellness concepts to diverse groups. Combines exercise science principles with leadership, communication, and professional skills.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Leadership in Fitness Settings",
+      "titleZh": "健身环境中的领导力",
+      "objectives": "Define leadership styles; describe qualities of effective fitness leaders; explain the difference between leading and managing a fitness group.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/leadership-skills/",
+      "readingNote": "ACE Fitness — Leadership Skills for Fitness Professionals",
+      "videoUrl": "https://www.youtube.com/watch?v=XKUPDUDOBVo",
+      "videoNote": "Leadership Styles Explained",
+      "video2Url": "https://www.youtube.com/watch?v=Unzc731iCUY",
+      "video2Note": "Simon Sinek on Great Leaders",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine",
+      "practiceNote": "Khan Academy — Health and Medicine",
+      "assignment": "Survey 5 people about a fitness leader who inspired them. Identify the top 3 leadership qualities mentioned and write a reflection on your own leadership style.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Exercise Science Foundations",
+      "titleZh": "运动科学基础",
+      "objectives": "Review the five components of fitness; explain energy systems (ATP-PC, glycolytic, oxidative); apply training principles to program design.",
+      "readingUrl": "https://www.nsca.com/education/articles/nsca-coach/exercise-science-foundations/",
+      "readingNote": "NSCA — Exercise Science Foundations",
+      "videoUrl": "https://www.youtube.com/watch?v=2tM1LFFxeKg",
+      "videoNote": "Energy Systems in Exercise Science",
+      "video2Url": "https://www.youtube.com/watch?v=wmqth7or9oE",
+      "video2Note": "Five Components of Fitness Reviewed",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine/physical-health",
+      "practiceNote": "Khan Academy — Physical Health",
+      "assignment": "Create a 1-page reference sheet explaining each energy system, the sports activities it fuels, and how training can improve each system.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 3,
+      "title": "Program Design Principles",
+      "titleZh": "项目设计原则",
+      "objectives": "Apply FITT-VP (Frequency, Intensity, Time, Type, Volume, Progression) to design evidence-based exercise programs for a variety of goals.",
+      "readingUrl": "https://www.acefitness.org/resources/everyone/blog/5593/what-is-the-fitt-principle/",
+      "readingNote": "ACE Fitness — FITT Principle",
+      "videoUrl": "https://www.youtube.com/watch?v=NynE4pHfNMY",
+      "videoNote": "Program Design Principles for Fitness",
+      "video2Url": "https://www.youtube.com/watch?v=GgmJrQ0V5W0",
+      "video2Note": "Designing a Balanced Workout Plan",
+      "practiceUrl": "https://www.acefitness.org/resources/professionals/tools-calculators/",
+      "practiceNote": "ACE Fitness — Program Design Calculators",
+      "assignment": "Design a 6-week beginner exercise program for a sedentary adult. Include cardio, strength, and flexibility components with progression built in.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 4,
+      "title": "Teaching Fitness Activities",
+      "titleZh": "健身活动教学",
+      "objectives": "Apply instructional principles (demonstrate, explain, cue, correct) when teaching physical skills; provide effective feedback to participants.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/teaching-exercise/",
+      "readingNote": "ACE Fitness — Teaching Exercise Effectively",
+      "videoUrl": "https://www.youtube.com/watch?v=XrZUFZFuFVE",
+      "videoNote": "How to Teach Exercise Skills Effectively",
+      "video2Url": "https://www.youtube.com/watch?v=Unzc731iCUY",
+      "video2Note": "Effective Coaching and Cueing Techniques",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine",
+      "practiceNote": "Khan Academy — Health and Medicine",
+      "assignment": "Teach a 5-minute fitness skill to a partner or small group. Self-assess using the IDEA (Introduce, Demonstrate, Explain, Activity) instructional model.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 5,
+      "title": "Motivating Others",
+      "titleZh": "激励他人",
+      "objectives": "Distinguish extrinsic from intrinsic motivation; apply self-determination theory and behavior change models to fitness contexts.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/motivation-exercise/",
+      "readingNote": "ACE Fitness — Motivating Clients",
+      "videoUrl": "https://www.youtube.com/watch?v=u6XAPnuFjJc",
+      "videoNote": "Drive: The Surprising Truth About Motivation",
+      "video2Url": "https://www.youtube.com/watch?v=8ZhoeSaPF-k",
+      "video2Note": "Self-Determination Theory in Sport and Fitness",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine/mental-health",
+      "practiceNote": "Khan Academy — Mental Health",
+      "assignment": "Interview two people about their fitness motivation. Apply a behavior change model (Transtheoretical, SDT, or Motivational Interviewing) to analyze their responses.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Group Exercise Instruction",
+      "titleZh": "团体运动指导",
+      "objectives": "Describe elements of an effective group exercise class (warm-up, main set, cool-down); explain music use, spatial awareness, and participant engagement.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/group-fitness/",
+      "readingNote": "ACE Fitness — Group Exercise Instruction",
+      "videoUrl": "https://www.youtube.com/watch?v=Yqn0VrPnVMY",
+      "videoNote": "Group Exercise Class Structure",
+      "video2Url": "https://www.youtube.com/watch?v=L_xrDAtykMI",
+      "video2Note": "Leading a Dynamic Group Warm-Up",
+      "practiceUrl": "https://www.acefitness.org/resources/professionals/expert-articles/",
+      "practiceNote": "ACE Fitness — Fitness Professional Articles",
+      "assignment": "Plan and lead a 10-minute group warm-up session. Include verbal cues, visual demonstrations, modifications, and a participant engagement strategy.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 7,
+      "title": "Special Populations in Fitness",
+      "titleZh": "特殊人群健身",
+      "objectives": "Identify modifications for fitness programs serving older adults, youth, pregnant women, and individuals with chronic conditions.",
+      "readingUrl": "https://www.cdc.gov/physicalactivity/basics/age-chart.html",
+      "readingNote": "CDC — Physical Activity Guidelines by Age Group",
+      "videoUrl": "https://www.youtube.com/watch?v=RrHJQsZ_nDc",
+      "videoNote": "Exercise for Special Populations",
+      "video2Url": "https://www.youtube.com/watch?v=4f0w2HGIZLM",
+      "video2Note": "Older Adults and Exercise",
+      "practiceUrl": "https://www.acefitness.org/resources/professionals/expert-articles/special-populations/",
+      "practiceNote": "ACE Fitness — Special Populations",
+      "assignment": "Design a 4-week beginner fitness program for one special population of your choice. Justify all modifications with evidence-based reasoning.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 8,
+      "title": "Technology in Fitness",
+      "titleZh": "健身科技",
+      "objectives": "Evaluate wearable fitness technology and apps for accuracy and usefulness; discuss the role of AI and data analytics in personalized fitness.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/fitness-technology/",
+      "readingNote": "ACE Fitness — Fitness Technology Trends",
+      "videoUrl": "https://www.youtube.com/watch?v=Pt4kT2dkAOA",
+      "videoNote": "Fitness Technology: Wearables and Apps",
+      "video2Url": "https://www.youtube.com/watch?v=S5OW0pRBcVQ",
+      "video2Note": "How AI Is Changing Fitness",
+      "practiceUrl": "https://www.myfitnesspal.com/",
+      "practiceNote": "MyFitnessPal — Fitness and Nutrition Tracking App",
+      "assignment": "Use a fitness tracking app for 2 weeks. Write a critical evaluation comparing self-reported vs. technology-measured activity data and discuss accuracy limitations.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Business of Fitness",
+      "titleZh": "健身行业",
+      "objectives": "Describe the fitness industry landscape; identify certifying bodies (ACE, NASM, NSCA); outline business basics for a fitness professional.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/fitness-business/",
+      "readingNote": "ACE Fitness — Fitness Business Resources",
+      "videoUrl": "https://www.youtube.com/watch?v=BxSfqHAUxYs",
+      "videoNote": "How to Start a Fitness Business",
+      "video2Url": "https://www.youtube.com/watch?v=KU3g1gVzFm0",
+      "video2Note": "Personal Trainer Career Path",
+      "practiceUrl": "https://www.bls.gov/ooh/personal-care-and-service/fitness-trainers-and-instructors.htm",
+      "practiceNote": "BLS — Fitness Trainers and Instructors Outlook",
+      "assignment": "Research two fitness certifications (e.g., ACE, NASM, NSCA-CPT). Compare exam requirements, cost, CEU requirements, and career relevance in a comparison table.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 10,
+      "title": "Safety and Risk Management",
+      "titleZh": "安全与风险管理",
+      "objectives": "Identify common exercise risks; describe informed consent and health screening procedures; explain how to respond to exercise-related emergencies.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/risk-management/",
+      "readingNote": "ACE Fitness — Risk Management for Fitness Professionals",
+      "videoUrl": "https://www.youtube.com/watch?v=DEFe6V5t7xo",
+      "videoNote": "Safety and Risk Management in Fitness",
+      "video2Url": "https://www.youtube.com/watch?v=6t4_R6GGJSI",
+      "video2Note": "Emergency Response in a Fitness Setting",
+      "practiceUrl": "https://www.redcross.org/take-a-class/first-aid",
+      "practiceNote": "Red Cross — First Aid Training",
+      "assignment": "Create a safety protocol for a fitness class. Include a PAR-Q health screening form, facility safety checklist, and emergency response procedure.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Fitness Assessment",
+      "titleZh": "体能评估",
+      "objectives": "Administer a comprehensive fitness assessment battery; interpret results; use data to set goals and design individualized programs.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/fitness-assessments/",
+      "readingNote": "ACE Fitness — Fitness Assessments",
+      "videoUrl": "https://www.youtube.com/watch?v=KN0wkYvD8jA",
+      "videoNote": "Conducting a Fitness Assessment",
+      "video2Url": "https://www.youtube.com/watch?v=NMq1t3WJhW8",
+      "video2Note": "Interpreting Fitness Test Results",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/tools-calculators/",
+      "practiceNote": "ACE Fitness — Fitness Assessment Calculators",
+      "assignment": "Conduct a full fitness assessment on a partner (cardiovascular, strength, flexibility, body composition). Write an individualized program recommendation based on results.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 12,
+      "title": "Nutrition Coaching Basics",
+      "titleZh": "营养指导基础",
+      "objectives": "Describe scope of practice for fitness professionals in nutrition guidance; explain macronutrient basics and healthy eating principles.",
+      "readingUrl": "https://www.myplate.gov/",
+      "readingNote": "USDA MyPlate — Nutrition Guidance",
+      "videoUrl": "https://www.youtube.com/watch?v=UkPsS4a4jWo",
+      "videoNote": "Nutrition Basics for Fitness Professionals",
+      "video2Url": "https://www.youtube.com/watch?v=GEqfBUTJ_Mw",
+      "video2Note": "Hydration and Athletic Performance",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine/energy-in-our-food",
+      "practiceNote": "Khan Academy — Energy in Our Food",
+      "assignment": "Create a client-friendly one-page nutrition handout on the plate method and pre/post-workout eating. Include hydration recommendations and practical meal tips.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Communication Skills for Fitness Leaders",
+      "titleZh": "健身领导者的沟通技巧",
+      "objectives": "Apply active listening and motivational interviewing techniques; demonstrate verbal and nonverbal communication skills in fitness coaching.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/communication-skills/",
+      "readingNote": "ACE Fitness — Communication Skills for Trainers",
+      "videoUrl": "https://www.youtube.com/watch?v=MJi7dY0ht0E",
+      "videoNote": "Motivational Interviewing in Health Coaching",
+      "video2Url": "https://www.youtube.com/watch?v=TZa01ZBMzBk",
+      "video2Note": "Active Listening Skills",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine/mental-health",
+      "practiceNote": "Khan Academy — Mental Health",
+      "assignment": "Role-play a fitness coaching session using active listening and motivational interviewing. Self-evaluate your verbal cues, empathy, and goal-setting conversation.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 14,
+      "title": "Professionalism and Ethics in Fitness",
+      "titleZh": "健身行业的职业素养与伦理",
+      "objectives": "Describe professional standards, codes of ethics, and scope of practice for fitness leaders; demonstrate professional behaviors in client interactions.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/expert-articles/code-of-ethics/",
+      "readingNote": "ACE Fitness — Code of Ethics for Fitness Professionals",
+      "videoUrl": "https://www.youtube.com/watch?v=F_fBHBVh8Hk",
+      "videoNote": "Professionalism in Fitness",
+      "video2Url": "https://www.youtube.com/watch?v=XKUPDUDOBVo",
+      "video2Note": "Ethics in Health and Fitness",
+      "practiceUrl": "https://www.acefitness.org/resources/professionals/",
+      "practiceNote": "ACE Fitness — Professional Development Resources",
+      "assignment": "Analyze a fitness ethics case study. Apply the ACE Code of Ethics to propose a resolution. Reflect on how professionalism builds client trust and career success.",
+      "estimatedHrs": 2.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which leadership style involves making decisions collaboratively with the group?",
+      "options": ["Autocratic", "Democratic", "Laissez-faire", "Transactional"],
+      "answer": "Democratic",
+      "explanation": "Democratic leaders involve group members in decision-making, fostering ownership and engagement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "An effective fitness leader primarily:",
+      "options": ["Performs all exercises personally", "Motivates and guides others toward their health goals", "Makes all decisions without input", "Focuses only on elite athletes"],
+      "answer": "Motivates and guides others toward their health goals",
+      "explanation": "Fitness leaders empower participants, provide guidance, and create motivating environments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Transformational leadership in fitness is characterized by:",
+      "options": ["Strict rule enforcement only", "Inspiring others to exceed their own expectations through vision and motivation", "Rewarding performance with tangible incentives", "Avoiding feedback"],
+      "answer": "Inspiring others to exceed their own expectations through vision and motivation",
+      "explanation": "Transformational leaders inspire and empower rather than relying on external rewards.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Emotional intelligence in fitness leadership includes:",
+      "options": ["Ignoring participants' feelings", "Recognizing and responding empathetically to participants' emotional states", "Only focusing on technical skills", "Maintaining strict emotional distance"],
+      "answer": "Recognizing and responding empathetically to participants' emotional states",
+      "explanation": "Emotionally intelligent leaders build trust and rapport by acknowledging and responding to others' emotions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "A fitness leader who adjusts their style based on participant needs is demonstrating:",
+      "options": ["Inconsistency", "Situational leadership", "Autocratic control", "Laissez-faire management"],
+      "answer": "Situational leadership",
+      "explanation": "Situational leaders adapt their style to the developmental level and needs of each individual or group.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Which energy system provides immediate energy for activities lasting 0–10 seconds?",
+      "options": ["Oxidative system", "Glycolytic system", "ATP-PC (phosphocreatine) system", "Fat oxidation system"],
+      "answer": "ATP-PC (phosphocreatine) system",
+      "explanation": "The ATP-PC system provides rapid energy for very short, explosive efforts using stored ATP and phosphocreatine.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "The oxidative (aerobic) energy system is the primary fuel source for activities lasting:",
+      "options": ["0–10 seconds", "10–120 seconds", "More than 2 minutes", "Only during sleep"],
+      "answer": "More than 2 minutes",
+      "explanation": "The aerobic system dominates in prolonged, lower-intensity activities, producing large amounts of ATP using oxygen.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The FITT principle stands for:",
+      "options": ["Force, Intensity, Time, Type", "Frequency, Intensity, Time, Type", "Frequency, Interval, Training, Threshold", "Fitness, Intensity, Training, Technique"],
+      "answer": "Frequency, Intensity, Time, Type",
+      "explanation": "FITT = Frequency, Intensity, Time, Type — the four variables for designing an exercise program.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "The glycolytic (anaerobic) system primarily produces energy through:",
+      "options": ["Fat oxidation", "Oxygen utilization", "Breakdown of glucose without oxygen", "Protein metabolism"],
+      "answer": "Breakdown of glucose without oxygen",
+      "explanation": "The glycolytic system breaks down glucose to pyruvate (without oxygen), producing ATP quickly but with lactate as a byproduct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "VO2 max is considered the gold standard for measuring:",
+      "options": ["Muscular strength", "Aerobic capacity", "Body composition", "Flexibility"],
+      "answer": "Aerobic capacity",
+      "explanation": "VO2 max measures maximum oxygen uptake during maximal exercise, representing the upper limit of aerobic energy production.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "FITT-VP adds which two variables to the original FITT principle?",
+      "options": ["Velocity and Power", "Volume and Progression", "Variety and Performance", "Volume and Power"],
+      "answer": "Volume and Progression",
+      "explanation": "FITT-VP adds Volume (total work done) and Progression (how to increase demands over time).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "A beginner strength program should prioritize:",
+      "options": ["Maximum weight from day one", "Learning proper form at moderate loads with gradual progression", "Training to failure every session", "Skipping warm-up to save time"],
+      "answer": "Learning proper form at moderate loads with gradual progression",
+      "explanation": "Beginners need to establish correct movement patterns and build a base before adding heavy loads.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "A balanced exercise program addresses which three components?",
+      "options": ["Only strength and speed", "Cardiovascular endurance, muscular strength/endurance, and flexibility", "Only aerobic conditioning", "Body composition only"],
+      "answer": "Cardiovascular endurance, muscular strength/endurance, and flexibility",
+      "explanation": "A well-rounded program includes cardiovascular, resistance, and flexibility training.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "The 10% rule in program design states you should increase training load by no more than:",
+      "options": ["10% per day", "10% per week", "10% per month", "25% per session"],
+      "answer": "10% per week",
+      "explanation": "The 10% rule helps prevent overuse injuries by limiting weekly increases in mileage or training volume.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Periodization in program design helps by:",
+      "options": ["Keeping workouts identical to build routine", "Systematically varying training stress to optimize performance and prevent overtraining", "Eliminating rest days for maximum stimulus", "Focusing only on one fitness component"],
+      "answer": "Systematically varying training stress to optimize performance and prevent overtraining",
+      "explanation": "Periodization varies volume and intensity in planned cycles to maximize adaptation while managing fatigue.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "The IDEA teaching model stands for:",
+      "options": ["Introduce, Demonstrate, Explain, Activity", "Instruct, Direct, Engage, Assess", "Inform, Discuss, Evaluate, Apply", "Identify, Design, Execute, Analyze"],
+      "answer": "Introduce, Demonstrate, Explain, Activity",
+      "explanation": "IDEA is a structured teaching model for fitness instruction: introduce the skill, demonstrate it, explain key points, then have participants practice.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Kinesthetic cueing in fitness instruction means:",
+      "options": ["Only verbal instructions", "Physically guiding the learner through the movement (with consent)", "Using music to signal transitions", "Visual demonstration from a distance"],
+      "answer": "Physically guiding the learner through the movement (with consent)",
+      "explanation": "Kinesthetic cueing involves tactile guidance to help participants feel the correct movement pattern.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Corrective feedback is most effective when it:",
+      "options": ["Lists every error at once", "Is specific, timely, and focuses on one key correction", "Is delivered only at the end of the session", "Criticizes without offering solutions"],
+      "answer": "Is specific, timely, and focuses on one key correction",
+      "explanation": "Effective feedback is immediate, specific, and actionable — correcting one priority at a time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "The 'sandwich feedback' method involves:",
+      "options": ["Only negative feedback", "Positive comment, corrective point, positive encouragement", "Correction first, then praise", "Silent observation only"],
+      "answer": "Positive comment, corrective point, positive encouragement",
+      "explanation": "Sandwich feedback surrounds correction with positive reinforcement to maintain motivation while addressing errors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Providing exercise modifications is important because it:",
+      "options": ["Makes classes easier for everyone", "Ensures all participants can safely perform at their own ability level", "Reduces the need for coaching", "Is only needed for elite athletes"],
+      "answer": "Ensures all participants can safely perform at their own ability level",
+      "explanation": "Modifications allow inclusion and safety for participants of varying fitness levels and physical limitations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Self-Determination Theory identifies three basic psychological needs driving intrinsic motivation as:",
+      "options": ["Reward, punishment, and recognition", "Autonomy, competence, and relatedness", "Strength, speed, and endurance", "Competition, fame, and money"],
+      "answer": "Autonomy, competence, and relatedness",
+      "explanation": "SDT proposes that autonomy (choice), competence (mastery), and relatedness (connection) fuel intrinsic motivation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Extrinsic motivation in exercise is driven by:",
+      "options": ["Personal enjoyment of the activity", "External rewards such as prizes, compliments, or social pressure", "Internal satisfaction of achieving a goal", "Natural curiosity about movement"],
+      "answer": "External rewards such as prizes, compliments, or social pressure",
+      "explanation": "Extrinsic motivation comes from outside sources; while effective short-term, it is less durable than intrinsic motivation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "The Transtheoretical Model identifies 5 stages of behavior change. Which stage describes someone who exercises regularly and has done so for less than 6 months?",
+      "options": ["Precontemplation", "Contemplation", "Preparation", "Action"],
+      "answer": "Action",
+      "explanation": "The Action stage: the person has made the behavior change but for fewer than 6 months; maintenance begins after 6 months.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Motivational Interviewing (MI) in fitness coaching is best described as:",
+      "options": ["Telling clients exactly what to do", "A client-centered communication style that explores and resolves ambivalence about behavior change", "A rigid assessment protocol", "Delivering standardized fitness lectures"],
+      "answer": "A client-centered communication style that explores and resolves ambivalence about behavior change",
+      "explanation": "MI uses empathy, reflective listening, and collaborative goal-setting to strengthen motivation for healthy behaviors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "A fitness leader who celebrates small client wins and focuses on effort rather than outcome is using:",
+      "options": ["Fixed mindset coaching", "Outcome-based reinforcement only", "Growth mindset coaching", "Punishment-based motivation"],
+      "answer": "Growth mindset coaching",
+      "explanation": "Growth mindset coaching emphasizes effort, learning, and improvement — praising process over outcome.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The three main phases of a group exercise class are:",
+      "options": ["Check-in, workout, cool-down review", "Warm-up, main conditioning set, cool-down", "Stretching, strengthening, meditation", "Introduction, demonstration, performance"],
+      "answer": "Warm-up, main conditioning set, cool-down",
+      "explanation": "All group exercise classes should include a warm-up, the main workout, and a cool-down with stretching.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "When selecting music for group exercise, the instructor should consider:",
+      "options": ["Only personal preference", "Tempo (BPM) matched to the exercise phase, legal licensing, and participant preferences", "Music that is always the same tempo", "Playing music only during breaks"],
+      "answer": "Tempo (BPM) matched to the exercise phase, legal licensing, and participant preferences",
+      "explanation": "Effective music selection matches BPM to exercise intensity, uses licensed tracks, and considers participant demographics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Spatial awareness in group exercise instruction means:",
+      "options": ["Staying in one spot throughout class", "Moving throughout the space to monitor, motivate, and assist all participants", "Standing closest to the sound system", "Only demonstrating from the front"],
+      "answer": "Moving throughout the space to monitor, motivate, and assist all participants",
+      "explanation": "Moving through the room allows the instructor to give individual feedback and maintain participant engagement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Mirroring in group exercise instruction means:",
+      "options": ["Participants imitate each other", "The instructor performs movements mirrored so participants follow correctly", "Using wall mirrors for self-correction", "Recording and reviewing class footage"],
+      "answer": "The instructor performs movements mirrored so participants follow correctly",
+      "explanation": "Mirroring means when the instructor moves their right, participants move their left — making cues visually intuitive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Participant engagement in group exercise is best maintained by:",
+      "options": ["Keeping the same routine every class", "Varying exercises, offering verbal encouragement, and using eye contact", "Avoiding interaction with participants", "Playing music so loud no verbal cues are needed"],
+      "answer": "Varying exercises, offering verbal encouragement, and using eye contact",
+      "explanation": "Variety, positive reinforcement, and personal connection maintain participant interest and adherence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "When designing programs for older adults, the fitness leader should emphasize:",
+      "options": ["High-impact plyometrics exclusively", "Balance, flexibility, functional strength, and fall prevention", "Maximum cardio intensity", "Competitive sport performance"],
+      "answer": "Balance, flexibility, functional strength, and fall prevention",
+      "explanation": "Older adult programs prioritize functional fitness and fall prevention due to age-related muscle and balance decline.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "For youth fitness programs, emphasis should be placed on:",
+      "options": ["Maximum weight lifting and competition", "Fun, skill development, variety, and positive experiences with movement", "Sport specialization before age 10", "Adult-equivalent training volumes"],
+      "answer": "Fun, skill development, variety, and positive experiences with movement",
+      "explanation": "Youth programs should build lifelong movement habits through enjoyable, age-appropriate activities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "A participant with Type 2 diabetes should be advised to:",
+      "options": ["Avoid all exercise", "Monitor blood glucose before, during, and after exercise", "Exercise only at maximum intensity", "Stop insulin medication before exercising"],
+      "answer": "Monitor blood glucose before, during, and after exercise",
+      "explanation": "Exercise affects blood glucose levels; monitoring helps prevent hypoglycemia and guides safe exercise intensity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Pregnant women should generally avoid exercise positions that:",
+      "options": ["Involve walking", "Involve lying flat on the back (supine) after the first trimester", "Include stretching", "Use light dumbbells"],
+      "answer": "Involve lying flat on the back (supine) after the first trimester",
+      "explanation": "Supine positions can compress the vena cava, reducing blood return to the heart and potentially harming the fetus.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "PAR-Q stands for:",
+      "options": ["Physical Activity Registration Questionnaire", "Physical Activity Readiness Questionnaire", "Personal Assessment Rating — Quality", "Pre-Activity Risk Qualifier"],
+      "answer": "Physical Activity Readiness Questionnaire",
+      "explanation": "The PAR-Q is a health screening tool to identify individuals who may need medical clearance before starting an exercise program.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A limitation of consumer wearable fitness trackers is that they:",
+      "options": ["Are too large to wear", "Often have accuracy limitations, especially for calorie counting", "Only work during sleep", "Cannot track heart rate"],
+      "answer": "Often have accuracy limitations, especially for calorie counting",
+      "explanation": "Research shows consumer wearables can be inaccurate for calorie estimates; step counts and HR are more reliable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Fitness apps primarily help users by:",
+      "options": ["Replacing the need for exercise", "Tracking activity, nutrition, and progress to support behavior change", "Providing medical diagnoses", "Replacing personal trainers entirely"],
+      "answer": "Tracking activity, nutrition, and progress to support behavior change",
+      "explanation": "Fitness apps facilitate self-monitoring, goal tracking, and feedback that support healthy behavior change.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Heart rate monitors are most accurate when using:",
+      "options": ["Wrist-based optical sensors during high-intensity exercise", "Chest strap electrodes in all conditions", "Fingertip oximeters during running", "Smartwatch during sprinting"],
+      "answer": "Chest strap electrodes in all conditions",
+      "explanation": "Chest strap monitors measure electrical cardiac signals, providing more accurate HR data than optical wrist sensors especially at high intensities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Technology in fitness can improve adherence by:",
+      "options": ["Making exercise unnecessarily complex", "Providing real-time feedback, accountability features, and progress visualization", "Replacing human coaching entirely", "Eliminating the need for warm-up"],
+      "answer": "Providing real-time feedback, accountability features, and progress visualization",
+      "explanation": "Technology tools that show progress, send reminders, and offer social features improve long-term exercise adherence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "When evaluating a fitness app for client use, a leader should assess:",
+      "options": ["Whether it has the most colorful interface", "Accuracy of data, ease of use, scientific backing, and privacy policies", "Celebrity endorsement", "Price only"],
+      "answer": "Accuracy of data, ease of use, scientific backing, and privacy policies",
+      "explanation": "Critical evaluation considers evidence base, accuracy, usability, and data security before recommending apps.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "The largest fitness certification organization in the U.S. is:",
+      "options": ["NSCA", "ACE", "ACSM", "NATA"],
+      "answer": "ACE",
+      "explanation": "ACE (American Council on Exercise) is the largest nonprofit fitness certification organization in the United States.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "A fitness professional's scope of practice typically includes:",
+      "options": ["Diagnosing medical conditions", "Designing exercise programs and coaching healthy lifestyle behaviors", "Prescribing dietary supplements for disease treatment", "Performing physical therapy interventions"],
+      "answer": "Designing exercise programs and coaching healthy lifestyle behaviors",
+      "explanation": "Fitness professionals design programs and educate on healthy habits; medical diagnosis is outside their scope.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Revenue streams for independent fitness professionals include:",
+      "options": ["Only gym employment", "Personal training, group fitness, online coaching, and fitness content creation", "Medical billing", "Sports team management"],
+      "answer": "Personal training, group fitness, online coaching, and fitness content creation",
+      "explanation": "Modern fitness professionals diversify income through in-person training, group classes, online platforms, and digital content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Which organization certifies strength and conditioning coaches for collegiate and professional sports settings?",
+      "options": ["ACE", "NASM", "NSCA (CSCS credential)", "Red Cross"],
+      "answer": "NSCA (CSCS credential)",
+      "explanation": "The NSCA's Certified Strength and Conditioning Specialist (CSCS) is the gold standard credential for sports performance professionals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Professional liability insurance for fitness professionals protects against:",
+      "options": ["Claims that a client was injured due to the trainer's negligence", "Equipment malfunctions only", "Late client payments", "Personal injury outside of work"],
+      "answer": "Claims that a client was injured due to the trainer's negligence",
+      "explanation": "Liability insurance covers legal costs if a client claims injury resulting from the fitness professional's services.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "A PAR-Q is administered before exercise to:",
+      "options": ["Rank participants by fitness level", "Screen for conditions requiring medical clearance before starting an exercise program", "Measure body composition", "Determine exercise preferences"],
+      "answer": "Screen for conditions requiring medical clearance before starting an exercise program",
+      "explanation": "The PAR-Q identifies cardiovascular, metabolic, and musculoskeletal risk factors requiring physician clearance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Warning signs that should stop exercise immediately include:",
+      "options": ["Mild muscle fatigue", "Chest pain, severe shortness of breath, or loss of consciousness", "Normal sweating", "Temporary thirst"],
+      "answer": "Chest pain, severe shortness of breath, or loss of consciousness",
+      "explanation": "These are cardiac emergency warning signs requiring immediate cessation of exercise and activation of EMS.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Informed consent in fitness settings means:",
+      "options": ["Participants agree to any instruction without questioning", "Participants understand and agree to exercise risks and the trainer's role", "Trainers are legally protected from all liability", "Medical clearance is no longer required"],
+      "answer": "Participants understand and agree to exercise risks and the trainer's role",
+      "explanation": "Informed consent documents that clients understand exercise risks and the professional relationship.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Equipment safety inspection in a fitness facility should be performed:",
+      "options": ["Once per year only", "Before each session and on a regular maintenance schedule", "Only after equipment breaks down", "When the manager requests it"],
+      "answer": "Before each session and on a regular maintenance schedule",
+      "explanation": "Regular inspection prevents equipment failures that could cause injury to participants.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "A fitness facility's Emergency Action Plan (EAP) should include:",
+      "options": ["Only staff phone numbers", "Location of AED, emergency contacts, roles during emergencies, and evacuation routes", "Marketing strategy", "Membership discounts"],
+      "answer": "Location of AED, emergency contacts, roles during emergencies, and evacuation routes",
+      "explanation": "A comprehensive EAP prepares staff to respond effectively to medical and environmental emergencies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "A comprehensive fitness assessment should include:",
+      "options": ["Only body weight measurement", "Cardiovascular, muscular strength and endurance, flexibility, and body composition tests", "A single timed run", "BMI calculation only"],
+      "answer": "Cardiovascular, muscular strength and endurance, flexibility, and body composition tests",
+      "explanation": "A complete fitness assessment battery evaluates all five health-related fitness components.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The 3-minute step test measures:",
+      "options": ["Flexibility", "Cardiovascular recovery", "Muscular endurance", "Body fat percentage"],
+      "answer": "Cardiovascular recovery",
+      "explanation": "The step test measures how quickly heart rate returns to normal after stepping, indicating cardiovascular fitness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Resting heart rate is best measured:",
+      "options": ["Immediately after intense exercise", "First thing in the morning before getting out of bed", "After eating a large meal", "During stressful activity"],
+      "answer": "First thing in the morning before getting out of bed",
+      "explanation": "Resting heart rate is most accurately measured in the morning before activity or stimulants.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Skinfold measurements to estimate body fat are taken using:",
+      "options": ["A scale and ruler", "Calipers at specific anatomical sites", "Blood pressure cuff", "Heart rate monitor"],
+      "answer": "Calipers at specific anatomical sites",
+      "explanation": "Skinfold calipers measure subcutaneous fat thickness at standardized sites to estimate total body fat percentage.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Assessment data should be used to:",
+      "options": ["Compare clients publicly", "Set individualized goals and design appropriate programs", "Disqualify clients from exercising", "Determine salary of the fitness professional"],
+      "answer": "Set individualized goals and design appropriate programs",
+      "explanation": "Assessment data guides program design, goal-setting, and progress evaluation tailored to each client.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Scope of practice limits fitness professionals from:",
+      "options": ["Teaching proper exercise technique", "Recommending eating patterns aligned with dietary guidelines", "Diagnosing nutritional deficiencies or prescribing medical nutrition therapy", "Explaining macronutrients to clients"],
+      "answer": "Diagnosing nutritional deficiencies or prescribing medical nutrition therapy",
+      "explanation": "Medical nutrition therapy and diagnosis of deficiencies are within the scope of registered dietitians, not fitness professionals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "The plate method recommends filling half of your plate with:",
+      "options": ["Protein", "Grains", "Fruits and vegetables", "Dairy"],
+      "answer": "Fruits and vegetables",
+      "explanation": "The plate method (MyPlate) recommends half the plate be fruits and vegetables for optimal nutrient density.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "The three macronutrients are:",
+      "options": ["Vitamins, minerals, and water", "Carbohydrates, proteins, and fats", "Fiber, sugar, and sodium", "Calcium, iron, and zinc"],
+      "answer": "Carbohydrates, proteins, and fats",
+      "explanation": "Macronutrients provide energy and are consumed in large quantities: carbohydrates, proteins, and fats.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Pre-workout nutrition should focus primarily on:",
+      "options": ["High-fat foods eaten 30 minutes before", "Easily digestible carbohydrates 1–2 hours before exercise", "Protein shakes only", "Fasting before all workouts"],
+      "answer": "Easily digestible carbohydrates 1–2 hours before exercise",
+      "explanation": "Pre-workout carbohydrates fuel the session; high-fat foods slow digestion and may cause GI discomfort.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "General hydration guidance for exercise is:",
+      "options": ["Drink only after thirst signals occur", "Hydrate before, during, and after exercise; monitor urine color", "Drink a minimum of 4 liters per hour during exercise", "Avoid water during high-intensity exercise"],
+      "answer": "Hydrate before, during, and after exercise; monitor urine color",
+      "explanation": "Proactive hydration prevents performance decrements; pale yellow urine indicates adequate hydration status.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Active listening in fitness coaching involves:",
+      "options": ["Waiting for your turn to speak while the client talks", "Fully attending to the client, reflecting content and emotions, and asking clarifying questions", "Offering immediate advice before the client finishes speaking", "Taking notes throughout without maintaining eye contact"],
+      "answer": "Fully attending to the client, reflecting content and emotions, and asking clarifying questions",
+      "explanation": "Active listening requires full attention, empathetic reflection, and thoughtful inquiry.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Open-ended questions in coaching are useful because they:",
+      "options": ["Can be answered with yes or no", "Invite detailed responses that reveal client values, barriers, and goals", "Are faster to answer", "Limit the conversation to factual information"],
+      "answer": "Invite detailed responses that reveal client values, barriers, and goals",
+      "explanation": "Open-ended questions (How? What? Tell me about...) open up conversation and deepen understanding.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Nonverbal communication in fitness coaching includes:",
+      "options": ["Email messages", "Body language, facial expressions, eye contact, and proximity", "Workout plans and handouts only", "Social media posts"],
+      "answer": "Body language, facial expressions, eye contact, and proximity",
+      "explanation": "Nonverbal cues powerfully convey enthusiasm, empathy, and confidence — often more than words alone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "A fitness coach who asks 'What would achieving this goal mean to you?' is using:",
+      "options": ["Closed questioning technique", "Values clarification — a motivational interviewing strategy", "Diagnostic assessment", "Performance evaluation"],
+      "answer": "Values clarification — a motivational interviewing strategy",
+      "explanation": "Values clarification helps clients connect their goals to deeper personal meaning, strengthening motivation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Rapport with clients is best built through:",
+      "options": ["Maintaining strict professional distance only", "Remembering personal details, showing genuine interest, and being consistent", "Only discussing fitness topics", "Focusing exclusively on performance data"],
+      "answer": "Remembering personal details, showing genuine interest, and being consistent",
+      "explanation": "Rapport develops through authentic connection, empathy, and reliability.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Professional boundaries in fitness require that coaches:",
+      "options": ["Become close personal friends with all clients", "Maintain appropriate professional relationships and avoid dual-role conflicts", "Share personal health information freely", "Discuss other clients' progress publicly"],
+      "answer": "Maintain appropriate professional relationships and avoid dual-role conflicts",
+      "explanation": "Professional boundaries protect both client and coach, ensuring the relationship stays ethical and focused on client wellbeing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Client confidentiality in fitness means:",
+      "options": ["Sharing client progress on social media with their name", "Protecting all personal health and fitness information shared by clients", "Discussing client weight with other clients", "Reporting all client data to the facility owner"],
+      "answer": "Protecting all personal health and fitness information shared by clients",
+      "explanation": "Fitness professionals have an ethical obligation to keep client information private.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "When a client asks for medical advice beyond the fitness professional's scope, the appropriate response is to:",
+      "options": ["Provide a diagnosis based on experience", "Refer the client to an appropriate healthcare professional", "Ignore the question", "Recommend supplements instead"],
+      "answer": "Refer the client to an appropriate healthcare professional",
+      "explanation": "Practicing outside scope of practice is unethical and potentially dangerous; referral is the correct action.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "A professional appearance and punctuality in fitness settings are important because they:",
+      "options": ["Have no impact on client trust", "Demonstrate competence, reliability, and respect for the client", "Only matter in corporate settings", "Are less important than technical skill alone"],
+      "answer": "Demonstrate competence, reliability, and respect for the client",
+      "explanation": "Professionalism in appearance and conduct builds client confidence and trust in the fitness professional.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Continuing education for fitness professionals is important because it:",
+      "options": ["Is only required for advanced certifications", "Keeps professionals current with evolving research and best practices", "Is optional once initial certification is obtained", "Only applies to group fitness instructors"],
+      "answer": "Keeps professionals current with evolving research and best practices",
+      "explanation": "The fitness industry evolves rapidly; CEUs ensure professionals apply the most current, evidence-based methods.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which leadership style involves collaborative decision-making with the group?",
+      "options": ["Autocratic", "Democratic", "Laissez-faire", "Transactional"],
+      "answer": "Democratic",
+      "explanation": "Democratic leaders involve group members in decisions, fostering ownership and engagement.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The ATP-PC energy system provides energy for activities lasting:",
+      "options": ["30–60 minutes", "2–10 minutes", "0–10 seconds", "10–120 seconds"],
+      "answer": "0–10 seconds",
+      "explanation": "The ATP-PC system provides immediate energy for very short, explosive efforts.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "FITT-VP adds which two variables to the FITT principle?",
+      "options": ["Velocity and Power", "Volume and Progression", "Variety and Performance", "Volume and Power"],
+      "answer": "Volume and Progression",
+      "explanation": "FITT-VP adds Volume (total work) and Progression (how demands increase over time).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "The IDEA teaching model stands for:",
+      "options": ["Introduce, Demonstrate, Explain, Activity", "Instruct, Direct, Engage, Assess", "Inform, Discuss, Evaluate, Apply", "Identify, Design, Execute, Analyze"],
+      "answer": "Introduce, Demonstrate, Explain, Activity",
+      "explanation": "IDEA is a structured model for fitness instruction.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Self-Determination Theory's three basic psychological needs are:",
+      "options": ["Reward, punishment, and recognition", "Autonomy, competence, and relatedness", "Strength, speed, and endurance", "Competition, fame, and money"],
+      "answer": "Autonomy, competence, and relatedness",
+      "explanation": "SDT identifies autonomy (choice), competence (mastery), and relatedness (connection) as drivers of intrinsic motivation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "The three main phases of a group exercise class are:",
+      "options": ["Check-in, workout, cool-down review", "Warm-up, main conditioning set, cool-down", "Stretching, strengthening, meditation", "Introduction, demonstration, performance"],
+      "answer": "Warm-up, main conditioning set, cool-down",
+      "explanation": "All group exercise classes include warm-up, main workout, and cool-down.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Programs for older adults should emphasize:",
+      "options": ["High-impact plyometrics", "Balance, flexibility, functional strength, and fall prevention", "Maximum cardio intensity", "Competitive sport performance"],
+      "answer": "Balance, flexibility, functional strength, and fall prevention",
+      "explanation": "Older adult programs prioritize functional fitness and fall prevention due to age-related decline.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "A limitation of consumer wearable fitness trackers is:",
+      "options": ["They are too large to wear", "Often inaccurate, especially for calorie counting", "They only work during sleep", "They cannot track heart rate at all"],
+      "answer": "Often inaccurate, especially for calorie counting",
+      "explanation": "Consumer wearables can have significant calorie estimate errors; step counts and HR are more reliable.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "A PAR-Q screens participants for:",
+      "options": ["Fitness level ranking", "Conditions requiring medical clearance before exercise", "Exercise preferences", "Body composition"],
+      "answer": "Conditions requiring medical clearance before exercise",
+      "explanation": "The PAR-Q identifies risk factors that require physician clearance before starting an exercise program.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "A comprehensive fitness assessment covers:",
+      "options": ["Body weight only", "Cardiovascular, muscular, flexibility, and body composition tests", "A single timed run", "BMI calculation only"],
+      "answer": "Cardiovascular, muscular, flexibility, and body composition tests",
+      "explanation": "A complete assessment battery evaluates all five health-related fitness components.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Fitness professionals should NOT do which of the following?",
+      "options": ["Teach proper exercise technique", "Diagnose nutritional deficiencies or prescribe medical nutrition therapy", "Explain macronutrients to clients", "Design exercise programs"],
+      "answer": "Diagnose nutritional deficiencies or prescribe medical nutrition therapy",
+      "explanation": "Medical nutrition therapy and deficiency diagnosis are within dietitians' scope, not fitness professionals'.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Active listening in coaching involves:",
+      "options": ["Waiting to speak while the client talks", "Fully attending, reflecting, and asking clarifying questions", "Giving immediate advice before the client finishes", "Taking notes without eye contact"],
+      "answer": "Fully attending, reflecting, and asking clarifying questions",
+      "explanation": "Active listening requires full attention, empathetic reflection, and thoughtful inquiry.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Professional boundaries in fitness require coaches to:",
+      "options": ["Become close personal friends with clients", "Maintain appropriate relationships and avoid dual-role conflicts", "Share personal health information freely", "Discuss other clients' progress publicly"],
+      "answer": "Maintain appropriate relationships and avoid dual-role conflicts",
+      "explanation": "Professional boundaries keep relationships ethical and focused on client wellbeing.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Mirroring in group exercise means:",
+      "options": ["Participants imitate each other", "The instructor's movement is reversed so participants can follow correctly", "Using wall mirrors for self-correction", "Recording classes for review"],
+      "answer": "The instructor's movement is reversed so participants can follow correctly",
+      "explanation": "Mirroring makes visual cues intuitive — instructor's right appears as participants' left.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "The 10% rule in program design states:",
+      "options": ["Increase load by 10% per day", "Increase weekly training load by no more than 10%", "Rest 10% of each workout session", "Train at 10% below maximum effort"],
+      "answer": "Increase weekly training load by no more than 10%",
+      "explanation": "The 10% rule helps prevent overuse injuries from progressing too quickly.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Transformational leadership inspires others by:",
+      "options": ["Strictly enforcing rules", "Creating vision and motivating people to exceed their expectations", "Rewarding only with tangible incentives", "Avoiding all feedback"],
+      "answer": "Creating vision and motivating people to exceed their expectations",
+      "explanation": "Transformational leaders empower and inspire rather than relying on external rewards or punishment.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "The glycolytic energy system produces energy by:",
+      "options": ["Fat oxidation", "Using oxygen", "Breaking down glucose without oxygen", "Protein metabolism"],
+      "answer": "Breaking down glucose without oxygen",
+      "explanation": "The glycolytic system provides ATP rapidly without oxygen, generating lactate as a byproduct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "A balanced exercise program should address:",
+      "options": ["Strength only", "Cardiovascular, muscular, and flexibility components", "Only aerobic conditioning", "Body composition only"],
+      "answer": "Cardiovascular, muscular, and flexibility components",
+      "explanation": "A well-rounded program integrates cardiovascular, resistance, and flexibility training.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Kinesthetic cueing involves:",
+      "options": ["Only verbal instructions", "Physical guidance through the movement with consent", "Music to signal transitions", "Visual demonstration from a distance"],
+      "answer": "Physical guidance through the movement with consent",
+      "explanation": "Kinesthetic cueing uses tactile guidance to help participants feel the correct movement pattern.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Motivational Interviewing is best described as:",
+      "options": ["Telling clients exactly what to do", "A client-centered style that explores ambivalence about change", "A rigid assessment protocol", "Delivering standardized lectures"],
+      "answer": "A client-centered style that explores ambivalence about change",
+      "explanation": "MI uses empathy, reflective listening, and collaboration to strengthen intrinsic motivation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Spatial awareness in group exercise means:",
+      "options": ["Staying in one spot", "Moving through the space to monitor and assist all participants", "Standing near the sound system", "Only demonstrating from the front"],
+      "answer": "Moving through the space to monitor and assist all participants",
+      "explanation": "Moving through the room allows individual feedback and maintains participant engagement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "A pregnant client should avoid exercise positions that:",
+      "options": ["Include walking", "Involve lying flat on the back after the first trimester", "Include light stretching", "Use light dumbbells"],
+      "answer": "Involve lying flat on the back after the first trimester",
+      "explanation": "Supine positions can compress the vena cava, reducing blood return to the heart.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Heart rate monitors are most accurate when using:",
+      "options": ["Wrist optical sensors during sprinting", "Chest strap electrodes", "Fingertip oximeters during running", "Smartwatch during HIIT"],
+      "answer": "Chest strap electrodes",
+      "explanation": "Chest straps measure electrical cardiac signals, providing more accurate HR data than optical sensors at high intensities.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "The NSCA's CSCS credential is designed for:",
+      "options": ["Group fitness instructors", "Strength and conditioning coaches for sport performance settings", "Personal trainers in gyms only", "Athletic trainers"],
+      "answer": "Strength and conditioning coaches for sport performance settings",
+      "explanation": "The CSCS is the gold-standard credential for coaches working with athletes in performance settings.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Informed consent in fitness means:",
+      "options": ["Participants accept all exercise risks without question", "Participants understand and agree to risks and the professional's role", "Trainers are protected from all liability", "Medical clearance is no longer needed"],
+      "answer": "Participants understand and agree to risks and the professional's role",
+      "explanation": "Informed consent documents client understanding and voluntary agreement to participate.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Skinfold measurements are taken using:",
+      "options": ["A scale and ruler", "Calipers at specific anatomical sites", "Blood pressure cuff", "Heart rate monitor"],
+      "answer": "Calipers at specific anatomical sites",
+      "explanation": "Skinfold calipers measure subcutaneous fat thickness at standardized sites to estimate body fat percentage.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Pre-workout nutrition should focus on:",
+      "options": ["High-fat foods 30 minutes before", "Digestible carbohydrates 1–2 hours before", "Protein shakes only", "Fasting before all workouts"],
+      "answer": "Digestible carbohydrates 1–2 hours before",
+      "explanation": "Pre-workout carbohydrates fuel the session; high fat slows digestion and may cause GI discomfort.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Open-ended questions in coaching are useful because they:",
+      "options": ["Can be answered with yes or no", "Invite detailed responses revealing values, barriers, and goals", "Are faster to answer", "Limit conversation to facts"],
+      "answer": "Invite detailed responses revealing values, barriers, and goals",
+      "explanation": "Open-ended questions deepen understanding and open up meaningful coaching conversations.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "When a client asks for advice beyond the fitness professional's scope, the correct response is to:",
+      "options": ["Provide a diagnosis based on experience", "Refer to an appropriate healthcare professional", "Ignore the question", "Recommend supplements instead"],
+      "answer": "Refer to an appropriate healthcare professional",
+      "explanation": "Practicing outside scope of practice is unethical and dangerous; referral protects the client.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Youth fitness programs should emphasize:",
+      "options": ["Maximum weight lifting and competition", "Fun, skill development, variety, and positive movement experiences", "Adult-equivalent training volumes", "Sport specialization before age 10"],
+      "answer": "Fun, skill development, variety, and positive movement experiences",
+      "explanation": "Youth programs build lifelong movement habits through enjoyable, age-appropriate activities.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Client confidentiality in fitness means:",
+      "options": ["Sharing progress on social media", "Protecting all personal health and fitness information shared by clients", "Discussing client weight with others", "Reporting all data to the facility owner"],
+      "answer": "Protecting all personal health and fitness information shared by clients",
+      "explanation": "Fitness professionals have an ethical obligation to keep client information private.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "The Transtheoretical Model's 'Action' stage describes someone who:",
+      "options": ["Is not thinking about changing behavior", "Is thinking about changing in the next 6 months", "Has been exercising regularly for less than 6 months", "Has exercised consistently for over 6 months"],
+      "answer": "Has been exercising regularly for less than 6 months",
+      "explanation": "Action stage: behavior has changed but for fewer than 6 months; maintenance begins after 6 months.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Continuing education for fitness professionals is important because it:",
+      "options": ["Is only for advanced certifications", "Keeps professionals current with evolving research and best practices", "Is optional once certified", "Only applies to group fitness instructors"],
+      "answer": "Keeps professionals current with evolving research and best practices",
+      "explanation": "CEUs ensure fitness professionals apply the most current, evidence-based methods.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Equipment safety inspection should occur:",
+      "options": ["Once per year", "Before each session and on a regular maintenance schedule", "Only after equipment breaks", "When the manager requests it"],
+      "answer": "Before each session and on a regular maintenance schedule",
+      "explanation": "Regular inspection prevents equipment failures that could injure participants.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Resting heart rate is best measured:",
+      "options": ["Immediately after intense exercise", "First thing in the morning before getting up", "After a large meal", "During stressful activity"],
+      "answer": "First thing in the morning before getting up",
+      "explanation": "Resting heart rate is most accurate in the morning before activity or stimulants.",
+      "points": 1
+    }
+  ]
+}

@@ -1,0 +1,1220 @@
+{
+  "slug": "calculus",
+  "name": "Calculus",
+  "nameZh": "微积分",
+  "credits": 1.0,
+  "department": "Mathematics",
+  "type": "Core",
+  "description": "An introduction to single-variable calculus covering limits, derivatives, and integrals. Students develop conceptual understanding and computational fluency in differentiation rules, applications of derivatives (optimization, related rates, curve sketching), the Fundamental Theorem of Calculus, integration techniques, and an introduction to differential equations and sequences — the foundation for all advanced STEM study.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Limits",
+      "titleZh": "极限",
+      "objectives": "Evaluate limits graphically, numerically, and algebraically; apply limit laws; distinguish between a function value and a limit; compute one-sided limits.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 2.1–2.3: Limits",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new/ab-1-2/v/introduction-to-limits-hd",
+      "videoNote": "Khan Academy — Introduction to Limits",
+      "video2Url": "https://www.youtube.com/watch?v=riXcZT2ICjA",
+      "video2Note": "Professor Leonard — Introduction to Limits",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new/ab-1-4/e/two-sided-limits-from-graphs",
+      "practiceNote": "Khan Academy — Two-Sided Limits (20 problems)",
+      "assignment": "Evaluate 10 limits algebraically using limit laws. Sketch a graph showing left-hand and right-hand limits that differ. Write a paragraph explaining what a limit means intuitively.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 2,
+      "title": "Continuity",
+      "titleZh": "连续性",
+      "objectives": "Define continuity at a point using the three-condition definition; identify types of discontinuities; apply the Intermediate Value Theorem.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/2-4-continuity",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 2.4: Continuity",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new/ab-1-11/v/continuity-at-a-point",
+      "videoNote": "Khan Academy — Continuity at a Point",
+      "video2Url": "https://www.youtube.com/watch?v=joewRl1CTL8",
+      "video2Note": "Professor Leonard — Continuity and the Intermediate Value Theorem",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new/ab-1-11/e/continuity-at-a-point",
+      "practiceNote": "Khan Academy — Continuity at a Point (15 problems)",
+      "assignment": "Classify 6 discontinuities as removable, jump, or infinite. Use the IVT to prove a root exists in a given interval for 3 functions.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 3,
+      "title": "The Derivative: Definition",
+      "titleZh": "导数的定义",
+      "objectives": "Define the derivative as a limit of a difference quotient; interpret the derivative as slope of tangent line and instantaneous rate of change; use the definition to compute derivatives.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 3.1: Defining the Derivative",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-1/v/derivative-as-a-concept",
+      "videoNote": "Khan Academy — The Derivative: A Concept",
+      "video2Url": "https://www.youtube.com/watch?v=ANyVpMS3HL4",
+      "video2Note": "Professor Leonard — Definition of the Derivative",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-2/e/derivative-as-a-limit",
+      "practiceNote": "Khan Academy — Derivative as a Limit (15 problems)",
+      "assignment": "Use the limit definition to find the derivative of 5 functions. Write the equation of the tangent line to 3 curves at given points.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 4,
+      "title": "Differentiation Rules",
+      "titleZh": "求导法则",
+      "objectives": "Apply the power rule, constant rule, sum/difference rule, and product and quotient rules; differentiate polynomial, rational, and radical functions.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/3-3-differentiation-rules",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 3.3: Differentiation Rules",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-5/v/power-rule",
+      "videoNote": "Khan Academy — Power Rule",
+      "video2Url": "https://www.youtube.com/watch?v=IiBC4ngwH6E",
+      "video2Note": "Professor Leonard — Basic Differentiation Rules",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-5/e/power-rule",
+      "practiceNote": "Khan Academy — Power Rule Practice (25 problems)",
+      "assignment": "Differentiate 15 functions using power, product, and quotient rules. Find the second derivative of 5 functions.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 5,
+      "title": "The Chain Rule",
+      "titleZh": "链式法则",
+      "objectives": "Apply the chain rule to differentiate composite functions; combine the chain rule with product and quotient rules; differentiate trigonometric, exponential, and logarithmic functions.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/3-6-the-chain-rule",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 3.6: The Chain Rule",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-1a/v/chain-rule-introduction",
+      "videoNote": "Khan Academy — Chain Rule Introduction",
+      "video2Url": "https://www.youtube.com/watch?v=H-ybCx8gt-8",
+      "video2Note": "Professor Leonard — The Chain Rule",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-1a/e/chain-rule",
+      "practiceNote": "Khan Academy — Chain Rule Practice (20 problems)",
+      "assignment": "Differentiate 12 composite functions using the chain rule. Apply the chain rule combined with product/quotient rules for 5 complex functions.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 6,
+      "title": "Applications of Derivatives",
+      "titleZh": "导数的应用：曲线分析",
+      "objectives": "Use the first and second derivative tests to find extrema; determine intervals of increase/decrease and concavity; sketch curves using derivative information.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/4-3-maxima-and-minima",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 4.3–4.5: Curve Sketching",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical-applications-new/ab-5-1/v/relative-maxima-and-minima",
+      "videoNote": "Khan Academy — Relative Maxima and Minima",
+      "video2Url": "https://www.youtube.com/watch?v=Ym0n5orBL-M",
+      "video2Note": "Professor Leonard — Increasing/Decreasing and First Derivative Test",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical-applications-new/ab-5-1/e/relative-maxima-and-minima",
+      "practiceNote": "Khan Academy — Relative Maxima and Minima (20 problems)",
+      "assignment": "For 5 functions: find critical points, classify them, determine intervals of increase/decrease and concavity, and sketch the graph.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 7,
+      "title": "Optimization",
+      "titleZh": "最优化问题",
+      "objectives": "Set up and solve optimization problems using derivatives; identify absolute extrema on closed intervals; apply the closed interval method.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/4-7-applied-optimization-problems",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 4.7: Applied Optimization Problems",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical-applications-new/ab-5-11/v/optimization-with-calc",
+      "videoNote": "Khan Academy — Optimization with Calculus",
+      "video2Url": "https://www.youtube.com/watch?v=zB3MhlnXFOE",
+      "video2Note": "Professor Leonard — Optimization Problems",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical-applications-new/ab-5-11/e/applied-optimization",
+      "practiceNote": "Khan Academy — Applied Optimization (15 problems)",
+      "assignment": "Solve 6 classic optimization problems (fencing, box, can). Write and solve your own optimization problem from a real-world scenario.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 8,
+      "title": "Related Rates",
+      "titleZh": "相关变化率",
+      "objectives": "Set up equations relating quantities that change with time; use implicit differentiation to find related rates; solve applied problems involving geometric quantities.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/4-1-related-rates",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 4.1: Related Rates",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical-applications-new/ab-4-4/v/rates-of-change-between-related-quantities",
+      "videoNote": "Khan Academy — Rates of Change Between Related Quantities",
+      "video2Url": "https://www.youtube.com/watch?v=pjdZ9PAlT2k",
+      "video2Note": "Professor Leonard — Related Rates",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical-applications-new/ab-4-4/e/related-rates",
+      "practiceNote": "Khan Academy — Related Rates (15 problems)",
+      "assignment": "Solve 6 related rates problems (ladder, balloon, shadow, water tank). Diagram each situation and clearly state all given rates.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 9,
+      "title": "Introduction to Integrals",
+      "titleZh": "积分入门",
+      "objectives": "Understand the antiderivative and indefinite integral; use the notation integral f(x)dx; apply basic antiderivative rules; use sigma notation and Riemann sums to approximate area.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/5-1-approximating-areas",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 5.1–5.3: Approximating Areas and Definite Integrals",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-1/v/introduction-to-integral-calculus",
+      "videoNote": "Khan Academy — Introduction to Integral Calculus",
+      "video2Url": "https://www.youtube.com/watch?v=rfG8ce4nNh0",
+      "video2Note": "Professor Leonard — Introduction to Integration (Riemann Sums)",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-2/e/left-and-right-riemann-sums",
+      "practiceNote": "Khan Academy — Riemann Sums Practice (15 problems)",
+      "assignment": "Compute left, right, and midpoint Riemann sums with n=4 for 3 functions. Find antiderivatives of 10 basic functions.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 10,
+      "title": "The Fundamental Theorem of Calculus",
+      "titleZh": "微积分基本定理",
+      "objectives": "State and apply both parts of the Fundamental Theorem of Calculus; evaluate definite integrals using antiderivatives; differentiate integrals with variable limits.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/5-3-the-fundamental-theorem-of-calculus",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 5.3: The Fundamental Theorem of Calculus",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-4/v/fundamental-theorem-of-calculus",
+      "videoNote": "Khan Academy — Fundamental Theorem of Calculus",
+      "video2Url": "https://www.youtube.com/watch?v=PGmVvIglZx8",
+      "video2Note": "Professor Leonard — The Fundamental Theorem of Calculus",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-7/e/the-fundamental-theorem-of-calculus",
+      "practiceNote": "Khan Academy — FTC Practice (20 problems)",
+      "assignment": "Evaluate 12 definite integrals using the FTC. Apply FTC Part 1 to differentiate 5 integral functions with variable upper limits.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 11,
+      "title": "Integration Techniques",
+      "titleZh": "积分技巧",
+      "objectives": "Apply u-substitution to evaluate indefinite and definite integrals; recognize when to use substitution; evaluate integrals of trigonometric, exponential, and logarithmic functions.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/5-5-substitution",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 5.5: Substitution",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-9/v/u-substitution",
+      "videoNote": "Khan Academy — u-Substitution",
+      "video2Url": "https://www.youtube.com/watch?v=sdYdnpYn-1o",
+      "video2Note": "Professor Leonard — u-Substitution",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-9/e/u-substitution",
+      "practiceNote": "Khan Academy — u-Substitution Practice (25 problems)",
+      "assignment": "Evaluate 15 integrals using u-substitution (mix of indefinite and definite). Identify the appropriate u for 5 tricky integrals.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 12,
+      "title": "Applications of Integration",
+      "titleZh": "积分的应用",
+      "objectives": "Compute areas between curves; find average value of a function; solve basic problems involving distance, displacement, and net change using integrals.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/6-1-areas-between-curves",
+      "readingNote": "OpenStax Calculus Volume 1 — Ch 6.1: Areas Between Curves",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-applications-of-integration-new/ab-8-4/v/area-between-curves",
+      "videoNote": "Khan Academy — Area Between Curves",
+      "video2Url": "https://www.youtube.com/watch?v=b7UtJkUpQqw",
+      "video2Note": "Professor Leonard — Area Between Curves",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-applications-of-integration-new/ab-8-4/e/area-between-curves",
+      "practiceNote": "Khan Academy — Area Between Curves (15 problems)",
+      "assignment": "Find the area between 5 pairs of curves. Compute the average value of 3 functions on a given interval. Solve 2 net change (displacement) problems.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 13,
+      "title": "Introduction to Differential Equations",
+      "titleZh": "微分方程入门",
+      "objectives": "Identify and classify ordinary differential equations; verify solutions; solve separable ODEs by separating variables and integrating; model exponential growth and decay.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-2/pages/4-1-basics-of-differential-equations",
+      "readingNote": "OpenStax Calculus Volume 2 — Ch 4.1–4.3: Differential Equations Basics",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations-new/ab-7-6/v/separable-differential-equations-introduction",
+      "videoNote": "Khan Academy — Separable Differential Equations",
+      "video2Url": "https://www.youtube.com/watch?v=cVtSMmWXhJI",
+      "video2Note": "Professor Leonard — Differential Equations: Separation of Variables",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations-new/ab-7-6/e/separable-differential-equations",
+      "practiceNote": "Khan Academy — Separable Differential Equations (15 problems)",
+      "assignment": "Solve 8 separable differential equations with initial conditions. Set up and solve exponential growth and decay models for 3 real scenarios.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 14,
+      "title": "Sequences & Series Introduction",
+      "titleZh": "数列与级数入门",
+      "objectives": "Define sequences and series; determine convergence or divergence of geometric and arithmetic sequences; compute partial sums; apply the geometric series formula.",
+      "readingUrl": "https://openstax.org/books/calculus-volume-2/pages/5-1-sequences",
+      "readingNote": "OpenStax Calculus Volume 2 — Ch 5.1–5.3: Sequences and Series",
+      "videoUrl": "https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-1/v/sequences-and-series",
+      "videoNote": "Khan Academy — Sequences and Series",
+      "video2Url": "https://www.youtube.com/watch?v=XHGhZj1tFvI",
+      "video2Note": "Professor Leonard — Introduction to Sequences and Series",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-1/e/convergent-and-divergent-sequences",
+      "practiceNote": "Khan Academy — Convergent and Divergent Sequences (20 problems)",
+      "assignment": "Determine convergence for 8 sequences. Compute the sum of 3 convergent geometric series. Write a 1-page explanation of the difference between a sequence and a series.",
+      "estimatedHrs": 3.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "What is the limit of (x^2 - 4)/(x - 2) as x approaches 2?",
+      "options": ["0", "2", "4", "Undefined"],
+      "answer": "4",
+      "explanation": "Factor: (x^2-4)/(x-2) = (x+2)(x-2)/(x-2) = x+2. As x->2, the limit is 2+2=4.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "If lim f(x) = 3 and lim g(x) = 2 as x->a, what is lim [f(x) + g(x)]?",
+      "options": ["1", "5", "6", "Cannot determine"],
+      "answer": "5",
+      "explanation": "By the sum limit law: lim [f(x) + g(x)] = lim f(x) + lim g(x) = 3 + 2 = 5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "What is lim (sin x)/x as x approaches 0?",
+      "options": ["0", "1", "infinity", "Does not exist"],
+      "answer": "1",
+      "explanation": "lim (sin x)/x = 1 as x->0 is a fundamental limit in calculus.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "For f(x) = |x|/x, does lim f(x) exist as x -> 0?",
+      "options": ["Yes, it equals 0", "Yes, it equals 1", "Yes, it equals -1", "No, because left and right limits differ"],
+      "answer": "No, because left and right limits differ",
+      "explanation": "lim from left = -1 and lim from right = 1. Since they differ, the two-sided limit does not exist.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "What does lim f(x) = L as x -> a mean?",
+      "options": ["f(a) = L", "f(x) gets arbitrarily close to L as x gets close to a", "f(x) = L for all x near a", "f(a) is undefined"],
+      "answer": "f(x) gets arbitrarily close to L as x gets close to a",
+      "explanation": "A limit describes the behavior of f(x) near a point, NOT necessarily the function value at that point.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "What are the three conditions for f to be continuous at x = a?",
+      "options": ["f(a) defined, lim exists, lim = f(a)", "f(a) exists, f is differentiable, limit is finite", "f is smooth, has no corners, lim = 0", "f(a) = 0, f is increasing, lim = f(a)"],
+      "answer": "f(a) defined, lim exists, lim = f(a)",
+      "explanation": "Continuity at a requires: (1) f(a) is defined, (2) lim f(x) as x->a exists, (3) the limit equals f(a).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Which type of discontinuity can be 'fixed' by redefining f at one point?",
+      "options": ["Jump discontinuity", "Infinite discontinuity", "Removable discontinuity", "Oscillating discontinuity"],
+      "answer": "Removable discontinuity",
+      "explanation": "A removable discontinuity occurs when the limit exists but does not equal the function value. It can be removed by redefining f at that point.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The Intermediate Value Theorem guarantees a root of f(x) = x^3 - 2 in [1, 2] because:",
+      "options": ["f(1) < 0 and f(2) > 0 and f is continuous", "f(1) = 1 and f(2) = 4", "f is a polynomial", "f(1.5) = 0"],
+      "answer": "f(1) < 0 and f(2) > 0 and f is continuous",
+      "explanation": "f(1) = -1 < 0 and f(2) = 6 > 0. Since f is continuous, IVT guarantees a c in (1,2) with f(c) = 0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "The function f(x) = 1/x has what type of discontinuity at x = 0?",
+      "options": ["Removable", "Jump", "Infinite", "None"],
+      "answer": "Infinite",
+      "explanation": "f(x) = 1/x approaches +/-infinity as x->0, creating a vertical asymptote and an infinite discontinuity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Is f(x) = x^2 continuous everywhere?",
+      "options": ["No, has a hole at x = 0", "Yes, polynomials are continuous everywhere", "Only for positive x", "Only on (-1, 1)"],
+      "answer": "Yes, polynomials are continuous everywhere",
+      "explanation": "All polynomial functions are continuous on their entire domain, which is all real numbers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The derivative f'(a) is defined as which limit?",
+      "options": ["lim [f(a+h) - f(a)] / h as h->0", "lim [f(a+h) + f(a)] / h as h->0", "lim f(a)/h as h->0", "lim [f(a) - f(h)] / a as h->0"],
+      "answer": "lim [f(a+h) - f(a)] / h as h->0",
+      "explanation": "The derivative is defined as f'(a) = lim_{h->0} [f(a+h) - f(a)] / h.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Geometrically, the derivative f'(a) represents:",
+      "options": ["The area under f at x = a", "The slope of the secant line", "The slope of the tangent line to f at x = a", "The y-intercept of f"],
+      "answer": "The slope of the tangent line to f at x = a",
+      "explanation": "f'(a) is the slope of the tangent line to the graph of f at the point (a, f(a)).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Use the definition to find the derivative of f(x) = x^2.",
+      "options": ["x", "2x", "2x + 1", "x^2"],
+      "answer": "2x",
+      "explanation": "lim [(x+h)^2 - x^2]/h = lim [2xh + h^2]/h = lim [2x + h] = 2x as h->0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "If f is differentiable at a, is f continuous at a?",
+      "options": ["Not necessarily", "Yes, differentiability implies continuity", "No, they are unrelated", "Only if f is a polynomial"],
+      "answer": "Yes, differentiability implies continuity",
+      "explanation": "If f is differentiable at a, then f is continuous at a. The converse is not necessarily true.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "What does f'(x) > 0 on an interval tell you about f?",
+      "options": ["f is concave up", "f is decreasing", "f is increasing", "f has a maximum"],
+      "answer": "f is increasing",
+      "explanation": "If f'(x) > 0 on an interval, then f is increasing on that interval.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "What is the derivative of f(x) = x^5?",
+      "options": ["x^4", "5x^4", "5x^6/6", "4x^5"],
+      "answer": "5x^4",
+      "explanation": "By the power rule, d/dx[x^n] = n*x^(n-1). So d/dx[x^5] = 5x^4.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "What is the derivative of f(x) = 3x^4 - 2x^2 + 7?",
+      "options": ["12x^3 - 4x", "12x^3 - 4x + 7", "3x^3 - 2x", "12x^4 - 4x^2"],
+      "answer": "12x^3 - 4x",
+      "explanation": "d/dx[3x^4] = 12x^3, d/dx[-2x^2] = -4x, d/dx[7] = 0. So f'(x) = 12x^3 - 4x.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "What is the product rule for d/dx[f(x)*g(x)]?",
+      "options": ["f'(x)*g'(x)", "f'(x)*g(x) + f(x)*g'(x)", "f'(x)*g(x) - f(x)*g'(x)", "f(x)*g(x)/(f'(x)+g'(x))"],
+      "answer": "f'(x)*g(x) + f(x)*g'(x)",
+      "explanation": "Product rule: d/dx[f*g] = f'*g + f*g'. (First times derivative of second plus second times derivative of first.)",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "What is the derivative of f(x) = sin(x)?",
+      "options": ["cos(x)", "-cos(x)", "sin(x)", "-sin(x)"],
+      "answer": "cos(x)",
+      "explanation": "d/dx[sin(x)] = cos(x) is a fundamental derivative formula.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Apply the quotient rule: what is d/dx[x^2 / sin(x)]?",
+      "options": ["2x/cos(x)", "(2x*sin(x) - x^2*cos(x)) / sin^2(x)", "(2x*cos(x) - x^2*sin(x)) / sin^2(x)", "2x*sin(x)"],
+      "answer": "(2x*sin(x) - x^2*cos(x)) / sin^2(x)",
+      "explanation": "Quotient rule: (f'g - fg')/g^2 = (2x*sin(x) - x^2*cos(x)) / sin^2(x).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "State the chain rule for d/dx[f(g(x))].",
+      "options": ["f'(x)*g'(x)", "f'(g(x))*g'(x)", "f(g'(x))", "f'(g(x)) + g'(x)"],
+      "answer": "f'(g(x))*g'(x)",
+      "explanation": "Chain rule: d/dx[f(g(x))] = f'(g(x)) * g'(x). Derivative of outer (evaluated at inner) times derivative of inner.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Find d/dx[sin(3x)].",
+      "options": ["cos(3x)", "3cos(3x)", "-cos(3x)", "sin(3)"],
+      "answer": "3cos(3x)",
+      "explanation": "Chain rule: outer is sin(u), inner is u = 3x. d/dx[sin(3x)] = cos(3x) * 3 = 3cos(3x).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Find d/dx[(x^2 + 1)^4].",
+      "options": ["4(x^2+1)^3", "8x(x^2+1)^3", "4x(x^2+1)^3", "8(x^2+1)^4"],
+      "answer": "8x(x^2+1)^3",
+      "explanation": "Chain rule: 4(x^2+1)^3 * d/dx[x^2+1] = 4(x^2+1)^3 * 2x = 8x(x^2+1)^3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "What is d/dx[e^(x^2)]?",
+      "options": ["e^(x^2)", "2x*e^(x^2)", "x^2*e^(x^2-1)", "2*e^(x^2)"],
+      "answer": "2x*e^(x^2)",
+      "explanation": "Chain rule: d/dx[e^u] = e^u * u', where u = x^2. So d/dx[e^(x^2)] = e^(x^2) * 2x = 2x*e^(x^2).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Find d/dx[ln(x^2 + 1)].",
+      "options": ["1/(x^2+1)", "2x/(x^2+1)", "ln(2x)", "2/(x^2+1)"],
+      "answer": "2x/(x^2+1)",
+      "explanation": "d/dx[ln(u)] = u'/u. Here u = x^2+1, u' = 2x. So the derivative is 2x/(x^2+1).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "A critical point of f occurs where:",
+      "options": ["f(x) = 0", "f'(x) = 0 or f'(x) is undefined", "f is not continuous", "f''(x) = 0"],
+      "answer": "f'(x) = 0 or f'(x) is undefined",
+      "explanation": "Critical points occur where the derivative is zero or undefined — these are candidates for relative extrema.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "If f'(x) changes from positive to negative at x = c, then f has a:",
+      "options": ["Local minimum at c", "Local maximum at c", "Inflection point at c", "Discontinuity at c"],
+      "answer": "Local maximum at c",
+      "explanation": "First Derivative Test: if f' goes from + to - at c, then f has a local maximum at c.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "If f''(x) > 0 on an interval, then f is:",
+      "options": ["Increasing", "Decreasing", "Concave up", "Concave down"],
+      "answer": "Concave up",
+      "explanation": "f''(x) > 0 means the first derivative is increasing, which means f is concave up (bends upward like a cup).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "An inflection point is where:",
+      "options": ["f has a local max or min", "f changes concavity", "f' = 0", "f is discontinuous"],
+      "answer": "f changes concavity",
+      "explanation": "An inflection point is where the concavity of f changes from up to down or vice versa.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "If f'(c) = 0 and f''(c) > 0, then by the Second Derivative Test, f has:",
+      "options": ["A local maximum at c", "A local minimum at c", "An inflection point at c", "No conclusion possible"],
+      "answer": "A local minimum at c",
+      "explanation": "Second Derivative Test: if f'(c) = 0 and f''(c) > 0 (concave up), then f has a local minimum at c.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "You have 100 meters of fencing for a rectangular garden against a wall (one side needs no fencing). What dimensions maximize the area?",
+      "options": ["25 m x 50 m", "50 m x 25 m", "33 m x 34 m", "25 m x 25 m"],
+      "answer": "25 m x 50 m",
+      "explanation": "With constraint x + 2y = 100 (x is the side along wall), Area = xy = (100-2y)y. dA/dy = 100-4y = 0, y = 25. x = 50. Max area = 50*25 = 1250 m^2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Absolute extrema on a closed interval [a, b] can occur at:",
+      "options": ["Only endpoints", "Only critical points", "Critical points and endpoints", "Only where f' = 0"],
+      "answer": "Critical points and endpoints",
+      "explanation": "By the Closed Interval Method, absolute extrema occur at critical points inside [a,b] or at the endpoints a and b.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "To minimize the surface area of a can with fixed volume, you set up the objective function and then:",
+      "options": ["Find where it crosses zero", "Find its derivative and set equal to zero", "Integrate it", "Find its limit at infinity"],
+      "answer": "Find its derivative and set equal to zero",
+      "explanation": "To minimize or maximize, differentiate the objective function and solve f'(x) = 0 to find critical points.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Find the minimum product of two positive numbers whose sum is 20.",
+      "options": ["0", "25", "100", "10"],
+      "answer": "100",
+      "explanation": "Let x and y = 20-x. Product P = x(20-x) = 20x - x^2. P' = 20 - 2x = 0, x = 10. Min product of two numbers with fixed sum occurs at equal values: 10*10 = 100. (This is actually the maximum.)",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Which theorem guarantees an absolute maximum exists for a continuous f on a closed interval [a,b]?",
+      "options": ["Intermediate Value Theorem", "Extreme Value Theorem", "Mean Value Theorem", "Fundamental Theorem of Calculus"],
+      "answer": "Extreme Value Theorem",
+      "explanation": "The Extreme Value Theorem states that a continuous function on a closed bounded interval attains both an absolute maximum and minimum.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A spherical balloon is being inflated. If the radius increases at 2 cm/s, how fast is the volume increasing when r = 3 cm?",
+      "options": ["36pi cm^3/s", "72pi cm^3/s", "12pi cm^3/s", "54pi cm^3/s"],
+      "answer": "72pi cm^3/s",
+      "explanation": "V = (4/3)pi*r^3, dV/dt = 4pi*r^2*(dr/dt) = 4pi*(9)*(2) = 72pi cm^3/s.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "In a related rates problem, implicit differentiation is applied with respect to:",
+      "options": ["x", "y", "t (time)", "The dependent variable"],
+      "answer": "t (time)",
+      "explanation": "In related rates, we differentiate both sides of an equation with respect to time t to find how rates are related.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "A 10-ft ladder slides down a wall. When the top is 6 ft high and sliding at 2 ft/s, how fast is the base moving away?",
+      "options": ["1.5 ft/s", "3/2 ft/s", "3 ft/s", "4 ft/s"],
+      "answer": "3/2 ft/s",
+      "explanation": "x^2 + y^2 = 100. 2x*dx/dt + 2y*dy/dt = 0. When y=6, x=8. 2(8)dx/dt + 2(6)(-2) = 0, 16*dx/dt = 24, dx/dt = 3/2 ft/s.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Which equation relates the sides of a right triangle in a typical related rates ladder problem?",
+      "options": ["a + b = c", "a^2 + b^2 = c^2", "sin(A) = a/c", "a/sin(A) = b/sin(B)"],
+      "answer": "a^2 + b^2 = c^2",
+      "explanation": "The Pythagorean theorem x^2 + y^2 = L^2 relates the horizontal and vertical legs to the fixed ladder length.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "If two cars leave an intersection at right angles and Car A travels at 60 mph, Car B at 80 mph, how fast does the distance between them increase?",
+      "options": ["100 mph", "140 mph", "20 mph", "70 mph"],
+      "answer": "100 mph",
+      "explanation": "d^2 = x^2 + y^2. d*(dd/dt) = x*(dx/dt) + y*(dy/dt). At t=0, d=0. Using rates: dd/dt = sqrt(60^2+80^2) = sqrt(10000) = 100 mph.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "What is the antiderivative of f(x) = 3x^2?",
+      "options": ["6x + C", "x^3 + C", "9x^2 + C", "x^2 + C"],
+      "answer": "x^3 + C",
+      "explanation": "The antiderivative reverses differentiation: d/dx[x^3] = 3x^2, so the antiderivative of 3x^2 is x^3 + C.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "A right Riemann sum with n rectangles over [a, b] uses which x-values?",
+      "options": ["Left endpoints of each subinterval", "Midpoints of each subinterval", "Right endpoints of each subinterval", "Random points in each subinterval"],
+      "answer": "Right endpoints of each subinterval",
+      "explanation": "A right Riemann sum evaluates the function at the right endpoint of each subinterval.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "As n (number of rectangles) approaches infinity, the Riemann sum approaches:",
+      "options": ["0", "The exact area under the curve", "Infinity", "The average value of f"],
+      "answer": "The exact area under the curve",
+      "explanation": "The definite integral is defined as the limit of Riemann sums as the number of subintervals approaches infinity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "What is integral of x^n dx (n not equal to -1)?",
+      "options": ["n*x^(n-1) + C", "x^(n+1)/(n+1) + C", "x^n/n + C", "n*x^n + C"],
+      "answer": "x^(n+1)/(n+1) + C",
+      "explanation": "Power rule for integration: integral of x^n dx = x^(n+1)/(n+1) + C, for n not equal to -1.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "What is integral of cos(x) dx?",
+      "options": ["-sin(x) + C", "sin(x) + C", "tan(x) + C", "-cos(x) + C"],
+      "answer": "sin(x) + C",
+      "explanation": "d/dx[sin(x)] = cos(x), so integral of cos(x) dx = sin(x) + C.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "FTC Part 2: How do you evaluate the definite integral from a to b of f(x) dx?",
+      "options": ["Find F(a) - F(b) where F' = f", "Find F(b) - F(a) where F' = f", "Compute lim of Riemann sums only", "Find f(b) - f(a)"],
+      "answer": "Find F(b) - F(a) where F' = f",
+      "explanation": "FTC Part 2: integral from a to b of f(x) dx = F(b) - F(a), where F is any antiderivative of f.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Evaluate the integral from 0 to 2 of 3x^2 dx.",
+      "options": ["6", "8", "4", "12"],
+      "answer": "8",
+      "explanation": "Antiderivative is x^3. F(2) - F(0) = 8 - 0 = 8.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "FTC Part 1 states: d/dx [integral from a to x of f(t) dt] = ?",
+      "options": ["f(a)", "f(t)", "f(x)", "F(x) - F(a)"],
+      "answer": "f(x)",
+      "explanation": "FTC Part 1: The derivative of an integral with a variable upper limit equals the integrand evaluated at x.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "What is integral from 0 to pi of sin(x) dx?",
+      "options": ["0", "1", "2", "pi"],
+      "answer": "2",
+      "explanation": "Antiderivative of sin(x) is -cos(x). [-cos(pi)] - [-cos(0)] = -(-1) - (-1) = 1 + 1 = 2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Using FTC Part 1, find d/dx [integral from 1 to x of sqrt(t) dt].",
+      "options": ["sqrt(x)", "sqrt(1)", "x^(3/2)/3", "x/2"],
+      "answer": "sqrt(x)",
+      "explanation": "By FTC Part 1, d/dx [integral from 1 to x of f(t) dt] = f(x) = sqrt(x).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "To integrate integral of 2x*(x^2+1)^4 dx, what is the best substitution?",
+      "options": ["u = 2x", "u = x^2 + 1", "u = x^4", "u = (x^2+1)^4"],
+      "answer": "u = x^2 + 1",
+      "explanation": "Let u = x^2+1, then du = 2x dx. The integral becomes integral of u^4 du = u^5/5 + C = (x^2+1)^5/5 + C.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Evaluate integral of cos(5x) dx.",
+      "options": ["sin(5x) + C", "(1/5)sin(5x) + C", "-sin(5x) + C", "5sin(5x) + C"],
+      "answer": "(1/5)sin(5x) + C",
+      "explanation": "u = 5x, du = 5 dx. integral of cos(5x) dx = (1/5)integral of cos(u) du = (1/5)sin(u) + C = sin(5x)/5 + C.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "What is integral of e^(3x) dx?",
+      "options": ["e^(3x) + C", "(1/3)e^(3x) + C", "3e^(3x) + C", "e^(3x)/x + C"],
+      "answer": "(1/3)e^(3x) + C",
+      "explanation": "u = 3x, du = 3 dx. integral of e^(3x) dx = (1/3)integral of e^u du = (1/3)e^(3x) + C.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "What is integral of 1/x dx?",
+      "options": ["x^(-2)/(-2) + C", "ln|x| + C", "1/x^2 + C", "x + C"],
+      "answer": "ln|x| + C",
+      "explanation": "integral of 1/x dx = ln|x| + C. This is the special case excluded from the power rule (n = -1).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "When using u-substitution on a definite integral, you must:",
+      "options": ["Keep original limits always", "Change the limits to u-values OR substitute back before using original limits", "Multiply by du/dx at the end", "Use only indefinite integrals first"],
+      "answer": "Change the limits to u-values OR substitute back before using original limits",
+      "explanation": "When doing u-substitution on definite integrals, either convert the limits to u-values (preferred) or back-substitute to x before evaluating.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "The area between f(x) and g(x) from a to b where f >= g is:",
+      "options": ["integral from a to b of f(x) dx", "integral from a to b of g(x) dx", "integral from a to b of [f(x) - g(x)] dx", "integral from a to b of [f(x) + g(x)] dx"],
+      "answer": "integral from a to b of [f(x) - g(x)] dx",
+      "explanation": "Area between curves = integral of (top curve - bottom curve) dx over the interval.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Find the area between y = x and y = x^2 from 0 to 1.",
+      "options": ["0", "1/6", "1/3", "1/2"],
+      "answer": "1/6",
+      "explanation": "integral from 0 to 1 of (x - x^2) dx = [x^2/2 - x^3/3] from 0 to 1 = 1/2 - 1/3 = 1/6.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "The average value of f on [a, b] is:",
+      "options": ["(f(a) + f(b))/2", "1/(b-a) * integral from a to b of f(x) dx", "f((a+b)/2)", "integral from a to b of f(x) dx"],
+      "answer": "1/(b-a) * integral from a to b of f(x) dx",
+      "explanation": "The average value of f on [a,b] = (1/(b-a)) * integral from a to b of f(x) dx.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "If v(t) = 3t^2 is the velocity at time t, the displacement from t=0 to t=2 is:",
+      "options": ["6", "8", "12", "24"],
+      "answer": "8",
+      "explanation": "Displacement = integral from 0 to 2 of 3t^2 dt = [t^3] from 0 to 2 = 8 - 0 = 8.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Net change theorem states that integral from a to b of F'(x) dx equals:",
+      "options": ["F'(b) - F'(a)", "F(b) - F(a)", "F(a) - F(b)", "F(b) * F(a)"],
+      "answer": "F(b) - F(a)",
+      "explanation": "The net change theorem (a consequence of FTC): integral from a to b of F'(x) dx = F(b) - F(a).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "A separable differential equation can be written as:",
+      "options": ["dy/dx = f(x) + g(y)", "dy/dx = f(x) * g(y)", "dy/dx = f(x+y)", "dy/dx + y = 0"],
+      "answer": "dy/dx = f(x) * g(y)",
+      "explanation": "A separable ODE can be written as dy/dx = f(x)*g(y), allowing separation: g(y)^(-1) dy = f(x) dx.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Solve dy/dx = 2x with y(0) = 3.",
+      "options": ["y = x^2", "y = x^2 + 3", "y = 2x + 3", "y = 2x^2 + 3"],
+      "answer": "y = x^2 + 3",
+      "explanation": "dy = 2x dx -> y = x^2 + C. Using y(0) = 3: 3 = 0 + C, so C = 3. Thus y = x^2 + 3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "The exponential growth model is dy/dt = ky. Its solution is:",
+      "options": ["y = e^(kt)", "y = y0 + kt", "y = y0 * e^(kt)", "y = k * ln(t)"],
+      "answer": "y = y0 * e^(kt)",
+      "explanation": "Separating: dy/y = k dt, integrating gives ln(y) = kt + C, so y = y0 * e^(kt) where y0 is the initial value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "A population doubles in 5 years. If P(0) = 100, what is k in P(t) = 100*e^(kt)?",
+      "options": ["k = 2", "k = ln(2)/5", "k = 5/ln(2)", "k = 0.2"],
+      "answer": "k = ln(2)/5",
+      "explanation": "P(5) = 200 -> 200 = 100*e^(5k) -> e^(5k) = 2 -> 5k = ln(2) -> k = ln(2)/5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "What is a slope field (direction field) used for?",
+      "options": ["Finding antiderivatives", "Visualizing solutions to a differential equation", "Computing limits", "Finding eigenvalues"],
+      "answer": "Visualizing solutions to a differential equation",
+      "explanation": "A slope field shows small line segments with slope dy/dx at each point, giving a visual picture of all solution curves.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "A sequence {a_n} converges if:",
+      "options": ["It is increasing", "lim a_n = L for some finite L as n -> infinity", "All terms are positive", "It is bounded above"],
+      "answer": "lim a_n = L for some finite L as n -> infinity",
+      "explanation": "A sequence converges if its terms approach a finite limit as n approaches infinity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Does the sequence a_n = 1/n converge?",
+      "options": ["No, it diverges to infinity", "Yes, it converges to 1", "Yes, it converges to 0", "No, it oscillates"],
+      "answer": "Yes, it converges to 0",
+      "explanation": "lim (1/n) = 0 as n -> infinity. The sequence converges to 0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "A geometric series sum from n=0 to infinity of a*r^n converges when:",
+      "options": ["|r| > 1", "|r| < 1", "r = 1", "r > 0"],
+      "answer": "|r| < 1",
+      "explanation": "A geometric series converges if and only if the common ratio satisfies |r| < 1. When it converges, the sum is a/(1-r).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "What is the sum of the infinite geometric series 1 + 1/2 + 1/4 + 1/8 + ...?",
+      "options": ["1", "3/2", "2", "Diverges"],
+      "answer": "2",
+      "explanation": "a = 1, r = 1/2. Sum = a/(1-r) = 1/(1-1/2) = 1/(1/2) = 2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "What is the difference between a sequence and a series?",
+      "options": ["A sequence is finite; a series is infinite", "A sequence lists terms; a series sums them", "A sequence grows; a series shrinks", "They are the same thing"],
+      "answer": "A sequence lists terms; a series sums them",
+      "explanation": "A sequence is an ordered list of terms. A series is the sum of a sequence. They are related but distinct concepts.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Evaluate: lim (x^2 - 9)/(x - 3) as x -> 3.",
+      "options": ["0", "3", "6", "9"],
+      "answer": "6",
+      "explanation": "(x^2-9)/(x-3) = (x+3)(x-3)/(x-3) = x+3. As x->3, the limit is 3+3=6.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Is f(x) = (x^2-4)/(x-2) continuous at x = 2?",
+      "options": ["Yes, with f(2) = 4", "Yes, all rational functions are continuous", "No, because f(2) is undefined (hole)", "No, because the limit does not exist"],
+      "answer": "No, because f(2) is undefined (hole)",
+      "explanation": "f(2) is undefined (0/0 form), creating a removable discontinuity (hole) at x = 2.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Using the limit definition, what is the derivative of f(x) = 2x + 1?",
+      "options": ["2x", "2", "1", "2x + 1"],
+      "answer": "2",
+      "explanation": "f'(x) = lim [(2(x+h)+1 - (2x+1))/h] = lim [2h/h] = lim 2 = 2.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Find the derivative of f(x) = 4x^3 - 6x^2 + 5x - 1.",
+      "options": ["12x^2 - 12x + 5", "12x^3 - 6x^2 + 5", "4x^2 - 6x + 5", "12x^2 - 6x + 1"],
+      "answer": "12x^2 - 12x + 5",
+      "explanation": "f'(x) = 4(3x^2) - 6(2x) + 5 = 12x^2 - 12x + 5.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Find d/dx [(x^2)(sin(x))].",
+      "options": ["2x*cos(x)", "x^2*cos(x) + 2x*sin(x)", "2x*sin(x) + x^2*cos(x)", "x^2*sin(x) + 2x"],
+      "answer": "2x*sin(x) + x^2*cos(x)",
+      "explanation": "Product rule: (x^2)'*sin(x) + x^2*(sin(x))' = 2x*sin(x) + x^2*cos(x).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Find d/dx [cos(x^3)].",
+      "options": ["-sin(x^3)", "-3x^2*sin(x^3)", "3x^2*sin(x^3)", "-sin(3x^2)"],
+      "answer": "-3x^2*sin(x^3)",
+      "explanation": "Chain rule: d/dx[cos(u)] = -sin(u)*u', where u = x^3, u' = 3x^2. So -sin(x^3)*3x^2.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "For f(x) = x^3 - 3x, on which interval is f decreasing?",
+      "options": ["(-inf, -1)", "(-1, 1)", "(1, inf)", "(-inf, 0)"],
+      "answer": "(-1, 1)",
+      "explanation": "f'(x) = 3x^2 - 3 = 3(x-1)(x+1). f' < 0 when -1 < x < 1, so f is decreasing on (-1, 1).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "A box with a square base and no top has volume 32 cubic feet. What side length x minimizes total surface area?",
+      "options": ["x = 2 ft", "x = 4 ft", "x = 8 ft", "x = 16 ft"],
+      "answer": "x = 4 ft",
+      "explanation": "V = x^2*h = 32, so h = 32/x^2. SA = x^2 + 4xh = x^2 + 128/x. dSA/dx = 2x - 128/x^2 = 0 -> x^3 = 64 -> x = 4.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Find all critical points of f(x) = x^3 - 12x + 1.",
+      "options": ["x = 0 only", "x = 2 and x = -2", "x = 3 and x = -3", "x = 4 only"],
+      "answer": "x = 2 and x = -2",
+      "explanation": "f'(x) = 3x^2 - 12 = 3(x^2-4) = 0 -> x = 2 and x = -2.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "What is lim as x -> infinity of (3x^2 + 1)/(x^2 - 2)?",
+      "options": ["0", "1", "3", "infinity"],
+      "answer": "3",
+      "explanation": "Divide numerator and denominator by x^2: (3 + 1/x^2)/(1 - 2/x^2) -> 3/1 = 3 as x -> infinity.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "A particle's position is s(t) = t^3 - 3t^2. Its velocity at t = 2 is:",
+      "options": ["-4", "0", "4", "12"],
+      "answer": "0",
+      "explanation": "v(t) = s'(t) = 3t^2 - 6t. v(2) = 3(4) - 6(2) = 12 - 12 = 0.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "If f''(x) < 0 on an interval, f is:",
+      "options": ["Increasing", "Decreasing", "Concave up", "Concave down"],
+      "answer": "Concave down",
+      "explanation": "f''(x) < 0 means the first derivative is decreasing, which means f is concave down (bends like an upside-down cup).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "The IVT guarantees a solution to f(x) = 0 in (1, 2) for f(x) = x^2 - 2. Why?",
+      "options": ["f is a polynomial and f(1) = -1 < 0 < 2 = f(2)", "f(1) < 0 and f(2) > 0 and f is continuous", "f is differentiable everywhere", "The graph crosses zero by visual inspection"],
+      "answer": "f(1) < 0 and f(2) > 0 and f is continuous",
+      "explanation": "f(1) = -1 < 0 and f(2) = 2 > 0. Since f is continuous, IVT guarantees c in (1,2) with f(c) = 0.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Find the tangent line to f(x) = x^2 at x = 3.",
+      "options": ["y = 6x - 9", "y = 9x - 9", "y = 6x + 9", "y = 3x + 9"],
+      "answer": "y = 6x - 9",
+      "explanation": "f(3) = 9, f'(3) = 6. Tangent: y - 9 = 6(x - 3) -> y = 6x - 18 + 9 = 6x - 9.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "For a related rates problem, a stone dropped in water creates ripples. If the radius grows at 3 m/s, how fast does the area grow when r = 5 m?",
+      "options": ["15pi m^2/s", "30pi m^2/s", "9pi m^2/s", "25pi m^2/s"],
+      "answer": "30pi m^2/s",
+      "explanation": "A = pi*r^2. dA/dt = 2pi*r*(dr/dt) = 2pi*5*3 = 30pi m^2/s.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Evaluate: integral from 1 to 3 of (2x + 1) dx.",
+      "options": ["8", "10", "12", "14"],
+      "answer": "12",
+      "explanation": "Antiderivative: x^2 + x. [9+3] - [1+1] = 12 - 2 = 10. Wait: (3^2+3) - (1^2+1) = 12 - 2 = 10.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "What is integral of (x^2 + 1) dx?",
+      "options": ["x^3 + x + C", "x^3/3 + x + C", "2x + C", "x^3/3 + C"],
+      "answer": "x^3/3 + x + C",
+      "explanation": "integral(x^2) dx = x^3/3 and integral(1) dx = x. So the result is x^3/3 + x + C.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Using u-substitution, evaluate integral of x*sqrt(x^2+1) dx.",
+      "options": ["(2/3)(x^2+1)^(3/2) + C", "(1/3)(x^2+1)^(3/2) + C", "(1/2)(x^2+1)^(3/2) + C", "x^2*sqrt(x^2+1) + C"],
+      "answer": "(1/3)(x^2+1)^(3/2) + C",
+      "explanation": "u = x^2+1, du = 2x dx. integral of x*sqrt(x^2+1) dx = (1/2)integral of sqrt(u) du = (1/2)*(2/3)*u^(3/2) + C = (1/3)(x^2+1)^(3/2) + C.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "d/dx [integral from 0 to x^2 of sin(t) dt] = ?",
+      "options": ["sin(x^2)", "2x*sin(x^2)", "-cos(x^2)", "cos(x^2)"],
+      "answer": "2x*sin(x^2)",
+      "explanation": "By FTC Part 1 and chain rule: if g(x) = x^2, then d/dx[integral from 0 to g(x) of sin(t) dt] = sin(g(x))*g'(x) = sin(x^2)*2x.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Find the area between y = x^2 and y = x from x = 0 to x = 1.",
+      "options": ["1/3", "1/6", "1/2", "1/4"],
+      "answer": "1/6",
+      "explanation": "On [0,1], x >= x^2. Area = integral from 0 to 1 of (x - x^2) dx = [x^2/2 - x^3/3] from 0 to 1 = 1/2 - 1/3 = 1/6.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Solve the separable ODE: dy/dx = y with y(0) = 2.",
+      "options": ["y = e^x + 2", "y = 2e^x", "y = 2x + 2", "y = e^(2x)"],
+      "answer": "y = 2e^x",
+      "explanation": "Separating: dy/y = dx -> ln|y| = x + C -> y = Ae^x. At x=0: 2 = A*1 -> A = 2. So y = 2e^x.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "What is the average value of f(x) = x^2 on [0, 3]?",
+      "options": ["3", "4", "9/2", "3/2"],
+      "answer": "3",
+      "explanation": "Average = (1/3)*integral from 0 to 3 of x^2 dx = (1/3)*[x^3/3] from 0 to 3 = (1/3)*9 = 3.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Does the geometric series 3 + 3/2 + 3/4 + 3/8 + ... converge? If so, what is its sum?",
+      "options": ["Diverges", "Converges to 6", "Converges to 4", "Converges to 3"],
+      "answer": "Converges to 6",
+      "explanation": "a = 3, r = 1/2. Since |r| < 1, it converges. Sum = a/(1-r) = 3/(1-1/2) = 3/(1/2) = 6.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "A radioactive substance decays by 10% per year. If P0 = 500 grams, what is the amount after 10 years?",
+      "options": ["500*e^(-10)", "500*(0.9)^10", "500*(0.1)^10", "500*e^(-0.1)"],
+      "answer": "500*(0.9)^10",
+      "explanation": "Discrete decay: P(t) = P0*(1-r)^t = 500*(0.9)^10 = approximately 174 grams.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Evaluate integral of e^x*sin(e^x) dx.",
+      "options": ["cos(e^x) + C", "-cos(e^x) + C", "e^x*cos(e^x) + C", "sin(e^x) + C"],
+      "answer": "-cos(e^x) + C",
+      "explanation": "u = e^x, du = e^x dx. integral of sin(u) du = -cos(u) + C = -cos(e^x) + C.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Find the absolute maximum of f(x) = x^3 - 3x on [-2, 2].",
+      "options": ["f = 2 at x = -1", "f = 2 at x = 1", "f = 2 at x = -1 and x = 1", "f = -2 at x = -2"],
+      "answer": "f = 2 at x = -1",
+      "explanation": "f'(x) = 3x^2 - 3 = 0 -> x = +/-1. f(-2)=-2, f(-1)=2, f(1)=-2, f(2)=2. Absolute max = 2, at both x=-1 and x=2. Among listed, f=2 at x=-1 is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "If a_n = (2n+1)/n, what does this sequence converge to?",
+      "options": ["0", "1", "2", "Diverges"],
+      "answer": "2",
+      "explanation": "a_n = 2 + 1/n. As n -> infinity, 1/n -> 0. So a_n -> 2.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Find d/dx [tan(x^2 + 1)].",
+      "options": ["sec^2(x^2+1)", "2x*sec^2(x^2+1)", "2x*tan(x^2+1)", "sec(x^2+1)*tan(x^2+1)"],
+      "answer": "2x*sec^2(x^2+1)",
+      "explanation": "Chain rule: d/dx[tan(u)] = sec^2(u)*u', where u = x^2+1, u' = 2x. So 2x*sec^2(x^2+1).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Two cars are at an intersection. Car A moves north at 50 mph and Car B moves east at 120 mph. How fast does the distance between them increase (initially)?",
+      "options": ["70 mph", "130 mph", "170 mph", "85 mph"],
+      "answer": "130 mph",
+      "explanation": "d/dt = sqrt(50^2 + 120^2) = sqrt(2500 + 14400) = sqrt(16900) = 130 mph.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Using the MVT, if f(0) = 1 and f(4) = 9 and f is continuous on [0,4] and differentiable on (0,4), there exists c in (0,4) with f'(c) = ?",
+      "options": ["1", "2", "4", "9"],
+      "answer": "2",
+      "explanation": "MVT guarantees c where f'(c) = (f(4)-f(0))/(4-0) = (9-1)/4 = 8/4 = 2.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "What is the displacement of a particle with velocity v(t) = t^2 - t from t=0 to t=3?",
+      "options": ["9/2", "7/2", "9", "6"],
+      "answer": "9/2",
+      "explanation": "Displacement = integral from 0 to 3 of (t^2 - t) dt = [t^3/3 - t^2/2] from 0 to 3 = (27/3 - 9/2) = 9 - 4.5 = 4.5 = 9/2.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Evaluate: integral from -1 to 1 of x^3 dx.",
+      "options": ["0", "1/2", "2", "1/4"],
+      "answer": "0",
+      "explanation": "x^3 is an odd function and the interval is symmetric about 0, so the integral is 0.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "A company's profit function is P(x) = -x^2 + 40x - 300, where x is units sold. How many units maximize profit?",
+      "options": ["10", "20", "30", "40"],
+      "answer": "20",
+      "explanation": "P'(x) = -2x + 40 = 0 -> x = 20. P''(x) = -2 < 0 confirms a maximum.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "What does the notation integral from a to b of f(x) dx represent geometrically when f(x) >= 0?",
+      "options": ["The slope of f on [a,b]", "The area under the curve f from x=a to x=b", "The average rate of change of f", "The maximum value of f on [a,b]"],
+      "answer": "The area under the curve f from x=a to x=b",
+      "explanation": "When f(x) >= 0, the definite integral represents the area of the region between the graph of f and the x-axis from a to b.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Solve: dy/dx = 3x^2*y with y(0) = 1.",
+      "options": ["y = e^(x^3)", "y = 3x^2 + 1", "y = x^3 + 1", "y = e^(x^2)"],
+      "answer": "y = e^(x^3)",
+      "explanation": "Separating: dy/y = 3x^2 dx -> ln|y| = x^3 + C -> y = Ae^(x^3). At x=0: 1 = A. So y = e^(x^3).",
+      "points": 1
+    }
+  ]
+}

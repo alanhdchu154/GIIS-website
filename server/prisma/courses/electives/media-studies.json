@@ -1,0 +1,1220 @@
+{
+  "slug": "media-studies",
+  "name": "Media Studies",
+  "nameZh": "媒体研究",
+  "credits": 0.5,
+  "department": "English",
+  "type": "Elective",
+  "description": "An elective course surveying the history, forms, economics, and cultural influence of mass media from print and radio to digital platforms and media literacy.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "History of Mass Media",
+      "titleZh": "大众媒体史",
+      "objectives": "Trace the development of mass media from the printing press through digital media; explain how each major medium transformed communication and society.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/1-2-the-history-of-mass-media/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 1.2: The History of Mass Media",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/mass-media-history",
+      "videoNote": "Khan Academy — History of Mass Media Overview",
+      "video2Url": "https://www.youtube.com/watch?v=l2lGCCHXfIw",
+      "video2Note": "YouTube — History of Media: From Cave Paintings to the Internet",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/1-3-how-did-we-get-here/",
+      "practiceNote": "Create a timeline of major mass media milestones from 1450 to the present",
+      "assignment": "Create an annotated timeline of at least eight major media milestones from Gutenberg's printing press to the smartphone era. For each milestone, write 50 words explaining what changed and why it mattered. Then write a 200-word conclusion reflecting on which innovation you believe had the greatest social impact and why.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Print Media: Newspapers & Magazines",
+      "titleZh": "印刷媒体：报纸与杂志",
+      "objectives": "Explain the historical and contemporary role of newspapers and magazines; analyze the economic and digital challenges facing print media today.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/4-1-history-of-newspapers/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 4.1: History of Newspapers",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/print-media",
+      "videoNote": "Khan Academy — Print Media and Journalism",
+      "video2Url": "https://www.youtube.com/watch?v=kGWAuCmFOl0",
+      "video2Note": "YouTube — The Future of Print Journalism",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/4-3-the-newspaper-industry-today/",
+      "practiceNote": "Compare the front page of a print newspaper with its online edition for differences in framing and emphasis",
+      "assignment": "Select a major national newspaper and a national magazine. Research their circulation trends over the past 20 years. Write a 350-word analysis explaining: (1) what the data shows about the health of print media, (2) how digital distribution has changed their business model, and (3) whether you believe print journalism has an important future role.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Radio & Audio Media",
+      "titleZh": "广播与音频媒体",
+      "objectives": "Trace the development of radio broadcasting; compare traditional radio with podcasting and streaming audio as media formats.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/6-1-history-of-radio/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 6.1: History of Radio",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/radio-history",
+      "videoNote": "Khan Academy — History of Radio Broadcasting",
+      "video2Url": "https://www.youtube.com/watch?v=z4YqEEi0Y8s",
+      "video2Note": "YouTube — The History of Radio and the Birth of Broadcasting",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/6-3-radio-in-the-21st-century/",
+      "practiceNote": "Analyze one podcast episode for its journalistic or entertainment conventions compared to broadcast radio",
+      "assignment": "Listen to two audio programs: one traditional AM/FM radio broadcast and one podcast on a similar topic. Write a 350-word comparison analyzing differences in production style, audience interaction, advertising model, and accessibility. Conclude with your view on which format better serves the public interest.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Television",
+      "titleZh": "电视",
+      "objectives": "Explain television's role as a dominant mass medium; analyze how television programming reflects and shapes social values and culture.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/7-1-history-of-television/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 7.1: History of Television",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/television-history",
+      "videoNote": "Khan Academy — History of Television as a Medium",
+      "video2Url": "https://www.youtube.com/watch?v=Zf7ZRQG4P8w",
+      "video2Note": "YouTube — How Television Changed the World",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/7-3-issues-and-trends-in-television/",
+      "practiceNote": "Apply cultivation theory by comparing a TV drama's depiction of crime with actual crime statistics",
+      "assignment": "Choose a popular television genre (reality TV, crime drama, sitcom, or news) and watch two episodes. Write a 400-word critical analysis: identify the social groups represented, examine how they are portrayed (stereotyped, realistic, absent?), and explain what values or worldview the program implicitly promotes to its audience.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 5,
+      "title": "Film as Medium",
+      "titleZh": "作为媒介的电影",
+      "objectives": "Analyze film as a medium of communication and cultural expression; identify how cinematic techniques convey meaning and ideology.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/8-1-history-of-film/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 8.1: History of Film",
+      "videoUrl": "https://www.khanacademy.org/humanities/art-history/global-contemporary-art/v/introduction-to-film-theory",
+      "videoNote": "Khan Academy — Introduction to Film Theory",
+      "video2Url": "https://www.youtube.com/watch?v=oHFfunBmXZg",
+      "video2Note": "YouTube — Film as a Communication Medium: How Movies Persuade",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/8-3-issues-and-trends-in-film/",
+      "practiceNote": "Analyze a 5-minute film scene for cinematography, editing, and narrative choices that convey meaning",
+      "assignment": "Watch a film scene of your choice (at least 3 minutes). Write a 400-word film analysis examining: (1) how camera angles and shots establish power relationships between characters, (2) how music or sound design shapes your emotional response, and (3) what ideological messages the scene communicates about society, gender, or class.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 6,
+      "title": "Online & Digital Media",
+      "titleZh": "网络与数字媒体",
+      "objectives": "Explain how the internet transformed media production, distribution, and consumption; evaluate both opportunities and risks of digital media.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/11-1-the-internet-and-social-media/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 11.1: The Internet and Social Media",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:the-internet-protocol-suite/v/the-internet-introduction",
+      "videoNote": "Khan Academy — The Internet: Introduction",
+      "video2Url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
+      "video2Note": "YouTube — What is the Internet? (How it Works)",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/11-2-social-media/",
+      "practiceNote": "Evaluate three online news sources for credibility markers using fact-checking criteria",
+      "assignment": "Select three different websites covering the same news story (a traditional newspaper website, a news aggregator, and a social media post). Write a 350-word comparison analyzing: how each platform frames the story, what information is emphasized or missing, which sources are cited, and which version you find most credible and why.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Social Media Platforms",
+      "titleZh": "社交媒体平台",
+      "objectives": "Describe the major social media platforms and their distinctive communication features; analyze how platform design shapes user behavior and content.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/11-2-social-media/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 11.2: Social Media",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:the-web/v/the-world-wide-web",
+      "videoNote": "Khan Academy — The World Wide Web and Social Platforms",
+      "video2Url": "https://www.youtube.com/watch?v=1-SvuFIQjK8",
+      "video2Note": "YouTube — How Social Media Platforms Manipulate Your Behavior",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/11-3-issues-and-trends-in-the-digital-age/",
+      "practiceNote": "Create a platform comparison chart analyzing audience, format, monetization, and communication style for three social media platforms",
+      "assignment": "Choose two social media platforms with very different designs (e.g., TikTok vs. LinkedIn). Write a 400-word analysis explaining: how each platform's design features (character limits, visual focus, algorithm, verification) shape what users communicate, who communicates, and how audiences respond.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 8,
+      "title": "Journalism & News Production",
+      "titleZh": "新闻学与新闻生产",
+      "objectives": "Explain the principles of professional journalism (accuracy, fairness, independence); trace how news is produced and how digital media has transformed journalism.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/4-2-how-newspapers-work/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 4.2: How Newspapers Work",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/journalism-basics",
+      "videoNote": "Khan Academy — Journalism Basics and News Standards",
+      "video2Url": "https://www.youtube.com/watch?v=YOivlK9qGkA",
+      "video2Note": "YouTube — How News Is Made: The Journalism Process",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/4-4-ethics-in-journalism/",
+      "practiceNote": "Evaluate a news article using the Society of Professional Journalists Code of Ethics",
+      "assignment": "Find a news story covered by at least three different outlets (one traditional newspaper, one broadcast network, one digital-native outlet). Write a 400-word analysis comparing: the headline choices, what sources each outlet consulted, what information each emphasized, and any evidence of bias or ethical lapses in any version.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 9,
+      "title": "Advertising & Public Relations",
+      "titleZh": "广告与公共关系",
+      "objectives": "Distinguish advertising from public relations; analyze persuasive techniques used in advertising and evaluate their ethical implications.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/12-1-history-of-advertising/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 12.1: History of Advertising",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-theory-topic/market-structures-and-firm-behavior/v/advertising-in-marketing",
+      "videoNote": "Khan Academy — Advertising in Marketing",
+      "video2Url": "https://www.youtube.com/watch?v=e9vRON91CyY",
+      "video2Note": "YouTube — Psychology of Advertising: How Ads Persuade You",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/12-3-public-relations/",
+      "practiceNote": "Identify and classify persuasive techniques in three current advertisements",
+      "assignment": "Collect three different advertisements from three different media (TV, social media, print). For each, write 100 words identifying: the target audience, the primary persuasive appeal (emotional, logical, or credibility-based), the specific technique used, and whether the ad makes any claims that are misleading or exaggerated. Then write a 100-word ethical evaluation.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 10,
+      "title": "Media Ownership & Economics",
+      "titleZh": "媒体所有权与经济",
+      "objectives": "Explain how media ownership concentration affects content diversity and democratic discourse; analyze the economic models that drive media production.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/13-1-the-structure-of-the-media-industry/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 13.1: The Structure of the Media Industry",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-theory-topic/market-structures-and-firm-behavior/v/media-ownership",
+      "videoNote": "Khan Academy — Media Ownership and Market Structure",
+      "video2Url": "https://www.youtube.com/watch?v=pq1CQ2K7-64",
+      "video2Note": "YouTube — Who Owns the Media? Media Consolidation Explained",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/13-2-ownership-and-media-consolidation/",
+      "practiceNote": "Research which company owns five media outlets you use regularly and map their corporate relationships",
+      "assignment": "Research the ownership of at least five different media outlets you use regularly (streaming services, news sites, TV channels, social platforms). Create a diagram showing any common corporate parents and write a 350-word analysis: how does this ownership concentration potentially affect the diversity of viewpoints, the content produced, and public trust in media?",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 11,
+      "title": "Representation in Media",
+      "titleZh": "媒体中的形象表达",
+      "objectives": "Analyze how race, gender, class, and sexuality are represented (or misrepresented) in mainstream media; evaluate the societal impact of media stereotypes.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/2-1-mass-media-and-its-messages/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 2.1: Mass Media and Its Messages",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/representation-media",
+      "videoNote": "Khan Academy — Representation in Media",
+      "video2Url": "https://www.youtube.com/watch?v=6Ux6HjXMkyY",
+      "video2Note": "YouTube — How Hollywood Stereotypes Affect Us",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/2-2-how-the-media-shapes-culture/",
+      "practiceNote": "Conduct a 30-minute content analysis of prime-time TV for representation patterns",
+      "assignment": "Watch 30 minutes of prime-time television (or stream a show's episode) and conduct a content analysis: record the demographic characteristics (gender, race, age, occupation) of every named character who appears. Write a 350-word report on what you found, compare it to actual US demographic data, and discuss the potential impact of any over- or under-representation.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 12,
+      "title": "Media Law & Regulation",
+      "titleZh": "媒体法律与监管",
+      "objectives": "Identify key legal frameworks governing US media including the First Amendment, FCC regulation, copyright, and defamation law.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/15-1-the-law-and-mass-media/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 15.1: The Law and Mass Media",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-civil-liberties/us-gov-first-amendment/v/freedoms-of-speech-press-and-petition",
+      "videoNote": "Khan Academy — First Amendment: Freedom of Speech and Press",
+      "video2Url": "https://www.youtube.com/watch?v=FWwBUxuYIUE",
+      "video2Note": "YouTube — Media Law and the First Amendment Explained",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/15-2-the-first-amendment-and-freedom-of-speech/",
+      "practiceNote": "Analyze a media law case study involving either defamation or First Amendment issues",
+      "assignment": "Research a real media law case (e.g., New York Times v. Sullivan, FCC v. Pacifica, or a recent social media content moderation lawsuit). Write a 400-word case analysis explaining: (1) the parties involved, (2) the legal principle at stake, (3) the ruling and its rationale, and (4) what the case means for the balance between press freedom and public protection.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 13,
+      "title": "Global Media",
+      "titleZh": "全球媒体",
+      "objectives": "Analyze the global flow of media content; evaluate debates over cultural imperialism, local adaptation, and the role of global media corporations.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/16-1-globalization-and-the-media/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 16.1: Globalization and the Media",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/globalization-media",
+      "videoNote": "Khan Academy — Media and Globalization",
+      "video2Url": "https://www.youtube.com/watch?v=3xYMtqHHjQA",
+      "video2Note": "YouTube — Cultural Imperialism and Global Media",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/16-2-media-and-culture-around-the-world/",
+      "practiceNote": "Compare how the same international news event was covered by two news outlets from different countries",
+      "assignment": "Select a global news event and find coverage from at least three different national media outlets (one US-based, one from Europe or Asia, one from a developing nation if possible). Write a 400-word comparison: how did each outlet frame the event? Whose voices were quoted? What context was provided? What does this reveal about global media flows and potential biases?",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 14,
+      "title": "Media Literacy",
+      "titleZh": "媒体素养",
+      "objectives": "Apply media literacy skills to critically evaluate media messages, identify bias, recognize misinformation, and become a more informed and responsible media consumer.",
+      "readingUrl": "https://open.lib.umn.edu/mediaandculture/chapter/1-4-media-literacy/",
+      "readingNote": "Understanding Media and Culture (UMN OER) — Ch 1.4: Media Literacy",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/media-literacy",
+      "videoNote": "Khan Academy — Media Literacy Basics",
+      "video2Url": "https://www.youtube.com/watch?v=q-Y-z6HmRgI",
+      "video2Note": "YouTube — How to Spot Fake News and Misinformation",
+      "practiceUrl": "https://open.lib.umn.edu/mediaandculture/chapter/1-5-ethics-of-mass-media/",
+      "practiceNote": "Use the SIFT method (Stop, Investigate, Find, Trace) to evaluate three social media posts",
+      "assignment": "Using the SIFT method (Stop, Investigate the source, Find better coverage, Trace claims), evaluate three media messages: one news article, one social media post, and one advertisement. Write a 400-word report assessing the credibility of each, identifying any misleading elements you discovered, and explaining how media literacy skills changed your initial reaction to each piece of content.",
+      "estimatedHrs": 3.0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which invention by Johannes Gutenberg in the 1450s is considered the first major milestone in mass media history?",
+      "options": ["The telegraph", "The movable type printing press", "The radio transmitter", "The daguerreotype photograph"],
+      "answer": "B",
+      "explanation": "Gutenberg's movable type printing press (~1450) made mass production of texts possible, democratizing information and launching the era of mass communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "McLuhan's famous phrase 'the medium is the message' means:",
+      "options": ["The content of a message is more important than how it is delivered", "The form of a medium itself shapes the content and impact of communication", "Television is a more powerful medium than radio", "Mass media exists only to sell advertising"],
+      "answer": "B",
+      "explanation": "McLuhan argued that the medium itself — its form and structure — shapes perception and society independently of the specific content it carries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Which of the following correctly orders the emergence of mass media technologies?",
+      "options": ["Television, Radio, Newspapers, Internet", "Newspapers, Radio, Television, Internet", "Radio, Newspapers, Internet, Television", "Internet, Television, Radio, Newspapers"],
+      "answer": "B",
+      "explanation": "Mass media developed historically in order: newspapers (1600s), radio (early 1900s), television (mid-1900s), and the internet (late 1900s–present).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "The term 'mass media' refers to communication channels that:",
+      "options": ["Are only accessible to wealthy audiences", "Deliver messages to large, diverse audiences simultaneously", "Focus exclusively on political content", "Require direct, face-to-face interaction"],
+      "answer": "B",
+      "explanation": "Mass media are technologies that reach and communicate to large, heterogeneous audiences at the same time, distinguishing them from interpersonal communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "The transition from 'Web 1.0' to 'Web 2.0' is significant in media history because Web 2.0 enabled:",
+      "options": ["Faster internet connection speeds only", "User-generated content and two-way interaction online", "Government control over online content", "The end of traditional broadcast television"],
+      "answer": "B",
+      "explanation": "Web 2.0 (mid-2000s) shifted the internet from read-only content delivery to an interactive platform where users generate and share their own content (blogs, social media, wikis).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "The term 'penny press' (1830s) refers to newspapers that:",
+      "options": ["Were funded entirely by government subsidies", "Were cheaply priced and aimed at a mass general audience", "Covered only financial and business news", "Were published by political parties for their supporters"],
+      "answer": "B",
+      "explanation": "The penny press made newspapers affordable (one cent) to working-class readers for the first time, transforming newspapers into a true mass medium with wide circulation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Investigative journalism that exposes corruption and social problems is known as:",
+      "options": ["Yellow journalism", "Muckraking", "Sensationalism", "Public relations"],
+      "answer": "B",
+      "explanation": "Muckraking (early 1900s) was investigative journalism that exposed corruption, corporate misconduct, and social injustice, driving important social reforms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The primary economic model for most print newspapers historically has been:",
+      "options": ["Government grants and public funding", "Subscription and advertising revenue", "Individual donor contributions", "Pay-per-article micropayments"],
+      "answer": "B",
+      "explanation": "Newspapers have traditionally relied on a dual revenue model: paid subscriptions from readers and display/classified advertising from businesses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "The rise of digital media has most directly challenged print newspapers by:",
+      "options": ["Making physical printing technology obsolete immediately", "Shifting advertising revenue to online platforms and reducing print readership", "Requiring newspapers to switch entirely to video content", "Eliminating the need for professional journalists"],
+      "answer": "B",
+      "explanation": "Digital media drew advertisers (especially classified ads) to online platforms and shifted readers to free online sources, dramatically reducing print newspaper revenue.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Yellow journalism is characterized by:",
+      "options": ["In-depth investigative reporting on complex social issues", "Sensationalized, exaggerated, or fabricated stories to boost circulation", "Objective, fact-based reporting without opinion", "Reporting exclusively on international affairs"],
+      "answer": "B",
+      "explanation": "Yellow journalism (late 1800s) used exaggeration, sensationalism, and sometimes fabrication to attract readers, exemplified by newspapers fueling public opinion before the Spanish-American War.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The 'Golden Age of Radio' (1920s–1950s) refers to a period when radio:",
+      "options": ["Was used exclusively by the military", "Became the dominant home entertainment medium in America", "Was available only to wealthy households", "Primarily broadcast political news and nothing else"],
+      "answer": "B",
+      "explanation": "The Golden Age of Radio was a period when radio was the primary entertainment medium in American homes, featuring dramas, comedies, news, and sports.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "What distinguishes a podcast from traditional broadcast radio?",
+      "options": ["Podcasts can only be listened to on smartphones", "Podcasts are on-demand recordings accessible anytime without a broadcast schedule", "Podcasts are always live and interactive", "Podcasts must be licensed by the FCC like broadcast radio"],
+      "answer": "B",
+      "explanation": "Podcasts are recorded audio programs available on-demand at any time through the internet, unlike broadcast radio which requires tuning in at a scheduled time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "The Federal Communications Commission (FCC) regulates broadcast radio primarily by:",
+      "options": ["Setting the prices broadcasters must charge for advertising", "Licensing radio stations and enforcing content standards on public airwaves", "Owning and operating all public radio stations", "Requiring all radio stations to broadcast news programs"],
+      "answer": "B",
+      "explanation": "The FCC grants licenses to radio broadcasters to use the public airwaves and enforces regulations including content standards, ownership rules, and equal time provisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Orson Welles' 1938 'War of the Worlds' broadcast is historically significant because it demonstrated:",
+      "options": ["That radio drama was more popular than news programming", "Radio's power to influence public belief and cause widespread panic", "The FCC's power to shut down broadcasts in real time", "That audiences preferred entertainment to factual reporting"],
+      "answer": "B",
+      "explanation": "The broadcast, which dramatized a Martian invasion as if it were real news, caused widespread panic and illustrated radio's powerful ability to shape audience reality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "National Public Radio (NPR) is an example of:",
+      "options": ["A commercial radio network funded primarily by advertising", "A public media organization funded by listeners and government grants", "A government-run propaganda radio network", "An internet-only streaming audio service"],
+      "answer": "B",
+      "explanation": "NPR is a nonprofit public media organization funded by a combination of listener donations, corporate sponsors, and government grants via the Corporation for Public Broadcasting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Cultivation Theory, developed by George Gerbner, suggests that heavy television viewing:",
+      "options": ["Makes viewers more politically informed and active", "Shapes viewers' perception of reality to match television's version of the world", "Has no measurable effect on attitudes or beliefs", "Primarily affects children under 10 but not adults"],
+      "answer": "B",
+      "explanation": "Cultivation Theory argues that long-term, heavy TV viewers develop a perception of social reality (e.g., crime, gender roles) that reflects what they see on television rather than actual statistics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "The 'mean world syndrome,' associated with Cultivation Theory, refers to the belief that:",
+      "options": ["Media violence directly causes real-world violent behavior", "Heavy TV viewers believe the world is more dangerous than it actually is", "Children who watch violent TV become desensitized to violence", "News programs exaggerate crime to attract larger audiences"],
+      "answer": "B",
+      "explanation": "Gerbner found that heavy TV viewers, exposed to disproportionate amounts of crime and violence on TV, tend to perceive the real world as more dangerous than it is.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Which regulatory body in the United States oversees broadcast television content?",
+      "options": ["The FTC (Federal Trade Commission)", "The FCC (Federal Communications Commission)", "The FEC (Federal Election Commission)", "The FCA (Federal Content Authority)"],
+      "answer": "B",
+      "explanation": "The FCC regulates broadcast television in the US, including licensing stations, enforcing content standards (indecency, equal time rules), and overseeing ownership.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "The television industry's shift to streaming services (Netflix, Hulu, Disney+) is significant because streaming:",
+      "options": ["Requires government licensing like broadcast television", "Operates on a subscription model outside traditional broadcast regulation", "Can only deliver content that previously aired on broadcast TV", "Is exclusively available in major metropolitan areas"],
+      "answer": "B",
+      "explanation": "Streaming services operate via the internet and subscription fees outside the broadcast regulatory framework, allowing more content freedom and a different economic model than traditional TV.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Prime-time television historically (8–11 PM) is significant because it:",
+      "options": ["Was reserved exclusively for educational programming", "Attracted the largest and most diverse audiences, commanding the highest advertising rates", "Was required to broadcast news programs by law", "Was the only time period regulated by the FCC"],
+      "answer": "B",
+      "explanation": "Prime time attracts the largest household audience, making it the most valuable advertising time slot and where networks traditionally scheduled their most popular programming.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The Bechdel Test for films measures whether a film:",
+      "options": ["Passes standards of MPAA rating appropriateness", "Features at least two women who talk to each other about something other than a man", "Has a female director or producer in a leadership role", "Contains no offensive stereotypes of any social group"],
+      "answer": "B",
+      "explanation": "The Bechdel Test (named after cartoonist Alison Bechdel) measures female representation by checking if a film has two named women characters who speak to each other about something besides a man.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "The Hollywood studio system, dominant from the 1920s–1950s, was characterized by:",
+      "options": ["Independent filmmakers having full creative control", "Studios controlling all aspects of production, distribution, and exhibition", "Government ownership of all major film production companies", "Films being produced solely for overseas audiences"],
+      "answer": "B",
+      "explanation": "The Hollywood studio system featured major studios (MGM, Warner Bros., Paramount) controlling the entire film industry from production through distribution and theater ownership.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Mise-en-scène in film refers to:",
+      "options": ["The order in which film scenes are edited together", "All elements visible in a frame including setting, lighting, and actors' positioning", "The musical score that accompanies the film narrative", "The process of adding visual effects after filming"],
+      "answer": "B",
+      "explanation": "Mise-en-scène encompasses all visual elements within the camera frame — set design, lighting, costume, actor placement — that communicate meaning in film.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Documentary film differs from narrative fiction film primarily in that documentary:",
+      "options": ["Uses professional actors to portray real events", "Claims to represent actual reality rather than a fictional story", "Always uses a chronological structure", "Is not considered a legitimate art form by film scholars"],
+      "answer": "B",
+      "explanation": "Documentaries claim to represent actual people, events, and places rather than fictional narratives, though scholars note they still involve editorial choices that shape the 'reality' presented.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "The MPAA film rating system (G, PG, PG-13, R, NC-17) is administered by:",
+      "options": ["The Federal Communications Commission", "A private voluntary industry organization (the film industry itself)", "The US Congress through federal legislation", "Local state governments for their respective jurisdictions"],
+      "answer": "B",
+      "explanation": "The MPAA (Motion Picture Association of America) rating system is a voluntary, industry-run classification system rather than a government censorship program.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The World Wide Web was invented by Tim Berners-Lee in 1989–1991 primarily to:",
+      "options": ["Create a platform for social media and personal networking", "Enable researchers to share information via hyperlinked documents", "Provide a commercial marketplace for online shopping", "Allow governments to communicate securely"],
+      "answer": "B",
+      "explanation": "Berners-Lee invented the Web at CERN as a system for researchers to share scientific information using hypertext documents connected by links.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Digital convergence refers to the merging of:",
+      "options": ["Print and broadcast media companies into single corporations", "Previously distinct media technologies into unified digital platforms", "All internet traffic through a single government server", "News and entertainment programming into a single format"],
+      "answer": "B",
+      "explanation": "Digital convergence describes how formerly separate media forms (text, audio, video, telephone) have merged into integrated digital platforms accessible on single devices.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Net neutrality refers to the principle that:",
+      "options": ["Internet users should only post neutral, non-partisan content", "Internet service providers should treat all internet traffic equally without discrimination", "Social media platforms should remain neutral in political debates", "Only government-approved content can be hosted on the internet"],
+      "answer": "B",
+      "explanation": "Net neutrality is the principle that ISPs must treat all internet traffic equally, not slowing, blocking, or prioritizing certain content, services, or websites over others.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "The SIFT method for evaluating online information stands for:",
+      "options": ["Search, Identify, Find, Test", "Stop, Investigate the source, Find better coverage, Trace claims", "Scan, Interpret, Filter, Trust", "Source, Inform, Fact-check, Think"],
+      "answer": "B",
+      "explanation": "SIFT (Stop, Investigate the source, Find better coverage, Trace claims) is a media literacy framework developed by Mike Caulfield for evaluating online information.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "An 'echo chamber' online is problematic for democratic discourse because it:",
+      "options": ["Allows anyone to post without verification", "Limits users' exposure to diverse viewpoints, reinforcing existing beliefs", "Makes it difficult for young people to find credible news sources", "Enables misinformation to spread faster than corrections"],
+      "answer": "B",
+      "explanation": "Echo chambers filter out challenging perspectives and expose users primarily to views they already hold, reducing the diversity of information needed for informed democratic participation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Which of the following best describes how social media algorithms determine what content to show users?",
+      "options": ["Content is shown chronologically and equally to all followers", "Algorithms prioritize content likely to generate the most engagement based on past user behavior", "Content is curated by professional editors who select quality posts", "Only verified accounts and official news sources appear prominently"],
+      "answer": "B",
+      "explanation": "Social media algorithms use machine learning to optimize for engagement, prioritizing content similar to what users have previously liked, shared, or spent time viewing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "The 'attention economy' in social media refers to the idea that:",
+      "options": ["Advertisers pay users directly for their attention", "User attention is the primary resource platforms compete for and sell to advertisers", "Social media companies pay content creators based on views", "Governments regulate how much attention media can demand from users"],
+      "answer": "B",
+      "explanation": "In the attention economy, social media platforms compete to capture and hold user attention, which is then sold to advertisers — making user attention the fundamental commodity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Which social media platform is best known for short-form video content driven by a discovery algorithm for non-followers?",
+      "options": ["LinkedIn", "Twitter/X", "TikTok", "Facebook"],
+      "answer": "C",
+      "explanation": "TikTok is distinguished by its For You Page algorithm, which aggressively surfaces short-form videos to users regardless of whether they follow the creator.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Context collapse on social media occurs when:",
+      "options": ["A post becomes impossible to view due to technical errors", "Content designed for one audience reaches multiple different audiences simultaneously", "The historical context of a post is lost over time", "Social media platforms delete old posts automatically"],
+      "answer": "B",
+      "explanation": "Context collapse happens when a social media post created for a specific audience (close friends) reaches unintended audiences (employers, strangers), creating communication challenges.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Social media platforms generate the majority of their revenue through:",
+      "options": ["User subscription fees for premium features", "Targeted advertising based on user data", "Government contracts for content moderation services", "Sales of branded merchandise to platform users"],
+      "answer": "B",
+      "explanation": "Most major social media platforms (Facebook/Meta, Google/YouTube, Twitter/X) generate the majority of revenue from targeted digital advertising using data collected from user behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "The journalistic principle of 'accuracy' requires reporters to:",
+      "options": ["Publish a story as quickly as possible to beat competitors", "Verify facts through multiple independent sources before publishing", "Report only information that is favorable to the public interest", "Include only information that can be proven beyond any doubt"],
+      "answer": "B",
+      "explanation": "Accuracy, a cornerstone of journalistic ethics, requires journalists to verify facts through reliable, independent sources before publication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "The inverted pyramid structure in news writing organizes information by placing:",
+      "options": ["Background information first, then main facts, then conclusion", "Most important information first, followed by decreasing levels of detail", "Chronological events in the order they occurred", "The journalist's analysis at the top, followed by supporting quotes"],
+      "answer": "B",
+      "explanation": "The inverted pyramid places the most newsworthy information (who, what, when, where, why) first, with supporting details and background following in descending order of importance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Citizen journalism refers to:",
+      "options": ["Journalism produced only by professionally trained reporters", "News content created and distributed by non-professional members of the public", "Government-funded news organizations with public service mandates", "Journalism that focuses exclusively on local community issues"],
+      "answer": "B",
+      "explanation": "Citizen journalism involves ordinary members of the public collecting, reporting, and publishing news — made possible by smartphones and social media.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Editorial independence in journalism means:",
+      "options": ["Journalists are self-employed freelancers with no employer", "News decisions are made based on journalistic merit rather than advertiser or owner pressure", "Newspapers are not regulated by any government or industry body", "Journalists are free to express personal political opinions in their reporting"],
+      "answer": "B",
+      "explanation": "Editorial independence means that story selection, framing, and content decisions are made by journalists based on news value, not influenced by the commercial or political interests of owners or advertisers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "The 24-hour news cycle has most significantly affected journalism by:",
+      "options": ["Giving reporters more time to thoroughly investigate stories", "Creating pressure to publish quickly, sometimes at the expense of accuracy", "Eliminating the need for editors and fact-checkers", "Making print newspapers more popular than before"],
+      "answer": "B",
+      "explanation": "The 24/7 news cycle driven by cable news and the internet pressures journalists to report faster, which can compromise thorough verification and increase errors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "The primary difference between advertising and public relations is that advertising:",
+      "options": ["Is free media coverage earned through newsworthy activities", "Is paid media space where the advertiser controls the message", "Is subject to the same ethical standards as journalism", "Focuses exclusively on corporate reputation management"],
+      "answer": "B",
+      "explanation": "Advertising is paid media where companies directly control the message content and placement, unlike PR which works to earn coverage through media relations and events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Native advertising is distinct from traditional advertising because it:",
+      "options": ["Uses only images without any text", "Is designed to look like editorial content rather than an advertisement", "Is produced by professional journalists for news organizations", "Is shown only to users who have explicitly requested it"],
+      "answer": "B",
+      "explanation": "Native advertising mimics the form and tone of the surrounding editorial content (news articles, social media posts) while actually being paid promotional material.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "The FTC (Federal Trade Commission) requires influencers and sponsored content creators to:",
+      "options": ["Limit their sponsored posts to two per month", "Clearly disclose when content is paid or sponsored", "Submit sponsored content to government review before posting", "Avoid using personal testimonials in advertising"],
+      "answer": "B",
+      "explanation": "FTC guidelines require clear and conspicuous disclosure when social media creators are paid to promote products, ensuring audiences know the content is advertising.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Emotional appeals in advertising (pathos) are effective because they:",
+      "options": ["Provide scientific evidence that the product works as claimed", "Create emotional connections that influence purchase decisions beyond rational evaluation", "Establish the brand's credibility through expert endorsements", "Target only consumers who are already loyal to the brand"],
+      "answer": "B",
+      "explanation": "Emotional appeals tap into feelings like joy, fear, nostalgia, or belonging, which can motivate purchase decisions more powerfully than rational product comparisons.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "A 'spin' in public relations refers to:",
+      "options": ["Releasing company financial reports to stockholders", "Presenting information in a way that favors a particular interpretation", "Hosting a press conference to announce major news", "Distributing free product samples to journalists"],
+      "answer": "B",
+      "explanation": "In PR, 'spin' means strategically framing information (often selectively or misleadingly) to present the most favorable interpretation of events for a person or organization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Media consolidation refers to the process of:",
+      "options": ["Making media content available across multiple platforms", "A small number of corporations owning an increasing share of media outlets", "Merging print and broadcast newsrooms into integrated operations", "Government agencies taking control of private media companies"],
+      "answer": "B",
+      "explanation": "Media consolidation (or concentration of ownership) occurs when a small number of large corporations acquire control over a growing proportion of media outlets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "The primary concern with media ownership concentration is that it may:",
+      "options": ["Make media too affordable for average consumers", "Reduce the diversity of voices and perspectives represented in media", "Increase competition between media companies", "Lead to more investigative journalism and public interest reporting"],
+      "answer": "B",
+      "explanation": "Concentrated ownership by a few corporations may limit the range of perspectives, reduce competitive journalism, and make media serve corporate rather than public interests.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Vertical integration in the media industry refers to a company:",
+      "options": ["Expanding into global international markets", "Owning multiple stages of the production and distribution process", "Hiring reporters at multiple levels of seniority", "Producing content in multiple languages and formats"],
+      "answer": "B",
+      "explanation": "Vertical integration means owning the entire supply chain — for example, a studio that produces films, owns the distribution company, and operates theaters showing the film.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Most commercial media in the United States are primarily funded by:",
+      "options": ["Government subsidies and public grants", "Advertising revenue", "User subscription fees only", "Nonprofit foundations and philanthropic donations"],
+      "answer": "B",
+      "explanation": "The dominant funding model for US commercial media (TV networks, newspapers, social media) is advertising revenue, which makes audiences the product sold to advertisers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "The concept of media as 'the fourth estate' refers to its role as:",
+      "options": ["The fourth branch of government with regulatory power", "An independent watchdog on the other three branches of power (government, business, church)", "The fourth largest industry sector in the US economy", "A fourth tier of the education system alongside primary, secondary, and higher education"],
+      "answer": "B",
+      "explanation": "The 'fourth estate' concept describes a free press as an independent watchdog on government and institutional power, holding the powerful accountable on behalf of the public.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "A stereotype in media representation refers to:",
+      "options": ["A factually accurate portrayal of a group based on research", "An oversimplified, fixed image of a group applied to all its members", "A positive portrayal designed to counteract negative images", "A diversity-focused casting approach in entertainment"],
+      "answer": "B",
+      "explanation": "Media stereotypes are reductive, generalized representations that reduce groups to a few fixed, oversimplified traits, often reflecting and reinforcing social biases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The term 'male gaze,' introduced by film theorist Laura Mulvey, refers to:",
+      "options": ["The requirement that male actors appear in every film scene", "The tendency of mainstream film to present women through a male heterosexual perspective", "The use of close-up shots that show characters' faces in detail", "The formal agreement among directors about camera positioning"],
+      "answer": "B",
+      "explanation": "Mulvey's male gaze theory argues that mainstream cinema is structured around a male heterosexual point of view, objectifying women's bodies for male pleasure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Underrepresentation of a group in media refers to a situation where:",
+      "options": ["A group receives more negative portrayals than positive ones", "A group appears in media at rates lower than their share of the population", "A group is portrayed in stereotypical roles across all media", "A group's members are prevented by law from working in media"],
+      "answer": "B",
+      "explanation": "Underrepresentation occurs when a demographic group appears less frequently in media than their actual proportion of the population, making their stories and perspectives less visible.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Media representation matters for real-world outcomes because:",
+      "options": ["Media images directly control how people behave at all times", "Repeated representations shape social norms, aspirations, and perceptions of different groups", "Only young children are influenced by media images", "Representation only matters in advertising, not in entertainment"],
+      "answer": "B",
+      "explanation": "Research shows that consistent media representations shape audience expectations, stereotypes, and aspirations — influencing how different groups are perceived and treated in society.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "The concept of 'intersectionality' in media analysis considers how:",
+      "options": ["Multiple media platforms can be used simultaneously", "Race, gender, class, sexuality, and other identities interact to shape media representation", "Advertisements must appeal to people at different income levels", "Media companies merge to create cross-platform content"],
+      "answer": "B",
+      "explanation": "Intersectionality (Crenshaw) recognizes that race, gender, class, sexuality, and other identities overlap and interact, producing distinct experiences of representation and discrimination.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "The First Amendment to the US Constitution protects freedom of the press primarily by:",
+      "options": ["Guaranteeing all journalists access to government information", "Prohibiting government from making laws restricting freedom of speech or the press", "Requiring the government to fund public media organizations", "Giving journalists immunity from lawsuits over published stories"],
+      "answer": "B",
+      "explanation": "The First Amendment prohibits Congress from making laws abridging freedom of speech or of the press, providing broad protection against prior restraint and government censorship.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Defamation law in the US protects individuals from:",
+      "options": ["Being photographed in public without consent", "False statements of fact that damage their reputation, published to others", "Negative opinions expressed about them in media", "Any media coverage they find personally embarrassing"],
+      "answer": "B",
+      "explanation": "Defamation (libel in print, slander in speech) involves publishing false statements of fact — not opinions — that damage a person's reputation to a third party.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "In the landmark case New York Times v. Sullivan (1964), the Supreme Court ruled that public officials suing for defamation must prove:",
+      "options": ["That the statement was unflattering", "Actual malice — that the statement was made with knowledge of its falsity or reckless disregard for truth", "That the newspaper had a financial motive for publishing the story", "That at least three sources confirmed the false information"],
+      "answer": "B",
+      "explanation": "NYT v. Sullivan established the 'actual malice' standard, requiring public officials to prove a media outlet knew a statement was false or acted with reckless disregard for truth, giving press significant protection.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Copyright law protects media creators by:",
+      "options": ["Giving them the right to ban all criticism of their work", "Granting them exclusive rights to reproduce, distribute, and adapt their creative work", "Requiring all consumers to pay before viewing or listening to any content", "Preventing any quotation of their work even for educational purposes"],
+      "answer": "B",
+      "explanation": "Copyright grants creators exclusive rights to reproduce, distribute, perform, and create derivative works, protecting their economic interests in creative output for a limited time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "The FCC's 'equal time' rule (Section 315) requires broadcast stations that give airtime to one political candidate to:",
+      "options": ["Provide free airtime to all registered political parties", "Offer comparable airtime to opposing candidates for the same office", "Submit all political content for government review before airing", "Avoid all political content within 60 days of an election"],
+      "answer": "B",
+      "explanation": "Section 315 of the Communications Act requires that if a broadcaster allows a legally qualified candidate to use airtime, it must offer equal opportunities to opposing candidates.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Cultural imperialism in global media refers to the concern that:",
+      "options": ["Nations compete to export their media to gain cultural influence over others", "Dominant nations' media overwhelm and displace local cultures worldwide", "Media corporations must adapt entirely to local customs in each market", "Governments ban foreign media to protect domestic culture"],
+      "answer": "B",
+      "explanation": "Cultural imperialism theory argues that the dominance of US and Western media globally can displace, undermine, or homogenize local cultural expressions and values.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Glocalization in global media refers to the practice of:",
+      "options": ["Global media corporations refusing to adapt content for local markets", "Adapting global media content to fit local cultural tastes and contexts", "Local media producers creating content only for their regional audience", "Governments controlling the flow of international media"],
+      "answer": "B",
+      "explanation": "Glocalization describes how global media companies (Netflix, McDonald's ads, Disney) adapt or localize their content to fit local cultural preferences while maintaining global brand identity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "The term 'global media flow' refers to:",
+      "options": ["The speed at which news stories spread on the internet", "The movement of media products, formats, and content across national borders", "The streaming speed of international video content", "The migration of media workers between countries"],
+      "answer": "B",
+      "explanation": "Global media flow describes the transnational circulation of media content (films, TV shows, music, news), which is largely dominated by US and Western media companies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Al Jazeera, launched in 1996 and based in Qatar, is significant in global media because it:",
+      "options": ["Became the first satellite television network in the world", "Provided a non-Western perspective on international news previously dominated by Western outlets", "Was the first media outlet to broadcast the internet live on television", "Served as the official propaganda outlet of the Arab League"],
+      "answer": "B",
+      "explanation": "Al Jazeera challenged the dominance of Western news outlets (CNN, BBC) in international coverage by providing alternative perspectives, especially on Middle Eastern events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Which of the following countries operates the most restrictive system of media censorship and internet filtering?",
+      "options": ["Sweden", "Brazil", "China", "Canada"],
+      "answer": "C",
+      "explanation": "China's 'Great Firewall' represents one of the world's most extensive systems of internet censorship and media control, blocking foreign platforms and restricting content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Media literacy is best defined as the ability to:",
+      "options": ["Read and write newspaper articles professionally", "Access, analyze, evaluate, create, and act using all forms of media", "Use all available social media platforms effectively", "Avoid all mass media and rely only on personal experience"],
+      "answer": "B",
+      "explanation": "Media literacy encompasses skills for accessing media, critically analyzing messages, evaluating credibility and bias, creating media, and using media responsibly as citizens.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Which of the following is a key question media literate consumers should ask about any media message?",
+      "options": ["Is this message shorter than most other messages on this topic?", "Who created this message and what values or biases might they have?", "How many people have shared or liked this message?", "Was this message produced by a professional journalist?"],
+      "answer": "B",
+      "explanation": "A core media literacy question is identifying who created a message and what values, interests, or perspectives might shape the content they produce.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Misinformation differs from disinformation in that misinformation:",
+      "options": ["Is always spread by government agencies", "Is false information spread without intent to deceive", "Is exclusively found on social media platforms", "Always involves images rather than text"],
+      "answer": "B",
+      "explanation": "Misinformation is false information spread by people who believe it to be true (no intent to deceive), while disinformation is false information spread deliberately to deceive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "The technique of 'lateral reading' for evaluating online sources involves:",
+      "options": ["Reading an article from the bottom to the top for different meaning", "Opening multiple browser tabs to quickly check what other sources say about a source", "Reading all the comments below an article before trusting it", "Comparing the reading level of a source to academic publications"],
+      "answer": "B",
+      "explanation": "Lateral reading — developed by fact-checkers — means leaving a source immediately and checking what other credible sources say about it, rather than judging it only by its own claims.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Which of the following best represents a media literate response to a viral social media claim?",
+      "options": ["Immediately sharing it if it confirms your existing beliefs", "Searching for independent verification of the claim before sharing", "Trusting it because it has thousands of likes and shares", "Ignoring all social media content and only reading print newspapers"],
+      "answer": "B",
+      "explanation": "Media literacy requires verifying claims through credible independent sources before accepting or sharing them, regardless of how widely they have been shared or how plausible they seem.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Marshall McLuhan's phrase 'the medium is the message' means:",
+      "options": ["Content is always more important than delivery format", "The medium of communication itself shapes meaning and social impact", "Television is a superior medium to print", "All media deliver identical messages regardless of format"],
+      "answer": "B",
+      "explanation": "McLuhan argued that the structure and characteristics of a medium transform how people perceive and understand information, independent of the specific content delivered.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The 'penny press' newspapers of the 1830s are historically significant because they:",
+      "options": ["Were the first newspapers to use the telegraph for news gathering", "Made newspapers affordable to the working class for the first time", "Were published entirely by women journalists", "Focused exclusively on political news without advertising"],
+      "answer": "B",
+      "explanation": "The penny press revolution made newspapers cheap enough for ordinary working-class readers, expanding the audience for newspapers dramatically and establishing the advertising-supported model.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "The FCC's primary role in American broadcasting is to:",
+      "options": ["Produce public service announcements for broadcast networks", "License broadcast stations and enforce content and ownership regulations", "Set advertising rates for commercial television and radio", "Operate the national public broadcasting system (PBS and NPR)"],
+      "answer": "B",
+      "explanation": "The FCC regulates broadcast media by issuing licenses to use the public airwaves and enforcing rules on content, ownership limits, and equal time for political candidates.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Cultivation Theory proposes that television's most significant long-term effect on audiences is:",
+      "options": ["Increasing political participation among regular viewers", "Shaping heavy viewers' perceptions of social reality to match television's portrayal", "Reducing attention spans among children and teenagers", "Making audiences more likely to purchase advertised products"],
+      "answer": "B",
+      "explanation": "Cultivation Theory argues that heavy, long-term TV viewing gradually shapes viewers' perceptions of the real world to align with the world as depicted on television.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "The Bechdel Test measures:",
+      "options": ["A film's MPAA rating appropriateness for different audiences", "Whether a film has two women characters who talk to each other about something other than a man", "The proportion of female filmmakers in the industry", "Whether a film passes standards set by feminist critics"],
+      "answer": "B",
+      "explanation": "The Bechdel Test is a minimal standard of female representation in film, checking whether at least two named women characters have a conversation about something other than a man.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Net neutrality refers to the principle that:",
+      "options": ["Internet content must remain politically neutral", "ISPs must treat all internet traffic equally without preferential treatment", "Social media platforms must provide equal visibility to all political views", "Internet users must register their real identities online"],
+      "answer": "B",
+      "explanation": "Net neutrality requires Internet Service Providers to treat all data traffic equally, preventing them from creating 'fast lanes' for paying companies or blocking competitors.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Context collapse on social media means:",
+      "options": ["The loss of historical context in rapidly moving news feeds", "Multiple distinct audiences (friends, family, employers) collapsing into one undifferentiated audience on a platform", "Social media platforms shutting down unexpectedly", "The gradual decline of quality communication norms online"],
+      "answer": "B",
+      "explanation": "Context collapse occurs when content intended for a specific audience reaches multiple different audiences simultaneously, making appropriate audience-specific communication difficult.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "The inverted pyramid structure in journalism places:",
+      "options": ["Opinion and analysis at the top of the article", "The most newsworthy information first, with details following in decreasing importance", "Background and context before the main news", "The journalist's conclusion at the beginning for clarity"],
+      "answer": "B",
+      "explanation": "The inverted pyramid structures news with the most important information (who, what, when, where, why) at the top, with supporting detail below — so readers get key facts even if they read only the first paragraph.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Native advertising is best described as:",
+      "options": ["Advertising created by and for indigenous communities", "Paid promotional content designed to look like editorial content", "Outdoor advertising on billboards and public spaces", "Advertising that targets consumers based on geographic location"],
+      "answer": "B",
+      "explanation": "Native advertising is a form of paid advertising designed to match the look, format, and tone of the surrounding editorial content, blurring the line between advertising and journalism.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Vertical integration in the media industry refers to:",
+      "options": ["A company hiring journalists at various levels of seniority", "A company owning multiple stages of production, distribution, and exhibition", "Media companies expanding into international markets", "Journalists rising from junior to senior editorial roles"],
+      "answer": "B",
+      "explanation": "Vertical integration occurs when one company controls multiple stages of the value chain — for example, owning a film studio, distribution company, and theater chain simultaneously.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The male gaze, as described by Laura Mulvey, refers to:",
+      "options": ["The tendency of male audiences to prefer action films over romance", "Mainstream cinema's tendency to present women from a male heterosexual perspective", "Camera techniques that show characters making direct eye contact with the viewer", "The formal requirement that male actors appear in all major roles"],
+      "answer": "B",
+      "explanation": "Mulvey's influential theory argued that Hollywood cinema is structured around a male heterosexual gaze that objectifies women and positions viewers to identify with male protagonists.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "The First Amendment protects press freedom primarily by:",
+      "options": ["Guaranteeing all journalists government press credentials", "Prohibiting government from restricting speech or the press without compelling justification", "Giving news organizations tax-exempt nonprofit status", "Requiring government transparency and public access to all records"],
+      "answer": "B",
+      "explanation": "The First Amendment prohibits government censorship of speech and press, providing the constitutional foundation for press freedom in the United States.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Glocalization in media refers to:",
+      "options": ["Restricting foreign media to protect domestic culture", "Adapting global media content to fit local cultural tastes and contexts", "Creating media content that appeals equally to all global audiences", "Governments partnering with international media companies"],
+      "answer": "B",
+      "explanation": "Glocalization describes how global media companies adapt their content, products, or formats to resonate with local cultural preferences while maintaining global distribution.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Media literacy requires consumers to evaluate media for which of the following?",
+      "options": ["Entertainment value and production quality only", "Source credibility, framing, omitted information, and potential bias", "Agreement with mainstream consensus positions", "The most recent publication date only"],
+      "answer": "B",
+      "explanation": "Media literacy involves critically evaluating media messages for source credibility, how topics are framed, what information is included or excluded, and what perspectives may be privileged or marginalized.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "The rise of podcasting has disrupted traditional radio broadcasting primarily by:",
+      "options": ["Making broadcast radio illegal in most markets", "Offering on-demand, niche content outside the FCC broadcast licensing system", "Replacing all music content with spoken-word programming", "Requiring listeners to pay monthly subscription fees for radio access"],
+      "answer": "B",
+      "explanation": "Podcasting allows creators to publish audio content directly to listeners on-demand without broadcast licenses, FCC oversight, or traditional radio distribution infrastructure.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Web 2.0 transformed the internet primarily by:",
+      "options": ["Making internet access faster through improved infrastructure", "Enabling user-generated content and interactive two-way communication", "Creating the first commercial websites and online stores", "Introducing the first search engines for finding online information"],
+      "answer": "B",
+      "explanation": "Web 2.0 shifted the internet from one-way content delivery to a participatory platform where users generate, share, remix, and interact with content through social media, wikis, and blogs.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Social media algorithms primarily optimize for:",
+      "options": ["Accuracy and credibility of shared information", "User engagement metrics (likes, shares, time spent)", "Diversity of viewpoints in each user's feed", "Content from verified professional news organizations"],
+      "answer": "B",
+      "explanation": "Social media algorithms are designed to maximize engagement — showing content most likely to generate reactions, shares, and longer viewing time — rather than optimizing for accuracy or diversity.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "The 'mean world syndrome' associated with Cultivation Theory refers to:",
+      "options": ["The tendency of news media to report only negative events", "Heavy TV viewers believing the real world is more dangerous than it actually is", "The desensitization to violence caused by video game exposure", "Social media's tendency to amplify angry and hostile comments"],
+      "answer": "B",
+      "explanation": "Mean world syndrome describes how heavy viewers of crime-heavy television develop the perception that the world is more dangerous and crime-ridden than actual statistics indicate.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Editorial independence in journalism is threatened when:",
+      "options": ["Journalists disagree with each other's assessments of stories", "Owners or advertisers pressure reporters to change or kill stories that harm their interests", "Reporters must have stories reviewed by editors before publication", "News organizations publish opinion columns alongside news reporting"],
+      "answer": "B",
+      "explanation": "Editorial independence is undermined when commercial or political interests — rather than journalistic judgment — determine which stories get published and how they are framed.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Defamation requires a plaintiff to prove which of the following elements?",
+      "options": ["The statement hurt their feelings", "A false statement of fact that was published to others and damaged their reputation", "The statement was unkind or unflattering", "The statement was made by a professional journalist"],
+      "answer": "B",
+      "explanation": "Defamation requires proof of a false statement of fact (not opinion), that was published to third parties, and that caused actual damage to the person's reputation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Cultural imperialism in global media is most associated with the concern that:",
+      "options": ["Domestic media industries cannot compete with foreign competitors economically", "Dominant Western media homogenizes global culture and marginalizes local voices", "International media regulations are too strict for media companies to operate globally", "Citizens prefer foreign media over domestic content"],
+      "answer": "B",
+      "explanation": "Cultural imperialism theory (Schiller, Tomlinson) argues that the global dominance of US/Western media can erode local cultural identities and impose Western values worldwide.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Intersectionality in media analysis examines how:",
+      "options": ["Multiple media platforms can be accessed simultaneously", "Overlapping identities (race, gender, class) interact to shape representation and experience", "News organizations must cover all sides of a controversy", "Advertising targets people based on combinations of demographic factors"],
+      "answer": "B",
+      "explanation": "Intersectionality (Crenshaw) is the framework for understanding how race, gender, class, sexuality, and other identities overlap and interact, creating distinct experiences of privilege and oppression reflected in media.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The attention economy model of social media means that:",
+      "options": ["Social media users must pay for professional attention from influencers", "Platforms generate profit by capturing and selling user attention to advertisers", "Only verified accounts receive significant platform attention", "Social media companies pay users for their time on the platform"],
+      "answer": "B",
+      "explanation": "In the attention economy, platforms capture user attention and sell it to advertisers — making the platform's core product not the content but the users' time and attention.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "The FTC requires influencers to disclose sponsored content primarily because:",
+      "options": ["Influencers earn more money when they disclose paid partnerships", "Consumers have the right to know when content is advertising rather than genuine personal recommendation", "The FTC wants to discourage influencer marketing as harmful to consumers", "Social media platforms require FTC approval before showing paid content"],
+      "answer": "B",
+      "explanation": "FTC disclosure rules protect consumers' right to know when they are being marketed to, preventing deceptive advertising practices when influencers don't reveal paid brand relationships.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "The difference between misinformation and disinformation is that disinformation is:",
+      "options": ["Less harmful because it spreads more slowly", "Deliberately false content intended to deceive or manipulate", "Found only on social media rather than traditional media", "Always created by government actors or foreign states"],
+      "answer": "B",
+      "explanation": "Disinformation is intentionally false content created to deceive, while misinformation is false content spread by people who believe it is true. Intent is the key distinguishing factor.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "SIFT as a media literacy strategy requires users first to:",
+      "options": ["Search for the most popular version of a story", "Stop and resist the impulse to share or react before evaluating the source", "Find the original source publication of a claim", "Trust content from accounts with verified badges"],
+      "answer": "B",
+      "explanation": "The first step of SIFT is to Stop — pause before reacting or sharing to give yourself time to think critically rather than sharing on impulse.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "New York Times v. Sullivan (1964) established that public officials suing for defamation must prove:",
+      "options": ["That the newspaper had a profit motive for publishing the story", "Actual malice — knowledge of falsity or reckless disregard for truth", "That the story was published without any fact-checking", "That at least three people read and believed the false statement"],
+      "answer": "B",
+      "explanation": "The Supreme Court's landmark ruling created the actual malice standard, giving press significant protection when covering public officials by requiring proof of intentional or reckless falsehood.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Media consolidation is most likely to harm public interest by:",
+      "options": ["Making media content more expensive for consumers", "Reducing the diversity of voices, perspectives, and news coverage available to audiences", "Causing media companies to invest less in entertainment programming", "Creating technical incompatibilities between different media platforms"],
+      "answer": "B",
+      "explanation": "When a few corporations own most media, the range of editorial perspectives narrows, local voices may be silenced, and content may serve corporate rather than civic interests.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Lateral reading as a fact-checking strategy involves:",
+      "options": ["Reading an article multiple times to understand it thoroughly", "Checking what other credible sources say about a source rather than judging it solely on its own claims", "Reading only the headline and first paragraph of online articles", "Comparing the article to Wikipedia for background information only"],
+      "answer": "B",
+      "explanation": "Lateral reading — the technique used by professional fact-checkers — involves leaving a website immediately and searching for what others say about the source's credibility.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Media representation of social groups matters for society primarily because:",
+      "options": ["Legal regulations require proportional representation in media", "Repeated representations shape stereotypes, social norms, and how groups are perceived and treated", "Only young children are influenced by media portrayals of social groups", "Diverse representation always improves media ratings and profits"],
+      "answer": "B",
+      "explanation": "Research consistently shows that consistent media stereotypes and representation patterns shape audience beliefs, social norms, career aspirations, and perceptions of different groups.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "The 24-hour news cycle has most significantly changed journalism by:",
+      "options": ["Giving reporters more time for thorough investigation", "Creating pressure to publish quickly, sometimes at the cost of accuracy and depth", "Eliminating the distinction between news and opinion content", "Making newspapers obsolete and replacing them with television news"],
+      "answer": "B",
+      "explanation": "Continuous news cycles pressure reporters to publish immediately, sometimes leading to errors, incomplete information, and prioritizing speed over thoroughness.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "The concept of media as the 'fourth estate' reflects the press's role as:",
+      "options": ["The fourth largest sector in the US economy", "An independent watchdog that monitors and holds government and powerful institutions accountable", "The fourth branch of government with formal regulatory authority", "A fourth educational institution alongside schools, colleges, and universities"],
+      "answer": "B",
+      "explanation": "The 'fourth estate' concept positions a free press as a democratic institution that independently monitors and holds accountable the government, business, and other powerful institutions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Al Jazeera's significance in global media is primarily that it:",
+      "options": ["Was the first television network to broadcast in HD globally", "Offered a non-Western perspective that challenged Western media's dominance in international news", "Became the world's largest social media company", "Was the first network to live-stream major international events online"],
+      "answer": "B",
+      "explanation": "Al Jazeera (1996) provided an Arab/Global South perspective on international events, diversifying the landscape of international news previously dominated by CNN, BBC, and other Western outlets.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Copyright law's 'fair use' doctrine allows limited use of copyrighted material for which purposes?",
+      "options": ["Any use that is not commercially profitable", "Criticism, commentary, education, news reporting, and parody under specified conditions", "Any use by nonprofit organizations", "Any use that credits the original creator in the text"],
+      "answer": "B",
+      "explanation": "Fair use permits limited use of copyrighted material for purposes including criticism, education, news reporting, and parody, evaluated by four factors including purpose, nature, amount, and market effect.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Which of the following best describes a media literate person's response to persuasive advertising?",
+      "options": ["Refusing to view any advertisements in any media", "Identifying the techniques used, evaluating claims critically, and making an informed consumer decision", "Trusting all advertising that features celebrity endorsements", "Only believing advertisements from companies they have purchased from before"],
+      "answer": "B",
+      "explanation": "Media literacy applied to advertising means recognizing persuasive techniques, questioning claims, identifying target audience assumptions, and making an informed rather than impulsive response.",
+      "points": 1
+    }
+  ]
+}

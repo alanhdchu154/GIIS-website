@@ -1,0 +1,1220 @@
+{
+  "slug": "ethics-critical-thinking",
+  "name": "Ethics & Critical Thinking",
+  "nameZh": "伦理学与批判性思维",
+  "credits": 0.5,
+  "department": "Social Studies",
+  "type": "Elective",
+  "description": "An elective course introducing students to moral philosophy, logical reasoning, and applied ethics, developing skills for rigorous ethical analysis of real-world issues.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to Ethics & Moral Philosophy",
+      "titleZh": "伦理学与道德哲学导论",
+      "objectives": "Define ethics and distinguish it from law, religion, and social convention; explain why ethical reasoning matters in personal and public life.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/1-1-what-is-ethics/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 1.1: What is Ethics?",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/moral-philosophy/moral-philosophy-intro/v/intro-to-ethics",
+      "videoNote": "Khan Academy — Introduction to Ethics",
+      "video2Url": "https://www.youtube.com/watch?v=FOoffXFpAlU",
+      "video2Note": "YouTube — Philosophy: Introduction to Moral Philosophy",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/1-2-ethical-theories-overview/",
+      "practiceNote": "Distinguish ethical from legal, religious, and social convention arguments in three provided scenarios",
+      "assignment": "Choose a current social controversy (capital punishment, universal basic income, mandatory vaccination, etc.). Write a 350-word essay distinguishing three different kinds of arguments that might be made about it: a legal argument, a religious or cultural argument, and a philosophical ethical argument. Explain why ethical analysis offers a distinctive form of reasoning that differs from the other two.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Consequentialism & Utilitarianism",
+      "titleZh": "结果主义与功利主义",
+      "objectives": "Explain consequentialism and utilitarian ethics; apply the greatest happiness principle to real ethical dilemmas; evaluate strengths and weaknesses of consequentialist reasoning.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/2-1-utilitarianism/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 2.1: Utilitarianism",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/moral-philosophy/consequentialism/v/consequentialism-and-utilitarianism",
+      "videoNote": "Khan Academy — Consequentialism and Utilitarianism",
+      "video2Url": "https://www.youtube.com/watch?v=-a739VjqdSI",
+      "video2Note": "YouTube — Utilitarianism Explained: Jeremy Bentham and John Stuart Mill",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/2-2-critiques-of-utilitarianism/",
+      "practiceNote": "Apply the utilitarian calculus to the trolley problem and a real public health policy scenario",
+      "assignment": "The classic trolley problem: a trolley is heading toward five people. You can pull a lever to divert it, but it will kill one person on another track. Apply utilitarian reasoning to decide what to do and write a 350-word analysis: what does utilitarianism say, and then raise two serious objections to the utilitarian answer — cases where maximizing total happiness seems to violate individual rights or dignity.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 3,
+      "title": "Deontological Ethics (Kant)",
+      "titleZh": "义务论伦理学（康德）",
+      "objectives": "Explain Kant's categorical imperative and duty-based ethics; apply deontological reasoning to ethical cases; contrast deontology with consequentialism.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/3-1-kantian-ethics/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 3.1: Kantian Ethics",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/moral-philosophy/deontology/v/kant-categorical-imperative",
+      "videoNote": "Khan Academy — Kant's Categorical Imperative",
+      "video2Url": "https://www.youtube.com/watch?v=8bIys6JoEDw",
+      "video2Note": "YouTube — Kant's Deontological Ethics Explained",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/3-2-critiques-of-kantian-ethics/",
+      "practiceNote": "Apply the categorical imperative's two formulations to three ethical dilemmas",
+      "assignment": "Apply Kant's categorical imperative to the following dilemma: a friend asks you to lie to cover up a mistake that will harm only them if revealed. First, apply the Formula of Universal Law ('what if everyone did this?') and then apply the Formula of Humanity ('are you treating anyone merely as a means?'). Write a 350-word analysis of what Kant's theory requires and then evaluate whether you agree with the deontological conclusion.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 4,
+      "title": "Virtue Ethics (Aristotle)",
+      "titleZh": "美德伦理学（亚里士多德）",
+      "objectives": "Explain Aristotle's virtue ethics and the concept of eudaimonia; identify the virtues and the doctrine of the mean; evaluate virtue ethics against other frameworks.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/4-1-virtue-ethics/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 4.1: Virtue Ethics",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/moral-philosophy/virtue-ethics/v/virtue-ethics-and-aristotle",
+      "videoNote": "Khan Academy — Virtue Ethics and Aristotle",
+      "video2Url": "https://www.youtube.com/watch?v=PrvtOWEXDIQ",
+      "video2Note": "YouTube — Aristotle's Virtue Ethics Explained",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/4-2-eudaimonia-and-flourishing/",
+      "practiceNote": "Identify five Aristotelian virtues and for each give examples of the corresponding deficiency and excess",
+      "assignment": "Identify a person you admire for their moral character — it can be a historical figure, a fictional character, or someone you know personally. Write a 400-word virtue ethics analysis: list at least four specific virtues they embody, describe concrete examples that demonstrate each virtue, and explain how their character exemplifies Aristotle's concept of eudaimonia (human flourishing). How does focusing on character rather than rules change how we evaluate their goodness?",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 5,
+      "title": "Moral Relativism vs. Universalism",
+      "titleZh": "道德相对主义与普遍主义",
+      "objectives": "Distinguish moral relativism from moral universalism; evaluate the philosophical arguments for each position; apply the debate to cross-cultural ethical cases.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/1-3-moral-relativism/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 1.3: Moral Relativism",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/moral-philosophy/moral-relativism/v/moral-relativism",
+      "videoNote": "Khan Academy — Moral Relativism vs. Moral Universalism",
+      "video2Url": "https://www.youtube.com/watch?v=9mlPCH9S4Xs",
+      "video2Note": "YouTube — Moral Relativism vs. Moral Absolutism Explained",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/1-4-cultural-relativism/",
+      "practiceNote": "Analyze a cross-cultural ethical practice using both relativist and universalist frameworks",
+      "assignment": "Research female genital cutting (FGC) — a practice accepted in some cultures and condemned in others. Write a 400-word essay applying both frameworks: what would a moral relativist say about judging this practice from outside the culture, and what would a universalist argue? Then state and defend your own position on whether some moral standards apply across all cultures and how we can distinguish cultural diversity from genuine human rights violations.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 6,
+      "title": "Logic & Argument Structure",
+      "titleZh": "逻辑与论证结构",
+      "objectives": "Identify the components of a logical argument (premises, conclusion); distinguish deductive from inductive arguments; evaluate argument validity and soundness.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/5-1-logic-and-arguments/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 5.1: Logic and Arguments",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/logic-induction-and-abduction/deductive-arguments/v/deductive-and-inductive-arguments",
+      "videoNote": "Khan Academy — Deductive and Inductive Arguments",
+      "video2Url": "https://www.youtube.com/watch?v=NKEhdsnKKHs",
+      "video2Note": "YouTube — Critical Thinking: Logic and Argument Structure",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/5-2-validity-and-soundness/",
+      "practiceNote": "Reconstruct five arguments into standard form (premise 1, premise 2, conclusion) and evaluate validity and soundness",
+      "assignment": "Find three arguments on a current public policy issue (from news articles, op-eds, or speeches). Reconstruct each into standard logical form (P1, P2, ∴ C). For each argument, evaluate: (1) Is it deductive or inductive? (2) Is it valid (does the conclusion follow)? (3) Is it sound (are the premises true)? Write a 350-word report on your findings.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 7,
+      "title": "Identifying Logical Fallacies",
+      "titleZh": "识别逻辑谬误",
+      "objectives": "Identify and explain common informal logical fallacies; recognize fallacious reasoning in everyday arguments and media.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/5-3-informal-fallacies/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 5.3: Informal Fallacies",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/logic-induction-and-abduction/fallacies/v/logical-fallacies",
+      "videoNote": "Khan Academy — Logical Fallacies Overview",
+      "video2Url": "https://www.youtube.com/watch?v=8xVl7PZTOIA",
+      "video2Note": "YouTube — 12 Common Logical Fallacies Explained with Examples",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/5-4-identifying-fallacies/",
+      "practiceNote": "Identify the fallacy in each of 10 provided argument examples",
+      "assignment": "Collect five real examples of logical fallacies from media (political speeches, advertisements, social media debates, or news commentary). For each example, (1) quote the fallacious argument, (2) name the fallacy type, (3) explain why the argument is fallacious, and (4) write a corrected version of the argument that makes a valid point without the fallacy. Write 60 words per example.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 8,
+      "title": "Evaluating Evidence & Claims",
+      "titleZh": "评估证据与主张",
+      "objectives": "Apply criteria for evaluating evidence quality; distinguish strong from weak evidence types; identify bias in sources and arguments.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/5-5-evaluating-evidence/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 5.5: Evaluating Evidence",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/evaluating-evidence",
+      "videoNote": "Khan Academy — Evaluating Evidence and Claims",
+      "video2Url": "https://www.youtube.com/watch?v=OEOIKkJJ-yg",
+      "video2Note": "YouTube — How to Evaluate Sources and Evidence Critically",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/5-6-bias-and-credibility/",
+      "practiceNote": "Rank four types of evidence (anecdote, expert opinion, correlation, controlled experiment) from weakest to strongest and justify your ranking",
+      "assignment": "Select a contested scientific or social science claim (e.g., a study about diet and health, social media effects, a policy outcome). Find three sources that address this claim — one academic study, one news report, and one opinion piece. Write a 400-word critical analysis comparing the quality of evidence each uses, identifying any cherry-picking, methodological weaknesses, or funding bias, and reaching a conclusion about what the available evidence actually supports.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 9,
+      "title": "Applied Ethics: Environment",
+      "titleZh": "应用伦理学：环境",
+      "objectives": "Apply major ethical frameworks to environmental dilemmas; evaluate obligations to future generations, nonhuman animals, and ecosystems.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/6-1-environmental-ethics/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 6.1: Environmental Ethics",
+      "videoUrl": "https://www.khanacademy.org/science/biology/ecology/human-impacts-on-the-environment/v/environmental-ethics",
+      "videoNote": "Khan Academy — Environmental Ethics Overview",
+      "video2Url": "https://www.youtube.com/watch?v=O9BBPGWLD4M",
+      "video2Note": "YouTube — Environmental Ethics: Do We Have Obligations to Nature?",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/6-2-climate-change-ethics/",
+      "practiceNote": "Apply three different ethical frameworks (utilitarian, deontological, virtue ethics) to the obligation to reduce one's carbon footprint",
+      "assignment": "Consider the ethical dimensions of climate change. Write a 400-word essay applying THREE different ethical frameworks to the question: 'Do wealthy industrialized nations have a special obligation to fund climate adaptation in developing nations that contributed little to greenhouse gas emissions?' Apply utilitarian reasoning, Kantian duty-based reasoning, and justice/fairness reasoning. Then state and defend your own position.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 10,
+      "title": "Applied Ethics: Technology & AI",
+      "titleZh": "应用伦理学：技术与人工智能",
+      "objectives": "Identify ethical issues arising from emerging technologies including AI, surveillance, genetic engineering, and autonomous systems; evaluate frameworks for tech ethics.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/7-1-technology-ethics/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 7.1: Technology Ethics",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:internet-safety/v/internet-privacy",
+      "videoNote": "Khan Academy — Technology Ethics and AI",
+      "video2Url": "https://www.youtube.com/watch?v=fg0_Vhldz-8",
+      "video2Note": "YouTube — The Ethics of Artificial Intelligence",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/7-2-ai-and-ethics/",
+      "practiceNote": "Evaluate an AI application in criminal justice, hiring, or healthcare for potential ethical violations",
+      "assignment": "Research a real case where an AI system caused harm through bias or error (e.g., facial recognition misidentifying people of color, predictive policing algorithms, AI hiring tools that discriminated). Write a 400-word ethical case study: describe the case, identify what ethical principles were violated (fairness, autonomy, accountability), analyze who was responsible for the harm, and propose specific ethical safeguards that should govern this type of AI application.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 11,
+      "title": "Applied Ethics: Bioethics",
+      "titleZh": "应用伦理学：生命伦理学",
+      "objectives": "Apply ethical frameworks to biomedical issues including informed consent, end-of-life decisions, resource allocation, and genetic technology.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/8-1-bioethics-introduction/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 8.1: Introduction to Bioethics",
+      "videoUrl": "https://www.khanacademy.org/test-prep/mcat/social-sciences-practice/mcat-sociology-practice/v/bioethics",
+      "videoNote": "Khan Academy — Introduction to Bioethics",
+      "video2Url": "https://www.youtube.com/watch?v=7yGCRqCWvsk",
+      "video2Note": "YouTube — Bioethics: The Four Principles Explained",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/8-2-the-four-principles-of-bioethics/",
+      "practiceNote": "Apply the four bioethical principles (autonomy, beneficence, non-maleficence, justice) to a medical case scenario",
+      "assignment": "A terminally ill patient with six months to live requests physician-assisted dying, which is legal in their state. Their family opposes the decision. Apply the four principles of bioethics: autonomy (patient's right to choose), beneficence (doing good), non-maleficence (do no harm), and justice (fair access to this option). Write a 400-word analysis of how each principle applies and what conclusion you reach about the ethical permissibility of honoring the patient's request.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 12,
+      "title": "Social Justice & Global Ethics",
+      "titleZh": "社会正义与全球伦理",
+      "objectives": "Apply theories of justice (Rawls, capabilities approach) to evaluate social and global inequalities; develop and defend positions on distributive justice.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/9-1-social-justice/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 9.1: Social Justice",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/moral-philosophy/rawls/v/john-rawls-a-theory-of-justice",
+      "videoNote": "Khan Academy — John Rawls: A Theory of Justice",
+      "video2Url": "https://www.youtube.com/watch?v=5-JQ17X6VNg",
+      "video2Note": "YouTube — Rawls's Veil of Ignorance and Social Justice",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/9-2-global-justice/",
+      "practiceNote": "Apply Rawls's 'veil of ignorance' thought experiment to evaluate two current social policies",
+      "assignment": "Apply Rawls's 'veil of ignorance' thought experiment to the question of global wealth inequality: if you did not know which country, socioeconomic class, or family you would be born into, what principles of global economic justice would you choose? Write a 400-word essay defending a specific position on whether wealthy nations have obligations to redistribute wealth globally, and what those obligations are.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 13,
+      "title": "Ethical Decision-Making Frameworks",
+      "titleZh": "伦理决策框架",
+      "objectives": "Apply systematic ethical decision-making frameworks to real dilemmas; practice moving from ethical analysis to a defensible, well-reasoned decision.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/10-1-ethical-decision-making/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 10.1: Ethical Decision-Making",
+      "videoUrl": "https://www.khanacademy.org/humanities/philosophy/moral-philosophy/moral-philosophy-intro/v/moral-dilemmas",
+      "videoNote": "Khan Academy — Ethical Dilemmas and Decision-Making",
+      "video2Url": "https://www.youtube.com/watch?v=3nwwKbM_vJc",
+      "video2Note": "YouTube — How to Make Ethical Decisions: A Framework",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/10-2-applying-multiple-frameworks/",
+      "practiceNote": "Walk through a workplace ethical dilemma using a six-step decision-making framework",
+      "assignment": "You discover that a classmate you know well is plagiarizing their final project for a major class. Using the six-step ethical decision-making framework (identify the dilemma, gather facts, identify stakeholders, consider options using multiple ethical frameworks, make a decision, evaluate the decision), write a 400-word step-by-step ethical analysis that reaches a specific, defensible conclusion about what you should do.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 14,
+      "title": "Ethics in Professional Life",
+      "titleZh": "职业生涯中的伦理",
+      "objectives": "Apply ethical principles to professional contexts including journalism, medicine, law, business, and science; evaluate professional codes of ethics.",
+      "readingUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/11-1-professional-ethics/",
+      "readingNote": "Ethics for Life Sciences (Hawaii OER) — Ch 11.1: Professional Ethics",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-theory-topic/market-structures-and-firm-behavior/v/business-ethics",
+      "videoNote": "Khan Academy — Business and Professional Ethics",
+      "video2Url": "https://www.youtube.com/watch?v=lTu4oaYQ0cs",
+      "video2Note": "YouTube — Professional Ethics: Why It Matters",
+      "practiceUrl": "https://pressbooks.oer.hawaii.edu/ethicsforlifesciences/chapter/11-2-codes-of-ethics/",
+      "practiceNote": "Read a professional code of ethics (medical, legal, journalistic, or engineering) and evaluate three specific provisions against the philosophical frameworks studied in this course",
+      "assignment": "Select a career you are considering or find interesting. Research its professional code of ethics (AMA for medicine, SPJ for journalism, APA for psychology, ABA for law, etc.). Write a 400-word analysis: identify three specific ethical obligations unique to this profession, explain which philosophical framework (utilitarian, deontological, virtue ethics) best grounds each obligation, and describe one real documented case where a practitioner violated professional ethics and what the consequences were.",
+      "estimatedHrs": 3.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Ethics is best defined as the branch of philosophy that:",
+      "options": ["Establishes the laws governments must follow", "Studies moral principles about what is right, wrong, good, and bad", "Describes how people actually behave in society", "Determines religious rules for moral conduct"],
+      "answer": "B",
+      "explanation": "Ethics (or moral philosophy) is the philosophical discipline that investigates principles for evaluating actions, character, and outcomes as right, wrong, good, or bad.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "An ethical argument differs from a legal argument in that an ethical argument:",
+      "options": ["Always reaches the same conclusion as legal analysis", "Addresses what is morally right or wrong, not merely what is legally permitted", "Can only be made by trained philosophers and ethicists", "Is based exclusively on religious texts and traditions"],
+      "answer": "B",
+      "explanation": "Legal arguments focus on what statutes and courts permit; ethical arguments ask what is morally right, which may differ — slavery was once legal but is universally condemned as unethical.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Which of the following is NOT one of the three main normative ethical theories?",
+      "options": ["Consequentialism", "Deontology", "Virtue ethics", "Egoism"],
+      "answer": "D",
+      "explanation": "The three major normative ethical theories studied in Western philosophy are consequentialism, deontology, and virtue ethics. Egoism exists as a theory but is not typically grouped as one of the three main frameworks.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Descriptive ethics is different from normative ethics in that descriptive ethics:",
+      "options": ["Prescribes what people ought to do", "Describes how people actually behave morally without evaluating whether it is right", "Applies ethical theory to specific real-world problems", "Studies the meaning of moral language and concepts"],
+      "answer": "B",
+      "explanation": "Descriptive ethics is an empirical enterprise — studying how people actually make moral judgments — while normative ethics evaluates what people ought to do.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "The study of ethics matters in everyday life primarily because:",
+      "options": ["Ethical decisions are made only by philosophers and politicians", "We face moral choices in personal, professional, and civic life that require reasoned justification", "Ethics provides a single correct answer to every moral question", "Laws cover all ethical situations so no additional moral reasoning is needed"],
+      "answer": "B",
+      "explanation": "Ethical reasoning is practically valuable because we face real moral decisions — about honesty, fairness, harm, justice — that require something beyond just following rules or habits.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "The core principle of utilitarianism, as formulated by Jeremy Bentham and John Stuart Mill, is:",
+      "options": ["Act according to your duty regardless of consequences", "Act to maximize overall happiness or well-being for the greatest number", "Act as a person of good character would act in this situation", "Act according to principles that could be universal laws"],
+      "answer": "B",
+      "explanation": "Utilitarianism's greatest happiness principle holds that the right action is the one that produces the greatest total happiness (pleasure, well-being) for the greatest number of people affected.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "The trolley problem is most commonly used in ethics to:",
+      "options": ["Teach students about the history of railway safety regulations", "Explore the tension between utilitarian reasoning and deontological restrictions on harming individuals", "Demonstrate that all ethical dilemmas have clear correct answers", "Show that consequentialism and deontology always reach the same conclusions"],
+      "answer": "B",
+      "explanation": "The trolley problem creates tension between utilitarian reasoning (divert to save five, harming one) and deontological intuitions (using someone as a means to save others is wrong).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The strongest objection to utilitarianism is that it can justify:",
+      "options": ["Giving too much weight to individual rights and autonomy", "Violating individual rights to produce a better collective outcome", "Making moral decisions too difficult by requiring calculation", "Requiring perfect knowledge of all consequences before acting"],
+      "answer": "B",
+      "explanation": "The most powerful objection to utilitarianism is that it can theoretically justify violating individual rights (e.g., torturing an innocent person) if doing so produces greater overall happiness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "John Stuart Mill's 'higher pleasures' modification to Bentham's utilitarianism proposed that:",
+      "options": ["Pleasures of the wealthy should count more in utilitarian calculations", "Intellectual and moral pleasures are qualitatively superior to physical pleasures", "Only the pleasures of adult citizens should be included in the utilitarian calculus", "The intensity of pleasure is the only criterion for measuring its moral worth"],
+      "answer": "B",
+      "explanation": "Mill modified Bentham by arguing that 'higher pleasures' (intellectual, moral, aesthetic) are qualitatively superior to 'lower pleasures' (bodily), not just quantitatively different.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Rule utilitarianism differs from act utilitarianism in that rule utilitarianism judges actions by:",
+      "options": ["The consequences of the specific individual action in question", "Whether the action conforms to a rule that generally maximizes happiness if followed by everyone", "The character of the person performing the action", "Whether a neutral observer would approve of the action"],
+      "answer": "B",
+      "explanation": "Rule utilitarianism asks whether following a general rule (e.g., 'keep your promises') maximizes utility, rather than calculating consequences of each individual act.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Immanuel Kant's categorical imperative is 'categorical' because it:",
+      "options": ["Applies only to specific categories of actions", "Applies unconditionally regardless of consequences or desires", "Is derived from the consequences that different actions produce", "Is based on cultural categories that vary across societies"],
+      "answer": "B",
+      "explanation": "Kant's categorical imperative is unconditional — it applies to all rational beings in all circumstances, regardless of desired outcomes or contingent circumstances.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Kant's Formula of Universal Law states that you should act only according to a maxim that:",
+      "options": ["Produces the best consequences for the greatest number", "You could will to become a universal law for all rational beings", "Conforms to the traditions and customs of your society", "Reflects the virtuous character of an admirable person"],
+      "answer": "B",
+      "explanation": "The Formula of Universal Law: 'Act only according to that maxim whereby you can at the same time will that it should become a universal law.' If universalizing the rule leads to contradiction, the action is wrong.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Kant's Formula of Humanity requires that you:",
+      "options": ["Act to maximize human happiness across all cultures", "Always treat humanity — in yourself and others — as an end, never merely as a means", "Follow the moral rules established by human governments", "Act in the way that reflects human nature and natural law"],
+      "answer": "B",
+      "explanation": "The Formula of Humanity holds that rational beings have inherent dignity and must never be used merely as tools for another person's ends — they must always be treated as ends in themselves.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Deontological ethics focuses primarily on:",
+      "options": ["The consequences and outcomes of actions", "The duties, rules, and intentions behind actions regardless of outcomes", "The character and virtues of the moral agent", "The social and cultural norms of a specific community"],
+      "answer": "B",
+      "explanation": "Deontological (duty-based) ethics evaluates actions based on adherence to moral rules and duties, not on the consequences those actions produce.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "The main criticism of Kantian ethics is that its absolute rules can:",
+      "options": ["Be too flexible, allowing too many exceptions in special circumstances", "Produce morally counterintuitive results by forbidding actions that would prevent great harm", "Only be applied by people with advanced philosophical training", "Conflict with legal obligations in most democratic societies"],
+      "answer": "B",
+      "explanation": "Kant's absolute prohibition on lying, for example, would forbid lying to a murderer asking where your friend is hiding — a conclusion most people find morally problematic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Aristotle's concept of eudaimonia is best translated as:",
+      "options": ["Pleasure and sensory satisfaction", "Human flourishing and the excellent exercise of our distinctively human capacities", "Following the commands of the gods or divine law", "The avoidance of all pain and suffering"],
+      "answer": "B",
+      "explanation": "Eudaimonia is typically translated as 'flourishing' or 'happiness' — but it means living well by excellently exercising the rational capacities that are distinctive to humans.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "The 'doctrine of the mean' in Aristotle's virtue ethics holds that virtues are:",
+      "options": ["Behaviors exactly halfway between two extremes in all cases", "Dispositions to respond appropriately to a situation, avoiding deficiency and excess", "Absolute rules that should be followed regardless of context", "Socially determined by the community's traditions and norms"],
+      "answer": "B",
+      "explanation": "Aristotle's doctrine of the mean holds that virtues are the appropriate middle ground between deficiency and excess — courage lies between cowardice and recklessness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "In Aristotle's virtue ethics, moral character develops through:",
+      "options": ["Studying philosophical texts about virtuous behavior", "Habitual practice and repeated performance of virtuous actions until they become second nature", "Following the commands of moral authority figures", "Calculating which actions produce the most beneficial consequences"],
+      "answer": "B",
+      "explanation": "Aristotle held that virtues are not innate but are developed through habituation — repeated performance of virtuous actions gradually shapes a person's character and dispositions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Virtue ethics asks primarily which of the following question?",
+      "options": ["What action produces the best consequences?", "What kind of person should I be?", "What duty am I obligated to perform?", "What does my society's tradition require of me?"],
+      "answer": "B",
+      "explanation": "Virtue ethics focuses on character rather than rules or consequences — the central question is 'What kind of person should I be and what would a person of good character do?'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "The main criticism of virtue ethics as a practical guide for moral decisions is that:",
+      "options": ["It demands too much sacrifice from moral agents", "It provides insufficient specific guidance for what to do in particular situations", "It applies only to ancient Greek society and not to modern life", "It places too much weight on consequences rather than character"],
+      "answer": "B",
+      "explanation": "Virtue ethics is criticized for being too vague as a decision guide — saying 'be courageous' doesn't clearly tell you what to do in a specific, complex moral dilemma.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Moral relativism is the view that:",
+      "options": ["All moral claims are false and there are no moral truths", "Moral standards vary across cultures and individuals and there are no universal moral truths", "Morality is relative to consequences and nothing else", "Moral questions are always complex and rarely have clear answers"],
+      "answer": "B",
+      "explanation": "Moral relativism holds that what is morally right or wrong is relative to the culture, society, or individual — there are no objective, universal moral standards.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Moral universalism (moral objectivism) holds that:",
+      "options": ["All cultures spontaneously arrive at the same moral conclusions", "Some moral standards apply to all people in all cultures regardless of local customs", "Morality is whatever the majority of people in a society agree on", "Universal morality is discovered through religious revelation alone"],
+      "answer": "B",
+      "explanation": "Moral universalism holds that there are objective moral truths that apply to all humans regardless of cultural background, tradition, or individual preference.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "The strongest argument FOR moral relativism is that it:",
+      "options": ["Provides clear guidance for resolving cross-cultural disputes", "Promotes tolerance and respect for cultural diversity by avoiding ethnocentrism", "Has been proven correct through empirical scientific research", "Allows governments to enforce a single set of moral standards globally"],
+      "answer": "B",
+      "explanation": "Relativism's main appeal is promoting tolerance — if morality is culturally relative, imposing your culture's morality on others becomes unjustified, fostering respect for cultural difference.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "The strongest argument AGAINST moral relativism is that it:",
+      "options": ["Requires too much cultural knowledge to apply in practice", "Cannot coherently condemn atrocities like genocide, slavery, or torture if a culture approves them", "Makes cross-cultural trade and diplomacy impossible", "Leads to selfishness and disregard for others' needs"],
+      "answer": "B",
+      "explanation": "The most powerful objection to relativism is that it logically prevents condemning historical atrocities — if Nazi Germany's culture approved genocide, relativism implies we cannot say it was wrong.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "The Universal Declaration of Human Rights (1948) reflects which approach to morality?",
+      "options": ["Moral relativism — different rights for different cultures", "Moral universalism — a set of rights applying to all humans regardless of culture", "Moral nihilism — rights are fictions that don't objectively exist", "Virtue ethics — rights that reflect the good character of liberal democracies"],
+      "answer": "B",
+      "explanation": "The Universal Declaration of Human Rights is grounded in moral universalism — the belief that all humans share certain rights by virtue of their humanity, regardless of nationality or culture.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "An argument is VALID if:",
+      "options": ["Its premises are all factually true", "Its conclusion follows necessarily from its premises, regardless of whether the premises are true", "Both its premises and conclusion are true", "It uses formal logical notation and symbols"],
+      "answer": "B",
+      "explanation": "Validity is a structural property: if the premises were true, the conclusion would have to be true. An argument can be valid even with false premises.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "An argument is SOUND if it is:",
+      "options": ["Valid and likely to persuade its audience", "Valid AND all of its premises are actually true", "Inductive and supported by statistical evidence", "Rhetorically effective regardless of logical structure"],
+      "answer": "B",
+      "explanation": "A sound argument is both valid (conclusion follows from premises) and has premises that are actually true — soundness guarantees that the conclusion is also true.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "A deductive argument, if valid, provides:",
+      "options": ["Strong but not conclusive support for its conclusion", "Conclusive, certain support for its conclusion if premises are true", "Probabilistic evidence that the conclusion is likely", "Only one possible interpretation of its premises and conclusion"],
+      "answer": "B",
+      "explanation": "In a valid deductive argument, if the premises are true, the conclusion must be true — the support is certain, not merely probable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "An inductive argument, even if strong, provides:",
+      "options": ["Absolute certainty that the conclusion is true", "Probable but not certain support for the conclusion", "No genuine support for any conclusion", "Support only for mathematical or scientific claims"],
+      "answer": "B",
+      "explanation": "Inductive arguments provide probabilistic support — the conclusion is likely, given the premises, but not guaranteed. New evidence could always overturn an inductive conclusion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Which of the following is a valid deductive argument form?",
+      "options": ["All observed swans are white, therefore all swans are white", "If P then Q. P. Therefore Q.", "Most students study hard. Therefore, most students will succeed.", "The more we study ethics, the more virtuous we become."],
+      "answer": "B",
+      "explanation": "Modus ponens ('If P then Q; P; therefore Q') is a valid deductive argument form — if both premises are true, the conclusion must be true.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "An ad hominem fallacy occurs when someone:",
+      "options": ["Attacks the argument by showing its premises are false", "Attacks the character or identity of the arguer rather than the argument itself", "Makes an appeal to human emotions to win an argument", "Uses examples that are too specific to support a general conclusion"],
+      "answer": "B",
+      "explanation": "Ad hominem attacks the person making an argument (their credibility, character, or circumstances) rather than addressing the argument's logic or evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "The straw man fallacy involves:",
+      "options": ["Using weak examples to support a strong conclusion", "Misrepresenting an opponent's argument to make it easier to attack", "Appealing to the authority of a famous person to win a debate", "Assuming the conclusion in one of the premises of an argument"],
+      "answer": "B",
+      "explanation": "The straw man fallacy distorts or exaggerates an opponent's position into a weaker version, then attacks that distorted version rather than the actual argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "A false dilemma (false dichotomy) presents:",
+      "options": ["Two options as the only possibilities when more options exist", "A logical contradiction that cannot be resolved", "An argument with two equally strong but contradictory premises", "Evidence that seems to support two different conclusions"],
+      "answer": "A",
+      "explanation": "The false dilemma presents only two options as if they exhaust all possibilities ('you're either with us or against us'), when in reality more alternatives exist.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Post hoc ergo propter hoc is the fallacy of assuming:",
+      "options": ["That one thing is the cause of another because they often occur together", "That because B came after A, A caused B", "That what works for most people will work for everyone", "That current conditions will continue into the future"],
+      "answer": "B",
+      "explanation": "Post hoc ergo propter hoc ('after this, therefore because of this') mistakenly infers causation from temporal sequence — because B followed A, A must have caused B.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "An appeal to authority is fallacious when:",
+      "options": ["Any expert is cited to support a claim", "The cited authority is not an expert in the relevant field", "Scientific consensus is used to support a scientific claim", "A peer-reviewed study is cited to support an empirical claim"],
+      "answer": "B",
+      "explanation": "Appealing to authority becomes fallacious when the authority cited has no special expertise in the relevant domain — a celebrity endorsing a vaccine or a physicist endorsing economic policy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "In evaluating evidence, anecdotal evidence is generally considered weaker than statistical evidence because:",
+      "options": ["Statistics are always collected by more reliable researchers than personal stories", "A single case cannot reliably represent a larger pattern across many cases", "Statistics are easier to understand than personal narratives", "Anecdotes are always intentionally fabricated to mislead"],
+      "answer": "B",
+      "explanation": "Anecdotal evidence (individual stories or cases) cannot reliably generalize — one person's experience may be exceptional and not representative of the broader pattern.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Confirmation bias in evaluating evidence is the tendency to:",
+      "options": ["Accept only evidence from sources that require confirmation from multiple experts", "Seek, interpret, and remember information that confirms existing beliefs while dismissing contradicting evidence", "Always confirm the majority view before forming a personal opinion", "Wait for confirmation from government authorities before accepting any claim"],
+      "answer": "B",
+      "explanation": "Confirmation bias is the cognitive tendency to favor evidence that supports pre-existing beliefs and to discount, avoid, or reinterpret evidence that contradicts them.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Correlation does not imply causation means that:",
+      "options": ["Correlated variables can never be causally related", "Two variables that consistently vary together may not have a cause-and-effect relationship", "Only randomized controlled experiments can identify correlated variables", "Statistical analysis cannot reveal relationships between variables"],
+      "answer": "B",
+      "explanation": "Correlation shows that two variables move together but does not prove that one causes the other — a third variable may cause both, or the correlation may be coincidental.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Peer review in academic research is important because it:",
+      "options": ["Guarantees that all published research is correct", "Subjects research to evaluation by independent experts before publication", "Ensures all research aligns with existing scientific consensus", "Prevents research that contradicts popular beliefs from being published"],
+      "answer": "B",
+      "explanation": "Peer review requires that research be evaluated by independent subject matter experts for methodological rigor and validity before publication, providing a quality check on academic claims.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Cherry-picking evidence refers to the practice of:",
+      "options": ["Selecting the freshest and most recent data for analysis", "Selectively presenting only evidence that supports one's conclusion while ignoring contradicting evidence", "Using agricultural examples to illustrate abstract scientific principles", "Choosing the strongest evidence to lead with in an academic paper"],
+      "answer": "B",
+      "explanation": "Cherry-picking involves selectively presenting evidence that supports a predetermined conclusion while omitting or dismissing evidence that contradicts it — a form of epistemic dishonesty.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Anthropocentrism in environmental ethics is the view that:",
+      "options": ["Humans must return to nature and live simply", "Human beings have inherent worth superior to nonhuman nature", "Environmental protection should be the highest moral priority", "All species have equal moral status to humans"],
+      "answer": "B",
+      "explanation": "Anthropocentrism places humans at the moral center — only human interests have inherent moral value, and nature's value is instrumental (useful to humans).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "The principle of intergenerational equity in environmental ethics requires that:",
+      "options": ["Environmental policies be made equally by all generations currently living", "Current generations meet their needs without compromising future generations' ability to meet theirs", "Each generation should conserve exactly half of all natural resources for the next generation", "Younger generations have more moral responsibility for environmental protection than older ones"],
+      "answer": "B",
+      "explanation": "Intergenerational equity (foundational to sustainable development) holds that present generations have an obligation not to deplete or degrade resources in ways that compromise future generations' wellbeing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "A deep ecologist would argue that nature has:",
+      "options": ["Value only insofar as it serves human economic needs", "Intrinsic value independent of its utility to humans", "Value determined solely by scientific assessment of biodiversity", "Value only when protected through international legal agreements"],
+      "answer": "B",
+      "explanation": "Deep ecology holds that all living beings and ecosystems have intrinsic value — inherent worth independent of their usefulness to humans.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Peter Singer's argument for extending moral consideration to animals rests primarily on:",
+      "options": ["The legal rights of animals under international law", "Animals' capacity to suffer, which he argues is morally relevant regardless of species", "The economic costs of industrial animal agriculture", "Religious teachings about compassion for all living creatures"],
+      "answer": "B",
+      "explanation": "Singer's utilitarian argument is that the capacity to suffer — not species membership — determines moral consideration; causing unnecessary animal suffering is therefore morally wrong.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "The precautionary principle in environmental ethics holds that when there is scientific uncertainty about serious environmental harm:",
+      "options": ["No action should be taken until scientists reach a firm consensus", "Preventive measures should be taken even before full scientific certainty is achieved", "Only actions with proven benefits should be implemented", "Economic growth must be prioritized over environmental protection"],
+      "answer": "B",
+      "explanation": "The precautionary principle holds that when actions risk serious or irreversible environmental harm, precautionary measures should be taken even if some scientific uncertainty remains.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Algorithmic bias in AI is ethically problematic primarily because it:",
+      "options": ["Makes AI systems slower and less accurate in their predictions", "Systematically disadvantages certain groups in consequential decisions like hiring, lending, and criminal justice", "Violates software licensing agreements and intellectual property laws", "Makes AI results difficult for programmers to understand and interpret"],
+      "answer": "B",
+      "explanation": "Algorithmic bias perpetuates and often amplifies historical discrimination in high-stakes domains, disadvantaging already marginalized groups through seemingly 'neutral' technical systems.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "The 'trolley problem for autonomous vehicles' involves deciding whether self-driving cars should:",
+      "options": ["Always follow traffic laws regardless of whether a human driver would", "Be programmed to make ethical tradeoffs about whose life to prioritize in unavoidable accident scenarios", "Be prohibited from public roads until they achieve perfect safety records", "Prioritize the financial interests of the vehicle manufacturer"],
+      "answer": "B",
+      "explanation": "The autonomous vehicle trolley problem asks who should decide — and how — what ethical principles govern an AI's choices when an accident is unavoidable and lives are at stake.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "The ethical principle of transparency requires AI systems to:",
+      "options": ["Share all source code and training data publicly", "Be explainable enough that affected parties can understand and contest decisions made about them", "Only be deployed by government entities with public accountability", "Show all data collected about users to those users on request"],
+      "answer": "B",
+      "explanation": "AI transparency requires that systems making consequential decisions be explainable — people affected should be able to understand the basis for decisions and challenge them meaningfully.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "The ethical concept of data ownership refers to the principle that:",
+      "options": ["All data is owned by the government on behalf of citizens", "Individuals should have control over personal data generated by and about them", "Data collected by private companies is their exclusive intellectual property", "Data should be freely shared to promote innovation and economic growth"],
+      "answer": "B",
+      "explanation": "Data ownership as an ethical principle holds that individuals should have meaningful rights to access, correct, and control personal data generated by their activities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "The ethical principle of non-maleficence, applied to AI, requires that developers:",
+      "options": ["Ensure AI systems are always more accurate than human alternatives", "Avoid deploying AI systems that could cause foreseeable harm to users or third parties", "Prioritize AI development speed over rigorous safety testing", "Only develop AI applications that generate profit for developers"],
+      "answer": "B",
+      "explanation": "Non-maleficence (do no harm) in AI ethics requires that developers anticipate, identify, and mitigate foreseeable harms before deployment — especially in high-stakes applications.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Informed consent in medical ethics requires that patients:",
+      "options": ["Agree to any treatment their doctor recommends", "Receive complete information about risks and alternatives and voluntarily agree to treatment free from coercion", "Sign consent forms prepared by the hospital's legal department", "Defer all medical decisions to family members if they are ill"],
+      "answer": "B",
+      "explanation": "Informed consent requires disclosure of material information (diagnosis, treatment options, risks), patient comprehension of that information, and voluntary agreement free from coercion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The four principles of bioethics developed by Beauchamp and Childress are:",
+      "options": ["Justice, equality, freedom, and dignity", "Autonomy, beneficence, non-maleficence, and justice", "Truth, compassion, respect, and accountability", "Rights, duties, care, and virtue"],
+      "answer": "B",
+      "explanation": "Beauchamp and Childress's 'principlism' framework identifies four core bioethical principles: respect for autonomy, beneficence (do good), non-maleficence (do no harm), and justice (fair distribution).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "The bioethical principle of beneficence requires medical practitioners to:",
+      "options": ["Do nothing that could cause any harm to the patient", "Act in the patient's best interest and promote their health and wellbeing", "Follow the patient's wishes even when they conflict with medical best practice", "Distribute healthcare resources equally among all patients"],
+      "answer": "B",
+      "explanation": "Beneficence is the duty to act in the patient's best interest and promote their well-being — actively doing good rather than merely avoiding harm.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Futile treatment in medical ethics refers to treatment that:",
+      "options": ["Is too expensive for most patients to afford", "Provides no reasonable hope of meaningful benefit to the patient", "Is not covered by standard health insurance plans", "Is considered experimental and not yet approved for standard use"],
+      "answer": "B",
+      "explanation": "Medical futility refers to interventions that have no reasonable chance of providing meaningful benefit — continuing them raises questions of justice (resources), autonomy, and non-maleficence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "The ethical debate over physician-assisted dying centers primarily on the tension between:",
+      "options": ["Patient autonomy and state interests in regulating the medical profession", "Patient autonomy and the physician's duty of beneficence and non-maleficence", "Medical costs and the healthcare system's need for efficiency", "Religious freedom and secular bioethical principles"],
+      "answer": "B",
+      "explanation": "Physician-assisted dying debates pit patient autonomy (the right to choose death) against the physician's traditional duties of beneficence (doing good) and non-maleficence (avoiding harm).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "John Rawls's 'veil of ignorance' thought experiment asks us to:",
+      "options": ["Ignore all facts about a moral situation to make objective judgments", "Design society's basic structure without knowing our own position, talents, or circumstances in it", "Make moral judgments while pretending to be from a different culture", "Ignore the consequences of our decisions to focus only on duties"],
+      "answer": "B",
+      "explanation": "The veil of ignorance is a hypothetical device: if we didn't know our place in society (race, class, gender, ability), we would design fair institutions that protect everyone — including the least advantaged.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Rawls's 'difference principle' holds that social and economic inequalities are just only if:",
+      "options": ["All citizens have equal wealth and social status", "They benefit the least advantaged members of society as much as possible", "They result from free market competition without government interference", "All citizens had equal opportunity to compete for better positions"],
+      "answer": "B",
+      "explanation": "The difference principle permits inequalities only when they are arranged to maximally benefit those who are worst off — justifying inequality only when it raises everyone's floor.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Martha Nussbaum's capabilities approach to justice focuses on ensuring that all people have:",
+      "options": ["Equal income and wealth to enable basic consumption", "Access to the central capabilities (health, education, political participation, etc.) necessary for a dignified human life", "Free market opportunities to pursue any economic goals they choose", "Legal equality without substantive attention to material inequalities"],
+      "answer": "B",
+      "explanation": "Nussbaum's capabilities approach argues that justice requires ensuring all people can achieve a minimum threshold of 10 central human capabilities — not just formal rights but real practical ability to live well.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Robert Nozick's libertarian critique of Rawls argues that:",
+      "options": ["Rawls doesn't go far enough in redistributing wealth to the poor", "Forced redistribution of legitimately acquired holdings violates individual rights regardless of the outcome", "Justice requires everyone to have exactly equal shares of wealth", "The government should determine the just distribution of all social goods"],
+      "answer": "B",
+      "explanation": "Nozick's entitlement theory holds that if holdings were acquired justly and transferred voluntarily, redistribution through taxation violates individual property rights — even if it would reduce inequality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Global justice refers to the question of:",
+      "options": ["Whether international courts can prosecute war crimes effectively", "Whether wealthy nations and global institutions have obligations of justice to people in poor countries", "Whether international trade agreements are fairly negotiated", "Whether global media fairly represents all nations"],
+      "answer": "B",
+      "explanation": "Global justice asks whether our moral obligations of fairness — to reduce poverty, respect rights, address climate change — extend beyond national borders to people in other countries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "The first step in most systematic ethical decision-making frameworks is to:",
+      "options": ["Select the ethical theory that supports your preferred conclusion", "Clearly identify and define the ethical dilemma or problem", "Immediately act on your initial moral intuition", "Consult the relevant legal statutes before anything else"],
+      "answer": "B",
+      "explanation": "Ethical decision-making frameworks consistently begin with problem identification — clearly defining the ethical issue, who is affected, and what is at stake.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Why is identifying stakeholders important in ethical decision-making?",
+      "options": ["To determine who has legal liability for the outcome", "To ensure all parties who will be affected by the decision are considered", "To find out who has the most power to influence the outcome", "To identify who should make the final decision"],
+      "answer": "B",
+      "explanation": "Stakeholder identification ensures that the interests and rights of all parties affected by a decision are considered — not just the decision-maker's interests or the most powerful parties.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Using multiple ethical frameworks (utilitarian, deontological, virtue) in a decision is useful because:",
+      "options": ["One framework is always clearly correct for any given situation", "Different frameworks highlight different morally relevant considerations, providing a more complete analysis", "It allows decision-makers to choose whichever conclusion they prefer", "It satisfies legal requirements for ethical decision documentation"],
+      "answer": "B",
+      "explanation": "Applying multiple frameworks reveals different morally relevant dimensions of a situation — consequences, duties, character — producing more comprehensive analysis than any single framework alone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Moral intuition in ethical decision-making should be:",
+      "options": ["Always followed without question as the truest moral guide", "Always overridden by theoretical ethical reasoning", "Taken seriously as data but subjected to critical reflection and refinement", "Ignored entirely in favor of systematic theoretical analysis"],
+      "answer": "C",
+      "explanation": "Strong moral intuitions represent accumulated moral wisdom and should be taken seriously as evidence; but intuitions can also be mistaken, so they need critical reflection and dialogue to refine them.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "The final step of most ethical decision-making frameworks involves:",
+      "options": ["Ensuring the decision maximizes financial benefit for all parties", "Evaluating the decision — assessing whether the outcome was right and what you learned", "Documenting the decision for legal protection", "Getting approval from a supervisor before implementing the decision"],
+      "answer": "B",
+      "explanation": "Ethical decision-making frameworks close with evaluation — reflecting on outcomes, whether the decision was well-reasoned, what you would do differently, and what moral lessons the experience offers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Professional ethics refers to:",
+      "options": ["The personal moral beliefs of individuals in a profession", "The special ethical obligations and standards that apply to practitioners of a specific profession", "Government regulations that all businesses must follow", "The informal social norms of a workplace culture"],
+      "answer": "B",
+      "explanation": "Professional ethics encompasses the specific moral duties, codes of conduct, and ethical standards that govern the behavior of practitioners in a defined field or profession.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "The physician's duty of confidentiality is grounded primarily in the ethical principle of:",
+      "options": ["Beneficence — protecting patients' health interests", "Respect for autonomy — protecting the patient's right to control their own private information", "Justice — ensuring equal treatment for all patients", "Non-maleficence — preventing harm to third parties who might misuse the information"],
+      "answer": "B",
+      "explanation": "Medical confidentiality is primarily grounded in patient autonomy — the right to control sensitive personal information — though it also serves beneficence by enabling honest communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Whistleblowing in a professional context involves:",
+      "options": ["Reporting a competitor's illegal behavior to regulatory authorities", "Disclosing organizational misconduct to authorities or the public, often at personal risk", "Using media contacts to resolve internal workplace disputes", "Blowing the final whistle on a failed negotiation between parties"],
+      "answer": "B",
+      "explanation": "Whistleblowing involves disclosing internal organizational wrongdoing (fraud, safety violations, ethical misconduct) to external authorities or the public, often at significant personal professional risk.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Conflicts of interest in professional life occur when:",
+      "options": ["Two colleagues in the same profession disagree about ethical standards", "A personal interest could compromise or appear to compromise the professional's objective judgment", "A professional is required to work for two competing clients simultaneously", "Professional standards conflict with current government regulations"],
+      "answer": "B",
+      "explanation": "A conflict of interest exists when a professional's personal interests (financial, personal relationships) could influence — or appear to influence — their professional judgment and duties.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "The fiduciary duty in professional ethics requires professionals to:",
+      "options": ["Maximize their own financial compensation for services rendered", "Act primarily in the client's or patient's best interest, placing their interests above the professional's own", "Follow all regulations even when they conflict with client interests", "Disclose all professional communications to regulatory bodies"],
+      "answer": "B",
+      "explanation": "A fiduciary duty is the highest legal and ethical standard of care — requiring the professional (lawyer, doctor, financial advisor) to act exclusively in the client's best interest.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "The fundamental question that normative ethics attempts to answer is:",
+      "options": ["How do people actually behave in moral situations?", "What actions, practices, or values are morally right or good?", "What is the historical origin of our moral beliefs?", "How can we scientifically measure the morality of actions?"],
+      "answer": "B",
+      "explanation": "Normative ethics is prescriptive — it asks what we ought to do, what is good, and what principles should guide moral decisions.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Utilitarianism evaluates the morality of an action by:",
+      "options": ["The intentions of the person performing the action", "The overall consequences — whether it maximizes happiness and minimizes suffering", "Whether the action conforms to universal moral duties", "The character of the person who performs the action"],
+      "answer": "B",
+      "explanation": "Utilitarianism is a consequentialist theory — the right action is whichever produces the greatest total well-being for all affected parties.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Kant's categorical imperative differs from utilitarianism primarily in that it:",
+      "options": ["Allows for exceptions when consequences are severe enough", "Provides absolute duties that apply regardless of consequences", "Requires considering the happiness of all affected parties", "Bases morality on the virtuous character of the moral agent"],
+      "answer": "B",
+      "explanation": "Kant's ethics is deontological — moral duties apply categorically and unconditionally, regardless of whether following them produces better or worse consequences.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Aristotle's concept of eudaimonia refers to:",
+      "options": ["The maximum amount of pleasure a person can experience", "Human flourishing through the excellent exercise of our characteristic rational capacities", "Complete freedom from all suffering and pain", "Fulfilling all of one's social and family obligations"],
+      "answer": "B",
+      "explanation": "Eudaimonia is the excellent, flourishing human life achieved by developing and exercising virtues — the qualities that enable us to live and act well as rational, social beings.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "The strongest critique of moral relativism is that it:",
+      "options": ["Makes cross-cultural communication impossible", "Cannot coherently condemn clear atrocities if the perpetrating culture approves of them", "Is too tolerant of cultural differences that should be accepted", "Requires perfect knowledge of all cultural norms before making judgments"],
+      "answer": "B",
+      "explanation": "Moral relativism logically prevents condemning genocide, torture, or slavery if the perpetrating society approves — a conclusion most find morally unacceptable.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A valid argument is one in which:",
+      "options": ["All premises are factually true", "The conclusion necessarily follows from the premises", "Both premises and conclusion are true", "The argument is rhetorically convincing to its audience"],
+      "answer": "B",
+      "explanation": "Validity is purely structural: if the premises were true, the conclusion would have to be true. An argument can be valid even with false premises.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "The ad hominem fallacy attacks the ______ rather than the argument.",
+      "options": ["Evidence used in the argument", "Person making the argument", "Logic of the argument's structure", "Conclusion of the argument"],
+      "answer": "B",
+      "explanation": "Ad hominem ('against the person') attempts to refute an argument by attacking the character, identity, or circumstances of the arguer rather than addressing the argument's actual merits.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Confirmation bias leads people to evaluate evidence:",
+      "options": ["More carefully when it supports their prior beliefs", "Favorably when it confirms existing beliefs and dismissively when it challenges them", "More critically when it comes from reputable academic sources", "Consistently regardless of whether it supports or challenges their beliefs"],
+      "answer": "B",
+      "explanation": "Confirmation bias systematically distorts evidence evaluation — people accept confirming evidence uncritically while subjecting disconfirming evidence to excessive scrutiny.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Kant's Formula of Humanity requires that we never:",
+      "options": ["Tell a lie under any circumstances", "Use other people merely as tools or instruments for our own ends", "Act in ways that maximize collective welfare", "Break social contracts without the consent of all parties"],
+      "answer": "B",
+      "explanation": "The Formula of Humanity requires treating every rational being as an end in themselves — never merely as a means to our own purposes — because rational beings have inherent dignity.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "The doctrine of the mean in virtue ethics means that virtues are:",
+      "options": ["Exactly the average of what most people do in society", "Appropriate dispositions that avoid both excess and deficiency in character and action", "Moderate, cautious positions that avoid extreme claims", "Behaviors that produce the most average amount of happiness"],
+      "answer": "B",
+      "explanation": "Aristotle's mean is not a mathematical average but an appropriate response — courage, for example, lies between the extremes of cowardice (deficiency) and recklessness (excess).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The Universal Declaration of Human Rights reflects which moral approach?",
+      "options": ["Moral relativism — different standards for different cultures", "Moral universalism — rights that apply to all humans everywhere", "Virtue ethics — rights earned through virtuous conduct", "Rule utilitarianism — rights that generally maximize welfare"],
+      "answer": "B",
+      "explanation": "The UDHR is grounded in moral universalism — the belief that all humans possess certain rights by virtue of their humanity, which no cultural or state authority can legitimately override.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Post hoc ergo propter hoc is the fallacy of assuming:",
+      "options": ["What most people believe must be true", "Because B came after A, A must have caused B", "One's position must be correct because one has held it for a long time", "That the burden of proof rests with those challenging a traditional view"],
+      "answer": "B",
+      "explanation": "Post hoc ('after this, therefore because of this') commits the error of inferring causation from mere temporal sequence — the fact that B followed A does not prove A caused B.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Anecdotal evidence is considered weak primarily because:",
+      "options": ["It is usually fabricated rather than based on real experience", "A single case cannot reliably generalize to a broader population", "It is emotional rather than rational in its appeal", "It is not accepted by academic journals in any discipline"],
+      "answer": "B",
+      "explanation": "Individual anecdotes may be true but cannot reliably represent the full range of cases — an exceptional personal experience may be atypical rather than representative of the broader pattern.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "The straw man fallacy involves misrepresenting an opponent's position to:",
+      "options": ["Make it more nuanced than it actually is", "Make it easier to attack than the actual position", "Show that the opponent has no consistent position", "Demonstrate that the opponent is arguing in bad faith"],
+      "answer": "B",
+      "explanation": "The straw man replaces an opponent's actual position with a weakened or distorted version, then attacks that weaker version — creating the illusion of refuting the original argument.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Mill's modification to Bentham's utilitarianism distinguished between 'higher' and 'lower' pleasures because he argued that:",
+      "options": ["Rich people's pleasures should count more in utilitarian calculations", "Intellectual and moral pleasures are qualitatively superior to physical pleasures", "Only pleasures that society approves should be counted", "The intensity of pleasure is the only morally relevant factor"],
+      "answer": "B",
+      "explanation": "Mill argued that not all pleasures are equal in quality — intellectual, artistic, and moral pleasures are qualitatively superior to mere physical satisfaction, even at lower intensity.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Rule utilitarianism differs from act utilitarianism by evaluating actions based on:",
+      "options": ["The actual consequences of the specific action", "Whether the action conforms to a rule that generally maximizes utility if universally followed", "The character and intentions of the person performing the action", "The majority opinion about whether the action is good"],
+      "answer": "B",
+      "explanation": "Rule utilitarianism judges actions by whether they follow rules (keep promises, don't lie) that generally produce better outcomes when followed universally — avoiding some objections to act utilitarianism.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Kant's Formula of Universal Law tests the morality of an action by asking:",
+      "options": ["Does this action produce more good than harm for everyone affected?", "Could I will that everyone act on the same maxim without contradiction?", "Would a virtuous person of good character perform this action?", "Does this action violate any existing laws or social norms?"],
+      "answer": "B",
+      "explanation": "The Formula of Universal Law: universalize the maxim behind your action — if doing so leads to contradiction or a world no rational being could want, the action is wrong.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Virtue ethics focuses on the development of character over time primarily because:",
+      "options": ["Rules and consequences are never reliable guides to action", "Being a good person with good character naturally leads to right actions across diverse situations", "Character determines legal standing in civil and criminal courts", "Virtuous character is inherited rather than developed"],
+      "answer": "B",
+      "explanation": "Virtue ethics holds that rules and calculations are insufficient — a person of good character (courageous, honest, just) will perceive what situations require and respond appropriately.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "The environmental ethics concept of intrinsic value holds that nature:",
+      "options": ["Has value only as a resource for human economic activity", "Has value in itself, independent of its usefulness to humans", "Has value determined by how much money humans pay for it", "Has equal moral status to all human individuals"],
+      "answer": "B",
+      "explanation": "Intrinsic value means something is valuable in and of itself — not merely because of its instrumental usefulness to humans. Assigning intrinsic value to nature grounds stronger environmental obligations.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Peter Singer's utilitarian argument for animal rights rests on the claim that:",
+      "options": ["Animals have the same legal rights as humans in most countries", "The capacity to suffer — not species membership — is the morally relevant criterion for moral consideration", "All living organisms deserve equal moral protection regardless of sentience", "Animal welfare should be considered only when it does not conflict with human interests"],
+      "answer": "B",
+      "explanation": "Singer argues speciesism is morally arbitrary — if suffering matters morally, then animal suffering should matter equally to equivalent human suffering.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "The four principles of bioethics (Beauchamp and Childress) most directly conflict when:",
+      "options": ["A patient from a different cultural background receives treatment", "Respecting patient autonomy conflicts with the physician's duty to prevent harm", "Two different physicians have different treatment recommendations", "Insurance companies deny coverage for a recommended treatment"],
+      "answer": "B",
+      "explanation": "The classic tension in bioethics is between autonomy (patient's right to choose) and non-maleficence/beneficence (physician's duty not to harm and to help) — most evident in cases like refusal of life-saving treatment.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Rawls's veil of ignorance is intended to produce:",
+      "options": ["Decision-makers who are ignorant of all facts about a situation", "Principles of justice that are fair because they are chosen without self-interested advantage", "A society where all individuals are literally equal in wealth and opportunity", "Ethical judgments free from any influence of emotion or intuition"],
+      "answer": "B",
+      "explanation": "The veil of ignorance is a fairness device: principles chosen without knowing your own social position cannot favor your group over others — ensuring fairness by removing self-interested bias.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Algorithmic bias in AI is most ethically concerning because it:",
+      "options": ["Makes AI systems less profitable for the companies that develop them", "Can systematically disadvantage already marginalized groups in consequential, high-stakes decisions", "Reveals that AI can never be truly objective in any application", "Requires expensive retraining that most companies cannot afford"],
+      "answer": "B",
+      "explanation": "Algorithmic bias is a justice issue — it reproduces and often amplifies existing social inequities in hiring, lending, criminal sentencing, and other high-stakes domains where bias causes serious real-world harm.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Applying multiple ethical frameworks to a moral dilemma is valuable because:",
+      "options": ["It allows decision-makers to select whichever conclusion they prefer", "Different frameworks highlight different morally relevant considerations that a single framework might miss", "It always produces a clear consensus answer that all reasonable people will accept", "It satisfies legal requirements for ethical decision documentation"],
+      "answer": "B",
+      "explanation": "Multi-framework analysis reveals that utilitarian, deontological, and virtue considerations each contribute something different — together they produce more complete moral analysis than any single lens.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Professional whistleblowing is ethically difficult primarily because it:",
+      "options": ["Is always illegal under corporate confidentiality agreements", "Requires risking personal professional harm to serve a public good", "Violates the whistle-blower's duty of loyalty to their employer", "Is only justified when the wrong being reported causes direct physical harm"],
+      "answer": "B",
+      "explanation": "Whistleblowing creates genuine ethical tension between loyalty to colleagues and employer, professional confidentiality, and the obligation to prevent or disclose wrongdoing — at significant personal risk.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "The precautionary principle in environmental ethics is most applicable when:",
+      "options": ["Scientific research on an issue has produced a clear, definitive consensus", "There is scientific uncertainty but evidence of potential serious or irreversible harm", "Proposed actions have well-documented track records of safety and efficacy", "Economic benefits of an action clearly outweigh potential environmental costs"],
+      "answer": "B",
+      "explanation": "The precautionary principle calls for preventive action in the face of scientific uncertainty about serious harm — particularly for irreversible environmental damage where we cannot undo mistakes.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "The correlation-causation distinction is important in ethical reasoning because:",
+      "options": ["Correlations are always statistically stronger than causal relationships", "Mistaking correlation for causation can lead to ineffective or harmful policy interventions", "Only causal evidence is admissible in ethical arguments", "Correlational research is conducted by less credible researchers"],
+      "answer": "B",
+      "explanation": "Misidentifying a correlation as causal leads to wrong solutions — targeting the symptom rather than the cause, wasting resources, and potentially causing harm through misguided intervention.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "The false dilemma fallacy is problematic in ethical reasoning because it:",
+      "options": ["Creates too many options for decision-makers to evaluate clearly", "Artificially narrows the choice space, preventing consideration of better alternatives", "Combines two different ethical theories inappropriately", "Presents only the most extreme positions on both sides of an issue"],
+      "answer": "B",
+      "explanation": "False dilemmas constrain reasoning by presenting only two options when more exist — leading decision-makers to choose between bad options when a better alternative is available.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Rawls's difference principle justifies economic inequality only when inequalities:",
+      "options": ["Result from individual talent and hard work rather than inheritance", "Benefit the least advantaged members of society as much as possible", "Are the result of free market competition without government interference", "Are consistent with equal opportunity for all citizens to compete"],
+      "answer": "B",
+      "explanation": "The difference principle allows departures from equality only when those inequalities genuinely benefit the least advantaged — making the worst-off members as well-off as possible.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "The fiduciary duty in professional ethics is most directly grounded in which ethical principle?",
+      "options": ["Utilitarian maximization of the professional's own welfare", "Unconditional prioritization of the client's interests over the professional's own interests", "Equal treatment of all clients regardless of their individual needs", "Following legal regulations even when they conflict with client interests"],
+      "answer": "B",
+      "explanation": "Fiduciary duty — the highest standard of professional care — requires placing the client's interests first, unconditionally, above the professional's own financial or personal interests.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Moral intuitions are best treated in ethical reasoning as:",
+      "options": ["Absolute moral truths that override all theoretical arguments", "Significant data points that should be taken seriously but subjected to critical reflection", "Irrelevant subjective feelings that ethical reasoning must eliminate", "Direct windows into objective moral truth that require no further analysis"],
+      "answer": "B",
+      "explanation": "Strong moral intuitions carry evidential weight — they reflect accumulated moral experience — but they can also reflect bias, culture, or limited perspective, requiring critical reflection.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Nozick's libertarian challenge to redistributive justice argues that:",
+      "options": ["Redistribution should be much more aggressive than Rawls recommends", "Taxing legitimately acquired holdings to redistribute wealth violates individual property rights", "Government has no role in ensuring any form of social welfare", "Free markets always produce just distributions without any need for regulation"],
+      "answer": "B",
+      "explanation": "Nozick's entitlement theory holds that if holdings were acquired and transferred justly, government redistribution — even for egalitarian goals — violates the right-holders' individual rights.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Martha Nussbaum's capabilities approach argues that justice requires ensuring people can:",
+      "options": ["Purchase any goods and services available in a free market", "Actually achieve a minimum threshold of central human capabilities needed for a dignified life", "Earn an equal income regardless of their chosen occupation", "Access information about all available life choices freely"],
+      "answer": "B",
+      "explanation": "Nussbaum's approach focuses on real human capabilities — the practical ability to be healthy, educated, politically engaged — not just formal rights or income equality.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "AI transparency is an ethical requirement primarily because:",
+      "options": ["Transparent AI systems are always more accurate than opaque ones", "People affected by AI decisions deserve to understand and be able to contest those decisions", "Transparency allows competitors to copy successful AI systems", "Government regulations in all countries require AI code to be publicly available"],
+      "answer": "B",
+      "explanation": "AI transparency is fundamentally about accountability and autonomy — people whose lives are affected by algorithmic decisions should be able to understand the basis for those decisions and have recourse.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Which of the following BEST describes the relationship between ethics and law?",
+      "options": ["Law and ethics are identical — legal equals moral", "Ethics provides the moral foundations and justifications for law, but legal and ethical requirements can diverge", "Law determines what is ethical — whatever is legal is automatically moral", "Ethics applies only to private life while law governs public behavior"],
+      "answer": "B",
+      "explanation": "Ethics and law are related but distinct — ethics provides the moral foundations for law, but historically many laws have been unethical (slavery, apartheid) and some ethical obligations exceed legal requirements.",
+      "points": 1
+    }
+  ]
+}

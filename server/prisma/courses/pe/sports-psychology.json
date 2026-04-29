@@ -1,0 +1,800 @@
+{
+  "slug": "sports-psychology",
+  "name": "Sports Psychology",
+  "nameZh": "运动心理学",
+  "credits": 0.5,
+  "department": "Physical Education",
+  "type": "Elective",
+  "description": "An applied course exploring the psychological principles that influence athletic performance, including motivation, goal setting, mental imagery, team dynamics, and achieving peak performance states.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to Sports Psychology",
+      "titleZh": "运动心理学导论",
+      "objectives": "Define sports psychology, identify its major research areas, and explain how mental skills training improves athletic performance.",
+      "readingUrl": "https://www.apa.org/topics/sports-psychology",
+      "readingNote": "APA — Division 47: Exercise and Sport Psychology",
+      "videoUrl": "https://www.youtube.com/watch?v=5RKy9tBZkCA",
+      "videoNote": "YouTube — Introduction to Sports Psychology",
+      "video2Url": "https://www.youtube.com/watch?v=AMT9nUwpMpg",
+      "video2Note": "YouTube — Mental Skills in Sport",
+      "practiceUrl": "https://www.apa.org/topics/sports-psychology",
+      "practiceNote": "Read the APA overview of sports psychology and list three mental skills you want to develop",
+      "assignment": "Write a 1-page reflection on how mental factors have helped or hindered your performance in a sport or physical challenge, and what sports psychology skill you most want to improve.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 2,
+      "title": "Motivation in Sport",
+      "titleZh": "运动中的动机",
+      "objectives": "Distinguish intrinsic from extrinsic motivation, apply Self-Determination Theory to athletic contexts, and identify strategies for building and sustaining motivation.",
+      "readingUrl": "https://www.apa.org/topics/motivation",
+      "readingNote": "APA — Motivation in Sport",
+      "videoUrl": "https://www.youtube.com/watch?v=VGhlhG3jMIk",
+      "videoNote": "YouTube — Intrinsic vs Extrinsic Motivation in Sport",
+      "video2Url": "https://www.youtube.com/watch?v=zfzF3AMIY8E",
+      "video2Note": "YouTube — Self-Determination Theory in Athletics",
+      "practiceUrl": "https://www.apa.org/topics/motivation",
+      "practiceNote": "Reflect on your current motivations for sport or exercise and classify each as intrinsic or extrinsic",
+      "assignment": "Describe your primary motivations for sport participation. Design a personal motivation strategy using Self-Determination Theory principles (autonomy, competence, relatedness).",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 3,
+      "title": "Goal Setting",
+      "titleZh": "目标设定",
+      "objectives": "Distinguish outcome, performance, and process goals; apply the SMART framework to sport goals; understand the role of goal tracking in athletic success.",
+      "readingUrl": "https://www.acefitness.org/resources/everyone/blog/5471/how-to-set-smart-fitness-goals/",
+      "readingNote": "ACE Fitness — SMART Goal Setting for Athletes",
+      "videoUrl": "https://www.youtube.com/watch?v=xBpJeJRfCnU",
+      "videoNote": "YouTube — Goal Setting in Sports Psychology",
+      "video2Url": "https://www.youtube.com/watch?v=U4IU-y9-J8Q",
+      "video2Note": "YouTube — Outcome Process and Performance Goals",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/blog/5471/how-to-set-smart-fitness-goals/",
+      "practiceNote": "Write one outcome, one performance, and one process goal for your sport or fitness activity",
+      "assignment": "Create a goal-setting plan for a sport or physical activity with one outcome goal, two performance goals, and three process goals using the SMART format with a tracking schedule.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Arousal, Anxiety & Stress",
+      "titleZh": "唤醒、焦虑与压力",
+      "objectives": "Explain the Inverted-U Hypothesis and its application to sport performance, differentiate cognitive and somatic anxiety, and identify pre-competition anxiety management strategies.",
+      "readingUrl": "https://www.apa.org/topics/stress/tips",
+      "readingNote": "APA — Managing Competition Anxiety and Stress",
+      "videoUrl": "https://www.youtube.com/watch?v=tEmt1Znux58",
+      "videoNote": "YouTube — Arousal and Athletic Performance — Inverted-U Theory",
+      "video2Url": "https://www.youtube.com/watch?v=ck5wLXyEJ3k",
+      "video2Note": "YouTube — Managing Pre-Competition Anxiety",
+      "practiceUrl": "https://www.apa.org/topics/stress",
+      "practiceNote": "Practice a 5-minute pre-performance breathing routine to manage arousal",
+      "assignment": "Analyze the inverted-U hypothesis using a personal sport example. Write a pre-competition routine that helps you reach your optimal arousal zone, including physical and mental techniques.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Attention & Concentration",
+      "titleZh": "注意力与专注",
+      "objectives": "Understand attentional styles (broad/narrow, internal/external), identify concentration disruptions in sport, and practice attention control techniques.",
+      "readingUrl": "https://www.apa.org/topics/sports-psychology",
+      "readingNote": "APA — Attention and Concentration in Sport",
+      "videoUrl": "https://www.youtube.com/watch?v=5RKy9tBZkCA",
+      "videoNote": "YouTube — Concentration and Focus in Sports",
+      "video2Url": "https://www.youtube.com/watch?v=7mRjGtYR8Ho",
+      "video2Note": "YouTube — How to Improve Focus for Athletes",
+      "practiceUrl": "https://www.apa.org/topics/sports-psychology",
+      "practiceNote": "Practice a 5-minute 'cue word' attention control exercise during a physical activity",
+      "assignment": "Identify the attentional style (broad/narrow, internal/external) required at different moments in your sport. Design a 3-strategy attention control plan for a critical performance situation.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Mental Imagery & Visualization",
+      "titleZh": "心理意象与可视化",
+      "objectives": "Define mental imagery in sport, explain PETTLEP imagery model components, and practice visualization scripts for performance enhancement.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/blog/mental-imagery-sport/",
+      "readingNote": "ACE Fitness — Mental Imagery for Athletic Performance",
+      "videoUrl": "https://www.youtube.com/watch?v=MH_gzHCGGNM",
+      "videoNote": "YouTube — Mental Imagery and Visualization in Sport",
+      "video2Url": "https://www.youtube.com/watch?v=1ZXKH6BzBGo",
+      "video2Note": "YouTube — How Olympic Athletes Use Visualization",
+      "practiceUrl": "https://www.apa.org/topics/sports-psychology",
+      "practiceNote": "Complete a 10-minute guided visualization for a sport skill you want to improve",
+      "assignment": "Write a detailed 5-minute imagery script for a key moment in your sport, incorporating all five senses and positive emotional content. Practice it daily for one week and record your experience.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Self-Confidence & Self-Efficacy",
+      "titleZh": "自信与自我效能",
+      "objectives": "Differentiate self-confidence and self-efficacy, explain Bandura's four sources of self-efficacy, and develop strategies to build athletic confidence.",
+      "readingUrl": "https://www.apa.org/topics/sports-psychology",
+      "readingNote": "APA — Self-Confidence and Self-Efficacy in Sport",
+      "videoUrl": "https://www.youtube.com/watch?v=0kBiTY7oGXQ",
+      "videoNote": "YouTube — Building Self-Confidence in Athletes",
+      "video2Url": "https://www.youtube.com/watch?v=VGhlhG3jMIk",
+      "video2Note": "YouTube — Bandura's Self-Efficacy Theory in Sports",
+      "practiceUrl": "https://www.apa.org/topics/sports-psychology",
+      "practiceNote": "Use Bandura's four sources of self-efficacy to identify one strategy for increasing your athletic confidence",
+      "assignment": "Write a 1-page confidence-building plan for a sport or performance situation, applying at least three of Bandura's sources of self-efficacy with specific action steps.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Team Cohesion & Leadership",
+      "titleZh": "团队凝聚力与领导力",
+      "objectives": "Define team cohesion and its two types (task and social), explain the leadership styles effective in sport settings, and identify strategies for building team unity.",
+      "readingUrl": "https://www.apa.org/topics/sports-psychology",
+      "readingNote": "APA — Team Dynamics and Leadership in Sport",
+      "videoUrl": "https://www.youtube.com/watch?v=nFEY3OZxlYk",
+      "videoNote": "YouTube — Building Team Cohesion in Sports",
+      "video2Url": "https://www.youtube.com/watch?v=lmyZMtPVodo",
+      "video2Note": "YouTube — Leadership Styles in Sport Psychology",
+      "practiceUrl": "https://www.apa.org/topics/sports-psychology",
+      "practiceNote": "Complete a team cohesion self-assessment for a team you are currently on or have been part of",
+      "assignment": "Analyze the cohesion and leadership of a team you have participated in. Identify the leadership style used by the coach and recommend two strategies to improve team cohesion.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Communication in Sport",
+      "titleZh": "运动中的沟通",
+      "objectives": "Identify effective verbal and nonverbal communication skills in sport, understand the importance of coach-athlete communication, and practice active listening techniques.",
+      "readingUrl": "https://www.apa.org/topics/sports-psychology",
+      "readingNote": "APA — Communication in Athletic Settings",
+      "videoUrl": "https://www.youtube.com/watch?v=V3ZlZ5k1FOY",
+      "videoNote": "YouTube — Communication Skills for Athletes and Coaches",
+      "video2Url": "https://www.youtube.com/watch?v=3lkbLBsU7-M",
+      "video2Note": "YouTube — Effective Listening in Sports Teams",
+      "practiceUrl": "https://www.apa.org/topics/sports-psychology",
+      "practiceNote": "Role-play a coach-athlete feedback conversation using the 'sandwich' feedback model",
+      "assignment": "Observe and analyze the communication patterns in a sport practice or game video. Identify 3 examples of effective and 2 examples of ineffective communication with suggestions for improvement.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 10,
+      "title": "Burnout & Overtraining",
+      "titleZh": "职业倦怠与过度训练",
+      "objectives": "Define athletic burnout and overtraining syndrome, identify warning signs, and explain prevention strategies including periodization and psychological recovery.",
+      "readingUrl": "https://www.acefitness.org/resources/everyone/blog/burnout-overtraining/",
+      "readingNote": "ACE Fitness — Burnout and Overtraining in Athletes",
+      "videoUrl": "https://www.youtube.com/watch?v=1f9bFEIMgHY",
+      "videoNote": "YouTube — Athletic Burnout Warning Signs",
+      "video2Url": "https://www.youtube.com/watch?v=PGMkLe71bDU",
+      "video2Note": "YouTube — Overtraining Syndrome Explained",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/blog/",
+      "practiceNote": "Complete a burnout self-assessment questionnaire and reflect on your current training balance",
+      "assignment": "Research athlete burnout and write a prevention guide for a high school sport team, including training load management, recovery strategies, and mental health resources.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Injury & Psychological Recovery",
+      "titleZh": "损伤与心理康复",
+      "objectives": "Explain the psychological stages athletes experience following injury, identify emotional responses to injury, and describe mental health support strategies during rehabilitation.",
+      "readingUrl": "https://www.apa.org/topics/sports-psychology",
+      "readingNote": "APA — Psychological Aspects of Sport Injury",
+      "videoUrl": "https://www.youtube.com/watch?v=kHCiCTRjHOY",
+      "videoNote": "YouTube — Psychological Stages of Sports Injury Recovery",
+      "video2Url": "https://www.youtube.com/watch?v=AMT9nUwpMpg",
+      "video2Note": "YouTube — Mental Health and Injury Recovery in Athletes",
+      "practiceUrl": "https://www.apa.org/topics/sports-psychology",
+      "practiceNote": "Reflect on a past injury or physical setback and identify the emotional stages you experienced",
+      "assignment": "Write a 1-page guide for athletes dealing with injury, covering the emotional stages of recovery, positive coping strategies, and when to seek professional psychological support.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 12,
+      "title": "Ethics & Fair Play",
+      "titleZh": "运动伦理与公平竞争",
+      "objectives": "Identify ethical issues in sport including cheating, doping, and gamesmanship, apply moral reasoning to sport dilemmas, and explain the values of sportsmanship and fair play.",
+      "readingUrl": "https://www.wada-ama.org/en/what-we-do/the-code/world-anti-doping-code",
+      "readingNote": "WADA — World Anti-Doping Code Overview",
+      "videoUrl": "https://www.youtube.com/watch?v=iFTfzeW4mcA",
+      "videoNote": "YouTube — Ethics and Doping in Sport",
+      "video2Url": "https://www.youtube.com/watch?v=5RKy9tBZkCA",
+      "video2Note": "YouTube — Sportsmanship and Fair Play",
+      "practiceUrl": "https://www.wada-ama.org/",
+      "practiceNote": "Read a WADA case study on doping violations and analyze the ethical issues involved",
+      "assignment": "Analyze a real or hypothetical ethical dilemma in sport (e.g., using performance-enhancing substances, cheating to win a championship) using a structured ethical decision-making framework.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Youth Sport Development",
+      "titleZh": "青少年运动发展",
+      "objectives": "Explain age-appropriate sport participation, identify developmental stages in youth sport, and understand how coaches and parents influence positive youth sport experiences.",
+      "readingUrl": "https://www.acefitness.org/resources/professionals/blog/youth-sport-development/",
+      "readingNote": "ACE Fitness — Youth Sport Development Principles",
+      "videoUrl": "https://www.youtube.com/watch?v=SgXHUolhfvg",
+      "videoNote": "YouTube — Youth Sport Development and Psychological Health",
+      "video2Url": "https://www.youtube.com/watch?v=6Nm7MgaOBWQ",
+      "video2Note": "YouTube — Positive Coaching in Youth Sports",
+      "practiceUrl": "https://www.acefitness.org/resources/professionals/",
+      "practiceNote": "Research the principles of positive youth sport development and identify three that are most critical",
+      "assignment": "Write a 1-page parent/coach guide for supporting youth athletes psychologically, including how to provide positive feedback, manage win-loss outcomes, and promote intrinsic motivation.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 14,
+      "title": "Peak Performance & Flow",
+      "titleZh": "巅峰表现与心流",
+      "objectives": "Define the flow state and its characteristics in sport, identify conditions that promote flow and peak performance, and synthesize all mental skills into a personalized performance plan.",
+      "readingUrl": "https://www.apa.org/topics/sports-psychology",
+      "readingNote": "APA — Flow State and Peak Performance in Sport",
+      "videoUrl": "https://www.youtube.com/watch?v=MH_gzHCGGNM",
+      "videoNote": "YouTube — Flow State in Athletic Performance",
+      "video2Url": "https://www.youtube.com/watch?v=5RKy9tBZkCA",
+      "video2Note": "YouTube — Peak Performance Psychology",
+      "practiceUrl": "https://www.apa.org/topics/sports-psychology",
+      "practiceNote": "Reflect on a time you experienced flow in sport or another activity. Identify the conditions that enabled it",
+      "assignment": "Create a comprehensive Personal Mental Performance Plan that integrates goal setting, arousal control, imagery, concentration, and confidence strategies for your primary sport or activity.",
+      "estimatedHrs": 3.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1, "order": 1, "question": "Sports psychology primarily focuses on:",
+      "options": ["Physical conditioning techniques only", "The mental and psychological factors that influence athletic performance", "Nutrition for athletes", "Injury treatment protocols"],
+      "answer": "B", "explanation": "Sports psychology studies how psychological factors — motivation, confidence, anxiety, focus — affect sport performance and well-being.", "points": 1
+    },
+    {
+      "moduleOrder": 1, "order": 2, "question": "Which is an example of a mental skill used in sports psychology?",
+      "options": ["Weight training", "Medication for performance enhancement", "Visualization and mental imagery", "Stretching routines"],
+      "answer": "C", "explanation": "Visualization (mental imagery) is a core mental skill in sports psychology, used to mentally rehearse performance before competition.", "points": 1
+    },
+    {
+      "moduleOrder": 1, "order": 3, "question": "The American Psychological Association (APA) division dedicated to sport and exercise psychology is:",
+      "options": ["Division 12", "Division 47", "Division 6", "Division 29"],
+      "answer": "B", "explanation": "APA Division 47 focuses on exercise and sport psychology, the scientific study of psychological factors related to sport and exercise.", "points": 1
+    },
+    {
+      "moduleOrder": 1, "order": 4, "question": "Mental skills training in sport is most beneficial because:",
+      "options": ["It replaces physical training", "It improves consistency, resilience, and performance under pressure", "Only elite athletes need it", "It can be learned in one day"],
+      "answer": "B", "explanation": "Mental skills training improves an athlete's ability to focus, manage stress, and perform consistently, especially under high-pressure conditions.", "points": 1
+    },
+    {
+      "moduleOrder": 1, "order": 5, "question": "Which athlete characteristic is most improved by sports psychology training?",
+      "options": ["Physical strength", "Reaction time", "Mental resilience and ability to handle setbacks", "Flexibility"],
+      "answer": "C", "explanation": "Sports psychology most directly builds mental resilience — the ability to respond constructively to adversity, setbacks, and pressure.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 1, "question": "Intrinsic motivation in sport refers to participating:",
+      "options": ["For external rewards like trophies", "For the inherent enjoyment, challenge, and personal satisfaction of the activity", "Only for coach approval", "To avoid punishment or embarrassment"],
+      "answer": "B", "explanation": "Intrinsic motivation comes from within — the joy of the activity itself, personal challenge, and the satisfaction of improvement.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 2, "question": "Self-Determination Theory identifies which three basic psychological needs?",
+      "options": ["Power, status, and recognition", "Autonomy, competence, and relatedness", "Winning, fame, and money", "Safety, security, and respect"],
+      "answer": "B", "explanation": "Self-Determination Theory (SDT) identifies autonomy, competence, and relatedness as the three fundamental psychological needs that fuel intrinsic motivation.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 3, "question": "Over-reliance on external rewards in sport can lead to:",
+      "options": ["Increased intrinsic motivation", "The undermining effect — decreased intrinsic motivation", "Better teamwork", "Improved performance under pressure"],
+      "answer": "B", "explanation": "When external rewards (overjustification effect) become the primary reason for participation, intrinsic motivation can decrease.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 4, "question": "Relatedness in Self-Determination Theory means:",
+      "options": ["Being related to a famous athlete", "Feeling connected and belonging to a team or community", "Relating to coaches only", "Understanding technical sport rules"],
+      "answer": "B", "explanation": "Relatedness refers to the sense of belonging and connection with others — teammates, coaches, and the sport community.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 5, "question": "Which motivation type is most associated with long-term athletic persistence?",
+      "options": ["Extrinsic — external rewards only", "Introjected — guilt-driven motivation", "Intrinsic — internal enjoyment and personal growth", "External — only coach approval"],
+      "answer": "C", "explanation": "Intrinsic motivation is the most autonomous and self-sustaining form, most strongly associated with long-term sport participation and wellbeing.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 1, "question": "Which type of goal focuses on the end result (winning or placing)?",
+      "options": ["Process goal", "Performance goal", "Outcome goal", "Mastery goal"],
+      "answer": "C", "explanation": "Outcome goals focus on end results like winning a competition or ranking, which are partially outside the athlete's control.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 2, "question": "A process goal focuses on:",
+      "options": ["Beating a specific opponent", "Achieving a personal best score", "The specific behaviors and actions within performance (e.g., 'keep hips forward')", "Team rankings and standings"],
+      "answer": "C", "explanation": "Process goals focus on technical execution — specific actions and behaviors the athlete performs during competition.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 3, "question": "Research suggests the most effective goal combination for performance improvement is:",
+      "options": ["Outcome goals only", "Process goals only", "A combination of outcome, performance, and process goals", "No goals — perform freely"],
+      "answer": "C", "explanation": "Using all three goal types together provides direction (outcome), benchmarks (performance), and actionable focus (process) for optimal athletic development.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 4, "question": "Which goal-setting mistake is most harmful to athletic confidence?",
+      "options": ["Setting challenging goals", "Setting process goals", "Setting outcome goals completely outside the athlete's control", "Tracking goal progress regularly"],
+      "answer": "C", "explanation": "Focusing exclusively on outcome goals (like winning) that depend partly on others' performance can harm confidence and motivation when results are outside the athlete's control.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 5, "question": "A performance goal example for a swimmer would be:",
+      "options": ["Win the state championship", "Keep head down through the turn", "Beat the team captain", "Win every race this season"],
+      "answer": "B", "explanation": "Keeping the head down through the turn is a specific performance goal focusing on technique, within the swimmer's direct control.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 1, "question": "The Inverted-U Hypothesis describes the relationship between arousal and performance as:",
+      "options": ["More arousal always improves performance", "Performance improves linearly with arousal indefinitely", "Performance is best at an optimal arousal level — too little or too much hurts performance", "Arousal has no effect on performance"],
+      "answer": "C", "explanation": "The Inverted-U (Yerkes-Dodson) relationship shows performance peaks at moderate arousal; too little causes under-arousal, too much causes anxiety and performance decline.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 2, "question": "Cognitive anxiety in sport refers to:",
+      "options": ["Physical muscle tension before competition", "Mental worry and negative thoughts about performance", "Excitement and energy before competition", "Physical nervousness symptoms like nausea"],
+      "answer": "B", "explanation": "Cognitive anxiety involves negative thoughts, worry, and fear of failure — the mental component of pre-competition anxiety.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 3, "question": "Somatic anxiety refers to:",
+      "options": ["Negative thoughts about performance", "Physical symptoms of anxiety such as increased heart rate, sweating, and muscle tension", "Reduced motivation before competition", "Overconfidence before a competition"],
+      "answer": "B", "explanation": "Somatic anxiety involves the physical symptoms of nervous arousal — elevated heart rate, sweating, nausea, and muscle tension.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 4, "question": "Diaphragmatic (belly) breathing is used in sport to:",
+      "options": ["Increase heart rate for competition", "Reduce anxiety and bring arousal to an optimal level", "Only during warm-up", "Improve flexibility"],
+      "answer": "B", "explanation": "Slow, deep belly breathing activates the parasympathetic nervous system, reducing physiological and cognitive arousal before or during competition.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 5, "question": "For a task requiring fine motor skills (archery, golf putting), optimal arousal is:",
+      "options": ["Very high", "Very low or moderate", "Maximum possible", "Not relevant to performance"],
+      "answer": "B", "explanation": "Fine motor skill tasks require low-to-moderate arousal for precision; high arousal impairs the fine control these skills demand.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 1, "question": "Which attentional focus is described as 'broad-external'?",
+      "options": ["Focusing on internal muscle sensations", "Focusing on analyzing a game plan", "Scanning the field to read the environment and other players", "Attending to one specific technical element"],
+      "answer": "C", "explanation": "Broad-external attention involves scanning the environment broadly — reading the field, tracking multiple players, and assessing the situation.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 2, "question": "Which type of attention is most useful for a basketball point guard during a game?",
+      "options": ["Narrow-internal only", "Broad-external to read the defense and teammates", "No attentional strategy needed", "Narrow-external to follow only the ball"],
+      "answer": "B", "explanation": "A point guard must scan broadly (broad-external) to read the defense, find open teammates, and make real-time decisions.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 3, "question": "A common concentration disruptor during sport competition is:",
+      "options": ["Focusing on process goals", "Using pre-game imagery", "Thinking about what might happen after the game (future thinking)", "Practicing deep breathing"],
+      "answer": "C", "explanation": "Future-oriented thinking (worrying about outcomes) pulls attention away from the present moment and disrupts performance-relevant focus.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 4, "question": "A 'cue word' in attention control is used to:",
+      "options": ["Signal the coach to call a timeout", "Rapidly refocus attention on a key performance element", "Communicate plays to teammates", "Distract opponents"],
+      "answer": "B", "explanation": "Cue words (e.g., 'smooth,' 'breathe,' 'snap') serve as mental triggers to quickly redirect attention back to a key aspect of performance.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 5, "question": "Mindfulness training improves athletic concentration primarily by:",
+      "options": ["Eliminating all thoughts during competition", "Training athletes to maintain present-moment awareness without judgment", "Replacing technical skill training", "Reducing physical fatigue"],
+      "answer": "B", "explanation": "Mindfulness builds the ability to notice distractions without being hijacked by them and return attention to the present-moment performance.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 1, "question": "Mental imagery in sport is most effective when it includes:",
+      "options": ["Only visual elements of the skill", "Multiple senses (visual, kinesthetic, auditory, emotional)", "Only negative outcomes to prepare for failure", "No emotional content"],
+      "answer": "B", "explanation": "Multi-sensory imagery incorporating sight, movement feel, sound, and emotions is significantly more effective than visual-only imagery.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 2, "question": "Internal imagery perspective means:",
+      "options": ["Watching yourself perform from an outside observer's view", "Imagining the performance from your own viewpoint — as if inside your body", "Imagining a teammate performing", "Reviewing game film"],
+      "answer": "B", "explanation": "Internal imagery places the athlete 'inside' their body, experiencing the kinesthetic feel of the movement during visualization.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 3, "question": "Research shows mental imagery works partly because:",
+      "options": ["It physically trains the muscles", "It activates similar neural pathways used in actual physical performance", "It only improves confidence without affecting skill", "It replaces the need for physical practice"],
+      "answer": "B", "explanation": "Neurological research shows that mental imagery activates many of the same brain regions and neural pathways as actual physical movement.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 4, "question": "The PETTLEP model of imagery stands for Physical, Environment, Task, Timing, Learning, Emotion, and:",
+      "options": ["Power", "Perspective", "Positivity", "Practice"],
+      "answer": "B", "explanation": "PETTLEP = Physical, Environment, Task, Timing, Learning, Emotion, Perspective — a framework for creating functional, effective athletic imagery.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 5, "question": "When is mental imagery most beneficial for athletes?",
+      "options": ["Only before competition, never during", "Before, during, and after practice and competition for skill learning, confidence, and rehabilitation", "Only for injured athletes", "Only when physical practice is impossible"],
+      "answer": "B", "explanation": "Imagery is beneficial throughout training and competition — for skill acquisition, pre-competition preparation, confidence building, and injury rehabilitation.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 1, "question": "Self-efficacy, as defined by Bandura, refers to:",
+      "options": ["General self-esteem", "Belief in one's ability to perform a specific task successfully", "Feeling good about your sport career in general", "Comparing yourself positively to other athletes"],
+      "answer": "B", "explanation": "Self-efficacy is situation-specific confidence — the belief that you can execute a specific behavior or skill successfully.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 2, "question": "Bandura's strongest source of self-efficacy is:",
+      "options": ["Verbal encouragement from others", "Watching others perform successfully", "Mastery experiences (past successes)", "Physiological arousal"],
+      "answer": "C", "explanation": "Mastery experiences — personal past successes — are Bandura's most powerful source of self-efficacy because they provide direct evidence of capability.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 3, "question": "Vicarious experience (modeling) builds self-efficacy by:",
+      "options": ["Physical training alone", "Watching similar others succeed, suggesting 'if they can do it, I can too'", "Receiving verbal praise from the coach", "Managing physiological responses"],
+      "answer": "B", "explanation": "Observing similar athletes succeed increases self-efficacy through social comparison — 'if someone like me can do this, I can too.'", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 4, "question": "A coach's use of positive, specific feedback primarily builds self-efficacy through which source?",
+      "options": ["Mastery experiences", "Vicarious experience", "Verbal persuasion", "Physiological states"],
+      "answer": "C", "explanation": "Verbal persuasion (encouragement and specific positive feedback from credible sources like coaches) is Bandura's third source of self-efficacy.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 5, "question": "Athletes with high self-efficacy typically:",
+      "options": ["Avoid challenging situations to protect confidence", "Set harder goals, persist longer, and recover more quickly from setbacks", "Perform worse under pressure", "Rely entirely on external validation"],
+      "answer": "B", "explanation": "High self-efficacy athletes embrace challenges, set ambitious goals, persist through adversity, and recover quickly from setbacks.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 1, "question": "Task cohesion in a sport team refers to:",
+      "options": ["Team members enjoying each other socially", "The degree to which team members work together to achieve team goals", "Individual athlete performance goals", "Physical fitness level of the team"],
+      "answer": "B", "explanation": "Task cohesion reflects how well team members cooperate and coordinate to achieve shared performance objectives.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 2, "question": "Which leadership style involves the leader making all decisions without athlete input?",
+      "options": ["Democratic", "Transformational", "Autocratic", "Servant"],
+      "answer": "C", "explanation": "Autocratic leadership involves the coach making all decisions without seeking or considering input from athletes.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 3, "question": "Transformational leadership in sport is characterized by:",
+      "options": ["Focusing on reward and punishment only", "Inspiring athletes through vision, individual consideration, and motivating beyond self-interest", "Avoiding athlete input in decisions", "Maintaining strict, unchanging rules"],
+      "answer": "B", "explanation": "Transformational coaches inspire athletes with a shared vision, individualize support, and motivate intrinsic values beyond external rewards.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 4, "question": "Social cohesion in a sport team refers to:",
+      "options": ["Strategic coordination during competition", "The degree to which team members like and enjoy spending time with each other", "Athletes' shared tactical knowledge", "Physical fitness levels across the team"],
+      "answer": "B", "explanation": "Social cohesion reflects interpersonal bonds — how much athletes genuinely like each other and enjoy each other's company.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 5, "question": "Which team-building activity most directly increases task cohesion?",
+      "options": ["Team dinners and social events", "Establishing shared performance goals and defining individual roles clearly", "Having athletes train individually", "Avoiding all team meetings"],
+      "answer": "B", "explanation": "Task cohesion is built by establishing clear shared goals and defining each athlete's specific role in achieving them.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 1, "question": "The 'sandwich' (or praise-critique-praise) feedback model involves:",
+      "options": ["Only giving negative feedback", "Starting and ending with positive feedback while placing corrective feedback in the middle", "Giving feedback only after the season ends", "Avoiding all constructive criticism"],
+      "answer": "B", "explanation": "The sandwich model delivers corrective feedback between two pieces of positive feedback, making it more receptive and less discouraging.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 2, "question": "Nonverbal communication in sport includes:",
+      "options": ["Only verbal instructions from coaches", "Body language, facial expressions, eye contact, and physical gestures", "Written game plans only", "Only signals from referees"],
+      "answer": "B", "explanation": "Nonverbal communication encompasses all body language, facial expressions, eye contact, posture, and physical gestures that convey messages.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 3, "question": "A coach who communicates in a style that respects athletes' feelings and encourages dialogue uses which style?",
+      "options": ["Passive communication", "Aggressive communication", "Assertive communication", "Avoidant communication"],
+      "answer": "C", "explanation": "Assertive communication expresses needs and opinions directly and respectfully, encouraging open dialogue and mutual respect.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 4, "question": "Active listening involves which of the following?",
+      "options": ["Formulating your response while the other person talks", "Giving full attention, reflecting understanding, and asking clarifying questions", "Only listening to teammates during timeouts", "Maintaining eye contact without processing the message"],
+      "answer": "B", "explanation": "Active listening means full present-moment attention, demonstrating understanding through reflection, and asking clarifying questions.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 5, "question": "Effective coach-athlete communication is most important during:",
+      "options": ["Off-season only", "Only during game situations", "All phases of sport — training, competition, and recovery", "Only after losses"],
+      "answer": "C", "explanation": "Effective coach-athlete communication is critical throughout all phases of sport — it builds trust, clarifies expectations, and supports athlete development.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 1, "question": "Athletic burnout is characterized by:",
+      "options": ["Increased motivation and performance", "Emotional and physical exhaustion, depersonalization, and reduced sense of accomplishment", "Temporary fatigue after a single hard training session", "Excitement before a major competition"],
+      "answer": "B", "explanation": "Burnout in athletes involves chronic exhaustion, negative attitudes toward sport, and a reduced sense of achievement after prolonged stress.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 2, "question": "Overtraining syndrome is distinguished from normal training fatigue by:",
+      "options": ["Brief recovery period needed", "Requiring several weeks to months of reduced training for full recovery", "Occurring only in novice athletes", "Improving with more intense training"],
+      "answer": "B", "explanation": "Overtraining syndrome requires extended rest (weeks to months) for recovery, unlike typical fatigue which resolves in days with adequate rest.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 3, "question": "Which is a psychological warning sign of overtraining syndrome?",
+      "options": ["Increased enthusiasm for training", "Depression, irritability, and loss of motivation for sport", "Better focus during competition", "Higher self-efficacy"],
+      "answer": "B", "explanation": "Psychological warning signs of overtraining include depression, mood disturbance, irritability, and loss of interest in training and competition.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 4, "question": "Periodization helps prevent burnout by:",
+      "options": ["Maintaining maximum training intensity year-round", "Systematically varying training load with planned recovery periods", "Training only one muscle group at a time", "Eliminating all rest days"],
+      "answer": "B", "explanation": "Periodization prevents burnout by systematically varying training intensity and volume with planned recovery phases throughout the training year.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 5, "question": "Which factor most directly reduces risk of youth sport burnout?",
+      "options": ["Specializing in one sport at very young age", "Participating in multiple sports and having athlete input in decisions", "Training 12 months per year without breaks", "Focusing only on competitive outcomes"],
+      "answer": "B", "explanation": "Sport diversification and giving young athletes input and ownership over their sport participation are key burnout prevention factors.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 1, "question": "The psychological stages of sport injury response are most similar to which model?",
+      "options": ["Maslow's Hierarchy of Needs", "Kübler-Ross grief model (denial, anger, bargaining, depression, acceptance)", "PETTLEP imagery model", "Bandura's self-efficacy model"],
+      "answer": "B", "explanation": "Athletes often progress through stages similar to grief (denial, anger, bargaining, depression, acceptance) when dealing with serious injury.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 2, "question": "Athletes are most vulnerable to depression and anxiety during injury because:",
+      "options": ["They are physically healthier than non-athletes", "Loss of sport identity, social isolation from team, and uncertainty about return triggers psychological distress", "Injury provides welcome rest from training", "They have unlimited professional mental health support"],
+      "answer": "B", "explanation": "Injury disrupts sport identity, separates athletes from teammates, creates uncertainty about recovery, and can trigger significant psychological distress.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 3, "question": "Using mental imagery during injury rehabilitation is beneficial because:",
+      "options": ["It physically accelerates tissue healing", "It maintains neural pathways for movement patterns and supports psychological coping", "It replaces all physical therapy", "It is only effective for minor injuries"],
+      "answer": "B", "explanation": "Imagery during rehabilitation maintains motor programs, enhances self-efficacy, reduces anxiety, and supports the psychological aspects of recovery.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 4, "question": "An athletic trainer or sport psychologist should refer an injured athlete for professional mental health support when:",
+      "options": ["The athlete has a minor sprain", "Signs of clinical depression, severe anxiety, or thoughts of self-harm are present", "The athlete asks about the return-to-play timeline", "The athlete is frustrated about missing one practice"],
+      "answer": "B", "explanation": "Clinical signs of depression, severe anxiety, or self-harm thoughts require referral to a licensed mental health professional.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 5, "question": "Re-injury anxiety (fear of re-injury) after return to play is:",
+      "options": ["A sign of poor athleticism", "A normal and common psychological response that can affect performance and may need addressing", "An indicator the athlete is ready to return", "Always a medical problem unrelated to psychology"],
+      "answer": "B", "explanation": "Re-injury anxiety is a normal, common psychological response to returning from injury and can significantly limit performance if not addressed.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 1, "question": "WADA stands for:",
+      "options": ["World Athletic Development Agency", "World Anti-Doping Agency", "World Athletics Directors Association", "World Athletic Data Authority"],
+      "answer": "B", "explanation": "WADA (World Anti-Doping Agency) is the international organization responsible for managing and enforcing anti-doping standards in sport.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 2, "question": "Gamesmanship in sport refers to:",
+      "options": ["Playing by the rules with full sportsmanship", "Using psychological tactics within or just outside the rules to gain an unfair advantage", "Developing superior technical skills", "Respecting officials' decisions"],
+      "answer": "B", "explanation": "Gamesmanship involves tactics like trash talk, faking injury, or psychological intimidation to gain advantage — technically legal but ethically questionable.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 3, "question": "Which ethical principle best supports fair competition in sport?",
+      "options": ["Winning by any means necessary", "Respecting opponents, rules, and the spirit of the game equally", "Using any performance-enhancing methods available", "Only following rules when officials are watching"],
+      "answer": "B", "explanation": "Fair play requires respecting the rules, opponents, officials, and the spirit of the sport — not just the letter of the rules.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 4, "question": "Performance-enhancing drug (PED) use is ethically problematic primarily because:",
+      "options": ["It improves performance", "It creates unfair competitive advantages and poses health risks to athletes", "It is approved by all sport organizations", "Only older athletes use them"],
+      "answer": "B", "explanation": "PED use violates competitive fairness, harms athlete health, and undermines the principle that sport should test natural athletic ability.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 5, "question": "A sport environment that promotes moral reasoning includes:",
+      "options": ["Coaching that rewards winning regardless of method", "Discussions about ethical dilemmas and modeling of sportsmanship by coaches and athletes", "Ignoring cheating if it leads to wins", "Punishing only rule-breaking that gets caught"],
+      "answer": "B", "explanation": "Moral sport environments discuss ethics openly, model sportsmanship, and value competitive integrity over winning at any cost.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 1, "question": "Early sport specialization (before puberty) is associated with increased risk of:",
+      "options": ["More scholarships and professional contracts", "Overuse injury, burnout, and premature dropout from sport", "Better academic performance", "Higher intrinsic motivation long-term"],
+      "answer": "B", "explanation": "Early single-sport specialization is linked to overuse injuries, burnout, social isolation, and higher rates of youth sport dropout.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 2, "question": "Which type of parental sport involvement is most beneficial for youth athletes?",
+      "options": ["Coaching from the sideline every moment", "Providing emotional support, showing enjoyment, and avoiding pressure around outcomes", "Criticizing performance errors immediately", "Threatening to withdraw support if they lose"],
+      "answer": "B", "explanation": "Parents who provide unconditional support, show genuine enjoyment of their child's participation, and avoid outcome pressure promote positive youth sport experiences.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 3, "question": "The Fun Integration Theory suggests that in youth sport, fun is best created by:",
+      "options": ["Winning games consistently", "Trying hard, positive team dynamics, learning, and coach support — not just winning", "Only competing in high-stakes tournaments", "Eliminating all forms of competition"],
+      "answer": "B", "explanation": "Research shows youth athletes define fun through effort, positive social experience, learning, and supportive coaching — far more than winning.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 4, "question": "Multi-sport participation in childhood is recommended because it:",
+      "options": ["Confuses young athletes with too many skills", "Develops diverse athletic skills, reduces overuse injury, and prevents burnout", "Decreases chances of playing in college", "Only benefits casual athletes, not future elites"],
+      "answer": "B", "explanation": "Multi-sport participation develops transferable athletic skills, reduces overuse injury risk, and is associated with longer athletic careers including at elite levels.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 5, "question": "A mastery-oriented coaching climate emphasizes:",
+      "options": ["Comparing athletes to each other publicly", "Personal improvement, effort, and learning over competitive outcome", "Only rewarding the best performers", "Winning at all developmental age groups"],
+      "answer": "B", "explanation": "A mastery climate encourages self-improvement and effort, which promotes intrinsic motivation, resilience, and long-term athletic development.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 1, "question": "Csikszentmihalyi's 'flow state' is characterized by:",
+      "options": ["Boredom from tasks too easy", "Anxiety from tasks too hard", "Complete absorption in a challenging activity with effortless performance", "Conscious awareness of every technical move"],
+      "answer": "C", "explanation": "Flow is the optimal psychological state of complete task absorption, characterized by effortless performance, loss of self-consciousness, and intrinsic enjoyment.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 2, "question": "Flow state is most likely to occur when:",
+      "options": ["The task is too easy for the athlete's skill level", "The task challenge and athlete skill level are both high and balanced", "The athlete is distracted by the crowd", "Anxiety is at maximum levels"],
+      "answer": "B", "explanation": "Flow occurs at the intersection of high challenge and high skill — when the task demands match the athlete's capabilities at the highest levels.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 3, "question": "Which mental skill is MOST foundational for achieving peak performance?",
+      "options": ["Physical conditioning alone", "Integration of goal setting, imagery, arousal control, and concentration skills", "Relying purely on natural talent", "Only positive self-talk"],
+      "answer": "B", "explanation": "Peak performance requires an integrated mental performance plan combining goal setting, imagery, arousal regulation, concentration, and confidence skills.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 4, "question": "A pre-performance routine helps athletes achieve optimal states by:",
+      "options": ["Eliminating all pre-game thoughts", "Providing a consistent sequence that activates optimal mental and physical readiness", "Replacing warm-up exercises", "Only working for elite athletes"],
+      "answer": "B", "explanation": "Pre-performance routines create consistent mental and physical preparation states, reducing anxiety and promoting optimal arousal and focus.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 5, "question": "A Personal Mental Performance Plan integrates mental skills including:",
+      "options": ["Only physical training techniques", "Goal setting, imagery, concentration, arousal control, and confidence-building strategies", "Social media engagement strategies", "Nutritional supplements only"],
+      "answer": "B", "explanation": "A comprehensive mental performance plan brings together multiple psychological skills — goals, imagery, focus, arousal control, and confidence — tailored to the individual athlete.", "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm", "order": 1, "type": "mc",
+      "question": "Sports psychology primarily studies which aspect of athletic performance?",
+      "options": ["Physical conditioning techniques", "Psychological and mental factors affecting sport performance", "Biomechanics of movement", "Nutrition for competition"],
+      "answer": "B", "explanation": "Sports psychology focuses on mental and psychological factors — motivation, anxiety, confidence, focus — that affect athletic performance.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 2, "type": "mc",
+      "question": "Intrinsic motivation in sport comes from:",
+      "options": ["External rewards like trophies or money", "Internal enjoyment, challenge, and personal satisfaction", "Coach approval and team pressure", "Fear of failure"],
+      "answer": "B", "explanation": "Intrinsic motivation is driven by personal enjoyment, curiosity, and the inherent satisfaction of the activity itself.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 3, "type": "mc",
+      "question": "Self-Determination Theory identifies which three basic psychological needs?",
+      "options": ["Winning, fame, and money", "Power, status, and recognition", "Autonomy, competence, and relatedness", "Safety, control, and comfort"],
+      "answer": "C", "explanation": "SDT identifies autonomy, competence, and relatedness as the three psychological needs that fuel intrinsic motivation.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 4, "type": "mc",
+      "question": "Which goal type focuses on controllable behaviors during performance?",
+      "options": ["Outcome goal", "Result goal", "Process goal", "Competitive goal"],
+      "answer": "C", "explanation": "Process goals focus on specific technical behaviors the athlete controls directly during performance.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 5, "type": "mc",
+      "question": "The Inverted-U Hypothesis suggests performance is best when arousal is:",
+      "options": ["Very low", "At an optimal moderate level", "At maximum", "At minimum"],
+      "answer": "B", "explanation": "The Inverted-U model predicts peak performance at an optimal moderate arousal level; too little or too much impairs performance.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 6, "type": "mc",
+      "question": "Cognitive anxiety refers to:",
+      "options": ["Physical symptoms like nausea", "Negative thoughts and mental worry about performance", "High energy and excitement", "Optimal readiness for competition"],
+      "answer": "B", "explanation": "Cognitive anxiety involves mental worry, negative self-talk, and fear of failure — the psychological component of pre-competition anxiety.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 7, "type": "mc",
+      "question": "Internal imagery perspective places the athlete:",
+      "options": ["Watching themselves from an outside view", "Inside their own body experiencing the movement", "Watching a teammate perform", "In a relaxed resting state"],
+      "answer": "B", "explanation": "Internal imagery has the athlete experiencing the sport skill from a first-person (inside-body) kinesthetic perspective.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 8, "type": "mc",
+      "question": "Bandura's strongest source of self-efficacy in sport is:",
+      "options": ["Verbal encouragement from coaches", "Watching others succeed", "Past personal mastery experiences", "Physiological relaxation"],
+      "answer": "C", "explanation": "Past mastery experiences (personal successes) are Bandura's most powerful source of self-efficacy because they provide direct evidence of capability.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 9, "type": "mc",
+      "question": "Task cohesion in a sport team refers to:",
+      "options": ["Athletes enjoying social time together", "Team members working together toward shared performance goals", "The coach's leadership style", "Individual athlete fitness levels"],
+      "answer": "B", "explanation": "Task cohesion reflects the degree to which team members coordinate and cooperate to achieve their shared competitive objectives.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 10, "type": "mc",
+      "question": "A 'cue word' in concentration training is used to:",
+      "options": ["Signal plays to teammates", "Rapidly redirect attention to a key performance element", "Communicate with the coach during play", "Distract opposing athletes"],
+      "answer": "B", "explanation": "Cue words serve as mental triggers that quickly refocus an athlete's attention on a critical performance aspect.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 11, "type": "mc",
+      "question": "Which is the best example of an outcome goal for a high school basketball player?",
+      "options": ["Increase free throw accuracy to 80%", "Win the state championship", "Hold 90-degree knee bend in defensive stance", "Practice ball-handling drills for 20 minutes daily"],
+      "answer": "B", "explanation": "Winning the state championship is an outcome goal focused on the competitive result, partly outside the athlete's direct control.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 12, "type": "mc",
+      "question": "Broad-external attentional focus is most useful for:",
+      "options": ["A golfer focusing on their swing mechanics", "A soccer player reading the field and tracking multiple opponents", "A swimmer monitoring their breathing rhythm", "A gymnast focusing on internal body position"],
+      "answer": "B", "explanation": "Broad-external focus scans the environment widely — essential for reading dynamic team sport situations.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 13, "type": "mc",
+      "question": "Mental imagery activates which neural pathways?",
+      "options": ["Completely different pathways from physical movement", "Many of the same neural pathways used during actual physical performance", "Only visual processing areas of the brain", "No significant neural activity occurs"],
+      "answer": "B", "explanation": "Neurological research shows mental imagery activates similar neural motor programs and brain regions as actual physical execution.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 14, "type": "mc",
+      "question": "Optimal arousal for a task requiring fine motor precision (e.g., archery) is:",
+      "options": ["Very high intensity", "Low to moderate", "Maximum intensity", "Identical to contact sport requirements"],
+      "answer": "B", "explanation": "Fine motor tasks require low-to-moderate arousal for precise control; high arousal impairs the fine movement coordination required.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 15, "type": "mc",
+      "question": "Self-Determination Theory's concept of 'competence' in sport means:",
+      "options": ["Winning every competition", "Feeling effective and capable in one's sport activities", "Being the team's best athlete", "Having the most athletic scholarships"],
+      "answer": "B", "explanation": "Competence need satisfaction involves feeling capable, effective, and growing in one's athletic skills — not necessarily winning.", "points": 1
+    },
+    {
+      "examType": "final", "order": 1, "type": "mc",
+      "question": "Athletic burnout is characterized by:",
+      "options": ["Increased enthusiasm and energy", "Chronic exhaustion, negative attitudes, and reduced sense of accomplishment in sport", "Temporary fatigue after a single hard session", "Optimal performance under pressure"],
+      "answer": "B", "explanation": "Burnout involves chronic emotional and physical exhaustion, depersonalization, and decreased sense of achievement after prolonged sport stress.", "points": 1
+    },
+    {
+      "examType": "final", "order": 2, "type": "mc",
+      "question": "Using imagery during injury rehabilitation helps athletes by:",
+      "options": ["Physically accelerating tissue repair", "Maintaining motor programs, reducing anxiety, and supporting psychological recovery", "Replacing all physical therapy needs", "Only helping with upper extremity injuries"],
+      "answer": "B", "explanation": "Imagery during rehabilitation maintains neural movement patterns, enhances efficacy, reduces fear of re-injury, and supports psychological healing.", "points": 1
+    },
+    {
+      "examType": "final", "order": 3, "type": "mc",
+      "question": "WADA's primary role is to:",
+      "options": ["Train elite athletes in strength and conditioning", "Manage and enforce anti-doping standards in international sport", "Organize international sporting events", "Fund youth sport development globally"],
+      "answer": "B", "explanation": "WADA (World Anti-Doping Agency) develops and enforces the World Anti-Doping Code across international sports organizations.", "points": 1
+    },
+    {
+      "examType": "final", "order": 4, "type": "mc",
+      "question": "Early single-sport specialization before puberty is associated with:",
+      "options": ["Lower injury rates", "Higher scholarship rates and professional contracts", "Increased overuse injury and burnout risk", "Better long-term athletic outcomes than multi-sport participation"],
+      "answer": "C", "explanation": "Early specialization significantly increases overuse injury risk, burnout, and early dropout compared to multi-sport participation during childhood.", "points": 1
+    },
+    {
+      "examType": "final", "order": 5, "type": "mc",
+      "question": "The flow state is most likely to occur when:",
+      "options": ["The task is too easy", "High challenge meets high skill level", "The athlete is bored", "Arousal is very low"],
+      "answer": "B", "explanation": "Flow emerges when both challenge level and athlete skill level are high and well-matched, producing effortless, absorbed performance.", "points": 1
+    },
+    {
+      "examType": "final", "order": 6, "type": "mc",
+      "question": "Transformational coaching in sport is characterized by:",
+      "options": ["Reward-based management only", "Inspiring athletes with vision, individualized support, and motivation beyond self-interest", "Strict autocratic control of all decisions", "Focusing only on physical training outcomes"],
+      "answer": "B", "explanation": "Transformational coaches inspire through shared vision, attend to individual athlete needs, and motivate athletes toward collective goals.", "points": 1
+    },
+    {
+      "examType": "final", "order": 7, "type": "mc",
+      "question": "Re-injury anxiety after return to sport is:",
+      "options": ["A sign the athlete is not ready psychologically and physically", "A normal psychological response that is common and can affect performance", "Always caused by poor physical rehabilitation", "Experienced by less than 1% of athletes returning from injury"],
+      "answer": "B", "explanation": "Re-injury anxiety is a normal, common psychological response to returning from injury that may require psychological skills training to address.", "points": 1
+    },
+    {
+      "examType": "final", "order": 8, "type": "mc",
+      "question": "A mastery coaching climate emphasizes:",
+      "options": ["Comparing athletes to teammates publicly", "Personal improvement and effort over competitive outcome", "Only rewarding top performers", "Winning at every developmental age group"],
+      "answer": "B", "explanation": "Mastery climates promote intrinsic motivation by valuing personal growth, effort, and skill development over social comparison and winning.", "points": 1
+    },
+    {
+      "examType": "final", "order": 9, "type": "mc",
+      "question": "A pre-performance routine is most valuable for athletes because it:",
+      "options": ["Replaces the need for warm-up", "Eliminates all competitive anxiety", "Creates a consistent optimal mental and physical readiness state before performance", "Only works for individual sports"],
+      "answer": "C", "explanation": "Pre-performance routines build consistency in mental and physical preparation, promoting optimal arousal, focus, and confidence.", "points": 1
+    },
+    {
+      "examType": "final", "order": 10, "type": "mc",
+      "question": "Sport ethics includes which principle?",
+      "options": ["Winning by any means necessary", "Respecting opponents, rules, and the spirit of fair competition", "Using PEDs if undetectable", "Only following rules when officials are watching"],
+      "answer": "B", "explanation": "Sport ethics requires respect for opponents, officials, and the rules — and adherence to the spirit of fair competition beyond just letter-of-the-law compliance.", "points": 1
+    },
+    {
+      "examType": "final", "order": 11, "type": "mc",
+      "question": "The Kübler-Ross model is applied to sport injury because athletes:",
+      "options": ["Experience physical symptoms identical to grief", "Often progress through emotional stages (denial, anger, bargaining, depression, acceptance) after serious injury", "Require medical grief counseling", "Only experience two emotional stages after injury"],
+      "answer": "B", "explanation": "Serious sport injuries trigger grief-like responses as athletes face loss of sport identity, role, and normal routine.", "points": 1
+    },
+    {
+      "examType": "final", "order": 12, "type": "mc",
+      "question": "Verbal persuasion as a source of self-efficacy is most effective when it comes from:",
+      "options": ["Strangers with no sport knowledge", "Credible, knowledgeable sources like coaches and experienced athletes", "Social media comments", "General public encouragement"],
+      "answer": "B", "explanation": "Verbal encouragement is most effective when it comes from credible, knowledgeable sources whose expertise makes their assessment meaningful to the athlete.", "points": 1
+    },
+    {
+      "examType": "final", "order": 13, "type": "mc",
+      "question": "Which is a psychological warning sign of burnout in athletes?",
+      "options": ["Increased training enthusiasm", "Depression, irritability, and loss of motivation for sport", "Improved competitive performance", "Higher self-confidence and energy"],
+      "answer": "B", "explanation": "Psychological burnout signs include persistent mood disturbance, loss of interest in sport, depression, irritability, and chronic motivational decline.", "points": 1
+    },
+    {
+      "examType": "final", "order": 14, "type": "mc",
+      "question": "The PETTLEP imagery model stands for Physical, Environment, Task, Timing, Learning, Emotion, and:",
+      "options": ["Power", "Perspective", "Performance", "Practice"],
+      "answer": "B", "explanation": "PETTLEP = Physical, Environment, Task, Timing, Learning, Emotion, Perspective — a comprehensive framework for functional athletic imagery.", "points": 1
+    },
+    {
+      "examType": "final", "order": 15, "type": "mc",
+      "question": "A Personal Mental Performance Plan combines which key mental skills?",
+      "options": ["Only relaxation techniques", "Goal setting, imagery, concentration, arousal control, and confidence strategies", "Only pre-game routines", "Physical warm-up plans only"],
+      "answer": "B", "explanation": "A comprehensive mental performance plan integrates multiple psychological skills — goals, imagery, focus, arousal regulation, and confidence — customized for the individual.", "points": 1
+    },
+    {
+      "examType": "final", "order": 16, "type": "mc",
+      "question": "Fun Integration Theory research shows youth athletes define fun primarily through:",
+      "options": ["Winning games and championships", "Trying hard, positive team dynamics, learning, and coach support", "Only social activities off the field", "Earning external awards and recognition"],
+      "answer": "B", "explanation": "Research finds youth athletes rank effort, positive social experience, learning, and supportive coaches as their primary definitions of fun — far above winning.", "points": 1
+    },
+    {
+      "examType": "final", "order": 17, "type": "mc",
+      "question": "Autonomy support in sport means coaches:",
+      "options": ["Make all decisions for athletes without input", "Provide reasons, acknowledge feelings, and give athletes choice in training decisions", "Avoid all athlete input in practice planning", "Focus exclusively on technical skill correction"],
+      "answer": "B", "explanation": "Autonomy support means explaining rationale, acknowledging athletes' feelings, and providing meaningful choice — fostering intrinsic motivation.", "points": 1
+    },
+    {
+      "examType": "final", "order": 18, "type": "mc",
+      "question": "The 'sandwich' feedback model is effective in sport coaching because:",
+      "options": ["It avoids all negative feedback", "It delivers corrective feedback between positive comments, increasing receptiveness", "It only provides positive feedback", "It focuses only on what athletes did wrong"],
+      "answer": "B", "explanation": "The sandwich model wraps corrective feedback in positive framing, making athletes more receptive and less defensive to criticism.", "points": 1
+    },
+    {
+      "examType": "final", "order": 19, "type": "mc",
+      "question": "Which coaching practice best supports social cohesion in a team?",
+      "options": ["Ranking athletes publicly by performance", "Promoting team rituals, shared goals, and opportunities for athletes to bond", "Separating the best athletes from lower performers", "Avoiding all team-building activities"],
+      "answer": "B", "explanation": "Social cohesion is built through shared experiences, team rituals, mutual support, and deliberate relationship-building opportunities.", "points": 1
+    },
+    {
+      "examType": "final", "order": 20, "type": "mc",
+      "question": "Mindfulness training benefits athletes primarily by:",
+      "options": ["Eliminating all competitive thoughts", "Building present-moment awareness and reducing the impact of distracting thoughts", "Replacing technical skill practice", "Increasing cognitive anxiety before competition"],
+      "answer": "B", "explanation": "Mindfulness trains athletes to notice distracting thoughts without being controlled by them and return attention to present-moment performance.", "points": 1
+    }
+  ]
+}

@@ -1,0 +1,1220 @@
+{
+  "slug": "marketing-basics",
+  "name": "Marketing Basics",
+  "nameZh": "市场营销基础",
+  "credits": 0.5,
+  "department": "Business",
+  "type": "Elective",
+  "description": "An introduction to core marketing concepts including the marketing mix, consumer behavior, market research, digital marketing, branding, and building a complete marketing plan.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "What Is Marketing?",
+      "titleZh": "什么是市场营销？",
+      "objectives": "Define marketing and explain its role in business; understand the marketing mix (4Ps); distinguish marketing from selling; describe how marketing creates value for customers and firms.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process",
+      "readingNote": "OpenStax Principles of Marketing Ch 1 — Marketing and the Marketing Process",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/v/entrepreneurship-marketing",
+      "videoNote": "Khan Academy — Introduction to Marketing",
+      "video2Url": "https://www.youtube.com/watch?v=gSEBfh-SPUE",
+      "video2Note": "YouTube — What Is Marketing? The 4Ps Explained",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/e/marketing-basics",
+      "practiceNote": "Khan Academy — Marketing Basics Practice",
+      "assignment": "Find a real-world advertisement and identify how it uses each of the 4Ps (Product, Price, Place, Promotion); write a paragraph explaining the value the product offers to its target customer.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Marketing Environment & Research",
+      "titleZh": "营销环境与调研",
+      "objectives": "Distinguish the micro and macro marketing environments; describe how PESTLE factors affect marketing decisions; explain the steps in the marketing research process and the types of market data.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/2-1-the-role-of-marketing-research",
+      "readingNote": "OpenStax Principles of Marketing Ch 2 — Strategic Planning in Marketing",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/v/market-research",
+      "videoNote": "Khan Academy — Market Research Overview",
+      "video2Url": "https://www.youtube.com/watch?v=fNDeL1bm5EM",
+      "video2Note": "YouTube — PESTLE Analysis Explained",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/e/market-research",
+      "practiceNote": "Khan Academy — Market Research Practice",
+      "assignment": "Choose a business and conduct a PESTLE analysis identifying at least two factors in each category; explain how two of those factors could affect their marketing strategy.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Consumer Behavior",
+      "titleZh": "消费者行为",
+      "objectives": "Identify the steps in the consumer buying decision process; explain psychological, social, cultural, and situational factors that influence purchasing decisions; apply consumer behavior insights to marketing strategy.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/3-1-understanding-consumer-markets-and-buying-behavior",
+      "readingNote": "OpenStax Principles of Marketing Ch 3 — Consumer Markets and Buying Behavior",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/v/consumer-behavior",
+      "videoNote": "Khan Academy — Consumer Behavior",
+      "video2Url": "https://www.youtube.com/watch?v=KVOlkVDNPjE",
+      "video2Note": "YouTube — Consumer Decision Making Process",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/e/consumer-behavior",
+      "practiceNote": "Khan Academy — Consumer Behavior Practice",
+      "assignment": "Walk through the five-step consumer decision process for a recent purchase you made; identify which psychological or social factors most influenced each step and how a marketer could influence your decision.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Market Segmentation, Targeting & Positioning",
+      "titleZh": "市场细分、目标市场与定位",
+      "objectives": "Define market segmentation and explain the four major segmentation bases; describe target market selection strategies; construct a positioning statement and perceptual map.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+      "readingNote": "OpenStax Principles of Marketing Ch 5 — Market Segmentation, Targeting, and Positioning",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/v/market-segmentation",
+      "videoNote": "Khan Academy — Market Segmentation",
+      "video2Url": "https://www.youtube.com/watch?v=vHtHfS5ZBa4",
+      "video2Note": "YouTube — STP Marketing: Segmentation, Targeting, and Positioning",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/e/market-segmentation",
+      "practiceNote": "Khan Academy — Segmentation and Targeting Practice",
+      "assignment": "Choose a consumer product; segment its market using at least three segmentation bases, select a primary target segment, and write a positioning statement for that segment.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 5,
+      "title": "Product Strategy",
+      "titleZh": "产品策略",
+      "objectives": "Distinguish between core, actual, and augmented product levels; explain the product life cycle and its marketing implications; understand product mix decisions including width, length, and depth.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/9-1-the-product-life-cycle",
+      "readingNote": "OpenStax Principles of Marketing Ch 9 — Products: Consumer and Industrial Goods",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/products-and-services/v/product-life-cycle",
+      "videoNote": "Khan Academy — Product Life Cycle",
+      "video2Url": "https://www.youtube.com/watch?v=BHxQbv0MRNY",
+      "video2Note": "YouTube — Product Life Cycle: Introduction, Growth, Maturity, Decline",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/products-and-services/e/product-strategy",
+      "practiceNote": "Khan Academy — Product Strategy Practice",
+      "assignment": "Select a real product and identify which stage of the product life cycle it is currently in; recommend and justify two specific marketing strategies appropriate for that stage.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Pricing Strategy",
+      "titleZh": "定价策略",
+      "objectives": "Explain internal and external factors affecting pricing decisions; compare pricing strategies including cost-plus, value-based, competitive, penetration, and skimming; understand psychological pricing.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/11-1-the-pricing-framework-and-a-firms-pricing-objectives",
+      "readingNote": "OpenStax Principles of Marketing Ch 11 — Pricing Products and Services",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/pricing/v/pricing-strategies",
+      "videoNote": "Khan Academy — Pricing Strategies",
+      "video2Url": "https://www.youtube.com/watch?v=2MhNFp3nkyk",
+      "video2Note": "YouTube — Pricing Strategies: Penetration vs Price Skimming",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/pricing/e/pricing-strategies",
+      "practiceNote": "Khan Academy — Pricing Practice",
+      "assignment": "A new coffee shop is opening in your city; recommend and justify a pricing strategy for its signature drinks, explaining why you chose it over at least two alternative approaches.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Distribution & Place",
+      "titleZh": "分销与渠道",
+      "objectives": "Describe marketing channels and their functions; compare direct and indirect distribution; explain channel conflict and management; understand logistics, supply chain, and omnichannel strategies.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/12-1-the-role-and-functions-of-marketing-channels",
+      "readingNote": "OpenStax Principles of Marketing Ch 12 — Distribution Channels",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/distribution/v/distribution-channels",
+      "videoNote": "Khan Academy — Distribution Channels",
+      "video2Url": "https://www.youtube.com/watch?v=_SqGLzr7rTQ",
+      "video2Note": "YouTube — Marketing Channels and Distribution Strategy",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/distribution/e/distribution-channels",
+      "practiceNote": "Khan Academy — Distribution Practice",
+      "assignment": "Map the distribution channel for a product of your choice from manufacturer to consumer; identify every intermediary and explain the function each one performs.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Promotion & Advertising",
+      "titleZh": "促销与广告",
+      "objectives": "Describe the promotional mix elements (advertising, sales promotion, public relations, personal selling, direct marketing); explain the communication process in marketing; compare push and pull strategies.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements",
+      "readingNote": "OpenStax Principles of Marketing Ch 13 — The Promotion Mix",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/promotion/v/promotional-mix",
+      "videoNote": "Khan Academy — The Promotional Mix",
+      "video2Url": "https://www.youtube.com/watch?v=KoXAFHpXkLo",
+      "video2Note": "YouTube — Advertising vs Public Relations vs Sales Promotion",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/promotion/e/promotional-mix",
+      "practiceNote": "Khan Academy — Promotion Practice",
+      "assignment": "Design a simple integrated promotional campaign for a school bake sale; use at least three elements of the promotional mix and explain the role each plays in communicating your message.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Digital Marketing & Social Media",
+      "titleZh": "数字营销与社交媒体",
+      "objectives": "Identify the major digital marketing channels including SEO, email, social media, and content marketing; explain key metrics for digital campaigns; understand influencer marketing and viral content strategies.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/14-1-digital-marketing",
+      "readingNote": "OpenStax Principles of Marketing Ch 14 — Digital Marketing",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/digital-marketing/v/digital-marketing",
+      "videoNote": "Khan Academy — Digital Marketing Overview",
+      "video2Url": "https://www.youtube.com/watch?v=bixR-KIJKYM",
+      "video2Note": "YouTube — Digital Marketing Strategy for Beginners",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/digital-marketing/e/digital-marketing",
+      "practiceNote": "Khan Academy — Digital Marketing Practice",
+      "assignment": "Analyze the social media presence of a brand you follow; evaluate their content strategy, posting frequency, engagement, and use of calls-to-action; recommend two improvements.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 10,
+      "title": "Branding & Brand Management",
+      "titleZh": "品牌与品牌管理",
+      "objectives": "Define brand and explain the components of brand equity; describe strategies for building and maintaining strong brands; analyze brand extension, co-branding, and rebranding decisions.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/10-1-branding-and-brand-equity",
+      "readingNote": "OpenStax Principles of Marketing Ch 10 — Branding and Package Design",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/branding/v/brand-equity",
+      "videoNote": "Khan Academy — Brand Equity",
+      "video2Url": "https://www.youtube.com/watch?v=SKgfJxRuMRA",
+      "video2Note": "YouTube — What Is Brand Equity and Why Does It Matter?",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/branding/e/branding",
+      "practiceNote": "Khan Academy — Branding Practice",
+      "assignment": "Choose a well-known brand and assess its brand equity using the four dimensions (brand loyalty, brand awareness, perceived quality, brand associations); explain what the brand should do to strengthen its weakest dimension.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Customer Relationship Management",
+      "titleZh": "客户关系管理",
+      "objectives": "Define CRM and its role in creating long-term customer value; explain the customer lifetime value concept; describe loyalty programs and strategies for customer retention and satisfaction.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/1-4-evolution-of-the-marketing-concept",
+      "readingNote": "OpenStax Principles of Marketing Ch 1.4 — Relationship Marketing",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/v/customer-relationship-management",
+      "videoNote": "Khan Academy — Customer Relationship Management",
+      "video2Url": "https://www.youtube.com/watch?v=g95cBFCjUd8",
+      "video2Note": "YouTube — CRM: What It Is and Why It Matters",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/e/crm",
+      "practiceNote": "Khan Academy — CRM Practice",
+      "assignment": "Design a three-step customer journey map for a local gym showing how a prospect becomes a loyal member; identify the touchpoints and marketing actions at each stage.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 12,
+      "title": "Marketing Ethics",
+      "titleZh": "营销道德",
+      "objectives": "Identify ethical issues in marketing including deceptive advertising, privacy violations, and targeting vulnerable populations; understand consumer protection laws; apply an ethical decision-making framework to marketing scenarios.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/1-5-determining-consumer-needs-and-wants",
+      "readingNote": "OpenStax Principles of Marketing Ch 16 — Sustainable Marketing",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/v/marketing-ethics",
+      "videoNote": "Khan Academy — Marketing Ethics",
+      "video2Url": "https://www.youtube.com/watch?v=4Y6Hqf2KBHM",
+      "video2Note": "YouTube — Ethical Issues in Marketing",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/e/marketing-ethics",
+      "practiceNote": "Khan Academy — Marketing Ethics Practice",
+      "assignment": "Find a real example of a marketing campaign that raised ethical concerns; describe the issue, identify which stakeholders were harmed, and explain what the company should have done differently.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Building a Marketing Plan",
+      "titleZh": "制定营销计划",
+      "objectives": "Describe the components of a marketing plan including situation analysis, objectives, strategy, tactics, and metrics; perform a SWOT analysis; understand how to set SMART marketing objectives.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/2-3-the-marketing-plan",
+      "readingNote": "OpenStax Principles of Marketing Ch 2.3 — The Marketing Plan",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/v/marketing-plan",
+      "videoNote": "Khan Academy — Creating a Marketing Plan",
+      "video2Url": "https://www.youtube.com/watch?v=ojKhMes_0LI",
+      "video2Note": "YouTube — How to Write a Marketing Plan Step by Step",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/e/marketing-plan",
+      "practiceNote": "Khan Academy — Marketing Plan Practice",
+      "assignment": "Conduct a SWOT analysis for a business idea of your choice; write three SMART marketing objectives and outline the key tactics you would use to achieve each objective.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 14,
+      "title": "Putting It All Together: Marketing Mix in Action",
+      "titleZh": "综合运用：营销组合的实践",
+      "objectives": "Integrate all 4Ps into a cohesive marketing strategy; analyze a complete marketing case study; evaluate marketing effectiveness and identify areas for improvement.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/16-1-sustainable-marketing",
+      "readingNote": "OpenStax Principles of Marketing Ch 16 — Sustainable Marketing",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/v/marketing-strategy",
+      "videoNote": "Khan Academy — Marketing Strategy",
+      "video2Url": "https://www.youtube.com/watch?v=P1kQh1H3_Yg",
+      "video2Note": "YouTube — Integrated Marketing Strategy Case Study",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/marketing-and-distribution/marketing-introduction/e/marketing-mix",
+      "practiceNote": "Khan Academy — Marketing Mix Integration Practice",
+      "assignment": "Create a complete one-page marketing plan for a student-run business, incorporating all 4Ps, a target segment description, three SMART objectives, and two key performance indicators to measure success.",
+      "estimatedHrs": 3.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "The four elements of the marketing mix are known as:",
+      "options": ["People, Process, Physical evidence, Promotion", "Product, Price, Place, Promotion", "Planning, Pricing, Placement, Publicity", "Product, Profit, Positioning, Promotion"],
+      "answer": "Product, Price, Place, Promotion",
+      "explanation": "The classic 4Ps of marketing — Product, Price, Place, and Promotion — form the foundational marketing mix that companies use to market their offerings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Marketing differs from selling because marketing:",
+      "options": ["Focuses only on transactions", "Focuses on identifying and satisfying customer needs profitably", "Occurs only after a product is made", "Is only about advertising"],
+      "answer": "Focuses on identifying and satisfying customer needs profitably",
+      "explanation": "While selling pushes existing products to customers, marketing takes a broader approach: researching needs, creating products that satisfy those needs, and building long-term relationships.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "A value proposition is:",
+      "options": ["The price charged for a product", "The promise of value a product delivers to customers", "The company's mission statement", "The total revenue from all sales"],
+      "answer": "The promise of value a product delivers to customers",
+      "explanation": "A value proposition explains why customers should choose a company's product over alternatives — the unique combination of benefits it provides.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "The 'Place' element of the marketing mix refers to:",
+      "options": ["Where the business headquarters is located", "How the product is made available to customers (distribution)", "The physical design of the product", "Where advertisements are placed"],
+      "answer": "How the product is made available to customers (distribution)",
+      "explanation": "Place in the marketing mix concerns how and where products are distributed and made accessible to the target market — including channels, locations, and logistics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Which of the following is an example of a service rather than a physical product?",
+      "options": ["A laptop computer", "A haircut", "A bag of coffee beans", "A textbook"],
+      "answer": "A haircut",
+      "explanation": "Services are intangible — they cannot be seen, touched, or stored. A haircut exemplifies service characteristics: intangibility, inseparability, variability, and perishability.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Primary market research data is:",
+      "options": ["Data collected from government reports", "Data already published by other organizations", "Original data collected directly for a specific research purpose", "Data from industry trade associations"],
+      "answer": "Original data collected directly for a specific research purpose",
+      "explanation": "Primary research involves gathering new data firsthand through surveys, interviews, focus groups, or observations — customized to the researcher's specific question.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "PESTLE analysis examines which external factors?",
+      "options": ["Product, Elasticity, Supply, Technology, Labor, Expenses", "Political, Economic, Social, Technological, Legal, Environmental", "Price, Employees, Segments, Target, Location, Expansion", "Profit, Equity, Sales, Trade, Logistics, Efficiency"],
+      "answer": "Political, Economic, Social, Technological, Legal, Environmental",
+      "explanation": "PESTLE is a framework for analyzing macro-environmental factors: Political, Economic, Social, Technological, Legal, and Environmental.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "A focus group in market research involves:",
+      "options": ["A large-scale online survey", "A small group discussion moderated to gather qualitative insights", "Statistical analysis of sales data", "A one-on-one interview with an expert"],
+      "answer": "A small group discussion moderated to gather qualitative insights",
+      "explanation": "Focus groups bring together 6–12 participants to discuss a product, brand, or concept in depth, generating rich qualitative data about attitudes and perceptions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Secondary market research uses:",
+      "options": ["Surveys designed by the researcher", "Data that has already been collected and published by others", "Experiments conducted by the firm", "Personal interviews with consumers"],
+      "answer": "Data that has already been collected and published by others",
+      "explanation": "Secondary research analyzes existing data (government statistics, industry reports, academic studies) — faster and cheaper than primary research but less tailored to specific needs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "The main purpose of market research is to:",
+      "options": ["Advertise a product to potential customers", "Reduce uncertainty in marketing decision-making", "Set the price of a product", "Design the product packaging"],
+      "answer": "Reduce uncertainty in marketing decision-making",
+      "explanation": "Market research gathers information about customers, competitors, and the environment to help managers make better-informed, lower-risk marketing decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The first step in the consumer buying decision process is:",
+      "options": ["Information search", "Purchase decision", "Problem recognition", "Post-purchase evaluation"],
+      "answer": "Problem recognition",
+      "explanation": "The buying process begins when the consumer recognizes a need or problem — the gap between their current state and desired state that motivates them to seek a solution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Social factors that influence consumer behavior include:",
+      "options": ["Personal income and savings", "Perception and learning", "Family, reference groups, and social class", "Occupation and lifestyle"],
+      "answer": "Family, reference groups, and social class",
+      "explanation": "Social factors include the influence of family, peer groups, social media influencers, and social class on consumer attitudes and purchasing decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Brand loyalty is an example of which consumer behavior factor?",
+      "options": ["Cultural factor", "Social factor", "Personal factor", "Psychological factor"],
+      "answer": "Psychological factor",
+      "explanation": "Brand loyalty relates to learning and attitudes — psychological factors that determine how consumers perceive and respond to brands over time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Cognitive dissonance after a purchase refers to:",
+      "options": ["Excitement about a new product", "Doubt or regret a consumer feels after making a purchase", "The process of comparing alternatives", "Satisfaction with a product's performance"],
+      "answer": "Doubt or regret a consumer feels after making a purchase",
+      "explanation": "Post-purchase cognitive dissonance (buyer's remorse) occurs when consumers question whether they made the right choice, especially for high-involvement purchases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "A consumer is more likely to engage in extensive problem-solving for:",
+      "options": ["A routine grocery item", "A high-involvement purchase like a car or laptop", "An impulse purchase at checkout", "A product bought out of habit"],
+      "answer": "A high-involvement purchase like a car or laptop",
+      "explanation": "High-involvement purchases are expensive, risky, or personally important — consumers spend more time searching for information and evaluating alternatives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Demographic segmentation divides markets based on:",
+      "options": ["Lifestyle and personality", "Age, income, gender, and education", "Geographic location", "Product usage rate"],
+      "answer": "Age, income, gender, and education",
+      "explanation": "Demographic segmentation uses measurable population characteristics — age, gender, income, education, occupation, family size — to divide the market.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Psychographic segmentation is based on:",
+      "options": ["Gender and age", "Location and climate", "Values, interests, lifestyles, and personality traits", "Purchase frequency and brand loyalty"],
+      "answer": "Values, interests, lifestyles, and personality traits",
+      "explanation": "Psychographic segmentation groups consumers by psychological characteristics — values, attitudes, interests, and lifestyle choices that influence buying behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "A perceptual map is used in marketing to:",
+      "options": ["Track distribution channels", "Show how consumers perceive competing brands on key attributes", "Plan a company's budget", "Visualize supply chain logistics"],
+      "answer": "Show how consumers perceive competing brands on key attributes",
+      "explanation": "A perceptual map plots brands based on consumer perceptions across two dimensions (e.g., price vs. quality), helping marketers identify competitive positioning gaps.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "An undifferentiated marketing strategy targets:",
+      "options": ["Multiple distinct segments with different offers", "A single niche segment", "The entire market with one standard offer", "Only online consumers"],
+      "answer": "The entire market with one standard offer",
+      "explanation": "An undifferentiated (mass marketing) strategy treats the market as homogeneous and uses one marketing mix for all consumers — efficient but less tailored.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "A positioning statement communicates:",
+      "options": ["The company's financial goals", "The unique benefit a product offers to a target segment vs. competitors", "The production process of a product", "The distribution network of a firm"],
+      "answer": "The unique benefit a product offers to a target segment vs. competitors",
+      "explanation": "A positioning statement defines the target market, the product category, the key benefit, and why consumers should believe it — differentiating the brand in customers' minds.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "In the product life cycle, sales grow most rapidly during the:",
+      "options": ["Introduction stage", "Growth stage", "Maturity stage", "Decline stage"],
+      "answer": "Growth stage",
+      "explanation": "During the growth stage, consumer awareness increases, sales rise rapidly, and new competitors enter the market attracted by profitability.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "The core product refers to:",
+      "options": ["The physical features and packaging of a product", "The fundamental benefit or problem-solving service the customer buys", "The brand name and warranty", "After-sales support"],
+      "answer": "The fundamental benefit or problem-solving service the customer buys",
+      "explanation": "The core product is the essential benefit — what the customer is really buying. A drill's core product is the hole, not the drill itself.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "In the maturity stage of the product life cycle, a typical marketing strategy is:",
+      "options": ["Heavy advertising to build awareness", "Rapid distribution expansion", "Market modification and product differentiation to maintain share", "Immediate product withdrawal"],
+      "answer": "Market modification and product differentiation to maintain share",
+      "explanation": "In maturity, competition is intense and growth slows; marketers focus on retaining market share through product improvements, promotions, and finding new market segments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Which stage of the product life cycle typically involves the highest marketing costs relative to sales?",
+      "options": ["Growth", "Maturity", "Introduction", "Decline"],
+      "answer": "Introduction",
+      "explanation": "In the introduction stage, companies must build awareness and distribution, resulting in high marketing costs while sales volume is still low.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Product mix 'depth' refers to:",
+      "options": ["The number of different product lines offered", "The number of variants within a single product line", "The total number of products sold", "The geographic spread of products"],
+      "answer": "The number of variants within a single product line",
+      "explanation": "Product mix depth measures how many variations (sizes, flavors, colors) exist within a single product line — e.g., a shampoo line offered in 8 different formulas.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Cost-plus pricing sets the price by:",
+      "options": ["Matching competitors' prices exactly", "Adding a markup to the total cost of producing the product", "Charging what the customer is willing to pay", "Setting price below competitors to gain market share"],
+      "answer": "Adding a markup to the total cost of producing the product",
+      "explanation": "Cost-plus pricing = total cost + desired profit margin. It is simple and ensures costs are covered, but may ignore what customers value or what competitors charge.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Price skimming involves:",
+      "options": ["Setting a low initial price to capture market share quickly", "Setting a high initial price and lowering it over time", "Setting prices the same as competitors", "Offering deep discounts to clear inventory"],
+      "answer": "Setting a high initial price and lowering it over time",
+      "explanation": "Price skimming targets early adopters willing to pay a premium, then lowers price as competition increases and the mass market is targeted.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Penetration pricing is best suited for:",
+      "options": ["Luxury goods with inelastic demand", "Products with a high-income target market", "Gaining rapid market share in a price-sensitive market", "Products with no competitors"],
+      "answer": "Gaining rapid market share in a price-sensitive market",
+      "explanation": "Penetration pricing sets a low initial price to attract a large customer base quickly — effective in competitive markets with price-sensitive consumers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "The psychological pricing strategy of charging $9.99 instead of $10 exploits:",
+      "options": ["Economic theory of demand elasticity", "The tendency for consumers to focus on the leftmost digit of a price", "Cost-plus markup calculations", "Competitive parity pricing"],
+      "answer": "The tendency for consumers to focus on the leftmost digit of a price",
+      "explanation": "Charm pricing (odd-even pricing) works because consumers perceive $9.99 as significantly less than $10 — anchoring on the leftmost digit.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Value-based pricing sets price based on:",
+      "options": ["The firm's production cost", "Competitors' prices only", "The perceived value of the product to the customer", "Government price regulations"],
+      "answer": "The perceived value of the product to the customer",
+      "explanation": "Value-based pricing aligns price with the economic value customers place on a product — often allowing premium pricing for high-differentiation products.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "An intermediary in a distribution channel:",
+      "options": ["Produces the finished product", "Connects producers to consumers by performing distribution functions", "Sets government price regulations", "Manufactures raw materials"],
+      "answer": "Connects producers to consumers by performing distribution functions",
+      "explanation": "Intermediaries (wholesalers, retailers, agents) add value by performing functions like storage, transportation, promotion, and breaking bulk between producer and consumer.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Direct distribution means the producer:",
+      "options": ["Uses multiple wholesalers", "Sells directly to the end consumer without intermediaries", "Sells through large retailers only", "Ships products internationally"],
+      "answer": "Sells directly to the end consumer without intermediaries",
+      "explanation": "Direct distribution (e.g., a company website or factory store) eliminates intermediaries, giving the producer greater control over customer experience and higher margins.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Intensive distribution means placing products in:",
+      "options": ["Only a few exclusive outlets", "A select number of carefully chosen retailers", "As many outlets as possible", "Only online channels"],
+      "answer": "As many outlets as possible",
+      "explanation": "Intensive distribution maximizes product availability by placing it in every possible outlet — common for convenience goods like snacks, gum, or beverages.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "An omnichannel strategy integrates:",
+      "options": ["Only physical retail stores", "Multiple sales channels so customers have a seamless experience", "International distribution only", "Direct mail and TV advertising"],
+      "answer": "Multiple sales channels so customers have a seamless experience",
+      "explanation": "Omnichannel retailing seamlessly connects online stores, mobile apps, and physical stores so customers can interact with a brand consistently across all channels.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Channel conflict occurs when:",
+      "options": ["The supply chain runs smoothly", "Two or more channel members disagree about roles, pricing, or territory", "A company expands to new markets", "Consumers prefer different distribution methods"],
+      "answer": "Two or more channel members disagree about roles, pricing, or territory",
+      "explanation": "Channel conflict — between manufacturer and retailer, or between two retailers — can disrupt distribution and must be managed through clear agreements or channel policies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Which element of the promotional mix involves mass communication through paid media?",
+      "options": ["Personal selling", "Public relations", "Advertising", "Sales promotion"],
+      "answer": "Advertising",
+      "explanation": "Advertising is paid, non-personal mass communication through media such as TV, radio, print, digital, and outdoor — used to reach large audiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "A push promotional strategy focuses on:",
+      "options": ["Creating consumer demand that pulls products through channels", "Persuading intermediaries to stock and promote the product", "Using social media to engage customers directly", "Building brand loyalty among end users"],
+      "answer": "Persuading intermediaries to stock and promote the product",
+      "explanation": "A push strategy 'pushes' products through the distribution channel using trade promotions, personal selling, and incentives directed at retailers and wholesalers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Sales promotion includes tactics such as:",
+      "options": ["Long-term brand image advertising", "Issuing press releases to media", "Coupons, rebates, contests, and buy-one-get-one offers", "Creating educational content for customers"],
+      "answer": "Coupons, rebates, contests, and buy-one-get-one offers",
+      "explanation": "Sales promotions are short-term incentives designed to stimulate immediate purchasing — including coupons, sweepstakes, samples, and temporary price reductions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Public relations (PR) differs from advertising primarily because PR:",
+      "options": ["Always costs more money", "Uses earned media rather than paid media", "Targets only existing customers", "Focuses on product features exclusively"],
+      "answer": "Uses earned media rather than paid media",
+      "explanation": "PR generates unpaid media coverage (news stories, reviews, endorsements), which often carries more credibility than paid advertising.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Integrated Marketing Communications (IMC) ensures that:",
+      "options": ["A company uses only one promotional medium", "All promotional messages are consistent and reinforce each other across channels", "Marketing and finance departments share the same budget", "Only digital marketing channels are used"],
+      "answer": "All promotional messages are consistent and reinforce each other across channels",
+      "explanation": "IMC coordinates all marketing communication tools — advertising, PR, social media, packaging, personal selling — to deliver a unified, consistent message.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "SEO stands for:",
+      "options": ["Social Engagement Optimization", "Search Engine Optimization", "Sales and Exchange Operations", "Strategic Email Outreach"],
+      "answer": "Search Engine Optimization",
+      "explanation": "SEO is the process of improving a website's visibility in organic (non-paid) search engine results to drive more traffic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Click-through rate (CTR) in digital marketing measures:",
+      "options": ["The total number of website visitors per day", "The percentage of people who click an ad after seeing it", "The cost of each ad click", "The number of social media followers"],
+      "answer": "The percentage of people who click an ad after seeing it",
+      "explanation": "CTR = (clicks / impressions) × 100. It measures how compelling an ad or link is — a higher CTR indicates more relevant, engaging content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Influencer marketing works primarily by:",
+      "options": ["Paying celebrities for TV commercials", "Leveraging the credibility and audience of social media personalities to promote products", "Using government endorsements", "Sending mass email campaigns"],
+      "answer": "Leveraging the credibility and audience of social media personalities to promote products",
+      "explanation": "Influencer marketing taps into an influencer's trust relationship with their followers to promote products authentically — often more effective than traditional ads for younger audiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Content marketing involves:",
+      "options": ["Paying for ad space in traditional media", "Creating and distributing valuable, relevant content to attract and retain a target audience", "Buying followers on social media platforms", "Sending unsolicited emails to prospects"],
+      "answer": "Creating and distributing valuable, relevant content to attract and retain a target audience",
+      "explanation": "Content marketing provides value to potential customers through blogs, videos, podcasts, and infographics — building trust and brand authority rather than directly selling.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "A conversion in digital marketing refers to:",
+      "options": ["Converting a social post into a paid ad", "A visitor completing a desired action (purchase, sign-up, download)", "Changing a marketing strategy mid-campaign", "Converting video content to images"],
+      "answer": "A visitor completing a desired action (purchase, sign-up, download)",
+      "explanation": "A conversion occurs when a user takes the desired action — buying, subscribing, or downloading — indicating the marketing effort achieved its goal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Brand equity refers to:",
+      "options": ["The monetary value of a company's physical assets", "The added value a brand name gives a product beyond its functional benefits", "The total advertising budget of a company", "The number of products in a brand's portfolio"],
+      "answer": "The added value a brand name gives a product beyond its functional benefits",
+      "explanation": "Brand equity is the premium consumers are willing to pay for a branded product over a generic equivalent — built through awareness, loyalty, perceived quality, and associations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Co-branding is a strategy where:",
+      "options": ["A company creates a new brand from scratch", "Two or more brands collaborate on a single product", "A brand is extended to a new product category", "A brand reduces its product line"],
+      "answer": "Two or more brands collaborate on a single product",
+      "explanation": "Co-branding (e.g., Nike + Apple for Apple Watch Nike) combines two brands' strengths to create a product that benefits from both brands' equity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Brand awareness is important because:",
+      "options": ["It guarantees high prices", "It is the first step in building customer preference and purchase intent", "It eliminates the need for product quality", "It is only relevant for new products"],
+      "answer": "It is the first step in building customer preference and purchase intent",
+      "explanation": "Consumers must first know a brand exists before they can develop positive attitudes or buy it — brand awareness is the foundation of brand equity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Brand extension occurs when:",
+      "options": ["A company creates an entirely new brand", "An existing brand name is used for a new product in a different category", "A brand reduces its geographic reach", "Two companies merge their brands"],
+      "answer": "An existing brand name is used for a new product in a different category",
+      "explanation": "Brand extension leverages an established brand's recognition and trust to enter a new market — e.g., Apple entering headphones with AirPods.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "A strong brand name should be:",
+      "options": ["Long and descriptive of all product features", "Identical to a competitor's brand name", "Memorable, easy to pronounce, and distinctive", "Trademarked in only one country"],
+      "answer": "Memorable, easy to pronounce, and distinctive",
+      "explanation": "Effective brand names are short, memorable, distinctive, and easy to pronounce — making it easy for consumers to recognize and recall the brand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Customer Lifetime Value (CLV) represents:",
+      "options": ["The profit from a single transaction", "The total net profit a company expects from a customer over the entire relationship", "The cost of acquiring a new customer", "The annual revenue per customer"],
+      "answer": "The total net profit a company expects from a customer over the entire relationship",
+      "explanation": "CLV measures the long-term value of retaining customers — it shows why investing in customer relationships is often more profitable than constantly acquiring new ones.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "CRM software primarily helps businesses:",
+      "options": ["Manufacture products more efficiently", "Track and manage customer interactions and relationships", "Set employee salaries", "Calculate production costs"],
+      "answer": "Track and manage customer interactions and relationships",
+      "explanation": "CRM (Customer Relationship Management) systems help businesses organize customer data, track purchase history, personalize communications, and improve service quality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Customer retention is generally more profitable than customer acquisition because:",
+      "options": ["Existing customers always spend more money", "Acquiring new customers costs 5–7 times more than retaining existing ones", "Retained customers are more likely to complain", "Acquisition is illegal in most markets"],
+      "answer": "Acquiring new customers costs 5–7 times more than retaining existing ones",
+      "explanation": "Research consistently shows that retaining existing customers is far less expensive than attracting new ones — and loyal customers often spend more and refer others.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "A loyalty program is designed to:",
+      "options": ["Reduce marketing costs by eliminating promotions", "Reward repeat customers and encourage ongoing purchasing", "Attract only new customers", "Replace customer service functions"],
+      "answer": "Reward repeat customers and encourage ongoing purchasing",
+      "explanation": "Loyalty programs (points, tiers, exclusive rewards) incentivize repeat purchases and deepen the emotional and transactional relationship with the brand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Net Promoter Score (NPS) measures:",
+      "options": ["Monthly revenue growth", "How likely customers are to recommend the company to others", "The company's social media following", "Employee productivity"],
+      "answer": "How likely customers are to recommend the company to others",
+      "explanation": "NPS asks customers 'How likely are you to recommend us?' on a 0–10 scale; Promoters (9–10) minus Detractors (0–6) gives the NPS — a key indicator of customer loyalty.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Deceptive advertising involves:",
+      "options": ["Using humor to sell products", "Making false or misleading claims about a product", "Targeting competitors in ads", "Advertising to a mass market"],
+      "answer": "Making false or misleading claims about a product",
+      "explanation": "Deceptive advertising misleads consumers about a product's nature, qualities, benefits, or price — violating FTC regulations and consumer trust.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Marketing to children raises ethical concerns primarily because:",
+      "options": ["Children are not potential customers", "Children may lack the cognitive ability to critically evaluate marketing messages", "Children have unlimited purchasing power", "It is always illegal"],
+      "answer": "Children may lack the cognitive ability to critically evaluate marketing messages",
+      "explanation": "Young children often cannot distinguish advertising from entertainment or critically evaluate persuasion attempts, making them a vulnerable population that requires ethical consideration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Greenwashing refers to:",
+      "options": ["Environmentally friendly manufacturing processes", "Falsely claiming products are eco-friendly for marketing purposes", "Paying employees a living wage", "Reducing a company's carbon footprint"],
+      "answer": "Falsely claiming products are eco-friendly for marketing purposes",
+      "explanation": "Greenwashing misleads consumers into thinking a product or company is more environmentally responsible than it actually is, exploiting growing environmental consciousness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "The FTC (Federal Trade Commission) regulates advertising in the US to:",
+      "options": ["Set prices for all consumer goods", "Ensure advertising is truthful and not deceptive", "Manage the federal budget", "Control social media platforms"],
+      "answer": "Ensure advertising is truthful and not deceptive",
+      "explanation": "The FTC enforces consumer protection laws, requiring advertising to be truthful, substantiated, and not misleading — protecting consumers from fraudulent marketing practices.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Cause-related marketing involves:",
+      "options": ["Marketing products that cause health problems", "A company linking its sales to a charitable cause", "Advertising to cause consumer panic", "Research into the causes of market failure"],
+      "answer": "A company linking its sales to a charitable cause",
+      "explanation": "Cause-related marketing ties product purchases to charitable donations, generating positive PR and appealing to consumers who want their purchases to have social impact.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "A SWOT analysis examines a company's:",
+      "options": ["Sales, Wages, Operations, and Technology", "Strengths, Weaknesses, Opportunities, and Threats", "Strategies, Workers, Objectives, and Tactics", "Supply, Wholesale, Output, and Trade"],
+      "answer": "Strengths, Weaknesses, Opportunities, and Threats",
+      "explanation": "SWOT analysis evaluates internal factors (Strengths, Weaknesses) and external factors (Opportunities, Threats) to inform strategic marketing planning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "A SMART marketing objective must be:",
+      "options": ["Strategic, Measurable, Actionable, Relevant, Targeted", "Specific, Measurable, Achievable, Relevant, Time-bound", "Simple, Manageable, Attractive, Realistic, Tested", "Synchronized, Marketed, Authorized, Realistic, Tracked"],
+      "answer": "Specific, Measurable, Achievable, Relevant, Time-bound",
+      "explanation": "SMART objectives give clear direction for marketing efforts: they specify exactly what is to be achieved (Specific), how success will be measured (Measurable), within a realistic timeframe (Time-bound).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "The situation analysis in a marketing plan typically includes:",
+      "options": ["Next year's budget forecast", "A SWOT analysis and review of the marketing environment", "Employee performance reviews", "Production process diagrams"],
+      "answer": "A SWOT analysis and review of the marketing environment",
+      "explanation": "The situation analysis is the foundation of a marketing plan — it assesses where the company stands now using SWOT, competitive analysis, and environmental scanning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Key Performance Indicators (KPIs) in marketing are used to:",
+      "options": ["Set employee salaries", "Measure whether marketing objectives are being achieved", "Choose which markets to enter", "Design product packaging"],
+      "answer": "Measure whether marketing objectives are being achieved",
+      "explanation": "KPIs are quantifiable metrics (sales growth, market share, conversion rate, CLV) that allow marketers to track progress toward their objectives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Which section of the marketing plan outlines HOW the company will achieve its objectives?",
+      "options": ["Mission statement", "Situation analysis", "Marketing strategy and tactics", "Financial projections"],
+      "answer": "Marketing strategy and tactics",
+      "explanation": "The strategy section describes the overall approach (target market, positioning), while tactics specify the specific actions — campaigns, promotions, pricing — that will implement the strategy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "An integrated marketing strategy ensures that:",
+      "options": ["Different departments have separate marketing budgets", "All 4Ps are aligned with each other and with the target market's needs", "Advertising spending is minimized", "Only digital channels are used"],
+      "answer": "All 4Ps are aligned with each other and with the target market's needs",
+      "explanation": "An effective marketing strategy integrates Product, Price, Place, and Promotion so they work together coherently to deliver the right value to the target customer.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Return on Marketing Investment (ROMI) is calculated as:",
+      "options": ["Marketing costs divided by number of ads", "Net profit from marketing minus marketing costs, divided by marketing costs", "Total sales divided by marketing budget", "Customer satisfaction score divided by ad spend"],
+      "answer": "Net profit from marketing minus marketing costs, divided by marketing costs",
+      "explanation": "ROMI = (Net profit attributable to marketing − Marketing investment) / Marketing investment × 100. It measures the financial return generated by marketing activities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "A/B testing in marketing involves:",
+      "options": ["Comparing two versions of a marketing element to see which performs better", "Testing a product in two different markets simultaneously", "Asking A-list celebrities and B-list celebrities to endorse a product", "Alternating between two advertising agencies"],
+      "answer": "Comparing two versions of a marketing element to see which performs better",
+      "explanation": "A/B testing (split testing) shows version A to one group and version B to another, measuring which drives better results — allowing data-driven marketing optimization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Market share is calculated as:",
+      "options": ["A firm's total revenue divided by its costs", "A firm's sales as a percentage of total industry sales", "The number of customers divided by the population", "Annual growth rate of a company"],
+      "answer": "A firm's sales as a percentage of total industry sales",
+      "explanation": "Market share = (Company sales / Total market sales) × 100. It measures a company's relative competitive position within its industry.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "A company that continually researches customer needs and adjusts its marketing mix is practicing:",
+      "options": ["Sales orientation", "Production orientation", "Marketing orientation", "Financial orientation"],
+      "answer": "Marketing orientation",
+      "explanation": "A marketing-oriented company puts customer needs at the center of all decisions, continuously gathering market intelligence and adapting its offerings to satisfy customers better than competitors.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is NOT one of the 4Ps of the marketing mix?",
+      "options": ["Product", "Profit", "Price", "Place"],
+      "answer": "Profit",
+      "explanation": "The 4Ps are Product, Price, Place, and Promotion. Profit is an outcome of marketing success, not an element of the marketing mix.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Which type of market research involves direct observation of consumers in their natural setting?",
+      "options": ["Survey research", "Experimental research", "Ethnographic research", "Secondary research"],
+      "answer": "Ethnographic research",
+      "explanation": "Ethnographic research involves researchers observing consumers in their natural environment to understand behavior as it actually occurs — providing deep contextual insights.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Post-purchase behavior is important to marketers because:",
+      "options": ["It determines the initial price of a product", "Satisfied customers create word-of-mouth referrals and repeat purchases", "It occurs before the consumer makes a purchase decision", "It is only relevant for luxury goods"],
+      "answer": "Satisfied customers create word-of-mouth referrals and repeat purchases",
+      "explanation": "Post-purchase satisfaction drives customer loyalty and word-of-mouth, while dissatisfaction leads to returns and negative reviews — both critical to brand reputation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Behavioral segmentation divides markets based on:",
+      "options": ["Age and income", "Geographic location", "Purchase behavior, usage rate, and brand loyalty", "Personality and lifestyle"],
+      "answer": "Purchase behavior, usage rate, and brand loyalty",
+      "explanation": "Behavioral segmentation groups consumers by actual purchase behavior — how often they buy, how much they use, and how loyal they are to specific brands.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "In the introduction stage of the product life cycle, profits are typically:",
+      "options": ["At their highest point", "Negative or very low due to high launch costs", "Stable and predictable", "Growing rapidly along with sales"],
+      "answer": "Negative or very low due to high launch costs",
+      "explanation": "During introduction, sales are low and marketing/distribution costs are high, typically resulting in losses or minimal profit.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A company prices a new product at $199 to signal quality while remaining just below $200. This is an example of:",
+      "options": ["Penetration pricing", "Skimming pricing", "Psychological pricing", "Competition-based pricing"],
+      "answer": "Psychological pricing",
+      "explanation": "Pricing at $199 uses the just-below effect — consumers perceive it as significantly less than $200, while the .99 ending can also signal a deal.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Exclusive distribution (like a Rolex boutique) is most appropriate for:",
+      "options": ["Convenience goods", "Staple goods", "Luxury or specialty goods", "Generic commodity products"],
+      "answer": "Luxury or specialty goods",
+      "explanation": "Exclusive distribution limits a product to a very small number of prestigious outlets, reinforcing the brand's luxury image and exclusivity.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Which promotional element is most effective for complex, high-value B2B sales?",
+      "options": ["Mass advertising", "Coupon distribution", "Personal selling", "Social media posts"],
+      "answer": "Personal selling",
+      "explanation": "Complex B2B sales require relationship-building, needs assessment, and tailored solutions — strengths of personal selling that mass advertising cannot replicate.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Which metric measures the percentage of website visitors who take a desired action?",
+      "options": ["Click-through rate", "Conversion rate", "Bounce rate", "Impression share"],
+      "answer": "Conversion rate",
+      "explanation": "Conversion rate = (conversions / total visitors) × 100. It measures the effectiveness of a website or campaign in achieving its goal (purchase, sign-up, etc.).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "The primary purpose of sales promotions is to:",
+      "options": ["Build long-term brand image", "Generate immediate consumer action or purchase", "Replace advertising in the promotional mix", "Improve product quality"],
+      "answer": "Generate immediate consumer action or purchase",
+      "explanation": "Sales promotions use short-term incentives (discounts, coupons, contests) to stimulate quick buying decisions — complementing the longer-term brand-building of advertising.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "A SWOT analysis identifies Opportunities as:",
+      "options": ["Internal strengths of the company", "Internal weaknesses of the company", "External factors the company can exploit to its advantage", "External threats from competitors"],
+      "answer": "External factors the company can exploit to its advantage",
+      "explanation": "Opportunities in SWOT are external — trends, market gaps, regulatory changes, or competitor weaknesses that the company can capitalize on.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Brand loyalty is valuable to a company because loyal customers:",
+      "options": ["Are always the most profitable segment", "Are less price-sensitive and generate repeat revenue", "Require more marketing spending", "Only buy during sales"],
+      "answer": "Are less price-sensitive and generate repeat revenue",
+      "explanation": "Loyal customers tend to repurchase consistently, pay premium prices, require less persuasion, and often recommend the brand to others.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "The 'augmented product' level includes:",
+      "options": ["Only the physical product itself", "The core benefit the consumer buys", "Additional features like warranty, delivery, and after-sale service", "The brand name only"],
+      "answer": "Additional features like warranty, delivery, and after-sale service",
+      "explanation": "The augmented product goes beyond the physical product to include extra services and benefits — delivery, installation, warranty, and customer support — that differentiate offerings.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Geographic segmentation divides markets by:",
+      "options": ["Income and education level", "Personality traits and values", "Location such as country, region, city, or climate", "Product usage frequency"],
+      "answer": "Location such as country, region, city, or climate",
+      "explanation": "Geographic segmentation recognizes that customer needs, preferences, and behaviors often vary by location — from country-level cultural differences to local climate needs.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "A pull promotional strategy aims to:",
+      "options": ["Push products through wholesalers to retailers", "Create consumer demand that pulls products through the distribution channel", "Reduce the number of distribution intermediaries", "Lower production costs"],
+      "answer": "Create consumer demand that pulls products through the distribution channel",
+      "explanation": "A pull strategy targets end consumers directly with advertising and promotions, creating demand that causes retailers to stock the product in response to consumer requests.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes relationship marketing?",
+      "options": ["Focusing exclusively on making single transactions", "Building long-term mutually beneficial relationships with customers", "Reducing the price to attract new buyers", "Advertising on social media platforms"],
+      "answer": "Building long-term mutually beneficial relationships with customers",
+      "explanation": "Relationship marketing prioritizes long-term customer loyalty over individual transactions, recognizing that retention and lifetime value create more sustainable profitability.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Which digital marketing channel involves earning placement in search results without paying per click?",
+      "options": ["Pay-per-click advertising", "Display advertising", "Search Engine Optimization (SEO)", "Affiliate marketing"],
+      "answer": "Search Engine Optimization (SEO)",
+      "explanation": "SEO improves a website's organic (free) rankings in search results through relevant content, site structure, and backlinks — distinct from paid search advertising.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Which segmentation strategy is likely used by Netflix to recommend content?",
+      "options": ["Demographic segmentation only", "Geographic segmentation", "Behavioral and psychographic segmentation using viewing data", "Undifferentiated mass marketing"],
+      "answer": "Behavioral and psychographic segmentation using viewing data",
+      "explanation": "Netflix uses algorithms analyzing viewing history, ratings, and preferences (behavioral and psychographic data) to personalize recommendations for each subscriber.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "When a cereal brand introduces a new granola bar product, this is an example of:",
+      "options": ["Brand dilution", "Brand extension", "Co-branding", "Private label branding"],
+      "answer": "Brand extension",
+      "explanation": "Brand extension uses an existing brand name in a new product category — leveraging established brand recognition while diversifying the product portfolio.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following is considered unethical targeting in marketing?",
+      "options": ["Targeting college students with textbook discounts", "Targeting elderly consumers with misleading high-pressure timeshare sales tactics", "Targeting families with children's educational products", "Targeting fitness enthusiasts with gym memberships"],
+      "answer": "Targeting elderly consumers with misleading high-pressure timeshare sales tactics",
+      "explanation": "Targeting vulnerable populations (elderly, children, financially distressed) with deceptive or manipulative tactics violates ethical marketing principles and often legal standards.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "The marketing concept holds that firms should:",
+      "options": ["Produce as much as possible to lower unit costs", "Focus on making sales regardless of customer needs", "Identify and satisfy customer needs more effectively than competitors", "Maximize short-term profit above all else"],
+      "answer": "Identify and satisfy customer needs more effectively than competitors",
+      "explanation": "The marketing concept states that organizational success comes from determining the needs of target markets and delivering desired satisfactions better than competitors.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "A company with a high NPS (Net Promoter Score) likely has:",
+      "options": ["Many detractors who complain online", "A large number of loyal customers who recommend the brand to others", "High advertising spending", "Many products in its portfolio"],
+      "answer": "A large number of loyal customers who recommend the brand to others",
+      "explanation": "A high NPS indicates more promoters (9–10 ratings) than detractors (0–6) — customers who actively recommend the brand, driving organic growth.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Which of the following is an example of a push promotional strategy?",
+      "options": ["A consumer campaign asking fans to share a hashtag", "A TV commercial targeting end consumers", "A trade promotion offering retailers discounts for prominently displaying the product", "A social media influencer review"],
+      "answer": "A trade promotion offering retailers discounts for prominently displaying the product",
+      "explanation": "Push strategies direct promotions at channel intermediaries (retailers, wholesalers) to encourage them to stock and promote the product — 'pushing' it toward consumers.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "When a store like Walmart sells products under its own brand name (e.g., Great Value), this is called:",
+      "options": ["Co-branding", "Brand extension", "Private label branding", "Brand dilution"],
+      "answer": "Private label branding",
+      "explanation": "Private label (store brand) products are manufactured by a third party but sold under the retailer's own brand name — typically at a lower price than national brands.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Content marketing primarily generates value by:",
+      "options": ["Interrupting consumers with paid advertisements", "Providing useful, relevant information that attracts and engages the target audience", "Reducing the price of products", "Expanding physical distribution"],
+      "answer": "Providing useful, relevant information that attracts and engages the target audience",
+      "explanation": "Content marketing builds trust and brand authority by offering genuinely useful content — rather than selling directly — establishing the brand as a knowledgeable resource.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "A marketing channel that goes from manufacturer → wholesaler → retailer → consumer is called:",
+      "options": ["A zero-level channel", "A one-level channel", "A two-level channel", "A direct channel"],
+      "answer": "A two-level channel",
+      "explanation": "Channel levels count the number of intermediaries. Manufacturer → Wholesaler → Retailer → Consumer has two intermediaries (wholesaler and retailer), making it a two-level channel.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "The decline stage of the product life cycle is characterized by:",
+      "options": ["Rapidly increasing sales and new competitors", "Stable sales and strong profits", "Falling sales, shrinking market, and possible product discontinuation", "High initial marketing investment"],
+      "answer": "Falling sales, shrinking market, and possible product discontinuation",
+      "explanation": "In the decline stage, sales fall due to changing consumer preferences, technology shifts, or new alternatives — firms must decide whether to harvest, divest, or rejuvenate the product.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Cost-plus pricing guarantees coverage of costs but may fail because it:",
+      "options": ["Is too complex to calculate", "Ignores what customers value and what competitors charge", "Always sets prices too low", "Cannot be used for services"],
+      "answer": "Ignores what customers value and what competitors charge",
+      "explanation": "Cost-plus pricing is internally focused; it may result in prices that are too high (losing sales) or too low (leaving money on the table) if market realities are not considered.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Greenwashing is problematic because it:",
+      "options": ["Makes products more expensive to manufacture", "Misleads consumers who want to make environmentally responsible choices", "Reduces demand for sustainable products", "Is encouraged by environmental regulations"],
+      "answer": "Misleads consumers who want to make environmentally responsible choices",
+      "explanation": "Greenwashing exploits consumers' environmental values with false or exaggerated eco-friendly claims, eroding trust and undermining genuine sustainability efforts.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Which of the following is the BEST example of a SMART marketing objective?",
+      "options": ["Increase brand awareness", "Improve our social media presence", "Grow Instagram followers by 20% within 3 months through a daily posting schedule", "Do more marketing"],
+      "answer": "Grow Instagram followers by 20% within 3 months through a daily posting schedule",
+      "explanation": "This objective is Specific (Instagram followers), Measurable (20%), Achievable (daily posts), Relevant (social media growth), and Time-bound (3 months).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Market penetration as a growth strategy involves:",
+      "options": ["Entering new geographic markets", "Developing new products for existing markets", "Selling more of existing products to existing customers", "Diversifying into unrelated industries"],
+      "answer": "Selling more of existing products to existing customers",
+      "explanation": "Market penetration (from Ansoff's Matrix) aims to grow by increasing market share — selling more of what you already have to customers you already serve.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Which consumer buying decision involves the LEAST deliberation?",
+      "options": ["Buying a house", "Choosing a university", "Grabbing a candy bar at checkout", "Selecting a car model"],
+      "answer": "Grabbing a candy bar at checkout",
+      "explanation": "Low-involvement routine purchases (like snacks) involve habitual buying with little deliberation — opposite to high-involvement decisions like homes or cars.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "The purpose of competitive analysis in a marketing plan is to:",
+      "options": ["Set the marketing budget", "Understand rival firms' strengths, weaknesses, and strategies to find competitive advantage", "Determine product manufacturing costs", "Hire the right marketing team"],
+      "answer": "Understand rival firms' strengths, weaknesses, and strategies to find competitive advantage",
+      "explanation": "Competitive analysis informs positioning and strategy by revealing where rivals are strong or weak, what they offer, and where market opportunities exist.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Social proof in marketing (testimonials, user reviews) works by:",
+      "options": ["Reducing the product's price", "Leveraging other consumers' positive experiences to reduce risk and build trust", "Expanding distribution channels", "Improving the product's physical design"],
+      "answer": "Leveraging other consumers' positive experiences to reduce risk and build trust",
+      "explanation": "Social proof reduces purchase risk by showing prospects that others like them have bought and been satisfied — one of the most powerful forms of persuasion in marketing.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "A brand's positioning is most effective when it is:",
+      "options": ["Copied from a successful competitor", "Relevant to the target segment, distinctive from competitors, and credibly delivered", "Focused only on low price", "Changed frequently to stay current"],
+      "answer": "Relevant to the target segment, distinctive from competitors, and credibly delivered",
+      "explanation": "Effective positioning occupies a unique, valued, and believable place in the minds of target customers — differentiating the brand in a way that drives preference and loyalty.",
+      "points": 1
+    }
+  ]
+}

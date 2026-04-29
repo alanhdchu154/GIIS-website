@@ -1,0 +1,1745 @@
+{
+  "slug": "personal-finance-applied-economics",
+  "name": "Personal Finance / Applied Economics",
+  "nameZh": "个人理财与应用经济学",
+  "description": "A practical course covering personal financial planning, investing, taxes, insurance, and the economic forces that shape everyday financial decisions.",
+  "credits": 1,
+  "department": "Business",
+  "type": "Elective",
+  "modules": [
+    {
+      "order": 1,
+      "title": "Financial Goal Setting & Mindset",
+      "titleZh": "财务目标设定与心态",
+      "objectives": "Define short-term, medium-term, and long-term financial goals Explain the difference between a scarcity mindset and an abundance mindset Apply SMART goal framework to a personal financial goal",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance",
+      "readingNote": "Khan Academy Personal Finance — browse the overview and goal-setting topics.",
+      "videoUrl": "https://www.youtube.com/watch?v=Gp3tX0XZLXM",
+      "videoNote": "Introduction to Personal Finance and Financial Goal Setting.",
+      "video2Url": "https://www.youtube.com/watch?v=fK9C5UyLqBo",
+      "video2Note": "SMART Goals explained with personal finance examples.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance",
+      "practiceNote": "Complete the introductory personal finance exercises on Khan Academy.",
+      "assignment": "Write three SMART financial goals: one short-term (under 1 year), one medium-term (1–5 years), and one long-term (5+ years). Explain how each goal aligns with your values and how you will measure progress.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 2,
+      "title": "Budgeting & Spending Plans",
+      "titleZh": "预算与支出计划",
+      "objectives": "Distinguish between needs and wants Create a monthly budget using the 50/30/20 rule Identify common budgeting pitfalls and strategies to avoid them",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-budgeting",
+      "readingNote": "Khan Academy — Budgeting and Financial Planning section.",
+      "videoUrl": "https://www.youtube.com/watch?v=sVKQn2I4HDM",
+      "videoNote": "How to make a budget and stick to it — step-by-step guide.",
+      "video2Url": "https://www.youtube.com/watch?v=HQzoZfc3GwQ",
+      "video2Note": "The 50/30/20 budgeting rule explained.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-budgeting",
+      "practiceNote": "Complete the budgeting practice exercises on Khan Academy.",
+      "assignment": "Create a sample monthly budget for a young adult earning $2,500/month after taxes. Categorize all expenses, apply the 50/30/20 rule, and identify two areas where spending could be reduced.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 3,
+      "title": "Banking, Savings & Emergency Funds",
+      "titleZh": "银行、储蓄与应急基金",
+      "objectives": "Compare checking and savings accounts Explain how compound interest grows savings over time Calculate an appropriate emergency fund target",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-saving-money",
+      "readingNote": "Khan Academy — Saving Money and Banking topics.",
+      "videoUrl": "https://www.youtube.com/watch?v=qIW-yFW9yQs",
+      "videoNote": "Banking basics: checking, savings, and how to choose the right account.",
+      "video2Url": "https://www.youtube.com/watch?v=2pBdKDmL3LI",
+      "video2Note": "The power of compound interest and building an emergency fund.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-saving-money",
+      "practiceNote": "Work through the savings and compound interest practice problems.",
+      "assignment": "Using the compound interest formula A = P(1 + r/n)^(nt), calculate the value of saving $200/month at 4% annual interest (compounded monthly) for 5, 10, and 20 years. Reflect on what your calculations reveal about the value of starting early.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 4,
+      "title": "Credit, Debt & Credit Scores",
+      "titleZh": "信用、债务与信用评分",
+      "objectives": "Explain how credit scores are calculated and what factors affect them Compare types of consumer debt (credit cards, auto loans, student loans) Describe strategies for managing and eliminating debt",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-loans-and-debt",
+      "readingNote": "Khan Academy — Loans and Debt section.",
+      "videoUrl": "https://www.youtube.com/watch?v=A4i2CXEbCKg",
+      "videoNote": "Understanding your credit score: what it is and how to improve it.",
+      "video2Url": "https://www.youtube.com/watch?v=ZwqN7bpbGDo",
+      "video2Note": "Credit card debt: how interest works and how to pay it off faster.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-loans-and-debt",
+      "practiceNote": "Complete the loans and debt exercises on Khan Academy.",
+      "assignment": "Analyze a scenario where a person has $5,000 in credit card debt at 22% APR. Calculate the monthly interest charge and develop a debt payoff plan using the avalanche method. Then compare it with the snowball method and explain which you would choose and why.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 5,
+      "title": "Introduction to Investing",
+      "titleZh": "投资入门",
+      "objectives": "Explain the risk-return tradeoff Identify major asset classes: stocks, bonds, real estate, and cash equivalents Describe the principle of diversification",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-investment-vehicles-insurance-and-retirement",
+      "readingNote": "Khan Academy — Investment Vehicles, Insurance, and Retirement section.",
+      "videoUrl": "https://www.youtube.com/watch?v=gFQNPmLKj1k",
+      "videoNote": "Investing 101: stocks, bonds, and the basics of growing wealth.",
+      "video2Url": "https://www.youtube.com/watch?v=R4o5cYYANDE",
+      "video2Note": "Risk vs. return: how to think about investment risk as a beginner.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-investment-vehicles-insurance-and-retirement",
+      "practiceNote": "Work through the investment basics exercises on Khan Academy.",
+      "assignment": "Build a hypothetical beginner investment portfolio with $10,000. Allocate the money across at least three different asset classes. Explain each allocation choice using the concepts of risk tolerance, time horizon, and diversification.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 6,
+      "title": "Stock Market Basics",
+      "titleZh": "股票市场基础",
+      "objectives": "Explain how stock markets function and how stocks are priced Distinguish between market orders, limit orders, and other order types Interpret basic stock information: P/E ratio, dividend yield, market capitalization",
+      "readingUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds",
+      "readingNote": "Khan Academy — Stocks and Bonds core finance section.",
+      "videoUrl": "https://www.youtube.com/watch?v=p7HKvqRI_Bo",
+      "videoNote": "How does the stock market work? A beginner's guide.",
+      "video2Url": "https://www.youtube.com/watch?v=F3QpgXBtDeo",
+      "video2Note": "How to read a stock quote and understand key metrics.",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds",
+      "practiceNote": "Complete the stocks and bonds practice exercises on Khan Academy.",
+      "assignment": "Research two publicly traded companies of your choice. Compare their P/E ratios, dividend yields, and 52-week price range. Write a brief analysis of which company you would invest in and justify your reasoning using at least three financial metrics.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 7,
+      "title": "Bonds, Mutual Funds & ETFs",
+      "titleZh": "债券、共同基金与ETF",
+      "objectives": "Explain how bonds work and the relationship between bond prices and interest rates Compare mutual funds and ETFs as investment vehicles Calculate a simple bond yield",
+      "readingUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds",
+      "readingNote": "Khan Academy — Bonds section within Stocks and Bonds.",
+      "videoUrl": "https://www.youtube.com/watch?v=usAuXs2SZdU",
+      "videoNote": "Bonds explained: how they work and when to invest in them.",
+      "video2Url": "https://www.youtube.com/watch?v=egrFoKBcMRk",
+      "video2Note": "ETFs vs. mutual funds: what's the difference and which is better for beginners?",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds",
+      "practiceNote": "Complete the bonds and investment vehicles exercises on Khan Academy.",
+      "assignment": "A bond has a face value of $1,000, a coupon rate of 5%, and matures in 10 years. The current market interest rate rises to 7%. Explain qualitatively and quantitatively (estimate) how the bond's market price is affected. Then compare investing $5,000 in this bond versus a low-cost S&P 500 ETF over 10 years.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 8,
+      "title": "Retirement Planning (401k, IRA)",
+      "titleZh": "退休规划（401k与IRA）",
+      "objectives": "Explain the difference between traditional and Roth retirement accounts Describe the tax advantages of 401k and IRA accounts Calculate the long-term value of consistent retirement contributions",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-investment-vehicles-insurance-and-retirement",
+      "readingNote": "Khan Academy — Retirement section within Investment Vehicles.",
+      "videoUrl": "https://www.youtube.com/watch?v=sJgdPEpMa48",
+      "videoNote": "401k vs. IRA: which is better for you?",
+      "video2Url": "https://www.youtube.com/watch?v=M9Tr5e8QaoE",
+      "video2Note": "Traditional vs. Roth IRA: tax strategies for retirement.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-investment-vehicles-insurance-and-retirement",
+      "practiceNote": "Work through the retirement planning exercises on Khan Academy.",
+      "assignment": "Compare two retirement scenarios: Person A contributes $300/month to a Roth IRA starting at age 22; Person B contributes $500/month starting at age 35. Assume 7% average annual return. Calculate both balances at age 65 and write a reflection on the importance of starting early.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 9,
+      "title": "Taxes & Filing Basics",
+      "titleZh": "税务与申报基础",
+      "objectives": "Explain the US progressive income tax system Distinguish between gross income, adjusted gross income, and taxable income Describe the purpose of W-2, 1040, and common tax deductions/credits",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-taxes",
+      "readingNote": "Khan Academy — Taxes section of Personal Finance.",
+      "videoUrl": "https://www.youtube.com/watch?v=hMmx0pMVFBQ",
+      "videoNote": "How the US tax system works: a complete beginner's guide.",
+      "video2Url": "https://www.youtube.com/watch?v=VJhkKFMQGRQ",
+      "video2Note": "How to read your W-2 and file your first tax return.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-taxes",
+      "practiceNote": "Complete the tax calculation exercises on Khan Academy.",
+      "assignment": "Given a taxable income of $48,000 and the 2024 US federal tax brackets, calculate the total federal income tax owed using the marginal tax rate system. Then identify two tax credits or deductions a young adult might qualify for and explain how they reduce the tax burden.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 10,
+      "title": "Insurance (Health, Auto, Life)",
+      "titleZh": "保险（健康、汽车、人寿）",
+      "objectives": "Explain the purpose of insurance as a risk management tool Compare health, auto, and life insurance types and key terms (premium, deductible, copay) Evaluate when and how much insurance coverage is appropriate",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-investment-vehicles-insurance-and-retirement",
+      "readingNote": "Khan Academy — Insurance section within Investment Vehicles and Insurance.",
+      "videoUrl": "https://www.youtube.com/watch?v=avQ9rVMlAW8",
+      "videoNote": "Insurance basics: how insurance works and why you need it.",
+      "video2Url": "https://www.youtube.com/watch?v=e7jPAUVH9Vs",
+      "video2Note": "Health insurance explained: premiums, deductibles, copays, and out-of-pocket maximums.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-investment-vehicles-insurance-and-retirement",
+      "practiceNote": "Complete the insurance exercises on Khan Academy.",
+      "assignment": "Compare two health insurance plans: Plan A has a $200/month premium and $1,000 deductible; Plan B has a $100/month premium and $3,500 deductible. In what scenarios is each plan more cost-effective? Calculate the break-even point and recommend a plan for a healthy 22-year-old with no chronic conditions.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 11,
+      "title": "Housing & Real Estate",
+      "titleZh": "住房与房地产",
+      "objectives": "Compare renting versus buying a home using financial criteria Explain the key costs of homeownership: mortgage, property tax, insurance, maintenance Calculate a simple mortgage payment and total interest paid",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-housing",
+      "readingNote": "Khan Academy — Housing section of Personal Finance.",
+      "videoUrl": "https://www.youtube.com/watch?v=wEHoOjwWJQM",
+      "videoNote": "Rent vs. buy: how to make the right decision for your situation.",
+      "video2Url": "https://www.youtube.com/watch?v=5B2BtgJqDHQ",
+      "video2Note": "How mortgages work: fixed vs. adjustable rate, amortization explained.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance/pf-housing",
+      "practiceNote": "Complete the housing and mortgage calculation exercises on Khan Academy.",
+      "assignment": "Compare renting an apartment for $1,200/month versus buying a $250,000 home with a 10% down payment at 6.5% interest over 30 years. Use a mortgage calculator to find the monthly payment. Factor in property taxes ($3,000/year), insurance ($1,200/year), and maintenance (1% of home value/year). Which option is more cost-effective over 10 years?",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 12,
+      "title": "Entrepreneurship & Side Income",
+      "titleZh": "创业与副业收入",
+      "objectives": "Explain the difference between self-employment, freelancing, and entrepreneurship Identify common ways to generate side income and evaluate their feasibility Describe the basic tax obligations for self-employed individuals",
+      "readingUrl": "https://openstax.org/books/entrepreneurship/pages/1-introduction",
+      "readingNote": "OpenStax Entrepreneurship — Chapter 1: The Entrepreneurial Perspective.",
+      "videoUrl": "https://www.youtube.com/watch?v=QW7hWx0jTJM",
+      "videoNote": "How to start a side hustle: ideas, strategies, and avoiding common mistakes.",
+      "video2Url": "https://www.youtube.com/watch?v=FcFSBBnLNHg",
+      "video2Note": "Self-employment taxes explained: what every freelancer needs to know.",
+      "practiceUrl": "https://openstax.org/books/entrepreneurship/pages/1-review-questions",
+      "practiceNote": "Complete the review questions from OpenStax Entrepreneurship Chapter 1.",
+      "assignment": "Choose one side income idea and create a simple business case: describe the service or product, estimate startup costs (under $500), project monthly revenue and expenses, and calculate when you would break even. Also explain what self-employment taxes you would owe.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 13,
+      "title": "Economic Indicators in Personal Life",
+      "titleZh": "个人生活中的经济指标",
+      "objectives": "Explain how inflation erodes purchasing power and affects personal finances Describe how interest rate changes (Fed policy) affect borrowing and saving Connect macroeconomic indicators (GDP, unemployment, CPI) to personal financial decisions",
+      "readingUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics",
+      "readingNote": "Khan Academy — Macroeconomics: focus on inflation, interest rates, and business cycles.",
+      "videoUrl": "https://www.youtube.com/watch?v=PHe0bXAIuk0",
+      "videoNote": "How the economy affects your personal finances — inflation, interest rates, and recession.",
+      "video2Url": "https://www.youtube.com/watch?v=d0nERTFo-Sk",
+      "video2Note": "What the Federal Reserve does and why it matters to your money.",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/inflation-tutorial-macro",
+      "practiceNote": "Complete the inflation and interest rate exercises on Khan Academy Macroeconomics.",
+      "assignment": "Inflation is currently 5% annually. If you keep $10,000 in a savings account earning 1% interest, calculate the real purchasing power loss after 3 years. Then write a short essay (300 words) explaining how you would adjust your financial strategy in a high-inflation environment.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 14,
+      "title": "Building a Personal Financial Plan",
+      "titleZh": "建立个人财务计划",
+      "objectives": "Synthesize all course topics into a coherent personal financial plan Evaluate financial trade-offs using opportunity cost and time value of money Create a comprehensive one-page financial roadmap for the next five years",
+      "readingUrl": "https://www.khanacademy.org/college-careers-more/personal-finance",
+      "readingNote": "Khan Academy — Review the Personal Finance overview and any topics you want to revisit.",
+      "videoUrl": "https://www.youtube.com/watch?v=7aTJpKuBzNo",
+      "videoNote": "How to build a complete personal financial plan from scratch.",
+      "video2Url": "https://www.youtube.com/watch?v=xCpNSQXXEhQ",
+      "video2Note": "Financial freedom roadmap: budgeting, saving, investing, and protecting your wealth.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/personal-finance",
+      "practiceNote": "Review any Khan Academy personal finance topics you feel less confident in.",
+      "assignment": "Create a comprehensive Personal Financial Plan for the next 5 years. Include: (1) a monthly budget, (2) an emergency fund goal and timeline, (3) a debt payoff plan (if applicable), (4) an investment allocation, (5) insurance needs, and (6) one major financial goal. Present your plan in a clear, organized format with supporting calculations.",
+      "estimatedHrs": 5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which of the following is an example of a long-term financial goal?",
+      "options": [
+        "Saving $200 for a new phone next month",
+        "Paying off a credit card balance in 3 months",
+        "Saving for a down payment on a house in 7 years",
+        "Buying groceries for the week"
+      ],
+      "answer": "Saving for a down payment on a house in 7 years",
+      "explanation": "Long-term financial goals typically span more than 5 years. Saving for a house down payment in 7 years fits this definition.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which characteristic makes a financial goal 'SMART'?",
+      "options": [
+        "It must involve investing in stocks",
+        "It must be specific, measurable, achievable, relevant, and time-bound",
+        "It must be set by a financial advisor",
+        "It must always focus on eliminating debt"
+      ],
+      "answer": "It must be specific, measurable, achievable, relevant, and time-bound",
+      "explanation": "SMART goals are Specific, Measurable, Achievable, Relevant, and Time-bound — a framework that improves goal clarity and success rates.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "A scarcity mindset in personal finance is best described as:",
+      "options": [
+        "Believing there will never be enough money and focusing on lack",
+        "Actively seeking new income streams",
+        "Investing aggressively to build wealth",
+        "Setting ambitious but realistic financial goals"
+      ],
+      "answer": "Believing there will never be enough money and focusing on lack",
+      "explanation": "A scarcity mindset is characterized by focusing on what one lacks rather than opportunities for growth, which can limit financial progress.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "What is the primary purpose of setting financial goals?",
+      "options": [
+        "To impress others with your financial ambition",
+        "To provide direction and motivation for saving and spending decisions",
+        "To guarantee future wealth regardless of income",
+        "To eliminate all discretionary spending"
+      ],
+      "answer": "To provide direction and motivation for saving and spending decisions",
+      "explanation": "Financial goals provide a roadmap for financial decisions, helping individuals prioritize their spending, saving, and investing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Which of the following is a medium-term financial goal?",
+      "options": [
+        "Saving enough for this week's lunch",
+        "Paying off student loans in 15 years",
+        "Building an emergency fund of $3,000 in 18 months",
+        "Retirement planning at age 22"
+      ],
+      "answer": "Building an emergency fund of $3,000 in 18 months",
+      "explanation": "Medium-term goals typically span 1–5 years. Building an $3,000 emergency fund in 18 months falls within this range.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "According to the 50/30/20 budgeting rule, what percentage of after-tax income should go toward wants?",
+      "options": [
+        "50%",
+        "20%",
+        "30%",
+        "10%"
+      ],
+      "answer": "30%",
+      "explanation": "The 50/30/20 rule allocates 50% to needs, 30% to wants, and 20% to savings and debt repayment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Which of the following is considered a 'need' in a budget?",
+      "options": [
+        "Streaming services subscription",
+        "Restaurant dining",
+        "Rent or mortgage payment",
+        "New video game"
+      ],
+      "answer": "Rent or mortgage payment",
+      "explanation": "Needs are essential expenses required for basic living, such as housing, food, utilities, and transportation. Rent is a fundamental need.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "What is zero-based budgeting?",
+      "options": [
+        "Spending nothing during the month",
+        "Allocating every dollar of income to specific categories so income minus expenses equals zero",
+        "Saving 100% of your income",
+        "A budgeting method that requires no tracking"
+      ],
+      "answer": "Allocating every dollar of income to specific categories so income minus expenses equals zero",
+      "explanation": "Zero-based budgeting assigns every dollar of income a specific purpose, ensuring that income minus all allocations (including savings) equals zero.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "If your monthly take-home pay is $2,500 and your total monthly expenses are $2,700, you are:",
+      "options": [
+        "Running a surplus",
+        "Breaking even",
+        "Running a deficit",
+        "Building an emergency fund"
+      ],
+      "answer": "Running a deficit",
+      "explanation": "A deficit occurs when expenses exceed income. Spending $2,700 when you earn only $2,500 creates a $200 monthly deficit.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Which strategy helps most with sticking to a budget?",
+      "options": [
+        "Never reviewing your budget once it is set",
+        "Tracking all spending in real time using an app or spreadsheet",
+        "Setting the budget as high as possible",
+        "Only budgeting for annual expenses"
+      ],
+      "answer": "Tracking all spending in real time using an app or spreadsheet",
+      "explanation": "Real-time tracking makes it easier to catch overspending early and adjust behavior before a small problem becomes a large one.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "What is the primary advantage of a high-yield savings account over a standard savings account?",
+      "options": [
+        "It offers guaranteed stock market returns",
+        "It charges no monthly fees",
+        "It offers a significantly higher annual percentage yield (APY)",
+        "It has no withdrawal limits"
+      ],
+      "answer": "It offers a significantly higher annual percentage yield (APY)",
+      "explanation": "High-yield savings accounts typically offer APYs that are many times higher than standard savings accounts, allowing your money to grow faster.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "How many months of living expenses is commonly recommended for an emergency fund?",
+      "options": [
+        "1 month",
+        "3–6 months",
+        "10–12 months",
+        "24 months"
+      ],
+      "answer": "3–6 months",
+      "explanation": "Financial experts generally recommend maintaining 3–6 months of essential living expenses in an easily accessible emergency fund.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "With compound interest, interest is calculated on:",
+      "options": [
+        "Only the original principal",
+        "Only new deposits made each month",
+        "The original principal plus all previously earned interest",
+        "The account balance minus fees"
+      ],
+      "answer": "The original principal plus all previously earned interest",
+      "explanation": "Compound interest is interest on interest. Each period, interest is earned not just on the principal but also on all interest accumulated so far.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Which account type is best for daily transactions like paying bills and making purchases?",
+      "options": [
+        "Certificate of Deposit (CD)",
+        "Money market fund",
+        "Checking account",
+        "Brokerage account"
+      ],
+      "answer": "Checking account",
+      "explanation": "Checking accounts are designed for frequent transactions — deposits, withdrawals, bill payments, and debit card purchases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Why is it important to keep an emergency fund in liquid, low-risk accounts rather than invested in stocks?",
+      "options": [
+        "Stocks earn less money over time",
+        "Emergency funds must be immediately accessible without risk of losing value",
+        "Stocks cannot be sold quickly",
+        "Banks require emergency funds to be held in cash"
+      ],
+      "answer": "Emergency funds must be immediately accessible without risk of losing value",
+      "explanation": "Emergencies require quick access to cash. Stock values can drop significantly in the short term, making them unsuitable for funds you might need immediately.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Which factor has the greatest impact on a credit score?",
+      "options": [
+        "Length of credit history",
+        "Types of credit used",
+        "Payment history",
+        "New credit inquiries"
+      ],
+      "answer": "Payment history",
+      "explanation": "Payment history is the most significant factor in credit scoring, accounting for approximately 35% of a FICO score.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "What is the annual percentage rate (APR) on a credit card?",
+      "options": [
+        "The monthly fee charged for having the card",
+        "The annualized interest rate charged on outstanding balances",
+        "The maximum credit limit on the card",
+        "The total amount you can borrow per year"
+      ],
+      "answer": "The annualized interest rate charged on outstanding balances",
+      "explanation": "APR represents the yearly cost of borrowing on a credit card, expressed as a percentage of the outstanding balance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "The debt avalanche method prioritizes paying off:",
+      "options": [
+        "The smallest debt balance first to build momentum",
+        "The debt with the lowest interest rate first",
+        "The debt with the highest interest rate first",
+        "All debts equally at the same time"
+      ],
+      "answer": "The debt with the highest interest rate first",
+      "explanation": "The avalanche method targets the highest-interest debt first, minimizing total interest paid over time — the most mathematically efficient approach.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "A credit utilization ratio of 80% would likely:",
+      "options": [
+        "Significantly improve your credit score",
+        "Have no effect on your credit score",
+        "Significantly lower your credit score",
+        "Qualify you for a lower interest rate"
+      ],
+      "answer": "Significantly lower your credit score",
+      "explanation": "Credit utilization above 30% negatively affects credit scores. An 80% utilization ratio signals high dependence on credit and lowers scores significantly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Which type of debt is typically considered 'good debt' because it can increase earning potential?",
+      "options": [
+        "Credit card debt used for vacations",
+        "Payday loans",
+        "Student loans for a marketable degree",
+        "Retail store credit cards"
+      ],
+      "answer": "Student loans for a marketable degree",
+      "explanation": "Student loans for education that increases earning potential are often considered 'good debt' since they can generate a positive return on investment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The risk-return tradeoff in investing means:",
+      "options": [
+        "Higher risk always guarantees higher returns",
+        "Investments with higher potential returns generally carry higher risk",
+        "Lower-risk investments always outperform higher-risk ones",
+        "There is no relationship between risk and potential return"
+      ],
+      "answer": "Investments with higher potential returns generally carry higher risk",
+      "explanation": "The fundamental principle of the risk-return tradeoff is that to earn higher potential returns, investors must accept higher levels of risk.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Diversification in an investment portfolio means:",
+      "options": [
+        "Putting all your money in one high-performing stock",
+        "Spreading investments across different asset classes and sectors to reduce risk",
+        "Only investing in government bonds",
+        "Investing the same dollar amount every month"
+      ],
+      "answer": "Spreading investments across different asset classes and sectors to reduce risk",
+      "explanation": "Diversification reduces the impact of any single investment's poor performance on the overall portfolio by spreading risk across many assets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Which of the following is an example of a fixed-income investment?",
+      "options": [
+        "Common stock",
+        "Real estate investment trust (REIT)",
+        "Corporate bond",
+        "Cryptocurrency"
+      ],
+      "answer": "Corporate bond",
+      "explanation": "Bonds are fixed-income securities that pay regular interest (coupon) payments and return the principal at maturity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "An investor with a 30-year time horizon and high risk tolerance would most likely hold a portfolio heavy in:",
+      "options": [
+        "Short-term Treasury bills",
+        "Long-term government bonds",
+        "Equity (stocks)",
+        "Savings accounts"
+      ],
+      "answer": "Equity (stocks)",
+      "explanation": "Investors with long time horizons and high risk tolerance can afford to weather market volatility and benefit from the historically higher long-term returns of equities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "What does the term 'liquidity' refer to in investing?",
+      "options": [
+        "The total value of an investment portfolio",
+        "How quickly and easily an investment can be converted to cash without significant loss of value",
+        "The annual interest rate earned on an investment",
+        "The amount of risk in a portfolio"
+      ],
+      "answer": "How quickly and easily an investment can be converted to cash without significant loss of value",
+      "explanation": "Liquidity measures how fast an asset can be sold at a fair price. Cash is the most liquid asset; real estate is less liquid.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "A company's market capitalization is calculated as:",
+      "options": [
+        "Annual revenue minus annual expenses",
+        "Share price multiplied by total shares outstanding",
+        "Total assets minus total liabilities",
+        "Net income divided by shares outstanding"
+      ],
+      "answer": "Share price multiplied by total shares outstanding",
+      "explanation": "Market capitalization = Share Price × Total Shares Outstanding. It represents the total market value of a company's equity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "A stock with a P/E ratio of 5 compared to the industry average of 20 could indicate:",
+      "options": [
+        "The stock is overvalued relative to its peers",
+        "The stock is undervalued or the company faces earnings concerns",
+        "The company has no debt",
+        "The stock will definitely increase in price"
+      ],
+      "answer": "The stock is undervalued or the company faces earnings concerns",
+      "explanation": "A low P/E ratio relative to peers can indicate undervaluation (a potential buying opportunity) or it may reflect investor concerns about future earnings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "A limit order to buy a stock at $50 means:",
+      "options": [
+        "You will buy the stock immediately at whatever price it is trading at",
+        "You will buy the stock only if the price falls to $50 or below",
+        "You will buy the stock only if the price rises above $50",
+        "You will buy exactly 50 shares of the stock"
+      ],
+      "answer": "You will buy the stock only if the price falls to $50 or below",
+      "explanation": "A buy limit order executes only at the specified price or lower, giving investors price control but no guarantee of execution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "What does it mean when a stock pays a dividend?",
+      "options": [
+        "The company is about to go bankrupt",
+        "The company returns a portion of profits to shareholders as cash payments",
+        "The stock price is guaranteed to increase",
+        "The company is raising new capital"
+      ],
+      "answer": "The company returns a portion of profits to shareholders as cash payments",
+      "explanation": "Dividends are distributions of a company's earnings to shareholders, typically paid quarterly, providing income in addition to potential price appreciation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Which index is most commonly used to measure the overall performance of the US stock market?",
+      "options": [
+        "Dow Jones Industrial Average (DJIA)",
+        "S&P 500",
+        "NASDAQ Composite",
+        "Russell 2000"
+      ],
+      "answer": "S&P 500",
+      "explanation": "The S&P 500 tracks 500 of the largest US publicly traded companies and is widely considered the best single gauge of large-cap US equity performance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "When interest rates in the economy rise, existing bond prices generally:",
+      "options": [
+        "Rise proportionally",
+        "Fall",
+        "Stay the same",
+        "Double"
+      ],
+      "answer": "Fall",
+      "explanation": "Bond prices and interest rates have an inverse relationship. When rates rise, existing bonds with lower coupon rates become less attractive, so their prices fall.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "What is an ETF (Exchange-Traded Fund)?",
+      "options": [
+        "A type of savings account that trades on exchanges",
+        "A fund that tracks an index or basket of assets and trades on stock exchanges like a stock",
+        "A government-issued bond sold through exchanges",
+        "A type of money market account"
+      ],
+      "answer": "A fund that tracks an index or basket of assets and trades on stock exchanges like a stock",
+      "explanation": "ETFs combine the diversification of a mutual fund with the trading flexibility of a stock, typically at low costs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "What is the coupon rate of a bond?",
+      "options": [
+        "The discount offered on the bond purchase price",
+        "The annual interest payment as a percentage of the face value",
+        "The penalty for early redemption",
+        "The capital gain earned when the bond matures"
+      ],
+      "answer": "The annual interest payment as a percentage of the face value",
+      "explanation": "The coupon rate is the annual interest rate the bond issuer pays on the bond's face (par) value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "A key advantage of index ETFs over actively managed mutual funds is typically:",
+      "options": [
+        "Higher returns guaranteed",
+        "No risk of loss",
+        "Lower expense ratios (fees)",
+        "Only available to institutional investors"
+      ],
+      "answer": "Lower expense ratios (fees)",
+      "explanation": "Index ETFs passively track an index, requiring minimal management, which results in much lower fees compared to actively managed mutual funds.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "A US Treasury bond is considered one of the safest investments because:",
+      "options": [
+        "It offers the highest interest rate in the market",
+        "It is backed by the full faith and credit of the US federal government",
+        "Its value always increases",
+        "It is insured by the FDIC up to $250,000"
+      ],
+      "answer": "It is backed by the full faith and credit of the US federal government",
+      "explanation": "US Treasury securities are backed by the federal government's taxing power, making default extremely unlikely — they are considered virtually risk-free.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "What is the main tax advantage of a traditional 401(k) plan?",
+      "options": [
+        "Contributions are made with after-tax dollars; withdrawals are tax-free",
+        "Contributions reduce your taxable income in the year they are made",
+        "There are no limits on annual contributions",
+        "The employer must match 100% of your contributions"
+      ],
+      "answer": "Contributions reduce your taxable income in the year they are made",
+      "explanation": "Traditional 401(k) contributions are made pre-tax, reducing current taxable income. Taxes are paid upon withdrawal in retirement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "A Roth IRA differs from a traditional IRA primarily because:",
+      "options": [
+        "Roth contributions are tax-deductible; traditional are not",
+        "Roth withdrawals in retirement are tax-free; traditional withdrawals are taxed",
+        "Roth IRAs have higher contribution limits",
+        "Roth IRAs are only available through employers"
+      ],
+      "answer": "Roth withdrawals in retirement are tax-free; traditional withdrawals are taxed",
+      "explanation": "Roth IRA contributions are made with after-tax dollars, so qualified withdrawals in retirement (including gains) are completely tax-free.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "What is an employer 401(k) match and why is it valuable?",
+      "options": [
+        "The employer charges a fee equal to your contribution",
+        "The employer contributes an amount to your 401(k) based on your own contributions — essentially free money",
+        "The employer invests your contributions in stocks without your input",
+        "The employer takes over managing your retirement account"
+      ],
+      "answer": "The employer contributes an amount to your 401(k) based on your own contributions — essentially free money",
+      "explanation": "An employer match is free compensation that immediately boosts your retirement savings. Not contributing enough to get the full match means leaving money on the table.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "The Rule of 72 states that you can estimate how long it takes to double your investment by:",
+      "options": [
+        "Multiplying your return rate by 72",
+        "Dividing 72 by your annual interest rate",
+        "Adding 72 to your annual return",
+        "Subtracting your age from 72"
+      ],
+      "answer": "Dividing 72 by your annual interest rate",
+      "explanation": "The Rule of 72: Years to double ≈ 72 / Annual Interest Rate. At 7% return, money doubles in approximately 10.3 years.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "What is a required minimum distribution (RMD) in retirement accounts?",
+      "options": [
+        "The minimum amount you must contribute each year",
+        "The minimum amount the government requires you to withdraw from certain retirement accounts starting at a specified age",
+        "The minimum account balance required to open a retirement account",
+        "A mandatory investment in government bonds"
+      ],
+      "answer": "The minimum amount the government requires you to withdraw from certain retirement accounts starting at a specified age",
+      "explanation": "RMDs are IRS-mandated minimum withdrawals from traditional IRAs and 401(k)s beginning at age 73, ensuring the tax-deferred money is eventually taxed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "The US federal income tax system is progressive, which means:",
+      "options": [
+        "Everyone pays the same tax rate regardless of income",
+        "Higher income is taxed at higher marginal rates",
+        "Tax rates decrease as income increases",
+        "Taxes are only paid by corporations"
+      ],
+      "answer": "Higher income is taxed at higher marginal rates",
+      "explanation": "In a progressive tax system, income is taxed at higher rates as it moves into higher tax brackets — but only the income within each bracket is taxed at that rate.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "What is the purpose of a W-2 form?",
+      "options": [
+        "To report freelance income",
+        "To report wages earned and taxes withheld by an employer",
+        "To claim tax deductions for self-employment",
+        "To report investment income"
+      ],
+      "answer": "To report wages earned and taxes withheld by an employer",
+      "explanation": "A W-2 is issued by employers and shows total wages paid and taxes withheld, used by employees to file their annual federal and state tax returns.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "What is the difference between a tax deduction and a tax credit?",
+      "options": [
+        "A deduction reduces taxes owed dollar-for-dollar; a credit reduces taxable income",
+        "A credit reduces taxes owed dollar-for-dollar; a deduction reduces taxable income",
+        "They are the same thing",
+        "Deductions are only for businesses; credits are only for individuals"
+      ],
+      "answer": "A credit reduces taxes owed dollar-for-dollar; a deduction reduces taxable income",
+      "explanation": "Tax deductions lower your taxable income (saving you taxes at your marginal rate); tax credits reduce the actual taxes you owe dollar-for-dollar — making credits generally more valuable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "What does FICA stand for and what does it fund?",
+      "options": [
+        "Financial Income Collection Act — funds income taxes",
+        "Federal Insurance Contributions Act — funds Social Security and Medicare",
+        "Federal Individual Credit Allowance — funds tax credits",
+        "Financial Independence Credit Authorization — funds retirement accounts"
+      ],
+      "answer": "Federal Insurance Contributions Act — funds Social Security and Medicare",
+      "explanation": "FICA taxes fund Social Security (6.2% of wages) and Medicare (1.45% of wages), with employers matching these contributions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "If your taxable income is $45,000 and the 22% tax bracket begins at $44,725 (for 2024 filing), you pay 22% on:",
+      "options": [
+        "Your entire $45,000 income",
+        "Only the $275 above $44,725",
+        "Nothing, since $45,000 is not high enough",
+        "The full amount above the standard deduction"
+      ],
+      "answer": "Only the $275 above $44,725",
+      "explanation": "Marginal tax rates apply only to the income within each bracket. Only the $275 that exceeds the 22% bracket threshold is taxed at 22%; lower income is taxed at lower rates.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "What is an insurance premium?",
+      "options": [
+        "The amount you pay out-of-pocket when you file a claim",
+        "The regular payment (monthly or annually) you make to keep an insurance policy active",
+        "The maximum amount an insurance company will pay",
+        "The penalty for canceling a policy early"
+      ],
+      "answer": "The regular payment (monthly or annually) you make to keep an insurance policy active",
+      "explanation": "A premium is the regular payment required to maintain insurance coverage, regardless of whether you file any claims.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "A health insurance deductible is:",
+      "options": [
+        "The total amount the insurance company will pay for medical bills",
+        "The amount you must pay out-of-pocket before insurance begins covering costs",
+        "The monthly premium for your health plan",
+        "The percentage of costs you share with the insurance company after the deductible"
+      ],
+      "answer": "The amount you must pay out-of-pocket before insurance begins covering costs",
+      "explanation": "The deductible is the amount you pay before your insurance kicks in. Plans with higher deductibles typically have lower premiums.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Which type of life insurance provides coverage for a specific period of time and is generally the most affordable?",
+      "options": [
+        "Whole life insurance",
+        "Universal life insurance",
+        "Variable life insurance",
+        "Term life insurance"
+      ],
+      "answer": "Term life insurance",
+      "explanation": "Term life insurance covers a specific period (e.g., 20 years) and pays a death benefit only if the insured dies during that term. It is typically the lowest-cost form of life insurance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "The concept of moral hazard in insurance refers to:",
+      "options": [
+        "Dishonest claims made by policyholders",
+        "The tendency to take more risks because you are insured",
+        "Insurance companies refusing to pay legitimate claims",
+        "The process of assessing risk before issuing a policy"
+      ],
+      "answer": "The tendency to take more risks because you are insured",
+      "explanation": "Moral hazard occurs when having insurance reduces the incentive to avoid risks — e.g., driving less carefully because you have auto insurance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "What is the primary purpose of an out-of-pocket maximum in health insurance?",
+      "options": [
+        "To limit how much the insurance company pays per year",
+        "To cap the total amount you pay for covered medical costs in a year",
+        "To determine your monthly premium",
+        "To set the maximum number of doctor visits covered"
+      ],
+      "answer": "To cap the total amount you pay for covered medical costs in a year",
+      "explanation": "The out-of-pocket maximum protects policyholders from catastrophic medical costs — once reached, the insurance company pays 100% of covered expenses for the rest of the year.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "When comparing renting versus buying a home, which factor favors renting?",
+      "options": [
+        "Building equity over time",
+        "Stability and permanence",
+        "Lower upfront costs and flexibility to relocate",
+        "Tax deductions for mortgage interest"
+      ],
+      "answer": "Lower upfront costs and flexibility to relocate",
+      "explanation": "Renting requires much less upfront capital and allows greater mobility — advantages especially relevant for young professionals or those with uncertain location plans.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "What is amortization in the context of a mortgage?",
+      "options": [
+        "The process of paying down a mortgage through regular payments that cover both principal and interest",
+        "The penalty charged for paying off a mortgage early",
+        "The increase in home value over time",
+        "The property tax calculated each year"
+      ],
+      "answer": "The process of paying down a mortgage through regular payments that cover both principal and interest",
+      "explanation": "Amortization is the gradual reduction of a mortgage loan balance through scheduled payments, with early payments weighted more toward interest and later payments more toward principal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "A 20% down payment on a home purchase is significant because it:",
+      "options": [
+        "Guarantees the mortgage will be approved",
+        "Eliminates the need for private mortgage insurance (PMI)",
+        "Reduces the mortgage interest rate to zero",
+        "Means the home is paid off in half the time"
+      ],
+      "answer": "Eliminates the need for private mortgage insurance (PMI)",
+      "explanation": "Lenders typically require PMI when the down payment is less than 20%, adding cost. A 20% down payment avoids PMI and may secure better loan terms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Real estate is considered a relatively illiquid asset because:",
+      "options": [
+        "It loses value quickly",
+        "It cannot be mortgaged",
+        "It cannot be sold quickly at full market value without significant time and transaction costs",
+        "Real estate prices never change"
+      ],
+      "answer": "It cannot be sold quickly at full market value without significant time and transaction costs",
+      "explanation": "Unlike stocks, real estate takes considerable time to sell and involves significant transaction costs (agent commissions, closing costs), making it less liquid.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "What does home equity represent?",
+      "options": [
+        "The total purchase price of the home",
+        "The current market value of the home minus the outstanding mortgage balance",
+        "The annual property tax on the home",
+        "The amount still owed on the mortgage"
+      ],
+      "answer": "The current market value of the home minus the outstanding mortgage balance",
+      "explanation": "Home equity = Current Market Value − Outstanding Mortgage Balance. It represents the owner's ownership stake in the property.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "What is a key characteristic of entrepreneurship that distinguishes it from traditional employment?",
+      "options": [
+        "Guaranteed steady paycheck",
+        "Bearing personal financial risk in exchange for potential profit",
+        "Working fewer hours per week",
+        "Having a boss who provides clear direction"
+      ],
+      "answer": "Bearing personal financial risk in exchange for potential profit",
+      "explanation": "Entrepreneurs take on personal financial risk by investing their own capital and time, without the safety net of a guaranteed salary, in exchange for the possibility of higher profits.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "A freelancer who earns $50,000 per year in self-employment income must pay self-employment tax of approximately:",
+      "options": [
+        "7.65% (only the employee's share)",
+        "0% (self-employed individuals don't pay payroll taxes)",
+        "15.3% (both employer and employee shares of Social Security and Medicare)",
+        "22% (the standard income tax rate for this bracket)"
+      ],
+      "answer": "15.3% (both employer and employee shares of Social Security and Medicare)",
+      "explanation": "Self-employed individuals pay 15.3% self-employment tax (12.4% Social Security + 2.9% Medicare) because they are both employer and employee. Half of this amount is deductible.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "What is a break-even point for a small business?",
+      "options": [
+        "The point at which the business earns maximum profit",
+        "The level of revenue at which total revenues equal total costs, resulting in neither profit nor loss",
+        "The point at which the owner can stop working",
+        "The minimum revenue required to pay taxes"
+      ],
+      "answer": "The level of revenue at which total revenues equal total costs, resulting in neither profit nor loss",
+      "explanation": "Break-even is the point where revenue covers all costs (fixed and variable), and the business begins generating profit beyond that level.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Which of the following is a common example of passive income?",
+      "options": [
+        "Working overtime hours at your job",
+        "Earning royalties from a book or song you created",
+        "Receiving your regular hourly wage",
+        "Consulting for a client on a project"
+      ],
+      "answer": "Earning royalties from a book or song you created",
+      "explanation": "Passive income requires minimal ongoing effort to maintain. Royalties from creative work continue to generate income without additional active labor.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "What is the gig economy?",
+      "options": [
+        "A system where all workers have permanent full-time jobs",
+        "A labor market characterized by short-term, flexible, freelance or contract-based work",
+        "A stock market index tracking technology companies",
+        "A government program providing income support"
+      ],
+      "answer": "A labor market characterized by short-term, flexible, freelance or contract-based work",
+      "explanation": "The gig economy refers to work arrangements involving temporary, flexible, or freelance jobs rather than permanent employment — including ridesharing, delivery, and freelance platforms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "The Consumer Price Index (CPI) measures:",
+      "options": [
+        "The total output of the US economy",
+        "The average change in prices paid by consumers for a basket of goods and services over time",
+        "The unemployment rate among consumers",
+        "The total value of consumer spending"
+      ],
+      "answer": "The average change in prices paid by consumers for a basket of goods and services over time",
+      "explanation": "The CPI tracks price changes for a representative basket of consumer goods and services, serving as the primary measure of inflation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "How does rising inflation typically affect people who hold cash savings?",
+      "options": [
+        "Their savings gain value because prices are rising",
+        "Their savings lose purchasing power because each dollar buys less",
+        "Their savings earn higher returns automatically",
+        "Inflation has no effect on savings"
+      ],
+      "answer": "Their savings lose purchasing power because each dollar buys less",
+      "explanation": "Inflation erodes the real value of cash. If inflation is 5% and your savings earn only 1%, you are effectively losing 4% of purchasing power annually.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "When the Federal Reserve raises interest rates, what is the typical effect on borrowing costs?",
+      "options": [
+        "Borrowing becomes cheaper for consumers and businesses",
+        "Borrowing costs rise, making loans and credit more expensive",
+        "Borrowing costs are unaffected by Fed decisions",
+        "The government pays all interest on private loans"
+      ],
+      "answer": "Borrowing costs rise, making loans and credit more expensive",
+      "explanation": "The Fed's interest rate decisions influence the federal funds rate, which ripples through the economy to affect mortgage rates, auto loan rates, and credit card APRs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "During a recession, which personal finance strategy becomes especially important?",
+      "options": [
+        "Taking on more debt to invest heavily in stocks",
+        "Maintaining a fully funded emergency fund and reducing unnecessary expenses",
+        "Withdrawing all money from investment accounts",
+        "Spending more to stimulate the economy"
+      ],
+      "answer": "Maintaining a fully funded emergency fund and reducing unnecessary expenses",
+      "explanation": "Recessions bring job loss risk and economic uncertainty, making emergency funds and lean budgets essential protective strategies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "If the GDP growth rate turns negative for two consecutive quarters, this is commonly called:",
+      "options": [
+        "Stagflation",
+        "Hyperinflation",
+        "A recession",
+        "Deflation"
+      ],
+      "answer": "A recession",
+      "explanation": "A recession is commonly defined as two consecutive quarters of negative GDP growth, indicating a significant and widespread decline in economic activity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Opportunity cost in personal finance refers to:",
+      "options": [
+        "The cost of borrowing money on credit",
+        "The value of the next best alternative you give up when making a financial decision",
+        "The penalty for early investment withdrawal",
+        "The cost of financial planning services"
+      ],
+      "answer": "The value of the next best alternative you give up when making a financial decision",
+      "explanation": "Every financial decision involves an opportunity cost — the value of what you forego. Spending $10,000 on a car means that money cannot be invested, which has a long-term opportunity cost.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "The time value of money concept states that:",
+      "options": [
+        "Money loses value over time because of inflation only",
+        "A dollar today is worth more than a dollar in the future because it can be invested and earn returns",
+        "Money is equally valuable regardless of when it is received",
+        "Future money is worth more because it has more time to grow"
+      ],
+      "answer": "A dollar today is worth more than a dollar in the future because it can be invested and earn returns",
+      "explanation": "The time value of money is the foundational principle of finance: money available now is worth more than the same amount in the future due to its earning potential.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Which of the following best represents a comprehensive personal financial plan?",
+      "options": [
+        "A plan that only focuses on eliminating debt",
+        "A document integrating goals, budgeting, savings, investing, insurance, and tax strategy",
+        "A plan created once and never revisited",
+        "A list of things you want to buy in the next year"
+      ],
+      "answer": "A document integrating goals, budgeting, savings, investing, insurance, and tax strategy",
+      "explanation": "A comprehensive financial plan addresses all aspects of personal finance in a coordinated way, aligning actions across all domains toward long-term financial well-being.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Dollar-cost averaging (DCA) is an investment strategy that involves:",
+      "options": [
+        "Investing a lump sum at the market's lowest point",
+        "Investing a fixed amount at regular intervals regardless of market price",
+        "Selling investments whenever prices fall",
+        "Only investing in stable, dividend-paying stocks"
+      ],
+      "answer": "Investing a fixed amount at regular intervals regardless of market price",
+      "explanation": "Dollar-cost averaging reduces the impact of market volatility by spreading purchases over time, resulting in buying more shares when prices are low and fewer when prices are high.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Why is it important to periodically review and rebalance an investment portfolio?",
+      "options": [
+        "To maximize trading commissions",
+        "To ensure the asset allocation remains aligned with your goals and risk tolerance as markets shift",
+        "To respond to daily market news",
+        "To guarantee profits every quarter"
+      ],
+      "answer": "To ensure the asset allocation remains aligned with your goals and risk tolerance as markets shift",
+      "explanation": "Over time, some investments grow faster than others, shifting the portfolio's allocation. Rebalancing restores the target allocation and maintains the intended level of risk.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "A SMART financial goal requires that the goal be all of the following EXCEPT:",
+      "options": [
+        "Specific and clearly defined",
+        "Achievable given current resources",
+        "Approved by a financial advisor",
+        "Time-bound with a clear deadline"
+      ],
+      "answer": "Approved by a financial advisor",
+      "explanation": "SMART stands for Specific, Measurable, Achievable, Relevant, and Time-bound. Advisor approval is not one of the SMART criteria.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Using the 50/30/20 budgeting rule on a $3,000 monthly take-home income, how much should be allocated to savings and debt repayment?",
+      "options": [
+        "$500",
+        "$600",
+        "$900",
+        "$1,500"
+      ],
+      "answer": "$600",
+      "explanation": "The 20% savings/debt repayment allocation: 20% × $3,000 = $600.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "You deposit $5,000 in an account earning 6% annual interest compounded annually. Approximately how much will it be worth after 2 years?",
+      "options": [
+        "$5,300",
+        "$5,600",
+        "$5,618",
+        "$6,000"
+      ],
+      "answer": "$5,618",
+      "explanation": "A = 5,000 × (1.06)^2 = 5,000 × 1.1236 = $5,618.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Which FICO credit score range is generally considered 'good' by most lenders?",
+      "options": [
+        "300–579",
+        "580–669",
+        "670–739",
+        "800–850"
+      ],
+      "answer": "670–739",
+      "explanation": "FICO scores of 670–739 are generally considered 'good,' enabling access to most credit products at reasonable rates.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "What type of risk CANNOT be eliminated through diversification?",
+      "options": [
+        "Company-specific risk",
+        "Industry risk",
+        "Systematic (market) risk",
+        "Management risk"
+      ],
+      "answer": "Systematic (market) risk",
+      "explanation": "Systematic risk affects the entire market and cannot be diversified away. Unsystematic (company or industry specific) risk can be reduced through diversification.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A company reports earnings per share (EPS) of $4. Its stock trades at $60. What is the price-to-earnings (P/E) ratio?",
+      "options": [
+        "4",
+        "15",
+        "60",
+        "240"
+      ],
+      "answer": "15",
+      "explanation": "P/E Ratio = Stock Price / EPS = $60 / $4 = 15.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "A bond with a face value of $1,000 and a coupon rate of 4% pays how much in annual interest?",
+      "options": [
+        "$4",
+        "$40",
+        "$400",
+        "$1,040"
+      ],
+      "answer": "$40",
+      "explanation": "Annual coupon payment = Face Value × Coupon Rate = $1,000 × 4% = $40.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "The debt snowball method differs from the debt avalanche method in that snowball prioritizes:",
+      "options": [
+        "Debts with the highest interest rate first",
+        "Debts with the highest balance first",
+        "Debts with the smallest balance first",
+        "Debts that are most overdue first"
+      ],
+      "answer": "Debts with the smallest balance first",
+      "explanation": "The snowball method focuses on paying off the smallest debt first to build psychological momentum, while avalanche targets the highest-interest debt.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "If a savings account pays 3% APY and inflation is 5%, the real return on the savings is:",
+      "options": [
+        "+8%",
+        "+3%",
+        "-2%",
+        "-5%"
+      ],
+      "answer": "-2%",
+      "explanation": "Real return ≈ Nominal Rate − Inflation Rate = 3% − 5% = −2%. The account loses purchasing power in real terms.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Which retirement account type allows tax-free growth AND tax-free withdrawals in retirement?",
+      "options": [
+        "Traditional 401(k)",
+        "Traditional IRA",
+        "Roth IRA",
+        "Pension plan"
+      ],
+      "answer": "Roth IRA",
+      "explanation": "Roth IRA contributions are made with after-tax dollars. Qualified withdrawals in retirement — including all investment gains — are completely tax-free.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The standard deduction for a single filer reduces taxable income by a fixed amount. If the standard deduction is $14,600 and gross income is $55,000, taxable income equals:",
+      "options": [
+        "$55,000",
+        "$40,400",
+        "$14,600",
+        "$69,600"
+      ],
+      "answer": "$40,400",
+      "explanation": "Taxable income = Gross Income − Standard Deduction = $55,000 − $14,600 = $40,400.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "An emergency fund should primarily be kept in which type of account?",
+      "options": [
+        "Stock index fund",
+        "High-yield savings account or money market account",
+        "Long-term CD with early withdrawal penalty",
+        "Cryptocurrency exchange"
+      ],
+      "answer": "High-yield savings account or money market account",
+      "explanation": "Emergency funds need to be liquid and stable. High-yield savings accounts provide easy access, FDIC insurance, and better interest rates than standard accounts.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Which of the following best describes a certificate of deposit (CD)?",
+      "options": [
+        "A type of stock that pays dividends",
+        "A savings instrument that pays a fixed interest rate for a specified term, with penalties for early withdrawal",
+        "A government bond with a 30-year maturity",
+        "A mutual fund that invests in certificates"
+      ],
+      "answer": "A savings instrument that pays a fixed interest rate for a specified term, with penalties for early withdrawal",
+      "explanation": "CDs offer higher interest rates than regular savings accounts in exchange for locking up funds for a specific term. Early withdrawal typically incurs a penalty.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "A bank charges 24% APR on a credit card balance. If you carry a $1,000 balance for one month, approximately how much interest do you owe?",
+      "options": [
+        "$24",
+        "$240",
+        "$20",
+        "$2.00"
+      ],
+      "answer": "$20",
+      "explanation": "Monthly interest = Annual Rate / 12 × Balance = 24% / 12 × $1,000 = 2% × $1,000 = $20.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Which factor is NOT typically part of a FICO credit score calculation?",
+      "options": [
+        "Payment history",
+        "Credit utilization ratio",
+        "Annual income",
+        "Length of credit history"
+      ],
+      "answer": "Annual income",
+      "explanation": "FICO scores are based on payment history, amounts owed, length of credit history, new credit, and credit mix. Income is not a factor in the FICO score calculation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following demonstrates an abundance mindset in personal finance?",
+      "options": [
+        "Believing you will never have enough money to invest",
+        "Avoiding all financial risks due to fear of loss",
+        "Viewing money as a tool for creating opportunities and giving generously",
+        "Hoarding cash because markets are too unpredictable"
+      ],
+      "answer": "Viewing money as a tool for creating opportunities and giving generously",
+      "explanation": "An abundance mindset sees money as a resource that can grow and be shared, rather than something to hoard out of fear.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "You earn $4,000/month after taxes. Following the 50/30/20 rule, what is your monthly wants budget?",
+      "options": [
+        "$800",
+        "$1,200",
+        "$2,000",
+        "$400"
+      ],
+      "answer": "$1,200",
+      "explanation": "Wants budget = 30% × $4,000 = $1,200.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "You invest $2,000 at 8% compounded annually. Approximately how long will it take to double?",
+      "options": [
+        "6 years",
+        "9 years",
+        "12 years",
+        "16 years"
+      ],
+      "answer": "9 years",
+      "explanation": "Using the Rule of 72: 72 / 8 = 9 years.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "A person pays $1,800/year in auto insurance premiums and has a $500 deductible. They file a claim for $2,500 in damage. How much does insurance pay?",
+      "options": [
+        "$2,500",
+        "$1,800",
+        "$2,000",
+        "$700"
+      ],
+      "answer": "$2,000",
+      "explanation": "The insured pays the $500 deductible first; insurance covers the remainder: $2,500 − $500 = $2,000.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "What is the expense ratio of an ETF?",
+      "options": [
+        "The percentage of dividends paid to investors",
+        "The annual fee charged by the fund as a percentage of assets under management",
+        "The ratio of gains to losses in the fund",
+        "The proportion of the fund invested in equity versus bonds"
+      ],
+      "answer": "The annual fee charged by the fund as a percentage of assets under management",
+      "explanation": "The expense ratio is the annual cost of managing the fund, expressed as a percentage of the fund's assets. Lower expense ratios mean more of the return goes to investors.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following best describes the Federal Reserve's primary tool for controlling inflation?",
+      "options": [
+        "Printing more money",
+        "Adjusting the federal funds interest rate",
+        "Raising income taxes",
+        "Regulating stock market trading"
+      ],
+      "answer": "Adjusting the federal funds interest rate",
+      "explanation": "The Federal Reserve primarily uses the federal funds rate to influence economic activity. Raising rates makes borrowing more expensive, reducing spending and inflation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "A homeowner with a $300,000 home and a $220,000 remaining mortgage has home equity of:",
+      "options": [
+        "$300,000",
+        "$220,000",
+        "$80,000",
+        "$520,000"
+      ],
+      "answer": "$80,000",
+      "explanation": "Home equity = Market Value − Outstanding Mortgage = $300,000 − $220,000 = $80,000.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Which statement about Social Security and self-employment tax is correct?",
+      "options": [
+        "Self-employed individuals pay no Social Security taxes",
+        "Self-employed individuals pay only the employee's share (7.65%)",
+        "Self-employed individuals pay the full 15.3% (both employer and employee shares)",
+        "Social Security taxes only apply to incomes over $200,000"
+      ],
+      "answer": "Self-employed individuals pay the full 15.3% (both employer and employee shares)",
+      "explanation": "Self-employed individuals bear both the employer (7.65%) and employee (7.65%) portions of payroll taxes, totaling 15.3%, though half is deductible.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Stagflation is defined as a situation in which:",
+      "options": [
+        "The economy experiences rapid GDP growth with zero inflation",
+        "High inflation occurs simultaneously with slow economic growth and high unemployment",
+        "Interest rates fall while the stock market rises",
+        "Deflation occurs during a period of economic boom"
+      ],
+      "answer": "High inflation occurs simultaneously with slow economic growth and high unemployment",
+      "explanation": "Stagflation combines stagnation (slow/negative growth, high unemployment) with inflation, making it particularly difficult to address with standard monetary policy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "What is the maximum annual contribution limit to a Roth IRA for individuals under 50 in 2024?",
+      "options": [
+        "$3,500",
+        "$7,000",
+        "$23,000",
+        "$69,000"
+      ],
+      "answer": "$7,000",
+      "explanation": "In 2024, the IRS allows individuals under 50 to contribute up to $7,000 per year to IRAs (traditional or Roth combined).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "An investor practices dollar-cost averaging by investing $400/month in an index fund. When prices are low, this strategy results in:",
+      "options": [
+        "Investing less money that month",
+        "Buying fewer shares that month",
+        "Buying more shares that month",
+        "Skipping the investment that month"
+      ],
+      "answer": "Buying more shares that month",
+      "explanation": "With DCA, the fixed dollar amount buys more shares when prices are low and fewer shares when prices are high, automatically achieving a lower average cost per share.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Term life insurance is best suited for someone who:",
+      "options": [
+        "Wants permanent coverage and a cash value component",
+        "Needs affordable coverage to protect dependents during peak earning and obligation years",
+        "Wants to use life insurance primarily as an investment vehicle",
+        "Has no dependents and no debts"
+      ],
+      "answer": "Needs affordable coverage to protect dependents during peak earning and obligation years",
+      "explanation": "Term life insurance provides affordable death benefit protection for a specific period, ideal for families with mortgages, young children, or income replacement needs.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "What does the acronym APY stand for and how does it differ from APR?",
+      "options": [
+        "Annual Percentage Yield — it includes the effect of compounding; APR does not",
+        "Annual Payment Yield — it is used only for savings accounts",
+        "Adjusted Percentage Yield — it accounts for inflation",
+        "Annual Principal Yield — it measures return on principal only"
+      ],
+      "answer": "Annual Percentage Yield — it includes the effect of compounding; APR does not",
+      "explanation": "APY (Annual Percentage Yield) reflects the total return including compounding; APR (Annual Percentage Rate) does not. APY is typically used for savings; APR for loans.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Which personal finance action has the greatest positive long-term impact for a 22-year-old?",
+      "options": [
+        "Waiting until age 40 to start investing to accumulate a larger lump sum",
+        "Starting to invest a modest amount consistently as early as possible",
+        "Focusing entirely on paying off all debt before saving anything",
+        "Keeping all savings in a checking account for easy access"
+      ],
+      "answer": "Starting to invest a modest amount consistently as early as possible",
+      "explanation": "Compound growth is most powerful over long time periods. Starting early — even with small amounts — dramatically outperforms larger contributions started later.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "If real GDP per capita is growing while inflation is low and unemployment is falling, the economy is most likely in a:",
+      "options": [
+        "Recession",
+        "Period of economic expansion or boom",
+        "Stagflation environment",
+        "Deflationary spiral"
+      ],
+      "answer": "Period of economic expansion or boom",
+      "explanation": "Rising real GDP per capita, falling unemployment, and low inflation are classic indicators of economic expansion — a healthy, growing economy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "What is the primary purpose of private mortgage insurance (PMI)?",
+      "options": [
+        "To insure the homeowner's belongings inside the house",
+        "To protect the lender if the borrower defaults when the down payment is less than 20%",
+        "To guarantee the home's value will not decrease",
+        "To cover property taxes if the homeowner cannot pay"
+      ],
+      "answer": "To protect the lender if the borrower defaults when the down payment is less than 20%",
+      "explanation": "PMI protects the lender (not the borrower) against losses if the borrower defaults. It is required when loan-to-value exceeds 80% (down payment less than 20%).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "A business earns $80,000 in revenue and has total costs (fixed + variable) of $65,000. Its profit margin is approximately:",
+      "options": [
+        "18.75%",
+        "81.25%",
+        "65%",
+        "12.5%"
+      ],
+      "answer": "18.75%",
+      "explanation": "Profit = $80,000 − $65,000 = $15,000. Profit margin = $15,000 / $80,000 = 18.75%.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which statement best explains why a Roth IRA may be preferable for a 22-year-old with a currently low income?",
+      "options": [
+        "It offers immediate tax deductions on contributions",
+        "Paying taxes now at a lower rate and withdrawing tax-free in retirement (when income may be higher) maximizes long-term benefit",
+        "It has no contribution limits unlike traditional IRAs",
+        "Roth IRA contributions can be deducted from state taxes"
+      ],
+      "answer": "Paying taxes now at a lower rate and withdrawing tax-free in retirement (when income may be higher) maximizes long-term benefit",
+      "explanation": "Young, lower-income earners are in lower tax brackets. Paying tax now (Roth) and avoiding taxes later (when bracket may be higher) is often the optimal strategy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "What is the difference between systematic and unsystematic investment risk?",
+      "options": [
+        "Systematic risk applies only to bonds; unsystematic risk applies only to stocks",
+        "Systematic risk affects individual companies; unsystematic risk affects the whole market",
+        "Systematic risk affects the entire market and cannot be diversified away; unsystematic risk is specific to a company or industry and can be reduced through diversification",
+        "They are the same concept described differently"
+      ],
+      "answer": "Systematic risk affects the entire market and cannot be diversified away; unsystematic risk is specific to a company or industry and can be reduced through diversification",
+      "explanation": "Systematic risk (market risk) includes recessions and interest rate changes — unavoidable. Unsystematic (specific) risk can be reduced by holding a diversified portfolio.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "A comprehensive personal financial plan should be reviewed and updated:",
+      "options": [
+        "Once, when it is first created",
+        "Only during a financial crisis",
+        "Regularly (annually or when major life changes occur) to reflect changing goals, income, and circumstances",
+        "Only when a financial advisor recommends it"
+      ],
+      "answer": "Regularly (annually or when major life changes occur) to reflect changing goals, income, and circumstances",
+      "explanation": "Financial plans should be living documents reviewed at least annually and updated whenever major life events occur (job change, marriage, children, home purchase) to remain relevant.",
+      "points": 1
+    }
+  ],
+  "isPublished": true
+}

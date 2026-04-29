@@ -1,0 +1,1220 @@
+{
+  "slug": "study-skills",
+  "name": "Study Skills",
+  "nameZh": "学习技能",
+  "credits": 0.5,
+  "department": "Elective",
+  "type": "Elective",
+  "description": "A practical course developing the habits, strategies, and mindset needed for academic success, including time management, note-taking, memory techniques, test preparation, and building a growth mindset.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Understanding How You Learn",
+      "titleZh": "了解自己的学习方式",
+      "objectives": "Identify your preferred learning style; explain how memory works (encoding, storage, retrieval); understand the science of learning including spaced practice and interleaving.",
+      "readingUrl": "https://www.learner.org/series/discovering-psychology/learning/",
+      "readingNote": "Learner.org — Discovering Psychology: Learning",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/the-science-of-practice",
+      "videoNote": "Khan Academy — The Science of Practice and Learning",
+      "video2Url": "https://www.youtube.com/watch?v=O96fE1E-rf8",
+      "video2Note": "YouTube — How to Study Effectively: The Science of Learning",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/science-of-learning",
+      "practiceNote": "Khan Academy — Science of Learning Self-Assessment",
+      "assignment": "Complete a learning style inventory online; write a one-page reflection analyzing your dominant learning style and explaining two evidence-based study strategies that align with how your brain learns best.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 2,
+      "title": "Time Management & Scheduling",
+      "titleZh": "时间管理与日程安排",
+      "objectives": "Apply time management principles including prioritization and planning; use tools such as weekly planners and time-blocking; identify and eliminate common time-wasters.",
+      "readingUrl": "https://www.usu.edu/academic-support/study-skills/time-management",
+      "readingNote": "USU Academic Support — Time Management for Students",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/how-to-create-a-study-schedule",
+      "videoNote": "Khan Academy — Creating a Study Schedule",
+      "video2Url": "https://www.youtube.com/watch?v=iDbdXTMnOmE",
+      "video2Note": "YouTube — Time Management for Students: The Eisenhower Matrix",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/time-management",
+      "practiceNote": "Khan Academy — Time Management Practice",
+      "assignment": "Create a detailed weekly schedule for the next two weeks that includes all classes, study blocks, extracurriculars, and personal time; use the Eisenhower Matrix to categorize your top 10 weekly tasks by urgency and importance.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Goal Setting & Motivation",
+      "titleZh": "目标设定与动力",
+      "objectives": "Write SMART academic goals; distinguish intrinsic from extrinsic motivation; understand self-determination theory; create a personal motivation plan to sustain effort over time.",
+      "readingUrl": "https://www.learner.org/series/psychology-the-study-of-human-behavior/motivation/",
+      "readingNote": "Learner.org — Psychology: Motivation",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/a/growth-mindset-introduction",
+      "videoNote": "Khan Academy — Goal Setting and Motivation",
+      "video2Url": "https://www.youtube.com/watch?v=TQMbvJNRpLE",
+      "video2Note": "YouTube — SMART Goals: How to Set Goals You'll Actually Achieve",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/e/goal-setting",
+      "practiceNote": "Khan Academy — Goal Setting Practice",
+      "assignment": "Write three SMART academic goals for this semester (one short-term, one medium-term, one long-term); for each goal, identify your intrinsic motivation and three specific action steps.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 4,
+      "title": "Note-Taking Strategies",
+      "titleZh": "笔记策略（康奈尔、大纲、思维导图）",
+      "objectives": "Practice the Cornell, outline, and mind map note-taking methods; compare their effectiveness for different subjects and learning styles; develop active listening skills during lectures.",
+      "readingUrl": "https://www.usu.edu/academic-support/study-skills/note-taking",
+      "readingNote": "USU Academic Support — Note-Taking Strategies",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/how-to-take-notes",
+      "videoNote": "Khan Academy — How to Take Effective Notes",
+      "video2Url": "https://www.youtube.com/watch?v=WtW9IyE04OQ",
+      "video2Note": "YouTube — Cornell Notes: The Best Note-Taking Method",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/note-taking",
+      "practiceNote": "Khan Academy — Note-Taking Practice",
+      "assignment": "Take notes on a 15-minute educational video using all three formats (Cornell, outline, mind map); then write a comparison reflection explaining which method was most effective for the content and why.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Active Reading Techniques",
+      "titleZh": "主动阅读技巧",
+      "objectives": "Apply the SQ3R reading method; annotate texts effectively; distinguish main ideas from supporting details; summarize and paraphrase complex academic texts.",
+      "readingUrl": "https://www.usu.edu/academic-support/study-skills/active-reading",
+      "readingNote": "USU Academic Support — Active Reading Strategies",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/reading-strategies",
+      "videoNote": "Khan Academy — Active Reading Strategies",
+      "video2Url": "https://www.youtube.com/watch?v=p4QiCbNy0jU",
+      "video2Note": "YouTube — SQ3R Reading Method Explained",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/reading-comprehension",
+      "practiceNote": "Khan Academy — Reading Comprehension Practice",
+      "assignment": "Select a challenging two-page reading from one of your classes; apply the SQ3R method and submit your Preview questions, reading annotations, and a 150-word summary.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Memory & Retention Strategies",
+      "titleZh": "记忆与巩固策略",
+      "objectives": "Explain the spacing effect and retrieval practice; use mnemonics and visualization techniques; create effective flashcard systems; apply the forgetting curve to optimize review schedules.",
+      "readingUrl": "https://www.learner.org/series/discovering-psychology/language-and-thinking/",
+      "readingNote": "Learner.org — Discovering Psychology: Memory and Thinking",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/spaced-practice",
+      "videoNote": "Khan Academy — Spaced Practice and Memory",
+      "video2Url": "https://www.youtube.com/watch?v=eVajQPuRmk8",
+      "video2Note": "YouTube — Memory Techniques: Spaced Repetition and Active Recall",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/memory-strategies",
+      "practiceNote": "Khan Academy — Memory Strategies Practice",
+      "assignment": "Create 20 flashcards for a current course using spaced repetition principles; study them over five days using the Leitner box system and record your retention rate at day 1, 3, and 5.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Test Preparation & Study Plans",
+      "titleZh": "考试准备与学习计划",
+      "objectives": "Create a structured study plan for an upcoming exam; identify what to study and in what order; use practice tests and self-assessment to guide preparation; avoid common cramming pitfalls.",
+      "readingUrl": "https://www.usu.edu/academic-support/study-skills/test-prep",
+      "readingNote": "USU Academic Support — Test Preparation Strategies",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/how-to-prepare-for-tests",
+      "videoNote": "Khan Academy — How to Prepare for Tests",
+      "video2Url": "https://www.youtube.com/watch?v=CPxSzxylRCI",
+      "video2Note": "YouTube — How to Study for Exams Using Active Recall",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/exam-prep",
+      "practiceNote": "Khan Academy — Exam Preparation Practice",
+      "assignment": "Create a two-week exam preparation calendar for an upcoming major test; include specific daily study goals, topics to review, practice questions, and built-in rest days.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Test-Taking Strategies",
+      "titleZh": "应试策略",
+      "objectives": "Apply strategies for multiple choice, short answer, and essay exams; manage time effectively during tests; identify common exam errors; use process of elimination and contextual clues.",
+      "readingUrl": "https://www.usu.edu/academic-support/study-skills/test-taking",
+      "readingNote": "USU Academic Support — Test-Taking Strategies",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/test-taking-strategies",
+      "videoNote": "Khan Academy — Test-Taking Strategies",
+      "video2Url": "https://www.youtube.com/watch?v=eBvMtf3GAFM",
+      "video2Note": "YouTube — How to Ace Multiple Choice Exams",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/test-taking",
+      "practiceNote": "Khan Academy — Test-Taking Practice",
+      "assignment": "Take a timed 20-question practice test in your most challenging subject; after reviewing your results, identify three types of errors (knowledge gaps, careless mistakes, or misread questions) and write a correction plan.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Managing Academic Stress & Anxiety",
+      "titleZh": "管理学业压力与焦虑",
+      "objectives": "Identify physical and psychological signs of academic stress; apply evidence-based stress management techniques including mindfulness, deep breathing, and exercise; develop a personal wellness routine.",
+      "readingUrl": "https://www.learner.org/series/discovering-psychology/health-mind-and-behavior/",
+      "readingNote": "Learner.org — Discovering Psychology: Health, Mind, and Behavior",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/a/managing-stress",
+      "videoNote": "Khan Academy — Managing Academic Stress",
+      "video2Url": "https://www.youtube.com/watch?v=hnpQrMqDoqE",
+      "video2Note": "YouTube — How to Manage School Stress and Anxiety",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/e/stress-management",
+      "practiceNote": "Khan Academy — Stress Management Practice",
+      "assignment": "Track your stress levels for one week using a daily log (rating 1–10 with notes on triggers); identify your top three stressors and create a personal wellness plan with at least three evidence-based coping strategies.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 10,
+      "title": "Digital Tools for Learning",
+      "titleZh": "学习数字工具",
+      "objectives": "Evaluate and use digital learning tools including Anki, Google Docs, Notion, and Pomodoro apps; organize digital files effectively; use AI tools responsibly to support (not replace) learning.",
+      "readingUrl": "https://edu.gcfglobal.org/en/thenow/using-technology-to-learn/1/",
+      "readingNote": "GCFGlobal — Using Technology to Learn",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/digital-learning-tools",
+      "videoNote": "Khan Academy — Digital Tools for Students",
+      "video2Url": "https://www.youtube.com/watch?v=DZnrEqgQyiE",
+      "video2Note": "YouTube — Best Study Apps and Digital Tools for Students",
+      "practiceUrl": "https://edu.gcfglobal.org/en/thenow/using-technology-to-learn/1/",
+      "practiceNote": "GCFGlobal — Technology for Learning Practice",
+      "assignment": "Set up a digital study system using at least two tools (e.g., Notion for notes, Anki for flashcards); use the system for one week and write a reflection on how it improved or complicated your studying.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Research & Writing Basics",
+      "titleZh": "研究与写作基础",
+      "objectives": "Identify credible sources using the CRAAP test; structure an academic essay with thesis, body, and conclusion; understand citation basics (MLA/APA); practice paraphrasing and avoiding plagiarism.",
+      "readingUrl": "https://www.usu.edu/academic-support/writing/research-and-documentation",
+      "readingNote": "USU Academic Support — Research and Writing",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/academic-writing",
+      "videoNote": "Khan Academy — Academic Research and Writing",
+      "video2Url": "https://www.youtube.com/watch?v=Tkv6yPIsq3k",
+      "video2Note": "YouTube — How to Write a Research Paper: Step by Step",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/academic-writing",
+      "practiceNote": "Khan Academy — Academic Writing Practice",
+      "assignment": "Find three sources on a topic of your choice; apply the CRAAP test (Currency, Relevance, Authority, Accuracy, Purpose) to evaluate each source; write a 200-word introduction with a clear thesis using one of the sources.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 12,
+      "title": "Group Study & Collaboration",
+      "titleZh": "小组学习与合作",
+      "objectives": "Organize effective study groups; apply collaborative learning techniques like the Jigsaw method; navigate conflict in academic teams; give and receive constructive feedback.",
+      "readingUrl": "https://www.usu.edu/academic-support/study-skills/group-study",
+      "readingNote": "USU Academic Support — Group Study Strategies",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/collaborative-learning",
+      "videoNote": "Khan Academy — Collaborative Learning",
+      "video2Url": "https://www.youtube.com/watch?v=Ir8JmSuMjJk",
+      "video2Note": "YouTube — How to Run an Effective Study Group",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/e/collaboration",
+      "practiceNote": "Khan Academy — Collaboration Skills Practice",
+      "assignment": "Form a study group with two or three classmates for an upcoming test; hold a one-hour Jigsaw study session where each person teaches one section; write a reflection on what worked and what you'd change.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Self-Assessment & Reflection",
+      "titleZh": "自我评估与反思",
+      "objectives": "Use metacognitive strategies to monitor your own learning; conduct a self-assessment of your academic strengths and weaknesses; set improvement goals based on assessment data; reflect on progress regularly.",
+      "readingUrl": "https://www.learner.org/series/discovering-psychology/the-self/",
+      "readingNote": "Learner.org — Discovering Psychology: The Self",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/a/metacognition",
+      "videoNote": "Khan Academy — Metacognition and Self-Assessment",
+      "video2Url": "https://www.youtube.com/watch?v=RH95h36NChI",
+      "video2Note": "YouTube — Metacognition: Thinking About Your Own Thinking",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/e/self-assessment",
+      "practiceNote": "Khan Academy — Self-Assessment Practice",
+      "assignment": "Complete a formal academic self-assessment covering five subjects and five study habits; rate yourself honestly, identify one strength and one weakness in each area, and set a measurable improvement goal for each weakness.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 14,
+      "title": "Building a Growth Mindset",
+      "titleZh": "培养成长型思维",
+      "objectives": "Distinguish fixed mindset from growth mindset using Carol Dweck's research; reframe failure as a learning opportunity; develop grit and perseverance; apply growth mindset principles to academic challenges.",
+      "readingUrl": "https://www.learner.org/series/discovering-psychology/development/",
+      "readingNote": "Learner.org — Discovering Psychology: Development and Growth",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/a/growth-mindset",
+      "videoNote": "Khan Academy — Growth Mindset Introduction",
+      "video2Url": "https://www.youtube.com/watch?v=hiiEeMN7vbQ",
+      "video2Note": "YouTube — Carol Dweck: The Power of Believing You Can Improve",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/e/growth-mindset",
+      "practiceNote": "Khan Academy — Growth Mindset Practice",
+      "assignment": "Identify one academic area where you've had a fixed mindset; write a reflection analyzing the fixed mindset thoughts you've had, reframe each one using growth mindset language, and describe three specific steps to approach that subject differently.",
+      "estimatedHrs": 2.0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Spaced practice (distributed practice) is more effective than massed practice (cramming) because:",
+      "options": ["It is easier and requires less effort", "It strengthens memory through repeated retrieval over time", "It reduces the total study time needed", "It works best for all subjects equally"],
+      "answer": "It strengthens memory through repeated retrieval over time",
+      "explanation": "Spacing out study sessions forces the brain to repeatedly retrieve information, strengthening long-term memory consolidation far more effectively than cramming.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "The three stages of memory processing are:",
+      "options": ["Reading, writing, and speaking", "Encoding, storage, and retrieval", "Attention, repetition, and forgetting", "Short-term, medium-term, and long-term"],
+      "answer": "Encoding, storage, and retrieval",
+      "explanation": "Memory works in three stages: encoding (getting information in), storage (keeping it), and retrieval (getting it back out when needed).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Interleaving as a study strategy means:",
+      "options": ["Studying one subject for many hours at a time", "Mixing different subjects or problem types during a study session", "Highlighting all important text in a reading", "Re-reading a chapter multiple times"],
+      "answer": "Mixing different subjects or problem types during a study session",
+      "explanation": "Interleaving — alternating between different topics or problem types — improves long-term retention and transfer of learning by forcing the brain to identify which approach to use.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Retrieval practice (the testing effect) improves memory because:",
+      "options": ["It shows students what they don't know so they can re-read", "Actively pulling information from memory strengthens the memory trace", "It is more motivating than passive review", "It reduces test anxiety"],
+      "answer": "Actively pulling information from memory strengthens the memory trace",
+      "explanation": "Every time you successfully retrieve information from memory, you strengthen the neural pathways associated with that knowledge — more powerful than passively re-reading.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Which study strategy is considered LEAST effective by cognitive science research?",
+      "options": ["Spaced practice", "Self-testing", "Highlighting and re-reading", "Interleaving"],
+      "answer": "Highlighting and re-reading",
+      "explanation": "Highlighting and re-reading create an illusion of learning (familiarity) without the active processing and retrieval that actually build durable memory.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "The Eisenhower Matrix categorizes tasks by:",
+      "options": ["Difficulty and length", "Cost and benefit", "Urgency and importance", "Subject and deadline"],
+      "answer": "Urgency and importance",
+      "explanation": "The Eisenhower (Urgent-Important) Matrix helps prioritize tasks into four quadrants: Do (urgent+important), Schedule (important, not urgent), Delegate (urgent, not important), and Eliminate.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Time blocking is a scheduling technique that involves:",
+      "options": ["Blocking social media apps during study time", "Assigning specific time slots to specific tasks or subjects", "Studying only during blocked-off school periods", "Limiting study sessions to 30-minute blocks"],
+      "answer": "Assigning specific time slots to specific tasks or subjects",
+      "explanation": "Time blocking dedicates specific chunks of time to particular tasks, reducing decision fatigue and ensuring important work gets scheduled before distractions fill the day.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Parkinson's Law states that:",
+      "options": ["Study time should equal the difficulty of the subject", "Work expands to fill the time available for its completion", "Motivation decreases after two hours of studying", "Tasks are best completed in the morning"],
+      "answer": "Work expands to fill the time available for its completion",
+      "explanation": "Parkinson's Law explains why setting deadlines matters — without a time limit, tasks tend to fill all available time, making deadlines essential for productivity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "The Pomodoro Technique involves studying for:",
+      "options": ["90 minutes followed by a 30-minute break", "25 minutes followed by a 5-minute break", "2 hours with no breaks until completion", "45 minutes followed by a 15-minute break"],
+      "answer": "25 minutes followed by a 5-minute break",
+      "explanation": "The Pomodoro Technique breaks work into 25-minute focused intervals (pomodoros) separated by 5-minute breaks, improving focus and preventing mental fatigue.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Which is the BEST strategy for managing a heavy workload across multiple classes?",
+      "options": ["Focus on one class at a time until it's mastered", "Create a master calendar showing all deadlines and schedule study time backwards from each deadline", "Study whichever subject feels most interesting that day", "Do all assignments the night before they are due"],
+      "answer": "Create a master calendar showing all deadlines and schedule study time backwards from each deadline",
+      "explanation": "A master calendar makes all commitments visible, and working backwards from deadlines ensures adequate preparation time for each assignment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Intrinsic motivation refers to:",
+      "options": ["Motivation driven by external rewards like grades or prizes", "Motivation that comes from internal interest, curiosity, or enjoyment of the activity itself", "Motivation from peer pressure", "Motivation from fear of failure"],
+      "answer": "Motivation that comes from internal interest, curiosity, or enjoyment of the activity itself",
+      "explanation": "Intrinsic motivation is driven by the inherent satisfaction of the activity — doing something because you genuinely enjoy it or find it interesting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "A SMART goal is one that is:",
+      "options": ["Simple, Mindful, Achievable, Reasonable, Timely", "Specific, Measurable, Achievable, Relevant, Time-bound", "Strong, Motivating, Actionable, Realistic, Transparent", "Systematic, Managed, Authorized, Reliable, Tested"],
+      "answer": "Specific, Measurable, Achievable, Relevant, Time-bound",
+      "explanation": "SMART goals provide the clarity and specificity needed to actually achieve them: they define exactly what, how much, by when, and why it matters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Self-determination theory suggests that intrinsic motivation is highest when people experience:",
+      "options": ["High external rewards and strict rules", "Autonomy, competence, and relatedness", "Competition with peers", "Fear of negative consequences"],
+      "answer": "Autonomy, competence, and relatedness",
+      "explanation": "Self-determination theory (Deci & Ryan) identifies three basic psychological needs: autonomy (choice), competence (mastery), and relatedness (connection) — all of which sustain intrinsic motivation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Breaking a large goal into smaller sub-goals helps because:",
+      "options": ["It makes the goal less important", "Smaller goals provide frequent success experiences that maintain motivation", "It allows you to avoid the most difficult parts", "It automatically increases your study time"],
+      "answer": "Smaller goals provide frequent success experiences that maintain motivation",
+      "explanation": "Sub-goals create momentum through regular accomplishments, providing the motivational feedback loop needed to sustain effort toward larger, long-term objectives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Procrastination is most often caused by:",
+      "options": ["Having too much free time", "Avoidance of tasks that feel uncomfortable, uncertain, or overwhelming", "Lack of a good calendar system", "Being too motivated and scattered"],
+      "answer": "Avoidance of tasks that feel uncomfortable, uncertain, or overwhelming",
+      "explanation": "Research shows procrastination is primarily an emotional regulation problem — people avoid tasks that trigger anxiety, boredom, or self-doubt rather than a time management failure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "The Cornell Note-Taking system divides the page into:",
+      "options": ["Two columns: main notes and margin questions, plus a summary at the bottom", "Three equal sections for different subjects", "A mind map in the center with branches", "Numbered bullet points only"],
+      "answer": "Two columns: main notes and margin questions, plus a summary at the bottom",
+      "explanation": "Cornell notes feature a wide right column for main notes, a narrow left cue column for questions and keywords, and a summary section at the bottom for synthesis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "A mind map is most useful for:",
+      "options": ["Recording sequential steps in a process", "Connecting related concepts visually and showing relationships between ideas", "Summarizing a linear argument in a textbook", "Recording exact quotes from a lecture"],
+      "answer": "Connecting related concepts visually and showing relationships between ideas",
+      "explanation": "Mind maps are non-linear visual tools that radiate ideas from a central concept — excellent for brainstorming, seeing connections between topics, and visual learners.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "The best time to review and expand your lecture notes is:",
+      "options": ["One week after the lecture", "Immediately or within 24 hours of the lecture", "Only when preparing for an exam", "After you have forgotten what was covered"],
+      "answer": "Immediately or within 24 hours of the lecture",
+      "explanation": "Memory fades rapidly after learning (the forgetting curve); reviewing notes within 24 hours consolidates the information before most of it is lost.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Outline note-taking works best for:",
+      "options": ["Capturing creative brainstorming sessions", "Visually complex scientific diagrams", "Content with a clear hierarchical structure, like textbook chapters", "Rapid lecture capture where structure is unclear"],
+      "answer": "Content with a clear hierarchical structure, like textbook chapters",
+      "explanation": "Outline notes organize information in main topics, subtopics, and supporting details — ideal for structured content with clear organization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Active listening during a lecture means:",
+      "options": ["Recording everything word for word", "Passively hearing what the teacher says", "Engaging with the material by predicting, questioning, and connecting ideas", "Only writing when the teacher repeats something"],
+      "answer": "Engaging with the material by predicting, questioning, and connecting ideas",
+      "explanation": "Active listening is cognitively engaged — generating questions, making predictions, and connecting new information to prior knowledge — not passively transcribing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The SQ3R reading method stands for:",
+      "options": ["Scan, Question, Read, Review, Recall", "Survey, Question, Read, Recite, Review", "Study, Query, Read, Repeat, Reflect", "Skim, Question, Read, Record, Reflect"],
+      "answer": "Survey, Question, Read, Recite, Review",
+      "explanation": "SQ3R is a structured active reading strategy: Survey (preview), Question (turn headings into questions), Read (answer those questions), Recite (recall key points), Review (summarize).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Annotation of a text while reading helps learning by:",
+      "options": ["Making the book look more organized", "Forcing active engagement with the material through marking, questioning, and connecting ideas", "Reducing the time needed to re-read later", "Impressing the teacher with effort"],
+      "answer": "Forcing active engagement with the material through marking, questioning, and connecting ideas",
+      "explanation": "Annotation — highlighting, writing questions, and noting connections in margins — transforms passive reading into active processing that deepens comprehension and retention.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Paraphrasing a text means:",
+      "options": ["Copying the text word for word", "Restating the author's ideas in your own words", "Summarizing in one sentence only", "Quoting directly with quotation marks"],
+      "answer": "Restating the author's ideas in your own words",
+      "explanation": "Paraphrasing restates ideas using different words and structure while preserving meaning — it demonstrates comprehension and is required when you do not directly quote.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "When reading a textbook, what should you do BEFORE reading a chapter?",
+      "options": ["Read the conclusion first", "Preview headings, figures, captions, and objectives to build a mental framework", "Read every word from beginning to end without stopping", "Take no notes until you finish the chapter"],
+      "answer": "Preview headings, figures, captions, and objectives to build a mental framework",
+      "explanation": "Previewing activates prior knowledge and creates a mental outline that helps you organize new information as you read — a core element of SQ3R.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "The main idea of a paragraph is best found:",
+      "options": ["Always in the last sentence", "Usually in the topic sentence, often the first or last sentence", "Only in headings and subheadings", "In every third sentence of a well-written paragraph"],
+      "answer": "Usually in the topic sentence, often the first or last sentence",
+      "explanation": "The topic sentence states the main idea of a paragraph — it is most often the first sentence but can also appear at the end as a concluding statement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Ebbinghaus's forgetting curve shows that without review, we forget approximately what percentage of new information within 24 hours?",
+      "options": ["10%", "30%", "50–70%", "90%"],
+      "answer": "50–70%",
+      "explanation": "Ebbinghaus's research showed that humans forget roughly 50–70% of new information within 24 hours without review — making timely repetition critical.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "A mnemonic device helps memory by:",
+      "options": ["Reducing the complexity of content", "Using associations, patterns, or acronyms to encode information more memorably", "Repeating information aloud multiple times", "Writing information in a specific color"],
+      "answer": "Using associations, patterns, or acronyms to encode information more memorably",
+      "explanation": "Mnemonics leverage associations (e.g., PEMDAS for order of operations) to make abstract information more concrete and easier to retrieve.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "The Leitner box system for flashcard learning works by:",
+      "options": ["Studying all cards with equal frequency", "Reviewing cards you know less well more frequently and cards you know well less frequently", "Organizing cards by subject topic only", "Studying cards in alphabetical order"],
+      "answer": "Reviewing cards you know less well more frequently and cards you know well less frequently",
+      "explanation": "The Leitner system uses spaced repetition: cards you answer correctly move to boxes reviewed less frequently; missed cards return to box 1 for frequent review.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "The best way to use flashcards is to:",
+      "options": ["Read the answer side first then flip to check", "Try to recall the answer before flipping the card (active recall)", "Read both sides simultaneously every time", "Study all cards in the same order each session"],
+      "answer": "Try to recall the answer before flipping the card (active recall)",
+      "explanation": "The power of flashcards comes from attempting retrieval before seeing the answer — this active recall process strengthens memory more than passive review.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Which of the following is an example of elaborative interrogation (a strong memory technique)?",
+      "options": ["Re-reading a chapter three times", "Asking yourself 'Why is this true?' and generating explanations", "Making a colorful poster of key terms", "Recording a lecture and listening to it again"],
+      "answer": "Asking yourself 'Why is this true?' and generating explanations",
+      "explanation": "Elaborative interrogation forces you to generate explanations for facts, connecting them to prior knowledge and significantly improving long-term retention.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Cramming the night before an exam is ineffective for long-term learning primarily because:",
+      "options": ["It takes too long", "Massed practice creates little long-term retention compared to spaced practice", "Students are too tired at night to learn", "It covers too much material"],
+      "answer": "Massed practice creates little long-term retention compared to spaced practice",
+      "explanation": "Cramming may help you recognize information briefly, but without spaced repetition, most of that information is forgotten quickly — not retained for later application.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "When creating a study plan, working 'backwards' from the exam date means:",
+      "options": ["Studying the last chapter first", "Starting with the most enjoyable topics", "Scheduling study sessions by counting back from the exam to ensure adequate preparation time", "Reviewing notes in reverse chronological order"],
+      "answer": "Scheduling study sessions by counting back from the exam to ensure adequate preparation time",
+      "explanation": "Backward planning identifies the exam date and works backwards to schedule what must be reviewed each day — ensuring comprehensive preparation without last-minute panic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "The most effective use of a practice test for exam preparation is to:",
+      "options": ["Take it immediately before the exam as a final review", "Take it early, identify weaknesses, and focus remaining study time on those gaps", "Use it only to predict what the real exam will look like", "Take it only if provided by the teacher"],
+      "answer": "Take it early, identify weaknesses, and focus remaining study time on those gaps",
+      "explanation": "Practice tests early in preparation reveal knowledge gaps that still have time to be addressed — this diagnostic use is far more valuable than a last-minute check.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Prioritizing topics for an exam should be based on:",
+      "options": ["Which topics you find most interesting", "Which topics are most heavily weighted by the teacher and where you have the most gaps", "Studying topics in alphabetical order", "Covering every topic for exactly equal time"],
+      "answer": "Which topics are most heavily weighted by the teacher and where you have the most gaps",
+      "explanation": "Efficient exam prep focuses time where it yields the most marks — heavily tested areas you haven't mastered yet deserve the most attention.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Getting adequate sleep before an exam is important because sleep:",
+      "options": ["Wastes valuable study time", "Consolidates memories formed during the day and improves cognitive performance", "Has no effect on academic performance", "Only matters for physical health, not mental performance"],
+      "answer": "Consolidates memories formed during the day and improves cognitive performance",
+      "explanation": "During sleep, the brain consolidates newly learned information into long-term memory and clears toxins. Sleep deprivation severely impairs attention, recall, and problem-solving.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "On a multiple-choice exam, when you are unsure of an answer, the best first strategy is:",
+      "options": ["Always guess C", "Always choose the longest answer", "Eliminate obviously wrong answers and choose from the remaining options", "Skip the question and never return to it"],
+      "answer": "Eliminate obviously wrong answers and choose from the remaining options",
+      "explanation": "Process of elimination reduces the number of options, increasing your odds of selecting the correct answer from a smaller pool.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "When taking an essay exam, you should begin by:",
+      "options": ["Writing as fast as possible from the first idea that comes to mind", "Reading all questions, budgeting time, then briefly outlining your response before writing", "Skipping the introduction and starting with body paragraphs", "Answering the easiest question last"],
+      "answer": "Reading all questions, budgeting time, then briefly outlining your response before writing",
+      "explanation": "A brief plan and time budget prevents running out of time and ensures your essay has a logical structure before you start writing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "If you have 60 minutes for a 30-question exam, you should spend on average:",
+      "options": ["30 seconds per question", "2 minutes per question", "5 minutes per question", "10 minutes per question"],
+      "answer": "2 minutes per question",
+      "explanation": "60 minutes ÷ 30 questions = 2 minutes per question. Time management during exams requires pacing yourself to avoid spending too long on any single question.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "A common careless mistake on exams that can easily be avoided is:",
+      "options": ["Not knowing the content well enough", "Misreading the question or not answering what was actually asked", "Running out of study time", "Having poor handwriting"],
+      "answer": "Misreading the question or not answering what was actually asked",
+      "explanation": "Many exam errors come from rushing and misreading questions — underlining key words in the question prompt helps ensure you answer what is actually being asked.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "After completing an exam early, you should:",
+      "options": ["Leave immediately", "Review your answers, check for errors, and revisit flagged questions", "Change all answers you initially guessed", "Skip reviewing to avoid second-guessing yourself"],
+      "answer": "Review your answers, check for errors, and revisit flagged questions",
+      "explanation": "Reviewing catches careless errors and allows you to reconsider flagged items with a clearer mind — the time is available and should be used productively.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Physiological symptoms of academic stress can include:",
+      "options": ["Increased energy and focus", "Headaches, muscle tension, sleep disturbances, and stomach problems", "Improved memory and concentration", "Decreased heart rate"],
+      "answer": "Headaches, muscle tension, sleep disturbances, and stomach problems",
+      "explanation": "Chronic academic stress triggers the body's stress response, leading to physical symptoms including headaches, muscle tension, digestive issues, and disrupted sleep.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Deep breathing exercises help reduce stress by:",
+      "options": ["Increasing carbon dioxide levels in the blood", "Activating the parasympathetic nervous system, reducing the stress response", "Distracting the mind from academic tasks", "Increasing adrenaline production"],
+      "answer": "Activating the parasympathetic nervous system, reducing the stress response",
+      "explanation": "Slow, deep breathing activates the parasympathetic ('rest and digest') nervous system, counteracting the fight-or-flight stress response and lowering heart rate and blood pressure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Mindfulness meditation helps students by:",
+      "options": ["Eliminating all stressful thoughts permanently", "Training attention and awareness to reduce rumination and improve focus", "Replacing the need for sleep", "Solving academic problems automatically"],
+      "answer": "Training attention and awareness to reduce rumination and improve focus",
+      "explanation": "Mindfulness trains the brain to observe thoughts without reacting to them, reducing rumination (repetitive worrying) and improving the ability to focus on present tasks.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Physical exercise benefits academic performance primarily by:",
+      "options": ["Taking time away from studying", "Increasing blood flow to the brain and releasing mood-improving neurotransmitters", "Replacing the need for mental rest breaks", "Reducing the need for sleep"],
+      "answer": "Increasing blood flow to the brain and releasing mood-improving neurotransmitters",
+      "explanation": "Exercise boosts brain-derived neurotrophic factor (BDNF), improves memory consolidation, reduces anxiety, and enhances focus — directly benefiting learning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Test anxiety is best managed by combining:",
+      "options": ["More caffeine and less sleep before the exam", "Thorough preparation with relaxation techniques and positive self-talk", "Avoiding thoughts about the exam entirely", "Competing with classmates to feel motivated"],
+      "answer": "Thorough preparation with relaxation techniques and positive self-talk",
+      "explanation": "Test anxiety is reduced when students combine genuine preparedness (reducing uncertainty) with relaxation strategies and a realistic, growth-oriented self-perception.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Spaced repetition software (like Anki) is based on the principle of:",
+      "options": ["Studying everything every day equally", "Showing you cards just before you are about to forget them to optimize review timing", "Testing only the most difficult material", "Presenting information in a random order"],
+      "answer": "Showing you cards just before you are about to forget them to optimize review timing",
+      "explanation": "Anki's algorithm tracks your performance and schedules each card to reappear right before you would forget it — maximizing retention with minimum review time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "When using AI tools for studying, academic integrity requires that you:",
+      "options": ["Submit AI-generated work as your own without attribution", "Use AI to generate ideas and explanations while doing the actual thinking and writing yourself", "Never use AI tools for any academic purpose", "Copy AI responses verbatim to save time"],
+      "answer": "Use AI to generate ideas and explanations while doing the actual thinking and writing yourself",
+      "explanation": "AI tools can be powerful learning aids for understanding concepts, generating practice questions, or checking reasoning — but submitting AI-generated work as your own is academic dishonesty.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Digital distraction during study sessions is best reduced by:",
+      "options": ["Leaving all apps open in case you need them", "Using a single monitor with all notifications disabled during focused study blocks", "Studying with the TV on for background noise", "Checking your phone every 10 minutes as a reward"],
+      "answer": "Using a single monitor with all notifications disabled during focused study blocks",
+      "explanation": "Research shows that notifications and multi-tasking significantly impair learning efficiency. Blocking distractions during focused intervals is more productive than willpower alone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Using Google Docs for collaborative assignments is most effective when:",
+      "options": ["Only one person edits at a time to avoid conflicts", "Team members use comments, suggestion mode, and version history to collaborate transparently", "All files are kept offline and merged at the end", "Formatting is ignored until the final draft"],
+      "answer": "Team members use comments, suggestion mode, and version history to collaborate transparently",
+      "explanation": "Google Docs' collaborative features — real-time editing, comment threads, and version history — enable transparent, trackable collaboration that benefits all team members.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "The most important factor in choosing a digital productivity tool is:",
+      "options": ["How popular it is with influencers", "Whether it integrates with your actual workflow and reduces friction", "How many features it has", "Whether it is free or paid"],
+      "answer": "Whether it integrates with your actual workflow and reduces friction",
+      "explanation": "The best tool is the one you will consistently use — complicated or feature-heavy tools that create friction often get abandoned, defeating their purpose.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The CRAAP test evaluates sources based on:",
+      "options": ["Cost, Reliability, Authority, Accuracy, and Popularity", "Currency, Relevance, Authority, Accuracy, and Purpose", "Content, Research, Analysis, Argument, and Proof", "Citations, Reviews, Audience, Arguments, and Publication"],
+      "answer": "Currency, Relevance, Authority, Accuracy, and Purpose",
+      "explanation": "The CRAAP test is a checklist for evaluating information quality: Currency (how recent), Relevance (to your topic), Authority (who created it), Accuracy (evidence quality), and Purpose (why it was created).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "A thesis statement in an academic essay is:",
+      "options": ["A question that the essay will explore", "A one or two sentence statement of the essay's main argument or position", "A summary of all the sources used", "The first sentence of every body paragraph"],
+      "answer": "A one or two sentence statement of the essay's main argument or position",
+      "explanation": "The thesis states the central argument of the essay clearly and specifically — it tells the reader what you are arguing and, often, why.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Plagiarism is:",
+      "options": ["Using quotation marks around someone else's exact words", "Using someone else's ideas or words without proper attribution", "Summarizing a source in your own words with a citation", "Citing more sources than necessary"],
+      "answer": "Using someone else's ideas or words without proper attribution",
+      "explanation": "Plagiarism — presenting others' work as your own without credit — is academic dishonesty regardless of whether you copy exactly or paraphrase without citation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Which of the following is generally considered the most credible type of source for academic research?",
+      "options": ["A Wikipedia article", "A peer-reviewed journal article", "A personal blog post", "A social media post from an expert"],
+      "answer": "A peer-reviewed journal article",
+      "explanation": "Peer-reviewed articles are evaluated by subject-matter experts before publication, ensuring high standards of accuracy, methodology, and scholarly rigor.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "A body paragraph in an academic essay should typically:",
+      "options": ["Include multiple unrelated ideas to cover more ground", "Begin with a topic sentence, provide evidence, and explain how the evidence supports the thesis", "Be as long as possible to demonstrate effort", "Start with a direct quote from a source"],
+      "answer": "Begin with a topic sentence, provide evidence, and explain how the evidence supports the thesis",
+      "explanation": "The structure of an effective body paragraph: topic sentence (main idea) → evidence (quote, data, example) → analysis (explaining how it supports the thesis).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "The Jigsaw collaborative learning method works by:",
+      "options": ["Having all group members study the same material independently", "Dividing material so each member becomes an expert in one section and teaches the others", "Competing to see who can memorize material fastest", "Assigning a leader who teaches all content to the group"],
+      "answer": "Dividing material so each member becomes an expert in one section and teaches the others",
+      "explanation": "In Jigsaw, each student masters one piece of the content and teaches it to peers — creating interdependence and ensuring everyone both learns and teaches.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Explaining a concept to a classmate helps the explainer because:",
+      "options": ["It takes less time than studying alone", "Teaching requires active retrieval and exposes gaps in your own understanding", "The classmate always catches your errors", "It counts as class participation"],
+      "answer": "Teaching requires active retrieval and exposes gaps in your own understanding",
+      "explanation": "The protégé effect — that teaching others boosts your own learning — works because explaining forces you to organize and retrieve knowledge, revealing gaps you didn't know existed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "An effective study group session has which characteristic?",
+      "options": ["No agenda, so conversation flows naturally", "Clear goals, assigned roles, and focused discussion of academic material", "Unlimited time with frequent social breaks", "Members studying silently in the same room"],
+      "answer": "Clear goals, assigned roles, and focused discussion of academic material",
+      "explanation": "Effective study groups are structured: they have a clear agenda, designated roles (leader, timekeeper, note-taker), and stay focused on the academic task.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Constructive feedback to a classmate should be:",
+      "options": ["Only positive to avoid hurt feelings", "Vague so they can interpret it freely", "Specific, actionable, and focused on the work rather than the person", "Delivered only by the teacher"],
+      "answer": "Specific, actionable, and focused on the work rather than the person",
+      "explanation": "Good feedback identifies specific issues and suggests how to improve them — focused on the work product, not personal attacks, making it useful and respectful.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Group work is most effective when:",
+      "options": ["One strong student does most of the work", "All members have clear roles and shared accountability for the final product", "Members only work on their own sections and combine at the end", "The group meets only once to divide tasks"],
+      "answer": "All members have clear roles and shared accountability for the final product",
+      "explanation": "Clear roles prevent social loafing, and shared accountability ensures all members are invested in quality — the two biggest challenges in group academic work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Metacognition is defined as:",
+      "options": ["Memorizing large amounts of information quickly", "Thinking about your own thinking and monitoring your own learning process", "Taking notes during a lecture", "Setting academic goals for the semester"],
+      "answer": "Thinking about your own thinking and monitoring your own learning process",
+      "explanation": "Metacognition — 'knowing about knowing' — involves awareness of your learning strategies, monitoring comprehension, and adjusting your approach when something isn't working.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "The illusion of knowing is a metacognitive error where students:",
+      "options": ["Overestimate how much they have actually learned from passive review", "Study too hard for easy content", "Underestimate their abilities and performance", "Forget to review material before an exam"],
+      "answer": "Overestimate how much they have actually learned from passive review",
+      "explanation": "Familiarity from re-reading creates an illusion of mastery. Students think they know the material until tested — the solution is self-testing rather than passive re-reading.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Regular self-assessment helps students primarily by:",
+      "options": ["Predicting exactly what will be on the exam", "Identifying knowledge gaps early enough to address them before assessments", "Reducing the amount of content they need to study", "Replacing feedback from teachers"],
+      "answer": "Identifying knowledge gaps early enough to address them before assessments",
+      "explanation": "Regular self-assessment catches misunderstandings and gaps while there is still time to address them — making it a proactive rather than reactive approach to learning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "After getting a graded assignment back, the most productive thing to do is:",
+      "options": ["Look at the grade and put it away", "Review errors to understand what went wrong and how to avoid those mistakes in the future", "Compare your grade with classmates", "Argue with the teacher about the grade"],
+      "answer": "Review errors to understand what went wrong and how to avoid those mistakes in the future",
+      "explanation": "Error analysis turns mistakes into learning opportunities — understanding why you got something wrong is essential for improvement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "A learning journal or reflective log helps students by:",
+      "options": ["Providing a record of attendance", "Making metacognitive thinking habitual through regular writing about learning experiences", "Replacing formal note-taking in class", "Documenting every fact they study"],
+      "answer": "Making metacognitive thinking habitual through regular writing about learning experiences",
+      "explanation": "Regular reflective writing — what you learned, how you learned it, what was confusing — builds the habit of metacognitive self-monitoring that improves learning over time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Carol Dweck's research distinguishes a growth mindset from a fixed mindset based on:",
+      "options": ["IQ level and natural talent", "Whether a person believes intelligence and ability can be developed through effort", "The quality of a student's school environment", "Whether a student achieves top grades"],
+      "answer": "Whether a person believes intelligence and ability can be developed through effort",
+      "explanation": "Dweck's research shows that those with a growth mindset believe abilities can be developed through dedication and hard work — leading to greater resilience and achievement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "A student with a fixed mindset is most likely to respond to failure by:",
+      "options": ["Analyzing what went wrong and trying a different approach", "Avoiding similar challenges in the future to protect their self-image", "Seeking out more difficult challenges", "Asking for feedback to improve"],
+      "answer": "Avoiding similar challenges in the future to protect their self-image",
+      "explanation": "Fixed mindset individuals interpret failure as evidence of limited ability — leading to avoidance of challenging tasks rather than effort and improvement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Grit, as defined by researcher Angela Duckworth, is:",
+      "options": ["Intelligence combined with physical strength", "Passion and perseverance for long-term goals", "The ability to memorize large amounts of information", "A fixed personality trait that cannot be developed"],
+      "answer": "Passion and perseverance for long-term goals",
+      "explanation": "Duckworth's research shows that grit — sustained passion and effort toward long-term goals — predicts success better than talent or IQ alone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Reframing a failure as a learning opportunity is consistent with:",
+      "options": ["A fixed mindset approach", "Growth mindset thinking", "Avoidance behavior", "Learned helplessness"],
+      "answer": "Growth mindset thinking",
+      "explanation": "Growth mindset reframes failures as feedback — data about what to improve — rather than judgments about fixed ability. 'Not yet' replaces 'I can't.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "The phrase 'the power of yet' encourages students to:",
+      "options": ["Give up on goals they haven't achieved", "Recognize that they may not have mastered something YET but can with effort", "Wait for natural talent to develop on its own", "Avoid difficult challenges until they feel ready"],
+      "answer": "Recognize that they may not have mastered something YET but can with effort",
+      "explanation": "Carol Dweck's 'power of yet' reframes 'I don't know this' into 'I don't know this yet' — a small linguistic shift that opens the door to growth and perseverance.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following study strategies has the STRONGEST evidence for improving long-term retention?",
+      "options": ["Highlighting and re-reading", "Spaced practice combined with retrieval practice", "Summarizing after each chapter", "Listening to recordings of lectures"],
+      "answer": "Spaced practice combined with retrieval practice",
+      "explanation": "Research in cognitive psychology consistently shows that spacing out study and actively retrieving information (self-testing) are the most effective evidence-based learning strategies.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Tasks labeled 'Important but NOT Urgent' in the Eisenhower Matrix should be:",
+      "options": ["Deleted immediately", "Scheduled for a specific future time", "Done right away", "Delegated to someone else"],
+      "answer": "Scheduled for a specific future time",
+      "explanation": "Important but not-urgent tasks (long-term goals, planning, learning) should be deliberately scheduled before urgency forces them — this is where high-value proactive work lives.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Extrinsic motivation differs from intrinsic motivation in that extrinsic motivation:",
+      "options": ["Is more durable over time", "Comes from outside the person through rewards or punishments", "Comes from internal satisfaction and interest", "Requires no external input"],
+      "answer": "Comes from outside the person through rewards or punishments",
+      "explanation": "Extrinsic motivation is driven by external factors — grades, money, praise, avoiding punishment. Intrinsic motivation comes from interest and enjoyment of the activity itself.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "In Cornell notes, the cue column is used to:",
+      "options": ["Write the date and subject heading", "Record verbatim everything the teacher says", "Write questions, keywords, and cues that prompt recall of the main notes", "Summarize the whole lecture in one paragraph"],
+      "answer": "Write questions, keywords, and cues that prompt recall of the main notes",
+      "explanation": "The cue column (left narrow column) contains questions or keywords written after the lecture — covering it and answering from memory turns the notes into a self-testing tool.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "The 'Survey' step in SQ3R involves:",
+      "options": ["Taking notes word for word from the text", "Reading the chapter completely before doing anything else", "Previewing headings, figures, and summaries before reading", "Answering end-of-chapter questions immediately"],
+      "answer": "Previewing headings, figures, and summaries before reading",
+      "explanation": "Surveying creates a mental map of the content before detailed reading — activating prior knowledge and providing context that makes comprehension easier.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "According to Ebbinghaus's forgetting curve, the best time to review new information to combat forgetting is:",
+      "options": ["Three weeks after learning it", "One month after learning it", "Within the first 24–48 hours of learning", "Right before an exam, no matter how far away"],
+      "answer": "Within the first 24–48 hours of learning",
+      "explanation": "The steepest drop in the forgetting curve occurs in the first 24–48 hours. A quick review in this window dramatically slows subsequent forgetting.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "The most valuable way to use a practice test in exam preparation is as:",
+      "options": ["A final review tool used the night before the exam", "A diagnostic tool used early to identify knowledge gaps", "A tool to predict your exact exam score", "Evidence of how little you need to study"],
+      "answer": "A diagnostic tool used early to identify knowledge gaps",
+      "explanation": "When used early, practice tests reveal gaps while there is still time to address them — combining retrieval practice with targeted follow-up study.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "On a multiple choice test, the process of elimination is valuable because it:",
+      "options": ["Guarantees you choose the correct answer", "Increases your probability of selecting the correct answer from the remaining choices", "Is faster than carefully reading all options", "Only works for questions you already know"],
+      "answer": "Increases your probability of selecting the correct answer from the remaining choices",
+      "explanation": "Eliminating incorrect distractors increases your odds from 25% (four choices) to 50% (two choices) or 33% (three choices) — a significant statistical advantage.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Test anxiety is MOST effectively reduced through a combination of:",
+      "options": ["Avoiding all thoughts about the exam", "Adequate preparation and learned relaxation strategies", "Competing with peers for the highest grade", "Taking the exam without preparation"],
+      "answer": "Adequate preparation and learned relaxation strategies",
+      "explanation": "Thorough preparation reduces fear of the unknown, while relaxation techniques (deep breathing, positive self-talk) manage the physiological response — addressing both causes of test anxiety.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Which of the following is an example of a digital tool based on spaced repetition?",
+      "options": ["Google Docs", "Anki", "Notion", "Canva"],
+      "answer": "Anki",
+      "explanation": "Anki is a flashcard app that uses a spaced repetition algorithm to schedule card reviews at optimal intervals — maximizing long-term retention efficiently.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The CRAAP test evaluates the 'Authority' of a source by asking:",
+      "options": ["How recently the source was published", "Who created the content and whether they are qualified to write about the topic", "Whether the source matches your beliefs", "How many people have read the source"],
+      "answer": "Who created the content and whether they are qualified to write about the topic",
+      "explanation": "Authority evaluates the creator's credentials, expertise, and organizational affiliation — key indicators of whether the source can be trusted.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "The Jigsaw method improves learning because it:",
+      "options": ["Allows students to choose only the material they like", "Creates interdependence — each student must learn their section to teach others", "Is faster than individual study", "Removes the need for note-taking"],
+      "answer": "Creates interdependence — each student must learn their section to teach others",
+      "explanation": "Jigsaw creates positive interdependence: every student's peers need them to master their section — increasing individual accountability and deep processing of content.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Which of the following is an effective strategy for reducing procrastination?",
+      "options": ["Waiting until you feel motivated to start", "Breaking a daunting task into tiny first steps and committing to just starting", "Setting a deadline far in the future", "Promising yourself a reward without any specific plan"],
+      "answer": "Breaking a daunting task into tiny first steps and committing to just starting",
+      "explanation": "The 'just start' strategy overcomes the emotional avoidance of procrastination — once begun, the activation energy drops and momentum builds.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Metacognition helps academic performance by allowing students to:",
+      "options": ["Always know the correct answer before studying", "Monitor their understanding and adjust their strategies when not learning effectively", "Avoid all difficult subject matter", "Replace studying with natural intelligence"],
+      "answer": "Monitor their understanding and adjust their strategies when not learning effectively",
+      "explanation": "Metacognitive learners recognize when a strategy isn't working and switch to a better one — a critical self-regulatory skill linked to academic achievement.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "A student with a growth mindset would most likely respond to a poor test grade by saying:",
+      "options": ["'I'm just not good at this subject.'", "'This test was unfair.'", "'I need to figure out what I didn't understand and study differently next time.'", "'There's no point in trying harder.'"],
+      "answer": "'I need to figure out what I didn't understand and study differently next time.'",
+      "explanation": "Growth mindset students interpret setbacks as information and opportunities — they respond with analysis, reflection, and adjusted effort rather than defeat.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Interleaving different subjects or problem types during study sessions improves:",
+      "options": ["Speed of memorization", "Ability to discriminate between concepts and apply the right approach in new situations", "Comfort with familiar material", "Short-term exam performance only"],
+      "answer": "Ability to discriminate between concepts and apply the right approach in new situations",
+      "explanation": "Interleaving forces the brain to identify which strategy applies to each problem — building flexible discrimination that transfers to novel exam questions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "The Pomodoro Technique improves productivity by:",
+      "options": ["Eliminating all breaks from study time", "Creating focused work intervals with structured rest, preventing mental fatigue", "Studying the same subject for four hours without interruption", "Using timers only for timed exams"],
+      "answer": "Creating focused work intervals with structured rest, preventing mental fatigue",
+      "explanation": "Alternating 25-minute focused work periods with short breaks maintains concentration by working with the brain's natural attention cycles rather than fighting them.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "A peer-reviewed academic source is more credible than a Wikipedia article because:",
+      "options": ["Wikipedia charges a subscription fee", "Peer-reviewed work has been evaluated by subject experts for accuracy and methodology", "Wikipedia is always out of date", "Academic sources are shorter and easier to read"],
+      "answer": "Peer-reviewed work has been evaluated by subject experts for accuracy and methodology",
+      "explanation": "Peer review is the gold standard for academic credibility — independent experts verify the research before publication, ensuring quality control that open-editing platforms cannot match.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "The 'illusion of knowing' can be broken by:",
+      "options": ["Reading the chapter a third time", "Replacing re-reading with self-testing — closing the book and recalling key points", "Adding more highlights to your notes", "Taking a longer break before reviewing"],
+      "answer": "Replacing re-reading with self-testing — closing the book and recalling key points",
+      "explanation": "Self-testing exposes the gap between recognition (familiarity) and actual recall — the true measure of learning. Failing to recall something signals genuine study is still needed.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Grit research by Angela Duckworth suggests that the most significant predictor of long-term success is:",
+      "options": ["Raw intelligence", "Natural talent", "Passion and perseverance sustained over time", "Coming from a wealthy family"],
+      "answer": "Passion and perseverance sustained over time",
+      "explanation": "Duckworth's studies across many domains show grit — sustained passion and effort despite setbacks — predicts achievement more reliably than IQ or talent.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following best describes academic plagiarism?",
+      "options": ["Quoting a source and providing a citation", "Paraphrasing a source and providing a citation", "Using someone else's ideas or words without giving them credit", "Citing a source incorrectly in the bibliography"],
+      "answer": "Using someone else's ideas or words without giving them credit",
+      "explanation": "Plagiarism is presenting others' work as your own without attribution — including copying, paraphrasing without citation, and submitting AI-generated text as your own.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Which note-taking format would be most effective for comparing two competing scientific theories?",
+      "options": ["Cornell notes", "A mind map", "A comparison chart or T-chart", "An outline with numbered bullets"],
+      "answer": "A comparison chart or T-chart",
+      "explanation": "A comparison chart places theories side by side across key attributes — ideal for highlighting similarities and differences clearly and efficiently.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Regular physical exercise benefits students academically because it:",
+      "options": ["Burns off energy that would otherwise cause distraction", "Improves memory consolidation, focus, and reduces anxiety and depression", "Replaces the need for sleep", "Is only beneficial for physical education classes"],
+      "answer": "Improves memory consolidation, focus, and reduces anxiety and depression",
+      "explanation": "Exercise increases BDNF (brain-derived neurotrophic factor), which promotes neuroplasticity and memory; it also reduces cortisol and improves mood — directly benefiting academic performance.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "A student who reflects on their errors after each graded assignment demonstrates which skill?",
+      "options": ["Memorization", "Metacognition and growth mindset", "Test anxiety management", "Speed reading"],
+      "answer": "Metacognition and growth mindset",
+      "explanation": "Error analysis requires metacognition (thinking about your thinking) and a growth mindset (seeing mistakes as information) — both hallmarks of effective, self-improving learners.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "The most effective study group session would include:",
+      "options": ["Open-ended socializing with some studying", "A clear agenda, pre-assigned reading, discussion of confusing concepts, and practice problems", "Each person studying their own material in silence together", "One person teaching while others passively listen for the whole session"],
+      "answer": "A clear agenda, pre-assigned reading, discussion of confusing concepts, and practice problems",
+      "explanation": "Structured study groups with preparation requirements, active discussion, and practice questions engage all members and produce better learning than unstructured sessions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which of the following SMART goal components ensures you will know when you have achieved your goal?",
+      "options": ["Specific", "Achievable", "Measurable", "Relevant"],
+      "answer": "Measurable",
+      "explanation": "The Measurable component defines how success will be quantified — without a measurable indicator, you cannot objectively determine whether the goal has been achieved.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "What does the body paragraph structure PIE stand for?",
+      "options": ["Point, Inform, Evaluate", "Point, Illustrate, Explain", "Preview, Include, End", "Plan, Introduce, Explore"],
+      "answer": "Point, Illustrate, Explain",
+      "explanation": "PIE paragraph structure: begin with your Point (topic sentence), Illustrate with evidence (quote, data, example), and Explain how the evidence supports your argument (analysis).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Self-determination theory argues that people are most intrinsically motivated when they feel:",
+      "options": ["Highly rewarded with external prizes", "Competitive with peers", "Autonomous, competent, and connected to others", "Strictly monitored and evaluated"],
+      "answer": "Autonomous, competent, and connected to others",
+      "explanation": "Ryan and Deci's self-determination theory identifies autonomy (agency over your choices), competence (feeling effective), and relatedness (connection to others) as the three basic psychological needs for intrinsic motivation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "A student who highlights everything in a textbook but struggles to recall content on an exam is experiencing:",
+      "options": ["Effective active learning", "The illusion of knowing created by passive review", "Overlearning a topic", "The testing effect"],
+      "answer": "The illusion of knowing created by passive review",
+      "explanation": "Highlighting creates familiarity, not retrievable knowledge. The student mistakes recognition for mastery — a cognitive bias corrected only through active retrieval practice.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Mindfulness-based stress reduction helps students with test anxiety by:",
+      "options": ["Eliminating all exam-related thoughts", "Building the ability to notice anxious thoughts without being controlled by them", "Replacing exam preparation with meditation", "Proving that exams do not matter"],
+      "answer": "Building the ability to notice anxious thoughts without being controlled by them",
+      "explanation": "Mindfulness teaches non-judgmental observation of thoughts and feelings — so anxious thoughts can be noticed and allowed to pass rather than spiraling into panic.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "When evaluating a website as a source, which factor is MOST important for academic research?",
+      "options": ["The visual design of the website", "Whether the website has many followers on social media", "The credentials and qualifications of the author and organization", "Whether the website loads quickly"],
+      "answer": "The credentials and qualifications of the author and organization",
+      "explanation": "Authority — the expertise and accountability of who produced the content — is the most critical factor in evaluating web sources for academic use.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "What is the primary benefit of working backwards from a due date when planning a project?",
+      "options": ["It allows you to start the project at the last possible moment", "It ensures you identify all the steps that need time and schedule them before the deadline", "It makes the project feel less important", "It replaces the need for a detailed outline"],
+      "answer": "It ensures you identify all the steps that need time and schedule them before the deadline",
+      "explanation": "Backward planning reveals how much preparation is needed and forces scheduling of each step — preventing the common mistake of underestimating how long things take.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which brain state is associated with the best memory consolidation?",
+      "options": ["Caffeine-enhanced alertness during all-night studying", "High stress from last-minute cramming", "Deep sleep — especially REM and slow-wave sleep", "Multitasking between subjects simultaneously"],
+      "answer": "Deep sleep — especially REM and slow-wave sleep",
+      "explanation": "Memory consolidation — the process of stabilizing new information into long-term storage — primarily occurs during REM and slow-wave sleep, making adequate sleep essential for learning.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "The Leitner flashcard system is based on the principle that:",
+      "options": ["All cards should be reviewed with equal frequency", "Cards you struggle with should be reviewed more often than cards you know well", "You should only review cards the day before an exam", "Flashcards work better in groups than individually"],
+      "answer": "Cards you struggle with should be reviewed more often than cards you know well",
+      "explanation": "The Leitner system uses a spaced repetition schedule where difficult cards are reviewed frequently and easy cards progress to boxes with longer review intervals.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Which of the following is the best example of a growth mindset response to failing a math test?",
+      "options": ["'I am just not a math person and never will be.'", "'The teacher made the test too hard on purpose.'", "'I didn't understand these concepts yet — I'll review them, ask for help, and try harder.'", "'My grade doesn't matter as long as I tried.'"],
+      "answer": "'I didn't understand these concepts yet — I'll review them, ask for help, and try harder.'",
+      "explanation": "Growth mindset responses treat failure as actionable feedback — identifying specific gaps and planning concrete steps for improvement with the word 'yet' keeping the door open.",
+      "points": 1
+    }
+  ]
+}

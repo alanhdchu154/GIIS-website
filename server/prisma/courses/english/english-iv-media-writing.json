@@ -1,0 +1,1220 @@
+{
+  "slug": "english-iv-media-writing",
+  "name": "English IV - Advanced Composition / Media Writing",
+  "nameZh": "英语四高级写作与媒体",
+  "credits": 1.0,
+  "department": "English",
+  "type": "Core",
+  "description": "A senior English course focusing on advanced composition and professional media writing across genres including feature journalism, opinion writing, script writing, and digital publishing.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Advanced Composition Review",
+      "titleZh": "高级写作复习",
+      "objectives": "Review and apply advanced composition principles including thesis development, argumentation, evidence integration, and revision at a senior level.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/1-1-the-nature-of-writing",
+      "readingNote": "OpenStax Writing Guide — Chapter 1: The Nature of Writing",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/argument-writing/v/argumentative-writing-overview",
+      "videoNote": "Khan Academy — Advanced Argumentative Writing",
+      "video2Url": "https://www.youtube.com/watch?v=kYYJlNbV1OM",
+      "video2Note": "YouTube — Advanced Composition: Senior-Level Writing Strategies",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/argument-writing",
+      "practiceNote": "Khan Academy — Argument Writing Practice",
+      "assignment": "Write a 600-word analytical essay reviewing one of your strongest pieces from a previous English course, evaluating it for thesis clarity, argument development, and source integration, and outlining three specific improvements you would make with your current skills.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 2,
+      "title": "Writing for Different Audiences",
+      "titleZh": "为不同受众写作",
+      "objectives": "Analyze how audience shapes every writing decision; adapt the same content effectively for different audiences, purposes, and publication contexts.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/2-1-audience-and-purpose",
+      "readingNote": "OpenStax Writing Guide — Chapter 2: Audience and Purpose",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/style-and-tone/style/v/writing-style-overview",
+      "videoNote": "Khan Academy — Audience, Purpose, and Style",
+      "video2Url": "https://www.youtube.com/watch?v=OL0sHh1W_Kk",
+      "video2Note": "YouTube — Writing for Your Audience",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/style-and-tone",
+      "practiceNote": "Khan Academy — Style and Tone Practice",
+      "assignment": "Write about the same topic (a local community issue) for three different audiences: a peer (blog post), a school administrator (formal memo), and a local newspaper (letter to the editor). Annotate each version explaining your key choices.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 3,
+      "title": "Feature Writing",
+      "titleZh": "特写写作",
+      "objectives": "Understand and apply the conventions of long-form feature journalism including narrative structure, scene-setting, profile writing, and in-depth reporting.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/3-1-feature-writing",
+      "readingNote": "OpenStax Writing Guide — Chapter 3: Feature Writing",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing/v/feature-writing",
+      "videoNote": "Khan Academy — Feature Writing Techniques",
+      "video2Url": "https://www.youtube.com/watch?v=szJLa1vD580",
+      "video2Note": "YouTube — How to Write a Feature Article",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing",
+      "practiceNote": "Khan Academy — Feature Writing Practice",
+      "assignment": "Write a 700-word profile feature article about a person in your community (school, neighborhood, or family). Use scene-setting in the opening, include at least two direct quotations, and apply narrative storytelling techniques.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 4,
+      "title": "Opinion & Editorial Writing",
+      "titleZh": "评论与社论写作",
+      "objectives": "Write compelling opinion columns and editorials that take clear positions, use evidence effectively, and engage readers with strong voice and relevant examples.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/4-1-opinion-editorial-writing",
+      "readingNote": "OpenStax Writing Guide — Chapter 4: Opinion and Editorial Writing",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/argument-writing/v/opinion-writing",
+      "videoNote": "Khan Academy — Opinion and Editorial Writing",
+      "video2Url": "https://www.youtube.com/watch?v=vzK-BTI4iyI",
+      "video2Note": "YouTube — How to Write a Great Opinion Column",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/argument-writing",
+      "practiceNote": "Khan Academy — Argument Writing Practice",
+      "assignment": "Write a 600-word opinion column on a current issue you care about. Your column must have a strong hook, a clear thesis, specific evidence, acknowledgment of the opposing view, and a call to action in the conclusion.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 5,
+      "title": "Narrative Journalism",
+      "titleZh": "叙事新闻学",
+      "objectives": "Combine journalistic accuracy with narrative storytelling techniques including scene, character, tension, and voice to write compelling narrative nonfiction.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/5-1-narrative-journalism",
+      "readingNote": "OpenStax Writing Guide — Chapter 5: Narrative Journalism",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/narrative-writing/v/narrative-journalism",
+      "videoNote": "Khan Academy — Narrative Journalism",
+      "video2Url": "https://www.youtube.com/watch?v=kYYJlNbV1OM",
+      "video2Note": "YouTube — The Art of Narrative Journalism",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/narrative-writing",
+      "practiceNote": "Khan Academy — Narrative Writing Practice",
+      "assignment": "Write a 700-word narrative journalism piece about a real event you witnessed or researched, using scene-setting, character development, specific sensory details, and at least one direct quotation from a source.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 6,
+      "title": "Investigative Writing",
+      "titleZh": "调查性写作",
+      "objectives": "Understand the methods and ethics of investigative journalism; conduct basic investigative research and write a findings report with documented evidence.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/6-1-investigative-writing",
+      "readingNote": "OpenStax Writing Guide — Chapter 6: Investigative Writing",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/research/v/investigative-writing",
+      "videoNote": "Khan Academy — Investigative Writing Research",
+      "video2Url": "https://www.youtube.com/watch?v=3Q7qPQ-YDKQ",
+      "video2Note": "YouTube — Introduction to Investigative Journalism",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/research",
+      "practiceNote": "Khan Academy — Research and Investigation Practice",
+      "assignment": "Choose a local or school issue to investigate. Gather information from at least three sources (interviews, documents, or data), then write a 600-word investigative report presenting your findings with specific evidence and analysis.",
+      "estimatedHrs": 5.0
+    },
+    {
+      "order": 7,
+      "title": "Writing for Social Media",
+      "titleZh": "社交媒体写作",
+      "objectives": "Apply professional writing standards to social media contexts; create effective content for different platforms understanding tone, engagement, and audience.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/7-1-writing-for-social-media",
+      "readingNote": "OpenStax Writing Guide — Chapter 7: Writing for Social Media",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/digital-writing/v/social-media-writing",
+      "videoNote": "Khan Academy — Writing for Social Media",
+      "video2Url": "https://www.youtube.com/watch?v=1RNzALDq3U8",
+      "video2Note": "YouTube — Professional Writing for Social Media Platforms",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/digital-writing",
+      "practiceNote": "Khan Academy — Digital Writing Practice",
+      "assignment": "Create a professional social media content plan for a cause or organization of your choice. Write five Instagram captions, one Twitter/X thread (five tweets), and one LinkedIn post on the same topic, annotating the style choices for each platform.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 8,
+      "title": "Blogging & Online Platforms",
+      "titleZh": "博客与在线平台",
+      "objectives": "Design and write professional blog content with effective headlines, formatting for web readers, SEO awareness, and compelling voice.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/8-1-blogging-and-online-writing",
+      "readingNote": "OpenStax Writing Guide — Chapter 8: Blogging and Online Writing",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/digital-writing/v/blogging",
+      "videoNote": "Khan Academy — Blogging and Online Writing",
+      "video2Url": "https://www.youtube.com/watch?v=Yp0cR4bPRiU",
+      "video2Note": "YouTube — How to Write a Blog Post That People Actually Read",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/digital-writing",
+      "practiceNote": "Khan Academy — Digital Writing Practice",
+      "assignment": "Write three complete blog posts (300-400 words each) on a topic of your expertise: one informative 'how-to,' one opinion piece, and one personal story. Each should include a compelling headline, clear subheadings, and a call to action.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 9,
+      "title": "Script & Broadcast Writing",
+      "titleZh": "剧本与广播写作",
+      "objectives": "Write scripts for broadcast journalism, podcasts, and video content; understand how writing for the ear differs from writing for the eye.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/9-1-script-and-broadcast-writing",
+      "readingNote": "OpenStax Writing Guide — Chapter 9: Script and Broadcast Writing",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing/v/script-writing",
+      "videoNote": "Khan Academy — Script Writing Basics",
+      "video2Url": "https://www.youtube.com/watch?v=MNEoivsGrfc",
+      "video2Note": "YouTube — Writing for Broadcast: Rules and Techniques",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing",
+      "practiceNote": "Khan Academy — Script Writing Practice",
+      "assignment": "Write two scripts: (1) a 90-second broadcast news script on a school or community issue using inverted pyramid structure and broadcast style, and (2) a 3-minute podcast episode script on a topic of your choice with intro music cues and outro.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 10,
+      "title": "Grant & Proposal Writing",
+      "titleZh": "基金申请与提案写作",
+      "objectives": "Understand the structure and conventions of professional grant proposals and formal writing; write a compelling project proposal with clear goals and justification.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/10-1-professional-writing",
+      "readingNote": "OpenStax Writing Guide — Chapter 10: Professional Writing",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing/v/professional-writing",
+      "videoNote": "Khan Academy — Professional Writing Formats",
+      "video2Url": "https://www.youtube.com/watch?v=k-EOkj0g3gk",
+      "video2Note": "YouTube — How to Write a Grant Proposal",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing",
+      "practiceNote": "Khan Academy — Professional Writing Practice",
+      "assignment": "Write a one-page project proposal for a school improvement initiative, including: a problem statement, proposed solution with three specific actions, expected outcomes, timeline, and a brief budget justification.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 11,
+      "title": "Professional Writing",
+      "titleZh": "职业写作",
+      "objectives": "Produce professional workplace documents including business emails, memos, cover letters, and resumes that communicate clearly and effectively.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/11-1-professional-writing",
+      "readingNote": "OpenStax Writing Guide — Chapter 11: Professional Writing",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing/v/professional-writing-formats",
+      "videoNote": "Khan Academy — Professional Writing Formats",
+      "video2Url": "https://www.youtube.com/watch?v=A7V5yFnLlhw",
+      "video2Note": "YouTube — Professional Writing: Emails, Memos, and Cover Letters",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing",
+      "practiceNote": "Khan Academy — Workplace Writing Practice",
+      "assignment": "Create a professional writing portfolio: one formal business email requesting information, one internal memo proposing a change, one cover letter for a volunteer or internship opportunity, and one one-page resume.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 12,
+      "title": "Portfolio Development",
+      "titleZh": "作品集开发",
+      "objectives": "Curate, revise, and present a professional writing portfolio that demonstrates range, growth, and polished craft across multiple genres.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/12-1-portfolio-and-reflection",
+      "readingNote": "OpenStax Writing Guide — Chapter 12: Portfolio and Reflection",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/portfolio/v/writing-portfolio-overview",
+      "videoNote": "Khan Academy — Writing Portfolio Development",
+      "video2Url": "https://www.youtube.com/watch?v=bFGMeqA8aqM",
+      "video2Note": "YouTube — How to Build a Professional Writing Portfolio",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/portfolio",
+      "practiceNote": "Khan Academy — Portfolio Building Practice",
+      "assignment": "Select your four strongest pieces from this course and revise each to publication quality. Write a 400-word portfolio introduction explaining your development as a writer and the choices made in selecting and revising each piece.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 13,
+      "title": "Publishing & Submission",
+      "titleZh": "发表与投稿",
+      "objectives": "Understand the publication process for professional and student media; research appropriate venues for your work and prepare a submission package.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/13-1-publishing-and-submission",
+      "readingNote": "OpenStax Writing Guide — Chapter 13: Publishing and Submission",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/portfolio/v/publishing-your-writing",
+      "videoNote": "Khan Academy — Publishing Your Writing",
+      "video2Url": "https://www.youtube.com/watch?v=jBiueaQHLmE",
+      "video2Note": "YouTube — How to Submit Your Writing for Publication",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/portfolio",
+      "practiceNote": "Khan Academy — Publication Preparation Practice",
+      "assignment": "Research three appropriate publication venues for one of your completed pieces (school newspaper, literary magazine, youth publication, or blog platform). Write a 200-word cover letter for each venue adapting your pitch to each outlet's style and mission.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 14,
+      "title": "Senior Capstone Project",
+      "titleZh": "高年级顶点项目",
+      "objectives": "Complete a substantial, self-directed writing project in a genre of your choice that demonstrates mastery of advanced composition and professional writing skills.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/14-1-capstone-project",
+      "readingNote": "OpenStax Writing Guide — Chapter 14: Capstone Project",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/portfolio/v/capstone-writing-project",
+      "videoNote": "Khan Academy — Capstone Writing Project",
+      "video2Url": "https://www.youtube.com/watch?v=bFGMeqA8aqM",
+      "video2Note": "YouTube — Your Senior Writing Capstone",
+      "practiceUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/portfolio",
+      "practiceNote": "Khan Academy — Capstone and Portfolio Practice",
+      "assignment": "Complete your Senior Capstone Project: a 1500-word piece in your chosen genre (feature article, investigative report, creative nonfiction, opinion series, or professional writing package). Include a revision history, a publication submission plan, and a 400-word reflective self-assessment.",
+      "estimatedHrs": 6.0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Advanced composition differs from introductory writing primarily in its emphasis on:",
+      "options": ["Basic grammar rules and paragraph structure", "Nuanced thesis development, complex argumentation, and sophisticated style", "Learning to write the five-paragraph essay", "Avoiding all use of research sources"],
+      "answer": "B",
+      "explanation": "Advanced composition builds on foundational skills, demanding more sophisticated thesis development, complex argumentation, and intentional stylistic choices.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Evaluating your own previous writing for thesis clarity requires asking:",
+      "options": ["Is this essay long enough?", "Does my thesis make a specific, debatable claim that my body paragraphs actually prove?", "Did I use enough quotations?", "Is every sentence grammatically correct?"],
+      "answer": "B",
+      "explanation": "Thesis evaluation checks whether the thesis is specific, debatable, and whether the essay's body paragraphs actually develop and prove that exact claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "A self-assessment of a previous essay should focus on:",
+      "options": ["Only the grade received", "Specific strengths and weaknesses with concrete examples from the text", "How much time was spent writing it", "Whether the teacher gave positive feedback"],
+      "answer": "B",
+      "explanation": "A meaningful self-assessment identifies specific strengths and weaknesses with textual evidence, enabling targeted improvement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Argument development at an advanced level requires:",
+      "options": ["Simply stating your opinion without evidence", "Building layered reasoning where claims, evidence, and analysis each do distinct work", "Using as many quotations as possible", "Writing only in first person"],
+      "answer": "B",
+      "explanation": "Advanced argumentation is layered: each claim is supported with specific evidence and then analyzed to show exactly how the evidence proves the claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Revising for argument development means primarily asking:",
+      "options": ["Are there any spelling errors?", "Does every paragraph's evidence connect back to and develop the thesis?", "Is the essay long enough?", "Are all citations formatted correctly?"],
+      "answer": "B",
+      "explanation": "Revision for development asks whether each piece of evidence is fully connected to and analyzed in relation to the central thesis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Audience analysis requires writers to consider:",
+      "options": ["Only the reader's age and grade level", "The reader's background knowledge, values, expectations, and needs", "Only whether the reader agrees with the writer's position", "Only the format in which they will read the text"],
+      "answer": "B",
+      "explanation": "Effective audience analysis considers background knowledge, values, interests, expectations, and what the audience needs from the text.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "A formal memo differs from a blog post primarily in:",
+      "options": ["The topic covered", "Register, format, length, and level of formality appropriate to its professional context", "Whether it includes images", "Whether it requires citations"],
+      "answer": "B",
+      "explanation": "A memo is a professional document with formal register and specific formatting conventions, while a blog is conversational and less structurally constrained.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "A letter to the editor in a local newspaper should be written for an audience that is:",
+      "options": ["Expert academics familiar with advanced scholarly discourse", "The general public of the community, with accessible language and concrete local relevance", "Only the newspaper's editorial staff", "Young children learning to read"],
+      "answer": "B",
+      "explanation": "Letters to the editor address the general community readership—accessible language, concrete examples, and clear relevance to local concerns are essential.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "When rewriting content for different audiences, what should stay consistent?",
+      "options": ["The length and format", "The core factual information and main argument or message", "The vocabulary and sentence structure", "The opening sentence"],
+      "answer": "B",
+      "explanation": "Core facts and central message remain consistent across audiences; format, vocabulary, tone, and examples are adapted to suit each audience's needs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Purpose in writing refers to:",
+      "options": ["The formatting requirements of the assignment", "The writer's goal in creating the text—to inform, persuade, entertain, or call to action", "The length of the finished piece", "The number of sources required"],
+      "answer": "B",
+      "explanation": "Purpose is the writer's primary communicative goal, which shapes every subsequent decision about content, tone, structure, and style.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Feature writing differs from hard news writing in that feature writing:",
+      "options": ["Reports breaking news as quickly as possible", "Uses narrative techniques, depth, and human interest to explore topics in detail", "Requires no sources or quotations", "Always presents statistical data"],
+      "answer": "B",
+      "explanation": "Feature writing goes beyond reporting immediate events to provide depth, narrative, and human interest through storytelling techniques.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "A scene-setting opening in a feature article serves to:",
+      "options": ["Immediately present the article's main statistics", "Draw readers in by placing them vividly in a specific moment or setting", "List the credentials of the journalist", "Summarize all the article's main points"],
+      "answer": "B",
+      "explanation": "Scene-setting opens a feature by immersing the reader in a specific, vivid moment, creating immediate engagement and emotional investment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "A profile feature article focuses on:",
+      "options": ["A product or service review", "In-depth exploration of a person through reporting, anecdotes, and quotations", "Only positive achievements of the subject", "Statistical data about a demographic group"],
+      "answer": "B",
+      "explanation": "A profile feature provides an in-depth, textured portrait of a person through observation, research, anecdotes, and direct quotation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Direct quotations in feature writing are most valuable when they:",
+      "options": ["Are as long as possible to fill space", "Capture the subject's voice, personality, or a specific compelling insight not achievable through paraphrase", "Are paraphrased to save space", "Always appear at the end of the article"],
+      "answer": "B",
+      "explanation": "The best feature quotations reveal voice, convey emotion, or capture something uniquely specific to the subject that paraphrase cannot reproduce.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "The 'nut graf' in feature journalism is a paragraph that:",
+      "options": ["Contains nutritional information for food writing", "Explains the broader significance and relevance of the story to the reader", "Lists all sources used in the piece", "Contains only statistics and data"],
+      "answer": "B",
+      "explanation": "The nut graf (nutshell paragraph) explains why the story matters—the broader context, significance, or 'so what' for the reader—usually following the scene-setting opening.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "A strong opinion column is distinguished from a weak one by:",
+      "options": ["Being longer than 1000 words", "Having a clear, specific position supported by evidence and addressing counterarguments", "Expressing strong emotions throughout", "Being written in the third person only"],
+      "answer": "B",
+      "explanation": "A strong opinion column takes a specific, defensible position, supports it with evidence and reasoning, and engages thoughtfully with opposing views.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "An editorial represents the views of:",
+      "options": ["A single named journalist", "The publication's editorial board—the collective voice of the news organization", "Anonymous community members", "The publication's advertisers"],
+      "answer": "B",
+      "explanation": "An editorial expresses the institutional opinion of the publication's editorial board, unlike opinion columns (bylined) or news reports (objective).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "A call to action in an opinion piece:",
+      "options": ["Summarizes the article's main points", "Urges the reader to take a specific action in response to the argument", "Introduces a new counterargument in the conclusion", "Lists all sources used"],
+      "answer": "B",
+      "explanation": "A call to action tells readers specifically what they should do—vote, donate, speak out, or change behavior—in response to the argument presented.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Acknowledging the opposing view in an opinion column strengthens the piece by:",
+      "options": ["Undermining the writer's own position", "Demonstrating fairness and allowing the writer to refute the counterargument with evidence", "Making the column longer to meet word count", "Replacing the need for evidence"],
+      "answer": "B",
+      "explanation": "Engaging with the opposing view shows intellectual honesty, strengthens the writer's credibility (ethos), and allows them to rebut the counterargument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "A hook in an opinion column is most effective when it:",
+      "options": ["Begins with a dictionary definition", "Opens with a surprising fact, compelling question, or vivid anecdote that draws readers in immediately", "Starts with 'In this column I will argue...'", "Lists all the reasons the writer holds their position"],
+      "answer": "B",
+      "explanation": "An effective hook creates immediate engagement through surprise, emotional connection, or intellectual curiosity—not formulaic openings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Narrative journalism differs from traditional news reporting primarily in its:",
+      "options": ["Avoidance of factual accuracy", "Use of literary storytelling techniques (scene, character, tension, voice) applied to real events", "Focus only on fictional events", "Lack of direct quotations from sources"],
+      "answer": "B",
+      "explanation": "Narrative journalism applies novelistic techniques—scene-building, character development, dramatic tension—to factually accurate reporting of real events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Scene-building in narrative journalism requires:",
+      "options": ["Inventing details to make the story more interesting", "Specific, observed sensory details that place the reader in the exact moment being reported", "Summarizing the event without any sensory description", "Using only official statistics"],
+      "answer": "B",
+      "explanation": "Scenes in narrative journalism must be built from observed or reported specific details—journalists cannot invent scenes but must gather them through reporting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Tension in narrative journalism is created through:",
+      "options": ["Using angry language throughout the piece", "Structuring the narrative around an unresolved conflict or question that keeps readers engaged", "Including many statistical facts back to back", "Avoiding any emotional content"],
+      "answer": "B",
+      "explanation": "Narrative tension comes from structuring the story around an unresolved conflict, question, or struggle that readers are compelled to follow to resolution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "The ethical obligation of narrative journalism requires that:",
+      "options": ["Invented details are acceptable if they improve the story", "All reported facts, scenes, and quotations must be accurate and verifiable", "Writers can exaggerate for dramatic effect", "Anonymous sources can be freely quoted without attribution"],
+      "answer": "B",
+      "explanation": "Narrative journalism applies storytelling technique to factual journalism—all details, scenes, and quotes must be factually accurate and based on reporting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Voice in narrative journalism refers to:",
+      "options": ["The volume at which the journalist speaks", "The distinctive perspective, style, and personality of the writer that comes through the prose", "The use of only first-person narration", "The choice of interview subjects"],
+      "answer": "B",
+      "explanation": "Voice in narrative journalism is the distinctive personality and perspective of the writer—their particular way of seeing and rendering the world in prose.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Investigative journalism primarily seeks to:",
+      "options": ["Report breaking events as they happen", "Uncover and expose wrongdoing, systemic problems, or hidden information in the public interest", "Write profiles of interesting people", "Provide entertainment through human interest stories"],
+      "answer": "B",
+      "explanation": "Investigative journalism uses in-depth research, document analysis, and source interviews to uncover issues of public importance that are not readily visible.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "FOIA (Freedom of Information Act) requests are tools used in investigative journalism to:",
+      "options": ["Get free access to entertainment media", "Request access to government records and documents that are legally available to the public", "Protect journalists from legal action", "Verify the identity of anonymous sources"],
+      "answer": "B",
+      "explanation": "FOIA allows journalists and citizens to formally request access to federal government records, which must be released unless protected by specific exemptions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Document-based evidence in investigative writing is valuable because:",
+      "options": ["It is easier to obtain than human sources", "Documents provide verifiable, primary evidence of facts that is harder to dispute than memory", "Readers prefer documents to interviews", "Documents are always more interesting than quotations"],
+      "answer": "B",
+      "explanation": "Documents—budgets, emails, meeting minutes, contracts—provide concrete, verifiable primary evidence that grounds investigative findings in demonstrable fact.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "An investigative report should organize its findings by:",
+      "options": ["Starting with the least significant finding", "Leading with the most significant, newsworthy finding and supporting it with documented evidence", "Presenting all information in strictly chronological order", "Saving the most important information for the conclusion"],
+      "answer": "B",
+      "explanation": "Investigative reports typically lead with the most significant finding to immediately capture the reader's attention, then provide the evidence and context to support it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "The ethical principle of 'right of reply' in investigative journalism requires:",
+      "options": ["Giving subjects of investigation the opportunity to respond to findings before publication", "Allowing subjects to review and edit the final article", "Publishing only positive findings about subjects", "Keeping all findings confidential until publication"],
+      "answer": "A",
+      "explanation": "Right of reply is the ethical obligation to give people who are the subject of potentially damaging reporting the opportunity to respond before the story is published.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Professional social media writing differs from personal posting primarily in its:",
+      "options": ["Use of more emoji and casual language", "Intentionality about audience, message, voice, and brand consistency", "Focus on personal opinions and reactions", "Avoidance of all factual content"],
+      "answer": "B",
+      "explanation": "Professional social media writing is strategic—deliberately crafting message, tone, and format to serve a clear purpose for a specific audience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Instagram captions for a professional account should:",
+      "options": ["Be as long as possible to maximize information", "Be tailored to the platform's visual-first culture: engaging, concise, and aligned with the image", "Avoid any use of hashtags", "Use formal academic vocabulary"],
+      "answer": "B",
+      "explanation": "Instagram captions support the visual content—they should be engaging and appropriately brief, using relevant hashtags and language suited to the platform's conversational culture.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "A Twitter/X thread is most effective when:",
+      "options": ["Every tweet repeats the same key message", "Each tweet builds on the previous one, creating a cumulative argument or narrative", "All tweets are identical in length and format", "It avoids responding to other users' content"],
+      "answer": "B",
+      "explanation": "An effective thread builds progressively—each tweet advances the argument or story, creating a cohesive, engaging progression that rewards following through to the end.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "LinkedIn writing should be distinguished from other social media writing by its:",
+      "options": ["Shorter character count than Twitter/X", "More professional tone, focus on professional value, and network-oriented framing", "Avoidance of any personal narrative", "Requirement for formal citations"],
+      "answer": "B",
+      "explanation": "LinkedIn writing targets a professional network, requiring a more formal tone, relevance to professional growth, and content that demonstrates professional value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Consistency in social media writing for an organization or cause means:",
+      "options": ["Posting the exact same content every day", "Maintaining a coherent brand voice, visual identity, and message across all posts and platforms", "Using the same hashtags on every single post", "Posting only once per week"],
+      "answer": "B",
+      "explanation": "Brand consistency in social media requires a coherent voice, values, visual identity, and messaging strategy across all content and platforms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A compelling blog headline should:",
+      "options": ["Be as long as possible to explain the full content", "Be specific, intriguing, and promise clear value to the reader", "Use only generic words like 'things' or 'stuff'", "Always begin with a number"],
+      "answer": "B",
+      "explanation": "An effective blog headline creates curiosity or promises specific value, using concrete, specific language to draw readers in and indicate what they'll gain.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Subheadings in a blog post serve to:",
+      "options": ["Replace the need for transitional sentences", "Break content into scannable sections, helping online readers navigate and find what they need", "Make the post look longer", "Indicate the writer's level of expertise"],
+      "answer": "B",
+      "explanation": "Subheadings support online reading behavior—most web readers scan before reading in full, and clear subheadings allow navigation to relevant sections.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "A how-to blog post differs from an informative post in that it:",
+      "options": ["Provides general background information without actionable steps", "Provides step-by-step guidance enabling the reader to accomplish a specific task", "Avoids using numbered lists", "Focuses on the writer's personal opinion"],
+      "answer": "B",
+      "explanation": "A how-to post is instructional—it guides the reader through a specific process step by step, enabling them to replicate it themselves.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "A call to action at the end of a blog post asks the reader to:",
+      "options": ["Stop reading the post immediately", "Take a specific next step: comment, subscribe, share, or try the technique described", "Go to a competing publication", "Forget the content they just read"],
+      "answer": "B",
+      "explanation": "A blog call to action drives engagement by asking readers to take a specific, relevant next step after reading—building community and extending the post's impact.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Voice in a blog post contributes to reader engagement by:",
+      "options": ["Making the content harder to understand", "Creating a consistent, relatable personality that readers connect with and want to return to", "Removing all personal perspective from the writing", "Using only formal academic language throughout"],
+      "answer": "B",
+      "explanation": "A distinctive, consistent blog voice creates connection—readers return not just for information but for the personality and perspective behind the writing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Writing for the ear (broadcast/podcast) differs from writing for the eye primarily in that:",
+      "options": ["Broadcast writing uses longer, more complex sentences", "Broadcast writing uses short, direct sentences and conversational language designed to be heard, not read", "Broadcast writing requires more citations than print writing", "Print writing is always more formal than broadcast writing"],
+      "answer": "B",
+      "explanation": "Broadcast writing is designed for listeners who cannot reread—sentences must be short, clear, and conversational, avoiding complex constructions that work better on paper.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "The inverted pyramid structure in broadcast news means:",
+      "options": ["Starting with background information and building to the main point", "Leading with the most important information and following with supporting details", "Presenting events strictly in chronological order", "Using a narrative story structure with a climax"],
+      "answer": "B",
+      "explanation": "The inverted pyramid leads with the most newsworthy information (who, what, when, where) and then provides supporting context and details in decreasing order of importance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "A podcast script differs from a broadcast news script in that it:",
+      "options": ["Must be shorter and contain fewer words", "Can use a more conversational voice, narrative pacing, and sound design cues appropriate to a longer-form audio format", "Cannot include any research or factual content", "Must always be read verbatim from the script"],
+      "answer": "B",
+      "explanation": "Podcast scripts allow more conversational, long-form style with sound design cues and narrative pacing suited to an on-demand, intimate audio format.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Active voice is preferred in broadcast writing because it:",
+      "options": ["Sounds more academic and authoritative", "Is clearer and more direct, making it easier to process when heard", "Uses more words to fill broadcast time", "Is required by all broadcast news standards"],
+      "answer": "B",
+      "explanation": "Active voice (Subject-Verb-Object) is clearer and more immediate than passive voice, making it easier for listeners to quickly process who did what.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Sound cues in a podcast script are important because they:",
+      "options": ["Are purely decorative and have no communicative function", "Direct the audio producer to add music or effects that shape the tone and structure of the episode", "Replace the need for any spoken narration", "Are only used in fiction podcasts"],
+      "answer": "B",
+      "explanation": "Sound cues in scripts (e.g., [Music fades in], [Ambient noise]) direct the audio producer to add elements that create atmosphere and signal transitions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "A grant proposal's problem statement should:",
+      "options": ["Describe only the proposed solution", "Clearly and specifically identify the problem to be addressed and its significance", "Be written in the most technical language possible", "List the budget first"],
+      "answer": "B",
+      "explanation": "The problem statement establishes the need for the grant—it must clearly identify and justify the problem's significance before proposing any solution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "A project proposal's expected outcomes section should describe:",
+      "options": ["How long the project will take", "Specific, measurable results the project will achieve", "The names of all team members", "The proposal writer's qualifications"],
+      "answer": "B",
+      "explanation": "Expected outcomes must be specific and measurable—they tell the funder what tangible results the project will produce, making success evaluable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Budget justification in a proposal means:",
+      "options": ["Listing the total cost without explanation", "Explaining why each budget item is necessary and how much it will cost", "Comparing your budget to other similar projects", "Including only the largest expenses"],
+      "answer": "B",
+      "explanation": "Budget justification explains the rationale for each expense, showing funders that resources will be used efficiently and appropriately.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "A project timeline in a proposal serves to:",
+      "options": ["Show that the project will take a very long time", "Demonstrate that the project is feasible within a defined period with specific milestones", "List the qualifications of all team members", "Explain the budget in visual form"],
+      "answer": "B",
+      "explanation": "A timeline shows funders that the project is realistically planned and executable, with clear milestones and a defined endpoint.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "The tone of a grant proposal or project proposal should be:",
+      "options": ["Casual and conversational to seem approachable", "Formal, professional, and confident—demonstrating competence and seriousness of purpose", "Emotional and passionate throughout", "Identical in style to an academic research paper"],
+      "answer": "B",
+      "explanation": "Grant proposals require a formal, professional tone that conveys competence, seriousness, and trustworthiness to the funder evaluating the proposal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "A professional business email should always:",
+      "options": ["Begin with 'Hey' to sound approachable", "Include a clear subject line, professional greeting, specific purpose, and appropriate closing", "Be as brief as possible—a single sentence is always best", "Avoid using bullet points or lists"],
+      "answer": "B",
+      "explanation": "Professional emails require a clear subject line, appropriate greeting (Dear + name), a specific and organized message, and a professional closing (e.g., 'Regards').",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "A resume's purpose is to:",
+      "options": ["Tell your complete life story in chronological order", "Present your skills, education, and experience concisely in a format that matches employer needs", "Include every job or activity you have ever done", "Be at least three pages long"],
+      "answer": "B",
+      "explanation": "A resume is a strategic marketing document—it selects and presents the most relevant qualifications for a specific opportunity, concisely and clearly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "An internal memo differs from a business email primarily in that it:",
+      "options": ["Must be handwritten", "Is a formal document for internal organizational communication, following specific memo format conventions", "Requires a signature and date at the bottom", "Is always longer than an email"],
+      "answer": "B",
+      "explanation": "A memo is a formal internal document with specific formatting (TO/FROM/DATE/SUBJECT lines) used within an organization for official communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "A cover letter for a position should:",
+      "options": ["Repeat every item on the resume word for word", "Highlight the most relevant qualifications and explain specifically why you are a strong fit for this opportunity", "Be as long as possible to demonstrate thoroughness", "Focus on why you need the position rather than what you offer"],
+      "answer": "B",
+      "explanation": "A cover letter complements (doesn't repeat) the resume, connecting your specific qualifications to the opportunity's requirements in a compelling, tailored narrative.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Proofreading professional documents is especially important because:",
+      "options": ["Errors are acceptable in informal workplace communication", "Errors in professional writing undermine credibility and can have real professional consequences", "Professional readers rarely notice errors", "Spellcheck tools catch all errors automatically"],
+      "answer": "B",
+      "explanation": "In professional contexts, errors in writing signal carelessness and lack of professionalism, potentially damaging credibility and professional opportunities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "A professional writing portfolio is curated by:",
+      "options": ["Including everything you have ever written", "Selecting pieces that best represent your range, expertise, and strongest skills for a specific purpose", "Choosing only the longest pieces you have written", "Ordering pieces alphabetically by title"],
+      "answer": "B",
+      "explanation": "Portfolio curation is strategic—selecting pieces that best demonstrate range, skill, and development for the specific audience reviewing the portfolio.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Revising pieces to publication quality means:",
+      "options": ["Making pieces longer to show more effort", "Ensuring every sentence, word choice, citation, and format is polished and error-free", "Submitting the original first draft", "Only fixing spelling and grammar"],
+      "answer": "B",
+      "explanation": "Publication-quality revision addresses all levels—content, argument, style, sentence-level clarity, and surface mechanics—until the piece represents your best work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "A portfolio introduction should:",
+      "options": ["List every piece in the portfolio with word counts", "Explain the writer's development, curation choices, and what the portfolio as a whole demonstrates", "Be identical in style to all other portfolio pieces", "Be written before the portfolio pieces are selected"],
+      "answer": "B",
+      "explanation": "A portfolio introduction provides a reflective overview—explaining the writer's growth, why specific pieces were chosen, and what the collection demonstrates about the writer's skills.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Range in a writing portfolio refers to:",
+      "options": ["Writing in a very long document", "Demonstrating competence across different genres, audiences, and purposes", "Including pieces written over many years", "Using the widest possible vocabulary"],
+      "answer": "B",
+      "explanation": "Portfolio range demonstrates the writer's versatility—showing they can write effectively across different genres (feature, opinion, script, professional) for different audiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Growth in a writing portfolio is demonstrated by:",
+      "options": ["Including only perfect pieces from the beginning of the year", "Showing progression from earlier, less developed work to more polished, sophisticated pieces", "Including only the most recent work", "Removing any pieces that show weaknesses"],
+      "answer": "B",
+      "explanation": "Demonstrating growth requires showing a progression—where the writer began and where they are now—making the development visible and meaningful.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "A submission cover letter for a publication should:",
+      "options": ["Be identical regardless of which publication you are submitting to", "Be specifically tailored to the publication's style, mission, and readership", "Summarize the entire piece in detail", "Focus on the writer's personal background rather than the work"],
+      "answer": "B",
+      "explanation": "Each submission letter should be tailored to the specific publication—demonstrating familiarity with the outlet, its audience, and why this particular piece fits.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Researching submission guidelines before submitting to a publication is important because:",
+      "options": ["All publications use identical formatting and length requirements", "Each publication has specific requirements for format, length, and style that must be followed", "Submission guidelines are optional suggestions only", "Guidelines only matter for academic journals"],
+      "answer": "B",
+      "explanation": "Ignoring submission guidelines signals unprofessionalism and often results in automatic rejection; each outlet has specific requirements that must be followed exactly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Student writers can build their publishing history by submitting to:",
+      "options": ["Only major national publications", "Student publications, literary magazines, youth-focused outlets, and local newspapers", "Only online platforms with no editorial standards", "Venues that accept all submissions without review"],
+      "answer": "B",
+      "explanation": "Student publications, school newspapers, youth magazines, local papers, and class-appropriate literary magazines are accessible and appropriate first publishing venues.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "After submitting to a publication and receiving a rejection, a writer should:",
+      "options": ["Give up on that piece entirely", "Review any feedback provided, revise if needed, and submit to another appropriate venue", "Submit the identical piece to the same outlet immediately", "Complain publicly about the editorial decision"],
+      "answer": "B",
+      "explanation": "Rejection is a normal part of the publication process; the professional response is to review feedback, potentially revise, and resubmit to another suitable outlet.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "A pitch letter to a publication editor introduces:",
+      "options": ["A completed, polished final draft of your piece", "The proposed piece with a brief summary of the topic, angle, and why it fits the publication", "Only your personal biography and credentials", "A list of sources you plan to use"],
+      "answer": "B",
+      "explanation": "A pitch (or query) letter proposes an article idea—describing the topic, angle, relevance to the publication's audience, and your qualifications—before writing the full piece.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "A senior capstone writing project demonstrates mastery by:",
+      "options": ["Following all teacher instructions exactly as given", "Integrating all major course skills into a substantial, self-directed piece at publication quality", "Being the longest piece the student has ever written", "Covering a topic previously assigned in an earlier course"],
+      "answer": "B",
+      "explanation": "A capstone project integrates all major course skills—composition, audience awareness, voice, revision, professional writing—into a polished, self-directed final piece.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "A revision history in the capstone project documents:",
+      "options": ["Only the final version of the piece", "The specific changes made from each draft to the next, showing the evolution of the work", "The number of hours spent writing", "The sources consulted but not used"],
+      "answer": "B",
+      "explanation": "A revision history demonstrates the writer's process—showing what changed, why, and how the piece evolved from first draft to final version.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "A publication submission plan for the capstone shows:",
+      "options": ["That the piece has already been accepted by a publisher", "Three to five identified venues appropriate for the piece with rationale for each selection", "The writer's future career goals", "A marketing budget for promoting the piece"],
+      "answer": "B",
+      "explanation": "A submission plan demonstrates that the writer has researched real, appropriate venues and understands why each would be a good fit for the specific piece.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Self-direction in a capstone project means the student:",
+      "options": ["Completes the project without any teacher guidance", "Drives the choices of topic, genre, approach, and revision with increasing independence", "Copies an existing published piece in a new genre", "Follows a prescribed template for the entire project"],
+      "answer": "B",
+      "explanation": "A capstone demonstrates senior-level independence—the student makes increasingly autonomous choices about subject, approach, and revision while using teacher feedback strategically.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "A strong reflective self-assessment in the capstone should:",
+      "options": ["List every grammar rule followed in the piece", "Honestly evaluate what works, what was challenging, what you would change, and what the piece demonstrates about your growth", "Summarize the content of the final piece", "Focus only on positive achievements without addressing weaknesses"],
+      "answer": "B",
+      "explanation": "A genuine self-assessment demonstrates metacognitive maturity—honestly analyzing strengths, challenges, and growth in a way that shows deep engagement with the writing process.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "The key distinction between feature writing and hard news reporting is that feature writing:",
+      "options": ["Is published less frequently than news reports", "Uses narrative storytelling techniques to explore topics with depth and human interest", "Never requires any factual research", "Is always longer than 2000 words"],
+      "answer": "B",
+      "explanation": "Feature writing uses narrative techniques—scene, character, voice, tension—to explore real events and people in depth, going beyond the immediate facts of a news report.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Adapting writing for different audiences requires changing:",
+      "options": ["Only the length of the piece", "Vocabulary, tone, format, and examples to match the audience's background and needs", "The factual information in the piece", "Only the title and opening paragraph"],
+      "answer": "B",
+      "explanation": "Effective audience adaptation adjusts vocabulary, tone, formality, format, and which examples or evidence will resonate—while keeping core facts consistent.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "A scene-setting opening in a feature article is designed to:",
+      "options": ["Summarize all the article's main facts immediately", "Immerse the reader in a vivid, specific moment to create immediate engagement", "Present the most important statistic first", "Introduce the journalist's credentials"],
+      "answer": "B",
+      "explanation": "A scene-setting lede places readers directly in a specific moment, creating emotional and narrative engagement before providing broader context.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "An editorial in a newspaper represents the views of:",
+      "options": ["A named individual columnist", "The publication's editorial board—the collective institutional voice", "Anonymous community members", "The publication's advertisers"],
+      "answer": "B",
+      "explanation": "Editorials represent the collective institutional position of the news organization's editorial board, not an individual writer.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Narrative journalism requires that all scenes and details be:",
+      "options": ["Invented by the writer to improve the story", "Based on observed or reported facts—never fabricated", "Kept vague to protect sources", "Written in the third person only"],
+      "answer": "B",
+      "explanation": "Narrative journalism's fundamental ethical requirement is that all reported scenes, details, and quotations are factually accurate—literary technique applied only to real facts.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "The nut graf in a feature article explains:",
+      "options": ["The nutritional content in a food feature", "The broader significance and relevance of the story to the reader", "All sources used in the piece", "The journalist's personal opinion"],
+      "answer": "B",
+      "explanation": "The nut graf provides the 'so what'—the broader context and significance that explains why readers should care about the story.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Broadcast writing should use active voice because it:",
+      "options": ["Sounds more formal and academic", "Is clearer and more direct, making it easier to process when heard", "Uses fewer words to fill broadcast time", "Is required by FCC regulations"],
+      "answer": "B",
+      "explanation": "Active voice makes broadcast writing more direct and immediate, which is essential for listeners who process audio in real time without re-reading.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "A professional LinkedIn post should be distinguished from an Instagram caption by its:",
+      "options": ["Shorter character count", "More professional tone and relevance to professional development and networking", "Avoidance of all personal narrative", "Requirement for formal citations"],
+      "answer": "B",
+      "explanation": "LinkedIn addresses a professional audience with professional goals—tone, content, and framing should reflect professional value and network relevance.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "A grant proposal's problem statement must:",
+      "options": ["Immediately propose the solution without describing the problem", "Clearly identify and justify the significance of the problem to be addressed", "List the budget in detail", "Describe the writer's personal interest in the topic"],
+      "answer": "B",
+      "explanation": "The problem statement establishes why the grant is needed by describing the problem clearly and making a compelling case for its importance.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "The 'right of reply' principle in investigative journalism requires:",
+      "options": ["Allowing subjects to edit the article before publication", "Giving subjects the opportunity to respond to findings before the story is published", "Publishing only positive findings about investigation subjects", "Keeping all sources confidential from the subject"],
+      "answer": "B",
+      "explanation": "Right of reply is the ethical obligation to give subjects of potentially damaging reporting a chance to respond, ensuring fairness in the reporting process.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Subheadings in a blog post primarily help readers to:",
+      "options": ["Increase the word count of the post", "Scan and navigate content quickly, finding the sections most relevant to them", "Make the post appear more academic", "Indicate where advertisements will appear"],
+      "answer": "B",
+      "explanation": "Subheadings accommodate online scanning behavior—most web readers scan before committing to reading in full, and clear subheadings aid navigation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "A cover letter for a volunteer opportunity should:",
+      "options": ["Repeat every item on the resume word for word", "Highlight the most relevant qualifications and explain why you are a strong fit for this specific opportunity", "Be at least three pages long", "Focus on what you need from the organization rather than what you offer"],
+      "answer": "B",
+      "explanation": "A cover letter must be tailored—connecting your specific skills and experience to the specific needs and mission of the opportunity.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Investigating a local issue as a journalist requires:",
+      "options": ["Only reading other newspaper articles about the topic", "Gathering information from multiple sources including interviews, documents, and data", "Writing only from personal experience", "Publishing findings before any verification"],
+      "answer": "B",
+      "explanation": "Investigative journalism requires multiple forms of evidence—interviews, documents, data—to build a complete, verifiable account of the issue being investigated.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Portfolio curation means:",
+      "options": ["Including everything ever written in chronological order", "Strategically selecting pieces that best demonstrate range, skill, and development for a specific purpose", "Choosing only the longest pieces written this year", "Selecting pieces randomly to show variety"],
+      "answer": "B",
+      "explanation": "Curation is a strategic selection process—choosing pieces that collectively make the strongest case for the writer's versatility and skills.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Consistency in social media writing for a cause or organization refers to:",
+      "options": ["Posting the exact same content every day", "Maintaining a coherent brand voice, message, and visual identity across all posts and platforms", "Using the same hashtags on every post", "Posting only once per week"],
+      "answer": "B",
+      "explanation": "Brand consistency in social media builds recognition and trust—a coherent voice, values, and messaging strategy across all content is essential.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "A pitch letter to a publication editor proposes:",
+      "options": ["A completed polished final draft for immediate publication", "The article idea with a brief description of topic, angle, and why it fits the publication", "Only the writer's biography and credentials", "A list of sources to be used"],
+      "answer": "B",
+      "explanation": "A pitch proposes an article idea—describing the topic, angle, and relevance to the specific publication—before the full article is written.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "A senior capstone writing project is distinguished by its:",
+      "options": ["Strict adherence to a prescribed format", "Integration of all major course skills into a substantial, self-directed publication-quality piece", "Focus on a topic assigned by the teacher", "Completion in one sitting without revision"],
+      "answer": "B",
+      "explanation": "A capstone integrates all course skills—composition, voice, research, revision, professional writing—into a self-directed, polished final work.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "A how-to blog post differs from a general informative post in that it:",
+      "options": ["Provides general background without steps", "Guides the reader through specific, actionable steps to accomplish a task", "Focuses on the writer's personal opinions", "Avoids numbered lists and instructions"],
+      "answer": "B",
+      "explanation": "A how-to post is instructional—providing a clear, step-by-step process that enables the reader to replicate the task themselves.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Document-based evidence in investigative writing is valuable because:",
+      "options": ["It is easier to obtain than human sources", "It provides verifiable, primary evidence that is harder to dispute than memory or verbal claims", "Readers always prefer documents to quotations", "Documents require no interpretation"],
+      "answer": "B",
+      "explanation": "Documents provide concrete, verifiable facts—budgets, emails, records—that ground investigative findings in demonstrable evidence.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Writing for the ear in broadcast journalism requires:",
+      "options": ["Using the same complex sentences appropriate for academic writing", "Short, direct, conversational sentences that are easy to process when heard once", "More quotations than print journalism", "Longer paragraphs to fill broadcast time"],
+      "answer": "B",
+      "explanation": "Broadcast writing is designed for listeners—short, clear, active sentences that convey key information effectively without the possibility of re-reading.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "A publication submission plan for a capstone project demonstrates:",
+      "options": ["That the piece has already been published", "Research into appropriate venues and strategic thinking about where the piece would best fit", "The writer's desire to become a professional journalist", "That the piece has been rejected by several publishers"],
+      "answer": "B",
+      "explanation": "A submission plan shows that the writer has researched real appropriate outlets and can articulate why each would be a good fit for their specific piece.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Self-direction in a senior capstone project involves:",
+      "options": ["Completing all work without any feedback from the teacher", "Making increasingly autonomous choices about topic, genre, approach, and revision", "Following a prescribed template for all components", "Replicating a previously published article in a new format"],
+      "answer": "B",
+      "explanation": "Senior-level self-direction means the student drives key decisions about their project—topic, genre, structure, revision—with strategic rather than dependent use of teacher feedback.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Proofreading professional documents before submission is critical because:",
+      "options": ["Spellcheck tools catch all possible errors", "Errors in professional writing undermine credibility and can have real professional consequences", "Professional readers never notice minor errors", "Proofreading is only necessary for academic papers"],
+      "answer": "B",
+      "explanation": "In professional contexts, errors signal lack of care and undermine credibility—they can affect career opportunities and professional relationships.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "An effective call to action at the end of an opinion column:",
+      "options": ["Repeats the introductory hook word for word", "Urges the reader to take a specific, relevant action in response to the argument", "Introduces a new argument not discussed in the body", "Apologizes for taking a strong position"],
+      "answer": "B",
+      "explanation": "A call to action transforms readers from passive to active—it tells them specifically what to do in response to the argument, increasing the column's real-world impact.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Portfolio range is best demonstrated by:",
+      "options": ["Writing the longest possible pieces", "Including work across different genres, audiences, and purposes that shows versatility", "Selecting only one genre and writing many examples of it", "Including all work completed during the course"],
+      "answer": "B",
+      "explanation": "Range demonstrates versatility—the ability to write effectively across different genres (feature, opinion, script, professional) for different audiences and purposes.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Receiving a rejection from a publication is most professionally handled by:",
+      "options": ["Abandoning the piece entirely", "Reviewing any feedback, revising if needed, and submitting to another appropriate venue", "Resubmitting the identical piece to the same outlet immediately", "Complaining publicly about the editorial decision"],
+      "answer": "B",
+      "explanation": "Professional writers treat rejection as information—reviewing feedback, revising strategically, and resubmitting to other suitable venues.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Budget justification in a grant proposal explains:",
+      "options": ["That the total budget is as low as possible", "Why each expense is necessary and appropriate to achieve the project's goals", "How the budget compares to other similar projects", "Only the largest single budget item"],
+      "answer": "B",
+      "explanation": "Budget justification demonstrates to funders that each expense is necessary, reasonable, and directly supports the project's stated goals.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Sound cues in a podcast script direct the audio producer to:",
+      "options": ["Eliminate all background noise from the recording", "Add music or sound effects at specific points to create atmosphere and signal transitions", "Record the host's voice at a higher volume", "Remove any silences from the final edit"],
+      "answer": "B",
+      "explanation": "Sound cues in podcast scripts are production directions—they specify where music, ambient sound, or effects should be added to shape the episode's tone and structure.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "A revision history document in a capstone project shows:",
+      "options": ["Only the final polished version of the piece", "The specific changes made from draft to draft, demonstrating the writer's revision process", "The number of hours spent on each draft", "Sources consulted but ultimately not used"],
+      "answer": "B",
+      "explanation": "A revision history makes the writing process visible—showing what changed between drafts, why, and how the piece evolved through revision.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Submission guidelines for a publication must be followed because:",
+      "options": ["They are optional suggestions for experienced writers", "Each outlet has specific requirements, and ignoring them signals unprofessionalism and leads to rejection", "Guidelines only apply to academic journal submissions", "All publications use the same universal format"],
+      "answer": "B",
+      "explanation": "Submission guidelines are requirements—not suggestions. Failing to follow them immediately signals unprofessionalism and typically results in rejection without reading.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "A strong capstone self-assessment evaluates:",
+      "options": ["Only the positive outcomes of the project", "What works, what was challenging, what you would change, and what the project demonstrates about your growth", "Only the grade received on the project", "The teacher's feedback without personal reflection"],
+      "answer": "B",
+      "explanation": "A genuine self-assessment requires intellectual honesty—identifying strengths and weaknesses, lessons learned, and what the work reveals about your development as a writer.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Professional social media content planning requires:",
+      "options": ["Posting spontaneously whenever inspiration strikes", "A strategic approach considering audience, message, platform norms, and brand consistency", "Using identical content across all platforms", "Posting as frequently as possible regardless of content quality"],
+      "answer": "B",
+      "explanation": "Effective professional social media requires strategic planning—understanding each platform's audience and norms, and crafting content that consistently serves the organization's goals.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "A profile feature article uses which combination of techniques?",
+      "options": ["Only statistics and official reports about the subject", "In-depth research, direct observation, quotations, anecdotes, and scene-setting to create a textured portrait", "A simple interview transcript without narrative framing", "Third-person voice with no direct quotations"],
+      "answer": "B",
+      "explanation": "A strong profile uses multiple reporting and narrative techniques—observation, interviews, documents, anecdotes—to build a complex, human portrait of the subject.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Tension in narrative journalism is created by:",
+      "options": ["Using angry or sensational language", "Structuring the narrative around an unresolved conflict that compels readers forward", "Including as many facts as possible", "Avoiding any emotional content in the reporting"],
+      "answer": "B",
+      "explanation": "Narrative tension comes from structural choices—placing an unresolved question or conflict at the center of the story that readers are compelled to follow to resolution.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "A portfolio introduction provides value because it:",
+      "options": ["Is a required formatting element with no real analytical purpose", "Gives the reader the writer's perspective on their own development and the choices made in curating the portfolio", "Summarizes each piece in the portfolio with its word count", "Was written before the pieces were selected"],
+      "answer": "B",
+      "explanation": "A portfolio introduction contextualizes the collection—explaining the writer's development, selection rationale, and what the portfolio demonstrates about their skills and growth.",
+      "points": 1
+    }
+  ]
+}

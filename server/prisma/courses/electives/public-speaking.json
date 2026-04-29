@@ -1,0 +1,1745 @@
+{
+  "name": "Public Speaking",
+  "nameZh": "公开演讲",
+  "slug": "public-speaking",
+  "description": "A half-credit course developing confident, effective oral communication skills for academic and professional contexts. Students study speech preparation, audience analysis, delivery techniques, and persuasive strategies through a series of progressively challenging speaking assignments.",
+  "credits": 0.5,
+  "department": "English",
+  "type": "Elective",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Overview of Public Speaking",
+      "titleZh": "公开演讲概述",
+      "objectives": "Identify the communication process model and its components; explain why public speaking competence matters in academic and professional contexts; describe the characteristics of an ethical public speaker.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/1-introduction",
+      "readingNote": "Read the OpenStax Introduction to Communication chapter covering the communication process, contexts, and ethical communication principles.",
+      "videoUrl": "https://www.youtube.com/watch?v=xaRjP-VB4do",
+      "videoNote": "Watch the TED-Ed overview of why public speaking skills matter and how great speakers think differently.",
+      "video2Url": "https://www.youtube.com/watch?v=AykYRO5d_lI",
+      "video2Note": "Review the communication process model and how noise, feedback, and context affect public speaking.",
+      "practiceUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/public-speaking-overview",
+      "practiceNote": "Complete the public speaking self-assessment to identify your current strengths and areas for development.",
+      "assignment": "Write a 300-word personal speech biography describing your history with public speaking—your experiences, fears, and goals for this course. Identify one speaker you admire and explain what makes them effective.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Managing Speech Anxiety",
+      "titleZh": "管理演讲焦虑",
+      "objectives": "Identify physiological and psychological symptoms of communication apprehension; apply cognitive restructuring and physical relaxation techniques; use systematic desensitization strategies to reduce speech anxiety.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/2-managing-communication-apprehension",
+      "readingNote": "Read the OpenStax section on communication apprehension, its causes, and evidence-based strategies for managing nervousness before and during speeches.",
+      "videoUrl": "https://www.youtube.com/watch?v=K0t-szpo9EQ",
+      "videoNote": "Watch Amy Cuddy's TED Talk on how body posture affects confidence and performance anxiety.",
+      "video2Url": "https://www.youtube.com/watch?v=KgESlVHBQkk",
+      "video2Note": "Review cognitive restructuring techniques for managing negative self-talk before speaking.",
+      "practiceUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/managing-speech-anxiety",
+      "practiceNote": "Complete the anxiety management technique practice activity.",
+      "assignment": "Deliver a 60-second impromptu speech introducing yourself to your class. Then write a 300-word reflection analyzing the anxiety you experienced before, during, and after the speech. Identify two techniques from the module that you will apply in future speeches.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Audience Analysis",
+      "titleZh": "受众分析",
+      "objectives": "Conduct demographic and psychographic audience analysis; explain how audience knowledge, attitudes, and values affect speech design; adapt a speech's language, examples, and appeals to a specific audience.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/3-audience-analysis",
+      "readingNote": "Read the OpenStax chapter on audience analysis, including demographic variables (age, gender, education) and psychographic variables (attitudes, values, beliefs).",
+      "videoUrl": "https://www.youtube.com/watch?v=y_UM3KblHVw",
+      "videoNote": "Watch the audience analysis tutorial for public speaking—understanding who you are speaking to.",
+      "video2Url": "https://www.youtube.com/watch?v=k1rJyFPBiMQ",
+      "video2Note": "Review how top communicators adapt their style and content to different audience types.",
+      "practiceUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/audience-analysis-speech",
+      "practiceNote": "Complete the audience profile worksheet for a hypothetical speaking situation.",
+      "assignment": "Select a topic and analyze two different audiences (e.g., high school students vs. corporate executives). Write a 400-word comparison describing how you would adapt the topic, language, examples, and appeals differently for each audience.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Topic Selection & Purpose",
+      "titleZh": "主题选择与目的",
+      "objectives": "Distinguish among general purpose, specific purpose, and central idea; select an appropriate speech topic using brainstorming and narrowing strategies; write a clear specific purpose statement and central idea.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/4-selecting-a-topic",
+      "readingNote": "Read the OpenStax section on the difference between a general purpose (to inform, to persuade, to entertain), a specific purpose, and a central idea (thesis) for a speech.",
+      "videoUrl": "https://www.youtube.com/watch?v=kl0Z7BH1qJQ",
+      "videoNote": "Watch the tutorial on how to select a compelling speech topic and craft a focused specific purpose statement.",
+      "video2Url": "https://www.youtube.com/watch?v=uFveNBrSZ8Y",
+      "video2Note": "Review how to narrow a broad topic into a speech-length central idea with a clear purpose.",
+      "practiceUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/speech-topic-selection",
+      "practiceNote": "Complete the brainstorming and topic selection practice activity.",
+      "assignment": "Brainstorm ten possible speech topics. Narrow to one topic and write: (1) a general purpose statement, (2) a specific purpose statement, and (3) a central idea. Write a 200-word justification explaining why this topic is appropriate for a classroom audience.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Research & Supporting Material",
+      "titleZh": "研究与支撑材料",
+      "objectives": "Identify major types of supporting material (examples, statistics, testimony, definitions); evaluate the credibility of oral sources; use statistics ethically and effectively in speeches.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/5-supporting-your-speech",
+      "readingNote": "Read the OpenStax chapter on types of support: examples (brief, extended, hypothetical), statistics (frequency, average, percentage), expert testimony, and peer testimony.",
+      "videoUrl": "https://www.youtube.com/watch?v=lMRZFcMqKe0",
+      "videoNote": "Watch the tutorial on finding and evaluating credible supporting material for speeches.",
+      "video2Url": "https://www.youtube.com/watch?v=sD2CdRY3bXM",
+      "video2Note": "Review how to use statistics ethically in speeches—avoiding cherry-picking and misleading data presentation.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:evidence-based-writing/e/evaluating-credibility-of-sources",
+      "practiceNote": "Practice evaluating source credibility for information used in public speeches.",
+      "assignment": "Gather four types of supporting material for your speech topic from Module 4: one example, one statistic, one expert quote, and one definition. Write a 300-word evidence card for each, including the source, the evidence, and a sentence explaining how you will use it in your speech.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 6,
+      "title": "Organizing a Speech",
+      "titleZh": "演讲结构组织",
+      "objectives": "Apply five organizational patterns for speeches (topical, chronological, spatial, problem-solution, Monroe's Motivated Sequence); select the pattern most appropriate for a given speech purpose; use main points and subpoints effectively.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/6-organizing-your-speech",
+      "readingNote": "Read the OpenStax chapter on speech organization patterns with examples of each pattern applied to different speech topics and purposes.",
+      "videoUrl": "https://www.youtube.com/watch?v=0JExO0F7mJY",
+      "videoNote": "Watch the speech organization tutorial covering topical, chronological, and problem-solution patterns with examples.",
+      "video2Url": "https://www.youtube.com/watch?v=8OiXjQCTEpA",
+      "video2Note": "Review Monroe's Motivated Sequence as a persuasion organizational framework.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/logical-sequence",
+      "practiceNote": "Practice identifying and applying appropriate organizational patterns to speech scenarios.",
+      "assignment": "Create a full-sentence outline for a 3-minute speech on your topic using the organizational pattern most appropriate to your purpose. Include an introduction section, three main points with subpoints, and a conclusion section. Write a 150-word justification for your pattern choice.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 7,
+      "title": "Introductions & Conclusions",
+      "titleZh": "引言与总结",
+      "objectives": "Write a speech introduction using an effective attention-getter, audience motivation, credibility statement, and preview; craft a conclusion that signals the end, summarizes main points, and ends memorably.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/7-introductions-and-conclusions",
+      "readingNote": "Read the OpenStax section on speech introductions (attention-getter types, relevance statement, credibility, preview) and conclusions (signpost, summary, clincher).",
+      "videoUrl": "https://www.youtube.com/watch?v=wfkxOoYzQkE",
+      "videoNote": "Watch examples of powerful speech openings and closings from top TED speakers.",
+      "video2Url": "https://www.youtube.com/watch?v=r9LLkFk5mhk",
+      "video2Note": "Review how to craft a memorable clincher that leaves a lasting impression on the audience.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/introductions-and-conclusions",
+      "practiceNote": "Practice evaluating the effectiveness of speech introductions and conclusions.",
+      "assignment": "Write a complete speech introduction and conclusion for your organized speech from Module 6. The introduction must include all four elements (attention-getter, relevance, credibility, preview). The conclusion must include a signpost, summary, and clincher. Each section should be written out in full and labeled by function.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Outlining",
+      "titleZh": "演讲提纲",
+      "objectives": "Distinguish between preparation outlines and speaking outlines; create a complete preparation outline with citations; construct a keyword speaking outline for use during delivery.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/8-outlining-your-speech",
+      "readingNote": "Read the OpenStax section on preparation outlines (full-sentence with citations) vs. speaking outlines (keyword notes for delivery), including formatting conventions.",
+      "videoUrl": "https://www.youtube.com/watch?v=5bTdHFSWHfQ",
+      "videoNote": "Watch the tutorial on constructing a proper speech outline with correct subordination and citation format.",
+      "video2Url": "https://www.youtube.com/watch?v=7a-0xsFQiNs",
+      "video2Note": "Review how to convert a preparation outline into an effective keyword speaking outline for natural delivery.",
+      "practiceUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/speech-outlining",
+      "practiceNote": "Practice creating properly subordinated speech outline entries.",
+      "assignment": "Using your organized speech from Module 6, write: (1) a complete preparation outline in full sentences with proper subordination and in-text citations, and (2) a keyword speaking outline reduced to the notes you would use during delivery. Submit both with a 150-word explanation of how they differ.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Language & Vocal Style",
+      "titleZh": "语言与声音风格",
+      "objectives": "Apply principles of oral vs. written style to speeches; use vivid, concrete, and inclusive language; vary vocal elements (rate, pitch, volume, pause, articulation) to enhance delivery.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/9-language-and-style",
+      "readingNote": "Read the OpenStax section on oral style characteristics (simplicity, directness, imagery) and vocal variety elements including rate, pitch, volume, pausing, and articulation.",
+      "videoUrl": "https://www.youtube.com/watch?v=eIho2S0ZahI",
+      "videoNote": "Watch the vocal delivery tutorial with exercises for rate, volume, pitch variation, and powerful pausing.",
+      "video2Url": "https://www.youtube.com/watch?v=bqDwFkJSb1Q",
+      "video2Note": "Review how top speakers use strategic pausing and vocal modulation to hold audience attention.",
+      "practiceUrl": "https://www.khanacademy.org/humanities/writing/grammar/conventions-of-standard-english/v/word-choice",
+      "practiceNote": "Practice selecting precise, vivid, and audience-appropriate language for different speaking contexts.",
+      "assignment": "Record a 60-second practice speech segment. Rewrite the segment twice: once using overly technical jargon, once using vivid, accessible oral style language. Submit the two written versions and a 250-word reflection identifying which vocal and language choices were most effective and why.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 10,
+      "title": "Physical Delivery & Nonverbal Communication",
+      "titleZh": "肢体表达与非语言沟通",
+      "objectives": "Apply nonverbal communication principles to speech delivery; use eye contact, gestures, posture, and movement to enhance credibility and connection; interpret audience feedback through nonverbal cues.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/10-nonverbal-communication",
+      "readingNote": "Read the OpenStax chapter on nonverbal communication in public speaking: kinesics (movement, gestures), eye contact, proxemics (space), and appearance.",
+      "videoUrl": "https://www.youtube.com/watch?v=Ks-_Mh1QhMc",
+      "videoNote": "Watch the nonverbal communication in public speaking tutorial analyzing body language in TED Talk examples.",
+      "video2Url": "https://www.youtube.com/watch?v=1T1hBPfJhCA",
+      "video2Note": "Review the common nonverbal mistakes made by inexperienced speakers and how to correct them.",
+      "practiceUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/nonverbal-communication-speaking",
+      "practiceNote": "Complete the nonverbal behavior observation and analysis exercise.",
+      "assignment": "Watch a recorded speech (TED Talk or political address) and write a 400-word nonverbal analysis evaluating the speaker's eye contact, gestures, posture, movement, and facial expressions. Identify two nonverbal strengths and one area for improvement with specific timestamped examples.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 11,
+      "title": "Visual Aids & Technology",
+      "titleZh": "视觉辅助与技术",
+      "objectives": "Explain principles of effective visual aid design (simplicity, consistency, relevance); create a well-designed presentation slide deck; integrate technology smoothly into speech delivery.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/11-visual-aids",
+      "readingNote": "Read the OpenStax section on types of visual aids, design principles (CRAP: contrast, repetition, alignment, proximity), and strategies for integrating technology during delivery.",
+      "videoUrl": "https://www.youtube.com/watch?v=Iwpi1Lm6dFo",
+      "videoNote": "Watch the presentation design tutorial on creating slides that support rather than replace the speaker.",
+      "video2Url": "https://www.youtube.com/watch?v=5B0F3b7wExI",
+      "video2Note": "Review the Assertion-Evidence slide design approach used in high-impact academic and professional presentations.",
+      "practiceUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/presentation-design-principles",
+      "practiceNote": "Complete the visual design principles activity evaluating good and poor slide design examples.",
+      "assignment": "Create a 6–8 slide presentation for your speech topic applying the four CRAP design principles. Each slide must contain a headline assertion, one supporting visual or data point, and minimal text. Submit the slide deck with a 250-word design rationale explaining your choices.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 12,
+      "title": "Informative Speaking",
+      "titleZh": "信息类演讲",
+      "objectives": "Explain the characteristics and goals of informative speaking; apply strategies to enhance audience comprehension and retention; deliver a 3–4 minute informative speech demonstrating structure, evidence, and delivery skills.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/12-informative-speaking",
+      "readingNote": "Read the OpenStax chapter on informative speaking including types (descriptions, explanations, demonstrations) and strategies for clarity, coherence, and audience engagement.",
+      "videoUrl": "https://www.youtube.com/watch?v=mHMVVIaMJB0",
+      "videoNote": "Watch exemplary informative speeches and analysis of what makes explanations clear and memorable.",
+      "video2Url": "https://www.youtube.com/watch?v=oGPmD5-JPRM",
+      "video2Note": "Review information retention research and how to structure informative content for maximum audience comprehension.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/summarizing-main-ideas",
+      "practiceNote": "Practice explaining complex concepts clearly and concisely for a general audience.",
+      "assignment": "Deliver a 3–4 minute informative speech on your topic (introduced in Module 4). Use your outline and speaking notes from Module 8. Submit your preparation outline and a 300-word self-evaluation assessing your delivery, organization, and evidence use against the course rubric.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 13,
+      "title": "Persuasive Speaking",
+      "titleZh": "说服性演讲",
+      "objectives": "Apply Aristotle's appeals (logos, ethos, pathos) to persuasive speech; construct a persuasive argument using evidence and reasoning; use Monroe's Motivated Sequence to organize a persuasive speech.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/13-persuasive-speaking",
+      "readingNote": "Read the OpenStax chapter on persuasion including Aristotle's three appeals, types of persuasive claims (fact, value, policy), and ethical persuasion principles.",
+      "videoUrl": "https://www.youtube.com/watch?v=GIlHNiGMJAE",
+      "videoNote": "Watch the persuasive speaking tutorial covering ethos, logos, and pathos with examples from landmark speeches.",
+      "video2Url": "https://www.youtube.com/watch?v=jVqwcBaE__Y",
+      "video2Note": "Review Monroe's Motivated Sequence applied to a model persuasive speech on a social issue.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/argument-structure",
+      "practiceNote": "Practice identifying ethos, logos, and pathos appeals in persuasive writing and speech excerpts.",
+      "assignment": "Deliver a 3–4 minute persuasive speech on a policy or value claim using Monroe's Motivated Sequence. Your speech must demonstrate all three Aristotelian appeals. Submit your preparation outline and a 300-word reflection identifying how you used ethos, logos, and pathos and evaluating their effectiveness.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 14,
+      "title": "Special Occasion & Professional Presentations",
+      "titleZh": "特殊场合与职业演讲",
+      "objectives": "Distinguish characteristics of major special occasion speeches (introduction, toast, eulogy, award acceptance); apply professional presentation skills to a job interview or pitch scenario; reflect on overall growth as a public speaker throughout the course.",
+      "readingUrl": "https://openstax.org/books/introduction-communication/pages/14-special-occasion-speaking",
+      "readingNote": "Read the OpenStax chapter on special occasion speaking: speeches of introduction, tribute, commemoration, and inspiration, as well as professional presentation contexts.",
+      "videoUrl": "https://www.youtube.com/watch?v=OmKqHVD30wA",
+      "videoNote": "Watch examples and analysis of effective special occasion speeches including acceptance speeches and toasts.",
+      "video2Url": "https://www.youtube.com/watch?v=RVmG_d3HKBA",
+      "video2Note": "Review professional presentation skills for job interviews, pitches, and networking contexts.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/career-content/career-content/speaking-in-the-workplace/v/workplace-communication",
+      "practiceNote": "Complete the professional communication scenarios practice activity.",
+      "assignment": "Deliver a 2-minute special occasion speech (choose: award acceptance, introduction of a speaker, or a toast). Then write a 400-word course capstone reflection evaluating your growth as a public speaker: What were your biggest improvements? What anxieties did you overcome? What skills will you continue to develop?",
+      "estimatedHrs": 3.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "The communication process model includes all of the following components EXCEPT:",
+      "options": [
+        "Sender and receiver",
+        "Message and channel",
+        "Noise and feedback",
+        "Syntax and semantics only"
+      ],
+      "answer": "Syntax and semantics only",
+      "explanation": "The communication process model includes sender, receiver, message, channel, noise, feedback, and context—not just syntax and semantics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Ethical public speaking requires speakers to:",
+      "options": [
+        "Use any persuasive technique to achieve the desired audience response",
+        "Be honest, prepare thoroughly, and respect audience diversity",
+        "Speak only about topics they have personal experience with",
+        "Avoid using any emotional appeals in their speeches"
+      ],
+      "answer": "Be honest, prepare thoroughly, and respect audience diversity",
+      "explanation": "Ethical speakers demonstrate honesty, diligence in preparation, respect for their audience, and responsible use of evidence and persuasive appeals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "In the communication model, 'noise' refers to:",
+      "options": [
+        "Loud background sounds in the speaking environment only",
+        "Any interference—physical, psychological, or semantic—that disrupts message transmission",
+        "The speaker speaking too quickly for the audience to follow",
+        "Questions asked by audience members during the speech"
+      ],
+      "answer": "Any interference—physical, psychological, or semantic—that disrupts message transmission",
+      "explanation": "Noise encompasses any barrier to effective communication: environmental sounds, distracting thoughts, misunderstood words, or technical problems.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Public speaking competence is valued in professional contexts primarily because:",
+      "options": [
+        "All high-paying careers require formal debate training",
+        "The ability to communicate clearly and persuasively is among the most sought-after professional skills",
+        "Professional communication rarely occurs in writing anymore",
+        "Employers only hire candidates who have competed in speech tournaments"
+      ],
+      "answer": "The ability to communicate clearly and persuasively is among the most sought-after professional skills",
+      "explanation": "Surveys consistently show that employers rank communication skills among the top qualities they seek in candidates across virtually all fields.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Feedback in the public speaking context refers to:",
+      "options": [
+        "The speaker's prepared remarks delivered to the audience",
+        "The audience's verbal and nonverbal responses to the speaker's message",
+        "The speaker's notes used during delivery",
+        "The grading rubric provided by the instructor after the speech"
+      ],
+      "answer": "The audience's verbal and nonverbal responses to the speaker's message",
+      "explanation": "Feedback is the receiver's response—nodding, applause, confused expressions, questions—that informs the sender whether the message was received as intended.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Communication apprehension (CA) is best defined as:",
+      "options": [
+        "The physical exhaustion speakers feel after long speeches",
+        "An individual's level of fear or anxiety associated with real or anticipated communication",
+        "The difficulty speakers experience choosing the right words",
+        "Audience disinterest that discourages the speaker during delivery"
+      ],
+      "answer": "An individual's level of fear or anxiety associated with real or anticipated communication",
+      "explanation": "Communication apprehension (James McCroskey's concept) describes anxiety about communication situations, which affects speaking performance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Cognitive restructuring helps speakers manage speech anxiety by:",
+      "options": [
+        "Practicing the speech until memorized word for word",
+        "Replacing negative self-talk with realistic, positive thoughts about speaking",
+        "Breathing deeply immediately before beginning the speech",
+        "Avoiding all public speaking situations to prevent anxiety"
+      ],
+      "answer": "Replacing negative self-talk with realistic, positive thoughts about speaking",
+      "explanation": "Cognitive restructuring involves identifying irrational negative thoughts about speaking (e.g., 'I will fail completely') and replacing them with realistic, balanced ones.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The 'fight-or-flight' response experienced during speech anxiety is caused by:",
+      "options": [
+        "Lack of preparation and insufficient practice time",
+        "The sympathetic nervous system releasing adrenaline in response to perceived threat",
+        "The speaker's inability to remember the speech content",
+        "Poor audience feedback during the previous speech"
+      ],
+      "answer": "The sympathetic nervous system releasing adrenaline in response to perceived threat",
+      "explanation": "The fight-or-flight response is a physiological reaction to perceived threat, releasing adrenaline that causes symptoms such as increased heart rate and sweating.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Systematic desensitization as a speech anxiety treatment involves:",
+      "options": [
+        "Avoiding all stressful communication situations indefinitely",
+        "Gradually exposing speakers to increasingly challenging speaking situations while managing anxiety",
+        "Memorizing speeches completely to eliminate uncertainty",
+        "Watching professional speakers to learn by observation only"
+      ],
+      "answer": "Gradually exposing speakers to increasingly challenging speaking situations while managing anxiety",
+      "explanation": "Systematic desensitization pairs relaxation techniques with progressively challenging speaking exposures to reduce anxiety responses over time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Amy Cuddy's research on 'power posing' suggests that adopting expansive body postures before a speech:",
+      "options": [
+        "Has no measurable effect on confidence or performance",
+        "May reduce cortisol levels and increase feelings of confidence before a performance",
+        "Is most effective when practiced immediately after delivering the speech",
+        "Works only for experienced speakers with low baseline anxiety"
+      ],
+      "answer": "May reduce cortisol levels and increase feelings of confidence before a performance",
+      "explanation": "Cuddy's research (though debated) proposes that adopting expansive postures can influence hormonal states and subjective feelings of power and confidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Demographic audience analysis focuses on:",
+      "options": [
+        "The audience's psychological attitudes and values about the topic",
+        "Observable characteristics such as age, gender, education, and cultural background",
+        "The audience's knowledge of the speaker's credentials",
+        "The physical characteristics of the speaking environment"
+      ],
+      "answer": "Observable characteristics such as age, gender, education, and cultural background",
+      "explanation": "Demographic analysis examines measurable group characteristics that help speakers anticipate audience needs, expectations, and prior knowledge.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Psychographic audience analysis examines:",
+      "options": [
+        "The average income and education level of audience members",
+        "The audience's values, beliefs, attitudes, and lifestyle characteristics",
+        "The number of people expected to attend the presentation",
+        "Seating arrangement and room configuration"
+      ],
+      "answer": "The audience's values, beliefs, attitudes, and lifestyle characteristics",
+      "explanation": "Psychographic analysis goes beyond demographics to understand what the audience believes, values, and cares about, which informs how a speaker frames arguments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Adapting a speech for a hostile audience (one that disagrees with your position) requires speakers to:",
+      "options": [
+        "Avoid presenting any evidence to prevent further disagreement",
+        "Present only emotional appeals and avoid logical arguments",
+        "Establish common ground, acknowledge the opposing view, and present evidence carefully",
+        "Begin with the strongest arguments and ignore audience resistance"
+      ],
+      "answer": "Establish common ground, acknowledge the opposing view, and present evidence carefully",
+      "explanation": "With hostile audiences, speakers should begin by establishing shared values, show respect for the opposing view, and introduce evidence gradually to avoid triggering defensive reactions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "The audience disposition most favorable for a persuasive speaker is:",
+      "options": [
+        "A hostile audience that openly opposes the speaker's position",
+        "An apathetic audience that has no existing opinion on the topic",
+        "A sympathetic audience that already agrees with the speaker's position",
+        "An uninformed audience that knows nothing about the topic"
+      ],
+      "answer": "A sympathetic audience that already agrees with the speaker's position",
+      "explanation": "A sympathetic audience is easiest to persuade (reinforcing existing views), while hostile or apathetic audiences require more sophisticated persuasive strategies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Audience relevance in speech design means the speaker:",
+      "options": [
+        "Selects the most sophisticated vocabulary possible for the topic",
+        "Explains why the topic matters to this specific audience",
+        "Chooses topics that the speaker personally finds most interesting",
+        "Avoids any topics that the audience might find controversial"
+      ],
+      "answer": "Explains why the topic matters to this specific audience",
+      "explanation": "Audience relevance (or 'relating to the audience') requires speakers to connect their topic explicitly to the interests, needs, or experiences of the specific people in the room.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "A specific purpose statement for a speech is best defined as:",
+      "options": [
+        "A one-sentence preview of the speech's three main points",
+        "A single infinitive phrase stating precisely what the speaker wants the audience to know, feel, or do",
+        "The topic narrowed to a single paragraph summary",
+        "The central idea restated as a question"
+      ],
+      "answer": "A single infinitive phrase stating precisely what the speaker wants the audience to know, feel, or do",
+      "explanation": "A specific purpose statement uses an infinitive phrase (e.g., 'To inform my audience about...') to state the precise response the speaker seeks from the audience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "The central idea (thesis) of a speech differs from the specific purpose in that the central idea:",
+      "options": [
+        "Is stated only in the speaker's notes, not in the speech itself",
+        "Is the speaker's goal stated as an infinitive phrase",
+        "States the core claim or message of the speech in a complete sentence for the audience",
+        "Lists all three main points as separate sentences"
+      ],
+      "answer": "States the core claim or message of the speech in a complete sentence for the audience",
+      "explanation": "The central idea is stated aloud in the speech for the audience to hear; the specific purpose is the speaker's goal statement used in planning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "The three general purposes for public speeches are:",
+      "options": [
+        "To analyze, to criticize, and to evaluate",
+        "To entertain, to enlighten, and to empower",
+        "To inform, to persuade, and to entertain",
+        "To report, to argue, and to celebrate"
+      ],
+      "answer": "To inform, to persuade, and to entertain",
+      "explanation": "The three classical general purposes for speeches are informing (increasing audience understanding), persuading (influencing beliefs or actions), and entertaining (providing enjoyment).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Which factor is most important when selecting a speech topic?",
+      "options": [
+        "Choosing the most obscure topic to appear intellectually sophisticated",
+        "Selecting a topic the speaker knows about, cares about, and that is appropriate for the audience and occasion",
+        "Using a topic assigned by a previous instructor in another class",
+        "Choosing the longest topic available to maximize research opportunities"
+      ],
+      "answer": "Selecting a topic the speaker knows about, cares about, and that is appropriate for the audience and occasion",
+      "explanation": "The best topics combine the speaker's genuine interest and knowledge with audience relevance and situational appropriateness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "A speech topic is considered too broad when:",
+      "options": [
+        "It cannot be covered meaningfully within the time limit",
+        "It is interesting to fewer than half of the audience members",
+        "It requires more than five sources to support",
+        "It focuses on a controversial social issue"
+      ],
+      "answer": "It cannot be covered meaningfully within the time limit",
+      "explanation": "A topic is too broad if covering it adequately requires more time than the speech allows—it must be narrowed to a manageable scope.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Expert testimony as a type of supporting material is most credible when:",
+      "options": [
+        "The expert is a celebrity with a large social media following",
+        "The expert has recognized credentials and expertise in the relevant field",
+        "The expert agrees exactly with the speaker's conclusion",
+        "The expert's testimony is the most recent available on the topic"
+      ],
+      "answer": "The expert has recognized credentials and expertise in the relevant field",
+      "explanation": "Expert testimony is credible when the source has verifiable credentials, training, or experience directly relevant to the claim being supported.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "A brief example in a speech is characterized by:",
+      "options": [
+        "A detailed narrative story illustrating a single point",
+        "A specific instance or case mentioned in one or two sentences",
+        "Statistical data drawn from multiple research studies",
+        "A hypothetical scenario presented as if it actually happened"
+      ],
+      "answer": "A specific instance or case mentioned in one or two sentences",
+      "explanation": "Brief examples are short, specific instances used to quickly illustrate a point without extended narration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Using statistics ethically in a speech requires speakers to:",
+      "options": [
+        "Select only statistics that support the thesis and ignore contradictory data",
+        "Explain what the statistics mean in plain language and cite their source",
+        "Round all statistics up to the nearest whole number for simplicity",
+        "Avoid using statistics because audiences find them confusing"
+      ],
+      "answer": "Explain what the statistics mean in plain language and cite their source",
+      "explanation": "Ethical use of statistics requires transparency about source, accuracy, and meaning—and avoiding selective use of data that misleads.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "An extended example (narrative) differs from a brief example in that an extended example:",
+      "options": [
+        "Uses statistics rather than stories to illustrate a point",
+        "Tells a complete story with characters, setting, and conflict to make a point vivid",
+        "Is drawn from historical events only",
+        "Cites only peer-reviewed academic research"
+      ],
+      "answer": "Tells a complete story with characters, setting, and conflict to make a point vivid",
+      "explanation": "Extended examples are full narratives that develop a story to bring a point to life, creating audience engagement and emotional connection.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "When citing a source orally during a speech, speakers should include at minimum:",
+      "options": [
+        "The author's full name and home institution",
+        "The source's title, author (or publication), and date",
+        "The page number and chapter of the source",
+        "The database where the article was found"
+      ],
+      "answer": "The source's title, author (or publication), and date",
+      "explanation": "Oral citations establish credibility by identifying who said it, where it was published, and when—giving audiences enough information to evaluate the source's authority.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The chronological organizational pattern is best suited for speeches that:",
+      "options": [
+        "Compare two or more different positions on an issue",
+        "Present information according to time sequence or historical development",
+        "Divide a topic into categories of equal importance",
+        "Move from a problem statement to a proposed solution"
+      ],
+      "answer": "Present information according to time sequence or historical development",
+      "explanation": "Chronological organization arranges information in time order—useful for explaining historical events, processes, or biographical narratives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Monroe's Motivated Sequence is primarily used for:",
+      "options": [
+        "Informative speeches explaining scientific processes",
+        "Ceremonial speeches at weddings and graduations",
+        "Persuasive speeches designed to motivate specific audience action",
+        "Introductory speeches at professional conferences"
+      ],
+      "answer": "Persuasive speeches designed to motivate specific audience action",
+      "explanation": "Monroe's Motivated Sequence (Attention, Need, Satisfaction, Visualization, Action) is specifically designed to move audiences from awareness of a problem to taking action.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "The problem-solution organizational pattern works best when:",
+      "options": [
+        "The speech aims to entertain the audience with a humorous narrative",
+        "The speaker wants to describe a geographic location or physical space",
+        "The speaker identifies a significant problem and proposes a course of action to address it",
+        "The speech compares the advantages and disadvantages of two options"
+      ],
+      "answer": "The speaker identifies a significant problem and proposes a course of action to address it",
+      "explanation": "Problem-solution organization first establishes that a significant problem exists, then proposes and justifies a specific solution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "The topical organizational pattern arranges main points by:",
+      "options": [
+        "Time sequence from earliest to most recent",
+        "Geographic or physical location",
+        "Logical or natural categories of the topic",
+        "Intensity from least to most important only"
+      ],
+      "answer": "Logical or natural categories of the topic",
+      "explanation": "Topical organization divides a topic into its natural or logical subtopics, useful when the topic does not follow time, space, or problem-solution logic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Internal summaries in a speech are used to:",
+      "options": [
+        "Introduce the speech at the beginning before the first main point",
+        "Preview upcoming main points before they are presented",
+        "Briefly recap a main point's content after it has been covered",
+        "Conclude the speech with a final memorable statement"
+      ],
+      "answer": "Briefly recap a main point's content after it has been covered",
+      "explanation": "Internal summaries reinforce audience retention by briefly restating the key content of a main point immediately after it is covered.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The credibility statement in a speech introduction is designed to:",
+      "options": [
+        "List all the sources cited in the speech",
+        "Establish the speaker's qualification or connection to the topic",
+        "Preview the main points of the speech",
+        "Thank the audience for their time before beginning"
+      ],
+      "answer": "Establish the speaker's qualification or connection to the topic",
+      "explanation": "The credibility statement tells the audience why they should trust the speaker on this particular topic—relevant experience, research, or personal connection.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "A rhetorical question used as an attention-getter in a speech is effective because:",
+      "options": [
+        "It requires audience members to answer aloud, creating participation",
+        "It engages audience thinking without requiring a formal response",
+        "It demonstrates the speaker's knowledge of the topic immediately",
+        "It provides the statistical evidence the speech will discuss"
+      ],
+      "answer": "It engages audience thinking without requiring a formal response",
+      "explanation": "A rhetorical question invites the audience to mentally consider an answer, immediately drawing them into the topic without requiring verbal participation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "The preview statement in a speech introduction should:",
+      "options": [
+        "Provide detailed evidence for each main point",
+        "Briefly identify the main points the speech will cover, in order",
+        "Explain why the speaker is qualified to speak on the topic",
+        "Present the speech's central idea as a question to be answered"
+      ],
+      "answer": "Briefly identify the main points the speech will cover, in order",
+      "explanation": "The preview gives the audience a roadmap of the speech by identifying the main points they will hear, in the order they will be presented.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "A speech clincher (the final statement of the conclusion) is most effective when it:",
+      "options": [
+        "Introduces a new argument the speaker forgot to include in the body",
+        "Is identical to the opening attention-getter, creating a circular structure",
+        "Provides a memorable ending that reinforces the speech's central message",
+        "Announces the speaker's next upcoming speech topic"
+      ],
+      "answer": "Provides a memorable ending that reinforces the speech's central message",
+      "explanation": "A clincher creates closure by leaving the audience with a final thought—a call to action, callback to the opening, or memorable quotation—that reinforces the central idea.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "The four components of an effective speech introduction, in order, are:",
+      "options": [
+        "Thesis, evidence, analysis, conclusion",
+        "Credibility, preview, topic, transition",
+        "Attention-getter, relevance statement, credibility statement, preview",
+        "Hook, summary, argument, call to action"
+      ],
+      "answer": "Attention-getter, relevance statement, credibility statement, preview",
+      "explanation": "The standard introduction structure draws attention (hook), connects topic to audience (relevance), establishes speaker qualification (credibility), and maps the speech (preview).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A speaking outline differs from a preparation outline in that a speaking outline:",
+      "options": [
+        "Contains complete sentences and full source citations",
+        "Contains keyword phrases to guide delivery without reading word for word",
+        "Is submitted to the instructor for grading",
+        "Must follow the same format as the preparation outline exactly"
+      ],
+      "answer": "Contains keyword phrases to guide delivery without reading word for word",
+      "explanation": "A speaking outline is a condensed version with keywords and cues—not complete sentences—that allows the speaker to refer to notes while maintaining eye contact and natural delivery.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Proper subordination in an outline means that:",
+      "options": [
+        "All items are placed at the same indentation level",
+        "Subpoints are indented under main points and contain narrower, supporting content",
+        "The main points are listed alphabetically",
+        "Sources are listed before the speech content they support"
+      ],
+      "answer": "Subpoints are indented under main points and contain narrower, supporting content",
+      "explanation": "Subordination ensures that subpoints (supporting details) are hierarchically organized under main points, visually and logically indicating their supporting relationship.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "A preparation outline serves which primary purpose?",
+      "options": [
+        "To be read aloud verbatim during the speech delivery",
+        "To help the speaker plan, organize, and check the logic of the speech before rehearsal",
+        "To substitute for practice by providing a complete script",
+        "To be distributed to audience members so they can follow along"
+      ],
+      "answer": "To help the speaker plan, organize, and check the logic of the speech before rehearsal",
+      "explanation": "A preparation outline is a planning tool that ensures the speech's argument is logically organized, properly supported, and complete before the speaker begins rehearsing delivery.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "The rule of parallel structure in outlining requires that:",
+      "options": [
+        "All main points have exactly the same number of subpoints",
+        "All entries at the same level follow the same grammatical form",
+        "Each subpoint must contain a direct quotation from a source",
+        "The conclusion restates each main point in reverse order"
+      ],
+      "answer": "All entries at the same level follow the same grammatical form",
+      "explanation": "Parallel structure requires that main points and subpoints at the same level use consistent grammatical form—all noun phrases, all complete sentences, or all questions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Delivery cues on a speaking outline might include notations such as:",
+      "options": [
+        "Word-for-word transcriptions of difficult passages",
+        "Font changes and color codes for aesthetic presentation purposes",
+        "Reminders to pause, make eye contact, or slow down at key points",
+        "Full bibliographic citations for every source used"
+      ],
+      "answer": "Reminders to pause, make eye contact, or slow down at key points",
+      "explanation": "Delivery cues on speaking outlines help speakers remember performance choices—when to pause for effect, when to look up, or when to transition to a visual aid.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Oral style in public speaking differs from written style primarily in that oral style uses:",
+      "options": [
+        "More complex sentence structures and sophisticated vocabulary",
+        "Shorter sentences, repetition, and personal pronouns for directness and clarity",
+        "Passive voice and impersonal language for academic formality",
+        "Longer paragraphs with embedded citations"
+      ],
+      "answer": "Shorter sentences, repetition, and personal pronouns for directness and clarity",
+      "explanation": "Oral style is designed for listening, not reading—shorter, more direct sentences with repetition and personal language help audiences process spoken ideas.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Rate of speech refers to:",
+      "options": [
+        "The speaker's level of anxiety during delivery",
+        "How many main points the speech contains per minute",
+        "The speed at which words are spoken, measured in words per minute",
+        "The frequency of audience applause during the speech"
+      ],
+      "answer": "The speed at which words are spoken, measured in words per minute",
+      "explanation": "Speaking rate (typically 120–180 words per minute for effective public speaking) significantly affects audience comprehension and perceived energy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Strategic pausing in speech delivery is used to:",
+      "options": [
+        "Hide the speaker's uncertainty about the next point",
+        "Signal important ideas, create emphasis, and give the audience time to process",
+        "Fill silent gaps between points to prevent audience distraction",
+        "Give the speaker time to read the next section of the manuscript"
+      ],
+      "answer": "Signal important ideas, create emphasis, and give the audience time to process",
+      "explanation": "Deliberate pauses mark importance, create dramatic effect, and allow audiences to absorb key information—skilled speakers use silence intentionally.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Inclusive language in public speaking requires speakers to:",
+      "options": [
+        "Use highly technical vocabulary to appear knowledgeable",
+        "Avoid words that marginalize or exclude audience members based on identity",
+        "Speak in the most formal register possible to demonstrate respect",
+        "Include references to every cultural group equally throughout the speech"
+      ],
+      "answer": "Avoid words that marginalize or exclude audience members based on identity",
+      "explanation": "Inclusive language ensures that all audience members feel respected and addressed—avoiding gendered assumptions, cultural stereotypes, and discriminatory terminology.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Articulation in speech delivery refers to:",
+      "options": [
+        "The emotional content expressed in the speaker's message",
+        "The clarity and precision with which individual sounds and words are produced",
+        "The organizational structure of the speech's main points",
+        "The speaker's ability to maintain eye contact throughout delivery"
+      ],
+      "answer": "The clarity and precision with which individual sounds and words are produced",
+      "explanation": "Articulation is the accurate production of speech sounds—speaking words clearly and precisely so that all audience members can understand them.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Eye contact in public speaking serves which primary function?",
+      "options": [
+        "It demonstrates that the speaker has memorized the speech",
+        "It builds connection with the audience and conveys confidence and credibility",
+        "It allows the speaker to monitor the clock for timing purposes",
+        "It signals the speaker's readiness to accept questions from the audience"
+      ],
+      "answer": "It builds connection with the audience and conveys confidence and credibility",
+      "explanation": "Eye contact creates audience connection, signals confidence, and communicates engagement—reducing the perceived barrier between speaker and listener.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Kinesics refers to the study of:",
+      "options": [
+        "The use of space and distance in communication",
+        "The vocal pitch and tone of a speaker's voice",
+        "Body movement, gestures, and facial expressions in communication",
+        "The written and visual elements of a presentation"
+      ],
+      "answer": "Body movement, gestures, and facial expressions in communication",
+      "explanation": "Kinesics is the study of nonverbal communication through body movement—including gestures, posture, facial expression, and eye behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Purposeful movement during a speech—such as moving toward the audience when making an emotional point—is called:",
+      "options": [
+        "Proxemics management",
+        "Motivated movement",
+        "Kinesthetic articulation",
+        "Spatial adaptation"
+      ],
+      "answer": "Motivated movement",
+      "explanation": "Motivated movement is physical movement that serves a communicative purpose—moving toward the audience for emphasis, or moving to different positions to signal transitions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "A speaker who reads directly from notes or a manuscript is likely to experience which delivery problem?",
+      "options": [
+        "Excessive eye contact that makes the audience uncomfortable",
+        "Loss of vocal variety and reduced audience connection",
+        "Speaking too slowly for the audience to follow",
+        "Using too many gestures that distract from the message"
+      ],
+      "answer": "Loss of vocal variety and reduced audience connection",
+      "explanation": "Reading from notes reduces eye contact, flattens vocal energy, and creates a barrier between speaker and audience—reducing the sense of genuine communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "When a speaker notices audience members yawning and checking their phones, the appropriate response is to:",
+      "options": [
+        "Continue the speech exactly as planned without deviation",
+        "Read the nonverbal feedback and adapt by adding more engaging examples or increasing energy",
+        "Address the audience directly and ask them to put their phones away",
+        "Conclude the speech immediately regardless of remaining content"
+      ],
+      "answer": "Read the nonverbal feedback and adapt by adding more engaging examples or increasing energy",
+      "explanation": "Effective speakers monitor audience nonverbal feedback and adapt in real time—adding an example, changing pace, or increasing vocal energy to re-engage listeners.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The 'C' in the CRAP design principles stands for:",
+      "options": [
+        "Color",
+        "Content",
+        "Contrast",
+        "Credibility"
+      ],
+      "answer": "Contrast",
+      "explanation": "CRAP stands for Contrast, Repetition, Alignment, and Proximity—four fundamental design principles that create professional, readable visual aids.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The most common error speakers make with presentation slides is:",
+      "options": [
+        "Using too few slides for the length of the speech",
+        "Overloading slides with text that the audience reads instead of listening",
+        "Using too many different visual aids (charts, images, graphs)",
+        "Displaying slides without speaking about them"
+      ],
+      "answer": "Overloading slides with text that the audience reads instead of listening",
+      "explanation": "Text-heavy slides cause audiences to read rather than listen, creating split attention that reduces both comprehension and speaker engagement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "The Assertion-Evidence slide design approach recommends that slide headlines should be:",
+      "options": [
+        "Single words or topic labels only",
+        "Complete sentences stating the key claim of the slide",
+        "Questions that the body of the slide answers",
+        "The title of the source the slide's data comes from"
+      ],
+      "answer": "Complete sentences stating the key claim of the slide",
+      "explanation": "The Assertion-Evidence approach uses headline sentences that assert the slide's key claim, allowing even a brief glance to convey the main point.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Redundancy in visual aid design (displaying the same content on slides and speaking it aloud) tends to:",
+      "options": [
+        "Reinforce retention by giving the audience two channels of the same information",
+        "Reduce audience processing because spoken and written language compete for cognitive resources",
+        "Demonstrate the speaker's thorough preparation and organization",
+        "Help non-native speakers follow the speech more easily in all contexts"
+      ],
+      "answer": "Reduce audience processing because spoken and written language compete for cognitive resources",
+      "explanation": "Cognitive load research shows that identical information in text and speech forces the brain to process redundant channels, reducing overall comprehension.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "When integrating technology into a speech, the safest practice is to:",
+      "options": [
+        "Rely entirely on technology for the speech's content and evidence",
+        "Test all equipment and have a backup plan in case of technical failure",
+        "Project slides without speaking, letting the audience read independently",
+        "Use as many different technologies as possible to appear innovative"
+      ],
+      "answer": "Test all equipment and have a backup plan in case of technical failure",
+      "explanation": "Technical failures are common; speakers must test all equipment before presenting and prepare to continue effectively if technology fails.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "An informative speech's primary goal is to:",
+      "options": [
+        "Convince the audience to change their beliefs or behavior",
+        "Increase audience understanding and knowledge about a topic",
+        "Entertain the audience through humor and storytelling",
+        "Motivate the audience to take immediate action on a social problem"
+      ],
+      "answer": "Increase audience understanding and knowledge about a topic",
+      "explanation": "Informative speaking aims to enlighten—increasing the audience's knowledge, understanding, or skill about a topic without attempting to change their position.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "A demonstration speech (how-to speech) is a type of informative speech that:",
+      "options": [
+        "Compares two different objects or processes for evaluation",
+        "Shows the audience how to perform a process step by step",
+        "Describes a person, place, or object through vivid language",
+        "Explains the causes and effects of a significant event"
+      ],
+      "answer": "Shows the audience how to perform a process step by step",
+      "explanation": "A demonstration speech teaches the audience how to do something by showing each step of the process, often with physical demonstration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Audience retention of speech content is most significantly improved by:",
+      "options": [
+        "Reading the speech from a full manuscript for accuracy",
+        "Using repetition, concrete examples, and audience engagement techniques",
+        "Speaking as quickly as possible to cover more information",
+        "Avoiding pauses to maintain continuous information delivery"
+      ],
+      "answer": "Using repetition, concrete examples, and audience engagement techniques",
+      "explanation": "Listeners retain information better when key points are repeated, illustrated with vivid examples, and reinforced through audience involvement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "An informative speech that describes the three branches of the U.S. government is best organized using:",
+      "options": [
+        "Chronological pattern—historical development of each branch",
+        "Causal pattern—causes and effects of each branch's decisions",
+        "Topical pattern—each branch as a separate main point category",
+        "Problem-solution pattern—problems with each branch and proposed reforms"
+      ],
+      "answer": "Topical pattern—each branch as a separate main point category",
+      "explanation": "Dividing a topic into its natural categories (executive, legislative, judicial) fits the topical organizational pattern—the branches are parallel categories, not a time sequence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Which technique is most helpful for making complex information understandable in an informative speech?",
+      "options": [
+        "Using technical jargon to signal expertise",
+        "Breaking down complex ideas into smaller components with relatable analogies",
+        "Reading definitions verbatim from an authoritative dictionary",
+        "Covering as many subtopics as possible in the time allowed"
+      ],
+      "answer": "Breaking down complex ideas into smaller components with relatable analogies",
+      "explanation": "Chunking complex information and connecting it to familiar concepts through analogy helps audiences process and retain unfamiliar content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Aristotle's ethos appeal in persuasive speaking refers to:",
+      "options": [
+        "Using emotional stories to connect with the audience's feelings",
+        "Logical evidence and reasoning that supports the argument",
+        "The speaker's credibility and perceived trustworthiness",
+        "The structure of the argument from least to most important"
+      ],
+      "answer": "The speaker's credibility and perceived trustworthiness",
+      "explanation": "Ethos is the persuasive appeal based on the speaker's character, competence, and trustworthiness—audiences are persuaded by speakers they respect and trust.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Logos appeal in persuasion refers to:",
+      "options": [
+        "The speaker's emotional connection with the audience",
+        "The use of statistics, evidence, and logical reasoning to support claims",
+        "The visual design and organization of the presentation slides",
+        "The speaker's personal background and lived experience"
+      ],
+      "answer": "The use of statistics, evidence, and logical reasoning to support claims",
+      "explanation": "Logos is the appeal to reason—using data, evidence, logical arguments, and examples to build a rationally compelling case.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Pathos in persuasive speaking involves:",
+      "options": [
+        "Citing research studies and expert testimony",
+        "Appealing to the audience's emotions through stories, vivid language, and examples",
+        "Establishing the speaker's credentials and professional expertise",
+        "Using the problem-solution organizational pattern"
+      ],
+      "answer": "Appealing to the audience's emotions through stories, vivid language, and examples",
+      "explanation": "Pathos appeals to audience emotions—using narratives, emotional language, and vivid imagery to create feelings that support the speaker's argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Monroe's Motivated Sequence begins with which step?",
+      "options": [
+        "Need—presenting a problem the audience should care about",
+        "Attention—capturing the audience's interest and focus",
+        "Satisfaction—proposing a solution to the problem",
+        "Action—calling the audience to do something specific"
+      ],
+      "answer": "Attention—capturing the audience's interest and focus",
+      "explanation": "Monroe's Motivated Sequence begins with Attention, followed by Need, Satisfaction, Visualization, and Action—each step building toward motivating audience behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "A persuasive speech on a policy claim argues that:",
+      "options": [
+        "Something is factually true or false based on evidence",
+        "Something is good or bad, right or wrong in value",
+        "Something should or should not be done as a course of action",
+        "Something beautiful or meaningful deserves appreciation"
+      ],
+      "answer": "Something should or should not be done as a course of action",
+      "explanation": "Policy claims argue for action—what should be done, by whom, and why—making them the most action-oriented type of persuasive claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "A speech of introduction at a professional event is designed to:",
+      "options": [
+        "Present the speaker's full biography and complete credentials",
+        "Build the audience's interest in and respect for the upcoming speaker",
+        "Outline the main points of the speech the featured speaker will deliver",
+        "Provide comic relief before the main speaker begins"
+      ],
+      "answer": "Build the audience's interest in and respect for the upcoming speaker",
+      "explanation": "A speech of introduction establishes the featured speaker's relevance and credibility while warming up the audience—it is brief and audience-focused, not a full biography.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "A wedding toast is an example of which type of special occasion speech?",
+      "options": [
+        "Eulogy",
+        "Tribute and celebration speech",
+        "Award acceptance speech",
+        "Commencement address"
+      ],
+      "answer": "Tribute and celebration speech",
+      "explanation": "A toast is a celebratory tribute speech honoring a person or occasion, typically combining brief personal stories, humor, and sincere well-wishes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "An effective award acceptance speech typically:",
+      "options": [
+        "Lists all awards the speaker has previously received",
+        "Expresses genuine gratitude, shares a meaningful personal insight, and inspires others",
+        "Reads from a prepared manuscript to ensure accuracy",
+        "Focuses primarily on criticism of those not selected for the award"
+      ],
+      "answer": "Expresses genuine gratitude, shares a meaningful personal insight, and inspires others",
+      "explanation": "Award acceptance speeches that resonate express authentic gratitude, offer personal reflection, and connect the award to a larger purpose that inspires the audience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Professional communication in job interview contexts requires candidates to:",
+      "options": [
+        "Provide only yes or no answers to keep responses concise",
+        "Use the STAR method (Situation, Task, Action, Result) to structure behavioral responses",
+        "Avoid discussing challenges or failures during the interview",
+        "Read from a prepared list of answers to avoid making mistakes"
+      ],
+      "answer": "Use the STAR method (Situation, Task, Action, Result) to structure behavioral responses",
+      "explanation": "The STAR method provides a clear structure for behavioral interview answers, demonstrating relevant experience through specific, organized storytelling.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "A capstone self-reflection in a public speaking course asks students to:",
+      "options": [
+        "Critique their instructor's feedback for accuracy",
+        "Compare their performance to the highest-scoring student in the class",
+        "Assess their own growth, identify skills developed, and set goals for continued improvement",
+        "List every speech topic covered throughout the course"
+      ],
+      "answer": "Assess their own growth, identify skills developed, and set goals for continued improvement",
+      "explanation": "Capstone self-reflection requires metacognitive evaluation—looking back at growth across the course and looking forward to continued skill development.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "multiple_choice",
+      "question": "In the communication process model, 'channel' refers to:",
+      "options": [
+        "The speaker's emotional state during delivery",
+        "The medium through which a message is transmitted (voice, video, text)",
+        "The feedback received from the audience",
+        "The physical environment where communication takes place"
+      ],
+      "answer": "The medium through which a message is transmitted (voice, video, text)",
+      "explanation": "The channel is the pathway or medium through which a message travels from sender to receiver—face-to-face voice, video, written text, etc.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "multiple_choice",
+      "question": "Cognitive restructuring as a speech anxiety management technique involves:",
+      "options": [
+        "Practicing deep breathing immediately before speaking",
+        "Replacing irrational negative self-talk with realistic positive thoughts",
+        "Memorizing the speech completely to reduce uncertainty",
+        "Avoiding high-stakes speaking situations"
+      ],
+      "answer": "Replacing irrational negative self-talk with realistic positive thoughts",
+      "explanation": "Cognitive restructuring targets the thought patterns that drive anxiety—replacing catastrophic thinking with balanced, realistic self-assessment.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "multiple_choice",
+      "question": "Demographic audience analysis examines which type of variables?",
+      "options": [
+        "The audience's values, beliefs, and lifestyle preferences",
+        "Observable group characteristics like age, gender, and education level",
+        "The psychological barriers to persuasion in the audience",
+        "The physical layout and technical setup of the speaking venue"
+      ],
+      "answer": "Observable group characteristics like age, gender, and education level",
+      "explanation": "Demographic variables are measurable group characteristics that help speakers anticipate audience background, prior knowledge, and expectations.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "multiple_choice",
+      "question": "A specific purpose statement for a speech should be written as:",
+      "options": [
+        "A complete arguable thesis statement",
+        "A question the speech will answer for the audience",
+        "An infinitive phrase stating precisely what the speaker wants the audience to know, feel, or do",
+        "A list of the three main points the speech will cover"
+      ],
+      "answer": "An infinitive phrase stating precisely what the speaker wants the audience to know, feel, or do",
+      "explanation": "A specific purpose statement uses an infinitive phrase (e.g., 'To persuade my audience to...') stating the speaker's precise goal.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "multiple_choice",
+      "question": "Expert testimony as supporting material is credible primarily when:",
+      "options": [
+        "The expert is popular on social media platforms",
+        "The expert has verifiable credentials and expertise in the relevant field",
+        "The expert's view agrees exactly with the speaker's argument",
+        "The expert was cited in a Wikipedia article"
+      ],
+      "answer": "The expert has verifiable credentials and expertise in the relevant field",
+      "explanation": "Expert testimony gains credibility from the source's recognized expertise, qualifications, and institutional standing in the relevant field.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "multiple_choice",
+      "question": "Monroe's Motivated Sequence is most appropriate for which type of speech?",
+      "options": [
+        "An informative speech explaining a scientific concept",
+        "A commemorative speech honoring a historical figure",
+        "A persuasive speech designed to motivate audience action",
+        "An introductory speech at a professional conference"
+      ],
+      "answer": "A persuasive speech designed to motivate audience action",
+      "explanation": "Monroe's Motivated Sequence moves audiences from attention through need, satisfaction, visualization, to action—making it ideal for action-oriented persuasive speeches.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "multiple_choice",
+      "question": "The preview statement in a speech introduction is designed to:",
+      "options": [
+        "Provide detailed evidence for the first main point",
+        "Briefly identify the main points the speech will address",
+        "Establish the speaker's qualifications on the topic",
+        "Create suspense by withholding the speech's central argument"
+      ],
+      "answer": "Briefly identify the main points the speech will address",
+      "explanation": "The preview gives the audience a roadmap—a brief statement of the main points in the order they will be presented.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "multiple_choice",
+      "question": "A speaking outline differs from a preparation outline in that it:",
+      "options": [
+        "Is longer and contains more detailed source citations",
+        "Uses only keywords and delivery cues rather than complete sentences",
+        "Must be formatted identically to the preparation outline",
+        "Contains the full text of the speech for word-for-word reading"
+      ],
+      "answer": "Uses only keywords and delivery cues rather than complete sentences",
+      "explanation": "A speaking outline is condensed into keywords that prompt natural delivery without scripting—allowing eye contact and audience engagement.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "multiple_choice",
+      "question": "Oral style in public speaking differs from written style in that oral style typically features:",
+      "options": [
+        "Longer, more complex sentence structures",
+        "Passive voice for formal and objective tone",
+        "Shorter sentences, direct language, and repetition for listener comprehension",
+        "Technical jargon and discipline-specific vocabulary"
+      ],
+      "answer": "Shorter sentences, direct language, and repetition for listener comprehension",
+      "explanation": "Spoken language must be immediately understood by listeners who cannot re-read—so oral style uses simpler, more direct, and repetitive structures.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "multiple_choice",
+      "question": "Kinesics in nonverbal communication refers to:",
+      "options": [
+        "The use of physical space and distance between communicators",
+        "The vocal pitch, rate, and volume used by a speaker",
+        "Body movements, gestures, posture, and facial expressions",
+        "The physical setting and environmental context of communication"
+      ],
+      "answer": "Body movements, gestures, posture, and facial expressions",
+      "explanation": "Kinesics is the study of body motion as a form of nonverbal communication.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "multiple_choice",
+      "question": "The CRAP design principles for visual aids include all of the following EXCEPT:",
+      "options": [
+        "Contrast",
+        "Repetition",
+        "Alignment",
+        "Creativity"
+      ],
+      "answer": "Creativity",
+      "explanation": "CRAP stands for Contrast, Repetition, Alignment, and Proximity—not Creativity. These four principles guide professional visual design.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "multiple_choice",
+      "question": "An informative speech aims primarily to:",
+      "options": [
+        "Change audience beliefs through emotional and logical appeals",
+        "Motivate the audience to take a specific course of action",
+        "Increase audience knowledge and understanding about a topic",
+        "Entertain the audience through humor and personal stories"
+      ],
+      "answer": "Increase audience knowledge and understanding about a topic",
+      "explanation": "Informative speeches expand the audience's knowledge and understanding without trying to change their views or motivate action.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "multiple_choice",
+      "question": "Aristotle's three artistic proofs (appeals) for persuasion are:",
+      "options": [
+        "Facts, opinions, and testimonials",
+        "Ethos, logos, and pathos",
+        "Induction, deduction, and analogy",
+        "Authority, popularity, and tradition"
+      ],
+      "answer": "Ethos, logos, and pathos",
+      "explanation": "Aristotle identified ethos (credibility), logos (logic), and pathos (emotion) as the three primary means of persuasion in rhetoric.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "multiple_choice",
+      "question": "The topical organizational pattern for speeches organizes content by:",
+      "options": [
+        "Time sequence from earliest to most recent event",
+        "Logical categories or subtopics of the main subject",
+        "Geographic movement from one location to another",
+        "A problem followed by its proposed solution"
+      ],
+      "answer": "Logical categories or subtopics of the main subject",
+      "explanation": "Topical organization divides a topic into its natural subcategories when chronological, spatial, or problem-solution structures are not appropriate.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "multiple_choice",
+      "question": "Communication apprehension affects public speakers most significantly through:",
+      "options": [
+        "Making them speak too slowly for effective communication",
+        "Generating anxiety that can interfere with preparation, delivery, and performance",
+        "Reducing the quality of research and supporting material gathered",
+        "Causing them to select inappropriate organizational patterns"
+      ],
+      "answer": "Generating anxiety that can interfere with preparation, delivery, and performance",
+      "explanation": "Communication apprehension creates anxiety that can disrupt the speaker's preparation process, cognitive functioning during delivery, and overall performance quality.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "multiple_choice",
+      "question": "Systematic desensitization for speech anxiety works by:",
+      "options": [
+        "Memorizing speeches until they require no active thinking",
+        "Gradually exposing speakers to progressively challenging speaking situations while managing anxiety",
+        "Avoiding all public speaking until confidence naturally develops",
+        "Prescribing medication to reduce physiological symptoms of anxiety"
+      ],
+      "answer": "Gradually exposing speakers to progressively challenging speaking situations while managing anxiety",
+      "explanation": "Systematic desensitization pairs anxiety management techniques with increasing levels of speaking challenge, gradually reducing the anxiety response.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "multiple_choice",
+      "question": "Adapting a speech for a hostile audience requires the speaker to:",
+      "options": [
+        "Begin with the most aggressive arguments to establish dominance",
+        "Establish common ground, show respect for the opposing view, and introduce evidence carefully",
+        "Avoid presenting any statistics that could be disputed",
+        "Skip the introduction and begin directly with the strongest evidence"
+      ],
+      "answer": "Establish common ground, show respect for the opposing view, and introduce evidence carefully",
+      "explanation": "With hostile audiences, credibility and relationship-building must come first—common ground reduces defensiveness and creates openness to the argument.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "multiple_choice",
+      "question": "A speech of tribute is a special occasion speech designed to:",
+      "options": [
+        "Inform the audience about a topic the speaker researched",
+        "Honor and recognize a person's qualities, contributions, and achievements",
+        "Persuade the audience to support a political or social cause",
+        "Demonstrate a complex skill or process step by step"
+      ],
+      "answer": "Honor and recognize a person's qualities, contributions, and achievements",
+      "explanation": "A speech of tribute celebrates and honors a person or group, highlighting their admirable qualities and contributions to inspire and move the audience.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "multiple_choice",
+      "question": "The 'Visualization' step in Monroe's Motivated Sequence asks the speaker to:",
+      "options": [
+        "Capture audience attention with a dramatic statistic or story",
+        "Propose a specific solution to the problem identified",
+        "Help the audience vividly imagine the positive outcome if they act",
+        "Call the audience to take immediate specific action"
+      ],
+      "answer": "Help the audience vividly imagine the positive outcome if they act",
+      "explanation": "Visualization projects the audience forward—showing them concretely what their world will look like if they adopt the speaker's proposed solution.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "multiple_choice",
+      "question": "A persuasive speech on a value claim argues that:",
+      "options": [
+        "Something is factually true or false",
+        "A specific action should or should not be taken",
+        "Something is morally good or bad, right or wrong",
+        "A causal relationship exists between two phenomena"
+      ],
+      "answer": "Something is morally good or bad, right or wrong",
+      "explanation": "Value claims make judgments about the worth, morality, or desirability of something—they argue for a particular evaluative stance.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "multiple_choice",
+      "question": "Strategic pausing in a speech serves which communicative purpose?",
+      "options": [
+        "It fills empty time when the speaker has forgotten the next point",
+        "It creates emphasis, signals importance, and gives audiences time to process",
+        "It signals to the audience that the speech is nearing its conclusion",
+        "It allows the speaker to check notes without appearing unprepared"
+      ],
+      "answer": "It creates emphasis, signals importance, and gives audiences time to process",
+      "explanation": "Deliberate pauses are powerful delivery tools—they mark important ideas, create dramatic effect, and allow cognitive processing time.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "multiple_choice",
+      "question": "The Assertion-Evidence slide design approach uses slide headlines that:",
+      "options": [
+        "Are single keywords identifying the slide's topic",
+        "Are complete sentences asserting the slide's key claim",
+        "Ask a question the slide's content will answer",
+        "List the sources cited on the slide"
+      ],
+      "answer": "Are complete sentences asserting the slide's key claim",
+      "explanation": "Assertion-Evidence slides use headline sentences that state the key claim—even a quick glance conveys the main point without requiring reading the full slide.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "multiple_choice",
+      "question": "Ethos as a persuasive appeal is most directly strengthened when a speaker:",
+      "options": [
+        "Uses emotional language to connect with the audience's feelings",
+        "Presents extensive statistical data and expert evidence",
+        "Demonstrates expertise, trustworthiness, and genuine care for the audience",
+        "Organizes the speech in a clear and logical sequence"
+      ],
+      "answer": "Demonstrates expertise, trustworthiness, and genuine care for the audience",
+      "explanation": "Ethos is built through demonstrated competence, reliability, and goodwill—audiences are persuaded by speakers they perceive as knowledgeable, honest, and caring.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "multiple_choice",
+      "question": "An informative demonstration speech is best organized using which pattern?",
+      "options": [
+        "Problem-solution—identifying a problem and showing how the demonstration solves it",
+        "Chronological—showing each step in sequence from beginning to end",
+        "Spatial—describing different physical locations involved in the process",
+        "Topical—dividing the demonstration into unrelated categories"
+      ],
+      "answer": "Chronological—showing each step in sequence from beginning to end",
+      "explanation": "Demonstration speeches follow the process step by step in time order, making chronological organization the natural and most effective pattern.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "multiple_choice",
+      "question": "Eye contact in public speaking is most effective when the speaker:",
+      "options": [
+        "Fixes their gaze on a single friendly face throughout the speech",
+        "Looks at different audience members across all sections of the room",
+        "Looks at the back wall to avoid direct contact with individuals",
+        "Maintains eye contact only during key statistics and data"
+      ],
+      "answer": "Looks at different audience members across all sections of the room",
+      "explanation": "Effective eye contact is distributed across all audience members, making everyone feel included and creating the sense of genuine conversation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "multiple_choice",
+      "question": "A clincher at the end of a speech should:",
+      "options": [
+        "Introduce new evidence that was not covered in the body",
+        "Thank the audience and ask for questions immediately",
+        "Provide a memorable final statement that reinforces the central message",
+        "Restate the introduction's opening hook word for word"
+      ],
+      "answer": "Provide a memorable final statement that reinforces the central message",
+      "explanation": "A clincher creates a powerful close—whether a callback, call to action, or memorable quote—that leaves the audience with the central message.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "multiple_choice",
+      "question": "When adapting language for a public speech compared to a written essay, speakers should:",
+      "options": [
+        "Use more passive voice for objectivity",
+        "Use longer, more complex sentences for precision",
+        "Use shorter, direct sentences and personal pronouns for clarity",
+        "Avoid repetition as it signals poor preparation"
+      ],
+      "answer": "Use shorter, direct sentences and personal pronouns for clarity",
+      "explanation": "Oral style must be immediately comprehensible to listeners—shorter sentences, active voice, and direct address facilitate real-time understanding.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "multiple_choice",
+      "question": "The STAR method for answering behavioral interview questions involves:",
+      "options": [
+        "Summarize, Tell, Analyze, Reflect",
+        "Situation, Task, Action, Result",
+        "Strategy, Target, Approach, Response",
+        "Skill, Timeline, Achievement, Reflection"
+      ],
+      "answer": "Situation, Task, Action, Result",
+      "explanation": "The STAR method structures behavioral interview answers by describing the Situation, the Task required, the Action taken, and the Result achieved.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "multiple_choice",
+      "question": "Redundancy between slide text and spoken content in a presentation tends to:",
+      "options": [
+        "Double the amount of learning by reinforcing the message in two channels",
+        "Reduce audience processing efficiency because reading and listening compete for attention",
+        "Help all audience members, especially those learning English as a second language",
+        "Signal to the audience that the speaker is well-prepared and thorough"
+      ],
+      "answer": "Reduce audience processing efficiency because reading and listening compete for attention",
+      "explanation": "Cognitive load research shows that identical information in both verbal and written channels creates split attention and reduces overall comprehension.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "multiple_choice",
+      "question": "A capstone reflection at the end of a public speaking course primarily requires students to:",
+      "options": [
+        "Critique the instructor's feedback for accuracy and fairness",
+        "Memorize and recite course terminology and definitions",
+        "Evaluate their growth as speakers, identify improved skills, and set future goals",
+        "Rank themselves against their classmates on each speech assignment"
+      ],
+      "answer": "Evaluate their growth as speakers, identify improved skills, and set future goals",
+      "explanation": "A capstone reflection requires metacognitive self-assessment—honest evaluation of improvement, recognition of remaining challenges, and forward-looking goal setting.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "multiple_choice",
+      "question": "Motivated movement in a speech is defined as:",
+      "options": [
+        "Random pacing back and forth that signals nervousness",
+        "Physical movement that serves a communicative purpose during delivery",
+        "Moving behind a podium to signal the beginning of the speech",
+        "Movement used only during the introduction and conclusion"
+      ],
+      "answer": "Physical movement that serves a communicative purpose during delivery",
+      "explanation": "Motivated movement is intentional—moving toward the audience for emphasis, stepping to a new position to signal transitions, or gesturing to reinforce key points.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "multiple_choice",
+      "question": "When a speaker notices an audience showing signs of confusion (furrowed brows, looking at each other), the most effective response is to:",
+      "options": [
+        "Continue exactly as planned to avoid disrupting the outline",
+        "Stop and ask the audience 'Are you confused?' to address the issue",
+        "Adapt by re-explaining the unclear point using a different example or approach",
+        "Move on to the next main point to save time"
+      ],
+      "answer": "Adapt by re-explaining the unclear point using a different example or approach",
+      "explanation": "Effective speakers read audience feedback and adapt in real time—clarifying confusing points rather than ignoring confusion or disrupting the flow by directly calling it out.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "multiple_choice",
+      "question": "An oral citation during a speech should include at minimum:",
+      "options": [
+        "The author's institutional affiliation and degree credentials",
+        "The source's title, author or publication, and date",
+        "The database where the article was found and its access date",
+        "All information that would appear in a Works Cited entry"
+      ],
+      "answer": "The source's title, author or publication, and date",
+      "explanation": "Oral citations establish credibility by identifying the source to the audience—at minimum including who, where published, and when.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "multiple_choice",
+      "question": "A chronological speech organizational pattern is most appropriate when:",
+      "options": [
+        "The topic has three natural, parallel subtopics of equal importance",
+        "The audience needs to understand a causal relationship between events",
+        "The speech explains a process or historical development in time order",
+        "The speaker is comparing two opposing positions on an issue"
+      ],
+      "answer": "The speech explains a process or historical development in time order",
+      "explanation": "Chronological organization arranges content by time sequence—ideal for how-to processes, historical narratives, or biographical accounts.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "multiple_choice",
+      "question": "Audience analysis should be conducted before writing a speech because it:",
+      "options": [
+        "Allows the speaker to select the most impressive vocabulary to use",
+        "Helps the speaker adapt topic, language, examples, and appeals to maximize relevance and impact",
+        "Determines the correct citation format to use for source materials",
+        "Establishes the speaker's credibility with the audience before the speech begins"
+      ],
+      "answer": "Helps the speaker adapt topic, language, examples, and appeals to maximize relevance and impact",
+      "explanation": "Audience analysis informs every speech decision—from topic selection to language choice to appeal strategy—ensuring the message resonates with the specific audience.",
+      "points": 1
+    }
+  ]
+}

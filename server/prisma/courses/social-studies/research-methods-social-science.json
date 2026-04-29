@@ -1,0 +1,1745 @@
+{
+  "slug": "research-methods-social-science",
+  "name": "Research Methods in Social Science",
+  "nameZh": "社会科学研究方法",
+  "credits": 1,
+  "department": "Social Studies",
+  "type": "Core",
+  "description": "A core course introducing students to the philosophical foundations and practical tools of social science research — from developing research questions and reviewing literature to designing studies, collecting data, and communicating findings ethically and rigorously.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to Social Science Research",
+      "titleZh": "社会科学研究导论",
+      "objectives": "Define social science research and distinguish it from everyday inquiry; identify the major social science disciplines and their distinctive research questions; explain the relationship between theory and empirical research.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/1-1-science-and-social-science/",
+      "readingNote": "University of Minnesota OER — Research Methods in the Social Sciences Ch 1.1: Science and Social Science",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/introduction-to-social-science",
+      "videoNote": "Khan Academy — Introduction to Social Science",
+      "video2Url": "https://www.youtube.com/watch?v=uMC8e1KAUi0",
+      "video2Note": "YouTube — What is Social Science Research? (SAGE Publications)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/1-2-the-role-of-values-in-social-science-research/",
+      "practiceNote": "Distinguish a scientific claim from a normative (values-based) claim using three examples from current events",
+      "assignment": "Write a 350-word essay answering: What makes social science 'scientific'? Describe two ways that social science research differs from natural science research (e.g., the role of the researcher, studying humans who react to being observed), and two ways they are similar. Give one concrete example of a social science research question and explain what kind of evidence could answer it.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Philosophical Foundations of Research",
+      "titleZh": "研究的哲学基础",
+      "objectives": "Distinguish between positivist, interpretivist, and critical research paradigms; explain the concepts of ontology and epistemology as they apply to social research; describe how philosophical assumptions shape research design choices.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/2-1-paradigms-and-worldviews/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 2.1: Paradigms and Worldviews",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/research-philosophy",
+      "videoNote": "Khan Academy — Research Philosophy in Social Science",
+      "video2Url": "https://www.youtube.com/watch?v=Y6HN1zRtgf8",
+      "video2Note": "YouTube — Research Paradigms: Positivism, Interpretivism, Critical Theory Explained",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/2-2-inductive-and-deductive-reasoning/",
+      "practiceNote": "Classify three social science studies as positivist, interpretivist, or critical and justify your classification",
+      "assignment": "Choose a social issue you care about (poverty, gender inequality, school discipline, online bullying). In 350 words, explain how (1) a positivist researcher, (2) an interpretivist researcher, and (3) a critical theory researcher would each approach studying it differently — what assumptions each makes, what methods each would use, and what kind of answer each is seeking.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Research Ethics & IRB",
+      "titleZh": "研究伦理与伦理审查委员会",
+      "objectives": "Explain the historical events (Tuskegee, Milgram, Zimbardo) that led to modern research ethics frameworks; describe the core principles of the Belmont Report (respect for persons, beneficence, justice); explain the role of Institutional Review Boards (IRBs) in protecting human subjects.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/3-1-ethical-considerations-in-research/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 3.1: Ethical Considerations in Research",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/research-ethics",
+      "videoNote": "Khan Academy — Research Ethics Overview",
+      "video2Url": "https://www.youtube.com/watch?v=x7RznBf0B9o",
+      "video2Note": "YouTube — The Tuskegee Syphilis Study and Research Ethics",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/3-2-informed-consent-and-confidentiality/",
+      "practiceNote": "Evaluate a hypothetical study design for ethical issues (informed consent, deception, confidentiality, vulnerable populations)",
+      "assignment": "Research either the Milgram obedience study (1963) or the Stanford Prison Experiment (1971). In 350 words: (1) summarize what the study involved, (2) identify at least three specific ethical violations using the Belmont Report's three principles, (3) explain what an IRB today would likely require before approving such a study, and (4) state whether you believe the knowledge gained justified the ethical costs.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Developing Research Questions",
+      "titleZh": "研究问题的构建",
+      "objectives": "Distinguish between descriptive, explanatory, and evaluative research questions; explain what makes a research question researchable, specific, and significant; describe the relationship between research questions, hypotheses, and variables.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/4-1-finding-a-research-topic/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 4.1: Finding a Research Topic",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/developing-research-questions",
+      "videoNote": "Khan Academy — Developing Research Questions",
+      "video2Url": "https://www.youtube.com/watch?v=71-GucBaM9U",
+      "video2Note": "YouTube — How to Write a Good Research Question (Scribbr)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/4-2-what-is-a-researchable-question/",
+      "practiceNote": "Refine three poorly worded research questions (too broad, normative, or unanswerable) into strong, researchable social science questions",
+      "assignment": "Identify a social phenomenon you want to understand better (e.g., social media use and teen mental health, income and voting behavior, peer pressure and academic performance). Write a 350-word essay that: (1) identifies your broad topic, (2) explains why it is important to study, (3) formulates one specific, researchable research question, (4) states a hypothesis, and (5) identifies the key independent and dependent variables.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Literature Review",
+      "titleZh": "文献综述",
+      "objectives": "Explain the purpose of a literature review in research; distinguish between primary and secondary sources; describe how to search academic databases, evaluate source credibility, and synthesize findings to identify research gaps.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/5-1-literature-reviews/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 5.1: Literature Reviews",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/literature-review",
+      "videoNote": "Khan Academy — Literature Review in Research",
+      "video2Url": "https://www.youtube.com/watch?v=zIYC6zG265E",
+      "video2Note": "YouTube — How to Write a Literature Review (Scribbr)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/5-2-academic-sources-and-databases/",
+      "practiceNote": "Search Google Scholar for 5 peer-reviewed articles on social media and adolescent well-being; annotate each with key findings and limitations",
+      "assignment": "Select a social science topic from a previous module. Using Google Scholar or your school library database, find three peer-reviewed journal articles on that topic. Write a 350-word mini-literature review that: (1) synthesizes the main findings across the three articles, (2) identifies what they agree on, (3) identifies a gap or debate that remains unresolved, and (4) explains how your own potential research could contribute to filling that gap.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 6,
+      "title": "Quantitative Research Design",
+      "titleZh": "定量研究设计",
+      "objectives": "Define quantitative research and explain its core logic; distinguish between cross-sectional, longitudinal, and panel designs; explain concepts of validity (internal and external), reliability, and generalizability in quantitative research.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/6-1-quantitative-vs-qualitative-research/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 6.1: Quantitative vs. Qualitative Research",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/quantitative-research-design",
+      "videoNote": "Khan Academy — Quantitative Research Design",
+      "video2Url": "https://www.youtube.com/watch?v=ZqOoRD1YNtk",
+      "video2Note": "YouTube — Quantitative Research: An Introduction (Scribbr)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/6-2-research-design-types/",
+      "practiceNote": "Classify five study descriptions as cross-sectional, longitudinal, or panel designs and identify one strength of each",
+      "assignment": "Design a quantitative study to answer this question: 'Do students who sleep at least 8 hours per night earn higher GPA than those who sleep less?' In 350 words: (1) describe your research design (cross-sectional or longitudinal), (2) define your operationalization of 'sleep hours' and 'academic performance,' (3) describe your sampling plan, (4) identify one internal validity threat and how you would control for it, and (5) explain to what population your results could be generalized.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Surveys & Questionnaires",
+      "titleZh": "调查与问卷",
+      "objectives": "Explain the types of survey questions (open-ended, closed-ended, Likert scale, ranking); identify principles of good questionnaire design (clarity, neutrality, order effects); describe sampling strategies (random, stratified, convenience, snowball) and their implications for representativeness.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/7-1-survey-research/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 7.1: Survey Research",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/surveys-and-questionnaires",
+      "videoNote": "Khan Academy — Surveys and Sampling",
+      "video2Url": "https://www.youtube.com/watch?v=WQG-0VPJ1NI",
+      "video2Note": "YouTube — How to Design a Survey (Scribbr)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/7-2-question-types-and-design/",
+      "practiceNote": "Critique five poorly designed survey questions (double-barreled, leading, vague) and rewrite each as a valid question",
+      "assignment": "Design a 10-question survey on a topic of your choice (student stress, social media habits, political engagement, community safety, etc.). In 350 words of accompanying explanation: (1) state your research question, (2) explain your choice of question types (open-ended vs. closed, Likert vs. yes/no), (3) identify one potential order effect in your survey and how you would address it, (4) describe your sampling strategy and who your target population is, and (5) explain how your sampling choice affects generalizability.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Experimental & Quasi-Experimental Design",
+      "titleZh": "实验与准实验设计",
+      "objectives": "Explain the logic of experimental research and why random assignment is important; distinguish between true experiments and quasi-experiments; define and identify threats to internal validity (confounding, selection bias, attrition); explain when experimental design is or is not feasible in social research.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/8-1-experimental-research/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 8.1: Experimental Research",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/ap-statistics/gathering-data-ap/experiments-ap/v/introduction-to-experiment-design",
+      "videoNote": "Khan Academy — Introduction to Experimental Design",
+      "video2Url": "https://www.youtube.com/watch?v=KCUNNm9lY2w",
+      "video2Note": "YouTube — Experimental vs. Quasi-Experimental Designs Explained",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/8-2-quasi-experimental-designs/",
+      "practiceNote": "Identify whether each of three study designs is a true experiment, quasi-experiment, or observational study, and explain the key differences",
+      "assignment": "A researcher wants to study whether a mindfulness program reduces student anxiety. Design a study in 350 words: (1) describe a true experimental design (including random assignment, control group, and treatment group), (2) identify two threats to internal validity this design would face (e.g., placebo effect, attrition), (3) explain why a quasi-experimental design might be necessary if random assignment is not possible, and (4) discuss one ethical consideration specific to this study.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Qualitative Research Design",
+      "titleZh": "定性研究设计",
+      "objectives": "Explain the philosophy and goals of qualitative research; compare qualitative and quantitative approaches on key dimensions (generalizability, depth, objectivity); describe the main qualitative traditions (phenomenology, grounded theory, case study, narrative research, ethnography).",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/9-1-qualitative-research-design/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 9.1: Qualitative Research Design",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/qualitative-research-design",
+      "videoNote": "Khan Academy — Qualitative Research Design",
+      "video2Url": "https://www.youtube.com/watch?v=IsAUNs-IoSQ",
+      "video2Note": "YouTube — Qualitative Research Methods: An Overview (Scribbr)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/9-2-qualitative-traditions/",
+      "practiceNote": "Match five research questions to the most appropriate qualitative tradition (phenomenology, grounded theory, case study, ethnography, or narrative) and justify each choice",
+      "assignment": "Your school has seen a rise in student absenteeism. A researcher wants to understand why students are missing school. In 350 words, explain why a qualitative research design is more appropriate than a quantitative survey alone for this question. Identify which qualitative tradition would best suit this study, describe the type of data you would collect, explain how you would ensure trustworthiness (instead of statistical reliability), and acknowledge one limitation of the qualitative approach.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 10,
+      "title": "Interviews & Focus Groups",
+      "titleZh": "访谈与焦点小组",
+      "objectives": "Compare structured, semi-structured, and unstructured interview formats; explain how to develop an interview guide; describe the advantages and challenges of focus groups compared to individual interviews; identify ethical issues in interview research (confidentiality, rapport, power dynamics).",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/10-1-interviews-and-focus-groups/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 10.1: Interviews and Focus Groups",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/interviews-and-focus-groups",
+      "videoNote": "Khan Academy — Qualitative Interview Methods",
+      "video2Url": "https://www.youtube.com/watch?v=mFWxlNBOxkI",
+      "video2Note": "YouTube — How to Conduct Qualitative Interviews (Scribbr)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/10-2-conducting-interviews/",
+      "practiceNote": "Write a 10-question semi-structured interview guide for studying student experiences of online learning during the pandemic",
+      "assignment": "You want to understand the experiences of first-generation college students at your school. In 350 words, design a qualitative data collection plan: (1) choose between individual interviews and focus groups and justify your choice, (2) describe your interview format (structured, semi-structured, or unstructured) and explain why, (3) write three specific interview questions you would ask, (4) explain how you would ensure participants feel comfortable sharing sensitive experiences, and (5) describe how you would handle confidentiality of what participants share.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Observational Methods & Ethnography",
+      "titleZh": "观察法与民族志",
+      "objectives": "Distinguish between participant observation, non-participant observation, and ethnography; explain the continuum from covert to overt observation; describe how field notes are recorded and used; analyze the ethical challenges of ethnographic research.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/11-1-observation-and-ethnography/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 11.1: Observation and Ethnography",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/observational-research-methods",
+      "videoNote": "Khan Academy — Observational Research Methods",
+      "video2Url": "https://www.youtube.com/watch?v=EFgBqyWnFuk",
+      "video2Note": "YouTube — What is Ethnography? (Anthropological Methods)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/11-2-field-notes-and-ethnographic-writing/",
+      "practiceNote": "Spend 20 minutes observing a public space (cafeteria, park, library) and write structured field notes describing what you observed, noting date, time, physical setting, and social interactions",
+      "assignment": "Classic sociological ethnographies have studied street gangs, hospital wards, religious communities, and corporate offices by embedding researchers inside these settings. Choose a social setting you could ethically observe (a sports team, a school club, a workplace, or an online community). In 350 words: (1) describe the setting and your research question, (2) choose participant or non-participant observation and justify why, (3) explain how you would gain access and build rapport, (4) describe what you would record in field notes, and (5) identify at least two ethical risks of this observational study.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 12,
+      "title": "Analyzing Quantitative Data",
+      "titleZh": "定量数据分析",
+      "objectives": "Distinguish between descriptive and inferential statistics; calculate and interpret measures of central tendency (mean, median, mode) and spread (range, standard deviation); explain the concept of statistical significance and p-values; identify appropriate visualizations for quantitative data.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/12-1-analyzing-quantitative-data/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 12.1: Analyzing Quantitative Data",
+      "videoUrl": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/mean-median-and-mode",
+      "videoNote": "Khan Academy — Mean, Median, Mode and Measures of Spread",
+      "video2Url": "https://www.youtube.com/watch?v=SjE6S_LGQ2o",
+      "video2Note": "YouTube — Statistics for Social Scientists: An Introduction (Crash Course Statistics)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/12-2-descriptive-and-inferential-statistics/",
+      "practiceNote": "Given a dataset of 20 student test scores, calculate the mean, median, mode, range, and identify which measure of central tendency is most appropriate given the distribution",
+      "assignment": "You conducted a survey of 50 students asking: 'How many hours per week do you spend on social media?' The data ranges from 2 to 40 hours, with most students reporting 8–12 hours, and a few outliers at 35–40 hours. In 350 words: (1) calculate or estimate the mean, median, and mode (describe what patterns they reveal), (2) explain whether the mean or median better represents the typical student in this data and why, (3) describe what a standard deviation would tell you, (4) choose one appropriate graph or chart for displaying this data and explain your choice, and (5) identify one possible source of measurement error in this self-reported data.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 13,
+      "title": "Analyzing Qualitative Data",
+      "titleZh": "定性数据分析",
+      "objectives": "Explain the process of coding qualitative data (open coding, axial coding, selective coding); describe thematic analysis as a systematic approach to identifying patterns; explain how to establish trustworthiness in qualitative research (member checking, triangulation, thick description).",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/13-1-analyzing-qualitative-data/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 13.1: Analyzing Qualitative Data",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/qualitative-data-analysis",
+      "videoNote": "Khan Academy — Qualitative Data Analysis Overview",
+      "video2Url": "https://www.youtube.com/watch?v=Aqdv3TuRk00",
+      "video2Note": "YouTube — Thematic Analysis: Step-by-Step Guide (Scribbr)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/13-2-coding-and-thematic-analysis/",
+      "practiceNote": "Practice open coding on three interview excerpts about student stress, identifying at least 5 initial codes and grouping them into 2 emerging themes",
+      "assignment": "You interviewed 10 students about their experiences with remote learning during COVID-19. Here are three direct quotes: (A) 'I felt really isolated and missed my friends'; (B) 'I actually liked learning at my own pace'; (C) 'My parents were stressed and it was hard to focus at home.' In 350 words: (1) apply open coding to each quote, generating codes for each; (2) group codes into at least two broader themes; (3) explain what thematic analysis reveals about students' remote learning experiences; (4) describe how you would use member checking to improve the trustworthiness of your analysis; and (5) identify one limitation of thematic analysis.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 14,
+      "title": "Writing & Disseminating Research",
+      "titleZh": "研究写作与成果传播",
+      "objectives": "Describe the structure of an academic research report (introduction, literature review, methods, results, discussion, conclusion); explain how to write for different audiences (academic, policy, general public); describe strategies for disseminating research findings ethically and effectively.",
+      "readingUrl": "https://open.lib.umn.edu/socialresearch/chapter/14-1-writing-up-research/",
+      "readingNote": "University of Minnesota OER — Research Methods Ch 14.1: Writing Up Research",
+      "videoUrl": "https://www.khanacademy.org/social-sciences/intro-social-science/v/writing-research-reports",
+      "videoNote": "Khan Academy — Writing Research Reports",
+      "video2Url": "https://www.youtube.com/watch?v=C3hmdBxVKUo",
+      "video2Note": "YouTube — How to Write a Social Science Research Paper (Scribbr)",
+      "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/14-2-research-dissemination/",
+      "practiceNote": "Convert an abstract academic research finding into a 200-word plain-language summary suitable for a high school student newspaper",
+      "assignment": "Write a 500-word mock research report summary on any social science topic you have studied in this course. Your summary must include: (1) Introduction — state the research question and why it matters; (2) Methods — describe your data collection method (survey, interview, observation, or experiment) in 2–3 sentences; (3) Results — report 2–3 key findings (you may fabricate plausible data); (4) Discussion — interpret what the findings mean and connect to existing research; (5) Conclusion — state what your study contributes and what further research is needed; (6) Ethical considerations — note one ethical issue you addressed in this study.",
+      "estimatedHrs": 3.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which of the following best distinguishes social science research from everyday, informal knowledge?",
+      "options": [
+        "Social science uses large sample sizes while everyday knowledge uses small ones",
+        "Social science uses systematic, empirical methods with transparent procedures that can be evaluated and replicated",
+        "Social science is conducted only by university professors",
+        "Everyday knowledge is always incorrect while social science is always right"
+      ],
+      "answer": "B",
+      "explanation": "Social science is 'scientific' because it applies systematic, empirical, transparent methods — data collection, analysis, reporting — that allow others to evaluate, criticize, and replicate findings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which of the following is an example of an 'empirical' research question in social science?",
+      "options": [
+        "Should the minimum wage be raised to $20 per hour?",
+        "What is the right immigration policy?",
+        "Does raising the minimum wage reduce teenage employment?",
+        "Is capitalism fair?"
+      ],
+      "answer": "C",
+      "explanation": "Empirical questions can be answered with observable evidence. Options A, B, and D are normative (value) questions that cannot be resolved by data alone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "The relationship between theory and empirical research in social science is best described as:",
+      "options": [
+        "Theory and research are completely separate activities",
+        "Theory guides research by generating hypotheses, and empirical findings refine or challenge theory",
+        "Empirical research is always done before any theory is developed",
+        "Social science theories cannot be tested empirically"
+      ],
+      "answer": "B",
+      "explanation": "Theory and research are iteratively connected: theoretical frameworks generate testable hypotheses, and empirical findings support, challenge, or refine theories.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "The 'replication crisis' in social science refers to:",
+      "options": [
+        "The difficulty of collecting the same data twice",
+        "The discovery that many published findings cannot be reproduced when studies are repeated by other researchers",
+        "The problem of copying others' research without attribution",
+        "The challenge of publishing research in multiple journals"
+      ],
+      "answer": "B",
+      "explanation": "The replication crisis revealed that a significant proportion of highly cited social science findings failed to hold when independently replicated — raising concerns about methodology, publication bias, and statistical practices.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Which of the following social science disciplines primarily studies the behavior of individuals and mental processes?",
+      "options": [
+        "Sociology",
+        "Political Science",
+        "Psychology",
+        "Economics"
+      ],
+      "answer": "C",
+      "explanation": "Psychology focuses on individual mental processes, behavior, cognition, and emotion — distinguishing it from sociology (groups/society), political science (power/governance), and economics (resource allocation).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "A 'positivist' research paradigm assumes that:",
+      "options": [
+        "Social reality is subjective and constructed through human interpretation",
+        "Social phenomena can be studied objectively using methods similar to natural science, producing generalizable laws",
+        "Research should serve to empower oppressed groups",
+        "All social knowledge is relative to the researcher's cultural context"
+      ],
+      "answer": "B",
+      "explanation": "Positivism holds that social reality exists independently of observers and can be measured objectively — emphasizing quantitative methods, hypothesis testing, and universal laws.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "'Ontology' in research philosophy refers to:",
+      "options": [
+        "How a researcher collects and analyzes data",
+        "The theory of knowledge — what counts as valid evidence",
+        "Assumptions about the nature of reality — what exists and how it is structured",
+        "The ethical principles guiding research practice"
+      ],
+      "answer": "C",
+      "explanation": "Ontology deals with assumptions about reality: does social reality exist independently of human minds (realism) or is it socially constructed (constructivism)?",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "An interpretivist research approach would most likely use which method?",
+      "options": [
+        "Randomized controlled experiment",
+        "Large-scale national survey with statistical analysis",
+        "In-depth interviews and thematic analysis of participants' subjective meanings",
+        "Analysis of economic indicators using regression models"
+      ],
+      "answer": "C",
+      "explanation": "Interpretivism seeks to understand the subjective meanings people give to social phenomena — privileging qualitative methods like interviews, ethnography, and discourse analysis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Inductive reasoning in research means:",
+      "options": [
+        "Starting with a theory and testing a specific hypothesis derived from it",
+        "Starting with specific observations and building toward broader theoretical patterns",
+        "Using deductive logic to disprove existing theories",
+        "Applying mathematical models to social data"
+      ],
+      "answer": "B",
+      "explanation": "Inductive reasoning moves from specific observations to general patterns — researchers gather data and then build theory from what they observe (grounded theory is a classic inductive approach).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Critical theory in social science is distinctive because it:",
+      "options": [
+        "Aims only to describe social phenomena without judgment",
+        "Seeks to understand and critique power structures in order to promote social change and emancipation",
+        "Rejects all empirical methods in favor of pure philosophical reasoning",
+        "Claims that objective knowledge of society is entirely possible"
+      ],
+      "answer": "B",
+      "explanation": "Critical theory (Frankfurt School, feminist theory, CRT) holds that research should not just describe society but critically analyze power relations and contribute to social transformation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The Tuskegee Syphilis Study (1932–1972) is used as a foundational example in research ethics because:",
+      "options": [
+        "It set the gold standard for informed consent procedures",
+        "Researchers deliberately withheld effective treatment from Black men with syphilis without their knowledge or consent, causing preventable suffering and death",
+        "It demonstrated that medical experiments can be conducted ethically on prisoners",
+        "It produced the first randomized controlled trial in medical history"
+      ],
+      "answer": "B",
+      "explanation": "Tuskegee remains the defining case of research ethics violation: the US government knowingly denied Black men treatment for syphilis for 40 years to study disease progression — without consent, and despite penicillin becoming available as a cure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "The Belmont Report's principle of 'respect for persons' primarily requires:",
+      "options": [
+        "That research benefit society at large",
+        "That researchers treat participants as autonomous individuals by obtaining informed consent",
+        "That risks to participants be minimized relative to benefits",
+        "That research be distributed fairly across different social groups"
+      ],
+      "answer": "B",
+      "explanation": "Respect for persons means recognizing individuals as autonomous agents capable of making their own decisions — operationalized through informed consent — and protecting those with diminished autonomy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Informed consent in human subjects research requires that participants:",
+      "options": [
+        "Sign a legal contract agreeing to complete the study",
+        "Be fully informed of the study's nature, risks, and benefits, and voluntarily agree to participate without coercion",
+        "Receive payment for their participation",
+        "Have at least a high school education to understand the research"
+      ],
+      "answer": "B",
+      "explanation": "Informed consent requires disclosure of study purpose, procedures, risks, benefits, and the right to withdraw — and voluntary agreement free from coercion or undue incentive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "An Institutional Review Board (IRB) evaluates research proposals primarily to:",
+      "options": [
+        "Ensure research findings are scientifically significant",
+        "Protect human participants from harm by reviewing the ethical appropriateness of proposed research",
+        "Ensure researchers have adequate funding and laboratory space",
+        "Verify that studies will be published in peer-reviewed journals"
+      ],
+      "answer": "B",
+      "explanation": "IRBs review proposed studies to assess risks relative to benefits, adequacy of informed consent procedures, and protections for vulnerable populations — all before any data collection begins.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Research 'confidentiality' means that:",
+      "options": [
+        "Participants are not told the true purpose of the study",
+        "No personally identifiable information will be collected from participants",
+        "Participant identities and data will be protected and not disclosed without consent",
+        "Only the principal investigator can access the research data"
+      ],
+      "answer": "C",
+      "explanation": "Confidentiality means that even if a participant's identity is known to the researcher, that information and the participant's data will not be disclosed publicly or to unauthorized parties.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "A 'descriptive' research question aims to:",
+      "options": [
+        "Test a causal relationship between variables",
+        "Understand why a social phenomenon occurs by explaining its causes",
+        "Document and describe what a phenomenon looks like, how common it is, or how it is distributed",
+        "Evaluate the effectiveness of an intervention or program"
+      ],
+      "answer": "C",
+      "explanation": "Descriptive research asks 'what' — mapping the prevalence, characteristics, or distribution of a phenomenon — rather than 'why' (explanatory) or 'what works' (evaluative).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "A research hypothesis is best defined as:",
+      "options": [
+        "A proven statement about the social world",
+        "A testable prediction about the relationship between variables, derived from theory or prior research",
+        "The final conclusion of a research study",
+        "A general topic area chosen for investigation"
+      ],
+      "answer": "B",
+      "explanation": "A hypothesis is a specific, testable prediction — e.g., 'students who attend peer tutoring sessions will earn higher test scores than those who do not' — that can be evaluated with empirical evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "In social science research, the 'independent variable' is:",
+      "options": [
+        "The variable the researcher measures as an outcome",
+        "The variable the researcher manipulates or measures as the presumed cause",
+        "A variable that is statistically controlled in the analysis",
+        "The variable that describes the sample characteristics"
+      ],
+      "answer": "B",
+      "explanation": "The independent variable (IV) is the presumed cause — it comes before (logically or temporally) the dependent variable (DV) and is what the researcher varies or measures to explain the outcome.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Why is it problematic to have a research question like 'Is social media bad for teens?'",
+      "options": [
+        "Social media cannot be studied scientifically",
+        "The question is normative and too broad — 'bad' is undefined, and the effects are likely complex and conditional rather than simply 'good' or 'bad'",
+        "Teen behavior is impossible to measure",
+        "Research on social media requires special government approval"
+      ],
+      "answer": "B",
+      "explanation": "Good research questions are empirical (not value judgments), specific (what aspect of social media? what outcome? for which teens?), and answerable with data — 'Is social media bad?' fails on all three grounds.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "'Operationalization' in research refers to:",
+      "options": [
+        "The process of gaining access to a research setting",
+        "Defining how an abstract concept will be concretely measured in a specific study",
+        "Writing the final research report for publication",
+        "Analyzing whether the results are statistically significant"
+      ],
+      "answer": "B",
+      "explanation": "Operationalization specifies how to measure an abstract variable — e.g., operationalizing 'academic achievement' as cumulative GPA, or 'social media use' as self-reported hours per day.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The primary purpose of a literature review in a research project is to:",
+      "options": [
+        "Prove that no one has studied the topic before",
+        "Demonstrate broad reading of non-academic sources",
+        "Synthesize existing knowledge on a topic, identify gaps, and position the new study within the field",
+        "Summarize the researcher's personal opinions on a topic"
+      ],
+      "answer": "C",
+      "explanation": "A literature review maps what is already known, identifies debates and gaps in existing research, and situates the new study's contribution within the scholarly conversation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "A 'peer-reviewed' journal article is one that:",
+      "options": [
+        "Has been read by at least 10 other students before publication",
+        "Has been evaluated by independent experts in the field before publication to assess its scholarly merit",
+        "Is published by a university rather than a commercial publisher",
+        "Has received at least 100 citations from other scholars"
+      ],
+      "answer": "B",
+      "explanation": "Peer review means that independent experts evaluate a manuscript's methodology, analysis, and contribution before publication — the primary quality control mechanism in academic publishing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "When synthesizing multiple studies in a literature review, a researcher should primarily aim to:",
+      "options": [
+        "Quote as many sources as possible to show breadth of reading",
+        "Identify patterns, agreements, contradictions, and gaps across the body of research",
+        "Describe each study in chronological order without drawing connections",
+        "Identify the single 'best' study and rely on it exclusively"
+      ],
+      "answer": "B",
+      "explanation": "Synthesis — identifying what multiple studies collectively reveal, where they agree and disagree, and what remains unknown — is the key intellectual task of a literature review, not mere summarization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Which of the following is the most reliable source for finding peer-reviewed social science research?",
+      "options": [
+        "Wikipedia",
+        "A popular magazine website",
+        "Google Scholar or an academic database like JSTOR or PsycINFO",
+        "A social media platform where researchers post their findings"
+      ],
+      "answer": "C",
+      "explanation": "Academic databases (Google Scholar, JSTOR, PsycINFO, Sociological Abstracts) index peer-reviewed journal articles — the gold standard of academic evidence — unlike Wikipedia or popular media.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "A 'research gap' in a literature review refers to:",
+      "options": [
+        "A period when no research was published on a topic",
+        "An aspect of a topic that existing research has not adequately addressed, providing justification for a new study",
+        "A mistake made by previous researchers that must be corrected",
+        "A missing citation in a reference list"
+      ],
+      "answer": "B",
+      "explanation": "A research gap is an unanswered question, unstudied population, unexamined context, or methodological limitation in the existing literature — which justifies why new research is needed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Quantitative research is best characterized by:",
+      "options": [
+        "In-depth exploration of individual perspectives and meanings",
+        "Numerical measurement of variables and statistical analysis to test hypotheses",
+        "Embedded fieldwork within a social group over an extended period",
+        "Open-ended interviews and thematic coding"
+      ],
+      "answer": "B",
+      "explanation": "Quantitative research uses numerical data and statistical analysis to measure variables, test hypotheses, and generalize findings to broader populations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "'Internal validity' in a research study refers to:",
+      "options": [
+        "Whether study findings can be generalized to other populations",
+        "Whether the study actually measures what it claims to measure, free from confounding explanations",
+        "Whether participants honestly answered survey questions",
+        "Whether the study was conducted ethically"
+      ],
+      "answer": "B",
+      "explanation": "Internal validity concerns whether the study's findings accurately reflect the relationship being studied — i.e., whether observed effects are due to the variable of interest rather than confounders.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "A longitudinal study differs from a cross-sectional study in that it:",
+      "options": [
+        "Surveys participants from multiple countries simultaneously",
+        "Collects data from the same participants at multiple points in time to track changes",
+        "Uses a larger sample size to increase statistical power",
+        "Combines both quantitative and qualitative methods"
+      ],
+      "answer": "B",
+      "explanation": "Longitudinal studies follow the same participants over time — enabling researchers to track developmental changes and causal sequences that cross-sectional studies (collected at a single time point) cannot.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "In quantitative research, 'reliability' of a measure refers to:",
+      "options": [
+        "Whether the measure accurately captures the intended concept",
+        "Whether the measure produces consistent results when repeated under the same conditions",
+        "Whether the sample represents the target population",
+        "Whether the study findings are statistically significant"
+      ],
+      "answer": "B",
+      "explanation": "Reliability is consistency: a reliable measure gives the same result each time the same phenomenon is measured under identical conditions — as opposed to validity, which concerns whether it measures the right thing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "'External validity' in social research refers to:",
+      "options": [
+        "The degree to which study results are free from confounding variables",
+        "The ability to generalize findings from the study sample to the broader population or other contexts",
+        "The consistency of measurements across different researchers",
+        "The ethical approval granted to a study by an IRB"
+      ],
+      "answer": "B",
+      "explanation": "External validity concerns generalizability: whether study findings from a particular sample, setting, and time period apply to other populations, settings, and circumstances.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "A Likert scale question asks respondents to:",
+      "options": [
+        "Choose from a yes/no binary response",
+        "Rate their level of agreement or frequency on a continuum (e.g., Strongly Agree to Strongly Disagree)",
+        "Select all answers that apply from a checklist",
+        "Write an open-ended response in their own words"
+      ],
+      "answer": "B",
+      "explanation": "Likert scales capture intensity or degree of attitude across a range of options (e.g., 5-point: Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree), providing ordinal data.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "A 'double-barreled' survey question is problematic because:",
+      "options": [
+        "It asks the same question twice in different words",
+        "It combines two distinct issues in one question, making it impossible to know which part the respondent is answering",
+        "It is too long for respondents to understand",
+        "It uses academic jargon that respondents may not know"
+      ],
+      "answer": "B",
+      "explanation": "Double-barreled questions (e.g., 'Do you support higher taxes and more government spending?') combine two issues — respondents may agree with one but not the other, making answers uninterpretable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Simple random sampling is defined as:",
+      "options": [
+        "Selecting participants who are easiest to reach",
+        "Dividing the population into groups and sampling from each group",
+        "Every member of the population has an equal probability of being selected",
+        "Asking participants to recruit other participants"
+      ],
+      "answer": "C",
+      "explanation": "Simple random sampling gives every population member an equal chance of selection — the foundation of probability sampling and the basis for statistical generalizability.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "'Snowball sampling' is most appropriate when:",
+      "options": [
+        "Studying large, clearly defined populations",
+        "Studying hard-to-reach or hidden populations where members can refer researchers to other members",
+        "Ensuring geographic representativeness of the sample",
+        "Testing a hypothesis with high statistical precision"
+      ],
+      "answer": "B",
+      "explanation": "Snowball sampling — where participants recruit other eligible participants — is used for hidden or marginalized populations (drug users, undocumented immigrants, abuse survivors) where no sampling frame exists.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Survey 'response bias' occurs when:",
+      "options": [
+        "Respondents misread questions due to poor survey formatting",
+        "Respondents systematically answer in ways that don't reflect their true attitudes (e.g., socially desirable responding)",
+        "The survey has too many questions for respondents to complete",
+        "The researcher analyzes the data incorrectly"
+      ],
+      "answer": "B",
+      "explanation": "Response bias — particularly social desirability bias — occurs when respondents answer in the way they believe is expected or valued rather than honestly, distorting results on sensitive topics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "The key feature that distinguishes a 'true experiment' from other research designs is:",
+      "options": [
+        "The use of a large sample size",
+        "Random assignment of participants to treatment and control conditions",
+        "The collection of both quantitative and qualitative data",
+        "The use of multiple dependent variables"
+      ],
+      "answer": "B",
+      "explanation": "Random assignment is the defining feature of a true experiment — it distributes known and unknown confounders evenly across groups, enabling causal inference.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "A 'control group' in an experiment serves the purpose of:",
+      "options": [
+        "Receiving the treatment to see if it works",
+        "Providing a comparison baseline so the effect of the treatment can be isolated",
+        "Ensuring all participants behave ethically during the study",
+        "Testing multiple treatments simultaneously"
+      ],
+      "answer": "B",
+      "explanation": "The control group receives no treatment (or a placebo), allowing researchers to compare outcomes with the treatment group and attribute differences to the experimental manipulation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "A quasi-experimental design differs from a true experiment in that:",
+      "options": [
+        "It does not collect outcome data",
+        "It lacks random assignment to conditions, making causal claims more tenuous",
+        "It is only used in laboratory settings",
+        "It relies entirely on qualitative data"
+      ],
+      "answer": "B",
+      "explanation": "Quasi-experiments compare pre-existing groups or use natural variation (e.g., comparing schools that adopted a program vs. those that didn't) — without random assignment, so unmeasured confounders remain a threat.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "'Attrition' (mortality) as a threat to internal validity in longitudinal experiments refers to:",
+      "options": [
+        "Participants dying during a medical study",
+        "Non-random dropout from the study, leaving a biased sample of participants who differ from those who dropped out",
+        "Researchers selectively removing participants whose data doesn't fit the hypothesis",
+        "The decay of treatment effects over time"
+      ],
+      "answer": "B",
+      "explanation": "Attrition threatens validity when dropout is systematic — if participants who drop out differ from those who remain (e.g., the most struggling students drop out of a tutoring study), the remaining sample is no longer representative.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "The 'placebo effect' is a research concern because:",
+      "options": [
+        "Participants who receive a placebo always improve more than those receiving treatment",
+        "Participants' belief that they are receiving treatment can itself cause improvement, making it difficult to isolate the true effect of the treatment",
+        "Placebos are unethical and cannot be used in human research",
+        "Placebos are only relevant in medical research, not social science"
+      ],
+      "answer": "B",
+      "explanation": "The placebo effect — improvement caused by the expectation of treatment rather than the treatment itself — can inflate apparent treatment effectiveness, which is why double-blind designs and placebo controls are used.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Qualitative research is most appropriate when the research goal is to:",
+      "options": [
+        "Test a specific hypothesis with a large representative sample",
+        "Measure the prevalence of a behavior across a national population",
+        "Deeply understand the meanings, experiences, and perspectives of participants in their natural context",
+        "Establish a mathematical relationship between two variables"
+      ],
+      "answer": "C",
+      "explanation": "Qualitative research excels at exploring 'how' and 'why' questions — generating rich, contextual understanding of human experience, meaning-making, and social processes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Grounded theory as a qualitative tradition aims to:",
+      "options": [
+        "Test an existing theory against new empirical data",
+        "Develop new theoretical explanations directly from systematic analysis of collected data",
+        "Describe the lived experience of a specific group",
+        "Produce thick descriptions of cultural practices in their natural setting"
+      ],
+      "answer": "B",
+      "explanation": "Grounded theory (Glaser & Strauss) builds theory inductively from data through constant comparative analysis — the theory 'emerges from' or is 'grounded in' the data rather than imposed from outside.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Phenomenology as a qualitative research tradition focuses on:",
+      "options": [
+        "Understanding how social structures shape group behavior",
+        "Describing the lived experience of a phenomenon from the perspective of those who experienced it",
+        "Observing and documenting cultural practices over extended periods",
+        "Developing new social theories from interview data"
+      ],
+      "answer": "B",
+      "explanation": "Phenomenology explores the subjective, first-person experience of a phenomenon — asking 'What is it like to experience X?' — seeking the essential structure of that experience as described by participants.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "In qualitative research, 'transferability' is the equivalent of 'generalizability' in quantitative research and is achieved through:",
+      "options": [
+        "Using a large, randomly selected sample",
+        "Providing thick, detailed descriptions of context so readers can judge whether findings apply to their own situations",
+        "Conducting statistical tests to confirm significance",
+        "Repeating the study with a different population"
+      ],
+      "answer": "B",
+      "explanation": "Qualitative researchers provide rich contextual detail (thick description) so readers can judge whether the findings transfer to their own context — rather than claiming statistical generalization to a population.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "A case study research design in social science involves:",
+      "options": [
+        "Studying a single individual's psychological development",
+        "In-depth investigation of a bounded case (person, group, event, organization) to generate rich contextual understanding",
+        "Conducting experiments on a small group of 5–10 participants",
+        "Analyzing data from a random sample of cases in a large survey"
+      ],
+      "answer": "B",
+      "explanation": "Case studies provide an in-depth examination of a specific bounded unit (a school, a community, a political movement, a company) using multiple data sources to understand its complexity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "A 'semi-structured interview' is characterized by:",
+      "options": [
+        "A fixed set of identical questions asked in the same order to all participants",
+        "An open-ended conversation with no predetermined questions",
+        "A prepared guide with key topics and questions but flexibility to probe and follow unexpected threads",
+        "Standardized questions read from a computer with no interviewer interaction"
+      ],
+      "answer": "C",
+      "explanation": "Semi-structured interviews provide structure (ensuring key topics are covered) while allowing flexibility — the interviewer can ask follow-up probes, explore unexpected themes, and adapt to each participant's responses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Focus groups differ from individual interviews primarily in that:",
+      "options": [
+        "Focus groups produce more statistically reliable data",
+        "Focus group dynamics allow participant interaction, which can generate collective meanings and social perspectives not available in individual interviews",
+        "Focus groups are more ethical because participants can monitor each other",
+        "Focus groups are always conducted online"
+      ],
+      "answer": "B",
+      "explanation": "Focus groups harness group interaction — participants discuss, debate, and build on each other's views — revealing shared social meanings and group norms that individual interviews cannot capture.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "'Rapport' in qualitative interviewing refers to:",
+      "options": [
+        "The researcher's academic credentials that establish credibility",
+        "A trusting relationship between interviewer and participant that encourages open, honest sharing",
+        "The formal consent procedure completed before the interview",
+        "The audio recording used to accurately transcribe the interview"
+      ],
+      "answer": "B",
+      "explanation": "Rapport is the warm, trusting relationship between interviewer and participant — essential for getting honest, in-depth responses, especially on sensitive topics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "In interview research, 'probing' questions are used to:",
+      "options": [
+        "Introduce new topics not previously discussed",
+        "Challenge the participant's credibility or test their knowledge",
+        "Follow up an initial response to get more depth, detail, or clarification",
+        "Conclude the interview and signal the conversation is ending"
+      ],
+      "answer": "C",
+      "explanation": "Probes (e.g., 'Can you tell me more about that?' or 'What do you mean by X?') encourage participants to elaborate, provide examples, or clarify ambiguous statements.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Power dynamics in qualitative interviews are a concern because:",
+      "options": [
+        "Participants may be more educated than the researcher",
+        "Researchers hold authority that can make participants feel unable to refuse participation or share sensitive information freely",
+        "Interview participants are always from marginalized communities",
+        "Power dynamics only matter in focus groups, not individual interviews"
+      ],
+      "answer": "B",
+      "explanation": "Researcher power (as authority figure, expert, or outsider) can silence participants or pressure them to give 'acceptable' answers — researchers must be aware of and actively work to mitigate this.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "In 'participant observation,' the researcher:",
+      "options": [
+        "Observes participants through a one-way mirror without their knowledge",
+        "Fully embeds within the social group being studied, participating in activities while also observing",
+        "Analyzes videos of social interactions without being present",
+        "Surveys participants about their observations of others"
+      ],
+      "answer": "B",
+      "explanation": "Participant observation involves the researcher joining the group or setting being studied — participating in activities to gain insider understanding while also systematically observing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "'Going native' in ethnographic research refers to the risk that:",
+      "options": [
+        "The researcher adopts the local language of the community studied",
+        "The researcher becomes so immersed in the group that they lose their analytical perspective and objectivity",
+        "Participants refuse to interact with an outsider researcher",
+        "The researcher's presence changes participants' behavior"
+      ],
+      "answer": "B",
+      "explanation": "Going native is a key danger in participant observation: the researcher becomes so integrated into the community that they can no longer maintain critical analytical distance, seeing the group only from within.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Field notes in ethnographic research serve the purpose of:",
+      "options": [
+        "Recording statistical data about participant demographics",
+        "Systematically documenting observations, conversations, reflections, and context in the field setting for later analysis",
+        "Summarizing findings at the end of the study",
+        "Providing evidence that the researcher visited the field site"
+      ],
+      "answer": "B",
+      "explanation": "Field notes are the primary data of participant observation — detailed written records of what the researcher observed, heard, and experienced, plus reflexive notes about the researcher's own responses and interpretations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Covert observation — observing without participants' knowledge — raises ethical concerns primarily because:",
+      "options": [
+        "Covert observers cannot collect reliable data",
+        "It violates informed consent, denying participants the right to know they are being studied and to refuse participation",
+        "Covert observers are more likely to misinterpret behavior",
+        "Covert observation is always illegal under research ethics law"
+      ],
+      "answer": "B",
+      "explanation": "Covert observation bypasses informed consent — a foundational ethical principle — making it ethically problematic even if it might provide more naturalistic data.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "The 'observer effect' (Hawthorne effect) in observational research refers to:",
+      "options": [
+        "The researcher's personal biases distorting what they record",
+        "Participants changing their behavior because they know they are being observed",
+        "The physical environment affecting participant behavior",
+        "Data becoming outdated as time passes during observation"
+      ],
+      "answer": "B",
+      "explanation": "The Hawthorne effect describes how participants modify their behavior in response to being observed — a threat to the naturalness of observational data that researchers address through prolonged engagement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "The mean, median, and mode are all measures of:",
+      "options": [
+        "The spread or variability of a dataset",
+        "Central tendency — the typical or representative value in a dataset",
+        "Statistical significance between two groups",
+        "The reliability of a measurement instrument"
+      ],
+      "answer": "B",
+      "explanation": "Mean, median, and mode are the three measures of central tendency — each describing a different sense of what is 'typical' or 'central' in a distribution of values.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "When a dataset has extreme outliers (very high or very low values), which measure of central tendency is most resistant to distortion?",
+      "options": [
+        "Mean",
+        "Mode",
+        "Median",
+        "Standard deviation"
+      ],
+      "answer": "C",
+      "explanation": "The median — the middle value — is resistant to outliers because it depends only on ranking, not magnitude. The mean, by contrast, is pulled up or down by extreme values.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Standard deviation in a dataset tells us:",
+      "options": [
+        "The difference between the highest and lowest values",
+        "The average distance of each data point from the mean — how spread out the values are",
+        "The most frequently occurring value in the dataset",
+        "Whether two variables are statistically correlated"
+      ],
+      "answer": "B",
+      "explanation": "Standard deviation measures variability around the mean: a small SD means values cluster tightly around the mean; a large SD means values are widely spread.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "In inferential statistics, a 'statistically significant' result (p < .05) means:",
+      "options": [
+        "The finding is practically important and large in magnitude",
+        "There is less than a 5% probability that the observed result occurred by chance if the null hypothesis is true",
+        "The study used a very large sample size",
+        "The result has been replicated in at least five other studies"
+      ],
+      "answer": "B",
+      "explanation": "p < .05 means the probability of observing the results by chance alone (if the null hypothesis is true) is less than 5% — a conventional threshold for statistical significance, though not a guarantee of practical importance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "A correlation coefficient of r = +0.85 between two variables indicates:",
+      "options": [
+        "A weak negative relationship",
+        "Almost no relationship between the variables",
+        "A strong positive relationship — as one variable increases, the other tends to increase as well",
+        "A perfect causal relationship between the variables"
+      ],
+      "answer": "C",
+      "explanation": "Correlation coefficients range from -1 to +1; r = +0.85 indicates a strong positive association — though correlation does not prove causation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "In qualitative data analysis, 'coding' refers to:",
+      "options": [
+        "Converting interview responses into numerical scores",
+        "Systematically labeling segments of text with tags (codes) that represent their meaning or content",
+        "Encrypting participant data to protect confidentiality",
+        "Writing computer programs to process survey data"
+      ],
+      "answer": "B",
+      "explanation": "Coding is the process of attaching labels (codes) to segments of qualitative data (interview transcripts, field notes) that capture the key idea, theme, or concept represented in that passage.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Thematic analysis in qualitative research involves:",
+      "options": [
+        "Counting how many times key words appear in a text",
+        "Identifying and interpreting recurring patterns of meaning (themes) across a dataset",
+        "Analyzing the grammatical structure of participants' language",
+        "Comparing statistical distributions across different participant groups"
+      ],
+      "answer": "B",
+      "explanation": "Thematic analysis systematically identifies, analyzes, and reports patterns (themes) within qualitative data — moving from initial codes to broader themes that capture shared meaning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "'Member checking' as a trustworthiness strategy in qualitative research involves:",
+      "options": [
+        "Verifying that participants were eligible members of the target population",
+        "Sharing preliminary findings with participants to check whether the analysis accurately reflects their experiences",
+        "Cross-checking the researcher's notes against audio recordings for accuracy",
+        "Having all team members independently code the same data"
+      ],
+      "answer": "B",
+      "explanation": "Member checking (respondent validation) involves returning to participants with the researcher's interpretations and asking whether they recognize and validate the analysis as reflecting their experiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Triangulation in qualitative research improves trustworthiness by:",
+      "options": [
+        "Using exactly three participants in every study",
+        "Cross-checking findings using multiple data sources, methods, or researchers to identify convergence or divergence",
+        "Applying three rounds of coding to the same data",
+        "Comparing results from three different time periods"
+      ],
+      "answer": "B",
+      "explanation": "Triangulation uses multiple sources of data (interviews + documents + observation), methods (qualitative + quantitative), or researchers to check whether different approaches produce consistent findings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Researcher 'reflexivity' in qualitative research requires the researcher to:",
+      "options": [
+        "Remain completely objective and emotionally detached from participants",
+        "Actively reflect on and disclose how their own identity, values, and assumptions may influence data collection and interpretation",
+        "Only study topics where they have no personal experience or prior knowledge",
+        "Use only publicly available secondary data to avoid bias"
+      ],
+      "answer": "B",
+      "explanation": "Reflexivity is the ongoing process of examining and acknowledging how the researcher's background, identity, and assumptions shape the research process and interpretations — a key trustworthiness strategy in qualitative work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "The standard structure of an academic social science research report includes:",
+      "options": [
+        "Executive summary, recommendations, appendices, bibliography",
+        "Introduction, literature review, methods, results, discussion, and conclusion",
+        "Hypothesis, experiment, results, and patent application",
+        "Abstract, news release, policy brief, and press conference notes"
+      ],
+      "answer": "B",
+      "explanation": "The IMRAD+ structure (Introduction, Methods, Results, Discussion, Conclusion) is the standard for social science empirical research papers, situating findings within existing literature and theory.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "The 'discussion' section of a research report primarily serves to:",
+      "options": [
+        "Describe the data collection procedures used",
+        "Present raw data and statistical outputs",
+        "Interpret the results, connect findings to existing theory and literature, and explain implications",
+        "List the references cited in the paper"
+      ],
+      "answer": "C",
+      "explanation": "The discussion interprets what the results mean — explaining unexpected findings, connecting to prior research, acknowledging limitations, and suggesting implications for practice and future research.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Writing a 'plain language summary' of a research finding for a general audience requires:",
+      "options": [
+        "Removing all statistical detail and replacing it with editorial opinion",
+        "Translating technical findings into accessible language without misrepresenting the research",
+        "Shortening the original paper by deleting every other section",
+        "Publicizing only the most exciting finding while omitting limitations"
+      ],
+      "answer": "B",
+      "explanation": "Plain language summaries make research accessible to non-specialists by translating jargon and complex methods into clear, accurate language — without oversimplifying or distorting the findings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Open-access research publishing benefits society primarily by:",
+      "options": [
+        "Ensuring only credentialed academics can access research findings",
+        "Making research findings freely available to anyone regardless of institutional affiliation or ability to pay",
+        "Reducing the cost of peer review for journal publishers",
+        "Preventing unauthorized replication of studies"
+      ],
+      "answer": "B",
+      "explanation": "Open-access publishing removes paywalls, enabling researchers in developing countries, practitioners, policymakers, and the general public to access research findings without institutional subscriptions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Reporting research limitations in a study is important because:",
+      "options": [
+        "It shows the researcher lacked adequate resources",
+        "It demonstrates scholarly integrity, helps readers properly interpret findings, and guides future researchers toward improvements",
+        "It provides grounds for rejecting the study's conclusions",
+        "It is required only for quantitative but not qualitative studies"
+      ],
+      "answer": "B",
+      "explanation": "Acknowledging limitations (sample size, self-report bias, specific context) is a mark of scholarly honesty — it contextualizes findings, prevents over-generalization, and identifies directions for future research.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes 'social science research' as distinct from everyday knowledge?",
+      "options": [
+        "Social science is always conducted in a laboratory",
+        "Social science uses systematic, empirical, and transparent methods that can be independently evaluated and replicated",
+        "Social science always produces definitive, final answers",
+        "Social science only studies individual behavior, not groups"
+      ],
+      "answer": "B",
+      "explanation": "Social science research is distinguished by its systematic methodology: defined procedures, empirical evidence, transparent reporting, and openness to criticism and replication.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "A positivist research paradigm assumes that social phenomena:",
+      "options": [
+        "Can only be understood from the insider perspective of participants",
+        "Should be studied primarily to promote social justice and equity",
+        "Can be studied objectively through empirical methods, producing generalizable laws",
+        "Are entirely shaped by language and cultural interpretation"
+      ],
+      "answer": "C",
+      "explanation": "Positivism holds that an objective social reality exists and can be measured using scientific methods — privileging quantitative data, hypothesis testing, and statistical generalization.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "The Tuskegee Syphilis Study violated which core principle of the Belmont Report?",
+      "options": [
+        "Beneficence only",
+        "Justice only",
+        "Respect for persons (informed consent) and beneficence (withholding effective treatment) and justice (targeting a vulnerable racial group)",
+        "None — the study followed all ethical standards of its time"
+      ],
+      "answer": "C",
+      "explanation": "Tuskegee violated all three Belmont principles: men were not informed they had syphilis (respect for persons), they were denied treatment (non-maleficence/beneficence), and the study exploited Black men in Alabama (justice).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "A research hypothesis must be:",
+      "options": [
+        "True before data collection begins",
+        "Supported by previous research before it can be tested",
+        "Testable and falsifiable with empirical evidence",
+        "Stated in non-technical language for general audiences"
+      ],
+      "answer": "C",
+      "explanation": "A valid scientific hypothesis must be testable — it must make a specific prediction that can be evaluated with observable evidence and could in principle be shown to be wrong.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "The purpose of a literature review in social science research is primarily to:",
+      "options": [
+        "Show that the researcher has read as many books as possible",
+        "Establish that no prior research exists on the topic",
+        "Synthesize existing knowledge, identify gaps, and position the new study within the scholarly conversation",
+        "Summarize the researcher's personal experience with the topic"
+      ],
+      "answer": "C",
+      "explanation": "A literature review maps what is known about a topic, identifies debates and gaps, and explains how the new study contributes to — or departs from — the existing body of knowledge.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Internal validity in a research study refers to:",
+      "options": [
+        "Whether findings can be generalized to other populations",
+        "Whether the study measures what it claims to measure, free from alternative explanations",
+        "Whether study participants honestly answered questions",
+        "Whether the study received IRB approval"
+      ],
+      "answer": "B",
+      "explanation": "Internal validity concerns whether observed relationships can be confidently attributed to the variable of interest rather than to confounders or methodological artifacts.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Simple random sampling is the preferred probability sampling method because:",
+      "options": [
+        "It is the cheapest and easiest method to implement",
+        "Every population member has an equal probability of selection, minimizing systematic bias",
+        "It allows researchers to deliberately include hard-to-reach groups",
+        "It requires no prior knowledge of the population's characteristics"
+      ],
+      "answer": "B",
+      "explanation": "Simple random sampling gives every population member an equal selection chance — the basis of probability-based inference and unbiased generalization from sample to population.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Random assignment in an experiment serves which key purpose?",
+      "options": [
+        "Ensuring all participants complete the study without dropping out",
+        "Distributing known and unknown confounding variables equally across groups, enabling causal inference",
+        "Guaranteeing that the sample is representative of the population",
+        "Ensuring the sample size is large enough to detect effects"
+      ],
+      "answer": "B",
+      "explanation": "Random assignment (not random sampling) distributes both measured and unmeasured confounders across treatment and control groups — making the groups equivalent at baseline so differences in outcomes can be causally attributed to the treatment.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Qualitative research is most appropriate when the research goal is to:",
+      "options": [
+        "Test a specific hypothesis with measurable variables",
+        "Estimate the percentage of people who hold a particular opinion",
+        "Understand the subjective meanings and experiences of participants in depth",
+        "Establish a causal relationship between two variables"
+      ],
+      "answer": "C",
+      "explanation": "Qualitative research excels at exploratory, in-depth understanding of complex social phenomena, meanings, and processes — where statistical measurement and generalization are less important than contextual richness.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "A semi-structured interview differs from a structured interview in that:",
+      "options": [
+        "Semi-structured interviews have no questions prepared in advance",
+        "Semi-structured interviews follow a prepared guide but allow flexibility to probe and follow unexpected themes",
+        "Structured interviews allow the interviewer to improvise freely",
+        "Semi-structured interviews are always conducted online"
+      ],
+      "answer": "B",
+      "explanation": "Semi-structured interviews combine the consistency of a prepared question guide with the flexibility to probe, adapt, and follow emerging directions — suitable for in-depth qualitative inquiry.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Participant observation in ethnographic research involves:",
+      "options": [
+        "Giving participants structured questionnaires to complete",
+        "The researcher embedding within the group being studied, participating in activities while observing",
+        "Analyzing publicly available social media posts of the target group",
+        "Conducting controlled experiments within the field setting"
+      ],
+      "answer": "B",
+      "explanation": "Participant observation is the defining method of ethnography: the researcher joins the community, participates in daily life, and builds an insider understanding while maintaining analytical awareness.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Which measure of central tendency is most appropriate when a dataset has extreme outliers?",
+      "options": [
+        "Mean",
+        "Mode",
+        "Median",
+        "Standard deviation"
+      ],
+      "answer": "C",
+      "explanation": "The median is resistant to extreme values because it depends on rank order rather than magnitude — outliers do not pull the median the way they distort the mean.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "The 'dependent variable' in a research study is:",
+      "options": [
+        "The variable the researcher controls or manipulates",
+        "The outcome the researcher measures — what is presumed to be caused or influenced by the independent variable",
+        "A control variable held constant throughout the study",
+        "The demographic characteristics of study participants"
+      ],
+      "answer": "B",
+      "explanation": "The dependent variable (DV) is the outcome being studied — it 'depends on' the independent variable and is measured to see if the presumed cause had an effect.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "A 'double-barreled' survey question is problematic because it:",
+      "options": [
+        "Asks about two topics in separate questions on the same survey",
+        "Combines two distinct issues in one question, making the response uninterpretable",
+        "Is repeated twice in the questionnaire as a reliability check",
+        "Uses academic jargon that respondents may not understand"
+      ],
+      "answer": "B",
+      "explanation": "When a question asks about two things at once (e.g., 'Do you support lower taxes and less government regulation?'), a respondent may agree with one part and disagree with the other — making any single answer meaningless.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Inductive reasoning in social science research moves from:",
+      "options": [
+        "General theory to specific hypothesis to data collection",
+        "Specific observations toward broader patterns and theoretical explanations",
+        "Statistical models to mathematical predictions about behavior",
+        "Policy recommendations to research questions to data"
+      ],
+      "answer": "B",
+      "explanation": "Inductive research begins with data and observations, then builds upward toward patterns and theoretical explanations — contrasted with deductive research that starts with theory and tests specific hypotheses.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which philosophical paradigm holds that social reality is socially constructed through human interaction and interpretation?",
+      "options": [
+        "Positivism",
+        "Interpretivism / constructivism",
+        "Critical theory",
+        "Empiricism"
+      ],
+      "answer": "B",
+      "explanation": "Interpretivism (also called constructivism in some frameworks) holds that social reality is not a fixed external fact but is constructed through people's interactions, interpretations, and shared meanings.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "The Belmont Report's principle of 'justice' requires that:",
+      "options": [
+        "Research benefits should outweigh risks to participants",
+        "Researchers should be legally prosecuted for ethical violations",
+        "Research burdens and benefits should be distributed fairly, not imposed on vulnerable groups for the benefit of others",
+        "All participants should receive identical treatment during the study"
+      ],
+      "answer": "C",
+      "explanation": "Justice requires that neither the burdens of research nor the benefits be unfairly concentrated — historically vulnerable groups (prisoners, poor patients, minorities) should not bear risks for studies that primarily benefit others.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Operationalization in social science research refers to:",
+      "options": [
+        "The process of gaining ethical approval from an IRB",
+        "Defining precisely how abstract concepts will be measured in a specific study",
+        "Writing the methods section of a research report",
+        "Selecting the most appropriate statistical test for the data"
+      ],
+      "answer": "B",
+      "explanation": "Operationalization converts abstract constructs (intelligence, wellbeing, political engagement) into concrete, measurable indicators — a crucial step that links theory to empirical data.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "External validity in research is most directly threatened by:",
+      "options": [
+        "Confounding variables that influence the outcome",
+        "Using a convenience sample that differs systematically from the target population",
+        "Random measurement error in questionnaire responses",
+        "The placebo effect in experimental conditions"
+      ],
+      "answer": "B",
+      "explanation": "External validity — generalizability — is threatened when the sample is not representative of the intended population, meaning findings may not apply beyond the specific sample studied.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Snowball sampling is most useful for studying:",
+      "options": [
+        "Large, clearly bounded populations like all high school students in a state",
+        "Hard-to-reach or hidden populations where members can refer the researcher to other eligible participants",
+        "Populations for which a complete sampling frame exists",
+        "Situations requiring high statistical precision and small margin of error"
+      ],
+      "answer": "B",
+      "explanation": "Snowball sampling is the primary strategy for reaching hidden or marginalized populations — where no list exists — by using initial contacts to identify additional participants.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "A quasi-experimental study lacks which key element of a true experiment?",
+      "options": [
+        "Pre- and post-test measurement",
+        "A comparison group",
+        "Random assignment of participants to conditions",
+        "Statistical analysis of outcome data"
+      ],
+      "answer": "C",
+      "explanation": "The defining difference is random assignment: true experiments randomly assign participants to treatment/control; quasi-experiments use pre-existing groups or natural variation, leaving confounders uncontrolled.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Grounded theory as a qualitative approach is distinctive because it:",
+      "options": [
+        "Tests a theory developed before data collection begins",
+        "Builds new theoretical explanations inductively from systematic analysis of collected data",
+        "Relies exclusively on secondary data sources",
+        "Is only used for studying small organizations"
+      ],
+      "answer": "B",
+      "explanation": "Grounded theory builds theory from data through constant comparative analysis — the researcher lets theory 'emerge from' the data rather than imposing a pre-existing framework.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The Hawthorne effect (observer effect) poses a threat to observational research because:",
+      "options": [
+        "Researchers misinterpret behavior due to their own cultural biases",
+        "Participants change their behavior when they know they are being observed, making behavior less natural",
+        "Field observation is more time-consuming than surveys",
+        "Observers cannot be in two places simultaneously"
+      ],
+      "answer": "B",
+      "explanation": "The Hawthorne effect — documented in factory productivity studies — shows that awareness of being studied changes behavior, potentially invalidating naturalistic observations.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Standard deviation in a dataset measures:",
+      "options": [
+        "The difference between the highest and lowest values (range)",
+        "The most frequently occurring value",
+        "The average distance of each data point from the mean (variability/spread)",
+        "Whether two variables are statistically correlated"
+      ],
+      "answer": "C",
+      "explanation": "Standard deviation quantifies how spread out values are around the mean — a small SD indicates tight clustering, a large SD indicates high variability.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "In qualitative research, 'triangulation' improves trustworthiness by:",
+      "options": [
+        "Using exactly three participants to represent all perspectives",
+        "Cross-checking findings using multiple data sources, methods, or researchers to identify convergence",
+        "Applying three separate coding rounds to the same data",
+        "Comparing results across three time periods"
+      ],
+      "answer": "B",
+      "explanation": "Triangulation uses multiple sources (documents, interviews, observation) or methods (qualitative + quantitative) to check whether different approaches converge on the same findings — strengthening confidence in the analysis.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Statistical significance (p < .05) tells us that:",
+      "options": [
+        "The effect size is large and practically meaningful",
+        "There is less than a 5% chance the result would occur if there were actually no real effect",
+        "The study was conducted with a very large sample",
+        "The finding has been replicated in multiple studies"
+      ],
+      "answer": "B",
+      "explanation": "p < .05 means we have less than a 5% probability of observing this result (or more extreme) by chance alone under the null hypothesis — but says nothing about practical significance or effect size.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "'Member checking' as a qualitative trustworthiness strategy involves:",
+      "options": [
+        "Verifying all participants are eligible members of the study population",
+        "Sharing preliminary findings with participants to check whether the analysis accurately reflects their experiences",
+        "Having all research team members independently code the data and compare results",
+        "Cross-referencing interview data with publicly available documentary evidence"
+      ],
+      "answer": "B",
+      "explanation": "Member checking returns interpretations to participants for verification — allowing them to confirm, correct, or expand on the researcher's analysis, improving accuracy and respondent validation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "The discussion section of a research report primarily serves to:",
+      "options": [
+        "Describe the data collection and measurement procedures in detail",
+        "Present raw numerical output from statistical tests",
+        "Interpret results in relation to existing theory and literature, explain implications, and acknowledge limitations",
+        "List the full citations of all sources used in the study"
+      ],
+      "answer": "C",
+      "explanation": "The discussion section moves beyond reporting what was found to explaining what the findings mean — connecting results to theory, explaining unexpected outcomes, and identifying implications and limitations.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Researcher 'reflexivity' in qualitative research requires the researcher to:",
+      "options": [
+        "Remain completely objective by suppressing personal knowledge",
+        "Actively reflect on and disclose how their identity, assumptions, and positionality may influence data collection and interpretation",
+        "Only study phenomena they have no personal connection to",
+        "Use structured instruments to eliminate subjective judgment"
+      ],
+      "answer": "B",
+      "explanation": "Reflexivity acknowledges that researchers bring their own social position, values, and assumptions into the research — and requires ongoing critical examination of how these shape what is seen, asked, and interpreted.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Reporting research limitations is important in a scientific report primarily because:",
+      "options": [
+        "It shows the researcher had inadequate funding",
+        "It demonstrates scholarly integrity, contextualizes findings to prevent over-generalization, and guides future researchers",
+        "It is only required for studies that found non-significant results",
+        "It is required by law in most countries for published research"
+      ],
+      "answer": "B",
+      "explanation": "Reporting limitations honestly is a mark of good science — it helps readers correctly interpret findings, avoids misleading applications, and identifies specific directions for future research improvements.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Open-access publishing in research primarily benefits:",
+      "options": [
+        "Commercial publishers who charge for article access",
+        "Researchers and the public by making findings freely available regardless of institutional affiliation",
+        "Only researchers in wealthy universities with large library budgets",
+        "Government agencies that fund classified research"
+      ],
+      "answer": "B",
+      "explanation": "Open-access removes subscription paywalls, enabling researchers in developing countries, practitioners, students, and citizens to read and use research findings without institutional access.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "The 'replication crisis' in social science revealed that:",
+      "options": [
+        "Most social science findings have been successfully replicated",
+        "Many highly cited findings could not be reproduced when studies were repeated by independent researchers",
+        "Social science studies cannot be replicated by definition",
+        "The replication crisis only affected medical research, not social science"
+      ],
+      "answer": "B",
+      "explanation": "Large-scale replication projects (especially in psychology) found that a substantial fraction of published findings did not replicate — raising serious questions about methodology, publication bias, and statistical practices.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Social desirability bias in survey research occurs when:",
+      "options": [
+        "Respondents randomly skip questions they find difficult",
+        "Respondents answer in the way they believe is socially acceptable rather than reflecting their true attitudes or behaviors",
+        "Researchers design surveys around topics they personally prefer",
+        "Survey questions are arranged in a socially logical order"
+      ],
+      "answer": "B",
+      "explanation": "Social desirability bias leads respondents to underreport stigmatized behaviors (drug use, prejudice) and overreport virtuous ones (voting, charitable giving) — distorting data on sensitive topics.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "A longitudinal study design is most valuable for studying:",
+      "options": [
+        "The prevalence of a phenomenon at a single point in time",
+        "How variables and outcomes change across time within the same participants",
+        "The relationship between variables in a large cross-national sample",
+        "Differences between independent groups that differ in a key characteristic"
+      ],
+      "answer": "B",
+      "explanation": "Longitudinal designs follow the same participants over time, enabling researchers to track change, establish temporal sequences, and make stronger causal inferences than cross-sectional snapshots allow.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "The primary ethical requirement before beginning any data collection in research involving human participants is:",
+      "options": [
+        "Securing funding from a recognized grant agency",
+        "Publishing a pre-registration of hypotheses on an open science platform",
+        "Obtaining informed consent from participants (or IRB approval for waiver of consent)",
+        "Having the research design approved by a statistical consultant"
+      ],
+      "answer": "C",
+      "explanation": "Informed consent — ensuring participants voluntarily agree after being fully informed of the study's nature, risks, and their rights — is the foundational ethical requirement of human subjects research.",
+      "points": 1
+    }
+  ]
+}

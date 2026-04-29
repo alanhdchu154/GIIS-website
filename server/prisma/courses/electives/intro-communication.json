@@ -1,0 +1,1220 @@
+{
+  "slug": "intro-communication",
+  "name": "Introduction to Communication",
+  "nameZh": "传播学导论",
+  "credits": 0.5,
+  "department": "English",
+  "type": "Core",
+  "description": "A foundational course introducing students to the nature, functions, and contexts of human communication from self-concept to public speaking and digital media.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "What is Communication",
+      "titleZh": "什么是传播",
+      "objectives": "Define communication and explain its core components; identify the levels of communication and why studying communication matters.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/1-1-why-study-communication/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 1.1: Why Study Communication",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/communication-basics",
+      "videoNote": "Khan Academy — Communication Basics Overview",
+      "video2Url": "https://www.youtube.com/watch?v=mD_8QHfKxH4",
+      "video2Note": "YouTube — Introduction to Communication Studies",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/1-2-the-communication-process/",
+      "practiceNote": "Label the components of the communication process using a real-life example",
+      "assignment": "In a 250-word response, describe a communication experience from the past week that did not go as expected. Identify which element of the communication process (sender, receiver, channel, message, feedback, or noise) you believe caused the breakdown and explain what you would do differently.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 2,
+      "title": "Types & Functions of Communication",
+      "titleZh": "传播的类型与功能",
+      "objectives": "Distinguish among intrapersonal, interpersonal, small group, public, and mass communication; describe the social, instrumental, and identity functions of communication.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/1-3-communication-competence/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 1.3: Communication Competence",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/types-of-communication",
+      "videoNote": "Khan Academy — Types of Communication",
+      "video2Url": "https://www.youtube.com/watch?v=5edCZbVGEeM",
+      "video2Note": "YouTube — Types of Communication and Their Functions",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/1-4-communication-ethics/",
+      "practiceNote": "Identify which type and function of communication best fits each given scenario",
+      "assignment": "Create a chart listing five different communication interactions you had today. For each interaction, identify the type of communication (intrapersonal, interpersonal, group, public, or mass), the primary function it served (informational, relational, or identity), and the channel used. Write a 200-word reflection summarizing patterns you noticed.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 3,
+      "title": "Self-Concept & Communication",
+      "titleZh": "自我概念与传播",
+      "objectives": "Explain how self-concept and self-esteem develop and influence communication behavior; apply the looking-glass self concept.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/2-1-self-concept/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 2.1: Self-Concept",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/self-concept",
+      "videoNote": "Khan Academy — Self-Concept and Self-Esteem",
+      "video2Url": "https://www.youtube.com/watch?v=9sPmI5VBZWY",
+      "video2Note": "YouTube — How Self-Concept Affects Communication",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/2-2-self-perception/",
+      "practiceNote": "Complete a self-concept inventory: list 10 words that describe how you see yourself",
+      "assignment": "Write a 350-word personal essay describing how your self-concept has been shaped by feedback from others (family, teachers, peers). Apply the looking-glass self concept by describing at least two instances where someone else's perception of you changed how you saw or presented yourself.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Verbal Messages",
+      "titleZh": "言语信息",
+      "objectives": "Analyze how word choice, language style, and denotative versus connotative meaning affect communication outcomes.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/3-1-language-and-meaning/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 3.1: Language and Meaning",
+      "videoUrl": "https://www.khanacademy.org/humanities/grammar/syntax-sentences-and-clauses/introduction-to-sentences/v/language-and-communication",
+      "videoNote": "Khan Academy — Language and Communication",
+      "video2Url": "https://www.youtube.com/watch?v=wDchsz4ZVHM",
+      "video2Note": "YouTube — Power of Words: How Language Shapes Communication",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/3-3-using-language-well/",
+      "practiceNote": "Rewrite five ambiguous sentences to increase clarity and reduce potential for misunderstanding",
+      "assignment": "Select a political speech, advertisement, or public announcement and analyze it in 350 words: identify examples of connotative language, euphemisms, and either inclusive or exclusive language. Explain how each specific word choice likely shapes the audience's perception of the message.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Nonverbal Messages",
+      "titleZh": "非言语信息",
+      "objectives": "Identify and categorize types of nonverbal communication; explain how nonverbal cues complement, contradict, and regulate verbal communication.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/4-1-principles-and-functions-of-nonverbal-communication/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 4.1: Principles and Functions of Nonverbal Communication",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/nonverbal-communication",
+      "videoNote": "Khan Academy — Nonverbal Communication Overview",
+      "video2Url": "https://www.youtube.com/watch?v=Ks-_Mh1QhMc",
+      "video2Note": "YouTube — Your Body Language May Shape Who You Are (TED Talk)",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/4-2-types-of-nonverbal-communication/",
+      "practiceNote": "Categorize 10 nonverbal behaviors observed in a photo or video as kinesics, proxemics, haptics, chronemics, or paralanguage",
+      "assignment": "Conduct a 10-minute nonverbal communication experiment: greet five different people without any verbal language (only facial expression, gesture, eye contact). Write a 300-word observation report describing the reactions you received and what you learned about the power of nonverbal messages.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Listening Skills",
+      "titleZh": "倾听技能",
+      "objectives": "Differentiate types of listening; apply active listening strategies to improve comprehension and relational quality in conversations.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/5-1-understanding-how-and-why-we-listen/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 5.1: Understanding How and Why We Listen",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/active-listening",
+      "videoNote": "Khan Academy — Active Listening Skills",
+      "video2Url": "https://www.youtube.com/watch?v=saXfavo1OQo",
+      "video2Note": "YouTube — 5 Ways to Listen Better (TED Talk)",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/5-3-improving-listening-competence/",
+      "practiceNote": "Practice active listening using the HURIER model in a 5-minute partner conversation",
+      "assignment": "For one day, deliberately focus on being a better listener in every conversation. Keep a listening log with at least four entries noting: who you listened to, what listening barriers you encountered (rehearsal, filtering, etc.), and one active listening technique you used. Write a 300-word reflection at the end of the day.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Interpersonal Relationships",
+      "titleZh": "人际关系",
+      "objectives": "Describe stages of relationship development and dissolution; explain how trust, commitment, and communication patterns shape interpersonal relationships.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/6-1-principles-of-interpersonal-communication/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 6.1: Principles of Interpersonal Communication",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/interpersonal-communication",
+      "videoNote": "Khan Academy — Interpersonal Relationships and Communication",
+      "video2Url": "https://www.youtube.com/watch?v=HAnw168huqA",
+      "video2Note": "YouTube — What Makes a Good Conversation (TED)",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/6-3-self-disclosure-and-interpersonal-communication/",
+      "practiceNote": "Map a personal relationship using Knapp's Staircase Model of relationship development",
+      "assignment": "Select a significant relationship in your life (friendship, family, or mentorship). Using Knapp's Relationship Model, identify which stage (initiating, experimenting, intensifying, integrating, or bonding) this relationship currently occupies and trace two or three key communication events that moved the relationship through earlier stages. Write 350 words.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 8,
+      "title": "Conflict in Communication",
+      "titleZh": "传播中的冲突",
+      "objectives": "Identify sources and styles of interpersonal conflict; apply constructive communication strategies to manage and resolve conflict.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/6-4-conflict-and-interpersonal-communication/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 6.4: Conflict and Interpersonal Communication",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/conflict-resolution",
+      "videoNote": "Khan Academy — Conflict Resolution Basics",
+      "video2Url": "https://www.youtube.com/watch?v=7Ri0B5nnSyM",
+      "video2Note": "YouTube — Thomas-Kilmann Conflict Styles Explained",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/6-5-getting-to-yes-principled-negotiation/",
+      "practiceNote": "Identify your dominant conflict style using the Thomas-Kilmann self-assessment",
+      "assignment": "Describe a real conflict you experienced or witnessed recently. In 400 words, analyze: (1) the source of the conflict (goal, value, or resource), (2) which conflict style each party used, (3) what the outcome was, and (4) how assertive and cooperative communication could have produced a better result.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 9,
+      "title": "Small Group Basics",
+      "titleZh": "小群体传播基础",
+      "objectives": "Identify characteristics of effective small groups; describe member roles and the stages of group development using Tuckman's model.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/13-1-understanding-small-groups/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 13.1: Understanding Small Groups",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/group-communication",
+      "videoNote": "Khan Academy — Group Communication",
+      "video2Url": "https://www.youtube.com/watch?v=V73an7pGOuI",
+      "video2Note": "YouTube — Tuckman's Stages of Group Development",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/13-2-group-development-and-decision-making/",
+      "practiceNote": "Classify a list of behaviors as task roles, maintenance roles, or self-serving roles",
+      "assignment": "Think about a team project or group you have participated in (school, sport, club, family). Write a 350-word analysis: describe the group's task and membership, identify which Tuckman stage the group spent the most time in and why, and evaluate one specific communication behavior that helped or hurt the group's effectiveness.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 10,
+      "title": "Public Speaking Introduction",
+      "titleZh": "公众演讲导论",
+      "objectives": "Identify the elements of effective public speaking; apply audience analysis, organizational structure, and delivery techniques to a brief presentation.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/9-1-public-speaking-and-communication/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 9.1: Public Speaking and Communication",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/public-speaking-basics",
+      "videoNote": "Khan Academy — Public Speaking Basics",
+      "video2Url": "https://www.youtube.com/watch?v=AykYRO5d_lI",
+      "video2Note": "YouTube — How to Speak so That People Want to Listen (TED)",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/9-2-audience-analysis/",
+      "practiceNote": "Create a brief audience analysis for a topic you would like to speak about",
+      "assignment": "Prepare and deliver (or record) a 2-minute informative speech on a topic of your choice. Afterward, write a 300-word self-evaluation: assess your use of organization (introduction-body-conclusion), delivery (eye contact, vocal variety, pace), and audience adaptation. Identify one specific strength and one area to improve.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 11,
+      "title": "Mass Media Overview",
+      "titleZh": "大众媒体概述",
+      "objectives": "Define mass communication and identify the major forms of mass media; explain basic theories including agenda-setting and uses and gratifications.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/15-1-the-evolution-of-media/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 15.1: The Evolution of Media",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/mass-media-overview",
+      "videoNote": "Khan Academy — Mass Media Overview",
+      "video2Url": "https://www.youtube.com/watch?v=P88t9Ox8vMU",
+      "video2Note": "YouTube — Agenda-Setting Theory Explained",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/15-3-mass-communication-theory/",
+      "practiceNote": "Apply uses and gratifications theory to analyze your own media consumption patterns",
+      "assignment": "Keep a media diary for 48 hours: log every media encounter (TV, YouTube, Instagram, news, podcasts, etc.) with the time, duration, and your purpose for consuming it. Write a 300-word analysis applying uses and gratifications theory to explain three of your media choices.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 12,
+      "title": "Social Media & Digital Communication",
+      "titleZh": "社交媒体与数字传播",
+      "objectives": "Evaluate how social media platforms transform communication norms, identity expression, and relationship maintenance.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/15-4-social-media-and-digital-communication/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 15.4: Social Media and Digital Communication",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:the-web/v/the-world-wide-web",
+      "videoNote": "Khan Academy — The World Wide Web and Online Communication",
+      "video2Url": "https://www.youtube.com/watch?v=1-SvuFIQjK8",
+      "video2Note": "YouTube — How Social Media is Changing the Way We Communicate",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/15-5-media-and-culture/",
+      "practiceNote": "Analyze a social media profile (with permission) for self-presentation strategies",
+      "assignment": "Compare how you present yourself on one social media platform versus how you present yourself in person. Write a 350-word essay analyzing: (1) which aspects of your identity you emphasize or downplay online, (2) how the platform's format or features shape what you share, and (3) whether your online and offline identities are consistent or divergent.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Cross-Cultural Communication",
+      "titleZh": "跨文化传播",
+      "objectives": "Identify cultural variables that affect communication; develop strategies for navigating cultural differences respectfully and effectively.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/8-1-foundations-of-culture-and-identity/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 8.1: Foundations of Culture and Identity",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/intercultural-communication",
+      "videoNote": "Khan Academy — Intercultural Communication",
+      "video2Url": "https://www.youtube.com/watch?v=YMyofREc5Jk",
+      "video2Note": "YouTube — Hofstede's Cultural Dimensions Theory",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/8-3-intercultural-communication-competence/",
+      "practiceNote": "Compare two cultures on at least three of Hofstede's cultural dimensions",
+      "assignment": "Interview a person from a cultural background different from your own (or research a documented cross-cultural communication case study). Write a 400-word report identifying at least three specific ways cultural differences affected communication and propose two practical strategies for more effective cross-cultural communication in that context.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 14,
+      "title": "Ethical Communication",
+      "titleZh": "伦理传播",
+      "objectives": "Apply the NCA Credo for Ethical Communication to analyze real-world situations; articulate personal responsibilities as a communicator.",
+      "readingUrl": "https://open.lib.umn.edu/communication/chapter/1-4-communication-ethics/",
+      "readingNote": "Communication in the Real World (UMN OER) — Ch 1.4: Communication Ethics",
+      "videoUrl": "https://www.khanacademy.org/test-prep/sat/x0a8c2e5f:sat-reading-and-writing/x0a8c2e5f:sat-reading-and-writing-about-passages/v/ethics-in-communication",
+      "videoNote": "Khan Academy — Ethics in Communication",
+      "video2Url": "https://www.youtube.com/watch?v=lTu4oaYQ0cs",
+      "video2Note": "YouTube — Digital Ethics and Responsible Online Communication",
+      "practiceUrl": "https://open.lib.umn.edu/communication/chapter/1-5-ethical-communication/",
+      "practiceNote": "Evaluate three communication scenarios for ethical compliance using the NCA Credo",
+      "assignment": "Write a 400-word personal Communication Ethics Statement. Drawing on the NCA Credo and course concepts, articulate at least four specific ethical principles that will guide your communication in interpersonal, digital, and public contexts. Give a concrete example of a past or hypothetical situation where each principle would apply.",
+      "estimatedHrs": 3.0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which of the following is NOT a component of the basic communication process?",
+      "options": ["Sender", "Profit motive", "Channel", "Receiver"],
+      "answer": "B",
+      "explanation": "The basic communication process consists of sender, message, encoding, channel, decoding, receiver, feedback, and noise. Profit motive is not a component.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Communication competence refers to:",
+      "options": ["The ability to memorize communication theories", "The ability to communicate effectively and appropriately in a given context", "Speaking multiple languages fluently", "Producing grammatically perfect sentences"],
+      "answer": "B",
+      "explanation": "Communication competence means knowing what communication behaviors are effective and appropriate for a given context and being able to perform them.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "The transactional model of communication differs from the linear model primarily because it:",
+      "options": ["Removes the concept of noise", "Treats communication as simultaneous and mutually influential", "Focuses exclusively on mass communication", "Requires written rather than verbal messages"],
+      "answer": "B",
+      "explanation": "The transactional model recognizes that communicators simultaneously send and receive messages and that each party influences the other, unlike the one-way linear model.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Why is context important in the communication process?",
+      "options": ["It determines the exact meaning of every word", "It shapes how messages are sent, interpreted, and understood", "It replaces the need for verbal messages", "It ensures messages are always received accurately"],
+      "answer": "B",
+      "explanation": "Context (physical, social, cultural, historical) shapes how communicators encode and decode messages, influencing meaning-making in every interaction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Studying communication is valuable because:",
+      "options": ["It guarantees you will never experience conflict", "It improves personal relationships, career success, and civic participation", "It teaches you to persuade anyone of anything", "It eliminates cultural misunderstandings entirely"],
+      "answer": "B",
+      "explanation": "Communication skills are consistently linked to better personal relationships, professional performance, and the ability to participate effectively in a democratic society.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Which level of communication involves only one person engaged in internal thought and self-talk?",
+      "options": ["Interpersonal communication", "Intrapersonal communication", "Small group communication", "Public communication"],
+      "answer": "B",
+      "explanation": "Intrapersonal communication occurs within an individual — the internal dialogue and self-reflection that takes place in one's own mind.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "The instrumental function of communication refers to using communication to:",
+      "options": ["Build and maintain relationships", "Achieve practical goals and get things done", "Define and express personal identity", "Entertain and amuse others"],
+      "answer": "B",
+      "explanation": "The instrumental function of communication involves using messages to accomplish tasks, make requests, or achieve practical objectives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Mass communication is distinguished from other forms primarily by:",
+      "options": ["Using only verbal language", "Reaching large, diverse audiences through technology", "Occurring only between two people", "Requiring face-to-face interaction"],
+      "answer": "B",
+      "explanation": "Mass communication transmits messages to large, heterogeneous audiences through media technologies such as television, radio, newspapers, and the internet.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Which communication function is served when someone gives a speech about recycling to change community behavior?",
+      "options": ["Relational function", "Identity function", "Persuasive/instrumental function", "Entertainment function"],
+      "answer": "C",
+      "explanation": "Attempting to change audience behavior serves the persuasive or instrumental function of communication — using messages to influence actions and achieve goals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Public communication differs from small group communication primarily in its:",
+      "options": ["Use of nonverbal cues", "Larger audience size and reduced interactivity", "Requirement for formal written language", "Focus on entertainment rather than information"],
+      "answer": "B",
+      "explanation": "Public communication involves one speaker addressing a larger audience with limited real-time interaction, contrasting with the smaller, more interactive small group context.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Self-concept is best described as:",
+      "options": ["How attractive others find you", "The overall mental image you hold of yourself", "Your performance on standardized tests", "The social roles assigned to you by others"],
+      "answer": "B",
+      "explanation": "Self-concept is the complex mental picture individuals hold of themselves, encompassing beliefs about their personality, abilities, values, and roles.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "According to Charles Cooley's 'looking-glass self,' we form our self-concept primarily through:",
+      "options": ["Comparing ourselves to idealized media figures", "Imagining how others see and evaluate us", "Our biological temperament and genetics", "Formal education and academic achievement"],
+      "answer": "B",
+      "explanation": "Cooley's looking-glass self theory proposes that people develop self-concept by imagining others' perceptions and judgments of them — society becomes a mirror.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Self-esteem refers to:",
+      "options": ["The number of roles you play in society", "An evaluative judgment about your own worth", "Your awareness of others' emotional states", "The accuracy of your self-perception"],
+      "answer": "B",
+      "explanation": "Self-esteem is the evaluative component of self-perception — how positively or negatively a person judges their own worth and competence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Impression management refers to the strategies people use to:",
+      "options": ["Accurately recall past events", "Control how others perceive and evaluate them", "Improve their academic performance", "Develop empathy for others"],
+      "answer": "B",
+      "explanation": "Impression management (Goffman's dramaturgical perspective) describes the ways people consciously and unconsciously control their self-presentation to shape others' perceptions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Which of the following is most likely to damage a person's self-concept?",
+      "options": ["Receiving specific, constructive criticism", "Consistent negative feedback from significant others over time", "Encountering mild disagreement in a debate", "Learning a new skill through trial and error"],
+      "answer": "B",
+      "explanation": "Repeated negative evaluations from people whose opinions matter (parents, peers, teachers) significantly shape — and can damage — a person's self-concept over time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Connotative meaning of a word refers to its:",
+      "options": ["Dictionary or literal definition", "Emotional and cultural associations", "Grammatical function in a sentence", "Technical usage within a specialized field"],
+      "answer": "B",
+      "explanation": "Connotative meaning encompasses the emotional, cultural, and personal associations a word carries beyond its objective dictionary (denotative) definition.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "The word 'home' has a different meaning than 'house' primarily because of a difference in:",
+      "options": ["Denotative meaning", "Connotative meaning", "Grammatical structure", "Abstract level"],
+      "answer": "B",
+      "explanation": "'Home' and 'house' share a similar denotative meaning (a dwelling) but 'home' carries warmer connotative associations of family, comfort, and belonging.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Jargon is best described as:",
+      "options": ["Profanity used in informal communication", "Specialized vocabulary understood within a particular group or profession", "Vague language used to conceal meaning", "Overly formal language used to impress others"],
+      "answer": "B",
+      "explanation": "Jargon is technical or specialized vocabulary used within a profession, field, or group that may be unclear to outsiders.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Using 'sanitation engineer' instead of 'garbage collector' is an example of:",
+      "options": ["Inclusive language", "Abstract language", "Euphemistic language", "Equivocal language"],
+      "answer": "C",
+      "explanation": "Euphemisms substitute mild or indirect expressions for words considered unpleasant or blunt, such as calling garbage collectors 'sanitation engineers.'",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Concrete language is more effective in communication because it:",
+      "options": ["Sounds more educated and professional", "Provides specific, unambiguous referents that reduce misunderstanding", "Eliminates the need for nonverbal cues", "Makes messages shorter and easier to deliver"],
+      "answer": "B",
+      "explanation": "Concrete language refers to specific, tangible people, places, things, or events, reducing the ambiguity that abstract language can create.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Which of the following is an example of haptics?",
+      "options": ["Speaking more slowly to emphasize a point", "Maintaining eye contact during a conversation", "A handshake when greeting someone", "Moving closer to a friend during a personal conversation"],
+      "answer": "C",
+      "explanation": "Haptics is the study of communication through touch; a handshake is a common form of haptic communication that conveys greeting, respect, or agreement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "When a nonverbal cue repeats the verbal message (e.g., saying 'Turn left' and pointing left), nonverbal behavior is functioning as a:",
+      "options": ["Contradiction", "Substitution", "Complement", "Repetition"],
+      "answer": "D",
+      "explanation": "Repetition occurs when nonverbal behavior repeats the same message as the verbal content (pointing left while saying 'turn left').",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Chronemics refers to the communicative use of:",
+      "options": ["Body movement and posture", "Physical space between communicators", "Time and timing in communication", "Touch and physical contact"],
+      "answer": "C",
+      "explanation": "Chronemics is the study of how time is used and perceived as a communicative resource — including punctuality, pace, and the amount of time devoted to interactions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Eye contact functions as a regulator in conversation by:",
+      "options": ["Expressing deep emotional attachment", "Signaling when it is someone's turn to speak or listen", "Replacing verbal greetings", "Communicating cultural identity"],
+      "answer": "B",
+      "explanation": "Regulators are nonverbal cues that manage the flow of conversation; eye contact signals turn-taking, attention, and the desire to speak or listen.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Nonverbal messages are often considered more believable than verbal messages because:",
+      "options": ["They are always intentional and consciously chosen", "They are harder to consciously control and thus seem more authentic", "They are universally understood across all cultures", "They carry more complex information than words can"],
+      "answer": "B",
+      "explanation": "Because nonverbal behaviors (microexpressions, posture changes, voice cracks) are often difficult to fully control, they tend to be perceived as more authentic and honest than carefully crafted words.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Empathic listening involves:",
+      "options": ["Evaluating the logic of the speaker's argument", "Understanding and sharing in the speaker's emotional experience", "Listening only for key facts and information", "Pretending to pay attention while thinking about something else"],
+      "answer": "B",
+      "explanation": "Empathic listening requires attempting to understand and emotionally connect with the speaker's perspective and feelings, not just processing informational content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Which of the following is a common listening barrier?",
+      "options": ["Maintaining eye contact with the speaker", "Mentally preparing your response while the speaker talks", "Paraphrasing what you heard to confirm understanding", "Asking clarifying questions after the speaker finishes"],
+      "answer": "B",
+      "explanation": "Rehearsing your response while the speaker is still talking diverts cognitive resources from listening, making it a significant listening barrier.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Open-ended questions in active listening are valuable because they:",
+      "options": ["Can be answered with a simple 'yes' or 'no'", "Invite the speaker to elaborate and share more fully", "Redirect the conversation to a new topic", "Demonstrate that you already know the answer"],
+      "answer": "B",
+      "explanation": "Open-ended questions (e.g., 'How did that make you feel?') invite expansive responses, encouraging the speaker to elaborate and feel genuinely heard.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Selective listening refers to:",
+      "options": ["Choosing which type of listening skill to apply in a given situation", "Paying attention only to information that confirms existing beliefs or interests", "Listening carefully to every word the speaker says", "Filtering out background noise to focus on the speaker"],
+      "answer": "B",
+      "explanation": "Selective listening occurs when listeners attend to only the parts of a message that interest them or confirm their views, missing important other content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Which of the following is NOT one of the steps in the HURIER listening model?",
+      "options": ["Hearing", "Understanding", "Redirecting", "Evaluating"],
+      "answer": "C",
+      "explanation": "The HURIER model includes Hearing, Understanding, Remembering, Interpreting, Evaluating, and Responding. Redirecting is not one of the steps.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "According to Knapp's Staircase Model, the first stage of relationship development is:",
+      "options": ["Intensifying", "Experimenting", "Initiating", "Integrating"],
+      "answer": "C",
+      "explanation": "Initiating is the first stage in Knapp's model, involving first impressions and initial contact (greeting, making oneself approachable and presentable).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Trust is foundational to interpersonal relationships because it:",
+      "options": ["Eliminates the possibility of conflict", "Makes deeper self-disclosure and vulnerability feel safe", "Guarantees the other person will always agree with you", "Is established instantly upon meeting someone"],
+      "answer": "B",
+      "explanation": "Trust creates a psychological safe space that enables partners to be vulnerable and engage in deeper self-disclosure, which is essential for relationship development.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "The 'differentiating' stage of Knapp's relationship model involves:",
+      "options": ["Two people meeting for the first time and making a positive impression", "Partners reasserting individual identities after having merged them", "Couples formally committing to a relationship through rituals", "Partners engaging in small talk to find common ground"],
+      "answer": "B",
+      "explanation": "The differentiating stage marks the beginning of relationship decline, as partners re-emphasize their individual differences and separate identities from the 'we' of the relationship.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Social exchange theory suggests that people maintain relationships when:",
+      "options": ["The relationship is the oldest in their social network", "The rewards of the relationship outweigh the costs", "Both partners share identical values and goals", "The relationship was formed in early childhood"],
+      "answer": "B",
+      "explanation": "Social exchange theory proposes that people evaluate relationships through a cost-benefit analysis, staying when perceived rewards exceed costs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "In the 'experimenting' stage of Knapp's model, communicators primarily engage in:",
+      "options": ["Deep personal disclosure about fears and insecurities", "Small talk to find common ground and determine compatibility", "Formal negotiation of relationship rules and boundaries", "Public displays of commitment to the relationship"],
+      "answer": "B",
+      "explanation": "During experimenting, people use small talk and exploratory questions to discover shared interests and assess whether to invest further in the relationship.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Which of the following is a constructive conflict communication behavior?",
+      "options": ["Attacking the other person's character", "Describing specific behavior and its impact using 'I' statements", "Bringing up unrelated past grievances", "Denying that a problem exists"],
+      "answer": "B",
+      "explanation": "'I' statements describe specific behaviors and their impact without blaming ('I feel frustrated when meetings start late' vs. 'You're always inconsiderate'), making them constructive conflict tools.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Stonewalling in conflict communication refers to:",
+      "options": ["Calmly presenting your perspective without interruption", "Withdrawing from interaction and refusing to engage", "Firmly restating your position until the other person agrees", "Seeking a third-party mediator to resolve the dispute"],
+      "answer": "B",
+      "explanation": "Stonewalling involves shutting down emotionally and withdrawing from communication — giving the 'silent treatment' — which prevents conflict resolution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "The competing conflict style is characterized by:",
+      "options": ["High concern for self and low concern for the other party", "Equal concern for self and the other party", "Low concern for self and high concern for the other party", "Low concern for both self and the other party"],
+      "answer": "A",
+      "explanation": "Competing involves high assertiveness and low cooperativeness — pursuing one's own goals at the expense of the other party's needs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "A pseudo-conflict arises when:",
+      "options": ["Two parties have genuinely incompatible values", "Conflict appears to exist because of misunderstanding, but is not real", "One party intentionally creates friction for personal gain", "Conflict is mediated by a neutral third party"],
+      "answer": "B",
+      "explanation": "Pseudo-conflict is the perception of conflict when no real incompatibility exists — the 'conflict' dissolves once the misunderstanding or misperception is clarified.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "The Win-Win approach to conflict resolution focuses on:",
+      "options": ["One party getting everything they want", "Finding a solution that fully satisfies both parties' core interests", "Splitting the difference equally between competing demands", "Avoiding conflict entirely to preserve the relationship"],
+      "answer": "B",
+      "explanation": "The Win-Win or collaborative approach aims to satisfy both parties' underlying interests, not just stated positions, producing durable agreements and stronger relationships.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "The optimal size for effective small group communication is generally:",
+      "options": ["1–2 members", "3–9 members", "10–15 members", "20 or more members"],
+      "answer": "B",
+      "explanation": "Groups of 3–9 provide enough diversity of perspectives for effective decision-making while remaining small enough for active participation by all members.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "A maintenance role in a small group is one that:",
+      "options": ["Keeps the group focused on completing its task", "Promotes interpersonal harmony and member well-being", "Serves individual interests at the expense of the group", "Records and documents group decisions"],
+      "answer": "B",
+      "explanation": "Maintenance roles (e.g., encourager, harmonizer, gatekeeper) focus on the social-emotional health of the group and keeping positive interpersonal dynamics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Groupthink is most easily prevented by:",
+      "options": ["Increasing the size of the group significantly", "Assigning a 'devil's advocate' to challenge the group's conclusions", "Eliminating all feedback between members", "Letting the most dominant member make all decisions"],
+      "answer": "B",
+      "explanation": "Assigning a devil's advocate role ensures that critical evaluation of ideas occurs even within highly cohesive groups, reducing the risk of groupthink.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "In Tuckman's model, which stage is characterized by conflict and power struggles?",
+      "options": ["Forming", "Storming", "Norming", "Adjourning"],
+      "answer": "B",
+      "explanation": "The Storming stage involves interpersonal conflict, resistance to the group task, and competition for leadership and roles as members assert their individuality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Social loafing in groups refers to:",
+      "options": ["The tendency for members to work harder when in a group setting", "The tendency for individuals to contribute less effort in a group than when working alone", "The process of delegating tasks to the most qualified members", "Informal socializing that takes time away from the task"],
+      "answer": "B",
+      "explanation": "Social loafing is the psychological phenomenon where individuals exert less effort when working in a group, often because individual accountability is reduced.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Audience analysis in public speaking involves:",
+      "options": ["Memorizing your speech word for word", "Researching and understanding your audience's characteristics, knowledge, and expectations", "Practicing nonverbal delivery in front of a mirror", "Writing out every detail of your topic before speaking"],
+      "answer": "B",
+      "explanation": "Audience analysis involves gathering information about audience demographics, knowledge level, attitudes, and expectations to tailor the speech effectively.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Communication apprehension (stage fright) is best managed by:",
+      "options": ["Avoiding all public speaking situations", "Preparation, practice, and reframing anxiety as positive energy", "Memorizing every word of the speech to avoid mistakes", "Speaking as fast as possible to get it over with"],
+      "answer": "B",
+      "explanation": "Research shows that thorough preparation, repeated practice, and reframing physiological arousal as excitement rather than fear are the most effective management strategies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "A well-organized speech introduction should:",
+      "options": ["Immediately present all the main evidence", "Gain attention, establish credibility, and preview the main points", "Last longer than the body of the speech", "Begin with an apology for any potential shortcomings"],
+      "answer": "B",
+      "explanation": "An effective introduction captures audience attention (hook), establishes the speaker's credibility, states the topic clearly, and previews the main points.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Vocal variety in public speaking includes varying your:",
+      "options": ["Word choice and vocabulary level", "Rate, pitch, volume, and pauses", "Clothing and physical appearance", "Use of visual aids and supporting materials"],
+      "answer": "B",
+      "explanation": "Vocal variety (changing rate, pitch, volume, and using strategic pauses) keeps audiences engaged and helps emphasize key points in a speech.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "The conclusion of a speech should:",
+      "options": ["Introduce new evidence to strengthen the argument", "Signal the end, restate the thesis, and end with a memorable closing statement", "Ask the audience to summarize what they learned", "Be as long as the introduction for symmetry"],
+      "answer": "B",
+      "explanation": "An effective conclusion signals closure (verbal cue), restates the central message, and ends with something memorable (callback, call to action, inspiring quote).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Gatekeeping in mass media refers to the process of:",
+      "options": ["Locking media content behind subscription paywalls", "Selecting and filtering which information reaches the public", "Regulating who can become a journalist or broadcaster", "Encrypting media content for copyright protection"],
+      "answer": "B",
+      "explanation": "Gatekeeping is the process by which media professionals (editors, producers, algorithm designers) decide which stories and information reach the public.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The agenda-setting function of media proposes that media:",
+      "options": ["Directly tells audiences what opinions to hold", "Influences which issues audiences consider important through editorial emphasis", "Causes audiences to copy behaviors seen in media", "Creates new social norms through fictional storytelling"],
+      "answer": "B",
+      "explanation": "Agenda-setting (McCombs & Shaw) argues media shapes issue salience — not what audiences think about issues, but which issues they think about at all.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "The convergence of media refers to the:",
+      "options": ["Decline of traditional media like newspapers and radio", "Merging of different media types and technologies into integrated platforms", "Agreement among media companies on content standards", "Process of translating media content into multiple languages"],
+      "answer": "B",
+      "explanation": "Media convergence describes the blending of previously distinct media forms (text, audio, video) and delivery channels into unified digital platforms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Uses and Gratifications Theory characterizes media audiences as:",
+      "options": ["Passive recipients who absorb whatever media presents", "Active agents who select media to satisfy particular needs", "Manipulated targets of media propaganda", "Homogeneous groups sharing identical media preferences"],
+      "answer": "B",
+      "explanation": "Uses and Gratifications Theory views audiences as active, goal-directed media users who choose specific content to satisfy needs like information, entertainment, and social connection.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Which of the following represents a form of media ownership concentration?",
+      "options": ["A community newspaper owned by local residents", "One corporation owning TV networks, film studios, and streaming platforms", "A public broadcaster funded by government and citizen fees", "Multiple independent journalists starting competing news websites"],
+      "answer": "B",
+      "explanation": "Media ownership concentration (or consolidation) occurs when a small number of companies control a large portion of media outlets, raising concerns about diversity of perspectives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Computer-mediated communication (CMC) differs from face-to-face communication in that CMC:",
+      "options": ["Contains richer nonverbal cues than face-to-face interaction", "Often lacks the full range of nonverbal cues present in face-to-face communication", "Is always more effective for building relationships", "Eliminates all possibility of miscommunication"],
+      "answer": "B",
+      "explanation": "CMC typically filters out or reduces nonverbal cues (facial expressions, tone of voice), making it 'leaner' than face-to-face communication and more prone to misunderstanding.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "The concept of 'context collapse' in social media refers to:",
+      "options": ["The failure of a social media platform due to technical issues", "The merging of multiple audiences (friends, family, colleagues) into one on a single platform", "The loss of historical context in fast-moving news feeds", "The tendency for social media posts to be misread as humor"],
+      "answer": "B",
+      "explanation": "Context collapse occurs when different audiences (who would normally be separate) converge on one platform, making it difficult to communicate appropriately for all groups simultaneously.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Online disinhibition refers to the tendency for people to:",
+      "options": ["Become more formal and polite in digital communication", "Behave in ways online that they would not in face-to-face settings", "Reduce their social media usage over time", "Develop greater empathy through online interactions"],
+      "answer": "B",
+      "explanation": "Online disinhibition describes how the perceived anonymity and reduced accountability of online spaces lead people to express themselves more freely — sometimes positively, sometimes harmfully.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Which of the following is an advantage of asynchronous digital communication?",
+      "options": ["It allows for immediate real-time feedback", "It gives communicators time to compose and revise messages thoughtfully", "It preserves all nonverbal cues from face-to-face interaction", "It prevents messages from being misunderstood"],
+      "answer": "B",
+      "explanation": "Asynchronous communication (email, recorded messages) gives senders time to think, draft, and revise messages carefully before sending, which can increase quality and reduce impulsive communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Social media algorithms most commonly present users with content that:",
+      "options": ["Challenges their existing beliefs for intellectual growth", "Aligns with their past behavior and stated preferences", "Is produced by verified professional journalists", "Has been rated most accurate by independent fact-checkers"],
+      "answer": "B",
+      "explanation": "Social media algorithms are designed to maximize engagement by showing users content similar to what they have previously liked, shared, or engaged with, potentially creating filter bubbles.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Cultural values most directly influence communication by shaping:",
+      "options": ["The biological capacity for language acquisition", "What is considered appropriate, polite, or meaningful in an interaction", "The technological infrastructure of communication systems", "The grammatical rules of a language"],
+      "answer": "B",
+      "explanation": "Cultural values define norms for appropriate interaction — what constitutes respect, directness, appropriate topics, and proper relationship dynamics in communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Uncertainty reduction theory predicts that in initial interactions, people are motivated to:",
+      "options": ["Immediately share deeply personal information to build trust quickly", "Gather information about the other person to reduce uncertainty and predict behavior", "Maintain mystery and avoid self-disclosure to seem interesting", "Follow strict cultural scripts for every aspect of the interaction"],
+      "answer": "B",
+      "explanation": "Berger & Calabrese's Uncertainty Reduction Theory proposes that people use communication strategies (passive, active, interactive) to reduce uncertainty about new acquaintances.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Low-context cultures tend to value communication that is:",
+      "options": ["Implicit, relational, and highly context-dependent", "Direct, explicit, and verbally detailed", "Built on long-term relationship history before transactions", "Primarily expressed through nonverbal and symbolic channels"],
+      "answer": "B",
+      "explanation": "Low-context cultures (e.g., US, Germany) rely on clear, direct, explicit verbal messages and minimize ambiguity, unlike high-context cultures that rely on shared understanding.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Cultural humility in intercultural communication involves:",
+      "options": ["Pretending to have no cultural background or biases", "Acknowledging your own cultural perspective while remaining open and respectful of others", "Adopting every aspect of cultures you encounter", "Speaking only when invited to do so in cross-cultural settings"],
+      "answer": "B",
+      "explanation": "Cultural humility involves self-reflection about your own cultural assumptions while approaching other cultural perspectives with genuine openness, curiosity, and respect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Code-switching in communication refers to:",
+      "options": ["Translating a message from one language to another", "Shifting communication style, language, or dialect based on the social context or audience", "Using secret codes to communicate privately", "Switching between verbal and nonverbal communication modes"],
+      "answer": "B",
+      "explanation": "Code-switching involves adjusting language, accent, vocabulary, or communication style to fit different social contexts or audiences — a common behavior in multicultural settings.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Ethical communicators, according to the NCA Credo, should:",
+      "options": ["Prioritize their own interests above all else", "Be truthful, accurate, and respectful of others' dignity", "Reveal all private information to avoid secrets", "Use any persuasive strategy that achieves their goal"],
+      "answer": "B",
+      "explanation": "The NCA Credo holds that ethical communicators are truthful, accurate, honest, and show respect for others' dignity, rights, and freedom of expression.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Sharing a friend's private information in a public forum without their permission violates which ethical principle?",
+      "options": ["Originality", "Confidentiality and respect for privacy", "Audience adaptation", "Intellectual rigor"],
+      "answer": "B",
+      "explanation": "Sharing private information without consent violates the ethical principle of confidentiality and respect for personal privacy, which are central to ethical communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Responsible citizenship in a democracy requires ethical communication skills because:",
+      "options": ["Democracy requires everyone to agree with the majority", "Informed democratic participation depends on access to accurate information and reasoned discourse", "Government officials make all important communication decisions", "Only professional journalists bear ethical communication responsibilities"],
+      "answer": "B",
+      "explanation": "Democracy functions through informed citizens engaging in reasoned public discourse; ethical communication — being truthful, fair, and open to diverse perspectives — is essential to this process.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Which of the following best represents ethical online communication?",
+      "options": ["Posting anonymously to avoid accountability for your words", "Citing sources, being truthful, and treating others with respect in digital spaces", "Sharing content quickly without verifying its accuracy", "Using platform anonymity to express views you would not say in person"],
+      "answer": "B",
+      "explanation": "Ethical online communication applies the same standards as ethical communication generally — accuracy, honesty, respect — even when technology provides anonymity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "The ethical principle of 'access to communication resources' advocates for:",
+      "options": ["Restricting communication channels to credentialed professionals", "Ensuring all individuals have equitable access to participate in communication", "Allowing media corporations to control what information is published", "Requiring government approval before distributing information"],
+      "answer": "B",
+      "explanation": "This ethical principle, reflected in the NCA Credo, holds that all people should have equitable access to communication channels and the opportunity to participate in public discourse.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which model of communication depicts communication as a one-way process from sender to receiver without feedback?",
+      "options": ["Transactional model", "Interactive model", "Linear model", "Constructivist model"],
+      "answer": "C",
+      "explanation": "The linear model (e.g., Shannon-Weaver, Lasswell) depicts communication as a one-way transmission from sender to receiver with no feedback loop.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The relational function of communication is primarily concerned with:",
+      "options": ["Transmitting factual information accurately", "Building and maintaining social bonds and relationships", "Achieving practical task-based goals", "Persuading others to change their beliefs"],
+      "answer": "B",
+      "explanation": "The relational function of communication involves using messages to establish, develop, and maintain interpersonal connections and social relationships.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Self-concept is primarily shaped by:",
+      "options": ["Biological factors alone", "Feedback from significant others and social comparisons", "A single formative experience in early life", "Academic test scores and external achievements"],
+      "answer": "B",
+      "explanation": "Self-concept develops through social interaction — feedback from parents, peers, teachers, and cultural messages — rather than any single source or biological determinism.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Denotative meaning refers to a word's:",
+      "options": ["Emotional and cultural associations", "Objective dictionary definition", "Usage within a specific professional field", "Sound and phonological structure"],
+      "answer": "B",
+      "explanation": "Denotative meaning is the literal, objective, dictionary definition of a word, shared widely among speakers of the same language.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "When someone smiles while delivering bad news, the smile is functioning to ______ the verbal message.",
+      "options": ["Repeat", "Complement", "Contradict", "Regulate"],
+      "answer": "C",
+      "explanation": "When nonverbal cues conflict with the verbal message (smiling while saying bad news), the nonverbal behavior contradicts or sends a mixed message.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Active listening requires which of the following?",
+      "options": ["Planning your response while the speaker is talking", "Full concentration and engaged responding to the speaker", "Agreeing with everything the speaker says", "Interrupting to ask questions before the speaker finishes"],
+      "answer": "B",
+      "explanation": "Active listening involves giving the speaker your full attention, working to understand their meaning, and responding in ways that show comprehension and engagement.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "In Knapp's Staircase Model, the 'bonding' stage is characterized by:",
+      "options": ["Initial small talk and exploration of common interests", "A public ritual or announcement formalizing the relationship's commitment", "Reassertion of individual identities as the relationship weakens", "Termination of regular communication between partners"],
+      "answer": "B",
+      "explanation": "The bonding stage involves a public commitment (marriage, business partnership announcement) that formally declares the relationship to others and society.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Using 'I' statements instead of 'you' statements in conflict communication is effective because:",
+      "options": ["It allows you to blame the other person without seeming accusatory", "It describes your experience without attacking or blaming the other person", "It shifts responsibility for the conflict to yourself", "It avoids any mention of the other person's behavior"],
+      "answer": "B",
+      "explanation": "'I' statements (I feel... when... because...) communicate your experience and needs without accusation or blame, reducing the other person's defensiveness.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Social loafing in group communication refers to:",
+      "options": ["Productive brainstorming sessions within the group", "Reduced individual effort when working within a group context", "Group members supporting each other during difficult tasks", "The process of distributing tasks based on member strengths"],
+      "answer": "B",
+      "explanation": "Social loafing is the tendency for individuals to exert less effort when part of a group, often because they assume others will pick up the slack.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Audience analysis is important in public speaking because it:",
+      "options": ["Allows speakers to avoid any topic that might interest the audience", "Helps speakers adapt their message to the specific knowledge, attitudes, and needs of listeners", "Gives speakers information about the room's technical equipment", "Helps speakers avoid eye contact with specific audience members"],
+      "answer": "B",
+      "explanation": "Audience analysis enables speakers to tailor content, language, examples, and appeals to match the specific audience, increasing relevance and persuasive effectiveness.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The Storming stage of Tuckman's group development model is characterized by:",
+      "options": ["Polite introductions and a desire to avoid conflict", "Interpersonal conflict and competition for roles within the group", "Established norms and increasing group cohesion", "Maximum productivity and effective collaboration"],
+      "answer": "B",
+      "explanation": "The Storming stage involves members asserting themselves, competing for roles, and experiencing conflict as they navigate group norms and hierarchy.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Impression management, as described by Erving Goffman, involves:",
+      "options": ["Forming accurate first impressions of strangers", "Strategically controlling how others perceive and evaluate you", "Managing workplace performance evaluations", "Remembering key information about communication partners"],
+      "answer": "B",
+      "explanation": "Goffman's dramaturgical perspective describes impression management as the ways people actively shape their self-presentation to control others' perceptions.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "In high-context cultures, communicators rely primarily on:",
+      "options": ["Precise, explicit verbal instructions and written contracts", "Shared context, relationships, and nonverbal cues to convey meaning", "Technical vocabulary and formal documentation", "Direct expression of disagreement and individual opinion"],
+      "answer": "B",
+      "explanation": "High-context cultures rely on the surrounding context, relationships, and nonverbal signals rather than explicit verbal messages to convey meaning.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Code-switching in communication refers to:",
+      "options": ["Translating a message into a secret language", "Adjusting language, vocabulary, or style based on the social context or audience", "Switching from verbal to written communication", "Using specialized technical vocabulary in casual conversation"],
+      "answer": "B",
+      "explanation": "Code-switching involves modifying communication style, register, or even language to suit different social situations or audiences.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "The 'looking-glass self' concept explains self-concept development through:",
+      "options": ["Biological and genetic inheritance", "How we imagine others perceive and judge us", "Formal academic assessment and feedback", "Early childhood unconscious memory formation"],
+      "answer": "B",
+      "explanation": "Cooley's looking-glass self proposes that self-concept forms as we imagine others' views of us and internalize those imagined evaluations as self-perception.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Noise in the communication process refers to:",
+      "options": ["Only loud sounds that interrupt speech", "Any interference that distorts the accurate transmission of a message", "The emotional tone of the sender's message", "The feedback provided by the receiver"],
+      "answer": "B",
+      "explanation": "Noise is any form of interference — physical, psychological, semantic, or cultural — that disrupts the accurate transmission or reception of a message.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "The instrumental function of communication serves to:",
+      "options": ["Maintain and strengthen social relationships", "Accomplish practical tasks and achieve tangible goals", "Express and define personal identity", "Provide entertainment and enjoyment"],
+      "answer": "B",
+      "explanation": "The instrumental function involves using communication to get things done — making requests, giving instructions, completing transactions, and achieving practical objectives.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Proxemics is the study of how people use:",
+      "options": ["Tone and rate of voice in conversation", "Physical space and distance in communication", "Gesture and body movement to convey meaning", "Time and timing as communicative resources"],
+      "answer": "B",
+      "explanation": "Proxemics (Hall) examines how physical distance — intimate, personal, social, and public zones — functions communicatively in different relationships and contexts.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "The primary difference between hearing and listening is:",
+      "options": ["Hearing involves both ears while listening uses only one", "Hearing is a physical process while listening involves active attention and meaning-making", "Listening is automatic while hearing requires effort", "Hearing requires silence while listening can occur in noisy environments"],
+      "answer": "B",
+      "explanation": "Hearing is the passive, physiological reception of sound; listening is the active, cognitive process of attending to and making sense of the sounds received.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Social exchange theory suggests that people remain in relationships when:",
+      "options": ["Both parties have identical personalities", "The perceived rewards outweigh the perceived costs of the relationship", "The relationship has existed for a long period of time", "Both parties agree not to communicate about conflict"],
+      "answer": "B",
+      "explanation": "Social exchange theory proposes that people evaluate relationships through cost-benefit analysis and continue relationships where rewards (emotional support, enjoyment, status) exceed costs.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Gatekeeping in mass media refers to:",
+      "options": ["Setting paywalls for online media access", "The editorial process of selecting which stories and information reach audiences", "Government censorship of broadcast content", "Audience screening of media for personal relevance"],
+      "answer": "B",
+      "explanation": "Gatekeeping describes how editors, journalists, and platform algorithms select and filter information, deciding what content reaches the public.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Context collapse in social media occurs when:",
+      "options": ["A social media platform goes offline unexpectedly", "Multiple distinct audiences converge on a single platform, making audience-specific communication difficult", "A post goes viral and reaches unintended audiences", "Social media companies merge their user databases"],
+      "answer": "B",
+      "explanation": "Context collapse refers to the flattening of multiple distinct audience groups (friends, family, colleagues, strangers) into one undifferentiated audience on a social media platform.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The accommodating conflict style is characterized by:",
+      "options": ["High concern for self and low concern for others", "Low concern for self and high concern for others", "Equal concern for self and others", "Low concern for both self and others"],
+      "answer": "B",
+      "explanation": "Accommodating involves setting aside one's own needs and concerns to satisfy the other party — low assertiveness but high cooperativeness.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Ethical communication, according to the NCA Credo, requires which of the following?",
+      "options": ["Winning arguments through any means necessary", "Truthfulness, accuracy, honesty, and respect for others' dignity", "Keeping all information strictly confidential", "Maximizing personal benefit from every communication interaction"],
+      "answer": "B",
+      "explanation": "The NCA Credo for Ethical Communication emphasizes truthfulness, accuracy, honesty, reasonableness, and respect for others' dignity and freedom of expression.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Cultural humility differs from cultural competence in that it:",
+      "options": ["Focuses on mastering the knowledge of specific cultural norms", "Emphasizes ongoing self-reflection and openness rather than claiming expertise in other cultures", "Requires living in another country for at least one year", "Involves adopting all practices of the cultures you encounter"],
+      "answer": "B",
+      "explanation": "Cultural humility is a lifelong, self-reflective process of examining one's own biases and remaining open to learning, rather than claiming a fixed mastery of other cultures.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Pseudo-conflict is best resolved by:",
+      "options": ["Allowing one party to win the argument", "Clarifying the misunderstanding that created the apparent conflict", "Seeking an external mediator to decide the outcome", "Avoiding the topic that caused the perceived conflict"],
+      "answer": "B",
+      "explanation": "Since pseudo-conflict is based on misperception or misunderstanding rather than real incompatibility, clarifying the misunderstanding typically dissolves the conflict.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Groupthink is most likely to be prevented by which of the following?",
+      "options": ["Increasing group size to over 20 members", "Assigning a devil's advocate role to challenge the group's conclusions", "Eliminating all leadership to create full equality", "Requiring anonymous voting on all decisions"],
+      "answer": "B",
+      "explanation": "Assigning a devil's advocate to question assumptions and challenge conclusions ensures critical evaluation occurs even within highly cohesive groups prone to groupthink.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Online disinhibition refers to the tendency to:",
+      "options": ["Become more socially cautious when communicating online", "Behave in ways online that one would not behave in face-to-face settings", "Reduce all social media activity due to privacy concerns", "Develop more empathy for others through digital interaction"],
+      "answer": "B",
+      "explanation": "Online disinhibition — fueled by anonymity, invisibility, and reduced accountability — leads people to express themselves more freely or recklessly online than in person.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Effective vocal variety in public speaking involves:",
+      "options": ["Maintaining the same pace, pitch, and volume throughout", "Varying rate, pitch, volume, and pauses to maintain audience engagement", "Speaking as quickly as possible to deliver more content", "Using a monotone voice to appear more professional"],
+      "answer": "B",
+      "explanation": "Varying vocal elements (rate, pitch, volume, pauses) maintains audience attention, emphasizes key points, and makes delivery more engaging and dynamic.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Social Penetration Theory describes relationship development through:",
+      "options": ["Five conflict stages that all relationships must experience", "Increasing breadth and depth of self-disclosure over time", "A series of public rituals that formalize commitment", "Three universal attachment styles shaped by early childhood"],
+      "answer": "B",
+      "explanation": "Social Penetration Theory (Altman & Taylor) uses an onion metaphor to describe how relationships deepen as self-disclosure increases in both breadth (topics covered) and depth (intimacy level).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Media convergence describes the process of:",
+      "options": ["Traditional media declining as digital media grows", "Different media types and technologies merging into integrated digital platforms", "Media companies agreeing on common editorial standards", "Audiences consuming less media due to content overload"],
+      "answer": "B",
+      "explanation": "Media convergence is the merging of previously distinct communication technologies (print, broadcast, digital) into interconnected platforms and devices.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "The Norming stage of Tuckman's group development model is characterized by:",
+      "options": ["Intense conflict and competition for leadership", "Establishing shared expectations and increasing group cohesion", "Maximum productivity and goal achievement", "Disbanding after the group task is completed"],
+      "answer": "B",
+      "explanation": "Norming involves the group resolving earlier conflicts and establishing shared norms, roles, and expectations, leading to growing trust and cohesion.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which ethical communication principle requires not spreading false information even when it might achieve a desirable outcome?",
+      "options": ["Reciprocity", "Truthfulness", "Confidentiality", "Inclusivity"],
+      "answer": "B",
+      "explanation": "The ethical principle of truthfulness holds that communicators have an obligation to share accurate information and avoid deception, regardless of the potential benefit of misleading others.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Which of the following communication behaviors would best demonstrate active listening?",
+      "options": ["Looking at your phone while the speaker talks", "Nodding, making eye contact, and paraphrasing what the speaker said", "Immediately sharing your own related experience when the speaker pauses", "Mentally preparing counterarguments while the speaker is talking"],
+      "answer": "B",
+      "explanation": "Active listening behaviors include attentive nonverbal signals (nodding, eye contact) and verbal feedback (paraphrasing) that demonstrate comprehension and genuine engagement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Filter bubbles in social media are created primarily by:",
+      "options": ["User-selected privacy settings that limit who can view content", "Personalization algorithms that curate content based on past behavior", "Government regulations on acceptable online speech", "Platform moderators who remove content from certain viewpoints"],
+      "answer": "B",
+      "explanation": "Filter bubbles result from algorithmic personalization that selects content matching users' preferences and past engagement, potentially limiting exposure to diverse perspectives.",
+      "points": 1
+    }
+  ]
+}

@@ -1,0 +1,1745 @@
+{
+  "slug": "world-politics",
+  "name": "World Politics",
+  "nameZh": "世界政治",
+  "credits": 0.5,
+  "department": "Social Studies",
+  "type": "Core",
+  "description": "A core course examining the actors, structures, and dynamics of international relations, from state power and sovereignty to globalization, conflict, diplomacy, and contemporary global challenges.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to International Relations",
+      "titleZh": "国际关系导论",
+      "objectives": "Define international relations as a field of study; identify its core actors, levels of analysis, and major theoretical traditions; explain why world politics matters for everyday life.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/1-1-what-is-international-relations/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 1.1: What is International Relations?",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-interactions-among-branches/us-gov-foreign-policy/v/introduction-to-foreign-policy",
+      "videoNote": "Khan Academy — Introduction to Foreign Policy",
+      "video2Url": "https://www.youtube.com/watch?v=bE3bE4YIpsg",
+      "video2Note": "YouTube — International Relations: An Introduction (Crash Course)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/1-2-levels-of-analysis/",
+      "practiceNote": "Use the three levels of analysis (individual, state, systemic) to explain one recent international event",
+      "assignment": "Write a 350-word essay introducing international relations. Choose one current world news story and explain how it illustrates at least two key themes in the field (e.g., power, cooperation, conflict, sovereignty, or interdependence). Include one concrete example from the last two years.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Nation-States & Sovereignty",
+      "titleZh": "民族国家与主权",
+      "objectives": "Define the nation-state and explain the origins of the modern state system; distinguish between nation, state, and nation-state; describe the concept of sovereignty and how it is challenged today.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/2-1-the-nation-state/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 2.1: The Nation-State",
+      "videoUrl": "https://www.khanacademy.org/humanities/world-history/1600s-1800s/enlightenment-revolution/v/age-of-revolutions",
+      "videoNote": "Khan Academy — Age of Revolutions (origins of modern states)",
+      "video2Url": "https://www.youtube.com/watch?v=2Nh-8kAQT1s",
+      "video2Note": "YouTube — Nation-States and Sovereignty Explained",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/2-2-sovereignty/",
+      "practiceNote": "Identify three contemporary cases where state sovereignty is contested and explain the competing claims",
+      "assignment": "Select a contested territory or breakaway region (e.g., Taiwan, Kosovo, Western Sahara, or Crimea). Write a 350-word analysis explaining: (1) why that territory's status is disputed, (2) what arguments each side makes using the concept of sovereignty, and (3) your assessment of the strongest argument.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Realism & Liberalism in IR",
+      "titleZh": "现实主义与自由主义",
+      "objectives": "Summarize realist and liberal theoretical frameworks in international relations; compare their assumptions about human nature, state behavior, and the international system; apply each theory to a historical case.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/3-1-realism/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 3.1–3.2: Realism and Liberalism",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-interactions-among-branches/us-gov-foreign-policy/v/realism-vs-liberalism-in-foreign-policy",
+      "videoNote": "Khan Academy — Realism vs. Liberalism in Foreign Policy",
+      "video2Url": "https://www.youtube.com/watch?v=c5bJB5Zs0Zk",
+      "video2Note": "YouTube — Realism vs. Liberalism: IR Theory Explained",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/3-3-constructivism/",
+      "practiceNote": "Compare how a realist and a liberal would each explain why states go to war",
+      "assignment": "Choose either the 2003 US invasion of Iraq or NATO expansion into Eastern Europe. Write a 350-word essay analyzing the event using both a realist lens and a liberal lens. Clearly state which theoretical explanation you find more convincing and why.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "International Organizations (UN, NATO, WTO)",
+      "titleZh": "国际组织：联合国、北约与世贸组织",
+      "objectives": "Describe the structure and purpose of major international organizations (UN, NATO, WTO, IMF); explain how intergovernmental organizations shape state behavior; assess both the capabilities and limitations of these bodies.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/7-1-international-organizations/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 7.1: International Organizations",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-interactions-among-branches/us-gov-foreign-policy/v/the-united-nations",
+      "videoNote": "Khan Academy — The United Nations",
+      "video2Url": "https://www.youtube.com/watch?v=Bkm2UjIJPVA",
+      "video2Note": "YouTube — How the United Nations Works",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/7-2-the-united-nations/",
+      "practiceNote": "Identify one success and one failure of the UN Security Council and explain the structural reasons for each",
+      "assignment": "Research a specific UN peacekeeping mission or WTO trade dispute. In 350 words, describe what the international organization did, evaluate whether it was effective, and explain the key constraints (political, financial, or structural) it faced.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Globalization",
+      "titleZh": "全球化",
+      "objectives": "Define globalization and describe its economic, cultural, and political dimensions; distinguish between hyperglobalists, skeptics, and transformationalists; evaluate the benefits and costs of globalization for different populations.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/9-1-what-is-globalization/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 9.1: What is Globalization?",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/international-trade-topic/globalization/v/introduction-to-globalization",
+      "videoNote": "Khan Academy — Introduction to Globalization",
+      "video2Url": "https://www.youtube.com/watch?v=JJ0nFD19eT8",
+      "video2Note": "YouTube — Globalization Explained (Explainity)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/9-2-effects-of-globalization/",
+      "practiceNote": "List two economic winners and two economic losers from globalization with supporting evidence",
+      "assignment": "Pick one product you use daily (smartphone, clothing, food item). Trace its global supply chain in 350 words: where are raw materials sourced, where is it manufactured, how does it reach you? Identify at least two ways globalization shaped this product's journey and one way globalization created inequality along the chain.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "International Trade & Finance",
+      "titleZh": "国际贸易与金融",
+      "objectives": "Explain comparative advantage and the rationale for free trade; describe key institutions of the global economy (WTO, IMF, World Bank); identify causes and consequences of trade disputes and currency crises.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/10-1-international-trade/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 10.1: International Trade",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/international-trade-and-finance/trade-deficits-and-surpluses/v/trade-and-comparative-advantage",
+      "videoNote": "Khan Academy — Trade and Comparative Advantage",
+      "video2Url": "https://www.youtube.com/watch?v=4P6oBzRBDbc",
+      "video2Note": "YouTube — How International Trade Works",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/10-2-international-finance/",
+      "practiceNote": "Explain how a tariff affects domestic producers, domestic consumers, and trading partners using a concrete example",
+      "assignment": "Analyze the US-China trade dispute (2018–present) in 350 words. Explain: (1) the core economic and political grievances on each side, (2) the specific trade tools each government used (tariffs, sanctions, quotas), and (3) your assessment of whether the dispute was primarily about economics or geopolitics.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Human Rights in Global Context",
+      "titleZh": "全球背景下的人权",
+      "objectives": "Define human rights and trace the development of the international human rights regime; explain tensions between sovereignty and human rights intervention; evaluate the effectiveness of international human rights enforcement mechanisms.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/11-1-human-rights/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 11.1: Human Rights",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-foundations/us-gov-the-purpose-of-government/v/civil-rights-vs-civil-liberties",
+      "videoNote": "Khan Academy — Civil Rights and Human Rights",
+      "video2Url": "https://www.youtube.com/watch?v=oh3BbLk5UIQ",
+      "video2Note": "YouTube — What Are Human Rights? (Amnesty International)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/11-2-humanitarian-intervention/",
+      "practiceNote": "Identify one case where a state's human rights record led to international intervention and evaluate the legal basis",
+      "assignment": "Choose an ongoing human rights crisis (e.g., Uyghurs in Xinjiang, Rohingya in Myanmar, or humanitarian situation in Gaza). Write 350 words: (1) describe the violations being documented, (2) explain what the international community has done (or failed to do), and (3) analyze the tension between sovereignty and the 'Responsibility to Protect' doctrine.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Causes of War & Conflict",
+      "titleZh": "战争与冲突的根源",
+      "objectives": "Identify and compare major theoretical explanations for war (realist, liberal, constructivist, domestic-level); distinguish between interstate and intrastate conflicts; explain why some disputes escalate to armed conflict while others do not.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/5-1-causes-of-war/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 5.1: Causes of War",
+      "videoUrl": "https://www.khanacademy.org/humanities/world-history/europe-1800s-early-1900s/world-war-i-tutorial/v/causes-of-world-war-i",
+      "videoNote": "Khan Academy — Causes of World War I",
+      "video2Url": "https://www.youtube.com/watch?v=WLF-bBbPTVQ",
+      "video2Note": "YouTube — Why Do Countries Go to War? (Vox)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/5-2-interstate-vs-intrastate-conflict/",
+      "practiceNote": "Apply three different theories of war causation to explain the 2022 Russian invasion of Ukraine",
+      "assignment": "Select one major war since 1945 (Korean War, Vietnam War, Gulf War, or Russia-Ukraine). In 350 words, apply at least two theories of war causation to explain why it began. Evaluate which explanation is most persuasive and what it misses.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Diplomacy & Foreign Policy",
+      "titleZh": "外交与外交政策",
+      "objectives": "Define diplomacy and describe the tools of foreign policy (military, economic, diplomatic); explain the domestic and international factors that shape a state's foreign policy; analyze a case of diplomatic negotiation.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/6-1-diplomacy/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 6.1: Diplomacy",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-interactions-among-branches/us-gov-foreign-policy/v/tools-of-foreign-policy",
+      "videoNote": "Khan Academy — Tools of Foreign Policy",
+      "video2Url": "https://www.youtube.com/watch?v=jWiC_PiCMhU",
+      "video2Note": "YouTube — How Diplomacy Works",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/6-2-foreign-policy-decision-making/",
+      "practiceNote": "Identify the key stakeholders in US foreign policy and map how domestic politics shape decisions",
+      "assignment": "Analyze a famous diplomatic negotiation (e.g., Cuban Missile Crisis, Camp David Accords, Iran Nuclear Deal/JCPOA, or Paris Climate Agreement). In 350 words, describe: (1) the key parties and their interests, (2) the diplomatic tools and strategies used, and (3) whether the negotiation succeeded and why.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 10,
+      "title": "Major World Powers (US, China, EU)",
+      "titleZh": "主要大国：美国、中国与欧盟",
+      "objectives": "Describe the foreign policy priorities and global roles of the United States, China, and the European Union; compare how each power uses hard and soft power; analyze areas of cooperation and competition among the major powers.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/4-1-great-powers/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 4.1: Great Powers",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-interactions-among-branches/us-gov-foreign-policy/v/us-foreign-policy-overview",
+      "videoNote": "Khan Academy — US Foreign Policy Overview",
+      "video2Url": "https://www.youtube.com/watch?v=luTPMHC7zHY",
+      "video2Note": "YouTube — US vs China: The New Cold War? (DW Documentary)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/4-2-soft-power-and-hard-power/",
+      "practiceNote": "Create a comparison chart of US, China, and EU foreign policy goals and instruments",
+      "assignment": "Pick one region where US and Chinese interests compete (e.g., South China Sea, Africa, or Latin America). In 350 words, describe each power's strategic interests, the tools they use (military, economic aid, diplomacy), and predict how this competition will evolve over the next decade.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Regional Issues (Middle East, Asia)",
+      "titleZh": "地区问题：中东与亚洲",
+      "objectives": "Identify the key political, ethnic, and resource-related conflicts in the Middle East and Asia-Pacific regions; explain the role of external powers in each region; analyze one specific regional dispute in depth.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/8-1-regional-conflicts/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 8.1: Regional Conflicts",
+      "videoUrl": "https://www.khanacademy.org/humanities/world-history/history-beginnings/ancient-middle-east/v/middle-east-history-overview",
+      "videoNote": "Khan Academy — Middle East: Historical Overview",
+      "video2Url": "https://www.youtube.com/watch?v=SbvbOsNFLaE",
+      "video2Note": "YouTube — The Israel-Palestine Conflict: A Brief, Simple History (Vox)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/8-2-the-asia-pacific/",
+      "practiceNote": "Map the key territorial disputes in the South China Sea and identify the competing sovereign claims",
+      "assignment": "Choose either the Israeli-Palestinian conflict or the South China Sea territorial dispute. In 350 words, provide a background summary, identify the main parties and their core interests, describe the role external powers play, and propose one realistic step toward de-escalation.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 12,
+      "title": "Democracy & Authoritarianism",
+      "titleZh": "民主与威权主义",
+      "objectives": "Define and compare democratic and authoritarian political systems; explain 'democratic backsliding' and its causes; evaluate the relationship between domestic political systems and international behavior.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/12-1-democracy-and-authoritarianism/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 12.1: Democracy and Authoritarianism",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-foundations/us-gov-type-of-government/v/forms-of-government",
+      "videoNote": "Khan Academy — Forms of Government",
+      "video2Url": "https://www.youtube.com/watch?v=NPcBCFatGk4",
+      "video2Note": "YouTube — The Rise of Authoritarianism (Vox)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/12-2-democratic-peace-theory/",
+      "practiceNote": "Evaluate the Democratic Peace Theory: does democracy actually prevent wars? Use two examples",
+      "assignment": "Research a country that has experienced democratic backsliding in the last 10 years (Hungary, Turkey, India, Brazil under Bolsonaro, or another of your choice). In 350 words, describe: (1) what democratic norms or institutions were eroded, (2) the political forces driving backsliding, and (3) what international responses, if any, occurred.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Environmental Politics",
+      "titleZh": "环境政治",
+      "objectives": "Explain why environmental challenges like climate change are international collective action problems; describe major international environmental agreements (Kyoto, Paris); analyze the role of NGOs, states, and corporations in global environmental governance.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/13-1-global-environmental-politics/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 13.1: Global Environmental Politics",
+      "videoUrl": "https://www.khanacademy.org/science/biology/ecology/biogeochemical-cycles/v/carbon-cycle",
+      "videoNote": "Khan Academy — Carbon Cycle and Climate",
+      "video2Url": "https://www.youtube.com/watch?v=G4H1N_yXBiA",
+      "video2Note": "YouTube — Paris Climate Agreement Explained (Vox)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/13-2-climate-change-negotiations/",
+      "practiceNote": "Identify the key provisions and shortcomings of the Paris Agreement using primary sources",
+      "assignment": "Write a 350-word policy memo addressed to the UN Secretary-General recommending one specific reform to international climate governance. Explain: (1) the current gap or failure the reform addresses, (2) the legal or political mechanism you propose, and (3) the main objections and how to overcome them.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 14,
+      "title": "Contemporary Global Issues",
+      "titleZh": "当代全球问题",
+      "objectives": "Identify and assess major contemporary global challenges (pandemics, cybersecurity, migration, nuclear proliferation); explain why these issues require multilateral cooperation; apply IR theories to analyze the prospects for international solutions.",
+      "readingUrl": "https://open.lib.umn.edu/internationalrelations/chapter/14-1-transnational-issues/",
+      "readingNote": "University of Minnesota OER — International Relations Ch 14.1: Transnational Issues",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-interactions-among-branches/us-gov-foreign-policy/v/global-challenges-overview",
+      "videoNote": "Khan Academy — Global Challenges Overview",
+      "video2Url": "https://www.youtube.com/watch?v=Yocja_N5s1I",
+      "video2Note": "YouTube — Global Problems That Need Global Solutions (TED-Ed)",
+      "practiceUrl": "https://open.lib.umn.edu/internationalrelations/chapter/14-2-nuclear-proliferation/",
+      "practiceNote": "Apply the collective action problem framework to explain why states struggle to cooperate on global pandemics",
+      "assignment": "Choose one transnational challenge (cybersecurity, pandemics, nuclear proliferation, or mass migration). Write a 400-word capstone essay that: (1) explains the nature and scale of the challenge, (2) applies at least one IR theory to explain why international cooperation is difficult, (3) describes existing international mechanisms, and (4) proposes a realistic improvement.",
+      "estimatedHrs": 3
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which of the following best defines 'international relations' as a field of study?",
+      "options": [
+        "The study of domestic government institutions only",
+        "The study of interactions among states, international organizations, and non-state actors in the global arena",
+        "The study of cultural differences between countries",
+        "The study of international economic transactions"
+      ],
+      "answer": "B",
+      "explanation": "IR broadly encompasses political, economic, security, and cultural interactions among states, international organizations (IGOs, NGOs), and multinational corporations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "The 'systemic level of analysis' in IR focuses on:",
+      "options": [
+        "Individual leaders and their personalities",
+        "Domestic political institutions",
+        "The structure of the international system as a whole",
+        "Military technology"
+      ],
+      "answer": "C",
+      "explanation": "The systemic level examines how the anarchic structure of the international system and the distribution of power among states shapes behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Which term refers to non-governmental groups that operate across borders to influence world politics?",
+      "options": [
+        "Intergovernmental Organizations (IGOs)",
+        "Multinational Corporations (MNCs)",
+        "Non-Governmental Organizations (NGOs)",
+        "Regional Trade Blocs"
+      ],
+      "answer": "C",
+      "explanation": "NGOs like Amnesty International and Greenpeace operate internationally without being government-controlled, making them distinct from IGOs or MNCs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "What event is commonly cited as the origin of the modern state system?",
+      "options": [
+        "The Congress of Vienna (1815)",
+        "The Treaty of Westphalia (1648)",
+        "The creation of the United Nations (1945)",
+        "The French Revolution (1789)"
+      ],
+      "answer": "B",
+      "explanation": "The Peace of Westphalia (1648) established the principle of state sovereignty and is considered the foundation of the modern international order.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Which of the following is a primary reason everyday citizens should care about international relations?",
+      "options": [
+        "IR only affects professional diplomats",
+        "Global events shape local economic conditions, security, and cultural life",
+        "Domestic politics completely insulate citizens from global dynamics",
+        "Only military personnel interact with foreign nations"
+      ],
+      "answer": "B",
+      "explanation": "Globalization means that wars, trade disputes, pandemics, and international agreements directly affect prices, jobs, security, and culture at home.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Which component is essential for an entity to be recognized as a 'state' under international law?",
+      "options": [
+        "A large military",
+        "A permanent population, defined territory, effective government, and capacity to enter relations",
+        "UN Security Council approval",
+        "A free-market economy"
+      ],
+      "answer": "B",
+      "explanation": "The Montevideo Convention (1933) defines statehood by four criteria: permanent population, defined territory, effective government, and capacity to enter into relations with other states.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "What does 'sovereignty' mean in international relations?",
+      "options": [
+        "A state's right to exclusive authority within its borders and freedom from external interference",
+        "The power of the UN to govern member states",
+        "A state's military dominance over neighboring countries",
+        "The economic wealth of a nation"
+      ],
+      "answer": "A",
+      "explanation": "Sovereignty refers to a state's supreme authority over its territory and population and its formal independence from external control.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "A 'nation' in the IR sense refers primarily to:",
+      "options": [
+        "Any territory with defined borders",
+        "A group of people sharing common identity, culture, or history",
+        "Any member of the United Nations",
+        "An economically developed state"
+      ],
+      "answer": "B",
+      "explanation": "A nation is a group bound by shared identity (language, culture, ethnicity, history), which may or may not have its own state — hence the distinction between nation and state.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "The doctrine of 'Responsibility to Protect' (R2P) challenges traditional sovereignty by arguing that:",
+      "options": [
+        "States have unlimited rights to treat their citizens as they wish",
+        "The international community may intervene when a state fails to protect its citizens from mass atrocities",
+        "Only the UN Security Council can define sovereignty",
+        "Sovereignty should be abolished"
+      ],
+      "answer": "B",
+      "explanation": "R2P holds that sovereignty is conditional: when states commit or fail to prevent genocide, war crimes, or crimes against humanity, the international community has the right — and possibly duty — to intervene.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Taiwan is an example of a contested sovereignty issue because:",
+      "options": [
+        "Taiwan lacks a functioning government",
+        "Taiwan is not populated",
+        "Taiwan operates as a self-governing entity but is claimed by the People's Republic of China",
+        "Taiwan is officially recognized as a sovereign state by the United Nations"
+      ],
+      "answer": "C",
+      "explanation": "Taiwan governs itself with its own military and democratic institutions but is claimed by the PRC, and most states do not formally recognize it diplomatically due to the 'One China' policy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Which assumption is central to the realist theory of international relations?",
+      "options": [
+        "States are naturally cooperative and seek mutual benefit",
+        "International institutions effectively constrain state behavior",
+        "The international system is anarchic and states prioritize survival and power",
+        "Public opinion drives foreign policy"
+      ],
+      "answer": "C",
+      "explanation": "Realists argue the absence of a world government (anarchy) forces states to prioritize their own survival and power in a self-help system.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Liberal theory in IR emphasizes that international cooperation is possible because:",
+      "options": [
+        "States are irrational actors",
+        "International institutions, economic interdependence, and democracy reduce incentives for conflict",
+        "Military power is the only path to security",
+        "All states share identical interests"
+      ],
+      "answer": "B",
+      "explanation": "Liberals argue that institutions, trade, and democratic governance lower the costs and risks of cooperation, making peaceful relations possible even in an anarchic world.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Hans Morgenthau is most associated with which theoretical tradition?",
+      "options": [
+        "Constructivism",
+        "Liberalism",
+        "Classical Realism",
+        "Marxism"
+      ],
+      "answer": "C",
+      "explanation": "Morgenthau's Politics Among Nations (1948) is the foundational text of classical realism, arguing that states are driven by power and the national interest.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "The 'Democratic Peace Theory' associated with liberal IR holds that:",
+      "options": [
+        "Democracies are the most aggressive states in the international system",
+        "Democracies rarely go to war with each other",
+        "Democratic states always support free trade",
+        "Democracies ignore international law"
+      ],
+      "answer": "B",
+      "explanation": "Democratic Peace Theory observes that while democracies do fight non-democracies, wars between established democracies are historically rare.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Constructivism in IR argues that state interests and identities are:",
+      "options": [
+        "Fixed and determined by material factors like geography and military power",
+        "Socially constructed through interaction, norms, and shared ideas",
+        "Entirely shaped by domestic elections",
+        "Determined solely by economic capacity"
+      ],
+      "answer": "B",
+      "explanation": "Constructivists like Alexander Wendt argue that the international system is 'what states make of it' — identities and interests are formed through social interaction and shared norms, not fixed material conditions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "The United Nations was established primarily to:",
+      "options": [
+        "Create a world government",
+        "Promote international peace, security, human rights, and cooperation among states",
+        "Regulate international trade",
+        "Enforce US foreign policy globally"
+      ],
+      "answer": "B",
+      "explanation": "The UN Charter (1945) established the organization to maintain international peace and security, develop friendly relations among nations, and promote human rights and international cooperation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Which UN body has primary responsibility for maintaining international peace and security?",
+      "options": [
+        "UN General Assembly",
+        "UN Secretariat",
+        "UN Security Council",
+        "International Court of Justice"
+      ],
+      "answer": "C",
+      "explanation": "The UN Security Council (UNSC) has primary responsibility for peace and security under Chapter VII of the UN Charter, and its resolutions are binding on member states.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "NATO is best described as:",
+      "options": [
+        "A global free trade organization",
+        "A military alliance among North American and European democracies based on collective defense",
+        "A humanitarian aid organization",
+        "An economic development fund for developing countries"
+      ],
+      "answer": "B",
+      "explanation": "NATO (North Atlantic Treaty Organization) is a collective defense alliance; its founding principle is Article 5, which treats an attack on one member as an attack on all.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "The World Trade Organization (WTO) primarily:",
+      "options": [
+        "Provides loans to developing countries",
+        "Sets rules for international trade and resolves trade disputes",
+        "Coordinates military operations",
+        "Monitors human rights violations"
+      ],
+      "answer": "B",
+      "explanation": "The WTO establishes international trade rules, reduces trade barriers, and provides a dispute settlement mechanism for member states.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "A major structural limitation of the UN Security Council is that:",
+      "options": [
+        "It has no mechanism for enforcing resolutions",
+        "The five permanent members each have veto power, which can block collective action",
+        "It has too many members to reach any decisions",
+        "It lacks the authority to authorize peacekeeping missions"
+      ],
+      "answer": "B",
+      "explanation": "The P5 veto (held by the US, UK, France, Russia, and China) often paralyzes the UNSC, preventing action on crises where a permanent member has strategic interests at stake.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Which of the following best captures the meaning of 'globalization'?",
+      "options": [
+        "The spread of American culture worldwide",
+        "The increasing interconnection of economies, cultures, and politics across national borders",
+        "The process by which all nations adopt the same government",
+        "The growth of military alliances"
+      ],
+      "answer": "B",
+      "explanation": "Globalization refers to the accelerating integration of markets, cultures, technologies, and governance across national boundaries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "'Hyperglobalists' argue that globalization:",
+      "options": [
+        "Has had minimal impact on the world economy",
+        "Is creating a borderless global economy that is transforming or eroding state power",
+        "Benefits only developed countries",
+        "Is slowing down due to rising nationalism"
+      ],
+      "answer": "B",
+      "explanation": "Hyperglobalists believe globalization is producing a qualitatively new global economy in which national borders matter much less than they once did.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Which of the following is a commonly cited cost of globalization for workers in developed countries?",
+      "options": [
+        "Higher wages due to increased exports",
+        "Job offshoring and wage competition with lower-cost labor markets",
+        "Greater environmental regulation",
+        "Reduced national debt"
+      ],
+      "answer": "B",
+      "explanation": "Globalization has enabled companies to relocate manufacturing to countries with lower labor costs, displacing workers in wealthier nations and contributing to wage stagnation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Cultural globalization is best exemplified by:",
+      "options": [
+        "The creation of the International Monetary Fund",
+        "The worldwide spread of cultural products like music, films, and fast food brands",
+        "The increase in military spending by all nations",
+        "Stricter border controls in Western Europe"
+      ],
+      "answer": "B",
+      "explanation": "Cultural globalization involves the spread of ideas, values, entertainment, and consumer products (e.g., Hollywood films, social media, fast food) across national borders.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "The concept of the 'global supply chain' refers to:",
+      "options": [
+        "A single factory that produces all parts of a product",
+        "The multinational network of production, sourcing, and distribution that creates a finished product",
+        "Government ownership of international transportation",
+        "The UN's system for distributing humanitarian aid"
+      ],
+      "answer": "B",
+      "explanation": "Global supply chains distribute production processes across multiple countries, with raw materials, components, and assembly often occurring on different continents.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The principle of 'comparative advantage' in international trade argues that:",
+      "options": [
+        "Countries should produce everything they need domestically",
+        "Countries benefit by specializing in goods they can produce at relatively lower opportunity cost and trading for others",
+        "Only large economies benefit from trade",
+        "Trade always increases inequality between nations"
+      ],
+      "answer": "B",
+      "explanation": "Comparative advantage, developed by David Ricardo, holds that even if a country is less efficient at producing everything, it gains from specializing in its relatively least-costly production and trading.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Which institution was created to provide short-term loans to countries facing balance-of-payments crises?",
+      "options": [
+        "World Trade Organization",
+        "International Monetary Fund (IMF)",
+        "World Bank",
+        "OECD"
+      ],
+      "answer": "B",
+      "explanation": "The IMF was established at Bretton Woods (1944) to stabilize international exchange rates and provide short-term financial assistance to countries with balance-of-payments problems.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "A 'tariff' is best defined as:",
+      "options": [
+        "A ban on importing a specific good",
+        "A government tax on imported goods",
+        "A voluntary agreement between two countries to limit trade",
+        "A subsidy given to domestic exporters"
+      ],
+      "answer": "B",
+      "explanation": "A tariff is a tax levied on imports, raising the price of foreign goods relative to domestic products and thereby protecting domestic industries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Economic sanctions in international relations are used primarily to:",
+      "options": [
+        "Increase bilateral trade between two countries",
+        "Pressure a target country to change its behavior by restricting trade or financial access",
+        "Provide development aid to poor countries",
+        "Regulate currency exchange rates"
+      ],
+      "answer": "B",
+      "explanation": "Sanctions restrict trade, investment, or financial transactions with a target state to compel a change in behavior without using military force.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "The US-China trade war that escalated in 2018 primarily involved:",
+      "options": [
+        "Military skirmishes in the South China Sea",
+        "Each country imposing tariffs on the other's exports",
+        "China withdrawing from the WTO",
+        "A US ban on all Chinese technology companies"
+      ],
+      "answer": "B",
+      "explanation": "The Trump administration imposed tariffs on hundreds of billions of dollars of Chinese goods, and China retaliated with tariffs on US exports, escalating into a prolonged trade dispute.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The Universal Declaration of Human Rights (UDHR) was adopted by the UN General Assembly in:",
+      "options": [
+        "1919",
+        "1945",
+        "1948",
+        "1966"
+      ],
+      "answer": "C",
+      "explanation": "The UDHR was adopted on December 10, 1948, and established a common standard of fundamental human rights for all peoples and nations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Human rights are described as 'universal' because:",
+      "options": [
+        "They apply only to citizens of democratic states",
+        "They belong to all human beings regardless of nationality, ethnicity, religion, or other status",
+        "They must be ratified by each country's parliament to apply",
+        "They only protect political and civil rights, not economic or social rights"
+      ],
+      "answer": "B",
+      "explanation": "The universality principle holds that human rights apply to every person simply by virtue of being human, not contingent on citizenship or government approval.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "The International Criminal Court (ICC) was established to:",
+      "options": [
+        "Resolve trade disputes between states",
+        "Prosecute individuals for genocide, war crimes, and crimes against humanity",
+        "Replace the UN Security Council",
+        "Impose economic sanctions on violating states"
+      ],
+      "answer": "B",
+      "explanation": "The ICC, established by the Rome Statute (1998), prosecutes individuals (including heads of state) for the most serious international crimes when national courts fail to do so.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "A key tension in human rights enforcement in IR is between:",
+      "options": [
+        "Free trade and protectionism",
+        "State sovereignty and the right of intervention to protect civilians",
+        "Nuclear deterrence and conventional warfare",
+        "Multilateralism and bilateral agreements"
+      ],
+      "answer": "B",
+      "explanation": "States invoke sovereignty to resist external interference, while human rights advocates argue the international community has obligations to protect populations from atrocities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Which of the following best characterizes the international human rights regime's main weakness?",
+      "options": [
+        "Too many enforceable treaties",
+        "Lack of a powerful enforcement mechanism with binding authority over states",
+        "Complete consensus among major powers on human rights norms",
+        "The existence of too many human rights organizations"
+      ],
+      "answer": "B",
+      "explanation": "International human rights law relies heavily on naming and shaming, voluntary compliance, and occasional Security Council action — there is no standing enforcement authority that can compel powerful states.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Which theoretical perspective would most emphasize the security dilemma as a cause of war?",
+      "options": [
+        "Liberalism",
+        "Constructivism",
+        "Realism",
+        "Marxism"
+      ],
+      "answer": "C",
+      "explanation": "Realists argue the security dilemma — where one state's defensive buildup makes others feel less secure, triggering arms races — is a structural cause of conflict inherent in anarchy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "An 'intrastate conflict' is one that occurs:",
+      "options": [
+        "Between two or more sovereign states",
+        "Within the borders of a single state (civil war)",
+        "Between a state and an international organization",
+        "Across multiple continents simultaneously"
+      ],
+      "answer": "B",
+      "explanation": "Intrastate conflicts (civil wars, insurgencies) occur within a country's borders, often between a government and non-state armed groups, as opposed to interstate wars between countries.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "The 'diversionary war' theory suggests that leaders may use military conflict to:",
+      "options": [
+        "Secure access to natural resources",
+        "Distract the public from domestic political problems and rally national support",
+        "Fulfill treaty obligations",
+        "Balance power against a rising rival"
+      ],
+      "answer": "B",
+      "explanation": "Diversionary war theory holds that leaders facing domestic unrest or declining popularity may initiate external conflict to boost nationalist sentiment and deflect attention from internal problems.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Kenneth Waltz identified which three 'images' as causes of war?",
+      "options": [
+        "Technology, ideology, and economics",
+        "Human nature, state structure, and the international system",
+        "Leadership, alliances, and arms races",
+        "Religion, ethnicity, and resources"
+      ],
+      "answer": "B",
+      "explanation": "In Man, the State and War (1959), Waltz argued war stems from human nature (first image), domestic political structures (second image), or the anarchic structure of the international system (third image).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Which of the following is a key explanation for why the 2022 Russian invasion of Ukraine occurred?",
+      "options": [
+        "Ukraine attacked Russia first",
+        "Russia sought to prevent NATO expansion and reassert control over its 'near abroad'",
+        "The United Nations authorized the invasion",
+        "Ukraine had nuclear weapons that threatened Russia"
+      ],
+      "answer": "B",
+      "explanation": "Russia cited NATO expansion toward its borders and the need to 'denazify' Ukraine as justifications; IR scholars emphasize Russia's security concerns and imperial ambitions regarding former Soviet space.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Which of the following is NOT a traditional tool of foreign policy?",
+      "options": [
+        "Military force (coercion)",
+        "Economic aid",
+        "Diplomatic negotiation",
+        "Domestic taxation policy"
+      ],
+      "answer": "D",
+      "explanation": "Domestic taxation is an internal fiscal policy tool; foreign policy tools include military force, economic instruments (aid, sanctions, trade), and diplomatic engagement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Joseph Nye's concept of 'soft power' refers to:",
+      "options": [
+        "Military superiority over rivals",
+        "The ability to influence others through attraction, culture, and values rather than coercion",
+        "Economic sanctions as a coercive tool",
+        "Nuclear deterrence"
+      ],
+      "answer": "B",
+      "explanation": "Soft power is the ability to shape others' preferences through cultural appeal, political values, and foreign policy legitimacy, rather than through military force or economic pressure (hard power).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "The Cuban Missile Crisis (1962) was resolved primarily through:",
+      "options": [
+        "US military invasion of Cuba",
+        "UN peacekeeping forces deployed to Cuba",
+        "Secret diplomacy between Kennedy and Khrushchev leading to a mutual withdrawal of missiles",
+        "A formal declaration of war that was quickly rescinded"
+      ],
+      "answer": "C",
+      "explanation": "The crisis ended when the US agreed not to invade Cuba and secretly to remove Jupiter missiles from Turkey, while the USSR removed its missiles from Cuba — a diplomatic solution reached through back-channel negotiations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Which domestic actor has the most formal authority over US foreign policy?",
+      "options": [
+        "The CIA",
+        "The Secretary of State",
+        "The President, as Commander-in-Chief and chief diplomat",
+        "The Senate Armed Services Committee"
+      ],
+      "answer": "C",
+      "explanation": "The US Constitution grants the President authority as Commander-in-Chief and primary conduct of foreign relations, though Congress retains powers to declare war and ratify treaties.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Multilateral diplomacy differs from bilateral diplomacy in that:",
+      "options": [
+        "It involves only two countries",
+        "It involves three or more states negotiating collectively",
+        "It excludes international organizations",
+        "It requires military backing to be effective"
+      ],
+      "answer": "B",
+      "explanation": "Multilateral diplomacy involves three or more countries working together (e.g., UN negotiations, climate conferences), as opposed to bilateral diplomacy between two states.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Which concept describes a state's ability to get others to do what it wants through incentives or military strength?",
+      "options": [
+        "Soft power",
+        "Hard power",
+        "Smart power",
+        "Structural power"
+      ],
+      "answer": "B",
+      "explanation": "Hard power involves using military force or economic coercion (carrots and sticks) to compel or induce desired behavior from other states.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "China's Belt and Road Initiative (BRI) is primarily an example of:",
+      "options": [
+        "Military expansion into neighboring countries",
+        "An economic and infrastructure investment strategy to extend China's global influence",
+        "A nuclear deterrence program",
+        "A United Nations humanitarian aid program"
+      ],
+      "answer": "B",
+      "explanation": "The BRI involves Chinese investment in ports, railways, and energy infrastructure across Asia, Africa, and Europe, expanding China's economic relationships and geopolitical influence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "The European Union's foreign policy is often described as 'civilian power' because:",
+      "options": [
+        "The EU has the world's largest military",
+        "The EU primarily uses economic tools, diplomacy, and norms rather than military force to pursue its interests",
+        "All EU members have nuclear weapons",
+        "The EU never participates in international negotiations"
+      ],
+      "answer": "B",
+      "explanation": "The EU relies heavily on trade agreements, enlargement conditionality, development aid, and multilateral diplomacy, rather than military coercion, as its primary foreign policy instruments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "The US 'pivot to Asia' (also called 'rebalance') under the Obama administration was motivated primarily by:",
+      "options": [
+        "A desire to withdraw from all international commitments",
+        "Growing recognition of China's rising power and the strategic importance of the Asia-Pacific region",
+        "A treaty obligation to Japan and South Korea",
+        "Domestic pressure from American manufacturers"
+      ],
+      "answer": "B",
+      "explanation": "The pivot aimed to shift US diplomatic, economic, and military attention toward Asia in response to China's expanding regional and global influence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "A 'unipolar' international system describes a world where:",
+      "options": [
+        "Power is roughly equal among many states",
+        "Two superpowers dominate (bipolarity)",
+        "One state exercises overwhelming preponderant power",
+        "No state has significant military or economic power"
+      ],
+      "answer": "C",
+      "explanation": "Unipolarity describes a system dominated by a single superpower (the US after the Cold War), contrasted with the bipolar Cold War and the pre-WWI multipolar system.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The Arab-Israeli conflict is rooted primarily in:",
+      "options": [
+        "Competing religious, nationalist, and territorial claims to the same land",
+        "A dispute over oil revenues",
+        "Cold War proxy competition between the US and USSR",
+        "A trade dispute over Mediterranean fishing rights"
+      ],
+      "answer": "A",
+      "explanation": "The conflict stems from overlapping nationalist movements (Zionism and Palestinian nationalism), competing claims to the same territory, and broader Arab-Israeli tensions over land, refugees, and Jerusalem.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Which of the following countries claims sovereignty over most of the South China Sea?",
+      "options": [
+        "Vietnam",
+        "The Philippines",
+        "China (People's Republic)",
+        "Japan"
+      ],
+      "answer": "C",
+      "explanation": "China claims approximately 90% of the South China Sea based on its 'nine-dash line,' overlapping with the exclusive economic zones of Vietnam, the Philippines, Malaysia, Brunei, and Indonesia.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "ASEAN (Association of Southeast Asian Nations) is primarily designed to:",
+      "options": [
+        "Create a military alliance against China",
+        "Promote regional economic integration, political cooperation, and peaceful dispute resolution in Southeast Asia",
+        "Serve as a UN Security Council alternative",
+        "Coordinate nuclear policy in Asia"
+      ],
+      "answer": "B",
+      "explanation": "ASEAN was founded in 1967 to promote regional stability, economic growth, and cooperation among its 10 Southeast Asian member states, emphasizing non-interference and consensus.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "The 2003 US-led invasion of Iraq was controversial in IR partly because:",
+      "options": [
+        "Iraq had attacked the United States first",
+        "It lacked a UN Security Council authorization and was based on contested intelligence about WMDs",
+        "It was a purely humanitarian intervention with no political motives",
+        "All NATO allies supported it unanimously"
+      ],
+      "answer": "B",
+      "explanation": "The invasion was conducted without explicit UN authorization and was justified by claims of Iraqi WMD programs that proved unfounded, raising serious questions about international law and intelligence manipulation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "In the context of the Middle East, 'sectarianism' refers to:",
+      "options": [
+        "Economic competition between oil-producing states",
+        "Political conflict along religious sectarian lines (e.g., Sunni vs. Shia Islam)",
+        "Border disputes between Arab states",
+        "Competition for influence between Turkey and Israel"
+      ],
+      "answer": "B",
+      "explanation": "Sectarian divisions between Sunni and Shia Muslims have fueled conflicts in Iraq, Syria, Bahrain, Lebanon, and Yemen, often exploited by external powers like Saudi Arabia and Iran.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Which of the following is a defining characteristic of a democratic political system?",
+      "options": [
+        "A single-party state with centralized power",
+        "Rule by a hereditary monarchy with no elections",
+        "Free and fair elections, protection of civil liberties, and accountability of government to citizens",
+        "Government control of all media"
+      ],
+      "answer": "C",
+      "explanation": "Democracy is characterized by competitive elections, civil and political rights, rule of law, and mechanisms of accountability such as free press and independent judiciary.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "'Democratic backsliding' refers to:",
+      "options": [
+        "A country transitioning from authoritarianism to democracy",
+        "The gradual erosion of democratic norms and institutions within a nominally democratic state",
+        "A military coup overthrowing a democratic government overnight",
+        "Voter apathy reducing election turnout"
+      ],
+      "answer": "B",
+      "explanation": "Democratic backsliding describes how elected leaders gradually undermine checks and balances, curtail press freedom, and weaken independent institutions while maintaining a facade of democratic legitimacy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Freedom House classifies countries annually as 'Free,' 'Partly Free,' or 'Not Free' based on:",
+      "options": [
+        "GDP per capita",
+        "Military strength",
+        "Political rights and civil liberties",
+        "UN Security Council membership"
+      ],
+      "answer": "C",
+      "explanation": "Freedom House evaluates political rights (electoral process, political pluralism, functioning of government) and civil liberties (freedom of expression, association, rule of law, personal autonomy).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Authoritarian states often use which of the following to maintain political control?",
+      "options": [
+        "Free press and open elections",
+        "Surveillance, censorship, co-optation of elites, and repression of opposition",
+        "Independent judiciaries and strong civil society",
+        "Term limits for leaders"
+      ],
+      "answer": "B",
+      "explanation": "Authoritarian regimes typically combine repression (jailing opponents, banning protests) with co-optation (rewarding loyalists), surveillance, and propaganda to maintain power.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Hungary under Viktor Orbán is often cited as an example of 'competitive authoritarianism' because:",
+      "options": [
+        "Hungary abolished all elections",
+        "Elections still occur but the playing field is systematically tilted in favor of the ruling party",
+        "Hungary left the European Union",
+        "The Hungarian military controls the government"
+      ],
+      "answer": "B",
+      "explanation": "In competitive authoritarianism, elections are held but the incumbent uses state resources, media control, and legal manipulation to disadvantage opponents, making genuine democratic competition very difficult.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Why is climate change considered a 'collective action problem' in international relations?",
+      "options": [
+        "Because climate change only affects a few countries",
+        "Because each state has an incentive to free-ride on others' emissions reductions while enjoying the shared benefit of a stable climate",
+        "Because the technology to address climate change does not yet exist",
+        "Because only wealthy states emit greenhouse gases"
+      ],
+      "answer": "B",
+      "explanation": "The atmosphere is a global public good; each state prefers others to bear the cost of emissions reductions while it continues benefiting, making voluntary international cooperation extremely difficult.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "The Paris Agreement (2015) differs from the Kyoto Protocol primarily in that:",
+      "options": [
+        "It focuses only on developed countries' emissions",
+        "It uses nationally determined contributions (NDCs) rather than binding emissions targets set by international agreement",
+        "It was ratified by fewer countries",
+        "It does not address climate finance"
+      ],
+      "answer": "B",
+      "explanation": "Unlike Kyoto's top-down binding targets for developed countries, the Paris Agreement uses a bottom-up approach in which each country sets its own voluntary NDCs, aiming for collective warming limits.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Which IR concept explains why states may resist environmental regulations to protect national economic competitiveness?",
+      "options": [
+        "Liberal institutionalism",
+        "Comparative advantage",
+        "Sovereignty and national interest",
+        "Constructivism"
+      ],
+      "answer": "C",
+      "explanation": "States prioritizing national economic interests may resist international environmental rules they see as costly burdens, reflecting a realist logic of protecting sovereign economic policy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Environmental NGOs such as Greenpeace play what role in global environmental governance?",
+      "options": [
+        "They have formal voting power in UN climate negotiations",
+        "They pressure states, raise public awareness, and hold governments accountable through naming and shaming",
+        "They set legally binding emissions standards",
+        "They provide military enforcement of environmental treaties"
+      ],
+      "answer": "B",
+      "explanation": "Environmental NGOs participate as observers in negotiations, mobilize public opinion, conduct research, and use publicity campaigns to increase political costs for states that fail to act.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "The term 'climate justice' refers to:",
+      "options": [
+        "Legal punishment of polluters in domestic courts",
+        "The argument that climate burdens fall disproportionately on vulnerable, low-emitting countries that least caused the problem",
+        "A UN court that adjudicates climate disputes",
+        "Equal emissions allowances for all states"
+      ],
+      "answer": "B",
+      "explanation": "Climate justice highlights that low-income and developing nations — which emit far less historically — face the worst climate impacts, raising ethical questions about responsibility, compensation, and adaptation finance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "A 'transnational' challenge is one that:",
+      "options": [
+        "Can be solved by a single powerful state acting alone",
+        "Crosses national borders and cannot be effectively addressed by any one state alone",
+        "Only affects military alliances",
+        "Is limited to economic inequality within states"
+      ],
+      "answer": "B",
+      "explanation": "Transnational problems like pandemics, cybersecurity threats, climate change, and terrorism cross borders and require collective international responses that no state can achieve unilaterally.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Nuclear non-proliferation efforts are primarily coordinated through:",
+      "options": [
+        "The World Trade Organization",
+        "The Non-Proliferation Treaty (NPT) and the International Atomic Energy Agency (IAEA)",
+        "The G7 summit",
+        "NATO's nuclear sharing arrangements"
+      ],
+      "answer": "B",
+      "explanation": "The NPT (1970) is the cornerstone non-proliferation treaty, and the IAEA conducts inspections and monitors compliance with nuclear safeguards commitments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "The COVID-19 pandemic demonstrated which key feature of contemporary world politics?",
+      "options": [
+        "States are fully capable of handling global crises alone",
+        "Global interdependence means that health crises rapidly become political and economic crises across all nations",
+        "International organizations were more effective than bilateral arrangements",
+        "Only authoritarian states were affected by the pandemic"
+      ],
+      "answer": "B",
+      "explanation": "COVID-19 showed that a health crisis originating in one country rapidly spread globally, disrupting supply chains, economies, and political systems worldwide, illustrating deep interdependence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Cybersecurity is a growing international concern because:",
+      "options": [
+        "All cyber attacks are conducted by rogue individuals, not states",
+        "States increasingly use cyberattacks as tools of espionage, coercion, and disruption of critical infrastructure",
+        "Only democracies are vulnerable to cyber threats",
+        "Existing international law fully covers cyber warfare"
+      ],
+      "answer": "B",
+      "explanation": "State-sponsored cyberattacks (against elections, infrastructure, military systems) have become a major tool of modern geopolitical competition, yet international norms and laws governing cyberspace remain underdeveloped.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Which approach would a liberal institutionalist recommend for addressing transnational challenges like pandemics or climate change?",
+      "options": [
+        "Each state developing its own unilateral solution",
+        "Strengthening international institutions, treaties, and multilateral cooperation mechanisms",
+        "Allowing market forces alone to solve global problems",
+        "Using military power to force compliance from non-cooperating states"
+      ],
+      "answer": "B",
+      "explanation": "Liberal institutionalists argue that international institutions lower transaction costs, provide information, and create reciprocal obligations that enable states to cooperate on collective problems they cannot solve alone.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best defines the field of international relations?",
+      "options": [
+        "Study of domestic political systems only",
+        "Study of interactions among states and non-state actors in the global arena",
+        "Study of international law enforcement",
+        "Study of economic development in poor countries"
+      ],
+      "answer": "B",
+      "explanation": "IR examines political, economic, security, and cultural interactions among states, international organizations, and non-state actors across national borders.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The Peace of Westphalia (1648) is significant in IR because it:",
+      "options": [
+        "Created the United Nations",
+        "Established the principle of state sovereignty as the foundation of the international order",
+        "Ended World War II",
+        "Created the first international trade agreement"
+      ],
+      "answer": "B",
+      "explanation": "Westphalia established that rulers had exclusive authority within their territories, founding the modern state-centric international system.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "The four Montevideo criteria for statehood include permanent population, defined territory, effective government, and:",
+      "options": [
+        "UN membership",
+        "Nuclear weapons",
+        "Capacity to enter into relations with other states",
+        "A democratic constitution"
+      ],
+      "answer": "C",
+      "explanation": "The Montevideo Convention (1933) defines statehood by these four criteria, the last being the capacity to conduct international relations.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Realism in IR assumes that the international system is characterized by:",
+      "options": [
+        "Strong international governance and rule of law",
+        "Anarchy — the absence of a world government — forcing states to rely on self-help",
+        "Natural harmony of interests among states",
+        "Declining importance of military power"
+      ],
+      "answer": "B",
+      "explanation": "Realism's foundational premise is anarchy: no superior authority exists above states, so they must provide for their own security.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Liberal IR theory emphasizes which of the following as a source of international peace?",
+      "options": [
+        "Military balancing and deterrence",
+        "Economic interdependence, democracy, and international institutions",
+        "The natural harmony between great powers",
+        "Cultural homogeneity among states"
+      ],
+      "answer": "B",
+      "explanation": "Liberals argue that trade, democratic governance, and institutions create shared interests and reduce the incentive for conflict.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "The UN Security Council's five permanent members each possess:",
+      "options": [
+        "The ability to deploy unlimited peacekeeping troops unilaterally",
+        "Veto power over substantive resolutions",
+        "The authority to amend the UN Charter alone",
+        "Special trade privileges under WTO rules"
+      ],
+      "answer": "B",
+      "explanation": "The P5 veto allows any permanent member (US, UK, France, Russia, China) to block any substantive UNSC resolution, often paralyzing collective action.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "NATO's founding collective defense principle (Article 5) states that:",
+      "options": [
+        "All member states must increase defense spending to 2% of GDP",
+        "An attack on one member is considered an attack on all",
+        "Members may not deploy troops outside their borders",
+        "NATO requires unanimous consent to admit new members"
+      ],
+      "answer": "B",
+      "explanation": "Article 5 is NATO's core commitment: an armed attack against any member is treated as an attack against the entire alliance, triggering collective response.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Globalization's 'skeptics' (as defined by Held and McGrew) argue that:",
+      "options": [
+        "Globalization is unprecedented and fully eroding state power",
+        "Globalization is not new and states remain the dominant actors in the world economy",
+        "Globalization benefits all countries equally",
+        "Cultural globalization is more significant than economic globalization"
+      ],
+      "answer": "B",
+      "explanation": "Skeptics argue that levels of global economic integration are no greater than in earlier periods (e.g., pre-WWI), and that states retain primary control over their economies.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "The World Trade Organization (WTO) primarily:",
+      "options": [
+        "Provides humanitarian assistance",
+        "Sets global trade rules and adjudicates trade disputes",
+        "Finances infrastructure in developing countries",
+        "Coordinates military alliances"
+      ],
+      "answer": "B",
+      "explanation": "The WTO establishes trade rules, facilitates trade negotiations, and provides a binding dispute settlement system for its 164+ member states.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Which of the following is the best example of 'soft power' in international relations?",
+      "options": [
+        "The US imposing sanctions on Iran",
+        "China deploying warships in the South China Sea",
+        "South Korean pop culture (K-pop) building a favorable image of Korea globally",
+        "NATO conducting military exercises in Eastern Europe"
+      ],
+      "answer": "C",
+      "explanation": "Soft power works through cultural attraction and positive image; K-pop's global popularity enhances South Korea's international reputation without coercion.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The Universal Declaration of Human Rights is:",
+      "options": [
+        "A legally binding treaty that states must implement",
+        "A non-binding declaration adopted by the UN General Assembly in 1948 establishing universal human rights standards",
+        "A document signed only by Western democracies",
+        "A military agreement for protecting civilians in wartime"
+      ],
+      "answer": "B",
+      "explanation": "The UDHR is a declaration, not a treaty — it is not legally binding per se, but it has enormous moral authority and has shaped subsequent binding human rights treaties.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "The 'security dilemma' in international relations refers to:",
+      "options": [
+        "The difficulty of recruiting soldiers for all-volunteer armies",
+        "The situation where a state's defensive military buildup makes other states feel less secure, triggering a spiral",
+        "A shortage of nuclear weapons materials",
+        "The challenge of coordinating military alliances"
+      ],
+      "answer": "B",
+      "explanation": "The security dilemma arises from uncertainty about intentions: one state's arms buildup can appear threatening to others, who respond in kind, generating insecurity despite defensive motives.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "The Cuban Missile Crisis was resolved primarily through:",
+      "options": [
+        "US military strikes against Soviet missile sites",
+        "US invasion of Cuba",
+        "Diplomatic negotiations leading to mutual concessions on missiles",
+        "A UN peacekeeping force deployed to Cuba"
+      ],
+      "answer": "C",
+      "explanation": "The crisis ended diplomatically: the US promised not to invade Cuba (and secretly agreed to remove Jupiter missiles from Turkey), while the USSR withdrew its missiles from Cuba.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "A 'comparative advantage' in international trade means a country should specialize in goods:",
+      "options": [
+        "Where it produces more than any other country",
+        "It can produce at a relatively lower opportunity cost than trading partners",
+        "That require the most advanced technology",
+        "That it has historically produced, regardless of efficiency"
+      ],
+      "answer": "B",
+      "explanation": "Comparative advantage — not absolute advantage — determines trade specialization: even an inefficient producer gains from specializing in its least-costly goods and trading.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Constructivist IR theory argues that the interests of states are:",
+      "options": [
+        "Fixed and determined by geography and power",
+        "Socially constructed through interaction, ideas, and shared norms",
+        "Solely determined by economic resources",
+        "Identical across all democratic states"
+      ],
+      "answer": "B",
+      "explanation": "Constructivists (e.g., Wendt) hold that identities and interests are not given by material factors but emerge from social interaction and the norms states develop in the international system.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Which level of analysis focuses on how the structure of the international system (anarchy, polarity) shapes state behavior?",
+      "options": [
+        "Individual level",
+        "State/domestic level",
+        "Systemic level",
+        "Bureaucratic level"
+      ],
+      "answer": "C",
+      "explanation": "The systemic (third-image) level analyzes how international structure — particularly anarchy and the distribution of power — constrains and shapes state behavior regardless of domestic politics.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Which doctrine holds that the international community may intervene to protect civilians when a state commits mass atrocities?",
+      "options": [
+        "Monroe Doctrine",
+        "Truman Doctrine",
+        "Responsibility to Protect (R2P)",
+        "Reagan Doctrine"
+      ],
+      "answer": "C",
+      "explanation": "R2P (adopted at the 2005 World Summit) holds that sovereignty entails responsibility; when states fail to protect their populations, the international community has the right to intervene.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "The Democratic Peace Theory predicts that:",
+      "options": [
+        "All democracies are pacifist and never go to war",
+        "Democracies rarely fight each other, though they do fight non-democracies",
+        "Democracy leads to more international trade but not less conflict",
+        "Authoritarian states are less likely to initiate wars"
+      ],
+      "answer": "B",
+      "explanation": "The empirical pattern shows wars between established democracies are historically rare, while democracies do engage in wars with non-democratic states.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Which of the following best describes China's Belt and Road Initiative?",
+      "options": [
+        "A military alliance including China and its neighbors",
+        "A Chinese-funded infrastructure investment network spanning Asia, Africa, and Europe",
+        "A UN-sponsored development program",
+        "A free trade agreement between China and ASEAN"
+      ],
+      "answer": "B",
+      "explanation": "The BRI involves Chinese financing of ports, railways, highways, and energy infrastructure in over 140 countries, extending Chinese economic influence and geopolitical reach.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "The Paris Agreement's nationally determined contributions (NDCs) are:",
+      "options": [
+        "Legally binding emissions targets imposed by an international authority",
+        "Voluntary commitments each country sets for itself on climate action",
+        "UN Security Council resolutions on climate",
+        "Fixed per-capita emissions quotas for all member states"
+      ],
+      "answer": "B",
+      "explanation": "NDCs are self-set national pledges; the Paris Agreement creates transparency and review mechanisms but cannot force countries to meet specific targets.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "'Democratic backsliding' is best described as:",
+      "options": [
+        "A rapid military coup overthrowing democracy overnight",
+        "Gradual erosion of democratic norms and institutions by elected leaders",
+        "Citizens voting to become a monarchy",
+        "A country that never had democratic institutions"
+      ],
+      "answer": "B",
+      "explanation": "Democratic backsliding occurs incrementally as elected leaders weaken checks and balances, restrict press freedom, and undermine judicial independence while maintaining a veneer of electoral legitimacy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "The South China Sea dispute primarily involves China's claim to:",
+      "options": [
+        "All islands and waters within its 'nine-dash line,' overlapping with the EEZs of multiple neighboring states",
+        "Military bases only, with no economic claims",
+        "Only the Spratly Islands, not the Paracel Islands",
+        "All waters east of Japan"
+      ],
+      "answer": "A",
+      "explanation": "China's nine-dash line claims approximately 90% of the South China Sea, conflicting with the EEZs and territorial claims of Vietnam, the Philippines, Malaysia, Brunei, and Indonesia.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The Non-Proliferation Treaty (NPT) is designed to:",
+      "options": [
+        "Eliminate all nuclear weapons immediately",
+        "Prevent the spread of nuclear weapons while allowing peaceful nuclear energy use",
+        "Ban conventional weapons trade",
+        "Establish nuclear-weapon-free zones only in Europe"
+      ],
+      "answer": "B",
+      "explanation": "The NPT (1970) commits non-nuclear states not to acquire weapons, nuclear states to disarm eventually, and allows all signatories to pursue peaceful nuclear energy with IAEA safeguards.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "A collective action problem arises when:",
+      "options": [
+        "A state can solve a problem entirely on its own",
+        "Individual states have incentives to free-ride on others' contributions to a shared good",
+        "International organizations have too much authority",
+        "States have identical preferences and cooperate naturally"
+      ],
+      "answer": "B",
+      "explanation": "Collective action problems occur because each actor can benefit from the collective good (clean air, pandemic control) without paying the cost, undermining cooperative solutions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Economic sanctions imposed by the US on Russia following the 2022 invasion of Ukraine are an example of which foreign policy tool?",
+      "options": [
+        "Military hard power",
+        "Economic coercive statecraft",
+        "Diplomatic recognition withdrawal",
+        "Humanitarian intervention"
+      ],
+      "answer": "B",
+      "explanation": "Economic sanctions (asset freezes, trade restrictions, financial exclusion) are coercive economic instruments used to impose costs on Russia without direct military engagement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which international institution provides short-term loans to countries facing balance-of-payments crises?",
+      "options": [
+        "World Bank",
+        "WTO",
+        "International Monetary Fund (IMF)",
+        "OECD"
+      ],
+      "answer": "C",
+      "explanation": "The IMF was established at Bretton Woods to stabilize international monetary exchange and provide conditional emergency lending to countries with balance-of-payments difficulties.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "The Arab Spring (2010–2011) is best described in IR terms as:",
+      "options": [
+        "A coordinated military coup organized by external powers",
+        "A wave of popular uprisings against authoritarian regimes across the Middle East and North Africa",
+        "A new economic integration initiative in the Arab world",
+        "A regional reaction to the 2008 global financial crisis only"
+      ],
+      "answer": "B",
+      "explanation": "The Arab Spring saw mass protests and uprisings in Tunisia, Egypt, Libya, Syria, Yemen, and elsewhere, driven by demands for democratic reform, human rights, and economic opportunity.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Which framework best explains why states struggle to cooperate on controlling greenhouse gas emissions?",
+      "options": [
+        "Balance of power theory",
+        "Collective action problem / free-rider problem",
+        "Democratic peace theory",
+        "Constructivist identity theory"
+      ],
+      "answer": "B",
+      "explanation": "The atmosphere is a global commons; each state benefits from others' emissions reductions while facing incentives to avoid its own costly cuts — a classic free-rider problem.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Joseph Nye's concept of 'smart power' combines:",
+      "options": [
+        "Nuclear and conventional military capabilities",
+        "Hard power (military and economic coercion) and soft power (attraction and legitimacy)",
+        "Bilateral and multilateral diplomacy",
+        "Economic development and military deterrence"
+      ],
+      "answer": "B",
+      "explanation": "Smart power is Nye's term for strategically combining hard power instruments (military force, sanctions) with soft power tools (cultural diplomacy, alliances, multilateral engagement).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Which of the following is a major reason international human rights enforcement remains weak?",
+      "options": [
+        "There are too few human rights treaties",
+        "Most human rights violations occur only in small countries",
+        "Sovereignty norms limit external interference, and no standing enforcement body has authority over powerful states",
+        "Human rights are not recognized in international law"
+      ],
+      "answer": "C",
+      "explanation": "While international human rights law has developed substantially, enforcement is hampered by the sovereignty norm, P5 vetoes in the Security Council, and the lack of a powerful standing enforcement mechanism.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "The 'diversionary war' theory suggests military conflict may be initiated to:",
+      "options": [
+        "Fulfill treaty obligations",
+        "Acquire natural resources from weaker states",
+        "Distract domestic audiences from internal political problems",
+        "Test new military technology"
+      ],
+      "answer": "C",
+      "explanation": "Diversionary theory proposes that leaders facing domestic political pressure (economic crisis, scandal) may initiate international conflict to rally public support and shift attention outward.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "ASEAN's principle of non-interference means that:",
+      "options": [
+        "ASEAN has a common military command",
+        "Member states do not criticize each other's domestic affairs as a condition of regional cooperation",
+        "ASEAN controls member states' foreign policies",
+        "ASEAN members pool their sovereignty like the EU"
+      ],
+      "answer": "B",
+      "explanation": "ASEAN's 'ASEAN Way' emphasizes consensus, respect for sovereignty, and non-interference in member states' internal affairs, which limits collective action on human rights or democratic governance.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "The International Criminal Court (ICC) has jurisdiction over:",
+      "options": [
+        "Trade disputes between states",
+        "Territorial claims in international waters",
+        "Individuals accused of genocide, war crimes, and crimes against humanity",
+        "Violations of international environmental law"
+      ],
+      "answer": "C",
+      "explanation": "The ICC prosecutes individuals — not states — for the most serious international crimes, stepping in when national courts are unwilling or unable to do so.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Which best characterizes the current international order (as of the 2020s)?",
+      "options": [
+        "Firmly unipolar with unchallenged US dominance",
+        "Strictly bipolar with the US and China in an equal standoff",
+        "Increasingly multipolar with rising powers challenging US primacy",
+        "Fully multilateral with international institutions governing state behavior"
+      ],
+      "answer": "C",
+      "explanation": "The post-Cold War unipolar moment is ending as China, India, the EU, and regional powers gain economic and political weight, creating a more contested, multipolar distribution of power.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Which approach to global problems would a liberal institutionalist most strongly advocate?",
+      "options": [
+        "Each state developing its own unilateral solution",
+        "Military enforcement by the most powerful state",
+        "Strengthening multilateral institutions and international legal frameworks for collective action",
+        "Allowing market forces to resolve global challenges without government intervention"
+      ],
+      "answer": "C",
+      "explanation": "Liberal institutionalists believe that international organizations, treaties, and rules reduce transaction costs, facilitate information sharing, and make sustained cooperation possible on collective challenges.",
+      "points": 1
+    }
+  ]
+}

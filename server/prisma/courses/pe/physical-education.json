@@ -1,0 +1,1220 @@
+{
+  "slug": "physical-education",
+  "name": "Physical Education",
+  "nameZh": "体育教育",
+  "credits": 0.5,
+  "department": "Physical Education",
+  "type": "Core",
+  "description": "Foundational concepts in physical fitness, exercise science, and lifelong wellness habits. Students explore the five components of fitness, movement skills, sport participation, and healthy lifestyle design.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to Physical Fitness",
+      "titleZh": "体育健身入门",
+      "objectives": "Define physical fitness; identify its five health-related components; understand why each matters for lifelong health.",
+      "readingUrl": "https://www.cdc.gov/physicalactivity/basics/index.htm",
+      "readingNote": "CDC — Physical Activity Basics",
+      "videoUrl": "https://www.youtube.com/watch?v=wmqth7or9oE",
+      "videoNote": "Components of Physical Fitness Explained",
+      "video2Url": "https://www.youtube.com/watch?v=NynE4pHfNMY",
+      "video2Note": "FITT Principle Overview",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine",
+      "practiceNote": "Khan Academy — Health and Medicine",
+      "assignment": "Assess your current fitness level using all 5 components. Create a personal fitness goal statement and a one-week exercise plan.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "The FITT Principle",
+      "titleZh": "FITT原则",
+      "objectives": "Explain Frequency, Intensity, Time, and Type; apply the FITT principle to design a safe and effective personal workout program.",
+      "readingUrl": "https://www.acefitness.org/resources/everyone/blog/5593/what-is-the-fitt-principle/",
+      "readingNote": "ACE Fitness — What Is the FITT Principle?",
+      "videoUrl": "https://www.youtube.com/watch?v=NynE4pHfNMY",
+      "videoNote": "FITT Principle for Exercise",
+      "video2Url": "https://www.youtube.com/watch?v=Yqn0VrPnVMY",
+      "video2Note": "Applying FITT to Different Fitness Goals",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine/physical-health",
+      "practiceNote": "Khan Academy — Physical Health",
+      "assignment": "Design a 4-week workout program using the FITT principle targeting at least two fitness components. Justify each variable choice.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Cardiovascular Endurance",
+      "titleZh": "心肺耐力",
+      "objectives": "Define cardiovascular endurance; explain heart and lung responses to aerobic exercise; identify activities that build aerobic fitness.",
+      "readingUrl": "https://www.cdc.gov/physicalactivity/basics/adults/index.htm",
+      "readingNote": "CDC — Physical Activity for Adults",
+      "videoUrl": "https://www.youtube.com/watch?v=oB-fB_OYgF0",
+      "videoNote": "Cardiovascular Fitness Explained",
+      "video2Url": "https://www.youtube.com/watch?v=vmj8YYfGiHs",
+      "video2Note": "How Aerobic Exercise Improves Heart Health",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine/circulatory-system-diseases",
+      "practiceNote": "Khan Academy — Cardiovascular System",
+      "assignment": "Track your resting heart rate for 5 days. Complete 3 aerobic sessions; record distance, time, and perceived exertion after each.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 4,
+      "title": "Muscular Strength and Endurance",
+      "titleZh": "肌肉力量与耐力",
+      "objectives": "Distinguish muscular strength from muscular endurance; identify major muscle groups; describe resistance training principles for each quality.",
+      "readingUrl": "https://www.nsca.com/education/articles/nsca-coach/strength-training-101/",
+      "readingNote": "NSCA — Strength Training 101",
+      "videoUrl": "https://www.youtube.com/watch?v=2tM1LFFxeKg",
+      "videoNote": "Muscular Strength vs. Endurance",
+      "video2Url": "https://www.youtube.com/watch?v=OG9FMhyQVIU",
+      "video2Note": "Resistance Training Fundamentals",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/exercise-library/",
+      "practiceNote": "ACE Fitness Exercise Library",
+      "assignment": "Perform a push-up, sit-up, and wall-sit test. Record results and compare to age norms. Write a 4-week strength plan for one major muscle group.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 5,
+      "title": "Flexibility and Stretching",
+      "titleZh": "柔韧性与拉伸",
+      "objectives": "Define flexibility; distinguish static, dynamic, and PNF stretching; explain how regular stretching reduces injury risk.",
+      "readingUrl": "https://www.acefitness.org/resources/everyone/blog/6018/the-science-and-practice-of-stretching/",
+      "readingNote": "ACE Fitness — The Science and Practice of Stretching",
+      "videoUrl": "https://www.youtube.com/watch?v=g8qksTN2ikE",
+      "videoNote": "Types of Stretching Explained",
+      "video2Url": "https://www.youtube.com/watch?v=L_xrDAtykMI",
+      "video2Note": "Dynamic Warm-Up Routine",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine",
+      "practiceNote": "Khan Academy — Health and Medicine",
+      "assignment": "Perform a sit-and-reach flexibility test. Develop a 10-minute daily stretching routine. Record range-of-motion improvements over one week.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 6,
+      "title": "Body Composition",
+      "titleZh": "身体成分",
+      "objectives": "Define body composition; explain lean mass vs. fat mass; describe healthy body fat ranges and assessment methods including BMI limitations.",
+      "readingUrl": "https://www.cdc.gov/healthyweight/assessing/bmi/index.html",
+      "readingNote": "CDC — Assessing Your Weight: BMI",
+      "videoUrl": "https://www.youtube.com/watch?v=2xW1xYmq3fY",
+      "videoNote": "Body Composition Explained",
+      "video2Url": "https://www.youtube.com/watch?v=S7NRXO0yiPc",
+      "video2Note": "BMI vs. Body Fat Percentage",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/tools-calculators/",
+      "practiceNote": "ACE Fitness — BMI and Body Composition Calculators",
+      "assignment": "Calculate your BMI and research your healthy body fat range. Discuss how exercise and diet affect body composition in a one-page reflection.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Goal Setting and Fitness Plans",
+      "titleZh": "目标设定与健身计划",
+      "objectives": "Apply the SMART goal framework to fitness goals; build a structured personal training plan with measurable outcomes and timelines.",
+      "readingUrl": "https://www.cdc.gov/physicalactivity/basics/adding-pa/index.htm",
+      "readingNote": "CDC — Adding Physical Activity to Your Life",
+      "videoUrl": "https://www.youtube.com/watch?v=1-SvuFIQjK8",
+      "videoNote": "SMART Goals for Fitness",
+      "video2Url": "https://www.youtube.com/watch?v=0s99kEolBec",
+      "video2Note": "How to Create a Fitness Plan",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/blog/6763/smart-goal-setting-for-exercise/",
+      "practiceNote": "ACE Fitness — SMART Goal Setting Guide",
+      "assignment": "Write 3 SMART fitness goals (short-, medium-, and long-term). Build an 8-week training calendar addressing each goal with specific workouts.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 8,
+      "title": "Nutrition for Active People",
+      "titleZh": "运动人群的营养",
+      "objectives": "Identify macronutrients and their roles in exercise; explain pre- and post-workout nutrition strategies; apply hydration guidelines.",
+      "readingUrl": "https://www.myplate.gov/life-stages/teens",
+      "readingNote": "USDA MyPlate — Nutrition for Teens",
+      "videoUrl": "https://www.youtube.com/watch?v=UkPsS4a4jWo",
+      "videoNote": "Sports Nutrition Basics",
+      "video2Url": "https://www.youtube.com/watch?v=GEqfBUTJ_Mw",
+      "video2Note": "Hydration and Exercise Performance",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine/energy-in-our-food",
+      "practiceNote": "Khan Academy — Energy in Our Food",
+      "assignment": "Keep a 3-day food diary. Analyze macronutrient intake using a tracker. Write recommendations to improve your pre-workout nutrition.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Injury Prevention and Safety",
+      "titleZh": "运动伤害预防与安全",
+      "objectives": "Identify common exercise injuries; explain warm-up, cool-down, and proper technique as prevention strategies; describe the R.I.C.E. protocol.",
+      "readingUrl": "https://www.niams.nih.gov/health-topics/sports-injuries",
+      "readingNote": "NIAMS — Sports Injuries Overview",
+      "videoUrl": "https://www.youtube.com/watch?v=DEFe6V5t7xo",
+      "videoNote": "Common Sports Injuries and How to Prevent Them",
+      "video2Url": "https://www.youtube.com/watch?v=BCT3c6PEi7w",
+      "video2Note": "RICE Method for Sports Injuries",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/blog/7093/how-to-prevent-common-exercise-injuries/",
+      "practiceNote": "ACE Fitness — How to Prevent Common Exercise Injuries",
+      "assignment": "Create a one-page injury prevention plan for a sport of your choice. Include warm-up, cool-down, technique tips, and equipment checklist.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 10,
+      "title": "Team Sports Fundamentals",
+      "titleZh": "团队运动基础",
+      "objectives": "Describe rules, positions, and basic strategies for at least two team sports; explain the value of teamwork and sportsmanship.",
+      "readingUrl": "https://www.active.com/team-sports",
+      "readingNote": "Active.com — Team Sports Overview",
+      "videoUrl": "https://www.youtube.com/watch?v=Ky26GWtXA5E",
+      "videoNote": "Teamwork in Sport",
+      "video2Url": "https://www.youtube.com/watch?v=7Wkubf1PrWg",
+      "video2Note": "Basketball Fundamentals for Beginners",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine",
+      "practiceNote": "Khan Academy — Health and Medicine",
+      "assignment": "Participate in two team sport activities. Write a 300-word analysis of teamwork dynamics and your personal contribution and sportsmanship.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Individual Sports and Lifetime Activities",
+      "titleZh": "个人运动与终身体育活动",
+      "objectives": "Identify a variety of individual sports and lifetime physical activities; explain how participation can be maintained safely into adulthood.",
+      "readingUrl": "https://www.cdc.gov/physicalactivity/basics/adults/index.htm",
+      "readingNote": "CDC — Physical Activity Guidelines for Adults",
+      "videoUrl": "https://www.youtube.com/watch?v=eLb1HRy5ADM",
+      "videoNote": "Benefits of Lifetime Physical Activity",
+      "video2Url": "https://www.youtube.com/watch?v=vNL49JG8hzg",
+      "video2Note": "Tennis Fundamentals for Beginners",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/blog/6563/lifetime-fitness-activities/",
+      "practiceNote": "ACE Fitness — Lifetime Fitness Activities",
+      "assignment": "Try one individual sport or lifetime activity new to you. Reflect on skills needed, personal challenges, and how you might continue participating.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 12,
+      "title": "Mental Health and Exercise",
+      "titleZh": "心理健康与运动",
+      "objectives": "Explain psychological benefits of regular physical activity; describe exercise's relationship to stress, anxiety, and depression; apply findings to personal wellness.",
+      "readingUrl": "https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm",
+      "readingNote": "CDC — Physical Activity and Mental Health",
+      "videoUrl": "https://www.youtube.com/watch?v=DsVzKCk7MaU",
+      "videoNote": "How Exercise Affects the Brain",
+      "video2Url": "https://www.youtube.com/watch?v=BHY0FxzoKZE",
+      "video2Note": "Exercise and Mental Health",
+      "practiceUrl": "https://www.khanacademy.org/science/health-and-medicine/mental-health",
+      "practiceNote": "Khan Academy — Mental Health",
+      "assignment": "Complete a 2-week exercise log tracking physical output and mood daily. Write a reflective essay analyzing how exercise affected your mental wellbeing.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Fitness Assessment and Progress Tracking",
+      "titleZh": "体能测评与进度追踪",
+      "objectives": "Administer standard fitness tests; interpret results against age-group norms; set data-driven improvement goals and re-test schedules.",
+      "readingUrl": "https://www.pyfp.org/learn-more/fitnessgram.html",
+      "readingNote": "Presidential Youth Fitness Program — FitnessGram",
+      "videoUrl": "https://www.youtube.com/watch?v=KN0wkYvD8jA",
+      "videoNote": "How to Conduct a Fitness Assessment",
+      "video2Url": "https://www.youtube.com/watch?v=NMq1t3WJhW8",
+      "video2Note": "Tracking Your Fitness Progress",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/tools-calculators/",
+      "practiceNote": "ACE Fitness — Fitness Assessment Calculators",
+      "assignment": "Complete a full fitness assessment battery. Record results in a data table, compare to norms, and create a 6-week improvement plan with re-test targets.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 14,
+      "title": "Creating a Personal Wellness Lifestyle",
+      "titleZh": "建立个人健康生活方式",
+      "objectives": "Synthesize course concepts into a sustainable personal wellness plan; identify community and digital resources that support long-term health.",
+      "readingUrl": "https://www.cdc.gov/physicalactivity/basics/index.htm",
+      "readingNote": "CDC — Physical Activity Basics (full guide)",
+      "videoUrl": "https://www.youtube.com/watch?v=e6i5GBVh8qw",
+      "videoNote": "Building a Healthy Lifestyle",
+      "video2Url": "https://www.youtube.com/watch?v=0s99kEolBec",
+      "video2Note": "How to Stay Fit for Life",
+      "practiceUrl": "https://www.myfitnesspal.com/",
+      "practiceNote": "MyFitnessPal — Track Fitness and Nutrition",
+      "assignment": "Write a 1-page Personal Wellness Manifesto covering fitness, nutrition, mental health, and sleep. Present a 12-month action plan with monthly checkpoints.",
+      "estimatedHrs": 3.0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which of the following is NOT one of the five health-related components of physical fitness?",
+      "options": ["Cardiovascular endurance", "Agility", "Muscular strength", "Body composition"],
+      "answer": "Agility",
+      "explanation": "The five health-related components are cardiovascular endurance, muscular strength, muscular endurance, flexibility, and body composition. Agility is a skill-related component.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "The ability of the heart and lungs to deliver oxygen to working muscles over a prolonged period is called:",
+      "options": ["Muscular endurance", "Flexibility", "Cardiovascular endurance", "Body composition"],
+      "answer": "Cardiovascular endurance",
+      "explanation": "Cardiovascular endurance reflects how efficiently the cardiorespiratory system sustains aerobic activity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Which fitness component measures the ratio of fat mass to lean mass?",
+      "options": ["Muscular strength", "Flexibility", "Cardiovascular endurance", "Body composition"],
+      "answer": "Body composition",
+      "explanation": "Body composition describes the proportion of fat tissue versus lean tissue (muscle, bone, organs) in the body.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Physical fitness is best described as:",
+      "options": ["The ability to run a marathon", "A set of attributes relating to the ability to perform physical activity", "Being free of all disease", "Having low body weight"],
+      "answer": "A set of attributes relating to the ability to perform physical activity",
+      "explanation": "Physical fitness is multi-dimensional, encompassing multiple health- and skill-related components.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Which component involves the ability of a muscle to exert maximum force against resistance in a single effort?",
+      "options": ["Flexibility", "Muscular strength", "Cardiovascular endurance", "Muscular endurance"],
+      "answer": "Muscular strength",
+      "explanation": "Muscular strength is the maximum force a muscle can produce in a single maximal effort.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "In the FITT principle, what does 'I' stand for?",
+      "options": ["Interval", "Intensity", "Increase", "Integration"],
+      "answer": "Intensity",
+      "explanation": "FITT = Frequency, Intensity, Time, Type — the four variables used to design an exercise program.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "'Frequency' in the FITT principle refers to:",
+      "options": ["How hard you exercise", "How often you exercise per week", "How long each session lasts", "What type of activity you do"],
+      "answer": "How often you exercise per week",
+      "explanation": "Frequency refers to the number of exercise sessions per week.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Which FITT recommendation is most appropriate for a beginner wanting to improve cardiovascular fitness?",
+      "options": ["5 days/week at maximum intensity for 60 minutes", "3 days/week at moderate intensity for 30 minutes", "1 day/week at high intensity for 90 minutes", "7 days/week at low intensity for 10 minutes"],
+      "answer": "3 days/week at moderate intensity for 30 minutes",
+      "explanation": "Beginners should start with moderate frequency and intensity to build fitness safely and reduce injury risk.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "The 'Type' variable of FITT refers to:",
+      "options": ["Your body type", "The kind of physical activity performed", "The time of day you exercise", "How intensely you train"],
+      "answer": "The kind of physical activity performed",
+      "explanation": "Type specifies the mode of exercise (e.g., running, swimming, weightlifting) chosen to meet a fitness goal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "The overload principle states that to improve fitness you must:",
+      "options": ["Exercise every day without rest", "Gradually increase the demand placed on the body beyond its current capacity", "Keep workout intensity the same", "Reduce workout duration over time"],
+      "answer": "Gradually increase the demand placed on the body beyond its current capacity",
+      "explanation": "Progressive overload means systematically increasing frequency, intensity, or time to continue producing fitness gains.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "VO2 max is a measure of:",
+      "options": ["Maximum muscular strength", "Maximum oxygen consumption during intense exercise", "Resting heart rate", "Lung volume at rest"],
+      "answer": "Maximum oxygen consumption during intense exercise",
+      "explanation": "VO2 max represents the maximum rate at which the body can consume oxygen during maximal aerobic exercise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "A lower resting heart rate generally indicates:",
+      "options": ["Poor cardiovascular health", "Better cardiovascular fitness", "Higher body fat percentage", "Dehydration"],
+      "answer": "Better cardiovascular fitness",
+      "explanation": "Well-trained hearts pump more blood per beat (greater stroke volume), beating fewer times per minute at rest.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Which activity is primarily aerobic?",
+      "options": ["100-meter sprint", "30-minute jog", "One-rep max bench press", "Vertical jump test"],
+      "answer": "30-minute jog",
+      "explanation": "Aerobic activities are sustained, moderate-intensity efforts using oxygen as the primary energy source.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "The target heart rate zone for moderate aerobic exercise is approximately:",
+      "options": ["30–40% of maximum heart rate", "50–70% of maximum heart rate", "80–90% of maximum heart rate", "100% of maximum heart rate"],
+      "answer": "50–70% of maximum heart rate",
+      "explanation": "Moderate-intensity aerobic exercise targets 50–70% of maximum heart rate, improving cardiovascular endurance safely.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "A simple estimate of maximum heart rate is:",
+      "options": ["Age x 2", "220 minus your age", "220 plus your age", "Resting heart rate x 3"],
+      "answer": "220 minus your age",
+      "explanation": "220 - age provides an estimated maximum heart rate used to calculate training zones.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Which test most directly measures muscular endurance?",
+      "options": ["One-rep max bench press", "Sit-and-reach test", "Timed push-up or sit-up test", "Mile run"],
+      "answer": "Timed push-up or sit-up test",
+      "explanation": "Muscular endurance tests measure how many repetitions a muscle can perform over time, not maximum force.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "The principle of specificity in strength training means:",
+      "options": ["Train the same muscles every day", "Training adaptations are specific to the muscles and movements trained", "All exercises are equally effective for all muscles", "Strength gains transfer automatically to all sports"],
+      "answer": "Training adaptations are specific to the muscles and movements trained",
+      "explanation": "Specificity means the body adapts to the exact demands placed on it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Which muscle is primarily targeted by a push-up?",
+      "options": ["Quadriceps", "Hamstrings", "Pectoralis major", "Gastrocnemius"],
+      "answer": "Pectoralis major",
+      "explanation": "Push-ups primarily work the pectoralis major (chest), assisted by the triceps and anterior deltoid.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Hypertrophy refers to:",
+      "options": ["Decrease in muscle fiber size", "Increase in muscle fiber size due to training", "Loss of flexibility", "Increased body fat"],
+      "answer": "Increase in muscle fiber size due to training",
+      "explanation": "Muscular hypertrophy is the enlargement of muscle fibers in response to resistance training.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "How many hours of rest between strength sessions for the same muscle group is recommended?",
+      "options": ["No rest needed", "At least 24–48 hours", "At least 7 days", "Rest is never recommended"],
+      "answer": "At least 24–48 hours",
+      "explanation": "Muscles need 24–48 hours to repair microtears and grow stronger before being retrained.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Static stretching is best performed:",
+      "options": ["Before explosive athletic activity as a warm-up", "After exercise when muscles are warm", "Only during competition", "First thing in the morning before any activity"],
+      "answer": "After exercise when muscles are warm",
+      "explanation": "Static stretching is most effective and safest post-exercise when muscles are warmed up and pliable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Dynamic stretching involves:",
+      "options": ["Holding a stretch for 30–60 seconds", "Controlled movements through a full range of motion", "A partner pushing your limb past its range", "Bouncing into a stretched position"],
+      "answer": "Controlled movements through a full range of motion",
+      "explanation": "Dynamic stretching uses controlled movements like leg swings and arm circles to prepare muscles for activity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "The sit-and-reach test primarily measures flexibility of the:",
+      "options": ["Shoulder and chest", "Quadriceps and calves", "Hamstrings and lower back", "Hip flexors only"],
+      "answer": "Hamstrings and lower back",
+      "explanation": "The sit-and-reach test is widely used to assess hamstring and lower back flexibility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "PNF stretching stands for:",
+      "options": ["Passive Neuromuscular Flexibility", "Proprioceptive Neuromuscular Facilitation", "Progressive Neuromuscular Flexibility", "Preventive Neuromuscular Function"],
+      "answer": "Proprioceptive Neuromuscular Facilitation",
+      "explanation": "PNF uses alternating contraction and relaxation to achieve greater range of motion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Ballistic stretching is generally discouraged because it:",
+      "options": ["Is too easy", "Uses bouncing movements that can trigger the stretch reflex and cause tears", "Does not improve flexibility", "Can only be done with a partner"],
+      "answer": "Uses bouncing movements that can trigger the stretch reflex and cause tears",
+      "explanation": "Ballistic stretching's rapid bouncing can activate the stretch reflex and risk muscle injury.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "BMI is calculated as:",
+      "options": ["Weight divided by height squared", "Height divided by weight", "Weight multiplied by height", "Fat mass divided by lean mass"],
+      "answer": "Weight divided by height squared",
+      "explanation": "BMI = weight (kg) / height (m)^2. It is a simple screening proxy for body weight status.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Which method provides the most accurate body fat percentage measurement?",
+      "options": ["BMI", "Hydrostatic (underwater) weighing", "Bathroom scale", "Visual inspection"],
+      "answer": "Hydrostatic (underwater) weighing",
+      "explanation": "Hydrostatic weighing uses water displacement and Archimedes' principle to calculate body density and fat percentage accurately.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Essential body fat is required for:",
+      "options": ["Athletic performance only", "Normal physiological function", "Visible muscle definition", "High BMI readings"],
+      "answer": "Normal physiological function",
+      "explanation": "Essential fat supports hormone production, organ protection, and other critical body functions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Lean body mass includes all of the following EXCEPT:",
+      "options": ["Muscle", "Bone", "Water", "Adipose tissue"],
+      "answer": "Adipose tissue",
+      "explanation": "Lean body mass includes everything except fat — muscle, bone, organs, and water.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "A key limitation of BMI is that it:",
+      "options": ["Requires expensive equipment", "Does not account for fat distribution or muscle mass", "Cannot be calculated for teenagers", "Measures flexibility"],
+      "answer": "Does not account for fat distribution or muscle mass",
+      "explanation": "BMI cannot distinguish fat from muscle, causing muscular athletes to be misclassified as overweight.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The 'M' in SMART goals stands for:",
+      "options": ["Meaningful", "Measurable", "Manageable", "Motivating"],
+      "answer": "Measurable",
+      "explanation": "SMART = Specific, Measurable, Achievable, Relevant, Time-bound. Measurable means clear criteria exist for tracking progress.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Which is the best example of a SMART fitness goal?",
+      "options": ["I want to get fit", "I will run a 5K in under 30 minutes within 8 weeks by training 4 days per week", "I want to be healthy someday", "Exercise more often"],
+      "answer": "I will run a 5K in under 30 minutes within 8 weeks by training 4 days per week",
+      "explanation": "This goal is specific (5K), measurable (under 30 min), achievable, relevant (fitness), and time-bound (8 weeks).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Long-term fitness goals are typically set for:",
+      "options": ["1–2 days", "1 week", "Several months to a year or more", "10 years minimum"],
+      "answer": "Several months to a year or more",
+      "explanation": "Long-term goals guide overall fitness direction and are supported by short-term milestone goals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Why is tracking progress important when pursuing a fitness goal?",
+      "options": ["To impress others", "To identify what is working and make evidence-based adjustments", "To prove the goal was too easy", "To compare yourself to professionals"],
+      "answer": "To identify what is working and make evidence-based adjustments",
+      "explanation": "Progress tracking provides data to recognize improvements and adjust the plan for continued success.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "The principle of reversibility means that:",
+      "options": ["Fitness gains are permanent", "Fitness gains are lost when training stops", "Beginners improve faster than advanced athletes", "Older adults cannot gain fitness"],
+      "answer": "Fitness gains are lost when training stops",
+      "explanation": "Reversibility ('use it or lose it') states the body returns toward pre-training state when exercise is discontinued.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Carbohydrates are the preferred energy source for high-intensity exercise because they:",
+      "options": ["Are stored in fat cells", "Are quickly broken down into glucose for immediate energy", "Provide more energy per gram than fat", "Do not cause fatigue"],
+      "answer": "Are quickly broken down into glucose for immediate energy",
+      "explanation": "Carbohydrates are rapidly converted to glucose and glycogen, providing the primary fuel for high-intensity exercise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "How much water should athletes generally drink before exercise?",
+      "options": ["None — only drink after exercise", "17–20 oz (500–600 mL) about 2 hours before", "1 gallon immediately before starting", "Drink only when feeling thirsty"],
+      "answer": "17–20 oz (500–600 mL) about 2 hours before",
+      "explanation": "Pre-hydration guidelines recommend 17–20 oz of water 2 hours before exercise for optimal hydration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Protein is most important for athletes in order to:",
+      "options": ["Provide quick energy during competition", "Support muscle repair and growth after exercise", "Replace carbohydrate stores", "Reduce body fat immediately"],
+      "answer": "Support muscle repair and growth after exercise",
+      "explanation": "Protein provides amino acids essential for repairing exercise-damaged muscle tissue and building new fibers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "Glycogen is best defined as:",
+      "options": ["A dietary fat", "The stored form of carbohydrates in muscles and liver", "A protein found in muscle fibers", "A hormone released during exercise"],
+      "answer": "The stored form of carbohydrates in muscles and liver",
+      "explanation": "Glycogen is synthesized from glucose and stored in skeletal muscle and liver as a readily accessible energy reserve.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Signs of dehydration during exercise include all EXCEPT:",
+      "options": ["Dark-colored urine", "Increased energy levels", "Decreased performance", "Dry mouth"],
+      "answer": "Increased energy levels",
+      "explanation": "Dehydration causes fatigue, reduced performance, dark urine, and dry mouth — not increased energy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "The R.I.C.E. method stands for:",
+      "options": ["Run, Ice, Compress, Elevate", "Rest, Ice, Compress, Elevate", "Rest, Increase, Cool, Exercise", "Reduce, Immobilize, Cool, Elevate"],
+      "answer": "Rest, Ice, Compress, Elevate",
+      "explanation": "R.I.C.E. is the standard first-aid protocol for acute soft-tissue injuries to reduce swelling and pain.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "An acute sports injury is best described as:",
+      "options": ["An injury that develops gradually from overuse", "A sudden injury from a specific traumatic event", "Soreness felt 48 hours after exercise", "Chronic inflammation from poor posture"],
+      "answer": "A sudden injury from a specific traumatic event",
+      "explanation": "Acute injuries occur suddenly — such as a sprained ankle from a misstep or a fracture from a collision.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "DOMS typically peaks at:",
+      "options": ["Immediately during exercise", "24–72 hours after intense exercise", "One week after exercise", "Only in untrained individuals"],
+      "answer": "24–72 hours after intense exercise",
+      "explanation": "DOMS results from microscopic muscle damage and inflammation, typically peaking 24–72 hours after novel or intense exercise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "A proper warm-up reduces injury risk by:",
+      "options": ["Increasing muscle tension and rigidity", "Raising muscle temperature and increasing blood flow", "Depleting glycogen stores", "Reducing heart rate"],
+      "answer": "Raising muscle temperature and increasing blood flow",
+      "explanation": "Warm-up increases muscle temperature and circulation, making tissues more pliable and less prone to tearing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Shin splints are most commonly caused by:",
+      "options": ["Overuse and impact on hard surfaces with sudden training increases", "Excessive stretching", "Dehydration alone", "Improper use of weight machines"],
+      "answer": "Overuse and impact on hard surfaces with sudden training increases",
+      "explanation": "Shin splints (medial tibial stress syndrome) result from repetitive tibial stress, often when runners increase mileage too quickly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Sportsmanship is best described as:",
+      "options": ["Winning by any means necessary", "Showing fairness, respect, and ethical behavior in sport", "Competing only for personal glory", "Ignoring teammates' mistakes"],
+      "answer": "Showing fairness, respect, and ethical behavior in sport",
+      "explanation": "Good sportsmanship involves playing fairly, respecting opponents and officials, and accepting outcomes gracefully.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "In basketball, a 'carry' (palming) violation occurs when:",
+      "options": ["A player fouls an opponent", "A player travels with the ball", "A player turns their hand under the ball during dribbling", "A player steps out of bounds"],
+      "answer": "A player turns their hand under the ball during dribbling",
+      "explanation": "Carrying occurs when a player places their hand beneath the ball during dribbling, which is a violation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Effective team communication in sports includes:",
+      "options": ["Yelling at teammates who make mistakes", "Calling out plays, using signals, and encouraging teammates", "Keeping strategies secret from teammates", "Only speaking to the coach"],
+      "answer": "Calling out plays, using signals, and encouraging teammates",
+      "explanation": "Effective team communication involves clear verbal and nonverbal exchanges that coordinate play and support morale.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Zone defense in basketball means:",
+      "options": ["Each player guards a specific opponent", "Players guard geographic areas of the court", "All players focus on offense", "Defending only near the basket"],
+      "answer": "Players guard geographic areas of the court",
+      "explanation": "In zone defense, each defender covers a designated court area rather than following a specific player.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "Which is the best example of positive team leadership?",
+      "options": ["Blaming teammates after a loss", "Encouraging peers and taking responsibility for your own performance", "Refusing to pass the ball", "Arguing with officials"],
+      "answer": "Encouraging peers and taking responsibility for your own performance",
+      "explanation": "Positive leaders support teammates, communicate constructively, and model accountability.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "A lifetime physical activity is one that:",
+      "options": ["Can only be done in high school", "Can be enjoyed and sustained into older adulthood", "Requires a professional coach at all times", "Is only for elite athletes"],
+      "answer": "Can be enjoyed and sustained into older adulthood",
+      "explanation": "Lifetime activities like swimming, golf, and cycling can be practiced safely and enjoyably throughout life.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Which is considered a classic lifetime individual sport?",
+      "options": ["American football", "Swimming", "Rugby", "Lacrosse"],
+      "answer": "Swimming",
+      "explanation": "Swimming can be practiced safely by individuals of all ages, making it a quintessential lifetime activity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "According to CDC guidelines, adults should aim for at least how much moderate aerobic activity per week?",
+      "options": ["60 minutes", "75 minutes", "150 minutes", "300 minutes minimum"],
+      "answer": "150 minutes",
+      "explanation": "CDC recommends at least 150 minutes of moderate-intensity aerobic activity per week for adults.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Which factor most supports sustained long-term physical activity participation?",
+      "options": ["Competing in professional leagues", "Choosing activities you find enjoyable", "Exercising only when highly motivated", "Following a single rigid routine forever"],
+      "answer": "Choosing activities you find enjoyable",
+      "explanation": "Enjoyment is the strongest predictor of long-term exercise adherence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Yoga qualifies as a lifetime activity primarily because it:",
+      "options": ["Requires expensive equipment", "Can be adapted to any fitness level and age", "Only builds cardiovascular fitness", "Must be done outdoors"],
+      "answer": "Can be adapted to any fitness level and age",
+      "explanation": "Yoga's adaptability in intensity, duration, and style makes it accessible and beneficial across all life stages.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Regular physical activity is associated with which mental health benefit?",
+      "options": ["Increased cortisol chronically", "Reduced symptoms of anxiety and depression", "Decreased endorphin release", "Higher baseline stress"],
+      "answer": "Reduced symptoms of anxiety and depression",
+      "explanation": "Exercise triggers endorphin release and neurochemical changes that reduce anxiety and depression.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "The 'runner's high' is linked to the release of:",
+      "options": ["Cortisol", "Endorphins and endocannabinoids", "Insulin", "Adrenaline only"],
+      "answer": "Endorphins and endocannabinoids",
+      "explanation": "The runner's high is a feeling of euphoria linked to endorphin and endocannabinoid release during sustained aerobic exercise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Exercise helps manage stress by:",
+      "options": ["Eliminating the source of stress", "Lowering cortisol over time and improving mood-related neurotransmitters", "Increasing blood pressure permanently", "Reducing sleep quality"],
+      "answer": "Lowering cortisol over time and improving mood-related neurotransmitters",
+      "explanation": "Regular exercise regulates cortisol and boosts serotonin and dopamine, improving mood and stress resilience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Which type of exercise has the strongest evidence for reducing anxiety symptoms?",
+      "options": ["Aerobic exercise", "Static stretching only", "Sedentary relaxation", "Isometric contractions only"],
+      "answer": "Aerobic exercise",
+      "explanation": "Aerobic exercise is most strongly linked to anxiety reduction through endorphin and serotonin activity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "The 'Exercise is Medicine' concept refers to:",
+      "options": ["Replacing all medical treatments with workouts", "Using physical activity as a strategy to prevent and manage disease and mental health conditions", "Only professional athletes using fitness therapy", "Prescribing vitamins alongside exercise"],
+      "answer": "Using physical activity as a strategy to prevent and manage disease and mental health conditions",
+      "explanation": "Exercise is Medicine is a global initiative promoting physical activity as a vital component of disease prevention and care.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "The FitnessGram PACER test measures:",
+      "options": ["Flexibility", "Muscular strength", "Aerobic capacity", "Body composition"],
+      "answer": "Aerobic capacity",
+      "explanation": "The PACER (Progressive Aerobic Cardiovascular Endurance Run) is a multistage aerobic test estimating VO2 max.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Comparing fitness test results to norms helps to:",
+      "options": ["Rank students competitively", "Determine whether scores fall within a healthy range for age and gender", "Win fitness awards", "Embarrass below-average scorers"],
+      "answer": "Determine whether scores fall within a healthy range for age and gender",
+      "explanation": "Fitness norms provide criterion-referenced healthy fitness zones for age and gender groups.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Why use multiple fitness tests rather than just one?",
+      "options": ["To take more class time", "Because fitness is multi-dimensional and no single test measures all components", "One test is always more accurate", "Multiple tests increase measurement error"],
+      "answer": "Because fitness is multi-dimensional and no single test measures all components",
+      "explanation": "A battery of tests gives a complete picture across cardiovascular, muscular, flexibility, and body composition dimensions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "To track fitness progress reliably, assessments should be:",
+      "options": ["Performed once and never repeated", "Conducted under consistent conditions at regular intervals", "Changed each time to prevent adaptation", "Done only when feeling at your best"],
+      "answer": "Conducted under consistent conditions at regular intervals",
+      "explanation": "Standardized conditions (same protocol, time, equipment) ensure score changes reflect true fitness changes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Which data point best indicates improvement in cardiovascular fitness over 6 weeks?",
+      "options": ["Increase in BMI", "Decrease in mile run time", "Increase in body weight", "No change in flexibility"],
+      "answer": "Decrease in mile run time",
+      "explanation": "A faster mile run time indicates improved aerobic capacity and cardiovascular efficiency.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "A sustainable wellness lifestyle is best characterized by:",
+      "options": ["Extreme diets and maximum training load", "Balanced habits in fitness, nutrition, sleep, and mental health maintained over time", "Exercising only during school years", "Avoiding all sedentary activities"],
+      "answer": "Balanced habits in fitness, nutrition, sleep, and mental health maintained over time",
+      "explanation": "Sustainable wellness integrates manageable, enjoyable habits across multiple health dimensions for long-term wellbeing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Sleep is important for fitness because:",
+      "options": ["It burns the most calories of any activity", "Growth hormone peaks during deep sleep, driving muscle repair", "It replaces the need for aerobic exercise", "Sleep has no effect on performance"],
+      "answer": "Growth hormone peaks during deep sleep, driving muscle repair",
+      "explanation": "During slow-wave sleep, growth hormone secretion peaks and muscle repair and consolidation occur.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Which behavior most supports long-term fitness adherence?",
+      "options": ["Setting unrealistic goals for rapid transformation", "Exercising with friends or a community for accountability", "Avoiding all rest days", "Doing only high-intensity exercise every day"],
+      "answer": "Exercising with friends or a community for accountability",
+      "explanation": "Social support and accountability through exercise partners or groups significantly improve long-term adherence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "The wellness wheel typically includes dimensions such as:",
+      "options": ["Physical, emotional, social, intellectual, spiritual, and environmental", "Only physical and mental health", "Financial wealth and career success only", "Academic performance exclusively"],
+      "answer": "Physical, emotional, social, intellectual, spiritual, and environmental",
+      "explanation": "The wellness wheel encompasses multiple interconnected dimensions of health beyond physical fitness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "A personal wellness plan is most effective when it:",
+      "options": ["Copies another person's routine exactly", "Is tailored to individual goals, preferences, and life circumstances", "Focuses only on weight loss", "Is set once and never revisited"],
+      "answer": "Is tailored to individual goals, preferences, and life circumstances",
+      "explanation": "Individualized plans reflecting personal values, schedules, and interests are more motivating and sustainable.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is a health-related component of physical fitness?",
+      "options": ["Speed", "Agility", "Cardiovascular endurance", "Reaction time"],
+      "answer": "Cardiovascular endurance",
+      "explanation": "Health-related components: cardiovascular endurance, muscular strength, muscular endurance, flexibility, body composition.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "In the FITT principle, 'Time' refers to:",
+      "options": ["The hour of day you exercise", "The duration of each session", "How quickly exercises are completed", "The age training begins"],
+      "answer": "The duration of each session",
+      "explanation": "Time in FITT refers to how long each individual workout session lasts.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "A student performs 3 sets of 15 push-ups. This primarily develops:",
+      "options": ["Cardiovascular endurance", "Flexibility", "Muscular endurance", "Body composition exclusively"],
+      "answer": "Muscular endurance",
+      "explanation": "High-repetition, lower-resistance exercises primarily develop muscular endurance.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Maximum heart rate is estimated by subtracting your age from:",
+      "options": ["180", "200", "220", "240"],
+      "answer": "220",
+      "explanation": "The formula 220 - age is the standard estimation of maximum heart rate.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Dynamic stretching differs from static stretching because dynamic stretching:",
+      "options": ["Is held for 30+ seconds", "Involves bouncing", "Uses controlled movement through a range of motion", "Requires a partner"],
+      "answer": "Uses controlled movement through a range of motion",
+      "explanation": "Dynamic stretching involves purposeful movement, unlike static stretching which holds a fixed position.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "BMI measures:",
+      "options": ["Exact body fat percentage", "Weight relative to height squared", "Muscle mass", "Bone density"],
+      "answer": "Weight relative to height squared",
+      "explanation": "BMI = weight (kg) / height (m)^2 — a screening proxy for body weight status.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "The overload principle states that to improve fitness you must:",
+      "options": ["Rest more than you train", "Stress the body beyond its current level to produce adaptation", "Keep all workouts the same intensity", "Train at maximum intensity from day one"],
+      "answer": "Stress the body beyond its current level to produce adaptation",
+      "explanation": "Progressive overload — gradually increasing demand — is the foundation of fitness improvement.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "The body's preferred fuel for high-intensity exercise is:",
+      "options": ["Fat", "Protein", "Carbohydrate", "Water"],
+      "answer": "Carbohydrate",
+      "explanation": "Carbohydrates are rapidly metabolized to glucose, the primary fuel for high-intensity exercise.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "R.I.C.E. is applied immediately after:",
+      "options": ["A long aerobic workout", "An acute soft-tissue injury such as a sprain", "A flexibility session", "A fitness test"],
+      "answer": "An acute soft-tissue injury such as a sprain",
+      "explanation": "R.I.C.E. (Rest, Ice, Compress, Elevate) is immediate first aid for acute soft-tissue injuries.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Sportsmanship includes which behavior?",
+      "options": ["Arguing every referee decision", "Celebrating aggressively in an opponent's face", "Acknowledging good play by opponents", "Cheating when undetected"],
+      "answer": "Acknowledging good play by opponents",
+      "explanation": "Good sportsmanship includes respect for opponents, officials, and the game.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The sit-and-reach assessment tests:",
+      "options": ["Muscular strength", "Cardiovascular endurance", "Flexibility", "Body composition"],
+      "answer": "Flexibility",
+      "explanation": "The sit-and-reach test measures flexibility, primarily of the hamstrings and lower back.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "SMART goals help athletes because they:",
+      "options": ["Remove the need for effort", "Provide clear, measurable direction and timelines", "Guarantee results without training", "Are only for elite athletes"],
+      "answer": "Provide clear, measurable direction and timelines",
+      "explanation": "SMART goals create accountability and clarity, making it easier to track progress and stay motivated.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "VO2 max measures:",
+      "options": ["Maximum muscular strength", "Maximum oxygen uptake during intense aerobic exercise", "Resting oxygen consumption", "Blood pressure during exercise"],
+      "answer": "Maximum oxygen uptake during intense aerobic exercise",
+      "explanation": "VO2 max is the gold-standard measure of aerobic fitness.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Muscular hypertrophy refers to:",
+      "options": ["Muscle fiber atrophy", "Increased number of muscle fibers", "Increased size of muscle fibers due to training", "Decreased flexibility"],
+      "answer": "Increased size of muscle fibers due to training",
+      "explanation": "Hypertrophy is the enlargement of existing muscle fibers in response to resistance training.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Which activity best develops cardiovascular endurance?",
+      "options": ["Shooting free throws", "One-rep max deadlift", "45-minute cycling session", "Static stretching routine"],
+      "answer": "45-minute cycling session",
+      "explanation": "Sustained aerobic activities like 45-minute cycling best develop cardiovascular endurance.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "The principle of specificity means that:",
+      "options": ["All exercises improve all fitness components equally", "Training adaptations are specific to the exercise type performed", "Rest is sport-specific", "Nutrition matters more than exercise"],
+      "answer": "Training adaptations are specific to the exercise type performed",
+      "explanation": "The body adapts to the exact type, intensity, and movement pattern of exercise applied.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "DOMS typically occurs:",
+      "options": ["Immediately during exercise", "24–72 hours after exercise", "Only in elite athletes", "Only from stretching"],
+      "answer": "24–72 hours after exercise",
+      "explanation": "DOMS results from micro-damage and inflammation in muscle fibers, peaking 1–3 days after intense or unaccustomed exercise.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Essential body fat is necessary for:",
+      "options": ["Athletic performance only", "Normal physiological functions including hormone production and organ protection", "High BMI scores", "Maximum running speed"],
+      "answer": "Normal physiological functions including hormone production and organ protection",
+      "explanation": "Essential fat supports critical body functions and cannot be eliminated without serious health consequences.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Regular aerobic exercise benefits mental health primarily by:",
+      "options": ["Eliminating stress sources", "Increasing endorphins and regulating stress hormones", "Requiring no mental effort", "Improving physical appearance only"],
+      "answer": "Increasing endorphins and regulating stress hormones",
+      "explanation": "Aerobic exercise triggers endorphin release and lowers chronic cortisol, reducing anxiety and depression.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "A lifetime physical activity:",
+      "options": ["Can only be done competitively", "Can be enjoyed throughout adulthood regardless of age", "Always requires advanced equipment", "Is only for teenagers"],
+      "answer": "Can be enjoyed throughout adulthood regardless of age",
+      "explanation": "Lifetime activities like swimming, cycling, and yoga can be adapted and sustained across all life stages.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Sleep is crucial for recovery because:",
+      "options": ["It eliminates the need to train", "Growth hormone peaks during deep sleep, promoting muscle repair", "It reduces muscle mass", "Sleep burns more calories than exercise"],
+      "answer": "Growth hormone peaks during deep sleep, promoting muscle repair",
+      "explanation": "Most growth hormone secretion and muscle repair occur during slow-wave (deep) sleep.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Glycogen stores are primarily depleted during:",
+      "options": ["Sedentary activities", "Prolonged moderate-to-high intensity exercise", "Short rest periods", "Low-intensity walking"],
+      "answer": "Prolonged moderate-to-high intensity exercise",
+      "explanation": "Glycogen is the primary fuel for moderate-to-high intensity exercise and becomes significantly depleted during prolonged sessions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The most important injury prevention strategy before explosive athletic activity is:",
+      "options": ["Static stretching only", "A dynamic warm-up including movement preparation", "Eating a large meal", "Sleeping for 2 hours beforehand"],
+      "answer": "A dynamic warm-up including movement preparation",
+      "explanation": "Dynamic warm-ups increase heart rate, blood flow, and muscle temperature while activating neuromuscular patterns needed for sport.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "The FitnessGram PACER test assesses:",
+      "options": ["Flexibility", "Aerobic capacity", "Muscular strength", "Reaction time"],
+      "answer": "Aerobic capacity",
+      "explanation": "The PACER is a multistage field test estimating aerobic capacity.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Which is the best SMART fitness goal?",
+      "options": ["Get stronger", "Complete 10 more push-ups than my current max within 4 weeks, training 3 days/week", "Exercise more", "Become an athlete"],
+      "answer": "Complete 10 more push-ups than my current max within 4 weeks, training 3 days/week",
+      "explanation": "This goal is Specific, Measurable, Achievable, Relevant, and Time-bound.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "The reversibility principle states that:",
+      "options": ["Fitness gains are permanent", "Fitness gains decline when training stops", "Training effects reverse after one missed session", "Only beginners lose fitness when inactive"],
+      "answer": "Fitness gains decline when training stops",
+      "explanation": "'Use it or lose it' — fitness adaptations regress toward baseline when training is discontinued.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Dehydration during exercise causes:",
+      "options": ["Increased strength and speed", "Decreased performance, heat illness risk, and impaired cognition", "No measurable effect on performance", "Increased muscle mass"],
+      "answer": "Decreased performance, heat illness risk, and impaired cognition",
+      "explanation": "Even mild dehydration (2% body weight loss) reduces aerobic performance and increases heat illness risk.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "A holistic wellness lifestyle attends to:",
+      "options": ["Physical fitness only", "Physical, mental, social, and emotional health dimensions", "Diet alone", "Academic performance exclusively"],
+      "answer": "Physical, mental, social, and emotional health dimensions",
+      "explanation": "Holistic wellness addresses multiple interconnected dimensions for comprehensive health and quality of life.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "PNF stretching achieves greater range of motion by:",
+      "options": ["Being the safest for beginners", "Using alternating muscle contraction and relaxation", "Requiring no partner or equipment", "Improving cardiovascular fitness"],
+      "answer": "Using alternating muscle contraction and relaxation",
+      "explanation": "PNF exploits the neurological stretch reflex — alternating contraction and relaxation allows muscles to lengthen further.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Team sports develop which skill beyond physical fitness?",
+      "options": ["Isolation and independence", "Communication, collaboration, and leadership", "Reduced empathy", "Sedentary habits"],
+      "answer": "Communication, collaboration, and leadership",
+      "explanation": "Team sports develop interpersonal skills alongside physical abilities.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "A cool-down after exercise is important because it:",
+      "options": ["Increases heart rate rapidly", "Gradually reduces heart rate and helps remove metabolic waste", "Replaces the warm-up", "Increases dizziness risk"],
+      "answer": "Gradually reduces heart rate and helps remove metabolic waste",
+      "explanation": "Cool-downs let the cardiovascular system transition safely to rest and help clear lactic acid from muscles.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "The best assessment of muscular strength is:",
+      "options": ["Mile run", "Sit-and-reach test", "One-repetition maximum (1RM) test", "Timed plank"],
+      "answer": "One-repetition maximum (1RM) test",
+      "explanation": "The 1RM test measures the maximum weight a person can lift for one repetition, directly assessing maximal strength.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Recommended sleep duration for teenagers is:",
+      "options": ["5–6 hours per night", "6–7 hours per night", "8–10 hours per night", "12+ hours per night"],
+      "answer": "8–10 hours per night",
+      "explanation": "Adolescents need 8–10 hours to support growth, recovery, cognitive function, and overall health.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Which is an example of an aerobic activity?",
+      "options": ["100-meter sprint", "One-rep max squat", "30-minute dance class", "Standing long jump"],
+      "answer": "30-minute dance class",
+      "explanation": "Aerobic activities are sustained, moderate-intensity exercises relying on oxygen. A 30-minute dance class qualifies.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Shin splints are best prevented by:",
+      "options": ["Increasing mileage by 50% each week", "Gradually increasing load, wearing proper footwear, and cross-training", "Only running on concrete", "Stretching after every meal"],
+      "answer": "Gradually increasing load, wearing proper footwear, and cross-training",
+      "explanation": "Prevention includes the 10% rule (increase weekly mileage by no more than 10%), supportive shoes, and varied training surfaces.",
+      "points": 1
+    }
+  ]
+}

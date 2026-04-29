@@ -1,0 +1,1220 @@
+{
+  "slug": "business-law",
+  "name": "Business Law",
+  "nameZh": "商业法律",
+  "credits": 1.0,
+  "department": "Business",
+  "type": "Elective",
+  "description": "A survey of the US legal system and its application to business, covering contracts, business organizations, employment law, intellectual property, consumer protection, torts, criminal law, and international and ethical dimensions of business law.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to the US Legal System",
+      "titleZh": "美国法律体系简介",
+      "objectives": "Distinguish civil from criminal law; identify the sources of law (constitutional, statutory, common, administrative); understand the structure and jurisdiction of federal and state courts.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/1-1-what-is-law/",
+      "readingNote": "OER Business Law — Ch 1: Introduction to Law and Legal Systems",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-foundations/us-gov-rule-of-law/v/us-gov-rule-of-law",
+      "videoNote": "Khan Academy — Rule of Law",
+      "video2Url": "https://www.youtube.com/watch?v=9O37ElCBMNM",
+      "video2Note": "YouTube — The US Legal System Explained",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/1-2-sources-and-types-of-law/",
+      "practiceNote": "OER Business Law — Sources and Types of Law Review",
+      "assignment": "Create a diagram of the federal court system showing all levels from district courts to the Supreme Court; for each level, indicate its jurisdiction and give a real-world example of the type of case it would handle.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 2,
+      "title": "Sources of Law & Court Structure",
+      "titleZh": "法律渊源与法院结构",
+      "objectives": "Explain the hierarchy of laws (constitutional supremacy); trace a case through the appellate process; understand the doctrine of stare decisis and the role of precedent in common law.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/1-3-the-court-system/",
+      "readingNote": "OER Business Law — Ch 1.3: The Court System",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-foundations/us-gov-separation-of-powers-checks-and-balances/v/checks-and-balances",
+      "videoNote": "Khan Academy — Checks, Balances, and the Courts",
+      "video2Url": "https://www.youtube.com/watch?v=CxvJkGqvZSI",
+      "video2Note": "YouTube — How a Case Moves Through the Courts",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/1-3-the-court-system/",
+      "practiceNote": "OER Business Law — Court System Review",
+      "assignment": "Research a famous Supreme Court case that affected business (e.g., Citizens United, Hobby Lobby); summarize the legal issue, describe the Court's decision, and explain how it changed the business legal landscape.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 3,
+      "title": "Contract Law: Formation",
+      "titleZh": "合同法：合同成立",
+      "objectives": "Identify the essential elements of a valid contract: offer, acceptance, consideration, and mutual assent; explain capacity and legality requirements; distinguish bilateral from unilateral contracts.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/8-1-overview-of-contract-law/",
+      "readingNote": "OER Business Law — Ch 8: Introduction to Contract Law",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/banking-and-money/v/contract-law",
+      "videoNote": "Khan Academy — Contract Law Fundamentals",
+      "video2Url": "https://www.youtube.com/watch?v=sS0rMrYPRlA",
+      "video2Note": "YouTube — Contract Law: Offer, Acceptance, and Consideration",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/8-2-contract-formation/",
+      "practiceNote": "OER Business Law — Contract Formation Review",
+      "assignment": "Analyze three everyday scenarios (buying a coffee, signing a lease, clicking 'I agree' online) and for each, identify whether a valid contract exists by checking all required elements — offer, acceptance, consideration, capacity, and legality.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 4,
+      "title": "Contract Law: Performance & Breach",
+      "titleZh": "合同法：履行与违约",
+      "objectives": "Distinguish complete, substantial, and material performance; explain conditions precedent, concurrent, and subsequent; identify types of breach (material, anticipatory, minor); understand discharge of contracts.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/9-1-performance-of-contract/",
+      "readingNote": "OER Business Law — Ch 9: Contract Performance, Breach, and Remedies",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/banking-and-money/v/contract-performance",
+      "videoNote": "Khan Academy — Contract Performance",
+      "video2Url": "https://www.youtube.com/watch?v=yiF8nFgCKdc",
+      "video2Note": "YouTube — Breach of Contract Explained",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/9-2-breach-of-contract/",
+      "practiceNote": "OER Business Law — Breach of Contract Review",
+      "assignment": "Read a provided hypothetical construction contract dispute; identify whether the contractor's performance was complete, substantial, or material breach; explain what happens next under contract law.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 5,
+      "title": "Contract Remedies",
+      "titleZh": "合同救济",
+      "objectives": "Identify the goal of contract remedies (expectation damages); calculate compensatory, consequential, and liquidated damages; explain specific performance, rescission, and the duty to mitigate.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/9-3-contract-remedies/",
+      "readingNote": "OER Business Law — Ch 9.3: Contract Remedies",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/banking-and-money/v/contract-remedies",
+      "videoNote": "Khan Academy — Contract Remedies",
+      "video2Url": "https://www.youtube.com/watch?v=mOwzW3xL8V0",
+      "video2Note": "YouTube — Contract Remedies: Damages, Specific Performance, Rescission",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/9-3-contract-remedies/",
+      "practiceNote": "OER Business Law — Contract Remedies Review",
+      "assignment": "A seller breaches a contract to deliver 1,000 widgets at $5 each; the buyer must purchase replacements on the open market for $7 each. Calculate compensatory damages, identify whether consequential damages might apply, and explain the duty to mitigate.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 6,
+      "title": "Business Organizations: Sole Proprietorship & Partnership",
+      "titleZh": "商业组织：独资与合伙",
+      "objectives": "Describe the characteristics, advantages, and disadvantages of sole proprietorships and partnerships; understand personal liability exposure; explain general vs. limited partnerships and the Uniform Partnership Act.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/14-1-forms-of-business-organization/",
+      "readingNote": "OER Business Law — Ch 14: Forms of Business Organization",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/entrepreneurship/types-of-businesses/v/sole-proprietorship",
+      "videoNote": "Khan Academy — Sole Proprietorships and Partnerships",
+      "video2Url": "https://www.youtube.com/watch?v=2qrN40MLLBc",
+      "video2Note": "YouTube — Business Structures: Sole Proprietorship vs Partnership",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/14-1-forms-of-business-organization/",
+      "practiceNote": "OER Business Law — Business Organizations Review",
+      "assignment": "Two friends want to open a restaurant together. Analyze whether they should form a general partnership or a limited liability partnership; compare liability, management control, tax treatment, and ease of formation for each option.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 7,
+      "title": "Corporations & LLCs",
+      "titleZh": "公司与有限责任公司",
+      "objectives": "Explain corporate formation, governance, and the corporate veil; distinguish S-corps, C-corps, and LLCs; understand shareholder rights; identify when courts pierce the corporate veil.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/14-2-corporations/",
+      "readingNote": "OER Business Law — Ch 14.2: Corporations and LLCs",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/entrepreneurship/types-of-businesses/v/corporations",
+      "videoNote": "Khan Academy — Corporations and LLCs",
+      "video2Url": "https://www.youtube.com/watch?v=GvGDKCHmNl4",
+      "video2Note": "YouTube — LLC vs Corporation: Which Is Right for Your Business?",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/14-2-corporations/",
+      "practiceNote": "OER Business Law — Corporations Review",
+      "assignment": "A tech startup founder asks for your advice: should they form a C-corp, S-corp, or LLC? Analyze their specific needs (seeking venture capital, 3 owners, wants to be taxed as a pass-through entity) and recommend the best structure with full justification.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 8,
+      "title": "Employment & Labor Law",
+      "titleZh": "劳动法与雇佣法",
+      "objectives": "Distinguish employees from independent contractors; explain at-will employment and its exceptions; describe major employment laws (Title VII, ADA, FLSA, FMLA); understand wrongful termination and workplace safety regulations.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/16-1-employment-law/",
+      "readingNote": "OER Business Law — Ch 16: Employment and Labor Law",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/entrepreneurship/hiring-and-managing-people/v/employment-law",
+      "videoNote": "Khan Academy — Employment Law Basics",
+      "video2Url": "https://www.youtube.com/watch?v=KVtVq0tOgEA",
+      "video2Note": "YouTube — US Employment Law: Key Concepts for Business",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/16-1-employment-law/",
+      "practiceNote": "OER Business Law — Employment Law Review",
+      "assignment": "A company fires an employee who reported a safety violation, alleging poor performance. Analyze whether this constitutes wrongful termination; identify which federal statute(s) may apply and what remedies the employee might seek.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 9,
+      "title": "Intellectual Property: Patents, Trademarks & Copyright",
+      "titleZh": "知识产权：专利、商标与版权",
+      "objectives": "Define patents, trademarks, trade secrets, and copyrights; explain what each protects and for how long; identify common IP violations; understand the process for registering trademarks with the USPTO.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/13-1-intellectual-property/",
+      "readingNote": "OER Business Law — Ch 13: Intellectual Property",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/businesses/patents-trademarks-copyrights/v/intellectual-property",
+      "videoNote": "Khan Academy — Intellectual Property",
+      "video2Url": "https://www.youtube.com/watch?v=EQy_pDXfNQE",
+      "video2Note": "YouTube — Patents, Trademarks, and Copyrights Explained",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/13-1-intellectual-property/",
+      "practiceNote": "OER Business Law — Intellectual Property Review",
+      "assignment": "A student invents a new phone case. Analyze what IP protections are available — patent, trademark, trade secret, or copyright — for (a) the functional mechanism, (b) the design, (c) the brand name, and (d) the marketing slogan.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 10,
+      "title": "Consumer Protection Law",
+      "titleZh": "消费者保护法",
+      "objectives": "Identify major consumer protection statutes (FTC Act, TILA, FDCPA, CPSA); explain deceptive trade practices and the FTC's role; understand product liability theories (negligence, strict liability, warranty).",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/15-1-consumer-protection-law/",
+      "readingNote": "OER Business Law — Ch 15: Consumer Protection",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/entrepreneurship/consumer-protection/v/consumer-protection",
+      "videoNote": "Khan Academy — Consumer Protection Law",
+      "video2Url": "https://www.youtube.com/watch?v=vhSXk75-6KY",
+      "video2Note": "YouTube — Consumer Protection Laws in the US",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/15-1-consumer-protection-law/",
+      "practiceNote": "OER Business Law — Consumer Protection Review",
+      "assignment": "Research a real product recall or FTC enforcement action from the past five years; identify which consumer protection statute(s) were involved, what the company did wrong, and what penalties or remedies resulted.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 11,
+      "title": "Tort Law in Business",
+      "titleZh": "商业侵权法",
+      "objectives": "Distinguish intentional torts, negligence, and strict liability; apply the four elements of negligence (duty, breach, causation, damages); explain defenses to negligence; understand tort liability for businesses and their employees.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/7-1-introduction-to-tort-law/",
+      "readingNote": "OER Business Law — Ch 7: Introduction to Tort Law",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-foundations/us-gov-rule-of-law/v/tort-law",
+      "videoNote": "Khan Academy — Tort Law",
+      "video2Url": "https://www.youtube.com/watch?v=GGJCWIjL-iA",
+      "video2Note": "YouTube — Negligence: The Four Elements Explained",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/7-2-negligence/",
+      "practiceNote": "OER Business Law — Negligence Review",
+      "assignment": "A customer slips on a wet floor in a grocery store and is injured. Apply the four elements of negligence (duty, breach, causation, damages) to analyze whether the store is liable; identify any defenses the store might raise.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 12,
+      "title": "Criminal Law in Business",
+      "titleZh": "商业刑事法",
+      "objectives": "Distinguish civil from criminal law consequences; identify white-collar crimes (fraud, embezzlement, bribery, insider trading); understand the Foreign Corrupt Practices Act (FCPA); explain corporate criminal liability.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/6-1-criminal-law/",
+      "readingNote": "OER Business Law — Ch 6: Criminal Law",
+      "videoUrl": "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-foundations/us-gov-rule-of-law/v/criminal-and-civil-law",
+      "videoNote": "Khan Academy — Criminal and Civil Law",
+      "video2Url": "https://www.youtube.com/watch?v=4eP98tDsYPU",
+      "video2Note": "YouTube — White Collar Crime: Types and Famous Cases",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/6-1-criminal-law/",
+      "practiceNote": "OER Business Law — Criminal Law in Business Review",
+      "assignment": "Research the Enron scandal or the Bernie Madoff Ponzi scheme; identify the criminal charges brought, the relevant statutes violated, the outcomes, and what corporate governance failures allowed the crime to occur.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 13,
+      "title": "International Business Law",
+      "titleZh": "国际商业法律",
+      "objectives": "Explain how international contracts differ from domestic ones; understand CISG, Incoterms, and currency risk; describe WTO dispute resolution; identify legal risks of doing business across borders.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/20-1-international-law/",
+      "readingNote": "OER Business Law — Ch 20: International Law",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/forex-trade-topic/trade-and-specialization-tutorial/v/international-trade-law",
+      "videoNote": "Khan Academy — International Trade and Law",
+      "video2Url": "https://www.youtube.com/watch?v=kRnHh3ixCUg",
+      "video2Note": "YouTube — International Business Law Overview",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/20-1-international-law/",
+      "practiceNote": "OER Business Law — International Business Law Review",
+      "assignment": "A US company wants to export electronics to Germany. Identify the key legal considerations including the applicable contract law (CISG), payment terms (Incoterms), IP protection, and how disputes would be resolved.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 14,
+      "title": "Dispute Resolution & Ethics",
+      "titleZh": "争议解决与道德",
+      "objectives": "Compare litigation, arbitration, and mediation as dispute resolution methods; explain the advantages and disadvantages of ADR for businesses; apply ethical frameworks to common business law scenarios.",
+      "readingUrl": "https://open.lib.umn.edu/businesslaw/chapter/2-1-the-legal-and-ethical-environment-of-business/",
+      "readingNote": "OER Business Law — Ch 2: Legal and Ethical Environment of Business",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/entrepreneurship/legal-issues/v/alternative-dispute-resolution",
+      "videoNote": "Khan Academy — Alternative Dispute Resolution",
+      "video2Url": "https://www.youtube.com/watch?v=YRDhbGC2GqE",
+      "video2Note": "YouTube — Mediation vs Arbitration vs Litigation",
+      "practiceUrl": "https://open.lib.umn.edu/businesslaw/chapter/2-1-the-legal-and-ethical-environment-of-business/",
+      "practiceNote": "OER Business Law — Dispute Resolution Review",
+      "assignment": "A business dispute involves $250,000 in contract damages. Compare and recommend the best dispute resolution method (litigation, mediation, or binding arbitration) considering cost, time, confidentiality, and the relationship between the parties.",
+      "estimatedHrs": 3.0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "The highest source of law in the United States is:",
+      "options": ["Federal statutes passed by Congress", "The US Constitution", "State constitutions", "Common law precedent"],
+      "answer": "The US Constitution",
+      "explanation": "The Supremacy Clause establishes the US Constitution as the supreme law of the land — federal statutes, state laws, and court decisions must all be consistent with it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Civil law differs from criminal law primarily in that civil law:",
+      "options": ["Involves more serious offenses", "Results in imprisonment as the standard penalty", "Resolves disputes between private parties seeking compensation", "Is prosecuted by the government on behalf of society"],
+      "answer": "Resolves disputes between private parties seeking compensation",
+      "explanation": "Civil law handles disputes between private parties — individuals, businesses — seeking remedies like damages or injunctions. Criminal law involves the government prosecuting offenses against society.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Administrative law is created by:",
+      "options": ["The President alone", "Federal and state agencies through regulations and rules", "Congress through constitutional amendments", "The Supreme Court through precedent"],
+      "answer": "Federal and state agencies through regulations and rules",
+      "explanation": "Administrative agencies (EPA, SEC, OSHA) create rules within the scope of authority delegated to them by Congress — these regulations have the force of law.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Jurisdiction refers to a court's:",
+      "options": ["Ability to enforce international law", "Authority to hear and decide a particular type of case", "Power to create new legislation", "Right to review executive orders"],
+      "answer": "Authority to hear and decide a particular type of case",
+      "explanation": "Jurisdiction is the legal authority of a court to hear cases — determined by subject matter (what type of case) and personal jurisdiction (authority over the parties).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Common law is best described as law that:",
+      "options": ["Is passed by state legislatures only", "Is created by judges through court decisions that become precedent", "Applies equally in all countries", "Is found only in the US Constitution"],
+      "answer": "Is created by judges through court decisions that become precedent",
+      "explanation": "Common law (case law) is judge-made law — courts interpret statutes and constitutional provisions, and their decisions become precedents binding on lower courts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "The doctrine of stare decisis requires courts to:",
+      "options": ["Follow all international law precedents", "Follow earlier decisions on the same legal issue (precedent)", "Rule in favor of the government in all disputes", "Decide cases based solely on statutory text"],
+      "answer": "Follow earlier decisions on the same legal issue (precedent)",
+      "explanation": "Stare decisis ('to stand by things decided') promotes legal stability and predictability by requiring courts to follow established precedent from higher courts in the same jurisdiction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "The US Supreme Court has original jurisdiction over cases involving:",
+      "options": ["All federal criminal cases", "Disputes between two states", "Small claims under $1,000", "All contract disputes in the US"],
+      "answer": "Disputes between two states",
+      "explanation": "The Constitution grants the Supreme Court original jurisdiction (the power to hear a case first) over disputes between states and cases involving foreign ambassadors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "An appellate court's primary role is to:",
+      "options": ["Conduct new trials with new juries", "Review the decisions of lower courts for legal errors", "Hear evidence from witnesses for the first time", "Set criminal sentences"],
+      "answer": "Review the decisions of lower courts for legal errors",
+      "explanation": "Appellate courts do not retry cases — they review the trial record for legal errors (incorrect application of law) and may affirm, reverse, or remand the lower court's decision.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Federal courts have subject matter jurisdiction over cases involving:",
+      "options": ["Any dispute worth more than $1,000", "Questions of federal law, the US Constitution, or diversity of citizenship between states", "Only criminal cases", "Only cases where the government is a party"],
+      "answer": "Questions of federal law, the US Constitution, or diversity of citizenship between states",
+      "explanation": "Federal courts have jurisdiction over federal questions (laws, treaties, Constitution) and diversity jurisdiction (parties from different states with claims over $75,000).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "When a higher court 'remands' a case, it means the court:",
+      "options": ["Upholds the lower court's decision completely", "Dismisses the case permanently", "Sends the case back to the lower court for further proceedings", "Issues a final verdict on the merits"],
+      "answer": "Sends the case back to the lower court for further proceedings",
+      "explanation": "A remand occurs when an appellate court returns the case to the trial court for further action consistent with the appellate court's ruling — often for a new trial or reconsideration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Consideration in contract law is best defined as:",
+      "options": ["The written terms of an agreement", "Something of value exchanged by each party to support a contract", "The intention of the parties to be legally bound", "The formality of signing a written document"],
+      "answer": "Something of value exchanged by each party to support a contract",
+      "explanation": "Consideration is the 'price' of the contract — what each party gives in exchange for the other's promise. Without mutual consideration, a promise is generally unenforceable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "An offer in contract law must include:",
+      "options": ["A written signature by both parties", "Definite terms and communication to the offeree", "Only the price of the goods or services", "Government approval"],
+      "answer": "Definite terms and communication to the offeree",
+      "explanation": "A valid offer requires communication of sufficiently definite terms (who, what, price, quantity) to the intended offeree — so a contract could be formed upon acceptance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "The mirror image rule states that acceptance must:",
+      "options": ["Be made in writing only", "Exactly match the terms of the offer with no modifications", "Occur within 24 hours of the offer", "Be communicated by telephone only"],
+      "answer": "Exactly match the terms of the offer with no modifications",
+      "explanation": "Under the common law mirror image rule, acceptance must match the offer exactly. Any change in terms creates a counteroffer rather than acceptance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "A contract with a minor (person under 18) is generally:",
+      "options": ["Void and completely unenforceable by either party", "Voidable at the minor's option", "Binding on both parties since both signed it", "Enforceable only if a parent co-signs"],
+      "answer": "Voidable at the minor's option",
+      "explanation": "Minors lack full contractual capacity — they may disaffirm (avoid) a contract at any time before reaching majority. The adult party, however, is bound.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "A contract to commit an illegal act is:",
+      "options": ["Voidable at either party's option", "Enforceable if both parties agree", "Void and unenforceable", "Valid as long as it is in writing"],
+      "answer": "Void and unenforceable",
+      "explanation": "Contracts whose purpose is illegal (e.g., paying someone to commit a crime) lack the legality element and are void — courts will not enforce them, leaving both parties without legal remedy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Anticipatory repudiation occurs when:",
+      "options": ["A party partially performs but then stops", "A party clearly indicates BEFORE the performance is due that they will not perform", "Both parties agree to cancel the contract", "A party performs late but adequately"],
+      "answer": "A party clearly indicates BEFORE the performance is due that they will not perform",
+      "explanation": "Anticipatory repudiation gives the non-breaching party the immediate right to treat the contract as breached and sue for damages — they need not wait for the performance deadline.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Substantial performance of a contract means:",
+      "options": ["Performing less than half of the contract's requirements", "Performing all terms perfectly with zero deviations", "Completing most of the contract with only minor deviations", "Performing exactly half of the contract's terms"],
+      "answer": "Completing most of the contract with only minor deviations",
+      "explanation": "Substantial performance falls just short of complete performance — the key benefit of the bargain is delivered with only minor, unintentional deviations. The breaching party may recover contract price minus cost to complete.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "A material breach of contract allows the non-breaching party to:",
+      "options": ["Demand only specific performance", "Treat the contract as terminated and sue for full expectation damages", "Continue performance and sue for reduced price only", "Accept the performance with no legal remedy"],
+      "answer": "Treat the contract as terminated and sue for full expectation damages",
+      "explanation": "A material breach is so significant that it defeats the contract's essential purpose — the innocent party may stop their own performance and sue for full damages.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "A contract may be discharged (terminated without breach) by:",
+      "options": ["Either party at any time, for any reason", "Mutual agreement of both parties to cancel or modify the contract", "Only the party who wrote the contract", "Government order only"],
+      "answer": "Mutual agreement of both parties to cancel or modify the contract",
+      "explanation": "Contracts can be discharged by full performance, mutual agreement (rescission, novation), impossibility of performance, or operation of law — mutual agreement is common in business.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "The doctrine of impossibility discharges a contract when:",
+      "options": ["Performance becomes merely difficult or more expensive", "An unforeseen event makes performance objectively impossible", "One party decides performance is no longer convenient", "The market price of the goods changes significantly"],
+      "answer": "An unforeseen event makes performance objectively impossible",
+      "explanation": "Impossibility discharges performance when an objective, unforeseen event (death, destruction of unique subject matter, supervening illegality) makes performance impossible — not merely unprofitable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The goal of contract damages is to:",
+      "options": ["Punish the breaching party severely", "Put the non-breaching party in the position they would have been in had the contract been performed", "Award the maximum possible damages to the plaintiff", "Divide losses equally between both parties"],
+      "answer": "Put the non-breaching party in the position they would have been in had the contract been performed",
+      "explanation": "Contract law is designed to compensate, not punish. Expectation damages aim to give the non-breaching party the 'benefit of the bargain' — the economic position they would have enjoyed with full performance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Specific performance as a remedy is typically ordered when:",
+      "options": ["The contract involves a large amount of money", "The subject matter is unique and money damages are inadequate", "The breaching party cannot afford to pay damages", "Both parties agree that specific performance is appropriate"],
+      "answer": "The subject matter is unique and money damages are inadequate",
+      "explanation": "Courts order specific performance (requiring the party to actually perform) when goods or property are unique — like a one-of-a-kind painting or real estate — making money damages an insufficient substitute.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Liquidated damages clauses in contracts are enforceable when:",
+      "options": ["The amount is always set at $1,000 regardless of harm", "Actual damages were difficult to estimate and the amount is a reasonable forecast of actual harm", "The clause is included only to punish the breaching party", "The amount equals triple the contract price"],
+      "answer": "Actual damages were difficult to estimate and the amount is a reasonable forecast of actual harm",
+      "explanation": "Liquidated damages clauses — agreeing in advance on a damage amount — are enforceable if damages were hard to predict and the amount is a reasonable (not punitive) estimate of likely harm.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "The duty to mitigate in contract law requires the non-breaching party to:",
+      "options": ["Accept whatever partial performance the breaching party offers", "Take reasonable steps to reduce losses after a breach", "Immediately file a lawsuit upon any breach", "Pay the breaching party's expenses"],
+      "answer": "Take reasonable steps to reduce losses after a breach",
+      "explanation": "The duty to mitigate prevents inflated damage awards — the non-breaching party cannot recover for losses they could have reasonably avoided after learning of the breach.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Consequential damages are recoverable in contract cases when:",
+      "options": ["They always equal three times the direct damages", "They were foreseeable by the breaching party at the time of contracting", "They arise from the non-breaching party's own actions", "They are specifically excluded by statute"],
+      "answer": "They were foreseeable by the breaching party at the time of contracting",
+      "explanation": "Under the Hadley v Baxendale rule, consequential (special) damages — losses beyond direct harm — are recoverable only if the breaching party knew or should have known about the special circumstances at the time of contracting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The key disadvantage of a sole proprietorship from a legal standpoint is:",
+      "options": ["It is very difficult to form", "The owner has unlimited personal liability for business debts", "It cannot enter into contracts", "It must have a board of directors"],
+      "answer": "The owner has unlimited personal liability for business debts",
+      "explanation": "A sole proprietorship has no legal separation between the owner and the business — if the business cannot pay its debts, creditors can reach the owner's personal assets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "In a general partnership, each partner is liable for:",
+      "options": ["Only their own share of the debts proportional to their ownership", "Only the debts they personally incurred", "The entire debt of the partnership (joint and several liability)", "No personal liability, like a corporation"],
+      "answer": "The entire debt of the partnership (joint and several liability)",
+      "explanation": "In a general partnership, all partners have unlimited personal liability — each partner can be held responsible for 100% of partnership debts, not just their ownership percentage.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "A limited partnership requires at least:",
+      "options": ["Three general partners and no limited partners", "One general partner (unlimited liability) and one limited partner (liability limited to investment)", "Five shareholders and a board of directors", "Government licensing before formation"],
+      "answer": "One general partner (unlimited liability) and one limited partner (liability limited to investment)",
+      "explanation": "A limited partnership has two classes: general partners who manage the business and bear unlimited liability, and limited partners who invest but cannot manage and risk only their capital contribution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "A partnership agreement primarily serves to:",
+      "options": ["Register the partnership with the federal government", "Define the rights, duties, profit-sharing, and decision-making procedures among partners", "Limit partners' personal liability", "Determine tax rates for the partnership"],
+      "answer": "Define the rights, duties, profit-sharing, and decision-making procedures among partners",
+      "explanation": "A partnership agreement customizes the partnership's governance — without it, the default rules of the Uniform Partnership Act (UPA) apply, which may not match the partners' intentions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Compared to a corporation, a sole proprietorship is typically preferred for small businesses because it:",
+      "options": ["Offers greater liability protection", "Is simpler and less expensive to form and operate", "Has more access to capital markets", "Provides superior tax advantages"],
+      "answer": "Is simpler and less expensive to form and operate",
+      "explanation": "Sole proprietorships require no formal filing in most cases — they begin when the owner starts doing business. No bylaws, board of directors, or complex formation documents are needed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The 'corporate veil' concept means that:",
+      "options": ["Corporations must keep their finances secret from shareholders", "Shareholders are generally not personally liable for corporate debts", "Corporate officers are immune from prosecution", "Corporations can hide their ownership structure"],
+      "answer": "Shareholders are generally not personally liable for corporate debts",
+      "explanation": "The corporate veil separates the legal identity of the corporation from its shareholders — shareholders' maximum loss is their investment, not their personal assets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Courts will 'pierce the corporate veil' (hold shareholders personally liable) when:",
+      "options": ["The corporation becomes very profitable", "The corporation is used as a fraud or when corporate formalities are completely ignored", "The corporation has fewer than 10 employees", "The shareholders are foreign nationals"],
+      "answer": "The corporation is used as a fraud or when corporate formalities are completely ignored",
+      "explanation": "Piercing the corporate veil is an equitable remedy applied when shareholders abuse the corporate form by treating the corporation as their personal bank or using it to commit fraud.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "An LLC (Limited Liability Company) combines the liability protection of a corporation with the tax treatment of:",
+      "options": ["A C-corporation (double taxation)", "A partnership or sole proprietorship (pass-through taxation)", "A nonprofit organization", "A foreign corporation"],
+      "answer": "A partnership or sole proprietorship (pass-through taxation)",
+      "explanation": "LLCs offer limited liability for members while allowing profits to pass through directly to members' personal tax returns — avoiding the double taxation of C-corporations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "An S-Corporation differs from a C-Corporation primarily in that an S-Corp:",
+      "options": ["Has no shareholders", "Can have unlimited numbers of shareholders", "Has pass-through taxation (no corporate-level income tax)", "Is required to be publicly traded"],
+      "answer": "Has pass-through taxation (no corporate-level income tax)",
+      "explanation": "S-Corps elect to pass corporate income, losses, deductions, and credits through to shareholders for federal tax purposes — avoiding the double taxation that applies to C-Corps.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "A corporation is governed by which of the following documents that define its structure and operations?",
+      "options": ["A partnership agreement and operating agreement", "Articles of incorporation and corporate bylaws", "A franchise agreement and license", "A business plan and pitch deck"],
+      "answer": "Articles of incorporation and corporate bylaws",
+      "explanation": "Articles of incorporation are the foundational formation documents filed with the state; bylaws are the internal rules governing day-to-day operations, meetings, and governance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Title VII of the Civil Rights Act of 1964 prohibits employment discrimination based on:",
+      "options": ["Age and disability", "Race, color, religion, sex, and national origin", "Sexual orientation and gender identity only", "Salary level and job title"],
+      "answer": "Race, color, religion, sex, and national origin",
+      "explanation": "Title VII is the cornerstone federal anti-discrimination law prohibiting employment discrimination in hiring, firing, compensation, and terms of employment based on five protected characteristics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "At-will employment means that:",
+      "options": ["Employees can only be fired after a court hearing", "Either party may end the employment relationship at any time for any lawful reason", "Employers must provide six months' notice before termination", "Employees must give one year's notice before resigning"],
+      "answer": "Either party may end the employment relationship at any time for any lawful reason",
+      "explanation": "At-will employment (the US default) allows employers to fire and employees to quit at any time without cause — but with important statutory exceptions (cannot fire for discriminatory or retaliatory reasons).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "The Fair Labor Standards Act (FLSA) establishes:",
+      "options": ["Rules for international trade unions", "Minimum wage, overtime pay, and child labor standards", "Employee stock option requirements", "Mandatory employer healthcare contributions"],
+      "answer": "Minimum wage, overtime pay, and child labor standards",
+      "explanation": "The FLSA sets the federal minimum wage, requires overtime pay (1.5× regular rate for hours over 40/week), and restricts child labor — foundational US employment law.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "An independent contractor differs from an employee in that:",
+      "options": ["Independent contractors receive full employee benefits", "Independent contractors control how and when they work and are not subject to the employer's direction", "Employees are always paid more than contractors", "Independent contractors must work on-site"],
+      "answer": "Independent contractors control how and when they work and are not subject to the employer's direction",
+      "explanation": "The employee vs. independent contractor distinction turns on the degree of control — contractors control their work method; employers control employees' time, place, and manner of work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "OSHA (Occupational Safety and Health Administration) requires employers to:",
+      "options": ["Provide free health insurance to all employees", "Provide a safe workplace free from recognized hazards", "Pay all overtime at twice the regular rate", "Allow unlimited sick leave for all employees"],
+      "answer": "Provide a safe workplace free from recognized hazards",
+      "explanation": "OSHA's general duty clause requires employers to provide employment free from recognized hazards likely to cause death or serious harm — and to comply with specific OSHA safety standards.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "A utility patent protects:",
+      "options": ["The ornamental appearance of a product", "A new, useful, and non-obvious process, machine, manufacture, or composition of matter", "A company's brand name and logo", "Creative works like books and songs"],
+      "answer": "A new, useful, and non-obvious process, machine, manufacture, or composition of matter",
+      "explanation": "Utility patents protect functional inventions for 20 years from filing — the invention must be novel, useful, and non-obvious to qualify.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "A trademark protects:",
+      "options": ["Functional aspects of a product", "Creative expression such as literature and music", "A word, symbol, or design that identifies the source of goods or services", "Confidential business information"],
+      "answer": "A word, symbol, or design that identifies the source of goods or services",
+      "explanation": "Trademarks protect brand identifiers — names, logos, slogans — that distinguish one company's goods or services from competitors', preventing consumer confusion about origin.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Copyright protection begins:",
+      "options": ["Only after registration with the US Copyright Office", "When the work is created and fixed in a tangible medium", "After the work is published commercially", "Upon the creator's death"],
+      "answer": "When the work is created and fixed in a tangible medium",
+      "explanation": "Under US law, copyright arises automatically when an original creative work is created and fixed in a tangible form — registration is not required for protection, though it provides benefits in litigation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "A trade secret is protected under law as long as:",
+      "options": ["The owner files for protection with the USPTO every 10 years", "Reasonable steps are taken to maintain its secrecy", "It is patented within two years of discovery", "Only one person knows the secret"],
+      "answer": "Reasonable steps are taken to maintain its secrecy",
+      "explanation": "Trade secrets (formulas, processes, business strategies) are protected indefinitely as long as they are not publicly known and the owner takes reasonable measures to keep them confidential.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "Trademark infringement occurs when:",
+      "options": ["Two companies sell products at the same price", "A company uses a mark that is likely to cause consumer confusion about the source of goods", "A company registers a trademark internationally", "A company uses a generic word as a trademark"],
+      "answer": "A company uses a mark that is likely to cause consumer confusion about the source of goods",
+      "explanation": "The test for trademark infringement is 'likelihood of confusion' — whether a reasonable consumer might be confused about who makes or endorses the product.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "The Federal Trade Commission (FTC) has authority to:",
+      "options": ["Set corporate tax rates", "Prohibit unfair or deceptive acts and practices in commerce", "Regulate securities markets and stock trading", "Set interest rates for consumer loans"],
+      "answer": "Prohibit unfair or deceptive acts and practices in commerce",
+      "explanation": "The FTC Act empowers the FTC to protect consumers from deceptive advertising, unfair business practices, identity theft, and anti-competitive behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Strict product liability holds a manufacturer liable when:",
+      "options": ["The product causes harm only if the manufacturer was negligent", "A defective product causes harm even if the manufacturer took all reasonable care", "Consumers misuse the product in any way", "The product has expired"],
+      "answer": "A defective product causes harm even if the manufacturer took all reasonable care",
+      "explanation": "Strict liability removes the need to prove negligence — if a product has a manufacturing, design, or warning defect that causes injury, the manufacturer is liable regardless of the level of care taken.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Truth in Lending Act (TILA) requires lenders to:",
+      "options": ["Charge interest rates approved by Congress", "Clearly disclose all credit terms including APR before a consumer signs a credit agreement", "Only lend money to consumers with excellent credit", "Register with the FTC before offering loans"],
+      "answer": "Clearly disclose all credit terms including APR before a consumer signs a credit agreement",
+      "explanation": "TILA's disclosure requirements help consumers compare credit offers by mandating standardized disclosure of APR, fees, total cost of credit, and other key terms before the agreement is signed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "An implied warranty of merchantability means that a product sold by a merchant:",
+      "options": ["Comes with a lifetime guarantee", "Will perform safely and as expected for its ordinary purpose", "Has been personally endorsed by the seller", "Has received FDA approval"],
+      "answer": "Will perform safely and as expected for its ordinary purpose",
+      "explanation": "Under the UCC, merchants automatically warrant that goods are fit for their ordinary use — a toaster must toast bread, a car must be drivable — without any express promise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "A class action lawsuit in consumer protection cases allows:",
+      "options": ["Only one consumer to sue a company for damages affecting many", "A large group of similarly harmed consumers to sue as a collective group", "Companies to sue consumers in groups", "The government to punish consumers for fraud"],
+      "answer": "A large group of similarly harmed consumers to sue as a collective group",
+      "explanation": "Class actions aggregate the claims of many similarly situated plaintiffs — practical when individual damages are small but total harm is large — making litigation economically feasible.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The four elements of negligence a plaintiff must prove are:",
+      "options": ["Intent, action, result, and damage", "Duty, breach, causation, and damages", "Warning, risk, harm, and liability", "Fault, injury, loss, and remedy"],
+      "answer": "Duty, breach, causation, and damages",
+      "explanation": "To win a negligence claim, a plaintiff must prove: (1) the defendant had a duty of care, (2) the defendant breached that duty, (3) the breach caused the plaintiff's injury, and (4) the plaintiff suffered damages.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Respondeat superior is a doctrine that holds employers liable for:",
+      "options": ["Their own personal negligence in managing the business", "The torts of their employees committed within the scope of employment", "All customer injuries regardless of negligence", "Contract breaches by independent contractors"],
+      "answer": "The torts of their employees committed within the scope of employment",
+      "explanation": "Respondeat superior ('let the master answer') makes employers vicariously liable for torts committed by employees acting within the course and scope of their employment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Intentional torts in a business context include:",
+      "options": ["Accidental product defects", "Fraud, defamation, and intentional interference with contract", "Injuries from natural disasters at a business", "Regulatory violations only"],
+      "answer": "Fraud, defamation, and intentional interference with contract",
+      "explanation": "Intentional torts require deliberate wrongful acts — fraud (intentional misrepresentation), defamation (false statements harming reputation), and tortious interference are common business intentional torts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Comparative negligence reduces a plaintiff's damages based on:",
+      "options": ["The defendant's financial ability to pay", "The plaintiff's own percentage of fault for the injury", "The number of defendants in the case", "The severity of the injury only"],
+      "answer": "The plaintiff's own percentage of fault for the injury",
+      "explanation": "Comparative negligence apportions fault between plaintiff and defendant — if the plaintiff is 30% at fault, their damages award is reduced by 30%.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "The 'reasonable person' standard in negligence law asks whether:",
+      "options": ["An expert in the relevant field would have acted differently", "An ordinary person of average prudence would have acted the same way in similar circumstances", "The most careful person imaginable would have prevented the harm", "The defendant personally knew the action was dangerous"],
+      "answer": "An ordinary person of average prudence would have acted the same way in similar circumstances",
+      "explanation": "The reasonable person standard is an objective test — not what this particular defendant knew or intended, but how a reasonably prudent person would have behaved under the same circumstances.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "White-collar crime is best described as:",
+      "options": ["Violent crimes committed by executives", "Non-violent crimes committed for financial gain in business or professional contexts", "Any crime committed by a person wearing professional attire", "Crimes that only affect the government"],
+      "answer": "Non-violent crimes committed for financial gain in business or professional contexts",
+      "explanation": "White-collar crime encompasses fraud, embezzlement, bribery, insider trading, and similar non-violent financial offenses typically committed by persons in positions of trust.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Insider trading involves:",
+      "options": ["Trading stocks on a public exchange", "Buying or selling securities based on material non-public information in violation of a duty", "Trading between employees within a company", "Using publicly available analyst reports for investment decisions"],
+      "answer": "Buying or selling securities based on material non-public information in violation of a duty",
+      "explanation": "Insider trading — trading on confidential, non-public information — violates securities law by giving traders an unfair advantage over the public market and undermining market integrity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "The Foreign Corrupt Practices Act (FCPA) prohibits US companies from:",
+      "options": ["Conducting business in foreign countries without a license", "Bribing foreign government officials to obtain or retain business", "Importing foreign goods without paying tariffs", "Hiring foreign nationals for domestic operations"],
+      "answer": "Bribing foreign government officials to obtain or retain business",
+      "explanation": "The FCPA makes it illegal for US companies and their agents to bribe foreign officials for business advantages — and requires accurate books and records regardless of overseas operations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Embezzlement is a crime involving:",
+      "options": ["Breaking and entering a business premises", "Misappropriation of funds or property by a person entrusted with them", "Forging a company's signatures on documents", "Selling confidential business information to competitors"],
+      "answer": "Misappropriation of funds or property by a person entrusted with them",
+      "explanation": "Embezzlement is theft by someone in a fiduciary position — an employee, officer, or trustee who diverts funds or property entrusted to them for personal gain.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "The burden of proof in a criminal business case is:",
+      "options": ["Preponderance of the evidence (more likely than not)", "Clear and convincing evidence", "Beyond a reasonable doubt", "Absolute certainty"],
+      "answer": "Beyond a reasonable doubt",
+      "explanation": "Criminal cases require proof beyond a reasonable doubt — the highest standard of proof in the US legal system — because criminal conviction carries potential imprisonment and severe consequences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "The CISG (UN Convention on Contracts for the International Sale of Goods) governs:",
+      "options": ["Employment disputes between countries", "Sales contracts between parties in different signatory countries", "Intellectual property licensing internationally", "Foreign direct investment disputes"],
+      "answer": "Sales contracts between parties in different signatory countries",
+      "explanation": "The CISG is an international treaty providing uniform rules for commercial contracts between businesses in different signatory countries — often applying by default unless parties opt out.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Incoterms are international trade terms that define:",
+      "options": ["The applicable interest rates for international loans", "The responsibilities of buyers and sellers for delivery, risk, and costs in international trade", "Immigration requirements for business travelers", "Currency exchange rates between countries"],
+      "answer": "The responsibilities of buyers and sellers for delivery, risk, and costs in international trade",
+      "explanation": "Incoterms (International Commercial Terms) published by the ICC are standardized three-letter codes (FOB, CIF, EXW) that specify who bears risk and responsibility at each stage of international shipment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Country risk in international business refers to:",
+      "options": ["Currency fluctuations that affect trade profitability", "The risk that a foreign government's actions (nationalization, sanctions, instability) will harm business", "The risk of intellectual property theft in international markets", "Competition from foreign firms in domestic markets"],
+      "answer": "The risk that a foreign government's actions (nationalization, sanctions, instability) will harm business",
+      "explanation": "Country (political) risk encompasses the risk that political instability, expropriation, regulatory changes, or sanctions in a foreign country will disrupt or destroy business operations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "The World Trade Organization (WTO) serves primarily to:",
+      "options": ["Set tax rates for multinational corporations", "Provide a framework for international trade rules and resolve trade disputes between nations", "Regulate international currency exchange", "Enforce intellectual property rights globally"],
+      "answer": "Provide a framework for international trade rules and resolve trade disputes between nations",
+      "explanation": "The WTO administers trade agreements, provides a forum for trade negotiations, and has a dispute settlement system for resolving conflicts between member countries' trade policies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "A choice of law clause in an international contract specifies:",
+      "options": ["Which language the contract is written in", "Which country's law will govern the contract's interpretation and enforcement", "The currency in which payment will be made", "How many arbitrators will resolve disputes"],
+      "answer": "Which country's law will govern the contract's interpretation and enforcement",
+      "explanation": "Choice of law clauses prevent uncertainty by specifying upfront which jurisdiction's laws apply — critical in international contracts where parties and performance span multiple legal systems.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Mediation differs from arbitration in that mediation:",
+      "options": ["Results in a binding decision issued by a neutral third party", "Uses a neutral facilitator to help parties reach a voluntary agreement", "Is always more expensive than litigation", "Requires a judge to preside over the proceedings"],
+      "answer": "Uses a neutral facilitator to help parties reach a voluntary agreement",
+      "explanation": "In mediation, a neutral mediator facilitates negotiation but has no power to impose a decision — settlement is voluntary. In arbitration, the arbitrator issues a binding decision.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Arbitration is generally preferred over litigation by businesses because it is typically:",
+      "options": ["Free of charge and open to the public", "Faster, cheaper, more confidential, and the arbitrator has subject-matter expertise", "Always decided in the company's favor", "More likely to result in punitive damages"],
+      "answer": "Faster, cheaper, more confidential, and the arbitrator has subject-matter expertise",
+      "explanation": "Arbitration's advantages include speed (no court backlog), lower cost, privacy (proceedings and results stay confidential), and specialized expertise of commercial arbitrators.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "The utilitarian approach to business ethics makes decisions based on:",
+      "options": ["Strict adherence to moral duties regardless of consequences", "Maximizing overall well-being and minimizing harm for the greatest number of people", "Whatever benefits the decision-maker personally", "Following the specific rules of the industry"],
+      "answer": "Maximizing overall well-being and minimizing harm for the greatest number of people",
+      "explanation": "Utilitarian ethics evaluates actions by their consequences — an action is ethical if it produces the greatest good for the greatest number of people affected.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "A mandatory arbitration clause in a consumer contract is controversial because it:",
+      "options": ["Always results in outcomes favorable to consumers", "Often prevents consumers from joining class actions and limits their legal options", "Requires consumers to pay no fees for arbitration", "Is illegal under US federal law"],
+      "answer": "Often prevents consumers from joining class actions and limits their legal options",
+      "explanation": "Mandatory arbitration clauses — common in consumer agreements — compel individual arbitration and frequently waive class action rights, reducing consumers' practical ability to challenge corporate misconduct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "Corporate social responsibility (CSR) in a legal context refers to:",
+      "options": ["A company's legal obligation to maximize shareholder profit alone", "Voluntary actions companies take to meet ethical, social, and environmental obligations beyond legal requirements", "Government regulations requiring companies to donate to charity", "The obligation to pay the highest possible wages by law"],
+      "answer": "Voluntary actions companies take to meet ethical, social, and environmental obligations beyond legal requirements",
+      "explanation": "CSR goes beyond legal compliance — companies voluntarily adopt practices that benefit stakeholders (employees, communities, environment) as part of their broader social obligation.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is a source of law in the United States?",
+      "options": ["Corporate bylaws", "Industry customs", "Administrative regulations issued by federal agencies", "International business norms"],
+      "answer": "Administrative regulations issued by federal agencies",
+      "explanation": "Administrative regulations created by agencies like the EPA, SEC, or OSHA within their congressional mandate have the force of law and are binding on businesses and individuals.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "A contract requires consideration from both parties. Which of the following is valid consideration?",
+      "options": ["A promise to make a gift with no condition", "A pre-existing legal duty to pay taxes", "$1,000 paid by the buyer in exchange for a seller's product", "Love and affection between family members"],
+      "answer": "$1,000 paid by the buyer in exchange for a seller's product",
+      "explanation": "Money paid in exchange for goods is classic bilateral consideration — each party gives something of value (money and product), satisfying the consideration requirement.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Under the doctrine of stare decisis, a trial court in the 9th Circuit must follow decisions from:",
+      "options": ["Any federal district court in the country", "The 9th Circuit Court of Appeals and the US Supreme Court", "Only the US Supreme Court", "Any state supreme court in the 9th Circuit"],
+      "answer": "The 9th Circuit Court of Appeals and the US Supreme Court",
+      "explanation": "Stare decisis requires lower courts to follow decisions from courts above them in the same judicial hierarchy — trial courts in the 9th Circuit follow both the 9th Circuit Court of Appeals and the Supreme Court.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "A contract that lacks consideration is generally:",
+      "options": ["Voidable at the breaching party's option", "Enforceable if it is in writing", "Unenforceable", "Enforceable if both parties signed it"],
+      "answer": "Unenforceable",
+      "explanation": "Consideration is a required element of a valid contract — without mutual exchange of value, a promise is a gift that courts will not enforce.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Material breach of a contract entitles the non-breaching party to:",
+      "options": ["Only partial damages for the inconvenience", "Treat the contract as discharged and sue for full expectation damages", "Continue performing and accept partial payment", "Renegotiate the original contract terms"],
+      "answer": "Treat the contract as discharged and sue for full expectation damages",
+      "explanation": "A material breach defeats the essential purpose of the contract — the innocent party is excused from further performance and can pursue the full expectation interest.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following is a defense against a negligence claim?",
+      "options": ["The defendant is a corporation, not an individual", "The plaintiff was also negligent (comparative negligence)", "The harm occurred at work rather than at home", "The defendant had no insurance"],
+      "answer": "The plaintiff was also negligent (comparative negligence)",
+      "explanation": "Comparative negligence reduces or eliminates the defendant's liability based on the plaintiff's own contribution to the harm — the plaintiff's damages are reduced proportionally to their fault.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "The primary advantage of forming an LLC for a small business is:",
+      "options": ["Unlimited ability to raise money from public investors", "Limited personal liability combined with pass-through taxation", "Avoidance of all state and federal taxes", "Simple formation requiring no legal documents"],
+      "answer": "Limited personal liability combined with pass-through taxation",
+      "explanation": "LLCs combine the liability protection of a corporation with the tax simplicity of a partnership — members are not personally liable for business debts, and profits are taxed only at the member level.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "An employee fired immediately after reporting workplace safety violations to OSHA would most likely have a claim for:",
+      "options": ["Voluntary resignation", "Wrongful termination in violation of public policy (retaliation)", "Breach of contract if at-will employed", "Discrimination under the ADA"],
+      "answer": "Wrongful termination in violation of public policy (retaliation)",
+      "explanation": "Federal and state whistleblower protection statutes prohibit retaliation against employees who report legal violations — terminating an employee for OSHA reporting is retaliatory wrongful termination.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Which type of intellectual property protection has the shortest term of protection?",
+      "options": ["Copyright", "Utility patent", "Trademark", "Trade secret"],
+      "answer": "Utility patent",
+      "explanation": "Utility patents protect inventions for 20 years from the filing date — shorter than copyright (life + 70 years) and trademarks (indefinitely renewable). Trade secrets can last forever if secrecy is maintained.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "In a general partnership, if Partner A makes a contract with a supplier on behalf of the partnership:",
+      "options": ["Only Partner A is bound by the contract", "The partnership and all general partners are bound by the contract", "Only the partners who approved the contract are bound", "The contract is void without all partners' signatures"],
+      "answer": "The partnership and all general partners are bound by the contract",
+      "explanation": "Each partner is an agent of the partnership — acts within the ordinary scope of partnership business bind the partnership and all general partners personally.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Anticipatory repudiation differs from ordinary breach in that anticipatory repudiation:",
+      "options": ["Occurs after the performance deadline has passed", "Occurs before the performance is due when a party clearly refuses to perform", "Only applies to real estate contracts", "Requires written notice to be effective"],
+      "answer": "Occurs before the performance is due when a party clearly refuses to perform",
+      "explanation": "Anticipatory repudiation allows the innocent party to immediately treat the contract as breached and mitigate damages — they need not wait until the actual performance date.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Which type of business organization avoids double taxation?",
+      "options": ["C-Corporation", "Publicly traded corporation", "Limited Liability Company (LLC)", "B-Corporation"],
+      "answer": "Limited Liability Company (LLC)",
+      "explanation": "LLCs use pass-through taxation — profits are reported on members' individual returns and taxed only once. C-corporations face double taxation: corporate income tax plus shareholder dividend tax.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Title VII employment discrimination protection applies to employers with:",
+      "options": ["Any number of employees", "15 or more employees", "At least 50 employees", "100 or more employees"],
+      "answer": "15 or more employees",
+      "explanation": "Title VII applies to employers with 15 or more employees — a threshold that exempts very small businesses while covering the vast majority of US workers.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Expectation damages in contract law are designed to:",
+      "options": ["Return both parties to their pre-contract positions", "Give the plaintiff the benefit of the bargain — the economic position they would have had if the contract was performed", "Punish the breaching party for misconduct", "Cover only the plaintiff's out-of-pocket expenses"],
+      "answer": "Give the plaintiff the benefit of the bargain — the economic position they would have had if the contract was performed",
+      "explanation": "Expectation (benefit-of-the-bargain) damages are the standard contract remedy — they compensate for the value the plaintiff would have received from full performance.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Which federal agency primarily enforces consumer protection laws against deceptive advertising?",
+      "options": ["Securities and Exchange Commission (SEC)", "Federal Trade Commission (FTC)", "Consumer Financial Protection Bureau (CFPB)", "Department of Justice (DOJ)"],
+      "answer": "Federal Trade Commission (FTC)",
+      "explanation": "The FTC is the primary federal consumer protection agency — it enforces laws against deceptive advertising, unfair business practices, and false product claims.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "The 'piercing of the corporate veil' doctrine holds shareholders personally liable when:",
+      "options": ["A corporation earns very high profits", "The corporation is used as a tool for fraud or completely ignores corporate formalities", "A corporation is publicly traded", "A corporation has fewer than five shareholders"],
+      "answer": "The corporation is used as a tool for fraud or completely ignores corporate formalities",
+      "explanation": "Courts pierce the veil when the corporation is a sham — used to commit fraud, lacks separate finances from owners, or fails to observe basic corporate formalities — exposing shareholders to personal liability.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Under the FCPA, a US company that discovers its foreign subsidiary has been bribing officials should:",
+      "options": ["Continue the practice as long as it is legal in the foreign country", "Immediately stop the practice, investigate, and potentially self-disclose to the DOJ/SEC", "Report the activity only to local foreign authorities", "Ignore the practice since it occurs overseas"],
+      "answer": "Immediately stop the practice, investigate, and potentially self-disclose to the DOJ/SEC",
+      "explanation": "FCPA liability extends to subsidiaries and agents of US companies globally. Self-disclosure, cooperation, and remediation are critical mitigating factors in DOJ/SEC enforcement decisions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Specific performance is most commonly granted as a contract remedy in cases involving:",
+      "options": ["Service contracts for routine work", "Sale of consumer goods under $500", "Real estate sales and sales of unique goods", "Employment contracts"],
+      "answer": "Real estate sales and sales of unique goods",
+      "explanation": "Because every parcel of real estate is unique and money cannot perfectly substitute, courts routinely grant specific performance in real estate sale contracts where the seller refuses to close.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "A business owner who operates as a sole proprietor but also has personal savings of $200,000 should understand that:",
+      "options": ["Their personal savings are fully protected from business creditors", "Their personal savings could be seized to satisfy business debts", "They can convert to an LLC at any time with no tax consequences", "Business debts can never exceed the business's revenue"],
+      "answer": "Their personal savings could be seized to satisfy business debts",
+      "explanation": "Sole proprietorships provide no liability separation — all personal assets are fully exposed to claims by business creditors.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "The doctrine of respondeat superior means a company is liable when its employee:",
+      "options": ["Commits a tort while on a personal errand unrelated to work", "Commits a tort while acting within the scope of their employment duties", "Is fired for poor performance", "Signs a contract on behalf of the company without authority"],
+      "answer": "Commits a tort while acting within the scope of their employment duties",
+      "explanation": "Respondeat superior imputes the torts of employees to employers when the wrongful act occurs within the course and scope of employment — e.g., a delivery driver causing an accident during a delivery.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following would be protected as a trade secret?",
+      "options": ["A publicly published recipe in a cookbook", "The formula for Coca-Cola kept strictly confidential for over 100 years", "A business idea that has been discussed at public industry conferences", "A logo registered with the USPTO"],
+      "answer": "The formula for Coca-Cola kept strictly confidential for over 100 years",
+      "explanation": "A trade secret is information with economic value that is actively kept secret — Coca-Cola's formula is the most famous example, protected indefinitely through strict confidentiality measures.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "In international commercial arbitration, the 'seat' of arbitration determines:",
+      "options": ["Where the arbitrators physically sit during hearings", "The law governing the arbitration proceedings and where the award can be enforced", "Which language the proceedings are conducted in", "How many arbitrators will participate"],
+      "answer": "The law governing the arbitration proceedings and where the award can be enforced",
+      "explanation": "The legal seat (place) of arbitration determines which national law governs the arbitration procedure and which courts have supervisory jurisdiction over the proceedings and award.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The Americans with Disabilities Act (ADA) requires employers to provide:",
+      "options": ["Free medical care to disabled employees", "Reasonable accommodations for qualified employees with disabilities unless it causes undue hardship", "A disability pay supplement for all disabled workers", "Disability insurance for every employee"],
+      "answer": "Reasonable accommodations for qualified employees with disabilities unless it causes undue hardship",
+      "explanation": "The ADA requires employers to make reasonable adjustments (flexible hours, modified duties, assistive technology) to enable qualified disabled employees to perform essential job functions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Strict product liability is advantageous for injured plaintiffs because they do not need to prove:",
+      "options": ["That they were injured", "That a defect existed in the product", "That the manufacturer was negligent", "That the product caused the injury"],
+      "answer": "That the manufacturer was negligent",
+      "explanation": "Strict liability removes negligence from the plaintiff's burden of proof — they must only show the product was defective and caused injury, not that the manufacturer failed to exercise reasonable care.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "What is the primary difference between mediation and litigation in resolving a business dispute?",
+      "options": ["Mediation always produces a binding result; litigation does not", "Mediation is conducted by government judges; litigation uses private neutrals", "Mediation is voluntary and non-binding unless settled; litigation produces a binding court judgment", "Mediation costs more than litigation for most disputes"],
+      "answer": "Mediation is voluntary and non-binding unless settled; litigation produces a binding court judgment",
+      "explanation": "Mediation facilitates voluntary negotiation — parties control the outcome and can walk away. Litigation results in a binding court judgment imposed by a judge or jury.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "An employee working 50 hours per week at $20/hour (non-exempt under FLSA) should receive total weekly pay of:",
+      "options": ["$1,000 ($20 × 50)", "$1,100 ($20 × 40 + $30 × 10)", "$900", "$1,200"],
+      "answer": "$1,100 ($20 × 40 + $30 × 10)",
+      "explanation": "FLSA requires non-exempt employees to receive 1.5× the regular rate for hours over 40: 40 × $20 = $800 + 10 × $30 = $300 → total $1,100.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "A copyright holder's exclusive rights include all of the following EXCEPT:",
+      "options": ["The right to reproduce the work", "The right to create derivative works", "The right to control all private discussion of the work", "The right to distribute copies publicly"],
+      "answer": "The right to control all private discussion of the work",
+      "explanation": "Copyright grants reproduction, distribution, derivative work, public display, and performance rights — but does not control private conversations, criticism, commentary, or other First Amendment-protected speech about the work.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "White-collar crimes like fraud and embezzlement can result in both:",
+      "options": ["Only civil liability for restitution", "Only criminal prosecution and imprisonment", "Both criminal prosecution (imprisonment, fines) and civil liability (damages to victims)", "Only regulatory fines from the SEC or FTC"],
+      "answer": "Both criminal prosecution (imprisonment, fines) and civil liability (damages to victims)",
+      "explanation": "White-collar crimes expose defendants to parallel civil and criminal proceedings — criminal prosecution by the government AND civil suits by harmed investors, customers, or partners.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "A choice of forum clause in an international business contract specifies:",
+      "options": ["The language the contract must be written in", "The court or arbitral tribunal in which disputes must be resolved", "The currency to be used for payment", "The country's tax law that applies to the contract"],
+      "answer": "The court or arbitral tribunal in which disputes must be resolved",
+      "explanation": "Choice of forum (jurisdiction) clauses designate where disputes will be heard — preventing costly disputes over venue and ensuring predictability in international contracts.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "The stakeholder theory of corporate ethics (as contrasted with shareholder primacy) argues that businesses owe duties to:",
+      "options": ["Shareholders alone, as owners of the business", "All parties with a stake in the business, including employees, customers, suppliers, and communities", "Only the government through regulatory compliance", "International customers and employees only"],
+      "answer": "All parties with a stake in the business, including employees, customers, suppliers, and communities",
+      "explanation": "Stakeholder theory holds that corporations should balance the interests of all affected parties — not just maximize shareholder returns — reflecting the evolving understanding of business's role in society.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which factor is NOT used to determine whether a worker is an employee or an independent contractor under most tests?",
+      "options": ["The degree of control the hiring party has over how work is done", "Whether the worker uses their own tools and equipment", "The worker's race and national origin", "Whether the work is a core part of the hiring party's business"],
+      "answer": "The worker's race and national origin",
+      "explanation": "Employee vs. contractor tests look at economic realities and control — they never consider protected characteristics like race or national origin, which are irrelevant to the classification and protected from discrimination.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Binding arbitration, as opposed to non-binding arbitration, means that:",
+      "options": ["The parties can ignore the arbitrator's decision", "The arbitrator's award is final and enforceable in court, with very limited grounds for appeal", "Only the plaintiff is bound by the decision", "The arbitrator must be a licensed judge"],
+      "answer": "The arbitrator's award is final and enforceable in court, with very limited grounds for appeal",
+      "explanation": "Binding arbitration produces a final award that courts will enforce under the Federal Arbitration Act — appealable only on very narrow grounds like fraud or arbitrator misconduct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "A company's compliance program is most effective at preventing criminal liability when it:",
+      "options": ["Is a document written to look good without real enforcement", "Includes clear policies, regular training, confidential reporting channels, and genuine enforcement from leadership", "Only focuses on financial reporting requirements", "Is managed by the same department it is designed to oversee"],
+      "answer": "Includes clear policies, regular training, confidential reporting channels, and genuine enforcement from leadership",
+      "explanation": "The DOJ's guidelines treat effective compliance programs as mitigating factors in corporate criminal cases — they must be genuinely implemented, not cosmetic.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Consequential damages in a contract dispute are limited by the rule that they must have been:",
+      "options": ["Incurred within 30 days of the breach", "Foreseeable by the breaching party at the time of contracting", "Specified exactly in the written contract", "Approved by a court before the breach occurred"],
+      "answer": "Foreseeable by the breaching party at the time of contracting",
+      "explanation": "The Hadley v Baxendale foreseeability rule limits consequential damages — the breaching party is liable only for losses they could reasonably have anticipated when they entered the contract.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Under strict product liability, which of the following product defects would make a manufacturer liable?",
+      "options": ["A product used by the consumer in a way no one could have predicted", "A manufacturing defect where one unit was assembled incorrectly and injured a consumer", "A product that becomes outdated and less safe than newer models", "A product that the consumer modified before use in an unauthorized way"],
+      "answer": "A manufacturing defect where one unit was assembled incorrectly and injured a consumer",
+      "explanation": "A manufacturing defect occurs when a specific unit deviates from the intended design and causes injury — classic strict liability scenario where the manufacturer is liable even without negligence.",
+      "points": 1
+    }
+  ]
+}

@@ -1,0 +1,1745 @@
+{
+  "name": "College Research & Writing",
+  "nameZh": "大学研究与写作",
+  "slug": "college-research-writing",
+  "description": "A half-credit course preparing students for the research and writing demands of college coursework. Students develop skills in formulating research questions, evaluating sources, constructing arguments, integrating evidence, and following academic citation standards through a culminating research project.",
+  "credits": 0.5,
+  "department": "English",
+  "type": "Elective",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Developing Research Questions",
+      "titleZh": "制定研究问题",
+      "objectives": "Distinguish between a topic, a research question, and a thesis; transform a broad topic into a focused, arguable research question; evaluate research questions for feasibility and scholarly relevance.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/12-1-navigating-research",
+      "readingNote": "Focus on how OpenStax Writing Guide describes moving from interest areas to researchable, arguable questions.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/developing-a-research-question",
+      "videoNote": "Watch the Khan Academy lesson on crafting focused research questions.",
+      "video2Url": "https://www.youtube.com/watch?v=jj-F6YVtsxI",
+      "video2Note": "Review how to narrow a broad topic into a specific, manageable research question.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:evidence-based-writing/e/improving-topic-and-research-questions",
+      "practiceNote": "Practice evaluating and improving research questions in context.",
+      "assignment": "Choose a topic you are passionate about and develop three candidate research questions. Select the strongest one and write a 300-word rationale explaining why it is focused, arguable, and researchable.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Library & Database Research",
+      "titleZh": "图书馆与数据库研究",
+      "objectives": "Use Boolean operators and advanced search filters in academic databases; identify peer-reviewed journal articles; navigate library catalog systems and interlibrary loan resources.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/12-2-finding-and-managing-sources",
+      "readingNote": "Read the OpenStax Writing Guide section on database searching strategies and managing sources efficiently.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/finding-sources-for-research",
+      "videoNote": "Watch the tutorial on finding quality sources using academic databases and search strategies.",
+      "video2Url": "https://www.youtube.com/watch?v=IlzF5mtyGDM",
+      "video2Note": "Review how to use Boolean operators (AND, OR, NOT) to refine database searches.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:evidence-based-writing/e/identifying-relevant-information",
+      "practiceNote": "Practice identifying the most relevant information from research sources.",
+      "assignment": "Using an academic database (JSTOR, Google Scholar, or ProQuest), conduct a search related to your research question from Module 1. Find five peer-reviewed articles. Record the search terms used and write a 200-word reflection on what made your search effective.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 3,
+      "title": "Evaluating Sources Critically",
+      "titleZh": "批判性评估资料",
+      "objectives": "Apply the CRAAP test to evaluate sources; distinguish between primary, secondary, and tertiary sources; identify bias, credibility, and relevance in academic and popular sources.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/12-3-evaluating-sources",
+      "readingNote": "Study the OpenStax section on source evaluation criteria including currency, relevance, authority, accuracy, and purpose (CRAAP).",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/evaluating-sources",
+      "videoNote": "Watch the Khan Academy lesson on distinguishing credible from unreliable sources.",
+      "video2Url": "https://www.youtube.com/watch?v=GoQG6Tin-1E",
+      "video2Note": "Review how to evaluate websites and news sources for bias and accuracy using the SIFT method.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:evidence-based-writing/e/evaluating-credibility-of-sources",
+      "practiceNote": "Practice the source credibility evaluation exercises.",
+      "assignment": "Apply the CRAAP test to three of the five sources you found in Module 2. Write a 300-word evaluation table identifying each source's strengths and weaknesses and whether you will use it in your research paper.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Note-Taking & Information Organization",
+      "titleZh": "笔记与信息整理",
+      "objectives": "Distinguish effective note-taking strategies; avoid accidental plagiarism through accurate paraphrasing and quotation; use digital tools to organize research notes efficiently.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/12-4-taking-notes-and-avoiding-plagiarism",
+      "readingNote": "Read the OpenStax guidance on effective note-taking, paraphrasing strategies, and maintaining source attribution.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/taking-research-notes",
+      "videoNote": "Watch the tutorial on organizing research notes and maintaining source integrity.",
+      "video2Url": "https://www.youtube.com/watch?v=ukiGWj4kIFE",
+      "video2Note": "Review the Cornell Note-taking System and how it applies to research note organization.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:evidence-based-writing/e/paraphrasing-and-summarizing",
+      "practiceNote": "Practice paraphrasing passages without altering meaning.",
+      "assignment": "Create a research notes document for your research question. Record three direct quotes, three paraphrases, and three summaries from your sources. Include full source information for each note. Write a 150-word reflection on the difference between paraphrasing and summarizing.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Annotated Bibliography",
+      "titleZh": "注释书目",
+      "objectives": "Write a complete annotated bibliography entry in MLA or APA format; summarize, assess, and reflect on each source; explain how each source relates to the research argument.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/12-5-annotated-bibliography",
+      "readingNote": "Study the OpenStax guide to writing effective annotations that summarize, evaluate, and connect sources to your argument.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/annotated-bibliography",
+      "videoNote": "Watch the annotated bibliography walkthrough with sample entries in MLA and APA formats.",
+      "video2Url": "https://www.youtube.com/watch?v=lOajtFRVCQ4",
+      "video2Note": "Review annotated bibliography examples and common formatting errors to avoid.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:evidence-based-writing/e/citing-sources",
+      "practiceNote": "Practice citation formatting exercises in MLA and APA styles.",
+      "assignment": "Write an annotated bibliography with five sources related to your research question. Each annotation should be 100–150 words and include: a summary of the source, an evaluation of its credibility, and an explanation of how you plan to use it in your paper.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 6,
+      "title": "Thesis & Argument Development",
+      "titleZh": "论点与论题开发",
+      "objectives": "Construct a strong, arguable thesis statement; distinguish between weak and strong thesis claims; develop a logical argument structure using evidence and reasoning.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/7-1-developing-a-thesis",
+      "readingNote": "Read the OpenStax Writing Guide section on developing argumentative thesis statements and the difference between a topic sentence and a thesis claim.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/developing-a-thesis-statement",
+      "videoNote": "Watch the thesis development tutorial covering arguability, specificity, and complexity.",
+      "video2Url": "https://www.youtube.com/watch?v=rWDAGlJEj7k",
+      "video2Note": "Review how to revise a weak thesis into a strong, arguable claim using the Socratic method.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/argument-structure",
+      "practiceNote": "Practice identifying and strengthening thesis statements in argument analysis exercises.",
+      "assignment": "Write three draft thesis statements for your research paper. Using feedback criteria from the module, self-evaluate each thesis and revise the strongest one into a final thesis. Submit all three drafts and the final thesis with a 200-word explanation of your revision choices.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Outline & Paper Organization",
+      "titleZh": "提纲与论文结构",
+      "objectives": "Create a detailed outline for a multi-page research paper; organize body paragraphs logically; use topic sentences to signal each paragraph's function.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/7-2-organizing-an-argument",
+      "readingNote": "Study the OpenStax section on outlining strategies including alphanumeric, decimal, and mind-map approaches for research papers.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/outlining-a-research-paper",
+      "videoNote": "Watch the step-by-step research paper outline construction tutorial.",
+      "video2Url": "https://www.youtube.com/watch?v=x7s7MJYdlHM",
+      "video2Note": "Review how to use a reverse outline to check an existing draft's logic and structure.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/logical-sequence",
+      "practiceNote": "Practice reordering paragraphs and ideas into logical sequence.",
+      "assignment": "Create a full-sentence outline for your research paper. Your outline must include: an introduction section with thesis, at least four body sections with topic sentences and evidence points, and a conclusion section. The outline should be approximately one page.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Writing Introductions & Conclusions",
+      "titleZh": "撰写引言与结论",
+      "objectives": "Write an engaging research paper introduction with a hook, context, and thesis; craft a conclusion that synthesizes findings without mere repetition; avoid common introduction and conclusion errors.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/7-3-writing-introductions-and-conclusions",
+      "readingNote": "Read the OpenStax guidance on effective introduction hooks (anecdote, statistic, question) and conclusion synthesis strategies.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/introductions-and-conclusions",
+      "videoNote": "Watch the tutorial on writing powerful academic introductions and conclusions.",
+      "video2Url": "https://www.youtube.com/watch?v=T0lmxW4WGBU",
+      "video2Note": "Review common introduction and conclusion mistakes and how to avoid them in college writing.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/introductions-and-conclusions",
+      "practiceNote": "Practice evaluating and improving introduction and conclusion paragraphs.",
+      "assignment": "Write an introduction and conclusion for your research paper. The introduction must include a hook, background context, and your thesis statement. The conclusion must synthesize your argument and offer a broader implication. Each should be 150–200 words. Submit both with a 150-word self-reflection on your choices.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 9,
+      "title": "Integrating Sources & Evidence",
+      "titleZh": "整合资料与证据",
+      "objectives": "Integrate quotations, paraphrases, and summaries smoothly into academic prose using signal phrases; apply the quote sandwich technique; avoid dropped quotations and patchwork writing.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/7-4-integrating-sources",
+      "readingNote": "Study the OpenStax guidance on the 'quote sandwich' model: introduce, quote/paraphrase, and analyze evidence in every body paragraph.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/integrating-sources",
+      "videoNote": "Watch the tutorial on using signal phrases and transitional language to integrate evidence effectively.",
+      "video2Url": "https://www.youtube.com/watch?v=b3FsGb7-s5s",
+      "video2Note": "Review examples of well-integrated vs. dropped quotations in academic essays.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:evidence-based-writing/e/integrating-evidence",
+      "practiceNote": "Practice selecting and integrating appropriate evidence for given argument claims.",
+      "assignment": "Write two complete body paragraphs for your research paper. Each paragraph must include a topic sentence, at least one integrated quotation or paraphrase (with signal phrase), analysis of the evidence, and a connection back to the thesis. Label the function of each sentence.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 10,
+      "title": "MLA & APA Citation Formats",
+      "titleZh": "MLA与APA引用格式",
+      "objectives": "Format in-text citations and Works Cited/References pages in both MLA 9th edition and APA 7th edition; identify when to use each format by discipline; avoid the ten most common citation errors.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/24-1-mla-documentation-and-format",
+      "readingNote": "Read the OpenStax MLA and APA chapters covering in-text citation patterns and reference list formatting for books, articles, and websites.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/mla-citation-basics",
+      "videoNote": "Watch the MLA 9th edition citation tutorial covering in-text citations and Works Cited formatting.",
+      "video2Url": "https://www.youtube.com/watch?v=BiSqpKGpCJY",
+      "video2Note": "Review APA 7th edition reference page formatting for journal articles, books, and electronic sources.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:evidence-based-writing/e/citing-sources",
+      "practiceNote": "Practice formatting citations correctly in both MLA and APA styles.",
+      "assignment": "Take your five annotated bibliography sources and format them in both MLA and APA styles. Submit a document with two sections: an MLA Works Cited page and an APA References page. Identify one formatting difference between the two styles for each source type in a 200-word comparison.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 11,
+      "title": "Revision & Proofreading",
+      "titleZh": "修改与校对",
+      "objectives": "Distinguish between revision (global changes) and proofreading (surface edits); apply a revision checklist for argument, organization, and evidence; use proofreading strategies to eliminate grammatical and mechanical errors.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/9-1-the-revision-process",
+      "readingNote": "Read the OpenStax Writing Guide section on multi-level revision strategies: content, organization, sentence-level, and mechanical editing.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/grammar/sentences-and-clauses/v/subject-verb-agreement",
+      "videoNote": "Watch the grammar review series on subject-verb agreement, pronoun reference, and sentence clarity.",
+      "video2Url": "https://www.youtube.com/watch?v=FJPGa2Z2xaQ",
+      "video2Note": "Review the systematic proofreading method: reading aloud, backward sentence-by-sentence, and peer reading.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:standard-english-conventions/e/improving-sentences",
+      "practiceNote": "Practice identifying and correcting sentence-level errors in academic writing.",
+      "assignment": "Revise your two body paragraphs from Module 9 using the three-level revision protocol: (1) argument and thesis alignment, (2) organization and transitions, (3) sentence clarity and grammar. Submit the original and revised versions with a 200-word revision memo explaining your changes.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 12,
+      "title": "Peer Review Process",
+      "titleZh": "同伴评审过程",
+      "objectives": "Provide specific, constructive written feedback on a peer's draft; distinguish between descriptive and evaluative feedback; use a structured peer review rubric to assess argument, evidence, organization, and citation.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/9-2-peer-review-giving-and-receiving-feedback",
+      "readingNote": "Study the OpenStax section on how to give feedback that is specific, balanced, and actionable rather than vague or purely evaluative.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/peer-review-strategies",
+      "videoNote": "Watch the tutorial on structured peer review strategies for academic writing.",
+      "video2Url": "https://www.youtube.com/watch?v=OvOHFf7IQPk",
+      "video2Note": "Review examples of effective vs. ineffective peer review comments with before/after drafts.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/argument-analysis",
+      "practiceNote": "Practice evaluating argument quality and evidence in writing samples.",
+      "assignment": "Exchange your introduction and two body paragraphs from previous modules with a classmate. Complete a structured peer review using the module rubric, providing at least three specific, actionable comments for each section. Submit both the completed rubric and a 200-word response explaining how you plan to use the feedback.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Presenting Research",
+      "titleZh": "研究成果展示",
+      "objectives": "Summarize a complex research argument in a five-minute oral presentation; create an effective visual aid for an academic audience; respond to audience questions with confidence and accuracy.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/23-1-presentation-of-research",
+      "readingNote": "Read the OpenStax section on adapting written research for oral presentation, including visual design principles and delivery strategies.",
+      "videoUrl": "https://www.khanacademy.org/humanities/writing/college-essay-writing/a/presenting-research-findings",
+      "videoNote": "Watch the tutorial on structuring a research presentation and designing clear, audience-centered slides.",
+      "video2Url": "https://www.youtube.com/watch?v=YVgS_opYacQ",
+      "video2Note": "Review strategies for handling Q&A sessions after academic research presentations.",
+      "practiceUrl": "https://www.khanacademy.org/test-prep/sat-reading-writing/x0a8c1cdd24a4c34d:sat-writing/x0a8c1cdd24a4c34d:sat-writing-craft-and-structure/e/summarizing-main-ideas",
+      "practiceNote": "Practice condensing complex arguments into clear, concise summaries.",
+      "assignment": "Create a 6–8 slide presentation summarizing your research paper argument. Your presentation must include: a title slide, research question, thesis, three key evidence points with citations, and a conclusion with implications. Write a 300-word speaker notes document for each slide.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 14,
+      "title": "College Application Essay Writing",
+      "titleZh": "大学申请文书写作",
+      "objectives": "Distinguish the college application essay from academic research writing; brainstorm authentic personal narrative topics; draft and revise a compelling personal statement using show-don't-tell techniques.",
+      "readingUrl": "https://openstax.org/books/writing-guide/pages/5-1-writing-a-personal-narrative",
+      "readingNote": "Read the OpenStax personal narrative chapter focusing on authentic voice, specific detail, and self-reflection strategies for college application writing.",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/college-admissions/v/an-effective-college-application-essay",
+      "videoNote": "Watch the Khan Academy series on writing effective college application essays that stand out.",
+      "video2Url": "https://www.youtube.com/watch?v=Nb4l7dFcKmY",
+      "video2Note": "Review show-don't-tell techniques and how to transform ordinary experiences into compelling personal statements.",
+      "practiceUrl": "https://www.khanacademy.org/college-careers-more/college-admissions/applying-to-college/college-application-essays/a/college-essay-prompts",
+      "practiceNote": "Practice brainstorming and drafting responses to Common App essay prompts.",
+      "assignment": "Write a 650-word college application personal statement responding to a Common App prompt of your choice. Your essay must demonstrate authentic voice, use specific details and scenes (show don't tell), and reflect meaningful personal growth. Submit a first draft and a 200-word self-reflection identifying the essay's strengths and areas for revision.",
+      "estimatedHrs": 4
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which of the following best describes a strong research question?",
+      "options": [
+        "A broad statement of fact that everyone already agrees with",
+        "A focused, arguable question that requires investigation and evidence",
+        "A question answered with a simple yes or no",
+        "A restatement of the paper's topic in question form"
+      ],
+      "answer": "A focused, arguable question that requires investigation and evidence",
+      "explanation": "A strong research question is specific, debatable, and complex enough to require a sustained investigation through evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "A thesis statement differs from a research question in that a thesis:",
+      "options": [
+        "Identifies the topic without taking a position",
+        "Is always a single sentence without supporting details",
+        "Presents the writer's central argument or claim in response to the research question",
+        "Lists all the subtopics the paper will cover"
+      ],
+      "answer": "Presents the writer's central argument or claim in response to the research question",
+      "explanation": "A thesis statement is the answer to the research question—it presents the writer's controlling claim that the paper will support.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "The process of narrowing a broad topic into a specific research question is important because:",
+      "options": [
+        "Broader topics produce longer papers that earn higher grades",
+        "A focused question makes the research manageable and the argument more precise",
+        "Databases only accept searches with very narrow terms",
+        "Teachers prefer questions about obscure topics"
+      ],
+      "answer": "A focused question makes the research manageable and the argument more precise",
+      "explanation": "Narrowing a topic allows a writer to conduct feasible research and develop a specific, well-supported argument rather than a superficial overview.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Which of the following is an example of a researchable, arguable research question?",
+      "options": [
+        "What is climate change?",
+        "Is climate change real?",
+        "To what extent do social media platforms bear responsibility for spreading climate misinformation?",
+        "How many people believe in climate change?"
+      ],
+      "answer": "To what extent do social media platforms bear responsibility for spreading climate misinformation?",
+      "explanation": "This question is focused, debatable, requires evidence and analysis, and is not answerable with a simple yes/no or a factual lookup.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Feasibility is an important criterion for a research question because it asks whether:",
+      "options": [
+        "The question can be answered using available evidence within the scope of the assignment",
+        "The question will be interesting to every reader",
+        "The question matches a pre-approved list of acceptable topics",
+        "The question is long enough to require five or more sources"
+      ],
+      "answer": "The question can be answered using available evidence within the scope of the assignment",
+      "explanation": "A feasible research question can realistically be investigated given the resources, time, and scope available to the writer.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Boolean operators in database searching include which of the following terms?",
+      "options": [
+        "LIKE, SIMILAR, CLOSE",
+        "AND, OR, NOT",
+        "FIND, SEARCH, MATCH",
+        "WITH, NEAR, ABOUT"
+      ],
+      "answer": "AND, OR, NOT",
+      "explanation": "Boolean operators AND, OR, and NOT allow researchers to combine, expand, or exclude search terms to control the scope of database results.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "A peer-reviewed journal article is most reliable for academic research because it:",
+      "options": [
+        "Was published on a well-known website",
+        "Passed evaluation by expert scholars before publication",
+        "Is freely available to anyone online",
+        "Was written by a college student as a course assignment"
+      ],
+      "answer": "Passed evaluation by expert scholars before publication",
+      "explanation": "Peer review means the article was critically evaluated by independent experts in the field before publication, ensuring scholarly quality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "When searching a database, placing quotation marks around a phrase (e.g., \"social media addiction\") instructs the database to:",
+      "options": [
+        "Search for either word separately",
+        "Exclude all articles that mention the phrase",
+        "Search for the exact phrase rather than individual words separately",
+        "Limit results to the most recent five years only"
+      ],
+      "answer": "Search for the exact phrase rather than individual words separately",
+      "explanation": "Phrase searching with quotation marks retrieves results where words appear together as a unit, making searches more precise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Which of the following academic databases is best known for peer-reviewed journal articles in humanities and social sciences?",
+      "options": [
+        "Google Images",
+        "Wikipedia",
+        "JSTOR",
+        "Amazon Reviews"
+      ],
+      "answer": "JSTOR",
+      "explanation": "JSTOR is a major academic database providing access to peer-reviewed journal articles, books, and primary sources across humanities, social sciences, and sciences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Using the 'AND' operator in a database search (e.g., social media AND mental health):",
+      "options": [
+        "Expands the search to include all articles about either topic",
+        "Narrows the search to articles that discuss both topics",
+        "Excludes all articles mentioning social media",
+        "Has no effect on the number of results returned"
+      ],
+      "answer": "Narrows the search to articles that discuss both topics",
+      "explanation": "AND requires both terms to appear in a result, narrowing the search to sources that address the relationship between the two concepts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "In the CRAAP test, the 'A' for Authority refers to evaluating:",
+      "options": [
+        "The accuracy of facts in the source",
+        "The availability of the source online",
+        "The credentials and expertise of the author or publisher",
+        "The academic level of the language used"
+      ],
+      "answer": "The credentials and expertise of the author or publisher",
+      "explanation": "Authority assesses whether the author has relevant expertise, credentials, or institutional affiliation that qualifies them to write on the topic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "A primary source in research is best described as:",
+      "options": [
+        "The most important source in your bibliography",
+        "An original document or firsthand account of an event or study",
+        "A textbook that synthesizes many sources on a topic",
+        "A Wikipedia article with extensive citations"
+      ],
+      "answer": "An original document or firsthand account of an event or study",
+      "explanation": "Primary sources are original materials—research studies, diaries, speeches, interviews, and original data—not interpretations of those materials.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "The SIFT method for evaluating online sources instructs users to first:",
+      "options": [
+        "Search immediately for more information on the topic",
+        "Save the article and use it without further verification",
+        "Stop and investigate the source before accepting its claims",
+        "Skim the article's conclusion to determine its reliability"
+      ],
+      "answer": "Stop and investigate the source before accepting its claims",
+      "explanation": "The 'S' in SIFT stands for 'Stop'—resist the impulse to immediately share or accept information and first investigate the source's credibility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Confirmation bias in research refers to the tendency to:",
+      "options": [
+        "Search only in databases that require institutional access",
+        "Prefer sources that confirm existing beliefs while ignoring contradictory evidence",
+        "Include too many sources that disagree with your thesis",
+        "Cite sources without reading them carefully"
+      ],
+      "answer": "Prefer sources that confirm existing beliefs while ignoring contradictory evidence",
+      "explanation": "Confirmation bias leads researchers to selectively seek and accept information that supports their preexisting views, undermining objectivity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Currency in source evaluation refers to:",
+      "options": [
+        "Whether the source has been cited by other scholars",
+        "The timeliness and publication date of the source relative to the research topic",
+        "The financial cost of accessing the source",
+        "Whether the source is written in standard academic currency (English)"
+      ],
+      "answer": "The timeliness and publication date of the source relative to the research topic",
+      "explanation": "Currency assesses how recent the source is and whether the information is still current and relevant for the research topic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Accidental plagiarism most commonly occurs when a student:",
+      "options": [
+        "Copies an entire article and submits it as their own work",
+        "Uses a source's ideas in their own words but fails to cite it",
+        "Writes original arguments without consulting any sources",
+        "Cites too many sources in a single paragraph"
+      ],
+      "answer": "Uses a source's ideas in their own words but fails to cite it",
+      "explanation": "Accidental plagiarism typically results from paraphrasing or summarizing a source's ideas without providing proper attribution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Paraphrasing differs from summarizing in that paraphrasing:",
+      "options": [
+        "Is always shorter than the original passage",
+        "Covers only the main idea of an entire work",
+        "Restates a specific passage in one's own words while maintaining its level of detail",
+        "Requires no citation because the words are the writer's own"
+      ],
+      "answer": "Restates a specific passage in one's own words while maintaining its level of detail",
+      "explanation": "Paraphrasing rewrites a specific passage at approximately the same length but in new words, while summarizing condenses an entire work to its main idea.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "The Cornell Note-taking System is effective for research because it:",
+      "options": [
+        "Requires copying all source text verbatim for accuracy",
+        "Organizes notes into cue, note, and summary sections for review and retrieval",
+        "Eliminates the need to identify page numbers for citations",
+        "Limits note-taking to bullet points only"
+      ],
+      "answer": "Organizes notes into cue, note, and summary sections for review and retrieval",
+      "explanation": "The Cornell system structures notes into an area for cues/questions, main notes, and a summary, facilitating efficient review and connection-making.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "When taking research notes, which practice best prevents patchwork writing?",
+      "options": [
+        "Copying exact phrases from sources and reformatting them later",
+        "Recording source ideas in your own words immediately and noting the source",
+        "Mixing quotations from multiple sources into a single note",
+        "Relying on memory instead of recording exact source information"
+      ],
+      "answer": "Recording source ideas in your own words immediately and noting the source",
+      "explanation": "Transforming source language immediately into your own words while noting the source prevents unintentional copying and patchwork assembly later.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "What information should always be recorded when taking a research note from an article?",
+      "options": [
+        "Only the quotation or paraphrase without page numbers to save time",
+        "The author, title, publication, date, and page or paragraph number",
+        "Only the URL if accessed online",
+        "The word count of the source article"
+      ],
+      "answer": "The author, title, publication, date, and page or paragraph number",
+      "explanation": "Complete source information must accompany every note to enable accurate citation and to prevent losing track of where information came from.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "An annotated bibliography entry typically includes all of the following EXCEPT:",
+      "options": [
+        "A complete citation in the required format",
+        "A summary of the source's content",
+        "An evaluation of the source's credibility",
+        "A full reprint of the source's abstract"
+      ],
+      "answer": "A full reprint of the source's abstract",
+      "explanation": "Annotated bibliography entries include citation, summary, evaluation, and reflection in the student's own words—not a reprint of the original abstract.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "The evaluative component of an annotated bibliography entry asks the writer to:",
+      "options": [
+        "Copy the source's conclusions verbatim",
+        "Assess the source's credibility, bias, and usefulness for the research project",
+        "List all other sources cited by the author",
+        "Describe the source's formatting and layout"
+      ],
+      "answer": "Assess the source's credibility, bias, and usefulness for the research project",
+      "explanation": "The evaluation section critically examines the source's authority, objectivity, methods, and relevance to the writer's research.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "An annotated bibliography serves which primary purpose in the research process?",
+      "options": [
+        "To replace the Works Cited page in the final paper",
+        "To demonstrate source comprehension and evaluate sources before writing",
+        "To show the instructor how many sources were found",
+        "To provide a reading list for future researchers"
+      ],
+      "answer": "To demonstrate source comprehension and evaluate sources before writing",
+      "explanation": "An annotated bibliography helps writers engage critically with their sources, assess their quality, and plan how to use them before drafting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Which citation style is most commonly required in English, humanities, and language arts courses?",
+      "options": [
+        "APA (American Psychological Association)",
+        "MLA (Modern Language Association)",
+        "Chicago/Turabian",
+        "IEEE (Institute of Electrical and Electronics Engineers)"
+      ],
+      "answer": "MLA (Modern Language Association)",
+      "explanation": "MLA format is the standard citation style in English, literature, and humanities disciplines at the high school and undergraduate level.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "The reflective component of an annotated bibliography entry asks the writer to explain:",
+      "options": [
+        "How many pages the source contains",
+        "Whether the source is available in a library database",
+        "How the source connects to and supports the research argument",
+        "The publisher's full corporate history"
+      ],
+      "answer": "How the source connects to and supports the research argument",
+      "explanation": "The reflective portion explains how the source fits into the research project and contributes to the writer's argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "A strong thesis statement must be:",
+      "options": [
+        "A question that the paper will attempt to answer",
+        "A statement of universally accepted fact",
+        "An arguable claim that the paper will support with evidence",
+        "A broad overview of the paper's topic"
+      ],
+      "answer": "An arguable claim that the paper will support with evidence",
+      "explanation": "A thesis must be contestable—a claim that someone could disagree with—and the paper's purpose is to persuade the reader through evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Which of the following is an example of a weak thesis statement?",
+      "options": [
+        "Although social media has positive uses, its unregulated design exploits teenage psychology and exacerbates mental health crises.",
+        "The opioid epidemic has had devastating effects on American families.",
+        "Schools should replace standardized testing with portfolio assessment because it more accurately measures diverse student abilities.",
+        "While free trade agreements boost GDP, they disproportionately harm low-wage domestic manufacturing workers."
+      ],
+      "answer": "The opioid epidemic has had devastating effects on American families.",
+      "explanation": "This statement is too obvious and vague—it makes no specific argument and could not be reasonably debated.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "The Toulmin model of argument consists of which core elements?",
+      "options": [
+        "Introduction, body, and conclusion",
+        "Claim, data, and warrant",
+        "Thesis, evidence, and summary",
+        "Hook, context, and thesis"
+      ],
+      "answer": "Claim, data, and warrant",
+      "explanation": "Stephen Toulmin's model of argument identifies the claim (what you assert), data (the evidence), and warrant (the reasoning connecting evidence to claim) as the core structure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Counter-argument and refutation in academic writing serve to:",
+      "options": [
+        "Undermine the writer's credibility by acknowledging disagreement",
+        "Demonstrate that the writer has not considered the full complexity of the issue",
+        "Strengthen the argument by addressing and responding to objections",
+        "Fill word count requirements without adding substantive content"
+      ],
+      "answer": "Strengthen the argument by addressing and responding to objections",
+      "explanation": "Acknowledging and effectively rebutting counterarguments demonstrates intellectual honesty and actually strengthens the writer's position.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "A thesis statement should appear where in an academic research paper?",
+      "options": [
+        "At the very beginning of the paper as the first sentence",
+        "At the end of the introduction paragraph",
+        "At the beginning of each body paragraph",
+        "Only in the conclusion after all evidence is presented"
+      ],
+      "answer": "At the end of the introduction paragraph",
+      "explanation": "The thesis conventionally appears at the end of the introduction, after providing context, to serve as the controlling idea for the entire paper.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "A full-sentence outline differs from a topic outline in that a full-sentence outline:",
+      "options": [
+        "Uses only Roman numerals for main sections",
+        "Expresses every entry as a complete sentence revealing the content of each section",
+        "Is used only for informal writing assignments",
+        "Lists topics without indicating how they relate to the thesis"
+      ],
+      "answer": "Expresses every entry as a complete sentence revealing the content of each section",
+      "explanation": "Full-sentence outlines use complete sentences for every entry, forcing the writer to articulate the actual claim of each section rather than just a vague label.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "A topic sentence in a body paragraph performs which essential function?",
+      "options": [
+        "Restates the thesis in identical wording",
+        "Provides the section's strongest piece of evidence",
+        "States the paragraph's controlling idea and its relationship to the thesis",
+        "Concludes the paragraph's argument and transitions to the next section"
+      ],
+      "answer": "States the paragraph's controlling idea and its relationship to the thesis",
+      "explanation": "A topic sentence identifies what the paragraph is about and connects it to the paper's overall argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "A reverse outline is a useful revision tool because it:",
+      "options": [
+        "Allows the writer to reorganize paragraphs before beginning to write",
+        "Maps what the draft actually argues versus what the outline intended",
+        "Creates a visual diagram of the paper's argument for the reader",
+        "Replaces the need for a peer review by identifying all errors"
+      ],
+      "answer": "Maps what the draft actually argues versus what the outline intended",
+      "explanation": "A reverse outline extracts the actual main point of each paragraph from a draft, revealing organizational gaps and logical inconsistencies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Logical organization in a research paper means that:",
+      "options": [
+        "All body paragraphs are exactly the same length",
+        "Ideas are sequenced so each builds on the previous, supporting the thesis",
+        "The strongest evidence always appears in the first body paragraph",
+        "Counterarguments are saved for the last body paragraph only"
+      ],
+      "answer": "Ideas are sequenced so each builds on the previous, supporting the thesis",
+      "explanation": "Logical organization ensures readers can follow the argument's progression as each section adds evidence and analysis toward the paper's conclusion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Transitions between paragraphs in a research paper are important because they:",
+      "options": [
+        "Add length to the paper without introducing new content",
+        "Signal the shift from one main idea to the next while maintaining logical flow",
+        "Replace the need for topic sentences in each paragraph",
+        "Are used only in the introduction and conclusion"
+      ],
+      "answer": "Signal the shift from one main idea to the next while maintaining logical flow",
+      "explanation": "Transitions connect paragraphs by linking the end of one idea to the beginning of the next, guiding the reader through the argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "An effective introduction hook is designed to:",
+      "options": [
+        "State the thesis immediately before any context is provided",
+        "Provide a complete summary of the paper's argument",
+        "Capture the reader's attention and create interest in the topic",
+        "List all the sources the paper will use"
+      ],
+      "answer": "Capture the reader's attention and create interest in the topic",
+      "explanation": "An introduction hook—whether a striking statistic, anecdote, or provocative question—draws the reader in before establishing context and thesis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "A conclusion in academic writing should avoid:",
+      "options": [
+        "Restating the thesis in new words",
+        "Discussing broader implications of the argument",
+        "Simply repeating the introduction paragraph verbatim",
+        "Suggesting areas for further research"
+      ],
+      "answer": "Simply repeating the introduction paragraph verbatim",
+      "explanation": "A conclusion should synthesize the argument and extend its implications—not mechanically repeat the introduction or body points.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Background context in an introduction serves to:",
+      "options": [
+        "Introduce the sources that will be cited in the body paragraphs",
+        "Give readers the necessary information to understand the thesis",
+        "Present the counterargument before the thesis is stated",
+        "List the paper's organizational structure explicitly"
+      ],
+      "answer": "Give readers the necessary information to understand the thesis",
+      "explanation": "Context bridges the hook and thesis by providing key background information that frames why the research question matters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "The 'broader implication' that a strong conclusion adds refers to:",
+      "options": [
+        "A new argument that was not mentioned in the body of the paper",
+        "Why the research argument matters beyond the paper itself",
+        "A restatement of all the evidence used throughout the paper",
+        "Suggestions to the reader about which sources to read next"
+      ],
+      "answer": "Why the research argument matters beyond the paper itself",
+      "explanation": "A strong conclusion extends the argument by connecting findings to larger contexts—societal, disciplinary, or practical—beyond the paper's immediate scope.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Which of the following is the best way to open a research paper introduction?",
+      "options": [
+        "'In this paper, I will argue that social media harms teenagers.'",
+        "A startling statistic: 'Teens who use social media more than three hours daily are three times more likely to experience depression, according to recent longitudinal research.'",
+        "'I have always been interested in social media.'",
+        "'This paper will discuss social media, depression, and teenagers.'"
+      ],
+      "answer": "A startling statistic: 'Teens who use social media more than three hours daily are three times more likely to experience depression, according to recent longitudinal research.'",
+      "explanation": "A compelling statistic from credible research immediately establishes the topic's significance and draws the reader into the argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "A 'dropped quotation' in academic writing refers to:",
+      "options": [
+        "A quotation that is too long and must be shortened",
+        "A quotation inserted without an introductory signal phrase or analytical follow-up",
+        "A quotation from a source that could not be verified as credible",
+        "A quotation formatted incorrectly in the citation"
+      ],
+      "answer": "A quotation inserted without an introductory signal phrase or analytical follow-up",
+      "explanation": "A dropped quotation appears without introduction or analysis, making it confusing and weakening the paragraph's logical flow.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "A signal phrase is used to introduce source material in order to:",
+      "options": [
+        "Indicate that the material is copied without permission",
+        "Attribute the material to its source and integrate it smoothly into the prose",
+        "Inform the reader that the sentence is not important to the argument",
+        "Replace the need for an in-text parenthetical citation"
+      ],
+      "answer": "Attribute the material to its source and integrate it smoothly into the prose",
+      "explanation": "Signal phrases (e.g., 'According to Smith...') credit the source and connect quoted material to the writer's argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "The 'quote sandwich' technique requires the writer to:",
+      "options": [
+        "Use only short quotations of five words or fewer",
+        "Introduce the quotation, present it, and then analyze what it means",
+        "Place quotations only in the introduction and conclusion",
+        "Use three quotations per paragraph to demonstrate research"
+      ],
+      "answer": "Introduce the quotation, present it, and then analyze what it means",
+      "explanation": "The quote sandwich involves: (1) introducing the source/context, (2) presenting the quotation or paraphrase, (3) explaining its significance for the argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Patchwork writing occurs when a writer:",
+      "options": [
+        "Uses too few sources to support the argument adequately",
+        "Assembles passages from different sources with minimal original analysis",
+        "Revises a draft multiple times without keeping earlier versions",
+        "Begins paragraphs with quotations rather than topic sentences"
+      ],
+      "answer": "Assembles passages from different sources with minimal original analysis",
+      "explanation": "Patchwork writing is a form of plagiarism where sources are stitched together with little original thinking, resulting in the student's voice being absent.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "After presenting evidence in a body paragraph, the writer must follow it with:",
+      "options": [
+        "Another quotation immediately to strengthen the point",
+        "Analysis explaining how the evidence supports the paragraph's topic sentence and thesis",
+        "A transition to the next body paragraph",
+        "A restatement of the thesis in different words"
+      ],
+      "answer": "Analysis explaining how the evidence supports the paragraph's topic sentence and thesis",
+      "explanation": "Analysis connects the evidence to the argument—without it, readers cannot understand why the evidence matters or what it proves.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "In MLA format, in-text citations typically include:",
+      "options": [
+        "Author's last name and the year of publication in parentheses",
+        "Author's last name and page number in parentheses",
+        "The full title of the source in quotation marks",
+        "The URL of the source and access date"
+      ],
+      "answer": "Author's last name and page number in parentheses",
+      "explanation": "MLA in-text citations use the author's last name and page number (e.g., Smith 42) to direct readers to the full citation on the Works Cited page.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "In APA format, in-text citations for a direct quotation include:",
+      "options": [
+        "Author's last name only in parentheses",
+        "Author's last name, year of publication, and page number",
+        "Full source title and year in parentheses",
+        "A footnote number linking to the reference list"
+      ],
+      "answer": "Author's last name, year of publication, and page number",
+      "explanation": "APA in-text citations for direct quotations include author, year, and page number (e.g., Smith, 2021, p. 42) following the quotation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "MLA style is most commonly required in which academic disciplines?",
+      "options": [
+        "Psychology, sociology, and nursing",
+        "Engineering, computer science, and physics",
+        "English, literature, and humanities",
+        "Business, finance, and economics"
+      ],
+      "answer": "English, literature, and humanities",
+      "explanation": "MLA format is the standard citation style in English and humanities disciplines at the high school and undergraduate level.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Which citation style uses a 'References' page (not 'Works Cited') at the end of the paper?",
+      "options": [
+        "MLA 9th edition",
+        "Chicago/Turabian (notes-bibliography)",
+        "APA 7th edition",
+        "AP style"
+      ],
+      "answer": "APA 7th edition",
+      "explanation": "APA uses a 'References' page, while MLA uses 'Works Cited,' and Chicago/Turabian uses 'Bibliography' or footnotes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "When citing a source with no page numbers (such as a website) in MLA format, writers should use:",
+      "options": [
+        "Leave the parenthetical citation blank",
+        "The author's first name only",
+        "The paragraph number (par. 3) or section heading if available",
+        "The URL of the webpage"
+      ],
+      "answer": "The paragraph number (par. 3) or section heading if available",
+      "explanation": "MLA recommends using paragraph numbers or section headings when page numbers are unavailable, such as with online sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Global revision in academic writing primarily focuses on:",
+      "options": [
+        "Correcting spelling and punctuation errors throughout the draft",
+        "Improving sentence variety and word choice at the stylistic level",
+        "Evaluating and restructuring argument, organization, and evidence",
+        "Fixing formatting errors in the citation page"
+      ],
+      "answer": "Evaluating and restructuring argument, organization, and evidence",
+      "explanation": "Global revision addresses the big-picture elements of writing—the strength of the argument, logical structure, and quality of evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Proofreading is best conducted after revision because:",
+      "options": [
+        "Grammar errors are easier to spot in longer drafts",
+        "Fixing surface errors in sections that might be deleted wastes time",
+        "Proofreaders need to see the final argument before beginning",
+        "Grammar errors become more frequent as writers revise content"
+      ],
+      "answer": "Fixing surface errors in sections that might be deleted wastes time",
+      "explanation": "Proofreading after revision ensures you are correcting surface errors in the final version of the text, not in paragraphs that may change or be cut.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Reading your writing aloud is an effective proofreading technique because:",
+      "options": [
+        "It demonstrates the paper's argument to an imagined audience",
+        "Errors that the eye skips over are often caught by the ear",
+        "It reveals how many sources were cited throughout the paper",
+        "It helps determine whether the paper meets the required word count"
+      ],
+      "answer": "Errors that the eye skips over are often caught by the ear",
+      "explanation": "Reading aloud slows the reader down and activates auditory processing, making awkward phrasing, missing words, and grammatical errors easier to detect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "A dangling modifier error occurs when:",
+      "options": [
+        "A modifier phrase is placed next to the word it correctly modifies",
+        "A modifying phrase does not logically connect to the subject of the main clause",
+        "A sentence has too many adjectives and adverbs",
+        "Two independent clauses are joined without a conjunction"
+      ],
+      "answer": "A modifying phrase does not logically connect to the subject of the main clause",
+      "explanation": "A dangling modifier refers to or modifies an absent or illogical subject, creating a confusing or unintentionally humorous sentence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "A revision memo is a reflective writing exercise that asks students to:",
+      "options": [
+        "Copy all corrected sentences from the revised draft",
+        "Explain what changes were made and why, demonstrating metacognitive awareness",
+        "List every grammar error found during proofreading",
+        "Summarize the paper's argument for a different audience"
+      ],
+      "answer": "Explain what changes were made and why, demonstrating metacognitive awareness",
+      "explanation": "A revision memo documents the writer's thinking process—what was changed, why, and how revisions strengthen the argument—building metacognitive writing skills.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Effective peer review feedback should always be:",
+      "options": [
+        "General enough to apply to any student's paper",
+        "Specific, targeted, and actionable for the writer",
+        "Focused only on positive aspects to encourage the writer",
+        "Limited to grammar and punctuation corrections"
+      ],
+      "answer": "Specific, targeted, and actionable for the writer",
+      "explanation": "Effective feedback identifies specific issues and suggests concrete improvements, giving the writer clear direction for revision.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "A structured peer review rubric helps reviewers because it:",
+      "options": [
+        "Allows reviewers to assign a grade to the paper",
+        "Ensures consistent evaluation of specific writing criteria rather than general impressions",
+        "Limits feedback to three comments per paper",
+        "Requires reviewers to compare the paper to published academic articles"
+      ],
+      "answer": "Ensures consistent evaluation of specific writing criteria rather than general impressions",
+      "explanation": "A rubric guides reviewers to assess specific elements—argument, evidence, organization, citation—systematically rather than offering vague overall impressions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Descriptive peer feedback (as opposed to evaluative feedback) involves:",
+      "options": [
+        "Assigning a letter grade to the paper's overall quality",
+        "Describing what you observed in the text without judging whether it is good or bad",
+        "Recommending that the writer completely restart the paper",
+        "Comparing the paper favorably or unfavorably to other students' work"
+      ],
+      "answer": "Describing what you observed in the text without judging whether it is good or bad",
+      "explanation": "Descriptive feedback tells writers what you noticed (e.g., 'I noticed your thesis changes between paragraphs 1 and 3') allowing them to make their own judgments about whether to revise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "The purpose of responding to peer feedback in writing is to:",
+      "options": [
+        "Argue that the reviewer was wrong about all suggested changes",
+        "Demonstrate that the writer read and considered the feedback, even if all changes are not adopted",
+        "Prove to the instructor that the peer review was completed",
+        "Copy all suggestions verbatim into the revised draft"
+      ],
+      "answer": "Demonstrate that the writer read and considered the feedback, even if all changes are not adopted",
+      "explanation": "A written response shows metacognitive engagement with feedback—the writer must explain what they will use, what they will not use, and why.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Peer review is a valuable part of the writing process primarily because:",
+      "options": [
+        "It eliminates the need for teacher feedback on the final draft",
+        "Peers can identify unclear arguments that the writer's familiarity with the topic obscures",
+        "It allows students to receive a grade without submitting individual work",
+        "Peers have more expertise than instructors in evaluating academic writing"
+      ],
+      "answer": "Peers can identify unclear arguments that the writer's familiarity with the topic obscures",
+      "explanation": "Writers often cannot see gaps in their own argument because they are too familiar with it; a reader's fresh perspective reveals what needs clarification.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "When adapting a research paper for an oral presentation, the most important adjustment is to:",
+      "options": [
+        "Read the paper aloud word for word",
+        "Simplify complex arguments into clear main points with supporting evidence",
+        "Include every detail and quotation from the written paper",
+        "Focus only on the introduction and conclusion of the paper"
+      ],
+      "answer": "Simplify complex arguments into clear main points with supporting evidence",
+      "explanation": "Oral presentations require distilling complex written arguments into digestible main points, as listeners cannot re-read sections for clarification.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Effective academic presentation slides should primarily:",
+      "options": [
+        "Contain all information from the speech in full sentences",
+        "Use visuals, key terms, and minimal text to support the speaker's message",
+        "Be identical to the written paper formatted into slides",
+        "Include as much data as possible on each slide to demonstrate research depth"
+      ],
+      "answer": "Use visuals, key terms, and minimal text to support the speaker's message",
+      "explanation": "Slides support rather than replace the speaker—they should display key terms, visuals, and data while the presenter elaborates with the full argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "During the Q&A portion of a research presentation, if you do not know the answer to a question, you should:",
+      "options": [
+        "Make up an answer to avoid appearing unprepared",
+        "Dismiss the question as outside the scope of your research",
+        "Acknowledge the limitation honestly and offer to investigate further",
+        "Ask the questioner to answer the question themselves"
+      ],
+      "answer": "Acknowledge the limitation honestly and offer to investigate further",
+      "explanation": "Intellectual honesty in academic presentations means acknowledging the boundaries of your knowledge and treating unanswered questions as opportunities for further research.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Speaker notes in a research presentation serve to:",
+      "options": [
+        "Provide a word-for-word script to be read during the presentation",
+        "Remind the presenter of elaborations, transitions, and key points not on the slides",
+        "Replace the need to practice the presentation before delivery",
+        "Serve as the formal written paper submitted to the instructor"
+      ],
+      "answer": "Remind the presenter of elaborations, transitions, and key points not on the slides",
+      "explanation": "Speaker notes capture the presenter's plan for each slide—key elaborations and transitions—without scripting the entire delivery.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "Summarizing a research argument for a presentation requires the presenter to:",
+      "options": [
+        "Include all supporting evidence and sub-arguments from the paper",
+        "Identify the most essential claims and eliminate peripheral details",
+        "Use different evidence than what appears in the written paper",
+        "Present the counterarguments only and not the thesis"
+      ],
+      "answer": "Identify the most essential claims and eliminate peripheral details",
+      "explanation": "Effective summarization for oral delivery requires identifying the core argument and key supporting points while omitting details that would overwhelm listeners.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "The college application personal statement differs from an academic research essay primarily because it:",
+      "options": [
+        "Requires more citations and source integration",
+        "Focuses on the writer's personal experiences, growth, and authentic voice",
+        "Must include a formal thesis and supporting body paragraphs",
+        "Is judged primarily on grammar and citation accuracy"
+      ],
+      "answer": "Focuses on the writer's personal experiences, growth, and authentic voice",
+      "explanation": "Personal statements invite authentic self-expression and narrative storytelling, allowing the writer's unique personality and perspective to emerge—unlike formal academic essays.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "The 'show, don't tell' principle in college essay writing means:",
+      "options": [
+        "Describing accomplishments using statistics and awards",
+        "Using specific scenes, dialogue, and sensory details instead of abstract claims",
+        "Stating directly what character traits you possess",
+        "Summarizing your extracurricular activities in list form"
+      ],
+      "answer": "Using specific scenes, dialogue, and sensory details instead of abstract claims",
+      "explanation": "Showing creates vivid, memorable writing by depicting experiences in concrete detail rather than making abstract claims about one's character.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "The Common App essay has a maximum word limit of:",
+      "options": [
+        "350 words",
+        "500 words",
+        "650 words",
+        "1000 words"
+      ],
+      "answer": "650 words",
+      "explanation": "The Common Application personal statement has a 650-word maximum, requiring writers to be selective and concise while telling a meaningful story.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "College admissions readers value personal statements that:",
+      "options": [
+        "List all academic achievements and test scores",
+        "Demonstrate reflection on a meaningful experience and show the writer's authentic personality",
+        "Use sophisticated vocabulary and complex sentence structures throughout",
+        "Prove that the writer has read every book in their college major"
+      ],
+      "answer": "Demonstrate reflection on a meaningful experience and show the writer's authentic personality",
+      "explanation": "Admissions readers seek essays that offer genuine insight into who the applicant is—their values, voice, and capacity for self-reflection—not simply a list of accomplishments.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "The self-reflection component of a college essay draft review asks writers to:",
+      "options": [
+        "Compare their essay to other students' essays for quality benchmarking",
+        "Identify what works well and what needs revision in their own draft using specific criteria",
+        "Summarize the essay's main argument for an academic audience",
+        "Calculate the readability score of the essay using an online tool"
+      ],
+      "answer": "Identify what works well and what needs revision in their own draft using specific criteria",
+      "explanation": "Metacognitive self-reflection on a draft builds revision skills by requiring writers to read their own work critically and identify specific strengths and gaps.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "multiple_choice",
+      "question": "A strong research question must be:",
+      "options": [
+        "Answerable with a simple yes or no",
+        "A broad topic statement without a specific angle",
+        "Focused, arguable, and requiring evidence-based investigation",
+        "Already answered by existing consensus"
+      ],
+      "answer": "Focused, arguable, and requiring evidence-based investigation",
+      "explanation": "A strong research question is specific, contestable, and complex enough to drive a sustained investigation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "multiple_choice",
+      "question": "The Boolean operator AND in a database search:",
+      "options": [
+        "Expands results to include either search term",
+        "Narrows results to include both search terms",
+        "Excludes all articles containing either term",
+        "Searches for exact phrase matching"
+      ],
+      "answer": "Narrows results to include both search terms",
+      "explanation": "AND requires both search terms to appear in results, narrowing the search to relevant sources addressing both concepts.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "multiple_choice",
+      "question": "In the CRAAP test, the letter 'P' (Purpose) asks evaluators to consider:",
+      "options": [
+        "Whether the source was published in a print format",
+        "Why the source was written and whether it reflects bias or a particular agenda",
+        "The page length of the source",
+        "Whether the author's purpose matches the research question topic"
+      ],
+      "answer": "Why the source was written and whether it reflects bias or a particular agenda",
+      "explanation": "Purpose assesses the source's intent—to inform, persuade, sell, or entertain—and whether that intent introduces bias.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "multiple_choice",
+      "question": "To avoid plagiarism when paraphrasing, writers must:",
+      "options": [
+        "Change only a few words in the original sentence",
+        "Restate the idea in their own words and sentence structure AND cite the source",
+        "Use quotation marks around the paraphrase",
+        "Only paraphrase sources that are over ten years old"
+      ],
+      "answer": "Restate the idea in their own words and sentence structure AND cite the source",
+      "explanation": "True paraphrasing requires completely restating the idea in new language—not just substituting synonyms—and always attributing the source.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "multiple_choice",
+      "question": "An annotated bibliography entry's 'reflective' section requires the writer to explain:",
+      "options": [
+        "How many times the source was cited in the paper",
+        "The source's publication history and previous editions",
+        "How the source will contribute to and connect with the research argument",
+        "The source's formatting and citation style"
+      ],
+      "answer": "How the source will contribute to and connect with the research argument",
+      "explanation": "The reflection connects the source to the writer's specific argument, explaining its relevance and planned use.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "multiple_choice",
+      "question": "A strong thesis statement must be arguable, which means it:",
+      "options": [
+        "Presents a fact that most scholars agree is accurate",
+        "Makes a claim that reasonable people could disagree with",
+        "Is supported by at least five scholarly sources",
+        "Is written in the first person with the phrase 'I believe'"
+      ],
+      "answer": "Makes a claim that reasonable people could disagree with",
+      "explanation": "An arguable thesis invites debate and requires supporting evidence—it is not a fact but a position that needs to be demonstrated.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "multiple_choice",
+      "question": "A full-sentence outline is preferred over a topic outline for research paper planning because it:",
+      "options": [
+        "Is shorter and easier to create before writing",
+        "Forces the writer to articulate the actual claim of each section",
+        "Allows writers to use bullet points for all entries",
+        "Requires only a list of sources without organizational structure"
+      ],
+      "answer": "Forces the writer to articulate the actual claim of each section",
+      "explanation": "Full-sentence outlines reveal the actual argument of each section, helping writers identify logical gaps before drafting.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "multiple_choice",
+      "question": "An effective introduction hook's primary purpose is to:",
+      "options": [
+        "Provide the complete argument of the paper upfront",
+        "Engage the reader's interest before building context and thesis",
+        "List all the sources the paper will cite",
+        "State the paper's thesis in the first sentence"
+      ],
+      "answer": "Engage the reader's interest before building context and thesis",
+      "explanation": "An introduction hook creates reader interest and establishes the paper's relevance before moving to context and thesis.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "multiple_choice",
+      "question": "Which of the following describes the 'quote sandwich' technique?",
+      "options": [
+        "Using two short quotations surrounding a longer paraphrase",
+        "Introducing evidence with a signal phrase, presenting it, then analyzing its significance",
+        "Placing all quotations in the introduction and conclusion",
+        "Using only block quotations for sources longer than four lines"
+      ],
+      "answer": "Introducing evidence with a signal phrase, presenting it, then analyzing its significance",
+      "explanation": "The quote sandwich ensures evidence is properly framed and analyzed: introduce the source, present the quotation, explain its connection to the argument.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "multiple_choice",
+      "question": "In MLA format, the in-text citation (Smith 42) indicates:",
+      "options": [
+        "Smith is the title of the article, published on page 42",
+        "The author's last name is Smith and the cited content is on page 42",
+        "The source was written in 1942 by an author named Smith",
+        "Smith is the 42nd source on the Works Cited page"
+      ],
+      "answer": "The author's last name is Smith and the cited content is on page 42",
+      "explanation": "MLA in-text citations direct readers to the full source information on the Works Cited page using author last name and page number.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "multiple_choice",
+      "question": "Revision focuses on which level of a draft?",
+      "options": [
+        "Correcting spelling and punctuation errors",
+        "Fixing comma splices and run-on sentences",
+        "Evaluating argument strength, organization, and evidence quality",
+        "Checking that the citation page is formatted correctly"
+      ],
+      "answer": "Evaluating argument strength, organization, and evidence quality",
+      "explanation": "Revision addresses the content and structure of the argument—the 'global' elements—while proofreading handles surface-level errors.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "multiple_choice",
+      "question": "Specific, actionable peer feedback is best exemplified by which comment?",
+      "options": [
+        "'This paragraph is confusing.'",
+        "'Good job on the thesis!'",
+        "'Your topic sentence in paragraph 3 does not connect to your thesis—try revising it to include the word \"equity\" to match your argument.'",
+        "'The paper needs more sources.'"
+      ],
+      "answer": "'Your topic sentence in paragraph 3 does not connect to your thesis—try revising it to include the word \"equity\" to match your argument.'",
+      "explanation": "Effective peer feedback identifies a specific problem, locates it precisely, and offers a concrete suggestion for improvement.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "multiple_choice",
+      "question": "A primary source is best defined as:",
+      "options": [
+        "The first source found in a database search",
+        "An original, firsthand document such as a research study, speech, or diary entry",
+        "A textbook chapter that synthesizes secondary sources",
+        "A Wikipedia article with at least 20 citations"
+      ],
+      "answer": "An original, firsthand document such as a research study, speech, or diary entry",
+      "explanation": "Primary sources are original materials—raw data, firsthand accounts—that secondary sources interpret and analyze.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "multiple_choice",
+      "question": "Patchwork writing is problematic because it:",
+      "options": [
+        "Uses too many different citation styles in one paper",
+        "Stitches together source passages with minimal original analysis, failing to demonstrate the writer's thinking",
+        "Includes too many contrasting viewpoints without a clear thesis",
+        "Changes the argument midway through the paper"
+      ],
+      "answer": "Stitches together source passages with minimal original analysis, failing to demonstrate the writer's thinking",
+      "explanation": "Patchwork writing lacks the writer's analytical voice and is a form of academic dishonesty even when sources are cited.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "multiple_choice",
+      "question": "The Toulmin model of argument identifies the 'warrant' as:",
+      "options": [
+        "The main claim of the argument",
+        "The evidence used to support the claim",
+        "The logical reasoning that connects evidence to the claim",
+        "The counterargument that the writer must refute"
+      ],
+      "answer": "The logical reasoning that connects evidence to the claim",
+      "explanation": "The warrant explains why the evidence supports the claim—the reasoning or assumption that makes the evidence relevant.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "multiple_choice",
+      "question": "Which of the following research questions is the strongest example of an arguable, focused question?",
+      "options": [
+        "What is the history of social media?",
+        "Does social media exist?",
+        "Should social media platforms be legally liable for algorithmic amplification of extremist content?",
+        "How many people use social media every day?"
+      ],
+      "answer": "Should social media platforms be legally liable for algorithmic amplification of extremist content?",
+      "explanation": "This question is focused, contested, requires evidence-based argumentation, and addresses a current policy debate with no simple answer.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "multiple_choice",
+      "question": "In a database search, using the OR operator between two terms (e.g., teenagers OR adolescents):",
+      "options": [
+        "Requires both terms to appear in every result",
+        "Excludes results that use either term",
+        "Broadens the search by retrieving articles containing either term",
+        "Searches for the exact phrase 'teenagers OR adolescents'"
+      ],
+      "answer": "Broadens the search by retrieving articles containing either term",
+      "explanation": "OR expands search results by including all articles that contain at least one of the specified terms, useful for capturing synonymous concepts.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "multiple_choice",
+      "question": "A peer-reviewed source is preferable in academic research because:",
+      "options": [
+        "Peer-reviewed articles are always freely available online",
+        "Expert reviewers have evaluated the research methodology and conclusions before publication",
+        "Peer-reviewed sources are shorter and easier to read than textbooks",
+        "Peer-reviewed articles never require citation"
+      ],
+      "answer": "Expert reviewers have evaluated the research methodology and conclusions before publication",
+      "explanation": "Peer review is a quality control process in which independent experts assess the validity and rigor of research before it is published.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "multiple_choice",
+      "question": "Confirmation bias in the research process leads writers to:",
+      "options": [
+        "Cite too many sources from the same publisher",
+        "Seek evidence that supports existing beliefs while discounting contradictory evidence",
+        "Overuse primary sources at the expense of secondary analysis",
+        "Forget to update sources when new editions are published"
+      ],
+      "answer": "Seek evidence that supports existing beliefs while discounting contradictory evidence",
+      "explanation": "Confirmation bias compromises research integrity by causing writers to selectively gather and interpret evidence in ways that confirm their preexisting position.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "multiple_choice",
+      "question": "An annotated bibliography serves the research writing process by:",
+      "options": [
+        "Replacing the Works Cited page in the final paper submission",
+        "Helping the writer critically engage with sources before drafting the paper",
+        "Listing all sources read during research regardless of whether they will be cited",
+        "Providing a summary of other scholars' thesis statements only"
+      ],
+      "answer": "Helping the writer critically engage with sources before drafting the paper",
+      "explanation": "An annotated bibliography builds critical reading skills by requiring writers to summarize, evaluate, and connect sources before drafting begins.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "multiple_choice",
+      "question": "Which revision strategy helps writers identify logical gaps between their outline and their actual draft?",
+      "options": [
+        "Reading the draft aloud to check for awkward phrasing",
+        "Creating a reverse outline of the completed draft",
+        "Checking each paragraph's formatting against the style guide",
+        "Counting the number of citations in each body paragraph"
+      ],
+      "answer": "Creating a reverse outline of the completed draft",
+      "explanation": "A reverse outline extracts the actual argument of each paragraph, revealing where the draft diverges from the intended logical structure.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "multiple_choice",
+      "question": "A conclusion paragraph in a research paper should do all of the following EXCEPT:",
+      "options": [
+        "Restate the thesis in new words",
+        "Synthesize the paper's main supporting points",
+        "Discuss the broader implications of the argument",
+        "Introduce new evidence and claims not covered in the body"
+      ],
+      "answer": "Introduce new evidence and claims not covered in the body",
+      "explanation": "Conclusions synthesize what has already been argued—they do not introduce new evidence or arguments that the body paragraphs did not support.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "multiple_choice",
+      "question": "APA 7th edition in-text citations for a direct quotation require which three elements?",
+      "options": [
+        "Author first name, publication title, and year",
+        "Author last name, year, and page number",
+        "Author last name, database name, and URL",
+        "Title, journal volume, and issue number"
+      ],
+      "answer": "Author last name, year, and page number",
+      "explanation": "APA in-text citations for direct quotations require: (Author, year, p. page#) — for example, (Smith, 2021, p. 42).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "multiple_choice",
+      "question": "The 'show, don't tell' principle in personal essay writing asks writers to:",
+      "options": [
+        "Prove their GPA and test scores using specific numbers",
+        "Use narrative scenes and sensory details rather than abstract character claims",
+        "Tell readers directly what values and qualities they possess",
+        "Show all sources of inspiration in a bibliography"
+      ],
+      "answer": "Use narrative scenes and sensory details rather than abstract character claims",
+      "explanation": "Showing creates vivid, specific writing that allows readers to infer the writer's qualities through concrete experience rather than stated claims.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "multiple_choice",
+      "question": "Transition sentences between body paragraphs serve which primary function?",
+      "options": [
+        "Introducing new evidence that was not in the outline",
+        "Connecting the end of one paragraph's idea to the beginning of the next",
+        "Summarizing the entire paper's argument after each body section",
+        "Replacing the need for topic sentences in body paragraphs"
+      ],
+      "answer": "Connecting the end of one paragraph's idea to the beginning of the next",
+      "explanation": "Transitions signal logical movement between paragraphs, guiding readers through the argument's progression.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "multiple_choice",
+      "question": "Descriptive peer feedback is preferable to evaluative feedback because it:",
+      "options": [
+        "Allows the reviewer to assign a numerical score to the paper",
+        "Describes what the reviewer observed without rendering a judgment, giving the writer agency to decide",
+        "Evaluates whether the paper meets the assignment requirements",
+        "Compares the paper's quality to the best paper in the class"
+      ],
+      "answer": "Describes what the reviewer observed without rendering a judgment, giving the writer agency to decide",
+      "explanation": "Descriptive feedback presents observations that the writer can act on, rather than judgments that can feel dismissive or unhelpful.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "multiple_choice",
+      "question": "When presenting research orally, slides should contain:",
+      "options": [
+        "The full text of the paper formatted into bullet points",
+        "Minimal text with visuals and key terms that support the speaker's explanation",
+        "Every quotation cited in the written paper",
+        "Only the title and thesis, with no visual content"
+      ],
+      "answer": "Minimal text with visuals and key terms that support the speaker's explanation",
+      "explanation": "Effective presentation slides serve as a visual aid—not a script—using key terms, data visualizations, and images to complement the speaker.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "multiple_choice",
+      "question": "The Common Application personal statement requires applicants to write no more than:",
+      "options": [
+        "350 words",
+        "500 words",
+        "650 words",
+        "800 words"
+      ],
+      "answer": "650 words",
+      "explanation": "The Common App personal statement has a 650-word maximum, requiring writers to be selective and concise in their self-presentation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "multiple_choice",
+      "question": "Integrating a counterargument into an academic research paper primarily serves to:",
+      "options": [
+        "Prove that the writer agrees with all perspectives on the issue",
+        "Weaken the thesis by presenting opposing views",
+        "Demonstrate intellectual rigor and strengthen the argument by addressing objections",
+        "Fill required word count without adding new evidence"
+      ],
+      "answer": "Demonstrate intellectual rigor and strengthen the argument by addressing objections",
+      "explanation": "Engaging counterarguments shows that the writer has considered multiple perspectives and can defend the thesis against the strongest objections.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "multiple_choice",
+      "question": "The SIFT method for evaluating online information stands for:",
+      "options": [
+        "Search, Identify, Find, Track",
+        "Stop, Investigate, Find better coverage, Trace claims",
+        "Summarize, Interpret, Find sources, Test reliability",
+        "Scan, Index, Flag bias, Trust ranking"
+      ],
+      "answer": "Stop, Investigate, Find better coverage, Trace claims",
+      "explanation": "SIFT is a lateral reading strategy: Stop before sharing, Investigate the source, Find better coverage from multiple outlets, and Trace claims to their original context.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "multiple_choice",
+      "question": "Which citation element distinguishes an MLA Works Cited entry from an APA References entry for a journal article?",
+      "options": [
+        "MLA lists the author's last name while APA lists the first name only",
+        "APA places the year of publication directly after the author's name, while MLA places it near the end",
+        "MLA requires a DOI for all online articles while APA does not",
+        "APA uses quotation marks around article titles while MLA does not"
+      ],
+      "answer": "APA places the year of publication directly after the author's name, while MLA places it near the end",
+      "explanation": "A key structural difference is that APA citation leads with the author name then year, while MLA places the year toward the end of the citation after journal volume/issue information.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "multiple_choice",
+      "question": "A revision memo demonstrates which writing competency?",
+      "options": [
+        "Ability to proofread for surface-level grammar errors",
+        "Metacognitive awareness—the ability to reflect on and evaluate one's own writing process and choices",
+        "Speed of writing under timed conditions",
+        "Ability to follow MLA formatting guidelines accurately"
+      ],
+      "answer": "Metacognitive awareness—the ability to reflect on and evaluate one's own writing process and choices",
+      "explanation": "A revision memo requires writers to articulate their revision decisions, demonstrating self-aware thinking about writing quality and improvement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "multiple_choice",
+      "question": "Which of the following best exemplifies a dropped quotation error?",
+      "options": [
+        "'As Smith argues, \"social media harms teenagers\" (12).'",
+        "'Research shows that teens are affected by social media (Smith 12).'",
+        "'\"Social media harms teenagers.\" This is an important concern.'",
+        "'According to Smith (2021), social media is linked to increased depression (p. 12).'"
+      ],
+      "answer": "'\"Social media harms teenagers.\" This is an important concern.'",
+      "explanation": "A dropped quotation appears without a signal phrase attributing it to a source and without analytical follow-up connecting it to the argument.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "multiple_choice",
+      "question": "Body paragraphs in a research paper should follow which organizational pattern?",
+      "options": [
+        "Hook, context, thesis",
+        "Abstract, methodology, results, discussion",
+        "Topic sentence, evidence (with citation), analysis, transition",
+        "Introduction, counterargument, refutation, conclusion"
+      ],
+      "answer": "Topic sentence, evidence (with citation), analysis, transition",
+      "explanation": "Effective body paragraphs open with a topic sentence, present cited evidence, analyze its significance for the argument, and transition to the next paragraph.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "multiple_choice",
+      "question": "College admissions officers most value personal statements that:",
+      "options": [
+        "List all academic achievements and test scores in narrative form",
+        "Use complex vocabulary to demonstrate intelligence and preparation",
+        "Reveal authentic personality, specific experiences, and genuine self-reflection",
+        "Prove that the applicant has read many books in their intended major"
+      ],
+      "answer": "Reveal authentic personality, specific experiences, and genuine self-reflection",
+      "explanation": "Admissions readers seek essays that offer insight into who the applicant genuinely is—their voice, values, and capacity for meaningful self-examination.",
+      "points": 1
+    }
+  ]
+}

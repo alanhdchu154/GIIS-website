@@ -1,0 +1,1220 @@
+{
+  "slug": "digital-literacy",
+  "name": "Digital Literacy",
+  "nameZh": "数字素养",
+  "credits": 0.5,
+  "department": "Technology",
+  "type": "Core",
+  "description": "An essential course developing the skills to navigate, evaluate, create, and communicate in digital environments, covering internet safety, cybersecurity, productivity tools, AI literacy, and digital citizenship.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to Digital Literacy",
+      "titleZh": "数字素养导论",
+      "objectives": "Define digital literacy and its importance in modern life; identify the key components of digital literacy; understand how digital skills impact education, employment, and citizenship.",
+      "readingUrl": "https://edu.gcfglobal.org/en/digital-media-literacy/what-is-digital-literacy/1/",
+      "readingNote": "GCFGlobal — What Is Digital Literacy?",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/digital-literacy-101/v/what-is-digital-literacy",
+      "videoNote": "Khan Academy — What Is Digital Literacy?",
+      "video2Url": "https://www.youtube.com/watch?v=o2YZgbAEP58",
+      "video2Note": "YouTube — Digital Literacy in the 21st Century",
+      "practiceUrl": "https://edu.gcfglobal.org/en/digital-media-literacy/",
+      "practiceNote": "GCFGlobal — Digital Media Literacy Practice",
+      "assignment": "Write a one-page personal digital audit: list the digital tools you use weekly, categorize them (communication, learning, entertainment, productivity), and reflect on which skills you would most like to improve.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 2,
+      "title": "Navigating the Internet Safely",
+      "titleZh": "安全使用互联网",
+      "objectives": "Identify risks of online activity including scams, phishing, and malicious websites; use safe browsing practices; understand HTTPS, URLs, and how to verify website legitimacy.",
+      "readingUrl": "https://edu.gcfglobal.org/en/internetsafety/",
+      "readingNote": "GCFGlobal — Internet Safety",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/online-safety-basics/v/internet-safety-intro",
+      "videoNote": "Khan Academy — Internet Safety Basics",
+      "video2Url": "https://www.youtube.com/watch?v=aO858HyFbKI",
+      "video2Note": "YouTube — How to Stay Safe Online",
+      "practiceUrl": "https://edu.gcfglobal.org/en/internetsafety/avoiding-online-scams/1/",
+      "practiceNote": "GCFGlobal — Avoiding Online Scams Practice",
+      "assignment": "Examine three websites (one legitimate, one suspicious, one clearly fake); use a checklist of trust indicators (HTTPS, domain age, contact info, grammar, design) to evaluate each and write a brief analysis of how you identified each.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 3,
+      "title": "Evaluating Online Information",
+      "titleZh": "评估在线信息",
+      "objectives": "Apply the SIFT method to evaluate digital information; identify misinformation, disinformation, and clickbait; fact-check claims using lateral reading and trusted fact-checking tools.",
+      "readingUrl": "https://edu.gcfglobal.org/en/digital-media-literacy/evaluating-internet-sources/1/",
+      "readingNote": "GCFGlobal — Evaluating Internet Sources",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/evaluating-information-online/v/evaluating-online-sources",
+      "videoNote": "Khan Academy — Evaluating Online Information",
+      "video2Url": "https://www.youtube.com/watch?v=GoQG6Tin-1E",
+      "video2Note": "YouTube — How to Spot Fake News",
+      "practiceUrl": "https://edu.gcfglobal.org/en/digital-media-literacy/spotting-fake-news/1/",
+      "practiceNote": "GCFGlobal — Spotting Fake News Practice",
+      "assignment": "Find three viral social media posts making factual claims; use lateral reading and fact-checking sites (Snopes, FactCheck.org) to verify or debunk each claim; write a report on your findings and what made each post believable or not.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Online Privacy & Data",
+      "titleZh": "在线隐私与数据",
+      "objectives": "Understand what personal data is collected online and how it is used; adjust privacy settings on common platforms; understand cookies, tracking, and data brokers; know your digital rights.",
+      "readingUrl": "https://edu.gcfglobal.org/en/internetsafety/protecting-your-online-privacy/1/",
+      "readingNote": "GCFGlobal — Protecting Your Online Privacy",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/online-privacy-basics/v/online-privacy",
+      "videoNote": "Khan Academy — Online Privacy",
+      "video2Url": "https://www.youtube.com/watch?v=__ZDFG-UjAE",
+      "video2Note": "YouTube — How Online Privacy Works",
+      "practiceUrl": "https://edu.gcfglobal.org/en/internetsafety/protecting-your-online-privacy/1/",
+      "practiceNote": "GCFGlobal — Online Privacy Practice",
+      "assignment": "Conduct a personal privacy audit: review and adjust the privacy settings on three apps or social media platforms you use; write a summary of what data each was collecting and what changes you made.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Cybersecurity Fundamentals",
+      "titleZh": "网络安全基础",
+      "objectives": "Describe common cyber threats including phishing, malware, ransomware, and social engineering; create strong passwords and use multi-factor authentication; understand how to protect personal and organizational data.",
+      "readingUrl": "https://edu.gcfglobal.org/en/internetsafety/creating-strong-passwords/1/",
+      "readingNote": "GCFGlobal — Cybersecurity Basics",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:online-tracking/v/cybersecurity-intro",
+      "videoNote": "Khan Academy — Cybersecurity Introduction",
+      "video2Url": "https://www.youtube.com/watch?v=inWWhr5tnEA",
+      "video2Note": "YouTube — Cybersecurity for Beginners",
+      "practiceUrl": "https://edu.gcfglobal.org/en/internetsafety/creating-strong-passwords/1/",
+      "practiceNote": "GCFGlobal — Cybersecurity Practice",
+      "assignment": "Evaluate the security of five accounts you use regularly (school email, social media, banking app, game account, shopping site); grade each on password strength, MFA, and recovery options; create a personal cybersecurity improvement plan.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Productivity Software: Docs, Sheets, Slides",
+      "titleZh": "生产力软件：文档、表格、演示",
+      "objectives": "Create, format, and collaborate on documents using Google Docs or Microsoft Word; build basic spreadsheets with formulas; design clear presentation slides; use comments, sharing, and version history.",
+      "readingUrl": "https://edu.gcfglobal.org/en/google-docs/",
+      "readingNote": "GCFGlobal — Google Docs, Sheets, and Slides Tutorials",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/getting-your-business-online/excel-and-google-sheets/v/google-sheets-intro",
+      "videoNote": "Khan Academy — Google Sheets and Docs Introduction",
+      "video2Url": "https://www.youtube.com/watch?v=jpfuGHFAVKs",
+      "video2Note": "YouTube — Google Workspace for Students Tutorial",
+      "practiceUrl": "https://edu.gcfglobal.org/en/google-docs/getting-started-with-google-docs/1/",
+      "practiceNote": "GCFGlobal — Google Docs Practice",
+      "assignment": "Create a research summary document in Google Docs with proper headings and citations; build a simple budget spreadsheet in Google Sheets using SUM, AVERAGE, and IF formulas; design a three-slide presentation in Google Slides summarizing a topic of your choice.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 7,
+      "title": "Digital Communication & Netiquette",
+      "titleZh": "数字沟通与网络礼仪",
+      "objectives": "Write effective professional emails; understand netiquette rules for online communication; navigate online collaboration tools (Slack, Teams, Google Meet); recognize and avoid cyberbullying.",
+      "readingUrl": "https://edu.gcfglobal.org/en/email101/",
+      "readingNote": "GCFGlobal — Email 101",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/digital-communication/v/netiquette",
+      "videoNote": "Khan Academy — Netiquette",
+      "video2Url": "https://www.youtube.com/watch?v=rVc-eBq1VFE",
+      "video2Note": "YouTube — Professional Email Writing Tips",
+      "practiceUrl": "https://edu.gcfglobal.org/en/email101/what-is-email/1/",
+      "practiceNote": "GCFGlobal — Email Communication Practice",
+      "assignment": "Write three emails: one to a teacher requesting an extension, one to a potential employer asking about an internship, and one to a classmate coordinating a group project; apply professional email conventions to each.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Digital Research Skills",
+      "titleZh": "数字研究技能",
+      "objectives": "Use advanced Google search operators; find scholarly sources using Google Scholar and library databases; evaluate source credibility using SIFT; organize digital research with citation management tools.",
+      "readingUrl": "https://edu.gcfglobal.org/en/digital-media-literacy/how-to-do-research-online/1/",
+      "readingNote": "GCFGlobal — How to Do Research Online",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/digital-research-skills/v/research-skills",
+      "videoNote": "Khan Academy — Digital Research Skills",
+      "video2Url": "https://www.youtube.com/watch?v=W5TM9MBd_Pk",
+      "video2Note": "YouTube — How to Use Google Search Like a Pro",
+      "practiceUrl": "https://edu.gcfglobal.org/en/digital-media-literacy/how-to-do-research-online/1/",
+      "practiceNote": "GCFGlobal — Research Skills Practice",
+      "assignment": "Research a health topic using at least four different search strategies (general Google, Google Scholar, library database, Wikipedia for leads only); compare the quality and depth of results from each approach.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Copyright, Creative Commons & Fair Use",
+      "titleZh": "版权、知识共享与合理使用",
+      "objectives": "Explain copyright and intellectual property basics; describe Creative Commons licenses and how to find free-to-use content; apply the four factors of fair use to academic scenarios.",
+      "readingUrl": "https://edu.gcfglobal.org/en/digital-media-literacy/copyright-and-creative-commons/1/",
+      "readingNote": "GCFGlobal — Copyright and Creative Commons",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/copyright-and-fair-use/v/copyright-basics",
+      "videoNote": "Khan Academy — Copyright Basics",
+      "video2Url": "https://www.youtube.com/watch?v=rRK6bxqiPtQ",
+      "video2Note": "YouTube — Copyright and Fair Use Explained for Students",
+      "practiceUrl": "https://edu.gcfglobal.org/en/digital-media-literacy/copyright-and-creative-commons/1/",
+      "practiceNote": "GCFGlobal — Copyright Practice",
+      "assignment": "Find five images online for a hypothetical school project; for each, identify its copyright status, the appropriate license, and whether you can use it freely, must attribute it, or cannot use it at all.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 10,
+      "title": "Social Media Literacy",
+      "titleZh": "社交媒体素养",
+      "objectives": "Analyze how social media algorithms shape what you see; understand filter bubbles and echo chambers; manage your digital footprint; use social media critically and constructively.",
+      "readingUrl": "https://www.commonsense.org/education/digital-citizenship/lesson/social-media-and-your-brain",
+      "readingNote": "Common Sense Education — Social Media and Your Brain",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/social-media-literacy/v/social-media",
+      "videoNote": "Khan Academy — Social Media Literacy",
+      "video2Url": "https://www.youtube.com/watch?v=1PGm8LslEb4",
+      "video2Note": "YouTube — How Social Media Algorithms Control What You See",
+      "practiceUrl": "https://www.commonsense.org/education/digital-citizenship/lesson/social-media-and-your-brain",
+      "practiceNote": "Common Sense Education — Social Media Practice",
+      "assignment": "Conduct a one-week social media audit: track how much time you spend on each platform, note what types of content the algorithm promotes to you, and reflect on whether your feed accurately represents the diversity of opinions on a topic you follow.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Artificial Intelligence Basics",
+      "titleZh": "人工智能基础",
+      "objectives": "Define artificial intelligence, machine learning, and large language models; explain how AI tools generate output; identify AI strengths, limitations, and biases; use AI tools responsibly for learning.",
+      "readingUrl": "https://edu.gcfglobal.org/en/thenow/what-is-artificial-intelligence/1/",
+      "readingNote": "GCFGlobal — What Is Artificial Intelligence?",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:internet-applications/v/intro-to-ai",
+      "videoNote": "Khan Academy — Introduction to Artificial Intelligence",
+      "video2Url": "https://www.youtube.com/watch?v=ad79nYk2keg",
+      "video2Note": "YouTube — How AI Works: Machine Learning Explained",
+      "practiceUrl": "https://edu.gcfglobal.org/en/thenow/what-is-artificial-intelligence/1/",
+      "practiceNote": "GCFGlobal — AI Basics Practice",
+      "assignment": "Use an AI writing assistant to help brainstorm ideas for an essay topic, then critically evaluate the output: identify two useful suggestions and two inaccurate or biased statements; reflect on how you would verify AI-generated content before using it.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 12,
+      "title": "Digital Health & Screen Time",
+      "titleZh": "数字健康与屏幕时间",
+      "objectives": "Understand the effects of excessive screen time on sleep, attention, and mental health; set healthy digital boundaries; practice digital well-being strategies; distinguish healthy from problematic technology use.",
+      "readingUrl": "https://www.commonsense.org/education/digital-citizenship/lesson/screen-time-and-health",
+      "readingNote": "Common Sense Education — Screen Time and Health",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/digital-health/v/digital-wellbeing",
+      "videoNote": "Khan Academy — Digital Well-being",
+      "video2Url": "https://www.youtube.com/watch?v=aXOChLn5ZdQ",
+      "video2Note": "YouTube — The Impact of Social Media on Mental Health",
+      "practiceUrl": "https://www.commonsense.org/education/digital-citizenship/lesson/screen-time-and-health",
+      "practiceNote": "Common Sense Education — Digital Health Practice",
+      "assignment": "Use your phone's built-in screen time tracker for one week to record daily totals by app category; identify one habit to change, set a screen time limit using your device's tools, and write a reflection after one week on the results.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 13,
+      "title": "Citizenship in the Digital Age",
+      "titleZh": "数字时代的公民身份",
+      "objectives": "Define digital citizenship and its nine elements; understand your rights and responsibilities online; engage constructively in online communities; understand how digital actions have real-world consequences.",
+      "readingUrl": "https://www.commonsense.org/education/digital-citizenship",
+      "readingNote": "Common Sense Education — Digital Citizenship",
+      "videoUrl": "https://www.khanacademy.org/college-careers-more/internet-safety/xa98f843752bca845/digital-citizenship/v/what-is-digital-citizenship",
+      "videoNote": "Khan Academy — What Is Digital Citizenship?",
+      "video2Url": "https://www.youtube.com/watch?v=sQDGBpFjEvE",
+      "video2Note": "YouTube — Digital Citizenship for Students",
+      "practiceUrl": "https://www.commonsense.org/education/digital-citizenship",
+      "practiceNote": "Common Sense Education — Digital Citizenship Practice",
+      "assignment": "Research a recent case where someone's online behavior had real-world consequences (positive or negative); analyze what digital citizenship principles were upheld or violated and write a reflection on the lesson.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 14,
+      "title": "Future of Technology",
+      "titleZh": "技术的未来",
+      "objectives": "Identify emerging technologies (AR/VR, blockchain, quantum computing, biotech); analyze how technology shapes work and society; develop skills for adapting to ongoing technological change.",
+      "readingUrl": "https://edu.gcfglobal.org/en/thenow/",
+      "readingNote": "GCFGlobal — Technology Now and in the Future",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:internet-applications/v/future-of-technology",
+      "videoNote": "Khan Academy — Future of Technology",
+      "video2Url": "https://www.youtube.com/watch?v=ZJixNvx9BAc",
+      "video2Note": "YouTube — Top 10 Future Technologies That Will Change the World",
+      "practiceUrl": "https://edu.gcfglobal.org/en/thenow/",
+      "practiceNote": "GCFGlobal — Emerging Technology Practice",
+      "assignment": "Choose one emerging technology and research how it might affect a career field of your interest over the next 10–20 years; write a two-paragraph analysis explaining both the opportunities it creates and the challenges or risks it poses.",
+      "estimatedHrs": 2.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Digital literacy is best described as:",
+      "options": ["The ability to type quickly", "The ability to safely and effectively use digital technologies to find, evaluate, create, and communicate information", "Knowing how to write computer code", "Having access to a smartphone"],
+      "answer": "The ability to safely and effectively use digital technologies to find, evaluate, create, and communicate information",
+      "explanation": "Digital literacy encompasses the full range of skills needed to function competently in a digital world — from finding and evaluating information to creating content and communicating responsibly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which of the following is an example of a digital literacy skill?",
+      "options": ["Typing speed", "Identifying a phishing email", "Owning a computer", "Having a social media account"],
+      "answer": "Identifying a phishing email",
+      "explanation": "Identifying phishing emails requires critical evaluation of digital communication — a core digital literacy competency involving security awareness and source evaluation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "Why is digital literacy increasingly important in today's job market?",
+      "options": ["All jobs now require coding skills", "Most modern careers require the ability to find, evaluate, and communicate digital information effectively", "Digital skills are only needed in technology companies", "Employers prefer workers who avoid using technology"],
+      "answer": "Most modern careers require the ability to find, evaluate, and communicate digital information effectively",
+      "explanation": "Regardless of industry, today's workplace requires digital skills — from using productivity software to evaluating online sources and communicating through digital channels.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "The 'digital divide' refers to:",
+      "options": ["The gap between old and new software versions", "Inequality in access to and ability to use digital technologies", "The difference between online and offline shopping", "The speed difference between Wi-Fi and mobile data"],
+      "answer": "Inequality in access to and ability to use digital technologies",
+      "explanation": "The digital divide describes unequal access to computers, internet, and digital skills across different populations — with significant implications for education and economic opportunity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Being a critical consumer of digital media means:",
+      "options": ["Complaining about digital content online", "Accepting all online information as equally valid", "Questioning, analyzing, and evaluating digital content before accepting it as true", "Only using trusted websites you have visited before"],
+      "answer": "Questioning, analyzing, and evaluating digital content before accepting it as true",
+      "explanation": "Critical media consumption involves applying questioning and analytical thinking to digital content — not accepting it at face value regardless of the source.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "HTTPS in a website address indicates:",
+      "options": ["The website is run by the government", "The connection between your browser and the website is encrypted", "The website was created recently", "The website has no advertisements"],
+      "answer": "The connection between your browser and the website is encrypted",
+      "explanation": "HTTPS (HyperText Transfer Protocol Secure) means data transmitted between your browser and the server is encrypted — protecting information like passwords and credit card numbers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Phishing is a cybercrime that involves:",
+      "options": ["Downloading pirated software", "Tricking people into revealing personal information through fake emails or websites", "Using someone's Wi-Fi without permission", "Sending spam messages to random addresses"],
+      "answer": "Tricking people into revealing personal information through fake emails or websites",
+      "explanation": "Phishing uses deceptive emails, texts, or websites that impersonate legitimate organizations to steal login credentials, financial information, or personal data.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "A trustworthy website is MOST likely to have:",
+      "options": ["Many pop-up advertisements", "A padlock icon, clear contact information, and professional content", "A very long URL with random characters", "No 'About' page"],
+      "answer": "A padlock icon, clear contact information, and professional content",
+      "explanation": "Trust signals include HTTPS (padlock), transparent contact information, professional design and grammar, and a clear 'About' page — all indicating a legitimate, credible site.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "Which action is SAFEST when using public Wi-Fi?",
+      "options": ["Checking your bank account", "Using a VPN for secure browsing", "Shopping with your credit card", "Staying logged into all accounts"],
+      "answer": "Using a VPN for secure browsing",
+      "explanation": "A VPN (Virtual Private Network) encrypts your internet traffic on public networks — preventing others on the same network from intercepting your data.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "What should you do if you receive an email from your bank asking you to click a link and enter your password?",
+      "options": ["Click the link immediately since banks send these routinely", "Call the bank directly using a number from their official website to verify the request", "Forward the email to friends as a warning", "Reply to the email asking if it is legitimate"],
+      "answer": "Call the bank directly using a number from their official website to verify the request",
+      "explanation": "Legitimate banks never ask for passwords via email. When in doubt, contact the institution directly through a known, verified contact method — never through links in suspicious emails.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The SIFT method for evaluating online information stands for:",
+      "options": ["Search, Investigate, Filter, Trust", "Stop, Investigate the source, Find better coverage, Trace claims", "Scan, Identify, Fact-check, Think", "Source, Information, Facts, Truth"],
+      "answer": "Stop, Investigate the source, Find better coverage, Trace claims",
+      "explanation": "SIFT is a four-step fact-checking framework: Stop (don't share immediately), Investigate the source (who made this?), Find better coverage (what do other sources say?), and Trace claims to originals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Lateral reading as a fact-checking strategy involves:",
+      "options": ["Reading an article from left to right very carefully", "Opening new browser tabs to research what others say about the source or claim", "Reading multiple articles on the same topic from the same website", "Skimming an article quickly for key words"],
+      "answer": "Opening new browser tabs to research what others say about the source or claim",
+      "explanation": "Lateral reading — leaving a site to search for information about it — is the strategy used by professional fact-checkers to quickly assess source credibility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Misinformation differs from disinformation in that misinformation:",
+      "options": ["Is always more dangerous", "Is false information spread with intent to deceive", "Is false or inaccurate information spread without intentional deception", "Only exists on social media"],
+      "answer": "Is false or inaccurate information spread without intentional deception",
+      "explanation": "Misinformation is inaccurate content spread accidentally; disinformation is deliberately false content created to deceive. Both cause harm, but intent differs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Clickbait headlines are designed to:",
+      "options": ["Summarize content accurately", "Trick users into clicking by exaggerating or sensationalizing the content", "Help readers decide if an article is relevant to them", "Increase the educational value of the content"],
+      "answer": "Trick users into clicking by exaggerating or sensationalizing the content",
+      "explanation": "Clickbait uses emotional, exaggerated, or mysterious headlines to drive clicks — often the actual content does not match the headline's implied promise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Which website is a reliable tool for checking the accuracy of viral claims and news stories?",
+      "options": ["Wikipedia", "Reddit", "Snopes.com", "Yahoo Answers"],
+      "answer": "Snopes.com",
+      "explanation": "Snopes is one of the most established fact-checking websites — it investigates viral claims, urban legends, and misinformation using primary sources and evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "A 'cookie' on a website is:",
+      "options": ["A type of malware that damages your computer", "A small text file stored by your browser that tracks your site visits and preferences", "A required payment for accessing premium content", "A security feature that blocks ads"],
+      "answer": "A small text file stored by your browser that tracks your site visits and preferences",
+      "explanation": "Cookies store user data like login status, preferences, and browsing behavior — helpful for user experience but also used for tracking and targeted advertising.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Which type of personal information should you NEVER share in a public online profile?",
+      "options": ["Your favorite TV show", "Your full home address and phone number", "Your general city of residence", "Your educational interests"],
+      "answer": "Your full home address and phone number",
+      "explanation": "Home address and phone number are sensitive personal identifiers that can be used to locate, contact, or exploit you — they should never appear in public online profiles.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Data brokers are companies that:",
+      "options": ["Sell internet plans to consumers", "Collect, analyze, and sell personal data about individuals to third parties", "Manage data storage for businesses", "Provide encryption services"],
+      "answer": "Collect, analyze, and sell personal data about individuals to third parties",
+      "explanation": "Data brokers aggregate data from public records, social media, loyalty programs, and app usage to build detailed profiles on individuals — which they sell to advertisers, insurers, and others.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "A privacy policy on a website explains:",
+      "options": ["The website's political stance", "How the website collects, uses, and shares your personal data", "How much advertising the website displays", "The technical specifications of the website"],
+      "answer": "How the website collects, uses, and shares your personal data",
+      "explanation": "Privacy policies disclose what data is collected, why, how it is used, who it is shared with, and how long it is retained — important for understanding what you agree to.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "The best way to prevent websites from tracking your browsing across multiple sites is to:",
+      "options": ["Use multiple email addresses", "Use a browser with enhanced tracking protection or a privacy-focused browser", "Only visit websites with HTTPS", "Clear your browser history once a month"],
+      "answer": "Use a browser with enhanced tracking protection or a privacy-focused browser",
+      "explanation": "Browsers with tracking protection (Firefox, Brave) or features like Enhanced Tracking Protection block third-party trackers from following you across the web.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "A strong password should include:",
+      "options": ["Only your name and birth year for easy remembering", "At least 12 characters with uppercase, lowercase, numbers, and symbols", "The same password as other accounts for convenience", "Only lowercase letters for fast typing"],
+      "answer": "At least 12 characters with uppercase, lowercase, numbers, and symbols",
+      "explanation": "Strong passwords are long and complex — combining character types makes them exponentially harder to crack through brute force or dictionary attacks.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Multi-factor authentication (MFA) improves security by:",
+      "options": ["Requiring a longer password", "Requiring a second proof of identity (like a phone code) in addition to a password", "Blocking all international login attempts", "Requiring you to change passwords every day"],
+      "answer": "Requiring a second proof of identity (like a phone code) in addition to a password",
+      "explanation": "MFA adds a second verification step — even if your password is stolen, attackers cannot log in without also having your phone or biometric confirmation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Ransomware is a type of malware that:",
+      "options": ["Shows you unwanted advertisements", "Spies on your keystrokes", "Encrypts your files and demands payment to restore access", "Slows down your computer by using its processing power"],
+      "answer": "Encrypts your files and demands payment to restore access",
+      "explanation": "Ransomware locks victims out of their own files by encrypting them, then demands a ransom (often in cryptocurrency) for the decryption key.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Social engineering in cybersecurity refers to:",
+      "options": ["Programming social media platforms", "Manipulating people into revealing confidential information through psychological tactics", "Building social networks for a company", "Engineering software for social apps"],
+      "answer": "Manipulating people into revealing confidential information through psychological tactics",
+      "explanation": "Social engineering exploits human psychology — urgency, fear, authority, or trust — rather than technical vulnerabilities to gain unauthorized access to information.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Keeping your software and operating system updated is important for security because updates often:",
+      "options": ["Add new features only", "Patch security vulnerabilities that hackers could exploit", "Slow your computer down to prevent hacking", "Reset your privacy settings"],
+      "answer": "Patch security vulnerabilities that hackers could exploit",
+      "explanation": "Software updates frequently include security patches that close vulnerabilities discovered since the last version — running outdated software leaves known attack vectors open.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "In Google Sheets, which formula calculates the sum of cells A1 through A10?",
+      "options": ["=TOTAL(A1:A10)", "=ADD(A1,A10)", "=SUM(A1:A10)", "=CALC(A1-A10)"],
+      "answer": "=SUM(A1:A10)",
+      "explanation": "The SUM function adds a range of cells together. =SUM(A1:A10) adds all values from cell A1 to A10 — one of the most fundamental spreadsheet formulas.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "The 'comment' feature in Google Docs is most useful for:",
+      "options": ["Deleting sections of text", "Adding private notes to a document visible only to the author", "Providing feedback and questions on a shared document without changing the text", "Formatting text as bold or italic"],
+      "answer": "Providing feedback and questions on a shared document without changing the text",
+      "explanation": "Comments allow collaborators to annotate text, ask questions, and suggest changes without altering the original content — essential for collaborative editing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "An effective presentation slide should:",
+      "options": ["Contain as much text as possible to maximize information", "Use large text, minimal bullet points, and one key idea per slide", "Include as many animations as possible", "Have a different font style on each slide"],
+      "answer": "Use large text, minimal bullet points, and one key idea per slide",
+      "explanation": "Effective slides support the speaker rather than replace them — one idea per slide with large text and visuals keeps the audience engaged without overwhelming them.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Version history in Google Docs allows you to:",
+      "options": ["See the history of websites you have visited", "View previous versions of a document and restore earlier drafts", "See who has searched for your document online", "Track your typing speed over time"],
+      "answer": "View previous versions of a document and restore earlier drafts",
+      "explanation": "Google Docs automatically saves version history — you can see all changes made, when, and by whom, and restore any previous version if needed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "When sharing a Google Doc with 'View only' permissions, recipients can:",
+      "options": ["Edit and delete content freely", "Comment but not change the text", "Read the document but not make any changes", "Download and re-share the document freely"],
+      "answer": "Read the document but not make any changes",
+      "explanation": "View-only permission gives access to read the document without the ability to edit, comment, or modify anything — appropriate for sharing final products.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Netiquette refers to:",
+      "options": ["The technical rules for connecting to Wi-Fi networks", "Etiquette and behavioral standards for online communication", "The legal rules governing internet commerce", "Software for managing email accounts"],
+      "answer": "Etiquette and behavioral standards for online communication",
+      "explanation": "Netiquette is the informal code of conduct for respectful, appropriate behavior in digital communication — from email tone to social media behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Writing in ALL CAPS in online communication is generally interpreted as:",
+      "options": ["Being enthusiastic", "Shouting or expressing extreme emotion", "Writing a formal document", "Emphasizing technical terms"],
+      "answer": "Shouting or expressing extreme emotion",
+      "explanation": "All-caps text in digital communication is understood as shouting — a netiquette violation in most professional or collaborative contexts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "A professional email should always include:",
+      "options": ["Multiple emojis to show personality", "Memes related to the topic", "A clear subject line, greeting, concise body, and professional sign-off", "Attachments regardless of whether they are requested"],
+      "answer": "A clear subject line, greeting, concise body, and professional sign-off",
+      "explanation": "Professional emails follow a clear structure: descriptive subject line, appropriate greeting, concise and focused body text, and a polite closing with your name.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Cyberbullying differs from in-person bullying in that it:",
+      "options": ["Is less harmful because it is only online", "Can reach the victim 24/7 and may involve a large audience", "Only affects teenagers", "Can be easily solved by turning off your computer"],
+      "answer": "Can reach the victim 24/7 and may involve a large audience",
+      "explanation": "Cyberbullying's unique harms include its around-the-clock reach, potential for widespread public humiliation, and permanence of digital content — often making it harder to escape than in-person bullying.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "The 'Reply All' function in email should be used:",
+      "options": ["By default for every email", "Only when your response is relevant to all original recipients", "Whenever you want to emphasize your message", "When you want to remove some recipients from the thread"],
+      "answer": "Only when your response is relevant to all original recipients",
+      "explanation": "Unnecessary Reply All emails clutter inboxes and annoy recipients — use it only when your reply genuinely needs to be seen by everyone on the original thread.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "The Google search operator 'site:' allows you to:",
+      "options": ["Search only paid results", "Limit results to a specific website or domain", "Search for websites created on a specific date", "Find exact word matches only"],
+      "answer": "Limit results to a specific website or domain",
+      "explanation": "The site: operator (e.g., site:edu climate change) restricts search results to a specific domain — useful for searching within a particular organization or type of site.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Google Scholar is a useful research tool because it:",
+      "options": ["Contains only Wikipedia articles", "Searches academic journals, theses, and scholarly books", "Shows only free articles from any website", "Is the same as regular Google but with a different design"],
+      "answer": "Searches academic journals, theses, and scholarly books",
+      "explanation": "Google Scholar indexes peer-reviewed papers, theses, court opinions, and academic books — making it far more useful than general Google for finding credible academic sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Putting a phrase in quotation marks in a Google search:",
+      "options": ["Excludes those words from the results", "Searches for the exact phrase in that specific order", "Ranks results by date", "Limits results to news articles only"],
+      "answer": "Searches for the exact phrase in that specific order",
+      "explanation": "Quoted searches (e.g., \"climate change policy\") return results containing those exact words in that exact order — reducing irrelevant results.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "When using Wikipedia for academic research, the best practice is to:",
+      "options": ["Cite Wikipedia directly in your bibliography", "Use Wikipedia as a starting point and then verify information through the cited primary sources", "Avoid Wikipedia entirely as it is never accurate", "Only read the article summary at the top"],
+      "answer": "Use Wikipedia as a starting point and then verify information through the cited primary sources",
+      "explanation": "Wikipedia is useful for getting an overview and finding source material, but its crowd-sourced nature means it should not be cited directly — follow the footnotes to primary sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "A .gov domain in a web address indicates the site is:",
+      "options": ["A global organization website", "A US government website", "A website about governance and politics from any country", "A website that has government approval"],
+      "answer": "A US government website",
+      "explanation": "The .gov top-level domain is restricted to official US government entities — federal, state, and local agencies — making these generally credible sources for official statistics and policies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Copyright law protects creators by:",
+      "options": ["Giving the creator exclusive rights to reproduce, distribute, and display their work", "Making their work available for anyone to use freely", "Requiring payment to register all creative works", "Protecting only commercially published works"],
+      "answer": "Giving the creator exclusive rights to reproduce, distribute, and display their work",
+      "explanation": "Copyright automatically grants creators exclusive rights to their work upon creation — including reproduction, distribution, and public performance — for a limited time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Creative Commons licenses allow creators to:",
+      "options": ["Permanently give up all rights to their work", "Specify exactly how others may use their work while retaining some rights", "Prevent any use of their work without payment", "Register their copyright with the government for free"],
+      "answer": "Specify exactly how others may use their work while retaining some rights",
+      "explanation": "Creative Commons offers flexible licenses letting creators say 'some rights reserved' — specifying conditions like attribution, non-commercial use, or no derivatives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Fair use allows limited use of copyrighted material without permission for purposes such as:",
+      "options": ["Selling copies of a movie for profit", "Using a full song in a commercial without credit", "Quoting a paragraph from a book in a literary analysis essay", "Posting an entire TV episode on YouTube"],
+      "answer": "Quoting a paragraph from a book in a literary analysis essay",
+      "explanation": "Fair use permits limited use for commentary, criticism, education, and news reporting — transformative academic analysis of a small portion is typically fair use.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "The CC BY license requires users of the content to:",
+      "options": ["Pay the creator a royalty fee", "Use the content only for non-commercial purposes", "Credit the original creator (attribution)", "Never modify the original work"],
+      "answer": "Credit the original creator (attribution)",
+      "explanation": "CC BY (Attribution) is the most permissive Creative Commons license — users may use, modify, and share the work for any purpose as long as they credit the creator.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "To find images that are free to use for a school project, you should search:",
+      "options": ["Any Google Image search result", "Google Images filtered for 'Creative Commons licenses' or sites like Unsplash", "Instagram for popular images", "Any news website for journalism photos"],
+      "answer": "Google Images filtered for 'Creative Commons licenses' or sites like Unsplash",
+      "explanation": "Using Google's license filter or dedicated free-image sites (Unsplash, Pexels, Pixabay) ensures you find images explicitly licensed for reuse — avoiding copyright infringement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "A social media filter bubble occurs when:",
+      "options": ["You see too many advertisements", "Algorithms show you primarily content that matches your existing views, limiting exposure to diverse perspectives", "You block accounts that post offensive content", "Social media applies age restrictions to certain content"],
+      "answer": "Algorithms show you primarily content that matches your existing views, limiting exposure to diverse perspectives",
+      "explanation": "Filter bubbles are created by recommendation algorithms that optimize for engagement — showing more of what you already like, reinforcing existing beliefs and limiting exposure to different viewpoints.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Your digital footprint includes:",
+      "options": ["Only your social media posts", "All data traces you leave online including posts, searches, likes, location data, and purchases", "Only information on websites you created", "Your saved passwords"],
+      "answer": "All data traces you leave online including posts, searches, likes, location data, and purchases",
+      "explanation": "Your digital footprint is the trail of data created by your online activity — active (things you post) and passive (data collected about you) — which can persist long-term.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Before sharing news on social media, you should:",
+      "options": ["Share it immediately if it confirms your beliefs", "Read beyond the headline and fact-check the claim using a reliable source", "Check how many likes and shares it already has", "Only share content from accounts with many followers"],
+      "answer": "Read beyond the headline and fact-check the claim using a reliable source",
+      "explanation": "Many people share content based on headlines alone — reading the full article and verifying the claim before sharing prevents the spread of misinformation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "How do social media platforms primarily make money?",
+      "options": ["Selling physical products to users", "Charging monthly subscription fees from all users", "Selling targeted advertising using data about users' interests and behavior", "Government grants and public funding"],
+      "answer": "Selling targeted advertising using data about users' interests and behavior",
+      "explanation": "Most social media platforms are free because their business model is advertising — they collect extensive data on users to enable highly targeted advertising for paying brands.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "An echo chamber in social media refers to:",
+      "options": ["Poor audio quality on social media videos", "An online environment where people encounter only opinions that reinforce their existing beliefs", "Social media groups formed around shared hobbies", "The repetition of popular posts across different platforms"],
+      "answer": "An online environment where people encounter only opinions that reinforce their existing beliefs",
+      "explanation": "Echo chambers form when people follow only accounts that share their views and algorithms amplify that content — creating environments where alternative perspectives are absent.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Machine learning is a type of AI that works by:",
+      "options": ["Following a rigid set of rules programmed by humans for every situation", "Learning patterns from large amounts of data to make predictions or decisions", "Downloading intelligence from the internet in real time", "Copying human decision-making through cameras"],
+      "answer": "Learning patterns from large amounts of data to make predictions or decisions",
+      "explanation": "Machine learning algorithms find patterns in training data and use those patterns to make predictions or decisions on new data — rather than following explicit rules.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "A limitation of large language models (like chatbots) is that they can:",
+      "options": ["Only speak one language", "Generate confident-sounding but factually incorrect information (hallucinations)", "Only answer questions asked in the past 24 hours", "Never produce creative writing"],
+      "answer": "Generate confident-sounding but factually incorrect information (hallucinations)",
+      "explanation": "AI language models generate text based on statistical patterns, not factual verification — they can produce plausible but incorrect information, which is why output must be fact-checked.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "AI bias in an algorithm occurs when:",
+      "options": ["The algorithm is too slow to process requests", "The AI system produces systematically unfair or discriminatory outcomes due to biased training data", "The AI learns too quickly and becomes overconfident", "The algorithm is programmed by people from only one country"],
+      "answer": "The AI system produces systematically unfair or discriminatory outcomes due to biased training data",
+      "explanation": "AI systems trained on biased data perpetuate those biases in their outputs — which can affect hiring, lending, criminal justice, and other high-stakes decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Using an AI tool to generate an essay and submitting it as your own work is:",
+      "options": ["Acceptable if you edit it slightly", "Academically dishonest if you do not disclose it", "A smart use of technology", "Required in modern education"],
+      "answer": "Academically dishonest if you do not disclose it",
+      "explanation": "Submitting AI-generated work as your own without disclosure violates academic integrity policies at most institutions — it misrepresents your own understanding and effort.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "An everyday example of AI in use is:",
+      "options": ["A calculator doing arithmetic", "A music streaming service recommending songs based on your listening history", "A word processor's spell checker", "A phone alarm clock"],
+      "answer": "A music streaming service recommending songs based on your listening history",
+      "explanation": "Recommendation engines (Spotify, Netflix, YouTube) use machine learning to analyze your behavior and predict what you'll enjoy — a ubiquitous example of AI in daily life.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Excessive screen time in adolescents has been linked to:",
+      "options": ["Improved academic performance only", "Increased exercise and outdoor activity", "Disrupted sleep, reduced attention span, and increased anxiety", "Better reading comprehension"],
+      "answer": "Disrupted sleep, reduced attention span, and increased anxiety",
+      "explanation": "Research associates high screen time in teens with delayed sleep onset (blue light suppresses melatonin), reduced attention, and higher rates of anxiety and depression.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "Blue light from screens before bedtime affects sleep because it:",
+      "options": ["Makes you more mentally alert so you exercise more", "Suppresses melatonin production, making it harder to fall asleep", "Improves your ability to dream", "Has no measurable effect on sleep"],
+      "answer": "Suppresses melatonin production, making it harder to fall asleep",
+      "explanation": "Blue light from LED screens suppresses melatonin — the hormone that regulates sleep — delaying sleep onset and reducing sleep quality if screens are used close to bedtime.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "A healthy digital boundary for school nights might include:",
+      "options": ["No screen time limits since digital skills are important for school", "Putting devices away 30–60 minutes before bedtime", "Keeping your phone in your bedroom for the whole night", "Only using devices for social media after homework"],
+      "answer": "Putting devices away 30–60 minutes before bedtime",
+      "explanation": "Creating a screen-free wind-down period before sleep allows melatonin levels to rise naturally, improving sleep quality and subsequent cognitive function.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "The term 'doom scrolling' refers to:",
+      "options": ["Scrolling through gaming content for hours", "Compulsively consuming large amounts of negative news or distressing content online", "Accidentally deleting important files", "Scrolling too fast through social media"],
+      "answer": "Compulsively consuming large amounts of negative news or distressing content online",
+      "explanation": "Doom scrolling is the tendency to continue reading negative news or alarming social media content despite the distress it causes — driven by anxiety and the algorithm's negativity bias.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Digital well-being tools built into smartphones typically allow users to:",
+      "options": ["Increase their data plan speed", "View screen time statistics and set app usage limits", "Block all internet access permanently", "Delete all social media accounts at once"],
+      "answer": "View screen time statistics and set app usage limits",
+      "explanation": "Built-in screen time dashboards (Screen Time on iOS, Digital Wellbeing on Android) show usage patterns by app and allow users to set daily limits — supporting mindful technology use.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Digital citizenship includes which of the following responsibilities?",
+      "options": ["Using technology only for personal entertainment", "Respecting others online, protecting privacy, and thinking critically about digital information", "Maximizing your screen time for productivity", "Avoiding all social media platforms"],
+      "answer": "Respecting others online, protecting privacy, and thinking critically about digital information",
+      "explanation": "Digital citizenship involves the ethical, responsible use of technology — including online respect, privacy protection, critical thinking, and understanding digital rights and responsibilities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "Your online reputation matters because:",
+      "options": ["Online posts disappear after 24 hours", "Digital content can persist and be found by future employers, schools, and others", "Only people you know follow your social media accounts", "Social media accounts are completely private by default"],
+      "answer": "Digital content can persist and be found by future employers, schools, and others",
+      "explanation": "Content posted online can persist long-term — screenshots, caches, and archives mean things you post now can affect your reputation, college admissions, and employment years later.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Which of the following is an example of being a positive digital citizen?",
+      "options": ["Sharing a friend's private photo without permission", "Reporting harassment you witness in an online gaming community", "Spreading a rumor because many people are already sharing it", "Creating an anonymous account to post negative comments"],
+      "answer": "Reporting harassment you witness in an online gaming community",
+      "explanation": "Being an 'upstander' — reporting or speaking out against harassment — is a core element of positive digital citizenship, using your digital presence constructively.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "Before posting something online, a good digital citizenship question to ask is:",
+      "options": ["Will this get the most likes?", "Is this legal, ethical, and something I would be comfortable with anyone seeing?", "Has someone else already posted this?", "Will this make me seem funny?"],
+      "answer": "Is this legal, ethical, and something I would be comfortable with anyone seeing?",
+      "explanation": "The 'Would I be comfortable if everyone could see this?' test helps prevent sharing content that could be harmful, embarrassing, or inappropriate when viewed by parents, teachers, or future employers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "The right to be forgotten (digital right to erasure) refers to:",
+      "options": ["The government's ability to erase all data from the internet", "An individual's right to request that their personal data be deleted from online databases", "Forgetting passwords and requesting a reset", "Technology that automatically erases old posts"],
+      "answer": "An individual's right to request that their personal data be deleted from online databases",
+      "explanation": "In many jurisdictions (including the EU under GDPR), individuals have a 'right to be forgotten' — the right to request that organizations erase their personal data.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Augmented reality (AR) differs from virtual reality (VR) in that AR:",
+      "options": ["Creates a completely immersive virtual environment", "Overlays digital information onto the real world", "Requires a full-body suit to operate", "Can only be experienced through special glasses"],
+      "answer": "Overlays digital information onto the real world",
+      "explanation": "AR adds digital elements (images, text, data) onto a real-world view (like Pokémon Go or Snapchat filters). VR creates a fully immersive digital environment replacing the real world.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Which skill will be most important for workers adapting to ongoing technological change?",
+      "options": ["Mastering one specific software tool permanently", "Lifelong learning, adaptability, and the ability to learn new technologies quickly", "Avoiding all new technologies until they are established", "Only using technologies older than five years"],
+      "answer": "Lifelong learning, adaptability, and the ability to learn new technologies quickly",
+      "explanation": "As technology evolves rapidly, the ability to continuously learn new tools and adapt to change is more valuable than deep mastery of any single tool that may become obsolete.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Blockchain technology is primarily notable for:",
+      "options": ["Making websites load faster", "Providing a decentralized, tamper-resistant way to record and verify transactions", "Replacing all passwords with biometric data", "Enabling faster wireless internet connections"],
+      "answer": "Providing a decentralized, tamper-resistant way to record and verify transactions",
+      "explanation": "Blockchain creates a distributed ledger of transactions that is extremely difficult to alter — the underlying technology of cryptocurrencies and many emerging decentralized applications.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Automation and AI are most likely to displace jobs that involve:",
+      "options": ["Creative problem-solving and interpersonal skills", "Routine, repetitive tasks that follow predictable patterns", "Strategic leadership and ethical judgment", "Physical work requiring fine motor skills in complex environments"],
+      "answer": "Routine, repetitive tasks that follow predictable patterns",
+      "explanation": "Jobs involving predictable, repetitive processes are most vulnerable to automation. Jobs requiring creativity, social intelligence, and complex judgment are more resistant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "The Internet of Things (IoT) refers to:",
+      "options": ["A network connecting only computers and smartphones", "The global network of everyday physical devices connected to the internet and each other", "A new faster version of the internet", "Social media platforms connecting people worldwide"],
+      "answer": "The global network of everyday physical devices connected to the internet and each other",
+      "explanation": "IoT describes the growing network of connected devices — from smart thermostats and watches to industrial sensors — that collect and exchange data via the internet.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes a phishing attack?",
+      "options": ["Hacking into a network by exploiting software vulnerabilities", "Deceiving people through fake messages or websites to steal personal information", "Installing malware by connecting a USB drive", "Overloading a server with traffic until it crashes"],
+      "answer": "Deceiving people through fake messages or websites to steal personal information",
+      "explanation": "Phishing is a social engineering attack that uses deceptive communication — fake emails, websites, or texts — to trick victims into revealing credentials or financial information.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The SIFT method advises you to 'Investigate the source' by:",
+      "options": ["Reading the article very carefully from beginning to end", "Looking up who made the content and whether they are credible before reading further", "Counting the number of sources cited in the article", "Checking how many social media shares the article has"],
+      "answer": "Looking up who made the content and whether they are credible before reading further",
+      "explanation": "Investigating the source means quickly checking who is behind the content before investing time reading it — a key habit that prevents being misled by unreliable sources.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Adjusting your privacy settings on social media platforms helps to:",
+      "options": ["Increase the number of followers you have", "Control who can see your personal information and content", "Improve the quality of your internet connection", "Prevent the platform from making money from advertising"],
+      "answer": "Control who can see your personal information and content",
+      "explanation": "Privacy settings let you decide who can see your profile, posts, location, and other personal data — an essential step in managing your digital footprint.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Multi-factor authentication (MFA) is most important because:",
+      "options": ["It makes logging in faster", "Even if your password is stolen, a second factor prevents unauthorized access", "It eliminates the need for passwords entirely", "It works only on mobile devices"],
+      "answer": "Even if your password is stolen, a second factor prevents unauthorized access",
+      "explanation": "MFA's key benefit is protection after password compromise — requiring a second verification step (code, biometric) means stolen passwords alone cannot unlock your account.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "In Google Sheets, which formula would calculate the average of cells B2 through B20?",
+      "options": ["=MEAN(B2:B20)", "=AVERAGE(B2:B20)", "=SUM(B2:B20)/20", "=AVG(B2:B20)"],
+      "answer": "=AVERAGE(B2:B20)",
+      "explanation": "The AVERAGE function calculates the arithmetic mean of a range. =AVERAGE(B2:B20) sums all values and divides by the count automatically.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Lateral reading is a fact-checking strategy used by professional fact-checkers that involves:",
+      "options": ["Carefully reading every word of an article before forming an opinion", "Immediately searching for information about the source from other websites", "Reading only the left column of a Wikipedia article", "Comparing the article to other articles on the same website"],
+      "answer": "Immediately searching for information about the source from other websites",
+      "explanation": "Lateral reading means leaving a website to quickly check what other credible sources say about it — far more efficient than reading an unreliable site in detail.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "A Creative Commons CC BY-NC license allows others to:",
+      "options": ["Use the work commercially without credit", "Use and modify the work non-commercially with attribution", "Use the work for any purpose without any restrictions", "Create derivative works and sell them"],
+      "answer": "Use and modify the work non-commercially with attribution",
+      "explanation": "CC BY-NC means users must credit the creator (BY) and may only use the work for non-commercial (NC) purposes — a common license for educational content.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Which of the following is an example of a passive digital footprint?",
+      "options": ["A photo you post on Instagram", "A comment you leave on a YouTube video", "Your location data collected by an app you use", "An email you send to a friend"],
+      "answer": "Your location data collected by an app you use",
+      "explanation": "A passive digital footprint is data collected about you without your direct input — location data, browsing behavior tracked by cookies, app usage statistics.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "A netiquette rule that applies to professional email communication is:",
+      "options": ["Always use lowercase letters for a casual tone", "Include a descriptive subject line and professional greeting", "Send emails at any time of day without considering the recipient's time zone", "Use emojis to show friendliness in all professional contexts"],
+      "answer": "Include a descriptive subject line and professional greeting",
+      "explanation": "A clear subject line helps recipients prioritize and find emails; a professional greeting sets the appropriate tone — both fundamental to effective professional email.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "The Google search operator that finds pages that link to a specific URL is:",
+      "options": ["site:", "link:", "inurl:", "related:"],
+      "answer": "link:",
+      "explanation": "The link: operator finds pages that contain links to a specific URL — useful for researching what sites reference a particular page.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Social media algorithms primarily show you content that:",
+      "options": ["Is posted by accounts you have never interacted with", "Maximizes engagement based on your past behavior", "Is the most factually accurate available", "Was posted most recently with no other factors"],
+      "answer": "Maximizes engagement based on your past behavior",
+      "explanation": "Social media algorithms optimize for engagement (likes, shares, time spent) — showing content similar to what you have previously interacted with, regardless of its accuracy or diversity.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "Which of the following is the MOST secure approach to password management?",
+      "options": ["Using the same strong password for all accounts to avoid forgetting", "Writing all passwords in a notebook kept at your desk", "Using a reputable password manager to generate and store unique passwords for each account", "Changing all passwords to your birthday for easy recall"],
+      "answer": "Using a reputable password manager to generate and store unique passwords for each account",
+      "explanation": "A password manager creates strong, unique passwords for every account and encrypts them securely — addressing both the need for complexity and the challenge of remembering many credentials.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Which of the following correctly describes the concept of a filter bubble?",
+      "options": ["A browser extension that blocks offensive content", "An algorithm-driven information environment where users see only content matching their existing views", "A cybersecurity tool that filters malicious emails", "A privacy feature that hides your location from apps"],
+      "answer": "An algorithm-driven information environment where users see only content matching their existing views",
+      "explanation": "Filter bubbles are created by personalization algorithms that limit information exposure — users see increasingly narrow, confirmatory content rather than a diverse range of perspectives.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Which of the following is a key characteristic of misinformation as opposed to disinformation?",
+      "options": ["Misinformation is always more widely shared", "Misinformation is spread without intent to deceive, while disinformation is deliberately false", "Misinformation only occurs on social media platforms", "Misinformation is always created by governments"],
+      "answer": "Misinformation is spread without intent to deceive, while disinformation is deliberately false",
+      "explanation": "The distinction is intent: misinformation is false content shared accidentally (by people who believe it or didn't check); disinformation is deliberately created to manipulate.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Being a responsible digital citizen when you encounter cyberbullying means:",
+      "options": ["Participating if most of your friends are involved", "Ignoring it because it is not your problem", "Reporting it to the platform and, if appropriate, to a trusted adult", "Retaliating against the bully online"],
+      "answer": "Reporting it to the platform and, if appropriate, to a trusted adult",
+      "explanation": "Digital citizenship involves being an upstander — using reporting tools to flag harassment and seeking adult help for serious cases, rather than participating or ignoring it.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "A ransomware attack can BEST be prevented by:",
+      "options": ["Using a very long password", "Regularly backing up data to an offline location and keeping software updated", "Turning off your computer when not in use", "Only using websites with HTTPS"],
+      "answer": "Regularly backing up data to an offline location and keeping software updated",
+      "explanation": "Regular offline backups mean ransomware cannot destroy your only copy of data; software updates close vulnerabilities ransomware exploits — the two most effective defenses.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Which of the following statements about AI language models is TRUE?",
+      "options": ["They always produce factually accurate information", "They cannot generate creative writing", "They generate text based on statistical patterns and can produce plausible but incorrect content", "They have real-time access to all internet information"],
+      "answer": "They generate text based on statistical patterns and can produce plausible but incorrect content",
+      "explanation": "LLMs generate text by predicting likely word sequences based on training data — they do not 'know' facts and can generate convincingly written but incorrect information (hallucinations).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Which type of tracking would continue even if you deleted all your browser cookies?",
+      "options": ["Session cookies", "Browser fingerprinting, which identifies your device by its unique configuration", "First-party cookies", "Third-party cookies"],
+      "answer": "Browser fingerprinting, which identifies your device by its unique configuration",
+      "explanation": "Browser fingerprinting tracks users through unique combinations of browser settings, installed fonts, screen resolution, and other attributes — working even without cookies.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "When evaluating the 'Currency' of a source using the CRAAP test, you are assessing:",
+      "options": ["How much the article cost to produce", "Whether the information is recent enough for your research topic", "Whether the source accepts payment for publishing", "How popular the source is currently"],
+      "answer": "Whether the information is recent enough for your research topic",
+      "explanation": "Currency evaluates the date of information — critical for fast-changing fields like medicine or technology where old information may be incorrect.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "The Internet of Things (IoT) raises which privacy concern?",
+      "options": ["IoT devices make the internet slower for everyone", "Connected devices continuously collect and transmit data about your behavior and environment", "IoT devices can only be used with special permissions", "IoT increases costs for internet providers"],
+      "answer": "Connected devices continuously collect and transmit data about your behavior and environment",
+      "explanation": "IoT devices (smart speakers, thermostats, health trackers) constantly gather and transmit data about daily behavior — raising significant questions about who has access and how it is used.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following is an ethical use of an AI writing tool for a school assignment?",
+      "options": ["Submitting the AI's output verbatim as your essay", "Using AI to generate practice questions to test yourself, then writing your own response", "Having AI write your entire paper and changing a few words", "Using AI to translate your assignment from another language you wrote it in to avoid a language class"],
+      "answer": "Using AI to generate practice questions to test yourself, then writing your own response",
+      "explanation": "Using AI as a study tool — generating questions, explanations, or feedback — supports your own learning without misrepresenting your work as something you didn't produce.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "The 'Purpose' criterion in the CRAAP test evaluates:",
+      "options": ["Whether the article has a clear purpose statement", "Why the information was created — to inform, persuade, sell, entertain, or manipulate", "Whether the article is long enough to be useful", "How many purposes the article serves"],
+      "answer": "Why the information was created — to inform, persuade, sell, entertain, or manipulate",
+      "explanation": "Understanding the purpose behind content reveals potential bias — advertising content, advocacy websites, and satire all have different motivations that affect how their information should be interpreted.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Fair use is most likely to apply when you:",
+      "options": ["Post an entire movie on YouTube for free", "Quote two sentences from a published book to support an argument in your own essay", "Sell printed copies of a copyrighted photograph", "Create a website using a copyrighted logo without permission"],
+      "answer": "Quote two sentences from a published book to support an argument in your own essay",
+      "explanation": "Fair use typically applies to small amounts of copyrighted material used for commentary, criticism, or education — transformative academic use of brief quotations is the clearest example.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "Which of the following is the BEST strategy for maintaining digital well-being?",
+      "options": ["Avoiding all technology except for school assignments", "Setting intentional boundaries around technology use while maintaining engagement for meaningful purposes", "Spending unlimited time on social media since it keeps you connected", "Only using technology when other people are also using it"],
+      "answer": "Setting intentional boundaries around technology use while maintaining engagement for meaningful purposes",
+      "explanation": "Digital well-being is not about eliminating technology but using it intentionally — balancing benefits (learning, connection, productivity) with boundaries that protect sleep, attention, and mental health.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "When using Google Scholar to find sources, you should prioritize articles that are:",
+      "options": ["The most recently cited articles regardless of their content", "Peer-reviewed and published in reputable academic journals", "Only available as free full-text downloads", "Written by the most famous authors in the field"],
+      "answer": "Peer-reviewed and published in reputable academic journals",
+      "explanation": "Peer review is the key quality indicator for academic sources — it means the work was evaluated by independent subject-matter experts before publication.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which practice BEST reduces the spread of misinformation online?",
+      "options": ["Only sharing content from accounts you follow", "Pausing before sharing, verifying the claim from independent sources, and sharing responsibly", "Sharing widely to let others decide what is true", "Trusting content that aligns with your existing knowledge"],
+      "answer": "Pausing before sharing, verifying the claim from independent sources, and sharing responsibly",
+      "explanation": "Most misinformation spreads because people share without checking. Pausing and verifying — even briefly — dramatically reduces your role in spreading false information.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "A positive digital footprint can benefit you by:",
+      "options": ["Preventing any organization from finding information about you", "Showcasing your skills, achievements, and responsible online behavior to future employers or colleges", "Making your social media accounts visible to more followers", "Reducing the amount of data companies can collect about you"],
+      "answer": "Showcasing your skills, achievements, and responsible online behavior to future employers or colleges",
+      "explanation": "A curated positive digital footprint — portfolios, thoughtful posts, professional profiles — can strengthen college applications and job searches by demonstrating character and competence.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "Automation's impact on the job market is BEST described as:",
+      "options": ["Eliminating all jobs within the next decade", "Transforming many jobs by automating routine tasks while creating new roles requiring human skills", "Only affecting manufacturing jobs", "Having no effect on professional or white-collar jobs"],
+      "answer": "Transforming many jobs by automating routine tasks while creating new roles requiring human skills",
+      "explanation": "History shows automation eliminates some tasks while creating new types of work — the net effect depends on how quickly workers and education systems adapt.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Which of the following is the most effective defense against social engineering attacks?",
+      "options": ["Installing the latest antivirus software", "Educating users to recognize and verify suspicious requests before complying", "Using very complex passwords", "Never using email for communication"],
+      "answer": "Educating users to recognize and verify suspicious requests before complying",
+      "explanation": "Social engineering exploits human psychology rather than technical vulnerabilities — education and a habit of verification (calling back on known numbers, checking with supervisors) are the primary defenses.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Digital citizenship responsibilities include:",
+      "options": ["Sharing as much personal information as possible to build your online presence", "Respecting intellectual property, protecting your privacy, and treating others with respect online", "Maximizing your time online to stay current", "Sharing any information that seems important, regardless of its accuracy"],
+      "answer": "Respecting intellectual property, protecting your privacy, and treating others with respect online",
+      "explanation": "The nine elements of digital citizenship include digital rights and responsibilities, ethics, security, privacy, and literacy — all centered on informed, ethical, and respectful online participation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Deepfakes pose a particular risk to society because they:",
+      "options": ["Make movies look more realistic", "Use AI to create convincing fake images or videos of real people, potentially spreading disinformation", "Require expensive equipment that limits their production", "Can only be created by professional filmmakers"],
+      "answer": "Use AI to create convincing fake images or videos of real people, potentially spreading disinformation",
+      "explanation": "Deepfakes can falsely portray real people saying or doing things they never did — with potential to damage reputations, spread political disinformation, and undermine trust in video evidence.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Which presentation design principle improves audience comprehension?",
+      "options": ["Using as many different fonts as possible for variety", "Including all talking points in full sentences on each slide", "Using visuals and minimal text to complement — not replace — the speaker's words", "Filling every slide completely to show thoroughness"],
+      "answer": "Using visuals and minimal text to complement — not replace — the speaker's words",
+      "explanation": "Slides are visual aids, not scripts. Audiences cannot read dense slides and listen simultaneously — minimal text with supporting visuals enhances rather than competes with the presentation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "The 'right to be forgotten' is most associated with which value?",
+      "options": ["Freedom of speech online", "The right to have outdated or harmful personal data removed from online databases", "The right to anonymous online communication", "The right to copy any content you find online"],
+      "answer": "The right to have outdated or harmful personal data removed from online databases",
+      "explanation": "The right to be forgotten (erasure) allows individuals to request removal of personal data that is no longer relevant or is causing harm — recognized in GDPR and growing globally.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Which skill is considered MOST future-proof as technology continues to advance?",
+      "options": ["Proficiency in one specific programming language", "The ability to quickly learn new tools and adapt to technological change", "Memorizing technical specifications of current devices", "Only working in jobs that cannot be computerized"],
+      "answer": "The ability to quickly learn new tools and adapt to technological change",
+      "explanation": "In a rapidly changing technological landscape, adaptability and continuous learning are the most durable skills — specific tool knowledge may become obsolete while the ability to learn remains valuable.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Which of the following BEST summarizes the responsibility of digital literacy for democracy?",
+      "options": ["Digital literacy is only important for personal safety", "Critically evaluating online information is essential for making informed civic and political decisions", "Government agencies should decide what information citizens can access online", "Digital literacy skills are only necessary for people who use social media"],
+      "answer": "Critically evaluating online information is essential for making informed civic and political decisions",
+      "explanation": "Democracy depends on informed citizens — as more civic discourse and political information moves online, the ability to evaluate sources and resist manipulation becomes essential for democratic participation.",
+      "points": 1
+    }
+  ]
+}

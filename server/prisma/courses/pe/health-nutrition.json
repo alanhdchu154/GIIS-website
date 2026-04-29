@@ -1,0 +1,800 @@
+{
+  "slug": "health-nutrition",
+  "name": "Health and Nutrition",
+  "nameZh": "健康与营养",
+  "credits": 0.5,
+  "department": "Physical Education",
+  "type": "Elective",
+  "description": "A comprehensive exploration of nutrition science covering macronutrients, micronutrients, hydration, dietary guidelines, sports nutrition, and global food systems for healthy adolescent lifestyles.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to Nutrition",
+      "titleZh": "营养学导论",
+      "objectives": "Define nutrition and its importance to health, identify the six classes of nutrients, and understand how food choices affect overall wellness.",
+      "readingUrl": "https://www.myplate.gov/eat-healthy/what-is-myplate",
+      "readingNote": "USDA MyPlate — What Is MyPlate?",
+      "videoUrl": "https://www.youtube.com/watch?v=MKM3HRDnZMo",
+      "videoNote": "YouTube — Introduction to Nutrition Science",
+      "video2Url": "https://www.youtube.com/watch?v=H89QQfXtc-k",
+      "video2Note": "YouTube — Six Classes of Nutrients Overview",
+      "practiceUrl": "https://www.myplate.gov/",
+      "practiceNote": "Use the MyPlate plan tool to assess your current dietary pattern",
+      "assignment": "Keep a 3-day food diary and analyze your intake using the MyPlate framework, identifying nutrients you consume adequately and areas for improvement.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 2,
+      "title": "Macronutrients: Carbohydrates",
+      "titleZh": "宏量营养素：碳水化合物",
+      "objectives": "Identify types of carbohydrates (simple vs. complex, fiber), understand their role as the body's primary energy source, and evaluate healthy carbohydrate food choices.",
+      "readingUrl": "https://www.hsph.harvard.edu/nutritionsource/carbohydrates/",
+      "readingNote": "Harvard T.H. Chan School of Public Health — Carbohydrates",
+      "videoUrl": "https://www.youtube.com/watch?v=wxzc_2c6GMg",
+      "videoNote": "YouTube — Carbohydrates Explained",
+      "video2Url": "https://www.youtube.com/watch?v=GBiSGEHJWN4",
+      "video2Note": "YouTube — Simple vs Complex Carbohydrates",
+      "practiceUrl": "https://www.hsph.harvard.edu/nutritionsource/carbohydrates/",
+      "practiceNote": "Identify five high-quality carbohydrate sources and five poor-quality sources from your diet",
+      "assignment": "Create a report comparing simple and complex carbohydrates, including the glycemic index concept, fiber's role in health, and three food swaps for better carbohydrate choices.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Macronutrients: Proteins",
+      "titleZh": "宏量营养素：蛋白质",
+      "objectives": "Explain the structure and functions of protein, differentiate complete from incomplete proteins, and determine protein needs for different activity levels.",
+      "readingUrl": "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/protein/",
+      "readingNote": "Harvard T.H. Chan School of Public Health — The Nutrition Source: Protein",
+      "videoUrl": "https://www.youtube.com/watch?v=IGVvPT1Rvzs",
+      "videoNote": "YouTube — Protein: What It Is and Why You Need It",
+      "video2Url": "https://www.youtube.com/watch?v=T3NKBK5PTOU",
+      "video2Note": "YouTube — Complete vs Incomplete Proteins",
+      "practiceUrl": "https://www.myplate.gov/eat-healthy/protein-foods",
+      "practiceNote": "Identify your estimated daily protein needs and plan a high-protein meal that includes a complete protein source",
+      "assignment": "Calculate your recommended daily protein intake based on body weight and activity level, and plan a full day of meals that meets this target with diverse protein sources.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Macronutrients: Fats",
+      "titleZh": "宏量营养素：脂肪",
+      "objectives": "Classify dietary fats (saturated, unsaturated, trans), understand their health implications, and identify food sources of healthy fats.",
+      "readingUrl": "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/fats-and-cholesterol/",
+      "readingNote": "Harvard T.H. Chan School of Public Health — Fats and Cholesterol",
+      "videoUrl": "https://www.youtube.com/watch?v=ksNZ9A3zHDg",
+      "videoNote": "YouTube — Types of Dietary Fat Explained",
+      "video2Url": "https://www.youtube.com/watch?v=GEr5aBstWLI",
+      "video2Note": "YouTube — Good Fats vs Bad Fats for Health",
+      "practiceUrl": "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/fats-and-cholesterol/",
+      "practiceNote": "Analyze a food label for fat content and classify fats found in the product",
+      "assignment": "Write a guide explaining the three main types of dietary fat, their health effects, food sources for each, and practical advice for choosing heart-healthy fats.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Micronutrients: Vitamins",
+      "titleZh": "微量营养素：维生素",
+      "objectives": "Identify water-soluble and fat-soluble vitamins, their functions, food sources, and consequences of deficiency or excess.",
+      "readingUrl": "https://ods.od.nih.gov/factsheets/list-VitaminsMinerals/",
+      "readingNote": "NIH Office of Dietary Supplements — Vitamins and Minerals",
+      "videoUrl": "https://www.youtube.com/watch?v=aaU_QVHG5CU",
+      "videoNote": "YouTube — Vitamins: Water-Soluble vs Fat-Soluble",
+      "video2Url": "https://www.youtube.com/watch?v=1ydcpXkJFk4",
+      "video2Note": "YouTube — Key Vitamins and Their Functions",
+      "practiceUrl": "https://ods.od.nih.gov/factsheets/list-VitaminsMinerals/",
+      "practiceNote": "Choose two vitamins and research their functions, deficiency symptoms, and best food sources",
+      "assignment": "Create a vitamin reference chart for 8 key vitamins (4 fat-soluble, 4 water-soluble) including daily recommended amounts, deficiency symptoms, and top food sources.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Micronutrients: Minerals",
+      "titleZh": "微量营养素：矿物质",
+      "objectives": "Identify key dietary minerals (calcium, iron, potassium, sodium, zinc), their roles in body function, deficiency conditions, and food sources.",
+      "readingUrl": "https://ods.od.nih.gov/factsheets/list-VitaminsMinerals/",
+      "readingNote": "NIH Office of Dietary Supplements — Minerals",
+      "videoUrl": "https://www.youtube.com/watch?v=7mRjGtYR8Ho",
+      "videoNote": "YouTube — Essential Minerals and Their Functions",
+      "video2Url": "https://www.youtube.com/watch?v=XKJk0v9kVkY",
+      "video2Note": "YouTube — Calcium, Iron, and Key Minerals Explained",
+      "practiceUrl": "https://ods.od.nih.gov/",
+      "practiceNote": "Analyze your typical diet for calcium and iron intake adequacy",
+      "assignment": "Research three minerals important for adolescent health (calcium, iron, zinc), explaining their functions, recommended daily intake, and consequences of deficiency with dietary solutions.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 7,
+      "title": "Water & Hydration",
+      "titleZh": "水与水合作用",
+      "objectives": "Explain water's roles in the body, understand daily hydration requirements, and recognize signs of dehydration and overhydration.",
+      "readingUrl": "https://www.hsph.harvard.edu/nutritionsource/water/",
+      "readingNote": "Harvard T.H. Chan School of Public Health — Water",
+      "videoUrl": "https://www.youtube.com/watch?v=iCrDJeKXX5c",
+      "videoNote": "YouTube — Importance of Hydration and Water Intake",
+      "video2Url": "https://www.youtube.com/watch?v=9iMGFqMmUFs",
+      "video2Note": "YouTube — Dehydration: Signs and Effects on the Body",
+      "practiceUrl": "https://www.hsph.harvard.edu/nutritionsource/water/",
+      "practiceNote": "Track your fluid intake for 3 days and compare to daily recommended amounts",
+      "assignment": "Write a hydration guide for teenagers that explains daily water needs, factors that increase hydration needs, signs of dehydration, and tips for staying hydrated.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 8,
+      "title": "Energy Balance & Weight Management",
+      "titleZh": "能量平衡与体重管理",
+      "objectives": "Explain the concept of energy balance (calories in vs. out), understand basal metabolic rate, and evaluate healthy approaches to weight management.",
+      "readingUrl": "https://www.cdc.gov/healthyweight/calories/index.html",
+      "readingNote": "CDC — Balancing Calories",
+      "videoUrl": "https://www.youtube.com/watch?v=1ZXKH6BzBGo",
+      "videoNote": "YouTube — Energy Balance and Weight Management",
+      "video2Url": "https://www.youtube.com/watch?v=TZLHV0gxMiQ",
+      "video2Note": "YouTube — Calories In vs Calories Out Explained",
+      "practiceUrl": "https://www.cdc.gov/healthyweight/index.html",
+      "practiceNote": "Use CDC BMI calculator and healthy weight resources to assess personal weight status",
+      "assignment": "Research the concept of energy balance and write a one-page essay explaining why crash diets are ineffective and unsustainable compared to lifestyle-based approaches.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "Eating Patterns & Dietary Guidelines",
+      "titleZh": "饮食模式与膳食指南",
+      "objectives": "Identify current US Dietary Guidelines, evaluate different eating patterns (Mediterranean, DASH, plant-based), and understand how to read and apply MyPlate.",
+      "readingUrl": "https://www.dietaryguidelines.gov/resources/2020-2025-dietary-guidelines-online-materials",
+      "readingNote": "USDA — 2020–2025 Dietary Guidelines for Americans",
+      "videoUrl": "https://www.youtube.com/watch?v=fqhYBTg73fw",
+      "videoNote": "YouTube — US Dietary Guidelines Explained",
+      "video2Url": "https://www.youtube.com/watch?v=8LjApQ4TXKE",
+      "video2Note": "YouTube — Mediterranean Diet vs Other Eating Patterns",
+      "practiceUrl": "https://www.dietaryguidelines.gov/",
+      "practiceNote": "Compare your 3-day food diary to the USDA Dietary Guidelines recommendations",
+      "assignment": "Compare the Mediterranean and DASH diets, summarizing their key principles, health benefits, and practical tips for adopting elements of each into everyday eating.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 10,
+      "title": "Sports Nutrition",
+      "titleZh": "运动营养",
+      "objectives": "Explain how nutritional needs change with physical activity, understand fueling strategies before, during, and after exercise, and evaluate sports supplements critically.",
+      "readingUrl": "https://www.acefitness.org/resources/everyone/blog/6679/nutrition-for-athletes/",
+      "readingNote": "ACE Fitness — Sports Nutrition for Athletes",
+      "videoUrl": "https://www.youtube.com/watch?v=MKM3HRDnZMo",
+      "videoNote": "YouTube — Sports Nutrition Fundamentals",
+      "video2Url": "https://www.youtube.com/watch?v=T3NKBK5PTOU",
+      "video2Note": "YouTube — Pre and Post Workout Nutrition",
+      "practiceUrl": "https://www.acefitness.org/resources/everyone/blog/6679/nutrition-for-athletes/",
+      "practiceNote": "Plan a pre-workout meal and post-workout recovery snack using sports nutrition principles",
+      "assignment": "Develop a complete one-day sports nutrition plan for a high school soccer player on a game day, including all meals, snacks, and hydration with rationale for each choice.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Food Labels & Consumer Health",
+      "titleZh": "食品标签与消费者健康",
+      "objectives": "Interpret the Nutrition Facts label, understand ingredient lists, identify marketing claims, and make informed food choices as a health-conscious consumer.",
+      "readingUrl": "https://www.fda.gov/food/new-nutrition-facts-label/how-understand-and-use-nutrition-facts-label",
+      "readingNote": "FDA — How to Understand and Use the Nutrition Facts Label",
+      "videoUrl": "https://www.youtube.com/watch?v=9gQ_VBgPShk",
+      "videoNote": "YouTube — How to Read a Nutrition Facts Label",
+      "video2Url": "https://www.youtube.com/watch?v=Mq5b1BZJBUY",
+      "video2Note": "YouTube — Food Marketing Tricks to Watch Out For",
+      "practiceUrl": "https://www.fda.gov/food/new-nutrition-facts-label/how-understand-and-use-nutrition-facts-label",
+      "practiceNote": "Analyze and compare nutrition labels from two similar food products",
+      "assignment": "Compare nutrition labels from three popular teen snack products, evaluating serving sizes, sugar, sodium, and nutrient density, then recommend the healthiest choice with justification.",
+      "estimatedHrs": 2.0
+    },
+    {
+      "order": 12,
+      "title": "Eating Disorders",
+      "titleZh": "饮食失调",
+      "objectives": "Identify types of eating disorders (anorexia, bulimia, binge eating disorder), understand their causes and health consequences, and know how to seek help.",
+      "readingUrl": "https://www.nimh.nih.gov/health/topics/eating-disorders",
+      "readingNote": "NIMH — Eating Disorders Overview",
+      "videoUrl": "https://www.youtube.com/watch?v=kHCiCTRjHOY",
+      "videoNote": "YouTube — Understanding Eating Disorders",
+      "video2Url": "https://www.youtube.com/watch?v=6Nm7MgaOBWQ",
+      "video2Note": "YouTube — Signs of Eating Disorders and Getting Help",
+      "practiceUrl": "https://www.nimh.nih.gov/health/topics/eating-disorders",
+      "practiceNote": "Review NIMH resources on eating disorder warning signs and treatment options",
+      "assignment": "Write a one-page resource guide for teens on eating disorders, covering warning signs, physical and emotional consequences, and how to support a friend who may be struggling.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Nutrition Through the Lifespan",
+      "titleZh": "全生命周期营养",
+      "objectives": "Explain how nutritional needs change across the lifespan from adolescence through older adulthood, and identify special dietary considerations for each life stage.",
+      "readingUrl": "https://www.myplate.gov/life-stages",
+      "readingNote": "USDA MyPlate — Nutrition Across the Lifespan",
+      "videoUrl": "https://www.youtube.com/watch?v=Wd1eVKcK5lc",
+      "videoNote": "YouTube — Nutrition Needs Across the Lifespan",
+      "video2Url": "https://www.youtube.com/watch?v=9n6rEB4cJh8",
+      "video2Note": "YouTube — Teen Nutrition vs Adult Nutrition",
+      "practiceUrl": "https://www.myplate.gov/life-stages",
+      "practiceNote": "Compare recommended daily servings for a teenager vs. an older adult using MyPlate tools",
+      "assignment": "Create a comparison chart of nutritional needs and key nutrients for four life stages: adolescent, young adult, middle-aged adult, and older adult, with food source examples.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 14,
+      "title": "Global Food Systems & Sustainability",
+      "titleZh": "全球食品体系与可持续性",
+      "objectives": "Understand how food is produced and distributed globally, identify environmental impacts of food choices, and explore sustainable and equitable food practices.",
+      "readingUrl": "https://www.who.int/news-room/fact-sheets/detail/food-safety",
+      "readingNote": "WHO — Food Safety and Global Food Systems",
+      "videoUrl": "https://www.youtube.com/watch?v=vGw1PnBHRps",
+      "videoNote": "YouTube — Global Food Systems and Sustainability",
+      "video2Url": "https://www.youtube.com/watch?v=uN7RAbH23IY",
+      "video2Note": "YouTube — Food Waste and the Environment",
+      "practiceUrl": "https://www.worldfoodprize.org/",
+      "practiceNote": "Explore the World Food Prize website and reflect on global food security challenges",
+      "assignment": "Write a reflective essay on the environmental impact of your diet, proposing three specific dietary changes you could make to reduce your food's environmental footprint.",
+      "estimatedHrs": 2.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1, "order": 1, "question": "Which of the following is NOT one of the six classes of nutrients?",
+      "options": ["Carbohydrates", "Vitamins", "Enzymes", "Minerals"],
+      "answer": "C", "explanation": "The six classes of nutrients are carbohydrates, proteins, fats, vitamins, minerals, and water. Enzymes are biological catalysts, not a nutrient class.", "points": 1
+    },
+    {
+      "moduleOrder": 1, "order": 2, "question": "Which nutrient class provides the most calories per gram?",
+      "options": ["Carbohydrates", "Protein", "Fat", "Vitamins"],
+      "answer": "C", "explanation": "Fat provides 9 calories per gram, compared to 4 calories per gram for both carbohydrates and protein.", "points": 1
+    },
+    {
+      "moduleOrder": 1, "order": 3, "question": "The USDA MyPlate icon is divided into how many food groups?",
+      "options": ["3", "4", "5", "6"],
+      "answer": "C", "explanation": "MyPlate is divided into five food groups: Fruits, Vegetables, Grains, Protein, and Dairy.", "points": 1
+    },
+    {
+      "moduleOrder": 1, "order": 4, "question": "Which nutrient class does NOT provide calories?",
+      "options": ["Carbohydrates", "Fats", "Vitamins", "Protein"],
+      "answer": "C", "explanation": "Vitamins and minerals do not provide calories; they support metabolic processes without contributing energy directly.", "points": 1
+    },
+    {
+      "moduleOrder": 1, "order": 5, "question": "Good nutrition is important for adolescents primarily because:",
+      "options": ["It only affects athletic performance", "It supports growth, brain development, energy, and long-term disease prevention", "It determines adult height only", "It is less important than sleep"],
+      "answer": "B", "explanation": "Adequate nutrition during adolescence supports rapid physical growth, cognitive development, energy for activity, and establishes lifelong health patterns.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 1, "question": "What is the primary function of carbohydrates in the body?",
+      "options": ["Building muscle tissue", "Providing energy (especially for the brain and during exercise)", "Transporting fat-soluble vitamins", "Maintaining fluid balance"],
+      "answer": "B", "explanation": "Carbohydrates are the body's preferred energy source, especially for brain function and moderate-to-high intensity exercise.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 2, "question": "Dietary fiber is best described as:",
+      "options": ["A simple carbohydrate digested rapidly", "An indigestible carbohydrate that supports digestive health", "A type of protein", "A fat-soluble nutrient"],
+      "answer": "B", "explanation": "Dietary fiber is a complex carbohydrate that humans cannot fully digest, supporting digestive health, satiety, and blood sugar regulation.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 3, "question": "The glycemic index measures:",
+      "options": ["The total carbohydrate content of a food", "How quickly a food raises blood glucose levels", "The amount of sugar in a product", "Protein content relative to carbohydrates"],
+      "answer": "B", "explanation": "The glycemic index ranks foods by how quickly they raise blood sugar; high-GI foods cause rapid spikes, low-GI foods cause gradual rises.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 4, "question": "Which food is the best source of complex carbohydrates?",
+      "options": ["White sugar", "Soda", "Whole grain bread", "Candy bar"],
+      "answer": "C", "explanation": "Whole grain bread contains complex carbohydrates and fiber, providing sustained energy compared to simple sugar sources.", "points": 1
+    },
+    {
+      "moduleOrder": 2, "order": 5, "question": "Excess carbohydrates consumed beyond energy needs are:",
+      "options": ["Excreted unchanged", "Converted and stored as fat", "Used exclusively by muscles", "Converted to vitamins"],
+      "answer": "B", "explanation": "When glycogen stores are full, excess dietary carbohydrates are converted to fat and stored in adipose tissue.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 1, "question": "A complete protein contains:",
+      "options": ["Only essential amino acids from plants", "All nine essential amino acids in adequate amounts", "Only non-essential amino acids", "No amino acids — only nitrogen"],
+      "answer": "B", "explanation": "A complete protein provides all nine essential amino acids that the body cannot synthesize on its own.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 2, "question": "Which food source provides complete protein?",
+      "options": ["Brown rice", "Black beans", "Lentils", "Eggs"],
+      "answer": "D", "explanation": "Eggs are a complete protein source containing all nine essential amino acids in adequate proportions.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 3, "question": "The recommended daily protein intake for active teenagers is approximately:",
+      "options": ["0.2 g/kg body weight", "0.8–1.2 g/kg body weight", "3.0 g/kg body weight", "5.0 g/kg body weight"],
+      "answer": "B", "explanation": "Active adolescents generally need 0.8–1.2 g/kg of body weight daily, with higher amounts for strength athletes.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 4, "question": "Protein's primary function in the body is:",
+      "options": ["Providing quick energy", "Building and repairing tissues, enzymes, and hormones", "Storing energy for extended exercise", "Regulating fluid balance only"],
+      "answer": "B", "explanation": "Protein provides amino acids for building and repairing muscles, synthesizing enzymes, hormones, antibodies, and structural proteins.", "points": 1
+    },
+    {
+      "moduleOrder": 3, "order": 5, "question": "Vegetarians can obtain all essential amino acids by:",
+      "options": ["Only eating soy protein", "Eating only vegetables without grains", "Combining complementary plant proteins (rice and beans)", "Avoiding protein entirely"],
+      "answer": "C", "explanation": "Combining complementary plant proteins (e.g., rice and beans) provides all essential amino acids that individual plant foods may lack.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 1, "question": "Saturated fats are primarily found in:",
+      "options": ["Olive oil and avocados", "Fatty fish and walnuts", "Butter, red meat, and cheese", "Sunflower and canola oil"],
+      "answer": "C", "explanation": "Saturated fats are abundant in animal products like butter, red meat, and full-fat dairy, and are linked to elevated LDL cholesterol.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 2, "question": "Trans fats are most harmful because they:",
+      "options": ["Provide too many calories", "Raise LDL (bad) cholesterol and lower HDL (good) cholesterol simultaneously", "Cause immediate allergic reactions", "Only affect athletic performance"],
+      "answer": "B", "explanation": "Trans fats raise LDL and lower HDL cholesterol, significantly increasing the risk of cardiovascular disease.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 3, "question": "Omega-3 fatty acids are especially beneficial for:",
+      "options": ["Building muscle rapidly", "Heart health, brain function, and reducing inflammation", "Rapid weight loss", "Improving bone density directly"],
+      "answer": "B", "explanation": "Omega-3 fatty acids (EPA, DHA) reduce inflammation, support cardiovascular health, and promote brain development and function.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 4, "question": "Which fat is considered the healthiest choice?",
+      "options": ["Trans fat from partially hydrogenated oils", "Saturated fat from coconut oil in excess", "Monounsaturated fat from olive oil", "Any fat found in fast food"],
+      "answer": "C", "explanation": "Monounsaturated fats, as found in olive oil, avocados, and nuts, are associated with improved heart health and reduced inflammation.", "points": 1
+    },
+    {
+      "moduleOrder": 4, "order": 5, "question": "Fat is essential in the diet because it:",
+      "options": ["Provides quick energy during sprints", "Is absorbed only by the kidneys", "Transports fat-soluble vitamins and supports cell membrane function", "Contains all essential amino acids"],
+      "answer": "C", "explanation": "Fat is essential for absorbing vitamins A, D, E, and K, maintaining cell membrane integrity, hormone production, and providing essential fatty acids.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 1, "question": "Which vitamins are fat-soluble?",
+      "options": ["Vitamins B and C", "Vitamins A, D, E, and K", "Vitamins C and B12", "All vitamins are fat-soluble"],
+      "answer": "B", "explanation": "Fat-soluble vitamins (A, D, E, K) are stored in body fat and require dietary fat for absorption; B vitamins and C are water-soluble.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 2, "question": "Vitamin C deficiency causes which disease?",
+      "options": ["Rickets", "Pellagra", "Scurvy", "Beriberi"],
+      "answer": "C", "explanation": "Scurvy results from vitamin C deficiency, causing collagen breakdown, bleeding gums, poor wound healing, and fatigue.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 3, "question": "Vitamin D is unique among vitamins because:",
+      "options": ["It is found only in vegetables", "The body can synthesize it from sunlight exposure", "It is water-soluble and excreted daily", "It requires iron for absorption"],
+      "answer": "B", "explanation": "Vitamin D is synthesized in the skin upon sunlight (UV) exposure, making it the only vitamin the body can produce endogenously.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 4, "question": "B vitamins primarily function as:",
+      "options": ["Antioxidants", "Coenzymes in energy metabolism", "Structural components of bone", "Hormones for muscle building"],
+      "answer": "B", "explanation": "B vitamins (B1, B2, B3, B6, B12, folate, etc.) act as coenzymes in metabolic reactions that convert food into usable energy.", "points": 1
+    },
+    {
+      "moduleOrder": 5, "order": 5, "question": "Vitamin A is essential for which body function?",
+      "options": ["Blood clotting only", "Calcium absorption", "Vision, immune function, and cell growth", "Nerve signal transmission"],
+      "answer": "C", "explanation": "Vitamin A supports vision (especially night vision), immune defense, skin integrity, and cell growth and differentiation.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 1, "question": "Calcium is most critical for which body function?",
+      "options": ["Red blood cell production", "Bone and teeth formation and strength", "Oxygen transport", "Blood sugar regulation"],
+      "answer": "B", "explanation": "Calcium is the primary mineral in bones and teeth, essential for their formation, density, and structural strength.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 2, "question": "Iron deficiency leads to which condition?",
+      "options": ["Osteoporosis", "Scurvy", "Iron-deficiency anemia", "Rickets"],
+      "answer": "C", "explanation": "Iron deficiency reduces hemoglobin production, impairing oxygen delivery and causing iron-deficiency anemia.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 3, "question": "Which food is the richest dietary source of calcium?",
+      "options": ["Orange juice (non-fortified)", "Salmon", "Dairy products like milk and yogurt", "Spinach alone"],
+      "answer": "C", "explanation": "Dairy products (milk, yogurt, cheese) are among the richest and most bioavailable sources of dietary calcium.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 4, "question": "Sodium's primary role in the body is:",
+      "options": ["Bone formation", "Muscle repair", "Regulating fluid balance and blood pressure", "Energy production"],
+      "answer": "C", "explanation": "Sodium is the primary extracellular electrolyte, regulating fluid balance, blood pressure, and nerve signal transmission.", "points": 1
+    },
+    {
+      "moduleOrder": 6, "order": 5, "question": "Excessive sodium intake is associated with:",
+      "options": ["Improved athletic performance", "Increased risk of high blood pressure and heart disease", "Enhanced bone density", "Better immune function"],
+      "answer": "B", "explanation": "High sodium intake increases blood pressure (hypertension), a major risk factor for heart disease and stroke.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 1, "question": "Water makes up approximately what percentage of the human body?",
+      "options": ["30–40%", "50–60%", "60–70%", "80–90%"],
+      "answer": "C", "explanation": "Water makes up approximately 60–70% of the adult body, with higher percentages in lean mass and lower in fat mass.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 2, "question": "Which of the following is an early sign of dehydration?",
+      "options": ["Increased energy", "Dark yellow urine and thirst", "Rapid weight gain", "Improved concentration"],
+      "answer": "B", "explanation": "Dark urine and thirst are early indicators of mild dehydration before significant performance or health impairment occurs.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 3, "question": "How much additional fluid should an athlete consume per hour of intense exercise?",
+      "options": ["No additional fluid", "100–200 mL", "500–1000 mL (based on sweat rate)", "3+ liters per hour"],
+      "answer": "C", "explanation": "Athletes typically lose 500–1000+ mL of sweat per hour and should replace these losses to maintain performance and safety.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 4, "question": "Overhydration (hyponatremia) is caused by:",
+      "options": ["Consuming too much salt", "Drinking excessive plain water without adequate electrolytes", "Not drinking enough water", "Consuming sports drinks excessively"],
+      "answer": "B", "explanation": "Hyponatremia occurs when excessive plain water intake dilutes blood sodium levels, causing dangerous electrolyte imbalance.", "points": 1
+    },
+    {
+      "moduleOrder": 7, "order": 5, "question": "Which beverage is the best choice for everyday hydration?",
+      "options": ["Sports drinks", "Energy drinks", "Water", "Fruit juice"],
+      "answer": "C", "explanation": "Water is the ideal everyday hydration choice — it is calorie-free, inexpensive, and perfectly suited for the body's hydration needs.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 1, "question": "Energy balance means:",
+      "options": ["Calories consumed equal calories burned", "Consuming only low-calorie foods", "Exercising more than eating", "Fasting regularly"],
+      "answer": "A", "explanation": "Energy balance occurs when caloric intake equals caloric expenditure, resulting in weight maintenance.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 2, "question": "Basal Metabolic Rate (BMR) refers to:",
+      "options": ["Calories burned during intense exercise", "Calories burned at rest to maintain basic body functions", "The rate at which food is digested", "Total daily caloric intake"],
+      "answer": "B", "explanation": "BMR is the number of calories the body burns at rest to maintain basic physiological functions like breathing and circulation.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 3, "question": "A caloric deficit of approximately 500 calories per day leads to approximately how much weight loss per week?",
+      "options": ["1 pound per week", "3 pounds per week", "5 pounds per week", "0.1 pounds per week"],
+      "answer": "A", "explanation": "A 500-calorie daily deficit (3,500 calories per week) theoretically results in approximately 1 pound of fat loss per week.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 4, "question": "Crash diets are ineffective for long-term weight management because they:",
+      "options": ["Contain too many nutrients", "Lead to muscle loss, nutrient deficiencies, and metabolic slowdown", "Provide too many calories", "Are too easy to maintain"],
+      "answer": "B", "explanation": "Crash diets cause rapid loss of muscle mass, deprive the body of essential nutrients, and trigger metabolic adaptation that slows weight loss.", "points": 1
+    },
+    {
+      "moduleOrder": 8, "order": 5, "question": "The most sustainable approach to healthy weight management combines:",
+      "options": ["Extreme dieting and no exercise", "Balanced nutrition, regular physical activity, and behavioral changes", "Only cardio exercise without diet changes", "Meal replacement shakes alone"],
+      "answer": "B", "explanation": "Sustainable weight management requires a combination of balanced diet, regular exercise, and healthy behavioral habits maintained over time.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 1, "question": "The 2020–2025 Dietary Guidelines for Americans recommend that added sugars contribute no more than:",
+      "options": ["5% of total daily calories", "10% of total daily calories", "20% of total daily calories", "No limit on added sugars"],
+      "answer": "B", "explanation": "The Dietary Guidelines recommend limiting added sugar to less than 10% of total daily caloric intake.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 2, "question": "The Mediterranean diet is characterized by high intake of:",
+      "options": ["Red meat and butter", "Processed foods and refined grains", "Fruits, vegetables, whole grains, legumes, and olive oil", "High-sugar desserts and sodas"],
+      "answer": "C", "explanation": "The Mediterranean diet emphasizes plant foods, whole grains, healthy fats (olive oil), fish, and limited red meat.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 3, "question": "The DASH diet was specifically designed to help manage:",
+      "options": ["Diabetes", "High blood pressure (hypertension)", "Cancer risk", "Kidney disease"],
+      "answer": "B", "explanation": "The DASH (Dietary Approaches to Stop Hypertension) diet was developed to lower blood pressure through diet modification.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 4, "question": "A plant-based diet is associated with reduced risk of:",
+      "options": ["Protein deficiency always", "Heart disease, type 2 diabetes, and certain cancers", "Vitamin B12 toxicity", "Excessive calorie intake only"],
+      "answer": "B", "explanation": "Well-planned plant-based diets are associated with reduced risk of chronic diseases including heart disease, diabetes, and certain cancers.", "points": 1
+    },
+    {
+      "moduleOrder": 9, "order": 5, "question": "Half of MyPlate should be filled with:",
+      "options": ["Grains and protein", "Fruits and vegetables", "Dairy and protein", "Grains only"],
+      "answer": "B", "explanation": "The USDA MyPlate recommends filling half your plate with fruits and vegetables at each meal.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 1, "question": "The best pre-workout meal should be consumed approximately how long before exercise?",
+      "options": ["Immediately before (5 minutes)", "30 minutes before only", "1–3 hours before exercise", "The day before only"],
+      "answer": "C", "explanation": "Consuming a mixed meal 1–3 hours before exercise allows adequate digestion and provides available energy without GI distress.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 2, "question": "Which nutrient is the most important to consume immediately after intense exercise?",
+      "options": ["Fat", "Fiber", "Protein and carbohydrates", "Vitamin C"],
+      "answer": "C", "explanation": "Post-exercise consumption of both protein (muscle repair) and carbohydrates (glycogen replenishment) optimizes recovery.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 3, "question": "Sports drinks are most appropriate for exercise lasting:",
+      "options": ["Under 20 minutes", "30–45 minutes at low intensity", "Longer than 60–90 minutes at moderate-to-high intensity", "All exercise regardless of duration"],
+      "answer": "C", "explanation": "Sports drinks provide electrolytes and carbohydrates that benefit performance during prolonged (60–90+ minutes) moderate-to-high intensity exercise.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 4, "question": "Protein supplements (shakes) are necessary for most high school athletes:",
+      "options": ["Yes — all athletes need them for muscle building", "No — most athletes can meet protein needs through whole food sources", "Only for football players", "Only after 5 years of training"],
+      "answer": "B", "explanation": "Most athletes can meet protein needs through whole foods; supplements may be convenient but are not necessary for high school athletes.", "points": 1
+    },
+    {
+      "moduleOrder": 10, "order": 5, "question": "Carbohydrate loading is most beneficial for athletes competing in:",
+      "options": ["100-meter sprint events", "Powerlifting competitions", "Events lasting 90+ minutes like marathons or soccer", "Short gymnastics routines"],
+      "answer": "C", "explanation": "Carbohydrate loading maximizes glycogen stores to delay fatigue, benefiting prolonged endurance events of 90+ minutes.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 1, "question": "The serving size on a nutrition facts label refers to:",
+      "options": ["The entire package contents", "The amount per serving suggested by the manufacturer", "The daily recommended intake", "The maximum safe amount"],
+      "answer": "B", "explanation": "Serving size on a nutrition label reflects the standardized amount per serving and is the basis for all nutritional information listed.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 2, "question": "A food labeled 'natural' must legally:",
+      "options": ["Be certified organic", "Contain no artificial colors or flavors", "Have very few specific requirements — it is not tightly regulated", "Be free of all preservatives"],
+      "answer": "C", "explanation": "The FDA does not have a strict legal definition for 'natural,' making it one of the most misleading marketing claims on food labels.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 3, "question": "The % Daily Value (%DV) on a nutrition label is based on a diet of how many calories?",
+      "options": ["1,500 calories", "2,000 calories", "2,500 calories", "3,000 calories"],
+      "answer": "B", "explanation": "The %DV on nutrition labels is calculated based on a reference diet of 2,000 calories per day.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 4, "question": "Ingredients on a food label are listed in order of:",
+      "options": ["Alphabetical order", "Nutritional importance", "Weight from most to least (predominant ingredient first)", "Caloric content from highest to lowest"],
+      "answer": "C", "explanation": "Ingredients are listed by weight, with the most abundant ingredient listed first, helping consumers assess the food's primary components.", "points": 1
+    },
+    {
+      "moduleOrder": 11, "order": 5, "question": "A %DV of 20% or more for sodium indicates:",
+      "options": ["A low-sodium food", "A moderate sodium food", "A high-sodium food", "No significant sodium content"],
+      "answer": "C", "explanation": "A %DV of 20% or more is considered HIGH for any nutrient; for sodium, this indicates a high-sodium food that should be limited.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 1, "question": "Anorexia nervosa is characterized by:",
+      "options": ["Binge eating followed by purging", "Severely restricting food intake due to intense fear of weight gain", "Uncontrolled binge eating without purging", "Food allergies"],
+      "answer": "B", "explanation": "Anorexia nervosa involves extreme food restriction driven by intense fear of gaining weight and distorted body image.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 2, "question": "Bulimia nervosa is characterized by:",
+      "options": ["Only restricting food intake", "Repeated binge-eating episodes followed by purging behaviors", "Binge eating without compensatory behaviors", "Avoiding specific food groups"],
+      "answer": "B", "explanation": "Bulimia involves cycles of binge eating followed by compensatory behaviors like purging (vomiting, laxatives) or excessive exercise.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 3, "question": "Binge Eating Disorder (BED) is different from bulimia because:",
+      "options": ["BED involves purging after binges", "BED involves recurrent binge episodes WITHOUT compensatory purging", "BED only affects males", "BED involves severe food restriction"],
+      "answer": "B", "explanation": "BED involves recurrent binge eating episodes accompanied by feelings of loss of control, without the purging behaviors seen in bulimia.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 4, "question": "Which of the following is a warning sign of an eating disorder in a peer?",
+      "options": ["Enjoying food at social events", "Sudden dramatic weight changes, avoiding meals, excessive exercise fixation", "Healthy body image discussions", "Normal hunger and eating patterns"],
+      "answer": "B", "explanation": "Warning signs include dramatic weight changes, food avoidance at social events, excessive exercise preoccupation, and distorted body image.", "points": 1
+    },
+    {
+      "moduleOrder": 12, "order": 5, "question": "The best first step if you are concerned about a friend with an eating disorder is:",
+      "options": ["Monitor their food intake without telling them", "Tell them they look fine and shouldn't worry", "Express caring concern privately and encourage them to seek professional help", "Post about it on social media"],
+      "answer": "C", "explanation": "Expressing genuine, non-judgmental concern privately and encouraging professional help is the most supportive and effective first step.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 1, "question": "During adolescence, increased calcium intake is important primarily for:",
+      "options": ["Improving endurance", "Supporting peak bone mass development", "Enhancing brain development", "Regulating blood pressure"],
+      "answer": "B", "explanation": "Adolescence is a critical window for building peak bone mass; adequate calcium and vitamin D intake during this period reduces osteoporosis risk.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 2, "question": "Iron needs are higher for adolescent girls than boys primarily because:",
+      "options": ["Girls are more physically active", "Girls experience menstrual blood loss", "Girls digest protein less efficiently", "Girls have larger muscle mass"],
+      "answer": "B", "explanation": "Menstrual blood loss increases iron needs in adolescent girls; inadequate intake can lead to iron-deficiency anemia.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 3, "question": "Older adults often need more of which nutrient to support bone health?",
+      "options": ["Sodium", "Sugar", "Calcium and Vitamin D", "Trans fats"],
+      "answer": "C", "explanation": "Older adults need higher calcium and vitamin D intake to compensate for decreased absorption efficiency and bone density loss with aging.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 4, "question": "Pregnancy increases the need for which nutrient to prevent neural tube defects?",
+      "options": ["Vitamin A in excess", "Folate (folic acid)", "Sodium", "Trans fats"],
+      "answer": "B", "explanation": "Folate (folic acid) is critical early in pregnancy to prevent neural tube defects; pregnant women need at least 600 mcg daily.", "points": 1
+    },
+    {
+      "moduleOrder": 13, "order": 5, "question": "Caloric needs generally decrease in older adulthood because:",
+      "options": ["Older adults eat faster", "Basal metabolic rate decreases with reduced muscle mass", "Vitamin absorption improves with age", "Older adults exercise more than young adults"],
+      "answer": "B", "explanation": "Aging is associated with reduced muscle mass (sarcopenia) and decreased physical activity, lowering overall caloric requirements.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 1, "question": "Which sector of the food system is responsible for producing raw agricultural products?",
+      "options": ["Food retail", "Food service", "Food production (farming/agriculture)", "Food policy"],
+      "answer": "C", "explanation": "Food production refers to farming and agriculture — growing crops, raising livestock, and producing the raw materials of the food supply.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 2, "question": "Food waste contributes to environmental problems primarily by:",
+      "options": ["Reducing supermarket profits", "Generating greenhouse gas emissions in landfills and wasting resources used in production", "Decreasing food prices globally", "Improving soil quality"],
+      "answer": "B", "explanation": "Food decomposing in landfills produces methane (a potent greenhouse gas), while all the water, land, and energy used to produce wasted food is also lost.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 3, "question": "Which dietary choice generally has the smallest environmental footprint?",
+      "options": ["High consumption of beef and lamb", "Eating primarily plant-based foods", "Daily consumption of highly processed foods", "Importing exotic fruits year-round"],
+      "answer": "B", "explanation": "Plant-based foods generally require less land, water, and energy to produce and generate fewer greenhouse gas emissions than animal-based foods.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 4, "question": "Food insecurity means:",
+      "options": ["Having too many food choices", "Lack of consistent access to enough food for an active, healthy life", "Poor food safety practices at home", "Eating only processed foods"],
+      "answer": "B", "explanation": "Food insecurity is the state of being without reliable access to sufficient amounts of affordable, nutritious food.", "points": 1
+    },
+    {
+      "moduleOrder": 14, "order": 5, "question": "Choosing locally grown, seasonal foods is a sustainable practice because it:",
+      "options": ["Always costs more money", "Reduces transportation emissions and supports local economies", "Has no effect on food quality", "Is only possible in summer months"],
+      "answer": "B", "explanation": "Local, seasonal foods reduce the carbon footprint of transportation, support regional farmers, and are often fresher and more nutritious.", "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm", "order": 1, "type": "mc",
+      "question": "Which of the six nutrient classes provides 9 calories per gram?",
+      "options": ["Carbohydrates", "Protein", "Fat", "Vitamins"],
+      "answer": "C", "explanation": "Fat provides 9 calories per gram — more than twice the energy density of carbohydrates or protein (4 cal/g each).", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 2, "type": "mc",
+      "question": "The glycemic index of a food indicates:",
+      "options": ["Its total carbohydrate content", "How rapidly it raises blood glucose levels", "Its fiber content", "Its caloric density"],
+      "answer": "B", "explanation": "The glycemic index measures how quickly a food raises blood sugar; high-GI foods cause rapid spikes.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 3, "type": "mc",
+      "question": "Complete proteins contain:",
+      "options": ["Only animal sources of nitrogen", "All nine essential amino acids in adequate amounts", "More calories than incomplete proteins", "No essential amino acids"],
+      "answer": "B", "explanation": "Complete proteins supply all nine essential amino acids the body cannot make on its own.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 4, "type": "mc",
+      "question": "Trans fats are especially harmful because they:",
+      "options": ["Provide too much fiber", "Raise LDL and lower HDL cholesterol simultaneously", "Are found only in vegetables", "Only affect digestive health"],
+      "answer": "B", "explanation": "Trans fats have a dual negative effect: raising LDL (bad) cholesterol while lowering HDL (good) cholesterol, increasing heart disease risk.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 5, "type": "mc",
+      "question": "Which vitamins are fat-soluble?",
+      "options": ["B vitamins and C", "A, D, E, and K", "C and D only", "All vitamins"],
+      "answer": "B", "explanation": "Vitamins A, D, E, and K are fat-soluble, requiring dietary fat for absorption and stored in body fat.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 6, "type": "mc",
+      "question": "Iron deficiency primarily causes:",
+      "options": ["Osteoporosis", "Night blindness", "Iron-deficiency anemia", "Rickets"],
+      "answer": "C", "explanation": "Iron deficiency reduces hemoglobin production, resulting in iron-deficiency anemia with fatigue, pallor, and reduced oxygen transport.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 7, "type": "mc",
+      "question": "Which is an early sign of dehydration?",
+      "options": ["Bright clear urine", "Dark yellow urine and thirst", "Weight gain", "Increased energy levels"],
+      "answer": "B", "explanation": "Dark yellow urine and thirst are among the earliest detectable signs of mild dehydration.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 8, "type": "mc",
+      "question": "Energy balance occurs when:",
+      "options": ["Calories consumed exceed calories burned", "Calories consumed are less than calories burned", "Calories consumed equal calories burned", "Only exercise determines energy balance"],
+      "answer": "C", "explanation": "Energy balance means caloric intake equals caloric expenditure, resulting in weight maintenance over time.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 9, "type": "mc",
+      "question": "The 2020–2025 Dietary Guidelines limit added sugars to less than:",
+      "options": ["5% of daily calories", "10% of daily calories", "25% of daily calories", "No specific limit"],
+      "answer": "B", "explanation": "The Dietary Guidelines for Americans recommend consuming less than 10% of daily calories from added sugars.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 10, "type": "mc",
+      "question": "Sports drinks are most appropriate for exercise lasting:",
+      "options": ["Less than 20 minutes", "30–45 minutes", "60–90+ minutes at moderate-to-high intensity", "All forms of light walking"],
+      "answer": "C", "explanation": "Sports drinks with electrolytes and carbohydrates become beneficial during sustained moderate-to-high intensity exercise lasting 60–90+ minutes.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 11, "type": "mc",
+      "question": "Omega-3 fatty acids are primarily known for supporting:",
+      "options": ["Bone density", "Heart health, brain function, and reducing inflammation", "Rapid weight gain", "Blood sugar stabilization only"],
+      "answer": "B", "explanation": "Omega-3 fatty acids (EPA and DHA) reduce inflammation and support cardiovascular health and brain function.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 12, "type": "mc",
+      "question": "Which food contains a complete protein?",
+      "options": ["White rice", "Black beans", "Whole eggs", "Wheat bread"],
+      "answer": "C", "explanation": "Eggs are a complete protein containing all nine essential amino acids in adequate amounts.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 13, "type": "mc",
+      "question": "Dietary fiber's primary health benefit is:",
+      "options": ["Providing quick energy", "Supporting digestive health, satiety, and blood sugar regulation", "Building muscle tissue", "Transporting vitamins"],
+      "answer": "B", "explanation": "Dietary fiber promotes healthy digestion, reduces cholesterol absorption, supports blood sugar control, and increases satiety.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 14, "type": "mc",
+      "question": "The recommended daily fluid intake for active teenagers is approximately:",
+      "options": ["Less than 1 liter", "1–2 liters only", "2–3+ liters depending on activity and climate", "No more than 1 glass"],
+      "answer": "C", "explanation": "Active teenagers generally need 2–3+ liters of fluid daily, with additional amounts needed during exercise and in hot weather.", "points": 1
+    },
+    {
+      "examType": "midterm", "order": 15, "type": "mc",
+      "question": "Calcium is most important during adolescence for:",
+      "options": ["Reducing iron deficiency", "Building peak bone mass for lifelong bone health", "Improving cardiovascular endurance", "Increasing muscle protein synthesis"],
+      "answer": "B", "explanation": "Adolescence is the critical window for peak bone mass development; adequate calcium intake during this period reduces lifelong osteoporosis risk.", "points": 1
+    },
+    {
+      "examType": "final", "order": 1, "type": "mc",
+      "question": "Which MyPlate recommendation helps most with chronic disease prevention?",
+      "options": ["Fill half your plate with grains", "Fill half your plate with fruits and vegetables", "Make dairy the largest portion", "Prioritize protein over all other groups"],
+      "answer": "B", "explanation": "The MyPlate recommendation to fill half the plate with fruits and vegetables is most strongly associated with chronic disease prevention.", "points": 1
+    },
+    {
+      "examType": "final", "order": 2, "type": "mc",
+      "question": "Anorexia nervosa is primarily characterized by:",
+      "options": ["Binge eating and purging", "Severe food restriction and intense fear of weight gain", "Uncontrolled eating without guilt", "Excessive intake of specific foods"],
+      "answer": "B", "explanation": "Anorexia involves extreme caloric restriction, distorted body image, and intense fear of gaining weight.", "points": 1
+    },
+    {
+      "examType": "final", "order": 3, "type": "mc",
+      "question": "Older adults' caloric needs decrease with age primarily because:",
+      "options": ["They sleep more", "Basal metabolic rate declines with reduced muscle mass", "Vitamin absorption increases with age", "They become more physically active"],
+      "answer": "B", "explanation": "Age-related muscle loss (sarcopenia) and reduced physical activity lower overall energy requirements in older adults.", "points": 1
+    },
+    {
+      "examType": "final", "order": 4, "type": "mc",
+      "question": "Food waste in landfills contributes to climate change by producing:",
+      "options": ["Nitrogen gas", "Methane, a potent greenhouse gas", "Pure carbon dioxide only", "Beneficial fertilizer gases"],
+      "answer": "B", "explanation": "Organic food decomposing in landfills produces methane, a greenhouse gas approximately 25 times more potent than CO2 over a century.", "points": 1
+    },
+    {
+      "examType": "final", "order": 5, "type": "mc",
+      "question": "The DASH diet was designed to reduce:",
+      "options": ["Cholesterol levels only", "Blood pressure (hypertension)", "Blood sugar in diabetes", "Risk of osteoporosis"],
+      "answer": "B", "explanation": "The DASH diet (Dietary Approaches to Stop Hypertension) was specifically developed to lower elevated blood pressure.", "points": 1
+    },
+    {
+      "examType": "final", "order": 6, "type": "mc",
+      "question": "Which nutrient is uniquely produced by the body through sunlight exposure?",
+      "options": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+      "answer": "C", "explanation": "Vitamin D is synthesized in the skin when exposed to ultraviolet B (UVB) radiation from sunlight.", "points": 1
+    },
+    {
+      "examType": "final", "order": 7, "type": "mc",
+      "question": "Post-workout nutrition should emphasize which two nutrients?",
+      "options": ["Fat and fiber", "Protein and carbohydrates", "Vitamins and minerals only", "Sodium and potassium only"],
+      "answer": "B", "explanation": "Post-exercise recovery is optimized by consuming protein for muscle repair and carbohydrates for glycogen replenishment.", "points": 1
+    },
+    {
+      "examType": "final", "order": 8, "type": "mc",
+      "question": "Which statement best describes food insecurity?",
+      "options": ["Having too many food choices", "Lack of consistent access to sufficient, affordable, nutritious food", "Unhealthy food preferences", "Overeating regularly"],
+      "answer": "B", "explanation": "Food insecurity refers to the limited or uncertain availability of nutritionally adequate and safe food.", "points": 1
+    },
+    {
+      "examType": "final", "order": 9, "type": "mc",
+      "question": "The percent Daily Value (%DV) on a food label is based on a daily intake of:",
+      "options": ["1,500 calories", "2,000 calories", "2,500 calories", "3,000 calories"],
+      "answer": "B", "explanation": "All %DV calculations on nutrition labels are based on a reference diet of 2,000 calories per day.", "points": 1
+    },
+    {
+      "examType": "final", "order": 10, "type": "mc",
+      "question": "Carbohydrate loading benefits athletes competing in events lasting:",
+      "options": ["Under 30 minutes", "30–60 minutes", "90+ minutes", "All sports equally"],
+      "answer": "C", "explanation": "Carbohydrate loading maximizes muscle glycogen stores, delaying fatigue in endurance events lasting 90 minutes or more.", "points": 1
+    },
+    {
+      "examType": "final", "order": 11, "type": "mc",
+      "question": "Folate (folic acid) is especially important during pregnancy to prevent:",
+      "options": ["Calcium deficiency", "Neural tube defects", "Iron toxicity", "Vitamin D excess"],
+      "answer": "B", "explanation": "Folate is essential for proper neural tube development in early pregnancy; deficiency is linked to spina bifida and anencephaly.", "points": 1
+    },
+    {
+      "examType": "final", "order": 12, "type": "mc",
+      "question": "Ingredients on a food label are listed in order of:",
+      "options": ["Caloric content", "Weight from most to least abundant", "Nutritional value", "Alphabetical order"],
+      "answer": "B", "explanation": "Food ingredients are listed by weight from the most to least abundant ingredient in the product.", "points": 1
+    },
+    {
+      "examType": "final", "order": 13, "type": "mc",
+      "question": "Choosing locally grown, seasonal produce supports sustainability by:",
+      "options": ["Making all foods more expensive", "Reducing transportation emissions and supporting local farmers", "Eliminating food safety regulations", "Requiring more packaging"],
+      "answer": "B", "explanation": "Local seasonal foods reduce the carbon footprint from transportation and storage while supporting regional agricultural economies.", "points": 1
+    },
+    {
+      "examType": "final", "order": 14, "type": "mc",
+      "question": "Binge Eating Disorder differs from bulimia because BED:",
+      "options": ["Involves only restriction", "Has no binge episodes", "Involves binges without compensatory purging behaviors", "Only affects underweight individuals"],
+      "answer": "C", "explanation": "BED involves recurrent binge eating episodes without purging behaviors, distinguishing it from bulimia nervosa.", "points": 1
+    },
+    {
+      "examType": "final", "order": 15, "type": "mc",
+      "question": "The Mediterranean diet's heart health benefits are largely attributed to:",
+      "options": ["High saturated fat from red meat", "High fruit, vegetable, whole grain, legume, and olive oil intake", "High sugar and processed food consumption", "Minimal fiber intake"],
+      "answer": "B", "explanation": "The Mediterranean diet's cardiovascular benefits come from its high intake of anti-inflammatory plant foods and heart-healthy fats like olive oil.", "points": 1
+    },
+    {
+      "examType": "final", "order": 16, "type": "mc",
+      "question": "Which macronutrient has the highest caloric density?",
+      "options": ["Carbohydrates (4 cal/g)", "Protein (4 cal/g)", "Fat (9 cal/g)", "Fiber (2 cal/g)"],
+      "answer": "C", "explanation": "Fat provides 9 calories per gram, the highest energy density of any macronutrient.", "points": 1
+    },
+    {
+      "examType": "final", "order": 17, "type": "mc",
+      "question": "Vitamin C deficiency leads to:",
+      "options": ["Rickets", "Scurvy", "Pellagra", "Beriberi"],
+      "answer": "B", "explanation": "Scurvy is caused by vitamin C deficiency, leading to collagen breakdown, bleeding gums, and impaired wound healing.", "points": 1
+    },
+    {
+      "examType": "final", "order": 18, "type": "mc",
+      "question": "Which dietary pattern has the smallest environmental carbon footprint?",
+      "options": ["High beef and lamb consumption", "Mostly plant-based foods", "High processed food consumption", "Daily exotic imported fruits"],
+      "answer": "B", "explanation": "Plant-based foods require significantly less land, water, and energy and produce fewer greenhouse gas emissions than animal products.", "points": 1
+    },
+    {
+      "examType": "final", "order": 19, "type": "mc",
+      "question": "Basal Metabolic Rate (BMR) represents:",
+      "options": ["Calories burned during vigorous exercise", "Calories burned at rest to maintain vital body functions", "Total daily energy needs including all activity", "Caloric intake from a typical meal"],
+      "answer": "B", "explanation": "BMR is the minimum energy the body needs at complete rest to sustain vital functions like breathing, circulation, and thermoregulation.", "points": 1
+    },
+    {
+      "examType": "final", "order": 20, "type": "mc",
+      "question": "Sodium's excessive intake is most associated with increased risk of:",
+      "options": ["Osteoporosis", "Vitamin deficiency", "High blood pressure and cardiovascular disease", "Muscle cramps only"],
+      "answer": "C", "explanation": "Excessive sodium intake elevates blood pressure (hypertension), a major risk factor for heart disease, stroke, and kidney disease.", "points": 1
+    }
+  ]
+}

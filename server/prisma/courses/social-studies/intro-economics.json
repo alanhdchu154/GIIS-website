@@ -1,0 +1,1220 @@
+{
+  "slug": "intro-economics",
+  "name": "Introduction to Economics",
+  "nameZh": "经济学导论",
+  "credits": 0.5,
+  "department": "Social Studies",
+  "type": "Core",
+  "description": "An accessible introduction to fundamental economic principles covering scarcity, supply and demand, market structures, national income, and the roles of money and government in the economy.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Scarcity & Economic Thinking",
+      "titleZh": "稀缺性与经济思维",
+      "objectives": "Define scarcity and explain why it is the central economic problem; distinguish between wants and needs; explain opportunity cost and the role of trade-offs in economic decision-making.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/1-1-what-is-economics-and-why-is-it-important",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 1 — What Is Economics?",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/basic-economic-concepts/introduction-to-economics/v/introduction-to-economics",
+      "videoNote": "Khan Academy — Introduction to Economics",
+      "video2Url": "https://www.youtube.com/watch?v=IbBOjEjxPUI",
+      "video2Note": "YouTube — Scarcity, Choice, and Opportunity Cost",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/basic-economic-concepts/introduction-to-economics/e/introduction-to-economics",
+      "practiceNote": "Khan Academy — Introduction to Economics Practice",
+      "assignment": "List three personal decisions you made this week and identify the opportunity cost of each; explain how scarcity forced you to make a trade-off in each case.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 2,
+      "title": "Supply & Demand Basics",
+      "titleZh": "供求基础",
+      "objectives": "State the law of demand and the law of supply; list the determinants of supply and demand; draw supply and demand curves and identify factors that shift each curve.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 3 — Demand, Supply, and Equilibrium",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/supply-demand-equilibrium/demand-curve-tutorial/v/demand-curve-as-marginal-benefit-curve",
+      "videoNote": "Khan Academy — Supply and Demand",
+      "video2Url": "https://www.youtube.com/watch?v=KZNsrBGLkQ8",
+      "video2Note": "YouTube — Supply and Demand: How Markets Work",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/supply-demand-equilibrium/demand-curve-tutorial/e/demand-and-supply",
+      "practiceNote": "Khan Academy — Demand and Supply Practice",
+      "assignment": "Draw a supply curve and a demand curve for a product of your choice; label equilibrium price and quantity, then show and explain the effect of one shift in supply and one shift in demand.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 3,
+      "title": "Market Equilibrium & Price",
+      "titleZh": "市场均衡与价格",
+      "objectives": "Identify market equilibrium as the price where quantity supplied equals quantity demanded; predict the effects of supply and demand shifts on equilibrium price and quantity; explain surpluses and shortages.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/3-3-changes-in-equilibrium-price-and-quantity-the-four-step-process",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 3.3 — Changes in Equilibrium",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/supply-demand-equilibrium/market-equilibrium-tutorial/v/market-equilibrium",
+      "videoNote": "Khan Academy — Market Equilibrium",
+      "video2Url": "https://www.youtube.com/watch?v=oaXSREhJYQ8",
+      "video2Note": "YouTube — Surpluses and Shortages Explained",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/supply-demand-equilibrium/market-equilibrium-tutorial/e/market-equilibrium",
+      "practiceNote": "Khan Academy — Market Equilibrium Practice",
+      "assignment": "Using a supply-demand diagram, predict and illustrate what happens to equilibrium price and quantity when consumer incomes rise for a normal good and input costs rise simultaneously.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 4,
+      "title": "Elasticity",
+      "titleZh": "弹性",
+      "objectives": "Define and calculate price elasticity of demand and supply; distinguish elastic from inelastic demand; explain how elasticity affects total revenue and the impact of taxes.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 5 — Elasticity",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/elasticity-ap/price-elasticity-of-demand-ap/v/price-elasticity-of-demand",
+      "videoNote": "Khan Academy — Price Elasticity of Demand",
+      "video2Url": "https://www.youtube.com/watch?v=_ObYCHbHWDE",
+      "video2Note": "YouTube — Elasticity and Total Revenue",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/elasticity-ap/price-elasticity-of-demand-ap/e/price-elasticity-of-demand",
+      "practiceNote": "Khan Academy — Price Elasticity Practice",
+      "assignment": "Given quantity and price data, calculate the price elasticity of demand using the midpoint method; determine whether the good is elastic or inelastic and what a price increase would do to total revenue.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 5,
+      "title": "Consumer Choice & Utility",
+      "titleZh": "消费者选择与效用",
+      "objectives": "Define utility and marginal utility; apply the law of diminishing marginal utility; explain how consumers maximize utility by allocating spending across goods.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/6-1-consumption-choices",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 6.1 — Consumption Choices",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-consumer-producer-surplus/ap-demand-curve-tutorial/v/marginal-utility",
+      "videoNote": "Khan Academy — Marginal Utility",
+      "video2Url": "https://www.youtube.com/watch?v=Kf9KhwryQNE",
+      "video2Note": "YouTube — Utility Maximization Explained",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-consumer-producer-surplus/ap-demand-curve-tutorial/e/marginal-utility",
+      "practiceNote": "Khan Academy — Marginal Utility Practice",
+      "assignment": "Complete a utility table for consuming different quantities of a snack; calculate marginal utility and identify the point of diminishing returns; determine how you would allocate $10 between two goods to maximize total utility.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 6,
+      "title": "Production & Costs",
+      "titleZh": "生产与成本",
+      "objectives": "Distinguish fixed from variable costs and short-run from long-run production; calculate total cost, average total cost, and marginal cost; explain the relationship between production and costs.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/7-2-production-in-the-short-run",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 7 — Cost and Industry Structure",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/production-cost-and-the-perfect-competition-model/production-and-costs/v/fixed-and-variable-costs",
+      "videoNote": "Khan Academy — Fixed and Variable Costs",
+      "video2Url": "https://www.youtube.com/watch?v=k3eqm1M5D7Q",
+      "video2Note": "YouTube — Average and Marginal Costs Explained",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/production-cost-and-the-perfect-competition-model/production-and-costs/e/production-and-costs",
+      "practiceNote": "Khan Academy — Production and Costs Practice",
+      "assignment": "Given a table of output and variable costs with fixed costs of $200, calculate total cost, average total cost, average variable cost, and marginal cost for each output level; graph ATC and MC.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 7,
+      "title": "Types of Market Structures",
+      "titleZh": "市场结构类型",
+      "objectives": "Identify and compare the four main market structures — perfect competition, monopolistic competition, oligopoly, and monopoly — using characteristics such as number of sellers, product type, and barriers to entry.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/8-1-perfect-competition-and-why-it-matters",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 8–10 — Market Structures",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/imperfect-competition/monopoly-tutorial/v/monopoly-basics",
+      "videoNote": "Khan Academy — Market Structures Overview",
+      "video2Url": "https://www.youtube.com/watch?v=8bXKONm2-xc",
+      "video2Note": "YouTube — Four Market Structures Compared",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/production-cost-and-the-perfect-competition-model/perfect-competition/e/perfect-competition",
+      "practiceNote": "Khan Academy — Market Structures Practice",
+      "assignment": "Create a comparison chart of all four market structures across at least six characteristics; identify a real-world example of each market structure and justify your classification.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 8,
+      "title": "Labor Markets",
+      "titleZh": "劳动力市场",
+      "objectives": "Explain how wages are determined by supply and demand in labor markets; analyze the effects of minimum wage laws; describe the role of unions and human capital in wage differences.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/14-1-the-theory-of-labor-markets",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 14 — Labor Markets",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/factor-markets/labor-market-ap/v/labor-market",
+      "videoNote": "Khan Academy — Labor Markets",
+      "video2Url": "https://www.youtube.com/watch?v=QlvRaOWUdOo",
+      "video2Note": "YouTube — Minimum Wage: Effects on Employment",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/factor-markets/labor-market-ap/e/labor-market",
+      "practiceNote": "Khan Academy — Labor Market Practice",
+      "assignment": "Draw a labor market diagram showing equilibrium wage and employment; add a minimum wage set above equilibrium and show the resulting surplus of labor (unemployment).",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 9,
+      "title": "National Income & GDP",
+      "titleZh": "国民收入与GDP",
+      "objectives": "Define GDP and explain its importance as an economic indicator; calculate GDP using the expenditure approach; distinguish between GDP and GNP; understand limitations of GDP as a welfare measure.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/19-1-measuring-the-size-of-the-economy-gross-domestic-product",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 19 — Measuring GDP",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/gdp-tutorial/v/gdp-and-the-circular-flow-of-income",
+      "videoNote": "Khan Academy — GDP Overview",
+      "video2Url": "https://www.youtube.com/watch?v=yKnJxpEV1D8",
+      "video2Note": "YouTube — What Is GDP and Why Does It Matter?",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/gdp-tutorial/e/calculating-gdp",
+      "practiceNote": "Khan Academy — Calculating GDP Practice",
+      "assignment": "Using a provided set of national data (consumption, investment, government spending, exports, imports), calculate GDP using the expenditure approach; explain one reason GDP might overstate and one reason it might understate actual wellbeing.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 10,
+      "title": "Unemployment",
+      "titleZh": "失业",
+      "objectives": "Define unemployment and explain how the unemployment rate is calculated; distinguish frictional, structural, cyclical, and seasonal unemployment; understand the concept of the natural rate of unemployment.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/21-1-how-the-unemployment-rate-is-defined-and-computed",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 21 — Unemployment",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/economic-indicators-and-the-business-cycle/unemployment-tutorial/v/unemployment-rate-primer",
+      "videoNote": "Khan Academy — Unemployment Rate",
+      "video2Url": "https://www.youtube.com/watch?v=J7NWhiLMaFg",
+      "video2Note": "YouTube — Types of Unemployment Explained",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/economic-indicators-and-the-business-cycle/unemployment-tutorial/e/unemployment",
+      "practiceNote": "Khan Academy — Unemployment Practice",
+      "assignment": "Given data on the population, labor force, and number unemployed, calculate the unemployment rate and labor force participation rate; categorize five given scenarios as frictional, structural, or cyclical unemployment.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 11,
+      "title": "Inflation & Price Level",
+      "titleZh": "通货膨胀与价格水平",
+      "objectives": "Define inflation and explain how the Consumer Price Index (CPI) measures it; distinguish demand-pull from cost-push inflation; analyze the effects of inflation on consumers, savers, and debtors.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/22-1-tracking-inflation",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 22 — Inflation",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/economic-indicators-and-the-business-cycle/inflation-tutorial/v/inflation-overview",
+      "videoNote": "Khan Academy — Inflation Overview",
+      "video2Url": "https://www.youtube.com/watch?v=OPKfAYCVA_s",
+      "video2Note": "YouTube — CPI and Measuring Inflation",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/economic-indicators-and-the-business-cycle/inflation-tutorial/e/inflation",
+      "practiceNote": "Khan Academy — Inflation Practice",
+      "assignment": "Using a simple market basket of three goods with prices in two years, calculate the CPI and the inflation rate; identify one winner and one loser from unexpected inflation and explain why.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 12,
+      "title": "Money, Banking & the Fed",
+      "titleZh": "货币、银行业与美联储",
+      "objectives": "Define money and its three functions; explain how banks create money through the deposit-expansion process; describe the Federal Reserve's structure and its three main monetary policy tools.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/27-1-defining-money-by-its-functions",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 27–28 — Money and the Federal Reserve",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/monetary-system-topic/monetary-policy-tutorial/v/the-federal-reserve",
+      "videoNote": "Khan Academy — Money and the Federal Reserve",
+      "video2Url": "https://www.youtube.com/watch?v=GsQAaQFBHM4",
+      "video2Note": "YouTube — How Banks Create Money",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/monetary-system-topic/monetary-policy-tutorial/e/monetary-policy",
+      "practiceNote": "Khan Academy — Monetary Policy Practice",
+      "assignment": "Explain the three functions of money using examples; trace how a $1,000 deposit with a 10% reserve requirement creates money through the banking system and calculate the maximum expansion.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 13,
+      "title": "Government's Role in the Economy",
+      "titleZh": "政府在经济中的作用",
+      "objectives": "Describe the government's roles as provider, regulator, and stabilizer; understand fiscal policy tools; analyze the trade-offs of government intervention including taxes, spending, and redistribution.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/30-1-the-annual-federal-budget",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 30 — Government Budgets and Fiscal Policy",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/aggregate-supply-demand-topic/fiscal-policy/v/fiscal-policy-and-stimulus",
+      "videoNote": "Khan Academy — Fiscal Policy",
+      "video2Url": "https://www.youtube.com/watch?v=3u4_FpHNqSM",
+      "video2Note": "YouTube — The Role of Government in a Market Economy",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/aggregate-supply-demand-topic/fiscal-policy/e/fiscal-policy",
+      "practiceNote": "Khan Academy — Fiscal Policy Practice",
+      "assignment": "Research the current US federal budget: identify the three largest spending categories and the main sources of revenue; write a paragraph arguing whether the government's current level of involvement in the economy is appropriate.",
+      "estimatedHrs": 2.5
+    },
+    {
+      "order": 14,
+      "title": "International Trade & Globalization",
+      "titleZh": "国际贸易与全球化",
+      "objectives": "Explain comparative advantage and the gains from trade; describe common trade barriers (tariffs, quotas); identify winners and losers from international trade; evaluate the pros and cons of globalization.",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/33-1-absolute-and-comparative-advantage",
+      "readingNote": "OpenStax Principles of Economics 2e Ch 33 — International Trade",
+      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/forex-trade-topic/trade-and-specialization-tutorial/v/comparative-advantage-specialization-and-gains-from-trade",
+      "videoNote": "Khan Academy — International Trade and Comparative Advantage",
+      "video2Url": "https://www.youtube.com/watch?v=NI9TLDIPVcs",
+      "video2Note": "YouTube — Globalization: Winners and Losers",
+      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/forex-trade-topic/trade-and-specialization-tutorial/e/comparative-advantage-and-gains-from-trade",
+      "practiceNote": "Khan Academy — Comparative Advantage Practice",
+      "assignment": "Given simple production data for two countries, calculate comparative advantage and determine a mutually beneficial trade; list two arguments for and two arguments against free trade.",
+      "estimatedHrs": 2.5
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Scarcity in economics means that:",
+      "options": ["All goods are very expensive", "Resources are limited relative to unlimited wants", "Only poor people face trade-offs", "The government controls all resources"],
+      "answer": "Resources are limited relative to unlimited wants",
+      "explanation": "Scarcity is the fundamental economic problem: human wants are unlimited while the resources to satisfy them are finite, forcing individuals and societies to make choices.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Opportunity cost is best defined as:",
+      "options": ["The monetary price of a good", "The value of the next best alternative foregone", "The cost of producing one additional unit", "The total cost of all resources used"],
+      "answer": "The value of the next best alternative foregone",
+      "explanation": "Opportunity cost is the value of what you give up when you make a choice — the best alternative you did not choose.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "The production possibilities frontier (PPF) illustrates:",
+      "options": ["How firms maximize profit", "The maximum combinations of two goods a society can produce given resources", "How consumers choose between goods", "The relationship between supply and demand"],
+      "answer": "The maximum combinations of two goods a society can produce given resources",
+      "explanation": "The PPF shows the trade-off between producing two goods when all resources are used efficiently; points on the curve are efficient, inside are inefficient, outside are unattainable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "If you choose to study instead of watching a movie, the opportunity cost of studying is:",
+      "options": ["The cost of textbooks", "The enjoyment you would have gotten from the movie", "The grade you receive on the exam", "The tuition you pay for the course"],
+      "answer": "The enjoyment you would have gotten from the movie",
+      "explanation": "The opportunity cost is the value of the best alternative foregone — in this case, the enjoyment of the movie you did not watch.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Economics is best described as the study of:",
+      "options": ["How governments control markets", "How people make choices under scarcity", "How to make money in the stock market", "How to eliminate poverty"],
+      "answer": "How people make choices under scarcity",
+      "explanation": "Economics studies how individuals, businesses, and governments make decisions to allocate limited resources to satisfy unlimited wants.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "The law of demand states that, all else equal:",
+      "options": ["As price rises, quantity demanded rises", "As price falls, quantity demanded falls", "As price rises, quantity demanded falls", "Price and demand are unrelated"],
+      "answer": "As price rises, quantity demanded falls",
+      "explanation": "The law of demand reflects the inverse relationship between price and quantity demanded — consumers buy less of a good as its price increases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Which of the following would SHIFT the demand curve for pizza to the RIGHT?",
+      "options": ["A decrease in the price of pizza", "An increase in consumer income (pizza is a normal good)", "An increase in the price of a pizza ingredient", "A decrease in the number of pizza restaurants"],
+      "answer": "An increase in consumer income (pizza is a normal good)",
+      "explanation": "Higher income increases demand for normal goods, shifting the demand curve right (more demanded at every price). A price change causes movement along the curve, not a shift.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "The law of supply states that, all else equal:",
+      "options": ["As price rises, quantity supplied falls", "As price falls, quantity supplied rises", "As price rises, quantity supplied rises", "Supply is not affected by price"],
+      "answer": "As price rises, quantity supplied rises",
+      "explanation": "Producers are willing to supply more of a good at higher prices because higher prices make production more profitable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "If the price of steel (an input) rises, what happens to the supply of cars?",
+      "options": ["Supply increases (shifts right)", "Supply decreases (shifts left)", "Supply is unchanged", "Demand for cars increases"],
+      "answer": "Supply decreases (shifts left)",
+      "explanation": "Higher input costs increase production costs, making it less profitable to produce cars at any given price, decreasing supply.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "A complement to coffee is:",
+      "options": ["Tea", "A substitute good", "Coffee creamer", "Decaf coffee"],
+      "answer": "Coffee creamer",
+      "explanation": "Complements are goods typically consumed together. Coffee and creamer are complements; if the price of coffee rises, demand for creamer falls.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Market equilibrium occurs when:",
+      "options": ["The government sets a fair price", "Quantity supplied equals quantity demanded", "Producers maximize profit", "Consumers spend all their income"],
+      "answer": "Quantity supplied equals quantity demanded",
+      "explanation": "Equilibrium is the price at which the market 'clears' — the amount sellers want to sell exactly equals the amount buyers want to buy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "A surplus in a market means:",
+      "options": ["Quantity demanded exceeds quantity supplied at the current price", "Quantity supplied exceeds quantity demanded at the current price", "The market is in equilibrium", "Prices are too low"],
+      "answer": "Quantity supplied exceeds quantity demanded at the current price",
+      "explanation": "A surplus (excess supply) occurs when the price is above equilibrium — producers want to sell more than buyers want to buy, putting downward pressure on price.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "If both supply and demand increase simultaneously, what definitely happens to equilibrium quantity?",
+      "options": ["It falls", "It rises", "It stays the same", "It depends on the size of each shift"],
+      "answer": "It rises",
+      "explanation": "Both a supply increase and a demand increase put upward pressure on quantity. Equilibrium quantity definitely rises; the effect on price is ambiguous.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "A price floor set above equilibrium will create:",
+      "options": ["A shortage", "A surplus", "Higher consumer spending", "Lower producer profits"],
+      "answer": "A surplus",
+      "explanation": "A price floor above equilibrium (e.g., minimum wage) keeps prices artificially high, so quantity supplied exceeds quantity demanded — a surplus.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "When demand increases and supply remains unchanged, equilibrium price will:",
+      "options": ["Fall", "Rise", "Stay the same", "Be indeterminate"],
+      "answer": "Rise",
+      "explanation": "An increase in demand (rightward shift) with unchanged supply creates excess demand at the old price, pushing the equilibrium price upward.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "If a 10% rise in price leads to a 20% fall in quantity demanded, price elasticity of demand is:",
+      "options": ["0.5 — inelastic", "1.0 — unit elastic", "2.0 — elastic", "0.2 — inelastic"],
+      "answer": "2.0 — elastic",
+      "explanation": "PED = % change in Qd / % change in P = 20% / 10% = 2.0. Since PED > 1, demand is elastic — consumers are very responsive to price changes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Goods with few substitutes tend to have:",
+      "options": ["Elastic demand", "Inelastic demand", "Perfectly elastic demand", "Unit elastic demand"],
+      "answer": "Inelastic demand",
+      "explanation": "With few substitutes, consumers cannot easily switch away when price rises, making demand less responsive to price — inelastic demand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "If demand is inelastic and price rises, total revenue will:",
+      "options": ["Decrease", "Increase", "Stay the same", "First rise then fall"],
+      "answer": "Increase",
+      "explanation": "With inelastic demand, the percentage decrease in quantity demanded is smaller than the percentage price increase, so price × quantity (total revenue) rises.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Which of the following goods is likely to have the MOST elastic demand?",
+      "options": ["Insulin for diabetics", "A specific luxury sports car brand", "Gasoline", "Salt"],
+      "answer": "A specific luxury sports car brand",
+      "explanation": "Luxury goods with many substitutes (other car brands or models) tend to have elastic demand — a price increase causes a large drop in quantity demanded.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Cross-price elasticity of demand measures:",
+      "options": ["How quantity demanded of one good responds to a change in income", "How quantity demanded of one good responds to a price change of another good", "How producers respond to a change in input prices", "The price sensitivity of a firm's product"],
+      "answer": "How quantity demanded of one good responds to a price change of another good",
+      "explanation": "Cross-price elasticity = % change in Qd of Good A / % change in price of Good B. Positive values indicate substitutes; negative values indicate complements.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Marginal utility is the:",
+      "options": ["Total satisfaction from consuming a good", "Additional satisfaction from consuming one more unit", "Average satisfaction per unit consumed", "Change in price per unit consumed"],
+      "answer": "Additional satisfaction from consuming one more unit",
+      "explanation": "Marginal utility is the extra satisfaction (utility) gained from consuming one additional unit of a good or service.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "The law of diminishing marginal utility states that:",
+      "options": ["Total utility eventually decreases with consumption", "Marginal utility increases as more units are consumed", "As more units are consumed, each additional unit provides less additional satisfaction", "Marginal utility is always constant"],
+      "answer": "As more units are consumed, each additional unit provides less additional satisfaction",
+      "explanation": "After a point, each additional unit of a good adds less to total utility than the previous unit did — the classic pattern of diminishing marginal utility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "A consumer maximizes utility when:",
+      "options": ["Marginal utility of every good equals zero", "The ratio of marginal utility to price is equal for all goods purchased", "Total spending equals total income", "Marginal utility of every good is equal"],
+      "answer": "The ratio of marginal utility to price is equal for all goods purchased",
+      "explanation": "Utility is maximized when MU_A/P_A = MU_B/P_B for all goods — the consumer gets the same bang per buck from every good purchased.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "If the price of Good A rises, a utility-maximizing consumer should:",
+      "options": ["Buy more of Good A until MU rises", "Buy less of Good A and possibly more of substitutes", "Stop buying all goods", "Increase spending on all goods equally"],
+      "answer": "Buy less of Good A and possibly more of substitutes",
+      "explanation": "A price increase lowers the MU/P ratio for Good A, so the consumer reduces purchases of A (until MU/P rises again) and shifts to other goods.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Consumer surplus is best described as:",
+      "options": ["The profit earned by producers", "The amount consumers pay for a good", "The difference between what consumers are willing to pay and what they actually pay", "The tax revenue collected from consumers"],
+      "answer": "The difference between what consumers are willing to pay and what they actually pay",
+      "explanation": "Consumer surplus is the benefit consumers receive by paying less than their maximum willingness to pay — the area below the demand curve and above market price.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Fixed costs are costs that:",
+      "options": ["Increase with output", "Decrease with output", "Do not change with output in the short run", "Depend on the number of workers hired"],
+      "answer": "Do not change with output in the short run",
+      "explanation": "Fixed costs (rent, insurance, equipment) must be paid regardless of how much is produced; they cannot be avoided in the short run.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Marginal cost is the:",
+      "options": ["Total cost divided by quantity", "Cost of producing one more unit of output", "Average of all costs", "Fixed cost per unit"],
+      "answer": "Cost of producing one more unit of output",
+      "explanation": "Marginal cost = change in total cost / change in quantity. It measures the additional cost of producing one more unit.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "If a firm has total costs of $500 at 10 units and $550 at 11 units, the marginal cost of the 11th unit is:",
+      "options": ["$500", "$50", "$55", "$550"],
+      "answer": "$50",
+      "explanation": "MC = change in total cost / change in quantity = ($550 − $500) / (11 − 10) = $50.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "Average total cost (ATC) is calculated as:",
+      "options": ["Total variable cost / quantity", "Total fixed cost / quantity", "Total cost / quantity", "Marginal cost × quantity"],
+      "answer": "Total cost / quantity",
+      "explanation": "ATC = TC / Q. It measures the per-unit cost of production, including both fixed and variable costs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "In the short run, a firm CANNOT change its:",
+      "options": ["Labor inputs", "Variable inputs", "Fixed inputs", "Total costs"],
+      "answer": "Fixed inputs",
+      "explanation": "In the short run, at least one input (such as factory size or equipment) is fixed and cannot be adjusted. Only variable inputs can be changed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Which market structure has the MOST competition?",
+      "options": ["Monopoly", "Oligopoly", "Monopolistic competition", "Perfect competition"],
+      "answer": "Perfect competition",
+      "explanation": "Perfect competition has the most competition: many sellers, identical products, free entry/exit, and perfect information — no single firm has pricing power.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "A monopoly differs from perfect competition primarily because the monopolist:",
+      "options": ["Has many competitors", "Sells a differentiated product", "Is the sole seller and faces no close substitutes", "Sets price equal to marginal cost"],
+      "answer": "Is the sole seller and faces no close substitutes",
+      "explanation": "A monopoly is defined by a single seller with significant barriers to entry and no close substitute for its product, giving it substantial pricing power.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "An example of an oligopoly in the United States is the:",
+      "options": ["Restaurant industry", "US airline industry", "Wheat farming industry", "Retail clothing industry"],
+      "answer": "US airline industry",
+      "explanation": "The US airline industry is dominated by a few large carriers (Delta, United, American, Southwest), making it an oligopoly with high barriers to entry.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Product differentiation in monopolistic competition means that:",
+      "options": ["All products are identical", "Each firm's product is slightly different from competitors' products", "There is only one product in the market", "Products are regulated by the government"],
+      "answer": "Each firm's product is slightly different from competitors' products",
+      "explanation": "In monopolistic competition, firms differentiate their products through quality, features, branding, or location — giving each some pricing power.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "Barriers to entry in a monopoly market might include:",
+      "options": ["Low startup costs", "Government licenses, patents, or control of key resources", "Many competing firms", "Free flow of information"],
+      "answer": "Government licenses, patents, or control of key resources",
+      "explanation": "Barriers to entry such as patents, government regulations, control of essential inputs, or high startup costs prevent new competitors from entering the market.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "In a competitive labor market, the equilibrium wage is determined by:",
+      "options": ["The government", "The intersection of labor supply and labor demand", "Unions alone", "The largest employers"],
+      "answer": "The intersection of labor supply and labor demand",
+      "explanation": "Like any competitive market, wages in a competitive labor market are determined by supply and demand forces.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "A minimum wage set above the market equilibrium wage will most likely:",
+      "options": ["Increase employment", "Decrease employment", "Have no effect on employment", "Reduce the labor supply"],
+      "answer": "Decrease employment",
+      "explanation": "A minimum wage above equilibrium creates a surplus of labor (more workers want jobs than employers want to hire), reducing employment below the free-market level.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Human capital refers to:",
+      "options": ["Physical machinery and equipment", "The knowledge and skills workers acquire through education and training", "A firm's financial assets", "Government investment in infrastructure"],
+      "answer": "The knowledge and skills workers acquire through education and training",
+      "explanation": "Human capital is the productive capacity embodied in workers through education, on-the-job training, and experience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "If labor demand increases (shifts right) and labor supply stays the same, wages will:",
+      "options": ["Fall", "Rise", "Stay the same", "Become unpredictable"],
+      "answer": "Rise",
+      "explanation": "Increased demand for labor with unchanged supply creates upward pressure on wages, raising the equilibrium wage.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "Labor unions generally aim to:",
+      "options": ["Lower wages to keep firms competitive", "Increase wages and improve working conditions for their members", "Reduce the number of workers in an industry", "Increase the supply of labor"],
+      "answer": "Increase wages and improve working conditions for their members",
+      "explanation": "Labor unions collectively bargain on behalf of workers to negotiate higher wages, better benefits, and improved workplace conditions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "GDP stands for:",
+      "options": ["General Domestic Prices", "Gross Domestic Product", "Government Development Plan", "Growth and Development Policy"],
+      "answer": "Gross Domestic Product",
+      "explanation": "GDP — Gross Domestic Product — measures the total market value of all final goods and services produced within a country's borders in a given period.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Which of the following is included in GDP?",
+      "options": ["Used car sales", "Government purchase of a new police car", "Stock market transactions", "Household unpaid childcare"],
+      "answer": "Government purchase of a new police car",
+      "explanation": "Government spending on new goods and services is part of GDP (the G component). Used goods, financial transactions, and unpaid household work are excluded.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "The expenditure approach to GDP is: GDP = ",
+      "options": ["Wages + Rent + Interest + Profit", "C + I + G + (X − M)", "Total output × average price level", "National income − depreciation"],
+      "answer": "C + I + G + (X − M)",
+      "explanation": "The expenditure approach adds Consumption (C), Investment (I), Government spending (G), and Net Exports (X − M) to calculate GDP.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "Real GDP differs from nominal GDP in that real GDP:",
+      "options": ["Includes inflation", "Adjusts for changes in the price level", "Only measures services", "Is always larger than nominal GDP"],
+      "answer": "Adjusts for changes in the price level",
+      "explanation": "Real GDP removes the effect of price changes (inflation), allowing comparison of actual output across different years.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "One major limitation of GDP as a measure of well-being is that it:",
+      "options": ["Measures too many goods and services", "Ignores income distribution and non-market activities", "Is too difficult to calculate accurately", "Only measures government output"],
+      "answer": "Ignores income distribution and non-market activities",
+      "explanation": "GDP does not account for how income is distributed, unpaid work (household labor, volunteering), environmental quality, or leisure time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "A person who recently lost their job and is actively searching for a new one is classified as:",
+      "options": ["Not in the labor force", "Employed", "Underemployed", "Unemployed"],
+      "answer": "Unemployed",
+      "explanation": "A person is counted as unemployed if they are jobless, available to work, and actively seeking employment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Frictional unemployment occurs when workers are:",
+      "options": ["Permanently displaced by automation", "Temporarily between jobs or searching for better positions", "Laid off during a recession", "Unable to find work due to lack of skills"],
+      "answer": "Temporarily between jobs or searching for better positions",
+      "explanation": "Frictional unemployment is short-term and voluntary, occurring as workers transition between jobs — a normal feature of a healthy labor market.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Structural unemployment results from:",
+      "options": ["Workers being between jobs", "A mismatch between worker skills and job requirements due to industry changes", "A temporary economic downturn", "Seasonal fluctuations in labor demand"],
+      "answer": "A mismatch between worker skills and job requirements due to industry changes",
+      "explanation": "Structural unemployment occurs when technological change or industry shifts make certain skills obsolete, requiring workers to retrain for different occupations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Cyclical unemployment is caused by:",
+      "options": ["Seasonal demand changes", "Workers voluntarily changing jobs", "A decline in aggregate demand during a recession", "A permanent shift in industry structure"],
+      "answer": "A decline in aggregate demand during a recession",
+      "explanation": "Cyclical unemployment rises during economic downturns (recessions) as businesses cut production and lay off workers due to decreased demand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "The natural rate of unemployment is the rate that:",
+      "options": ["Is always zero in a healthy economy", "Includes only frictional and structural unemployment", "Is equal to the cyclical unemployment rate", "Only exists during recessions"],
+      "answer": "Includes only frictional and structural unemployment",
+      "explanation": "The natural rate is the unemployment rate consistent with full employment — it includes frictional and structural unemployment but not cyclical unemployment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Inflation is defined as:",
+      "options": ["An increase in the money supply", "A sustained increase in the general price level over time", "An increase in government spending", "A rise in the unemployment rate"],
+      "answer": "A sustained increase in the general price level over time",
+      "explanation": "Inflation is the rate at which the general level of prices for goods and services rises, eroding purchasing power over time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The Consumer Price Index (CPI) measures:",
+      "options": ["The total output of the economy", "Changes in the price of a fixed basket of goods and services bought by a typical household", "The government's spending on consumer goods", "Producer prices for manufactured goods"],
+      "answer": "Changes in the price of a fixed basket of goods and services bought by a typical household",
+      "explanation": "The CPI tracks how the cost of a representative basket of consumer goods and services changes over time, measuring the inflation experienced by typical households.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Demand-pull inflation occurs when:",
+      "options": ["Production costs rise", "Aggregate demand exceeds the economy's productive capacity", "The money supply decreases", "Imports become more expensive"],
+      "answer": "Aggregate demand exceeds the economy's productive capacity",
+      "explanation": "Demand-pull inflation — 'too much money chasing too few goods' — happens when aggregate demand grows faster than aggregate supply.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "Who benefits from unexpected inflation?",
+      "options": ["Savers holding cash", "Lenders with fixed-rate loans", "Borrowers with fixed-rate loans", "People on fixed incomes"],
+      "answer": "Borrowers with fixed-rate loans",
+      "explanation": "Unexpected inflation erodes the real value of debt, benefiting borrowers who repay loans in dollars worth less than when they borrowed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "If the CPI was 200 in Year 1 and 210 in Year 2, the inflation rate was:",
+      "options": ["10%", "5%", "2%", "0.5%"],
+      "answer": "5%",
+      "explanation": "Inflation rate = (CPI Year 2 − CPI Year 1) / CPI Year 1 × 100 = (210 − 200) / 200 × 100 = 5%.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "The three functions of money are:",
+      "options": ["Saving, borrowing, and spending", "Medium of exchange, unit of account, and store of value", "Production, distribution, and consumption", "Investment, consumption, and savings"],
+      "answer": "Medium of exchange, unit of account, and store of value",
+      "explanation": "Money functions as a medium of exchange (used to buy goods), a unit of account (measuring prices), and a store of value (preserving purchasing power over time).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "When a bank receives a $1,000 deposit and the reserve requirement is 10%, it can lend out:",
+      "options": ["$1,000", "$100", "$900", "$10,000"],
+      "answer": "$900",
+      "explanation": "The bank must hold $100 in reserves (10% × $1,000) and can lend out the remaining $900.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "The Federal Reserve was created to:",
+      "options": ["Maximize government tax revenue", "Serve as the central bank and manage the US monetary system", "Set income tax rates", "Regulate the stock market"],
+      "answer": "Serve as the central bank and manage the US monetary system",
+      "explanation": "The Fed was established in 1913 to provide a stable monetary and financial system, acting as a lender of last resort and controlling the money supply.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "When the Fed SELLS government bonds, the money supply:",
+      "options": ["Increases", "Decreases", "Stays the same", "Becomes unpredictable"],
+      "answer": "Decreases",
+      "explanation": "When the Fed sells bonds, buyers pay with money, reducing bank reserves and the money supply — a contractionary monetary policy action.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "M1 money supply includes:",
+      "options": ["Stocks and bonds", "Currency in circulation and checking account deposits", "All savings and time deposits", "Only physical currency"],
+      "answer": "Currency in circulation and checking account deposits",
+      "explanation": "M1 is the narrowest measure of money supply, including the most liquid assets: physical currency and demand deposits (checking accounts).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "A public good is one that is:",
+      "options": ["Provided only by private firms", "Non-excludable and non-rival", "Very expensive to produce", "Only consumed by the wealthy"],
+      "answer": "Non-excludable and non-rival",
+      "explanation": "Public goods cannot exclude non-payers (non-excludable) and one person's use does not reduce availability to others (non-rival). Examples: national defense, lighthouses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "A negative externality leads to market:",
+      "options": ["Underproduction", "Overproduction relative to the social optimum", "Efficient production", "Zero production"],
+      "answer": "Overproduction relative to the social optimum",
+      "explanation": "When producers do not bear the full social cost of their actions (e.g., pollution), they overproduce — more than is socially optimal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "The primary purpose of the federal income tax is to:",
+      "options": ["Punish wealthy individuals", "Raise revenue to fund government spending", "Redistribute all income equally", "Control inflation"],
+      "answer": "Raise revenue to fund government spending",
+      "explanation": "The main purpose of taxation is to finance government expenditures on public goods, services, and transfer programs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "A progressive tax system means that:",
+      "options": ["Everyone pays the same dollar amount", "Higher income earners pay a higher percentage of their income in taxes", "Tax rates decrease as income rises", "Only businesses pay taxes"],
+      "answer": "Higher income earners pay a higher percentage of their income in taxes",
+      "explanation": "In a progressive tax system (like the US federal income tax), the marginal tax rate rises with income — higher earners pay a larger share.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "When government spending exceeds tax revenues, the result is a:",
+      "options": ["Budget surplus", "Trade deficit", "Budget deficit", "Trade surplus"],
+      "answer": "Budget deficit",
+      "explanation": "A budget deficit occurs when government expenditures exceed tax revenues in a given year, requiring the government to borrow to cover the shortfall.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Comparative advantage means a country should produce goods for which it has:",
+      "options": ["The most resources", "The lowest opportunity cost", "The highest absolute productivity", "The largest population"],
+      "answer": "The lowest opportunity cost",
+      "explanation": "Comparative advantage is based on opportunity cost — a country specializes in goods it can produce at the lowest opportunity cost relative to trading partners.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "A tariff is a tax placed on:",
+      "options": ["Domestic producers", "Imported goods", "Exported goods", "Consumer incomes"],
+      "answer": "Imported goods",
+      "explanation": "A tariff is a tax imposed by a government on imported goods, raising their price and making domestic goods more competitive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "Free trade is generally argued to benefit countries because it:",
+      "options": ["Eliminates all imports", "Allows specialization and gains from comparative advantage", "Prevents foreign competition", "Always results in a trade surplus"],
+      "answer": "Allows specialization and gains from comparative advantage",
+      "explanation": "Free trade enables countries to specialize in what they produce most efficiently and trade for other goods, expanding total consumption possibilities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Globalization refers to:",
+      "options": ["Countries closing their borders to trade", "The increasing integration of economies, cultures, and people worldwide", "Government control of international commerce", "A policy of self-sufficiency"],
+      "answer": "The increasing integration of economies, cultures, and people worldwide",
+      "explanation": "Globalization describes the process by which economies, markets, cultures, and people become more interconnected through trade, investment, and communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "One argument AGAINST free trade is that it can:",
+      "options": ["Lower prices for consumers", "Lead to job losses in industries that cannot compete with cheaper imports", "Increase economic growth", "Expand consumer choice"],
+      "answer": "Lead to job losses in industries that cannot compete with cheaper imports",
+      "explanation": "While free trade generates net benefits, it can displace workers in import-competing industries — a significant distributional concern.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "The production possibilities frontier bows outward (is concave) because of:",
+      "options": ["Constant opportunity costs", "Increasing opportunity costs as production is shifted", "Decreasing opportunity costs", "Government restrictions"],
+      "answer": "Increasing opportunity costs as production is shifted",
+      "explanation": "Resources are not equally suited to all uses; as you produce more of one good, you must use increasingly less suitable resources, raising opportunity costs.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "If the price of a substitute good rises, what happens to the demand for the original good?",
+      "options": ["It decreases", "It increases", "It stays the same", "It becomes perfectly inelastic"],
+      "answer": "It increases",
+      "explanation": "When the price of a substitute rises, consumers switch to the original good, increasing its demand (shifting right).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "A price ceiling set BELOW equilibrium price will cause:",
+      "options": ["A surplus", "A shortage", "Prices to rise above equilibrium", "No effect on the market"],
+      "answer": "A shortage",
+      "explanation": "A binding price ceiling keeps prices artificially low, increasing quantity demanded while decreasing quantity supplied — creating a shortage.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "Using the midpoint method, if price rises from $10 to $20 and quantity demanded falls from 100 to 80, PED =",
+      "options": ["0.5", "1.0", "0.33", "2.0"],
+      "answer": "0.33",
+      "explanation": "% change Q = (80−100)/90 = −22.2%; % change P = (20−10)/15 = 66.7%; PED = 22.2/66.7 ≈ 0.33 (inelastic).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Total utility is maximized at the point where:",
+      "options": ["Marginal utility is maximized", "Marginal utility equals zero", "Average utility equals marginal utility", "Marginal utility is negative"],
+      "answer": "Marginal utility equals zero",
+      "explanation": "Total utility reaches its maximum when marginal utility is zero. Consuming beyond this point causes marginal utility to become negative, reducing total utility.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Which cost is always declining as output increases?",
+      "options": ["Average variable cost", "Average total cost", "Average fixed cost", "Marginal cost"],
+      "answer": "Average fixed cost",
+      "explanation": "Average fixed cost (AFC) = fixed costs / quantity. Since fixed costs are constant, AFC always falls as output rises — spreading fixed costs over more units.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Which of the following is a characteristic of BOTH monopolistic competition and perfect competition?",
+      "options": ["Product differentiation", "Many sellers", "Price above marginal cost", "High barriers to entry"],
+      "answer": "Many sellers",
+      "explanation": "Both market structures have many sellers and free entry/exit. They differ in that monopolistic competition has differentiated products while perfect competition has identical products.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "Which of the following is a shift factor for SUPPLY (not a movement along supply)?",
+      "options": ["A change in the product's own price", "Improved technology that lowers production costs", "A change in quantity demanded", "Consumer income changes"],
+      "answer": "Improved technology that lowers production costs",
+      "explanation": "Technology improvements lower production costs and shift the supply curve right. A change in the good's own price causes movement along the existing supply curve.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Structural unemployment is best addressed by:",
+      "options": ["Expansionary fiscal policy", "Lowering interest rates", "Job retraining and education programs", "Extending unemployment benefits"],
+      "answer": "Job retraining and education programs",
+      "explanation": "Structural unemployment results from skills mismatches; retraining workers for in-demand occupations directly addresses the root cause.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "A firm in a perfectly competitive market earns zero economic profit in the long run because:",
+      "options": ["The government prevents profits", "Entry of new firms eliminates profit by lowering price to minimum ATC", "The firm has no marginal revenue", "Product prices are set by unions"],
+      "answer": "Entry of new firms eliminates profit by lowering price to minimum ATC",
+      "explanation": "Positive profits attract new entrants, increasing supply and driving price down until economic profit equals zero in the long run.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "If demand is elastic and price decreases, total revenue will:",
+      "options": ["Decrease", "Increase", "Stay the same", "Equal zero"],
+      "answer": "Increase",
+      "explanation": "With elastic demand (PED > 1), a price decrease causes a proportionally larger increase in quantity demanded, raising total revenue.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "The key characteristic distinguishing oligopoly from other market structures is:",
+      "options": ["Many firms selling differentiated products", "Strategic interdependence among a few dominant firms", "A single seller with complete market control", "Identical products with free entry"],
+      "answer": "Strategic interdependence among a few dominant firms",
+      "explanation": "Oligopoly firms must consider rivals' reactions to their pricing/output decisions — this strategic interdependence is the defining feature.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Which of the following would DECREASE labor demand in a particular industry?",
+      "options": ["An increase in demand for the industry's product", "A fall in wages", "A technological innovation that replaces workers with machines", "An increase in human capital investment"],
+      "answer": "A technological innovation that replaces workers with machines",
+      "explanation": "Labor-saving technology reduces the quantity of labor needed to produce each unit, shifting the labor demand curve left.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Producer surplus is the area:",
+      "options": ["Below demand curve and above price", "Above supply curve and below equilibrium price", "Between supply and demand at disequilibrium quantities", "Equal to fixed costs in the long run"],
+      "answer": "Above supply curve and below equilibrium price",
+      "explanation": "Producer surplus is the benefit producers receive by selling at the market price above their minimum acceptable price (supply curve) — the area above supply and below price.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "Which of the following is NOT one of the four factors of production?",
+      "options": ["Land", "Labor", "Capital", "Currency"],
+      "answer": "Currency",
+      "explanation": "The four factors of production are land, labor, capital (physical tools and machinery), and entrepreneurship. Currency is a financial medium, not a productive resource.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "Deflation is defined as:",
+      "options": ["A decrease in GDP", "A sustained decrease in the general price level", "An increase in unemployment", "A reduction in money supply"],
+      "answer": "A sustained decrease in the general price level",
+      "explanation": "Deflation is the opposite of inflation — a sustained decrease in the general price level, which can be harmful because it delays purchases and increases the real burden of debt.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "When the Federal Reserve lowers the reserve requirement, the most direct effect is:",
+      "options": ["Decreased money supply", "Increased money creation potential by banks", "Higher interest rates", "Reduced bank lending"],
+      "answer": "Increased money creation potential by banks",
+      "explanation": "A lower reserve requirement means banks must hold less in reserve and can lend more, increasing the money multiplier and expanding the money supply.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "A budget deficit occurs when:",
+      "options": ["Exports exceed imports", "Government revenues exceed government spending", "Government spending exceeds government revenues", "The money supply grows too fast"],
+      "answer": "Government spending exceeds government revenues",
+      "explanation": "A budget deficit means the government spends more than it collects in taxes in a given year, requiring borrowing to fund the difference.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "If the US has a trade deficit, it means:",
+      "options": ["Exports exceed imports", "Imports exceed exports", "The budget deficit is growing", "Unemployment is rising"],
+      "answer": "Imports exceed exports",
+      "explanation": "A trade deficit (negative net exports) means the value of a country's imports exceeds the value of its exports.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "Which of the following would be considered expansionary monetary policy?",
+      "options": ["Raising the discount rate", "Selling government bonds in the open market", "Raising the reserve requirement", "Lowering the federal funds rate"],
+      "answer": "Lowering the federal funds rate",
+      "explanation": "Lowering the federal funds rate reduces the cost of borrowing, encouraging banks to lend more, increasing the money supply and stimulating aggregate demand.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following would be most likely to cause cost-push inflation?",
+      "options": ["An increase in consumer confidence", "A sharp rise in oil prices", "A tax cut for households", "Rapid GDP growth"],
+      "answer": "A sharp rise in oil prices",
+      "explanation": "Cost-push inflation results from rising input costs (like oil) increasing production costs across the economy, shifting aggregate supply left.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "GDP is calculated using which approach in the formula C + I + G + (X − M)?",
+      "options": ["Income approach", "Production approach", "Expenditure approach", "Value-added approach"],
+      "answer": "Expenditure approach",
+      "explanation": "The expenditure approach sums all spending on final goods and services: Consumption, Investment, Government spending, and Net Exports.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "Which of the following best describes the free-rider problem?",
+      "options": ["Consumers who negotiate lower prices", "People who benefit from public goods without paying for them", "Workers who avoid labor unions", "Firms that free-ride on government subsidies"],
+      "answer": "People who benefit from public goods without paying for them",
+      "explanation": "Because public goods are non-excludable, people can consume them without contributing to their cost — undermining private provision.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "If Country A has a comparative advantage in producing cars, it means:",
+      "options": ["Country A produces cars using fewer total resources than any other country", "Country A can produce cars at a lower opportunity cost than its trading partners", "Country A has the most advanced car technology", "Country A exports more cars than any other country"],
+      "answer": "Country A can produce cars at a lower opportunity cost than its trading partners",
+      "explanation": "Comparative advantage is defined by relative opportunity cost, not absolute productivity — the basis for all gains from trade.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Which of the following is an example of structural unemployment?",
+      "options": ["A teacher laid off during a recession due to budget cuts", "A coal miner who loses their job as coal plants switch to natural gas", "A ski instructor unemployed in summer", "A recent graduate searching for their first job"],
+      "answer": "A coal miner who loses their job as coal plants switch to natural gas",
+      "explanation": "The coal miner is structurally unemployed because their skills no longer match industry needs due to a fundamental shift in the energy sector.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Expansionary fiscal policy during a recession would include:",
+      "options": ["Raising taxes and cutting spending", "Cutting taxes and increasing government spending", "Raising interest rates", "Selling government bonds"],
+      "answer": "Cutting taxes and increasing government spending",
+      "explanation": "Expansionary fiscal policy boosts aggregate demand by putting more money in consumers' hands (tax cuts) and directly increasing government spending.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "The money multiplier equals 1 / reserve requirement. If the reserve requirement is 0.25, the money multiplier is:",
+      "options": ["0.25", "2", "4", "25"],
+      "answer": "4",
+      "explanation": "Money multiplier = 1 / 0.25 = 4. Each dollar in new reserves can support $4 in total deposits.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "A quota differs from a tariff in that a quota:",
+      "options": ["Raises prices for domestic consumers", "Generates tax revenue for the government", "Sets a physical limit on the quantity of imports", "Benefits domestic producers"],
+      "answer": "Sets a physical limit on the quantity of imports",
+      "explanation": "Unlike a tariff (which is a tax), a quota directly limits the volume of imports allowed. Both raise domestic prices, but only tariffs generate government revenue.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Stagflation is a condition characterized by:",
+      "options": ["High growth and high inflation", "High unemployment and high inflation simultaneously", "Low inflation and low unemployment", "Rapid GDP growth with falling prices"],
+      "answer": "High unemployment and high inflation simultaneously",
+      "explanation": "Stagflation — a combination of stagnation (high unemployment, slow growth) and inflation — is associated with negative supply shocks like the 1970s oil crisis.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "When the price level rises, the purchasing power of money:",
+      "options": ["Rises", "Falls", "Stays constant", "Doubles"],
+      "answer": "Falls",
+      "explanation": "Inflation reduces purchasing power — each dollar buys fewer goods and services when the general price level is higher.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which of the following is the best example of a public good?",
+      "options": ["A movie theater ticket", "A national park with an entrance fee", "National defense", "A private toll road"],
+      "answer": "National defense",
+      "explanation": "National defense is non-excludable (everyone in the country is protected) and non-rival (one person's protection doesn't reduce another's), making it a classic public good.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "Which Federal Reserve tool is used MOST frequently to conduct monetary policy?",
+      "options": ["Changing the reserve requirement", "Open market operations (buying/selling bonds)", "Changing the discount rate", "Printing new currency"],
+      "answer": "Open market operations (buying/selling bonds)",
+      "explanation": "Open market operations — the purchase and sale of US Treasury securities — are the Fed's primary and most flexible monetary policy tool.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "In a competitive labor market, if the demand for a product rises sharply, what happens to wages in that industry?",
+      "options": ["Wages fall because more workers are needed", "Wages rise as labor demand increases", "Wages are unaffected by product demand", "Wages fall as the supply of workers increases"],
+      "answer": "Wages rise as labor demand increases",
+      "explanation": "Higher product demand increases the marginal revenue product of labor, shifting labor demand right and raising equilibrium wages.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Which of the following is an automatic stabilizer?",
+      "options": ["A new infrastructure spending bill", "Unemployment insurance payments", "An emergency interest rate cut", "A presidential tax rebate package"],
+      "answer": "Unemployment insurance payments",
+      "explanation": "Unemployment insurance automatically increases during recessions (as more people qualify) and decreases during expansions — without requiring new legislation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Globalization has generally led to which of the following outcomes?",
+      "options": ["Higher prices for consumers worldwide", "Reduced trade between countries", "Greater economic interdependence and specialization", "The elimination of all trade barriers"],
+      "answer": "Greater economic interdependence and specialization",
+      "explanation": "Globalization has increased international trade, investment, and economic interdependence, allowing countries to specialize based on comparative advantage.",
+      "points": 1
+    }
+  ]
+}

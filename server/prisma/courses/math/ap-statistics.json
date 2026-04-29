@@ -1,0 +1,1220 @@
+{
+  "slug": "ap-statistics",
+  "name": "AP Statistics",
+  "nameZh": "AP统计学",
+  "credits": 1.0,
+  "department": "Mathematics",
+  "type": "Core",
+  "description": "A college-level statistics course following the AP curriculum. Students explore four major themes: Exploring Data (describing patterns and departures from patterns), Sampling and Experimentation (planning and conducting a study), Anticipating Patterns (probability and simulation), and Statistical Inference (estimating population parameters and testing hypotheses). Students develop skills to critically evaluate data and communicate conclusions clearly.",
+  "isPublished": true,
+  "modules": [
+    {
+      "order": 1,
+      "title": "Exploring Data: Categorical & Quantitative Variables",
+      "titleZh": "探索数据：分类变量与定量变量",
+      "objectives": "Distinguish categorical from quantitative variables; construct and interpret frequency tables, bar charts, pie charts, and dotplots; describe distribution shape, center, and spread.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 1: Sampling and Data",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/data-variables/v/types-of-statistical-studies",
+      "videoNote": "Khan Academy — Types of Data (Categorical vs. Quantitative)",
+      "video2Url": "https://www.youtube.com/watch?v=oI3hZJqXAjU",
+      "video2Note": "Professor Leonard — Introduction to Statistics: Types of Data",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/display-categorical/e/reading-bar-charts",
+      "practiceNote": "Khan Academy — Reading Bar Charts (15 problems)",
+      "assignment": "Classify 20 variables as categorical or quantitative. Create a frequency table and bar chart for a provided dataset. Write a 3-sentence description of the distribution.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 2,
+      "title": "Describing Distributions",
+      "titleZh": "描述分布",
+      "objectives": "Compute and interpret mean, median, mode, range, IQR, variance, and standard deviation; construct and interpret histograms, stemplots, and boxplots; identify outliers using the 1.5*IQR rule.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/2-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 2: Descriptive Statistics",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/measuring-center-quantitative/v/mean-median-and-mode",
+      "videoNote": "Khan Academy — Mean, Median, and Mode",
+      "video2Url": "https://www.youtube.com/watch?v=GkZz-PQKHA8",
+      "video2Note": "Professor Leonard — Descriptive Statistics: Center and Spread",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/more-standard-deviation/e/standard-deviation-of-a-data-set",
+      "practiceNote": "Khan Academy — Standard Deviation Practice (20 problems)",
+      "assignment": "For a given dataset: compute mean, median, Q1, Q3, IQR, and standard deviation. Construct a boxplot and histogram. Identify any outliers using the 1.5*IQR rule.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 3,
+      "title": "Comparing Distributions",
+      "titleZh": "比较分布",
+      "objectives": "Compare distributions using parallel boxplots and back-to-back stemplots; describe differences in shape, center, spread, and unusual features in context; use z-scores to compare values across distributions.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/2-7-measures-of-the-spread-of-the-data",
+      "readingNote": "OpenStax Introductory Statistics — Ch 2.7-2.8: Comparing Distributions",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/comparing-distributions/v/comparing-distributions",
+      "videoNote": "Khan Academy — Comparing Distributions",
+      "video2Url": "https://www.youtube.com/watch?v=K6Nj1lGbkFo",
+      "video2Note": "Professor Leonard — Z-Scores and Comparing Distributions",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/comparing-distributions/e/reading-box-plots",
+      "practiceNote": "Khan Academy — Reading Box Plots (15 problems)",
+      "assignment": "Compare two datasets using parallel boxplots. Calculate z-scores for 6 values across two different distributions. Write a 2-paragraph comparison in context.",
+      "estimatedHrs": 3.0
+    },
+    {
+      "order": 4,
+      "title": "Bivariate Data & Linear Regression",
+      "titleZh": "二元数据与线性回归",
+      "objectives": "Create and interpret scatterplots; describe association (direction, form, strength); calculate and interpret the correlation coefficient r and coefficient of determination r^2; find and use the least-squares regression line.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/12-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 12: Linear Regression and Correlation",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/bivariate-data-ap/correlation-coefficient-r/v/correlation-coefficient-intuition-examples",
+      "videoNote": "Khan Academy — Correlation Coefficient Intuition",
+      "video2Url": "https://www.youtube.com/watch?v=GhrxgbQnEEU",
+      "video2Note": "Professor Leonard — Correlation and Linear Regression",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/bivariate-data-ap/least-squares-regression/e/least-squares-regression",
+      "practiceNote": "Khan Academy — Least Squares Regression (15 problems)",
+      "assignment": "For a bivariate dataset: create a scatterplot, calculate r, find the LSRL, interpret slope and intercept in context, and compute r^2. Identify any influential points.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 5,
+      "title": "Designing Studies",
+      "titleZh": "研究设计",
+      "objectives": "Distinguish observational studies from experiments; identify sampling methods (SRS, stratified, cluster, systematic); recognize sources of bias; understand principles of experimental design (randomization, control, replication, blinding).",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-2-data-sampling-and-variation-in-data-and-sampling",
+      "readingNote": "OpenStax Introductory Statistics — Ch 1.2-1.3: Sampling and Study Design",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/gathering-data-ap/sampling-observational-studies/v/introduction-to-sampling-distributions",
+      "videoNote": "Khan Academy — Sampling Methods",
+      "video2Url": "https://www.youtube.com/watch?v=sMq_9A3g5Y0",
+      "video2Note": "Professor Leonard — Study Design and Sampling",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/gathering-data-ap/sampling-observational-studies/e/identifying-sampling-methods",
+      "practiceNote": "Khan Academy — Identifying Sampling Methods (15 problems)",
+      "assignment": "Design a study to investigate a question of your choice. Specify the sampling method, control group, treatment, and how to address potential confounding variables. Write a 1-page study proposal.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 6,
+      "title": "Probability",
+      "titleZh": "概率",
+      "objectives": "Apply the addition rule, multiplication rule, and complement rule; compute conditional probabilities; use Venn diagrams and two-way tables; distinguish independent from dependent events.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/3-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 3: Probability Topics",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/probability-ap/addition-rule-probability/v/addition-rule-for-probability",
+      "videoNote": "Khan Academy — Addition Rule for Probability",
+      "video2Url": "https://www.youtube.com/watch?v=cTe5S7c6MWs",
+      "video2Note": "Professor Leonard — Probability Rules and Conditional Probability",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/probability-ap/multiplication-rule-independence/e/multiplication-rule-for-independent-events",
+      "practiceNote": "Khan Academy — Multiplication Rule (20 problems)",
+      "assignment": "Solve 10 probability problems using addition, multiplication, and complement rules. Construct a two-way table and use it to calculate 4 conditional probabilities.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 7,
+      "title": "Random Variables",
+      "titleZh": "随机变量",
+      "objectives": "Define discrete and continuous random variables; compute expected value (mean) and standard deviation of a random variable; apply rules for transforming and combining random variables.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/4-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 4: Discrete Random Variables",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/random-variables-ap/discrete-random-variables/v/random-variables",
+      "videoNote": "Khan Academy — Random Variables",
+      "video2Url": "https://www.youtube.com/watch?v=zKBBfRQE1V4",
+      "video2Note": "Professor Leonard — Random Variables: Expected Value and Standard Deviation",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/random-variables-ap/discrete-random-variables/e/expected-value",
+      "practiceNote": "Khan Academy — Expected Value (15 problems)",
+      "assignment": "Construct a probability distribution table for a given scenario. Calculate the mean and standard deviation. Apply linear transformation and combination rules for 4 problems.",
+      "estimatedHrs": 3.5
+    },
+    {
+      "order": 8,
+      "title": "Binomial & Geometric Distributions",
+      "titleZh": "二项分布与几何分布",
+      "objectives": "Verify BINS conditions for a binomial setting; calculate binomial probabilities using the formula and technology; compute mean and standard deviation of a binomial; understand the geometric distribution.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/4-3-binomial-distribution",
+      "readingNote": "OpenStax Introductory Statistics — Ch 4.3: Binomial Distribution",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/random-variables-ap/binomial-random-variable/v/binomial-distribution",
+      "videoNote": "Khan Academy — Binomial Distribution",
+      "video2Url": "https://www.youtube.com/watch?v=qIzC1-9PwQo",
+      "video2Note": "Professor Leonard — Binomial Probability Distribution",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/random-variables-ap/binomial-random-variable/e/binomial-probabilities",
+      "practiceNote": "Khan Academy — Binomial Probabilities (20 problems)",
+      "assignment": "Verify BINS for 4 scenarios. Calculate P(X=k), P(X<=k), and P(X>k) for 3 binomial settings. Solve 2 geometric distribution problems.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 9,
+      "title": "Sampling Distributions",
+      "titleZh": "抽样分布",
+      "objectives": "Define and describe the sampling distribution of the sample mean and sample proportion; apply the Central Limit Theorem; calculate and interpret standard error.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/7-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 7: The Central Limit Theorem",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/sampling-distribution-mean/v/sampling-distribution-of-the-sample-mean",
+      "videoNote": "Khan Academy — Sampling Distribution of the Sample Mean",
+      "video2Url": "https://www.youtube.com/watch?v=FXZ2O1Lv-KE",
+      "video2Note": "Professor Leonard — The Central Limit Theorem",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/sampling-distribution-mean/e/sampling-distributions-sample-means",
+      "practiceNote": "Khan Academy — Sampling Distributions Practice (20 problems)",
+      "assignment": "Calculate the mean and standard error of sampling distributions for 4 scenarios. Use the CLT to find probabilities for sample means. Explain the effect of sample size on variability.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 10,
+      "title": "Confidence Intervals",
+      "titleZh": "置信区间",
+      "objectives": "Construct and interpret confidence intervals for a population mean and proportion; understand the meaning of confidence level; analyze the effect of sample size and confidence level on interval width.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/8-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 8: Confidence Intervals",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/estimating-confidence-ap/introduction-confidence-intervals/v/confidence-intervals",
+      "videoNote": "Khan Academy — Confidence Intervals Introduction",
+      "video2Url": "https://www.youtube.com/watch?v=MbKQeIBWzd8",
+      "video2Note": "Professor Leonard — Confidence Intervals for Means and Proportions",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/estimating-confidence-ap/one-sample-z-interval-proportion/e/calculating-one-sample-z-interval-proportion",
+      "practiceNote": "Khan Academy — One-Sample z Interval Practice (15 problems)",
+      "assignment": "Construct 95% and 99% confidence intervals for 3 datasets (means and proportions). Interpret each interval in context. Determine the required sample size for a desired margin of error.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 11,
+      "title": "Significance Tests",
+      "titleZh": "显著性检验",
+      "objectives": "State hypotheses (H0 and Ha); calculate and interpret a test statistic and p-value; make and justify a conclusion at a given significance level alpha; understand Type I and Type II errors and power.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/9-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 9: Hypothesis Testing with One Sample",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/tests-significance-ap/idea-significance-tests/v/simple-hypothesis-testing",
+      "videoNote": "Khan Academy — Simple Hypothesis Testing",
+      "video2Url": "https://www.youtube.com/watch?v=-FtlH4svqx4",
+      "video2Note": "Professor Leonard — Hypothesis Testing",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/tests-significance-ap/one-sample-z-test-proportion/e/calculating-p-value-from-z-statistic",
+      "practiceNote": "Khan Academy — Calculating p-values (20 problems)",
+      "assignment": "Conduct full hypothesis tests (4-step process) for 4 scenarios involving means and proportions. Identify and describe Type I and Type II errors in each context.",
+      "estimatedHrs": 4.5
+    },
+    {
+      "order": 12,
+      "title": "Comparing Two Populations",
+      "titleZh": "两组数据的比较",
+      "objectives": "Construct confidence intervals and conduct significance tests for two-sample means (independent and paired) and two-sample proportions; select the appropriate procedure and verify conditions.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/10-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 10: Hypothesis Testing with Two Samples",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/two-sample-inference/difference-between-sample-means/v/comparing-two-means",
+      "videoNote": "Khan Academy — Comparing Two Means",
+      "video2Url": "https://www.youtube.com/watch?v=hpWdDmgsIRE",
+      "video2Note": "Professor Leonard — Two-Sample t-Tests and Confidence Intervals",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/two-sample-inference/two-sample-z-interval-proportions/e/two-sample-proportion-interval",
+      "practiceNote": "Khan Academy — Two-Sample Proportion Intervals (15 problems)",
+      "assignment": "Conduct two-sample hypothesis tests for 3 scenarios (means and proportions). Construct and interpret 95% confidence intervals for each. Write conclusions in full sentences in context.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 13,
+      "title": "Chi-Square Tests",
+      "titleZh": "卡方检验",
+      "objectives": "Perform chi-square goodness-of-fit tests; chi-square tests of independence; chi-square tests of homogeneity; compute test statistics, degrees of freedom, and p-values; interpret results in context.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/11-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 11: The Chi-Square Distribution",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/inference-categorical-data-chi-square-tests/chi-square-goodness-of-fit-tests/v/chi-square-statistic",
+      "videoNote": "Khan Academy — Chi-Square Statistic",
+      "video2Url": "https://www.youtube.com/watch?v=WXPBoFDqNVk",
+      "video2Note": "Professor Leonard — Chi-Square Tests",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/inference-categorical-data-chi-square-tests/chi-square-goodness-of-fit-tests/e/chi-square-goodness-of-fit-tests",
+      "practiceNote": "Khan Academy — Chi-Square Goodness of Fit (15 problems)",
+      "assignment": "Perform a goodness-of-fit test and a test of independence using provided data tables. Calculate expected counts, the chi-square statistic, degrees of freedom, and p-value. Write a full conclusion.",
+      "estimatedHrs": 4.0
+    },
+    {
+      "order": 14,
+      "title": "Inference for Linear Regression",
+      "titleZh": "线性回归的推断",
+      "objectives": "Verify conditions for regression inference; construct and interpret a confidence interval for the slope; test H0: beta=0 using a t-test for slope; interpret computer regression output.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/12-introduction",
+      "readingNote": "OpenStax Introductory Statistics — Ch 12: Linear Regression and Correlation Inference",
+      "videoUrl": "https://www.khanacademy.org/math/ap-statistics/inference-slope/intro-inference-slope/v/introduction-inference-slope",
+      "videoNote": "Khan Academy — Introduction to Inference for Regression",
+      "video2Url": "https://www.youtube.com/watch?v=MD1uZUBVXfk",
+      "video2Note": "Professor Leonard — Inference for Linear Regression",
+      "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/inference-slope/inference-slope/e/confidence-interval-slope",
+      "practiceNote": "Khan Academy — Confidence Interval for Slope (15 problems)",
+      "assignment": "Interpret a regression computer output table. Test the hypothesis that the slope is zero at alpha=0.05. Construct a 95% CI for the slope and interpret it in context. Verify all conditions.",
+      "estimatedHrs": 4.0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which of the following is a categorical variable?",
+      "options": ["Height in centimeters", "SAT score", "Favorite color", "Number of siblings"],
+      "answer": "Favorite color",
+      "explanation": "Categorical variables place individuals into groups or categories. Favorite color is categorical; height, SAT score, and number of siblings are quantitative.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "A distribution is described as skewed right. Where is the tail?",
+      "options": ["On the left side", "On the right side", "On both sides equally", "There is no tail"],
+      "answer": "On the right side",
+      "explanation": "A right-skewed distribution has a long tail extending toward higher (right) values.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "A pie chart best displays which type of data?",
+      "options": ["Quantitative data over time", "Categorical data as parts of a whole", "Two quantitative variables", "Frequency of quantitative intervals"],
+      "answer": "Categorical data as parts of a whole",
+      "explanation": "Pie charts display how categorical data is divided into parts of a whole, showing relative frequencies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "What does SOCS stand for when describing distributions?",
+      "options": ["Symmetry, Outliers, Center, Spread", "Shape, Outliers, Center, Spread", "Skew, Outliers, Correlation, SD", "Shape, Order, Count, Summary"],
+      "answer": "Shape, Outliers, Center, Spread",
+      "explanation": "When describing a distribution, always discuss Shape, Outliers (unusual features), Center, and Spread.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Which graph is best for displaying a single quantitative variable for a small dataset?",
+      "options": ["Bar chart", "Pie chart", "Dotplot", "Scatterplot"],
+      "answer": "Dotplot",
+      "explanation": "Dotplots are ideal for small quantitative datasets, showing each individual data point.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Which measure of center is most resistant to outliers?",
+      "options": ["Mean", "Mode", "Median", "Range"],
+      "answer": "Median",
+      "explanation": "The median is resistant to outliers because it depends only on the middle value(s), not extreme values.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "The interquartile range (IQR) is calculated as:",
+      "options": ["Mean - Median", "Q3 - Q1", "Max - Min", "Q2 - Q1"],
+      "answer": "Q3 - Q1",
+      "explanation": "IQR = Q3 - Q1, representing the range of the middle 50% of data.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "By the 1.5*IQR rule, a value is an outlier if it is:",
+      "options": ["More than 2 SD from the mean", "Outside Q1 - 1.5*IQR or Q3 + 1.5*IQR", "More than 3 SD from the mean", "Less than Q1 or greater than Q3"],
+      "answer": "Outside Q1 - 1.5*IQR or Q3 + 1.5*IQR",
+      "explanation": "A value is an outlier if it falls below Q1 - 1.5*IQR or above Q3 + 1.5*IQR.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "For a right-skewed distribution, which is typically true?",
+      "options": ["Mean < Median", "Mean = Median", "Mean > Median", "Mean and Median are both zero"],
+      "answer": "Mean > Median",
+      "explanation": "In a right-skewed distribution, the mean is pulled toward the high outliers, making mean > median.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "Standard deviation measures:",
+      "options": ["The middle value of data", "The most frequent value", "The average distance of data from the mean", "The range divided by 4"],
+      "answer": "The average distance of data from the mean",
+      "explanation": "Standard deviation is roughly the average distance of observations from their mean.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "A z-score of -2 means a value is:",
+      "options": ["2 units above the mean", "2 SD above the mean", "2 SD below the mean", "2% below the mean"],
+      "answer": "2 SD below the mean",
+      "explanation": "z = (x - mean)/sd. A z-score of -2 means the value is 2 standard deviations below the mean.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Which graph allows direct comparison of five-number summaries for two distributions?",
+      "options": ["Histogram", "Dotplot", "Back-to-back stemplot", "Parallel boxplots"],
+      "answer": "Parallel boxplots",
+      "explanation": "Parallel boxplots display the five-number summary side by side for easy comparison.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "A student scores 80 on Test A (mean=70, sd=10) and 75 on Test B (mean=60, sd=5). On which did she perform relatively better?",
+      "options": ["Test A (z=1)", "Test B (z=3)", "They are equal", "Cannot be determined"],
+      "answer": "Test B (z=3)",
+      "explanation": "z_A = (80-70)/10 = 1.0. z_B = (75-60)/5 = 3.0. Higher z-score means better relative performance, so Test B.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "The five-number summary consists of:",
+      "options": ["Mean, Median, Mode, Range, SD", "Min, Q1, Median, Q3, Max", "Mean, Q1, Q2, Q3, Max", "Min, Mean, Median, Mode, Max"],
+      "answer": "Min, Q1, Median, Q3, Max",
+      "explanation": "The five-number summary: Minimum, Q1, Median (Q2), Q3, Maximum.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "Adding 5 to every value in a dataset will:",
+      "options": ["Increase mean by 5 and increase SD by 5", "Increase mean by 5 and leave SD unchanged", "Leave mean unchanged and increase SD by 5", "Multiply mean by 5"],
+      "answer": "Increase mean by 5 and leave SD unchanged",
+      "explanation": "Adding a constant shifts measures of center by that amount. Spread (SD, IQR) is unchanged.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "A scatterplot shows a negative association. This means:",
+      "options": ["As x increases, y tends to increase", "As x increases, y tends to decrease", "There is no relationship between x and y", "x and y are always equal"],
+      "answer": "As x increases, y tends to decrease",
+      "explanation": "Negative association means an inverse relationship: higher x values tend to be paired with lower y values.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "r = 0.92 indicates:",
+      "options": ["A weak positive relationship", "A strong positive linear relationship", "A strong negative relationship", "No linear relationship"],
+      "answer": "A strong positive linear relationship",
+      "explanation": "r close to +1 indicates a strong positive linear association. r = 0.92 is very close to 1.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "What does r^2 = 0.81 mean?",
+      "options": ["The correlation is 0.81", "81% of the variation in y is explained by the linear model", "The slope is 0.81", "19% of data points fit the line"],
+      "answer": "81% of the variation in y is explained by the linear model",
+      "explanation": "r^2 represents the proportion of variability in y that is explained by the linear regression on x.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "In the LSRL y-hat = 2.3 + 0.5x, what does 0.5 represent?",
+      "options": ["The y-intercept", "For each 1-unit increase in x, y increases by 0.5 on average", "The correlation coefficient", "The SD of residuals"],
+      "answer": "For each 1-unit increase in x, y increases by 0.5 on average",
+      "explanation": "The slope of the LSRL represents the predicted change in y for each 1-unit increase in x.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "Correlation does NOT imply:",
+      "options": ["Association", "Linear relationship", "Causation", "A pattern in the scatterplot"],
+      "answer": "Causation",
+      "explanation": "A statistical correlation between two variables does not prove that one causes the other.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "A simple random sample (SRS) ensures:",
+      "options": ["Every individual has an equal chance of selection", "Every group has equal representation", "The sample is perfectly representative", "Only volunteers are selected"],
+      "answer": "Every individual has an equal chance of selection",
+      "explanation": "In an SRS, every individual in the population has an equal probability of being chosen.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Confounding occurs when:",
+      "options": ["The sample size is too small", "An extraneous variable is associated with both the explanatory variable and the response", "Randomization is not used", "The experiment has no control group"],
+      "answer": "An extraneous variable is associated with both the explanatory variable and the response",
+      "explanation": "Confounding means an outside variable is mixed up with the explanatory variable, making it impossible to isolate the true effect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "Which principle prevents systematic differences between experimental groups?",
+      "options": ["Replication", "Control", "Blinding", "Randomization"],
+      "answer": "Randomization",
+      "explanation": "Randomization (randomly assigning subjects to treatments) prevents systematic bias between treatment groups.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "Stratified sampling vs. cluster sampling: the key difference is:",
+      "options": ["Stratified samples from each group; cluster selects entire groups", "Stratified divides into groups and samples all; cluster divides and samples some", "They are the same method", "Cluster is random; stratified is not"],
+      "answer": "Stratified samples from each group; cluster selects entire groups",
+      "explanation": "Stratified: divide into homogeneous strata, then sample from each. Cluster: divide into heterogeneous clusters, then randomly select entire clusters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Nonresponse bias occurs when:",
+      "options": ["Questions are misleading", "Non-responders differ from responders", "The sample is too large", "Researchers influence responses"],
+      "answer": "Non-responders differ from responders",
+      "explanation": "Nonresponse bias results when individuals who do not respond are systematically different from those who do.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Two events A and B are independent if:",
+      "options": ["P(A and B) = P(A) + P(B)", "P(A|B) = P(A)", "P(A and B) = 0", "P(A) = P(B)"],
+      "answer": "P(A|B) = P(A)",
+      "explanation": "A and B are independent if knowing B occurred does not change the probability of A.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "P(A or B) = P(A) + P(B) - P(A and B) is the:",
+      "options": ["Multiplication rule", "Complement rule", "General addition rule", "Conditional probability formula"],
+      "answer": "General addition rule",
+      "explanation": "The general addition rule avoids double-counting the overlap between A and B.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "If P(A) = 0.4 and P(B) = 0.5 and A and B are mutually exclusive, what is P(A or B)?",
+      "options": ["0.2", "0.7", "0.9", "0.1"],
+      "answer": "0.9",
+      "explanation": "Mutually exclusive means P(A and B) = 0. So P(A or B) = 0.4 + 0.5 - 0 = 0.9.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "The conditional probability formula P(A|B) = ?",
+      "options": ["P(A and B) / P(A)", "P(A) * P(B)", "P(A and B) / P(B)", "P(B) - P(A)"],
+      "answer": "P(A and B) / P(B)",
+      "explanation": "P(A|B) = P(A and B) / P(B), the probability of A given that B has occurred.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "What is the probability of rolling a sum of 7 on two fair dice?",
+      "options": ["1/6", "7/36", "6/36", "1/12"],
+      "answer": "6/36",
+      "explanation": "Pairs summing to 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6 out of 36 total. P = 6/36 = 1/6.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The expected value E(X) of a discrete random variable is:",
+      "options": ["The most likely outcome", "The sum of all possible values", "The sum of x_i * P(x_i) for all values", "The average of squared deviations"],
+      "answer": "The sum of x_i * P(x_i) for all values",
+      "explanation": "E(X) = sum of [x_i * P(x_i)], the weighted average of all possible values.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "If E(X) = 5 and Y = 3X + 2, what is E(Y)?",
+      "options": ["17", "15", "7", "5"],
+      "answer": "17",
+      "explanation": "E(aX + b) = a*E(X) + b = 3(5) + 2 = 17.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "If X and Y are independent with Var(X) = 4 and Var(Y) = 9, what is Var(X + Y)?",
+      "options": ["5", "6.5", "13", "36"],
+      "answer": "13",
+      "explanation": "For independent variables, Var(X + Y) = Var(X) + Var(Y) = 4 + 9 = 13.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Which is an example of a discrete random variable?",
+      "options": ["Height of a randomly selected student", "Time to run a mile", "Number of heads in 10 coin flips", "Temperature at noon"],
+      "answer": "Number of heads in 10 coin flips",
+      "explanation": "Discrete random variables take on countable values. Number of heads is countable; the others are continuous.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 5,
+      "question": "SD(aX) = ?",
+      "options": ["a * SD(X)", "|a| * SD(X)", "a^2 * SD(X)", "SD(X)/a"],
+      "answer": "|a| * SD(X)",
+      "explanation": "When multiplying by a constant a, the standard deviation is multiplied by |a|.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "What are the BINS conditions for a binomial distribution?",
+      "options": ["Big, Independent, Normal, Symmetric", "Binary, Independent, Number fixed, Same probability", "Balanced, Identical, Normal, Standard", "Binary, Increasing, Negative, Symmetric"],
+      "answer": "Binary, Independent, Number fixed, Same probability",
+      "explanation": "BINS: Binary (two outcomes), Independent trials, Number of trials n fixed, Same probability p each trial.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "For X ~ B(n=10, p=0.3), what is E(X)?",
+      "options": ["0.3", "3", "7", "2.1"],
+      "answer": "3",
+      "explanation": "E(X) = n*p = 10 * 0.3 = 3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "For X ~ B(n=10, p=0.3), what is SD(X)?",
+      "options": ["sqrt(3)", "sqrt(2.1)", "3", "2.1"],
+      "answer": "sqrt(2.1)",
+      "explanation": "Var(X) = n*p*(1-p) = 10*0.3*0.7 = 2.1. SD(X) = sqrt(2.1).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "P(X = k) for a binomial is:",
+      "options": ["p^k * (1-p)^(n-k)", "C(n,k) * p^k * (1-p)^(n-k)", "n! / k!", "p^n * (1-p)^k"],
+      "answer": "C(n,k) * p^k * (1-p)^(n-k)",
+      "explanation": "Binomial probability: P(X=k) = C(n,k) * p^k * (1-p)^(n-k).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "In a geometric distribution, we count:",
+      "options": ["The number of successes in n trials", "The number of trials until the first success", "The number of ways to choose k from n", "The number of failures in total"],
+      "answer": "The number of trials until the first success",
+      "explanation": "The geometric distribution models the number of trials needed to get the first success.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "The Central Limit Theorem states that for large n, the sampling distribution of x-bar is approximately:",
+      "options": ["Uniform", "Exponential", "Normal", "Binomial"],
+      "answer": "Normal",
+      "explanation": "The CLT states that for large n, the sampling distribution of x-bar is approximately Normal regardless of the population shape.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "The standard error of x-bar is:",
+      "options": ["sigma / n", "sigma / sqrt(n)", "s / n", "sqrt(sigma / n)"],
+      "answer": "sigma / sqrt(n)",
+      "explanation": "The standard deviation of the sampling distribution of x-bar = sigma / sqrt(n).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "As sample size n increases, the standard error of x-bar:",
+      "options": ["Increases", "Decreases", "Stays the same", "Equals 1"],
+      "answer": "Decreases",
+      "explanation": "SE = sigma/sqrt(n). As n increases, SE decreases — larger samples give more precise estimates.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "The mean of the sampling distribution of x-bar equals:",
+      "options": ["sigma", "sigma / sqrt(n)", "mu (the population mean)", "n * mu"],
+      "answer": "mu (the population mean)",
+      "explanation": "The sampling distribution of x-bar is centered at the population mean mu. x-bar is an unbiased estimator.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "The standard error of the sample proportion p-hat is:",
+      "options": ["p*(1-p)", "sqrt(p*(1-p)/n)", "p/n", "n*p*(1-p)"],
+      "answer": "sqrt(p*(1-p)/n)",
+      "explanation": "The standard error of p-hat is sqrt(p*(1-p)/n).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "A 95% confidence interval means:",
+      "options": ["95% of the data falls in the interval", "We are 95% sure the true parameter is in THIS interval", "In repeated sampling, 95% of such intervals will contain the true parameter", "The sample mean is within 5% of the true mean"],
+      "answer": "In repeated sampling, 95% of such intervals will contain the true parameter",
+      "explanation": "A 95% CI means that if we repeated the procedure many times, 95% of the constructed intervals would contain the true parameter.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "The margin of error in a confidence interval equals:",
+      "options": ["z* + SE", "z* - SE", "z* * SE", "SE / z*"],
+      "answer": "z* * SE",
+      "explanation": "Margin of error = z* * SE (critical value times standard error).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "To cut the margin of error in half, you must multiply the sample size by:",
+      "options": ["2", "4", "1/2", "1/4"],
+      "answer": "4",
+      "explanation": "Since ME = z*/sqrt(n), to halve ME you need sqrt(n) to double, so n must quadruple.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "What is the z* critical value for a 90% confidence interval?",
+      "options": ["1.96", "2.576", "1.645", "1.282"],
+      "answer": "1.645",
+      "explanation": "For 90% CI, the middle 90% leaves 5% in each tail. z* = 1.645.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "To construct a valid one-sample z-interval for a mean, which condition is required?",
+      "options": ["The population must be normal", "n >= 30 or the population is approximately normal", "n >= 100", "The data must have no outliers"],
+      "answer": "n >= 30 or the population is approximately normal",
+      "explanation": "By the CLT, n >= 30 is often sufficient for normality of the sampling distribution, OR the population is approximately normal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The null hypothesis H0 typically states:",
+      "options": ["The researcher's belief", "No effect or no difference", "The alternative is true", "The sample mean equals the population mean"],
+      "answer": "No effect or no difference",
+      "explanation": "H0 is the statement of no effect, no difference, or no change — the status quo.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The p-value is:",
+      "options": ["The probability that H0 is true", "The probability of observing results at least as extreme as the data, assuming H0 is true", "The significance level alpha", "The probability that Ha is true"],
+      "answer": "The probability of observing results at least as extreme as the data, assuming H0 is true",
+      "explanation": "The p-value = P(data as extreme or more | H0 is true). Small p-value is evidence against H0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "If p-value < alpha, you should:",
+      "options": ["Fail to reject H0", "Accept H0", "Reject H0", "Increase alpha"],
+      "answer": "Reject H0",
+      "explanation": "If p-value < alpha, the result is statistically significant: we reject H0 in favor of Ha.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "A Type I error is:",
+      "options": ["Failing to reject a false H0", "Rejecting a true H0", "Accepting a false Ha", "Failing to reject a true H0"],
+      "answer": "Rejecting a true H0",
+      "explanation": "Type I error (false positive): Rejecting H0 when it is actually true. Its probability equals alpha.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "A Type II error is:",
+      "options": ["Failing to reject a false H0", "Rejecting a true H0", "Setting alpha too high", "Computing the wrong p-value"],
+      "answer": "Failing to reject a false H0",
+      "explanation": "Type II error (false negative): Failing to reject H0 when H0 is actually false. Its probability is beta.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "For a two-sample t-test comparing means of two independent groups, H0 is typically:",
+      "options": ["mu1 = 0", "mu1 - mu2 = 0", "sigma1 = sigma2", "n1 = n2"],
+      "answer": "mu1 - mu2 = 0",
+      "explanation": "H0: mu1 - mu2 = 0 (equivalently mu1 = mu2) — no difference in population means.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "A paired t-test is used when:",
+      "options": ["Sample sizes are equal", "Data consist of paired observations", "The variances are equal", "Both groups are large"],
+      "answer": "Data consist of paired observations",
+      "explanation": "A paired t-test is appropriate when observations are naturally paired — such as before/after on the same individuals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "When testing H0: p1=p2, the pooled estimate of p used is:",
+      "options": ["(p1 + p2)/2", "(x1 + x2) / (n1 + n2)", "p1 * p2", "sqrt(p1 * p2)"],
+      "answer": "(x1 + x2) / (n1 + n2)",
+      "explanation": "The pooled proportion p-hat = (x1+x2)/(n1+n2) is used to calculate the test statistic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "A 95% CI for mu1 - mu2 is (-3, 8). This suggests:",
+      "options": ["Significant evidence that mu1 > mu2", "We cannot conclude there is a difference (0 is in the interval)", "Significant evidence that mu1 < mu2", "The means are equal"],
+      "answer": "We cannot conclude there is a difference (0 is in the interval)",
+      "explanation": "Since 0 is in the interval (-3, 8), it is plausible that mu1 - mu2 = 0. We fail to reject H0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "A conservative approximation for two-sample t degrees of freedom is:",
+      "options": ["n1 + n2", "n1 + n2 - 2", "min(n1-1, n2-1)", "n1 * n2"],
+      "answer": "min(n1-1, n2-1)",
+      "explanation": "A conservative approximation for two-sample t df is min(n1-1, n2-1). Technology uses the Welch-Satterthwaite approximation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "A chi-square goodness-of-fit test is used to:",
+      "options": ["Compare means of two groups", "Test if observed categorical data fits a hypothesized distribution", "Test independence of two quantitative variables", "Compare standard deviations"],
+      "answer": "Test if observed categorical data fits a hypothesized distribution",
+      "explanation": "The chi-square goodness-of-fit test determines whether the distribution of a single categorical variable matches a specified distribution.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "The chi-square test statistic is:",
+      "options": ["sum of (O - E)", "sum of (O - E)^2 / E", "sum of O / E", "(O - E) / sqrt(E)"],
+      "answer": "sum of (O - E)^2 / E",
+      "explanation": "Chi-square statistic = sum of [(O - E)^2 / E] for all categories.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "For a valid chi-square test, expected counts should generally be:",
+      "options": ["All greater than 30", "All greater than 10", "At least 5", "At least 1"],
+      "answer": "At least 5",
+      "explanation": "The condition for the chi-square test is that all expected counts are at least 5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "For a chi-square test of independence in a 3x4 table, df = ?",
+      "options": ["7", "6", "11", "12"],
+      "answer": "6",
+      "explanation": "For a chi-square test of independence, df = (r-1)*(c-1) = (3-1)*(4-1) = 2*3 = 6.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 5,
+      "question": "A chi-square test of homogeneity tests whether:",
+      "options": ["A variable's distribution matches a theoretical one", "The distribution of a categorical variable is the same across multiple populations", "Two quantitative variables are related", "Two categorical variables are independent within one population"],
+      "answer": "The distribution of a categorical variable is the same across multiple populations",
+      "explanation": "Chi-square test of homogeneity: compare the distribution of a categorical variable across two or more independent populations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "In regression inference, H0 for the slope is:",
+      "options": ["beta = 1", "beta = 0 (no linear relationship)", "beta = x-bar", "beta > 0"],
+      "answer": "beta = 0 (no linear relationship)",
+      "explanation": "H0: beta = 0 tests whether there is a statistically significant linear relationship in the population.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "The conditions for regression inference are summarized as:",
+      "options": ["Linearity only", "Linearity, Independence, Normality of residuals, Equal variance (LINE)", "Randomness and normality only", "Large sample size only"],
+      "answer": "Linearity, Independence, Normality of residuals, Equal variance (LINE)",
+      "explanation": "Conditions: Linear relationship, Independent observations, Normal residuals, Equal/constant variance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "The t-statistic for the slope in regression output is:",
+      "options": ["b0 / SE(b0)", "b1 / SE(b1)", "r / sqrt(n-2)", "b1 - beta0 / SE"],
+      "answer": "b1 / SE(b1)",
+      "explanation": "The t-statistic for the slope = b1 / SE(b1).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "Degrees of freedom for the t-test for regression slope with n data points is:",
+      "options": ["n", "n - 1", "n - 2", "n - p"],
+      "answer": "n - 2",
+      "explanation": "For simple linear regression (one predictor), df = n - 2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "A 95% CI for the slope (0.3, 0.9) means:",
+      "options": ["The slope is definitely between 0.3 and 0.9", "We are 95% confident the true population slope is between 0.3 and 0.9", "95% of predicted y values are within 0.3 and 0.9", "There is a 5% chance the slope is zero"],
+      "answer": "We are 95% confident the true population slope is between 0.3 and 0.9",
+      "explanation": "Since 0 is not in (0.3, 0.9), there is significant evidence of a linear relationship. We are 95% confident the true slope lies here.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "A researcher records the blood type (A, B, AB, O) of 50 patients. Blood type is best classified as:",
+      "options": ["Quantitative discrete", "Quantitative continuous", "Categorical nominal", "Categorical ordinal"],
+      "answer": "Categorical nominal",
+      "explanation": "Blood type is categorical with no natural order among categories, making it nominal.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "For the dataset {2, 4, 4, 6, 8, 8, 8, 10}, what is the median?",
+      "options": ["6", "7", "6.5", "8"],
+      "answer": "7",
+      "explanation": "With 8 values, median = average of 4th and 5th values = (6+8)/2 = 7.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "A z-score of -1.5 means the observation is:",
+      "options": ["1.5 units above the mean", "1.5 units below the mean", "1.5 SD above the mean", "1.5 SD below the mean"],
+      "answer": "1.5 SD below the mean",
+      "explanation": "z = (x - mu)/sigma. z = -1.5 means the observation is 1.5 standard deviations below the mean.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "mc",
+      "question": "In a scatterplot, r = -0.95 indicates:",
+      "options": ["A strong positive association", "A weak negative association", "A strong negative linear association", "No association"],
+      "answer": "A strong negative linear association",
+      "explanation": "r = -0.95 is close to -1, indicating a strong negative linear relationship.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Which principle ensures causal conclusions in an experiment?",
+      "options": ["Replication", "Blinding", "Stratification", "Randomization"],
+      "answer": "Randomization",
+      "explanation": "Random assignment of subjects to treatments balances confounding variables, allowing causal inference.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "P(A) = 0.6, P(B) = 0.3, and A and B are independent. What is P(A and B)?",
+      "options": ["0.9", "0.3", "0.18", "0.5"],
+      "answer": "0.18",
+      "explanation": "For independent events: P(A and B) = P(A) * P(B) = 0.6 * 0.3 = 0.18.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "X can equal 1, 2, or 3 with probabilities 0.2, 0.5, 0.3. What is E(X)?",
+      "options": ["2", "2.1", "1.8", "2.5"],
+      "answer": "2.1",
+      "explanation": "E(X) = 1(0.2) + 2(0.5) + 3(0.3) = 0.2 + 1.0 + 0.9 = 2.1.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "mc",
+      "question": "15 independent Bernoulli trials, each with probability 0.4. Which distribution applies?",
+      "options": ["Geometric(p=0.4)", "Normal(mu=6, sigma=2)", "Binomial(n=15, p=0.4)", "Uniform(1,15)"],
+      "answer": "Binomial(n=15, p=0.4)",
+      "explanation": "BINS conditions are met: Binary, Independent, Number fixed at 15, Same p=0.4.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Population mean=100, SD=20, n=25. What is the standard error of x-bar?",
+      "options": ["4", "5", "20", "0.8"],
+      "answer": "4",
+      "explanation": "SE = sigma/sqrt(n) = 20/sqrt(25) = 20/5 = 4.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "A symmetric, bell-shaped distribution — which measure of center is most appropriate?",
+      "options": ["Median", "Mode", "Mean", "IQR"],
+      "answer": "Mean",
+      "explanation": "For symmetric distributions, the mean is preferred as it uses all data values.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "1,000 randomly selected adults are polled. This is an example of:",
+      "options": ["Census", "Convenience sample", "Simple random sample", "Stratified sample"],
+      "answer": "Simple random sample",
+      "explanation": "Randomly selecting individuals from the population without regard to subgroups describes an SRS.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "mc",
+      "question": "In a boxplot, the box spans from:",
+      "options": ["Min to Max", "Q1 to Q3", "Mean - SD to Mean + SD", "Q1 to Median"],
+      "answer": "Q1 to Q3",
+      "explanation": "The box in a boxplot spans from Q1 to Q3, representing the IQR (middle 50%).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "r = 0.87 between ice cream sales and drowning rates. Concluding ice cream causes drowning is an example of:",
+      "options": ["A valid causal conclusion", "Confounding (warm weather causes both)", "Extrapolation", "Response bias"],
+      "answer": "Confounding (warm weather causes both)",
+      "explanation": "Warm weather is a confounding variable causing both. Correlation does not imply causation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Multiplying all values in a dataset by 3 will:",
+      "options": ["Triple the mean only", "Triple both the mean and standard deviation", "Triple the standard deviation only", "Leave both unchanged"],
+      "answer": "Triple both the mean and standard deviation",
+      "explanation": "Multiplying by k multiplies all measures of center and spread by k.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "The LSRL is y-hat = -130 + 4.2x. Predict the weight of a person 65 inches tall.",
+      "options": ["143 lbs", "156 lbs", "130 lbs", "273 lbs"],
+      "answer": "143 lbs",
+      "explanation": "y-hat = -130 + 4.2(65) = -130 + 273 = 143 lbs.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "mc",
+      "question": "A 95% CI for mean test score is (72, 84). Which interpretation is correct?",
+      "options": ["95% of students scored between 72 and 84", "We are 95% confident the population mean score is between 72 and 84", "The sample mean is definitely 78", "There is a 5% chance the interval is wrong"],
+      "answer": "We are 95% confident the population mean score is between 72 and 84",
+      "explanation": "A 95% CI means we are 95% confident the true population mean lies in this interval.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "A significance test yields p-value = 0.03, alpha = 0.05. The correct conclusion is:",
+      "options": ["Fail to reject H0; no significant evidence", "Reject H0; statistically significant evidence against H0", "Accept H0", "The result is practically significant"],
+      "answer": "Reject H0; statistically significant evidence against H0",
+      "explanation": "p-value = 0.03 < alpha = 0.05, so we reject H0.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "For X ~ B(20, 0.5), P(X = 10) = ?",
+      "options": ["0.5", "C(20,10) * (0.5)^20", "C(20,10) * (0.5)^10", "(0.5)^20"],
+      "answer": "C(20,10) * (0.5)^20",
+      "explanation": "P(X=10) = C(20,10) * (0.5)^10 * (0.5)^10 = C(20,10) * (0.5)^20.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "A chi-square goodness-of-fit test with 5 categories: df = ?",
+      "options": ["5", "4", "3", "6"],
+      "answer": "4",
+      "explanation": "For a goodness-of-fit test with k categories, df = k - 1 = 5 - 1 = 4.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "mc",
+      "question": "A Type I error in a medical test for a disease would be:",
+      "options": ["Correctly identifying a sick patient", "Diagnosing a healthy person as sick", "Missing a sick patient (false negative)", "A lab error"],
+      "answer": "Diagnosing a healthy person as sick",
+      "explanation": "Type I error = rejecting a true H0. If H0 is 'patient is healthy,' Type I error = concluding sick when actually healthy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "In regression output, slope b1 = 2.5 with SE(b1) = 0.8. The t-statistic for testing H0: beta=0 is:",
+      "options": ["2.0", "3.125", "0.32", "1.25"],
+      "answer": "3.125",
+      "explanation": "t = b1 / SE(b1) = 2.5 / 0.8 = 3.125.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "A 95% CI for p1 - p2 is (-0.05, 0.15). This means:",
+      "options": ["Significant evidence that p1 > p2", "Significant evidence that p1 < p2", "No significant difference between p1 and p2 at alpha=0.05", "p1 - p2 = 0.15"],
+      "answer": "No significant difference between p1 and p2 at alpha=0.05",
+      "explanation": "0 is in the interval (-0.05, 0.15), so we fail to find significant evidence of a difference.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "The power of a test is defined as:",
+      "options": ["1 - alpha", "1 - beta", "The probability of a Type I error", "alpha + beta"],
+      "answer": "1 - beta",
+      "explanation": "Power = 1 - beta = P(reject H0 | H0 is false) = probability of correctly detecting a real effect.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "mc",
+      "question": "X has mean 10 and SD 3. Y = 2X - 1. What are the mean and SD of Y?",
+      "options": ["Mean=19, SD=6", "Mean=21, SD=5", "Mean=19, SD=5", "Mean=21, SD=6"],
+      "answer": "Mean=19, SD=6",
+      "explanation": "E(Y) = 2*10 - 1 = 19. SD(Y) = |2|*3 = 6.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "To test if gender and product preference are independent, use:",
+      "options": ["Two-sample t-test", "Paired t-test", "Chi-square test of independence", "Chi-square goodness-of-fit test"],
+      "answer": "Chi-square test of independence",
+      "explanation": "To test whether two categorical variables are independent within one population, use chi-square test of independence.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which increases the width of a confidence interval?",
+      "options": ["Increasing the sample size", "Decreasing the confidence level", "Increasing the confidence level", "Decreasing the standard deviation"],
+      "answer": "Increasing the confidence level",
+      "explanation": "A higher confidence level requires a larger critical value z*, which increases the margin of error and widens the interval.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Sampling distribution of p-hat: n=100, p=0.6. The standard error is:",
+      "options": ["0.06", "0.049", "0.24", "0.0049"],
+      "answer": "0.049",
+      "explanation": "SE = sqrt(p*(1-p)/n) = sqrt(0.6*0.4/100) = sqrt(0.0024) = 0.049.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "mc",
+      "question": "A paired t-test is conducted on:",
+      "options": ["The original before measurements", "The original after measurements", "The differences (after - before) for each pair", "The averages of before and after"],
+      "answer": "The differences (after - before) for each pair",
+      "explanation": "In a paired t-test, compute d_i = after_i - before_i for each pair, then conduct a one-sample t-test on the differences.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Which plot checks equal variance (homoscedasticity) in regression inference?",
+      "options": ["Histogram of x values", "Scatterplot of x vs y", "Residual plot (residuals vs fitted values)", "Normal probability plot of x"],
+      "answer": "Residual plot (residuals vs fitted values)",
+      "explanation": "A residual plot should show no pattern and constant spread — checking linearity and equal variance.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Which method divides the population into groups by characteristic and randomly samples from each?",
+      "options": ["Simple random sampling", "Cluster sampling", "Systematic sampling", "Stratified sampling"],
+      "answer": "Stratified sampling",
+      "explanation": "Stratified sampling: divide into strata sharing a characteristic, then randomly sample from each stratum.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Chi-square test of homogeneity comparing 3 populations with 4 categorical outcomes: df = ?",
+      "options": ["6", "8", "11", "12"],
+      "answer": "6",
+      "explanation": "df = (rows - 1)*(columns - 1) = (3-1)*(4-1) = 2*3 = 6.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "mc",
+      "question": "In a residual plot for regression, residuals should:",
+      "options": ["Show a clear upward trend", "Show a clear curved pattern", "Be randomly scattered around zero with no pattern", "Increase as x increases"],
+      "answer": "Be randomly scattered around zero with no pattern",
+      "explanation": "A good residual plot shows residuals randomly scattered around 0 with constant variance.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "To estimate a proportion within 3% at 95% confidence with no prior estimate of p, sample size should be:",
+      "options": ["n = 1068", "n = 544", "n = 267", "n = 400"],
+      "answer": "n = 1068",
+      "explanation": "Using p = 0.5, n = (z*/ME)^2 * p*(1-p) = (1.96/0.03)^2 * 0.25 = 1067 -> 1068.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "If the population is already normally distributed, the sampling distribution of x-bar is normal for:",
+      "options": ["Only large sample sizes (n > 30)", "Any sample size n", "Only n > 100", "Only symmetric populations"],
+      "answer": "Any sample size n",
+      "explanation": "If the population is normal, then the sampling distribution of x-bar is exactly normal for ANY sample size n.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Students who eat breakfast score higher. This is observational. Why can't we conclude causation?",
+      "options": ["The sample size is too small", "Confounding variables (e.g., parental involvement) may explain both behaviors", "The study was not blinded", "Correlation is always zero in observational studies"],
+      "answer": "Confounding variables (e.g., parental involvement) may explain both behaviors",
+      "explanation": "In observational studies, confounding variables may be responsible for the observed association — causation cannot be established.",
+      "points": 1
+    }
+  ]
+}
