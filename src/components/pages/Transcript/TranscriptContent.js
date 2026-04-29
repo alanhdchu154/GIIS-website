@@ -139,7 +139,8 @@ function TranscriptContent({
               <a href="https://genesisideas.school/">https://genesisideas.school/</a><br />
             </div>
             <div style={styles.column3}>
-              School Code: 650<br />President: Shiyu Zhang, Ph.D.<br />
+              FL School Code: 650<br />President: Shiyu Zhang, Ph.D.<br />
+              admissions@genesisideas.school
             </div>
           </div>
 

@@ -16,6 +16,8 @@ const LoginPortal = lazy(() => import('./components/pages/Auth/LoginPortal'));
 const AdminLogin = lazy(() => import('./components/pages/Admin/AdminLogin'));
 const AdminDashboard = lazy(() => import('./components/pages/Admin/AdminDashboard'));
 const AdminTranscriptPage = lazy(() => import('./components/pages/Admin/AdminTranscriptPage'));
+const DiplomaPage = lazy(() => import('./components/pages/Diploma/DiplomaPage'));
+const SchoolProfilePage = lazy(() => import('./components/pages/SchoolProfile/SchoolProfilePage'));
 const NotFound = lazy(() => import('./components/pages/NotFound'));
 const PrivacyPolicy = lazy(() => import('./components/pages/PrivacyPolicy'));
 const TermsOfUse = lazy(() => import('./components/pages/TermsOfUse'));
@@ -128,6 +130,8 @@ function App() {
          <Route path="/learn/:slug/exam" element={<ExamPage language={language} />} />
          <Route path="/learn/:slug/grades" element={<GradesPage language={language} />} />
          <Route path="/learn/:slug/syllabus" element={<SyllabusPage language={language} />} />
+         <Route path="/diploma/:studentId" element={<DiplomaPage language={language} />} />
+        <Route path="/school-profile" element={<SchoolProfilePage />} />
          <Route path="/profile" element={<ProfilePage language={language} />} />
          <Route path="/pricing" element={<PricingPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/privacy" element={<PrivacyPolicy language={language} />} />

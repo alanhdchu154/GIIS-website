@@ -1,5 +1,6 @@
 const express = require('express');
 const { z } = require('zod');
+const bcrypt = require('bcryptjs');
 const { PrismaClient } = require('@prisma/client');
 const {
   authenticate,
@@ -144,53 +145,76 @@ router.get('/', authenticate, requireAdmin, async (req, res) => {
   });
 });
 
-/** Create student profile — admin only */
+/** Create student profile — admin only. Optionally creates a login account if email + password are provided. */
 router.post('/', authenticate, requireAdmin, async (req, res) => {
   const body = req.body || {};
-  // Allow creating with just a name; other fields optional
   const partial = studentProfileSchema.partial().extend({ name: z.string().min(1).max(200).default('New student') });
   const parse = partial.safeParse(body);
   if (!parse.success) {
     return res.status(400).json({ error: parse.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ') });
   }
   const d = parse.data;
-  const student = await prisma.student.create({
-    data: {
-      name: d.name,
-      birthDate: parseDateOnly(d.birthDate) ?? null,
-      gender: d.gender ?? null,
-      parentGuardian: d.parentGuardian ?? null,
-      address: d.address ?? null,
-      city: d.city ?? null,
-      province: d.province ?? null,
-      zipCode: d.zipCode ?? null,
-      entryDate: parseDateOnly(d.entryDate) ?? null,
-      withdrawalDate: parseDateOnly(d.withdrawalDate) ?? null,
-      graduationDate: parseDateOnly(d.graduationDate) ?? null,
-      transcriptDate: parseDateOnly(d.transcriptDate) ?? null,
-    },
-  });
+
+  const email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : null;
+  const password = typeof body.password === 'string' ? body.password : null;
+
+  if (email && !password) return res.status(400).json({ error: 'password required when email is provided' });
+  if (password && password.length < 8) return res.status(400).json({ error: 'password must be at least 8 characters' });
+
+  if (email) {
+    const existing = await prisma.studentAccount.findUnique({ where: { email } });
+    if (existing) return res.status(409).json({ error: 'email already registered' });
+  }
+
+  const profileData = {
+    name: d.name,
+    birthDate: parseDateOnly(d.birthDate) ?? null,
+    gender: d.gender ?? null,
+    parentGuardian: d.parentGuardian ?? null,
+    address: d.address ?? null,
+    city: d.city ?? null,
+    province: d.province ?? null,
+    zipCode: d.zipCode ?? null,
+    entryDate: parseDateOnly(d.entryDate) ?? null,
+    withdrawalDate: parseDateOnly(d.withdrawalDate) ?? null,
+    graduationDate: parseDateOnly(d.graduationDate) ?? null,
+    transcriptDate: parseDateOnly(d.transcriptDate) ?? null,
+  };
+
+  let student;
+  if (email && password) {
+    const passwordHash = await bcrypt.hash(password, 12);
+    student = await prisma.student.create({
+      data: {
+        ...profileData,
+        account: { create: { email, passwordHash } },
+      },
+    });
+  } else {
+    student = await prisma.student.create({ data: profileData });
+  }
+
   await audit('student_create', student.id, req);
   res.status(201).json({ student: serializeStudent(student) });
 });
 
 /** Full student + nested transcript — admin or that student */
 router.get('/:id', authenticate, requireStudentOrAdminForStudentParam, async (req, res) => {
+  const isAdmin = req.auth?.role === 'admin';
   const student = await prisma.student.findUnique({
     where: { id: req.params.id },
     include: {
       semesters: {
         orderBy: { sortOrder: 'asc' },
-        include: {
-          courseRows: { orderBy: { sortOrder: 'asc' } },
-        },
+        include: { courseRows: { orderBy: { sortOrder: 'asc' } } },
       },
+      ...(isAdmin ? { account: { select: { email: true } } } : {}),
     },
   });
-  if (!student) {
-    return res.status(404).json({ error: 'Student not found' });
-  }
-  res.json({ student: serializeStudent(student) });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+  const serialized = serializeStudent(student);
+  if (isAdmin) serialized.loginEmail = student.account?.email ?? null;
+  res.json({ student: serialized });
 });
 
 router.patch('/:id', authenticate, requireStudentOrAdminForStudentParam, async (req, res) => {
@@ -239,6 +263,32 @@ router.patch('/:id', authenticate, requireStudentOrAdminForStudentParam, async (
   } catch {
     res.status(404).json({ error: 'Student not found' });
   }
+});
+
+/** PUT /api/students/:id/login — create or reset login credentials for a student (admin only) */
+router.put('/:id/login', authenticate, requireAdmin, async (req, res) => {
+  const { email, password } = req.body || {};
+  if (!email || !password) return res.status(400).json({ error: 'email and password are required' });
+  if (password.length < 8) return res.status(400).json({ error: 'password must be at least 8 characters' });
+
+  const student = await prisma.student.findUnique({ where: { id: req.params.id } });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const normalizedEmail = email.trim().toLowerCase();
+  const existing = await prisma.studentAccount.findUnique({ where: { email: normalizedEmail } });
+  if (existing && existing.studentId !== req.params.id) {
+    return res.status(409).json({ error: 'email already used by another student' });
+  }
+
+  const passwordHash = await bcrypt.hash(password, 12);
+  await prisma.studentAccount.upsert({
+    where: { studentId: req.params.id },
+    create: { studentId: req.params.id, email: normalizedEmail, passwordHash },
+    update: { email: normalizedEmail, passwordHash },
+  });
+
+  await audit('login_set', req.params.id, req);
+  res.json({ ok: true, email: normalizedEmail });
 });
 
 router.delete('/:id', authenticate, requireAdmin, async (req, res) => {

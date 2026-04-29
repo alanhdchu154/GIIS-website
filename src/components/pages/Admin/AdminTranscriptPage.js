@@ -1,8 +1,90 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import TranscriptContent from '../Transcript/TranscriptContent.js';
 import { getAdminSession } from '../../../api/authStorage';
+import { getApiBase } from '../../../config/apiBase';
+
+const API = getApiBase();
+
+function LoginSection({ studentId, isEn }) {
+  const [loginEmail, setLoginEmail] = useState(null);
+  const [form, setForm] = useState({ email: '', password: '' });
+  const [saving, setSaving] = useState(false);
+  const [msg, setMsg] = useState('');
+  const [showForm, setShowForm] = useState(false);
+
+  useEffect(() => {
+    fetch(`${API}/api/students/${studentId}`, { credentials: 'include' })
+      .then((r) => r.json())
+      .then((d) => {
+        setLoginEmail(d.student?.loginEmail ?? null);
+        if (d.student?.loginEmail) setForm((f) => ({ ...f, email: d.student.loginEmail }));
+      })
+      .catch(() => {});
+  }, [studentId]);
+
+  async function handleSave(e) {
+    e.preventDefault();
+    setMsg('');
+    if (!form.email.trim() || !form.password) { setMsg(isEn ? 'Email and password are required.' : 'Email 與密碼為必填。'); return; }
+    if (form.password.length < 8) { setMsg(isEn ? 'Password must be at least 8 characters.' : '密碼至少 8 個字元。'); return; }
+    setSaving(true);
+    try {
+      const r = await fetch(`${API}/api/students/${studentId}/login`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ email: form.email.trim(), password: form.password }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || 'Failed');
+      setLoginEmail(d.email);
+      setForm((f) => ({ ...f, password: '' }));
+      setShowForm(false);
+      setMsg(isEn ? '✓ Login credentials saved.' : '✓ 登入帳號已儲存。');
+    } catch (err) {
+      setMsg(err.message);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <div className="border rounded p-3 mb-3 bg-white" style={{ maxWidth: '520px' }}>
+      <div className="d-flex justify-content-between align-items-center mb-1">
+        <span className="fw-semibold small">{isEn ? 'Login Account' : '登入帳號'}</span>
+        <button className="btn btn-sm btn-outline-secondary" onClick={() => { setShowForm((v) => !v); setMsg(''); }}>
+          {showForm ? (isEn ? 'Cancel' : '取消') : loginEmail ? (isEn ? 'Reset credentials' : '重設帳號') : (isEn ? '+ Set login' : '＋ 設定帳號')}
+        </button>
+      </div>
+      <p className="small text-muted mb-2">
+        {loginEmail
+          ? <><span className="badge bg-success me-1">✓</span>{loginEmail}</>
+          : <span className="text-warning fw-semibold">{isEn ? 'No login set — student cannot sign in yet.' : '尚未設定帳號，學生無法登入。'}</span>}
+      </p>
+      {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
+      {showForm && (
+        <form onSubmit={handleSave} className="mt-2">
+          <div className="mb-2">
+            <label className="form-label small mb-1">Email</label>
+            <input type="email" className="form-control form-control-sm" value={form.email}
+              onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))} required />
+          </div>
+          <div className="mb-2">
+            <label className="form-label small mb-1">{isEn ? 'New Password' : '新密碼'}</label>
+            <input type="password" className="form-control form-control-sm" value={form.password}
+              onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
+              placeholder={isEn ? 'Min. 8 characters' : '至少 8 個字元'} minLength={8} required />
+          </div>
+          <button type="submit" className="btn btn-primary btn-sm" disabled={saving}>
+            {saving ? (isEn ? 'Saving…' : '儲存中…') : (isEn ? 'Save' : '儲存')}
+          </button>
+        </form>
+      )}
+    </div>
+  );
+}
 
 export default function AdminTranscriptPage({ language }) {
   const { studentId } = useParams();
@@ -53,6 +135,9 @@ export default function AdminTranscriptPage({ language }) {
             {mode === 'view' ? copy.hintView : copy.hintEdit}
           </span>
         </div>
+
+        <LoginSection studentId={studentId} isEn={isEn} />
+
         <TranscriptContent
           language={language}
           viewerRole="admin"

@@ -17,7 +17,7 @@ const STATUS_BADGE = {
   withdrawn: { label: { en: 'Withdrawn', zh: '退学' },  bg: '#dc3545' },
 };
 
-const EMPTY_FORM = { name: '', birthDate: '', graduationDate: '', entryDate: '' };
+const EMPTY_FORM = { name: '', email: '', password: '', birthDate: '', graduationDate: '', entryDate: '' };
 
 export default function AdminDashboard({ language }) {
   const isEn = language === 'en';
@@ -70,11 +70,16 @@ export default function AdminDashboard({ language }) {
   async function handleCreateSubmit(e) {
     e.preventDefault();
     const name = form.name.trim();
+    const email = form.email.trim();
+    const password = form.password;
     if (!name) { setFormErr(isEn ? 'Name is required.' : '姓名为必填。'); return; }
+    if (email && !password) { setFormErr(isEn ? 'Password is required when email is set.' : '設定 Email 時密碼為必填。'); return; }
+    if (password && password.length < 8) { setFormErr(isEn ? 'Password must be at least 8 characters.' : '密碼至少需要 8 個字元。'); return; }
     setCreating(true);
     setFormErr('');
     try {
       const body = { name };
+      if (email) { body.email = email; body.password = password; }
       if (form.birthDate) body.birthDate = form.birthDate;
       if (form.graduationDate) body.graduationDate = form.graduationDate;
       if (form.entryDate) body.entryDate = form.entryDate;
@@ -218,6 +223,14 @@ export default function AdminDashboard({ language }) {
                         <Link className="btn btn-sm btn-outline-primary me-1" to={`/admin/transcript/${s.id}`}>
                           {isEn ? 'View & edit' : '檢视／編辑'}
                         </Link>
+                        <Link
+                          className="btn btn-sm btn-outline-secondary me-1"
+                          to={`/diploma/${s.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          🎓
+                        </Link>
                         {status === 'withdrawn' && (
                           <button
                             className="btn btn-sm btn-outline-danger"
@@ -252,8 +265,9 @@ export default function AdminDashboard({ language }) {
           style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 1050, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}
         >
-          <div style={{ background: '#fff', borderRadius: '8px', padding: '28px 32px', width: '100%', maxWidth: '440px', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' }}>
-            <h5 style={{ marginBottom: '20px' }}>{isEn ? 'New Student' : '新增学生'}</h5>
+          <div style={{ background: '#fff', borderRadius: '8px', padding: '28px 32px', width: '100%', maxWidth: '460px', boxShadow: '0 8px 32px rgba(0,0,0,0.18)', maxHeight: '90vh', overflowY: 'auto' }}>
+            <h5 style={{ marginBottom: '4px' }}>{isEn ? 'New Student' : '新增学生'}</h5>
+            <p className="text-muted small mb-4">{isEn ? 'Profile is required. Login credentials are optional — set them now or add later.' : '個人資料為必填；登入帳號可現在設定，也可之後補填。'}</p>
             <form onSubmit={handleCreateSubmit}>
               <div className="mb-3">
                 <label className="form-label fw-semibold">
@@ -268,6 +282,43 @@ export default function AdminDashboard({ language }) {
                   autoFocus
                 />
               </div>
+
+              <hr className="my-3" />
+              <p className="small fw-semibold mb-2" style={{ color: '#444' }}>
+                {isEn ? 'Login Account (optional)' : '登入帳號（選填）'}
+              </p>
+              <div className="mb-3">
+                <label className="form-label">{isEn ? 'Email' : 'Email 信箱'}</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  value={form.email}
+                  onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+                  placeholder="student@example.com"
+                  autoComplete="off"
+                />
+              </div>
+              <div className="mb-3">
+                <label className="form-label">{isEn ? 'Password' : '密碼'}</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  value={form.password}
+                  onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
+                  placeholder={isEn ? 'Min. 8 characters' : '至少 8 個字元'}
+                  autoComplete="new-password"
+                  minLength={8}
+                  disabled={!form.email}
+                />
+                {!form.email && (
+                  <div className="form-text">{isEn ? 'Enter email first to enable password.' : '請先填 Email 再設密碼。'}</div>
+                )}
+              </div>
+
+              <hr className="my-3" />
+              <p className="small fw-semibold mb-2" style={{ color: '#444' }}>
+                {isEn ? 'Academic Info (optional)' : '學籍資訊（選填）'}
+              </p>
               <div className="mb-3">
                 <label className="form-label">{isEn ? 'Birth Date' : '生日'}</label>
                 <input
@@ -278,23 +329,23 @@ export default function AdminDashboard({ language }) {
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">{isEn ? 'Graduation Date' : '预计畢业日'}</label>
-                <input
-                  type="date"
-                  className="form-control"
-                  value={form.graduationDate}
-                  onChange={(e) => setForm((f) => ({ ...f, graduationDate: e.target.value }))}
-                />
-                <div className="form-text">{isEn ? 'Used to compute grade level (9–12).' : '用来计算目前年级（9–12）。'}</div>
-              </div>
-              <div className="mb-3">
-                <label className="form-label">{isEn ? 'Entry Date' : '入学日期'}</label>
+                <label className="form-label">{isEn ? 'Entry Date' : '入學日期'}</label>
                 <input
                   type="date"
                   className="form-control"
                   value={form.entryDate}
                   onChange={(e) => setForm((f) => ({ ...f, entryDate: e.target.value }))}
                 />
+              </div>
+              <div className="mb-3">
+                <label className="form-label">{isEn ? 'Expected Graduation Date' : '預計畢業日'}</label>
+                <input
+                  type="date"
+                  className="form-control"
+                  value={form.graduationDate}
+                  onChange={(e) => setForm((f) => ({ ...f, graduationDate: e.target.value }))}
+                />
+                <div className="form-text">{isEn ? 'Used to compute grade level (9–12).' : '用來計算目前年級（9–12）。'}</div>
               </div>
               {formErr && <div className="alert alert-danger py-2 mb-3">{formErr}</div>}
               <div className="d-flex justify-content-end gap-2">

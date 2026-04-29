@@ -27,9 +27,9 @@ function emptyRegisterForm() {
 export default function LoginPortal({ language }) {
   const t = getAuthPageStrings(language);
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
 
-  const tabFromUrl = searchParams.get('tab') === 'register' ? 'register' : 'signin';
+  const tabFromUrl = 'signin'; // registration is admin-only; self-register is disabled
   const [tab, setTab] = useState(tabFromUrl);
 
   const [loginEmail, setLoginEmail] = useState('');
@@ -164,15 +164,6 @@ export default function LoginPortal({ language }) {
                 onClick={() => selectTab('signin')}
               >
                 {t.tabSignIn}
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={tab === 'register'}
-                className={tab === 'register' ? styles.tabActive : styles.tab}
-                onClick={() => selectTab('register')}
-              >
-                {t.tabRegister}
               </button>
             </div>
 
