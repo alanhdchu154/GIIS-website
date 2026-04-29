@@ -128,6 +128,9 @@ export default function AdminDashboard({ language }) {
           </p>
         </div>
         <div>
+          <Link to="/school-profile" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm me-2">
+            {isEn ? 'School Profile' : '學校簡介'}
+          </Link>
           <button type="button" className="btn btn-outline-secondary btn-sm me-2" onClick={logout}>
             {isEn ? 'Log out' : '登出'}
           </button>
