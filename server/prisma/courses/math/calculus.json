@@ -279,29 +279,13 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "For f(x) = |x|/x, does lim f(x) exist as x -> 0?",
+      "question": "True or False: The limit of (x^2 - 4)/(x - 2) as x approaches 2 is \"4\".",
       "options": [
-        "Yes, it equals 0",
-        "Yes, it equals 1",
-        "Yes, it equals -1",
-        "No, because left and right limits differ"
+        "True",
+        "False"
       ],
-      "answer": "No, because left and right limits differ",
-      "explanation": "lim from left = -1 and lim from right = 1. Since they differ, the two-sided limit does not exist.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "What does lim f(x) = L as x -> a mean?",
-      "options": [
-        "f(a) = L",
-        "f(x) gets arbitrarily close to L as x gets close to a",
-        "f(x) = L for all x near a",
-        "f(a) is undefined"
-      ],
-      "answer": "f(x) gets arbitrarily close to L as x gets close to a",
-      "explanation": "A limit describes the behavior of f(x) near a point, NOT necessarily the function value at that point.",
+      "answer": "True",
+      "explanation": "True. 4 is correct.",
       "points": 1
     },
     {
@@ -363,15 +347,13 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "Is f(x) = x^2 continuous everywhere?",
+      "question": "True or False: The three conditions for f to be continuous at x = a is \"f(a) defined, lim exists, lim = f(a)\".",
       "options": [
-        "No, has a hole at x = 0",
-        "Yes, polynomials are continuous everywhere",
-        "Only for positive x",
-        "Only on (-1, 1)"
+        "True",
+        "False"
       ],
-      "answer": "Yes, polynomials are continuous everywhere",
-      "explanation": "All polynomial functions are continuous on their entire domain, which is all real numbers.",
+      "answer": "True",
+      "explanation": "True. f(a) defined, lim exists, lim = f(a) is correct.",
       "points": 1
     },
     {
@@ -419,29 +401,25 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "If f is differentiable at a, is f continuous at a?",
+      "question": "True or False: The answer to \"The derivative f'(a) is defined as which limit\" is: lim [f(a+h) - f(a)] / h as h->0.",
       "options": [
-        "Not necessarily",
-        "Yes, differentiability implies continuity",
-        "No, they are unrelated",
-        "Only if f is a polynomial"
+        "True",
+        "False"
       ],
-      "answer": "Yes, differentiability implies continuity",
-      "explanation": "If f is differentiable at a, then f is continuous at a. The converse is not necessarily true.",
+      "answer": "True",
+      "explanation": "True. lim [f(a+h) - f(a)] / h as h->0 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "What does f'(x) > 0 on an interval tell you about f?",
+      "question": "True or False: The answer to \"Geometrically, the derivative f'(a) represents:\" is: The area under f at x = a.",
       "options": [
-        "f is concave up",
-        "f is decreasing",
-        "f is increasing",
-        "f has a maximum"
+        "True",
+        "False"
       ],
-      "answer": "f is increasing",
-      "explanation": "If f'(x) > 0 on an interval, then f is increasing on that interval.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: The slope of the tangent line to f at x = a.",
       "points": 1
     },
     {
@@ -503,15 +481,10 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Apply the quotient rule: what is d/dx[x^2 / sin(x)]?",
-      "options": [
-        "2x/cos(x)",
-        "(2x*sin(x) - x^2*cos(x)) / sin^2(x)",
-        "(2x*cos(x) - x^2*sin(x)) / sin^2(x)",
-        "2x*sin(x)"
-      ],
-      "answer": "(2x*sin(x) - x^2*cos(x)) / sin^2(x)",
-      "explanation": "Quotient rule: (f'g - fg')/g^2 = (2x*sin(x) - x^2*cos(x)) / sin^2(x).",
+      "question": "Fill in the blank: ___ is the derivative of f(x) = sin(x).",
+      "options": null,
+      "answer": "cos(x)",
+      "explanation": "The correct answer is: cos(x).",
       "points": 1
     },
     {
@@ -585,6 +558,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 5,
+      "order": 6,
+      "question": "True or False: The answer to \"State the chain rule for d/dx[f(g(x))].\" is: f'(g(x))*g'(x).",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. f'(g(x))*g'(x) is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 6,
       "order": 1,
       "question": "A critical point of f occurs where:",
@@ -629,29 +614,22 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "An inflection point is where:",
+      "question": "True or False: The answer to \"A critical point of f occurs where:\" is: f'(x) = 0 or f'(x) is undefined.",
       "options": [
-        "f has a local max or min",
-        "f changes concavity",
-        "f' = 0",
-        "f is discontinuous"
+        "True",
+        "False"
       ],
-      "answer": "f changes concavity",
-      "explanation": "An inflection point is where the concavity of f changes from up to down or vice versa.",
+      "answer": "True",
+      "explanation": "True. f'(x) = 0 or f'(x) is undefined is correct.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "If f'(c) = 0 and f''(c) > 0, then by the Second Derivative Test, f has:",
-      "options": [
-        "A local maximum at c",
-        "A local minimum at c",
-        "An inflection point at c",
-        "No conclusion possible"
-      ],
-      "answer": "A local minimum at c",
-      "explanation": "Second Derivative Test: if f'(c) = 0 and f''(c) > 0 (concave up), then f has a local minimum at c.",
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"an inflection point is where:.\"",
+      "options": null,
+      "answer": "f changes concavity",
+      "explanation": "The correct answer is: f changes concavity.",
       "points": 1
     },
     {
@@ -699,29 +677,22 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Find the minimum product of two positive numbers whose sum is 20.",
+      "question": "True or False: The answer to \"You have 100 meters of fencing for a rectangular garden against a wall (one side needs no fencing). What dimensions maximize the area\" is: 25 m x 50 m.",
       "options": [
-        "0",
-        "25",
-        "100",
-        "10"
+        "True",
+        "False"
       ],
-      "answer": "100",
-      "explanation": "Let x and y = 20-x. Product P = x(20-x) = 20x - x^2. P' = 20 - 2x = 0, x = 10. Min product of two numbers with fixed sum occurs at equal values: 10*10 = 100. (This is actually the maximum.)",
+      "answer": "True",
+      "explanation": "True. 25 m x 50 m is correct.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Which theorem guarantees an absolute maximum exists for a continuous f on a closed interval [a,b]?",
-      "options": [
-        "Intermediate Value Theorem",
-        "Extreme Value Theorem",
-        "Mean Value Theorem",
-        "Fundamental Theorem of Calculus"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which theorem guarantees an absolute maximum exists for a continuous f on a closed interval [a,b].\"",
+      "options": null,
       "answer": "Extreme Value Theorem",
-      "explanation": "The Extreme Value Theorem states that a continuous function on a closed bounded interval attains both an absolute maximum and minimum.",
+      "explanation": "The correct answer is: Extreme Value Theorem.",
       "points": 1
     },
     {
@@ -783,15 +754,13 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "If two cars leave an intersection at right angles and Car A travels at 60 mph, Car B at 80 mph, how fast does the distance between them increase?",
+      "question": "True or False: The answer to \"A spherical balloon is being inflated. If the radius increases at 2 cm/s, how fast is the volume increasing when r = 3 cm\" is: 72pi cm^3/s.",
       "options": [
-        "100 mph",
-        "140 mph",
-        "20 mph",
-        "70 mph"
+        "True",
+        "False"
       ],
-      "answer": "100 mph",
-      "explanation": "d^2 = x^2 + y^2. d*(dd/dt) = x*(dx/dt) + y*(dy/dt). At t=0, d=0. Using rates: dd/dt = sqrt(60^2+80^2) = sqrt(10000) = 100 mph.",
+      "answer": "True",
+      "explanation": "True. 72pi cm^3/s is correct.",
       "points": 1
     },
     {
@@ -839,29 +808,25 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "What is integral of x^n dx (n not equal to -1)?",
+      "question": "True or False: The antiderivative of f(x) = 3x^2 is \"x^3 + C\".",
       "options": [
-        "n*x^(n-1) + C",
-        "x^(n+1)/(n+1) + C",
-        "x^n/n + C",
-        "n*x^n + C"
+        "True",
+        "False"
       ],
-      "answer": "x^(n+1)/(n+1) + C",
-      "explanation": "Power rule for integration: integral of x^n dx = x^(n+1)/(n+1) + C, for n not equal to -1.",
+      "answer": "True",
+      "explanation": "True. x^3 + C is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "What is integral of cos(x) dx?",
+      "question": "True or False: The answer to \"A right Riemann sum with n rectangles over [a, b] uses which x-values\" is: Left endpoints of each subinterval.",
       "options": [
-        "-sin(x) + C",
-        "sin(x) + C",
-        "tan(x) + C",
-        "-cos(x) + C"
+        "True",
+        "False"
       ],
-      "answer": "sin(x) + C",
-      "explanation": "d/dx[sin(x)] = cos(x), so integral of cos(x) dx = sin(x) + C.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Right endpoints of each subinterval.",
       "points": 1
     },
     {
@@ -923,15 +888,19 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Using FTC Part 1, find d/dx [integral from 1 to x of sqrt(t) dt].",
-      "options": [
-        "sqrt(x)",
-        "sqrt(1)",
-        "x^(3/2)/3",
-        "x/2"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"using ftc part 1, find d/dx [integral from 1 to x of sqrt(t) dt]..\"",
+      "options": null,
       "answer": "sqrt(x)",
-      "explanation": "By FTC Part 1, d/dx [integral from 1 to x of f(t) dt] = f(x) = sqrt(x).",
+      "explanation": "The correct answer is: sqrt(x).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 6,
+      "question": "Fill in the blank: ___ is integral from 0 to pi of sin(x) dx.",
+      "options": null,
+      "answer": "2",
+      "explanation": "The correct answer is: 2.",
       "points": 1
     },
     {
@@ -1005,6 +974,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 11,
+      "order": 6,
+      "question": "True or False: The answer to \"To integrate integral of 2x*(x^2+1)^4 dx, what is the best substitution\" is: u = x^2 + 1.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. u = x^2 + 1 is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 12,
       "order": 1,
       "question": "The area between f(x) and g(x) from a to b where f >= g is:",
@@ -1049,29 +1030,31 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "If v(t) = 3t^2 is the velocity at time t, the displacement from t=0 to t=2 is:",
+      "question": "True or False: The answer to \"The area between f(x) and g(x) from a to b where f >= g is:\" is: integral from a to b of [f(x) - g(x)] dx.",
       "options": [
-        "6",
-        "8",
-        "12",
-        "24"
+        "True",
+        "False"
       ],
-      "answer": "8",
-      "explanation": "Displacement = integral from 0 to 2 of 3t^2 dt = [t^3] from 0 to 2 = 8 - 0 = 8.",
+      "answer": "True",
+      "explanation": "True. integral from a to b of [f(x) - g(x)] dx is correct.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Net change theorem states that integral from a to b of F'(x) dx equals:",
-      "options": [
-        "F'(b) - F'(a)",
-        "F(b) - F(a)",
-        "F(a) - F(b)",
-        "F(b) * F(a)"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"net change theorem states that integral from a to b of f'(x) dx equals:.\"",
+      "options": null,
       "answer": "F(b) - F(a)",
-      "explanation": "The net change theorem (a consequence of FTC): integral from a to b of F'(x) dx = F(b) - F(a).",
+      "explanation": "The correct answer is: F(b) - F(a).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 6,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if v(t) = 3t^2 is the velocity at time t, the displacement from t=0 to t=2 is:.\"",
+      "options": null,
+      "answer": "8",
+      "explanation": "The correct answer is: 8.",
       "points": 1
     },
     {
@@ -1119,29 +1102,13 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "A population doubles in 5 years. If P(0) = 100, what is k in P(t) = 100*e^(kt)?",
+      "question": "True or False: The answer to \"A separable differential equation can be written as:\" is: dy/dx = f(x) * g(y).",
       "options": [
-        "k = 2",
-        "k = ln(2)/5",
-        "k = 5/ln(2)",
-        "k = 0.2"
+        "True",
+        "False"
       ],
-      "answer": "k = ln(2)/5",
-      "explanation": "P(5) = 200 -> 200 = 100*e^(5k) -> e^(5k) = 2 -> 5k = ln(2) -> k = ln(2)/5.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "What is a slope field (direction field) used for?",
-      "options": [
-        "Finding antiderivatives",
-        "Visualizing solutions to a differential equation",
-        "Computing limits",
-        "Finding eigenvalues"
-      ],
-      "answer": "Visualizing solutions to a differential equation",
-      "explanation": "A slope field shows small line segments with slope dy/dx at each point, giving a visual picture of all solution curves.",
+      "answer": "True",
+      "explanation": "True. dy/dx = f(x) * g(y) is correct.",
       "points": 1
     },
     {
@@ -1203,15 +1170,13 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "What is the difference between a sequence and a series?",
+      "question": "True or False: The answer to \"A sequence {a_n} converges if:\" is: lim a_n = L for some finite L as n -> infinity.",
       "options": [
-        "A sequence is finite; a series is infinite",
-        "A sequence lists terms; a series sums them",
-        "A sequence grows; a series shrinks",
-        "They are the same thing"
+        "True",
+        "False"
       ],
-      "answer": "A sequence lists terms; a series sums them",
-      "explanation": "A sequence is an ordered list of terms. A series is the sum of a sequence. They are related but distinct concepts.",
+      "answer": "True",
+      "explanation": "True. lim a_n = L for some finite L as n -> infinity is correct.",
       "points": 1
     }
   ],
@@ -1264,16 +1229,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "Find the derivative of f(x) = 4x^3 - 6x^2 + 5x - 1.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Find the derivative of f(x) = 4x^3 - 6x^2 + 5x - 1.\" is: 12x^2 - 12x + 5.",
       "options": [
-        "12x^2 - 12x + 5",
-        "12x^3 - 6x^2 + 5",
-        "4x^2 - 6x + 5",
-        "12x^2 - 6x + 1"
+        "True",
+        "False"
       ],
-      "answer": "12x^2 - 12x + 5",
-      "explanation": "f'(x) = 4(3x^2) - 6(2x) + 5 = 12x^2 - 12x + 5.",
+      "answer": "True",
+      "explanation": "True. 12x^2 - 12x + 5 is correct.",
       "points": 1
     },
     {
@@ -1309,31 +1272,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "For f(x) = x^3 - 3x, on which interval is f decreasing?",
-      "options": [
-        "(-inf, -1)",
-        "(-1, 1)",
-        "(1, inf)",
-        "(-inf, 0)"
-      ],
+      "options": null,
       "answer": "(-1, 1)",
-      "explanation": "f'(x) = 3x^2 - 3 = 3(x-1)(x+1). f' < 0 when -1 < x < 1, so f is decreasing on (-1, 1).",
+      "explanation": "The correct answer is: (-1, 1).",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "A box with a square base and no top has volume 32 cubic feet. What side length x minimizes total surface area?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A box with a square base and no top has volume 32 cubic feet. What side length x minimizes total surface area\" is: x = 2 ft.",
       "options": [
-        "x = 2 ft",
-        "x = 4 ft",
-        "x = 8 ft",
-        "x = 16 ft"
+        "True",
+        "False"
       ],
-      "answer": "x = 4 ft",
-      "explanation": "V = x^2*h = 32, so h = 32/x^2. SA = x^2 + 4xh = x^2 + 128/x. dSA/dx = 2x - 128/x^2 = 0 -> x^3 = 64 -> x = 4.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: x = 4 ft.",
       "points": 1
     },
     {
@@ -1384,16 +1340,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "If f''(x) < 0 on an interval, f is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"If f''(x) < 0 on an interval, f is:\" is: Concave down.",
       "options": [
-        "Increasing",
-        "Decreasing",
-        "Concave up",
-        "Concave down"
+        "True",
+        "False"
       ],
-      "answer": "Concave down",
-      "explanation": "f''(x) < 0 means the first derivative is decreasing, which means f is concave down (bends like an upside-down cup).",
+      "answer": "True",
+      "explanation": "True. Concave down is correct.",
       "points": 1
     },
     {
@@ -1444,16 +1398,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "Evaluate: integral from 1 to 3 of (2x + 1) dx.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Evaluate: integral from 1 to 3 of (2x + 1) dx.\" is: 8.",
       "options": [
-        "8",
-        "10",
-        "12",
-        "14"
+        "True",
+        "False"
       ],
-      "answer": "12",
-      "explanation": "Antiderivative: x^2 + x. [9+3] - [1+1] = 12 - 2 = 10. Wait: (3^2+3) - (1^2+1) = 12 - 2 = 10.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 12.",
       "points": 1
     },
     {
@@ -1504,31 +1456,24 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "Find the area between y = x^2 and y = x from x = 0 to x = 1.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Find the area between y = x^2 and y = x from x = 0 to x = 1.\" is: 1/6.",
       "options": [
-        "1/3",
-        "1/6",
-        "1/2",
-        "1/4"
+        "True",
+        "False"
       ],
-      "answer": "1/6",
-      "explanation": "On [0,1], x >= x^2. Area = integral from 0 to 1 of (x - x^2) dx = [x^2/2 - x^3/3] from 0 to 1 = 1/2 - 1/3 = 1/6.",
+      "answer": "True",
+      "explanation": "True. 1/6 is correct.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 6,
-      "type": "mc",
+      "type": "fill",
       "question": "Solve the separable ODE: dy/dx = y with y(0) = 2.",
-      "options": [
-        "y = e^x + 2",
-        "y = 2e^x",
-        "y = 2x + 2",
-        "y = e^(2x)"
-      ],
+      "options": null,
       "answer": "y = 2e^x",
-      "explanation": "Separating: dy/y = dx -> ln|y| = x + C -> y = Ae^x. At x=0: 2 = A*1 -> A = 2. So y = 2e^x.",
+      "explanation": "The correct answer is: y = 2e^x.",
       "points": 1
     },
     {
@@ -1564,16 +1509,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "A radioactive substance decays by 10% per year. If P0 = 500 grams, what is the amount after 10 years?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A radioactive substance decays by 10% per year. If P0 = 500 grams, what is the amount after 10 years\" is: 500*e^(-10).",
       "options": [
-        "500*e^(-10)",
-        "500*(0.9)^10",
-        "500*(0.1)^10",
-        "500*e^(-0.1)"
+        "True",
+        "False"
       ],
-      "answer": "500*(0.9)^10",
-      "explanation": "Discrete decay: P(t) = P0*(1-r)^t = 500*(0.9)^10 = approximately 174 grams.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 500*(0.9)^10.",
       "points": 1
     },
     {
@@ -1624,16 +1567,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
+      "type": "fill",
       "question": "Find d/dx [tan(x^2 + 1)].",
-      "options": [
-        "sec^2(x^2+1)",
-        "2x*sec^2(x^2+1)",
-        "2x*tan(x^2+1)",
-        "sec(x^2+1)*tan(x^2+1)"
-      ],
+      "options": null,
       "answer": "2x*sec^2(x^2+1)",
-      "explanation": "Chain rule: d/dx[tan(u)] = sec^2(u)*u', where u = x^2+1, u' = 2x. So 2x*sec^2(x^2+1).",
+      "explanation": "The correct answer is: 2x*sec^2(x^2+1).",
       "points": 1
     },
     {
@@ -1684,16 +1622,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "Evaluate: integral from -1 to 1 of x^3 dx.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Evaluate: integral from -1 to 1 of x^3 dx.\" is: 1/2.",
       "options": [
-        "0",
-        "1/2",
-        "2",
-        "1/4"
+        "True",
+        "False"
       ],
-      "answer": "0",
-      "explanation": "x^3 is an odd function and the interval is symmetric about 0, so the integral is 0.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 0.",
       "points": 1
     },
     {
@@ -1729,17 +1665,13 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "mc",
+      "type": "fill",
       "question": "Solve: dy/dx = 3x^2*y with y(0) = 1.",
-      "options": [
-        "y = e^(x^3)",
-        "y = 3x^2 + 1",
-        "y = x^3 + 1",
-        "y = e^(x^2)"
-      ],
+      "options": null,
       "answer": "y = e^(x^3)",
-      "explanation": "Separating: dy/y = 3x^2 dx -> ln|y| = x^3 + C -> y = Ae^(x^3). At x=0: 1 = A. So y = e^(x^3).",
+      "explanation": "The correct answer is: y = e^(x^3).",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 12
 }

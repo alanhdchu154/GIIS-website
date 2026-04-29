@@ -246,7 +246,7 @@
         "Digesting food"
       ],
       "answer": "Melting ice",
-      "explanation": "",
+      "explanation": "The correct answer is: Melting ice.",
       "points": 1
     },
     {
@@ -261,7 +261,7 @@
         "The number of electrons plus neutrons"
       ],
       "answer": "The number of protons",
-      "explanation": "",
+      "explanation": "The correct answer is: The number of protons.",
       "points": 1
     },
     {
@@ -276,22 +276,20 @@
         "Energy levels"
       ],
       "answer": "Neutrons",
-      "explanation": "",
+      "explanation": "The correct answer is: Neutrons.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "How many valence electrons does a sulfur (Group 16) atom have?",
+      "type": "tf",
+      "question": "True or False: The answer to \"How many valence electrons does a sulfur (Group 16) atom have\" is: 6.",
       "options": [
-        "2",
-        "4",
-        "6",
-        "8"
+        "True",
+        "False"
       ],
-      "answer": "6",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. 6 is correct.",
       "points": 1
     },
     {
@@ -306,7 +304,7 @@
         "First increases then decreases"
       ],
       "answer": "Decreases",
-      "explanation": "",
+      "explanation": "The correct answer is: Decreases.",
       "points": 1
     },
     {
@@ -321,37 +319,30 @@
         "Two atoms with equal electronegativity"
       ],
       "answer": "A metal and a nonmetal transferring electrons",
-      "explanation": "",
+      "explanation": "The correct answer is: A metal and a nonmetal transferring electrons.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "The molecular geometry of water (H₂O) is:",
-      "options": [
-        "Linear",
-        "Trigonal planar",
-        "Tetrahedral",
-        "Bent"
-      ],
+      "options": null,
       "answer": "Bent",
-      "explanation": "",
+      "explanation": "The correct answer is: Bent.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "What is the correct name for the compound NaCl?",
+      "type": "tf",
+      "question": "True or False: The correct name for the compound NaCl is \"Sodium chlorine\".",
       "options": [
-        "Sodium chlorine",
-        "Sodium chloride",
-        "Natrium chloride",
-        "Sodium(I) chloride"
+        "True",
+        "False"
       ],
-      "answer": "Sodium chloride",
-      "explanation": "",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Sodium chloride.",
       "points": 1
     },
     {
@@ -366,7 +357,7 @@
         "4"
       ],
       "answer": "2",
-      "explanation": "",
+      "explanation": "The correct answer is: 2.",
       "points": 1
     },
     {
@@ -381,7 +372,7 @@
         "6.02 × 10²⁰ particles"
       ],
       "answer": "6.02 × 10²³ particles",
-      "explanation": "",
+      "explanation": "The correct answer is: 6.02 × 10²³ particles.",
       "points": 1
     },
     {
@@ -396,22 +387,20 @@
         "20 g/mol"
       ],
       "answer": "18 g/mol",
-      "explanation": "",
+      "explanation": "The correct answer is: 18 g/mol.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "The SI unit of temperature used in gas law calculations is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The SI unit of temperature used in gas law calculations is:\" is: Kelvin.",
       "options": [
-        "Celsius",
-        "Fahrenheit",
-        "Kelvin",
-        "Rankine"
+        "True",
+        "False"
       ],
-      "answer": "Kelvin",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Kelvin is correct.",
       "points": 1
     },
     {
@@ -421,7 +410,7 @@
       "question": "Explain the difference between a physical property and a chemical property. Give one example of each for iron.",
       "options": null,
       "answer": "A physical property (e.g., density, melting point) can be observed without changing composition; a chemical property (e.g., rusting/oxidation) describes how a substance reacts and changes identity.",
-      "explanation": "",
+      "explanation": "The correct answer is: A physical property (e.g., density, melting point) can be observed without changing composition; a chemical property (e.g., rusting/oxidation) describes how a substance reacts and changes identity..",
       "points": 2
     },
     {
@@ -431,7 +420,7 @@
       "question": "Draw the Lewis structure for CO₂ and predict its molecular shape. Is the molecule polar or nonpolar? Explain.",
       "options": null,
       "answer": "CO₂ has two double bonds between C and each O, linear geometry (VSEPR), and is nonpolar because the bond dipoles cancel due to symmetry.",
-      "explanation": "",
+      "explanation": "The correct answer is: CO₂ has two double bonds between C and each O, linear geometry (VSEPR), and is nonpolar because the bond dipoles cancel due to symmetry..",
       "points": 2
     },
     {
@@ -441,22 +430,20 @@
       "question": "Balance the following equation and identify its reaction type: CH₄ + O₂ → CO₂ + H₂O. Then explain what conservation of mass means in the context of this reaction.",
       "options": null,
       "answer": "Balanced: CH₄ + 2O₂ → CO₂ + 2H₂O. Combustion reaction. Conservation of mass means the number of atoms of each element is equal on both sides; matter is neither created nor destroyed.",
-      "explanation": "",
+      "explanation": "The correct answer is: Balanced: CH₄ + 2O₂ → CO₂ + 2H₂O. Combustion reaction. Conservation of mass means the number of atoms of each element is equal on both sides; matter is neither created nor destroyed..",
       "points": 2
     },
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "According to Boyle's Law, if the pressure of a gas doubles at constant temperature, the volume:",
+      "type": "tf",
+      "question": "True or False: The answer to \"According to Boyle's Law, if the pressure of a gas doubles at constant temperature, the volume:\" is: Doubles.",
       "options": [
-        "Doubles",
-        "Halves",
-        "Stays the same",
-        "Quadruples"
+        "True",
+        "False"
       ],
-      "answer": "Halves",
-      "explanation": "",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Halves.",
       "points": 1
     },
     {
@@ -471,7 +458,7 @@
         "Moles of solvent per liter of solution"
       ],
       "answer": "Moles of solute per liter of solution",
-      "explanation": "",
+      "explanation": "The correct answer is: Moles of solute per liter of solution.",
       "points": 1
     },
     {
@@ -486,7 +473,7 @@
         "Weakly acidic"
       ],
       "answer": "Strongly acidic",
-      "explanation": "",
+      "explanation": "The correct answer is: Strongly acidic.",
       "points": 1
     },
     {
@@ -501,22 +488,20 @@
         "Hydroxide producer only"
       ],
       "answer": "Proton donor",
-      "explanation": "",
+      "explanation": "The correct answer is: Proton donor.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "An endothermic reaction:",
+      "type": "tf",
+      "question": "True or False: The answer to \"An endothermic reaction:\" is: Absorbs heat from the surroundings.",
       "options": [
-        "Releases heat to the surroundings",
-        "Absorbs heat from the surroundings",
-        "Has ΔH < 0",
-        "Always occurs spontaneously"
+        "True",
+        "False"
       ],
-      "answer": "Absorbs heat from the surroundings",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Absorbs heat from the surroundings is correct.",
       "points": 1
     },
     {
@@ -531,7 +516,7 @@
         "Enthalpy equals temperature times pressure"
       ],
       "answer": "The total enthalpy change is independent of the reaction pathway",
-      "explanation": "",
+      "explanation": "The correct answer is: The total enthalpy change is independent of the reaction pathway.",
       "points": 1
     },
     {
@@ -546,7 +531,7 @@
         "Changes the equilibrium constant"
       ],
       "answer": "Increases the reaction rate",
-      "explanation": "",
+      "explanation": "The correct answer is: Increases the reaction rate.",
       "points": 1
     },
     {
@@ -561,22 +546,20 @@
         "Toward more energy"
       ],
       "answer": "To the left (toward more reactants)",
-      "explanation": "",
+      "explanation": "The correct answer is: To the left (toward more reactants).",
       "points": 1
     },
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "Alpha (α) particles consist of:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Alpha (α) particles consist of:\" is: One electron.",
       "options": [
-        "Two protons and two neutrons",
-        "One electron",
-        "High-energy electromagnetic radiation",
-        "One proton"
+        "True",
+        "False"
       ],
-      "answer": "Two protons and two neutrons",
-      "explanation": "",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Two protons and two neutrons.",
       "points": 1
     },
     {
@@ -591,7 +574,7 @@
         "Absorption of gamma rays"
       ],
       "answer": "Splitting a heavy nucleus into smaller fragments",
-      "explanation": "",
+      "explanation": "The correct answer is: Splitting a heavy nucleus into smaller fragments.",
       "points": 1
     },
     {
@@ -606,7 +589,7 @@
         "1/16"
       ],
       "answer": "1/4",
-      "explanation": "",
+      "explanation": "The correct answer is: 1/4.",
       "points": 1
     },
     {
@@ -621,22 +604,20 @@
         "Ketones"
       ],
       "answer": "Alcohols",
-      "explanation": "",
+      "explanation": "The correct answer is: Alcohols.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
-      "question": "Colligative properties depend on:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Colligative properties depend on:\" is: The number of solute particles in solution.",
       "options": [
-        "The chemical identity of the solute",
-        "The number of solute particles in solution",
-        "The temperature of the solvent only",
-        "The charge of the solute ions only"
+        "True",
+        "False"
       ],
-      "answer": "The number of solute particles in solution",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. The number of solute particles in solution is correct.",
       "points": 1
     },
     {
@@ -651,7 +632,7 @@
         "20.9 J"
       ],
       "answer": "2090 J",
-      "explanation": "",
+      "explanation": "The correct answer is: 2090 J.",
       "points": 1
     },
     {
@@ -666,7 +647,7 @@
         "Henry's Law"
       ],
       "answer": "The Ideal Gas Law (PV = nRT)",
-      "explanation": "",
+      "explanation": "The correct answer is: The Ideal Gas Law (PV = nRT).",
       "points": 1
     },
     {
@@ -681,17 +662,20 @@
         "The reactant with the highest molar mass"
       ],
       "answer": "The reagent that is completely consumed first and limits product formation",
-      "explanation": "",
+      "explanation": "The correct answer is: The reagent that is completely consumed first and limits product formation.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 17,
-      "type": "sa",
-      "question": "Explain the concept of dynamic equilibrium. Use the reaction H₂ + I₂ ⇌ 2HI as an example and describe what happens at the molecular level when equilibrium is reached.",
-      "options": null,
-      "answer": "At dynamic equilibrium, the forward and reverse reactions occur at equal rates so there is no net change in concentrations. For H₂ + I₂ ⇌ 2HI, HI molecules are forming and decomposing at the same rate; the system appears static but reactions continue at the molecular level.",
-      "explanation": "",
+      "type": "tf",
+      "question": "True or False: The answer to \"Explain the concept of dynamic equilibrium. Use the reaction H₂ + I₂ ⇌ 2HI as an example and describe what happens at the molecular level when equilibrium is reached.\" is: At dynamic equilibrium, the forward and reverse reactions occur at equal rates so there is no net change in concentrations. For H₂ + I₂ ⇌ 2HI, HI molecules are forming and decomposing at the same rate; the system appears static but reactions continue at the molecular level..",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: At dynamic equilibrium, the forward and reverse reactions occur at equal rates so there is no net change in concentrations. For H₂ + I₂ ⇌ 2HI, HI molecules are forming and decomposing at the same rate; the system appears static but reactions continue at the molecular level..",
       "points": 2
     },
     {
@@ -701,7 +685,7 @@
       "question": "A student dissolves 117 g of NaCl (molar mass = 58.5 g/mol) in enough water to make 2.0 L of solution. Calculate the molarity of the solution and describe how you would further dilute it to 0.5 M.",
       "options": null,
       "answer": "Moles of NaCl = 117 / 58.5 = 2.0 mol. Molarity = 2.0 mol / 2.0 L = 1.0 M. To dilute to 0.5 M: use M₁V₁ = M₂V₂; take 500 mL of the 1.0 M solution and add water to make 1.0 L total.",
-      "explanation": "",
+      "explanation": "The correct answer is: Moles of NaCl = 117 / 58.5 = 2.0 mol. Molarity = 2.0 mol / 2.0 L = 1.0 M. To dilute to 0.5 M: use M₁V₁ = M₂V₂; take 500 mL of the 1.0 M solution and add water to make 1.0 L total..",
       "points": 2
     },
     {
@@ -711,7 +695,7 @@
       "question": "Compare alpha, beta, and gamma radiation in terms of charge, mass, and penetrating power. Which type is most dangerous if ingested and why?",
       "options": null,
       "answer": "Alpha (α): +2 charge, mass ≈ 4 amu, low penetration (stopped by paper or skin). Beta (β): –1 charge, mass ≈ 0, moderate penetration (stopped by thin metal). Gamma (γ): no charge, no mass, highest penetration (requires lead/thick concrete). Alpha radiation is most dangerous if ingested because its high ionizing power causes significant biological damage at close range inside tissue.",
-      "explanation": "",
+      "explanation": "The correct answer is: Alpha (α): +2 charge, mass ≈ 4 amu, low penetration (stopped by paper or skin). Beta (β): –1 charge, mass ≈ 0, moderate penetration (stopped by thin metal). Gamma (γ): no charge, no mass, highest penetration (requires lead/thick concrete). Alpha radiation is most dangerous if ingested because its high ionizing power causes significant biological damage at close range inside tissue..",
       "points": 2
     },
     {
@@ -726,7 +710,7 @@
         "Up a group and right to left across a period"
       ],
       "answer": "Up a group and left to right across a period",
-      "explanation": "",
+      "explanation": "The correct answer is: Up a group and left to right across a period.",
       "points": 1
     }
   ],
@@ -734,7 +718,6 @@
     {
       "moduleOrder": 1,
       "order": 1,
-      "type": "mc",
       "question": "Which state of matter has a definite volume but no definite shape?",
       "options": [
         "Solid",
@@ -743,13 +726,12 @@
         "Plasma"
       ],
       "answer": "Liquid",
-      "explanation": "",
+      "explanation": "The correct answer is: Liquid.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 2,
-      "type": "mc",
       "question": "The SI base unit for mass is:",
       "options": [
         "Pound",
@@ -758,13 +740,12 @@
         "Milligram"
       ],
       "answer": "Kilogram",
-      "explanation": "",
+      "explanation": "The correct answer is: Kilogram.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 3,
-      "type": "mc",
       "question": "Which of the following is a chemical property?",
       "options": [
         "Density",
@@ -773,43 +754,33 @@
         "Flammability"
       ],
       "answer": "Flammability",
-      "explanation": "",
+      "explanation": "The correct answer is: Flammability.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "type": "mc",
-      "question": "The number 0.00340 expressed in scientific notation is:",
+      "question": "True or False: The answer to \"Which state of matter has a definite volume but no definite shape\" is: Liquid.",
       "options": [
-        "3.40 × 10⁻²",
-        "3.40 × 10⁻³",
-        "34.0 × 10⁻⁴",
-        "0.340 × 10⁻²"
+        "True",
+        "False"
       ],
-      "answer": "3.40 × 10⁻³",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Liquid is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "type": "mc",
-      "question": "How many significant figures are in the measurement 4.050 g?",
-      "options": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"how many significant figures are in the measurement 4.050 g.\"",
+      "options": null,
       "answer": "4",
-      "explanation": "",
+      "explanation": "The correct answer is: 4.",
       "points": 1
     },
     {
       "moduleOrder": 2,
       "order": 1,
-      "type": "mc",
       "question": "The particle in an atom with no electrical charge is the:",
       "options": [
         "Proton",
@@ -818,13 +789,12 @@
         "Positron"
       ],
       "answer": "Neutron",
-      "explanation": "",
+      "explanation": "The correct answer is: Neutron.",
       "points": 1
     },
     {
       "moduleOrder": 2,
       "order": 2,
-      "type": "mc",
       "question": "The mass number of an atom equals:",
       "options": [
         "Protons only",
@@ -833,13 +803,12 @@
         "Protons + electrons"
       ],
       "answer": "Protons + neutrons",
-      "explanation": "",
+      "explanation": "The correct answer is: Protons + neutrons.",
       "points": 1
     },
     {
       "moduleOrder": 2,
       "order": 3,
-      "type": "mc",
       "question": "Carbon-12 and Carbon-14 are:",
       "options": [
         "Different elements",
@@ -848,13 +817,12 @@
         "Allotropes of carbon"
       ],
       "answer": "Isotopes of carbon",
-      "explanation": "",
+      "explanation": "The correct answer is: Isotopes of carbon.",
       "points": 1
     },
     {
       "moduleOrder": 2,
       "order": 4,
-      "type": "mc",
       "question": "In the Bohr model, electrons orbit the nucleus in:",
       "options": [
         "Random paths",
@@ -863,28 +831,24 @@
         "Overlapping clouds"
       ],
       "answer": "Fixed energy levels (shells)",
-      "explanation": "",
+      "explanation": "The correct answer is: Fixed energy levels (shells).",
       "points": 1
     },
     {
       "moduleOrder": 2,
       "order": 5,
-      "type": "mc",
-      "question": "An element with atomic number 17 has how many protons?",
+      "question": "True or False: The answer to \"The particle in an atom with no electrical charge is the:\" is: Neutron.",
       "options": [
-        "8",
-        "12",
-        "17",
-        "35"
+        "True",
+        "False"
       ],
-      "answer": "17",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Neutron is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 1,
-      "type": "mc",
       "question": "The Aufbau principle states that electrons fill orbitals:",
       "options": [
         "Starting from the highest energy level",
@@ -893,13 +857,12 @@
         "Two at a time in separate orbitals first"
       ],
       "answer": "Starting from the lowest available energy level",
-      "explanation": "",
+      "explanation": "The correct answer is: Starting from the lowest available energy level.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 2,
-      "type": "mc",
       "question": "How many electrons can a 2p subshell hold?",
       "options": [
         "2",
@@ -908,13 +871,12 @@
         "10"
       ],
       "answer": "6",
-      "explanation": "",
+      "explanation": "The correct answer is: 6.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 3,
-      "type": "mc",
       "question": "The electron configuration of oxygen (atomic number 8) is:",
       "options": [
         "1s²2s²2p²",
@@ -923,43 +885,36 @@
         "1s²2s⁴2p²"
       ],
       "answer": "1s²2s²2p⁴",
-      "explanation": "",
+      "explanation": "The correct answer is: 1s²2s²2p⁴.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 4,
-      "type": "mc",
-      "question": "Hund's rule states that electrons in the same subshell:",
+      "question": "True or False: The answer to \"The Aufbau principle states that electrons fill orbitals:\" is: Starting from the lowest available energy level.",
       "options": [
-        "Pair up as quickly as possible",
-        "Occupy separate orbitals with parallel spins before pairing",
-        "Always have opposite spins",
-        "Fill the highest orbital first"
+        "True",
+        "False"
       ],
-      "answer": "Occupy separate orbitals with parallel spins before pairing",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Starting from the lowest available energy level is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "type": "mc",
-      "question": "The Pauli exclusion principle states that no two electrons in an atom can have:",
+      "question": "True or False: The answer to \"How many electrons can a 2p subshell hold\" is: 2.",
       "options": [
-        "The same energy level",
-        "The same principal quantum number",
-        "The same set of all four quantum numbers",
-        "The same spin"
+        "True",
+        "False"
       ],
-      "answer": "The same set of all four quantum numbers",
-      "explanation": "",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 6.",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 1,
-      "type": "mc",
       "question": "Elements in the same group of the periodic table have the same number of:",
       "options": [
         "Total electrons",
@@ -968,13 +923,12 @@
         "Energy levels"
       ],
       "answer": "Valence electrons",
-      "explanation": "",
+      "explanation": "The correct answer is: Valence electrons.",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 2,
-      "type": "mc",
       "question": "Metalloids (semimetals) are found:",
       "options": [
         "Far left of the periodic table",
@@ -983,13 +937,12 @@
         "In the middle transition metals only"
       ],
       "answer": "Along the staircase boundary between metals and nonmetals",
-      "explanation": "",
+      "explanation": "The correct answer is: Along the staircase boundary between metals and nonmetals.",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 3,
-      "type": "mc",
       "question": "First ionization energy generally increases:",
       "options": [
         "Down a group",
@@ -998,13 +951,12 @@
         "Moving to the center of a period"
       ],
       "answer": "Left to right across a period",
-      "explanation": "",
+      "explanation": "The correct answer is: Left to right across a period.",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 4,
-      "type": "mc",
       "question": "The halogen group elements are found in group:",
       "options": [
         "1",
@@ -1013,28 +965,24 @@
         "18"
       ],
       "answer": "17",
-      "explanation": "",
+      "explanation": "The correct answer is: 17.",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 5,
-      "type": "mc",
-      "question": "Noble gases are chemically unreactive because they:",
+      "question": "True or False: The answer to \"Elements in the same group of the periodic table have the same number of:\" is: Valence electrons.",
       "options": [
-        "Have very high mass",
-        "Have a full outer valence shell of electrons",
-        "Are radioactive",
-        "Only exist as solids"
+        "True",
+        "False"
       ],
-      "answer": "Have a full outer valence shell of electrons",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Valence electrons is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 1,
-      "type": "mc",
       "question": "In an ionic bond, electrons are:",
       "options": [
         "Shared equally between atoms",
@@ -1043,13 +991,12 @@
         "Transferred from nonmetal to metal"
       ],
       "answer": "Transferred from metal to nonmetal",
-      "explanation": "",
+      "explanation": "The correct answer is: Transferred from metal to nonmetal.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 2,
-      "type": "mc",
       "question": "A Lewis structure shows:",
       "options": [
         "The three-dimensional shape of a molecule",
@@ -1058,13 +1005,12 @@
         "Nuclear structure"
       ],
       "answer": "Valence electrons as dots around the atomic symbol",
-      "explanation": "",
+      "explanation": "The correct answer is: Valence electrons as dots around the atomic symbol.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 3,
-      "type": "mc",
       "question": "VSEPR theory predicts molecular shape based on:",
       "options": [
         "Atomic mass of the central atom",
@@ -1073,43 +1019,33 @@
         "Bond lengths only"
       ],
       "answer": "Repulsion between electron pairs around the central atom",
-      "explanation": "",
+      "explanation": "The correct answer is: Repulsion between electron pairs around the central atom.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "type": "mc",
-      "question": "A polar covalent bond forms when:",
+      "question": "True or False: The answer to \"In an ionic bond, electrons are:\" is: Transferred from metal to nonmetal.",
       "options": [
-        "Electrons are shared equally",
-        "Electrons are transferred completely",
-        "Electrons are shared unequally due to different electronegativities",
-        "Two metals bond together"
+        "True",
+        "False"
       ],
-      "answer": "Electrons are shared unequally due to different electronegativities",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Transferred from metal to nonmetal is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 5,
-      "type": "mc",
-      "question": "The shape of a molecule with 4 bonding pairs and 0 lone pairs around the central atom is:",
-      "options": [
-        "Linear",
-        "Bent",
-        "Trigonal pyramidal",
-        "Tetrahedral"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the shape of a molecule with 4 bonding pairs and 0 lone pairs around the central atom is:.\"",
+      "options": null,
       "answer": "Tetrahedral",
-      "explanation": "",
+      "explanation": "The correct answer is: Tetrahedral.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 1,
-      "type": "mc",
       "question": "The compound Fe₂O₃ is named:",
       "options": [
         "Iron oxide",
@@ -1118,13 +1054,12 @@
         "Diiron trioxide"
       ],
       "answer": "Iron(III) oxide",
-      "explanation": "",
+      "explanation": "The correct answer is: Iron(III) oxide.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 2,
-      "type": "mc",
       "question": "The formula for calcium nitrate is:",
       "options": [
         "CaN",
@@ -1133,13 +1068,12 @@
         "Ca₂NO₃"
       ],
       "answer": "Ca(NO₃)₂",
-      "explanation": "",
+      "explanation": "The correct answer is: Ca(NO₃)₂.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 3,
-      "type": "mc",
       "question": "The prefix 'tetra-' in covalent nomenclature indicates:",
       "options": [
         "2 atoms",
@@ -1148,13 +1082,12 @@
         "5 atoms"
       ],
       "answer": "4 atoms",
-      "explanation": "",
+      "explanation": "The correct answer is: 4 atoms.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 4,
-      "type": "mc",
       "question": "Acids that contain oxygen are called:",
       "options": [
         "Binary acids",
@@ -1163,13 +1096,12 @@
         "Amphoteric acids"
       ],
       "answer": "Oxyacids",
-      "explanation": "",
+      "explanation": "The correct answer is: Oxyacids.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "type": "mc",
       "question": "The name of HCl when dissolved in water is:",
       "options": [
         "Hydrogen chloride",
@@ -1178,13 +1110,12 @@
         "Hydrochloric acid"
       ],
       "answer": "Hydrochloric acid",
-      "explanation": "",
+      "explanation": "The correct answer is: Hydrochloric acid.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 1,
-      "type": "mc",
       "question": "A synthesis reaction has the general form:",
       "options": [
         "AB → A + B",
@@ -1193,13 +1124,12 @@
         "AB + CD → AD + CB"
       ],
       "answer": "A + B → AB",
-      "explanation": "",
+      "explanation": "The correct answer is: A + B → AB.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 2,
-      "type": "mc",
       "question": "In a combustion reaction, a hydrocarbon reacts with O₂ to produce:",
       "options": [
         "CO and H₂",
@@ -1208,13 +1138,12 @@
         "C and H₂O"
       ],
       "answer": "CO₂ and H₂O",
-      "explanation": "",
+      "explanation": "The correct answer is: CO₂ and H₂O.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 3,
-      "type": "mc",
       "question": "When balancing a chemical equation, you may only change:",
       "options": [
         "Subscripts",
@@ -1223,43 +1152,24 @@
         "The products"
       ],
       "answer": "Coefficients",
-      "explanation": "",
+      "explanation": "The correct answer is: Coefficients.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 4,
-      "type": "mc",
-      "question": "In a double-displacement reaction, two ionic compounds exchange:",
+      "question": "True or False: The answer to \"A synthesis reaction has the general form:\" is: A + B → AB.",
       "options": [
-        "Electrons",
-        "Protons",
-        "Cations (positive ions)",
-        "Neutrons"
+        "True",
+        "False"
       ],
-      "answer": "Cations (positive ions)",
-      "explanation": "",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "type": "mc",
-      "question": "The law that explains why equations must be balanced is:",
-      "options": [
-        "Law of definite proportions",
-        "Law of conservation of mass",
-        "Law of multiple proportions",
-        "Avogadro's law"
-      ],
-      "answer": "Law of conservation of mass",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. A + B → AB is correct.",
       "points": 1
     },
     {
       "moduleOrder": 8,
       "order": 1,
-      "type": "mc",
       "question": "One mole of carbon-12 has a mass of:",
       "options": [
         "6 g",
@@ -1268,13 +1178,12 @@
         "6.02 g"
       ],
       "answer": "12 g",
-      "explanation": "",
+      "explanation": "The correct answer is: 12 g.",
       "points": 1
     },
     {
       "moduleOrder": 8,
       "order": 2,
-      "type": "mc",
       "question": "How many moles are in 36 g of H₂O (molar mass = 18 g/mol)?",
       "options": [
         "1 mol",
@@ -1283,13 +1192,12 @@
         "0.5 mol"
       ],
       "answer": "2 mol",
-      "explanation": "",
+      "explanation": "The correct answer is: 2 mol.",
       "points": 1
     },
     {
       "moduleOrder": 8,
       "order": 3,
-      "type": "mc",
       "question": "Mole ratios in stoichiometry come from:",
       "options": [
         "Atomic masses on the periodic table",
@@ -1298,13 +1206,12 @@
         "Experimental measurements only"
       ],
       "answer": "Coefficients in the balanced chemical equation",
-      "explanation": "",
+      "explanation": "The correct answer is: Coefficients in the balanced chemical equation.",
       "points": 1
     },
     {
       "moduleOrder": 8,
       "order": 4,
-      "type": "mc",
       "question": "The limiting reagent is the reactant that:",
       "options": [
         "Has the highest molar mass",
@@ -1313,28 +1220,24 @@
         "Requires the most energy to react"
       ],
       "answer": "Is completely used up first and determines maximum product",
-      "explanation": "",
+      "explanation": "The correct answer is: Is completely used up first and determines maximum product.",
       "points": 1
     },
     {
       "moduleOrder": 8,
       "order": 5,
-      "type": "mc",
-      "question": "Percent yield is calculated as:",
+      "question": "True or False: The answer to \"One mole of carbon-12 has a mass of:\" is: 12 g.",
       "options": [
-        "(theoretical yield / actual yield) × 100%",
-        "(actual yield / theoretical yield) × 100%",
-        "(actual yield − theoretical yield) × 100%",
-        "(molar mass / actual yield) × 100%"
+        "True",
+        "False"
       ],
-      "answer": "(actual yield / theoretical yield) × 100%",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. 12 g is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 1,
-      "type": "mc",
       "question": "According to kinetic molecular theory, gas particles:",
       "options": [
         "Have strong attractive forces between them",
@@ -1343,13 +1246,12 @@
         "Occupy most of the container volume"
       ],
       "answer": "Are in constant, random motion",
-      "explanation": "",
+      "explanation": "The correct answer is: Are in constant, random motion.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 2,
-      "type": "mc",
       "question": "Boyle's Law states that at constant temperature, pressure and volume are:",
       "options": [
         "Directly proportional",
@@ -1358,13 +1260,12 @@
         "Independent of each other"
       ],
       "answer": "Inversely proportional",
-      "explanation": "",
+      "explanation": "The correct answer is: Inversely proportional.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 3,
-      "type": "mc",
       "question": "Charles's Law states that at constant pressure, volume and temperature are:",
       "options": [
         "Inversely proportional",
@@ -1373,43 +1274,36 @@
         "Inversely related by a squared factor"
       ],
       "answer": "Directly proportional",
-      "explanation": "",
+      "explanation": "The correct answer is: Directly proportional.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 4,
-      "type": "mc",
-      "question": "The ideal gas law is expressed as:",
+      "question": "True or False: The answer to \"According to kinetic molecular theory, gas particles:\" is: Are in constant, random motion.",
       "options": [
-        "PV = nRT",
-        "PV = mRT",
-        "P/V = nRT",
-        "PV = nR/T"
+        "True",
+        "False"
       ],
-      "answer": "PV = nRT",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Are in constant, random motion is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "type": "mc",
-      "question": "STP (Standard Temperature and Pressure) refers to:",
+      "question": "True or False: The answer to \"Boyle's Law states that at constant temperature, pressure and volume are:\" is: Directly proportional.",
       "options": [
-        "25°C and 2 atm",
-        "0°C and 1 atm",
-        "100°C and 1 atm",
-        "0 K and 1 atm"
+        "True",
+        "False"
       ],
-      "answer": "0°C and 1 atm",
-      "explanation": "",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Inversely proportional.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 1,
-      "type": "mc",
       "question": "Solubility of most solid solutes in water increases with:",
       "options": [
         "Decreasing temperature",
@@ -1418,13 +1312,12 @@
         "Decreasing solvent volume"
       ],
       "answer": "Increasing temperature",
-      "explanation": "",
+      "explanation": "The correct answer is: Increasing temperature.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 2,
-      "type": "mc",
       "question": "A solution is 2.0 M NaCl. This means:",
       "options": [
         "2.0 g NaCl per liter",
@@ -1433,13 +1326,12 @@
         "2.0 g NaCl per kg of solvent"
       ],
       "answer": "2.0 mol NaCl per liter of solution",
-      "explanation": "",
+      "explanation": "The correct answer is: 2.0 mol NaCl per liter of solution.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 3,
-      "type": "mc",
       "question": "The dilution equation is:",
       "options": [
         "M₁ + V₁ = M₂ + V₂",
@@ -1448,13 +1340,12 @@
         "M₁V₂ = M₂V₁"
       ],
       "answer": "M₁V₁ = M₂V₂",
-      "explanation": "",
+      "explanation": "The correct answer is: M₁V₁ = M₂V₂.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 4,
-      "type": "mc",
       "question": "Boiling point elevation is an example of a:",
       "options": [
         "Chemical property",
@@ -1463,28 +1354,24 @@
         "Thermodynamic equilibrium"
       ],
       "answer": "Colligative property",
-      "explanation": "",
+      "explanation": "The correct answer is: Colligative property.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 5,
-      "type": "mc",
-      "question": "\"Like dissolves like\" means:",
+      "question": "True or False: The answer to \"Solubility of most solid solutes in water increases with:\" is: Increasing temperature.",
       "options": [
-        "Polar solvents dissolve polar solutes; nonpolar solvents dissolve nonpolar solutes",
-        "All solutes dissolve in any solvent",
-        "Solid solutes dissolve only in solid solvents",
-        "Temperature determines solubility only"
+        "True",
+        "False"
       ],
-      "answer": "Polar solvents dissolve polar solutes; nonpolar solvents dissolve nonpolar solutes",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. Increasing temperature is correct.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 1,
-      "type": "mc",
       "question": "According to the Arrhenius definition, a base is a substance that produces ______ ions in water.",
       "options": [
         "H⁺",
@@ -1493,13 +1380,12 @@
         "Cl⁻"
       ],
       "answer": "OH⁻",
-      "explanation": "",
+      "explanation": "The correct answer is: OH⁻.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 2,
-      "type": "mc",
       "question": "A solution with pH = 7 is:",
       "options": [
         "Acidic",
@@ -1508,13 +1394,12 @@
         "Saturated"
       ],
       "answer": "Neutral",
-      "explanation": "",
+      "explanation": "The correct answer is: Neutral.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 3,
-      "type": "mc",
       "question": "In a neutralization reaction, an acid reacts with a base to form:",
       "options": [
         "Another acid",
@@ -1523,43 +1408,33 @@
         "An oxide and water"
       ],
       "answer": "Water and a salt",
-      "explanation": "",
+      "explanation": "The correct answer is: Water and a salt.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "type": "mc",
-      "question": "Titration is used to determine:",
+      "question": "True or False: The answer to \"According to the Arrhenius definition, a base is a substance that produces ______ ions in water.\" is: OH⁻.",
       "options": [
-        "The color of an acid",
-        "The unknown concentration of an acid or base",
-        "The boiling point of a solution",
-        "The molar mass of a solid"
+        "True",
+        "False"
       ],
-      "answer": "The unknown concentration of an acid or base",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. OH⁻ is correct.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 5,
-      "type": "mc",
-      "question": "If [H⁺] = 1 × 10⁻⁴ M, the pH is:",
-      "options": [
-        "2",
-        "4",
-        "6",
-        "10"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if [h⁺] = 1 × 10⁻⁴ m, the ph is:.\"",
+      "options": null,
       "answer": "4",
-      "explanation": "",
+      "explanation": "The correct answer is: 4.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 1,
-      "type": "mc",
       "question": "Enthalpy (H) is a measure of:",
       "options": [
         "The speed of a reaction",
@@ -1568,13 +1443,12 @@
         "The temperature of the products"
       ],
       "answer": "The heat content of a system at constant pressure",
-      "explanation": "",
+      "explanation": "The correct answer is: The heat content of a system at constant pressure.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 2,
-      "type": "mc",
       "question": "An exothermic reaction has a ΔH value that is:",
       "options": [
         "Positive",
@@ -1583,13 +1457,12 @@
         "Equal to temperature"
       ],
       "answer": "Negative",
-      "explanation": "",
+      "explanation": "The correct answer is: Negative.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 3,
-      "type": "mc",
       "question": "Calorimetry measures:",
       "options": [
         "Reaction rate",
@@ -1598,13 +1471,12 @@
         "Equilibrium concentrations"
       ],
       "answer": "Heat exchanged during a chemical or physical process",
-      "explanation": "",
+      "explanation": "The correct answer is: Heat exchanged during a chemical or physical process.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 4,
-      "type": "mc",
       "question": "The specific heat of water is 4.18 J/g°C. This means:",
       "options": [
         "It takes 4.18 kJ to heat 1 kg of water 1°C",
@@ -1613,13 +1485,12 @@
         "Water boils at 4.18°C"
       ],
       "answer": "It takes 4.18 J to raise 1 g of water by 1°C",
-      "explanation": "",
+      "explanation": "The correct answer is: It takes 4.18 J to raise 1 g of water by 1°C.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "type": "mc",
       "question": "Hess's Law allows us to calculate ΔH by:",
       "options": [
         "Measuring temperature change directly",
@@ -1628,13 +1499,12 @@
         "Using the ideal gas law"
       ],
       "answer": "Adding ΔH values of individual steps in a reaction pathway",
-      "explanation": "",
+      "explanation": "The correct answer is: Adding ΔH values of individual steps in a reaction pathway.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 1,
-      "type": "mc",
       "question": "Increasing temperature generally increases the reaction rate because:",
       "options": [
         "It decreases the activation energy",
@@ -1643,13 +1513,12 @@
         "It changes the equilibrium constant only"
       ],
       "answer": "It gives more particles enough energy to overcome the activation energy barrier",
-      "explanation": "",
+      "explanation": "The correct answer is: It gives more particles enough energy to overcome the activation energy barrier.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 2,
-      "type": "mc",
       "question": "A catalyst speeds up a reaction by:",
       "options": [
         "Increasing the temperature",
@@ -1658,13 +1527,12 @@
         "Changing the equilibrium position permanently"
       ],
       "answer": "Providing an alternative pathway with lower activation energy",
-      "explanation": "",
+      "explanation": "The correct answer is: Providing an alternative pathway with lower activation energy.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 3,
-      "type": "mc",
       "question": "Le Chatelier's principle states that if a stress is applied to a system at equilibrium, the system will:",
       "options": [
         "Reach a new equilibrium favoring the stress direction",
@@ -1673,43 +1541,33 @@
         "Increase the rate of both forward and reverse reactions equally forever"
       ],
       "answer": "Shift to relieve the stress and reach a new equilibrium",
-      "explanation": "",
+      "explanation": "The correct answer is: Shift to relieve the stress and reach a new equilibrium.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 4,
-      "type": "mc",
-      "question": "For the reaction A + B ⇌ C + D, the equilibrium constant expression Kc is:",
+      "question": "True or False: The answer to \"Increasing temperature generally increases the reaction rate because:\" is: It gives more particles enough energy to overcome the activation energy barrier.",
       "options": [
-        "Kc = [A][B] / [C][D]",
-        "Kc = [C][D] / [A][B]",
-        "Kc = [A] + [B] / [C] + [D]",
-        "Kc = [C] × [D] × [A] × [B]"
+        "True",
+        "False"
       ],
-      "answer": "Kc = [C][D] / [A][B]",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. It gives more particles enough energy to overcome the activation energy barrier is correct.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 5,
-      "type": "mc",
-      "question": "If Kc >> 1, the equilibrium strongly favors:",
-      "options": [
-        "Reactants",
-        "Products",
-        "Neither side",
-        "The exothermic direction only"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if kc >> 1, the equilibrium strongly favors:.\"",
+      "options": null,
       "answer": "Products",
-      "explanation": "",
+      "explanation": "The correct answer is: Products.",
       "points": 1
     },
     {
       "moduleOrder": 14,
       "order": 1,
-      "type": "mc",
       "question": "Beta (β) decay occurs when:",
       "options": [
         "A nucleus emits an alpha particle",
@@ -1718,13 +1576,12 @@
         "Two protons fuse together"
       ],
       "answer": "A neutron converts to a proton and emits an electron",
-      "explanation": "",
+      "explanation": "The correct answer is: A neutron converts to a proton and emits an electron.",
       "points": 1
     },
     {
       "moduleOrder": 14,
       "order": 2,
-      "type": "mc",
       "question": "The half-life of a radioactive isotope is:",
       "options": [
         "The time for half the atoms to gain a proton",
@@ -1733,13 +1590,12 @@
         "The time for its radiation to decrease by 100%"
       ],
       "answer": "The time for half of the radioactive atoms to decay",
-      "explanation": "",
+      "explanation": "The correct answer is: The time for half of the radioactive atoms to decay.",
       "points": 1
     },
     {
       "moduleOrder": 14,
       "order": 3,
-      "type": "mc",
       "question": "Nuclear fusion releases energy by:",
       "options": [
         "Splitting a uranium nucleus",
@@ -1748,13 +1604,12 @@
         "Absorbing neutrons"
       ],
       "answer": "Combining light nuclei (such as hydrogen) into a heavier nucleus",
-      "explanation": "",
+      "explanation": "The correct answer is: Combining light nuclei (such as hydrogen) into a heavier nucleus.",
       "points": 1
     },
     {
       "moduleOrder": 14,
       "order": 4,
-      "type": "mc",
       "question": "The simplest organic compound class, containing only C–C and C–H single bonds, is:",
       "options": [
         "Alkenes",
@@ -1763,23 +1618,21 @@
         "Aromatic hydrocarbons"
       ],
       "answer": "Alkanes",
-      "explanation": "",
+      "explanation": "The correct answer is: Alkanes.",
       "points": 1
     },
     {
       "moduleOrder": 14,
       "order": 5,
-      "type": "mc",
-      "question": "If a radioactive sample starts with 100 g and has a half-life of 5 years, how much remains after 15 years?",
+      "question": "True or False: The answer to \"Beta (β) decay occurs when:\" is: A neutron converts to a proton and emits an electron.",
       "options": [
-        "50 g",
-        "25 g",
-        "12.5 g",
-        "6.25 g"
+        "True",
+        "False"
       ],
-      "answer": "12.5 g",
-      "explanation": "",
+      "answer": "True",
+      "explanation": "True. A neutron converts to a proton and emits an electron is correct.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 10
 }

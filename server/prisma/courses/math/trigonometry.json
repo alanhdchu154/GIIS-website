@@ -279,29 +279,22 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "What is the radius of the unit circle?",
+      "question": "True or False: The answer to \"How many radians are in 180 degrees\" is: pi.",
       "options": [
-        "0",
-        "1/2",
-        "1",
-        "2"
+        "True",
+        "False"
       ],
-      "answer": "1",
-      "explanation": "By definition, the unit circle has radius 1 centered at the origin.",
+      "answer": "True",
+      "explanation": "True. pi is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "What are the coordinates at 150 degrees on the unit circle?",
-      "options": [
-        "(-sqrt(3)/2, 1/2)",
-        "(sqrt(3)/2, 1/2)",
-        "(-1/2, sqrt(3)/2)",
-        "(1/2, -sqrt(3)/2)"
-      ],
+      "question": "Fill in the blank: ___ is the coordinates at 150 degrees on the unit circle.",
+      "options": null,
       "answer": "(-sqrt(3)/2, 1/2)",
-      "explanation": "150 degrees is in Quadrant II. cos(150) = -sqrt(3)/2 and sin(150) = 1/2.",
+      "explanation": "The correct answer is: (-sqrt(3)/2, 1/2).",
       "points": 1
     },
     {
@@ -363,15 +356,13 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "If sin(theta) = 3/5 and theta is in Quadrant II, what is cos(theta)?",
+      "question": "True or False: Sin(pi/6) is \"1/2\".",
       "options": [
-        "4/5",
-        "-4/5",
-        "3/4",
-        "-3/4"
+        "True",
+        "False"
       ],
-      "answer": "-4/5",
-      "explanation": "Using sin^2 + cos^2 = 1: cos^2 = 1 - 9/25 = 16/25, so cos = +/-4/5. In QII, cosine is negative, so cos(theta) = -4/5.",
+      "answer": "True",
+      "explanation": "True. 1/2 is correct.",
       "points": 1
     },
     {
@@ -419,29 +410,25 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "What is the vertical shift of y = cos(x) + 3?",
+      "question": "True or False: The period of y = sin(2x) is \"pi\".",
       "options": [
-        "3 units downward",
-        "3 units upward",
-        "3 units to the right",
-        "No vertical shift"
+        "True",
+        "False"
       ],
-      "answer": "3 units upward",
-      "explanation": "The +3 at the end shifts the entire graph 3 units upward.",
+      "answer": "True",
+      "explanation": "True. pi is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "What is the period of y = tan(pi*x)?",
+      "question": "True or False: The amplitude of y = -3cos(x) is \"-3\".",
       "options": [
-        "pi",
-        "1",
-        "2",
-        "2pi"
+        "True",
+        "False"
       ],
-      "answer": "1",
-      "explanation": "The period of y = tan(Bx) is pi/B = pi/pi = 1.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 3.",
       "points": 1
     },
     {
@@ -503,15 +490,19 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Simplify: sec(theta) * sin(theta)",
-      "options": [
-        "tan(theta)",
-        "cot(theta)",
-        "cos(theta)",
-        "csc(theta)"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"simplify: sec(theta) * sin(theta).\"",
+      "options": null,
       "answer": "tan(theta)",
-      "explanation": "sec(theta) * sin(theta) = (1/cos) * sin = sin/cos = tan(theta).",
+      "explanation": "The correct answer is: tan(theta).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 6,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which of the following equals 1 + tan^2(theta).\"",
+      "options": null,
+      "answer": "sec^2(theta)",
+      "explanation": "The correct answer is: sec^2(theta).",
       "points": 1
     },
     {
@@ -585,6 +576,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 5,
+      "order": 6,
+      "question": "True or False: Sin(A + B) is \"sinA cosB + cosA sinB\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. sinA cosB + cosA sinB is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 6,
       "order": 1,
       "question": "What is sin(2theta) in terms of sin and cos?",
@@ -629,29 +632,31 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "What is sin(theta/2) in terms of cos(theta)?",
+      "question": "True or False: Sin(2theta) in terms of sin and cos is \"2*sin*cos\".",
       "options": [
-        "sqrt((1+cos)/2)",
-        "sqrt((1-cos)/2)",
-        "(1-cos)/2",
-        "(1+cos)/2"
+        "True",
+        "False"
       ],
-      "answer": "sqrt((1-cos)/2)",
-      "explanation": "The half-angle formula: sin(theta/2) = +/- sqrt((1 - cos(theta))/2).",
+      "answer": "True",
+      "explanation": "True. 2*sin*cos is correct.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Use the double-angle formula to find cos(60) from cos(30) = sqrt(3)/2.",
-      "options": [
-        "1/2",
-        "sqrt(3)/2",
-        "0",
-        "-1/2"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"use the double-angle formula to find cos(60) from cos(30) = sqrt(3)/2..\"",
+      "options": null,
       "answer": "1/2",
-      "explanation": "cos(60) = 2cos^2(30) - 1 = 2*(3/4) - 1 = 3/2 - 1 = 1/2.",
+      "explanation": "The correct answer is: 1/2.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 6,
+      "question": "Fill in the blank: ___ is sin(theta/2) in terms of cos(theta).",
+      "options": null,
+      "answer": "sqrt((1-cos)/2)",
+      "explanation": "The correct answer is: sqrt((1-cos)/2).",
       "points": 1
     },
     {
@@ -699,29 +704,22 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Evaluate arctan(1).",
+      "question": "True or False: The range of arcsin(x) is \"[-pi/2, pi/2]\".",
       "options": [
-        "pi/6",
-        "pi/4",
-        "pi/3",
-        "pi/2"
+        "True",
+        "False"
       ],
-      "answer": "pi/4",
-      "explanation": "arctan(1) = pi/4 because tan(pi/4) = 1 and pi/4 is in the range (-pi/2, pi/2) of arctan.",
+      "answer": "True",
+      "explanation": "True. [-pi/2, pi/2] is correct.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Simplify sin(arccos(x)).",
-      "options": [
-        "x",
-        "1 - x",
-        "sqrt(1 - x^2)",
-        "1/x"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"simplify sin(arccos(x))..\"",
+      "options": null,
       "answer": "sqrt(1 - x^2)",
-      "explanation": "Let theta = arccos(x), so cos(theta) = x. By the Pythagorean identity, sin(theta) = sqrt(1 - x^2) (positive since arccos gives angles in [0, pi]).",
+      "explanation": "The correct answer is: sqrt(1 - x^2).",
       "points": 1
     },
     {
@@ -783,15 +781,13 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "If cos(theta) = 7/25, find sin(theta) in a right triangle.",
+      "question": "True or False: The answer to \"In a right triangle, what does SOH stand for\" is: Sin = Opposite/Hypotenuse.",
       "options": [
-        "24/25",
-        "7/24",
-        "25/7",
-        "24/7"
+        "True",
+        "False"
       ],
-      "answer": "24/25",
-      "explanation": "sin^2 + cos^2 = 1 -> sin^2 = 1 - 49/625 = 576/625 -> sin = 24/25.",
+      "answer": "True",
+      "explanation": "True. Sin = Opposite/Hypotenuse is correct.",
       "points": 1
     },
     {
@@ -839,29 +835,25 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "In triangle ABC, A = 30 degrees, a = 6, b = 12. How many triangles are possible?",
+      "question": "True or False: The answer to \"State the Law of Sines.\" is: a/sinA = b/sinB = c/sinC.",
       "options": [
-        "0",
-        "1",
-        "2",
-        "Infinitely many"
+        "True",
+        "False"
       ],
-      "answer": "1",
-      "explanation": "Height h = b*sinA = 12*sin(30) = 6 = a. When a equals the height, exactly one right triangle is formed.",
+      "answer": "True",
+      "explanation": "True. a/sinA = b/sinB = c/sinC is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "Which case can be solved directly using Law of Sines without ambiguity?",
+      "question": "True or False: The answer to \"In triangle ABC, A = 40 degrees, B = 75 degrees, a = 10. Find b (approximately).\" is: b = 7.0.",
       "options": [
-        "SSA",
-        "SSS",
-        "AAS",
-        "SAS"
+        "True",
+        "False"
       ],
-      "answer": "AAS",
-      "explanation": "AAS (two angles and a non-included side) has exactly one solution and is solved directly by the Law of Sines.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: b = 14.4.",
       "points": 1
     },
     {
@@ -923,15 +915,10 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "In a triangle with a = 5, b = 7, c = 8, what is cos(C)?",
-      "options": [
-        "1/7",
-        "5/7",
-        "1/2",
-        "-1/2"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in a triangle with a = 5, b = 7, c = 8, what is cos(c).\"",
+      "options": null,
       "answer": "1/7",
-      "explanation": "c^2 = a^2 + b^2 - 2ab*cosC -> 64 = 25 + 49 - 70*cosC -> cosC = 10/70 = 1/7.",
+      "explanation": "The correct answer is: 1/7.",
       "points": 1
     },
     {
@@ -1005,6 +992,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 11,
+      "order": 6,
+      "question": "True or False: The answer to \"The polar point (3, pi/2) corresponds to which rectangular point\" is: (0, 3).",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. (0, 3) is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 12,
       "order": 1,
       "question": "What is the magnitude of vector v = <3, 4>?",
@@ -1049,29 +1048,31 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "Find the unit vector in the direction of <3, 4>.",
+      "question": "True or False: The magnitude of vector v = <3, 4> is \"5\".",
       "options": [
-        "<3/5, 4/5>",
-        "<3/7, 4/7>",
-        "<1, 1>",
-        "<3, 4>"
+        "True",
+        "False"
       ],
-      "answer": "<3/5, 4/5>",
-      "explanation": "The magnitude is 5. The unit vector is <3/5, 4/5>.",
+      "answer": "True",
+      "explanation": "True. 5 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "What is the angle between vectors <1, 0> and <0, 1>?",
-      "options": [
-        "0 degrees",
-        "45 degrees",
-        "90 degrees",
-        "180 degrees"
-      ],
+      "question": "Fill in the blank: ___ is the angle between vectors <1, 0> and <0, 1>.",
+      "options": null,
       "answer": "90 degrees",
-      "explanation": "cos(theta) = dot product / (|u|*|v|) = 0/(1*1) = 0, so theta = 90 degrees.",
+      "explanation": "The correct answer is: 90 degrees.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 6,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"find the unit vector in the direction of <3, 4>..\"",
+      "options": null,
+      "answer": "<3/5, 4/5>",
+      "explanation": "The correct answer is: <3/5, 4/5>.",
       "points": 1
     },
     {
@@ -1119,29 +1120,22 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "How many nth roots does a nonzero complex number have?",
+      "question": "True or False: The answer to \"Write 1 + i in polar form.\" is: sqrt(2)*(cos(pi/4) + i*sin(pi/4)).",
       "options": [
-        "1",
-        "2",
-        "n",
-        "Infinitely many"
+        "True",
+        "False"
       ],
-      "answer": "n",
-      "explanation": "Every nonzero complex number has exactly n distinct nth roots, evenly spaced around a circle.",
+      "answer": "True",
+      "explanation": "True. sqrt(2)*(cos(pi/4) + i*sin(pi/4)) is correct.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 5,
-      "question": "What is |3 - 4i|?",
-      "options": [
-        "1",
-        "5",
-        "7",
-        "25"
-      ],
+      "question": "Fill in the blank: ___ is |3 - 4i|.",
+      "options": null,
       "answer": "5",
-      "explanation": "|3 - 4i| = sqrt(9 + 16) = sqrt(25) = 5.",
+      "explanation": "The correct answer is: 5.",
       "points": 1
     },
     {
@@ -1203,15 +1197,13 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "What does the amplitude of a sinusoidal model represent in context?",
+      "question": "True or False: The answer to \"A Ferris wheel with diameter 40 m completes one revolution in 30 seconds. What is the amplitude of the height function\" is: 20.",
       "options": [
-        "The period of the phenomenon",
-        "The average value",
-        "Half the distance between max and min values",
-        "The horizontal shift"
+        "True",
+        "False"
       ],
-      "answer": "Half the distance between max and min values",
-      "explanation": "Amplitude = (max - min)/2, representing how far the phenomenon swings above or below its average.",
+      "answer": "True",
+      "explanation": "True. 20 is correct.",
       "points": 1
     }
   ],
@@ -1264,16 +1256,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "Simplify (sin^2(theta) - 1) / cos(theta).",
+      "type": "tf",
+      "question": "True or False: The answer to \"Simplify (sin^2(theta) - 1) / cos(theta).\" is: -cos(theta).",
       "options": [
-        "cos(theta)",
-        "-cos(theta)",
-        "sin(theta)",
-        "-sin(theta)"
+        "True",
+        "False"
       ],
-      "answer": "-cos(theta)",
-      "explanation": "sin^2 - 1 = -cos^2 (Pythagorean identity). So (-cos^2)/cos = -cos(theta).",
+      "answer": "True",
+      "explanation": "True. -cos(theta) is correct.",
       "points": 1
     },
     {
@@ -1309,31 +1299,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "What is the range of f(x) = 2sin(x) + 1?",
-      "options": [
-        "[-1, 1]",
-        "[-2, 2]",
-        "[-1, 3]",
-        "[0, 3]"
-      ],
+      "options": null,
       "answer": "[-1, 3]",
-      "explanation": "2sin(x) has range [-2, 2], so adding 1 shifts it to [-1, 3].",
+      "explanation": "The correct answer is: [-1, 3].",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "Evaluate arcsin(-sqrt(3)/2).",
+      "type": "tf",
+      "question": "True or False: The answer to \"Evaluate arcsin(-sqrt(3)/2).\" is: -pi/6.",
       "options": [
-        "-pi/3",
-        "-pi/6",
-        "2pi/3",
-        "4pi/3"
+        "True",
+        "False"
       ],
-      "answer": "-pi/3",
-      "explanation": "arcsin(-sqrt(3)/2) = -pi/3 because sin(-pi/3) = -sqrt(3)/2 and -pi/3 is in [-pi/2, pi/2].",
+      "answer": "False",
+      "explanation": "False. The correct answer is: -pi/3.",
       "points": 1
     },
     {
@@ -1384,16 +1367,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "In triangle ABC, A = 35 degrees, B = 65 degrees, a = 12. Find b using Law of Sines.",
+      "type": "tf",
+      "question": "True or False: The answer to \"In triangle ABC, A = 35 degrees, B = 65 degrees, a = 12. Find b using Law of Sines.\" is: b = 18.9.",
       "options": [
-        "b = 8.5",
-        "b = 18.9",
-        "b = 15.7",
-        "b = 10.2"
+        "True",
+        "False"
       ],
-      "answer": "b = 18.9",
-      "explanation": "b = a*sin(B)/sin(A) = 12*sin(65)/sin(35) = 12*0.906/0.574 = 18.9.",
+      "answer": "True",
+      "explanation": "True. b = 18.9 is correct.",
       "points": 1
     },
     {
@@ -1444,16 +1425,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "In a triangle with sides a = 7, b = 8, c = 9, find the largest angle C.",
+      "type": "tf",
+      "question": "True or False: The answer to \"In a triangle with sides a = 7, b = 8, c = 9, find the largest angle C.\" is: C = 82.8 degrees.",
       "options": [
-        "C = 73.4 degrees",
-        "C = 82.8 degrees",
-        "C = 67.4 degrees",
-        "C = 55.8 degrees"
+        "True",
+        "False"
       ],
-      "answer": "C = 73.4 degrees",
-      "explanation": "cosC = (a^2+b^2-c^2)/(2ab) = (49+64-81)/112 = 32/112 = 2/7. C = arccos(2/7) = 73.4 degrees.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: C = 73.4 degrees.",
       "points": 1
     },
     {
@@ -1504,31 +1483,24 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "A tide model: h(t) = 4sin(pi*t/6) + 5, where h is in feet and t in hours. What is the maximum water height?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A tide model: h(t) = 4sin(pi*t/6) + 5, where h is in feet and t in hours. What is the maximum water height\" is: 9 ft.",
       "options": [
-        "5 ft",
-        "4 ft",
-        "9 ft",
-        "1 ft"
+        "True",
+        "False"
       ],
-      "answer": "9 ft",
-      "explanation": "Maximum = amplitude + midline = 4 + 5 = 9 feet.",
+      "answer": "True",
+      "explanation": "True. 9 ft is correct.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 6,
-      "type": "mc",
+      "type": "fill",
       "question": "What is the angle between vectors <1, 1> and <1, -1>?",
-      "options": [
-        "0 degrees",
-        "45 degrees",
-        "90 degrees",
-        "180 degrees"
-      ],
+      "options": null,
       "answer": "90 degrees",
-      "explanation": "Dot product = 1*1 + 1*(-1) = 0, so the vectors are perpendicular (90 degrees).",
+      "explanation": "The correct answer is: 90 degrees.",
       "points": 1
     },
     {
@@ -1564,16 +1536,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "Two forces of 30 N and 40 N act at right angles. What is the magnitude of the resultant force?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Two forces of 30 N and 40 N act at right angles. What is the magnitude of the resultant force\" is: 70 N.",
       "options": [
-        "50 N",
-        "70 N",
-        "35 N",
-        "10 N"
+        "True",
+        "False"
       ],
-      "answer": "50 N",
-      "explanation": "|F| = sqrt(30^2 + 40^2) = sqrt(900+1600) = sqrt(2500) = 50 N.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 50 N.",
       "points": 1
     },
     {
@@ -1624,16 +1594,14 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
-      "question": "To prove sec(theta) - cos(theta) = sin(theta)*tan(theta), what is the key identity used?",
+      "type": "tf",
+      "question": "True or False: The answer to \"To prove sec(theta) - cos(theta) = sin(theta)*tan(theta), what is the key identity used\" is: sin^2 = 1 - cos^2.",
       "options": [
-        "sec^2 = 1 + tan^2",
-        "sin^2 = 1 - cos^2",
-        "tan = cos/sin",
-        "csc = 1/sin"
+        "True",
+        "False"
       ],
-      "answer": "sin^2 = 1 - cos^2",
-      "explanation": "sec - cos = 1/cos - cos = (1-cos^2)/cos = sin^2/cos = sin*(sin/cos) = sin*tan. Key: 1-cos^2 = sin^2.",
+      "answer": "True",
+      "explanation": "True. sin^2 = 1 - cos^2 is correct.",
       "points": 1
     },
     {
@@ -1684,16 +1652,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "The graph of y = cos(x) is the same as y = sin(x) shifted by how much?",
+      "type": "tf",
+      "question": "True or False: The answer to \"The graph of y = cos(x) is the same as y = sin(x) shifted by how much\" is: pi/4 to the left.",
       "options": [
-        "pi/4 to the left",
-        "pi/2 to the right",
-        "pi/2 to the left",
-        "pi to the right"
+        "True",
+        "False"
       ],
-      "answer": "pi/2 to the left",
-      "explanation": "cos(x) = sin(x + pi/2), so the cosine graph is the sine graph shifted pi/2 to the left.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: pi/2 to the left.",
       "points": 1
     },
     {
@@ -1729,17 +1695,13 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "mc",
+      "type": "fill",
       "question": "A rose curve r = sin(4*theta) has how many petals?",
-      "options": [
-        "4",
-        "8",
-        "2",
-        "16"
-      ],
+      "options": null,
       "answer": "8",
-      "explanation": "For r = sin(n*theta) with n even, the curve has 2n petals. Since n=4, there are 2*4=8 petals.",
+      "explanation": "The correct answer is: 8.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": null
 }

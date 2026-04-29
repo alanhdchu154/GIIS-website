@@ -22,7 +22,7 @@
       "practiceUrl": "https://www.samhsa.gov/wellness-initiative/eight-dimensions-wellness",
       "practiceNote": "Complete a wellness wheel self-assessment to identify your strongest and weakest dimensions",
       "assignment": "Complete a personal wellness wheel assessment, rate yourself in each dimension (1–10), and write a 1-page reflection identifying your top two areas for growth and one action step for each.",
-      "estimatedHrs": 2.0
+      "estimatedHrs": 2
     },
     {
       "order": 2,
@@ -118,7 +118,7 @@
       "practiceUrl": "https://www.loveisrespect.org/",
       "practiceNote": "Complete the relationship health quiz at loveisrespect.org",
       "assignment": "Write a personal reflection on the qualities you value in friendships and family relationships, describing one communication skill you want to develop and how you will practice it.",
-      "estimatedHrs": 2.0
+      "estimatedHrs": 2
     },
     {
       "order": 8,
@@ -135,666 +135,925 @@
       "practiceNote": "Research the CDC's statistics on teen substance use and identify three prevention strategies",
       "assignment": "Create a prevention resource for peers that explains the brain effects of one substance (alcohol, nicotine, or cannabis), risk factors for addiction, and three refusal skill strategies.",
       "estimatedHrs": 2.5
-    },
-    {
-      "order": 9,
-      "title": "Sexual Health & Responsibility",
-      "titleZh": "性健康与责任",
-      "objectives": "Understand basic reproductive health, STI prevention, and the importance of informed, consensual decision-making regarding sexual health.",
-      "readingUrl": "https://www.cdc.gov/healthyyouth/sexualbehaviors/index.htm",
-      "readingNote": "CDC — Sexual Health for Teens",
-      "videoUrl": "https://www.youtube.com/watch?v=MqFfpW0TZOE",
-      "videoNote": "YouTube — Sexual Health Education for Teens",
-      "video2Url": "https://www.youtube.com/watch?v=BEKKNQVwHh0",
-      "video2Note": "YouTube — Consent and Healthy Relationships",
-      "practiceUrl": "https://www.cdc.gov/healthyyouth/sexualbehaviors/index.htm",
-      "practiceNote": "Review CDC's teen sexual health statistics and identify two evidence-based prevention strategies",
-      "assignment": "Write a fact sheet on one sexually transmitted infection (STI), covering transmission, symptoms, prevention, and testing, using credible public health sources.",
-      "estimatedHrs": 2.5
-    },
-    {
-      "order": 10,
-      "title": "Environmental Health",
-      "titleZh": "环境健康",
-      "objectives": "Identify how environmental factors (air quality, water safety, pollution) affect human health, and evaluate personal and community actions to protect environmental health.",
-      "readingUrl": "https://www.cdc.gov/nceh/publications/factsheets/EnvironmentalHealth.htm",
-      "readingNote": "CDC — Environmental Health Overview",
-      "videoUrl": "https://www.youtube.com/watch?v=vGw1PnBHRps",
-      "videoNote": "YouTube — Environmental Health and Human Wellbeing",
-      "video2Url": "https://www.youtube.com/watch?v=uN7RAbH23IY",
-      "video2Note": "YouTube — How Pollution Affects Your Health",
-      "practiceUrl": "https://www.cdc.gov/nceh/index.htm",
-      "practiceNote": "Research the air quality index (AQI) in your local area and assess current environmental health risks",
-      "assignment": "Evaluate an environmental health issue in your community (e.g., air quality, water safety, waste management) and propose three evidence-based solutions or personal actions.",
-      "estimatedHrs": 2.0
-    },
-    {
-      "order": 11,
-      "title": "Chronic Disease Prevention",
-      "titleZh": "慢性病预防",
-      "objectives": "Identify the leading chronic diseases (heart disease, diabetes, cancer, obesity), understand modifiable risk factors, and apply prevention strategies through lifestyle choices.",
-      "readingUrl": "https://www.cdc.gov/chronicdisease/resources/publications/factsheets/preventing-chronic-diseases.htm",
-      "readingNote": "CDC — Preventing Chronic Diseases",
-      "videoUrl": "https://www.youtube.com/watch?v=TZLHV0gxMiQ",
-      "videoNote": "YouTube — Chronic Disease Prevention Through Lifestyle",
-      "video2Url": "https://www.youtube.com/watch?v=4qwnQhxSLDM",
-      "video2Note": "YouTube — Risk Factors for Chronic Disease",
-      "practiceUrl": "https://www.cdc.gov/chronicdisease/index.htm",
-      "practiceNote": "Complete a personal chronic disease risk factor assessment using CDC resources",
-      "assignment": "Choose one chronic disease, research its risk factors, write a 2-page prevention plan that applies diet, exercise, sleep, and stress management strategies for a teenager.",
-      "estimatedHrs": 2.5
-    },
-    {
-      "order": 12,
-      "title": "Consumer Health & Healthcare",
-      "titleZh": "消费者健康与医疗",
-      "objectives": "Understand how to evaluate health information sources, navigate basic healthcare systems, and make informed decisions as a health consumer.",
-      "readingUrl": "https://medlineplus.gov/healthliteracy.html",
-      "readingNote": "MedlinePlus — Health Literacy and Consumer Health",
-      "videoUrl": "https://www.youtube.com/watch?v=9gQ_VBgPShk",
-      "videoNote": "YouTube — How to Evaluate Health Information Online",
-      "video2Url": "https://www.youtube.com/watch?v=XGK84Poeynk",
-      "video2Note": "YouTube — Understanding Your Healthcare Options",
-      "practiceUrl": "https://medlineplus.gov/",
-      "practiceNote": "Evaluate two health websites for credibility using the CRAAP test criteria",
-      "assignment": "Evaluate three health information sources (website, social media post, news article) using criteria for credibility, accuracy, and bias, and write a summary of your findings.",
-      "estimatedHrs": 2.5
-    },
-    {
-      "order": 13,
-      "title": "Community & Global Health",
-      "titleZh": "社区与全球健康",
-      "objectives": "Identify social determinants of health, understand how community and global factors affect population health, and recognize the role of public health institutions.",
-      "readingUrl": "https://www.who.int/health-topics/social-determinants-of-health",
-      "readingNote": "WHO — Social Determinants of Health",
-      "videoUrl": "https://www.youtube.com/watch?v=kbsN37r8zts",
-      "videoNote": "YouTube — Social Determinants of Health Explained",
-      "video2Url": "https://www.youtube.com/watch?v=Wd1eVKcK5lc",
-      "video2Note": "YouTube — Global Public Health Challenges",
-      "practiceUrl": "https://www.who.int/health-topics",
-      "practiceNote": "Research a current global health issue on the WHO website and describe its impact on a specific population",
-      "assignment": "Research one social determinant of health (e.g., income, education, housing) and write a 1-page essay explaining how it affects health outcomes and what communities can do to address it.",
-      "estimatedHrs": 2.5
-    },
-    {
-      "order": 14,
-      "title": "Creating a Personal Wellness Plan",
-      "titleZh": "制定个人健康计划",
-      "objectives": "Synthesize all wellness dimensions into a comprehensive, personalized wellness plan with specific goals, strategies, and tracking methods for maintaining lifelong health.",
-      "readingUrl": "https://www.samhsa.gov/wellness-initiative",
-      "readingNote": "SAMHSA — Wellness Initiative and Planning",
-      "videoUrl": "https://www.youtube.com/watch?v=U4IU-y9-J8Q",
-      "videoNote": "YouTube — Creating a Personal Wellness Plan",
-      "video2Url": "https://www.youtube.com/watch?v=xBpJeJRfCnU",
-      "video2Note": "YouTube — Holistic Health Goal Setting",
-      "practiceUrl": "https://www.samhsa.gov/wellness-initiative",
-      "practiceNote": "Use the SAMHSA wellness plan template to draft your personal wellness goals for each dimension",
-      "assignment": "Create a comprehensive personal wellness plan addressing all wellness dimensions, with two SMART goals per dimension, specific action steps, a timeline, and a method for tracking progress.",
-      "estimatedHrs": 4.0
     }
   ],
   "quizQuestions": [
     {
-      "moduleOrder": 1, "order": 1, "question": "How many dimensions of wellness does SAMHSA identify?",
-      "options": ["5", "6", "8", "10"],
-      "answer": "C", "explanation": "SAMHSA identifies 8 dimensions of wellness: emotional, financial, social, spiritual, occupational, physical, intellectual, and environmental.", "points": 1
-    },
-    {
-      "moduleOrder": 1, "order": 2, "question": "Which best describes the concept of 'holistic wellness'?",
-      "options": ["Focusing only on physical health", "Recognizing that all wellness dimensions are interconnected and equally important", "Prioritizing spiritual health above all others", "Achieving perfect health in every dimension"],
-      "answer": "B", "explanation": "Holistic wellness acknowledges that all health dimensions are interconnected — weakness in one can affect all others.", "points": 1
-    },
-    {
-      "moduleOrder": 1, "order": 3, "question": "Intellectual wellness involves:",
-      "options": ["Having a high IQ only", "Engaging in creative and stimulating mental activities and lifelong learning", "Achieving straight-A grades", "Avoiding all challenging tasks"],
-      "answer": "B", "explanation": "Intellectual wellness is nurtured through curiosity, learning, problem-solving, and engaging in mentally stimulating activities.", "points": 1
-    },
-    {
-      "moduleOrder": 1, "order": 4, "question": "A wellness wheel is used to:",
-      "options": ["Measure only physical fitness", "Visually assess balance across all wellness dimensions", "Track daily caloric intake", "Plan athletic training programs"],
-      "answer": "B", "explanation": "A wellness wheel allows individuals to visually assess their perceived wellbeing in each dimension and identify areas for growth.", "points": 1
-    },
-    {
-      "moduleOrder": 1, "order": 5, "question": "Occupational wellness refers to:",
-      "options": ["Physical fitness related to occupation", "Finding meaning and satisfaction in your work or studies", "Working the most hours possible", "Having the highest-paying career"],
-      "answer": "B", "explanation": "Occupational wellness involves deriving meaning, satisfaction, and purpose from work, school, or other productive activities.", "points": 1
-    },
-    {
-      "moduleOrder": 2, "order": 1, "question": "How much daily physical activity do adolescents need according to health guidelines?",
-      "options": ["20 minutes per day", "30 minutes per day", "60 minutes per day", "90 minutes per day"],
-      "answer": "C", "explanation": "The CDC recommends that adolescents get at least 60 minutes of moderate-to-vigorous physical activity every day.", "points": 1
-    },
-    {
-      "moduleOrder": 2, "order": 2, "question": "Which type of physical activity is recommended at least 3 days per week for teens?",
-      "options": ["Static stretching only", "Muscle-strengthening activities", "Low-intensity walking only", "Sitting meditation"],
-      "answer": "B", "explanation": "Muscle and bone-strengthening activities (resistance training, gymnastics) are recommended at least 3 days per week for teens.", "points": 1
-    },
-    {
-      "moduleOrder": 2, "order": 3, "question": "A common barrier to exercise for teenagers is:",
-      "options": ["Excessive free time", "Lack of time due to academic and social commitments", "Having too many gym memberships", "Knowing too many exercises"],
-      "answer": "B", "explanation": "Time constraints from school, homework, and social activities are among the most frequently cited barriers to teen physical activity.", "points": 1
-    },
-    {
-      "moduleOrder": 2, "order": 4, "question": "Regular physical activity improves which aspect of mental wellness?",
-      "options": ["It has no effect on mental health", "It improves mood, reduces anxiety and depression, and enhances self-esteem", "It only improves physical appearance", "It increases academic stress"],
-      "answer": "B", "explanation": "Regular physical activity triggers endorphin release, reduces cortisol, and improves mood, self-esteem, and mental health outcomes.", "points": 1
-    },
-    {
-      "moduleOrder": 2, "order": 5, "question": "Sedentary behavior refers to:",
-      "options": ["Light physical activity", "Time spent in activities with very low energy expenditure (sitting, screen time)", "Any exercise lasting less than 30 minutes", "Sleep and rest"],
-      "answer": "B", "explanation": "Sedentary behavior includes prolonged sitting, screen use, and other very low-energy activities that can harm health even in exercising individuals.", "points": 1
-    },
-    {
-      "moduleOrder": 3, "order": 1, "question": "MyPlate recommends that half your plate be filled with:",
-      "options": ["Protein and grains", "Fruits and vegetables", "Dairy and fats", "Grains only"],
-      "answer": "B", "explanation": "The USDA MyPlate guideline recommends filling half of every meal's plate with fruits and vegetables.", "points": 1
-    },
-    {
-      "moduleOrder": 3, "order": 2, "question": "How does poor nutrition most directly affect mental wellness?",
-      "options": ["It has no connection to mental health", "Nutrient deficiencies can impair brain function, mood, and cognitive performance", "It only affects physical appearance", "It improves focus and energy"],
-      "answer": "B", "explanation": "Nutritional deficiencies (e.g., iron, B vitamins, omega-3s) can negatively impact brain chemistry, mood regulation, and cognitive function.", "points": 1
-    },
-    {
-      "moduleOrder": 3, "order": 3, "question": "Which eating habit best supports nutritional wellness?",
-      "options": ["Skipping breakfast to save calories", "Eating a variety of whole, minimally processed foods from all food groups", "Consuming mostly ultra-processed convenience foods", "Following extreme restrictive diets"],
-      "answer": "B", "explanation": "Nutritional wellness is supported by variety, balance, and adequacy — choosing whole foods from all food groups in appropriate amounts.", "points": 1
-    },
-    {
-      "moduleOrder": 3, "order": 4, "question": "Mindful eating involves:",
-      "options": ["Eating as quickly as possible", "Counting every calorie precisely", "Paying full attention to hunger cues, flavors, and eating without distraction", "Avoiding social meals"],
-      "answer": "C", "explanation": "Mindful eating means eating with full attention, savoring food, and listening to hunger and satiety cues without distraction.", "points": 1
-    },
-    {
-      "moduleOrder": 3, "order": 5, "question": "Hydration's impact on wellness includes:",
-      "options": ["Only improving physical performance", "Supporting cognitive function, mood, digestion, and physical performance", "No effect on mental clarity", "Reducing energy levels"],
-      "answer": "B", "explanation": "Adequate hydration supports brain function, mood regulation, digestive health, temperature regulation, and physical performance.", "points": 1
-    },
-    {
-      "moduleOrder": 4, "order": 1, "question": "Mental health is best defined as:",
-      "options": ["The absence of all mental illness", "Emotional, psychological, and social well-being that affects thinking, feeling, and behavior", "High intelligence and academic achievement", "Complete freedom from stress"],
-      "answer": "B", "explanation": "Mental health encompasses emotional, psychological, and social well-being, affecting how we think, feel, and interact with the world.", "points": 1
-    },
-    {
-      "moduleOrder": 4, "order": 2, "question": "Anxiety disorders are the most common mental health condition in:",
-      "options": ["Adults over 65", "Children under 5", "Teenagers and young adults", "Only competitive athletes"],
-      "answer": "C", "explanation": "Anxiety disorders are the most prevalent mental health conditions in adolescents and young adults, often beginning in childhood or teen years.", "points": 1
-    },
-    {
-      "moduleOrder": 4, "order": 3, "question": "Which is NOT a healthy coping strategy for mental health challenges?",
-      "options": ["Journaling", "Exercising regularly", "Talking to a trusted adult", "Using alcohol to reduce feelings of anxiety"],
-      "answer": "D", "explanation": "Alcohol is an unhealthy and potentially harmful coping mechanism that masks symptoms rather than addressing mental health challenges.", "points": 1
-    },
-    {
-      "moduleOrder": 4, "order": 4, "question": "Stigma around mental health prevents many teens from seeking help because:",
-      "options": ["Mental health treatment is illegal for teens", "They fear judgment, social exclusion, or being labeled as weak", "Therapy is too expensive for all teens", "Mental illness is not taken seriously by doctors"],
-      "answer": "B", "explanation": "Social stigma — fear of being judged, labeled, or excluded — is one of the primary barriers preventing teens from seeking mental health support.", "points": 1
-    },
-    {
-      "moduleOrder": 4, "order": 5, "question": "A protective factor for teen mental health includes:",
-      "options": ["Isolation from peers and family", "Social support from caring adults and peers", "Avoiding all forms of stress", "Ignoring negative emotions"],
-      "answer": "B", "explanation": "Strong social support from family, peers, and trusted adults is one of the most significant protective factors for adolescent mental health.", "points": 1
-    },
-    {
-      "moduleOrder": 5, "order": 1, "question": "The body's 'fight or flight' response is triggered by which hormone?",
-      "options": ["Insulin", "Cortisol and adrenaline (epinephrine)", "Serotonin", "Melatonin"],
-      "answer": "B", "explanation": "The fight-or-flight response involves the release of cortisol and adrenaline from the adrenal glands in response to perceived threats.", "points": 1
-    },
-    {
-      "moduleOrder": 5, "order": 2, "question": "Which of the following is an evidence-based stress management technique?",
-      "options": ["Ruminating on problems repeatedly", "Avoiding all responsibilities", "Deep breathing exercises and mindfulness meditation", "Watching screens for 6+ hours"],
-      "answer": "C", "explanation": "Deep breathing and mindfulness meditation activate the parasympathetic nervous system, reducing physiological stress responses.", "points": 1
-    },
-    {
-      "moduleOrder": 5, "order": 3, "question": "Chronic stress can harm physical health by:",
-      "options": ["Strengthening the immune system permanently", "Elevating cortisol levels, suppressing immune function, and increasing disease risk", "Improving cardiovascular health", "Increasing digestive efficiency"],
-      "answer": "B", "explanation": "Prolonged cortisol elevation from chronic stress suppresses the immune system, raises blood pressure, and increases risk of chronic disease.", "points": 1
-    },
-    {
-      "moduleOrder": 5, "order": 4, "question": "Which type of stress can sometimes improve performance?",
-      "options": ["Chronic unmanaged stress", "Distress (negative stress)", "Eustress (positive stress)", "Traumatic stress"],
-      "answer": "C", "explanation": "Eustress is positive, motivating stress that enhances focus and performance — like the excitement before a big presentation or race.", "points": 1
-    },
-    {
-      "moduleOrder": 5, "order": 5, "question": "Which time management strategy most directly reduces academic stress?",
-      "options": ["Procrastinating on large tasks", "Breaking large assignments into smaller, scheduled tasks", "Studying only the night before", "Avoiding all extracurricular activities"],
-      "answer": "B", "explanation": "Breaking tasks into manageable pieces and scheduling them reduces the overwhelming nature of large assignments, decreasing stress.", "points": 1
-    },
-    {
-      "moduleOrder": 6, "order": 1, "question": "How many hours of sleep per night do teenagers need?",
-      "options": ["5–6 hours", "6–7 hours", "8–10 hours", "12+ hours"],
-      "answer": "C", "explanation": "The CDC and American Academy of Sleep Medicine recommend 8–10 hours of sleep per night for teenagers aged 13–18.", "points": 1
-    },
-    {
-      "moduleOrder": 6, "order": 2, "question": "REM (Rapid Eye Movement) sleep is especially important for:",
-      "options": ["Physical muscle repair only", "Memory consolidation and emotional processing", "Physical growth only", "Caloric expenditure"],
-      "answer": "B", "explanation": "REM sleep plays a critical role in consolidating memories, processing emotions, and supporting learning and cognitive function.", "points": 1
-    },
-    {
-      "moduleOrder": 6, "order": 3, "question": "Blue light from screens before bed disrupts sleep by:",
-      "options": ["Improving sleep quality", "Suppressing melatonin production and delaying sleep onset", "Increasing REM sleep", "Accelerating the sleep cycle"],
-      "answer": "B", "explanation": "Blue light mimics daylight, suppressing melatonin (the sleep hormone), making it harder to fall asleep at a natural bedtime.", "points": 1
-    },
-    {
-      "moduleOrder": 6, "order": 4, "question": "Which sleep hygiene habit promotes better sleep quality?",
-      "options": ["Irregular sleep and wake times", "Consuming caffeine in the evening", "Keeping a consistent sleep schedule", "Exercising intensely right before bed"],
-      "answer": "C", "explanation": "Going to bed and waking at consistent times strengthens the circadian rhythm, improving sleep quality and ease of falling asleep.", "points": 1
-    },
-    {
-      "moduleOrder": 6, "order": 5, "question": "Sleep deprivation in teens is associated with:",
-      "options": ["Improved athletic performance", "Better academic grades", "Impaired concentration, mood instability, and increased health risks", "Enhanced immune function"],
-      "answer": "C", "explanation": "Insufficient sleep impairs cognitive function, emotional regulation, immune response, and is linked to increased risk of anxiety and depression.", "points": 1
-    },
-    {
-      "moduleOrder": 7, "order": 1, "question": "A healthy relationship is characterized by:",
-      "options": ["Jealousy and possessiveness", "Mutual respect, trust, honesty, and support", "One person making all decisions", "Frequent conflict without resolution"],
-      "answer": "B", "explanation": "Healthy relationships are built on mutual respect, trust, open communication, honesty, and support for each other's wellbeing.", "points": 1
-    },
-    {
-      "moduleOrder": 7, "order": 2, "question": "Which of the following is a warning sign of an unhealthy relationship?",
-      "options": ["Respecting each other's boundaries", "Encouraging independence and friendships", "One partner attempting to control the other's behavior", "Open and honest communication"],
-      "answer": "C", "explanation": "Controlling behavior, including monitoring movements, isolating from friends, or making decisions for the partner, is a warning sign of abuse.", "points": 1
-    },
-    {
-      "moduleOrder": 7, "order": 3, "question": "'I' statements in communication are effective because they:",
-      "options": ["Blame the other person for problems", "Express feelings without accusation, reducing defensiveness", "Avoid discussing any conflict", "Make the speaker appear dominant"],
-      "answer": "B", "explanation": "'I feel... when...' statements communicate feelings without blaming others, reducing defensiveness and improving resolution.", "points": 1
-    },
-    {
-      "moduleOrder": 7, "order": 4, "question": "Social wellness is most strongly associated with:",
-      "options": ["Having the most social media followers", "Meaningful connections and a supportive social network", "Avoiding all conflict in relationships", "Being the most popular person at school"],
-      "answer": "B", "explanation": "Social wellness is about the quality of relationships and social support networks, not quantity of connections or popularity.", "points": 1
-    },
-    {
-      "moduleOrder": 7, "order": 5, "question": "Active listening involves:",
-      "options": ["Thinking about your response while the other person talks", "Fully concentrating on, understanding, and responding to the speaker", "Talking over others to make your point", "Avoiding eye contact during conversations"],
-      "answer": "B", "explanation": "Active listening requires full attention to the speaker, withholding judgment, and reflecting back what was heard before responding.", "points": 1
-    },
-    {
-      "moduleOrder": 8, "order": 1, "question": "Nicotine in tobacco products affects the developing teen brain by:",
-      "options": ["Having no effect on teenage brains", "Disrupting formation of brain circuits that control attention, learning, and impulse control", "Improving concentration and mood permanently", "Only affecting the lungs"],
-      "answer": "B", "explanation": "Nicotine is highly addictive and disrupts developing brain circuits responsible for attention, mood regulation, learning, and impulse control in teens.", "points": 1
-    },
-    {
-      "moduleOrder": 8, "order": 2, "question": "The minimum legal drinking age in the United States is:",
-      "options": ["16", "18", "21", "25"],
-      "answer": "C", "explanation": "The legal drinking age in all 50 US states is 21 years old.", "points": 1
-    },
-    {
-      "moduleOrder": 8, "order": 3, "question": "Which factor most protects teens from substance use?",
-      "options": ["Absence of rules at home", "Strong family bonds and healthy peer relationships", "Easy access to substances", "Academic pressure and stress"],
-      "answer": "B", "explanation": "Strong family connections, positive peer relationships, and school engagement are among the strongest protective factors against teen substance use.", "points": 1
-    },
-    {
-      "moduleOrder": 8, "order": 4, "question": "A refusal skill for peer pressure might include:",
-      "options": ["Accepting substances to avoid social rejection", "Confidently saying 'No thanks' and suggesting an alternative activity", "Pretending to agree and then using the substance later", "Ignoring the person completely"],
-      "answer": "B", "explanation": "Effective refusal skills include a clear, firm 'No,' offering an alternative, and leaving the situation if pressure continues.", "points": 1
-    },
-    {
-      "moduleOrder": 8, "order": 5, "question": "Electronic cigarettes (e-cigarettes) are harmful to teens because:",
-      "options": ["They contain zero chemicals", "They contain nicotine and aerosol chemicals harmful to the developing brain and lungs", "They are approved as safe by the FDA for teens", "They only affect taste buds"],
-      "answer": "B", "explanation": "E-cigarettes contain nicotine, ultrafine particles, and other chemicals harmful to the developing teen brain and respiratory system.", "points": 1
-    },
-    {
-      "moduleOrder": 9, "order": 1, "question": "Consent in sexual health means:",
-      "options": ["Automatic agreement in a long-term relationship", "Clear, ongoing, and voluntary agreement from all partners before any sexual activity", "Silence indicates agreement", "Agreement given under pressure is acceptable"],
-      "answer": "B", "explanation": "Consent must be clear, ongoing, freely given, and can be withdrawn at any time; it cannot be assumed from silence or pressure.", "points": 1
-    },
-    {
-      "moduleOrder": 9, "order": 2, "question": "Which method is most effective at preventing both STIs and unintended pregnancy?",
-      "options": ["Condom use only", "Abstinence only", "Condoms used consistently and correctly", "Fertility awareness alone"],
-      "answer": "C", "explanation": "Consistent, correct condom use provides significant protection against both sexually transmitted infections and unintended pregnancy.", "points": 1
-    },
-    {
-      "moduleOrder": 9, "order": 3, "question": "HPV (Human Papillomavirus) is unique among common STIs because:",
-      "options": ["There is no test or vaccine", "It can be prevented by a vaccine (Gardasil)", "It only affects adults over 40", "It has no health consequences"],
-      "answer": "B", "explanation": "HPV is the only STI for which a highly effective preventive vaccine (Gardasil) is available and recommended for preteens and teens.", "points": 1
-    },
-    {
-      "moduleOrder": 9, "order": 4, "question": "Why is sexual health education important for adolescents?",
-      "options": ["It encourages risky behavior", "It provides accurate information to support informed decision-making and reduce STIs and teen pregnancy", "It is only for sexually active teens", "It replaces parental guidance entirely"],
-      "answer": "B", "explanation": "Comprehensive sexual health education equips teens with accurate knowledge to make informed decisions, reducing rates of STIs and unintended pregnancy.", "points": 1
-    },
-    {
-      "moduleOrder": 9, "order": 5, "question": "Regular STI testing is recommended for sexually active teens because:",
-      "options": ["STIs always produce obvious symptoms", "Many STIs have no symptoms and can be treated or managed when detected early", "Testing guarantees zero STI risk", "Only adults need STI testing"],
-      "answer": "B", "explanation": "Many STIs (chlamydia, HIV, herpes) can be asymptomatic; early detection through testing allows timely treatment and prevents spread.", "points": 1
-    },
-    {
-      "moduleOrder": 10, "order": 1, "question": "The Air Quality Index (AQI) measures:",
-      "options": ["Wind speed and temperature", "Concentration of pollutants in outdoor air and associated health risk", "Water quality in local streams", "Indoor air ventilation rates"],
-      "answer": "B", "explanation": "The AQI measures the concentrations of five major pollutants in outdoor air and translates them into a health risk scale.", "points": 1
-    },
-    {
-      "moduleOrder": 10, "order": 2, "question": "Lead exposure in children is most commonly linked to:",
-      "options": ["Eating too many vegetables", "Old lead-based paint and contaminated water in older homes", "Spending time outdoors", "Drinking filtered water"],
-      "answer": "B", "explanation": "Lead exposure in children most commonly occurs from deteriorating lead-based paint in pre-1978 homes and lead-contaminated water from old pipes.", "points": 1
-    },
-    {
-      "moduleOrder": 10, "order": 3, "question": "Which individual action best supports environmental health?",
-      "options": ["Increasing single-use plastic consumption", "Reducing, reusing, and recycling to minimize waste", "Driving everywhere instead of walking", "Ignoring local environmental regulations"],
-      "answer": "B", "explanation": "Reducing, reusing, and recycling limits waste production, conserves resources, and reduces environmental pollutants.", "points": 1
-    },
-    {
-      "moduleOrder": 10, "order": 4, "question": "Climate change is linked to human health by:",
-      "options": ["Reducing all health risks globally", "Increasing heat-related illness, air pollution, infectious disease spread, and natural disasters", "Having no measurable health effects", "Only affecting developing countries"],
-      "answer": "B", "explanation": "Climate change worsens air quality, expands ranges of disease vectors, increases extreme weather events, and exacerbates heat-related illness.", "points": 1
-    },
-    {
-      "moduleOrder": 10, "order": 5, "question": "Access to safe drinking water is important for public health because contaminated water can cause:",
-      "options": ["Increased cognitive function", "Waterborne diseases such as cholera, typhoid, and diarrheal illness", "No significant health problems", "Only minor skin irritation"],
-      "answer": "B", "explanation": "Contaminated water transmits serious waterborne pathogens that cause diarrheal illness, cholera, typhoid, and other diseases globally.", "points": 1
-    },
-    {
-      "moduleOrder": 11, "order": 1, "question": "Which of the following is a modifiable risk factor for chronic disease?",
-      "options": ["Age", "Genetic predisposition", "Physical inactivity", "Family history"],
-      "answer": "C", "explanation": "Physical inactivity is a modifiable risk factor — lifestyle changes can significantly reduce its contribution to chronic disease risk.", "points": 1
-    },
-    {
-      "moduleOrder": 11, "order": 2, "question": "Type 2 diabetes is most strongly associated with which lifestyle factor?",
-      "options": ["Too much sleep", "Excessive physical activity", "Obesity and physical inactivity", "Eating too many vegetables"],
-      "answer": "C", "explanation": "Obesity and physical inactivity are the primary modifiable risk factors for type 2 diabetes, a preventable chronic disease.", "points": 1
-    },
-    {
-      "moduleOrder": 11, "order": 3, "question": "The leading cause of death in the United States is:",
-      "options": ["Accidents", "Cancer", "Heart disease", "Diabetes"],
-      "answer": "C", "explanation": "Heart disease has been the leading cause of death in the United States for most of the past century, responsible for approximately 1 in 4 deaths.", "points": 1
-    },
-    {
-      "moduleOrder": 11, "order": 4, "question": "Regular aerobic exercise reduces the risk of chronic disease by:",
-      "options": ["Increasing blood pressure and cholesterol", "Improving insulin sensitivity, reducing inflammation, and strengthening the cardiovascular system", "Only improving physical appearance", "Having no effect on disease risk"],
-      "answer": "B", "explanation": "Regular aerobic exercise improves insulin sensitivity, reduces inflammation, lowers blood pressure, and strengthens the heart, reducing chronic disease risk.", "points": 1
-    },
-    {
-      "moduleOrder": 11, "order": 5, "question": "Which diet pattern is most strongly associated with reduced chronic disease risk?",
-      "options": ["High-sugar, high-sodium processed diet", "High saturated fat diet", "Plant-rich diet with fruits, vegetables, whole grains, and lean proteins", "Very low calorie crash diet"],
-      "answer": "C", "explanation": "Diets rich in fruits, vegetables, whole grains, and lean proteins and low in processed foods are associated with the lowest chronic disease risk.", "points": 1
-    },
-    {
-      "moduleOrder": 12, "order": 1, "question": "A reliable health information website can be identified by:",
-      "options": [".com with anonymous authors", "Government (.gov), educational (.edu), or reputable nonprofit (.org) domains with cited authors", "The most popular social media post", "The most elaborate website design"],
-      "answer": "B", "explanation": "Credible health sources include government, academic, and established medical organization websites with identified authors and cited evidence.", "points": 1
-    },
-    {
-      "moduleOrder": 12, "order": 2, "question": "Health literacy is defined as:",
-      "options": ["Having a medical degree", "The ability to obtain, process, and understand health information to make informed decisions", "Only reading health textbooks", "Following all health advice on social media"],
-      "answer": "B", "explanation": "Health literacy is the capacity to find, understand, and use health information effectively to make decisions about care and lifestyle.", "points": 1
-    },
-    {
-      "moduleOrder": 12, "order": 3, "question": "Preventive healthcare includes which of the following?",
-      "options": ["Waiting until illness is severe before seeing a doctor", "Annual checkups, vaccinations, and screenings before disease develops", "Only taking medication when sick", "Avoiding healthcare providers unless in emergency"],
-      "answer": "B", "explanation": "Preventive healthcare includes routine checkups, immunizations, and health screenings that detect or prevent disease before it progresses.", "points": 1
-    },
-    {
-      "moduleOrder": 12, "order": 4, "question": "Which is a red flag for health misinformation?",
-      "options": ["Claims based on peer-reviewed research", "Promises of miraculous cures or treatments not supported by evidence", "Transparent funding sources", "Authors with verifiable medical credentials"],
-      "answer": "B", "explanation": "Miraculous cure claims, lack of cited evidence, anonymous sources, and sensationalized language are hallmarks of health misinformation.", "points": 1
-    },
-    {
-      "moduleOrder": 12, "order": 5, "question": "Generic drugs are:",
-      "options": ["Always inferior to brand-name drugs", "Chemically identical to brand-name drugs but typically less expensive", "Only available for serious diseases", "Not approved by the FDA"],
-      "answer": "B", "explanation": "Generic drugs contain the same active ingredients in the same doses as brand-name drugs and are FDA-approved equivalents at lower cost.", "points": 1
-    },
-    {
-      "moduleOrder": 13, "order": 1, "question": "Social determinants of health include:",
-      "options": ["Only genetic factors", "Income, education, neighborhood, employment, and access to healthcare", "Only individual lifestyle choices", "Only physical activity and diet"],
-      "answer": "B", "explanation": "Social determinants are the conditions in which people are born, grow, work, and live that significantly affect health outcomes.", "points": 1
-    },
-    {
-      "moduleOrder": 13, "order": 2, "question": "The World Health Organization (WHO) defines health as:",
-      "options": ["The absence of disease or infirmity only", "A state of complete physical, mental, and social well-being, not merely absence of disease", "The ability to exercise vigorously", "Achieving perfect fitness levels"],
-      "answer": "B", "explanation": "WHO defines health as complete physical, mental, and social well-being — a positive concept that goes beyond the absence of illness.", "points": 1
-    },
-    {
-      "moduleOrder": 13, "order": 3, "question": "Health equity means:",
-      "options": ["Everyone gets exactly the same healthcare", "Every person has a fair opportunity to attain their highest level of health", "Only wealthy people receive quality care", "Health is equally distributed by chance"],
-      "answer": "B", "explanation": "Health equity means addressing disparities so all people have fair opportunities to achieve their full health potential regardless of social circumstances.", "points": 1
-    },
-    {
-      "moduleOrder": 13, "order": 4, "question": "Public health institutions like the CDC primarily work to:",
-      "options": ["Treat individual patients", "Prevent disease and protect the health of populations through policy, research, and education", "Replace private healthcare", "Operate hospitals only"],
-      "answer": "B", "explanation": "The CDC and similar public health organizations focus on population-level disease prevention, health promotion, and emergency response.", "points": 1
-    },
-    {
-      "moduleOrder": 13, "order": 5, "question": "Which global health issue causes the most childhood deaths worldwide?",
-      "options": ["Cancer", "Preventable and treatable infectious diseases and malnutrition", "Sports injuries", "Genetic disorders only"],
-      "answer": "B", "explanation": "Preventable and treatable conditions including pneumonia, diarrhea, and malaria alongside malnutrition are leading causes of global childhood mortality.", "points": 1
-    },
-    {
-      "moduleOrder": 14, "order": 1, "question": "A personal wellness plan should include goals for:",
-      "options": ["Physical fitness only", "All dimensions of wellness with specific action steps", "Academic performance only", "Social media engagement"],
-      "answer": "B", "explanation": "A comprehensive wellness plan addresses all dimensions of health with specific, measurable goals and action plans for each.", "points": 1
-    },
-    {
-      "moduleOrder": 14, "order": 2, "question": "SMART goals in a wellness plan should be:",
-      "options": ["Vague and flexible", "Specific, Measurable, Achievable, Relevant, and Time-bound", "Set by others without your input", "Changed weekly without tracking"],
-      "answer": "B", "explanation": "SMART goals provide clear, structured targets with defined timelines that make progress trackable and achievable.", "points": 1
-    },
-    {
-      "moduleOrder": 14, "order": 3, "question": "The most important factor for long-term success with a wellness plan is:",
-      "options": ["Achieving perfection immediately", "Consistency and gradual progress over time", "Having the most expensive equipment", "Following someone else's identical plan"],
-      "answer": "B", "explanation": "Sustainable wellness improvement requires consistent effort and gradual progress — not perfection — tailored to individual needs and preferences.", "points": 1
-    },
-    {
-      "moduleOrder": 14, "order": 4, "question": "Tracking progress in a wellness plan is important because it:",
-      "options": ["Guarantees results without effort", "Provides feedback, maintains motivation, and allows plan adjustments", "Replaces professional healthcare", "Only applies to physical fitness goals"],
-      "answer": "B", "explanation": "Tracking provides data on what is working, maintains accountability and motivation, and allows evidence-based plan adjustments.", "points": 1
-    },
-    {
-      "moduleOrder": 14, "order": 5, "question": "A personal wellness plan is most effective when it:",
-      "options": ["Copies someone else's plan exactly", "Is personalized to individual values, interests, and realistic lifestyle factors", "Focuses only on areas of strength", "Changes completely every week"],
-      "answer": "B", "explanation": "Personalized wellness plans that align with individual values, interests, and realistic constraints are most sustainable and effective.", "points": 1
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "How many dimensions of wellness does SAMHSA identify?",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": "C",
+      "explanation": "SAMHSA identifies 8 dimensions of wellness: emotional, financial, social, spiritual, occupational, physical, intellectual, and environmental.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which best describes the concept of 'holistic wellness'?",
+      "options": [
+        "Focusing only on physical health",
+        "Recognizing that all wellness dimensions are interconnected and equally important",
+        "Prioritizing spiritual health above all others",
+        "Achieving perfect health in every dimension"
+      ],
+      "answer": "B",
+      "explanation": "Holistic wellness acknowledges that all health dimensions are interconnected — weakness in one can affect all others.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "True or False: The answer to \"How many dimensions of wellness does SAMHSA identify\" is: C.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. C is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"occupational wellness refers to:.\"",
+      "options": null,
+      "answer": "B",
+      "explanation": "The correct answer is: B.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "How much daily physical activity do adolescents need according to health guidelines?",
+      "options": [
+        "20 minutes per day",
+        "30 minutes per day",
+        "60 minutes per day",
+        "90 minutes per day"
+      ],
+      "answer": "C",
+      "explanation": "The CDC recommends that adolescents get at least 60 minutes of moderate-to-vigorous physical activity every day.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Which type of physical activity is recommended at least 3 days per week for teens?",
+      "options": [
+        "Static stretching only",
+        "Muscle-strengthening activities",
+        "Low-intensity walking only",
+        "Sitting meditation"
+      ],
+      "answer": "B",
+      "explanation": "Muscle and bone-strengthening activities (resistance training, gymnastics) are recommended at least 3 days per week for teens.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "A common barrier to exercise for teenagers is:",
+      "options": [
+        "Excessive free time",
+        "Lack of time due to academic and social commitments",
+        "Having too many gym memberships",
+        "Knowing too many exercises"
+      ],
+      "answer": "B",
+      "explanation": "Time constraints from school, homework, and social activities are among the most frequently cited barriers to teen physical activity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "True or False: The answer to \"How much daily physical activity do adolescents need according to health guidelines\" is: C.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. C is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "MyPlate recommends that half your plate be filled with:",
+      "options": [
+        "Protein and grains",
+        "Fruits and vegetables",
+        "Dairy and fats",
+        "Grains only"
+      ],
+      "answer": "B",
+      "explanation": "The USDA MyPlate guideline recommends filling half of every meal's plate with fruits and vegetables.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "How does poor nutrition most directly affect mental wellness?",
+      "options": [
+        "It has no connection to mental health",
+        "Nutrient deficiencies can impair brain function, mood, and cognitive performance",
+        "It only affects physical appearance",
+        "It improves focus and energy"
+      ],
+      "answer": "B",
+      "explanation": "Nutritional deficiencies (e.g., iron, B vitamins, omega-3s) can negatively impact brain chemistry, mood regulation, and cognitive function.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Which eating habit best supports nutritional wellness?",
+      "options": [
+        "Skipping breakfast to save calories",
+        "Eating a variety of whole, minimally processed foods from all food groups",
+        "Consuming mostly ultra-processed convenience foods",
+        "Following extreme restrictive diets"
+      ],
+      "answer": "B",
+      "explanation": "Nutritional wellness is supported by variety, balance, and adequacy — choosing whole foods from all food groups in appropriate amounts.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"hydration's impact on wellness includes:.\"",
+      "options": null,
+      "answer": "B",
+      "explanation": "The correct answer is: B.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Mental health is best defined as:",
+      "options": [
+        "The absence of all mental illness",
+        "Emotional, psychological, and social well-being that affects thinking, feeling, and behavior",
+        "High intelligence and academic achievement",
+        "Complete freedom from stress"
+      ],
+      "answer": "B",
+      "explanation": "Mental health encompasses emotional, psychological, and social well-being, affecting how we think, feel, and interact with the world.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Anxiety disorders are the most common mental health condition in:",
+      "options": [
+        "Adults over 65",
+        "Children under 5",
+        "Teenagers and young adults",
+        "Only competitive athletes"
+      ],
+      "answer": "C",
+      "explanation": "Anxiety disorders are the most prevalent mental health conditions in adolescents and young adults, often beginning in childhood or teen years.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Which is NOT a healthy coping strategy for mental health challenges?",
+      "options": [
+        "Journaling",
+        "Exercising regularly",
+        "Talking to a trusted adult",
+        "Using alcohol to reduce feelings of anxiety"
+      ],
+      "answer": "D",
+      "explanation": "Alcohol is an unhealthy and potentially harmful coping mechanism that masks symptoms rather than addressing mental health challenges.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Stigma around mental health prevents many teens from seeking help because:",
+      "options": [
+        "Mental health treatment is illegal for teens",
+        "They fear judgment, social exclusion, or being labeled as weak",
+        "Therapy is too expensive for all teens",
+        "Mental illness is not taken seriously by doctors"
+      ],
+      "answer": "B",
+      "explanation": "Social stigma — fear of being judged, labeled, or excluded — is one of the primary barriers preventing teens from seeking mental health support.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The body's 'fight or flight' response is triggered by which hormone?",
+      "options": [
+        "Insulin",
+        "Cortisol and adrenaline (epinephrine)",
+        "Serotonin",
+        "Melatonin"
+      ],
+      "answer": "B",
+      "explanation": "The fight-or-flight response involves the release of cortisol and adrenaline from the adrenal glands in response to perceived threats.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Which of the following is an evidence-based stress management technique?",
+      "options": [
+        "Ruminating on problems repeatedly",
+        "Avoiding all responsibilities",
+        "Deep breathing exercises and mindfulness meditation",
+        "Watching screens for 6+ hours"
+      ],
+      "answer": "C",
+      "explanation": "Deep breathing and mindfulness meditation activate the parasympathetic nervous system, reducing physiological stress responses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "True or False: The answer to \"The body's 'fight or flight' response is triggered by which hormone\" is: B.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. B is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "True or False: The answer to \"Which of the following is an evidence-based stress management technique\" is: Ruminating on problems repeatedly.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: C.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "How many hours of sleep per night do teenagers need?",
+      "options": [
+        "5–6 hours",
+        "6–7 hours",
+        "8–10 hours",
+        "12+ hours"
+      ],
+      "answer": "C",
+      "explanation": "The CDC and American Academy of Sleep Medicine recommend 8–10 hours of sleep per night for teenagers aged 13–18.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "REM (Rapid Eye Movement) sleep is especially important for:",
+      "options": [
+        "Physical muscle repair only",
+        "Memory consolidation and emotional processing",
+        "Physical growth only",
+        "Caloric expenditure"
+      ],
+      "answer": "B",
+      "explanation": "REM sleep plays a critical role in consolidating memories, processing emotions, and supporting learning and cognitive function.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Blue light from screens before bed disrupts sleep by:",
+      "options": [
+        "Improving sleep quality",
+        "Suppressing melatonin production and delaying sleep onset",
+        "Increasing REM sleep",
+        "Accelerating the sleep cycle"
+      ],
+      "answer": "B",
+      "explanation": "Blue light mimics daylight, suppressing melatonin (the sleep hormone), making it harder to fall asleep at a natural bedtime.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "True or False: The answer to \"How many hours of sleep per night do teenagers need\" is: C.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. C is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"sleep deprivation in teens is associated with:.\"",
+      "options": null,
+      "answer": "C",
+      "explanation": "The correct answer is: C.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "A healthy relationship is characterized by:",
+      "options": [
+        "Jealousy and possessiveness",
+        "Mutual respect, trust, honesty, and support",
+        "One person making all decisions",
+        "Frequent conflict without resolution"
+      ],
+      "answer": "B",
+      "explanation": "Healthy relationships are built on mutual respect, trust, open communication, honesty, and support for each other's wellbeing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Which of the following is a warning sign of an unhealthy relationship?",
+      "options": [
+        "Respecting each other's boundaries",
+        "Encouraging independence and friendships",
+        "One partner attempting to control the other's behavior",
+        "Open and honest communication"
+      ],
+      "answer": "C",
+      "explanation": "Controlling behavior, including monitoring movements, isolating from friends, or making decisions for the partner, is a warning sign of abuse.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "True or False: The answer to \"A healthy relationship is characterized by:\" is: B.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. B is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"active listening involves:.\"",
+      "options": null,
+      "answer": "B",
+      "explanation": "The correct answer is: B.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Nicotine in tobacco products affects the developing teen brain by:",
+      "options": [
+        "Having no effect on teenage brains",
+        "Disrupting formation of brain circuits that control attention, learning, and impulse control",
+        "Improving concentration and mood permanently",
+        "Only affecting the lungs"
+      ],
+      "answer": "B",
+      "explanation": "Nicotine is highly addictive and disrupts developing brain circuits responsible for attention, mood regulation, learning, and impulse control in teens.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "The minimum legal drinking age in the United States is:",
+      "options": [
+        "16",
+        "18",
+        "21",
+        "25"
+      ],
+      "answer": "C",
+      "explanation": "The legal drinking age in all 50 US states is 21 years old.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Which factor most protects teens from substance use?",
+      "options": [
+        "Absence of rules at home",
+        "Strong family bonds and healthy peer relationships",
+        "Easy access to substances",
+        "Academic pressure and stress"
+      ],
+      "answer": "B",
+      "explanation": "Strong family connections, positive peer relationships, and school engagement are among the strongest protective factors against teen substance use.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "True or False: The answer to \"Nicotine in tobacco products affects the developing teen brain by:\" is: B.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. B is correct.",
+      "points": 1
     }
   ],
   "questions": [
     {
-      "examType": "midterm", "order": 1, "type": "mc",
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
       "question": "SAMHSA's model identifies how many dimensions of wellness?",
-      "options": ["5", "6", "8", "10"],
-      "answer": "C", "explanation": "SAMHSA identifies 8 dimensions: emotional, financial, social, spiritual, occupational, physical, intellectual, and environmental.", "points": 1
+      "options": [
+        "5",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": "C",
+      "explanation": "SAMHSA identifies 8 dimensions: emotional, financial, social, spiritual, occupational, physical, intellectual, and environmental.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 2, "type": "mc",
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
       "question": "The CDC recommends how many minutes of daily physical activity for teenagers?",
-      "options": ["20 minutes", "30 minutes", "60 minutes", "90 minutes"],
-      "answer": "C", "explanation": "The CDC recommends at least 60 minutes of moderate-to-vigorous physical activity daily for adolescents.", "points": 1
+      "options": [
+        "20 minutes",
+        "30 minutes",
+        "60 minutes",
+        "90 minutes"
+      ],
+      "answer": "C",
+      "explanation": "The CDC recommends at least 60 minutes of moderate-to-vigorous physical activity daily for adolescents.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 3, "type": "mc",
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
       "question": "Mental health is best described as:",
-      "options": ["The absence of any mental disorder", "Emotional, psychological, and social well-being", "Having high intelligence", "Never experiencing stress"],
-      "answer": "B", "explanation": "Mental health is a positive concept encompassing emotional, psychological, and social well-being, not just the absence of illness.", "points": 1
+      "options": [
+        "The absence of any mental disorder",
+        "Emotional, psychological, and social well-being",
+        "Having high intelligence",
+        "Never experiencing stress"
+      ],
+      "answer": "B",
+      "explanation": "Mental health is a positive concept encompassing emotional, psychological, and social well-being, not just the absence of illness.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 4, "type": "mc",
-      "question": "The fight-or-flight stress response involves release of:",
-      "options": ["Melatonin and serotonin", "Cortisol and adrenaline", "Insulin and glucagon", "Estrogen and testosterone"],
-      "answer": "B", "explanation": "The fight-or-flight response releases cortisol and adrenaline (epinephrine) from the adrenal glands in response to stress.", "points": 1
+      "examType": "midterm",
+      "order": 4,
+      "type": "tf",
+      "question": "True or False: The answer to \"The fight-or-flight stress response involves release of:\" is: B.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. B is correct.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 5, "type": "mc",
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
       "question": "How many hours of sleep per night do teenagers need?",
-      "options": ["5–6 hours", "6–7 hours", "8–10 hours", "11–12 hours"],
-      "answer": "C", "explanation": "The American Academy of Sleep Medicine recommends 8–10 hours of sleep per night for teenagers aged 13–18.", "points": 1
+      "options": [
+        "5–6 hours",
+        "6–7 hours",
+        "8–10 hours",
+        "11–12 hours"
+      ],
+      "answer": "C",
+      "explanation": "The American Academy of Sleep Medicine recommends 8–10 hours of sleep per night for teenagers aged 13–18.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 6, "type": "mc",
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
       "question": "Blue light from screens disrupts sleep by:",
-      "options": ["Improving melatonin production", "Suppressing melatonin and delaying sleep onset", "Making the eyes tired faster", "No effect on sleep patterns"],
-      "answer": "B", "explanation": "Blue light from screens suppresses melatonin production, making it harder to fall asleep at the normal bedtime.", "points": 1
+      "options": [
+        "Improving melatonin production",
+        "Suppressing melatonin and delaying sleep onset",
+        "Making the eyes tired faster",
+        "No effect on sleep patterns"
+      ],
+      "answer": "B",
+      "explanation": "Blue light from screens suppresses melatonin production, making it harder to fall asleep at the normal bedtime.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 7, "type": "mc",
+      "examType": "midterm",
+      "order": 7,
+      "type": "fill",
       "question": "A healthy relationship is characterized by:",
-      "options": ["Jealousy and control", "Mutual respect, trust, and open communication", "One partner making all decisions", "Frequent unresolved conflict"],
-      "answer": "B", "explanation": "Healthy relationships are built on mutual respect, trust, honest communication, and support for each other's wellbeing and autonomy.", "points": 1
+      "options": null,
+      "answer": "B",
+      "explanation": "The correct answer is: B.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 8, "type": "mc",
-      "question": "MyPlate recommends filling how much of your plate with fruits and vegetables?",
-      "options": ["One quarter", "One third", "Half", "Three quarters"],
-      "answer": "C", "explanation": "USDA's MyPlate recommends making half of every meal's plate fruits and vegetables to support health and disease prevention.", "points": 1
+      "examType": "midterm",
+      "order": 8,
+      "type": "tf",
+      "question": "True or False: The answer to \"MyPlate recommends filling how much of your plate with fruits and vegetables\" is: One quarter.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: C.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 9, "type": "mc",
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
       "question": "Which substance is both addictive and harmful to the developing teen brain?",
-      "options": ["Caffeine in moderate amounts from natural sources", "Nicotine from e-cigarettes and tobacco", "Vitamin supplements", "Sports drinks"],
-      "answer": "B", "explanation": "Nicotine is highly addictive and disrupts the developing adolescent brain's circuits for attention, learning, and impulse control.", "points": 1
+      "options": [
+        "Caffeine in moderate amounts from natural sources",
+        "Nicotine from e-cigarettes and tobacco",
+        "Vitamin supplements",
+        "Sports drinks"
+      ],
+      "answer": "B",
+      "explanation": "Nicotine is highly addictive and disrupts the developing adolescent brain's circuits for attention, learning, and impulse control.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 10, "type": "mc",
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
       "question": "Which is a warning sign of an unhealthy relationship?",
-      "options": ["Mutual respect and honesty", "Encouraging friendships with others", "Controlling and isolating behavior by one partner", "Healthy disagreement and resolution"],
-      "answer": "C", "explanation": "Controlling, isolating, or monitoring a partner's behavior are red flags for emotional or physical abuse in a relationship.", "points": 1
+      "options": [
+        "Mutual respect and honesty",
+        "Encouraging friendships with others",
+        "Controlling and isolating behavior by one partner",
+        "Healthy disagreement and resolution"
+      ],
+      "answer": "C",
+      "explanation": "Controlling, isolating, or monitoring a partner's behavior are red flags for emotional or physical abuse in a relationship.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 11, "type": "mc",
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
       "question": "Eustress differs from distress because eustress:",
-      "options": ["Is always harmful", "Is positive, motivating stress that improves performance", "Causes chronic health problems", "Only occurs in athletes"],
-      "answer": "B", "explanation": "Eustress is positive, energizing stress that motivates and enhances performance, while distress is negative and can harm health.", "points": 1
+      "options": [
+        "Is always harmful",
+        "Is positive, motivating stress that improves performance",
+        "Causes chronic health problems",
+        "Only occurs in athletes"
+      ],
+      "answer": "B",
+      "explanation": "Eustress is positive, energizing stress that motivates and enhances performance, while distress is negative and can harm health.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 12, "type": "mc",
-      "question": "Consent in sexual health requires that agreement be:",
-      "options": ["Given once and assumed ongoing", "Clear, voluntary, and can be withdrawn at any time", "Only verbal and formal", "Assumed if no refusal is expressed"],
-      "answer": "B", "explanation": "Consent must be clearly given, freely chosen without pressure, ongoing, and can be withdrawn at any moment by any party.", "points": 1
+      "examType": "midterm",
+      "order": 12,
+      "type": "tf",
+      "question": "True or False: The answer to \"Consent in sexual health requires that agreement be:\" is: B.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. B is correct.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 13, "type": "mc",
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
       "question": "Chronic stress can harm physical health by:",
-      "options": ["Improving immune function", "Elevating cortisol, suppressing immunity, and increasing heart disease risk", "Increasing muscle strength", "Improving digestive health"],
-      "answer": "B", "explanation": "Sustained cortisol elevation from chronic stress weakens the immune system, raises blood pressure, and increases chronic disease risk.", "points": 1
+      "options": [
+        "Improving immune function",
+        "Elevating cortisol, suppressing immunity, and increasing heart disease risk",
+        "Increasing muscle strength",
+        "Improving digestive health"
+      ],
+      "answer": "B",
+      "explanation": "Sustained cortisol elevation from chronic stress weakens the immune system, raises blood pressure, and increases chronic disease risk.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 14, "type": "mc",
+      "examType": "midterm",
+      "order": 14,
+      "type": "fill",
       "question": "REM sleep is especially important for:",
-      "options": ["Muscle repair only", "Memory consolidation and emotional processing", "Physical growth hormone release", "Caloric expenditure during rest"],
-      "answer": "B", "explanation": "REM sleep is critical for processing emotions, consolidating memories, and supporting learning and cognitive function.", "points": 1
+      "options": null,
+      "answer": "B",
+      "explanation": "The correct answer is: B.",
+      "points": 1
     },
     {
-      "examType": "midterm", "order": 15, "type": "mc",
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
       "question": "Which factor most protects teens from substance use?",
-      "options": ["Strict punishment for any infraction", "Strong family bonds and positive peer relationships", "Removing all rules at home", "Academic pressure to succeed"],
-      "answer": "B", "explanation": "Strong family connections, caring adults, and positive peer relationships are among the strongest protective factors against adolescent substance use.", "points": 1
+      "options": [
+        "Strict punishment for any infraction",
+        "Strong family bonds and positive peer relationships",
+        "Removing all rules at home",
+        "Academic pressure to succeed"
+      ],
+      "answer": "B",
+      "explanation": "Strong family connections, caring adults, and positive peer relationships are among the strongest protective factors against adolescent substance use.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 1, "type": "mc",
-      "question": "Social determinants of health include which factors?",
-      "options": ["Genetics and age only", "Income, education, neighborhood, and access to healthcare", "Physical fitness level only", "Individual food preferences"],
-      "answer": "B", "explanation": "Social determinants — conditions like income, education, housing, and environment — profoundly shape health outcomes across populations.", "points": 1
+      "examType": "final",
+      "order": 1,
+      "type": "tf",
+      "question": "True or False: The answer to \"Social determinants of health include which factors\" is: Genetics and age only.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: B.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 2, "type": "mc",
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
       "question": "The leading cause of death in the United States is:",
-      "options": ["Cancer", "Accidents", "Heart disease", "Diabetes"],
-      "answer": "C", "explanation": "Heart disease has been the leading cause of death in the US for decades, accounting for approximately 1 in 4 deaths annually.", "points": 1
+      "options": [
+        "Cancer",
+        "Accidents",
+        "Heart disease",
+        "Diabetes"
+      ],
+      "answer": "C",
+      "explanation": "Heart disease has been the leading cause of death in the US for decades, accounting for approximately 1 in 4 deaths annually.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 3, "type": "mc",
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
       "question": "A credible health information website is most likely to have which feature?",
-      "options": ["Anonymous author and no references", "Miraculous health claims without evidence", "Cited authors, peer-reviewed sources, and a .gov or .edu domain", "Flashy advertising for supplements"],
-      "answer": "C", "explanation": "Credible health sites provide clear author credentials, citations from peer-reviewed sources, and are often associated with government or educational institutions.", "points": 1
+      "options": [
+        "Anonymous author and no references",
+        "Miraculous health claims without evidence",
+        "Cited authors, peer-reviewed sources, and a .gov or .edu domain",
+        "Flashy advertising for supplements"
+      ],
+      "answer": "C",
+      "explanation": "Credible health sites provide clear author credentials, citations from peer-reviewed sources, and are often associated with government or educational institutions.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 4, "type": "mc",
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
       "question": "HPV is unique among STIs because:",
-      "options": ["There is no treatment available", "A preventive vaccine (Gardasil) exists and is recommended for teens", "It only affects males", "It causes immediate, severe symptoms"],
-      "answer": "B", "explanation": "HPV is the only STI for which a highly effective preventive vaccine is available and recommended for preteens and teenagers.", "points": 1
+      "options": [
+        "There is no treatment available",
+        "A preventive vaccine (Gardasil) exists and is recommended for teens",
+        "It only affects males",
+        "It causes immediate, severe symptoms"
+      ],
+      "answer": "B",
+      "explanation": "HPV is the only STI for which a highly effective preventive vaccine is available and recommended for preteens and teenagers.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 5, "type": "mc",
-      "question": "A wellness plan is most effective when it:",
-      "options": ["Copies another person's plan exactly", "Is personalized to individual values and realistic lifestyle factors", "Focuses on physical health only", "Changes completely each week without tracking"],
-      "answer": "B", "explanation": "Personalized, realistic wellness plans aligned with individual interests and values are the most sustainable and effective over the long term.", "points": 1
+      "examType": "final",
+      "order": 5,
+      "type": "tf",
+      "question": "True or False: The answer to \"A wellness plan is most effective when it:\" is: B.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. B is correct.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 6, "type": "mc",
+      "examType": "final",
+      "order": 6,
+      "type": "fill",
       "question": "The Air Quality Index (AQI) is a measure of:",
-      "options": ["Indoor temperature and humidity", "Outdoor air pollutant concentrations and their health implications", "Water quality in local rivers", "Occupational health risk"],
-      "answer": "B", "explanation": "The AQI translates outdoor air pollutant concentrations into a standardized scale that communicates health risk to the public.", "points": 1
+      "options": null,
+      "answer": "B",
+      "explanation": "The correct answer is: B.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 7, "type": "mc",
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
       "question": "Health equity means:",
-      "options": ["Everyone receives identical healthcare services", "All people have a fair opportunity to achieve their highest possible health", "Only the wealthy deserve health resources", "Health outcomes are determined solely by genetics"],
-      "answer": "B", "explanation": "Health equity means removing barriers so everyone has a fair opportunity to achieve optimal health, regardless of social circumstances.", "points": 1
+      "options": [
+        "Everyone receives identical healthcare services",
+        "All people have a fair opportunity to achieve their highest possible health",
+        "Only the wealthy deserve health resources",
+        "Health outcomes are determined solely by genetics"
+      ],
+      "answer": "B",
+      "explanation": "Health equity means removing barriers so everyone has a fair opportunity to achieve optimal health, regardless of social circumstances.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 8, "type": "mc",
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
       "question": "Preventive healthcare includes:",
-      "options": ["Waiting until disease is severe", "Only treating emergencies", "Routine checkups, vaccinations, and health screenings", "Avoiding doctors entirely"],
-      "answer": "C", "explanation": "Preventive care detects risk factors and conditions early through regular checkups, vaccinations, and recommended health screenings.", "points": 1
+      "options": [
+        "Waiting until disease is severe",
+        "Only treating emergencies",
+        "Routine checkups, vaccinations, and health screenings",
+        "Avoiding doctors entirely"
+      ],
+      "answer": "C",
+      "explanation": "Preventive care detects risk factors and conditions early through regular checkups, vaccinations, and recommended health screenings.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 9, "type": "mc",
-      "question": "Physical inactivity is classified as a chronic disease risk factor that is:",
-      "options": ["Non-modifiable — determined by genetics", "Modifiable through lifestyle changes", "Only relevant after age 40", "Of lesser importance than diet"],
-      "answer": "B", "explanation": "Physical inactivity is a modifiable risk factor — increasing daily activity significantly reduces chronic disease risk regardless of age.", "points": 1
+      "examType": "final",
+      "order": 9,
+      "type": "tf",
+      "question": "True or False: The answer to \"Physical inactivity is classified as a chronic disease risk factor that is:\" is: Non-modifiable — determined by genetics.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: B.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 10, "type": "mc",
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
       "question": "WHO defines health as:",
-      "options": ["Absence of disease or infirmity only", "A complete state of physical, mental, and social well-being", "Having optimal BMI and fitness", "Being free of any medications"],
-      "answer": "B", "explanation": "The World Health Organization defines health as a state of complete physical, mental, and social well-being, not merely the absence of disease.", "points": 1
+      "options": [
+        "Absence of disease or infirmity only",
+        "A complete state of physical, mental, and social well-being",
+        "Having optimal BMI and fitness",
+        "Being free of any medications"
+      ],
+      "answer": "B",
+      "explanation": "The World Health Organization defines health as a state of complete physical, mental, and social well-being, not merely the absence of disease.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 11, "type": "mc",
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
       "question": "Which sleep habit is most effective for improving sleep quality?",
-      "options": ["Varying sleep and wake times daily", "Using screens until falling asleep", "Maintaining a consistent sleep schedule", "Consuming caffeine in the evening"],
-      "answer": "C", "explanation": "A consistent sleep-wake schedule strengthens the circadian rhythm and is the most evidence-based sleep hygiene practice.", "points": 1
+      "options": [
+        "Varying sleep and wake times daily",
+        "Using screens until falling asleep",
+        "Maintaining a consistent sleep schedule",
+        "Consuming caffeine in the evening"
+      ],
+      "answer": "C",
+      "explanation": "A consistent sleep-wake schedule strengthens the circadian rhythm and is the most evidence-based sleep hygiene practice.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 12, "type": "mc",
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
       "question": "Active listening improves relationships because it:",
-      "options": ["Allows you to prepare your response while someone talks", "Demonstrates full attention and understanding, reducing conflict", "Requires you to talk more than listen", "Is only used in professional settings"],
-      "answer": "B", "explanation": "Active listening — giving full attention and reflecting back what's heard — reduces misunderstandings and strengthens relationship trust.", "points": 1
+      "options": [
+        "Allows you to prepare your response while someone talks",
+        "Demonstrates full attention and understanding, reducing conflict",
+        "Requires you to talk more than listen",
+        "Is only used in professional settings"
+      ],
+      "answer": "B",
+      "explanation": "Active listening — giving full attention and reflecting back what's heard — reduces misunderstandings and strengthens relationship trust.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 13, "type": "mc",
+      "examType": "final",
+      "order": 13,
+      "type": "fill",
       "question": "E-cigarettes are harmful to teens because they contain:",
-      "options": ["No chemicals of concern", "Nicotine and harmful aerosol chemicals that damage the developing brain and lungs", "Only water vapor", "Only approved, safe ingredients"],
-      "answer": "B", "explanation": "E-cigarettes contain nicotine, ultrafine particles, and other chemicals that harm the developing teen brain and respiratory system.", "points": 1
+      "options": null,
+      "answer": "B",
+      "explanation": "The correct answer is: B.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 14, "type": "mc",
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
       "question": "Type 2 diabetes is most linked to which modifiable lifestyle factors?",
-      "options": ["Too much sleep and vitamin excess", "Obesity and physical inactivity", "Excessive exercise and high protein intake", "Only genetic factors"],
-      "answer": "B", "explanation": "Obesity and physical inactivity are the primary modifiable risk factors for type 2 diabetes, making it largely preventable.", "points": 1
+      "options": [
+        "Too much sleep and vitamin excess",
+        "Obesity and physical inactivity",
+        "Excessive exercise and high protein intake",
+        "Only genetic factors"
+      ],
+      "answer": "B",
+      "explanation": "Obesity and physical inactivity are the primary modifiable risk factors for type 2 diabetes, making it largely preventable.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 15, "type": "mc",
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
       "question": "A SMART wellness goal must be:",
-      "options": ["Vague and flexible to allow any outcome", "Specific, Measurable, Achievable, Relevant, and Time-bound", "Set by a healthcare provider only", "Changed weekly without evaluation"],
-      "answer": "B", "explanation": "SMART goals provide clear, actionable targets with specific criteria that make progress measurable and achievement realistic.", "points": 1
+      "options": [
+        "Vague and flexible to allow any outcome",
+        "Specific, Measurable, Achievable, Relevant, and Time-bound",
+        "Set by a healthcare provider only",
+        "Changed weekly without evaluation"
+      ],
+      "answer": "B",
+      "explanation": "SMART goals provide clear, actionable targets with specific criteria that make progress measurable and achievement realistic.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 16, "type": "mc",
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
       "question": "Occupational wellness in a high school student most directly relates to:",
-      "options": ["Physical fitness levels", "Finding meaning and purpose in academic work and extracurricular activities", "Having the highest GPA", "Social media presence"],
-      "answer": "B", "explanation": "For students, occupational wellness means finding satisfaction, purpose, and engagement in academic work and activities.", "points": 1
+      "options": [
+        "Physical fitness levels",
+        "Finding meaning and purpose in academic work and extracurricular activities",
+        "Having the highest GPA",
+        "Social media presence"
+      ],
+      "answer": "B",
+      "explanation": "For students, occupational wellness means finding satisfaction, purpose, and engagement in academic work and activities.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 17, "type": "mc",
-      "question": "Waterborne diseases are caused by:",
-      "options": ["Clean drinking water", "Consuming contaminated water containing pathogens like bacteria or parasites", "Drinking too much water", "Using bottled water"],
-      "answer": "B", "explanation": "Waterborne diseases result from pathogens (bacteria, viruses, parasites) in contaminated water that cause illnesses like cholera and typhoid.", "points": 1
+      "examType": "final",
+      "order": 17,
+      "type": "tf",
+      "question": "True or False: The answer to \"Waterborne diseases are caused by:\" is: Clean drinking water.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: B.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 18, "type": "mc",
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
       "question": "The most effective approach to stress management includes:",
-      "options": ["Avoiding all challenges and stressors", "Using a variety of healthy coping strategies tailored to the stressor type", "Relying on substances to reduce stress", "Ignoring all stress signals"],
-      "answer": "B", "explanation": "Using diverse, healthy coping strategies — exercise, social support, mindfulness, time management — matched to different stressors is most effective.", "points": 1
+      "options": [
+        "Avoiding all challenges and stressors",
+        "Using a variety of healthy coping strategies tailored to the stressor type",
+        "Relying on substances to reduce stress",
+        "Ignoring all stress signals"
+      ],
+      "answer": "B",
+      "explanation": "Using diverse, healthy coping strategies — exercise, social support, mindfulness, time management — matched to different stressors is most effective.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 19, "type": "mc",
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
       "question": "Mindful eating involves:",
-      "options": ["Counting every calorie precisely", "Eating quickly to save time", "Paying full attention to hunger, flavors, and eating without distraction", "Eliminating all enjoyable foods"],
-      "answer": "C", "explanation": "Mindful eating means eating with full awareness of hunger and satiety cues, flavors, and the eating experience without distraction.", "points": 1
+      "options": [
+        "Counting every calorie precisely",
+        "Eating quickly to save time",
+        "Paying full attention to hunger, flavors, and eating without distraction",
+        "Eliminating all enjoyable foods"
+      ],
+      "answer": "C",
+      "explanation": "Mindful eating means eating with full awareness of hunger and satiety cues, flavors, and the eating experience without distraction.",
+      "points": 1
     },
     {
-      "examType": "final", "order": 20, "type": "mc",
+      "examType": "final",
+      "order": 20,
+      "type": "fill",
       "question": "Tracking progress in a personal wellness plan is important because it:",
-      "options": ["Ensures perfection from day one", "Provides feedback that maintains motivation and guides plan adjustments", "Replaces the need for professional healthcare", "Guarantees results without effort"],
-      "answer": "B", "explanation": "Progress tracking creates accountability, reveals what's working, maintains motivation, and guides evidence-based plan improvements.", "points": 1
+      "options": null,
+      "answer": "B",
+      "explanation": "The correct answer is: B.",
+      "points": 1
     }
-  ]
+  ],
+  "gradeLevel": null
 }

@@ -282,16 +282,14 @@
     {
       "examType": "final",
       "order": 4,
-      "type": "mc",
-      "question": "Solve for x: 3x − 7 = 14.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Solve for x: 3x − 7 = 14.\" is: x = 7.",
       "options": [
-        "x = 7",
-        "x = 3",
-        "x = 21",
-        "x = 9"
+        "True",
+        "False"
       ],
-      "answer": "x = 7",
-      "explanation": "3x = 21; x = 7.",
+      "answer": "True",
+      "explanation": "True. x = 7 is correct.",
       "points": 1
     },
     {
@@ -327,31 +325,24 @@
     {
       "examType": "final",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "Solve and graph: −3x + 6 ≥ −9. Which interval represents the solution?",
-      "options": [
-        "x ≤ 5",
-        "x ≥ 5",
-        "x ≤ −5",
-        "x ≥ −5"
-      ],
+      "options": null,
       "answer": "x ≤ 5",
-      "explanation": "−3x ≥ −15 → divide by −3 (flip the inequality) → x ≤ 5.",
+      "explanation": "The correct answer is: x ≤ 5.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 8,
-      "type": "mc",
-      "question": "Which of the following relations is a function?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following relations is a function\" is: {(1,2),(1,3),(2,4)}.",
       "options": [
-        "{(1,2),(1,3),(2,4)}",
-        "{(2,3),(3,3),(4,3)}",
-        "{(1,2),(2,3),(1,4)}",
-        "{(0,1),(0,2),(1,1)}"
+        "True",
+        "False"
       ],
-      "answer": "{(2,3),(3,3),(4,3)}",
-      "explanation": "A function requires each x-value to map to exactly one y-value. Only {(2,3),(3,3),(4,3)} has unique x-values.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: {(2,3),(3,3),(4,3)}.",
       "points": 1
     },
     {
@@ -402,16 +393,14 @@
     {
       "examType": "final",
       "order": 12,
-      "type": "mc",
-      "question": "What is the solution to the system: y = 2x + 1 and y = −x + 7?",
+      "type": "tf",
+      "question": "True or False: The solution to the system: y = 2x + 1 and y = −x + 7 is \"(2, 5)\".",
       "options": [
-        "(2, 5)",
-        "(3, 4)",
-        "(1, 3)",
-        "(2, 3)"
+        "True",
+        "False"
       ],
-      "answer": "(2, 5)",
-      "explanation": "2x + 1 = −x + 7 → 3x = 6 → x = 2. y = 2(2) + 1 = 5.",
+      "answer": "True",
+      "explanation": "True. (2, 5) is correct.",
       "points": 1
     },
     {
@@ -462,16 +451,14 @@
     {
       "examType": "final",
       "order": 16,
-      "type": "mc",
-      "question": "Factor: x² + 7x + 12.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Factor: x² + 7x + 12.\" is: (x + 2)(x + 6).",
       "options": [
-        "(x + 3)(x + 4)",
-        "(x + 2)(x + 6)",
-        "(x + 1)(x + 12)",
-        "(x − 3)(x − 4)"
+        "True",
+        "False"
       ],
-      "answer": "(x + 3)(x + 4)",
-      "explanation": "Find two numbers that multiply to 12 and add to 7: 3 and 4. So (x + 3)(x + 4).",
+      "answer": "False",
+      "explanation": "False. The correct answer is: (x + 3)(x + 4).",
       "points": 1
     },
     {
@@ -522,26 +509,24 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "short",
-      "question": "A ball is thrown upward. Its height in feet is h(t) = −16t² + 48t + 4, where t is in seconds. What is the initial height of the ball?",
-      "options": null,
-      "answer": "4 feet",
-      "explanation": "The initial height is h(0) = −16(0)² + 48(0) + 4 = 4 feet.",
+      "type": "tf",
+      "question": "True or False: The answer to \"A ball is thrown upward. Its height in feet is h(t) = −16t² + 48t + 4, where t is in seconds. What is the initial height of the ball\" is: 4 feet.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 4 feet is correct.",
       "points": 2
     },
     {
       "examType": "midterm",
       "order": 1,
-      "type": "mc",
+      "type": "fill",
       "question": "Evaluate 4x − 3 when x = 5.",
-      "options": [
-        "17",
-        "20",
-        "23",
-        "7"
-      ],
+      "options": null,
       "answer": "17",
-      "explanation": "4(5) − 3 = 20 − 3 = 17.",
+      "explanation": "The correct answer is: 17.",
       "points": 1
     },
     {
@@ -577,16 +562,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "Which property justifies: 5(x + 2) = 5x + 10?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which property justifies: 5(x + 2) = 5x + 10\" is: Commutative.",
       "options": [
-        "Commutative",
-        "Associative",
-        "Distributive",
-        "Identity"
+        "True",
+        "False"
       ],
-      "answer": "Distributive",
-      "explanation": "The distributive property: a(b + c) = ab + ac.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Distributive.",
       "points": 1
     },
     {
@@ -637,16 +620,11 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
+      "type": "fill",
       "question": "Solve and express in interval notation: 2x − 3 > 7.",
-      "options": [
-        "(5, ∞)",
-        "[5, ∞)",
-        "(−∞, 5)",
-        "x < 5"
-      ],
+      "options": null,
       "answer": "(5, ∞)",
-      "explanation": "2x > 10; x > 5. Open interval: (5, ∞).",
+      "explanation": "The correct answer is: (5, ∞).",
       "points": 1
     },
     {
@@ -697,16 +675,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "A store sells pens for $2 each and notebooks for $5 each. Maria spends $31. She buys 3 notebooks. How many pens did she buy?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A store sells pens for $2 each and notebooks for $5 each. Maria spends $31. She buys 3 notebooks. How many pens did she buy\" is: 7.",
       "options": [
-        "8",
-        "7",
-        "6",
-        "5"
+        "True",
+        "False"
       ],
-      "answer": "8",
-      "explanation": "5(3) = 15; 31 − 15 = 16; 16/2 = 8 pens.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 8.",
       "points": 2
     },
     {
@@ -796,29 +772,22 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Evaluate x² − x when x = 4.",
+      "question": "True or False: The value of 3x + 5 when x = 2 is \"11\".",
       "options": [
-        "16",
-        "12",
-        "8",
-        "20"
+        "True",
+        "False"
       ],
-      "answer": "12",
-      "explanation": "4² − 4 = 16 − 4 = 12.",
+      "answer": "True",
+      "explanation": "True. 11 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "In the expression 5y + 3, the coefficient of y is:",
-      "options": [
-        "3",
-        "5",
-        "y",
-        "8"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in the expression 5y + 3, the coefficient of y is:.\"",
+      "options": null,
       "answer": "5",
-      "explanation": "The coefficient is the number multiplying the variable. Here it is 5.",
+      "explanation": "The correct answer is: 5.",
       "points": 1
     },
     {
@@ -880,15 +849,13 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "Simplify: 3 + 4² ÷ 2 − 1.",
+      "question": "True or False: The answer to \"Simplify: 2 + 3 × 4.\" is: 14.",
       "options": [
-        "10",
-        "11",
-        "9",
-        "12"
+        "True",
+        "False"
       ],
-      "answer": "10",
-      "explanation": "4² = 16; 16 ÷ 2 = 8; 3 + 8 − 1 = 10.",
+      "answer": "True",
+      "explanation": "True. 14 is correct.",
       "points": 1
     },
     {
@@ -936,29 +903,25 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "What is the additive inverse of −8?",
+      "question": "True or False: The answer to \"Which property states a + b = b + a\" is: Commutative.",
       "options": [
-        "8",
-        "1/8",
-        "−1/8",
-        "0"
+        "True",
+        "False"
       ],
-      "answer": "8",
-      "explanation": "The additive inverse of a number is its opposite. −8 + 8 = 0.",
+      "answer": "True",
+      "explanation": "True. Commutative is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "Simplify: 3(2x + 1) − 2(x − 4).",
+      "question": "True or False: The answer to \"Simplify using the distributive property: 4(x + 3).\" is: 4x + 3.",
       "options": [
-        "4x + 11",
-        "8x + 5",
-        "4x + 5",
-        "8x + 11"
+        "True",
+        "False"
       ],
-      "answer": "4x + 11",
-      "explanation": "6x + 3 − 2x + 8 = 4x + 11.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 4x + 12.",
       "points": 1
     },
     {
@@ -1020,15 +983,10 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Which equation has the solution x = −4?",
-      "options": [
-        "x + 4 = 0",
-        "2x = 8",
-        "x − 4 = 0",
-        "3x = 12"
-      ],
-      "answer": "x + 4 = 0",
-      "explanation": "x + 4 = 0 → x = −4. The others give positive solutions.",
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"solve: x/3 + 1 = 4..\"",
+      "options": null,
+      "answer": "x = 9",
+      "explanation": "The correct answer is: x = 9.",
       "points": 1
     },
     {
@@ -1102,6 +1060,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 5,
+      "order": 6,
+      "question": "True or False: The answer to \"Solve: 2(x + 3) = 14.\" is: x = 4.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. x = 4 is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 6,
       "order": 1,
       "question": "Solve: x + 4 > 9.",
@@ -1146,29 +1116,22 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Solve: 3x − 2 ≥ 7.",
+      "question": "True or False: The answer to \"Solve: x + 4 > 9.\" is: x > 5.",
       "options": [
-        "x ≥ 3",
-        "x ≤ 3",
-        "x > 3",
-        "x ≥ 5"
+        "True",
+        "False"
       ],
-      "answer": "x ≥ 3",
-      "explanation": "3x ≥ 9; x ≥ 3.",
+      "answer": "True",
+      "explanation": "True. x > 5 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Which graph represents x > −2?",
-      "options": [
-        "Open circle at −2, arrow pointing right",
-        "Closed circle at −2, arrow pointing right",
-        "Open circle at −2, arrow pointing left",
-        "Closed circle at 2, arrow pointing left"
-      ],
-      "answer": "Open circle at −2, arrow pointing right",
-      "explanation": "Strict inequality (>) uses an open circle; \"greater than\" means arrow points right.",
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"solve: 3x − 2 ≥ 7..\"",
+      "options": null,
+      "answer": "x ≥ 3",
+      "explanation": "The correct answer is: x ≥ 3.",
       "points": 1
     },
     {
@@ -1216,29 +1179,22 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "The vertical line test determines whether a graph is a:",
+      "question": "True or False: The answer to \"Which of the following is NOT a function\" is: {(1,2),(1,3),(2,4)}.",
       "options": [
-        "Linear equation",
-        "Function",
-        "Relation",
-        "Polynomial"
+        "True",
+        "False"
       ],
-      "answer": "Function",
-      "explanation": "If any vertical line crosses the graph more than once, it is not a function.",
+      "answer": "True",
+      "explanation": "True. {(1,2),(1,3),(2,4)} is correct.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "If f(x) = x² + 1, what is the range for x ∈ {−2, 0, 2}?",
-      "options": [
-        "{1, 2, 5}",
-        "{5, 1, 5}",
-        "{1, 4, 5}",
-        "{0, 1, 4}"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if f(x) = x² + 1, what is the range for x ∈ {−2, 0, 2}.\"",
+      "options": null,
       "answer": "{5, 1, 5}",
-      "explanation": "f(−2)=5, f(0)=1, f(2)=5. Range (unique values): {1, 5}.",
+      "explanation": "The correct answer is: {5, 1, 5}.",
       "points": 1
     },
     {
@@ -1300,15 +1256,13 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "A line passes through (0, 3) and (2, 7). What is its equation?",
+      "question": "True or False: The y-intercept of y = 4x − 6 is \"(0, −6)\".",
       "options": [
-        "y = 2x + 3",
-        "y = 3x + 2",
-        "y = 4x + 3",
-        "y = 2x + 7"
+        "True",
+        "False"
       ],
-      "answer": "y = 2x + 3",
-      "explanation": "Slope = (7−3)/(2−0) = 2. y-intercept = 3. Equation: y = 2x + 3.",
+      "answer": "True",
+      "explanation": "True. (0, −6) is correct.",
       "points": 1
     },
     {
@@ -1356,29 +1310,25 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "A car travels 150 miles in 3 hours. What is its rate of change (slope)?",
+      "question": "True or False: The answer to \"Find the slope between (1, 3) and (4, 9).\" is: 2.",
       "options": [
-        "450 mi/hr",
-        "50 mi/hr",
-        "153 mi/hr",
-        "0.02 mi/hr"
+        "True",
+        "False"
       ],
-      "answer": "50 mi/hr",
-      "explanation": "Rate of change = 150 ÷ 3 = 50 miles per hour.",
+      "answer": "True",
+      "explanation": "True. 2 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "What type of slope does a line going from lower-left to upper-right have?",
+      "question": "True or False: The slope of a horizontal line is \"1\".",
       "options": [
-        "Zero",
-        "Negative",
-        "Positive",
-        "Undefined"
+        "True",
+        "False"
       ],
-      "answer": "Positive",
-      "explanation": "A line rising from left to right has a positive slope.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 0.",
       "points": 1
     },
     {
@@ -1440,15 +1390,10 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "A line perpendicular to y = 2x + 1 has slope:",
-      "options": [
-        "2",
-        "−2",
-        "½",
-        "−½"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a line perpendicular to y = 2x + 1 has slope:.\"",
+      "options": null,
       "answer": "−½",
-      "explanation": "Perpendicular slopes are negative reciprocals. Reciprocal of 2 is ½; negate it: −½.",
+      "explanation": "The correct answer is: −½.",
       "points": 1
     },
     {
@@ -1522,6 +1467,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 11,
+      "order": 6,
+      "question": "True or False: The solution to a system of equations is \"The point where two lines intersect\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The point where two lines intersect is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 12,
       "order": 1,
       "question": "Simplify: x³ × x⁴.",
@@ -1566,29 +1523,13 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "Add: (3x² + 2x) + (x² − 5x + 1).",
+      "question": "True or False: The answer to \"Simplify: x³ × x⁴.\" is: x⁷.",
       "options": [
-        "4x² + 7x + 1",
-        "4x² − 3x + 1",
-        "2x² − 3x + 1",
-        "4x² − 7x − 1"
+        "True",
+        "False"
       ],
-      "answer": "4x² − 3x + 1",
-      "explanation": "(3+1)x² + (2−5)x + 1 = 4x² − 3x + 1.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 5,
-      "question": "Multiply: (x + 2)(x + 5).",
-      "options": [
-        "x² + 7x + 10",
-        "x² + 10x + 7",
-        "x² + 7x + 7",
-        "x² + 3x + 10"
-      ],
-      "answer": "x² + 7x + 10",
-      "explanation": "FOIL: x² + 5x + 2x + 10 = x² + 7x + 10.",
+      "answer": "True",
+      "explanation": "True. x⁷ is correct.",
       "points": 1
     },
     {
@@ -1636,29 +1577,22 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "Factor: x² − 6x + 9.",
+      "question": "True or False: The GCF of 12x³ + 8x² is \"4x²\".",
       "options": [
-        "(x − 3)(x − 3)",
-        "(x + 3)(x − 3)",
-        "(x − 9)(x + 1)",
-        "(x − 3)(x + 3)"
+        "True",
+        "False"
       ],
-      "answer": "(x − 3)(x − 3)",
-      "explanation": "Perfect square trinomial: (x − 3)² = x² − 6x + 9.",
+      "answer": "True",
+      "explanation": "True. 4x² is correct.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 5,
-      "question": "Factor completely: 3x² + 6x.",
-      "options": [
-        "3(x² + 2)",
-        "3x(x + 2)",
-        "x(3x + 6)",
-        "6x(x + 1)"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"factor completely: 3x² + 6x..\"",
+      "options": null,
       "answer": "3x(x + 2)",
-      "explanation": "Factor out GCF = 3x: 3x(x + 2).",
+      "explanation": "The correct answer is: 3x(x + 2).",
       "points": 1
     },
     {
@@ -1720,16 +1654,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "Which quadratic has solutions x = 2 and x = −3?",
+      "question": "True or False: The standard form of a quadratic equation is \"ax² + bx + c = 0\".",
       "options": [
-        "x² + x − 6 = 0",
-        "x² − x − 6 = 0",
-        "x² + 5x + 6 = 0",
-        "x² − 5x + 6 = 0"
+        "True",
+        "False"
       ],
-      "answer": "x² + x − 6 = 0",
-      "explanation": "(x − 2)(x + 3) = x² + 3x − 2x − 6 = x² + x − 6 = 0.",
+      "answer": "True",
+      "explanation": "True. ax² + bx + c = 0 is correct.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 9
 }

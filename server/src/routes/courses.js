@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
       credits: true,
       department: true,
       type: true,
+      gradeLevel: true,
       description: true,
       _count: { select: { modules: true } },
     },

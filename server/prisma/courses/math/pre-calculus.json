@@ -282,16 +282,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "Solve for x: log₂(x) = 5.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Solve for x: log₂(x) = 5.\" is: x = 32.",
       "options": [
-        "x = 10",
-        "x = 32",
-        "x = 25",
-        "x = 64"
+        "True",
+        "False"
       ],
-      "answer": "x = 32",
-      "explanation": "log₂(x) = 5 means 2⁵ = x = 32.",
+      "answer": "True",
+      "explanation": "True. x = 32 is correct.",
       "points": 1
     },
     {
@@ -327,31 +325,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "What is the amplitude of y = −4 sin(2x + π)?",
-      "options": [
-        "−4",
-        "4",
-        "2",
-        "π"
-      ],
+      "options": null,
       "answer": "4",
-      "explanation": "Amplitude is the absolute value of the coefficient of sine: |−4| = 4.",
+      "explanation": "The correct answer is: 4.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "Which identity is the double-angle formula for cos(2θ)?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which identity is the double-angle formula for cos(2θ)\" is: cos²θ + sin²θ.",
       "options": [
-        "cos²θ + sin²θ",
-        "2sinθcosθ",
-        "cos²θ − sin²θ",
-        "1 − cos²θ"
+        "True",
+        "False"
       ],
-      "answer": "cos²θ − sin²θ",
-      "explanation": "The double-angle formula: cos(2θ) = cos²θ − sin²θ (also equals 2cos²θ − 1 or 1 − 2sin²θ).",
+      "answer": "False",
+      "explanation": "False. The correct answer is: cos²θ − sin²θ.",
       "points": 1
     },
     {
@@ -402,16 +393,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "The period of y = 3 cos(πx) is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The period of y = 3 cos(πx) is:\" is: 2.",
       "options": [
-        "π",
-        "2",
-        "3",
-        "1/π"
+        "True",
+        "False"
       ],
-      "answer": "2",
-      "explanation": "Period = 2π/|B| = 2π/π = 2.",
+      "answer": "True",
+      "explanation": "True. 2 is correct.",
       "points": 1
     },
     {
@@ -447,16 +436,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "If f(x) = x² − 1 and g(x) = √x, what is the domain of g(f(x))?",
+      "type": "tf",
+      "question": "True or False: The answer to \"If f(x) = x² − 1 and g(x) = √x, what is the domain of g(f(x))\" is: x ≥ 0.",
       "options": [
-        "x ≥ 0",
-        "x ≤ −1 or x ≥ 1",
-        "all real numbers",
-        "x ≥ 1"
+        "True",
+        "False"
       ],
-      "answer": "x ≤ −1 or x ≥ 1",
-      "explanation": "g(f(x)) = √(x² − 1). We need x² − 1 ≥ 0 → x² ≥ 1 → x ≤ −1 or x ≥ 1.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: x ≤ −1 or x ≥ 1.",
       "points": 1
     },
     {
@@ -507,16 +494,14 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "What is the reference angle for 5π/6?",
+      "type": "tf",
+      "question": "True or False: The reference angle for 5π/6 is \"π/6\".",
       "options": [
-        "π/6",
-        "π/3",
-        "π/4",
-        "5π/6"
+        "True",
+        "False"
       ],
-      "answer": "π/6",
-      "explanation": "5π/6 is in Q2. Reference angle = π − 5π/6 = π/6.",
+      "answer": "True",
+      "explanation": "True. π/6 is correct.",
       "points": 1
     },
     {
@@ -567,16 +552,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "Vector v has magnitude 5 and direction angle 53° from the positive x-axis. What is its component form?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Vector v has magnitude 5 and direction angle 53° from the positive x-axis. What is its component form\" is: ⟨3, 4⟩.",
       "options": [
-        "⟨3, 4⟩",
-        "⟨4, 3⟩",
-        "⟨5cos53°, 5sin53°⟩ ≈ ⟨3, 4⟩",
-        "⟨5, 53⟩"
+        "True",
+        "False"
       ],
-      "answer": "⟨5cos53°, 5sin53°⟩ ≈ ⟨3, 4⟩",
-      "explanation": "Component form: ⟨|v|cosθ, |v|sinθ⟩ = ⟨5cos53°, 5sin53°⟩ ≈ ⟨3, 4⟩.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: ⟨5cos53°, 5sin53°⟩ ≈ ⟨3, 4⟩.",
       "points": 1
     },
     {
@@ -627,16 +610,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
+      "type": "fill",
       "question": "The 5th term of the geometric sequence 3, 6, 12, 24, … is:",
-      "options": [
-        "36",
-        "48",
-        "96",
-        "48"
-      ],
+      "options": null,
       "answer": "48",
-      "explanation": "First term a₁ = 3, common ratio r = 2. a₅ = 3 × 2⁴ = 3 × 16 = 48.",
+      "explanation": "The correct answer is: 48.",
       "points": 1
     },
     {
@@ -687,16 +665,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "Which of the following is NOT a condition for f(x) to be continuous at x = a?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following is NOT a condition for f(x) to be continuous at x = a\" is: f(a) is defined.",
       "options": [
-        "f(a) is defined",
-        "lim(x→a) f(x) exists",
-        "lim(x→a) f(x) = f(a)",
-        "f(a) = 0"
+        "True",
+        "False"
       ],
-      "answer": "f(a) = 0",
-      "explanation": "Continuity requires: f(a) defined, the limit exists, and limit equals f(a). There is no requirement that f(a) = 0.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: f(a) = 0.",
       "points": 1
     },
     {
@@ -776,29 +752,22 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "If f(x) = 2x + 6, what is f⁻¹(x)?",
+      "question": "True or False: The answer to \"If f(x) = 3x − 2 and g(x) = x + 5, what is (f ∘ g)(x)\" is: 3x + 13.",
       "options": [
-        "(x − 6)/2",
-        "(x + 6)/2",
-        "2x − 6",
-        "(x/2) + 6"
+        "True",
+        "False"
       ],
-      "answer": "(x − 6)/2",
-      "explanation": "Swap x and y: x = 2y + 6 → 2y = x − 6 → y = (x − 6)/2.",
+      "answer": "True",
+      "explanation": "True. 3x + 13 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "A piecewise function is defined as f(x) = x + 1 for x < 2 and f(x) = x² for x ≥ 2. What is f(2) + f(0)?",
-      "options": [
-        "5",
-        "6",
-        "4",
-        "3"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a piecewise function is defined as f(x) = x + 1 for x < 2 and f(x) = x² for x ≥ 2. what is f(2) + f(0).\"",
+      "options": null,
       "answer": "5",
-      "explanation": "f(2) = 2² = 4 (second piece). f(0) = 0 + 1 = 1 (first piece). Sum = 5.",
+      "explanation": "The correct answer is: 5.",
       "points": 1
     },
     {
@@ -860,15 +829,13 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "Which polynomial has zeros at x = −1, x = 2, and x = 5?",
+      "question": "True or False: The answer to \"What does the end behavior of f(x) = 5x³ − 2x + 1 look like\" is: Down on left, up on right.",
       "options": [
-        "f(x) = (x+1)(x−2)(x−5)",
-        "f(x) = (x−1)(x+2)(x+5)",
-        "f(x) = (x+1)(x+2)(x+5)",
-        "f(x) = (x−1)(x−2)(x−5)"
+        "True",
+        "False"
       ],
-      "answer": "f(x) = (x+1)(x−2)(x−5)",
-      "explanation": "Setting each factor to zero gives x = −1, x = 2, x = 5.",
+      "answer": "True",
+      "explanation": "True. Down on left, up on right is correct.",
       "points": 1
     },
     {
@@ -916,29 +883,25 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Using change-of-base, log₇(50) equals:",
+      "question": "True or False: The answer to \"Simplify: log₃(27).\" is: 3.",
       "options": [
-        "log 50 / log 7",
-        "log 7 / log 50",
-        "ln 7 / ln 50",
-        "50/7"
+        "True",
+        "False"
       ],
-      "answer": "log 50 / log 7",
-      "explanation": "Change-of-base formula: logₐ(b) = log(b)/log(a) = log(50)/log(7).",
+      "answer": "True",
+      "explanation": "True. 3 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "A population grows logistically and approaches a carrying capacity of 10,000. Which best describes the long-term behavior?",
+      "question": "True or False: The answer to \"Which property allows you to write log(AB) as log A + log B\" is: Power Rule.",
       "options": [
-        "The population grows without bound",
-        "The population oscillates",
-        "The population levels off near 10,000",
-        "The population decreases to zero"
+        "True",
+        "False"
       ],
-      "answer": "The population levels off near 10,000",
-      "explanation": "Logistic growth has an upper limit (carrying capacity). The population approaches but never exceeds 10,000.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Product Rule.",
       "points": 1
     },
     {
@@ -1000,15 +963,19 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "In a 30-60-90 triangle with hypotenuse 2, what is the side opposite the 60° angle?",
-      "options": [
-        "1",
-        "√3",
-        "2√3",
-        "√2"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in a 30-60-90 triangle with hypotenuse 2, what is the side opposite the 60° angle.\"",
+      "options": null,
       "answer": "√3",
-      "explanation": "In a 30-60-90 triangle, sides are 1, √3, 2. With hypotenuse 2, the side opposite 60° is √3.",
+      "explanation": "The correct answer is: √3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 6,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the inverse trig function sin⁻¹(0.5) gives an angle of:.\"",
+      "options": null,
+      "answer": "30°",
+      "explanation": "The correct answer is: 30°.",
       "points": 1
     },
     {
@@ -1082,6 +1049,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 5,
+      "order": 6,
+      "question": "True or False: The answer to \"Convert 5π/4 radians to degrees.\" is: 225°.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 225° is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 6,
       "order": 1,
       "question": "What is the period of y = sin(4x)?",
@@ -1126,29 +1105,13 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Where does the graph of y = tan(x) have vertical asymptotes?",
+      "question": "True or False: The period of y = sin(4x) is \"π/2\".",
       "options": [
-        "x = nπ",
-        "x = π/2 + nπ",
-        "x = π/4 + nπ",
-        "x = 2nπ"
+        "True",
+        "False"
       ],
-      "answer": "x = π/2 + nπ",
-      "explanation": "tan(x) = sin(x)/cos(x) is undefined when cos(x) = 0, at x = π/2 + nπ.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 6,
-      "order": 5,
-      "question": "A sinusoidal model has maximum value 7 and minimum value −1. What is the amplitude and midline?",
-      "options": [
-        "Amplitude 4, midline y = 3",
-        "Amplitude 8, midline y = 3",
-        "Amplitude 4, midline y = 4",
-        "Amplitude 3, midline y = 4"
-      ],
-      "answer": "Amplitude 4, midline y = 3",
-      "explanation": "Amplitude = (max − min)/2 = (7 − (−1))/2 = 4. Midline = (max + min)/2 = (7 + (−1))/2 = 3.",
+      "answer": "True",
+      "explanation": "True. π/2 is correct.",
       "points": 1
     },
     {
@@ -1196,29 +1159,22 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Solve: 2cos(x) = √2 on [0, 2π).",
+      "question": "True or False: The answer to \"Which of the following is a Pythagorean identity\" is: sin²θ + cos²θ = 1.",
       "options": [
-        "x = π/4 and x = 7π/4",
-        "x = π/3 and x = 5π/3",
-        "x = π/6 and x = 11π/6",
-        "x = π/4 and x = 3π/4"
+        "True",
+        "False"
       ],
-      "answer": "x = π/4 and x = 7π/4",
-      "explanation": "cos(x) = √2/2 at x = π/4 (Q1) and x = 7π/4 (Q4).",
+      "answer": "True",
+      "explanation": "True. sin²θ + cos²θ = 1 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "The double-angle formula sin(2θ) equals:",
-      "options": [
-        "sin²θ − cos²θ",
-        "2sinθcosθ",
-        "1 − 2sin²θ",
-        "2cos²θ − 1"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the double-angle formula sin(2θ) equals:.\"",
+      "options": null,
       "answer": "2sinθcosθ",
-      "explanation": "sin(2θ) = sin(θ + θ) = sinθcosθ + cosθsinθ = 2sinθcosθ.",
+      "explanation": "The correct answer is: 2sinθcosθ.",
       "points": 1
     },
     {
@@ -1280,15 +1236,13 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "In triangle ABC, A = 30°, a = 5, b = 8. The angle B is found using Law of Sines. How many solutions exist?",
+      "question": "True or False: The answer to \"Which law should you use to solve a triangle when given two sides and the angle between them (SAS)\" is: Law of Cosines.",
       "options": [
-        "0",
-        "1",
-        "2",
-        "Cannot be determined"
+        "True",
+        "False"
       ],
-      "answer": "2",
-      "explanation": "SSA with a < b: sin B = b sinA / a = 8(0.5)/5 = 0.8. Since 0.8 < 1, sin B has two angles on [0°, 180°), giving 2 triangles.",
+      "answer": "True",
+      "explanation": "True. Law of Cosines is correct.",
       "points": 1
     },
     {
@@ -1336,29 +1290,25 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Which of the following is a scalar quantity?",
+      "question": "True or False: The magnitude of vector v = ⟨−3, 4⟩ is \"5\".",
       "options": [
-        "Force",
-        "Velocity",
-        "Speed",
-        "Displacement"
+        "True",
+        "False"
       ],
-      "answer": "Speed",
-      "explanation": "Speed has only magnitude (no direction), making it a scalar. The others are vectors.",
+      "answer": "True",
+      "explanation": "True. 5 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "A vector with magnitude 1 is called:",
+      "question": "True or False: The answer to \"Two vectors u and v are orthogonal if:\" is: u + v = 0.",
       "options": [
-        "A zero vector",
-        "A unit vector",
-        "A position vector",
-        "An orthogonal vector"
+        "True",
+        "False"
       ],
-      "answer": "A unit vector",
-      "explanation": "A unit vector has magnitude 1. Any vector can be normalized by dividing by its magnitude.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: u · v = 0.",
       "points": 1
     },
     {
@@ -1420,15 +1370,10 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "The polar equation r = 1 − cos θ represents which type of curve?",
-      "options": [
-        "A circle",
-        "A lemniscate",
-        "A cardioid",
-        "A rose curve"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the polar equation r = 1 − cos θ represents which type of curve.\"",
+      "options": null,
       "answer": "A cardioid",
-      "explanation": "r = 1 ± cos θ and r = 1 ± sin θ are cardioids — heart-shaped polar curves.",
+      "explanation": "The correct answer is: A cardioid.",
       "points": 1
     },
     {
@@ -1502,6 +1447,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 11,
+      "order": 6,
+      "question": "True or False: The answer to \"The parabola x² = 12y opens:\" is: Upward.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Upward is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 12,
       "order": 1,
       "question": "Find the common difference of the arithmetic sequence: 7, 11, 15, 19, …",
@@ -1546,29 +1503,22 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "In a mathematical induction proof, what are the two required steps?",
+      "question": "True or False: The answer to \"Find the common difference of the arithmetic sequence: 7, 11, 15, 19, …\" is: 4.",
       "options": [
-        "Hypothesis and conclusion",
-        "Base case and inductive step",
-        "Theorem and corollary",
-        "Definition and lemma"
+        "True",
+        "False"
       ],
-      "answer": "Base case and inductive step",
-      "explanation": "Proof by induction requires: (1) Base case (usually n=1) and (2) Inductive step (assume true for n=k, prove for n=k+1).",
+      "answer": "True",
+      "explanation": "True. 4 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "A geometric series has first term 5 and common ratio 1/2. The sum of the infinite series is:",
-      "options": [
-        "5",
-        "10",
-        "∞",
-        "2.5"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a geometric series has first term 5 and common ratio 1/2. the sum of the infinite series is:.\"",
+      "options": null,
       "answer": "10",
-      "explanation": "Infinite geometric series: S = a₁/(1 − r) = 5/(1 − 1/2) = 5/(1/2) = 10, since |r| < 1.",
+      "explanation": "The correct answer is: 10.",
       "points": 1
     },
     {
@@ -1616,29 +1566,13 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "In the expansion of (a + b)⁴, the coefficient of a²b² (from Pascal's triangle) is:",
+      "question": "True or False: The answer to \"How many ways can 5 books be arranged on a shelf\" is: 120.",
       "options": [
-        "4",
-        "6",
-        "12",
-        "16"
+        "True",
+        "False"
       ],
-      "answer": "6",
-      "explanation": "Row 4 of Pascal's triangle: 1, 4, 6, 4, 1. The middle term coefficient is 6 = C(4,2).",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "A bag has 4 red and 6 blue marbles. The probability of drawing 2 red marbles without replacement is:",
-      "options": [
-        "4/10 × 3/9",
-        "4/10 × 4/10",
-        "C(4,2)/C(10,2)",
-        "Both A and C"
-      ],
-      "answer": "Both A and C",
-      "explanation": "P = (4/10)(3/9) = 12/90 = 2/15. Also C(4,2)/C(10,2) = 6/45 = 2/15. Both methods give the same answer.",
+      "answer": "True",
+      "explanation": "True. 120 is correct.",
       "points": 1
     },
     {
@@ -1700,16 +1634,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "lim(x→0) (sin x)/x equals:",
+      "question": "True or False: The answer to \"What does lim(x→2) f(x) = 5 mean\" is: f(x) gets arbitrarily close to 5 as x gets close to 2 from either side.",
       "options": [
-        "0",
-        "∞",
-        "1",
-        "undefined"
+        "True",
+        "False"
       ],
-      "answer": "1",
-      "explanation": "This is a fundamental limit in calculus: lim(x→0) (sin x)/x = 1. It is proved using the squeeze theorem.",
+      "answer": "True",
+      "explanation": "True. f(x) gets arbitrarily close to 5 as x gets close to 2 from either side is correct.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 10
 }

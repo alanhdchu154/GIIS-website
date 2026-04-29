@@ -4,7 +4,7 @@
   "nameZh": "AP 生物学",
   "credits": 1,
   "department": "Science",
-  "type": "Core",
+  "type": "AP",
   "description": "AP Biology is a rigorous college-level course covering the core principles of modern biology, including the chemistry of life, cellular processes, genetics, evolution, and ecology. Students develop scientific reasoning skills through inquiry-based learning and prepare for the AP Biology exam.",
   "isPublished": true,
   "modules": [
@@ -231,6 +231,38 @@
       "practiceNote": "Khan Academy: Ecosystems and Energy — complete the ecological pyramid calculations and the biogeochemical cycle matching exercises.",
       "assignment": "Using the 10% rule of energy transfer, calculate how much plant matter is needed to support a 150-pound human eating only beef (tertiary consumer) vs. chicken (secondary consumer) vs. plants (primary consumer). Discuss the environmental implications of diet choices and relate them to carbon cycle disruption.",
       "estimatedHrs": 3.5
+    },
+    {
+      "order": 15,
+      "title": "Ecosystems and Energy Flow — Advanced Applications",
+      "titleZh": "生态系统与能量流动 — Advanced Applications",
+      "objectives": "In-depth case studies and real-world applications.",
+      "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
+      "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption. (Advanced)",
+      "videoUrl": "https://www.youtube.com/watch?v=b1L_TGfHLxQ",
+      "videoNote": "CrashCourse Ecology #5: Ecosystems — energy flow, ecological efficiency, and the 10% rule for energy transfer between trophic levels. (Review)",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.khanacademy.org/science/ap-biology/ecology/energy-flow-through-ecosystems",
+      "practiceNote": "Khan Academy: Ecosystems and Energy — complete the ecological pyramid calculations and the biogeochemical cycle matching exercises. (AP Prep)",
+      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 16,
+      "title": "Ecosystems and Energy Flow — Synthesis & Review",
+      "titleZh": "生态系统与能量流动 — Synthesis & Review",
+      "objectives": "Comprehensive review and AP exam preparation strategies.",
+      "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
+      "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption. (Advanced)",
+      "videoUrl": "https://www.youtube.com/watch?v=b1L_TGfHLxQ",
+      "videoNote": "CrashCourse Ecology #5: Ecosystems — energy flow, ecological efficiency, and the 10% rule for energy transfer between trophic levels. (Review)",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.khanacademy.org/science/ap-biology/ecology/energy-flow-through-ecosystems",
+      "practiceNote": "Khan Academy: Ecosystems and Energy — complete the ecological pyramid calculations and the biogeochemical cycle matching exercises. (AP Prep)",
+      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "estimatedHrs": 4
     }
   ],
   "quizQuestions": [
@@ -279,29 +311,13 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which of the following is an example of a dehydration synthesis reaction?",
+      "question": "True or False: The answer to \"Which property of water allows it to act as a solvent for ionic compounds\" is: Its polar covalent bonds and hydrogen bonding.",
       "options": [
-        "Breaking down starch into glucose with water",
-        "Joining two glucose molecules to form maltose",
-        "Dissolving salt in water",
-        "Breaking a peptide bond with water"
+        "True",
+        "False"
       ],
-      "answer": "Joining two glucose molecules to form maltose",
-      "explanation": "Dehydration synthesis builds polymers by removing a water molecule as monomers are joined. Joining two glucose molecules to form maltose releases water and forms a glycosidic bond.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "The backbone of DNA and RNA is made of alternating:",
-      "options": [
-        "Amino acids and fatty acids",
-        "Phosphate groups and nitrogenous bases",
-        "Sugars and phosphate groups",
-        "Ribose and deoxyribose only"
-      ],
-      "answer": "Sugars and phosphate groups",
-      "explanation": "The backbone of nucleic acids consists of alternating sugar (deoxyribose in DNA, ribose in RNA) and phosphate groups. The nitrogenous bases project inward and carry the genetic information.",
+      "answer": "True",
+      "explanation": "True. Its polar covalent bonds and hydrogen bonding is correct.",
       "points": 1
     },
     {
@@ -363,15 +379,13 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "The endosymbiotic theory proposes that mitochondria originated from:",
+      "question": "True or False: The answer to \"Which organelle is responsible for synthesizing proteins\" is: Ribosomes.",
       "options": [
-        "The nucleus dividing",
-        "Ancient free-living prokaryotes engulfed by a larger cell",
-        "Spontaneous assembly of phospholipids",
-        "Viral infection of early cells"
+        "True",
+        "False"
       ],
-      "answer": "Ancient free-living prokaryotes engulfed by a larger cell",
-      "explanation": "The endosymbiotic theory proposes that mitochondria evolved from ancient aerobic bacteria that were engulfed by larger cells, evidenced by their double membranes and own DNA.",
+      "answer": "True",
+      "explanation": "True. Ribosomes is correct.",
       "points": 1
     },
     {
@@ -419,29 +433,25 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Facilitated diffusion differs from simple diffusion because it:",
+      "question": "True or False: The answer to \"In osmosis, water moves from an area of:\" is: Low solute concentration to high solute concentration.",
       "options": [
-        "Requires ATP",
-        "Uses transport proteins but does not require energy",
-        "Only moves water molecules",
-        "Moves substances against their gradient"
+        "True",
+        "False"
       ],
-      "answer": "Uses transport proteins but does not require energy",
-      "explanation": "Facilitated diffusion uses channel or carrier proteins to help larger or charged molecules cross the membrane, but moves substances down their concentration gradient and does not require ATP.",
+      "answer": "True",
+      "explanation": "True. Low solute concentration to high solute concentration is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "Endocytosis is a process by which cells:",
+      "question": "True or False: The answer to \"Which type of transport requires ATP\" is: Simple diffusion.",
       "options": [
-        "Export proteins via vesicle fusion",
-        "Import large particles by engulfing them with the membrane",
-        "Move ions through channel proteins",
-        "Release neurotransmitters into synapses"
+        "True",
+        "False"
       ],
-      "answer": "Import large particles by engulfing them with the membrane",
-      "explanation": "Endocytosis is bulk transport into the cell. The cell membrane wraps around material, forming a vesicle brought inside. Types include phagocytosis, pinocytosis, and receptor-mediated endocytosis.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Active transport.",
       "points": 1
     },
     {
@@ -503,15 +513,13 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Signal amplification in a signaling cascade occurs because:",
+      "question": "True or False: The answer to \"Which stage of cell signaling involves a ligand binding to a receptor\" is: Reception.",
       "options": [
-        "The original signal molecule grows larger",
-        "Each activated molecule can activate many downstream molecules",
-        "Receptors replicate during signaling",
-        "The ligand enters the nucleus"
+        "True",
+        "False"
       ],
-      "answer": "Each activated molecule can activate many downstream molecules",
-      "explanation": "In a signal transduction cascade, each activated protein can activate many molecules of the next protein in the pathway, creating an exponential amplification effect.",
+      "answer": "True",
+      "explanation": "True. Reception is correct.",
       "points": 1
     },
     {
@@ -559,29 +567,22 @@
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Cancer cells differ from normal cells in that they:",
+      "question": "True or False: The answer to \"During which phase of the cell cycle does DNA replication occur\" is: S phase.",
       "options": [
-        "Undergo apoptosis more frequently",
-        "Ignore cell cycle checkpoint signals",
-        "Divide less rapidly than normal cells",
-        "Have fewer mutations than normal cells"
+        "True",
+        "False"
       ],
-      "answer": "Ignore cell cycle checkpoint signals",
-      "explanation": "Cancer results from mutations that allow cells to bypass cell cycle checkpoints. Proto-oncogenes mutate into oncogenes and tumor suppressor genes are inactivated, allowing uncontrolled proliferation.",
+      "answer": "True",
+      "explanation": "True. S phase is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 5,
-      "question": "How many chromosomes does a human somatic cell have after completing mitosis?",
-      "options": [
-        "23",
-        "46",
-        "69",
-        "92"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"how many chromosomes does a human somatic cell have after completing mitosis.\"",
+      "options": null,
       "answer": "46",
-      "explanation": "Human somatic (body) cells are diploid (2n=46). Mitosis produces two genetically identical daughter cells, each with the same chromosome number as the parent cell (46 chromosomes).",
+      "explanation": "The correct answer is: 46.",
       "points": 1
     },
     {
@@ -699,29 +700,13 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Why is an RNA primer necessary for DNA replication?",
+      "question": "True or False: The answer to \"DNA strands are described as antiparallel because:\" is: One strand runs 5' to 3' and the complementary strand runs 3' to 5'.",
       "options": [
-        "RNA polymerase is faster than DNA polymerase",
-        "DNA polymerase can only add nucleotides to an existing 3'-OH group",
-        "RNA provides the energy for replication",
-        "Primers mark where replication should stop"
+        "True",
+        "False"
       ],
-      "answer": "DNA polymerase can only add nucleotides to an existing 3'-OH group",
-      "explanation": "DNA polymerase III can only extend an existing nucleotide chain. Primase synthesizes a short RNA primer that provides the free 3'-OH end that DNA polymerase needs to begin adding DNA nucleotides.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "The lagging strand during DNA replication is synthesized:",
-      "options": [
-        "Continuously in the 5' to 3' direction",
-        "In short fragments (Okazaki fragments) in the 5' to 3' direction",
-        "From 3' to 5' continuously",
-        "By RNA polymerase without primers"
-      ],
-      "answer": "In short fragments (Okazaki fragments) in the 5' to 3' direction",
-      "explanation": "DNA polymerase can only synthesize in the 5' to 3' direction. The lagging strand template runs toward the replication fork, so synthesis must occur in short Okazaki fragments, each requiring a new primer.",
+      "answer": "True",
+      "explanation": "True. One strand runs 5' to 3' and the complementary strand runs 3' to 5' is correct.",
       "points": 1
     },
     {
@@ -783,15 +768,13 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "What happens at the stop codon during translation?",
+      "question": "True or False: The answer to \"Which enzyme synthesizes mRNA from a DNA template\" is: RNA polymerase.",
       "options": [
-        "A new amino acid is added",
-        "Release factors bind and the polypeptide is released",
-        "The ribosome moves backward",
-        "tRNA adds a stop amino acid"
+        "True",
+        "False"
       ],
-      "answer": "Release factors bind and the polypeptide is released",
-      "explanation": "Stop codons (UAA, UAG, UGA) do not code for amino acids. Release factors bind to the stop codon, causing the ribosome to release the completed polypeptide chain and disassemble.",
+      "answer": "True",
+      "explanation": "True. RNA polymerase is correct.",
       "points": 1
     },
     {
@@ -839,29 +822,25 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Restriction enzymes cut DNA at:",
+      "question": "True or False: The answer to \"PCR (Polymerase Chain Reaction) amplifies DNA by:\" is: Cycling through denaturation, annealing, and extension steps.",
       "options": [
-        "Random positions throughout the genome",
-        "Specific short palindromic recognition sequences",
-        "Only at AT-rich regions",
-        "The beginning and end of every gene"
+        "True",
+        "False"
       ],
-      "answer": "Specific short palindromic recognition sequences",
-      "explanation": "Restriction enzymes (endonucleases) recognize and cut specific 4-8 base pair palindromic sequences in DNA, allowing precise DNA cutting for cloning and analysis.",
+      "answer": "True",
+      "explanation": "True. Cycling through denaturation, annealing, and extension steps is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "In recombinant DNA technology, a plasmid is used as a:",
+      "question": "True or False: The answer to \"In gel electrophoresis, smaller DNA fragments:\" is: Travel less distance than larger fragments.",
       "options": [
-        "Restriction enzyme",
-        "Vector to carry foreign DNA into a host cell",
-        "Primer for PCR",
-        "Gel electrophoresis stain"
+        "True",
+        "False"
       ],
-      "answer": "Vector to carry foreign DNA into a host cell",
-      "explanation": "Plasmids are small circular DNA molecules that replicate independently in bacteria. In recombinant DNA technology, they serve as vectors carrying foreign (recombinant) DNA into host bacteria where it can be expressed and replicated.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Travel farther from the well than larger fragments.",
       "points": 1
     },
     {
@@ -923,15 +902,13 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Which of the following provides evidence for evolution?",
+      "question": "True or False: The answer to \"Which of the following is NOT a requirement for natural selection to occur\" is: Conscious choice by organisms to adapt.",
       "options": [
-        "The existence of vestigial structures, molecular homology, and the fossil record",
-        "The fact that all species are perfectly adapted to their environments",
-        "The complexity of cellular structures",
-        "The inability of scientists to create life in a lab"
+        "True",
+        "False"
       ],
-      "answer": "The existence of vestigial structures, molecular homology, and the fossil record",
-      "explanation": "Evidence for evolution includes: the fossil record, comparative anatomy (homologous and vestigial structures), molecular biology (shared DNA sequences), and biogeography.",
+      "answer": "True",
+      "explanation": "True. Conscious choice by organisms to adapt is correct.",
       "points": 1
     },
     {
@@ -979,29 +956,13 @@
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "On a phylogenetic tree, the outgroup is:",
+      "question": "True or False: The answer to \"Allopatric speciation occurs when:\" is: A geographic barrier separates a population, preventing gene flow.",
       "options": [
-        "The most recently evolved species",
-        "A species most closely related to all others in the study",
-        "A species more distantly related to the study group, used as a reference",
-        "The ancestor of all species in the clade"
+        "True",
+        "False"
       ],
-      "answer": "A species more distantly related to the study group, used as a reference",
-      "explanation": "An outgroup is a taxon closely related to, but outside of, the group being studied. It is used to root the tree and identify which characters are ancestral vs. derived.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 5,
-      "question": "Adaptive radiation refers to:",
-      "options": [
-        "Convergent evolution of unrelated species",
-        "The rapid diversification of one ancestral species into many new species filling different ecological niches",
-        "The gradual transformation of one species into another over time",
-        "The extinction of species following environmental change"
-      ],
-      "answer": "The rapid diversification of one ancestral species into many new species filling different ecological niches",
-      "explanation": "Adaptive radiation occurs when a single ancestral species rapidly diversifies into many species adapted to different ecological niches. Classic examples include Darwin's finches in the Galapagos.",
+      "answer": "True",
+      "explanation": "True. A geographic barrier separates a population, preventing gene flow is correct.",
       "points": 1
     },
     {
@@ -1119,29 +1080,13 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "Mutualism is a symbiotic relationship where:",
+      "question": "True or False: The answer to \"The competitive exclusion principle states that:\" is: Two species with identical niches cannot coexist in the same habitat.",
       "options": [
-        "One organism benefits and the other is harmed",
-        "Both organisms benefit",
-        "One organism benefits and the other is unaffected",
-        "Both organisms are harmed"
+        "True",
+        "False"
       ],
-      "answer": "Both organisms benefit",
-      "explanation": "Mutualism is a +/+ interaction where both species benefit. Examples include mycorrhizal fungi and plant roots, and clownfish and sea anemones.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "Species diversity is important for ecosystem stability because:",
-      "options": [
-        "More species means more competition, which reduces population sizes",
-        "Higher diversity provides more functional redundancy and pathways for energy flow",
-        "Diverse ecosystems always have more predators",
-        "Species diversity reduces the carrying capacity of the ecosystem"
-      ],
-      "answer": "Higher diversity provides more functional redundancy and pathways for energy flow",
-      "explanation": "Higher species diversity increases ecosystem resilience. Functional redundancy means the loss of one species is less likely to cause ecosystem collapse. More diverse food webs have more alternative energy pathways.",
+      "answer": "True",
+      "explanation": "True. Two species with identical niches cannot coexist in the same habitat is correct.",
       "points": 1
     },
     {
@@ -1203,15 +1148,13 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "Eutrophication of lakes is primarily caused by:",
+      "question": "True or False: The answer to \"The 10% rule in ecology states that:\" is: Only 10% of energy is transferred from one trophic level to the next.",
       "options": [
-        "Overfishing of top predators",
-        "Excess nutrient runoff (nitrogen and phosphorus) causing algal blooms",
-        "Introduction of invasive fish species",
-        "Acid rain reducing water pH"
+        "True",
+        "False"
       ],
-      "answer": "Excess nutrient runoff (nitrogen and phosphorus) causing algal blooms",
-      "explanation": "Eutrophication occurs when excess nutrients from agricultural fertilizer or sewage runoff enter water bodies, causing massive algal blooms. When algae die and decompose, bacteria deplete dissolved oxygen, creating hypoxic dead zones.",
+      "answer": "True",
+      "explanation": "True. Only 10% of energy is transferred from one trophic level to the next is correct.",
       "points": 1
     }
   ],
@@ -1264,16 +1207,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "When a cell is placed in a hypotonic solution, water will move:",
+      "type": "tf",
+      "question": "True or False: The answer to \"When a cell is placed in a hypotonic solution, water will move:\" is: Into the cell by osmosis, causing the cell to swell.",
       "options": [
-        "Out of the cell by osmosis, causing the cell to shrink",
-        "Into the cell by osmosis, causing the cell to swell",
-        "In both directions equally, with no net change",
-        "Out of the cell by active transport"
+        "True",
+        "False"
       ],
-      "answer": "Into the cell by osmosis, causing the cell to swell",
-      "explanation": "A hypotonic solution has lower solute concentration (higher water concentration) than the cell's cytoplasm. Water moves into the cell by osmosis, causing the cell to swell and potentially lyse (cytolysis).",
+      "answer": "True",
+      "explanation": "True. Into the cell by osmosis, causing the cell to swell is correct.",
       "points": 1
     },
     {
@@ -1309,31 +1250,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "Which nitrogenous base is found in DNA but NOT in RNA?",
-      "options": [
-        "Adenine",
-        "Guanine",
-        "Cytosine",
-        "Thymine"
-      ],
+      "options": null,
       "answer": "Thymine",
-      "explanation": "DNA contains adenine, guanine, cytosine, and thymine. RNA contains adenine, guanine, cytosine, and uracil (U) instead of thymine. Uracil lacks the methyl group that thymine has.",
+      "explanation": "The correct answer is: Thymine.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "Which of the following best describes the role of the ribosome in gene expression?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following best describes the role of the ribosome in gene expression\" is: It transcribes DNA into mRNA.",
       "options": [
-        "It transcribes DNA into mRNA",
-        "It serves as the site where mRNA is translated into protein",
-        "It adds the 5' cap and poly-A tail to mRNA",
-        "It splices introns from pre-mRNA"
+        "True",
+        "False"
       ],
-      "answer": "It serves as the site where mRNA is translated into protein",
-      "explanation": "Ribosomes are the molecular machines where translation occurs. They have two subunits that come together on mRNA, and tRNAs bring amino acids that are joined by peptide bonds to build the polypeptide chain.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: It serves as the site where mRNA is translated into protein.",
       "points": 1
     },
     {
@@ -1384,16 +1318,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "Helicase's role in DNA replication is to:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Helicase's role in DNA replication is to:\" is: Unwind the double helix at the replication fork.",
       "options": [
-        "Synthesize new DNA strands",
-        "Join Okazaki fragments",
-        "Unwind the double helix at the replication fork",
-        "Add RNA primers to template strands"
+        "True",
+        "False"
       ],
-      "answer": "Unwind the double helix at the replication fork",
-      "explanation": "Helicase breaks the hydrogen bonds between complementary base pairs and unwinds the double helix at the replication fork, creating single-stranded templates for DNA polymerase.",
+      "answer": "True",
+      "explanation": "True. Unwind the double helix at the replication fork is correct.",
       "points": 1
     },
     {
@@ -1414,16 +1346,11 @@
     {
       "examType": "midterm",
       "order": 14,
-      "type": "mc",
+      "type": "fill",
       "question": "Which of the following is a membrane-bound organelle found only in plant cells?",
-      "options": [
-        "Mitochondria",
-        "Ribosome",
-        "Chloroplast",
-        "Vacuole"
-      ],
+      "options": null,
       "answer": "Chloroplast",
-      "explanation": "Chloroplasts are membrane-bound organelles found only in plant cells and algae. They contain chlorophyll and perform photosynthesis.",
+      "explanation": "The correct answer is: Chloroplast.",
       "points": 1
     },
     {
@@ -1444,16 +1371,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "A population of beetles has 840 individuals. If p (frequency of allele A) = 0.3, what is the expected frequency of heterozygous individuals (2pq) under Hardy-Weinberg equilibrium?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A population of beetles has 840 individuals. If p (frequency of allele A) = 0.3, what is the expected frequency of heterozygous individuals (2pq) under Hardy-Weinberg equilibrium\" is: 0.09.",
       "options": [
-        "0.09",
-        "0.42",
-        "0.49",
-        "0.30"
+        "True",
+        "False"
       ],
-      "answer": "0.42",
-      "explanation": "If p = 0.3, then q = 1 - 0.3 = 0.7. Frequency of heterozygotes = 2pq = 2 x 0.3 x 0.7 = 0.42 (42%).",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 0.42.",
       "points": 1
     },
     {
@@ -1504,16 +1429,14 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "Which of the following correctly describes allopatric speciation?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following correctly describes allopatric speciation\" is: Speciation due to geographic separation that prevents gene flow.",
       "options": [
-        "Speciation occurring without geographic isolation through polyploidy",
-        "Speciation driven by different mating preferences within the same habitat",
-        "Speciation due to geographic separation that prevents gene flow",
-        "Speciation that occurs when one species evolves into another in the same location"
+        "True",
+        "False"
       ],
-      "answer": "Speciation due to geographic separation that prevents gene flow",
-      "explanation": "Allopatric speciation results from geographic isolation (mountains, oceans, rivers) that prevents gene flow between populations. Over time, populations accumulate genetic differences until they become reproductively isolated.",
+      "answer": "True",
+      "explanation": "True. Speciation due to geographic separation that prevents gene flow is correct.",
       "points": 1
     },
     {
@@ -1564,16 +1487,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "Which observation by Darwin most directly supports the concept of natural selection?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which observation by Darwin most directly supports the concept of natural selection\" is: All species are perfectly adapted to their environment.",
       "options": [
-        "All species are perfectly adapted to their environment",
-        "Individuals within a species vary in heritable traits, and some variants survive and reproduce better",
-        "Species were specially created in their current forms",
-        "Evolution only occurs over millions of years"
+        "True",
+        "False"
       ],
-      "answer": "Individuals within a species vary in heritable traits, and some variants survive and reproduce better",
-      "explanation": "Darwin's key observations: individuals vary in heritable traits, more offspring are produced than can survive, and individuals with favorable traits reproduce more. Together these lead to evolution by natural selection.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Individuals within a species vary in heritable traits, and some variants survive and reproduce better.",
       "points": 1
     },
     {
@@ -1624,16 +1545,14 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
-      "question": "The Bottleneck Effect is a type of genetic drift that occurs when:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The Bottleneck Effect is a type of genetic drift that occurs when:\" is: A population is drastically reduced in size by a catastrophic event.",
       "options": [
-        "A small group of individuals colonizes a new area",
-        "A population is drastically reduced in size by a catastrophic event",
-        "Natural selection acts strongly on one phenotype",
-        "Two populations merge after geographic isolation"
+        "True",
+        "False"
       ],
-      "answer": "A population is drastically reduced in size by a catastrophic event",
-      "explanation": "The bottleneck effect occurs when a catastrophic event drastically reduces population size. The surviving population has reduced genetic diversity and may have very different allele frequencies from the original population.",
+      "answer": "True",
+      "explanation": "True. A population is drastically reduced in size by a catastrophic event is correct.",
       "points": 1
     },
     {
@@ -1684,16 +1603,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "During meiosis, genetic diversity is increased by:",
+      "type": "tf",
+      "question": "True or False: The answer to \"During meiosis, genetic diversity is increased by:\" is: DNA replication errors only.",
       "options": [
-        "DNA replication errors only",
-        "Crossing over (recombination) during prophase I and independent assortment of homologs",
-        "Mitotic cell division following meiosis II",
-        "Sister chromatid separation during anaphase II"
+        "True",
+        "False"
       ],
-      "answer": "Crossing over (recombination) during prophase I and independent assortment of homologs",
-      "explanation": "Meiosis generates genetic diversity through: crossing over during prophase I, independent assortment (random orientation of homolog pairs at metaphase I), and random fertilization.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Crossing over (recombination) during prophase I and independent assortment of homologs.",
       "points": 1
     },
     {
@@ -1741,5 +1658,6 @@
       "explanation": "The founder effect occurs when a small number of individuals from a larger population establish a new colony in an isolated area. The founders carry only a subset of the original genetic variation, reducing diversity.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 12
 }

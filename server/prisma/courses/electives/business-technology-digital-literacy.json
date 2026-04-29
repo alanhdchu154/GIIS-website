@@ -54,7 +54,7 @@
       "practiceUrl": "https://docs.google.com",
       "practiceNote": "Google Docs — Create a document using the provided template and practice formatting styles",
       "assignment": "Create a 2-page report on a technology topic of your choice. Apply: title, at least 3 heading levels, body text, bullet lists, a table, and page numbers. Use a consistent font and style throughout.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 4,
@@ -70,7 +70,7 @@
       "practiceUrl": "https://www.khanacademy.org/computing/computer-programming",
       "practiceNote": "Khan Academy — Intro to programming: practice data entry and logic exercises",
       "assignment": "Build a personal budget spreadsheet for one month. Include income, at least 8 expense categories, and use SUM, AVERAGE, and IF formulas. Format with currency, bold headers, and conditional highlighting for over-budget cells.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 5,
@@ -102,7 +102,7 @@
       "practiceUrl": "https://slides.google.com",
       "practiceNote": "Google Slides — Design a 5-slide pitch deck using a custom theme",
       "assignment": "Create a 10-slide presentation on a business idea of your choice. Apply: title slide, agenda, 6 content slides, and a closing slide. Use consistent fonts, a color palette of 3 colors, and include at least 2 data visualizations.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 7,
@@ -135,102 +135,6 @@
       "practiceNote": "Khan Academy — Research skills: evaluating sources practice",
       "assignment": "Select 3 online articles on the same news story from different sources. Evaluate each using the SIFT method (Stop, Investigate the source, Find better coverage, Trace claims). Write a 1-page comparison explaining which sources you trust most and why.",
       "estimatedHrs": 2.5
-    },
-    {
-      "order": 9,
-      "title": "Cybersecurity & Digital Safety",
-      "titleZh": "网络安全与数字安全",
-      "objectives": "Create strong passwords; recognize phishing attempts; understand malware types; configure privacy settings; practice safe browsing habits.",
-      "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
-      "readingNote": "Google Digital Garage — Digital Skills for Work: Staying Safe Online",
-      "videoUrl": "https://www.youtube.com/watch?v=aO858HyFbKI",
-      "videoNote": "TED-Ed — How to create a better password",
-      "video2Url": "https://www.youtube.com/watch?v=Y7zNlEMDmI4",
-      "video2Note": "GCFGlobal — Internet Safety: Phishing Scams and How to Avoid Them",
-      "practiceUrl": "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security",
-      "practiceNote": "Khan Academy — Online Data Security: Introduction to cybersecurity",
-      "assignment": "Audit your personal digital security: evaluate password strength for 5 accounts, review privacy settings on 2 social media platforms, and identify 3 potential phishing red flags in a set of sample emails provided by the instructor. Write a personal cybersecurity action plan.",
-      "estimatedHrs": 3.0
-    },
-    {
-      "order": 10,
-      "title": "Social Media & Professional Branding",
-      "titleZh": "社交媒体与职业品牌",
-      "objectives": "Understand digital footprint; create a professional LinkedIn profile; distinguish personal vs professional social media use; manage online reputation.",
-      "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
-      "readingNote": "Google Digital Garage — Digital Skills for Work: Your Online Presence",
-      "videoUrl": "https://www.youtube.com/watch?v=sHnqXzg5WZI",
-      "videoNote": "GCFGlobal — LinkedIn Basics: Creating a Profile",
-      "video2Url": "https://www.youtube.com/watch?v=w_pEpOGFsBk",
-      "video2Note": "TED-Ed — The future of your digital self",
-      "practiceUrl": "https://www.linkedin.com",
-      "practiceNote": "LinkedIn — Set up or update your student profile with education, skills, and a summary",
-      "assignment": "Create or update a LinkedIn profile with: professional photo description, compelling headline, 3-sentence summary, education section, and 5 relevant skills. Write a 1-page reflection on the difference between your professional and personal digital presence.",
-      "estimatedHrs": 2.5
-    },
-    {
-      "order": 11,
-      "title": "Introduction to Data & Analytics",
-      "titleZh": "数据与分析入门",
-      "objectives": "Define data and data types; calculate and interpret descriptive statistics; read dashboards and data visualizations; understand the data analysis process.",
-      "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
-      "readingNote": "Google Digital Garage — Digital Skills for Work: Making Sense of Data",
-      "videoUrl": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data",
-      "videoNote": "Khan Academy — Statistics: Summarizing Quantitative Data",
-      "video2Url": "https://www.youtube.com/watch?v=fX5ErmCirho",
-      "video2Note": "TED-Ed — What is data science?",
-      "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/e/mean_median_and_mode",
-      "practiceNote": "Khan Academy — Mean, Median, and Mode practice",
-      "assignment": "Collect data on 10 of your classmates' study hours per week. Calculate mean, median, mode, and range. Create a histogram and a summary paragraph interpreting your findings. Identify one insight and one question your data raises.",
-      "estimatedHrs": 3.0
-    },
-    {
-      "order": 12,
-      "title": "Digital Project Management",
-      "titleZh": "数字项目管理",
-      "objectives": "Use project management tools (Trello, Asana, or Notion) to plan tasks; create timelines; assign responsibilities; manage team workflows and deadlines.",
-      "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
-      "readingNote": "Google Digital Garage — Digital Skills for Work: Project Management Basics",
-      "videoUrl": "https://www.youtube.com/watch?v=IsNJ2b-C_3c",
-      "videoNote": "GCFGlobal — Trello: Getting Started with Trello",
-      "video2Url": "https://www.youtube.com/watch?v=l3F3l3psqXY",
-      "video2Note": "TED-Ed — How to manage a project",
-      "practiceUrl": "https://trello.com",
-      "practiceNote": "Trello — Create a board for a class project with To Do, In Progress, and Done columns",
-      "assignment": "Plan a fictional 4-week school event using Trello or Notion. Create at least 15 tasks across 3 phases, assign due dates, add labels by priority, and write a brief status update as if reporting to a manager after Week 2.",
-      "estimatedHrs": 3.0
-    },
-    {
-      "order": 13,
-      "title": "E-Commerce & Digital Business Models",
-      "titleZh": "电商与数字商业模式",
-      "objectives": "Explain how online businesses operate; compare marketplace, subscription, and direct-to-consumer models; understand digital payments and customer experience.",
-      "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
-      "readingNote": "Google Digital Garage — Digital Skills for Work: Doing Business Online",
-      "videoUrl": "https://www.youtube.com/watch?v=2EPEVGEFpis",
-      "videoNote": "TED-Ed — How does the stock market work? (digital economy context)",
-      "video2Url": "https://www.youtube.com/watch?v=SHhC5DtOC4M",
-      "video2Note": "GCFGlobal — E-Commerce Basics: How Online Shopping Works",
-      "practiceUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
-      "practiceNote": "Google Digital Garage — Lesson: Sell products and services online",
-      "assignment": "Research and compare 2 e-commerce companies (one marketplace like Amazon, one direct-to-consumer like Warby Parker). Analyze their business model, revenue streams, and customer experience. Present your comparison in a 2-page report or a 6-slide deck.",
-      "estimatedHrs": 3.0
-    },
-    {
-      "order": 14,
-      "title": "Emerging Technologies & the Future of Work",
-      "titleZh": "新兴技术与未来工作",
-      "objectives": "Understand AI and automation basics; identify gig economy trends; evaluate which digital skills matter most for career readiness; reflect on technology's impact on society.",
-      "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
-      "readingNote": "Google Digital Garage — Digital Skills for Work: Future of Work & Technology",
-      "videoUrl": "https://www.youtube.com/watch?v=t4kyRyKyOpo",
-      "videoNote": "TED-Ed — How AI could become an extension of your mind",
-      "video2Url": "https://www.youtube.com/watch?v=7Pq-S557XQU",
-      "video2Note": "TED-Ed — The jobs we'll lose to machines — and the ones we won't",
-      "practiceUrl": "https://www.khanacademy.org/computing/computer-science/algorithms",
-      "practiceNote": "Khan Academy — Algorithms: Intro to algorithms (foundations for understanding AI)",
-      "assignment": "Write a 1-page reflection: (1) identify 2 jobs that AI/automation may significantly change within 10 years, (2) name 3 digital skills you already have and 3 you want to develop, and (3) describe one technology trend that excites or concerns you and why.",
-      "estimatedHrs": 2.5
     }
   ],
   "questions": [
@@ -239,7 +143,12 @@
       "order": 1,
       "type": "mc",
       "question": "Which of the following is an example of hardware?",
-      "options": ["Microsoft Word", "The Windows operating system", "A keyboard", "A PDF file"],
+      "options": [
+        "Microsoft Word",
+        "The Windows operating system",
+        "A keyboard",
+        "A PDF file"
+      ],
       "answer": "A keyboard",
       "explanation": "Hardware refers to the physical components of a computer. A keyboard is a physical input device.",
       "points": 1
@@ -249,7 +158,12 @@
       "order": 2,
       "type": "mc",
       "question": "Which of the following is the correct structure for a professional email?",
-      "options": ["Subject, body, emoji, signature", "Subject line, greeting, body, professional closing, signature", "Greeting, subject line, body, signature", "Body, subject, CC, signature"],
+      "options": [
+        "Subject, body, emoji, signature",
+        "Subject line, greeting, body, professional closing, signature",
+        "Greeting, subject line, body, signature",
+        "Body, subject, CC, signature"
+      ],
       "answer": "Subject line, greeting, body, professional closing, signature",
       "explanation": "Professional emails follow the structure: clear subject line, polite greeting, organized body, professional closing (e.g., 'Best regards'), and a signature.",
       "points": 1
@@ -259,7 +173,12 @@
       "order": 3,
       "type": "mc",
       "question": "In an email, BCC stands for:",
-      "options": ["Bold Carbon Copy", "Blind Carbon Copy", "Basic Copy & Confirmation", "Bulk Contact Channel"],
+      "options": [
+        "Bold Carbon Copy",
+        "Blind Carbon Copy",
+        "Basic Copy & Confirmation",
+        "Bulk Contact Channel"
+      ],
       "answer": "Blind Carbon Copy",
       "explanation": "BCC (Blind Carbon Copy) sends a copy of the email to additional recipients without other recipients seeing their addresses.",
       "points": 1
@@ -267,11 +186,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "Which Google Docs feature allows you to see and restore a previous version of a document?",
-      "options": ["Spell Check", "Version History", "Explore Tool", "Document Outline"],
-      "answer": "Version History",
-      "explanation": "Version History (File > Version History) lets you view and restore earlier versions of a Google Docs document.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which Google Docs feature allows you to see and restore a previous version of a document\" is: Version History.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Version History is correct.",
       "points": 1
     },
     {
@@ -279,7 +201,12 @@
       "order": 5,
       "type": "mc",
       "question": "In a spreadsheet, which formula would calculate the total of cells A1 through A10?",
-      "options": ["=TOTAL(A1:A10)", "=ADD(A1,A10)", "=SUM(A1:A10)", "=COUNT(A1:A10)"],
+      "options": [
+        "=TOTAL(A1:A10)",
+        "=ADD(A1,A10)",
+        "=SUM(A1:A10)",
+        "=COUNT(A1:A10)"
+      ],
       "answer": "=SUM(A1:A10)",
       "explanation": "=SUM(A1:A10) adds all numeric values in the range A1 through A10.",
       "points": 1
@@ -289,7 +216,12 @@
       "order": 6,
       "type": "mc",
       "question": "What does the AVERAGE function do in a spreadsheet?",
-      "options": ["Finds the largest value in a range", "Counts the number of cells with data", "Calculates the arithmetic mean of a range of numbers", "Rounds all values to the nearest integer"],
+      "options": [
+        "Finds the largest value in a range",
+        "Counts the number of cells with data",
+        "Calculates the arithmetic mean of a range of numbers",
+        "Rounds all values to the nearest integer"
+      ],
       "answer": "Calculates the arithmetic mean of a range of numbers",
       "explanation": "=AVERAGE(range) sums all values in the range and divides by the count of those values to return the arithmetic mean.",
       "points": 1
@@ -297,21 +229,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "Which design principle means that the most important element on a slide should visually stand out the most?",
-      "options": ["Color harmony", "White space", "Visual hierarchy", "Font pairing"],
+      "options": null,
       "answer": "Visual hierarchy",
-      "explanation": "Visual hierarchy guides the viewer's eye by making the most important information larger, bolder, or higher contrast than supporting details.",
+      "explanation": "The correct answer is: Visual hierarchy.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "Which of the following best describes cloud storage?",
-      "options": ["Files stored on a USB drive", "Files stored on your computer's hard drive only", "Files stored on remote servers accessible via the internet", "Files printed and stored physically"],
-      "answer": "Files stored on remote servers accessible via the internet",
-      "explanation": "Cloud storage saves data on remote servers managed by a provider (e.g., Google Drive, OneDrive), allowing access from any internet-connected device.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following best describes cloud storage\" is: Files stored on a USB drive.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Files stored on remote servers accessible via the internet.",
       "points": 1
     },
     {
@@ -319,7 +254,12 @@
       "order": 9,
       "type": "mc",
       "question": "Using the Boolean search operator AND in a search engine:",
-      "options": ["Finds pages with either of the terms", "Excludes a term from search results", "Requires both terms to appear in results", "Finds exact phrases only"],
+      "options": [
+        "Finds pages with either of the terms",
+        "Excludes a term from search results",
+        "Requires both terms to appear in results",
+        "Finds exact phrases only"
+      ],
       "answer": "Requires both terms to appear in results",
       "explanation": "Boolean AND narrows a search by requiring all connected terms to be present in every result returned.",
       "points": 1
@@ -329,7 +269,12 @@
       "order": 10,
       "type": "mc",
       "question": "Which characteristic is a red flag that an email might be a phishing attempt?",
-      "options": ["It comes from a known colleague", "It asks you to verify your password by clicking a link", "It has a formal greeting and signature", "It was sent during business hours"],
+      "options": [
+        "It comes from a known colleague",
+        "It asks you to verify your password by clicking a link",
+        "It has a formal greeting and signature",
+        "It was sent during business hours"
+      ],
       "answer": "It asks you to verify your password by clicking a link",
       "explanation": "Legitimate organizations never ask for passwords via email. Urgent requests to click links and enter credentials are classic phishing tactics.",
       "points": 1
@@ -339,7 +284,12 @@
       "order": 11,
       "type": "mc",
       "question": "Which of the following is the strongest password?",
-      "options": ["password123", "JohnSmith1990", "Tr#9kL!mQ2@v", "12345678"],
+      "options": [
+        "password123",
+        "JohnSmith1990",
+        "Tr#9kL!mQ2@v",
+        "12345678"
+      ],
       "answer": "Tr#9kL!mQ2@v",
       "explanation": "Strong passwords are long, use a mix of uppercase, lowercase, numbers, and symbols, and avoid common words or personal information.",
       "points": 1
@@ -347,11 +297,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "What is a digital footprint?",
-      "options": ["The physical size of a computer monitor", "The amount of data your device uses per month", "The trail of data you leave behind from your online activities", "The resolution of images posted online"],
-      "answer": "The trail of data you leave behind from your online activities",
-      "explanation": "A digital footprint is the record of everything you do online — posts, searches, purchases, and interactions — which can be traced back to you.",
+      "type": "tf",
+      "question": "True or False: A digital footprint is \"The trail of data you leave behind from your online activities\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The trail of data you leave behind from your online activities is correct.",
       "points": 1
     },
     {
@@ -359,7 +312,12 @@
       "order": 13,
       "type": "mc",
       "question": "When sharing a Google Drive file, setting access to 'Viewer' means the recipient can:",
-      "options": ["Edit and delete the file", "Comment only", "Only view the file without making changes", "Share the file with others"],
+      "options": [
+        "Edit and delete the file",
+        "Comment only",
+        "Only view the file without making changes",
+        "Share the file with others"
+      ],
       "answer": "Only view the file without making changes",
       "explanation": "Viewer access allows recipients to see the file contents but not edit, comment, or share it.",
       "points": 1
@@ -387,11 +345,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "Which component is the 'brain' of a computer that processes instructions?",
-      "options": ["RAM", "Hard Drive", "CPU", "Monitor"],
-      "answer": "CPU",
-      "explanation": "The CPU (Central Processing Unit) is the primary component that executes instructions and processes data for all computer operations.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which component is the 'brain' of a computer that processes instructions\" is: RAM.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: CPU.",
       "points": 1
     },
     {
@@ -399,7 +360,12 @@
       "order": 2,
       "type": "mc",
       "question": "The subject line of a professional email should be:",
-      "options": ["Left blank to seem mysterious", "Long and detailed to explain everything", "Concise and descriptive of the email's purpose", "Written in all capital letters to grab attention"],
+      "options": [
+        "Left blank to seem mysterious",
+        "Long and detailed to explain everything",
+        "Concise and descriptive of the email's purpose",
+        "Written in all capital letters to grab attention"
+      ],
       "answer": "Concise and descriptive of the email's purpose",
       "explanation": "A good subject line is brief yet informative, giving the recipient a clear idea of the email's content before opening it.",
       "points": 1
@@ -409,7 +375,12 @@
       "order": 3,
       "type": "mc",
       "question": "In Microsoft Word or Google Docs, 'Styles' are used to:",
-      "options": ["Change the document's background color", "Apply consistent formatting to headings and body text throughout a document", "Spell-check the entire document", "Convert the document to a PDF"],
+      "options": [
+        "Change the document's background color",
+        "Apply consistent formatting to headings and body text throughout a document",
+        "Spell-check the entire document",
+        "Convert the document to a PDF"
+      ],
       "answer": "Apply consistent formatting to headings and body text throughout a document",
       "explanation": "Styles (Heading 1, Heading 2, Normal, etc.) enforce consistent formatting and allow automatic generation of a table of contents.",
       "points": 1
@@ -419,7 +390,12 @@
       "order": 4,
       "type": "mc",
       "question": "In a spreadsheet, which formula returns 'Pass' if the value in A1 is 60 or above, and 'Fail' otherwise?",
-      "options": ["=IF(A1>=60, 'Pass', 'Fail')", "=IF(A1>60, 'Fail', 'Pass')", "=SUM(A1, 'Pass')", "=AVERAGE(A1, 60)"],
+      "options": [
+        "=IF(A1>=60, 'Pass', 'Fail')",
+        "=IF(A1>60, 'Fail', 'Pass')",
+        "=SUM(A1, 'Pass')",
+        "=AVERAGE(A1, 60)"
+      ],
       "answer": "=IF(A1>=60, 'Pass', 'Fail')",
       "explanation": "The IF function evaluates a condition (A1>=60) and returns the first value ('Pass') if true, or the second ('Fail') if false.",
       "points": 1
@@ -427,21 +403,24 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "VLOOKUP in a spreadsheet is primarily used to:",
-      "options": ["Look up a value in a column and return a related value from the same row", "Calculate the vertical average of a column", "Find the highest value in a data range", "Sort data in ascending order"],
-      "answer": "Look up a value in a column and return a related value from the same row",
-      "explanation": "VLOOKUP searches the first column of a range for a match and returns a value from a specified column in the same row.",
+      "type": "tf",
+      "question": "True or False: The answer to \"VLOOKUP in a spreadsheet is primarily used to:\" is: Look up a value in a column and return a related value from the same row.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Look up a value in a column and return a related value from the same row is correct.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 6,
-      "type": "mc",
+      "type": "fill",
       "question": "Which chart type is best for showing how a whole is divided into parts (e.g., budget by category)?",
-      "options": ["Line chart", "Scatter plot", "Pie chart", "Bar chart"],
+      "options": null,
       "answer": "Pie chart",
-      "explanation": "Pie charts display parts of a whole as slices, making them ideal for showing proportional distributions like budget allocations.",
+      "explanation": "The correct answer is: Pie chart.",
       "points": 1
     },
     {
@@ -449,7 +428,12 @@
       "order": 7,
       "type": "mc",
       "question": "What does the '6 × 6 rule' for presentations suggest?",
-      "options": ["Use at least 6 fonts per slide", "Use no more than 6 bullet points per slide and 6 words per bullet", "Include 6 images and 6 charts", "Have at least 6 slides with 6 paragraphs each"],
+      "options": [
+        "Use at least 6 fonts per slide",
+        "Use no more than 6 bullet points per slide and 6 words per bullet",
+        "Include 6 images and 6 charts",
+        "Have at least 6 slides with 6 paragraphs each"
+      ],
       "answer": "Use no more than 6 bullet points per slide and 6 words per bullet",
       "explanation": "The 6×6 rule is a design guideline to keep slides uncluttered: max 6 bullet points per slide and 6 words per bullet.",
       "points": 1
@@ -459,7 +443,12 @@
       "order": 8,
       "type": "mc",
       "question": "Real-time collaboration in Google Drive means:",
-      "options": ["Only one person can edit the document at a time", "Multiple users can edit the same document simultaneously and see each other's changes live", "The document is updated only when it is re-uploaded", "Changes are saved only when the document is closed"],
+      "options": [
+        "Only one person can edit the document at a time",
+        "Multiple users can edit the same document simultaneously and see each other's changes live",
+        "The document is updated only when it is re-uploaded",
+        "Changes are saved only when the document is closed"
+      ],
       "answer": "Multiple users can edit the same document simultaneously and see each other's changes live",
       "explanation": "Google Workspace tools support real-time collaboration, allowing multiple contributors to work simultaneously with live updates visible to all editors.",
       "points": 1
@@ -467,11 +456,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "The SIFT method for evaluating online information stands for:",
-      "options": ["Search, Identify, Find, Test", "Stop, Investigate the source, Find better coverage, Trace claims", "Scan, Interpret, Filter, Tag", "Source, Skim, Infer, Transfer"],
-      "answer": "Stop, Investigate the source, Find better coverage, Trace claims",
-      "explanation": "SIFT is a media literacy framework: Stop before sharing, Investigate the source, Find other coverage, and Trace claims to their origin.",
+      "type": "tf",
+      "question": "True or False: The answer to \"The SIFT method for evaluating online information stands for:\" is: Search, Identify, Find, Test.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Stop, Investigate the source, Find better coverage, Trace claims.",
       "points": 1
     },
     {
@@ -479,7 +471,12 @@
       "order": 10,
       "type": "mc",
       "question": "Which of the following best protects an account in addition to a strong password?",
-      "options": ["Sharing the password with a trusted friend", "Using the same password across all accounts", "Enabling two-factor authentication (2FA)", "Writing the password on a sticky note"],
+      "options": [
+        "Sharing the password with a trusted friend",
+        "Using the same password across all accounts",
+        "Enabling two-factor authentication (2FA)",
+        "Writing the password on a sticky note"
+      ],
       "answer": "Enabling two-factor authentication (2FA)",
       "explanation": "Two-factor authentication adds a second verification step (e.g., a code sent to your phone), making it significantly harder for attackers to access your account even if they know your password.",
       "points": 1
@@ -489,7 +486,12 @@
       "order": 11,
       "type": "mc",
       "question": "A professional LinkedIn headline should:",
-      "options": ["Be your full legal name only", "List every job you have ever had", "Briefly describe your professional identity and value", "Include your phone number and home address"],
+      "options": [
+        "Be your full legal name only",
+        "List every job you have ever had",
+        "Briefly describe your professional identity and value",
+        "Include your phone number and home address"
+      ],
       "answer": "Briefly describe your professional identity and value",
       "explanation": "A LinkedIn headline is a short pitch that appears under your name. It should communicate who you are professionally and what you offer.",
       "points": 1
@@ -499,7 +501,12 @@
       "order": 12,
       "type": "mc",
       "question": "Which of the following is an example of descriptive analytics?",
-      "options": ["Predicting next month's sales using a model", "Calculating the average customer age from a dataset", "Recommending products based on past behavior", "Automating a billing process"],
+      "options": [
+        "Predicting next month's sales using a model",
+        "Calculating the average customer age from a dataset",
+        "Recommending products based on past behavior",
+        "Automating a billing process"
+      ],
       "answer": "Calculating the average customer age from a dataset",
       "explanation": "Descriptive analytics summarizes historical data (e.g., averages, totals, distributions) to describe what has happened.",
       "points": 1
@@ -507,11 +514,14 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
-      "question": "In project management, a Kanban board organizes tasks into columns such as:",
-      "options": ["Start, Middle, End", "To Do, In Progress, Done", "High, Medium, Low", "Planning, Execution, Review, Close"],
-      "answer": "To Do, In Progress, Done",
-      "explanation": "Kanban boards visualize workflow with columns representing stages of progress, most commonly To Do, In Progress, and Done.",
+      "type": "tf",
+      "question": "True or False: The answer to \"In project management, a Kanban board organizes tasks into columns such as:\" is: To Do, In Progress, Done.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. To Do, In Progress, Done is correct.",
       "points": 1
     },
     {
@@ -519,7 +529,12 @@
       "order": 14,
       "type": "mc",
       "question": "Which e-commerce business model charges customers a recurring fee for ongoing access to a product or service?",
-      "options": ["Marketplace model", "Direct-to-consumer model", "Subscription model", "Auction model"],
+      "options": [
+        "Marketplace model",
+        "Direct-to-consumer model",
+        "Subscription model",
+        "Auction model"
+      ],
       "answer": "Subscription model",
       "explanation": "Subscription models (e.g., Netflix, Spotify) generate recurring revenue by charging customers a regular fee — monthly or annually — for continued access.",
       "points": 1
@@ -529,7 +544,12 @@
       "order": 15,
       "type": "mc",
       "question": "Which of the following tasks is most likely to be automated by AI in the near future?",
-      "options": ["Writing original creative novels", "Sorting and categorizing large volumes of data", "Developing empathy and emotional intelligence", "Performing complex ethical negotiations"],
+      "options": [
+        "Writing original creative novels",
+        "Sorting and categorizing large volumes of data",
+        "Developing empathy and emotional intelligence",
+        "Performing complex ethical negotiations"
+      ],
       "answer": "Sorting and categorizing large volumes of data",
       "explanation": "Repetitive, rule-based tasks like data sorting are well-suited for automation. Creative, emotional, and ethical tasks remain difficult for AI to replicate.",
       "points": 1
@@ -539,7 +559,12 @@
       "order": 16,
       "type": "mc",
       "question": "Which formula would count only the cells in B1:B20 that contain numerical values (not blank or text)?",
-      "options": ["=SUM(B1:B20)", "=COUNTA(B1:B20)", "=COUNT(B1:B20)", "=AVERAGE(B1:B20)"],
+      "options": [
+        "=SUM(B1:B20)",
+        "=COUNTA(B1:B20)",
+        "=COUNT(B1:B20)",
+        "=AVERAGE(B1:B20)"
+      ],
       "answer": "=COUNT(B1:B20)",
       "explanation": "=COUNT counts only cells containing numbers. =COUNTA counts all non-empty cells including text.",
       "points": 1
@@ -547,11 +572,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "A pivot table in a spreadsheet is used to:",
-      "options": ["Automatically delete duplicate rows", "Rotate a chart from horizontal to vertical", "Summarize, group, and analyze large datasets interactively", "Convert spreadsheet data to a PDF"],
-      "answer": "Summarize, group, and analyze large datasets interactively",
-      "explanation": "Pivot tables let users quickly summarize and cross-tabulate large data sets by dragging fields into rows, columns, and values areas.",
+      "type": "tf",
+      "question": "True or False: The answer to \"A pivot table in a spreadsheet is used to:\" is: Automatically delete duplicate rows.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Summarize, group, and analyze large datasets interactively.",
       "points": 1
     },
     {
@@ -559,7 +587,12 @@
       "order": 18,
       "type": "mc",
       "question": "The gig economy refers to:",
-      "options": ["Full-time employment at large corporations", "A market of short-term, freelance, or contract-based work enabled by digital platforms", "Government regulation of the tech industry", "Physical concerts and entertainment events"],
+      "options": [
+        "Full-time employment at large corporations",
+        "A market of short-term, freelance, or contract-based work enabled by digital platforms",
+        "Government regulation of the tech industry",
+        "Physical concerts and entertainment events"
+      ],
       "answer": "A market of short-term, freelance, or contract-based work enabled by digital platforms",
       "explanation": "The gig economy encompasses platforms like Uber, Fiverr, and Upwork, where workers take on flexible, project-based work rather than traditional employment.",
       "points": 1
@@ -590,7 +623,12 @@
       "moduleOrder": 1,
       "order": 1,
       "question": "Which of the following is an example of software?",
-      "options": ["Printer", "RAM chip", "Google Chrome browser", "Computer monitor"],
+      "options": [
+        "Printer",
+        "RAM chip",
+        "Google Chrome browser",
+        "Computer monitor"
+      ],
       "answer": "Google Chrome browser",
       "explanation": "Software is a set of programs or instructions. Google Chrome is an application (software); the others are hardware.",
       "points": 1
@@ -599,7 +637,12 @@
       "moduleOrder": 1,
       "order": 2,
       "question": "What does RAM stand for?",
-      "options": ["Remote Access Memory", "Read-Only Access Module", "Random Access Memory", "Rapid Application Mode"],
+      "options": [
+        "Remote Access Memory",
+        "Read-Only Access Module",
+        "Random Access Memory",
+        "Rapid Application Mode"
+      ],
       "answer": "Random Access Memory",
       "explanation": "RAM (Random Access Memory) is the computer's short-term memory that holds data currently in use by the processor.",
       "points": 1
@@ -607,35 +650,34 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Which of the following is an operating system?",
-      "options": ["Microsoft Excel", "macOS", "Google Chrome", "Adobe Photoshop"],
-      "answer": "macOS",
-      "explanation": "macOS is Apple's operating system. Excel, Chrome, and Photoshop are applications that run on top of an operating system.",
+      "question": "True or False: The answer to \"Which of the following is an example of software\" is: Google Chrome browser.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Google Chrome browser is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "File management best practice includes:",
-      "options": ["Saving all files to the desktop", "Using descriptive file names and organized folder structures", "Never renaming files once saved", "Keeping all files in a single folder"],
-      "answer": "Using descriptive file names and organized folder structures",
-      "explanation": "Good file management makes it easy to find, share, and back up files by using clear names and logical folder hierarchies.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "Which of the following is an input device?",
-      "options": ["Monitor", "Speaker", "Mouse", "Printer"],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which of the following is an input device.\"",
+      "options": null,
       "answer": "Mouse",
-      "explanation": "Input devices send data to the computer. A mouse is an input device; monitors, speakers, and printers are output devices.",
+      "explanation": "The correct answer is: Mouse.",
       "points": 1
     },
     {
       "moduleOrder": 2,
       "order": 1,
       "question": "Which greeting is most appropriate for a professional email to a potential employer?",
-      "options": ["Hey!", "Yo boss,", "Dear Mr. Kim,", "What's up,"],
+      "options": [
+        "Hey!",
+        "Yo boss,",
+        "Dear Mr. Kim,",
+        "What's up,"
+      ],
       "answer": "Dear Mr. Kim,",
       "explanation": "Professional emails use formal greetings. 'Dear [Title Last Name],' is the standard respectful opening.",
       "points": 1
@@ -644,7 +686,12 @@
       "moduleOrder": 2,
       "order": 2,
       "question": "What is the purpose of the CC field in an email?",
-      "options": ["To send the email anonymously", "To send a copy to additional recipients who should be aware of the message", "To attach files to the email", "To encrypt the email"],
+      "options": [
+        "To send the email anonymously",
+        "To send a copy to additional recipients who should be aware of the message",
+        "To attach files to the email",
+        "To encrypt the email"
+      ],
       "answer": "To send a copy to additional recipients who should be aware of the message",
       "explanation": "CC (Carbon Copy) sends a visible copy to other recipients, signaling they are included for awareness but are not the primary audience.",
       "points": 1
@@ -653,7 +700,12 @@
       "moduleOrder": 2,
       "order": 3,
       "question": "Which of the following is the best subject line for a professional email?",
-      "options": ["Hi", "Question", "Meeting Request — Project Kickoff — April 30", "READ THIS IMMEDIATELY"],
+      "options": [
+        "Hi",
+        "Question",
+        "Meeting Request — Project Kickoff — April 30",
+        "READ THIS IMMEDIATELY"
+      ],
       "answer": "Meeting Request — Project Kickoff — April 30",
       "explanation": "A good subject line is specific and informative, telling the recipient exactly what the email is about at a glance.",
       "points": 1
@@ -661,26 +713,25 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "When should you use 'Reply All' in an email?",
-      "options": ["Always, to keep everyone informed", "Only when your reply is relevant to everyone on the original email", "Never — always reply only to the sender", "When you want to disagree with the sender publicly"],
-      "answer": "Only when your reply is relevant to everyone on the original email",
-      "explanation": "Reply All should be used thoughtfully — only when all recipients need to see your response. Overusing it clutters inboxes.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 2,
-      "order": 5,
-      "question": "Which closing is most appropriate for a formal professional email?",
-      "options": ["Later!", "XOXO", "Best regards,", "Cya"],
-      "answer": "Best regards,",
-      "explanation": "Professional email closings include 'Best regards,' 'Sincerely,' or 'Thank you,' followed by your full name.",
+      "question": "True or False: The answer to \"Which greeting is most appropriate for a professional email to a potential employer\" is: Dear Mr. Kim,.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Dear Mr. Kim, is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 1,
       "question": "What is the purpose of using heading styles (Heading 1, Heading 2) in a document?",
-      "options": ["To change the document's page orientation", "To create consistent formatting and enable a navigable outline", "To add page numbers automatically", "To insert a table of images"],
+      "options": [
+        "To change the document's page orientation",
+        "To create consistent formatting and enable a navigable outline",
+        "To add page numbers automatically",
+        "To insert a table of images"
+      ],
       "answer": "To create consistent formatting and enable a navigable outline",
       "explanation": "Heading styles apply consistent formatting and allow document navigation tools and automatic table of contents generation.",
       "points": 1
@@ -689,7 +740,12 @@
       "moduleOrder": 3,
       "order": 2,
       "question": "Which keyboard shortcut is used to make selected text bold in most word processors?",
-      "options": ["Ctrl + I", "Ctrl + U", "Ctrl + B", "Ctrl + S"],
+      "options": [
+        "Ctrl + I",
+        "Ctrl + U",
+        "Ctrl + B",
+        "Ctrl + S"
+      ],
       "answer": "Ctrl + B",
       "explanation": "Ctrl + B (Cmd + B on Mac) applies bold formatting to selected text in Google Docs, Microsoft Word, and most word processors.",
       "points": 1
@@ -698,7 +754,12 @@
       "moduleOrder": 3,
       "order": 3,
       "question": "What does 'margin' refer to in document design?",
-      "options": ["The font size used in the document", "The blank space around the edges of a page", "The number of words per line", "The color of the page background"],
+      "options": [
+        "The font size used in the document",
+        "The blank space around the edges of a page",
+        "The number of words per line",
+        "The color of the page background"
+      ],
       "answer": "The blank space around the edges of a page",
       "explanation": "Margins are the white space borders on all four sides of a page that frame the content and improve readability.",
       "points": 1
@@ -706,26 +767,22 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "What is a document template?",
-      "options": ["A blank page with no formatting", "A pre-designed document with layouts, fonts, and styles ready to use", "A saved version of a deleted file", "A type of spreadsheet"],
-      "answer": "A pre-designed document with layouts, fonts, and styles ready to use",
-      "explanation": "Templates provide a starting point with pre-set formatting, saving time and ensuring consistent professional appearance.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 5,
-      "question": "Which line spacing setting provides the most white space between lines, improving readability for longer documents?",
-      "options": ["Single (1.0)", "1.5", "Double (2.0)", "Condensed (0.8)"],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which line spacing setting provides the most white space between lines, improving readability for longer documents.\"",
+      "options": null,
       "answer": "Double (2.0)",
-      "explanation": "Double spacing creates the most space between lines, making text easier to read and allowing room for annotations — common in academic documents.",
+      "explanation": "The correct answer is: Double (2.0).",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 1,
       "question": "In a spreadsheet, a cell reference like 'B3' refers to:",
-      "options": ["Row B, Column 3", "Column B, Row 3", "The 3rd sheet, column B", "The 2nd block of data"],
+      "options": [
+        "Row B, Column 3",
+        "Column B, Row 3",
+        "The 3rd sheet, column B",
+        "The 2nd block of data"
+      ],
       "answer": "Column B, Row 3",
       "explanation": "Cell references use the column letter followed by the row number. B3 is the cell at Column B, Row 3.",
       "points": 1
@@ -734,7 +791,12 @@
       "moduleOrder": 4,
       "order": 2,
       "question": "What does the =COUNT(A1:A10) formula do?",
-      "options": ["Adds all values in A1 to A10", "Returns the average of A1:A10", "Counts the number of cells in A1:A10 that contain numbers", "Finds the largest value in A1:A10"],
+      "options": [
+        "Adds all values in A1 to A10",
+        "Returns the average of A1:A10",
+        "Counts the number of cells in A1:A10 that contain numbers",
+        "Finds the largest value in A1:A10"
+      ],
       "answer": "Counts the number of cells in A1:A10 that contain numbers",
       "explanation": "=COUNT counts only cells with numeric data in the specified range.",
       "points": 1
@@ -743,7 +805,12 @@
       "moduleOrder": 4,
       "order": 3,
       "question": "What is an absolute cell reference in a spreadsheet (e.g., $A$1)?",
-      "options": ["A cell reference that changes when you copy a formula to another cell", "A cell reference that stays fixed regardless of where the formula is copied", "A reference to a cell in another spreadsheet file", "A cell that cannot be edited"],
+      "options": [
+        "A cell reference that changes when you copy a formula to another cell",
+        "A cell reference that stays fixed regardless of where the formula is copied",
+        "A reference to a cell in another spreadsheet file",
+        "A cell that cannot be edited"
+      ],
       "answer": "A cell reference that stays fixed regardless of where the formula is copied",
       "explanation": "Adding $ signs locks the column and/or row reference. $A$1 always points to cell A1 no matter where the formula is moved.",
       "points": 1
@@ -752,25 +819,26 @@
       "moduleOrder": 4,
       "order": 4,
       "question": "The formula =IF(B2>100, 'Over Budget', 'OK') will display 'Over Budget' when:",
-      "options": ["B2 equals exactly 100", "B2 is less than 100", "B2 is greater than 100", "B2 is empty"],
+      "options": [
+        "B2 equals exactly 100",
+        "B2 is less than 100",
+        "B2 is greater than 100",
+        "B2 is empty"
+      ],
       "answer": "B2 is greater than 100",
       "explanation": "The IF function checks the logical condition (B2>100). If true, it returns 'Over Budget'; otherwise it returns 'OK'.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 4,
-      "order": 5,
-      "question": "Which formula finds the average of cells C1 through C8?",
-      "options": ["=MEAN(C1:C8)", "=AVG(C1:C8)", "=AVERAGE(C1:C8)", "=SUM(C1:C8)/COUNT(C1:C8) only"],
-      "answer": "=AVERAGE(C1:C8)",
-      "explanation": "=AVERAGE(range) is the built-in function that calculates the arithmetic mean. While SUM/COUNT also works, =AVERAGE is the standard formula.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 1,
       "question": "What does sorting data in a spreadsheet allow you to do?",
-      "options": ["Delete duplicate rows automatically", "Arrange data in ascending or descending order based on a column", "Change the font of all cells", "Merge multiple sheets into one"],
+      "options": [
+        "Delete duplicate rows automatically",
+        "Arrange data in ascending or descending order based on a column",
+        "Change the font of all cells",
+        "Merge multiple sheets into one"
+      ],
       "answer": "Arrange data in ascending or descending order based on a column",
       "explanation": "Sorting reorders rows based on values in a selected column, either from A to Z (ascending) or Z to A (descending).",
       "points": 1
@@ -779,7 +847,12 @@
       "moduleOrder": 5,
       "order": 2,
       "question": "What does a filter in a spreadsheet do?",
-      "options": ["Changes the color of cells based on value", "Hides rows that do not meet specified criteria, making it easier to focus on relevant data", "Removes all formulas from a range", "Copies data to a new sheet"],
+      "options": [
+        "Changes the color of cells based on value",
+        "Hides rows that do not meet specified criteria, making it easier to focus on relevant data",
+        "Removes all formulas from a range",
+        "Copies data to a new sheet"
+      ],
       "answer": "Hides rows that do not meet specified criteria, making it easier to focus on relevant data",
       "explanation": "Filters temporarily hide rows that don't match your criteria, allowing you to view and analyze a subset of your data.",
       "points": 1
@@ -787,35 +860,37 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "In VLOOKUP, the third argument (col_index_num) specifies:",
-      "options": ["The column to search in", "The value to look up", "Which column number to return a value from", "Whether the match is exact or approximate"],
-      "answer": "Which column number to return a value from",
-      "explanation": "The third argument in VLOOKUP tells the function which column (counting from the left of the lookup range) to retrieve the result from.",
+      "question": "True or False: The answer to \"What does sorting data in a spreadsheet allow you to do\" is: Arrange data in ascending or descending order based on a column.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Arrange data in ascending or descending order based on a column is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "A pivot table is most useful for:",
-      "options": ["Writing macros to automate tasks", "Summarizing and cross-tabulating large datasets quickly", "Creating animated charts", "Formatting cells with conditional rules"],
-      "answer": "Summarizing and cross-tabulating large datasets quickly",
-      "explanation": "Pivot tables let you group, count, sum, and average large amounts of data interactively without writing formulas.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 5,
-      "order": 5,
-      "question": "Which chart type is best for showing a trend over time (e.g., monthly sales for a year)?",
-      "options": ["Pie chart", "Bar chart", "Line chart", "Scatter plot"],
-      "answer": "Line chart",
-      "explanation": "Line charts connect data points over time, making trends, growth, and changes easy to see across a continuous period.",
+      "question": "True or False: The answer to \"What does a filter in a spreadsheet do\" is: Changes the color of cells based on value.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Hides rows that do not meet specified criteria, making it easier to focus on relevant data.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 1,
       "question": "Which of the following is a best practice for slide text?",
-      "options": ["Include complete paragraphs so the audience can read everything", "Use bullet points with brief phrases, not full sentences", "Use 3 different fonts per slide for variety", "Avoid using any text and rely only on images"],
+      "options": [
+        "Include complete paragraphs so the audience can read everything",
+        "Use bullet points with brief phrases, not full sentences",
+        "Use 3 different fonts per slide for variety",
+        "Avoid using any text and rely only on images"
+      ],
       "answer": "Use bullet points with brief phrases, not full sentences",
       "explanation": "Slides should support the speaker, not replace them. Brief bullet points keep slides clean and the audience focused on the presenter.",
       "points": 1
@@ -824,7 +899,12 @@
       "moduleOrder": 6,
       "order": 2,
       "question": "A slide's color palette should ideally consist of:",
-      "options": ["As many colors as possible to look creative", "2–3 complementary colors used consistently", "Only black and white", "A different color for every slide"],
+      "options": [
+        "As many colors as possible to look creative",
+        "2–3 complementary colors used consistently",
+        "Only black and white",
+        "A different color for every slide"
+      ],
       "answer": "2–3 complementary colors used consistently",
       "explanation": "A limited, consistent color palette creates visual cohesion and professionalism. Too many colors look chaotic and distract from the content.",
       "points": 1
@@ -833,7 +913,12 @@
       "moduleOrder": 6,
       "order": 3,
       "question": "What is the purpose of a title slide in a presentation?",
-      "options": ["To list every topic that will be covered in detail", "To introduce the topic, presenter, and context to the audience", "To display the data and conclusions", "To show the references and sources used"],
+      "options": [
+        "To list every topic that will be covered in detail",
+        "To introduce the topic, presenter, and context to the audience",
+        "To display the data and conclusions",
+        "To show the references and sources used"
+      ],
       "answer": "To introduce the topic, presenter, and context to the audience",
       "explanation": "The title slide sets the stage — it shows the presentation topic, the presenter's name, and often the date or organization.",
       "points": 1
@@ -841,26 +926,25 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Visual hierarchy in slide design means:",
-      "options": ["Using the same font size for all text on every slide", "Arranging elements so the most important information is visually dominant", "Adding animations to every element", "Placing images only at the bottom of each slide"],
-      "answer": "Arranging elements so the most important information is visually dominant",
-      "explanation": "Visual hierarchy guides the audience's eye, ensuring key messages are noticed first through size, contrast, color, or position.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 6,
-      "order": 5,
-      "question": "What is 'white space' in slide design?",
-      "options": ["The background color of the slide", "Empty space around elements that improves readability and focus", "Slides with no content as placeholders", "A font style used in presentations"],
-      "answer": "Empty space around elements that improves readability and focus",
-      "explanation": "White space (or negative space) is intentional empty space around elements. It prevents clutter and makes content easier to read and process.",
+      "question": "True or False: The answer to \"Which of the following is a best practice for slide text\" is: Use bullet points with brief phrases, not full sentences.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Use bullet points with brief phrases, not full sentences is correct.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 1,
       "question": "Which of the following is a benefit of using cloud storage for team projects?",
-      "options": ["Only one person can work on a file at a time", "Files can be accessed and edited from any device with internet access", "Files are permanently deleted after 30 days", "Cloud storage does not require an internet connection"],
+      "options": [
+        "Only one person can work on a file at a time",
+        "Files can be accessed and edited from any device with internet access",
+        "Files are permanently deleted after 30 days",
+        "Cloud storage does not require an internet connection"
+      ],
       "answer": "Files can be accessed and edited from any device with internet access",
       "explanation": "Cloud storage enables access from any internet-connected device, supporting remote collaboration and eliminating the need to email files back and forth.",
       "points": 1
@@ -869,7 +953,12 @@
       "moduleOrder": 7,
       "order": 2,
       "question": "What does 'version history' allow you to do in Google Docs?",
-      "options": ["Delete all previous versions of a document", "See who made changes and restore earlier versions of the document", "Share the document with new users", "Convert the document to a spreadsheet"],
+      "options": [
+        "Delete all previous versions of a document",
+        "See who made changes and restore earlier versions of the document",
+        "Share the document with new users",
+        "Convert the document to a spreadsheet"
+      ],
       "answer": "See who made changes and restore earlier versions of the document",
       "explanation": "Version history tracks every saved change, letting collaborators see who edited what and when, and restore earlier versions if needed.",
       "points": 1
@@ -877,35 +966,25 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "When sharing a file via Google Drive, 'Editor' access allows the recipient to:",
-      "options": ["View only", "Comment only", "View, comment, and make changes to the file", "View and print but not download"],
-      "answer": "View, comment, and make changes to the file",
-      "explanation": "Editor access grants full editing rights — the recipient can add, modify, and delete content in the shared file.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 4,
-      "question": "SaaS stands for:",
-      "options": ["Software as a Standard", "Security and Application Service", "Software as a Service", "Systems and Administration Setup"],
-      "answer": "Software as a Service",
-      "explanation": "SaaS delivers software applications over the internet on a subscription basis (e.g., Google Workspace, Microsoft 365), eliminating local installation.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "Which of the following is an example of cloud collaboration?",
-      "options": ["Emailing a Word document attachment back and forth", "Two students editing the same Google Doc simultaneously from different locations", "Saving a file to a USB drive and passing it between classmates", "Printing a document and writing comments by hand"],
-      "answer": "Two students editing the same Google Doc simultaneously from different locations",
-      "explanation": "Real-time cloud collaboration means multiple users can work on the same live document at the same time from any location.",
+      "question": "True or False: The answer to \"Which of the following is a benefit of using cloud storage for team projects\" is: Files can be accessed and edited from any device with internet access.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Files can be accessed and edited from any device with internet access is correct.",
       "points": 1
     },
     {
       "moduleOrder": 8,
       "order": 1,
       "question": "Which Boolean search operator would you use to exclude a word from search results?",
-      "options": ["AND", "OR", "NOT", "WITH"],
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "WITH"
+      ],
       "answer": "NOT",
       "explanation": "The Boolean operator NOT (or a minus sign in Google) excludes terms from results. E.g., 'jaguar NOT car' returns results about the animal, not the vehicle.",
       "points": 1
@@ -914,7 +993,12 @@
       "moduleOrder": 8,
       "order": 2,
       "question": "Which domain extension is most commonly associated with government websites in the United States?",
-      "options": [".com", ".org", ".edu", ".gov"],
+      "options": [
+        ".com",
+        ".org",
+        ".edu",
+        ".gov"
+      ],
       "answer": ".gov",
       "explanation": "The .gov domain is restricted to U.S. government entities, making it a reliable indicator of official government information.",
       "points": 1
@@ -923,7 +1007,12 @@
       "moduleOrder": 8,
       "order": 3,
       "question": "Which of the following is the best indicator that a website is a reliable source?",
-      "options": ["It has many colorful images", "It cites peer-reviewed studies and identifies its authors", "It appears at the top of Google search results", "It has been shared many times on social media"],
+      "options": [
+        "It has many colorful images",
+        "It cites peer-reviewed studies and identifies its authors",
+        "It appears at the top of Google search results",
+        "It has been shared many times on social media"
+      ],
       "answer": "It cites peer-reviewed studies and identifies its authors",
       "explanation": "Credible sources identify their authors, cite verifiable evidence, and have editorial oversight — not simply high traffic or eye-catching design.",
       "points": 1
@@ -931,290 +1020,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "What does it mean to 'trace a claim to its origin'?",
-      "options": ["Find the original source of the information rather than relying on a secondary report", "Copy the article and paste it into a new document", "Search for the newest article about the topic", "Find the most popular article about the topic"],
-      "answer": "Find the original source of the information rather than relying on a secondary report",
-      "explanation": "Tracing claims means following citations or links back to the primary source to verify what the original research or data actually says.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 8,
-      "order": 5,
-      "question": "Putting a phrase in quotation marks in a Google search:",
-      "options": ["Translates the phrase to another language", "Searches for pages with that exact phrase", "Excludes pages containing that phrase", "Sorts results by date published"],
-      "answer": "Searches for pages with that exact phrase",
-      "explanation": "Enclosing a phrase in quotes tells the search engine to return only results that contain that exact sequence of words.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 1,
-      "question": "What is malware?",
-      "options": ["A type of productivity software", "Software designed to damage, disrupt, or gain unauthorized access to computer systems", "A cloud storage service", "A programming language"],
-      "answer": "Software designed to damage, disrupt, or gain unauthorized access to computer systems",
-      "explanation": "Malware (malicious software) includes viruses, ransomware, spyware, and trojans — all designed to harm or exploit systems and data.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 2,
-      "question": "Which of the following is the best practice for creating a secure password?",
-      "options": ["Use your birthdate for easy remembering", "Use a combination of uppercase, lowercase, numbers, and symbols with 12+ characters", "Use the same password for all accounts to avoid forgetting", "Use a common dictionary word"],
-      "answer": "Use a combination of uppercase, lowercase, numbers, and symbols with 12+ characters",
-      "explanation": "Long passwords with mixed character types are exponentially harder to crack with brute-force attacks than short or simple passwords.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 3,
-      "question": "Phishing attacks typically try to:",
-      "options": ["Improve your computer's performance", "Trick you into revealing sensitive information like passwords or credit card numbers", "Update your software automatically", "Block unwanted advertisements"],
-      "answer": "Trick you into revealing sensitive information like passwords or credit card numbers",
-      "explanation": "Phishing uses deceptive emails, texts, or websites that impersonate trusted organizations to steal credentials or personal information.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 4,
-      "question": "Two-factor authentication (2FA) improves account security by:",
-      "options": ["Requiring two different passwords", "Adding a second verification step beyond just a password", "Logging you out automatically after 2 minutes", "Blocking access from unrecognized email addresses"],
-      "answer": "Adding a second verification step beyond just a password",
-      "explanation": "2FA requires something you know (password) plus something you have (e.g., a code sent to your phone), making unauthorized access much harder.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 5,
-      "question": "Which is an example of safe browsing practice?",
-      "options": ["Clicking all pop-up ads that offer free prizes", "Downloading software from unknown third-party websites", "Checking for HTTPS in the URL before entering personal information", "Using public Wi-Fi to access your bank account without a VPN"],
-      "answer": "Checking for HTTPS in the URL before entering personal information",
-      "explanation": "HTTPS indicates an encrypted connection. Always verify HTTPS before entering passwords, payment details, or other sensitive information.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 10,
-      "order": 1,
-      "question": "Your digital footprint includes:",
-      "options": ["Only the photos you post publicly", "Only emails you send", "All data traces from your online activities including searches, posts, purchases, and logins", "Only information on government databases"],
-      "answer": "All data traces from your online activities including searches, posts, purchases, and logins",
-      "explanation": "Your digital footprint is the cumulative record of everything you do online — it is far broader than just public posts.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 10,
-      "order": 2,
-      "question": "On LinkedIn, your 'headline' appears:",
-      "options": ["Only on your private settings page", "Directly below your name and is one of the first things people see on your profile", "Only when you apply for a job", "At the bottom of your profile under recommendations"],
-      "answer": "Directly below your name and is one of the first things people see on your profile",
-      "explanation": "The LinkedIn headline is a prominent, brief description of who you are professionally — it's visible in search results and connection requests.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 10,
-      "order": 3,
-      "question": "Which of the following would be most harmful to a professional reputation online?",
-      "options": ["Posting photos from a school science fair", "Sharing an article about industry trends", "Posting offensive comments on public social media", "Updating your LinkedIn profile with new skills"],
-      "answer": "Posting offensive comments on public social media",
-      "explanation": "Employers regularly search candidates online. Offensive or inappropriate public content can damage professional relationships and job prospects.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 10,
-      "order": 4,
-      "question": "The purpose of a LinkedIn 'About' section is to:",
-      "options": ["List every job title you have ever had in detail", "Provide a brief personal narrative summarizing your skills, interests, and professional goals", "Display your GPA and test scores", "Show a gallery of your personal photos"],
-      "answer": "Provide a brief personal narrative summarizing your skills, interests, and professional goals",
-      "explanation": "The About section is your elevator pitch — a short, engaging summary that tells your professional story and what you bring to the table.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 10,
-      "order": 5,
-      "question": "Which behavior helps maintain a positive professional digital brand?",
-      "options": ["Posting controversial political opinions under your real name frequently", "Engaging professionally with industry content and connecting with mentors on LinkedIn", "Keeping your LinkedIn profile empty to protect privacy", "Using the same username for gaming and professional networking"],
-      "answer": "Engaging professionally with industry content and connecting with mentors on LinkedIn",
-      "explanation": "Actively engaging with relevant content and building a professional network demonstrates initiative and enhances your credibility in your field.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 1,
-      "question": "Which of the following is an example of quantitative data?",
-      "options": ["A customer's favorite color", "The number of units sold per month", "A product review written in words", "A country's name"],
-      "answer": "The number of units sold per month",
-      "explanation": "Quantitative data is numerical and measurable. Sales counts are numbers; the other examples are categorical or qualitative.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 2,
-      "question": "The median of a dataset is the:",
-      "options": ["Most frequently occurring value", "Sum of all values divided by the count", "Middle value when data is sorted in order", "Difference between the largest and smallest values"],
-      "answer": "Middle value when data is sorted in order",
-      "explanation": "The median is the middle value in an ordered dataset. It is resistant to extreme outliers, unlike the mean.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 3,
-      "question": "A business dashboard typically displays:",
-      "options": ["The source code of the company's website", "Key performance indicators and metrics in visual format for quick decision-making", "Employee personal information", "Raw spreadsheet data in text form only"],
-      "answer": "Key performance indicators and metrics in visual format for quick decision-making",
-      "explanation": "Dashboards aggregate key metrics (KPIs) into charts and summaries, giving managers a quick overview of business performance.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 4,
-      "question": "Descriptive analytics answers the question:",
-      "options": ["What will happen next?", "Why did this happen?", "What happened?", "How can we make it happen?"],
-      "answer": "What happened?",
-      "explanation": "Descriptive analytics summarizes historical data to describe past events. Predictive analytics forecasts what will happen; prescriptive analytics recommends actions.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 5,
-      "question": "If a dataset has values 4, 7, 7, 9, and 13, what is the mode?",
-      "options": ["7", "9", "8", "13"],
-      "answer": "7",
-      "explanation": "The mode is the value that appears most frequently. '7' appears twice in the dataset, more than any other value.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 1,
-      "question": "In project management, a 'deadline' refers to:",
-      "options": ["The budget limit for a project", "The date by which a task or project must be completed", "The team member responsible for a task", "The list of project goals"],
-      "answer": "The date by which a task or project must be completed",
-      "explanation": "A deadline is the final date or time by which work must be finished. Meeting deadlines is a core professional responsibility.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 2,
-      "question": "Which tool would you use to visually manage tasks in a Kanban-style workflow?",
-      "options": ["Google Sheets", "Trello", "Gmail", "Google Slides"],
-      "answer": "Trello",
-      "explanation": "Trello uses a Kanban board interface with cards and columns (e.g., To Do, In Progress, Done) to visually manage tasks and workflows.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 3,
-      "question": "Breaking a large project into smaller tasks is useful because:",
-      "options": ["It makes the project look more complicated", "It allows progress to be tracked and makes work less overwhelming", "It removes the need for deadlines", "It means only one person needs to work on the project"],
-      "answer": "It allows progress to be tracked and makes work less overwhelming",
-      "explanation": "Decomposing projects into subtasks makes them manageable, enables progress tracking, and allows work to be distributed across team members.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 4,
-      "question": "Assigning an 'owner' to a task in a project management tool means:",
-      "options": ["That person paid for the task", "That person is responsible for completing that specific task", "That person cannot be changed or reassigned", "The company owns the task outcome"],
-      "answer": "That person is responsible for completing that specific task",
-      "explanation": "Assigning ownership clarifies accountability — each task has one person clearly responsible for its completion by the deadline.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 5,
-      "question": "A project status update to a manager should include:",
-      "options": ["Only information about what went wrong", "Progress made, upcoming tasks, and any blockers or risks", "Only the final results once the project is complete", "Personal opinions about team members"],
-      "answer": "Progress made, upcoming tasks, and any blockers or risks",
-      "explanation": "Effective status updates communicate accomplishments, next steps, and any issues that need attention — keeping stakeholders informed without overwhelming them.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 1,
-      "question": "An online marketplace like Amazon allows:",
-      "options": ["Only one seller to list products", "Multiple third-party sellers to list and sell products to consumers on a single platform", "Buyers to set their own prices", "Only physical goods to be sold"],
-      "answer": "Multiple third-party sellers to list and sell products to consumers on a single platform",
-      "explanation": "Marketplaces aggregate sellers and buyers on one platform, earning revenue through listing fees or commissions on sales.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 2,
-      "question": "A subscription business model generates revenue by:",
-      "options": ["Charging a one-time fee per purchase", "Selling physical products in a store", "Charging recurring fees (monthly or annual) for continued access to a product or service", "Auctioning products to the highest bidder"],
-      "answer": "Charging recurring fees (monthly or annual) for continued access to a product or service",
-      "explanation": "Subscription models (Netflix, Spotify, Adobe) provide predictable recurring revenue and build long-term customer relationships.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 3,
-      "question": "Which of the following is an example of a digital payment method?",
-      "options": ["Writing a personal check", "Paying with cash at a store", "Using PayPal to purchase online", "Using a money order"],
-      "answer": "Using PayPal to purchase online",
-      "explanation": "PayPal is a digital payment platform that processes electronic transactions online without requiring physical cash or checks.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 4,
-      "question": "Direct-to-consumer (DTC) e-commerce means a brand:",
-      "options": ["Sells products through third-party retailers only", "Sells directly to customers via its own website without intermediaries", "Only sells to other businesses (B2B)", "Only sells at physical stores"],
-      "answer": "Sells directly to customers via its own website without intermediaries",
-      "explanation": "DTC brands (e.g., Warby Parker, Glossier) bypass traditional retail middlemen to sell directly to consumers, retaining more margin and control of customer experience.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "Customer experience (CX) in e-commerce refers to:",
-      "options": ["The technical specifications of the website's servers", "The overall impression a customer has across all interactions with a brand online", "The number of products listed on the website", "The discount percentage offered on sale items"],
-      "answer": "The overall impression a customer has across all interactions with a brand online",
-      "explanation": "Customer experience encompasses everything from website usability and checkout ease to delivery speed, returns policy, and customer support.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 1,
-      "question": "Artificial intelligence (AI) refers to:",
-      "options": ["Software that only follows pre-programmed rules with no flexibility", "Computer systems that can perform tasks that typically require human intelligence, such as learning and problem-solving", "Hardware that runs faster than standard computers", "A type of cybersecurity software"],
-      "answer": "Computer systems that can perform tasks that typically require human intelligence, such as learning and problem-solving",
-      "explanation": "AI encompasses machine learning, natural language processing, and computer vision — technologies that enable computers to learn from data and make decisions.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 2,
-      "question": "Which of the following jobs is most at risk of automation?",
-      "options": ["Therapist", "Data entry clerk", "Elementary school teacher", "Art director"],
-      "answer": "Data entry clerk",
-      "explanation": "Repetitive, rule-based tasks like data entry are highly susceptible to automation. Roles requiring human judgment, creativity, and emotional intelligence are harder to automate.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 3,
-      "question": "The gig economy is best characterized by:",
-      "options": ["Permanent, full-time employment with benefits", "Short-term, flexible, freelance or contract work arranged through digital platforms", "Government-funded employment programs", "Traditional 9-to-5 office jobs"],
-      "answer": "Short-term, flexible, freelance or contract work arranged through digital platforms",
-      "explanation": "Gig economy workers (e.g., Uber drivers, Fiverr freelancers) take on project-based work with flexibility but without traditional employment benefits.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 4,
-      "question": "Which skill is considered most 'future-proof' in a world increasingly shaped by AI and automation?",
-      "options": ["Memorizing large amounts of factual data", "Performing fast manual data calculations", "Critical thinking and creative problem-solving", "Operating a single specialized machine"],
-      "answer": "Critical thinking and creative problem-solving",
-      "explanation": "While AI can process and recall data far faster than humans, it struggles with nuanced reasoning, creativity, and applying judgment in novel situations — making these skills uniquely valuable.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 5,
-      "question": "What does 'digital literacy' mean in the context of career readiness?",
-      "options": ["Being able to read e-books on a tablet", "Having the ability to use digital tools effectively, evaluate online information critically, and adapt to new technologies", "Typing at 100 words per minute", "Having a social media account"],
-      "answer": "Having the ability to use digital tools effectively, evaluate online information critically, and adapt to new technologies",
-      "explanation": "Digital literacy goes beyond basic computer use — it includes critical thinking about technology, safe online behavior, and the adaptability to learn new tools as they emerge.",
+      "question": "True or False: The answer to \"Which Boolean search operator would you use to exclude a word from search results\" is: NOT.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. NOT is correct.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": null
 }

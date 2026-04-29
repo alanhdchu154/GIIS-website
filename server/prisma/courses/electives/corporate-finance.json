@@ -183,54 +183,6 @@
       "practiceNote": "Khan Academy — Bond Pricing Practice",
       "assignment": "A $1,000 par bond pays a 6% annual coupon for 10 years. Calculate the bond's price if the market yield is (a) 6%, (b) 8%, and (c) 4%. Graph the bond price-yield relationship and explain the inverse relationship.",
       "estimatedHrs": 3.5
-    },
-    {
-      "order": 12,
-      "title": "Equity Markets & Stock Valuation",
-      "titleZh": "股权市场与股票估值",
-      "objectives": "Value stocks using the Dividend Discount Model (DDM) and constant growth (Gordon Growth) model; apply the P/E ratio and EV/EBITDA multiple for relative valuation; explain efficient market hypothesis and its implications.",
-      "readingUrl": "https://openstax.org/books/principles-management/pages/11-introduction",
-      "readingNote": "OpenStax Financial Management Ch 11 — Stock Valuation",
-      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/stock-basics-tutorial/v/stock-valuation",
-      "videoNote": "Khan Academy — Stock Valuation",
-      "video2Url": "https://www.youtube.com/watch?v=gQCeR3xpxMQ",
-      "video2Note": "YouTube — How to Value a Stock: DDM and DCF Models",
-      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/stock-basics-tutorial/e/stock-valuation",
-      "practiceNote": "Khan Academy — Stock Valuation Practice",
-      "assignment": "A company pays a $2 annual dividend expected to grow at 5% per year forever. If investors require a 10% return, calculate the stock's intrinsic value using the Gordon Growth Model. Also value the stock using a P/E approach given EPS = $4 and an industry P/E of 15.",
-      "estimatedHrs": 3.5
-    },
-    {
-      "order": 13,
-      "title": "Mergers & Acquisitions",
-      "titleZh": "并购",
-      "objectives": "Explain the types and motivations of M&A transactions; calculate synergy value and accretion/dilution; distinguish hostile from friendly takeovers; analyze takeover defenses; understand the M&A process from due diligence to close.",
-      "readingUrl": "https://openstax.org/books/principles-management/pages/23-introduction",
-      "readingNote": "OpenStax Financial Management Ch 23 — Mergers and Acquisitions",
-      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/investment-vehicles-tutorial/mergers-and-acquisitions/v/mergers-and-acquisitions",
-      "videoNote": "Khan Academy — Mergers and Acquisitions",
-      "video2Url": "https://www.youtube.com/watch?v=5KCdM7EHhEU",
-      "video2Note": "YouTube — How Mergers and Acquisitions Work",
-      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/investment-vehicles-tutorial/mergers-and-acquisitions/e/mergers-and-acquisitions",
-      "practiceNote": "Khan Academy — M&A Practice",
-      "assignment": "Company A ($500M market cap) plans to acquire Company B ($200M market cap) expecting $50M in annual synergies. Calculate the maximum premium Company A should pay; analyze whether the deal is value-creating at a 30% premium and identify three key due diligence areas.",
-      "estimatedHrs": 3.5
-    },
-    {
-      "order": 14,
-      "title": "International & Ethical Finance",
-      "titleZh": "国际金融与道德金融",
-      "objectives": "Explain exchange rate risk and hedging instruments (forwards, options); understand the role of international capital markets; apply ethical frameworks to financial decision-making; evaluate ESG investing principles.",
-      "readingUrl": "https://openstax.org/books/principles-management/pages/24-introduction",
-      "readingNote": "OpenStax Financial Management Ch 24 — International Finance",
-      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/forex-trade-topic/foreign-exchange-topic/v/currency-exchange-introduction",
-      "videoNote": "Khan Academy — Currency Exchange and International Finance",
-      "video2Url": "https://www.youtube.com/watch?v=KQfvBM_cUKI",
-      "video2Note": "YouTube — ESG Investing and Corporate Ethics",
-      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/forex-trade-topic/foreign-exchange-topic/e/foreign-exchange",
-      "practiceNote": "Khan Academy — International Finance Practice",
-      "assignment": "A US company expects to receive €5,000,000 in six months. Explain how the company can hedge its exchange rate risk using a forward contract; also research one company that has committed to ESG principles and evaluate whether its financial performance supports or contradicts the argument that ethical finance compromises returns.",
-      "estimatedHrs": 3.5
     }
   ],
   "quizQuestions": [
@@ -265,43 +217,22 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Which of the following is an example of a financing decision in corporate finance?",
+      "question": "True or False: The answer to \"The primary goal of financial management in a corporation is to:\" is: Maximize shareholder wealth (stock price).",
       "options": [
-        "Choosing whether to build a new factory",
-        "Deciding how much dividend to pay shareholders",
-        "Issuing bonds to fund an acquisition",
-        "Launching a new product line"
+        "True",
+        "False"
       ],
-      "answer": "Issuing bonds to fund an acquisition",
-      "explanation": "Financing decisions concern how to raise capital — debt (bonds, loans) vs. equity (stock issuance). Investment decisions concern how to allocate capital; dividend decisions concern how to return it.",
+      "answer": "True",
+      "explanation": "True. Maximize shareholder wealth (stock price) is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Corporate governance mechanisms designed to reduce agency problems include:",
-      "options": [
-        "Higher executive salaries regardless of performance",
-        "Independent boards, executive stock options, and shareholder voting rights",
-        "Reducing the number of shareholders",
-        "Eliminating all debt from the capital structure"
-      ],
-      "answer": "Independent boards, executive stock options, and shareholder voting rights",
-      "explanation": "Corporate governance mechanisms align manager incentives with shareholders: stock options make managers shareholders; independent boards provide oversight; shareholder voting provides accountability.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "Stakeholders in a corporation include all EXCEPT:",
-      "options": [
-        "Shareholders",
-        "Employees and customers",
-        "Creditors and suppliers",
-        "Competitors"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"stakeholders in a corporation include all except:.\"",
+      "options": null,
       "answer": "Competitors",
-      "explanation": "Stakeholders are parties with a direct interest in the company — shareholders, employees, customers, creditors, suppliers, and communities. Competitors are external market participants with no direct stake.",
+      "explanation": "The correct answer is: Competitors.",
       "points": 1
     },
     {
@@ -349,29 +280,13 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "EBITDA stands for earnings before:",
+      "question": "True or False: The answer to \"Which financial statement shows a company's revenues, expenses, and profit over a period\" is: Income statement.",
       "options": [
-        "Expected income, taxes, dividends, and amortization",
-        "Interest, taxes, depreciation, and amortization",
-        "Income, trade, depreciation, and assets",
-        "Exchange, tax, debt, and allowances"
+        "True",
+        "False"
       ],
-      "answer": "Interest, taxes, depreciation, and amortization",
-      "explanation": "EBITDA isolates operating profitability by removing financing effects (interest), tax effects, and non-cash accounting charges (depreciation and amortization).",
-      "points": 1
-    },
-    {
-      "moduleOrder": 2,
-      "order": 5,
-      "question": "The debt-to-equity ratio measures:",
-      "options": [
-        "Profitability per dollar of equity",
-        "How much debt a company uses relative to equity to finance assets",
-        "The efficiency of inventory management",
-        "The return on invested capital"
-      ],
-      "answer": "How much debt a company uses relative to equity to finance assets",
-      "explanation": "D/E ratio = Total debt / Total equity. It measures financial leverage — higher ratios indicate more aggressive use of debt financing, which increases both risk and potential return.",
+      "answer": "True",
+      "explanation": "True. Income statement is correct.",
       "points": 1
     },
     {
@@ -414,34 +329,6 @@
       ],
       "answer": "$7,921",
       "explanation": "PV = FV / (1 + r)^n = $10,000 / (1.06)^4 = $10,000 / 1.2625 ≈ $7,921",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 4,
-      "question": "An annuity due differs from an ordinary annuity in that payments occur:",
-      "options": [
-        "Annually rather than monthly",
-        "At the beginning of each period rather than the end",
-        "At irregular intervals",
-        "Only once per year"
-      ],
-      "answer": "At the beginning of each period rather than the end",
-      "explanation": "An annuity due has payments at the start of each period (like rent paid in advance), making it worth slightly more than an ordinary annuity (end-of-period payments) due to earlier receipt.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 5,
-      "question": "The discount rate used in present value calculations represents:",
-      "options": [
-        "The expected inflation rate",
-        "The cost of capital or opportunity cost of the investment",
-        "The nominal interest rate on government bonds only",
-        "The average stock market return"
-      ],
-      "answer": "The cost of capital or opportunity cost of the investment",
-      "explanation": "The discount rate reflects what you could earn on the next best alternative investment — the opportunity cost of committing money to this particular use.",
       "points": 1
     },
     {
@@ -501,20 +388,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 4,
-      "order": 5,
-      "question": "The market risk premium is calculated as:",
-      "options": [
-        "Risk-free rate − Market return",
-        "Market return − Risk-free rate",
-        "Beta × Market return",
-        "Stock return − Beta"
-      ],
-      "answer": "Market return − Risk-free rate",
-      "explanation": "The market risk premium = Rm − Rf. It represents the extra return investors expect for bearing market risk beyond a risk-free investment.",
-      "points": 1
-    },
-    {
       "moduleOrder": 5,
       "order": 1,
       "question": "A project should be accepted according to NPV analysis if:",
@@ -545,43 +418,25 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "When NPV and IRR rankings conflict for mutually exclusive projects, you should rely on:",
+      "question": "True or False: The answer to \"A project should be accepted according to NPV analysis if:\" is: NPV is greater than zero.",
       "options": [
-        "IRR because it accounts for project scale",
-        "NPV because it directly measures value creation in dollars",
-        "Payback period for a tiebreaker",
-        "The project with the higher IRR always"
+        "True",
+        "False"
       ],
-      "answer": "NPV because it directly measures value creation in dollars",
-      "explanation": "NPV is superior for mutually exclusive projects because IRR ignores project scale and can conflict with value maximization when project sizes or timing of cash flows differ significantly.",
+      "answer": "True",
+      "explanation": "True. NPV is greater than zero is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "The payback period method's main weakness is that it:",
+      "question": "True or False: The answer to \"The Internal Rate of Return (IRR) is the discount rate that makes a project's NPV equal to:\" is: The initial investment.",
       "options": [
-        "Is too complicated to calculate",
-        "Ignores the time value of money and cash flows after the payback period",
-        "Requires knowledge of the discount rate",
-        "Only works for annual cash flows"
+        "True",
+        "False"
       ],
-      "answer": "Ignores the time value of money and cash flows after the payback period",
-      "explanation": "The payback period simply counts years to recover the initial investment — it neither discounts future cash flows nor considers what happens after payback, potentially rejecting value-creating long-term projects.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 5,
-      "order": 5,
-      "question": "The profitability index is useful in capital rationing situations because it:",
-      "options": [
-        "Measures dollar value of NPV only",
-        "Ranks projects by NPV per dollar invested, helping prioritize when capital is limited",
-        "Always gives the same ranking as IRR",
-        "Eliminates the need to calculate NPV"
-      ],
-      "answer": "Ranks projects by NPV per dollar invested, helping prioritize when capital is limited",
-      "explanation": "PI = (NPV + Initial Investment) / Initial Investment. When capital is constrained, PI helps select the combination of projects creating the most value per dollar of limited capital.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Zero.",
       "points": 1
     },
     {
@@ -629,29 +484,13 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "The CAPM is commonly used to estimate which component of WACC?",
+      "question": "True or False: The answer to \"WACC is used in capital budgeting as the:\" is: Minimum required rate of return (hurdle rate) for new projects.",
       "options": [
-        "Cost of debt",
-        "Cost of preferred stock",
-        "Cost of equity",
-        "Tax rate"
+        "True",
+        "False"
       ],
-      "answer": "Cost of equity",
-      "explanation": "CAPM estimates the return equity investors require given the firm's systematic risk (beta): Cost of equity = Rf + β × (Rm − Rf) — this is the equity component of WACC.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 6,
-      "order": 5,
-      "question": "If a project's expected return exceeds the firm's WACC, the project will:",
-      "options": [
-        "Decrease the firm's value",
-        "Be rejected regardless of cash flows",
-        "Create value for shareholders",
-        "Only be accepted if NPV equals zero"
-      ],
-      "answer": "Create value for shareholders",
-      "explanation": "A project earning more than its cost of capital (WACC) generates positive NPV and increases firm value — exactly the criterion for value-creating investment decisions.",
+      "answer": "True",
+      "explanation": "True. Minimum required rate of return (hurdle rate) for new projects is correct.",
       "points": 1
     },
     {
@@ -685,43 +524,13 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "The trade-off theory of capital structure argues that optimal capital structure balances:",
+      "question": "True or False: The answer to \"The Modigliani-Miller theorem in a world without taxes states that:\" is: A firm's value is unaffected by its capital structure.",
       "options": [
-        "Revenue growth and cost cutting",
-        "The tax benefits of debt against the costs of financial distress",
-        "Short-term and long-term financing",
-        "Equity issuance costs and retained earnings"
+        "True",
+        "False"
       ],
-      "answer": "The tax benefits of debt against the costs of financial distress",
-      "explanation": "The trade-off theory says firms add debt until the marginal tax shield benefit equals the marginal cost of potential financial distress — finding the optimal D/E ratio.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 4,
-      "question": "Financial distress costs include:",
-      "options": [
-        "Lower tax bills from interest deductions",
-        "Management time diverted from operations, supplier loss, and customer desertion",
-        "Higher stock prices from leverage",
-        "Reduced bankruptcy risk"
-      ],
-      "answer": "Management time diverted from operations, supplier loss, and customer desertion",
-      "explanation": "Financial distress — approaching bankruptcy — imposes indirect costs: management focuses on survival rather than value creation, suppliers demand cash, and customers fear the firm won't honor warranties.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "Financial leverage magnifies which of the following?",
-      "options": [
-        "Only profits, never losses",
-        "Both returns and risks to equity holders",
-        "Only the firm's assets, not liabilities",
-        "The cost of debt but not equity"
-      ],
-      "answer": "Both returns and risks to equity holders",
-      "explanation": "Financial leverage amplifies both gains and losses for equity holders — good in up markets (higher ROE), but devastating in downturns as fixed interest must be paid regardless of earnings.",
+      "answer": "True",
+      "explanation": "True. A firm's value is unaffected by its capital structure is correct.",
       "points": 1
     },
     {
@@ -769,29 +578,13 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "The dividend clientele effect refers to the idea that:",
+      "question": "True or False: The answer to \"According to the dividend irrelevance theory (M&M), firm value is NOT affected by:\" is: Whether dividends are paid or earnings are retained.",
       "options": [
-        "Dividends attract the wealthiest investors only",
-        "Different investor groups prefer different dividend policies based on their tax situations and income needs",
-        "Clients of investment banks always prefer higher dividends",
-        "All investors prefer high dividends universally"
+        "True",
+        "False"
       ],
-      "answer": "Different investor groups prefer different dividend policies based on their tax situations and income needs",
-      "explanation": "Retirees needing income prefer high-dividend stocks; high-income investors in high tax brackets prefer low dividends and capital gains. Companies tend to attract shareholders matching their policy.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 8,
-      "order": 5,
-      "question": "A stock dividend (stock split) differs from a cash dividend in that a stock dividend:",
-      "options": [
-        "Increases the total value of the firm immediately",
-        "Distributes additional shares rather than cash, leaving shareholders' proportional ownership unchanged",
-        "Is taxed as ordinary income immediately",
-        "Reduces the number of shares outstanding"
-      ],
-      "answer": "Distributes additional shares rather than cash, leaving shareholders' proportional ownership unchanged",
-      "explanation": "A stock dividend gives shareholders more shares but proportionally reduces share price — total ownership value is unchanged. It's primarily an accounting reclassification.",
+      "answer": "True",
+      "explanation": "True. Whether dividends are paid or earnings are retained is correct.",
       "points": 1
     },
     {
@@ -834,34 +627,6 @@
       ],
       "answer": "Collecting receivables faster and/or paying payables later",
       "explanation": "Faster collections reduce Days Sales Outstanding; taking longer to pay suppliers increases Days Payable Outstanding — both reduce CCC and improve cash flow.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 4,
-      "question": "Just-in-time (JIT) inventory management reduces working capital requirements by:",
-      "options": [
-        "Building large safety stock reserves",
-        "Receiving inventory only as needed for production, minimizing inventory on hand",
-        "Paying for inventory well in advance to secure lower prices",
-        "Selling inventory to competitors when demand is low"
-      ],
-      "answer": "Receiving inventory only as needed for production, minimizing inventory on hand",
-      "explanation": "JIT minimizes Days Inventory Outstanding — reducing carrying costs, storage expenses, and obsolescence risk while freeing cash tied up in excess inventory.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 5,
-      "question": "Extending credit to customers (accounts receivable) creates a trade-off between:",
-      "options": [
-        "Tax savings and debt service",
-        "Increased sales and the cost of financing the credit extended",
-        "Short-term and long-term debt",
-        "Dividends paid and earnings retained"
-      ],
-      "answer": "Increased sales and the cost of financing the credit extended",
-      "explanation": "Credit terms attract more customers and increase sales, but the firm must finance the receivables (opportunity cost of capital tied up) while bearing default risk — a classic working capital trade-off.",
       "points": 1
     },
     {
@@ -921,20 +686,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 10,
-      "order": 5,
-      "question": "Commercial paper is a short-term financing instrument typically used by:",
-      "options": [
-        "Small startups without credit history",
-        "Large, creditworthy corporations to raise funds at below-prime rates directly from investors",
-        "Only governments and municipalities",
-        "Individual consumers for personal loans"
-      ],
-      "answer": "Large, creditworthy corporations to raise funds at below-prime rates directly from investors",
-      "explanation": "Commercial paper is unsecured short-term promissory notes (maturities up to 270 days) issued by highly rated companies — often cheaper than bank borrowing for large corporations.",
-      "points": 1
-    },
-    {
       "moduleOrder": 11,
       "order": 1,
       "question": "The price of a bond is equal to the present value of:",
@@ -965,253 +716,25 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "Yield to maturity (YTM) is best defined as:",
+      "question": "True or False: The answer to \"The price of a bond is equal to the present value of:\" is: All future coupon payments plus the par value at maturity.",
       "options": [
-        "The annual coupon payment divided by par value",
-        "The total return expected if a bond is held to maturity, accounting for current price, coupon, and par value",
-        "The discount rate set by the Federal Reserve",
-        "The coupon rate at the time of bond issuance"
+        "True",
+        "False"
       ],
-      "answer": "The total return expected if a bond is held to maturity, accounting for current price, coupon, and par value",
-      "explanation": "YTM is the IRR of the bond's cash flows (coupons + par) given its current price — it represents the annualized return if purchased now and held to maturity.",
+      "answer": "True",
+      "explanation": "True. All future coupon payments plus the par value at maturity is correct.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "A zero-coupon bond pays:",
+      "question": "True or False: The answer to \"When market interest rates rise above a bond's coupon rate, the bond will trade:\" is: At par value.",
       "options": [
-        "Monthly coupon payments",
-        "Semi-annual coupon payments",
-        "No periodic interest — only the par value at maturity",
-        "Interest only at the date of maturity equal to the coupon rate"
+        "True",
+        "False"
       ],
-      "answer": "No periodic interest — only the par value at maturity",
-      "explanation": "Zero-coupon bonds make no periodic interest payments — they are issued at a deep discount below par and return the full par value at maturity, with the appreciation representing the interest earned.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 5,
-      "question": "Duration measures a bond's:",
-      "options": [
-        "Time until the next coupon payment",
-        "Sensitivity to interest rate changes — longer duration means greater price sensitivity",
-        "Credit quality and default risk",
-        "Time since issuance"
-      ],
-      "answer": "Sensitivity to interest rate changes — longer duration means greater price sensitivity",
-      "explanation": "Duration quantifies interest rate risk — a bond with duration of 8 years will fall approximately 8% in price for each 1% rise in interest rates.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 1,
-      "question": "The Gordon Growth Model (constant growth DDM) values a stock as:",
-      "options": [
-        "EPS divided by the required return",
-        "Next year's dividend divided by (required return − growth rate)",
-        "Current dividend times the growth rate",
-        "Book value per share plus retained earnings"
-      ],
-      "answer": "Next year's dividend divided by (required return − growth rate)",
-      "explanation": "Gordon Growth Model: P₀ = D₁ / (r − g). It assumes dividends grow at a constant rate forever, valuing the stock as a perpetuity growing at rate g.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 2,
-      "question": "The efficient market hypothesis (EMH) in its semi-strong form states that stock prices reflect:",
-      "options": [
-        "Only historical price information",
-        "All publicly available information",
-        "All public and private (insider) information",
-        "Only information known to institutional investors"
-      ],
-      "answer": "All publicly available information",
-      "explanation": "Semi-strong EMH holds that current prices instantly and accurately reflect all publicly available information — making it impossible to earn consistently superior returns using public data alone.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 3,
-      "question": "A stock's P/E ratio measures:",
-      "options": [
-        "Profit relative to equity book value",
-        "The share price divided by earnings per share",
-        "The present value of future earnings",
-        "Dividends paid relative to earnings"
-      ],
-      "answer": "The share price divided by earnings per share",
-      "explanation": "P/E = Price per share / Earnings per share. It shows how much investors are willing to pay for each dollar of earnings — a key relative valuation multiple.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 4,
-      "question": "If a company has EPS of $5 and its industry P/E is 20, the stock's relative value is approximately:",
-      "options": [
-        "$100",
-        "$20",
-        "$25",
-        "$80"
-      ],
-      "answer": "$100",
-      "explanation": "Relative value = EPS × Industry P/E = $5 × 20 = $100. This assumes the company should trade at the same multiple as peers with similar growth and risk.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 5,
-      "question": "Common stock holders are residual claimants, meaning they:",
-      "options": [
-        "Receive fixed dividends before other investors",
-        "Have first claim on company assets in bankruptcy",
-        "Receive any remaining value after all other claims are satisfied",
-        "Are guaranteed a minimum return by law"
-      ],
-      "answer": "Receive any remaining value after all other claims are satisfied",
-      "explanation": "Equity holders stand last in the claim hierarchy — after creditors and preferred shareholders. In bankruptcy, common stock often becomes worthless; in prosperity, they benefit from all upside.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 1,
-      "question": "A horizontal merger combines:",
-      "options": [
-        "Companies at different stages of the same supply chain",
-        "Companies in completely unrelated industries",
-        "Competitors in the same industry and market",
-        "A parent company with one of its subsidiaries"
-      ],
-      "answer": "Competitors in the same industry and market",
-      "explanation": "A horizontal merger combines firms at the same level of production in the same industry — e.g., two banks or two automakers merging. It can increase market power and create scale economies.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 2,
-      "question": "M&A synergies occur when:",
-      "options": [
-        "The combined firm's value exceeds the sum of the individual firms' values",
-        "The acquiring firm pays a premium above market value",
-        "Both companies operate more efficiently when independent",
-        "The acquisition is financed entirely with debt"
-      ],
-      "answer": "The combined firm's value exceeds the sum of the individual firms' values",
-      "explanation": "Synergy is the '2 + 2 = 5' effect of mergers — cost savings, revenue increases, or risk reductions that make the combined entity worth more than the two firms separately.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 3,
-      "question": "A hostile takeover occurs when:",
-      "options": [
-        "The acquiring firm negotiates with the target's board and receives approval",
-        "The acquirer bypasses the target's management and board to appeal directly to shareholders",
-        "Both companies merge voluntarily as equals",
-        "A private equity firm buys a company with management's support"
-      ],
-      "answer": "The acquirer bypasses the target's management and board to appeal directly to shareholders",
-      "explanation": "A hostile takeover proceeds without target management's consent — the acquirer makes a tender offer directly to shareholders or launches a proxy fight to replace the board.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 4,
-      "question": "Due diligence in an M&A transaction involves:",
-      "options": [
-        "Marketing the combined company to investors after the deal closes",
-        "Thorough investigation of the target's financials, legal issues, operations, and liabilities before closing",
-        "Negotiating the deal terms with investment bankers",
-        "Filing for antitrust approval with regulators"
-      ],
-      "answer": "Thorough investigation of the target's financials, legal issues, operations, and liabilities before closing",
-      "explanation": "Due diligence is the buyer's pre-closing investigation — examining financial statements, contracts, IP, litigation exposure, and operational risks to verify what was represented and identify hidden problems.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "The winner's curse in M&A refers to the tendency for acquirers to:",
-      "options": [
-        "Always win competitive bidding processes",
-        "Overpay for acquisitions, destroying shareholder value",
-        "Acquire undervalued targets consistently",
-        "Benefit from synergies larger than expected"
-      ],
-      "answer": "Overpay for acquisitions, destroying shareholder value",
-      "explanation": "Research shows acquirers frequently overpay — driven by hubris, competitive bidding pressure, or overestimated synergies — resulting in acquisition premiums that exceed actual value created.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 1,
-      "question": "Exchange rate risk (currency risk) for a US exporter arises from:",
-      "options": [
-        "Changes in US interest rates only",
-        "The possibility that the foreign currency will depreciate before payment is received, reducing dollar revenues",
-        "Tariffs imposed by the foreign government",
-        "The cost of translating financial statements"
-      ],
-      "answer": "The possibility that the foreign currency will depreciate before payment is received, reducing dollar revenues",
-      "explanation": "A US exporter receiving foreign currency faces transaction exposure — if the foreign currency weakens before they convert to dollars, their dollar revenues fall.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 2,
-      "question": "A forward contract to hedge exchange rate risk commits a company to:",
-      "options": [
-        "Buy or sell currency at today's spot rate in the future",
-        "Buy or sell a fixed amount of foreign currency at a specified exchange rate on a specified future date",
-        "Pay a premium for the right but not obligation to exchange currency",
-        "Borrow in the foreign currency to offset exposure"
-      ],
-      "answer": "Buy or sell a fixed amount of foreign currency at a specified exchange rate on a specified future date",
-      "explanation": "A forward contract locks in the exchange rate for a future transaction — eliminating uncertainty but also giving up any favorable rate movements.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 3,
-      "question": "ESG investing focuses on companies' performance in:",
-      "options": [
-        "Earnings, Sales, and Growth",
-        "Environmental, Social, and Governance factors",
-        "Equity, Stability, and Growth",
-        "External, Strategic, and Global factors"
-      ],
-      "answer": "Environmental, Social, and Governance factors",
-      "explanation": "ESG investing evaluates companies on environmental sustainability, social responsibility (labor, diversity), and governance quality (board composition, executive pay) alongside financial metrics.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 4,
-      "question": "Purchasing Power Parity (PPP) theory suggests that exchange rates should adjust so that:",
-      "options": [
-        "Interest rates are equal across all countries",
-        "Identical goods cost the same in different countries when prices are expressed in a common currency",
-        "Countries with higher inflation have stronger currencies",
-        "Central banks control all exchange rates"
-      ],
-      "answer": "Identical goods cost the same in different countries when prices are expressed in a common currency",
-      "explanation": "PPP predicts that exchange rates adjust to equalize price levels internationally — if a basket of goods costs more in one country, its currency should depreciate relative to cheaper countries.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 5,
-      "question": "An ethical finance perspective argues that financial decisions should consider:",
-      "options": [
-        "Only the return to equity shareholders",
-        "The impact on all stakeholders including employees, communities, and the environment",
-        "Only legally required disclosures",
-        "Maximizing short-term earnings per share above all else"
-      ],
-      "answer": "The impact on all stakeholders including employees, communities, and the environment",
-      "explanation": "Ethical finance — aligned with ESG and stakeholder theory — holds that sustainable long-term value creation requires considering impacts on all stakeholders, not just maximizing shareholder returns.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Below par (at a discount).",
       "points": 1
     }
   ],
@@ -1264,16 +787,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "Using CAPM with Rf = 2%, Rm = 9%, and β = 1.2, the required return is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Using CAPM with Rf = 2%, Rm = 9%, and β = 1.2, the required return is:\" is: 10.4%.",
       "options": [
-        "10.8%",
-        "12.4%",
-        "10.4%",
-        "14%"
+        "True",
+        "False"
       ],
-      "answer": "10.4%",
-      "explanation": "Required return = 2% + 1.2 × (9% − 2%) = 2% + 1.2 × 7% = 2% + 8.4% = 10.4%",
+      "answer": "True",
+      "explanation": "True. 10.4% is correct.",
       "points": 1
     },
     {
@@ -1324,16 +845,14 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "In the Gordon Growth Model, if D₁ = $3, r = 12%, and g = 4%, the stock's intrinsic value is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"In the Gordon Growth Model, if D₁ = $3, r = 12%, and g = 4%, the stock's intrinsic value is:\" is: $25.",
       "options": [
-        "$25",
-        "$37.50",
-        "$30",
-        "$75"
+        "True",
+        "False"
       ],
-      "answer": "$37.50",
-      "explanation": "P₀ = D₁ / (r − g) = $3 / (0.12 − 0.04) = $3 / 0.08 = $37.50",
+      "answer": "False",
+      "explanation": "False. The correct answer is: $37.50.",
       "points": 1
     },
     {
@@ -1384,16 +903,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "Which of the following is an example of unsystematic (diversifiable) risk?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following is an example of unsystematic (diversifiable) risk\" is: A CEO fraud scandal specific to one company.",
       "options": [
-        "A recession reducing all stock returns",
-        "Rising inflation affecting all companies",
-        "A CEO fraud scandal specific to one company",
-        "An increase in global interest rates"
+        "True",
+        "False"
       ],
-      "answer": "A CEO fraud scandal specific to one company",
-      "explanation": "Unsystematic risk is company-specific — fraud, product recalls, labor strikes — affecting one firm and diversifiable away by holding many stocks. Systematic risk affects the entire market.",
+      "answer": "True",
+      "explanation": "True. A CEO fraud scandal specific to one company is correct.",
       "points": 1
     },
     {
@@ -1444,16 +961,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "A project with a negative NPV should generally be:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A project with a negative NPV should generally be:\" is: Accepted if it has a positive IRR.",
       "options": [
-        "Accepted if it has a positive IRR",
-        "Rejected because it destroys shareholder value",
-        "Accepted if the payback period is short",
-        "Accepted if management personally supports it"
+        "True",
+        "False"
       ],
-      "answer": "Rejected because it destroys shareholder value",
-      "explanation": "Negative NPV means the project's costs exceed the present value of its future cash flows — it destroys rather than creates value and should be rejected under the NPV rule.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Rejected because it destroys shareholder value.",
       "points": 1
     },
     {
@@ -1504,16 +1019,14 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "Semi-strong form market efficiency implies that technical analysis (studying price charts) is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Semi-strong form market efficiency implies that technical analysis (studying price charts) is:\" is: Unable to consistently generate above-market returns since prices already reflect all public information.",
       "options": [
-        "Highly profitable for experienced traders",
-        "Unable to consistently generate above-market returns since prices already reflect all public information",
-        "Only effective for short-term trading",
-        "The best approach for retail investors"
+        "True",
+        "False"
       ],
-      "answer": "Unable to consistently generate above-market returns since prices already reflect all public information",
-      "explanation": "Semi-strong EMH says all public information — including price history — is already embedded in prices, so neither technical analysis (price patterns) nor fundamental analysis can consistently beat the market.",
+      "answer": "True",
+      "explanation": "True. Unable to consistently generate above-market returns since prices already reflect all public information is correct.",
       "points": 1
     },
     {
@@ -1564,16 +1077,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "A firm's Return on Equity (ROE) using the DuPont formula equals:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A firm's Return on Equity (ROE) using the DuPont formula equals:\" is: Net income / Sales.",
       "options": [
-        "Net income / Sales",
-        "Net profit margin × Asset turnover × Equity multiplier",
-        "EBITDA / Total assets",
-        "Gross profit / Revenue"
+        "True",
+        "False"
       ],
-      "answer": "Net profit margin × Asset turnover × Equity multiplier",
-      "explanation": "DuPont decomposition: ROE = (Net income/Sales) × (Sales/Total assets) × (Total assets/Equity) — breaking ROE into profitability, efficiency, and leverage components.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Net profit margin × Asset turnover × Equity multiplier.",
       "points": 1
     },
     {
@@ -1624,16 +1135,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
+      "type": "fill",
       "question": "The annualized cost of not taking a '1/10 net 60' trade discount is approximately:",
-      "options": [
-        "1%",
-        "7.4%",
-        "18%",
-        "24%"
-      ],
+      "options": null,
       "answer": "7.4%",
-      "explanation": "Cost = (0.01/0.99) × (365/(60−10)) = 1.01% × 7.3 ≈ 7.4%. By not taking the discount, the company effectively pays ~7.4% annualized for 50 extra days of trade credit.",
+      "explanation": "The correct answer is: 7.4%.",
       "points": 1
     },
     {
@@ -1684,16 +1190,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "Which of the following is a characteristic of common stock that preferred stock does NOT have?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following is a characteristic of common stock that preferred stock does NOT have\" is: Dividend priority over debt holders.",
       "options": [
-        "Dividend priority over debt holders",
-        "Fixed dividend payments",
-        "Voting rights on major corporate decisions",
-        "Priority over common stock in bankruptcy"
+        "True",
+        "False"
       ],
-      "answer": "Voting rights on major corporate decisions",
-      "explanation": "Common stock includes voting rights (elect directors, approve major changes). Preferred stock typically has no voting rights but receives fixed dividends and has liquidation priority over common stock.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Voting rights on major corporate decisions.",
       "points": 1
     },
     {
@@ -1741,5 +1245,6 @@
       "explanation": "Ethical financial management balances stakeholder interests — short-term profit maximization at the expense of employees or communities often creates long-term risks (reputational, regulatory, talent) that reduce overall firm value.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": null
 }

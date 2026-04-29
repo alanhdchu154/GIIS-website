@@ -4,7 +4,7 @@
   "nameZh": "AP 心理学",
   "credits": 1,
   "department": "Psychology",
-  "type": "Core",
+  "type": "AP",
   "description": "Comprehensive study of human behavior and mental processes aligned with the College Board AP Psychology curriculum. Topics span biological bases, sensation, perception, learning, memory, cognition, development, personality, disorders, and treatment, preparing students for the AP exam and college-level psychology.",
   "isPublished": true,
   "modules": [
@@ -231,6 +231,38 @@
       "practiceNote": "Khan Academy — Psychological Therapies Practice",
       "assignment": "Evaluate CBT vs. medication for treating depression. Use research evidence to argue which approach (or combination) is most effective. (400 words)",
       "estimatedHrs": 3.5
+    },
+    {
+      "order": 15,
+      "title": "Treatment of Psychological Disorders — Advanced Applications",
+      "titleZh": "心理障碍的治疗 — Advanced Applications",
+      "objectives": "In-depth case studies and real-world applications.",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/16-introduction",
+      "readingNote": "OpenStax Psychology 2e — Ch 16.1–16.5: Treatment of Disorders (Advanced)",
+      "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:introduction-to-treatment/v/treatment-of-psychological-disorders",
+      "videoNote": "Khan Academy AP Psychology — Treatment Overview (Review)",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:psychological-therapies/e/psychological-therapies",
+      "practiceNote": "Khan Academy — Psychological Therapies Practice (AP Prep)",
+      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 16,
+      "title": "Treatment of Psychological Disorders — Synthesis & Review",
+      "titleZh": "心理障碍的治疗 — Synthesis & Review",
+      "objectives": "Comprehensive review and AP exam preparation strategies.",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/16-introduction",
+      "readingNote": "OpenStax Psychology 2e — Ch 16.1–16.5: Treatment of Disorders (Advanced)",
+      "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:introduction-to-treatment/v/treatment-of-psychological-disorders",
+      "videoNote": "Khan Academy AP Psychology — Treatment Overview (Review)",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:psychological-therapies/e/psychological-therapies",
+      "practiceNote": "Khan Academy — Psychological Therapies Practice (AP Prep)",
+      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "estimatedHrs": 4
     }
   ],
   "quizQuestions": [
@@ -265,43 +297,13 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "The term 'psychology' is derived from the Greek words for:",
+      "question": "True or False: Wilhelm Wundt is considered the founder of the first psychology laboratory.",
       "options": [
-        "Brain and learning",
-        "Mind and study",
-        "Behavior and science",
-        "Thought and measurement"
+        "True",
+        "False"
       ],
-      "answer": "Mind and study",
-      "explanation": "Psychology comes from 'psyche' (mind/soul) and 'logos' (study).",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 4,
-      "question": "Which approach emphasizes unconscious processes and early childhood experiences?",
-      "options": [
-        "Cognitive",
-        "Behavioral",
-        "Psychoanalytic",
-        "Biological"
-      ],
-      "answer": "Psychoanalytic",
-      "explanation": "Freud's psychoanalytic approach centers on the unconscious mind and how early experiences shape personality.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "The humanistic approach in psychology was pioneered by:",
-      "options": [
-        "B.F. Skinner",
-        "Abraham Maslow and Carl Rogers",
-        "Ivan Pavlov",
-        "Albert Bandura"
-      ],
-      "answer": "Abraham Maslow and Carl Rogers",
-      "explanation": "Maslow and Rogers founded humanistic psychology, emphasizing human potential and self-actualization.",
+      "answer": "True",
+      "explanation": "True. Wilhelm Wundt is correct.",
       "points": 1
     },
     {
@@ -349,29 +351,13 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Which research method best establishes cause-and-effect relationships?",
+      "question": "True or False: The answer to \"In an experiment, the variable that the researcher manipulates is called the:\" is: Independent variable.",
       "options": [
-        "Case study",
-        "Survey",
-        "Naturalistic observation",
-        "Experiment"
+        "True",
+        "False"
       ],
-      "answer": "Experiment",
-      "explanation": "Experiments with random assignment and manipulation of variables are the only method that can establish causation.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 2,
-      "order": 5,
-      "question": "Institutional Review Boards (IRBs) primarily ensure that research:",
-      "options": [
-        "Produces statistically significant results",
-        "Is ethically conducted",
-        "Uses random sampling",
-        "Is peer-reviewed before starting"
-      ],
-      "answer": "Is ethically conducted",
-      "explanation": "IRBs review research proposals to protect participants from harm and ensure ethical standards are met.",
+      "answer": "True",
+      "explanation": "True. Independent variable is correct.",
       "points": 1
     },
     {
@@ -414,34 +400,6 @@
       ],
       "answer": "Insulating the axon and enabling saltatory conduction",
       "explanation": "Myelin insulates the axon, allowing the electrical signal to jump between nodes of Ranvier (saltatory conduction).",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 4,
-      "question": "Dopamine is most closely associated with:",
-      "options": [
-        "Sleep regulation",
-        "Reward and pleasure pathways",
-        "Fight-or-flight response",
-        "Digestive function"
-      ],
-      "answer": "Reward and pleasure pathways",
-      "explanation": "Dopamine plays a major role in the brain's reward system and is linked to motivation and pleasure.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 5,
-      "question": "The corpus callosum connects:",
-      "options": [
-        "The cerebellum to the brainstem",
-        "The left and right cerebral hemispheres",
-        "The thalamus to the cortex",
-        "The frontal and occipital lobes"
-      ],
-      "answer": "The left and right cerebral hemispheres",
-      "explanation": "The corpus callosum is a band of nerve fibers allowing communication between the two cerebral hemispheres.",
       "points": 1
     },
     {
@@ -501,20 +459,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 4,
-      "order": 5,
-      "question": "Which Gestalt principle states we perceive objects close together as belonging to the same group?",
-      "options": [
-        "Similarity",
-        "Closure",
-        "Proximity",
-        "Continuity"
-      ],
-      "answer": "Proximity",
-      "explanation": "The Gestalt principle of proximity says elements that are near each other are perceived as a group.",
-      "points": 1
-    },
-    {
       "moduleOrder": 5,
       "order": 1,
       "question": "REM sleep is characterized by:",
@@ -545,43 +489,25 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "Which drug type slows down the central nervous system?",
+      "question": "True or False: The answer to \"REM sleep is characterized by:\" is: Rapid eye movements and vivid dreaming.",
       "options": [
-        "Stimulants",
-        "Hallucinogens",
-        "Depressants",
-        "Opiates only"
+        "True",
+        "False"
       ],
-      "answer": "Depressants",
-      "explanation": "Depressants (e.g., alcohol, barbiturates) slow CNS activity, reducing arousal and impairing coordination.",
+      "answer": "True",
+      "explanation": "True. Rapid eye movements and vivid dreaming is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Narcolepsy is a disorder characterized by:",
+      "question": "True or False: The answer to \"The activation-synthesis hypothesis proposes that dreams are:\" is: Wish fulfillments from the unconscious.",
       "options": [
-        "Inability to enter REM sleep",
-        "Sudden uncontrollable sleep attacks",
-        "Chronic insomnia",
-        "Sleepwalking during NREM sleep"
+        "True",
+        "False"
       ],
-      "answer": "Sudden uncontrollable sleep attacks",
-      "explanation": "Narcolepsy causes sudden, irresistible episodes of falling asleep, sometimes with cataplexy.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 5,
-      "order": 5,
-      "question": "Hypnosis is best described as:",
-      "options": [
-        "A state of unconsciousness",
-        "A heightened state of suggestibility",
-        "Deep REM sleep",
-        "A form of meditation"
-      ],
-      "answer": "A heightened state of suggestibility",
-      "explanation": "Hypnosis involves a state of focused attention and heightened suggestibility, but subjects retain some awareness.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Random neural signals interpreted by the brain.",
       "points": 1
     },
     {
@@ -629,29 +555,22 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "A variable-ratio schedule of reinforcement produces:",
+      "question": "True or False: The answer to \"In Pavlov's experiment, the bell (after conditioning) is the:\" is: Conditioned stimulus.",
       "options": [
-        "Slow, steady responding",
-        "High, steady rates of responding resistant to extinction",
-        "Responding only at fixed time intervals",
-        "Rapid extinction when rewards stop"
+        "True",
+        "False"
       ],
-      "answer": "High, steady rates of responding resistant to extinction",
-      "explanation": "Variable-ratio schedules (like slot machines) produce high, persistent response rates because reinforcement is unpredictable.",
+      "answer": "True",
+      "explanation": "True. Conditioned stimulus is correct.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "The process by which a conditioned response weakens when the CS is repeatedly presented without the US is called:",
-      "options": [
-        "Discrimination",
-        "Generalization",
-        "Extinction",
-        "Spontaneous recovery"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the process by which a conditioned response weakens when the cs is repeatedly presented without the us is called:.\"",
+      "options": null,
       "answer": "Extinction",
-      "explanation": "Extinction occurs when the conditioned stimulus is repeatedly presented without the unconditioned stimulus, weakening the conditioned response.",
+      "explanation": "The correct answer is: Extinction.",
       "points": 1
     },
     {
@@ -685,43 +604,22 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "Elizabeth Loftus's research on the misinformation effect showed that:",
+      "question": "True or False: The answer to \"The working memory model was proposed by:\" is: Baddeley and Hitch.",
       "options": [
-        "Memory is always accurate",
-        "Leading questions can alter memories of events",
-        "Flashbulb memories are completely reliable",
-        "Long-term memory has unlimited capacity"
+        "True",
+        "False"
       ],
-      "answer": "Leading questions can alter memories of events",
-      "explanation": "Loftus demonstrated that post-event information (like misleading questions) can distort eyewitness memory.",
+      "answer": "True",
+      "explanation": "True. Baddeley and Hitch is correct.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Procedural memory (knowing how to ride a bike) is stored in:",
-      "options": [
-        "Episodic memory",
-        "Semantic memory",
-        "Implicit (nondeclarative) memory",
-        "Working memory"
-      ],
-      "answer": "Implicit (nondeclarative) memory",
-      "explanation": "Procedural memory for skills and habits is a type of implicit (nondeclarative) memory, not requiring conscious recall.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "The tip-of-the-tongue phenomenon illustrates:",
-      "options": [
-        "Proactive interference",
-        "A retrieval failure",
-        "Encoding failure",
-        "Storage decay"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the tip-of-the-tongue phenomenon illustrates:.\"",
+      "options": null,
       "answer": "A retrieval failure",
-      "explanation": "The tip-of-the-tongue state occurs when information is stored but cannot be retrieved at that moment — a retrieval failure.",
+      "explanation": "The correct answer is: A retrieval failure.",
       "points": 1
     },
     {
@@ -769,29 +667,13 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "The Whorfian (Sapir-Whorf) hypothesis states that:",
+      "question": "True or False: The answer to \"A mental shortcut or rule of thumb used in decision making is called a:\" is: Heuristic.",
       "options": [
-        "Language is universal across cultures",
-        "Language influences thought and perception of reality",
-        "Thought is independent of language",
-        "Language develops before thought"
+        "True",
+        "False"
       ],
-      "answer": "Language influences thought and perception of reality",
-      "explanation": "The linguistic relativity hypothesis proposes that the language we speak shapes how we think and perceive the world.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 8,
-      "order": 5,
-      "question": "Mental fixation (functional fixedness) refers to:",
-      "options": [
-        "The inability to see new uses for familiar objects",
-        "Enhanced creativity under pressure",
-        "Memory for problem-solving strategies",
-        "Using algorithms instead of heuristics"
-      ],
-      "answer": "The inability to see new uses for familiar objects",
-      "explanation": "Functional fixedness is a cognitive bias where people can only see objects as used in their traditional way.",
+      "answer": "True",
+      "explanation": "True. Heuristic is correct.",
       "points": 1
     },
     {
@@ -834,34 +716,6 @@
       ],
       "answer": "Out of internal interest or enjoyment",
       "explanation": "Intrinsic motivation comes from within — doing something because it is inherently interesting or enjoyable.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 4,
-      "question": "The Yerkes-Dodson law suggests that performance is best at:",
-      "options": [
-        "Very low arousal",
-        "Very high arousal",
-        "Moderate levels of arousal",
-        "Zero arousal"
-      ],
-      "answer": "Moderate levels of arousal",
-      "explanation": "The Yerkes-Dodson law describes an inverted-U relationship between arousal and performance — optimal at moderate levels.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 5,
-      "question": "The facial feedback hypothesis proposes that:",
-      "options": [
-        "Facial expressions result from emotions only",
-        "Facial expressions can influence the emotions we feel",
-        "Emotions are culturally determined",
-        "Only voluntary expressions reflect true emotion"
-      ],
-      "answer": "Facial expressions can influence the emotions we feel",
-      "explanation": "The facial feedback hypothesis suggests that our facial expressions can trigger or amplify corresponding emotional experiences.",
       "points": 1
     },
     {
@@ -921,20 +775,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 10,
-      "order": 5,
-      "question": "Secure attachment in infancy is associated with:",
-      "options": [
-        "An unresponsive caregiver",
-        "Consistent and sensitive caregiving",
-        "Frequent separation from caregivers",
-        "Inconsistent caregiving patterns"
-      ],
-      "answer": "Consistent and sensitive caregiving",
-      "explanation": "Ainsworth found that securely attached infants have caregivers who are consistently sensitive and responsive to their needs.",
-      "points": 1
-    },
-    {
       "moduleOrder": 11,
       "order": 1,
       "question": "Freud's concept of the 'id' refers to:",
@@ -965,43 +805,25 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "The Rorschach inkblot test is an example of a:",
+      "question": "True or False: The answer to \"Freud's concept of the 'id' refers to:\" is: Primitive instincts seeking immediate gratification.",
       "options": [
-        "Self-report inventory",
-        "Projective test",
-        "Behavioral observation measure",
-        "Neuropsychological assessment"
+        "True",
+        "False"
       ],
-      "answer": "Projective test",
-      "explanation": "The Rorschach is a projective test where ambiguous stimuli are used to reveal unconscious thoughts and feelings.",
+      "answer": "True",
+      "explanation": "True. Primitive instincts seeking immediate gratification is correct.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "Carl Rogers emphasized which condition for therapeutic personality change?",
+      "question": "True or False: The answer to \"The Big Five personality factors include all EXCEPT:\" is: Openness.",
       "options": [
-        "Strict behavioral contracts",
-        "Unconditional positive regard",
-        "Insight into unconscious conflicts",
-        "Systematic desensitization"
+        "True",
+        "False"
       ],
-      "answer": "Unconditional positive regard",
-      "explanation": "Rogers believed that unconditional positive regard — accepting clients without judgment — is essential for growth.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 5,
-      "question": "According to social-cognitive theory, behavior is best predicted by:",
-      "options": [
-        "Unconscious drives alone",
-        "Traits alone",
-        "The interaction of person, behavior, and environment",
-        "Fixed genetic predispositions"
-      ],
-      "answer": "The interaction of person, behavior, and environment",
-      "explanation": "Bandura's reciprocal determinism posits that behavior, personal factors, and environment mutually influence one another.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Psychoticism.",
       "points": 1
     },
     {
@@ -1049,29 +871,13 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "A standardized test has a mean of 100 and SD of 15. A score of 130 is:",
+      "question": "True or False: The answer to \"A test that measures what it intends to measure has:\" is: High validity.",
       "options": [
-        "At the 50th percentile",
-        "Two standard deviations above the mean",
-        "Within the normal range",
-        "Below average"
+        "True",
+        "False"
       ],
-      "answer": "Two standard deviations above the mean",
-      "explanation": "130 – 100 = 30 points above the mean, and 30/15 = 2 standard deviations above.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 5,
-      "question": "Gardner's theory of multiple intelligences was criticized primarily because:",
-      "options": [
-        "It ignored academic ability",
-        "It lacked consistent empirical support from factor analysis",
-        "It was too narrow in scope",
-        "It only applied to Western cultures"
-      ],
-      "answer": "It lacked consistent empirical support from factor analysis",
-      "explanation": "Critics argue Gardner's intelligences may be better described as talents or abilities, lacking strong psychometric evidence.",
+      "answer": "True",
+      "explanation": "True. High validity is correct.",
       "points": 1
     },
     {
@@ -1105,43 +911,13 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "Major depressive disorder differs from bipolar disorder in that it:",
+      "question": "True or False: The answer to \"The DSM-5 is used primarily to:\" is: Classify and diagnose mental disorders.",
       "options": [
-        "Involves episodes of mania",
-        "Only includes depressive episodes without mania",
-        "Is caused solely by genetics",
-        "Responds only to lithium treatment"
+        "True",
+        "False"
       ],
-      "answer": "Only includes depressive episodes without mania",
-      "explanation": "Major depressive disorder involves depressive episodes without manic or hypomanic episodes, distinguishing it from bipolar disorder.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 4,
-      "question": "Obsessive-compulsive disorder (OCD) involves:",
-      "options": [
-        "Persistent flashbacks of trauma",
-        "Intrusive thoughts (obsessions) and repetitive behaviors (compulsions)",
-        "Sudden panic attacks without a trigger",
-        "Dissociation from reality"
-      ],
-      "answer": "Intrusive thoughts (obsessions) and repetitive behaviors (compulsions)",
-      "explanation": "OCD is characterized by unwanted, intrusive obsessions and repetitive compulsions performed to reduce anxiety.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "The diathesis-stress model proposes that disorders result from:",
-      "options": [
-        "Only genetic predispositions",
-        "Only environmental stressors",
-        "An interaction between genetic vulnerability and environmental stress",
-        "A purely neurochemical imbalance"
-      ],
-      "answer": "An interaction between genetic vulnerability and environmental stress",
-      "explanation": "The diathesis-stress model says disorders develop when a genetic predisposition (diathesis) interacts with environmental stressors.",
+      "answer": "True",
+      "explanation": "True. Classify and diagnose mental disorders is correct.",
       "points": 1
     },
     {
@@ -1189,29 +965,13 @@
     {
       "moduleOrder": 14,
       "order": 4,
-      "question": "Free association is a technique used in:",
+      "question": "True or False: The answer to \"Cognitive-behavioral therapy (CBT) focuses on:\" is: Changing maladaptive thought patterns and behaviors.",
       "options": [
-        "Cognitive therapy",
-        "Behavior modification",
-        "Psychoanalysis",
-        "Humanistic therapy"
+        "True",
+        "False"
       ],
-      "answer": "Psychoanalysis",
-      "explanation": "Free association, developed by Freud, involves patients saying whatever comes to mind to reveal unconscious material.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 5,
-      "question": "Meta-analyses of psychotherapy research generally show that:",
-      "options": [
-        "No therapy is effective",
-        "Most established therapies produce similar positive outcomes",
-        "Only CBT is effective",
-        "Drug therapy always outperforms psychotherapy"
-      ],
-      "answer": "Most established therapies produce similar positive outcomes",
-      "explanation": "The 'Dodo bird verdict' — most bona fide therapies are roughly equally effective according to meta-analytic studies.",
+      "answer": "True",
+      "explanation": "True. Changing maladaptive thought patterns and behaviors is correct.",
       "points": 1
     }
   ],
@@ -1264,16 +1024,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "The absolute threshold is the minimum stimulus intensity that can be detected:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The absolute threshold is the minimum stimulus intensity that can be detected:\" is: 50% of the time.",
       "options": [
-        "100% of the time",
-        "75% of the time",
-        "50% of the time",
-        "25% of the time"
+        "True",
+        "False"
       ],
-      "answer": "50% of the time",
-      "explanation": "By definition, the absolute threshold is the stimulus level detectable exactly 50% of the time.",
+      "answer": "True",
+      "explanation": "True. 50% of the time is correct.",
       "points": 1
     },
     {
@@ -1309,31 +1067,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "The part of long-term memory that stores facts and general knowledge is called:",
-      "options": [
-        "Procedural memory",
-        "Episodic memory",
-        "Semantic memory",
-        "Working memory"
-      ],
+      "options": null,
       "answer": "Semantic memory",
-      "explanation": "Semantic memory contains general factual knowledge about the world, independent of personal experience.",
+      "explanation": "The correct answer is: Semantic memory.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "Framing effect refers to:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Framing effect refers to:\" is: The tendency to judge based on the first piece of information received.",
       "options": [
-        "The tendency to judge based on the first piece of information received",
-        "How the presentation of information influences decision making",
-        "Using past experiences to solve new problems",
-        "The inability to change mental sets"
+        "True",
+        "False"
       ],
-      "answer": "How the presentation of information influences decision making",
-      "explanation": "The framing effect shows that how choices are worded or presented significantly affects decisions.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: How the presentation of information influences decision making.",
       "points": 1
     },
     {
@@ -1384,16 +1135,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "A test is reliable if it:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A test is reliable if it:\" is: Produces consistent results across time.",
       "options": [
-        "Measures what it claims to measure",
-        "Produces consistent results across time",
-        "Has been standardized on a large sample",
-        "Predicts real-world performance"
+        "True",
+        "False"
       ],
-      "answer": "Produces consistent results across time",
-      "explanation": "Reliability means consistency — a test produces similar scores when repeated under similar conditions.",
+      "answer": "True",
+      "explanation": "True. Produces consistent results across time is correct.",
       "points": 1
     },
     {
@@ -1444,16 +1193,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "The diathesis-stress model explains psychological disorders as resulting from:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The diathesis-stress model explains psychological disorders as resulting from:\" is: Only biological factors.",
       "options": [
-        "Only biological factors",
-        "Only environmental trauma",
-        "Genetic vulnerability interacting with environmental stress",
-        "Purely cognitive distortions"
+        "True",
+        "False"
       ],
-      "answer": "Genetic vulnerability interacting with environmental stress",
-      "explanation": "The diathesis-stress model proposes disorders emerge from the interaction of predisposition and stressful life events.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Genetic vulnerability interacting with environmental stress.",
       "points": 1
     },
     {
@@ -1504,31 +1251,24 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "The Big Five personality trait that predicts academic and occupational success most consistently is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The Big Five personality trait that predicts academic and occupational success most consistently is:\" is: Conscientiousness.",
       "options": [
-        "Extraversion",
-        "Openness",
-        "Conscientiousness",
-        "Agreeableness"
+        "True",
+        "False"
       ],
-      "answer": "Conscientiousness",
-      "explanation": "Research consistently shows conscientiousness (organization, discipline, goal-directedness) predicts success across domains.",
+      "answer": "True",
+      "explanation": "True. Conscientiousness is correct.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 6,
-      "type": "mc",
+      "type": "fill",
       "question": "Electroconvulsive therapy (ECT) is most effective for:",
-      "options": [
-        "Schizophrenia",
-        "Severe, treatment-resistant depression",
-        "Anxiety disorders",
-        "Antisocial personality disorder"
-      ],
+      "options": null,
       "answer": "Severe, treatment-resistant depression",
-      "explanation": "ECT is used for severe depression that has not responded to other treatments and can produce rapid improvement.",
+      "explanation": "The correct answer is: Severe, treatment-resistant depression.",
       "points": 1
     },
     {
@@ -1564,16 +1304,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "The two-factor theory of emotion (Schachter-Singer) proposes that emotion requires:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The two-factor theory of emotion (Schachter-Singer) proposes that emotion requires:\" is: Only physiological arousal.",
       "options": [
-        "Only physiological arousal",
-        "Physiological arousal plus a cognitive label",
-        "Only cognitive appraisal",
-        "Facial expression to precede feeling"
+        "True",
+        "False"
       ],
-      "answer": "Physiological arousal plus a cognitive label",
-      "explanation": "Schachter and Singer proposed that we experience emotion when arousal is attributed to a specific cause through cognitive labeling.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Physiological arousal plus a cognitive label.",
       "points": 1
     },
     {
@@ -1624,16 +1362,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
+      "type": "fill",
       "question": "Erikson's stage of 'Generativity vs. Stagnation' occurs during:",
-      "options": [
-        "Adolescence",
-        "Early adulthood",
-        "Middle adulthood",
-        "Late adulthood"
-      ],
+      "options": null,
       "answer": "Middle adulthood",
-      "explanation": "During middle adulthood, people focus on contributing to society and future generations (generativity) vs. feeling unproductive.",
+      "explanation": "The correct answer is: Middle adulthood.",
       "points": 1
     },
     {
@@ -1684,16 +1417,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "The hormone cortisol is primarily released during:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The hormone cortisol is primarily released during:\" is: Deep sleep.",
       "options": [
-        "Deep sleep",
-        "Orgasm",
-        "Stress responses",
-        "Digestion"
+        "True",
+        "False"
       ],
-      "answer": "Stress responses",
-      "explanation": "Cortisol is the primary stress hormone, released by the adrenal glands as part of the HPA axis response.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Stress responses.",
       "points": 1
     },
     {
@@ -1741,5 +1472,6 @@
       "explanation": "Phobias develop through classical conditioning (fear association) and are maintained by operant avoidance behaviors.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 12
 }

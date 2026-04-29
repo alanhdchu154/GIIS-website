@@ -2,7 +2,7 @@
   "slug": "economics-seminar",
   "name": "Economics Seminar",
   "nameZh": "经济学研讨",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Social Studies",
   "type": "Core",
   "description": "An advanced senior economics seminar — applying micro and macroeconomic theory to contemporary issues, behavioral economics, game theory, economic policy debates, and capstone research.",
@@ -22,7 +22,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/basic-economics-concepts-macro/introduction-to-macroeconomics/e/macroeconomics-basics",
       "practiceNote": "Khan Academy — Macroeconomics Basics Practice",
       "assignment": "Draw and annotate supply and demand curves for two real markets. Identify one factor shifting each curve and predict the new equilibrium.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 2,
@@ -38,7 +38,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/choices-opp-costs-tutorial/marginal-thinking-tut/e/thinking-at-the-margin",
       "practiceNote": "Khan Academy — Marginal Thinking Practice",
       "assignment": "Identify two cognitive biases you have observed in your own financial decisions. Propose a nudge that could improve each decision.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 3,
@@ -54,7 +54,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/nash-equilibrium-tutorial/nash-eq-tutorial/e/nash-equilibrium",
       "practiceNote": "Khan Academy — Nash Equilibrium Practice",
       "assignment": "Construct a 2×2 payoff matrix for a real-world strategic scenario (e.g., OPEC oil production). Identify dominant strategies and the Nash equilibrium.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 4,
@@ -86,7 +86,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-factor-markets/ap-labor-market-tutorial/e/labor-market",
       "practiceNote": "Khan Academy — Labor Market Practice",
       "assignment": "Research the current federal minimum wage debate. Write a 300-word analysis presenting the strongest arguments on each side, then state your own evidence-based position.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 6,
@@ -102,7 +102,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/income-and-wealth-distribution/income-inequality/e/income-inequality",
       "practiceNote": "Khan Academy — Income Inequality Practice",
       "assignment": "Sketch a Lorenz curve for two countries with different Gini coefficients. Identify two policy interventions and explain their expected effects on inequality.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 7,
@@ -150,7 +150,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/economic-growth-topic/long-run-economic-growth/e/economic-growth-practice",
       "practiceNote": "Khan Academy — Economic Growth Practice",
       "assignment": "Compare South Korea and Ghana's economic trajectories since 1960. Identify three institutional or policy factors explaining their divergence. Use GDP-per-capita data.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 10,
@@ -166,7 +166,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/investment-vehicles-tutorial/investment-vehicles/e/stocks-and-bonds",
       "practiceNote": "Khan Academy — Stocks & Bonds Practice",
       "assignment": "Trace the 2008 financial crisis from subprime mortgage origination through bank failures to the real economy. Identify two regulatory gaps that enabled the crisis.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 11,
@@ -214,132 +214,1127 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/international-trade-and-finance/trade-and-current-account-balance-ap/e/international-trade",
       "practiceNote": "Khan Academy AP Macro — International Trade Practice",
       "assignment": "Analyze the US-China trade imbalance: use the current account identity to explain it, then evaluate one proposed policy response (tariffs, currency revaluation, or domestic savings policies).",
-      "estimatedHrs": 4.0
-    },
-    {
-      "order": 14,
-      "title": "Capstone: Economic Policy Brief",
-      "titleZh": "顶石项目：经济政策简报",
-      "objectives": "Independently research a contemporary economic issue; apply course frameworks to develop and defend a policy recommendation in a written brief and oral presentation.",
-      "readingUrl": "https://mru.org/courses/development-economics/policy-brief-writing",
-      "readingNote": "Marginal Revolution University — Policy Brief Writing Guide",
-      "videoUrl": "https://www.youtube.com/watch?v=kDH6JHWj7Ak",
-      "videoNote": "Planet Money — How Economists Think About Policy (YouTube)",
-      "video2Url": "https://www.youtube.com/watch?v=PNsOoiLLCvk",
-      "video2Note": "Crash Course Economics #35 — Economics of Happiness & Wellbeing",
-      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics",
-      "practiceNote": "Khan Academy AP Macroeconomics — Full Review",
-      "assignment": "Submit a 600–800 word policy brief on a real economic issue. Include: problem statement, economic analysis (using at least two course concepts), policy recommendation, and one counter-argument with rebuttal. Present in 5 minutes.",
-      "estimatedHrs": 5.0
+      "estimatedHrs": 4
     }
   ],
   "questions": [
-    { "examType": "midterm", "order": 1, "type": "mc", "question": "Which of the following would cause a rightward shift in the demand curve for electric vehicles?", "options": ["A rise in the price of EVs", "A fall in consumer income (if EVs are normal goods)", "A government subsidy given to EV buyers", "An increase in the cost of lithium batteries"], "answer": "A government subsidy given to EV buyers", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 2, "type": "mc", "question": "If the price elasticity of demand for a good is −0.3, the good is best described as:", "options": ["Perfectly elastic", "Elastic", "Inelastic", "Perfectly inelastic"], "answer": "Inelastic", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 3, "type": "mc", "question": "According to prospect theory, people tend to:", "options": ["Weigh gains and losses equally", "Feel losses more intensely than equivalent gains", "Always maximize expected utility", "Prefer certain losses over probabilistic gains"], "answer": "Feel losses more intensely than equivalent gains", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 4, "type": "mc", "question": "A nudge, as defined by Thaler and Sunstein, is best described as:", "options": ["A financial penalty for bad choices", "A legal ban on harmful behaviors", "An opt-out default that alters choices without restricting options", "A tax incentive for socially beneficial behavior"], "answer": "An opt-out default that alters choices without restricting options", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 5, "type": "mc", "question": "In the Prisoner's Dilemma, the Nash equilibrium outcome is:", "options": ["Both cooperate, maximizing joint payoff", "One confesses, one stays silent", "Both defect, even though mutual cooperation would be better", "Both stay silent, avoiding all punishment"], "answer": "Both defect, even though mutual cooperation would be better", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 6, "type": "mc", "question": "A dominant strategy in game theory is one that:", "options": ["Yields the highest payoff only if the other player cooperates", "Is the best response regardless of what the other player does", "Always leads to a Pareto-optimal outcome", "Requires coordination between players"], "answer": "Is the best response regardless of what the other player does", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 7, "type": "mc", "question": "A firm should continue producing as long as:", "options": ["Total revenue exceeds total fixed costs", "Marginal revenue equals average total cost", "Marginal revenue is greater than or equal to marginal cost", "Price exceeds average variable cost only"], "answer": "Marginal revenue is greater than or equal to marginal cost", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 8, "type": "mc", "question": "Which market structure results in the largest deadweight loss relative to perfect competition?", "options": ["Monopolistic competition", "Oligopoly", "Perfect competition", "Monopoly"], "answer": "Monopoly", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 9, "type": "mc", "question": "Human capital investment theory predicts that workers will accept lower wages when:", "options": ["Jobs are located far from home", "Employers offer on-the-job training that raises future earnings", "Labor unions negotiate on their behalf", "The minimum wage is above equilibrium"], "answer": "Employers offer on-the-job training that raises future earnings", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 10, "type": "mc", "question": "A monopsony in the labor market refers to:", "options": ["A single seller of a product", "A single buyer of labor, giving it wage-setting power", "A union with monopoly bargaining power", "A market with many competing employers"], "answer": "A single buyer of labor, giving it wage-setting power", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 11, "type": "mc", "question": "The Gini coefficient is a measure of:", "options": ["Economic growth rate", "Inflation", "Income or wealth inequality within a population", "Government debt relative to GDP"], "answer": "Income or wealth inequality within a population", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 12, "type": "mc", "question": "Moral hazard in health insurance occurs when:", "options": ["Sick people are excluded from coverage", "Insurers charge higher premiums to high-risk individuals", "People consume more healthcare than they would if paying full price themselves", "Hospitals overcharge uninsured patients"], "answer": "People consume more healthcare than they would if paying full price themselves", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 13, "type": "mc", "question": "Adverse selection in insurance markets arises because:", "options": ["Insurers have more information than customers", "High-risk individuals are more likely to seek insurance, raising average costs", "Governments mandate universal coverage", "Competition drives premiums to zero"], "answer": "High-risk individuals are more likely to seek insurance, raising average costs", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 14, "type": "short-answer", "question": "Explain the concept of 'anchoring bias' and give one example of how it affects consumer behavior in a real market.", "options": null, "answer": "Anchoring bias occurs when individuals rely too heavily on the first piece of information (the 'anchor') when making decisions. For example, a retailer that marks a product 'was $200, now $120' causes consumers to anchor to $200, making $120 feel like a bargain even if the product's true value is lower. This inflates willingness to pay relative to the unanchored benchmark.", "explanation": "", "points": 2 },
-    { "examType": "midterm", "order": 15, "type": "short-answer", "question": "Using the concept of marginal cost and marginal revenue, explain why a monopolist produces less output at a higher price than a perfectly competitive industry would.", "options": null, "answer": "In perfect competition, price equals marginal cost (P = MC), ensuring allocative efficiency. A monopolist faces a downward-sloping demand curve, so marginal revenue is below price. The monopolist sets MR = MC, which yields a quantity lower than the competitive output. Because price > MC at this quantity, consumers willing to pay more than the cost of production are priced out, creating deadweight loss.", "explanation": "", "points": 2 },
-    { "examType": "final", "order": 1, "type": "mc", "question": "If the government imposes a price ceiling below the equilibrium price, the result is:", "options": ["A surplus", "A shortage", "No change in quantity demanded", "Higher producer surplus"], "answer": "A shortage", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 2, "type": "mc", "question": "The anchoring effect is most relevant to which field of economics?", "options": ["Macroeconomics", "International trade theory", "Behavioral economics", "Labor economics"], "answer": "Behavioral economics", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 3, "type": "mc", "question": "In a repeated Prisoner's Dilemma, cooperation is more likely to emerge because:", "options": ["Both players have dominant strategies to cooperate", "The game has a definite endpoint known to both players", "Players can punish defection in future rounds (tit-for-tat)", "Third-party enforcement is available"], "answer": "Players can punish defection in future rounds (tit-for-tat)", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 4, "type": "mc", "question": "Which cost concept is most relevant when a firm decides whether to shut down in the short run?", "options": ["Average total cost", "Average fixed cost", "Marginal cost", "Average variable cost"], "answer": "Average variable cost", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 5, "type": "mc", "question": "An increase in the minimum wage is most likely to reduce employment when labor demand is:", "options": ["Perfectly inelastic", "Elastic", "Inelastic", "Unit elastic"], "answer": "Elastic", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 6, "type": "mc", "question": "A Lorenz curve that bows further from the 45-degree line indicates:", "options": ["Lower inequality", "Equal distribution of income", "Higher inequality", "A higher GDP per capita"], "answer": "Higher inequality", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 7, "type": "mc", "question": "A carbon tax corrects the market failure caused by carbon emissions by:", "options": ["Subsidizing green energy producers", "Banning fossil fuel extraction", "Making producers internalize the external cost of pollution", "Setting a quota on total emissions permits"], "answer": "Making producers internalize the external cost of pollution", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 8, "type": "mc", "question": "In the Solow growth model, an economy reaches a steady state when:", "options": ["GDP grows at the fastest possible rate", "Investment exactly offsets depreciation of the capital stock", "Total factor productivity is maximized", "Population growth is zero"], "answer": "Investment exactly offsets depreciation of the capital stock", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 9, "type": "mc", "question": "The 2008 financial crisis was primarily triggered by:", "options": ["A sudden spike in oil prices", "Defaults on subprime mortgages and the collapse of mortgage-backed securities", "A sharp rise in interest rates by the Federal Reserve", "A trade war with China"], "answer": "Defaults on subprime mortgages and the collapse of mortgage-backed securities", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 10, "type": "mc", "question": "Quantitative easing (QE) is a monetary policy tool that involves:", "options": ["The government cutting taxes to boost spending", "Raising the federal funds rate to curb inflation", "The central bank buying long-term assets to inject money into the economy", "Setting a price floor on government bonds"], "answer": "The central bank buying long-term assets to inject money into the economy", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 11, "type": "mc", "question": "The Taylor Rule suggests the Fed should raise interest rates when:", "options": ["Inflation is below target and unemployment is above the natural rate", "Inflation is above target or the output gap is positive", "Quantitative easing has expanded the money supply", "The federal deficit exceeds 3% of GDP"], "answer": "Inflation is above target or the output gap is positive", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 12, "type": "mc", "question": "Keynesian economists argue that during a severe recession, the government should:", "options": ["Cut spending to restore business confidence", "Raise interest rates to prevent inflation", "Increase spending or cut taxes to stimulate aggregate demand", "Devalue the currency to boost exports"], "answer": "Increase spending or cut taxes to stimulate aggregate demand", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 13, "type": "mc", "question": "Comparative advantage in international trade means a country should specialize in goods:", "options": ["That it can produce using the most workers", "For which it has an absolute cost advantage over all trading partners", "That it can produce at a lower opportunity cost than its trading partners", "That other countries cannot produce at all"], "answer": "That it can produce at a lower opportunity cost than its trading partners", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 14, "type": "mc", "question": "Currency depreciation tends to:", "options": ["Make a country's exports more expensive and imports cheaper", "Make a country's exports cheaper and imports more expensive", "Have no effect on the trade balance", "Reduce domestic inflation"], "answer": "Make a country's exports cheaper and imports more expensive", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 15, "type": "mc", "question": "A positive externality from education justifies government subsidies because:", "options": ["Education is a luxury good", "Private markets over-produce education", "Individuals underinvest, leading to less education than is socially optimal", "Schools have monopoly power"], "answer": "Individuals underinvest, leading to less education than is socially optimal", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 16, "type": "mc", "question": "The zero lower bound problem occurs when:", "options": ["Fiscal policy cannot increase government spending further", "The central bank cannot lower nominal interest rates below zero, limiting expansionary monetary policy", "Quantitative easing raises long-term interest rates", "The money multiplier falls to zero"], "answer": "The central bank cannot lower nominal interest rates below zero, limiting expansionary monetary policy", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 17, "type": "mc", "question": "According to the IMF's mandate, it primarily aims to:", "options": ["Finance infrastructure projects in developing countries", "Promote international monetary stability and serve as a lender of last resort to countries in crisis", "Negotiate trade agreements among member nations", "Regulate global stock markets"], "answer": "Promote international monetary stability and serve as a lender of last resort to countries in crisis", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 18, "type": "short-answer", "question": "Explain the difference between a carbon tax and a cap-and-trade system. Under what conditions might each be preferable as a climate policy?", "options": null, "answer": "A carbon tax sets a price per ton of CO₂, letting the quantity of emissions adjust. A cap-and-trade system sets a fixed quantity of permitted emissions and lets price adjust through tradeable permits. A carbon tax is preferable when policymakers have good information about the marginal cost of abatement and want price certainty to guide investment. Cap-and-trade is preferable when hitting a precise emissions target is the priority, since the cap guarantees a ceiling on total emissions regardless of economic conditions.", "explanation": "", "points": 2 },
-    { "examType": "final", "order": 19, "type": "short-answer", "question": "Describe two reasons why GDP per capita may be a poor measure of a country's standard of living, and suggest one alternative or supplemental indicator.", "options": null, "answer": "First, GDP per capita ignores distribution: a country with high average income may have extreme inequality, leaving most citizens worse off than the average suggests. Second, GDP omits non-market production such as unpaid care work and environmental degradation, overstating well-being when growth comes at ecological cost. A supplemental measure is the Human Development Index (HDI), which incorporates life expectancy and education alongside income, providing a more comprehensive picture of living standards.", "explanation": "", "points": 2 },
-    { "examType": "final", "order": 20, "type": "short-answer", "question": "In your capstone policy brief, you recommended a specific economic policy. Summarize your recommendation in 3–4 sentences and identify one key trade-off your proposal involves.", "options": null, "answer": "This is an open-response question graded on the quality of the student's individual policy brief recommendation. A full-credit response should clearly state the policy, connect it to at least one economic concept studied in the course, and identify a genuine trade-off — for example, a carbon tax raises revenue and reduces emissions but imposes regressive costs on lower-income households unless offset by dividend rebates.", "explanation": "", "points": 2 }
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following would cause a rightward shift in the demand curve for electric vehicles?",
+      "options": [
+        "A rise in the price of EVs",
+        "A fall in consumer income (if EVs are normal goods)",
+        "A government subsidy given to EV buyers",
+        "An increase in the cost of lithium batteries"
+      ],
+      "answer": "A government subsidy given to EV buyers",
+      "explanation": "The correct answer is: A government subsidy given to EV buyers.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "If the price elasticity of demand for a good is −0.3, the good is best described as:",
+      "options": [
+        "Perfectly elastic",
+        "Elastic",
+        "Inelastic",
+        "Perfectly inelastic"
+      ],
+      "answer": "Inelastic",
+      "explanation": "The correct answer is: Inelastic.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "According to prospect theory, people tend to:",
+      "options": [
+        "Weigh gains and losses equally",
+        "Feel losses more intensely than equivalent gains",
+        "Always maximize expected utility",
+        "Prefer certain losses over probabilistic gains"
+      ],
+      "answer": "Feel losses more intensely than equivalent gains",
+      "explanation": "The correct answer is: Feel losses more intensely than equivalent gains.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "tf",
+      "question": "True or False: The answer to \"A nudge, as defined by Thaler and Sunstein, is best described as:\" is: An opt-out default that alters choices without restricting options.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. An opt-out default that alters choices without restricting options is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "In the Prisoner's Dilemma, the Nash equilibrium outcome is:",
+      "options": [
+        "Both cooperate, maximizing joint payoff",
+        "One confesses, one stays silent",
+        "Both defect, even though mutual cooperation would be better",
+        "Both stay silent, avoiding all punishment"
+      ],
+      "answer": "Both defect, even though mutual cooperation would be better",
+      "explanation": "The correct answer is: Both defect, even though mutual cooperation would be better.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A dominant strategy in game theory is one that:",
+      "options": [
+        "Yields the highest payoff only if the other player cooperates",
+        "Is the best response regardless of what the other player does",
+        "Always leads to a Pareto-optimal outcome",
+        "Requires coordination between players"
+      ],
+      "answer": "Is the best response regardless of what the other player does",
+      "explanation": "The correct answer is: Is the best response regardless of what the other player does.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "A firm should continue producing as long as:",
+      "options": [
+        "Total revenue exceeds total fixed costs",
+        "Marginal revenue equals average total cost",
+        "Marginal revenue is greater than or equal to marginal cost",
+        "Price exceeds average variable cost only"
+      ],
+      "answer": "Marginal revenue is greater than or equal to marginal cost",
+      "explanation": "The correct answer is: Marginal revenue is greater than or equal to marginal cost.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "tf",
+      "question": "True or False: The answer to \"Which market structure results in the largest deadweight loss relative to perfect competition\" is: Monopolistic competition.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Monopoly.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Human capital investment theory predicts that workers will accept lower wages when:",
+      "options": [
+        "Jobs are located far from home",
+        "Employers offer on-the-job training that raises future earnings",
+        "Labor unions negotiate on their behalf",
+        "The minimum wage is above equilibrium"
+      ],
+      "answer": "Employers offer on-the-job training that raises future earnings",
+      "explanation": "The correct answer is: Employers offer on-the-job training that raises future earnings.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "A monopsony in the labor market refers to:",
+      "options": [
+        "A single seller of a product",
+        "A single buyer of labor, giving it wage-setting power",
+        "A union with monopoly bargaining power",
+        "A market with many competing employers"
+      ],
+      "answer": "A single buyer of labor, giving it wage-setting power",
+      "explanation": "The correct answer is: A single buyer of labor, giving it wage-setting power.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "The Gini coefficient is a measure of:",
+      "options": [
+        "Economic growth rate",
+        "Inflation",
+        "Income or wealth inequality within a population",
+        "Government debt relative to GDP"
+      ],
+      "answer": "Income or wealth inequality within a population",
+      "explanation": "The correct answer is: Income or wealth inequality within a population.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "tf",
+      "question": "True or False: The answer to \"Moral hazard in health insurance occurs when:\" is: People consume more healthcare than they would if paying full price themselves.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. People consume more healthcare than they would if paying full price themselves is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "Adverse selection in insurance markets arises because:",
+      "options": [
+        "Insurers have more information than customers",
+        "High-risk individuals are more likely to seek insurance, raising average costs",
+        "Governments mandate universal coverage",
+        "Competition drives premiums to zero"
+      ],
+      "answer": "High-risk individuals are more likely to seek insurance, raising average costs",
+      "explanation": "The correct answer is: High-risk individuals are more likely to seek insurance, raising average costs.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "short-answer",
+      "question": "Explain the concept of 'anchoring bias' and give one example of how it affects consumer behavior in a real market.",
+      "options": null,
+      "answer": "Anchoring bias occurs when individuals rely too heavily on the first piece of information (the 'anchor') when making decisions. For example, a retailer that marks a product 'was $200, now $120' causes consumers to anchor to $200, making $120 feel like a bargain even if the product's true value is lower. This inflates willingness to pay relative to the unanchored benchmark.",
+      "explanation": "The correct answer is: Anchoring bias occurs when individuals rely too heavily on the first piece of information (the 'anchor') when making decisions. For example, a retailer that marks a product 'was $200, now $120' causes consumers to anchor to $200, making $120 feel like a bargain even if the product's true value is lower. This inflates willingness to pay relative to the unanchored benchmark..",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short-answer",
+      "question": "Using the concept of marginal cost and marginal revenue, explain why a monopolist produces less output at a higher price than a perfectly competitive industry would.",
+      "options": null,
+      "answer": "In perfect competition, price equals marginal cost (P = MC), ensuring allocative efficiency. A monopolist faces a downward-sloping demand curve, so marginal revenue is below price. The monopolist sets MR = MC, which yields a quantity lower than the competitive output. Because price > MC at this quantity, consumers willing to pay more than the cost of production are priced out, creating deadweight loss.",
+      "explanation": "The correct answer is: In perfect competition, price equals marginal cost (P = MC), ensuring allocative efficiency. A monopolist faces a downward-sloping demand curve, so marginal revenue is below price. The monopolist sets MR = MC, which yields a quantity lower than the competitive output. Because price > MC at this quantity, consumers willing to pay more than the cost of production are priced out, creating deadweight loss..",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "tf",
+      "question": "True or False: The answer to \"If the government imposes a price ceiling below the equilibrium price, the result is:\" is: A surplus.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: A shortage.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "The anchoring effect is most relevant to which field of economics?",
+      "options": [
+        "Macroeconomics",
+        "International trade theory",
+        "Behavioral economics",
+        "Labor economics"
+      ],
+      "answer": "Behavioral economics",
+      "explanation": "The correct answer is: Behavioral economics.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "In a repeated Prisoner's Dilemma, cooperation is more likely to emerge because:",
+      "options": [
+        "Both players have dominant strategies to cooperate",
+        "The game has a definite endpoint known to both players",
+        "Players can punish defection in future rounds (tit-for-tat)",
+        "Third-party enforcement is available"
+      ],
+      "answer": "Players can punish defection in future rounds (tit-for-tat)",
+      "explanation": "The correct answer is: Players can punish defection in future rounds (tit-for-tat).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Which cost concept is most relevant when a firm decides whether to shut down in the short run?",
+      "options": [
+        "Average total cost",
+        "Average fixed cost",
+        "Marginal cost",
+        "Average variable cost"
+      ],
+      "answer": "Average variable cost",
+      "explanation": "The correct answer is: Average variable cost.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "tf",
+      "question": "True or False: The answer to \"An increase in the minimum wage is most likely to reduce employment when labor demand is:\" is: Elastic.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Elastic is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "fill",
+      "question": "A Lorenz curve that bows further from the 45-degree line indicates:",
+      "options": null,
+      "answer": "Higher inequality",
+      "explanation": "The correct answer is: Higher inequality.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "A carbon tax corrects the market failure caused by carbon emissions by:",
+      "options": [
+        "Subsidizing green energy producers",
+        "Banning fossil fuel extraction",
+        "Making producers internalize the external cost of pollution",
+        "Setting a quota on total emissions permits"
+      ],
+      "answer": "Making producers internalize the external cost of pollution",
+      "explanation": "The correct answer is: Making producers internalize the external cost of pollution.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "In the Solow growth model, an economy reaches a steady state when:",
+      "options": [
+        "GDP grows at the fastest possible rate",
+        "Investment exactly offsets depreciation of the capital stock",
+        "Total factor productivity is maximized",
+        "Population growth is zero"
+      ],
+      "answer": "Investment exactly offsets depreciation of the capital stock",
+      "explanation": "The correct answer is: Investment exactly offsets depreciation of the capital stock.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "tf",
+      "question": "True or False: The answer to \"The 2008 financial crisis was primarily triggered by:\" is: A sudden spike in oil prices.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Defaults on subprime mortgages and the collapse of mortgage-backed securities.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Quantitative easing (QE) is a monetary policy tool that involves:",
+      "options": [
+        "The government cutting taxes to boost spending",
+        "Raising the federal funds rate to curb inflation",
+        "The central bank buying long-term assets to inject money into the economy",
+        "Setting a price floor on government bonds"
+      ],
+      "answer": "The central bank buying long-term assets to inject money into the economy",
+      "explanation": "The correct answer is: The central bank buying long-term assets to inject money into the economy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "The Taylor Rule suggests the Fed should raise interest rates when:",
+      "options": [
+        "Inflation is below target and unemployment is above the natural rate",
+        "Inflation is above target or the output gap is positive",
+        "Quantitative easing has expanded the money supply",
+        "The federal deficit exceeds 3% of GDP"
+      ],
+      "answer": "Inflation is above target or the output gap is positive",
+      "explanation": "The correct answer is: Inflation is above target or the output gap is positive.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Keynesian economists argue that during a severe recession, the government should:",
+      "options": [
+        "Cut spending to restore business confidence",
+        "Raise interest rates to prevent inflation",
+        "Increase spending or cut taxes to stimulate aggregate demand",
+        "Devalue the currency to boost exports"
+      ],
+      "answer": "Increase spending or cut taxes to stimulate aggregate demand",
+      "explanation": "The correct answer is: Increase spending or cut taxes to stimulate aggregate demand.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "tf",
+      "question": "True or False: The answer to \"Comparative advantage in international trade means a country should specialize in goods:\" is: That it can produce at a lower opportunity cost than its trading partners.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. That it can produce at a lower opportunity cost than its trading partners is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Currency depreciation tends to:",
+      "options": [
+        "Make a country's exports more expensive and imports cheaper",
+        "Make a country's exports cheaper and imports more expensive",
+        "Have no effect on the trade balance",
+        "Reduce domestic inflation"
+      ],
+      "answer": "Make a country's exports cheaper and imports more expensive",
+      "explanation": "The correct answer is: Make a country's exports cheaper and imports more expensive.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "A positive externality from education justifies government subsidies because:",
+      "options": [
+        "Education is a luxury good",
+        "Private markets over-produce education",
+        "Individuals underinvest, leading to less education than is socially optimal",
+        "Schools have monopoly power"
+      ],
+      "answer": "Individuals underinvest, leading to less education than is socially optimal",
+      "explanation": "The correct answer is: Individuals underinvest, leading to less education than is socially optimal.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "The zero lower bound problem occurs when:",
+      "options": [
+        "Fiscal policy cannot increase government spending further",
+        "The central bank cannot lower nominal interest rates below zero, limiting expansionary monetary policy",
+        "Quantitative easing raises long-term interest rates",
+        "The money multiplier falls to zero"
+      ],
+      "answer": "The central bank cannot lower nominal interest rates below zero, limiting expansionary monetary policy",
+      "explanation": "The correct answer is: The central bank cannot lower nominal interest rates below zero, limiting expansionary monetary policy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "tf",
+      "question": "True or False: The answer to \"According to the IMF's mandate, it primarily aims to:\" is: Finance infrastructure projects in developing countries.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Promote international monetary stability and serve as a lender of last resort to countries in crisis.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "short-answer",
+      "question": "Explain the difference between a carbon tax and a cap-and-trade system. Under what conditions might each be preferable as a climate policy?",
+      "options": null,
+      "answer": "A carbon tax sets a price per ton of CO₂, letting the quantity of emissions adjust. A cap-and-trade system sets a fixed quantity of permitted emissions and lets price adjust through tradeable permits. A carbon tax is preferable when policymakers have good information about the marginal cost of abatement and want price certainty to guide investment. Cap-and-trade is preferable when hitting a precise emissions target is the priority, since the cap guarantees a ceiling on total emissions regardless of economic conditions.",
+      "explanation": "The correct answer is: A carbon tax sets a price per ton of CO₂, letting the quantity of emissions adjust. A cap-and-trade system sets a fixed quantity of permitted emissions and lets price adjust through tradeable permits. A carbon tax is preferable when policymakers have good information about the marginal cost of abatement and want price certainty to guide investment. Cap-and-trade is preferable when hitting a precise emissions target is the priority, since the cap guarantees a ceiling on total emissions regardless of economic conditions..",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short-answer",
+      "question": "Describe two reasons why GDP per capita may be a poor measure of a country's standard of living, and suggest one alternative or supplemental indicator.",
+      "options": null,
+      "answer": "First, GDP per capita ignores distribution: a country with high average income may have extreme inequality, leaving most citizens worse off than the average suggests. Second, GDP omits non-market production such as unpaid care work and environmental degradation, overstating well-being when growth comes at ecological cost. A supplemental measure is the Human Development Index (HDI), which incorporates life expectancy and education alongside income, providing a more comprehensive picture of living standards.",
+      "explanation": "The correct answer is: First, GDP per capita ignores distribution: a country with high average income may have extreme inequality, leaving most citizens worse off than the average suggests. Second, GDP omits non-market production such as unpaid care work and environmental degradation, overstating well-being when growth comes at ecological cost. A supplemental measure is the Human Development Index (HDI), which incorporates life expectancy and education alongside income, providing a more comprehensive picture of living standards..",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "short-answer",
+      "question": "In your capstone policy brief, you recommended a specific economic policy. Summarize your recommendation in 3–4 sentences and identify one key trade-off your proposal involves.",
+      "options": null,
+      "answer": "This is an open-response question graded on the quality of the student's individual policy brief recommendation. A full-credit response should clearly state the policy, connect it to at least one economic concept studied in the course, and identify a genuine trade-off — for example, a carbon tax raises revenue and reduces emissions but imposes regressive costs on lower-income households unless offset by dividend rebates.",
+      "explanation": "The correct answer is: This is an open-response question graded on the quality of the student's individual policy brief recommendation. A full-credit response should clearly state the policy, connect it to at least one economic concept studied in the course, and identify a genuine trade-off — for example, a carbon tax raises revenue and reduces emissions but imposes regressive costs on lower-income households unless offset by dividend rebates..",
+      "points": 2
+    }
   ],
   "quizQuestions": [
-    { "moduleOrder": 1, "order": 1, "question": "The law of demand states that, all else equal, as price increases:", "options": ["Quantity demanded increases", "Quantity demanded decreases", "Quantity supplied decreases", "Demand shifts rightward"], "answer": "Quantity demanded decreases", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 2, "question": "Which macroeconomic indicator measures the total market value of all final goods and services produced within a country in a year?", "options": ["CPI", "Unemployment rate", "GDP", "Gini coefficient"], "answer": "GDP", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 3, "question": "If price elasticity of demand equals −2.5, demand is:", "options": ["Perfectly inelastic", "Inelastic", "Elastic", "Unit elastic"], "answer": "Elastic", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 4, "question": "In a perfectly competitive market, in the long run, economic profit is:", "options": ["Maximized", "Positive but small", "Driven to zero by new entrants", "Driven to zero by government regulation"], "answer": "Driven to zero by new entrants", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 5, "question": "The Consumer Price Index (CPI) primarily measures:", "options": ["The total output of an economy", "Changes in the price level of a representative basket of consumer goods", "The unemployment rate", "A country's trade balance"], "answer": "Changes in the price level of a representative basket of consumer goods", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 1, "question": "The traditional economic assumption that individuals always choose to maximize utility is called:", "options": ["Bounded rationality", "The rational agent assumption", "Prospect theory", "Nudge theory"], "answer": "The rational agent assumption", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 2, "question": "Anchoring bias occurs when people:", "options": ["Ignore all available information", "Rely too heavily on the first piece of information encountered", "Always choose the middle option", "Prefer losses to gains"], "answer": "Rely too heavily on the first piece of information encountered", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 3, "question": "Prospect theory, developed by Kahneman and Tversky, shows that people:", "options": ["Are indifferent between losses and gains of the same size", "Value gains more than losses of equivalent magnitude", "Value losses more than gains of equivalent magnitude", "Always make optimal decisions under risk"], "answer": "Value losses more than gains of equivalent magnitude", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 4, "question": "An example of a nudge used in public policy is:", "options": ["A fine for not enrolling in a pension plan", "Making enrollment in a pension plan the default (opt-out)", "Banning unhealthy food in cafeterias", "Subsidizing gym memberships directly"], "answer": "Making enrollment in a pension plan the default (opt-out)", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 5, "question": "Which cognitive bias leads investors to hold losing stocks too long because they fear realizing a loss?", "options": ["Anchoring", "Availability heuristic", "Loss aversion", "Confirmation bias"], "answer": "Loss aversion", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 1, "question": "A Nash equilibrium is a situation in which:", "options": ["Both players maximize joint profit", "Each player's strategy is the best response to the other player's strategy", "One player dominates the other", "The game has no solution"], "answer": "Each player's strategy is the best response to the other player's strategy", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 2, "question": "In the classic Prisoner's Dilemma, two players who cannot communicate will:", "options": ["Both cooperate", "Both defect", "One cooperate, one defect randomly", "Cooperate if they are friends"], "answer": "Both defect", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 3, "question": "Which real-world scenario most closely resembles a Prisoner's Dilemma?", "options": ["Two firms choosing to advertise or not when both advertising hurts total industry profit", "A firm setting its own price in a perfectly competitive market", "A government deciding on its national budget", "A monopolist choosing output level"], "answer": "Two firms choosing to advertise or not when both advertising hurts total industry profit", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 4, "question": "A dominant strategy is one that:", "options": ["Always leads to the highest joint payoff", "Is optimal only if the opponent cooperates", "Yields the best payoff regardless of the opponent's choice", "Requires knowledge of the opponent's strategy"], "answer": "Yields the best payoff regardless of the opponent's choice", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 5, "question": "Game theory is applied in economics to analyze:", "options": ["Only sports competitions", "Strategic interactions where each agent's payoff depends on others' choices", "Random events with no strategic element", "Government budget decisions only"], "answer": "Strategic interactions where each agent's payoff depends on others' choices", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 1, "question": "Marginal cost is defined as:", "options": ["Total cost divided by total output", "The change in total cost from producing one additional unit", "Fixed cost per unit of output", "The difference between price and average variable cost"], "answer": "The change in total cost from producing one additional unit", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 2, "question": "A firm in a perfectly competitive market is a 'price taker' because:", "options": ["It produces a unique product", "It has no market power and must accept the market price", "Government regulation fixes its price", "It earns positive economic profit"], "answer": "It has no market power and must accept the market price", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 3, "question": "Price discrimination by a monopolist involves:", "options": ["Charging one uniform price to all consumers", "Charging different prices to different consumer groups based on willingness to pay", "Lowering price below marginal cost to eliminate rivals", "Colluding with other firms on pricing"], "answer": "Charging different prices to different consumer groups based on willingness to pay", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 4, "question": "Economies of scale occur when:", "options": ["Average total cost rises as output increases", "Average total cost falls as output increases", "Marginal cost exceeds average total cost", "Fixed costs increase with output"], "answer": "Average total cost falls as output increases", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 5, "question": "Deadweight loss in a monopoly market represents:", "options": ["The monopolist's profit", "Consumer surplus transferred to the producer", "The value of trades that don't occur due to the monopolist's higher price", "Total tax revenue collected by the government"], "answer": "The value of trades that don't occur due to the monopolist's higher price", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 1, "question": "The equilibrium wage in a competitive labor market is determined by:", "options": ["Government decree", "The intersection of labor supply and labor demand", "Union negotiation alone", "The minimum wage law"], "answer": "The intersection of labor supply and labor demand", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 2, "question": "Human capital refers to:", "options": ["Physical machinery owned by workers", "The stock of skills, knowledge, and education embodied in workers", "Financial savings held by households", "Government spending on infrastructure"], "answer": "The stock of skills, knowledge, and education embodied in workers", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 3, "question": "A binding minimum wage set above the equilibrium wage tends to cause:", "options": ["A decrease in unemployment", "Increased labor demand", "A surplus of labor (unemployment)", "Lower product prices"], "answer": "A surplus of labor (unemployment)", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 4, "question": "Labor unions primarily seek to:", "options": ["Maximize employer profits", "Reduce the wages of non-union workers", "Bargain collectively for higher wages, better benefits, and safer conditions", "Eliminate minimum wage laws"], "answer": "Bargain collectively for higher wages, better benefits, and safer conditions", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 5, "question": "The gender wage gap refers to:", "options": ["Differences in hours worked between genders", "The systematic difference in average earnings between men and women", "Legal discrimination in wage-setting", "Differences in union membership rates"], "answer": "The systematic difference in average earnings between men and women", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 1, "question": "A Gini coefficient of 0 represents:", "options": ["Maximum inequality", "Moderate inequality", "Perfect equality of income", "Zero economic growth"], "answer": "Perfect equality of income", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 2, "question": "A progressive income tax system is one in which:", "options": ["All taxpayers pay the same dollar amount", "Higher-income earners pay a lower percentage of income in taxes", "Higher-income earners pay a higher percentage of income in taxes", "Tax rates decrease as income rises"], "answer": "Higher-income earners pay a higher percentage of income in taxes", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 3, "question": "Transfer payments such as unemployment insurance and food stamps are designed to:", "options": ["Increase GDP directly", "Fund military spending", "Redistribute income to lower-income households", "Reduce the national debt"], "answer": "Redistribute income to lower-income households", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 4, "question": "Skill-biased technological change contributes to rising inequality by:", "options": ["Raising wages for all workers equally", "Increasing demand for high-skilled workers while reducing demand for routine low-skilled jobs", "Eliminating the need for college education", "Reducing total factor productivity"], "answer": "Increasing demand for high-skilled workers while reducing demand for routine low-skilled jobs", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 5, "question": "A Universal Basic Income (UBI) proposal would:", "options": ["Replace all existing taxes with a flat consumption tax", "Provide every citizen with a regular unconditional cash payment", "Require recipients to meet work requirements", "Only apply to citizens above age 65"], "answer": "Provide every citizen with a regular unconditional cash payment", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 1, "question": "Adverse selection in insurance refers to:", "options": ["Insurers rejecting all high-risk applicants", "High-risk individuals being more likely to seek insurance, driving up premiums", "Governments mandating coverage for all citizens", "Insurance companies colluding on premiums"], "answer": "High-risk individuals being more likely to seek insurance, driving up premiums", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 2, "question": "Moral hazard in health insurance occurs when insured individuals:", "options": ["Lie about their health status to get coverage", "Use more healthcare than they would if they paid full price", "Choose the cheapest available plan", "Invest in preventive care"], "answer": "Use more healthcare than they would if they paid full price", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 3, "question": "A single-payer healthcare system is one in which:", "options": ["Each citizen chooses and pays their own insurer", "Multiple private insurers compete for customers", "One public entity (usually the government) finances all healthcare", "Employers are solely responsible for worker health costs"], "answer": "One public entity (usually the government) finances all healthcare", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 4, "question": "Healthcare is considered an 'imperfect market' primarily because of:", "options": ["Too many competing providers", "Perfect information on both sides", "Information asymmetry, externalities, and high switching costs", "Zero government involvement"], "answer": "Information asymmetry, externalities, and high switching costs", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 5, "question": "The Affordable Care Act (ACA) addressed adverse selection primarily by:", "options": ["Banning all private insurance", "Creating a single government insurer", "Requiring most Americans to obtain coverage and creating insurance marketplaces", "Eliminating copayments for all services"], "answer": "Requiring most Americans to obtain coverage and creating insurance marketplaces", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 1, "question": "A negative externality exists when:", "options": ["A firm's production benefits third parties who don't pay", "A firm's production imposes costs on third parties who are not compensated", "The government subsidizes a product", "A good is excludable and rival"], "answer": "A firm's production imposes costs on third parties who are not compensated", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 2, "question": "A carbon tax set equal to the social cost of carbon achieves efficiency by:", "options": ["Banning all carbon emissions", "Making the market price reflect both private and external costs", "Subsidizing renewable energy directly", "Allowing unlimited emissions with a permit system"], "answer": "Making the market price reflect both private and external costs", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 3, "question": "Under a cap-and-trade system, the total quantity of emissions is:", "options": ["Unlimited, but taxed per ton", "Fixed by the cap; firms buy and sell permits", "Set by each individual firm voluntarily", "Determined by international negotiation each year"], "answer": "Fixed by the cap; firms buy and sell permits", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 4, "question": "Cost-benefit analysis of an environmental regulation compares:", "options": ["Government spending to tax revenue", "Short-run vs. long-run economic growth", "The monetary value of benefits (e.g., health gains) to the economic costs of compliance", "The number of jobs created versus jobs lost"], "answer": "The monetary value of benefits (e.g., health gains) to the economic costs of compliance", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 5, "question": "The Coase Theorem states that externalities can be resolved without government intervention if:", "options": ["Firms are regulated by a national authority", "Property rights are clearly defined and transaction costs are low", "The polluting firm is taxed per unit of output", "International agreements are in place"], "answer": "Property rights are clearly defined and transaction costs are low", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 1, "question": "In the Solow growth model, the steady state is reached when:", "options": ["GDP growth rate is maximized", "Investment equals depreciation of the capital stock", "Population growth stops", "Total factor productivity is constant"], "answer": "Investment equals depreciation of the capital stock", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 2, "question": "Conditional convergence in growth theory predicts that poorer countries will grow faster than richer ones, assuming they have:", "options": ["Higher natural resource endowments", "Similar institutions, savings rates, and policies", "Lower population growth", "More diversified export sectors"], "answer": "Similar institutions, savings rates, and policies", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 3, "question": "The 'East Asian miracle' (South Korea, Taiwan, Singapore) is often attributed to:", "options": ["Abundant natural resources", "High savings rates, export-led growth, and strong institutions", "Foreign aid from the United States", "Low tariff barriers from the beginning"], "answer": "High savings rates, export-led growth, and strong institutions", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 4, "question": "Total Factor Productivity (TFP) measures:", "options": ["The ratio of capital to labor in production", "Output growth not explained by increases in capital or labor inputs", "Government spending as a share of GDP", "The trade balance of a country"], "answer": "Output growth not explained by increases in capital or labor inputs", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 5, "question": "According to Acemoglu and Robinson, the most important driver of long-run economic development is:", "options": ["Geography and climate", "Ethnic homogeneity", "Inclusive political and economic institutions", "Natural resource abundance"], "answer": "Inclusive political and economic institutions", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 1, "question": "Financial intermediaries such as banks create value primarily by:", "options": ["Printing money for the government", "Channeling savings from depositors to productive borrowers", "Setting interest rates for the economy", "Providing insurance to depositors"], "answer": "Channeling savings from depositors to productive borrowers", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 2, "question": "A mortgage-backed security (MBS) is:", "options": ["A government bond backed by tax revenue", "A financial instrument that bundles mortgage loans and sells claims on their cash flows", "An insurance policy for homeowners", "A government subsidy for first-time home buyers"], "answer": "A financial instrument that bundles mortgage loans and sells claims on their cash flows", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 3, "question": "The 2008 financial crisis spread from housing markets to the broader economy mainly through:", "options": ["A sudden increase in government spending", "Losses on mortgage-backed securities that weakened banks and froze credit markets", "A dramatic fall in oil prices", "Currency depreciation in the eurozone"], "answer": "Losses on mortgage-backed securities that weakened banks and froze credit markets", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 4, "question": "The Dodd-Frank Act (2010) was designed to:", "options": ["Stimulate consumer spending after the recession", "Regulate financial markets and reduce systemic risk after the 2008 crisis", "Fund infrastructure repair projects", "Cut the federal deficit"], "answer": "Regulate financial markets and reduce systemic risk after the 2008 crisis", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 5, "question": "A bond's price and its yield (interest rate) are:", "options": ["Positively correlated", "Unrelated", "Inversely related", "Identical in value"], "answer": "Inversely related", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 1, "question": "The federal funds rate is:", "options": ["The rate at which banks lend to households", "The overnight interest rate banks charge each other for reserve lending, set as a target by the Fed", "The interest rate on 10-year Treasury bonds", "The rate the Fed charges banks to borrow from the discount window"], "answer": "The overnight interest rate banks charge each other for reserve lending, set as a target by the Fed", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 2, "question": "The Taylor Rule prescribes that central banks should raise interest rates when:", "options": ["Unemployment rises above the natural rate", "Inflation exceeds its target or the output gap is positive", "The money supply grows too slowly", "Bond prices fall"], "answer": "Inflation exceeds its target or the output gap is positive", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 3, "question": "The zero lower bound problem means that:", "options": ["Governments cannot increase spending below zero", "Nominal interest rates cannot fall below zero, limiting further monetary stimulus", "Inflation cannot fall below zero", "Bond yields cannot become negative"], "answer": "Nominal interest rates cannot fall below zero, limiting further monetary stimulus", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 4, "question": "Quantitative easing (QE) is intended to lower long-term interest rates by:", "options": ["Raising the reserve requirement for banks", "The central bank purchasing long-term government and mortgage-backed securities", "Reducing government spending", "Cutting the corporate tax rate"], "answer": "The central bank purchasing long-term government and mortgage-backed securities", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 5, "question": "Inflation targeting by a central bank means:", "options": ["Setting the money supply at a fixed growth rate", "Publicly committing to keep inflation near a specified goal (e.g., 2%) and adjusting policy accordingly", "Allowing inflation to rise freely in a recession", "Pegging the currency to a foreign currency"], "answer": "Publicly committing to keep inflation near a specified goal (e.g., 2%) and adjusting policy accordingly", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 1, "question": "Keynesian economists argue that during a recession, the government should:", "options": ["Cut spending and raise taxes to balance the budget", "Increase spending or reduce taxes to boost aggregate demand", "Allow automatic stabilizers to work without discretionary policy", "Raise interest rates to restore confidence"], "answer": "Increase spending or reduce taxes to boost aggregate demand", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 2, "question": "The fiscal multiplier measures:", "options": ["The ratio of government debt to GDP", "How much GDP changes for each dollar of government spending", "The tax rate applied to the highest income bracket", "The ratio of federal revenue to federal expenditure"], "answer": "How much GDP changes for each dollar of government spending", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 3, "question": "Austerity policies refer to:", "options": ["Expansionary fiscal policies during recessions", "Government spending increases funded by new taxes", "Cuts in government spending and/or tax increases to reduce deficits", "Central bank purchases of government bonds"], "answer": "Cuts in government spending and/or tax increases to reduce deficits", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 4, "question": "A country's debt-to-GDP ratio is considered concerning when it:", "options": ["Falls below 30%", "Remains constant over time", "Rises rapidly, signaling potential difficulty servicing debt", "Equals exactly 100%"], "answer": "Rises rapidly, signaling potential difficulty servicing debt", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 5, "question": "Generational equity in fiscal policy refers to concerns about:", "options": ["Equality of income across social classes", "Whether current government borrowing places unfair burdens on future taxpayers", "Equal voting rights across generations", "The distribution of tax cuts by age group"], "answer": "Whether current government borrowing places unfair burdens on future taxpayers", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 1, "question": "Comparative advantage means a country should export goods for which it has:", "options": ["An absolute cost advantage over all trading partners", "The lowest opportunity cost of production relative to other goods", "The highest total output capacity", "The most advanced technology"], "answer": "The lowest opportunity cost of production relative to other goods", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 2, "question": "A current account deficit means a country:", "options": ["Exports more goods and services than it imports", "Imports more goods and services than it exports", "Has a balanced government budget", "Holds more foreign currency reserves than it needs"], "answer": "Imports more goods and services than it exports", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 3, "question": "Currency depreciation makes a country's exports:", "options": ["More expensive for foreign buyers", "Cheaper for foreign buyers, boosting export competitiveness", "Identical in price to before depreciation", "Subject to higher tariffs abroad"], "answer": "Cheaper for foreign buyers, boosting export competitiveness", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 4, "question": "The International Monetary Fund (IMF) was created primarily to:", "options": ["Finance infrastructure projects in developing countries", "Promote international monetary stability and provide emergency loans to countries facing balance-of-payments crises", "Negotiate trade agreements", "Regulate global banking systems"], "answer": "Promote international monetary stability and provide emergency loans to countries facing balance-of-payments crises", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 5, "question": "Global imbalances refer to:", "options": ["Differences in natural resource endowments across countries", "Large, persistent current account surpluses in some countries (e.g., China, Germany) and deficits in others (e.g., US)", "Unequal military spending among nations", "Differences in population growth rates"], "answer": "Large, persistent current account surpluses in some countries (e.g., China, Germany) and deficits in others (e.g., US)", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 1, "question": "A policy brief is designed to:", "options": ["Present an academic literature review with no recommendations", "Summarize a complex policy issue and recommend a clear course of action for decision-makers", "Describe the history of an economic concept", "Provide statistical analysis without interpretation"], "answer": "Summarize a complex policy issue and recommend a clear course of action for decision-makers", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 2, "question": "When evaluating competing economic policies, which criterion asks 'does the policy minimize waste and produce the most output from available resources?'", "options": ["Equity", "Sustainability", "Efficiency", "Political feasibility"], "answer": "Efficiency", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 3, "question": "A capstone research project in economics typically requires students to:", "options": ["Memorize formulas and reproduce textbook examples", "Identify a real-world problem, apply economic theory, and develop an evidence-based recommendation", "Summarize a single textbook chapter", "Interview government officials only"], "answer": "Identify a real-world problem, apply economic theory, and develop an evidence-based recommendation", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 4, "question": "Acknowledging a counter-argument in a policy brief is important because:", "options": ["It shows the author is uncertain about their recommendation", "It weakens the policy recommendation", "It demonstrates analytical rigor and strengthens credibility by addressing opposing views", "It is required by law for government documents"], "answer": "It demonstrates analytical rigor and strengthens credibility by addressing opposing views", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 5, "question": "Which of the following best describes a trade-off in economic policy?", "options": ["A policy that achieves all goals simultaneously with no costs", "A situation where pursuing one goal requires sacrificing some of another goal", "A mathematical formula for optimizing resource allocation", "An agreement between two governments on tariff rates"], "answer": "A situation where pursuing one goal requires sacrificing some of another goal", "explanation": "", "points": 1 }
-  ]
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "The law of demand states that, all else equal, as price increases:",
+      "options": [
+        "Quantity demanded increases",
+        "Quantity demanded decreases",
+        "Quantity supplied decreases",
+        "Demand shifts rightward"
+      ],
+      "answer": "Quantity demanded decreases",
+      "explanation": "The correct answer is: Quantity demanded decreases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which macroeconomic indicator measures the total market value of all final goods and services produced within a country in a year?",
+      "options": [
+        "CPI",
+        "Unemployment rate",
+        "GDP",
+        "Gini coefficient"
+      ],
+      "answer": "GDP",
+      "explanation": "The correct answer is: GDP.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "True or False: The answer to \"The law of demand states that, all else equal, as price increases:\" is: Quantity demanded decreases.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Quantity demanded decreases is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "The traditional economic assumption that individuals always choose to maximize utility is called:",
+      "options": [
+        "Bounded rationality",
+        "The rational agent assumption",
+        "Prospect theory",
+        "Nudge theory"
+      ],
+      "answer": "The rational agent assumption",
+      "explanation": "The correct answer is: The rational agent assumption.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "Anchoring bias occurs when people:",
+      "options": [
+        "Ignore all available information",
+        "Rely too heavily on the first piece of information encountered",
+        "Always choose the middle option",
+        "Prefer losses to gains"
+      ],
+      "answer": "Rely too heavily on the first piece of information encountered",
+      "explanation": "The correct answer is: Rely too heavily on the first piece of information encountered.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Prospect theory, developed by Kahneman and Tversky, shows that people:",
+      "options": [
+        "Are indifferent between losses and gains of the same size",
+        "Value gains more than losses of equivalent magnitude",
+        "Value losses more than gains of equivalent magnitude",
+        "Always make optimal decisions under risk"
+      ],
+      "answer": "Value losses more than gains of equivalent magnitude",
+      "explanation": "The correct answer is: Value losses more than gains of equivalent magnitude.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "True or False: The answer to \"The traditional economic assumption that individuals always choose to maximize utility is called:\" is: The rational agent assumption.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The rational agent assumption is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "A Nash equilibrium is a situation in which:",
+      "options": [
+        "Both players maximize joint profit",
+        "Each player's strategy is the best response to the other player's strategy",
+        "One player dominates the other",
+        "The game has no solution"
+      ],
+      "answer": "Each player's strategy is the best response to the other player's strategy",
+      "explanation": "The correct answer is: Each player's strategy is the best response to the other player's strategy.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "In the classic Prisoner's Dilemma, two players who cannot communicate will:",
+      "options": [
+        "Both cooperate",
+        "Both defect",
+        "One cooperate, one defect randomly",
+        "Cooperate if they are friends"
+      ],
+      "answer": "Both defect",
+      "explanation": "The correct answer is: Both defect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Which real-world scenario most closely resembles a Prisoner's Dilemma?",
+      "options": [
+        "Two firms choosing to advertise or not when both advertising hurts total industry profit",
+        "A firm setting its own price in a perfectly competitive market",
+        "A government deciding on its national budget",
+        "A monopolist choosing output level"
+      ],
+      "answer": "Two firms choosing to advertise or not when both advertising hurts total industry profit",
+      "explanation": "The correct answer is: Two firms choosing to advertise or not when both advertising hurts total industry profit.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "Marginal cost is defined as:",
+      "options": [
+        "Total cost divided by total output",
+        "The change in total cost from producing one additional unit",
+        "Fixed cost per unit of output",
+        "The difference between price and average variable cost"
+      ],
+      "answer": "The change in total cost from producing one additional unit",
+      "explanation": "The correct answer is: The change in total cost from producing one additional unit.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "A firm in a perfectly competitive market is a 'price taker' because:",
+      "options": [
+        "It produces a unique product",
+        "It has no market power and must accept the market price",
+        "Government regulation fixes its price",
+        "It earns positive economic profit"
+      ],
+      "answer": "It has no market power and must accept the market price",
+      "explanation": "The correct answer is: It has no market power and must accept the market price.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "Price discrimination by a monopolist involves:",
+      "options": [
+        "Charging one uniform price to all consumers",
+        "Charging different prices to different consumer groups based on willingness to pay",
+        "Lowering price below marginal cost to eliminate rivals",
+        "Colluding with other firms on pricing"
+      ],
+      "answer": "Charging different prices to different consumer groups based on willingness to pay",
+      "explanation": "The correct answer is: Charging different prices to different consumer groups based on willingness to pay.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Economies of scale occur when:",
+      "options": [
+        "Average total cost rises as output increases",
+        "Average total cost falls as output increases",
+        "Marginal cost exceeds average total cost",
+        "Fixed costs increase with output"
+      ],
+      "answer": "Average total cost falls as output increases",
+      "explanation": "The correct answer is: Average total cost falls as output increases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The equilibrium wage in a competitive labor market is determined by:",
+      "options": [
+        "Government decree",
+        "The intersection of labor supply and labor demand",
+        "Union negotiation alone",
+        "The minimum wage law"
+      ],
+      "answer": "The intersection of labor supply and labor demand",
+      "explanation": "The correct answer is: The intersection of labor supply and labor demand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Human capital refers to:",
+      "options": [
+        "Physical machinery owned by workers",
+        "The stock of skills, knowledge, and education embodied in workers",
+        "Financial savings held by households",
+        "Government spending on infrastructure"
+      ],
+      "answer": "The stock of skills, knowledge, and education embodied in workers",
+      "explanation": "The correct answer is: The stock of skills, knowledge, and education embodied in workers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "True or False: The answer to \"The equilibrium wage in a competitive labor market is determined by:\" is: The intersection of labor supply and labor demand.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The intersection of labor supply and labor demand is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "True or False: The answer to \"Human capital refers to:\" is: Physical machinery owned by workers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: The stock of skills, knowledge, and education embodied in workers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "A Gini coefficient of 0 represents:",
+      "options": [
+        "Maximum inequality",
+        "Moderate inequality",
+        "Perfect equality of income",
+        "Zero economic growth"
+      ],
+      "answer": "Perfect equality of income",
+      "explanation": "The correct answer is: Perfect equality of income.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "A progressive income tax system is one in which:",
+      "options": [
+        "All taxpayers pay the same dollar amount",
+        "Higher-income earners pay a lower percentage of income in taxes",
+        "Higher-income earners pay a higher percentage of income in taxes",
+        "Tax rates decrease as income rises"
+      ],
+      "answer": "Higher-income earners pay a higher percentage of income in taxes",
+      "explanation": "The correct answer is: Higher-income earners pay a higher percentage of income in taxes.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Transfer payments such as unemployment insurance and food stamps are designed to:",
+      "options": [
+        "Increase GDP directly",
+        "Fund military spending",
+        "Redistribute income to lower-income households",
+        "Reduce the national debt"
+      ],
+      "answer": "Redistribute income to lower-income households",
+      "explanation": "The correct answer is: Redistribute income to lower-income households.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "True or False: The answer to \"A Gini coefficient of 0 represents:\" is: Perfect equality of income.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Perfect equality of income is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Adverse selection in insurance refers to:",
+      "options": [
+        "Insurers rejecting all high-risk applicants",
+        "High-risk individuals being more likely to seek insurance, driving up premiums",
+        "Governments mandating coverage for all citizens",
+        "Insurance companies colluding on premiums"
+      ],
+      "answer": "High-risk individuals being more likely to seek insurance, driving up premiums",
+      "explanation": "The correct answer is: High-risk individuals being more likely to seek insurance, driving up premiums.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Moral hazard in health insurance occurs when insured individuals:",
+      "options": [
+        "Lie about their health status to get coverage",
+        "Use more healthcare than they would if they paid full price",
+        "Choose the cheapest available plan",
+        "Invest in preventive care"
+      ],
+      "answer": "Use more healthcare than they would if they paid full price",
+      "explanation": "The correct answer is: Use more healthcare than they would if they paid full price.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "True or False: The answer to \"Adverse selection in insurance refers to:\" is: High-risk individuals being more likely to seek insurance, driving up premiums.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. High-risk individuals being more likely to seek insurance, driving up premiums is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A negative externality exists when:",
+      "options": [
+        "A firm's production benefits third parties who don't pay",
+        "A firm's production imposes costs on third parties who are not compensated",
+        "The government subsidizes a product",
+        "A good is excludable and rival"
+      ],
+      "answer": "A firm's production imposes costs on third parties who are not compensated",
+      "explanation": "The correct answer is: A firm's production imposes costs on third parties who are not compensated.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "A carbon tax set equal to the social cost of carbon achieves efficiency by:",
+      "options": [
+        "Banning all carbon emissions",
+        "Making the market price reflect both private and external costs",
+        "Subsidizing renewable energy directly",
+        "Allowing unlimited emissions with a permit system"
+      ],
+      "answer": "Making the market price reflect both private and external costs",
+      "explanation": "The correct answer is: Making the market price reflect both private and external costs.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Under a cap-and-trade system, the total quantity of emissions is:",
+      "options": [
+        "Unlimited, but taxed per ton",
+        "Fixed by the cap; firms buy and sell permits",
+        "Set by each individual firm voluntarily",
+        "Determined by international negotiation each year"
+      ],
+      "answer": "Fixed by the cap; firms buy and sell permits",
+      "explanation": "The correct answer is: Fixed by the cap; firms buy and sell permits.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "True or False: The answer to \"A negative externality exists when:\" is: A firm's production imposes costs on third parties who are not compensated.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. A firm's production imposes costs on third parties who are not compensated is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "In the Solow growth model, the steady state is reached when:",
+      "options": [
+        "GDP growth rate is maximized",
+        "Investment equals depreciation of the capital stock",
+        "Population growth stops",
+        "Total factor productivity is constant"
+      ],
+      "answer": "Investment equals depreciation of the capital stock",
+      "explanation": "The correct answer is: Investment equals depreciation of the capital stock.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Conditional convergence in growth theory predicts that poorer countries will grow faster than richer ones, assuming they have:",
+      "options": [
+        "Higher natural resource endowments",
+        "Similar institutions, savings rates, and policies",
+        "Lower population growth",
+        "More diversified export sectors"
+      ],
+      "answer": "Similar institutions, savings rates, and policies",
+      "explanation": "The correct answer is: Similar institutions, savings rates, and policies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "The 'East Asian miracle' (South Korea, Taiwan, Singapore) is often attributed to:",
+      "options": [
+        "Abundant natural resources",
+        "High savings rates, export-led growth, and strong institutions",
+        "Foreign aid from the United States",
+        "Low tariff barriers from the beginning"
+      ],
+      "answer": "High savings rates, export-led growth, and strong institutions",
+      "explanation": "The correct answer is: High savings rates, export-led growth, and strong institutions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Financial intermediaries such as banks create value primarily by:",
+      "options": [
+        "Printing money for the government",
+        "Channeling savings from depositors to productive borrowers",
+        "Setting interest rates for the economy",
+        "Providing insurance to depositors"
+      ],
+      "answer": "Channeling savings from depositors to productive borrowers",
+      "explanation": "The correct answer is: Channeling savings from depositors to productive borrowers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "A mortgage-backed security (MBS) is:",
+      "options": [
+        "A government bond backed by tax revenue",
+        "A financial instrument that bundles mortgage loans and sells claims on their cash flows",
+        "An insurance policy for homeowners",
+        "A government subsidy for first-time home buyers"
+      ],
+      "answer": "A financial instrument that bundles mortgage loans and sells claims on their cash flows",
+      "explanation": "The correct answer is: A financial instrument that bundles mortgage loans and sells claims on their cash flows.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "The 2008 financial crisis spread from housing markets to the broader economy mainly through:",
+      "options": [
+        "A sudden increase in government spending",
+        "Losses on mortgage-backed securities that weakened banks and froze credit markets",
+        "A dramatic fall in oil prices",
+        "Currency depreciation in the eurozone"
+      ],
+      "answer": "Losses on mortgage-backed securities that weakened banks and froze credit markets",
+      "explanation": "The correct answer is: Losses on mortgage-backed securities that weakened banks and froze credit markets.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "The Dodd-Frank Act (2010) was designed to:",
+      "options": [
+        "Stimulate consumer spending after the recession",
+        "Regulate financial markets and reduce systemic risk after the 2008 crisis",
+        "Fund infrastructure repair projects",
+        "Cut the federal deficit"
+      ],
+      "answer": "Regulate financial markets and reduce systemic risk after the 2008 crisis",
+      "explanation": "The correct answer is: Regulate financial markets and reduce systemic risk after the 2008 crisis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "The federal funds rate is:",
+      "options": [
+        "The rate at which banks lend to households",
+        "The overnight interest rate banks charge each other for reserve lending, set as a target by the Fed",
+        "The interest rate on 10-year Treasury bonds",
+        "The rate the Fed charges banks to borrow from the discount window"
+      ],
+      "answer": "The overnight interest rate banks charge each other for reserve lending, set as a target by the Fed",
+      "explanation": "The correct answer is: The overnight interest rate banks charge each other for reserve lending, set as a target by the Fed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "The Taylor Rule prescribes that central banks should raise interest rates when:",
+      "options": [
+        "Unemployment rises above the natural rate",
+        "Inflation exceeds its target or the output gap is positive",
+        "The money supply grows too slowly",
+        "Bond prices fall"
+      ],
+      "answer": "Inflation exceeds its target or the output gap is positive",
+      "explanation": "The correct answer is: Inflation exceeds its target or the output gap is positive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "True or False: The answer to \"The federal funds rate is:\" is: The overnight interest rate banks charge each other for reserve lending, set as a target by the Fed.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The overnight interest rate banks charge each other for reserve lending, set as a target by the Fed is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "True or False: The answer to \"The Taylor Rule prescribes that central banks should raise interest rates when:\" is: Unemployment rises above the natural rate.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Inflation exceeds its target or the output gap is positive.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Keynesian economists argue that during a recession, the government should:",
+      "options": [
+        "Cut spending and raise taxes to balance the budget",
+        "Increase spending or reduce taxes to boost aggregate demand",
+        "Allow automatic stabilizers to work without discretionary policy",
+        "Raise interest rates to restore confidence"
+      ],
+      "answer": "Increase spending or reduce taxes to boost aggregate demand",
+      "explanation": "The correct answer is: Increase spending or reduce taxes to boost aggregate demand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "The fiscal multiplier measures:",
+      "options": [
+        "The ratio of government debt to GDP",
+        "How much GDP changes for each dollar of government spending",
+        "The tax rate applied to the highest income bracket",
+        "The ratio of federal revenue to federal expenditure"
+      ],
+      "answer": "How much GDP changes for each dollar of government spending",
+      "explanation": "The correct answer is: How much GDP changes for each dollar of government spending.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Austerity policies refer to:",
+      "options": [
+        "Expansionary fiscal policies during recessions",
+        "Government spending increases funded by new taxes",
+        "Cuts in government spending and/or tax increases to reduce deficits",
+        "Central bank purchases of government bonds"
+      ],
+      "answer": "Cuts in government spending and/or tax increases to reduce deficits",
+      "explanation": "The correct answer is: Cuts in government spending and/or tax increases to reduce deficits.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "True or False: The answer to \"Keynesian economists argue that during a recession, the government should:\" is: Increase spending or reduce taxes to boost aggregate demand.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Increase spending or reduce taxes to boost aggregate demand is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "Comparative advantage means a country should export goods for which it has:",
+      "options": [
+        "An absolute cost advantage over all trading partners",
+        "The lowest opportunity cost of production relative to other goods",
+        "The highest total output capacity",
+        "The most advanced technology"
+      ],
+      "answer": "The lowest opportunity cost of production relative to other goods",
+      "explanation": "The correct answer is: The lowest opportunity cost of production relative to other goods.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "A current account deficit means a country:",
+      "options": [
+        "Exports more goods and services than it imports",
+        "Imports more goods and services than it exports",
+        "Has a balanced government budget",
+        "Holds more foreign currency reserves than it needs"
+      ],
+      "answer": "Imports more goods and services than it exports",
+      "explanation": "The correct answer is: Imports more goods and services than it exports.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "True or False: The answer to \"Comparative advantage means a country should export goods for which it has:\" is: The lowest opportunity cost of production relative to other goods.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The lowest opportunity cost of production relative to other goods is correct.",
+      "points": 1
+    }
+  ],
+  "gradeLevel": 12
 }

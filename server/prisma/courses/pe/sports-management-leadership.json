@@ -183,54 +183,6 @@
       "practiceNote": "Complete the sport technology landscape analysis activity.",
       "assignment": "Write a 500-word innovation proposal for introducing a technology solution (e.g., AI-powered scouting, fan engagement app, smart stadium) to a sport organization. Include cost-benefit considerations.",
       "estimatedHrs": 3
-    },
-    {
-      "order": 12,
-      "title": "Mentoring & Coaching Leadership",
-      "titleZh": "指导与辅导领导力",
-      "objectives": "Distinguish mentoring from coaching; apply GROW coaching model to leadership development; design a mentoring program for emerging sport managers.",
-      "readingUrl": "https://humankinetics.com/blogs/excerpts/mentoring-coaching-sport-leadership",
-      "readingNote": "Study formal and informal mentoring in sport, the GROW model (Goal, Reality, Options, Will), and how executive coaches support sport leaders.",
-      "videoUrl": "https://www.youtube.com/watch?v=0bwI_TpvYLo",
-      "videoNote": "Watch the GROW coaching model applied to athletic leadership development.",
-      "video2Url": "https://www.youtube.com/watch?v=VmWu29ma8w0",
-      "video2Note": "Review how sport organizations structure mentoring programs for diverse emerging leaders.",
-      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/current-economics/leadership-development/a/mentoring-coaching",
-      "practiceNote": "Practice GROW coaching conversations through the interactive scenario exercises.",
-      "assignment": "Design a six-month mentoring program for first-year sport management employees. Write a 500-word program outline including matching criteria, meeting frequency, goals, and evaluation methods.",
-      "estimatedHrs": 3
-    },
-    {
-      "order": 13,
-      "title": "Global Sport Leadership",
-      "titleZh": "全球体育领导力",
-      "objectives": "Analyze leadership challenges in international sport organizations; compare governance models across global sport federations; evaluate cross-cultural leadership competencies.",
-      "readingUrl": "https://humankinetics.com/blogs/excerpts/global-sport-leadership-international",
-      "readingNote": "Read about international sport governance structures (IOC, FIFA, WADA), cross-cultural leadership challenges, and global sport business expansion.",
-      "videoUrl": "https://www.youtube.com/watch?v=4NpGCFczKiE",
-      "videoNote": "Watch the international sport management lecture on IOC governance and global sport business.",
-      "video2Url": "https://www.youtube.com/watch?v=T8yfVj7-a3k",
-      "video2Note": "Case study on cross-cultural challenges when leagues expand internationally (NBA, NFL, Premier League).",
-      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/current-economics/global-business/a/cross-cultural-leadership",
-      "practiceNote": "Complete the cross-cultural leadership competency self-assessment.",
-      "assignment": "Select a global sport organization (e.g., FIFA, IOC, NBA Global Games). Write a 500-word analysis of its leadership structure, governance challenges, and one reform you would propose.",
-      "estimatedHrs": 3.5
-    },
-    {
-      "order": 14,
-      "title": "Capstone: Leadership Development Plan",
-      "titleZh": "综合项目：领导力发展计划",
-      "objectives": "Synthesize course concepts into a personal leadership philosophy; create a comprehensive leadership development plan; present and defend leadership goals to peers.",
-      "readingUrl": "https://humankinetics.com/blogs/excerpts/leadership-development-plan-sport-managers",
-      "readingNote": "Read the leadership development plan framework including self-assessment, vision setting, skill gap analysis, and action planning.",
-      "videoUrl": "https://www.youtube.com/watch?v=QL9iy_GEQ4k",
-      "videoNote": "Watch examples of executive leadership development plans from sport management professionals.",
-      "video2Url": "https://www.youtube.com/watch?v=VPRIVdE6SRk",
-      "video2Note": "Review how to present a personal leadership philosophy effectively.",
-      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/current-economics/leadership-development/a/personal-leadership-plan",
-      "practiceNote": "Complete the leadership self-assessment and skills inventory tool.",
-      "assignment": "Create a comprehensive 800-word Leadership Development Plan that includes: (1) personal leadership philosophy, (2) three-year career goals in sport management, (3) identified skill gaps, (4) specific development activities, and (5) a 90-day action plan.",
-      "estimatedHrs": 4
     }
   ],
   "quizQuestions": [
@@ -265,43 +217,22 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Behavioral leadership theories shifted the focus from leader traits to:",
+      "question": "True or False: The answer to \"Which leadership theory focuses on identifying innate characteristics that make individuals effective leaders\" is: Trait theory.",
       "options": [
-        "Follower personality types",
-        "Observable leader actions and behaviors",
-        "Environmental and situational factors only",
-        "Financial incentives for followers"
+        "True",
+        "False"
       ],
-      "answer": "Observable leader actions and behaviors",
-      "explanation": "Behavioral theories, such as the Ohio State and Michigan studies, examined what leaders actually do rather than what innate traits they possess.",
+      "answer": "True",
+      "explanation": "True. Trait theory is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which of the following is best described by Hersey and Blanchard's Situational Leadership Model?",
-      "options": [
-        "Leaders should always use a democratic style",
-        "Leaders should adapt their style based on follower readiness",
-        "Transformational leaders inspire long-term change",
-        "Servant leaders prioritize organizational profit over followers"
-      ],
-      "answer": "Leaders should adapt their style based on follower readiness",
-      "explanation": "Hersey and Blanchard's model prescribes that leaders adjust their directing and supporting behaviors based on followers' developmental level.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "In sport management, which theory is most useful for understanding how an athletic director should adjust leadership style when managing both experienced coaches and new staff?",
-      "options": [
-        "Trait theory",
-        "Great Man theory",
-        "Situational leadership theory",
-        "Classical management theory"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in sport management, which theory is most useful for understanding how an athletic director should adjust leadership style when managing both experienced coaches and new staff.\"",
+      "options": null,
       "answer": "Situational leadership theory",
-      "explanation": "Situational leadership theory provides a framework for adapting one's approach based on the readiness and experience of different followers, making it applicable across staff levels.",
+      "explanation": "The correct answer is: Situational leadership theory.",
       "points": 1
     },
     {
@@ -349,29 +280,13 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Individualized consideration in transformational leadership refers to:",
+      "question": "True or False: The answer to \"Which component of transformational leadership involves a leader serving as an ethical role model\" is: Idealized influence.",
       "options": [
-        "Setting collective team goals for all members equally",
-        "Recognizing and addressing each follower's unique needs and development",
-        "Using punishment to correct poor performance",
-        "Establishing a clear chain of command"
+        "True",
+        "False"
       ],
-      "answer": "Recognizing and addressing each follower's unique needs and development",
-      "explanation": "Individualized consideration means leaders act as mentors or coaches, attending to each follower's personal growth and emotional needs.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 2,
-      "order": 5,
-      "question": "Research consistently shows that transformational leadership in sport organizations is associated with:",
-      "options": [
-        "Lower athlete satisfaction and reduced intrinsic motivation",
-        "Higher athlete satisfaction and improved intrinsic motivation",
-        "Increased rule violations and disciplinary problems",
-        "Reduced team cohesion and cooperation"
-      ],
-      "answer": "Higher athlete satisfaction and improved intrinsic motivation",
-      "explanation": "Studies on transformational leadership in sport settings consistently show positive outcomes including greater motivation, satisfaction, and performance.",
+      "answer": "True",
+      "explanation": "True. Idealized influence is correct.",
       "points": 1
     },
     {
@@ -414,34 +329,6 @@
       ],
       "answer": "Monitoring and analyzing internal and external factors affecting the organization",
       "explanation": "Environmental scanning involves systematically collecting and analyzing information about internal operations and external trends to inform strategy.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 4,
-      "question": "Which step follows strategy formulation in the strategic planning process?",
-      "options": [
-        "Environmental scanning",
-        "Strategy implementation",
-        "Mission development",
-        "Stakeholder identification"
-      ],
-      "answer": "Strategy implementation",
-      "explanation": "After strategies are formulated, organizations move to implementation—executing the chosen strategy through resource allocation, structure, and action plans.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 5,
-      "question": "A sport organization's vision statement differs from its mission statement in that it:",
-      "options": [
-        "Describes day-to-day operational procedures",
-        "Focuses on current activities and present purpose",
-        "Describes what the organization aspires to become in the future",
-        "Outlines the organization's tax-exempt status"
-      ],
-      "answer": "Describes what the organization aspires to become in the future",
-      "explanation": "A vision statement is forward-looking, articulating the long-term aspirational goal the organization is working toward.",
       "points": 1
     },
     {
@@ -501,20 +388,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 4,
-      "order": 5,
-      "question": "What is the primary purpose of team-building activities in a sport organization?",
-      "options": [
-        "To reduce the athletic director's workload",
-        "To strengthen interpersonal relationships and shared culture",
-        "To select the starting lineup for competitions",
-        "To discipline athletes who violate conduct policies"
-      ],
-      "answer": "To strengthen interpersonal relationships and shared culture",
-      "explanation": "Team-building activities are designed to improve communication, trust, and cohesion among group members.",
-      "points": 1
-    },
-    {
       "moduleOrder": 5,
       "order": 1,
       "question": "According to the Thomas-Kilmann model, which conflict style involves high assertiveness and high cooperativeness?",
@@ -545,43 +418,25 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "In collective bargaining between a players' union and team owners, what type of negotiation seeks to expand the total value available rather than just dividing existing resources?",
+      "question": "True or False: The answer to \"According to the Thomas-Kilmann model, which conflict style involves high assertiveness and high cooperativeness\" is: Collaborating.",
       "options": [
-        "Distributive negotiation",
-        "Principled negotiation",
-        "Positional bargaining",
-        "Integrative negotiation"
+        "True",
+        "False"
       ],
-      "answer": "Integrative negotiation",
-      "explanation": "Integrative (or interest-based) negotiation seeks mutually beneficial solutions that grow the total value, rather than competing over a fixed pie.",
+      "answer": "True",
+      "explanation": "True. Collaborating is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Which source of conflict is most common in sport organizations with matrix management structures?",
+      "question": "True or False: The answer to \"A sport manager who delays addressing a conflict between two coaches is using which conflict style\" is: Collaborating.",
       "options": [
-        "Conflict over playing time between athletes",
-        "Role ambiguity and jurisdictional disputes among departments",
-        "Disagreements about uniform designs and equipment",
-        "Conflict between fans and stadium management"
+        "True",
+        "False"
       ],
-      "answer": "Role ambiguity and jurisdictional disputes among departments",
-      "explanation": "Matrix structures create overlapping authority, leading to role ambiguity and conflict over decision-making jurisdiction.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 5,
-      "order": 5,
-      "question": "A third-party neutral who helps disputing parties reach a voluntary agreement is called a:",
-      "options": [
-        "Arbitrator",
-        "Litigator",
-        "Mediator",
-        "Adjudicator"
-      ],
-      "answer": "Mediator",
-      "explanation": "A mediator facilitates communication and negotiation between parties to help them reach a voluntary, mutually acceptable resolution.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Avoiding.",
       "points": 1
     },
     {
@@ -629,29 +484,13 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Which ethical decision-making framework evaluates choices based on their consequences and overall utility?",
+      "question": "True or False: The answer to \"The rational decision-making model assumes that decision-makers:\" is: Have access to complete information and make optimal choices.",
       "options": [
-        "Deontological ethics",
-        "Virtue ethics",
-        "Consequentialism (utilitarianism)",
-        "Social contract theory"
+        "True",
+        "False"
       ],
-      "answer": "Consequentialism (utilitarianism)",
-      "explanation": "Consequentialism judges actions based on their outcomes—the greatest good for the greatest number—making outcomes the basis of ethical judgment.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 6,
-      "order": 5,
-      "question": "Groupthink in sport management decision-making refers to:",
-      "options": [
-        "A team's collective athletic performance strategy",
-        "The tendency of cohesive groups to prioritize harmony over critical analysis",
-        "Data-driven group decision-making processes",
-        "Collaborative brainstorming techniques"
-      ],
-      "answer": "The tendency of cohesive groups to prioritize harmony over critical analysis",
-      "explanation": "Groupthink occurs when the desire for consensus suppresses dissent and critical thinking, often leading to poor decisions.",
+      "answer": "True",
+      "explanation": "True. Have access to complete information and make optimal choices is correct.",
       "points": 1
     },
     {
@@ -685,43 +524,13 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "Which term refers to invisible systemic barriers that prevent women and minorities from advancing to upper levels of organizations?",
+      "question": "True or False: The answer to \"The NFL's Rooney Rule requires teams to:\" is: Interview at least one minority candidate for head coaching and senior football operations positions.",
       "options": [
-        "Iron curtain",
-        "Glass ceiling",
-        "Bamboo ceiling",
-        "Career plateau"
+        "True",
+        "False"
       ],
-      "answer": "Glass ceiling",
-      "explanation": "The 'glass ceiling' metaphor describes invisible barriers that prevent women and minorities from rising to senior leadership positions despite qualifications.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 4,
-      "question": "A sport organization that focuses on equity rather than equality in resource distribution is:",
-      "options": [
-        "Providing identical resources to all teams regardless of need",
-        "Distributing resources based on each group's specific needs to achieve fairness",
-        "Eliminating all performance-based pay distinctions",
-        "Ignoring demographic differences in program development"
-      ],
-      "answer": "Distributing resources based on each group's specific needs to achieve fairness",
-      "explanation": "Equity recognizes that different groups may need different resources or support to achieve equal outcomes, going beyond providing the same resources to all.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "Inclusive leadership in sport organizations is best characterized by:",
-      "options": [
-        "Promoting only high performers regardless of background",
-        "Creating environments where all individuals feel valued and can contribute",
-        "Focusing exclusively on on-field performance metrics",
-        "Maintaining traditional hierarchies to ensure stability"
-      ],
-      "answer": "Creating environments where all individuals feel valued and can contribute",
-      "explanation": "Inclusive leadership actively creates conditions where diverse perspectives are welcomed and all team members can contribute meaningfully.",
+      "answer": "True",
+      "explanation": "True. Interview at least one minority candidate for head coaching and senior football operations positions is correct.",
       "points": 1
     },
     {
@@ -769,29 +578,13 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "The primary revenue source for most professional sport leagues is:",
+      "question": "True or False: The answer to \"In professional sport, a salary cap is designed to:\" is: Limit the total amount teams can spend on player salaries to promote competitive balance.",
       "options": [
-        "Merchandise licensing fees",
-        "Stadium parking revenue",
-        "Broadcast media rights contracts",
-        "Player transfer fees"
+        "True",
+        "False"
       ],
-      "answer": "Broadcast media rights contracts",
-      "explanation": "Television and digital broadcasting rights represent the largest revenue stream for major professional sport leagues, often dwarfing gate receipts.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 8,
-      "order": 5,
-      "question": "Zero-based budgeting in sport organizations requires managers to:",
-      "options": [
-        "Automatically approve last year's budget amounts",
-        "Justify every budget line from scratch each budget cycle",
-        "Cut 10% from all budget categories annually",
-        "Allocate funds only after revenues are confirmed"
-      ],
-      "answer": "Justify every budget line from scratch each budget cycle",
-      "explanation": "Zero-based budgeting requires every expense to be justified anew each period rather than basing allocations on prior-year spending.",
+      "answer": "True",
+      "explanation": "True. Limit the total amount teams can spend on player salaries to promote competitive balance is correct.",
       "points": 1
     },
     {
@@ -834,34 +627,6 @@
       ],
       "answer": "Community outreach to create positive social impact and enhance brand image",
       "explanation": "NBA Cares is the league's global social responsibility initiative, uniting players, teams, and staff in addressing social issues and strengthening communities.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 4,
-      "question": "Which measurement approach helps sport organizations evaluate the social impact of their CSR programs?",
-      "options": [
-        "EBITDA margin analysis",
-        "Social return on investment (SROI)",
-        "Net promoter score (NPS) only",
-        "Break-even analysis"
-      ],
-      "answer": "Social return on investment (SROI)",
-      "explanation": "SROI is a framework for measuring and accounting for the broader social, environmental, and economic value of an investment relative to its cost.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 5,
-      "question": "A sport organization's community relations program is most effective when it:",
-      "options": [
-        "Focuses exclusively on marketing and brand visibility",
-        "Aligns with genuine organizational values and addresses authentic community needs",
-        "Is managed entirely by an external public relations firm",
-        "Focuses only on activities during the competitive season"
-      ],
-      "answer": "Aligns with genuine organizational values and addresses authentic community needs",
-      "explanation": "Effective community programs are credible when they reflect the organization's core values and respond to real community needs rather than serving only as marketing tools.",
       "points": 1
     },
     {
@@ -921,20 +686,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 10,
-      "order": 5,
-      "question": "Effective crisis communication requires that organizations:",
-      "options": [
-        "Wait until all facts are confirmed before communicating anything",
-        "Communicate quickly, honestly, and consistently with stakeholders",
-        "Limit communication to a single press release and no further updates",
-        "Assign blame to external parties as quickly as possible"
-      ],
-      "answer": "Communicate quickly, honestly, and consistently with stakeholders",
-      "explanation": "Crisis communication best practices emphasize speed, transparency, and consistency to maintain credibility and limit reputational damage.",
-      "points": 1
-    },
-    {
       "moduleOrder": 11,
       "order": 1,
       "question": "Wearable technology in sport performance management is primarily used to:",
@@ -965,253 +716,25 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "Esports represents an innovation in sport management primarily because it:",
+      "question": "True or False: The answer to \"Wearable technology in sport performance management is primarily used to:\" is: Monitor athlete biometrics and workload to optimize training and prevent injury.",
       "options": [
-        "Replaces traditional physical sports with digital competition",
-        "Creates new revenue streams, fan engagement models, and global audiences for sport businesses",
-        "Focuses exclusively on amateur competition without commercial interests",
-        "Eliminates the need for physical infrastructure in sport"
+        "True",
+        "False"
       ],
-      "answer": "Creates new revenue streams, fan engagement models, and global audiences for sport businesses",
-      "explanation": "Esports generates significant revenue through streaming, sponsorships, and licensing while reaching global fan bases through digital platforms.",
+      "answer": "True",
+      "explanation": "True. Monitor athlete biometrics and workload to optimize training and prevent injury is correct.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "Artificial intelligence applications in sport management are most commonly used for:",
+      "question": "True or False: The answer to \"In sport management, 'big data' refers to:\" is: Large stadium capacities and fan attendance figures.",
       "options": [
-        "Officiating all competitive decisions during games",
-        "Analyzing patterns in performance data and fan behavior to inform decisions",
-        "Automatically generating contract terms for athletes",
-        "Replacing sport marketing teams with automated systems"
+        "True",
+        "False"
       ],
-      "answer": "Analyzing patterns in performance data and fan behavior to inform decisions",
-      "explanation": "AI in sport management analyzes complex datasets to identify performance trends, predict injury risk, optimize scheduling, and personalize fan experiences.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 5,
-      "question": "A key challenge for sport organizations implementing new technology is:",
-      "options": [
-        "Excessive availability of affordable technology solutions",
-        "Too much data leading to overconfident decision-making without scrutiny",
-        "Resistance from media partners who prefer traditional formats",
-        "The elimination of sponsorship revenue from technology companies"
-      ],
-      "answer": "Too much data leading to overconfident decision-making without scrutiny",
-      "explanation": "One significant challenge is 'data overload'—having so much data that organizations may use it to confirm biases rather than critically evaluate findings.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 1,
-      "question": "The primary distinction between mentoring and coaching in a sport management context is that mentoring:",
-      "options": [
-        "Focuses on immediate performance improvement in a specific skill",
-        "Is a long-term relationship providing career guidance and wisdom from experience",
-        "Is used only for underperforming employees",
-        "Focuses exclusively on psychosocial rather than career development"
-      ],
-      "answer": "Is a long-term relationship providing career guidance and wisdom from experience",
-      "explanation": "Mentoring typically involves a more experienced person sharing knowledge and guidance for overall career development, while coaching focuses on specific skill performance.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 2,
-      "question": "In the GROW coaching model, the 'R' stands for:",
-      "options": [
-        "Resources available to the coachee",
-        "Reality—the current situation and challenges",
-        "Results expected from the coaching session",
-        "Review of previous performance metrics"
-      ],
-      "answer": "Reality—the current situation and challenges",
-      "explanation": "The GROW model's Reality stage involves exploring the coachee's current situation, challenges, and what has already been tried.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 3,
-      "question": "Formal mentoring programs in sport organizations typically differ from informal mentoring in that they:",
-      "options": [
-        "Are initiated spontaneously without organizational planning",
-        "Are structured with assigned pairs, defined goals, and organizational oversight",
-        "Involve only executive-level leaders as mentors",
-        "Are limited to on-field athletic skill development"
-      ],
-      "answer": "Are structured with assigned pairs, defined goals, and organizational oversight",
-      "explanation": "Formal mentoring programs are intentionally designed with matched pairs, structured meetings, clear objectives, and organizational support systems.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 4,
-      "question": "Which type of mentoring involves receiving guidance from multiple individuals with different expertise rather than one primary mentor?",
-      "options": [
-        "Reverse mentoring",
-        "Peer mentoring",
-        "Developmental network mentoring",
-        "Traditional dyadic mentoring"
-      ],
-      "answer": "Developmental network mentoring",
-      "explanation": "Developmental network mentoring involves seeking multiple mentors with different backgrounds and expertise, creating a network of development relationships.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 5,
-      "question": "Reverse mentoring in sport organizations involves:",
-      "options": [
-        "Senior employees teaching junior employees traditional management skills",
-        "Junior employees sharing expertise with senior leaders, especially on technology and culture",
-        "Athletes coaching their own coaches on game strategy",
-        "External consultants mentoring organizational leadership teams"
-      ],
-      "answer": "Junior employees sharing expertise with senior leaders, especially on technology and culture",
-      "explanation": "Reverse mentoring pairs younger or less experienced employees with senior leaders to share expertise on technology, social media, and emerging cultural trends.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 1,
-      "question": "The International Olympic Committee (IOC) operates under a governance model best described as:",
-      "options": [
-        "Fully democratic with member nation voting on all decisions",
-        "A hierarchical structure with an elected executive board and president",
-        "A corporate model governed by league commissioners",
-        "A government-regulated body controlled by member state parliaments"
-      ],
-      "answer": "A hierarchical structure with an elected executive board and president",
-      "explanation": "The IOC operates with a president, executive board, and general session of elected members, following a hierarchical governance structure.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 2,
-      "question": "Cross-cultural leadership competence in global sport management includes the ability to:",
-      "options": [
-        "Apply a single standardized leadership approach across all cultures",
-        "Adapt communication and management styles to cultural contexts and values",
-        "Require all international staff to adopt host country cultural norms",
-        "Limit global operations to avoid cultural complexity"
-      ],
-      "answer": "Adapt communication and management styles to cultural contexts and values",
-      "explanation": "Cross-cultural leadership competence involves cultural intelligence—the ability to recognize cultural differences and adapt one's approach accordingly.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 3,
-      "question": "The globalization of professional sport leagues (e.g., NBA Global Games, NFL International Series) is primarily driven by:",
-      "options": [
-        "Government mandates requiring leagues to expand internationally",
-        "The desire to access new markets, increase broadcasting rights revenue, and grow global fan bases",
-        "A surplus of domestic talent requiring international competition",
-        "International regulatory requirements for professional sport"
-      ],
-      "answer": "The desire to access new markets, increase broadcasting rights revenue, and grow global fan bases",
-      "explanation": "Professional leagues expand internationally to generate new revenue from broadcasting rights, sponsorships, merchandise, and growing fan bases in emerging markets.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 4,
-      "question": "WADA (World Anti-Doping Agency) represents an example of global sport governance that:",
-      "options": [
-        "Is controlled entirely by national Olympic committees",
-        "Provides international coordination to ensure consistent anti-doping standards across sports and nations",
-        "Operates only during Olympic years",
-        "Is funded exclusively by pharmaceutical companies"
-      ],
-      "answer": "Provides international coordination to ensure consistent anti-doping standards across sports and nations",
-      "explanation": "WADA coordinates international efforts to standardize anti-doping policies, testing procedures, and sanctions across sport organizations globally.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "A key challenge for sport leaders managing international organizations is:",
-      "options": [
-        "Excessive government subsidies reducing organizational autonomy",
-        "Navigating differences in legal systems, cultural values, and governance expectations",
-        "A surplus of qualified international leadership candidates",
-        "The inability to use technology in cross-border communication"
-      ],
-      "answer": "Navigating differences in legal systems, cultural values, and governance expectations",
-      "explanation": "International sport leaders must manage varying legal frameworks, cultural norms, and governance traditions across member nations, requiring high cultural and political acumen.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 1,
-      "question": "A personal leadership philosophy in sport management should primarily:",
-      "options": [
-        "List tactical performance goals for the upcoming season",
-        "Articulate core values and beliefs that guide a leader's decisions and behaviors",
-        "Describe the financial targets of the organization",
-        "Outline the hierarchical reporting structure of a department"
-      ],
-      "answer": "Articulate core values and beliefs that guide a leader's decisions and behaviors",
-      "explanation": "A personal leadership philosophy expresses the fundamental values, beliefs, and principles that shape how a leader thinks, decides, and acts.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 2,
-      "question": "A skill gap analysis in a leadership development plan involves:",
-      "options": [
-        "Evaluating athletes' performance weaknesses",
-        "Identifying the difference between current competencies and those needed for future leadership roles",
-        "Comparing a sport organization's budget deficits across departments",
-        "Assessing the physical fitness gap between training and competition demands"
-      ],
-      "answer": "Identifying the difference between current competencies and those needed for future leadership roles",
-      "explanation": "A skill gap analysis compares current skills against required future competencies to identify areas for targeted development.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 3,
-      "question": "SMART goals in a leadership development plan should be:",
-      "options": [
-        "Simple, manageable, affordable, reasonable, and timely",
-        "Specific, measurable, achievable, relevant, and time-bound",
-        "Strategic, motivating, ambiguous, realistic, and transformative",
-        "Systematic, meaningful, adaptive, results-focused, and trackable"
-      ],
-      "answer": "Specific, measurable, achievable, relevant, and time-bound",
-      "explanation": "SMART goals provide clear, actionable targets with defined success criteria and timelines, increasing accountability and achievement.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 4,
-      "question": "The 90-day action plan component of a leadership development plan is designed to:",
-      "options": [
-        "Project five-year career earnings and salary expectations",
-        "Provide immediate, concrete steps to begin developing identified leadership competencies",
-        "Document historical leadership successes for a portfolio",
-        "Replace the need for ongoing mentoring and coaching"
-      ],
-      "answer": "Provide immediate, concrete steps to begin developing identified leadership competencies",
-      "explanation": "A 90-day action plan translates long-term development goals into immediate, achievable actions that build momentum toward growth.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 5,
-      "question": "Reflective practice in leadership development involves:",
-      "options": [
-        "Copying successful strategies from famous sport executives",
-        "Critically analyzing one's own experiences to extract lessons for future leadership",
-        "Following a fixed set of rules that never require reassessment",
-        "Evaluating only the failures of others to learn what to avoid"
-      ],
-      "answer": "Critically analyzing one's own experiences to extract lessons for future leadership",
-      "explanation": "Reflective practice is the process of purposefully thinking about one's actions and decisions to develop deeper self-awareness and improve future performance.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Vast volumes of structured and unstructured data used for analysis and decision-making.",
       "points": 1
     }
   ],
@@ -1264,16 +787,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "multiple_choice",
-      "question": "The deepest and most difficult-to-change level of organizational culture, according to Schein, is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The deepest and most difficult-to-change level of organizational culture, according to Schein, is:\" is: Basic underlying assumptions.",
       "options": [
-        "Espoused values",
-        "Artifacts and symbols",
-        "Observable behaviors",
-        "Basic underlying assumptions"
+        "True",
+        "False"
       ],
-      "answer": "Basic underlying assumptions",
-      "explanation": "Basic underlying assumptions are unconscious, taken-for-granted beliefs that form the foundation of organizational culture and resist change.",
+      "answer": "True",
+      "explanation": "True. Basic underlying assumptions is correct.",
       "points": 1
     },
     {
@@ -1309,31 +830,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "multiple_choice",
+      "type": "fill",
       "question": "The four components of Bass's transformational leadership model include all of the following EXCEPT:",
-      "options": [
-        "Idealized influence",
-        "Inspirational motivation",
-        "Contingent reward",
-        "Individualized consideration"
-      ],
+      "options": null,
       "answer": "Contingent reward",
-      "explanation": "Contingent reward is a feature of transactional leadership, not transformational leadership. The four transformational components are idealized influence, inspirational motivation, intellectual stimulation, and individualized consideration.",
+      "explanation": "The correct answer is: Contingent reward.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "multiple_choice",
-      "question": "A sport organization's mission statement differs from its strategic goals in that the mission:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A sport organization's mission statement differs from its strategic goals in that the mission:\" is: Is updated annually with specific financial targets.",
       "options": [
-        "Is updated annually with specific financial targets",
-        "Describes the enduring purpose of the organization, not specific actions",
-        "Lists tactical priorities for the current fiscal year",
-        "Identifies competitors and market positioning only"
+        "True",
+        "False"
       ],
-      "answer": "Describes the enduring purpose of the organization, not specific actions",
-      "explanation": "A mission statement expresses the organization's enduring reason for existence, while strategic goals are specific, time-bound objectives derived from the mission.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Describes the enduring purpose of the organization, not specific actions.",
       "points": 1
     },
     {
@@ -1384,16 +898,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "multiple_choice",
-      "question": "Title IX had the most direct impact on collegiate athletics by:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Title IX had the most direct impact on collegiate athletics by:\" is: Requiring equal participation opportunities and resource allocation for female athletes.",
       "options": [
-        "Mandating performance-based academic scholarships",
-        "Requiring equal participation opportunities and resource allocation for female athletes",
-        "Creating the NCAA governance structure for college sports",
-        "Establishing minimum coaching salary requirements"
+        "True",
+        "False"
       ],
-      "answer": "Requiring equal participation opportunities and resource allocation for female athletes",
-      "explanation": "Title IX's application to collegiate athletics required schools to provide equitable athletic opportunities, scholarships, and resources to female students.",
+      "answer": "True",
+      "explanation": "True. Requiring equal participation opportunities and resource allocation for female athletes is correct.",
       "points": 1
     },
     {
@@ -1444,16 +956,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "multiple_choice",
-      "question": "Situational leadership theory prescribes that leaders should increase directing behavior when:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Situational leadership theory prescribes that leaders should increase directing behavior when:\" is: Followers have high competence and high commitment.",
       "options": [
-        "Followers have high competence and high commitment",
-        "Followers have high competence but low commitment",
-        "Followers have low competence and high commitment",
-        "Followers have low competence and low commitment"
+        "True",
+        "False"
       ],
-      "answer": "Followers have low competence and low commitment",
-      "explanation": "Hersey and Blanchard's model calls for high task direction when followers lack both the skills and the motivation to perform a task independently.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Followers have low competence and low commitment.",
       "points": 1
     },
     {
@@ -1504,16 +1014,14 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "multiple_choice",
-      "question": "A sport manager using the accommodating conflict style is demonstrating:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A sport manager using the accommodating conflict style is demonstrating:\" is: Low assertiveness and high cooperativeness.",
       "options": [
-        "High assertiveness and low cooperativeness",
-        "Low assertiveness and high cooperativeness",
-        "High assertiveness and high cooperativeness",
-        "Low assertiveness and low cooperativeness"
+        "True",
+        "False"
       ],
-      "answer": "Low assertiveness and high cooperativeness",
-      "explanation": "Accommodating means yielding to others' concerns while subordinating your own—low assertiveness but high cooperativeness.",
+      "answer": "True",
+      "explanation": "True. Low assertiveness and high cooperativeness is correct.",
       "points": 1
     },
     {
@@ -1564,16 +1072,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "multiple_choice",
-      "question": "AI-powered analytics in sport management is most commonly applied to:",
+      "type": "tf",
+      "question": "True or False: The answer to \"AI-powered analytics in sport management is most commonly applied to:\" is: Automating referee decisions during competition.",
       "options": [
-        "Automating referee decisions during competition",
-        "Identifying performance patterns and predicting injury risk in athlete data",
-        "Replacing broadcast commentators with automated narration",
-        "Eliminating the need for front office financial planning"
+        "True",
+        "False"
       ],
-      "answer": "Identifying performance patterns and predicting injury risk in athlete data",
-      "explanation": "AI in sport management analyzes complex performance datasets to identify patterns, model outcomes, and flag injury risk indicators.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Identifying performance patterns and predicting injury risk in athlete data.",
       "points": 1
     },
     {
@@ -1624,16 +1130,14 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "multiple_choice",
-      "question": "Equity-focused leadership in sport organizations requires leaders to:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Equity-focused leadership in sport organizations requires leaders to:\" is: Recognize systemic disadvantages and allocate resources accordingly to level the playing field.",
       "options": [
-        "Provide identical support to all individuals regardless of circumstance",
-        "Recognize systemic disadvantages and allocate resources accordingly to level the playing field",
-        "Rely on merit alone without considering background or identity",
-        "Focus resources exclusively on the highest-performing departments"
+        "True",
+        "False"
       ],
-      "answer": "Recognize systemic disadvantages and allocate resources accordingly to level the playing field",
-      "explanation": "Equity-focused leadership acknowledges that equal treatment is not always fair—different groups may need differentiated support to achieve equitable outcomes.",
+      "answer": "True",
+      "explanation": "True. Recognize systemic disadvantages and allocate resources accordingly to level the playing field is correct.",
       "points": 1
     },
     {
@@ -1684,16 +1188,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "multiple_choice",
-      "question": "WADA's role in global sport governance is primarily to:",
+      "type": "tf",
+      "question": "True or False: The answer to \"WADA's role in global sport governance is primarily to:\" is: Organize international sport competitions and award Olympic medals.",
       "options": [
-        "Organize international sport competitions and award Olympic medals",
-        "Establish and enforce consistent anti-doping standards across international sport",
-        "Manage broadcasting rights for global sport events",
-        "Adjudicate contract disputes between players and clubs"
+        "True",
+        "False"
       ],
-      "answer": "Establish and enforce consistent anti-doping standards across international sport",
-      "explanation": "The World Anti-Doping Agency develops the World Anti-Doping Code and coordinates global efforts to maintain clean sport through testing, sanctions, and education.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Establish and enforce consistent anti-doping standards across international sport.",
       "points": 1
     },
     {
@@ -1741,5 +1243,6 @@
       "explanation": "The capstone plan requires students to integrate leadership theory with personal self-assessment to create an actionable plan for their own development as future sport leaders.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": null
 }

@@ -28,11 +28,17 @@ const DEPT_TO_PATHWAY = {
   'Mathematics':          { label: 'Math & Data',     slug: 'math' },
   'English':              { label: 'Communications',  slug: 'communications' },
   'English Language Arts':{ label: 'Communications',  slug: 'communications' },
-  'Science':              { label: 'Engineering',     slug: 'engineering' },
-  'Technology':           { label: 'Computer Science',slug: 'cs' },
-  'Social Studies':       { label: 'Economics',       slug: 'economics' },
-  'Elective':             { label: 'Arts & Design',   slug: 'arts' },
+  'Science':              { label: 'Science',         slug: 'engineering' },
+  'Technology':           { label: 'Technology',      slug: 'cs' },
+  'Social Studies':       { label: 'Social Studies',  slug: 'economics' },
+  'Physical Education':   { label: 'PE & Sports',     slug: 'pe' },
+  'Elective':             { label: 'Electives',       slug: 'arts' },
+  'Electives':            { label: 'Electives',       slug: 'arts' },
 };
+
+const PATHWAY_ORDER = ['Math & Data','Science','Communications','Social Studies','Psychology','Business','Technology','PE & Sports','Electives'];
+
+function fmt1(v) { return v != null ? parseFloat(v).toFixed(1) : null; }
 
 const LETTER_TO_GPA = {
   'A': 4.0, 'A-': 3.7, 'B+': 3.3, 'B': 3.0, 'B-': 2.7,
@@ -148,10 +154,29 @@ function CourseCard({ enr, isEn }) {
       </h3>
 
       <p style={{ fontSize: '12px', color: '#888', margin: 0 }}>
-        {enr.course.credits} {isEn ? 'credit' : '学分'} · {total} {isEn ? 'modules' : '模块'}
+        {enr.course.credits} {isEn ? 'cr' : '学分'} · {total} {isEn ? 'mods' : '模块'}
         {enr.grade?.weighted !== null && enr.grade?.weighted !== undefined
           ? ` · ${Math.round(enr.grade.weighted * 10) / 10}%` : ''}
       </p>
+      {/* Per-course GPA chips */}
+      {letter && (() => {
+        const LGPA = { 'A':4.0,'A-':3.7,'B+':3.3,'B':3.0,'B-':2.7,'C+':2.3,'C':2.0,'C-':1.7,'D+':1.3,'D':1.0,'F':0.0 };
+        const base = LGPA[letter] ?? null;
+        if (base === null) return null;
+        const apBonus = enr.course.type === 'AP' ? 1.0 : 0;
+        return (
+          <div style={{ display: 'flex', gap: '6px', marginTop: '6px' }}>
+            <span style={{ fontSize: '10px', fontWeight: 700, color: '#555', background: '#f0f2f8', padding: '2px 8px', borderRadius: '10px' }}>
+              UW {base.toFixed(1)}
+            </span>
+            {apBonus > 0 && (
+              <span style={{ fontSize: '10px', fontWeight: 700, color: '#C84B0A', background: '#fff3e0', padding: '2px 8px', borderRadius: '10px' }}>
+                W {(base + apBonus).toFixed(1)} (AP)
+              </span>
+            )}
+          </div>
+        );
+      })()}
 
       {enr.creditEarned ? (
         <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -211,7 +236,16 @@ export default function LearnDashboard({ language }) {
   const allCourses = useCourses();
   const [enrolling, setEnrolling] = useState(null);
   const [enrollErr, setEnrollErr] = useState('');
-  const [deptFilter, setDeptFilter] = useState('All');
+  const [pathwayFilter, setPathwayFilter] = useState('All');
+  const [expandedSems, setExpandedSems] = useState(new Set());
+
+  function toggleSem(sem) {
+    setExpandedSems(prev => {
+      const n = new Set(prev);
+      n.has(sem) ? n.delete(sem) : n.add(sem);
+      return n;
+    });
+  }
 
   useEffect(() => {
     if (!session) navigate('/login', { replace: true });
@@ -263,14 +297,23 @@ export default function LearnDashboard({ language }) {
   // Continue learning: first in-progress course with a next module
   const spotlight = inProgress.find((e) => nextModule(e) !== null) || inProgress[0];
 
+  // Determine student's current grade from semesterLabels
+  const currentGrade = myEnrollments.length > 0
+    ? Math.max(0, ...myEnrollments
+        .map(e => { const m = (e.semesterLabel || '').match(/Grade (\d+)/); return m ? parseInt(m[1]) : 0; })
+        .filter(Boolean))
+    : 0;
+
   // Catalog
   const enrolledSlugs = new Set(myEnrollments.map((e) => e.course.slug));
-  const departments = allCourses
-    ? ['All', ...Array.from(new Set(allCourses.map((c) => c.department))).sort()]
-    : ['All'];
-  const catalogCourses = (allCourses || []).filter((c) =>
-    !enrolledSlugs.has(c.slug) && (deptFilter === 'All' || c.department === deptFilter)
-  );
+  const availablePathways = ['All', ...PATHWAY_ORDER.filter(p =>
+    (allCourses || []).some(c => !enrolledSlugs.has(c.slug) && DEPT_TO_PATHWAY[c.department]?.label === p)
+  )];
+  const catalogCourses = (allCourses || []).filter((c) => {
+    if (enrolledSlugs.has(c.slug)) return false;
+    if (pathwayFilter !== 'All' && DEPT_TO_PATHWAY[c.department]?.label !== pathwayFilter) return false;
+    return true;
+  });
 
   // Detect predominant pathway from enrollments
   const deptCount = {};
@@ -320,7 +363,7 @@ export default function LearnDashboard({ language }) {
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px' }}>
             <StatCard label={isEn ? 'Credits Earned' : '已获学分'} value={creditsEarned % 1 === 0 ? creditsEarned : creditsEarned.toFixed(1)} sub={`/ ${GRAD_CREDITS} ${isEn ? 'to graduate' : '毕业学分'}`} />
             <StatCard label={isEn ? 'Completed' : '已完成'} value={completed.length} sub={isEn ? `of ${myEnrollments.length} courses` : `共 ${myEnrollments.length} 门`} />
-            <StatCard label="GPA" value={gpa ?? '—'} sub={isEn ? '4.0 scale' : '4.0 制'} />
+            <StatCard label="GPA (UW)" value={fmt1(gpa) ?? '—'} sub={isEn ? '4.0 scale' : '4.0 制'} />
             <StatCard label={isEn ? 'In Progress' : '进行中'} value={inProgress.length} sub={isEn ? 'active courses' : '门进行中'} />
           </div>
         )}
@@ -424,7 +467,7 @@ export default function LearnDashboard({ language }) {
                 </div>
               )}
 
-              {/* Completed — grouped by semester */}
+              {/* Completed — grouped by semester, current expanded / past collapsible */}
               {completed.length > 0 && (() => {
                 const semMap = {};
                 completed.forEach(enr => {
@@ -437,30 +480,47 @@ export default function LearnDashboard({ language }) {
                   return grade * 2 + (label.toLowerCase().includes('fall') ? 0 : 1);
                 };
                 const semesters = Object.keys(semMap).sort((a, b) => sortKey(a) - sortKey(b));
+                const currentSem = semesters[semesters.length - 1];
                 return semesters.map((sem) => {
                   const semEnrs = semMap[sem];
                   const semCredits = semEnrs.reduce((s, e) => s + Number(e.course.credits), 0).toFixed(1);
                   const semGPA = computeSemGPAs(semEnrs);
+                  const isCurrent = sem === currentSem;
+                  const isOpen = isCurrent || expandedSems.has(sem);
                   return (
-                  <div key={sem} style={{ marginBottom: '28px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '10px', flexWrap: 'wrap' }}>
+                  <div key={sem} style={{ marginBottom: '20px', border: '1px solid #e8edf8', borderRadius: '10px', overflow: 'hidden' }}>
+                    {/* Semester header — clickable for past semesters */}
+                    <div
+                      onClick={!isCurrent ? () => toggleSem(sem) : undefined}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px',
+                        background: isCurrent ? '#f0f4ff' : '#f8f9fd',
+                        cursor: isCurrent ? 'default' : 'pointer', flexWrap: 'wrap',
+                        borderBottom: isOpen ? '1px solid #e8edf8' : 'none',
+                      }}
+                    >
                       <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: 0 }}>
+                        {!isCurrent && <span style={{ marginRight: '6px' }}>{isOpen ? '▾' : '▸'}</span>}
                         {sem}
+                        {isCurrent && <span style={{ marginLeft: '8px', fontSize: '9px', background: '#2b3d6d', color: '#fff', padding: '1px 6px', borderRadius: '10px', verticalAlign: 'middle' }}>
+                          {isEn ? 'CURRENT' : '本学期'}
+                        </span>}
                       </p>
                       <span style={{ fontSize: '11px', color: '#aaa' }}>
                         {semEnrs.length} {isEn ? 'courses' : '门课'} · {semCredits} {isEn ? 'cr' : '学分'}
                       </span>
                       {semGPA.weighted && (
-                        <span style={{ fontSize: '11px', color: '#555', fontWeight: 600 }}>
-                          {isEn ? 'W-GPA' : '加权GPA'} {semGPA.weighted}
-                          {semGPA.unweighted && semGPA.unweighted !== semGPA.weighted
-                            ? ` · ${isEn ? 'UW-GPA' : '非加权'} ${semGPA.unweighted}` : ''}
+                        <span style={{ fontSize: '11px', color: '#555', fontWeight: 700 }}>
+                          {isEn ? 'W' : '加权'} {fmt1(semGPA.weighted)} · {isEn ? 'UW' : '非加权'} {fmt1(semGPA.unweighted)}
                         </span>
                       )}
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '12px' }}>
-                      {semEnrs.map((enr) => <CourseCard key={enr.id} enr={enr} isEn={isEn} />)}
-                    </div>
+                    {/* Course grid — only shown when open */}
+                    {isOpen && (
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '12px', padding: '14px 16px' }}>
+                        {semEnrs.map((enr) => <CourseCard key={enr.id} enr={enr} isEn={isEn} />)}
+                      </div>
+                    )}
                   </div>
                   );
                 });
@@ -487,14 +547,14 @@ export default function LearnDashboard({ language }) {
             )}
           </div>
 
-          {/* Department filter */}
+          {/* Pathway filter */}
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '16px', marginTop: '10px' }}>
-            {departments.map((dept) => (
-              <button key={dept} onClick={() => setDeptFilter(dept)} style={{
+            {availablePathways.map((p) => (
+              <button key={p} onClick={() => setPathwayFilter(p)} style={{
                 fontSize: '11px', fontWeight: 600, padding: '4px 12px', borderRadius: '20px', cursor: 'pointer',
-                background: deptFilter === dept ? '#1a1a2e' : '#f0f2f8',
-                color: deptFilter === dept ? '#fff' : '#444', border: 'none',
-              }}>{dept}</button>
+                background: pathwayFilter === p ? '#1a1a2e' : '#f0f2f8',
+                color: pathwayFilter === p ? '#fff' : '#444', border: 'none',
+              }}>{p}</button>
             ))}
           </div>
 
@@ -509,12 +569,20 @@ export default function LearnDashboard({ language }) {
               {catalogCourses.map((c) => {
                 const color = DEPT_COLORS[c.department] || '#2b3d6d';
                 const pathway = DEPT_TO_PATHWAY[c.department];
+                const gradeOk = c.gradeLevel == null || currentGrade === 0 || c.gradeLevel >= currentGrade;
+                const gradeLocked = !gradeOk;
                 return (
-                  <div key={c.slug} style={{ background: '#fff', border: '1px solid #e0e6f0', borderTop: `4px solid ${color}`, borderRadius: '10px', padding: '18px 20px', display: 'flex', flexDirection: 'column' }}>
+                  <div key={c.slug} style={{
+                    background: gradeLocked ? '#fafafa' : '#fff',
+                    border: `1px solid ${gradeLocked ? '#e8e8e8' : '#e0e6f0'}`,
+                    borderTop: `4px solid ${gradeLocked ? '#ccc' : color}`,
+                    borderRadius: '10px', padding: '18px 20px', display: 'flex', flexDirection: 'column',
+                    opacity: gradeLocked ? 0.6 : 1,
+                  }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
-                      <span style={{ fontSize: '10px', fontWeight: 700, color, textTransform: 'uppercase', letterSpacing: '1px' }}>{c.department}</span>
+                      <span style={{ fontSize: '10px', fontWeight: 700, color: gradeLocked ? '#aaa' : color, textTransform: 'uppercase', letterSpacing: '1px' }}>{c.department}</span>
                       <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-                        {pathway && (
+                        {pathway && !gradeLocked && (
                           <Link to={`/pathways/${pathway.slug}`} style={{
                             fontSize: '9px', fontWeight: 700, background: color + '18', color,
                             padding: '2px 7px', borderRadius: '20px', textDecoration: 'none', whiteSpace: 'nowrap',
@@ -522,24 +590,35 @@ export default function LearnDashboard({ language }) {
                             {pathway.label}
                           </Link>
                         )}
+                        {c.gradeLevel && (
+                          <span style={{ fontSize: '9px', background: gradeLocked ? '#ffebee' : '#f0f2f8', color: gradeLocked ? '#c62828' : '#2b3d6d', padding: '2px 7px', borderRadius: '20px', fontWeight: 600 }}>
+                            G{c.gradeLevel}+
+                          </span>
+                        )}
                         <span style={{ fontSize: '9px', background: '#f0f2f8', color: '#2b3d6d', padding: '2px 7px', borderRadius: '20px', fontWeight: 600 }}>{c.type}</span>
                       </div>
                     </div>
-                    <h3 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a2e', margin: '4px 0 3px', flex: 1 }}>
+                    <h3 style={{ fontSize: '14px', fontWeight: 700, color: gradeLocked ? '#bbb' : '#1a1a2e', margin: '4px 0 3px', flex: 1 }}>
                       {isEn ? c.name : (c.nameZh || c.name)}
                     </h3>
                     <p style={{ fontSize: '11px', color: '#666', lineHeight: 1.5, margin: '0 0 12px', minHeight: '32px' }}>{c.description}</p>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <span style={{ fontSize: '11px', color: '#888' }}>
-                        {c.credits} {isEn ? 'cr' : '学分'} · {c._count?.modules || 0} {isEn ? 'modules' : '模块'} · {c._count?.modules || 0} {isEn ? 'quizzes' : '测验'}
+                        {c.credits} {isEn ? 'cr' : '学分'} · {c._count?.modules || 0} {isEn ? 'modules' : '模块'}
                       </span>
-                      <button onClick={() => enroll(c.slug)} disabled={enrolling === c.slug} style={{
-                        fontSize: '12px', fontWeight: 700, color: '#fff',
-                        background: enrolling === c.slug ? '#aaa' : color,
-                        border: 'none', borderRadius: '6px', padding: '5px 14px', cursor: 'pointer',
-                      }}>
-                        {enrolling === c.slug ? (isEn ? 'Enrolling…' : '报名中…') : (isEn ? '+ Enroll' : '+ 报名')}
-                      </button>
+                      {gradeLocked ? (
+                        <span style={{ fontSize: '11px', color: '#c62828', fontWeight: 600 }}>
+                          {isEn ? `G${c.gradeLevel}+ only` : `需 G${c.gradeLevel}+`}
+                        </span>
+                      ) : (
+                        <button onClick={() => enroll(c.slug)} disabled={enrolling === c.slug} style={{
+                          fontSize: '12px', fontWeight: 700, color: '#fff',
+                          background: enrolling === c.slug ? '#aaa' : color,
+                          border: 'none', borderRadius: '6px', padding: '5px 14px', cursor: 'pointer',
+                        }}>
+                          {enrolling === c.slug ? (isEn ? 'Enrolling…' : '报名中…') : (isEn ? '+ Enroll' : '+ 报名')}
+                        </button>
+                      )}
                     </div>
                   </div>
                 );

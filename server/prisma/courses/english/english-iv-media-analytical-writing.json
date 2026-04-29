@@ -2,134 +2,1369 @@
   "slug": "english-iv-media-analytical-writing",
   "name": "English IV - Media & Analytical Writing",
   "nameZh": "英语四（媒体与分析写作）",
-  "credits": 1.0,
+  "credits": 1,
   "department": "English",
   "type": "Core",
   "description": "An advanced English course combining media literacy with analytical writing, teaching students to critically read, evaluate, and write about media texts including news, digital content, and visual media.",
   "isPublished": true,
   "modules": [
-    {"order":1,"title":"Media Literacy","titleZh":"媒体素养","objectives":"Define media literacy and understand why critical evaluation of media messages is essential in the modern world.","readingUrl":"https://medialiteracynow.org/what-is-media-literacy/","readingNote":"Read the overview of media literacy principles.","videoUrl":"https://www.youtube.com/watch?v=IeHLJ1EfSss","videoNote":"Watch the introduction to media literacy.","video2Url":"","video2Note":"","practiceUrl":"https://www.allsides.com","practiceNote":"Browse AllSides to see news stories from multiple political perspectives.","assignment":"Choose a news story and compare how three different outlets cover it. Write a one-page analysis of the differences in framing, language, and emphasis.","estimatedHrs":3},
-    {"order":2,"title":"Analyzing News Media","titleZh":"分析新闻媒体","objectives":"Apply analytical frameworks to evaluate news articles for accuracy, bias, sourcing, and journalistic standards.","readingUrl":"https://www.poynter.org","readingNote":"Read articles on news analysis and journalistic ethics from Poynter.","videoUrl":"https://www.youtube.com/watch?v=pAVMBCM5hBQ","videoNote":"Watch the video on how to analyze news articles.","video2Url":"","video2Note":"","practiceUrl":"https://www.factcheck.org","practiceNote":"Use FactCheck.org to investigate a recent news claim.","assignment":"Analyze a news article using SIFT (Stop, Investigate the source, Find better coverage, Trace claims) and write a one-page evaluation.","estimatedHrs":3},
-    {"order":3,"title":"Visual Rhetoric","titleZh":"视觉修辞","objectives":"Analyze how images, design, color, and layout create meaning and persuade audiences.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/rhetorical_situation/index.html","readingNote":"Read about rhetorical principles applied to visual media.","videoUrl":"https://www.youtube.com/watch?v=B2BbzLrm7TQ","videoNote":"Watch the introduction to visual rhetoric.","video2Url":"","video2Note":"","practiceUrl":"https://www.adbusters.org","practiceNote":"Analyze an advertisement's visual rhetoric on Adbusters.","assignment":"Choose a print advertisement and write a rhetorical analysis examining how visual elements (image, color, layout, text) work together to persuade the audience.","estimatedHrs":3},
-    {"order":4,"title":"Digital Communication","titleZh":"数字传播","objectives":"Understand how digital media changes communication norms, audience expectations, and message construction.","readingUrl":"https://www.pewresearch.org/internet/","readingNote":"Read a Pew Research report on digital communication trends.","videoUrl":"https://www.youtube.com/watch?v=t37oHFnscX8","videoNote":"Watch the video on digital communication and its effects.","video2Url":"","video2Note":"","practiceUrl":"https://www.commonsensemedia.org","practiceNote":"Explore digital literacy resources on Common Sense Media.","assignment":"Create a short analysis comparing the same message delivered via three different digital platforms (email, Twitter/X, and a blog post), explaining how the medium shapes the message.","estimatedHrs":3},
-    {"order":5,"title":"Investigative Reading","titleZh":"调查性阅读","objectives":"Apply investigative reading strategies to trace claims, verify sources, and identify misinformation.","readingUrl":"https://www.snopes.com","readingNote":"Read a few fact-check cases on Snopes to understand investigative reading.","videoUrl":"https://www.youtube.com/watch?v=NmY2tFN2rxw","videoNote":"Watch the video on lateral reading and fact-checking.","video2Url":"","video2Note":"","practiceUrl":"https://www.mediawise.org","practiceNote":"Complete a MediaWise fact-checking exercise.","assignment":"Choose a viral social media claim, use lateral reading to investigate its accuracy, and write a one-page fact-check with your findings and evidence.","estimatedHrs":3},
-    {"order":6,"title":"Analytical Essay Writing","titleZh":"分析性文章写作","objectives":"Write well-structured analytical essays about media texts using textual evidence and critical frameworks.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html","readingNote":"Read about developing analytical arguments.","videoUrl":"https://www.youtube.com/watch?v=bmWp73MLkJE","videoNote":"Watch the tutorial on analytical essay development.","video2Url":"","video2Note":"","practiceUrl":"https://www.noredink.com","practiceNote":"Complete analytical writing exercises on NoRedInk.","assignment":"Write a 4-paragraph analytical essay on a media text of your choice, developing an original thesis about how it uses specific techniques to achieve its purpose.","estimatedHrs":4},
-    {"order":7,"title":"Research in the Digital Age","titleZh":"数字时代的研究","objectives":"Navigate digital information environments effectively, evaluate online sources, and conduct ethical research.","readingUrl":"https://owl.purdue.edu/owl/research_and_citation/conducting_research/research_overview/index.html","readingNote":"Read about online research strategies and source evaluation.","videoUrl":"https://www.youtube.com/watch?v=ZyQATm86bCQ","videoNote":"Watch the video on research in the digital age.","video2Url":"","video2Note":"","practiceUrl":"https://www.jstor.org","practiceNote":"Practice searching academic databases for credible sources.","assignment":"Research a media topic using at least four credible digital sources and create an annotated bibliography evaluating each source's credibility and usefulness.","estimatedHrs":4},
-    {"order":8,"title":"Bias & Credibility","titleZh":"偏见与可信度","objectives":"Identify types of media bias, understand how bias influences reporting, and evaluate the credibility of media sources.","readingUrl":"https://www.allsides.com/media-bias/media-bias-chart","readingNote":"Study the AllSides Media Bias Chart and read about how bias is identified.","videoUrl":"https://www.youtube.com/watch?v=pAVMBCM5hBQ","videoNote":"Watch the video on identifying bias in news media.","video2Url":"","video2Note":"","practiceUrl":"https://www.mediabiasfactcheck.com","practiceNote":"Look up several news sources on Media Bias Fact Check.","assignment":"Select one news story covered by two outlets with different political leanings and write an essay analyzing how bias affects each outlet's coverage.","estimatedHrs":3},
-    {"order":9,"title":"Opinion & Editorial Writing","titleZh":"意见与社论写作","objectives":"Write clear, persuasive opinion pieces and editorials that present a position supported by evidence and reasoning.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html","readingNote":"Read about persuasive and opinion writing techniques.","videoUrl":"https://www.youtube.com/watch?v=qHjUP7_5F3s","videoNote":"Watch the video on editorial and opinion writing.","video2Url":"","video2Note":"","practiceUrl":"https://www.nytimes.com/section/opinion","practiceNote":"Read opinion pieces from the New York Times and note their structure.","assignment":"Write a 400-word editorial on a current media or technology issue, taking a clear position and supporting it with at least three pieces of evidence.","estimatedHrs":4},
-    {"order":10,"title":"Multimedia Presentation","titleZh":"多媒体演示","objectives":"Design and deliver an effective multimedia presentation that combines text, images, and data to communicate an analytical argument.","readingUrl":"https://www.presentationzen.com","readingNote":"Read about principles of effective presentation design.","videoUrl":"https://www.youtube.com/watch?v=Iwpi1Lm6dFo","videoNote":"Watch the video on creating effective multimedia presentations.","video2Url":"","video2Note":"","practiceUrl":"https://www.canva.com","practiceNote":"Create a sample slide deck on Canva using design principles.","assignment":"Create a 10-slide multimedia presentation on a media literacy topic, incorporating images, data visualizations, and clear analytical claims.","estimatedHrs":4},
-    {"order":11,"title":"Film Analysis","titleZh":"电影分析","objectives":"Analyze films as texts using cinematic techniques including camera work, editing, sound, and narrative to develop analytical arguments.","readingUrl":"https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html","readingNote":"Read about analyzing visual and filmic texts.","videoUrl":"https://www.youtube.com/watch?v=3Q3eITC01Fk","videoNote":"Watch the video on film analysis techniques.","video2Url":"","video2Note":"","practiceUrl":"https://www.criterion.com","practiceNote":"Read a film essay on the Criterion Collection website.","assignment":"Watch a short film or film clip and write a 400-word analysis examining how specific cinematic techniques create meaning and support the film's theme.","estimatedHrs":4},
-    {"order":12,"title":"Social Media & Writing","titleZh":"社交媒体与写作","objectives":"Analyze how social media platforms shape writing conventions, and write effectively for digital audiences.","readingUrl":"https://www.pewresearch.org/internet/","readingNote":"Read a Pew Research report on social media usage and its effects.","videoUrl":"https://www.youtube.com/watch?v=t37oHFnscX8","videoNote":"Watch the video on writing for social media audiences.","video2Url":"","video2Note":"","practiceUrl":"https://www.commonsensemedia.org","practiceNote":"Complete a social media literacy activity on Common Sense Media.","assignment":"Write the same analytical argument as a 280-character tweet thread (at least 5 tweets), a LinkedIn post, and a blog post, reflecting on how the platform changes your writing.","estimatedHrs":3},
-    {"order":13,"title":"Publishing & Audience","titleZh":"发布与受众","objectives":"Understand the publishing process and how audience awareness shapes writing decisions from draft to final publication.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/index.html","readingNote":"Read about writing for different audiences and publication contexts.","videoUrl":"https://www.youtube.com/watch?v=AyDpopMf4OI","videoNote":"Watch the video on writing for specific audiences.","video2Url":"","video2Note":"","practiceUrl":"https://www.medium.com","practiceNote":"Read examples of published essays on Medium to study audience-oriented writing.","assignment":"Identify a target publication (school newspaper, blog, online magazine) and write a 500-word piece specifically tailored to that outlet's audience and style guidelines.","estimatedHrs":4},
-    {"order":14,"title":"Capstone Media Project","titleZh":"媒体毕业项目","objectives":"Produce an original media analysis or media product that synthesizes course skills in critical reading, analytical writing, and media literacy.","readingUrl":"https://medialiteracynow.org","readingNote":"Review media literacy frameworks for your capstone project.","videoUrl":"https://www.youtube.com/watch?v=IeHLJ1EfSss","videoNote":"Watch the overview of media literacy principles for your final project.","video2Url":"","video2Note":"","practiceUrl":"https://www.canva.com","practiceNote":"Use Canva or another tool to create your final media project.","assignment":"Create a 6-8 page analytical research paper or a multimedia project (video essay, podcast, or digital magazine) on a media literacy topic of your choice, incorporating research, analysis, and original argument.","estimatedHrs":8}
+    {
+      "order": 1,
+      "title": "Media Literacy",
+      "titleZh": "媒体素养",
+      "objectives": "Define media literacy and understand why critical evaluation of media messages is essential in the modern world.",
+      "readingUrl": "https://medialiteracynow.org/what-is-media-literacy/",
+      "readingNote": "Read the overview of media literacy principles.",
+      "videoUrl": "https://www.youtube.com/watch?v=IeHLJ1EfSss",
+      "videoNote": "Watch the introduction to media literacy.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.allsides.com",
+      "practiceNote": "Browse AllSides to see news stories from multiple political perspectives.",
+      "assignment": "Choose a news story and compare how three different outlets cover it. Write a one-page analysis of the differences in framing, language, and emphasis.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 2,
+      "title": "Analyzing News Media",
+      "titleZh": "分析新闻媒体",
+      "objectives": "Apply analytical frameworks to evaluate news articles for accuracy, bias, sourcing, and journalistic standards.",
+      "readingUrl": "https://www.poynter.org",
+      "readingNote": "Read articles on news analysis and journalistic ethics from Poynter.",
+      "videoUrl": "https://www.youtube.com/watch?v=pAVMBCM5hBQ",
+      "videoNote": "Watch the video on how to analyze news articles.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.factcheck.org",
+      "practiceNote": "Use FactCheck.org to investigate a recent news claim.",
+      "assignment": "Analyze a news article using SIFT (Stop, Investigate the source, Find better coverage, Trace claims) and write a one-page evaluation.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 3,
+      "title": "Visual Rhetoric",
+      "titleZh": "视觉修辞",
+      "objectives": "Analyze how images, design, color, and layout create meaning and persuade audiences.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/rhetorical_situation/index.html",
+      "readingNote": "Read about rhetorical principles applied to visual media.",
+      "videoUrl": "https://www.youtube.com/watch?v=B2BbzLrm7TQ",
+      "videoNote": "Watch the introduction to visual rhetoric.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.adbusters.org",
+      "practiceNote": "Analyze an advertisement's visual rhetoric on Adbusters.",
+      "assignment": "Choose a print advertisement and write a rhetorical analysis examining how visual elements (image, color, layout, text) work together to persuade the audience.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 4,
+      "title": "Digital Communication",
+      "titleZh": "数字传播",
+      "objectives": "Understand how digital media changes communication norms, audience expectations, and message construction.",
+      "readingUrl": "https://www.pewresearch.org/internet/",
+      "readingNote": "Read a Pew Research report on digital communication trends.",
+      "videoUrl": "https://www.youtube.com/watch?v=t37oHFnscX8",
+      "videoNote": "Watch the video on digital communication and its effects.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.commonsensemedia.org",
+      "practiceNote": "Explore digital literacy resources on Common Sense Media.",
+      "assignment": "Create a short analysis comparing the same message delivered via three different digital platforms (email, Twitter/X, and a blog post), explaining how the medium shapes the message.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 5,
+      "title": "Investigative Reading",
+      "titleZh": "调查性阅读",
+      "objectives": "Apply investigative reading strategies to trace claims, verify sources, and identify misinformation.",
+      "readingUrl": "https://www.snopes.com",
+      "readingNote": "Read a few fact-check cases on Snopes to understand investigative reading.",
+      "videoUrl": "https://www.youtube.com/watch?v=NmY2tFN2rxw",
+      "videoNote": "Watch the video on lateral reading and fact-checking.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.mediawise.org",
+      "practiceNote": "Complete a MediaWise fact-checking exercise.",
+      "assignment": "Choose a viral social media claim, use lateral reading to investigate its accuracy, and write a one-page fact-check with your findings and evidence.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 6,
+      "title": "Analytical Essay Writing",
+      "titleZh": "分析性文章写作",
+      "objectives": "Write well-structured analytical essays about media texts using textual evidence and critical frameworks.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html",
+      "readingNote": "Read about developing analytical arguments.",
+      "videoUrl": "https://www.youtube.com/watch?v=bmWp73MLkJE",
+      "videoNote": "Watch the tutorial on analytical essay development.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.noredink.com",
+      "practiceNote": "Complete analytical writing exercises on NoRedInk.",
+      "assignment": "Write a 4-paragraph analytical essay on a media text of your choice, developing an original thesis about how it uses specific techniques to achieve its purpose.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 7,
+      "title": "Research in the Digital Age",
+      "titleZh": "数字时代的研究",
+      "objectives": "Navigate digital information environments effectively, evaluate online sources, and conduct ethical research.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/research_overview/index.html",
+      "readingNote": "Read about online research strategies and source evaluation.",
+      "videoUrl": "https://www.youtube.com/watch?v=ZyQATm86bCQ",
+      "videoNote": "Watch the video on research in the digital age.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.jstor.org",
+      "practiceNote": "Practice searching academic databases for credible sources.",
+      "assignment": "Research a media topic using at least four credible digital sources and create an annotated bibliography evaluating each source's credibility and usefulness.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 8,
+      "title": "Bias & Credibility",
+      "titleZh": "偏见与可信度",
+      "objectives": "Identify types of media bias, understand how bias influences reporting, and evaluate the credibility of media sources.",
+      "readingUrl": "https://www.allsides.com/media-bias/media-bias-chart",
+      "readingNote": "Study the AllSides Media Bias Chart and read about how bias is identified.",
+      "videoUrl": "https://www.youtube.com/watch?v=pAVMBCM5hBQ",
+      "videoNote": "Watch the video on identifying bias in news media.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.mediabiasfactcheck.com",
+      "practiceNote": "Look up several news sources on Media Bias Fact Check.",
+      "assignment": "Select one news story covered by two outlets with different political leanings and write an essay analyzing how bias affects each outlet's coverage.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 9,
+      "title": "Opinion & Editorial Writing",
+      "titleZh": "意见与社论写作",
+      "objectives": "Write clear, persuasive opinion pieces and editorials that present a position supported by evidence and reasoning.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "readingNote": "Read about persuasive and opinion writing techniques.",
+      "videoUrl": "https://www.youtube.com/watch?v=qHjUP7_5F3s",
+      "videoNote": "Watch the video on editorial and opinion writing.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.nytimes.com/section/opinion",
+      "practiceNote": "Read opinion pieces from the New York Times and note their structure.",
+      "assignment": "Write a 400-word editorial on a current media or technology issue, taking a clear position and supporting it with at least three pieces of evidence.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 10,
+      "title": "Multimedia Presentation",
+      "titleZh": "多媒体演示",
+      "objectives": "Design and deliver an effective multimedia presentation that combines text, images, and data to communicate an analytical argument.",
+      "readingUrl": "https://www.presentationzen.com",
+      "readingNote": "Read about principles of effective presentation design.",
+      "videoUrl": "https://www.youtube.com/watch?v=Iwpi1Lm6dFo",
+      "videoNote": "Watch the video on creating effective multimedia presentations.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.canva.com",
+      "practiceNote": "Create a sample slide deck on Canva using design principles.",
+      "assignment": "Create a 10-slide multimedia presentation on a media literacy topic, incorporating images, data visualizations, and clear analytical claims.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 11,
+      "title": "Film Analysis",
+      "titleZh": "电影分析",
+      "objectives": "Analyze films as texts using cinematic techniques including camera work, editing, sound, and narrative to develop analytical arguments.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html",
+      "readingNote": "Read about analyzing visual and filmic texts.",
+      "videoUrl": "https://www.youtube.com/watch?v=3Q3eITC01Fk",
+      "videoNote": "Watch the video on film analysis techniques.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.criterion.com",
+      "practiceNote": "Read a film essay on the Criterion Collection website.",
+      "assignment": "Watch a short film or film clip and write a 400-word analysis examining how specific cinematic techniques create meaning and support the film's theme.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 12,
+      "title": "Social Media & Writing",
+      "titleZh": "社交媒体与写作",
+      "objectives": "Analyze how social media platforms shape writing conventions, and write effectively for digital audiences.",
+      "readingUrl": "https://www.pewresearch.org/internet/",
+      "readingNote": "Read a Pew Research report on social media usage and its effects.",
+      "videoUrl": "https://www.youtube.com/watch?v=t37oHFnscX8",
+      "videoNote": "Watch the video on writing for social media audiences.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.commonsensemedia.org",
+      "practiceNote": "Complete a social media literacy activity on Common Sense Media.",
+      "assignment": "Write the same analytical argument as a 280-character tweet thread (at least 5 tweets), a LinkedIn post, and a blog post, reflecting on how the platform changes your writing.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 13,
+      "title": "Publishing & Audience",
+      "titleZh": "发布与受众",
+      "objectives": "Understand the publishing process and how audience awareness shapes writing decisions from draft to final publication.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/index.html",
+      "readingNote": "Read about writing for different audiences and publication contexts.",
+      "videoUrl": "https://www.youtube.com/watch?v=AyDpopMf4OI",
+      "videoNote": "Watch the video on writing for specific audiences.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.medium.com",
+      "practiceNote": "Read examples of published essays on Medium to study audience-oriented writing.",
+      "assignment": "Identify a target publication (school newspaper, blog, online magazine) and write a 500-word piece specifically tailored to that outlet's audience and style guidelines.",
+      "estimatedHrs": 4
+    }
   ],
   "quizQuestions": [
-    {"moduleOrder":1,"order":1,"question":"What is media literacy?","options":["The ability to read quickly","The ability to access, analyze, evaluate, and create media in various forms","The study of journalism","The ability to use social media platforms"],"answer":"The ability to access, analyze, evaluate, and create media in various forms","explanation":"Media literacy is the ability to critically access, analyze, evaluate, and create media messages in all forms.","points":1},
-    {"moduleOrder":1,"order":2,"question":"Why is media literacy important in modern society?","options":["It is required for school","People are constantly exposed to media messages that shape their beliefs and decisions","It helps you use technology faster","It replaces the need for reading books"],"answer":"People are constantly exposed to media messages that shape their beliefs and decisions","explanation":"Media literacy helps individuals critically evaluate the messages they consume, making them more informed citizens.","points":1},
-    {"moduleOrder":1,"order":3,"question":"What does 'framing' mean in media analysis?","options":["The physical frame around a newspaper","How a media outlet selects and presents information to shape how audiences perceive an issue","The format of a television show","The size of a headline"],"answer":"How a media outlet selects and presents information to shape how audiences perceive an issue","explanation":"Framing refers to how media choose which aspects of a story to emphasize, influencing how audiences interpret events.","points":1},
-    {"moduleOrder":1,"order":4,"question":"What is the difference between news and opinion content in media?","options":["News is longer","News reports verifiable facts; opinion expresses the writer's views and interpretations","Opinion uses more sources","There is no difference in modern media"],"answer":"News reports verifiable facts; opinion expresses the writer's views and interpretations","explanation":"News journalism aims to report facts objectively; opinion pieces explicitly express the author's perspective.","points":1},
-    {"moduleOrder":1,"order":5,"question":"What is convergence in media?","options":["When newspapers close","The blending of different media platforms and technologies into a single digital environment","A type of camera technique","A journalistic writing style"],"answer":"The blending of different media platforms and technologies into a single digital environment","explanation":"Convergence refers to how different forms of media—print, video, audio—now coexist and blend on digital platforms.","points":1},
-    {"moduleOrder":2,"order":1,"question":"What is the SIFT method for evaluating news?","options":["Scan, Interpret, Find, Test","Stop, Investigate the source, Find better coverage, Trace claims","Search, Identify, Filter, Trust","Summarize, Inquire, Fact-check, Think"],"answer":"Stop, Investigate the source, Find better coverage, Trace claims","explanation":"SIFT is a fact-checking strategy: Stop before sharing, Investigate the source, Find better coverage, and Trace claims to original context.","points":1},
-    {"moduleOrder":2,"order":2,"question":"What is 'lateral reading' in source verification?","options":["Reading a source from left to right","Opening multiple browser tabs to research what others say about a source, rather than reading deeply within it","Reading the headline only","Reading multiple articles in sequence"],"answer":"Opening multiple browser tabs to research what others say about a source, rather than reading deeply within it","explanation":"Lateral reading means checking what other credible sources say about a website or author rather than evaluating the site on its own terms.","points":1},
-    {"moduleOrder":2,"order":3,"question":"What is the purpose of fact-checking?","options":["To change a story's conclusion","To verify whether claims made in media content are accurate and supported by evidence","To summarize news articles","To identify the writer's bias"],"answer":"To verify whether claims made in media content are accurate and supported by evidence","explanation":"Fact-checking is the process of investigating and verifying factual claims made in news or other content.","points":1},
-    {"moduleOrder":2,"order":4,"question":"What distinguishes a credible news source?","options":["It has the most followers","It has a clear editorial process, transparency about sources, and a record of accuracy","It is free to access","It reports only positive news"],"answer":"It has a clear editorial process, transparency about sources, and a record of accuracy","explanation":"Credible news sources are transparent about their methods, cite sources, issue corrections, and have a consistent record of accuracy.","points":1},
-    {"moduleOrder":2,"order":5,"question":"What is 'clickbait'?","options":["A type of news article","Misleading or sensationalized content designed to attract clicks rather than inform","A social media platform","A fact-checking technique"],"answer":"Misleading or sensationalized content designed to attract clicks rather than inform","explanation":"Clickbait uses exaggerated or misleading headlines to generate traffic without delivering meaningful or accurate information.","points":1},
-    {"moduleOrder":3,"order":1,"question":"What is visual rhetoric?","options":["The study of photography","The use of visual elements to communicate meaning and persuade an audience","Writing about images","A type of graphic design"],"answer":"The use of visual elements to communicate meaning and persuade an audience","explanation":"Visual rhetoric examines how images, design, color, and layout function as forms of communication and persuasion.","points":1},
-    {"moduleOrder":3,"order":2,"question":"How does color function in visual rhetoric?","options":["It only makes images prettier","Color conveys emotion, establishes tone, and directs the viewer's attention","It indicates the age of the image","It has no rhetorical function"],"answer":"Color conveys emotion, establishes tone, and directs the viewer's attention","explanation":"Color is a powerful visual tool that creates emotional responses and guides the viewer's interpretation of an image.","points":1},
-    {"moduleOrder":3,"order":3,"question":"What is 'composition' in visual analysis?","options":["The written text in an image","The arrangement of visual elements within the frame","The color palette used","The subject of the photograph"],"answer":"The arrangement of visual elements within the frame","explanation":"Composition refers to how visual elements are arranged within the image, affecting emphasis, balance, and meaning.","points":1},
-    {"moduleOrder":3,"order":4,"question":"What makes an image 'iconic' in media studies?","options":["It is very large","It comes to symbolize a broader event, idea, or cultural moment beyond its literal content","It was expensive to produce","It uses bright colors"],"answer":"It comes to symbolize a broader event, idea, or cultural moment beyond its literal content","explanation":"An iconic image transcends its literal content to become a powerful cultural symbol representing larger ideas or events.","points":1},
-    {"moduleOrder":3,"order":5,"question":"What is the relationship between text and image in multimodal media?","options":["Text and image always mean the same thing","Text and image interact to create meaning that neither can produce alone","Images are always more important than text","Text explains what images cannot show"],"answer":"Text and image interact to create meaning that neither can produce alone","explanation":"In multimodal media, text and images work together dynamically, each modifying and enhancing the meaning of the other.","points":1},
-    {"moduleOrder":4,"order":1,"question":"What does 'the medium is the message' mean?","options":["The content of a message is more important than how it is delivered","The form or channel through which a message is delivered shapes its meaning and impact","Messages in print are more credible than digital messages","Media platforms all work the same way"],"answer":"The form or channel through which a message is delivered shapes its meaning and impact","explanation":"Marshall McLuhan's phrase means that the medium itself—TV, internet, print—fundamentally shapes how a message is received and understood.","points":1},
-    {"moduleOrder":4,"order":2,"question":"How does digital communication differ from print communication?","options":["Digital is always less credible","Digital communication is immediate, interactive, and allows for rapid distribution and response","Print is always more accurate","They are essentially the same"],"answer":"Digital communication is immediate, interactive, and allows for rapid distribution and response","explanation":"Digital media enables instant, interactive communication with global audiences, fundamentally changing how messages are created and received.","points":1},
-    {"moduleOrder":4,"order":3,"question":"What is a 'filter bubble' in digital communication?","options":["A spam filter","An algorithmically created environment where users are exposed only to content that aligns with their existing views","A type of news aggregator","A cybersecurity tool"],"answer":"An algorithmically created environment where users are exposed only to content that aligns with their existing views","explanation":"Filter bubbles occur when algorithms show users only content that matches their existing preferences, limiting exposure to diverse perspectives.","points":1},
-    {"moduleOrder":4,"order":4,"question":"What is viral content?","options":["Content that spreads computer viruses","Content that spreads rapidly and widely through sharing on digital networks","Paid advertising content","Long-form journalism"],"answer":"Content that spreads rapidly and widely through sharing on digital networks","explanation":"Viral content spreads rapidly through social sharing, often because it provokes strong emotional responses.","points":1},
-    {"moduleOrder":4,"order":5,"question":"What is digital citizenship?","options":["Owning many digital devices","The responsible and ethical use of digital technology and online communities","Having many social media followers","Being skilled at coding"],"answer":"The responsible and ethical use of digital technology and online communities","explanation":"Digital citizenship involves using technology ethically, respectfully, and safely while contributing positively to online communities.","points":1},
-    {"moduleOrder":5,"order":1,"question":"What is misinformation?","options":["Information that is very old","False or inaccurate information that is spread without malicious intent","Opinion disguised as fact","A type of clickbait"],"answer":"False or inaccurate information that is spread without malicious intent","explanation":"Misinformation is false or inaccurate information shared by people who may not know it is incorrect.","points":1},
-    {"moduleOrder":5,"order":2,"question":"What is disinformation?","options":["Outdated information","False information spread deliberately to deceive or mislead","Information that is hard to understand","A type of editorial opinion"],"answer":"False information spread deliberately to deceive or mislead","explanation":"Disinformation is intentionally false or misleading information created and spread to deceive audiences.","points":1},
-    {"moduleOrder":5,"order":3,"question":"What does it mean to trace a claim to its original source?","options":["To find the original creator, context, and evidence behind a claim rather than relying on secondary reports","To read the most popular version of a story","To cite a news article","To summarize a claim"],"answer":"To find the original creator, context, and evidence behind a claim rather than relying on secondary reports","explanation":"Tracing a claim means going back to the primary source of a claim to verify whether it has been accurately reported.","points":1},
-    {"moduleOrder":5,"order":4,"question":"What is confirmation bias in media consumption?","options":["Reading multiple sources","The tendency to seek out and favor information that confirms existing beliefs","Verifying information before sharing","Reading fact-checked news only"],"answer":"The tendency to seek out and favor information that confirms existing beliefs","explanation":"Confirmation bias leads people to accept information that agrees with their existing views and reject information that challenges them.","points":1},
-    {"moduleOrder":5,"order":5,"question":"What is 'deep fake' media?","options":["Very detailed journalism","AI-generated video or audio that realistically depicts people saying or doing things they never said or did","A type of documentary film","Long investigative journalism"],"answer":"AI-generated video or audio that realistically depicts people saying or doing things they never said or did","explanation":"Deep fakes are synthetic media created using artificial intelligence to convincingly depict real people in fabricated scenarios.","points":1},
-    {"moduleOrder":6,"order":1,"question":"What is an analytical thesis in a media essay?","options":["A summary of the media text","A debatable claim about how or why a media text works to achieve a particular effect","A description of the media text","A list of the media text's features"],"answer":"A debatable claim about how or why a media text works to achieve a particular effect","explanation":"An analytical thesis makes a specific, arguable claim about the meaning, strategy, or effect of a media text.","points":1},
-    {"moduleOrder":6,"order":2,"question":"What is textual evidence in media analysis?","options":["A quote from a textbook","Specific details from the media text that support the analytical claim","A summary of the media text","A citation from a news article"],"answer":"Specific details from the media text that support the analytical claim","explanation":"Textual evidence in media analysis refers to specific details—words, images, data—from the media text that support the writer's argument.","points":1},
-    {"moduleOrder":6,"order":3,"question":"What should follow evidence in an analytical media essay?","options":["More evidence","Analysis explaining how the evidence supports the claim","A new paragraph","A counterargument"],"answer":"Analysis explaining how the evidence supports the claim","explanation":"After presenting evidence, the writer must explain how it connects to and supports the analytical argument.","points":1},
-    {"moduleOrder":6,"order":4,"question":"What is a media text?","options":["A written news article only","Any form of communication produced and distributed by media, including articles, films, advertisements, and social media posts","A textbook about media","A transcript of a speech"],"answer":"Any form of communication produced and distributed by media, including articles, films, advertisements, and social media posts","explanation":"A media text is any artifact created by media organizations or individuals—written, visual, audio, or digital.","points":1},
-    {"moduleOrder":6,"order":5,"question":"What distinguishes media analysis from media summary?","options":["Media analysis is longer","Media analysis evaluates how and why a text works; summary only describes what it contains","Summary is harder to write","Media analysis uses more quotations"],"answer":"Media analysis evaluates how and why a text works; summary only describes what it contains","explanation":"Analysis examines the techniques, strategies, and effects of a media text; summary merely describes its content.","points":1},
-    {"moduleOrder":7,"order":1,"question":"What is a database in academic research?","options":["A collection of social media posts","An organized collection of peer-reviewed articles, books, and academic resources","A library website","A search engine like Google"],"answer":"An organized collection of peer-reviewed articles, books, and academic resources","explanation":"Academic databases provide access to scholarly journals, peer-reviewed articles, and research publications.","points":1},
-    {"moduleOrder":7,"order":2,"question":"What is the difference between a search engine and an academic database?","options":["They are the same","A search engine indexes all web content; a database indexes curated scholarly sources","Academic databases are free to use","Search engines provide more accurate results"],"answer":"A search engine indexes all web content; a database indexes curated scholarly sources","explanation":"Search engines cast a wide net over all web content; academic databases focus on vetted scholarly sources.","points":1},
-    {"moduleOrder":7,"order":3,"question":"What does it mean to evaluate a website's 'authority'?","options":["Checking how many visitors it has","Assessing the credentials and expertise of the author or organization behind the content","Finding out how old the website is","Checking if it has advertisements"],"answer":"Assessing the credentials and expertise of the author or organization behind the content","explanation":"Evaluating authority means determining whether the author or organization has the expertise and credibility to speak on the topic.","points":1},
-    {"moduleOrder":7,"order":4,"question":"What is an open-access journal?","options":["A journal anyone can write for","A peer-reviewed journal whose content is freely available online to all readers","A popular magazine","A self-published blog"],"answer":"A peer-reviewed journal whose content is freely available online to all readers","explanation":"Open-access journals are peer-reviewed publications that make their content freely available without subscription fees.","points":1},
-    {"moduleOrder":7,"order":5,"question":"Why is it important to use a variety of source types in media research?","options":["To make the bibliography longer","To triangulate findings across different types of evidence, strengthening the argument's credibility","Because one type of source is never accurate","To meet a length requirement"],"answer":"To triangulate findings across different types of evidence, strengthening the argument's credibility","explanation":"Using diverse source types—news articles, academic studies, primary documents—provides multiple perspectives and strengthens research.","points":1},
-    {"moduleOrder":8,"order":1,"question":"What is media bias?","options":["When reporters make grammatical errors","When media coverage systematically favors certain perspectives, groups, or interpretations over others","A type of political advertisement","When news is reported incorrectly"],"answer":"When media coverage systematically favors certain perspectives, groups, or interpretations over others","explanation":"Media bias occurs when reporting reflects a systematic preference for certain viewpoints, whether in story selection, framing, or language.","points":1},
-    {"moduleOrder":8,"order":2,"question":"What is 'false balance' in journalism?","options":["When a news article has too many quotations","Giving equal coverage to positions that are not equally supported by evidence, creating a false impression of debate","When a reporter is biased","When a story has no sources"],"answer":"Giving equal coverage to positions that are not equally supported by evidence, creating a false impression of debate","explanation":"False balance treats two sides as equally credible when the evidence strongly favors one position, misleading audiences.","points":1},
-    {"moduleOrder":8,"order":3,"question":"What is agenda-setting theory?","options":["How governments control the media","The theory that media don't tell us what to think, but tell us what to think about by selecting which stories to cover","How journalists write stories","How advertising affects content"],"answer":"The theory that media don't tell us what to think, but tell us what to think about by selecting which stories to cover","explanation":"Agenda-setting theory suggests media influence public attention by deciding which stories and issues to cover prominently.","points":1},
-    {"moduleOrder":8,"order":4,"question":"What is selection bias in news reporting?","options":["Selecting only positive stories","When media systematically choose which stories to cover in ways that favor particular viewpoints or narratives","Choosing only international news","Preferring local stories"],"answer":"When media systematically choose which stories to cover in ways that favor particular viewpoints or narratives","explanation":"Selection bias involves systematically choosing or avoiding certain stories based on viewpoint, creating a skewed picture of reality.","points":1},
-    {"moduleOrder":8,"order":5,"question":"Why should media consumers seek multiple sources of information?","options":["To spend more time reading","To get a more complete and balanced picture by comparing coverage across different outlets","Because one source is always wrong","To satisfy a school requirement"],"answer":"To get a more complete and balanced picture by comparing coverage across different outlets","explanation":"Consulting multiple sources helps identify bias, fill in missing perspectives, and form more accurate understanding.","points":1},
-    {"moduleOrder":9,"order":1,"question":"What is the main goal of an editorial?","options":["To report facts neutrally","To express and argue for a specific opinion or position on an issue","To entertain readers with a story","To summarize recent news"],"answer":"To express and argue for a specific opinion or position on an issue","explanation":"An editorial presents and argues for a specific viewpoint, aiming to persuade readers.","points":1},
-    {"moduleOrder":9,"order":2,"question":"What is the difference between an editorial and a news article?","options":["Editorials are longer","A news article reports facts; an editorial expresses and argues a viewpoint","News articles are more credible","Editorials use more statistics"],"answer":"A news article reports facts; an editorial expresses and argues a viewpoint","explanation":"News articles aim to report facts objectively; editorials explicitly advocate for a position.","points":1},
-    {"moduleOrder":9,"order":3,"question":"What should an opinion editorial include?","options":["Only personal anecdotes","A clear position, supporting evidence and reasoning, and acknowledgment of counterarguments","Only statistics","A summary of news events"],"answer":"A clear position, supporting evidence and reasoning, and acknowledgment of counterarguments","explanation":"Strong editorials present a clear claim, support it with evidence and logic, and address opposing viewpoints.","points":1},
-    {"moduleOrder":9,"order":4,"question":"What is a 'call to action' in persuasive writing?","options":["A dramatic opening","A direct request for the audience to take a specific action","A counterargument","A conclusion that summarizes"],"answer":"A direct request for the audience to take a specific action","explanation":"A call to action explicitly asks the audience to do something in response to the argument.","points":1},
-    {"moduleOrder":9,"order":5,"question":"Why is knowing your audience important when writing an editorial?","options":["To determine the length","To tailor your argument, evidence, and tone to what will be most persuasive to your specific readers","To choose the format","To avoid using evidence"],"answer":"To tailor your argument, evidence, and tone to what will be most persuasive to your specific readers","explanation":"Audience awareness helps writers choose evidence, examples, and language that will resonate with and persuade their intended readers.","points":1},
-    {"moduleOrder":10,"order":1,"question":"What is a multimedia presentation?","options":["A very long slide deck","A presentation that combines text, images, audio, video, and/or data visualization to communicate a message","A spoken presentation only","A written report with pictures"],"answer":"A presentation that combines text, images, audio, video, and/or data visualization to communicate a message","explanation":"Multimedia presentations integrate multiple modalities to communicate effectively to audiences.","points":1},
-    {"moduleOrder":10,"order":2,"question":"What is the 'less is more' principle in presentation design?","options":["Using fewer slides","Minimizing text and visual clutter on each slide to maximize clarity and impact","Using smaller fonts","Having fewer ideas in a presentation"],"answer":"Minimizing text and visual clutter on each slide to maximize clarity and impact","explanation":"Effective presentation design uses minimal text and focused visuals, letting key ideas stand out clearly.","points":1},
-    {"moduleOrder":10,"order":3,"question":"What is data visualization?","options":["A photograph of data","A graphic representation of information (charts, graphs, infographics) to make data understandable","A table of numbers","Raw data in a spreadsheet"],"answer":"A graphic representation of information (charts, graphs, infographics) to make data understandable","explanation":"Data visualization transforms complex data into visual formats that are easier to understand and communicate.","points":1},
-    {"moduleOrder":10,"order":4,"question":"What is the purpose of a presentation narrative?","options":["To read text aloud from slides","To guide the audience through the argument with a clear story or logical sequence","To summarize all the information","To introduce yourself"],"answer":"To guide the audience through the argument with a clear story or logical sequence","explanation":"A presentation narrative creates a coherent flow that guides the audience through the argument in a logical and engaging way.","points":1},
-    {"moduleOrder":10,"order":5,"question":"What is the role of design in a multimedia presentation?","options":["To make the presentation look professional only","To support and enhance the communication of the argument through visual clarity and coherence","To hide the lack of content","To replace the spoken component"],"answer":"To support and enhance the communication of the argument through visual clarity and coherence","explanation":"Design choices—layout, color, typography—should serve the argument, making content clear and engaging.","points":1},
-    {"moduleOrder":11,"order":1,"question":"What is mise-en-scène in film analysis?","options":["A French term for the plot","Everything placed in front of the camera, including setting, lighting, costume, and actors' positions","The editing style of a film","The film's soundtrack"],"answer":"Everything placed in front of the camera, including setting, lighting, costume, and actors' positions","explanation":"Mise-en-scène refers to the visual elements arranged within the frame: setting, props, lighting, and staging.","points":1},
-    {"moduleOrder":11,"order":2,"question":"What does cinematography refer to in film analysis?","options":["The written screenplay","The art and technique of camera work, including framing, movement, and lighting","The editing of the film","The sound design"],"answer":"The art and technique of camera work, including framing, movement, and lighting","explanation":"Cinematography encompasses all decisions about how the camera captures images, including angles, movement, and lighting.","points":1},
-    {"moduleOrder":11,"order":3,"question":"What is editing in film and why is it significant?","options":["Writing the script","The joining of shots to create sequence, rhythm, and meaning","Choosing the music","Directing the actors"],"answer":"The joining of shots to create sequence, rhythm, and meaning","explanation":"Editing assembles shots to create narrative flow, control pacing, juxtapose images, and shape the audience's experience.","points":1},
-    {"moduleOrder":11,"order":4,"question":"What is a close-up shot in filmmaking?","options":["A shot taken from far away","A shot that frames a face or object in detail, drawing attention to expression or significance","A shot that shows the whole scene","A moving camera shot"],"answer":"A shot that frames a face or object in detail, drawing attention to expression or significance","explanation":"Close-ups focus tightly on a face or detail to emphasize emotion, importance, or meaning.","points":1},
-    {"moduleOrder":11,"order":5,"question":"What is diegetic sound in film?","options":["Music added in post-production","Sound that exists within the world of the film and can be heard by the characters","Narration spoken over the film","Sound effects added in editing"],"answer":"Sound that exists within the world of the film and can be heard by the characters","explanation":"Diegetic sound originates from the story world—dialogue, footsteps, ambient sounds that characters can hear.","points":1},
-    {"moduleOrder":12,"order":1,"question":"How do social media platforms shape writing style?","options":["They have no effect on writing","Platform constraints—character limits, audience expectations, and algorithmic preferences—shape how content is written","They always encourage longer writing","They make writing more formal"],"answer":"Platform constraints—character limits, audience expectations, and algorithmic preferences—shape how content is written","explanation":"Each social media platform has unique constraints and audience expectations that significantly influence how content is written and received.","points":1},
-    {"moduleOrder":12,"order":2,"question":"What is engagement in social media writing?","options":["The number of words in a post","Interactions (likes, shares, comments, clicks) that indicate an audience's response to content","The quality of writing","The length of a caption"],"answer":"Interactions (likes, shares, comments, clicks) that indicate an audience's response to content","explanation":"Engagement refers to how actively the audience responds to content through various platform interactions.","points":1},
-    {"moduleOrder":12,"order":3,"question":"What is a hashtag and how is it used rhetorically?","options":["A punctuation mark","A keyword marked with # that categorizes content and can create community or amplify a message","A type of hyperlink","An image caption"],"answer":"A keyword marked with # that categorizes content and can create community or amplify a message","explanation":"Hashtags organize content around topics and can be used to join conversations, build movements, or increase visibility.","points":1},
-    {"moduleOrder":12,"order":4,"question":"What is influencer marketing in social media?","options":["Government advertising","Using individuals with large social media followings to promote products, ideas, or brands","A type of news coverage","Algorithmic content promotion"],"answer":"Using individuals with large social media followings to promote products, ideas, or brands","explanation":"Influencer marketing leverages trusted social media personalities to reach and persuade their established audiences.","points":1},
-    {"moduleOrder":12,"order":5,"question":"What ethical considerations arise in social media writing?","options":["Only length and formatting","Accuracy, privacy, attribution, and the potential for spreading misinformation or causing harm","Follower count only","Using the correct hashtags"],"answer":"Accuracy, privacy, attribution, and the potential for spreading misinformation or causing harm","explanation":"Social media writing carries ethical responsibilities around accuracy, respect for privacy, proper attribution, and awareness of potential harm.","points":1},
-    {"moduleOrder":13,"order":1,"question":"What does 'publishing for a specific audience' mean?","options":["Printing many copies","Tailoring the content, tone, and format of writing to the expectations and needs of a particular readership","Making writing available online","Writing about popular topics"],"answer":"Tailoring the content, tone, and format of writing to the expectations and needs of a particular readership","explanation":"Publishing for a specific audience means understanding and addressing the knowledge, values, and expectations of your intended readers.","points":1},
-    {"moduleOrder":13,"order":2,"question":"What is editorial voice?","options":["The volume of the presenter","The distinctive tone, perspective, and style that identifies a publication or writer","The use of formal language only","The number of editorials published"],"answer":"The distinctive tone, perspective, and style that identifies a publication or writer","explanation":"Editorial voice is the recognizable personality and perspective that distinguishes a publication's or writer's work.","points":1},
-    {"moduleOrder":13,"order":3,"question":"What is a style guide in publishing?","options":["A book about fashion","A set of standards for writing and formatting used consistently within a publication","A grammar textbook","A list of approved topics"],"answer":"A set of standards for writing and formatting used consistently within a publication","explanation":"A style guide establishes rules for grammar, punctuation, formatting, and terminology to ensure consistency across a publication.","points":1},
-    {"moduleOrder":13,"order":4,"question":"What is the revision process in professional writing?","options":["Writing quickly without revision","Multiple rounds of editing for content, style, and mechanics before publication","Checking spelling only","Having one person read the draft"],"answer":"Multiple rounds of editing for content, style, and mechanics before publication","explanation":"Professional writing involves systematic revision at multiple levels—content, structure, style, and proofreading—before publication.","points":1},
-    {"moduleOrder":13,"order":5,"question":"Why is attribution important in published writing?","options":["It makes articles longer","It gives credit to sources, builds credibility, and allows readers to verify information","It is required by law","It replaces the need for original ideas"],"answer":"It gives credit to sources, builds credibility, and allows readers to verify information","explanation":"Attribution acknowledges source material, demonstrates intellectual honesty, and enables readers to check facts and find further information.","points":1},
-    {"moduleOrder":14,"order":1,"question":"What is a capstone project in media analysis?","options":["The first assignment in a course","A culminating project that synthesizes course learning in a substantial original work","A group presentation only","A short quiz"],"answer":"A culminating project that synthesizes course learning in a substantial original work","explanation":"A capstone project integrates the skills and knowledge developed throughout a course into a major original work.","points":1},
-    {"moduleOrder":14,"order":2,"question":"What is a video essay?","options":["A written essay about video games","An analytical argument delivered in video format, combining narration, visuals, and editing","A recorded lecture","A news broadcast"],"answer":"An analytical argument delivered in video format, combining narration, visuals, and editing","explanation":"A video essay presents analytical arguments through the medium of video, integrating narration, images, film clips, and editing.","points":1},
-    {"moduleOrder":14,"order":3,"question":"What distinguishes a media analysis from a summary of media content?","options":["Length only","Analysis evaluates how and why a media text works; summary describes what it contains","Analysis uses academic sources","Summary uses more quotations"],"answer":"Analysis evaluates how and why a media text works; summary describes what it contains","explanation":"Analysis examines techniques, strategies, and effects; summary merely describes content without evaluating how it functions.","points":1},
-    {"moduleOrder":14,"order":4,"question":"What is a digital magazine?","options":["An online version of a print magazine only","A curated digital publication featuring multimedia content, articles, and visual design","A social media account","A blog with many authors"],"answer":"A curated digital publication featuring multimedia content, articles, and visual design","explanation":"A digital magazine is a curated online publication that integrates text, images, video, and interactive elements.","points":1},
-    {"moduleOrder":14,"order":5,"question":"Why is media literacy a lifelong skill?","options":["Because you can only learn it in school","Because the media landscape continuously evolves and critical evaluation skills are always needed","Because media is always misleading","Because technology never changes"],"answer":"Because the media landscape continuously evolves and critical evaluation skills are always needed","explanation":"As media forms, platforms, and technologies change, the ability to critically evaluate media messages remains essential.","points":1}
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "What is media literacy?",
+      "options": [
+        "The ability to read quickly",
+        "The ability to access, analyze, evaluate, and create media in various forms",
+        "The study of journalism",
+        "The ability to use social media platforms"
+      ],
+      "answer": "The ability to access, analyze, evaluate, and create media in various forms",
+      "explanation": "Media literacy is the ability to critically access, analyze, evaluate, and create media messages in all forms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Why is media literacy important in modern society?",
+      "options": [
+        "It is required for school",
+        "People are constantly exposed to media messages that shape their beliefs and decisions",
+        "It helps you use technology faster",
+        "It replaces the need for reading books"
+      ],
+      "answer": "People are constantly exposed to media messages that shape their beliefs and decisions",
+      "explanation": "Media literacy helps individuals critically evaluate the messages they consume, making them more informed citizens.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "True or False: Media literacy is \"The ability to access, analyze, evaluate, and create media in various forms\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The ability to access, analyze, evaluate, and create media in various forms is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "What is the SIFT method for evaluating news?",
+      "options": [
+        "Scan, Interpret, Find, Test",
+        "Stop, Investigate the source, Find better coverage, Trace claims",
+        "Search, Identify, Filter, Trust",
+        "Summarize, Inquire, Fact-check, Think"
+      ],
+      "answer": "Stop, Investigate the source, Find better coverage, Trace claims",
+      "explanation": "SIFT is a fact-checking strategy: Stop before sharing, Investigate the source, Find better coverage, and Trace claims to original context.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "What is 'lateral reading' in source verification?",
+      "options": [
+        "Reading a source from left to right",
+        "Opening multiple browser tabs to research what others say about a source, rather than reading deeply within it",
+        "Reading the headline only",
+        "Reading multiple articles in sequence"
+      ],
+      "answer": "Opening multiple browser tabs to research what others say about a source, rather than reading deeply within it",
+      "explanation": "Lateral reading means checking what other credible sources say about a website or author rather than evaluating the site on its own terms.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "What is the purpose of fact-checking?",
+      "options": [
+        "To change a story's conclusion",
+        "To verify whether claims made in media content are accurate and supported by evidence",
+        "To summarize news articles",
+        "To identify the writer's bias"
+      ],
+      "answer": "To verify whether claims made in media content are accurate and supported by evidence",
+      "explanation": "Fact-checking is the process of investigating and verifying factual claims made in news or other content.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "True or False: The SIFT method for evaluating news is \"Stop, Investigate the source, Find better coverage, Trace claims\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Stop, Investigate the source, Find better coverage, Trace claims is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "What is visual rhetoric?",
+      "options": [
+        "The study of photography",
+        "The use of visual elements to communicate meaning and persuade an audience",
+        "Writing about images",
+        "A type of graphic design"
+      ],
+      "answer": "The use of visual elements to communicate meaning and persuade an audience",
+      "explanation": "Visual rhetoric examines how images, design, color, and layout function as forms of communication and persuasion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "How does color function in visual rhetoric?",
+      "options": [
+        "It only makes images prettier",
+        "Color conveys emotion, establishes tone, and directs the viewer's attention",
+        "It indicates the age of the image",
+        "It has no rhetorical function"
+      ],
+      "answer": "Color conveys emotion, establishes tone, and directs the viewer's attention",
+      "explanation": "Color is a powerful visual tool that creates emotional responses and guides the viewer's interpretation of an image.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "What is 'composition' in visual analysis?",
+      "options": [
+        "The written text in an image",
+        "The arrangement of visual elements within the frame",
+        "The color palette used",
+        "The subject of the photograph"
+      ],
+      "answer": "The arrangement of visual elements within the frame",
+      "explanation": "Composition refers to how visual elements are arranged within the image, affecting emphasis, balance, and meaning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "What does 'the medium is the message' mean?",
+      "options": [
+        "The content of a message is more important than how it is delivered",
+        "The form or channel through which a message is delivered shapes its meaning and impact",
+        "Messages in print are more credible than digital messages",
+        "Media platforms all work the same way"
+      ],
+      "answer": "The form or channel through which a message is delivered shapes its meaning and impact",
+      "explanation": "Marshall McLuhan's phrase means that the medium itself—TV, internet, print—fundamentally shapes how a message is received and understood.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "How does digital communication differ from print communication?",
+      "options": [
+        "Digital is always less credible",
+        "Digital communication is immediate, interactive, and allows for rapid distribution and response",
+        "Print is always more accurate",
+        "They are essentially the same"
+      ],
+      "answer": "Digital communication is immediate, interactive, and allows for rapid distribution and response",
+      "explanation": "Digital media enables instant, interactive communication with global audiences, fundamentally changing how messages are created and received.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "What is a 'filter bubble' in digital communication?",
+      "options": [
+        "A spam filter",
+        "An algorithmically created environment where users are exposed only to content that aligns with their existing views",
+        "A type of news aggregator",
+        "A cybersecurity tool"
+      ],
+      "answer": "An algorithmically created environment where users are exposed only to content that aligns with their existing views",
+      "explanation": "Filter bubbles occur when algorithms show users only content that matches their existing preferences, limiting exposure to diverse perspectives.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "What is viral content?",
+      "options": [
+        "Content that spreads computer viruses",
+        "Content that spreads rapidly and widely through sharing on digital networks",
+        "Paid advertising content",
+        "Long-form journalism"
+      ],
+      "answer": "Content that spreads rapidly and widely through sharing on digital networks",
+      "explanation": "Viral content spreads rapidly through social sharing, often because it provokes strong emotional responses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "What is misinformation?",
+      "options": [
+        "Information that is very old",
+        "False or inaccurate information that is spread without malicious intent",
+        "Opinion disguised as fact",
+        "A type of clickbait"
+      ],
+      "answer": "False or inaccurate information that is spread without malicious intent",
+      "explanation": "Misinformation is false or inaccurate information shared by people who may not know it is incorrect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "What is disinformation?",
+      "options": [
+        "Outdated information",
+        "False information spread deliberately to deceive or mislead",
+        "Information that is hard to understand",
+        "A type of editorial opinion"
+      ],
+      "answer": "False information spread deliberately to deceive or mislead",
+      "explanation": "Disinformation is intentionally false or misleading information created and spread to deceive audiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "True or False: Misinformation is \"False or inaccurate information that is spread without malicious intent\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. False or inaccurate information that is spread without malicious intent is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "True or False: Disinformation is \"Outdated information\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: False information spread deliberately to deceive or mislead.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "What is an analytical thesis in a media essay?",
+      "options": [
+        "A summary of the media text",
+        "A debatable claim about how or why a media text works to achieve a particular effect",
+        "A description of the media text",
+        "A list of the media text's features"
+      ],
+      "answer": "A debatable claim about how or why a media text works to achieve a particular effect",
+      "explanation": "An analytical thesis makes a specific, arguable claim about the meaning, strategy, or effect of a media text.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "What is textual evidence in media analysis?",
+      "options": [
+        "A quote from a textbook",
+        "Specific details from the media text that support the analytical claim",
+        "A summary of the media text",
+        "A citation from a news article"
+      ],
+      "answer": "Specific details from the media text that support the analytical claim",
+      "explanation": "Textual evidence in media analysis refers to specific details—words, images, data—from the media text that support the writer's argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "What should follow evidence in an analytical media essay?",
+      "options": [
+        "More evidence",
+        "Analysis explaining how the evidence supports the claim",
+        "A new paragraph",
+        "A counterargument"
+      ],
+      "answer": "Analysis explaining how the evidence supports the claim",
+      "explanation": "After presenting evidence, the writer must explain how it connects to and supports the analytical argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "True or False: An analytical thesis in a media essay is \"A debatable claim about how or why a media text works to achieve a particular effect\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. A debatable claim about how or why a media text works to achieve a particular effect is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "What is a database in academic research?",
+      "options": [
+        "A collection of social media posts",
+        "An organized collection of peer-reviewed articles, books, and academic resources",
+        "A library website",
+        "A search engine like Google"
+      ],
+      "answer": "An organized collection of peer-reviewed articles, books, and academic resources",
+      "explanation": "Academic databases provide access to scholarly journals, peer-reviewed articles, and research publications.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "What is the difference between a search engine and an academic database?",
+      "options": [
+        "They are the same",
+        "A search engine indexes all web content; a database indexes curated scholarly sources",
+        "Academic databases are free to use",
+        "Search engines provide more accurate results"
+      ],
+      "answer": "A search engine indexes all web content; a database indexes curated scholarly sources",
+      "explanation": "Search engines cast a wide net over all web content; academic databases focus on vetted scholarly sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "True or False: A database in academic research is \"An organized collection of peer-reviewed articles, books, and academic resources\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. An organized collection of peer-reviewed articles, books, and academic resources is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "What is media bias?",
+      "options": [
+        "When reporters make grammatical errors",
+        "When media coverage systematically favors certain perspectives, groups, or interpretations over others",
+        "A type of political advertisement",
+        "When news is reported incorrectly"
+      ],
+      "answer": "When media coverage systematically favors certain perspectives, groups, or interpretations over others",
+      "explanation": "Media bias occurs when reporting reflects a systematic preference for certain viewpoints, whether in story selection, framing, or language.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "What is 'false balance' in journalism?",
+      "options": [
+        "When a news article has too many quotations",
+        "Giving equal coverage to positions that are not equally supported by evidence, creating a false impression of debate",
+        "When a reporter is biased",
+        "When a story has no sources"
+      ],
+      "answer": "Giving equal coverage to positions that are not equally supported by evidence, creating a false impression of debate",
+      "explanation": "False balance treats two sides as equally credible when the evidence strongly favors one position, misleading audiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "What is agenda-setting theory?",
+      "options": [
+        "How governments control the media",
+        "The theory that media don't tell us what to think, but tell us what to think about by selecting which stories to cover",
+        "How journalists write stories",
+        "How advertising affects content"
+      ],
+      "answer": "The theory that media don't tell us what to think, but tell us what to think about by selecting which stories to cover",
+      "explanation": "Agenda-setting theory suggests media influence public attention by deciding which stories and issues to cover prominently.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "True or False: Media bias is \"When media coverage systematically favors certain perspectives, groups, or interpretations over others\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. When media coverage systematically favors certain perspectives, groups, or interpretations over others is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "What is the main goal of an editorial?",
+      "options": [
+        "To report facts neutrally",
+        "To express and argue for a specific opinion or position on an issue",
+        "To entertain readers with a story",
+        "To summarize recent news"
+      ],
+      "answer": "To express and argue for a specific opinion or position on an issue",
+      "explanation": "An editorial presents and argues for a specific viewpoint, aiming to persuade readers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "What is the difference between an editorial and a news article?",
+      "options": [
+        "Editorials are longer",
+        "A news article reports facts; an editorial expresses and argues a viewpoint",
+        "News articles are more credible",
+        "Editorials use more statistics"
+      ],
+      "answer": "A news article reports facts; an editorial expresses and argues a viewpoint",
+      "explanation": "News articles aim to report facts objectively; editorials explicitly advocate for a position.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "What should an opinion editorial include?",
+      "options": [
+        "Only personal anecdotes",
+        "A clear position, supporting evidence and reasoning, and acknowledgment of counterarguments",
+        "Only statistics",
+        "A summary of news events"
+      ],
+      "answer": "A clear position, supporting evidence and reasoning, and acknowledgment of counterarguments",
+      "explanation": "Strong editorials present a clear claim, support it with evidence and logic, and address opposing viewpoints.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "What is a multimedia presentation?",
+      "options": [
+        "A very long slide deck",
+        "A presentation that combines text, images, audio, video, and/or data visualization to communicate a message",
+        "A spoken presentation only",
+        "A written report with pictures"
+      ],
+      "answer": "A presentation that combines text, images, audio, video, and/or data visualization to communicate a message",
+      "explanation": "Multimedia presentations integrate multiple modalities to communicate effectively to audiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "What is the 'less is more' principle in presentation design?",
+      "options": [
+        "Using fewer slides",
+        "Minimizing text and visual clutter on each slide to maximize clarity and impact",
+        "Using smaller fonts",
+        "Having fewer ideas in a presentation"
+      ],
+      "answer": "Minimizing text and visual clutter on each slide to maximize clarity and impact",
+      "explanation": "Effective presentation design uses minimal text and focused visuals, letting key ideas stand out clearly.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "What is data visualization?",
+      "options": [
+        "A photograph of data",
+        "A graphic representation of information (charts, graphs, infographics) to make data understandable",
+        "A table of numbers",
+        "Raw data in a spreadsheet"
+      ],
+      "answer": "A graphic representation of information (charts, graphs, infographics) to make data understandable",
+      "explanation": "Data visualization transforms complex data into visual formats that are easier to understand and communicate.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "What is the purpose of a presentation narrative?",
+      "options": [
+        "To read text aloud from slides",
+        "To guide the audience through the argument with a clear story or logical sequence",
+        "To summarize all the information",
+        "To introduce yourself"
+      ],
+      "answer": "To guide the audience through the argument with a clear story or logical sequence",
+      "explanation": "A presentation narrative creates a coherent flow that guides the audience through the argument in a logical and engaging way.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "What is mise-en-scène in film analysis?",
+      "options": [
+        "A French term for the plot",
+        "Everything placed in front of the camera, including setting, lighting, costume, and actors' positions",
+        "The editing style of a film",
+        "The film's soundtrack"
+      ],
+      "answer": "Everything placed in front of the camera, including setting, lighting, costume, and actors' positions",
+      "explanation": "Mise-en-scène refers to the visual elements arranged within the frame: setting, props, lighting, and staging.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "What does cinematography refer to in film analysis?",
+      "options": [
+        "The written screenplay",
+        "The art and technique of camera work, including framing, movement, and lighting",
+        "The editing of the film",
+        "The sound design"
+      ],
+      "answer": "The art and technique of camera work, including framing, movement, and lighting",
+      "explanation": "Cinematography encompasses all decisions about how the camera captures images, including angles, movement, and lighting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "True or False: Mise-en-scène in film analysis is \"Everything placed in front of the camera, including setting, lighting, costume, and actors' positions\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Everything placed in front of the camera, including setting, lighting, costume, and actors' positions is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "True or False: The answer to \"What does cinematography refer to in film analysis\" is: The written screenplay.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: The art and technique of camera work, including framing, movement, and lighting.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "How do social media platforms shape writing style?",
+      "options": [
+        "They have no effect on writing",
+        "Platform constraints—character limits, audience expectations, and algorithmic preferences—shape how content is written",
+        "They always encourage longer writing",
+        "They make writing more formal"
+      ],
+      "answer": "Platform constraints—character limits, audience expectations, and algorithmic preferences—shape how content is written",
+      "explanation": "Each social media platform has unique constraints and audience expectations that significantly influence how content is written and received.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "What is engagement in social media writing?",
+      "options": [
+        "The number of words in a post",
+        "Interactions (likes, shares, comments, clicks) that indicate an audience's response to content",
+        "The quality of writing",
+        "The length of a caption"
+      ],
+      "answer": "Interactions (likes, shares, comments, clicks) that indicate an audience's response to content",
+      "explanation": "Engagement refers to how actively the audience responds to content through various platform interactions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "What is a hashtag and how is it used rhetorically?",
+      "options": [
+        "A punctuation mark",
+        "A keyword marked with # that categorizes content and can create community or amplify a message",
+        "A type of hyperlink",
+        "An image caption"
+      ],
+      "answer": "A keyword marked with # that categorizes content and can create community or amplify a message",
+      "explanation": "Hashtags organize content around topics and can be used to join conversations, build movements, or increase visibility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "True or False: The answer to \"How do social media platforms shape writing style\" is: Platform constraints—character limits, audience expectations, and algorithmic preferences—shape how content is written.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Platform constraints—character limits, audience expectations, and algorithmic preferences—shape how content is written is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "What does 'publishing for a specific audience' mean?",
+      "options": [
+        "Printing many copies",
+        "Tailoring the content, tone, and format of writing to the expectations and needs of a particular readership",
+        "Making writing available online",
+        "Writing about popular topics"
+      ],
+      "answer": "Tailoring the content, tone, and format of writing to the expectations and needs of a particular readership",
+      "explanation": "Publishing for a specific audience means understanding and addressing the knowledge, values, and expectations of your intended readers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "What is editorial voice?",
+      "options": [
+        "The volume of the presenter",
+        "The distinctive tone, perspective, and style that identifies a publication or writer",
+        "The use of formal language only",
+        "The number of editorials published"
+      ],
+      "answer": "The distinctive tone, perspective, and style that identifies a publication or writer",
+      "explanation": "Editorial voice is the recognizable personality and perspective that distinguishes a publication's or writer's work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "True or False: The answer to \"What does 'publishing for a specific audience' mean\" is: Tailoring the content, tone, and format of writing to the expectations and needs of a particular readership.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Tailoring the content, tone, and format of writing to the expectations and needs of a particular readership is correct.",
+      "points": 1
+    }
   ],
   "questions": [
-    {"examType":"midterm","order":1,"type":"mc","question":"What is media literacy?","options":["The ability to read quickly","The ability to access, analyze, evaluate, and create media messages","The study of journalism history","The ability to use technology"],"answer":"The ability to access, analyze, evaluate, and create media messages","explanation":"Media literacy is the ability to critically access, analyze, evaluate, and create media in various forms.","points":1},
-    {"examType":"midterm","order":2,"type":"mc","question":"What does 'framing' mean in media analysis?","options":["The physical border around a screen","How media selects and presents information to shape audience perception","The format of a broadcast","The size of a headline"],"answer":"How media selects and presents information to shape audience perception","explanation":"Framing refers to how media choose which aspects of a story to emphasize, influencing interpretation.","points":1},
-    {"examType":"midterm","order":3,"type":"mc","question":"What is the SIFT method?","options":["Scan, Interpret, Find, Test","Stop, Investigate the source, Find better coverage, Trace claims","Search, Identify, Filter, Trust","Summarize, Inquire, Fact-check, Think"],"answer":"Stop, Investigate the source, Find better coverage, Trace claims","explanation":"SIFT is a fact-checking strategy for evaluating online information.","points":1},
-    {"examType":"midterm","order":4,"type":"mc","question":"What is visual rhetoric?","options":["Writing about images","The use of visual elements to communicate meaning and persuade an audience","Photography techniques","Graphic design principles"],"answer":"The use of visual elements to communicate meaning and persuade an audience","explanation":"Visual rhetoric examines how images, design, color, and layout function as persuasion.","points":1},
-    {"examType":"midterm","order":5,"type":"mc","question":"What does 'the medium is the message' mean?","options":["Content is more important than delivery method","The channel through which a message is delivered shapes its meaning and impact","Digital media is always better","Print is more credible"],"answer":"The channel through which a message is delivered shapes its meaning and impact","explanation":"McLuhan's phrase means that the medium itself fundamentally shapes how a message is received.","points":1},
-    {"examType":"midterm","order":6,"type":"mc","question":"What is misinformation?","options":["Very old information","False or inaccurate information spread without malicious intent","Opinion presented as fact","Clickbait headlines"],"answer":"False or inaccurate information spread without malicious intent","explanation":"Misinformation is false or inaccurate information shared by people who may not know it is incorrect.","points":1},
-    {"examType":"midterm","order":7,"type":"mc","question":"What distinguishes media analysis from media summary?","options":["Analysis is longer","Analysis evaluates how and why a text works; summary only describes what it contains","Summary is harder to write","Analysis uses more quotations"],"answer":"Analysis evaluates how and why a text works; summary only describes what it contains","explanation":"Analysis examines techniques, strategies, and effects; summary describes content without evaluating how it functions.","points":1},
-    {"examType":"midterm","order":8,"type":"mc","question":"What is media bias?","options":["Grammatical errors in reporting","When media coverage systematically favors certain perspectives over others","Opinion in a news article","Reporting incorrect facts"],"answer":"When media coverage systematically favors certain perspectives over others","explanation":"Media bias is a systematic preference for certain viewpoints in story selection, framing, or language.","points":1},
-    {"examType":"midterm","order":9,"type":"mc","question":"What is the main goal of an editorial?","options":["To report facts neutrally","To express and argue for a specific opinion on an issue","To entertain readers","To summarize recent news"],"answer":"To express and argue for a specific opinion on an issue","explanation":"An editorial presents and argues for a specific viewpoint, aiming to persuade readers.","points":1},
-    {"examType":"midterm","order":10,"type":"mc","question":"What is a filter bubble?","options":["A spam filter","An environment where users see only content that aligns with their existing views","A news aggregator","A cybersecurity tool"],"answer":"An environment where users see only content that aligns with their existing views","explanation":"Filter bubbles occur when algorithms show users only content matching their existing preferences.","points":1},
-    {"examType":"midterm","order":11,"type":"mc","question":"What is mise-en-scène in film analysis?","options":["The plot of a film","Everything placed in front of the camera including setting, lighting, and staging","The editing style","The film's soundtrack"],"answer":"Everything placed in front of the camera including setting, lighting, and staging","explanation":"Mise-en-scène refers to the visual elements arranged within the frame.","points":1},
-    {"examType":"midterm","order":12,"type":"mc","question":"What is confirmation bias?","options":["Checking information before sharing","The tendency to favor information that confirms existing beliefs","Reading multiple news sources","Using fact-checking tools"],"answer":"The tendency to favor information that confirms existing beliefs","explanation":"Confirmation bias leads people to accept information that agrees with their existing views.","points":1},
-    {"examType":"midterm","order":13,"type":"mc","question":"What is agenda-setting theory?","options":["How governments control media","The theory that media tell us what to think about by selecting which stories to cover","How journalists write stories","How advertising affects content"],"answer":"The theory that media tell us what to think about by selecting which stories to cover","explanation":"Agenda-setting theory suggests media influence public attention through story selection.","points":1},
-    {"examType":"midterm","order":14,"type":"mc","question":"What does 'lateral reading' involve?","options":["Reading from left to right","Checking what other credible sources say about a source rather than reading deeply within it","Reading multiple articles in sequence","Reading only the headline"],"answer":"Checking what other credible sources say about a source rather than reading deeply within it","explanation":"Lateral reading means checking what other sources say about a website or author rather than evaluating the site on its own terms.","points":1},
-    {"examType":"midterm","order":15,"type":"mc","question":"What is disinformation?","options":["Outdated information","Deliberately false information created and spread to deceive","Information that is hard to understand","Opinion disguised as fact"],"answer":"Deliberately false information created and spread to deceive","explanation":"Disinformation is intentionally false or misleading information created to deceive audiences.","points":1},
-    {"examType":"final","order":1,"type":"mc","question":"What is a media text?","options":["A written news article only","Any form of communication produced by media, including articles, films, advertisements, and social media","A textbook about media","A transcript of a speech"],"answer":"Any form of communication produced by media, including articles, films, advertisements, and social media","explanation":"A media text is any artifact created by media—written, visual, audio, or digital.","points":1},
-    {"examType":"final","order":2,"type":"mc","question":"What is cinematography?","options":["Writing the screenplay","The art and technique of camera work including framing, movement, and lighting","Editing the film","Sound design"],"answer":"The art and technique of camera work including framing, movement, and lighting","explanation":"Cinematography encompasses all decisions about how the camera captures images.","points":1},
-    {"examType":"final","order":3,"type":"mc","question":"What is a capstone media project?","options":["The first assignment in a course","A culminating project that synthesizes course learning in a substantial original work","A group quiz","A short reflection"],"answer":"A culminating project that synthesizes course learning in a substantial original work","explanation":"A capstone project integrates the skills developed throughout a course into a major original work.","points":1},
-    {"examType":"final","order":4,"type":"mc","question":"What is 'false balance' in journalism?","options":["Too many quotations in an article","Giving equal coverage to positions not equally supported by evidence","A biased reporter","An article with no sources"],"answer":"Giving equal coverage to positions not equally supported by evidence","explanation":"False balance treats two sides as equally credible when evidence strongly favors one position.","points":1},
-    {"examType":"final","order":5,"type":"mc","question":"What is data visualization?","options":["A photograph of data","A graphic representation of information to make data understandable","Raw data in a spreadsheet","A table of numbers"],"answer":"A graphic representation of information to make data understandable","explanation":"Data visualization transforms complex data into visual formats that are easier to understand.","points":1},
-    {"examType":"final","order":6,"type":"mc","question":"What is a hashtag's rhetorical function?","options":["A punctuation mark only","To categorize content and create community or amplify a message","A type of hyperlink","An image caption"],"answer":"To categorize content and create community or amplify a message","explanation":"Hashtags organize content around topics and can build movements or increase visibility.","points":1},
-    {"examType":"final","order":7,"type":"mc","question":"What is selection bias in news reporting?","options":["Choosing only positive stories","Systematically choosing to cover certain stories in ways that favor particular viewpoints","Preferring local news","Only reporting international events"],"answer":"Systematically choosing to cover certain stories in ways that favor particular viewpoints","explanation":"Selection bias involves systematically choosing or avoiding stories based on viewpoint, creating a skewed picture of reality.","points":1},
-    {"examType":"final","order":8,"type":"mc","question":"What is a deep fake?","options":["Very detailed journalism","AI-generated video or audio depicting people saying or doing things they never did","A type of documentary","Long investigative journalism"],"answer":"AI-generated video or audio depicting people saying or doing things they never did","explanation":"Deep fakes are synthetic media created using artificial intelligence to convincingly depict fabricated scenarios.","points":1},
-    {"examType":"final","order":9,"type":"mc","question":"What is editorial voice?","options":["The volume of the presenter","The distinctive tone and style that identifies a publication or writer","Formal language only","The number of editorials published"],"answer":"The distinctive tone and style that identifies a publication or writer","explanation":"Editorial voice is the recognizable personality and perspective that distinguishes a writer's or publication's work.","points":1},
-    {"examType":"final","order":10,"type":"mc","question":"What is diegetic sound in film?","options":["Music added in post-production","Sound that exists within the world of the film and can be heard by characters","Narration over the film","Sound effects added in editing"],"answer":"Sound that exists within the world of the film and can be heard by characters","explanation":"Diegetic sound originates from the story world—dialogue, footsteps, ambient sounds that characters can hear.","points":1},
-    {"examType":"final","order":11,"type":"mc","question":"What is digital citizenship?","options":["Owning many digital devices","The responsible and ethical use of digital technology and online communities","Having many followers","Being skilled at coding"],"answer":"The responsible and ethical use of digital technology and online communities","explanation":"Digital citizenship involves using technology ethically, respectfully, and safely.","points":1},
-    {"examType":"final","order":12,"type":"mc","question":"What is a video essay?","options":["A written essay about video games","An analytical argument delivered in video format combining narration and visuals","A recorded lecture","A news broadcast"],"answer":"An analytical argument delivered in video format combining narration and visuals","explanation":"A video essay presents analytical arguments through video, integrating narration, images, and editing.","points":1},
-    {"examType":"final","order":13,"type":"mc","question":"Why is attribution important in published writing?","options":["It makes articles longer","It credits sources, builds credibility, and allows readers to verify information","It is required by law","It replaces original ideas"],"answer":"It credits sources, builds credibility, and allows readers to verify information","explanation":"Attribution acknowledges source material, demonstrates intellectual honesty, and enables fact verification.","points":1},
-    {"examType":"final","order":14,"type":"mc","question":"What does composition mean in visual analysis?","options":["The written text in an image","The arrangement of visual elements within the frame","The color palette","The subject of the photograph"],"answer":"The arrangement of visual elements within the frame","explanation":"Composition refers to how visual elements are arranged within the image, affecting emphasis and meaning.","points":1},
-    {"examType":"final","order":15,"type":"mc","question":"Why is media literacy considered a lifelong skill?","options":["You can only learn it in school","The media landscape continuously evolves and critical evaluation is always needed","Media is always misleading","Technology never changes"],"answer":"The media landscape continuously evolves and critical evaluation is always needed","explanation":"As media forms and technologies change, the ability to critically evaluate media messages remains essential.","points":1},
-    {"examType":"final","order":16,"type":"mc","question":"What is influencer marketing?","options":["Government advertising","Using social media personalities to promote products or ideas to their audiences","A type of news coverage","Algorithmic content promotion"],"answer":"Using social media personalities to promote products or ideas to their audiences","explanation":"Influencer marketing leverages trusted social media personalities to reach and persuade their established audiences.","points":1},
-    {"examType":"final","order":17,"type":"mc","question":"What is a call to action in persuasive writing?","options":["A dramatic opening","A direct request for the audience to take a specific action","A counterargument","A conclusion that summarizes"],"answer":"A direct request for the audience to take a specific action","explanation":"A call to action explicitly asks the audience to do something in response to the argument.","points":1},
-    {"examType":"final","order":18,"type":"mc","question":"What is the 'less is more' principle in presentation design?","options":["Using fewer slides","Minimizing text and visual clutter to maximize clarity and impact","Using smaller fonts","Having fewer ideas"],"answer":"Minimizing text and visual clutter to maximize clarity and impact","explanation":"Effective presentation design uses minimal text and focused visuals so key ideas stand out clearly.","points":1},
-    {"examType":"final","order":19,"type":"mc","question":"What makes an image 'iconic' in media studies?","options":["It is very large","It comes to symbolize a broader event, idea, or cultural moment","It was expensive to produce","It uses bright colors"],"answer":"It comes to symbolize a broader event, idea, or cultural moment","explanation":"An iconic image transcends its literal content to become a powerful cultural symbol.","points":1},
-    {"examType":"final","order":20,"type":"mc","question":"What distinguishes a media analysis thesis from a summary statement?","options":["An analysis thesis is longer","An analysis thesis makes a debatable claim about how a media text works; a summary statement describes content","A summary uses more evidence","They are the same"],"answer":"An analysis thesis makes a debatable claim about how a media text works; a summary statement describes content","explanation":"An analytical thesis makes an arguable claim about strategy and effect; a summary merely describes what the text contains.","points":1}
-  ]
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "What is media literacy?",
+      "options": [
+        "The ability to read quickly",
+        "The ability to access, analyze, evaluate, and create media messages",
+        "The study of journalism history",
+        "The ability to use technology"
+      ],
+      "answer": "The ability to access, analyze, evaluate, and create media messages",
+      "explanation": "Media literacy is the ability to critically access, analyze, evaluate, and create media in various forms.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "What does 'framing' mean in media analysis?",
+      "options": [
+        "The physical border around a screen",
+        "How media selects and presents information to shape audience perception",
+        "The format of a broadcast",
+        "The size of a headline"
+      ],
+      "answer": "How media selects and presents information to shape audience perception",
+      "explanation": "Framing refers to how media choose which aspects of a story to emphasize, influencing interpretation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "What is the SIFT method?",
+      "options": [
+        "Scan, Interpret, Find, Test",
+        "Stop, Investigate the source, Find better coverage, Trace claims",
+        "Search, Identify, Filter, Trust",
+        "Summarize, Inquire, Fact-check, Think"
+      ],
+      "answer": "Stop, Investigate the source, Find better coverage, Trace claims",
+      "explanation": "SIFT is a fact-checking strategy for evaluating online information.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "tf",
+      "question": "True or False: Visual rhetoric is \"The use of visual elements to communicate meaning and persuade an audience\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The use of visual elements to communicate meaning and persuade an audience is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "What does 'the medium is the message' mean?",
+      "options": [
+        "Content is more important than delivery method",
+        "The channel through which a message is delivered shapes its meaning and impact",
+        "Digital media is always better",
+        "Print is more credible"
+      ],
+      "answer": "The channel through which a message is delivered shapes its meaning and impact",
+      "explanation": "McLuhan's phrase means that the medium itself fundamentally shapes how a message is received.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "What is misinformation?",
+      "options": [
+        "Very old information",
+        "False or inaccurate information spread without malicious intent",
+        "Opinion presented as fact",
+        "Clickbait headlines"
+      ],
+      "answer": "False or inaccurate information spread without malicious intent",
+      "explanation": "Misinformation is false or inaccurate information shared by people who may not know it is incorrect.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "What distinguishes media analysis from media summary?",
+      "options": [
+        "Analysis is longer",
+        "Analysis evaluates how and why a text works; summary only describes what it contains",
+        "Summary is harder to write",
+        "Analysis uses more quotations"
+      ],
+      "answer": "Analysis evaluates how and why a text works; summary only describes what it contains",
+      "explanation": "Analysis examines techniques, strategies, and effects; summary describes content without evaluating how it functions.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "tf",
+      "question": "True or False: Media bias is \"Grammatical errors in reporting\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: When media coverage systematically favors certain perspectives over others.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "What is the main goal of an editorial?",
+      "options": [
+        "To report facts neutrally",
+        "To express and argue for a specific opinion on an issue",
+        "To entertain readers",
+        "To summarize recent news"
+      ],
+      "answer": "To express and argue for a specific opinion on an issue",
+      "explanation": "An editorial presents and argues for a specific viewpoint, aiming to persuade readers.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "What is a filter bubble?",
+      "options": [
+        "A spam filter",
+        "An environment where users see only content that aligns with their existing views",
+        "A news aggregator",
+        "A cybersecurity tool"
+      ],
+      "answer": "An environment where users see only content that aligns with their existing views",
+      "explanation": "Filter bubbles occur when algorithms show users only content matching their existing preferences.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "What is mise-en-scène in film analysis?",
+      "options": [
+        "The plot of a film",
+        "Everything placed in front of the camera including setting, lighting, and staging",
+        "The editing style",
+        "The film's soundtrack"
+      ],
+      "answer": "Everything placed in front of the camera including setting, lighting, and staging",
+      "explanation": "Mise-en-scène refers to the visual elements arranged within the frame.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "tf",
+      "question": "True or False: Confirmation bias is \"The tendency to favor information that confirms existing beliefs\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The tendency to favor information that confirms existing beliefs is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "What is agenda-setting theory?",
+      "options": [
+        "How governments control media",
+        "The theory that media tell us what to think about by selecting which stories to cover",
+        "How journalists write stories",
+        "How advertising affects content"
+      ],
+      "answer": "The theory that media tell us what to think about by selecting which stories to cover",
+      "explanation": "Agenda-setting theory suggests media influence public attention through story selection.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "What does 'lateral reading' involve?",
+      "options": [
+        "Reading from left to right",
+        "Checking what other credible sources say about a source rather than reading deeply within it",
+        "Reading multiple articles in sequence",
+        "Reading only the headline"
+      ],
+      "answer": "Checking what other credible sources say about a source rather than reading deeply within it",
+      "explanation": "Lateral reading means checking what other sources say about a website or author rather than evaluating the site on its own terms.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "What is disinformation?",
+      "options": [
+        "Outdated information",
+        "Deliberately false information created and spread to deceive",
+        "Information that is hard to understand",
+        "Opinion disguised as fact"
+      ],
+      "answer": "Deliberately false information created and spread to deceive",
+      "explanation": "Disinformation is intentionally false or misleading information created to deceive audiences.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "tf",
+      "question": "True or False: A media text is \"A written news article only\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Any form of communication produced by media, including articles, films, advertisements, and social media.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "What is cinematography?",
+      "options": [
+        "Writing the screenplay",
+        "The art and technique of camera work including framing, movement, and lighting",
+        "Editing the film",
+        "Sound design"
+      ],
+      "answer": "The art and technique of camera work including framing, movement, and lighting",
+      "explanation": "Cinematography encompasses all decisions about how the camera captures images.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "What is a capstone media project?",
+      "options": [
+        "The first assignment in a course",
+        "A culminating project that synthesizes course learning in a substantial original work",
+        "A group quiz",
+        "A short reflection"
+      ],
+      "answer": "A culminating project that synthesizes course learning in a substantial original work",
+      "explanation": "A capstone project integrates the skills developed throughout a course into a major original work.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "What is 'false balance' in journalism?",
+      "options": [
+        "Too many quotations in an article",
+        "Giving equal coverage to positions not equally supported by evidence",
+        "A biased reporter",
+        "An article with no sources"
+      ],
+      "answer": "Giving equal coverage to positions not equally supported by evidence",
+      "explanation": "False balance treats two sides as equally credible when evidence strongly favors one position.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "tf",
+      "question": "True or False: Data visualization is \"A graphic representation of information to make data understandable\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. A graphic representation of information to make data understandable is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "What is a hashtag's rhetorical function?",
+      "options": [
+        "A punctuation mark only",
+        "To categorize content and create community or amplify a message",
+        "A type of hyperlink",
+        "An image caption"
+      ],
+      "answer": "To categorize content and create community or amplify a message",
+      "explanation": "Hashtags organize content around topics and can build movements or increase visibility.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "What is selection bias in news reporting?",
+      "options": [
+        "Choosing only positive stories",
+        "Systematically choosing to cover certain stories in ways that favor particular viewpoints",
+        "Preferring local news",
+        "Only reporting international events"
+      ],
+      "answer": "Systematically choosing to cover certain stories in ways that favor particular viewpoints",
+      "explanation": "Selection bias involves systematically choosing or avoiding stories based on viewpoint, creating a skewed picture of reality.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "What is a deep fake?",
+      "options": [
+        "Very detailed journalism",
+        "AI-generated video or audio depicting people saying or doing things they never did",
+        "A type of documentary",
+        "Long investigative journalism"
+      ],
+      "answer": "AI-generated video or audio depicting people saying or doing things they never did",
+      "explanation": "Deep fakes are synthetic media created using artificial intelligence to convincingly depict fabricated scenarios.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "tf",
+      "question": "True or False: Editorial voice is \"The volume of the presenter\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: The distinctive tone and style that identifies a publication or writer.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "What is diegetic sound in film?",
+      "options": [
+        "Music added in post-production",
+        "Sound that exists within the world of the film and can be heard by characters",
+        "Narration over the film",
+        "Sound effects added in editing"
+      ],
+      "answer": "Sound that exists within the world of the film and can be heard by characters",
+      "explanation": "Diegetic sound originates from the story world—dialogue, footsteps, ambient sounds that characters can hear.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "What is digital citizenship?",
+      "options": [
+        "Owning many digital devices",
+        "The responsible and ethical use of digital technology and online communities",
+        "Having many followers",
+        "Being skilled at coding"
+      ],
+      "answer": "The responsible and ethical use of digital technology and online communities",
+      "explanation": "Digital citizenship involves using technology ethically, respectfully, and safely.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "What is a video essay?",
+      "options": [
+        "A written essay about video games",
+        "An analytical argument delivered in video format combining narration and visuals",
+        "A recorded lecture",
+        "A news broadcast"
+      ],
+      "answer": "An analytical argument delivered in video format combining narration and visuals",
+      "explanation": "A video essay presents analytical arguments through video, integrating narration, images, and editing.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "tf",
+      "question": "True or False: The answer to \"Why is attribution important in published writing\" is: It credits sources, builds credibility, and allows readers to verify information.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. It credits sources, builds credibility, and allows readers to verify information is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "What does composition mean in visual analysis?",
+      "options": [
+        "The written text in an image",
+        "The arrangement of visual elements within the frame",
+        "The color palette",
+        "The subject of the photograph"
+      ],
+      "answer": "The arrangement of visual elements within the frame",
+      "explanation": "Composition refers to how visual elements are arranged within the image, affecting emphasis and meaning.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Why is media literacy considered a lifelong skill?",
+      "options": [
+        "You can only learn it in school",
+        "The media landscape continuously evolves and critical evaluation is always needed",
+        "Media is always misleading",
+        "Technology never changes"
+      ],
+      "answer": "The media landscape continuously evolves and critical evaluation is always needed",
+      "explanation": "As media forms and technologies change, the ability to critically evaluate media messages remains essential.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "What is influencer marketing?",
+      "options": [
+        "Government advertising",
+        "Using social media personalities to promote products or ideas to their audiences",
+        "A type of news coverage",
+        "Algorithmic content promotion"
+      ],
+      "answer": "Using social media personalities to promote products or ideas to their audiences",
+      "explanation": "Influencer marketing leverages trusted social media personalities to reach and persuade their established audiences.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "tf",
+      "question": "True or False: A call to action in persuasive writing is \"A dramatic opening\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: A direct request for the audience to take a specific action.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "What is the 'less is more' principle in presentation design?",
+      "options": [
+        "Using fewer slides",
+        "Minimizing text and visual clutter to maximize clarity and impact",
+        "Using smaller fonts",
+        "Having fewer ideas"
+      ],
+      "answer": "Minimizing text and visual clutter to maximize clarity and impact",
+      "explanation": "Effective presentation design uses minimal text and focused visuals so key ideas stand out clearly.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "What makes an image 'iconic' in media studies?",
+      "options": [
+        "It is very large",
+        "It comes to symbolize a broader event, idea, or cultural moment",
+        "It was expensive to produce",
+        "It uses bright colors"
+      ],
+      "answer": "It comes to symbolize a broader event, idea, or cultural moment",
+      "explanation": "An iconic image transcends its literal content to become a powerful cultural symbol.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "What distinguishes a media analysis thesis from a summary statement?",
+      "options": [
+        "An analysis thesis is longer",
+        "An analysis thesis makes a debatable claim about how a media text works; a summary statement describes content",
+        "A summary uses more evidence",
+        "They are the same"
+      ],
+      "answer": "An analysis thesis makes a debatable claim about how a media text works; a summary statement describes content",
+      "explanation": "An analytical thesis makes an arguable claim about strategy and effect; a summary merely describes what the text contains.",
+      "points": 1
+    }
+  ],
+  "gradeLevel": 12
 }

@@ -4,7 +4,7 @@
   "nameZh": "AP人文地理",
   "credits": 1,
   "department": "Social Studies",
-  "type": "Core",
+  "type": "AP",
   "description": "A college-level course examining how humans shape and are shaped by their environments — exploring population patterns, cultural diffusion, political boundaries, urban systems, economic development, and the geographic tools used to analyze our world.",
   "isPublished": true,
   "modules": [
@@ -231,6 +231,38 @@
       "practiceNote": "Complete a full AP Human Geography practice free-response question synthesizing population, culture, and development concepts",
       "assignment": "Write a 400-word capstone essay on one of the following contemporary geographic challenges: (a) climate-driven migration — which populations are most at risk, where will they move, and what policies are needed; (b) food security — how geography, climate, and globalization interact to create food insecurity, and where the worst gaps exist; or (c) smart cities — how technology is changing urban geography and what equity concerns arise. Use at least three geographic concepts from different course modules in your analysis.",
       "estimatedHrs": 3.5
+    },
+    {
+      "order": 15,
+      "title": "Contemporary Human Geography Issues — Advanced Applications",
+      "titleZh": "当代人文地理问题 — Advanced Applications",
+      "objectives": "In-depth case studies and real-world applications.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Contemporary Issues chapter (Advanced)",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes",
+      "videoNote": "Khan Academy AP Human Geography — Contemporary Migration Issues (Review)",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography",
+      "practiceNote": "Complete a full AP Human Geography practice free-response question synthesizing population, culture, and development concepts (AP Prep)",
+      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 16,
+      "title": "Contemporary Human Geography Issues — Synthesis & Review",
+      "titleZh": "当代人文地理问题 — Synthesis & Review",
+      "objectives": "Comprehensive review and AP exam preparation strategies.",
+      "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
+      "readingNote": "OER World Regional Geography — Contemporary Issues chapter (Advanced)",
+      "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes",
+      "videoNote": "Khan Academy AP Human Geography — Contemporary Migration Issues (Review)",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography",
+      "practiceNote": "Complete a full AP Human Geography practice free-response question synthesizing population, culture, and development concepts (AP Prep)",
+      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "estimatedHrs": 4
     }
   ],
   "quizQuestions": [
@@ -265,43 +297,22 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "A 'region' in geography is defined as:",
+      "question": "True or False: The answer to \"Which type of location describes a place's position relative to other places (e.g., 'north of Chicago')\" is: B.",
       "options": [
-        "Only a country's political boundaries",
-        "An area that shares at least one common characteristic, whether physical or human",
-        "Any area with more than 1 million people",
-        "A zone defined solely by climate"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "A region is an area defined by shared characteristics — physical (climate zone, landform), cultural (language, religion), or functional (economic market area).",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "The concept of 'sense of place' refers to:",
-      "options": [
-        "The coordinates of a location",
-        "The subjective feelings and meanings people attach to specific locations",
-        "The administrative boundaries of a city",
-        "The economic function of a geographic area"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"geographic scale in map analysis refers to:.\"",
+      "options": null,
       "answer": "B",
-      "explanation": "Sense of place is the subjective, emotional, and cultural attachment that people develop toward specific locations, giving those places meaning beyond their physical attributes.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "Geographic scale in map analysis refers to:",
-      "options": [
-        "The color scheme used on a map",
-        "The level of zoom or detail at which geographic phenomena are analyzed",
-        "The physical size of a paper map",
-        "The number of countries shown on a map"
-      ],
-      "answer": "B",
-      "explanation": "Scale in geography refers to the spatial extent of analysis — local, regional, national, or global — which affects what patterns are visible and what conclusions can be drawn.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -349,29 +360,13 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Which of the following regions is MOST sparsely populated due to extreme environmental conditions?",
+      "question": "True or False: The answer to \"Arithmetic population density is calculated as:\" is: A.",
       "options": [
-        "Western Europe",
-        "The Sahara Desert",
-        "Coastal South Asia",
-        "The Mississippi River Valley"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "The Sahara's extreme heat, lack of water, and minimal arable land make permanent large-scale settlement nearly impossible, resulting in very low population density.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 2,
-      "order": 5,
-      "question": "The concept of 'ecumene' refers to:",
-      "options": [
-        "The total area of Earth's oceans",
-        "The permanently inhabited portion of Earth's surface",
-        "The political boundaries of a country",
-        "The areas where agriculture is practiced"
-      ],
-      "answer": "B",
-      "explanation": "The ecumene is the portion of Earth that is permanently settled or inhabited by humans — roughly 30% of the total land area.",
+      "answer": "True",
+      "explanation": "True. A is correct.",
       "points": 1
     },
     {
@@ -419,29 +414,10 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Ravenstein's 'Laws of Migration' suggest that most migrants travel:",
-      "options": [
-        "Long distances to the most prosperous countries",
-        "Short distances and toward the nearest large urban center",
-        "Randomly without geographic pattern",
-        "Only within their country of origin"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"countries like germany and japan, with sub-replacement fertility rates and aging populations, face which demographic challenge.\"",
+      "options": null,
       "answer": "B",
-      "explanation": "Ravenstein found that most migration occurs over short distances and is step-by-step (rural to small town to large city), a pattern still evident in developing world urbanization today.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 5,
-      "question": "Countries like Germany and Japan, with sub-replacement fertility rates and aging populations, face which demographic challenge?",
-      "options": [
-        "Overpopulation and strain on food supplies",
-        "Shrinking workforce and increasing pension/healthcare costs for an aging population",
-        "Rapid urban growth beyond housing capacity",
-        "Declining infant mortality causing population explosion"
-      ],
-      "answer": "B",
-      "explanation": "Sub-replacement fertility leads to population aging: fewer working-age people must support a growing elderly population, straining pension systems, healthcare, and economic productivity.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -501,20 +477,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 4,
-      "order": 5,
-      "question": "The term 'cultural landscape' was introduced by Carl Sauer to describe:",
-      "options": [
-        "The natural environment before human settlement",
-        "The visible imprint of human culture on the physical environment",
-        "The geographic distribution of ethnic groups",
-        "The boundaries between different cultural regions"
-      ],
-      "answer": "B",
-      "explanation": "Sauer defined cultural landscape as the visible, human-modified landscape — buildings, roads, field patterns, sacred sites — that reflects the culture of the people who created it.",
-      "points": 1
-    },
-    {
       "moduleOrder": 5,
       "order": 1,
       "question": "A 'geometric boundary' in political geography is one that:",
@@ -545,43 +507,25 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "The concept of 'devolution' in political geography refers to:",
+      "question": "True or False: The answer to \"A 'geometric boundary' in political geography is one that:\" is: B.",
       "options": [
-        "The expansion of a state's territory through conquest",
-        "The transfer of power from a central government to regional or subnational governments",
-        "The collapse of a state due to civil war",
-        "The process of international recognition of new states"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "Devolution is the process by which central governments grant greater political and economic autonomy to regions — as in Scotland, Catalonia, or Quebec — often driven by ethnic or cultural regional identities.",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "The Berlin Conference (1884–85) is geographically significant because it:",
+      "question": "True or False: The answer to \"'Centripetal forces' in a state are those that:\" is: Cause the state to break apart into smaller units.",
       "options": [
-        "Created the United Nations to resolve colonial disputes",
-        "European powers divided Africa among themselves with boundaries that ignored African ethnic and political realities",
-        "Established the borders of Germany after World War I",
-        "Resulted in the decolonization of British territories in Asia"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "European powers drew African boundaries at Berlin to avoid conflict among themselves, creating geometric borders that cut across existing African kingdoms, ethnic groups, and cultural territories — contributing to post-independence conflicts.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 5,
-      "order": 5,
-      "question": "A 'stateless nation' is best defined as:",
-      "options": [
-        "A failed state with no functioning government",
-        "A group of people sharing national identity without having their own internationally recognized sovereign state",
-        "A country that has been expelled from the UN",
-        "A state that has no military forces"
-      ],
-      "answer": "B",
-      "explanation": "Stateless nations — like the Kurds, Palestinians, or Basques — share a distinct national identity, culture, and territorial claims but do not have their own internationally recognized sovereign state.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: B.",
       "points": 1
     },
     {
@@ -629,29 +573,22 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Which of the following best describes 'shifting cultivation' (swidden agriculture)?",
+      "question": "True or False: The answer to \"Subsistence agriculture differs from commercial agriculture primarily in that:\" is: B.",
       "options": [
-        "Permanently farming the same plot with crop rotation",
-        "Moving between multiple plots, clearing vegetation by burning, farming briefly, then allowing land to fallow and regenerate",
-        "Irrigation-based rice farming in river deltas",
-        "Large-scale mechanized grain production"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "Shifting cultivation (slash-and-burn) involves clearing vegetation by fire, farming for a few seasons, then abandoning the plot and moving on — allowing natural regeneration before returning.",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "A major criticism of the Green Revolution's impact in sub-Saharan Africa is that:",
-      "options": [
-        "It increased food production too dramatically, causing prices to collapse",
-        "Its crop varieties and infrastructure requirements were poorly suited to African growing conditions, and benefits were concentrated among wealthier farmers",
-        "It prioritized subsistence farming over commercial exports",
-        "Africa did not need the Green Revolution because it already had food security"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a major criticism of the green revolution's impact in sub-saharan africa is that:.\"",
+      "options": null,
       "answer": "B",
-      "explanation": "Green Revolution technologies were developed for South Asian and Latin American conditions; African soils, rainfall patterns, and smallholder farm structures meant adoption was limited, and benefits skewed to larger, wealthier farmers.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -685,43 +622,22 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "Wallerstein's World Systems Theory classifies countries as 'core,' 'semi-periphery,' or 'periphery.' A 'periphery' country is characterized by:",
+      "question": "True or False: The answer to \"The Industrial Revolution began in which country in the late 18th century\" is: C.",
       "options": [
-        "Dominating global trade and controlling financial markets",
-        "Producing high-value manufactured goods for export to developing nations",
-        "Exporting raw materials and cheap labor to core countries while remaining economically dependent",
-        "Having the world's highest per capita income"
+        "True",
+        "False"
       ],
-      "answer": "C",
-      "explanation": "Periphery countries in World Systems Theory are economically dependent, specializing in raw material extraction and low-wage manufacturing that primarily benefits core countries.",
+      "answer": "True",
+      "explanation": "True. C is correct.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Which of the following best explains why South Korea successfully industrialized in the 20th century?",
-      "options": [
-        "South Korea had vast natural resource deposits",
-        "Strong state investment in education and targeted industrial policy, combined with export-oriented manufacturing and foreign investment",
-        "South Korea received permanent free aid from the United States",
-        "South Korea's large population provided consumer demand"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"special economic zones (sezs) as used in china were designed to:.\"",
+      "options": null,
       "answer": "B",
-      "explanation": "South Korea's 'economic miracle' (1960s–90s) resulted from state-directed industrial policy (chaebols), high educational investment, export promotion, and integration into global production networks.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "Special Economic Zones (SEZs) as used in China were designed to:",
-      "options": [
-        "Restrict foreign investment to protect domestic industries",
-        "Create geographically defined areas with reduced regulations and taxes to attract foreign investment and promote export manufacturing",
-        "Provide free housing and education to rural migrants",
-        "Replace state-owned enterprises with worker cooperatives"
-      ],
-      "answer": "B",
-      "explanation": "China's SEZs (starting with Shenzhen in 1980) offered preferential tax rates, streamlined regulations, and export infrastructure to attract transnational corporations and stimulate export-led industrial growth.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -769,29 +685,13 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "Gentrification in urban geography refers to:",
+      "question": "True or False: The answer to \"The global population living in urban areas surpassed 50% for the first time around:\" is: C.",
       "options": [
-        "Wealthy residents leaving cities for suburbs",
-        "The influx of wealthier residents and businesses into previously low-income urban neighborhoods, often displacing existing residents",
-        "Government demolition of slums and construction of public housing",
-        "The construction of new high-tech infrastructure in suburban areas"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "Gentrification transforms low-income neighborhoods as wealthier newcomers move in, renovate properties, and attract new businesses — raising housing costs and often displacing lower-income long-term residents.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 8,
-      "order": 5,
-      "question": "In cities of the Global South, informal settlements (squatter settlements/favelas) are typically located:",
-      "options": [
-        "In the most desirable urban locations near parks and amenities",
-        "On peripheral, hazardous, or otherwise undesirable land (steep hillsides, floodplains, polluted areas)",
-        "In the central business district",
-        "In established middle-class residential zones"
-      ],
-      "answer": "B",
-      "explanation": "Migrants and poor urban residents in developing cities often occupy marginal, undesirable land on urban peripheries — steep slopes prone to landslides, flood plains, or areas near landfills — as these are the only unoccupied or unclaimed areas.",
+      "answer": "True",
+      "explanation": "True. C is correct.",
       "points": 1
     },
     {
@@ -839,29 +739,10 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "A 'global city' (Sassen) is defined primarily by:",
-      "options": [
-        "Being the most populous city in its country",
-        "Serving as a command and control center for the global economy through concentrations of finance, media, and professional services",
-        "Having the highest standard of living",
-        "Being located on a major ocean coastline"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"economic 'race to the bottom' in globalization refers to:.\"",
+      "options": null,
       "answer": "B",
-      "explanation": "Global cities (New York, London, Tokyo, Shanghai) are major nodes of the world economy — concentrating headquarters of major firms, financial markets, media, and international institutions.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 5,
-      "question": "Economic 'race to the bottom' in globalization refers to:",
-      "options": [
-        "Competition among workers to accept the lowest wages",
-        "Countries competing by lowering labor, environmental, and tax standards to attract foreign investment",
-        "Global prices declining due to overproduction",
-        "Developing countries becoming permanently poorer despite economic growth"
-      ],
-      "answer": "B",
-      "explanation": "The race to the bottom occurs when governments lower wages, weaken labor and environmental protections, or cut taxes to attract mobile capital — benefiting corporations at the expense of workers and the environment.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -921,20 +802,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 10,
-      "order": 5,
-      "question": "Belgium's political tensions between Dutch-speaking Flemish and French-speaking Walloon communities illustrate which geographic concept?",
-      "options": [
-        "Environmental determinism",
-        "Cultural convergence",
-        "Centrifugal force based on linguistic regionalism",
-        "Urban primacy"
-      ],
-      "answer": "C",
-      "explanation": "Belgium's linguistic divide creates centrifugal forces that pull the state apart — the Flemish and Walloon regions have deeply different political, economic, and cultural identities, repeatedly threatening national cohesion.",
-      "points": 1
-    },
-    {
       "moduleOrder": 11,
       "order": 1,
       "question": "Which geographic concept describes the unequal distribution of environmental hazards, with low-income and minority communities bearing disproportionate exposure?",
@@ -965,43 +832,25 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "Freshwater scarcity is most acute in which of the following regions?",
+      "question": "True or False: The answer to \"Which geographic concept describes the unequal distribution of environmental hazards, with low-income and minority communities bearing disproportionate exposure\" is: B.",
       "options": [
-        "Northern Europe",
-        "The Amazon Basin",
-        "Sub-Saharan Africa and the Middle East/North Africa region",
-        "Southeast Asia"
+        "True",
+        "False"
       ],
-      "answer": "C",
-      "explanation": "Sub-Saharan Africa and MENA face the most severe freshwater stress — driven by arid climates, population growth, poor infrastructure, and climate change reducing already scarce rainfall.",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "Deforestation in the Amazon Basin primarily threatens which global environmental function?",
+      "question": "True or False: The answer to \"The 'resource curse' (paradox of plenty) refers to:\" is: Countries with abundant resources that export too many goods, creating inflation.",
       "options": [
-        "Global ocean current regulation",
-        "Carbon storage and global climate regulation, plus biodiversity",
-        "Arctic ice sheet stability",
-        "Pacific Ocean fishery productivity"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "Amazon forests store vast amounts of carbon (their destruction releases CO2 into the atmosphere) and host an estimated 10% of all species on Earth — deforestation threatens both global climate and biodiversity.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 5,
-      "question": "Transboundary environmental problems — like shared river systems — are difficult to manage because:",
-      "options": [
-        "Environmental problems rarely cross national borders",
-        "Each state has sovereign control over its portion and different interests, making cooperation challenging",
-        "International environmental law fully resolves all such disputes",
-        "Only small countries are affected by transboundary environmental issues"
-      ],
-      "answer": "B",
-      "explanation": "When rivers or ecosystems cross multiple nations (e.g., Nile, Mekong, Amazon), each state acts according to its own national interest, often creating upstream-downstream conflicts over extraction, pollution, and dam construction.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: B.",
       "points": 1
     },
     {
@@ -1049,29 +898,22 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "Microfinance programs (like Grameen Bank in Bangladesh) address development primarily by:",
+      "question": "True or False: The answer to \"Modernization theory of development argues that all countries progress through similar stages and that:\" is: B.",
       "options": [
-        "Providing large government loans to major corporations",
-        "Giving small loans to poor entrepreneurs (especially women) who lack access to conventional banking",
-        "Subsidizing agricultural exports in developing countries",
-        "Building major infrastructure like dams and highways"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "Microfinance provides small loans and financial services to low-income individuals — especially women — who cannot access traditional credit, enabling entrepreneurship and income generation at the household level.",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "The gender gap in development is significant because research consistently shows that:",
-      "options": [
-        "Closing the gender gap in education and employment reduces economic growth",
-        "Investing in women's education and economic participation has strong multiplier effects on development outcomes for families and communities",
-        "Gender equality is only relevant to political development, not economic development",
-        "Development levels are unrelated to gender inequality"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the gender gap in development is significant because research consistently shows that:.\"",
+      "options": null,
       "answer": "B",
-      "explanation": "Evidence consistently shows that educating women and girls reduces fertility rates, improves child health and nutrition, increases household income, and boosts national economic productivity.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -1105,43 +947,22 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "GPS (Global Positioning System) contributes to geographic analysis by:",
+      "question": "True or False: The answer to \"Geographic Information Systems (GIS) are best described as:\" is: B.",
       "options": [
-        "Processing geographic data in layers on a computer",
-        "Providing precise absolute location data (coordinates) for objects and places on Earth's surface",
-        "Interpreting satellite imagery of land cover changes",
-        "Creating three-dimensional terrain models"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "GPS satellites triangulate precise location coordinates for any point on Earth, providing the absolute location data that GIS, navigation, and field data collection rely on.",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "Which of the following is a practical application of GIS in urban planning?",
-      "options": [
-        "Predicting stock market trends",
-        "Identifying neighborhoods lacking grocery stores ('food deserts') to prioritize where new markets should be opened",
-        "Designing aircraft flight paths",
-        "Monitoring ocean temperatures"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a significant ethical concern associated with widespread geographic data collection and gis use is:.\"",
+      "options": null,
       "answer": "B",
-      "explanation": "GIS can overlay layers of grocery store locations, population density, and income levels to reveal geographic gaps in food access, helping planners and policymakers target interventions.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "A significant ethical concern associated with widespread geographic data collection and GIS use is:",
-      "options": [
-        "Maps will become too accurate to be useful",
-        "Privacy issues — detailed location tracking and surveillance of individuals without their informed consent",
-        "GIS data is too expensive for governments to use",
-        "Geographic data is unreliable because it changes too quickly"
-      ],
-      "answer": "B",
-      "explanation": "As location data becomes more detailed and pervasive (smartphones, satellites, street cameras), questions of who controls that data, how it is used, and whether surveillance is consensual become pressing ethical issues.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -1189,29 +1010,13 @@
     {
       "moduleOrder": 14,
       "order": 4,
-      "question": "The 'digital divide' in geographic context refers to:",
+      "question": "True or False: The answer to \"Climate-driven migration refers to:\" is: B.",
       "options": [
-        "The gap between analog and digital map-making techniques",
-        "The unequal access to digital technology and internet connectivity between and within countries, often correlating with income and geography",
-        "The separation of digital from physical commercial spaces",
-        "Legal restrictions on internet content in authoritarian countries"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "The digital divide maps unequal access to broadband internet, smartphones, and digital services — with stark gaps between urban/rural areas, wealthy/poor countries, and different income groups within countries.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 5,
-      "question": "Indigenous land rights disputes are geographically significant because:",
-      "options": [
-        "Indigenous peoples have no historical connection to their claimed territories",
-        "They involve competing claims over territory between states and indigenous communities whose historical occupancy and cultural ties predate colonial borders",
-        "All indigenous land claims have been legally resolved globally",
-        "They only matter in small island states"
-      ],
-      "answer": "B",
-      "explanation": "Indigenous land rights conflicts involve geographic claims by peoples whose presence predates colonialism — including sacred sites, traditional territories, and resource rights — often in tension with state sovereignty and extractive industries.",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     }
   ],
@@ -1264,16 +1069,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "In the Demographic Transition Model, Stage 4 is characterized by:",
+      "type": "tf",
+      "question": "True or False: The answer to \"In the Demographic Transition Model, Stage 4 is characterized by:\" is: C.",
       "options": [
-        "High birth rates and high death rates",
-        "High birth rates and falling death rates",
-        "Low birth rates and low death rates, with slow or zero population growth",
-        "Rapidly rising population due to immigration"
+        "True",
+        "False"
       ],
-      "answer": "C",
-      "explanation": "Stage 4 countries (most developed nations) have achieved low birth and death rates, resulting in stable or slowly declining natural population growth.",
+      "answer": "True",
+      "explanation": "True. C is correct.",
       "points": 1
     },
     {
@@ -1309,31 +1112,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "The Berlin Conference (1884–85) primarily affected Africa's political geography by:",
-      "options": [
-        "Creating the African Union",
-        "Establishing the borders of apartheid South Africa",
-        "European powers dividing Africa with geometric borders that ignored African ethnic and cultural boundaries",
-        "Ending the slave trade in West Africa"
-      ],
+      "options": null,
       "answer": "C",
-      "explanation": "European colonial powers drew Africa's boundaries to avoid conflict among themselves, creating geometric borders that fragmented ethnic groups and lumped incompatible populations together — contributing to post-independence instability.",
+      "explanation": "The correct answer is: C.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "Von Thünen's agricultural model predicts that which type of farming would occur closest to the central market city?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Von Thünen's agricultural model predicts that which type of farming would occur closest to the central market city\" is: Extensive grain farming.",
       "options": [
-        "Extensive grain farming",
-        "Sheep ranching for wool",
-        "Dairy and market gardening (perishables)",
-        "Timber/forestry"
+        "True",
+        "False"
       ],
-      "answer": "C",
-      "explanation": "Perishable, high-value products like fresh milk and vegetables must reach the market quickly and cannot bear high transportation costs, placing dairy and market gardening in the innermost ring of von Thünen's model.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: C.",
       "points": 1
     },
     {
@@ -1384,16 +1180,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "The Human Development Index (HDI) is a better measure than GDP per capita because it:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The Human Development Index (HDI) is a better measure than GDP per capita because it:\" is: B.",
       "options": [
-        "Measures only economic output without social factors",
-        "Incorporates health (life expectancy) and education alongside income, giving a more complete picture of well-being",
-        "Measures a country's military power relative to its income",
-        "Only measures the richest 10% of the population's income"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "HDI adds life expectancy and education to the income measure, revealing that high income does not automatically translate to high health and education outcomes.",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     },
     {
@@ -1414,16 +1208,11 @@
     {
       "examType": "midterm",
       "order": 14,
-      "type": "mc",
+      "type": "fill",
       "question": "Which statement best describes the 'replacement fertility rate'?",
-      "options": [
-        "A TFR of 3.0 needed for population growth",
-        "A TFR of approximately 2.1 children per woman, sufficient to maintain a stable population size without immigration",
-        "A TFR of 1.0 needed to slow population growth",
-        "A TFR of 4.0 required for economic growth in developing countries"
-      ],
+      "options": null,
       "answer": "B",
-      "explanation": "Replacement fertility (~2.1) means each woman has enough children to replace herself and her partner, accounting for childhood mortality before reproductive age — maintaining population stability.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -1444,16 +1233,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "Which map projection preserves area (equal-area) at the cost of distorting shape?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which map projection preserves area (equal-area) at the cost of distorting shape\" is: Mercator.",
       "options": [
-        "Mercator",
-        "Robinson",
-        "Peters (Gall-Peters)",
-        "Azimuthal equidistant"
+        "True",
+        "False"
       ],
-      "answer": "C",
-      "explanation": "The Gall-Peters projection is an equal-area projection — land masses are shown in their correct relative sizes — but shapes are distorted, making countries appear stretched or compressed.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: C.",
       "points": 1
     },
     {
@@ -1504,31 +1291,24 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "The 'Green Revolution' of the 1960s–70s primarily increased food production through:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The 'Green Revolution' of the 1960s–70s primarily increased food production through:\" is: B.",
       "options": [
-        "Expanding farmland by clearing forests",
-        "Introduction of high-yield crop varieties combined with irrigation, fertilizers, and pesticides",
-        "Reducing meat consumption globally",
-        "Shifting from subsistence to urban food production"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "The Green Revolution's productivity gains came from high-yielding wheat and rice varieties combined with irrigation, synthetic fertilizers, and pesticides — dramatically increasing yields on existing farmland.",
+      "answer": "True",
+      "explanation": "True. B is correct.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 6,
-      "type": "mc",
+      "type": "fill",
       "question": "Dependency theory attributes poverty in developing countries primarily to:",
-      "options": [
-        "Geographic isolation from global markets",
-        "Historical and ongoing structural exploitation through unequal economic relationships with wealthy countries",
-        "Failure to adopt democratic institutions",
-        "Overpopulation relative to available resources"
-      ],
+      "options": null,
       "answer": "B",
-      "explanation": "Dependency theorists argue that colonial and neocolonial economic structures transferred wealth from periphery to core through unequal trade, debt, and continued economic dependence.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -1564,16 +1344,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "Environmental justice as a geographic concept focuses on:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Environmental justice as a geographic concept focuses on:\" is: Using courts to prosecute pollution by corporations.",
       "options": [
-        "Using courts to prosecute pollution by corporations",
-        "The unequal geographic distribution of environmental hazards, which disproportionately burden low-income and minority communities",
-        "International agreements on carbon emissions reduction",
-        "Protecting wilderness areas from any human use"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "Environmental justice examines the spatial correlation between socioeconomic vulnerability and exposure to pollution, toxic waste, climate risk, and other environmental hazards.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: B.",
       "points": 1
     },
     {
@@ -1624,16 +1402,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
+      "type": "fill",
       "question": "Transnational corporations (TNCs) most directly contribute to which geographic process?",
-      "options": [
-        "Strengthening national economic self-sufficiency",
-        "Global economic integration through dispersed production, sourcing, and marketing across multiple countries",
-        "Reducing income inequality between core and periphery nations",
-        "Strengthening local cultural identities"
-      ],
+      "options": null,
       "answer": "B",
-      "explanation": "TNCs drive economic globalization by distributing their supply chains, production facilities, and markets across many countries, making national economies increasingly interdependent.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     },
     {
@@ -1684,16 +1457,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "The Von Thünen model of agricultural land use assumes which central organizing principle?",
+      "type": "tf",
+      "question": "True or False: The answer to \"The Von Thünen model of agricultural land use assumes which central organizing principle\" is: Agricultural zones are determined primarily by soil type.",
       "options": [
-        "Agricultural zones are determined primarily by soil type",
-        "Farmers locate activities to minimize transportation costs to the market city, creating concentric rings of land use",
-        "Climate zones determine all agricultural patterns globally",
-        "Government policy assigns crops to specific geographic zones"
+        "True",
+        "False"
       ],
-      "answer": "B",
-      "explanation": "Von Thünen's model shows that transportation cost to market — not soil or climate — determines which crops are grown where: high-value perishables near the city, extensive crops farther away.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: B.",
       "points": 1
     },
     {
@@ -1729,17 +1500,13 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "mc",
+      "type": "fill",
       "question": "Which geographic concept best explains why Pacific Island nations like Kiribati face an existential threat from climate change?",
-      "options": [
-        "Urban primacy concentrating population in a single vulnerable city",
-        "Sea level rise threatening the habitability of low-lying atoll territories, potentially requiring complete national relocation",
-        "Rapid population growth overwhelming island resources",
-        "Colonial land use patterns causing deforestation"
-      ],
+      "options": null,
       "answer": "B",
-      "explanation": "Low-lying atoll islands sit only a meter or two above sea level; projected sea level rise threatens inundation of entire national territories, potentially making them uninhabitable — raising unprecedented questions of statelessness and climate migration.",
+      "explanation": "The correct answer is: B.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 12
 }

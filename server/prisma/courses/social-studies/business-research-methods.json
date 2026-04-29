@@ -2,7 +2,7 @@
   "slug": "business-research-methods",
   "name": "Business Research Methods",
   "nameZh": "商业研究方法",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Social Studies",
   "type": "Core",
   "description": "Develops skills for conducting rigorous business and social science research — research design, quantitative and qualitative methods, data analysis, literature review, and professional research reporting.",
@@ -38,7 +38,7 @@
       "practiceUrl": "https://scholar.google.com/scholar?q=business+research+questions",
       "practiceNote": "Google Scholar — Search for examples of business research questions in published studies",
       "assignment": "Write one clear research question for a business topic of your choice. Include one hypothesis (null and alternative), and state two scope limitations.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 3,
@@ -70,7 +70,7 @@
       "practiceUrl": "https://scholar.google.com/scholar?q=research+design+validity+reliability",
       "practiceNote": "Google Scholar — Read a published methods section to identify its research design",
       "assignment": "Choose a business problem. Write a one-page research design plan specifying the design type (exploratory/descriptive/causal), why it fits, and how you would ensure validity and reliability.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 5,
@@ -102,7 +102,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/e/mean_median_and_mode",
       "practiceNote": "Khan Academy — Mean, Median, and Mode Practice",
       "assignment": "Collect or use a provided dataset of 20+ values. Calculate mean, median, mode, and standard deviation. Write a 200-word paragraph interpreting what these statistics reveal about the data.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 7,
@@ -134,7 +134,7 @@
       "practiceUrl": "https://scholar.google.com/scholar?q=mixed+methods+business+research",
       "practiceNote": "Google Scholar — Search for a mixed-methods business study and identify how triangulation is used",
       "assignment": "Design a brief mixed-methods research plan for a business problem of your choice. Specify your quantitative instrument, qualitative method, and how you would triangulate results.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 9,
@@ -150,7 +150,7 @@
       "practiceUrl": "https://www.khanacademy.org/math/statistics-probability/displaying-describing-data/quantitative-data-graphs/e/reading-histograms",
       "practiceNote": "Khan Academy — Reading Histograms Practice",
       "assignment": "Using real or simulated data, create 3 different chart types (e.g., bar, line, pie) for the same dataset. Write a paragraph explaining which visualization is most appropriate and why.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 10,
@@ -182,7 +182,7 @@
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-stateme/financial-statements-tutorial/v/introduction-to-the-income-statement",
       "practiceNote": "Khan Academy — Introduction to the Income Statement",
       "assignment": "Download a real company's annual report. Calculate 4 financial ratios (e.g., current ratio, profit margin, ROE, debt-to-equity). Write a 200-word analysis of what these ratios reveal.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 12,
@@ -198,7 +198,7 @@
       "practiceUrl": "https://scholar.google.com/scholar?q=business+research+report+example",
       "practiceNote": "Google Scholar — Find a published business research article and map its structure",
       "assignment": "Write a 400-word draft methodology and findings section for your capstone research project. Include how data was collected, how it was analyzed, and 2–3 key findings with supporting evidence.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 13,
@@ -215,131 +215,1144 @@
       "practiceNote": "Khan Academy — Communication & Presentation Skills for Business",
       "assignment": "Create a 6-slide presentation summarizing a research topic. Include: title, research question, methods, 2 findings slides, and conclusion. Write a 100-word executive summary.",
       "estimatedHrs": 3.5
-    },
-    {
-      "order": 14,
-      "title": "Capstone: Business Research Project",
-      "titleZh": "综合项目：商业研究项目",
-      "objectives": "Complete a full original business research project from question to presentation; integrate all methods learned; demonstrate proficiency in report writing, data analysis, and public presentation.",
-      "readingUrl": "https://scholar.google.com/scholar?q=business+research+project+methodology",
-      "readingNote": "Google Scholar — Browse capstone business research examples for reference",
-      "videoUrl": "https://www.youtube.com/watch?v=uk2gSHbnhAI",
-      "videoNote": "MIT OpenCourseWare — Research Methods in Social Science (overview lecture)",
-      "video2Url": "https://www.youtube.com/watch?v=GG9HS6HvEoE",
-      "video2Note": "Crash Course Statistics #48 — The Research Process (wrap-up)",
-      "practiceUrl": "https://scholar.google.com/scholar?q=undergraduate+business+research+paper",
-      "practiceNote": "Google Scholar — Read a full undergraduate-level business research paper as a model",
-      "assignment": "Submit your complete capstone: (1) a 1500–2000 word research report with all standard sections, (2) a dataset or interview transcripts as an appendix, and (3) a 10-minute oral presentation with slides.",
-      "estimatedHrs": 6.0
     }
   ],
   "questions": [
-    { "examType": "midterm", "order": 1, "type": "mc", "question": "Which of the following best describes applied research?", "options": ["Research conducted purely to expand knowledge with no immediate use", "Research aimed at solving a specific practical problem", "Research that uses only qualitative methods", "Research that avoids hypotheses"], "answer": "Research aimed at solving a specific practical problem", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 2, "type": "mc", "question": "Which is the correct sequence of the research process?", "options": ["Collect data → Define problem → Analyze → Report", "Define problem → Literature review → Design → Collect → Analyze → Report", "Analyze → Define problem → Collect → Report", "Report → Design → Collect → Analyze"], "answer": "Define problem → Literature review → Design → Collect → Analyze → Report", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 3, "type": "mc", "question": "A research hypothesis is best described as:", "options": ["A proven fact supported by all studies", "A testable prediction about the relationship between variables", "A research question reworded as a statement", "A summary of prior literature"], "answer": "A testable prediction about the relationship between variables", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 4, "type": "mc", "question": "Which Boolean operator narrows a Google Scholar search by requiring both terms to appear?", "options": ["OR", "NOT", "AND", "NEAR"], "answer": "AND", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 5, "type": "mc", "question": "Internal validity in research design refers to:", "options": ["How well results apply to other settings", "Whether the study actually measures what it claims to measure", "The extent to which the sample represents the population", "The consistency of results across repeated measurements"], "answer": "Whether the study actually measures what it claims to measure", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 6, "type": "mc", "question": "A Likert scale question typically asks respondents to:", "options": ["Choose one answer from a yes/no option", "Rank items from most to least important", "Rate their level of agreement on a scale (e.g., 1–5)", "Write an open-ended response"], "answer": "Rate their level of agreement on a scale (e.g., 1–5)", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 7, "type": "mc", "question": "Random sampling is preferable to convenience sampling because it:", "options": ["Is cheaper and faster", "Ensures every member of the population has an equal chance of being selected", "Requires no planning", "Always produces larger samples"], "answer": "Ensures every member of the population has an equal chance of being selected", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 8, "type": "mc", "question": "The mean of the data set {4, 8, 6, 10, 2} is:", "options": ["6", "8", "5", "7"], "answer": "6", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 9, "type": "mc", "question": "Standard deviation measures:", "options": ["The middle value in a dataset", "The most frequently occurring value", "The average distance of data points from the mean", "The difference between the maximum and minimum values"], "answer": "The average distance of data points from the mean", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 10, "type": "mc", "question": "Which qualitative method involves observing participants in their natural environment without intervening?", "options": ["Survey", "Experiment", "Ethnographic observation", "Regression analysis"], "answer": "Ethnographic observation", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 11, "type": "mc", "question": "Focus groups are most useful for:", "options": ["Testing causal relationships between variables", "Measuring sales performance precisely", "Generating rich qualitative insights through group discussion", "Calculating market share"], "answer": "Generating rich qualitative insights through group discussion", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 12, "type": "mc", "question": "Thematic analysis in qualitative research involves:", "options": ["Running statistical tests on interview data", "Calculating the frequency of words in a document", "Identifying recurring patterns or themes across qualitative data", "Designing a survey"], "answer": "Identifying recurring patterns or themes across qualitative data", "explanation": "", "points": 1 },
-    { "examType": "midterm", "order": 13, "type": "short", "question": "Explain the difference between a research question and a hypothesis. Give one example of each for a business research topic.", "options": null, "answer": "", "explanation": "", "points": 2 },
-    { "examType": "midterm", "order": 14, "type": "short", "question": "Describe two advantages and one disadvantage of using surveys as a data collection method in business research.", "options": null, "answer": "", "explanation": "", "points": 2 },
-    { "examType": "midterm", "order": 15, "type": "short", "question": "What is source credibility and why does it matter in a literature review? Name two criteria for evaluating whether a source is credible.", "options": null, "answer": "", "explanation": "", "points": 2 },
-    { "examType": "final", "order": 1, "type": "mc", "question": "Which research design is most appropriate when a researcher wants to establish cause and effect?", "options": ["Exploratory", "Descriptive", "Causal (experimental)", "Ethnographic"], "answer": "Causal (experimental)", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 2, "type": "mc", "question": "Triangulation in mixed methods research means:", "options": ["Using three different sample sizes", "Cross-verifying findings using multiple data sources or methods", "Drawing a triangle diagram of results", "Running three statistical tests"], "answer": "Cross-verifying findings using multiple data sources or methods", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 3, "type": "mc", "question": "Which chart type is best for showing change over time?", "options": ["Pie chart", "Bar chart", "Line chart", "Scatter plot"], "answer": "Line chart", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 4, "type": "mc", "question": "PESTLE analysis examines which set of external factors?", "options": ["People, Economics, Strategy, Trade, Law, Environment", "Political, Economic, Social, Technological, Legal, Environmental", "Product, Entry, Sales, Trade, Location, Equity", "Price, Earnings, Stock, Technology, Labor, Exports"], "answer": "Political, Economic, Social, Technological, Legal, Environmental", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 5, "type": "mc", "question": "A SWOT analysis is used to:", "options": ["Calculate financial ratios", "Map a company's internal strengths and weaknesses alongside external opportunities and threats", "Design a survey questionnaire", "Conduct a literature review"], "answer": "Map a company's internal strengths and weaknesses alongside external opportunities and threats", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 6, "type": "mc", "question": "The current ratio measures:", "options": ["Net profit as a percentage of revenue", "A company's ability to pay short-term obligations using current assets", "Total debt relative to total equity", "Return on investment over one year"], "answer": "A company's ability to pay short-term obligations using current assets", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 7, "type": "mc", "question": "Which financial statement shows revenues and expenses over a period?", "options": ["Balance sheet", "Cash flow statement", "Income statement", "Statement of retained earnings"], "answer": "Income statement", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 8, "type": "mc", "question": "In a research report, the methodology section should explain:", "options": ["The implications for future research only", "How data was collected, from whom, and how it was analyzed", "A summary of all prior studies", "The financial cost of the research"], "answer": "How data was collected, from whom, and how it was analyzed", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 9, "type": "mc", "question": "An executive summary should:", "options": ["Contain every detail from the full report", "Be written before the research is conducted", "Concisely summarize the research purpose, methods, key findings, and recommendations", "Focus only on financial data"], "answer": "Concisely summarize the research purpose, methods, key findings, and recommendations", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 10, "type": "mc", "question": "Data storytelling in a presentation means:", "options": ["Making up data to fit a narrative", "Using fictional examples to explain statistics", "Framing data insights within a compelling narrative to guide the audience's understanding", "Avoiding charts in favor of written text"], "answer": "Framing data insights within a compelling narrative to guide the audience's understanding", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 11, "type": "mc", "question": "Which sampling method divides the population into subgroups and samples from each proportionally?", "options": ["Simple random sampling", "Convenience sampling", "Stratified sampling", "Snowball sampling"], "answer": "Stratified sampling", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 12, "type": "mc", "question": "External validity refers to:", "options": ["Whether the study measures what it intends to measure", "The degree to which research findings can be generalized to other contexts or populations", "The reliability of measurement instruments", "The absence of researcher bias"], "answer": "The degree to which research findings can be generalized to other contexts or populations", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 13, "type": "mc", "question": "Which of the following is an example of primary data collection?", "options": ["Reading a published industry report", "Analyzing a company's historical sales records", "Conducting original interviews with consumers", "Reviewing government census statistics"], "answer": "Conducting original interviews with consumers", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 14, "type": "mc", "question": "Response bias in surveys occurs when:", "options": ["The sample is too large", "Respondents answer questions inaccurately due to social desirability or misunderstanding", "The researcher uses too many Likert questions", "Data is analyzed using the wrong statistical test"], "answer": "Respondents answer questions inaccurately due to social desirability or misunderstanding", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 15, "type": "mc", "question": "Debt-to-equity ratio is calculated as:", "options": ["Net income divided by total revenue", "Total liabilities divided by shareholders' equity", "Current assets divided by current liabilities", "Operating income divided by interest expense"], "answer": "Total liabilities divided by shareholders' equity", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 16, "type": "mc", "question": "Qualitative research is especially valuable when:", "options": ["Large sample sizes are available", "Precise numerical measurement is the goal", "The researcher seeks to understand meanings, experiences, or social processes in depth", "Variables can be easily controlled in a lab"], "answer": "The researcher seeks to understand meanings, experiences, or social processes in depth", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 17, "type": "mc", "question": "Which principle of good data visualization states that chart elements should not distort the data's true proportions?", "options": ["Simplicity", "Accuracy", "Color contrast", "Interactivity"], "answer": "Accuracy", "explanation": "", "points": 1 },
-    { "examType": "final", "order": 18, "type": "short", "question": "Describe the structure of a complete business research report and explain the purpose of each major section.", "options": null, "answer": "", "explanation": "", "points": 2 },
-    { "examType": "final", "order": 19, "type": "short", "question": "Compare and contrast quantitative and qualitative research methods. Give one situation where each would be more appropriate for a business problem.", "options": null, "answer": "", "explanation": "", "points": 2 },
-    { "examType": "final", "order": 20, "type": "short", "question": "Explain the role of market research in business decision-making. How can SWOT and PESTLE analyses complement each other?", "options": null, "answer": "", "explanation": "", "points": 2 }
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following best describes applied research?",
+      "options": [
+        "Research conducted purely to expand knowledge with no immediate use",
+        "Research aimed at solving a specific practical problem",
+        "Research that uses only qualitative methods",
+        "Research that avoids hypotheses"
+      ],
+      "answer": "Research aimed at solving a specific practical problem",
+      "explanation": "The correct answer is: Research aimed at solving a specific practical problem.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "Which is the correct sequence of the research process?",
+      "options": [
+        "Collect data → Define problem → Analyze → Report",
+        "Define problem → Literature review → Design → Collect → Analyze → Report",
+        "Analyze → Define problem → Collect → Report",
+        "Report → Design → Collect → Analyze"
+      ],
+      "answer": "Define problem → Literature review → Design → Collect → Analyze → Report",
+      "explanation": "The correct answer is: Define problem → Literature review → Design → Collect → Analyze → Report.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "A research hypothesis is best described as:",
+      "options": [
+        "A proven fact supported by all studies",
+        "A testable prediction about the relationship between variables",
+        "A research question reworded as a statement",
+        "A summary of prior literature"
+      ],
+      "answer": "A testable prediction about the relationship between variables",
+      "explanation": "The correct answer is: A testable prediction about the relationship between variables.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "tf",
+      "question": "True or False: The answer to \"Which Boolean operator narrows a Google Scholar search by requiring both terms to appear\" is: AND.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. AND is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Internal validity in research design refers to:",
+      "options": [
+        "How well results apply to other settings",
+        "Whether the study actually measures what it claims to measure",
+        "The extent to which the sample represents the population",
+        "The consistency of results across repeated measurements"
+      ],
+      "answer": "Whether the study actually measures what it claims to measure",
+      "explanation": "The correct answer is: Whether the study actually measures what it claims to measure.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A Likert scale question typically asks respondents to:",
+      "options": [
+        "Choose one answer from a yes/no option",
+        "Rank items from most to least important",
+        "Rate their level of agreement on a scale (e.g., 1–5)",
+        "Write an open-ended response"
+      ],
+      "answer": "Rate their level of agreement on a scale (e.g., 1–5)",
+      "explanation": "The correct answer is: Rate their level of agreement on a scale (e.g., 1–5).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "Random sampling is preferable to convenience sampling because it:",
+      "options": [
+        "Is cheaper and faster",
+        "Ensures every member of the population has an equal chance of being selected",
+        "Requires no planning",
+        "Always produces larger samples"
+      ],
+      "answer": "Ensures every member of the population has an equal chance of being selected",
+      "explanation": "The correct answer is: Ensures every member of the population has an equal chance of being selected.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "tf",
+      "question": "True or False: The answer to \"The mean of the data set {4, 8, 6, 10, 2} is:\" is: 8.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: 6.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "Standard deviation measures:",
+      "options": [
+        "The middle value in a dataset",
+        "The most frequently occurring value",
+        "The average distance of data points from the mean",
+        "The difference between the maximum and minimum values"
+      ],
+      "answer": "The average distance of data points from the mean",
+      "explanation": "The correct answer is: The average distance of data points from the mean.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Which qualitative method involves observing participants in their natural environment without intervening?",
+      "options": [
+        "Survey",
+        "Experiment",
+        "Ethnographic observation",
+        "Regression analysis"
+      ],
+      "answer": "Ethnographic observation",
+      "explanation": "The correct answer is: Ethnographic observation.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "Focus groups are most useful for:",
+      "options": [
+        "Testing causal relationships between variables",
+        "Measuring sales performance precisely",
+        "Generating rich qualitative insights through group discussion",
+        "Calculating market share"
+      ],
+      "answer": "Generating rich qualitative insights through group discussion",
+      "explanation": "The correct answer is: Generating rich qualitative insights through group discussion.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "tf",
+      "question": "True or False: The answer to \"Thematic analysis in qualitative research involves:\" is: Identifying recurring patterns or themes across qualitative data.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Identifying recurring patterns or themes across qualitative data is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "short",
+      "question": "Explain the difference between a research question and a hypothesis. Give one example of each for a business research topic.",
+      "options": null,
+      "answer": "",
+      "explanation": "The correct answer is: .",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "fill",
+      "question": "Describe two advantages and one disadvantage of using surveys as a data collection method in business research.",
+      "options": null,
+      "answer": "",
+      "explanation": "The correct answer is: .",
+      "points": 2
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "short",
+      "question": "What is source credibility and why does it matter in a literature review? Name two criteria for evaluating whether a source is credible.",
+      "options": null,
+      "answer": "",
+      "explanation": "The correct answer is: .",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "tf",
+      "question": "True or False: The answer to \"Which research design is most appropriate when a researcher wants to establish cause and effect\" is: Exploratory.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Causal (experimental).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Triangulation in mixed methods research means:",
+      "options": [
+        "Using three different sample sizes",
+        "Cross-verifying findings using multiple data sources or methods",
+        "Drawing a triangle diagram of results",
+        "Running three statistical tests"
+      ],
+      "answer": "Cross-verifying findings using multiple data sources or methods",
+      "explanation": "The correct answer is: Cross-verifying findings using multiple data sources or methods.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "Which chart type is best for showing change over time?",
+      "options": [
+        "Pie chart",
+        "Bar chart",
+        "Line chart",
+        "Scatter plot"
+      ],
+      "answer": "Line chart",
+      "explanation": "The correct answer is: Line chart.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "PESTLE analysis examines which set of external factors?",
+      "options": [
+        "People, Economics, Strategy, Trade, Law, Environment",
+        "Political, Economic, Social, Technological, Legal, Environmental",
+        "Product, Entry, Sales, Trade, Location, Equity",
+        "Price, Earnings, Stock, Technology, Labor, Exports"
+      ],
+      "answer": "Political, Economic, Social, Technological, Legal, Environmental",
+      "explanation": "The correct answer is: Political, Economic, Social, Technological, Legal, Environmental.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "tf",
+      "question": "True or False: The answer to \"A SWOT analysis is used to:\" is: Map a company's internal strengths and weaknesses alongside external opportunities and threats.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Map a company's internal strengths and weaknesses alongside external opportunities and threats is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "The current ratio measures:",
+      "options": [
+        "Net profit as a percentage of revenue",
+        "A company's ability to pay short-term obligations using current assets",
+        "Total debt relative to total equity",
+        "Return on investment over one year"
+      ],
+      "answer": "A company's ability to pay short-term obligations using current assets",
+      "explanation": "The correct answer is: A company's ability to pay short-term obligations using current assets.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Which financial statement shows revenues and expenses over a period?",
+      "options": [
+        "Balance sheet",
+        "Cash flow statement",
+        "Income statement",
+        "Statement of retained earnings"
+      ],
+      "answer": "Income statement",
+      "explanation": "The correct answer is: Income statement.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "In a research report, the methodology section should explain:",
+      "options": [
+        "The implications for future research only",
+        "How data was collected, from whom, and how it was analyzed",
+        "A summary of all prior studies",
+        "The financial cost of the research"
+      ],
+      "answer": "How data was collected, from whom, and how it was analyzed",
+      "explanation": "The correct answer is: How data was collected, from whom, and how it was analyzed.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "tf",
+      "question": "True or False: The answer to \"An executive summary should:\" is: Contain every detail from the full report.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Concisely summarize the research purpose, methods, key findings, and recommendations.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "Data storytelling in a presentation means:",
+      "options": [
+        "Making up data to fit a narrative",
+        "Using fictional examples to explain statistics",
+        "Framing data insights within a compelling narrative to guide the audience's understanding",
+        "Avoiding charts in favor of written text"
+      ],
+      "answer": "Framing data insights within a compelling narrative to guide the audience's understanding",
+      "explanation": "The correct answer is: Framing data insights within a compelling narrative to guide the audience's understanding.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Which sampling method divides the population into subgroups and samples from each proportionally?",
+      "options": [
+        "Simple random sampling",
+        "Convenience sampling",
+        "Stratified sampling",
+        "Snowball sampling"
+      ],
+      "answer": "Stratified sampling",
+      "explanation": "The correct answer is: Stratified sampling.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "External validity refers to:",
+      "options": [
+        "Whether the study measures what it intends to measure",
+        "The degree to which research findings can be generalized to other contexts or populations",
+        "The reliability of measurement instruments",
+        "The absence of researcher bias"
+      ],
+      "answer": "The degree to which research findings can be generalized to other contexts or populations",
+      "explanation": "The correct answer is: The degree to which research findings can be generalized to other contexts or populations.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following is an example of primary data collection\" is: Conducting original interviews with consumers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Conducting original interviews with consumers is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Response bias in surveys occurs when:",
+      "options": [
+        "The sample is too large",
+        "Respondents answer questions inaccurately due to social desirability or misunderstanding",
+        "The researcher uses too many Likert questions",
+        "Data is analyzed using the wrong statistical test"
+      ],
+      "answer": "Respondents answer questions inaccurately due to social desirability or misunderstanding",
+      "explanation": "The correct answer is: Respondents answer questions inaccurately due to social desirability or misunderstanding.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Debt-to-equity ratio is calculated as:",
+      "options": [
+        "Net income divided by total revenue",
+        "Total liabilities divided by shareholders' equity",
+        "Current assets divided by current liabilities",
+        "Operating income divided by interest expense"
+      ],
+      "answer": "Total liabilities divided by shareholders' equity",
+      "explanation": "The correct answer is: Total liabilities divided by shareholders' equity.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Qualitative research is especially valuable when:",
+      "options": [
+        "Large sample sizes are available",
+        "Precise numerical measurement is the goal",
+        "The researcher seeks to understand meanings, experiences, or social processes in depth",
+        "Variables can be easily controlled in a lab"
+      ],
+      "answer": "The researcher seeks to understand meanings, experiences, or social processes in depth",
+      "explanation": "The correct answer is: The researcher seeks to understand meanings, experiences, or social processes in depth.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "tf",
+      "question": "True or False: The answer to \"Which principle of good data visualization states that chart elements should not distort the data's true proportions\" is: Simplicity.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Accuracy.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "short",
+      "question": "Describe the structure of a complete business research report and explain the purpose of each major section.",
+      "options": null,
+      "answer": "",
+      "explanation": "The correct answer is: .",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "short",
+      "question": "Compare and contrast quantitative and qualitative research methods. Give one situation where each would be more appropriate for a business problem.",
+      "options": null,
+      "answer": "",
+      "explanation": "The correct answer is: .",
+      "points": 2
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "fill",
+      "question": "Explain the role of market research in business decision-making. How can SWOT and PESTLE analyses complement each other?",
+      "options": null,
+      "answer": "",
+      "explanation": "The correct answer is: .",
+      "points": 2
+    }
   ],
   "quizQuestions": [
-    { "moduleOrder": 1, "order": 1, "question": "Which type of research is conducted primarily to expand general knowledge with no immediate application?", "options": ["Applied research", "Basic (pure) research", "Exploratory research", "Market research"], "answer": "Basic (pure) research", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 2, "question": "Business research differs from purely academic research in that it primarily aims to:", "options": ["Publish findings in journals", "Solve specific organizational problems or support decisions", "Develop new theories", "Train future researchers"], "answer": "Solve specific organizational problems or support decisions", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 3, "question": "Which of the following is an ethical principle in research?", "options": ["Reporting only favorable results", "Fabricating data to support a hypothesis", "Obtaining informed consent from participants", "Keeping methods secret"], "answer": "Obtaining informed consent from participants", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 4, "question": "Exploratory research is best suited for:", "options": ["Testing a well-established hypothesis", "Understanding a problem that is not yet well defined", "Calculating exact market size", "Comparing two product prices statistically"], "answer": "Understanding a problem that is not yet well defined", "explanation": "", "points": 1 },
-    { "moduleOrder": 1, "order": 5, "question": "Which step comes immediately after identifying a research problem?", "options": ["Collecting data", "Reviewing existing literature", "Writing the final report", "Presenting findings"], "answer": "Reviewing existing literature", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 1, "question": "A good research question should be:", "options": ["Broad enough to cover every possible topic", "Specific, focused, and answerable through research", "Already answered in existing literature", "Identical to the research hypothesis"], "answer": "Specific, focused, and answerable through research", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 2, "question": "A null hypothesis typically states:", "options": ["That the researcher's prediction is correct", "That there is no significant relationship or difference between variables", "The expected direction of results", "The research question in question form"], "answer": "That there is no significant relationship or difference between variables", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 3, "question": "Research scope refers to:", "options": ["The total cost of a study", "The boundaries that define what the research will and will not cover", "The number of hypotheses in a study", "The length of the final report"], "answer": "The boundaries that define what the research will and will not cover", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 4, "question": "Which of the following is the weakest research question?", "options": ["How does social media advertising affect purchase intention among college students?", "What factors influence employee turnover in the retail industry?", "Is marketing good?", "How do interest rate changes affect small business loan uptake?"], "answer": "Is marketing good?", "explanation": "", "points": 1 },
-    { "moduleOrder": 2, "order": 5, "question": "Research objectives are best described as:", "options": ["The final conclusions of the study", "Specific statements of what the research aims to achieve", "The data collection instruments", "The bibliography of a study"], "answer": "Specific statements of what the research aims to achieve", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 1, "question": "Which of the following is the most credible source for a business literature review?", "options": ["A personal blog post", "A Wikipedia article", "A peer-reviewed journal article", "A social media comment"], "answer": "A peer-reviewed journal article", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 2, "question": "Google Scholar is primarily used to:", "options": ["Buy research reports", "Find peer-reviewed academic articles and citations", "Create data visualizations", "Design surveys"], "answer": "Find peer-reviewed academic articles and citations", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 3, "question": "Synthesizing sources in a literature review means:", "options": ["Listing each source's findings separately", "Copying and pasting key quotes", "Identifying connections, contradictions, and gaps across multiple sources", "Only summarizing the most recent article"], "answer": "Identifying connections, contradictions, and gaps across multiple sources", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 4, "question": "APA citation style is commonly used in:", "options": ["Chemistry and physics", "Social sciences and business research", "Law journals only", "Engineering reports"], "answer": "Social sciences and business research", "explanation": "", "points": 1 },
-    { "moduleOrder": 3, "order": 5, "question": "Plagiarism in research is best avoided by:", "options": ["Paraphrasing without citing the source", "Properly citing all sources and quoting directly when necessary", "Only using your own ideas", "Avoiding all secondary sources"], "answer": "Properly citing all sources and quoting directly when necessary", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 1, "question": "A descriptive research design aims to:", "options": ["Establish cause-and-effect relationships", "Accurately describe characteristics of a population or phenomenon", "Generate new theories", "Disprove existing hypotheses"], "answer": "Accurately describe characteristics of a population or phenomenon", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 2, "question": "Reliability in research measurement means:", "options": ["The study measures what it claims to measure", "Results are consistent when the measurement is repeated under the same conditions", "The sample represents the population", "The findings can be generalized globally"], "answer": "Results are consistent when the measurement is repeated under the same conditions", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 3, "question": "A causal research design requires:", "options": ["Only interviews and observation", "A control group and manipulation of the independent variable", "No hypotheses", "A very large literature review"], "answer": "A control group and manipulation of the independent variable", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 4, "question": "External validity is threatened when:", "options": ["The researcher uses a large sample", "Findings cannot be generalized beyond the specific study context", "Data is collected accurately", "Hypotheses are clearly stated"], "answer": "Findings cannot be generalized beyond the specific study context", "explanation": "", "points": 1 },
-    { "moduleOrder": 4, "order": 5, "question": "Which design would you use to explore why customers stop using a subscription service when little prior research exists?", "options": ["Causal", "Descriptive", "Exploratory", "Experimental"], "answer": "Exploratory", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 1, "question": "Which question type is most prone to leading the respondent toward a particular answer?", "options": ["Open-ended question", "Likert-scale question", "Leading question", "Ranking question"], "answer": "Leading question", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 2, "question": "A 5-point Likert scale typically ranges from:", "options": ["0 to 100", "Strongly agree to strongly disagree", "Yes to no", "Never to daily"], "answer": "Strongly agree to strongly disagree", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 3, "question": "Stratified sampling divides the population into subgroups (strata) to:", "options": ["Make the survey shorter", "Ensure proportional representation of key groups", "Reduce survey costs", "Eliminate the need for random selection"], "answer": "Ensure proportional representation of key groups", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 4, "question": "Pilot testing a survey before full deployment helps to:", "options": ["Increase the sample size", "Identify confusing or ambiguous questions", "Reduce the number of questions needed", "Guarantee a 100% response rate"], "answer": "Identify confusing or ambiguous questions", "explanation": "", "points": 1 },
-    { "moduleOrder": 5, "order": 5, "question": "Response rate in a survey is defined as:", "options": ["The number of questions answered correctly", "The percentage of contacted participants who complete the survey", "The average time taken to complete the survey", "The number of returned surveys minus incomplete ones"], "answer": "The percentage of contacted participants who complete the survey", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 1, "question": "The median of the dataset {3, 7, 7, 9, 12} is:", "options": ["7", "9", "7.6", "3"], "answer": "7", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 2, "question": "Which measure of central tendency is most affected by extreme outliers?", "options": ["Mode", "Median", "Mean", "Range"], "answer": "Mean", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 3, "question": "Descriptive statistics are used to:", "options": ["Make predictions about populations from samples", "Summarize and describe the features of a dataset", "Test causal relationships", "Prove or disprove a hypothesis"], "answer": "Summarize and describe the features of a dataset", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 4, "question": "A positive correlation between two variables means:", "options": ["As one variable increases, the other decreases", "The variables have no relationship", "As one variable increases, the other tends to increase as well", "One variable causes the other to change"], "answer": "As one variable increases, the other tends to increase as well", "explanation": "", "points": 1 },
-    { "moduleOrder": 6, "order": 5, "question": "Before analyzing data, researchers should 'clean' the dataset by:", "options": ["Deleting all outliers automatically", "Checking for missing values, duplicates, and data entry errors", "Rounding all numbers to whole values", "Converting all data to percentages"], "answer": "Checking for missing values, duplicates, and data entry errors", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 1, "question": "Which qualitative method is best for understanding individual lived experiences in depth?", "options": ["Survey", "Experiment", "In-depth interview", "Regression analysis"], "answer": "In-depth interview", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 2, "question": "Case study research is most appropriate when:", "options": ["Large samples are available", "You need to generalize to a broad population quickly", "You want to investigate a real-world phenomenon in its natural context", "Statistical testing is the primary goal"], "answer": "You want to investigate a real-world phenomenon in its natural context", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 3, "question": "A focus group typically consists of:", "options": ["One researcher and one participant", "A large survey sample of 500+", "6–10 participants guided by a moderator", "Only expert academics"], "answer": "6–10 participants guided by a moderator", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 4, "question": "Which qualitative method involves the researcher immersing themselves in a community to observe behavior over time?", "options": ["Survey", "Ethnography", "Experiment", "Content analysis"], "answer": "Ethnography", "explanation": "", "points": 1 },
-    { "moduleOrder": 7, "order": 5, "question": "Saturation in qualitative research occurs when:", "options": ["The sample size reaches 1000", "New interviews or observations stop producing new themes or insights", "All hypotheses are confirmed", "The research budget is exhausted"], "answer": "New interviews or observations stop producing new themes or insights", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 1, "question": "Mixed methods research combines:", "options": ["Primary and secondary data only", "Quantitative and qualitative approaches in a single study", "Surveys and experiments exclusively", "Descriptive and causal designs only"], "answer": "Quantitative and qualitative approaches in a single study", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 2, "question": "In a sequential mixed methods design, the researcher:", "options": ["Runs both methods simultaneously", "Conducts one method first and uses its results to inform the second method", "Uses only quantitative data with a qualitative label", "Presents qualitative and quantitative results separately without integration"], "answer": "Conducts one method first and uses its results to inform the second method", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 3, "question": "Triangulation improves research quality by:", "options": ["Tripling the sample size", "Using three different statistical tests", "Confirming findings through multiple independent data sources or methods", "Running the same survey three times"], "answer": "Confirming findings through multiple independent data sources or methods", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 4, "question": "Which is a key advantage of mixed methods research?", "options": ["It is always faster than single-method studies", "It provides both numerical and in-depth contextual understanding", "It eliminates the need for sampling", "It removes the need for a literature review"], "answer": "It provides both numerical and in-depth contextual understanding", "explanation": "", "points": 1 },
-    { "moduleOrder": 8, "order": 5, "question": "When qualitative findings help explain surprising quantitative results, the integration approach is called:", "options": ["Parallel convergent design", "Explanatory sequential design", "Exploratory sequential design", "Embedded design"], "answer": "Explanatory sequential design", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 1, "question": "A pie chart is most appropriate for showing:", "options": ["Trends over time", "Correlations between two variables", "Proportions of a whole that add up to 100%", "Distributions of a continuous variable"], "answer": "Proportions of a whole that add up to 100%", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 2, "question": "Which chart is best for comparing quantities across several distinct categories?", "options": ["Line chart", "Scatter plot", "Bar chart", "Histogram"], "answer": "Bar chart", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 3, "question": "A scatter plot is used to visualize:", "options": ["Parts of a whole", "Change over time in a single variable", "The relationship between two quantitative variables", "Categorical frequency counts"], "answer": "The relationship between two quantitative variables", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 4, "question": "'Chartjunk' refers to:", "options": ["Too few labels on a graph", "Unnecessary visual elements that clutter a chart and obscure data", "Using too many colors in a pie chart", "Missing a title on a visualization"], "answer": "Unnecessary visual elements that clutter a chart and obscure data", "explanation": "", "points": 1 },
-    { "moduleOrder": 9, "order": 5, "question": "A histogram differs from a bar chart in that it:", "options": ["Uses horizontal bars", "Shows categorical data", "Displays the distribution of a continuous variable with no gaps between bars", "Always shows percentages"], "answer": "Displays the distribution of a continuous variable with no gaps between bars", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 1, "question": "Primary market research involves:", "options": ["Reading published industry reports", "Collecting new data directly from target customers or stakeholders", "Analyzing government statistics", "Reviewing a competitor's annual report"], "answer": "Collecting new data directly from target customers or stakeholders", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 2, "question": "SWOT stands for:", "options": ["Sales, Workflow, Output, Trends", "Strengths, Weaknesses, Opportunities, Threats", "Strategy, Worth, Operations, Targets", "Systems, Workforce, Objectives, Technology"], "answer": "Strengths, Weaknesses, Opportunities, Threats", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 3, "question": "Which PESTLE factor would include analyzing minimum wage laws affecting a business?", "options": ["Political", "Economic", "Social", "Legal"], "answer": "Legal", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 4, "question": "Consumer behavior research examines:", "options": ["How companies file financial reports", "The processes by which people select, purchase, and use products", "Government tax regulations", "Supply chain management"], "answer": "The processes by which people select, purchase, and use products", "explanation": "", "points": 1 },
-    { "moduleOrder": 10, "order": 5, "question": "Competitive analysis helps a business by:", "options": ["Setting employee salaries", "Identifying rivals' strengths and weaknesses to find strategic advantages", "Filing for trademarks", "Designing the company logo"], "answer": "Identifying rivals' strengths and weaknesses to find strategic advantages", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 1, "question": "Which financial statement shows a company's assets, liabilities, and equity at a specific point in time?", "options": ["Income statement", "Cash flow statement", "Balance sheet", "Statement of retained earnings"], "answer": "Balance sheet", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 2, "question": "Gross profit margin is calculated as:", "options": ["Net income divided by total assets", "(Revenue minus cost of goods sold) divided by revenue", "Operating income divided by interest expense", "Total liabilities divided by shareholders' equity"], "answer": "(Revenue minus cost of goods sold) divided by revenue", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 3, "question": "A high debt-to-equity ratio typically indicates:", "options": ["The company has very little debt", "The company relies heavily on borrowing to finance its operations", "The company is very profitable", "The company has strong cash flow"], "answer": "The company relies heavily on borrowing to finance its operations", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 4, "question": "Industry benchmarking involves:", "options": ["Setting internal goals without external comparison", "Comparing a company's financial ratios or performance metrics to industry averages or competitors", "Hiring consultants to redesign operations", "Calculating only the company's revenue growth"], "answer": "Comparing a company's financial ratios or performance metrics to industry averages or competitors", "explanation": "", "points": 1 },
-    { "moduleOrder": 11, "order": 5, "question": "The cash flow statement reports:", "options": ["A company's total assets at year-end", "Revenues and expenses over a period", "Cash inflows and outflows from operating, investing, and financing activities", "Shareholder dividends only"], "answer": "Cash inflows and outflows from operating, investing, and financing activities", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 1, "question": "The methodology section of a research report should include:", "options": ["The researcher's personal opinions", "A summary of all findings", "Details on data collection methods, sample, and analysis approach", "Financial projections"], "answer": "Details on data collection methods, sample, and analysis approach", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 2, "question": "The discussion section of a research report should:", "options": ["Simply restate the findings in list form", "Interpret what the findings mean and connect them to the literature", "Include raw data tables only", "Describe the data collection process again"], "answer": "Interpret what the findings mean and connect them to the literature", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 3, "question": "Academic writing style in business research is characterized by:", "options": ["Casual tone, personal anecdotes, and emotional language", "Objective tone, precise language, and evidence-based claims", "Bullet points replacing full sentences throughout", "Avoiding all citation of sources"], "answer": "Objective tone, precise language, and evidence-based claims", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 4, "question": "The conclusion of a research report should:", "options": ["Introduce new data not discussed earlier", "Summarize key findings, state limitations, and suggest future research directions", "Repeat the literature review", "List all references"], "answer": "Summarize key findings, state limitations, and suggest future research directions", "explanation": "", "points": 1 },
-    { "moduleOrder": 12, "order": 5, "question": "Which section of a research report comes immediately after the introduction?", "options": ["Conclusion", "References", "Methodology", "Appendix"], "answer": "Methodology", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 1, "question": "An executive summary is typically placed:", "options": ["At the end of the report as an appendix", "At the very beginning of the report, before the introduction", "In the middle of the findings section", "After the references"], "answer": "At the very beginning of the report, before the introduction", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 2, "question": "The '5-second rule' in slide design suggests that:", "options": ["Presentations should last no longer than 5 minutes", "Each slide should take no more than 5 minutes to read", "A good slide communicates its main point within 5 seconds of viewing", "Audiences should wait 5 seconds before asking questions"], "answer": "A good slide communicates its main point within 5 seconds of viewing", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 3, "question": "Data storytelling in a presentation involves:", "options": ["Fabricating data to support conclusions", "Presenting only the most favorable results", "Using narrative structure to connect data points and guide audience understanding", "Reading every number off a spreadsheet"], "answer": "Using narrative structure to connect data points and guide audience understanding", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 4, "question": "When handling an unexpected question during a research presentation, it is best to:", "options": ["Ignore the question and continue", "Make up an answer to appear confident", "Acknowledge the question honestly and offer to follow up with research if needed", "Argue that the question is irrelevant"], "answer": "Acknowledge the question honestly and offer to follow up with research if needed", "explanation": "", "points": 1 },
-    { "moduleOrder": 13, "order": 5, "question": "Which of the following is a characteristic of a poorly designed presentation slide?", "options": ["One main idea per slide", "A clear chart with a title", "Dense paragraphs of text replacing spoken explanation", "A simple, readable font"], "answer": "Dense paragraphs of text replacing spoken explanation", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 1, "question": "The first step in a capstone business research project is:", "options": ["Writing the conclusion", "Collecting survey data", "Clearly defining the research question and objectives", "Designing the presentation slides"], "answer": "Clearly defining the research question and objectives", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 2, "question": "Which section of the final research report explains who was studied and how data was gathered?", "options": ["Introduction", "Literature review", "Methodology", "Discussion"], "answer": "Methodology", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 3, "question": "Peer review of a capstone project is valuable because:", "options": ["It replaces the need for a literature review", "External feedback helps identify gaps, unclear writing, and analytical errors", "It guarantees a higher grade", "It allows the researcher to skip the methodology section"], "answer": "External feedback helps identify gaps, unclear writing, and analytical errors", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 4, "question": "Including an appendix in a research report allows the researcher to:", "options": ["Replace the bibliography", "Provide supplementary material (raw data, full transcripts) without cluttering the main report", "Add personal opinions excluded from the main text", "Avoid citing sources in the body"], "answer": "Provide supplementary material (raw data, full transcripts) without cluttering the main report", "explanation": "", "points": 1 },
-    { "moduleOrder": 14, "order": 5, "question": "A well-executed capstone business research project demonstrates:", "options": ["The ability to copy and summarize one source", "Mastery of the full research cycle from question design to presentation of original findings", "Only quantitative data analysis skills", "The ability to design slides without written analysis"], "answer": "Mastery of the full research cycle from question design to presentation of original findings", "explanation": "", "points": 1 }
-  ]
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which type of research is conducted primarily to expand general knowledge with no immediate application?",
+      "options": [
+        "Applied research",
+        "Basic (pure) research",
+        "Exploratory research",
+        "Market research"
+      ],
+      "answer": "Basic (pure) research",
+      "explanation": "The correct answer is: Basic (pure) research.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Business research differs from purely academic research in that it primarily aims to:",
+      "options": [
+        "Publish findings in journals",
+        "Solve specific organizational problems or support decisions",
+        "Develop new theories",
+        "Train future researchers"
+      ],
+      "answer": "Solve specific organizational problems or support decisions",
+      "explanation": "The correct answer is: Solve specific organizational problems or support decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "True or False: The answer to \"Which type of research is conducted primarily to expand general knowledge with no immediate application\" is: Basic (pure) research.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Basic (pure) research is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which step comes immediately after identifying a research problem.\"",
+      "options": null,
+      "answer": "Reviewing existing literature",
+      "explanation": "The correct answer is: Reviewing existing literature.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "A good research question should be:",
+      "options": [
+        "Broad enough to cover every possible topic",
+        "Specific, focused, and answerable through research",
+        "Already answered in existing literature",
+        "Identical to the research hypothesis"
+      ],
+      "answer": "Specific, focused, and answerable through research",
+      "explanation": "The correct answer is: Specific, focused, and answerable through research.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "A null hypothesis typically states:",
+      "options": [
+        "That the researcher's prediction is correct",
+        "That there is no significant relationship or difference between variables",
+        "The expected direction of results",
+        "The research question in question form"
+      ],
+      "answer": "That there is no significant relationship or difference between variables",
+      "explanation": "The correct answer is: That there is no significant relationship or difference between variables.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Research scope refers to:",
+      "options": [
+        "The total cost of a study",
+        "The boundaries that define what the research will and will not cover",
+        "The number of hypotheses in a study",
+        "The length of the final report"
+      ],
+      "answer": "The boundaries that define what the research will and will not cover",
+      "explanation": "The correct answer is: The boundaries that define what the research will and will not cover.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "True or False: The answer to \"A good research question should be:\" is: Specific, focused, and answerable through research.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Specific, focused, and answerable through research is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Which of the following is the most credible source for a business literature review?",
+      "options": [
+        "A personal blog post",
+        "A Wikipedia article",
+        "A peer-reviewed journal article",
+        "A social media comment"
+      ],
+      "answer": "A peer-reviewed journal article",
+      "explanation": "The correct answer is: A peer-reviewed journal article.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Google Scholar is primarily used to:",
+      "options": [
+        "Buy research reports",
+        "Find peer-reviewed academic articles and citations",
+        "Create data visualizations",
+        "Design surveys"
+      ],
+      "answer": "Find peer-reviewed academic articles and citations",
+      "explanation": "The correct answer is: Find peer-reviewed academic articles and citations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Synthesizing sources in a literature review means:",
+      "options": [
+        "Listing each source's findings separately",
+        "Copying and pasting key quotes",
+        "Identifying connections, contradictions, and gaps across multiple sources",
+        "Only summarizing the most recent article"
+      ],
+      "answer": "Identifying connections, contradictions, and gaps across multiple sources",
+      "explanation": "The correct answer is: Identifying connections, contradictions, and gaps across multiple sources.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "A descriptive research design aims to:",
+      "options": [
+        "Establish cause-and-effect relationships",
+        "Accurately describe characteristics of a population or phenomenon",
+        "Generate new theories",
+        "Disprove existing hypotheses"
+      ],
+      "answer": "Accurately describe characteristics of a population or phenomenon",
+      "explanation": "The correct answer is: Accurately describe characteristics of a population or phenomenon.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Reliability in research measurement means:",
+      "options": [
+        "The study measures what it claims to measure",
+        "Results are consistent when the measurement is repeated under the same conditions",
+        "The sample represents the population",
+        "The findings can be generalized globally"
+      ],
+      "answer": "Results are consistent when the measurement is repeated under the same conditions",
+      "explanation": "The correct answer is: Results are consistent when the measurement is repeated under the same conditions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "A causal research design requires:",
+      "options": [
+        "Only interviews and observation",
+        "A control group and manipulation of the independent variable",
+        "No hypotheses",
+        "A very large literature review"
+      ],
+      "answer": "A control group and manipulation of the independent variable",
+      "explanation": "The correct answer is: A control group and manipulation of the independent variable.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "External validity is threatened when:",
+      "options": [
+        "The researcher uses a large sample",
+        "Findings cannot be generalized beyond the specific study context",
+        "Data is collected accurately",
+        "Hypotheses are clearly stated"
+      ],
+      "answer": "Findings cannot be generalized beyond the specific study context",
+      "explanation": "The correct answer is: Findings cannot be generalized beyond the specific study context.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Which question type is most prone to leading the respondent toward a particular answer?",
+      "options": [
+        "Open-ended question",
+        "Likert-scale question",
+        "Leading question",
+        "Ranking question"
+      ],
+      "answer": "Leading question",
+      "explanation": "The correct answer is: Leading question.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "A 5-point Likert scale typically ranges from:",
+      "options": [
+        "0 to 100",
+        "Strongly agree to strongly disagree",
+        "Yes to no",
+        "Never to daily"
+      ],
+      "answer": "Strongly agree to strongly disagree",
+      "explanation": "The correct answer is: Strongly agree to strongly disagree.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "True or False: The answer to \"Which question type is most prone to leading the respondent toward a particular answer\" is: Leading question.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Leading question is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "True or False: The answer to \"A 5-point Likert scale typically ranges from:\" is: 0 to 100.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Strongly agree to strongly disagree.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The median of the dataset {3, 7, 7, 9, 12} is:",
+      "options": [
+        "7",
+        "9",
+        "7.6",
+        "3"
+      ],
+      "answer": "7",
+      "explanation": "The correct answer is: 7.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "Which measure of central tendency is most affected by extreme outliers?",
+      "options": [
+        "Mode",
+        "Median",
+        "Mean",
+        "Range"
+      ],
+      "answer": "Mean",
+      "explanation": "The correct answer is: Mean.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Descriptive statistics are used to:",
+      "options": [
+        "Make predictions about populations from samples",
+        "Summarize and describe the features of a dataset",
+        "Test causal relationships",
+        "Prove or disprove a hypothesis"
+      ],
+      "answer": "Summarize and describe the features of a dataset",
+      "explanation": "The correct answer is: Summarize and describe the features of a dataset.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "True or False: The answer to \"The median of the dataset {3, 7, 7, 9, 12} is:\" is: 7.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 7 is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Which qualitative method is best for understanding individual lived experiences in depth?",
+      "options": [
+        "Survey",
+        "Experiment",
+        "In-depth interview",
+        "Regression analysis"
+      ],
+      "answer": "In-depth interview",
+      "explanation": "The correct answer is: In-depth interview.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Case study research is most appropriate when:",
+      "options": [
+        "Large samples are available",
+        "You need to generalize to a broad population quickly",
+        "You want to investigate a real-world phenomenon in its natural context",
+        "Statistical testing is the primary goal"
+      ],
+      "answer": "You want to investigate a real-world phenomenon in its natural context",
+      "explanation": "The correct answer is: You want to investigate a real-world phenomenon in its natural context.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "True or False: The answer to \"Which qualitative method is best for understanding individual lived experiences in depth\" is: In-depth interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. In-depth interview is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Mixed methods research combines:",
+      "options": [
+        "Primary and secondary data only",
+        "Quantitative and qualitative approaches in a single study",
+        "Surveys and experiments exclusively",
+        "Descriptive and causal designs only"
+      ],
+      "answer": "Quantitative and qualitative approaches in a single study",
+      "explanation": "The correct answer is: Quantitative and qualitative approaches in a single study.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "In a sequential mixed methods design, the researcher:",
+      "options": [
+        "Runs both methods simultaneously",
+        "Conducts one method first and uses its results to inform the second method",
+        "Uses only quantitative data with a qualitative label",
+        "Presents qualitative and quantitative results separately without integration"
+      ],
+      "answer": "Conducts one method first and uses its results to inform the second method",
+      "explanation": "The correct answer is: Conducts one method first and uses its results to inform the second method.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Triangulation improves research quality by:",
+      "options": [
+        "Tripling the sample size",
+        "Using three different statistical tests",
+        "Confirming findings through multiple independent data sources or methods",
+        "Running the same survey three times"
+      ],
+      "answer": "Confirming findings through multiple independent data sources or methods",
+      "explanation": "The correct answer is: Confirming findings through multiple independent data sources or methods.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "True or False: The answer to \"Mixed methods research combines:\" is: Quantitative and qualitative approaches in a single study.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Quantitative and qualitative approaches in a single study is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "A pie chart is most appropriate for showing:",
+      "options": [
+        "Trends over time",
+        "Correlations between two variables",
+        "Proportions of a whole that add up to 100%",
+        "Distributions of a continuous variable"
+      ],
+      "answer": "Proportions of a whole that add up to 100%",
+      "explanation": "The correct answer is: Proportions of a whole that add up to 100%.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "Which chart is best for comparing quantities across several distinct categories?",
+      "options": [
+        "Line chart",
+        "Scatter plot",
+        "Bar chart",
+        "Histogram"
+      ],
+      "answer": "Bar chart",
+      "explanation": "The correct answer is: Bar chart.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "A scatter plot is used to visualize:",
+      "options": [
+        "Parts of a whole",
+        "Change over time in a single variable",
+        "The relationship between two quantitative variables",
+        "Categorical frequency counts"
+      ],
+      "answer": "The relationship between two quantitative variables",
+      "explanation": "The correct answer is: The relationship between two quantitative variables.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Primary market research involves:",
+      "options": [
+        "Reading published industry reports",
+        "Collecting new data directly from target customers or stakeholders",
+        "Analyzing government statistics",
+        "Reviewing a competitor's annual report"
+      ],
+      "answer": "Collecting new data directly from target customers or stakeholders",
+      "explanation": "The correct answer is: Collecting new data directly from target customers or stakeholders.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "SWOT stands for:",
+      "options": [
+        "Sales, Workflow, Output, Trends",
+        "Strengths, Weaknesses, Opportunities, Threats",
+        "Strategy, Worth, Operations, Targets",
+        "Systems, Workforce, Objectives, Technology"
+      ],
+      "answer": "Strengths, Weaknesses, Opportunities, Threats",
+      "explanation": "The correct answer is: Strengths, Weaknesses, Opportunities, Threats.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Which PESTLE factor would include analyzing minimum wage laws affecting a business?",
+      "options": [
+        "Political",
+        "Economic",
+        "Social",
+        "Legal"
+      ],
+      "answer": "Legal",
+      "explanation": "The correct answer is: Legal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Consumer behavior research examines:",
+      "options": [
+        "How companies file financial reports",
+        "The processes by which people select, purchase, and use products",
+        "Government tax regulations",
+        "Supply chain management"
+      ],
+      "answer": "The processes by which people select, purchase, and use products",
+      "explanation": "The correct answer is: The processes by which people select, purchase, and use products.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Which financial statement shows a company's assets, liabilities, and equity at a specific point in time?",
+      "options": [
+        "Income statement",
+        "Cash flow statement",
+        "Balance sheet",
+        "Statement of retained earnings"
+      ],
+      "answer": "Balance sheet",
+      "explanation": "The correct answer is: Balance sheet.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Gross profit margin is calculated as:",
+      "options": [
+        "Net income divided by total assets",
+        "(Revenue minus cost of goods sold) divided by revenue",
+        "Operating income divided by interest expense",
+        "Total liabilities divided by shareholders' equity"
+      ],
+      "answer": "(Revenue minus cost of goods sold) divided by revenue",
+      "explanation": "The correct answer is: (Revenue minus cost of goods sold) divided by revenue.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "True or False: The answer to \"Which financial statement shows a company's assets, liabilities, and equity at a specific point in time\" is: Balance sheet.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Balance sheet is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "True or False: The answer to \"Gross profit margin is calculated as:\" is: Net income divided by total assets.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: (Revenue minus cost of goods sold) divided by revenue.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "The methodology section of a research report should include:",
+      "options": [
+        "The researcher's personal opinions",
+        "A summary of all findings",
+        "Details on data collection methods, sample, and analysis approach",
+        "Financial projections"
+      ],
+      "answer": "Details on data collection methods, sample, and analysis approach",
+      "explanation": "The correct answer is: Details on data collection methods, sample, and analysis approach.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "The discussion section of a research report should:",
+      "options": [
+        "Simply restate the findings in list form",
+        "Interpret what the findings mean and connect them to the literature",
+        "Include raw data tables only",
+        "Describe the data collection process again"
+      ],
+      "answer": "Interpret what the findings mean and connect them to the literature",
+      "explanation": "The correct answer is: Interpret what the findings mean and connect them to the literature.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Academic writing style in business research is characterized by:",
+      "options": [
+        "Casual tone, personal anecdotes, and emotional language",
+        "Objective tone, precise language, and evidence-based claims",
+        "Bullet points replacing full sentences throughout",
+        "Avoiding all citation of sources"
+      ],
+      "answer": "Objective tone, precise language, and evidence-based claims",
+      "explanation": "The correct answer is: Objective tone, precise language, and evidence-based claims.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "True or False: The answer to \"The methodology section of a research report should include:\" is: Details on data collection methods, sample, and analysis approach.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Details on data collection methods, sample, and analysis approach is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which section of a research report comes immediately after the introduction.\"",
+      "options": null,
+      "answer": "Methodology",
+      "explanation": "The correct answer is: Methodology.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "An executive summary is typically placed:",
+      "options": [
+        "At the end of the report as an appendix",
+        "At the very beginning of the report, before the introduction",
+        "In the middle of the findings section",
+        "After the references"
+      ],
+      "answer": "At the very beginning of the report, before the introduction",
+      "explanation": "The correct answer is: At the very beginning of the report, before the introduction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "The '5-second rule' in slide design suggests that:",
+      "options": [
+        "Presentations should last no longer than 5 minutes",
+        "Each slide should take no more than 5 minutes to read",
+        "A good slide communicates its main point within 5 seconds of viewing",
+        "Audiences should wait 5 seconds before asking questions"
+      ],
+      "answer": "A good slide communicates its main point within 5 seconds of viewing",
+      "explanation": "The correct answer is: A good slide communicates its main point within 5 seconds of viewing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "True or False: The answer to \"An executive summary is typically placed:\" is: At the very beginning of the report, before the introduction.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. At the very beginning of the report, before the introduction is correct.",
+      "points": 1
+    }
+  ],
+  "gradeLevel": 12
 }

@@ -282,16 +282,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "For the data set {3, 5, 7, 8, 12, 15, 20}, what is the IQR?",
+      "type": "tf",
+      "question": "True or False: The answer to \"For the data set {3, 5, 7, 8, 12, 15, 20}, what is the IQR\" is: 10.",
       "options": [
-        "7",
-        "9",
-        "10",
-        "12"
+        "True",
+        "False"
       ],
-      "answer": "10",
-      "explanation": "Q1 = 5, Q3 = 15 (median of lower and upper halves). IQR = 15 − 5 = 10.",
+      "answer": "True",
+      "explanation": "True. 10 is correct.",
       "points": 1
     },
     {
@@ -327,31 +325,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "A bag contains 4 red and 6 blue marbles. If one marble is drawn at random, what is the probability it is red?",
-      "options": [
-        "1/4",
-        "2/5",
-        "3/5",
-        "4/6"
-      ],
+      "options": null,
       "answer": "2/5",
-      "explanation": "P(red) = 4/10 = 2/5.",
+      "explanation": "The correct answer is: 2/5.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "Events A and B are mutually exclusive. P(A) = 0.3 and P(B) = 0.4. What is P(A or B)?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Events A and B are mutually exclusive. P(A) = 0.3 and P(B) = 0.4. What is P(A or B)\" is: 0.12.",
       "options": [
-        "0.12",
-        "0.70",
-        "0.58",
-        "0.40"
+        "True",
+        "False"
       ],
-      "answer": "0.70",
-      "explanation": "For mutually exclusive events: P(A or B) = P(A) + P(B) = 0.3 + 0.4 = 0.7.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 0.70.",
       "points": 1
     },
     {
@@ -402,16 +393,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "The Central Limit Theorem states that as sample size increases, the sampling distribution of the sample mean approaches:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The Central Limit Theorem states that as sample size increases, the sampling distribution of the sample mean approaches:\" is: A normal distribution.",
       "options": [
-        "A uniform distribution",
-        "A binomial distribution",
-        "A normal distribution",
-        "A skewed distribution"
+        "True",
+        "False"
       ],
-      "answer": "A normal distribution",
-      "explanation": "The CLT guarantees the sampling distribution of the mean is approximately normal for large n, regardless of the population's shape.",
+      "answer": "True",
+      "explanation": "True. A normal distribution is correct.",
       "points": 1
     },
     {
@@ -452,16 +441,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "In an observational study, the researcher:",
+      "type": "tf",
+      "question": "True or False: The answer to \"In an observational study, the researcher:\" is: Assigns subjects to treatment groups.",
       "options": [
-        "Assigns subjects to treatment groups",
-        "Observes subjects without intervening",
-        "Uses a control group and a placebo",
-        "Randomly assigns variables"
+        "True",
+        "False"
       ],
-      "answer": "Observes subjects without intervening",
-      "explanation": "In an observational study, the researcher collects data without imposing any treatment or manipulation.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Observes subjects without intervening.",
       "points": 1
     },
     {
@@ -512,31 +499,24 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "A student scores at the 84th percentile on a normally distributed exam with mean 70 and SD 10. Approximately what is the student's score?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A student scores at the 84th percentile on a normally distributed exam with mean 70 and SD 10. Approximately what is the student's score\" is: 80.",
       "options": [
-        "74",
-        "78",
-        "80",
-        "84"
+        "True",
+        "False"
       ],
-      "answer": "80",
-      "explanation": "The 84th percentile is approximately 1 SD above the mean. Score = 70 + 10 = 80.",
+      "answer": "True",
+      "explanation": "True. 80 is correct.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 6,
-      "type": "mc",
+      "type": "fill",
       "question": "If P(A) = 0.6 and A and B are independent with P(B) = 0.3, what is P(A and B)?",
-      "options": [
-        "0.18",
-        "0.90",
-        "0.42",
-        "0.30"
-      ],
+      "options": null,
       "answer": "0.18",
-      "explanation": "For independent events: P(A and B) = P(A) × P(B) = 0.6 × 0.3 = 0.18.",
+      "explanation": "The correct answer is: 0.18.",
       "points": 1
     },
     {
@@ -572,16 +552,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "As sample size increases, the standard error of the mean:",
+      "type": "tf",
+      "question": "True or False: The answer to \"As sample size increases, the standard error of the mean:\" is: Increases.",
       "options": [
-        "Increases",
-        "Stays the same",
-        "Decreases",
-        "Equals the population SD"
+        "True",
+        "False"
       ],
-      "answer": "Decreases",
-      "explanation": "Standard error = σ/√n. As n grows, √n grows, so the standard error decreases.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Decreases.",
       "points": 1
     },
     {
@@ -632,16 +610,14 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
-      "question": "A Type II error occurs when the test:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A Type II error occurs when the test:\" is: Fails to reject a false null hypothesis.",
       "options": [
-        "Rejects a true null hypothesis",
-        "Fails to reject a false null hypothesis",
-        "Rejects a false null hypothesis",
-        "Fails to reject a true null hypothesis"
+        "True",
+        "False"
       ],
-      "answer": "Fails to reject a false null hypothesis",
-      "explanation": "Type II error (β): failing to detect a real effect when one truly exists.",
+      "answer": "True",
+      "explanation": "True. Fails to reject a false null hypothesis is correct.",
       "points": 1
     },
     {
@@ -692,16 +668,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "If r² = 0.64 for a regression model, which statement is correct?",
+      "type": "tf",
+      "question": "True or False: The answer to \"If r² = 0.64 for a regression model, which statement is correct\" is: 64% of the variation in x is explained by y.",
       "options": [
-        "64% of the variation in x is explained by y",
-        "64% of the variation in y is explained by x",
-        "The slope is 0.64",
-        "The correlation is 0.64"
+        "True",
+        "False"
       ],
-      "answer": "64% of the variation in y is explained by x",
-      "explanation": "r² (coefficient of determination) is the proportion of variability in y accounted for by the linear relationship with x.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 64% of the variation in y is explained by x.",
       "points": 1
     },
     {
@@ -791,29 +765,13 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which is an example of response bias?",
+      "question": "True or False: The answer to \"Which of the following is a quantitative variable\" is: Height in inches.",
       "options": [
-        "Sampling only from one neighborhood",
-        "Respondents lying about income on a survey",
-        "Only people who feel strongly respond",
-        "Using an outdated voter list"
+        "True",
+        "False"
       ],
-      "answer": "Respondents lying about income on a survey",
-      "explanation": "Response bias occurs when participants give inaccurate answers, often due to social desirability or question wording.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "In a stratified sample, the population is first divided into:",
-      "options": [
-        "Clusters of geography",
-        "Random groups",
-        "Non-overlapping subgroups called strata",
-        "Time periods"
-      ],
-      "answer": "Non-overlapping subgroups called strata",
-      "explanation": "Stratified sampling divides the population into strata (e.g., by grade level) and then randomly samples within each stratum.",
+      "answer": "True",
+      "explanation": "True. Height in inches is correct.",
       "points": 1
     },
     {
@@ -875,15 +833,13 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "A bar graph differs from a histogram in that:",
+      "question": "True or False: The answer to \"A box plot displays which five summary statistics\" is: Min, Q1, Median, Q3, Max.",
       "options": [
-        "Bar graphs show frequency; histograms do not",
-        "Histograms have gaps between bars; bar graphs do not",
-        "Bar graphs are for categorical data; histograms are for quantitative data",
-        "Histograms can only show five values"
+        "True",
+        "False"
       ],
-      "answer": "Bar graphs are for categorical data; histograms are for quantitative data",
-      "explanation": "Bar graphs display categorical variables with separated bars; histograms display continuous numerical data with adjacent bars.",
+      "answer": "True",
+      "explanation": "True. Min, Q1, Median, Q3, Max is correct.",
       "points": 1
     },
     {
@@ -931,29 +887,25 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "A data value is an outlier if it is more than 1.5 × IQR above Q3. If Q3 = 50 and IQR = 12, what is the upper fence?",
+      "question": "True or False: The answer to \"Which measure of center is most affected by outliers\" is: Mean.",
       "options": [
-        "62",
-        "68",
-        "72",
-        "74"
+        "True",
+        "False"
       ],
-      "answer": "68",
-      "explanation": "Upper fence = Q3 + 1.5 × IQR = 50 + 1.5(12) = 50 + 18 = 68.",
+      "answer": "True",
+      "explanation": "True. Mean is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "Standard deviation measures:",
+      "question": "True or False: The answer to \"Find the median of: 4, 7, 9, 12, 15.\" is: 7.",
       "options": [
-        "The center of the data",
-        "The most common value",
-        "The average distance of data values from the mean",
-        "The difference between max and min"
+        "True",
+        "False"
       ],
-      "answer": "The average distance of data values from the mean",
-      "explanation": "Standard deviation quantifies how spread out values are around the mean.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 9.",
       "points": 1
     },
     {
@@ -1015,15 +967,10 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Using the standard normal table, P(Z < 1.96) ≈:",
-      "options": [
-        "0.025",
-        "0.950",
-        "0.975",
-        "0.990"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"using the standard normal table, p(z < 1.96) ≈:.\"",
+      "options": null,
       "answer": "0.975",
-      "explanation": "The standard normal table gives P(Z < 1.96) ≈ 0.975, which is why z* = 1.96 is used for 95% confidence intervals.",
+      "explanation": "The correct answer is: 0.975.",
       "points": 1
     },
     {
@@ -1097,6 +1044,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 5,
+      "order": 6,
+      "question": "True or False: The answer to \"When flipping a fair coin, what is the probability of getting heads\" is: 0.5.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 0.5 is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 6,
       "order": 1,
       "question": "P(A|B) is read as:",
@@ -1141,29 +1100,22 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "A tree diagram is used to:",
+      "question": "True or False: The answer to \"P(A|B) is read as:\" is: The probability of A given B.",
       "options": [
-        "Display distributions of quantitative data",
-        "Visualize sequential probability events and their outcomes",
-        "Show correlation between two variables",
-        "Compute standard deviation"
+        "True",
+        "False"
       ],
-      "answer": "Visualize sequential probability events and their outcomes",
-      "explanation": "Tree diagrams branch out to show all possible outcomes of sequential events and their associated probabilities.",
+      "answer": "True",
+      "explanation": "True. The probability of A given B is correct.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "In a contingency table, if P(B|A) = P(B), the events A and B are:",
-      "options": [
-        "Mutually exclusive",
-        "Complementary",
-        "Independent",
-        "Dependent"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in a contingency table, if p(b|a) = p(b), the events a and b are:.\"",
+      "options": null,
       "answer": "Independent",
-      "explanation": "Independence is defined by P(B|A) = P(B) — knowing A gives no information about B.",
+      "explanation": "The correct answer is: Independent.",
       "points": 1
     },
     {
@@ -1211,29 +1163,13 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "For a binomial distribution with n = 10 and p = 0.3, the variance is:",
+      "question": "True or False: The answer to \"For a discrete probability distribution, all probabilities must be:\" is: Between 0 and 1 inclusive, and sum to 1.",
       "options": [
-        "3",
-        "2.1",
-        "0.21",
-        "7"
+        "True",
+        "False"
       ],
-      "answer": "2.1",
-      "explanation": "Var(X) = np(1−p) = 10 × 0.3 × 0.7 = 2.1.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "Expected value of a random variable tells you:",
-      "options": [
-        "The most likely single outcome",
-        "The average outcome over many repetitions",
-        "The maximum possible value",
-        "The standard deviation"
-      ],
-      "answer": "The average outcome over many repetitions",
-      "explanation": "E(X) is the long-run average value of the random variable over infinitely many trials.",
+      "answer": "True",
+      "explanation": "True. Between 0 and 1 inclusive, and sum to 1 is correct.",
       "points": 1
     },
     {
@@ -1295,15 +1231,13 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "The sampling distribution of p̂ (sample proportion) is approximately normal when:",
+      "question": "True or False: The answer to \"The Central Limit Theorem applies when:\" is: n ≥ 30 (or the population is normal).",
       "options": [
-        "n > 10",
-        "np ≥ 10 and n(1−p) ≥ 10",
-        "p = 0.5",
-        "n > 30 always"
+        "True",
+        "False"
       ],
-      "answer": "np ≥ 10 and n(1−p) ≥ 10",
-      "explanation": "The normal approximation for p̂ is valid when both np and n(1−p) are at least 10.",
+      "answer": "True",
+      "explanation": "True. n ≥ 30 (or the population is normal) is correct.",
       "points": 1
     },
     {
@@ -1351,29 +1285,25 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Margin of error in a confidence interval is defined as:",
+      "question": "True or False: The answer to \"When should you use a t-distribution instead of z for a confidence interval for a mean\" is: When population standard deviation is unknown.",
       "options": [
-        "Point estimate − true parameter",
-        "Critical value × standard error",
-        "Sample mean − population mean",
-        "z × σ"
+        "True",
+        "False"
       ],
-      "answer": "Critical value × standard error",
-      "explanation": "Margin of error = t* × (s/√n) or z* × (σ/√n), combining the critical value and standard error.",
+      "answer": "True",
+      "explanation": "True. When population standard deviation is unknown is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "Which statement correctly interprets a 95% CI of (62, 70) for a mean?",
+      "question": "True or False: The answer to \"Degrees of freedom for a one-sample t-interval with n = 20 is:\" is: 20.",
       "options": [
-        "95% of individuals score between 62 and 70",
-        "The sample mean is definitely 66",
-        "We are 95% confident the population mean is between 62 and 70",
-        "There is a 95% chance the true mean is exactly 66"
+        "True",
+        "False"
       ],
-      "answer": "We are 95% confident the population mean is between 62 and 70",
-      "explanation": "Confidence intervals are statements about the parameter (population mean), not individuals or the sample mean.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 19.",
       "points": 1
     },
     {
@@ -1435,15 +1365,19 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "A 95% confidence interval for a proportion is (0.42, 0.58). The point estimate is:",
-      "options": [
-        "0.42",
-        "0.58",
-        "0.50",
-        "0.16"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a 95% confidence interval for a proportion is (0.42, 0.58). the point estimate is:.\"",
+      "options": null,
       "answer": "0.50",
-      "explanation": "The point estimate is the midpoint of the interval: (0.42 + 0.58)/2 = 0.50.",
+      "explanation": "The correct answer is: 0.50.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 6,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"when no prior estimate of p is available, which value is used to conservatively calculate required sample size.\"",
+      "options": null,
+      "answer": "p̂ = 0.50",
+      "explanation": "The correct answer is: p̂ = 0.50.",
       "points": 1
     },
     {
@@ -1517,6 +1451,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 11,
+      "order": 6,
+      "question": "True or False: The answer to \"The null hypothesis (H₀) typically states:\" is: There is no effect or no difference.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. There is no effect or no difference is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 12,
       "order": 1,
       "question": "The chi-square statistic is calculated as:",
@@ -1561,29 +1507,22 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "For a one-proportion z-test with p₀ = 0.5, n = 100, and p̂ = 0.58, the z-statistic is:",
+      "question": "True or False: The answer to \"The chi-square statistic is calculated as:\" is: Σ(O − E)² / E.",
       "options": [
-        "1.6",
-        "0.8",
-        "3.2",
-        "0.16"
+        "True",
+        "False"
       ],
-      "answer": "1.6",
-      "explanation": "z = (0.58 − 0.5) / √(0.5 × 0.5 / 100) = 0.08 / 0.05 = 1.6.",
+      "answer": "True",
+      "explanation": "True. Σ(O − E)² / E is correct.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "A large chi-square statistic means:",
-      "options": [
-        "Observed and expected frequencies are very close",
-        "There is strong evidence against H₀",
-        "The p-value is large",
-        "The sample size is too small"
-      ],
-      "answer": "There is strong evidence against H₀",
-      "explanation": "A large χ² value indicates large discrepancies between observed and expected counts, giving evidence against H₀.",
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"for a one-proportion z-test with p₀ = 0.5, n = 100, and p̂ = 0.58, the z-statistic is:.\"",
+      "options": null,
+      "answer": "1.6",
+      "explanation": "The correct answer is: 1.6.",
       "points": 1
     },
     {
@@ -1631,29 +1570,13 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "If r = 0.9, what is r²?",
+      "question": "True or False: The answer to \"Which value of r indicates the strongest linear relationship\" is: r = −0.85.",
       "options": [
-        "0.9",
-        "0.81",
-        "0.45",
-        "0.30"
+        "True",
+        "False"
       ],
-      "answer": "0.81",
-      "explanation": "r² = (0.9)² = 0.81. This means 81% of the variability in y is explained by x.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "A scatterplot shows a positive linear trend. This means:",
-      "options": [
-        "As x increases, y tends to decrease",
-        "As x increases, y tends to increase",
-        "x and y are not related",
-        "The correlation is negative"
-      ],
-      "answer": "As x increases, y tends to increase",
-      "explanation": "A positive association means higher x values correspond to higher y values on average.",
+      "answer": "True",
+      "explanation": "True. r = −0.85 is correct.",
       "points": 1
     },
     {
@@ -1715,16 +1638,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "Which of the following is an example of voluntary response bias?",
+      "question": "True or False: The answer to \"A graph that uses 3D effects to exaggerate differences in a pie chart is an example of:\" is: A misleading graphic.",
       "options": [
-        "Selecting every 5th person on a list",
-        "Only people who feel strongly about a topic respond to an online poll",
-        "Dividing by gender and sampling each group proportionally",
-        "Using a random number generator to select participants"
+        "True",
+        "False"
       ],
-      "answer": "Only people who feel strongly about a topic respond to an online poll",
-      "explanation": "Voluntary response samples attract people with strong opinions, making them unrepresentative of the general population.",
+      "answer": "True",
+      "explanation": "True. A misleading graphic is correct.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 11
 }

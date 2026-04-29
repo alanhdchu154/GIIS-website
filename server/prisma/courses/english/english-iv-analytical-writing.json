@@ -2,134 +2,1369 @@
   "slug": "english-iv-analytical-writing",
   "name": "English IV - Analytical Writing",
   "nameZh": "英语四（分析写作）",
-  "credits": 1.0,
+  "credits": 1,
   "department": "English",
   "type": "Core",
   "description": "An advanced English course focused on analytical and critical writing skills, including literary analysis, rhetorical analysis, argument evaluation, and research synthesis, culminating in a capstone portfolio.",
   "isPublished": true,
   "modules": [
-    {"order":1,"title":"Analytical Thinking & Reading","titleZh":"分析性思维与阅读","objectives":"Develop critical thinking skills by questioning assumptions, identifying bias, and evaluating arguments in texts.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html","readingNote":"Read about critical reading and analytical thinking strategies.","videoUrl":"https://www.youtube.com/watch?v=HnJ1bqXUnIM","videoNote":"Watch the video on critical thinking and reading.","video2Url":"","video2Note":"","practiceUrl":"https://www.khanacademy.org","practiceNote":"Complete critical thinking exercises on Khan Academy.","assignment":"Choose an editorial article and write a one-page analysis identifying the author's assumptions, evidence quality, and logical reasoning.","estimatedHrs":3},
-    {"order":2,"title":"Close Reading","titleZh":"细读","objectives":"Apply close reading strategies to analyze texts in detail, examining word choice, structure, and tone.","readingUrl":"https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html","readingNote":"Read about close reading techniques for literary texts.","videoUrl":"https://www.youtube.com/watch?v=fhUOBMzBQGo","videoNote":"Watch the tutorial on close reading strategies.","video2Url":"","video2Note":"","practiceUrl":"https://www.commonlit.org","practiceNote":"Complete a close reading exercise on CommonLit.","assignment":"Select a passage of at least 300 words and write a detailed close reading annotation identifying literary devices, tone shifts, and authorial choices.","estimatedHrs":3},
-    {"order":3,"title":"Thesis Development","titleZh":"论点发展","objectives":"Craft strong, arguable, and specific thesis statements that guide analytical essays.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html","readingNote":"Read about developing strong thesis statements.","videoUrl":"https://www.youtube.com/watch?v=bmWp73MLkJE","videoNote":"Watch the tutorial on thesis development.","video2Url":"","video2Note":"","practiceUrl":"https://www.noredink.com","practiceNote":"Practice writing and revising thesis statements.","assignment":"Write five different thesis statements on the same topic, ranging from weak to strong, and explain what makes each stronger than the last.","estimatedHrs":3},
-    {"order":4,"title":"Literary Analysis","titleZh":"文学分析","objectives":"Analyze literary works by examining theme, symbolism, characterization, and author's craft to develop a supported argument.","readingUrl":"https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html","readingNote":"Study the techniques for writing literary analysis essays.","videoUrl":"https://www.youtube.com/watch?v=N2f5zDeI_8k","videoNote":"Watch the video on literary analysis writing.","video2Url":"","video2Note":"","practiceUrl":"https://www.commonlit.org","practiceNote":"Complete the literary analysis practice on CommonLit.","assignment":"Write a 5-paragraph literary analysis essay on a short story, developing an original thesis and supporting it with textual evidence.","estimatedHrs":5},
-    {"order":5,"title":"Textual Evidence","titleZh":"文本证据","objectives":"Select, integrate, and cite textual evidence effectively to support analytical claims.","readingUrl":"https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html","readingNote":"Read about quoting, paraphrasing, and summarizing effectively.","videoUrl":"https://www.youtube.com/watch?v=FXG4ioClXmc","videoNote":"Watch the video on integrating textual evidence.","video2Url":"","video2Note":"","practiceUrl":"https://www.noredink.com","practiceNote":"Complete the evidence integration exercises.","assignment":"Take three analytical claims and for each, find two pieces of textual evidence, integrate them with signal phrases, and write a follow-up analysis sentence.","estimatedHrs":3},
-    {"order":6,"title":"Rhetorical Analysis","titleZh":"修辞分析","objectives":"Analyze how authors use rhetorical strategies—ethos, pathos, logos—to achieve their purpose with a specific audience.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/rhetorical_situation/index.html","readingNote":"Study the rhetorical situation and analysis techniques.","videoUrl":"https://www.youtube.com/watch?v=rE9-3EvN_yA","videoNote":"Watch the video on rhetorical analysis.","video2Url":"","video2Note":"","practiceUrl":"https://www.procon.org","practiceNote":"Analyze a persuasive article for rhetorical strategies.","assignment":"Write a rhetorical analysis essay on a speech or article, identifying the author's use of ethos, pathos, and logos and evaluating their effectiveness.","estimatedHrs":4},
-    {"order":7,"title":"Argument Evaluation","titleZh":"论证评估","objectives":"Identify logical fallacies, evaluate the strength of arguments, and distinguish fact from opinion.","readingUrl":"https://yourlogicalfallacyis.com","readingNote":"Explore the logical fallacy reference guide.","videoUrl":"https://www.youtube.com/watch?v=NKEhdsnKKHs","videoNote":"Watch the video on logical fallacies and argument evaluation.","video2Url":"","video2Note":"","practiceUrl":"https://www.khanacademy.org","practiceNote":"Complete the logical reasoning exercises on Khan Academy.","assignment":"Find two arguments on a controversial issue and evaluate each for logical fallacies, evidence quality, and persuasive strength.","estimatedHrs":3},
-    {"order":8,"title":"Source Integration","titleZh":"来源整合","objectives":"Integrate multiple sources into analytical writing using signal phrases, quotation, paraphrase, and summary.","readingUrl":"https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html","readingNote":"Read about the techniques of source integration.","videoUrl":"https://www.youtube.com/watch?v=rTLBkHmSqSc","videoNote":"Watch the video on integrating sources in academic writing.","video2Url":"","video2Note":"","practiceUrl":"https://www.easybib.com","practiceNote":"Practice creating citations and integrating sources.","assignment":"Write two body paragraphs that each integrate at least two sources using a mix of quotation and paraphrase with proper MLA citations.","estimatedHrs":3},
-    {"order":9,"title":"Research Methods","titleZh":"研究方法","objectives":"Apply advanced research methods including database searches, source evaluation, and annotated bibliography creation.","readingUrl":"https://owl.purdue.edu/owl/research_and_citation/conducting_research/research_overview/index.html","readingNote":"Read about advanced research processes and database use.","videoUrl":"https://www.youtube.com/watch?v=ZyQATm86bCQ","videoNote":"Watch the tutorial on academic database research.","video2Url":"","video2Note":"","practiceUrl":"https://www.jstor.org","practiceNote":"Search JSTOR for peer-reviewed sources on your research topic.","assignment":"Create an annotated bibliography with five sources, including a brief summary and evaluation of each source's credibility and relevance.","estimatedHrs":4},
-    {"order":10,"title":"Writing Across Genres","titleZh":"跨体裁写作","objectives":"Understand how purpose, audience, and genre conventions shape analytical writing in different contexts.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/index.html","readingNote":"Read about genre conventions in academic writing.","videoUrl":"https://www.youtube.com/watch?v=AyDpopMf4OI","videoNote":"Watch the video on writing in different genres.","video2Url":"","video2Note":"","practiceUrl":"https://www.commonlit.org","practiceNote":"Read texts in multiple genres and compare their conventions.","assignment":"Write the same analytical argument in three different formats: a short essay, an editorial letter, and a social media thread, adapting tone and style for each audience.","estimatedHrs":4},
-    {"order":11,"title":"Style & Voice","titleZh":"风格与声音","objectives":"Develop a distinctive analytical writing style with appropriate academic voice, precision, and clarity.","readingUrl":"https://owl.purdue.edu/owl/general_writing/academic_writing/word_choice/index.html","readingNote":"Read about word choice, style, and academic voice.","videoUrl":"https://www.youtube.com/watch?v=rFzQ2FGkxuM","videoNote":"Watch the video on developing academic writing style.","video2Url":"","video2Note":"","practiceUrl":"https://www.grammarly.com","practiceNote":"Use Grammarly to analyze and improve the style of your writing.","assignment":"Revise a previous analytical essay to improve academic voice, eliminate passive constructions where possible, and enhance word precision.","estimatedHrs":3},
-    {"order":12,"title":"Revision & Editing","titleZh":"修改与编辑","objectives":"Apply systematic revision and editing strategies to produce polished analytical essays.","readingUrl":"https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html","readingNote":"Study advanced revision and editing strategies.","videoUrl":"https://www.youtube.com/watch?v=M-xhBpjdZcc","videoNote":"Watch the video on revision strategies for analytical writing.","video2Url":"","video2Note":"","practiceUrl":"https://www.grammarly.com","practiceNote":"Use Grammarly for a systematic grammar and style check.","assignment":"Exchange an essay with a partner, complete a structured peer review using a rubric, revise your own essay based on feedback, and submit both drafts.","estimatedHrs":3},
-    {"order":13,"title":"Synthesis Writing","titleZh":"综合写作","objectives":"Synthesize multiple sources into a coherent analytical argument that goes beyond summarizing individual sources.","readingUrl":"https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html","readingNote":"Read about synthesis writing strategies.","videoUrl":"https://www.youtube.com/watch?v=2LBP0JJtxOI","videoNote":"Watch the video on synthesis writing.","video2Url":"","video2Note":"","practiceUrl":"https://www.jstor.org","practiceNote":"Gather three sources on a topic and practice synthesizing their arguments.","assignment":"Write a 5-paragraph synthesis essay using four sources, demonstrating how they relate to each other and to your central thesis.","estimatedHrs":5},
-    {"order":14,"title":"Capstone Portfolio","titleZh":"毕业作品集","objectives":"Compile and reflect on analytical writing throughout the course, demonstrating growth in critical thinking and writing.","readingUrl":"https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html","readingNote":"Review portfolio assembly and reflection guidelines.","videoUrl":"https://www.youtube.com/watch?v=_l2hv1LNmxs","videoNote":"Watch the video on creating a capstone portfolio.","video2Url":"","video2Note":"","practiceUrl":"https://www.seesaw.com","practiceNote":"Organize your digital portfolio on the class platform.","assignment":"Assemble your three strongest analytical essays, revise them to final draft quality, and write a 3-paragraph reflection on your growth as an analytical writer.","estimatedHrs":5}
+    {
+      "order": 1,
+      "title": "Analytical Thinking & Reading",
+      "titleZh": "分析性思维与阅读",
+      "objectives": "Develop critical thinking skills by questioning assumptions, identifying bias, and evaluating arguments in texts.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html",
+      "readingNote": "Read about critical reading and analytical thinking strategies.",
+      "videoUrl": "https://www.youtube.com/watch?v=HnJ1bqXUnIM",
+      "videoNote": "Watch the video on critical thinking and reading.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.khanacademy.org",
+      "practiceNote": "Complete critical thinking exercises on Khan Academy.",
+      "assignment": "Choose an editorial article and write a one-page analysis identifying the author's assumptions, evidence quality, and logical reasoning.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 2,
+      "title": "Close Reading",
+      "titleZh": "细读",
+      "objectives": "Apply close reading strategies to analyze texts in detail, examining word choice, structure, and tone.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html",
+      "readingNote": "Read about close reading techniques for literary texts.",
+      "videoUrl": "https://www.youtube.com/watch?v=fhUOBMzBQGo",
+      "videoNote": "Watch the tutorial on close reading strategies.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.commonlit.org",
+      "practiceNote": "Complete a close reading exercise on CommonLit.",
+      "assignment": "Select a passage of at least 300 words and write a detailed close reading annotation identifying literary devices, tone shifts, and authorial choices.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 3,
+      "title": "Thesis Development",
+      "titleZh": "论点发展",
+      "objectives": "Craft strong, arguable, and specific thesis statements that guide analytical essays.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html",
+      "readingNote": "Read about developing strong thesis statements.",
+      "videoUrl": "https://www.youtube.com/watch?v=bmWp73MLkJE",
+      "videoNote": "Watch the tutorial on thesis development.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.noredink.com",
+      "practiceNote": "Practice writing and revising thesis statements.",
+      "assignment": "Write five different thesis statements on the same topic, ranging from weak to strong, and explain what makes each stronger than the last.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 4,
+      "title": "Literary Analysis",
+      "titleZh": "文学分析",
+      "objectives": "Analyze literary works by examining theme, symbolism, characterization, and author's craft to develop a supported argument.",
+      "readingUrl": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html",
+      "readingNote": "Study the techniques for writing literary analysis essays.",
+      "videoUrl": "https://www.youtube.com/watch?v=N2f5zDeI_8k",
+      "videoNote": "Watch the video on literary analysis writing.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.commonlit.org",
+      "practiceNote": "Complete the literary analysis practice on CommonLit.",
+      "assignment": "Write a 5-paragraph literary analysis essay on a short story, developing an original thesis and supporting it with textual evidence.",
+      "estimatedHrs": 5
+    },
+    {
+      "order": 5,
+      "title": "Textual Evidence",
+      "titleZh": "文本证据",
+      "objectives": "Select, integrate, and cite textual evidence effectively to support analytical claims.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html",
+      "readingNote": "Read about quoting, paraphrasing, and summarizing effectively.",
+      "videoUrl": "https://www.youtube.com/watch?v=FXG4ioClXmc",
+      "videoNote": "Watch the video on integrating textual evidence.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.noredink.com",
+      "practiceNote": "Complete the evidence integration exercises.",
+      "assignment": "Take three analytical claims and for each, find two pieces of textual evidence, integrate them with signal phrases, and write a follow-up analysis sentence.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 6,
+      "title": "Rhetorical Analysis",
+      "titleZh": "修辞分析",
+      "objectives": "Analyze how authors use rhetorical strategies—ethos, pathos, logos—to achieve their purpose with a specific audience.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/rhetorical_situation/index.html",
+      "readingNote": "Study the rhetorical situation and analysis techniques.",
+      "videoUrl": "https://www.youtube.com/watch?v=rE9-3EvN_yA",
+      "videoNote": "Watch the video on rhetorical analysis.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.procon.org",
+      "practiceNote": "Analyze a persuasive article for rhetorical strategies.",
+      "assignment": "Write a rhetorical analysis essay on a speech or article, identifying the author's use of ethos, pathos, and logos and evaluating their effectiveness.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 7,
+      "title": "Argument Evaluation",
+      "titleZh": "论证评估",
+      "objectives": "Identify logical fallacies, evaluate the strength of arguments, and distinguish fact from opinion.",
+      "readingUrl": "https://yourlogicalfallacyis.com",
+      "readingNote": "Explore the logical fallacy reference guide.",
+      "videoUrl": "https://www.youtube.com/watch?v=NKEhdsnKKHs",
+      "videoNote": "Watch the video on logical fallacies and argument evaluation.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.khanacademy.org",
+      "practiceNote": "Complete the logical reasoning exercises on Khan Academy.",
+      "assignment": "Find two arguments on a controversial issue and evaluate each for logical fallacies, evidence quality, and persuasive strength.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 8,
+      "title": "Source Integration",
+      "titleZh": "来源整合",
+      "objectives": "Integrate multiple sources into analytical writing using signal phrases, quotation, paraphrase, and summary.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html",
+      "readingNote": "Read about the techniques of source integration.",
+      "videoUrl": "https://www.youtube.com/watch?v=rTLBkHmSqSc",
+      "videoNote": "Watch the video on integrating sources in academic writing.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.easybib.com",
+      "practiceNote": "Practice creating citations and integrating sources.",
+      "assignment": "Write two body paragraphs that each integrate at least two sources using a mix of quotation and paraphrase with proper MLA citations.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 9,
+      "title": "Research Methods",
+      "titleZh": "研究方法",
+      "objectives": "Apply advanced research methods including database searches, source evaluation, and annotated bibliography creation.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/research_overview/index.html",
+      "readingNote": "Read about advanced research processes and database use.",
+      "videoUrl": "https://www.youtube.com/watch?v=ZyQATm86bCQ",
+      "videoNote": "Watch the tutorial on academic database research.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.jstor.org",
+      "practiceNote": "Search JSTOR for peer-reviewed sources on your research topic.",
+      "assignment": "Create an annotated bibliography with five sources, including a brief summary and evaluation of each source's credibility and relevance.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 10,
+      "title": "Writing Across Genres",
+      "titleZh": "跨体裁写作",
+      "objectives": "Understand how purpose, audience, and genre conventions shape analytical writing in different contexts.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/index.html",
+      "readingNote": "Read about genre conventions in academic writing.",
+      "videoUrl": "https://www.youtube.com/watch?v=AyDpopMf4OI",
+      "videoNote": "Watch the video on writing in different genres.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.commonlit.org",
+      "practiceNote": "Read texts in multiple genres and compare their conventions.",
+      "assignment": "Write the same analytical argument in three different formats: a short essay, an editorial letter, and a social media thread, adapting tone and style for each audience.",
+      "estimatedHrs": 4
+    },
+    {
+      "order": 11,
+      "title": "Style & Voice",
+      "titleZh": "风格与声音",
+      "objectives": "Develop a distinctive analytical writing style with appropriate academic voice, precision, and clarity.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/academic_writing/word_choice/index.html",
+      "readingNote": "Read about word choice, style, and academic voice.",
+      "videoUrl": "https://www.youtube.com/watch?v=rFzQ2FGkxuM",
+      "videoNote": "Watch the video on developing academic writing style.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.grammarly.com",
+      "practiceNote": "Use Grammarly to analyze and improve the style of your writing.",
+      "assignment": "Revise a previous analytical essay to improve academic voice, eliminate passive constructions where possible, and enhance word precision.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 12,
+      "title": "Revision & Editing",
+      "titleZh": "修改与编辑",
+      "objectives": "Apply systematic revision and editing strategies to produce polished analytical essays.",
+      "readingUrl": "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html",
+      "readingNote": "Study advanced revision and editing strategies.",
+      "videoUrl": "https://www.youtube.com/watch?v=M-xhBpjdZcc",
+      "videoNote": "Watch the video on revision strategies for analytical writing.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.grammarly.com",
+      "practiceNote": "Use Grammarly for a systematic grammar and style check.",
+      "assignment": "Exchange an essay with a partner, complete a structured peer review using a rubric, revise your own essay based on feedback, and submit both drafts.",
+      "estimatedHrs": 3
+    },
+    {
+      "order": 13,
+      "title": "Synthesis Writing",
+      "titleZh": "综合写作",
+      "objectives": "Synthesize multiple sources into a coherent analytical argument that goes beyond summarizing individual sources.",
+      "readingUrl": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html",
+      "readingNote": "Read about synthesis writing strategies.",
+      "videoUrl": "https://www.youtube.com/watch?v=2LBP0JJtxOI",
+      "videoNote": "Watch the video on synthesis writing.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://www.jstor.org",
+      "practiceNote": "Gather three sources on a topic and practice synthesizing their arguments.",
+      "assignment": "Write a 5-paragraph synthesis essay using four sources, demonstrating how they relate to each other and to your central thesis.",
+      "estimatedHrs": 5
+    }
   ],
   "quizQuestions": [
-    {"moduleOrder":1,"order":1,"question":"What is analytical thinking?","options":["Memorizing facts","Breaking down complex ideas to understand them critically","Writing narratives","Summarizing texts"],"answer":"Breaking down complex ideas to understand them critically","explanation":"Analytical thinking involves examining ideas, identifying assumptions, evaluating evidence, and drawing reasoned conclusions.","points":1},
-    {"moduleOrder":1,"order":2,"question":"What does it mean to identify bias in a text?","options":["Finding grammatical errors","Recognizing when an author presents only one-sided or subjective information","Summarizing the main idea","Identifying the genre"],"answer":"Recognizing when an author presents only one-sided or subjective information","explanation":"Identifying bias means recognizing when a text unfairly favors one perspective or omits key contrary evidence.","points":1},
-    {"moduleOrder":1,"order":3,"question":"What is the purpose of questioning assumptions in analytical reading?","options":["To agree with the author","To challenge unstated beliefs that underlie an argument","To find spelling errors","To summarize the text"],"answer":"To challenge unstated beliefs that underlie an argument","explanation":"Questioning assumptions involves identifying and critically evaluating beliefs that an author takes for granted.","points":1},
-    {"moduleOrder":1,"order":4,"question":"Which of the following best describes an analytical essay?","options":["A personal narrative","A text that breaks down a subject and evaluates it critically","A descriptive passage","A fictional story"],"answer":"A text that breaks down a subject and evaluates it critically","explanation":"An analytical essay examines a subject by breaking it into its component parts and critically evaluating them.","points":1},
-    {"moduleOrder":1,"order":5,"question":"What is the first step in critical reading?","options":["Highlighting all unfamiliar words","Previewing the text and forming questions before reading","Writing a summary","Looking up the author"],"answer":"Previewing the text and forming questions before reading","explanation":"Critical reading begins with previewing titles, headings, and structure, and formulating questions to guide reading.","points":1},
-    {"moduleOrder":2,"order":1,"question":"What is close reading?","options":["Reading a text quickly for the main idea","A detailed, careful analysis of a short passage focusing on language and style","Summarizing a novel","Reading aloud"],"answer":"A detailed, careful analysis of a short passage focusing on language and style","explanation":"Close reading involves carefully examining the specific language, structure, and meaning of a text passage.","points":1},
-    {"moduleOrder":2,"order":2,"question":"What does 'diction' refer to in a close reading?","options":["The sentence length","The author's word choice","The topic of the text","The narrative structure"],"answer":"The author's word choice","explanation":"Diction refers to the particular words an author selects and how those choices contribute to meaning and tone.","points":1},
-    {"moduleOrder":2,"order":3,"question":"What is 'tone' in a literary text?","options":["The volume at which the text is read","The author's attitude or emotional stance toward the subject","The main character's mood","The setting's atmosphere"],"answer":"The author's attitude or emotional stance toward the subject","explanation":"Tone is the author's emotional attitude toward the subject or audience, conveyed through word choice and style.","points":1},
-    {"moduleOrder":2,"order":4,"question":"Why is annotating while reading useful for close analysis?","options":["It makes books look used","It helps capture observations and questions in the moment for later analysis","It speeds up reading","It replaces the need to write an essay"],"answer":"It helps capture observations and questions in the moment for later analysis","explanation":"Annotation records reactions, questions, and analysis as you read, creating a record useful for later writing.","points":1},
-    {"moduleOrder":2,"order":5,"question":"What does analyzing the structure of a text reveal?","options":["The author's biography","How the organization of the text shapes meaning and argument","The word count","The publication date"],"answer":"How the organization of the text shapes meaning and argument","explanation":"Analyzing structure reveals how the author's organizational choices contribute to the overall meaning.","points":1},
-    {"moduleOrder":3,"order":1,"question":"What makes a thesis statement analytical rather than informational?","options":["It is longer","It makes a debatable claim that requires evidence and reasoning","It states a fact","It summarizes the text"],"answer":"It makes a debatable claim that requires evidence and reasoning","explanation":"An analytical thesis presents an arguable interpretation or evaluation that must be supported with evidence.","points":1},
-    {"moduleOrder":3,"order":2,"question":"Which of the following is a strong analytical thesis?","options":["This essay is about the theme of courage.","Shakespeare's Hamlet uses the motif of corruption to argue that unchecked ambition destroys moral integrity.","Hamlet is a play about a prince.","Shakespeare wrote many plays."],"answer":"Shakespeare's Hamlet uses the motif of corruption to argue that unchecked ambition destroys moral integrity.","explanation":"A strong analytical thesis makes a specific, arguable claim about how a text works and what it means.","points":1},
-    {"moduleOrder":3,"order":3,"question":"What should a thesis statement do?","options":["Summarize the plot","State the writer's main analytical argument and preview how it will be supported","List all the topics in the essay","Ask a question"],"answer":"State the writer's main analytical argument and preview how it will be supported","explanation":"A thesis presents the central argument and often signals the key points of evidence that will follow.","points":1},
-    {"moduleOrder":3,"order":4,"question":"Where is the thesis statement typically placed?","options":["In the middle of the essay","At the end of the conclusion","At the end of the introduction","At the beginning of each body paragraph"],"answer":"At the end of the introduction","explanation":"The thesis statement is conventionally placed at the end of the introductory paragraph.","points":1},
-    {"moduleOrder":3,"order":5,"question":"What is a 'roadmap thesis'?","options":["A thesis that describes the setting","A thesis that states the argument and briefly outlines the main supporting points","A thesis in the conclusion","A thesis without a claim"],"answer":"A thesis that states the argument and briefly outlines the main supporting points","explanation":"A roadmap thesis not only presents the central argument but also previews the key points to be developed.","points":1},
-    {"moduleOrder":4,"order":1,"question":"What is the primary goal of a literary analysis essay?","options":["To summarize the plot","To argue an interpretation of a text using evidence","To describe the characters","To retell the story in your own words"],"answer":"To argue an interpretation of a text using evidence","explanation":"Literary analysis essays present and defend a specific interpretation or evaluation of a literary work.","points":1},
-    {"moduleOrder":4,"order":2,"question":"What is a motif in literature?","options":["The setting of a story","A recurring element that has symbolic significance","The main character","The climax of the plot"],"answer":"A recurring element that has symbolic significance","explanation":"A motif is a recurring image, idea, or symbol in a literary work that develops theme and meaning.","points":1},
-    {"moduleOrder":4,"order":3,"question":"What does 'irony' mean in literary analysis?","options":["A type of poem","A contrast between expectation and reality","A form of characterization","A narrative technique"],"answer":"A contrast between expectation and reality","explanation":"Irony occurs when there is a gap between what is said or expected and what actually happens or is meant.","points":1},
-    {"moduleOrder":4,"order":4,"question":"What is the 'author's craft'?","options":["The physical tools the author uses","The deliberate choices an author makes about language, structure, and technique","The author's biography","The genre of the text"],"answer":"The deliberate choices an author makes about language, structure, and technique","explanation":"Author's craft refers to the intentional literary and stylistic decisions made to create meaning and effect.","points":1},
-    {"moduleOrder":4,"order":5,"question":"How should body paragraphs in a literary analysis be structured?","options":["Summary, opinion, conclusion","Claim, evidence, analysis","Introduction, body, conclusion","Hook, thesis, summary"],"answer":"Claim, evidence, analysis","explanation":"Each body paragraph should present a specific analytical claim, support it with textual evidence, and analyze how the evidence supports the claim.","points":1},
-    {"moduleOrder":5,"order":1,"question":"What is a signal phrase when integrating evidence?","options":["A punctuation mark","An introductory phrase that attributes a quote or idea to its source","A transition word","A citation format"],"answer":"An introductory phrase that attributes a quote or idea to its source","explanation":"Signal phrases introduce quotations or paraphrases and credit the source.","points":1},
-    {"moduleOrder":5,"order":2,"question":"What should follow every piece of textual evidence in an analytical essay?","options":["Another quotation","Analysis explaining how the evidence supports the claim","A citation","A summary"],"answer":"Analysis explaining how the evidence supports the claim","explanation":"After providing evidence, the writer must analyze how it connects to and supports the thesis or paragraph claim.","points":1},
-    {"moduleOrder":5,"order":3,"question":"When should a writer use a direct quotation rather than a paraphrase?","options":["When the source is long","When the specific wording is important and cannot be improved","When they don't understand the source","When summarizing a whole argument"],"answer":"When the specific wording is important and cannot be improved","explanation":"Direct quotations are best used when the original phrasing is particularly powerful, precise, or when wording itself is under analysis.","points":1},
-    {"moduleOrder":5,"order":4,"question":"What is 'quote sandwiching'?","options":["Using too many quotations","The technique of introducing a quote, providing it, then analyzing it","Placing quotes at the end of paragraphs","Avoiding direct quotations"],"answer":"The technique of introducing a quote, providing it, then analyzing it","explanation":"Quote sandwiching ensures quotations are properly introduced with a signal phrase and followed by analysis.","points":1},
-    {"moduleOrder":5,"order":5,"question":"What is the danger of using too many direct quotations?","options":["The essay becomes longer","The essay lacks the writer's own analytical voice and argument","The paper becomes harder to read","Citations become incorrect"],"answer":"The essay lacks the writer's own analytical voice and argument","explanation":"Over-reliance on direct quotations can undermine the writer's analytical voice.","points":1},
-    {"moduleOrder":6,"order":1,"question":"What does rhetorical analysis examine?","options":["A text's plot","How an author uses language and strategies to persuade or affect an audience","The grammar of a text","The author's biography"],"answer":"How an author uses language and strategies to persuade or affect an audience","explanation":"Rhetorical analysis examines the techniques an author uses to achieve their purpose with a specific audience.","points":1},
-    {"moduleOrder":6,"order":2,"question":"What is the rhetorical situation?","options":["The topic of the text","The context including speaker, audience, purpose, and text","The argument of the text","The emotional appeal of the text"],"answer":"The context including speaker, audience, purpose, and text","explanation":"The rhetorical situation encompasses the context in which communication occurs: speaker, audience, purpose, topic, and occasion.","points":1},
-    {"moduleOrder":6,"order":3,"question":"How does kairos function in rhetoric?","options":["It is an appeal to logic","It refers to the right moment or timing for communication","It is an emotional appeal","It establishes the speaker's credibility"],"answer":"It refers to the right moment or timing for communication","explanation":"Kairos refers to the opportune moment or context in which communication is most effective.","points":1},
-    {"moduleOrder":6,"order":4,"question":"What is the difference between an argument and a rhetorical analysis?","options":["They are the same","An argument makes a claim; a rhetorical analysis examines how an argument is constructed","A rhetorical analysis is shorter","An argument uses logos; a rhetorical analysis uses pathos"],"answer":"An argument makes a claim; a rhetorical analysis examines how an argument is constructed","explanation":"An argument persuades; a rhetorical analysis analyzes the persuasive techniques used.","points":1},
-    {"moduleOrder":6,"order":5,"question":"What should a rhetorical analysis thesis include?","options":["A summary of the text","A claim about what strategies the author uses and how effective they are","The author's biography","A list of rhetorical terms"],"answer":"A claim about what strategies the author uses and how effective they are","explanation":"A rhetorical analysis thesis identifies the key rhetorical strategies and evaluates their effectiveness.","points":1},
-    {"moduleOrder":7,"order":1,"question":"What is a logical fallacy?","options":["A false fact","An error in reasoning that undermines an argument","A grammatical mistake","A misquotation"],"answer":"An error in reasoning that undermines an argument","explanation":"A logical fallacy is a flaw in reasoning that makes an argument invalid or misleading.","points":1},
-    {"moduleOrder":7,"order":2,"question":"What is an ad hominem fallacy?","options":["Attacking the argument instead of the person","Attacking the person making the argument instead of the argument itself","Using too much emotion","Making a hasty conclusion"],"answer":"Attacking the person making the argument instead of the argument itself","explanation":"Ad hominem fallacy occurs when someone attacks character rather than the argument.","points":1},
-    {"moduleOrder":7,"order":3,"question":"What is a hasty generalization?","options":["A well-supported conclusion","Drawing a broad conclusion from insufficient evidence","Using too many statistics","Making an emotional appeal"],"answer":"Drawing a broad conclusion from insufficient evidence","explanation":"A hasty generalization draws a broad conclusion based on a very small or unrepresentative sample.","points":1},
-    {"moduleOrder":7,"order":4,"question":"What is the straw man fallacy?","options":["Strengthening your opponent's argument","Misrepresenting an opponent's argument to make it easier to attack","Avoiding the topic","Using circular reasoning"],"answer":"Misrepresenting an opponent's argument to make it easier to attack","explanation":"A straw man fallacy distorts or exaggerates an opponent's position to make it easier to refute.","points":1},
-    {"moduleOrder":7,"order":5,"question":"What does it mean to distinguish fact from opinion?","options":["Identifying which sentences are longer","Recognizing that facts can be verified while opinions reflect personal judgment","Finding the author's name","Identifying the genre"],"answer":"Recognizing that facts can be verified while opinions reflect personal judgment","explanation":"Facts are objectively verifiable; opinions are subjective judgments that cannot be proven true or false.","points":1},
-    {"moduleOrder":8,"order":1,"question":"What is the purpose of a signal phrase when integrating sources?","options":["To end a quotation","To attribute the source and introduce the evidence smoothly","To provide a citation","To summarize the source"],"answer":"To attribute the source and introduce the evidence smoothly","explanation":"Signal phrases introduce quotations or paraphrases and give credit to the author.","points":1},
-    {"moduleOrder":8,"order":2,"question":"What is the difference between summary and paraphrase?","options":["They are identical","Summary condenses the whole source; paraphrase restates a specific passage in your own words","Paraphrase is longer than summary","Summary uses quotation marks"],"answer":"Summary condenses the whole source; paraphrase restates a specific passage in your own words","explanation":"Summary provides an overview of an entire source; paraphrase restates a specific section in the writer's own words.","points":1},
-    {"moduleOrder":8,"order":3,"question":"What is plagiarism?","options":["Citing too many sources","Using someone else's words or ideas without proper attribution","Writing in a style similar to another author","Including too many quotations"],"answer":"Using someone else's words or ideas without proper attribution","explanation":"Plagiarism is presenting another person's intellectual work as your own without proper citation.","points":1},
-    {"moduleOrder":8,"order":4,"question":"What makes source integration effective?","options":["Using as many quotations as possible","Smoothly embedding evidence into your argument with proper introduction and analysis","Only using direct quotations","Avoiding paraphrase"],"answer":"Smoothly embedding evidence into your argument with proper introduction and analysis","explanation":"Effective source integration means introducing evidence, providing it, and analyzing how it supports your argument.","points":1},
-    {"moduleOrder":8,"order":5,"question":"Why is it important to use multiple sources in an analytical essay?","options":["It makes the essay longer","Multiple perspectives strengthen the argument and demonstrate thorough research","It is required by MLA format","It replaces the need for a thesis"],"answer":"Multiple perspectives strengthen the argument and demonstrate thorough research","explanation":"Using multiple sources shows the writer has considered a range of evidence and perspectives.","points":1},
-    {"moduleOrder":9,"order":1,"question":"What is an annotated bibliography?","options":["A list of citations only","A list of sources that includes a brief summary and evaluation of each source","A research paper","A table of contents"],"answer":"A list of sources that includes a brief summary and evaluation of each source","explanation":"An annotated bibliography provides citations followed by a brief paragraph summarizing and evaluating each source.","points":1},
-    {"moduleOrder":9,"order":2,"question":"What does it mean to evaluate a source's credibility?","options":["Checking if it is online","Assessing the author's expertise, publication venue, and currency of information","Counting the number of pages","Finding the longest article"],"answer":"Assessing the author's expertise, publication venue, and currency of information","explanation":"Evaluating credibility involves checking the author's qualifications, the publication's reputation, and how current the information is.","points":1},
-    {"moduleOrder":9,"order":3,"question":"What is a peer-reviewed article?","options":["An article written by students","An article evaluated by experts in the field before publication","A newspaper article","A blog post"],"answer":"An article evaluated by experts in the field before publication","explanation":"Peer-reviewed articles have been reviewed and approved by other experts in the field.","points":1},
-    {"moduleOrder":9,"order":4,"question":"What does CRAAP stand for in source evaluation?","options":["Content, Relevance, Accuracy, Authority, Purpose","Currency, Relevance, Authority, Accuracy, Purpose","Copy, Research, Annotate, Analyze, Publish","Create, Review, Apply, Arrange, Present"],"answer":"Currency, Relevance, Authority, Accuracy, Purpose","explanation":"The CRAAP test evaluates sources based on Currency, Relevance, Authority, Accuracy, and Purpose.","points":1},
-    {"moduleOrder":9,"order":5,"question":"What is the difference between a primary and a secondary source in research?","options":["Primary sources are online; secondary sources are in print","Primary sources are original materials; secondary sources analyze or discuss primary sources","Secondary sources are more reliable","Primary sources are always longer"],"answer":"Primary sources are original materials; secondary sources analyze or discuss primary sources","explanation":"Primary sources are firsthand evidence; secondary sources interpret or discuss primary materials.","points":1},
-    {"moduleOrder":10,"order":1,"question":"What does 'writing across genres' mean?","options":["Writing very long essays","Adapting writing style, tone, and structure to fit different genres and audiences","Mixing fiction and nonfiction","Using multiple languages"],"answer":"Adapting writing style, tone, and structure to fit different genres and audiences","explanation":"Writing across genres means understanding how purpose, audience, and context require different forms of communication.","points":1},
-    {"moduleOrder":10,"order":2,"question":"What is 'audience awareness' in writing?","options":["Knowing how many people will read your essay","Understanding who your readers are and adapting your writing to their needs and expectations","Counting the number of words","Using formal language only"],"answer":"Understanding who your readers are and adapting your writing to their needs and expectations","explanation":"Audience awareness means tailoring content, tone, vocabulary, and style to the specific readers you are addressing.","points":1},
-    {"moduleOrder":10,"order":3,"question":"How does an editorial differ from a research essay?","options":["An editorial is longer","An editorial expresses opinion for a public audience; a research essay presents evidence-based argument in an academic context","A research essay is more emotional","An editorial uses more evidence"],"answer":"An editorial expresses opinion for a public audience; a research essay presents evidence-based argument in an academic context","explanation":"Editorials aim to persuade a general readership; research essays present thoroughly evidenced arguments for academic audiences.","points":1},
-    {"moduleOrder":10,"order":4,"question":"What is purpose in writing?","options":["The length of the essay","The writer's reason for writing and what they want to accomplish with the audience","The topic of the essay","The sources used"],"answer":"The writer's reason for writing and what they want to accomplish with the audience","explanation":"Purpose refers to the goal the writer aims to achieve: to inform, persuade, entertain, analyze, or synthesize.","points":1},
-    {"moduleOrder":10,"order":5,"question":"Why is understanding genre conventions important?","options":["To avoid writing different types of essays","To know what readers expect and how to meet or subvert those expectations effectively","To memorize formats","To avoid using transitions"],"answer":"To know what readers expect and how to meet or subvert those expectations effectively","explanation":"Genre conventions are the shared expectations of a form; understanding them allows writers to communicate more effectively.","points":1},
-    {"moduleOrder":11,"order":1,"question":"What is academic voice in writing?","options":["Writing in a very formal, impersonal tone with no opinion","A tone that is clear, precise, objective, and appropriately formal for an academic context","Using as many complex words as possible","Using only passive voice"],"answer":"A tone that is clear, precise, objective, and appropriately formal for an academic context","explanation":"Academic voice balances clarity, precision, and appropriate formality.","points":1},
-    {"moduleOrder":11,"order":2,"question":"What is the difference between active and passive voice?","options":["Active voice is longer","In active voice, the subject performs the action; in passive voice, the subject receives the action","Passive voice is more academic","There is no difference"],"answer":"In active voice, the subject performs the action; in passive voice, the subject receives the action","explanation":"Active voice is generally clearer and more direct than passive voice.","points":1},
-    {"moduleOrder":11,"order":3,"question":"What does word precision mean in analytical writing?","options":["Using the longest possible words","Choosing words that convey exactly the intended meaning","Using simple words only","Repeating key words"],"answer":"Choosing words that convey exactly the intended meaning","explanation":"Word precision means selecting the most accurate term to express an idea.","points":1},
-    {"moduleOrder":11,"order":4,"question":"What is hedging language and when is it appropriate?","options":["Using definitive statements always","Using cautious language (might, suggests, could) when making uncertain or qualified claims","Avoiding all qualifiers","Using emotional language"],"answer":"Using cautious language (might, suggests, could) when making uncertain or qualified claims","explanation":"Hedging language qualifies claims appropriately when certainty is not warranted.","points":1},
-    {"moduleOrder":11,"order":5,"question":"Why should analytical writers avoid clichés?","options":["They are grammatically incorrect","Clichés are overused expressions that reduce the precision and originality of analytical writing","They make the essay longer","They are not allowed in MLA format"],"answer":"Clichés are overused expressions that reduce the precision and originality of analytical writing","explanation":"Clichés are overused phrases that lack specificity and originality, weakening the analytical voice.","points":1},
-    {"moduleOrder":12,"order":1,"question":"What is the goal of the revision stage?","options":["To correct spelling errors","To improve the content, structure, and development of the essay","To check punctuation","To format the bibliography"],"answer":"To improve the content, structure, and development of the essay","explanation":"Revision focuses on big-picture improvements: strengthening the thesis, developing arguments, improving organization.","points":1},
-    {"moduleOrder":12,"order":2,"question":"What should a peer reviewer focus on during feedback?","options":["Correcting every grammar mistake","Evaluating the strength of the argument, evidence, and organization","Rewriting the essay","Checking the citation format"],"answer":"Evaluating the strength of the argument, evidence, and organization","explanation":"Productive peer review addresses content-level concerns: thesis clarity, evidence quality, logical flow, and development.","points":1},
-    {"moduleOrder":12,"order":3,"question":"What is 'global revision'?","options":["Revising for spelling errors","Revising for big-picture issues like argument, structure, and development","Revising word choice only","Adding more quotations"],"answer":"Revising for big-picture issues like argument, structure, and development","explanation":"Global revision addresses the overall effectiveness of the essay: the argument's logic, organization, and evidence.","points":1},
-    {"moduleOrder":12,"order":4,"question":"What is 'local revision'?","options":["Revising the introduction","Revising sentence-level issues like word choice, clarity, and mechanics","Reorganizing paragraphs","Adding more evidence"],"answer":"Revising sentence-level issues like word choice, clarity, and mechanics","explanation":"Local revision focuses on improving individual sentences, word choice, grammar, and punctuation.","points":1},
-    {"moduleOrder":12,"order":5,"question":"Why is it recommended to revise after a period of time away from the draft?","options":["To forget what you wrote","To gain distance that allows you to read the draft more objectively","To have less time to revise","To allow the draft to be perfect already"],"answer":"To gain distance that allows you to read the draft more objectively","explanation":"Taking a break before revising allows you to read your work with fresh eyes and catch weaknesses.","points":1},
-    {"moduleOrder":13,"order":1,"question":"What is synthesis writing?","options":["Summarizing one source","Combining ideas from multiple sources to develop and support an original argument","Quoting sources without analysis","Listing the main points of each source"],"answer":"Combining ideas from multiple sources to develop and support an original argument","explanation":"Synthesis writing goes beyond summarizing individual sources to show how multiple sources relate and connect to your own argument.","points":1},
-    {"moduleOrder":13,"order":2,"question":"What distinguishes synthesis from summary?","options":["Synthesis is shorter","Synthesis connects multiple sources to your own argument; summary restates a single source","Summary uses more quotations","They are the same thing"],"answer":"Synthesis connects multiple sources to your own argument; summary restates a single source","explanation":"Synthesis integrates multiple perspectives to support an original thesis, while summary merely restates what a source says.","points":1},
-    {"moduleOrder":13,"order":3,"question":"What is a 'synthesis matrix'?","options":["A type of citation format","An organizational tool that tracks how multiple sources relate to each other and to your thesis","A graphic organizer for plot","A research database"],"answer":"An organizational tool that tracks how multiple sources relate to each other and to your thesis","explanation":"A synthesis matrix is a chart that maps sources against key themes or arguments, helping writers see connections.","points":1},
-    {"moduleOrder":13,"order":4,"question":"How should sources be introduced in a synthesis essay?","options":["Without any attribution","With signal phrases that identify the source and place it in context","Only in footnotes","At the end of each paragraph"],"answer":"With signal phrases that identify the source and place it in context","explanation":"Sources in synthesis essays are introduced with signal phrases that credit authors and establish context.","points":1},
-    {"moduleOrder":13,"order":5,"question":"What is the writer's role in a synthesis essay?","options":["To remain neutral and only quote sources","To develop and defend an original argument using sources as support","To summarize each source in order","To disagree with all sources"],"answer":"To develop and defend an original argument using sources as support","explanation":"In synthesis writing, the writer's original analytical argument drives the essay.","points":1},
-    {"moduleOrder":14,"order":1,"question":"What is the purpose of a capstone portfolio?","options":["To display every assignment completed","To showcase the writer's most polished analytical work and reflect on growth","To replace all exams","To grade other students"],"answer":"To showcase the writer's most polished analytical work and reflect on growth","explanation":"A capstone portfolio presents the writer's best work as evidence of learning and growth over the course.","points":1},
-    {"moduleOrder":14,"order":2,"question":"What should a portfolio reflection essay demonstrate?","options":["That all assignments were completed on time","Metacognitive awareness of growth, strengths, and areas for continued improvement","A summary of each assignment","The writer's agreement with course readings"],"answer":"Metacognitive awareness of growth, strengths, and areas for continued improvement","explanation":"A strong portfolio reflection demonstrates the writer's ability to evaluate their own intellectual and stylistic development.","points":1},
-    {"moduleOrder":14,"order":3,"question":"Why is selecting which pieces to include in a portfolio important?","options":["Because longer essays are always better","Because selection demonstrates judgment about which work best represents your skills and growth","To include the highest-graded work only","To include the most recent work only"],"answer":"Because selection demonstrates judgment about which work best represents your skills and growth","explanation":"Selecting portfolio pieces thoughtfully shows the writer's ability to evaluate their work and make strategic choices.","points":1},
-    {"moduleOrder":14,"order":4,"question":"What distinguishes a capstone portfolio from a regular assignment collection?","options":["A capstone portfolio is longer","A capstone includes reflective commentary, revision, and curation that demonstrate development","It only includes the final essay","It is graded differently"],"answer":"A capstone includes reflective commentary, revision, and curation that demonstrate development","explanation":"A capstone portfolio goes beyond collecting work by requiring thoughtful revision, selection, and reflective analysis.","points":1},
-    {"moduleOrder":14,"order":5,"question":"What does 'metacognition' mean in the context of portfolio reflection?","options":["Reading about writing","Thinking about your own thinking and learning process","Memorizing writing rules","Evaluating other students' work"],"answer":"Thinking about your own thinking and learning process","explanation":"Metacognition is the awareness and understanding of one's own thought processes, essential for meaningful portfolio reflection.","points":1}
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "What is analytical thinking?",
+      "options": [
+        "Memorizing facts",
+        "Breaking down complex ideas to understand them critically",
+        "Writing narratives",
+        "Summarizing texts"
+      ],
+      "answer": "Breaking down complex ideas to understand them critically",
+      "explanation": "Analytical thinking involves examining ideas, identifying assumptions, evaluating evidence, and drawing reasoned conclusions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "What does it mean to identify bias in a text?",
+      "options": [
+        "Finding grammatical errors",
+        "Recognizing when an author presents only one-sided or subjective information",
+        "Summarizing the main idea",
+        "Identifying the genre"
+      ],
+      "answer": "Recognizing when an author presents only one-sided or subjective information",
+      "explanation": "Identifying bias means recognizing when a text unfairly favors one perspective or omits key contrary evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "True or False: Analytical thinking is \"Breaking down complex ideas to understand them critically\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Breaking down complex ideas to understand them critically is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "What is close reading?",
+      "options": [
+        "Reading a text quickly for the main idea",
+        "A detailed, careful analysis of a short passage focusing on language and style",
+        "Summarizing a novel",
+        "Reading aloud"
+      ],
+      "answer": "A detailed, careful analysis of a short passage focusing on language and style",
+      "explanation": "Close reading involves carefully examining the specific language, structure, and meaning of a text passage.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "What does 'diction' refer to in a close reading?",
+      "options": [
+        "The sentence length",
+        "The author's word choice",
+        "The topic of the text",
+        "The narrative structure"
+      ],
+      "answer": "The author's word choice",
+      "explanation": "Diction refers to the particular words an author selects and how those choices contribute to meaning and tone.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "What is 'tone' in a literary text?",
+      "options": [
+        "The volume at which the text is read",
+        "The author's attitude or emotional stance toward the subject",
+        "The main character's mood",
+        "The setting's atmosphere"
+      ],
+      "answer": "The author's attitude or emotional stance toward the subject",
+      "explanation": "Tone is the author's emotional attitude toward the subject or audience, conveyed through word choice and style.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "True or False: Close reading is \"A detailed, careful analysis of a short passage focusing on language and style\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. A detailed, careful analysis of a short passage focusing on language and style is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "What makes a thesis statement analytical rather than informational?",
+      "options": [
+        "It is longer",
+        "It makes a debatable claim that requires evidence and reasoning",
+        "It states a fact",
+        "It summarizes the text"
+      ],
+      "answer": "It makes a debatable claim that requires evidence and reasoning",
+      "explanation": "An analytical thesis presents an arguable interpretation or evaluation that must be supported with evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Which of the following is a strong analytical thesis?",
+      "options": [
+        "This essay is about the theme of courage.",
+        "Shakespeare's Hamlet uses the motif of corruption to argue that unchecked ambition destroys moral integrity.",
+        "Hamlet is a play about a prince.",
+        "Shakespeare wrote many plays."
+      ],
+      "answer": "Shakespeare's Hamlet uses the motif of corruption to argue that unchecked ambition destroys moral integrity.",
+      "explanation": "A strong analytical thesis makes a specific, arguable claim about how a text works and what it means.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "What should a thesis statement do?",
+      "options": [
+        "Summarize the plot",
+        "State the writer's main analytical argument and preview how it will be supported",
+        "List all the topics in the essay",
+        "Ask a question"
+      ],
+      "answer": "State the writer's main analytical argument and preview how it will be supported",
+      "explanation": "A thesis presents the central argument and often signals the key points of evidence that will follow.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "What is the primary goal of a literary analysis essay?",
+      "options": [
+        "To summarize the plot",
+        "To argue an interpretation of a text using evidence",
+        "To describe the characters",
+        "To retell the story in your own words"
+      ],
+      "answer": "To argue an interpretation of a text using evidence",
+      "explanation": "Literary analysis essays present and defend a specific interpretation or evaluation of a literary work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "What is a motif in literature?",
+      "options": [
+        "The setting of a story",
+        "A recurring element that has symbolic significance",
+        "The main character",
+        "The climax of the plot"
+      ],
+      "answer": "A recurring element that has symbolic significance",
+      "explanation": "A motif is a recurring image, idea, or symbol in a literary work that develops theme and meaning.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "What does 'irony' mean in literary analysis?",
+      "options": [
+        "A type of poem",
+        "A contrast between expectation and reality",
+        "A form of characterization",
+        "A narrative technique"
+      ],
+      "answer": "A contrast between expectation and reality",
+      "explanation": "Irony occurs when there is a gap between what is said or expected and what actually happens or is meant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "What is the 'author's craft'?",
+      "options": [
+        "The physical tools the author uses",
+        "The deliberate choices an author makes about language, structure, and technique",
+        "The author's biography",
+        "The genre of the text"
+      ],
+      "answer": "The deliberate choices an author makes about language, structure, and technique",
+      "explanation": "Author's craft refers to the intentional literary and stylistic decisions made to create meaning and effect.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "What is a signal phrase when integrating evidence?",
+      "options": [
+        "A punctuation mark",
+        "An introductory phrase that attributes a quote or idea to its source",
+        "A transition word",
+        "A citation format"
+      ],
+      "answer": "An introductory phrase that attributes a quote or idea to its source",
+      "explanation": "Signal phrases introduce quotations or paraphrases and credit the source.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "What should follow every piece of textual evidence in an analytical essay?",
+      "options": [
+        "Another quotation",
+        "Analysis explaining how the evidence supports the claim",
+        "A citation",
+        "A summary"
+      ],
+      "answer": "Analysis explaining how the evidence supports the claim",
+      "explanation": "After providing evidence, the writer must analyze how it connects to and supports the thesis or paragraph claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "True or False: A signal phrase when integrating evidence is \"An introductory phrase that attributes a quote or idea to its source\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. An introductory phrase that attributes a quote or idea to its source is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "True or False: The answer to \"What should follow every piece of textual evidence in an analytical essay\" is: Another quotation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Analysis explaining how the evidence supports the claim.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "What does rhetorical analysis examine?",
+      "options": [
+        "A text's plot",
+        "How an author uses language and strategies to persuade or affect an audience",
+        "The grammar of a text",
+        "The author's biography"
+      ],
+      "answer": "How an author uses language and strategies to persuade or affect an audience",
+      "explanation": "Rhetorical analysis examines the techniques an author uses to achieve their purpose with a specific audience.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "What is the rhetorical situation?",
+      "options": [
+        "The topic of the text",
+        "The context including speaker, audience, purpose, and text",
+        "The argument of the text",
+        "The emotional appeal of the text"
+      ],
+      "answer": "The context including speaker, audience, purpose, and text",
+      "explanation": "The rhetorical situation encompasses the context in which communication occurs: speaker, audience, purpose, topic, and occasion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "How does kairos function in rhetoric?",
+      "options": [
+        "It is an appeal to logic",
+        "It refers to the right moment or timing for communication",
+        "It is an emotional appeal",
+        "It establishes the speaker's credibility"
+      ],
+      "answer": "It refers to the right moment or timing for communication",
+      "explanation": "Kairos refers to the opportune moment or context in which communication is most effective.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "True or False: The answer to \"What does rhetorical analysis examine\" is: How an author uses language and strategies to persuade or affect an audience.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. How an author uses language and strategies to persuade or affect an audience is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "What is a logical fallacy?",
+      "options": [
+        "A false fact",
+        "An error in reasoning that undermines an argument",
+        "A grammatical mistake",
+        "A misquotation"
+      ],
+      "answer": "An error in reasoning that undermines an argument",
+      "explanation": "A logical fallacy is a flaw in reasoning that makes an argument invalid or misleading.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "What is an ad hominem fallacy?",
+      "options": [
+        "Attacking the argument instead of the person",
+        "Attacking the person making the argument instead of the argument itself",
+        "Using too much emotion",
+        "Making a hasty conclusion"
+      ],
+      "answer": "Attacking the person making the argument instead of the argument itself",
+      "explanation": "Ad hominem fallacy occurs when someone attacks character rather than the argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "True or False: A logical fallacy is \"An error in reasoning that undermines an argument\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. An error in reasoning that undermines an argument is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "What is the purpose of a signal phrase when integrating sources?",
+      "options": [
+        "To end a quotation",
+        "To attribute the source and introduce the evidence smoothly",
+        "To provide a citation",
+        "To summarize the source"
+      ],
+      "answer": "To attribute the source and introduce the evidence smoothly",
+      "explanation": "Signal phrases introduce quotations or paraphrases and give credit to the author.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "What is the difference between summary and paraphrase?",
+      "options": [
+        "They are identical",
+        "Summary condenses the whole source; paraphrase restates a specific passage in your own words",
+        "Paraphrase is longer than summary",
+        "Summary uses quotation marks"
+      ],
+      "answer": "Summary condenses the whole source; paraphrase restates a specific passage in your own words",
+      "explanation": "Summary provides an overview of an entire source; paraphrase restates a specific section in the writer's own words.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "What is plagiarism?",
+      "options": [
+        "Citing too many sources",
+        "Using someone else's words or ideas without proper attribution",
+        "Writing in a style similar to another author",
+        "Including too many quotations"
+      ],
+      "answer": "Using someone else's words or ideas without proper attribution",
+      "explanation": "Plagiarism is presenting another person's intellectual work as your own without proper citation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "True or False: The purpose of a signal phrase when integrating sources is \"To attribute the source and introduce the evidence smoothly\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. To attribute the source and introduce the evidence smoothly is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "What is an annotated bibliography?",
+      "options": [
+        "A list of citations only",
+        "A list of sources that includes a brief summary and evaluation of each source",
+        "A research paper",
+        "A table of contents"
+      ],
+      "answer": "A list of sources that includes a brief summary and evaluation of each source",
+      "explanation": "An annotated bibliography provides citations followed by a brief paragraph summarizing and evaluating each source.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "What does it mean to evaluate a source's credibility?",
+      "options": [
+        "Checking if it is online",
+        "Assessing the author's expertise, publication venue, and currency of information",
+        "Counting the number of pages",
+        "Finding the longest article"
+      ],
+      "answer": "Assessing the author's expertise, publication venue, and currency of information",
+      "explanation": "Evaluating credibility involves checking the author's qualifications, the publication's reputation, and how current the information is.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "What is a peer-reviewed article?",
+      "options": [
+        "An article written by students",
+        "An article evaluated by experts in the field before publication",
+        "A newspaper article",
+        "A blog post"
+      ],
+      "answer": "An article evaluated by experts in the field before publication",
+      "explanation": "Peer-reviewed articles have been reviewed and approved by other experts in the field.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "What does 'writing across genres' mean?",
+      "options": [
+        "Writing very long essays",
+        "Adapting writing style, tone, and structure to fit different genres and audiences",
+        "Mixing fiction and nonfiction",
+        "Using multiple languages"
+      ],
+      "answer": "Adapting writing style, tone, and structure to fit different genres and audiences",
+      "explanation": "Writing across genres means understanding how purpose, audience, and context require different forms of communication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "What is 'audience awareness' in writing?",
+      "options": [
+        "Knowing how many people will read your essay",
+        "Understanding who your readers are and adapting your writing to their needs and expectations",
+        "Counting the number of words",
+        "Using formal language only"
+      ],
+      "answer": "Understanding who your readers are and adapting your writing to their needs and expectations",
+      "explanation": "Audience awareness means tailoring content, tone, vocabulary, and style to the specific readers you are addressing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "How does an editorial differ from a research essay?",
+      "options": [
+        "An editorial is longer",
+        "An editorial expresses opinion for a public audience; a research essay presents evidence-based argument in an academic context",
+        "A research essay is more emotional",
+        "An editorial uses more evidence"
+      ],
+      "answer": "An editorial expresses opinion for a public audience; a research essay presents evidence-based argument in an academic context",
+      "explanation": "Editorials aim to persuade a general readership; research essays present thoroughly evidenced arguments for academic audiences.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "What is purpose in writing?",
+      "options": [
+        "The length of the essay",
+        "The writer's reason for writing and what they want to accomplish with the audience",
+        "The topic of the essay",
+        "The sources used"
+      ],
+      "answer": "The writer's reason for writing and what they want to accomplish with the audience",
+      "explanation": "Purpose refers to the goal the writer aims to achieve: to inform, persuade, entertain, analyze, or synthesize.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "What is academic voice in writing?",
+      "options": [
+        "Writing in a very formal, impersonal tone with no opinion",
+        "A tone that is clear, precise, objective, and appropriately formal for an academic context",
+        "Using as many complex words as possible",
+        "Using only passive voice"
+      ],
+      "answer": "A tone that is clear, precise, objective, and appropriately formal for an academic context",
+      "explanation": "Academic voice balances clarity, precision, and appropriate formality.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "What is the difference between active and passive voice?",
+      "options": [
+        "Active voice is longer",
+        "In active voice, the subject performs the action; in passive voice, the subject receives the action",
+        "Passive voice is more academic",
+        "There is no difference"
+      ],
+      "answer": "In active voice, the subject performs the action; in passive voice, the subject receives the action",
+      "explanation": "Active voice is generally clearer and more direct than passive voice.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "True or False: Academic voice in writing is \"A tone that is clear, precise, objective, and appropriately formal for an academic context\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. A tone that is clear, precise, objective, and appropriately formal for an academic context is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "True or False: The difference between active and passive voice is \"Active voice is longer\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: In active voice, the subject performs the action; in passive voice, the subject receives the action.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "What is the goal of the revision stage?",
+      "options": [
+        "To correct spelling errors",
+        "To improve the content, structure, and development of the essay",
+        "To check punctuation",
+        "To format the bibliography"
+      ],
+      "answer": "To improve the content, structure, and development of the essay",
+      "explanation": "Revision focuses on big-picture improvements: strengthening the thesis, developing arguments, improving organization.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "What should a peer reviewer focus on during feedback?",
+      "options": [
+        "Correcting every grammar mistake",
+        "Evaluating the strength of the argument, evidence, and organization",
+        "Rewriting the essay",
+        "Checking the citation format"
+      ],
+      "answer": "Evaluating the strength of the argument, evidence, and organization",
+      "explanation": "Productive peer review addresses content-level concerns: thesis clarity, evidence quality, logical flow, and development.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "What is 'global revision'?",
+      "options": [
+        "Revising for spelling errors",
+        "Revising for big-picture issues like argument, structure, and development",
+        "Revising word choice only",
+        "Adding more quotations"
+      ],
+      "answer": "Revising for big-picture issues like argument, structure, and development",
+      "explanation": "Global revision addresses the overall effectiveness of the essay: the argument's logic, organization, and evidence.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "True or False: The goal of the revision stage is \"To improve the content, structure, and development of the essay\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. To improve the content, structure, and development of the essay is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "What is synthesis writing?",
+      "options": [
+        "Summarizing one source",
+        "Combining ideas from multiple sources to develop and support an original argument",
+        "Quoting sources without analysis",
+        "Listing the main points of each source"
+      ],
+      "answer": "Combining ideas from multiple sources to develop and support an original argument",
+      "explanation": "Synthesis writing goes beyond summarizing individual sources to show how multiple sources relate and connect to your own argument.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "What distinguishes synthesis from summary?",
+      "options": [
+        "Synthesis is shorter",
+        "Synthesis connects multiple sources to your own argument; summary restates a single source",
+        "Summary uses more quotations",
+        "They are the same thing"
+      ],
+      "answer": "Synthesis connects multiple sources to your own argument; summary restates a single source",
+      "explanation": "Synthesis integrates multiple perspectives to support an original thesis, while summary merely restates what a source says.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "True or False: Synthesis writing is \"Combining ideas from multiple sources to develop and support an original argument\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Combining ideas from multiple sources to develop and support an original argument is correct.",
+      "points": 1
+    }
   ],
   "questions": [
-    {"examType":"midterm","order":1,"type":"mc","question":"What is the primary purpose of an analytical essay?","options":["To tell a personal story","To summarize a text","To develop and defend an interpretation or evaluation using evidence","To describe a subject"],"answer":"To develop and defend an interpretation or evaluation using evidence","explanation":"Analytical essays present and support an original claim through critical examination of evidence.","points":1},
-    {"examType":"midterm","order":2,"type":"mc","question":"What is close reading?","options":["Reading a text quickly","A detailed analysis of a short passage examining language, structure, and meaning","Summarizing a chapter","Reading aloud with expression"],"answer":"A detailed analysis of a short passage examining language, structure, and meaning","explanation":"Close reading involves careful, detailed examination of a text's specific language and how it creates meaning.","points":1},
-    {"examType":"midterm","order":3,"type":"mc","question":"What makes a thesis analytical?","options":["It is three sentences long","It makes a debatable, specific claim requiring evidence and reasoning","It summarizes the text","It identifies the author"],"answer":"It makes a debatable, specific claim requiring evidence and reasoning","explanation":"An analytical thesis presents an arguable interpretation that must be defended with evidence.","points":1},
-    {"examType":"midterm","order":4,"type":"mc","question":"What is the function of a signal phrase?","options":["To end a paragraph","To introduce and attribute a source smoothly into the text","To provide a citation only","To summarize an argument"],"answer":"To introduce and attribute a source smoothly into the text","explanation":"Signal phrases introduce evidence and credit its source, helping it flow naturally into the writer's argument.","points":1},
-    {"examType":"midterm","order":5,"type":"mc","question":"What does rhetorical analysis examine?","options":["A text's plot","The author's use of language and strategies to influence an audience","The grammar of a text","The historical context only"],"answer":"The author's use of language and strategies to influence an audience","explanation":"Rhetorical analysis examines how an author uses ethos, pathos, logos, and other strategies to achieve their purpose.","points":1},
-    {"examType":"midterm","order":6,"type":"mc","question":"What is an ad hominem logical fallacy?","options":["Drawing a broad conclusion from little evidence","Attacking the person rather than their argument","Misrepresenting an opponent's position","Using circular reasoning"],"answer":"Attacking the person rather than their argument","explanation":"Ad hominem fallacy occurs when someone attacks a person's character instead of engaging with their actual argument.","points":1},
-    {"examType":"midterm","order":7,"type":"mc","question":"What should follow every piece of textual evidence in an analytical paragraph?","options":["Another quotation","Analysis explaining how the evidence supports the claim","A transition sentence","A new topic sentence"],"answer":"Analysis explaining how the evidence supports the claim","explanation":"After providing evidence, the writer must analyze how it connects to and supports the paragraph's claim.","points":1},
-    {"examType":"midterm","order":8,"type":"mc","question":"What is diction?","options":["The sentence structure of a text","The author's word choice","The tone of the text","The narrative point of view"],"answer":"The author's word choice","explanation":"Diction refers to the specific words an author selects and how those choices contribute to meaning and effect.","points":1},
-    {"examType":"midterm","order":9,"type":"mc","question":"What does evaluating a source's credibility involve?","options":["Checking if it is online","Assessing the author's expertise, publication venue, and information currency","Counting the number of citations","Finding the longest source"],"answer":"Assessing the author's expertise, publication venue, and information currency","explanation":"Credibility evaluation considers the author's qualifications, the publication's reputation, and the information's currency.","points":1},
-    {"examType":"midterm","order":10,"type":"mc","question":"What is a motif in literary analysis?","options":["The setting of a story","A recurring element that carries symbolic significance","The main character","The climax"],"answer":"A recurring element that carries symbolic significance","explanation":"A motif is a recurring image, idea, or symbol in a literary work that develops theme and meaning.","points":1},
-    {"examType":"midterm","order":11,"type":"mc","question":"What is the rhetorical situation?","options":["The plot of the text","The context including speaker, audience, purpose, and occasion","The argument of the text","The emotional tone"],"answer":"The context including speaker, audience, purpose, and occasion","explanation":"The rhetorical situation encompasses the context in which communication occurs.","points":1},
-    {"examType":"midterm","order":12,"type":"mc","question":"What is synthesis writing?","options":["Summarizing one source","Combining ideas from multiple sources to develop an original argument","Quoting extensively from sources","Listing arguments from each source"],"answer":"Combining ideas from multiple sources to develop an original argument","explanation":"Synthesis writing integrates multiple perspectives to support an original analytical thesis.","points":1},
-    {"examType":"midterm","order":13,"type":"mc","question":"What is the CRAAP test used for?","options":["Evaluating essay structure","Evaluating the credibility and quality of sources","Checking citation format","Analyzing rhetoric"],"answer":"Evaluating the credibility and quality of sources","explanation":"The CRAAP test evaluates sources based on Currency, Relevance, Authority, Accuracy, and Purpose.","points":1},
-    {"examType":"midterm","order":14,"type":"mc","question":"What is academic voice?","options":["Writing in a very impersonal tone with no argument","A clear, precise, and appropriately formal tone for academic contexts","Using only passive voice","Avoiding first-person pronouns always"],"answer":"A clear, precise, and appropriately formal tone for academic contexts","explanation":"Academic voice balances clarity, precision, and appropriate formality.","points":1},
-    {"examType":"midterm","order":15,"type":"mc","question":"What is plagiarism?","options":["Citing too many sources","Using someone else's words or ideas without proper attribution","Writing in a style similar to another author","Including too many quotations"],"answer":"Using someone else's words or ideas without proper attribution","explanation":"Plagiarism is presenting another person's intellectual work as your own without proper citation.","points":1},
-    {"examType":"final","order":1,"type":"mc","question":"What distinguishes global revision from local revision?","options":["Global is longer","Global addresses argument and structure; local addresses sentence-level issues","Local revision comes first","They are the same"],"answer":"Global addresses argument and structure; local addresses sentence-level issues","explanation":"Global revision focuses on big-picture issues like thesis and organization; local revision focuses on sentence clarity and mechanics.","points":1},
-    {"examType":"final","order":2,"type":"mc","question":"What is a straw man fallacy?","options":["Attacking the person making an argument","Misrepresenting an opponent's argument to make it easier to refute","Drawing a broad conclusion from little evidence","Using circular reasoning"],"answer":"Misrepresenting an opponent's argument to make it easier to refute","explanation":"A straw man fallacy distorts an opponent's position into a weaker version that is easier to attack.","points":1},
-    {"examType":"final","order":3,"type":"mc","question":"What is the capstone portfolio's purpose?","options":["To display all assignments","To showcase polished analytical work and demonstrate growth","To replace the final exam","To grade peers"],"answer":"To showcase polished analytical work and demonstrate growth","explanation":"The capstone portfolio presents the writer's best work as evidence of learning and development.","points":1},
-    {"examType":"final","order":4,"type":"mc","question":"What is quote sandwiching?","options":["Using too many quotations","Introducing a quote, providing it, then analyzing its significance","Placing quotes only at the end of paragraphs","Avoiding direct quotations"],"answer":"Introducing a quote, providing it, then analyzing its significance","explanation":"Quote sandwiching ensures evidence is properly framed: introduced, quoted, then analyzed.","points":1},
-    {"examType":"final","order":5,"type":"mc","question":"What does 'audience awareness' mean in analytical writing?","options":["Knowing how many people will read your essay","Tailoring content, tone, and style to the specific readers you address","Using formal language exclusively","Counting words"],"answer":"Tailoring content, tone, and style to the specific readers you address","explanation":"Audience awareness means adapting writing to the knowledge, expectations, and needs of your specific readers.","points":1},
-    {"examType":"final","order":6,"type":"mc","question":"What is an annotated bibliography?","options":["A list of citations only","A list of sources that includes a summary and evaluation of each","A research paper","A table of contents"],"answer":"A list of sources that includes a summary and evaluation of each","explanation":"An annotated bibliography provides citations followed by a brief paragraph summarizing and evaluating each source.","points":1},
-    {"examType":"final","order":7,"type":"mc","question":"What is the difference between summary and synthesis?","options":["Synthesis is shorter","Summary restates one source; synthesis integrates multiple sources to support an argument","Summary uses more quotations","They are the same"],"answer":"Summary restates one source; synthesis integrates multiple sources to support an argument","explanation":"Synthesis goes beyond summarizing to show how multiple sources relate and connect to your own argument.","points":1},
-    {"examType":"final","order":8,"type":"mc","question":"What does word precision mean in analytical writing?","options":["Using the longest possible words","Choosing words that convey exactly the intended meaning","Using simple words only","Avoiding all adjectives"],"answer":"Choosing words that convey exactly the intended meaning","explanation":"Word precision means selecting the most accurate term to express an idea.","points":1},
-    {"examType":"final","order":9,"type":"mc","question":"What is a roadmap thesis?","options":["A thesis about geography","A thesis that states the argument and previews the key supporting points","A thesis placed in the conclusion","A thesis that asks a question"],"answer":"A thesis that states the argument and previews the key supporting points","explanation":"A roadmap thesis presents the central argument and signals the key points that will be developed.","points":1},
-    {"examType":"final","order":10,"type":"mc","question":"What is irony in literary analysis?","options":["A type of rhyme","A contrast between expectation and reality","A form of characterization","A narrative structure"],"answer":"A contrast between expectation and reality","explanation":"Irony occurs when there is a discrepancy between what is said or expected and what actually happens or is meant.","points":1},
-    {"examType":"final","order":11,"type":"mc","question":"What does metacognition mean in portfolio reflection?","options":["Reading about writing","Thinking about your own thinking and learning process","Memorizing writing rules","Evaluating other students' work"],"answer":"Thinking about your own thinking and learning process","explanation":"Metacognition is the awareness and evaluation of one's own thought processes.","points":1},
-    {"examType":"final","order":12,"type":"mc","question":"What is the ARMS revision strategy?","options":["Analyze, Revise, Modify, Submit","Add, Remove, Move, Substitute","Ask, Reread, Mark, Summarize","Arrange, Rewrite, Measure, Strengthen"],"answer":"Add, Remove, Move, Substitute","explanation":"ARMS guides revision: Add missing content, Remove unnecessary material, Move sections for clarity, Substitute better choices.","points":1},
-    {"examType":"final","order":13,"type":"mc","question":"What is the difference between a primary and a secondary source?","options":["Primary sources are online","Primary sources are original materials; secondary sources analyze or interpret primary sources","Secondary sources are more reliable","Primary sources are always longer"],"answer":"Primary sources are original materials; secondary sources analyze or interpret primary sources","explanation":"Primary sources are firsthand evidence; secondary sources interpret or discuss primary materials.","points":1},
-    {"examType":"final","order":14,"type":"mc","question":"What is kairos in rhetoric?","options":["An appeal to logic","An appeal to emotion","The right moment or timing for communication","The speaker's credibility"],"answer":"The right moment or timing for communication","explanation":"Kairos refers to the opportune moment or context in which communication is most effective.","points":1},
-    {"examType":"final","order":15,"type":"mc","question":"What is the author's craft?","options":["The physical tools the author uses","The deliberate choices an author makes about language, structure, and technique","The author's biography","The genre of the text"],"answer":"The deliberate choices an author makes about language, structure, and technique","explanation":"Author's craft refers to intentional literary and stylistic decisions made to create meaning and effect.","points":1},
-    {"examType":"final","order":16,"type":"mc","question":"What is hedging language?","options":["Using definitive statements always","Using cautious language when making uncertain or qualified claims","Avoiding all qualifiers","Using emotional language"],"answer":"Using cautious language when making uncertain or qualified claims","explanation":"Hedging language qualifies claims appropriately when certainty is not warranted.","points":1},
-    {"examType":"final","order":17,"type":"mc","question":"What does 'writing across genres' mean?","options":["Writing very long essays","Adapting style, tone, and structure to fit different genres and audiences","Mixing fiction and nonfiction","Using multiple languages in one essay"],"answer":"Adapting style, tone, and structure to fit different genres and audiences","explanation":"Writing across genres means understanding how purpose, audience, and context require different forms of communication.","points":1},
-    {"examType":"final","order":18,"type":"mc","question":"What is a hasty generalization?","options":["A well-supported conclusion","Drawing a broad conclusion from insufficient evidence","Using too many statistics","Making an emotional appeal"],"answer":"Drawing a broad conclusion from insufficient evidence","explanation":"A hasty generalization draws a broad conclusion based on a small or unrepresentative sample.","points":1},
-    {"examType":"final","order":19,"type":"mc","question":"What is the purpose of an annotated bibliography entry?","options":["To list the citation only","To summarize the source and evaluate its credibility and relevance to the research","To paraphrase the entire source","To provide an abstract"],"answer":"To summarize the source and evaluate its credibility and relevance to the research","explanation":"Each annotated bibliography entry summarizes content and evaluates the source's quality and usefulness.","points":1},
-    {"examType":"final","order":20,"type":"mc","question":"What does the writer's role in a synthesis essay involve?","options":["Remaining neutral and only quoting sources","Developing and defending an original argument using sources as support","Summarizing each source in order","Disagreeing with all sources"],"answer":"Developing and defending an original argument using sources as support","explanation":"In synthesis writing, the writer's original argument drives the essay, with sources serving as supporting evidence.","points":1}
-  ]
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "What is the primary purpose of an analytical essay?",
+      "options": [
+        "To tell a personal story",
+        "To summarize a text",
+        "To develop and defend an interpretation or evaluation using evidence",
+        "To describe a subject"
+      ],
+      "answer": "To develop and defend an interpretation or evaluation using evidence",
+      "explanation": "Analytical essays present and support an original claim through critical examination of evidence.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "What is close reading?",
+      "options": [
+        "Reading a text quickly",
+        "A detailed analysis of a short passage examining language, structure, and meaning",
+        "Summarizing a chapter",
+        "Reading aloud with expression"
+      ],
+      "answer": "A detailed analysis of a short passage examining language, structure, and meaning",
+      "explanation": "Close reading involves careful, detailed examination of a text's specific language and how it creates meaning.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "What makes a thesis analytical?",
+      "options": [
+        "It is three sentences long",
+        "It makes a debatable, specific claim requiring evidence and reasoning",
+        "It summarizes the text",
+        "It identifies the author"
+      ],
+      "answer": "It makes a debatable, specific claim requiring evidence and reasoning",
+      "explanation": "An analytical thesis presents an arguable interpretation that must be defended with evidence.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "tf",
+      "question": "True or False: The function of a signal phrase is \"To introduce and attribute a source smoothly into the text\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. To introduce and attribute a source smoothly into the text is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "What does rhetorical analysis examine?",
+      "options": [
+        "A text's plot",
+        "The author's use of language and strategies to influence an audience",
+        "The grammar of a text",
+        "The historical context only"
+      ],
+      "answer": "The author's use of language and strategies to influence an audience",
+      "explanation": "Rhetorical analysis examines how an author uses ethos, pathos, logos, and other strategies to achieve their purpose.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "What is an ad hominem logical fallacy?",
+      "options": [
+        "Drawing a broad conclusion from little evidence",
+        "Attacking the person rather than their argument",
+        "Misrepresenting an opponent's position",
+        "Using circular reasoning"
+      ],
+      "answer": "Attacking the person rather than their argument",
+      "explanation": "Ad hominem fallacy occurs when someone attacks a person's character instead of engaging with their actual argument.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "What should follow every piece of textual evidence in an analytical paragraph?",
+      "options": [
+        "Another quotation",
+        "Analysis explaining how the evidence supports the claim",
+        "A transition sentence",
+        "A new topic sentence"
+      ],
+      "answer": "Analysis explaining how the evidence supports the claim",
+      "explanation": "After providing evidence, the writer must analyze how it connects to and supports the paragraph's claim.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "tf",
+      "question": "True or False: Diction is \"The sentence structure of a text\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: The author's word choice.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "What does evaluating a source's credibility involve?",
+      "options": [
+        "Checking if it is online",
+        "Assessing the author's expertise, publication venue, and information currency",
+        "Counting the number of citations",
+        "Finding the longest source"
+      ],
+      "answer": "Assessing the author's expertise, publication venue, and information currency",
+      "explanation": "Credibility evaluation considers the author's qualifications, the publication's reputation, and the information's currency.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "What is a motif in literary analysis?",
+      "options": [
+        "The setting of a story",
+        "A recurring element that carries symbolic significance",
+        "The main character",
+        "The climax"
+      ],
+      "answer": "A recurring element that carries symbolic significance",
+      "explanation": "A motif is a recurring image, idea, or symbol in a literary work that develops theme and meaning.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "What is the rhetorical situation?",
+      "options": [
+        "The plot of the text",
+        "The context including speaker, audience, purpose, and occasion",
+        "The argument of the text",
+        "The emotional tone"
+      ],
+      "answer": "The context including speaker, audience, purpose, and occasion",
+      "explanation": "The rhetorical situation encompasses the context in which communication occurs.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "tf",
+      "question": "True or False: Synthesis writing is \"Combining ideas from multiple sources to develop an original argument\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Combining ideas from multiple sources to develop an original argument is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "What is the CRAAP test used for?",
+      "options": [
+        "Evaluating essay structure",
+        "Evaluating the credibility and quality of sources",
+        "Checking citation format",
+        "Analyzing rhetoric"
+      ],
+      "answer": "Evaluating the credibility and quality of sources",
+      "explanation": "The CRAAP test evaluates sources based on Currency, Relevance, Authority, Accuracy, and Purpose.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "What is academic voice?",
+      "options": [
+        "Writing in a very impersonal tone with no argument",
+        "A clear, precise, and appropriately formal tone for academic contexts",
+        "Using only passive voice",
+        "Avoiding first-person pronouns always"
+      ],
+      "answer": "A clear, precise, and appropriately formal tone for academic contexts",
+      "explanation": "Academic voice balances clarity, precision, and appropriate formality.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "What is plagiarism?",
+      "options": [
+        "Citing too many sources",
+        "Using someone else's words or ideas without proper attribution",
+        "Writing in a style similar to another author",
+        "Including too many quotations"
+      ],
+      "answer": "Using someone else's words or ideas without proper attribution",
+      "explanation": "Plagiarism is presenting another person's intellectual work as your own without proper citation.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "tf",
+      "question": "True or False: The answer to \"What distinguishes global revision from local revision\" is: Global is longer.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Global addresses argument and structure; local addresses sentence-level issues.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "What is a straw man fallacy?",
+      "options": [
+        "Attacking the person making an argument",
+        "Misrepresenting an opponent's argument to make it easier to refute",
+        "Drawing a broad conclusion from little evidence",
+        "Using circular reasoning"
+      ],
+      "answer": "Misrepresenting an opponent's argument to make it easier to refute",
+      "explanation": "A straw man fallacy distorts an opponent's position into a weaker version that is easier to attack.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "What is the capstone portfolio's purpose?",
+      "options": [
+        "To display all assignments",
+        "To showcase polished analytical work and demonstrate growth",
+        "To replace the final exam",
+        "To grade peers"
+      ],
+      "answer": "To showcase polished analytical work and demonstrate growth",
+      "explanation": "The capstone portfolio presents the writer's best work as evidence of learning and development.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "What is quote sandwiching?",
+      "options": [
+        "Using too many quotations",
+        "Introducing a quote, providing it, then analyzing its significance",
+        "Placing quotes only at the end of paragraphs",
+        "Avoiding direct quotations"
+      ],
+      "answer": "Introducing a quote, providing it, then analyzing its significance",
+      "explanation": "Quote sandwiching ensures evidence is properly framed: introduced, quoted, then analyzed.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "tf",
+      "question": "True or False: The answer to \"What does 'audience awareness' mean in analytical writing\" is: Tailoring content, tone, and style to the specific readers you address.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Tailoring content, tone, and style to the specific readers you address is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "What is an annotated bibliography?",
+      "options": [
+        "A list of citations only",
+        "A list of sources that includes a summary and evaluation of each",
+        "A research paper",
+        "A table of contents"
+      ],
+      "answer": "A list of sources that includes a summary and evaluation of each",
+      "explanation": "An annotated bibliography provides citations followed by a brief paragraph summarizing and evaluating each source.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "What is the difference between summary and synthesis?",
+      "options": [
+        "Synthesis is shorter",
+        "Summary restates one source; synthesis integrates multiple sources to support an argument",
+        "Summary uses more quotations",
+        "They are the same"
+      ],
+      "answer": "Summary restates one source; synthesis integrates multiple sources to support an argument",
+      "explanation": "Synthesis goes beyond summarizing to show how multiple sources relate and connect to your own argument.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "What does word precision mean in analytical writing?",
+      "options": [
+        "Using the longest possible words",
+        "Choosing words that convey exactly the intended meaning",
+        "Using simple words only",
+        "Avoiding all adjectives"
+      ],
+      "answer": "Choosing words that convey exactly the intended meaning",
+      "explanation": "Word precision means selecting the most accurate term to express an idea.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "tf",
+      "question": "True or False: A roadmap thesis is \"A thesis about geography\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: A thesis that states the argument and previews the key supporting points.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "What is irony in literary analysis?",
+      "options": [
+        "A type of rhyme",
+        "A contrast between expectation and reality",
+        "A form of characterization",
+        "A narrative structure"
+      ],
+      "answer": "A contrast between expectation and reality",
+      "explanation": "Irony occurs when there is a discrepancy between what is said or expected and what actually happens or is meant.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "What does metacognition mean in portfolio reflection?",
+      "options": [
+        "Reading about writing",
+        "Thinking about your own thinking and learning process",
+        "Memorizing writing rules",
+        "Evaluating other students' work"
+      ],
+      "answer": "Thinking about your own thinking and learning process",
+      "explanation": "Metacognition is the awareness and evaluation of one's own thought processes.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "What is the ARMS revision strategy?",
+      "options": [
+        "Analyze, Revise, Modify, Submit",
+        "Add, Remove, Move, Substitute",
+        "Ask, Reread, Mark, Summarize",
+        "Arrange, Rewrite, Measure, Strengthen"
+      ],
+      "answer": "Add, Remove, Move, Substitute",
+      "explanation": "ARMS guides revision: Add missing content, Remove unnecessary material, Move sections for clarity, Substitute better choices.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "tf",
+      "question": "True or False: The difference between a primary and a secondary source is \"Primary sources are original materials; secondary sources analyze or interpret primary sources\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Primary sources are original materials; secondary sources analyze or interpret primary sources is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "What is kairos in rhetoric?",
+      "options": [
+        "An appeal to logic",
+        "An appeal to emotion",
+        "The right moment or timing for communication",
+        "The speaker's credibility"
+      ],
+      "answer": "The right moment or timing for communication",
+      "explanation": "Kairos refers to the opportune moment or context in which communication is most effective.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "What is the author's craft?",
+      "options": [
+        "The physical tools the author uses",
+        "The deliberate choices an author makes about language, structure, and technique",
+        "The author's biography",
+        "The genre of the text"
+      ],
+      "answer": "The deliberate choices an author makes about language, structure, and technique",
+      "explanation": "Author's craft refers to intentional literary and stylistic decisions made to create meaning and effect.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "What is hedging language?",
+      "options": [
+        "Using definitive statements always",
+        "Using cautious language when making uncertain or qualified claims",
+        "Avoiding all qualifiers",
+        "Using emotional language"
+      ],
+      "answer": "Using cautious language when making uncertain or qualified claims",
+      "explanation": "Hedging language qualifies claims appropriately when certainty is not warranted.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "tf",
+      "question": "True or False: The answer to \"What does 'writing across genres' mean\" is: Writing very long essays.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Adapting style, tone, and structure to fit different genres and audiences.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "What is a hasty generalization?",
+      "options": [
+        "A well-supported conclusion",
+        "Drawing a broad conclusion from insufficient evidence",
+        "Using too many statistics",
+        "Making an emotional appeal"
+      ],
+      "answer": "Drawing a broad conclusion from insufficient evidence",
+      "explanation": "A hasty generalization draws a broad conclusion based on a small or unrepresentative sample.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "What is the purpose of an annotated bibliography entry?",
+      "options": [
+        "To list the citation only",
+        "To summarize the source and evaluate its credibility and relevance to the research",
+        "To paraphrase the entire source",
+        "To provide an abstract"
+      ],
+      "answer": "To summarize the source and evaluate its credibility and relevance to the research",
+      "explanation": "Each annotated bibliography entry summarizes content and evaluates the source's quality and usefulness.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "What does the writer's role in a synthesis essay involve?",
+      "options": [
+        "Remaining neutral and only quoting sources",
+        "Developing and defending an original argument using sources as support",
+        "Summarizing each source in order",
+        "Disagreeing with all sources"
+      ],
+      "answer": "Developing and defending an original argument using sources as support",
+      "explanation": "In synthesis writing, the writer's original argument drives the essay, with sources serving as supporting evidence.",
+      "points": 1
+    }
+  ],
+  "gradeLevel": 12
 }

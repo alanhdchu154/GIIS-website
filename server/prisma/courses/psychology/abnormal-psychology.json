@@ -183,54 +183,6 @@
       "practiceNote": "Khan Academy — Eating Disorders Practice",
       "assignment": "Analyze the biopsychosocial factors contributing to anorexia nervosa. Create a table identifying biological (e.g., genetics, serotonin), psychological (e.g., perfectionism, cognitive distortions), and social (e.g., media ideals, peer pressure) factors and their role in the disorder.",
       "estimatedHrs": 3
-    },
-    {
-      "order": 12,
-      "title": "Substance-Related Disorders",
-      "titleZh": "物质相关障碍",
-      "objectives": "Distinguish substance use, intoxication, and use disorder; explain the neuroscience of addiction (reward pathway); and evaluate pharmacological and behavioral treatment approaches.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/4-4",
-      "readingNote": "OpenStax Psychology 2e Ch 4.4",
-      "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-psychological-disorders/ap-substance-related-and-addictive-disorders/v/substance-disorders",
-      "videoNote": "Khan Academy — Substance-Related Disorders",
-      "video2Url": "https://www.youtube.com/watch?v=ao6sady5pjk",
-      "video2Note": "YouTube — Addiction & the Brain's Reward System",
-      "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-psychological-disorders/ap-substance-related-and-addictive-disorders/e/psychological-disorders",
-      "practiceNote": "Khan Academy — Substance Disorders Practice",
-      "assignment": "Describe how repeated drug use changes the brain's dopamine reward pathway. Explain why these changes make quitting difficult and evaluate two evidence-based approaches (one pharmacological, one behavioral) for treating opioid use disorder.",
-      "estimatedHrs": 3
-    },
-    {
-      "order": 13,
-      "title": "Neurodevelopmental Disorders",
-      "titleZh": "神经发育障碍",
-      "objectives": "Describe ADHD and autism spectrum disorder (ASD), explain their neurobiological bases, compare DSM-5 diagnostic criteria, and evaluate behavioral and pharmacological interventions.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/15-2",
-      "readingNote": "OpenStax Psychology 2e Ch 15.2",
-      "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-psychological-disorders/ap-neurodevelopmental-disorders/v/adhd-autism",
-      "videoNote": "Khan Academy — Neurodevelopmental Disorders",
-      "video2Url": "https://www.youtube.com/watch?v=xtf5TdMsFz4",
-      "video2Note": "YouTube — ADHD vs. Autism Spectrum Disorder",
-      "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-psychological-disorders/ap-neurodevelopmental-disorders/e/psychological-disorders",
-      "practiceNote": "Khan Academy — Neurodevelopmental Practice",
-      "assignment": "Compare ADHD and autism spectrum disorder across three dimensions: core symptoms, age of onset/diagnosis, and primary treatment approaches. Present your comparison in a structured table followed by a 200-word reflection.",
-      "estimatedHrs": 3
-    },
-    {
-      "order": 14,
-      "title": "Treatment Approaches",
-      "titleZh": "治疗方法",
-      "objectives": "Compare psychodynamic, cognitive-behavioral, humanistic, and biomedical treatment approaches; evaluate empirically supported treatments; and discuss access to mental healthcare.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/16-introduction",
-      "readingNote": "OpenStax Psychology 2e Ch 16",
-      "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-treatment-of-psychological-disorders/ap-overview-of-treatment/v/overview-of-psychological-treatment",
-      "videoNote": "Khan Academy — Treatment Overview",
-      "video2Url": "https://www.youtube.com/watch?v=RNpBLgJAqlo",
-      "video2Note": "YouTube — Types of Psychological Therapy Explained",
-      "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-treatment-of-psychological-disorders/ap-overview-of-treatment/e/treatment-of-psychological-disorders",
-      "practiceNote": "Khan Academy — Treatment Practice",
-      "assignment": "You are a psychologist working with a client who has major depressive disorder that has not responded to two antidepressant medications. Write a 400-word clinical recommendation addressing: (1) your proposed treatment approach, (2) the evidence supporting it, and (3) ethical considerations.",
-      "estimatedHrs": 3.5
     }
   ],
   "quizQuestions": [
@@ -265,43 +217,22 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Cultural context matters in defining abnormality because:",
+      "question": "True or False: The answer to \"The '4 Ds' framework for defining abnormal behavior includes deviance, distress, dysfunction, and:\" is: Danger.",
       "options": [
-        "Disorders are identical across all cultures",
-        "Behaviors considered abnormal in one culture may be normal in another",
-        "The DSM applies universally without cultural variation",
-        "All cultures use the same diagnostic criteria"
+        "True",
+        "False"
       ],
-      "answer": "Behaviors considered abnormal in one culture may be normal in another",
-      "explanation": "Cultural context shapes what is considered deviant; DSM acknowledges culture-bound syndromes and requires cultural context in diagnosis.",
+      "answer": "True",
+      "explanation": "True. Danger is correct.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Functional impairment as a criterion for disorder means:",
-      "options": [
-        "The behavior causes statistical deviance",
-        "The behavior impairs daily activities, relationships, or work",
-        "The person poses a physical danger to others",
-        "The behavior causes subjective distress"
-      ],
-      "answer": "The behavior impairs daily activities, relationships, or work",
-      "explanation": "Dysfunction refers to impairment in major areas of daily functioning such as work, school, relationships, or self-care.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "Which approach defines abnormality based on deviation from the average in a population?",
-      "options": [
-        "Clinical significance approach",
-        "Maladaptive approach",
-        "Statistical approach",
-        "Cultural approach"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which approach defines abnormality based on deviation from the average in a population.\"",
+      "options": null,
       "answer": "Statistical approach",
-      "explanation": "The statistical approach defines abnormality as behaviors or characteristics that significantly deviate from the statistical average of the population.",
+      "explanation": "The correct answer is: Statistical approach.",
       "points": 1
     },
     {
@@ -349,29 +280,13 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Trephination in ancient times was used to treat mental illness by:",
+      "question": "True or False: The answer to \"The medical model of psychopathology views mental disorders as:\" is: Diseases with biological causes.",
       "options": [
-        "Bleeding patients to restore humoral balance",
-        "Drilling holes in the skull to release evil spirits",
-        "Immersing patients in cold water",
-        "Using herbs and potions"
+        "True",
+        "False"
       ],
-      "answer": "Drilling holes in the skull to release evil spirits",
-      "explanation": "Trephination — drilling holes in the skull — was an ancient practice believed to allow evil spirits or demons causing mental illness to escape.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 2,
-      "order": 5,
-      "question": "The cognitive model traces mental disorders primarily to:",
-      "options": [
-        "Neurotransmitter imbalances",
-        "Maladaptive patterns of thinking and interpretation",
-        "Reinforcement of dysfunctional behavior",
-        "Unresolved unconscious conflicts"
-      ],
-      "answer": "Maladaptive patterns of thinking and interpretation",
-      "explanation": "The cognitive model (Beck, Ellis) proposes that distorted or irrational thoughts drive emotional disturbance and maladaptive behavior.",
+      "answer": "True",
+      "explanation": "True. Diseases with biological causes is correct.",
       "points": 1
     },
     {
@@ -414,34 +329,6 @@
       ],
       "answer": "Create stigma and influence how others perceive the person",
       "explanation": "Diagnostic labels can stigmatize individuals and create self-fulfilling prophecies, influencing how clinicians and society perceive the labeled person.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 4,
-      "question": "The dimensional approach to classification suggests that disorders:",
-      "options": [
-        "Fall into discrete, mutually exclusive categories",
-        "Exist on a continuum with normal functioning",
-        "Are defined solely by biological markers",
-        "Cannot be reliably diagnosed"
-      ],
-      "answer": "Exist on a continuum with normal functioning",
-      "explanation": "A dimensional approach recognizes that psychological disorders grade continuously into normal functioning, capturing symptom severity rather than just presence/absence.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 5,
-      "question": "Rosenhan's 'On Being Sane in Insane Places' study critically demonstrated:",
-      "options": [
-        "The reliability of psychiatric diagnosis",
-        "Diagnosis is influenced by context and labeling effects",
-        "Schizophrenia is easily distinguished from normal behavior",
-        "Psychiatric hospitals provide effective treatment"
-      ],
-      "answer": "Diagnosis is influenced by context and labeling effects",
-      "explanation": "Rosenhan's pseudopatient study showed that once labeled 'schizophrenic,' normal behavior was interpreted through that diagnostic lens, exposing problems with psychiatric classification.",
       "points": 1
     },
     {
@@ -501,20 +388,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 4,
-      "order": 5,
-      "question": "Specific phobia is classified as an anxiety disorder defined by:",
-      "options": [
-        "Fear of two or more general life domains",
-        "Intense, irrational fear of a specific object or situation",
-        "Generalized worry without identifiable triggers",
-        "Fear of having a panic attack"
-      ],
-      "answer": "Intense, irrational fear of a specific object or situation",
-      "explanation": "Specific phobia involves a marked, persistent, irrational fear triggered by a specific object or situation (e.g., spiders, heights, blood).",
-      "points": 1
-    },
-    {
       "moduleOrder": 5,
       "order": 1,
       "question": "Obsessions in OCD are:",
@@ -545,43 +418,25 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "Exposure and response prevention (ERP) for OCD involves:",
+      "question": "True or False: The answer to \"Obsessions in OCD are:\" is: Unwanted, intrusive thoughts that cause distress.",
       "options": [
-        "Avoiding feared stimuli until anxiety decreases",
-        "Exposing the patient to feared stimuli while preventing compulsive responses",
-        "Replacing obsessions with positive thoughts",
-        "Using medication alone without behavioral therapy"
+        "True",
+        "False"
       ],
-      "answer": "Exposing the patient to feared stimuli while preventing compulsive responses",
-      "explanation": "ERP confronts the feared stimulus (exposure) while blocking the compulsive response (prevention), allowing anxiety to habituate and breaking the OCD cycle.",
+      "answer": "True",
+      "explanation": "True. Unwanted, intrusive thoughts that cause distress is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Body dysmorphic disorder (BDD) involves:",
+      "question": "True or False: The answer to \"Compulsions in OCD are:\" is: Pleasurable repetitive behaviors.",
       "options": [
-        "Dangerous food restriction to achieve thinness",
-        "Preoccupation with perceived flaws in physical appearance",
-        "Intense fear of illness and death",
-        "Repetitive skin-picking or hair-pulling behaviors only"
+        "True",
+        "False"
       ],
-      "answer": "Preoccupation with perceived flaws in physical appearance",
-      "explanation": "BDD is characterized by obsessive preoccupation with an imagined or slight defect in appearance, causing significant distress and repetitive checking behaviors.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 5,
-      "order": 5,
-      "question": "Thought-action fusion in OCD refers to the belief that:",
-      "options": [
-        "Thoughts directly cause external events or are morally equivalent to actions",
-        "Compulsions neutralize intrusive thoughts",
-        "Obsessions always lead to dangerous behaviors",
-        "Thoughts cannot be controlled voluntarily"
-      ],
-      "answer": "Thoughts directly cause external events or are morally equivalent to actions",
-      "explanation": "Thought-action fusion is the cognitive distortion that having a bad thought is as bad as doing it, or that thinking something can make it happen.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Repetitive behaviors or mental acts performed to reduce obsession-related distress.",
       "points": 1
     },
     {
@@ -629,29 +484,22 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Hyperarousal symptoms of PTSD include:",
+      "question": "True or False: The answer to \"DSM-5 requires PTSD symptoms to be present for at least:\" is: 1 month.",
       "options": [
-        "Emotional numbing",
-        "Inability to recall trauma details",
-        "Persistent negative beliefs about the world",
-        "Exaggerated startle response and sleep disturbances"
+        "True",
+        "False"
       ],
-      "answer": "Exaggerated startle response and sleep disturbances",
-      "explanation": "Hyperarousal symptoms reflect persistent activation of the stress response, including hypervigilance, exaggerated startle, and sleep problems.",
+      "answer": "True",
+      "explanation": "True. 1 month is correct.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Which brain structure is most implicated in the exaggerated fear responses seen in PTSD?",
-      "options": [
-        "Hippocampus",
-        "Prefrontal cortex",
-        "Amygdala",
-        "Cerebellum"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which brain structure is most implicated in the exaggerated fear responses seen in ptsd.\"",
+      "options": null,
       "answer": "Amygdala",
-      "explanation": "The amygdala (fear processing center) is hyperactive in PTSD, contributing to exaggerated fear responses and difficulty extinguishing fear memories.",
+      "explanation": "The correct answer is: Amygdala.",
       "points": 1
     },
     {
@@ -685,43 +533,13 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "Anhedonia in depression refers to:",
+      "question": "True or False: The answer to \"Beck's cognitive triad in depression consists of negative views about:\" is: Self, world, and future.",
       "options": [
-        "Excessive guilt and worthlessness",
-        "Inability to feel pleasure in previously enjoyable activities",
-        "Recurrent thoughts of death or suicide",
-        "Psychomotor retardation"
+        "True",
+        "False"
       ],
-      "answer": "Inability to feel pleasure in previously enjoyable activities",
-      "explanation": "Anhedonia is the markedly diminished interest or pleasure in activities that were previously enjoyed — a core symptom of depression.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 4,
-      "question": "Learned helplessness (Seligman) as a model of depression proposes that depression results from:",
-      "options": [
-        "Excessive dopamine activity",
-        "Repeated uncontrollable negative experiences leading to passive resignation",
-        "A genetic predisposition to low mood",
-        "Cognitive distortions about future success"
-      ],
-      "answer": "Repeated uncontrollable negative experiences leading to passive resignation",
-      "explanation": "Seligman proposed that repeated exposure to uncontrollable stressors leads organisms to believe they are helpless, producing depression-like passivity.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "The monoamine hypothesis of depression proposes that depression results from:",
-      "options": [
-        "Excess dopamine activity in reward circuits",
-        "Deficiencies in norepinephrine and/or serotonin",
-        "Elevated cortisol levels from chronic stress",
-        "Reduced GABA inhibition"
-      ],
-      "answer": "Deficiencies in norepinephrine and/or serotonin",
-      "explanation": "The monoamine (biogenic amine) hypothesis proposes that depression results from insufficient levels of serotonin, norepinephrine, or dopamine.",
+      "answer": "True",
+      "explanation": "True. Self, world, and future is correct.",
       "points": 1
     },
     {
@@ -769,29 +587,13 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "Cyclothymia differs from Bipolar II in that cyclothymia involves:",
+      "question": "True or False: The answer to \"Bipolar I disorder is distinguished from Bipolar II by:\" is: At least one full manic episode.",
       "options": [
-        "Full manic episodes alternating with depression",
-        "Full hypomanic episodes alternating with full depression",
-        "Numerous periods of hypomanic and depressive symptoms not meeting full criteria, lasting 2+ years",
-        "Only depressive symptoms with no elevated mood episodes"
+        "True",
+        "False"
       ],
-      "answer": "Numerous periods of hypomanic and depressive symptoms not meeting full criteria, lasting 2+ years",
-      "explanation": "Cyclothymia is a chronic, less severe form of bipolar disorder with numerous hypomanic and depressive symptoms that don't meet full criteria, persisting for 2+ years.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 8,
-      "order": 5,
-      "question": "Psychosocial interventions for bipolar disorder include:",
-      "options": [
-        "Psychoanalytic therapy as the primary intervention",
-        "Psychoeducation, routine regulation, and interpersonal therapy",
-        "Exposure and response prevention only",
-        "Cognitive restructuring of negative automatic thoughts alone"
-      ],
-      "answer": "Psychoeducation, routine regulation, and interpersonal therapy",
-      "explanation": "Psychosocial treatments for bipolar disorder focus on medication adherence, educating patients about the disorder, maintaining regular routines, and interpersonal functioning.",
+      "answer": "True",
+      "explanation": "True. At least one full manic episode is correct.",
       "points": 1
     },
     {
@@ -834,34 +636,6 @@
       ],
       "answer": "Excess dopamine activity in mesolimbic pathways",
       "explanation": "The dopamine hypothesis proposes that excess dopamine transmission in mesolimbic pathways produces positive symptoms of schizophrenia.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 4,
-      "question": "Second-generation (atypical) antipsychotics differ from first-generation antipsychotics in that they:",
-      "options": [
-        "Only block dopamine D2 receptors",
-        "Block both dopamine and serotonin receptors",
-        "Are used only for negative symptoms",
-        "Have no side effects"
-      ],
-      "answer": "Block both dopamine and serotonin receptors",
-      "explanation": "Atypical antipsychotics block both D2 dopamine and 5-HT2A serotonin receptors, producing fewer extrapyramidal side effects than first-generation drugs.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 5,
-      "question": "A delusion of persecution involves the belief that:",
-      "options": [
-        "One has special powers or a grandiose identity",
-        "Others are plotting to harm, spy on, or persecute you",
-        "One's thoughts are being broadcast to others",
-        "External forces are controlling one's thoughts or actions"
-      ],
-      "answer": "Others are plotting to harm, spy on, or persecute you",
-      "explanation": "Persecutory delusions — the most common type in schizophrenia — involve false beliefs that one is being targeted, followed, or harmed by others.",
       "points": 1
     },
     {
@@ -921,20 +695,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 10,
-      "order": 5,
-      "question": "Dialectical Behavior Therapy (DBT), developed specifically for borderline personality disorder, focuses on:",
-      "options": [
-        "Exposing patients to feared stimuli",
-        "Mindfulness, distress tolerance, emotional regulation, and interpersonal skills",
-        "Restructuring delusions and hallucinations",
-        "Medication compliance and psychoeducation"
-      ],
-      "answer": "Mindfulness, distress tolerance, emotional regulation, and interpersonal skills",
-      "explanation": "DBT (Linehan) combines CBT with mindfulness and acceptance strategies, teaching patients skills in four modules: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness.",
-      "points": 1
-    },
-    {
       "moduleOrder": 11,
       "order": 1,
       "question": "Anorexia nervosa is characterized by:",
@@ -965,253 +725,25 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "Sociocultural factors in eating disorders include:",
+      "question": "True or False: The answer to \"Anorexia nervosa is characterized by:\" is: Restriction of food intake leading to significantly low body weight, body image distortion, and intense fear of gaining weight.",
       "options": [
-        "Genetic predisposition and neurochemical imbalances only",
-        "Thin-ideal media messages, diet culture, and peer pressure",
-        "Hypothalamic dysregulation only",
-        "Early trauma and PTSD"
+        "True",
+        "False"
       ],
-      "answer": "Thin-ideal media messages, diet culture, and peer pressure",
-      "explanation": "Sociocultural models emphasize how media idealization of thinness, diet culture, and social comparisons create body dissatisfaction that can trigger eating disorders.",
+      "answer": "True",
+      "explanation": "True. Restriction of food intake leading to significantly low body weight, body image distortion, and intense fear of gaining weight is correct.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "Binge-eating disorder (BED) differs from bulimia in that BED involves:",
+      "question": "True or False: The answer to \"The key feature distinguishing bulimia nervosa from anorexia is:\" is: Presence of binge eating.",
       "options": [
-        "Purging after binges",
-        "Restriction of calories between binges",
-        "Recurrent binges without regular compensatory behaviors",
-        "Binge eating only in response to extreme stress"
+        "True",
+        "False"
       ],
-      "answer": "Recurrent binges without regular compensatory behaviors",
-      "explanation": "BED involves recurrent episodes of eating large amounts in a short time with a sense of loss of control, but no regular use of compensatory behaviors like purging.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 5,
-      "question": "Family-Based Treatment (FBT) for anorexia nervosa in adolescents involves:",
-      "options": [
-        "Individual insight-oriented therapy for the patient alone",
-        "Parents taking control of re-feeding and gradually returning control to the adolescent",
-        "Intensive inpatient medical stabilization only",
-        "Group therapy with other patients with eating disorders"
-      ],
-      "answer": "Parents taking control of re-feeding and gradually returning control to the adolescent",
-      "explanation": "FBT (Maudsley approach) empowers parents to take charge of re-feeding in Phase 1, gradually transferring control back to the adolescent as weight is restored.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 1,
-      "question": "Substance use disorder (DSM-5) is characterized by:",
-      "options": [
-        "Using substances for medical purposes only",
-        "A problematic pattern of substance use causing significant impairment",
-        "Recreational use without tolerance",
-        "Using substances fewer than three times per week"
-      ],
-      "answer": "A problematic pattern of substance use causing significant impairment",
-      "explanation": "Substance use disorder involves a cluster of cognitive, behavioral, and physiological symptoms indicating impaired control, social impairment, risky use, and pharmacological criteria.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 2,
-      "question": "The mesolimbic dopamine pathway is central to addiction because it underlies:",
-      "options": [
-        "Fear responses to threatening stimuli",
-        "Reward, motivation, and reinforcing effects of drugs",
-        "Executive control over impulses",
-        "Memory consolidation of drug-related cues"
-      ],
-      "answer": "Reward, motivation, and reinforcing effects of drugs",
-      "explanation": "Drugs of abuse activate the mesolimbic dopamine pathway (nucleus accumbens), producing intense reward signals that drive repeated drug-seeking behavior.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 3,
-      "question": "Tolerance to a drug refers to:",
-      "options": [
-        "The physical symptoms of withdrawal",
-        "The need for increasing doses to achieve the same effect",
-        "The inability to stop using the drug despite wanting to",
-        "Using a drug to cope with emotional pain"
-      ],
-      "answer": "The need for increasing doses to achieve the same effect",
-      "explanation": "Tolerance develops when the body adapts to the drug, requiring progressively larger doses to achieve the same pharmacological effect.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 4,
-      "question": "Motivational Interviewing (MI) is a treatment technique for substance disorders that:",
-      "options": [
-        "Confronts the client about denial aggressively",
-        "Uses empathy and reflective listening to strengthen intrinsic motivation to change",
-        "Relies on peer pressure from group therapy",
-        "Provides rewards for abstinence only"
-      ],
-      "answer": "Uses empathy and reflective listening to strengthen intrinsic motivation to change",
-      "explanation": "MI is a collaborative, person-centered counseling approach that uses reflective listening and exploring ambivalence to build internal motivation for behavior change.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 5,
-      "question": "Naltrexone is used in treating opioid and alcohol use disorders because it:",
-      "options": [
-        "Replaces the addictive substance with a safer opioid",
-        "Increases dopamine release in the reward pathway",
-        "Blocks opioid receptors, reducing the rewarding effects of the substance",
-        "Treats withdrawal symptoms during detoxification"
-      ],
-      "answer": "Blocks opioid receptors, reducing the rewarding effects of the substance",
-      "explanation": "Naltrexone is an opioid antagonist that blocks opioid receptors, preventing the rewarding effects of opioids and reducing cravings in alcohol use disorder.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 1,
-      "question": "ADHD is characterized by persistent patterns of:",
-      "options": [
-        "Inattention only",
-        "Hyperactivity only",
-        "Inattention and/or hyperactivity-impulsivity interfering with functioning",
-        "Repetitive behaviors and restricted interests"
-      ],
-      "answer": "Inattention and/or hyperactivity-impulsivity interfering with functioning",
-      "explanation": "ADHD (Attention-Deficit/Hyperactivity Disorder) involves developmentally inappropriate levels of inattention and/or hyperactivity-impulsivity that impair functioning.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 2,
-      "question": "Autism Spectrum Disorder (ASD) is defined by deficits in:",
-      "options": [
-        "Attention and impulse control",
-        "Social communication and restricted, repetitive patterns of behavior",
-        "Memory and learning",
-        "Mood regulation and emotional expression"
-      ],
-      "answer": "Social communication and restricted, repetitive patterns of behavior",
-      "explanation": "DSM-5 defines ASD by two core domains: persistent deficits in social communication/interaction and restricted, repetitive patterns of behavior, interests, or activities.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 3,
-      "question": "Stimulant medications (e.g., methylphenidate) treat ADHD by:",
-      "options": [
-        "Sedating hyperactive children",
-        "Increasing dopamine and norepinephrine availability in the prefrontal cortex",
-        "Reducing anxiety that underlies inattention",
-        "Blocking serotonin reuptake"
-      ],
-      "answer": "Increasing dopamine and norepinephrine availability in the prefrontal cortex",
-      "explanation": "Stimulants paradoxically reduce hyperactivity by increasing catecholamine neurotransmission in prefrontal circuits that regulate attention and executive function.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 4,
-      "question": "The 'spectrum' in Autism Spectrum Disorder refers to:",
-      "options": [
-        "Varying causes across different patients",
-        "A wide range of severity and symptom presentation",
-        "Different treatment approaches for each patient",
-        "The progression from mild to severe over time"
-      ],
-      "answer": "A wide range of severity and symptom presentation",
-      "explanation": "ASD is conceptualized as a spectrum because individuals present with widely varying degrees of social, communicative, and behavioral differences.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "Applied Behavior Analysis (ABA) is a treatment for ASD that:",
-      "options": [
-        "Uses medication to reduce core symptoms",
-        "Applies behavioral principles to teach skills and reduce challenging behaviors",
-        "Focuses on social skill groups for adolescents",
-        "Uses sensory integration to reduce sensory sensitivities"
-      ],
-      "answer": "Applies behavioral principles to teach skills and reduce challenging behaviors",
-      "explanation": "ABA uses reinforcement-based principles to systematically teach communication, social, and adaptive skills while reducing maladaptive behaviors.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 1,
-      "question": "Cognitive-behavioral therapy (CBT) is considered an empirically supported treatment for:",
-      "options": [
-        "Schizophrenia as the primary treatment",
-        "Anxiety disorders, depression, OCD, PTSD, and many other conditions",
-        "Personality disorders exclusively",
-        "Biological disorders not responsive to medication"
-      ],
-      "answer": "Anxiety disorders, depression, OCD, PTSD, and many other conditions",
-      "explanation": "CBT has the strongest evidence base among psychotherapies, with randomized controlled trials supporting its effectiveness for a wide range of disorders.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 2,
-      "question": "Psychoeducation in mental health treatment refers to:",
-      "options": [
-        "Formal university training for mental health professionals",
-        "Providing patients and families with information about the disorder and treatment",
-        "Educational programs in schools to prevent mental illness",
-        "Teaching patients cognitive restructuring techniques"
-      ],
-      "answer": "Providing patients and families with information about the disorder and treatment",
-      "explanation": "Psychoeducation improves treatment adherence and outcomes by ensuring patients and families understand the disorder, its course, and the rationale for treatment.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 3,
-      "question": "The therapeutic alliance (working relationship between client and therapist) is important because:",
-      "options": [
-        "It determines the choice of theoretical orientation",
-        "It is one of the strongest predictors of therapy outcome across all therapy types",
-        "It replaces the need for specific therapeutic techniques",
-        "It only matters in long-term psychodynamic therapy"
-      ],
-      "answer": "It is one of the strongest predictors of therapy outcome across all therapy types",
-      "explanation": "Research consistently shows that the quality of the therapeutic relationship is one of the most powerful predictors of positive outcomes in psychotherapy.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 4,
-      "question": "Electroconvulsive therapy (ECT) is most effective for:",
-      "options": [
-        "OCD unresponsive to SSRIs",
-        "Treatment-resistant severe depression",
-        "Schizophrenia in early stages",
-        "Personality disorders"
-      ],
-      "answer": "Treatment-resistant severe depression",
-      "explanation": "ECT, which induces a controlled seizure, is highly effective for severe depression that has not responded to medications or psychotherapy.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 5,
-      "question": "Barriers to mental healthcare access in the US include:",
-      "options": [
-        "Too many providers relative to demand",
-        "Stigma, cost, insurance limitations, and shortage of providers",
-        "Excessive government funding of mental health services",
-        "Overdiagnosis reducing the need for treatment"
-      ],
-      "answer": "Stigma, cost, insurance limitations, and shortage of providers",
-      "explanation": "Major barriers include mental health stigma, high treatment costs, inadequate insurance coverage, and geographic shortage of qualified mental health providers.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Binge eating followed by compensatory behavior, with body weight typically at or above normal.",
       "points": 1
     }
   ],
@@ -1264,16 +796,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "A panic attack is best characterized by:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A panic attack is best characterized by:\" is: Sudden intense fear peaking within minutes with physical symptoms.",
       "options": [
-        "Persistent worry lasting months",
-        "Sudden intense fear peaking within minutes with physical symptoms",
-        "Fear limited to a specific identifiable object",
-        "Low-grade anxiety across many life domains"
+        "True",
+        "False"
       ],
-      "answer": "Sudden intense fear peaking within minutes with physical symptoms",
-      "explanation": "Panic attacks are abrupt surges of intense fear accompanied by physical symptoms (e.g., racing heart, chest pain, dizziness) that peak within minutes.",
+      "answer": "True",
+      "explanation": "True. Sudden intense fear peaking within minutes with physical symptoms is correct.",
       "points": 1
     },
     {
@@ -1324,16 +854,14 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "A key feature of anorexia nervosa is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A key feature of anorexia nervosa is:\" is: Binge eating followed by compensatory behaviors.",
       "options": [
-        "Binge eating followed by compensatory behaviors",
-        "Restriction of caloric intake with intense fear of weight gain",
-        "Recurrent binge eating without compensatory behavior",
-        "Avoidance of foods based on sensory sensitivity"
+        "True",
+        "False"
       ],
-      "answer": "Restriction of caloric intake with intense fear of weight gain",
-      "explanation": "Anorexia involves severe food restriction, intense fear of gaining weight, and body image distortion resulting in dangerously low weight.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Restriction of caloric intake with intense fear of weight gain.",
       "points": 1
     },
     {
@@ -1384,16 +912,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "The amygdala is most implicated in the exaggerated fear responses of:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The amygdala is most implicated in the exaggerated fear responses of:\" is: PTSD and anxiety disorders.",
       "options": [
-        "Schizophrenia",
-        "Bipolar disorder",
-        "PTSD and anxiety disorders",
-        "Major depressive disorder"
+        "True",
+        "False"
       ],
-      "answer": "PTSD and anxiety disorders",
-      "explanation": "Hyperactivity of the amygdala (fear processing center) underlies the heightened threat sensitivity and exaggerated fear responses in PTSD and anxiety disorders.",
+      "answer": "True",
+      "explanation": "True. PTSD and anxiety disorders is correct.",
       "points": 1
     },
     {
@@ -1444,16 +970,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "Bipolar I disorder requires at least one full manic episode lasting:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Bipolar I disorder requires at least one full manic episode lasting:\" is: 2 days.",
       "options": [
-        "2 days",
-        "4 days",
-        "7 days (or any duration if hospitalization is required)",
-        "2 weeks"
+        "True",
+        "False"
       ],
-      "answer": "7 days (or any duration if hospitalization is required)",
-      "explanation": "DSM-5 defines a manic episode as lasting at least 7 days, or any duration if symptoms are severe enough to require hospitalization.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 7 days (or any duration if hospitalization is required).",
       "points": 1
     },
     {
@@ -1504,16 +1028,14 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "Dialectical Behavior Therapy (DBT) was developed specifically for:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Dialectical Behavior Therapy (DBT) was developed specifically for:\" is: Borderline personality disorder.",
       "options": [
-        "Schizophrenia",
-        "OCD",
-        "Borderline personality disorder",
-        "Major depressive disorder"
+        "True",
+        "False"
       ],
-      "answer": "Borderline personality disorder",
-      "explanation": "Marsha Linehan developed DBT specifically for BPD, combining CBT with acceptance strategies and skills training in mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness.",
+      "answer": "True",
+      "explanation": "True. Borderline personality disorder is correct.",
       "points": 1
     },
     {
@@ -1564,16 +1086,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "A major sociocultural factor contributing to eating disorders is:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A major sociocultural factor contributing to eating disorders is:\" is: Serotonin dysregulation.",
       "options": [
-        "Serotonin dysregulation",
-        "Thin-ideal media idealization and diet culture",
-        "Childhood traumatic experiences only",
-        "Genetic predisposition exclusively"
+        "True",
+        "False"
       ],
-      "answer": "Thin-ideal media idealization and diet culture",
-      "explanation": "Sociocultural pressures, particularly media portrayals of an ultra-thin ideal, contribute to body dissatisfaction and disordered eating behaviors.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Thin-ideal media idealization and diet culture.",
       "points": 1
     },
     {
@@ -1624,16 +1144,14 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
-      "question": "The therapeutic alliance is one of the strongest predictors of therapy outcome because:",
+      "type": "tf",
+      "question": "True or False: The answer to \"The therapeutic alliance is one of the strongest predictors of therapy outcome because:\" is: A trusting relationship facilitates engagement with therapeutic techniques and self-disclosure.",
       "options": [
-        "It determines which therapy model will be used",
-        "A trusting relationship facilitates engagement with therapeutic techniques and self-disclosure",
-        "It is more important than the specific therapy techniques",
-        "Clients with stronger alliances have less severe disorders"
+        "True",
+        "False"
       ],
-      "answer": "A trusting relationship facilitates engagement with therapeutic techniques and self-disclosure",
-      "explanation": "Research shows that a strong working alliance enables clients to engage fully with therapeutic work, increasing the effectiveness of all types of psychotherapy.",
+      "answer": "True",
+      "explanation": "True. A trusting relationship facilitates engagement with therapeutic techniques and self-disclosure is correct.",
       "points": 1
     },
     {
@@ -1684,16 +1202,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "Flat affect in schizophrenia is classified as a _____ symptom.",
+      "type": "tf",
+      "question": "True or False: The answer to \"Flat affect in schizophrenia is classified as a _____ symptom.\" is: Positive.",
       "options": [
-        "Positive",
-        "Negative",
-        "Cognitive",
-        "Disorganized"
+        "True",
+        "False"
       ],
-      "answer": "Negative",
-      "explanation": "Flat affect (reduced emotional expression) is a negative symptom — a deficit or reduction in normal functioning.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Negative.",
       "points": 1
     },
     {
@@ -1741,5 +1257,6 @@
       "explanation": "Mental health stigma discourages many individuals from seeking help; combined with cost, insurance gaps, and provider shortages, it constitutes a major access barrier.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": null
 }

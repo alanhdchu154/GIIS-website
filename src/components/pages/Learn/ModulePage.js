@@ -269,21 +269,36 @@ export default function ModulePage({ language }) {
                       Q{i + 1} · {q.points} {isEn ? 'pt' : '分'}
                     </p>
                     <p style={{ margin: '0 0 14px', fontSize: '15px', fontWeight: 600, color: '#1a1a2e', lineHeight: 1.6 }}>{q.question}</p>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
-                      {(q.options || []).map((opt) => (
-                        <label key={opt} style={{
-                          display: 'flex', alignItems: 'flex-start', gap: '10px', cursor: 'pointer',
-                          padding: '9px 13px', borderRadius: '7px',
-                          background: quizAnswers[q.id] === opt ? '#e8edf8' : '#f8f9fd',
-                          border: `1px solid ${quizAnswers[q.id] === opt ? '#2b3d6d' : '#e0e6f0'}`,
-                        }}>
-                          <input type="radio" name={q.id} value={opt} checked={quizAnswers[q.id] === opt}
-                            onChange={() => setQuizAnswers(p => ({ ...p, [q.id]: opt }))}
-                            style={{ marginTop: '2px', flexShrink: 0 }} />
-                          <span style={{ fontSize: '14px', color: '#333' }}>{opt}</span>
-                        </label>
-                      ))}
-                    </div>
+                    {/* Fill-in-blank: options is null */}
+                    {(!q.options || q.options.length === 0) ? (
+                      <input
+                        type="text"
+                        placeholder={isEn ? 'Type your answer…' : '输入答案…'}
+                        value={quizAnswers[q.id] || ''}
+                        onChange={e => setQuizAnswers(p => ({ ...p, [q.id]: e.target.value }))}
+                        style={{
+                          width: '100%', padding: '10px 14px', fontSize: '14px', border: '1px solid #c5d0f0',
+                          borderRadius: '8px', outline: 'none', boxSizing: 'border-box',
+                          background: quizAnswers[q.id] ? '#f0f4ff' : '#f8f9fd',
+                        }}
+                      />
+                    ) : (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
+                        {(q.options || []).map((opt) => (
+                          <label key={opt} style={{
+                            display: 'flex', alignItems: 'flex-start', gap: '10px', cursor: 'pointer',
+                            padding: '9px 13px', borderRadius: '7px',
+                            background: quizAnswers[q.id] === opt ? '#e8edf8' : '#f8f9fd',
+                            border: `1px solid ${quizAnswers[q.id] === opt ? '#2b3d6d' : '#e0e6f0'}`,
+                          }}>
+                            <input type="radio" name={q.id} value={opt} checked={quizAnswers[q.id] === opt}
+                              onChange={() => setQuizAnswers(p => ({ ...p, [q.id]: opt }))}
+                              style={{ marginTop: '2px', flexShrink: 0 }} />
+                            <span style={{ fontSize: '14px', color: '#333' }}>{opt}</span>
+                          </label>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>

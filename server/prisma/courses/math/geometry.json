@@ -282,16 +282,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "The angles of a triangle are in the ratio 2:3:5. What is the measure of the largest angle?",
+      "type": "tf",
+      "question": "True or False: The answer to \"The angles of a triangle are in the ratio 2:3:5. What is the measure of the largest angle\" is: 90°.",
       "options": [
-        "36°",
-        "54°",
-        "90°",
-        "72°"
+        "True",
+        "False"
       ],
-      "answer": "90°",
-      "explanation": "The ratio parts sum to 10. Total = 180°, so each part = 18°. Largest = 5 × 18° = 90°.",
+      "answer": "True",
+      "explanation": "True. 90° is correct.",
       "points": 1
     },
     {
@@ -327,31 +325,24 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "mc",
+      "type": "fill",
       "question": "A right triangle has legs of 8 cm and 15 cm. What is the length of the hypotenuse?",
-      "options": [
-        "17 cm",
-        "23 cm",
-        "√161 cm",
-        "√337 cm"
-      ],
+      "options": null,
       "answer": "17 cm",
-      "explanation": "c² = 8² + 15² = 64 + 225 = 289. c = √289 = 17 cm.",
+      "explanation": "The correct answer is: 17 cm.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "In a 45-45-90 triangle, the legs each measure 7 cm. What is the length of the hypotenuse?",
+      "type": "tf",
+      "question": "True or False: The answer to \"In a 45-45-90 triangle, the legs each measure 7 cm. What is the length of the hypotenuse\" is: 7 cm.",
       "options": [
-        "7 cm",
-        "7√2 cm",
-        "14 cm",
-        "7√3 cm"
+        "True",
+        "False"
       ],
-      "answer": "7√2 cm",
-      "explanation": "In a 45-45-90 triangle, hypotenuse = leg × √2 = 7√2 cm.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 7√2 cm.",
       "points": 1
     },
     {
@@ -402,16 +393,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "A line segment has endpoints A(2, 3) and B(8, 11). What is the length of AB?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A line segment has endpoints A(2, 3) and B(8, 11). What is the length of AB\" is: 10.",
       "options": [
-        "6",
-        "8",
-        "10",
-        "√100"
+        "True",
+        "False"
       ],
-      "answer": "10",
-      "explanation": "d = √((8−2)² + (11−3)²) = √(36 + 64) = √100 = 10.",
+      "answer": "True",
+      "explanation": "True. 10 is correct.",
       "points": 1
     },
     {
@@ -432,11 +421,11 @@
     {
       "examType": "midterm",
       "order": 14,
-      "type": "short",
+      "type": "fill",
       "question": "A 5-meter ladder leans against a wall, with its base 3 meters from the wall. How high up the wall does the ladder reach? Show your work using the Pythagorean Theorem.",
       "options": null,
       "answer": "4 meters",
-      "explanation": "h² + 3² = 5². h² = 25 − 9 = 16. h = 4 meters.",
+      "explanation": "The correct answer is: 4 meters.",
       "points": 2
     },
     {
@@ -452,16 +441,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "Which of the following best describes a ray?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following best describes a ray\" is: A set of all points in a plane equidistant from a center.",
       "options": [
-        "A set of all points in a plane equidistant from a center",
-        "A part of a line with two endpoints",
-        "A part of a line with one endpoint extending infinitely in one direction",
-        "Two rays sharing a common endpoint"
+        "True",
+        "False"
       ],
-      "answer": "A part of a line with one endpoint extending infinitely in one direction",
-      "explanation": "A ray starts at one endpoint and extends infinitely in one direction only.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: A part of a line with one endpoint extending infinitely in one direction.",
       "points": 1
     },
     {
@@ -512,31 +499,24 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "Which congruence criterion works only for right triangles?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which congruence criterion works only for right triangles\" is: HL.",
       "options": [
-        "SSS",
-        "SAS",
-        "ASA",
-        "HL"
+        "True",
+        "False"
       ],
-      "answer": "HL",
-      "explanation": "Hypotenuse-Leg (HL) congruence applies only to right triangles: if the hypotenuse and one leg are congruent, the triangles are congruent.",
+      "answer": "True",
+      "explanation": "True. HL is correct.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 6,
-      "type": "mc",
+      "type": "fill",
       "question": "In similar triangles △ABC ~ △DEF, AB = 6, DE = 9, and AC = 8. What is DF?",
-      "options": [
-        "12",
-        "6",
-        "16",
-        "10"
-      ],
+      "options": null,
       "answer": "12",
-      "explanation": "Scale factor = DE/AB = 9/6 = 3/2. DF = AC × (3/2) = 8 × 1.5 = 12.",
+      "explanation": "The correct answer is: 12.",
       "points": 1
     },
     {
@@ -572,16 +552,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "A circle has a radius of 6 cm. What is the length of an arc intercepted by a central angle of 120°?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A circle has a radius of 6 cm. What is the length of an arc intercepted by a central angle of 120°\" is: 2π cm.",
       "options": [
-        "2π cm",
-        "4π cm",
-        "8π cm",
-        "12π cm"
+        "True",
+        "False"
       ],
-      "answer": "4π cm",
-      "explanation": "Arc length = (θ/360°) × 2πr = (120/360) × 2π(6) = (1/3) × 12π = 4π cm.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 4π cm.",
       "points": 1
     },
     {
@@ -632,16 +610,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
+      "type": "fill",
       "question": "A triangle with vertices A(0, 0), B(4, 0), and C(4, 3) is reflected over the y-axis. What are the coordinates of the image of B?",
-      "options": [
-        "(4, 0)",
-        "(−4, 0)",
-        "(0, 4)",
-        "(4, −3)"
-      ],
+      "options": null,
       "answer": "(−4, 0)",
-      "explanation": "Reflection over the y-axis maps (x, y) → (−x, y). B(4, 0) → B'(−4, 0).",
+      "explanation": "The correct answer is: (−4, 0).",
       "points": 1
     },
     {
@@ -692,16 +665,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "A sphere has a radius of 3 cm. What is its volume?",
+      "type": "tf",
+      "question": "True or False: The answer to \"A sphere has a radius of 3 cm. What is its volume\" is: 12π cm³.",
       "options": [
-        "12π cm³",
-        "36π cm³",
-        "108π cm³",
-        "27π cm³"
+        "True",
+        "False"
       ],
-      "answer": "36π cm³",
-      "explanation": "V = (4/3)πr³ = (4/3)π(3)³ = (4/3)π(27) = 36π cm³.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 36π cm³.",
       "points": 1
     },
     {
@@ -781,29 +752,13 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Through any two points, there exists exactly:",
+      "question": "True or False: The answer to \"Which undefined term has no size, shape, or dimension and is represented by a dot\" is: Point.",
       "options": [
-        "Zero lines",
-        "One line",
-        "Two lines",
-        "Infinite lines"
+        "True",
+        "False"
       ],
-      "answer": "One line",
-      "explanation": "One of the basic postulates of geometry: any two distinct points determine exactly one line.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "An angle is formed by:",
-      "options": [
-        "Two parallel lines",
-        "Two rays sharing a common endpoint",
-        "A segment and a ray",
-        "Three collinear points"
-      ],
-      "answer": "Two rays sharing a common endpoint",
-      "explanation": "An angle consists of two rays (sides) that share a common endpoint called the vertex.",
+      "answer": "True",
+      "explanation": "True. Point is correct.",
       "points": 1
     },
     {
@@ -865,15 +820,13 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "If ∠A = (4x + 10)° and ∠B = (6x − 20)° are vertical angles, what is x?",
+      "question": "True or False: The answer to \"Two angles whose measures sum to 90° are called:\" is: Complementary.",
       "options": [
-        "5",
-        "10",
-        "15",
-        "30"
+        "True",
+        "False"
       ],
-      "answer": "15",
-      "explanation": "Vertical angles are congruent: 4x + 10 = 6x − 20 → 30 = 2x → x = 15.",
+      "answer": "True",
+      "explanation": "True. Complementary is correct.",
       "points": 1
     },
     {
@@ -921,29 +874,25 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "If alternate interior angles are congruent, the lines cut by the transversal are:",
+      "question": "True or False: The answer to \"When parallel lines are cut by a transversal, corresponding angles are:\" is: Congruent.",
       "options": [
-        "Perpendicular",
-        "Parallel",
-        "Skew",
-        "Intersecting at 45°"
+        "True",
+        "False"
       ],
-      "answer": "Parallel",
-      "explanation": "The Converse of the Alternate Interior Angles Theorem states that if alternate interior angles are congruent, the lines are parallel.",
+      "answer": "True",
+      "explanation": "True. Congruent is correct.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "A transversal crosses two parallel lines. One co-interior angle is 58°. What is the other co-interior angle?",
+      "question": "True or False: The answer to \"Alternate exterior angles are located:\" is: On the same side of the transversal, between the parallel lines.",
       "options": [
-        "58°",
-        "32°",
-        "122°",
-        "142°"
+        "True",
+        "False"
       ],
-      "answer": "122°",
-      "explanation": "Co-interior angles are supplementary: 180° − 58° = 122°.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: On opposite sides of the transversal, outside the parallel lines.",
       "points": 1
     },
     {
@@ -1005,15 +954,10 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "A triangle with one angle greater than 90° is classified as:",
-      "options": [
-        "Acute",
-        "Right",
-        "Obtuse",
-        "Equiangular"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a triangle with one angle greater than 90° is classified as:.\"",
+      "options": null,
       "answer": "Obtuse",
-      "explanation": "An obtuse triangle has one interior angle measuring greater than 90°.",
+      "explanation": "The correct answer is: Obtuse.",
       "points": 1
     },
     {
@@ -1087,6 +1031,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 5,
+      "order": 6,
+      "question": "True or False: The answer to \"The SSS congruence postulate requires:\" is: All three sides to be congruent.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. All three sides to be congruent is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 6,
       "order": 1,
       "question": "The AA similarity criterion states two triangles are similar if:",
@@ -1131,29 +1087,31 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "A tree casts a 15 m shadow. Nearby, a 2 m post casts a 3 m shadow. How tall is the tree?",
+      "question": "True or False: The answer to \"The AA similarity criterion states two triangles are similar if:\" is: Two angles of one equal two angles of the other.",
       "options": [
-        "7.5 m",
-        "10 m",
-        "12 m",
-        "5 m"
+        "True",
+        "False"
       ],
-      "answer": "10 m",
-      "explanation": "Ratios of corresponding parts of similar triangles: 2/3 = h/15 → h = 10 m.",
+      "answer": "True",
+      "explanation": "True. Two angles of one equal two angles of the other is correct.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "If two triangles are similar with a scale factor of 1:4, how do their areas compare?",
-      "options": [
-        "1:4",
-        "1:8",
-        "1:16",
-        "1:2"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if two triangles are similar with a scale factor of 1:4, how do their areas compare.\"",
+      "options": null,
       "answer": "1:16",
-      "explanation": "Area ratio = (scale factor)² = 1²:4² = 1:16.",
+      "explanation": "The correct answer is: 1:16.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 6,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a tree casts a 15 m shadow. nearby, a 2 m post casts a 3 m shadow. how tall is the tree.\"",
+      "options": null,
+      "answer": "10 m",
+      "explanation": "The correct answer is: 10 m.",
       "points": 1
     },
     {
@@ -1201,29 +1159,22 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "In a 45-45-90 triangle, if the hypotenuse is 10, what is the leg length?",
+      "question": "True or False: The answer to \"In a right triangle with legs a = 6 and b = 8, what is the hypotenuse\" is: 10.",
       "options": [
-        "5",
-        "10√2",
-        "5√2",
-        "10/√3"
+        "True",
+        "False"
       ],
-      "answer": "5√2",
-      "explanation": "Leg = hypotenuse/√2 = 10/√2 = 10√2/2 = 5√2.",
+      "answer": "True",
+      "explanation": "True. 10 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "In a 30-60-90 triangle, the longer leg is 6√3. What is the shorter leg?",
-      "options": [
-        "6",
-        "3",
-        "12",
-        "3√3"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in a 30-60-90 triangle, the longer leg is 6√3. what is the shorter leg.\"",
+      "options": null,
       "answer": "6",
-      "explanation": "Longer leg = shorter leg × √3. 6√3 = shorter leg × √3. Shorter leg = 6.",
+      "explanation": "The correct answer is: 6.",
       "points": 1
     },
     {
@@ -1285,15 +1236,13 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "Which property belongs to all rhombuses?",
+      "question": "True or False: The answer to \"The sum of interior angles of a quadrilateral is:\" is: 360°.",
       "options": [
-        "All angles are 90°",
-        "Diagonals are congruent",
-        "All four sides are congruent",
-        "Only one pair of parallel sides"
+        "True",
+        "False"
       ],
-      "answer": "All four sides are congruent",
-      "explanation": "By definition, a rhombus has four congruent sides. It does not necessarily have right angles.",
+      "answer": "True",
+      "explanation": "True. 360° is correct.",
       "points": 1
     },
     {
@@ -1341,29 +1290,25 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "A chord is:",
+      "question": "True or False: The answer to \"The distance from the center of a circle to any point on the circle is called the:\" is: Radius.",
       "options": [
-        "A line tangent to the circle",
-        "A segment from the center to the circle",
-        "A segment with both endpoints on the circle",
-        "The longest arc of a circle"
+        "True",
+        "False"
       ],
-      "answer": "A segment with both endpoints on the circle",
-      "explanation": "A chord is a line segment whose two endpoints both lie on the circle. The diameter is the longest chord.",
+      "answer": "True",
+      "explanation": "True. Radius is correct.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "What is the circumference of a circle with diameter 10 cm?",
+      "question": "True or False: The answer to \"A central angle of 90° in a circle with radius 5 cm subtends an arc. What fraction of the circle's circumference is this arc\" is: 1/2.",
       "options": [
-        "5π cm",
-        "10π cm",
-        "100π cm",
-        "25π cm"
+        "True",
+        "False"
       ],
-      "answer": "10π cm",
-      "explanation": "C = πd = π × 10 = 10π cm.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 1/4.",
       "points": 1
     },
     {
@@ -1425,15 +1370,19 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Which formula gives the area of a regular polygon with perimeter P and apothem a?",
-      "options": [
-        "A = Pa",
-        "A = P/a",
-        "A = ½Pa",
-        "A = 2Pa"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which formula gives the area of a regular polygon with perimeter p and apothem a.\"",
+      "options": null,
       "answer": "A = ½Pa",
-      "explanation": "Area of a regular polygon = ½ × perimeter × apothem = ½Pa.",
+      "explanation": "The correct answer is: A = ½Pa.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 6,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a composite figure consists of a rectangle (5 × 4) with a semicircle (radius 2) on top. what is the area of the composite figure.\"",
+      "options": null,
+      "answer": "20 + 2π",
+      "explanation": "The correct answer is: 20 + 2π.",
       "points": 1
     },
     {
@@ -1507,6 +1456,18 @@
       "points": 1
     },
     {
+      "moduleOrder": 11,
+      "order": 6,
+      "question": "True or False: The volume of a rectangular prism with length 4, width 3, and height 5 is \"60\".",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 60 is correct.",
+      "points": 1
+    },
+    {
       "moduleOrder": 12,
       "order": 1,
       "question": "What is the distance between points (1, 4) and (5, 7)?",
@@ -1551,29 +1512,31 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "What is the equation of a line with slope 3 that passes through the origin?",
+      "question": "True or False: The distance between points (1, 4) and (5, 7) is \"5\".",
       "options": [
-        "y = 3",
-        "y = x + 3",
-        "y = 3x",
-        "x = 3"
+        "True",
+        "False"
       ],
-      "answer": "y = 3x",
-      "explanation": "The line passes through (0, 0), so y-intercept b = 0. Equation: y = 3x.",
+      "answer": "True",
+      "explanation": "True. 5 is correct.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Two points on a circle are A(0, 0) and B(6, 0). What is the length of chord AB?",
-      "options": [
-        "3",
-        "6",
-        "√36",
-        "12"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"two points on a circle are a(0, 0) and b(6, 0). what is the length of chord ab.\"",
+      "options": null,
       "answer": "6",
-      "explanation": "AB = √((6−0)² + (0−0)²) = √36 = 6 units.",
+      "explanation": "The correct answer is: 6.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 6,
+      "question": "Fill in the blank: ___ is the equation of a line with slope 3 that passes through the origin.",
+      "options": null,
+      "answer": "y = 3x",
+      "explanation": "The correct answer is: y = 3x.",
       "points": 1
     },
     {
@@ -1621,29 +1584,22 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "A dilation with scale factor k > 1 produces an image that is:",
+      "question": "True or False: The answer to \"A translation moves a point (3, −2) by the vector ⟨−4, 5⟩. Where does the point land\" is: (−1, 3).",
       "options": [
-        "Smaller than the original",
-        "The same size as the original",
-        "Larger than the original",
-        "Reflected across the origin"
+        "True",
+        "False"
       ],
-      "answer": "Larger than the original",
-      "explanation": "When k > 1, the image is enlarged. When 0 < k < 1, the image is reduced.",
+      "answer": "True",
+      "explanation": "True. (−1, 3) is correct.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 5,
-      "question": "Which transformation preserves both size and shape (is an isometry)?",
-      "options": [
-        "Dilation",
-        "Rotation",
-        "Both dilation and rotation",
-        "Only dilation"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which transformation preserves both size and shape (is an isometry).\"",
+      "options": null,
       "answer": "Rotation",
-      "explanation": "Rotations are isometries — they preserve distances and angle measures. Dilations change size, so they are not isometries.",
+      "explanation": "The correct answer is: Rotation.",
       "points": 1
     },
     {
@@ -1705,16 +1661,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "Which is a valid reason to use in a geometric proof?",
+      "question": "True or False: The answer to \"The hypothesis of the conditional statement 'If a shape is a square, then it has four equal sides' is:\" is: A shape is a square.",
       "options": [
-        "It looks like it from the diagram",
-        "A postulate or theorem",
-        "My calculation shows it",
-        "It seems reasonable"
+        "True",
+        "False"
       ],
-      "answer": "A postulate or theorem",
-      "explanation": "Valid reasons in geometric proofs are definitions, postulates, previously proven theorems, and given information.",
+      "answer": "True",
+      "explanation": "True. A shape is a square is correct.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 9
 }

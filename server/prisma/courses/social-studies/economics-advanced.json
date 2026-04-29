@@ -215,22 +215,6 @@
       "practiceNote": "Khan Academy — Comparative Advantage Practice",
       "assignment": "Given production possibilities data for two countries, calculate opportunity costs, identify comparative advantages, and determine the range of mutually beneficial trading prices; draw the world price tariff diagram showing welfare effects.",
       "estimatedHrs": 3.5
-    },
-    {
-      "order": 14,
-      "title": "Development Economics & Global Inequality",
-      "titleZh": "发展经济学与全球不平等",
-      "objectives": "Distinguish developed from developing economies using key indicators; analyze barriers to economic development; evaluate the role of institutions, foreign aid, and trade in poverty reduction.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/35-introduction",
-      "readingNote": "OpenStax Principles of Economics 2e Ch 35 — Poverty and Economic Inequality",
-      "videoUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/income-and-wealth-distribution-topic/income-inequality-tutorial/v/income-inequality",
-      "videoNote": "Khan Academy — Income Inequality and Development",
-      "video2Url": "https://www.youtube.com/watch?v=jbkSRLYSojo",
-      "video2Note": "YouTube — Economic Development: Why Are Some Countries Rich and Others Poor?",
-      "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/macroeconomics/income-and-wealth-distribution-topic/income-inequality-tutorial/e/income-inequality",
-      "practiceNote": "Khan Academy — Income Inequality Practice",
-      "assignment": "Compare two countries at different stages of development using HDI, Gini coefficient, and GDP per capita data; write a policy brief recommending three evidence-based strategies for sustainable economic development.",
-      "estimatedHrs": 4
     }
   ],
   "quizQuestions": [
@@ -265,43 +249,13 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "A consumer is in equilibrium when:",
+      "question": "True or False: The answer to \"When the price of a good rises and a consumer buys less of it because it is relatively more expensive than substitutes, this is called the:\" is: Substitution effect.",
       "options": [
-        "Total utility is maximized and the budget is exhausted",
-        "MUx/Px > MUy/Py",
-        "Marginal utility of each good equals its price",
-        "The indifference curve intersects the budget line"
+        "True",
+        "False"
       ],
-      "answer": "Total utility is maximized and the budget is exhausted",
-      "explanation": "Consumer equilibrium occurs where the highest attainable indifference curve is tangent to the budget constraint, maximizing total utility given the budget.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 4,
-      "question": "For a normal good, when income increases, the demand curve:",
-      "options": [
-        "Shifts left",
-        "Shifts right",
-        "Remains unchanged",
-        "Becomes flatter"
-      ],
-      "answer": "Shifts right",
-      "explanation": "A normal good is one for which demand increases as income increases, shifting the demand curve to the right.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 1,
-      "order": 5,
-      "question": "Giffen goods are unusual because they:",
-      "options": [
-        "Have perfectly elastic demand",
-        "Violate the law of demand — quantity demanded rises when price rises",
-        "Always have positive cross-price elasticity",
-        "Are always inferior goods with downward-sloping demand"
-      ],
-      "answer": "Violate the law of demand — quantity demanded rises when price rises",
-      "explanation": "Giffen goods are inferior goods for which the income effect dominates the substitution effect so strongly that demand increases when price rises.",
+      "answer": "True",
+      "explanation": "True. Substitution effect is correct.",
       "points": 1
     },
     {
@@ -349,29 +303,13 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Economies of scale occur when a firm's long-run average cost:",
+      "question": "True or False: The answer to \"The law of diminishing marginal returns states that as more units of a variable input are added to fixed inputs:\" is: Marginal product eventually decreases.",
       "options": [
-        "Increases as output increases",
-        "Decreases as output increases",
-        "Remains constant as output increases",
-        "Fluctuates with variable inputs"
+        "True",
+        "False"
       ],
-      "answer": "Decreases as output increases",
-      "explanation": "Economies of scale exist when expanding output reduces long-run average total cost, often due to specialization, bulk purchasing, or spreading fixed costs.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 2,
-      "order": 5,
-      "question": "A firm's short-run supply curve is its:",
-      "options": [
-        "Entire marginal cost curve",
-        "Marginal cost curve above average variable cost",
-        "Average total cost curve above minimum ATC",
-        "Marginal revenue curve"
-      ],
-      "answer": "Marginal cost curve above average variable cost",
-      "explanation": "A competitive firm will produce as long as price exceeds AVC; therefore the supply curve is the segment of the MC curve above the minimum AVC (the shutdown point).",
+      "answer": "True",
+      "explanation": "True. Marginal product eventually decreases is correct.",
       "points": 1
     },
     {
@@ -414,34 +352,6 @@
       ],
       "answer": "Price is less than average variable cost",
       "explanation": "A firm shuts down when it cannot cover variable costs — if P < AVC, losses from producing exceed losses from shutting down (which equal fixed costs).",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 4,
-      "question": "In the long run, perfectly competitive markets tend toward zero economic profit because:",
-      "options": [
-        "Government regulations prevent profits",
-        "Entry of new firms drives price down to minimum ATC",
-        "Firms collude to keep prices stable",
-        "Technology improvements eliminate profit"
-      ],
-      "answer": "Entry of new firms drives price down to minimum ATC",
-      "explanation": "Positive economic profits attract new entrants, increasing supply, lowering price, and eliminating profit until P = minimum ATC.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 3,
-      "order": 5,
-      "question": "Productive efficiency in perfect competition is achieved because in long-run equilibrium:",
-      "options": [
-        "Firms produce at minimum average total cost",
-        "Firms earn positive economic profit",
-        "Price exceeds marginal cost",
-        "There are barriers to entry"
-      ],
-      "answer": "Firms produce at minimum average total cost",
-      "explanation": "In the long-run perfectly competitive equilibrium, P = MC = minimum ATC, ensuring productive efficiency — goods are produced at the lowest possible cost.",
       "points": 1
     },
     {
@@ -501,20 +411,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 4,
-      "order": 5,
-      "question": "In long-run monopolistic competition equilibrium, firms earn:",
-      "options": [
-        "Positive economic profit",
-        "Zero economic profit",
-        "Negative economic profit",
-        "Maximum accounting profit"
-      ],
-      "answer": "Zero economic profit",
-      "explanation": "Entry and exit drive economic profit to zero in the long run, as in perfect competition, but firms produce on the downward-sloping portion of ATC — not at minimum ATC.",
-      "points": 1
-    },
-    {
       "moduleOrder": 5,
       "order": 1,
       "question": "Which of the following best describes an oligopoly?",
@@ -545,43 +441,25 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "A Nash equilibrium is a situation where:",
+      "question": "True or False: The answer to \"Which of the following best describes an oligopoly\" is: A market dominated by a few interdependent firms.",
       "options": [
-        "All players earn maximum possible profit",
-        "No player can improve their outcome by unilaterally changing strategy",
-        "All players choose to cooperate",
-        "Government enforces a price ceiling"
+        "True",
+        "False"
       ],
-      "answer": "No player can improve their outcome by unilaterally changing strategy",
-      "explanation": "At a Nash equilibrium, each player is choosing the best response to the other players' strategies, so no one has an incentive to deviate.",
+      "answer": "True",
+      "explanation": "True. A market dominated by a few interdependent firms is correct.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "A cartel is an arrangement where oligopolistic firms:",
+      "question": "True or False: The answer to \"In a prisoner's dilemma game, the Nash equilibrium is often a poor outcome because:\" is: Both players cooperate and maximize joint profits.",
       "options": [
-        "Compete aggressively on price",
-        "Agree to coordinate output and pricing like a monopolist",
-        "Merge into a single firm",
-        "Reduce production costs through economies of scale"
+        "True",
+        "False"
       ],
-      "answer": "Agree to coordinate output and pricing like a monopolist",
-      "explanation": "A cartel involves firms colluding to restrict output and raise prices, effectively acting as a joint monopoly. Cartels are illegal under US antitrust law.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 5,
-      "order": 5,
-      "question": "The kinked demand curve model in oligopoly predicts that:",
-      "options": [
-        "Prices will change frequently in response to cost changes",
-        "Prices tend to be rigid because rivals match price cuts but not increases",
-        "Firms will always cooperate to maximize joint profits",
-        "Entry is unrestricted so profits are zero in the long run"
-      ],
-      "answer": "Prices tend to be rigid because rivals match price cuts but not increases",
-      "explanation": "In the kinked demand model, if a firm raises price, rivals don't follow (demand is elastic above kink), but if it cuts price, rivals match (demand is inelastic below kink), creating price stickiness.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Each player's dominant strategy leads to a worse collective outcome.",
       "points": 1
     },
     {
@@ -629,29 +507,13 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "A monopsony in the labor market refers to:",
+      "question": "True or False: The answer to \"A firm's demand for labor is derived from:\" is: The demand for the good or service the labor produces.",
       "options": [
-        "A labor market with many competing employers",
-        "A single employer who has market power over wages",
-        "A union that sets wages above equilibrium",
-        "A government-mandated minimum wage"
+        "True",
+        "False"
       ],
-      "answer": "A single employer who has market power over wages",
-      "explanation": "A monopsonist is the sole employer (or dominant buyer of labor) in a market, giving it the power to pay wages below the competitive level.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 6,
-      "order": 5,
-      "question": "Human capital refers to:",
-      "options": [
-        "The physical machines used in production",
-        "The investment workers make in education and skills",
-        "The financial capital raised by firms",
-        "The number of workers in an economy"
-      ],
-      "answer": "The investment workers make in education and skills",
-      "explanation": "Human capital is the stock of knowledge, skills, and health that workers accumulate through education, training, and experience, which enhances their productivity.",
+      "answer": "True",
+      "explanation": "True. The demand for the good or service the labor produces is correct.",
       "points": 1
     },
     {
@@ -685,43 +547,13 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "A Pigouvian tax is designed to:",
+      "question": "True or False: The answer to \"A negative externality occurs when a market transaction:\" is: Imposes costs on third parties not involved in the transaction.",
       "options": [
-        "Subsidize firms that produce positive externalities",
-        "Correct a negative externality by making the producer internalize the social cost",
-        "Raise government revenue without affecting market outcomes",
-        "Eliminate all forms of market failure"
+        "True",
+        "False"
       ],
-      "answer": "Correct a negative externality by making the producer internalize the social cost",
-      "explanation": "A Pigouvian tax equal to the external cost per unit aligns private incentives with social costs, leading firms to produce the socially optimal quantity.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 4,
-      "question": "Education is often cited as an example of a positive externality because:",
-      "options": [
-        "It is provided only by the government",
-        "Educated individuals generate benefits for society beyond what they capture personally",
-        "It reduces income inequality directly",
-        "The government can produce it at zero cost"
-      ],
-      "answer": "Educated individuals generate benefits for society beyond what they capture personally",
-      "explanation": "Education benefits not just the individual (higher wages) but also society through increased productivity, lower crime rates, and civic participation — benefits the private market undersupplies.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 7,
-      "order": 5,
-      "question": "The Coase Theorem argues that externalities can be resolved without government intervention when:",
-      "options": [
-        "There are many parties involved and high transaction costs",
-        "Property rights are well-defined and transaction costs are low",
-        "The externality is a public bad",
-        "The government sets the correct Pigouvian tax"
-      ],
-      "answer": "Property rights are well-defined and transaction costs are low",
-      "explanation": "The Coase Theorem states that when property rights are clear and bargaining is costless, private parties will negotiate to achieve the efficient outcome regardless of who holds the rights.",
+      "answer": "True",
+      "explanation": "True. Imposes costs on third parties not involved in the transaction is correct.",
       "points": 1
     },
     {
@@ -769,29 +601,13 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "Moral hazard refers to the tendency for people to:",
+      "question": "True or False: The answer to \"A public good is characterized by:\" is: Non-excludability and non-rivalry.",
       "options": [
-        "Misrepresent information before entering a contract",
-        "Take on more risk after being insured or protected from consequences",
-        "Cooperate to achieve mutually beneficial outcomes",
-        "Save more when interest rates are high"
+        "True",
+        "False"
       ],
-      "answer": "Take on more risk after being insured or protected from consequences",
-      "explanation": "Moral hazard occurs when having insurance (or other protection) changes behavior — a person may take greater risks because they bear less of the cost of bad outcomes.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 8,
-      "order": 5,
-      "question": "Common resources (like fisheries) are prone to overuse because they are:",
-      "options": [
-        "Non-excludable but rival",
-        "Non-excludable and non-rival",
-        "Excludable and non-rival",
-        "Excludable and rival"
-      ],
-      "answer": "Non-excludable but rival",
-      "explanation": "Common resources are rival (one person's use depletes what is available) but non-excludable (you cannot prevent people from using them), leading to the tragedy of the commons.",
+      "answer": "True",
+      "explanation": "True. Non-excludability and non-rivalry is correct.",
       "points": 1
     },
     {
@@ -839,29 +655,10 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Which of the following is NOT included in GDP calculations?",
-      "options": [
-        "New car purchases by households",
-        "Government expenditure on roads",
-        "Purchase of a new home",
-        "Purchase of stocks on the stock market"
-      ],
-      "answer": "Purchase of stocks on the stock market",
-      "explanation": "Purchasing stocks is a financial transaction — a transfer of existing assets — not the production of a new good or service, so it is excluded from GDP.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 9,
-      "order": 5,
-      "question": "If nominal GDP grows by 5% and the price level rises by 3%, then real GDP grew by approximately:",
-      "options": [
-        "8%",
-        "5%",
-        "3%",
-        "2%"
-      ],
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if nominal gdp grows by 5% and the price level rises by 3%, then real gdp grew by approximately:.\"",
+      "options": null,
       "answer": "2%",
-      "explanation": "Real GDP growth ≈ Nominal GDP growth − Inflation rate = 5% − 3% = 2%. This separates actual production growth from inflation.",
+      "explanation": "The correct answer is: 2%.",
       "points": 1
     },
     {
@@ -921,20 +718,6 @@
       "points": 1
     },
     {
-      "moduleOrder": 10,
-      "order": 5,
-      "question": "Which of the following would most likely be a lagging economic indicator?",
-      "options": [
-        "Stock market prices",
-        "Building permits issued",
-        "Unemployment rate",
-        "Manufacturing orders"
-      ],
-      "answer": "Unemployment rate",
-      "explanation": "The unemployment rate is a lagging indicator — firms typically wait to hire or fire until they are confident about economic conditions, so unemployment peaks after the recession's trough.",
-      "points": 1
-    },
-    {
       "moduleOrder": 11,
       "order": 1,
       "question": "Expansionary fiscal policy involves:",
@@ -965,43 +748,25 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "Crowding out occurs when government borrowing:",
+      "question": "True or False: The answer to \"Expansionary fiscal policy involves:\" is: Cutting taxes and increasing government spending.",
       "options": [
-        "Increases the money supply",
-        "Raises interest rates and reduces private investment",
-        "Decreases the national debt",
-        "Stimulates consumer confidence"
+        "True",
+        "False"
       ],
-      "answer": "Raises interest rates and reduces private investment",
-      "explanation": "When the government borrows heavily, it competes with private borrowers, pushing up interest rates and reducing private investment — partially offsetting the stimulus effect.",
+      "answer": "True",
+      "explanation": "True. Cutting taxes and increasing government spending is correct.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "Automatic stabilizers are government programs that:",
+      "question": "True or False: The answer to \"If the marginal propensity to consume (MPC) is 0.75, the spending multiplier equals:\" is: 1.75.",
       "options": [
-        "Require Congressional approval each year",
-        "Automatically increase spending or cut taxes during recessions without new legislation",
-        "Are always pro-cyclical",
-        "Apply only to monetary policy"
+        "True",
+        "False"
       ],
-      "answer": "Automatically increase spending or cut taxes during recessions without new legislation",
-      "explanation": "Programs like unemployment insurance and progressive income taxes automatically expand during downturns and contract during booms, smoothing the business cycle.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 11,
-      "order": 5,
-      "question": "A recessionary gap occurs when:",
-      "options": [
-        "Actual GDP exceeds potential GDP",
-        "Actual GDP is less than potential GDP",
-        "The economy is at full employment",
-        "The price level is rising too quickly"
-      ],
-      "answer": "Actual GDP is less than potential GDP",
-      "explanation": "A recessionary gap exists when the economy produces less than its full-employment potential output, typically associated with high unemployment.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: 4.",
       "points": 1
     },
     {
@@ -1049,29 +814,13 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "The money multiplier is equal to:",
+      "question": "True or False: The answer to \"When the Federal Reserve buys government securities in the open market, it:\" is: Increases the money supply and lowers interest rates.",
       "options": [
-        "1 divided by the reserve requirement",
-        "Reserve requirement divided by 1",
-        "Marginal propensity to consume ÷ (1 − MPC)",
-        "Total deposits divided by the monetary base"
+        "True",
+        "False"
       ],
-      "answer": "1 divided by the reserve requirement",
-      "explanation": "Money multiplier = 1 / reserve requirement ratio. If banks must hold 10% in reserves, the multiplier is 10, meaning $1 of new reserves can generate $10 in new deposits.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 12,
-      "order": 5,
-      "question": "Quantitative easing (QE) is a monetary policy tool used when:",
-      "options": [
-        "Inflation is too high and rates must be raised quickly",
-        "Interest rates are already near zero and traditional tools are insufficient",
-        "The government needs to reduce its debt",
-        "Commercial banks are holding excess reserves"
-      ],
-      "answer": "Interest rates are already near zero and traditional tools are insufficient",
-      "explanation": "QE involves the central bank purchasing longer-term assets to inject liquidity when conventional interest rate reductions have reached their lower bound.",
+      "answer": "True",
+      "explanation": "True. Increases the money supply and lowers interest rates is correct.",
       "points": 1
     },
     {
@@ -1105,113 +854,13 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "A tariff on imported steel will most directly:",
+      "question": "True or False: The answer to \"Comparative advantage is based on:\" is: Relative opportunity costs of production between countries.",
       "options": [
-        "Lower prices for domestic consumers of steel",
-        "Benefit domestic steel producers and harm domestic steel consumers",
-        "Increase the quantity of steel imported",
-        "Improve the efficiency of resource allocation"
+        "True",
+        "False"
       ],
-      "answer": "Benefit domestic steel producers and harm domestic steel consumers",
-      "explanation": "A tariff raises the price of imported steel, protecting domestic producers but forcing domestic consumers (including manufacturers who use steel) to pay higher prices.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 4,
-      "question": "A quota is a trade restriction that:",
-      "options": [
-        "Places a tax on imported goods",
-        "Limits the quantity of a good that can be imported",
-        "Subsidizes domestic exporters",
-        "Devalues a country's currency"
-      ],
-      "answer": "Limits the quantity of a good that can be imported",
-      "explanation": "An import quota sets a maximum quantity limit on imports. Like tariffs, quotas raise domestic prices, benefit domestic producers, and harm consumers.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 13,
-      "order": 5,
-      "question": "The infant industry argument for trade protection holds that:",
-      "options": [
-        "Old, established industries need permanent protection",
-        "New domestic industries may need temporary protection to develop competitive advantage",
-        "All industries benefit from free trade without exception",
-        "Tariffs always improve the terms of trade"
-      ],
-      "answer": "New domestic industries may need temporary protection to develop competitive advantage",
-      "explanation": "The infant industry argument suggests that new industries in developing countries may need temporary protection from international competition until they achieve economies of scale.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 1,
-      "question": "The Human Development Index (HDI) measures a country's development using:",
-      "options": [
-        "GDP alone",
-        "Life expectancy, education, and GNI per capita",
-        "Export volumes and trade balances",
-        "Population size and urbanization rate"
-      ],
-      "answer": "Life expectancy, education, and GNI per capita",
-      "explanation": "The HDI combines health (life expectancy at birth), education (mean and expected years of schooling), and standard of living (GNI per capita) into a composite index.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 2,
-      "question": "The Gini coefficient measures:",
-      "options": [
-        "Economic growth rate",
-        "Income inequality within a country",
-        "The balance of payments",
-        "Inflation over time"
-      ],
-      "answer": "Income inequality within a country",
-      "explanation": "The Gini coefficient ranges from 0 (perfect equality) to 1 (perfect inequality) and summarizes the income distribution across a population.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 3,
-      "question": "Which of the following is considered a major barrier to economic development?",
-      "options": [
-        "High trade volumes",
-        "Weak institutions and property rights",
-        "Low savings rates accompanied by high investment",
-        "Strong rule of law"
-      ],
-      "answer": "Weak institutions and property rights",
-      "explanation": "Weak legal institutions, corruption, and poorly defined property rights discourage investment and entrepreneurship, limiting economic development.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 4,
-      "question": "The Washington Consensus generally recommended that developing nations:",
-      "options": [
-        "Increase trade barriers and nationalize industries",
-        "Pursue fiscal discipline, market liberalization, and privatization",
-        "Adopt fixed exchange rates permanently",
-        "Focus on import substitution industrialization"
-      ],
-      "answer": "Pursue fiscal discipline, market liberalization, and privatization",
-      "explanation": "The Washington Consensus was a set of economic policies advocated by international institutions emphasizing free markets, fiscal austerity, and trade and financial liberalization.",
-      "points": 1
-    },
-    {
-      "moduleOrder": 14,
-      "order": 5,
-      "question": "Foreign direct investment (FDI) in developing countries is generally expected to:",
-      "options": [
-        "Reduce technology transfer",
-        "Increase unemployment in the host country",
-        "Contribute to capital formation, employment, and technology transfer",
-        "Worsen income inequality without exception"
-      ],
-      "answer": "Contribute to capital formation, employment, and technology transfer",
-      "explanation": "FDI can benefit developing economies by bringing capital, creating jobs, transferring technology and management practices, and integrating local firms into global supply chains.",
+      "answer": "True",
+      "explanation": "True. Relative opportunity costs of production between countries is correct.",
       "points": 1
     }
   ],
@@ -1264,16 +913,14 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "mc",
-      "question": "Price discrimination by a monopolist involves:",
+      "type": "tf",
+      "question": "True or False: The answer to \"Price discrimination by a monopolist involves:\" is: Charging different prices to different consumers based on willingness to pay.",
       "options": [
-        "Charging the same price to all consumers",
-        "Charging different prices to different consumers based on willingness to pay",
-        "Lowering price to increase market share",
-        "Setting price equal to marginal cost"
+        "True",
+        "False"
       ],
-      "answer": "Charging different prices to different consumers based on willingness to pay",
-      "explanation": "Price discrimination allows a monopolist to capture consumer surplus by charging each consumer or group the maximum they are willing to pay.",
+      "answer": "True",
+      "explanation": "True. Charging different prices to different consumers based on willingness to pay is correct.",
       "points": 1
     },
     {
@@ -1324,16 +971,14 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "mc",
-      "question": "A subsidy given to firms with positive externalities is intended to:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A subsidy given to firms with positive externalities is intended to:\" is: Decrease production and raise prices.",
       "options": [
-        "Decrease production and raise prices",
-        "Increase production toward the socially optimal level",
-        "Eliminate competition in the market",
-        "Reduce government tax revenue"
+        "True",
+        "False"
       ],
-      "answer": "Increase production toward the socially optimal level",
-      "explanation": "A subsidy lowers production costs, shifting supply right and increasing output to close the gap between market equilibrium and the socially optimal quantity.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Increase production toward the socially optimal level.",
       "points": 1
     },
     {
@@ -1384,16 +1029,14 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "mc",
-      "question": "An increase in consumer income causes the demand for an inferior good to:",
+      "type": "tf",
+      "question": "True or False: The answer to \"An increase in consumer income causes the demand for an inferior good to:\" is: Decrease.",
       "options": [
-        "Increase",
-        "Decrease",
-        "Remain unchanged",
-        "Become perfectly inelastic"
+        "True",
+        "False"
       ],
-      "answer": "Decrease",
-      "explanation": "An inferior good is one for which demand falls as income rises — consumers switch to higher-quality substitutes when they can afford to.",
+      "answer": "True",
+      "explanation": "True. Decrease is correct.",
       "points": 1
     },
     {
@@ -1444,16 +1087,14 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "mc",
-      "question": "A price ceiling set below the equilibrium price will cause:",
+      "type": "tf",
+      "question": "True or False: The answer to \"A price ceiling set below the equilibrium price will cause:\" is: A surplus.",
       "options": [
-        "A surplus",
-        "A shortage",
-        "No change in quantity supplied",
-        "An increase in supply"
+        "True",
+        "False"
       ],
-      "answer": "A shortage",
-      "explanation": "A binding price ceiling below equilibrium reduces quantity supplied and increases quantity demanded, creating a shortage (excess demand).",
+      "answer": "False",
+      "explanation": "False. The correct answer is: A shortage.",
       "points": 1
     },
     {
@@ -1504,31 +1145,24 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "mc",
-      "question": "In the AD-AS model, a supply shock that increases production costs would:",
+      "type": "tf",
+      "question": "True or False: The answer to \"In the AD-AS model, a supply shock that increases production costs would:\" is: Shift aggregate supply left, raising prices and lowering output.",
       "options": [
-        "Shift aggregate demand right",
-        "Shift aggregate supply left, raising prices and lowering output",
-        "Shift aggregate supply right",
-        "Shift aggregate demand left"
+        "True",
+        "False"
       ],
-      "answer": "Shift aggregate supply left, raising prices and lowering output",
-      "explanation": "A negative supply shock (e.g., rising oil prices) raises production costs, shifting the short-run aggregate supply curve left — causing stagflation (higher prices and lower output).",
+      "answer": "True",
+      "explanation": "True. Shift aggregate supply left, raising prices and lowering output is correct.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 6,
-      "type": "mc",
+      "type": "fill",
       "question": "If the reserve requirement is 20%, the money multiplier is:",
-      "options": [
-        "2",
-        "4",
-        "5",
-        "20"
-      ],
+      "options": null,
       "answer": "5",
-      "explanation": "Money multiplier = 1 / reserve requirement = 1 / 0.20 = 5.",
+      "explanation": "The correct answer is: 5.",
       "points": 1
     },
     {
@@ -1564,16 +1198,14 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "mc",
-      "question": "Tariffs benefit which group in the importing country?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Tariffs benefit which group in the importing country\" is: Domestic consumers.",
       "options": [
-        "Domestic consumers",
-        "Foreign exporters",
-        "Domestic producers of the protected good",
-        "All domestic workers equally"
+        "True",
+        "False"
       ],
-      "answer": "Domestic producers of the protected good",
-      "explanation": "Tariffs raise the domestic price, harming consumers but shielding domestic producers from foreign competition, allowing them to sell more at higher prices.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Domestic producers of the protected good.",
       "points": 1
     },
     {
@@ -1624,16 +1256,14 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "mc",
-      "question": "Which policy would MOST directly reduce income inequality in a developing country?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which policy would MOST directly reduce income inequality in a developing country\" is: Investing in universal primary education and healthcare.",
       "options": [
-        "Imposing import tariffs on all goods",
-        "Investing in universal primary education and healthcare",
-        "Devaluing the national currency",
-        "Eliminating all taxes on capital income"
+        "True",
+        "False"
       ],
-      "answer": "Investing in universal primary education and healthcare",
-      "explanation": "Broad investments in human capital through education and healthcare expand opportunity and productivity for lower-income populations, directly reducing inequality.",
+      "answer": "True",
+      "explanation": "True. Investing in universal primary education and healthcare is correct.",
       "points": 1
     },
     {
@@ -1684,16 +1314,14 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "mc",
-      "question": "Which of the following best describes the role of institutions in economic development?",
+      "type": "tf",
+      "question": "True or False: The answer to \"Which of the following best describes the role of institutions in economic development\" is: Institutions are irrelevant; only natural resources determine development.",
       "options": [
-        "Institutions are irrelevant; only natural resources determine development",
-        "Strong institutions (rule of law, property rights, anti-corruption) underpin sustained growth",
-        "Institutions matter only for political outcomes, not economic ones",
-        "Economic growth automatically produces good institutions without effort"
+        "True",
+        "False"
       ],
-      "answer": "Strong institutions (rule of law, property rights, anti-corruption) underpin sustained growth",
-      "explanation": "Economists like Acemoglu and Robinson show that inclusive economic and political institutions are fundamental to long-run prosperity, as they encourage investment and innovation.",
+      "answer": "False",
+      "explanation": "False. The correct answer is: Strong institutions (rule of law, property rights, anti-corruption) underpin sustained growth.",
       "points": 1
     },
     {
@@ -1729,17 +1357,13 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "mc",
+      "type": "fill",
       "question": "In an economy with MPC = 0.8, if the government increases spending by $50 billion, the total increase in GDP (assuming no crowding out) will be:",
-      "options": [
-        "$50 billion",
-        "$80 billion",
-        "$250 billion",
-        "$400 billion"
-      ],
+      "options": null,
       "answer": "$250 billion",
-      "explanation": "Multiplier = 1 / (1 − 0.8) = 5. Total change in GDP = 5 × $50B = $250 billion.",
+      "explanation": "The correct answer is: $250 billion.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 12
 }

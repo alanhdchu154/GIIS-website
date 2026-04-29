@@ -1,38 +1,50 @@
 /**
  * Seeds quiz + exam progress for all 4 students based on their official transcript grades.
- * Generates realistic, varied per-module scores rather than identical round numbers.
+ * Stores actual per-question answers so the review panel shows which questions were wrong.
  */
 
 const { PrismaClient } = require('@prisma/client');
 const db = new PrismaClient();
 
 /**
- * Generates varied quiz scores that average close to targetPct.
- * With 5 questions per module, achievable scores are multiples of 20 (0,20,40,60,80,100).
+ * Given quiz questions and a target score (0-100), builds a realistic answers object
+ * {questionId: submittedAnswer} where the score matches as closely as possible.
  */
-function makeModuleScores(targetPct, numModules) {
-  const step = 20; // 5 questions → 20% per question
-  const lo = Math.floor(targetPct / step) * step;
-  const hi = Math.min(100, lo + step);
-  if (lo === hi) return Array(numModules).fill(lo);
+function buildAnswers(questions, targetPct) {
+  const total = questions.length;
+  if (total === 0) return { answers: {}, score: 0 };
 
-  const numHi = Math.round(((targetPct - lo) / step) * numModules);
-  const numLo = numModules - numHi;
-  const scores = [...Array(numLo).fill(lo), ...Array(numHi).fill(hi)];
+  const numCorrect = Math.round((targetPct / 100) * total);
+  // Shuffle questions to randomise which are "wrong"
+  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  const correctSet = new Set(shuffled.slice(0, numCorrect).map(q => q.id));
 
-  // Fisher-Yates shuffle
-  for (let i = scores.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [scores[i], scores[j]] = [scores[j], scores[i]];
+  const answers = {};
+  for (const q of questions) {
+    if (correctSet.has(q.id)) {
+      answers[q.id] = q.answer;
+    } else {
+      // Pick a wrong option; for fill-blank / T/F use a plausible wrong value
+      const wrong = pickWrongAnswer(q);
+      answers[q.id] = wrong;
+    }
   }
+  const score = total > 0 ? (numCorrect / total) * 100 : 0;
+  return { answers, score };
+}
 
-  // ~12% chance any module drops one bracket (simulates harder modules or off days)
-  return scores.map(s => (s > 0 && Math.random() < 0.12) ? Math.max(0, s - step) : s);
+function pickWrongAnswer(q) {
+  const opts = Array.isArray(q.options) && q.options.length > 0 ? q.options : null;
+  if (opts) {
+    const wrongs = opts.filter(o => o !== q.answer);
+    return wrongs.length > 0 ? wrongs[Math.floor(Math.random() * wrongs.length)] : opts[0];
+  }
+  // fill-in-blank: submit a plausible wrong answer
+  return q.answer.split(' ').reverse().join(' ') + ' (incorrect)';
 }
 
 /**
  * Nearest achievable score for an exam with numQuestions questions.
- * Randomly picks between lo/hi bracket weighted by proximity to target.
  */
 function nearestAchievable(targetPct, numQuestions) {
   if (!numQuestions) return targetPct;
@@ -199,44 +211,53 @@ async function seedStudent(student) {
       });
     }
 
-    // Quiz attempts for every module — varied realistic scores, not identical round numbers
-    const moduleScores = makeModuleScores(targetScore, allModuleOrders.length);
-    for (let idx = 0; idx < allModuleOrders.length; idx++) {
-      const moduleOrder = allModuleOrders[idx];
-      const score = moduleScores[idx];
+    // Quiz attempts — fetch actual questions and build per-question answers
+    for (const moduleOrder of allModuleOrders) {
+      const qs = await db.moduleQuizQuestion.findMany({
+        where: { courseId: course.id, moduleOrder },
+        orderBy: { order: 'asc' },
+      });
+      if (qs.length === 0) continue;
+      // Use targetScore with small per-module variation (±8%)
+      const modTarget = Math.min(100, Math.max(0, targetScore + (Math.random() * 16 - 8)));
+      const { answers, score } = buildAnswers(qs, modTarget);
       await db.moduleQuizAttempt.upsert({
         where: { enrollmentId_moduleOrder: { enrollmentId: enrollment.id, moduleOrder } },
-        create: { enrollmentId: enrollment.id, moduleOrder, score, passed: score >= 70, answers: {} },
-        update: { score, passed: score >= 70 },
+        create: { enrollmentId: enrollment.id, moduleOrder, score, passed: score >= 70, answers },
+        update: { score, passed: score >= 70, answers },
       });
     }
 
-    // Remove any old exam attempts for this enrollment (avoid duplicate conflicts)
+    // Remove any old exam attempts for this enrollment
     await db.examAttempt.deleteMany({ where: { enrollmentId: enrollment.id } });
 
-    // Midterm attempt — 15 questions, score varies realistically
-    const midScore = nearestAchievable(targetScore, 15);
+    // Midterm — build per-question answers from actual exam questions
+    const midQs = await db.examQuestion.findMany({
+      where: { courseId: course.id, examType: 'midterm' },
+      orderBy: { order: 'asc' },
+    });
+    const midTarget = nearestAchievable(targetScore, midQs.length || 15);
+    const midData = midQs.length > 0 ? buildAnswers(midQs, midTarget) : { answers: {}, score: midTarget };
     await db.examAttempt.create({
       data: {
-        enrollmentId: enrollment.id,
-        examType: 'midterm',
-        submittedAt: new Date(),
-        score: midScore,
-        passed: midScore >= 70,
-        answers: {},
+        enrollmentId: enrollment.id, examType: 'midterm',
+        submittedAt: new Date(), score: midData.score,
+        passed: midData.score >= 70, answers: midData.answers,
       },
     });
 
-    // Final attempt — 20 questions, score varies realistically
-    const finalScore = nearestAchievable(targetScore, 20);
+    // Final — build per-question answers from actual exam questions
+    const finalQs = await db.examQuestion.findMany({
+      where: { courseId: course.id, examType: 'final' },
+      orderBy: { order: 'asc' },
+    });
+    const finalTarget = nearestAchievable(targetScore, finalQs.length || 20);
+    const finalData = finalQs.length > 0 ? buildAnswers(finalQs, finalTarget) : { answers: {}, score: finalTarget };
     await db.examAttempt.create({
       data: {
-        enrollmentId: enrollment.id,
-        examType: 'final',
-        submittedAt: new Date(),
-        score: finalScore,
-        passed: finalScore >= 70,
-        answers: {},
+        enrollmentId: enrollment.id, examType: 'final',
+        submittedAt: new Date(), score: finalData.score,
+        passed: finalData.score >= 70, answers: finalData.answers,
       },
     });
 

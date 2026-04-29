@@ -2,7 +2,7 @@
   "slug": "psychology-seminar-capstone",
   "name": "Psychology Seminar / Capstone",
   "nameZh": "心理学研讨与毕业项目",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Psychology",
   "type": "Elective",
   "description": "An advanced seminar integrating core psychological knowledge with current research, cross-cultural perspectives, and an independent capstone research project.",
@@ -22,7 +22,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/ap-history-of-psychology/e/history-of-psychology",
       "practiceNote": "Khan Academy — Psychology History Practice",
       "assignment": "Write a 400-word integrative essay identifying the three psychological concepts you believe are most important for understanding human behavior. For each concept, cite a landmark study and explain its real-world application.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 2,
@@ -70,7 +70,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-social-psychology-tutorial/e/social-psychology",
       "practiceNote": "Khan Academy — Social Psychology Practice",
       "assignment": "Compare how one psychological concept (such as conformity, self-esteem, or attachment) manifests differently in two distinct cultural contexts. Write a 450-word analysis citing at least two cultural psychology studies.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 5,
@@ -86,7 +86,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-motivation-emotion-and-personality/ap-theories-of-motivation/e/motivation-and-emotion",
       "practiceNote": "Khan Academy — Motivation Practice",
       "assignment": "Complete the VIA Character Strengths survey online and identify your top five strengths. Write a 400-word reflection on how these strengths align with Seligman's PERMA model and how you could apply two of them more intentionally in daily life.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 6,
@@ -118,7 +118,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/e/research-methods",
       "practiceNote": "Khan Academy — Research Methods Practice",
       "assignment": "Design a hypothetical psychology study including: research question, hypothesis, independent and dependent variables, participant selection method, procedure, and ethical safeguards. Write a 500-word proposal in standard research format.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 8,
@@ -134,7 +134,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/e/research-methods",
       "practiceNote": "Khan Academy — Research Evaluation Practice",
       "assignment": "Search Google Scholar for three peer-reviewed articles on your chosen capstone topic. Write a 500-word annotated synthesis summarizing each study, comparing findings, and identifying a gap in the literature your project will address.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 9,
@@ -150,7 +150,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/e/research-methods",
       "practiceNote": "Khan Academy — Psychology Research Practice",
       "assignment": "Format a mock APA 7th edition reference list of five sources (two journal articles, one book, one book chapter, one website). Then write a three-paragraph sample passage using proper in-text citations for all five sources.",
-      "estimatedHrs": 3.0
+      "estimatedHrs": 3
     },
     {
       "order": 10,
@@ -183,177 +183,1062 @@
       "practiceNote": "Khan Academy — Descriptive Statistics Practice",
       "assignment": "Find a psychology journal article that includes a results section with statistical data. Write a 400-word interpretation of the reported statistics (means, p-values, effect sizes), explaining in plain language what the numbers mean for the study's conclusions.",
       "estimatedHrs": 3.5
-    },
-    {
-      "order": 12,
-      "title": "Case Study Methodology",
-      "titleZh": "案例研究方法论",
-      "objectives": "Describe the purpose and strengths/limitations of case study research, analyze classic psychology case studies, and apply case study design to a real-world psychological question.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-2",
-      "readingNote": "OpenStax Psychology 2e Ch 2.2 — Research Designs",
-      "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
-      "videoNote": "Khan Academy — Research Methods",
-      "video2Url": "https://www.youtube.com/watch?v=1OaWLgCXols",
-      "video2Note": "YouTube — Famous Psychology Case Studies",
-      "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/e/research-methods",
-      "practiceNote": "Khan Academy — Research Design Practice",
-      "assignment": "Choose one famous psychology case study (e.g., Phineas Gage, H.M., Genie, David Reimer). Write a 500-word analysis covering what was studied, key findings, ethical concerns, and what the case contributed to psychological knowledge.",
-      "estimatedHrs": 3.5
-    },
-    {
-      "order": 13,
-      "title": "Presenting Research",
-      "titleZh": "研究成果展示",
-      "objectives": "Organize a psychology research presentation following APA poster or oral presentation conventions, use effective visual aids, and respond to audience questions professionally.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-introduction",
-      "readingNote": "OpenStax Psychology 2e — Research Communication",
-      "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
-      "videoNote": "Khan Academy — Communicating Research",
-      "video2Url": "https://www.youtube.com/watch?v=Unzc731iCUY",
-      "video2Note": "YouTube — How to Give a Great Research Presentation",
-      "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/e/research-methods",
-      "practiceNote": "Khan Academy — Research Methods Practice",
-      "assignment": "Create a 10-slide presentation of your capstone research project including: title, introduction/rationale, literature review summary, methodology, (planned or hypothetical) results, discussion, and references. Submit slides with speaker notes.",
-      "estimatedHrs": 4.0
-    },
-    {
-      "order": 14,
-      "title": "Independent Project & Reflection",
-      "titleZh": "独立研究项目与反思",
-      "objectives": "Complete and submit a full capstone research paper or project, reflect on intellectual growth across the course, and connect psychological learning to future academic and career goals.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
-      "readingNote": "OpenStax Psychology 2e — Full Text Review",
-      "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/ap-history-of-psychology/v/history-of-psychology",
-      "videoNote": "Khan Academy — Psychology Overview",
-      "video2Url": "https://www.youtube.com/watch?v=vo4pMVb0R6M",
-      "video2Note": "YouTube — Psychology as a Science",
-      "practiceUrl": "https://www.khanacademy.org/science/ap-psychology",
-      "practiceNote": "Khan Academy — AP Psychology Full Course Review",
-      "assignment": "Submit your completed capstone project (1,200–1,500 words) on your chosen psychology topic. Include an introduction, literature review, methodology, findings or analysis, discussion, and APA reference list. Attach a 300-word personal reflection on your growth as a psychological thinker.",
-      "estimatedHrs": 6.0
     }
   ],
   "quizQuestions": [
-    { "moduleOrder": 1, "order": 1, "question": "Which perspective in psychology emphasizes observable behavior and environmental influences?", "options": ["Humanistic", "Psychodynamic", "Behaviorism", "Cognitive"], "answer": "Behaviorism", "explanation": "Behaviorism, pioneered by Watson and Skinner, focuses on observable behavior shaped by the environment.", "points": 1 },
-    { "moduleOrder": 1, "order": 2, "question": "The Little Albert experiment demonstrated which psychological principle?", "options": ["Operant conditioning", "Classical conditioning of fear", "Observational learning", "Extinction"], "answer": "Classical conditioning of fear", "explanation": "Watson and Rayner conditioned fear of a white rat in Little Albert by pairing it with a loud noise.", "points": 1 },
-    { "moduleOrder": 1, "order": 3, "question": "The Stanford Prison Experiment is cited as a landmark example of ethical concerns related to:", "options": ["Deception and harm to participants", "Invalid measurement tools", "Sample bias", "Poor statistical analysis"], "answer": "Deception and harm to participants", "explanation": "Zimbardo's study caused psychological harm to participants and is now a central case in research ethics education.", "points": 1 },
-    { "moduleOrder": 1, "order": 4, "question": "Which theoretical perspective emphasizes conscious experience, free will, and personal growth?", "options": ["Biological", "Behavioral", "Humanistic", "Cognitive"], "answer": "Humanistic", "explanation": "Humanistic psychology (Maslow, Rogers) emphasizes human potential, free will, and subjective experience.", "points": 1 },
-    { "moduleOrder": 1, "order": 5, "question": "Meta-analysis in psychology refers to:", "options": ["A single large experiment", "A statistical review combining results from multiple studies", "Qualitative interview analysis", "A longitudinal study design"], "answer": "A statistical review combining results from multiple studies", "explanation": "Meta-analysis statistically combines results from many studies to estimate an overall effect size on a topic.", "points": 1 },
-
-    { "moduleOrder": 2, "order": 1, "question": "Neuroplasticity refers to the brain's ability to:", "options": ["Generate new neurons only in infancy", "Reorganize itself by forming new neural connections throughout life", "Maintain fixed structure after development", "Resist changes due to injury"], "answer": "Reorganize itself by forming new neural connections throughout life", "explanation": "Neuroplasticity is the brain's lifelong capacity to reorganize by forming and pruning synaptic connections.", "points": 1 },
-    { "moduleOrder": 2, "order": 2, "question": "fMRI measures brain activity by detecting changes in:", "options": ["Electrical voltage", "Blood oxygenation levels", "Neurotransmitter concentrations", "Skull thickness"], "answer": "Blood oxygenation levels", "explanation": "fMRI detects the BOLD signal — blood oxygenation-level-dependent changes — as a proxy for neural activity.", "points": 1 },
-    { "moduleOrder": 2, "order": 3, "question": "Which brain structure plays the central role in forming new explicit memories?", "options": ["Amygdala", "Cerebellum", "Hippocampus", "Thalamus"], "answer": "Hippocampus", "explanation": "The hippocampus is critical for encoding and consolidating new explicit (declarative) memories.", "points": 1 },
-    { "moduleOrder": 2, "order": 4, "question": "The default mode network is most active when a person is:", "options": ["Solving math problems", "Engaged in focused attention tasks", "At rest and mind-wandering", "Exercising"], "answer": "At rest and mind-wandering", "explanation": "The default mode network activates during rest, self-referential thought, and mind-wandering rather than goal-directed tasks.", "points": 1 },
-    { "moduleOrder": 2, "order": 5, "question": "Long-term potentiation (LTP) is best described as:", "options": ["A sleep stage associated with memory", "A strengthening of synaptic connections through repeated activation", "A decrease in receptor sensitivity", "A type of unconscious learning"], "answer": "A strengthening of synaptic connections through repeated activation", "explanation": "LTP is the persistent strengthening of synapses following repeated stimulation — a cellular basis for learning and memory.", "points": 1 },
-
-    { "moduleOrder": 3, "order": 1, "question": "The replication crisis refers to the finding that many published psychology studies:", "options": ["Used too-large sample sizes", "Cannot be reproduced by independent researchers", "Were conducted outside the US", "Focused too narrowly on animal research"], "answer": "Cannot be reproduced by independent researchers", "explanation": "The replication crisis highlights that a substantial proportion of published psychology findings fail to replicate when re-tested.", "points": 1 },
-    { "moduleOrder": 3, "order": 2, "question": "Epigenetics studies how:", "options": ["Genes mutate over time", "Environmental factors influence gene expression without changing DNA sequence", "Natural selection operates on behavior", "Neurons communicate via chemicals"], "answer": "Environmental factors influence gene expression without changing DNA sequence", "explanation": "Epigenetics examines heritable changes in gene expression caused by environmental experiences, not alterations to the DNA sequence itself.", "points": 1 },
-    { "moduleOrder": 3, "order": 3, "question": "Open science practices in psychology include:", "options": ["Keeping data confidential to prevent bias", "Pre-registering studies and sharing raw data publicly", "Publishing only positive results", "Limiting replication studies"], "answer": "Pre-registering studies and sharing raw data publicly", "explanation": "Open science promotes transparency through pre-registration, data sharing, and open access publication to improve reproducibility.", "points": 1 },
-    { "moduleOrder": 3, "order": 4, "question": "Embodied cognition theory proposes that:", "options": ["Cognition occurs entirely in the brain independent of the body", "Physical body states and movements influence cognitive processes", "Intelligence is fully determined by genetics", "Language is the foundation of all thought"], "answer": "Physical body states and movements influence cognitive processes", "explanation": "Embodied cognition holds that thinking is grounded in bodily experience — posture, gesture, and sensation shape thought.", "points": 1 },
-    { "moduleOrder": 3, "order": 5, "question": "Publication bias in psychology refers to the tendency to:", "options": ["Publish studies with large sample sizes preferentially", "Publish significant positive results more than null or negative results", "Reject studies from non-Western countries", "Favor qualitative over quantitative methods"], "answer": "Publish significant positive results more than null or negative results", "explanation": "Publication bias inflates apparent effect sizes because journals favor publishing statistically significant results.", "points": 1 },
-
-    { "moduleOrder": 4, "order": 1, "question": "The WEIRD acronym in cross-cultural psychology stands for populations that are:", "options": ["Western, Educated, Industrialized, Rich, Democratic", "White, English-speaking, Independent, Rational, Developed", "Western, Experimental, Intellectual, Reasoning, Democratic", "Wealthy, European, Individualist, Religious, Diverse"], "answer": "Western, Educated, Industrialized, Rich, Democratic", "explanation": "WEIRD critiques the overrepresentation of Western, Educated, Industrialized, Rich, Democratic samples in psychology research.", "points": 1 },
-    { "moduleOrder": 4, "order": 2, "question": "Collectivist cultures are most likely to emphasize:", "options": ["Personal achievement and individual rights", "Group harmony, family obligations, and interdependence", "Competition and self-promotion", "Emotional expressiveness in public"], "answer": "Group harmony, family obligations, and interdependence", "explanation": "Collectivist cultures (e.g., East Asian) prioritize group cohesion, interdependence, and social obligations over individual goals.", "points": 1 },
-    { "moduleOrder": 4, "order": 3, "question": "The Müller-Lyer illusion affects people from non-Western cultures:", "options": ["More strongly than Westerners", "About the same as Westerners", "Less than Westerners", "Not at all"], "answer": "Less than Westerners", "explanation": "Cross-cultural research shows the Müller-Lyer illusion is weaker in cultures without carpentered environments, supporting cultural influences on perception.", "points": 1 },
-    { "moduleOrder": 4, "order": 4, "question": "Emic research approaches study behavior:", "options": ["Using universal categories across cultures", "From within a specific culture using its own standards", "Comparing exactly two cultures", "Using only Western psychological tests"], "answer": "From within a specific culture using its own standards", "explanation": "Emic approaches use culture-specific frameworks to understand behavior from within, versus etic (universal) approaches.", "points": 1 },
-    { "moduleOrder": 4, "order": 5, "question": "Cross-cultural psychology differs from cultural psychology primarily in that it:", "options": ["Focuses only on non-Western populations", "Compares psychological phenomena across different cultures", "Rejects quantitative methods", "Focuses on a single culture in depth"], "answer": "Compares psychological phenomena across different cultures", "explanation": "Cross-cultural psychology systematically compares behavior and mental processes across cultures to identify universals and variations.", "points": 1 },
-
-    { "moduleOrder": 5, "order": 1, "question": "Seligman's PERMA model of well-being includes Positive emotions, Engagement, Relationships, Meaning, and:", "options": ["Money", "Achievement", "Autonomy", "Recognition"], "answer": "Achievement", "explanation": "Seligman's PERMA model identifies five pillars of well-being: Positive emotions, Engagement, Relationships, Meaning, and Achievement.", "points": 1 },
-    { "moduleOrder": 5, "order": 2, "question": "The hedonic adaptation principle explains why:", "options": ["People quickly return to a baseline level of happiness after positive events", "Negative events always lower well-being permanently", "Wealth reliably increases happiness long-term", "Meditation has no lasting benefit"], "answer": "People quickly return to a baseline level of happiness after positive events", "explanation": "Hedonic adaptation (the hedonic treadmill) shows people adapt to changes and return to a stable happiness set point.", "points": 1 },
-    { "moduleOrder": 5, "order": 3, "question": "Flow, as defined by Csikszentmihalyi, is a state of:", "options": ["Deep relaxation and low arousal", "Complete absorption in a challenging activity", "Social connection and belonging", "Mindless routine tasks"], "answer": "Complete absorption in a challenging activity", "explanation": "Flow is the optimal experience of deep, effortless concentration when skill level matches task challenge.", "points": 1 },
-    { "moduleOrder": 5, "order": 4, "question": "Research on gratitude interventions has shown they most consistently improve:", "options": ["IQ scores", "Subjective well-being and positive affect", "Academic grades", "Physical health only"], "answer": "Subjective well-being and positive affect", "explanation": "Gratitude interventions reliably increase positive emotions, life satisfaction, and overall subjective well-being.", "points": 1 },
-    { "moduleOrder": 5, "order": 5, "question": "Character strengths in positive psychology are best defined as:", "options": ["Skills learned through formal education", "Positive traits that contribute to individual and collective flourishing", "Innate talents determined by genetics", "Personality disorders on a continuum"], "answer": "Positive traits that contribute to individual and collective flourishing", "explanation": "Peterson and Seligman's VIA classification identifies 24 character strengths as core positive traits that enable well-being.", "points": 1 },
-
-    { "moduleOrder": 6, "order": 1, "question": "Industrial-Organizational (I-O) psychology applies psychological principles to:", "options": ["Clinical settings and hospitals", "Workplace behavior, performance, and organizational design", "Criminal justice and law", "Educational curriculum development"], "answer": "Workplace behavior, performance, and organizational design", "explanation": "I-O psychology improves worker productivity, job satisfaction, and organizational effectiveness.", "points": 1 },
-    { "moduleOrder": 6, "order": 2, "question": "A forensic psychologist is most likely to:", "options": ["Treat patients in a hospital setting", "Provide psychological expertise within the legal system", "Conduct basic neuroscience research", "Design school counseling programs"], "answer": "Provide psychological expertise within the legal system", "explanation": "Forensic psychologists apply psychological science to legal issues such as competency evaluations and criminal profiling.", "points": 1 },
-    { "moduleOrder": 6, "order": 3, "question": "To become a licensed clinical psychologist in the US, the minimum degree required is typically a:", "options": ["Bachelor's degree", "Master's degree", "Doctoral degree (Ph.D. or Psy.D.)", "Medical degree (M.D.)"], "answer": "Doctoral degree (Ph.D. or Psy.D.)", "explanation": "Licensure as a clinical psychologist in the US requires a doctoral degree plus supervised clinical hours and a licensing exam.", "points": 1 },
-    { "moduleOrder": 6, "order": 4, "question": "Health psychology focuses on:", "options": ["Mental illness treatment", "The relationship between psychological factors and physical health", "Sports performance enhancement", "Educational assessment"], "answer": "The relationship between psychological factors and physical health", "explanation": "Health psychology examines how behavior, cognition, and emotion influence physical health and illness prevention.", "points": 1 },
-    { "moduleOrder": 6, "order": 5, "question": "The American Psychological Association (APA) is best described as:", "options": ["A government mental health agency", "The principal professional organization for psychologists in the United States", "A pharmaceutical regulatory body", "An international mental health charity"], "answer": "The principal professional organization for psychologists in the United States", "explanation": "The APA is the largest professional association for psychologists in the US, setting ethical standards and publication guidelines.", "points": 1 },
-
-    { "moduleOrder": 7, "order": 1, "question": "Internal validity in an experiment refers to:", "options": ["How well results generalize to the real world", "Whether the study measures what it intends to measure", "The degree to which changes in the IV caused changes in the DV", "The reliability of measurement tools"], "answer": "The degree to which changes in the IV caused changes in the DV", "explanation": "Internal validity ensures that observed effects are due to the independent variable, not confounding factors.", "points": 1 },
-    { "moduleOrder": 7, "order": 2, "question": "A double-blind study controls for:", "options": ["Sampling bias", "Demand characteristics and experimenter bias", "Ceiling and floor effects", "Regression to the mean"], "answer": "Demand characteristics and experimenter bias", "explanation": "Double-blind designs prevent both participants and experimenters from knowing group assignments, controlling their biases.", "points": 1 },
-    { "moduleOrder": 7, "order": 3, "question": "Random assignment in an experiment serves the purpose of:", "options": ["Ensuring a representative sample from the population", "Equating groups on known and unknown confounding variables", "Increasing external validity", "Reducing participant dropout"], "answer": "Equating groups on known and unknown confounding variables", "explanation": "Random assignment distributes participant characteristics equally across conditions, controlling for confounds.", "points": 1 },
-    { "moduleOrder": 7, "order": 4, "question": "Institutional Review Boards (IRBs) exist to:", "options": ["Evaluate the scientific merit of studies", "Protect human participants from harm and rights violations", "Fund psychological research", "Publish peer-reviewed articles"], "answer": "Protect human participants from harm and rights violations", "explanation": "IRBs review research proposals to ensure ethical treatment of participants including informed consent and minimal risk.", "points": 1 },
-    { "moduleOrder": 7, "order": 5, "question": "Longitudinal research designs are most useful for studying:", "options": ["Differences between cultural groups at one time point", "Changes within individuals over time", "Cause-effect relationships via manipulation", "Population-level prevalence of disorders"], "answer": "Changes within individuals over time", "explanation": "Longitudinal designs follow the same participants over extended periods, revealing developmental and change patterns.", "points": 1 },
-
-    { "moduleOrder": 8, "order": 1, "question": "A peer-reviewed journal article has been:", "options": ["Written by a graduate student", "Evaluated by independent experts in the field before publication", "Published without any editing process", "Approved by a government agency"], "answer": "Evaluated by independent experts in the field before publication", "explanation": "Peer review is the process where independent experts evaluate a study's methodology and conclusions before publication.", "points": 1 },
-    { "moduleOrder": 8, "order": 2, "question": "Which database is specifically designed for searching psychology and behavioral science literature?", "options": ["PubMed", "ERIC", "PsycINFO", "Web of Science"], "answer": "PsycINFO", "explanation": "PsycINFO is the APA's comprehensive database of psychology and behavioral science literature.", "points": 1 },
-    { "moduleOrder": 8, "order": 3, "question": "A literature review in a research paper serves to:", "options": ["Present the researcher's raw data", "Summarize and synthesize existing research relevant to the study topic", "Describe the participant sample", "List all references alphabetically"], "answer": "Summarize and synthesize existing research relevant to the study topic", "explanation": "A literature review contextualizes a study within existing knowledge and identifies the research gap being addressed.", "points": 1 },
-    { "moduleOrder": 8, "order": 4, "question": "Effect size in a research study indicates:", "options": ["Whether the result is statistically significant", "The practical magnitude of the relationship or difference", "The number of participants", "The probability the result is due to chance"], "answer": "The practical magnitude of the relationship or difference", "explanation": "Effect size (e.g., Cohen's d) quantifies the practical significance of a finding, independent of sample size.", "points": 1 },
-    { "moduleOrder": 8, "order": 5, "question": "A systematic review differs from a narrative review in that it:", "options": ["Covers fewer studies", "Uses predetermined criteria to search and evaluate all relevant studies", "Focuses on qualitative research only", "Is written by a single author"], "answer": "Uses predetermined criteria to search and evaluate all relevant studies", "explanation": "Systematic reviews follow explicit, reproducible protocols to identify and evaluate all eligible studies on a question.", "points": 1 },
-
-    { "moduleOrder": 9, "order": 1, "question": "In APA 7th edition, the running head is:", "options": ["Required on all pages", "Required only in manuscripts submitted for publication", "Never used", "Required only on the title page"], "answer": "Required only in manuscripts submitted for publication", "explanation": "APA 7th edition eliminated the running head requirement for student papers; it is only required for publication submissions.", "points": 1 },
-    { "moduleOrder": 9, "order": 2, "question": "An APA 7th edition in-text citation for a work with two authors uses:", "options": ["The ampersand (&) in all cases", "The word 'and' in narrative citations, & in parenthetical citations", "The word 'and' only", "The ampersand (&) only in parenthetical citations inside parentheses"], "answer": "The word 'and' in narrative citations, & in parenthetical citations", "explanation": "APA 7 uses 'and' in narrative citations (Smith and Jones, 2021) and '&' inside parentheses (Smith & Jones, 2021).", "points": 1 },
-    { "moduleOrder": 9, "order": 3, "question": "For a journal article with three or more authors, APA 7th edition in-text citations use:", "options": ["All author last names each time", "First author et al. from the first citation", "First two authors then et al.", "All authors in the reference list only"], "answer": "First author et al. from the first citation", "explanation": "APA 7th edition uses 'First Author et al.' from the very first citation when a work has three or more authors.", "points": 1 },
-    { "moduleOrder": 9, "order": 4, "question": "An abstract in APA format should be:", "options": ["At least 500 words", "150–250 words on a separate page", "A bulleted list of key findings", "Included only in doctoral dissertations"], "answer": "150–250 words on a separate page", "explanation": "APA abstracts are concise summaries of 150–250 words placed on a separate page after the title page.", "points": 1 },
-    { "moduleOrder": 9, "order": 5, "question": "The reference list in APA format is organized:", "options": ["By topic area", "By date of publication", "Alphabetically by the first author's last name", "Numerically by order of citation"], "answer": "Alphabetically by the first author's last name", "explanation": "APA reference lists are arranged alphabetically by the first author's last name and then by year for same-author entries.", "points": 1 },
-
-    { "moduleOrder": 10, "order": 1, "question": "A Likert scale typically asks participants to rate their agreement on a scale from:", "options": ["0 to 100", "1 (strongly disagree) to 5 or 7 (strongly agree)", "Yes or No only", "A to F"], "answer": "1 (strongly disagree) to 5 or 7 (strongly agree)", "explanation": "Likert scales measure attitudes/opinions on an ordered response format, typically 5 or 7 points.", "points": 1 },
-    { "moduleOrder": 10, "order": 2, "question": "Test-retest reliability refers to:", "options": ["Whether two different tests measure the same construct", "The consistency of a measure across time", "Whether a test is free from cultural bias", "The accuracy of a test compared to a gold standard"], "answer": "The consistency of a measure across time", "explanation": "Test-retest reliability is established by administering the same test twice and correlating the scores.", "points": 1 },
-    { "moduleOrder": 10, "order": 3, "question": "Social desirability bias in self-report surveys occurs when respondents:", "options": ["Forget to complete certain questions", "Answer to present themselves favorably rather than truthfully", "Misread the questions", "Complete the survey too quickly"], "answer": "Answer to present themselves favorably rather than truthfully", "explanation": "Social desirability bias inflates positive self-reports because people want to appear favorable to researchers.", "points": 1 },
-    { "moduleOrder": 10, "order": 4, "question": "Operational definition in research refers to:", "options": ["The theoretical meaning of a construct", "The specific procedure used to measure or manipulate a variable", "The statistical test selected for analysis", "The sample recruitment strategy"], "answer": "The specific procedure used to measure or manipulate a variable", "explanation": "Operational definitions specify exactly how abstract variables are measured or manipulated in a study.", "points": 1 },
-    { "moduleOrder": 10, "order": 5, "question": "Construct validity refers to whether a test:", "options": ["Produces consistent results over time", "Actually measures the theoretical construct it claims to measure", "Is free from cultural bias", "Can predict future performance"], "answer": "Actually measures the theoretical construct it claims to measure", "explanation": "Construct validity is the degree to which a measurement tool accurately captures the theoretical concept it is designed to assess.", "points": 1 },
-
-    { "moduleOrder": 11, "order": 1, "question": "A statistically significant result (p < .05) means:", "options": ["The effect is large and important", "There is less than a 5% probability the result is due to chance", "The hypothesis is proven true", "The sample was representative"], "answer": "There is less than a 5% probability the result is due to chance", "explanation": "p < .05 indicates a less than 5% probability that the observed result would occur if the null hypothesis were true.", "points": 1 },
-    { "moduleOrder": 11, "order": 2, "question": "Cohen's d is used to measure:", "options": ["Statistical significance", "The correlation between two variables", "Effect size for differences between means", "Sample size requirements"], "answer": "Effect size for differences between means", "explanation": "Cohen's d expresses the standardized difference between two means, indicating practical significance.", "points": 1 },
-    { "moduleOrder": 11, "order": 3, "question": "A positive correlation between two variables means:", "options": ["One variable causes the other to increase", "As one variable increases, the other tends to increase as well", "The two variables are unrelated", "As one increases, the other decreases"], "answer": "As one variable increases, the other tends to increase as well", "explanation": "A positive correlation indicates a direct relationship — both variables move in the same direction.", "points": 1 },
-    { "moduleOrder": 11, "order": 4, "question": "A confidence interval of 95% means we are 95% confident that:", "options": ["The true population parameter falls within the interval", "95% of scores fall within the interval", "The sample is 95% representative", "The study will replicate 95% of the time"], "answer": "The true population parameter falls within the interval", "explanation": "A 95% CI means that if the study were repeated many times, 95% of intervals would contain the true population value.", "points": 1 },
-    { "moduleOrder": 11, "order": 5, "question": "Standard deviation measures:", "options": ["The most common score in a dataset", "The middle value in a dataset", "The spread or variability of scores around the mean", "The difference between highest and lowest scores"], "answer": "The spread or variability of scores around the mean", "explanation": "Standard deviation quantifies how much individual scores deviate from the mean, indicating data variability.", "points": 1 },
-
-    { "moduleOrder": 12, "order": 1, "question": "The case study of Phineas Gage contributed to understanding of:", "options": ["Memory systems", "The role of the frontal lobe in personality and behavior", "Language acquisition", "Sleep and dreaming"], "answer": "The role of the frontal lobe in personality and behavior", "explanation": "Gage's personality change after frontal lobe damage demonstrated the role of the frontal lobe in behavior regulation.", "points": 1 },
-    { "moduleOrder": 12, "order": 2, "question": "Patient H.M., studied after brain surgery, demonstrated that the hippocampus is critical for:", "options": ["Procedural memory", "Forming new explicit long-term memories", "Language production", "Emotional regulation"], "answer": "Forming new explicit long-term memories", "explanation": "H.M.'s inability to form new declarative memories after hippocampal removal established the hippocampus's role in memory.", "points": 1 },
-    { "moduleOrder": 12, "order": 3, "question": "A key limitation of the case study method is:", "options": ["It provides no useful data", "Results from a single individual may not generalize to others", "It is unethical by definition", "It requires large sample sizes"], "answer": "Results from a single individual may not generalize to others", "explanation": "Case studies provide rich detail about individuals but have limited generalizability to broader populations.", "points": 1 },
-    { "moduleOrder": 12, "order": 4, "question": "The case of Genie (the feral child) provided evidence for:", "options": ["The role of rewards in language learning", "A critical period for language acquisition", "The importance of IQ in learning", "Operant conditioning in social development"], "answer": "A critical period for language acquisition", "explanation": "Genie's failure to acquire full language after her discovery at age 13 supported the critical period hypothesis for language.", "points": 1 },
-    { "moduleOrder": 12, "order": 5, "question": "Triangulation in qualitative research means:", "options": ["Using three participants minimum", "Using multiple data sources or methods to strengthen conclusions", "Conducting research in three countries", "Having three independent coders"], "answer": "Using multiple data sources or methods to strengthen conclusions", "explanation": "Triangulation improves validity by corroborating findings across multiple methods, data sources, or researchers.", "points": 1 },
-
-    { "moduleOrder": 13, "order": 1, "question": "An APA research poster typically includes:", "options": ["Full manuscript text", "Introduction, methods, results, and conclusions in visual panels", "Only graphs and tables", "Abstract and discussion only"], "answer": "Introduction, methods, results, and conclusions in visual panels", "explanation": "Research posters present a study's key sections visually — introduction, methods, results, and discussion — for conference display.", "points": 1 },
-    { "moduleOrder": 13, "order": 2, "question": "The 'so what?' question in a research presentation refers to:", "options": ["Statistical significance", "The practical and theoretical implications of the findings", "Sample size justification", "The research design chosen"], "answer": "The practical and theoretical implications of the findings", "explanation": "Researchers must articulate why their findings matter — the real-world or scientific significance of their results.", "points": 1 },
-    { "moduleOrder": 13, "order": 3, "question": "When presenting research findings, limitations should be:", "options": ["Hidden to strengthen the argument", "Acknowledged honestly and contextualized", "Listed in the introduction", "Avoided entirely in oral presentations"], "answer": "Acknowledged honestly and contextualized", "explanation": "Ethical and credible research presentation includes transparently acknowledging methodological limitations.", "points": 1 },
-    { "moduleOrder": 13, "order": 4, "question": "Visual aids in a research presentation are most effective when they:", "options": ["Contain all the text from the paper", "Simplify complex data into clear, labeled graphics", "Use multiple competing color schemes", "Replace the verbal explanation entirely"], "answer": "Simplify complex data into clear, labeled graphics", "explanation": "Effective visual aids distill complex information into clear visuals that complement and enhance verbal explanation.", "points": 1 },
-    { "moduleOrder": 13, "order": 5, "question": "Which section of a research paper explains what the findings mean and how they relate to prior research?", "options": ["Abstract", "Methods", "Results", "Discussion"], "answer": "Discussion", "explanation": "The discussion interprets findings, connects them to prior literature, notes limitations, and suggests future research.", "points": 1 },
-
-    { "moduleOrder": 14, "order": 1, "question": "A capstone project in psychology is designed primarily to:", "options": ["Repeat previous course assignments", "Demonstrate independent research and synthesis of psychological knowledge", "Replace final exams", "Test memorization of key terms"], "answer": "Demonstrate independent research and synthesis of psychological knowledge", "explanation": "Capstone projects integrate knowledge across a program through original research or applied projects.", "points": 1 },
-    { "moduleOrder": 14, "order": 2, "question": "Reflective practice in psychology education involves:", "options": ["Memorizing theory without application", "Critically examining one's own learning, assumptions, and development", "Summarizing textbook chapters", "Peer grading of classmates' assignments"], "answer": "Critically examining one's own learning, assumptions, and development", "explanation": "Reflective practice requires metacognitive examination of one's own thinking processes, growth, and areas for improvement.", "points": 1 },
-    { "moduleOrder": 14, "order": 3, "question": "Future directions in a research paper should:", "options": ["Criticize prior researchers", "Propose specific questions or studies that logically follow from the findings", "Repeat the research question", "Summarize the methods section"], "answer": "Propose specific questions or studies that logically follow from the findings", "explanation": "Future directions extend the research by identifying new questions and suggesting specific studies to build on current findings.", "points": 1 },
-    { "moduleOrder": 14, "order": 4, "question": "Academic integrity in research requires:", "options": ["Citing only sources the professor has read", "Honest representation of data and proper attribution of all ideas", "Changing data that contradicts your hypothesis", "Submitting the same paper for multiple classes without disclosure"], "answer": "Honest representation of data and proper attribution of all ideas", "explanation": "Academic integrity demands honest data reporting, complete source attribution, and avoidance of fabrication, falsification, or plagiarism.", "points": 1 },
-    { "moduleOrder": 14, "order": 5, "question": "A growth mindset, as defined by Dweck, is the belief that:", "options": ["Intelligence and abilities are fixed at birth", "Effort and learning can develop intelligence and abilities over time", "Talent alone determines success", "Failure should be avoided at all costs"], "answer": "Effort and learning can develop intelligence and abilities over time", "explanation": "Dweck's growth mindset is the belief that abilities are malleable and can be developed through dedication and effort.", "points": 1 }
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "Which perspective in psychology emphasizes observable behavior and environmental influences?",
+      "options": [
+        "Humanistic",
+        "Psychodynamic",
+        "Behaviorism",
+        "Cognitive"
+      ],
+      "answer": "Behaviorism",
+      "explanation": "Behaviorism, pioneered by Watson and Skinner, focuses on observable behavior shaped by the environment.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "The Little Albert experiment demonstrated which psychological principle?",
+      "options": [
+        "Operant conditioning",
+        "Classical conditioning of fear",
+        "Observational learning",
+        "Extinction"
+      ],
+      "answer": "Classical conditioning of fear",
+      "explanation": "Watson and Rayner conditioned fear of a white rat in Little Albert by pairing it with a loud noise.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "True or False: The answer to \"Which perspective in psychology emphasizes observable behavior and environmental influences\" is: Behaviorism.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Behaviorism is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Neuroplasticity refers to the brain's ability to:",
+      "options": [
+        "Generate new neurons only in infancy",
+        "Reorganize itself by forming new neural connections throughout life",
+        "Maintain fixed structure after development",
+        "Resist changes due to injury"
+      ],
+      "answer": "Reorganize itself by forming new neural connections throughout life",
+      "explanation": "Neuroplasticity is the brain's lifelong capacity to reorganize by forming and pruning synaptic connections.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "fMRI measures brain activity by detecting changes in:",
+      "options": [
+        "Electrical voltage",
+        "Blood oxygenation levels",
+        "Neurotransmitter concentrations",
+        "Skull thickness"
+      ],
+      "answer": "Blood oxygenation levels",
+      "explanation": "fMRI detects the BOLD signal — blood oxygenation-level-dependent changes — as a proxy for neural activity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Which brain structure plays the central role in forming new explicit memories?",
+      "options": [
+        "Amygdala",
+        "Cerebellum",
+        "Hippocampus",
+        "Thalamus"
+      ],
+      "answer": "Hippocampus",
+      "explanation": "The hippocampus is critical for encoding and consolidating new explicit (declarative) memories.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "True or False: The answer to \"Neuroplasticity refers to the brain's ability to:\" is: Reorganize itself by forming new neural connections throughout life.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Reorganize itself by forming new neural connections throughout life is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The replication crisis refers to the finding that many published psychology studies:",
+      "options": [
+        "Used too-large sample sizes",
+        "Cannot be reproduced by independent researchers",
+        "Were conducted outside the US",
+        "Focused too narrowly on animal research"
+      ],
+      "answer": "Cannot be reproduced by independent researchers",
+      "explanation": "The replication crisis highlights that a substantial proportion of published psychology findings fail to replicate when re-tested.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Epigenetics studies how:",
+      "options": [
+        "Genes mutate over time",
+        "Environmental factors influence gene expression without changing DNA sequence",
+        "Natural selection operates on behavior",
+        "Neurons communicate via chemicals"
+      ],
+      "answer": "Environmental factors influence gene expression without changing DNA sequence",
+      "explanation": "Epigenetics examines heritable changes in gene expression caused by environmental experiences, not alterations to the DNA sequence itself.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Open science practices in psychology include:",
+      "options": [
+        "Keeping data confidential to prevent bias",
+        "Pre-registering studies and sharing raw data publicly",
+        "Publishing only positive results",
+        "Limiting replication studies"
+      ],
+      "answer": "Pre-registering studies and sharing raw data publicly",
+      "explanation": "Open science promotes transparency through pre-registration, data sharing, and open access publication to improve reproducibility.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "The WEIRD acronym in cross-cultural psychology stands for populations that are:",
+      "options": [
+        "Western, Educated, Industrialized, Rich, Democratic",
+        "White, English-speaking, Independent, Rational, Developed",
+        "Western, Experimental, Intellectual, Reasoning, Democratic",
+        "Wealthy, European, Individualist, Religious, Diverse"
+      ],
+      "answer": "Western, Educated, Industrialized, Rich, Democratic",
+      "explanation": "WEIRD critiques the overrepresentation of Western, Educated, Industrialized, Rich, Democratic samples in psychology research.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Collectivist cultures are most likely to emphasize:",
+      "options": [
+        "Personal achievement and individual rights",
+        "Group harmony, family obligations, and interdependence",
+        "Competition and self-promotion",
+        "Emotional expressiveness in public"
+      ],
+      "answer": "Group harmony, family obligations, and interdependence",
+      "explanation": "Collectivist cultures (e.g., East Asian) prioritize group cohesion, interdependence, and social obligations over individual goals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "The Müller-Lyer illusion affects people from non-Western cultures:",
+      "options": [
+        "More strongly than Westerners",
+        "About the same as Westerners",
+        "Less than Westerners",
+        "Not at all"
+      ],
+      "answer": "Less than Westerners",
+      "explanation": "Cross-cultural research shows the Müller-Lyer illusion is weaker in cultures without carpentered environments, supporting cultural influences on perception.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Emic research approaches study behavior:",
+      "options": [
+        "Using universal categories across cultures",
+        "From within a specific culture using its own standards",
+        "Comparing exactly two cultures",
+        "Using only Western psychological tests"
+      ],
+      "answer": "From within a specific culture using its own standards",
+      "explanation": "Emic approaches use culture-specific frameworks to understand behavior from within, versus etic (universal) approaches.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Seligman's PERMA model of well-being includes Positive emotions, Engagement, Relationships, Meaning, and:",
+      "options": [
+        "Money",
+        "Achievement",
+        "Autonomy",
+        "Recognition"
+      ],
+      "answer": "Achievement",
+      "explanation": "Seligman's PERMA model identifies five pillars of well-being: Positive emotions, Engagement, Relationships, Meaning, and Achievement.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "The hedonic adaptation principle explains why:",
+      "options": [
+        "People quickly return to a baseline level of happiness after positive events",
+        "Negative events always lower well-being permanently",
+        "Wealth reliably increases happiness long-term",
+        "Meditation has no lasting benefit"
+      ],
+      "answer": "People quickly return to a baseline level of happiness after positive events",
+      "explanation": "Hedonic adaptation (the hedonic treadmill) shows people adapt to changes and return to a stable happiness set point.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "True or False: The answer to \"Seligman's PERMA model of well-being includes Positive emotions, Engagement, Relationships, Meaning, and:\" is: Achievement.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Achievement is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "True or False: The answer to \"The hedonic adaptation principle explains why:\" is: Negative events always lower well-being permanently.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: People quickly return to a baseline level of happiness after positive events.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Industrial-Organizational (I-O) psychology applies psychological principles to:",
+      "options": [
+        "Clinical settings and hospitals",
+        "Workplace behavior, performance, and organizational design",
+        "Criminal justice and law",
+        "Educational curriculum development"
+      ],
+      "answer": "Workplace behavior, performance, and organizational design",
+      "explanation": "I-O psychology improves worker productivity, job satisfaction, and organizational effectiveness.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "A forensic psychologist is most likely to:",
+      "options": [
+        "Treat patients in a hospital setting",
+        "Provide psychological expertise within the legal system",
+        "Conduct basic neuroscience research",
+        "Design school counseling programs"
+      ],
+      "answer": "Provide psychological expertise within the legal system",
+      "explanation": "Forensic psychologists apply psychological science to legal issues such as competency evaluations and criminal profiling.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "To become a licensed clinical psychologist in the US, the minimum degree required is typically a:",
+      "options": [
+        "Bachelor's degree",
+        "Master's degree",
+        "Doctoral degree (Ph.D. or Psy.D.)",
+        "Medical degree (M.D.)"
+      ],
+      "answer": "Doctoral degree (Ph.D. or Psy.D.)",
+      "explanation": "Licensure as a clinical psychologist in the US requires a doctoral degree plus supervised clinical hours and a licensing exam.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "True or False: The answer to \"Industrial-Organizational (I-O) psychology applies psychological principles to:\" is: Workplace behavior, performance, and organizational design.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Workplace behavior, performance, and organizational design is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Internal validity in an experiment refers to:",
+      "options": [
+        "How well results generalize to the real world",
+        "Whether the study measures what it intends to measure",
+        "The degree to which changes in the IV caused changes in the DV",
+        "The reliability of measurement tools"
+      ],
+      "answer": "The degree to which changes in the IV caused changes in the DV",
+      "explanation": "Internal validity ensures that observed effects are due to the independent variable, not confounding factors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "A double-blind study controls for:",
+      "options": [
+        "Sampling bias",
+        "Demand characteristics and experimenter bias",
+        "Ceiling and floor effects",
+        "Regression to the mean"
+      ],
+      "answer": "Demand characteristics and experimenter bias",
+      "explanation": "Double-blind designs prevent both participants and experimenters from knowing group assignments, controlling their biases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "True or False: The answer to \"Internal validity in an experiment refers to:\" is: The degree to which changes in the IV caused changes in the DV.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The degree to which changes in the IV caused changes in the DV is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A peer-reviewed journal article has been:",
+      "options": [
+        "Written by a graduate student",
+        "Evaluated by independent experts in the field before publication",
+        "Published without any editing process",
+        "Approved by a government agency"
+      ],
+      "answer": "Evaluated by independent experts in the field before publication",
+      "explanation": "Peer review is the process where independent experts evaluate a study's methodology and conclusions before publication.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Which database is specifically designed for searching psychology and behavioral science literature?",
+      "options": [
+        "PubMed",
+        "ERIC",
+        "PsycINFO",
+        "Web of Science"
+      ],
+      "answer": "PsycINFO",
+      "explanation": "PsycINFO is the APA's comprehensive database of psychology and behavioral science literature.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "A literature review in a research paper serves to:",
+      "options": [
+        "Present the researcher's raw data",
+        "Summarize and synthesize existing research relevant to the study topic",
+        "Describe the participant sample",
+        "List all references alphabetically"
+      ],
+      "answer": "Summarize and synthesize existing research relevant to the study topic",
+      "explanation": "A literature review contextualizes a study within existing knowledge and identifies the research gap being addressed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "True or False: The answer to \"A peer-reviewed journal article has been:\" is: Evaluated by independent experts in the field before publication.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Evaluated by independent experts in the field before publication is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "In APA 7th edition, the running head is:",
+      "options": [
+        "Required on all pages",
+        "Required only in manuscripts submitted for publication",
+        "Never used",
+        "Required only on the title page"
+      ],
+      "answer": "Required only in manuscripts submitted for publication",
+      "explanation": "APA 7th edition eliminated the running head requirement for student papers; it is only required for publication submissions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "An APA 7th edition in-text citation for a work with two authors uses:",
+      "options": [
+        "The ampersand (&) in all cases",
+        "The word 'and' in narrative citations, & in parenthetical citations",
+        "The word 'and' only",
+        "The ampersand (&) only in parenthetical citations inside parentheses"
+      ],
+      "answer": "The word 'and' in narrative citations, & in parenthetical citations",
+      "explanation": "APA 7 uses 'and' in narrative citations (Smith and Jones, 2021) and '&' inside parentheses (Smith & Jones, 2021).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "For a journal article with three or more authors, APA 7th edition in-text citations use:",
+      "options": [
+        "All author last names each time",
+        "First author et al. from the first citation",
+        "First two authors then et al.",
+        "All authors in the reference list only"
+      ],
+      "answer": "First author et al. from the first citation",
+      "explanation": "APA 7th edition uses 'First Author et al.' from the very first citation when a work has three or more authors.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "A Likert scale typically asks participants to rate their agreement on a scale from:",
+      "options": [
+        "0 to 100",
+        "1 (strongly disagree) to 5 or 7 (strongly agree)",
+        "Yes or No only",
+        "A to F"
+      ],
+      "answer": "1 (strongly disagree) to 5 or 7 (strongly agree)",
+      "explanation": "Likert scales measure attitudes/opinions on an ordered response format, typically 5 or 7 points.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Test-retest reliability refers to:",
+      "options": [
+        "Whether two different tests measure the same construct",
+        "The consistency of a measure across time",
+        "Whether a test is free from cultural bias",
+        "The accuracy of a test compared to a gold standard"
+      ],
+      "answer": "The consistency of a measure across time",
+      "explanation": "Test-retest reliability is established by administering the same test twice and correlating the scores.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Social desirability bias in self-report surveys occurs when respondents:",
+      "options": [
+        "Forget to complete certain questions",
+        "Answer to present themselves favorably rather than truthfully",
+        "Misread the questions",
+        "Complete the survey too quickly"
+      ],
+      "answer": "Answer to present themselves favorably rather than truthfully",
+      "explanation": "Social desirability bias inflates positive self-reports because people want to appear favorable to researchers.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "Operational definition in research refers to:",
+      "options": [
+        "The theoretical meaning of a construct",
+        "The specific procedure used to measure or manipulate a variable",
+        "The statistical test selected for analysis",
+        "The sample recruitment strategy"
+      ],
+      "answer": "The specific procedure used to measure or manipulate a variable",
+      "explanation": "Operational definitions specify exactly how abstract variables are measured or manipulated in a study.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "A statistically significant result (p < .05) means:",
+      "options": [
+        "The effect is large and important",
+        "There is less than a 5% probability the result is due to chance",
+        "The hypothesis is proven true",
+        "The sample was representative"
+      ],
+      "answer": "There is less than a 5% probability the result is due to chance",
+      "explanation": "p < .05 indicates a less than 5% probability that the observed result would occur if the null hypothesis were true.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "Cohen's d is used to measure:",
+      "options": [
+        "Statistical significance",
+        "The correlation between two variables",
+        "Effect size for differences between means",
+        "Sample size requirements"
+      ],
+      "answer": "Effect size for differences between means",
+      "explanation": "Cohen's d expresses the standardized difference between two means, indicating practical significance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "True or False: The answer to \"A statistically significant result (p < .05) means:\" is: There is less than a 5% probability the result is due to chance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. There is less than a 5% probability the result is due to chance is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "True or False: The answer to \"Cohen's d is used to measure:\" is: Statistical significance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Effect size for differences between means.",
+      "points": 1
+    }
   ],
   "questions": [
-    { "examType": "midterm", "order": 1, "type": "mc", "question": "Which of the following is the best example of a falsifiable psychological hypothesis?", "options": ["People have free will", "Students who sleep 8 hours will score higher on memory tests than those who sleep 4 hours", "Consciousness is a mystery", "All behavior has a cause"], "answer": "Students who sleep 8 hours will score higher on memory tests than those who sleep 4 hours", "explanation": "A falsifiable hypothesis makes a specific, testable prediction that could be proven wrong by empirical data.", "points": 1 },
-    { "examType": "midterm", "order": 2, "type": "mc", "question": "The replication crisis in psychology has led researchers to prioritize:", "options": ["Larger effect sizes without replication", "Open science practices and pre-registration", "Smaller sample sizes to reduce cost", "Single-study conclusions"], "answer": "Open science practices and pre-registration", "explanation": "In response to replication failures, the field has adopted open science norms including pre-registration and data transparency.", "points": 1 },
-    { "examType": "midterm", "order": 3, "type": "mc", "question": "Long-term potentiation is considered a cellular mechanism underlying:", "options": ["Emotional regulation", "Synaptic learning and memory formation", "Hormonal fluctuations", "Sensory adaptation"], "answer": "Synaptic learning and memory formation", "explanation": "LTP strengthens synaptic connections with repeated activation, providing a cellular basis for learning and memory.", "points": 1 },
-    { "examType": "midterm", "order": 4, "type": "mc", "question": "Collectivist cultures, compared to individualist cultures, tend to show:", "options": ["Higher rates of self-serving bias", "Greater conformity and in-group cooperation", "More self-enhancement in self-description", "Less concern for family obligations"], "answer": "Greater conformity and in-group cooperation", "explanation": "Research consistently finds greater conformity, harmony-seeking, and in-group cooperation in collectivist cultural contexts.", "points": 1 },
-    { "examType": "midterm", "order": 5, "type": "mc", "question": "Seligman's concept of 'learned helplessness' was later transformed into research on:", "options": ["Behavioral conditioning", "Positive psychology and resilience", "Cognitive load theory", "Attachment theory"], "answer": "Positive psychology and resilience", "explanation": "Seligman moved from studying learned helplessness to founding positive psychology, focusing on strengths and flourishing.", "points": 1 },
-    { "examType": "midterm", "order": 6, "type": "mc", "question": "Which of the following is NOT a career in applied psychology?", "options": ["Forensic psychologist", "School psychologist", "Astrophysicist", "Industrial-organizational psychologist"], "answer": "Astrophysicist", "explanation": "Astrophysics is a physical science unrelated to psychology; forensic, school, and I-O are all applied psychology careers.", "points": 1 },
-    { "examType": "midterm", "order": 7, "type": "mc", "question": "External validity in research refers to:", "options": ["Control of confounding variables", "The ability to generalize findings to other populations and settings", "The accuracy of the measuring instrument", "Internal consistency of a scale"], "answer": "The ability to generalize findings to other populations and settings", "explanation": "External validity concerns how well study results apply beyond the specific study conditions to the real world.", "points": 1 },
-    { "examType": "midterm", "order": 8, "type": "mc", "question": "A literature review should ideally be organized:", "options": ["Chronologically only", "Thematically or by argument, synthesizing studies rather than just summarizing them", "Alphabetically by author name", "Randomly as sources are found"], "answer": "Thematically or by argument, synthesizing studies rather than just summarizing them", "explanation": "Effective literature reviews organize sources thematically to build an argument, not just list individual study summaries.", "points": 1 },
-    { "examType": "midterm", "order": 9, "type": "mc", "question": "APA 7th edition requires that student papers include:", "options": ["A running head on every page", "Author affiliation, course number, and instructor name", "A structured abstract minimum 500 words", "A separate appendix for all citations"], "answer": "Author affiliation, course number, and instructor name", "explanation": "APA 7th edition student paper title pages require student name, affiliation, course, instructor, and date.", "points": 1 },
-    { "examType": "midterm", "order": 10, "type": "mc", "question": "Social desirability bias is best minimized by:", "options": ["Larger sample sizes", "Anonymous responding and behaviorally anchored questions", "In-person administration only", "Using open-ended questions exclusively"], "answer": "Anonymous responding and behaviorally anchored questions", "explanation": "Anonymity reduces self-presentation concerns; behaviorally anchored questions ask about specific actions rather than attitudes.", "points": 1 },
-    { "examType": "midterm", "order": 11, "type": "mc", "question": "A p-value of .03 means:", "options": ["There is a 3% chance the hypothesis is true", "There is a 3% chance the result occurred by chance if the null is true", "The effect size is large", "The study replicated 97% of previous findings"], "answer": "There is a 3% chance the result occurred by chance if the null is true", "explanation": "The p-value is the probability of obtaining results at least as extreme as observed, assuming the null hypothesis is true.", "points": 1 },
-    { "examType": "midterm", "order": 12, "type": "mc", "question": "Patient H.M.'s case study was significant primarily because it demonstrated:", "options": ["Language is housed in the left hemisphere", "The hippocampus is essential for new explicit memory formation", "The amygdala controls fear responses", "Sleep is required for memory consolidation"], "answer": "The hippocampus is essential for new explicit memory formation", "explanation": "H.M.'s anterograde amnesia following hippocampal removal proved the hippocampus is necessary for forming new declarative memories.", "points": 1 },
-    { "examType": "midterm", "order": 13, "type": "mc", "question": "When presenting research, acknowledging limitations is important because:", "options": ["It makes the study appear weaker", "It demonstrates scientific integrity and helps others evaluate the findings accurately", "Journals require at least five limitations listed", "It reduces the need for a discussion section"], "answer": "It demonstrates scientific integrity and helps others evaluate the findings accurately", "explanation": "Transparent reporting of limitations is a hallmark of credible science and allows proper interpretation of results.", "points": 1 },
-    { "examType": "midterm", "order": 14, "type": "mc", "question": "Embodied cognition challenges traditional cognitive science by arguing that:", "options": ["The brain is the sole site of cognition", "Physical body experience is irrelevant to thought", "Cognitive processes are grounded in bodily states and actions", "Language shapes all cognition"], "answer": "Cognitive processes are grounded in bodily states and actions", "explanation": "Embodied cognition holds that thought arises from interactions between brain, body, and environment — not just abstract symbols.", "points": 1 },
-    { "examType": "midterm", "order": 15, "type": "mc", "question": "The Belmont Report established which three core principles for ethical research with human participants?", "options": ["Consent, privacy, and funding transparency", "Respect for persons, beneficence, and justice", "Validity, reliability, and generalizability", "Autonomy, efficacy, and disclosure"], "answer": "Respect for persons, beneficence, and justice", "explanation": "The Belmont Report (1979) established three ethical principles: respect for persons (autonomy), beneficence (do good/no harm), and justice (fair participant selection).", "points": 1 },
-
-    { "examType": "final", "order": 1, "type": "mc", "question": "Which approach to psychology emphasizes testing hypotheses with controlled, observable, and measurable data?", "options": ["Psychodynamic", "Scientific empiricism", "Introspection", "Narrative therapy"], "answer": "Scientific empiricism", "explanation": "Scientific empiricism is the foundation of modern psychology — knowledge comes from systematic, observable, testable evidence.", "points": 1 },
-    { "examType": "final", "order": 2, "type": "mc", "question": "Neurogenesis in adults primarily occurs in which brain structure?", "options": ["Prefrontal cortex", "Cerebellum", "Hippocampus", "Corpus callosum"], "answer": "Hippocampus", "explanation": "Adult neurogenesis (new neuron production) is most documented in the hippocampal dentate gyrus, related to memory and stress.", "points": 1 },
-    { "examType": "final", "order": 3, "type": "mc", "question": "The WEIRD problem in psychology research refers to the risk of:", "options": ["Overly complex statistical models", "Generalizing findings from narrow Western samples to all humanity", "Using too many dependent variables", "Recruiting too many participants"], "answer": "Generalizing findings from narrow Western samples to all humanity", "explanation": "WEIRD critiques over-reliance on Western, educated, industrialized, rich, democratic samples as the basis for universal claims.", "points": 1 },
-    { "examType": "final", "order": 4, "type": "mc", "question": "Broaden-and-build theory (Fredrickson) proposes that positive emotions:", "options": ["Narrow attention to immediate threats", "Broaden awareness and build lasting personal resources", "Have no lasting behavioral effects", "Are less adaptive than negative emotions"], "answer": "Broaden awareness and build lasting personal resources", "explanation": "Fredrickson's broaden-and-build theory holds that positive emotions expand cognitive repertoire and build durable physical, social, and intellectual resources.", "points": 1 },
-    { "examType": "final", "order": 5, "type": "mc", "question": "I-O psychology's focus on 'personnel psychology' primarily involves:", "options": ["Treating mental illness in employees", "Hiring, training, performance appraisal, and workforce selection", "Conducting clinical assessments", "Designing consumer marketing campaigns"], "answer": "Hiring, training, performance appraisal, and workforce selection", "explanation": "Personnel psychology, a branch of I-O, applies psychological principles to selection, training, and performance management.", "points": 1 },
-    { "examType": "final", "order": 6, "type": "mc", "question": "A confounding variable in an experiment is:", "options": ["The variable being measured", "The variable being manipulated", "An uncontrolled variable that varies with the independent variable", "A participant characteristic selected for study"], "answer": "An uncontrolled variable that varies with the independent variable", "explanation": "Confounds vary systematically with the IV and can produce alternative explanations for the observed effect.", "points": 1 },
-    { "examType": "final", "order": 7, "type": "mc", "question": "Which search term strategy is most effective when using PsycINFO?", "options": ["Using only broad single keywords", "Using Boolean operators (AND, OR, NOT) with specific terms", "Limiting searches to the past 50 years only", "Searching only by author name"], "answer": "Using Boolean operators (AND, OR, NOT) with specific terms", "explanation": "Boolean operators combine search terms precisely, narrowing or expanding results to find the most relevant literature.", "points": 1 },
-    { "examType": "final", "order": 8, "type": "mc", "question": "In APA 7, a DOI is best described as:", "options": ["A database of open-access articles", "A permanent digital identifier linking to a specific article", "An abbreviation for the journal impact factor", "A library catalog number"], "answer": "A permanent digital identifier linking to a specific article", "explanation": "A DOI (Digital Object Identifier) is a permanent alphanumeric string assigned to a document to provide a stable hyperlink.", "points": 1 },
-    { "examType": "final", "order": 9, "type": "mc", "question": "Inter-rater reliability assesses:", "options": ["Consistency of a measure across time", "Agreement between two or more independent raters", "Whether a test measures what it intends to", "Internal consistency of test items"], "answer": "Agreement between two or more independent raters", "explanation": "Inter-rater reliability measures the degree to which two or more observers independently give the same ratings or codings.", "points": 1 },
-    { "examType": "final", "order": 10, "type": "mc", "question": "A correlation coefficient of r = –0.75 indicates:", "options": ["A strong positive relationship", "A weak negative relationship", "A strong negative relationship", "No relationship"], "answer": "A strong negative relationship", "explanation": "r = –0.75 indicates a strong negative correlation — as one variable increases, the other strongly decreases.", "points": 1 },
-    { "examType": "final", "order": 11, "type": "mc", "question": "Phineas Gage's accident demonstrated the importance of the frontal lobe for:", "options": ["Visual processing", "Balance and motor coordination", "Personality and social behavior regulation", "Language comprehension"], "answer": "Personality and social behavior regulation", "explanation": "After frontal lobe damage Gage showed dramatic personality changes including impulsivity and poor social judgment.", "points": 1 },
-    { "examType": "final", "order": 12, "type": "mc", "question": "Triangulation in qualitative research strengthens validity by:", "options": ["Using exactly three participants", "Corroborating findings across multiple methods or data sources", "Requiring three research questions", "Sampling from three geographic regions"], "answer": "Corroborating findings across multiple methods or data sources", "explanation": "Triangulation uses multiple methods, sources, or researchers to verify and strengthen qualitative conclusions.", "points": 1 },
-    { "examType": "final", "order": 13, "type": "mc", "question": "The discussion section of a research paper should NOT:", "options": ["Interpret the findings", "Relate results to existing theory", "Present raw data tables", "Acknowledge limitations"], "answer": "Present raw data tables", "explanation": "Raw data and statistical results are presented in the results section; the discussion interprets and contextualizes them.", "points": 1 },
-    { "examType": "final", "order": 14, "type": "mc", "question": "Academic self-efficacy, as studied in educational psychology, predicts:", "options": ["IQ scores", "Effort, persistence, and achievement in academic tasks", "Introversion levels", "Genetic intelligence"], "answer": "Effort, persistence, and achievement in academic tasks", "explanation": "Students with high academic self-efficacy invest more effort, persist longer, and achieve more, regardless of actual ability level.", "points": 1 },
-    { "examType": "final", "order": 15, "type": "mc", "question": "Dweck's research on growth vs. fixed mindset has implications for education by suggesting:", "options": ["Praising intelligence leads to greater motivation", "Praising effort and process leads to greater resilience and learning", "Ability grouping maximizes student potential", "Grades are the best motivator"], "answer": "Praising effort and process leads to greater resilience and learning", "explanation": "Dweck found that process praise fosters growth mindset, leading students to embrace challenges and persist through setbacks.", "points": 1 },
-    { "examType": "final", "order": 16, "type": "mc", "question": "Which of the following best demonstrates ecological validity?", "options": ["A tightly controlled lab experiment", "A study conducted in a natural, real-world setting", "A study with a very large sample size", "A double-blind randomized trial"], "answer": "A study conducted in a natural, real-world setting", "explanation": "Ecological validity is the degree to which research findings reflect real-world conditions and behavior.", "points": 1 },
-    { "examType": "final", "order": 17, "type": "mc", "question": "Pre-registration of a study means researchers publicly commit to:", "options": ["Publishing results regardless of significance", "Their hypotheses and analysis plan before collecting data", "Sharing their data after 10 years", "Paying participants before the study"], "answer": "Their hypotheses and analysis plan before collecting data", "explanation": "Pre-registration timestamps hypotheses and planned analyses before data collection, preventing HARKing (hypothesizing after results are known).", "points": 1 },
-    { "examType": "final", "order": 18, "type": "mc", "question": "Which positive psychology concept refers to finding deep purpose and direction in one's activities?", "options": ["Hedonism", "Eudaimonia", "Flow", "Gratitude"], "answer": "Eudaimonia", "explanation": "Eudaimonia (Aristotle, used in positive psychology) refers to well-being derived from living meaningfully and fulfilling one's potential.", "points": 1 },
-    { "examType": "final", "order": 19, "type": "mc", "question": "A capstone project demonstrates mastery primarily through:", "options": ["Memorization of course content", "Independent synthesis and application of knowledge to a novel question", "Reproducing a textbook chapter", "Group memorization activities"], "answer": "Independent synthesis and application of knowledge to a novel question", "explanation": "Capstone projects require students to integrate learning from a program and apply it independently to a new, substantive question.", "points": 1 },
-    { "examType": "final", "order": 20, "type": "mc", "question": "Research ethics requires informed consent to include:", "options": ["Detailed data analysis procedures", "The purpose, procedures, risks, benefits, and right to withdraw", "The researcher's personal opinions", "Future publication plans only"], "answer": "The purpose, procedures, risks, benefits, and right to withdraw", "explanation": "Informed consent requires disclosing study purpose, procedures, risks, benefits, confidentiality measures, and the right to withdraw without penalty.", "points": 1 }
-  ]
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "Which of the following is the best example of a falsifiable psychological hypothesis?",
+      "options": [
+        "People have free will",
+        "Students who sleep 8 hours will score higher on memory tests than those who sleep 4 hours",
+        "Consciousness is a mystery",
+        "All behavior has a cause"
+      ],
+      "answer": "Students who sleep 8 hours will score higher on memory tests than those who sleep 4 hours",
+      "explanation": "A falsifiable hypothesis makes a specific, testable prediction that could be proven wrong by empirical data.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "The replication crisis in psychology has led researchers to prioritize:",
+      "options": [
+        "Larger effect sizes without replication",
+        "Open science practices and pre-registration",
+        "Smaller sample sizes to reduce cost",
+        "Single-study conclusions"
+      ],
+      "answer": "Open science practices and pre-registration",
+      "explanation": "In response to replication failures, the field has adopted open science norms including pre-registration and data transparency.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "Long-term potentiation is considered a cellular mechanism underlying:",
+      "options": [
+        "Emotional regulation",
+        "Synaptic learning and memory formation",
+        "Hormonal fluctuations",
+        "Sensory adaptation"
+      ],
+      "answer": "Synaptic learning and memory formation",
+      "explanation": "LTP strengthens synaptic connections with repeated activation, providing a cellular basis for learning and memory.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "tf",
+      "question": "True or False: The answer to \"Collectivist cultures, compared to individualist cultures, tend to show:\" is: Greater conformity and in-group cooperation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Greater conformity and in-group cooperation is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "Seligman's concept of 'learned helplessness' was later transformed into research on:",
+      "options": [
+        "Behavioral conditioning",
+        "Positive psychology and resilience",
+        "Cognitive load theory",
+        "Attachment theory"
+      ],
+      "answer": "Positive psychology and resilience",
+      "explanation": "Seligman moved from studying learned helplessness to founding positive psychology, focusing on strengths and flourishing.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "Which of the following is NOT a career in applied psychology?",
+      "options": [
+        "Forensic psychologist",
+        "School psychologist",
+        "Astrophysicist",
+        "Industrial-organizational psychologist"
+      ],
+      "answer": "Astrophysicist",
+      "explanation": "Astrophysics is a physical science unrelated to psychology; forensic, school, and I-O are all applied psychology careers.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "mc",
+      "question": "External validity in research refers to:",
+      "options": [
+        "Control of confounding variables",
+        "The ability to generalize findings to other populations and settings",
+        "The accuracy of the measuring instrument",
+        "Internal consistency of a scale"
+      ],
+      "answer": "The ability to generalize findings to other populations and settings",
+      "explanation": "External validity concerns how well study results apply beyond the specific study conditions to the real world.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "tf",
+      "question": "True or False: The answer to \"A literature review should ideally be organized:\" is: Chronologically only.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Thematically or by argument, synthesizing studies rather than just summarizing them.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "APA 7th edition requires that student papers include:",
+      "options": [
+        "A running head on every page",
+        "Author affiliation, course number, and instructor name",
+        "A structured abstract minimum 500 words",
+        "A separate appendix for all citations"
+      ],
+      "answer": "Author affiliation, course number, and instructor name",
+      "explanation": "APA 7th edition student paper title pages require student name, affiliation, course, instructor, and date.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "Social desirability bias is best minimized by:",
+      "options": [
+        "Larger sample sizes",
+        "Anonymous responding and behaviorally anchored questions",
+        "In-person administration only",
+        "Using open-ended questions exclusively"
+      ],
+      "answer": "Anonymous responding and behaviorally anchored questions",
+      "explanation": "Anonymity reduces self-presentation concerns; behaviorally anchored questions ask about specific actions rather than attitudes.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "A p-value of .03 means:",
+      "options": [
+        "There is a 3% chance the hypothesis is true",
+        "There is a 3% chance the result occurred by chance if the null is true",
+        "The effect size is large",
+        "The study replicated 97% of previous findings"
+      ],
+      "answer": "There is a 3% chance the result occurred by chance if the null is true",
+      "explanation": "The p-value is the probability of obtaining results at least as extreme as observed, assuming the null hypothesis is true.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "tf",
+      "question": "True or False: The answer to \"Patient H.M.'s case study was significant primarily because it demonstrated:\" is: The hippocampus is essential for new explicit memory formation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The hippocampus is essential for new explicit memory formation is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "When presenting research, acknowledging limitations is important because:",
+      "options": [
+        "It makes the study appear weaker",
+        "It demonstrates scientific integrity and helps others evaluate the findings accurately",
+        "Journals require at least five limitations listed",
+        "It reduces the need for a discussion section"
+      ],
+      "answer": "It demonstrates scientific integrity and helps others evaluate the findings accurately",
+      "explanation": "Transparent reporting of limitations is a hallmark of credible science and allows proper interpretation of results.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Embodied cognition challenges traditional cognitive science by arguing that:",
+      "options": [
+        "The brain is the sole site of cognition",
+        "Physical body experience is irrelevant to thought",
+        "Cognitive processes are grounded in bodily states and actions",
+        "Language shapes all cognition"
+      ],
+      "answer": "Cognitive processes are grounded in bodily states and actions",
+      "explanation": "Embodied cognition holds that thought arises from interactions between brain, body, and environment — not just abstract symbols.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "The Belmont Report established which three core principles for ethical research with human participants?",
+      "options": [
+        "Consent, privacy, and funding transparency",
+        "Respect for persons, beneficence, and justice",
+        "Validity, reliability, and generalizability",
+        "Autonomy, efficacy, and disclosure"
+      ],
+      "answer": "Respect for persons, beneficence, and justice",
+      "explanation": "The Belmont Report (1979) established three ethical principles: respect for persons (autonomy), beneficence (do good/no harm), and justice (fair participant selection).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "tf",
+      "question": "True or False: The answer to \"Which approach to psychology emphasizes testing hypotheses with controlled, observable, and measurable data\" is: Psychodynamic.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Scientific empiricism.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "Neurogenesis in adults primarily occurs in which brain structure?",
+      "options": [
+        "Prefrontal cortex",
+        "Cerebellum",
+        "Hippocampus",
+        "Corpus callosum"
+      ],
+      "answer": "Hippocampus",
+      "explanation": "Adult neurogenesis (new neuron production) is most documented in the hippocampal dentate gyrus, related to memory and stress.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "The WEIRD problem in psychology research refers to the risk of:",
+      "options": [
+        "Overly complex statistical models",
+        "Generalizing findings from narrow Western samples to all humanity",
+        "Using too many dependent variables",
+        "Recruiting too many participants"
+      ],
+      "answer": "Generalizing findings from narrow Western samples to all humanity",
+      "explanation": "WEIRD critiques over-reliance on Western, educated, industrialized, rich, democratic samples as the basis for universal claims.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "Broaden-and-build theory (Fredrickson) proposes that positive emotions:",
+      "options": [
+        "Narrow attention to immediate threats",
+        "Broaden awareness and build lasting personal resources",
+        "Have no lasting behavioral effects",
+        "Are less adaptive than negative emotions"
+      ],
+      "answer": "Broaden awareness and build lasting personal resources",
+      "explanation": "Fredrickson's broaden-and-build theory holds that positive emotions expand cognitive repertoire and build durable physical, social, and intellectual resources.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "tf",
+      "question": "True or False: The answer to \"I-O psychology's focus on 'personnel psychology' primarily involves:\" is: Hiring, training, performance appraisal, and workforce selection.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Hiring, training, performance appraisal, and workforce selection is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "mc",
+      "question": "A confounding variable in an experiment is:",
+      "options": [
+        "The variable being measured",
+        "The variable being manipulated",
+        "An uncontrolled variable that varies with the independent variable",
+        "A participant characteristic selected for study"
+      ],
+      "answer": "An uncontrolled variable that varies with the independent variable",
+      "explanation": "Confounds vary systematically with the IV and can produce alternative explanations for the observed effect.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "Which search term strategy is most effective when using PsycINFO?",
+      "options": [
+        "Using only broad single keywords",
+        "Using Boolean operators (AND, OR, NOT) with specific terms",
+        "Limiting searches to the past 50 years only",
+        "Searching only by author name"
+      ],
+      "answer": "Using Boolean operators (AND, OR, NOT) with specific terms",
+      "explanation": "Boolean operators combine search terms precisely, narrowing or expanding results to find the most relevant literature.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "In APA 7, a DOI is best described as:",
+      "options": [
+        "A database of open-access articles",
+        "A permanent digital identifier linking to a specific article",
+        "An abbreviation for the journal impact factor",
+        "A library catalog number"
+      ],
+      "answer": "A permanent digital identifier linking to a specific article",
+      "explanation": "A DOI (Digital Object Identifier) is a permanent alphanumeric string assigned to a document to provide a stable hyperlink.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "tf",
+      "question": "True or False: The answer to \"Inter-rater reliability assesses:\" is: Consistency of a measure across time.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Agreement between two or more independent raters.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "A correlation coefficient of r = –0.75 indicates:",
+      "options": [
+        "A strong positive relationship",
+        "A weak negative relationship",
+        "A strong negative relationship",
+        "No relationship"
+      ],
+      "answer": "A strong negative relationship",
+      "explanation": "r = –0.75 indicates a strong negative correlation — as one variable increases, the other strongly decreases.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "Phineas Gage's accident demonstrated the importance of the frontal lobe for:",
+      "options": [
+        "Visual processing",
+        "Balance and motor coordination",
+        "Personality and social behavior regulation",
+        "Language comprehension"
+      ],
+      "answer": "Personality and social behavior regulation",
+      "explanation": "After frontal lobe damage Gage showed dramatic personality changes including impulsivity and poor social judgment.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "Triangulation in qualitative research strengthens validity by:",
+      "options": [
+        "Using exactly three participants",
+        "Corroborating findings across multiple methods or data sources",
+        "Requiring three research questions",
+        "Sampling from three geographic regions"
+      ],
+      "answer": "Corroborating findings across multiple methods or data sources",
+      "explanation": "Triangulation uses multiple methods, sources, or researchers to verify and strengthen qualitative conclusions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "tf",
+      "question": "True or False: The answer to \"The discussion section of a research paper should NOT:\" is: Present raw data tables.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Present raw data tables is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Academic self-efficacy, as studied in educational psychology, predicts:",
+      "options": [
+        "IQ scores",
+        "Effort, persistence, and achievement in academic tasks",
+        "Introversion levels",
+        "Genetic intelligence"
+      ],
+      "answer": "Effort, persistence, and achievement in academic tasks",
+      "explanation": "Students with high academic self-efficacy invest more effort, persist longer, and achieve more, regardless of actual ability level.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "Dweck's research on growth vs. fixed mindset has implications for education by suggesting:",
+      "options": [
+        "Praising intelligence leads to greater motivation",
+        "Praising effort and process leads to greater resilience and learning",
+        "Ability grouping maximizes student potential",
+        "Grades are the best motivator"
+      ],
+      "answer": "Praising effort and process leads to greater resilience and learning",
+      "explanation": "Dweck found that process praise fosters growth mindset, leading students to embrace challenges and persist through setbacks.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "Which of the following best demonstrates ecological validity?",
+      "options": [
+        "A tightly controlled lab experiment",
+        "A study conducted in a natural, real-world setting",
+        "A study with a very large sample size",
+        "A double-blind randomized trial"
+      ],
+      "answer": "A study conducted in a natural, real-world setting",
+      "explanation": "Ecological validity is the degree to which research findings reflect real-world conditions and behavior.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "tf",
+      "question": "True or False: The answer to \"Pre-registration of a study means researchers publicly commit to:\" is: Publishing results regardless of significance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Their hypotheses and analysis plan before collecting data.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "Which positive psychology concept refers to finding deep purpose and direction in one's activities?",
+      "options": [
+        "Hedonism",
+        "Eudaimonia",
+        "Flow",
+        "Gratitude"
+      ],
+      "answer": "Eudaimonia",
+      "explanation": "Eudaimonia (Aristotle, used in positive psychology) refers to well-being derived from living meaningfully and fulfilling one's potential.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "A capstone project demonstrates mastery primarily through:",
+      "options": [
+        "Memorization of course content",
+        "Independent synthesis and application of knowledge to a novel question",
+        "Reproducing a textbook chapter",
+        "Group memorization activities"
+      ],
+      "answer": "Independent synthesis and application of knowledge to a novel question",
+      "explanation": "Capstone projects require students to integrate learning from a program and apply it independently to a new, substantive question.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "mc",
+      "question": "Research ethics requires informed consent to include:",
+      "options": [
+        "Detailed data analysis procedures",
+        "The purpose, procedures, risks, benefits, and right to withdraw",
+        "The researcher's personal opinions",
+        "Future publication plans only"
+      ],
+      "answer": "The purpose, procedures, risks, benefits, and right to withdraw",
+      "explanation": "Informed consent requires disclosing study purpose, procedures, risks, benefits, confidentiality measures, and the right to withdraw without penalty.",
+      "points": 1
+    }
+  ],
+  "gradeLevel": null
 }

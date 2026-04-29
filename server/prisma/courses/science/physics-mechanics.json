@@ -2,7 +2,7 @@
   "slug": "physics-mechanics",
   "name": "Physics - Mechanics",
   "nameZh": "物理力学",
-  "credits": 1.0,
+  "credits": 1,
   "department": "Science",
   "type": "Core",
   "description": "An algebra- and calculus-ready course covering classical mechanics including kinematics, Newton's laws, energy, momentum, rotational motion, simple harmonic motion, and introductory wave physics.",
@@ -38,7 +38,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/physics/two-dimensional-motion/projectile-motion/e/projectile-motion",
       "practiceNote": "Khan Academy — Projectile Motion Practice",
       "assignment": "A ball is launched from ground level at 25 m/s at 37° above the horizontal. Calculate (a) the maximum height, (b) the total time of flight, (c) the horizontal range, and (d) the velocity vector (magnitude and direction) at the moment of impact. Show all component analysis clearly.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 3,
@@ -54,7 +54,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/physics/forces-newtons-laws/newtons-laws-of-motion/e/newtons-first-and-third-law",
       "practiceNote": "Khan Academy — Newton's Laws Practice",
       "assignment": "Draw a complete free-body diagram for a 5.0 kg block being pulled horizontally at constant velocity by a rope at 30° above horizontal with a tension of 20 N on a rough surface. Calculate the coefficient of kinetic friction, the normal force, and the net force. Then solve a connected two-mass Atwood machine problem for the acceleration and tension.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 4,
@@ -70,7 +70,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/physics/forces-newtons-laws/inclined-planes-friction/e/inclined-planes-and-friction",
       "practiceNote": "Khan Academy — Inclined Planes and Friction Practice",
       "assignment": "A 10.0 kg box rests on a ramp inclined at 25° to the horizontal. The coefficient of static friction is 0.45 and kinetic friction is 0.30. (a) Determine if the box slides. (b) If it does slide, calculate the acceleration. (c) Calculate the minimum applied force parallel to the ramp needed to push the box up the incline at constant velocity.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 5,
@@ -102,7 +102,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/physics/work-and-energy/work-and-energy-tutorial/e/conservation-of-energy",
       "practiceNote": "Khan Academy — Conservation of Energy Practice",
       "assignment": "A roller coaster car of mass 500 kg starts from rest at a height of 40 m. (a) Using conservation of energy, find the speed at the bottom of the first drop. (b) Find the speed at a second hill of height 15 m. (c) If friction does −8000 J of work on the car from start to the second hill, find the new speed at the second hill. Explain why the answer to (c) is lower.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 7,
@@ -134,7 +134,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/physics/linear-momentum/elastic-and-inelastic-collisions/e/elastic-and-inelastic-collisions",
       "practiceNote": "Khan Academy — Collision Problems Practice",
       "assignment": "Cart A (2.0 kg, moving right at 4.0 m/s) collides with Cart B (3.0 kg, at rest). (a) If the collision is perfectly inelastic, find the final velocity and calculate the kinetic energy lost. (b) If the collision is elastic, find the final velocities of both carts. (c) Compare the two scenarios and explain the physical meaning of the kinetic energy difference.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 9,
@@ -150,7 +150,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/physics/centripetal-force-and-gravitation/centripetal-acceleration-tutoria/e/centripetal-forces",
       "practiceNote": "Khan Academy — Centripetal Force Practice",
       "assignment": "A car of mass 1200 kg travels at 20 m/s around a flat horizontal circular turn of radius 80 m. (a) Calculate the centripetal acceleration and centripetal force required. (b) Identify which force provides the centripetal force and find the required coefficient of friction. (c) Determine the minimum speed for a roller-coaster car to maintain contact at the top of a loop of radius 12 m.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 10,
@@ -166,7 +166,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/physics/centripetal-force-and-gravitation/newtons-law-of-gravitation/e/gravity-and-orbits",
       "practiceNote": "Khan Academy — Gravitation Practice",
       "assignment": "A satellite orbits Earth at an altitude of 400 km above Earth's surface (Earth's radius = 6.37 × 10⁶ m, M_Earth = 5.97 × 10²⁴ kg, G = 6.67 × 10⁻¹¹ N·m²/kg²). Calculate (a) the orbital radius, (b) the orbital speed, (c) the orbital period, and (d) compare this to the given orbital period of the ISS (≈92 min) and explain any discrepancy.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 11,
@@ -214,7 +214,7 @@
       "practiceUrl": "https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/harmonic-motion/e/simple-harmonic-motion",
       "practiceNote": "Khan Academy — Simple Harmonic Motion Practice",
       "assignment": "A 0.50 kg mass is attached to a spring with k = 200 N/m and displaced 8.0 cm from equilibrium. (a) Find the period and frequency of oscillation. (b) Find the maximum speed and maximum acceleration. (c) Using energy conservation, find the speed when the displacement is 4.0 cm. (d) Predict how the period would change if the mass were doubled, and verify with the formula.",
-      "estimatedHrs": 4.0
+      "estimatedHrs": 4
     },
     {
       "order": 14,
@@ -234,112 +234,1411 @@
     }
   ],
   "quizQuestions": [
-    { "moduleOrder": 1, "order": 1, "question": "A car accelerates from rest at 4.0 m/s². What is its velocity after 5.0 s?", "options": ["5.0 m/s", "20 m/s", "10 m/s", "25 m/s"], "answer": "20 m/s", "explanation": "v = v₀ + at = 0 + (4.0)(5.0) = 20 m/s.", "points": 1 },
-    { "moduleOrder": 1, "order": 2, "question": "On a velocity-time graph, the slope represents:", "options": ["Displacement", "Speed", "Acceleration", "Distance"], "answer": "Acceleration", "explanation": "The slope of a v-t graph equals the rate of change of velocity, which is acceleration.", "points": 1 },
-    { "moduleOrder": 1, "order": 3, "question": "An object is dropped from rest. How far does it fall in 3.0 s? (g = 9.8 m/s²)", "options": ["29.4 m", "44.1 m", "14.7 m", "88.2 m"], "answer": "44.1 m", "explanation": "y = ½gt² = ½(9.8)(3.0)² = 44.1 m.", "points": 1 },
-    { "moduleOrder": 1, "order": 4, "question": "Which kinematic equation is most useful when time is unknown?", "options": ["v = v₀ + at", "x = v₀t + ½at²", "v² = v₀² + 2ax", "x = ½(v₀ + v)t"], "answer": "v² = v₀² + 2ax", "explanation": "v² = v₀² + 2ax directly relates initial/final velocity and displacement without requiring time.", "points": 1 },
-    { "moduleOrder": 1, "order": 5, "question": "An object moves at constant velocity. Its acceleration is:", "options": ["9.8 m/s²", "Positive and increasing", "Zero", "Equal to its velocity"], "answer": "Zero", "explanation": "Constant velocity means no change in speed or direction, so acceleration is zero by definition.", "points": 1 },
-    { "moduleOrder": 2, "order": 1, "question": "At the highest point of a projectile's trajectory, which statement is true?", "options": ["Both vx and vy are zero", "vy = 0 but vx is unchanged", "vx = 0 but vy is unchanged", "Total velocity is maximum"], "answer": "vy = 0 but vx is unchanged", "explanation": "At maximum height, the vertical component of velocity is zero, but the horizontal component remains constant throughout the flight.", "points": 1 },
-    { "moduleOrder": 2, "order": 2, "question": "A ball is thrown horizontally at 10 m/s from a cliff 20 m high. How long does it take to hit the ground?", "options": ["1.0 s", "2.0 s", "4.0 s", "0.5 s"], "answer": "2.0 s", "explanation": "Using y = ½gt²: 20 = ½(10)t², t² = 4.0, t = 2.0 s (using g ≈ 10 m/s² for simplicity).", "points": 1 },
-    { "moduleOrder": 2, "order": 3, "question": "Which launch angle gives the maximum horizontal range for a projectile launched from and landing at the same height?", "options": ["30°", "45°", "60°", "90°"], "answer": "45°", "explanation": "Range is maximized at 45° because it balances the horizontal component (cos θ) and the time of flight, which depends on the vertical component (sin θ).", "points": 1 },
-    { "moduleOrder": 2, "order": 4, "question": "For a projectile (no air resistance), the horizontal acceleration is:", "options": ["9.8 m/s² downward", "9.8 m/s² in the direction of motion", "Zero", "Equal to the vertical acceleration"], "answer": "Zero", "explanation": "In the absence of air resistance, no horizontal force acts on a projectile, so its horizontal acceleration is zero and horizontal velocity is constant.", "points": 1 },
-    { "moduleOrder": 2, "order": 5, "question": "A projectile is launched at 30° and another at 60° with the same initial speed. Their ranges are:", "options": ["The 30° launch has a longer range", "The 60° launch has a longer range", "They have equal range", "Not comparable without knowing initial speed"], "answer": "They have equal range", "explanation": "Complementary angles (that sum to 90°, like 30° and 60°) give equal horizontal ranges when launched from and landing at the same height.", "points": 1 },
-    { "moduleOrder": 3, "order": 1, "question": "Newton's first law states that an object remains at rest or in uniform motion unless:", "options": ["It is on a frictionless surface", "Acted upon by a net external force", "Its mass is constant", "Gravity is absent"], "answer": "Acted upon by a net external force", "explanation": "Newton's first law (law of inertia) states that an object's state of motion only changes when a net external force acts on it.", "points": 1 },
-    { "moduleOrder": 3, "order": 2, "question": "A 10 kg object experiences a net force of 30 N. What is its acceleration?", "options": ["300 m/s²", "0.33 m/s²", "3.0 m/s²", "10 m/s²"], "answer": "3.0 m/s²", "explanation": "a = F/m = 30 N / 10 kg = 3.0 m/s².", "points": 1 },
-    { "moduleOrder": 3, "order": 3, "question": "Newton's third law states that for every action there is:", "options": ["A larger reaction in the same direction", "An equal and opposite reaction on the same object", "An equal and opposite reaction on a different object", "No reaction if the objects are not in contact"], "answer": "An equal and opposite reaction on a different object", "explanation": "Newton's third law action-reaction forces are equal in magnitude and opposite in direction, but act on different objects.", "points": 1 },
-    { "moduleOrder": 3, "order": 4, "question": "A 5.0 kg book rests on a table. What is the normal force exerted by the table on the book? (g = 9.8 m/s²)", "options": ["5.0 N", "9.8 N", "49 N", "98 N"], "answer": "49 N", "explanation": "The normal force equals the book's weight: N = mg = (5.0)(9.8) = 49 N.", "points": 1 },
-    { "moduleOrder": 3, "order": 5, "question": "In an Atwood machine, two masses hang over a frictionless pulley. If M₁ > M₂, the system accelerates with:", "options": ["a = (M₁ + M₂)g / (M₁ − M₂)", "a = (M₁ − M₂)g / (M₁ + M₂)", "a = g always", "a = M₁g only"], "answer": "a = (M₁ − M₂)g / (M₁ + M₂)", "explanation": "Applying Newton's second law to both masses: net force = (M₁ − M₂)g, total mass = M₁ + M₂, giving a = (M₁ − M₂)g / (M₁ + M₂).", "points": 1 },
-    { "moduleOrder": 4, "order": 1, "question": "The maximum static friction force is described by:", "options": ["fs = μk N", "fs ≤ μs N", "fs = μs N always", "fs = mg cosθ only on ramps"], "answer": "fs ≤ μs N", "explanation": "Static friction can range from zero up to its maximum value μs N; it equals exactly μs N only at the verge of sliding.", "points": 1 },
-    { "moduleOrder": 4, "order": 2, "question": "A block on an inclined plane at angle θ. The component of gravity parallel to the slope is:", "options": ["mg cosθ", "mg sinθ", "mg tanθ", "mg / sinθ"], "answer": "mg sinθ", "explanation": "Resolving gravity along the slope: the component parallel to the incline is mg sinθ (directed down the slope).", "points": 1 },
-    { "moduleOrder": 4, "order": 3, "question": "The normal force on a block resting on an incline of angle θ equals:", "options": ["mg sinθ", "mg tanθ", "mg cosθ", "mg"], "answer": "mg cosθ", "explanation": "The normal force is perpendicular to the incline surface and balances the component of gravity perpendicular to the surface: N = mg cosθ.", "points": 1 },
-    { "moduleOrder": 4, "order": 4, "question": "Which friction force acts on a block that is already sliding?", "options": ["Static friction", "Maximum static friction", "Kinetic friction", "No friction"], "answer": "Kinetic friction", "explanation": "Once an object is in motion, kinetic (sliding) friction acts, which is generally less than maximum static friction.", "points": 1 },
-    { "moduleOrder": 4, "order": 5, "question": "A block sits on a ramp. Increasing the angle θ from 0° to 90° causes the normal force to:", "options": ["Increase from 0 to mg", "Remain constant at mg", "Decrease from mg to 0", "First increase then decrease"], "answer": "Decrease from mg to 0", "explanation": "N = mg cosθ; as θ increases from 0° to 90°, cosθ decreases from 1 to 0, so the normal force decreases from mg to 0.", "points": 1 },
-    { "moduleOrder": 5, "order": 1, "question": "Work done by a force is calculated as:", "options": ["W = Fvt", "W = F × d × sinθ", "W = F × d × cosθ", "W = mad"], "answer": "W = F × d × cosθ", "explanation": "Work = Force × displacement × cos(angle between force and displacement): W = Fd cosθ.", "points": 1 },
-    { "moduleOrder": 5, "order": 2, "question": "A force perpendicular to the displacement of an object does:", "options": ["Positive work", "Negative work", "Zero work", "Maximum work"], "answer": "Zero work", "explanation": "W = Fd cos90° = 0. A force perpendicular to motion (like the normal force) does no work.", "points": 1 },
-    { "moduleOrder": 5, "order": 3, "question": "The kinetic energy of a 4.0 kg object moving at 6.0 m/s is:", "options": ["24 J", "12 J", "72 J", "144 J"], "answer": "72 J", "explanation": "KE = ½mv² = ½(4.0)(6.0)² = ½(4.0)(36) = 72 J.", "points": 1 },
-    { "moduleOrder": 5, "order": 4, "question": "The work-energy theorem states that the net work done on an object equals:", "options": ["Its potential energy change", "Its change in kinetic energy", "The force times time", "Its total mechanical energy"], "answer": "Its change in kinetic energy", "explanation": "The work-energy theorem: W_net = ΔKE = KE_f − KE_i.", "points": 1 },
-    { "moduleOrder": 5, "order": 5, "question": "A machine does 1200 J of work in 4.0 s. What is its power output?", "options": ["4800 W", "300 W", "1200 W", "48 W"], "answer": "300 W", "explanation": "P = W/t = 1200 J / 4.0 s = 300 W.", "points": 1 },
-    { "moduleOrder": 6, "order": 1, "question": "The gravitational potential energy of a 2.0 kg mass at a height of 5.0 m is: (g = 10 m/s²)", "options": ["10 J", "100 J", "25 J", "50 J"], "answer": "100 J", "explanation": "PE = mgh = (2.0)(10)(5.0) = 100 J.", "points": 1 },
-    { "moduleOrder": 6, "order": 2, "question": "A ball is released from rest at height h. Using conservation of energy, its speed at the bottom is:", "options": ["v = √(gh)", "v = √(2gh)", "v = 2gh", "v = gh/2"], "answer": "v = √(2gh)", "explanation": "mgh = ½mv², solving for v: v = √(2gh).", "points": 1 },
-    { "moduleOrder": 6, "order": 3, "question": "Elastic potential energy stored in a spring compressed by x is:", "options": ["PE = kx", "PE = ½kx", "PE = kx²", "PE = ½kx²"], "answer": "PE = ½kx²", "explanation": "The elastic potential energy of a spring follows Hooke's law: PE = ½kx², where k is the spring constant.", "points": 1 },
-    { "moduleOrder": 6, "order": 4, "question": "When friction is present, the total mechanical energy of a sliding block:", "options": ["Is conserved exactly", "Increases due to heat generation", "Decreases because friction is a nonconservative force", "Stays constant because energy is conserved"], "answer": "Decreases because friction is a nonconservative force", "explanation": "Friction converts mechanical energy to thermal energy, so total mechanical energy (KE + PE) decreases.", "points": 1 },
-    { "moduleOrder": 6, "order": 5, "question": "A pendulum swings from rest at its highest point. At the lowest point:", "options": ["KE is maximum and PE is minimum", "KE is minimum and PE is maximum", "KE equals PE", "Both KE and PE are zero"], "answer": "KE is maximum and PE is minimum", "explanation": "At the lowest point of a pendulum's swing, all gravitational PE has converted to KE, making KE maximum and PE minimum.", "points": 1 },
-    { "moduleOrder": 7, "order": 1, "question": "The momentum of a 2.0 kg object moving at 8.0 m/s is:", "options": ["4.0 kg·m/s", "16 kg·m/s", "10 kg·m/s", "6.0 kg·m/s"], "answer": "16 kg·m/s", "explanation": "p = mv = (2.0)(8.0) = 16 kg·m/s.", "points": 1 },
-    { "moduleOrder": 7, "order": 2, "question": "Impulse has the same units as:", "options": ["Energy", "Force", "Power", "Momentum"], "answer": "Momentum", "explanation": "Impulse = FΔt [N·s = kg·m/s], which are the same units as momentum.", "points": 1 },
-    { "moduleOrder": 7, "order": 3, "question": "The impulse-momentum theorem states:", "options": ["J = Δp", "J = F/t", "J = ma", "J = ΔKE"], "answer": "J = Δp", "explanation": "The impulse-momentum theorem: the net impulse on an object equals the change in its momentum (J = Δp).", "points": 1 },
-    { "moduleOrder": 7, "order": 4, "question": "A 0.10 kg ball's velocity changes from +20 m/s to −20 m/s. The magnitude of the impulse is:", "options": ["0 N·s", "2.0 N·s", "4.0 N·s", "40 N·s"], "answer": "4.0 N·s", "explanation": "J = Δp = m(v_f − v_i) = 0.10(−20 − 20) = −4.0 N·s; magnitude = 4.0 N·s.", "points": 1 },
-    { "moduleOrder": 7, "order": 5, "question": "Increasing the collision time in a car crash (e.g., via airbags) reduces the:", "options": ["Total momentum change", "Impulse experienced", "Average force on the occupant", "Final velocity of the car"], "answer": "Average force on the occupant", "explanation": "Since J = FΔt is fixed (same momentum change), increasing Δt decreases F. Airbags extend collision time to reduce peak force.", "points": 1 },
-    { "moduleOrder": 8, "order": 1, "question": "Conservation of momentum applies when:", "options": ["The net external force on the system is zero", "No internal forces are present", "Kinetic energy is conserved", "The collision is elastic"], "answer": "The net external force on the system is zero", "explanation": "Momentum is conserved in an isolated system (zero net external force), regardless of the nature of internal forces.", "points": 1 },
-    { "moduleOrder": 8, "order": 2, "question": "In a perfectly inelastic collision:", "options": ["Kinetic energy is conserved", "The objects bounce off each other", "The objects stick together", "Momentum is not conserved"], "answer": "The objects stick together", "explanation": "In a perfectly inelastic collision, the colliding objects stick together and move with a common final velocity; kinetic energy is not conserved.", "points": 1 },
-    { "moduleOrder": 8, "order": 3, "question": "A 3.0 kg cart moving at 4.0 m/s collides and sticks with a 1.0 kg stationary cart. What is their final velocity?", "options": ["4.0 m/s", "3.0 m/s", "1.0 m/s", "2.0 m/s"], "answer": "3.0 m/s", "explanation": "Using momentum conservation: (3.0)(4.0) = (3.0 + 1.0)v_f; v_f = 12/4 = 3.0 m/s.", "points": 1 },
-    { "moduleOrder": 8, "order": 4, "question": "In a perfectly elastic collision, which quantities are both conserved?", "options": ["Momentum and kinetic energy", "Momentum and potential energy", "Kinetic energy and force", "Mass and acceleration"], "answer": "Momentum and kinetic energy", "explanation": "Elastic collisions conserve both total momentum and total kinetic energy of the system.", "points": 1 },
-    { "moduleOrder": 8, "order": 5, "question": "If two identical balls undergo a perfectly elastic head-on collision, and ball A was moving while ball B was at rest, afterwards:", "options": ["Both balls move at half the original speed", "Ball A continues and ball B stays still", "Ball A stops and ball B moves at the original speed of A", "Both balls move in opposite directions"], "answer": "Ball A stops and ball B moves at the original speed of A", "explanation": "For an elastic collision between equal masses where one is initially at rest, the moving object stops and the stationary one moves with the original velocity.", "points": 1 },
-    { "moduleOrder": 9, "order": 1, "question": "Centripetal acceleration always points:", "options": ["In the direction of velocity", "Opposite to velocity", "Toward the center of the circular path", "Away from the center of the circular path"], "answer": "Toward the center of the circular path", "explanation": "Centripetal acceleration is always directed toward the center of the circular path, causing the continuous change in direction of velocity.", "points": 1 },
-    { "moduleOrder": 9, "order": 2, "question": "The centripetal force on an object in circular motion is provided by:", "options": ["A special outward force called centrifugal force", "Whatever net inward force exists in that physical situation", "Gravity alone in all cases", "Friction alone in all cases"], "answer": "Whatever net inward force exists in that physical situation", "explanation": "Centripetal force is not a separate force; it is the net inward force provided by whatever forces are present (tension, friction, gravity, normal force).", "points": 1 },
-    { "moduleOrder": 9, "order": 3, "question": "A car of mass m travels at speed v around a flat circular track of radius r. The centripetal force required is:", "options": ["mv/r", "mv²r", "mv²/r", "m²v/r"], "answer": "mv²/r", "explanation": "Centripetal force F_c = mv²/r, directed toward the center of the circular path.", "points": 1 },
-    { "moduleOrder": 9, "order": 4, "question": "At the top of a vertical loop, the minimum speed to maintain contact with the track occurs when:", "options": ["Normal force equals mg", "Normal force equals zero", "Normal force is at its maximum", "The centripetal force is zero"], "answer": "Normal force equals zero", "explanation": "At minimum speed at the top of a loop, the normal force goes to zero and gravity alone provides the centripetal force: mg = mv²/r, so v_min = √(gr).", "points": 1 },
-    { "moduleOrder": 9, "order": 5, "question": "If the speed of an object in circular motion doubles while the radius remains constant, the centripetal force:", "options": ["Doubles", "Halves", "Quadruples", "Remains the same"], "answer": "Quadruples", "explanation": "F_c = mv²/r; doubling v increases v² by a factor of 4, so F_c quadruples.", "points": 1 },
-    { "moduleOrder": 10, "order": 1, "question": "Newton's law of universal gravitation states that the gravitational force between two masses is:", "options": ["Directly proportional to both masses and inversely proportional to distance", "Directly proportional to both masses and inversely proportional to the square of the distance", "Inversely proportional to both masses", "Proportional to distance"], "answer": "Directly proportional to both masses and inversely proportional to the square of the distance", "explanation": "F = Gm₁m₂/r²; force is proportional to each mass and inversely proportional to the square of the separation distance.", "points": 1 },
-    { "moduleOrder": 10, "order": 2, "question": "If the distance between two masses is doubled, the gravitational force between them:", "options": ["Doubles", "Halves", "Decreases by a factor of 4", "Increases by a factor of 4"], "answer": "Decreases by a factor of 4", "explanation": "Since F ∝ 1/r², doubling r gives F' = F/(2)² = F/4; the force decreases to one-quarter.", "points": 1 },
-    { "moduleOrder": 10, "order": 3, "question": "Kepler's third law states that the square of a planet's orbital period is proportional to:", "options": ["Its orbital speed", "The cube of its average orbital radius", "Its mass", "The gravitational constant G"], "answer": "The cube of its average orbital radius", "explanation": "Kepler's third law: T² ∝ r³ (or T² = (4π²/GM)r³), derived from combining Newton's gravitational law with circular orbit dynamics.", "points": 1 },
-    { "moduleOrder": 10, "order": 4, "question": "A satellite in a higher orbit compared to one in a lower orbit has:", "options": ["Greater orbital speed and shorter period", "Lower orbital speed and longer period", "The same orbital speed", "Greater orbital speed and longer period"], "answer": "Lower orbital speed and longer period", "explanation": "From v = √(GM/r), orbital speed decreases with increasing r; from T² ∝ r³, period increases with r.", "points": 1 },
-    { "moduleOrder": 10, "order": 5, "question": "The gravitational field strength g at distance r from Earth's center is given by:", "options": ["g = GMr", "g = GM/r²", "g = GM/r", "g = GMr²"], "answer": "g = GM/r²", "explanation": "Gravitational field strength g = F/m = GM_Earth/r², which equals the free-fall acceleration at that location.", "points": 1 },
-    { "moduleOrder": 11, "order": 1, "question": "Torque is calculated as τ = rF sinθ, where θ is the angle between:", "options": ["The force and the horizontal", "The position vector r and the force F", "The torque and the angular velocity", "The radius and the vertical"], "answer": "The position vector r and the force F", "explanation": "Torque τ = r × F; the magnitude is rF sinθ, where θ is the angle between the position vector (from pivot to point of force application) and the force vector.", "points": 1 },
-    { "moduleOrder": 11, "order": 2, "question": "For an object to be in static equilibrium, which TWO conditions must be satisfied?", "options": ["ΣF = 0 and ΣKE = 0", "ΣF = 0 and Στ = 0", "Στ = 0 and ΣE = constant", "ΣF = ma and Στ = Iα"], "answer": "ΣF = 0 and Στ = 0", "explanation": "Static equilibrium requires both translational equilibrium (net force = 0) and rotational equilibrium (net torque = 0).", "points": 1 },
-    { "moduleOrder": 11, "order": 3, "question": "The moment of inertia of an object depends on:", "options": ["Only its mass", "Only its shape", "Both its mass and how that mass is distributed relative to the rotation axis", "Only its angular velocity"], "answer": "Both its mass and how that mass is distributed relative to the rotation axis", "explanation": "Moment of inertia I = Σmr² depends on the total mass AND how far each mass element is from the rotation axis.", "points": 1 },
-    { "moduleOrder": 11, "order": 4, "question": "Newton's second law for rotation is:", "options": ["F = ma", "τ = mv²/r", "τ_net = Iα", "L = Iω"], "answer": "τ_net = Iα", "explanation": "The rotational analog of F = ma is τ_net = Iα, where τ is net torque, I is moment of inertia, and α is angular acceleration.", "points": 1 },
-    { "moduleOrder": 11, "order": 5, "question": "A force of 10 N is applied perpendicular to the end of a wrench that is 0.30 m long. The torque applied to the bolt is:", "options": ["0.030 N·m", "33 N·m", "3.0 N·m", "30 N·m"], "answer": "3.0 N·m", "explanation": "τ = rF sinθ = (0.30)(10)(sin90°) = 3.0 N·m.", "points": 1 },
-    { "moduleOrder": 12, "order": 1, "question": "The rotational kinetic energy of a spinning object is:", "options": ["KE = ½mv²", "KE = ½Iω²", "KE = Iα", "KE = τω"], "answer": "KE = ½Iω²", "explanation": "Rotational kinetic energy KE_rot = ½Iω², the rotational analog of translational KE = ½mv².", "points": 1 },
-    { "moduleOrder": 12, "order": 2, "question": "When a rolling object goes down a ramp without slipping, energy is distributed between:", "options": ["Only translational kinetic energy", "Only rotational kinetic energy", "Translational kinetic energy, rotational kinetic energy, and loss to friction", "Translational and rotational kinetic energy, with less speed than a sliding object"], "answer": "Translational and rotational kinetic energy, with less speed than a sliding object", "explanation": "A rolling object has both KE_trans and KE_rot; total KE = ½mv² + ½Iω². This means less speed than a frictionless sliding object.", "points": 1 },
-    { "moduleOrder": 12, "order": 3, "question": "Angular momentum L of a rotating object is defined as:", "options": ["L = mv", "L = Iω", "L = Iα", "L = τ/ω"], "answer": "L = Iω", "explanation": "Angular momentum L = Iω, the rotational analog of linear momentum p = mv.", "points": 1 },
-    { "moduleOrder": 12, "order": 4, "question": "If no net external torque acts on a system, angular momentum is:", "options": ["Increasing at rate τ", "Decreasing because of rotational friction", "Conserved (constant)", "Zero"], "answer": "Conserved (constant)", "explanation": "Conservation of angular momentum: if τ_net = 0, then ΔL/Δt = 0, so L = Iω = constant.", "points": 1 },
-    { "moduleOrder": 12, "order": 5, "question": "A spinning figure skater pulls her arms in, reducing her moment of inertia to half. Her angular velocity will:", "options": ["Halve", "Remain the same", "Double", "Quadruple"], "answer": "Double", "explanation": "L = Iω is conserved. If I decreases to I/2, then ω must double to keep Iω constant.", "points": 1 },
-    { "moduleOrder": 13, "order": 1, "question": "The period of a mass-spring system in simple harmonic motion is:", "options": ["T = 2π√(k/m)", "T = 2π√(m/k)", "T = 2π√(m/g)", "T = 2π√(g/L)"], "answer": "T = 2π√(m/k)", "explanation": "For a mass m on a spring with constant k: T = 2π√(m/k). Period increases with mass and decreases with stiffer spring.", "points": 1 },
-    { "moduleOrder": 13, "order": 2, "question": "In simple harmonic motion, the restoring force is:", "options": ["Constant in magnitude", "Proportional to displacement and directed away from equilibrium", "Proportional to displacement and directed toward equilibrium", "Independent of displacement"], "answer": "Proportional to displacement and directed toward equilibrium", "explanation": "The restoring force F = −kx is proportional to displacement x and always directed back toward the equilibrium position.", "points": 1 },
-    { "moduleOrder": 13, "order": 3, "question": "In SHM, the maximum velocity occurs at:", "options": ["Maximum displacement (amplitude)", "Equilibrium position", "Halfway between equilibrium and amplitude", "Any point with zero acceleration"], "answer": "Equilibrium position", "explanation": "At equilibrium, all energy is kinetic, so velocity is maximum. At maximum displacement, all energy is potential and velocity is zero.", "points": 1 },
-    { "moduleOrder": 13, "order": 4, "question": "If the amplitude of SHM is doubled while all else remains the same, the period:", "options": ["Doubles", "Halves", "Quadruples", "Remains the same"], "answer": "Remains the same", "explanation": "The period of SHM (T = 2π√(m/k) for a spring) is independent of amplitude; only mass and spring constant affect it.", "points": 1 },
-    { "moduleOrder": 13, "order": 5, "question": "The period of a simple pendulum depends on:", "options": ["The mass of the bob and the length", "The length of the string and g", "The amplitude and mass", "The length and mass only"], "answer": "The length of the string and g", "explanation": "T = 2π√(L/g) for a simple pendulum; the period depends on string length L and gravitational acceleration g, not on the mass or amplitude (for small angles).", "points": 1 },
-    { "moduleOrder": 14, "order": 1, "question": "In a transverse wave, the particles of the medium vibrate:", "options": ["Parallel to the direction of wave propagation", "Perpendicular to the direction of wave propagation", "In random directions", "In circular paths"], "answer": "Perpendicular to the direction of wave propagation", "explanation": "In transverse waves (e.g., light, rope waves), the medium oscillates perpendicular to the wave's propagation direction.", "points": 1 },
-    { "moduleOrder": 14, "order": 2, "question": "Sound is which type of wave?", "options": ["Transverse mechanical wave", "Electromagnetic wave", "Longitudinal mechanical wave", "Transverse electromagnetic wave"], "answer": "Longitudinal mechanical wave", "explanation": "Sound waves are longitudinal mechanical waves—compressions and rarefactions propagate in the same direction as the wave travels.", "points": 1 },
-    { "moduleOrder": 14, "order": 3, "question": "A wave has a frequency of 50 Hz and wavelength 4.0 m. What is its wave speed?", "options": ["12.5 m/s", "54 m/s", "200 m/s", "46 m/s"], "answer": "200 m/s", "explanation": "v = fλ = (50 Hz)(4.0 m) = 200 m/s.", "points": 1 },
-    { "moduleOrder": 14, "order": 4, "question": "The Doppler effect predicts that a sound source moving toward a stationary observer is heard at:", "options": ["A lower frequency than emitted", "The same frequency as emitted", "A higher frequency than emitted", "Zero frequency"], "answer": "A higher frequency than emitted", "explanation": "As a source moves toward an observer, wave fronts are compressed, decreasing wavelength and increasing the observed frequency.", "points": 1 },
-    { "moduleOrder": 14, "order": 5, "question": "Constructive interference occurs when two waves meet and their phase difference is:", "options": ["90°", "180°", "270°", "0° or 360° (in phase)"], "answer": "0° or 360° (in phase)", "explanation": "Constructive interference occurs when two waves are in phase (0°, 360°, or integer multiples of 360°), so their amplitudes add.", "points": 1 }
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "A car accelerates from rest at 4.0 m/s². What is its velocity after 5.0 s?",
+      "options": [
+        "5.0 m/s",
+        "20 m/s",
+        "10 m/s",
+        "25 m/s"
+      ],
+      "answer": "20 m/s",
+      "explanation": "v = v₀ + at = 0 + (4.0)(5.0) = 20 m/s.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "On a velocity-time graph, the slope represents:",
+      "options": [
+        "Displacement",
+        "Speed",
+        "Acceleration",
+        "Distance"
+      ],
+      "answer": "Acceleration",
+      "explanation": "The slope of a v-t graph equals the rate of change of velocity, which is acceleration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "An object is dropped from rest. How far does it fall in 3.0 s? (g = 9.8 m/s²)",
+      "options": [
+        "29.4 m",
+        "44.1 m",
+        "14.7 m",
+        "88.2 m"
+      ],
+      "answer": "44.1 m",
+      "explanation": "y = ½gt² = ½(9.8)(3.0)² = 44.1 m.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 4,
+      "question": "True or False: The answer to \"A car accelerates from rest at 4.0 m/s². What is its velocity after 5.0 s\" is: 20 m/s.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 20 m/s is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 5,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"an object moves at constant velocity. its acceleration is:.\"",
+      "options": null,
+      "answer": "Zero",
+      "explanation": "The correct answer is: Zero.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "At the highest point of a projectile's trajectory, which statement is true?",
+      "options": [
+        "Both vx and vy are zero",
+        "vy = 0 but vx is unchanged",
+        "vx = 0 but vy is unchanged",
+        "Total velocity is maximum"
+      ],
+      "answer": "vy = 0 but vx is unchanged",
+      "explanation": "At maximum height, the vertical component of velocity is zero, but the horizontal component remains constant throughout the flight.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "A ball is thrown horizontally at 10 m/s from a cliff 20 m high. How long does it take to hit the ground?",
+      "options": [
+        "1.0 s",
+        "2.0 s",
+        "4.0 s",
+        "0.5 s"
+      ],
+      "answer": "2.0 s",
+      "explanation": "Using y = ½gt²: 20 = ½(10)t², t² = 4.0, t = 2.0 s (using g ≈ 10 m/s² for simplicity).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "Which launch angle gives the maximum horizontal range for a projectile launched from and landing at the same height?",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "answer": "45°",
+      "explanation": "Range is maximized at 45° because it balances the horizontal component (cos θ) and the time of flight, which depends on the vertical component (sin θ).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 4,
+      "question": "For a projectile (no air resistance), the horizontal acceleration is:",
+      "options": [
+        "9.8 m/s² downward",
+        "9.8 m/s² in the direction of motion",
+        "Zero",
+        "Equal to the vertical acceleration"
+      ],
+      "answer": "Zero",
+      "explanation": "In the absence of air resistance, no horizontal force acts on a projectile, so its horizontal acceleration is zero and horizontal velocity is constant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 5,
+      "question": "True or False: The answer to \"At the highest point of a projectile's trajectory, which statement is true\" is: vy = 0 but vx is unchanged.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. vy = 0 but vx is unchanged is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Newton's first law states that an object remains at rest or in uniform motion unless:",
+      "options": [
+        "It is on a frictionless surface",
+        "Acted upon by a net external force",
+        "Its mass is constant",
+        "Gravity is absent"
+      ],
+      "answer": "Acted upon by a net external force",
+      "explanation": "Newton's first law (law of inertia) states that an object's state of motion only changes when a net external force acts on it.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "A 10 kg object experiences a net force of 30 N. What is its acceleration?",
+      "options": [
+        "300 m/s²",
+        "0.33 m/s²",
+        "3.0 m/s²",
+        "10 m/s²"
+      ],
+      "answer": "3.0 m/s²",
+      "explanation": "a = F/m = 30 N / 10 kg = 3.0 m/s².",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Newton's third law states that for every action there is:",
+      "options": [
+        "A larger reaction in the same direction",
+        "An equal and opposite reaction on the same object",
+        "An equal and opposite reaction on a different object",
+        "No reaction if the objects are not in contact"
+      ],
+      "answer": "An equal and opposite reaction on a different object",
+      "explanation": "Newton's third law action-reaction forces are equal in magnitude and opposite in direction, but act on different objects.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 4,
+      "question": "True or False: The answer to \"Newton's first law states that an object remains at rest or in uniform motion unless:\" is: Acted upon by a net external force.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Acted upon by a net external force is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 5,
+      "question": "True or False: The answer to \"A 10 kg object experiences a net force of 30 N. What is its acceleration\" is: 300 m/s².",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: 3.0 m/s².",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "The maximum static friction force is described by:",
+      "options": [
+        "fs = μk N",
+        "fs ≤ μs N",
+        "fs = μs N always",
+        "fs = mg cosθ only on ramps"
+      ],
+      "answer": "fs ≤ μs N",
+      "explanation": "Static friction can range from zero up to its maximum value μs N; it equals exactly μs N only at the verge of sliding.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "A block on an inclined plane at angle θ. The component of gravity parallel to the slope is:",
+      "options": [
+        "mg cosθ",
+        "mg sinθ",
+        "mg tanθ",
+        "mg / sinθ"
+      ],
+      "answer": "mg sinθ",
+      "explanation": "Resolving gravity along the slope: the component parallel to the incline is mg sinθ (directed down the slope).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "The normal force on a block resting on an incline of angle θ equals:",
+      "options": [
+        "mg sinθ",
+        "mg tanθ",
+        "mg cosθ",
+        "mg"
+      ],
+      "answer": "mg cosθ",
+      "explanation": "The normal force is perpendicular to the incline surface and balances the component of gravity perpendicular to the surface: N = mg cosθ.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 4,
+      "question": "Which friction force acts on a block that is already sliding?",
+      "options": [
+        "Static friction",
+        "Maximum static friction",
+        "Kinetic friction",
+        "No friction"
+      ],
+      "answer": "Kinetic friction",
+      "explanation": "Once an object is in motion, kinetic (sliding) friction acts, which is generally less than maximum static friction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 5,
+      "question": "True or False: The answer to \"The maximum static friction force is described by:\" is: fs ≤ μs N.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. fs ≤ μs N is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "Work done by a force is calculated as:",
+      "options": [
+        "W = Fvt",
+        "W = F × d × sinθ",
+        "W = F × d × cosθ",
+        "W = mad"
+      ],
+      "answer": "W = F × d × cosθ",
+      "explanation": "Work = Force × displacement × cos(angle between force and displacement): W = Fd cosθ.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "A force perpendicular to the displacement of an object does:",
+      "options": [
+        "Positive work",
+        "Negative work",
+        "Zero work",
+        "Maximum work"
+      ],
+      "answer": "Zero work",
+      "explanation": "W = Fd cos90° = 0. A force perpendicular to motion (like the normal force) does no work.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "The kinetic energy of a 4.0 kg object moving at 6.0 m/s is:",
+      "options": [
+        "24 J",
+        "12 J",
+        "72 J",
+        "144 J"
+      ],
+      "answer": "72 J",
+      "explanation": "KE = ½mv² = ½(4.0)(6.0)² = ½(4.0)(36) = 72 J.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 4,
+      "question": "True or False: The answer to \"Work done by a force is calculated as:\" is: W = F × d × cosθ.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. W = F × d × cosθ is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 5,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a machine does 1200 j of work in 4.0 s. what is its power output.\"",
+      "options": null,
+      "answer": "300 W",
+      "explanation": "The correct answer is: 300 W.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "The gravitational potential energy of a 2.0 kg mass at a height of 5.0 m is: (g = 10 m/s²)",
+      "options": [
+        "10 J",
+        "100 J",
+        "25 J",
+        "50 J"
+      ],
+      "answer": "100 J",
+      "explanation": "PE = mgh = (2.0)(10)(5.0) = 100 J.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "A ball is released from rest at height h. Using conservation of energy, its speed at the bottom is:",
+      "options": [
+        "v = √(gh)",
+        "v = √(2gh)",
+        "v = 2gh",
+        "v = gh/2"
+      ],
+      "answer": "v = √(2gh)",
+      "explanation": "mgh = ½mv², solving for v: v = √(2gh).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Elastic potential energy stored in a spring compressed by x is:",
+      "options": [
+        "PE = kx",
+        "PE = ½kx",
+        "PE = kx²",
+        "PE = ½kx²"
+      ],
+      "answer": "PE = ½kx²",
+      "explanation": "The elastic potential energy of a spring follows Hooke's law: PE = ½kx², where k is the spring constant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 4,
+      "question": "When friction is present, the total mechanical energy of a sliding block:",
+      "options": [
+        "Is conserved exactly",
+        "Increases due to heat generation",
+        "Decreases because friction is a nonconservative force",
+        "Stays constant because energy is conserved"
+      ],
+      "answer": "Decreases because friction is a nonconservative force",
+      "explanation": "Friction converts mechanical energy to thermal energy, so total mechanical energy (KE + PE) decreases.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 5,
+      "question": "A pendulum swings from rest at its highest point. At the lowest point:",
+      "options": [
+        "KE is maximum and PE is minimum",
+        "KE is minimum and PE is maximum",
+        "KE equals PE",
+        "Both KE and PE are zero"
+      ],
+      "answer": "KE is maximum and PE is minimum",
+      "explanation": "At the lowest point of a pendulum's swing, all gravitational PE has converted to KE, making KE maximum and PE minimum.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "The momentum of a 2.0 kg object moving at 8.0 m/s is:",
+      "options": [
+        "4.0 kg·m/s",
+        "16 kg·m/s",
+        "10 kg·m/s",
+        "6.0 kg·m/s"
+      ],
+      "answer": "16 kg·m/s",
+      "explanation": "p = mv = (2.0)(8.0) = 16 kg·m/s.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Impulse has the same units as:",
+      "options": [
+        "Energy",
+        "Force",
+        "Power",
+        "Momentum"
+      ],
+      "answer": "Momentum",
+      "explanation": "Impulse = FΔt [N·s = kg·m/s], which are the same units as momentum.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "The impulse-momentum theorem states:",
+      "options": [
+        "J = Δp",
+        "J = F/t",
+        "J = ma",
+        "J = ΔKE"
+      ],
+      "answer": "J = Δp",
+      "explanation": "The impulse-momentum theorem: the net impulse on an object equals the change in its momentum (J = Δp).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 4,
+      "question": "True or False: The answer to \"The momentum of a 2.0 kg object moving at 8.0 m/s is:\" is: 16 kg·m/s.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 16 kg·m/s is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "Conservation of momentum applies when:",
+      "options": [
+        "The net external force on the system is zero",
+        "No internal forces are present",
+        "Kinetic energy is conserved",
+        "The collision is elastic"
+      ],
+      "answer": "The net external force on the system is zero",
+      "explanation": "Momentum is conserved in an isolated system (zero net external force), regardless of the nature of internal forces.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "In a perfectly inelastic collision:",
+      "options": [
+        "Kinetic energy is conserved",
+        "The objects bounce off each other",
+        "The objects stick together",
+        "Momentum is not conserved"
+      ],
+      "answer": "The objects stick together",
+      "explanation": "In a perfectly inelastic collision, the colliding objects stick together and move with a common final velocity; kinetic energy is not conserved.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "A 3.0 kg cart moving at 4.0 m/s collides and sticks with a 1.0 kg stationary cart. What is their final velocity?",
+      "options": [
+        "4.0 m/s",
+        "3.0 m/s",
+        "1.0 m/s",
+        "2.0 m/s"
+      ],
+      "answer": "3.0 m/s",
+      "explanation": "Using momentum conservation: (3.0)(4.0) = (3.0 + 1.0)v_f; v_f = 12/4 = 3.0 m/s.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 4,
+      "question": "In a perfectly elastic collision, which quantities are both conserved?",
+      "options": [
+        "Momentum and kinetic energy",
+        "Momentum and potential energy",
+        "Kinetic energy and force",
+        "Mass and acceleration"
+      ],
+      "answer": "Momentum and kinetic energy",
+      "explanation": "Elastic collisions conserve both total momentum and total kinetic energy of the system.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 5,
+      "question": "True or False: The answer to \"Conservation of momentum applies when:\" is: The net external force on the system is zero.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The net external force on the system is zero is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Centripetal acceleration always points:",
+      "options": [
+        "In the direction of velocity",
+        "Opposite to velocity",
+        "Toward the center of the circular path",
+        "Away from the center of the circular path"
+      ],
+      "answer": "Toward the center of the circular path",
+      "explanation": "Centripetal acceleration is always directed toward the center of the circular path, causing the continuous change in direction of velocity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "The centripetal force on an object in circular motion is provided by:",
+      "options": [
+        "A special outward force called centrifugal force",
+        "Whatever net inward force exists in that physical situation",
+        "Gravity alone in all cases",
+        "Friction alone in all cases"
+      ],
+      "answer": "Whatever net inward force exists in that physical situation",
+      "explanation": "Centripetal force is not a separate force; it is the net inward force provided by whatever forces are present (tension, friction, gravity, normal force).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "A car of mass m travels at speed v around a flat circular track of radius r. The centripetal force required is:",
+      "options": [
+        "mv/r",
+        "mv²r",
+        "mv²/r",
+        "m²v/r"
+      ],
+      "answer": "mv²/r",
+      "explanation": "Centripetal force F_c = mv²/r, directed toward the center of the circular path.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 4,
+      "question": "True or False: The answer to \"Centripetal acceleration always points:\" is: Toward the center of the circular path.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Toward the center of the circular path is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 5,
+      "question": "True or False: The answer to \"The centripetal force on an object in circular motion is provided by:\" is: A special outward force called centrifugal force.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Whatever net inward force exists in that physical situation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Newton's law of universal gravitation states that the gravitational force between two masses is:",
+      "options": [
+        "Directly proportional to both masses and inversely proportional to distance",
+        "Directly proportional to both masses and inversely proportional to the square of the distance",
+        "Inversely proportional to both masses",
+        "Proportional to distance"
+      ],
+      "answer": "Directly proportional to both masses and inversely proportional to the square of the distance",
+      "explanation": "F = Gm₁m₂/r²; force is proportional to each mass and inversely proportional to the square of the separation distance.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "If the distance between two masses is doubled, the gravitational force between them:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Decreases by a factor of 4",
+        "Increases by a factor of 4"
+      ],
+      "answer": "Decreases by a factor of 4",
+      "explanation": "Since F ∝ 1/r², doubling r gives F' = F/(2)² = F/4; the force decreases to one-quarter.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "Kepler's third law states that the square of a planet's orbital period is proportional to:",
+      "options": [
+        "Its orbital speed",
+        "The cube of its average orbital radius",
+        "Its mass",
+        "The gravitational constant G"
+      ],
+      "answer": "The cube of its average orbital radius",
+      "explanation": "Kepler's third law: T² ∝ r³ (or T² = (4π²/GM)r³), derived from combining Newton's gravitational law with circular orbit dynamics.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 4,
+      "question": "A satellite in a higher orbit compared to one in a lower orbit has:",
+      "options": [
+        "Greater orbital speed and shorter period",
+        "Lower orbital speed and longer period",
+        "The same orbital speed",
+        "Greater orbital speed and longer period"
+      ],
+      "answer": "Lower orbital speed and longer period",
+      "explanation": "From v = √(GM/r), orbital speed decreases with increasing r; from T² ∝ r³, period increases with r.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 5,
+      "question": "True or False: The answer to \"Newton's law of universal gravitation states that the gravitational force between two masses is:\" is: Directly proportional to both masses and inversely proportional to the square of the distance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Directly proportional to both masses and inversely proportional to the square of the distance is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "Torque is calculated as τ = rF sinθ, where θ is the angle between:",
+      "options": [
+        "The force and the horizontal",
+        "The position vector r and the force F",
+        "The torque and the angular velocity",
+        "The radius and the vertical"
+      ],
+      "answer": "The position vector r and the force F",
+      "explanation": "Torque τ = r × F; the magnitude is rF sinθ, where θ is the angle between the position vector (from pivot to point of force application) and the force vector.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "For an object to be in static equilibrium, which TWO conditions must be satisfied?",
+      "options": [
+        "ΣF = 0 and ΣKE = 0",
+        "ΣF = 0 and Στ = 0",
+        "Στ = 0 and ΣE = constant",
+        "ΣF = ma and Στ = Iα"
+      ],
+      "answer": "ΣF = 0 and Στ = 0",
+      "explanation": "Static equilibrium requires both translational equilibrium (net force = 0) and rotational equilibrium (net torque = 0).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "The moment of inertia of an object depends on:",
+      "options": [
+        "Only its mass",
+        "Only its shape",
+        "Both its mass and how that mass is distributed relative to the rotation axis",
+        "Only its angular velocity"
+      ],
+      "answer": "Both its mass and how that mass is distributed relative to the rotation axis",
+      "explanation": "Moment of inertia I = Σmr² depends on the total mass AND how far each mass element is from the rotation axis.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 4,
+      "question": "True or False: The answer to \"Torque is calculated as τ = rF sinθ, where θ is the angle between:\" is: The position vector r and the force F.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The position vector r and the force F is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 5,
+      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a force of 10 n is applied perpendicular to the end of a wrench that is 0.30 m long. the torque applied to the bolt is:.\"",
+      "options": null,
+      "answer": "3.0 N·m",
+      "explanation": "The correct answer is: 3.0 N·m.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "The rotational kinetic energy of a spinning object is:",
+      "options": [
+        "KE = ½mv²",
+        "KE = ½Iω²",
+        "KE = Iα",
+        "KE = τω"
+      ],
+      "answer": "KE = ½Iω²",
+      "explanation": "Rotational kinetic energy KE_rot = ½Iω², the rotational analog of translational KE = ½mv².",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "When a rolling object goes down a ramp without slipping, energy is distributed between:",
+      "options": [
+        "Only translational kinetic energy",
+        "Only rotational kinetic energy",
+        "Translational kinetic energy, rotational kinetic energy, and loss to friction",
+        "Translational and rotational kinetic energy, with less speed than a sliding object"
+      ],
+      "answer": "Translational and rotational kinetic energy, with less speed than a sliding object",
+      "explanation": "A rolling object has both KE_trans and KE_rot; total KE = ½mv² + ½Iω². This means less speed than a frictionless sliding object.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "Angular momentum L of a rotating object is defined as:",
+      "options": [
+        "L = mv",
+        "L = Iω",
+        "L = Iα",
+        "L = τ/ω"
+      ],
+      "answer": "L = Iω",
+      "explanation": "Angular momentum L = Iω, the rotational analog of linear momentum p = mv.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "If no net external torque acts on a system, angular momentum is:",
+      "options": [
+        "Increasing at rate τ",
+        "Decreasing because of rotational friction",
+        "Conserved (constant)",
+        "Zero"
+      ],
+      "answer": "Conserved (constant)",
+      "explanation": "Conservation of angular momentum: if τ_net = 0, then ΔL/Δt = 0, so L = Iω = constant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 5,
+      "question": "A spinning figure skater pulls her arms in, reducing her moment of inertia to half. Her angular velocity will:",
+      "options": [
+        "Halve",
+        "Remain the same",
+        "Double",
+        "Quadruple"
+      ],
+      "answer": "Double",
+      "explanation": "L = Iω is conserved. If I decreases to I/2, then ω must double to keep Iω constant.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "The period of a mass-spring system in simple harmonic motion is:",
+      "options": [
+        "T = 2π√(k/m)",
+        "T = 2π√(m/k)",
+        "T = 2π√(m/g)",
+        "T = 2π√(g/L)"
+      ],
+      "answer": "T = 2π√(m/k)",
+      "explanation": "For a mass m on a spring with constant k: T = 2π√(m/k). Period increases with mass and decreases with stiffer spring.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "In simple harmonic motion, the restoring force is:",
+      "options": [
+        "Constant in magnitude",
+        "Proportional to displacement and directed away from equilibrium",
+        "Proportional to displacement and directed toward equilibrium",
+        "Independent of displacement"
+      ],
+      "answer": "Proportional to displacement and directed toward equilibrium",
+      "explanation": "The restoring force F = −kx is proportional to displacement x and always directed back toward the equilibrium position.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "In SHM, the maximum velocity occurs at:",
+      "options": [
+        "Maximum displacement (amplitude)",
+        "Equilibrium position",
+        "Halfway between equilibrium and amplitude",
+        "Any point with zero acceleration"
+      ],
+      "answer": "Equilibrium position",
+      "explanation": "At equilibrium, all energy is kinetic, so velocity is maximum. At maximum displacement, all energy is potential and velocity is zero.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 4,
+      "question": "True or False: The answer to \"The period of a mass-spring system in simple harmonic motion is:\" is: T = 2π√(m/k).",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. T = 2π√(m/k) is correct.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "In a transverse wave, the particles of the medium vibrate:",
+      "options": [
+        "Parallel to the direction of wave propagation",
+        "Perpendicular to the direction of wave propagation",
+        "In random directions",
+        "In circular paths"
+      ],
+      "answer": "Perpendicular to the direction of wave propagation",
+      "explanation": "In transverse waves (e.g., light, rope waves), the medium oscillates perpendicular to the wave's propagation direction.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Sound is which type of wave?",
+      "options": [
+        "Transverse mechanical wave",
+        "Electromagnetic wave",
+        "Longitudinal mechanical wave",
+        "Transverse electromagnetic wave"
+      ],
+      "answer": "Longitudinal mechanical wave",
+      "explanation": "Sound waves are longitudinal mechanical waves—compressions and rarefactions propagate in the same direction as the wave travels.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "A wave has a frequency of 50 Hz and wavelength 4.0 m. What is its wave speed?",
+      "options": [
+        "12.5 m/s",
+        "54 m/s",
+        "200 m/s",
+        "46 m/s"
+      ],
+      "answer": "200 m/s",
+      "explanation": "v = fλ = (50 Hz)(4.0 m) = 200 m/s.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 4,
+      "question": "The Doppler effect predicts that a sound source moving toward a stationary observer is heard at:",
+      "options": [
+        "A lower frequency than emitted",
+        "The same frequency as emitted",
+        "A higher frequency than emitted",
+        "Zero frequency"
+      ],
+      "answer": "A higher frequency than emitted",
+      "explanation": "As a source moves toward an observer, wave fronts are compressed, decreasing wavelength and increasing the observed frequency.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 5,
+      "question": "True or False: The answer to \"In a transverse wave, the particles of the medium vibrate:\" is: Perpendicular to the direction of wave propagation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Perpendicular to the direction of wave propagation is correct.",
+      "points": 1
+    }
   ],
   "questions": [
-    { "examType": "midterm", "order": 1, "type": "mc", "question": "A ball is thrown straight up with an initial velocity of 20 m/s. How long does it take to reach maximum height? (g = 10 m/s²)", "options": ["1.0 s", "2.0 s", "4.0 s", "10 s"], "answer": "2.0 s", "explanation": "At maximum height v = 0. Using v = v₀ − gt: 0 = 20 − 10t, t = 2.0 s.", "points": 1 },
-    { "examType": "midterm", "order": 2, "type": "mc", "question": "A projectile is launched horizontally at 15 m/s from a height of 45 m. What is the horizontal distance traveled when it lands? (g = 10 m/s²)", "options": ["30 m", "45 m", "15 m", "67.5 m"], "answer": "45 m", "explanation": "Time to fall: 45 = ½(10)t², t = 3.0 s. Horizontal distance: x = v₀t = 15(3.0) = 45 m.", "points": 1 },
-    { "examType": "midterm", "order": 3, "type": "mc", "question": "A 10 kg box accelerates at 2.0 m/s² across a frictionless surface. What is the net force on the box?", "options": ["5.0 N", "12 N", "20 N", "98 N"], "answer": "20 N", "explanation": "F_net = ma = (10)(2.0) = 20 N.", "points": 1 },
-    { "examType": "midterm", "order": 4, "type": "mc", "question": "A 5.0 kg block is pushed along a horizontal surface with a coefficient of kinetic friction μk = 0.40. What is the friction force? (g = 10 m/s²)", "options": ["5.0 N", "20 N", "40 N", "50 N"], "answer": "20 N", "explanation": "f_k = μk × N = μk × mg = 0.40 × 5.0 × 10 = 20 N.", "points": 1 },
-    { "examType": "midterm", "order": 5, "type": "mc", "question": "How much work does it take to push a 20 kg box 5.0 m up a frictionless ramp at a constant velocity if the ramp makes 30° with the horizontal? (g = 10 m/s²)", "options": ["100 J", "500 J", "866 J", "1000 J"], "answer": "500 J", "explanation": "Work against gravity = mgh = mg(d sinθ) = 20(10)(5.0)(sin30°) = 20(10)(5.0)(0.5) = 500 J.", "points": 1 },
-    { "examType": "midterm", "order": 6, "type": "mc", "question": "A spring with k = 400 N/m is compressed 0.20 m. How much elastic potential energy is stored?", "options": ["8.0 J", "16 J", "40 J", "80 J"], "answer": "8.0 J", "explanation": "PE_spring = ½kx² = ½(400)(0.20)² = ½(400)(0.04) = 8.0 J.", "points": 1 },
-    { "examType": "midterm", "order": 7, "type": "mc", "question": "A 0.25 kg ball moving at 12 m/s strikes a wall and rebounds at 12 m/s. The magnitude of the impulse is:", "options": ["0 N·s", "3.0 N·s", "6.0 N·s", "12 N·s"], "answer": "6.0 N·s", "explanation": "J = Δp = m(v_f − v_i) = 0.25(−12 − 12) = −6.0 N·s; magnitude = 6.0 N·s.", "points": 1 },
-    { "examType": "midterm", "order": 8, "type": "mc", "question": "A 1.0 kg cart moves right at 3.0 m/s and a 2.0 kg cart moves left at 1.5 m/s. They collide and stick. What is their final velocity?", "options": ["0 m/s", "1.0 m/s to the right", "0.5 m/s to the right", "2.0 m/s to the left"], "answer": "0 m/s", "explanation": "p_total = (1.0)(3.0) + (2.0)(−1.5) = 3.0 − 3.0 = 0. So v_f = 0/(1.0 + 2.0) = 0 m/s.", "points": 1 },
-    { "examType": "midterm", "order": 9, "type": "mc", "question": "An object moves in a circle of radius 2.0 m at a constant speed of 4.0 m/s. Its centripetal acceleration is:", "options": ["2.0 m/s²", "4.0 m/s²", "8.0 m/s²", "16 m/s²"], "answer": "8.0 m/s²", "explanation": "a_c = v²/r = (4.0)²/2.0 = 16/2.0 = 8.0 m/s².", "points": 1 },
-    { "examType": "midterm", "order": 10, "type": "mc", "question": "The gravitational force between two objects is F. If the mass of one object is tripled and the distance is kept the same, the new force is:", "options": ["F/3", "F", "3F", "9F"], "answer": "3F", "explanation": "F ∝ m₁m₂/r². Tripling one mass triples the force: F_new = 3F.", "points": 1 },
-    { "examType": "midterm", "order": 11, "type": "mc", "question": "A 4.0 kg object moving at 6.0 m/s has kinetic energy of 72 J. If a net force does 128 J of work on it, what is its new KE?", "options": ["56 J", "128 J", "200 J", "72 J"], "answer": "200 J", "explanation": "By the work-energy theorem: KE_f = KE_i + W_net = 72 + 128 = 200 J.", "points": 1 },
-    { "examType": "midterm", "order": 12, "type": "mc", "question": "A 3.0 kg block on a ramp inclined at 20° is in static equilibrium. The component of gravity along the ramp is (g = 10 m/s²):", "options": ["30 N", "10.3 N", "28.2 N", "20.5 N"], "answer": "10.3 N", "explanation": "F_parallel = mg sinθ = 3.0 × 10 × sin20° = 30 × 0.342 ≈ 10.3 N.", "points": 1 },
-    { "examType": "midterm", "order": 13, "type": "mc", "question": "At which position in SHM does the object have maximum acceleration?", "options": ["At the equilibrium position", "Halfway between equilibrium and amplitude", "At maximum displacement (amplitude)", "At the point of maximum velocity"], "answer": "At maximum displacement (amplitude)", "explanation": "Acceleration in SHM: a = −(k/m)x. Acceleration is maximum when displacement x is maximum (at amplitude).", "points": 1 },
-    { "examType": "midterm", "order": 14, "type": "mc", "question": "Which of the following correctly states Kepler's third law?", "options": ["Each planet moves in an ellipse with the Sun at one focus", "A planet sweeps equal areas in equal times", "T² is proportional to r³ where r is the mean orbital radius", "Orbital speed is constant for each planet"], "answer": "T² is proportional to r³ where r is the mean orbital radius", "explanation": "Kepler's third law: T² ∝ r³. Planets farther from the Sun have longer periods following this relationship.", "points": 1 },
-    { "examType": "midterm", "order": 15, "type": "mc", "question": "For a mass on a spring in SHM, if the spring constant is quadrupled while the mass remains the same, the period:", "options": ["Doubles", "Halves", "Quadruples", "Remains the same"], "answer": "Halves", "explanation": "T = 2π√(m/k). Quadrupling k gives T_new = 2π√(m/4k) = T/2; the period halves.", "points": 1 },
-    { "examType": "final", "order": 1, "type": "mc", "question": "An object is thrown upward at 30 m/s. What is its maximum height? (g = 10 m/s²)", "options": ["15 m", "45 m", "90 m", "30 m"], "answer": "45 m", "explanation": "Using v² = v₀² − 2gh: 0 = 900 − 20h, h = 45 m.", "points": 1 },
-    { "examType": "final", "order": 2, "type": "mc", "question": "A 60 kg person stands on a scale in an elevator accelerating upward at 2.0 m/s². What does the scale read? (g = 10 m/s²)", "options": ["480 N", "600 N", "720 N", "120 N"], "answer": "720 N", "explanation": "Scale reads N = m(g + a) = 60(10 + 2.0) = 60(12) = 720 N.", "points": 1 },
-    { "examType": "final", "order": 3, "type": "mc", "question": "A ball rolls off a table of height 1.25 m with a horizontal velocity of 2.0 m/s. How far from the table's base does it land? (g = 10 m/s²)", "options": ["0.50 m", "1.0 m", "2.0 m", "2.5 m"], "answer": "1.0 m", "explanation": "Time to fall: 1.25 = ½(10)t², t = 0.50 s. Horizontal distance: x = 2.0 × 0.50 = 1.0 m.", "points": 1 },
-    { "examType": "final", "order": 4, "type": "mc", "question": "In a head-on elastic collision between a heavy object (M) and a lighter object (m, initially at rest), the lighter object:", "options": ["Remains stationary", "Moves in the same direction as M with a slow speed", "Is launched forward at up to twice the initial speed of M", "Always moves in the opposite direction to M"], "answer": "Is launched forward at up to twice the initial speed of M", "explanation": "In the limiting case M >> m, the light object rebounds at approximately 2v_M (where v_M is the initial heavy object speed), and the heavy object's speed is nearly unchanged.", "points": 1 },
-    { "examType": "final", "order": 5, "type": "mc", "question": "A torque of 12 N·m is applied to a wheel with moment of inertia 4.0 kg·m². The angular acceleration is:", "options": ["48 rad/s²", "3.0 rad/s²", "8.0 rad/s²", "0.33 rad/s²"], "answer": "3.0 rad/s²", "explanation": "τ = Iα → α = τ/I = 12/4.0 = 3.0 rad/s².", "points": 1 },
-    { "examType": "final", "order": 6, "type": "mc", "question": "A solid disk and a hollow ring of equal mass and radius roll down a ramp from the same height. Which reaches the bottom first?", "options": ["The hollow ring", "The solid disk", "They reach the bottom at the same time", "The answer depends on which is heavier"], "answer": "The solid disk", "explanation": "The solid disk has less rotational inertia (I = ½MR²) than the hollow ring (I = MR²), so more energy goes to translation and it accelerates faster.", "points": 1 },
-    { "examType": "final", "order": 7, "type": "mc", "question": "A satellite orbiting at radius r has speed v. If it moves to an orbit at radius 4r, its new orbital speed is:", "options": ["4v", "2v", "v/2", "v/4"], "answer": "v/2", "explanation": "Orbital speed v = √(GM/r) ∝ 1/√r. Quadrupling r gives v_new = v/√4 = v/2.", "points": 1 },
-    { "examType": "final", "order": 8, "type": "mc", "question": "An object undergoing SHM has a position x(t) = 0.10 cos(4πt) m. Its maximum speed is:", "options": ["0.10 m/s", "0.40 m/s", "4π m/s × 0.10", "4π × 0.10 m/s"], "answer": "4π × 0.10 m/s", "explanation": "For x = A cos(ωt), v_max = Aω = 0.10 × 4π ≈ 1.26 m/s (expressed as 4π × 0.10 m/s).", "points": 1 },
-    { "examType": "final", "order": 9, "type": "mc", "question": "A 0.50 kg mass on a spring (k = 50 N/m) oscillates with amplitude 0.20 m. Its maximum speed is:", "options": ["1.0 m/s", "2.0 m/s", "4.0 m/s", "0.20 m/s"], "answer": "2.0 m/s", "explanation": "v_max = A√(k/m) = 0.20√(50/0.50) = 0.20√100 = 0.20 × 10 = 2.0 m/s.", "points": 1 },
-    { "examType": "final", "order": 10, "type": "mc", "question": "A sound wave with frequency 500 Hz travels at 340 m/s. Its wavelength is:", "options": ["0.68 m", "1.47 m", "170 m", "0.17 m"], "answer": "0.68 m", "explanation": "λ = v/f = 340/500 = 0.68 m.", "points": 1 },
-    { "examType": "final", "order": 11, "type": "mc", "question": "A source emits a 600 Hz tone moving toward a stationary observer at 34 m/s. Using v_sound = 340 m/s, the observed frequency is:", "options": ["540 Hz", "600 Hz", "660 Hz", "700 Hz"], "answer": "660 Hz", "explanation": "f_obs = f × v/(v − v_s) = 600 × 340/(340 − 34) = 600 × 340/306 = 600 × 1.111 ≈ 667 Hz ≈ 660 Hz (closest answer).", "points": 1 },
-    { "examType": "final", "order": 12, "type": "mc", "question": "A 5.0 kg ball swings on a 2.0 m string in a vertical circle. What is the minimum speed at the top of the circle to maintain tension? (g = 10 m/s²)", "options": ["√10 m/s", "√20 m/s", "√5 m/s", "10 m/s"], "answer": "√20 m/s", "explanation": "At minimum speed at the top, N = 0: mg = mv²/r, v_min = √(gr) = √(10 × 2.0) = √20 ≈ 4.5 m/s.", "points": 1 },
-    { "examType": "final", "order": 13, "type": "mc", "question": "Conservation of angular momentum explains why a collapsing star (decreasing r) spins faster because:", "options": ["Its gravitational potential energy increases", "Its moment of inertia decreases, so angular velocity must increase to conserve L = Iω", "External torques accelerate it", "Its mass increases during collapse"], "answer": "Its moment of inertia decreases, so angular velocity must increase to conserve L = Iω", "explanation": "As the star collapses, r decreases and I = Σmr² decreases. With no external torque, L = Iω is conserved, so ω must increase.", "points": 1 },
-    { "examType": "final", "order": 14, "type": "mc", "question": "Two waves of amplitude A travel in the same medium and meet. At a point where they are exactly out of phase (180°), the resulting amplitude is:", "options": ["2A", "A", "A/2", "Zero"], "answer": "Zero", "explanation": "Completely out-of-phase waves undergo destructive interference: the displacements cancel and the net amplitude is zero.", "points": 1 },
-    { "examType": "final", "order": 15, "type": "mc", "question": "A beam of mass 20 kg and length 4.0 m is pivoted at one end. A 40 N force is applied straight down at the other end. What is the torque about the pivot?", "options": ["80 N·m", "160 N·m", "40 N·m", "20 N·m"], "answer": "160 N·m", "explanation": "τ = rF sinθ = (4.0 m)(40 N)(sin90°) = 160 N·m.", "points": 1 },
-    { "examType": "final", "order": 16, "type": "mc", "question": "An object starts from rest and rolls without slipping down a 5.0 m ramp inclined at 30°. The height descended is 2.5 m. Using energy conservation (solid cylinder I = ½mr²), its speed at the bottom is approximately:", "options": ["5.0 m/s", "7.0 m/s", "4.1 m/s", "3.0 m/s"], "answer": "4.1 m/s", "explanation": "mgh = ½mv² + ½(½mr²)(v/r)² = ¾mv². So v = √(4gh/3) = √(4 × 10 × 2.5/3) = √(33.3) ≈ 5.8 m/s. Closest answer shown accounting for typical rounding is approximately 4.1 m/s if g=9.8 is used: √(4×9.8×2.5/3) ≈ √32.7 ≈ 5.7; selecting the closest available distractor.", "points": 1 },
-    { "examType": "final", "order": 17, "type": "mc", "question": "A pendulum is taken to the Moon where g = 1.6 m/s² (compared to Earth's 9.8 m/s²). Its period compared to Earth is:", "options": ["Shorter by factor √(9.8/1.6)", "Longer by factor √(9.8/1.6)", "The same", "Longer by factor 9.8/1.6"], "answer": "Longer by factor √(9.8/1.6)", "explanation": "T = 2π√(L/g); since g_moon < g_earth, T_moon = T_earth × √(g_earth/g_moon) = T_earth × √(9.8/1.6).", "points": 1 },
-    { "examType": "final", "order": 18, "type": "mc", "question": "In the Doppler effect, a stationary observer hears a higher frequency than emitted when:", "options": ["The source is moving away from the observer", "The source is stationary and the observer moves away", "The source is moving toward the observer", "Both source and observer move in the same direction at the same speed"], "answer": "The source is moving toward the observer", "explanation": "A source moving toward an observer compresses the wave fronts in front of it, increasing the frequency heard by the stationary observer.", "points": 1 },
-    { "examType": "final", "order": 19, "type": "mc", "question": "Which of the following represents the correct relationship for elastic potential energy in Hooke's Law?", "options": ["F = kx and PE = kx", "F = kx and PE = ½kx²", "F = ½kx and PE = kx²", "F = kx² and PE = ½kx"], "answer": "F = kx and PE = ½kx²", "explanation": "Hooke's Law: F = kx (force is proportional to displacement); the work done (elastic PE) stored in the spring is the area under the F-x graph: PE = ½kx².", "points": 1 },
-    { "examType": "final", "order": 20, "type": "mc", "question": "A 2000 kg car traveling at 25 m/s brakes to a stop. The magnitude of the average braking force if stopping distance is 50 m is:", "options": ["12,500 N", "625 N", "1000 N", "50,000 N"], "answer": "12,500 N", "explanation": "Using work-energy: F × d = ΔKE = ½mv² = ½(2000)(25)² = 625,000 J. F = 625,000 / 50 = 12,500 N.", "points": 1 }
-  ]
+    {
+      "examType": "midterm",
+      "order": 1,
+      "type": "mc",
+      "question": "A ball is thrown straight up with an initial velocity of 20 m/s. How long does it take to reach maximum height? (g = 10 m/s²)",
+      "options": [
+        "1.0 s",
+        "2.0 s",
+        "4.0 s",
+        "10 s"
+      ],
+      "answer": "2.0 s",
+      "explanation": "At maximum height v = 0. Using v = v₀ − gt: 0 = 20 − 10t, t = 2.0 s.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "type": "mc",
+      "question": "A projectile is launched horizontally at 15 m/s from a height of 45 m. What is the horizontal distance traveled when it lands? (g = 10 m/s²)",
+      "options": [
+        "30 m",
+        "45 m",
+        "15 m",
+        "67.5 m"
+      ],
+      "answer": "45 m",
+      "explanation": "Time to fall: 45 = ½(10)t², t = 3.0 s. Horizontal distance: x = v₀t = 15(3.0) = 45 m.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "type": "mc",
+      "question": "A 10 kg box accelerates at 2.0 m/s² across a frictionless surface. What is the net force on the box?",
+      "options": [
+        "5.0 N",
+        "12 N",
+        "20 N",
+        "98 N"
+      ],
+      "answer": "20 N",
+      "explanation": "F_net = ma = (10)(2.0) = 20 N.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "type": "tf",
+      "question": "True or False: The answer to \"A 5.0 kg block is pushed along a horizontal surface with a coefficient of kinetic friction μk = 0.40. What is the friction force? (g = 10 m/s²)\" is: 20 N.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 20 N is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "type": "mc",
+      "question": "How much work does it take to push a 20 kg box 5.0 m up a frictionless ramp at a constant velocity if the ramp makes 30° with the horizontal? (g = 10 m/s²)",
+      "options": [
+        "100 J",
+        "500 J",
+        "866 J",
+        "1000 J"
+      ],
+      "answer": "500 J",
+      "explanation": "Work against gravity = mgh = mg(d sinθ) = 20(10)(5.0)(sin30°) = 20(10)(5.0)(0.5) = 500 J.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "type": "mc",
+      "question": "A spring with k = 400 N/m is compressed 0.20 m. How much elastic potential energy is stored?",
+      "options": [
+        "8.0 J",
+        "16 J",
+        "40 J",
+        "80 J"
+      ],
+      "answer": "8.0 J",
+      "explanation": "PE_spring = ½kx² = ½(400)(0.20)² = ½(400)(0.04) = 8.0 J.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "type": "fill",
+      "question": "A 0.25 kg ball moving at 12 m/s strikes a wall and rebounds at 12 m/s. The magnitude of the impulse is:",
+      "options": null,
+      "answer": "6.0 N·s",
+      "explanation": "The correct answer is: 6.0 N·s.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "type": "tf",
+      "question": "True or False: The answer to \"A 1.0 kg cart moves right at 3.0 m/s and a 2.0 kg cart moves left at 1.5 m/s. They collide and stick. What is their final velocity\" is: 1.0 m/s to the right.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: 0 m/s.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "type": "mc",
+      "question": "An object moves in a circle of radius 2.0 m at a constant speed of 4.0 m/s. Its centripetal acceleration is:",
+      "options": [
+        "2.0 m/s²",
+        "4.0 m/s²",
+        "8.0 m/s²",
+        "16 m/s²"
+      ],
+      "answer": "8.0 m/s²",
+      "explanation": "a_c = v²/r = (4.0)²/2.0 = 16/2.0 = 8.0 m/s².",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "type": "mc",
+      "question": "The gravitational force between two objects is F. If the mass of one object is tripled and the distance is kept the same, the new force is:",
+      "options": [
+        "F/3",
+        "F",
+        "3F",
+        "9F"
+      ],
+      "answer": "3F",
+      "explanation": "F ∝ m₁m₂/r². Tripling one mass triples the force: F_new = 3F.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "type": "mc",
+      "question": "A 4.0 kg object moving at 6.0 m/s has kinetic energy of 72 J. If a net force does 128 J of work on it, what is its new KE?",
+      "options": [
+        "56 J",
+        "128 J",
+        "200 J",
+        "72 J"
+      ],
+      "answer": "200 J",
+      "explanation": "By the work-energy theorem: KE_f = KE_i + W_net = 72 + 128 = 200 J.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "type": "tf",
+      "question": "True or False: The answer to \"A 3.0 kg block on a ramp inclined at 20° is in static equilibrium. The component of gravity along the ramp is (g = 10 m/s²):\" is: 10.3 N.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 10.3 N is correct.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "type": "mc",
+      "question": "At which position in SHM does the object have maximum acceleration?",
+      "options": [
+        "At the equilibrium position",
+        "Halfway between equilibrium and amplitude",
+        "At maximum displacement (amplitude)",
+        "At the point of maximum velocity"
+      ],
+      "answer": "At maximum displacement (amplitude)",
+      "explanation": "Acceleration in SHM: a = −(k/m)x. Acceleration is maximum when displacement x is maximum (at amplitude).",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "type": "mc",
+      "question": "Which of the following correctly states Kepler's third law?",
+      "options": [
+        "Each planet moves in an ellipse with the Sun at one focus",
+        "A planet sweeps equal areas in equal times",
+        "T² is proportional to r³ where r is the mean orbital radius",
+        "Orbital speed is constant for each planet"
+      ],
+      "answer": "T² is proportional to r³ where r is the mean orbital radius",
+      "explanation": "Kepler's third law: T² ∝ r³. Planets farther from the Sun have longer periods following this relationship.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "type": "mc",
+      "question": "For a mass on a spring in SHM, if the spring constant is quadrupled while the mass remains the same, the period:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Quadruples",
+        "Remains the same"
+      ],
+      "answer": "Halves",
+      "explanation": "T = 2π√(m/k). Quadrupling k gives T_new = 2π√(m/4k) = T/2; the period halves.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "type": "tf",
+      "question": "True or False: The answer to \"An object is thrown upward at 30 m/s. What is its maximum height? (g = 10 m/s²)\" is: 15 m.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: 45 m.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "type": "mc",
+      "question": "A 60 kg person stands on a scale in an elevator accelerating upward at 2.0 m/s². What does the scale read? (g = 10 m/s²)",
+      "options": [
+        "480 N",
+        "600 N",
+        "720 N",
+        "120 N"
+      ],
+      "answer": "720 N",
+      "explanation": "Scale reads N = m(g + a) = 60(10 + 2.0) = 60(12) = 720 N.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "type": "mc",
+      "question": "A ball rolls off a table of height 1.25 m with a horizontal velocity of 2.0 m/s. How far from the table's base does it land? (g = 10 m/s²)",
+      "options": [
+        "0.50 m",
+        "1.0 m",
+        "2.0 m",
+        "2.5 m"
+      ],
+      "answer": "1.0 m",
+      "explanation": "Time to fall: 1.25 = ½(10)t², t = 0.50 s. Horizontal distance: x = 2.0 × 0.50 = 1.0 m.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "type": "mc",
+      "question": "In a head-on elastic collision between a heavy object (M) and a lighter object (m, initially at rest), the lighter object:",
+      "options": [
+        "Remains stationary",
+        "Moves in the same direction as M with a slow speed",
+        "Is launched forward at up to twice the initial speed of M",
+        "Always moves in the opposite direction to M"
+      ],
+      "answer": "Is launched forward at up to twice the initial speed of M",
+      "explanation": "In the limiting case M >> m, the light object rebounds at approximately 2v_M (where v_M is the initial heavy object speed), and the heavy object's speed is nearly unchanged.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "type": "tf",
+      "question": "True or False: The answer to \"A torque of 12 N·m is applied to a wheel with moment of inertia 4.0 kg·m². The angular acceleration is:\" is: 3.0 rad/s².",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 3.0 rad/s² is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "type": "fill",
+      "question": "A solid disk and a hollow ring of equal mass and radius roll down a ramp from the same height. Which reaches the bottom first?",
+      "options": null,
+      "answer": "The solid disk",
+      "explanation": "The correct answer is: The solid disk.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "type": "mc",
+      "question": "A satellite orbiting at radius r has speed v. If it moves to an orbit at radius 4r, its new orbital speed is:",
+      "options": [
+        "4v",
+        "2v",
+        "v/2",
+        "v/4"
+      ],
+      "answer": "v/2",
+      "explanation": "Orbital speed v = √(GM/r) ∝ 1/√r. Quadrupling r gives v_new = v/√4 = v/2.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "type": "mc",
+      "question": "An object undergoing SHM has a position x(t) = 0.10 cos(4πt) m. Its maximum speed is:",
+      "options": [
+        "0.10 m/s",
+        "0.40 m/s",
+        "4π m/s × 0.10",
+        "4π × 0.10 m/s"
+      ],
+      "answer": "4π × 0.10 m/s",
+      "explanation": "For x = A cos(ωt), v_max = Aω = 0.10 × 4π ≈ 1.26 m/s (expressed as 4π × 0.10 m/s).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "type": "tf",
+      "question": "True or False: The answer to \"A 0.50 kg mass on a spring (k = 50 N/m) oscillates with amplitude 0.20 m. Its maximum speed is:\" is: 1.0 m/s.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: 2.0 m/s.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "type": "mc",
+      "question": "A sound wave with frequency 500 Hz travels at 340 m/s. Its wavelength is:",
+      "options": [
+        "0.68 m",
+        "1.47 m",
+        "170 m",
+        "0.17 m"
+      ],
+      "answer": "0.68 m",
+      "explanation": "λ = v/f = 340/500 = 0.68 m.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "type": "mc",
+      "question": "A source emits a 600 Hz tone moving toward a stationary observer at 34 m/s. Using v_sound = 340 m/s, the observed frequency is:",
+      "options": [
+        "540 Hz",
+        "600 Hz",
+        "660 Hz",
+        "700 Hz"
+      ],
+      "answer": "660 Hz",
+      "explanation": "f_obs = f × v/(v − v_s) = 600 × 340/(340 − 34) = 600 × 340/306 = 600 × 1.111 ≈ 667 Hz ≈ 660 Hz (closest answer).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "type": "mc",
+      "question": "A 5.0 kg ball swings on a 2.0 m string in a vertical circle. What is the minimum speed at the top of the circle to maintain tension? (g = 10 m/s²)",
+      "options": [
+        "√10 m/s",
+        "√20 m/s",
+        "√5 m/s",
+        "10 m/s"
+      ],
+      "answer": "√20 m/s",
+      "explanation": "At minimum speed at the top, N = 0: mg = mv²/r, v_min = √(gr) = √(10 × 2.0) = √20 ≈ 4.5 m/s.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "type": "tf",
+      "question": "True or False: The answer to \"Conservation of angular momentum explains why a collapsing star (decreasing r) spins faster because:\" is: Its moment of inertia decreases, so angular velocity must increase to conserve L = Iω.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Its moment of inertia decreases, so angular velocity must increase to conserve L = Iω is correct.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "type": "mc",
+      "question": "Two waves of amplitude A travel in the same medium and meet. At a point where they are exactly out of phase (180°), the resulting amplitude is:",
+      "options": [
+        "2A",
+        "A",
+        "A/2",
+        "Zero"
+      ],
+      "answer": "Zero",
+      "explanation": "Completely out-of-phase waves undergo destructive interference: the displacements cancel and the net amplitude is zero.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "type": "mc",
+      "question": "A beam of mass 20 kg and length 4.0 m is pivoted at one end. A 40 N force is applied straight down at the other end. What is the torque about the pivot?",
+      "options": [
+        "80 N·m",
+        "160 N·m",
+        "40 N·m",
+        "20 N·m"
+      ],
+      "answer": "160 N·m",
+      "explanation": "τ = rF sinθ = (4.0 m)(40 N)(sin90°) = 160 N·m.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "type": "mc",
+      "question": "An object starts from rest and rolls without slipping down a 5.0 m ramp inclined at 30°. The height descended is 2.5 m. Using energy conservation (solid cylinder I = ½mr²), its speed at the bottom is approximately:",
+      "options": [
+        "5.0 m/s",
+        "7.0 m/s",
+        "4.1 m/s",
+        "3.0 m/s"
+      ],
+      "answer": "4.1 m/s",
+      "explanation": "mgh = ½mv² + ½(½mr²)(v/r)² = ¾mv². So v = √(4gh/3) = √(4 × 10 × 2.5/3) = √(33.3) ≈ 5.8 m/s. Closest answer shown accounting for typical rounding is approximately 4.1 m/s if g=9.8 is used: √(4×9.8×2.5/3) ≈ √32.7 ≈ 5.7; selecting the closest available distractor.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "type": "tf",
+      "question": "True or False: The answer to \"A pendulum is taken to the Moon where g = 1.6 m/s² (compared to Earth's 9.8 m/s²). Its period compared to Earth is:\" is: Shorter by factor √(9.8/1.6).",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The correct answer is: Longer by factor √(9.8/1.6).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "type": "mc",
+      "question": "In the Doppler effect, a stationary observer hears a higher frequency than emitted when:",
+      "options": [
+        "The source is moving away from the observer",
+        "The source is stationary and the observer moves away",
+        "The source is moving toward the observer",
+        "Both source and observer move in the same direction at the same speed"
+      ],
+      "answer": "The source is moving toward the observer",
+      "explanation": "A source moving toward an observer compresses the wave fronts in front of it, increasing the frequency heard by the stationary observer.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "type": "mc",
+      "question": "Which of the following represents the correct relationship for elastic potential energy in Hooke's Law?",
+      "options": [
+        "F = kx and PE = kx",
+        "F = kx and PE = ½kx²",
+        "F = ½kx and PE = kx²",
+        "F = kx² and PE = ½kx"
+      ],
+      "answer": "F = kx and PE = ½kx²",
+      "explanation": "Hooke's Law: F = kx (force is proportional to displacement); the work done (elastic PE) stored in the spring is the area under the F-x graph: PE = ½kx².",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "type": "fill",
+      "question": "A 2000 kg car traveling at 25 m/s brakes to a stop. The magnitude of the average braking force if stopping distance is 50 m is:",
+      "options": null,
+      "answer": "12,500 N",
+      "explanation": "The correct answer is: 12,500 N.",
+      "points": 1
+    }
+  ],
+  "gradeLevel": null
 }
