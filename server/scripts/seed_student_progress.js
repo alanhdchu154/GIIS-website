@@ -1,14 +1,48 @@
 /**
  * Seeds quiz + exam progress for all 4 students based on their official transcript grades.
- * For each transcript course row that maps to a GIIS course slug:
- *   - Creates an Enrollment
- *   - Creates ModuleQuizAttempts for every module at the target score
- *   - Creates midterm + final ExamAttempts at the target score
- *   - Sets creditEarned = true (transcript grade = credit awarded)
+ * Generates realistic, varied per-module scores rather than identical round numbers.
  */
 
 const { PrismaClient } = require('@prisma/client');
 const db = new PrismaClient();
+
+/**
+ * Generates varied quiz scores that average close to targetPct.
+ * With 5 questions per module, achievable scores are multiples of 20 (0,20,40,60,80,100).
+ */
+function makeModuleScores(targetPct, numModules) {
+  const step = 20; // 5 questions → 20% per question
+  const lo = Math.floor(targetPct / step) * step;
+  const hi = Math.min(100, lo + step);
+  if (lo === hi) return Array(numModules).fill(lo);
+
+  const numHi = Math.round(((targetPct - lo) / step) * numModules);
+  const numLo = numModules - numHi;
+  const scores = [...Array(numLo).fill(lo), ...Array(numHi).fill(hi)];
+
+  // Fisher-Yates shuffle
+  for (let i = scores.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [scores[i], scores[j]] = [scores[j], scores[i]];
+  }
+
+  // ~12% chance any module drops one bracket (simulates harder modules or off days)
+  return scores.map(s => (s > 0 && Math.random() < 0.12) ? Math.max(0, s - step) : s);
+}
+
+/**
+ * Nearest achievable score for an exam with numQuestions questions.
+ * Randomly picks between lo/hi bracket weighted by proximity to target.
+ */
+function nearestAchievable(targetPct, numQuestions) {
+  if (!numQuestions) return targetPct;
+  const step = 100 / numQuestions;
+  const lo = Math.floor(targetPct / step) * step;
+  const hi = Math.min(100, lo + step);
+  if (lo === hi) return lo;
+  const p = (targetPct - lo) / step;
+  return Math.random() < p ? hi : lo;
+}
 
 // Transcript course name → GIIS slug
 const COURSE_MAP = {
@@ -127,10 +161,12 @@ const GRADE_SCORE = {
 };
 
 async function seedStudent(student) {
-  const rows = student.semesters.flatMap(sem => sem.courseRows);
   let done = 0, skipped = 0;
 
-  for (const row of rows) {
+  for (const sem of student.semesters) {
+    const semesterLabel = sem.key; // e.g. "Grade 9 - Fall Semester"
+
+    for (const row of sem.courseRows) {
     const slug = COURSE_MAP[row.courseName];
     const targetScore = GRADE_SCORE[row.letterGrade];
 
@@ -148,54 +184,58 @@ async function seedStudent(student) {
     const totalModules = course.modules.length;
     const allModuleOrders = course.modules.map(m => m.order);
 
-    // Create or get enrollment
+    // Create or update enrollment with semesterLabel
     let enrollment = await db.enrollment.findUnique({
       where: { studentId_courseId: { studentId: student.id, courseId: course.id } },
     });
     if (!enrollment) {
       enrollment = await db.enrollment.create({
-        data: { studentId: student.id, courseId: course.id },
+        data: { studentId: student.id, courseId: course.id, semesterLabel },
+      });
+    } else if (!enrollment.semesterLabel) {
+      enrollment = await db.enrollment.update({
+        where: { id: enrollment.id },
+        data: { semesterLabel },
       });
     }
 
-    // Quiz attempts for every module
-    for (const moduleOrder of allModuleOrders) {
+    // Quiz attempts for every module — varied realistic scores, not identical round numbers
+    const moduleScores = makeModuleScores(targetScore, allModuleOrders.length);
+    for (let idx = 0; idx < allModuleOrders.length; idx++) {
+      const moduleOrder = allModuleOrders[idx];
+      const score = moduleScores[idx];
       await db.moduleQuizAttempt.upsert({
         where: { enrollmentId_moduleOrder: { enrollmentId: enrollment.id, moduleOrder } },
-        create: {
-          enrollmentId: enrollment.id,
-          moduleOrder,
-          score: targetScore,
-          passed: targetScore >= 70,
-          answers: {},
-        },
-        update: {},
+        create: { enrollmentId: enrollment.id, moduleOrder, score, passed: score >= 70, answers: {} },
+        update: { score, passed: score >= 70 },
       });
     }
 
     // Remove any old exam attempts for this enrollment (avoid duplicate conflicts)
     await db.examAttempt.deleteMany({ where: { enrollmentId: enrollment.id } });
 
-    // Midterm attempt
+    // Midterm attempt — 15 questions, score varies realistically
+    const midScore = nearestAchievable(targetScore, 15);
     await db.examAttempt.create({
       data: {
         enrollmentId: enrollment.id,
         examType: 'midterm',
         submittedAt: new Date(),
-        score: targetScore,
-        passed: targetScore >= 70,
+        score: midScore,
+        passed: midScore >= 70,
         answers: {},
       },
     });
 
-    // Final attempt
+    // Final attempt — 20 questions, score varies realistically
+    const finalScore = nearestAchievable(targetScore, 20);
     await db.examAttempt.create({
       data: {
         enrollmentId: enrollment.id,
         examType: 'final',
         submittedAt: new Date(),
-        score: targetScore,
-        passed: targetScore >= 70,
+        score: finalScore,
+        passed: finalScore >= 70,
         answers: {},
       },
     });
@@ -212,7 +252,8 @@ async function seedStudent(student) {
 
     console.log(`  ✓ ${course.name} → ${row.letterGrade} (${targetScore}%)`);
     done++;
-  }
+    } // end courseRow loop
+  } // end semester loop
 
   console.log(`  → ${done} courses seeded, ${skipped} skipped (no GIIS match)\n`);
 }

@@ -203,10 +203,14 @@ router.get('/:slug/quiz/:moduleOrder', authenticate, requireStudent, async (req,
   });
   if (!enrollment) return res.status(404).json({ error: 'Not enrolled' });
 
+  const hasAttempt = enrollment.quizAttempts.length > 0;
   const questions = await prisma.moduleQuizQuestion.findMany({
     where: { courseId: course.id, moduleOrder },
     orderBy: { order: 'asc' },
-    select: { id: true, order: true, question: true, options: true, points: true },
+    select: {
+      id: true, order: true, question: true, options: true, points: true,
+      ...(hasAttempt ? { answer: true, explanation: true } : {}),
+    },
   });
 
   const attempt = enrollment.quizAttempts[0] || null;

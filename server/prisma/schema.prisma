@@ -141,6 +141,7 @@ model Enrollment {
   courseId         String
   course           Course    @relation(fields: [courseId], references: [id])
   enrolledAt       DateTime  @default(now())
+  semesterLabel    String    @default("")
   completedModules Int[]     @default([])
   creditEarned     Boolean   @default(false)
   creditEarnedAt   DateTime?

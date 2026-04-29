@@ -78,7 +78,14 @@ export default function ModulePage({ language }) {
 
         // quiz
         const qa = d.enrollment?.quizAttempts?.find((a) => a.moduleOrder === moduleOrder);
-        if (qa) { setPrevAttempt(qa); setQuizPhase('submitted'); }
+        if (qa) {
+          setPrevAttempt(qa);
+          setQuizPhase('submitted');
+          // Auto-load questions for review (backend returns correct answers when attempt exists)
+          fetch(`${API}/api/enrollments/${slug}/quiz/${moduleOrder}`, { credentials: 'include' })
+            .then((r) => r.ok ? r.json() : {})
+            .then((qd) => { if (qd.questions?.length) setQuizQuestions(qd.questions); });
+        }
 
         // assignment
         const as = d.enrollment?.assignments?.find((a) => a.moduleOrder === moduleOrder);
@@ -315,34 +322,51 @@ export default function ModulePage({ language }) {
                 </p>
               </div>
 
-              {/* Answer breakdown */}
-              {(quizResult?.graded || quizAttempt?.answers) && quizResult?.graded && (
-                <details>
-                  <summary style={{ fontSize: '13px', fontWeight: 700, color: '#2b3d6d', cursor: 'pointer', marginBottom: '12px' }}>
-                    {isEn ? 'View answer breakdown' : '查看答题详情'}
-                  </summary>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    {quizQuestions.map((q, i) => {
-                      const g = quizResult.graded.find(x => x.questionId === q.id);
-                      return (
-                        <div key={q.id} style={{
-                          padding: '14px', borderRadius: '8px',
-                          background: g?.correct ? '#f1f8e9' : '#ffebee',
-                          border: `1px solid ${g?.correct ? '#c5e1a5' : '#ef9a9a'}`,
-                        }}>
-                          <p style={{ margin: '0 0 4px', fontSize: '13px', fontWeight: 700, color: g?.correct ? '#33691e' : '#b71c1c' }}>
-                            {g?.correct ? '✓' : '✗'} Q{i + 1}: {q.question}
-                          </p>
-                          {!g?.correct && <p style={{ margin: '0 0 3px', fontSize: '12px', color: '#555' }}>
-                            {isEn ? 'Correct: ' : '正确答案：'}<strong style={{ color: '#2e7d32' }}>{g?.correctAnswer}</strong>
-                          </p>}
-                          {g?.explanation && <p style={{ margin: '3px 0 0', fontSize: '12px', color: '#666', fontStyle: 'italic' }}>{g.explanation}</p>}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </details>
-              )}
+              {/* Answer breakdown — works on first submit (quizResult) and on revisit (quizQuestions loaded) */}
+              {quizQuestions.length > 0 && (() => {
+                const breakdown = quizResult?.graded
+                  ? quizResult.graded
+                  : quizQuestions.map((q) => {
+                      const given = (quizAttempt.answers?.[q.id] ?? '').toString().trim().toLowerCase();
+                      const correct = q.answer ? given === q.answer.trim().toLowerCase() : null;
+                      return { questionId: q.id, correct, correctAnswer: q.answer, yourAnswer: quizAttempt.answers?.[q.id], explanation: q.explanation };
+                    });
+                return (
+                  <details open={!!quizResult}>
+                    <summary style={{ fontSize: '13px', fontWeight: 700, color: '#2b3d6d', cursor: 'pointer', marginBottom: '12px' }}>
+                      {isEn ? 'View answer breakdown' : '查看答题详情'}
+                    </summary>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {quizQuestions.map((q, i) => {
+                        const g = breakdown.find(x => x.questionId === q.id);
+                        const isCorrect = g?.correct;
+                        const isUnknown = g?.correct === null;
+                        const bg = isUnknown ? '#f8f9fd' : isCorrect ? '#f1f8e9' : '#ffebee';
+                        const border = isUnknown ? '#e0e6f0' : isCorrect ? '#c5e1a5' : '#ef9a9a';
+                        const labelColor = isUnknown ? '#888' : isCorrect ? '#33691e' : '#b71c1c';
+                        return (
+                          <div key={q.id} style={{ padding: '14px', borderRadius: '8px', background: bg, border: `1px solid ${border}` }}>
+                            <p style={{ margin: '0 0 4px', fontSize: '13px', fontWeight: 700, color: labelColor }}>
+                              {isUnknown ? '•' : isCorrect ? '✓' : '✗'} Q{i + 1}: {q.question}
+                            </p>
+                            {g?.yourAnswer && !isCorrect && (
+                              <p style={{ margin: '0 0 3px', fontSize: '12px', color: '#555' }}>
+                                {isEn ? 'Your answer: ' : '你的答案：'}<span style={{ color: '#c62828' }}>{g.yourAnswer}</span>
+                              </p>
+                            )}
+                            {g?.correctAnswer && (
+                              <p style={{ margin: '0 0 3px', fontSize: '12px', color: '#555' }}>
+                                {isEn ? 'Correct: ' : '正确答案：'}<strong style={{ color: '#2e7d32' }}>{g.correctAnswer}</strong>
+                              </p>
+                            )}
+                            {g?.explanation && <p style={{ margin: '3px 0 0', fontSize: '12px', color: '#666', fontStyle: 'italic' }}>{g.explanation}</p>}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </details>
+                );
+              })()}
             </div>
           )}
         </section>

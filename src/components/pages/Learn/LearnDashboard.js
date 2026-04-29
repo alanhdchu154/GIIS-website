@@ -389,39 +389,60 @@ export default function LearnDashboard({ language }) {
               <p style={{ fontSize: '16px', fontWeight: 700, color: '#2b3d6d', margin: '0 0 8px' }}>
                 {isEn ? "You're not enrolled in any courses yet." : '你还没有报名任何课程。'}
               </p>
-              <p style={{ fontSize: '13px', color: '#888', margin: '0 0 16px' }}>
+              <p style={{ fontSize: '13px', color: '#888', margin: 0 }}>
                 {isEn ? 'Browse the course catalog below to get started.' : '在下方课程目录找到你感兴趣的课程开始学习。'}
               </p>
             </div>
           ) : (
             <>
+              {/* In Progress */}
               {inProgress.length > 0 && (
-                <>
+                <div style={{ marginBottom: '32px' }}>
                   <p style={{ fontSize: '11px', fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 10px' }}>
                     {isEn ? `In Progress — ${inProgress.length}` : `进行中 — ${inProgress.length}`}
                   </p>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '12px', marginBottom: '24px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '12px' }}>
                     {inProgress.map((enr) => <CourseCard key={enr.id} enr={enr} isEn={isEn} />)}
                   </div>
-                </>
+                </div>
               )}
-              {completed.length > 0 && (
-                <>
-                  <p style={{ fontSize: '11px', fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 10px' }}>
-                    {isEn ? `Completed — ${completed.length}` : `已完成 — ${completed.length}`}
-                  </p>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '12px' }}>
-                    {completed.map((enr) => <CourseCard key={enr.id} enr={enr} isEn={isEn} />)}
+
+              {/* Completed — grouped by semester */}
+              {completed.length > 0 && (() => {
+                const semMap = {};
+                completed.forEach(enr => {
+                  const label = enr.semesterLabel || 'Completed';
+                  if (!semMap[label]) semMap[label] = [];
+                  semMap[label].push(enr);
+                });
+                const sortKey = (label) => {
+                  const g = label.match(/Grade (\d+)/); const grade = g ? parseInt(g[1]) : 99;
+                  return grade * 2 + (label.toLowerCase().includes('fall') ? 0 : 1);
+                };
+                const semesters = Object.keys(semMap).sort((a, b) => sortKey(a) - sortKey(b));
+                return semesters.map((sem) => (
+                  <div key={sem} style={{ marginBottom: '28px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+                      <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: 0 }}>
+                        {sem}
+                      </p>
+                      <span style={{ fontSize: '11px', color: '#aaa' }}>
+                        {semMap[sem].length} {isEn ? 'courses' : '门课'} · {semMap[sem].reduce((s, e) => s + Number(e.course.credits), 0).toFixed(1)} {isEn ? 'credits' : '学分'}
+                      </span>
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '12px' }}>
+                      {semMap[sem].map((enr) => <CourseCard key={enr.id} enr={enr} isEn={isEn} />)}
+                    </div>
                   </div>
-                </>
-              )}
+                ));
+              })()}
             </>
           )}
         </section>
 
-        {/* Enroll in More Courses — always visible */}
+        {/* Enroll in More Courses — with pathway labels */}
         <section>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
             <div>
               <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#1a1a2e', margin: '0 0 2px' }}>
                 {isEn ? 'Enroll in More Courses' : '新增课程'}
@@ -438,10 +459,10 @@ export default function LearnDashboard({ language }) {
           </div>
 
           {/* Department filter */}
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
+          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '16px', marginTop: '10px' }}>
             {departments.map((dept) => (
               <button key={dept} onClick={() => setDeptFilter(dept)} style={{
-                fontSize: '12px', fontWeight: 600, padding: '5px 14px', borderRadius: '20px', cursor: 'pointer',
+                fontSize: '11px', fontWeight: 600, padding: '4px 12px', borderRadius: '20px', cursor: 'pointer',
                 background: deptFilter === dept ? '#1a1a2e' : '#f0f2f8',
                 color: deptFilter === dept ? '#fff' : '#444', border: 'none',
               }}>{dept}</button>
@@ -458,18 +479,31 @@ export default function LearnDashboard({ language }) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))', gap: '12px' }}>
               {catalogCourses.map((c) => {
                 const color = DEPT_COLORS[c.department] || '#2b3d6d';
+                const pathway = DEPT_TO_PATHWAY[c.department];
                 return (
-                  <div key={c.slug} style={{ background: '#fff', border: '1px solid #e0e6f0', borderTop: `4px solid ${color}`, borderRadius: '10px', padding: '18px 20px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+                  <div key={c.slug} style={{ background: '#fff', border: '1px solid #e0e6f0', borderTop: `4px solid ${color}`, borderRadius: '10px', padding: '18px 20px', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
                       <span style={{ fontSize: '10px', fontWeight: 700, color, textTransform: 'uppercase', letterSpacing: '1px' }}>{c.department}</span>
-                      <span style={{ fontSize: '10px', background: '#f0f2f8', color: '#2b3d6d', padding: '2px 7px', borderRadius: '20px', fontWeight: 600 }}>{c.type}</span>
+                      <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                        {pathway && (
+                          <Link to={`/pathways/${pathway.slug}`} style={{
+                            fontSize: '9px', fontWeight: 700, background: color + '18', color,
+                            padding: '2px 7px', borderRadius: '20px', textDecoration: 'none', whiteSpace: 'nowrap',
+                          }}>
+                            {pathway.label}
+                          </Link>
+                        )}
+                        <span style={{ fontSize: '9px', background: '#f0f2f8', color: '#2b3d6d', padding: '2px 7px', borderRadius: '20px', fontWeight: 600 }}>{c.type}</span>
+                      </div>
                     </div>
-                    <h3 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a2e', margin: '4px 0 3px' }}>
+                    <h3 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a2e', margin: '4px 0 3px', flex: 1 }}>
                       {isEn ? c.name : (c.nameZh || c.name)}
                     </h3>
                     <p style={{ fontSize: '11px', color: '#666', lineHeight: 1.5, margin: '0 0 12px', minHeight: '32px' }}>{c.description}</p>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ fontSize: '11px', color: '#888' }}>{c.credits} {isEn ? 'cr' : '学分'} · {c._count?.modules || 0} {isEn ? 'mod' : '模块'}</span>
+                      <span style={{ fontSize: '11px', color: '#888' }}>
+                        {c.credits} {isEn ? 'cr' : '学分'} · {c._count?.modules || 0} {isEn ? 'modules' : '模块'} · {c._count?.modules || 0} {isEn ? 'quizzes' : '测验'}
+                      </span>
                       <button onClick={() => enroll(c.slug)} disabled={enrolling === c.slug} style={{
                         fontSize: '12px', fontWeight: 700, color: '#fff',
                         background: enrolling === c.slug ? '#aaa' : color,
