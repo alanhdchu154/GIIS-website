@@ -324,6 +324,26 @@ export default function LearnDashboard({ language }) {
   // Default pathway filter to student's top pathway on first render
   const activePathwayFilter = pathwayFilter ?? (detectedPathway?.label || 'All');
 
+  // Recommended next courses: unenrolled courses in student's pathway, ordered by grade level
+  const recommendedCourses = detectedPathway && allCourses
+    ? allCourses
+        .filter(c => {
+          if (enrolledSlugs.has(c.slug)) return false;
+          if (DEPT_TO_PATHWAY[c.department]?.label !== detectedPathway.label) return false;
+          const gl = c.gradeLevel;
+          // Only show courses at or one grade above current; null gradeLevel = elective, always show
+          if (gl && currentGrade > 0 && gl > currentGrade + 1) return false;
+          return true;
+        })
+        .sort((a, b) => {
+          const ga = a.gradeLevel || 99;
+          const gb = b.gradeLevel || 99;
+          if (ga !== gb) return ga - gb;
+          return a.name.localeCompare(b.name);
+        })
+        .slice(0, 4)
+    : [];
+
   return (
     <>
       <Helmet>
@@ -439,6 +459,59 @@ export default function LearnDashboard({ language }) {
               {isEn ? 'Go to Module →' : '进入模块 →'}
             </Link>
           </div>
+        )}
+
+        {/* Recommended Next Courses */}
+        {recommendedCourses.length > 0 && (
+          <section style={{ marginBottom: '40px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
+              <div>
+                <p style={{ margin: '0 0 2px', fontSize: '11px', fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
+                  {isEn ? `Recommended · ${detectedPathway.label} Pathway` : `推荐课程 · ${detectedPathway.label}`}
+                </p>
+                <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#1a1a2e', margin: 0 }}>
+                  {isEn ? 'Your Next Courses' : '你的下一步'}
+                </h2>
+              </div>
+              {detectedPathway && (
+                <Link to={`/pathways/${detectedPathway.slug}`} style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none' }}>
+                  {isEn ? `View full pathway →` : `查看完整路径 →`}
+                </Link>
+              )}
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '12px' }}>
+              {recommendedCourses.map(c => {
+                const color = DEPT_COLORS[c.department] || '#2b3d6d';
+                return (
+                  <div key={c.slug} style={{
+                    background: '#fff', border: `1px solid #e0e6f0`, borderTop: `4px solid ${color}`,
+                    borderRadius: '10px', padding: '18px 20px', display: 'flex', flexDirection: 'column', gap: '4px',
+                  }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                      <span style={{ fontSize: '10px', fontWeight: 700, color, textTransform: 'uppercase', letterSpacing: '1px' }}>{c.department}</span>
+                      <div style={{ display: 'flex', gap: '4px' }}>
+                        {c.gradeLevel && <span style={{ fontSize: '9px', background: '#f0f2f8', color: '#2b3d6d', padding: '2px 6px', borderRadius: '20px', fontWeight: 600 }}>G{c.gradeLevel}</span>}
+                        {c.type === 'AP' && <span style={{ fontSize: '9px', background: '#fff3e0', color: '#e65100', padding: '2px 6px', borderRadius: '20px', fontWeight: 700 }}>AP</span>}
+                      </div>
+                    </div>
+                    <h3 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a2e', margin: '4px 0 2px', flex: 1, lineHeight: 1.3 }}>
+                      {isEn ? c.name : (c.nameZh || c.name)}
+                    </h3>
+                    <p style={{ fontSize: '11px', color: '#888', margin: '0 0 10px' }}>
+                      {c.credits} {isEn ? 'cr' : '学分'} · {c._count?.modules || 0} {isEn ? 'modules' : '模块'}
+                    </p>
+                    <button onClick={() => enroll(c.slug)} disabled={enrolling === c.slug} style={{
+                      fontSize: '12px', fontWeight: 700, color: '#fff',
+                      background: enrolling === c.slug ? '#aaa' : color,
+                      border: 'none', borderRadius: '6px', padding: '6px 14px', cursor: 'pointer', alignSelf: 'flex-start',
+                    }}>
+                      {enrolling === c.slug ? (isEn ? 'Enrolling…' : '报名中…') : (isEn ? '+ Enroll' : '+ 报名')}
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         )}
 
         {/* My Courses */}

@@ -19,7 +19,7 @@ function TranscriptContent({
   const isAdminViewer = viewerRole === 'admin';
   const canEdit = isAdminViewer && mode === 'edit';
   const canSave = canEdit;
-  const canExport = isAdminViewer && mode === 'view';
+  const canExport = (isAdminViewer && mode === 'view') || viewerRole === 'student';
 
   const [isStaticMode, setIsStaticMode] = useState(false);
   const isStatic = isStaticMode || !canEdit;
