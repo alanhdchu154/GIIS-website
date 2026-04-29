@@ -57,6 +57,67 @@ function ScorePill({ score, total, label, weight, color }) {
   );
 }
 
+function ExamReviewPanel({ slug, examType, isEn }) {
+  const [review, setReview] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  async function load() {
+    if (review) { setOpen(o => !o); return; }
+    setLoading(true);
+    const r = await fetch(`${API}/api/enrollments/${slug}/exam/review?type=${examType}`, { credentials: 'include' });
+    setLoading(false);
+    if (!r.ok) return;
+    setReview(await r.json());
+    setOpen(true);
+  }
+
+  return (
+    <div style={{ marginTop: '8px' }}>
+      <button onClick={load} disabled={loading} style={{
+        fontSize: '11px', fontWeight: 700, color: '#2b3d6d', background: '#f0f4ff',
+        border: '1px solid #c5d0f0', borderRadius: '6px', padding: '4px 12px', cursor: 'pointer',
+      }}>
+        {loading ? '…' : open ? (isEn ? 'Hide Review ▲' : '收起 ▲') : (isEn ? 'Review Questions ▼' : '查看考题 ▼')}
+      </button>
+
+      {open && review && (
+        <div style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {review.questions.map((q, i) => {
+            const g = review.graded.find(x => x.questionId === q.id);
+            const isCorrect = g?.correct;
+            const isUnknown = isCorrect === null || isCorrect === undefined || !g?.yourAnswer;
+            return (
+              <div key={q.id} style={{
+                padding: '14px 16px', borderRadius: '8px',
+                background: isUnknown ? '#f8f9fd' : isCorrect ? '#f1f8e9' : '#ffebee',
+                border: `1px solid ${isUnknown ? '#e0e6f0' : isCorrect ? '#c5e1a5' : '#ef9a9a'}`,
+              }}>
+                <p style={{ margin: '0 0 4px', fontSize: '12px', fontWeight: 700, color: isUnknown ? '#888' : isCorrect ? '#33691e' : '#b71c1c' }}>
+                  {isUnknown ? '•' : isCorrect ? '✓' : '✗'} Q{i + 1} ({q.points} pt): {q.question}
+                </p>
+                {g?.yourAnswer && (
+                  <p style={{ margin: '2px 0', fontSize: '11px', color: '#555' }}>
+                    {isEn ? 'Your answer: ' : '你的答案：'}<span style={{ color: isCorrect ? '#2e7d32' : '#c62828' }}>{g.yourAnswer}</span>
+                  </p>
+                )}
+                {!isCorrect && g?.correctAnswer && (
+                  <p style={{ margin: '2px 0', fontSize: '11px', color: '#555' }}>
+                    {isEn ? 'Correct: ' : '正确答案：'}<strong style={{ color: '#2e7d32' }}>{g.correctAnswer}</strong>
+                  </p>
+                )}
+                {g?.explanation && (
+                  <p style={{ margin: '4px 0 0', fontSize: '11px', color: '#666', fontStyle: 'italic' }}>{g.explanation}</p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function GradesPage({ language }) {
   const isEn = language !== 'zh';
   const { slug } = useParams();
@@ -221,37 +282,43 @@ export default function GradesPage({ language }) {
             </div>
 
             {/* Midterm row */}
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', padding: '14px 18px', borderBottom: '1px solid #f0f0f0', alignItems: 'center' }}>
-              <div>
-                <p style={{ margin: 0, fontSize: '13px', fontWeight: 700, color: '#1a1a2e' }}>{isEn ? 'Midterm Exam' : '期中考试'}</p>
-                <p style={{ margin: '2px 0 0', fontSize: '11px', color: '#888' }}>{isEn ? 'Modules 1–7 · 30% of grade' : '模块 1–7 · 占 30%'}</p>
+            <div style={{ padding: '14px 18px', borderBottom: '1px solid #f0f0f0' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', alignItems: 'center' }}>
+                <div>
+                  <p style={{ margin: 0, fontSize: '13px', fontWeight: 700, color: '#1a1a2e' }}>{isEn ? 'Midterm Exam' : '期中考试'}</p>
+                  <p style={{ margin: '2px 0 0', fontSize: '11px', color: '#888' }}>{isEn ? 'Modules 1–7 · 30% of grade' : '模块 1–7 · 占 30%'}</p>
+                </div>
+                <div style={{ textAlign: 'center' }}>
+                  <StatusBadge score={midterm?.score ?? null} passed={midterm?.passed ?? false} submitted={!!midterm} />
+                </div>
+                <div style={{ textAlign: 'center', fontSize: '13px' }}>
+                  {midterm ? (midterm.passed ? '✅' : '❌') : '—'}
+                </div>
+                <div style={{ textAlign: 'right', fontSize: '11px', color: '#888' }}>
+                  {midterm ? new Date(midterm.submittedAt).toLocaleDateString() : <span style={{ color: '#aaa', fontStyle: 'italic' }}>{isEn ? 'Not taken' : '未参加'}</span>}
+                </div>
               </div>
-              <div style={{ textAlign: 'center' }}>
-                <StatusBadge score={midterm?.score ?? null} passed={midterm?.passed ?? false} submitted={!!midterm} />
-              </div>
-              <div style={{ textAlign: 'center', fontSize: '13px' }}>
-                {midterm ? (midterm.passed ? '✅' : '❌') : '—'}
-              </div>
-              <div style={{ textAlign: 'right', fontSize: '11px', color: '#888' }}>
-                {midterm ? new Date(midterm.submittedAt).toLocaleDateString() : <span style={{ color: '#aaa', fontStyle: 'italic' }}>{isEn ? 'Not taken' : '未参加'}</span>}
-              </div>
+              {midterm && <ExamReviewPanel slug={slug} examType="midterm" isEn={isEn} />}
             </div>
 
             {/* Final row */}
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', padding: '14px 18px', alignItems: 'center' }}>
-              <div>
-                <p style={{ margin: 0, fontSize: '13px', fontWeight: 700, color: '#1a1a2e' }}>{isEn ? 'Final Exam' : '期末考试'}</p>
-                <p style={{ margin: '2px 0 0', fontSize: '11px', color: '#888' }}>{isEn ? 'All modules · 30% of grade' : '全部模块 · 占 30%'}</p>
+            <div style={{ padding: '14px 18px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', alignItems: 'center' }}>
+                <div>
+                  <p style={{ margin: 0, fontSize: '13px', fontWeight: 700, color: '#1a1a2e' }}>{isEn ? 'Final Exam' : '期末考试'}</p>
+                  <p style={{ margin: '2px 0 0', fontSize: '11px', color: '#888' }}>{isEn ? 'All modules · 30% of grade' : '全部模块 · 占 30%'}</p>
+                </div>
+                <div style={{ textAlign: 'center' }}>
+                  <StatusBadge score={finalData?.score ?? null} passed={finalData?.passed ?? false} submitted={!!finalData} />
+                </div>
+                <div style={{ textAlign: 'center', fontSize: '13px' }}>
+                  {finalData ? (finalData.passed ? '✅' : '❌') : '—'}
+                </div>
+                <div style={{ textAlign: 'right', fontSize: '11px', color: '#888' }}>
+                  {finalData ? new Date(finalData.submittedAt).toLocaleDateString() : <span style={{ color: '#aaa', fontStyle: 'italic' }}>{isEn ? 'Not taken' : '未参加'}</span>}
+                </div>
               </div>
-              <div style={{ textAlign: 'center' }}>
-                <StatusBadge score={finalData?.score ?? null} passed={finalData?.passed ?? false} submitted={!!finalData} />
-              </div>
-              <div style={{ textAlign: 'center', fontSize: '13px' }}>
-                {finalData ? (finalData.passed ? '✅' : '❌') : '—'}
-              </div>
-              <div style={{ textAlign: 'right', fontSize: '11px', color: '#888' }}>
-                {finalData ? new Date(finalData.submittedAt).toLocaleDateString() : <span style={{ color: '#aaa', fontStyle: 'italic' }}>{isEn ? 'Not taken' : '未参加'}</span>}
-              </div>
+              {finalData && <ExamReviewPanel slug={slug} examType="final" isEn={isEn} />}
             </div>
 
             {/* Weighted total row */}

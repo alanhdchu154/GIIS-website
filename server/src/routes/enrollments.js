@@ -187,6 +187,36 @@ router.get('/:slug/grades', authenticate, requireStudent, async (req, res) => {
   });
 });
 
+// GET /api/enrollments/:slug/exam/review?type=midterm|final — review past exam
+router.get('/:slug/exam/review', authenticate, requireStudent, async (req, res) => {
+  const examType = req.query.type === 'midterm' ? 'midterm' : 'final';
+  const course = await prisma.course.findUnique({ where: { slug: req.params.slug }, select: { id: true } });
+  if (!course) return res.status(404).json({ error: 'Course not found' });
+
+  const enrollment = await prisma.enrollment.findUnique({
+    where: { studentId_courseId: { studentId: req.auth.studentId, courseId: course.id } },
+    include: { examAttempts: { where: { examType, submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' }, take: 1 } },
+  });
+  if (!enrollment) return res.status(404).json({ error: 'Not enrolled' });
+
+  const attempt = enrollment.examAttempts[0] || null;
+  if (!attempt) return res.status(404).json({ error: 'No completed exam attempt found' });
+
+  const questions = await prisma.examQuestion.findMany({
+    where: { courseId: course.id, examType },
+    orderBy: { order: 'asc' },
+    select: { id: true, order: true, question: true, type: true, options: true, answer: true, explanation: true, points: true },
+  });
+
+  const graded = questions.map((q) => {
+    const given = (attempt.answers?.[q.id] ?? '').toString().trim().toLowerCase();
+    const correct = given === q.answer.trim().toLowerCase();
+    return { questionId: q.id, correct, yourAnswer: attempt.answers?.[q.id] || null, correctAnswer: q.answer, explanation: q.explanation };
+  });
+
+  res.json({ examType, score: Number(attempt.score), passed: attempt.passed, submittedAt: attempt.submittedAt, questions, graded });
+});
+
 // ── Module Quiz ───────────────────────────────────────────────────────────────
 
 // GET /api/enrollments/:slug/quiz/:moduleOrder — fetch quiz questions (no answers)
