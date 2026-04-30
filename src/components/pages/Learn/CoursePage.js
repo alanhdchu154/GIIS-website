@@ -181,7 +181,19 @@ export default function CoursePage({ language }) {
               <p style={{ margin: 0, fontWeight: 700, fontSize: '14px', color: midtermLocked ? '#aaa' : '#1a1a2e' }}>
                 {isEn ? 'Midterm Exam' : '期中考试'} <span style={{ fontSize: '11px', color: '#888', fontWeight: 400 }}>{isEn ? '(covers modules 1–7 · 30%)' : '（涵盖模块 1–7 · 占 30%）'}</span>
               </p>
-              {midtermLocked && <p style={{ margin: '2px 0 0', fontSize: '11px', color: '#aaa' }}>{isEn ? `Complete quizzes 1–${MIDTERM_CUTOFF} to unlock` : `完成模块 1–${MIDTERM_CUTOFF} 测验后解锁`}</p>}
+              {midtermLocked && (() => {
+                const done = [...Array(MIDTERM_CUTOFF)].filter((_, i) => submittedQuizSet.has(i + 1)).length;
+                return (
+                  <>
+                    <p style={{ margin: '3px 0 4px', fontSize: '11px', color: '#aaa' }}>
+                      {isEn ? `${done} / ${MIDTERM_CUTOFF} quizzes done` : `已完成 ${done} / ${MIDTERM_CUTOFF} 测验`}
+                    </p>
+                    <div style={{ background: '#e8ecf5', borderRadius: '4px', height: '4px', maxWidth: '180px' }}>
+                      <div style={{ width: `${Math.round((done / MIDTERM_CUTOFF) * 100)}%`, background: '#2b3d6d', borderRadius: '4px', height: '100%', transition: 'width 0.3s' }} />
+                    </div>
+                  </>
+                );
+              })()}
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
               {midtermAttempt && (
@@ -211,7 +223,23 @@ export default function CoursePage({ language }) {
               <p style={{ margin: 0, fontWeight: 700, fontSize: '14px', color: finalLocked ? '#aaa' : '#1a1a2e' }}>
                 {isEn ? 'Final Exam' : '期末考试'} <span style={{ fontSize: '11px', color: '#888', fontWeight: 400 }}>{isEn ? '(covers all modules · 30%)' : '（涵盖全部模块 · 占 30%）'}</span>
               </p>
-              {finalLocked && <p style={{ margin: '2px 0 0', fontSize: '11px', color: '#aaa' }}>{isEn ? 'Complete all quizzes + midterm to unlock' : '完成全部测验及期中考试后解锁'}</p>}
+              {finalLocked && (() => {
+                const quizDone = [...Array(totalModules)].filter((_, i) => submittedQuizSet.has(i + 1)).length;
+                const steps = totalModules + 1; // all quizzes + midterm
+                const stepsDone = quizDone + (midtermAttempt ? 1 : 0);
+                return (
+                  <>
+                    <p style={{ margin: '3px 0 4px', fontSize: '11px', color: '#aaa' }}>
+                      {isEn
+                        ? `${quizDone}/${totalModules} quizzes · midterm ${midtermAttempt ? '✓' : '✗'}`
+                        : `${quizDone}/${totalModules} 测验 · 期中 ${midtermAttempt ? '✓' : '✗'}`}
+                    </p>
+                    <div style={{ background: '#e8ecf5', borderRadius: '4px', height: '4px', maxWidth: '180px' }}>
+                      <div style={{ width: `${Math.round((stepsDone / steps) * 100)}%`, background: '#2b3d6d', borderRadius: '4px', height: '100%', transition: 'width 0.3s' }} />
+                    </div>
+                  </>
+                );
+              })()}
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
               {finalAttempt && (
