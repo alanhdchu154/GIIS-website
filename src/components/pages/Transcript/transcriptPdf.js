@@ -78,7 +78,7 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
   const totals = computeSemesterTotals(rows || []);
   const isInProgress = semesterStatus === SEMESTER_STATUS.IN_PROGRESS;
 
-  const td = `${TD_BASE}font-size:6pt;border:0.5px solid #ccc;padding:1px 1.5px;vertical-align:middle;`;
+  const td = `${TD_BASE}font-size:6pt;border:0.5px solid #ccc;padding:2px 3px;vertical-align:middle;`;
   const col = {
     name:  `${td}width:44%;`,
     type:  `${td}width:10%;text-align:center;`,
@@ -86,7 +86,7 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
     grade: `${td}width:8%;text-align:center;`,
     gpa:   `${td}width:15%;text-align:center;`,
   };
-  const hd = `${TD_BASE}font-size:5.5pt;font-weight:bold;padding:1px 1.5px;border:0.5px solid #999;background:${HEAD_BG};white-space:normal;line-height:1.2;`;
+  const hd = `${TD_BASE}font-size:5.5pt;font-weight:bold;padding:2px 3px;border:0.5px solid #999;background:${HEAD_BG};white-space:normal;line-height:1.2;`;
   const hCol = {
     name:  `${hd}width:44%;text-align:left;`,
     type:  `${hd}width:10%;text-align:center;`,
@@ -94,7 +94,7 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
     grade: `${hd}width:8%;text-align:center;`,
     gpa:   `${hd}width:15%;text-align:center;`,
   };
-  const totTd = `${TD_BASE}font-size:6pt;background:${HEAD_BG};font-weight:bold;border:0.5px solid #999;border-top:1px solid #999;padding:1px 1.5px;vertical-align:middle;`;
+  const totTd = `${TD_BASE}font-size:6pt;background:${HEAD_BG};font-weight:bold;border:0.5px solid #999;border-top:1px solid #999;padding:2px 3px;vertical-align:middle;`;
 
   const body = dataRows.map((r, i) => {
     const bg = i % 2 !== 0 ? `background:${ALT_ROW};` : '';
@@ -254,7 +254,7 @@ function buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDa
 </table>
 
 <!-- SIGNATURE -->
-<table style="width:100%;border-collapse:collapse;margin-top:3mm;margin-bottom:1mm;">
+<table style="width:50%;margin-left:auto;border-collapse:collapse;margin-top:2mm;margin-bottom:1mm;">
   <tbody><tr>
     <td style="${TD_BASE}white-space:nowrap;font-size:8pt;padding-right:4px;vertical-align:bottom;border:none;">Official(s) Certifying Transcript:</td>
     <td style="${TD_BASE}border-bottom:1px solid #333;border-top:none;border-left:none;border-right:none;vertical-align:bottom;">&nbsp;</td>
