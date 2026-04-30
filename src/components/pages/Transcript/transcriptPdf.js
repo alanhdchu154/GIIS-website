@@ -1,4 +1,5 @@
 import logoSlogan from '../../../img/logo_slogan.png';
+import logo from '../../../img/logo_nobg.png';
 import { TRANSCRIPT_SEMESTER_KEYS } from './transcriptMappers.js';
 import { getAllSemesterStatuses, SEMESTER_STATUS } from './semesterStatus.js';
 
@@ -201,24 +202,29 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
     padding: 6mm 7mm 4mm 7mm;
     box-sizing: border-box;
     background: #fff;
-    border-top: 4px solid #2e75b6;
   }
   .transcript-pdf-export * { box-sizing: border-box; }
 
   /* ── HEADER ── */
-  .hdr-subtitle { text-align: center; font-size: 7.5pt; color: #444; margin: 0 0 0.5mm; }
-  .hdr-schoolname { text-align: center; font-size: 16pt; font-weight: bold; margin: 0 0 1.5mm; }
-  .hdr-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 7pt;
-    color: #333;
-    padding-bottom: 1.5mm;
-    border-bottom: 1.5px solid #2e75b6;
+  .hdr-table { width: 100%; border-collapse: collapse; border-bottom: 2px solid #2b3d6d; padding-bottom: 2mm; margin-bottom: 2mm; }
+  .hdr-logo-cell { width: 13%; vertical-align: middle; padding: 0; }
+  .hdr-logo-cell img { height: 52px; width: auto; display: block; }
+  .hdr-center-cell { text-align: center; vertical-align: middle; padding: 0 4mm; }
+  .hdr-subtitle { font-size: 6.5pt; color: #666; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 0.5mm; }
+  .hdr-schoolname { font-size: 16pt; font-weight: bold; color: #1a1a2e; line-height: 1.1; margin: 0 0 1.5mm; }
+  .hdr-contact { font-size: 7pt; color: #444; }
+  .hdr-badge-cell { width: 22%; text-align: right; vertical-align: top; padding: 0; }
+  .hdr-official-badge {
+    display: inline-block;
+    border: 2px solid #2b3d6d;
+    color: #2b3d6d;
+    font-weight: bold;
+    font-size: 7.5pt;
+    padding: 2px 6px;
+    letter-spacing: 0.5px;
     margin-bottom: 2mm;
-    line-height: 1.4;
   }
-  .hdr-meta-right { text-align: right; }
+  .hdr-meta-right { font-size: 6.5pt; color: #444; line-height: 1.6; text-align: right; }
 
   /* ── STUDENT INFO TABLE ── */
   .si-table { width: 100%; border-collapse: collapse; margin-bottom: 2mm; }
@@ -288,6 +294,12 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
   .cum-table td { border: 0.5px solid #999; padding: 1.5px 4px; font-size: 7.5pt; background: ${HEAD_BG}; }
   .cum-label { font-weight: bold; text-align: center; width: 12%; }
 
+  /* ── GRADING SCALE ── */
+  .scale-table { width: 100%; border-collapse: collapse; margin-bottom: 2mm; font-size: 6.5pt; }
+  .scale-table th, .scale-table td { border: 0.5px solid #999; padding: 1px 3px; text-align: center; }
+  .scale-header { background: ${HEAD_BG}; font-weight: bold; text-align: left !important; }
+  .scale-val { background: #f5f8fc; }
+
   /* ── SIGNATURE ── */
   .sig-certify-row { display: flex; align-items: flex-end; gap: 4px; margin-top: 3mm; margin-bottom: 1mm; font-size: 8pt; }
   .sig-certify-text { white-space: nowrap; }
@@ -295,6 +307,7 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
   .sig-sub-label { text-align: right; font-size: 7pt; color: #333; margin-bottom: 3mm; }
   .sig-name-row { display: flex; justify-content: flex-end; gap: 10mm; font-size: 8pt; font-weight: 600; }
   .sig-role-row { display: flex; justify-content: flex-end; gap: 10mm; font-size: 7pt; color: #555; margin-top: 1px; }
+  .sig-seal { text-align: center; font-weight: bold; font-size: 8pt; color: #b00020; letter-spacing: 1px; margin: 3mm 0 2mm; }
 
   /* ── FOOTER ── */
   .footer {
@@ -308,13 +321,20 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
 </style>
 
 <!-- HEADER -->
-<div class="hdr-subtitle">Academic Transcript</div>
-<div class="hdr-schoolname">Genesis of Ideas International School</div>
-<div class="hdr-meta">
-  <div>7901 4th St N STE 300,<br/>St. Petersburg, FL 33702</div>
-  <div style="text-align:center;">Phone: +1 (813) 501-5756<br/>genesisideas.school</div>
-  <div class="hdr-meta-right">School Code: <strong>650</strong><br/>President: Shiyu Zhang, Ph.D.</div>
-</div>
+<table class="hdr-table">
+  <tr>
+    <td class="hdr-logo-cell"><img src="${logo}" alt="GIIS" /></td>
+    <td class="hdr-center-cell">
+      <div class="hdr-subtitle">Official Academic Record</div>
+      <div class="hdr-schoolname">Genesis of Ideas International School</div>
+      <div class="hdr-contact">7901 4th St N STE 300, St. Petersburg, FL 33702 &nbsp;|&nbsp; +1 (813) 501-5756 &nbsp;|&nbsp; genesisideas.school</div>
+    </td>
+    <td class="hdr-badge-cell">
+      <div class="hdr-official-badge">OFFICIAL TRANSCRIPT</div>
+      <div class="hdr-meta-right">FL School Code: 650<br/>President: Shiyu Zhang, Ph.D.<br/>admissions@genesisideas.school</div>
+    </td>
+  </tr>
+</table>
 
 <!-- STUDENT INFO -->
 <table class="si-table">
@@ -370,6 +390,26 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
   </tbody>
 </table>
 
+<!-- GRADING SCALE -->
+<table class="scale-table">
+  <thead>
+    <tr>
+      <th class="scale-header" colspan="9">Grading Scale (Unweighted &mdash; AP courses add +1.0)</th>
+      <th class="scale-header" colspan="2">Course Types</th>
+    </tr>
+    <tr>
+      <th>A</th><th>A&minus;</th><th>B+</th><th>B</th><th>B&minus;</th><th>C+</th><th>C</th><th>D</th><th>F</th>
+      <td rowspan="2" colspan="2" style="text-align:left;padding:1px 4px;vertical-align:top;border:0.5px solid #999;">
+        <strong>AP</strong>&nbsp;&nbsp;Advanced Placement<br/>
+        <strong>Core / Elec</strong>&nbsp;&nbsp;Core Curriculum / Elective
+      </td>
+    </tr>
+    <tr>
+      <td class="scale-val">4.0</td><td class="scale-val">3.7</td><td class="scale-val">3.3</td><td class="scale-val">3.0</td><td class="scale-val">2.7</td><td class="scale-val">2.3</td><td class="scale-val">2.0</td><td class="scale-val">1.0</td><td class="scale-val">0.0</td>
+    </tr>
+  </thead>
+</table>
+
 <!-- SIGNATURE -->
 <div class="sig-certify-row">
   <span class="sig-certify-text">Official(s) Certifying Transcript:</span>
@@ -386,10 +426,11 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
   <span>Title</span>
   <span>Date</span>
 </div>
+<div class="sig-seal">NOT VALID WITHOUT OFFICIAL SEAL</div>
 
 <!-- FOOTER -->
 <div class="footer">
-  <span>Genesis of Ideas International School &mdash; Confidential Student Record</span>
+  <span>Genesis of Ideas International School &mdash; Official Academic Record &mdash; Confidential</span>
   <span>Page 1 of 1</span>
 </div>
 `;
