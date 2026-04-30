@@ -304,6 +304,15 @@ export default function LearnDashboard({ language }) {
         .filter(Boolean))
     : 0;
 
+  // Detect predominant pathway from enrollments
+  const deptCount = {};
+  myEnrollments.forEach((e) => { const d = e.course.department; deptCount[d] = (deptCount[d] || 0) + 1; });
+  const topDept = Object.entries(deptCount).sort((a, b) => b[1] - a[1])[0]?.[0];
+  const detectedPathway = topDept ? DEPT_TO_PATHWAY[topDept] : null;
+
+  // Default pathway filter to student's top pathway on first render
+  const activePathwayFilter = pathwayFilter ?? (detectedPathway?.label || 'All');
+
   // Catalog
   const enrolledSlugs = new Set(myEnrollments.map((e) => e.course.slug));
   const availablePathways = ['All', ...PATHWAY_ORDER.filter(p =>
@@ -314,15 +323,6 @@ export default function LearnDashboard({ language }) {
     if (activePathwayFilter !== 'All' && DEPT_TO_PATHWAY[c.department]?.label !== activePathwayFilter) return false;
     return true;
   });
-
-  // Detect predominant pathway from enrollments
-  const deptCount = {};
-  myEnrollments.forEach((e) => { const d = e.course.department; deptCount[d] = (deptCount[d] || 0) + 1; });
-  const topDept = Object.entries(deptCount).sort((a, b) => b[1] - a[1])[0]?.[0];
-  const detectedPathway = topDept ? DEPT_TO_PATHWAY[topDept] : null;
-
-  // Default pathway filter to student's top pathway on first render
-  const activePathwayFilter = pathwayFilter ?? (detectedPathway?.label || 'All');
 
   // Recommended next courses: unenrolled courses in student's pathway, ordered by grade level
   const recommendedCourses = detectedPathway && allCourses
