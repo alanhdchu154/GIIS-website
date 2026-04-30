@@ -1,3 +1,5 @@
+import html2canvas from 'html2canvas';
+import { jsPDF } from 'jspdf';
 import logoSlogan from '../../../img/logo_slogan.png';
 import logo from '../../../img/logo_nobg.png';
 import { TRANSCRIPT_SEMESTER_KEYS } from './transcriptMappers.js';
@@ -9,29 +11,9 @@ const NAVY     = '#2b3d6d';
 const F = "'Times New Roman',Times,serif";
 const TD_BASE = `font-family:${F};box-sizing:border-box;`;
 
-// A4 portrait dimensions
-const PAGE_W = 210; // mm
-const DOC_W  = 190; // mm
-const WIN_W  = Math.round(PAGE_W * 96 / 25.4); // ≈794 CSS px
-
-function loadHtml2Pdf() {
-  if (typeof window !== 'undefined' && window.html2pdf) return Promise.resolve();
-  return new Promise((resolve, reject) => {
-    const existing = document.querySelector('script[data-html2pdf]');
-    if (existing) {
-      existing.addEventListener('load', () => resolve());
-      existing.addEventListener('error', () => reject(new Error('html2pdf failed')));
-      return;
-    }
-    const s = document.createElement('script');
-    s.src = `${process.env.PUBLIC_URL}/html2pdf.bundle.min.js`;
-    s.async = true;
-    s.dataset.html2pdf = '1';
-    s.onload = () => resolve();
-    s.onerror = () => reject(new Error('html2pdf failed'));
-    document.body.appendChild(s);
-  });
-}
+const PAGE_W_MM = 210;
+const DOC_W_MM  = 190;
+const WIN_W_PX  = Math.round(PAGE_W_MM * 96 / 25.4); // ≈794
 
 function escapeHtml(s) {
   return String(s ?? '')
@@ -54,9 +36,7 @@ function normalizeDateForPdf(v) {
 
 function todayForPdf() {
   const d = new Date();
-  const mm = String(d.getMonth() + 1).padStart(2, '0');
-  const dd = String(d.getDate()).padStart(2, '0');
-  return `${mm}/${dd}/${d.getFullYear()}`;
+  return `${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}/${d.getFullYear()}`;
 }
 
 function gpaVal(v) {
@@ -71,12 +51,11 @@ function computeSemesterTotals(rows) {
     if (!r?.name || r.name === 'Semester Totals') continue;
     const cr = parseFloat(String(r.credits ?? '')) || 0;
     if (cr <= 0) continue;
-    const w = gpaVal(r.weightedGPA);
-    const u = gpaVal(r.unweightedGPA);
+    const w = gpaVal(r.weightedGPA), u = gpaVal(r.unweightedGPA);
     if (w !== null && u !== null) { totalW += w * cr; totalU += u * cr; totalCr += cr; }
   }
   if (totalCr <= 0) return { credits: 0, weighted: '—', unweighted: '—' };
-  return { credits: totalCr, weighted: (totalW / totalCr).toFixed(2), unweighted: (totalU / totalCr).toFixed(2) };
+  return { credits: totalCr, weighted: (totalW/totalCr).toFixed(2), unweighted: (totalU/totalCr).toFixed(2) };
 }
 
 function computeAllGPA(rowsBySemester) {
@@ -86,64 +65,62 @@ function computeAllGPA(rowsBySemester) {
       if (!r?.name || r.name === 'Semester Totals') continue;
       const cr = parseFloat(String(r.credits ?? '')) || 0;
       if (cr <= 0) continue;
-      const w = gpaVal(r.weightedGPA);
-      const u = gpaVal(r.unweightedGPA);
+      const w = gpaVal(r.weightedGPA), u = gpaVal(r.unweightedGPA);
       if (w !== null && u !== null) { totalW += w * cr; totalU += u * cr; totalCr += cr; }
     }
   }
   if (totalCr <= 0) return { weighted: '—', unweighted: '—', credits: 0 };
-  return { weighted: (totalW / totalCr).toFixed(2), unweighted: (totalU / totalCr).toFixed(2), credits: totalCr };
+  return { weighted: (totalW/totalCr).toFixed(2), unweighted: (totalU/totalCr).toFixed(2), credits: totalCr };
 }
 
-// All styles are inline — external/head CSS is NOT reliable in html2canvas cloning
 function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
   const dataRows = (rows || []).filter(r => r && r.name && r.name !== 'Semester Totals' && r.name.trim() !== '');
   const totals = computeSemesterTotals(rows || []);
   const isInProgress = semesterStatus === SEMESTER_STATUS.IN_PROGRESS;
 
-  const tdBase = `${TD_BASE}font-size:6pt;border:0.5px solid #ccc;padding:1px 1.5px;vertical-align:middle;`;
+  const td = `${TD_BASE}font-size:6pt;border:0.5px solid #ccc;padding:1px 1.5px;vertical-align:middle;`;
   const col = {
-    name:  `${tdBase}width:40%;`,
-    type:  `${tdBase}width:14%;text-align:center;`,
-    cred:  `${tdBase}width:6%;text-align:center;`,
-    grade: `${tdBase}width:6%;text-align:center;`,
-    gpa:   `${tdBase}width:17%;text-align:center;`,
+    name:  `${td}width:40%;`,
+    type:  `${td}width:14%;text-align:center;`,
+    cred:  `${td}width:6%;text-align:center;`,
+    grade: `${td}width:6%;text-align:center;`,
+    gpa:   `${td}width:17%;text-align:center;`,
   };
-  const hBase = `${TD_BASE}font-size:5.5pt;font-weight:bold;padding:1px 1.5px;border:0.5px solid #999;background:${HEAD_BG};white-space:normal;line-height:1.2;`;
+  const hd = `${TD_BASE}font-size:5.5pt;font-weight:bold;padding:1px 1.5px;border:0.5px solid #999;background:${HEAD_BG};white-space:normal;line-height:1.2;`;
   const hCol = {
-    name:  `${hBase}width:40%;text-align:left;`,
-    type:  `${hBase}width:14%;text-align:center;`,
-    cred:  `${hBase}width:6%;text-align:center;`,
-    grade: `${hBase}width:6%;text-align:center;`,
-    gpa:   `${hBase}width:17%;text-align:center;`,
+    name:  `${hd}width:40%;text-align:left;`,
+    type:  `${hd}width:14%;text-align:center;`,
+    cred:  `${hd}width:6%;text-align:center;`,
+    grade: `${hd}width:6%;text-align:center;`,
+    gpa:   `${hd}width:17%;text-align:center;`,
   };
-  const totBase = `${TD_BASE}font-size:6pt;background:${HEAD_BG};font-weight:bold;border:0.5px solid #999;border-top:1px solid #999;padding:1px 1.5px;vertical-align:middle;`;
+  const totTd = `${TD_BASE}font-size:6pt;background:${HEAD_BG};font-weight:bold;border:0.5px solid #999;border-top:1px solid #999;padding:1px 1.5px;vertical-align:middle;`;
 
   const body = dataRows.map((r, i) => {
     const bg = i % 2 !== 0 ? `background:${ALT_ROW};` : '';
     return `<tr>
-      <td style="${col.name}${bg}">${escapeHtml(r.name || '')}</td>
-      <td style="${col.type}${bg}">${escapeHtml(r.type || '')}</td>
-      <td style="${col.cred}${bg}">${escapeHtml(r.credits != null ? String(r.credits) : '')}</td>
-      <td style="${col.grade}${bg}">${escapeHtml(r.grade || '')}</td>
-      <td style="${col.gpa}${bg}">${escapeHtml(r.weightedGPA != null && r.weightedGPA !== '' ? String(r.weightedGPA) : '')}</td>
-      <td style="${col.gpa}${bg}">${escapeHtml(r.unweightedGPA != null && r.unweightedGPA !== '' ? String(r.unweightedGPA) : '')}</td>
+      <td style="${col.name}${bg}">${escapeHtml(r.name||'')}</td>
+      <td style="${col.type}${bg}">${escapeHtml(r.type||'')}</td>
+      <td style="${col.cred}${bg}">${escapeHtml(r.credits!=null?String(r.credits):'')}</td>
+      <td style="${col.grade}${bg}">${escapeHtml(r.grade||'')}</td>
+      <td style="${col.gpa}${bg}">${escapeHtml(r.weightedGPA!=null&&r.weightedGPA!==''?String(r.weightedGPA):'')}</td>
+      <td style="${col.gpa}${bg}">${escapeHtml(r.unweightedGPA!=null&&r.unweightedGPA!==''?String(r.unweightedGPA):'')}</td>
     </tr>`;
   }).join('');
 
-  const totalsRow = `<tr>
-    <td style="${totBase}width:40%;">Semester Totals</td>
-    <td style="${totBase}width:14%;text-align:center;"></td>
-    <td style="${totBase}width:6%;text-align:center;">${totals.credits > 0 ? totals.credits.toFixed(1) : ''}</td>
-    <td style="${totBase}width:6%;text-align:center;"></td>
-    <td style="${totBase}width:17%;text-align:center;">${escapeHtml(totals.weighted)}</td>
-    <td style="${totBase}width:17%;text-align:center;">${escapeHtml(totals.unweighted)}</td>
+  const totRow = `<tr>
+    <td style="${totTd}width:40%;">Semester Totals</td>
+    <td style="${totTd}width:14%;text-align:center;"></td>
+    <td style="${totTd}width:6%;text-align:center;">${totals.credits>0?totals.credits.toFixed(1):''}</td>
+    <td style="${totTd}width:6%;text-align:center;"></td>
+    <td style="${totTd}width:17%;text-align:center;">${escapeHtml(totals.weighted)}</td>
+    <td style="${totTd}width:17%;text-align:center;">${escapeHtml(totals.unweighted)}</td>
   </tr>`;
 
   return `<div style="margin-bottom:1.5mm;">
     <table style="width:100%;border-collapse:collapse;table-layout:fixed;font-family:${F};">
       <thead>
-        <tr><th colspan="6" style="${TD_BASE}font-size:7pt;font-weight:bold;padding:1.5px 3px;text-align:left;border:0.5px solid #999;background:#fff;">${escapeHtml(semesterName)}${isInProgress ? ' (In Progress)' : ''}</th></tr>
+        <tr><th colspan="6" style="${TD_BASE}font-size:7pt;font-weight:bold;padding:1.5px 3px;text-align:left;border:0.5px solid #999;background:#fff;">${escapeHtml(semesterName)}${isInProgress?' (In Progress)':''}</th></tr>
         <tr>
           <th style="${hCol.name}">Course Name</th>
           <th style="${hCol.type}">Type</th>
@@ -153,54 +130,23 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
           <th style="${hCol.gpa}">Unweighted GPA</th>
         </tr>
       </thead>
-      <tbody>${body}${totalsRow}</tbody>
+      <tbody>${body}${totRow}</tbody>
     </table>
   </div>`;
 }
 
-export async function exportTranscriptToPDF({ profile, semesterRowsRef, semesterInitialRows, setIsStaticMode }) {
-  try { await loadHtml2Pdf(); } catch { return; }
-  if (!window.html2pdf) return;
+function buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDateDisplay) {
+  const siTd  = `${TD_BASE}border:0.5px solid #999;padding:0.8mm 1.5mm;vertical-align:top;width:25%;font-size:6.5pt;`;
+  const cumTd = `${TD_BASE}border:0.5px solid #999;padding:1.5px 4px;font-size:7.5pt;background:${HEAD_BG};`;
+  const scaleTh = `${TD_BASE}font-size:6pt;font-weight:bold;border:0.5px solid #999;padding:1px 3px;text-align:center;background:${HEAD_BG};`;
+  const scaleTd = `${TD_BASE}font-size:6pt;border:0.5px solid #999;padding:1px 3px;text-align:center;background:${ALT_ROW};`;
 
-  setIsStaticMode(true);
-
-  setTimeout(() => {
-    const rowsBySemester = {};
-    for (const key of TRANSCRIPT_SEMESTER_KEYS) {
-      rowsBySemester[key] = semesterRowsRef.current[key] || semesterInitialRows[key] || [];
-    }
-
-    const cumulative = computeAllGPA(rowsBySemester);
-    const p = profile || {};
-    const transcriptDate = p.transcriptDate ? new Date(p.transcriptDate) : new Date();
-    const graduationYear = p.graduationDate ? new Date(p.graduationDate).getFullYear() : null;
-    const semStatuses = getAllSemesterStatuses(TRANSCRIPT_SEMESTER_KEYS, graduationYear, transcriptDate);
-
-    const visibleKeys = TRANSCRIPT_SEMESTER_KEYS.filter(k => semStatuses[k] !== SEMESTER_STATUS.UPCOMING);
-    const half = Math.ceil(visibleKeys.length / 2);
-    const leftKeys  = visibleKeys.length > 4 ? visibleKeys.slice(0, half) : visibleKeys.slice(0, 4);
-    const rightKeys = visibleKeys.length > 4 ? visibleKeys.slice(half)    : visibleKeys.slice(4);
-
-    const leftHtml  = leftKeys.map(k => buildSemesterTableHtml(k, rowsBySemester[k], semStatuses[k])).join('');
-    const rightHtml = rightKeys.map(k => buildSemesterTableHtml(k, rowsBySemester[k], semStatuses[k])).join('');
-
-    const exportToday = todayForPdf();
-    const transcriptDateDisplay = normalizeDateForPdf(p.transcriptDate) !== '—'
-      ? normalizeDateForPdf(p.transcriptDate) : exportToday;
-
-    const siTd = `${TD_BASE}border:0.5px solid #999;padding:0.8mm 1.5mm;vertical-align:top;width:25%;font-size:6.5pt;`;
-    const cumTd = `${TD_BASE}border:0.5px solid #999;padding:1.5px 4px;font-size:7.5pt;background:${HEAD_BG};`;
-    const scaleTh = `${TD_BASE}font-size:6pt;font-weight:bold;border:0.5px solid #999;padding:1px 3px;text-align:center;background:${HEAD_BG};`;
-    const scaleTd = `${TD_BASE}font-size:6pt;border:0.5px solid #999;padding:1px 3px;text-align:center;background:${ALT_ROW};`;
-
-    const pdfDoc = document.createElement('div');
-    pdfDoc.style.cssText = `font-family:${F};color:#000;width:${DOC_W}mm;margin:0 auto;padding:6mm 7mm 4mm 7mm;box-sizing:border-box;background:#fff;`;
-    pdfDoc.innerHTML = `
+  return `
 <!-- HEADER -->
-<table style="width:100%;border-collapse:collapse;margin-bottom:0;padding-bottom:2mm;">
+<table style="width:100%;border-collapse:collapse;margin-bottom:0;">
   <tbody><tr>
     <td style="${TD_BASE}width:12%;vertical-align:middle;padding:0;border:none;">
-      <img src="${logo}" alt="GIIS" style="height:52px;width:auto;display:block;" />
+      <img src="${logo}" alt="GIIS" style="height:52px;width:auto;display:block;" crossorigin="anonymous" />
     </td>
     <td style="${TD_BASE}text-align:center;vertical-align:middle;padding:0 4mm;border:none;">
       <div style="${TD_BASE}font-size:6.5pt;color:#666;letter-spacing:1px;text-transform:uppercase;margin:0 0 0.5mm;">Official Academic Record</div>
@@ -219,16 +165,16 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
 <table style="width:100%;border-collapse:collapse;margin-bottom:2mm;table-layout:fixed;">
   <tbody>
     <tr>
-      <td style="${siTd}">Name: ${escapeHtml(p.name || '—')}</td>
+      <td style="${siTd}">Name: ${escapeHtml(p.name||'—')}</td>
       <td style="${siTd}">Birth Date: ${escapeHtml(normalizeDateForPdf(p.birthDate))}</td>
-      <td style="${siTd}">Gender: ${escapeHtml(p.gender || '—')}</td>
-      <td style="${siTd}">Parent/Guardian: ${escapeHtml(p.parentGuardian || '—')}</td>
+      <td style="${siTd}">Gender: ${escapeHtml(p.gender||'—')}</td>
+      <td style="${siTd}">Parent/Guardian: ${escapeHtml(p.parentGuardian||'—')}</td>
     </tr>
     <tr>
-      <td style="${siTd}">Address: ${escapeHtml(p.address || '—')}</td>
-      <td style="${siTd}">City: ${escapeHtml(p.city || '—')}</td>
-      <td style="${siTd}">Province: ${escapeHtml(p.province || '—')}</td>
-      <td style="${siTd}">Zip Code: ${escapeHtml(p.zipCode || '—')}</td>
+      <td style="${siTd}">Address: ${escapeHtml(p.address||'—')}</td>
+      <td style="${siTd}">City: ${escapeHtml(p.city||'—')}</td>
+      <td style="${siTd}">Province: ${escapeHtml(p.province||'—')}</td>
+      <td style="${siTd}">Zip Code: ${escapeHtml(p.zipCode||'—')}</td>
     </tr>
     <tr>
       <td style="${siTd}">Entry Date: ${escapeHtml(normalizeDateForPdf(p.entryDate))}</td>
@@ -239,10 +185,10 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
   </tbody>
 </table>
 
-<!-- GRADE TABLES (two-column) -->
+<!-- GRADE TABLES (two-column with watermark) -->
 <div style="position:relative;margin-bottom:1mm;">
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:55%;pointer-events:none;z-index:0;opacity:0.22;text-align:center;">
-    <img src="${logoSlogan}" alt="" style="width:100%;display:block;" />
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:55%;pointer-events:none;z-index:0;opacity:0.18;text-align:center;">
+    <img src="${logoSlogan}" alt="" style="width:100%;display:block;" crossorigin="anonymous" />
   </div>
   <div style="position:relative;z-index:1;">
     <table style="width:100%;border-collapse:collapse;table-layout:fixed;">
@@ -261,12 +207,12 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
     <tr>
       <td style="${cumTd}font-weight:bold;text-align:center;width:12%;">Weighted</td>
       <td style="${cumTd}width:44%;">Cumulative GPA: ${escapeHtml(cumulative.weighted)}</td>
-      <td style="${cumTd}width:44%;">Cumulative Credits: ${escapeHtml(cumulative.credits > 0 ? cumulative.credits.toFixed(1) : '—')}</td>
+      <td style="${cumTd}width:44%;">Cumulative Credits: ${escapeHtml(cumulative.credits>0?cumulative.credits.toFixed(1):'—')}</td>
     </tr>
     <tr>
       <td style="${cumTd}font-weight:bold;text-align:center;width:12%;">Unweighted</td>
       <td style="${cumTd}width:44%;">Cumulative GPA: ${escapeHtml(cumulative.unweighted)}</td>
-      <td style="${cumTd}width:44%;">Cumulative Credits: ${escapeHtml(cumulative.credits > 0 ? cumulative.credits.toFixed(1) : '—')}</td>
+      <td style="${cumTd}width:44%;">Cumulative Credits: ${escapeHtml(cumulative.credits>0?cumulative.credits.toFixed(1):'—')}</td>
     </tr>
   </tbody>
 </table>
@@ -340,43 +286,85 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
     <td style="${TD_BASE}font-size:6.5pt;color:#888;padding-top:1mm;border:none;text-align:right;">Page 1 of 1</td>
   </tr></tbody>
 </table>`;
+}
 
-    // position:absolute at doc origin + high z-index so html2canvas sees it correctly
-    const pdfWrapper = document.createElement('div');
-    pdfWrapper.style.cssText = `position:absolute;top:0;left:0;width:${PAGE_W}mm;background:#fff;box-sizing:border-box;z-index:999999;`;
-    pdfWrapper.appendChild(pdfDoc);
-    document.body.appendChild(pdfWrapper);
-    void pdfWrapper.offsetHeight; // force layout reflow before capture
+export async function exportTranscriptToPDF({ profile, semesterRowsRef, semesterInitialRows, setIsStaticMode }) {
+  setIsStaticMode(true);
+  await new Promise(r => setTimeout(r, 50));
 
-    const savedScrollX = window.scrollX;
-    const savedScrollY = window.scrollY;
+  try {
+    const rowsBySemester = {};
+    for (const key of TRANSCRIPT_SEMESTER_KEYS) {
+      rowsBySemester[key] = semesterRowsRef.current[key] || semesterInitialRows[key] || [];
+    }
+
+    const cumulative = computeAllGPA(rowsBySemester);
+    const p = profile || {};
+    const transcriptDate = p.transcriptDate ? new Date(p.transcriptDate) : new Date();
+    const graduationYear = p.graduationDate ? new Date(p.graduationDate).getFullYear() : null;
+    const semStatuses = getAllSemesterStatuses(TRANSCRIPT_SEMESTER_KEYS, graduationYear, transcriptDate);
+
+    const visibleKeys = TRANSCRIPT_SEMESTER_KEYS.filter(k => semStatuses[k] !== SEMESTER_STATUS.UPCOMING);
+    const half = Math.ceil(visibleKeys.length / 2);
+    const leftKeys  = visibleKeys.length > 4 ? visibleKeys.slice(0, half) : visibleKeys.slice(0, 4);
+    const rightKeys = visibleKeys.length > 4 ? visibleKeys.slice(half)    : visibleKeys.slice(4);
+
+    const leftHtml  = leftKeys.map(k => buildSemesterTableHtml(k, rowsBySemester[k], semStatuses[k])).join('');
+    const rightHtml = rightKeys.map(k => buildSemesterTableHtml(k, rowsBySemester[k], semStatuses[k])).join('');
+
+    const exportToday = todayForPdf();
+    const transcriptDateDisplay = normalizeDateForPdf(p.transcriptDate) !== '—'
+      ? normalizeDateForPdf(p.transcriptDate) : exportToday;
+
+    const container = document.createElement('div');
+    container.style.cssText = `position:absolute;top:0;left:0;width:${PAGE_W_MM}mm;z-index:99999;background:#fff;`;
+
+    const inner = document.createElement('div');
+    inner.style.cssText = `width:${DOC_W_MM}mm;margin:0 auto;padding:6mm 7mm 4mm 7mm;box-sizing:border-box;background:#fff;font-family:${F};color:#000;`;
+    inner.innerHTML = buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDateDisplay);
+
+    container.appendChild(inner);
+    document.body.appendChild(container);
+    void container.offsetHeight;
+
+    const savedX = window.scrollX, savedY = window.scrollY;
     window.scrollTo(0, 0);
 
-    const options = {
-      margin: 0,
-      filename: `${(profile?.name || 'Transcript').replace(/[\\/:*?"<>|]/g, '-')}_Transcript.pdf`,
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        logging: false,
-        scrollX: 0,
-        scrollY: 0,
-        windowWidth: WIN_W,
-        ignoreElements: el => el.tagName === 'BUTTON',
-      },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    };
+    const canvas = await html2canvas(container, {
+      scale: 2,
+      useCORS: true,
+      allowTaint: true,
+      logging: false,
+      scrollX: 0,
+      scrollY: 0,
+      windowWidth: WIN_W_PX,
+      backgroundColor: '#ffffff',
+    });
 
-    window.html2pdf()
-      .set(options)
-      .from(pdfWrapper)
-      .save()
-      .finally(() => {
-        document.body.removeChild(pdfWrapper);
-        window.scrollTo(savedScrollX, savedScrollY);
-        setIsStaticMode(false);
-      });
-  }, 0);
+    document.body.removeChild(container);
+    window.scrollTo(savedX, savedY);
+
+    const imgData = canvas.toDataURL('image/jpeg', 0.95);
+    const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+    const pdfW = pdf.internal.pageSize.getWidth();
+    const pdfH = pdf.internal.pageSize.getHeight();
+    const imgH = (canvas.height * pdfW) / canvas.width;
+
+    let heightLeft = imgH;
+    let yPos = 0;
+    pdf.addImage(imgData, 'JPEG', 0, yPos, pdfW, imgH);
+    heightLeft -= pdfH;
+
+    while (heightLeft > 0) {
+      yPos -= pdfH;
+      pdf.addPage();
+      pdf.addImage(imgData, 'JPEG', 0, yPos, pdfW, imgH);
+      heightLeft -= pdfH;
+    }
+
+    pdf.save(`${(p.name || 'Transcript').replace(/[\\/:*?"<>|]/g, '-')}_Transcript.pdf`);
+
+  } finally {
+    setIsStaticMode(false);
+  }
 }
