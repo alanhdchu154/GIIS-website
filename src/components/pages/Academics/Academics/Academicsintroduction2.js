@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AP_COURSES = [
-  { code: 'AP Statistics',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '数據分析与统计推论' } },
+  { code: 'AP Statistics',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '数据分析与统计推论' } },
   { code: 'AP Biology',         icon: '🧬', desc: { en: 'College-level life sciences', zh: '大学程度生命科学' } },
   { code: 'AP Psychology',      icon: '🧠', desc: { en: 'Behavior & mental processes', zh: '行为与心理历程' } },
   { code: 'AP Human Geography', icon: '🌏', desc: { en: 'Patterns of human society', zh: '人文地理与全球视野' } },

@@ -135,7 +135,7 @@ export default function LoginPortal({ language }) {
     <div id="content">
       <Helmet>
         <title>
-          {isEn ? 'Student portal — Sign in' : '學生專區 — 登入'}
+          {isEn ? 'Student portal — Sign in' : '学生专区 — 登入'}
           {' | Genesis of Ideas International School'}
         </title>
       </Helmet>

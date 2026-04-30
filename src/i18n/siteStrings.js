@@ -65,17 +65,17 @@ export function getAuthPageStrings(language) {
     portalTitle: en ? 'Student portal' : '学生专区',
     portalSubtitle: en
       ? 'Sign in or create an account to access your transcript.'
-      : '登入或註冊帳号以使用线上成绩单。',
+      : '登入或注册帐号以使用线上成绩单。',
     tabSignIn: en ? 'Sign in' : '登入',
-    tabRegister: en ? 'Register' : '註冊',
-    tablistAria: en ? 'Sign in or register' : '登入或註冊',
+    tabRegister: en ? 'Register' : '注册',
+    tablistAria: en ? 'Sign in or register' : '登入或注册',
     signInBlurb: en
       ? 'Sign in with the email and password you used when you registered.'
-      : '请使用註冊时的电子郵件与密碼登入。',
+      : '请使用注册时的电子邮件与密码登入。',
     signInCta: en ? 'Sign in' : '登入',
     registerBlurb: en
       ? 'Enter the same information that appears on your official transcript header (name, birth date, guardian, address).'
-      : '请填写与正式成绩单抬头一致的资料（姓名、生日、監护人、住址等）。',
+      : '请填写与正式成绩单抬头一致的资料（姓名、生日、监护人、住址等）。',
     registerRequiredNote: en
       ? 'Fields marked * are required.'
       : '标示 * 为必填。',
@@ -83,22 +83,22 @@ export function getAuthPageStrings(language) {
     gender: en ? 'Gender' : '性别',
     genderFemale: en ? 'Female' : '女',
     genderMale: en ? 'Male' : '男',
-    parentGuardian: en ? 'Parent / guardian' : '家长／監护人',
+    parentGuardian: en ? 'Parent / guardian' : '家长／监护人',
     address: en ? 'Street address' : '地址',
     city: en ? 'City' : '城市',
     province: en ? 'State / province' : '州／省',
-    zipCode: en ? 'ZIP / postal code' : '郵递区号',
-    email: en ? 'Email' : '电子郵件',
-    password: en ? 'Password' : '密碼',
+    zipCode: en ? 'ZIP / postal code' : '邮递区号',
+    email: en ? 'Email' : '电子邮件',
+    password: en ? 'Password' : '密码',
     displayName: en ? 'Name on transcript' : '成绩单姓名',
     passwordHint: en ? 'At least 8 characters.' : '至少 8 个字元。',
     signingIn: en ? 'Signing in…' : '登入中…',
     signIn: en ? 'Sign in' : '登入',
     creating: en ? 'Creating…' : '建立中…',
-    createAccount: en ? 'Create account' : '建立帳号',
-    loginFailed: en ? 'Login failed' : '登入失敗',
-    registerFailed: en ? 'Registration failed' : '註冊失敗',
-    unexpectedLogin: en ? 'Unexpected response from server.' : '伺服器回应異常。',
+    createAccount: en ? 'Create account' : '建立帐号',
+    loginFailed: en ? 'Login failed' : '登入失败',
+    registerFailed: en ? 'Registration failed' : '注册失败',
+    unexpectedLogin: en ? 'Unexpected response from server.' : '伺服器回应异常。',
     missingApiUrl: en
       ? 'API address is not configured. Set REACT_APP_API_URL, or run npm start (defaults to http://localhost:4000).'
       : '未设定 API 位址。请设定 REACT_APP_API_URL，或使用 npm start（预设 http://localhost:4000）。',

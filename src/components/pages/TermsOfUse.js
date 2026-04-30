@@ -8,7 +8,7 @@ export default function TermsOfUse({ language }) {
   return (
     <>
       <Helmet>
-        <title>{isEn ? 'Terms of Use' : '使用條款'} | Genesis of Ideas International School</title>
+        <title>{isEn ? 'Terms of Use' : '使用条款'} | Genesis of Ideas International School</title>
         <meta
           name="description"
           content={
@@ -21,8 +21,8 @@ export default function TermsOfUse({ language }) {
       </Helmet>
 
       <div className="container py-5" style={{ maxWidth: 920 }}>
-        <h1 className="h3 mb-2">{isEn ? 'Terms of Use' : '使用條款'}</h1>
-        <p className="text-muted mb-4">{isEn ? `Last updated: ${updated}` : `最後更新：${updated}`}</p>
+        <h1 className="h3 mb-2">{isEn ? 'Terms of Use' : '使用条款'}</h1>
+        <p className="text-muted mb-4">{isEn ? `Last updated: ${updated}` : `最后更新：${updated}`}</p>
 
         {isEn ? (
           <>
@@ -54,30 +54,30 @@ export default function TermsOfUse({ language }) {
           </>
         ) : (
           <>
-            <h2 className="h5 mt-4">網站內容</h2>
+            <h2 className="h5 mt-4">网站内容</h2>
             <p className="mb-2">
-              本網站提供資訊用途。學校可能隨時更新內容。
+              本网站提供资讯用途。学校可能随时更新内容。
             </p>
 
-            <h2 className="h5 mt-4">學生專區</h2>
+            <h2 className="h5 mt-4">学生专区</h2>
             <ul>
-              <li>請妥善保管帳號密碼並保持機密。</li>
-              <li>學生可查看成績單資料；只有經授權的管理者可編輯正式紀錄。</li>
-              <li>不得嘗試干擾系統運作或繞過安全控管。</li>
+              <li>请妥善保管帐号密码并保持机密。</li>
+              <li>学生可查看成绩单资料；只有经授权的管理者可编辑正式纪录。</li>
+              <li>不得尝试干扰系统运作或绕过安全控管。</li>
             </ul>
 
-            <h2 className="h5 mt-4">使用規範</h2>
+            <h2 className="h5 mt-4">使用规范</h2>
             <p className="mb-2">
-              你不得將本網站用於違法行為、濫用自動化程式、或提交不實資訊。
+              你不得将本网站用于违法行为、滥用自动化程式、或提交不实资讯。
             </p>
 
-            <h2 className="h5 mt-4">免責聲明</h2>
+            <h2 className="h5 mt-4">免责声明</h2>
             <p className="mb-2">
-              本網站與服務以「現狀」提供，不提供任何明示或默示保證。服務可能因維護或技術因素暫停或變更。
+              本网站与服务以「现状」提供，不提供任何明示或默示保证。服务可能因维护或技术因素暂停或变更。
             </p>
 
-            <h2 className="h5 mt-4">聯絡方式</h2>
-            <p className="mb-0">如有疑問，請使用官網聯絡資訊與學校聯絡。</p>
+            <h2 className="h5 mt-4">联络方式</h2>
+            <p className="mb-0">如有疑问，请使用官网联络资讯与学校联络。</p>
           </>
         )}
       </div>

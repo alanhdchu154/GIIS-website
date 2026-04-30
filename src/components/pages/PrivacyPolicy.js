@@ -8,7 +8,7 @@ export default function PrivacyPolicy({ language }) {
   return (
     <>
       <Helmet>
-        <title>{isEn ? 'Privacy Policy' : '隱私權政策'} | Genesis of Ideas International School</title>
+        <title>{isEn ? 'Privacy Policy' : '隐私权政策'} | Genesis of Ideas International School</title>
         <meta
           name="description"
           content={
@@ -21,8 +21,8 @@ export default function PrivacyPolicy({ language }) {
       </Helmet>
 
       <div className="container py-5" style={{ maxWidth: 920 }}>
-        <h1 className="h3 mb-2">{isEn ? 'Privacy Policy' : '隱私權政策'}</h1>
-        <p className="text-muted mb-4">{isEn ? `Last updated: ${updated}` : `最後更新：${updated}`}</p>
+        <h1 className="h3 mb-2">{isEn ? 'Privacy Policy' : '隐私权政策'}</h1>
+        <p className="text-muted mb-4">{isEn ? `Last updated: ${updated}` : `最后更新：${updated}`}</p>
 
         {isEn ? (
           <>
@@ -66,40 +66,40 @@ export default function PrivacyPolicy({ language }) {
           </>
         ) : (
           <>
-            <h2 className="h5 mt-4">我們蒐集哪些資料</h2>
+            <h2 className="h5 mt-4">我们搜集哪些资料</h2>
             <ul>
-              <li>網站聯絡表單（你主動提供的姓名、Email、訊息內容）</li>
-              <li>學生專區帳號資訊（Email 與密碼雜湊）</li>
-              <li>成績單抬頭資料（例如姓名、生日、監護人、住址等）</li>
-              <li>成績單課程與成績資料（由你或管理者輸入）</li>
+              <li>网站联络表单（你主动提供的姓名、Email、讯息内容）</li>
+              <li>学生专区帐号资讯（Email 与密码杂凑）</li>
+              <li>成绩单抬头资料（例如姓名、生日、监护人、住址等）</li>
+              <li>成绩单课程与成绩资料（由你或管理者输入）</li>
             </ul>
 
-            <h2 className="h5 mt-4">我們如何使用</h2>
+            <h2 className="h5 mt-4">我们如何使用</h2>
             <ul>
-              <li>提供網站內容並回覆諮詢</li>
-              <li>帳號登入驗證與保護學生專區</li>
-              <li>建立、查閱與維護成績單資料</li>
-              <li>改善系統穩定性、安全性與使用體驗</li>
+              <li>提供网站内容并回复咨询</li>
+              <li>帐号登入验证与保护学生专区</li>
+              <li>建立、查阅与维护成绩单资料</li>
+              <li>改善系统稳定性、安全性与使用体验</li>
             </ul>
 
-            <h2 className="h5 mt-4">資料分享</h2>
+            <h2 className="h5 mt-4">资料分享</h2>
             <p className="mb-2">
-              我們不會販售個人資料。僅在服務運作所需（例如主機/雲端服務供應商）或依法令要求時才可能分享必要資訊。
+              我们不会贩售个人资料。仅在服务运作所需（例如主机/云端服务供应商）或依法令要求时才可能分享必要资讯。
             </p>
 
-            <h2 className="h5 mt-4">資料安全</h2>
+            <h2 className="h5 mt-4">资料安全</h2>
             <p className="mb-2">
-              我們採取合理的技術措施保護資料，但任何傳輸或儲存方式都無法保證 100% 安全。
+              我们采取合理的技术措施保护资料，但任何传输或储存方式都无法保证 100% 安全。
             </p>
 
-            <h2 className="h5 mt-4">你的權利</h2>
+            <h2 className="h5 mt-4">你的权利</h2>
             <p className="mb-2">
-              你可以向學校提出查詢、更正或刪除學生專區資料之需求。
+              你可以向学校提出查询、更正或删除学生专区资料之需求。
             </p>
 
-            <h2 className="h5 mt-4">聯絡方式</h2>
+            <h2 className="h5 mt-4">联络方式</h2>
             <p className="mb-0">
-              隱私相關問題請透過官網首頁的聯絡資訊與學校聯絡。
+              隐私相关问题请透过官网首页的联络资讯与学校联络。
             </p>
           </>
         )}

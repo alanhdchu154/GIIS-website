@@ -31,11 +31,11 @@ function TranscriptMain({ language }) {
             <p className="text-muted">
               {isEn
                 ? 'Students: register or sign in to load and save your transcript from our server.'
-                : '学生请先註冊或登入，以载入並储存你的成绩单资料。'}
+                : '学生请先注册或登入，以载入并储存你的成绩单资料。'}
             </p>
             <div className="d-flex flex-wrap gap-2 mt-3">
               <Link to="/login?tab=register" className="btn btn-primary">
-                {isEn ? 'Register' : '註冊'}
+                {isEn ? 'Register' : '注册'}
               </Link>
               <Link to="/login" className="btn btn-outline-primary">
                 {t.signInCta}

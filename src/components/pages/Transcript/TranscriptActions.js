@@ -38,7 +38,7 @@ function TranscriptActions({ canSave, canExport, remoteSaving, profile, language
             cursor: 'pointer',
           }}
         >
-          {language === 'en' ? 'Export to PDF' : '匯出 PDF'}
+          {language === 'en' ? 'Export to PDF' : '汇出 PDF'}
         </button>
       )}
     </>

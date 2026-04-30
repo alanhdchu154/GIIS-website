@@ -26,7 +26,7 @@ const SERVICES = [
   },
   {
     icon: '💬',
-    title: { en: 'Progress Check-ins', zh: '学习进度追蹤' },
+    title: { en: 'Progress Check-ins', zh: '学习进度追踪' },
     body: {
       en: 'Regular one-on-one check-ins help students stay on track, address challenges early, and maintain momentum throughout the school year.',
       zh: '定期一对一的进度确认，帮助学生保持学习节奏、提早发现问题，让整个学年都能稳健前进。',
@@ -45,7 +45,7 @@ const SERVICES = [
     title: { en: 'Technical & Platform Support', zh: '技术与平台协助' },
     body: {
       en: 'Get help with Moodle access, coursework submission, or any technical issues — so nothing gets in the way of your learning.',
-      zh: '协助解决 Moodle 登入、作业提交或任何技术问题，确保学习不受阻礙。',
+      zh: '协助解决 Moodle 登入、作业提交或任何技术问题，确保学习不受阻碍。',
     },
   },
   {
@@ -69,7 +69,7 @@ export default function SupportMain({ language, toggleLanguage }) {
           name="description"
           content={isEn
             ? 'Student support services at Genesis of Ideas International School — advising, counseling, and academic resources.'
-            : '艾迪尔国际学校学生支持服务：学业辅导、身心健康諮詢与资源说明。'}
+            : '艾迪尔国际学校学生支持服务：学业辅导、身心健康咨询与资源说明。'}
         />
       </Helmet>
 

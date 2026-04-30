@@ -13,7 +13,7 @@ function getStudentStatus(s) {
 
 const STATUS_BADGE = {
   enrolled:  { label: { en: 'Enrolled',  zh: '在籍' },  bg: '#198754' },
-  graduated: { label: { en: 'Graduated', zh: '畢业' },  bg: '#0d6efd' },
+  graduated: { label: { en: 'Graduated', zh: '毕业' },  bg: '#0d6efd' },
   withdrawn: { label: { en: 'Withdrawn', zh: '退学' },  bg: '#dc3545' },
 };
 
@@ -49,7 +49,7 @@ export default function AdminDashboard({ language }) {
       const r = await fetch(`${API_BASE}/api/students`, { credentials: 'include' });
       const data = await r.json().catch(() => ({}));
       if (r.status === 401) { clearAdminSession(); navigate('/login', { replace: true }); return; }
-      if (!r.ok) throw new Error(data.error || (isEn ? 'Failed to load' : '载入失敗'));
+      if (!r.ok) throw new Error(data.error || (isEn ? 'Failed to load' : '载入失败'));
       setStudents(data.students || []);
     } catch (e) {
       setErr(e.message);
@@ -73,8 +73,8 @@ export default function AdminDashboard({ language }) {
     const email = form.email.trim();
     const password = form.password;
     if (!name) { setFormErr(isEn ? 'Name is required.' : '姓名为必填。'); return; }
-    if (email && !password) { setFormErr(isEn ? 'Password is required when email is set.' : '設定 Email 時密碼為必填。'); return; }
-    if (password && password.length < 8) { setFormErr(isEn ? 'Password must be at least 8 characters.' : '密碼至少需要 8 個字元。'); return; }
+    if (email && !password) { setFormErr(isEn ? 'Password is required when email is set.' : '设定 Email 时密码为必填。'); return; }
+    if (password && password.length < 8) { setFormErr(isEn ? 'Password must be at least 8 characters.' : '密码至少需要 8 个字元。'); return; }
     setCreating(true);
     setFormErr('');
     try {
@@ -90,7 +90,7 @@ export default function AdminDashboard({ language }) {
         body: JSON.stringify(body),
       });
       const data = await r.json().catch(() => ({}));
-      if (!r.ok) throw new Error(data.error || (isEn ? 'Create failed' : '建立失敗'));
+      if (!r.ok) throw new Error(data.error || (isEn ? 'Create failed' : '建立失败'));
       navigate(`/admin/transcript/${data.student.id}`);
     } catch (e2) {
       setFormErr(e2.message);
@@ -100,11 +100,11 @@ export default function AdminDashboard({ language }) {
   }
 
   async function handleDelete(id) {
-    if (!window.confirm(isEn ? 'Delete this withdrawn student? This cannot be undone.' : '确定要刪除此退学学生嗎？此动作无法还原。')) return;
+    if (!window.confirm(isEn ? 'Delete this withdrawn student? This cannot be undone.' : '确定要删除此退学学生吗？此动作无法还原。')) return;
     setDeletingId(id);
     try {
       const r = await fetch(`${API_BASE}/api/students/${id}`, { method: 'DELETE', credentials: 'include' });
-      if (!r.ok) throw new Error(isEn ? 'Delete failed' : '刪除失敗');
+      if (!r.ok) throw new Error(isEn ? 'Delete failed' : '删除失败');
       setStudents((prev) => prev.filter((s) => s.id !== id));
     } catch (e) {
       setErr(e.message);
@@ -124,12 +124,12 @@ export default function AdminDashboard({ language }) {
           <p className="text-muted small mb-0 mt-1">
             {isEn
               ? 'Roster, profiles, and grade transcripts. Open a student to edit.'
-              : '学生列表、个资与成绩单。点擊学生即可編辑。'}
+              : '学生列表、个资与成绩单。点击学生即可编辑。'}
           </p>
         </div>
         <div>
           <Link to="/school-profile" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm me-2">
-            {isEn ? 'School Profile' : '學校簡介'}
+            {isEn ? 'School Profile' : '学校简介'}
           </Link>
           <button type="button" className="btn btn-outline-secondary btn-sm me-2" onClick={logout}>
             {isEn ? 'Log out' : '登出'}
@@ -150,7 +150,7 @@ export default function AdminDashboard({ language }) {
           {[
             { key: 'all',      label: { en: 'All',      zh: '全部' } },
             { key: 'enrolled', label: { en: 'Enrolled', zh: '在籍' } },
-            { key: 'graduated',label: { en: 'Graduated',zh: '畢业' } },
+            { key: 'graduated',label: { en: 'Graduated',zh: '毕业' } },
             { key: 'withdrawn',label: { en: 'Withdrawn',zh: '退学' } },
           ].map(({ key, label }) => {
             const count = key === 'all'
@@ -182,13 +182,13 @@ export default function AdminDashboard({ language }) {
               <thead className="table-light">
                 <tr>
                   <th>{isEn ? 'Name' : '姓名'}</th>
-                  <th>{isEn ? 'Status' : '狀态'}</th>
+                  <th>{isEn ? 'Status' : '状态'}</th>
                   <th>{isEn ? 'ID' : '学号'}</th>
                   <th>{isEn ? 'Grade' : '年级'}</th>
                   <th>{isEn ? 'Login email' : '登入信箱'}</th>
                   <th>{isEn ? 'Birth' : '生日'}</th>
                   <th>{isEn ? 'Location' : '地点'}</th>
-                  <th>{isEn ? 'Guardian' : '監护人'}</th>
+                  <th>{isEn ? 'Guardian' : '监护人'}</th>
                   <th className="text-center">{isEn ? 'Semesters' : '学期数'}</th>
                   <th>{isEn ? 'Updated' : '更新时间'}</th>
                   <th />
@@ -224,7 +224,7 @@ export default function AdminDashboard({ language }) {
                       </td>
                       <td className="text-end text-nowrap">
                         <Link className="btn btn-sm btn-outline-primary me-1" to={`/admin/transcript/${s.id}`}>
-                          {isEn ? 'View & edit' : '檢视／編辑'}
+                          {isEn ? 'View & edit' : '检视／编辑'}
                         </Link>
                         <Link
                           className="btn btn-sm btn-outline-secondary me-1"
@@ -240,7 +240,7 @@ export default function AdminDashboard({ language }) {
                             onClick={() => handleDelete(s.id)}
                             disabled={deletingId === s.id}
                           >
-                            {deletingId === s.id ? '…' : (isEn ? 'Delete' : '刪除')}
+                            {deletingId === s.id ? '…' : (isEn ? 'Delete' : '删除')}
                           </button>
                         )}
                       </td>
@@ -251,8 +251,8 @@ export default function AdminDashboard({ language }) {
                   <tr>
                     <td colSpan={11} className="text-muted text-center py-4">
                       {statusFilter === 'all'
-                        ? (isEn ? 'No students yet — create one above.' : '目前沒有学生资料，请使用上方按鈕新增。')
-                        : (isEn ? 'No students in this category.' : '此分类沒有学生。')}
+                        ? (isEn ? 'No students yet — create one above.' : '目前没有学生资料，请使用上方按钮新增。')
+                        : (isEn ? 'No students in this category.' : '此分类没有学生。')}
                     </td>
                   </tr>
                 )}
@@ -270,7 +270,7 @@ export default function AdminDashboard({ language }) {
         >
           <div style={{ background: '#fff', borderRadius: '8px', padding: '28px 32px', width: '100%', maxWidth: '460px', boxShadow: '0 8px 32px rgba(0,0,0,0.18)', maxHeight: '90vh', overflowY: 'auto' }}>
             <h5 style={{ marginBottom: '4px' }}>{isEn ? 'New Student' : '新增学生'}</h5>
-            <p className="text-muted small mb-4">{isEn ? 'Profile is required. Login credentials are optional — set them now or add later.' : '個人資料為必填；登入帳號可現在設定，也可之後補填。'}</p>
+            <p className="text-muted small mb-4">{isEn ? 'Profile is required. Login credentials are optional — set them now or add later.' : '个人资料为必填；登入帐号可现在设定，也可之后补填。'}</p>
             <form onSubmit={handleCreateSubmit}>
               <div className="mb-3">
                 <label className="form-label fw-semibold">
@@ -281,14 +281,14 @@ export default function AdminDashboard({ language }) {
                   className="form-control"
                   value={form.name}
                   onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                  placeholder={isEn ? 'e.g. Zhang Wei' : '例：張偉'}
+                  placeholder={isEn ? 'e.g. Zhang Wei' : '例：张伟'}
                   autoFocus
                 />
               </div>
 
               <hr className="my-3" />
               <p className="small fw-semibold mb-2" style={{ color: '#444' }}>
-                {isEn ? 'Login Account (optional)' : '登入帳號（選填）'}
+                {isEn ? 'Login Account (optional)' : '登入帐号（选填）'}
               </p>
               <div className="mb-3">
                 <label className="form-label">{isEn ? 'Email' : 'Email 信箱'}</label>
@@ -302,25 +302,25 @@ export default function AdminDashboard({ language }) {
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">{isEn ? 'Password' : '密碼'}</label>
+                <label className="form-label">{isEn ? 'Password' : '密码'}</label>
                 <input
                   type="password"
                   className="form-control"
                   value={form.password}
                   onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
-                  placeholder={isEn ? 'Min. 8 characters' : '至少 8 個字元'}
+                  placeholder={isEn ? 'Min. 8 characters' : '至少 8 个字元'}
                   autoComplete="new-password"
                   minLength={8}
                   disabled={!form.email}
                 />
                 {!form.email && (
-                  <div className="form-text">{isEn ? 'Enter email first to enable password.' : '請先填 Email 再設密碼。'}</div>
+                  <div className="form-text">{isEn ? 'Enter email first to enable password.' : '请先填 Email 再设密码。'}</div>
                 )}
               </div>
 
               <hr className="my-3" />
               <p className="small fw-semibold mb-2" style={{ color: '#444' }}>
-                {isEn ? 'Academic Info (optional)' : '學籍資訊（選填）'}
+                {isEn ? 'Academic Info (optional)' : '学籍资讯（选填）'}
               </p>
               <div className="mb-3">
                 <label className="form-label">{isEn ? 'Birth Date' : '生日'}</label>
@@ -332,7 +332,7 @@ export default function AdminDashboard({ language }) {
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">{isEn ? 'Entry Date' : '入學日期'}</label>
+                <label className="form-label">{isEn ? 'Entry Date' : '入学日期'}</label>
                 <input
                   type="date"
                   className="form-control"
@@ -341,14 +341,14 @@ export default function AdminDashboard({ language }) {
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">{isEn ? 'Expected Graduation Date' : '預計畢業日'}</label>
+                <label className="form-label">{isEn ? 'Expected Graduation Date' : '预计毕业日'}</label>
                 <input
                   type="date"
                   className="form-control"
                   value={form.graduationDate}
                   onChange={(e) => setForm((f) => ({ ...f, graduationDate: e.target.value }))}
                 />
-                <div className="form-text">{isEn ? 'Used to compute grade level (9–12).' : '用來計算目前年級（9–12）。'}</div>
+                <div className="form-text">{isEn ? 'Used to compute grade level (9–12).' : '用来计算目前年级（9–12）。'}</div>
               </div>
               {formErr && <div className="alert alert-danger py-2 mb-3">{formErr}</div>}
               <div className="d-flex justify-content-end gap-2">
@@ -356,7 +356,7 @@ export default function AdminDashboard({ language }) {
                   {isEn ? 'Cancel' : '取消'}
                 </button>
                 <button type="submit" className="btn btn-primary" disabled={creating}>
-                  {creating ? (isEn ? 'Creating…' : '建立中…') : (isEn ? 'Create & open' : '建立並开啟')}
+                  {creating ? (isEn ? 'Creating…' : '建立中…') : (isEn ? 'Create & open' : '建立并开启')}
                 </button>
               </div>
             </form>

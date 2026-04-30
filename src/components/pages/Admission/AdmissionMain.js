@@ -25,10 +25,10 @@ const STEPS = [
   },
   {
     num: '03',
-    title: { en: 'Interview & Assessment', zh: '面談与学力评估' },
+    title: { en: 'Interview & Assessment', zh: '面谈与学力评估' },
     body: {
       en: 'Complete a brief interview or placement discussion so we can design the right academic path for you.',
-      zh: '进行简短的面談或学力评估，让我们为你规划最合适的学习方向。',
+      zh: '进行简短的面谈或学力评估，让我们为你规划最合适的学习方向。',
     },
   },
   {
@@ -336,7 +336,7 @@ export default function AdmissionMain({ language, toggleLanguage }) {
               },
               {
                 q: { en: 'Is the diploma recognized by US universities?', zh: '这个文凭被美国大学认可吗？' },
-                a: { en: 'Yes. GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the same standard followed by US private high schools. Our diploma is designed to be recognized by US colleges during international student admissions review.', zh: '是的。GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭——与美国私立高中标准一致。我们的文凭在美国大学国际学生申请审核中具备完整的学術效力。' },
+                a: { en: 'Yes. GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the same standard followed by US private high schools. Our diploma is designed to be recognized by US colleges during international student admissions review.', zh: '是的。GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭——与美国私立高中标准一致。我们的文凭在美国大学国际学生申请审核中具备完整的学术效力。' },
               },
               {
                 q: { en: 'How long does the program take?', zh: '课程需要多长时间完成？' },
