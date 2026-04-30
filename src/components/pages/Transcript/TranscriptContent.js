@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import logoSlogan from '../../../img/logo_slogan.png';
-import logo from '../../../img/logo_nobg.png';
 import GradeTable from './GradeTable.js';
 import TranscriptActions from './TranscriptActions.js';
 import { useTranscriptData } from './useTranscriptData.js';
@@ -125,18 +124,23 @@ function TranscriptContent({
 
         <div style={{ position: 'relative', zIndex: 1 }}>
           {/* Header */}
-          <div style={styles.header} className="pdf-header-title">
-            <img src={logo} alt="GIIS" style={styles.headerLogo} />
-            <div style={styles.headerCenter}>
-              <div style={styles.headerLabel}>Official Academic Record</div>
-              <div style={styles.title}>Genesis of Ideas International School</div>
-              <div style={styles.headerContact}>
-                7901 4th St N STE 300, St. Petersburg, FL 33702&nbsp;&nbsp;·&nbsp;&nbsp;+1 (813) 501-5756&nbsp;&nbsp;·&nbsp;&nbsp;genesisideas.school
-              </div>
+          <div style={styles.mainTitle} className="pdf-header-title">
+            <p style={{ marginBottom: '0' }}>Academic Transcript</p>
+          </div>
+          <div style={styles.title} className="pdf-header-school">
+            <p style={{ marginBottom: '0' }}>Genesis of Ideas International School</p>
+          </div>
+          <div style={styles.columns} className="pdf-header-columns">
+            <div style={styles.column1}>
+              7901 4th St N STE 300,<br />St. Petersburg, FL 33702<br />
             </div>
-            <div style={styles.headerBadge}>
-              <div style={styles.officialBadge}>OFFICIAL TRANSCRIPT</div>
-              <div style={styles.headerMeta}>FL School Code: 650<br />President: Shiyu Zhang, Ph.D.</div>
+            <div style={styles.column2}>
+              Phone: +1 (813) 501-5756<br />
+              <a href="https://genesisideas.school/">https://genesisideas.school/</a><br />
+            </div>
+            <div style={styles.column3}>
+              FL School Code: 650<br />President: Shiyu Zhang, Ph.D.<br />
+              admissions@genesisideas.school
             </div>
           </div>
 
@@ -279,29 +283,21 @@ function TranscriptContent({
 }
 
 const fontBase = { fontFamily: 'Times New Roman, Times, serif' };
-const NAVY = '#2b3d6d';
 
 const styles = {
-  container: { border: 'none', padding: '20px 24px', textAlign: 'left', width: '100%', backgroundColor: 'white', outline: 'none', boxShadow: 'none', boxSizing: 'border-box' },
-
-  // Header
-  header: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: `3px solid ${NAVY}`, paddingBottom: '14px', marginBottom: '16px', gap: '12px' },
-  headerLogo: { height: '64px', width: 'auto', flexShrink: 0 },
-  headerCenter: { flex: 1, textAlign: 'center' },
-  headerLabel: { fontSize: '9pt', color: '#666', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '2px', ...fontBase },
-  title: { fontSize: '18pt', fontWeight: 'bold', color: '#1a1a2e', ...fontBase, lineHeight: 1.1, marginBottom: '4px' },
-  headerContact: { fontSize: '9pt', color: '#555', ...fontBase },
-  headerBadge: { textAlign: 'right', flexShrink: 0 },
-  officialBadge: { display: 'inline-block', border: `2px solid ${NAVY}`, color: NAVY, fontWeight: 'bold', fontSize: '9pt', padding: '3px 10px', letterSpacing: '0.5px', marginBottom: '6px', ...fontBase },
-  headerMeta: { fontSize: '8.5pt', color: '#555', lineHeight: 1.6, ...fontBase },
-
-  // Student info table
-  thTd: { padding: '8px 10px', border: '1px solid #bbb', textAlign: 'left', fontSize: '10.5pt', width: '25%', wordWrap: 'break-word', ...fontBase, lineHeight: '1.4', backgroundColor: '#fafafa' },
-  thTdNarrow: { padding: '8px 10px', border: '1px solid #bbb', textAlign: 'left', fontSize: '10.5pt', width: '12%', wordWrap: 'break-word', ...fontBase, lineHeight: '1.4', backgroundColor: '#fafafa' },
-  thTdWide: { padding: '8px 10px', border: '1px solid #bbb', textAlign: 'left', fontSize: '10.5pt', width: '44%', wordWrap: 'break-word', ...fontBase, lineHeight: '1.4', backgroundColor: '#fafafa' },
-  table: { width: '100%', borderCollapse: 'collapse', ...fontBase, margin: '8px 0 16px', tableLayout: 'fixed', fontSize: '10.5pt' },
-  labelInputWrapper: { display: 'flex', alignItems: 'center', gap: '6px' },
-  input: { flex: 1, fontSize: '10.5pt', boxSizing: 'border-box', border: 'none', borderBottom: '2px solid #2b3d6d', background: 'none', outline: 'none', ...fontBase, lineHeight: '1.4', minWidth: 0 },
+  container: { border: 'none', padding: '4px', textAlign: 'left', width: '100%', backgroundColor: 'white', outline: 'none', boxShadow: 'none' },
+  title: { marginBottom: '2px', ...fontBase, fontSize: '16pt', fontWeight: 'bold', textAlign: 'center' },
+  mainTitle: { marginBottom: '2px', ...fontBase, fontSize: '10pt', fontWeight: 'normal', textAlign: 'center' },
+  columns: { width: '100%', display: 'flex', justifyContent: 'space-between', backgroundColor: 'rgba(255,255,255,1)', margin: '0 auto' },
+  column1: { flex: '1', textAlign: 'left', padding: '4px', boxSizing: 'border-box', fontSize: '10pt', ...fontBase, lineHeight: '1.1' },
+  column2: { flex: '1', textAlign: 'center', padding: '4px', boxSizing: 'border-box', fontSize: '10pt', ...fontBase, lineHeight: '1.1' },
+  column3: { flex: '1', textAlign: 'right', padding: '4px', boxSizing: 'border-box', fontSize: '10pt', ...fontBase, lineHeight: '1.1' },
+  thTd: { padding: '1px 3px', border: '1px solid black', textAlign: 'left', fontSize: '8pt', width: '25%', wordWrap: 'break-word', ...fontBase, lineHeight: '1.1' },
+  thTdNarrow: { padding: '1px 3px', border: '1px solid black', textAlign: 'left', fontSize: '8pt', width: '12%', wordWrap: 'break-word', ...fontBase, lineHeight: '1.1' },
+  thTdWide: { padding: '1px 3px', border: '1px solid black', textAlign: 'left', fontSize: '8pt', width: '44%', wordWrap: 'break-word', ...fontBase, lineHeight: '1.1' },
+  table: { width: '100%', borderCollapse: 'collapse', ...fontBase, margin: '4px 0', tableLayout: 'fixed', fontSize: '8pt' },
+  labelInputWrapper: { display: 'flex', alignItems: 'center' },
+  input: { width: '50%', fontSize: '8pt', boxSizing: 'border-box', border: 'none', borderBottom: '2px solid black', background: 'none', outline: 'none', overflowWrap: 'break-word', whiteSpace: 'normal', wordWrap: 'break-word', ...fontBase, lineHeight: '1' },
 };
 
 export default TranscriptContent;
