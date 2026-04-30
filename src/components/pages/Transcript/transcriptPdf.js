@@ -80,19 +80,19 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
 
   const td = `${TD_BASE}font-size:6pt;border:0.5px solid #ccc;padding:1px 1.5px;vertical-align:middle;`;
   const col = {
-    name:  `${td}width:40%;`,
-    type:  `${td}width:14%;text-align:center;`,
-    cred:  `${td}width:6%;text-align:center;`,
-    grade: `${td}width:6%;text-align:center;`,
-    gpa:   `${td}width:17%;text-align:center;`,
+    name:  `${td}width:44%;`,
+    type:  `${td}width:10%;text-align:center;`,
+    cred:  `${td}width:8%;text-align:center;`,
+    grade: `${td}width:8%;text-align:center;`,
+    gpa:   `${td}width:15%;text-align:center;`,
   };
   const hd = `${TD_BASE}font-size:5.5pt;font-weight:bold;padding:1px 1.5px;border:0.5px solid #999;background:${HEAD_BG};white-space:normal;line-height:1.2;`;
   const hCol = {
-    name:  `${hd}width:40%;text-align:left;`,
-    type:  `${hd}width:14%;text-align:center;`,
-    cred:  `${hd}width:6%;text-align:center;`,
-    grade: `${hd}width:6%;text-align:center;`,
-    gpa:   `${hd}width:17%;text-align:center;`,
+    name:  `${hd}width:44%;text-align:left;`,
+    type:  `${hd}width:10%;text-align:center;`,
+    cred:  `${hd}width:8%;text-align:center;`,
+    grade: `${hd}width:8%;text-align:center;`,
+    gpa:   `${hd}width:15%;text-align:center;`,
   };
   const totTd = `${TD_BASE}font-size:6pt;background:${HEAD_BG};font-weight:bold;border:0.5px solid #999;border-top:1px solid #999;padding:1px 1.5px;vertical-align:middle;`;
 
@@ -109,12 +109,12 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
   }).join('');
 
   const totRow = `<tr>
-    <td style="${totTd}width:40%;">Semester Totals</td>
-    <td style="${totTd}width:14%;text-align:center;"></td>
-    <td style="${totTd}width:6%;text-align:center;">${totals.credits>0?totals.credits.toFixed(1):''}</td>
-    <td style="${totTd}width:6%;text-align:center;"></td>
-    <td style="${totTd}width:17%;text-align:center;">${escapeHtml(totals.weighted)}</td>
-    <td style="${totTd}width:17%;text-align:center;">${escapeHtml(totals.unweighted)}</td>
+    <td style="${totTd}width:44%;">Semester Totals</td>
+    <td style="${totTd}width:10%;text-align:center;"></td>
+    <td style="${totTd}width:8%;text-align:center;">${totals.credits>0?totals.credits.toFixed(1):''}</td>
+    <td style="${totTd}width:8%;text-align:center;"></td>
+    <td style="${totTd}width:15%;text-align:center;">${escapeHtml(totals.weighted)}</td>
+    <td style="${totTd}width:15%;text-align:center;">${escapeHtml(totals.unweighted)}</td>
   </tr>`;
 
   return `<div style="margin-bottom:1.5mm;">
