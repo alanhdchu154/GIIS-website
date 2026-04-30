@@ -35,11 +35,11 @@ function calculateTotals(rows) {
   rows.forEach((row) => {
     if (row.name === 'Semester Totals') return;
     const credits = parseFloat(row.credits) || 0;
-    totalCredits += credits;
     if (row.weightedGPA !== '-' && row.unweightedGPA !== '-') {
       const w = typeof row.weightedGPA === 'number' ? row.weightedGPA : parseFloat(row.weightedGPA);
       const u = typeof row.unweightedGPA === 'number' ? row.unweightedGPA : parseFloat(row.unweightedGPA);
       if (Number.isFinite(w) && Number.isFinite(u)) {
+        totalCredits += credits;
         totalWeighted += w * credits;
         totalUnweighted += u * credits;
       }

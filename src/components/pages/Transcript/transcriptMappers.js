@@ -19,13 +19,13 @@ function calculateTotalsLikeTable(updatedRows) {
   updatedRows.forEach((row) => {
     if (row.name === 'Semester Totals') return;
     const credits = parseFloat(row.credits) || 0;
-    totalCredits += credits;
     const w = row.weightedGPA;
     const u = row.unweightedGPA;
     if (w !== '-' && u !== '-' && w !== '' && u !== '') {
       const wf = typeof w === 'number' ? w : parseFloat(w);
       const uf = typeof u === 'number' ? u : parseFloat(u);
       if (Number.isFinite(wf) && Number.isFinite(uf)) {
+        totalCredits += credits;
         totalWeightedGPA += wf * credits;
         totalUnweightedGPA += uf * credits;
       }
@@ -50,7 +50,9 @@ export function courseApiToGradeRows(courseRowsFromApi) {
   const dataRows = (courseRowsFromApi || []).map((c) => ({
     name: c.courseName || '',
     type: c.courseType || '',
-    credits: c.credits != null ? String(c.credits) : '',
+    credits: (c.credits != null && String(c.credits).trim() !== '')
+      ? String(c.credits)
+      : (c.courseType === 'Core' || c.courseType === 'Core (AP)') ? '1.0' : '',
     grade: c.letterGrade || '',
     weightedGPA: normalizeGpaCell(c.weightedGpa),
     unweightedGPA: normalizeGpaCell(c.unweightedGpa),
