@@ -98,10 +98,12 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
 
   const body = dataRows.map((r, i) => {
     const bg = i % 2 !== 0 ? `background:${ALT_ROW};` : '';
+    const isCore = r.type === 'Core' || r.type === 'Core (AP)';
+    const credVal = (r.credits != null && String(r.credits).trim() !== '') ? String(r.credits) : (isCore ? '1.0' : '');
     return `<tr>
       <td style="${col.name}${bg}">${escapeHtml(r.name||'')}</td>
       <td style="${col.type}${bg}">${escapeHtml(r.type||'')}</td>
-      <td style="${col.cred}${bg}">${escapeHtml(r.credits!=null?String(r.credits):'')}</td>
+      <td style="${col.cred}${bg}">${escapeHtml(credVal)}</td>
       <td style="${col.grade}${bg}">${escapeHtml(r.grade||'')}</td>
       <td style="${col.gpa}${bg}">${escapeHtml(r.weightedGPA!=null&&r.weightedGPA!==''?String(r.weightedGPA):'')}</td>
       <td style="${col.gpa}${bg}">${escapeHtml(r.unweightedGPA!=null&&r.unweightedGPA!==''?String(r.unweightedGPA):'')}</td>
@@ -109,16 +111,24 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
   }).join('');
 
   const totRow = `<tr>
-    <td style="${totTd}width:44%;">Semester Totals</td>
-    <td style="${totTd}width:10%;text-align:center;"></td>
-    <td style="${totTd}width:8%;text-align:center;">${totals.credits>0?totals.credits.toFixed(1):''}</td>
-    <td style="${totTd}width:8%;text-align:center;"></td>
-    <td style="${totTd}width:15%;text-align:center;">${escapeHtml(totals.weighted)}</td>
-    <td style="${totTd}width:15%;text-align:center;">${escapeHtml(totals.unweighted)}</td>
+    <td style="${totTd}">Semester Totals</td>
+    <td style="${totTd}text-align:center;"></td>
+    <td style="${totTd}text-align:center;">${totals.credits>0?totals.credits.toFixed(1):''}</td>
+    <td style="${totTd}text-align:center;"></td>
+    <td style="${totTd}text-align:center;">${escapeHtml(totals.weighted)}</td>
+    <td style="${totTd}text-align:center;">${escapeHtml(totals.unweighted)}</td>
   </tr>`;
 
-  return `<div style="margin-bottom:1.5mm;">
+  return `<div style="margin-bottom:1mm;">
     <table style="width:100%;border-collapse:collapse;table-layout:fixed;font-family:${F};">
+      <colgroup>
+        <col style="width:44%;" />
+        <col style="width:10%;" />
+        <col style="width:8%;" />
+        <col style="width:8%;" />
+        <col style="width:15%;" />
+        <col style="width:15%;" />
+      </colgroup>
       <thead>
         <tr><th colspan="6" style="${TD_BASE}font-size:7pt;font-weight:bold;padding:1.5px 3px;text-align:left;border:0.5px solid #999;background:#fff;">${escapeHtml(semesterName)}${isInProgress?' (In Progress)':''}</th></tr>
         <tr>
@@ -138,8 +148,8 @@ function buildSemesterTableHtml(semesterName, rows, semesterStatus) {
 function buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDateDisplay) {
   const siTd  = `${TD_BASE}border:0.5px solid #999;padding:0.8mm 1.5mm;vertical-align:top;width:25%;font-size:6.5pt;`;
   const cumTd = `${TD_BASE}border:0.5px solid #999;padding:1.5px 4px;font-size:7.5pt;background:${HEAD_BG};`;
-  const scaleTh = `${TD_BASE}font-size:6pt;font-weight:bold;border:0.5px solid #999;padding:1px 3px;text-align:center;background:${HEAD_BG};`;
-  const scaleTd = `${TD_BASE}font-size:6pt;border:0.5px solid #999;padding:1px 3px;text-align:center;background:${ALT_ROW};`;
+  const gs = `${TD_BASE}font-size:5.5pt;border:0.5px solid #ccc;padding:0.5px 2px;text-align:center;`;
+  const ct = `${TD_BASE}font-size:5.5pt;border:0.5px solid #ccc;padding:0.5px 3px;`;
 
   return `
 <!-- HEADER -->
@@ -218,39 +228,47 @@ function buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDa
 </table>
 
 <!-- GRADING SCALE -->
-<table style="width:100%;border-collapse:collapse;margin-bottom:2mm;">
-  <thead>
-    <tr>
-      <th colspan="9" style="${scaleTh}text-align:left;">Grading Scale (Unweighted &mdash; AP courses add +1.0)</th>
-      <th colspan="2" style="${scaleTh}text-align:left;">Course Types</th>
-    </tr>
-    <tr>
-      <th style="${scaleTh}">A</th>
-      <th style="${scaleTh}">A&minus;</th>
-      <th style="${scaleTh}">B+</th>
-      <th style="${scaleTh}">B</th>
-      <th style="${scaleTh}">B&minus;</th>
-      <th style="${scaleTh}">C+</th>
-      <th style="${scaleTh}">C</th>
-      <th style="${scaleTh}">D</th>
-      <th style="${scaleTh}">F</th>
-      <td rowspan="2" colspan="2" style="${TD_BASE}font-size:6pt;border:0.5px solid #999;padding:1px 4px;vertical-align:top;text-align:left;">
-        <strong>AP</strong>&nbsp;&nbsp;Advanced Placement<br/>
-        <strong>Core / Elec</strong>&nbsp;&nbsp;Core Curriculum / Elective
-      </td>
-    </tr>
-    <tr>
-      <td style="${scaleTd}">4.0</td>
-      <td style="${scaleTd}">3.7</td>
-      <td style="${scaleTd}">3.3</td>
-      <td style="${scaleTd}">3.0</td>
-      <td style="${scaleTd}">2.7</td>
-      <td style="${scaleTd}">2.3</td>
-      <td style="${scaleTd}">2.0</td>
-      <td style="${scaleTd}">1.0</td>
-      <td style="${scaleTd}">0.0</td>
-    </tr>
-  </thead>
+<table style="width:100%;border-collapse:collapse;margin-top:1mm;margin-bottom:1mm;">
+  <tbody><tr>
+    <td style="width:65%;vertical-align:top;border:none;padding:0 3mm 0 0;">
+      <div style="${TD_BASE}font-size:5.5pt;font-weight:bold;background:${HEAD_BG};border:0.5px solid #999;border-bottom:none;padding:1px 3px;">Grading Scale (Unweighted &mdash; AP courses add +1.0)</div>
+      <table style="width:100%;border-collapse:collapse;table-layout:fixed;">
+        <tbody>
+          <tr>
+            <td style="${gs}font-weight:bold;">A</td>
+            <td style="${gs}font-weight:bold;background:${ALT_ROW};">A&minus;</td>
+            <td style="${gs}font-weight:bold;">B+</td>
+            <td style="${gs}font-weight:bold;background:${ALT_ROW};">B</td>
+            <td style="${gs}font-weight:bold;">B&minus;</td>
+            <td style="${gs}font-weight:bold;background:${ALT_ROW};">C+</td>
+            <td style="${gs}font-weight:bold;">C</td>
+            <td style="${gs}font-weight:bold;background:${ALT_ROW};">D</td>
+            <td style="${gs}font-weight:bold;">F</td>
+          </tr>
+          <tr>
+            <td style="${gs}">4.0</td>
+            <td style="${gs}background:${ALT_ROW};">3.7</td>
+            <td style="${gs}">3.3</td>
+            <td style="${gs}background:${ALT_ROW};">3.0</td>
+            <td style="${gs}">2.7</td>
+            <td style="${gs}background:${ALT_ROW};">2.3</td>
+            <td style="${gs}">2.0</td>
+            <td style="${gs}background:${ALT_ROW};">1.0</td>
+            <td style="${gs}">0.0</td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+    <td style="width:35%;vertical-align:top;border:none;padding:0 0 0 2mm;">
+      <div style="${TD_BASE}font-size:5.5pt;font-weight:bold;background:${HEAD_BG};border:0.5px solid #999;border-bottom:none;padding:1px 3px;">Course Types</div>
+      <table style="width:100%;border-collapse:collapse;">
+        <tbody>
+          <tr><td style="${ct}width:22%;font-weight:bold;">AP</td><td style="${ct}">Advanced Placement</td></tr>
+          <tr><td style="${ct}background:${ALT_ROW};font-weight:bold;">Core / Elec</td><td style="${ct}background:${ALT_ROW};">Core Curriculum / Elective</td></tr>
+        </tbody>
+      </table>
+    </td>
+  </tr></tbody>
 </table>
 
 <!-- SIGNATURE -->
