@@ -299,8 +299,13 @@ export default function AdminTranscriptPage({ language }) {
         <title>Admin — Transcript | Genesis of Ideas International School</title>
       </Helmet>
       <div className="container-fluid py-2">
-        <p className="mb-2">
+        <p className="mb-2 d-flex gap-3 flex-wrap align-items-center">
           <Link to="/admin">{copy.back}</Link>
+          {studentId ? (
+            <Link to={`/admin/students/${studentId}/audit-trail`} className="small">
+              {isEn ? 'View activity audit trail →' : '查看学习活动审计 →'}
+            </Link>
+          ) : null}
         </p>
         <div className="d-flex flex-wrap gap-2 align-items-center mb-2">
           <span className="small text-muted">{copy.modeLabel}</span>

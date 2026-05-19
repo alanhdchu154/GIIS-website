@@ -473,6 +473,239 @@ router.put('/:id/transcript', authenticate, requireStudentOrAdminForStudentParam
   res.json({ student: serializeStudent(updated) });
 });
 
+/**
+ * Student audit trail — admin only.
+ *
+ * Returns a chronological evidence chain for a single student that can be
+ * shown to a college admissions officer / FL DOE auditor:
+ *   - Identity + enrollment summary
+ *   - All quiz attempts, assignment submissions, exam attempts with timestamps
+ *   - Course modules with derived "completed at" datetime
+ *   - Admin audit log entries scoped to this student
+ *
+ * Sorted newest-first. The frontend renders this as a per-week timeline
+ * + per-course breakdown + Export PDF button.
+ *
+ * RF-1 / T-001.
+ */
+router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
+  const studentId = req.params.id;
+
+  const student = await prisma.student.findUnique({
+    where: { id: studentId },
+    select: {
+      id: true,
+      studentCode: true,
+      name: true,
+      birthDate: true,
+      entryDate: true,
+      graduationDate: true,
+      account: { select: { email: true } },
+    },
+  });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const enrollments = await prisma.enrollment.findMany({
+    where: { studentId },
+    include: {
+      course: {
+        select: {
+          id: true,
+          slug: true,
+          name: true,
+          credits: true,
+          type: true,
+          gradeLevel: true,
+          modules: {
+            select: { order: true, title: true, estimatedHrs: true },
+            orderBy: { order: 'asc' },
+          },
+        },
+      },
+      quizAttempts: { orderBy: { submittedAt: 'desc' } },
+      assignments: { orderBy: { submittedAt: 'desc' } },
+      examAttempts: { orderBy: { startedAt: 'desc' } },
+    },
+  });
+
+  const auditLogs = await prisma.auditLog.findMany({
+    where: { studentId },
+    orderBy: { createdAt: 'desc' },
+    take: 200,
+    select: {
+      id: true,
+      action: true,
+      actorRole: true,
+      actorEmail: true,
+      createdAt: true,
+    },
+  });
+
+  // Flatten everything into a single timeline (one event per activity).
+  const timeline = [];
+
+  for (const enr of enrollments) {
+    const courseName = enr.course?.name || '(unknown)';
+    const moduleByOrder = new Map(
+      (enr.course?.modules || []).map((m) => [m.order, m])
+    );
+
+    // Per-module completion datetime is derived: latest quiz/assignment for
+    // that module's order. We do not store an explicit completedAt today.
+    const completionDate = new Map();
+    for (const q of enr.quizAttempts) {
+      if (q.passed) {
+        const prev = completionDate.get(q.moduleOrder);
+        if (!prev || q.submittedAt > prev) completionDate.set(q.moduleOrder, q.submittedAt);
+      }
+    }
+    for (const a of enr.assignments) {
+      if (a.gradedAt) {
+        const prev = completionDate.get(a.moduleOrder);
+        if (!prev || a.gradedAt > prev) completionDate.set(a.moduleOrder, a.gradedAt);
+      }
+    }
+
+    for (const order of enr.completedModules || []) {
+      const m = moduleByOrder.get(order);
+      timeline.push({
+        kind: 'module_complete',
+        at: completionDate.get(order) || enr.creditEarnedAt || null,
+        courseName,
+        courseSlug: enr.course?.slug,
+        moduleOrder: order,
+        moduleTitle: m?.title || `Module ${order}`,
+        estimatedHrs: m?.estimatedHrs ? Number(m.estimatedHrs) : 0,
+      });
+    }
+
+    for (const q of enr.quizAttempts) {
+      timeline.push({
+        kind: 'quiz_attempt',
+        at: q.submittedAt,
+        courseName,
+        courseSlug: enr.course?.slug,
+        moduleOrder: q.moduleOrder,
+        score: q.score != null ? Number(q.score) : null,
+        passed: q.passed,
+      });
+    }
+
+    for (const a of enr.assignments) {
+      timeline.push({
+        kind: 'assignment_submit',
+        at: a.submittedAt,
+        courseName,
+        courseSlug: enr.course?.slug,
+        moduleOrder: a.moduleOrder,
+        score: a.score != null ? Number(a.score) : null,
+        graded: a.gradedAt != null,
+        gradedAt: a.gradedAt,
+      });
+    }
+
+    for (const x of enr.examAttempts) {
+      timeline.push({
+        kind: 'exam_attempt',
+        at: x.submittedAt || x.startedAt,
+        startedAt: x.startedAt,
+        submittedAt: x.submittedAt,
+        courseName,
+        courseSlug: enr.course?.slug,
+        examType: x.examType,
+        score: x.score != null ? Number(x.score) : null,
+        passed: x.passed,
+      });
+    }
+  }
+
+  for (const log of auditLogs) {
+    timeline.push({
+      kind: 'admin_action',
+      at: log.createdAt,
+      action: log.action,
+      actorEmail: log.actorEmail,
+      actorRole: log.actorRole,
+    });
+  }
+
+  timeline.sort((a, b) => {
+    const ta = a.at ? new Date(a.at).getTime() : 0;
+    const tb = b.at ? new Date(b.at).getTime() : 0;
+    return tb - ta;
+  });
+
+  // Per-course summary block
+  const courses = enrollments.map((enr) => {
+    const moduleHrs = new Map(
+      (enr.course?.modules || []).map((m) => [m.order, Number(m.estimatedHrs || 0)])
+    );
+    const completed = enr.completedModules || [];
+    const estHrs = completed.reduce((sum, o) => sum + (moduleHrs.get(o) || 0), 0);
+    return {
+      courseId: enr.course?.id,
+      slug: enr.course?.slug,
+      name: enr.course?.name,
+      type: enr.course?.type,
+      gradeLevel: enr.course?.gradeLevel,
+      credits: enr.course?.credits ? Number(enr.course.credits) : null,
+      semesterLabel: enr.semesterLabel,
+      enrolledAt: enr.enrolledAt,
+      creditEarned: enr.creditEarned,
+      creditEarnedAt: enr.creditEarnedAt,
+      modulesCompleted: completed.length,
+      modulesTotal: (enr.course?.modules || []).length,
+      estimatedHrs: Number(estHrs.toFixed(1)),
+      quizAttempts: enr.quizAttempts.length,
+      quizPassed: enr.quizAttempts.filter((q) => q.passed).length,
+      assignments: enr.assignments.length,
+      assignmentsGraded: enr.assignments.filter((a) => a.gradedAt).length,
+      exams: enr.examAttempts.length,
+      examsPassed: enr.examAttempts.filter((x) => x.passed).length,
+    };
+  });
+
+  // Totals
+  const totals = courses.reduce(
+    (acc, c) => {
+      acc.modulesCompleted += c.modulesCompleted;
+      acc.estimatedHrs += c.estimatedHrs;
+      acc.quizAttempts += c.quizAttempts;
+      acc.quizPassed += c.quizPassed;
+      acc.assignments += c.assignments;
+      acc.assignmentsGraded += c.assignmentsGraded;
+      acc.exams += c.exams;
+      acc.examsPassed += c.examsPassed;
+      return acc;
+    },
+    {
+      modulesCompleted: 0,
+      estimatedHrs: 0,
+      quizAttempts: 0,
+      quizPassed: 0,
+      assignments: 0,
+      assignmentsGraded: 0,
+      exams: 0,
+      examsPassed: 0,
+    }
+  );
+  totals.estimatedHrs = Number(totals.estimatedHrs.toFixed(1));
+
+  res.json({
+    student: {
+      ...student,
+      birthDate: dateOnly(student.birthDate),
+      entryDate: dateOnly(student.entryDate),
+      graduationDate: dateOnly(student.graduationDate),
+      loginEmail: student.account?.email ?? null,
+    },
+    totals,
+    courses,
+    timeline,
+    generatedAt: new Date().toISOString(),
+  });
+});
+
 /** Audit log — admin only */
 router.get('/audit', authenticate, requireAdmin, async (req, res) => {
   const page = Math.max(1, parseInt(req.query.page, 10) || 1);

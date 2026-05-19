@@ -1,6 +1,6 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
-const { authenticate, requireAdmin } = require('../middleware/auth');
+const { authenticate, requireAdmin, blockIfSoftLocked } = require('../middleware/auth');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -100,7 +100,7 @@ router.get('/', authenticate, requireStudent, async (req, res) => {
   res.json(enriched);
 });
 
-router.post('/', authenticate, requireStudent, async (req, res) => {
+router.post('/', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
   const { slug } = req.body || {};
   if (!slug) return res.status(400).json({ error: 'slug is required' });
   const course = await prisma.course.findUnique({ where: { slug }, select: { id: true, isPublished: true } });
@@ -248,7 +248,7 @@ router.get('/:slug/quiz/:moduleOrder', authenticate, requireStudent, async (req,
 });
 
 // POST /api/enrollments/:slug/quiz/:moduleOrder/submit — submit quiz answers
-router.post('/:slug/quiz/:moduleOrder/submit', authenticate, requireStudent, async (req, res) => {
+router.post('/:slug/quiz/:moduleOrder/submit', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
   const moduleOrder = parseInt(req.params.moduleOrder, 10);
   const { answers } = req.body || {};
   if (!moduleOrder || !answers || typeof answers !== 'object') {
@@ -300,7 +300,7 @@ router.post('/:slug/quiz/:moduleOrder/submit', authenticate, requireStudent, asy
 
 // ── Assignment Submission ─────────────────────────────────────────────────────
 
-router.post('/:slug/assignment/:moduleOrder', authenticate, requireStudent, async (req, res) => {
+router.post('/:slug/assignment/:moduleOrder', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
   const moduleOrder = parseInt(req.params.moduleOrder, 10);
   const { content } = req.body || {};
   if (!moduleOrder || !content?.trim()) return res.status(400).json({ error: 'moduleOrder and content are required' });
@@ -324,7 +324,7 @@ router.post('/:slug/assignment/:moduleOrder', authenticate, requireStudent, asyn
 
 // ── Exam (Midterm & Final) ────────────────────────────────────────────────────
 
-router.post('/:slug/exam', authenticate, requireStudent, async (req, res) => {
+router.post('/:slug/exam', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
   const { examType = 'final' } = req.body || {};
   if (examType !== 'midterm' && examType !== 'final') return res.status(400).json({ error: 'examType must be midterm or final' });
 
@@ -385,7 +385,7 @@ router.post('/:slug/exam', authenticate, requireStudent, async (req, res) => {
   res.status(201).json({ attemptId: attempt.id, examType, questions });
 });
 
-router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, async (req, res) => {
+router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
   const { answers } = req.body || {};
   if (!answers || typeof answers !== 'object') return res.status(400).json({ error: 'answers object required' });
 

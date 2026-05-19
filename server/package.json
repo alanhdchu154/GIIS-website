@@ -13,6 +13,7 @@
     "db:migrate:dev": "node scripts/prisma-env.cjs migrate dev",
     "db:migrate:deploy": "node scripts/prisma-env.cjs migrate deploy",
     "db:seed": "node prisma/seed.js",
+    "audit:seniors": "node scripts/senior-activity-audit.js",
     "postinstall": "node scripts/prisma-env.cjs generate",
     "test": "jest"
   },

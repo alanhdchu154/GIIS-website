@@ -40,14 +40,25 @@ model Student {
   auditLogs   AuditLog[]
   enrollments Enrollment[]
   parentAccounts ParentAccount[]
+  subscriptions  Subscription[]
 }
 
 /// Self-service student login (one account per student record).
+///
+/// Lock states (from least to most restrictive):
+///   normal              isActive=true,  softLocked=false  → full access
+///   soft-locked         isActive=true,  softLocked=true   → can sign in + see dashboard,
+///                                                            CANNOT take exams or open new modules
+///                                                            (set by webhook on 2× payment failure)
+///   deactivated         isActive=false                    → cannot sign in at all
+///                                                            (set by webhook on refund or admin action)
 model StudentAccount {
   id           String   @id @default(cuid())
   email        String   @unique
   passwordHash String
   isActive     Boolean  @default(true)
+  softLocked   Boolean  @default(false)
+  lockReason   String   @default("")   /// "payment_past_due" | "refund_issued" | "admin_hold" | ""
   studentId    String   @unique
   student      Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
   createdAt    DateTime @default(now())
@@ -265,18 +276,25 @@ model Subscription {
   planType                 String
   /// Number of student seats this subscription unlocks
   maxStudents              Int       @default(1)
-  /// active | past_due | cancelled | incomplete | trialing | paid
+  /// active | past_due | cancelled | incomplete | trialing | paid | refunded
   status                   String    @default("incomplete")
   currentPeriodEnd         DateTime?
   cancelAtPeriodEnd        Boolean   @default(false)
   /// USD cents at purchase time (audit; doesn't follow price changes)
   amountTotal              Int?
+  /// Set by webhooks-stripe on invoice.payment_failed; resets to 0 when an invoice succeeds.
+  paymentFailureCount      Int       @default(0)
+  /// Manually linked by admin in /admin/subscriptions (T-107) — connects this purchase to the
+  /// specific student account whose access flag we should toggle on payment events.
+  studentId                String?
+  student                  Student?  @relation(fields: [studentId], references: [id], onDelete: SetNull)
   createdAt                DateTime  @default(now())
   updatedAt                DateTime  @updatedAt
 
   @@index([purchaserEmail])
   @@index([status])
   @@index([planType])
+  @@index([studentId])
 }
 
 /// Immutable record of admin/student actions on student data.

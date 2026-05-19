@@ -54,7 +54,57 @@ function requireStudentOrAdminForStudentParam(req, res, next) {
   return res.status(403).json({ error: 'Forbidden' });
 }
 
+/**
+ * Block soft-locked student accounts from doing high-cost actions (taking exams,
+ * opening new modules) while still letting them sign in to see their dashboard.
+ *
+ * Soft-lock is set by webhooks-stripe.js after 2× payment_failed (T-103) or on
+ * refund (T-102). Admin sessions are never blocked.
+ *
+ * Apply this middleware to: exam start/submit, module-open, quiz submit.
+ */
+async function blockIfSoftLocked(req, res, next) {
+  if (req.auth?.role === 'admin') return next();
+  if (req.auth?.role !== 'student') return next();
+  try {
+    // Lazily import Prisma so middleware loads cleanly without DB during tests.
+    const { PrismaClient } = require('@prisma/client');
+    const prisma = req.app.locals._prismaForLockCheck ||
+      (req.app.locals._prismaForLockCheck = new PrismaClient());
+    const account = await prisma.studentAccount.findUnique({
+      where: { studentId: req.auth.studentId },
+      select: { isActive: true, softLocked: true, lockReason: true },
+    });
+    if (!account?.isActive) {
+      return res.status(403).json({
+        error: 'Account deactivated',
+        code: 'account_inactive',
+        lockReason: account?.lockReason || '',
+      });
+    }
+    if (account.softLocked) {
+      return res.status(402).json({
+        error: 'Account access limited — please update payment method',
+        code: 'soft_locked',
+        lockReason: account.lockReason,
+      });
+    }
+    return next();
+  } catch (err) {
+    // If lock check fails, fail OPEN (let the request through) and log loudly.
+    // We never want a transient DB blip to lock out paying parents.
+    console.error('[auth] blockIfSoftLocked check failed (failing open):', err.message);
+    return next();
+  }
+}
+
 /** @deprecated Use authenticate */
 const requireAuth = authenticate;
 
-module.exports = { authenticate, requireAuth, requireAdmin, requireStudentOrAdminForStudentParam };
+module.exports = {
+  authenticate,
+  requireAuth,
+  requireAdmin,
+  requireStudentOrAdminForStudentParam,
+  blockIfSoftLocked,
+};

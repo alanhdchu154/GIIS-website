@@ -148,13 +148,22 @@ export default function AdminProgressPage() {
                   </div>
 
                   {/* Action */}
-                  <Link to={`/admin/transcript/${s.id}`} style={{
-                    fontSize: '12px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none',
-                    padding: '6px 14px', border: '1.5px solid #2b3d6d', borderRadius: '6px',
-                    whiteSpace: 'nowrap', flexShrink: 0,
-                  }}>
-                    View →
-                  </Link>
+                  <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
+                    <Link to={`/admin/students/${s.id}/audit-trail`} style={{
+                      fontSize: '12px', fontWeight: 700, color: '#1a2d5a', textDecoration: 'none',
+                      padding: '6px 12px', border: '1.5px solid #1a2d5a', borderRadius: '6px',
+                      whiteSpace: 'nowrap', background: '#fff',
+                    }}>
+                      Audit Trail
+                    </Link>
+                    <Link to={`/admin/transcript/${s.id}`} style={{
+                      fontSize: '12px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none',
+                      padding: '6px 14px', border: '1.5px solid #2b3d6d', borderRadius: '6px',
+                      whiteSpace: 'nowrap',
+                    }}>
+                      View →
+                    </Link>
+                  </div>
                 </div>
               );
             })}

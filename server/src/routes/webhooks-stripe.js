@@ -6,6 +6,9 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
 
+/** Number of consecutive invoice.payment_failed events before we soft-lock the student (T-103). */
+const SOFT_LOCK_THRESHOLD = 2;
+
 /**
  * POST /api/webhooks/stripe
  *
@@ -15,8 +18,11 @@ const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_
  * Events we handle:
  *   checkout.session.completed        → upsert Subscription with status from Stripe
  *   customer.subscription.updated     → refresh status, currentPeriodEnd, cancelAtPeriodEnd
- *   customer.subscription.deleted     → status = 'cancelled'
- *   invoice.payment_failed            → status = 'past_due'
+ *   customer.subscription.deleted     → status = 'cancelled' + deactivate linked student
+ *   invoice.payment_succeeded         → reset paymentFailureCount, clear soft-lock
+ *   invoice.payment_failed            → status = 'past_due', increment failure count,
+ *                                       soft-lock student when failures ≥ SOFT_LOCK_THRESHOLD (T-103)
+ *   charge.refunded                   → status = 'refunded', deactivate linked student (T-102)
  *
  * In dev, STRIPE_WEBHOOK_SECRET may be empty; we skip signature verification and parse
  * raw body directly. NEVER do this in production — Stripe explicitly warns about it.
@@ -51,8 +57,14 @@ router.post('/', async (req, res) => {
       case 'customer.subscription.deleted':
         await handleSubscriptionDeleted(event.data.object);
         break;
+      case 'invoice.payment_succeeded':
+        await handlePaymentSucceeded(event.data.object);
+        break;
       case 'invoice.payment_failed':
         await handlePaymentFailed(event.data.object);
+        break;
+      case 'charge.refunded':
+        await handleChargeRefunded(event.data.object);
         break;
       default:
         // Unhandled event types still return 200 so Stripe stops retrying.
@@ -67,6 +79,63 @@ router.post('/', async (req, res) => {
 
   res.json({ received: true });
 });
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+/**
+ * Locate the Subscription row + linked StudentAccount for a Stripe payment event.
+ * Returns { sub, account } — either field may be null if we haven't linked yet.
+ *
+ * Linkage priority:
+ *   1. Subscription.studentId (set manually in /admin/subscriptions, T-107) — authoritative
+ *   2. Match StudentAccount.email to Subscription.purchaserEmail (best-effort fallback)
+ *
+ * Note: until T-105 auto-creates StudentAccounts on checkout, most Subscriptions will have no
+ * linked student and the soft-lock / deactivate is a no-op. We log the unlinked case loudly so
+ * Alan can see it in the webhook log and fix manually via /admin/subscriptions.
+ */
+async function resolveLinkedAccount(stripeSubscriptionId) {
+  if (!stripeSubscriptionId) return { sub: null, account: null };
+  const sub = await prisma.subscription.findUnique({
+    where: { stripeSubscriptionId },
+    include: { student: { include: { account: true } } },
+  });
+  if (!sub) return { sub: null, account: null };
+  if (sub.student?.account) return { sub, account: sub.student.account };
+  // Fallback: try matching purchaser email to a student account
+  if (sub.purchaserEmail) {
+    const account = await prisma.studentAccount.findUnique({
+      where: { email: sub.purchaserEmail },
+    });
+    if (account) return { sub, account };
+  }
+  return { sub, account: null };
+}
+
+async function softLockStudent(account, reason) {
+  if (!account) return null;
+  return prisma.studentAccount.update({
+    where: { id: account.id },
+    data: { softLocked: true, lockReason: reason },
+  });
+}
+
+async function deactivateStudent(account, reason) {
+  if (!account) return null;
+  return prisma.studentAccount.update({
+    where: { id: account.id },
+    data: { isActive: false, softLocked: true, lockReason: reason },
+  });
+}
+
+async function clearStudentLock(account) {
+  if (!account) return null;
+  if (!account.softLocked && account.lockReason === '') return account;
+  return prisma.studentAccount.update({
+    where: { id: account.id },
+    data: { softLocked: false, lockReason: '' },
+  });
+}
 
 // ─── Event handlers ───────────────────────────────────────────────────────────
 
@@ -120,7 +189,7 @@ async function handleCheckoutCompleted(session) {
 
   console.log(`[webhook] ✓ checkout.session.completed — ${planType} · ${session.customer_email} · ${status}`);
 
-  // TODO (next): create Student / ParentAccount automatically, send welcome email via Resend.
+  // TODO (T-105): create Student / ParentAccount automatically, send welcome email via Resend.
 }
 
 async function handleSubscriptionUpdated(sub) {
@@ -150,11 +219,48 @@ async function handleSubscriptionDeleted(sub) {
     where: { stripeSubscriptionId: sub.id },
   });
   if (!existing) return;
+
+  // Cancellation arrives here. We deactivate the linked student (if any) — same as a refund —
+  // because their access window has fully ended.
+  const { account } = await resolveLinkedAccount(sub.id);
+
   await prisma.subscription.update({
     where: { stripeSubscriptionId: sub.id },
     data: { status: 'cancelled', cancelAtPeriodEnd: false },
   });
-  console.log(`[webhook] ✓ subscription.deleted — ${sub.id}`);
+  if (account) {
+    await deactivateStudent(account, 'subscription_cancelled');
+    console.log(`[webhook] ✓ subscription.deleted — ${sub.id} · deactivated student ${account.email}`);
+  } else {
+    console.log(`[webhook] ✓ subscription.deleted — ${sub.id} · no linked student`);
+  }
+
+  // TODO (T-402 email templates): notify parent that subscription ended and access is revoked.
+}
+
+async function handlePaymentSucceeded(invoice) {
+  if (!invoice.subscription) return;
+  const existing = await prisma.subscription.findUnique({
+    where: { stripeSubscriptionId: invoice.subscription },
+  });
+  if (!existing) return;
+
+  await prisma.subscription.update({
+    where: { stripeSubscriptionId: invoice.subscription },
+    data: {
+      status: 'active',
+      paymentFailureCount: 0,
+    },
+  });
+
+  // Successful payment — clear any soft-lock we set during past_due.
+  const { account } = await resolveLinkedAccount(invoice.subscription);
+  if (account?.softLocked && account.lockReason === 'payment_past_due') {
+    await clearStudentLock(account);
+    console.log(`[webhook] ✓ invoice.payment_succeeded — ${invoice.subscription} · cleared soft-lock for ${account.email}`);
+  } else {
+    console.log(`[webhook] ✓ invoice.payment_succeeded — ${invoice.subscription}`);
+  }
 }
 
 async function handlePaymentFailed(invoice) {
@@ -163,11 +269,102 @@ async function handlePaymentFailed(invoice) {
     where: { stripeSubscriptionId: invoice.subscription },
   });
   if (!existing) return;
+
+  const newCount = existing.paymentFailureCount + 1;
   await prisma.subscription.update({
     where: { stripeSubscriptionId: invoice.subscription },
-    data: { status: 'past_due' },
+    data: {
+      status: 'past_due',
+      paymentFailureCount: newCount,
+    },
   });
-  console.log(`[webhook] ⚠ payment_failed — ${invoice.subscription}`);
+
+  if (newCount >= SOFT_LOCK_THRESHOLD) {
+    const { account } = await resolveLinkedAccount(invoice.subscription);
+    if (account) {
+      await softLockStudent(account, 'payment_past_due');
+      console.log(
+        `[webhook] ⚠ payment_failed — ${invoice.subscription} · attempt ${newCount} ` +
+          `· soft-locked student ${account.email}`
+      );
+    } else {
+      console.warn(
+        `[webhook] ⚠ payment_failed — ${invoice.subscription} · attempt ${newCount} ` +
+          `· NO linked student (set Subscription.studentId in /admin/subscriptions)`
+      );
+    }
+  } else {
+    console.log(`[webhook] ⚠ payment_failed — ${invoice.subscription} · attempt ${newCount}`);
+  }
+
+  // TODO (T-402 email templates): notify parent and link to Stripe Customer Portal (T-101).
+}
+
+async function handleChargeRefunded(charge) {
+  // A refunded charge belongs to either a subscription invoice or a one-time payment.
+  // We update the matching Subscription row when we can find it.
+  let stripeSubscriptionId = null;
+  let checkoutSessionId = null;
+
+  if (charge.invoice) {
+    try {
+      const inv = await stripe.invoices.retrieve(charge.invoice);
+      stripeSubscriptionId = inv.subscription || null;
+    } catch (err) {
+      console.warn(`[webhook] charge.refunded — failed to retrieve invoice ${charge.invoice}: ${err.message}`);
+    }
+  }
+
+  if (!stripeSubscriptionId && charge.payment_intent) {
+    // For one-time payments, we recorded the checkout session id on Subscription.
+    // Stripe doesn't return checkout session id from a payment_intent directly,
+    // so we look up by stripeCustomerId as a fallback.
+    if (charge.customer) {
+      const oneTime = await prisma.subscription.findFirst({
+        where: { stripeCustomerId: charge.customer, planType: 'live_test' },
+        orderBy: { createdAt: 'desc' },
+      });
+      if (oneTime) checkoutSessionId = oneTime.stripeCheckoutSessionId;
+    }
+  }
+
+  let sub = null;
+  let account = null;
+  if (stripeSubscriptionId) {
+    const r = await resolveLinkedAccount(stripeSubscriptionId);
+    sub = r.sub;
+    account = r.account;
+  } else if (checkoutSessionId) {
+    sub = await prisma.subscription.findUnique({
+      where: { stripeCheckoutSessionId: checkoutSessionId },
+      include: { student: { include: { account: true } } },
+    });
+    account = sub?.student?.account || null;
+  }
+
+  if (!sub) {
+    console.warn(
+      `[webhook] charge.refunded — no matching Subscription for charge ${charge.id}. ` +
+        `Manual reconciliation needed (see /admin/subscriptions).`
+    );
+    return;
+  }
+
+  await prisma.subscription.update({
+    where: { id: sub.id },
+    data: { status: 'refunded', cancelAtPeriodEnd: true },
+  });
+
+  if (account) {
+    await deactivateStudent(account, 'refund_issued');
+    console.log(`[webhook] ✓ charge.refunded — ${charge.id} · deactivated student ${account.email}`);
+  } else {
+    console.log(`[webhook] ✓ charge.refunded — ${charge.id} · no linked student`);
+  }
+
+  // TODO (T-402 email templates):
+  //   - email parent confirming refund + access revoked
+  //   - alert admin (alanhdchu@) — refunds are rare and worth a heads-up
 }
 
 module.exports = router;

@@ -27,6 +27,7 @@ const applicationsRoutes = require('./routes/applications');
 const verifyRoutes = require('./routes/verify');
 const checkoutRoutes = require('./routes/checkout');
 const stripeWebhookRoutes = require('./routes/webhooks-stripe');
+const subscriptionsRoutes = require('./routes/subscriptions');
 
 if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 16) {
   console.warn('[warn] Set a strong JWT_SECRET in .env (16+ chars) before production.');
@@ -107,6 +108,7 @@ app.use('/api/admin/assignments', adminAssignmentsRoutes);
 app.use('/api/applications', applicationsRoutes);
 app.use('/api/verify', verifyRoutes);
 app.use('/api/checkout', checkoutRoutes);
+app.use('/api/subscriptions', subscriptionsRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found', path: req.path });
