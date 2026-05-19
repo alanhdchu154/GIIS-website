@@ -1,5 +1,7 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
+const bcrypt = require('bcryptjs');
+const crypto = require('crypto');
 const { authenticate, requireAdmin } = require('../middleware/auth');
 
 const prisma = new PrismaClient();
@@ -7,7 +9,8 @@ const router = express.Router();
 
 // POST /api/applications  — public, no auth required
 router.post('/', async (req, res) => {
-  const { studentName, dob, gradeLevel, parentName, parentEmail, phone, notes } = req.body || {};
+  const { studentName, dob, gradeLevel, parentName, parentEmail, phone, notes,
+          currentSchool, targetUniversities, preferredLanguage } = req.body || {};
   const missing = [];
   if (!studentName?.trim()) missing.push('studentName');
   if (!dob?.trim()) missing.push('dob');
@@ -24,6 +27,9 @@ router.post('/', async (req, res) => {
       studentName: studentName.trim(),
       dob: dob.trim(),
       gradeLevel: gradeLevel.trim(),
+      currentSchool: (currentSchool || '').trim(),
+      targetUniversities: (targetUniversities || '').trim(),
+      preferredLanguage: preferredLanguage === 'zh' ? 'zh' : 'en',
       parentName: parentName.trim(),
       parentEmail: parentEmail.trim().toLowerCase(),
       phone: (phone || '').trim(),
@@ -31,14 +37,13 @@ router.post('/', async (req, res) => {
     },
   });
 
-  // TODO: send confirmation email to parentEmail + admin notification (Resend Phase 1)
-
+  // TODO: send confirmation email to parentEmail + admin notification (Resend)
   res.status(201).json({ ok: true, id: app.id });
 });
 
 // GET /api/applications  — admin only
 router.get('/', authenticate, requireAdmin, async (req, res) => {
-  const status = req.query.status; // pending | approved | rejected | undefined (all)
+  const status = req.query.status;
   const where = status ? { status } : {};
   const apps = await prisma.application.findMany({
     where,
@@ -58,8 +63,75 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
     where: { id: req.params.id },
     data: { status, reviewedAt: new Date(), reviewedById: req.auth.adminId },
   });
-  // TODO: on approve, send Stripe checkout link to parentEmail (Phase 2)
   res.json({ ok: true, id: app.id, status: app.status });
+});
+
+/**
+ * POST /api/applications/:id/activate  — admin only
+ * Creates Student + ParentAccount from an approved application.
+ * Returns temp credentials for the admin to forward to the parent.
+ * Safe to call once only — sets accountsCreated=true to prevent duplicates.
+ */
+router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
+  const app = await prisma.application.findUnique({ where: { id: req.params.id } });
+  if (!app) return res.status(404).json({ error: 'Application not found.' });
+  if (app.status !== 'approved') return res.status(400).json({ error: 'Application must be approved first.' });
+  if (app.accountsCreated) return res.status(409).json({ error: 'Accounts already created for this application.' });
+
+  // Check parent email not already in use
+  const existing = await prisma.parentAccount.findUnique({ where: { email: app.parentEmail } });
+  if (existing) return res.status(409).json({ error: `A parent account already exists for ${app.parentEmail}.` });
+
+  // Generate student code: GIIS-[year]-[4 random hex chars]
+  const year = new Date().getFullYear();
+  const suffix = crypto.randomBytes(2).toString('hex').toUpperCase();
+  const studentCode = `GIIS-${year}-${suffix}`;
+
+  // Parse birth date
+  let birthDate = null;
+  try { birthDate = new Date(app.dob); } catch {}
+
+  // Generate temp password: 3 words + 4 digits, e.g. "Oak-River-74-2391"
+  const words = ['Oak', 'Blue', 'Star', 'River', 'Pine', 'Crest', 'Dawn', 'Vale', 'Bay', 'Arch'];
+  const w1 = words[Math.floor(Math.random() * words.length)];
+  const w2 = words[Math.floor(Math.random() * words.length)];
+  const digits = String(Math.floor(Math.random() * 9000) + 1000);
+  const tempPassword = `${w1}-${w2}-${digits}`;
+  const passwordHash = await bcrypt.hash(tempPassword, 12);
+
+  // Create Student + ParentAccount in a transaction
+  const student = await prisma.student.create({
+    data: {
+      name: app.studentName,
+      studentCode,
+      birthDate,
+      parentGuardian: app.parentName,
+      parentEmail: app.parentEmail,
+      entryDate: new Date(),
+    },
+  });
+
+  await prisma.parentAccount.create({
+    data: {
+      email: app.parentEmail,
+      passwordHash,
+      studentId: student.id,
+    },
+  });
+
+  await prisma.application.update({
+    where: { id: app.id },
+    data: { accountsCreated: true },
+  });
+
+  res.json({
+    ok: true,
+    studentCode,
+    studentId: student.id,
+    parentEmail: app.parentEmail,
+    tempPassword,
+    loginUrl: `${process.env.CORS_ORIGIN || 'https://genesisideas.school'}/parent/login`,
+  });
 });
 
 module.exports = router;

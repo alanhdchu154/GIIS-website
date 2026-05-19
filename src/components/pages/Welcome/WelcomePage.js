@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
+import { getParentSession } from '../../../api/authStorage';
 
 /**
  * /welcome — landing page Stripe redirects to after a successful Checkout session.
@@ -38,8 +39,18 @@ export default function WelcomePage({ language }) {
   const isEn = language !== 'zh';
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get('session_id');
+  const navigate = useNavigate();
+  const parentSession = getParentSession();
 
   const [state, setState] = useState({ loading: true, data: null, error: null });
+
+  // If parent is already logged in and payment is confirmed, go straight to dashboard
+  useEffect(() => {
+    if (parentSession && sessionId) {
+      const timer = setTimeout(() => navigate('/parent/dashboard', { replace: true }), 2500);
+      return () => clearTimeout(timer);
+    }
+  }, [parentSession, sessionId, navigate]);
 
   useEffect(() => {
     if (!sessionId) {

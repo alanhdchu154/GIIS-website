@@ -71,6 +71,13 @@ router.get('/me', async (req, res) => {
   }
   events.sort((a, b) => new Date(b.at) - new Date(a.at));
 
+  // Check subscription status by parent email
+  const activeSub = await prisma.subscription.findFirst({
+    where: { purchaserEmail: auth.email, status: { in: ['active', 'trialing'] } },
+    orderBy: { createdAt: 'desc' },
+    select: { status: true, planType: true, currentPeriodEnd: true, cancelAtPeriodEnd: true },
+  });
+
   res.json({
     student: {
       id: student.id, name: student.name, studentCode: student.studentCode,
@@ -83,6 +90,7 @@ router.get('/me', async (req, res) => {
       completedModules: e.completedModules.length, totalModules: e.course._count.modules, creditEarned: e.creditEarned,
     })),
     recentActivity: events.slice(0, 10),
+    subscription: activeSub || null,
   });
 });
 

@@ -10,7 +10,7 @@ const GRADE_LEVELS = ['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'];
 export default function ApplyForm({ language }) {
   const isEn = language !== 'zh';
 
-  const [form, setForm] = useState({ studentName: '', dob: '', gradeLevel: '', parentName: '', parentEmail: '', phone: '', notes: '' });
+  const [form, setForm] = useState({ studentName: '', dob: '', gradeLevel: '', currentSchool: '', targetUniversities: '', preferredLanguage: 'en', parentName: '', parentEmail: '', phone: '', notes: '' });
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -152,6 +152,25 @@ export default function ApplyForm({ language }) {
                 </select>
               </Field>
             </div>
+
+            <Field label={T('Current School', '目前就读学校')} err={errors.currentSchool}>
+              <input type="text" value={form.currentSchool} onChange={set('currentSchool')} placeholder={T('e.g. Shanghai High School', '例：上海中学')} style={inputStyle(false)} />
+            </Field>
+
+            <Field label={T('Target Universities (optional)', '目标大学（选填）')} err={errors.targetUniversities}>
+              <input type="text" value={form.targetUniversities} onChange={set('targetUniversities')} placeholder={T('e.g. UC Berkeley, NYU, Boston University', '例：UC Berkeley、纽约大学、波士顿大学')} style={inputStyle(false)} />
+            </Field>
+
+            <Field label={T('Preferred instruction language', '上课语言偏好')} err={errors.preferredLanguage}>
+              <div style={{ display: 'flex', gap: 16, marginTop: 8 }}>
+                {[['en', T('English', '英文')], ['zh', T('Chinese (Mandarin)', '中文（普通话）')]].map(([val, label]) => (
+                  <label key={val} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 14, cursor: 'pointer', fontWeight: form.preferredLanguage === val ? 700 : 400, color: form.preferredLanguage === val ? '#2b3d6d' : '#5c6578' }}>
+                    <input type="radio" name="preferredLanguage" value={val} checked={form.preferredLanguage === val} onChange={set('preferredLanguage')} style={{ accentColor: '#2b3d6d' }} />
+                    {label}
+                  </label>
+                ))}
+              </div>
+            </Field>
 
             <p style={{ fontSize: 12, fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '8px 0 18px' }}>
               {T('Parent / Guardian Information', '家长 / 监护人信息')}

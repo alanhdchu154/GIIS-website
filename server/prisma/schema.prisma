@@ -237,18 +237,22 @@ model ParentAccount {
 
 /// Prospective student application submitted via /apply.
 model Application {
-  id           String   @id @default(cuid())
-  studentName  String
-  dob          String
-  gradeLevel   String
-  parentName   String
-  parentEmail  String
-  phone        String   @default("")
-  notes        String   @default("")
-  status       String   @default("pending")  // pending | approved | rejected
-  createdAt    DateTime @default(now())
-  reviewedAt   DateTime?
-  reviewedById String?
+  id                 String   @id @default(cuid())
+  studentName        String
+  dob                String
+  gradeLevel         String
+  currentSchool      String   @default("")
+  targetUniversities String   @default("")
+  preferredLanguage  String   @default("en")   // "en" | "zh"
+  parentName         String
+  parentEmail        String
+  phone              String   @default("")
+  notes              String   @default("")
+  status             String   @default("pending")  // pending | approved | rejected
+  accountsCreated    Boolean  @default(false)
+  createdAt          DateTime @default(now())
+  reviewedAt         DateTime?
+  reviewedById       String?
 }
 
 /// Stripe purchase record. One row per Checkout completion.

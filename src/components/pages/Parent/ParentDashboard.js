@@ -119,6 +119,26 @@ export default function ParentDashboard({ language }) {
     }
   }
 
+  async function handleStartCheckout() {
+    setPortalLoading(true);
+    setPortalError(null);
+    try {
+      const res = await fetch(`${API}/api/checkout/create-session`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ planType: 'founders_monthly' }),
+      });
+      const json = await res.json();
+      if (!res.ok) { setPortalError(json.error || 'Could not start checkout.'); return; }
+      window.location.href = json.url;
+    } catch {
+      setPortalError('Network error — please try again.');
+    } finally {
+      setPortalLoading(false);
+    }
+  }
+
   if (!session) return null;
 
   if (!data && !error) {
@@ -143,7 +163,7 @@ export default function ParentDashboard({ language }) {
     );
   }
 
-  const { student, stats, enrollments, recentActivity } = data;
+  const { student, stats, enrollments, recentActivity, subscription } = data;
   const gradPct = Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100));
   const inProgress = enrollments.filter(e => !e.creditEarned);
   const completed = enrollments.filter(e => e.creditEarned);
@@ -174,6 +194,26 @@ export default function ParentDashboard({ language }) {
               {isEn ? 'Sign out' : '退出登录'}
             </button>
           </div>
+
+          {/* Enrollment pending banner */}
+          {!subscription && (
+            <div style={{ background: 'linear-gradient(90deg, #b45309, #d97706)', borderRadius: 12, padding: '16px 24px', marginBottom: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
+              <div>
+                <p style={{ fontSize: 14, fontWeight: 800, color: '#fff', margin: '0 0 2px' }}>
+                  {isEn ? 'Your enrollment is not yet active' : '你的学籍尚未激活'}
+                </p>
+                <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.8)', margin: 0 }}>
+                  {isEn ? 'Complete payment to unlock full course access.' : '完成付款以解锁全部课程。'}
+                </p>
+              </div>
+              <button
+                onClick={handleStartCheckout}
+                disabled={portalLoading}
+                style={{ background: '#fff', color: '#b45309', fontWeight: 800, fontSize: 13, border: 'none', borderRadius: 8, padding: '10px 20px', cursor: portalLoading ? 'wait' : 'pointer', whiteSpace: 'nowrap', fontFamily: 'Inter, sans-serif' }}>
+                {portalLoading ? (isEn ? 'Loading…' : '加载中…') : (isEn ? 'Complete Enrollment →' : '完成报名 →')}
+              </button>
+            </div>
+          )}
 
           {/* Two-column layout */}
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.1fr) minmax(0,0.9fr)', gap: 20 }} className="giis-parent-grid">

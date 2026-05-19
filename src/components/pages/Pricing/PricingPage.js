@@ -171,20 +171,16 @@ export default function PricingPage({ language, toggleLanguage }) {
                   </li>
                 ))}
               </ul>
-              <button
-                onClick={() => startCheckout('founders_monthly', setLoading, setCheckoutError)}
-                disabled={!!loading}
+              <Link
+                to="/apply"
                 style={{
                   display: 'block', width: '100%', textAlign: 'center', padding: '14px',
                   background: 'rgba(213,168,54,1)', borderRadius: '10px',
-                  cursor: loading ? 'wait' : 'pointer',
-                  color: '#1a1a2e', fontWeight: 800, fontSize: '15px', border: 'none',
-                  boxShadow: '0 6px 18px rgba(213,168,54,0.3)',
+                  color: '#1a1a2e', fontWeight: 800, fontSize: '15px', textDecoration: 'none',
+                  boxShadow: '0 6px 18px rgba(213,168,54,0.3)', boxSizing: 'border-box',
                 }}>
-                {loading === 'founders_monthly'
-                  ? (isEn ? 'Redirecting…' : '跳转中…')
-                  : (isEn ? 'Start Now — $19.90/mo' : '立即开始 — $19.90/月')}
-              </button>
+                {isEn ? 'Apply Now →' : '立即申请 →'}
+              </Link>
             </div>
 
             {/* ── Group Plan ── */}
@@ -230,19 +226,16 @@ export default function PricingPage({ language, toggleLanguage }) {
                   </li>
                 ))}
               </ul>
-              <button
-                onClick={() => startCheckout('group_monthly', setLoading, setCheckoutError)}
-                disabled={!!loading}
+              <Link
+                to="/apply"
                 style={{
                   display: 'block', width: '100%', textAlign: 'center', padding: '14px',
                   background: '#2b3d6d', borderRadius: '10px',
-                  cursor: loading ? 'wait' : 'pointer',
-                  color: '#fff', fontWeight: 800, fontSize: '15px', border: 'none',
+                  color: '#fff', fontWeight: 800, fontSize: '15px', textDecoration: 'none',
+                  boxSizing: 'border-box',
                 }}>
-                {loading === 'group_monthly'
-                  ? (isEn ? 'Redirecting…' : '跳转中…')
-                  : (isEn ? 'Start Group Plan — $50/mo' : '申请团体方案 — $50/月')}
-              </button>
+                {isEn ? 'Apply Now →' : '立即申请 →'}
+              </Link>
             </div>
 
           </div>
