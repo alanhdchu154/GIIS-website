@@ -118,12 +118,14 @@ const PRESIDENT = {
 };
 
 const SCHOOL = {
-  legalNameEn: 'Genesis of Ideas International School',
+  legalNameEn: 'Genesis of Ideas International School, LLC',
   legalNameZh: '艾迪尔国际学校',
   address: '7901 4th St N STE 300, St. Petersburg, FL 33702, USA',
   founded: '2022',
-  registered: '2024',
+  registered: 'March 19, 2024',
+  ein: '99-2175408',
   flCode: '650',
+  ceebCode: '650',
   statute: 'Florida Statute 1002.42',
 };
 
@@ -365,13 +367,12 @@ export default function AboutPage({ language, toggleLanguage }) {
               <div><strong>{en ? 'School type' : '学校类型'}:</strong> {en
                 ? `Florida-registered private school · ${SCHOOL.statute}`
                 : `Florida 注册私立学校 · ${SCHOOL.statute}`}</div>
-              <div><strong>{en ? 'Founded / Registered' : '成立 / 注册'}:</strong> {en
-                ? `${SCHOOL.founded} (founded) · ${SCHOOL.registered} (FL DOE registered)`
-                : `${SCHOOL.founded} 创办 · ${SCHOOL.registered} 完成 FL DOE 注册`}</div>
+              <div><strong>{en ? 'Founded / FL LLC Registered' : '成立 / FL LLC 注册'}:</strong> {en
+                ? `${SCHOOL.founded} (founded) · ${SCHOOL.registered} (FL LLC filed)`
+                : `${SCHOOL.founded} 创办 · ${SCHOOL.registered} FL LLC 完成注册`}</div>
+              <div><strong>EIN:</strong> {SCHOOL.ein}</div>
               <div><strong>{en ? 'FL school code' : 'FL 学校代码'}:</strong> {SCHOOL.flCode}</div>
-              <div><strong>{en ? 'CEEB code' : 'CEEB 代码'}:</strong> {en
-                ? 'Application in progress with College Board'
-                : '已向 College Board 递交申请'}</div>
+              <div><strong>{en ? 'CEEB code' : 'CEEB 代码'}:</strong> {SCHOOL.ceebCode}</div>
               <div><strong>{en ? 'Accreditation' : '认证'}:</strong> {en
                 ? 'Currently pursuing regional accreditation. Independent of any third-party accreditor.'
                 : '正在申请区域认证，目前为独立 Florida 注册私立学校。'}</div>

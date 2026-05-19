@@ -39,12 +39,13 @@ const SCHOOL = {
   phone: '+1 (813) 501-5756',
   website: 'https://genesisideas.school',
   email: 'admissions@genesisideas.school',
+  ein: '99-2175408',
   flSchoolCode: '650',
-  ceebCode: 'Pending',
+  ceebCode: '650',
   founded: '2022',
-  registered: '2024',
+  registered: 'March 19, 2024',
   president: 'Shiyu Zhang, Ph.D.',
-  type: 'Florida Registered Private School',
+  type: 'Florida Registered Private School (LLC)',
   enrollment: 'Approximately 4 students (2024–2025)',
   gradeRange: 'Grades 9–12',
 };
@@ -335,17 +336,18 @@ function ProfileDocument() {
             of Education in 2024. Our small enrollment ensures that every student receives
             individualized academic attention and mentorship.
             <br /><br />
-            <em>Accreditation:</em> GIIS is currently an independent private school registered
-            with the Florida DOE (Statute 1002.42). The school is in the process of pursuing
-            regional accreditation. A CEEB code application has been submitted to College Board.
-            Transcripts are issued and certified by the school president.
+            <em>Accreditation:</em> GIIS is an independent private school registered with the
+            Florida DOE (Statute 1002.42), incorporated as a Florida LLC (EIN 99-2175408). The
+            school is in the process of pursuing regional accreditation. CEEB Code 650 has been
+            assigned by College Board. Transcripts are issued and certified by the school president.
           </div>
           <table style={{ ...s.table, alignSelf: 'start' }}>
             <tbody>
               {[
                 ['Type', SCHOOL.type],
                 ['Founded', SCHOOL.founded],
-                ['FL DOE Registered', SCHOOL.registered],
+                ['FL LLC Registered', SCHOOL.registered],
+                ['EIN', SCHOOL.ein],
                 ['FL School Code', SCHOOL.flSchoolCode],
                 ['CEEB Code', SCHOOL.ceebCode],
                 ['Grades', SCHOOL.gradeRange],
