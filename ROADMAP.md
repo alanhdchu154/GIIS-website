@@ -983,16 +983,15 @@ Acceptance ✅：video 路徑只在 DemoEmbed.js 寫死。
 - ✅ **Live API keys 已設定**：`sk_live_...` → `server/.env`（local + Lightsail production 兩份）；`pk_live_...` → `.env.development`
 - ✅ **Webhook endpoint 已建立**：`https://genesisideas.school/api/webhooks/stripe`，訂閱 4 事件，`whsec_...` 存入 Lightsail `server/.env`
 - ✅ **Lightsail production 部署**：git pull → npm install（stripe package）→ prisma db push（Subscription table 已存在）→ `pm2 restart giis-api --update-env`，API `/api/checkout/tiers` 回應正常
-- [ ] **AdminDashboard $1 smoke test**：點「Stripe $1 test」用真實卡刷 $1 → 確認 Chase ...0602 進帳 + DB Subscription row → Stripe dashboard 退款 $1
+- ✅ **Live mode $1 smoke test 通過（2026-05-19）**：`live_test` price 原建成 recurring 導致 `payment` mode 衝突 → 修 `mode: 'subscription'`；同修 rate-limiter `validate.xForwardedForHeader=false` 消除 proxy 警告。真實卡刷通 → Stripe 收款 → DB Subscription row 確認
 
 ### 🔧 Phase 2 待辦 — 訂閱管理補完
 
-#### P2-A. Stripe Customer Portal（自助取消/更改訂閱）
-> **最緊急**：家長問「怎麼取消」你要能回答。30 行後端 + 1 個按鈕。
-
-- 後端：新增 `POST /api/billing/portal`（用 Stripe `billingPortal.sessions.create`，回傳一次性 portal URL）
-- 前端：ParentDashboard 加「Manage subscription →」按鈕，POST 後 `window.location.href = url`
-- Stripe Dashboard 開 Customer Portal（Billing → Customer portal → Activate）— 無需另設計 UI，Stripe 提供整套
+#### ✅ P2-A. Stripe Customer Portal（2026-05-19 完成）
+- ✅ `POST /api/billing/portal`（`server/src/routes/billing.js`）：parent JWT auth → 查 `stripeCustomerId` → `billingPortal.sessions.create` → 回傳 URL
+- ✅ `ParentDashboard.js`：新增「Subscription」卡片 + 「Manage subscription →」按鈕，含 loading/error 狀態
+- ✅ Stripe Dashboard Customer Portal 已 Activate（含 cancel / update payment / invoice history）
+- ✅ 部署到 Lightsail，`/api/billing` 已掛載
 
 #### P2-B. Admin 訂閱列表頁
 > **Alan 才知道誰付錢、幾號扣款**
