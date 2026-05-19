@@ -249,6 +249,8 @@ model Application {
   phone              String   @default("")
   notes              String   @default("")
   status             String   @default("pending")  // pending | approved | rejected
+  rejectionReason    String   @default("")
+  adminNotes         String   @default("")
   accountsCreated    Boolean  @default(false)
   createdAt          DateTime @default(now())
   reviewedAt         DateTime?

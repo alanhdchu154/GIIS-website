@@ -53,15 +53,32 @@ router.get('/', authenticate, requireAdmin, async (req, res) => {
   res.json(apps);
 });
 
-// PATCH /api/applications/:id  — approve or reject
+// PATCH /api/applications/:id  — update status, rejectionReason, or adminNotes
 router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
-  const { status } = req.body || {};
-  if (!['approved', 'rejected', 'pending'].includes(status)) {
-    return res.status(400).json({ error: 'status must be approved | rejected | pending' });
+  const { status, rejectionReason, adminNotes } = req.body || {};
+  const data = {};
+
+  if (status !== undefined) {
+    if (!['approved', 'rejected', 'pending'].includes(status)) {
+      return res.status(400).json({ error: 'status must be approved | rejected | pending' });
+    }
+    data.status = status;
+    data.reviewedAt = new Date();
+    data.reviewedById = req.auth.adminId;
+    if (status === 'rejected' && rejectionReason !== undefined) {
+      data.rejectionReason = rejectionReason;
+    }
   }
+
+  if (adminNotes !== undefined) data.adminNotes = adminNotes;
+
+  if (Object.keys(data).length === 0) {
+    return res.status(400).json({ error: 'Nothing to update.' });
+  }
+
   const app = await prisma.application.update({
     where: { id: req.params.id },
-    data: { status, reviewedAt: new Date(), reviewedById: req.auth.adminId },
+    data,
   });
   res.json({ ok: true, id: app.id, status: app.status });
 });
