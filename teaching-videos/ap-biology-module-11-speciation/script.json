@@ -1,0 +1,78 @@
+{
+  "course": "AP Biology",
+  "module": "Module 11: Speciation and Phylogeny",
+  "voice": "en-US-EmmaNeural",
+  "voice_rate": "-3%",
+  "intro_music_seconds": 3,
+  "outro_music_seconds": 3,
+  "sections": [
+    {
+      "id": "01_title",
+      "text": "Welcome back to AP Biology — Module Eleven, Speciation and Phylogeny. This is the second half of College Board Unit Seven, which lands on thirteen to twenty percent of your AP exam. Last module we asked HOW populations change. Today we ask the bigger question: how do populations split into entirely new species, how do we draw the family tree of life, and how did life get started in the first place?"
+    },
+    {
+      "id": "02_hook",
+      "text": "A horse and a donkey can mate. They can produce a baby. But that baby — the mule — is almost always sterile. So here is the question. Are horses and donkeys the same species, or different species? Hold that question in your head. The answer depends on which definition of species you use, and the College Board has a favorite. By the end of this lesson you will know how to draw the line in five different ways, and which line the AP exam wants first."
+    },
+    {
+      "id": "03_overview",
+      "text": "Four things today. One — what a species actually is, because the textbook gives you four definitions and they don't always agree. Two — reproductive isolation: the prezygotic and postzygotic barriers that keep species apart. Three — how new species are born: allopatric, sympatric, and parapatric speciation, plus the pace question — does evolution crawl, or does it jump? Four — how we draw the resulting family tree, what makes a real clade, and how life on Earth got started in the first place."
+    },
+    {
+      "id": "04_species_concepts",
+      "text": "Four ways to define a species. The big one for the AP exam is the Biological Species Concept, proposed by Ernst Mayr. A species is a group of populations whose members can interbreed AND produce fertile offspring, and that are reproductively isolated from other groups. Notice both parts — interbreed AND fertile. That is why horses and donkeys count as different species — the mule is sterile. But the Biological Species Concept has limits. It can't really handle asexual organisms, and it doesn't fit prokaryotes well either — bacteria DO exchange genes, but through horizontal gene transfer, not Mayr-style interbreeding. And it can't handle fossils — you can't test if a trilobite was fertile with another trilobite. So we keep three more in the toolbox: morphological — same body plan; ecological — same niche; and phylogenetic — same recent ancestor on the tree."
+    },
+    {
+      "id": "05_prezygotic_isolation",
+      "text": "Reproductive isolation comes in two flavors. PREzygotic barriers stop fertilization from happening at all — no zygote ever forms. There are five. Habitat isolation — same general area, different habitats. Temporal isolation — different breeding times; two related species at the same site might breed in different months or different times of day. Behavioral isolation — different courtship signals; fireflies are the textbook case — each species has its own flash code, and the wrong code gets ignored. Mechanical isolation — anatomy just doesn't fit; flowers and their specific pollinators are a classic example. Gametic isolation — sperm and egg are in the same place but their surface proteins don't match, so they can't fuse; this matters most for species that release gametes into open water."
+    },
+    {
+      "id": "06_postzygotic_isolation",
+      "text": "POSTzygotic barriers — fertilization succeeds, but the hybrid is an evolutionary dead end. Three forms. Reduced hybrid viability — the hybrid embryo just doesn't develop, or dies young. Reduced hybrid fertility — and here is the mule. A horse and a donkey can produce a healthy mule, but when the mule tries to make sperm or eggs, meiosis fails — horse and donkey chromosomes are simply too different to pair correctly. The mule is sterile. And hybrid breakdown — the first generation hybrid is fine, but its kids, the F-two generation, fall apart. Either way, gene flow between the parent species is blocked."
+    },
+    {
+      "id": "07_allopatric",
+      "text": "Allopatric speciation. Allo means OTHER, patric means homeland. Different homelands. A geographic barrier physically splits one population in two — a river forms, a mountain rises, sea level drops, a glacier advances. The two halves now evolve independently. Different selection pressures, different mutations, different drift. Given enough time, when you bring them back together, they can no longer interbreed. Classic examples — Death Valley pupfish, trapped in isolated desert springs as the lakes dried up; the Galápagos finches, each island shaping a different beak, now recognized as around seventeen species. Allopatric speciation is the most common mode on Earth."
+    },
+    {
+      "id": "08_sympatric",
+      "text": "Sympatric speciation. Sym means SAME. Same homeland, no geographic barrier — and yet new species form. How? Three main routes. Polyploidy — common in plants. A reproductive error multiplies the chromosome count in one generation, and the polyploid plant can't breed with its diploid parents anymore. Two flavors: autopolyploidy is doubling within one species, and allopolyploidy is hybridization BETWEEN species followed by chromosome doubling. Bread wheat is allopolyploid. Sexual selection — cichlid fish in the African Great Lakes, where female mate choice for male coloration split single lake populations into hundreds of species. And habitat differentiation — different microhabitats in the same region drive divergence. Parapatric speciation is the in-between case — ranges partially overlap, and selection pressure changes along a gradient."
+    },
+    {
+      "id": "09_pace",
+      "text": "Two views of how fast speciation happens. On the left — gradualism. Darwin's original picture. Tiny changes accumulate slowly and steadily, generation by generation, over millions of years. On the right — punctuated equilibrium, proposed by Eldredge and Gould. Long periods where the species barely changes at all — that is stasis. Then a relatively short burst of rapid change — speciation in tens of thousands of years instead of millions. One important clarification: punctuated equilibrium is NOT saltation, NOT an overnight macromutation. Even inside that rapid burst, change is still population-level gradual evolution — it just looks fast against geological time. The fossil record actually shows BOTH patterns in different lineages. The AP exam loves to ask which is which from a graph — flat-then-jump is punctuated, steady-slope is gradual."
+    },
+    {
+      "id": "10_phylogeny_basics",
+      "text": "Now the family tree. A phylogenetic tree — or cladogram — is a hypothesis about evolutionary relationships. Nodes are the branching points — every node is a common ancestor. Branches are the lineages. The tips are the taxa you see today, or the fossils we have evidence of. An outgroup is a more distantly related taxon used to root the tree. Three tip-reading traps the AP loves. First — branches rotate around any node like a mobile, without changing relationships. Two tips next to each other on the page are NOT necessarily more closely related. Only branching order matters. Second — every living tip is at the present. None is more evolved than another. Third — and this is the big one — we did NOT descend from chimpanzees. Humans and chimpanzees share a most recent common ancestor; chimps are not our ancestors, they are our cousins. Time runs along branches from root to tip, not across the row of tips. Trees today are usually built from DNA or protein sequences, and the molecular clock estimates divergence times from accumulated neutral mutations."
+    },
+    {
+      "id": "11_clades_compare",
+      "text": "Three kinds of groups — and only ONE is a real clade. Monophyletic — that is a clade — means an ancestor PLUS every single descendant. Mammalia is monophyletic. Aves is monophyletic. Archosauria is monophyletic, and includes crocodilians, dinosaurs, and pterosaurs — birds ARE dinosaurs in the cladistic sense. Paraphyletic — an ancestor plus SOME but not all descendants. The classic example: reptiles, drawn the old-school way that excludes birds. Birds descend from reptiles, so reptiles-minus-birds is paraphyletic, not a true clade. Polyphyletic — members pulled from different ancestors, grouped because they share a trait that evolved independently. Warm-blooded animals — mammals plus birds — is polyphyletic, because endothermy evolved twice. To DEFINE a clade you need a synapomorphy — a shared derived trait. And here is the subtle point students miss: synapomorphy versus plesiomorphy is RELATIVE to which clade you are defining. A vertebral column IS a synapomorphy when you are defining Vertebrata. The SAME vertebral column is a plesiomorphy when you are defining Mammalia — it is ancestral for every mammal, so it can't distinguish mammals from other vertebrates. Same trait, different clade, different label."
+    },
+    {
+      "id": "12_pause1",
+      "text": "Your turn. Two populations of one finch species. Sea level drops, a land bridge forms, some birds walk over to Island B. Ten thousand years later, sea level rises and the islands are separated. Fifty thousand more years pass, and finally the islands rejoin. The birds meet, they try to court — but the females reject the males whose song they don't recognize. Two questions. One — what MODE of speciation is this? Two — what kind of reproductive isolation are we seeing, prezygotic or postzygotic, and which specific TYPE? Pause now. Solve it. Press play when you're ready."
+    },
+    {
+      "id": "13_pause1_silence",
+      "text": "Walking through it. The mode is ALLOPATRIC speciation — geographic separation by water did the work. The land bridge formed, then disappeared, and during that fifty thousand years of isolation the two populations evolved independently. When they came back together, the barrier is reproductive — and it is PREZYGOTIC, because the females reject the males BEFORE any mating happens. The specific type is BEHAVIORAL isolation — the song is a courtship signal that no longer matches across the two populations. No zygote ever forms. Two key moves on the AP exam — name the mode, name the prezygotic-or-postzygotic category, then name the specific mechanism."
+    },
+    {
+      "id": "14_extinction_variation",
+      "text": "Two background pieces the AP exam folds into Unit Seven. First — extinction. Earth has had five mass extinctions: Ordovician, Devonian, Permian, Triassic, and Cretaceous-Paleogene. The biggest was the Permian — sometimes called the Great Dying — which wiped out about ninety-six percent of marine species. The most famous is the Cretaceous-Paleogene, about sixty-six million years ago. An asteroid impact ended the reign of the non-avian dinosaurs. Mass extinctions reset the playing field and open ecological niches that drive new bursts of speciation afterward. Second — genetic variation. High genetic diversity gives a species a bigger toolkit to adapt to change. Population bottlenecks strip out that variation and leave a species fragile — a classic case is the northern elephant seal, hunted down to fewer than a hundred individuals in the late eighteen hundreds. The species recovered numerically but is left with very low genetic diversity."
+    },
+    {
+      "id": "15_origin_of_life",
+      "text": "How did life get started? Three pieces the AP exam expects. One — Miller and Urey, nineteen fifty-three. They built a closed apparatus, filled it with methane, ammonia, hydrogen, and water vapor — their best guess at the time for early Earth's atmosphere — and sparked it with electricity to simulate lightning. They recovered amino acids. Organic monomers can form abiotically. Modern geochemistry suggests early Earth's atmosphere was probably less reducing than they assumed, but the experiment still stands as the first demonstration that organic monomers can form abiotically. Two — the RNA world hypothesis. RNA is special because it can do TWO jobs at once: store information like DNA, and catalyze reactions like a protein. Ribozymes are RNA enzymes. So the first life may have run on RNA before DNA and protein took over. Three — LUCA, the Last Universal Common Ancestor, about three point five billion years ago — we infer LUCA existed because every living thing shares the same genetic code AND the same core molecular machinery. And finally, endosymbiotic theory, proposed by Lynn Margulis. Mitochondria and chloroplasts descended from engulfed prokaryotes that stayed inside a larger host cell. The exam wants the evidence by name: double membrane, their OWN circular DNA, seventy-S ribosomes — prokaryote size — and they reproduce by binary fission."
+    },
+    {
+      "id": "16_recap",
+      "text": "Recap. Biological Species Concept first — interbreed, fertile offspring, reproductively isolated. When BSC fails — for asexual organisms, for prokaryotes which use horizontal gene transfer, and for fossils — fall back on morphological, ecological, or phylogenetic. Isolation: PRE-zygotic blocks fertilization in five ways; POST-zygotic blocks viable or fertile offspring — the mule is the canonical postzygotic example. Speciation modes: allopatric needs a geographic barrier and is the most common; sympatric needs no barrier and runs on polyploidy, sexual selection, or habitat differentiation. Pace: gradualism is steady; punctuated equilibrium is stasis-then-burst — and remember the burst is still gradual, just compressed against geological time. Trees: only monophyletic groups are real clades, and a synapomorphy is what defines one, always relative to which clade you mean. Tip-reading: rotate, don't rank, and humans share a common ancestor with chimps. Mass extinctions reset the playing field. And life itself started with abiotic chemistry, an RNA world, LUCA, and the endosymbiotic origin of mitochondria and chloroplasts."
+    },
+    {
+      "id": "17_path",
+      "text": "Your path forward. Read OpenStax Biology, chapters eighteen and twenty, for the deeper version of speciation and phylogenies. Drill the Khan Academy AP Biology Unit Seven problem sets — speciation, cladograms, and origin-of-life questions are highly predictable, so grinding them pays off fast. Do the GIIS Unit Seven assignment in your dashboard. Book an advisor check-in if monophyletic versus paraphyletic, or synapomorphy versus plesiomorphy, still feels fuzzy. Next time, we leave Unit Seven and step into Module Twelve — Ecology, starting with populations. Carrying capacity, exponential versus logistic growth, K-selected versus r-selected species. See you there."
+    }
+  ]
+}

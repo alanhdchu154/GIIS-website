@@ -1,0 +1,36 @@
+{
+  "module_slug": "ap-biology-module-4-cell-communication",
+  "reviewer": "post-hoc PhD audit",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "03_overview",
+      "severity": "minor",
+      "claim": "Three stages, named by Earl Sutherland.",
+      "problem": "Sutherland won the 1971 Nobel for discovering cAMP and the second-messenger concept (studying epinephrine on liver glycogen), but the explicit 'reception / transduction / response' three-stage framing is a Campbell textbook pedagogical formulation, not a label Sutherland himself coined. Section 05 repeats this attribution.",
+      "suggested_fix": "Change to 'Three stages — a framework built on Earl Sutherland's Nobel-winning work on epinephrine and cAMP' or simply 'Three stages you'll see in every Campbell-style pathway.'"
+    },
+    {
+      "section_id": "07_receptor_rtk",
+      "severity": "minor",
+      "claim": "When a ligand binds, two RTK monomers come together — that's called dimerization. ... The insulin receptor is the classic example.",
+      "problem": "Accurate for the canonical RTK story used on the AP exam, but the insulin receptor is technically a constitutive (pre-formed) alpha-2-beta-2 tetramer that undergoes a conformational change rather than ligand-induced monomer dimerization. Not an AP-exam-level distinction, but a sharp student or grader could flag it.",
+      "suggested_fix": "Either keep insulin receptor and add 'though insulin's receptor is already pre-assembled and undergoes a conformational change on binding' OR swap the example to EGFR or VEGFR, which are textbook ligand-induced dimerizers."
+    },
+    {
+      "section_id": "11_pause1_silence",
+      "severity": "minor",
+      "claim": "Cascades trade speed for huge amplification.",
+      "problem": "Misleading. Phosphorylation cascades are actually fast (millisecond-to-second range) AND amplify; the real trade-off is metabolic cost (ATP) and regulatory complexity, not speed. As worded, students may write on the FRQ that cascades are slow, which would lose points.",
+      "suggested_fix": "Replace with 'Cascades take a few extra steps, but they buy you massive amplification — and they're still fast, on the order of seconds.'"
+    },
+    {
+      "section_id": "09_transduction_cascade",
+      "severity": "minor",
+      "claim": "one activated receptor can activate around a hundred kinases, each of which activates a hundred more.",
+      "problem": "The 100-fold-per-step figure is illustrative, not a measured biological constant. Fine pedagogically, but pair it with section 11's 'roughly a hundred' and a student might quote it as fact on an FRQ. AP graders accept order-of-magnitude amplification claims; the number itself isn't testable.",
+      "suggested_fix": "Add the word 'illustratively' or 'roughly' once, e.g., 'illustratively, each layer can amplify about a hundred-fold' — already partially done in section 11, just keep the hedge consistent."
+    }
+  ],
+  "overall_assessment": "The script is factually solid and AP-aligned — receptor types, GDP/GTP switch, second messengers, caspases, and quorum sensing are all correctly described. No hallucinations or critical errors. Four minor wording issues (Sutherland attribution, insulin receptor as canonical RTK, 'cascades trade speed', and amplification numerics) are worth a light copy-edit before recording but do not block release."
+}

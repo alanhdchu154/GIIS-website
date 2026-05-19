@@ -1,0 +1,15 @@
+{
+  "module_slug": "ap-biology-module-7-dna-replication",
+  "reviewer": "post-hoc PhD audit",
+  "verdict": "pass",
+  "issues": [
+    {
+      "section_id": "02_hook",
+      "severity": "trivial",
+      "claim": "'about six feet long — two meters'",
+      "problem": "2 meters is closer to 6.5 ft (~6 ft 7 in), not 6 ft. Both figures are commonly cited approximations for human diploid DNA, so not misleading, but the unit conversion is slightly loose.",
+      "suggested_fix": "Optional: say 'about two meters — over six feet' to preserve the approximation without the mismatched conversion."
+    }
+  ],
+  "overall_assessment": "Factually solid AP-rigor narration. All canonical content is correct: antiparallel 5'→3' directionality, A-T (2 H-bonds) / G-C (3 H-bonds), Chargaff, Meselson-Stahl 1958 semiconservative, the helicase/SSBP/topoisomerase/primase/Pol III/Pol I/ligase cascade, RNA primer requirement and 3'-OH rule, Okazaki fragment size in bacteria (~1-2 kb), 3'→5' exonuclease proofreading, TTAGGG telomere repeat, telomerase carrying its own RNA template, and reactivation in cancer. No hallucinations or AP-trap-level errors detected; safe to ship."
+}

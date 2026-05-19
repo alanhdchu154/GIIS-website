@@ -1,0 +1,84 @@
+{
+  "reviewer": "B — Adversarial AP Student",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "02_hook",
+      "severity": "minor",
+      "claim": "'A population changed color in 50 years. No magic — just math.' and 'not because individual moths changed, but because the population did.'",
+      "problem": "The 'population vs individual' framing is correct, but a sharp student could still walk away thinking the moths themselves somehow shifted. The hook never explicitly says individual moths kept their color from birth to death — only the allele frequencies in the population changed. Without that, the pre-existing misconception 'organisms adapt during their lifetime' (Lamarckism) is left untouched at the very moment it's most contagious.",
+      "suggested_fix": "Add one sentence to the narration: 'No individual moth ever changed color — light moths stayed light their whole lives, dark moths stayed dark. What changed was the ratio of dark to light in the population, because dark moths survived predation better on sooty trees and left more offspring.'"
+    },
+    {
+      "section_id": "04_darwin_postulates",
+      "severity": "minor",
+      "claim": "'individuals with traits better suited to their environment leave more offspring. Stack those four, and evolution by natural selection is logically inevitable.'",
+      "problem": "Two missing nuances an AP grader will dock points for. (1) Natural selection acts on phenotypes, not directly on genotypes — this is a high-frequency FRQ point and never appears in the module. (2) Postulate 2 says 'some variation is heritable' in the narration but the bullet just says 'Variation is heritable,' which a student will memorize as 'all variation is heritable.' That conflates phenotypic variation with the heritable subset and leads to wrong answers on questions about environmental variation (e.g., a sun-tanned parent doesn't pass the tan).",
+      "suggested_fix": "Tighten bullet 2 to 'Some variation is heritable (phenotypic variation has a genetic component)' and add a one-liner to the narration: 'Selection sees the phenotype — the visible trait — but only the heritable, genetic part of that variation gets passed on. A bodybuilder's muscles don't make their kids stronger.'"
+    },
+    {
+      "section_id": "05_fitness_definition",
+      "severity": "note",
+      "claim": "'Fitness in biology... means relative reproductive success — how many of your offspring survive to reproduce themselves.'",
+      "problem": "Good definition, but the 'relative' part is asserted, never demonstrated. A student who sees '12 grandchildren vs 2' will memorize fitness as an absolute count. AP FRQs frequently ask students to compute relative fitness (w = individual's offspring / max offspring in population), and the module never shows that fitness is a ratio bounded between 0 and 1.",
+      "suggested_fix": "Add to narration: 'Relative means we compare to the highest performer in the same population — the best gets a fitness of 1, everyone else is a fraction of that. Move the same scrawny mouse to a different environment and its fitness number changes completely.' This also reinforces context-dependence."
+    },
+    {
+      "section_id": "06_selection_types",
+      "severity": "minor",
+      "claim": "'Sexual selection — competition for mates — gives us peacock tails and deer antlers.'",
+      "problem": "Lumping peacock tails and deer antlers under one label hides the AP-tested distinction between intersexual selection (female choice → peacock tail) and intrasexual selection (male-male combat → deer antlers). College Board has asked students to label which is which. Also, sexual selection is not technically a fourth mode of natural selection in the same axis as directional/stabilizing/disruptive — it's a separate framework. Putting it as 'a fourth panel' alongside the three bell curves visually implies they're parallel categories.",
+      "suggested_fix": "In narration: 'Sexual selection comes in two flavors — intersexual, where one sex chooses (peacock tails evolved because peahens prefer them), and intrasexual, where same-sex individuals compete (deer antlers evolved from male-male combat).' On the slide, separate sexual selection visually (e.g., a divider line or different panel style) so students don't memorize it as 'the fourth bell curve.'"
+    },
+    {
+      "section_id": "08_hw_conditions",
+      "severity": "note",
+      "claim": "'H-W isn't a fact about nature, it's a baseline we measure deviations from.'",
+      "problem": "Excellent framing. But the conditions list and narration never note that the H-W equation for genotypes (p² + 2pq + q²) is reached after one generation of random mating even if the starting genotype frequencies are out of equilibrium — a point the AP exam has tested. Also missing: H-W assumes diploid, sexually reproducing, autosomal locus. A sharp student might try to apply it to X-linked or haploid problems and get confused.",
+      "suggested_fix": "Add a brief footnote line on the slide: 'Assumes one diploid, autosomal gene with two alleles.' Optional narration aside: 'After just one round of random mating, the genotype frequencies snap to p², 2pq, q² — even if they started somewhere weird. That's why H-W is such a strong null.'"
+    },
+    {
+      "section_id": "11_mechanisms",
+      "severity": "minor",
+      "claim": "'Natural selection is the only non-random mechanism — it specifically favors higher-fitness alleles.'",
+      "problem": "Two issues. (1) 'Favors higher-fitness alleles' subtly anthropomorphizes selection and skips the phenotype layer again — selection favors phenotypes; allele frequencies shift as a downstream consequence. (2) Saying selection is 'the only non-random mechanism' is technically right for direction but mutation is also not uniformly random across the genome (mutation hotspots, biased mutation), and non-random mating is literally in the name — students get tripped up here. A safer phrasing distinguishes 'non-random with respect to fitness' from 'non-random in general.'",
+      "suggested_fix": "Reword: 'Natural selection is the only mechanism that's non-random with respect to fitness — it consistently favors phenotypes that reproduce more, and the alleles underlying those phenotypes ride along. Mutation is random with respect to what's useful. Drift is random by definition. Non-random mating reshuffles genotypes but doesn't itself favor any allele.'"
+    },
+    {
+      "section_id": "11_mechanisms",
+      "severity": "minor",
+      "claim": "'Non-random mating, like inbreeding, changes genotype frequencies without changing allele frequencies directly.'",
+      "problem": "This is correct (and called out in ap_traps_covered) but it's stated once and never illustrated. A student hearing this for the first time will conflate it with 'inbreeding causes evolution' — which technically by the strict 'change in allele frequencies' definition it doesn't, but by the H-W deviation definition the slide just established, any broken condition = evolving. The module sets up two slightly different definitions of evolution and never reconciles them.",
+      "suggested_fix": "Add a clarifying sentence: 'Non-random mating breaks H-W — so by the broad definition the population is evolving — but on its own it doesn't change which alleles exist or how common they are, only how they pair up. That's why inbreeding by itself doesn't drive long-term evolutionary change, though it can expose recessive alleles to selection.'"
+    },
+    {
+      "section_id": "12_drift_examples",
+      "severity": "note",
+      "claim": "'cheetahs after the last ice age, the survivors carry only a sliver of the original variation, and that sliver is what the species has to work with forever after.'",
+      "problem": "'Forever after' is an overstatement — mutation slowly restores variation over evolutionary time. More importantly, the slide never says drift is non-adaptive — that drift can fix harmful or neutral alleles purely by chance. Students often default to 'whatever survives must have been better' even after the fitness lecture, and the bottleneck example is exactly where that confusion lands.",
+      "suggested_fix": "Add: 'And critically — which alleles made it through the bottleneck has nothing to do with fitness. Drift is pure chance. A great allele can be lost; a harmful one can become common.'"
+    },
+    {
+      "section_id": "13_evidence",
+      "severity": "minor",
+      "claim": "'we see evolution happening live — antibiotic resistance in hospitals, finch beaks shifting after droughts.'",
+      "problem": "Antibiotic resistance is the highest-yield example for the misconception 'bacteria develop resistance because they need to' (Lamarckism resurgent). The module mentions it twice but never explicitly says the resistance mutations were already present in the population before the antibiotic showed up — the antibiotic just selected for them. Without that, students write the wrong thing on FRQs about antibiotic resistance constantly.",
+      "suggested_fix": "Add to narration: 'Important — the resistant bacteria didn't become resistant because of the antibiotic. The mutations were already there by chance in a tiny fraction of the population. The antibiotic just killed everyone else, so the resistant ones inherited the colony.'"
+    },
+    {
+      "section_id": "15_recap",
+      "severity": "note",
+      "claim": "Recap and assignment: 'Optional assignment: solve three H-W practice problems posted in the Learn Portal.'",
+      "problem": "Calling it 'optional' on the recap slide undercuts the path forward. AP students respond to clear, low-friction next steps; 'optional' lets the median student skip it and arrive at Module 11 without having actually practiced the math, which is the single hardest skill in this module. Also, the recap reinstates the population/individual distinction implicitly but never re-flags the 'evolution does not have a goal / is not progress' trap, which is the most common conceptual misconception in all of evolution.",
+      "suggested_fix": "Drop the word 'optional' — make it 'Before Module 11: three H-W practice problems in your Learn Portal.' Add one recap bullet: 'Evolution has no goal and no direction toward complexity — it's just what happens when these mechanisms run on a varying, reproducing population.'"
+    },
+    {
+      "section_id": "16_path",
+      "severity": "note",
+      "claim": "'Finish your H-W practice, get a good night's sleep, and I'll see you in Module eleven.'",
+      "problem": "The path slide is warm and concrete — good. But there's no explicit success criterion for moving on (e.g., 'you should be able to solve a H-W problem starting from either q² or a heterozygote count'). Students self-assess poorly; without a checkpoint, they advance whether or not they've internalized the math.",
+      "suggested_fix": "Add one line on the slide: 'You're ready for Module 11 when you can: (a) state Darwin's 4 postulates, (b) solve a H-W problem from the recessive phenotype, (c) name which mechanism a given scenario describes.'"
+    }
+  ],
+  "overall_assessment": "Solid outline overall — the pedagogy is tight, the AP traps are explicitly named, and the pacing of the pause exercise is correct (problem stated in 09, walkthrough in 10, after H-W is fully introduced in 07-08). No critical misconceptions are planted. The main gaps are subtle but they're the exact spots where AP graders dock points: (1) selection acts on phenotypes, not directly on genotypes, is never said; (2) the Lamarckian misreading of both peppered moths and antibiotic resistance isn't pre-empted; (3) drift's non-adaptiveness is implied but never stated; (4) intersexual vs intrasexual selection is collapsed; (5) the 'evolution = progress / has a goal' misconception is never named even once despite being the most common evolution misconception in all of biology education. None of these will tank a student, but a few one-line additions to the narration would close the gap between 'good lecture' and 'AP-bulletproof lecture.'"
+}

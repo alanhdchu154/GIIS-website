@@ -1,0 +1,72 @@
+{
+  "reviewer": "C — Citation Checker, round 2",
+  "verdict": "minor",
+  "previously_flagged_now_resolved": [
+    "06_postzygotic_isolation: horse/donkey/mule chromosome counts 64/62/63 — REMOVED; replaced with the non-numeric 'horse and donkey chromosomes are too different to pair correctly during meiosis.'",
+    "02_hook: Linnaean binomials 'Equus caballus' / 'Equus asinus' and the 64/62/63 counts — REMOVED; hook is now just horse/donkey/sterile mule.",
+    "09_pace: '1972' date for Eldredge & Gould — REMOVED; only the names remain (matches reference).",
+    "15_origin_of_life: 'Margulis 1967' date — REMOVED; only the name remains (matches reference).",
+    "15_origin_of_life: 'alpha-proteobacterium' (mitochondrial ancestor) and 'cyanobacterium' (chloroplast ancestor) — REMOVED; generalized to 'free-living prokaryotes engulfed by a larger host cell.'",
+    "15_origin_of_life: Miller-Urey 'one-week timeline' — REMOVED.",
+    "14_extinction_variation: Ordovician ~444 / Devonian ~375 / Permian ~252 / Triassic ~201 Mya specific dates — REMOVED. Only ~66 Mya for K-Pg remains (which IS in the reference).",
+    "14_extinction_variation: 'Cheetahs nearly went extinct in the last ice age' bottleneck example — REMOVED.",
+    "14_extinction_variation: '~20 individuals' for northern elephant seal bottleneck — softened to 'fewer than 100 individuals,' which is the conservative published range.",
+    "08_sympatric: 'Lake Victoria' specific lake and '>500 species' specific count — generalized to 'African Great Lakes' and 'hundreds of species per lake.'",
+    "08_sympatric: 'Triticum aestivum' binomial and 'three ancestral grass species' specificity — REMOVED; wheat now simply 'allohexaploid (polyploid hybrid).'",
+    "07_allopatric: '13+ species' of Galápagos finches — softened to 'around 17 species — more than a dozen,' which is a hedged real-world figure.",
+    "05_prezygotic_isolation: garter snake (habitat), sea urchin (gametic), and bird-song (behavioral) species-specific examples — REMOVED; replaced with generic descriptions. Firefly flash pattern (the only example backed by the reference) kept.",
+    "11_clades_compare: 'Hair defines mammals' as the headline synapomorphy example — REMOVED; replaced with the vertebral-column relativity example (synapomorphy for Vertebrata, plesiomorphy for Mammalia), which is the same conceptual point without the specific 'hair' citation."
+  ],
+  "previously_flagged_still_open": [
+    "01_title: Unit 7 weight '13–20% of AP exam' kept. The revision notes acknowledge this is not in the supplied reference but IS in the official AP CED. Real-world true; severity remains minor.",
+    "14_extinction_variation: 'Chicxulub crater off Mexico' impact site kept. Revision notes flag it as enrichment and the narration now frames it as 'the leading candidate site' rather than asserting it. Still not in the supplied reference; severity remains minor.",
+    "15_origin_of_life: Miller-Urey four-gas mixture (CH4, NH3, H2, H2O) kept. Now framed as 'their best guess at the time' with the modern-geochemistry caveat. Still not in the supplied reference but textbook-standard; severity remains minor.",
+    "15_origin_of_life: 'Ribozymes are RNA enzymes' kept. Not in the supplied reference but pedagogically inseparable from the RNA-world claim; severity remains note-level.",
+    "15_origin_of_life: LUCA elaboration kept and slightly altered. The narration no longer says 'three domains' explicitly but does add 'ribosomes, ATP, conserved proteins across all of life' — these specific shared-molecular-machinery items are not enumerated in the supplied reference. Severity minor."
+  ],
+  "new_issues": [
+    {
+      "section_id": "07_allopatric",
+      "severity": "minor",
+      "unsupported_claim": "Death Valley pupfish were 'trapped in isolated desert springs as the lakes dried up' — the historical drying-of-pluvial-lakes mechanism.",
+      "suggested_fix": "Reference lists 'Death Valley pupfish' as an allopatric example but does NOT explain the lake-drying mechanism. Either drop the mechanism clause or cite a source."
+    },
+    {
+      "section_id": "07_allopatric",
+      "severity": "minor",
+      "unsupported_claim": "'Around 17 species' / 'around seventeen species' of Galápagos finches.",
+      "suggested_fix": "Softened from the round-1 '13+' but still a specific count not present in the reference (which only names 'Galápagos finches'). The 'more than a dozen' hedge already in the text is the reference-safe phrasing; consider dropping the '17' and keeping only 'more than a dozen.'"
+    },
+    {
+      "section_id": "08_sympatric",
+      "severity": "minor",
+      "unsupported_claim": "'Hundreds of species' of cichlids per African Great Lake, 'driven by female mate choice for male coloration.'",
+      "suggested_fix": "Reference says only 'sexual selection (cichlid fish in African lakes)' — gives no species count and no female-choice-for-coloration mechanism. The count and mechanism are real-world standard but not in the supplied reference. Either remove the count and the mechanism specifics, or cite a source."
+    },
+    {
+      "section_id": "08_sympatric",
+      "severity": "minor",
+      "unsupported_claim": "Bread wheat is 'allohexaploid' — i.e., specifically an allopolyploid rather than an autopolyploid, and specifically hexaploid.",
+      "suggested_fix": "Reference says only 'wheat is hexaploid.' The 'allo-' (hybridization between species) qualifier is not in the reference. Either trim to 'hexaploid' or cite a source for the allopolyploid origin."
+    },
+    {
+      "section_id": "14_extinction_variation",
+      "severity": "minor",
+      "unsupported_claim": "Permian extinction nickname 'the Great Dying.'",
+      "suggested_fix": "Reference confirms '~96% marine species' for the Permian but does NOT use the nickname 'Great Dying.' Optional: either drop the nickname or cite a source. Low-stakes."
+    },
+    {
+      "section_id": "14_extinction_variation",
+      "severity": "minor",
+      "unsupported_claim": "Northern elephant seal 'reduced to fewer than 100 individuals in the late 1800s.'",
+      "suggested_fix": "Softened from the round-1 '~20 individuals,' but the species, the count, and the date are still not in the reference. The reference supports only the general principle 'loss of variation reduces resilience.' Either drop the example or cite a population-genetics source."
+    },
+    {
+      "section_id": "15_origin_of_life",
+      "severity": "minor",
+      "unsupported_claim": "LUCA inferred from 'the universal genetic code AND … ribosomes, ATP, conserved proteins across all of life.'",
+      "suggested_fix": "Reference says only 'LUCA ~3.5 Bya.' The 'ribosomes, ATP, conserved proteins' enumeration is widely accepted but not in the supplied reference. Either generalize ('shared molecular machinery across all life') or cite a source."
+    }
+  ],
+  "overall_assessment": "Round 2 is a clear and substantial improvement. Every critical fabricated-date-or-name flag from round 1 has been resolved — the chromosome counts (64/62/63), the Equus binomials, the Eldredge-Gould 1972 date, the Margulis 1967 date, the alpha-proteobacterium / cyanobacterium endosymbiont identifications, the Miller-Urey one-week timeline, and the Ordovician/Devonian/Permian/Triassic Mya values are all gone. Several minor items (Lake Victoria + >500 cichlids, Triticum aestivum, garter snakes / sea urchins, cheetah bottleneck, '~20 individuals' for elephant seals, 'hair defines mammals') were also addressed by removal or generalization. The revisor's notes file is transparent about what was kept and why (Unit 7 13-20% weight from CED, Chicxulub as 'leading candidate,' Miller-Urey gas list as 'their best guess at the time,' ribozymes for RNA-world coherence) — these remain real-world-true elaborations rather than fabricated facts. New minor issues identified are all of the same flavor: real-world-standard specifics (17 finches, hundreds of cichlids, 'allohexaploid' wheat, 'Great Dying,' elephant-seal bottleneck count and date, LUCA's specific shared-machinery list, Death Valley pupfish drying-springs mechanism) that are textbook-correct but not in the supplied reference. None are fabrications. Verdict: minor — no critical fabricated dates/names remain in the outline."
+}

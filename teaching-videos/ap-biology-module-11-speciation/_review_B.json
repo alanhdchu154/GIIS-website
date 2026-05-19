@@ -1,0 +1,49 @@
+{
+  "reviewer": "B — Adversarial AP Student",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "04_species_concepts",
+      "severity": "note",
+      "claim": "BSC: 'populations whose members can interbreed AND produce fertile offspring, and that are reproductively isolated from other groups.'",
+      "problem": "The narration says BSC 'can't handle' asexual organisms and fossils — true, but a sharp student could counter that bacteria DO exchange genes (horizontal gene transfer / conjugation), which is not the same as 'interbreeding.' The current wording 'most bacteria don't interbreed at all' is fine, but the slide bullet says BSC 'fails for asexual organisms, bacteria, and fossils' as if bacteria are inherently asexual — they're not, they just don't do BSC-style sexual reproduction. One-line clarification would head off the misconception.",
+      "suggested_fix": "In the content_hint, change 'fails for asexual organisms, bacteria, and fossils' to 'fails for asexual organisms, prokaryotes (which exchange genes by horizontal transfer, not Mayr-style interbreeding), and fossils.'"
+    },
+    {
+      "section_id": "09_pace",
+      "severity": "minor",
+      "claim": "'Punctuated equilibrium … a relatively short burst of rapid change — speciation in tens of thousands of years instead of millions.'",
+      "problem": "Good — but the outline never explicitly heads off the classic trap that punctuated equilibrium = saltation / overnight macromutation. A bright student who has read Gould secondhand may walk away thinking 'jumps' means non-gradual within the burst. The burst itself is still population-level gradual change, just compressed against geological time. One sentence would prevent this misread.",
+      "suggested_fix": "Add to narration_seed: 'Important — even inside that rapid burst, change is still population-level gradual; punctuated equilibrium is NOT saltation or overnight mutation. The bursts only look fast against geological time.'"
+    },
+    {
+      "section_id": "10_phylogeny_basics",
+      "severity": "minor",
+      "claim": "'The tips are the taxa you can see today, or the fossils we have evidence of.'",
+      "problem": "The outline addresses tip-rotation well, but never explicitly disarms the 'tips on the right are more evolved' misconception, nor the time-axis trap (time runs ALONG branches from root to tip, NOT across tips left-to-right). Both are listed in the trap prompt and both are CED-favorite gotchas. Also the related 'humans evolved from chimps' trap is nowhere on the outline — phylogeny without that disclaimer is a missed opportunity.",
+      "suggested_fix": "Append to content_hint: 'Two tip-reading traps to disarm: (a) every living tip is equally evolved — extant taxa are all at the present, none is ancestral to another; we did NOT evolve from chimpanzees, we share a most recent common ancestor with them. (b) Time runs along branches from root to tip, not across the row of tips.' Echo in narration."
+    },
+    {
+      "section_id": "11_clades_compare",
+      "severity": "note",
+      "claim": "'Hair defines mammals. A plesiomorphy is an ancestral trait — a vertebral column doesn't tell you anything special about mammals, because every vertebrate has one.'",
+      "problem": "Strong. Only nitpick: 'synapomorphy / plesiomorphy' is relative to the level of the clade you're defining — a vertebral column IS a synapomorphy at the level of Vertebrata, just a plesiomorphy at the level of Mammalia. The outline implicitly assumes this but the wording 'a vertebral column doesn't tell you anything special' could be misread as 'never a synapomorphy.' A half-sentence on relativity would inoculate against that.",
+      "suggested_fix": "Add: 'Synapomorphy vs plesiomorphy is relative to the clade you're defining — vertebral column is a synapomorphy for Vertebrata, but a plesiomorphy when you're trying to define Mammalia.'"
+    },
+    {
+      "section_id": "15_origin_of_life",
+      "severity": "note",
+      "claim": "'Miller and Urey … filled it with methane, ammonia, hydrogen, and water vapor — their best guess for early Earth's atmosphere.'",
+      "problem": "Endosymbiosis evidence is well-presented as evidence, not guess — good. But Miller-Urey is presented without the now-standard caveat that the assumed reducing atmosphere is no longer thought to reflect actual early Earth (most modern reconstructions favor a more neutral CO2/N2 atmosphere). Not required by CED, but a sharp student who has read further will notice the omission and may distrust the rest. One clause covers it.",
+      "suggested_fix": "Append: 'Modern geochemistry suggests early Earth's atmosphere was probably less reducing than Miller assumed, but the experiment still stands as the first demonstration that organic monomers can form abiotically under plausible early-Earth conditions.'"
+    },
+    {
+      "section_id": "08_sympatric",
+      "severity": "note",
+      "claim": "'Polyploidy — common in plants. A reproductive error doubles or triples the chromosome count in one generation.'",
+      "problem": "Pacing is fine — sympatric is defined before polyploidy is introduced as a mechanism, which is the correct order (the trap prompt explicitly flagged the reverse). However, the outline does not distinguish autopolyploidy (same species, chromosome doubling) from allopolyploidy (hybrid + doubling — which is what bread wheat actually is). Calling bread wheat just 'polyploidy' obscures the more interesting mechanism. AP exam has been known to ask.",
+      "suggested_fix": "Add one phrase: 'Two flavors — autopolyploidy (doubling within one species) and allopolyploidy (hybridization between species followed by doubling). Bread wheat is allopolyploid — three different ancestral grass genomes combined.'"
+    }
+  ],
+  "overall_assessment": "Solid outline. The big traps from the prompt are mostly handled: BSC limits are stated, prezygotic vs postzygotic is crisp with the mule anchored correctly as postzygotic, allopatric vs sympatric pacing is in the right order (sympatric defined before polyploidy is invoked as a mechanism), monophyletic vs paraphyletic vs polyphyletic gets full treatment, tip rotation is called out, and endosymbiosis is presented with concrete evidence rather than as speculation. The gaps are around inoculation — the outline could be more aggressive about pre-empting the saltation reading of punctuated equilibrium, the 'humans evolved from chimps' / 'tips are more evolved' phylogeny misreads, and the auto- vs allopolyploidy distinction. Verdict: minor — none of the issues are factually wrong, but a handful of one-liners would close the gaps a sharp student would otherwise walk away with."
+}

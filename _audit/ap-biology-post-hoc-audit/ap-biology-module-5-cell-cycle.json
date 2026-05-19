@@ -1,0 +1,29 @@
+{
+  "module_slug": "ap-biology-module-5-cell-cycle",
+  "reviewer": "post-hoc PhD audit",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "06_mitosis_overview",
+      "severity": "minor",
+      "claim": "Mitosis has five named phases ... the AP College Board uses five — so learn five.",
+      "problem": "The AP Biology CED (Course and Exam Description) standardly treats mitosis as four phases (prophase, metaphase, anaphase, telophase) with prometaphase events folded into late prophase / early metaphase. Five-phase models are common in college texts but the assertion that 'the AP College Board uses five' is not accurate to the official CED.",
+      "suggested_fix": "Reword to: 'Most modern textbooks split mitosis into five phases — prophase, prometaphase, metaphase, anaphase, telophase. The AP CED lists four (prophase, metaphase, anaphase, telophase) and treats prometaphase events as part of the prophase-to-metaphase transition. Either framing will be accepted on the exam; just be ready to describe nuclear envelope breakdown and kinetochore attachment, which is what prometaphase covers.'"
+    },
+    {
+      "section_id": "02_hook",
+      "severity": "minor",
+      "claim": "your body is producing roughly three point eight million new cells every second",
+      "problem": "The 3.8 million/sec figure traces to a specific 2021 estimate (Sender & Milo) of total human cell turnover, but many sources cite different numbers (e.g., ~25 million/sec including all cell types, or ~2-3 million/sec for red blood cells specifically). The number is defensible but presented as fact without nuance. Not a content error for AP scoring.",
+      "suggested_fix": "Either soften to 'your body produces a few million new cells every second' or cite the source (Sender & Milo 2021). Low priority — the pedagogical point stands."
+    },
+    {
+      "section_id": "13_cancer_mechanisms",
+      "severity": "minor",
+      "claim": "Tumor suppressor genes ... are recessive at the cell level, meaning both alleles need to be knocked out before the brakes fail.",
+      "problem": "This is the classic Knudson two-hit model and is the AP-correct answer. However, p53 specifically can act through dominant-negative and haploinsufficiency mechanisms — a single mutated allele producing a faulty tetramer can impair the wild-type copy. Not wrong for AP rigor; just a simplification.",
+      "suggested_fix": "Optional add-on: 'For AP purposes, treat tumor suppressors as recessive — both copies must be lost. In reality p53 is a partial exception because mutant protein can poison the functional tetramer, but the two-hit model is what the exam tests.'"
+    }
+  ],
+  "overall_assessment": "Script is factually sound and AP-appropriate overall. p53, MPF (cyclin B + CDK1), separase/cohesin at anaphase, cleavage furrow vs. cell plate, G1/G2/spindle checkpoints, and oncogene-vs-tumor-suppressor framing are all correct. The only meaningful issue is the claim that the AP College Board uses a five-phase mitosis model — the official CED uses four. Safe to publish with that one fix."
+}

@@ -1,0 +1,63 @@
+{
+  "reviewer": "A — Peer PhD (Evolutionary Biology)",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "04_darwin_postulates",
+      "severity": "note",
+      "claim": "Darwin's four postulates are framed as (1) variation, (2) heritability, (3) overproduction/struggle, (4) differential reproductive success.",
+      "problem": "This is the standard Mayr/Endler reformulation rather than Darwin's own wording, and the script presents it as 'Darwin's argument is just four steps' without that nuance. Factually defensible for AP, but a peer reviewer would note that Darwin himself did not enumerate four discrete postulates — this is a 20th-century didactic reconstruction.",
+      "suggested_fix": "Either acknowledge briefly that this is the modern reformulation of Darwin's logic (e.g., 'Darwin's argument, as biologists commonly summarize it today, has four steps...'), or keep as-is for AP simplicity — but be aware this is pedagogical convention, not Darwin's own enumeration."
+    },
+    {
+      "section_id": "06_selection_types",
+      "severity": "note",
+      "claim": "Peppered moths used as the canonical example of directional selection.",
+      "problem": "Peppered moths (Biston betularia) are textbook-correct as directional selection, but the script uses them as the hook example AND the directional-selection example. That's fine, just be aware that the modern literature (Cook, Grant, Majerus) has refined — but firmly upheld — the classic Kettlewell story. Nothing wrong factually; just flagging that the dark morph (carbonaria) was favored on soot-darkened bark, which the slide does represent correctly.",
+      "suggested_fix": "No change required. Optionally mention the allele name 'carbonaria' if you want to add rigor, but not necessary for AP."
+    },
+    {
+      "section_id": "08_hw_conditions",
+      "severity": "minor",
+      "claim": "Listed condition: 'No mutation, No migration / gene flow, Random mating, Very large population, No natural selection.'",
+      "problem": "All five conditions are correct, but the phrasing 'Very large population' is slightly imprecise. The technical condition is 'infinitely large population' (or 'no genetic drift'). 'Very large' is the standard AP simplification and is acceptable, but a peer reviewer would prefer 'infinitely large (no genetic drift)' to make explicit that this condition is what excludes drift.",
+      "suggested_fix": "Change to 'Infinitely large population (no genetic drift)' or add a parenthetical: 'Very large population — i.e., no genetic drift.' This also makes the connection to the 'five mechanisms' in section 11 cleaner, since each H-W condition then maps 1:1 to one of the five mechanisms."
+    },
+    {
+      "section_id": "11_mechanisms",
+      "severity": "minor",
+      "claim": "'Non-random mating, like inbreeding, changes genotype frequencies without changing allele frequencies directly.'",
+      "problem": "This statement is correct and is a nice AP trap call-out. However, the slide's bullet says 'non-random mating — assortative / inbreeding,' which conflates two distinct phenomena: assortative mating (mating based on phenotype similarity, which can be positive or negative) and inbreeding (mating based on relatedness/pedigree). These are related but not synonymous. Minor pedagogical issue, not a factual error.",
+      "suggested_fix": "Either keep as-is (acceptable for AP) or briefly distinguish: 'non-random mating — including assortative mating (by phenotype) and inbreeding (by relatedness).'"
+    },
+    {
+      "section_id": "12_drift_examples",
+      "severity": "minor",
+      "claim": "'cheetahs after the last ice age' as the cause of the cheetah bottleneck.",
+      "problem": "The exact cause and timing of the cheetah bottleneck is genuinely uncertain in the literature. Estimates range from ~10,000–12,000 years ago (late Pleistocene, end-of-last-ice-age extinction event) to a much older bottleneck ~100,000 years ago, with possibly a second more recent one. Saying 'after the last ice age' is a defensible simplification but is presented as more settled than it is. Not a hard error.",
+      "suggested_fix": "Soften slightly: 'cheetahs experienced a severe bottleneck in their evolutionary history — likely around the end of the last ice age' or just 'cheetahs went through a severe bottleneck and modern cheetahs have remarkably little genetic variation.'"
+    },
+    {
+      "section_id": "12_drift_examples",
+      "severity": "note",
+      "claim": "'polydactyly — having extra fingers — is unusually common in some Amish communities.'",
+      "problem": "Factually correct, but the canonical Amish founder-effect example in genetics textbooks is actually Ellis–van Creveld syndrome (which includes polydactyly as one symptom, along with short stature and heart defects), traced to a single founder couple (Samuel King and his wife, ~1744). Calling it 'polydactyly' alone is a slight oversimplification — polydactyly is the most visible feature of EvC, but the underlying allele causes the full syndrome. This is a common AP-level shorthand and is not incorrect, just incomplete.",
+      "suggested_fix": "Optionally upgrade to: 'Ellis–van Creveld syndrome — which causes polydactyly and other traits — is unusually common in the Pennsylvania Amish, traced to a single 18th-century founder couple.' For AP this level of detail may be more than needed; if so, keep as-is."
+    },
+    {
+      "section_id": "13_evidence",
+      "severity": "note",
+      "claim": "Six lines of evidence listed: fossil record, biogeography, comparative anatomy, embryology, molecular sequences, direct observation.",
+      "problem": "All six are legitimate lines of evidence. The inclusion of 'embryology' as a standalone line is a bit dated — modern evo-devo treats developmental evidence as one strand within comparative biology, and Haeckel's strong 'recapitulation' claim has been retired. The script doesn't invoke recapitulation, just 'embryos of distant relatives share early developmental patterns,' which is fine. Just noting that some modern textbooks fold embryology into comparative anatomy/evo-devo rather than listing it separately.",
+      "suggested_fix": "No change required — acceptable for AP. Just avoid any wording that implies 'ontogeny recapitulates phylogeny.'"
+    },
+    {
+      "section_id": "14_homology_trap",
+      "severity": "note",
+      "claim": "'bird wing vs insect wing' as the analogous-structures example.",
+      "problem": "Correct and a classic textbook example. Even cleaner pairs sometimes used are 'bird wing vs bat wing' (which is actually a mixed case — wings are analogous as flight surfaces, but the underlying forelimb bones are homologous) or 'shark fin vs dolphin fin.' The bird-vs-insect example is unambiguous and fine.",
+      "suggested_fix": "No change required."
+    }
+  ],
+  "overall_assessment": "The outline is factually solid and pedagogically well-structured for an AP Biology audience. The Hardy-Weinberg equations (p+q=1, p²+2pq+q²=1) are correct, the fitness definition (relative reproductive success, context-dependent) is correctly framed and the AP trap is well-flagged, the selection-type examples (peppered moths, human birth weight, African seedcrackers, peacocks/antlers) are all canonical and correct, the bottleneck-vs-founder distinction is correct, and the homologous-vs-analogous distinction is correctly stated. The H-W practice problem in section 09–10 works out correctly (q²=0.16 → q=0.4 → p=0.6). I found no critical factual errors. The issues I flagged are minor oversimplifications or pedagogical conventions worth tightening if there's space: 'very large population' should ideally be 'infinitely large (no drift),' the Amish founder-effect example is more precisely Ellis–van Creveld syndrome, the cheetah bottleneck timing is presented as more settled than the literature supports, and 'Darwin's four postulates' is technically the Mayr reformulation rather than Darwin's own enumeration. None of these would mislead an AP student, and none rise to the level of a factual error. Verdict: minor."
+}

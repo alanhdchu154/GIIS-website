@@ -1,0 +1,36 @@
+{
+  "module_slug": "ap-biology-module-2-cell-structure",
+  "reviewer": "post-hoc PhD audit",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "08_mitochondria_chloroplasts",
+      "severity": "minor",
+      "claim": "Mitochondria run cellular respiration — they take glucose and oxygen and produce ATP.",
+      "problem": "Oversimplification. Glycolysis (glucose to pyruvate) occurs in the cytosol, not the mitochondrion. Only pyruvate (and NADH shuttled in) enters the mitochondrion for the Krebs cycle and oxidative phosphorylation. An AP free-response asking 'where does glycolysis occur' or 'what enters the mitochondrion' could penalize students who internalize this phrasing literally.",
+      "suggested_fix": "Replace with: 'Mitochondria run the oxygen-using stages of cellular respiration — the Krebs cycle and oxidative phosphorylation — producing the bulk of the cell's ATP. Glycolysis itself happens out in the cytosol first.'"
+    },
+    {
+      "section_id": "06_nucleus_ribosomes",
+      "severity": "minor",
+      "claim": "...nuclear pores that let messenger RNA out and proteins in.",
+      "problem": "Directionally simplified. Nuclear pore complexes are bidirectional and traffic many cargoes (ribosomal subunits exit, transcription factors and histones enter, snRNAs cycle). On AP, students sometimes see questions about ribosomal subunit export — the 'mRNA out / proteins in' framing can mislead.",
+      "suggested_fix": "Add a short qualifier: '...nuclear pores that regulate two-way traffic — mRNA and ribosomal subunits move out, proteins like transcription factors and histones move in.'"
+    },
+    {
+      "section_id": "04_prok_vs_euk",
+      "severity": "minor",
+      "claim": "Eukaryotes — protists, plants, fungi, and animals — are ten to a hundred times bigger...",
+      "problem": "Linear-size ratio is correct (prokaryotes ~1 micrometer, eukaryotes ~10-100 micrometers), but 'ten to a hundred times bigger' is ambiguous between diameter and volume. Volumetrically a 10x diameter is 1000x volume. Not wrong, but a careful AP grader would flag the imprecision.",
+      "suggested_fix": "Clarify: 'ten to a hundred times bigger across — meaning hundreds to millions of times larger by volume.'"
+    },
+    {
+      "section_id": "13_endosymbiosis",
+      "severity": "minor",
+      "claim": "...engulfed by a larger host cell about one-and-a-half to two billion years ago...",
+      "problem": "The mitochondrial endosymbiosis event is generally dated ~1.5-2 Bya in the AP-accepted range, but the chloroplast (primary plastid) event is more recent, roughly 1-1.6 Bya. Lumping both into the same window is a minor simplification.",
+      "suggested_fix": "Either say 'somewhere between one and two billion years ago' or split: 'mitochondria around two billion years ago, chloroplasts somewhat later.'"
+    }
+  ],
+  "overall_assessment": "Script is AP-accurate at the conceptual level and safe to keep on YouTube — no hallucinated studies, no fabricated statistics, no factual reversals. The four flagged items are pedagogical oversimplifications (most notably the 'mitochondria take glucose' phrasing, which conflicts with the AP-required glycolysis-in-cytosol detail) rather than errors. Recommend a re-record or pinned-comment correction for section 08 before scaling distribution; sections 04, 06, and 13 can be tightened in the next iteration."
+}

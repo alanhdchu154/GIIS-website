@@ -1,0 +1,84 @@
+{
+  "reviewer": "C — Citation Checker (anti-hallucination)",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "01_title",
+      "severity": "minor",
+      "unsupported_claim": "Unit 7 is '13–20% of the exam'",
+      "where_in_reference_it_is_missing": "Reference does not state any exam-weight percentage for Unit 7.",
+      "suggested_fix": "remove or rephrase to omit the percentage (e.g., 'a major unit on the AP exam'), unless an external CED citation is added to the reference doc."
+    },
+    {
+      "section_id": "02_hook",
+      "severity": "minor",
+      "unsupported_claim": "Peppered moths shifted 'in just fifty years' during England's Industrial Revolution",
+      "where_in_reference_it_is_missing": "Reference mentions peppered moths during the Industrial Revolution as an example of directional selection, but does not give a 50-year time span or specify England.",
+      "suggested_fix": "rephrase to fit reference — drop the '50 years' and 'England' specifics, e.g., 'During the Industrial Revolution, peppered moths shifted from mostly light to mostly dark.'"
+    },
+    {
+      "section_id": "02_hook",
+      "severity": "note",
+      "unsupported_claim": "'…predicts antibiotic resistance, finch beaks, and even what your immune system is doing right now.'",
+      "where_in_reference_it_is_missing": "Reference lists antibiotic resistance and Galápagos finch beaks as direct-observation evidence. The immune-system claim is not in the reference.",
+      "suggested_fix": "rephrase to fit reference — drop the immune-system aside, keep antibiotic resistance and finch beaks."
+    },
+    {
+      "section_id": "09_pause1",
+      "severity": "minor",
+      "unsupported_claim": "Specific practice-problem numbers: 400 mice, 64 white (aa), q²=0.16, q=0.4, p=0.6",
+      "where_in_reference_it_is_missing": "Reference gives the H-W equations (p+q=1, p²+2pq+q²=1) but does not provide this specific worked example.",
+      "suggested_fix": "acceptable as a pedagogical example since the math derives directly from cited equations; flagged only as a note. No fix needed if treated as an instructor-generated problem rather than a sourced claim."
+    },
+    {
+      "section_id": "10_pause1_silence",
+      "severity": "note",
+      "unsupported_claim": "Same worked numbers as 09_pause1.",
+      "where_in_reference_it_is_missing": "Same as above — derived from cited formulas, not from the reference's content.",
+      "suggested_fix": "no change — derivation from H-W equations is in-bounds."
+    },
+    {
+      "section_id": "12_drift_examples",
+      "severity": "minor",
+      "unsupported_claim": "Cheetah bottleneck attributed to 'after the last ice age'",
+      "where_in_reference_it_is_missing": "Reference names cheetahs as a bottleneck example but does not give a cause (last ice age) or any time period.",
+      "suggested_fix": "rephrase to fit reference — drop the 'after the last ice age' attribution, keep cheetahs as the bottleneck example."
+    },
+    {
+      "section_id": "12_drift_examples",
+      "severity": "minor",
+      "unsupported_claim": "Amish founder example specified as 'Pennsylvania Amish'",
+      "where_in_reference_it_is_missing": "Reference says 'Amish populations, polydactyly' without naming Pennsylvania.",
+      "suggested_fix": "rephrase to fit reference — say 'Amish' rather than 'Pennsylvania Amish', or add the Pennsylvania detail to the reference doc."
+    },
+    {
+      "section_id": "13_evidence",
+      "severity": "minor",
+      "unsupported_claim": "'…vestigial leftovers like the human appendix.'",
+      "where_in_reference_it_is_missing": "Reference lists vestigial structures as a category but does not name the human appendix.",
+      "suggested_fix": "rephrase to fit reference — say 'vestigial structures' without naming the appendix, or add the appendix example to the reference doc."
+    },
+    {
+      "section_id": "13_evidence",
+      "severity": "note",
+      "unsupported_claim": "'…finch beaks shifting after droughts in the Galápagos.'",
+      "where_in_reference_it_is_missing": "Reference lists 'Galápagos finch beaks' as direct-observation evidence but does not specify drought as the driver.",
+      "suggested_fix": "rephrase to fit reference — drop the 'after droughts' specificity, or add the drought detail to the reference doc."
+    },
+    {
+      "section_id": "14_homology_trap",
+      "severity": "minor",
+      "unsupported_claim": "Specific homology examples: human arm, whale flipper, bat wing; analogy examples: bird wing vs insect wing",
+      "where_in_reference_it_is_missing": "Reference defines homologous vs analogous structures conceptually but does not name any of these specific organ examples.",
+      "suggested_fix": "add to reference doc — these are canonical AP examples and worth including; otherwise rephrase generically ('limb bones of different mammals', 'wings of different lineages')."
+    },
+    {
+      "section_id": "16_path",
+      "severity": "note",
+      "unsupported_claim": "'AP Biology CED Unit 7 topics 7.1–7.8' and 'College Board sample free-response questions on H-W'",
+      "where_in_reference_it_is_missing": "Reference doc covers Unit 7 content but does not enumerate sub-topic numbers (7.1–7.8) or reference College Board sample FRQs.",
+      "suggested_fix": "remove or replace with a generic 'AP Biology Unit 7' citation, unless the CED sub-topic numbering is added to the reference doc."
+    }
+  ],
+  "overall_assessment": "No fabricated names, dates, or fictional studies were detected — every flagged item is either a real-world-true elaboration (Pennsylvania Amish, human appendix, finch droughts, cheetah ice-age cause) layered on top of an example that IS in the reference, or a pedagogical derivation from a cited formula (the mouse H-W problem). The only externally-sourced numeric claims are the '13–20% of the exam' weighting and the '50 years' Industrial Revolution timeline, neither of which appears in the reference. No named individuals from M11 (Mayr, Eldredge, etc.) snuck in. Verdict is 'minor' — the script should either trim these elaborations or have them added to the reference doc, but nothing here rises to a critical hallucination."
+}

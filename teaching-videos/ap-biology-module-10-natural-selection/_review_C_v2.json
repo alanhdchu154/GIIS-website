@@ -1,0 +1,51 @@
+{
+  "reviewer": "C — Citation Checker, round 2",
+  "verdict": "minor",
+  "previously_flagged_now_resolved": [
+    "02_hook — '50 years' Industrial Revolution timeline removed; England specifier removed",
+    "02_hook — immune-system aside removed; narration now only cites antibiotic resistance and Galápagos finch beaks (both in ref)",
+    "12_drift_examples — 'after the last ice age' cheetah cause removed",
+    "12_drift_examples — 'Pennsylvania' specifier on Amish removed",
+    "13_evidence — 'after droughts' Galápagos finch driver removed",
+    "16_path — 'Unit 7 topics 7.1–7.8' and 'College Board sample FRQs' trimmed to generic 'AP Biology Unit 7'",
+    "01_title — '13–20% of the exam' is now confirmed in the reference doc ('CED unit 7 weight: 13–20%'), so this is no longer an unsupported claim"
+  ],
+  "previously_flagged_still_open": [
+    "13_evidence — 'human appendix' as the named vestigial example is still in narration; reference lists 'vestigial structures' as a category but never names the appendix. Revisor flagged this as an intentional keep (canonical AP example) and added to the human-review list for reference-doc update. Severity: minor.",
+    "14_homology_trap — 'human arm, whale flipper, bat wing' (homology) and 'bird wing vs insect wing' (analogy) still in narration and slide hint; reference defines the categories but doesn't name these organs. Revisor flagged for reference-doc update. Severity: minor.",
+    "09_pause1 / 10_pause1_silence — the 400 mice / 64 white worked H-W problem is still present; previously OK'd as instructor-derived from cited formulas. No action needed."
+  ],
+  "new_issues": [
+    {
+      "section_id": "12_drift_examples",
+      "severity": "minor",
+      "unsupported_claim": "Amish founder example is now elaborated to 'Ellis-van Creveld syndrome (which includes polydactyly along with other traits), traced to a single founder couple.'",
+      "suggested_fix": "Reference says only 'Amish, polydactyly'. The disease name 'Ellis-van Creveld syndrome' and the 'single founder couple' attribution are not in the reference. Either trim the narration back to 'polydactyly is unusually common in some Amish communities (founder effect)', or add the Ellis-van Creveld + founder-couple detail to the reference doc. Real-world-true but unsourced — minor, not critical."
+    },
+    {
+      "section_id": "04_darwin_postulates",
+      "severity": "minor",
+      "unsupported_claim": "'…the Malthusian struggle' — naming Thomas Malthus as the source of postulate 3 ('more offspring than the environment can support').",
+      "suggested_fix": "Reference lists 'more offspring than environment can support' as one of Darwin's postulates but does not name Malthus. Either drop the 'Malthusian' label and say 'the resource-limitation step', or add a one-line Malthus citation to the reference doc. Real-world-true but unsourced — minor."
+    },
+    {
+      "section_id": "13_evidence",
+      "severity": "note",
+      "unsupported_claim": "'antibiotic resistance in hospitals' — narrows the antibiotic-resistance example to a hospital setting.",
+      "suggested_fix": "Reference says only 'antibiotic resistance' as a direct-observation example without naming hospitals. Either drop 'in hospitals' or add it to the reference doc. Pedagogically harmless; note-level."
+    },
+    {
+      "section_id": "02_hook",
+      "severity": "note",
+      "unsupported_claim": "'The dark variant already existed by chance mutation before the soot arrived.' This Lamarckism pre-empt is a conceptual elaboration on the peppered-moth case.",
+      "suggested_fix": "Not in the reference verbatim, but it is a direct logical consequence of Darwin's postulate 1 (variation must exist) combined with the peppered-moth example that IS in the reference. Acceptable as an in-bounds derivation; flag only because the specific 'before the soot' phrasing is new. No action needed."
+    },
+    {
+      "section_id": "13_evidence",
+      "severity": "note",
+      "unsupported_claim": "'The mutations were already there by chance in a tiny fraction of the population — the antibiotic just killed everyone else.' Same Lamarckism pre-empt applied to antibiotics.",
+      "suggested_fix": "Same as above — a logical derivation from Darwin's postulates + the antibiotic-resistance example that IS in the reference. In-bounds; note-level only."
+    }
+  ],
+  "overall_assessment": "Round 1's six fabricated-specifics issues (50 years, England, after-droughts, after-the-last-ice-age, Pennsylvania, CED 7.1–7.8 enumeration) are all cleanly resolved — the revisor either removed the unsupported qualifier or kept only the part that IS in the reference. The two intentionally-kept canonical AP examples (human appendix; human arm / whale flipper / bat wing / bird wing / insect wing) remain technically unsupported by the current reference doc, but the revisor explicitly flagged them for a reference-doc update rather than a script change, which is a reasonable trade. Two genuinely new minor issues appeared during the revision: the 'Ellis-van Creveld syndrome traced to a single founder couple' elaboration on the Amish example, and the 'Malthusian struggle' name-drop in Darwin's postulate 3. Both are real-world-true but go beyond what the reference doc currently says. No fabricated dates, no invented studies, no fictional researchers — the verdict stays at 'minor', a clear improvement over round 1's same-rated 'minor' with materially fewer open items."
+}

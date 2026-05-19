@@ -1,0 +1,74 @@
+{
+  "course": "AP Biology",
+  "module": "Module 10: Natural Selection and Evolution",
+  "voice": "en-US-EmmaNeural",
+  "voice_rate": "-3%",
+  "intro_music_seconds": 3,
+  "outro_music_seconds": 3,
+  "sections": [
+    {
+      "id": "01_title",
+      "text": "Welcome back to AP Biology. Today is Module Ten — Natural Selection and Evolution. This is the engine that connects every other unit, and it shows up on roughly one in six exam points. So let's get it right."
+    },
+    {
+      "id": "02_hook",
+      "text": "Here's something wild. During the Industrial Revolution, peppered moths shifted from mostly light to mostly dark — not because individual moths changed color, but because the population did. No individual moth ever changed: light moths stayed light, dark moths stayed dark. The dark variant already existed by chance mutation before the soot arrived — natural selection just changed which variants survived to reproduce. Today we'll see exactly how, and why this same logic predicts antibiotic resistance and Galápagos finch beaks."
+    },
+    {
+      "id": "03_overview",
+      "text": "Here's the plan. First, Darwin's four postulates — the simple logic behind natural selection. Second, the Hardy-Weinberg equation — our null model for when a population is standing still. And third, the five mechanisms that break that equilibrium and cause real evolution."
+    },
+    {
+      "id": "04_darwin_postulates",
+      "text": "Darwin's argument is just four steps. One — individuals in a population vary. Two — some of that variation is heritable, meaning it has a genetic component passed to offspring. Three — more babies are born than can possibly survive, the Malthusian struggle. And four — individuals with traits better suited to their environment leave more offspring. One crucial nuance: natural selection acts on phenotypes — the visible traits — not directly on genotypes. A bodybuilder's muscles don't make their kids stronger because that variation isn't heritable. Stack those four steps, and evolution by natural selection is logically inevitable."
+    },
+    {
+      "id": "05_fitness_definition",
+      "text": "Quick warning — this is the number-one fitness trap on the AP exam. Fitness in biology does not mean strong, fast, or long-lived. It means relative reproductive success — how many of your offspring survive to reproduce themselves. A scrawny mouse with twelve grandchildren has higher fitness than a buff mouse with two. 'Relative' means we compare to the highest performer in the same population — the top reproducer gets a fitness of one, and everyone else is a fraction of that. Move the same mouse to a different environment and its fitness number changes completely — fitness is always context-dependent."
+    },
+    {
+      "id": "06_selection_types",
+      "text": "Selection comes in flavors. Directional selection shifts the average — like peppered moths going darker. Stabilizing selection squeezes toward the average — human birth weight is the classic case, where too small and too large both struggle. Disruptive selection pushes against the middle and favors both extremes — African seedcrackers either get small beaks for soft seeds or big beaks for hard seeds, and the middle loses out. And then sexual selection — a separate framework, competition for mates — comes in two flavors. Intersexual selection is mate choice: peacock tails evolved because peahens prefer them. Intrasexual selection is same-sex combat: deer antlers evolved from males fighting other males for access to mates."
+    },
+    {
+      "id": "07_hw_setup",
+      "text": "Now the math. Hardy-Weinberg is our null model — it describes what allele frequencies should look like in a population that is not evolving. If p is the frequency of allele A and q is the frequency of allele a, then p plus q equals one. And the genotypes follow p squared plus two p q plus q squared equals one — that's the frequencies of homozygous dominant, heterozygous, and homozygous recessive."
+    },
+    {
+      "id": "08_hw_conditions",
+      "text": "For Hardy-Weinberg to hold, five things must all be true. No mutation. No migration in or out. Mating is random. The population is infinitely large — which is the technical way of saying no genetic drift. And no natural selection. Each of these five conditions maps directly to one of the five mechanisms we're about to cover. In the real world, at least one of these is always broken — which is exactly why every real population is evolving. Hardy-Weinberg isn't a fact about nature; it's a baseline we measure deviations from."
+    },
+    {
+      "id": "09_pause1",
+      "text": "Quick practice. In a population of four hundred mice, sixty-four are white — that's the homozygous recessive aa genotype. Assuming Hardy-Weinberg, what's the frequency of the dominant A allele? Pause now. Solve it. Press play when you're ready."
+    },
+    {
+      "id": "10_pause1_silence",
+      "text": "Here's the walkthrough. The aa genotype frequency is sixty-four over four hundred, which is point one six — that's q squared. Take the square root and q equals point four. Since p plus q equals one, p equals point six. The trick is always to start from q squared whenever the problem gives you the recessive phenotype count."
+    },
+    {
+      "id": "11_mechanisms",
+      "text": "So what breaks Hardy-Weinberg? Five mechanisms, one per condition. Mutation creates brand-new alleles — rare per generation but the ultimate source of all variation. Gene flow is migration between populations, which tends to make them more similar. Genetic drift is random chance, and it hits small populations hardest. Natural selection is the only mechanism non-random with respect to fitness — it favors phenotypes that reproduce more, and the alleles underlying those phenotypes ride along. And non-random mating comes in two distinct forms — assortative mating, where individuals choose partners based on phenotype similarity, and inbreeding, where partners are chosen based on relatedness. These are related ideas but not the same thing. Non-random mating changes genotype frequencies without changing allele frequencies directly."
+    },
+    {
+      "id": "12_drift_examples",
+      "text": "Genetic drift has two famous flavors. The bottleneck effect — when a population crashes, like the cheetah bottleneck, the survivors carry only a sliver of the original variation, and that sliver is what the species has to work with. And critically — which alleles made it through the bottleneck has nothing to do with fitness. Drift is non-adaptive — the surviving alleles were lucky, not better. A great allele can be lost; a harmful one can become common. The founder effect — when a small group splits off and colonizes new territory, like the Amish — whatever alleles those founders happened to carry now dominate the new population. That's why Ellis-van Creveld syndrome, which includes polydactyly along with other traits, is unusually common in some Amish communities, traced to a single founder couple."
+    },
+    {
+      "id": "13_evidence",
+      "text": "And how do we know any of this actually happened? Six independent lines of evidence. Fossils show change through time. Biogeography — the marsupial wolf in Australia and the placental wolf in North America look almost identical but aren't closely related, which is convergent evolution from similar environments. Comparative anatomy gives us homologous structures from common ancestors and vestigial leftovers like the human appendix. Embryos of distant relatives share early developmental patterns. DNA sequences confirm relationships down to the molecule. And we see evolution happening live — antibiotic resistance in hospitals, and Galápagos finch beaks. One critical point on antibiotic resistance: the resistant bacteria didn't become resistant because of the antibiotic. The mutations were already there by chance in a tiny fraction of the population — the antibiotic just killed everyone else, so the resistant ones inherited the colony. Natural selection chose which variants survived; it didn't create them."
+    },
+    {
+      "id": "14_homology_trap",
+      "text": "One more AP trap. Homologous and analogous structures sound similar but mean opposite things. Homologous structures — like a human arm, a whale flipper, and a bat wing — share the same underlying bone layout because they inherited it from a common ancestor. Different functions, same blueprint. Analogous structures — like a bird wing and an insect wing — do the same job but evolved independently. Same function, different blueprint. Homology is about ancestry. Analogy is about convergence. And one more thing while we're naming traps: evolution has no goal. There is no ladder of progress, no destination, no 'higher' or 'lower' organisms. Evolution is just what happens when these mechanisms run on a varying, reproducing population — nothing more."
+    },
+    {
+      "id": "15_recap",
+      "text": "Let's lock it in. Darwin's four postulates give us natural selection — and remember, selection acts on phenotypes, not directly on genotypes. Fitness means reproductive success, not muscle. Hardy-Weinberg is our null model, and five conditions must all hold for it. Five mechanisms break it — mutation, gene flow, drift, selection, and non-random mating. Drift is non-adaptive — pure chance, not fitness. And six independent lines of evidence all point to the same conclusion: life shares common ancestry. One last conceptual flag — evolution has no goal and no direction toward complexity or perfection. Your assignment before Module Eleven — three Hardy-Weinberg practice problems are waiting in your Learn Portal."
+    },
+    {
+      "id": "16_path",
+      "text": "Next up — Module Eleven, Speciation and Phylogeny. Once you understand how a single population changes, the next question is how one population splits into two separate species, and how we map all of life onto a single family tree. You're ready for Module Eleven when you can do three things: state Darwin's four postulates, solve a Hardy-Weinberg problem starting from the recessive phenotype, and name which of the five mechanisms a given scenario describes. Finish your Hardy-Weinberg practice, get a good night's sleep, and I'll see you in Module Eleven."
+    }
+  ]
+}

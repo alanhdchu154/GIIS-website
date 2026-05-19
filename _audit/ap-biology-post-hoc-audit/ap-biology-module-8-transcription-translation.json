@@ -1,0 +1,29 @@
+{
+  "module_slug": "ap-biology-module-8-transcription-translation",
+  "reviewer": "post-hoc PhD audit",
+  "verdict": "pass",
+  "issues": [
+    {
+      "section_id": "07_alternative_splicing",
+      "severity": "minor",
+      "claim": "Humans have only about twenty thousand genes — fewer than a grain of rice.",
+      "problem": "True but the comparison is a popular-science talking point rather than an AP-exam fact. Rice (Oryza sativa) is typically cited at ~35,000-50,000 protein-coding genes, so the claim holds, but students sometimes mis-remember this as 'rice has more DNA' (genome size) which is a separate idea. Not wrong, just rhetorical.",
+      "suggested_fix": "Optional: clarify 'fewer protein-coding genes than a rice plant' to head off the genome-size confusion. No change required for accuracy."
+    },
+    {
+      "section_id": "07_alternative_splicing",
+      "severity": "minor",
+      "claim": "Human cells make over a hundred thousand different proteins.",
+      "problem": "Proteome size estimates vary widely in the literature (often cited 80k-400k+ isoforms via alternative splicing and PTMs). 'Over a hundred thousand' is a defensible round number used in many AP-aligned textbooks, so acceptable, but not a hard exam fact.",
+      "suggested_fix": "Optionally soften to 'many tens of thousands of distinct protein isoforms' to avoid implying a precise figure."
+    },
+    {
+      "section_id": "05_transcription",
+      "severity": "minor",
+      "claim": "The TATA box about twenty-five base pairs upstream of the gene.",
+      "problem": "Slightly imprecise — the TATA box is typically ~25-35 bp upstream of the transcription start site (often quoted as the -25 to -30 region). The number cited is within the accepted range, so this is acceptable shorthand.",
+      "suggested_fix": "Optional: 'roughly 25 to 30 base pairs upstream.' Not required."
+    }
+  ],
+  "overall_assessment": "Script is factually accurate and AP-rigor appropriate. Central dogma, transcription directionality, mRNA processing, ribosome subunit sizes (80S/70S, A/P/E), codon table facts (64/61/3, AUG=Met, UAA/UAG/UGA), ribozyme catalysis of the peptide bond, lac/trp operon logic, and the sickle-cell missense example (GAG to GTG, glu to val at beta-globin position 6) are all correctly stated. The worked pause problem (template 3'-TACGGCATT-5' yielding mRNA 5'-AUGCCGUAA-3', Met-Pro-stop) checks out. No hallucinations or critical errors found; only minor rhetorical flourishes worth softening."
+}

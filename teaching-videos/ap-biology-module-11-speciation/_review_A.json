@@ -1,0 +1,63 @@
+{
+  "reviewer": "A — Peer PhD (Evolutionary Biology)",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "08_sympatric",
+      "severity": "minor",
+      "claim": "Lake Victoria cichlids: '>500 species diverged within one lake driven by female mate choice for male coloration' and narration says 'more than five hundred species.'",
+      "problem": "The ~500+ species cichlid radiation figure is canonically associated with Lake Malawi (and Lake Tanganyika has ~250). Lake Victoria's haplochromine flock is large but typically estimated at ~300–500 species, and crucially Lake Victoria is geologically very young (it largely desiccated ~14,700 ya), so it is a textbook case of explosive radiation rather than necessarily the largest. The narration's '>500' is at the high end of estimates and a bit overstated. The mechanism (female mate choice on male coloration, with turbidity-mediated breakdown) is correct.",
+      "suggested_fix": "Change to 'hundreds of cichlid species' or 'around 500 species' and consider noting that Lake Malawi has the largest flock (~800–1000 spp). At minimum hedge: 'estimated 300–500 species in Lake Victoria, driven by female mate choice for male coloration.'"
+    },
+    {
+      "section_id": "07_allopatric",
+      "severity": "minor",
+      "claim": "Galápagos finches 'diverged into 13+ species' (specific_examples) and the canonical example for allopatric speciation.",
+      "problem": "Current taxonomy recognizes ~17–18 Darwin's finch species (including the Cocos finch). '13+' is the older textbook number but is a slight undercount. Also, while Darwin's finches are conventionally cited as allopatric, the radiation involved repeated cycles of allopatric divergence on different islands followed by secondary contact and sympatric reinforcement — calling them purely allopatric is the standard AP-level simplification but slightly oversimplified.",
+      "suggested_fix": "Update to '~17 species' or say 'more than a dozen species' to avoid a hard number that is becoming dated. The allopatric framing is fine for AP."
+    },
+    {
+      "section_id": "15_origin_of_life",
+      "severity": "minor",
+      "claim": "Miller-Urey 'sparked a flask of CH4, NH3, H2, and H2O with electrical discharge → recovered amino acids' and 'After a week they pulled out amino acids.'",
+      "problem": "Factually correct, but a note: Miller's original 1953 paper reported recovering several amino acids (notably glycine, alanine, aspartic acid) after running the apparatus for one week; later re-analysis of the archived vials with modern instrumentation found >20 amino acids. The composition (CH4, NH3, H2, H2O) reflects Oparin-Haldane's reducing-atmosphere assumption, which is now thought NOT to accurately reflect early Earth's atmosphere (likely more CO2/N2-dominated). This is fine for AP but worth a single hedging clause.",
+      "suggested_fix": "Optional: add a brief caveat — 'The reducing atmosphere they used is now considered less accurate than originally thought, but the principle — that organic monomers can form abiotically — still holds.' Not required at AP level."
+    },
+    {
+      "section_id": "15_origin_of_life",
+      "severity": "minor",
+      "claim": "'LUCA … about three point five billion years ago — we know it existed because every living thing today uses essentially the same genetic code.'",
+      "problem": "The ~3.5 Bya date is consistent with the oldest robust microfossil/stromatolite evidence and is fine for AP. However, current molecular-clock estimates place LUCA closer to ~3.8–4.2 Bya, with 3.5 Bya being the conservative lower bound from fossil evidence. The phrasing 'we know it existed BECAUSE every living thing uses the same genetic code' is slightly weak — the universal genetic code is one line of evidence, but the stronger inference is shared core machinery (ribosomes, ATP, conserved protein domains across all three domains). The outline does mention 'shared core ribosomal machinery' in specific_examples but the narration drops it.",
+      "suggested_fix": "Acceptable as-is for AP, but tighten narration to 'we infer LUCA existed because all life shares the same genetic code AND core molecular machinery — ribosomes, ATP, conserved proteins.' Date '~3.5 Bya' is OK as conservative."
+    },
+    {
+      "section_id": "11_clades_compare",
+      "severity": "note",
+      "claim": "Example of monophyletic group: 'birds + crocodiles + dinosaurs (Archosauria).'",
+      "problem": "Minor terminology — birds ARE dinosaurs (avian dinosaurs), so listing 'birds + crocodiles + dinosaurs' as three separate things is internally inconsistent with the cladistic framing the slide is teaching. Archosauria = crocodilians + dinosaurs (including birds) + their extinct relatives (pterosaurs, etc.). The slide correctly insists 'reptiles excluding birds = paraphyletic' on the very next line, so listing birds separately from dinosaurs muddles the message.",
+      "suggested_fix": "Change to 'Archosauria = crocodilians + dinosaurs (which includes birds) + pterosaurs.' Or just say 'Mammalia' and 'Aves' as monophyletic examples and drop the Archosauria reference."
+    },
+    {
+      "section_id": "14_extinction_variation",
+      "severity": "note",
+      "claim": "'northern elephant seals reduced to about twenty individuals in the eighteen hundreds.'",
+      "problem": "The widely cited bottleneck figure is 'fewer than 100' or 'as few as ~20' individuals in the 1890s; the exact number is uncertain. '~20' is the low-end estimate and is commonly cited but worth softening.",
+      "suggested_fix": "'reduced to fewer than 100 individuals (perhaps as few as 20) in the late 1800s.' Minor — current phrasing is acceptable."
+    },
+    {
+      "section_id": "06_postzygotic_isolation",
+      "severity": "note",
+      "claim": "Meiosis 'can't pair an odd number of chromosomes evenly' in the mule.",
+      "problem": "Technically the deeper reason is that horse and donkey chromosomes are NOT homologous pairs — many have undergone Robertsonian fusions/rearrangements between the two species, so homologous pairing fails during prophase I regardless of the odd total. The 'odd number' phrasing is the common textbook shorthand but is a slight oversimplification: even if the chromosome count were equal but the chromosomes were non-homologous, the mule would still be sterile.",
+      "suggested_fix": "Acceptable for AP. If desired: 'horse and donkey chromosomes are too different to pair correctly in meiosis — the odd total of 63 makes it even worse.'"
+    },
+    {
+      "section_id": "08_sympatric",
+      "severity": "note",
+      "claim": "Bread wheat 'is HEXAPLOID — six chromosome sets — and it happened by sympatric polyploidy. Six chromosome sets from three ancestral grass species.'",
+      "problem": "Correct. Triticum aestivum is AABBDD allohexaploid from three diploid ancestors (Triticum urartu, an Aegilops speltoides relative, and Aegilops tauschii). Worth noting it is specifically an ALLOPOLYPLOID (hybridization + chromosome doubling between species) rather than autopolyploid; the outline doesn't distinguish, but AP doesn't usually require this.",
+      "suggested_fix": "Optional: mention 'allopolyploid (hybrid origin)' vs autopolyploid distinction in key_vocabulary."
+    }
+  ],
+  "overall_assessment": "Solid, AP-appropriate outline with no critical factual errors. Species concepts, Mayr attribution, prezygotic/postzygotic categorization, allopatric/sympatric/parapatric distinctions, Eldredge & Gould 1972, Miller-Urey 1953, Margulis 1967, endosymbiosis evidence (double membrane / circular DNA / 70S ribosomes / binary fission), K-Pg at ~66 Mya with Chicxulub and non-avian dinosaurs, and the monophyletic/paraphyletic/polyphyletic framing (reptiles-minus-birds = paraphyletic; warm-blooded = polyphyletic) are all correctly stated. Synapomorphy vs plesiomorphy is handled cleanly. Issues are stylistic or precision-level: the Lake Victoria '>500 species' figure is at the high end and the canonical 500+ flock is Malawi; Darwin's finches are now ~17 species (not 13); the Archosauria example accidentally lists 'birds + dinosaurs' as separate groups in a slide that is teaching cladistic thinking; and the LUCA date and Miller-Urey atmosphere both warrant a one-clause hedge. None of these would mislead an AP student. Recommend minor revisions."
+}

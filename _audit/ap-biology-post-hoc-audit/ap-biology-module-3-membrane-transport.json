@@ -1,0 +1,36 @@
+{
+  "module_slug": "ap-biology-module-3-membrane-transport",
+  "reviewer": "post-hoc PhD audit",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "02_hook",
+      "severity": "moderate",
+      "claim": "a single protein pump is moving three sodium ions out and two potassium ions in -- over and over, roughly ten million times every second",
+      "problem": "Factual error in turnover rate. A single Na+/K+-ATPase cycles approximately 100-150 times per second (per pump), not ten million. The figure of ~10 million may have been confused with the total number of pumps per cell, or with aggregate ion flux. As written, it is off by roughly five orders of magnitude and an AP exam reader who knows enzyme kinetics will flag it. The student takeaway (the pump is constantly working, costs energy) is fine; the number is not.",
+      "suggested_fix": "Rewrite as: 'a single Na+/K+-ATPase pump cycles about a hundred times every second, and each of your cells has millions of them running in parallel.' Keeps the awe, restores accuracy."
+    },
+    {
+      "section_id": "02_hook",
+      "severity": "minor",
+      "claim": "That one pump uses about a quarter of all the calories you eat just sitting still.",
+      "problem": "Overstated. The widely cited figure is ~19-28% of basal metabolic rate goes to Na+/K+-ATPase activity across all cells, with higher fractions in the brain specifically (up to ~50-60% of neuronal ATP). 'A quarter of all the calories you eat' rounds the brain-specific or upper-bound estimate up to a body-wide claim. Not catastrophic, but a sharp AP reader could push back.",
+      "suggested_fix": "Soften to: 'That one pump family burns roughly 20 percent of the calories you spend at rest -- and even more in your brain.'"
+    },
+    {
+      "section_id": "02_hook",
+      "severity": "minor",
+      "claim": "If it stopped for even a few minutes, you would lose consciousness.",
+      "problem": "Plausible but imprecise. Loss of consciousness on Na/K-ATPase failure depends on tissue and mechanism; in stroke/ischemia, neuronal depolarization occurs within minutes, but global pump failure 'for a few minutes' is not a clean physiological scenario. Acceptable as dramatic framing; flag only because module was generated without reviewer cascade.",
+      "suggested_fix": "Optional: 'If those pumps failed across your neurons, brain function would collapse within minutes.'"
+    },
+    {
+      "section_id": "06_passive_diffusion",
+      "severity": "minor",
+      "claim": "Channel proteins are hydrophilic tunnels -- like aquaporins for water, or ion channels for sodium and potassium.",
+      "problem": "Accurate, but worth noting for AP rigor: aquaporins are technically water-selective channels, and most ion channels in textbook contexts are gated (voltage- or ligand-gated) and so straddle the passive/regulated boundary. The narration is fine as an introduction; just be ready to refine in Module 4 (signaling) and the nervous-system unit so students don't think all ion channels are always-open like aquaporins.",
+      "suggested_fix": "No change required for this module. In Module 4, clarify that most physiologically important ion channels are gated."
+    }
+  ],
+  "overall_assessment": "Scientifically sound on every core AP Bio concept -- fluid mosaic, selective permeability, passive vs. active transport, osmosis/tonicity, Na+/K+ pump stoichiometry (3 out / 2 in per ATP), secondary active transport via SGLT, endo/exocytosis. The only meaningful problem is the hook's '10 million times every second' turnover claim, which is off by ~5 orders of magnitude and should be corrected before publication; the 'quarter of all calories' figure is also slightly inflated. No critical errors -- module is safe to ship after the section 02 fix."
+}
