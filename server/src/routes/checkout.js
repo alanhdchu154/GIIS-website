@@ -31,7 +31,7 @@ const PRICE_TIERS = {
   },
   live_test: {
     priceId: process.env.STRIPE_PRICE_LIVE_TEST,
-    mode: 'payment',  // one-time, not recurring
+    mode: 'subscription',
     maxStudents: 1,
     label: 'Live mode end-to-end test · $1',
   },
