@@ -418,7 +418,7 @@ export default function HandbookPage({ language, toggleLanguage }) {
               ? 'Genesis of Ideas International School is governed by:'
               : '艾迪尔国际学校之治理结构如下：'}</P>
             <UL>
-              <li>{en ? <><strong>Alan Hwader Chu, Founder & Head of School</strong> — owner, executive authority over school policy, finance, technology, and external representation.</> : <><strong>曲華德 (Alan Hwader Chu)，创办人 · 校长 (Founder & Head of School)</strong> — 学校所有人，对学校政策、财务、科技与对外代表行使执行权。</>}</li>
+              <li>{en ? <><strong>Alan Hwader Chu, Founder & Head of School</strong> — owner, executive authority over school policy, finance, technology, and external representation.</> : <><strong>曲华德 (Alan Hwader Chu)，创办人 · 校长 (Founder & Head of School)</strong> — 学校所有人，对学校政策、财务、科技与对外代表行使执行权。</>}</li>
               <li>{en ? <><strong>Shiyu Zhang, Ph.D., President & Principal</strong> — academic authority over curriculum, faculty oversight, and signs all official transcripts and diplomas.</> : <><strong>张诗雨博士，校长 (President & Principal)</strong> — 学术权威，统筹课程、教师监督，并签署所有正式成绩单与文凭。</>}</li>
             </UL>
             <P>{en

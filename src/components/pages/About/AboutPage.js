@@ -10,7 +10,7 @@ import Nav from '../../main/Nav';
  * Florida DOE auditors, and prospective parents can verify who runs the school.
  *
  * Current named leaders:
- *   - Alan Hwader Chu (曲華德) — Founder & Head of School
+ *   - Alan Hwader Chu (曲华德) — Founder & Head of School
  *   - Shiyu Zhang, Ph.D.       — President & Principal
  *
  * Title decision (2026-05-18): Alan = "Founder & Head of School" (executive
@@ -28,7 +28,7 @@ const MUTED = '#5b6479';
 
 const FOUNDER = {
   nameEn: 'Alan Hwader Chu',
-  nameZh: '曲華德',
+  nameZh: '曲华德',
   titleEn: 'Founder & Head of School',
   titleZh: '创办人 · 校长',
   email: 'alanhdchu@genesisideas.school',
@@ -43,7 +43,7 @@ const FOUNDER = {
     "His published research has appeared in Optical Materials Express (2020) and the Journal of Alloys & Compounds (2017), and he has received the TMS and TwICHE Best Poster Awards.",
   ],
   bioZh: [
-    '曲華德 (Alan) 创办艾迪尔国际学校 (GIIS) 的目标，是为中国学生提供一条真实可信、与美国体系接轨的高中升学通道 —— 拥有真实的教学、真实的科研、真实的证据链，而不只是一张文凭上的校名。',
+    '曲华德 (Alan) 创办艾迪尔国际学校 (GIIS) 的目标，是为中国学生提供一条真实可信、与美国体系接轨的高中升学通道 —— 拥有真实的教学、真实的科研、真实的证据链，而不只是一张文凭上的校名。',
     '他是跨学科的教育者与工程师，研究生训练横跨材料工程（普渡大学硕士，含博士阶段研究）、人工智能（德州大学奥斯汀分校硕士在读）与化学工程（国立清华大学硕士与学士，台湾新竹）。',
     '他拥有十年以上 IGCSE、A-Level、AP 体系下 Physics、Chemistry、Mathematics 的国际课程教学经验，长期指导中学生科研项目与升学准备。他曾担任 Purdue West Central / Lafayette Regional Science Fair (2021) 中学生科研竞赛评委，并持有 CAIE Cambridge 9702 Physics 专业认证。',
     '职业上，他曾参与 Walmart (Fortune 1) 大规模实时运营决策与数据系统建设，并在 KLA-Tencor 开发工程自动化工具。他将企业级系统与 AI 背景带入 GIIS，从零搭建学校的 GPA 体系、成绩单流程、学习数据分析与学术运营 SOP。',
@@ -287,7 +287,7 @@ export default function AboutPage({ language, toggleLanguage }) {
           name="description"
           content={en
             ? 'Genesis of Ideas International School (GIIS) is a Florida-registered private school. Meet the founder Alan Hwader Chu and President & Principal Shiyu Zhang, Ph.D.'
-            : '艾迪尔国际学校 (GIIS) 是 Florida 注册私立学校。了解创办人曲華德 (Alan Hwader Chu) 与校长张诗雨博士。'}
+            : '艾迪尔国际学校 (GIIS) 是 Florida 注册私立学校。了解创办人曲华德 (Alan Hwader Chu) 与校长张诗雨博士。'}
         />
       </Helmet>
 
