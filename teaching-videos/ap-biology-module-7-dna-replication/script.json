@@ -8,67 +8,77 @@
   "sections": [
     {
       "id": "01_title",
-      "text": "Welcome back to AP Biology — Module Seven, DNA Structure and Replication. This kicks off College Board Unit Six, Gene Expression and Regulation, which is a big one — twelve to sixteen percent of the AP exam. Today we look at what DNA actually is, and how every one of your cells copies it with near-perfect accuracy."
+      "text": "Welcome back to AP Biology — Module Seven, DNA Structure and Replication. This kicks off College Board Unit Six, Gene Expression and Regulation, which is twelve to sixteen percent of the AP exam. Today we look at what DNA actually is, and how every one of your cells copies it with near-perfect accuracy."
     },
     {
       "id": "02_hook",
-      "text": "Every single cell in your body has about two meters of DNA packed inside its nucleus. And every time that cell divides, it has to copy all two meters of it — and it does that with about one error per a billion bases. How? That is the question for today. The answer is a molecular assembly line of about seven proteins working in a precise order."
+      "text": "Here is something to think about. Stretch out all the DNA in a single one of your cells and it is about six feet long — two meters — packed into a nucleus you would need a microscope to see. And every time that cell divides, it has to copy all of it with about one error per a billion bases. The story of how starts in nineteen fifty-three, with Watson, Crick, and a critical X-ray image taken by Rosalind Franklin called Photo Fifty-One."
     },
     {
       "id": "03_overview",
-      "text": "Three things to lock in. First — the structure of DNA itself: double helix, antiparallel strands, base pairing. Second — replication: semiconservative, leading versus lagging strand, and the lineup of enzymes that do the work. Third — proofreading and repair, plus telomeres and why they matter for aging and cancer."
+      "text": "Three things to lock in. First — the structure of DNA itself: double helix, antiparallel strands, base pairing. Second — replication: semiconservative, leading versus lagging strand, and the lineup of enzymes that do the work. Third — proofreading and telomeres, plus the common traps the AP exam likes to set."
     },
     {
       "id": "04_dna_structure",
-      "text": "Nineteen fifty-three. Watson and Crick publish the double helix model — but they did it using Rosalind Franklin's X-ray diffraction data, which she took without their knowledge. The structure is two strands twisted around each other. The backbone is alternating sugar and phosphate — deoxyribose plus phosphate. The bases stick inward and pair up across the middle. And the strands are antiparallel — one runs five-prime to three-prime, the other runs three-prime to five-prime. Major and minor grooves on the outside let proteins read the sequence without unwinding."
+      "text": "DNA is a double helix — two strands twisted around each other like a spiral staircase. The backbone of each strand is alternating sugar and phosphate, and the sugar is deoxyribose — that is the D in DNA. The bases stick inward from each backbone and pair up across the middle, like the rungs of a ladder. The two strands are antiparallel, which we will dig into in a moment. And on the outside of the helix you can see major and minor grooves — that is where regulatory proteins read the sequence without ever unwinding the helix."
     },
     {
-      "id": "05_chargaff_base_pairing",
-      "text": "Chargaff noticed something weird before anyone knew the structure — in any DNA sample, the percentage of A always equals the percentage of T, and the percentage of G equals the percentage of C. That was a huge clue. The reason: A pairs with T using two hydrogen bonds, and G pairs with C using three hydrogen bonds. That extra bond means G-C rich regions are harder to pull apart — which matters when an enzyme tries to unwind the helix."
+      "id": "05_base_pairing",
+      "text": "Base pairing follows two strict rules. Adenine pairs with thymine using two hydrogen bonds. Guanine pairs with cytosine using three hydrogen bonds. That extra bond means G-C rich regions are more stable and harder to pull apart. There is also a shape rule — purines, which are A and G, are the bigger two-ring bases, and they always pair with pyrimidines, the smaller one-ring bases, which are T and C. And before anyone knew the structure, Chargaff noticed that in any DNA sample, percent A equals percent T, and percent G equals percent C — a direct clue that bases were pairing up."
     },
     {
-      "id": "06_semiconservative",
-      "text": "How does DNA copy itself? Three guesses were possible — conservative, semiconservative, or dispersive. In nineteen fifty-eight, Meselson and Stahl settled it. They grew bacteria in heavy nitrogen, switched to light nitrogen, and tracked DNA density after each round of replication. The result matched only one model — semiconservative. Each new double helix has one original strand and one brand-new strand. The old strand serves as the template for the new one."
+      "id": "06_antiparallel_5_3",
+      "text": "Antiparallel means the two strands run in opposite directions. Each strand has a five-prime end and a three-prime end — those numbers come from carbons on the sugar. The phosphate group hangs off the five-prime carbon, and the next nucleotide attaches at the three-prime carbon. So one strand reads five-prime to three-prime going down, and its partner reads three-prime to five-prime going down — they point opposite ways. This sounds like a small detail, but it is the single most important fact in this entire module. Every weird thing about replication comes from it."
     },
     {
-      "id": "07_replication_enzymes",
-      "text": "The first four enzymes set up the fork. Helicase unwinds the double helix, breaking the hydrogen bonds between bases. Single-strand binding proteins, or SSBPs, coat the separated strands so they don't snap back together. Topoisomerase works ahead of the fork — it cuts and rejoins the DNA to relieve the supercoiling that builds up from unwinding. Then primase lays down a short RNA primer, because DNA polymerase cannot start from scratch — it needs an existing three-prime OH to build onto."
+      "id": "07_meselson_stahl",
+      "text": "Three guesses were possible for how DNA copies itself — conservative, semiconservative, or dispersive. In nineteen fifty-eight, Meselson and Stahl settled it. They grew bacteria in heavy nitrogen, switched them to light nitrogen, and then measured the density of the DNA after each round of replication. The pattern matched only one model — semiconservative. Every new double helix has one parental strand and one brand-new strand. The old strand serves as the template for the new one."
     },
     {
-      "id": "08_polymerase_directionality",
-      "text": "Now the main player. DNA polymerase III adds nucleotides only in the five-prime to three-prime direction. Always. This creates an asymmetry. On the leading strand, polymerase moves toward the fork and synthesizes one continuous piece. On the lagging strand, the template runs the wrong way, so polymerase has to work backward — in short pieces called Okazaki fragments — each one needing its own RNA primer. Both strands are still built five-prime to three-prime — that part never changes."
+      "id": "08_replication_fork",
+      "text": "Replication begins at an origin and opens up into a Y-shaped replication fork. Three enzymes set it up. Helicase unwinds the double helix by breaking the hydrogen bonds between bases. Single-strand binding proteins, or SSBPs, coat the separated strands so they don't snap back together. And topoisomerase works ahead of the fork — it cuts and rejoins the DNA to relieve the supercoiling that builds up from all that unwinding. Now we have two exposed single strands ready to be copied."
     },
     {
-      "id": "09_finishing_steps",
-      "text": "After Pol three lays down the new DNA, two cleanup enzymes finish the job. DNA polymerase one removes the RNA primers and replaces them with DNA — same five-prime to three-prime direction. But that leaves tiny nicks between the new fragments. DNA ligase seals those nicks by forming the final phosphodiester bond, joining everything into one continuous strand."
+      "id": "09_primase_polymerase",
+      "text": "Two more enzymes start synthesis. Primase comes in first and lays down a short RNA primer — about ten nucleotides. That is necessary because DNA polymerase can not start from scratch. It can only extend an existing strand — it needs a free three-prime OH to add onto. Then DNA polymerase three takes over and adds nucleotides one at a time, always five-prime to three-prime, complementary to the template. Pause on that — five-prime to three-prime, always. That rule never bends."
     },
     {
       "id": "10_pause1",
-      "text": "Try this one. Given the template strand three-prime — T A C G G T — five-prime, write the new strand that DNA polymerase builds. And which direction did polymerase build it? Pause now. Solve it. Press play when you're ready."
+      "text": "Try this one. DNA polymerase only extends from a three-prime OH and only synthesizes five-prime to three-prime. But the two template strands run opposite directions. How does the cell replicate both strands at once if polymerase only goes one way? Pause now. Think it through. Press play when you're ready."
     },
     {
       "id": "11_pause1_silence",
-      "text": "Answer. Pair each base — A with T, G with C. T pairs with A, A pairs with T, C with G, G with C, G with C, T with A. The new strand is five-prime — A T G C C A — three-prime. And polymerase built it five-prime to three-prime, reading the template in the three-prime to five-prime direction. That five-prime to three-prime synthesis rule is the source of every quirky thing about replication — including the lagging strand and Okazaki fragments."
+      "text": "Answer. The cell solves it with two different strategies. On the leading strand, the template runs toward the fork in the right direction, so polymerase moves continuously, following the fork as it opens. One primer, one long continuous strand. On the lagging strand the template runs the wrong way, so polymerase has to work backward — away from the fork — in short pieces called Okazaki fragments. Each Okazaki fragment needs its own RNA primer. Polymerase one later removes those primers, and ligase seals the nicks. Both strands are still built five-prime to three-prime — that rule never bent."
     },
     {
-      "id": "12_proofreading_repair",
-      "text": "How does the cell get to one error per a billion bases? Three layers. First — DNA polymerase has built-in three-prime to five-prime exonuclease activity. As it builds, it can back up and remove a mismatched base it just put down. Second — mismatch repair proteins patrol behind and fix errors that slipped past proofreading. Third — nucleotide excision repair handles bulky damage, especially the thymine dimers caused by UV light. People with xeroderma pigmentosum have a broken excision repair pathway, which is why they get skin cancer from even small amounts of sunlight."
+      "id": "12_lagging_strand_detail",
+      "text": "Let's zoom in on the lagging strand. As the fork opens, primase keeps laying down new RNA primers on the lagging template, each one further away from the previous Okazaki fragment. DNA polymerase three then extends each primer, building a short fragment about a thousand to two thousand bases long in bacteria. When a new fragment runs into the previous primer, DNA polymerase one steps in, chews out the RNA primer, and replaces it with DNA. That leaves a single nick between fragments — and DNA ligase forms the final phosphodiester bond that seals the lagging strand into one continuous piece."
     },
     {
-      "id": "13_telomeres",
-      "text": "Now an awkward problem. Linear chromosome ends — telomeres — have a repeating sequence, in humans it is T-T-A-G-G-G repeated thousands of times. Every time the lagging strand is replicated, the very end can't be fully copied — there is no room for a final primer. So chromosomes shorten a little with every division. This is the end replication problem. Telomerase, an enzyme with its own RNA template, can extend telomeres back out — but in your body, only germ cells and stem cells make active telomerase. Most adult cells don't, which is part of why we age. And cancer cells almost always reactivate telomerase — that is what makes them effectively immortal."
+      "id": "13_proofreading_telomeres",
+      "text": "Two finishing topics. First — accuracy. DNA polymerase has built-in three-prime to five-prime exonuclease proofreading. As it builds, it can back up and remove a mismatched base it just put down — and that gets the error rate down to about one in a billion bases. Second — telomeres. Linear chromosome ends carry a repeating sequence — T T A G G G in humans. Because the lagging strand can't fully complete its end with a primer, chromosomes shorten with every division. Telomerase, an enzyme that carries its own RNA template, can extend telomeres back out — but in your body only germ cells and stem cells make active telomerase. Most cancers reactivate it, which is part of what makes them immortal."
     },
     {
       "id": "14_compare_traps",
-      "text": "Common traps on this topic. Trap one — students think the lagging strand is built three-prime to five-prime. It is not. Both strands are built five-prime to three-prime — the lagging one just does it in short backward chunks. Trap two — DNA polymerase cannot start on its own. It needs a primer. Always primase first, polymerase second. Trap three — semiconservative is not the same as conservative or dispersive. Semiconservative means one old strand plus one new strand per daughter helix. Get those three traps right and you have most of the points on this topic."
+      "text": "Three roles you must keep straight. DNA polymerase three is the workhorse — it does the bulk of new DNA synthesis, both leading and lagging strands, five-prime to three-prime. DNA polymerase one is the cleanup specialist — it removes the RNA primers and fills the gaps with DNA, also five-prime to three-prime. And DNA ligase is the welder — it forms the final phosphodiester bond that seals the nicks between Okazaki fragments. Three different enzymes, three different jobs. The AP exam loves to swap these and see if you notice."
     },
     {
       "id": "15_recap",
-      "text": "Recap. DNA is a double helix, antiparallel strands, A pairs with T using two bonds, G pairs with C using three bonds. Replication is semiconservative — Meselson and Stahl proved it. The enzyme order matters: helicase, SSBPs, topoisomerase, primase, then DNA polymerase three building five-prime to three-prime — continuous on the leading strand, Okazaki fragments on the lagging strand. Polymerase one swaps RNA primer for DNA. Ligase seals the nicks. Proofreading plus mismatch repair plus nucleotide excision repair get error rates down to one in a billion. Telomeres shorten with age; telomerase rebuilds them and is reactivated in cancer."
+      "text": "Recap. DNA is a double helix, antiparallel strands, A pairs with T with two hydrogen bonds, G pairs with C with three. Replication is semiconservative — Meselson and Stahl proved it. The enzyme order at the fork: helicase, SSBPs, topoisomerase, primase, then DNA polymerase three — building five-prime to three-prime, continuous on the leading strand, Okazaki fragments on the lagging strand. Polymerase one swaps RNA primers for DNA. Ligase seals the nicks. Proofreading gets the error rate to one in a billion. Telomeres shorten with each division; telomerase rebuilds them and is reactivated in cancer."
     },
     {
       "id": "16_path",
-      "text": "Your path forward. Read OpenStax Biology, Chapter Fourteen, for the deeper version of replication. Drill the Khan Academy AP Biology Unit Six problem sets — questions about the leading versus lagging strand and the enzyme order come up almost every year. Do the assignment in your dashboard. Book an advisor check-in if the directionality of polymerase still feels confusing. Next time — Module Eight, Transcription and Translation. We go from DNA to RNA to protein."
+      "text": "Your path forward. Read OpenStax Biology, Chapter Fourteen, for the deeper version of replication. Drill the Khan Academy AP Biology Unit Six problem sets — questions about leading versus lagging strand and the enzyme order come up almost every year. Do the assignment in your dashboard. Book an advisor check-in if the five-prime to three-prime directionality still feels confusing. Next time — Module Eight, Transcription and Translation. We go from DNA to RNA to protein."
     }
-  ]
+  ],
+  "youtube": {
+    "video_id": "bLbLa9191Cg",
+    "url": "https://youtu.be/bLbLa9191Cg",
+    "embed_url": "https://www.youtube.com/embed/bLbLa9191Cg",
+    "studio_url": "https://studio.youtube.com/video/bLbLa9191Cg/edit",
+    "privacy": "unlisted",
+    "playlist": "AP Biology",
+    "playlist_id": "PLBdiOM21TW9LbCfqZADMWrSHBsDHa2m6h",
+    "uploaded_at": "2026-05-19T14:00:41+00:00"
+  }
 }

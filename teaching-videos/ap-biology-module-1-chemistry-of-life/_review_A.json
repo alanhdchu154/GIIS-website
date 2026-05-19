@@ -1,0 +1,34 @@
+{
+  "reviewer": "A",
+  "role": "peer-phd-subject-matter",
+  "module": "ap-biology-module-1-chemistry-of-life",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "12_carbs_lipids",
+      "severity": "minor",
+      "description": "Script oversimplifies starch as alpha-1,4 only. Natural starch is actually a mixture of amylose (mostly linear alpha-1,4) and amylopectin (alpha-1,4 backbone with alpha-1,6 branch points). The outline correctly distinguishes glycogen as 'alpha-1,4 + alpha-1,6 branches,' but by giving starch only 'alpha-1,4,' both outline and script implicitly imply amylopectin doesn't exist. AP CED-aligned framing should say starch = amylose (alpha-1,4) + amylopectin (alpha-1,4 with alpha-1,6 branches), with glycogen being even MORE highly branched than amylopectin."
+    },
+    {
+      "section": "08_carbon_chemistry",
+      "severity": "minor",
+      "description": "The script omits the carbonyl group (C=O) entirely from narration, even though the outline lists it as one of the seven functional groups and it is the group that forms inside peptide bonds and distinguishes aldehydes/ketones in monosaccharides. Hydroxyl is also dropped from the script narration. Recommend adding a brief mention of carbonyl (and hydroxyl) so the spoken list matches the seven groups parents/students will see on the slide; on the AP exam, students are expected to recognize carbonyl in aldoses/ketoses and in the peptide bond."
+    },
+    {
+      "section": "05_bonds_compare",
+      "severity": "minor",
+      "description": "Stating a hydrogen bond is 'about five percent of a covalent bond' is at the low end of the commonly cited range. Typical water H-bond energy is ~20 kJ/mol vs ~460 kJ/mol for an O-H covalent bond (~4-5%), so the figure is defensible, but many AP textbooks (Campbell, OpenStax) cite '1/20th' or '~5-10%'. Acceptable as stated; consider 'roughly one-twentieth' for closer alignment with Campbell phrasing."
+    },
+    {
+      "section": "14_nucleic_acids",
+      "severity": "minor",
+      "description": "Calling ATP 'a nucleotide' is the standard AP simplification and is fine, but strictly ATP is a nucleoside triphosphate (adenosine + 3 phosphates). Since a nucleotide is defined as base + sugar + one-or-more phosphates, ATP technically qualifies. No change required, but if asked to be strict, note ATP carries three phosphates whereas DNA/RNA nucleotides incorporated into a strand carry only one (the other two are cleaved during polymerization)."
+    },
+    {
+      "section": "13_proteins",
+      "severity": "minor",
+      "description": "Script omits the hydrophobic effect from the tertiary-structure description, while the outline explicitly (and correctly) calls it out as a thermodynamic exclusion. Since this is one of the most frequently tested AP concepts (R-group interactions in tertiary structure), the narration should briefly say 'hydrogen bonds, ionic interactions, disulfide bridges, and the hydrophobic effect' rather than just 'R-group interactions' to match the outline."
+    }
+  ],
+  "summary": "Content is factually accurate and AP-ready overall; the only substantive science concern is that starch is oversimplified as alpha-1,4 only (amylopectin's alpha-1,6 branches are missing), plus a few narration omissions where the script under-represents what the outline correctly states (carbonyl group, hydrophobic effect in tertiary structure)."
+}

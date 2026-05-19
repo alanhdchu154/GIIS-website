@@ -1,10 +1,8 @@
 """AP Biology · Module 7 — DNA Structure and Replication.
 
-Teal (science) theme auto-resolved from "AP Biology". 16 slides total.
-Heavy on customs because the double helix, base-pairing rungs, replication
-fork with leading/lagging strands, and telomere shortening each need real
-diagrams. Pause slide (10) is duplicated to 11 so the same image plays
-during both Q and A.
+Teal (science) theme auto-resolved by slide_kit from the "AP Biology" prefix.
+16 slides total. Pause slide (10) is duplicated to (11) so the same image
+plays during both the question and the answer-reveal narration.
 """
 import sys
 import math
@@ -30,878 +28,855 @@ deck.title("01_title", "AP Biology",
            "Sample lesson  ·  ~8 minutes")
 
 
-# 02 — hook: 2 meters of DNA + error rate
+# 02 — hook: 6 feet of DNA + Photo 51
 def hook(img, d):
-    d.text((110, 80), "Two meters of DNA. One error per billion bases.",
-           fill=MAROON, font=font("serif_bold", 56))
+    d.text((110, 70), "6 feet of DNA  ·  in every cell.",
+           fill=MAROON, font=font("serif_bold", 60))
 
-    # Left panel: 2 meters
-    lx, ly, lw, lh = 140, 230, 760, 540
+    # Left panel: cell with DNA stretching out
+    lx, ly, lw, lh = 140, 220, 760, 600
     d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=28,
                         outline=ACCENT, width=6, fill=CARD)
-    big = "2  meters"
-    bf = font("serif_bold", 130)
-    tw = d.textlength(big, font=bf)
-    d.text((lx + lw // 2 - tw / 2, ly + 110), big,
-           fill=MAROON_DARK, font=bf)
-    cap = "of DNA  ·  in every cell"
-    cf = font("serif_bold", 40)
-    tw2 = d.textlength(cap, font=cf)
-    d.text((lx + lw // 2 - tw2 / 2, ly + 290), cap,
-           fill=ACCENT, font=cf)
-    sub = "Packed into a nucleus 6 microns across."
-    sf = font("sans", 28)
-    tw3 = d.textlength(sub, font=sf)
-    d.text((lx + lw // 2 - tw3 / 2, ly + 380), sub,
-           fill=MUTED, font=sf)
-    sub2 = "(roughly 3 billion base pairs)"
-    sf2 = font("serif_ital", 26)
-    tw4 = d.textlength(sub2, font=sf2)
-    d.text((lx + lw // 2 - tw4 / 2, ly + 430), sub2,
-           fill=MUTED, font=sf2)
+    cf = font("serif_bold", 38)
+    cap = "Your DNA, stretched out:"
+    tw = d.textlength(cap, font=cf)
+    d.text((lx + lw // 2 - tw / 2, ly + 30), cap, fill=MAROON_DARK, font=cf)
 
-    # Right panel: error rate
-    rx, ry, rw, rh = 1020, 230, 760, 540
+    # Cell circle
+    cell_cx = lx + lw // 2
+    cell_cy = ly + 220
+    cell_r = 90
+    d.ellipse([cell_cx - cell_r, cell_cy - cell_r,
+               cell_cx + cell_r, cell_cy + cell_r],
+              fill=ACCENT_LT, outline=MAROON_DARK, width=4)
+    # Nucleus
+    d.ellipse([cell_cx - 40, cell_cy - 40, cell_cx + 40, cell_cy + 40],
+              fill=ACCENT, outline=MAROON_DARK, width=3)
+    d.text((cell_cx - 60, cell_cy + 100), "one cell",
+           fill=MUTED, font=font("sans", 26))
+
+    # Squiggly DNA line going down
+    dna_top = cell_cy + 150
+    dna_bot = ly + lh - 80
+    midx = cell_cx
+    pts = []
+    n = 18
+    for i in range(n + 1):
+        t = i / n
+        py = dna_top + (dna_bot - dna_top) * t
+        px = midx + 80 * math.sin(t * math.pi * 5)
+        pts.append((px, py))
+    for i in range(len(pts) - 1):
+        d.line([pts[i], pts[i + 1]], fill=MAROON_DARK, width=5)
+    d.text((lx + lw // 2 - 100, dna_bot + 5), "= 6 feet long",
+           fill=ACCENT, font=font("sans_bold", 32))
+
+    # Right panel: Photo 51 / Watson-Crick story
+    rx, ry, rw, rh = 1020, 220, 760, 600
     d.rounded_rectangle([rx, ry, rx + rw, ry + rh], radius=28,
                         outline=ACCENT, width=6, fill=CARD)
-    cap2 = "Copied with"
-    tw5 = d.textlength(cap2, font=cf)
-    d.text((rx + rw // 2 - tw5 / 2, ry + 60), cap2,
+    cap2 = "1953  ·  the double helix."
+    tw2 = d.textlength(cap2, font=cf)
+    d.text((rx + rw // 2 - tw2 / 2, ry + 30), cap2,
            fill=MAROON_DARK, font=cf)
 
-    err = "1 error"
-    ef = font("serif_bold", 110)
-    tw6 = d.textlength(err, font=ef)
-    d.text((rx + rw // 2 - tw6 / 2, ry + 150), err,
-           fill=MAROON, font=ef)
-    err2 = "per  1,000,000,000  bases"
-    ef2 = font("sans_bold", 36)
-    tw7 = d.textlength(err2, font=ef2)
-    d.text((rx + rw // 2 - tw7 / 2, ry + 290), err2,
-           fill=ACCENT, font=ef2)
-    sub3 = "How?  An assembly line of about 7 proteins."
-    sf3 = font("serif_ital", 28)
-    tw8 = d.textlength(sub3, font=sf3)
-    d.text((rx + rw // 2 - tw8 / 2, ry + 400), sub3,
-           fill=MUTED, font=sf3)
+    # Stylized "Photo 51" X-ray pattern (cross of dots)
+    px_cx = rx + rw // 2
+    px_cy = ry + 280
+    d.ellipse([px_cx - 130, px_cy - 130, px_cx + 130, px_cy + 130],
+              fill=(30, 30, 30), outline=MAROON_DARK, width=3)
+    for i in range(-3, 4):
+        if i == 0:
+            continue
+        for sign1, sign2 in [(1, 1), (1, -1), (-1, 1), (-1, -1)]:
+            spot_x = px_cx + sign1 * abs(i) * 20
+            spot_y = px_cy + sign2 * abs(i) * 20
+            r = 8 + abs(i)
+            d.ellipse([spot_x - r, spot_y - r, spot_x + r, spot_y + r],
+                      fill=(240, 240, 240))
+    d.ellipse([px_cx - 14, px_cy - 14, px_cx + 14, px_cy + 14],
+              fill=(240, 240, 240))
+    d.text((px_cx - 70, px_cy + 150), "Photo 51",
+           fill=MUTED, font=font("sans_bold", 26))
+    d.text((px_cx - 110, px_cy + 185),
+           "Rosalind Franklin, 1952", fill=MUTED,
+           font=font("serif_ital", 22))
 
     # Bottom punchline strip
-    d.rounded_rectangle([110, 820, W - 110, 940], radius=20,
+    d.rounded_rectangle([110, 880, W - 110, 1000], radius=20,
                         fill=ACCENT_LT, outline=MAROON, width=5)
-    centered(d, "Today: the molecular machinery that makes that accuracy possible.",
-             font("serif_bold", 36), 850, MAROON_DARK)
+    centered(d, "Every division copies all 6 feet — with ~1 error per billion bases.",
+             font("serif_bold", 36), 910, MAROON_DARK)
 deck.custom("02_hook", hook)
 
 
 # 03 — overview
 deck.overview("03_overview", "Game plan.", [
     "DNA structure — double helix, antiparallel, base pairing.",
-    "Replication — semiconservative, the enzymes, leading vs. lagging.",
-    "Proofreading, repair, and the telomere problem.",
-], footnote="By the end:  you can list the 7 enzymes of replication in order.")
+    "Replication — semiconservative; leading vs. lagging; the enzyme lineup.",
+    "Proofreading + telomeres + common traps.",
+], footnote="By the end: you can name every enzyme and predict the new strand.")
 
 
-# 04 — DNA structure (custom: double helix diagram + key facts)
+# 04 — DNA structure (double helix, backbone, grooves)
 def dna_structure(img, d):
-    d.text((110, 70), "DNA  —  the double helix.",
-           fill=MAROON, font=font("serif_bold", 64))
-    d.text((110, 160),
-           "Watson & Crick, 1953  ·  using Rosalind Franklin's X-ray data.",
-           fill=ACCENT, font=font("sans_bold", 32))
+    d.text((110, 60), "DNA  =  double helix.",
+           fill=MAROON, font=font("serif_bold", 60))
+    d.text((110, 140),
+           "Two antiparallel strands  ·  sugar–phosphate backbone (deoxyribose)  ·  bases pair inward.",
+           fill=MUTED, font=font("sans", 28))
 
-    # Left side: double helix drawing
-    lx, ly = 140, 220
-    lw, lh = 700, 740
-    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=24,
-                        outline=ACCENT, width=5, fill=CARD)
-
-    # Draw two sine-wave strands twisting around each other
-    cx = lx + lw // 2
-    top_y = ly + 60
-    bot_y = ly + lh - 60
-    n_steps = 60
+    # Left: stylized double helix
+    cx_l = 480
+    helix_top = 220
+    helix_bot = 920
     amp = 130
-    freq = 2.5  # number of full twists down the column
-    left_pts = []
-    right_pts = []
-    for i in range(n_steps + 1):
-        t = i / n_steps
-        y = top_y + t * (bot_y - top_y)
-        phase = t * freq * 2 * math.pi
-        x_l = cx + amp * math.sin(phase)
-        x_r = cx - amp * math.sin(phase)
-        left_pts.append((x_l, y))
-        right_pts.append((x_r, y))
+    turns = 3
+    n = 80
+    pts_left = []
+    pts_right = []
+    for i in range(n + 1):
+        t = i / n
+        y = helix_top + (helix_bot - helix_top) * t
+        phase = t * turns * 2 * math.pi
+        x1 = cx_l + amp * math.sin(phase)
+        x2 = cx_l + amp * math.sin(phase + math.pi)
+        pts_left.append((x1, y))
+        pts_right.append((x2, y))
+    rung_step = 5
+    for i in range(0, n + 1, rung_step):
+        x1, y1 = pts_left[i]
+        x2, y2 = pts_right[i]
+        if abs(x1 - x2) < 40:
+            continue
+        d.line([(x1, y1), (x2, y2)], fill=ACCENT, width=3)
+    for i in range(len(pts_left) - 1):
+        d.line([pts_left[i], pts_left[i + 1]], fill=MAROON_DARK, width=6)
+        d.line([pts_right[i], pts_right[i + 1]], fill=MAROON, width=6)
 
-    # Rungs (base pairs) at intervals
-    rung_step = 4
-    for i in range(0, n_steps + 1, rung_step):
-        # Color: alternate A-T (red-ish) and G-C (accent)
-        col = MAROON if (i // rung_step) % 2 == 0 else ACCENT
-        d.line([left_pts[i], right_pts[i]], fill=col, width=4)
+    # 5' / 3' labels on the helix
+    d.text((cx_l - amp - 60, helix_top - 40), "5′",
+           fill=MAROON_DARK, font=font("sans_bold", 32))
+    d.text((cx_l - amp - 60, helix_bot + 5), "3′",
+           fill=MAROON_DARK, font=font("sans_bold", 32))
+    d.text((cx_l + amp + 30, helix_top - 40), "3′",
+           fill=MAROON, font=font("sans_bold", 32))
+    d.text((cx_l + amp + 30, helix_bot + 5), "5′",
+           fill=MAROON, font=font("sans_bold", 32))
 
-    # Two backbones drawn after rungs so they're on top
-    for i in range(len(left_pts) - 1):
-        d.line([left_pts[i], left_pts[i + 1]], fill=MAROON_DARK, width=6)
-        d.line([right_pts[i], right_pts[i + 1]], fill=MAROON_DARK, width=6)
+    # Major / minor groove labels
+    d.text((cx_l + 200, 380), "← major groove",
+           fill=MUTED, font=font("sans_bold", 26))
+    d.text((cx_l + 200, 580), "← minor groove",
+           fill=MUTED, font=font("sans_bold", 26))
 
-    # Labels: 5' and 3' ends
-    d.text((lx + 30, top_y - 30), "5'", fill=ACCENT,
-           font=font("serif_bold", 38))
-    d.text((lx + lw - 60, top_y - 30), "3'", fill=ACCENT,
-           font=font("serif_bold", 38))
-    d.text((lx + 30, bot_y + 10), "3'", fill=ACCENT,
-           font=font("serif_bold", 38))
-    d.text((lx + lw - 60, bot_y + 10), "5'", fill=ACCENT,
-           font=font("serif_bold", 38))
-
-    # Arrow showing antiparallel directions
-    d.text((lx + 20, ly + lh // 2 - 100), "↓", fill=MAROON_DARK,
-           font=font("serif_bold", 50))
-    d.text((lx + lw - 50, ly + lh // 2 - 100), "↑", fill=MAROON_DARK,
-           font=font("serif_bold", 50))
-
-    # Right side: key facts panel
-    rx = lx + lw + 40
-    rw = W - 110 - rx
-    rh = 740
-    d.rounded_rectangle([rx, ly, rx + rw, ly + rh], radius=24,
-                        outline=MAROON, width=5, fill=ACCENT_LT)
-    d.text((rx + 30, ly + 30), "Key features",
-           fill=MAROON_DARK, font=font("serif_bold", 48))
-
-    facts = [
-        ("Backbone", "Sugar (deoxyribose) + phosphate"),
-        ("Bases", "Stick inward, pair across"),
-        ("Antiparallel", "One strand 5'→3', other 3'→5'"),
-        ("Grooves", "Major & minor — proteins read here"),
-        ("Diameter", "2 nm — uniform along whole length"),
+    # Right side: vocabulary card
+    rx = 970
+    ry = 220
+    rw = 820
+    rh = 700
+    d.rounded_rectangle([rx, ry, rx + rw, ry + rh], radius=22,
+                        outline=ACCENT, width=5, fill=CARD)
+    d.text((rx + 30, ry + 20), "Key features",
+           fill=ACCENT, font=font("sans_bold", 40))
+    items = [
+        ("Double helix",         "Two strands twisted ~10 bp per turn."),
+        ("Backbone",             "Sugar (deoxyribose) + phosphate, on the outside."),
+        ("Bases",                "Stick inward;  pair across the middle."),
+        ("Antiparallel",         "One strand 5′→3′, partner 3′→5′."),
+        ("Major + minor grooves","Proteins read sequence WITHOUT unwinding."),
     ]
-    fy = ly + 120
-    for label, body in facts:
-        d.text((rx + 30, fy), label, fill=ACCENT,
+    yy = ry + 100
+    for head, sub in items:
+        d.ellipse([rx + 30, yy + 14, rx + 50, yy + 34], fill=ACCENT)
+        d.text((rx + 70, yy), head, fill=INK,
                font=font("sans_bold", 32))
-        d.text((rx + 30, fy + 45), body, fill=INK,
+        d.text((rx + 70, yy + 46), sub, fill=MUTED,
                font=font("sans", 26))
-        fy += 115
-
-    # Bottom strip — credit Rosalind Franklin
-    d.rounded_rectangle([110, 990, W - 110, 1060], radius=18,
-                        fill=ACCENT_LT, outline=MAROON, width=4)
-    centered(d, "Franklin's Photo 51 was the X-ray that revealed the helix — Watson & Crick saw it before publishing.",
-             font("serif_ital", 26), 1010, MAROON_DARK)
+        yy += 110
 deck.custom("04_dna_structure", dna_structure)
 
 
-# 05 — Chargaff + base pairing (custom: A-T and G-C base-pair diagrams)
+# 05 — base pairing
 def base_pairing(img, d):
-    d.text((110, 70), "Chargaff  +  base pairing.",
-           fill=MAROON, font=font("serif_bold", 64))
-    d.text((110, 160),
-           "%A = %T   and   %G = %C   ·  in any double-stranded DNA.",
-           fill=ACCENT, font=font("sans_bold", 34))
+    d.text((110, 70), "Base pairing  —  A · T  and  G · C.",
+           fill=MAROON, font=font("serif_bold", 60))
 
-    # Left: A-T pair (2 H-bonds)
-    lx, ly = 140, 240
-    lw, lh = 760, 560
-    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=24,
+    # A=T pair on left
+    lx = 200
+    ly = 220
+    d.rounded_rectangle([lx, ly, lx + 700, ly + 300], radius=20,
                         outline=ACCENT, width=5, fill=CARD)
-    d.text((lx + 30, ly + 20), "A   —   T",
-           fill=MAROON_DARK, font=font("serif_bold", 80))
-    d.text((lx + 30, ly + 130), "Adenine  ·  Thymine",
+    d.text((lx + 30, ly + 20), "A  =  T", fill=ACCENT,
+           font=font("serif_bold", 64))
+    d.text((lx + 30, ly + 110), "Adenine  ·  Thymine",
+           fill=INK, font=font("sans", 28))
+    d.text((lx + 30, ly + 160), "2  hydrogen bonds",
+           fill=MAROON_DARK, font=font("sans_bold", 32))
+    for i in range(2):
+        bx = lx + 450
+        by = ly + 120 + i * 36
+        for j in range(5):
+            d.rectangle([bx + j * 22, by, bx + j * 22 + 14, by + 6],
+                        fill=ACCENT)
+    d.text((lx + 30, ly + 230), "purine  +  pyrimidine",
+           fill=MUTED, font=font("serif_ital", 24))
+
+    # G=C pair on right
+    rx = 1020
+    d.rounded_rectangle([rx, ly, rx + 700, ly + 300], radius=20,
+                        outline=MAROON, width=5, fill=CARD)
+    d.text((rx + 30, ly + 20), "G  ≡  C", fill=MAROON,
+           font=font("serif_bold", 64))
+    d.text((rx + 30, ly + 110), "Guanine  ·  Cytosine",
+           fill=INK, font=font("sans", 28))
+    d.text((rx + 30, ly + 160), "3  hydrogen bonds",
+           fill=MAROON_DARK, font=font("sans_bold", 32))
+    for i in range(3):
+        bx = rx + 450
+        by = ly + 110 + i * 30
+        for j in range(5):
+            d.rectangle([bx + j * 22, by, bx + j * 22 + 14, by + 6],
+                        fill=MAROON)
+    d.text((rx + 30, ly + 230), "purine  +  pyrimidine",
+           fill=MUTED, font=font("serif_ital", 24))
+
+    # Middle strip — purine vs pyrimidine rule
+    d.rounded_rectangle([110, 580, W - 110, 720], radius=20,
+                        outline=ACCENT, width=4, fill=ACCENT_LT)
+    centered(d, "PURINES  (A, G)  =  2 rings    ·    PYRIMIDINES  (T, C)  =  1 ring",
+             font("sans_bold", 36), 605, MAROON_DARK)
+    centered(d, "Purine always pairs with pyrimidine  →  uniform helix width.",
+             font("sans", 28), 660, INK)
+
+    # Bottom — Chargaff's rule
+    d.rounded_rectangle([110, 760, W - 110, 980], radius=22,
+                        outline=MAROON, width=5, fill=CARD)
+    d.text((150, 780), "Chargaff's rules",
+           fill=MAROON, font=font("serif_bold", 44))
+    centered(d, "%A  =  %T          %G  =  %C",
+             font("mono", 60), 850, ACCENT)
+    centered(d, "Direct clue, BEFORE the structure was known, that bases were pairing up.",
+             font("sans", 28), 935, MUTED)
+deck.custom("05_base_pairing", base_pairing)
+
+
+# 06 — antiparallel 5'-3'
+def antiparallel(img, d):
+    d.text((110, 60), "Antiparallel  —  the most important fact in this module.",
+           fill=MAROON, font=font("serif_bold", 48))
+
+    top_y = 280
+    bot_y = 480
+    left_x = 220
+    right_x = 1700
+
+    d.line([(left_x, top_y), (right_x, top_y)], fill=MAROON_DARK, width=8)
+    d.line([(left_x, bot_y), (right_x, bot_y)], fill=MAROON, width=8)
+
+    d.text((left_x - 90, top_y - 30), "5′",
+           fill=MAROON_DARK, font=font("sans_bold", 48))
+    d.text((right_x + 20, top_y - 30), "3′",
+           fill=MAROON_DARK, font=font("sans_bold", 48))
+    d.text((left_x - 90, bot_y - 30), "3′",
+           fill=MAROON, font=font("sans_bold", 48))
+    d.text((right_x + 20, bot_y - 30), "5′",
+           fill=MAROON, font=font("sans_bold", 48))
+
+    # Top strand arrow points right (5' → 3')
+    arrow_y = top_y - 65
+    d.line([(left_x + 100, arrow_y), (right_x - 100, arrow_y)],
+           fill=ACCENT, width=5)
+    d.polygon([(right_x - 100, arrow_y),
+               (right_x - 130, arrow_y - 15),
+               (right_x - 130, arrow_y + 15)], fill=ACCENT)
+    d.text((left_x + 480, arrow_y - 50),
+           "this strand reads 5′ → 3′",
            fill=ACCENT, font=font("sans_bold", 32))
 
-    # Two base hexagons + 2 H-bonds between them
-    bx_left = lx + 150
-    bx_right = lx + lw - 290
+    # Bottom strand arrow points left (5' → 3' since 5' is on right)
+    arrow_y2 = bot_y + 35
+    d.line([(left_x + 100, arrow_y2), (right_x - 100, arrow_y2)],
+           fill=ACCENT, width=5)
+    d.polygon([(left_x + 100, arrow_y2),
+               (left_x + 130, arrow_y2 - 15),
+               (left_x + 130, arrow_y2 + 15)], fill=ACCENT)
+    d.text((left_x + 480, arrow_y2 + 30),
+           "its partner reads 5′ → 3′ the OTHER way",
+           fill=ACCENT, font=font("sans_bold", 32))
+
+    # Bases between the strands
+    base_pairs = [("A", "T"), ("G", "C"), ("T", "A"), ("C", "G"),
+                  ("A", "T"), ("G", "C"), ("T", "A"), ("A", "T"),
+                  ("C", "G"), ("G", "C")]
+    bf = font("mono", 40)
+    n_bp = len(base_pairs)
+    span = right_x - left_x - 200
+    for i, (b1, b2) in enumerate(base_pairs):
+        bx = left_x + 100 + int(i * span / (n_bp - 1))
+        d.line([(bx, top_y + 10), (bx, bot_y - 10)], fill=ACCENT, width=3)
+        d.rectangle([bx - 22, top_y + 14, bx + 22, top_y + 64],
+                    fill=ACCENT_LT, outline=MAROON_DARK, width=2)
+        tw = d.textlength(b1, font=bf)
+        d.text((bx - tw / 2, top_y + 16), b1, fill=MAROON_DARK, font=bf)
+        d.rectangle([bx - 22, bot_y - 64, bx + 22, bot_y - 14],
+                    fill=ACCENT_LT, outline=MAROON_DARK, width=2)
+        tw2 = d.textlength(b2, font=bf)
+        d.text((bx - tw2 / 2, bot_y - 60), b2, fill=MAROON_DARK, font=bf)
+
+    # Takeaway
+    d.rounded_rectangle([110, 620, W - 110, 980], radius=22,
+                        outline=MAROON, width=5, fill=CARD)
+    d.text((150, 645), "Why this matters",
+           fill=MAROON, font=font("serif_bold", 44))
+    bullets = [
+        "Phosphate hangs off the 5′ carbon  ·  next nucleotide attaches at 3′.",
+        "DNA polymerase ONLY adds at the 3′ end  →  builds 5′ → 3′, always.",
+        "Because the strands point opposite ways, polymerase handles each differently.",
+        "Every weird thing about replication (leading/lagging, Okazaki) comes from this.",
+    ]
+    yy = 720
+    for bt in bullets:
+        d.text((180, yy), "·", fill=ACCENT, font=font("serif_bold", 40))
+        d.text((220, yy + 6), bt, fill=INK, font=font("sans", 28))
+        yy += 60
+deck.custom("06_antiparallel_5_3", antiparallel)
+
+
+# 07 — Meselson-Stahl semiconservative
+def meselson_stahl(img, d):
+    d.text((110, 60), "Meselson  &  Stahl  (1958)  —  replication is semiconservative.",
+           fill=MAROON, font=font("serif_bold", 42))
+
+    models = [
+        ("CONSERVATIVE",     "old + old   AND   new + new", False),
+        ("SEMICONSERVATIVE", "old + new   in every helix", True),
+        ("DISPERSIVE",       "old & new mixed in each strand", False),
+    ]
+    panel_w = 540
+    panel_h = 220
+    panel_y = 180
+    gap = 30
+    start_x = (W - (panel_w * 3 + gap * 2)) // 2
+
+    for i, (name, sub, is_winner) in enumerate(models):
+        x = start_x + i * (panel_w + gap)
+        color = ACCENT if is_winner else MUTED
+        line_w = 6 if is_winner else 3
+        d.rounded_rectangle([x, panel_y, x + panel_w, panel_y + panel_h],
+                            radius=20, outline=color, width=line_w,
+                            fill=CARD if is_winner else deck.bg)
+        d.text((x + 24, panel_y + 16), name, fill=color,
+               font=font("sans_bold", 32))
+        d.text((x + 24, panel_y + 70), sub, fill=INK,
+               font=font("sans", 26))
+        vis_y = panel_y + 130
+        if i == 0:
+            colors = [(MAROON_DARK, MAROON_DARK), (ACCENT, ACCENT)]
+        elif i == 1:
+            colors = [(MAROON_DARK, ACCENT), (MAROON_DARK, ACCENT)]
+        else:
+            colors = [(MAROON_DARK, ACCENT), (ACCENT, MAROON_DARK)]
+        for d_idx, (c1, c2) in enumerate(colors):
+            dx = x + 60 + d_idx * 220
+            d.rectangle([dx, vis_y, dx + 130, vis_y + 12], fill=c1)
+            d.rectangle([dx, vis_y + 20, dx + 130, vis_y + 32], fill=c2)
+        if is_winner:
+            d.text((x + panel_w - 80, panel_y + 16), "✓",
+                   fill=ACCENT, font=font("serif_bold", 50))
+
+    # Experiment summary
+    d.rounded_rectangle([110, 460, W - 110, 980], radius=22,
+                        outline=MAROON, width=5, fill=CARD)
+    d.text((150, 480), "The experiment",
+           fill=MAROON, font=font("serif_bold", 44))
+    steps = [
+        "1.  Grow E. coli in heavy nitrogen (¹⁵N) for many generations  →  all DNA is heavy.",
+        "2.  Switch culture to light nitrogen (¹⁴N).  Let it replicate once.",
+        "3.  Spin DNA on a density gradient.  ALL of it sits at ONE intermediate band.",
+        "4.  Replicate once more in ¹⁴N.  Now TWO bands — half intermediate, half light.",
+    ]
+    yy = 560
+    for s in steps:
+        d.text((180, yy), s, fill=INK, font=font("sans", 28))
+        yy += 60
+
+    d.rounded_rectangle([150, 830, W - 150, 950], radius=18,
+                        fill=ACCENT_LT, outline=ACCENT, width=4)
+    centered(d, "Result rules out conservative + dispersive  →  SEMICONSERVATIVE wins.",
+             font("serif_bold", 34), 870, MAROON_DARK)
+deck.custom("07_meselson_stahl", meselson_stahl)
+
+
+# 08 — replication fork: helicase, SSBPs, topoisomerase
+def replication_fork(img, d):
+    d.text((110, 70), "Opening the fork  —  helicase  ·  SSBPs  ·  topoisomerase.",
+           fill=MAROON, font=font("serif_bold", 48))
+
+    fork_x = 700
+    fork_y = 520
+    # Pre-fork double helix (left)
+    d.line([(200, fork_y - 30), (fork_x - 50, fork_y - 30)],
+           fill=MAROON_DARK, width=8)
+    d.line([(200, fork_y + 30), (fork_x - 50, fork_y + 30)],
+           fill=MAROON, width=8)
+    for x in range(220, fork_x - 60, 40):
+        d.line([(x, fork_y - 25), (x, fork_y + 25)], fill=ACCENT, width=3)
+    # Upper template
+    d.line([(fork_x - 50, fork_y - 30), (1500, fork_y - 220)],
+           fill=MAROON_DARK, width=8)
+    # Lower template
+    d.line([(fork_x - 50, fork_y + 30), (1500, fork_y + 220)],
+           fill=MAROON, width=8)
+
+    # Helicase
+    d.ellipse([fork_x - 100, fork_y - 60, fork_x + 20, fork_y + 60],
+              fill=RED, outline=MAROON_DARK, width=4)
+    hf = font("sans_bold", 28)
+    tw = d.textlength("HEL", font=hf)
+    d.text((fork_x - 40 - tw / 2, fork_y - 14), "HEL", fill=CREAM, font=hf)
+    d.text((fork_x - 130, fork_y + 80), "Helicase",
+           fill=RED, font=font("sans_bold", 30))
+    d.text((fork_x - 150, fork_y + 115),
+           "breaks H-bonds  ·  unwinds", fill=MUTED, font=font("sans", 22))
+
+    # SSBPs — beads on the open strands
+    for bx in [900, 1050, 1200, 1350]:
+        ratio = (bx - (fork_x - 50)) / (1500 - (fork_x - 50))
+        upper_y = fork_y - 30 - ratio * 190
+        d.ellipse([bx - 22, upper_y - 22, bx + 22, upper_y + 22],
+                  fill=ACCENT, outline=MAROON_DARK, width=3)
+        lower_y = fork_y + 30 + ratio * 190
+        d.ellipse([bx - 22, lower_y - 22, bx + 22, lower_y + 22],
+                  fill=ACCENT, outline=MAROON_DARK, width=3)
+    d.text((1100, 250), "SSBPs", fill=ACCENT,
+           font=font("sans_bold", 30))
+    d.text((1030, 285),
+           "keep separated strands from snapping back",
+           fill=MUTED, font=font("sans", 22))
+
+    # Topoisomerase ahead of the fork
+    d.ellipse([280, fork_y - 50, 380, fork_y + 50],
+              fill=MAROON, outline=MAROON_DARK, width=4)
+    tf = font("sans_bold", 26)
+    twt = d.textlength("TOPO", font=tf)
+    d.text((330 - twt / 2, fork_y - 14), "TOPO",
+           fill=CREAM, font=tf)
+    d.text((230, fork_y + 80), "Topoisomerase",
+           fill=MAROON, font=font("sans_bold", 30))
+    d.text((220, fork_y + 115),
+           "relieves supercoiling AHEAD of fork",
+           fill=MUTED, font=font("sans", 22))
+
+    # Supercoiling loops ahead
+    for cx in (170, 130):
+        d.arc([cx - 25, fork_y - 25, cx + 25, fork_y + 25],
+              start=0, end=360, fill=MUTED, width=3)
+
+    # Side legend
+    legend_x = 1560
+    legend_y = 230
+    d.rounded_rectangle([legend_x, legend_y, legend_x + 240, legend_y + 360],
+                        radius=18, outline=ACCENT, width=4, fill=CARD)
+    d.text((legend_x + 20, legend_y + 16), "Setup crew",
+           fill=ACCENT, font=font("sans_bold", 28))
+    items = [
+        (RED,    "Helicase"),
+        (ACCENT, "SSBPs"),
+        (MAROON, "Topoiso."),
+    ]
+    yy = legend_y + 80
+    for col, lbl in items:
+        d.ellipse([legend_x + 20, yy, legend_x + 50, yy + 30], fill=col)
+        d.text((legend_x + 60, yy), lbl, fill=INK,
+               font=font("sans_bold", 24))
+        yy += 60
+
+    # Bottom takeaway
+    d.rounded_rectangle([110, 820, W - 110, 980], radius=20,
+                        outline=MAROON, width=5, fill=ACCENT_LT)
+    centered(d, "Order:  topoisomerase (ahead)  →  helicase (open)  →  SSBPs (hold).",
+             font("serif_bold", 34), 850, MAROON_DARK)
+    centered(d, "Now we have two exposed single-stranded templates ready to be copied.",
+             font("sans", 28), 910, INK)
+deck.custom("08_replication_fork", replication_fork)
+
+
+# 09 — primase + DNA Pol III
+def primase_polymerase(img, d):
+    d.text((110, 70), "Starting synthesis  —  primase  →  DNA Pol III.",
+           fill=MAROON, font=font("serif_bold", 50))
+
+    # Left card: primase
+    lx, ly, lw, lh = 110, 200, 870, 740
+    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=22,
+                        outline=ACCENT, width=5, fill=CARD)
+    d.text((lx + 30, ly + 20), "PRIMASE", fill=ACCENT,
+           font=font("sans_bold", 44))
+    d.text((lx + 30, ly + 80),
+           "Lays down a short RNA primer  (~10 nt).",
+           fill=INK, font=font("sans", 28))
+    d.text((lx + 30, ly + 130),
+           "Why?  DNA polymerase can NOT start from scratch.",
+           fill=MAROON_DARK, font=font("sans_bold", 28))
+    d.text((lx + 30, ly + 180),
+           "It needs an existing 3′ OH to add onto.",
+           fill=MAROON_DARK, font=font("sans_bold", 28))
+
+    # Visual: template strand with RNA primer on top
+    bx = lx + 50
     by = ly + 320
-    bw = 140
-    # Left base (A)
-    d.rounded_rectangle([bx_left, by - 60, bx_left + bw, by + 60], radius=14,
-                        outline=MAROON_DARK, width=4, fill=ACCENT_LT)
-    d.text((bx_left + 50, by - 35), "A", fill=MAROON_DARK,
-           font=font("serif_bold", 72))
-    # Right base (T)
-    d.rounded_rectangle([bx_right, by - 60, bx_right + bw, by + 60], radius=14,
-                        outline=MAROON_DARK, width=4, fill=ACCENT_LT)
-    d.text((bx_right + 50, by - 35), "T", fill=MAROON_DARK,
-           font=font("serif_bold", 72))
-    # Two H-bonds (dashed lines)
-    for off in [-20, 20]:
-        # Dashed line
-        x0 = bx_left + bw
-        x1 = bx_right
-        for seg in range(0, int(x1 - x0), 16):
-            d.line([(x0 + seg, by + off), (x0 + seg + 8, by + off)],
-                   fill=MAROON, width=4)
+    d.line([(bx, by + 60), (bx + 770, by + 60)],
+           fill=MAROON_DARK, width=6)
+    d.text((bx - 50, by + 40), "3′",
+           fill=MAROON_DARK, font=font("sans_bold", 28))
+    d.text((bx + 780, by + 40), "5′",
+           fill=MAROON_DARK, font=font("sans_bold", 28))
+    template_bases = ["T", "A", "C", "G", "G", "A", "T", "C", "T", "G"]
+    bf = font("mono", 30)
+    for i, b in enumerate(template_bases):
+        tx = bx + 40 + i * 70
+        d.text((tx, by + 25), b, fill=MAROON_DARK, font=bf)
+    # RNA primer
+    primer_bases = ["A", "U", "G", "C"]
+    for i, b in enumerate(primer_bases):
+        tx = bx + 40 + i * 70
+        d.rectangle([tx - 4, by - 30, tx + 30, by + 10],
+                    fill=RED, outline=MAROON_DARK, width=2)
+        tw = d.textlength(b, font=bf)
+        d.text((tx + 13 - tw / 2, by - 25), b, fill=CREAM, font=bf)
+    d.text((bx + 40 + 4 * 70 + 10, by - 60),
+           "3′ OH", fill=ACCENT, font=font("sans_bold", 30))
+    d.line([(bx + 40 + 4 * 70 + 30, by - 30),
+            (bx + 40 + 4 * 70 + 30, by - 50)],
+           fill=ACCENT, width=4)
+    d.text((bx + 100, by - 90),
+           "← RNA primer (red)",
+           fill=RED, font=font("sans_bold", 26))
 
-    d.text((lx + 30, ly + 450), "2 hydrogen bonds",
-           fill=MAROON, font=font("serif_bold", 38))
+    d.text((lx + 30, ly + 580),
+           "Primer = launchpad for DNA polymerase.",
+           fill=MAROON_DARK, font=font("sans_bold", 28))
+    d.text((lx + 30, ly + 625),
+           "RNA primers are temporary — Pol I removes them later.",
+           fill=MUTED, font=font("serif_ital", 26))
 
-    # Right: G-C pair (3 H-bonds)
+    # Right card: Pol III
     rx = lx + lw + 30
     rw = W - 110 - rx
-    d.rounded_rectangle([rx, ly, rx + rw, ly + lh], radius=24,
+    rh = lh
+    d.rounded_rectangle([rx, ly, rx + rw, ly + rh], radius=22,
                         outline=MAROON, width=5, fill=CARD)
-    d.text((rx + 30, ly + 20), "G   —   C",
-           fill=MAROON_DARK, font=font("serif_bold", 80))
-    d.text((rx + 30, ly + 130), "Guanine  ·  Cytosine",
-           fill=ACCENT, font=font("sans_bold", 32))
+    d.text((rx + 30, ly + 20), "DNA  Pol  III", fill=MAROON,
+           font=font("sans_bold", 44))
+    d.text((rx + 30, ly + 80),
+           "The workhorse of DNA synthesis (bacteria).",
+           fill=INK, font=font("sans", 28))
+    d.text((rx + 30, ly + 130),
+           "Adds nucleotides ONLY 5′ → 3′.  Always.",
+           fill=MAROON_DARK, font=font("sans_bold", 28))
+    d.text((rx + 30, ly + 180),
+           "Complementary to the template.",
+           fill=INK, font=font("sans", 28))
 
-    bx_left2 = rx + 150
-    bx_right2 = rx + rw - 290
-    by2 = ly + 320
-    d.rounded_rectangle([bx_left2, by2 - 60, bx_left2 + bw, by2 + 60], radius=14,
-                        outline=MAROON_DARK, width=4, fill=ACCENT_LT)
-    d.text((bx_left2 + 50, by2 - 35), "G", fill=MAROON_DARK,
-           font=font("serif_bold", 72))
-    d.rounded_rectangle([bx_right2, by2 - 60, bx_right2 + bw, by2 + 60], radius=14,
-                        outline=MAROON_DARK, width=4, fill=ACCENT_LT)
-    d.text((bx_right2 + 50, by2 - 35), "C", fill=MAROON_DARK,
-           font=font("serif_bold", 72))
-    # Three H-bonds
-    for off in [-30, 0, 30]:
-        x0 = bx_left2 + bw
-        x1 = bx_right2
-        for seg in range(0, int(x1 - x0), 16):
-            d.line([(x0 + seg, by2 + off), (x0 + seg + 8, by2 + off)],
-                   fill=MAROON, width=4)
+    d.rounded_rectangle([rx + 30, ly + 250, rx + rw - 30, ly + 430],
+                        radius=18, outline=ACCENT, width=5, fill=ACCENT_LT)
+    rule_text = "5′ → 3′"
+    f5 = font("mono", 100)
+    tw5 = d.textlength(rule_text, font=f5)
+    d.text((rx + rw // 2 - tw5 / 2, ly + 285), rule_text,
+           fill=MAROON_DARK, font=f5)
+    centered(d, "always.  no exceptions.",
+             font("serif_ital", 30), ly + 395, MAROON_DARK)
 
-    d.text((rx + 30, ly + 450), "3 hydrogen bonds",
-           fill=MAROON, font=font("serif_bold", 38))
-
-    # Bottom strip
-    d.rounded_rectangle([110, 830, W - 110, 950], radius=20,
-                        fill=ACCENT_LT, outline=MAROON, width=5)
-    centered(d, "G-C rich regions are harder to pull apart — relevant when helicase tries to unwind.",
-             font("sans_bold", 30), 855, MAROON_DARK)
-    centered(d, "Purines (A, G) always pair with pyrimidines (T, C) → uniform 2 nm helix width.",
-             font("serif_ital", 26), 905, MUTED)
-deck.custom("05_chargaff_base_pairing", base_pairing)
-
-
-# 06 — semiconservative (custom: Meselson-Stahl 3 generations)
-def semiconservative(img, d):
-    d.text((110, 70), "Semiconservative  —  Meselson & Stahl, 1958.",
-           fill=MAROON, font=font("serif_bold", 56))
-    d.text((110, 150),
-           "Each daughter helix has ONE old strand + ONE new strand.",
-           fill=ACCENT, font=font("sans_bold", 32))
-
-    # Three generation columns
-    col_w = 540
-    col_h = 720
-    gap = 30
-    start_x = (W - (col_w * 3 + gap * 2)) // 2
-    y0 = 220
-
-    generations = [
-        ("PARENT",
-         [("heavy", "heavy")],
-         "Grown in heavy nitrogen (¹⁵N)"),
-        ("1 GENERATION",
-         [("heavy", "light"), ("heavy", "light")],
-         "All hybrid — proves NOT conservative"),
-        ("2 GENERATIONS",
-         [("heavy", "light"), ("light", "light"),
-          ("heavy", "light"), ("light", "light")],
-         "Half hybrid, half light — proves NOT dispersive"),
-    ]
-
-    for i, (label, helices, caption) in enumerate(generations):
-        x = start_x + i * (col_w + gap)
-        d.rounded_rectangle([x, y0, x + col_w, y0 + col_h], radius=20,
-                            outline=ACCENT, width=5, fill=CARD)
-        # Header
-        d.rectangle([x, y0, x + col_w, y0 + 70], fill=ACCENT)
-        cf = font("sans_bold", 32)
-        tw = d.textlength(label, font=cf)
-        d.text((x + col_w // 2 - tw / 2, y0 + 18), label,
-               fill=CREAM, font=cf)
-
-        # Draw helices in the column
-        n_helices = len(helices)
-        h_y_step = 460 // max(n_helices, 1)
-        for j, (s1, s2) in enumerate(helices):
-            hy = y0 + 130 + j * h_y_step
-            # Two parallel strands per helix
-            for k, strand in enumerate([s1, s2]):
-                stroke_color = MAROON_DARK if strand == "heavy" else ACCENT
-                stroke_w = 10 if strand == "heavy" else 6
-                strand_y = hy + k * 20
-                d.line([(x + 40, strand_y), (x + col_w - 40, strand_y)],
-                       fill=stroke_color, width=stroke_w)
-            # Rungs (base pairs)
-            for rx_off in range(50, col_w - 50, 26):
-                d.line([(x + rx_off, hy), (x + rx_off, hy + 20)],
-                       fill=MUTED, width=2)
-
-        # Caption
-        cap_lines = wrap(d, caption, font("sans", 24), col_w - 60)
-        cy = y0 + col_h - 100
-        for line in cap_lines:
-            tw_l = d.textlength(line, font=font("sans", 24))
-            d.text((x + col_w // 2 - tw_l / 2, cy), line,
-                   fill=MUTED, font=font("sans", 24))
-            cy += 32
-
-    # Legend
-    leg_y = 980
-    d.line([(140, leg_y + 10), (200, leg_y + 10)], fill=MAROON_DARK, width=10)
-    d.text((210, leg_y - 5), "= old (parental) strand", fill=INK,
-           font=font("sans", 26))
-    d.line([(700, leg_y + 10), (760, leg_y + 10)], fill=ACCENT, width=6)
-    d.text((770, leg_y - 5), "= new (daughter) strand", fill=INK,
-           font=font("sans", 26))
-deck.custom("06_semiconservative", semiconservative)
-
-
-# 07 — replication enzymes (custom: replication fork with helicase, SSBPs, topo, primase)
-def replication_enzymes(img, d):
-    d.text((110, 70), "The fork  —  helicase, SSBPs, topoisomerase, primase.",
-           fill=MAROON, font=font("serif_bold", 48))
-    d.text((110, 140),
-           "Four enzymes open up the DNA  before  polymerase can start.",
-           fill=ACCENT, font=font("sans_bold", 30))
-
-    # Draw the replication fork
-    fork_x = 700           # the vertex of the fork
-    fork_y = 540           # vertical center
-    arm_len = 480          # how far the unwound arms extend
-    closed_len = 380       # how far the closed double helix extends right
-
-    # Closed double helix on the right (still wound)
-    for k in range(2):
-        sy = fork_y - 25 + k * 50
-        d.line([(fork_x, sy), (fork_x + closed_len, sy)],
-               fill=MAROON_DARK, width=8)
-    # Rungs on closed section
-    for rx_off in range(20, closed_len, 22):
-        d.line([(fork_x + rx_off, fork_y - 25),
-                (fork_x + rx_off, fork_y + 25)],
-               fill=MUTED, width=2)
-
-    # Two open arms going left from the fork
-    # Top arm
-    top_end_x = fork_x - arm_len
-    top_end_y = fork_y - 180
-    d.line([(fork_x, fork_y - 25), (top_end_x, top_end_y)],
-           fill=MAROON_DARK, width=8)
-    # Bottom arm
-    bot_end_x = fork_x - arm_len
-    bot_end_y = fork_y + 180
-    d.line([(fork_x, fork_y + 25), (bot_end_x, bot_end_y)],
-           fill=MAROON_DARK, width=8)
-
-    # SSBPs (small circles) on the open arms
-    for arm_y0, arm_y1 in [(fork_y - 25, top_end_y), (fork_y + 25, bot_end_y)]:
-        for frac in [0.25, 0.5, 0.75]:
-            sx = fork_x + frac * (top_end_x - fork_x)
-            sy = arm_y0 + frac * (arm_y1 - arm_y0)
-            d.ellipse([sx - 18, sy - 18, sx + 18, sy + 18],
-                      fill=ACCENT_LT, outline=MAROON_DARK, width=3)
-            d.text((sx - 14, sy - 12), "SS", fill=MAROON_DARK,
-                   font=font("sans_bold", 18))
-
-    # Helicase at the fork vertex
-    d.ellipse([fork_x - 55, fork_y - 55, fork_x + 55, fork_y + 55],
-              fill=MAROON, outline=MAROON_DARK, width=4)
-    d.text((fork_x - 50, fork_y - 22), "HEL", fill=CREAM,
-           font=font("sans_bold", 26))
-
-    # Topoisomerase ahead of the fork (right side, on the closed DNA)
-    topo_x = fork_x + closed_len - 60
-    d.ellipse([topo_x - 50, fork_y - 50, topo_x + 50, fork_y + 50],
-              fill=ACCENT, outline=MAROON_DARK, width=4)
-    d.text((topo_x - 38, fork_y - 18), "TOPO", fill=CREAM,
-           font=font("sans_bold", 22))
-
-    # Primase laying down a primer on the top arm
-    prim_frac = 0.5
-    prim_x = fork_x + prim_frac * (top_end_x - fork_x)
-    prim_y = fork_y - 25 + prim_frac * (top_end_y - (fork_y - 25))
-    # Primer as a short red segment
-    d.line([(prim_x - 30, prim_y + 12), (prim_x + 30, prim_y + 12)],
-           fill=RED, width=6)
-    d.text((prim_x - 30, prim_y + 24), "RNA primer",
-           fill=RED, font=font("sans_bold", 22))
-    # Primase blob
-    d.ellipse([prim_x - 38, prim_y - 38, prim_x + 38, prim_y + 38],
-              fill=ACCENT_LT, outline=MAROON_DARK, width=3)
-    d.text((prim_x - 38, prim_y - 16), "PRIM", fill=MAROON_DARK,
-           font=font("sans_bold", 22))
-
-    # Labels with leader lines
-    # Helicase
-    d.line([(fork_x, fork_y + 60), (fork_x, fork_y + 130)],
-           fill=MAROON_DARK, width=2)
-    d.text((fork_x - 90, fork_y + 135), "HELICASE",
-           fill=MAROON, font=font("sans_bold", 28))
-    d.text((fork_x - 220, fork_y + 175), "unwinds the helix",
-           fill=MUTED, font=font("sans", 24))
-
-    # SSBP label
-    d.text((180, 280), "SSBPs", fill=ACCENT,
-           font=font("sans_bold", 32))
-    d.text((180, 320), "Single-strand binding proteins",
-           fill=INK, font=font("sans", 24))
-    d.text((180, 355), "keep strands from re-annealing.",
-           fill=MUTED, font=font("sans", 22))
-
-    # Topo label
-    d.text((1380, 280), "TOPOISOMERASE",
-           fill=ACCENT, font=font("sans_bold", 28))
-    d.text((1380, 320), "Relieves supercoiling",
-           fill=INK, font=font("sans", 24))
-    d.text((1380, 355), "ahead of the fork.",
-           fill=MUTED, font=font("sans", 22))
-
-    # Primase label
-    d.text((180, 800), "PRIMASE",
-           fill=ACCENT, font=font("sans_bold", 32))
-    d.text((180, 840), "Lays RNA primer — provides a 3' OH",
-           fill=INK, font=font("sans", 24))
-    d.text((180, 870), "for DNA polymerase to build from.",
-           fill=MUTED, font=font("sans", 22))
-
-    # Bottom strip — the order
-    d.rounded_rectangle([110, 940, W - 110, 1020], radius=20,
-                        fill=ACCENT_LT, outline=MAROON, width=5)
-    centered(d, "ORDER:  helicase  →  SSBPs  →  topoisomerase  →  primase  →  (then polymerase)",
-             font("sans_bold", 30), 962, MAROON_DARK)
-deck.custom("07_replication_enzymes", replication_enzymes)
-
-
-# 08 — polymerase directionality (leading vs lagging + Okazaki)
-def polymerase_directionality(img, d):
-    d.text((110, 70), "Polymerase  —  always 5' → 3'.",
-           fill=MAROON, font=font("serif_bold", 60))
-    d.text((110, 150),
-           "Same rule creates two very different strands.",
-           fill=ACCENT, font=font("sans_bold", 32))
-
-    # Replication fork in the middle
-    fork_x = W // 2
-    fork_y = 580
-    arm_len = 600
-
-    # Template strands diverging left (open arms of the fork)
-    # Top template: runs 3' (at fork) → 5' (at left end)
-    # Bottom template: runs 5' (at fork) → 3' (at left end)
-    top_y = fork_y - 100
-    bot_y = fork_y + 100
-    # Top template
-    d.line([(fork_x, top_y), (fork_x - arm_len, top_y)],
-           fill=MAROON_DARK, width=8)
-    d.text((fork_x + 10, top_y - 38), "3'",
-           fill=MAROON, font=font("serif_bold", 36))
-    d.text((fork_x - arm_len - 50, top_y - 38), "5'",
-           fill=MAROON, font=font("serif_bold", 36))
-    d.text((fork_x - arm_len + 80, top_y - 50), "template",
+    d.text((rx + 30, ly + 480),
+           "Eukaryotes:  Pol δ  +  Pol ε  do the same job.",
+           fill=INK, font=font("sans", 28))
+    d.text((rx + 30, ly + 530),
+           "AP exam treats E. coli as the canonical model.",
            fill=MUTED, font=font("serif_ital", 24))
 
-    # Bottom template
-    d.line([(fork_x, bot_y), (fork_x - arm_len, bot_y)],
-           fill=MAROON_DARK, width=8)
-    d.text((fork_x + 10, bot_y + 12), "5'",
-           fill=MAROON, font=font("serif_bold", 36))
-    d.text((fork_x - arm_len - 50, bot_y + 12), "3'",
-           fill=MAROON, font=font("serif_bold", 36))
-    d.text((fork_x - arm_len + 80, bot_y + 30), "template",
-           fill=MUTED, font=font("serif_ital", 24))
-
-    # Closed double helix to the right of the fork
-    closed_x = fork_x + 280
-    for k in range(2):
-        sy = fork_y - 25 + k * 50
-        d.line([(fork_x, sy), (closed_x, sy)],
-               fill=MAROON_DARK, width=8)
-    for rx_off in range(20, 280, 22):
-        d.line([(fork_x + rx_off, fork_y - 25),
-                (fork_x + rx_off, fork_y + 25)],
-               fill=MUTED, width=2)
-    # Helicase at fork
-    d.ellipse([fork_x - 40, fork_y - 40, fork_x + 40, fork_y + 40],
-              fill=MAROON, outline=MAROON_DARK, width=4)
-    d.text((fork_x - 30, fork_y - 16), "HEL", fill=CREAM,
-           font=font("sans_bold", 22))
-    # Fork direction arrow
-    d.text((closed_x + 20, fork_y - 20), "→",
-           fill=MAROON_DARK, font=font("serif_bold", 50))
-    d.text((closed_x + 70, fork_y + 35), "fork moves",
-           fill=MUTED, font=font("sans", 22))
-
-    # LEADING strand: continuous, on the top template
-    # New strand drawn just below the top template, going 5'→3' toward the fork
-    lead_y = top_y + 36
-    d.line([(fork_x - arm_len + 60, lead_y), (fork_x - 30, lead_y)],
-           fill=ACCENT, width=8)
-    # Arrow at the fork end showing direction of synthesis (toward fork = right)
-    d.polygon([(fork_x - 30, lead_y - 10),
-               (fork_x - 8, lead_y),
-               (fork_x - 30, lead_y + 10)], fill=ACCENT)
-    d.text((fork_x - arm_len + 60, lead_y - 36), "5'",
-           fill=ACCENT, font=font("serif_bold", 30))
-    d.text((fork_x - 30, lead_y + 18), "3'",
-           fill=ACCENT, font=font("serif_bold", 30))
-    d.text((fork_x - arm_len + 60, lead_y + 30), "LEADING — continuous",
-           fill=ACCENT, font=font("sans_bold", 26))
-
-    # LAGGING strand: 3 Okazaki fragments on the bottom template
-    lag_y = bot_y - 36
-    frag_w = 150
-    starts = [fork_x - 90, fork_x - 270, fork_x - 450]
-    for i, sx in enumerate(starts):
-        # Fragment built 5'→3', moving away from the fork (so leftward)
-        d.line([(sx, lag_y), (sx - frag_w, lag_y)], fill=ACCENT, width=8)
-        # Arrowhead at left end (3' end of fragment)
-        d.polygon([(sx - frag_w, lag_y - 10),
-                   (sx - frag_w - 22, lag_y),
-                   (sx - frag_w, lag_y + 10)], fill=ACCENT)
-        # 5' label at fragment start (closer to fork)
-        d.text((sx + 4, lag_y - 36), "5'",
-               fill=ACCENT, font=font("serif_bold", 26))
-        # 3' label at fragment end
-        d.text((sx - frag_w - 30, lag_y - 36), "3'",
-               fill=ACCENT, font=font("serif_bold", 26))
-        # RNA primer at the 5' end of each fragment
-        d.line([(sx + 4, lag_y - 12), (sx - 32, lag_y - 12)],
-               fill=RED, width=6)
-        d.text((sx - 4, lag_y - 80), f"#{3 - i}",
-               fill=MAROON, font=font("sans_bold", 22))
-    d.text((fork_x - arm_len + 60, lag_y + 30),
-           "LAGGING — short Okazaki fragments",
-           fill=ACCENT, font=font("sans_bold", 26))
-    # Red primer legend dot
-    d.line([(fork_x - arm_len + 60, lag_y + 70),
-            (fork_x - arm_len + 130, lag_y + 70)],
-           fill=RED, width=6)
-    d.text((fork_x - arm_len + 145, lag_y + 56), "= RNA primer",
-           fill=RED, font=font("sans", 22))
-
-    # Bottom strip
-    d.rounded_rectangle([110, 940, W - 110, 1020], radius=20,
-                        fill=ACCENT_LT, outline=MAROON, width=5)
-    centered(d, "BOTH strands are built 5' → 3'.  The lagging strand just does it in pieces, away from the fork.",
-             font("sans_bold", 28), 962, MAROON_DARK)
-deck.custom("08_polymerase_directionality", polymerase_directionality)
+    d.rounded_rectangle([rx + 30, ly + 600, rx + rw - 30, ly + 700],
+                        radius=18, outline=MAROON, width=4, fill=CARD)
+    centered(d, "Needs a free 3′ OH.  No primer  →  no synthesis.",
+             font("sans_bold", 26), ly + 635, MAROON_DARK)
+deck.custom("09_primase_polymerase", primase_polymerase)
 
 
-# 09 — finishing steps (Pol I + ligase)
-def finishing_steps(img, d):
-    d.text((110, 70), "Finishing  —  Pol I  +  ligase.",
-           fill=MAROON, font=font("serif_bold", 64))
-    d.text((110, 150),
-           "Two cleanup enzymes turn Okazaki fragments into one continuous strand.",
-           fill=ACCENT, font=font("sans_bold", 30))
-
-    # Three rows: BEFORE, POL I REPLACES PRIMER, LIGASE SEALS
-    row_h = 230
-    y0 = 230
-    label_x = 110
-    diag_x = 480
-    diag_w = 1320
-
-    def draw_strand_with_segments(y, segments):
-        """segments: list of (start_frac, end_frac, color)."""
-        for s, e, col in segments:
-            x0 = diag_x + s * diag_w
-            x1 = diag_x + e * diag_w
-            d.line([(x0, y), (x1, y)], fill=col, width=14)
-
-    def draw_nick(y, frac):
-        """Small gap mark indicating a nick."""
-        x = diag_x + frac * diag_w
-        d.line([(x - 4, y - 18), (x - 4, y + 18)], fill=MAROON_DARK, width=2)
-        d.line([(x + 4, y - 18), (x + 4, y + 18)], fill=MAROON_DARK, width=2)
-        d.text((x - 18, y - 50), "nick", fill=MAROON,
-               font=font("sans_bold", 22))
-
-    # Row 1: BEFORE — Okazaki fragments with red RNA primers
-    y1 = y0 + row_h * 0 + 60
-    d.text((label_x, y1 - 20), "1. BEFORE",
-           fill=MAROON_DARK, font=font("sans_bold", 32))
-    d.text((label_x, y1 + 20), "Okazaki + primers",
-           fill=MUTED, font=font("sans", 22))
-    # Three Okazaki fragments: red primer + teal DNA
-    fragments = [
-        (0.00, 0.05, RED), (0.05, 0.30, ACCENT),
-        (0.32, 0.37, RED), (0.37, 0.62, ACCENT),
-        (0.64, 0.69, RED), (0.69, 0.94, ACCENT),
-    ]
-    draw_strand_with_segments(y1 + 10, fragments)
-
-    # Row 2: POL I replaces primer with DNA
-    y2 = y0 + row_h * 1 + 60
-    d.text((label_x, y2 - 20), "2. POL I",
-           fill=MAROON_DARK, font=font("sans_bold", 32))
-    d.text((label_x, y2 + 20), "replaces RNA → DNA",
-           fill=MUTED, font=font("sans", 22))
-    fragments2 = [
-        (0.00, 0.30, ACCENT),
-        (0.32, 0.62, ACCENT),
-        (0.64, 0.94, ACCENT),
-    ]
-    draw_strand_with_segments(y2 + 10, fragments2)
-    # Show the two nicks remaining
-    draw_nick(y2 + 10, 0.31)
-    draw_nick(y2 + 10, 0.63)
-
-    # Row 3: LIGASE seals the nicks
-    y3 = y0 + row_h * 2 + 60
-    d.text((label_x, y3 - 20), "3. LIGASE",
-           fill=MAROON_DARK, font=font("sans_bold", 32))
-    d.text((label_x, y3 + 20), "seals nicks",
-           fill=MUTED, font=font("sans", 22))
-    fragments3 = [(0.00, 0.94, ACCENT)]
-    draw_strand_with_segments(y3 + 10, fragments3)
-
-    # Legend for colors
-    leg_y = y3 + 90
-    d.line([(diag_x, leg_y), (diag_x + 60, leg_y)], fill=RED, width=10)
-    d.text((diag_x + 70, leg_y - 14), "RNA primer", fill=RED,
-           font=font("sans_bold", 24))
-    d.line([(diag_x + 300, leg_y), (diag_x + 360, leg_y)], fill=ACCENT, width=10)
-    d.text((diag_x + 370, leg_y - 14), "DNA", fill=ACCENT,
-           font=font("sans_bold", 24))
-
-    # Bottom strip
-    d.rounded_rectangle([110, 970, W - 110, 1050], radius=20,
-                        fill=ACCENT_LT, outline=MAROON, width=5)
-    centered(d, "Ligase forms the final phosphodiester bond — joining everything into one continuous strand.",
-             font("sans_bold", 28), 995, MAROON_DARK)
-deck.custom("09_finishing_steps", finishing_steps)
-
-
-# 10 — pause + try
-deck.pause("10_pause1", "PAUSE  &  TRY",
-           "Template:   3' — T A C G G T — 5'.   Write the new strand. Which direction?",
-           "3' — T A C G G T — 5'",
-           hint="Pause now. Solve it. Press play when you're ready.")
+# 10 — pause
+deck.pause("10_pause1", "PAUSE  &  THINK",
+           "Polymerase only extends from 3′ OH, only synthesizes 5′→3′.  But the templates run opposite directions.",
+           "How is BOTH replicated at once?",
+           hint="Pause now.  Think it through.  Press play when you're ready.")
 
 # 11 — duplicate the pause slide for the answer-reveal section
 deck.duplicate("10_pause1", "11_pause1_silence")
 
 
-# 12 — proofreading + repair (custom: 3 layers stacked)
-def proofreading_repair(img, d):
-    d.text((110, 70), "How we get to 1 error per billion bases.",
-           fill=MAROON, font=font("serif_bold", 56))
-    d.text((110, 150),
-           "Three layers of accuracy  —  stack the odds.",
+# 12 — lagging strand detail (Okazaki fragments, ligase)
+def lagging_detail(img, d):
+    d.text((110, 60), "The lagging strand  —  Okazaki  +  ligase.",
+           fill=MAROON, font=font("serif_bold", 54))
+
+    fork_x = 320
+    cy = 380
+    # Pre-fork
+    d.line([(150, cy - 40), (fork_x, cy - 40)], fill=MAROON_DARK, width=6)
+    d.line([(150, cy + 40), (fork_x, cy + 40)], fill=MAROON, width=6)
+    # Upper template (leading)
+    d.line([(fork_x, cy - 40), (1700, cy - 200)], fill=MAROON_DARK, width=6)
+    # Lower template (lagging)
+    d.line([(fork_x, cy + 40), (1700, cy + 200)], fill=MAROON, width=6)
+
+    # LEADING strand: one continuous new strand
+    d.line([(fork_x + 80, cy - 90), (1500, cy - 250)], fill=ACCENT, width=10)
+    d.polygon([(fork_x + 90, cy - 95),
+               (fork_x + 130, cy - 75),
+               (fork_x + 130, cy - 110)], fill=ACCENT)
+    d.text((900, cy - 285), "LEADING  —  continuous, toward fork",
            fill=ACCENT, font=font("sans_bold", 32))
+    d.text((900, cy - 250), "5′ → 3′  ·  one primer  ·  one piece",
+           fill=MUTED, font=font("sans", 24))
 
-    layers = [
-        ("LAYER  1",
-         "PROOFREADING",
-         "DNA polymerase has 3' → 5' exonuclease activity.",
-         "Backs up and removes a wrong base it just added.",
-         "~1 error per 10⁷ bases  →  10⁹ after proofreading"),
-        ("LAYER  2",
-         "MISMATCH  REPAIR",
-         "Protein patrols scan freshly-replicated DNA.",
-         "Cut out and re-synthesize errors that slipped past.",
-         "Defects → Lynch syndrome (hereditary colon cancer)"),
-        ("LAYER  3",
-         "NUCLEOTIDE  EXCISION  REPAIR  (NER)",
-         "Handles bulky damage — especially UV thymine dimers.",
-         "Removes a patch of nucleotides, fills, ligates.",
-         "Defective in xeroderma pigmentosum"),
+    # LAGGING strand: Okazaki fragments going AWAY from fork
+    frag_starts = [(fork_x + 90, cy + 90), (700, cy + 130),
+                   (1080, cy + 170), (1460, cy + 210)]
+    frag_lens = [340, 340, 340, 200]
+    for (sx, sy), L in zip(frag_starts, frag_lens):
+        ex = sx + L
+        ey_start = cy + 40 + (sx - fork_x) * 0.115 + 50
+        ey_end = cy + 40 + (ex - fork_x) * 0.115 + 50
+        d.line([(sx, ey_start), (ex, ey_end)], fill=ACCENT, width=10)
+        d.polygon([(ex, ey_end),
+                   (ex - 30, ey_end - 15),
+                   (ex - 30, ey_end + 15)], fill=ACCENT)
+        # Small red RNA primer at the start
+        d.line([(sx - 20, ey_start - 3), (sx, ey_start)], fill=RED, width=10)
+
+    d.text((760, cy + 280), "LAGGING  —  discontinuous, AWAY from fork",
+           fill=MAROON, font=font("sans_bold", 32))
+    d.text((760, cy + 320),
+           "Okazaki fragments  ·  each has its own RNA primer (red)",
+           fill=MUTED, font=font("sans", 24))
+
+    # Bottom: cleanup story
+    d.rounded_rectangle([110, 720, W - 110, 980], radius=22,
+                        outline=MAROON, width=5, fill=CARD)
+    d.text((150, 740), "Finishing the lagging strand",
+           fill=MAROON, font=font("serif_bold", 36))
+    steps = [
+        ("1.", "DNA Pol III builds each Okazaki fragment 5′→3′ from its primer."),
+        ("2.", "DNA Pol I removes the RNA primer in front, fills the gap with DNA."),
+        ("3.", "DNA ligase forms the final phosphodiester bond  →  seals the nick."),
     ]
-
-    box_h = 220
-    gap = 16
-    y = 240
-    for i, (tag, title, line1, line2, footnote) in enumerate(layers):
-        # Alternate colors for visual rhythm
-        bg = ACCENT_LT if i % 2 == 0 else CARD
-        d.rounded_rectangle([110, y, W - 110, y + box_h], radius=18,
-                            outline=ACCENT, width=5, fill=bg)
-        # Big layer number badge on the left
-        bx = 160
-        by = y + box_h // 2
-        d.ellipse([bx - 50, by - 50, bx + 50, by + 50],
-                  fill=ACCENT, outline=MAROON_DARK, width=4)
-        ns = str(i + 1)
-        nf = font("serif_bold", 56)
-        tw = d.textlength(ns, font=nf)
-        d.text((bx - tw / 2, by - 38), ns, fill=CREAM, font=nf)
-
-        # Body content
-        d.text((240, y + 24), tag, fill=ACCENT,
-               font=font("sans_bold", 22))
-        d.text((240, y + 56), title, fill=MAROON_DARK,
-               font=font("serif_bold", 40))
-        d.text((240, y + 120), line1, fill=INK, font=font("sans", 26))
-        d.text((240, y + 158), line2, fill=INK, font=font("sans", 26))
-        # Footnote on the right
-        d.text((1240, y + 100), footnote, fill=MAROON,
-               font=font("sans_bold", 24))
-
-        y += box_h + gap
-
-    # Bottom strip
-    d.rounded_rectangle([110, y + 6, W - 110, y + 76], radius=18,
-                        fill=ACCENT_LT, outline=MAROON, width=4)
-    centered(d, "Xeroderma pigmentosum patients can't repair UV damage → severe sunlight-induced skin cancer.",
-             font("sans_bold", 26), y + 26, MAROON_DARK)
-deck.custom("12_proofreading_repair", proofreading_repair)
+    yy = 800
+    for n, t in steps:
+        d.text((180, yy), n, fill=ACCENT, font=font("serif_bold", 34))
+        d.text((230, yy + 4), t, fill=INK, font=font("sans", 28))
+        yy += 55
+deck.custom("12_lagging_strand_detail", lagging_detail)
 
 
-# 13 — telomeres (custom: shortening over generations + telomerase callout)
-def telomeres(img, d):
-    d.text((110, 70), "Telomeres  —  the end replication problem.",
-           fill=MAROON, font=font("serif_bold", 56))
-    d.text((110, 150),
-           "Human telomere sequence:    T T A G G G   ·   repeated thousands of times.",
-           fill=ACCENT, font=font("sans_bold", 30))
+# 13 — proofreading + telomeres
+def proofreading_telomeres(img, d):
+    d.text((110, 60), "Proofreading  +  telomeres.",
+           fill=MAROON, font=font("serif_bold", 60))
 
-    # Left: chromosomes shortening
-    lx, ly = 110, 230
-    lw, lh = 1090, 740
-    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=20,
+    # Left card: proofreading
+    lx, ly = 110, 200
+    lw, lh = 870, 740
+    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=22,
                         outline=ACCENT, width=5, fill=CARD)
-    d.text((lx + 30, ly + 20), "Each division → telomere shortens",
-           fill=MAROON_DARK, font=font("sans_bold", 32))
+    d.text((lx + 30, ly + 20), "PROOFREADING", fill=ACCENT,
+           font=font("sans_bold", 40))
+    d.text((lx + 30, ly + 80),
+           "DNA polymerase has built-in",
+           fill=INK, font=font("sans", 28))
+    d.text((lx + 30, ly + 120),
+           "3′ → 5′ exonuclease activity.",
+           fill=MAROON_DARK, font=font("mono", 32))
+    d.text((lx + 30, ly + 180),
+           "Catches mismatches AS it builds.",
+           fill=INK, font=font("sans", 28))
 
-    # 4 chromosomes with shrinking telomere caps
-    base_chrom_x = lx + 60
-    chrom_y_step = 150
-    chrom_y0 = ly + 110
-    body_len = 600
-    # Telomere lengths in pixels
-    tel_lens = [180, 130, 80, 30]
-    labels = ["Newborn cell", "Division 20", "Division 50", "Division 70 (senescence)"]
+    # Diagram: a strand with one wrong base flagged
+    bx = lx + 50
+    by = ly + 280
+    d.line([(bx, by + 60), (bx + 770, by + 60)],
+           fill=MAROON_DARK, width=6)
+    template = ["T", "A", "C", "G", "G", "A", "T", "C"]
+    bf = font("mono", 32)
+    for i, b in enumerate(template):
+        tx = bx + 40 + i * 90
+        d.text((tx, by + 25), b, fill=MAROON_DARK, font=bf)
+    new = ["A", "T", "G", "C", "T", "T", "A", "?"]
+    for i, b in enumerate(new):
+        tx = bx + 40 + i * 90
+        color = RED if i == 4 else ACCENT
+        d.rectangle([tx - 6, by - 35, tx + 36, by + 10],
+                    fill=color, outline=MAROON_DARK, width=2)
+        tw = d.textlength(b, font=bf)
+        d.text((tx + 14 - tw / 2, by - 30), b, fill=CREAM, font=bf)
+    d.text((lx + 30, by + 130),
+           "Pol backs up  →  removes wrong base  →  reinserts the right one.",
+           fill=MAROON_DARK, font=font("sans_bold", 24))
 
-    for i, (tlen, label) in enumerate(zip(tel_lens, labels)):
-        cy = chrom_y0 + i * chrom_y_step
-        # Left telomere (red cap)
-        d.rounded_rectangle([base_chrom_x, cy - 18,
-                              base_chrom_x + tlen, cy + 18], radius=10,
-                             fill=MAROON, outline=MAROON_DARK, width=3)
-        # Chromosome body (teal)
-        d.rounded_rectangle([base_chrom_x + tlen + 4, cy - 18,
-                              base_chrom_x + tlen + 4 + body_len, cy + 18], radius=10,
-                             fill=ACCENT_LT, outline=MAROON_DARK, width=3)
-        # Right telomere
-        d.rounded_rectangle([base_chrom_x + tlen + 4 + body_len + 4, cy - 18,
-                              base_chrom_x + tlen + 4 + body_len + 4 + tlen, cy + 18], radius=10,
-                             fill=MAROON, outline=MAROON_DARK, width=3)
-        # Label on the right side
-        right_edge = base_chrom_x + 2 * tlen + body_len + 8
-        d.text((right_edge + 30, cy - 16), label, fill=INK,
-               font=font("sans_bold", 26))
+    # Big stat
+    d.rounded_rectangle([lx + 30, ly + 540, lx + lw - 30, ly + 700],
+                        radius=18, outline=ACCENT, width=5, fill=ACCENT_LT)
+    centered_x = lx + lw // 2
+    rate = "~ 1 error per 10⁹ bases"
+    rf = font("serif_bold", 50)
+    twr = d.textlength(rate, font=rf)
+    d.text((centered_x - twr / 2, ly + 565), rate,
+           fill=MAROON_DARK, font=rf)
+    centered(d, "after polymerase proofreading.",
+             font("sans", 30), ly + 640, INK)
 
-    # Legend
-    d.rounded_rectangle([lx + 30, ly + lh - 110, lx + lw - 30, ly + lh - 30],
-                        radius=14, fill=ACCENT_LT, outline=MAROON, width=3)
-    d.rectangle([lx + 60, ly + lh - 85, lx + 100, ly + lh - 55], fill=MAROON)
-    d.text((lx + 115, ly + lh - 90), "= telomere (TTAGGG repeats)",
-           fill=INK, font=font("sans_bold", 24))
-    d.rectangle([lx + 560, ly + lh - 85, lx + 600, ly + lh - 55],
-                fill=ACCENT_LT, outline=MAROON_DARK, width=2)
-    d.text((lx + 615, ly + lh - 90), "= rest of chromosome",
-           fill=INK, font=font("sans_bold", 24))
-
-    # Right: TELOMERASE box
+    # Right card: telomeres
     rx = lx + lw + 30
     rw = W - 110 - rx
-    d.rounded_rectangle([rx, ly, rx + rw, ly + lh], radius=20,
-                        outline=MAROON, width=5, fill=ACCENT_LT)
-    d.text((rx + 30, ly + 20), "TELOMERASE",
-           fill=MAROON_DARK, font=font("serif_bold", 50))
-    d.text((rx + 30, ly + 100),
-           "Carries its own",
+    rh = lh
+    d.rounded_rectangle([rx, ly, rx + rw, ly + rh], radius=22,
+                        outline=MAROON, width=5, fill=CARD)
+    d.text((rx + 30, ly + 20), "TELOMERES", fill=MAROON_DARK,
+           font=font("sans_bold", 40))
+    d.text((rx + 30, ly + 80),
+           "Linear chromosome ends.",
            fill=INK, font=font("sans", 28))
-    d.text((rx + 30, ly + 138),
-           "RNA template.",
-           fill=INK, font=font("sans", 28))
-    d.text((rx + 30, ly + 200),
-           "Extends telomeres",
-           fill=INK, font=font("sans", 28))
-    d.text((rx + 30, ly + 238),
-           "back out.",
-           fill=INK, font=font("sans", 28))
+    d.text((rx + 30, ly + 130),
+           "Repeating sequence:  T T A G G G  (human).",
+           fill=MAROON_DARK, font=font("mono", 28))
 
-    d.text((rx + 30, ly + 320), "ACTIVE in:",
-           fill=MAROON, font=font("sans_bold", 30))
-    for i, bullet in enumerate(["·  germ cells",
-                                 "·  stem cells",
-                                 "·  most cancers"]):
-        d.text((rx + 30, ly + 370 + i * 46), bullet,
-               fill=MAROON_DARK, font=font("sans_bold", 28))
+    # Three "generations" of the chromosome, each shorter
+    bxr = rx + 50
+    byr = ly + 240
+    chrom_x_start = bxr
+    chrom_y = byr
+    for i in range(3):
+        length = 700 - i * 60
+        d.rectangle([chrom_x_start + (700 - length) // 2,
+                     chrom_y + i * 60,
+                     chrom_x_start + (700 - length) // 2 + length,
+                     chrom_y + i * 60 + 30],
+                    fill=ACCENT_LT, outline=MAROON_DARK, width=3)
+        d.rectangle([chrom_x_start + (700 - length) // 2,
+                     chrom_y + i * 60,
+                     chrom_x_start + (700 - length) // 2 + 30,
+                     chrom_y + i * 60 + 30],
+                    fill=RED, outline=MAROON_DARK, width=3)
+        d.rectangle([chrom_x_start + (700 - length) // 2 + length - 30,
+                     chrom_y + i * 60,
+                     chrom_x_start + (700 - length) // 2 + length,
+                     chrom_y + i * 60 + 30],
+                    fill=RED, outline=MAROON_DARK, width=3)
+        d.text((chrom_x_start + 720, chrom_y + i * 60 + 2),
+               f"div {i + 1}", fill=MUTED, font=font("sans", 22))
 
-    d.text((rx + 30, ly + 540), "SILENT in:",
-           fill=MUTED, font=font("sans_bold", 30))
-    d.text((rx + 30, ly + 585), "·  most adult cells",
-           fill=INK, font=font("sans", 28))
-    d.text((rx + 30, ly + 625), "·  → contributes to aging",
-           fill=INK, font=font("serif_ital", 26))
+    d.text((rx + 30, ly + 460),
+           "End replication problem:",
+           fill=MAROON_DARK, font=font("sans_bold", 30))
+    d.text((rx + 30, ly + 500),
+           "Lagging strand can't fully complete its end  →  shortens each division.",
+           fill=INK, font=font("sans", 24))
 
-    # Bottom strip
-    d.rounded_rectangle([110, 990, W - 110, 1060], radius=18,
+    d.rounded_rectangle([rx + 30, ly + 560, rx + rw - 30, ly + 700],
+                        radius=18, outline=MAROON, width=5, fill=ACCENT_LT)
+    d.text((rx + 50, ly + 580), "TELOMERASE", fill=MAROON_DARK,
+           font=font("sans_bold", 34))
+    d.text((rx + 50, ly + 625),
+           "carries its own RNA template  →  extends telomeres.",
+           fill=INK, font=font("sans", 24))
+    d.text((rx + 50, ly + 660),
+           "Active in germ + stem cells.  Reactivated in most cancers.",
+           fill=MAROON_DARK, font=font("sans_bold", 24))
+deck.custom("13_proofreading_telomeres", proofreading_telomeres)
+
+
+# 14 — compare: Pol III vs Pol I vs Ligase
+def compare_traps(img, d):
+    d.text((110, 70), "Three enzymes  —  three jobs.  Don't mix them up.",
+           fill=MAROON, font=font("serif_bold", 48))
+
+    cols = [
+        ("DNA Pol III", "the workhorse",
+         ["Bulk DNA synthesis.",
+          "Both leading + lagging.",
+          "Builds 5′ → 3′ from",
+          "an existing 3′ OH.",
+          "Also: 3′→5′ proofreading."],
+         "SYNTHESIZE", ACCENT),
+        ("DNA Pol I", "the cleanup",
+         ["Removes RNA primers.",
+          "Fills the gap with DNA.",
+          "Also 5′ → 3′ synthesis.",
+          "(Has 5′→3′ exonuclease",
+          "to chew out the primer.)"],
+         "REPLACE", MAROON),
+        ("DNA Ligase", "the welder",
+         ["Seals the NICK between",
+          "two adjacent fragments.",
+          "Forms the final",
+          "phosphodiester bond.",
+          "No nucleotide addition."],
+         "SEAL", ACCENT),
+    ]
+
+    col_w = 540
+    col_h = 620
+    gap = 30
+    start_x = (W - (col_w * 3 + gap * 2)) // 2
+    y0 = 200
+    for i, (name, sub, lines, foot, color) in enumerate(cols):
+        x = start_x + i * (col_w + gap)
+        d.rounded_rectangle([x, y0, x + col_w, y0 + col_h], radius=20,
+                            outline=color, width=5, fill=CARD)
+        d.text((x + 26, y0 + 24), name, fill=color,
+               font=font("serif_bold", 44))
+        d.text((x + 26, y0 + 90), sub, fill=MUTED,
+               font=font("sans_bold", 28))
+        ly = y0 + 170
+        for ln in lines:
+            d.text((x + 26, ly), ln, fill=INK, font=font("sans", 28))
+            ly += 55
+        d.rounded_rectangle([x + 26, y0 + col_h - 80,
+                             x + col_w - 26, y0 + col_h - 26],
+                            radius=12, fill=color)
+        f_foot = font("sans_bold", 34)
+        tw = d.textlength(foot, font=f_foot)
+        d.text((x + col_w // 2 - tw / 2, y0 + col_h - 70),
+               foot, fill=CREAM, font=f_foot)
+
+    # Bottom trap warning
+    d.rounded_rectangle([110, 870, W - 110, 980], radius=20,
                         fill=ACCENT_LT, outline=MAROON, width=4)
-    centered(d, "Cancer cells reactivate telomerase  →  effectively immortal division.",
-             font("sans_bold", 28), 1012, MAROON_DARK)
-deck.custom("13_telomeres", telomeres)
-
-
-# 14 — compare traps: lagging strand directionality + primer requirement
-deck.compare("14_compare_traps",
-             "Common traps  —  three to memorize.",
-             left={"label": "WRONG  ✗",
-                   "color": MAROON,
-                   "lines": [
-                       "Lagging strand is built",
-                       "3' → 5'.",
-                       "",
-                       "DNA polymerase can",
-                       "start from scratch.",
-                       "",
-                       "Semiconservative =",
-                       "all-old or all-new",
-                       "daughter strands.",
-                   ],
-                   "footnote": "These are the three most-missed answers on this topic."},
-             right={"label": "RIGHT  ✓",
-                    "color": ACCENT,
-                    "lines": [
-                        "BOTH strands built 5' → 3'.",
-                        "Lagging just does it backward",
-                        "in short Okazaki fragments.",
-                        "",
-                        "Polymerase needs a primer.",
-                        "Primase lays it down first.",
-                        "",
-                        "Semiconservative = one old",
-                        "+ one new strand per daughter.",
-                    ],
-                    "footnote": "Get these three right → most of the points on this topic."})
+    centered(d, "AP trap:  the lagging strand is still built 5′ → 3′  ·  just in short backward chunks.",
+             font("sans_bold", 32), 905, MAROON_DARK)
+deck.custom("14_compare_traps", compare_traps)
 
 
 # 15 — recap
 deck.recap("15_recap", "Recap.", [
-    "DNA = double helix, antiparallel; A-T (2 H-bonds), G-C (3 H-bonds).",
+    "DNA = double helix, antiparallel.  A=T (2 H-bonds), G≡C (3 H-bonds).  Chargaff: %A=%T, %G=%C.",
     "Replication is semiconservative — Meselson & Stahl, 1958.",
-    "Enzyme order:  helicase  →  SSBPs  →  topoisomerase  →  primase  →  Pol III.",
-    "Pol III builds 5' → 3':  leading continuous;  lagging in Okazaki fragments.",
-    "Pol I replaces RNA primer with DNA;  ligase seals nicks.",
-    "Proofreading (3'→5' exo) + mismatch repair + NER → ~1 error per 10⁹ bases.",
-    "Telomeres shrink with each division;  telomerase rebuilds them (germ, stem, cancer).",
+    "Fork setup:  topoisomerase  →  helicase  →  SSBPs  →  primase  →  DNA Pol III.",
+    "Leading = continuous toward fork.  Lagging = Okazaki fragments AWAY from fork.",
+    "Pol I removes RNA primers + fills with DNA.  Ligase seals the nicks.",
+    "Proofreading → ~1 error / 10⁹.  Telomeres shorten each division; telomerase rebuilds them.",
 ], assignment=[
-    "1.  Write the new strand for template  3'-CGTAAG-5'.  Show direction of synthesis.",
-    "2.  List the 7 replication enzymes in order, with one sentence on what each does.",
+    "1.  Given a template strand, write the complementary new strand and label 5′/3′.",
+    "2.  Name the enzyme responsible for each step at the fork and what it does.",
 ])
 
 
 # 16 — path
 deck.path("16_path", [
-    ("✓",  "Watch this lesson",       "(done!)"),
-    ("1.", "Read OpenStax Biology",   "Chapter 14 — DNA structure and replication"),
-    ("2.", "Khan Academy AP Bio",     "Unit 6 problem sets — DNA replication and repair"),
-    ("3.", "Assignment in dashboard", "Complementary strand + enzyme order (above)"),
-    ("4.", "Advisor check-in",        "If 5'→3' directionality or Okazaki logic still feels fuzzy"),
-], next_text="Next up:  Module 8 — Transcription and Translation  (DNA → RNA → protein).")
+    ("✓",  "Watch this lesson",        "(done!)"),
+    ("1.", "Read OpenStax Biology",    "Chapter 14 — DNA Structure and Function"),
+    ("2.", "Khan Academy AP Bio",      "Unit 6 problem sets — DNA structure + replication"),
+    ("3.", "Assignment in dashboard",  "Enzyme order + leading/lagging strand questions"),
+    ("4.", "Advisor check-in",         "If 5′→3′ directionality still feels confusing"),
+], next_text="Next up:  Module 8 — Transcription and Translation.")
 
 
 print("AP Biology Module 7 slides built.")

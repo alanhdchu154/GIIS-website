@@ -1,0 +1,55 @@
+{
+  "reviewer": "C",
+  "role": "citation-checker",
+  "module": "ap-biology-module-3-membrane-transport",
+  "reference_doc": "references/ap-biology-ced.md (Unit 3+4 membrane transport section)",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "Claim 'each pump cycles roughly a hundred times every second' is not in the reference. Reference only states the 3 Na+ out / 2 K+ in per ATP stoichiometry; no cycling rate is given."
+    },
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "Claim 'your nerve cells carry millions of them' (pumps per nerve cell) is not in the reference."
+    },
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "Claim 'around twenty percent of your resting energy budget' is not in the reference. No energy-budget figure appears in the M3 section."
+    },
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "Claim 'if it stopped for even a few minutes, you would lose consciousness' is not in the reference."
+    },
+    {
+      "section": "05_permeability",
+      "severity": "minor",
+      "description": "Charged species 'calcium, chloride' are added beyond reference, which lists only 'Na+, K+' as ion examples (line 135-136). Generalization to all ions is consistent with the reference statement that 'charged species ... require transport proteins,' but the specific Ca2+/Cl- examples are unverified within this section."
+    },
+    {
+      "section": "09_active_transport_secondary",
+      "severity": "minor",
+      "description": "'Antiporters carry them opposite directions' — the reference mentions only symporters (Na+-glucose). Antiporter terminology is unverified in this section."
+    },
+    {
+      "section": "12_bulk_transport",
+      "severity": "minor",
+      "description": "Example 'pancreas secretes insulin' via exocytosis is not in reference; reference lists 'neurotransmitters, hormones, mucus' generally (line 154). Insulin is a hormone so consistent, but specific pancreas/insulin example is not cited."
+    },
+    {
+      "section": "13_real_world_examples",
+      "severity": "minor",
+      "description": "Kidney/nephron/aquaporin reabsorption example is not present in the reference M3 section. Reference mentions aquaporins as channels (line 136) but does not connect them to kidneys."
+    },
+    {
+      "section": "13_real_world_examples",
+      "severity": "minor",
+      "description": "Neuron action-potential wave / axonal propagation detail is not in the reference, which only states the Na/K pump 'create[s] the electrochemical gradient used by nerve cells' (line 146)."
+    }
+  ],
+  "summary": "Core mechanism claims (Singer-Nicolson 1972, 3 Na+/2 K+/ATP, GLUT1, aquaporins, tonicity, endo/exocytosis types) all verified; hook stats (100 Hz cycling, 20% energy, millions per cell) and several downstream physiology examples (kidney, insulin, antiporters, Ca2+/Cl-) are unverified by the reference."
+}

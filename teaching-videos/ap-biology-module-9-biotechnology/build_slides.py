@@ -2,9 +2,10 @@
 
 Teal (science) theme auto-resolved from "AP Biology". 16 slides total.
 Heavy on customs for the molecular tool diagrams — restriction enzyme
-cut + sticky ends, gel electrophoresis ladder, PCR thermal cycler graph,
-CRISPR mechanism, etc. Pause slide (10) is duplicated to 11 so the same
-image plays during both Q and A sections.
+cut + sticky ends, plasmid + recombinant DNA, gel electrophoresis ladder,
+PCR overview + 3-step thermal cycler, Sanger + NGS, CRISPR mechanism.
+Pause slide (10) is duplicated to 11 so the same image plays during both
+Q and A sections.
 """
 import sys
 import math
@@ -30,114 +31,132 @@ deck.title("01_title", "AP Biology",
            "Sample lesson  ·  ~8 minutes")
 
 
-# 02 — hook: four things parents/students touch every week, all biotech
+# 02 — hook: 1953 reading DNA → 2020 editing DNA
 def hook(img, d):
-    d.text((110, 80), "You touch biotechnology every week.",
-           fill=MAROON, font=font("serif_bold", 60))
+    d.text((110, 70), "From reading the code to writing it.",
+           fill=MAROON, font=font("serif_bold", 64))
 
-    # Four icon cards in a row
-    cards = [
-        ("COVID-19 PCR", "the test in your nose", "PCR"),
-        ("Insulin", "millions of diabetics", "recombinant DNA"),
-        ("DNA evidence", "courtrooms worldwide", "STR fingerprinting"),
-        ("Sickle-cell cure", "first patients, 2023", "CRISPR"),
-    ]
-    card_w = 400
-    card_h = 460
-    gap = 30
-    start_x = (W - (card_w * 4 + gap * 3)) // 2
-    y0 = 220
-    for i, (title, sub, tag) in enumerate(cards):
-        x = start_x + i * (card_w + gap)
-        # Card
-        d.rounded_rectangle([x, y0, x + card_w, y0 + card_h], radius=22,
-                            outline=ACCENT, width=5, fill=CARD)
-        # Title strip at top
-        d.rounded_rectangle([x, y0, x + card_w, y0 + 70], radius=22,
-                            fill=ACCENT)
-        d.rectangle([x, y0 + 22, x + card_w, y0 + 70], fill=ACCENT)
-        tf = font("serif_bold", 34)
-        tw = d.textlength(title, font=tf)
-        d.text((x + card_w // 2 - tw / 2, y0 + 16), title, fill=CREAM, font=tf)
+    # Timeline arrow across the slide
+    arrow_y = 540
+    d.line([(220, arrow_y), (W - 220, arrow_y)],
+           fill=MAROON_DARK, width=8)
+    # Arrowhead
+    d.polygon([
+        (W - 220, arrow_y - 24),
+        (W - 170, arrow_y),
+        (W - 220, arrow_y + 24),
+    ], fill=MAROON_DARK)
 
-        # Tool tag — pill near bottom
-        tag_y = y0 + 150
-        tagf = font("sans_bold", 26)
-        ttw = d.textlength(tag.upper(), font=tagf)
-        d.rounded_rectangle(
-            [x + card_w // 2 - ttw / 2 - 22, tag_y,
-             x + card_w // 2 + ttw / 2 + 22, tag_y + 50],
-            radius=14, fill=MAROON, outline=MAROON_DARK, width=3)
-        d.text((x + card_w // 2 - ttw / 2, tag_y + 12),
-               tag.upper(), fill=CREAM, font=tagf)
+    # Left node: 1953 — Watson & Crick
+    lx, ly = 200, 240
+    lw, lh = 700, 460
+    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=24,
+                        outline=ACCENT, width=6, fill=CARD)
+    d.text((lx + 30, ly + 24), "1953", fill=MAROON,
+           font=font("serif_bold", 72))
+    d.text((lx + 30, ly + 120), "Watson + Crick",
+           fill=MAROON_DARK, font=font("serif_bold", 44))
+    d.text((lx + 30, ly + 190), "Figure out the structure of DNA.",
+           fill=INK, font=font("sans", 30))
+    d.text((lx + 30, ly + 240),
+           "Humanity learns to READ the code.",
+           fill=ACCENT, font=font("serif_bold", 32))
 
-        # Sub caption (wrapped)
-        sf = font("sans", 26)
-        sub_lines = wrap(d, sub, sf, card_w - 60)
-        sy = y0 + 270
-        for line in sub_lines:
-            ltw = d.textlength(line, font=sf)
-            d.text((x + card_w // 2 - ltw / 2, sy), line,
-                   fill=INK, font=sf)
-            sy += 36
+    # Mini double helix
+    hx0 = lx + 30
+    hy0 = ly + 320
+    for i in range(7):
+        x_off = int(math.sin(i * 0.9) * 30)
+        d.ellipse([hx0 + i * 80 + x_off - 10, hy0 - 10,
+                   hx0 + i * 80 + x_off + 10, hy0 + 10],
+                  fill=ACCENT)
+        d.ellipse([hx0 + i * 80 - x_off - 10, hy0 + 70,
+                   hx0 + i * 80 - x_off + 10, hy0 + 90],
+                  fill=MAROON)
+        d.line([(hx0 + i * 80 + x_off, hy0),
+                (hx0 + i * 80 - x_off, hy0 + 80)],
+               fill=MAROON_DARK, width=2)
 
-        # Connector hint
-        cf = font("serif_ital", 24)
-        cap = "→ biotechnology"
-        cw = d.textlength(cap, font=cf)
-        d.text((x + card_w // 2 - cw / 2, y0 + card_h - 60), cap,
-               fill=ACCENT, font=cf)
+    # Right node: 2020 — Doudna & Charpentier
+    rx = W - 200 - lw
+    d.rounded_rectangle([rx, ly, rx + lw, ly + lh], radius=24,
+                        outline=MAROON, width=6, fill=ACCENT_LT)
+    d.text((rx + 30, ly + 24), "2020", fill=MAROON,
+           font=font("serif_bold", 72))
+    d.text((rx + 30, ly + 120), "Doudna + Charpentier",
+           fill=MAROON_DARK, font=font("serif_bold", 42))
+    d.text((rx + 30, ly + 190), "Nobel Prize — CRISPR-Cas9.",
+           fill=INK, font=font("sans", 30))
+    d.text((rx + 30, ly + 240),
+           "Humanity learns to EDIT the code.",
+           fill=MAROON, font=font("serif_bold", 32))
+
+    # Mini scissors-on-DNA
+    sx = rx + 60
+    sy = hy0 + 30
+    d.line([(sx, sy), (sx + 540, sy)], fill=INK, width=10)
+    d.line([(sx, sy + 40), (sx + 540, sy + 40)], fill=INK, width=10)
+    # Cut
+    d.line([(sx + 260, sy - 30), (sx + 320, sy + 70)],
+           fill=MAROON, width=8)
+    d.line([(sx + 320, sy - 30), (sx + 260, sy + 70)],
+           fill=MAROON, width=8)
+
+    # Big arc label in the middle of arrow
+    label = "67 years"
+    lf = font("serif_bold", 56)
+    tw = d.textlength(label, font=lf)
+    # Pill background
+    px = W // 2 - tw / 2 - 40
+    d.rounded_rectangle([px, arrow_y - 50, px + tw + 80, arrow_y + 50],
+                        radius=24, fill=MAROON, outline=MAROON_DARK, width=4)
+    d.text((W // 2 - tw / 2, arrow_y - 36), label,
+           fill=CREAM, font=lf)
 
     # Bottom punchline strip
-    d.rounded_rectangle([110, 800, W - 110, 940], radius=20,
+    d.rounded_rectangle([110, 770, W - 110, 920], radius=20,
                         fill=ACCENT_LT, outline=MAROON, width=5)
-    centered(d, "Same toolkit — restriction enzymes, PCR, sequencing, CRISPR — behind every one of these.",
-             font("serif_bold", 32), 832, MAROON_DARK)
-    centered(d, "Today: what each tool actually does.",
-             font("sans", 30), 882, MUTED)
+    centered(d, "Sixty-seven years from reading to writing the code of life.",
+             font("serif_bold", 36), 800, MAROON_DARK)
+    centered(d, "Everything in between — that arc — is what we call biotechnology.",
+             font("sans", 30), 860, MUTED)
 deck.custom("02_hook", hook)
 
 
 # 03 — overview
 deck.overview("03_overview", "Game plan.", [
-    "The toolkit — restriction enzymes, gel electrophoresis, PCR, sequencing, CRISPR.",
+    "The toolkit — restriction enzymes, plasmids, gel, PCR, sequencing, CRISPR.",
     "How each tool actually works at the molecular level.",
-    "The applications: medicine, agriculture, forensics, diagnostics — and the ethics.",
+    "Applications — medicine, agriculture, forensics, diagnostics — and the ethics.",
 ], footnote="By the end: you can explain how a COVID PCR test detects one viral molecule.")
 
 
-# 04 — restriction enzymes + ligase: EcoRI cut diagram with sticky ends
-def restriction_enzymes_ligase(img, d):
-    d.text((110, 70), "Restriction enzymes  +  ligase  +  plasmids.",
+# 04 — restriction enzymes (EcoRI cut + sticky ends)
+def restriction_enzymes(img, d):
+    d.text((110, 70), "Restriction enzymes  —  bacterial scissors.",
            fill=MAROON, font=font("serif_bold", 56))
     d.text((110, 160),
-           "EcoRI recognizes GAATTC. Cuts on a stagger → sticky ends.",
-           fill=MUTED, font=font("sans", 30))
+           "Bacterial defense vs. viruses.  EcoRI recognizes GAATTC (palindromic) → cuts on a stagger → sticky ends.",
+           fill=MUTED, font=font("sans", 26))
 
-    # Top: DNA sequence with arrows showing EcoRI cut sites
-    seq_top = "5'  ...G A A T T C...  3'"
-    seq_bot = "3'  ...C T T A A G...  5'"
+    # Top: DNA sequence with cut indicators
+    sy = 250
     mf = font("mono", 56)
-    sy = 240
-    centered(d, seq_top, mf, sy, INK)
-    centered(d, seq_bot, mf, sy + 80, INK)
-    # Arrows showing cuts (top: between G and A; bottom: between G and A)
-    arrow_f = font("serif_bold", 40)
-    # We approximate cut positions visually below.
-    # Indicator labels
+    centered(d, "5'  ...G A A T T C...  3'", mf, sy, INK)
+    centered(d, "3'  ...C T T A A G...  5'", mf, sy + 80, INK)
+    # Arrow indicators
     d.text((W // 2 - 240, sy - 60), "cut →", fill=MAROON_DARK,
            font=font("sans_bold", 30))
     d.text((W // 2 + 110, sy + 150), "← cut", fill=MAROON_DARK,
            font=font("sans_bold", 30))
 
-    # Middle: the result — two fragments with sticky overhangs
-    y_mid = 460
-    centered(d, "After the cut — sticky ends:",
-             font("serif_bold", 38), y_mid, MAROON)
+    # Middle label
+    y_mid = 470
+    centered(d, "After the cut  —  sticky ends (AATT overhang):",
+             font("serif_bold", 36), y_mid, MAROON)
 
     # Two fragment boxes
-    # Left fragment
-    lx, ly_box, lw, lh = 200, 540, 720, 200
+    lx, ly_box, lw, lh = 200, 550, 720, 200
     d.rounded_rectangle([lx, ly_box, lx + lw, ly_box + lh], radius=14,
                         outline=ACCENT, width=4, fill=CARD)
     d.text((lx + 30, ly_box + 30), "5'  ...G",
@@ -147,7 +166,6 @@ def restriction_enzymes_ligase(img, d):
     d.text((lx + lw - 320, ly_box + 165), "overhang: AATT",
            fill=ACCENT, font=font("sans_bold", 24))
 
-    # Right fragment
     rx = W - 200 - lw
     d.rounded_rectangle([rx, ly_box, rx + lw, ly_box + lh], radius=14,
                         outline=ACCENT, width=4, fill=CARD)
@@ -158,38 +176,117 @@ def restriction_enzymes_ligase(img, d):
     d.text((rx + 30, ly_box + 165), "overhang: AATT",
            fill=ACCENT, font=font("sans_bold", 24))
 
-    # Plasmid + ligase mini-diagram on the right side bottom
-    p_cx, p_cy = W // 2, 880
-    d.text((110, 790), "Then:  ligase joins fragments  +  plasmid carries the insert into bacteria.",
-           fill=MAROON_DARK, font=font("sans_bold", 30))
-
-    # Plasmid icon
-    d.ellipse([p_cx - 70, p_cy - 60, p_cx + 70, p_cy + 60],
-              outline=MAROON, width=6)
-    d.ellipse([p_cx - 40, p_cy - 30, p_cx + 40, p_cy + 30],
-              outline=MAROON, width=6)
-    d.text((p_cx - 50, p_cy + 70), "plasmid",
-           fill=MAROON_DARK, font=font("sans_bold", 24))
-
-    # Antibiotic-resistance tag
-    d.text((p_cx + 100, p_cy - 12),
-           "→ AmpR gene = selection marker",
-           fill=ACCENT, font=font("sans_bold", 26))
-deck.custom("04_restriction_enzymes_ligase", restriction_enzymes_ligase)
+    # Bottom punchline
+    d.rounded_rectangle([110, 810, W - 110, 970], radius=20,
+                        fill=ACCENT_LT, outline=MAROON, width=5)
+    centered(d, "Same enzyme on two pieces → matching sticky ends → they base-pair right back together.",
+             font("serif_bold", 30), 840, MAROON_DARK)
+    centered(d, "That is the chemistry that makes recombinant DNA possible.",
+             font("serif_ital", 28), 895, MAROON)
+deck.custom("04_restriction_enzymes", restriction_enzymes)
 
 
-# 05 — gel electrophoresis: charge + gel ladder
+# 05 — plasmids + recombinant DNA
+def plasmids_recombinant(img, d):
+    d.text((110, 70), "Plasmids  +  ligase  =  recombinant DNA.",
+           fill=MAROON, font=font("serif_bold", 56))
+    d.text((110, 160),
+           "Plasmid: small circular bacterial DNA.  Carries antibiotic-resistance gene → selection marker.",
+           fill=MUTED, font=font("sans", 26))
+
+    # Left: the recipe steps
+    lx, ly = 110, 240
+    lw, lh = 870, 720
+    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=20,
+                        outline=ACCENT, width=5, fill=CARD)
+    d.text((lx + 30, ly + 24), "THE RECIPE",
+           fill=ACCENT, font=font("serif_bold", 44))
+
+    steps = [
+        ("1.", "Cut plasmid + gene of interest",
+         "with the SAME restriction enzyme."),
+        ("2.", "Sticky ends base-pair",
+         "between plasmid and insert."),
+        ("3.", "DNA ligase seals nicks",
+         "with phosphodiester bonds."),
+        ("4.", "Transform into bacteria",
+         "via heat shock or electroporation."),
+        ("5.", "Plate on antibiotic agar",
+         "→ only cells with plasmid survive."),
+    ]
+    y = ly + 110
+    for num, head, sub in steps:
+        d.text((lx + 30, y), num, fill=MAROON,
+               font=font("serif_bold", 40))
+        d.text((lx + 100, y + 4), head, fill=INK,
+               font=font("sans_bold", 28))
+        d.text((lx + 100, y + 46), sub, fill=MUTED,
+               font=font("sans", 24))
+        y += 110
+
+    # Right: plasmid diagram
+    rx = lx + lw + 30
+    rw = W - 110 - rx
+    d.rounded_rectangle([rx, ly, rx + rw, ly + lh], radius=20,
+                        outline=MAROON, width=5, fill=ACCENT_LT)
+    d.text((rx + 30, ly + 24), "PLASMID",
+           fill=MAROON_DARK, font=font("serif_bold", 44))
+
+    # Big circular plasmid
+    p_cx = rx + rw // 2
+    p_cy = ly + 360
+    p_r = 200
+    # Outer ring
+    d.ellipse([p_cx - p_r, p_cy - p_r, p_cx + p_r, p_cy + p_r],
+              outline=MAROON, width=10)
+    d.ellipse([p_cx - p_r + 18, p_cy - p_r + 18,
+               p_cx + p_r - 18, p_cy + p_r - 18],
+              outline=MAROON_DARK, width=4)
+
+    # Inserted gene segment (highlighted arc)
+    bbox = [p_cx - p_r + 8, p_cy - p_r + 8,
+            p_cx + p_r - 8, p_cy + p_r - 8]
+    d.arc(bbox, start=300, end=60, fill=ACCENT, width=24)
+    d.text((p_cx + 110, p_cy - 220), "insert",
+           fill=ACCENT, font=font("sans_bold", 30))
+
+    # AmpR resistance segment
+    d.arc(bbox, start=120, end=180, fill=MAROON, width=24)
+    d.text((p_cx - 260, p_cy + 90), "AmpR",
+           fill=MAROON, font=font("sans_bold", 30))
+
+    # Ori
+    d.arc(bbox, start=210, end=240, fill=MAROON_DARK, width=18)
+    d.text((p_cx - 200, p_cy + 200), "ori",
+           fill=MAROON_DARK, font=font("sans_bold", 26))
+
+    # Bottom caption
+    d.text((rx + 30, ly + lh - 80),
+           "Antibiotic-resistance gene =",
+           fill=MAROON_DARK, font=font("sans_bold", 28))
+    d.text((rx + 30, ly + lh - 44),
+           "selection marker.",
+           fill=MAROON_DARK, font=font("sans_bold", 28))
+
+    # Bottom strip
+    d.rounded_rectangle([110, 985, W - 110, 1045], radius=14,
+                        fill=ACCENT_LT, outline=MAROON, width=4)
+    centered(d, "Recombinant DNA = foreign DNA inserted into a vector and copied inside a living cell.",
+             font("sans_bold", 26), 1003, MAROON_DARK)
+deck.custom("05_plasmids_recombinant", plasmids_recombinant)
+
+
+# 06 — gel electrophoresis
 def gel_electrophoresis(img, d):
     d.text((110, 70), "Gel electrophoresis  —  separating by size.",
            fill=MAROON, font=font("serif_bold", 56))
     d.text((110, 160),
-           "DNA is negatively charged → migrates toward + electrode. Smaller fragments = faster.",
-           fill=MUTED, font=font("sans", 28))
+           "DNA backbone is NEGATIVELY charged (phosphate groups) → migrates toward + electrode.  Smaller = faster.",
+           fill=MUTED, font=font("sans", 26))
 
     # Left: gel diagram
     gx, gy = 200, 260
     gw, gh = 800, 680
-    # Gel slab
     d.rounded_rectangle([gx, gy, gx + gw, gy + gh], radius=18,
                         outline=MAROON_DARK, width=5, fill=ACCENT_LT)
     # Electrodes
@@ -211,26 +308,21 @@ def gel_electrophoresis(img, d):
         d.rectangle([wx, gy + 20, wx + well_w, gy + 70],
                     fill=CARD, outline=MAROON_DARK, width=3)
 
-    # Bands — smaller fragments travel further (further right toward +)
-    # Each lane = sample with bands at different positions
-    # For a ladder (lane 0), show many bands
-    ladder_positions = [110, 180, 270, 380, 510, 600]  # px from top of gel
+    # Bands — smaller fragments travel farther
+    ladder_positions = [110, 180, 270, 380, 510, 600]
     for i in range(well_count):
         wx = start_w + i * (well_w + well_gap)
         cx_band = wx + well_w // 2
         if i == 0:
-            # Ladder lane — bands at all positions
             for bp in ladder_positions:
                 d.rectangle([cx_band - 38, gy + bp,
                              cx_band + 38, gy + bp + 14],
                             fill=MAROON_DARK)
         elif i == 1:
-            # One big band high (large fragment)
             d.rectangle([cx_band - 38, gy + 130,
                          cx_band + 38, gy + 148],
                         fill=ACCENT)
         elif i == 2:
-            # Two bands, medium
             d.rectangle([cx_band - 38, gy + 180,
                          cx_band + 38, gy + 198],
                         fill=ACCENT)
@@ -238,15 +330,12 @@ def gel_electrophoresis(img, d):
                          cx_band + 38, gy + 398],
                         fill=ACCENT)
         elif i == 3:
-            # Small fragment — far down
             d.rectangle([cx_band - 38, gy + 510,
                          cx_band + 38, gy + 528],
                         fill=ACCENT)
         elif i == 4:
-            # Empty / control
             pass
 
-    # Labels for lanes
     label_lanes = ["ladder", "large", "two", "small", "ctrl"]
     for i, lbl in enumerate(label_lanes):
         wx = start_w + i * (well_w + well_gap)
@@ -256,7 +345,6 @@ def gel_electrophoresis(img, d):
         d.text((cx_band - tw / 2, gy + gh - 30), lbl,
                fill=MAROON_DARK, font=lf)
 
-    # Size labels next to ladder
     size_labels = ["10 kb", "5 kb", "2 kb", "1 kb", "500 bp", "200 bp"]
     for bp, lbl in zip(ladder_positions, size_labels):
         d.text((gx + 20, gy + bp - 6), lbl, fill=MUTED,
@@ -276,8 +364,8 @@ def gel_electrophoresis(img, d):
            "phosphate groups → ",
            fill=INK, font=font("sans", 28))
     d.text((rx + 30, ry + 190),
-           "negatively charged.",
-           fill=INK, font=font("sans", 28))
+           "NEGATIVELY charged.",
+           fill=MAROON, font=font("sans_bold", 28))
 
     d.text((rx + 30, ry + 260),
            "Apply current →",
@@ -293,7 +381,7 @@ def gel_electrophoresis(img, d):
            "Small fragments slip",
            fill=INK, font=font("sans", 28))
     d.text((rx + 30, ry + 455),
-           "through easily.",
+           "through easily (FAST).",
            fill=INK, font=font("sans", 28))
     d.text((rx + 30, ry + 495),
            "Large fragments lag.",
@@ -311,22 +399,112 @@ def gel_electrophoresis(img, d):
                         fill=ACCENT_LT, outline=MAROON, width=4)
     centered(d, "Check restriction digests · check PCR products · prep DNA fingerprinting.",
              font("sans_bold", 26), 980, MAROON_DARK)
-deck.custom("05_gel_electrophoresis", gel_electrophoresis)
+deck.custom("06_gel_electrophoresis", gel_electrophoresis)
 
 
-# 06 — PCR steps: 3 temperatures on a thermal cycler diagram
-def pcr_steps(img, d):
+# 07 — PCR overview: Mullis + exponential growth
+def pcr_overview(img, d):
+    d.text((110, 70), "PCR  —  amplify a target exponentially.",
+           fill=MAROON, font=font("serif_bold", 56))
+
+    # Top strip: who & when
+    d.rounded_rectangle([110, 170, W - 110, 280], radius=18,
+                        fill=ACCENT_LT, outline=MAROON, width=5)
+    d.text((140, 195), "Kary Mullis",
+           fill=MAROON_DARK, font=font("serif_bold", 44))
+    d.text((140, 245), "Invented PCR — 1985.   Nobel Prize in Chemistry — 1993.",
+           fill=INK, font=font("sans_bold", 28))
+
+    # Doubling chart
+    lx, ly = 110, 320
+    lw, lh = 1080, 640
+    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=20,
+                        outline=ACCENT, width=5, fill=CARD)
+    d.text((lx + 30, ly + 24), "Copies after each cycle (log scale)",
+           fill=MAROON_DARK, font=font("sans_bold", 30))
+
+    # Axes
+    gx0 = lx + 100
+    gy0 = ly + 560
+    gx1 = lx + lw - 50
+    gy1 = ly + 100
+    d.line([(gx0, gy1), (gx0, gy0)], fill=MAROON_DARK, width=4)
+    d.line([(gx0, gy0), (gx1, gy0)], fill=MAROON_DARK, width=4)
+    d.text((lx + 20, ly + 80), "copies", fill=MAROON_DARK,
+           font=font("sans_bold", 22))
+    d.text((gx1 - 80, gy0 + 14), "cycles →", fill=MAROON_DARK,
+           font=font("sans_bold", 22))
+
+    n_cycles = 30
+    x_ticks = [0, 5, 10, 15, 20, 25, 30]
+    span_x = gx1 - gx0
+    for c in x_ticks:
+        px = gx0 + int(c / n_cycles * span_x)
+        d.line([(px, gy0), (px, gy0 + 12)], fill=MAROON_DARK, width=3)
+        lab = str(c)
+        tf = font("sans_bold", 22)
+        tw = d.textlength(lab, font=tf)
+        d.text((px - tw / 2, gy0 + 20), lab,
+               fill=MAROON_DARK, font=tf)
+
+    y_labels = ["1", "10", "10²", "10⁴", "10⁶", "10⁸", "10⁹"]
+    y_vals = [0, 1, 2, 4, 6, 8, 9]
+    max_log = 9.0
+    span_y = gy0 - gy1
+    for lab, v in zip(y_labels, y_vals):
+        py = gy0 - int(v / max_log * span_y)
+        d.line([(gx0 - 10, py), (gx0, py)], fill=MAROON_DARK, width=3)
+        tf = font("sans_bold", 22)
+        tw = d.textlength(lab, font=tf)
+        d.text((gx0 - 20 - tw, py - 14), lab,
+               fill=MAROON_DARK, font=tf)
+
+    # Plot 2^n
+    prev = None
+    for c in range(n_cycles + 1):
+        copies_log = c * math.log10(2)
+        px = gx0 + int(c / n_cycles * span_x)
+        py = gy0 - int(copies_log / max_log * span_y)
+        if prev is not None:
+            d.line([prev, (px, py)], fill=ACCENT, width=5)
+        d.ellipse([px - 5, py - 5, px + 5, py + 5], fill=MAROON)
+        prev = (px, py)
+
+    # Annotations
+    c = 30
+    px = gx0 + int(c / n_cycles * span_x)
+    py = gy0 - int((c * math.log10(2)) / max_log * span_y)
+    d.text((px - 320, py - 70), "30 cycles → ~10⁹ copies",
+           fill=MAROON, font=font("serif_bold", 32))
+
+    # Formula in corner
+    d.rounded_rectangle([lx + 130, ly + 130, lx + 500, ly + 240],
+                        radius=16, fill=ACCENT_LT, outline=MAROON, width=4)
+    d.text((lx + 160, ly + 150), "copies = 2ⁿ",
+           fill=MAROON_DARK, font=font("mono", 44))
+    d.text((lx + 160, ly + 200), "n = number of cycles",
+           fill=MUTED, font=font("sans", 24))
+
+    # Bottom strip
+    d.rounded_rectangle([110, 985, W - 110, 1045], radius=14,
+                        fill=ACCENT_LT, outline=MAROON, width=4)
+    centered(d, "From 1 starting molecule to ~1 billion copies in about 2 hours.",
+             font("sans_bold", 26), 1003, MAROON_DARK)
+deck.custom("07_pcr_overview", pcr_overview)
+
+
+# 08 — PCR three steps
+def pcr_three_steps(img, d):
     d.text((110, 70), "PCR  —  three temperatures, one cycle.",
            fill=MAROON, font=font("serif_bold", 56))
     d.text((110, 160),
-           "Kary Mullis, 1985.  Nobel 1993.  Taq polymerase from Thermus aquaticus.",
+           "Each cycle ~doubles the target.  Taq polymerase from Thermus aquaticus.",
            fill=MUTED, font=font("sans", 28))
 
-    # Three step cards
     steps = [
         ("1. DENATURE", "~95 °C", "DNA strands separate.",
          "Hydrogen bonds break.", ACCENT_LT),
-        ("2. ANNEAL", "~55 °C", "Primers bind template.",
+        ("2. ANNEAL", "50–65 °C", "Primers bind template.",
          "Short DNA tags find their match.", ACCENT),
         ("3. EXTEND", "~72 °C", "Taq builds new strand.",
          "Heat-stable polymerase from\nThermus aquaticus.", ACCENT_LT),
@@ -340,27 +518,23 @@ def pcr_steps(img, d):
         x = start_x + i * (card_w + gap)
         d.rounded_rectangle([x, y0, x + card_w, y0 + card_h], radius=22,
                             outline=MAROON_DARK, width=5, fill=col)
-        # Title strip
         d.rectangle([x, y0, x + card_w, y0 + 80], fill=MAROON)
         lf = font("serif_bold", 40)
         tw = d.textlength(label, font=lf)
         d.text((x + card_w // 2 - tw / 2, y0 + 20), label,
                fill=CREAM, font=lf)
 
-        # Big temperature
-        tf = font("serif_bold", 100)
+        tf = font("serif_bold", 96)
         tw_t = d.textlength(temp, font=tf)
         d.text((x + card_w // 2 - tw_t / 2, y0 + 110), temp,
                fill=MAROON_DARK, font=tf)
 
-        # Lines
         body_y = y0 + 260
         bf = font("sans_bold", 30)
         lw_t = d.textlength(line1, font=bf)
         d.text((x + card_w // 2 - lw_t / 2, body_y), line1,
                fill=INK, font=bf)
 
-        # line2 may be multi-line
         sf = font("sans", 26)
         l2_lines = line2.split("\n")
         sy = body_y + 60
@@ -370,7 +544,6 @@ def pcr_steps(img, d):
                    fill=MUTED, font=sf)
             sy += 38
 
-        # Arrow to next
         if i < 2:
             ax = x + card_w + 4
             ay = y0 + card_h // 2
@@ -380,150 +553,25 @@ def pcr_steps(img, d):
                 (ax, ay + 22),
             ], fill=MAROON)
 
-    # Bottom strip — the key insight
+    # Bottom strip
     d.rounded_rectangle([110, 830, W - 110, 990], radius=20,
                         fill=ACCENT_LT, outline=MAROON, width=5)
-    centered(d, "WHY Taq?  Regular polymerase would denature at 95 °C — the whole reaction would die in cycle 1.",
+    centered(d, "WHY Taq?  Regular polymerase would denature at 95 °C — the reaction would die in cycle 1.",
              font("serif_bold", 28), 855, MAROON_DARK)
-    centered(d, "Taq came from a bacterium in Yellowstone's hot springs — that is why PCR exists.",
+    centered(d, "Taq came from a bacterium in hot springs — that is why PCR exists.",
              font("serif_ital", 28), 905, MAROON)
-    centered(d, "One thermal cycler runs 30 cycles in ~2 hours.",
+    centered(d, "Each cycle ~doubles target.  30 cycles ≈ 10⁹-fold amplification.",
              font("sans_bold", 26), 950, MAROON_DARK)
-deck.custom("06_pcr_steps", pcr_steps)
+deck.custom("08_pcr_three_steps", pcr_three_steps)
 
 
-# 07 — PCR amplification: doubling curve + cycle table
-def pcr_amplification(img, d):
-    d.text((110, 70), "Each cycle doubles.  30 cycles → ~1 billion.",
-           fill=MAROON, font=font("serif_bold", 56))
-
-    # Left: doubling chart
-    lx, ly = 110, 200
-    lw, lh = 1080, 780
-    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=20,
-                        outline=ACCENT, width=5, fill=CARD)
-    d.text((lx + 30, ly + 24), "Copies after each cycle (log scale)",
-           fill=MAROON_DARK, font=font("sans_bold", 30))
-
-    # Axes
-    gx0 = lx + 100
-    gy0 = ly + 700
-    gx1 = lx + lw - 50
-    gy1 = ly + 100
-    d.line([(gx0, gy1), (gx0, gy0)], fill=MAROON_DARK, width=4)
-    d.line([(gx0, gy0), (gx1, gy0)], fill=MAROON_DARK, width=4)
-    d.text((lx + 20, ly + 80), "copies", fill=MAROON_DARK,
-           font=font("sans_bold", 22))
-    d.text((gx1 - 80, gy0 + 14), "cycles →", fill=MAROON_DARK,
-           font=font("sans_bold", 22))
-
-    # X-axis: 30 cycles in 6 ticks (0, 5, 10, 15, 20, 25, 30)
-    n_cycles = 30
-    x_ticks = [0, 5, 10, 15, 20, 25, 30]
-    span_x = gx1 - gx0
-    for c in x_ticks:
-        px = gx0 + int(c / n_cycles * span_x)
-        d.line([(px, gy0), (px, gy0 + 12)], fill=MAROON_DARK, width=3)
-        lab = str(c)
-        tf = font("sans_bold", 22)
-        tw = d.textlength(lab, font=tf)
-        d.text((px - tw / 2, gy0 + 20), lab,
-               fill=MAROON_DARK, font=tf)
-
-    # Y-axis: log labels 1, 10, 100, ..., 10^9
-    y_labels = ["1", "10", "10²", "10⁴", "10⁶", "10⁸", "10⁹"]
-    y_vals = [0, 1, 2, 4, 6, 8, 9]  # log10 values
-    max_log = 9.0
-    span_y = gy0 - gy1
-    for lab, v in zip(y_labels, y_vals):
-        py = gy0 - int(v / max_log * span_y)
-        d.line([(gx0 - 10, py), (gx0, py)], fill=MAROON_DARK, width=3)
-        tf = font("sans_bold", 22)
-        tw = d.textlength(lab, font=tf)
-        d.text((gx0 - 20 - tw, py - 14), lab,
-               fill=MAROON_DARK, font=tf)
-
-    # Plot 2^n for n=0..30
-    prev = None
-    for c in range(n_cycles + 1):
-        copies_log = c * math.log10(2)  # log10(2^c)
-        px = gx0 + int(c / n_cycles * span_x)
-        py = gy0 - int(copies_log / max_log * span_y)
-        if prev is not None:
-            d.line([prev, (px, py)], fill=ACCENT, width=5)
-        # Dot
-        d.ellipse([px - 5, py - 5, px + 5, py + 5], fill=MAROON)
-        prev = (px, py)
-
-    # Annotations
-    # Cycle 10 marker
-    c = 10
-    px = gx0 + int(c / n_cycles * span_x)
-    py = gy0 - int((c * math.log10(2)) / max_log * span_y)
-    d.text((px + 12, py - 40), "10 cycles → 1,024 copies",
-           fill=MAROON_DARK, font=font("sans_bold", 22))
-
-    # Cycle 20 marker
-    c = 20
-    px = gx0 + int(c / n_cycles * span_x)
-    py = gy0 - int((c * math.log10(2)) / max_log * span_y)
-    d.text((px + 12, py - 40), "20 cycles → ~1 million",
-           fill=MAROON_DARK, font=font("sans_bold", 22))
-
-    # Cycle 30 marker
-    c = 30
-    px = gx0 + int(c / n_cycles * span_x)
-    py = gy0 - int((c * math.log10(2)) / max_log * span_y)
-    d.text((px - 280, py - 60), "30 cycles → ~10⁹ copies",
-           fill=MAROON, font=font("serif_bold", 28))
-
-    # Right: equation
-    rx = lx + lw + 30
-    rw = W - 110 - rx
-    rh = 780
-    d.rounded_rectangle([rx, ly, rx + rw, ly + rh], radius=20,
-                        outline=MAROON, width=5, fill=ACCENT_LT)
-    d.text((rx + 30, ly + 30), "FORMULA",
-           fill=MAROON_DARK, font=font("serif_bold", 44))
-    d.text((rx + 30, ly + 110),
-           "copies = 2ⁿ",
-           fill=MAROON_DARK, font=font("mono", 52))
-    d.text((rx + 30, ly + 180),
-           "n = # of cycles",
-           fill=INK, font=font("sans", 26))
-    # Examples
-    rows = [
-        ("n=10", "≈ 1,024"),
-        ("n=20", "≈ 1,048,576"),
-        ("n=30", "≈ 1.07 × 10⁹"),
-    ]
-    ey = ly + 260
-    for left, right in rows:
-        d.text((rx + 30, ey), left, fill=ACCENT,
-               font=font("sans_bold", 32))
-        d.text((rx + 30, ey + 40), right, fill=MAROON_DARK,
-               font=font("mono", 30))
-        ey += 110
-
-    d.text((rx + 30, ly + 610),
-           "Detect 1 virus →",
-           fill=INK, font=font("sans_bold", 28))
-    d.text((rx + 30, ly + 650),
-           "10⁹ copies in 2 hrs.",
-           fill=MAROON, font=font("serif_bold", 30))
-    d.text((rx + 30, ly + 710),
-           "→ visible band on gel.",
-           fill=MUTED, font=font("serif_ital", 24))
-deck.custom("07_pcr_amplification", pcr_amplification)
-
-
-# 08 — sequencing: Sanger ddNTP cards + NGS parallel diagram
-def sequencing(img, d):
+# 09 — DNA sequencing (Sanger + NGS)
+def dna_sequencing(img, d):
     d.text((110, 70), "DNA sequencing  —  reading the actual bases.",
            fill=MAROON, font=font("serif_bold", 56))
     d.text((110, 160),
-           "Sanger (classic) → NGS (modern parallel).",
-           fill=MUTED, font=font("sans", 30))
+           "Sanger (classic chain-termination) → next-gen sequencing (massively parallel).",
+           fill=MUTED, font=font("sans", 28))
 
     # Left: Sanger
     lx, ly = 110, 240
@@ -536,7 +584,6 @@ def sequencing(img, d):
            "Frederick Sanger, 1977  ·  Nobel 1980.",
            fill=MAROON_DARK, font=font("sans_bold", 24))
 
-    # ddNTP explanation
     d.text((lx + 30, ly + 160),
            "Key trick:  ddNTPs",
            fill=MAROON_DARK, font=font("serif_bold", 38))
@@ -563,7 +610,6 @@ def sequencing(img, d):
            fill=MAROON_DARK, font=font("sans_bold", 22))
     bases = ["A", "T", "G", "C", "A", "G", "T"]
     for i, b in enumerate(bases):
-        # Each fragment gets longer
         bar_y = ladder_y + 50 + i * 38
         d.rectangle([ladder_x, bar_y, ladder_x + 80 + i * 25, bar_y + 22],
                     fill=ACCENT_LT, outline=MAROON_DARK, width=2)
@@ -623,18 +669,28 @@ def sequencing(img, d):
                         fill=ACCENT_LT, outline=MAROON, width=4)
     centered(d, "Sanger: read ONE region accurately.   NGS: read EVERYTHING at once.",
              font("sans_bold", 26), 1006, MAROON_DARK)
-deck.custom("08_sequencing", sequencing)
+deck.custom("09_dna_sequencing", dna_sequencing)
 
 
-# 09 — CRISPR-Cas9 mechanism: gRNA + Cas9 → cut → repair
+# 10 — pause + try (Taq + PCR question)
+deck.pause("10_pause1", "PAUSE  &  TRY",
+           "Tiny drop of blood at a crime scene — just a few cells.  What amplifies it?  What gives Taq its key property?",
+           "PCR  +  Taq  =  ?",
+           hint="Pause now. Solve it. Press play when you're ready.")
+
+# 11 — duplicate for the answer-reveal section
+deck.duplicate("10_pause1", "11_pause1_silence")
+
+
+# 12 — CRISPR-Cas9 mechanism
 def crispr_cas9(img, d):
     d.text((110, 70), "CRISPR-Cas9  —  programmable scissors.",
            fill=MAROON, font=font("serif_bold", 56))
     d.text((110, 160),
-           "Doudna + Charpentier  ·  Nobel Chemistry 2020.",
-           fill=MUTED, font=font("sans", 30))
+           "Bacterial defense vs. viruses → adapted as a genome-editing tool.  Doudna + Charpentier · Nobel 2020.",
+           fill=MUTED, font=font("sans", 26))
 
-    # Stage 1: gRNA + Cas9 finding target
+    # Stage 1: target
     s1x = 110
     s1y = 250
     s1w = 580
@@ -644,19 +700,16 @@ def crispr_cas9(img, d):
     d.text((s1x + 20, s1y + 20), "1.  Target",
            fill=ACCENT, font=font("serif_bold", 42))
 
-    # Cas9 = big blob
     cx, cy = s1x + s1w // 2, s1y + 280
     d.ellipse([cx - 130, cy - 100, cx + 130, cy + 100],
               fill=ACCENT_LT, outline=MAROON_DARK, width=5)
     d.text((cx - 40, cy - 20), "Cas9",
            fill=MAROON_DARK, font=font("serif_bold", 40))
 
-    # gRNA hanging from Cas9
     d.line([(cx, cy + 100), (cx, cy + 200)], fill=MAROON, width=8)
     d.text((cx + 20, cy + 130), "gRNA",
            fill=MAROON, font=font("sans_bold", 28))
 
-    # Target DNA below
     dna_y = cy + 240
     d.rectangle([s1x + 40, dna_y, s1x + s1w - 40, dna_y + 20],
                 fill=INK)
@@ -666,7 +719,7 @@ def crispr_cas9(img, d):
            fill=MAROON_DARK, font=font("sans_bold", 24))
 
     d.text((s1x + 20, s1y + s1h - 60),
-           "gRNA finds matching sequence.",
+           "gRNA finds complementary sequence.",
            fill=MUTED, font=font("serif_ital", 24))
 
     # Stage 2: cut
@@ -679,7 +732,6 @@ def crispr_cas9(img, d):
     d.text((s2x + 20, s2y + 20), "2.  Cut",
            fill=ACCENT, font=font("serif_bold", 42))
 
-    # DNA cut diagram
     dna_y2 = s2y + 350
     d.rectangle([s2x + 40, dna_y2, s2x + s2w // 2 - 30, dna_y2 + 20],
                 fill=INK)
@@ -689,7 +741,6 @@ def crispr_cas9(img, d):
                 fill=INK)
     d.rectangle([s2x + s2w // 2 + 30, dna_y2 + 40, s2x + s2w - 40, dna_y2 + 60],
                 fill=INK)
-    # Scissors-like
     d.line([(s2x + s2w // 2 - 50, dna_y2 - 40),
             (s2x + s2w // 2 + 50, dna_y2 + 100)],
            fill=MAROON, width=8)
@@ -714,12 +765,10 @@ def crispr_cas9(img, d):
     d.text((s3x + 20, s3y + 20), "3.  Repair",
            fill=MAROON_DARK, font=font("serif_bold", 42))
 
-    # Two pathways
     d.text((s3x + 20, s3y + 130),
            "Cell repairs the cut:",
            fill=INK, font=font("sans_bold", 26))
 
-    # Path A: knockout
     d.rounded_rectangle([s3x + 20, s3y + 200, s3x + s3w - 20, s3y + 380],
                         radius=14, fill=CARD, outline=ACCENT, width=4)
     d.text((s3x + 40, s3y + 220), "A. Knock OUT",
@@ -731,7 +780,6 @@ def crispr_cas9(img, d):
            "Indels → gene broken.",
            fill=INK, font=font("sans", 24))
 
-    # Path B: insert
     d.rounded_rectangle([s3x + 20, s3y + 410, s3x + s3w - 20, s3y + 600],
                         radius=14, fill=CARD, outline=MAROON, width=4)
     d.text((s3x + 40, s3y + 430), "B. Knock IN",
@@ -746,261 +794,137 @@ def crispr_cas9(img, d):
            "Correct disease genes.",
            fill=MAROON_DARK, font=font("sans_bold", 22))
 
-    # Bottom strip
     d.rounded_rectangle([110, 980, W - 110, 1050], radius=14,
                         fill=ACCENT_LT, outline=MAROON, width=4)
     centered(d, "Cas9 makes the cut — the CELL does the repair. CRISPR is the scissors, not the result.",
              font("sans_bold", 26), 998, MAROON_DARK)
-deck.custom("09_crispr_cas9", crispr_cas9)
+deck.custom("12_crispr_cas9", crispr_cas9)
 
 
-# 10 — pause + try
-deck.pause("10_pause1", "PAUSE  &  TRY",
-           "Start with 1 DNA molecule. Each PCR cycle perfectly doubles. After 10 cycles, how many copies?",
-           "copies  =  2ⁿ",
-           hint="Pause now. Solve it. Press play when you're ready.")
-
-# 11 — duplicate for the answer-reveal section
-deck.duplicate("10_pause1", "11_pause1_silence")
-
-
-# 12 — applications: medicine + agriculture
-def applications_medicine_ag(img, d):
-    d.text((110, 70), "Applications  —  medicine  +  agriculture.",
+# 13 — applications (medicine + agriculture + forensics + diagnostics)
+def applications(img, d):
+    d.text((110, 70), "Applications  —  the toolkit in the wild.",
            fill=MAROON, font=font("serif_bold", 56))
 
-    # Left: Medicine
-    lx, ly = 110, 200
-    lw, lh = 870, 780
-    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=20,
-                        outline=ACCENT, width=5, fill=CARD)
-    d.text((lx + 30, ly + 24), "MEDICINE",
-           fill=ACCENT, font=font("sans_bold", 44))
-
-    med_items = [
-        ("RECOMBINANT INSULIN", "1982",
-         "First FDA-approved biotech drug.",
-         "Human insulin gene spliced",
-         "into E. coli using a plasmid."),
-        ("GENE THERAPY", "1990s →",
-         "Cures some forms of SCID",
-         "(bubble-boy disease) by inserting",
-         "a working copy of the gene."),
-        ("CRISPR TRIALS", "2023 →",
-         "Sickle-cell + beta-thalassemia",
-         "treated by editing patients'",
-         "own blood stem cells."),
+    domains = [
+        ("MEDICINE", ACCENT, [
+            ("Recombinant insulin (1982)",
+             "1st FDA-approved biotech drug."),
+            ("Gene therapy",
+             "Cures some forms of SCID."),
+            ("CRISPR trials",
+             "Sickle-cell, beta-thalassemia."),
+        ]),
+        ("AGRICULTURE", MAROON, [
+            ("Bt corn",
+             "Bacterial gene kills caterpillars."),
+            ("Roundup-Ready soy",
+             "Glyphosate-tolerant crops."),
+            ("Golden Rice",
+             "β-carotene → fights vit. A deficiency."),
+        ]),
+        ("FORENSICS", ACCENT, [
+            ("STR markers",
+             "Short tandem repeats vary per person."),
+            ("CODIS database",
+             "FBI matches DNA profiles nationwide."),
+            ("PCR amplifies trace DNA",
+             "→ usable evidence from few cells."),
+        ]),
+        ("DIAGNOSTICS", MAROON, [
+            ("HIV",
+             "PCR detects viral RNA directly."),
+            ("COVID-19",
+             "RT-PCR from a nasal swab."),
+            ("Prenatal screening",
+             "Cell-free fetal DNA from mom's blood."),
+        ]),
     ]
-    y = ly + 90
-    for name, date, l1, l2, l3 in med_items:
-        # Header row
-        d.text((lx + 30, y), name, fill=MAROON_DARK,
-               font=font("sans_bold", 28))
-        df = font("serif_ital", 24)
-        dw = d.textlength(date, font=df)
-        d.text((lx + lw - 30 - dw, y + 2), date,
-               fill=ACCENT, font=df)
-        # Body
-        d.text((lx + 30, y + 50), l1, fill=INK, font=font("sans", 24))
-        d.text((lx + 30, y + 85), l2, fill=INK, font=font("sans", 24))
-        d.text((lx + 30, y + 120), l3, fill=INK, font=font("sans", 24))
-        y += 230
 
-    # Right: Agriculture
-    rx = lx + lw + 30
-    rw = W - 110 - rx
-    d.rounded_rectangle([rx, ly, rx + rw, ly + lh], radius=20,
-                        outline=MAROON, width=5, fill=CARD)
-    d.text((rx + 30, ly + 24), "AGRICULTURE",
-           fill=MAROON_DARK, font=font("sans_bold", 44))
+    card_w = 850
+    card_h = 380
+    gap_x = 30
+    gap_y = 20
+    start_x = (W - (card_w * 2 + gap_x)) // 2
+    y0 = 200
+    for i, (name, color, items) in enumerate(domains):
+        col = i % 2
+        row = i // 2
+        bx = start_x + col * (card_w + gap_x)
+        by = y0 + row * (card_h + gap_y)
+        d.rounded_rectangle([bx, by, bx + card_w, by + card_h],
+                            radius=20, outline=color, width=5,
+                            fill=CARD)
+        # Title strip
+        d.rectangle([bx, by, bx + card_w, by + 64], fill=color)
+        d.text((bx + 24, by + 14), name,
+               fill=CREAM, font=font("sans_bold", 36))
 
-    ag_items = [
-        ("Bt CORN", "Bacillus thuringiensis gene",
-         "→ corn makes its own",
-         "insecticidal protein.",
-         "Kills caterpillars; safe for"),
-        ("ROUNDUP-READY", "Soybeans engineered to",
-         "tolerate glyphosate herbicide.",
-         "Farmers spray crops without",
-         "killing them."),
-        ("GOLDEN RICE", "Rice engineered to make",
-         "beta-carotene (vitamin A).",
-         "Designed to combat",
-         "vitamin-A blindness."),
-    ]
-    y = ly + 90
-    for name, l1, l2, l3, l4 in ag_items:
-        d.text((rx + 30, y), name, fill=MAROON_DARK,
-               font=font("sans_bold", 28))
-        d.text((rx + 30, y + 50), l1, fill=INK, font=font("sans", 24))
-        d.text((rx + 30, y + 85), l2, fill=INK, font=font("sans", 24))
-        d.text((rx + 30, y + 120), l3, fill=INK, font=font("sans", 24))
-        d.text((rx + 30, y + 155), l4, fill=INK, font=font("sans", 24))
-        y += 230
-
-    # Bottom ethics strip
-    d.rounded_rectangle([110, 1000, W - 110, 1060], radius=14,
-                        fill=ACCENT_LT, outline=MAROON, width=4)
-    centered(d, "Ethics:  germline editing  ·  GMO patents  ·  ecological risk  ·  genetic privacy.",
-             font("sans_bold", 24), 1018, MAROON_DARK)
-deck.custom("12_applications_medicine_ag", applications_medicine_ag)
-
-
-# 13 — applications: forensics + diagnostics
-def applications_forensics_diagnostics(img, d):
-    d.text((110, 70), "Forensics  +  diagnostics.",
-           fill=MAROON, font=font("serif_bold", 56))
-
-    # Left: Forensics — DNA fingerprint
-    lx, ly = 110, 200
-    lw, lh = 870, 780
-    d.rounded_rectangle([lx, ly, lx + lw, ly + lh], radius=20,
-                        outline=ACCENT, width=5, fill=CARD)
-    d.text((lx + 30, ly + 24), "FORENSICS",
-           fill=ACCENT, font=font("sans_bold", 44))
-    d.text((lx + 30, ly + 90),
-           "DNA fingerprinting",
-           fill=MAROON_DARK, font=font("serif_bold", 36))
-
-    d.text((lx + 30, ly + 160),
-           "STR markers — short tandem",
-           fill=INK, font=font("sans", 26))
-    d.text((lx + 30, ly + 195),
-           "repeats. Each person has",
-           fill=INK, font=font("sans", 26))
-    d.text((lx + 30, ly + 230),
-           "a unique pattern of repeats.",
-           fill=INK, font=font("sans", 26))
-
-    # Mini fingerprint bands
-    fy = ly + 310
-    d.text((lx + 30, fy), "Crime scene vs. suspects:",
-           fill=MAROON_DARK, font=font("sans_bold", 24))
-    cols_labels = ["scene", "S1", "S2", "S3"]
-    col_w_lane = 110
-    gap_lane = 30
-    start_lane = lx + 80
-    lane_y0 = fy + 50
-    lane_h = 340
-    # Reference profile (scene) bands at specific positions
-    scene_bands = [40, 110, 200, 280]
-    # Suspect band patterns — match S2
-    profiles = [
-        scene_bands,                  # scene
-        [60, 130, 220, 300],          # S1 - different
-        scene_bands,                  # S2 - MATCH
-        [50, 140, 230, 290],          # S3 - different
-    ]
-    for i, (lbl, bands) in enumerate(zip(cols_labels, profiles)):
-        lx_lane = start_lane + i * (col_w_lane + gap_lane)
-        # Lane background
-        d.rectangle([lx_lane, lane_y0, lx_lane + col_w_lane,
-                     lane_y0 + lane_h], fill=ACCENT_LT,
-                    outline=MAROON_DARK, width=3)
-        # Highlight matching column (S2)
-        col = MAROON if i == 2 else INK
-        for b in bands:
-            d.rectangle([lx_lane + 8, lane_y0 + b,
-                         lx_lane + col_w_lane - 8, lane_y0 + b + 16],
-                        fill=col)
-        # Label
-        lf = font("sans_bold", 24)
-        tw = d.textlength(lbl, font=lf)
-        d.text((lx_lane + col_w_lane // 2 - tw / 2, lane_y0 + lane_h + 10),
-               lbl, fill=MAROON_DARK if i == 2 else INK, font=lf)
-    d.text((lx + 30, ly + lh - 60), "CODIS database — FBI matches profiles nationwide.",
-           fill=MAROON_DARK, font=font("sans_bold", 22))
-
-    # Right: Diagnostics
-    rx = lx + lw + 30
-    rw = W - 110 - rx
-    d.rounded_rectangle([rx, ly, rx + rw, ly + lh], radius=20,
-                        outline=MAROON, width=5, fill=CARD)
-    d.text((rx + 30, ly + 24), "DIAGNOSTICS",
-           fill=MAROON_DARK, font=font("sans_bold", 44))
-    d.text((rx + 30, ly + 90),
-           "PCR-based tests",
-           fill=MAROON_DARK, font=font("serif_bold", 36))
-
-    diags = [
-        ("HIV", "PCR detects viral RNA",
-         "directly — earlier than",
-         "antibody tests."),
-        ("COVID-19", "Nasal swab → RT-PCR",
-         "amplifies viral RNA.",
-         "Threshold cycle = viral load."),
-        ("PRENATAL", "Cell-free fetal DNA in",
-         "maternal blood. Detects",
-         "Down syndrome (trisomy 21)."),
-    ]
-    y = ly + 160
-    for name, l1, l2, l3 in diags:
-        d.text((rx + 30, y), name, fill=ACCENT,
-               font=font("serif_bold", 32))
-        d.text((rx + 30, y + 45), l1, fill=INK, font=font("sans", 24))
-        d.text((rx + 30, y + 80), l2, fill=INK, font=font("sans", 24))
-        d.text((rx + 30, y + 115), l3, fill=INK, font=font("sans", 24))
-        y += 195
-
-    d.text((rx + 30, ly + lh - 60),
-           "Same toolkit, different question.",
-           fill=MAROON_DARK, font=font("serif_ital", 24))
+        ly_item = by + 90
+        for head, sub in items:
+            # Bullet
+            d.ellipse([bx + 28, ly_item + 16, bx + 44, ly_item + 32],
+                      fill=color)
+            d.text((bx + 60, ly_item + 4), head,
+                   fill=MAROON_DARK, font=font("sans_bold", 26))
+            d.text((bx + 60, ly_item + 42), sub,
+                   fill=INK, font=font("sans", 22))
+            ly_item += 90
 
     # Bottom strip
-    d.rounded_rectangle([110, 1000, W - 110, 1060], radius=14,
+    d.rounded_rectangle([110, 985, W - 110, 1050], radius=14,
                         fill=ACCENT_LT, outline=MAROON, width=4)
-    centered(d, "Forensics asks WHO.  Diagnostics asks WHAT.  Both lean hard on PCR.",
-             font("sans_bold", 26), 1016, MAROON_DARK)
-deck.custom("13_applications_forensics_diagnostics", applications_forensics_diagnostics)
+    centered(d, "Same toolkit — different question — different field.",
+             font("sans_bold", 28), 1004, MAROON_DARK)
+deck.custom("13_applications", applications)
 
 
-# 14 — compare traps: PCR vs sequencing (and other confusions)
+# 14 — compare traps: germline vs somatic + gel separates by size
 deck.compare("14_compare_traps",
              "Common traps  —  what students mix up.",
-             left={"label": "PCR",
-                   "color": ACCENT,
+             left={"label": "GERMLINE edit",
+                   "color": MAROON,
                    "lines": [
-                       "AMPLIFIES a known region.",
+                       "Changes sperm or egg DNA.",
                        "",
-                       "Needs primers you DESIGN",
-                       "for a known target.",
+                       "Heritable — passes to every",
+                       "future generation.",
                        "",
-                       "Output: lots of copies",
-                       "of ONE sequence.",
+                       "Banned for human clinical",
+                       "use in most countries.",
                        "",
-                       "Used in: diagnostics,",
-                       "forensics, cloning prep.",
+                       "Ethics: consent for unborn",
+                       "generations, equity.",
                    ],
-                   "footnote": "If 'how MUCH is there' → PCR."},
-             right={"label": "SEQUENCING",
-                    "color": MAROON,
+                   "footnote": "Permanent across the species line."},
+             right={"label": "SOMATIC edit",
+                    "color": ACCENT,
                     "lines": [
-                        "READS the order of bases.",
+                        "Changes body cells only.",
                         "",
-                        "Doesn't require you to",
-                        "know the sequence first.",
+                        "Stops with the patient —",
+                        "not inherited.",
                         "",
-                        "Output: the actual",
-                        "letters of the DNA.",
+                        "Sickle-cell CRISPR trials",
+                        "are somatic.",
                         "",
-                        "Used in: genome projects,",
-                        "cancer panels, variant ID.",
+                        "Also: gel separates by SIZE,",
+                        "NOT by sequence.",
                     ],
-                    "footnote": "If 'what IS the sequence' → sequencing."})
+                    "footnote": "Different ethics — different rules."})
 
 
-# 15 — recap
+# 15 — recap + ethics in the assignment box
 deck.recap("15_recap", "Recap.", [
-    "Restriction enzymes cut at specific sites (EcoRI → GAATTC, sticky ends); ligase seals; plasmids carry inserts.",
+    "Restriction enzymes cut at palindromic sites (EcoRI → GAATTC, sticky ends); ligase seals; plasmids carry inserts.",
     "Gel electrophoresis: DNA is negative → moves to +; smaller fragments travel farther.",
-    "PCR: 95 °C denature, ~55 °C anneal, 72 °C extend with Taq. 30 cycles → ~10⁹ copies.",
-    "Sanger sequencing uses ddNTPs (terminate chain). NGS reads millions of fragments in parallel.",
-    "CRISPR-Cas9: gRNA targets Cas9 to make a double-strand cut; cell repair knocks out or inserts.",
+    "PCR: 95 °C denature → 50–65 °C anneal → 72 °C extend with Taq. 30 cycles ≈ 10⁹ copies.",
+    "Sanger uses ddNTPs (chain terminators). NGS reads millions of fragments in parallel.",
+    "CRISPR-Cas9: gRNA + Cas9 → double-strand cut; cell repair knocks out or inserts.",
     "Applications: insulin, gene therapy, sickle-cell CRISPR, Bt corn, Golden Rice, CODIS, COVID PCR.",
-    "Ethics: germline editing, GMO patents, ecological risk, genetic privacy.",
 ], assignment=[
-    "1.  Sketch a PCR cycle. Label the 3 temperatures and what happens at each step.",
-    "2.  In 2-3 sentences, explain how a COVID-19 PCR test detects one viral RNA molecule.",
+    "Ethics to know:  germline edits & consent for future generations  ·  equity of access",
+    "Patent law (Myriad BRCA case)  ·  GMO ecological release  ·  genetic privacy.",
 ])
 
 
@@ -1009,9 +933,9 @@ deck.path("16_path", [
     ("✓",  "Watch this lesson",       "(done!)"),
     ("1.", "Read OpenStax Biology",   "Chapter 17 — biotechnology tools and applications"),
     ("2.", "Khan Academy AP Bio",     "Unit 6 problem sets — biotech, PCR, gel, CRISPR"),
-    ("3.", "Assignment in dashboard", "PCR cycle diagram + COVID test explanation (above)"),
-    ("4.", "Advisor check-in",        "If PCR steps or CRISPR mechanism still feel fuzzy"),
-], next_text="Next up:  Module 10 — Natural Selection  (Unit 7 begins).")
+    ("3.", "Assignment in dashboard", "PCR cycle diagram + COVID test explanation"),
+    ("4.", "Advisor check-in",        "If PCR steps or the CRISPR mechanism still feel fuzzy"),
+], next_text="Next up:  Module 10 — Natural Selection and Evolution  (Unit 7 begins).")
 
 
 print("AP Biology Module 9 slides built.")

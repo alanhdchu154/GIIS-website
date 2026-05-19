@@ -1,0 +1,12 @@
+{
+  "reviewer": "C",
+  "role": "citation-checker",
+  "module": "ap-biology-module-1-chemistry-of-life",
+  "reference_doc": "references/ap-biology-m1-ref.md",
+  "verdict": "pass",
+  "issues": [
+    {"section": "02_hook", "severity": "minor", "description": "The specific figure 'a hundred-foot tree' is rhetorical and not explicitly cited in the reference (reference only says water 'climbs a tree' via transpiration). Acceptable as an illustrative example, not a content claim."},
+    {"section": "16_path", "severity": "minor", "description": "'Khan Academy AP Biology Unit 1 problem sets' is a study-resource suggestion not present in the reference doc — not a factual claim about biology, but flagged for completeness."}
+  ],
+  "summary": "All substantive biology claims (8-11% exam weight, 96% by mass C/H/O/N, CHNOPS, 5% covalent strength for H-bonds, 104.5 degree water angle, four valence electrons, glucose C6H12O6, alpha-1,4 vs beta-1,4 bonds, hemoglobin 4 subunits, A=T 2 H-bonds vs G triple-C 3 H-bonds, amylase/collagen/keratin/hemoglobin/antibodies/myosin/actin examples, OpenStax 3.4 attribution) are directly supported by the reference; only two minor non-content items flagged."
+}

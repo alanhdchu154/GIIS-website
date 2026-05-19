@@ -1,0 +1,74 @@
+{
+  "reviewer": "B",
+  "role": "adversarial-student",
+  "module": "ap-biology-module-2-cell-structure",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "04_prok_vs_euk",
+      "severity": "minor",
+      "description": "Claim that eukaryotes have '80S ribosomes in their cytoplasm' is correct but invites confusion later — students will ask why endosymbiosis (section 13) says mitochondria/chloroplasts have 70S ribosomes 'inside' a eukaryote. The lesson never explicitly reconciles 'eukaryotes have 80S in cytosol AND 70S inside mitochondria/chloroplasts.' Adversarial student trap: 'You said eukaryotes have 80S — so how can they also have 70S?'"
+    },
+    {
+      "section": "06_nucleus_ribosomes",
+      "severity": "minor",
+      "description": "The free vs bound ribosome distinction is presented as if it's two different ribosome types. AP students commonly misconceive this — the ribosomes are identical; localization is determined by the signal peptide on the nascent protein. The script's phrasing 'Free ribosomes... make proteins that stay in the cell. Bound ribosomes... make proteins destined for membranes, lysosomes, or export' reinforces the misconception of two ribosome populations rather than dynamic targeting."
+    },
+    {
+      "section": "07_endomembrane",
+      "severity": "minor",
+      "description": "States lysosomes are 'present in animal cells' without qualifying — fungi and many protists also have lysosome-equivalent acidic compartments. More importantly, section 14 later says lysosomes are 'mainly found in animal cells' (softer language), which contradicts the absolute phrasing here. Pick one. Also, the endomembrane system technically INCLUDES the nuclear envelope and plasma membrane — but section 06 introduced the nucleus as separate, leaving a gap."
+    },
+    {
+      "section": "08_mitochondria_chloroplasts",
+      "severity": "critical",
+      "description": "Two oversimplifications that become misconceptions: (1) 'Chloroplasts... are found in plants and algae only — never in animal cells' — TRUE, but the lesson does NOT address the common student misconception that ALL plant cells have chloroplasts. Root cells, internal stem cells, and non-photosynthetic tissues lack functional chloroplasts (they have other plastids: leucoplasts, amyloplasts). This is a documented AP trap. (2) 'They show up in nearly all eukaryotic cells' for mitochondria — good hedging, but the lesson never names exceptions (mature RBCs lose them) and never mentions mitosomes/hydrogenosomes in some anaerobic eukaryotes. Minor for AP, but the 'nearly all' is left dangling without explanation."
+    },
+    {
+      "section": "08_mitochondria_chloroplasts",
+      "severity": "minor",
+      "description": "Says mitochondria 'run the oxygen-requiring parts of cellular respiration' and 'generate the bulk of the cell's ATP.' Glycolysis is correctly placed in the cytosol, but the Krebs cycle does not directly require oxygen — only the ETC does. A sharp AP student will catch that 'oxygen-requiring parts' is fuzzy. Also, 'the folded inner one whose folds are called cristae, where the ATP machinery lives' — ATP synthase is on the cristae membrane, but the matrix (not mentioned) is where the Krebs cycle runs. Matrix is conspicuously absent."
+    },
+    {
+      "section": "09_cytoskeleton",
+      "severity": "minor",
+      "description": "Cilia and flagella are mentioned as having microtubule cores — but the script doesn't distinguish eukaryotic flagella (9+2 microtubule arrangement) from prokaryotic flagella (flagellin protein, rotating motor). Students who learned prokaryotic flagella elsewhere will conflate them. Also no mention that centrosomes/centrioles are microtubule-organizing centers — relevant for AP cell-cycle questions."
+    },
+    {
+      "section": "11_pause1_silence",
+      "severity": "critical",
+      "description": "Peroxisomes are introduced ONLY in the answer to the pause question — they were never covered in the organelle tour (sections 06-09). The pause is supposed to test recall, but the third answer (peroxisomes + catalase) requires knowledge the lesson never delivered. This is a sequencing failure. Either add peroxisomes to section 07 or change the pause prompt."
+    },
+    {
+      "section": "12_sa_v_ratio",
+      "severity": "minor",
+      "description": "Uses 'radius cubed' and 'radius squared' — but cells aren't spheres. The formula is true for a sphere; the principle generalizes, but the lesson uses 'radius' without saying 'assuming a spherical cell' or noting that real cells exploit shape (which is then mentioned as a workaround — 'flattening their shape'). Mild internal tension: if shape matters, then 'r-cubed vs r-squared' is a model, not law."
+    },
+    {
+      "section": "13_endosymbiosis",
+      "severity": "minor",
+      "description": "Says endosymbiosis happened 'about one-and-a-half to two billion years ago' — fine for mitochondria; chloroplast endosymbiosis was later (~1 billion years ago) and is a SEPARATE event (secondary endosymbiosis exists too). Lesson collapses both into one timeline. Also, '70S ribosomes' as evidence: technically correct, but mitochondrial ribosomes are now known to have diverged significantly (55S in mammals) — AP doesn't test this depth, but a top student reading further will be confused."
+    },
+    {
+      "section": "14_compare_traps",
+      "severity": "minor",
+      "description": "Good that the lesson explicitly addresses the chloroplast-and-lysosome traps, but misses two other classic AP traps: (1) cell wall composition — plants (cellulose) vs fungi (chitin) vs bacteria (peptidoglycan) — never mentioned anywhere in the module; (2) plasmodesmata vs gap junctions vs tight junctions — cell-cell connections are absent from the module entirely. For a 'Cell Structure' module that maps to CED Unit 2, this is a coverage gap."
+    },
+    {
+      "section": "15_recap",
+      "severity": "minor",
+      "description": "Recap says 'chloroplasts make glucose in plants' — reinforces the 'all plant cells have chloroplasts' misconception flagged above. Should say 'in photosynthetic plant cells' or 'in plant leaf cells.'"
+    },
+    {
+      "section": "module-wide",
+      "severity": "minor",
+      "description": "Topic 2.4 (plasma membranes intro) is listed in _outline.json ced_topics but receives essentially zero treatment in the script — the plasma membrane is only mentioned in passing (vesicles deliver to it, SA:V is about it). No phospholipid bilayer, no fluid mosaic, no membrane proteins. The outline promises 'intro only — deep transport deferred to M3,' but the script delivers nothing at all. Either remove from outline or add 1-2 sentences."
+    },
+    {
+      "section": "module-wide",
+      "severity": "minor",
+      "description": "Cell wall and extracellular matrix are not covered. Plant cell wall, fungal cell wall, animal ECM, and the relationship between cell wall and central vacuole turgor pressure are all common AP topics under Unit 2. The 'central vacuole' is mentioned once in section 14 only as a lysosome contrast, with no mention of turgor or storage."
+    }
+  ],
+  "summary": "Solid skeleton with accurate CED-aligned content, but peroxisomes-in-answer-only is a real sequencing failure, the 'all plant cells have chloroplasts' misconception is not headed off, and several Unit 2 topics (cell walls, junctions, plasma membrane intro) are absent — minor verdict assuming peroxisomes get added to the organelle tour."
+}

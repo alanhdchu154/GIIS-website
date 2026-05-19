@@ -8,67 +8,67 @@
   "sections": [
     {
       "id": "01_title",
-      "text": "Welcome back to AP Biology — Module Six, Mendelian Genetics. This kicks off College Board Unit Five, Heredity, which lands on roughly eight to eleven percent of the AP exam. We'll cover Mendel's three laws, Punnett squares, the patterns that go beyond Mendel, meiosis, and chromosomal disorders."
+      "text": "Welcome back to AP Biology. This is Module Six — Mendelian Genetics. We're inside College Board Unit Five, which is eight to eleven percent of the AP exam. Today's job: connect meiosis to inheritance, and figure out why offspring look like — and unlike — their parents."
     },
     {
       "id": "02_hook",
-      "text": "Two brown-eyed parents have a blue-eyed child. Not the mailman. Both parents are heterozygous — capital B, lowercase b — each carrying one hidden recessive allele. About a quarter of their children will get b from both sides and have blue eyes. One man with pea plants worked all of this out in 1865, a full century before we knew what DNA even was. His name was Gregor Mendel."
+      "text": "Here's a number that should stop you. You share ninety-nine point nine percent of your DNA with every other human on Earth. The remaining zero point one percent — the part that makes you, you — gets shuffled in meiosis. Independent assortment alone gives roughly eight point four million unique chromosome combinations per gamete. Add crossing over and random fertilization, and the number of possible you's explodes. That's what we're unpacking today."
     },
     {
       "id": "03_overview",
-      "text": "Four things to lock in today. First — Mendel's three laws. Second — Punnett squares, both the simple three-to-one cross and the four-by-four nine-three-three-one. Third — when Mendel's basic rules don't quite fit, the non-Mendelian patterns AP loves to test. And fourth — meiosis itself, linkage, and what happens when chromosomes mis-separate."
+      "text": "Three big moves today. First — meiosis: two divisions, one diploid cell becomes four haploid gametes. Second — Mendel's three laws, plus the ratios that come out of his crosses. Third — the non-Mendelian patterns that break the simple three-to-one rule. By the end, you'll be able to predict offspring ratios for almost any cross."
     },
     {
-      "id": "04_mendel_laws",
-      "text": "Mendel's three laws. Segregation — each parent has two alleles per gene, but gametes only carry one. The alleles split apart during meiosis one. Independent assortment — alleles for different genes sort independently of each other, as long as those genes are on different chromosomes. Dominance — in a heterozygote, only the dominant allele shows up in the phenotype; the recessive is masked. These three are the foundation; everything else in this module is either a confirmation or an exception."
+      "id": "04_meiosis_overview",
+      "text": "Big picture. Meiosis takes one diploid germ cell — that's two-N, forty-six chromosomes in humans — and produces four haploid gametes, each with N — twenty-three chromosomes. It does this in two divisions. Meiosis One separates homologous pairs. Meiosis Two separates sister chromatids. The result: four genetically unique haploid cells, ready to become sperm or eggs."
     },
     {
-      "id": "05_monohybrid_punnett",
-      "text": "Monohybrid cross — one trait, two heterozygous parents, capital A lowercase a crossed with capital A lowercase a. Draw a two-by-two grid. Mother contributes A or a along the top; father contributes A or a along the side. Fill the four cells: one AA, two Aa, one aa. That's a one-to-two-to-one genotype ratio, which collapses to a three-to-one phenotype ratio — three dominant to one recessive. Memorize three-to-one. It's the signature of a heterozygous cross."
+      "id": "05_meiosis_I_II_compare",
+      "text": "Two divisions, two jobs. Meiosis One is reductional — chromosome number is cut in half because homologous chromosomes pair up in Prophase One, cross over, line up in Metaphase One, and then separate. Meiosis Two is equational — sister chromatids separate, just like mitosis, but on haploid cells. Ploidy doesn't change in Meiosis Two. So: Meiosis One halves the number; Meiosis Two splits the duplicates."
     },
     {
-      "id": "06_dihybrid_punnett",
-      "text": "Dihybrid cross — two traits, both heterozygous. AaBb crossed with AaBb. Each parent makes four kinds of gametes: AB, Ab, aB, ab. So you get a four-by-four Punnett with sixteen cells. Count the phenotypes: nine show both dominants, three show A dominant and b recessive, three show a recessive and B dominant, and one shows both recessives. Nine to three to three to one. The shortcut — each gene by itself still gives you a three-to-one, and you just multiply them. But this only works if the two genes are unlinked."
+      "id": "06_three_sources_variation",
+      "text": "Three sources of genetic variation in meiosis — memorize these. One: crossing over in Prophase One — non-sister chromatids of homologous pairs exchange DNA at chiasmata. Two: independent assortment in Metaphase One — each homologous pair lines up independently, giving two to the twenty-third — about eight point four million — combinations per human gamete. Three: random fertilization — any one of those gametes meets any of millions from the other parent. Multiply them together and the variation is staggering."
     },
     {
-      "id": "07_non_mendelian",
-      "text": "Six non-Mendelian patterns. Incomplete dominance — heterozygote is a blend, like pink snapdragons from red and white parents. Codominance — both alleles fully show, like AB blood type expressing both A and B antigens at the same time. Multiple alleles — more than two versions exist in the population, like the I-A, I-B, and i alleles for blood type. Pleiotropy — one gene affects many traits; the sickle-cell allele alone causes anemia, organ damage, and malaria resistance. Polygenic — many genes contribute to one trait, like height or skin color, producing a smooth distribution. And epistasis — one gene's expression depends on another, like Labrador coat color."
+      "id": "07_mendel_laws",
+      "text": "Mendel ran pea-plant crosses in the eighteen-sixties and gave us three laws. Segregation — the two alleles for a gene separate during gamete formation; each gamete gets only one. Independent assortment — alleles for different genes sort independently, as long as the genes are on different chromosomes. Dominance — in a heterozygote, the dominant allele's phenotype is the one you see; the recessive is masked but not erased."
     },
     {
-      "id": "08_sex_linked",
-      "text": "Sex-linked inheritance lives on the X chromosome. Females have two X's, so they need two recessive alleles to show an X-linked recessive trait. But males only have one X and a Y — we call them hemizygous — so one recessive allele is enough. That's why X-linked recessive disorders affect males far more often than females. The classic examples — red-green color blindness, hemophilia, and Duchenne muscular dystrophy. A carrier mother crossed with a normal father gives half her sons the affected condition and half her daughters as carriers."
+      "id": "08_monohybrid_dihybrid",
+      "text": "The ratios you must know. A monohybrid cross — heterozygote times heterozygote, big-A little-a times big-A little-a — gives a three-to-one phenotype ratio and a one-to-two-to-one genotype ratio. A dihybrid cross — big-A little-a big-B little-b times the same — gives the famous nine-to-three-to-three-to-one phenotype ratio. But that nine-three-three-one only holds when the two genes are on different chromosomes. If they're linked, the ratio breaks."
     },
     {
-      "id": "09_meiosis_overview",
-      "text": "Meiosis. One diploid germ cell becomes four haploid gametes through two divisions. Meiosis one is reductional — homologous chromosomes pair up in synapsis, cross over to exchange DNA at chiasmata, then the whole homologs separate. Diploid becomes haploid here. Meiosis two is equational — it's basically mitosis on haploid cells, where sister chromatids finally separate. Three sources of variation: crossing over in prophase one, independent assortment of homologs at metaphase one, and random fertilization. In humans, just independent assortment alone gives over eight million combinations."
+      "id": "09_non_mendelian_intro",
+      "text": "Mendel got lucky — pea traits are clean. Real biology gets weirder. Incomplete dominance: red snapdragon crossed with white gives pink — the heterozygote is its own intermediate phenotype, so the ratio becomes one red, two pink, one white. Codominance is different — both alleles fully show. ABO blood: a person with the I-A and I-B alleles displays both A and B antigens on their red blood cells — that's type AB. Blended versus both-showing — don't confuse them."
     },
     {
       "id": "10_pause1",
-      "text": "Try this. A man with hemophilia, which is X-linked recessive, marries a woman who is not a carrier — completely normal. What are the genotypes and phenotypes of their daughters and their sons? Pause now. Work the Punnett. Press play when you're ready."
+      "text": "Pause and try — two predictions. First: two pink snapdragons are crossed. What phenotype ratio do you expect in the offspring? Second: one parent has blood type AB; the other has type O. What blood types can their kids have, and in what ratio? Pause now. Work it out. Press play when you're ready."
     },
     {
       "id": "11_pause1_silence",
-      "text": "Answer. The father is X-lowercase-h Y — affected, hemizygous. The mother is X-capital-H X-capital-H — not a carrier. All daughters get X-capital-H from mom and X-lowercase-h from dad — so every daughter is a heterozygous carrier, but none have the disease. All sons get X-capital-H from mom and Y from dad — so every son is completely normal. The key trap: affected father plus non-carrier mother gives zero affected children, but every daughter becomes a carrier. The disease shows up again in the grandsons."
+      "text": "Answers. Pink times pink is big-R little-r times big-R little-r — a monohybrid cross with incomplete dominance. Offspring come out one big-R big-R red, two big-R little-r pink, one little-r little-r white. That's the classic one-two-one. Second cross: blood type AB is I-A I-B; type O is little-i little-i. Every child inherits little-i from the O parent, and either I-A or I-B from the AB parent. So fifty percent are I-A little-i — type A — and fifty percent are I-B little-i — type B. No AB. No O. Ever."
     },
     {
-      "id": "12_linkage_recombination",
-      "text": "Linkage. When two genes sit close together on the same chromosome, they tend to be inherited together — they violate Mendel's law of independent assortment. We measure how often they get separated by crossing over with recombination frequency. One percent recombinant offspring equals one centimorgan of map distance. Zero percent means fully linked; fifty percent means effectively unlinked. The maximum is fifty percent because crossing over only swaps half the gametes on average. Alfred Sturtevant used this idea to build the first gene map in 1913, while he was still a sophomore in college."
+      "id": "12_multiple_alleles_pleiotropy",
+      "text": "Two more patterns. Multiple alleles — a gene has more than two versions in the population, even though any one person carries only two. ABO blood is the classic example: three alleles — I-A, I-B, and little-i — combining to make four blood types. Pleiotropy — one gene affects many traits. The sickle-cell allele is the textbook case: it changes hemoglobin, which causes anemia, pain crises, organ damage — and in heterozygotes, resistance to malaria. One mutation, a whole cascade."
     },
     {
-      "id": "13_chromosomal_disorders",
-      "text": "When chromosomes fail to separate properly in meiosis, we call it nondisjunction. One gamete ends up with an extra chromosome; the other is missing one. Fertilize either of those and you get aneuploidy — the wrong chromosome count. Trisomy twenty-one causes Down syndrome — the most common viable autosomal trisomy. XXY is Klinefelter syndrome — males with an extra X. XO is Turner syndrome — females with only one X. Aneuploidy of full sets is called polyploidy. In plants it's common and often beneficial — wheat and strawberries are polyploid — but in animals it's almost always lethal."
+      "id": "13_sex_linked_polygenic",
+      "text": "Two more flavors. Sex-linked — most often X-linked recessive. Females are X X, so they need two recessive alleles to show the trait. Males are X Y — they're hemizygous, meaning only one X, so any recessive allele on it is always expressed. That's why red-green color blindness, hemophilia, and Duchenne muscular dystrophy hit males far more often. Polygenic inheritance — many genes contribute to one trait, so you get continuous distributions instead of discrete categories. Human height and skin color are polygenic."
     },
     {
       "id": "14_compare_traps",
-      "text": "Common trap — students mix up incomplete dominance and codominance. In incomplete dominance the heterozygote is a blend, an in-between, like red plus white snapdragons giving pink — one brand new intermediate phenotype, with a one-to-two-to-one ratio. In codominance both alleles fully show up at once with no blending — like AB blood type, where both A and B antigens are visible simultaneously. The trick — if the heterozygote looks new, it's incomplete. If the heterozygote shows both parent traits at once, it's codominance."
+      "text": "The classic trap students fall into: incomplete dominance versus codominance. They sound similar — they're not. Incomplete dominance blends — pink from red and white, a brand-new intermediate phenotype. Codominance shows both at the same time, fully and separately — A antigens and B antigens both on the same cell, neither blended nor masked. The genotype-to-phenotype ratio is one-two-one for both, but the heterozygote looks completely different."
     },
     {
       "id": "15_recap",
-      "text": "Recap. Mendel's three laws are segregation, independent assortment, and dominance. Aa by Aa gives three-to-one phenotype. AaBb by AaBb gives nine-to-three-to-three-to-one, but only if the genes are unlinked. Non-Mendelian patterns — incomplete dominance, codominance, multiple alleles, pleiotropy, polygenic, epistasis. X-linked recessive traits hit males harder because they're hemizygous. Meiosis one separates homologs, meiosis two separates sister chromatids. Linkage is measured in centimorgans. Nondisjunction causes Trisomy twenty-one, Klinefelter, and Turner."
+      "text": "Recap. Meiosis One is reductional, Meiosis Two is equational. Three sources of variation: crossing over, independent assortment, random fertilization. Mendel's three laws: segregation, independent assortment, dominance. Three-to-one for monohybrid; nine-three-three-one for unlinked dihybrid. Non-Mendelian: incomplete dominance blends, codominance shows both, multiple alleles, pleiotropy, polygenic, sex-linked. And nondisjunction in meiosis causes aneuploidy — Trisomy Twenty-One is Down syndrome, X-X-Y is Klinefelter, X-O is Turner."
     },
     {
       "id": "16_path",
-      "text": "Your path forward. Read OpenStax Biology, Chapters Twelve and Thirteen, for Mendel and modern inheritance patterns. Drill the Khan Academy AP Biology Unit Five problem sets — Punnett squares, pedigrees, and linkage maps are very predictable on the exam. Complete the dihybrid and X-linked pedigree assignment in your dashboard. And book an advisor check-in if nine-to-three-to-three-to-one ratios or the non-Mendelian patterns still feel slippery. Next time, Module Seven — DNA Structure and Replication, which begins Unit Six."
+      "text": "Your path forward. Read OpenStax Biology, Chapters Twelve and Thirteen — Mendel and patterns of inheritance. Drill Khan Academy AP Biology Unit Five — especially the Punnett square and probability problems. Do the assignment in your dashboard. And book an advisor check-in if dihybrid crosses or sex-linked pedigrees still trip you up — those are the two reliable test-day traps. Next time, we open the molecule itself: Module Seven — DNA Structure and Replication."
     }
   ],
   "youtube": {
@@ -76,9 +76,8 @@
     "url": "https://youtu.be/PQ9sMV1Uzdg",
     "embed_url": "https://www.youtube.com/embed/PQ9sMV1Uzdg",
     "studio_url": "https://studio.youtube.com/video/PQ9sMV1Uzdg/edit",
-    "privacy": "unlisted",
-    "playlist": "AP Biology",
-    "playlist_id": "PLBdiOM21TW9LbCfqZADMWrSHBsDHa2m6h",
-    "uploaded_at": "2026-05-18T14:00:40+00:00"
+    "published_at": "2026-05-18T14:00:34Z",
+    "synced_at": "2026-05-19T04:11:03+00:00",
+    "playlist": "AP Biology"
   }
 }
