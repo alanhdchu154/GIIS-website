@@ -76,6 +76,8 @@ export default function ParentDashboard({ language }) {
   const navigate = useNavigate();
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
+  const [portalLoading, setPortalLoading] = useState(false);
+  const [portalError, setPortalError] = useState(null);
 
   const session = getParentSession();
 
@@ -100,6 +102,21 @@ export default function ParentDashboard({ language }) {
     fetch(`${API}/api/parent/logout`, { method: 'POST', credentials: 'include' }).catch(() => {});
     clearParentSession();
     navigate('/parent/login', { replace: true });
+  }
+
+  async function handleManageBilling() {
+    setPortalLoading(true);
+    setPortalError(null);
+    try {
+      const res = await fetch(`${API}/api/billing/portal`, { method: 'POST', credentials: 'include' });
+      const json = await res.json();
+      if (!res.ok) { setPortalError(json.error || 'Could not open billing portal.'); return; }
+      window.location.href = json.url;
+    } catch {
+      setPortalError('Network error — please try again.');
+    } finally {
+      setPortalLoading(false);
+    }
   }
 
   if (!session) return null;
@@ -227,6 +244,30 @@ export default function ParentDashboard({ language }) {
                   ? <p style={{ fontSize: 13, color: '#9aa0ad' }}>{isEn ? 'No activity yet.' : '暂无活动记录。'}</p>
                   : recentActivity.map((ev, i) => <ActivityRow key={i} event={ev} isEn={isEn} />)
                 }
+              </div>
+
+              {/* Subscription management */}
+              <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
+                <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 14px' }}>
+                  {isEn ? 'Subscription' : '订阅管理'}
+                </p>
+                <button
+                  onClick={handleManageBilling}
+                  disabled={portalLoading}
+                  style={{ width: '100%', background: '#1a1a2e', color: '#fff', border: 'none', borderRadius: 8, padding: '11px 16px', fontSize: 13.5, fontWeight: 700, cursor: portalLoading ? 'wait' : 'pointer', fontFamily: 'Inter, sans-serif', letterSpacing: '0.01em' }}
+                >
+                  {portalLoading
+                    ? (isEn ? 'Opening…' : '开启中…')
+                    : (isEn ? 'Manage subscription →' : '管理订阅 →')}
+                </button>
+                {portalError && (
+                  <p style={{ fontSize: 12, color: '#b91c1c', margin: '8px 0 0' }}>{portalError}</p>
+                )}
+                <p style={{ fontSize: 11, color: '#9aa0ad', margin: '8px 0 0', lineHeight: 1.5 }}>
+                  {isEn
+                    ? 'Cancel, update payment method, or download invoices via Stripe.'
+                    : '透过 Stripe 取消订阅、更新付款方式或下载发票。'}
+                </p>
               </div>
 
               {/* Quick links */}
