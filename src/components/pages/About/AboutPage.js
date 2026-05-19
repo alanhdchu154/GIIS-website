@@ -75,10 +75,10 @@ const FOUNDER = {
 
 const PRESIDENT = {
   nameEn: 'Shiyu Zhang, Ph.D.',
-  nameZh: '张诗雨 博士',
+  nameZh: '章诗雨 博士',
   titleEn: 'President & Principal',
   titleZh: '校长',
-  email: 'admissions@genesisideas.school',
+  email: 'shiyu.zhang@genesisideas.school',
   // TODO: upload Dr. Zhang's headshot to /src/img/Leadership/shiyu.jpg and switch this.
   initials: 'SZ',
   bioEn: [
@@ -89,8 +89,8 @@ const PRESIDENT = {
     "In addition to classroom teaching, she has extensive experience in online education and educational management, with a strong focus on helping students develop both academic excellence and the independent learning ability required to thrive in a global context.",
   ],
   bioZh: [
-    '张诗雨博士担任艾迪尔国际学校 (GIIS) 校长，所有正式成绩单与文凭均由其签署。',
-    '张博士是经验丰富的国际教育者与学术导师，拥有十年以上 TOEFL、IELTS、GRE 与 A-Level 中文教学经验，专长于双语教育，在多文化学习环境中同时教授中文与英文。',
+    '章诗雨博士担任艾迪尔国际学校 (GIIS) 校长，所有正式成绩单与文凭均由其签署。',
+    '章博士是经验丰富的国际教育者与学术导师，拥有十年以上 TOEFL、IELTS、GRE 与 A-Level 中文教学经验，专长于双语教育，在多文化学习环境中同时教授中文与英文。',
     '她拥有普渡大学比较文学博士学位 (Ph.D., Purdue University)，并完成教育学与计算机科学之进阶研究。跨学科的学术背景让她能将扎实的语言训练与批判性思维、沟通能力及个性化学习策略相结合。',
     '多年来，她辅导来自不同教育背景的学生发展语言能力、学术写作、标准化考试准备与国际大学申请。她的教学理念强调：个性化教学、建立学生自信、跨文化沟通能力。',
     '除课堂教学之外，她在线上教育与教育管理方面亦有丰富经验，专注于帮助学生在全球化背景下同时发展学术卓越与独立学习能力。',
@@ -287,7 +287,7 @@ export default function AboutPage({ language, toggleLanguage }) {
           name="description"
           content={en
             ? 'Genesis of Ideas International School (GIIS) is a Florida-registered private school. Meet the founder Alan Hwader Chu and President & Principal Shiyu Zhang, Ph.D.'
-            : '艾迪尔国际学校 (GIIS) 是 Florida 注册私立学校。了解创办人曲华德 (Alan Hwader Chu) 与校长张诗雨博士。'}
+            : '艾迪尔国际学校 (GIIS) 是 Florida 注册私立学校。了解创办人曲华德 (Alan Hwader Chu) 与校长章诗雨博士。'}
         />
       </Helmet>
 

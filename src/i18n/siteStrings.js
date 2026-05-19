@@ -3,46 +3,25 @@
 export function getNavStrings(language) {
   const en = language === 'en';
   return {
-    discovery: en ? 'DISCOVERY' : '发现我们',
+    about:    en ? 'ABOUT'     : '关于我们',
     academics: en ? 'ACADEMICS' : '学术',
     admission: en ? 'ADMISSION' : '入学',
-    support: en ? 'STUDENT SUPPORT' : '学生支持',
+    resources: en ? 'RESOURCES' : '资源',
     langToggleAria: en ? 'Switch to Chinese' : 'Switch to English',
     /** Single entry: student portal (admin uses same page with admin credentials) */
     signIn: en ? 'Login' : '登入',
-    dropdownDiscovery: en
+    dropdownAbout: en
       ? [
           { label: 'About GIIS',           to: '/discovery#about' },
           { label: 'Mission & Values',     to: '/discovery#mission' },
           { label: 'Leadership & Faculty', to: '/about' },
           { label: 'School Profile (PDF)', to: '/school-profile' },
-          { label: 'Student Handbook',     to: '/handbook' },
-          { label: 'Academic Calendar',    to: '/calendar' },
         ]
       : [
           { label: '关于 GIIS',     to: '/discovery#about' },
           { label: '使命与价值观',   to: '/discovery#mission' },
           { label: '学校领导与师资', to: '/about' },
           { label: '学校简介 (PDF)', to: '/school-profile' },
-          { label: '学生与家庭手册', to: '/handbook' },
-          { label: '学校日历',     to: '/calendar' },
-        ],
-    dropdownAcademics: en
-      ? [
-          { label: 'Course Catalog',           to: '/academics' },
-          { label: 'Academic Calendar',        to: '/calendar' },
-          { label: 'Psychology Pathway',       to: '/pathways/psychology' },
-          { label: 'CS & Engineering',         to: '/pathways/cs' },
-          { label: 'Business & Marketing',     to: '/pathways/business' },
-          { label: 'Economics & Finance',      to: '/pathways/economics' },
-        ]
-      : [
-          { label: '课程目录',       to: '/academics' },
-          { label: '学校日历',       to: '/calendar' },
-          { label: '心理学路径',     to: '/pathways/psychology' },
-          { label: '计算机科学路径', to: '/pathways/cs' },
-          { label: '商业与市场营销', to: '/pathways/business' },
-          { label: '经济与金融',     to: '/pathways/economics' },
         ],
     dropdownAdmission: en
       ? [
@@ -55,14 +34,18 @@ export function getNavStrings(language) {
           { label: '立即申请',   to: '/apply' },
           { label: '学费与价格', to: '/pricing' },
         ],
-    dropdownSupport: en
+    dropdownResources: en
       ? [
           { label: 'Academic Advising', to: '/support' },
           { label: 'Life Counseling',   to: '/support' },
+          { label: 'Student Handbook',  to: '/handbook' },
+          { label: 'Academic Calendar', to: '/calendar' },
         ]
       : [
-          { label: '学业辅导', to: '/support' },
-          { label: '生活辅导', to: '/support' },
+          { label: '学业辅导',     to: '/support' },
+          { label: '生活辅导',     to: '/support' },
+          { label: '学生与家庭手册', to: '/handbook' },
+          { label: '学校日历',     to: '/calendar' },
         ],
   };
 }

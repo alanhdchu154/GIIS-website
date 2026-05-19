@@ -87,7 +87,7 @@ function Nav({ language, toggleLanguage }) {
                         <div className={`collapse navbar-collapse ${!isCollapsed ? 'show' : ''} ${styles.mobileMenu}`}>
                             <ul className={styles.mobileItems}>
                                 <li onClick={() => go('/discovery')}>
-                                    <Link to="/discovery" onClick={e => e.preventDefault()}>{t.discovery}</Link>
+                                    <Link to="/discovery" onClick={e => e.preventDefault()}>{t.about}</Link>
                                 </li>
                                 <li onClick={() => go('/academics')}>
                                     <Link to="/academics" onClick={e => e.preventDefault()}>{t.academics}</Link>
@@ -104,7 +104,7 @@ function Nav({ language, toggleLanguage }) {
                                     <Link to="/pricing" onClick={e => e.preventDefault()}>{isEn ? 'Tuition & Pricing' : '学费'}</Link>
                                 </li>
                                 <li onClick={() => go('/support')}>
-                                    <Link to="/support" onClick={e => e.preventDefault()}>{t.support}</Link>
+                                    <Link to="/support" onClick={e => e.preventDefault()}>{t.resources}</Link>
                                 </li>
                             </ul>
                         </div>
@@ -151,11 +151,11 @@ function Nav({ language, toggleLanguage }) {
 
                 <div className="collapse navbar-collapse">
                     <ul className={`navbar-nav ${styles.desktopNav}`}>
-                        {/* DISCOVERY */}
+                        {/* ABOUT */}
                         <li className={styles.navItem}>
-                            <Link className={styles.navLink} to="/discovery">{t.discovery}</Link>
+                            <Link className={styles.navLink} to="/discovery">{t.about}</Link>
                             <ul className={styles.dropdown}>
-                                {t.dropdownDiscovery.map(item => (
+                                {t.dropdownAbout.map(item => (
                                     <li key={item.label}>
                                         <Link to={item.to} style={{ color: 'inherit', textDecoration: 'none' }}>{item.label}</Link>
                                     </li>
@@ -205,11 +205,11 @@ function Nav({ language, toggleLanguage }) {
                             </ul>
                         </li>
 
-                        {/* STUDENT SUPPORT */}
+                        {/* RESOURCES */}
                         <li className={styles.navItem}>
-                            <Link className={styles.navLink} to="/support">{t.support}</Link>
+                            <Link className={styles.navLink} to="/support">{t.resources}</Link>
                             <ul className={`${styles.dropdown} ${styles.dropdownRight}`}>
-                                {t.dropdownSupport.map(item => (
+                                {t.dropdownResources.map(item => (
                                     <li key={item.label}>
                                         <Link to={item.to} style={{ color: 'inherit', textDecoration: 'none' }}>{item.label}</Link>
                                     </li>
