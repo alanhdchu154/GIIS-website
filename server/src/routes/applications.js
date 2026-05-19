@@ -3,6 +3,7 @@ const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const { authenticate, requireAdmin } = require('../middleware/auth');
+const { sendNewApplicationAlert, sendWelcomeEmail, sendRejectionEmail } = require('../lib/mailer');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -37,7 +38,18 @@ router.post('/', async (req, res) => {
     },
   });
 
-  // TODO: send confirmation email to parentEmail + admin notification (Resend)
+  // Fire-and-forget: notify admin of new application
+  sendNewApplicationAlert({
+    studentName: app.studentName,
+    gradeLevel: app.gradeLevel,
+    parentName: app.parentName,
+    parentEmail: app.parentEmail,
+    currentSchool: app.currentSchool,
+    targetUniversities: app.targetUniversities,
+    preferredLanguage: app.preferredLanguage,
+    appId: app.id,
+  });
+
   res.status(201).json({ ok: true, id: app.id });
 });
 
@@ -80,6 +92,17 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
     where: { id: req.params.id },
     data,
   });
+
+  // Auto-send rejection email when status changes to rejected
+  if (data.status === 'rejected') {
+    sendRejectionEmail({
+      parentEmail: app.parentEmail,
+      parentName: app.parentName,
+      studentName: app.studentName,
+      reason: app.rejectionReason,
+    });
+  }
+
   res.json({ ok: true, id: app.id, status: app.status });
 });
 
@@ -141,13 +164,24 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     data: { accountsCreated: true },
   });
 
+  const loginUrl = `${process.env.CORS_ORIGIN || 'https://genesisideas.school'}/parent/login`;
+
+  // Auto-send welcome email with credentials
+  sendWelcomeEmail({
+    parentEmail: app.parentEmail,
+    studentName: app.studentName,
+    tempPassword,
+    loginUrl,
+    studentCode,
+  });
+
   res.json({
     ok: true,
     studentCode,
     studentId: student.id,
     parentEmail: app.parentEmail,
     tempPassword,
-    loginUrl: `${process.env.CORS_ORIGIN || 'https://genesisideas.school'}/parent/login`,
+    loginUrl,
   });
 });
 

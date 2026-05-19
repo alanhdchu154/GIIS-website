@@ -156,6 +156,24 @@ export default function AdminDashboard({ language }) {
           >
             {isEn ? 'Stripe $1 test' : 'Stripe $1 测试'}
           </button>
+          <button
+            type="button"
+            className="btn btn-outline-success btn-sm me-2"
+            title="Send weekly progress digest to all parents with active subscriptions"
+            onClick={async () => {
+              if (!window.confirm('Send weekly progress email to all active parents now?')) return;
+              try {
+                const r = await fetch(`${API_BASE}/api/admin/weekly-report`, { method: 'POST', credentials: 'include' });
+                const d = await r.json();
+                if (!r.ok) throw new Error(d.error || 'Failed');
+                alert(`Weekly report sent: ${d.sent} emails sent, ${d.skipped} skipped.`);
+              } catch (e) {
+                alert(`Error: ${e.message}`);
+              }
+            }}
+          >
+            📧 Weekly report
+          </button>
           <button type="button" className="btn btn-outline-secondary btn-sm me-2" onClick={logout}>
             {isEn ? 'Log out' : '登出'}
           </button>
