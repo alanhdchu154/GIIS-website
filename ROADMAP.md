@@ -1,9 +1,9 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-18 PM（**/about 領導頁上線：Alan Hwader Chu 創辦人 bio + Shiyu Zhang 校長 placeholder · CEEB 申請急用 (T-201 part 1)**）
+> 最後更新：2026-05-18 Evening（Nav 重組：DISCOVERY→ABOUT(4) + STUDENT SUPPORT→RESOURCES(4)；章詩雨博士信箱修正；/support 頁完整改版：移除 Moodle、新增 4 步驟 journey + 4 服務卡片具體 deliverables）
 >
-> 前次：2026-05-18 AM（Stripe Live mode 全鏈上線：live keys + 3 prod price IDs + webhook secret + Lightsail prod deploy）
-> 前前次：2026-05-12（Nav 登入/登出 UX · 語言切換按鈕視覺 · 5 位學生 G12 Spring 全課程完成進度 · seedCourses 修 FK 衝突）
+> 前次：2026-05-18 PM（/about 領導頁上線：Alan Hwader Chu 創辦人 bio + Shiyu Zhang 校長 placeholder · CEEB 申請急用 (T-201 part 1)）
+> 前前次：2026-05-18 AM（Stripe Live mode 全鏈上線：live keys + 3 prod price IDs + webhook secret + Lightsail prod deploy）
 > **核心目標：讓家長願意付錢，並且持續付錢。**
 >
 > 這份 roadmap 是給 **Claude Code CLI（code mode）** 的工作清單。
@@ -80,6 +80,21 @@
 - ✅ **轉址**：`/about/principal` + `/about/leadership` → `/about`
 - 檔案：`src/components/pages/About/AboutPage.js`, `src/App.js`, `src/components/Footer/Footer.js`
 - ⏳ **TODO（等 Alan）**：(1) 確認 Alan 對外 title (2) 高解析 headshot (3) Shiyu Zhang 完整 bio + 學歷 + 照片 (4) 是否列 Alan 私人聯絡 email 在公開頁
+
+---
+
+## ✅ Nav 重組 + /support 頁改版 + 校長信箱修正（2026-05-18 Evening）
+
+- ✅ **Nav 重組**：DISCOVERY(6項) → ABOUT(4)；STUDENT SUPPORT(2項) → RESOURCES(4)；移除 dropdownAcademics 死代碼
+  - ABOUT dropdown：About GIIS · Mission & Values · Leadership & Faculty · School Profile (PDF)
+  - RESOURCES dropdown：Academic Advising · Life Counseling · Student Handbook · Academic Calendar
+- ✅ **章詩雨博士信箱**：`AboutPage.js` 更新 email `admissions→ shiyu.zhang@genesisideas.school`；nameZh 修正 `张→章`
+- ✅ **`/support` 頁完整改版**：移除 Moodle callout（舊平台參考）、移除 hero 圖片依賴、去掉空泛文案
+  - 新增：4 步驟 "Your support journey" (01 Onboarding Call → 02 Course Plan → 03 Learn Portal → 04 Check-ins)
+  - 新增：4 服務卡片各附具體 "What you get" 清單（Academic Advising / College Application Support / Assignment Feedback / Wellbeing Counseling）
+  - 新增：Learn Portal CTA 深藍帶（連至 /parent/demo + /login）
+  - 聯絡區塊：email CTA + 有用連結側欄
+- 檔案：`src/components/main/Nav.js`, `src/i18n/siteStrings.js`, `src/components/pages/About/AboutPage.js`, `src/components/pages/Support/SupportMain.js`
 
 ---
 
