@@ -17,9 +17,12 @@ const AdminLogin = lazy(() => import('./components/pages/Admin/AdminLogin'));
 const AdminDashboard = lazy(() => import('./components/pages/Admin/AdminDashboard'));
 const AdminTranscriptPage = lazy(() => import('./components/pages/Admin/AdminTranscriptPage'));
 const AdminProgressPage = lazy(() => import('./components/pages/Admin/AdminProgressPage'));
+const AdminAuditTrailPage = lazy(() => import('./components/pages/Admin/AdminAuditTrailPage'));
 const CalendarPage = lazy(() => import('./components/pages/Calendar/CalendarPage'));
 const DiplomaPage = lazy(() => import('./components/pages/Diploma/DiplomaPage'));
 const SchoolProfilePage = lazy(() => import('./components/pages/SchoolProfile/SchoolProfilePage'));
+const AboutPage = lazy(() => import('./components/pages/About/AboutPage'));
+const HandbookPage = lazy(() => import('./components/pages/Handbook/HandbookPage'));
 const NotFound = lazy(() => import('./components/pages/NotFound'));
 const PrivacyPolicy = lazy(() => import('./components/pages/PrivacyPolicy'));
 const TermsOfUse = lazy(() => import('./components/pages/TermsOfUse'));
@@ -124,6 +127,7 @@ function App() {
          <Route path="/admin" element={<AdminDashboard language={language} />} />
          <Route path="/admin/transcript/:studentId" element={<AdminTranscriptPage language={language} />} />
          <Route path="/admin/progress" element={<AdminProgressPage />} />
+        <Route path="/admin/students/:studentId/audit-trail" element={<AdminAuditTrailPage />} />
          <Route path="/calendar" element={<CalendarPage language={language} />} />
          {/* Pathways hub */}
          <Route path="/pathways" element={<PathwaysHub language={language} toggleLanguage={toggleLanguage} />} />
@@ -145,6 +149,12 @@ function App() {
          <Route path="/learn/:slug/syllabus" element={<SyllabusPage language={language} />} />
          <Route path="/diploma/:studentId" element={<DiplomaPage language={language} />} />
         <Route path="/school-profile" element={<SchoolProfilePage />} />
+         <Route path="/about" element={<AboutPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/about/principal" element={<Navigate to="/about" replace />} />
+         <Route path="/about/leadership" element={<Navigate to="/about" replace />} />
+         <Route path="/about/faculty" element={<Navigate to="/about" replace />} />
+         <Route path="/handbook" element={<HandbookPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/student-handbook" element={<Navigate to="/handbook" replace />} />
          <Route path="/profile" element={<ProfilePage language={language} />} />
          <Route path="/pricing" element={<PricingPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/parent/demo" element={<ParentDashboardDemo language={language} />} />

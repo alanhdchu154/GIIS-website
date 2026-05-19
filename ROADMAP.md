@@ -1,8 +1,9 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-18（**Stripe Checkout shipped: founders_monthly + group_monthly + live_test, Subscription model, /welcome page, AdminDashboard $1 test button**）
+> 最後更新：2026-05-18 PM（**/about 領導頁上線：Alan Hwader Chu 創辦人 bio + Shiyu Zhang 校長 placeholder · CEEB 申請急用 (T-201 part 1)**）
 >
-> 前次：2026-05-12（Nav 登入/登出 UX · 語言切換按鈕視覺 · 5 位學生 G12 Spring 全課程完成進度 · seedCourses 修 FK 衝突）
+> 前次：2026-05-18 AM（Stripe Live mode 全鏈上線：live keys + 3 prod price IDs + webhook secret + Lightsail prod deploy）
+> 前前次：2026-05-12（Nav 登入/登出 UX · 語言切換按鈕視覺 · 5 位學生 G12 Spring 全課程完成進度 · seedCourses 修 FK 衝突）
 > **核心目標：讓家長願意付錢，並且持續付錢。**
 >
 > 這份 roadmap 是給 **Claude Code CLI（code mode）** 的工作清單。
@@ -27,6 +28,58 @@
 1. **信任** — 這是一間真正的學校嗎？我的孩子拿到的文憑有意義嗎？
 2. **透明** — 我看得到孩子在學什麼、學得怎麼樣嗎？
 3. **結果** — 孩子有在進步嗎？這筆錢花得值得嗎？
+
+---
+
+## 🎯 CEEB 嚴審稽核 — 準備清單（2026-05-18）
+
+> 假設：CEEB 審核員（或將來大學 admissions office、Florida DOE auditor）來函要看完整 documentation。
+> 目標：每一項問題都有對應的公開 URL + 可下載 PDF + 內容夠厚實。
+
+| 審核員可能要的 | 狀態 | URL | 內容深度 | 卡誰 |
+|---|---|---|---|---|
+| School profile | ✅ 已上線 | `/school-profile` | 良好（PDF export 可用，含校歷、grading scale、24 credits、curriculum、president signature）；T-302 待補 leadership block + Class of 2026 profile | T-302 — Dev |
+| Graduation requirements | ✅ 已上線 | `/school-profile`（內含 24-credit 分配表）+ `/handbook#graduation` | 良好（兩處交叉引用） | — |
+| Student handbook | ✅ 已上線 | `/handbook` | 12 sections 完整 draft（Academic, Integrity, Attendance, AI Use, Conduct, Appeals, Records, Privacy/FERPA, Governance）| Alan review 措辭 |
+| Proof Alan = Head of School | ✅ 部分 | `/about`（公開 leader 介紹）+ `/handbook §12 Governance`（明文寫 Alan = Founder & Head of School） | 公開頁夠用；正式法律文件待補 | Alan — 見下方 ⏳ |
+| Faculty / qualified instructors | ❌ 缺 | — | T-205 in backlog | Alan content（1 週）+ Dev 0.5 天 |
+| AP Course Audit ledger 合規 | ❓ 未確認 | — | 若不在 ledger 上，transcript / curriculum / handbook 中所有「AP」字樣須改「Honors」或「Advanced」 | Alan — T-004 RF-2 |
+| FL DOE registration certificate | ❓ 未公開 | — | 應該 PDF 上傳到 site 並從 `/about` + `/handbook §1` 連到 | Alan — T-202 |
+
+### ⏳ 等 Alan 補的 CEEB 文件
+
+- **CEEB application 確認單** — College Board 收件後的 reference number / status snapshot（截圖即可）
+- **FL DOE registration certificate** — Florida DOE 發的私校註冊證明 PDF
+- **Letter of Appointment / Statement of Authority** — 一份簡單的 1-頁正式文件，由 Alan（Founder/Owner）+ Shiyu Zhang（President & Principal）共同簽署，內容類似「I, Alan Hwader Chu, founder and owner of GIIS, hereby attest that I serve as Head of School and that Shiyu Zhang, Ph.D. serves as President & Principal, signing all official transcripts and diplomas.」可放到 `/about` 作為 downloadable PDF
+- **Articles of Incorporation / Operating Agreement** —（如有）證明 Alan owns the entity，內部備存即可、不一定公開
+- **Class of 2026 audit trail PDF**（每位 senior 一份）— T-001 完成後可 export，存檔備查
+
+### 🔧 Site infrastructure（這次同時做的）
+
+- ✅ `/about` 新 leader 頁面（Founder & Head of School + President & Principal）
+- ✅ `/handbook` 完整雙語學生家庭手冊（12 sections）
+- ✅ `/about/faculty`、`/about/principal`、`/about/leadership`、`/student-handbook` 全部轉址到正確頁
+- ✅ Footer 加「About & Leadership」「School Profile」「Student Handbook」
+- ✅ Nav Discovery dropdown 修：6 個項目都點到不同目的地（之前 3 項全到 /discovery 同一頁）
+- ✅ Nav Admission dropdown 修：移除誤導性「FAQ」、Apply Now 改連到 `/apply` 而非 `/admission`
+- ✅ ScrollToTop 加 hash anchor 支援（讓 `/discovery#mission` 可實際捲到 mission section）
+- ✅ AboutPage / HandbookPage 加 `<Nav>` 元件（之前漏接）
+
+---
+
+## ✅ /about Leadership 頁面（2026-05-18 PM）
+
+> CEEB 申請急用 — Alan 需要一個 leader/owner 的公開頁面證明身分。Backlog T-201 part 1。
+
+- ✅ **新路由 `/about`**：列 Alan Hwader Chu（Founder & Director of Academic Operations）+ Shiyu Zhang, Ph.D.（President & Principal）兩位 leader
+- ✅ **Alan bio 完整入站**：履歷 V3 提煉 — UT Austin AI MS 在讀、Purdue MatEng MS、Tsing Hua ChemE MS+BS、10+ 年 IGCSE/A-Level/AP STEM 教學、Walmart Fortune 1 工程經驗、Optical Materials Express + J. Alloys & Compounds 論文、TMS + TwICHE Best Poster
+- ✅ **雙語**：中英內容 via `language` prop
+- ✅ **Avatar fallback**：暫用 initials（AC / SZ）—— Alan 提供高解析照片後換 `src/img/Leadership/`
+- ✅ **School verification 區塊**：FL Statute 1002.42 註冊、地址、CEEB pending、accreditation 聲明，與 SchoolProfilePage 一致（無 Cognia / 無 accredited 字樣）
+- ✅ **Footer 加 "About & Leadership"**：在 School column 第一條
+- ✅ **轉址**：`/about/principal` + `/about/leadership` → `/about`
+- 檔案：`src/components/pages/About/AboutPage.js`, `src/App.js`, `src/components/Footer/Footer.js`
+- ⏳ **TODO（等 Alan）**：(1) 確認 Alan 對外 title (2) 高解析 headshot (3) Shiyu Zhang 完整 bio + 學歷 + 照片 (4) 是否列 Alan 私人聯絡 email 在公開頁
 
 ---
 
@@ -903,24 +956,67 @@ Acceptance ✅：video 路徑只在 DemoEmbed.js 寫死。
   - `src/App.js` — `/welcome` route 註冊
 - ✅ **Backward compat**：前端送 `planType: 'monthly'`（legacy）會被 LEGACY_ALIASES 自動 map 到 `founders_monthly`
 
-### 🔧 Phase 2 #7 收尾 — 等 Alan 動作
+### ✅ Phase 2 #7 收尾 — Live mode 已上線（2026-05-18）
 
-- [ ] **本機驗收**：
-  1. `cd server && npx prisma db push`（套 Subscription model）
-  2. `cd server && npm run dev`（API at :4000）
-  3. `npm start`（root，React at :3000）
-  4. `localhost:3000/pricing` → 點 Apply → 填 `4242 4242 4242 4242` + 任未來日期 + 任 CVC + 任 ZIP
-  5. 應被跳到 `localhost:3000/welcome?session_id=...`，10 秒內顯示「Payment confirmed」
-  6. （選）`stripe listen --forward-to localhost:4000/api/webhooks/stripe` 拿 whsec_ 存進 .env，重啟 server，看到 webhook log + DB Subscription row
-  7. `psql -h localhost -U giis -d giis_transcript -c 'SELECT * FROM "Subscription";'` 確認 row 存在 status='active'
+- ✅ **3 個 Live mode Products 建好**：founders_monthly `price_1TYYZ4...` / group_monthly `price_1TYYaD...` / live_test `price_1TYYap...`
+- ✅ **Live API keys 已設定**：`sk_live_...` → `server/.env`（local + Lightsail production 兩份）；`pk_live_...` → `.env.development`
+- ✅ **Webhook endpoint 已建立**：`https://genesisideas.school/api/webhooks/stripe`，訂閱 4 事件，`whsec_...` 存入 Lightsail `server/.env`
+- ✅ **Lightsail production 部署**：git pull → npm install（stripe package）→ prisma db push（Subscription table 已存在）→ `pm2 restart giis-api --update-env`，API `/api/checkout/tiers` 回應正常
+- [ ] **AdminDashboard $1 smoke test**：點「Stripe $1 test」用真實卡刷 $1 → 確認 Chase ...0602 進帳 + DB Subscription row → Stripe dashboard 退款 $1
 
-- [ ] **切到 Stripe Live mode 上線**：
-  1. Stripe dashboard 右上 toggle 切 Live
-  2. **重建 3 個 Products** 在 Live mode（sandbox 跟 live 是隔離的，products 不會同步）
-  3. 拿 Live API keys（sk_live_... + pk_live_...）替換 server/.env
-  4. **設定 Webhook endpoint**：Developers → Webhooks → Add endpoint → URL `https://api.genesisideas.school/api/webhooks/stripe`（或對應生產 API URL）→ 訂閱 4 個事件（checkout.session.completed, customer.subscription.updated, customer.subscription.deleted, invoice.payment_failed）→ 拿到 whsec_ 存 .env
-  5. AdminDashboard 點「Stripe $1 test」用真實卡刷 $1，2 個工作天後看 Chase ...0602 進帳，整鏈打通
-  6. Stripe dashboard 退款 $1（避免帳簿留小尾巴）
+### 🔧 Phase 2 待辦 — 訂閱管理補完
+
+#### P2-A. Stripe Customer Portal（自助取消/更改訂閱）
+> **最緊急**：家長問「怎麼取消」你要能回答。30 行後端 + 1 個按鈕。
+
+- 後端：新增 `POST /api/billing/portal`（用 Stripe `billingPortal.sessions.create`，回傳一次性 portal URL）
+- 前端：ParentDashboard 加「Manage subscription →」按鈕，POST 後 `window.location.href = url`
+- Stripe Dashboard 開 Customer Portal（Billing → Customer portal → Activate）— 無需另設計 UI，Stripe 提供整套
+
+#### P2-B. Admin 訂閱列表頁
+> **Alan 才知道誰付錢、幾號扣款**
+
+- 新建 `src/components/pages/Admin/AdminSubscriptionsPage.js` at `/admin/subscriptions`
+- 後端：`GET /api/admin/subscriptions`（admin auth，從 Subscription table 撈，排序 `currentPeriodEnd ASC`）
+- 顯示：purchaserEmail / planType / status / 下次扣款日（`currentPeriodEnd`）/ cancelAtPeriodEnd
+- AdminDashboard 加入口按鈕
+
+#### P2-C. 付款失敗 → 鎖定帳號 access gate
+> 現在 `past_due` 狀態不會鎖帳號，等於免費用
+
+- 方案：`requireActiveSubscription` middleware，讀 `Subscription` table，`status` 不是 `active/trialing` 就回 403
+- 套用範圍：`/api/courses` GET / module / quiz / exam routes（成績單 PDF 例外，付款失敗的家長仍能下載）
+- 注意：手動 seed 的學生（Class of 2026）應該 bypass 此 gate（`student.isManual` flag 或白名單 `studentCode` 前綴）
+
+#### P2-D. 30 天退款後自動停權
+> 現在 Stripe `charge.refunded` 沒處理，退款後學生仍可登入
+
+- `webhooks-stripe.js` 加 `charge.refunded` handler → 把對應 `Subscription.status` 改成 `cancelled`
+- 或更保守：`customer.subscription.deleted`（Stripe 退款後會刪訂閱）其實已有 handler，確認它有正確 set status='cancelled'
+
+#### P2-E. 購買後自動開通流程（目前是人工）
+> 現在家長付完錢，24 小時內要 admin 手動建 StudentAccount — 這是瓶頸
+
+- `webhooks-stripe.js` `handleCheckoutCompleted` 裡的 TODO 補完：
+  1. 用 `purchaserEmail` 查 `Student` by `parentEmail`（找到就好）
+  2. 找不到 → 在 `Application` 插一筆 pending（admin 從 `/admin/applications` 看）
+  3. Resend 寄「我們收到你的付款，24 小時內發送登入憑據」確認信（需 `RESEND_API_KEY`）
+- 依賴：`RESEND_API_KEY`（與 Phase 1 #4 同一條）
+
+#### P2-F. 團報座位邏輯（group_monthly）
+> 現在 group 方案 maxStudents=5 但完全沒追蹤誰佔了哪個座位
+
+- 先釐清商業模式：購買者是一個家長 paying for siblings？還是補習班/老師 paying for a cohort？
+- 方案 A（家長同一家庭）：`Subscription` → `Student[]` 一對多，family 共用一張訂閱
+- 方案 B（老師/cohort）：新 `SubscriptionSeat { subscriptionId, studentEmail, invitedAt, acceptedAt }`，purchaser 可發邀請連結
+- 在商業模式確認前，**先加一個 admin 手動關聯頁**（`/admin/subscriptions/:id/seats`），讓 Alan 直接指定哪幾個學生算在這張訂閱下
+
+#### P2-G. Netlify frontend 改用 live publishable key
+> `.env.development` 裡的 `REACT_APP_STRIPE_PUBLISHABLE_KEY` 是 pk_test_，Netlify build 出來是 test key
+
+- 在 Netlify Dashboard → Site settings → Environment variables 加 `REACT_APP_STRIPE_PUBLISHABLE_KEY=pk_live_...`
+- 或把 `.env.development` 裡的 test key 改成 live key（publishable key 公開安全，可進 git）
+- **注意**：目前 PricingPage.js 的 Checkout 是純後端跳轉，前端 pk 其實沒用到 — 但未來做 Stripe Elements 前要先對齊
 
 - [ ] **Resend wrapper（依賴解開後做）**：webhook `checkout.session.completed` 裡的 TODO（自動建 Student + ParentAccount + 寄歡迎信）— 等 Phase 1 待辦的 `RESEND_API_KEY` 解開後一起做
 

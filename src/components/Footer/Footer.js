@@ -18,6 +18,9 @@ const NAV_COLS = [
     titleEn: 'School',
     titleZh: '学校',
     links: [
+      { en: 'About & Leadership', zh: '关于我们', to: '/about' },
+      { en: 'School Profile (PDF)', zh: '学校简介 (PDF)', to: '/school-profile' },
+      { en: 'Student Handbook', zh: '学生手册', to: '/handbook' },
       { en: 'Admission', zh: '招生', to: '/admission' },
       { en: 'Tuition & Pricing', zh: '学费', to: '/pricing' },
       { en: 'Discovery', zh: '了解我们', to: '/discovery' },

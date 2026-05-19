@@ -12,14 +12,20 @@ export function getNavStrings(language) {
     signIn: en ? 'Login' : '登入',
     dropdownDiscovery: en
       ? [
-          { label: 'Meet Our School', to: '/discovery' },
-          { label: 'Our Mission',     to: '/discovery' },
-          { label: 'About Our Faculty', to: '/discovery' },
+          { label: 'About GIIS',           to: '/discovery#about' },
+          { label: 'Mission & Values',     to: '/discovery#mission' },
+          { label: 'Leadership & Faculty', to: '/about' },
+          { label: 'School Profile (PDF)', to: '/school-profile' },
+          { label: 'Student Handbook',     to: '/handbook' },
+          { label: 'Academic Calendar',    to: '/calendar' },
         ]
       : [
-          { label: '认识学校', to: '/discovery' },
-          { label: '办学使命', to: '/discovery' },
-          { label: '师资介绍', to: '/discovery' },
+          { label: '关于 GIIS',     to: '/discovery#about' },
+          { label: '使命与价值观',   to: '/discovery#mission' },
+          { label: '学校领导与师资', to: '/about' },
+          { label: '学校简介 (PDF)', to: '/school-profile' },
+          { label: '学生与家庭手册', to: '/handbook' },
+          { label: '学校日历',     to: '/calendar' },
         ],
     dropdownAcademics: en
       ? [
@@ -40,14 +46,14 @@ export function getNavStrings(language) {
         ],
     dropdownAdmission: en
       ? [
-          { label: 'Apply Now',      to: '/admission' },
-          { label: 'Tuition & Pricing', to: '/pricing' },
-          { label: 'FAQ',            to: '/admission' },
+          { label: 'Admission Overview', to: '/admission' },
+          { label: 'Apply Now',          to: '/apply' },
+          { label: 'Tuition & Pricing',  to: '/pricing' },
         ]
       : [
-          { label: '立即申请',   to: '/admission' },
+          { label: '招生概览',   to: '/admission' },
+          { label: '立即申请',   to: '/apply' },
           { label: '学费与价格', to: '/pricing' },
-          { label: '常见问题',   to: '/admission' },
         ],
     dropdownSupport: en
       ? [

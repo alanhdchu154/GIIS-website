@@ -46,7 +46,8 @@ function DiscoveryMain({ language, toggleLanguage }) {
       </div>
 
       {/* About GIIS — dark navy */}
-      <div id="introduction" style={{
+      <div id="about" style={{
+        scrollMarginTop: 80,
         background: 'rgba(43, 61, 109, 1)',
         borderBottom: '6px solid rgba(213, 168, 54, 1)',
       }}>
@@ -54,7 +55,7 @@ function DiscoveryMain({ language, toggleLanguage }) {
       </div>
 
       {/* Core Values & Mission */}
-      <div id="introduction2">
+      <div id="mission" style={{ scrollMarginTop: 80 }}>
         <DiscoveryIntroduction2 language={language} />
       </div>
     </>
