@@ -1,7 +1,64 @@
 {
-  "generated_at": "2026-05-19T14:00:41+00:00",
+  "generated_at": "2026-05-20T14:03:17+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "AP Computer Science A": [
+      {
+        "course": "AP Computer Science A",
+        "course_slug": "ap-computer-science-a",
+        "module_number": 1,
+        "module_title": "Primitive Types",
+        "youtube_id": "kTMroXpbPLQ",
+        "url": "https://youtu.be/kTMroXpbPLQ",
+        "embed_url": "https://www.youtube.com/embed/kTMroXpbPLQ",
+        "published_at": "2026-05-15T14:00:21Z",
+        "lesson_dir": "ap-cs-a-module-1-primitives"
+      },
+      {
+        "course": "AP Computer Science A",
+        "course_slug": "ap-computer-science-a",
+        "module_number": 2,
+        "module_title": "Using Objects",
+        "youtube_id": "-ltLaZz2JAI",
+        "url": "https://youtu.be/-ltLaZz2JAI",
+        "embed_url": "https://www.youtube.com/embed/-ltLaZz2JAI",
+        "published_at": "2026-05-17T14:00:22Z",
+        "lesson_dir": "ap-cs-a-module-2-using-objects"
+      },
+      {
+        "course": "AP Computer Science A",
+        "course_slug": "ap-computer-science-a",
+        "module_number": 3,
+        "module_title": "Boolean Expressions and if Statements",
+        "youtube_id": "tGAOZaDi0zw",
+        "url": "https://youtu.be/tGAOZaDi0zw",
+        "embed_url": "https://www.youtube.com/embed/tGAOZaDi0zw",
+        "published_at": "2026-05-17T14:00:30Z",
+        "lesson_dir": "ap-cs-a-module-3-booleans-if"
+      },
+      {
+        "course": "AP Computer Science A",
+        "course_slug": "ap-computer-science-a",
+        "module_number": 4,
+        "module_title": "Iteration",
+        "youtube_id": "KR1_MR8vsMI",
+        "url": "https://youtu.be/KR1_MR8vsMI",
+        "embed_url": "https://www.youtube.com/embed/KR1_MR8vsMI",
+        "published_at": "2026-05-20T14:03:06Z",
+        "lesson_dir": "ap-cs-a-module-4-iteration"
+      },
+      {
+        "course": "AP Computer Science A",
+        "course_slug": "ap-computer-science-a",
+        "module_number": 10,
+        "module_title": "Recursion",
+        "youtube_id": "FEziRpv36Os",
+        "url": "https://youtu.be/FEziRpv36Os",
+        "embed_url": "https://www.youtube.com/embed/FEziRpv36Os",
+        "published_at": "2026-05-15T14:00:29Z",
+        "lesson_dir": "ap-cs-a-module-10-recursion"
+      }
+    ],
     "AP Biology": [
       {
         "course": "AP Biology",
@@ -72,13 +129,46 @@
       {
         "course": "AP Biology",
         "course_slug": "ap-biology",
+        "module_number": 7,
+        "module_title": "DNA Structure and Replication",
+        "youtube_id": "bLbLa9191Cg",
+        "url": "https://youtu.be/bLbLa9191Cg",
+        "embed_url": "https://www.youtube.com/embed/bLbLa9191Cg",
+        "published_at": "2026-05-19T14:00:34Z",
+        "lesson_dir": "ap-biology-module-7-dna-replication"
+      },
+      {
+        "course": "AP Biology",
+        "course_slug": "ap-biology",
+        "module_number": 8,
+        "module_title": "Gene Expression — Transcription and Translation",
+        "youtube_id": "8deeEp9oiYo",
+        "url": "https://youtu.be/8deeEp9oiYo",
+        "embed_url": "https://www.youtube.com/embed/8deeEp9oiYo",
+        "published_at": "2026-05-20T14:01:04Z",
+        "lesson_dir": "ap-biology-module-8-transcription-translation"
+      },
+      {
+        "course": "AP Biology",
+        "course_slug": "ap-biology",
+        "module_number": 9,
+        "module_title": "Biotechnology",
+        "youtube_id": "Qp0yTYbwKWw",
+        "url": "https://youtu.be/Qp0yTYbwKWw",
+        "embed_url": "https://www.youtube.com/embed/Qp0yTYbwKWw",
+        "published_at": "2026-05-20T14:01:35Z",
+        "lesson_dir": "ap-biology-module-9-biotechnology"
+      },
+      {
+        "course": "AP Biology",
+        "course_slug": "ap-biology",
         "module_number": 10,
-        "module_title": "Natural Selection and Evolution",
-        "youtube_id": "ILFeGC54PBo",
-        "url": "https://youtu.be/ILFeGC54PBo",
-        "embed_url": "https://www.youtube.com/embed/ILFeGC54PBo",
-        "published_at": "2026-05-19T14:00:04Z",
-        "lesson_dir": "ap-biology-module-10-natural-selection"
+        "module_title": "Natural Selection and Evolution — V2 Pilot",
+        "youtube_id": "10ALEOVKLm0",
+        "url": "https://youtu.be/10ALEOVKLm0",
+        "embed_url": "https://www.youtube.com/embed/10ALEOVKLm0",
+        "published_at": "2026-05-20T14:00:45Z",
+        "lesson_dir": "ap-biology-module-10-natural-selection-v2"
       },
       {
         "course": "AP Biology",
@@ -90,52 +180,6 @@
         "embed_url": "https://www.youtube.com/embed/qIQJsiqBqsY",
         "published_at": "2026-05-19T14:00:14Z",
         "lesson_dir": "ap-biology-module-11-speciation"
-      }
-    ],
-    "AP Computer Science A": [
-      {
-        "course": "AP Computer Science A",
-        "course_slug": "ap-computer-science-a",
-        "module_number": 1,
-        "module_title": "Primitive Types",
-        "youtube_id": "kTMroXpbPLQ",
-        "url": "https://youtu.be/kTMroXpbPLQ",
-        "embed_url": "https://www.youtube.com/embed/kTMroXpbPLQ",
-        "published_at": "2026-05-15T14:00:21Z",
-        "lesson_dir": "ap-cs-a-module-1-primitives"
-      },
-      {
-        "course": "AP Computer Science A",
-        "course_slug": "ap-computer-science-a",
-        "module_number": 2,
-        "module_title": "Using Objects",
-        "youtube_id": "-ltLaZz2JAI",
-        "url": "https://youtu.be/-ltLaZz2JAI",
-        "embed_url": "https://www.youtube.com/embed/-ltLaZz2JAI",
-        "published_at": "2026-05-17T14:00:22Z",
-        "lesson_dir": "ap-cs-a-module-2-using-objects"
-      },
-      {
-        "course": "AP Computer Science A",
-        "course_slug": "ap-computer-science-a",
-        "module_number": 3,
-        "module_title": "Boolean Expressions and if Statements",
-        "youtube_id": "tGAOZaDi0zw",
-        "url": "https://youtu.be/tGAOZaDi0zw",
-        "embed_url": "https://www.youtube.com/embed/tGAOZaDi0zw",
-        "published_at": "2026-05-17T14:00:30Z",
-        "lesson_dir": "ap-cs-a-module-3-booleans-if"
-      },
-      {
-        "course": "AP Computer Science A",
-        "course_slug": "ap-computer-science-a",
-        "module_number": 10,
-        "module_title": "Recursion",
-        "youtube_id": "FEziRpv36Os",
-        "url": "https://youtu.be/FEziRpv36Os",
-        "embed_url": "https://www.youtube.com/embed/FEziRpv36Os",
-        "published_at": "2026-05-15T14:00:29Z",
-        "lesson_dir": "ap-cs-a-module-10-recursion"
       }
     ],
     "AP Calculus AB": [
@@ -490,6 +534,61 @@
   },
   "lessons": [
     {
+      "course": "AP Computer Science A",
+      "course_slug": "ap-computer-science-a",
+      "module_number": 1,
+      "module_title": "Primitive Types",
+      "youtube_id": "kTMroXpbPLQ",
+      "url": "https://youtu.be/kTMroXpbPLQ",
+      "embed_url": "https://www.youtube.com/embed/kTMroXpbPLQ",
+      "published_at": "2026-05-15T14:00:21Z",
+      "lesson_dir": "ap-cs-a-module-1-primitives"
+    },
+    {
+      "course": "AP Computer Science A",
+      "course_slug": "ap-computer-science-a",
+      "module_number": 2,
+      "module_title": "Using Objects",
+      "youtube_id": "-ltLaZz2JAI",
+      "url": "https://youtu.be/-ltLaZz2JAI",
+      "embed_url": "https://www.youtube.com/embed/-ltLaZz2JAI",
+      "published_at": "2026-05-17T14:00:22Z",
+      "lesson_dir": "ap-cs-a-module-2-using-objects"
+    },
+    {
+      "course": "AP Computer Science A",
+      "course_slug": "ap-computer-science-a",
+      "module_number": 3,
+      "module_title": "Boolean Expressions and if Statements",
+      "youtube_id": "tGAOZaDi0zw",
+      "url": "https://youtu.be/tGAOZaDi0zw",
+      "embed_url": "https://www.youtube.com/embed/tGAOZaDi0zw",
+      "published_at": "2026-05-17T14:00:30Z",
+      "lesson_dir": "ap-cs-a-module-3-booleans-if"
+    },
+    {
+      "course": "AP Computer Science A",
+      "course_slug": "ap-computer-science-a",
+      "module_number": 4,
+      "module_title": "Iteration",
+      "youtube_id": "KR1_MR8vsMI",
+      "url": "https://youtu.be/KR1_MR8vsMI",
+      "embed_url": "https://www.youtube.com/embed/KR1_MR8vsMI",
+      "published_at": "2026-05-20T14:03:06Z",
+      "lesson_dir": "ap-cs-a-module-4-iteration"
+    },
+    {
+      "course": "AP Computer Science A",
+      "course_slug": "ap-computer-science-a",
+      "module_number": 10,
+      "module_title": "Recursion",
+      "youtube_id": "FEziRpv36Os",
+      "url": "https://youtu.be/FEziRpv36Os",
+      "embed_url": "https://www.youtube.com/embed/FEziRpv36Os",
+      "published_at": "2026-05-15T14:00:29Z",
+      "lesson_dir": "ap-cs-a-module-10-recursion"
+    },
+    {
       "course": "AP Biology",
       "course_slug": "ap-biology",
       "module_number": 1,
@@ -558,13 +657,46 @@
     {
       "course": "AP Biology",
       "course_slug": "ap-biology",
+      "module_number": 7,
+      "module_title": "DNA Structure and Replication",
+      "youtube_id": "bLbLa9191Cg",
+      "url": "https://youtu.be/bLbLa9191Cg",
+      "embed_url": "https://www.youtube.com/embed/bLbLa9191Cg",
+      "published_at": "2026-05-19T14:00:34Z",
+      "lesson_dir": "ap-biology-module-7-dna-replication"
+    },
+    {
+      "course": "AP Biology",
+      "course_slug": "ap-biology",
+      "module_number": 8,
+      "module_title": "Gene Expression — Transcription and Translation",
+      "youtube_id": "8deeEp9oiYo",
+      "url": "https://youtu.be/8deeEp9oiYo",
+      "embed_url": "https://www.youtube.com/embed/8deeEp9oiYo",
+      "published_at": "2026-05-20T14:01:04Z",
+      "lesson_dir": "ap-biology-module-8-transcription-translation"
+    },
+    {
+      "course": "AP Biology",
+      "course_slug": "ap-biology",
+      "module_number": 9,
+      "module_title": "Biotechnology",
+      "youtube_id": "Qp0yTYbwKWw",
+      "url": "https://youtu.be/Qp0yTYbwKWw",
+      "embed_url": "https://www.youtube.com/embed/Qp0yTYbwKWw",
+      "published_at": "2026-05-20T14:01:35Z",
+      "lesson_dir": "ap-biology-module-9-biotechnology"
+    },
+    {
+      "course": "AP Biology",
+      "course_slug": "ap-biology",
       "module_number": 10,
-      "module_title": "Natural Selection and Evolution",
-      "youtube_id": "ILFeGC54PBo",
-      "url": "https://youtu.be/ILFeGC54PBo",
-      "embed_url": "https://www.youtube.com/embed/ILFeGC54PBo",
-      "published_at": "2026-05-19T14:00:04Z",
-      "lesson_dir": "ap-biology-module-10-natural-selection"
+      "module_title": "Natural Selection and Evolution — V2 Pilot",
+      "youtube_id": "10ALEOVKLm0",
+      "url": "https://youtu.be/10ALEOVKLm0",
+      "embed_url": "https://www.youtube.com/embed/10ALEOVKLm0",
+      "published_at": "2026-05-20T14:00:45Z",
+      "lesson_dir": "ap-biology-module-10-natural-selection-v2"
     },
     {
       "course": "AP Biology",
@@ -576,50 +708,6 @@
       "embed_url": "https://www.youtube.com/embed/qIQJsiqBqsY",
       "published_at": "2026-05-19T14:00:14Z",
       "lesson_dir": "ap-biology-module-11-speciation"
-    },
-    {
-      "course": "AP Computer Science A",
-      "course_slug": "ap-computer-science-a",
-      "module_number": 1,
-      "module_title": "Primitive Types",
-      "youtube_id": "kTMroXpbPLQ",
-      "url": "https://youtu.be/kTMroXpbPLQ",
-      "embed_url": "https://www.youtube.com/embed/kTMroXpbPLQ",
-      "published_at": "2026-05-15T14:00:21Z",
-      "lesson_dir": "ap-cs-a-module-1-primitives"
-    },
-    {
-      "course": "AP Computer Science A",
-      "course_slug": "ap-computer-science-a",
-      "module_number": 2,
-      "module_title": "Using Objects",
-      "youtube_id": "-ltLaZz2JAI",
-      "url": "https://youtu.be/-ltLaZz2JAI",
-      "embed_url": "https://www.youtube.com/embed/-ltLaZz2JAI",
-      "published_at": "2026-05-17T14:00:22Z",
-      "lesson_dir": "ap-cs-a-module-2-using-objects"
-    },
-    {
-      "course": "AP Computer Science A",
-      "course_slug": "ap-computer-science-a",
-      "module_number": 3,
-      "module_title": "Boolean Expressions and if Statements",
-      "youtube_id": "tGAOZaDi0zw",
-      "url": "https://youtu.be/tGAOZaDi0zw",
-      "embed_url": "https://www.youtube.com/embed/tGAOZaDi0zw",
-      "published_at": "2026-05-17T14:00:30Z",
-      "lesson_dir": "ap-cs-a-module-3-booleans-if"
-    },
-    {
-      "course": "AP Computer Science A",
-      "course_slug": "ap-computer-science-a",
-      "module_number": 10,
-      "module_title": "Recursion",
-      "youtube_id": "FEziRpv36Os",
-      "url": "https://youtu.be/FEziRpv36Os",
-      "embed_url": "https://www.youtube.com/embed/FEziRpv36Os",
-      "published_at": "2026-05-15T14:00:29Z",
-      "lesson_dir": "ap-cs-a-module-10-recursion"
     },
     {
       "course": "AP Calculus AB",
