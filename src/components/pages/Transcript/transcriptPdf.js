@@ -6,10 +6,9 @@ import sealImg from '../../../img/transcript_seal.jpg';
 import { TRANSCRIPT_SEMESTER_KEYS } from './transcriptMappers.js';
 import { getAllSemesterStatuses, SEMESTER_STATUS } from './semesterStatus.js';
 
-const HEAD_BG = '#e6edf7';
-const ALT_ROW  = '#f4f7fc';
-const NAVY     = '#1a2d5a';
-const GOLD     = '#b8962e';
+const HEAD_BG = '#dce6f1';
+const ALT_ROW  = '#f5f8fc';
+const NAVY     = '#2b3d6d';
 const F = "'Times New Roman',Times,serif";
 const TD_BASE = `font-family:${F};box-sizing:border-box;`;
 
@@ -166,13 +165,12 @@ function buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDa
       <div style="${TD_BASE}font-size:7pt;color:#444;">7901 4th St N STE 300, St. Petersburg, FL 33702 &nbsp;|&nbsp; +1 (813) 501-5756 &nbsp;|&nbsp; genesisideas.school</div>
     </td>
     <td style="${TD_BASE}width:22%;text-align:right;vertical-align:top;padding:0;border:none;">
-      <div style="${TD_BASE}display:inline-block;border:2px solid ${GOLD};color:${NAVY};font-weight:bold;font-size:7.5pt;padding:2px 8px;letter-spacing:1.5px;margin-bottom:2mm;">OFFICIAL TRANSCRIPT</div>
+      <div style="${TD_BASE}display:inline-block;border:2px solid ${NAVY};color:${NAVY};font-weight:bold;font-size:7.5pt;padding:2px 6px;letter-spacing:0.5px;margin-bottom:2mm;">OFFICIAL TRANSCRIPT</div>
       <div style="${TD_BASE}font-size:6.5pt;color:#444;line-height:1.6;text-align:right;">FL School Code: 650<br/>President &amp; Principal: Shiyu Zhang, Ph.D.<br/>admissions@genesisideas.school</div>
     </td>
   </tr></tbody>
 </table>
-<div style="border-top:2.5px solid ${NAVY};margin-bottom:0;"></div>
-<div style="border-top:1px solid rgba(184,150,46,0.5);margin-bottom:2mm;"></div>
+<div style="border-top:2px solid ${NAVY};margin-bottom:2mm;"></div>
 
 <!-- STUDENT INFO -->
 <table style="width:100%;border-collapse:collapse;margin-bottom:2mm;table-layout:fixed;">
@@ -275,21 +273,19 @@ function buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDa
 </table>
 
 <!-- SEAL + SIGNATURE -->
-<table style="width:100%;border-collapse:collapse;margin-top:4mm;margin-bottom:1mm;">
+<table style="width:100%;border-collapse:collapse;margin-top:3mm;margin-bottom:1mm;">
   <tbody><tr>
-    <!-- Seal: 25% -->
-    <td style="width:25%;text-align:center;vertical-align:middle;border:none;padding:0;">
+    <td style="width:18%;text-align:center;vertical-align:middle;border:none;padding:0 2mm 0 0;">
       <img src="${sealImg}" alt="Official Seal" crossorigin="anonymous"
-           style="width:72px;height:72px;object-fit:contain;display:block;margin:0 auto;
-                  filter:sepia(15%) opacity(0.9) contrast(108%) brightness(105%)
-                         drop-shadow(0px 0px 4px rgba(184,150,46,0.4));" />
+           style="width:62px;height:62px;object-fit:contain;display:block;margin:0 auto;" />
     </td>
-    <!-- Gap: 15% -->
-    <td style="width:15%;border:none;"></td>
-    <!-- Signature block: 60% -->
-    <td style="width:60%;vertical-align:top;border:none;padding:0;">
-      <div style="${TD_BASE}font-size:8pt;margin-bottom:1px;">Official(s) Certifying Transcript:</div>
-      <div style="border-bottom:1px solid #333;margin-bottom:1mm;">&nbsp;</div>
+    <td style="width:82%;vertical-align:top;border:none;padding:0;">
+      <table style="width:100%;border-collapse:collapse;margin-bottom:1mm;">
+        <tbody><tr>
+          <td style="${TD_BASE}white-space:nowrap;font-size:8pt;padding-right:4px;vertical-align:bottom;border:none;">Official(s) Certifying Transcript:</td>
+          <td style="${TD_BASE}border-bottom:1px solid #333;border-top:none;border-left:none;border-right:none;vertical-align:bottom;">&nbsp;</td>
+        </tr></tbody>
+      </table>
       <div style="${TD_BASE}font-size:7pt;color:#333;margin-bottom:3mm;text-align:right;">Signature</div>
       <table style="width:100%;border-collapse:collapse;">
         <tbody>
@@ -299,9 +295,9 @@ function buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDa
             <td style="${TD_BASE}text-align:center;font-size:8pt;font-weight:600;padding:1px 4px;border:none;">${escapeHtml(exportToday)}</td>
           </tr>
           <tr>
-            <td style="${TD_BASE}text-align:center;font-size:6pt;color:#666;padding:2px 4px;letter-spacing:0.8px;text-transform:uppercase;border:none;border-top:1px solid #555;">Printed Name</td>
-            <td style="${TD_BASE}text-align:center;font-size:6pt;color:#666;padding:2px 4px;letter-spacing:0.8px;text-transform:uppercase;border:none;border-top:1px solid #555;">Title</td>
-            <td style="${TD_BASE}text-align:center;font-size:6pt;color:#666;padding:2px 4px;letter-spacing:0.8px;text-transform:uppercase;border:none;border-top:1px solid #555;">Date</td>
+            <td style="${TD_BASE}text-align:center;font-size:7pt;color:#555;padding:1px 4px;border:none;border-top:1px solid #333;">Printed Name</td>
+            <td style="${TD_BASE}text-align:center;font-size:7pt;color:#555;padding:1px 4px;border:none;border-top:1px solid #333;">Title</td>
+            <td style="${TD_BASE}text-align:center;font-size:7pt;color:#555;padding:1px 4px;border:none;border-top:1px solid #333;">Date</td>
           </tr>
         </tbody>
       </table>
