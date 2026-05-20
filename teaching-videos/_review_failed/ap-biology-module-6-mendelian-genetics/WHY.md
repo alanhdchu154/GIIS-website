@@ -20,3 +20,12 @@
 - `teaching-videos/ap-biology-module-6-mendelian-genetics/_review_A.json`
 - `teaching-videos/ap-biology-module-6-mendelian-genetics/_review_B.json`
 - `teaching-videos/ap-biology-module-6-mendelian-genetics/_review_C.json`
+
+## ⚠️ BROADCAST CONSTRAINT — added 2026-05-20 Slot B
+This script is already broadcast on YouTube — `youtube.video_id` = `PQ9sMV1Uzdg`. Slot B did NOT touch script.json to avoid divergence.
+
+Of the 3 broadcast-locked AP Bio modules with critical Reviewer C verdicts (M4/M5/M6), this one has the highest pedagogical drift risk: the recap mentions topics never taught in the body (nondisjunction/aneuploidy/Down/Klinefelter/Turner). Two safe paths:
+1. **Re-record & re-upload** — restructure recap, add a worked dihybrid Punnett + a sex-linked example in body. This is closer to a "minor regen" than a 6-line tweak; might be cheapest to redo from scratch.
+2. **YouTube description errata + supplemental worksheet** — pinned correction + a downloadable PDF worksheet covering nondisjunction/dihybrid/sex-linked, linked from both the YouTube description and the Learn Portal module page.
+
+Recommend: option 2 is the better cost/value trade for this one — the structural gap is teachable via worksheet, not a narration tweak.

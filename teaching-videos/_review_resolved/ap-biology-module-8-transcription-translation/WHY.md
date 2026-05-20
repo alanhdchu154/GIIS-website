@@ -22,3 +22,17 @@
 - `teaching-videos/ap-biology-module-8-transcription-translation/_review_A.json`
 - `teaching-videos/ap-biology-module-8-transcription-translation/_review_B.json`
 - `teaching-videos/ap-biology-module-8-transcription-translation/_review_C.json`
+
+## ✅ STATUS — patched 2026-05-20 Slot B
+M8 was NOT yet uploaded to YouTube (`youtube.video_id` absent in pre-patch script.json), so on-disk surgical patch was safe. Slot B applied the surgical edits per the highest-leverage list:
+
+- `02_hook` — dropped unsupported "1958" Crick date; kept the dogma framing.
+- `05_transcription` — added explicit template-vs-coding-strand disambiguation (AP FRQ trap).
+- `06_mrna_processing` — formally named the spliceosome components as snRNPs (small nuclear ribonucleoproteins).
+- `07_alternative_splicing` — removed the unsupported "20k genes / 100k proteins / fewer than rice" framing; replaced with qualitative phrasing ("surprisingly modest gene count … few enough genes that alternative splicing matters").
+- `09_codons_trnas` — added a wobble-pairing paragraph (CED-aligned).
+- `12_translation_steps` — disambiguated eukaryotic 5'-cap-scanning vs prokaryotic Shine-Dalgarno initiation.
+- `13_gene_regulation` — added the CAP/cAMP positive-regulation layer for the lac operon ("full blast only when lactose is present AND glucose is low").
+- `15_recap` — removed rice claim, added snRNPs + CAP-cAMP mentions; preserved structure.
+
+A round-2 Reviewer C re-run is queued — see `_review_C_v2.json` once written. If verdict is `minor` or `pass`, this `_review_failed/` marker should be moved or deleted by the next agent.

@@ -1,0 +1,48 @@
+{
+  "reviewer": "C",
+  "role": "citation-checker",
+  "round": 2,
+  "module": "ap-biology-module-8-transcription-translation",
+  "previous_round_verdict": "critical",
+  "previous_round_critical_issues_resolved": [
+    {
+      "issue": "Crick 1958 date in 02_hook",
+      "resolved": true,
+      "evidence": "Section 02_hook now reads 'Francis Crick captured it on a single page' with no date. The unsupported '1958 sketch' claim has been removed. Reference attributes the central dogma to Crick (line 425) without a date, so this is now CED-supported."
+    },
+    {
+      "issue": "20k genes / 100k proteins / rice in 07 and 15",
+      "resolved": true,
+      "evidence": "Section 07_alternative_splicing now uses qualitative language: 'surprisingly modest gene count', 'far more distinct proteins than that number suggests', 'Few enough genes that alternative splicing matters'. Section 15_recap likewise reads 'modest gene count produces a vast proteome'. No specific gene/protein counts or rice comparison remain. Reference line 449-450 supports the qualitative point that 'Alternative splicing lets one gene encode multiple protein isoforms.'"
+    },
+    {
+      "issue": "Section 13 lac operon missing CAP/cAMP",
+      "resolved": true,
+      "evidence": "Section 13 now contains 'CAP and cAMP. When glucose is scarce, cAMP rises, CAP binds upstream, and transcription gets boosted. So lac runs full blast only when lactose is present AND glucose is low.' Reference line 475-476 explicitly states 'cAMP-CAP boosts transcription when glucose is low' — fully CED-supported."
+    }
+  ],
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "09_codons_trnas",
+      "severity": "minor",
+      "description": "Claim about 'wobble pairing — the third base of a codon can pair more loosely with the tRNA anticodon, so one tRNA often reads several codons that differ only in the third position' is not present in the reference excerpt. Reference only states the code is 'redundant (multiple codons -> same amino acid)' but does not mention wobble pairing mechanism. Unsupported by excerpt (though factually correct in general AP Bio knowledge)."
+    },
+    {
+      "section": "12_translation_steps",
+      "severity": "minor",
+      "description": "Claim 'Prokaryotes do it differently — the small subunit binds a Shine-Dalgarno sequence just upstream of A-U-G to position itself' is not supported by the reference excerpt. Reference line 465-466 describes eukaryotic initiation only ('small ribosomal subunit binds 5' cap, scans to AUG, large subunit joins'). No mention of Shine-Dalgarno or prokaryotic-specific initiation in the excerpt."
+    },
+    {
+      "section": "16_path",
+      "severity": "minor",
+      "description": "Carryover from round 1 — 'OpenStax Biology, Chapters Fifteen and Sixteen' specifies chapter numbers that are not verifiable against the CED reference excerpt. Excerpt contains no OpenStax chapter references. (Non-load-bearing study-path suggestion, not a science claim.)"
+    },
+    {
+      "section": "08_translation_ribosome",
+      "severity": "minor",
+      "description": "Claim 'Prokaryotic ribosomes are smaller — seventy-S total' is not supported by the reference excerpt. Reference line 458-460 only describes eukaryotic ribosomes (60S + 40S = 80S). Prokaryotic ribosome size is not mentioned in the excerpt. (Factually correct in general but unsupported by the reference window.)"
+    }
+  ],
+  "summary": "Round 2: All 3 round-1 critical issues are RESOLVED — Crick 1958 date dropped, gene/protein/rice numerics replaced with qualitative phrasing, and lac operon CAP/cAMP layer added (CED-supported per line 475-476). New CED-supported additions verified: snRNPs name (line 448, supported), template/coding strand contrast in 05 (template reading 3'->5' is supported by line 436-437; coding-strand definition as 'same sequence as mRNA except T-for-U' is a derivable corollary, not flagged). Four remaining minor flags: (1) wobble pairing in 09, (2) Shine-Dalgarno in 12, (3) OpenStax chapter numbers in 16 carryover, (4) prokaryotic 70S ribosome size in 08. None are load-bearing and none materially change the science. Verdict upgraded from critical to MINOR. Recommend removing _review_failed/<slug>/WHY.md."
+}

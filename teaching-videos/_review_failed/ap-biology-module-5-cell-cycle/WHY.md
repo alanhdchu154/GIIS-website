@@ -19,3 +19,10 @@
 - `teaching-videos/ap-biology-module-5-cell-cycle/_review_A.json`
 - `teaching-videos/ap-biology-module-5-cell-cycle/_review_B.json`
 - `teaching-videos/ap-biology-module-5-cell-cycle/_review_C.json`
+
+## ⚠️ BROADCAST CONSTRAINT — added 2026-05-20 Slot B
+This script is already broadcast on YouTube — `youtube.video_id` = `OJDjXPhi9qI`. Same constraint as M4: patching `script.json` would diverge the on-disk narration from the recorded video. Slot B did NOT touch script.json.
+
+Two safe paths for human resolution:
+1. **Re-record & re-upload** — apply the narration patch, regen TTS, re-render MP4, replace on YouTube. The G1-ploidy guardrail is load-bearing science and arguably worth the re-record cost.
+2. **YouTube description errata** — pinned correction noting "G1 cells stay diploid (2n); only chromatid count changes across S phase. The 3.8M cells/sec figure is from Sender & Milo (2016)."

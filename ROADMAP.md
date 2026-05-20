@@ -1,11 +1,13 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-20 Slot A 04:12Z（AP Biology M4-M9 retroactive review cascade — 6 modules × 3 reviewers 平行；18 個 review JSON 全部寫入；4 個 module 拿到 Reviewer C critical 並寫入 `_review_failed/<slug>/WHY.md` 等人類 surgical narration 修正）
+> 最後更新：2026-05-20 Slot B 5am（AP Bio M8 surgical narration patch + round-2 Reviewer C verdict `minor`；發現 M4/M5/M6 已上 YouTube，patch unsafe — WHY.md 加上 BROADCAST CONSTRAINT 說明，留給人類決定 re-record vs description errata）
 >
-> 前次：2026-05-19 Later 11（把 Presentations / imagegen / Browser / testing-strategy 寫入 lesson flow；新增 release gate + contact sheet helper；daily upload 先跑 quality report）
+> 前次：2026-05-20 Slot B2（Pathway audit 升級 module outline rubric：可檢查 objectives 是否可評量、assignment 是否夠厚；目前 57 pass / 34 warn / 2 fail）
 >
-> 前前次：2026-05-19 Later 10（AP Biology M10 V2 pilot：短段落、單概念 slides、三類 reviewer artifacts、靜音 timing MP4、audit score 99）
-> 前前前次：2026-05-19 Later 9（新增 ModuleProgress：影片/閱讀/練習/測驗/作業完成時間可追蹤；家長與 admin audit trail 可看到學習活動）
+> 前前次：2026-05-20 Slot B（Pathway/course quality audit：93 門課掃描；新增 public pathway academic evidence panel；找出 AP CSA / AP Calc AB 無 quiz/exam 題庫的 P0 缺口）
+>
+> 前前前次：2026-05-20 Slot A 04:12Z（AP Biology M4-M9 retroactive review cascade — 6 modules × 3 reviewers 平行；18 個 review JSON 全部寫入；4 個 module 拿到 Reviewer C critical 並寫入 `_review_failed/<slug>/WHY.md` 等人類 surgical narration 修正）
+> 前前前次：2026-05-19 Later 10（AP Biology M10 V2 pilot：短段落、單概念 slides、三類 reviewer artifacts、靜音 timing MP4、audit score 99）
 > **核心目標：讓家長願意付錢，並且持續付錢。**
 >
 > 這份 roadmap 是給 **Claude Code CLI（code mode）** 的工作清單。
@@ -30,6 +32,27 @@
 1. **信任** — 這是一間真正的學校嗎？我的孩子拿到的文憑有意義嗎？
 2. **透明** — 我看得到孩子在學什麼、學得怎麼樣嗎？
 3. **結果** — 孩子有在進步嗎？這筆錢花得值得嗎？
+
+---
+
+## ✅ Pathway / course quality audit + public evidence panel（2026-05-20 Slot B）
+
+> 目標：用高標準檢查 pathway 是否像一間真高中，而不是只像 marketing page；讓家長看到學分、課綱、評量與成果證據，也讓 dev 之後可自動抓出薄弱課程。
+
+- ✅ **使用 skill 判斷**：用 `engineering:tech-debt` 的 impact/risk/effort 框架檢查 pathway/course content debt。結論：public pathway 可信度不差，但 course catalog/source-of-truth 分散與 AP 題庫缺口會直接傷害 trust/transparency。
+- ✅ **新增 course quality audit**：`tools/pathway-quality/audit_courses.js` + `npm run audit:pathways`，掃 `server/prisma/courses/**/*.json`，檢查 modules、module quiz density、midterm/final 題庫、module objectives/resources/assignments、AP alignment wording、estimated hours。
+- ✅ **Baseline 結果**：93 門課：77 pass / 14 warn / 2 fail。兩個 P0 fail 是 `ap-computer-science-a`、`ap-calculus-ab`：都有 14 modules，但 `quizQuestions=0`、`midterm=0`、`final=0`，學生進 Learn Portal 會卡在 quiz/exam 評量缺失。14 個 warn 主要是 1-credit electives estimated module hours < 40 或 AP alignment wording 不夠明確。
+- ✅ **Public pathway trust upgrade**：`src/components/pages/Pathways/PathwayComponents.js` 新增 Academic evidence panel，顯示 credit map、course depth、assessment trail、senior evidence；每條 pathway 都會自動吃 schedule/courses 計算。
+- ✅ **Pathways hub trust strip**：`src/components/pages/Pathways/PathwaysHub.js` 新增 Credit plan / Learn Portal evidence / Capstone outcome 三格，讓家長進 pathway hub 第一屏後立刻知道這不是普通選修課清單。
+- ✅ **視覺/技術驗證**：`npm run audit:pathways` 通過並列出缺口；`npm run build` 通過；Playwright screenshots 已檢查 `/pathways/cs` 與 `/pathways`，新增 panel 無重疊、可讀。
+- 🔧 **下一個 P0**：為 `ap-computer-science-a` 和 `ap-calculus-ab` 補至少每 module 3 題 quiz、midterm ≥10 題、final ≥15 題；這應該認真出題，不要用 placeholder。完成後 `npm run audit:pathways` 應降為 0 fail。
+
+### ✅ Module outline rubric upgrade（2026-05-20 Slot B2）
+
+- ✅ **Audit 不只查「有沒有」**：`tools/pathway-quality/audit_courses.js` 現在也檢查 module objectives 是否足夠長、是否含 measurable verb，以及 assignment 是否夠厚到能產生真 student work。
+- ✅ **新 baseline**：`npm run audit:pathways` 結果為 57 pass / 34 warn / 2 fail。fail 仍是 AP CSA / AP Calc AB 無題庫；warn 變多是因為 rubric 更嚴格，抓出 outline quality 問題。
+- 🔎 **高標準判斷**：整體 course sequence 有真學校雛形；最佳的一批是 Business / Social Studies / Psychology 多數 electives，module + quiz + assignment chain 比較完整。較弱的是 core Biology、English I Writing Focus、World History、Algebra I、部分 English IV variants：它們不是不能用，而是 objectives/assignments 太像 topic list，缺少可被家長/審核員看懂的「學生做了什麼」證據。
+- 🔧 **下一個內容修補順序**：先補 AP CSA / AP Calc 題庫（P0），再 surgical upgrade Biology + English I Writing Focus + World History 的 weak objectives / thin assignments（P1），最後調整 1-credit electives estimated hours 或改成 0.5-credit positioning（P2）。
 
 ---
 
@@ -66,6 +89,20 @@
 - ✅ Nav Admission dropdown 修：移除誤導性「FAQ」、Apply Now 改連到 `/apply` 而非 `/admission`
 - ✅ ScrollToTop 加 hash anchor 支援（讓 `/discovery#mission` 可實際捲到 mission section）
 - ✅ AboutPage / HandbookPage 加 `<Nav>` 元件（之前漏接）
+
+---
+
+## ✅ AP Biology M8 surgical narration patch + broadcast-constraint flagging（2026-05-20 Slot B 5am CT）
+
+> Slot B 任務：接續 Slot A 的 retroactive cascade，處理那 4 個 Reviewer-C-critical 的 module。發現 M4/M5/M6/M7 都已經有 `youtube.video_id` — 改 script.json 會讓 on-disk 文字跟 YouTube 上的影片產生 divergence，違反 AUTO_PIPELINE.md 的 "don't regenerate uploaded modules" 原則。M8 沒上 YouTube，可以安全 patch。
+
+- ✅ **Surgical patch M8**：8 個 sections 動手 — 02_hook 拿掉 Crick 1958 日期；05_transcription 加 template vs coding strand 區分；06_mrna_processing 把 spliceosome 元件正名為 snRNPs；07_alternative_splicing 拿掉 20k genes / 100k proteins / fewer than rice，改成 qualitative；09_codons_trnas 加 wobble pairing 段落；12_translation_steps 加 Shine-Dalgarno prokaryotic initiation；13_gene_regulation 加 CAP/cAMP positive layer for lac operon；15_recap 同步移除 rice 並加 snRNPs + CAP/cAMP mentions。
+- ✅ **Round-2 Reviewer C cascade**：fresh sub-agent 用同樣的 CED window (lines 423-504) 重新審核 patched script。Verdict：`minor`（從 round 1 的 `critical` 升級）。3 個 round-1 critical issue 全部 resolved（Crick 1958 dropped、rice claim dropped、lac CAP/cAMP added 且 CED-supported）。剩 4 個 minor issue（wobble、Shine-Dalgarno、OpenStax 章節、prokaryotic 70S）— 全部不是 load-bearing。
+- ✅ **檔案搬家**：`teaching-videos/_review_failed/ap-biology-module-8-transcription-translation/` 移到 `teaching-videos/_review_resolved/ap-biology-module-8-transcription-translation/`，附帶 `STATUS — patched` addendum 在 WHY.md 留 audit trail。
+- 🟠 **M4/M5/M6 標 BROADCAST CONSTRAINT**：每個 WHY.md 新增一段，明寫該 module 的 `youtube.video_id`、為什麼 slot B 不動 script.json、以及兩條給人類的可選路徑：(1) re-record + re-upload（M5 的 G1 ploidy guardrail 是 load-bearing science，最值得 re-record）；(2) YouTube description errata（M6 還可加 supplemental worksheet PDF 補 nondisjunction/dihybrid/sex-linked gap）。
+- ✅ **Audit summary**：`teaching-videos/_audit/ap-biology/2026-05-20T10-30-00Z-slot-B-narration-revision.json`
+- ⚙️ **沒做**：沒 push 到 git、沒 call YouTube API、沒動 `public/data/lessons-manifest.json`、沒生新 module（因為剩 4 個 _review_failed 要處理 > 加新 module；下個 slot A 應該開始 AP CSA M5 with full cascade）
+- 🔧 **下一個 Slot A 建議**：開始 AP Computer Science A M5 onward，full generator + 3-reviewer cascade + writer。AP CSA 有 CED reference doc，目前 4/10，沒有 broadcast-locked debt
 
 ---
 

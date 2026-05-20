@@ -1,0 +1,86 @@
+{
+  "run_id": "ap-biology-slot-B-narration-revision-2026-05-20T10-30-00Z",
+  "run_type": "narration_revision_round_2",
+  "timestamp": "2026-05-20T10:30:00Z",
+  "course": "AP Biology",
+  "slot": "B (5am CT)",
+  "picked_up_from_slot_A": true,
+  "slot_A_context": "Slot A (2026-05-20T04:12Z) retroactively ran the 3-reviewer cascade on AP Bio M4-M9, producing 18 review JSON files. M4/M5/M6/M8 received Reviewer C critical verdicts and got _review_failed/<slug>/WHY.md markers. M7/M9 were minor-only (ship-safe).",
+  "slot_B_action_summary": "Discovered that M4/M5/M6 already carry youtube.video_id — surgical script.json patches would diverge the broadcast video from the on-disk script (per AUTO_PIPELINE.md: never regenerate uploaded modules). Only M8 lacked a video_id and was safe to patch. Slot B applied the WHY.md-prescribed surgical edits to M8 (8 sections touched), then spawned a fresh Reviewer C sub-agent for round-2 verification.",
+  "modules_touched": [
+    {
+      "slug": "ap-biology-module-8-transcription-translation",
+      "action": "surgical_narration_patch",
+      "broadcast_status": "not_yet_uploaded",
+      "sections_edited": [
+        "02_hook (dropped Crick 1958 date)",
+        "05_transcription (added template vs coding strand disambiguation)",
+        "06_mrna_processing (named snRNPs)",
+        "07_alternative_splicing (removed unsupported 20k/100k/rice numbers; replaced with qualitative framing)",
+        "09_codons_trnas (added wobble pairing line)",
+        "12_translation_steps (added Shine-Dalgarno prokaryotic initiation)",
+        "13_gene_regulation (added CAP/cAMP positive-regulation layer for lac operon)",
+        "15_recap (removed rice claim; added snRNPs + CAP/cAMP recap mentions)"
+      ],
+      "round_2_reviewer_C_verdict": "minor",
+      "round_1_critical_issues_resolved": 3,
+      "round_2_remaining_minor_issues": 4,
+      "remaining_minor_issues_summary": "wobble (09), Shine-Dalgarno (12), OpenStax chapter numbers (16), 70S prokaryotic ribosome (08) — all non-load-bearing carryovers or true-but-not-in-CED-window.",
+      "decision": "ship_with_minor_revisions",
+      "review_failed_folder_action": "moved to _review_resolved/ap-biology-module-8-transcription-translation/",
+      "v2_review_file": "_review_C_v2.json"
+    }
+  ],
+  "modules_unable_to_patch": [
+    {
+      "slug": "ap-biology-module-4-cell-communication",
+      "reason": "Already broadcast on YouTube (video_id: qwUfhZFQjZA, uploaded 2026-05-19). Surgical script.json patch would diverge on-disk text from the recorded video — unsafe per AUTO_PIPELINE.md anti-pattern (don't regenerate modules with youtube.video_id).",
+      "WHY_md_updated_with_broadcast_constraint": true,
+      "deferred_paths_for_human": [
+        "re-record + re-upload (most expensive, most honest)",
+        "YouTube description errata (cheaper, lower-visibility correction)"
+      ]
+    },
+    {
+      "slug": "ap-biology-module-5-cell-cycle",
+      "reason": "Already broadcast on YouTube (video_id: OJDjXPhi9qI). The G1-ploidy guardrail is load-bearing science and arguably worth re-record cost.",
+      "WHY_md_updated_with_broadcast_constraint": true
+    },
+    {
+      "slug": "ap-biology-module-6-mendelian-genetics",
+      "reason": "Already broadcast on YouTube (video_id: PQ9sMV1Uzdg). Structural gap (recap covers untaught material) — recommended path is supplemental worksheet + YouTube description errata, not narration tweak.",
+      "WHY_md_updated_with_broadcast_constraint": true
+    }
+  ],
+  "files_written_this_run": [
+    "teaching-videos/ap-biology-module-8-transcription-translation/script.json (patched)",
+    "teaching-videos/ap-biology-module-8-transcription-translation/_review_C_v2.json (round-2 verdict)",
+    "teaching-videos/_review_resolved/ap-biology-module-8-transcription-translation/WHY.md (moved from _review_failed/, with STATUS — patched addendum)",
+    "teaching-videos/_review_failed/ap-biology-module-4-cell-communication/WHY.md (appended BROADCAST CONSTRAINT section)",
+    "teaching-videos/_review_failed/ap-biology-module-5-cell-cycle/WHY.md (appended BROADCAST CONSTRAINT section)",
+    "teaching-videos/_review_failed/ap-biology-module-6-mendelian-genetics/WHY.md (appended BROADCAST CONSTRAINT section)",
+    "teaching-videos/_audit/ap-biology/2026-05-20T10-30-00Z-slot-B-narration-revision.json (this file)"
+  ],
+  "summary_stats": {
+    "modules_patched_this_run": 1,
+    "modules_blocked_by_broadcast_status": 3,
+    "round_2_reviewers_spawned": 1,
+    "modules_moved_to_review_resolved": 1,
+    "modules_still_in_review_failed": 3,
+    "new_modules_generated": 0
+  },
+  "why_no_new_modules": "Per scheduled task instructions: 'AP Biology — DO NOT ADD MORE until existing are audited.' Slot A completed the retroactive audit. Slot B's job was to act on those audits — which meant either narration patches (for non-broadcast modules) or documenting broadcast constraints (for already-uploaded modules). Adding new AP CSA / AP Psychology modules in the same run would have either (a) skipped the full 3-reviewer cascade (forbidden) or (b) exceeded the time budget. Chose 1 verified patch over multiple unverified generations.",
+  "constraints_respected": {
+    "no_youtube_api_calls": true,
+    "no_git_push": true,
+    "lessons_manifest_untouched": true,
+    "no_regeneration_of_uploaded_modules": true,
+    "three_reviewer_cascade_used_for_M8_revision": true,
+    "no_skipped_reviewers": true
+  },
+  "next_slot_recommendations": [
+    "Slot A (tonight 11pm CT): begin a fresh AP Computer Science A module (M5 onward) with the FULL generator + 3-reviewer cascade + writer pipeline. AP CSA has a CED reference doc and currently sits at 4/10 with no broadcast-locked debt.",
+    "Alan / human: decide path for M4/M5/M6 broadcast-locked corrections (re-record vs YouTube description errata). M6 specifically would benefit from a supplemental worksheet PDF rather than narration changes.",
+    "Future agent: confirm M8's _review_C_v2.json verdict, then (if a Mac TTS+upload pass is desired) ensure the patched script.json is what gets sent to TTS. Verify slides/ PNGs do not need re-render — narration text changes do not affect slide visuals in this lesson."
+  ]
+}

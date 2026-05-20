@@ -20,6 +20,15 @@
 - script.json and slides already exist on disk; folder was NOT moved per `_review_failed/` SOP because doing so would break the Mac TTS+upload pipeline that may have already processed neighboring modules.
 - Per CLAUDE.md, "trust" is the first parent-payment lens: ship-as-is risks teaching the alpha-subunit mistake. But the cost of regenerating is higher than the cost of a 6-line narration tweak.
 
+## ⚠️ BROADCAST CONSTRAINT — added 2026-05-20 Slot B
+This script is already broadcast on YouTube — `youtube.video_id` = `qwUfhZFQjZA` (uploaded 2026-05-19). Patching `script.json` directly is **unsafe**: it would diverge the on-disk narration from the recorded video, and any future regen+TTS run would produce a different MP4 than what parents/students already see on YouTube.
+
+Two safe paths for resolution (deferred to human / Alan):
+1. **Re-record & re-upload** — apply the surgical narration edits to script.json, regen TTS audio, re-render MP4, replace YouTube video (private→re-upload or use YouTube's "upload new version" feature). Most expensive but honest.
+2. **YouTube description errata** — leave script.json alone; add a pinned correction in the YouTube description (e.g., "Errata: Sutherland's three-stage framework wasn't dated; G-protein alpha-subunit dissociates, not the whole G-protein"). Cheaper but lower-visibility correction.
+
+Slot B explicitly did NOT touch script.json for this module to avoid script/video divergence.
+
 ## Source-of-truth files
 - `teaching-videos/ap-biology-module-4-cell-communication/_review_A.json`
 - `teaching-videos/ap-biology-module-4-cell-communication/_review_B.json`
