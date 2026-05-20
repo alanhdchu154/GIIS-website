@@ -1,6 +1,10 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-20 Slot C11（Transcript frontend restored exactly to 2026-05-12 snapshot；server package date behavior aligned；not resent yet）
+> 最後更新：2026-05-20 Slot C13（Frontend Transcript Export to PDF restored to Alan's 5/10 reference lineage；issue date now uses export day；seal made more formal）
+>
+> 前次：2026-05-20 Slot C12（Graduation PDFs rechecked；admin/student transcript downloads share one export path；parent transcript download is not implemented yet）
+>
+> 前次：2026-05-20 Slot C11（Transcript frontend restored exactly to 2026-05-12 snapshot；server package date behavior aligned；not resent yet）
 >
 > 前次：2026-05-20 Slot C10（Server transcript package moved closer to exact 2026-05-10 inline PDF settings；seal/signature block uses same filter/layout；not resent yet）
 >
@@ -209,6 +213,26 @@
 - ✅ **PDF dry-run 已覆蓋重產**：五位 senior transcript + diploma 已重新產生；五份 transcript 全部仍是 1 page。Baoyi preview：`server/tmp/graduation-documents/preview/baoyi-transcript-512.png`。
 - ✅ **驗證**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過；`npm run build` 通過。
 - ⚠️ **尚未重寄**：仍未 email。等 Alan 確認 5/12 版型與日期行為後再重寄五封附件信。
+
+### ✅ Graduation document recheck + transcript download path audit（2026-05-20 Slot C12）
+
+> 目標：重新抽查 transcript + diploma PDF，並確認 Admin / student / parent 下載 transcript 是否會產生同一種 official format。
+
+- ✅ **PDF package recheck**：重新 dry-run 產出五位 senior 的 transcript + diploma package 到 `server/tmp/graduation-documents/`；五份 transcript 皆為 1 page，抽查 Hanxi transcript 與 Ruwen/Hanxi diploma 可正常 render 成 PNG preview。
+- ✅ **Transcript date live behavior**：live Netlify bundle 已抽查，正式 transcript export 的 `Transcript Date` 會使用 export 當天日期；本輪 preview 顯示 `05/20/2026`。
+- ✅ **Admin/student transcript 格式一致**：`/admin/transcript/:studentId` 與 `/transcript` 都 render `TranscriptContent`，PDF button 最終都呼叫同一個 `exportTranscriptToPDF()`；所以 Admin 與 student 下載格式不是兩套模板。
+- ⚠️ **Parent transcript download gap**：`ParentDashboard` 目前只有 progress / billing / activity dashboard，沒有 transcript PDF download 入口，也沒有 reuse `TranscriptContent`。若要讓 parent 下載 transcript，下一步應新增 parent transcript route/button，直接 reuse 同一個 `TranscriptContent` / `exportTranscriptToPDF()`，避免 official document format 分叉。
+- ✅ **驗證**：`npm run audit:seniors` 通過；`npm run build` 通過；live site `https://genesisideas.school` 回 `HTTP/2 200`。
+
+### ✅ Frontend transcript export restored to Alan 5/10 reference lineage（2026-05-20 Slot C13）
+
+> 目標：停止用「大概 5/10」或 server package 反推；以 Alan 提供的 `Yunfan Yang_Transcript.pdf` 作為 reference，先把網站 `Export to PDF` 回到同一視覺 lineage，再只做必要的日期與 seal 修正。
+
+- ✅ **Canonical version 定位**：Alan 提供的 5/10 PDF 對應的是 5/10 當天較早的 transcript export lineage（`4c616ea7`），不是後續 gold-accent / embossed-seal 版本；前端 `src/components/pages/Transcript/transcriptPdf.js` 已回到該 lineage。
+- ✅ **Issue date 修正**：`Transcript Date` 與 certifying signature date 現在都使用 export 當天日期；不再優先吃 profile 裡舊的 `transcriptDate`。
+- ✅ **Seal 微調**：保留 reference 的左下 gold seal 位置與結構，只把尺寸與 contrast/drop-shadow 做輕微正式化，避免回到灰色 cosplay seal。
+- ✅ **Title convention 保留**：右上仍使用 `President & Principal: Shiyu Zhang, Ph.D.`，符合目前 official-title convention。
+- ✅ **驗證**：`npm run build` 通過；`npm run audit:seniors` 通過。尚未 deploy，尚未重寄任何 PDF。
 
 ---
 
