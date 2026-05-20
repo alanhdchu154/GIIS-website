@@ -1,0 +1,64 @@
+{
+  "reviewer": "A",
+  "role": "peer-phd-subject-matter",
+  "module": "ap-biology-module-8-transcription-translation",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "Crick coined the term 'central dogma' in a 1957 talk and published the formulation in 1958, but the famous one-page sketch was actually a 1956 note. Saying he 'sketched it on a single page in 1958' is a small historical conflation. Fix: say 'Crick articulated the central dogma in 1958' and drop the 'single page' line."
+    },
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "The 'one gene, one messenger, one protein' framing is the discarded 'one gene–one polypeptide' shorthand and contradicts the alternative-splicing point made two sections later. A student will get whiplash. Fix: say 'one gene can be copied into one or more messengers, each translated into a protein.'"
+    },
+    {
+      "section": "05_transcription",
+      "severity": "minor",
+      "description": "'TATA box about 25 base pairs upstream' is fine, but the script says the TATA box 'marks' the promoter — the TATA box is a core promoter element, not a marker upstream of the promoter. Phrase as 'the core promoter, which contains the TATA box ~25 bp upstream of the transcription start site.'"
+    },
+    {
+      "section": "06_mrna_processing",
+      "severity": "minor",
+      "description": "The spliceosome is described as 'a complex of small nuclear RNAs.' It is composed of snRNPs — small nuclear ribonucleoproteins (snRNAs + proteins), not RNA alone. AP exam stems sometimes test snRNP terminology."
+    },
+    {
+      "section": "07_alternative_splicing",
+      "severity": "critical",
+      "description": "'Humans make over a hundred thousand different proteins' from ~20,000 genes is a popular but unsupported number. Current proteomics estimates the human proteome at roughly 20,000 canonical proteins with hundreds of thousands of proteoforms once PTMs are included; the often-quoted '100,000 proteins from alternative splicing alone' is not a defensible figure. Fix: 'one gene can produce multiple protein isoforms via alternative splicing, dramatically expanding the proteome,' without a fabricated number. Also, rice has ~35,000–50,000 genes, not 'fewer than humans' in the way implied — the throwaway comparison is misleading."
+    },
+    {
+      "section": "08_translation_ribosome",
+      "severity": "minor",
+      "description": "Prokaryotic ribosome subunit detail is missing — it's 50S + 30S = 70S. Saying only '70S total' is fine for AP but worth one extra clause for symmetry with the eukaryotic breakdown."
+    },
+    {
+      "section": "09_codons_trnas",
+      "severity": "minor",
+      "description": "Section claims 'every protein begins life with a methionine at position one.' True at translation initiation, but the initiator Met is frequently cleaved post-translationally, and in prokaryotes the initiator is fMet (formyl-methionine). For AP this is acceptable, but the absolute phrasing 'every protein' is too strong. Also: anticodons and wobble are mentioned in the CED concept but not explained in narration."
+    },
+    {
+      "section": "11_pause1_silence",
+      "severity": "critical",
+      "description": "Worked-example error. Template strand given: 3'-TAC GGC ATT-5'. Complementary antiparallel mRNA should be 5'-AUG CCG UAA-3'. The script gets that right. BUT then it says 'CCG codes for proline.' CCG codes for PROLINE — correct. Good. However, the script then says 'the finished peptide is just two amino acids long — methionine, then proline' — this is fine. No error here on recheck. Downgrading: the only quibble is that release factors recognize stop codons in the A site and the peptide hydrolyzes off the P-site tRNA; 'pops the chain off' is acceptable shorthand."
+    },
+    {
+      "section": "13_gene_regulation",
+      "severity": "minor",
+      "description": "lac operon description omits the catabolite-repression layer (cAMP-CAP boosts transcription when glucose is low), which IS in the CED reference and which AP free-response questions love. Worth one sentence."
+    },
+    {
+      "section": "13_gene_regulation",
+      "severity": "minor",
+      "description": "'DNA methylation represses and histone acetylation activates' is broadly correct for AP, but the script should clarify DNA methylation specifically at CpG islands of promoters (per CED) — otherwise students get tripped up by gene-body methylation contradictions on harder stems."
+    },
+    {
+      "section": "14_mutations_compare",
+      "severity": "minor",
+      "description": "Sickle-cell description is correct (GAG→GTG, Glu→Val, β-globin position 6). Minor nit: this is a DNA-level mutation; at the mRNA level it is GAG→GUG. Worth noting to avoid confusion when students see the mRNA version on the exam."
+    }
+  ],
+  "summary": "Script is largely sound for AP Biology Unit 6 and aligned to CED content. The most exam-relevant fix is the '100,000 proteins from 20,000 genes' claim in section 07 — that number is not defensible and the rice comparison is sloppy. Several minor polish items (snRNP terminology, cAMP-CAP, CpG specificity) would tighten alignment with the CED."
+}

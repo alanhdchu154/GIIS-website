@@ -1,0 +1,69 @@
+{
+  "reviewer": "A",
+  "role": "peer-phd-subject-matter",
+  "module": "ap-biology-module-9-biotechnology",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "Framing 'Watson and Crick figured out the structure of DNA. They learned how to READ the code of life' is loose. Solving the double-helix structure (1953) did not teach anyone to 'read' the code — that came later with sequencing (Sanger, 1977) and ultimately the genetic code work of Nirenberg/Khorana/Holley in the 1960s. Also, CRISPR is not 'writing' the code from scratch; it is targeted editing. Tighten the metaphor: '1953: we saw the structure. 2020: we could precisely edit it.'"
+    },
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "Rosalind Franklin and Maurice Wilkins are omitted from the 1953 framing. Not strictly required for AP, but a PhD reviewer would flag the standard correction."
+    },
+    {
+      "section": "04_restriction_enzymes",
+      "severity": "minor",
+      "description": "Says restriction enzymes 'evolved as a defense against viruses.' Accurate, but the narration should mention that bacteria protect their own DNA via methylation at the same recognition sites — this is a common AP free-response follow-up ('why doesn't the enzyme cut the bacterium's own genome?')."
+    },
+    {
+      "section": "04_restriction_enzymes",
+      "severity": "minor",
+      "description": "Definition of palindrome is slightly muddled: 'reads the same forward on one strand as backward on the other.' The technical AP-correct phrasing is that the 5'->3' sequence on one strand equals the 5'->3' sequence on the complementary strand. Current phrasing is okay but could mislead a careful student into thinking GAATTC == CTTAAG read backwards."
+    },
+    {
+      "section": "05_plasmids_recombinant",
+      "severity": "minor",
+      "description": "Calling a plasmid 'a small circular piece of bacterial DNA' is fine for AP, but missing that plasmids are extrachromosomal and replicate independently of the chromosome — a frequent AP MCQ distractor."
+    },
+    {
+      "section": "07_pcr_overview",
+      "severity": "minor",
+      "description": "'30 cycles gets you to about a billion copies' — technically 2^30 ~ 1.07 x 10^9, so this is fine; but immediately after the script also says '10-to-the-ninth' in 08, which is the CED phrasing. Consistent, just flag that real PCR efficiency is <100%, so 'about a billion' is an idealized number. Not wrong, just an oversimplification."
+    },
+    {
+      "section": "08_pcr_three_steps",
+      "severity": "minor",
+      "description": "Primers should be specified as short single-stranded DNA oligonucleotides that flank the target region (forward and reverse). 'Short primers bind to their complementary template regions' is technically true but a student who has not heard 'two primers, one on each strand' may not understand why the product is bounded."
+    },
+    {
+      "section": "09_dna_sequencing",
+      "severity": "minor",
+      "description": "'$3 billion in 2003 to under $1,000 today' is the standard Human Genome Project / NHGRI talking point and is accurate, but it is not in the CED excerpt. Flag for citation review (Reviewer C territory)."
+    },
+    {
+      "section": "12_crispr_cas9",
+      "severity": "minor",
+      "description": "Calling CRISPR-Cas9 'the newest tool and the most powerful' is editorializing. Also, the script conflates two repair pathways without naming them: NHEJ (non-homologous end joining, which causes the indels) and HDR (homology-directed repair, used when a template is supplied). Naming them is not required by the CED, but a PhD would note the omission."
+    },
+    {
+      "section": "13_applications",
+      "severity": "minor",
+      "description": "'CRISPR clinical trials are now treating sickle-cell disease' is true but understates current status — Casgevy (exa-cel) received FDA approval in December 2023, so it is now an approved therapy, not just a trial. Minor currency issue."
+    },
+    {
+      "section": "13_applications",
+      "severity": "minor",
+      "description": "'recombinant insulin was the first FDA-approved biotech drug in 1982' — Humulin was approved by the FDA in October 1982. Accurate. No fix needed; flagged for cross-check by Reviewer C since the year is a specific claim."
+    },
+    {
+      "section": "14_compare_traps",
+      "severity": "minor",
+      "description": "Germline vs somatic framing is correct and useful. Could be sharpened: germline edits affect gametes / embryos / the germ line; somatic edits affect only differentiated (non-reproductive) cells of one individual. Currently says 'sperm or egg DNA' which is fine but missing the early-embryo case (where the famous He Jiankui CCR5 edits occurred)."
+    }
+  ],
+  "summary": "No outright factual errors; the molecular biology is accurate and AP-appropriate. The issues are oversimplifications and missing nuance (palindrome definition, methylation self-protection, NHEJ vs HDR, primer pairing, Casgevy approval status). Safe to ship after a light revision pass on sections 02, 04, 08, and 12."
+}

@@ -1,0 +1,94 @@
+{
+  "reviewer": "C",
+  "role": "citation-checker",
+  "module": "ap-biology-module-9-biotechnology",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "01_title",
+      "severity": "minor",
+      "description": "Claim: 'Unit Six lands on roughly twelve to sixteen percent of the AP exam.' This specific percentage range is NOT in the reference text (lines 507-554). Flagged as unsupported numeric claim."
+    },
+    {
+      "section": "02_hook",
+      "severity": "critical",
+      "description": "Claim: 'In nineteen fifty-three, Watson and Crick figured out the structure of DNA.' The year 1953 and the names Watson and Crick do NOT appear anywhere in the reference excerpt. Flagged as unsupported specific date + names."
+    },
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "Claim: 'Sixty-seven years from reading the code, to writing it.' The arithmetic depends on 1953 (not in reference) and 2020 (which IS in the reference for Doudna/Charpentier Nobel). The 67-year framing itself is not in the reference but is a derived claim."
+    },
+    {
+      "section": "07_pcr_overview",
+      "severity": "minor",
+      "description": "Claim: 'PCR was invented by Kary Mullis in nineteen eighty-five, and he won the Nobel Prize in Chemistry in nineteen ninety-three.' Reference (line 521) supports 'Kary Mullis (1985), Nobel 1993' — VERIFIED. The phrasing 'Nobel Prize in Chemistry' specifically is not in the reference (the reference just says 'Nobel 1993'), but this is a small detail; marking minor."
+    },
+    {
+      "section": "08_pcr_three_steps",
+      "severity": "minor",
+      "description": "Claim: 'Taq polymerase, the heat-stable enzyme from the bacterium Thermus aquaticus' — VERIFIED against reference line 525-526. Temperatures 95°C / 50-65°C / 72°C all VERIFIED against lines 523-525. 'Run thirty cycles and you go from one molecule to about ten-to-the-ninth' — VERIFIED against line 527 ('30 cycles -> ~10^9-fold amplification')."
+    },
+    {
+      "section": "09_dna_sequencing",
+      "severity": "critical",
+      "description": "Claim: 'the cost of a human genome dropped from three billion dollars in two thousand three to under a thousand dollars today.' Neither the $3 billion figure, the year 2003, nor the under-$1,000 figure appears anywhere in the reference (lines 507-554). Flagged as unsupported specific numbers and date."
+    },
+    {
+      "section": "09_dna_sequencing",
+      "severity": "minor",
+      "description": "Claim: 'Sanger sequencing... uses dideoxynucleotides — ddNTPs — which terminate chain elongation because they lack the three-prime hydroxyl' — the ddNTP chain-termination mechanism is VERIFIED against line 528-530, but the specific 'lack the three-prime hydroxyl' molecular detail is not in the reference. Flagged as a mechanistic claim beyond the excerpt."
+    },
+    {
+      "section": "11_pause1_silence",
+      "severity": "critical",
+      "description": "Claim: 'Thermus aquaticus, a bacterium that lives in hot springs at temperatures above seventy degrees Celsius.' Reference (line 525-526) says 'heat-stable Thermus aquaticus' but does NOT specify hot springs, nor 70°C habitat temperature. Flagged as unsupported habitat detail and specific temperature."
+    },
+    {
+      "section": "12_crispr_cas9",
+      "severity": "minor",
+      "description": "Claim: 'Jennifer Doudna and Emmanuelle Charpentier won the twenty-twenty Nobel Prize in Chemistry.' Reference (line 535) confirms 'Jennifer Doudna and Emmanuelle Charpentier (Nobel 2020)' — VERIFIED. The specific category 'Nobel Prize in Chemistry' is not stated in the reference (which just says 'Nobel 2020'); minor flag for category specificity."
+    },
+    {
+      "section": "13_applications",
+      "severity": "minor",
+      "description": "Claim: 'recombinant insulin was the first FDA-approved biotech drug in nineteen eighty-two.' Reference (line 539) confirms 'recombinant insulin (first approved 1982)' — VERIFIED. The qualifier 'FDA-approved' specifically is not in the reference but is a reasonable inference."
+    },
+    {
+      "section": "13_applications",
+      "severity": "minor",
+      "description": "Claim: 'CRISPR clinical trials are now treating sickle-cell disease by editing patients' own blood stem cells.' Reference (line 540) confirms 'CRISPR trials (sickle-cell, beta-thalassemia, blindness).' Sickle-cell VERIFIED. The mechanism detail 'editing patients' own blood stem cells' is NOT in the reference. Flagged as unsupported mechanism."
+    },
+    {
+      "section": "13_applications",
+      "severity": "critical",
+      "description": "Claim: 'Bt corn carries a bacterial gene that kills caterpillars; Golden Rice is engineered to make beta-carotene to fight vitamin-A deficiency.' Reference (line 541-542) lists 'Bt corn, Roundup-Ready soybeans, Golden Rice' but does NOT describe HOW Bt corn works (no mention of caterpillars or insecticidal mechanism) and does NOT describe Golden Rice's beta-carotene / vitamin-A content. Flagged as unsupported mechanistic claims."
+    },
+    {
+      "section": "13_applications",
+      "severity": "critical",
+      "description": "Claim: 'the FBI's CODIS database matches profiles nationwide.' Reference (line 543) confirms 'CODIS database' — VERIFIED. But 'FBI's' and 'matches profiles nationwide' are NOT in the reference excerpt. Flagged as unsupported attribution and scope."
+    },
+    {
+      "section": "13_applications",
+      "severity": "critical",
+      "description": "Claim: 'PCR is the workhorse, the test that detected HIV in the eighties and COVID-19 in your nose.' Reference (line 544) says 'PCR-based pathogen tests (HIV, COVID-19)' — pathogens VERIFIED. But 'in the eighties' is a specific decade NOT in the reference. Flagged as unsupported date claim."
+    },
+    {
+      "section": "13_applications",
+      "severity": "minor",
+      "description": "Claim: 'Gene therapy has cured some forms of SCID.' Reference (line 539-540) lists 'gene therapy (e.g., SCID).' The word 'cured' is stronger than the reference, which only lists SCID as an example. Flagged as a verb-strength issue."
+    },
+    {
+      "section": "15_recap",
+      "severity": "minor",
+      "description": "Claim: 'patent law as in the Myriad BRCA case.' Reference (line 551) confirms 'Patent law on living organisms / genes (e.g., Myriad Genetics BRCA case).' VERIFIED."
+    },
+    {
+      "section": "16_path",
+      "severity": "minor",
+      "description": "Claim: 'Read OpenStax Biology, Chapter Seventeen' and 'Khan Academy AP Biology Unit Six problem sets.' Neither source is referenced in lines 507-554. Flagged as unsupported source recommendations (but these are pedagogical pointers, not factual claims about biotechnology)."
+    }
+  ],
+  "summary": "Traced ~28 specific claims (names, dates, numbers, mechanisms) against the reference excerpt. ~14 fully verified, ~14 flagged as not present in the reference. 5 critical flags concern specific numbers, dates, or mechanisms outside the excerpt (Watson/Crick 1953, $3B/2003/$1000 genome cost, Thermus aquaticus 70°C habitat, Bt/Golden Rice mechanisms, FBI/HIV-in-the-eighties details). Most flagged items are generally-known biology that just happens not to be in this CED excerpt; only the genome-cost figures and Watson/Crick year are external numeric claims a citation checker cannot confirm from the given source."
+}

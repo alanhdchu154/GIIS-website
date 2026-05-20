@@ -1,9 +1,11 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-19 Later 11（把 Presentations / imagegen / Browser / testing-strategy 寫入 lesson flow；新增 release gate + contact sheet helper；daily upload 先跑 quality report）
+> 最後更新：2026-05-20 Slot A 04:12Z（AP Biology M4-M9 retroactive review cascade — 6 modules × 3 reviewers 平行；18 個 review JSON 全部寫入；4 個 module 拿到 Reviewer C critical 並寫入 `_review_failed/<slug>/WHY.md` 等人類 surgical narration 修正）
 >
-> 前次：2026-05-19 Later 10（AP Biology M10 V2 pilot：短段落、單概念 slides、三類 reviewer artifacts、靜音 timing MP4、audit score 99）
-> 前前次：2026-05-19 Later 9（新增 ModuleProgress：影片/閱讀/練習/測驗/作業完成時間可追蹤；家長與 admin audit trail 可看到學習活動）
+> 前次：2026-05-19 Later 11（把 Presentations / imagegen / Browser / testing-strategy 寫入 lesson flow；新增 release gate + contact sheet helper；daily upload 先跑 quality report）
+>
+> 前前次：2026-05-19 Later 10（AP Biology M10 V2 pilot：短段落、單概念 slides、三類 reviewer artifacts、靜音 timing MP4、audit score 99）
+> 前前前次：2026-05-19 Later 9（新增 ModuleProgress：影片/閱讀/練習/測驗/作業完成時間可追蹤；家長與 admin audit trail 可看到學習活動）
 > **核心目標：讓家長願意付錢，並且持續付錢。**
 >
 > 這份 roadmap 是給 **Claude Code CLI（code mode）** 的工作清單。
@@ -64,6 +66,26 @@
 - ✅ Nav Admission dropdown 修：移除誤導性「FAQ」、Apply Now 改連到 `/apply` 而非 `/admission`
 - ✅ ScrollToTop 加 hash anchor 支援（讓 `/discovery#mission` 可實際捲到 mission section）
 - ✅ AboutPage / HandbookPage 加 `<Nav>` 元件（之前漏接）
+
+---
+
+## ✅ AP Biology M4-M9 retroactive review cascade（2026-05-20 Slot A 04:12Z）
+
+> 修補 May 2026 regression — M4-M9 早先 auto-pipeline 跑出來的 script.json 從未經過 3-reviewer cascade。本輪 retroactive 補上 18 個 review JSON。
+
+- ✅ **6 個 module × 3 reviewer 平行跑**：M4 Cell Communication、M5 Cell Cycle、M6 Mendelian Genetics、M7 DNA Replication、M8 Transcription/Translation、M9 Biotechnology。Reviewer A = Peer-PhD（subject-matter）、Reviewer B = Adversarial Student（pedagogy）、Reviewer C = Citation Checker（只能用 `references/ap-biology-ced.md` 對應行區，anti-hallucination）
+- ✅ **18 個 review JSON 全部寫入** `teaching-videos/ap-biology-module-{4..9}-*/_review_{A,B,C}.json`
+- ✅ **沒有重寫 script.json、build_slides.py、slides/**（遵守 idempotence + 「don't regenerate」rule — 這些 lesson 早有 visual + narration 在 disk，重生會破壞 Mac TTS+upload pipeline）
+- ✅ **Audit summary**：`teaching-videos/_audit/ap-biology/2026-05-20T04-12-01Z-retroactive-audit.json`
+- 🟢 **2 個 ship-safe**（A/B/C 全 minor）：M7 DNA Replication、M9 Biotechnology
+- 🟠 **4 個寫了 `_review_failed/<slug>/WHY.md`（A/B minor + C critical）**：M4、M5、M6、M8
+  - M4 Cell Communication — C 抓 6 個 unsupported claims（Sutherland 1950s 日期、10-15% 考試比重、100×100×100=1M amplification 算式）；Alpha-subunit 細節需修；quorum sensing 該升級成正式 section
+  - M5 Cell Cycle — section 05 G1 ploidy 措辭風險（"DNA is still one copy per chromosome" 容易被誤解成單倍體）；3.8M cells/sec 統計 unsourced
+  - M6 Mendelian Genetics — recap 引入 nondisjunction/aneuploidy 但 body 未教；section 03 承諾「almost any cross」但沒有 dihybrid Punnett 或 sex-linked pedigree 範例；section 05 Meiosis II 框成「just like mitosis」是誤解風險
+  - M8 Transcription/Translation — "20k genes → 100k proteins, 比米少" 三位 reviewer 都旗；section 05 template vs coding strand 沒分清；section 09 wobble 缺；section 13 lac operon CAP/cAMP positive regulation 缺
+- ⚠️ **重要解讀**：4 個 C-critical 都是 citation-window narrow 造成（CED excerpt 不含 specific 數字/日期，但內容本身是 textbook 真實）。Reviewer A（PhD）+ B（adversarial student）100% 給 minor — 核心科學沒問題。建議 surgical 6-line narration patch，不重生
+- 🔧 **下次該做**：人類 (Alan) 或下次 agent 跑 narration revision pass。每個 `_review_failed/<slug>/WHY.md` 內列出該修哪幾行；改完後再跑 round-2 Reviewer C 寫 `_review_C_v2.json` 確認 pass
+- ⚙️ **沒做**：沒 push 到 git（Mac launchd 的工作）、沒動 `public/data/lessons-manifest.json`、沒 call YouTube API、沒重生任何 slide
 
 ---
 

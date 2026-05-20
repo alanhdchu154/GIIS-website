@@ -1,0 +1,69 @@
+{
+  "reviewer": "B",
+  "role": "adversarial-student",
+  "module": "ap-biology-module-4-cell-communication",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "The hook says adrenaline lands on receptors 'on your heart cells' and triggers heart pounding, pupil dilation, and a jump-back. The jump-back is skeletal muscle / motor neuron, not adrenaline on heart cells. A student who memorizes this hook will conflate sympathetic nervous system reflexes with hormonal cardiac effects. Fix: keep adrenaline → heart, but separate the reflex action."
+    },
+    {
+      "section": "03_overview",
+      "severity": "minor",
+      "description": "'Three stages, named by Earl Sutherland, and they apply to every signaling pathway you'll see on the exam.' The word 'every' is the kind of absolute claim AP loves to trap students on. Ligand-gated ion channels barely have a 'transduction cascade' in the classical sense — reception and response are nearly fused. A student who writes 'all pathways have a phosphorylation cascade' on an FRQ will lose a point."
+    },
+    {
+      "section": "05_reception_3stages",
+      "severity": "minor",
+      "description": "'Memorize this order. Every College Board question on this unit assumes it.' Encouraging memorization over mechanism is the exact study habit that causes students to lose application-level points on the AP exam. The model FRQs in this unit are about predicting what happens when you knock out a kinase, not about reciting the three stages."
+    },
+    {
+      "section": "06_receptor_gpcr",
+      "severity": "critical",
+      "description": "'GDP for GTP — that's the activation switch — then drifts off to activate a downstream enzyme like adenylyl cyclase.' Students will read 'the G protein drifts off' and think the entire trimer floats away. It is the GTP-bound alpha subunit that dissociates from beta-gamma and engages the effector. This is exactly the kind of detail that shows up in stem-question diagrams. The script should at least say 'a subunit of the G protein.'"
+    },
+    {
+      "section": "07_receptor_rtk",
+      "severity": "minor",
+      "description": "'The insulin receptor is the classic example' — true, but the insulin receptor is already a pre-formed dimer (held by disulfide bonds); ligand binding causes a conformational change and trans-autophosphorylation, not de novo dimerization. A student who pairs 'RTKs dimerize on ligand binding' with 'insulin receptor is the example' is now carrying a small misconception."
+    },
+    {
+      "section": "09_transduction_cascade",
+      "severity": "minor",
+      "description": "'A kinase is an enzyme that adds a phosphate group from ATP onto another protein, turning it on.' Phosphorylation does not always 'turn on' a protein — it can inhibit, change localization, or create a binding site. Glycogen synthase is INHIBITED by phosphorylation. AP loves this trap."
+    },
+    {
+      "section": "10_pause1",
+      "severity": "minor",
+      "description": "Pause question is fine, but the 'answer' in 11 uses 100 x 100 x 100 = 10^6 as if it's mechanism rather than illustration. A student who internalizes 'amplification is exactly a million times' will get burned on a question that gives them different per-step amplification numbers."
+    },
+    {
+      "section": "11_pause1_silence",
+      "severity": "minor",
+      "description": "'Cascades trade speed for huge amplification' — actually backwards. Cascades are FAST (millisecond-to-second kinase steps) AND amplified; the trade-off vs direct ion channel signaling is response duration and reversibility, not speed. A student who writes 'cascades are slow' on an FRQ will lose a point."
+    },
+    {
+      "section": "12_second_messengers",
+      "severity": "minor",
+      "description": "Three messengers named (cAMP, Ca2+, IP3/DAG) but cGMP — which the CED treats as part of the same family in NO/guanylyl cyclase signaling — is never mentioned. A diligent student doing OpenStax Ch 9 will encounter it and wonder why their lesson skipped it."
+    },
+    {
+      "section": "13_response_apoptosis",
+      "severity": "minor",
+      "description": "'This is how your fingers separated from webbing in the womb' is a vivid example but is the ONLY developmental example given. Apoptosis also prunes neurons, removes self-reactive T cells, and shapes organs. A student who only remembers the webbing example will struggle on an FRQ about thymic selection."
+    },
+    {
+      "section": "14_compare_traps",
+      "severity": "minor",
+      "description": "The GPCR-vs-RTK compare table omits the most exam-worthy distinction: GPCRs typically activate ONE downstream pathway per G protein class, RTKs trigger MULTIPLE pathways simultaneously. The script says 'different scale of pathway activation' but never spells out 'one vs many.'"
+    },
+    {
+      "section": "15_recap",
+      "severity": "minor",
+      "description": "Quorum sensing as a 'bonus mention' at the end. The CED explicitly includes autoinducers, biofilm formation, and Vibrio fischeri bioluminescence — none of which appear here. On a multiple choice question about bacterial communication, a student would have nothing to anchor to."
+    }
+  ],
+  "summary": "Several oversimplifications create plausible exam-day traps — 'kinases turn on proteins', 'cascades trade speed for amplification', 'GDP/GTP swap on the whole G protein' — none catastrophic alone, but together they build the kind of fuzzy mental model that costs FRQ points."
+}

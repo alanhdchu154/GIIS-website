@@ -1,0 +1,69 @@
+{
+  "reviewer": "B",
+  "role": "adversarial-student",
+  "module": "ap-biology-module-8-transcription-translation",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "The line 'every cell type from the same DNA' skips the real mechanism — differential gene expression. A student will memorize the punchline and not the mechanism. Add: '...because different cell types express different subsets of the same genes.'"
+    },
+    {
+      "section": "04_central_dogma",
+      "severity": "minor",
+      "description": "Calling reverse transcriptase 'the one famous exception' is misleading. RNA replication in RNA viruses, prion-style protein propagation arguments, and ribozyme self-modification are all discussed as nuances. For an AP student this is fine, but the absolute 'one' invites a trick question. Soften to 'the most famous exception.'"
+    },
+    {
+      "section": "05_transcription",
+      "severity": "minor",
+      "description": "Script never explicitly says which DNA strand is the TEMPLATE vs the CODING (sense) strand. AP questions exploit this constantly. Students who only hear 'reads the template 3' to 5'' often can't identify which of two given strands is the template. Add one sentence: 'The template strand is the one that is complementary to the mRNA; the other strand, called the coding strand, has the same sequence as the mRNA except with T in place of U.'"
+    },
+    {
+      "section": "06_mrna_processing",
+      "severity": "minor",
+      "description": "Script says splicing 'cuts out introns and stitches exons together' but never defines the words. A student who has never seen these terms will assume introns = important (they sound like 'in') and exons = leftover. Add a one-line mnemonic: 'EXons EXit the nucleus and are EXpressed; INtrons stay IN and get cut out.'"
+    },
+    {
+      "section": "07_alternative_splicing",
+      "severity": "critical",
+      "description": "The 100,000 proteins from 20,000 genes claim is the kind of number a student will repeat on a free-response and lose points on, because it conflates 'proteoforms' with 'proteins.' Also 'fewer genes than a grain of rice' is a pop-bio talking point that, when fact-checked, depends on which rice and which gene count. Replace with qualitative framing — 'one gene can yield several proteins, which is part of how a small genome supports a complex organism.'"
+    },
+    {
+      "section": "08_translation_ribosome",
+      "severity": "minor",
+      "description": "tRNA structure and anticodon are never described. The script jumps to A/P/E sites without explaining that codon-anticodon base pairing is what selects which amino acid arrives. A student will hear 'A site receives aminoacyl-tRNA' and not know how the right tRNA is chosen."
+    },
+    {
+      "section": "09_codons_trnas",
+      "severity": "minor",
+      "description": "'Wobble' is in the CED skill list (paired with anticodons) but completely absent from the script. AP questions on 'why is the code redundant' expect the wobble concept. Add: 'The third codon position often tolerates mismatched base pairing — this is wobble — which is part of why the code is redundant.'"
+    },
+    {
+      "section": "10_pause1",
+      "severity": "minor",
+      "description": "Practice problem gives a 9-nt template '3'-TACGGCATT-5'' but does not say to read it 5'→3' on the mRNA after transcription. A confused student might transcribe in the wrong direction and write 5'-AUGCCGUAA-3' OR 5'-UUACGGCAU-3' depending on which end they treat as the start. Worked solution should explicitly show the antiparallel pairing step before reading codons."
+    },
+    {
+      "section": "12_translation_steps",
+      "severity": "minor",
+      "description": "'Small ribosomal subunit binds the 5' cap' is the eukaryotic scanning model. In prokaryotes, the small subunit binds the Shine-Dalgarno sequence. The script never disambiguates. A student who has memorized this line will get a prokaryote-initiation question wrong."
+    },
+    {
+      "section": "13_gene_regulation",
+      "severity": "minor",
+      "description": "lac operon explanation skips two AP-favorite details: (1) the role of CAP/cAMP under low glucose, (2) the difference between an inducer (allolactose) inactivating a repressor (negative regulation) vs CAP being a positive regulator. AP free-response on lac operon almost always asks about BOTH layers."
+    },
+    {
+      "section": "14_mutations_compare",
+      "severity": "minor",
+      "description": "Missing: insertion/deletion mutations of a multiple of 3 (in-frame indels) which add or remove amino acids without shifting the frame. AP MCQs use this to trap students who think 'any insertion = frameshift.'"
+    },
+    {
+      "section": "15_recap",
+      "severity": "minor",
+      "description": "Recap restates the unsupported '20,000 genes → 100,000 proteins' claim. If that number is wrong in section 07, it is doubly wrong here because the student is being asked to memorize it as a takeaway."
+    }
+  ],
+  "summary": "As a student, I can pass an AP MCQ section after watching this, but I will get burned on free-response questions that demand template vs coding strand, wobble, the CAP-cAMP layer of the lac operon, and in-frame indels. The 100,000-proteins claim is the single most quotable line in the video and it's the one most likely to lose me points."
+}

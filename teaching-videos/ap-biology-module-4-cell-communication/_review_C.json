@@ -1,0 +1,69 @@
+{
+  "reviewer": "C",
+  "role": "citation-checker",
+  "module": "ap-biology-module-4-cell-communication",
+  "verdict": "critical",
+  "issues": [
+    {
+      "section": "01_title",
+      "severity": "critical",
+      "description": "'roughly ten to fifteen percent of the AP exam' — the reference (lines 168-225) does not state any exam weighting. UNSUPPORTED specific number."
+    },
+    {
+      "section": "03_overview",
+      "severity": "critical",
+      "description": "'Three stages, named by Earl Sutherland' — the reference heading says 'Stages of Cell Signaling (Sutherland)' which supports the Sutherland attribution for the stages framework. SUPPORTED."
+    },
+    {
+      "section": "05_reception_3stages",
+      "severity": "critical",
+      "description": "'In the nineteen-fifties, Earl Sutherland was studying how adrenaline triggers liver cells to release glucose.' Reference mentions Sutherland (parenthetically under 'Stages of Cell Signaling') but does NOT mention the 1950s date, adrenaline, liver cells, or glucose release in connection with him. UNSUPPORTED date and biographical context."
+    },
+    {
+      "section": "06_receptor_gpcr",
+      "severity": "minor",
+      "description": "'seven-transmembrane proteins' — SUPPORTED ('7-transmembrane proteins'). 'GDP for GTP' — SUPPORTED. 'downstream enzyme like adenylyl cyclase' — SUPPORTED ('adenylyl cyclase → cAMP'). 'GPCRs are the biggest receptor family in your body — taste, smell, vision, and most drugs target them.' UNSUPPORTED — reference does not state GPCRs are the largest family or list taste/smell/vision/drug targets."
+    },
+    {
+      "section": "07_receptor_rtk",
+      "severity": "minor",
+      "description": "'single-pass membrane proteins' — SUPPORTED ('single-pass receptors'). 'dimerization' — SUPPORTED ('dimerize upon ligand binding'). 'phosphorylates tyrosine amino acids on its partner using ATP' — SUPPORTED for tyrosines; ATP is not explicitly named here but is named in the phosphorylation-cascade section. 'The insulin receptor is the classic example' — SUPPORTED ('e.g., insulin receptor')."
+    },
+    {
+      "section": "08_receptor_other",
+      "severity": "minor",
+      "description": "'Ligand-gated ion channels — when a ligand like acetylcholine binds' — SUPPORTED ('acetylcholine receptor at neuromuscular junction'). 'intracellular receptors — for nonpolar ligands like steroid hormones' — SUPPORTED. 'the complex enters the nucleus and acts directly as a transcription factor' — SUPPORTED ('enters the nucleus and acts as a transcription factor')."
+    },
+    {
+      "section": "09_transduction_cascade",
+      "severity": "critical",
+      "description": "'one activated receptor can activate around a hundred kinases, each of which activates a hundred more. Three layers of that and you've turned one signal into a million products.' UNSUPPORTED specific numbers — reference says 'one receptor → thousands of activated downstream molecules' but does NOT give a 100x-per-step factor or a 10^6 total. 'Phosphatases remove phosphates and switch the signal off' — SUPPORTED."
+    },
+    {
+      "section": "11_pause1_silence",
+      "severity": "critical",
+      "description": "'Each activated kinase activates roughly a hundred downstream molecules, so three layers of cascade gives you a hundred times a hundred times a hundred — that's ten to the sixth, one million.' UNSUPPORTED specific numerical mechanism — see 09_transduction_cascade above."
+    },
+    {
+      "section": "12_second_messengers",
+      "severity": "minor",
+      "description": "'cAMP is made from ATP by the enzyme adenylyl cyclase, usually downstream of a GPCR' — SUPPORTED. 'Calcium ions are released from the endoplasmic reticulum' — SUPPORTED ('released from ER stores via IP3'). 'IP-three and DAG come from cleaving a membrane lipid called PIP-two' — SUPPORTED ('derived from membrane lipid PIP2'). 'IP-three opens calcium channels, DAG activates protein kinase C' — IP3 → Ca2+ release is SUPPORTED; the specific claim that DAG activates 'protein kinase C' is NOT in the reference. UNSUPPORTED naming of PKC."
+    },
+    {
+      "section": "13_response_apoptosis",
+      "severity": "minor",
+      "description": "'apoptosis — programmed cell death' — SUPPORTED. 'caspases' — SUPPORTED. 'shrinks, fragments into membrane-bound apoptotic bodies, and gets phagocytosed quietly. No inflammation' — SUPPORTED. 'This is how your fingers separated from webbing in the womb.' UNSUPPORTED specific developmental example — reference says 'developmental cues' but does not name finger/webbing separation."
+    },
+    {
+      "section": "15_recap",
+      "severity": "minor",
+      "description": "'bacteria coordinate behavior through quorum sensing, using small autoinducer molecules to detect their own population density' — SUPPORTED ('autoinducers', 'high cell density')."
+    },
+    {
+      "section": "16_path",
+      "severity": "critical",
+      "description": "'Read OpenStax Biology Chapter Nine'; 'Khan Academy's AP Biology Unit Four problem sets' — reference contains no mention of OpenStax, chapter numbers, or Khan Academy. UNSUPPORTED specific external resources. (Resource recommendations are arguably outside the CED's scope, but per strict rules they are unsupported claims.)"
+    }
+  ],
+  "summary": "Traced approximately 38 specific claims across 16 sections; flagged 6 as unsupported by the reference (CED lines 168-225). Critical flags: AP exam weighting (10-15%), the 1950s date for Sutherland, the 100x-per-step and 10^6 amplification numbers (two sections), OpenStax Ch 9 and Khan Academy citations. Minor flags: GPCR ubiquity claims (taste/smell/vision/drugs), PKC naming, finger-webbing developmental example. Most receptor-mechanism claims ARE supported by the reference."
+}

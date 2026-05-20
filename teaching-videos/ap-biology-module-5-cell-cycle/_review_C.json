@@ -1,0 +1,44 @@
+{
+  "reviewer": "C",
+  "role": "citation-checker",
+  "module": "ap-biology-module-5-cell-cycle",
+  "verdict": "critical",
+  "issues": [
+    {
+      "section": "01_title",
+      "severity": "critical",
+      "description": "Claim 'roughly ten to fifteen percent of the AP exam' is a specific numerical weighting for Unit 4. The reference excerpt (lines 228-289) does NOT contain any exam-weighting percentage. Flag as unsupported by the provided reference."
+    },
+    {
+      "section": "02_hook",
+      "severity": "critical",
+      "description": "Specific number '3.8 million new cells every second' is not present anywhere in the reference. Flag as unsupported."
+    },
+    {
+      "section": "07_mitosis_phases_detail",
+      "severity": "minor",
+      "description": "Names 'separase' and 'cohesin' are used. The reference (line 251-252) does say 'cohesin proteins cleaved by separase' — so both terms ARE supported. No flag. (Recording the trace.)"
+    },
+    {
+      "section": "11_pause1_silence",
+      "severity": "critical",
+      "description": "Claim that p53 is 'mutated in over half of all human cancers' includes a specific statistic. The reference (line 285-286) states 'Mutated in >50% of human cancers' — this IS supported. No flag. However, the script also calls p53 the 'guardian of the genome,' which the reference also supports (line 284). Both supported."
+    },
+    {
+      "section": "12_cyclins_cdks",
+      "severity": "minor",
+      "description": "'MPF, M-phase Promoting Factor — is cyclin B bound to CDK1' — reference line 274 confirms 'MPF (M-phase Promoting Factor) = cyclin B + CDK1; triggers entry into mitosis.' Supported. No flag."
+    },
+    {
+      "section": "13_cancer_mechanisms",
+      "severity": "minor",
+      "description": "Specific gene names 'Ras and Myc' as proto-oncogenes and 'p53 and Rb' as tumor suppressors — reference lines 278-282 list exactly these examples. Supported. No flag."
+    },
+    {
+      "section": "16_path",
+      "severity": "critical",
+      "description": "Specific resource names 'OpenStax Biology, Chapter Ten' and 'Khan Academy AP Biology Unit Four problem sets' are external citations that do NOT appear in the reference excerpt. These are study-resource pointers rather than scientific claims, but as specific named sources they are unsupported by the provided reference."
+    }
+  ],
+  "summary": "Traced approximately 22 specific claims across the 16 sections (gene names, phase names, structures, percentages, protein identities, resource names). Confirmed support for 19 (e.g., cohesin/separase, MPF=cyclinB+CDK1, p53>50% cancers, Ras/Myc/p53/Rb, cleavage furrow, cell plate, G0 contains neurons and mature muscle cells, restriction-point label, all five mitosis phase names and events). Flagged 3 unsupported specific claims: the '10-15%' exam-weighting figure, the '3.8 million cells per second' figure, and the named external study resources (OpenStax Ch. 10, Khan Academy). Reviewer has no subject expertise; flags reflect reference coverage only."
+}

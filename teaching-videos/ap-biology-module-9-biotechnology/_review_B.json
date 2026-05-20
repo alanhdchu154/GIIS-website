@@ -1,0 +1,74 @@
+{
+  "reviewer": "B",
+  "role": "adversarial-student",
+  "module": "ap-biology-module-9-biotechnology",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "If I take 'reading the code' literally I will walk away thinking Watson and Crick sequenced DNA in 1953. They didn't — they figured out the double-helix shape. The script never corrects this and I will lose points if an FRQ asks who first sequenced DNA."
+    },
+    {
+      "section": "04_restriction_enzymes",
+      "severity": "minor",
+      "description": "I am told sticky ends 'base-pair right back together' — but only when cut with the SAME enzyme (or one that produces compatible ends). Script does say 'cut by the same enzyme,' but the causal link to WHY (matching overhang sequences) is hand-waved. I will not be able to answer 'why can a piece cut with EcoRI not ligate cleanly into a BamHI cut?'"
+    },
+    {
+      "section": "04_restriction_enzymes",
+      "severity": "minor",
+      "description": "Nothing about blunt-end cutters. If the AP exam shows an enzyme that cuts straight across rather than staggered, I will assume all restriction enzymes make sticky ends and answer wrong."
+    },
+    {
+      "section": "05_plasmids_recombinant",
+      "severity": "minor",
+      "description": "The whole 'transformation' step ('transform into bacteria') is given as one word. I have no idea how bacteria take up the plasmid — heat shock? electroporation? competent cells? — and the antibiotic-selection logic ('only bacteria that picked up the plasmid survive') is stated as fact without explaining that you also need the antibiotic-resistance gene to be on YOUR plasmid for the selection to work."
+    },
+    {
+      "section": "06_gel_electrophoresis",
+      "severity": "minor",
+      "description": "I am told smaller fragments move faster but the gel-loading details — loading dye, wells at the negative end, ethidium bromide or SYBR for visualization, a DNA ladder for reference — are all skipped. If the FRQ asks 'how do you know what size band X is?' I cannot answer 'compare to a ladder of known sizes.'"
+    },
+    {
+      "section": "07_pcr_overview",
+      "severity": "minor",
+      "description": "Says '30 cycles gets you to about a billion copies.' I will repeat that on the exam, but I do not understand WHY doubling 30 times equals a billion. A one-line 'because 2^30 is about 10^9' would lock it in."
+    },
+    {
+      "section": "08_pcr_three_steps",
+      "severity": "critical",
+      "description": "I am told there are 'three temperatures per cycle' and the steps are denaturation, annealing, extension. Missing: WHAT IS IN THE REACTION TUBE. Template DNA, two primers (forward and reverse), dNTPs, Taq polymerase, buffer with Mg2+. If the FRQ says 'one of these reagents was left out — predict the result,' I will be stuck because the script never enumerated the ingredients."
+    },
+    {
+      "section": "09_dna_sequencing",
+      "severity": "minor",
+      "description": "ddNTPs are explained as 'lacking the 3-prime hydroxyl,' which is correct, but nowhere does the script say each ddNTP is labeled with a different fluorescent dye (modern Sanger) or that the four reactions were originally run in separate lanes. Without that, the leap from 'fragments of every possible length' to 'read the bases in order' feels like magic."
+    },
+    {
+      "section": "11_pause1_silence",
+      "severity": "minor",
+      "description": "Answer says Taq survives '95°C denaturation step every cycle without denaturing itself' because Thermus aquaticus lives 'above 70°C.' I see the gap immediately: 70 is below 95. The script should say Thermus aquaticus thrives in hot springs that exceed 70°C and its proteins remain folded even at 95°C — the threshold isn't the same as the optimum."
+    },
+    {
+      "section": "12_crispr_cas9",
+      "severity": "minor",
+      "description": "The guide RNA is described as carrying 'a sequence that matches your target DNA.' Matches how — identical, or complementary? It needs to be complementary, but a student hearing 'matches' will guess identical and get burned. Also no mention of the PAM sequence, which is the most-tested CRISPR detail on recent AP MCQs."
+    },
+    {
+      "section": "13_applications",
+      "severity": "minor",
+      "description": "Bt corn 'carries a bacterial gene that kills caterpillars' — I learn nothing about HOW. The Bt toxin is a protein that binds receptors in lepidopteran midgut. Without the mechanism I cannot answer 'why is Bt toxic to caterpillars but not humans?' — a classic AP biotech ethics-and-mechanism FRQ stem."
+    },
+    {
+      "section": "14_compare_traps",
+      "severity": "minor",
+      "description": "Germline vs somatic is great, but the script does not warn me about the OTHER classic AP confusion: PCR vs gel electrophoresis (PCR amplifies, gel separates — they are sequential, not alternative techniques). I have seen this confusion in three released MCQs."
+    },
+    {
+      "section": "15_recap",
+      "severity": "minor",
+      "description": "Recap mentions 'Myriad BRCA case' for the first time — it never came up in 13_applications. A student who paused, took notes during applications, and skipped the recap will have no context for what Myriad is. Either introduce it earlier or drop it."
+    }
+  ],
+  "summary": "The script is engaging and the big ideas are correct, but I would walk into the exam with mechanism-level gaps: PCR reagent list, what 'matches' means for the guide RNA, the PAM sequence, blunt vs sticky ends, transformation mechanics, gel-loading mechanics, and the Bt mechanism. None are wrong; all are dangerously thin. Recommend revision-narration."
+}

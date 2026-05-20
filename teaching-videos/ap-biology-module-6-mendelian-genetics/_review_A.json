@@ -1,0 +1,54 @@
+{
+  "reviewer": "A",
+  "role": "peer-phd-subject-matter",
+  "module": "ap-biology-module-6-mendelian-genetics",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "The '99.9% identical DNA' figure is a common pop-science statement and is roughly correct for single-nucleotide variation, but modern estimates including indels and structural variants put human-to-human similarity closer to ~99.6-99.9%. Not exam-relevant, but worth softening to 'about 99.9%' (already hedged with 'roughly' later — acceptable)."
+    },
+    {
+      "section": "06_three_sources_variation",
+      "severity": "minor",
+      "description": "States '2^23 — about 8.4 million — combinations per human gamete.' 2^23 = 8,388,608, which rounds to ~8.4 million — fine. But the phrasing 'per gamete' is loose; more precisely it is the number of *possible* chromosome assortments a single meiosis can yield from one germ cell, ignoring crossing over. Tighten to 'possible combinations of maternal/paternal homologs.'"
+    },
+    {
+      "section": "07_mendel_laws",
+      "severity": "minor",
+      "description": "Independent assortment is described as applying when genes are 'on different chromosomes' — correct, but the CED also notes 'or far apart on the same chromosome.' Mentioning that exception would prevent a misconception when linkage is introduced next."
+    },
+    {
+      "section": "08_monohybrid_dihybrid",
+      "severity": "minor",
+      "description": "Says '9:3:3:1 only holds when the two genes are on different chromosomes. If they're linked, the ratio breaks.' Technically genes can be on the same chromosome but so far apart they assort independently (~50 cM). Acceptable simplification for AP, but a top student may push back."
+    },
+    {
+      "section": "09_non_mendelian_intro",
+      "severity": "minor",
+      "description": "The phrasing 'Mendel got lucky — pea traits are clean' is fine colloquially, but Mendel deliberately chose discrete traits; it was design, not luck. Minor pedagogical framing issue."
+    },
+    {
+      "section": "11_pause1_silence",
+      "severity": "minor",
+      "description": "The AB x O cross answer is correct (50% A, 50% B; no AB or O) — assuming standard ABO genetics and no cis-AB allele. The absolute 'No AB. No O. Ever.' is true for textbook AP purposes; the rare cis-AB exception is out of scope and the statement is fine as written for AP."
+    },
+    {
+      "section": "13_sex_linked_polygenic",
+      "severity": "minor",
+      "description": "Defines hemizygous as 'meaning only one X.' Technically hemizygous = having only one copy of a gene/region (true for X-linked genes in XY males AND for Y-linked genes). The script's usage is correct in context but the definition is slightly narrow. Also: skin color as 'polygenic' is correct but is also influenced by environment; AP usually pairs it with 'multifactorial' — minor."
+    },
+    {
+      "section": "15_recap",
+      "severity": "critical",
+      "description": "Reads 'X-X-Y is Klinefelter, X-O is Turner.' XXY (Klinefelter) is correct. 'X-O' for Turner is correct shorthand for monosomy X (45,X / 45,XO), but the narration as spoken — 'X-O' — could be confused with 'XO' as a genotype. Recommend rewording to 'forty-five X — Turner syndrome' to avoid the ambiguous spoken letter sequence. Also, Down syndrome is Trisomy 21 — correct in script."
+    },
+    {
+      "section": "15_recap",
+      "severity": "minor",
+      "description": "Recap omits linkage/recombination and epistasis, both of which are in the CED Unit 5 reference. Not wrong, but a complete recap should at least name-drop them since they were introduced (linkage) or are testable (epistasis)."
+    }
+  ],
+  "summary": "Overall scientifically sound and exam-aligned. One borderline-critical wording issue in the recap (XO spoken aloud is ambiguous), plus several minor tightening opportunities around independent assortment, hemizygosity, and the omission of epistasis. No content that would directly mislead an AP student on a free-response question."
+}

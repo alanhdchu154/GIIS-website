@@ -1,0 +1,39 @@
+{
+  "reviewer": "A",
+  "role": "peer-phd-subject-matter",
+  "module": "ap-biology-module-5-cell-cycle",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "The '3.8 million new cells per second' figure is widely cited (Sender & Milo 2021) but is a whole-body estimate that includes red blood cell and gut epithelial turnover, not a count of mitotic decisions happening at a checkpoint right now. Phrasing 'each one of them just made a decision — divide, or don't' conflates differentiated turnover with G1 restriction-point commitment. Suggest softening to 'your body produces millions of new cells every second, and each one had to pass a checkpoint to get there.'"
+    },
+    {
+      "section": "05_interphase_detail",
+      "severity": "critical",
+      "description": "Statement 'in G1 ... the DNA is still one copy per chromosome' is imprecise and AP-exam-risky. In G1 each chromosome consists of a single chromatid (one DNA molecule), but the ploidy is still 2n in a somatic cell — students confuse 'one copy per chromosome' with 'haploid.' Also: centrosome duplication actually begins at the G1/S transition and continues through S, not exclusively in G2 as implied. Fix: 'In G1 each chromosome is a single chromatid; centrosomes begin duplicating around G1/S; by G2 the cell has finished duplicating its centrosomes and is assembling the components it needs for the spindle.'"
+    },
+    {
+      "section": "06_mitosis_overview",
+      "severity": "minor",
+      "description": "Claim that 'PMAT ... is the framing the AP College Board uses too' is misleading — the current CED lists five phases including prometaphase (see CED Unit 4). The script then teaches five anyway, so the framing contradicts itself. Drop the PMAT-is-College-Board line."
+    },
+    {
+      "section": "07_mitosis_phases_detail",
+      "severity": "minor",
+      "description": "'Separase cleaves cohesin' is correct but the script omits that the anaphase-promoting complex/cyclosome (APC/C) is what triggers separase activation by degrading securin. Not required by CED but a frequent FRQ-level distinction; mention APC/C in one clause for completeness."
+    },
+    {
+      "section": "12_cyclins_cdks",
+      "severity": "minor",
+      "description": "'CDK concentrations stay roughly constant' is acceptable shorthand but glosses over the fact that CDK *activity* is also gated by inhibitory phosphorylation (Wee1) and activating phosphorylation (CAK), not just cyclin binding. For AP-level this is fine; for a student going into AP FRQ depth, one sentence on phosphorylation as a second layer of control would tighten this."
+    },
+    {
+      "section": "13_cancer_mechanisms",
+      "severity": "minor",
+      "description": "Saying tumor suppressors are 'recessive at the cell level' is the classic Knudson two-hit framing and is correct for Rb and to a large extent p53, but p53 also exhibits well-documented dominant-negative behavior where one mutant allele can poison the tetramer. The script's blanket 'both alleles need to be knocked out' is the AP-expected answer, so this is a minor nuance rather than a fix-required error."
+    }
+  ],
+  "summary": "Script is solid AP-level cell-cycle content and tracks the CED closely. One critical clarity fix in section 05 (chromatid vs. chromosome copy / centrosome timing), plus a handful of minor tightenings around APC/C, CDK regulation, and the PMAT-vs-CED framing."
+}
