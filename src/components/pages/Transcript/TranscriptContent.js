@@ -65,6 +65,7 @@ function TranscriptContent({
   }).format(today);
 
   const referenceDate = today;
+  const todayIso = today.toISOString().slice(0, 10);
   const graduationYear =
     profile?.graduationDate ? new Date(profile.graduationDate).getFullYear() : null;
   const semesterStatuses = getAllSemesterStatuses(
@@ -189,7 +190,7 @@ function TranscriptContent({
                 <td style={styles.thTd}>Entry Date: <input type="date" style={styles.input} readOnly={isStatic} {...(profile ? pf('entryDate') : {})} /></td>
                 <td style={styles.thTd}>Withdrawal Date: <input type="date" style={styles.input} readOnly={isStatic} {...(profile ? pf('withdrawalDate') : {})} /></td>
                 <td style={styles.thTd}>Graduation Date: <input type="date" style={styles.input} readOnly={isStatic} {...(profile ? pf('graduationDate') : {})} /></td>
-                <td style={styles.thTd}>Transcript Date: <input type="date" style={styles.input} readOnly={isStatic} {...(profile ? pf('transcriptDate') : {})} /></td>
+                <td style={styles.thTd}>Transcript Date: <input type="date" style={styles.input} readOnly value={todayIso} /></td>
               </tr>
             </tbody>
           </table>
