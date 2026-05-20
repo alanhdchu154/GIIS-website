@@ -9,14 +9,16 @@ import './learn-mobile.css';
 
 const API = getApiBase();
 
-function ResourceCard({ icon, label, url, note }) {
+function ResourceCard({ icon, label, url, note, completedAt, onComplete, marking, completeLabel }) {
   if (!url) return null;
+  const isDone = !!completedAt;
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+    <div style={{ display: 'flex', gap: '10px', alignItems: 'stretch', flexWrap: 'wrap' }}>
+      <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', flex: '1 1 360px' }}>
       <div style={{
         display: 'flex', alignItems: 'flex-start', gap: '12px',
         padding: '16px', background: '#f8f9fd', border: '1px solid #e0e6f0',
-        borderRadius: '10px', transition: 'border-color 0.2s',
+        borderRadius: '10px', transition: 'border-color 0.2s', height: '100%', boxSizing: 'border-box',
       }}
         onMouseEnter={e => e.currentTarget.style.borderColor = '#2b3d6d'}
         onMouseLeave={e => e.currentTarget.style.borderColor = '#e0e6f0'}
@@ -28,7 +30,28 @@ function ResourceCard({ icon, label, url, note }) {
         </div>
         <span style={{ marginLeft: 'auto', fontSize: '16px', color: '#aaa', flexShrink: 0 }}>↗</span>
       </div>
-    </a>
+      </a>
+      <button
+        type="button"
+        onClick={onComplete}
+        disabled={isDone || marking}
+        style={{
+          flex: '0 0 auto',
+          minWidth: '128px',
+          padding: '12px 14px',
+          borderRadius: '8px',
+          border: `1px solid ${isDone ? '#a5d6a7' : '#c5d0f0'}`,
+          background: isDone ? '#e8f5e9' : '#fff',
+          color: isDone ? '#1b5e20' : '#2b3d6d',
+          fontSize: '12px',
+          fontWeight: 800,
+          cursor: isDone || marking ? 'default' : 'pointer',
+        }}
+        title={isDone ? new Date(completedAt).toLocaleString() : completeLabel}
+      >
+        {isDone ? 'Done' : marking ? 'Saving...' : completeLabel}
+      </button>
+    </div>
   );
 }
 
@@ -65,6 +88,8 @@ export default function ModulePage({ language }) {
   const [prevSubmission, setPrevSubmission] = useState(null);
   const [assigning, setAssigning] = useState(false);
   const [assignDone, setAssignDone] = useState(false);
+  const [moduleProgress, setModuleProgress] = useState(null);
+  const [progressSaving, setProgressSaving] = useState('');
 
   const [error, setError] = useState('');
 
@@ -92,6 +117,8 @@ export default function ModulePage({ language }) {
         // assignment
         const as = d.enrollment?.assignments?.find((a) => a.moduleOrder === moduleOrder);
         if (as) { setPrevSubmission(as); setAssignmentText(as.content); }
+        const progress = d.enrollment?.moduleProgresses?.find((p) => p.moduleOrder === moduleOrder);
+        setModuleProgress(progress || null);
       })
       .catch(() => setError('Failed to load module'));
   }, [slug, moduleOrder, session, navigate]);
@@ -135,7 +162,21 @@ export default function ModulePage({ language }) {
       body: JSON.stringify({ content: assignmentText }),
     });
     setAssigning(false);
-    if (r.ok) { const d = await r.json(); setPrevSubmission(d); setAssignDone(true); }
+    if (r.ok) { const d = await r.json(); setPrevSubmission(d); setAssignDone(true); load(); }
+  }
+
+  async function markProgress(flag) {
+    setProgressSaving(flag);
+    const r = await fetch(`${API}/api/enrollments/${slug}/module/${moduleOrder}/progress`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({ [flag]: true }),
+    });
+    setProgressSaving('');
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) { setError(d.error || 'Progress update failed'); return; }
+    setModuleProgress(d);
   }
 
   if (!session) return null;
@@ -203,10 +244,48 @@ export default function ModulePage({ language }) {
             {isEn ? 'Study Resources' : '学习资源'}
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <ResourceCard icon="📖" label={isEn ? 'Reading' : '阅读材料'} url={mod.readingUrl} note={mod.readingNote} />
-            <ResourceCard icon="▶️" label={isEn ? 'Video Lesson' : '视频课程'} url={mod.videoUrl} note={mod.videoNote} />
-            {mod.video2Url && <ResourceCard icon="🎬" label={isEn ? 'Supplemental Video' : '补充视频'} url={mod.video2Url} note={mod.video2Note} />}
-            <ResourceCard icon="✏️" label={isEn ? 'Practice' : '练习'} url={mod.practiceUrl} note={mod.practiceNote} />
+            <ResourceCard
+              icon="📖"
+              label={isEn ? 'Reading' : '阅读材料'}
+              url={mod.readingUrl}
+              note={mod.readingNote}
+              completedAt={moduleProgress?.readingCompletedAt}
+              onComplete={() => markProgress('readingCompleted')}
+              marking={progressSaving === 'readingCompleted'}
+              completeLabel={isEn ? 'Mark read' : '标记已读'}
+            />
+            <ResourceCard
+              icon="▶️"
+              label={isEn ? 'Video Lesson' : '视频课程'}
+              url={mod.videoUrl}
+              note={mod.videoNote}
+              completedAt={moduleProgress?.videoCompletedAt}
+              onComplete={() => markProgress('videoCompleted')}
+              marking={progressSaving === 'videoCompleted'}
+              completeLabel={isEn ? 'Mark watched' : '标记已看'}
+            />
+            {mod.video2Url && (
+              <ResourceCard
+                icon="🎬"
+                label={isEn ? 'Supplemental Video' : '补充视频'}
+                url={mod.video2Url}
+                note={mod.video2Note}
+                completedAt={moduleProgress?.supplementalVideoCompletedAt}
+                onComplete={() => markProgress('supplementalVideoCompleted')}
+                marking={progressSaving === 'supplementalVideoCompleted'}
+                completeLabel={isEn ? 'Mark watched' : '标记已看'}
+              />
+            )}
+            <ResourceCard
+              icon="✏️"
+              label={isEn ? 'Practice' : '练习'}
+              url={mod.practiceUrl}
+              note={mod.practiceNote}
+              completedAt={moduleProgress?.practiceCompletedAt}
+              onComplete={() => markProgress('practiceCompleted')}
+              marking={progressSaving === 'practiceCompleted'}
+              completeLabel={isEn ? 'Mark done' : '标记完成'}
+            />
           </div>
         </section>
 

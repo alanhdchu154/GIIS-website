@@ -17,6 +17,10 @@ const API = getApiBase();
 
 const KIND_LABEL = {
   module_complete: { en: 'Module completed', zh: '模块完成', color: '#1b5e20', bg: '#e8f5e9' },
+  video_complete: { en: 'Video completed', zh: '视频完成', color: '#6a1b9a', bg: '#f3e5f5' },
+  supplemental_video_complete: { en: 'Video completed', zh: '视频完成', color: '#6a1b9a', bg: '#f3e5f5' },
+  reading_complete: { en: 'Reading completed', zh: '阅读完成', color: '#00695c', bg: '#e0f2f1' },
+  practice_complete: { en: 'Practice completed', zh: '练习完成', color: '#4527a0', bg: '#ede7f6' },
   quiz_attempt: { en: 'Quiz attempt', zh: '小测', color: '#0d47a1', bg: '#e3f2fd' },
   assignment_submit: { en: 'Assignment submitted', zh: '作业提交', color: '#4a148c', bg: '#f3e5f5' },
   exam_attempt: { en: 'Exam attempt', zh: '考试', color: '#b71c1c', bg: '#ffebee' },
@@ -54,6 +58,14 @@ function TimelineRow({ event }) {
   let summary = '';
   if (event.kind === 'module_complete') {
     summary = `${event.courseName} · ${event.moduleTitle}`;
+  } else if (['video_complete', 'supplemental_video_complete', 'reading_complete', 'practice_complete'].includes(event.kind)) {
+    const activity = {
+      video_complete: 'video',
+      supplemental_video_complete: 'supplemental video',
+      reading_complete: 'reading',
+      practice_complete: 'practice',
+    }[event.kind];
+    summary = `${event.courseName} · Module ${event.moduleOrder} ${activity} · ${event.moduleTitle}`;
   } else if (event.kind === 'quiz_attempt') {
     const sc = event.score != null ? ` · ${Number(event.score).toFixed(0)}%` : '';
     const pf = event.passed ? ' · ✓ passed' : '';
@@ -128,6 +140,9 @@ export default function AdminAuditTrailPage() {
   const filteredTimeline = useMemo(() => {
     if (!data) return [];
     if (filter === 'all') return data.timeline;
+    if (filter === 'video_complete') {
+      return data.timeline.filter((e) => e.kind === 'video_complete' || e.kind === 'supplemental_video_complete');
+    }
     return data.timeline.filter((e) => e.kind === filter);
   }, [data, filter]);
 
@@ -248,6 +263,9 @@ export default function AdminAuditTrailPage() {
               <option value="assignment_submit">Assignments only</option>
               <option value="exam_attempt">Exams only</option>
               <option value="module_complete">Module completions</option>
+              <option value="video_complete">Videos only</option>
+              <option value="reading_complete">Readings only</option>
+              <option value="practice_complete">Practice only</option>
               <option value="admin_action">Admin actions</option>
             </select>
           </div>
@@ -262,8 +280,8 @@ export default function AdminAuditTrailPage() {
           <p style={{ marginTop: 22, fontSize: 11, color: '#888', lineHeight: 1.6 }}>
             This audit trail is generated from the GIIS Learn platform database. "Estimated hours" sums
             <code style={{ background: '#f4f6fa', padding: '1px 4px', borderRadius: 3, margin: '0 3px' }}>CourseModule.estimatedHrs</code>
-            for each completed module — it is an upper bound, not measured session time. For a measured
-            session-time record we would need to add a LoginLog table (recommended before next external audit).
+            for each completed module — it is an upper bound, not measured session time. Video, reading, and
+            practice completion timestamps are first-completion records from the Learn Portal.
           </p>
         </div>
       </div>

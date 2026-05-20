@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
 import DemoEmbed from '../../main/DemoEmbed.js';
-import { getApiBase } from '../../../config/apiBase';
 
-const API = getApiBase();
 const SCHOOL_EMAIL = 'admissions@genesisideas.school';
 
 const MONTHLY_FEATURES = [
@@ -51,28 +49,8 @@ const FAQS = [
   },
 ];
 
-async function startCheckout(planType, setLoading, setError) {
-  setLoading(planType);
-  setError('');
-  try {
-    const res = await fetch(`${API}/api/checkout/create-session`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ planType }),
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || 'Checkout failed');
-    window.location.href = data.url;
-  } catch (err) {
-    setError(err.message);
-    setLoading(null);
-  }
-}
-
 export default function PricingPage({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
-  const [loading, setLoading] = useState(null);
-  const [checkoutError, setCheckoutError] = useState('');
 
   return (
     <>
@@ -240,12 +218,6 @@ export default function PricingPage({ language, toggleLanguage }) {
 
           </div>
 
-          {checkoutError && (
-            <div style={{ margin: '20px 0 0', padding: '12px 16px', background: '#fff3f3', border: '1px solid #f5c6cb', borderRadius: '8px', color: '#721c24', fontSize: '14px' }}>
-              {checkoutError}
-            </div>
-          )}
-
           <p style={{ marginTop: '14px', textAlign: 'center', fontSize: '11px', color: '#aaa' }}>
             {isEn ? 'Secure payment via Stripe · Cards, Apple Pay, Cash App' : 'Stripe 安全支付 · 信用卡、Apple Pay、Cash App'}
           </p>
@@ -263,23 +235,6 @@ export default function PricingPage({ language, toggleLanguage }) {
                   : '按自己节奏学习每个模块，准备好后参加学分考试。通过（70% 以上）即可获得 1 个学分并记入官方成绩单。完整的 24 学分文凭根据入学年级需要 1–4 年完成。'}
               </p>
             </div>
-          </div>
-
-          {/* Live test — internal use only */}
-          <div style={{ marginTop: '40px', paddingTop: '24px', borderTop: '1px dashed #d4d8e0', textAlign: 'center' }}>
-            <p style={{ fontSize: '11px', color: '#bbb', margin: '0 0 8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
-              Internal · End-to-end test
-            </p>
-            <button
-              onClick={() => startCheckout('live_test', setLoading, setCheckoutError)}
-              disabled={!!loading}
-              style={{
-                padding: '7px 18px', fontSize: '12px', fontWeight: 600,
-                background: 'transparent', border: '1px solid #d4d8e0',
-                borderRadius: '8px', color: '#888', cursor: loading ? 'wait' : 'pointer',
-              }}>
-              {loading === 'live_test' ? 'Redirecting…' : '🧪 Live test — $1 charge'}
-            </button>
           </div>
 
         </div>

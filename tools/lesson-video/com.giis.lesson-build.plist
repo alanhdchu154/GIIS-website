@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  GIIS lesson-build daily runner · launchd job
+
+  WHAT IT DOES
+    Runs tools/lesson-video/daily_build.sh every day at 08:00 local Mac time.
+    daily_build.sh scans teaching-videos/ for any lesson folder that has
+    script.json + slides/*.png but no rendered MP4, and runs make_lesson.py
+    (edge-tts + ffmpeg) on up to MAX_BUILDS (default 4) of them.
+
+  WHY 08:00
+    One hour before the 09:00 YouTube upload run (com.giis.youtube-daily.plist).
+    Gives merging enough time to finish before the upload job starts looking
+    for "pending" MP4s. Also pairs with the Cowork scheduled task at 11:00
+    that generates NEW script.json + slides for upcoming days — so the loop is:
+      Day N  11:00 Cowork:   generate AP Calc M5 script.json + slides/
+      Day N+1 08:00 Mac:     daily_build.sh finds M5 → TTS + merge → MP4
+      Day N+1 09:00 Mac:     daily.sh uploads M5 to YouTube
+      Day N+1 09:30 Mac:     daily.sh auto-pushes the manifest commit
+
+  INSTALL
+    cp tools/lesson-video/com.giis.lesson-build.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.giis.lesson-build.plist
+
+  CHECK
+    launchctl list | grep giis             # should show both lesson-build and youtube-daily
+    tail -f ~/Library/Logs/giis-lesson-build.log
+
+  STOP
+    launchctl unload ~/Library/LaunchAgents/com.giis.lesson-build.plist
+    rm ~/Library/LaunchAgents/com.giis.lesson-build.plist
+
+  RUN ONCE NOW (no need to wait for 08:00)
+    launchctl kickstart -k gui/$(id -u)/com.giis.lesson-build
+
+  IMPORTANT
+    Edit the WorkingDirectory below if your repo lives anywhere other than
+    /Users/alanhdchu/GIIS/giis-website.
+
+    Anaconda Python is hardcoded in daily_build.sh — edit there if your
+    Python install lives elsewhere or you want a venv.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.giis.lesson-build</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/alanhdchu/GIIS/giis-website</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/alanhdchu/GIIS/giis-website/tools/lesson-video/daily_build.sh</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- Don't run on launchctl load — wait for the 08:00 tick. -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- ffmpeg + TTS are CPU-heavy; play nice with other processes. -->
+    <key>LowPriorityIO</key>
+    <true/>
+    <key>Nice</key>
+    <integer>5</integer>
+
+    <key>StandardOutPath</key>
+    <string>/Users/alanhdchu/Library/Logs/giis-lesson-build.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/alanhdchu/Library/Logs/giis-lesson-build.err.log</string>
+</dict>
+</plist>

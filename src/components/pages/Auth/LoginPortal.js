@@ -207,6 +207,11 @@ export default function LoginPortal({ language }) {
                 <button type="submit" className={styles.submitBtn} disabled={loading}>
                   {loading ? t.signingIn : t.signInCta}
                 </button>
+                <p className="small text-center mb-0 mt-3">
+                  <Link to="/reset-password?role=student">
+                    {isEn ? 'Forgot password?' : '忘记密码？'}
+                  </Link>
+                </p>
               </form>
             )}
 

@@ -182,11 +182,30 @@ def print_status_report(lessons: list[dict]):
 
 
 # ─── upload runner ─────────────────────────────────────────────────────
+def _course_match(lesson_course: str, filter_str: str) -> bool:
+    """Case-insensitive substring match — `--course psych` matches both
+    `AP Psychology` (substring 'psych') and folder slugs like `ap-psych-*`."""
+    needle = filter_str.lower().strip()
+    return needle in (lesson_course or "").lower()
+
+
 def run_upload(args):
     lessons = scan()
     pending = [L for L in lessons if L["status"] == "pending"]
+
+    # Optional course filter — useful when you have mixed pending across
+    # subjects and want to batch by course (e.g. `--course psych` to upload
+    # only AP Psychology this run).
+    if args.course:
+        before = len(pending)
+        pending = [L for L in pending if _course_match(L["course"], args.course)]
+        print(f"{DIM}filter `--course {args.course}`: {before} → {len(pending)} pending{RESET}")
+
     if not pending:
-        print(f"{GREEN}Nothing pending. All rendered videos already uploaded.{RESET}")
+        if args.course:
+            print(f"{GREEN}Nothing pending matching `--course {args.course}`.{RESET}")
+        else:
+            print(f"{GREEN}Nothing pending. All rendered videos already uploaded.{RESET}")
         return 0
 
     queue = pending[: args.max]
@@ -207,7 +226,10 @@ def run_upload(args):
         print(f"\n{BOLD}─── uploading: {L['module']} ───{RESET}")
         cmd = [sys.executable, str(UPLOAD_LESSON), str(L["dir"]),
                "--privacy", args.privacy]
-        r = subprocess.run(cmd)
+        # stdin=DEVNULL — same reasoning as merge_lesson/make_lesson:
+        # upload_lesson eventually invokes ffmpeg/youtube libs that may
+        # try to read stdin. Don't let them touch ours.
+        r = subprocess.run(cmd, stdin=subprocess.DEVNULL)
         if r.returncode != 0:
             print(f"{RED}  ↑ failed (exit {r.returncode}){RESET}")
             failures.append(L)
@@ -251,6 +273,11 @@ def main():
                     choices=["public", "unlisted", "private"])
     up.add_argument("--dry-run", action="store_true",
                     help="show what would be uploaded, don't call YouTube")
+    up.add_argument("--course", default=None,
+                    help="filter pending lessons by course (case-insensitive "
+                         "substring match against script.json `course`). "
+                         "Examples: `--course psych` / `--course algebra` / "
+                         "`--course \"AP Calculus\"`")
 
     args = ap.parse_args()
 

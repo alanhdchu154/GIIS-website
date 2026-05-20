@@ -24,14 +24,6 @@ function HeroSection({ language }) {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* subtle gold accent */}
-      <div style={{
-        position: 'absolute', top: '-120px', right: '-120px',
-        width: '440px', height: '440px',
-        background: 'radial-gradient(circle, rgba(213,168,54,0.18) 0%, transparent 65%)',
-        pointerEvents: 'none',
-      }} />
-
       <div style={{
         maxWidth: '1180px', margin: '0 auto',
         padding: '0 6%',
@@ -61,7 +53,7 @@ function HeroSection({ language }) {
             fontSize: 'clamp(34px, 4.6vw, 60px)',
             fontWeight: 800,
             lineHeight: 1.05,
-            letterSpacing: '-0.02em',
+            letterSpacing: 0,
             margin: '0 0 18px',
           }}>
             {isEn ? (
@@ -79,12 +71,12 @@ function HeroSection({ language }) {
             maxWidth: '520px',
           }}>
             {isEn
-              ? 'Florida-registered private school. 24-credit graduation framework. The same standard followed by US private high schools — recognized by US universities.'
-              : 'Florida 注册私立学校。24 学分毕业框架。与美国私立高中相同的标准，被美国大学认可。'}
+              ? 'Florida-registered private school. 24-credit graduation framework. Real coursework, transcript records, parent progress visibility, and a diploma path built for US college admissions review.'
+              : 'Florida 注册私立学校。24 学分毕业框架。真实课程、成绩记录、家长进度可视化，以及面向美国大学申请审核的文凭路径。'}
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '14px' }}>
-            <Link to="/admission" style={ctaPrimary}>
+            <Link to="/apply" style={ctaPrimary}>
               {isEn ? 'Start Your Application →' : '开始申请 →'}
             </Link>
             <a href="#demo" style={ctaSecondary}>
@@ -144,12 +136,6 @@ function HeroSection({ language }) {
           position: 'relative',
           transform: 'perspective(1400px) rotateY(-4deg) rotateX(2deg)',
         }}>
-          <div style={{
-            position: 'absolute', inset: '-10% -8% -10% -8%',
-            background: 'radial-gradient(ellipse at center, rgba(213,168,54,0.25) 0%, transparent 60%)',
-            filter: 'blur(40px)',
-            pointerEvents: 'none',
-          }} />
           <img
             src={dashboardScreen}
             alt={isEn ? 'GIIS Student Portal — track credits, GPA, and graduation progress' : 'GIIS 学生平台 — 追踪学分、GPA 与毕业进度'}
@@ -211,8 +197,8 @@ function HeroSection({ language }) {
           <div style={trustBlock}>
             <span style={{ fontSize: '28px' }}>✍️</span>
             <div>
-              <p style={trustLabel}>{isEn ? 'Real teacher feedback' : '真人老师批改'}</p>
-              <p style={trustValue}>{isEn ? 'Every assignment graded' : '每份作业都有反馈'}</p>
+              <p style={trustLabel}>{isEn ? 'Weekly parent reports' : '每周家长报告'}</p>
+              <p style={trustValue}>{isEn ? 'Progress visibility after enrollment' : '入学后持续看见进度'}</p>
             </div>
           </div>
 

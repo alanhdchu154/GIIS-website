@@ -107,6 +107,9 @@ def main():
                          "default: use the script.json `course` field, e.g. 'Algebra I'.")
     ap.add_argument("--no-playlist", action="store_true",
                     help="skip playlist auto-add even if --playlist or course field is set")
+    ap.add_argument("--no-cleanup", action="store_true",
+                    help="after a successful upload, skip auto-deletion of local "
+                         "slides/audio/mp4 (which is the default). Useful for debugging.")
     args = ap.parse_args()
 
     lesson = args.lesson_dir.resolve()
@@ -128,8 +131,12 @@ def main():
 
     title = f"{script.get('course','?')} — {script.get('module','?')}"
     description = build_description(script, lesson)
-    srt = lesson / "subtitles.srt"
-    thumb = lesson / "slides" / "01_title.png"
+    # Prefer transcript.txt (YouTube auto-aligns plain text via Google STT —
+    # better than any local subtitle alignment). Fall back to legacy SRT if
+    # transcript isn't there (e.g. older lesson rendered before this change).
+    transcript = lesson / "transcript.txt"
+    srt        = lesson / "subtitles.srt"
+    thumb      = lesson / "slides" / "01_title.png"
 
     cmd = [sys.executable, str(Path(__file__).parent / "upload_video.py"),
            str(mp4), "--title", title, "--privacy", args.privacy]
@@ -137,8 +144,11 @@ def main():
     desc_file = lesson / "_yt_description.txt"
     desc_file.write_text(description)
     cmd += ["--description-file", str(desc_file)]
-    if srt.exists() and not args.no_captions:
-        cmd += ["--captions", str(srt)]
+    if not args.no_captions:
+        if transcript.exists():
+            cmd += ["--transcript", str(transcript)]
+        elif srt.exists():
+            cmd += ["--captions", str(srt)]
     if thumb.exists() and not args.no_thumbnail:
         cmd += ["--thumbnail", str(thumb)]
     print(f"[upload-lesson] {title}\n[upload-lesson] {mp4}")
@@ -186,6 +196,23 @@ def main():
     # manifest the Learn Portal reads. Cheap (~5 quota units when no dups).
     here = Path(__file__).resolve().parent
     subprocess.run([sys.executable, str(here / "sync_channel.py"), "--apply"], check=False)
+
+    # Auto-cleanup local artifacts (slides/, audio/, *.mp4, *.wav, etc.) now
+    # that the video is verifiably live on YouTube. Saves 15-210MB per lesson
+    # and keeps the repo lean for everyone. Three-layer safety net inside
+    # cleanup_lesson.py refuses if anything looks wrong — uploaded video must
+    # really be 'processed' on the channel before we touch local files.
+    #
+    # Pass --no-cleanup to keep artifacts (e.g. for debugging a bad render).
+    if not args.no_cleanup:
+        print()
+        cleanup_rc = subprocess.run(
+            [sys.executable, str(here / "cleanup_lesson.py"), str(lesson)],
+        ).returncode
+        if cleanup_rc != 0:
+            print(f"[cleanup] returned {cleanup_rc} — local artifacts NOT removed. "
+                  f"This is safe (the YouTube upload is fine); the lesson folder "
+                  f"will use disk until next manual cleanup. See message above.")
 
 if __name__ == "__main__":
     main()

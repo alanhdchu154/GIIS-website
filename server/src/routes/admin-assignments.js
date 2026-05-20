@@ -94,6 +94,33 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
       gradedById: req.auth.adminId,
     },
   });
+  const existingProgress = await prisma.moduleProgress.findUnique({
+    where: {
+      enrollmentId_moduleOrder: {
+        enrollmentId: submission.enrollmentId,
+        moduleOrder: submission.moduleOrder,
+      },
+    },
+  });
+  await prisma.moduleProgress.upsert({
+    where: {
+      enrollmentId_moduleOrder: {
+        enrollmentId: submission.enrollmentId,
+        moduleOrder: submission.moduleOrder,
+      },
+    },
+    update: {
+      assignmentGradedAt: existingProgress?.assignmentGradedAt || updated.gradedAt,
+      lastActivityAt: updated.gradedAt,
+    },
+    create: {
+      enrollmentId: submission.enrollmentId,
+      moduleOrder: submission.moduleOrder,
+      assignmentSubmittedAt: submission.submittedAt,
+      assignmentGradedAt: updated.gradedAt,
+      lastActivityAt: updated.gradedAt,
+    },
+  });
 
   // TODO: Phase 1 email notifications (Resend) — notify student + parent
   // await sendGradingNotification(submission);

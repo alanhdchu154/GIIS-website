@@ -128,6 +128,12 @@ export default function ParentLogin({ language }) {
             </button>
 
             <p style={{ textAlign: 'center', marginTop: 20, fontSize: 13, color: '#5c6578' }}>
+              <Link to="/reset-password?role=parent" style={{ color: '#2b3d6d', fontWeight: 600 }}>
+                {isEn ? 'Forgot password?' : '忘记密码？'}
+              </Link>
+            </p>
+
+            <p style={{ textAlign: 'center', marginTop: 10, fontSize: 13, color: '#5c6578' }}>
               {isEn ? "Don't have an account? " : '还没有账号？'}
               <a href={`mailto:admissions@genesisideas.school?subject=${encodeURIComponent('Parent Account Setup')}`}
                 style={{ color: '#2b3d6d', fontWeight: 600 }}>

@@ -95,13 +95,20 @@ function ParentEmailSection({ studentId, isEn }) {
   const [parentEmail, setParentEmail] = useState(null);
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState('');
+  const [accountForm, setAccountForm] = useState({ email: '', password: '' });
   const [saving, setSaving] = useState(false);
+  const [accountSaving, setAccountSaving] = useState(false);
   const [msg, setMsg] = useState('');
+  const [accountMsg, setAccountMsg] = useState('');
 
   useEffect(() => {
     fetch(`${API}/api/students/${studentId}`, { credentials: 'include' })
       .then((r) => r.json())
-      .then((d) => { setParentEmail(d.student?.parentEmail ?? null); })
+      .then((d) => {
+        const email = d.student?.parentEmail ?? '';
+        setParentEmail(email || null);
+        setAccountForm((f) => ({ ...f, email }));
+      })
       .catch(() => {});
   }, [studentId]);
 
@@ -124,12 +131,55 @@ function ParentEmailSection({ studentId, isEn }) {
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || 'Failed');
       setParentEmail(trimmed || null);
+      setAccountForm((f) => ({ ...f, email: trimmed || f.email }));
       setEditing(false);
       setMsg(isEn ? '✓ Parent email saved.' : '✓ 家长邮箱已储存。');
     } catch (err) {
       setMsg(err.message);
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function handleAccountSetup(e) {
+    e.preventDefault();
+    setAccountMsg('');
+    const email = accountForm.email.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setAccountMsg(isEn ? 'Valid parent email is required.' : '请输入有效的家长邮箱。');
+      return;
+    }
+    if (!accountForm.password || accountForm.password.length < 8) {
+      setAccountMsg(isEn ? 'Password must be at least 8 characters.' : '密码至少 8 个字元。');
+      return;
+    }
+    setAccountSaving(true);
+    try {
+      const profileRes = await fetch(`${API}/api/students/${studentId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ parentEmail: email }),
+      });
+      const profileData = await profileRes.json().catch(() => ({}));
+      if (!profileRes.ok) throw new Error(profileData.error || 'Could not save parent email');
+
+      const setupRes = await fetch(`${API}/api/parent/setup`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ studentId, email, password: accountForm.password }),
+      });
+      const setupData = await setupRes.json().catch(() => ({}));
+      if (!setupRes.ok) throw new Error(setupData.error || 'Could not create parent account');
+
+      setParentEmail(email);
+      setAccountForm({ email, password: '' });
+      setAccountMsg(isEn ? '✓ Parent portal login created/reset.' : '✓ 家长 Portal 登入已建立／重设。');
+    } catch (err) {
+      setAccountMsg(err.message);
+    } finally {
+      setAccountSaving(false);
     }
   }
 
@@ -160,6 +210,289 @@ function ParentEmailSection({ studentId, isEn }) {
             {saving ? (isEn ? 'Saving…' : '储存中…') : (isEn ? 'Save' : '储存')}
           </button>
         </form>
+      )}
+
+      <hr className="my-3" />
+      <form onSubmit={handleAccountSetup}>
+        <p className="small fw-semibold mb-2">{isEn ? 'Parent Portal Login' : '家长 Portal 登入'}</p>
+        <div className="mb-2">
+          <label className="form-label small mb-1">{isEn ? 'Login Email' : '登入邮箱'}</label>
+          <input
+            type="email"
+            className="form-control form-control-sm"
+            value={accountForm.email}
+            onChange={(e) => setAccountForm((f) => ({ ...f, email: e.target.value }))}
+            placeholder="parent@example.com"
+          />
+        </div>
+        <div className="mb-2">
+          <label className="form-label small mb-1">{isEn ? 'Temporary / New Password' : '临时／新密码'}</label>
+          <input
+            type="password"
+            className="form-control form-control-sm"
+            value={accountForm.password}
+            onChange={(e) => setAccountForm((f) => ({ ...f, password: e.target.value }))}
+            placeholder={isEn ? 'Min. 8 characters' : '至少 8 个字元'}
+            minLength={8}
+          />
+          <div className="form-text">
+            {isEn
+              ? 'Creates the parent account if missing, or resets its password if it already exists.'
+              : '若家长账号不存在会建立；若已存在则重设密码。'}
+          </div>
+        </div>
+        {accountMsg && <div className={`alert py-1 px-2 small mb-2 ${accountMsg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{accountMsg}</div>}
+        <button type="submit" className="btn btn-primary btn-sm" disabled={accountSaving}>
+          {accountSaving ? (isEn ? 'Saving…' : '储存中…') : (isEn ? 'Create / reset parent login' : '建立／重设家长登入')}
+        </button>
+      </form>
+    </div>
+  );
+}
+
+function EnrollmentManagerSection({ studentId, isEn }) {
+  const [courses, setCourses] = useState([]);
+  const [enrollments, setEnrollments] = useState([]);
+  const [form, setForm] = useState({ courseId: '', semesterLabel: '' });
+  const [saving, setSaving] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [msg, setMsg] = useState('');
+
+  async function loadData() {
+    setLoading(true);
+    try {
+      const [courseRes, enrollmentRes] = await Promise.all([
+        fetch(`${API}/api/courses`, { credentials: 'include' }),
+        fetch(`${API}/api/enrollments/admin/student/${studentId}`, { credentials: 'include' }),
+      ]);
+      const courseData = await courseRes.json().catch(() => []);
+      const enrollmentData = await enrollmentRes.json().catch(() => []);
+      if (!courseRes.ok) throw new Error(courseData.error || 'Could not load courses');
+      if (!enrollmentRes.ok) throw new Error(enrollmentData.error || 'Could not load enrollments');
+      setCourses(Array.isArray(courseData) ? courseData : []);
+      setEnrollments(Array.isArray(enrollmentData) ? enrollmentData : []);
+    } catch (err) {
+      setMsg(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [studentId]);
+
+  const enrolledCourseIds = new Set(enrollments.map((enr) => enr.courseId));
+  const availableCourses = courses.filter((course) => !enrolledCourseIds.has(course.id));
+
+  async function handleAdd(e) {
+    e.preventDefault();
+    setMsg('');
+    if (!form.courseId) {
+      setMsg(isEn ? 'Choose a course first.' : '请先选择课程。');
+      return;
+    }
+    setSaving(true);
+    try {
+      const r = await fetch(`${API}/api/enrollments/admin/student/${studentId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ courseId: form.courseId, semesterLabel: form.semesterLabel }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || 'Could not add enrollment');
+      setEnrollments((items) => [d, ...items]);
+      setForm({ courseId: '', semesterLabel: form.semesterLabel });
+      setMsg(isEn ? '✓ Course assigned.' : '✓ 已指派课程。');
+    } catch (err) {
+      setMsg(err.message);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function updateEnrollment(enrollmentId, patch) {
+    setMsg('');
+    setSaving(true);
+    try {
+      const r = await fetch(`${API}/api/enrollments/admin/${enrollmentId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(patch),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || 'Could not update enrollment');
+      setEnrollments((items) => items.map((item) => item.id === enrollmentId ? d : item));
+      setMsg(isEn ? '✓ Enrollment updated.' : '✓ 选课资料已更新。');
+    } catch (err) {
+      setMsg(err.message);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function deleteEnrollment(enrollment) {
+    const ok = window.confirm(isEn
+      ? `Remove ${enrollment.course?.name || 'this course'} from this student? This also removes related quiz/exam/assignment records.`
+      : `要从学生名下移除 ${enrollment.course?.name || '这门课'} 吗？相关 quiz/exam/assignment 记录也会移除。`);
+    if (!ok) return;
+
+    setMsg('');
+    setSaving(true);
+    try {
+      const r = await fetch(`${API}/api/enrollments/admin/${enrollment.id}`, {
+        method: 'DELETE',
+        credentials: 'include',
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || 'Could not remove enrollment');
+      setEnrollments((items) => items.filter((item) => item.id !== enrollment.id));
+      setMsg(isEn ? '✓ Enrollment removed.' : '✓ 选课已移除。');
+    } catch (err) {
+      setMsg(err.message);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  function parseModules(value) {
+    return value
+      .split(',')
+      .map((item) => Number.parseInt(item.trim(), 10))
+      .filter((n) => Number.isInteger(n) && n > 0);
+  }
+
+  return (
+    <div className="border rounded p-3 mb-3 bg-white" style={{ maxWidth: '820px' }}>
+      <div className="d-flex justify-content-between align-items-center mb-2">
+        <span className="fw-semibold small">{isEn ? 'Course Enrollment Manager' : '课程指派管理'}</span>
+        <button className="btn btn-sm btn-outline-secondary" type="button" onClick={loadData} disabled={loading || saving}>
+          {loading ? (isEn ? 'Loading…' : '载入中…') : (isEn ? 'Refresh' : '重新整理')}
+        </button>
+      </div>
+
+      <form onSubmit={handleAdd} className="row g-2 align-items-end mb-3">
+        <div className="col-md-6">
+          <label className="form-label small mb-1">{isEn ? 'Assign published course' : '指派已发布课程'}</label>
+          <select
+            className="form-select form-select-sm"
+            value={form.courseId}
+            onChange={(e) => setForm((f) => ({ ...f, courseId: e.target.value }))}
+            disabled={saving || loading}
+          >
+            <option value="">{isEn ? 'Choose course…' : '选择课程…'}</option>
+            {availableCourses.map((course) => (
+              <option key={course.id} value={course.id}>
+                {course.name} · {Number(course.credits).toFixed(1)} cr · {course._count?.modules || 0} modules
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="col-md-3">
+          <label className="form-label small mb-1">{isEn ? 'Semester label' : '学期标签'}</label>
+          <input
+            className="form-control form-control-sm"
+            value={form.semesterLabel}
+            onChange={(e) => setForm((f) => ({ ...f, semesterLabel: e.target.value }))}
+            placeholder="G12 Spring"
+            disabled={saving}
+          />
+        </div>
+        <div className="col-md-3">
+          <button className="btn btn-primary btn-sm w-100" type="submit" disabled={saving || loading || !form.courseId}>
+            {saving ? (isEn ? 'Saving…' : '储存中…') : (isEn ? '+ Assign course' : '＋ 指派课程')}
+          </button>
+        </div>
+      </form>
+
+      {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
+
+      {loading ? (
+        <p className="small text-muted mb-0">{isEn ? 'Loading enrollments…' : '正在载入选课…'}</p>
+      ) : enrollments.length === 0 ? (
+        <p className="small text-warning fw-semibold mb-0">{isEn ? 'No courses assigned yet.' : '尚未指派课程。'}</p>
+      ) : (
+        <div className="table-responsive">
+          <table className="table table-sm align-middle mb-0">
+            <thead>
+              <tr>
+                <th>{isEn ? 'Course' : '课程'}</th>
+                <th style={{ minWidth: '130px' }}>{isEn ? 'Semester' : '学期'}</th>
+                <th style={{ minWidth: '155px' }}>{isEn ? 'Completed modules' : '已完成单元'}</th>
+                <th>{isEn ? 'Credit' : '学分'}</th>
+                <th className="text-end">{isEn ? 'Actions' : '操作'}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {enrollments.map((enrollment) => {
+                const moduleTotal = enrollment.course?._count?.modules || 0;
+                const completedValue = (enrollment.completedModules || []).join(', ');
+                return (
+                  <tr key={enrollment.id}>
+                    <td>
+                      <div className="fw-semibold small">{enrollment.course?.name || 'Untitled course'}</div>
+                      <div className="text-muted" style={{ fontSize: '11px' }}>
+                        {enrollment.course?.slug} · {Number(enrollment.course?.credits || 0).toFixed(1)} cr · {moduleTotal} modules
+                      </div>
+                    </td>
+                    <td>
+                      <input
+                        className="form-control form-control-sm"
+                        defaultValue={enrollment.semesterLabel || ''}
+                        placeholder="G12 Spring"
+                        onBlur={(e) => {
+                          if (e.target.value !== (enrollment.semesterLabel || '')) {
+                            updateEnrollment(enrollment.id, { semesterLabel: e.target.value });
+                          }
+                        }}
+                        disabled={saving}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        className="form-control form-control-sm"
+                        defaultValue={completedValue}
+                        placeholder="1, 2, 3"
+                        onBlur={(e) => {
+                          if (e.target.value !== completedValue) {
+                            updateEnrollment(enrollment.id, { completedModules: parseModules(e.target.value) });
+                          }
+                        }}
+                        disabled={saving}
+                      />
+                      <div className="text-muted" style={{ fontSize: '11px' }}>
+                        {(enrollment.completedModules || []).length} / {moduleTotal || '—'} modules
+                      </div>
+                    </td>
+                    <td>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          checked={!!enrollment.creditEarned}
+                          onChange={(e) => updateEnrollment(enrollment.id, { creditEarned: e.target.checked })}
+                          disabled={saving}
+                          id={`credit-${enrollment.id}`}
+                        />
+                        <label className="form-check-label small" htmlFor={`credit-${enrollment.id}`}>
+                          {enrollment.creditEarned ? (isEn ? 'Earned' : '已取得') : (isEn ? 'Not earned' : '未取得')}
+                        </label>
+                      </div>
+                    </td>
+                    <td className="text-end">
+                      <button className="btn btn-sm btn-outline-danger" type="button" onClick={() => deleteEnrollment(enrollment)} disabled={saving}>
+                        {isEn ? 'Remove' : '移除'}
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
@@ -332,6 +665,7 @@ export default function AdminTranscriptPage({ language }) {
 
         <LoginSection studentId={studentId} isEn={isEn} />
         <ParentEmailSection studentId={studentId} isEn={isEn} />
+        <EnrollmentManagerSection studentId={studentId} isEn={isEn} />
         <GraduationSection studentId={studentId} />
 
         <TranscriptContent

@@ -13,9 +13,45 @@ const W_QUIZ = 0.40;
 const W_MID  = 0.30;
 const W_FINAL = 0.30;
 
+const MODULE_PROGRESS_FIELDS = new Set([
+  'readingCompletedAt',
+  'videoCompletedAt',
+  'supplementalVideoCompletedAt',
+  'practiceCompletedAt',
+  'quizCompletedAt',
+  'assignmentSubmittedAt',
+  'assignmentGradedAt',
+  'moduleCompletedAt',
+]);
+
 function requireStudent(req, res, next) {
   if (req.auth?.role !== 'student') return res.status(403).json({ error: 'Students only' });
   next();
+}
+
+async function touchModuleProgress(enrollmentId, moduleOrder, fields, at = new Date()) {
+  const selectedFields = [...new Set(fields)].filter((field) => MODULE_PROGRESS_FIELDS.has(field));
+  if (!enrollmentId || !moduleOrder || selectedFields.length === 0) return null;
+
+  const existing = await prisma.moduleProgress.findUnique({
+    where: { enrollmentId_moduleOrder: { enrollmentId, moduleOrder } },
+  });
+
+  const data = { lastActivityAt: at };
+  for (const field of selectedFields) {
+    if (!existing?.[field]) data[field] = at;
+  }
+
+  if (existing) {
+    return prisma.moduleProgress.update({
+      where: { enrollmentId_moduleOrder: { enrollmentId, moduleOrder } },
+      data,
+    });
+  }
+
+  const create = { enrollmentId, moduleOrder, lastActivityAt: at };
+  for (const field of selectedFields) create[field] = at;
+  return prisma.moduleProgress.create({ data: create });
 }
 
 function letterGrade(pct) {
@@ -78,6 +114,171 @@ function computeGrade({ quizAttempts, midterm, final_, totalModules }) {
 
 // ── List / enroll ─────────────────────────────────────────────────────────────
 
+router.get('/admin/all', authenticate, requireAdmin, async (req, res) => {
+  const enrollments = await prisma.enrollment.findMany({
+    include: {
+      student: { select: { name: true, studentCode: true } },
+      course: { select: { slug: true, name: true, credits: true } },
+      examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' }, take: 2 },
+      quizAttempts: { select: { moduleOrder: true, score: true } },
+      assignments: { orderBy: { moduleOrder: 'asc' } },
+      moduleProgresses: { orderBy: { moduleOrder: 'asc' } },
+    },
+    orderBy: { enrolledAt: 'desc' },
+  });
+  res.json(enrollments);
+});
+
+router.get('/admin/student/:studentId', authenticate, requireAdmin, async (req, res) => {
+  const student = await prisma.student.findUnique({
+    where: { id: req.params.studentId },
+    select: { id: true },
+  });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const enrollments = await prisma.enrollment.findMany({
+    where: { studentId: student.id },
+    include: {
+      course: {
+        select: {
+          id: true,
+          slug: true,
+          name: true,
+          nameZh: true,
+          credits: true,
+          department: true,
+          type: true,
+          _count: { select: { modules: true } },
+        },
+      },
+      examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
+      quizAttempts: { select: { moduleOrder: true, score: true, passed: true, submittedAt: true } },
+      assignments: { select: { moduleOrder: true, feedback: true, score: true, submittedAt: true, gradedAt: true } },
+      moduleProgresses: { orderBy: { moduleOrder: 'asc' } },
+    },
+    orderBy: [{ semesterLabel: 'asc' }, { enrolledAt: 'desc' }],
+  });
+
+  res.json(enrollments);
+});
+
+router.post('/admin/student/:studentId', authenticate, requireAdmin, async (req, res) => {
+  const { courseId, slug, semesterLabel = '' } = req.body || {};
+  if (!courseId && !slug) return res.status(400).json({ error: 'courseId or slug is required' });
+
+  const student = await prisma.student.findUnique({
+    where: { id: req.params.studentId },
+    select: { id: true },
+  });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const course = courseId
+    ? await prisma.course.findUnique({ where: { id: courseId }, select: { id: true } })
+    : await prisma.course.findUnique({ where: { slug }, select: { id: true } });
+  if (!course) return res.status(404).json({ error: 'Course not found' });
+
+  try {
+    const enrollment = await prisma.enrollment.create({
+      data: {
+        studentId: student.id,
+        courseId: course.id,
+        semesterLabel: String(semesterLabel || '').trim(),
+      },
+      include: {
+        course: {
+          select: {
+            id: true,
+            slug: true,
+            name: true,
+            nameZh: true,
+            credits: true,
+            department: true,
+            type: true,
+            _count: { select: { modules: true } },
+          },
+        },
+        examAttempts: true,
+        quizAttempts: true,
+        assignments: true,
+        moduleProgresses: true,
+      },
+    });
+    res.status(201).json(enrollment);
+  } catch (e) {
+    if (e.code === 'P2002') return res.status(409).json({ error: 'Student is already enrolled in this course' });
+    throw e;
+  }
+});
+
+router.patch('/admin/:enrollmentId', authenticate, requireAdmin, async (req, res) => {
+  const allowed = ['semesterLabel', 'creditEarned', 'completedModules'];
+  const data = {};
+
+  for (const key of allowed) {
+    if (req.body?.[key] === undefined) continue;
+    if (key === 'semesterLabel') data.semesterLabel = String(req.body.semesterLabel || '').trim();
+    if (key === 'creditEarned') {
+      data.creditEarned = Boolean(req.body.creditEarned);
+      data.creditEarnedAt = data.creditEarned ? new Date() : null;
+    }
+    if (key === 'completedModules') {
+      if (!Array.isArray(req.body.completedModules)) {
+        return res.status(400).json({ error: 'completedModules must be an array of module numbers' });
+      }
+      data.completedModules = [...new Set(req.body.completedModules
+        .map((n) => Number.parseInt(n, 10))
+        .filter((n) => Number.isInteger(n) && n > 0))]
+        .sort((a, b) => a - b);
+    }
+  }
+
+  if (Object.keys(data).length === 0) return res.status(400).json({ error: 'No supported fields to update' });
+
+  try {
+    const enrollment = await prisma.enrollment.update({
+      where: { id: req.params.enrollmentId },
+      data,
+      include: {
+        course: {
+          select: {
+            id: true,
+            slug: true,
+            name: true,
+            nameZh: true,
+            credits: true,
+            department: true,
+            type: true,
+            _count: { select: { modules: true } },
+          },
+        },
+        examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
+        quizAttempts: { select: { moduleOrder: true, score: true, passed: true, submittedAt: true } },
+        assignments: { select: { moduleOrder: true, feedback: true, score: true, submittedAt: true, gradedAt: true } },
+        moduleProgresses: { orderBy: { moduleOrder: 'asc' } },
+      },
+    });
+    if (Array.isArray(data.completedModules)) {
+      for (const moduleOrder of data.completedModules) {
+        await touchModuleProgress(enrollment.id, moduleOrder, ['moduleCompletedAt']);
+      }
+    }
+    res.json(enrollment);
+  } catch (e) {
+    if (e.code === 'P2025') return res.status(404).json({ error: 'Enrollment not found' });
+    throw e;
+  }
+});
+
+router.delete('/admin/:enrollmentId', authenticate, requireAdmin, async (req, res) => {
+  try {
+    await prisma.enrollment.delete({ where: { id: req.params.enrollmentId } });
+    res.json({ ok: true });
+  } catch (e) {
+    if (e.code === 'P2025') return res.status(404).json({ error: 'Enrollment not found' });
+    throw e;
+  }
+});
+
 router.get('/', authenticate, requireStudent, async (req, res) => {
   const enrollments = await prisma.enrollment.findMany({
     where: { studentId: req.auth.studentId },
@@ -132,11 +333,45 @@ router.get('/:slug', authenticate, requireStudent, async (req, res) => {
       examAttempts: { orderBy: { startedAt: 'desc' } },
       quizAttempts: { orderBy: { moduleOrder: 'asc' } },
       assignments: { orderBy: { moduleOrder: 'asc' } },
+      moduleProgresses: { orderBy: { moduleOrder: 'asc' } },
     },
   });
   if (!enrollment) return res.status(404).json({ error: 'Not enrolled' });
 
   res.json({ enrollment, course });
+});
+
+// POST /api/enrollments/:slug/module/:moduleOrder/progress
+// Records first-completed timestamps for non-graded module activities.
+router.post('/:slug/module/:moduleOrder/progress', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
+  const moduleOrder = parseInt(req.params.moduleOrder, 10);
+  if (!moduleOrder) return res.status(400).json({ error: 'Invalid moduleOrder' });
+
+  const body = req.body || {};
+  const requested = [];
+  if (body.readingCompleted) requested.push('readingCompletedAt');
+  if (body.videoCompleted) requested.push('videoCompletedAt');
+  if (body.supplementalVideoCompleted) requested.push('supplementalVideoCompletedAt');
+  if (body.practiceCompleted) requested.push('practiceCompletedAt');
+  if (requested.length === 0) {
+    return res.status(400).json({ error: 'At least one completion flag is required' });
+  }
+
+  const course = await prisma.course.findUnique({
+    where: { slug: req.params.slug },
+    select: { id: true, modules: { where: { order: moduleOrder }, select: { order: true } } },
+  });
+  if (!course) return res.status(404).json({ error: 'Course not found' });
+  if (course.modules.length === 0) return res.status(404).json({ error: 'Module not found' });
+
+  const enrollment = await prisma.enrollment.findUnique({
+    where: { studentId_courseId: { studentId: req.auth.studentId, courseId: course.id } },
+    select: { id: true },
+  });
+  if (!enrollment) return res.status(404).json({ error: 'Not enrolled' });
+
+  const progress = await touchModuleProgress(enrollment.id, moduleOrder, requested);
+  res.json(progress);
 });
 
 // ── Grades ────────────────────────────────────────────────────────────────────
@@ -154,6 +389,7 @@ router.get('/:slug/grades', authenticate, requireStudent, async (req, res) => {
       quizAttempts: { orderBy: { moduleOrder: 'asc' } },
       examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
       assignments: { orderBy: { moduleOrder: 'asc' } },
+      moduleProgresses: { orderBy: { moduleOrder: 'asc' } },
     },
   });
   if (!enrollment) return res.status(404).json({ error: 'Not enrolled' });
@@ -167,12 +403,14 @@ router.get('/:slug/grades', authenticate, requireStudent, async (req, res) => {
   const quizRows = course.modules.map((mod) => {
     const attempt = enrollment.quizAttempts.find((a) => a.moduleOrder === mod.order);
     const assignment = enrollment.assignments.find((a) => a.moduleOrder === mod.order);
+    const progress = enrollment.moduleProgresses.find((p) => p.moduleOrder === mod.order);
     return {
       moduleOrder: mod.order,
       title: mod.title,
       titleZh: mod.titleZh,
       quiz: attempt ? { score: Number(attempt.score), passed: attempt.passed, submittedAt: attempt.submittedAt } : null,
       assignment: assignment ? { content: assignment.content, feedback: assignment.feedback, submittedAt: assignment.submittedAt } : null,
+      progress: progress || null,
     };
   });
 
@@ -294,6 +532,12 @@ router.post('/:slug/quiz/:moduleOrder/submit', authenticate, requireStudent, blo
     : [...enrollment.completedModules, moduleOrder].sort((a, b) => a - b);
 
   await prisma.enrollment.update({ where: { id: enrollment.id }, data: { completedModules: completed } });
+  await touchModuleProgress(
+    enrollment.id,
+    moduleOrder,
+    ['quizCompletedAt', 'moduleCompletedAt'],
+    attempt.submittedAt
+  );
 
   res.json({ score: Math.round(score * 10) / 10, passed, earned, total, graded, attempt });
 });
@@ -318,6 +562,7 @@ router.post('/:slug/assignment/:moduleOrder', authenticate, requireStudent, bloc
     update: { content: content.trim() },
     create: { enrollmentId: enrollment.id, moduleOrder, content: content.trim() },
   });
+  await touchModuleProgress(enrollment.id, moduleOrder, ['assignmentSubmittedAt'], submission.submittedAt);
 
   res.json(submission);
 });
@@ -431,20 +676,6 @@ router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, block
 
 // ── Admin ─────────────────────────────────────────────────────────────────────
 
-router.get('/admin/all', authenticate, requireAdmin, async (req, res) => {
-  const enrollments = await prisma.enrollment.findMany({
-    include: {
-      student: { select: { name: true, studentCode: true } },
-      course: { select: { slug: true, name: true, credits: true } },
-      examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' }, take: 2 },
-      quizAttempts: { select: { moduleOrder: true, score: true } },
-      assignments: { orderBy: { moduleOrder: 'asc' } },
-    },
-    orderBy: { enrolledAt: 'desc' },
-  });
-  res.json(enrollments);
-});
-
 // PATCH /api/enrollments/admin/:enrollmentId/assignment/:moduleOrder/feedback — teacher feedback
 router.patch('/admin/:enrollmentId/assignment/:moduleOrder/feedback', authenticate, requireAdmin, async (req, res) => {
   const moduleOrder = parseInt(req.params.moduleOrder, 10);
@@ -458,8 +689,9 @@ router.patch('/admin/:enrollmentId/assignment/:moduleOrder/feedback', authentica
 
   const updated = await prisma.assignmentSubmission.update({
     where: { id: submission.id },
-    data: { feedback: feedback.trim() },
+    data: { feedback: feedback.trim(), gradedAt: submission.gradedAt || new Date() },
   });
+  await touchModuleProgress(req.params.enrollmentId, moduleOrder, ['assignmentGradedAt'], updated.gradedAt);
   res.json(updated);
 });
 

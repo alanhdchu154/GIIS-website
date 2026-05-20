@@ -14,6 +14,10 @@
     "db:migrate:deploy": "node scripts/prisma-env.cjs migrate deploy",
     "db:seed": "node prisma/seed.js",
     "audit:seniors": "node scripts/senior-activity-audit.js",
+    "email:principal-appointment": "node scripts/send-principal-appointment-letter.js",
+    "email:weekly-report": "node scripts/send-weekly-report.js",
+    "email:weekly-report:dry-run": "node scripts/send-weekly-report.js --dry-run",
+    "smoke:student-lifecycle": "node scripts/smoke-student-lifecycle.js",
     "postinstall": "node scripts/prisma-env.cjs generate",
     "test": "jest"
   },

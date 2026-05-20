@@ -26,7 +26,15 @@ function StatCard({ label, value, sub }) {
 }
 
 function ActivityRow({ event, isEn }) {
-  const colors = { exam: { bg: '#e8f5e9', fg: '#2e7d32', icon: '✓' }, quiz: { bg: '#e3f2fd', fg: '#2b3d6d', icon: '📝' }, assignment: { bg: '#fff3e0', fg: '#e65100', icon: '📋' } };
+  const colors = {
+    exam: { bg: '#e8f5e9', fg: '#2e7d32', icon: '✓' },
+    quiz: { bg: '#e3f2fd', fg: '#2b3d6d', icon: '📝' },
+    assignment: { bg: '#fff3e0', fg: '#e65100', icon: '📋' },
+    video: { bg: '#f3e5f5', fg: '#6a1b9a', icon: '▶' },
+    supplemental_video: { bg: '#f3e5f5', fg: '#6a1b9a', icon: '▶' },
+    reading: { bg: '#e0f2f1', fg: '#00695c', icon: 'R' },
+    practice: { bg: '#ede7f6', fg: '#4527a0', icon: 'P' },
+  };
   const c = colors[event.type] || colors.quiz;
   return (
     <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', padding: '10px 0', borderBottom: '1px solid #f0f2f8' }}>
@@ -39,6 +47,10 @@ function ActivityRow({ event, isEn }) {
           {event.type === 'exam' && (isEn ? ` — ${event.passed ? 'Passed' : 'Attempted'} final exam` : ` — ${event.passed ? '通过' : '参加'}期末考`)}
           {event.type === 'quiz' && (isEn ? ` — Module ${event.moduleOrder} quiz` : ` — 第 ${event.moduleOrder} 模块测验`)}
           {event.type === 'assignment' && (isEn ? ` — Module ${event.moduleOrder} assignment` : ` — 第 ${event.moduleOrder} 模块作业`)}
+          {event.type === 'video' && (isEn ? ` — Module ${event.moduleOrder} video completed` : ` — 第 ${event.moduleOrder} 模块视频完成`)}
+          {event.type === 'supplemental_video' && (isEn ? ` — Module ${event.moduleOrder} supplemental video completed` : ` — 第 ${event.moduleOrder} 模块补充视频完成`)}
+          {event.type === 'reading' && (isEn ? ` — Module ${event.moduleOrder} reading completed` : ` — 第 ${event.moduleOrder} 模块阅读完成`)}
+          {event.type === 'practice' && (isEn ? ` — Module ${event.moduleOrder} practice completed` : ` — 第 ${event.moduleOrder} 模块练习完成`)}
           {event.score != null && <span style={{ fontWeight: 400, color: '#5c6578' }}> ({Number(event.score).toFixed(0)}%)</span>}
           {event.type === 'assignment' && event.hasFeedback && <span style={{ color: '#2e7d32', fontWeight: 400 }}> {isEn ? '· Feedback received' : '· 已收到反馈'}</span>}
         </p>

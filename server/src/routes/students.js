@@ -525,6 +525,7 @@ router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
       quizAttempts: { orderBy: { submittedAt: 'desc' } },
       assignments: { orderBy: { submittedAt: 'desc' } },
       examAttempts: { orderBy: { startedAt: 'desc' } },
+      moduleProgresses: { orderBy: { moduleOrder: 'asc' } },
     },
   });
 
@@ -550,9 +551,12 @@ router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
       (enr.course?.modules || []).map((m) => [m.order, m])
     );
 
-    // Per-module completion datetime is derived: latest quiz/assignment for
-    // that module's order. We do not store an explicit completedAt today.
+    // Per-module completion datetime uses explicit ModuleProgress when present,
+    // with legacy quiz/assignment fallback for older rows.
     const completionDate = new Map();
+    for (const p of enr.moduleProgresses || []) {
+      if (p.moduleCompletedAt) completionDate.set(p.moduleOrder, p.moduleCompletedAt);
+    }
     for (const q of enr.quizAttempts) {
       if (q.passed) {
         const prev = completionDate.get(q.moduleOrder);
@@ -577,6 +581,27 @@ router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
         moduleTitle: m?.title || `Module ${order}`,
         estimatedHrs: m?.estimatedHrs ? Number(m.estimatedHrs) : 0,
       });
+    }
+
+    for (const p of enr.moduleProgresses || []) {
+      const progressEvents = [
+        ['video_complete', p.videoCompletedAt],
+        ['supplemental_video_complete', p.supplementalVideoCompletedAt],
+        ['reading_complete', p.readingCompletedAt],
+        ['practice_complete', p.practiceCompletedAt],
+      ];
+      for (const [kind, at] of progressEvents) {
+        if (!at) continue;
+        const m = moduleByOrder.get(p.moduleOrder);
+        timeline.push({
+          kind,
+          at,
+          courseName,
+          courseSlug: enr.course?.slug,
+          moduleOrder: p.moduleOrder,
+          moduleTitle: m?.title || `Module ${p.moduleOrder}`,
+        });
+      }
     }
 
     for (const q of enr.quizAttempts) {

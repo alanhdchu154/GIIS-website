@@ -1,6 +1,7 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const { PrismaClient } = require('@prisma/client');
+const { computeSemesterTotals } = require('../lib/gpa');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -14,6 +15,29 @@ function extractParentAuth(req) {
     const p = jwt.verify(token, process.env.JWT_SECRET);
     return p.role === 'parent' ? p : null;
   } catch { return null; }
+}
+
+function isReleased(semester, now = new Date()) {
+  return !semester.releaseDate || new Date(semester.releaseDate) <= now;
+}
+
+function transcriptStats(semesters) {
+  const releasedRows = (semesters || [])
+    .filter((semester) => isReleased(semester))
+    .flatMap((semester) => semester.courseRows || [])
+    .filter((row) => row.courseName && row.letterGrade && String(row.letterGrade).trim());
+
+  const creditsEarned = releasedRows.reduce((sum, row) => sum + Number(row.credits || 0), 0);
+  const gpaRows = releasedRows.filter(
+    (row) => Number.isFinite(Number(row.weightedGpa)) && Number.isFinite(Number(row.unweightedGpa))
+  );
+  const totals = computeSemesterTotals(gpaRows);
+
+  return {
+    creditsEarned,
+    gpa: totals.unweightedGPA === '-' ? null : totals.unweightedGPA,
+    completed: releasedRows.length,
+  };
 }
 
 // GET /api/parent/me
@@ -31,30 +55,20 @@ router.get('/me', async (req, res) => {
           examAttempts: { orderBy: { submittedAt: 'desc' }, take: 5 },
           assignments: { orderBy: { updatedAt: 'desc' }, take: 5 },
           quizAttempts: { orderBy: { submittedAt: 'desc' }, take: 5 },
+          moduleProgresses: { orderBy: { lastActivityAt: 'desc' }, take: 10 },
         },
         orderBy: { enrolledAt: 'desc' },
+      },
+      semesters: {
+        include: { courseRows: true },
+        orderBy: { sortOrder: 'asc' },
       },
     },
   });
 
   if (!student) return res.status(404).json({ error: 'Student not found' });
 
-  // Calculate credits + GPA
-  let creditsEarned = 0;
-  let gpaSum = 0;
-  let gradedCount = 0;
-  for (const enr of student.enrollments) {
-    if (enr.creditEarned) {
-      creditsEarned += Number(enr.course.credits);
-      const best = enr.examAttempts.find(a => a.examType === 'final' && a.passed);
-      if (best?.score != null) {
-        const s = Number(best.score);
-        gpaSum += s >= 90 ? 4.0 : s >= 80 ? 3.0 : s >= 70 ? 2.0 : s >= 60 ? 1.0 : 0;
-        gradedCount++;
-      }
-    }
-  }
-  const gpa = gradedCount > 0 ? (gpaSum / gradedCount).toFixed(2) : null;
+  const stats = transcriptStats(student.semesters);
 
   // Build recent activity feed (last 10 events across all enrollments)
   const events = [];
@@ -67,6 +81,17 @@ router.get('/me', async (req, res) => {
     }
     for (const s of enr.assignments) {
       events.push({ type: 'assignment', course: enr.course.name, moduleOrder: s.moduleOrder, hasFeedback: !!s.feedback, at: s.submittedAt });
+    }
+    for (const p of enr.moduleProgresses || []) {
+      const activityTypes = [
+        ['video', p.videoCompletedAt],
+        ['supplemental_video', p.supplementalVideoCompletedAt],
+        ['reading', p.readingCompletedAt],
+        ['practice', p.practiceCompletedAt],
+      ];
+      for (const [type, at] of activityTypes) {
+        if (at) events.push({ type, course: enr.course.name, moduleOrder: p.moduleOrder, at });
+      }
     }
   }
   events.sort((a, b) => new Date(b.at) - new Date(a.at));
@@ -83,7 +108,12 @@ router.get('/me', async (req, res) => {
       id: student.id, name: student.name, studentCode: student.studentCode,
       gradeLevel: student.entryDate ? `Grade ${9 + Math.floor((Date.now() - new Date(student.entryDate)) / (365.25 * 24 * 3600 * 1000))}` : null,
     },
-    stats: { creditsEarned: Number(creditsEarned.toFixed(1)), gpa, totalEnrollments: student.enrollments.length, completed: student.enrollments.filter(e => e.creditEarned).length },
+    stats: {
+      creditsEarned: Number(stats.creditsEarned.toFixed(1)),
+      gpa: stats.gpa,
+      totalEnrollments: student.enrollments.length,
+      completed: stats.completed,
+    },
     enrollments: student.enrollments.map(e => ({
       id: e.id, slug: e.course.slug, name: e.course.name, nameZh: e.course.nameZh,
       department: e.course.department, credits: Number(e.course.credits),

@@ -1,27 +1,44 @@
 /**
  * Resend email helper.
  * All outbound email goes through this module.
- * If RESEND_EMAIL_API_KEY is missing, emails are skipped with a warning.
+ * If RESEND_EMAIL_API_KEY / RESEND_API_KEY is missing, emails are skipped with a warning.
  */
 const { Resend } = require('resend');
 
-const resend = process.env.RESEND_EMAIL_API_KEY
-  ? new Resend(process.env.RESEND_EMAIL_API_KEY)
+const RESEND_KEY = process.env.RESEND_EMAIL_API_KEY || process.env.RESEND_API_KEY;
+
+const resend = RESEND_KEY
+  ? new Resend(RESEND_KEY)
   : null;
 
-const FROM = 'GIIS Admissions <admissions@genesisideas.school>';
+const FROM = process.env.RESEND_FROM_EMAIL || 'GIIS Admissions <admissions@genesisideas.school>';
 const ADMIN_EMAIL = 'alanhdchu@genesisideas.school';
+const ADMISSIONS_EMAIL = 'admissions@genesisideas.school';
+const FALLBACK_PARENT_EMAIL = 'admin@genesisideas.school';
 const SITE = process.env.CORS_ORIGIN?.split(',')[0]?.trim() || 'https://genesisideas.school';
 
-async function send({ to, subject, html, text }) {
+async function send({ to, cc, subject, html, text }) {
   if (!resend) {
-    console.warn(`[mailer] RESEND_EMAIL_API_KEY not set — skipping email to ${to}: ${subject}`);
-    return;
+    console.warn(`[mailer] RESEND_EMAIL_API_KEY / RESEND_API_KEY not set — skipping email to ${to}: ${subject}`);
+    return { ok: false, skipped: true, reason: 'resend_api_key_missing' };
   }
   try {
-    await resend.emails.send({ from: FROM, to, subject, html, text });
+    const payload = { from: FROM, to, subject, html, text };
+    if (cc) payload.cc = cc;
+    const result = await resend.emails.send(payload);
+    if (result?.error) {
+      const message = result.error.message || JSON.stringify(result.error);
+      console.error(`[mailer] Resend rejected "${subject}" to ${to}:`, message);
+      return { ok: false, skipped: false, error: message, provider: result };
+    }
+    return {
+      ok: true,
+      id: result?.data?.id || result?.id || null,
+      provider: result,
+    };
   } catch (err) {
     console.error(`[mailer] Failed to send "${subject}" to ${to}:`, err.message);
+    return { ok: false, skipped: false, error: err.message };
   }
 }
 
@@ -137,8 +154,9 @@ async function sendWeeklyProgressEmail({ parentEmail, studentName, creditsEarned
     ? inProgressCourses.map(c => `<li style="margin-bottom:6px"><strong>${c.name}</strong> — ${c.completedModules}/${c.totalModules} modules</li>`).join('')
     : '<li style="color:#9aa0ad">No active courses.</li>';
 
-  await send({
+  return send({
     to: parentEmail,
+    cc: ADMISSIONS_EMAIL,
     subject,
     html: `
 <div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1d24">
@@ -175,4 +193,128 @@ async function sendWeeklyProgressEmail({ parentEmail, studentName, creditsEarned
   });
 }
 
-module.exports = { sendNewApplicationAlert, sendWelcomeEmail, sendRejectionEmail, sendWeeklyProgressEmail };
+async function sendPasswordResetEmail({ email, role, resetUrl, expiresMinutes = 60 }) {
+  const subject = role === 'parent'
+    ? 'Reset your GIIS Parent Portal password'
+    : 'Reset your GIIS Student Portal password';
+  const portalName = role === 'parent' ? 'Parent Portal' : 'Student Portal';
+  return send({
+    to: email,
+    subject,
+    html: `
+<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1d24">
+  <div style="background:#1a1a2e;padding:26px 30px;border-radius:12px 12px 0 0">
+    <p style="color:#d5a836;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px">Genesis of Ideas International School</p>
+    <h1 style="color:#fff;font-size:22px;font-weight:800;margin:0">Password reset</h1>
+  </div>
+  <div style="background:#fff;border:1px solid #e8ecf5;border-top:none;padding:28px 30px;border-radius:0 0 12px 12px">
+    <p>We received a request to reset the password for your GIIS ${portalName} account.</p>
+    <p><a href="${resetUrl}" style="background:#2b3d6d;color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block">Reset password →</a></p>
+    <p style="font-size:13px;color:#5c6578">This link expires in ${expiresMinutes} minutes. If you did not request this, you can ignore this email.</p>
+    <p style="font-size:12px;color:#9aa0ad;margin-top:24px">If the button does not work, open this link: <br><a href="${resetUrl}" style="color:#2b3d6d">${resetUrl}</a></p>
+  </div>
+</div>
+    `.trim(),
+    text: `Reset your GIIS ${portalName} password:\n${resetUrl}\n\nThis link expires in ${expiresMinutes} minutes. If you did not request this, ignore this email.`,
+  });
+}
+
+async function sendPrincipalAppointmentLetter({
+  principalEmail = 'shiyu.zhang@genesisideas.school',
+  cc = ADMIN_EMAIL,
+  appointmentDate = 'May 19, 2026',
+  effectiveDate = 'May 19, 2026',
+} = {}) {
+  const subject = 'Formal Letter of Appointment — President & Principal';
+  const html = `
+<div style="font-family:Georgia,'Times New Roman',serif;max-width:680px;margin:0 auto;color:#1a1d24;line-height:1.65">
+  <div style="border-bottom:3px double #1a2d5a;padding:0 0 18px;margin:0 0 24px">
+    <p style="font-family:Inter,Arial,sans-serif;color:#b8962e;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px">Genesis of Ideas International School</p>
+    <h1 style="font-size:24px;color:#1a2d5a;margin:0">Formal Letter of Appointment</h1>
+    <p style="font-family:Inter,Arial,sans-serif;font-size:12px;color:#5c6578;margin:6px 0 0">Florida-registered private school · Operating under Florida Statute 1002.42</p>
+  </div>
+
+  <p style="margin:0 0 18px"><strong>Date:</strong> ${appointmentDate}</p>
+  <p style="margin:0 0 18px">Dear <strong>Shiyu Zhang, Ph.D.</strong>,</p>
+
+  <p>
+    On behalf of Genesis of Ideas International School, this letter formally confirms
+    your appointment as <strong>President &amp; Principal</strong> of Genesis of Ideas
+    International School, effective <strong>${effectiveDate}</strong>.
+  </p>
+
+  <p>
+    In this role, you are authorized to provide academic and administrative leadership
+    for the school, including oversight of academic standards, student records, graduation
+    verification, school profile documentation, official transcript certification, and
+    diploma issuance in accordance with the school's policies and Florida private school
+    registration framework.
+  </p>
+
+  <p>
+    You are further authorized to serve as the certifying school official for official
+    academic records issued by Genesis of Ideas International School, including transcripts,
+    school profile documents, diploma verification records, and related academic
+    documentation used for college admissions, transfer review, and family records.
+  </p>
+
+  <p>
+    Genesis of Ideas International School is grateful for your leadership and professional
+    service. This appointment is issued for institutional recordkeeping and may be retained
+    in the school's governance, accreditation-readiness, and academic documentation files.
+  </p>
+
+  <div style="margin:34px 0 24px">
+    <p style="margin:0 0 28px">Sincerely,</p>
+    <p style="margin:0;color:#1a2d5a;font-size:18px"><strong>Alan Hwader Chu</strong></p>
+    <p style="font-family:Inter,Arial,sans-serif;font-size:13px;color:#5c6578;margin:2px 0 0">Founder &amp; Head of School<br>Genesis of Ideas International School</p>
+  </div>
+
+  <hr style="border:none;border-top:1px solid #e8ecf5;margin:26px 0">
+  <p style="font-family:Inter,Arial,sans-serif;font-size:12px;color:#5c6578;margin:0">
+    School address: 7901 4th St N STE 300, St. Petersburg, FL 33702<br>
+    Website: <a href="https://genesisideas.school" style="color:#1a2d5a">https://genesisideas.school</a> · Email: <a href="mailto:admissions@genesisideas.school" style="color:#1a2d5a">admissions@genesisideas.school</a>
+  </p>
+
+  <div style="margin-top:24px;padding:14px 16px;background:#f8f9fc;border-left:4px solid #b8962e;font-family:Inter,Arial,sans-serif;font-size:13px;color:#333">
+    <strong>中文摘要：</strong>本函正式确认章诗雨博士担任 Genesis of Ideas International School 的 President &amp; Principal，并授权其负责学校学术管理、学生记录、成绩单认证与文凭签发等职责。
+  </div>
+</div>
+  `.trim();
+
+  const text = [
+    'Genesis of Ideas International School',
+    'Formal Letter of Appointment',
+    '',
+    `Date: ${appointmentDate}`,
+    '',
+    'Dear Shiyu Zhang, Ph.D.,',
+    '',
+    `On behalf of Genesis of Ideas International School, this letter formally confirms your appointment as President & Principal of Genesis of Ideas International School, effective ${effectiveDate}.`,
+    '',
+    "In this role, you are authorized to provide academic and administrative leadership for the school, including oversight of academic standards, student records, graduation verification, school profile documentation, official transcript certification, and diploma issuance in accordance with the school's policies and Florida private school registration framework.",
+    '',
+    'You are further authorized to serve as the certifying school official for official academic records issued by Genesis of Ideas International School, including transcripts, school profile documents, diploma verification records, and related academic documentation used for college admissions, transfer review, and family records.',
+    '',
+    'Sincerely,',
+    'Alan Hwader Chu',
+    'Founder & Head of School',
+    'Genesis of Ideas International School',
+    '',
+    '中文摘要：本函正式确认章诗雨博士担任 Genesis of Ideas International School 的 President & Principal，并授权其负责学校学术管理、学生记录、成绩单认证与文凭签发等职责。',
+  ].join('\n');
+
+  return send({ to: principalEmail, cc, subject, html, text });
+}
+
+module.exports = {
+  ADMIN_EMAIL,
+  ADMISSIONS_EMAIL,
+  FALLBACK_PARENT_EMAIL,
+  sendNewApplicationAlert,
+  sendWelcomeEmail,
+  sendRejectionEmail,
+  sendWeeklyProgressEmail,
+  sendPasswordResetEmail,
+  sendPrincipalAppointmentLetter,
+};

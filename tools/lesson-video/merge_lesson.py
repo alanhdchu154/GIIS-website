@@ -76,6 +76,12 @@ def run(cmd, **kw):
     # transparently rewrite the command name to the located ffmpeg path
     if cmd and cmd[0] == "ffmpeg":
         cmd = [FFMPEG, *cmd[1:]]
+    # IMPORTANT: pin stdin to /dev/null. ffmpeg reads stdin for interactive
+    # control (press 'q' to quit) and would otherwise inherit the parent
+    # process's stdin. When this script is called from a bash `while read`
+    # loop (e.g. daily_build.sh), ffmpeg silently consumes the loop's queue
+    # file, causing only the FIRST lesson to ever be built per run.
+    kw.setdefault("stdin", subprocess.DEVNULL)
     r = subprocess.run(cmd, capture_output=True, text=True, **kw)
     if r.returncode != 0:
         sys.exit(f"command failed: {' '.join(cmd)}\n{r.stderr}")
@@ -161,34 +167,129 @@ def _ass_header() -> str:
         "Effect, Text\n"
     )
 
+def _load_word_timings(audio_dir: Path, section_id: str) -> list[dict] | None:
+    """Load <section>.words.json if present (written by make_lesson.py from
+    edge-tts WordBoundary events). Returns the words list or None.
+
+    Format: {"words": [{"text": str, "offset_s": float, "duration_s": float}, ...]}
+    Offsets are relative to the section's audio start (i.e. section-local).
+    """
+    p = audio_dir / f"{section_id}.words.json"
+    if not p.exists() or p.stat().st_size == 0:
+        return None
+    try:
+        return json.loads(p.read_text()).get("words") or None
+    except Exception:
+        return None
+
+
+def _chunks_from_word_timings(text: str, words: list[dict],
+                              max_words: int = MAX_WORDS) -> list[tuple[str, float, float]]:
+    """Group word-timed segments into subtitle chunks aligned to actual audio.
+
+    Returns list of (chunk_text, start_offset_s, end_offset_s) where offsets are
+    section-local. The chunk_text is reconstructed from the source `text` so
+    punctuation / capitalization survive (WordBoundary events strip those).
+
+    Strategy: split the source text into chunks the same way as the legacy
+    `chunks()` function (sentence-aware, ≤max_words). Walk through the
+    word-timing list in parallel, accumulating each chunk's start (first word
+    offset) and end (last word offset+duration). If word counts mismatch
+    (edge-tts occasionally emits boundary events for contractions or hyphenated
+    compounds slightly differently than text.split() expects), we fall back to
+    proportional within the affected chunk — better than crashing.
+    """
+    text_chunks = chunks(text, max_words)
+    if not words:
+        # Caller should have checked, but be defensive.
+        return []
+
+    # Pointer into the words list as we consume each chunk.
+    wi = 0
+    n_words = len(words)
+    out: list[tuple[str, float, float]] = []
+    for c in text_chunks:
+        n_in_chunk = len(c.split())
+        if wi >= n_words:
+            # Ran out of word events — emit zero-length cue at last known time.
+            last = (words[-1]["offset_s"] + words[-1]["duration_s"]) if words else 0.0
+            out.append((c, last, last))
+            continue
+        # Take up to n_in_chunk words, but never exceed the events we have.
+        take = min(n_in_chunk, n_words - wi)
+        slice_ = words[wi:wi + take]
+        start = slice_[0]["offset_s"]
+        end   = slice_[-1]["offset_s"] + slice_[-1]["duration_s"]
+        out.append((c, start, end))
+        wi += take
+    return out
+
+
 def build_subtitles(folder: Path, sections: list[dict], wavs: dict[str, Path],
                     intro_offset: float) -> tuple[Path, Path, list[dict]]:
     """Generate BOTH subtitles.srt (clean, for YouTube upload) and
-    subtitles.ass (styled, for ffmpeg burn-in). Same cues, different formats."""
+    subtitles.ass (styled, for ffmpeg burn-in). Same cues, different formats.
+
+    Per-section, prefers word-level timestamps from edge-tts (audio/<id>.words.json)
+    when available. Falls back to proportional-by-word-count for legacy sections
+    where TTS predates the word-boundary capture.
+    """
+    audio_dir = folder / "audio"
     cur = intro_offset
     idx = 1
     section_starts: list[dict] = []
     srt_lines: list[str] = []
     ass_events: list[str] = []
+    aligned_count = 0
+    fallback_count = 0
     for s in sections:
         dur = wav_duration(wavs[s["id"]])
         section_starts.append({"id": s["id"], "start": cur, "duration": dur})
-        cs = chunks(s["text"])
-        weights = [max(1, len(c.split())) for c in cs]
-        total_w = sum(weights)
-        t = cur
-        for c, w in zip(cs, weights):
-            d = dur * w / total_w
-            srt_lines.append(
-                f"{idx}\n{fmt_srt_time(t)} --> {fmt_srt_time(t + d)}\n{c}\n"
-            )
-            ass_events.append(
-                f"Dialogue: 0,{fmt_ass_time(t)},{fmt_ass_time(t + d)},"
-                f"Default,,0,0,0,,{c}"
-            )
-            idx += 1
-            t += d
+
+        words = _load_word_timings(audio_dir, s["id"])
+        if words:
+            # Word-level alignment — sample-accurate, no drift.
+            chunk_cues = _chunks_from_word_timings(s["text"], words)
+            for c, off_start, off_end in chunk_cues:
+                t = cur + off_start
+                t_end = cur + off_end
+                # Guard: never let a cue extend past the section's audio.
+                if t_end > cur + dur: t_end = cur + dur
+                srt_lines.append(
+                    f"{idx}\n{fmt_srt_time(t)} --> {fmt_srt_time(t_end)}\n{c}\n"
+                )
+                ass_events.append(
+                    f"Dialogue: 0,{fmt_ass_time(t)},{fmt_ass_time(t_end)},"
+                    f"Default,,0,0,0,,{c}"
+                )
+                idx += 1
+            aligned_count += 1
+        else:
+            # Legacy fallback: proportional-by-word-count within the section.
+            # This drifts a bit (especially for voices with long sentence pauses)
+            # but matches the pre-2026-05-11 behavior.
+            cs = chunks(s["text"])
+            weights = [max(1, len(c.split())) for c in cs]
+            total_w = sum(weights)
+            t = cur
+            for c, w in zip(cs, weights):
+                d = dur * w / total_w
+                srt_lines.append(
+                    f"{idx}\n{fmt_srt_time(t)} --> {fmt_srt_time(t + d)}\n{c}\n"
+                )
+                ass_events.append(
+                    f"Dialogue: 0,{fmt_ass_time(t)},{fmt_ass_time(t + d)},"
+                    f"Default,,0,0,0,,{c}"
+                )
+                idx += 1
+                t += d
+            fallback_count += 1
         cur += dur + GAP
+
+    if aligned_count or fallback_count:
+        print(f"[subs] {aligned_count} section(s) word-aligned, "
+              f"{fallback_count} fallback to proportional")
+
     srt_path = folder / "subtitles.srt"
     srt_path.write_text("\n".join(srt_lines))
     ass_path = folder / "subtitles.ass"
@@ -296,38 +397,38 @@ def build_slides_concat(folder: Path, sections: list[dict],
     return p
 
 def render_mp4(folder: Path, concat_file: Path, master_audio: Path,
-               ass: Path, output: Path):
-    # cd into the folder so ASS path is just a basename — keeps the filter
-    # argument simple and avoids needing to escape the absolute path.
-    #
-    # Two pipeline subtleties this command works around:
-    #
-    # (1) PNG concat demuxer emits ONE frame per image regardless of how
-    #     long that image is held. libass would then render the subtitle
-    #     once per slide and freeze on the first cue active when the slide
-    #     started, even if multiple cues span that slide's airtime. Forcing
-    #     `-framerate 30` BEFORE the concat input duplicates each PNG into
-    #     30 fps of frames, so the subtitles filter is invoked per output
-    #     frame and the cues advance correctly.
-    #
-    # (2) `-shortest` is unreliable against the PNG concat demuxer; the
-    #     last image's "implied" duration often runs ~25 s past the audio,
-    #     leaving silent dead frames after the recap. Forcing -t to the
-    #     audio length cuts the tail cleanly.
-    # Subtitle refresh granularity is driven by build_slides_concat() chunking
-    # the slide hold-times into SUB_REFRESH-second pieces — that's what makes
-    # cues advance inside a single visual slide. Keep this command lean.
+               output: Path):
+    """Render final MP4 from concat list + master audio. No burned-in subs —
+    we upload a plain-text transcript to YouTube and let Google STT do
+    forced-alignment for the closed captions track (better quality than any
+    local alignment, and viewers can toggle CC on/off + auto-translate).
+
+    `-t` to audio length cuts the tail cleanly (the PNG concat demuxer can
+    over-extend the last slide). No need for the SUB_REFRESH chunking trick
+    that used to drive libass cue advancement.
+    """
     audio_dur = wav_duration(master_audio)
     run(["ffmpeg", "-y",
          "-f", "concat", "-safe", "0", "-i", str(concat_file.resolve()),
          "-i", str(master_audio.resolve()),
-         "-vf", f"subtitles={ass.name}",
          "-c:v", "libx264", "-preset", "medium", "-crf", "22",
          "-pix_fmt", "yuv420p", "-r", "30",
          "-c:a", "aac", "-b:a", "128k",
          "-t", f"{audio_dur:.3f}",
          str(output.resolve())],
         cwd=folder)
+
+
+def build_transcript(folder: Path, sections: list[dict]) -> Path:
+    """Write a `transcript.txt` containing the full narration as plain text
+    (one section per paragraph, blank line between). This is what upload_lesson.py
+    sends to YouTube — Google's caption pipeline aligns it to the audio
+    perfectly using their STT, no local alignment needed.
+    """
+    parts = [s["text"].strip() for s in sections if s.get("text", "").strip()]
+    p = folder / "transcript.txt"
+    p.write_text("\n\n".join(parts) + "\n", encoding="utf-8")
+    return p
 
 def main():
     ap = argparse.ArgumentParser()
@@ -357,7 +458,11 @@ def main():
         sys.exit(f"missing {audio_dir}")
     wavs = ensure_wavs(audio_dir, [s["id"] for s in sections])
 
-    srt, ass, _ = build_subtitles(folder, sections, wavs, intro_offset=intro_secs)
+    # Plain-text transcript for YouTube to align (no local subtitle work).
+    transcript = build_transcript(folder, sections)
+    print(f"[transcript] {transcript.name}  ({len(sections)} sections, "
+          f"{sum(len(s['text'].split()) for s in sections)} words)")
+
     master = build_master_audio(folder, sections, wavs, intro_secs, outro_secs)
     concat = build_slides_concat(folder, sections, wavs, intro_secs, outro_secs)
 
@@ -365,12 +470,12 @@ def main():
     # successive runs overwrite a single canonical MP4 instead of creating dupes
     out_name = args.output or f"{folder.name.replace('-', '_')}.mp4"
     out_path = folder / out_name
-    render_mp4(folder, concat, master, ass, out_path)
+    render_mp4(folder, concat, master, out_path)
     size_mb = out_path.stat().st_size / 1024 / 1024
     # Total duration
     total = intro_secs + sum(wav_duration(wavs[s["id"]]) for s in sections) + GAP*(len(sections)-1) + outro_secs
     print(f"\nDONE  {out_path}")
-    print(f"      {size_mb:.1f} MB, ~{total/60:.1f} min")
+    print(f"      {size_mb:.1f} MB, ~{total/60:.1f} min  (no burn-in subs — YouTube CC handles it)")
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,11 @@
 # Lesson video skill
 
 > Take a folder containing `script.json` + `slides/` and produce a finished MP4 with English Aria narration and burned-in subtitles. Use this for every GIIS teaching video.
+>
+> V2 production quality rules live in `tools/lesson-video/QUALITY_FLOW.md`.
+> Read that file before creating, reviewing, rendering, or uploading any
+> lesson. Claude Code can draft lessons, but the release gate decides whether
+> they are uploadable.
 
 ## When to use this skill
 
@@ -47,6 +52,12 @@ This is the script Claude invokes when the user says "merge the lesson" in chat.
 ├── slides/
 │   ├── 01_<id>.png          # required — one PNG per section
 │   └── ...
+├── contact-sheet.jpg        # required before upload — visual QA thumbnail sheet
+├── _review_A*.json          # required before upload — PhD/peer content check
+├── _review_B*.json          # required before upload — adversarial student check
+├── _review_C*.json          # required before upload — citation/source/license check
+├── assets_manifest.json     # required if sourced/generated images are used
+├── learning_check.json      # recommended — quiz/checks tied to lesson misconceptions
 ├── audio/                   # made by make_lesson.py / synth_audio_local.py
 │   ├── 01_<id>.mp3
 │   └── ...
@@ -55,6 +66,30 @@ This is the script Claude invokes when the user says "merge the lesson" in chat.
 ```
 
 The slide filename's prefix MUST match the section id (e.g. `id: "08_pause1"` → `slides/08_pause1.png`).
+
+## V2 quality bar
+
+Use the following tools/skills as quality layers:
+
+- `presentations:Presentations` standard for slide story: one claim/action per slide, coherent contact sheet, no filler layouts.
+- `imagegen` only for hook illustrations, thumbnails, and low-precision conceptual scenes. Precision diagrams should be deterministic code in `build_slides.py`.
+- `browser:browser` for Learn Portal / HTML / embed QA when a local page is involved; otherwise generate and inspect `contact-sheet.jpg`.
+- `engineering:testing-strategy` for `learning_check.json`, A/B tests, and release rubric.
+
+Upload gate defaults:
+
+- score >= 90
+- `pass` or `pass_with_minor_notes`
+- no major/critical audit issues
+- MP4 + transcript + contact sheet present
+- PhD/peer + adversarial student + citation/source reviewer artifacts present
+- AP lessons require citation/source review
+
+Run before upload:
+
+```bash
+python3 tools/lesson-video/lesson_release_gate.py --pending
+```
 
 ### `script.json` schema
 
@@ -87,6 +122,7 @@ school (different teacher per class) rather than one robot reading everything.
 | Social Studies (History, Govt, Econ, Geography)       | `en-US-ChristopherNeural`   | Documentary-style authority. Fits civics + history. |
 | Psychology (Foundations, AP Psych, Cognitive, etc.)   | `en-US-BrianNeural`         | Thoughtful + warm. Psych needs "I'm listening carefully" tone. |
 | PE / Health (Athletic, Health & Wellness, Sports Mgmt)| `en-US-JennyNeural`         | Coach energy. "Let's move." |
+| Computer Science (AP CS A, Programming, Software Eng.)| `en-US-GuyNeural`           | Academic authority. Same voice as walkthrough Pathway scene — continuity. Distinct from Math's Aria. |
 | Electives / Business (default)                         | `en-US-AriaNeural`          | Safe default when none of the above fits. |
 
 **Rate**: stay at `-3%` for instructional clarity unless the user requests faster/slower.
@@ -107,6 +143,18 @@ delivers both languages — preserves the "same teacher" feel across languages.
 6. Renders MP4 (1920×1080, H.264 CRF 22, AAC 128k, 30 fps) with subtitles burned in via libass.
 
 Output: `<folder-name-with-underscores>.mp4` next to the script. Successive runs overwrite the same file.
+
+## Audit and release gate
+
+After slides/audio/MP4 exist, run:
+
+```bash
+python3 tools/lesson-video/audit_lessons.py teaching-videos/<lesson-folder>/
+python3 tools/lesson-video/lesson_release_gate.py teaching-videos/<lesson-folder>/
+```
+
+If the release gate returns `needs_revision`, revise the script/slides/reviewer
+artifacts before YouTube upload. Do not treat "MP4 exists" as sufficient.
 
 ## Required dependencies
 

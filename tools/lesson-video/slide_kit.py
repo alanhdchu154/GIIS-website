@@ -82,6 +82,7 @@ SEPIA       = (172, 105, 50);  SEPIA_LIGHT  = (210, 160, 110)  # English / Liter
 NAVY        = (38,  72,  128); NAVY_LIGHT   = (110, 140, 190)  # Social Studies / History
 LAVENDER    = (118, 92,  168); LAVENDER_LT  = (180, 158, 220)  # Psychology
 BURNT       = (200, 100, 50);  BURNT_LIGHT  = (235, 160, 110)  # PE / Health
+STEEL       = (52,  90,  142); STEEL_LIGHT  = (130, 168, 212)  # Computer Science (Java syntax-highlight blue)
 
 # Theme registry: matched against the first words of `course`.
 # Order matters — first match wins.
@@ -112,6 +113,11 @@ THEMES = [
     (("Health", "Athletic", "Sports", "Fitness", "Physical Education"),
         {"name": "pe_health",
          "accent": BURNT, "accent_light": BURNT_LIGHT,
+         "bg": CREAM,     "card_bg": PARCHMENT}),
+    (("Computer Science", "AP Computer Science", "Programming", "Software",
+      "Java", "Python Programming", "Web Development"),
+        {"name": "computer_science",
+         "accent": STEEL, "accent_light": STEEL_LIGHT,
          "bg": CREAM,     "card_bg": PARCHMENT}),
 ]
 DEFAULT_THEME = {"name": "default",

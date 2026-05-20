@@ -133,6 +133,27 @@ def upload_captions(video_id: str, srt: Path, language: str = "en"):
                          ).execute()
     print(f"[captions] uploaded {srt.name}")
 
+
+def upload_transcript(video_id: str, transcript: Path, language: str = "en"):
+    """Upload a plain-text transcript (no timestamps). YouTube auto-aligns it
+    to the audio using Google STT — same engine that powers auto-captions but
+    with our known text, so it's 100% accurate text AND timing.
+
+    This replaces the old SRT upload path. Cleaner because:
+      - No local subtitle alignment (no whisper, no proportional drift)
+      - No burned-in subs in the MP4 (viewers can toggle CC, auto-translate)
+      - Captions available immediately after YouTube finishes processing
+    """
+    creds = get_creds()
+    yt = build("youtube", "v3", credentials=creds)
+    body = {"snippet": {"videoId": video_id, "language": language,
+                         "name": "English", "isDraft": False}}
+    yt.captions().insert(
+        part="snippet", body=body,
+        media_body=MediaFileUpload(str(transcript), mimetype="text/plain"),
+    ).execute()
+    print(f"[transcript] uploaded {transcript.name} for YouTube to align")
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video", type=Path, help="path to .mp4")
@@ -146,7 +167,12 @@ def main():
                     choices=["public", "unlisted", "private"],
                     help="default unlisted — share by link, doesn't show in search")
     ap.add_argument("--thumbnail", type=Path, help="optional PNG/JPG thumbnail")
-    ap.add_argument("--captions", type=Path, help="optional .srt file to attach")
+    ap.add_argument("--captions", type=Path,
+                    help="optional .srt file to attach (legacy — prefer --transcript)")
+    ap.add_argument("--transcript", type=Path,
+                    help="plain-text transcript for YouTube to auto-align to audio. "
+                         "Preferred over --captions: no local subtitle alignment "
+                         "needed, and Google STT does the timing perfectly.")
     args = ap.parse_args()
 
     if not args.video.exists():
@@ -172,7 +198,13 @@ def main():
         try: upload_thumbnail(vid, args.thumbnail)
         except HttpError as e:
             print(f"  thumbnail skipped: {e}")
-    if args.captions:
+    # Transcript preferred — YouTube force-aligns plain text via Google STT.
+    # Falls back to SRT captions if --captions was passed instead.
+    if args.transcript:
+        try: upload_transcript(vid, args.transcript)
+        except HttpError as e:
+            print(f"  transcript skipped: {e}")
+    elif args.captions:
         try: upload_captions(vid, args.captions)
         except HttpError as e:
             print(f"  captions skipped: {e}")

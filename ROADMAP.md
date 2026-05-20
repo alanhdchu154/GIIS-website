@@ -1,9 +1,9 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-18 Evening（Nav 重組：DISCOVERY→ABOUT(4) + STUDENT SUPPORT→RESOURCES(4)；章詩雨博士信箱修正；/support 頁完整改版：移除 Moodle、新增 4 步驟 journey + 4 服務卡片具體 deliverables）
+> 最後更新：2026-05-19 Later 11（把 Presentations / imagegen / Browser / testing-strategy 寫入 lesson flow；新增 release gate + contact sheet helper；daily upload 先跑 quality report）
 >
-> 前次：2026-05-18 PM（/about 領導頁上線：Alan Hwader Chu 創辦人 bio + Shiyu Zhang 校長 placeholder · CEEB 申請急用 (T-201 part 1)）
-> 前前次：2026-05-18 AM（Stripe Live mode 全鏈上線：live keys + 3 prod price IDs + webhook secret + Lightsail prod deploy）
+> 前次：2026-05-19 Later 10（AP Biology M10 V2 pilot：短段落、單概念 slides、三類 reviewer artifacts、靜音 timing MP4、audit score 99）
+> 前前次：2026-05-19 Later 9（新增 ModuleProgress：影片/閱讀/練習/測驗/作業完成時間可追蹤；家長與 admin audit trail 可看到學習活動）
 > **核心目標：讓家長願意付錢，並且持續付錢。**
 >
 > 這份 roadmap 是給 **Claude Code CLI（code mode）** 的工作清單。
@@ -95,6 +95,167 @@
   - 新增：Learn Portal CTA 深藍帶（連至 /parent/demo + /login）
   - 聯絡區塊：email CTA + 有用連結側欄
 - 檔案：`src/components/main/Nav.js`, `src/i18n/siteStrings.js`, `src/components/pages/About/AboutPage.js`, `src/components/pages/Support/SupportMain.js`
+
+---
+
+## ✅ Pricing internal test cleanup + weekly report email fix（2026-05-19）
+
+- ✅ **公開 Pricing 清理**：`src/components/pages/Pricing/PricingPage.js` 移除 public-facing "Internal · End-to-end test" / `$1 live_test` 按鈕與相關 checkout state。`live_test` 仍保留在 Admin dashboard 給 Alan 內部 smoke test。
+- ✅ **Weekly report 修成可真寄**：`server/src/routes/weekly-report.js` 改用 schema-safe 查詢：`Enrollment.completedModules` 當 `Int[]`，不再 include 成 relation；GPA/credits 改從 released transcript `CourseRow` + `computeSemesterTotals()` 計算，避免不存在的 `Enrollment.finalGrade`。
+- ✅ **Resend env 對齊**：`server/src/lib/mailer.js` 同時支援 `RESEND_EMAIL_API_KEY` 與 roadmap 既有的 `RESEND_API_KEY`，並回傳 `{ ok, skipped, error }`，weekly report 不再把「缺 API key / 寄送失敗」算成 sent。
+- ✅ **驗證**：`npm run build` 通過；`cd server && npm test -- --runInBand` 通過；`node -e "require('./server/src/routes/weekly-report')"` 通過。
+- 🔧 **仍待補**：cron/dry-run CLI、`EmailLog` 防重複寄送、作業批改後通知家長 email、sample weekly digest 表單（仍屬 Resend 進階收尾）。
+
+---
+
+## ✅ Admin operating loop hardening（2026-05-19 Later）
+
+> 目標：新增/開通/收款/家長登入/週報都能用 Admin UI 操作，不再靠 re-seed 或手動 DB。
+
+- ✅ **新增 `/admin/subscriptions`**：`src/components/pages/Admin/AdminSubscriptionsPage.js` 可列出 Stripe subscription/payment rows、summary（total/active/past_due/unlinked）、付款 email、plan、status、amount、period end、Stripe IDs，並用 dropdown 手動 link/unlink 到 Student。這讓 webhook payment_failed/refund/cancel 能找到正確學生 soft-lock/deactivate。
+- ✅ **AdminDashboard 加入口**：`src/components/pages/Admin/AdminDashboard.js` header 加 Subscriptions + Applications，避免功能藏在 URL。
+- ✅ **家長 Portal 登入可直接建立/重設**：`AdminTranscriptPage.js` 的 Parent Portal Email section 增加 "Create / reset parent login" 表單，會同時 PATCH `Student.parentEmail` 並呼叫 `POST /api/parent/setup`。手動新增學生後，不需要 re-seed 或 curl 才能讓家長登入。
+- ✅ **家長 Dashboard GPA/credits 對齊 transcript source of truth**：`server/src/routes/parent-data.js` 改用 released `CourseRow` + `computeSemesterTotals()` 算學分與 unweighted GPA，與 weekly report 一致；admin 手動改 transcript 後家長端不再顯示另一套 enrollment/exam-derived 數字。
+- ✅ **修 admin enrollment API dead route**：`server/src/routes/enrollments.js` 把 `GET /admin/all` 移到 `/:slug` 前面，避免 `/api/enrollments/admin/all` 被誤配成 student-only `/:slug` route。
+- ✅ **驗證**：`npm run build` 通過；`cd server && npm test -- --runInBand` 通過；`node -e "require('./server/src/routes/enrollments'); require('./server/src/routes/subscriptions')"` 與 parent/weekly route load 通過。
+- 🔧 **仍待補**：Admin course catalog/module editor（課程內容 CRUD 還不是完整 UI）；forgot password；EmailLog/cron；payment success 後自動 link application/subscription/student。
+
+---
+
+## ✅ Principal appointment letter email smoke test（2026-05-19 Later 2）
+
+- ✅ **Mailer 支援 CC**：`server/src/lib/mailer.js` 的 `send()` 增加 `cc` payload 支援，仍保留 `{ ok, skipped, error }` 回傳。
+- ✅ **正式聘書 template**：新增 `sendPrincipalAppointmentLetter()`，英文正式 Letter of Appointment + 中文摘要，確認 Shiyu Zhang, Ph.D. 擔任 `President & Principal`，授權學術管理、成績單認證、文憑簽發與 school record certification。
+- ✅ **寄送腳本**：新增 `server/scripts/send-principal-appointment-letter.js`；`server/package.json` 加 `npm run email:principal-appointment`。
+- ✅ **實寄測試通過**：已寄給 `shiyu.zhang@genesisideas.school`，CC `alanhdchu@genesisideas.school`。Resend script 回報 sent。
+- ✅ **驗證**：`cd server && npm test -- --runInBand` 通過；`node -e "require('./server/src/lib/mailer')"` 通過。
+- 🔧 **後續可選**：把 appointment letter 同步生成 PDF 並掛到 `/about` 或 internal governance records（CEEB/DOE audit 時更好用）。
+
+---
+
+## ✅ Admin enrollment manager（2026-05-19 Later 3）
+
+> 目標：新增學生後，admin 可以直接開課、修進度、修學分，不需要改 seed 或手動 DB。
+
+- ✅ **Backend admin enrollment CRUD**：`server/src/routes/enrollments.js` 新增 `GET /api/enrollments/admin/student/:studentId`、`POST /api/enrollments/admin/student/:studentId`、`PATCH /api/enrollments/admin/:enrollmentId`、`DELETE /api/enrollments/admin/:enrollmentId`。支援列出學生選課、指派課程、更新 `semesterLabel` / `completedModules` / `creditEarned`、移除誤指派課程。
+- ✅ **Admin transcript 頁加 Course Enrollment Manager**：`src/components/pages/Admin/AdminTranscriptPage.js` 可選 published course 指派給學生、設定學期、用 comma list 編輯 completed modules、勾選 credit earned、移除 enrollment。這補上「學生登入上課前，admin 如何開課」的操作面。
+- ✅ **No re-seed path**：新增學生後現在可用 Admin UI 完成 student login、parent portal login、subscription link、course enrollment、graduation/transcript 基本管理。
+- ✅ **驗證**：`npm run build` 通過；`cd server && npm test -- --runInBand` 通過；`node -e "require('./server/src/routes/enrollments')"` 通過。
+- 🔧 **仍待補**：更完整的 course catalog/module editor、家長週報 cron + EmailLog、防止 payment success 後未自動綁定 student。
+
+---
+
+## ⚠️ Student lifecycle smoke test（2026-05-19 Later 4）
+
+> 目標：用一個可重跑腳本驗證「新增學生 → 開帳號 → 家長帳號 → 連付款 → 選課 → 打分數 → transcript/parent projection」整條營運流程。
+
+- ✅ **新增 smoke script**：`server/scripts/smoke-student-lifecycle.js` 會重建 `GIIS-SMOKE-20260519` 測試學生，設定 student login / parent login，建立 active `founders_monthly` subscription，指派一門 published course，寫入 completed modules、quiz attempts、assignment feedback/score、midterm/final scores、transcript `A-` 與 GPA。
+- ✅ **npm script**：`server/package.json` 加 `npm run smoke:student-lifecycle`。
+- ✅ **靜態驗證**：`node --check server/scripts/smoke-student-lifecycle.js` 通過；`npm run build` 通過；`cd server && npm test -- --runInBand` 通過。
+- ⚠️ **實跑 blocked by local DB runtime**：目前 `DATABASE_URL` fallback 到 `localhost:5432/giis_transcript`，但本機沒有 Docker；系統內建 `postgresql@14` 缺 `libicui18n.74.dylib`，`initdb` 也無法啟動。因此 smoke script 邏輯已就緒，但本機未能真的寫入 DB。修法：安裝/修復 PostgreSQL 或提供可用 Postgres `DATABASE_URL` 後執行 `cd server && npm run db:push && npm run smoke:student-lifecycle`。
+- 🔧 **仍待補**：把這個 smoke script 接進 CI 的 ephemeral Postgres，或在 dev setup 補一鍵啟動 DB 的非 Docker fallback。
+
+---
+
+## ✅ Ops retention loop hardening（2026-05-19 Later 5）
+
+> 目標：讓付費後的家長持續收到進度、付款能自動連到學生、登入卡住時可自助恢復；這三件事直接影響續付與信任。
+
+- ✅ **EmailLog + weekly report 去重**：`server/prisma/schema.prisma` 新增 `EmailLog`；`server/src/lib/weeklyReportService.js` 以 `weekly_report:{studentId}:{week}` 做 dedupe，一週不重複寄；支援 `dryRun` / `force`。
+- ✅ **Weekly report CLI / cron-ready**：`server/scripts/send-weekly-report.js`；`server/package.json` 新增 `npm run email:weekly-report` 與 `npm run email:weekly-report:dry-run`，可接 cron / CI / 手動 admin run。
+- ✅ **家長 email fallback**：若 active linked student 找不到有效 purchaser/parent email，週報 fallback 到 `admin@genesisideas.school`，避免 silent skip。
+- ✅ **Stripe 自動 link student**：`server/src/routes/webhooks-stripe.js` 在 `checkout.session.completed` / `invoice.payment_succeeded` 後，用付款 email 依序 match `ParentAccount.email`、`Student.parentEmail`、`StudentAccount.email`，自動填 `Subscription.studentId`。
+- ✅ **Forgot password**：`PasswordResetToken` model；學生 `/api/auth/forgot-password` + `/api/auth/reset-password`；家長 `/api/parent/forgot-password` + `/api/parent/reset-password`；frontend 新增 `/reset-password`，學生與家長 login 頁都有入口。
+- ✅ **Resend error handling 修正**：`server/src/lib/mailer.js` 現在會把 Resend `result.error` 視為失敗並印出 provider error；`RESEND_FROM_EMAIL` 可覆蓋寄件人。
+- ✅ **CI Postgres smoke test**：`.github/workflows/ci.yml` 新增 `server-smoke` job，使用 `postgres:16` service，執行 server install → `db:push` → `db:seed` → Jest → `smoke:student-lifecycle`。本機 Postgres 壞掉時，PR/CI 仍可驗證真 DB lifecycle。
+- ⚠️ **校長聘書未寄出原因已定位**：Resend 回 403：`genesisideas.school` domain is not verified。需要先到 Resend 驗證 domain，或暫時設 `RESEND_FROM_EMAIL` 為 Resend 已驗證 sender，否則所有 `admissions@genesisideas.school` 寄件都會被拒。
+- ✅ **驗證**：`npm run postinstall` / Prisma generate 通過；`npx prisma validate` 通過；route load 通過；`npm run build` 通過；`cd server && npm test -- --runInBand` 通過。
+- ⚠️ **部署注意**：需要對 production DB 執行 `cd server && npm run db:migrate:deploy`（或目前流程用 `npm run db:push`）讓 `EmailLog` / `PasswordResetToken` 表生效。
+- 🔧 **仍待補**：把 weekly report CLI 接到實際 cron；Resend domain DNS 驗證；本機 DB runtime 修好後可在 laptop 重跑 `smoke:student-lifecycle`。
+
+---
+
+## ✅ Homepage payment path + weekly report CC（2026-05-19 Later 6）
+
+> 目標：家長付款前先快速驗證「學校是真的、進度看得到、價格與下一步清楚」；付款後 weekly report 讓 admissions 也收到副本。
+
+- ✅ **Weekly report 全部 CC admissions**：`server/src/lib/mailer.js` 的 `sendWeeklyProgressEmail()` 會 CC `admissions@genesisideas.school`；`server/src/lib/weeklyReportService.js` 回傳也帶 `cc`，方便 CLI/API 查核。
+- ✅ **Hero CTA 直達申請**：`src/components/pages/Homepage/Homepage/HeroSection.js` 的 primary CTA 從 `/admission` 改到 `/apply`，減少家長已經有意願時的繞路。
+- ✅ **Hero 文案更聚焦付款疑慮**：第一屏明確說明 Florida-registered、24-credit framework、real coursework、transcript records、parent progress visibility、US college admissions review；避免只像宣傳頁。
+- ✅ **新增付款前驗證區塊**：`src/components/pages/Homepage/HomepageMain.js` 新增 `ParentDecisionStrip`，三個入口：`/school-profile`、`/parent/demo`、`/pricing`，再附 `/apply` CTA。這是為了把「我還不確定」轉成「我可以自己驗證」。
+- ✅ **首頁 Apply CTA 修正**：`src/components/pages/Homepage/Homepage/Slogan.js` 的 Apply Now 也改到 `/apply`。
+- ✅ **視覺/技術驗證**：`npm run build` 通過；`cd server && npm test -- --runInBand` 通過；Playwright 以 `http://localhost:3000` 擷取首頁 screenshot，第一屏 render 正常。
+- 🔧 **仍待補**：首頁下方 Faculty / Success stories 可再加「可下載 governance/appointment PDF」與「sample weekly report」預覽，進一步提高 trust + transparency。
+
+---
+
+## ✅ Sample weekly report preview（2026-05-19 Later 7）
+
+> 目標：把「家長每週看得到孩子進度」從一句承諾變成付款前可視化的具體樣本。
+
+- ✅ **首頁新增 weekly digest preview**：`src/components/pages/Homepage/HomepageMain.js` 新增 `WeeklyReportPreview`，放在付款前驗證區塊後、80 秒 demo 前。展示 credits、GPA、graduation progress、active courses、advisor note、dashboard CTA。
+- ✅ **銷售動線更順**：流程現在是 Hero → Apply/price → Before You Pay 驗證 → Weekly report preview → product demo，先回答 trust/transparency，再要求家長投入時間或付款。
+- ✅ **DemoEmbed 預設 CTA 修正**：`src/components/main/DemoEmbed.js` 的 default `primaryCtaTo` 從 `/admission` 改 `/apply`，避免復用時又把申請 CTA 導回資訊頁。
+- ✅ **視覺驗證**：Playwright 在 `http://localhost:3000` scroll 到 weekly preview 區塊截圖，區塊可讀、沒有桌面重疊；dev server 已關閉。
+- ✅ **技術驗證**：`npm run build` 通過；`cd server && npm test -- --runInBand` 通過；mailer/weeklyReportService route load 通過。
+- 🔧 **仍待補**：把 sample weekly report 也接到 `/parent/demo` 頁面底部，讓從 Pricing 來的家長也能看到 email 樣本；再把真 weekly report template 和首頁 preview 的 copy 抽成共用資料，避免日後漂移。
+
+---
+
+## ✅ Lesson quality audit gate（2026-05-19 Later 8）
+
+> 目標：把「AI 產課程影片」升級成可控的製片/審核流程；每支影片進 Learn Portal / YouTube 前，都能先看到內容密度、素材完整度、reviewer gate 與 release 風險。
+
+- ✅ **新增 audit 腳本**：`tools/lesson-video/audit_lessons.py` 可掃單支或全量 `teaching-videos/*/script.json`，輸出 machine-readable JSON + human-readable Markdown。
+- ✅ **檢查面向**：section/word count、估計分鐘數、過長段落、pause/answer 結構、trap/misconception 語言、assignment/portal next action、slide/audio/MP4/transcript/YouTube 狀態、risky public claims、AP wording note。
+- ✅ **Reviewer gate 入表**：自動彙整 `_review*.json`，辨識 PhD/peer reviewer、adversarial student reviewer、citation/source checker，並把 critical/minor verdict 納入 `pass` / `pass_with_minor_notes` / `needs_review` / `block`。
+- ✅ **全量 baseline 已跑**：64 支 lesson，結果 `needs_review: 48`、`pass_with_minor_notes: 14`、`pass: 2`，平均 score 65.5；報告在 `teaching-videos/_audit/lesson-quality/20260520T000849Z-lesson-quality.{json,md}`。
+- ✅ **第一批洞察**：最大問題不是產不出影片，而是資訊密度與缺正式 reviewer gate；AP Psych 多支平均 section 過長，AP Bio M8 缺 MP4/reviewer，已清理上傳後的 lesson folders 不再被誤判為 missing slides。
+- ✅ **驗證**：`python3 -m py_compile tools/lesson-video/audit_lessons.py` 通過；單支 AP Biology M10 audit 通過；全量 audit 通過。
+- 🔧 **仍待補**：把 audit 接進 `make_lesson.py` / YouTube upload 前的 release gate；下一版可加入 LLM-based PhD reviewer、source/license fetch、slide screenshot readability/OCR、contact-sheet visual QA。
+
+---
+
+## ✅ Module activity completion tracking（2026-05-19 Later 9）
+
+> 目標：讓家長與 admin 不只看到「完成幾個 module」，也能看到每個影片/閱讀/練習/測驗/作業實際何時完成，增加透明度與續費信任。
+
+- ✅ **新增 `ModuleProgress` DB model**：`server/prisma/schema.prisma` 新增 per-enrollment/per-module 進度表，記錄 `readingCompletedAt`、`videoCompletedAt`、`supplementalVideoCompletedAt`、`practiceCompletedAt`、`quizCompletedAt`、`assignmentSubmittedAt`、`assignmentGradedAt`、`moduleCompletedAt`、`lastActivityAt`；timestamp 採首次完成，不被重複點擊覆蓋。
+- ✅ **學生端可手動標記非評分活動**：`src/components/pages/Learn/ModulePage.js` 的 Reading / Video / Supplemental Video / Practice resource cards 增加 Mark read / Mark watched / Mark done；呼叫 `POST /api/enrollments/:slug/module/:moduleOrder/progress` 寫入真資料。
+- ✅ **測驗與作業自動同步 progress**：`server/src/routes/enrollments.js` 在 quiz submit、assignment submit、admin assignment feedback 時同步寫入 `ModuleProgress`；admin 手動更新 completed modules 時也會補 `moduleCompletedAt`。
+- ✅ **家長 Dashboard 可看到活動時間線**：`server/src/routes/parent-data.js` 把 video/reading/practice completion 放入 recent activity；`src/components/pages/Parent/ParentDashboard.js` 增加對應顯示。
+- ✅ **Admin audit trail 更完整**：`server/src/routes/students.js` 使用 explicit `ModuleProgress.moduleCompletedAt`，並把 video/reading/practice events 納入 timeline；`src/components/pages/Admin/AdminAuditTrailPage.js` 增加 filter 與文字顯示。
+- ✅ **驗證**：`npx prisma format` / `npx prisma validate` / `npm run postinstall` 通過；route load 通過；`cd server && npm test -- --runInBand` 通過；`npm run build` 通過。
+- ⚠️ **部署注意**：production DB 需要跑 Prisma migration/db push，讓 `ModuleProgress` 表生效。下一步可把 weekly report 的「本週活動」也改用 `ModuleProgress.lastActivityAt`，週報會更像真 LMS。
+
+---
+
+## ✅ AP Biology M10 V2 lesson production pilot（2026-05-19 Later 10）
+
+> 目標：實測新版「專業課程製片 flow」：短講稿、單概念 slides、三類 reviewer、contact-sheet QA、audit gate，比原 Claude Code 版本更像可控的正式課程產線。
+
+- ✅ **新建 V2 pilot folder**：`teaching-videos/ap-biology-module-10-natural-selection-v2/`，不覆蓋原 M10。
+- ✅ **Script 降密度**：原 M10 16 sections / 1412 words / avg 88.2 / max 147；V2 改成 14 sections / 594 words / avg 42.4 / max 53。核心策略：misconception-first、每段只教一件事、Hardy-Weinberg pause + worked answer 分離。
+- ✅ **Slides 重做**：`build_slides.py` 產生 14 張 1920×1080 slides，採 teacher-drawn diagrams，不使用未授權網路圖片；新增 macOS font fallback，Alan 的 Mac 可直接 build。
+- ✅ **三類 reviewer artifacts**：新增 `_review_A_v2pilot.json`（PhD-level content）、`_review_B_v2pilot.json`（adversarial AP student）、`_review_C_v2pilot.json`（citation/source/license）。C reviewer 因未綁 reference packet 給 `minor`，其餘 pass。
+- ✅ **Contact-sheet visual QA**：產生 `contact-sheet.jpg`，實際抓到並修掉兩個問題：舊 `03_blueprint.png` 殘留、recap assignment box 文字重疊。
+- ✅ **Timing MP4 render**：產出 `ap_biology_module_10_natural_selection_v2_pilot.mp4`（約 4.1 min，靜音 WAV timing placeholder；正式上線前需用 Edge TTS/EmmaNeural 重生 audio）。
+- ✅ **Audit comparison**：`tools/lesson-video/audit_lessons.py` 補支援 WAV audio artifacts；比較報告在 `teaching-videos/_audit/lesson-quality-v2-pilot/20260520T003514Z-lesson-quality.{json,md}`。結果：原 M10 score 62 `pass_with_minor_notes`；V2 score 99 `pass`（只剩 AP naming note）。
+- 🔧 **仍待補**：把 V2 標準寫回 `tools/lesson-video/AGENT_RECIPE.md` / `SKILL.md`，正式接 Edge TTS + source/reference packet + upload gate；下一支可用 AP Psych 高密度影片做第二個 pilot。
+
+---
+
+## ✅ Lesson production toolchain integration（2026-05-19 Later 11）
+
+> 目標：把 `presentations:Presentations`、`imagegen`、`browser:browser`、`engineering:testing-strategy` 這些能力正式加入 lesson flow，讓 CC/Codex 之後不是憑感覺做影片，而是照製片 + 審核 + 學習測試流程走。
+
+- ✅ **新增 `QUALITY_FLOW.md`**：`tools/lesson-video/QUALITY_FLOW.md` 定義四層能力角色：Presentations = slide story/contact-sheet bar；imagegen = hook/thumbnail/低精度概念圖；Browser = Learn Portal/embed render QA；testing-strategy = `learning_check.json` / A-B test / release rubric。
+- ✅ **新增 release gate**：`tools/lesson-video/lesson_release_gate.py` 讀 `audit_lessons.py` 結果，輸出 `ready_to_upload` / `needs_revision` / `blocked`；預設要求 score ≥ 90、無 major/critical、MP4、transcript、contact sheet、三類 reviewer、AP citation/source reviewer。
+- ✅ **新增 contact sheet helper**：`tools/lesson-video/make_contact_sheet.py` 從 `slides/*.png` 產生 `contact-sheet.jpg`，固定納入 QA。
+- ✅ **更新 lesson contracts**：`tools/lesson-video/SKILL.md`、`AGENT_RECIPE.md`、`AUTO_PIPELINE.md` 都已加入 V2 規則：visual plan、assets manifest、learning check、contact sheet、release gate。
+- ✅ **Daily upload 先跑 quality report**：`tools/youtube-upload/daily.sh` 在 `yt_queue.py upload` 前先執行 `lesson_release_gate.py --pending` 並寫 `teaching-videos/_audit/release-gate/latest-release-gate.json`。目前先 non-blocking，避免立刻打斷現有 launchd；下一步可改成只上傳 ready 清單。
+- ✅ **實測**：`python3 -m py_compile` 通過；V2 M10 release gate ready；`lesson_release_gate.py --pending` 跑 19 支 pending，結果 ready 1 / needs_revision 18 / blocked 0。
+- 🔧 **仍待補**：把 `yt_queue.py upload` 改成強制消費 release gate 的 `ready_to_upload`，並為 AP/CS/Math 各做一支 V2 pilot，確認 gate 不會過度阻擋正常高品質影片。
 
 ---
 
@@ -599,15 +760,17 @@ tools/lesson-video/                  # 共用 merge skill（所有未來 lesson 
 - ✅ **1-2 Schema** — `ParentAccount`、`Application`、`Student.parentEmail`、`AssignmentSubmission.{score, gradedAt, gradedById}` 全加進 `schema.prisma`
   - ⚠️ **待執行**：在 server 上跑 `npx prisma db push` 讓 schema 同步到 PostgreSQL
 - ✅ **1-3 API** — `POST /api/parent/login|logout|setup`、`GET /api/parent/me`（學分 + GPA + enrollments + 活動 feed）掛進 `server/src/index.js`
+- ✅ **1-4a Admin-triggered weekly progress email** — `POST /api/admin/weekly-report` 已可寄真 Resend email：active subscription → parent account → student transcript stats + active courses；缺 API key 或寄送失敗會回 skipped/errors，不再假成功
 - ✅ **1-5 作業批改 UI** — `AdminAssignmentQueue.js` at `/admin/assignments`：inline 評語 + 分數 + pending/graded filter；`server/src/routes/admin-assignments.js`（GET pending、GET all、PATCH grade）
 - ✅ **1-6 Demo embed 共用 component** — `DemoEmbed.js` single source；Homepage / Admission / Pricing 三頁共用；`HomepageDemo.js` 刪除
 
 ### 🔧 Phase 1 剩餘（需要外部服務或 Alan 操作）
 
-- [ ] **1-4 每週進度 Email 報告（Resend）** — 需要 `RESEND_API_KEY`（Alan 在 resend.com 拿，免費 3,000 封/月）
+- [ ] **1-4b 每週進度 Email 報告收尾（Resend）** — 基礎 admin-triggered 真寄已完成；剩 cron/dry-run CLI + `EmailLog` + assignment feedback notification
   - 檔案：`server/src/jobs/weekly-digest.js`、`server/src/lib/resend.js`、`EmailLog` schema model
   - Acceptance：`node server/src/jobs/weekly-digest.js --dry-run` 可列出；`--dry-run=false` 真寄
   - 作業批改後通知家長的 email 也在這裡補上（`admin-assignments.js` 裡已有 `// TODO` 占位）
+  - Env：`server/src/lib/mailer.js` 目前支援 `RESEND_API_KEY` 或 `RESEND_EMAIL_API_KEY`
 
 - [ ] **Schema 同步** — server 上跑 `npx prisma db push` 讓 ParentAccount / Application / AssignmentSubmission 新欄位生效
 
@@ -635,9 +798,15 @@ tools/lesson-video/                  # 共用 merge skill（所有未來 lesson 
 
 ---
 
-### 4. 每週進度 Email 報告（Resend）
+### ✅ 4a. Admin-triggered 每週進度 Email 報告（2026-05-19 基礎可寄）
 
 > 不需要家長登入，系統主動推訊息。Phase 1 最重要的單一功能。
+
+`server/src/routes/weekly-report.js` 已修成可用版本：Admin dashboard 按 "Weekly report" → 找 active/trialing subscriptions → 匹配 ParentAccount → 用 released transcript CourseRow 算學分與 unweighted GPA → 用 enrollment `completedModules.length` 算 active course 進度 → 透過 `sendWeeklyProgressEmail()` 真寄。`mailer.js` 支援 `RESEND_API_KEY` / `RESEND_EMAIL_API_KEY`，並回傳 sent/skipped/errors，缺 key 不會被誤算為成功。
+
+**驗證**：`npm run build`、`cd server && npm test -- --runInBand`、`node -e "require('./server/src/routes/weekly-report')"` 全通過。
+
+### 4b. 每週進度 Email 報告收尾（Resend）
 
 **檔案**：
 - 新建 `server/src/jobs/weekly-digest.js` — 計算過去 7 天每個學生的活動，組成 HTML email
@@ -657,7 +826,7 @@ tools/lesson-video/                  # 共用 merge skill（所有未來 lesson 
 - 寄出記錄存到 `EmailLog` table（避免重複寄）
 - 寄到測試學生 `26-004 Yunfan Yang` 自己的 admin email 看 render
 
-**依賴**：Resend API key（Alan 在 resend.com 拿，存 `server/.env` 的 `RESEND_API_KEY`）
+**依賴**：Resend API key（Alan 在 resend.com 拿，存 `server/.env` 的 `RESEND_API_KEY` 或 `RESEND_EMAIL_API_KEY`）
 
 ---
 
@@ -1175,7 +1344,7 @@ Acceptance ✅：列印成績單掃 QR 不需登入可驗真偽。
 
 ```
 ✅ Phase 1（讓家長看到）— 核心已完成
-  剩：週報 email（等 RESEND_API_KEY）、Admin 建學生時填 parentEmail、npx prisma db push
+  剩：週報 cron/dry-run + EmailLog、作業批改 email 通知、npx prisma db push
 
 🎯 Trust Sprint（消除「太便宜不可能是真的」警報）— next batch
   P0：校長 bio → 首頁嵌真課影片 → Footer 信任資訊 → 30 天退款 + sample digest

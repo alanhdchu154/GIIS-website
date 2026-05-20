@@ -13,6 +13,7 @@ const Admission = lazy(() => import('./components/pages/Admission/AdmissionMain'
 const Support = lazy(() => import('./components/pages/Support/SupportMain'));
 const Transcript = lazy(() => import('./components/pages/Transcript/TranscriptMain'));
 const LoginPortal = lazy(() => import('./components/pages/Auth/LoginPortal'));
+const ResetPasswordPage = lazy(() => import('./components/pages/Auth/ResetPasswordPage'));
 const AdminLogin = lazy(() => import('./components/pages/Admin/AdminLogin'));
 const AdminDashboard = lazy(() => import('./components/pages/Admin/AdminDashboard'));
 const AdminTranscriptPage = lazy(() => import('./components/pages/Admin/AdminTranscriptPage'));
@@ -52,6 +53,7 @@ const ParentLogin = lazy(() => import('./components/pages/Parent/ParentLogin'));
 const ParentDashboard = lazy(() => import('./components/pages/Parent/ParentDashboard'));
 const AssignmentQueue = lazy(() => import('./components/pages/Admin/AssignmentQueue'));
 const ApplicationsQueue = lazy(() => import('./components/pages/Admin/ApplicationsQueue'));
+const AdminSubscriptionsPage = lazy(() => import('./components/pages/Admin/AdminSubscriptionsPage'));
 const ApplyForm = lazy(() => import('./components/pages/Apply/ApplyForm'));
 const VerifyPage = lazy(() => import('./components/pages/Verify/VerifyPage'));
 const WelcomePage = lazy(() => import('./components/pages/Welcome/WelcomePage'));
@@ -122,6 +124,7 @@ function App() {
          <Route path="/support" element={<Support language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/transcript" element={<Transcript language={language}/>}/>
          <Route path="/login" element={<LoginPortal language={language} />} />
+         <Route path="/reset-password" element={<ResetPasswordPage language={language} />} />
          <Route path="/register" element={<Navigate to="/login?tab=register" replace />} />
          <Route path="/admin/login" element={<AdminLogin />} />
          <Route path="/admin" element={<AdminDashboard language={language} />} />
@@ -162,6 +165,7 @@ function App() {
          <Route path="/parent/dashboard" element={<ParentDashboard language={language} />} />
          <Route path="/admin/assignments" element={<AssignmentQueue />} />
          <Route path="/admin/applications" element={<ApplicationsQueue />} />
+         <Route path="/admin/subscriptions" element={<AdminSubscriptionsPage />} />
          <Route path="/apply" element={<ApplyForm language={language} />} />
          <Route path="/welcome" element={<WelcomePage language={language} />} />
          <Route path="/verify/:code" element={<VerifyPage />} />

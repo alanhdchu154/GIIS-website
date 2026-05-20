@@ -17,28 +17,28 @@ model AdminUser {
 }
 
 model Student {
-  id               String   @id @default(cuid())
-  studentCode      String?  @unique
-  name             String   @default("")
-  birthDate        DateTime?
-  gender           String?
-  parentGuardian   String?
-  address          String?
-  city             String?
-  province         String?
-  zipCode          String?
-  entryDate        DateTime?
-  withdrawalDate   DateTime?
-  graduationDate   DateTime?
-  transcriptDate   DateTime?
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  id             String    @id @default(cuid())
+  studentCode    String?   @unique
+  name           String    @default("")
+  birthDate      DateTime?
+  gender         String?
+  parentGuardian String?
+  address        String?
+  city           String?
+  province       String?
+  zipCode        String?
+  entryDate      DateTime?
+  withdrawalDate DateTime?
+  graduationDate DateTime?
+  transcriptDate DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
 
-  parentEmail     String?
-  account     StudentAccount?
-  semesters   Semester[]
-  auditLogs   AuditLog[]
-  enrollments Enrollment[]
+  parentEmail    String?
+  account        StudentAccount?
+  semesters      Semester[]
+  auditLogs      AuditLog[]
+  enrollments    Enrollment[]
   parentAccounts ParentAccount[]
   subscriptions  Subscription[]
 }
@@ -58,7 +58,7 @@ model StudentAccount {
   passwordHash String
   isActive     Boolean  @default(true)
   softLocked   Boolean  @default(false)
-  lockReason   String   @default("")   /// "payment_past_due" | "refund_issued" | "admin_hold" | ""
+  lockReason   String   @default("") /// "payment_past_due" | "refund_issued" | "admin_hold" | ""
   studentId    String   @unique
   student      Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
   createdAt    DateTime @default(now())
@@ -96,22 +96,22 @@ model CourseRow {
 // ─── Course content models ────────────────────────────────────────────────────
 
 model Course {
-  id          String   @id @default(cuid())
-  slug        String   @unique
-  name        String
-  nameZh      String   @default("")
-  credits     Decimal  @db.Decimal(4, 1)
-  department  String
-  type        String   @default("Core")     // Core | AP | Elective
-  gradeLevel  Int?                          // 9 | 10 | 11 | 12 | null = open to all
-  description String   @default("")
-  isPublished Boolean  @default(false)
-  modules         CourseModule[]
-  questions       ExamQuestion[]
-  quizQuestions   ModuleQuizQuestion[]
-  enrollments     Enrollment[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id            String               @id @default(cuid())
+  slug          String               @unique
+  name          String
+  nameZh        String               @default("")
+  credits       Decimal              @db.Decimal(4, 1)
+  department    String
+  type          String               @default("Core") // Core | AP | Elective
+  gradeLevel    Int? // 9 | 10 | 11 | 12 | null = open to all
+  description   String               @default("")
+  isPublished   Boolean              @default(false)
+  modules       CourseModule[]
+  questions     ExamQuestion[]
+  quizQuestions ModuleQuizQuestion[]
+  enrollments   Enrollment[]
+  createdAt     DateTime             @default(now())
+  updatedAt     DateTime             @updatedAt
 }
 
 model CourseModule {
@@ -137,42 +137,64 @@ model CourseModule {
 }
 
 model ExamQuestion {
-  id          String  @id @default(cuid())
+  id          String @id @default(cuid())
   courseId    String
-  course      Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  examType    String  @default("final")  // "midterm" | "final"
-  order       Int     @default(0)
+  course      Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  examType    String @default("final") // "midterm" | "final"
+  order       Int    @default(0)
   question    String
-  type        String  @default("mc")   // mc | short
+  type        String @default("mc") // mc | short
   options     Json?
   answer      String
-  explanation String  @default("")
-  points      Int     @default(1)
+  explanation String @default("")
+  points      Int    @default(1)
 }
 
 model Enrollment {
-  id               String    @id @default(cuid())
+  id               String                 @id @default(cuid())
   studentId        String
-  student          Student   @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  student          Student                @relation(fields: [studentId], references: [id], onDelete: Cascade)
   courseId         String
-  course           Course    @relation(fields: [courseId], references: [id])
-  enrolledAt       DateTime  @default(now())
-  semesterLabel    String    @default("")
-  completedModules Int[]     @default([])
-  creditEarned     Boolean   @default(false)
+  course           Course                 @relation(fields: [courseId], references: [id])
+  enrolledAt       DateTime               @default(now())
+  semesterLabel    String                 @default("")
+  completedModules Int[]                  @default([])
+  creditEarned     Boolean                @default(false)
   creditEarnedAt   DateTime?
   examAttempts     ExamAttempt[]
   quizAttempts     ModuleQuizAttempt[]
   assignments      AssignmentSubmission[]
+  moduleProgresses ModuleProgress[]
 
   @@unique([studentId, courseId])
+}
+
+model ModuleProgress {
+  id                           String     @id @default(cuid())
+  enrollmentId                 String
+  enrollment                   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  moduleOrder                  Int
+  readingCompletedAt           DateTime?
+  videoCompletedAt             DateTime?
+  supplementalVideoCompletedAt DateTime?
+  practiceCompletedAt          DateTime?
+  quizCompletedAt              DateTime?
+  assignmentSubmittedAt        DateTime?
+  assignmentGradedAt           DateTime?
+  moduleCompletedAt            DateTime?
+  lastActivityAt               DateTime   @default(now())
+  createdAt                    DateTime   @default(now())
+  updatedAt                    DateTime   @updatedAt
+
+  @@unique([enrollmentId, moduleOrder])
+  @@index([lastActivityAt])
 }
 
 model ExamAttempt {
   id           String     @id @default(cuid())
   enrollmentId String
   enrollment   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
-  examType     String     @default("final")  // "midterm" | "final"
+  examType     String     @default("final") // "midterm" | "final"
   startedAt    DateTime   @default(now())
   submittedAt  DateTime?
   score        Decimal?   @db.Decimal(5, 2)
@@ -181,16 +203,16 @@ model ExamAttempt {
 }
 
 model ModuleQuizQuestion {
-  id          String  @id @default(cuid())
+  id          String @id @default(cuid())
   courseId    String
-  course      Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  course      Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
   moduleOrder Int
   order       Int
   question    String
   options     Json?
   answer      String
-  explanation String  @default("")
-  points      Int     @default(1)
+  explanation String @default("")
+  points      Int    @default(1)
 
   @@unique([courseId, moduleOrder, order])
 }
@@ -209,15 +231,15 @@ model ModuleQuizAttempt {
 }
 
 model AssignmentSubmission {
-  id           String   @id @default(cuid())
+  id           String     @id @default(cuid())
   enrollmentId String
   enrollment   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
   moduleOrder  Int
-  submittedAt  DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  submittedAt  DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
   content      String
-  feedback     String   @default("")
-  score        Decimal? @db.Decimal(5, 2)
+  feedback     String     @default("")
+  score        Decimal?   @db.Decimal(5, 2)
   gradedAt     DateTime?
   gradedById   String?
 
@@ -226,33 +248,47 @@ model AssignmentSubmission {
 
 /// One parent can link to multiple students (e.g. siblings, divorced parents with separate accounts).
 model ParentAccount {
-  id           String   @id @default(cuid())
-  email        String   @unique
+  id           String    @id @default(cuid())
+  email        String    @unique
   passwordHash String
   studentId    String
-  student      Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
-  createdAt    DateTime @default(now())
+  student      Student   @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  createdAt    DateTime  @default(now())
   lastLoginAt  DateTime?
+}
+
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  role      String /// "student" | "parent"
+  email     String
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([email])
+  @@index([role])
+  @@index([expiresAt])
 }
 
 /// Prospective student application submitted via /apply.
 model Application {
-  id                 String   @id @default(cuid())
+  id                 String    @id @default(cuid())
   studentName        String
   dob                String
   gradeLevel         String
-  currentSchool      String   @default("")
-  targetUniversities String   @default("")
-  preferredLanguage  String   @default("en")   // "en" | "zh"
+  currentSchool      String    @default("")
+  targetUniversities String    @default("")
+  preferredLanguage  String    @default("en") // "en" | "zh"
   parentName         String
   parentEmail        String
-  phone              String   @default("")
-  notes              String   @default("")
-  status             String   @default("pending")  // pending | approved | rejected
-  rejectionReason    String   @default("")
-  adminNotes         String   @default("")
-  accountsCreated    Boolean  @default(false)
-  createdAt          DateTime @default(now())
+  phone              String    @default("")
+  notes              String    @default("")
+  status             String    @default("pending") // pending | approved | rejected
+  rejectionReason    String    @default("")
+  adminNotes         String    @default("")
+  accountsCreated    Boolean   @default(false)
+  createdAt          DateTime  @default(now())
   reviewedAt         DateTime?
   reviewedById       String?
 }
@@ -270,32 +306,32 @@ model Application {
 ///   group_monthly      $50    / month recurring (3-5 students; reseller / cohort)
 ///   live_test          $1     one-time (Alan's own end-to-end smoke test)
 model Subscription {
-  id                       String    @id @default(cuid())
+  id                      String    @id @default(cuid())
   /// Email entered at Stripe Checkout — may not yet have a ParentAccount.
-  purchaserEmail           String
+  purchaserEmail          String
   /// Stripe identifiers
-  stripeCustomerId         String?
-  stripeSubscriptionId     String?   @unique
-  stripePriceId            String?
-  stripeCheckoutSessionId  String?   @unique
+  stripeCustomerId        String?
+  stripeSubscriptionId    String?   @unique
+  stripePriceId           String?
+  stripeCheckoutSessionId String?   @unique
   /// Tier name (see header docs for valid values)
-  planType                 String
+  planType                String
   /// Number of student seats this subscription unlocks
-  maxStudents              Int       @default(1)
+  maxStudents             Int       @default(1)
   /// active | past_due | cancelled | incomplete | trialing | paid | refunded
-  status                   String    @default("incomplete")
-  currentPeriodEnd         DateTime?
-  cancelAtPeriodEnd        Boolean   @default(false)
+  status                  String    @default("incomplete")
+  currentPeriodEnd        DateTime?
+  cancelAtPeriodEnd       Boolean   @default(false)
   /// USD cents at purchase time (audit; doesn't follow price changes)
-  amountTotal              Int?
+  amountTotal             Int?
   /// Set by webhooks-stripe on invoice.payment_failed; resets to 0 when an invoice succeeds.
-  paymentFailureCount      Int       @default(0)
+  paymentFailureCount     Int       @default(0)
   /// Manually linked by admin in /admin/subscriptions (T-107) — connects this purchase to the
   /// specific student account whose access flag we should toggle on payment events.
-  studentId                String?
-  student                  Student?  @relation(fields: [studentId], references: [id], onDelete: SetNull)
-  createdAt                DateTime  @default(now())
-  updatedAt                DateTime  @updatedAt
+  studentId               String?
+  student                 Student?  @relation(fields: [studentId], references: [id], onDelete: SetNull)
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
 
   @@index([purchaserEmail])
   @@index([status])
@@ -303,13 +339,30 @@ model Subscription {
   @@index([studentId])
 }
 
+model EmailLog {
+  id         String   @id @default(cuid())
+  kind       String
+  recipient  String
+  studentId  String?
+  providerId String?
+  dedupeKey  String?  @unique
+  status     String   @default("sent") /// sent | skipped | error
+  error      String   @default("")
+  sentAt     DateTime @default(now())
+
+  @@index([kind])
+  @@index([recipient])
+  @@index([studentId])
+  @@index([sentAt])
+}
+
 /// Immutable record of admin/student actions on student data.
 model AuditLog {
   id         String   @id @default(cuid())
-  action     String   /// "student_create" | "student_delete" | "profile_update" | "transcript_update"
+  action     String /// "student_create" | "student_delete" | "profile_update" | "transcript_update"
   studentId  String?
   student    Student? @relation(fields: [studentId], references: [id], onDelete: SetNull)
-  actorRole  String   /// "admin" | "student"
+  actorRole  String /// "admin" | "student"
   actorEmail String
   createdAt  DateTime @default(now())
 

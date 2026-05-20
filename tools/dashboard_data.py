@@ -115,8 +115,10 @@ def main():
                         "timestamp":       dd.get('timestamp'),
                         "mode":            dd.get('mode'),
                         "produced_count":  len(produced),
-                        "produced_titles": [(p.get('title') or p.get('slug') or '?')
-                                             for p in produced][:5],
+                        "produced_titles": [
+                            (p.get('title') or p.get('slug') or '?') if isinstance(p, dict) else str(p)
+                            for p in produced
+                        ][:5],
                         "halted_count":    len(dd.get('halted') or []),
                     })
                 except Exception:
@@ -141,6 +143,10 @@ def main():
             return iso_str[:10] if len(iso_str) >= 10 else None
 
     # Generated events come from the _audit summaries we already loaded.
+    # `produced` items may be either:
+    #   - dicts like {"slug": ..., "title": ..., ...}
+    #   - bare strings (just the slug) — newer Cowork runs sometimes write this
+    # Normalize both into the same shape downstream consumers expect.
     if AUDIT.is_dir():
         for course_dir in AUDIT.iterdir():
             if not course_dir.is_dir(): continue
@@ -153,9 +159,16 @@ def main():
                 if not day: continue
                 bucket = daily.setdefault(day, {"generated": [], "uploaded": []})
                 for p in (dd.get('produced') or []):
+                    if isinstance(p, dict):
+                        slug  = p.get('slug')
+                        title = p.get('title') or slug
+                    else:  # string (just a slug)
+                        slug  = str(p)
+                        # Reconstruct a readable title from slug if possible
+                        title = slug.split('-module-', 1)[-1].replace('-', ' ').title() if slug else '?'
                     bucket["generated"].append({
-                        "slug":   p.get('slug'),
-                        "title":  p.get('title') or p.get('slug'),
+                        "slug":   slug,
+                        "title":  title,
                         "course": dd.get('course'),
                     })
 

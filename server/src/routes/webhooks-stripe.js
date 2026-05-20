@@ -137,6 +137,48 @@ async function clearStudentLock(account) {
   });
 }
 
+async function findStudentForPurchaserEmail(email) {
+  const normalized = String(email || '').trim().toLowerCase();
+  if (!normalized || normalized === 'unknown') return null;
+
+  const parent = await prisma.parentAccount.findUnique({
+    where: { email: normalized },
+    select: { studentId: true },
+  });
+  if (parent?.studentId) return parent.studentId;
+
+  const studentByParentEmail = await prisma.student.findFirst({
+    where: { parentEmail: { equals: normalized, mode: 'insensitive' } },
+    select: { id: true },
+    orderBy: { createdAt: 'desc' },
+  });
+  if (studentByParentEmail?.id) return studentByParentEmail.id;
+
+  const studentAccount = await prisma.studentAccount.findUnique({
+    where: { email: normalized },
+    select: { studentId: true },
+  });
+  if (studentAccount?.studentId) return studentAccount.studentId;
+
+  return null;
+}
+
+async function autoLinkSubscriptionByEmail(subscriptionRecord) {
+  if (!subscriptionRecord || subscriptionRecord.studentId) return subscriptionRecord;
+  const studentId = await findStudentForPurchaserEmail(subscriptionRecord.purchaserEmail);
+  if (!studentId) {
+    console.warn(`[webhook] subscription ${subscriptionRecord.id} has no matching student for ${subscriptionRecord.purchaserEmail}`);
+    return subscriptionRecord;
+  }
+
+  const linked = await prisma.subscription.update({
+    where: { id: subscriptionRecord.id },
+    data: { studentId },
+  });
+  console.log(`[webhook] ✓ auto-linked subscription ${linked.id} to student ${studentId} via purchaser email`);
+  return linked;
+}
+
 // ─── Event handlers ───────────────────────────────────────────────────────────
 
 async function handleCheckoutCompleted(session) {
@@ -163,7 +205,7 @@ async function handleCheckoutCompleted(session) {
     stripePriceId = session.line_items?.data?.[0]?.price?.id || null;
   }
 
-  await prisma.subscription.upsert({
+  const subscriptionRecord = await prisma.subscription.upsert({
     where: { stripeCheckoutSessionId: session.id },
     update: {
       status,
@@ -186,10 +228,9 @@ async function handleCheckoutCompleted(session) {
       amountTotal:             session.amount_total,
     },
   });
+  await autoLinkSubscriptionByEmail(subscriptionRecord);
 
   console.log(`[webhook] ✓ checkout.session.completed — ${planType} · ${session.customer_email} · ${status}`);
-
-  // TODO (T-105): create Student / ParentAccount automatically, send welcome email via Resend.
 }
 
 async function handleSubscriptionUpdated(sub) {
@@ -245,13 +286,14 @@ async function handlePaymentSucceeded(invoice) {
   });
   if (!existing) return;
 
-  await prisma.subscription.update({
+  const updated = await prisma.subscription.update({
     where: { stripeSubscriptionId: invoice.subscription },
     data: {
       status: 'active',
       paymentFailureCount: 0,
     },
   });
+  await autoLinkSubscriptionByEmail(updated);
 
   // Successful payment — clear any soft-lock we set during past_due.
   const { account } = await resolveLinkedAccount(invoice.subscription);

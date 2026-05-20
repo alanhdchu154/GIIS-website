@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
  *   headline          string?       — override the H2 headline (use {en, zh} object)
  *   subline           string?       — override the description (use {en, zh} object)
  *   showCtas          boolean?      — hide both CTAs (e.g. on Pricing where the page already has Apply buttons)
- *   primaryCtaTo      string?       — primary CTA link target, default '/admission'
+ *   primaryCtaTo      string?       — primary CTA link target, default '/apply'
  *   primaryCtaLabel   {en, zh}?     — override primary CTA text
  *   background        string?       — section background CSS, default white
  */
@@ -29,7 +29,7 @@ function DemoEmbed({
   headline,
   subline,
   showCtas = true,
-  primaryCtaTo = '/admission',
+  primaryCtaTo = '/apply',
   primaryCtaLabel,
   background = '#fff',
 }) {
