@@ -280,10 +280,9 @@ function buildHtml(p, leftHtml, rightHtml, cumulative, exportToday, transcriptDa
     <!-- Seal: 25% -->
     <td style="width:25%;text-align:center;vertical-align:middle;border:none;padding:0;">
       <img src="${sealImg}" alt="Official Seal" crossorigin="anonymous"
-           style="width:72px;height:72px;object-fit:contain;display:block;margin:0 auto;
-                  filter:grayscale(100%) opacity(0.42) contrast(110%) brightness(130%)
-                         drop-shadow(1.5px 1.5px 0px rgba(255,255,255,0.85))
-                         drop-shadow(-1px -1px 1px rgba(60,60,90,0.55));" />
+           style="width:80px;height:80px;object-fit:contain;display:block;margin:0 auto;
+                  filter:sepia(20%) opacity(0.88) contrast(108%) brightness(105%)
+                         drop-shadow(0px 0px 4px rgba(184,150,46,0.45));" />
     </td>
     <!-- Gap: 15% -->
     <td style="width:15%;border:none;"></td>
