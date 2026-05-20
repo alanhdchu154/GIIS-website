@@ -232,5 +232,1122 @@
       "assignment": "Solve three problems: (1) area between y = x² and y = x on [0,1]; (2) volume of revolution of y = √x on [0,4] about the x-axis using the disk method; (3) volume of a solid whose base is the region under y = x² on [0,2] with square cross-sections perpendicular to the x-axis.",
       "estimatedHrs": 4.5
     }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "A function is continuous at x = a when:",
+      "options": [
+        "f(a) exists, the limit exists, and they are equal",
+        "only f(a) exists",
+        "only the graph is increasing",
+        "the derivative is zero"
+      ],
+      "answer": "f(a) exists, the limit exists, and they are equal",
+      "explanation": "Continuity at a point requires all three conditions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "A jump discontinuity usually means:",
+      "options": [
+        "the left and right limits are different",
+        "the function is a polynomial",
+        "the derivative is positive",
+        "the graph is always smooth"
+      ],
+      "answer": "the left and right limits are different",
+      "explanation": "A jump occurs when the one-sided limits do not match.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "If a limit from the left and right are unequal, the two-sided limit:",
+      "options": [
+        "does not exist",
+        "equals their average",
+        "equals zero",
+        "equals f(a)"
+      ],
+      "answer": "does not exist",
+      "explanation": "A two-sided limit exists only when both one-sided limits agree.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Which technique often resolves a 0/0 limit for rational expressions?",
+      "options": [
+        "factoring and canceling",
+        "declaring the limit impossible immediately",
+        "using units",
+        "taking an antiderivative"
+      ],
+      "answer": "factoring and canceling",
+      "explanation": "Algebraic simplification can remove a removable discontinuity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "The Squeeze Theorem applies when:",
+      "options": [
+        "a target function is trapped between two functions with the same limit",
+        "a function is always linear",
+        "a denominator is zero",
+        "a derivative is negative"
+      ],
+      "answer": "a target function is trapped between two functions with the same limit",
+      "explanation": "If lower and upper bounds converge to L, the squeezed function also converges to L.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "What is an indeterminate form?",
+      "options": [
+        "A form like 0/0 that needs more analysis",
+        "A final answer of zero",
+        "A function with no variables",
+        "A theorem about area"
+      ],
+      "answer": "A form like 0/0 that needs more analysis",
+      "explanation": "0/0 does not determine a limit by itself.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "The derivative at a point represents:",
+      "options": [
+        "instantaneous rate of change",
+        "average value only",
+        "total area under a curve",
+        "the y-intercept"
+      ],
+      "answer": "instantaneous rate of change",
+      "explanation": "The derivative is the limit of average rates over shrinking intervals.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "The difference quotient is used to define:",
+      "options": [
+        "the derivative",
+        "the integral",
+        "the domain",
+        "a horizontal asymptote"
+      ],
+      "answer": "the derivative",
+      "explanation": "The derivative is the limit of the difference quotient as h approaches 0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "A tangent line slope at x = a is:",
+      "options": [
+        "f'(a)",
+        "f(a)",
+        "a only",
+        "the area from 0 to a"
+      ],
+      "answer": "f'(a)",
+      "explanation": "The derivative value gives the tangent slope.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "What is d/dx of x^5?",
+      "options": [
+        "5x^4",
+        "x^4",
+        "5x^5",
+        "x^6/6"
+      ],
+      "answer": "5x^4",
+      "explanation": "The power rule gives n*x^(n-1).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Which rule differentiates a product f(x)g(x)?",
+      "options": [
+        "product rule",
+        "quotient rule",
+        "squeeze theorem",
+        "FTC"
+      ],
+      "answer": "product rule",
+      "explanation": "The product rule is f prime g plus f g prime.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "What is the derivative of a constant?",
+      "options": [
+        "0",
+        "1",
+        "the constant",
+        "undefined always"
+      ],
+      "answer": "0",
+      "explanation": "A constant has no rate of change.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "The chain rule is mainly for:",
+      "options": [
+        "composite functions",
+        "linear functions only",
+        "areas only",
+        "tables only"
+      ],
+      "answer": "composite functions",
+      "explanation": "Differentiate the outside function and multiply by the derivative of the inside.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Implicit differentiation is useful when:",
+      "options": [
+        "y is not isolated as a function of x",
+        "there are no variables",
+        "the graph is a bar chart",
+        "all terms are constants"
+      ],
+      "answer": "y is not isolated as a function of x",
+      "explanation": "Differentiate both sides with respect to x, treating y as a function of x.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "When differentiating y^2 with respect to x implicitly, the result is:",
+      "options": [
+        "2y dy/dx",
+        "2y",
+        "y^3/3",
+        "dy/dx only"
+      ],
+      "answer": "2y dy/dx",
+      "explanation": "By the chain rule, derivative of y^2 is 2y times dy/dx.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "What is d/dx of sin x?",
+      "options": [
+        "cos x",
+        "-sin x",
+        "-cos x",
+        "tan x"
+      ],
+      "answer": "cos x",
+      "explanation": "The derivative of sin x is cos x.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "What is d/dx of ln x?",
+      "options": [
+        "1/x",
+        "x",
+        "ln x",
+        "e^x"
+      ],
+      "answer": "1/x",
+      "explanation": "The natural log derivative is 1/x for x > 0.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "What is d/dx of e^(3x)?",
+      "options": [
+        "3e^(3x)",
+        "e^(3x)",
+        "3x e^(3x)",
+        "e^3"
+      ],
+      "answer": "3e^(3x)",
+      "explanation": "Use the chain rule: derivative of 3x is 3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "In related rates, when should known numerical values usually be substituted?",
+      "options": [
+        "After differentiating",
+        "Before differentiating always",
+        "Only after graphing",
+        "Never"
+      ],
+      "answer": "After differentiating",
+      "explanation": "Substituting too early can erase changing quantities.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "Related rates problems require differentiating with respect to:",
+      "options": [
+        "time",
+        "area only",
+        "the final answer",
+        "a constant"
+      ],
+      "answer": "time",
+      "explanation": "Rates such as dx/dt or dV/dt describe change over time.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "Why are units important in related rates?",
+      "options": [
+        "They identify what rate the answer represents",
+        "They make derivatives unnecessary",
+        "They replace equations",
+        "They always equal zero"
+      ],
+      "answer": "They identify what rate the answer represents",
+      "explanation": "A numerical rate needs units like cm/s or m^3/min.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "The Mean Value Theorem requires a function to be:",
+      "options": [
+        "continuous on [a,b] and differentiable on (a,b)",
+        "differentiable only at endpoints",
+        "always positive",
+        "a polynomial only"
+      ],
+      "answer": "continuous on [a,b] and differentiable on (a,b)",
+      "explanation": "These are the standard hypotheses of MVT.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "If f prime changes from positive to negative at c, f has a:",
+      "options": [
+        "local maximum",
+        "local minimum",
+        "vertical asymptote",
+        "jump discontinuity"
+      ],
+      "answer": "local maximum",
+      "explanation": "Increasing then decreasing indicates a local max.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "If f double-prime is positive, the graph is:",
+      "options": [
+        "concave up",
+        "concave down",
+        "always decreasing",
+        "discontinuous"
+      ],
+      "answer": "concave up",
+      "explanation": "Positive second derivative means slopes are increasing.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "Optimization problems usually start by defining:",
+      "options": [
+        "an objective function and constraints",
+        "only a final answer",
+        "only a tangent line",
+        "a random table"
+      ],
+      "answer": "an objective function and constraints",
+      "explanation": "You maximize or minimize an objective subject to constraints.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "An absolute maximum on a closed interval can occur:",
+      "options": [
+        "at a critical point or endpoint",
+        "only where f is undefined",
+        "only at x=0",
+        "only at an inflection point"
+      ],
+      "answer": "at a critical point or endpoint",
+      "explanation": "Closed interval optimization checks critical points and endpoints.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Why check the domain in optimization?",
+      "options": [
+        "It restricts possible meaningful answers",
+        "It removes all derivatives",
+        "It makes every answer positive",
+        "It replaces constraints"
+      ],
+      "answer": "It restricts possible meaningful answers",
+      "explanation": "Real-world quantities often have boundaries such as positive length.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "A left Riemann sum uses:",
+      "options": [
+        "left endpoints of subintervals",
+        "right endpoints only",
+        "derivatives only",
+        "zeros only"
+      ],
+      "answer": "left endpoints of subintervals",
+      "explanation": "The sample point in each subinterval is its left endpoint.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "A definite integral can represent:",
+      "options": [
+        "accumulated change or signed area",
+        "only a slope at one point",
+        "only a discontinuity",
+        "only an exponent"
+      ],
+      "answer": "accumulated change or signed area",
+      "explanation": "Integrals accumulate quantities over an interval.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "The trapezoidal rule approximates area using:",
+      "options": [
+        "trapezoids",
+        "circles",
+        "only tangent lines",
+        "recursive calls"
+      ],
+      "answer": "trapezoids",
+      "explanation": "It averages left and right heights over each subinterval.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "FTC Part 2 evaluates definite integrals using:",
+      "options": [
+        "antiderivatives",
+        "only graphs",
+        "only limits at infinity",
+        "only implicit differentiation"
+      ],
+      "answer": "antiderivatives",
+      "explanation": "If F is an antiderivative of f, integral from a to b is F(b)-F(a).",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "If F(x) = integral from 1 to x of f(t) dt, then F prime(x) is:",
+      "options": [
+        "f(x)",
+        "f(1)",
+        "0",
+        "x f(x)"
+      ],
+      "answer": "f(x)",
+      "explanation": "FTC Part 1 says accumulation functions differentiate back to the integrand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "What is an accumulation function?",
+      "options": [
+        "A function defined by an integral with a variable limit",
+        "A list of constants",
+        "A derivative table",
+        "A discontinuity"
+      ],
+      "answer": "A function defined by an integral with a variable limit",
+      "explanation": "It tracks accumulated area/change as the endpoint varies.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "In u-substitution, u is chosen to simplify:",
+      "options": [
+        "a composite expression and its derivative",
+        "only the final answer",
+        "a table heading",
+        "the graph color"
+      ],
+      "answer": "a composite expression and its derivative",
+      "explanation": "A good u makes du match another part of the integrand.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "For a definite integral, changing to u often requires:",
+      "options": [
+        "changing the bounds",
+        "ignoring dx",
+        "making the answer negative",
+        "using product rule"
+      ],
+      "answer": "changing the bounds",
+      "explanation": "Bounds in x should be converted to bounds in u if staying in u-space.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "u-substitution is the integration counterpart of:",
+      "options": [
+        "the chain rule",
+        "the product rule",
+        "MVT",
+        "linear search"
+      ],
+      "answer": "the chain rule",
+      "explanation": "Substitution reverses the chain rule.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "A slope field shows:",
+      "options": [
+        "short line segments representing dy/dx at points",
+        "only exact solution formulas",
+        "areas under curves",
+        "Riemann rectangles"
+      ],
+      "answer": "short line segments representing dy/dx at points",
+      "explanation": "Each segment shows the local slope of a differential equation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "A separable differential equation lets you:",
+      "options": [
+        "put y terms with dy and x terms with dx",
+        "avoid integration",
+        "differentiate only constants",
+        "ignore initial conditions"
+      ],
+      "answer": "put y terms with dy and x terms with dx",
+      "explanation": "Separation prepares both sides for integration.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "An initial condition is used to:",
+      "options": [
+        "find the particular solution constant",
+        "remove all variables",
+        "estimate a limit graphically",
+        "choose a sorting algorithm"
+      ],
+      "answer": "find the particular solution constant",
+      "explanation": "After solving generally, plug in the initial point to determine C.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "Area between two curves is often computed by integrating:",
+      "options": [
+        "top minus bottom",
+        "bottom minus top always",
+        "derivative only",
+        "zero over the interval"
+      ],
+      "answer": "top minus bottom",
+      "explanation": "Vertical slices use upper function minus lower function.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "The washer method is used when:",
+      "options": [
+        "a volume of revolution has a hole",
+        "a function is discontinuous",
+        "a graph has no area",
+        "a derivative is constant"
+      ],
+      "answer": "a volume of revolution has a hole",
+      "explanation": "Washers subtract inner radius area from outer radius area.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "For known cross-sections, volume is:",
+      "options": [
+        "integral of cross-sectional area",
+        "derivative of perimeter",
+        "limit of a String",
+        "always pi r squared"
+      ],
+      "answer": "integral of cross-sectional area",
+      "explanation": "Volume accumulates slices: integrate A(x) dx.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "question": "If lim x->2 f(x) = 5 and f(2) = 5, what condition is satisfied?",
+      "type": "mc",
+      "options": [
+        "Continuity at x=2",
+        "A vertical asymptote",
+        "A jump discontinuity",
+        "No limit exists"
+      ],
+      "answer": "Continuity at x=2",
+      "explanation": "The limit exists and equals the function value.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "question": "Which form usually requires algebraic simplification before evaluating a limit?",
+      "type": "mc",
+      "options": [
+        "0/0",
+        "3/2",
+        "5",
+        "infinity as a final finite value"
+      ],
+      "answer": "0/0",
+      "explanation": "0/0 is indeterminate.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "question": "The derivative definition uses the limit as h approaches:",
+      "type": "mc",
+      "options": [
+        "0",
+        "1",
+        "infinity",
+        "-1 only"
+      ],
+      "answer": "0",
+      "explanation": "The interval width shrinks to zero.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "question": "What is d/dx of 4x^3 - 2x?",
+      "type": "mc",
+      "options": [
+        "12x^2 - 2",
+        "4x^2 - 2",
+        "12x^3 - 2",
+        "x^4 - x^2"
+      ],
+      "answer": "12x^2 - 2",
+      "explanation": "Apply the power rule term by term.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "question": "The derivative of (x^2 + 1)^5 requires:",
+      "type": "mc",
+      "options": [
+        "chain rule",
+        "Squeeze Theorem",
+        "Riemann sum",
+        "slope field"
+      ],
+      "answer": "chain rule",
+      "explanation": "It is a composite function.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "question": "For x^2 + y^2 = 25, implicit differentiation gives:",
+      "type": "mc",
+      "options": [
+        "2x + 2y dy/dx = 0",
+        "2x + 2y = 0",
+        "x + y = 25",
+        "dy/dx = 25"
+      ],
+      "answer": "2x + 2y dy/dx = 0",
+      "explanation": "Differentiate y^2 as 2y dy/dx.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "question": "What is d/dx of cos x?",
+      "type": "mc",
+      "options": [
+        "-sin x",
+        "sin x",
+        "cos x",
+        "-cos x"
+      ],
+      "answer": "-sin x",
+      "explanation": "The derivative of cos x is -sin x.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "question": "In related rates, a quantity such as dr/dt means:",
+      "type": "mc",
+      "options": [
+        "radius changing with respect to time",
+        "area under radius",
+        "a constant radius",
+        "a limit law"
+      ],
+      "answer": "radius changing with respect to time",
+      "explanation": "The notation describes rate of change over time.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "question": "MVT guarantees a point where instantaneous rate equals:",
+      "type": "mc",
+      "options": [
+        "average rate of change",
+        "the y-intercept",
+        "total area",
+        "zero always"
+      ],
+      "answer": "average rate of change",
+      "explanation": "Under the hypotheses, f prime(c) equals the secant slope.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "question": "If f prime is negative on an interval, f is:",
+      "type": "mc",
+      "options": [
+        "decreasing",
+        "increasing",
+        "constant always",
+        "discontinuous always"
+      ],
+      "answer": "decreasing",
+      "explanation": "A negative derivative means the function decreases.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "question": "Which must be checked for closed interval absolute extrema?",
+      "type": "mc",
+      "options": [
+        "critical points and endpoints",
+        "only endpoints",
+        "only inflection points",
+        "only x-intercepts"
+      ],
+      "answer": "critical points and endpoints",
+      "explanation": "Absolute extrema can occur at interior critical points or interval endpoints.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "question": "What does f double-prime help determine?",
+      "type": "mc",
+      "options": [
+        "concavity",
+        "initial value only",
+        "String length",
+        "domain only"
+      ],
+      "answer": "concavity",
+      "explanation": "The second derivative indicates concavity.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "question": "The derivative of ln(x^2 + 1) is:",
+      "type": "mc",
+      "options": [
+        "2x/(x^2 + 1)",
+        "1/(x^2 + 1)",
+        "ln(2x)",
+        "2x ln x"
+      ],
+      "answer": "2x/(x^2 + 1)",
+      "explanation": "Use chain rule: derivative of ln u is u prime/u.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "question": "A removable discontinuity often appears as:",
+      "type": "mc",
+      "options": [
+        "a hole",
+        "a vertical line through every point",
+        "a maximum only",
+        "an area"
+      ],
+      "answer": "a hole",
+      "explanation": "A factor cancellation can reveal a hole in the graph.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "question": "The product rule for f(x)g(x) is:",
+      "type": "mc",
+      "options": [
+        "f'g + fg'",
+        "f'g'",
+        "f/g",
+        "f+g only"
+      ],
+      "answer": "f'g + fg'",
+      "explanation": "Differentiate one factor at a time and add.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "question": "A right Riemann sum uses which sample points?",
+      "type": "mc",
+      "options": [
+        "right endpoints",
+        "left endpoints",
+        "only midpoints",
+        "critical points only"
+      ],
+      "answer": "right endpoints",
+      "explanation": "Right sums use the right endpoint of each subinterval.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "question": "The definite integral of velocity over time gives:",
+      "type": "mc",
+      "options": [
+        "displacement",
+        "acceleration only",
+        "slope only",
+        "a discontinuity"
+      ],
+      "answer": "displacement",
+      "explanation": "Integrating velocity accumulates change in position.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "question": "FTC Part 1 says d/dx of integral from a to x f(t)dt equals:",
+      "type": "mc",
+      "options": [
+        "f(x)",
+        "f(a)",
+        "0",
+        "integral f(x)dx"
+      ],
+      "answer": "f(x)",
+      "explanation": "Differentiating accumulation returns the integrand.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "question": "What is integral of 2x dx?",
+      "type": "mc",
+      "options": [
+        "x^2 + C",
+        "2 + C",
+        "2x + C",
+        "x + C"
+      ],
+      "answer": "x^2 + C",
+      "explanation": "An antiderivative of 2x is x^2.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "question": "u-substitution most directly reverses:",
+      "type": "mc",
+      "options": [
+        "chain rule",
+        "quotient rule",
+        "MVT",
+        "curve sketching"
+      ],
+      "answer": "chain rule",
+      "explanation": "Substitution handles integrals of composite functions.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "question": "For integral 2x cos(x^2) dx, a good u is:",
+      "type": "mc",
+      "options": [
+        "x^2",
+        "2x",
+        "cos x",
+        "dx"
+      ],
+      "answer": "x^2",
+      "explanation": "du = 2x dx appears in the integral.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "question": "A slope field for dy/dx = y has slopes depending on:",
+      "type": "mc",
+      "options": [
+        "y-value",
+        "area only",
+        "the final answer only",
+        "no variables"
+      ],
+      "answer": "y-value",
+      "explanation": "The derivative formula uses y.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "question": "Solving dy/dx = xy by separation starts with:",
+      "type": "mc",
+      "options": [
+        "(1/y) dy = x dx",
+        "dy = x + y",
+        "dx/dy = xy only",
+        "y = x always"
+      ],
+      "answer": "(1/y) dy = x dx",
+      "explanation": "Separate y terms with dy and x terms with dx.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "question": "Area between y=x and y=x^2 on [0,1] uses:",
+      "type": "mc",
+      "options": [
+        "integral of x - x^2",
+        "integral of x^2 - x",
+        "derivative of x + x^2",
+        "zero because they intersect"
+      ],
+      "answer": "integral of x - x^2",
+      "explanation": "On [0,1], x is above x^2.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "question": "The disk method volume around the x-axis uses:",
+      "type": "mc",
+      "options": [
+        "pi integral [f(x)]^2 dx",
+        "integral f prime dx only",
+        "2 pi r h only",
+        "top minus bottom only"
+      ],
+      "answer": "pi integral [f(x)]^2 dx",
+      "explanation": "Cross-sectional disks have area pi radius squared.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "question": "A washer method problem subtracts:",
+      "type": "mc",
+      "options": [
+        "inner radius squared from outer radius squared",
+        "left endpoint from right endpoint",
+        "derivative from integral",
+        "x from y always"
+      ],
+      "answer": "inner radius squared from outer radius squared",
+      "explanation": "Washer area is pi(R^2 - r^2).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "question": "An accumulation function is increasing where:",
+      "type": "mc",
+      "options": [
+        "the integrand is positive",
+        "the integrand is negative",
+        "the upper limit is missing",
+        "the graph is blue"
+      ],
+      "answer": "the integrand is positive",
+      "explanation": "F prime equals the integrand, so F increases where f is positive.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "question": "What does a midpoint Riemann sum use?",
+      "type": "mc",
+      "options": [
+        "midpoints of subintervals",
+        "only endpoints of the full interval",
+        "critical points only",
+        "zeros only"
+      ],
+      "answer": "midpoints of subintervals",
+      "explanation": "Each rectangle height is sampled at the subinterval midpoint.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "question": "If f prime changes from negative to positive at c, f has:",
+      "type": "mc",
+      "options": [
+        "local minimum",
+        "local maximum",
+        "vertical asymptote",
+        "jump discontinuity"
+      ],
+      "answer": "local minimum",
+      "explanation": "Decreasing then increasing indicates a local min.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "question": "For optimization, the second derivative test helps:",
+      "type": "mc",
+      "options": [
+        "classify maxima/minima",
+        "find domain only",
+        "make all functions continuous",
+        "avoid derivatives"
+      ],
+      "answer": "classify maxima/minima",
+      "explanation": "Positive second derivative suggests local min; negative suggests local max.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "question": "A separable differential equation with initial condition produces:",
+      "type": "mc",
+      "options": [
+        "a particular solution",
+        "only a slope field",
+        "no constant",
+        "only a table"
+      ],
+      "answer": "a particular solution",
+      "explanation": "The initial condition determines the integration constant.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "question": "The integral from a to b of rate of change gives:",
+      "type": "mc",
+      "options": [
+        "net change",
+        "average slope only",
+        "domain only",
+        "a tangent equation"
+      ],
+      "answer": "net change",
+      "explanation": "This is the net change theorem.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "question": "Which AP Calc concept links derivative and integral as inverse processes?",
+      "type": "mc",
+      "options": [
+        "Fundamental Theorem of Calculus",
+        "Mean Value Theorem only",
+        "Squeeze Theorem only",
+        "Implicit differentiation"
+      ],
+      "answer": "Fundamental Theorem of Calculus",
+      "explanation": "FTC connects accumulation and rates of change.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "question": "A volume with square cross-sections perpendicular to x-axis is found by:",
+      "type": "mc",
+      "options": [
+        "integrating side(x)^2 dx",
+        "differentiating area only",
+        "using binary search",
+        "using only endpoints"
+      ],
+      "answer": "integrating side(x)^2 dx",
+      "explanation": "Each slice area is the square of its side length.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "question": "Which expression is an antiderivative of cos x?",
+      "type": "mc",
+      "options": [
+        "sin x + C",
+        "-sin x + C",
+        "tan x + C",
+        "1/x + C"
+      ],
+      "answer": "sin x + C",
+      "explanation": "The derivative of sin x is cos x.",
+      "points": 1
+    }
   ]
 }

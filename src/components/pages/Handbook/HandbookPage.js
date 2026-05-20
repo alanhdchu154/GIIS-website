@@ -245,21 +245,18 @@ export default function HandbookPage({ language, toggleLanguage }) {
           <Section id="graduation">
             <SectionHeading {...SECTIONS[2]} language={language} />
             <P>{en
-              ? 'Students must earn a minimum of 24 credits to qualify for the GIIS High School Diploma. The credit distribution is:'
-              : '获得 GIIS 高中文凭需累计至少 24 个学分，分配如下：'}</P>
+              ? 'Students must earn a minimum of 24 credits to qualify for the GIIS High School Diploma. As a Florida-registered private school, GIIS sets its own college-preparatory graduation framework:'
+              : '获得 GIIS 高中文凭需累计至少 24 个学分。作为 Florida 注册私立学校，GIIS 采用自定的大学预备毕业框架：'}</P>
             <UL>
               <li>{en ? 'English Language Arts — 4 credits' : '英语语文 — 4 学分'}</li>
               <li>{en ? 'Mathematics — 4 credits' : '数学 — 4 学分'}</li>
               <li>{en ? 'Sciences — 3 credits' : '科学 — 3 学分'}</li>
               <li>{en ? 'Social Studies — 3 credits' : '社会科学 — 3 学分'}</li>
-              <li>{en ? 'World Languages — 2 credits' : '外语 — 2 学分'}</li>
-              <li>{en ? 'Arts or Electives — 2 credits' : '艺术或选修 — 2 学分'}</li>
-              <li>{en ? 'Physical Education / Health — 1 credit' : '体育 / 健康 — 1 学分'}</li>
-              <li>{en ? 'Free Electives — 5 credits' : '自由选修 — 5 学分'}</li>
+              <li>{en ? 'Pathway, college-prep, arts, technology, personal finance, and free electives — 10 credits' : '专业方向、大学预备、艺术、科技、个人理财与自由选修 — 10 学分'}</li>
             </UL>
             <P>{en
-              ? 'Florida Statute 1002.42 requires a minimum of 170 instructional days per year. GIIS operates two semesters of approximately 18 weeks each, totaling ~180 instructional days. The diploma is signed by the President & Principal, carries a unique student code, and is verifiable at /verify/{code} via QR code.'
-              : '依据 Florida Statute 1002.42 规定，每学年至少需有 170 个教学日。GIIS 每学年分为两个约 18 周的学期，共约 180 个教学日。文凭由 President & Principal 签署，每份附唯一学生代码与 QR 码，可通过 /verify/{code} 进行验证。'}</P>
+              ? 'Physical Education is not a GIIS graduation requirement because GIIS operates as an online school. World language study is recommended for students targeting selective universities, but it is not required for the GIIS diploma. The diploma is signed by the President & Principal, carries a unique student code, and is verifiable at /verify/{code} via QR code.'
+              : '由于 GIIS 为线上学校，体育课不列为 GIIS 毕业硬性要求。申请选择性大学的学生建议补充外语学习，但外语不是 GIIS 文凭的毕业门槛。文凭由 President & Principal 签署，每份附唯一学生代码与 QR 码，可通过 /verify/{code} 进行验证。'}</P>
           </Section>
 
           {/* §4 Assessment */}

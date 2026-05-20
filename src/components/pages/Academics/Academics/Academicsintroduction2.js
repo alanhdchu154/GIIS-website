@@ -14,12 +14,12 @@ const PROGRAMS = [
     title: { en: 'US Diploma Program', zh: '美国高中文凭课程' },
     tag: { en: '24 Credits · Florida Registered', zh: '24 学分 · Florida 注册私立学校' },
     body: {
-      en: 'GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the same standard followed by US private high schools and recognized by US colleges for international student admissions.',
-      zh: 'GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭，与美国私立高中标准一致，在美国大学审核国际学生申请时具备完整的学术效力。',
+      en: 'GIIS is a registered Florida private school issuing US high school diplomas under a college-preparatory 24-credit graduation framework designed for online learners and US college admissions review.',
+      zh: 'GIIS 是在 Florida 注册的私立学校，依据面向线上学习与美国大学申请审核的 24 学分大学预备毕业框架颁发美国高中文凭。',
     },
     points: {
-      en: ['English Language Arts — 4 credits', 'Mathematics — 4 credits', 'Science — 3 credits', 'Social Studies — 3 credits', 'PE & Health — 1 credit', 'Electives — 8.5 credits'],
-      zh: ['英语语言艺术 — 4 学分', '数学 — 4 学分', '自然科学 — 3 学分', '社会科学 — 3 学分', '体育与健康 — 1 学分', '选修课程 — 8.5 学分'],
+      en: ['English Language Arts — 4 credits', 'Mathematics — 4 credits', 'Science — 3 credits', 'Social Studies — 3 credits', 'Pathway & Electives — 10 credits', 'World language study is recommended for selective colleges'],
+      zh: ['英语语言艺术 — 4 学分', '数学 — 4 学分', '自然科学 — 3 学分', '社会科学 — 3 学分', '方向与选修 — 10 学分', '申请选择性大学时建议补充外语学习'],
     },
   },
   {

@@ -1201,6 +1201,90 @@
       "answer": "True",
       "explanation": "True. beta = 0 (no linear relationship) is correct.",
       "points": 1
+    },
+    {
+      "moduleOrder": 15,
+      "order": 1,
+      "points": 1,
+      "question": "In a regression-inference case study, which condition checks whether a linear model is appropriate?",
+      "options": [
+        "The scatterplot and residual plot show no strong curvature",
+        "The sample mean equals the sample median",
+        "The explanatory variable is measured in percentages",
+        "The response variable has exactly two categories"
+      ],
+      "answer": "The scatterplot and residual plot show no strong curvature",
+      "explanation": "Regression inference for slope assumes the linear model is a reasonable description of the relationship."
+    },
+    {
+      "moduleOrder": 15,
+      "order": 2,
+      "points": 1,
+      "question": "What does a confidence interval for the slope estimate?",
+      "options": [
+        "The predicted y-value for every individual",
+        "A plausible range for the population regression slope",
+        "The correlation in the sample only",
+        "The intercept of the least-squares line"
+      ],
+      "answer": "A plausible range for the population regression slope",
+      "explanation": "The interval estimates the population slope beta, not just the sample slope b."
+    },
+    {
+      "moduleOrder": 15,
+      "order": 3,
+      "points": 1,
+      "question": "If a residual plot shows increasing spread as x increases, which condition is most directly threatened?",
+      "options": [
+        "Independence",
+        "Normality of x",
+        "Constant standard deviation of residuals",
+        "Random assignment"
+      ],
+      "answer": "Constant standard deviation of residuals",
+      "explanation": "Regression inference assumes roughly equal variability of residuals across x-values."
+    },
+    {
+      "moduleOrder": 16,
+      "order": 1,
+      "points": 1,
+      "question": "For AP Statistics, the correct conclusion to a significance test should include:",
+      "options": [
+        "Only the p-value",
+        "A decision in context about the population parameter",
+        "A statement that the null hypothesis is proven true",
+        "Only a graph"
+      ],
+      "answer": "A decision in context about the population parameter",
+      "explanation": "AP scoring expects students to connect the test result back to the parameter and real context."
+    },
+    {
+      "moduleOrder": 16,
+      "order": 2,
+      "points": 1,
+      "question": "Which phrase correctly interprets a p-value?",
+      "options": [
+        "The probability that the null hypothesis is true",
+        "The probability, assuming the null is true, of getting a result as extreme or more extreme than the observed result",
+        "The probability that the alternative is false",
+        "The probability that the sample was random"
+      ],
+      "answer": "The probability, assuming the null is true, of getting a result as extreme or more extreme than the observed result",
+      "explanation": "A p-value is conditional on the null hypothesis and measures extremeness of the observed statistic."
+    },
+    {
+      "moduleOrder": 16,
+      "order": 3,
+      "points": 1,
+      "question": "Which review task best prepares students for mixed AP Statistics free-response questions?",
+      "options": [
+        "Memorizing calculator buttons only",
+        "Practicing parameter identification, condition checks, calculation, and contextual conclusion together",
+        "Ignoring assumptions to save time",
+        "Using the same test for every scenario"
+      ],
+      "answer": "Practicing parameter identification, condition checks, calculation, and contextual conclusion together",
+      "explanation": "Free-response success depends on choosing the correct procedure and communicating assumptions, work, and conclusion."
     }
   ],
   "questions": [

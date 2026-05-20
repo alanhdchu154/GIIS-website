@@ -1,13 +1,35 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-20 Slot B 5am（AP Bio M8 surgical narration patch + round-2 Reviewer C verdict `minor`；發現 M4/M5/M6 已上 YouTube，patch unsafe — WHY.md 加上 BROADCAST CONSTRAINT 說明，留給人類決定 re-record vs description errata）
+> 最後更新：2026-05-20 Slot C11（Transcript frontend restored exactly to 2026-05-12 snapshot；server package date behavior aligned；not resent yet）
 >
-> 前次：2026-05-20 Slot B2（Pathway audit 升級 module outline rubric：可檢查 objectives 是否可評量、assignment 是否夠厚；目前 57 pass / 34 warn / 2 fail）
+> 前次：2026-05-20 Slot C10（Server transcript package moved closer to exact 2026-05-10 inline PDF settings；seal/signature block uses same filter/layout；not resent yet）
 >
-> 前前次：2026-05-20 Slot B（Pathway/course quality audit：93 門課掃描；新增 public pathway academic evidence panel；找出 AP CSA / AP Calc AB 無 quiz/exam 題庫的 P0 缺口）
+> 前次：2026-05-20 Slot C9（Transcript package verified against 2026-05-10 git source；server PDF scale tuned to 0.97；all senior transcripts remain one page；not resent yet）
 >
-> 前前前次：2026-05-20 Slot A 04:12Z（AP Biology M4-M9 retroactive review cascade — 6 modules × 3 reviewers 平行；18 個 review JSON 全部寫入；4 個 module 拿到 Reviewer C critical 並寫入 `_review_failed/<slug>/WHY.md` 等人類 surgical narration 修正）
-> 前前前次：2026-05-19 Later 10（AP Biology M10 V2 pilot：短段落、單概念 slides、三類 reviewer artifacts、靜音 timing MP4、audit score 99）
+> 前次：2026-05-20 Slot C8（Graduation PDF generator re-aligned to Admin diploma visual source；transcripts forced back to one-page package；not resent yet）
+>
+> 前次：2026-05-20 Slot C7（Corrected graduation PDF generator to match Admin/frontend formats；transcript one-page layout restored, transcript date uses export date；not resent yet）
+>
+> 前次：2026-05-20 Slot C6（Graduation transcript+diploma PDF packages generated and emailed；五位 senior 每人 transcript PDF + diploma PDF 附件已寄校長 CC Alan）
+>
+> 前次：2026-05-20 Slot C5（Transcript/diploma/credit consistency hardening；修 Hanxi current-course credit mismatch、鎖住 student-side transcript writes、修 future graduation verification、標出 import-only transcript rows）
+>
+> 前次：2026-05-20 Slot C4（Class of 2026 senior records audit + graduation issuance email dry-run；修正 G12 Spring A- Learn Portal score sync）
+>
+> 前前次：2026-05-20 Slot C3（Florida private-school graduation rules recheck；移除 GIIS diploma hard requirement 裡的 PE/Health 與 World Languages，改為 online-school appropriate 24-credit framework）
+>
+> 前前前次：2026-05-20 Slot C2（Answer key normalization + graduation eligibility audit；發現 Admin 24-credit eligibility 與公開 handbook subject-distribution eligibility 不一致）
+>
+> 前前前次：2026-05-20 Slot C（Course assessment QA gate + AP CSA/AP Calc 題庫補齊 + grading answer-key compatibility；`npm run audit:pathways` 現在 48 pass / 45 warn / 0 fail）
+>
+> 前前次：2026-05-20 Slot B 5am（AP Bio M8 surgical narration patch + round-2 Reviewer C verdict `minor`；發現 M4/M5/M6 已上 YouTube，patch unsafe — WHY.md 加上 BROADCAST CONSTRAINT 說明，留給人類決定 re-record vs description errata）
+>
+> 前前前次：2026-05-20 Slot B2（Pathway audit 升級 module outline rubric：可檢查 objectives 是否可評量、assignment 是否夠厚；目前 57 pass / 34 warn / 2 fail）
+>
+> 前前前前次：2026-05-20 Slot B（Pathway/course quality audit：93 門課掃描；新增 public pathway academic evidence panel；找出 AP CSA / AP Calc AB 無 quiz/exam 題庫的 P0 缺口）
+>
+> 前前前前次：2026-05-20 Slot A 04:12Z（AP Biology M4-M9 retroactive review cascade — 6 modules × 3 reviewers 平行；18 個 review JSON 全部寫入；4 個 module 拿到 Reviewer C critical 並寫入 `_review_failed/<slug>/WHY.md` 等人類 surgical narration 修正）
+> 前前前前次：2026-05-19 Later 10（AP Biology M10 V2 pilot：短段落、單概念 slides、三類 reviewer artifacts、靜音 timing MP4、audit score 99）
 > **核心目標：讓家長願意付錢，並且持續付錢。**
 >
 > 這份 roadmap 是給 **Claude Code CLI（code mode）** 的工作清單。
@@ -53,6 +75,140 @@
 - ✅ **新 baseline**：`npm run audit:pathways` 結果為 57 pass / 34 warn / 2 fail。fail 仍是 AP CSA / AP Calc AB 無題庫；warn 變多是因為 rubric 更嚴格，抓出 outline quality 問題。
 - 🔎 **高標準判斷**：整體 course sequence 有真學校雛形；最佳的一批是 Business / Social Studies / Psychology 多數 electives，module + quiz + assignment chain 比較完整。較弱的是 core Biology、English I Writing Focus、World History、Algebra I、部分 English IV variants：它們不是不能用，而是 objectives/assignments 太像 topic list，缺少可被家長/審核員看懂的「學生做了什麼」證據。
 - 🔧 **下一個內容修補順序**：先補 AP CSA / AP Calc 題庫（P0），再 surgical upgrade Biology + English I Writing Focus + World History 的 weak objectives / thin assignments（P1），最後調整 1-credit electives estimated hours 或改成 0.5-credit positioning（P2）。
+
+### ✅ Assessment bank QA gate + P0 assessment repairs（2026-05-20 Slot C）
+
+> 目標：家長付錢後，學生進 Learn Portal 不能遇到「有課沒有 quiz / midterm / final」或「答對被系統判錯」這種直接毀信任的問題。
+
+- ✅ **使用 skills**：`data:validate-data` 用來把 course audit 當資料品質驗證，不只看數量；`engineering:testing-strategy` 用來把 module quiz / midterm / final 變成可重跑的 acceptance gate；`engineering:tech-debt` 用於排定 P0/P1/P2。
+- ✅ **AP CSA / AP Calculus AB P0 補齊**：新增 `tools/pathway-quality/fill_ap_assessments.js`，為 `ap-computer-science-a` 與 `ap-calculus-ab` 各補 42 題 module quiz（14 modules × 3）、15 題 midterm、20 題 final。兩門課從 fail 降為 warn。
+- ✅ **Audit gate 升級到題目層級**：`tools/pathway-quality/audit_courses.js` 現在檢查每個 module 是否至少 3 題 quiz、midterm/final 題數、question/answer/options/explanation 基本完整性、A/B/C/D answer-key compatibility、open-response answer 異常。
+- ✅ **修 Learn Portal 判分相容性**：`server/src/routes/enrollments.js` 現在同時接受完整選項文字與 `A/B/C/D` answer key；舊 course JSON 用 `"answer": "B"` 時，學生選第二個 option 不會再被錯判錯。
+- ✅ **清掉所有 fail**：新增 `tools/pathway-quality/repair_assessment_quality.js`，修 5 門課的壞 answer key / missing short-answer model answers，並補 AP Biology、AP Human Geography、AP Psychology、AP Statistics 的 modules 15-16 quiz coverage。最新 `npm run audit:pathways`：93 門課 = 48 pass / 45 warn / 0 fail。
+- ✅ **驗證**：所有 course JSON parse OK；`node --check` 通過；`npm run audit:pathways` 通過；`npm run build` 通過；`cd server && npm test -- --runInBand` 通過。
+- 🔧 **下一個 P1**：45 個 warn 不是 blocker，但要逐步清。優先順序：Biology、English I Writing Focus、World History 的 weak objectives / thin assignments；再處理 open-response 題目 answer 看起來像 option key 的 legacy generated content；最後調整 low estimated hours 的 1-credit electives。
+
+### ✅ Answer-key normalization + graduation eligibility audit（2026-05-20 Slot C2）
+
+> 目標：把 Alan 指出的「`answer: "B"` 聽起來怪」拆清楚：題庫 source-of-truth 不應長期存 option key；runtime compatibility 只能當舊 DB 防護。同時用公開 graduation requirements 檢查 Class of 2026 到底誰可畢業。
+
+- ✅ **題庫 source 正規化**：新增並執行 `tools/pathway-quality/normalize_answer_keys.js`；把 14 個 course JSON 中 684 題有 options 的 `answer: "A/B/C/D"` 轉成完整選項文字。最新檢查：`letterAnswersWithOptions=0`。
+- ✅ **保留 runtime fallback 的原因**：`server/src/routes/enrollments.js` 仍接受 `A/B/C/D`，但定位是「保護已 seed / 已存在 DB 內的舊資料」，不是鼓勵新題庫使用 letter key。新 course JSON 應以完整答案文字為準。
+- ⚠️ **真正壞題仍存在但已被 audit 標 warn**：136 題 `options: null` 但 `answer: "B/C"` 的 fill/open-response legacy generated questions。這不是判分相容問題，是內容品質問題；下輪應重寫成真正 short-answer / fill answer。
+- ✅ **新增 graduation audit**：`tools/graduation/audit_seed_graduation.js` + `npm run audit:graduation`，用 `server/prisma/seed.js` 的 transcript source-of-truth 檢查 2026 屆 5 位學生。
+- ⚠️ **重大發現**：Admin Transcript 畫面目前只用 `>=24 credits` 解鎖 Mark as Graduated；但公開 `Handbook` / `SchoolProfile` 寫的是 24-credit subject distribution（含 World Languages 2 credits、PE/Health 1 credit）。照 Admin credits-only，5 位 seed senior 都 eligible；照公開 subject distribution，5 位都 not eligible，因為 transcript 沒有 World Languages；Ruwen / Baoyi / Hanxi 另缺 PE/Health。
+- 🔧 **下一個 P0**：決定 GIIS 真正畢業規則。若採 Florida-style 24-credit + 8.5 electives、無 world language requirement，要同步改 `Handbook` / `SchoolProfile` / audit；若保留 World Languages 2 credits，必須補 transfer-credit rows 或新增語言課程到學生 transcript，並把 Admin eligibility 改成 distribution-based。
+- ✅ **驗證**：`npm run audit:graduation`、`npm run audit:pathways`、`npm run build`、`cd server && npm test -- --runInBand` 全部通過。
+
+### ✅ GIIS online-school graduation framework cleanup（2026-05-20 Slot C3）
+
+> 目標：把公開畢業規則改回真實、可營運、適合 online school 的版本；避免把 Florida public-school PE requirement 或 college-admission world-language recommendation 誤寫成 GIIS diploma hard requirement。
+
+- ✅ **重新查官方資料**：Florida DOE private-school general requirements 明確說 DOE 不管 private school 的 curriculum、academic credits、grades、graduation/promotion requirements；這些由 private school owner 負責。Florida Statute 1002.42 的重點是 registration / annual survey / owner fingerprints / records / attendance / health and immunization / safety，不是 subject-by-subject graduation table。
+- ✅ **釐清 public standard**：Florida public high school standard diploma 在 1003.4282 有 24-credit distribution，含 PE；private school 要讓家長知道 public high school requirements，但不是被要求採用同一套。
+- ✅ **移除 GIIS PE hard requirement**：`HandbookPage.js`、`SchoolProfilePage.js`、`CourseCatalog.js` 不再把 PE/Health 寫成畢業必修；Health/PE 留作 optional wellness electives。
+- ✅ **移除 World Languages hard requirement**：World Languages 改為 selective college recommendation，不列為 GIIS diploma 門檻。這避免 2026 屆 senior 因沒有外語課被錯判不 eligible。
+- ✅ **新 GIIS 24-credit framework**：English 4、Math 4、Science 3、Social Studies 3、Pathway / college-prep / arts / technology / personal finance / free electives 10。Total = 24。
+- ✅ **Audit 更新**：`npm run audit:graduation` 現在 5 位 seed senior 都是 `giis=eligible`，並會提示 world language 是 college recommendation 而非 diploma requirement。
+- ✅ **驗證**：`npm run audit:graduation` 通過；`npm run build` 通過；`cd server && npm test -- --runInBand` 通過。
+- 🔧 **下一個 P0**：Admin 畢業 UI 目前只顯示 credits-only eligible。建議下一步把 `audit:graduation` 的 distribution logic 抽成 shared helper，讓 Admin Transcript 頁同時顯示 subject breakdown + college recommendation note。
+
+### ✅ Class of 2026 senior records audit + graduation issuance dry-run（2026-05-20 Slot C4）
+
+> 目標：在寄給校長要求成績單與畢業證書前，先用可重跑 gate 檢查五位可畢業學生的 transcript、semester grades、G12 Spring Learn Portal completion、quiz/midterm/final score sync。
+
+- ✅ **新增 senior records audit**：`tools/graduation/audit_senior_records.js` + `npm run audit:seniors`，靜態檢查 `server/prisma/seed.js` 與 course JSON，不依賴本機 DB 是否啟動。
+- ✅ **稽核範圍**：確認五位 2026 senior 都有 8 個學期、transcript date、graduation date、所有 course rows 有 credits / letter grade / GPA、總學分 ≥24、G12 Spring transcript rows 有 release gate、G12 Spring Learn Portal progress 有全 module quiz + midterm + final exam。
+- ✅ **修正 score sync bug**：G12 Spring 幾門 A- 課程原本 seed 成 `quizScore=90`、`examScore=89`，照 Learn Portal 加權會算 89.4 = B+；已改成 `examScore=90`，讓 Learn Portal 計算結果與 transcript A- 一致。
+- ✅ **Audit 結果**：`npm run audit:seniors` 五位全 PASS：Ruwen Li 33 credits、Tao Zhang 32.5 credits、Baoyi Lu 33 credits、Yunfan Yang 31 credits、Hanxi Xiao 33 credits；G12 Spring 全部 releaseDate = 2026-05-22。
+- ✅ **寄信 dry-run script**：新增 `server/scripts/send-graduation-issuance-requests.js`。預設只列出五封信 To/CC/Subject/Audit summary；真正寄送必須加 `--send`，且應等 Alan 明確確認。
+- ✅ **Email template**：`server/src/lib/mailer.js` 新增 `sendGraduationIssuanceRequest()`，每封信給 `shiyu.zhang@genesisideas.school`，CC `alanhdchu@genesisideas.school` + `admissions@genesisideas.school`，內容請校長 review / prepare official transcript + diploma package。
+- ✅ **已寄出畢業文件通知信**：Alan 於 2026-05-20 明確確認後，已執行 `GRADUATION_REQUEST_CC=alanhdchu@genesisideas.school node scripts/send-graduation-issuance-requests.js --send`，五封分開寄給 `shiyu.zhang@genesisideas.school`，CC Alan。Resend ids：Ruwen `66a2c5ed-7c87-42d0-a79e-f761612ab678`；Tao `a04fd023-c2d5-4972-96f0-78f5ea17d3e6`；Baoyi `fbc4babd-7aff-42f9-9ad6-0a3b84c14fba`；Yunfan `15b9b6c7-de6f-46b7-8c1b-7d84c71557e4`；Hanxi `aeddad8c-ba58-46b7-b6f8-47db80531538`。
+- ✅ **驗證**：`npm run audit:graduation` 通過；`npm run audit:seniors` 通過；`node server/scripts/send-graduation-issuance-requests.js` dry-run 通過；`cd server && npm test -- --runInBand` 通過；`npm run build` 通過。
+
+### ✅ Transcript / diploma consistency hardening（2026-05-20 Slot C5）
+
+> 目標：回應 Alan 對 hardcoded / imported transcript rows 的擔心。結論：第一年有 transfer/import transcript source-of-truth 可以接受；真正要防的是學生端可寫 transcript、future graduation 被 verify 成已畢業、以及 Admin 保存 transcript 時把 release gate 洗掉。
+
+- ✅ **更嚴格 senior audit**：`npm run audit:seniors` 現在也檢查 diploma/verification source fields（studentCode、graduationDate、transcriptDate），並把「historical transcript/import-only course names 不完全 match current catalog」標成 warning。
+- ✅ **目前資料判斷**：五位 senior 仍全 PASS。Ruwen/Tao/Baoyi 沒有 credit/catalog warning；Yunfan 有 2 筆 historical/import credit variation（Grade 11 Government/Economics 是 0.5，current catalog 是 1），屬歷史轉入/semester-credit 記錄，不是 current Learn Portal row；Hanxi 有 7 筆 historical transcript/import-only rows 不完全 match current catalog（例如 Learning Strategies & Study Skills、Introduction to Sociology、Biology - Human Systems）。
+- ✅ **修 current-course credit mismatch**：Hanxi 的 G12 Spring `Behavioral Science` / `Social Psychology` 是現行 Learn Portal 課，catalog 都是 0.5 credit，但 transcript 原本寫 1 credit；已修為 0.5 + 0.5。Hanxi 總學分從 33 改為 32，仍高於 24-credit graduation threshold。
+- ✅ **Audit gate 加 credit rule**：`npm run audit:seniors` 現在會把 G12 Spring current-course credit 與 catalog mismatch 視為 issue；historical/import rows 的 credit mismatch 則標 warning，要求未來用 official revision log 或 source label 解釋。
+- ✅ **鎖住 transcript 寫入權限**：`server/src/routes/students.js` 的 profile PATCH 與 transcript PUT 改為 admin-only。之前雖然前端不給 student save button，但 API 層 student token 仍可能改 transcript；這是直接破壞 official records trust 的漏洞。
+- ✅ **保存 transcript 不再洗掉 release gate**：`PUT /api/students/:id/transcript` 重建 semesters 時會保留同 key 既有 `releaseDate`；避免 Admin 進 edit/save 後把 G12 Spring 的 2026-05-22 release gate 變 null。
+- ✅ **verification 修正 future graduation**：`server/src/routes/verify.js` 不再只看 `graduationDate` 是否存在；只有 graduationDate <= today 才回 `graduated=true`。若是 2026-06-30 這種未來日期，public verification 會回 `graduationScheduled=true`。
+- ✅ **Diploma 頁 admin eligible date 修正**：`DiplomaPage.js` 在 admin 檢視 `/diploma/:studentId` 時改抓 `/api/enrollments/admin/student/:studentId`，避免抓到目前 cookie/session 下面錯誤學生的 enrollment evidence。
+- ✅ **驗證**：`npm run audit:seniors` 通過；`npm run audit:graduation` 通過；graduation issuance dry-run 通過；`cd server && npm test -- --runInBand` 通過；`npm run build` 通過。
+- 🔧 **下一個 P1**：把 transfer/import rows 正式加上 source label（例如 `source=transfer/import/learn_portal/manual_adjustment`）與 optional evidence note，讓 transcript audit trail 可以對外說清楚「哪些是轉入歷史學分，哪些是 GIIS Learn Portal 直接產生」。
+
+### ✅ Graduation transcript + diploma PDF packages sent（2026-05-20 Slot C6）
+
+> 目標：Alan 更正前一封 request-only email 不夠；校長需要收到每位學生的 transcript PDF + diploma PDF 附件。
+
+- ✅ **Mailer 支援附件**：`server/src/lib/mailer.js` 的 `send()` 現在接受 `attachments`，新增 `sendGraduationDocumentPackage()` template。
+- ✅ **PDF package script**：新增 `server/scripts/send-graduation-document-packages.js`，從 `server/prisma/seed.js` 的 senior transcript source-of-truth 產出每位學生兩個 PDF：official transcript（2 pages）與 diploma（1 page）。
+- ✅ **PDF 產出位置**：`server/tmp/graduation-documents/`。已確認 10 個 PDF 都非空；`file` 顯示 transcript 皆為 2 pages、diploma 皆為 1 page。
+- ✅ **正式寄出**：Alan 明確要求後，執行 `GRADUATION_DOCUMENT_CC=alanhdchu@genesisideas.school node scripts/send-graduation-document-packages.js --send`，五封分開寄給 `shiyu.zhang@genesisideas.school`，CC Alan；每封附該學生 transcript PDF + diploma PDF。
+- ✅ **Resend ids**：Ruwen `ed2db01f-7651-4b41-be4f-95dfa581386f`；Tao `4a41f08c-a904-484a-bff1-bec909ea121e`；Baoyi `aeac2a03-7294-4193-8ace-4be15a995c06`；Yunfan `af608897-82c1-428e-8ca9-0349c6271a45`；Hanxi `ec1fc682-94f6-4978-b7f2-b712b89c4f6f`。
+- ⚠️ **Clarification**：前一輪 Slot C4 寄出的是 graduation document issuance request，不含 PDF 附件；Slot C6 才是正確的 PDF attachment package。
+
+### ✅ Corrected graduation PDF generator to Admin/frontend formats（2026-05-20 Slot C7）
+
+> 目標：Alan 指出 Slot C6 附件 PDF 格式不對：server script 用了簡化版模板，沒有以 Admin transcript/diploma download format 為準。
+
+- ✅ **Transcript date 修正**：`src/components/pages/Transcript/transcriptPdf.js` 的正式前端 export 現在 `Transcript Date` 永遠使用 export current date，不再優先使用 profile 裡舊的 `transcriptDate`。
+- ✅ **Server transcript generator 修正**：`server/scripts/send-graduation-document-packages.js` 已改成對齊前端 `transcriptPdf.js` 的 compact one-page transcript style：A4 portrait、兩欄 semester tables、official header、seal/signature block、`Page 1 of 1`。
+- ✅ **Server diploma generator 修正**：同一 script 的 diploma HTML 已改成對齊 `DiplomaPage.js` 的 admin/download style：navy/gold ornate border、大 seal、center diploma text、校長/學生簽名區、official seal、verification line。
+- ✅ **PDF dry-run 已重新產出**：`server/tmp/graduation-documents/` 裡 10 個 PDF 已覆蓋為 corrected version。Python PDF page-count check：五份 transcript 都是 1 page，五份 diploma 都是 1 page。
+- ✅ **驗證**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`node --check server/src/lib/mailer.js` 通過；`npm run audit:seniors` 通過；`npm run build` 通過。
+- ⚠️ **尚未重寄**：Slot C7 只重新產生 corrected PDFs，沒有再次 email，避免在 Alan 看過確認前又寄出錯附件。若 Alan 確認可重寄，執行 `GRADUATION_DOCUMENT_CC=alanhdchu@genesisideas.school node scripts/send-graduation-document-packages.js --send`。
+
+### ✅ Graduation PDF generator re-aligned to Admin diploma visual source（2026-05-20 Slot C8）
+
+> 目標：Alan 再次指出 diploma 仍不像 Admin 線上下載版、transcript 仍不像之前一頁剛好塞下的版型；本輪停止「近似模板」，改把 server PDF 產生器拉近 Admin/前端 source-of-truth。
+
+- ✅ **Diploma 改回 Admin 視覺語言**：`server/scripts/send-graduation-document-packages.js` 現在補上 `DiplomaPage.js` 裡的 premium elements：Google font links、navy/gold frame、guilloche band、四角 ornament、大型 circular school seal、Pinyon/Great Vibes signatures、official seal、verification QR code。
+- ✅ **QR code 不再用純文字代替**：server script 直接用既有 `qrcode.react` + `react-dom/server` render inline SVG，跟前端 QR code 來源一致。
+- ✅ **Transcript package 回到一頁**：server transcript HTML 維持前端 transcript export 的 A4 / 190mm / official header / two-column semester tables / seal+signature block；PDF 輸出時對 transcript 使用 `scale: 0.94`，保證五位 senior 都是 1 page。
+- ✅ **PDF dry-run 已覆蓋重產**：`server/tmp/graduation-documents/` 裡五位 senior 的 transcript + diploma 已重新產生；`file` page-count 顯示五份 transcript 全部 1 page。抽樣 preview：Ruwen transcript / diploma 已 render 成 PNG 檢查版面。
+- ✅ **驗證**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過；`node scripts/send-graduation-document-packages.js` dry-run 通過；`npm run build` 通過。
+- ⚠️ **尚未重寄**：這輪沒有 email。等 Alan 看過確認後，才可執行 `GRADUATION_DOCUMENT_CC=alanhdchu@genesisideas.school node scripts/send-graduation-document-packages.js --send` 重寄五封 PDF 附件信。
+
+### ✅ Transcript package verified against 2026-05-10 git source（2026-05-20 Slot C9）
+
+> 目標：Alan 指出「5/10 左右 git 的 transcript 格式不錯」，本輪明確回到那個 commit 檢查，而不是靠印象調整。
+
+- ✅ **Git source check**：`git log --since='2026-05-08' --until='2026-05-12' -- src/components/pages/Transcript/transcriptPdf.js` 找到 5/10 transcript commits；最終 candidate 是 `0c609abe`（`Transcript: brand color unification, gold accent header`）。
+- ✅ **差異結論**：目前前端 `src/components/pages/Transcript/transcriptPdf.js` 跟 `0c609abe` 幾乎一致；唯一刻意差異是 `Transcript Date` 改為 export current date，符合 Alan 先前要求。
+- ✅ **Server package 修正**：問題不在前端 Admin download，而在 server PDF package 直接 print HTML 時比例和頁高不一致；`server/scripts/send-graduation-document-packages.js` 的 transcript PDF scale 從 `0.94` 調到 `0.97`，更接近 5/10 視覺密度，同時仍保證一頁。
+- ✅ **PDF dry-run 已覆蓋重產**：五位 senior transcript + diploma 已重新產生；`file server/tmp/graduation-documents/*Transcript.pdf` 顯示五份 transcript 全部 1 page。
+- ✅ **Preview 檢查**：已 render `server/tmp/graduation-documents/preview/baoyi-transcript.png` / `hanxi-transcript.png`，長內容 transcript 也能維持單頁且視覺密度接近 5/10。
+- ✅ **驗證**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過。
+- ⚠️ **尚未重寄**：仍未 email。等 Alan 確認 PDF 版型後再重寄五封附件信。
+
+### ✅ Server transcript package moved to 2026-05-10 inline PDF settings（2026-05-20 Slot C10）
+
+> 目標：Alan 強調 official transcript 不能 cosplay，要求「完全一樣的 5/10 版本」，尤其 seal 不要再用近似版。
+
+- ✅ **5/10 source 再確認**：`0c609abe:src/components/pages/Transcript/transcriptPdf.js` 的 seal/signature block 使用 72px official seal、`grayscale(100%) opacity(0.42) contrast(110%) brightness(130%)` + double drop-shadow filter、25/15/60 seal/signature layout。
+- ✅ **Server HTML 修正**：`server/scripts/send-graduation-document-packages.js` 不再只靠 class-based table CSS；semester tables 改成 5/10 前端 export 的 inline-style pattern（colgroup 44/10/8/8/15/15、header/body/totals inline styles）。
+- ✅ **5/10 spacing/color 補齊**：server transcript header ratio、top rule spacing、watermark opacity、school-name margin 等回到 5/10 設定；seal/signature block 使用同一 filter/layout。
+- ✅ **PDF dry-run 已覆蓋重產**：五位 senior transcript + diploma 已重新產生；五份 transcript 全部仍是 1 page。
+- ✅ **Preview 檢查**：新增 `server/tmp/graduation-documents/preview/baoyi-transcript-v510.png` / `ruwen-transcript-v510.png` 作為本輪 visual QA。
+- ✅ **驗證**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過。
+- ⚠️ **尚未重寄**：仍未 email。等 Alan 確認後再重寄五封附件信。
+
+### ✅ Transcript frontend restored exactly to 2026-05-12 snapshot（2026-05-20 Slot C11）
+
+> 目標：Alan 明確要求「看 5/12 版本，直接用那時候的 code」，不要再只做近似調整。
+
+- ✅ **5/12 snapshot 定位**：`git rev-list -1 --before='2026-05-12 23:59:59 -0500' HEAD` 得到 `86bc3369`；5/12 當天沒有 transcript 新 commit，該 snapshot 的 transcript source 來自 5/10 `0c609abe`。
+- ✅ **前端 code 完全對齊**：`src/components/pages/Transcript/transcriptPdf.js` 已恢復到 `86bc3369:src/components/pages/Transcript/transcriptPdf.js`；`git diff 86bc3369 -- src/components/pages/Transcript/transcriptPdf.js` 現在為空。
+- ✅ **日期行為同步回 5/12**：5/12 code 是「有 profile transcriptDate 就用 transcriptDate，沒有才用 exportToday」；因此撤回 Slot C7 的 always-current-date 改動。這是 Alan 最新「完全用 5/12 code」要求的結果。
+- ✅ **Server package 日期同步**：`server/scripts/send-graduation-document-packages.js` 產生 transcript 時也改為優先使用 seed/profile `transcriptDate`，避免寄出的 PDF 跟 Admin frontend download 行為不同。
+- ✅ **PDF dry-run 已覆蓋重產**：五位 senior transcript + diploma 已重新產生；五份 transcript 全部仍是 1 page。Baoyi preview：`server/tmp/graduation-documents/preview/baoyi-transcript-512.png`。
+- ✅ **驗證**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過；`npm run build` 通過。
+- ⚠️ **尚未重寄**：仍未 email。等 Alan 確認 5/12 版型與日期行為後再重寄五封附件信。
 
 ---
 

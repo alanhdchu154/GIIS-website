@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// Florida 24-credit graduation framework (industry standard for Florida-registered private schools)
+// GIIS 24-credit graduation framework for a Florida-registered private school.
+// Florida DOE does not prescribe private-school graduation subject distribution;
+// this framework is college-preparatory and online-school appropriate.
 const GRAD_REQUIREMENTS = [
   { area: 'English Language Arts', areaZh: '英语语言艺术', credits: 4,   color: '#2b3d6d' },
   { area: 'Mathematics',           areaZh: '数学',         credits: 4,   color: '#1a5276' },
   { area: 'Science',               areaZh: '自然科学',     credits: 3,   color: '#1e8449' },
   { area: 'Social Studies',        areaZh: '社会科学',     credits: 3,   color: '#7a3b3b' },
-  { area: 'Health & PE',           areaZh: '健康体育',     credits: 1,   color: '#6c757d' },
-  { area: 'Electives',             areaZh: '选修课程',     credits: 8.5, color: '#5b2c6f' },
-  { area: 'Personal Finance',      areaZh: '个人理财',     credits: 0.5, color: '#555' },
+  { area: 'Pathway & Electives',   areaZh: '方向与选修',   credits: 10,  color: '#5b2c6f' },
 ];
 const TOTAL_CREDITS = 24;
 
@@ -795,16 +795,16 @@ const DEPARTMENTS = [
   {
     id: 'pe',
     label: { en: 'Health & Physical Education', zh: '健康与体育' },
-    required: { en: '1 credit required', zh: '必修 1 学分' },
+    required: { en: 'Optional wellness electives', zh: '健康与运动选修' },
     color: '#5a6e3f',
     note: {
-      en: 'Florida requires 1 credit in Physical Education with integrated health content. Students with an interest in sports or wellness may take additional electives in this area.',
-      zh: 'Florida 要求修习 1 学分体育（含健康教育）。有兴趣的学生可进一步选修运动心理、运动管理等选修课。',
+      en: 'Because GIIS is an online school, Physical Education is not a GIIS diploma requirement. Students with an interest in sports, health, or wellness may take electives in this area.',
+      zh: '由于 GIIS 是线上学校，体育不列为 GIIS 文凭硬性要求。对运动、健康或健康管理有兴趣的学生可选修本领域课程。',
     },
     courses: [
-      { name: 'Physical Education',             type: 'Core',    credits: '0.5', grade: '9',  term: 'Fall' },
-      { name: 'Health & Wellness',              type: 'Core',    credits: '0.5', grade: '9',  term: 'Spring' },
-      { name: 'Health and Nutrition',           type: 'Core',    credits: '0.5', grade: '9',  term: 'Spring' },
+      { name: 'Physical Education',             type: 'Elective', credits: '0.5', grade: '9',  term: 'Fall' },
+      { name: 'Health & Wellness',              type: 'Elective', credits: '0.5', grade: '9',  term: 'Spring' },
+      { name: 'Health and Nutrition',           type: 'Elective', credits: '0.5', grade: '9',  term: 'Spring' },
       { name: 'Sports Psychology',              type: 'Elective', credits: '0.5', grade: '10', term: 'Fall' },
       { name: 'Fitness Leadership',             type: 'Elective', credits: '0.5', grade: '11', term: 'Fall' },
       { name: 'Athletic Training',              type: 'Elective', credits: '0.5', grade: '12', term: 'Fall' },

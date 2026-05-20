@@ -102,10 +102,7 @@ const GRAD_REQS = [
   { subject: 'Mathematics', credits: 4 },
   { subject: 'Sciences', credits: 3 },
   { subject: 'Social Studies', credits: 3 },
-  { subject: 'World Languages', credits: 2 },
-  { subject: 'Arts or Electives', credits: 2 },
-  { subject: 'Physical Education / Health', credits: 1 },
-  { subject: 'Electives', credits: 5 },
+  { subject: 'Pathway, College-Prep, Arts, Technology, Personal Finance, and Free Electives', credits: 10 },
 ];
 
 const GOLD = '#b8962e';
@@ -424,7 +421,8 @@ function ProfileDocument() {
           <div style={s.sectionTitle}>Graduation Requirements</div>
           <div style={{ ...s.body, marginBottom: '6px' }}>
             Students must earn a minimum of <strong>24 credits</strong> to qualify for a
-            High School Diploma. The following distribution is required:
+            GIIS High School Diploma. As a Florida-registered private school, GIIS sets
+            its own college-preparatory graduation framework:
           </div>
           <table style={s.table}>
             <thead>
@@ -448,6 +446,11 @@ function ProfileDocument() {
               </tr>
             </tbody>
           </table>
+          <div style={{ ...s.body, marginTop: '8px', fontSize: '10px' }}>
+            Physical Education is not required for the GIIS online diploma. World language
+            study is recommended for students targeting selective universities, but it is not
+            a GIIS diploma requirement.
+          </div>
 
           <div style={{ marginTop: '10px' }}>
             <div style={s.sectionTitle}>Assessment Structure</div>

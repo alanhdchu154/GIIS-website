@@ -13,6 +13,33 @@ const W_QUIZ = 0.40;
 const W_MID  = 0.30;
 const W_FINAL = 0.30;
 
+function normalizeAnswer(value) {
+  return String(value ?? '').trim().toLowerCase();
+}
+
+function answerVariants(question) {
+  const answer = String(question.answer || '').trim();
+  const variants = new Set([normalizeAnswer(answer)]);
+  const letterIndex = /^[A-D]$/i.test(answer) ? answer.toUpperCase().charCodeAt(0) - 65 : -1;
+  if (letterIndex >= 0 && Array.isArray(question.options) && question.options[letterIndex]) {
+    variants.add(normalizeAnswer(question.options[letterIndex]));
+  }
+  return variants;
+}
+
+function isCorrectAnswer(question, given) {
+  return answerVariants(question).has(normalizeAnswer(given));
+}
+
+function displayAnswer(question) {
+  const answer = String(question.answer || '').trim();
+  const letterIndex = /^[A-D]$/i.test(answer) ? answer.toUpperCase().charCodeAt(0) - 65 : -1;
+  if (letterIndex >= 0 && Array.isArray(question.options) && question.options[letterIndex]) {
+    return question.options[letterIndex];
+  }
+  return answer;
+}
+
 const MODULE_PROGRESS_FIELDS = new Set([
   'readingCompletedAt',
   'videoCompletedAt',
@@ -447,9 +474,8 @@ router.get('/:slug/exam/review', authenticate, requireStudent, async (req, res) 
   });
 
   const graded = questions.map((q) => {
-    const given = (attempt.answers?.[q.id] ?? '').toString().trim().toLowerCase();
-    const correct = given === q.answer.trim().toLowerCase();
-    return { questionId: q.id, correct, yourAnswer: attempt.answers?.[q.id] || null, correctAnswer: q.answer, explanation: q.explanation };
+    const correct = isCorrectAnswer(q, attempt.answers?.[q.id]);
+    return { questionId: q.id, correct, yourAnswer: attempt.answers?.[q.id] || null, correctAnswer: displayAnswer(q), explanation: q.explanation };
   });
 
   res.json({ examType, score: Number(attempt.score), passed: attempt.passed, submittedAt: attempt.submittedAt, questions, graded });
@@ -513,10 +539,9 @@ router.post('/:slug/quiz/:moduleOrder/submit', authenticate, requireStudent, blo
   let earned = 0, total = 0;
   const graded = questions.map((q) => {
     total += q.points;
-    const given = (answers[q.id] ?? '').toString().trim().toLowerCase();
-    const correct = given === q.answer.trim().toLowerCase();
+    const correct = isCorrectAnswer(q, answers[q.id]);
     if (correct) earned += q.points;
-    return { questionId: q.id, correct, correctAnswer: q.answer, explanation: q.explanation };
+    return { questionId: q.id, correct, correctAnswer: displayAnswer(q), explanation: q.explanation };
   });
 
   const score = total > 0 ? (earned / total) * 100 : 0;
@@ -652,10 +677,9 @@ router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, block
   let earned = 0, total = 0;
   const graded = questions.map((q) => {
     total += q.points;
-    const given = (answers[q.id] ?? '').toString().trim().toLowerCase();
-    const correct = given === q.answer.trim().toLowerCase();
+    const correct = isCorrectAnswer(q, answers[q.id]);
     if (correct) earned += q.points;
-    return { questionId: q.id, correct, correctAnswer: q.answer, explanation: q.explanation };
+    return { questionId: q.id, correct, correctAnswer: displayAnswer(q), explanation: q.explanation };
   });
 
   const score = total > 0 ? (earned / total) * 100 : 0;

@@ -76,7 +76,7 @@ export default function VerifyPage() {
                 {[
                   ['Student Name', data.name],
                   ['Student ID', data.studentCode],
-                  ['Status', data.graduated ? '✓ Graduated' : 'Active Student'],
+                  ['Status', data.graduated ? '✓ Graduated' : (data.graduationScheduled ? 'Graduation Scheduled' : 'Active Student')],
                   ...(data.graduationDate ? [['Graduation Date', new Date(data.graduationDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })]] : []),
                   ...(data.transcriptDate ? [['Document Date', new Date(data.transcriptDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })]] : []),
                   ['Issuing Institution', 'Genesis of Ideas International School'],
@@ -84,7 +84,7 @@ export default function VerifyPage() {
                 ].map(([label, value]) => (
                   <div key={label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', paddingBottom: 12, borderBottom: '1px solid #f0f2f8' }}>
                     <span style={{ fontSize: 12, color: '#9aa0ad', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', flexShrink: 0, marginRight: 12 }}>{label}</span>
-                    <span style={{ fontSize: 13, fontWeight: data.graduated && label === 'Status' ? 700 : 400, textAlign: 'right', color: data.graduated && label === 'Status' ? '#2e7d32' : '#1a1d24' }}>{value}</span>
+                    <span style={{ fontSize: 13, fontWeight: (data.graduated || data.graduationScheduled) && label === 'Status' ? 700 : 400, textAlign: 'right', color: data.graduated && label === 'Status' ? '#2e7d32' : '#1a1d24' }}>{value}</span>
                   </div>
                 ))}
               </div>

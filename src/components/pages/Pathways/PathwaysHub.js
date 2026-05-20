@@ -165,6 +165,34 @@ function PathwayCard({ p, isEn }) {
   );
 }
 
+function StandardsStrip({ isEn }) {
+  const items = isEn
+    ? [
+        { label: 'Credit plan', value: '8 semesters', body: 'Each pathway is framed as a four-year course sequence, not a loose list of electives.' },
+        { label: 'Evidence', value: 'Learn Portal', body: 'Courses use module quizzes, exams, assignments, and activity timestamps that parents can review.' },
+        { label: 'Outcome', value: 'Capstone', body: 'Senior-year projects create visible work for advising, portfolios, or college application narratives.' },
+      ]
+    : [
+        { label: '学分规划', value: '8 个学期', body: '每条路径都是四年课程序列，不是零散选修课清单。' },
+        { label: '学习证据', value: '学习系统', body: '课程包含章节测验、考试、作业与学习时间记录，家长可查看。' },
+        { label: '成果导向', value: '毕业项目', body: '高年级专题项目可用于升学辅导、作品集或申请故事。' },
+      ];
+
+  return (
+    <div style={{ background: '#fff', borderBottom: '1px solid #e6eaf2', fontFamily: 'Inter, sans-serif' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '24px 10%', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 14 }}>
+        {items.map((item) => (
+          <div key={item.label} style={{ border: '1px solid #e6eaf2', borderRadius: 8, padding: '16px 18px', background: '#fbfcff' }}>
+            <p style={{ margin: '0 0 5px', fontSize: 10, letterSpacing: '1px', textTransform: 'uppercase', fontWeight: 800, color: '#2b3d6d' }}>{item.label}</p>
+            <p style={{ margin: '0 0 6px', fontSize: 20, fontWeight: 850, color: '#1a1a2e' }}>{item.value}</p>
+            <p style={{ margin: 0, fontSize: 12, lineHeight: 1.55, color: '#5c6578' }}>{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function PathwaysHub({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
 
@@ -211,6 +239,8 @@ export default function PathwaysHub({ language, toggleLanguage }) {
           ))}
         </div>
       </div>
+
+      <StandardsStrip isEn={isEn} />
 
       {/* Categories */}
       <div style={{ background: '#f4f6fb', fontFamily: 'Inter, sans-serif' }}>

@@ -276,7 +276,7 @@
         "Nominal location",
         "Spatial location"
       ],
-      "answer": "B",
+      "answer": "Relative location",
       "explanation": "Relative location describes where a place is in relation to other places, as opposed to absolute location, which uses coordinates like latitude and longitude.",
       "points": 1
     },
@@ -290,7 +290,7 @@
         "Area (size)",
         "Color"
       ],
-      "answer": "C",
+      "answer": "Area (size)",
       "explanation": "The Mercator projection preserves shape (conformal) but greatly exaggerates the size of land masses near the poles — making Greenland appear as large as Africa, when Africa is actually 14 times larger.",
       "points": 1
     },
@@ -325,7 +325,7 @@
         "Number of farmers divided by farmland area",
         "Urban population divided by city area"
       ],
-      "answer": "A",
+      "answer": "Total population divided by total land area",
       "explanation": "Arithmetic (crude) density = total population ÷ total land area, giving an overall average that doesn't account for how much land is actually habitable or farmable.",
       "points": 1
     },
@@ -339,7 +339,7 @@
         "Egypt has equal population distribution across its territory",
         "Egypt lacks the data needed for arithmetic density"
       ],
-      "answer": "B",
+      "answer": "Egypt's population is almost entirely concentrated on the small fraction of arable land along the Nile",
       "explanation": "Egypt's vast desert means almost all of its population lives in the Nile valley and delta — physiological density (population per arable land) reveals the extreme pressure on that small productive zone.",
       "points": 1
     },
@@ -353,7 +353,7 @@
         "It is the only habitable region in East Asia",
         "It became densely populated only in the 20th century due to industrialization"
       ],
-      "answer": "B",
+      "answer": "It has fertile soils, flat terrain, adequate rainfall, and a long history of agricultural civilization",
       "explanation": "The North China Plain's fertile yellow river soils, flat land, monsoon rainfall, and thousands of years of agricultural history have made it one of the most productive and densely settled areas on Earth.",
       "points": 1
     },
@@ -379,7 +379,7 @@
         "Both birth rates and death rates fall simultaneously",
         "Immigration dramatically increases the population"
       ],
-      "answer": "B",
+      "answer": "Death rates fall while birth rates remain high",
       "explanation": "Stage 2 is characterized by improving medicine and sanitation that reduce death rates, while birth rates remain high due to continued cultural norms — resulting in rapid natural increase.",
       "points": 1
     },
@@ -393,7 +393,7 @@
         "2.1 children per woman",
         "3.0 children per woman"
       ],
-      "answer": "C",
+      "answer": "2.1 children per woman",
       "explanation": "Replacement fertility is approximately 2.1 children per woman in developed countries (slightly higher in developing countries due to higher child mortality), accounting for child mortality before reproductive age.",
       "points": 1
     },
@@ -407,7 +407,7 @@
         "Better schools in the receiving country",
         "Family reunification opportunities abroad"
       ],
-      "answer": "B",
+      "answer": "Political violence and civil war in the home country",
       "explanation": "Push factors are negative conditions in the origin location that drive people to leave — political violence, war, famine, persecution, and poverty are classic push factors.",
       "points": 1
     },
@@ -430,7 +430,7 @@
         "The center of a country's political power",
         "A region where multiple cultures are in conflict"
       ],
-      "answer": "B",
+      "answer": "The geographic origin point from which a cultural trait or practice spread",
       "explanation": "The hearth is the place of origin of a cultural trait, practice, idea, or innovation, from which it subsequently diffuses outward.",
       "points": 1
     },
@@ -444,7 +444,7 @@
         "Hierarchical diffusion",
         "Stimulus diffusion"
       ],
-      "answer": "C",
+      "answer": "Hierarchical diffusion",
       "explanation": "Hierarchical diffusion spreads through an ordered sequence — typically from large cities to smaller cities to rural areas — rather than spreading equally in all directions from person to person.",
       "points": 1
     },
@@ -458,7 +458,7 @@
         "The extinction of minority languages due to forced assimilation",
         "The spread of religions through military conquest"
       ],
-      "answer": "B",
+      "answer": "Cultures becoming more similar as they adopt shared practices, media, and consumer goods",
       "explanation": "Cultural convergence describes how globalization — through media, trade, and migration — leads to shared cultural practices (English as lingua franca, global fast food, Hollywood films) across diverse societies.",
       "points": 1
     },
@@ -472,7 +472,7 @@
         "Relocation diffusion",
         "Stimulus diffusion"
       ],
-      "answer": "C",
+      "answer": "Relocation diffusion",
       "explanation": "Relocation diffusion occurs when people physically move to a new area and bring their cultural practices with them — e.g., Mexican immigrants bringing quinceañera traditions to the United States.",
       "points": 1
     },
@@ -486,7 +486,7 @@
         "Is negotiated based on ethnic distribution",
         "Is defined by ocean coastlines"
       ],
-      "answer": "B",
+      "answer": "Follows lines of latitude or longitude regardless of physical or cultural features",
       "explanation": "Geometric boundaries are straight lines drawn along latitude/longitude or at regular angles — common in Africa and the American West — often ignoring physical terrain and cultural settlement patterns.",
       "points": 1
     },
@@ -500,7 +500,7 @@
         "Create ethnic conflict within state borders",
         "Lead to territorial expansion and imperialism"
       ],
-      "answer": "B",
+      "answer": "Unify and bind people together, strengthening national identity and political cohesion",
       "explanation": "Centripetal forces — like shared language, national identity, religious unity, or strong institutions — hold a state together, as opposed to centrifugal forces that pull it apart.",
       "points": 1
     },
@@ -538,7 +538,7 @@
         "Commercial farmers grow food for their own families",
         "Subsistence farming is more common in temperate climates"
       ],
-      "answer": "B",
+      "answer": "Subsistence farmers grow food primarily for their own consumption rather than for sale in markets",
       "explanation": "Subsistence farmers grow food to feed themselves and their families, with little or no surplus for markets; commercial farmers produce crops specifically for sale in national or global markets.",
       "points": 1
     },
@@ -552,7 +552,7 @@
         "Dairy products and market vegetables",
         "Forestry for timber"
       ],
-      "answer": "C",
+      "answer": "Dairy products and market vegetables",
       "explanation": "Von Thünen's concentric rings place perishable, high-value products (dairy, vegetables) closest to the market because they must be delivered quickly and cannot bear high transport costs.",
       "points": 1
     },
@@ -566,7 +566,7 @@
         "The elimination of pesticide use in global agriculture",
         "Universal food security for all developing nations"
       ],
-      "answer": "B",
+      "answer": "Introduction of high-yield crop varieties, irrigation, and fertilizers that dramatically increased food production",
       "explanation": "The Green Revolution introduced high-yield wheat and rice varieties, synthetic fertilizers, irrigation, and pesticides — dramatically increasing food production in South Asia, Mexico, and parts of Southeast Asia.",
       "points": 1
     },
@@ -601,7 +601,7 @@
         "Great Britain",
         "United States"
       ],
-      "answer": "C",
+      "answer": "Great Britain",
       "explanation": "Britain industrialized first (1760s–1840s), driven by coal and iron resources, colonial markets, technological innovation (steam engine), and financial capital.",
       "points": 1
     },
@@ -615,7 +615,7 @@
         "Trade balance, political freedom, and urbanization rate",
         "Population growth, agricultural output, and internet access"
       ],
-      "answer": "B",
+      "answer": "Life expectancy, education (literacy and schooling), and income (GNI per capita)",
       "explanation": "The HDI combines life expectancy (health), mean and expected years of schooling (education), and GNI per capita (income/standard of living) into a composite development score.",
       "points": 1
     },
@@ -650,7 +650,7 @@
         "2008",
         "2025"
       ],
-      "answer": "C",
+      "answer": "2008",
       "explanation": "According to UN data, 2008 was the year humanity crossed the threshold of having more people living in urban than rural areas for the first time in history.",
       "points": 1
     },
@@ -664,7 +664,7 @@
         "Multiple unconnected urban nuclei within a metropolitan area",
         "A grid pattern with equal residential and commercial zones"
       ],
-      "answer": "B",
+      "answer": "A series of rings expanding outward from the central business district",
       "explanation": "Burgess's Concentric Zone Model depicts cities as a series of concentric rings: CBD at center, surrounded by a zone of transition, then working-class housing, better residential, and the commuter zone.",
       "points": 1
     },
@@ -678,7 +678,7 @@
         "All cities grow at the same rate",
         "The capital city is located in the geographic center of the country"
       ],
-      "answer": "B",
+      "answer": "One city is disproportionately large compared to all others in the country, dominating economic and political life",
       "explanation": "Urban primacy (e.g., Bangkok in Thailand, Buenos Aires in Argentina) occurs when one city is many times larger than the second city, concentrating economic activity, media, and political power.",
       "points": 1
     },
@@ -704,7 +704,7 @@
         "Selling products only in its home country",
         "Employing workers exclusively from its country of origin"
       ],
-      "answer": "B",
+      "answer": "Operating production, distribution, or service facilities in multiple countries",
       "explanation": "TNCs operate across national borders with headquarters typically in a core country and production or sourcing spread across multiple countries to take advantage of geographic differences in costs and regulations.",
       "points": 1
     },
@@ -718,7 +718,7 @@
         "The compression of urban space due to high-rise buildings",
         "Geographic contraction of national borders"
       ],
-      "answer": "B",
+      "answer": "How transportation and communication technologies reduce the effective distance between places, making the world feel smaller",
       "explanation": "Time-space compression describes how technologies (internet, air travel, container shipping) have dramatically reduced the time and cost of moving goods, people, and information, effectively shrinking perceived distances.",
       "points": 1
     },
@@ -732,7 +732,7 @@
         "Import substitution",
         "Vertical integration"
       ],
-      "answer": "B",
+      "answer": "Outsourcing (offshoring)",
       "explanation": "Outsourcing/offshoring moves business processes (manufacturing, call centers, software development) to other countries where labor or operational costs are lower, reshaping global economic geographies.",
       "points": 1
     },
@@ -755,7 +755,7 @@
         "All languages in this family are mutually intelligible",
         "It originated in Australia"
       ],
-      "answer": "B",
+      "answer": "It includes the most widely spoken languages in the world, from English and Spanish to Hindi and Persian",
       "explanation": "Indo-European is the world's largest language family, spanning most of Europe, Iran, and South Asia — including English, Spanish, French, Hindi, Bengali, Russian, and many others.",
       "points": 1
     },
@@ -769,7 +769,7 @@
         "A dead language no longer spoken natively",
         "A language with more than 1 billion speakers"
       ],
-      "answer": "B",
+      "answer": "A language used as a common means of communication between speakers of different native languages",
       "explanation": "A lingua franca is a common language used for communication between people who do not share a native language — English is the dominant contemporary global lingua franca.",
       "points": 1
     },
@@ -783,7 +783,7 @@
         "Persia (modern-day Iran)",
         "East Africa"
       ],
-      "answer": "B",
+      "answer": "The Arabian Peninsula (modern-day Saudi Arabia)",
       "explanation": "Islam originated in the 7th century CE in the Arabian Peninsula, specifically Mecca and Medina, before spreading rapidly through conquest, trade, and missionary activity across the Middle East, North Africa, Central Asia, and Southeast Asia.",
       "points": 1
     },
@@ -797,7 +797,7 @@
         "Shintoism",
         "Christianity"
       ],
-      "answer": "D",
+      "answer": "Christianity",
       "explanation": "Universalizing religions (Christianity, Islam, Buddhism) actively proselytize and seek converts globally, in contrast to ethnic religions (Hinduism, Judaism, Shintoism) tied to specific ethnic or cultural groups.",
       "points": 1
     },
@@ -811,7 +811,7 @@
         "Resource curse",
         "Ecological footprint"
       ],
-      "answer": "B",
+      "answer": "Environmental justice",
       "explanation": "Environmental justice examines how environmental burdens (pollution, toxic waste sites, flood risk) are unevenly distributed geographically, often concentrated in poor and minority communities.",
       "points": 1
     },
@@ -825,7 +825,7 @@
         "Environmental damage caused by excessive resource extraction",
         "The depletion of fossil fuels causing economic collapse"
       ],
-      "answer": "B",
+      "answer": "Countries rich in natural resources that paradoxically experience slower economic growth, more conflict, and weaker governance than resource-poor countries",
       "explanation": "Resource-rich countries (Nigeria, Venezuela, DRC) often experience weaker development than resource-poor peers due to commodity price volatility, corruption, neglect of non-resource sectors, and conflict over resource control.",
       "points": 1
     },
@@ -863,7 +863,7 @@
         "Development is determined solely by geographic location",
         "Colonial history is the primary cause of underdevelopment"
       ],
-      "answer": "B",
+      "answer": "Traditional societies can develop by adopting the capital, technology, and institutions of already-developed countries",
       "explanation": "Modernization theory (W.W. Rostow) argues that development follows universal stages from traditional society to high mass consumption, and that foreign aid and technology transfer can accelerate the process.",
       "points": 1
     },
@@ -877,7 +877,7 @@
         "Rapid population growth overwhelming economic capacity",
         "Failure of developing countries to adopt free market policies"
       ],
-      "answer": "B",
+      "answer": "The structural exploitation of peripheral countries by core countries through colonial and neocolonial economic relationships",
       "explanation": "Dependency theorists (Frank, Prebisch) argue that the global capitalist system is structured to transfer wealth from periphery to core — perpetuating poverty through unequal terms of trade and debt.",
       "points": 1
     },
@@ -891,7 +891,7 @@
         "A large, highly educated middle class",
         "A small population with high literacy rates"
       ],
-      "answer": "B",
+      "answer": "Extreme inequality where oil or resource wealth is concentrated among elites, with poor health and education outcomes for the general population",
       "explanation": "Some Gulf oil states have high GNI per capita but rank lower on HDI due to inequality, poor health and education outcomes for migrant workers and lower-income citizens.",
       "points": 1
     },
@@ -926,7 +926,7 @@
         "Weather forecasting models",
         "Digital archives of historical maps"
       ],
-      "answer": "B",
+      "answer": "Computer-based tools that capture, store, analyze, and display geographically referenced (spatial) data in layers",
       "explanation": "GIS integrates multiple layers of spatial data (land use, population, infrastructure, elevation) to enable geographic analysis, visualization, and decision support.",
       "points": 1
     },
@@ -940,7 +940,7 @@
         "Using telephone surveys to gather geographic data",
         "Studying places geographers cannot physically visit"
       ],
-      "answer": "B",
+      "answer": "Collecting geographic data about Earth's surface from a distance using satellites or aircraft",
       "explanation": "Remote sensing uses electromagnetic radiation detected by satellite or aerial sensors to collect information about Earth's surface — land cover, temperature, vegetation health, urban extent, etc.",
       "points": 1
     },
@@ -975,7 +975,7 @@
         "Migration due to political persecution in climate-policy-related disputes",
         "Seasonal agricultural migration that has always occurred"
       ],
-      "answer": "B",
+      "answer": "People forced to move because climate change has made their home locations uninhabitable or economically unviable",
       "explanation": "Climate migration is driven by sea level rise, desertification, drought, and extreme weather events making regions uninhabitable — particularly threatening low-lying Pacific island states, coastal Bangladesh, and the Sahel.",
       "points": 1
     },
@@ -989,7 +989,7 @@
         "Government food rations supplied weekly",
         "At least 50% of food produced domestically"
       ],
-      "answer": "B",
+      "answer": "Physical, social, and economic access to sufficient, safe, and nutritious food at all times",
       "explanation": "The FAO's definition encompasses four dimensions: availability (enough food exists), access (people can obtain it), utilization (food is nutritious and safe), and stability (access is reliable over time).",
       "points": 1
     },
@@ -1003,7 +1003,7 @@
         "A city governed by an artificial intelligence",
         "A planned city built entirely from scratch in the 21st century"
       ],
-      "answer": "B",
+      "answer": "An urban area that uses digital technology, data, and sensors to improve infrastructure, services, and quality of life",
       "explanation": "Smart cities integrate digital infrastructure (sensors, data networks, AI analytics) to optimize traffic, energy, waste management, public safety, and civic participation.",
       "points": 1
     },
@@ -1018,6 +1018,90 @@
       "answer": "True",
       "explanation": "True. B is correct.",
       "points": 1
+    },
+    {
+      "moduleOrder": 15,
+      "order": 1,
+      "points": 1,
+      "question": "A city adopting bus rapid transit, mixed-use zoning, and walkable districts is primarily addressing which contemporary issue?",
+      "options": [
+        "Agricultural hearth diffusion",
+        "Sustainable urban development",
+        "Centripetal nationalism",
+        "Primary-sector employment"
+      ],
+      "answer": "Sustainable urban development",
+      "explanation": "These policies reduce car dependence and support denser, more sustainable urban patterns."
+    },
+    {
+      "moduleOrder": 15,
+      "order": 2,
+      "points": 1,
+      "question": "Which evidence best supports an analysis of climate migration?",
+      "options": [
+        "Only a political boundary map",
+        "Temperature, sea-level, livelihood, and migration-flow data considered together",
+        "A list of capital cities",
+        "A single cultural landscape photograph"
+      ],
+      "answer": "Temperature, sea-level, livelihood, and migration-flow data considered together",
+      "explanation": "Climate migration is multicausal and should be analyzed with environmental, economic, and population data."
+    },
+    {
+      "moduleOrder": 15,
+      "order": 3,
+      "points": 1,
+      "question": "Indigenous land-rights conflicts often require geographic analysis because they involve:",
+      "options": [
+        "Only language-family classification",
+        "Territory, resource control, cultural landscapes, and political power",
+        "Random migration unrelated to place",
+        "The elimination of scale from policy decisions"
+      ],
+      "answer": "Territory, resource control, cultural landscapes, and political power",
+      "explanation": "Human geography connects land, identity, governance, and resource-use conflicts across scales."
+    },
+    {
+      "moduleOrder": 16,
+      "order": 1,
+      "points": 1,
+      "question": "Which AP Human Geography skill is most important when comparing two maps of the same region?",
+      "options": [
+        "Ignoring scale to simplify the answer",
+        "Identifying spatial patterns and explaining what may cause them",
+        "Listing every place name on both maps",
+        "Choosing the map with brighter colors"
+      ],
+      "answer": "Identifying spatial patterns and explaining what may cause them",
+      "explanation": "AP map questions ask students to identify, compare, and explain spatial patterns using geographic reasoning."
+    },
+    {
+      "moduleOrder": 16,
+      "order": 2,
+      "points": 1,
+      "question": "A strong AP free-response answer about food security should include:",
+      "options": [
+        "A definition only",
+        "A claim, geographic evidence, and an explanation of economic or environmental causes",
+        "A personal opinion without data",
+        "A list of countries with no reasoning"
+      ],
+      "answer": "A claim, geographic evidence, and an explanation of economic or environmental causes",
+      "explanation": "Scorable responses connect concepts to evidence and explain the process behind the pattern."
+    },
+    {
+      "moduleOrder": 16,
+      "order": 3,
+      "points": 1,
+      "question": "Which review strategy best prepares students for AP Human Geography synthesis questions?",
+      "options": [
+        "Memorizing terms without examples",
+        "Practicing links among population, culture, political, agriculture, urban, and development units",
+        "Studying only physical geography",
+        "Skipping map interpretation"
+      ],
+      "answer": "Practicing links among population, culture, political, agriculture, urban, and development units",
+      "explanation": "Synthesis questions often combine multiple units and require students to transfer concepts across contexts."
     }
   ],
   "questions": [
@@ -1032,7 +1116,7 @@
         "The size of a geographic region",
         "The administrative classification of a place"
       ],
-      "answer": "B",
+      "answer": "A place's position in relation to other places or features",
       "explanation": "Relative location describes where a place is relative to other known places — e.g., 'north of Mexico City' — rather than an absolute coordinate.",
       "points": 1
     },
@@ -1047,7 +1131,7 @@
         "Illustrating population distribution",
         "Political boundary mapping"
       ],
-      "answer": "B",
+      "answer": "Marine navigation because it preserves compass direction (rhumb lines)",
       "explanation": "The Mercator projection is conformal (preserves shape and direction), making it ideal for navigation, but it severely distorts the area of high-latitude land masses.",
       "points": 1
     },
@@ -1062,7 +1146,7 @@
         "Urban land area only",
         "National territory including territorial waters"
       ],
-      "answer": "B",
+      "answer": "Arable (farmable) land area",
       "explanation": "Physiological density = population ÷ arable land area, revealing pressure on food-producing land rather than spreading population over all land including deserts and mountains.",
       "points": 1
     },
@@ -1090,7 +1174,7 @@
         "The center of a country's political power",
         "The region most resistant to cultural change"
       ],
-      "answer": "B",
+      "answer": "The geographic origin point from which a cultural innovation or practice spreads",
       "explanation": "The hearth is the origin location of a cultural trait from which diffusion occurs — e.g., Mesopotamia as a hearth of writing, or the Arabian Peninsula as the hearth of Islam.",
       "points": 1
     },
@@ -1105,7 +1189,7 @@
         "A language spreading only through military conquest",
         "Immigrants bringing cultural practices to new settlement locations"
       ],
-      "answer": "B",
+      "answer": "A fashion trend spreading from major cities to smaller towns to rural areas",
       "explanation": "Hierarchical diffusion follows an ordered sequence — typically from higher-status or larger urban centers downward to smaller cities and rural areas, rather than spreading uniformly.",
       "points": 1
     },
@@ -1143,7 +1227,7 @@
         "Periphery — dependent on raw material exports and low-wage labor",
         "Supercore — controlling global technology"
       ],
-      "answer": "C",
+      "answer": "Periphery — dependent on raw material exports and low-wage labor",
       "explanation": "Most Sub-Saharan African countries are classified as periphery in World Systems Theory — economically dependent, exporting raw materials at low prices and importing manufactured goods at higher prices.",
       "points": 1
     },
@@ -1158,7 +1242,7 @@
         "Chicago",
         "Boston"
       ],
-      "answer": "C",
+      "answer": "Chicago",
       "explanation": "E.W. Burgess developed the concentric zone model in 1925 based on his analysis of Chicago's spatial growth pattern, organized in rings outward from the CBD.",
       "points": 1
     },
@@ -1173,7 +1257,7 @@
         "Political persecution and violence in the origin country",
         "Cultural ties to a diaspora community in another country"
       ],
-      "answer": "C",
+      "answer": "Political persecution and violence in the origin country",
       "explanation": "Push factors are negative conditions in the origin location — violence, persecution, poverty, environmental disaster — that compel people to leave, as opposed to pull factors attracting them to a destination.",
       "points": 1
     },
@@ -1201,7 +1285,7 @@
         "The development of regional dialects in previously unified language areas",
         "Increasing cultural isolation of rural communities"
       ],
-      "answer": "B",
+      "answer": "Global spread of English, American fast food chains, and Hollywood entertainment across diverse cultures",
       "explanation": "Cultural convergence through globalization is seen in the worldwide spread of consumer brands, English as lingua franca, and American/Western media forms — making diverse cultures more similar in surface practices.",
       "points": 1
     },
@@ -1226,7 +1310,7 @@
         "Is too small in population to qualify for UN membership",
         "Lives entirely as nomads without permanent territory"
       ],
-      "answer": "B",
+      "answer": "Shares a national identity and territorial claims but lacks its own internationally recognized sovereign state",
       "explanation": "Stateless nations — the Kurds, Palestinians, and Tibetans are common examples — have a distinct national identity and often a claimed homeland but are not recognized as sovereign states in the international system.",
       "points": 1
     },
@@ -1254,7 +1338,7 @@
         "Buddhism spreading to new countries as monks traveled the Silk Road",
         "English spreading through social media across the globe"
       ],
-      "answer": "C",
+      "answer": "Buddhism spreading to new countries as monks traveled the Silk Road",
       "explanation": "Relocation diffusion occurs when people physically move and carry cultural practices with them — monks traveling (relocating) and establishing Buddhist communities in new regions is a classic example.",
       "points": 1
     },
@@ -1269,7 +1353,7 @@
         "Has invested heavily in manufacturing and education",
         "Has achieved Stage 4 of the demographic transition"
       ],
-      "answer": "B",
+      "answer": "Relies heavily on a single primary commodity export with weak governance and high inequality",
       "explanation": "Countries heavily dependent on one resource (oil, diamonds, copper) with weak institutions are most vulnerable to the resource curse — commodity price swings, elite capture, and neglect of other economic sectors.",
       "points": 1
     },
@@ -1284,7 +1368,7 @@
         "Population dispersal from the capital to smaller cities",
         "Decline of immigration into the largest city"
       ],
-      "answer": "B",
+      "answer": "Concentration of investment and talent in one city while other regions are starved of resources",
       "explanation": "Urban primacy leads to over-concentration of economic activity, political attention, and skilled workers in the primate city, while peripheral regions stagnate and receive inadequate public investment.",
       "points": 1
     },
@@ -1322,7 +1406,7 @@
         "Predict weather patterns using atmospheric models",
         "Survey land for agricultural productivity using soil samples"
       ],
-      "answer": "B",
+      "answer": "Capture, analyze, and display layered spatial data to support geographic decision-making",
       "explanation": "GIS integrates layers of geographic data (population, land use, infrastructure, environmental data) to enable spatial analysis — supporting urban planning, disaster response, resource management, and policy decisions.",
       "points": 1
     },
@@ -1337,7 +1421,7 @@
         "Cultural attraction to wealthier nations",
         "Global labor market demand for migrants"
       ],
-      "answer": "B",
+      "answer": "Environmental changes (sea level rise, desertification, extreme weather) making home regions uninhabitable or economically nonviable",
       "explanation": "Climate migration results directly from environmental changes — including flooding of coastal areas, prolonged drought, intensifying storms, and desertification — that undermine agriculture and habitability.",
       "points": 1
     },
@@ -1365,7 +1449,7 @@
         "It replaces all local languages with a global standard",
         "It is used only in international diplomatic settings"
       ],
-      "answer": "B",
+      "answer": "It provides a common language for communication among speakers of different native languages, facilitating trade, diplomacy, and cultural exchange",
       "explanation": "Lingua francas — Swahili in East Africa, English globally — enable communication across language boundaries, facilitating trade, governance, and cultural exchange across diverse regions.",
       "points": 1
     },
@@ -1380,7 +1464,7 @@
         "Government construction of affordable public housing in wealthy neighborhoods",
         "Industrial development of former residential areas"
       ],
-      "answer": "B",
+      "answer": "The influx of wealthier residents and businesses into lower-income urban neighborhoods, raising housing costs and often displacing existing residents",
       "explanation": "Gentrification reshapes urban neighborhoods as higher-income residents move in, property values rise, local character changes, and lower-income residents are often priced out and displaced.",
       "points": 1
     },
@@ -1395,7 +1479,7 @@
         "Legal restrictions on internet freedom in authoritarian countries",
         "Competition between tech companies in global markets"
       ],
-      "answer": "B",
+      "answer": "Unequal access to internet and digital technology between and within countries, often correlated with income and urban/rural location",
       "explanation": "The digital divide maps unequal connectivity — separating urban from rural areas, wealthy from poor countries, and high from low-income households within countries — with major implications for economic opportunity.",
       "points": 1
     },
@@ -1420,7 +1504,7 @@
         "Regions with extreme drought preventing agriculture",
         "Areas where fast food restaurants are banned"
       ],
-      "answer": "B",
+      "answer": "Limited access to affordable, nutritious food — often in low-income urban or rural areas with few supermarkets",
       "explanation": "Food deserts are typically low-income urban or rural areas lacking full-service grocery stores within reasonable distance, forcing residents to rely on fast food or convenience stores for nutrition.",
       "points": 1
     },
@@ -1435,7 +1519,7 @@
         "Processing census data from national governments",
         "Conducting soil and water quality tests in the field"
       ],
-      "answer": "B",
+      "answer": "Collecting spectral and image data from Earth's surface without direct physical contact, enabling monitoring of land cover, vegetation, and environmental change",
       "explanation": "Remote sensing detects electromagnetic radiation reflected or emitted from Earth's surface, producing images and data used to monitor deforestation, urban growth, crop health, glacial retreat, and disaster damage.",
       "points": 1
     },
@@ -1450,7 +1534,7 @@
         "The dissolution of a state due to civil war",
         "International recognition of a new sovereign state"
       ],
-      "answer": "B",
+      "answer": "The transfer of power from a central government to regional or subnational governments",
       "explanation": "Devolution grants greater autonomy to regions — as with Scotland, Catalonia, or Quebec — often driven by regional ethnic, cultural, or economic distinctiveness from the national core.",
       "points": 1
     },
@@ -1478,7 +1562,7 @@
         "A religion with no formal doctrine or organization",
         "A religion only practiced in urbanized societies"
       ],
-      "answer": "B",
+      "answer": "A religion that actively seeks converts across all ethnic and cultural groups worldwide",
       "explanation": "Universalizing religions — Christianity, Islam, Buddhism — seek to convert all of humanity regardless of ethnicity or nationality, and have spread globally through missionary activity, trade, and conquest.",
       "points": 1
     },
@@ -1493,7 +1577,7 @@
         "The compression of urban space due to high-rise development",
         "Standardizing time zones globally"
       ],
-      "answer": "B",
+      "answer": "Transportation and communication technology reducing the effective distance and time between places, making the world feel smaller",
       "explanation": "Time-space compression captures how technologies — internet, air travel, container shipping — have dramatically reduced the cost and time of moving goods, people, and information across geographic space.",
       "points": 1
     },

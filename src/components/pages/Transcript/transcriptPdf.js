@@ -344,8 +344,7 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
     const rightHtml = rightKeys.map(k => buildSemesterTableHtml(k, rowsBySemester[k], semStatuses[k])).join('');
 
     const exportToday = todayForPdf();
-    const transcriptDateDisplay = normalizeDateForPdf(p.transcriptDate) !== '—'
-      ? normalizeDateForPdf(p.transcriptDate) : exportToday;
+    const transcriptDateDisplay = exportToday;
 
     const container = document.createElement('div');
     container.style.cssText = `position:absolute;top:0;left:0;width:${PAGE_W_MM}mm;z-index:99999;background:#fff;`;

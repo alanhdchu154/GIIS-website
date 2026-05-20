@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-05-20T01:25:43Z",
+  "policy": {
+    "min_score": 90,
+    "require_contact_sheet": true,
+    "require_transcript": true,
+    "require_reviewers": true,
+    "require_ap_citation": true,
+    "pending_only": false
+  },
+  "summary": {
+    "ready": 1,
+    "needs_revision": 0,
+    "blocked": 0,
+    "total": 1
+  },
+  "ready_to_upload": [
+    {
+      "slug": "ap-biology-module-10-natural-selection-v2",
+      "path": "teaching-videos/ap-biology-module-10-natural-selection-v2",
+      "bucket": "ready",
+      "quality_score": 99,
+      "verdict": "pass",
+      "course": "AP Biology",
+      "module": "Module 10: Natural Selection and Evolution — V2 Pilot",
+      "reasons": []
+    }
+  ],
+  "needs_revision": [],
+  "blocked": [],
+  "all": [
+    {
+      "slug": "ap-biology-module-10-natural-selection-v2",
+      "path": "teaching-videos/ap-biology-module-10-natural-selection-v2",
+      "bucket": "ready",
+      "quality_score": 99,
+      "verdict": "pass",
+      "course": "AP Biology",
+      "module": "Module 10: Natural Selection and Evolution — V2 Pilot",
+      "reasons": []
+    }
+  ]
+}

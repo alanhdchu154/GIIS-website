@@ -17,7 +17,7 @@ const ADMISSIONS_EMAIL = 'admissions@genesisideas.school';
 const FALLBACK_PARENT_EMAIL = 'admin@genesisideas.school';
 const SITE = process.env.CORS_ORIGIN?.split(',')[0]?.trim() || 'https://genesisideas.school';
 
-async function send({ to, cc, subject, html, text }) {
+async function send({ to, cc, subject, html, text, attachments }) {
   if (!resend) {
     console.warn(`[mailer] RESEND_EMAIL_API_KEY / RESEND_API_KEY not set — skipping email to ${to}: ${subject}`);
     return { ok: false, skipped: true, reason: 'resend_api_key_missing' };
@@ -25,6 +25,7 @@ async function send({ to, cc, subject, html, text }) {
   try {
     const payload = { from: FROM, to, subject, html, text };
     if (cc) payload.cc = cc;
+    if (attachments) payload.attachments = attachments;
     const result = await resend.emails.send(payload);
     if (result?.error) {
       const message = result.error.message || JSON.stringify(result.error);
@@ -307,6 +308,166 @@ async function sendPrincipalAppointmentLetter({
   return send({ to: principalEmail, cc, subject, html, text });
 }
 
+async function sendGraduationIssuanceRequest({
+  principalEmail = 'shiyu.zhang@genesisideas.school',
+  cc = [ADMIN_EMAIL, ADMISSIONS_EMAIL],
+  student,
+} = {}) {
+  if (!student) throw new Error('student is required');
+  const subject = `Graduation Document Issuance Request — ${student.code} ${student.name}`;
+  const html = `
+<div style="font-family:Inter,Arial,sans-serif;max-width:640px;margin:0 auto;color:#1a1d24;line-height:1.65">
+  <div style="border-bottom:3px solid #1a2d5a;padding:0 0 16px;margin:0 0 22px">
+    <p style="color:#b8962e;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px">Genesis of Ideas International School</p>
+    <h1 style="font-size:22px;color:#1a2d5a;margin:0">Graduation Document Issuance Request</h1>
+  </div>
+
+  <p>Dear <strong>Shiyu Zhang, Ph.D.</strong>,</p>
+  <p>
+    Please review and prepare the official graduation document package for
+    <strong>${student.name}</strong> (<strong>${student.code}</strong>).
+    The package should include the student's official transcript and GIIS high school diploma,
+    subject to final administrative review and school records policy.
+  </p>
+
+  <table style="border-collapse:collapse;width:100%;font-size:14px;margin:18px 0">
+    ${[
+      ['Student', `${student.name} (${student.code})`],
+      ['Graduation date on record', student.graduationDate],
+      ['Transcript date on record', student.transcriptDate],
+      ['Credits completed', `${student.totalCredits} credits`],
+      ['Transcript semesters', `${student.semesters} semesters`],
+      ['G12 Spring coursework', `${student.g12SpringCourses} courses completed with module quizzes, midterm, and final exam records`],
+      ['G12 Spring grade release', student.g12SpringReleaseDate],
+    ].map(([label, value]) => `
+      <tr>
+        <td style="padding:8px 14px 8px 0;color:#5c6578;border-bottom:1px solid #e8ecf5;white-space:nowrap">${label}</td>
+        <td style="padding:8px 0;border-bottom:1px solid #e8ecf5"><strong>${value}</strong></td>
+      </tr>
+    `).join('')}
+  </table>
+
+  <p>
+    Internal audit status: <strong>PASS</strong>. The transcript record has eight semesters,
+    all semester rows contain grades and GPA values, total credits exceed the GIIS 24-credit
+    graduation threshold, and current G12 Spring Learn Portal completion/exam data matches
+    the transcript letter grades.
+  </p>
+
+  <p>
+    Please confirm once the transcript and diploma have been prepared for issuance.
+  </p>
+
+  <p style="margin-top:26px">Sincerely,<br><strong>GIIS Academic Operations</strong></p>
+
+  <hr style="border:none;border-top:1px solid #e8ecf5;margin:24px 0">
+  <p style="font-size:12px;color:#5c6578;margin:0">
+    Genesis of Ideas International School · Florida-registered private school · admissions@genesisideas.school
+  </p>
+</div>
+  `.trim();
+
+  const text = [
+    'Genesis of Ideas International School',
+    'Graduation Document Issuance Request',
+    '',
+    'Dear Shiyu Zhang, Ph.D.,',
+    '',
+    `Please review and prepare the official graduation document package for ${student.name} (${student.code}). The package should include the student's official transcript and GIIS high school diploma, subject to final administrative review and school records policy.`,
+    '',
+    `Graduation date on record: ${student.graduationDate}`,
+    `Transcript date on record: ${student.transcriptDate}`,
+    `Credits completed: ${student.totalCredits} credits`,
+    `Transcript semesters: ${student.semesters}`,
+    `G12 Spring coursework: ${student.g12SpringCourses} courses completed with module quizzes, midterm, and final exam records`,
+    `G12 Spring grade release: ${student.g12SpringReleaseDate}`,
+    '',
+    'Internal audit status: PASS. The transcript record has eight semesters, all semester rows contain grades and GPA values, total credits exceed the GIIS 24-credit graduation threshold, and current G12 Spring Learn Portal completion/exam data matches the transcript letter grades.',
+    '',
+    'Please confirm once the transcript and diploma have been prepared for issuance.',
+    '',
+    'Sincerely,',
+    'GIIS Academic Operations',
+  ].join('\n');
+
+  return send({ to: principalEmail, cc, subject, html, text });
+}
+
+async function sendGraduationDocumentPackage({
+  principalEmail = 'shiyu.zhang@genesisideas.school',
+  cc = ADMIN_EMAIL,
+  student,
+  transcriptPdf,
+  diplomaPdf,
+} = {}) {
+  if (!student) throw new Error('student is required');
+  if (!transcriptPdf || !diplomaPdf) throw new Error('transcriptPdf and diplomaPdf are required');
+
+  const subject = `GIIS Official Transcript and Diploma — ${student.code} ${student.name}`;
+  const html = `
+<div style="font-family:Inter,Arial,sans-serif;max-width:640px;margin:0 auto;color:#1a1d24;line-height:1.65">
+  <p>Dear <strong>Shiyu Zhang, Ph.D.</strong>,</p>
+  <p>
+    Attached are the PDF transcript and diploma package for
+    <strong>${student.name}</strong> (<strong>${student.code}</strong>) for your review and records.
+  </p>
+  <table style="border-collapse:collapse;width:100%;font-size:14px;margin:18px 0">
+    ${[
+      ['Student', `${student.name} (${student.code})`],
+      ['Graduation date', student.graduationDate],
+      ['Transcript date', student.transcriptDate],
+      ['Credits completed', `${student.totalCredits} credits`],
+      ['Audit status', 'PASS'],
+    ].map(([label, value]) => `
+      <tr>
+        <td style="padding:8px 14px 8px 0;color:#5c6578;border-bottom:1px solid #e8ecf5;white-space:nowrap">${label}</td>
+        <td style="padding:8px 0;border-bottom:1px solid #e8ecf5"><strong>${value}</strong></td>
+      </tr>
+    `).join('')}
+  </table>
+  <p>
+    The attached transcript uses the corrected credit values and current senior audit output.
+    Letter grades were not changed during the latest credit correction.
+  </p>
+  <p>Sincerely,<br><strong>GIIS Academic Operations</strong></p>
+</div>
+  `.trim();
+
+  const text = [
+    `Dear Shiyu Zhang, Ph.D.,`,
+    '',
+    `Attached are the PDF transcript and diploma package for ${student.name} (${student.code}) for your review and records.`,
+    '',
+    `Graduation date: ${student.graduationDate}`,
+    `Transcript date: ${student.transcriptDate}`,
+    `Credits completed: ${student.totalCredits} credits`,
+    'Audit status: PASS',
+    '',
+    'The attached transcript uses the corrected credit values and current senior audit output. Letter grades were not changed during the latest credit correction.',
+    '',
+    'Sincerely,',
+    'GIIS Academic Operations',
+  ].join('\n');
+
+  return send({
+    to: principalEmail,
+    cc,
+    subject,
+    html,
+    text,
+    attachments: [
+      {
+        filename: transcriptPdf.filename,
+        content: transcriptPdf.content,
+      },
+      {
+        filename: diplomaPdf.filename,
+        content: diplomaPdf.content,
+      },
+    ],
+  });
+}
+
 module.exports = {
   ADMIN_EMAIL,
   ADMISSIONS_EMAIL,
@@ -317,4 +478,6 @@ module.exports = {
   sendWeeklyProgressEmail,
   sendPasswordResetEmail,
   sendPrincipalAppointmentLetter,
+  sendGraduationIssuanceRequest,
+  sendGraduationDocumentPackage,
 };

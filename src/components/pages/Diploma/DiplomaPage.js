@@ -414,7 +414,11 @@ export default function DiplomaPage({ language }) {
       })
       .catch(() => setError('Failed to load student data'));
 
-    fetch(`${API}/api/enrollments`, { credentials: 'include' })
+    const enrollmentUrl = isAdmin && studentId
+      ? `${API}/api/enrollments/admin/student/${studentId}`
+      : `${API}/api/enrollments`;
+
+    fetch(enrollmentUrl, { credentials: 'include' })
       .then((r) => r.ok ? r.json() : null)
       .then((enrollments) => {
         if (!Array.isArray(enrollments)) return;

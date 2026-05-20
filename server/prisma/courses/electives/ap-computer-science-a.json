@@ -232,5 +232,1122 @@
       "assignment": "Implement selectionSort, insertionSort, and binarySearch on int[] arrays. Write a driver that builds an array of 20 random ints, sorts it with each algorithm (verify all three give the same sorted result), then runs binarySearch on the sorted output for 5 different target values (3 in the array, 2 not in the array). Print the index returned (or -1).",
       "estimatedHrs": 4.5
     }
+  ],
+  "quizQuestions": [
+    {
+      "moduleOrder": 1,
+      "order": 1,
+      "question": "What is the value of result after this code runs? int result = 7 / 2;",
+      "options": [
+        "2",
+        "3",
+        "3.5",
+        "4"
+      ],
+      "answer": "3",
+      "explanation": "Integer division drops the decimal part, so 7 / 2 evaluates to 3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 2,
+      "question": "Which declaration stores a decimal value most appropriately in Java?",
+      "options": [
+        "int score = 98.6;",
+        "double score = 98.6;",
+        "boolean score = 98.6;",
+        "char score = 98.6;"
+      ],
+      "answer": "double score = 98.6;",
+      "explanation": "double stores floating-point decimal values.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 1,
+      "order": 3,
+      "question": "What does casting do in this expression: (double) 5 / 2?",
+      "options": [
+        "Changes 5 to a floating-point value before division",
+        "Rounds the answer to the nearest integer",
+        "Creates a String",
+        "Makes the code invalid"
+      ],
+      "answer": "Changes 5 to a floating-point value before division",
+      "explanation": "Casting 5 to double makes the division floating-point, producing 2.5.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 1,
+      "question": "Which String comparison is safest for checking same text content?",
+      "options": [
+        "name == \"Alan\"",
+        "name.equals(\"Alan\")",
+        "name = \"Alan\"",
+        "name.compareTo(\"Alan\") > 10"
+      ],
+      "answer": "name.equals(\"Alan\")",
+      "explanation": "equals compares String contents; == compares object references.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 2,
+      "question": "What does \"computer\".substring(0, 3) return?",
+      "options": [
+        "com",
+        "comp",
+        "omp",
+        "put"
+      ],
+      "answer": "com",
+      "explanation": "substring starts at index 0 and stops before index 3.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 2,
+      "order": 3,
+      "question": "What is true about String objects in Java?",
+      "options": [
+        "They are mutable",
+        "They are immutable",
+        "They can only store one character",
+        "They cannot call methods"
+      ],
+      "answer": "They are immutable",
+      "explanation": "String methods return new values; they do not change the original String.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 1,
+      "question": "Which expression is true when x is between 10 and 20 inclusive?",
+      "options": [
+        "x > 10 && x < 20",
+        "x >= 10 && x <= 20",
+        "x >= 10 || x <= 20",
+        "10 <= x <= 20"
+      ],
+      "answer": "x >= 10 && x <= 20",
+      "explanation": "Java requires two comparisons joined by && for an inclusive range.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 2,
+      "question": "Why can short-circuit evaluation matter?",
+      "options": [
+        "It makes all expressions false",
+        "It can skip evaluating the right side of && or ||",
+        "It converts booleans to integers",
+        "It only works with Strings"
+      ],
+      "answer": "It can skip evaluating the right side of && or ||",
+      "explanation": "For &&, Java skips the right side if the left side is false; for ||, it skips if the left side is true.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 3,
+      "order": 3,
+      "question": "Which operator means logical NOT in Java?",
+      "options": [
+        "!",
+        "&&",
+        "||",
+        "!="
+      ],
+      "answer": "!",
+      "explanation": "! reverses a boolean value. != means not equal.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 1,
+      "question": "How many times does this loop run? for (int i = 0; i < 5; i++)",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "It never stops"
+      ],
+      "answer": "5",
+      "explanation": "i takes values 0, 1, 2, 3, and 4.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 2,
+      "question": "Which loop is best when you do not know in advance how many repetitions are needed?",
+      "options": [
+        "while loop",
+        "enhanced for loop only",
+        "import loop",
+        "class loop"
+      ],
+      "answer": "while loop",
+      "explanation": "A while loop continues until its condition becomes false, useful for sentinel input or unknown repetition.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 4,
+      "order": 3,
+      "question": "What is a common cause of an infinite loop?",
+      "options": [
+        "The condition eventually becomes false",
+        "The loop variable is never updated toward stopping",
+        "The loop has a body",
+        "The loop uses braces"
+      ],
+      "answer": "The loop variable is never updated toward stopping",
+      "explanation": "If the condition never changes toward false, the loop can run forever.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 1,
+      "question": "A nested loop with outer loop n times and inner loop n times usually performs about how many iterations?",
+      "options": [
+        "n",
+        "2n",
+        "n squared",
+        "log n"
+      ],
+      "answer": "n squared",
+      "explanation": "The inner loop runs n times for each of n outer iterations.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 2,
+      "question": "Which pattern is most natural for printing a grid of rows and columns?",
+      "options": [
+        "A single if statement",
+        "Nested loops",
+        "A String comparison only",
+        "A constructor"
+      ],
+      "answer": "Nested loops",
+      "explanation": "Rows and columns are a two-dimensional pattern, so nested loops fit naturally.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 5,
+      "order": 3,
+      "question": "What is an accumulator variable used for?",
+      "options": [
+        "Storing a running total or combined result",
+        "Declaring a class",
+        "Stopping a method from returning",
+        "Changing a package name"
+      ],
+      "answer": "Storing a running total or combined result",
+      "explanation": "An accumulator is updated repeatedly inside a loop.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 1,
+      "question": "Which part of a method signature identifies the data a method receives?",
+      "options": [
+        "Parameters",
+        "Comments",
+        "Package name",
+        "Import statements"
+      ],
+      "answer": "Parameters",
+      "explanation": "Parameters define inputs passed into a method.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 2,
+      "question": "What does a return type of void mean?",
+      "options": [
+        "The method returns an int",
+        "The method returns no value",
+        "The method cannot be called",
+        "The method must be private"
+      ],
+      "answer": "The method returns no value",
+      "explanation": "void methods perform actions but do not return a value.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 6,
+      "order": 3,
+      "question": "Why split code into methods?",
+      "options": [
+        "To make code impossible to test",
+        "To organize behavior into reusable named units",
+        "To remove all variables",
+        "To avoid classes"
+      ],
+      "answer": "To organize behavior into reusable named units",
+      "explanation": "Methods improve readability, reuse, testing, and decomposition.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 1,
+      "question": "Why are instance variables usually private?",
+      "options": [
+        "To support encapsulation and protect object state",
+        "Because private variables are faster",
+        "Because public variables cannot store data",
+        "Because constructors require it"
+      ],
+      "answer": "To support encapsulation and protect object state",
+      "explanation": "Private fields prevent outside code from changing state without validation.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 2,
+      "question": "What is the primary role of a constructor?",
+      "options": [
+        "Initialize a new object",
+        "Delete an object",
+        "Sort an array",
+        "Start a loop"
+      ],
+      "answer": "Initialize a new object",
+      "explanation": "A constructor sets up instance variables when an object is created.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 7,
+      "order": 3,
+      "question": "When is the keyword this most useful?",
+      "options": [
+        "When a parameter name matches an instance variable name",
+        "Only inside static methods",
+        "Only when importing packages",
+        "When declaring arrays"
+      ],
+      "answer": "When a parameter name matches an instance variable name",
+      "explanation": "this.field refers to the current object field, avoiding ambiguity.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 1,
+      "question": "A static variable belongs to:",
+      "options": [
+        "Each individual object only",
+        "The class itself",
+        "A method parameter",
+        "A local block only"
+      ],
+      "answer": "The class itself",
+      "explanation": "static members are shared at the class level.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 2,
+      "question": "Which is a good use of static?",
+      "options": [
+        "A shared constant like Math.PI",
+        "A dog object name",
+        "A rectangle width unique to one rectangle",
+        "A student age unique to one student"
+      ],
+      "answer": "A shared constant like Math.PI",
+      "explanation": "Class-level constants or utility methods are common static uses.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 8,
+      "order": 3,
+      "question": "Why is main declared static?",
+      "options": [
+        "It must run before any object of the class is created",
+        "It changes every instance variable",
+        "It can only be used in abstract classes",
+        "It returns a boolean"
+      ],
+      "answer": "It must run before any object of the class is created",
+      "explanation": "The JVM can call main without first constructing an object.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 1,
+      "question": "What exception occurs when accessing arr[arr.length]?",
+      "options": [
+        "NullPointerException",
+        "ArrayIndexOutOfBoundsException",
+        "ArithmeticException",
+        "No exception"
+      ],
+      "answer": "ArrayIndexOutOfBoundsException",
+      "explanation": "The last valid index is arr.length - 1.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 2,
+      "question": "What is true when an array is passed to a method?",
+      "options": [
+        "A reference to the same array is passed",
+        "The array is always copied",
+        "The array becomes immutable",
+        "The method cannot change elements"
+      ],
+      "answer": "A reference to the same array is passed",
+      "explanation": "Methods can modify the array elements through the shared reference.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 9,
+      "order": 3,
+      "question": "Which loop is best for visiting every value when indexes are not needed?",
+      "options": [
+        "enhanced for loop",
+        "while(true) only",
+        "switch statement",
+        "constructor loop"
+      ],
+      "answer": "enhanced for loop",
+      "explanation": "Enhanced for loops simplify reading each element without index logic.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 1,
+      "question": "Which statement creates an ArrayList of Strings?",
+      "options": [
+        "ArrayList<String> names = new ArrayList<String>();",
+        "String[] names = new ArrayList();",
+        "ArrayList<int> nums = new ArrayList<int>();",
+        "new String ArrayList names;"
+      ],
+      "answer": "ArrayList<String> names = new ArrayList<String>();",
+      "explanation": "ArrayList uses object types as generic parameters.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 2,
+      "question": "Which ArrayList method returns the element at index i?",
+      "options": [
+        "get(i)",
+        "take(i)",
+        "index(i)",
+        "read(i)"
+      ],
+      "answer": "get(i)",
+      "explanation": "get retrieves an element by index.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 10,
+      "order": 3,
+      "question": "How is ArrayList different from a normal array?",
+      "options": [
+        "It can resize as elements are added or removed",
+        "It stores only primitive int values",
+        "It has no methods",
+        "It cannot be looped over"
+      ],
+      "answer": "It can resize as elements are added or removed",
+      "explanation": "ArrayList is a resizable list backed by an array-like structure.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 1,
+      "question": "In int[][] grid = new int[3][4], how many rows are there?",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "12"
+      ],
+      "answer": "3",
+      "explanation": "The first dimension is the number of rows.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 2,
+      "question": "What traversal visits each row completely before moving to the next row?",
+      "options": [
+        "Column-major order",
+        "Row-major order",
+        "Random order",
+        "Binary order"
+      ],
+      "answer": "Row-major order",
+      "explanation": "Row-major traversal loops rows outside and columns inside.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 11,
+      "order": 3,
+      "question": "Why are nested loops common with 2D arrays?",
+      "options": [
+        "One loop controls rows and one controls columns",
+        "2D arrays cannot use indexes",
+        "They automatically sort the array",
+        "They prevent all errors"
+      ],
+      "answer": "One loop controls rows and one controls columns",
+      "explanation": "A 2D grid has two dimensions, so two loop variables are usually needed.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "Which keyword creates an inheritance relationship?",
+      "options": [
+        "extends",
+        "inherits",
+        "parent",
+        "implementsClass"
+      ],
+      "answer": "extends",
+      "explanation": "A subclass extends a superclass.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "What does method overriding allow?",
+      "options": [
+        "A subclass provides its own version of an inherited method",
+        "A class deletes the superclass",
+        "A variable changes type randomly",
+        "A method runs without a name"
+      ],
+      "answer": "A subclass provides its own version of an inherited method",
+      "explanation": "Overriding supports polymorphic behavior.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "What does polymorphism allow?",
+      "options": [
+        "A superclass reference can refer to a subclass object",
+        "A primitive can call methods",
+        "A class can have no constructor",
+        "An array must be sorted"
+      ],
+      "answer": "A superclass reference can refer to a subclass object",
+      "explanation": "Polymorphism lets code use a general type while executing subclass-specific methods.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 1,
+      "question": "What must every recursive method have to stop correctly?",
+      "options": [
+        "A base case",
+        "A static variable",
+        "A public field",
+        "A package statement"
+      ],
+      "answer": "A base case",
+      "explanation": "The base case ends the recursion.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 2,
+      "question": "What data structure concept is used to track recursive calls?",
+      "options": [
+        "Call stack",
+        "Queue only",
+        "Hash table only",
+        "ArrayList only"
+      ],
+      "answer": "Call stack",
+      "explanation": "Each recursive call gets its own stack frame.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 13,
+      "order": 3,
+      "question": "Which problem is naturally recursive?",
+      "options": [
+        "Traversing a tree",
+        "Printing one fixed String",
+        "Declaring one int",
+        "Importing Scanner"
+      ],
+      "answer": "Traversing a tree",
+      "explanation": "Trees are recursive structures: each subtree can be traversed the same way.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 1,
+      "question": "What condition is required for binary search?",
+      "options": [
+        "The data must be sorted",
+        "The array must be length 10",
+        "The values must all be Strings",
+        "The code must be recursive"
+      ],
+      "answer": "The data must be sorted",
+      "explanation": "Binary search discards halves based on sorted order.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 2,
+      "question": "Which sorting algorithm divides the array and merges sorted halves?",
+      "options": [
+        "Merge sort",
+        "Selection sort",
+        "Linear search",
+        "Bubble scan"
+      ],
+      "answer": "Merge sort",
+      "explanation": "Merge sort is a divide-and-conquer algorithm.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 14,
+      "order": 3,
+      "question": "What is the average time complexity of binary search?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n squared)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Each comparison cuts the remaining search space roughly in half.",
+      "points": 1
+    }
+  ],
+  "questions": [
+    {
+      "examType": "midterm",
+      "order": 1,
+      "question": "What is printed by System.out.println(9 / 4);?",
+      "type": "mc",
+      "options": [
+        "2",
+        "2.25",
+        "3",
+        "4"
+      ],
+      "answer": "2",
+      "explanation": "Both operands are ints, so integer division truncates.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 2,
+      "question": "Which expression correctly tests whether s equals \"yes\"?",
+      "type": "mc",
+      "options": [
+        "s == \"yes\"",
+        "s.equals(\"yes\")",
+        "s = \"yes\"",
+        "equals(s, \"yes\")"
+      ],
+      "answer": "s.equals(\"yes\")",
+      "explanation": "equals compares String contents.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 3,
+      "question": "What is the value of !(true && false)?",
+      "type": "mc",
+      "options": [
+        "true",
+        "false",
+        "0",
+        "It is invalid"
+      ],
+      "answer": "true",
+      "explanation": "true && false is false; !false is true.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 4,
+      "question": "A loop that reads values until the user types -1 is best described as:",
+      "type": "mc",
+      "options": [
+        "sentinel-controlled",
+        "constructor-controlled",
+        "inheritance-controlled",
+        "compile-time only"
+      ],
+      "answer": "sentinel-controlled",
+      "explanation": "A sentinel value signals when input should stop.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 5,
+      "question": "A double nested loop over an n by n grid has which order of growth?",
+      "type": "mc",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n squared)"
+      ],
+      "answer": "O(n squared)",
+      "explanation": "There are n rows times n columns.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 6,
+      "question": "Which method header returns an int and receives two int parameters?",
+      "type": "mc",
+      "options": [
+        "public int add(int a, int b)",
+        "public void add(int a, int b)",
+        "public add int(a,b)",
+        "int public add()"
+      ],
+      "answer": "public int add(int a, int b)",
+      "explanation": "The return type appears before the method name and parameters appear in parentheses.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 7,
+      "question": "Why should a class validate constructor parameters?",
+      "type": "mc",
+      "options": [
+        "To protect object invariants",
+        "To make all fields public",
+        "To avoid all methods",
+        "To force inheritance"
+      ],
+      "answer": "To protect object invariants",
+      "explanation": "Validation prevents objects from starting in invalid states.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 8,
+      "question": "What is the result of \"desk\".indexOf(\"s\")?",
+      "type": "mc",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "answer": "2",
+      "explanation": "String indexes start at 0: d=0, e=1, s=2.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 9,
+      "question": "Which statement about local variables is true?",
+      "type": "mc",
+      "options": [
+        "They exist only within their declared scope",
+        "They are automatically public",
+        "They belong to every object",
+        "They are always static"
+      ],
+      "answer": "They exist only within their declared scope",
+      "explanation": "Local variables live inside a method or block.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 10,
+      "question": "What is the output after int x = 4; x += 3;?",
+      "type": "mc",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "12"
+      ],
+      "answer": "7",
+      "explanation": "x += 3 adds 3 to the current value.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 11,
+      "question": "Which choice best describes encapsulation?",
+      "type": "mc",
+      "options": [
+        "Hiding internal state and exposing controlled methods",
+        "Using no methods",
+        "Putting all code in main",
+        "Making every field public"
+      ],
+      "answer": "Hiding internal state and exposing controlled methods",
+      "explanation": "Encapsulation controls access to object data.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 12,
+      "question": "What makes an overloaded method different?",
+      "type": "mc",
+      "options": [
+        "Same name, different parameter list",
+        "Same name, same parameter list",
+        "No return type",
+        "It must be private"
+      ],
+      "answer": "Same name, different parameter list",
+      "explanation": "Overloading is based on different signatures.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 13,
+      "question": "Which operator combines two boolean conditions and requires both to be true?",
+      "type": "mc",
+      "options": [
+        "&&",
+        "||",
+        "!",
+        "== for Strings"
+      ],
+      "answer": "&&",
+      "explanation": "&& is logical AND.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 14,
+      "question": "What is printed by for (int i=1; i<=3; i++) System.out.print(i);?",
+      "type": "mc",
+      "options": [
+        "012",
+        "123",
+        "1234",
+        "111"
+      ],
+      "answer": "123",
+      "explanation": "i starts at 1 and runs while i <= 3.",
+      "points": 1
+    },
+    {
+      "examType": "midterm",
+      "order": 15,
+      "question": "Which code avoids a divide-by-zero error when d may be 0?",
+      "type": "mc",
+      "options": [
+        "if (d != 0) result = n / d;",
+        "result = n / d; if (d != 0) {}",
+        "if (d = 0) result = 0;",
+        "result = d / n always"
+      ],
+      "answer": "if (d != 0) result = n / d;",
+      "explanation": "Check the denominator before division.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 1,
+      "question": "Which member is shared by all objects of a class?",
+      "type": "mc",
+      "options": [
+        "static variable",
+        "instance variable",
+        "local variable",
+        "method parameter"
+      ],
+      "answer": "static variable",
+      "explanation": "static belongs to the class, not each object.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 2,
+      "question": "What is arr[0] in an array?",
+      "type": "mc",
+      "options": [
+        "The first element",
+        "The last element",
+        "The length",
+        "The type"
+      ],
+      "answer": "The first element",
+      "explanation": "Java arrays are zero-indexed.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 3,
+      "question": "What does list.remove(2) do for an ArrayList?",
+      "type": "mc",
+      "options": [
+        "Removes the element at index 2",
+        "Removes all elements equal to 2 always",
+        "Returns the length only",
+        "Sorts the list"
+      ],
+      "answer": "Removes the element at index 2",
+      "explanation": "With an int argument, remove deletes the item at that index.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 4,
+      "question": "In a 2D array grid[r][c], r usually represents:",
+      "type": "mc",
+      "options": [
+        "row",
+        "column",
+        "method",
+        "class"
+      ],
+      "answer": "row",
+      "explanation": "The first index is typically row.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 5,
+      "question": "A subclass constructor often calls:",
+      "type": "mc",
+      "options": [
+        "super(...)",
+        "parent.new()",
+        "extends(...)",
+        "static(...)"
+      ],
+      "answer": "super(...)",
+      "explanation": "super calls a superclass constructor.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 6,
+      "question": "If Animal a = new Dog(); a.speak(); and Dog overrides speak, which speak runs?",
+      "type": "mc",
+      "options": [
+        "Dog speak",
+        "Animal speak always",
+        "No method runs",
+        "It is a compile error because Dog is not Animal"
+      ],
+      "answer": "Dog speak",
+      "explanation": "Dynamic dispatch chooses the runtime object method.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 7,
+      "question": "What happens if recursion has no reachable base case?",
+      "type": "mc",
+      "options": [
+        "It can lead to stack overflow",
+        "It always returns 0",
+        "It becomes a loop automatically",
+        "It sorts the array"
+      ],
+      "answer": "It can lead to stack overflow",
+      "explanation": "Recursive calls keep adding stack frames until memory is exhausted.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 8,
+      "question": "Which search checks elements one by one?",
+      "type": "mc",
+      "options": [
+        "linear search",
+        "binary search",
+        "merge sort",
+        "polymorphic search"
+      ],
+      "answer": "linear search",
+      "explanation": "Linear search scans sequentially.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 9,
+      "question": "Selection sort repeatedly:",
+      "type": "mc",
+      "options": [
+        "selects the smallest remaining item and moves it into position",
+        "splits arrays in half",
+        "uses inheritance",
+        "requires a 2D array"
+      ],
+      "answer": "selects the smallest remaining item and moves it into position",
+      "explanation": "Selection sort grows a sorted region by selecting the next smallest.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 10,
+      "question": "Which is true about ArrayList<Integer>?",
+      "type": "mc",
+      "options": [
+        "It stores Integer objects, not primitive int directly",
+        "It cannot change size",
+        "It cannot be looped over",
+        "It must be sorted"
+      ],
+      "answer": "It stores Integer objects, not primitive int directly",
+      "explanation": "Generics require reference types; autoboxing bridges int and Integer.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 11,
+      "question": "What is the purpose of @Override?",
+      "type": "mc",
+      "options": [
+        "It asks the compiler to verify a method overrides a superclass method",
+        "It makes a field private",
+        "It imports a class",
+        "It starts recursion"
+      ],
+      "answer": "It asks the compiler to verify a method overrides a superclass method",
+      "explanation": "@Override catches signature mistakes.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 12,
+      "question": "Which algorithm is usually O(n log n)?",
+      "type": "mc",
+      "options": [
+        "merge sort",
+        "linear search",
+        "selection sort",
+        "array access"
+      ],
+      "answer": "merge sort",
+      "explanation": "Merge sort divides and merges in O(n log n).",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 13,
+      "question": "Which is the best reason to use binary search over linear search?",
+      "type": "mc",
+      "options": [
+        "It is faster on sorted large lists",
+        "It works on unsorted data",
+        "It never uses comparisons",
+        "It changes the array automatically"
+      ],
+      "answer": "It is faster on sorted large lists",
+      "explanation": "Binary search is O(log n) but requires sorted data.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 14,
+      "question": "What is true about private instance variables?",
+      "type": "mc",
+      "options": [
+        "They can be accessed directly only inside the class",
+        "They are shared by all classes",
+        "They cannot store values",
+        "They are always static"
+      ],
+      "answer": "They can be accessed directly only inside the class",
+      "explanation": "private restricts direct access to the declaring class.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 15,
+      "question": "A recursive factorial method should return what for factorial(0)?",
+      "type": "mc",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "It should recurse forever"
+      ],
+      "answer": "1",
+      "explanation": "0! is 1 and commonly used as the base case.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 16,
+      "question": "Which data structure principle describes a stack?",
+      "type": "mc",
+      "options": [
+        "Last in, first out",
+        "First in, first out",
+        "Random in, random out",
+        "Sorted only"
+      ],
+      "answer": "Last in, first out",
+      "explanation": "A stack removes the most recently added item first.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 17,
+      "question": "What does grid.length return for a rectangular 2D array?",
+      "type": "mc",
+      "options": [
+        "number of rows",
+        "number of columns",
+        "total cells",
+        "last value"
+      ],
+      "answer": "number of rows",
+      "explanation": "The outer array length is the row count.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 18,
+      "question": "Why might a method receive an array parameter?",
+      "type": "mc",
+      "options": [
+        "To process or modify a collection of related values",
+        "To create a package",
+        "To prevent loops",
+        "To replace all classes"
+      ],
+      "answer": "To process or modify a collection of related values",
+      "explanation": "Arrays group values so a method can work with all of them.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 19,
+      "question": "Which phrase best defines abstraction?",
+      "type": "mc",
+      "options": [
+        "Focusing on essential behavior while hiding unnecessary detail",
+        "Making all code public",
+        "Never using methods",
+        "Deleting comments"
+      ],
+      "answer": "Focusing on essential behavior while hiding unnecessary detail",
+      "explanation": "Abstraction lets users rely on what an object does without knowing every implementation detail.",
+      "points": 1
+    },
+    {
+      "examType": "final",
+      "order": 20,
+      "question": "Which AP CSA topic connects inheritance, overriding, and dynamic dispatch?",
+      "type": "mc",
+      "options": [
+        "polymorphism",
+        "integer division",
+        "String immutability",
+        "array bounds"
+      ],
+      "answer": "polymorphism",
+      "explanation": "Polymorphism depends on inheritance and overridden behavior.",
+      "points": 1
+    }
   ]
 }

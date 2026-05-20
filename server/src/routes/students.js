@@ -307,7 +307,7 @@ router.get('/:id', authenticate, requireStudentOrAdminForStudentParam, async (re
   res.json({ student: serialized });
 });
 
-router.patch('/:id', authenticate, requireStudentOrAdminForStudentParam, async (req, res) => {
+router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
   const allowed = [
     'name',
     'studentCode',
@@ -396,7 +396,7 @@ router.delete('/:id', authenticate, requireAdmin, async (req, res) => {
  * Replace entire transcript: semesters + course rows.
  * Body: { semesters: [ { key, sortOrder?, courseRows: [ { courseName, courseType, credits, letterGrade } ] } ] }
  */
-router.put('/:id/transcript', authenticate, requireStudentOrAdminForStudentParam, async (req, res) => {
+router.put('/:id/transcript', authenticate, requireAdmin, async (req, res) => {
   const studentId = req.params.id;
   const semestersInput = req.body?.semesters;
   if (!Array.isArray(semestersInput)) {
@@ -407,6 +407,11 @@ router.put('/:id/transcript', authenticate, requireStudentOrAdminForStudentParam
   if (!student) {
     return res.status(404).json({ error: 'Student not found' });
   }
+  const existingSemesters = await prisma.semester.findMany({
+    where: { studentId },
+    select: { key: true, releaseDate: true },
+  });
+  const existingReleaseByKey = new Map(existingSemesters.map((sem) => [sem.key, sem.releaseDate]));
 
   try {
     await prisma.$transaction(async (tx) => {
@@ -425,6 +430,7 @@ router.put('/:id/transcript', authenticate, requireStudentOrAdminForStudentParam
             studentId,
             key: key.trim(),
             sortOrder,
+            releaseDate: parseDateOnly(sem.releaseDate) ?? existingReleaseByKey.get(key.trim()) ?? null,
           },
         });
 

@@ -39,10 +39,12 @@
       "Bash(curl -s -b /tmp/c2.txt http://localhost:4000/api/me)",
       "Bash(curl -s -c /tmp/c3.txt -b /tmp/c3.txt -X POST http://localhost:4000/api/auth/login -H 'Content-Type: application/json' -H 'Origin: http://localhost:3000' -d '{\"email\":\"yunfan.yang@genesisideas.school\",\"password\":\"Student2024!!\"}')",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('Token in response:', bool\\(d.get\\('token'\\)\\)\\); print\\('Student:', d.get\\('student',{}\\).get\\('name'\\)\\)\")",
-      "Bash(curl -s -b /tmp/c3.txt http://localhost:4000/api/me)"
+      "Bash(curl -s -b /tmp/c3.txt http://localhost:4000/api/me)",
+      "Bash(rm -f /Users/alanhdchu/GIIS/giis-website/.git/index.lock /Users/alanhdchu/GIIS/giis-website/.git/HEAD.lock && git status --short)"
     ],
     "additionalDirectories": [
-      "/tmp"
+      "/tmp",
+      "/Users/alanhdchu/GIIS/giis-website/.git"
     ]
   }
 }

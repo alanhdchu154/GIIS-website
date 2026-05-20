@@ -419,8 +419,8 @@ const hanxiXiaoSemesters = makeSemesters([
     key: 'Grade 12 - Spring Semester', sortOrder: 7, releaseDate: SPRING_2026_RELEASE, courses: [
       courseRowGated(0, 'English IV - Advanced Composition',     'Core',     '1',  'A',  SPRING_2026_RELEASE),
       courseRowGated(1, 'Sociology',                             'Core',     '1',  'A-', SPRING_2026_RELEASE),
-      courseRowGated(2, 'Behavioral Science',                     'Elective', '1',  'A',  SPRING_2026_RELEASE),
-      courseRowGated(3, 'Social Psychology',                     'Elective', '1',  'A',  SPRING_2026_RELEASE),
+      courseRowGated(2, 'Behavioral Science',                     'Elective', '0.5', 'A',  SPRING_2026_RELEASE),
+      courseRowGated(3, 'Social Psychology',                     'Elective', '0.5', 'A',  SPRING_2026_RELEASE),
     ],
   },
 ]);
@@ -1804,14 +1804,14 @@ async function main() {
 
   // G12 Spring semester — all students completed all modules + both exams.
   // Grades are held by the gate (releaseDate May 22); course work is fully done.
-  // quizScore: A=94, A-=90  |  midtermScore/finalScore: A=93, A-=89
+  // quizScore: A=94, A-=90  |  midtermScore/finalScore: A=93, A-=90
   const range = (n) => Array.from({ length: n }, (_, i) => i + 1);
   const g12Progress = [
     {
       email: 'ruwen.li@genesisideas.school',
       courses: [
-        { slug: 'english-iv-advanced-composition', modules: 13, quizScore: 90, examScore: 89 },
-        { slug: 'sociology',                        modules: 13, quizScore: 90, examScore: 89 },
+        { slug: 'english-iv-advanced-composition', modules: 13, quizScore: 90, examScore: 90 },
+        { slug: 'sociology',                        modules: 13, quizScore: 90, examScore: 90 },
         { slug: 'business-law',                     modules: 11, quizScore: 94, examScore: 93 },
         { slug: 'corporate-finance',                modules: 11, quizScore: 94, examScore: 93 },
       ],
@@ -1820,7 +1820,7 @@ async function main() {
       email: 'tao.zhang@genesisideas.school',
       courses: [
         { slug: 'english-iv-advanced-composition', modules: 13, quizScore: 94, examScore: 93 },
-        { slug: 'ap-human-geography',              modules: 16, quizScore: 90, examScore: 89 },
+        { slug: 'ap-human-geography',              modules: 16, quizScore: 90, examScore: 90 },
         { slug: 'abnormal-psychology',             modules: 11, quizScore: 94, examScore: 93 },
         { slug: 'counseling-mental-health',        modules: 11, quizScore: 94, examScore: 93 },
       ],
@@ -1829,7 +1829,7 @@ async function main() {
       email: 'baoyi.lu@genesisideas.school',
       courses: [
         { slug: 'english-iv-media-writing',           modules: 13, quizScore: 94, examScore: 93 },
-        { slug: 'sociology',                           modules: 13, quizScore: 90, examScore: 89 },
+        { slug: 'sociology',                           modules: 13, quizScore: 90, examScore: 90 },
         { slug: 'personal-finance-applied-economics', modules: 11, quizScore: 94, examScore: 93 },
         { slug: 'digital-media-society',              modules: 11, quizScore: 94, examScore: 93 },
       ],
@@ -1846,7 +1846,7 @@ async function main() {
       email: 'hanxi.xiao@genesisideas.school',
       courses: [
         { slug: 'english-iv-advanced-composition', modules: 13, quizScore: 94, examScore: 93 },
-        { slug: 'sociology',                        modules: 13, quizScore: 90, examScore: 89 },
+        { slug: 'sociology',                        modules: 13, quizScore: 90, examScore: 90 },
         { slug: 'behavioral-science',               modules:  8, quizScore: 94, examScore: 93 },
         { slug: 'social-psychology',                modules:  8, quizScore: 94, examScore: 93 },
       ],

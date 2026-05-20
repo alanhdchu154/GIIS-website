@@ -1,0 +1,293 @@
+{
+  "generated_at": "2026-05-20T00:35:14Z",
+  "repo_root": "/Users/alanhdchu/GIIS/giis-website",
+  "summary": {
+    "lesson_count": 2,
+    "verdict_counts": {
+      "pass_with_minor_notes": 1,
+      "pass": 1
+    },
+    "issue_counts": {
+      "minor": 6,
+      "note": 3
+    },
+    "avg_quality_score": 80.5,
+    "median_quality_score": 80.5,
+    "ready_count": 2,
+    "needs_review_count": 0,
+    "blocked_count": 0
+  },
+  "lessons": [
+    {
+      "slug": "ap-biology-module-10-natural-selection",
+      "path": "teaching-videos/ap-biology-module-10-natural-selection",
+      "verdict": "pass_with_minor_notes",
+      "quality_score": 62,
+      "issues": [
+        {
+          "severity": "minor",
+          "message": "Average section is 88.2 words; narration may feel dense."
+        },
+        {
+          "severity": "minor",
+          "message": "06_selection_types is 108 words; consider splitting the slide."
+        },
+        {
+          "severity": "minor",
+          "message": "11_mechanisms is 118 words; consider splitting the slide."
+        },
+        {
+          "severity": "minor",
+          "message": "12_drift_examples is 128 words; consider splitting the slide."
+        },
+        {
+          "severity": "minor",
+          "message": "13_evidence is 147 words; consider splitting the slide."
+        },
+        {
+          "severity": "minor",
+          "message": "14_homology_trap is 115 words; consider splitting the slide."
+        },
+        {
+          "severity": "note",
+          "message": "AP course naming should be checked against Course Audit/authorization wording before public claims."
+        },
+        {
+          "severity": "note",
+          "message": "YouTube block exists but folder is not marked .cleaned; cleanup may not have run."
+        }
+      ],
+      "issue_counts": {
+        "minor": 6,
+        "note": 2
+      },
+      "script": {
+        "course": "AP Biology",
+        "module": "Module 10: Natural Selection and Evolution",
+        "voice": "en-US-EmmaNeural",
+        "voice_rate": "-3%",
+        "section_count": 16,
+        "word_count": 1412,
+        "estimated_minutes": 9.4,
+        "avg_words_per_section": 88.2,
+        "max_words_in_section": 147,
+        "long_sections": [
+          {
+            "id": "06_selection_types",
+            "words": 108
+          },
+          {
+            "id": "11_mechanisms",
+            "words": 118
+          },
+          {
+            "id": "12_drift_examples",
+            "words": 128
+          },
+          {
+            "id": "13_evidence",
+            "words": 147
+          },
+          {
+            "id": "14_homology_trap",
+            "words": 115
+          }
+        ],
+        "empty_sections": [],
+        "required_structure": {
+          "title": true,
+          "hook": true,
+          "overview": true,
+          "pause": true,
+          "recap": true,
+          "path": true
+        },
+        "pause_count": 1,
+        "silence_count": 1,
+        "has_worked_solution_after_pause": true,
+        "urls_in_narration": [],
+        "risky_claims": [],
+        "assignment_mentions": 5,
+        "misconception_mentions": 3
+      },
+      "assets": {
+        "slides_count": 16,
+        "audio_mp3_count": 16,
+        "audio_wav_count": 16,
+        "audio_file_count": 16,
+        "mp4_count": 1,
+        "has_mp4": true,
+        "mp4_files": [
+          {
+            "file": "ap_biology_module_10_natural_selection.mp4",
+            "mb": 16.6
+          }
+        ],
+        "has_transcript": true,
+        "has_intro_music": true,
+        "has_outro_music": true,
+        "is_cleaned_after_upload": false,
+        "slide_dimensions_sample": {
+          "1920x1080": 5
+        },
+        "missing_slides": [],
+        "extra_slides": [],
+        "missing_audio": [],
+        "slide_count_matches_sections": true,
+        "audio_count_matches_sections": true
+      },
+      "reviewers": {
+        "count": 6,
+        "verdicts": [
+          {
+            "file": "_review_A.json",
+            "reviewer": "A — Peer PhD (Evolutionary Biology)",
+            "verdict": "minor"
+          },
+          {
+            "file": "_review_A_v2.json",
+            "reviewer": "A — Peer PhD (Evolutionary Biology), round 2",
+            "verdict": "pass"
+          },
+          {
+            "file": "_review_B.json",
+            "reviewer": "B — Adversarial AP Student",
+            "verdict": "minor"
+          },
+          {
+            "file": "_review_B_v2.json",
+            "reviewer": "B — Adversarial AP Student, round 2",
+            "verdict": "pass"
+          },
+          {
+            "file": "_review_C.json",
+            "reviewer": "C — Citation Checker (anti-hallucination)",
+            "verdict": "minor"
+          },
+          {
+            "file": "_review_C_v2.json",
+            "reviewer": "C — Citation Checker, round 2",
+            "verdict": "minor"
+          }
+        ],
+        "counts": {
+          "minor": 4,
+          "pass": 2
+        },
+        "has_phd_level": true,
+        "has_adversarial_student": true,
+        "has_citation_checker": true
+      },
+      "youtube": {
+        "video_id": "ILFeGC54PBo",
+        "url": "https://youtu.be/ILFeGC54PBo",
+        "privacy": "unlisted",
+        "playlist": "AP Biology",
+        "uploaded_at": "2026-05-19T14:00:11+00:00"
+      }
+    },
+    {
+      "slug": "ap-biology-module-10-natural-selection-v2",
+      "path": "teaching-videos/ap-biology-module-10-natural-selection-v2",
+      "verdict": "pass",
+      "quality_score": 99,
+      "issues": [
+        {
+          "severity": "note",
+          "message": "AP course naming should be checked against Course Audit/authorization wording before public claims."
+        }
+      ],
+      "issue_counts": {
+        "note": 1
+      },
+      "script": {
+        "course": "AP Biology",
+        "module": "Module 10: Natural Selection and Evolution — V2 Pilot",
+        "voice": "en-US-EmmaNeural",
+        "voice_rate": "-3%",
+        "section_count": 14,
+        "word_count": 594,
+        "estimated_minutes": 4.0,
+        "avg_words_per_section": 42.4,
+        "max_words_in_section": 53,
+        "long_sections": [],
+        "empty_sections": [],
+        "required_structure": {
+          "title": true,
+          "hook": true,
+          "overview": true,
+          "pause": true,
+          "recap": true,
+          "path": true
+        },
+        "pause_count": 1,
+        "silence_count": 0,
+        "has_worked_solution_after_pause": true,
+        "urls_in_narration": [],
+        "risky_claims": [],
+        "assignment_mentions": 2,
+        "misconception_mentions": 3
+      },
+      "assets": {
+        "slides_count": 14,
+        "audio_mp3_count": 0,
+        "audio_wav_count": 14,
+        "audio_file_count": 14,
+        "mp4_count": 1,
+        "has_mp4": true,
+        "mp4_files": [
+          {
+            "file": "ap_biology_module_10_natural_selection_v2_pilot.mp4",
+            "mb": 3.1
+          }
+        ],
+        "has_transcript": true,
+        "has_intro_music": true,
+        "has_outro_music": true,
+        "is_cleaned_after_upload": false,
+        "slide_dimensions_sample": {
+          "1920x1080": 5
+        },
+        "missing_slides": [],
+        "extra_slides": [],
+        "missing_audio": [],
+        "slide_count_matches_sections": true,
+        "audio_count_matches_sections": true
+      },
+      "reviewers": {
+        "count": 3,
+        "verdicts": [
+          {
+            "file": "_review_A_v2pilot.json",
+            "reviewer": "A — PhD-level Content Reviewer (pilot self-audit)",
+            "verdict": "pass"
+          },
+          {
+            "file": "_review_B_v2pilot.json",
+            "reviewer": "B — Adversarial AP Student Reviewer (pilot self-audit)",
+            "verdict": "pass"
+          },
+          {
+            "file": "_review_C_v2pilot.json",
+            "reviewer": "C — Citation / Source / License Checker (pilot self-audit)",
+            "verdict": "minor"
+          }
+        ],
+        "counts": {
+          "pass": 2,
+          "minor": 1
+        },
+        "has_phd_level": true,
+        "has_adversarial_student": true,
+        "has_citation_checker": true
+      },
+      "youtube": {
+        "video_id": null,
+        "url": null,
+        "privacy": null,
+        "playlist": null,
+        "uploaded_at": null
+      }
+    }
+  ]
+}

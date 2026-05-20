@@ -219,6 +219,70 @@ export function ScheduleGrid({ schedule, color, onCourseClick }) {
   );
 }
 
+function EvidenceCard({ label, value, body, color }) {
+  return (
+    <div style={{ background: '#fff', border: '1px solid #e3e7ef', borderRadius: 10, padding: '18px 18px 16px' }}>
+      <p style={{ margin: '0 0 5px', fontSize: 11, fontWeight: 800, color, textTransform: 'uppercase', letterSpacing: '0.8px' }}>{label}</p>
+      <p style={{ margin: '0 0 8px', fontSize: 24, lineHeight: 1, fontWeight: 850, color: '#1a1a2e' }}>{value}</p>
+      <p style={{ margin: 0, fontSize: 12, lineHeight: 1.55, color: '#5c6578' }}>{body}</p>
+    </div>
+  );
+}
+
+function PathwayEvidencePanel({ schedule, courses, color }) {
+  const allScheduledCourses = schedule.flatMap((term) => term.courses);
+  const totalCredits = allScheduledCourses.reduce((sum, course) => sum + Number(course.credits || 0), 0);
+  const pathwayCredits = allScheduledCourses
+    .filter((course) => course.type === 'pathway')
+    .reduce((sum, course) => sum + Number(course.credits || 0), 0);
+  const supportingCredits = allScheduledCourses
+    .filter((course) => course.type === 'supporting')
+    .reduce((sum, course) => sum + Number(course.credits || 0), 0);
+  const quizQuestions = courses.reduce((sum, course) => sum + (course.quiz?.length || 0), 0);
+  const resourceCount = courses.reduce((sum, course) => sum + (course.resources?.length || 0), 0);
+  const capstone = allScheduledCourses.find((course) => /capstone|portfolio|project|research/i.test(course.name));
+
+  return (
+    <div style={{ marginBottom: 46, padding: '24px', borderRadius: 12, background: '#f8fafc', border: '1px solid #e3e7ef' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 18, flexWrap: 'wrap', marginBottom: 18 }}>
+        <div>
+          <p style={{ margin: '0 0 5px', fontSize: 11, fontWeight: 800, color, textTransform: 'uppercase', letterSpacing: '1px' }}>Academic evidence</p>
+          <h2 style={{ margin: 0, fontSize: 22, fontWeight: 850, color: '#1a1a2e' }}>What makes this pathway transcript-ready</h2>
+        </div>
+        <p style={{ margin: 0, fontSize: 12, color: '#5c6578', maxWidth: 360, lineHeight: 1.55 }}>
+          Parents should see more than course names: a credit map, assessments, learning records, and a senior artifact that can support college advising.
+        </p>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 12 }}>
+        <EvidenceCard
+          color={color}
+          label="Credit map"
+          value={`${Number(totalCredits.toFixed(1))} cr`}
+          body={`${Number(pathwayCredits.toFixed(1))} pathway credits plus ${Number(supportingCredits.toFixed(1))} recommended credits across 8 semesters.`}
+        />
+        <EvidenceCard
+          color={color}
+          label="Course depth"
+          value={courses.length}
+          body={`${resourceCount} curated resources, full syllabi, weekly outlines, and project-based assignments.`}
+        />
+        <EvidenceCard
+          color={color}
+          label="Assessment trail"
+          value={`${quizQuestions}Q`}
+          body="Module quizzes, midterm/final exams in the Learn Portal, and timestamped activity records for parent visibility."
+        />
+        <EvidenceCard
+          color={color}
+          label="Senior evidence"
+          value={capstone ? 'Yes' : 'Plan'}
+          body={capstone ? `${capstone.name} creates a reviewable portfolio, research, or project artifact.` : 'Advisor can add a capstone artifact for college applications.'}
+        />
+      </div>
+    </div>
+  );
+}
+
 // ─── PathwayPage (full template) ──────────────────────────────────────────────
 
 export function PathwayPage({ meta, schedule, courses, language, toggleLanguage }) {
@@ -295,6 +359,8 @@ export function PathwayPage({ meta, schedule, courses, language, toggleLanguage 
       </div>
 
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '56px 32px' }}>
+
+        <PathwayEvidencePanel schedule={schedule} courses={courses} color={color} />
 
         {/* Schedule */}
         <div style={{ marginBottom: 60 }}>
