@@ -64,9 +64,7 @@ function TranscriptContent({
     timeZone: 'America/Chicago',
   }).format(today);
 
-  // For status computation: use transcriptDate for official view, today for live editing.
-  const referenceDate =
-    profile?.transcriptDate ? new Date(profile.transcriptDate) : today;
+  const referenceDate = today;
   const graduationYear =
     profile?.graduationDate ? new Date(profile.graduationDate).getFullYear() : null;
   const semesterStatuses = getAllSemesterStatuses(

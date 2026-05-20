@@ -331,7 +331,7 @@ export async function exportTranscriptToPDF({ profile, semesterRowsRef, semester
 
     const cumulative = computeAllGPA(rowsBySemester);
     const p = profile || {};
-    const transcriptDate = p.transcriptDate ? new Date(p.transcriptDate) : new Date();
+    const transcriptDate = new Date();
     const graduationYear = p.graduationDate ? new Date(p.graduationDate).getFullYear() : null;
     const semStatuses = getAllSemesterStatuses(TRANSCRIPT_SEMESTER_KEYS, graduationYear, transcriptDate);
 
