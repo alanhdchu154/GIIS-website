@@ -1,0 +1,37 @@
+{
+  "reviewer": "A — Peer Subject-Matter Reviewer (round 2)",
+  "verdict": "pass",
+  "issues": [
+    {
+      "section_id": "06_demography",
+      "severity": "pass",
+      "description": "Round-1 note resolved. The outline now explicitly states b, d, i, e are PER-CAPITA RATES (per individual per unit time), so r = (b − d) + (i − e) is the per-capita growth rate, and correctly contrasts the raw-count form dN/dt = (B − D) + (I − E) for total change. Sign rule (r>0 grows, r=0 stable, r<0 shrinks) is correct.",
+      "suggested_fix": "None — accurate."
+    },
+    {
+      "section_id": "07_exponential",
+      "severity": "pass",
+      "description": "Round-1 note resolved. Doubling time ≈ 70/r is now correctly qualified: r expressed as a PERCENT growth rate, with an explicit warning not to plug in the decimal r from dN/dt = rN. Dimensionally correct.",
+      "suggested_fix": "None — accurate."
+    },
+    {
+      "section_id": "08_logistic",
+      "severity": "pass",
+      "description": "Logistic model stated correctly: dN/dt = rN(K − N)/K, the (K − N)/K term walked through properly (near 1 at small N, toward 0 as N→K). The model-vs-reality distinction is handled correctly — the basic logistic asymptotes to K, while real populations may overshoot/oscillate/crash. K framed as a settling level, not a hard wall. No misstatement of model behavior.",
+      "suggested_fix": "None — accurate."
+    },
+    {
+      "section_id": "10_limiting_factors_compare",
+      "severity": "pass",
+      "description": "Density-dependent vs density-independent now correctly led by the MECHANISM test ('does the per-capita effect change with N?') rather than memorized example bins. Example sets and the pause-slide answers (11/12) are correct, including the fire-by-crowding twist.",
+      "suggested_fix": "None — accurate."
+    },
+    {
+      "section_id": "13_r_vs_k_compare",
+      "severity": "pass",
+      "description": "r/K correctly framed as a spectrum, not a binary; trait lists and examples accurate. The 'many fish' example remains acceptable for AP and the spectrum caveat covers the large/late-maturing-fish exception. Survivorship Type I/II/III (sec 14) shapes and strategy mappings (I↔K, III↔r, II constant) are correct.",
+      "suggested_fix": "None — optional 'many small fish' refinement only."
+    }
+  ],
+  "overall_assessment": "All three round-1 flags are fully addressed and now correct: per-capita rate framing of r=(b−d)+(i−e) is explicitly stated and distinguished from the raw-count total-change form; the rule of 70 specifies r-as-a-percent with a decimal-vs-percent warning; and r/K is consistently a spectrum. The logistic section correctly separates the model (asymptotes to K) from real-world overshoot/oscillation without conflating them. Equations (dN/dt=rN, dN/dt=rN(K−N)/K), density-dependent/-independent mechanism test, r/K spectrum, and Type I/II/III survivorship are all factually sound. No critical or minor errors remain. Clean pass."
+}

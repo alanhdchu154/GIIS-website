@@ -1,0 +1,37 @@
+{
+  "reviewer": "B — Adversarial Student",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "08_logistic",
+      "severity": "note",
+      "description": "The outline correctly says K is 'not a hard wall' and 'populations can overshoot it,' which is excellent. But the slide visual shows only a clean S-curve flattening at K — it never SHOWS an overshoot-and-crash oscillation. A student hears 'can overshoot' but sees only the textbook S, so the misconception that the curve simply glides to K and stops is reinforced visually. The text and the picture disagree.",
+      "suggested_fix": "Add a faint dotted overshoot-and-dampen wobble around the K line on the logistic visual (curve briefly pokes above K then settles), so the 'overshoot is real' point the narration makes is actually visible."
+    },
+    {
+      "section_id": "11_pause1",
+      "severity": "note",
+      "description": "The pause question is well-built and the two scenarios are genuinely unambiguous (cold snap = independent, density-driven disease = dependent), and 12_pause1_silence resolves both cleanly with the correct reasoning. The only weakness: both scenarios are near-canonical textbook cases, so a student who has memorized the example lists can answer without using the 'does it intensify with N?' test. It tests recall more than transfer. This is a robustness gap, not an error.",
+      "suggested_fix": "Make one scenario a novel/ambiguous-looking case that forces the test rule — e.g. 'a wildfire spreads faster through a denser stand of trees' (density-DEPENDENT despite fire usually being the textbook example of density-independent), which rewards reasoning over memorized bins."
+    },
+    {
+      "section_id": "10_limiting_factors_compare",
+      "severity": "minor",
+      "description": "Fire/floods/'human disturbance' are listed as flatly density-independent, but the same factors can become density-dependent in real scenarios (fire spreads faster in denser fuel; disease-like crowding effects). Since the very next slide's pause asks students to CLASSIFY novel scenarios, presenting the lists as fixed labels can mislead a student into classifying by example-matching ('fire = independent, always') instead of by the mechanism test the slide itself states. The mechanism rule is correct; the rigid example lists quietly undercut it.",
+      "suggested_fix": "Add one line: 'Classify by the mechanism, not the example — the SAME factor (e.g. fire) can be density-dependent if its impact grows with crowding. Always ask: does the effect intensify because there are more individuals?'"
+    },
+    {
+      "section_id": "07_exponential",
+      "severity": "note",
+      "description": "Mostly solid. 'Doubling time approximately 70/r' is given without stating that r must be expressed as a percent (the rule of 70 uses percentage growth rate, not the decimal per-capita r used in dN/dt = rN). A sharp student who plugs a decimal r (e.g. 0.05) into 70/r gets 1400, an absurd answer. The two meanings of 'r' on this slide collide silently.",
+      "suggested_fix": "Note that the 70/r shortcut uses r as a PERCENT (e.g. r = 5%/yr → doubling ≈ 14 yr), distinct from the decimal r in dN/dt = rN, so students don't mix the units."
+    },
+    {
+      "section_id": "06_demography",
+      "severity": "note",
+      "description": "r is written as r = (b − d) + (i − e) using raw birth/death/migration counts, but it is labeled 'per-capita growth rate.' Per-capita r is properly (births − deaths + immigration − emigration) divided by N (or expressed as per-capita rates b, d, i, e). As written with counts, the formula gives an absolute change (closer to dN/dt), not a per-capita rate. The sign logic (r>0 grows, etc.) is fine, but a precise student will catch the per-capita mislabel, and AP free-response can dock this.",
+      "suggested_fix": "Either label it the overall growth rate / dN/dt, or define b, d, i, e as per-capita rates so 'per-capita growth rate r' is dimensionally honest."
+    }
+  ],
+  "overall_assessment": "Strong, AP-aligned outline that gets the two highest-stakes traps exactly right: carrying capacity is explicitly framed as a leveling point with overshoot, not a hard cap, and r/K is explicitly a spectrum, not a binary. Exponential-vs-logistic is crisp with a clean decision rule, survivorship Type I/II/III maps cleanly onto K/r strategies with correct examples, and the energy-flow preview is appropriately brief and non-misleading ('matter cycles, energy flows'). The pause question is answerable and the silence slide resolves it correctly. No critical, misconception-creating defects. The remaining issues are refinements: the logistic VISUAL doesn't show the overshoot the text promises; the density-dependent/independent example lists are presented rigidly enough to encourage example-matching over the mechanism test the slide itself teaches; the pause tests recall more than transfer; and two small quantitative-precision points (rule-of-70 units, per-capita r definition) could trip up a top student. Verdict: minor."
+}

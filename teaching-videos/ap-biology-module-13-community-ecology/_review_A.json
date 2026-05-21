@@ -1,0 +1,61 @@
+{
+  "reviewer": "A — Peer Subject-Matter Reviewer (Ecology PhD)",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "04_interactions_table",
+      "severity": "note",
+      "description": "All six +/−/0 signs are correct (competition −/−, predation +/−, herbivory +/−, parasitism +/−, mutualism +/+, commensalism +/0). One genuine subtlety: the barnacle-on-whale example for commensalism (+/0) is the standard textbook case, but it is debated in the literature — barnacles can add measurable drag/hydrodynamic cost to the host, so the host is not strictly unaffected, and the gain to the barnacle (transport to plankton-rich water) is real. For AP purposes it is acceptable and conventional, but it is not a clean, settled +/0.",
+      "suggested_fix": "Keep the example for AP alignment, but optionally pair or replace with a less contested case such as cattle egrets following grazers, or epiphytic orchids on a tree trunk, which more cleanly approximate +/0."
+    },
+    {
+      "section_id": "08_predator_prey",
+      "severity": "minor",
+      "description": "The lynx-hare narration and graph are correct at AP level (Lotka-Volterra predicts coupled out-of-phase oscillations; lynx lags hare; Hudson's Bay Company fur records show ~10-year cycles). The only imprecision worth flagging: the lynx-hare cycle is NOT actually driven primarily by lynx predation in the way the simple Lotka-Volterra model implies — modern work shows hare cycles are driven by a combination of food limitation and the full predator guild (lynx, coyote, raptors) plus stress/maternal effects, with lynx largely tracking the hare. This is a known caveat that the simple model overstates. The outline does not claim mechanism causation explicitly, so this is acceptable, but the pairing of 'Lotka-Volterra predicts' with the lynx-hare data can imply the model is the validated mechanism.",
+      "suggested_fix": "No change required for AP scope. If desired, a one-clause hedge ('the data fit the cyclic prediction, though the real cause is more complex than two species alone') would be more honest without adding exam burden."
+    },
+    {
+      "section_id": "09_defenses_mimicry",
+      "severity": "minor",
+      "description": "Batesian (harmless mimics harmful — a bluff, only one defended) and Müllerian (multiple harmful species converge on a shared warning pattern, all genuinely defended) are both defined CORRECTLY. The viceroy/monarch 'reconsidered' caveat is handled honestly and is the correct treatment: Ritland & Brower (1991) showed the viceroy is itself unpalatable, which actually makes viceroy/monarch a MÜLLERIAN pair (or at least Müllerian-like), NOT Batesian. The outline says 'later reconsidered, but the term applies to many cases,' which is true but slightly soft — it does not tell the student WHICH way it was reconsidered (it flipped toward Müllerian).",
+      "suggested_fix": "Optionally sharpen the caveat: 'the viceroy turned out to be unpalatable too, so it is now considered Müllerian rather than Batesian — use a cleaner Batesian example such as the harmless hoverfly mimicking a stinging wasp, or a scarlet kingsnake mimicking a coral snake.' This avoids teaching a now-incorrect Batesian exemplar."
+    },
+    {
+      "section_id": "06_competitive_exclusion",
+      "severity": "note",
+      "description": "Gause's competitive exclusion principle and resource partitioning are stated correctly, and MacArthur's warblers are correctly classified as resource partitioning, not exclusion. Minor framing note: the warblers are also used in 04/05 as the EXAMPLE OF COMPETITION (−/−). This is internally consistent (the species do compete, and partitioning is the resolution of that competition), but a sharp student could find it confusing that the same warblers illustrate both 'competition' and 'coexistence via partitioning.' It is not an error.",
+      "suggested_fix": "No fix needed. Optionally add one clause noting that partitioning is precisely how these competing warblers avoid exclusion, to make the through-line explicit."
+    },
+    {
+      "section_id": "07_niche_compare",
+      "severity": "pass",
+      "description": "Fundamental vs realized niche is stated correctly: fundamental = full set of conditions in the absence of interactions; realized = the subset actually occupied after competition/interactions; realized is a subset of fundamental and interactions shrink (never expand) it. This is exactly right and the 'competition expands a niche is wrong' note is the correct AP trap.",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "12_keystone",
+      "severity": "pass",
+      "description": "Keystone species is correctly defined by disproportionately large effect relative to abundance, explicitly NOT by being most abundant or largest. Paine's Pisaster ochraceus removal → mussel monoculture/biodiversity collapse is the canonical and accurate keystone study. Yellowstone wolves as a top-down trophic cascade is correct.",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "13_succession_compare",
+      "severity": "pass",
+      "description": "Primary succession (bare rock, no soil, volcanic/glacial, lichen/moss pioneers building soil over long timescales) vs secondary succession (soil remains after fire/farm abandonment, faster, herbaceous → shrub → forest) is correct, and the 'soil presence is the dividing line, not disturbance type' framing is the right AP distinction.",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "14_diversity",
+      "severity": "minor",
+      "description": "Richness (number of species), evenness (relative abundances), and Shannon H (combines both) are correct. The diversity→stability claim is hedged appropriately with 'generally,' which is good — the diversity-stability relationship is real but genuinely debated and context-dependent in the ecology literature. One small overreach: 'more productive' is stated as a near-certain consequence. Diversity-productivity relationships (the BEF/productivity literature) are real but more equivocal than diversity-stability, and the relationship is often hump-shaped or saturating rather than monotonic. Lumping 'more productive' in with stability as a flat consequence is slightly stronger than the evidence.",
+      "suggested_fix": "Soften 'more productive' to 'often more productive' or drop it, keeping the well-supported claims (more stable/resistant/resilient, more resistant to invasion). The resistance-to-invasion claim is also context-dependent but is the standard AP-level statement and acceptable."
+    },
+    {
+      "section_id": "key_vocabulary",
+      "severity": "note",
+      "description": "Vocabulary list is accurate and complete for the CED scope. 'resistance and resilience (stability)' is correctly distinguished. No sign errors in the parenthetical tags. Aposematic and cryptic coloration are correctly labeled.",
+      "suggested_fix": "None."
+    }
+  ],
+  "overall_assessment": "Scientifically sound and well-aligned to AP scope. All six interaction signs, competitive exclusion/Gause, resource partitioning, fundamental vs realized niche, Lotka-Volterra/lynx-hare, Batesian vs Müllerian definitions, keystone-by-disproportionate-impact, primary vs secondary succession, and richness/evenness/Shannon H are all correct. No critical (false) statements. The honest handling of the viceroy/monarch caveat is good but could be sharpened (the case flipped toward Müllerian, so it is now a poor Batesian exemplar — swap in hoverfly/wasp or kingsnake/coral snake). Two soft overstatements ('more productive' as a flat diversity consequence; the implication that Lotka-Volterra is the validated mechanism for lynx-hare) are minor and easily hedged. The barnacle-on-whale commensalism example is conventional but mildly contested. Recommend addressing the viceroy exemplar; the rest are optional polish."
+}

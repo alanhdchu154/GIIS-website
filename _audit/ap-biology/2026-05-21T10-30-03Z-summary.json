@@ -1,0 +1,119 @@
+{
+  "run_id": "ap-biology-slot-B-2026-05-21T10-30-03Z",
+  "run_type": "new_module_generation",
+  "slot": "B (5am CT)",
+  "timestamp": "2026-05-21T10:30:03Z",
+  "course": "AP Biology",
+  "course_slug": "ap-biology",
+  "reference_doc": "references/ap-biology-ced.md (Unit 8 — Ecology section)",
+  "plan_followed": "_audit/ap-biology/2026-05-18T04-12-13Z-plan.json (slot A's 16-module plan; resumed at the M12 gap)",
+  "why_this_run": "Slot A (2026-05-21T04:08Z) ran a retroactive 3-reviewer cascade on AP Calculus AB and concluded the reference-doc-backed NEW-content backlog was exhausted. That conclusion overlooked AP Biology M12-M16 (Unit 8 — Ecology), which the 2026-05-19 slot B summary explicitly listed under remaining_for_course. Verification at the start of this run confirmed: (1) AP Biology M1-M11 all carry the 3-reviewer cascade (_review_A/B/C present on every folder) so the earlier 'DO NOT ADD MORE until existing are audited' block is genuinely lifted; (2) references/ap-biology-ced.md contains a complete Unit 8 section mapped to M12-M16; (3) M12-M16 folders did not exist. So genuine rigorous auto-work WAS available. Slot B generated M12 and M13 via the full generator -> 2-round 3-reviewer cascade -> writer pipeline.",
+  "produced": [
+    "ap-biology-module-12-population-ecology",
+    "ap-biology-module-13-community-ecology"
+  ],
+  "produced_detail": [
+    {
+      "slug": "ap-biology-module-12-population-ecology",
+      "title": "Module 12: Ecology: Populations",
+      "cb_unit": "Unit 8 — Ecology (10-15%)",
+      "cb_topics": ["8.1 Responses to the Environment", "8.2 Energy Flow (preview only)", "8.3 Population Ecology", "8.4 Effect of Density on Populations"],
+      "sections": 17,
+      "slides": 17,
+      "voice": "en-US-EmmaNeural",
+      "voice_rate": "-3%",
+      "review_cascade": {
+        "round_1": {"A": "minor", "B": "minor", "C": "minor"},
+        "round_2": {"A": "pass", "B": "pass", "C": "minor"},
+        "final_decision": "ship (0 critical, <=1 minor in round 2)"
+      },
+      "topics_covered": [
+        "Population parameters (N, density, dispersion: clumped/uniform/random)",
+        "Demography and per-capita growth rate r=(b-d)+(i-e) (clarified as per-capita rates after review)",
+        "Exponential J-curve dN/dt=rN, doubling time ~70/r (rule of 70, r as percent)",
+        "Logistic S-curve dN/dt=rN(K-N)/K, carrying capacity K with overshoot/oscillation nuance",
+        "Density-dependent vs density-independent limiting factors (taught via the mechanism test, not just example lists)",
+        "r-selected vs K-selected as a spectrum",
+        "Type I/II/III survivorship curves mapped to life history"
+      ],
+      "ap_traps_inoculated": ["exponential vs logistic", "K is not a hard never-exceeded ceiling", "density-dependent vs -independent classification", "r/K is a spectrum not a binary", "survivorship type <-> strategy mapping"],
+      "learning_checks": 5,
+      "audit_quality_score": 79,
+      "audit_verdict": "needs_review (driven solely by the by-design 'No MP4 found' major + 1 AP-naming note)"
+    },
+    {
+      "slug": "ap-biology-module-13-community-ecology",
+      "title": "Module 13: Community Ecology",
+      "cb_unit": "Unit 8 — Ecology (10-15%)",
+      "cb_topics": ["8.5 Community Ecology", "8.6 Biodiversity", "8.7 Disruptions to Ecosystems"],
+      "sections": 16,
+      "slides": 16,
+      "voice": "en-US-EmmaNeural",
+      "voice_rate": "-3%",
+      "review_cascade": {
+        "round_1": {"A": "minor", "B": "minor", "C": "minor (flagged the 10-15% exam-weight as unsupported only because the CED unit-weighting table line was not in its excerpt; the figure IS in the CED)"},
+        "round_2": {"A": "pass", "B": "pass", "C": "minor"},
+        "final_decision": "ship (0 critical, <=1 minor in round 2)"
+      },
+      "topics_covered": [
+        "Six interspecific interactions and their +/-/0 signs (competition, predation, herbivory, parasitism, mutualism, commensalism)",
+        "Competitive exclusion (Gause) and resource partitioning (MacArthur warblers)",
+        "Fundamental vs realized niche (shrinkage named to competition/predation after review)",
+        "Predator-prey cycles (Lotka-Volterra, lynx/snowshoe hare ~10-year cycles)",
+        "Coevolutionary defenses; Batesian (palatable mimic of defended model) vs Mullerian (multiple defended share a pattern), viceroy/monarch 'reconsidered' caveat preserved",
+        "Keystone species (Paine's Pisaster, Yellowstone wolves) defined by disproportionate impact, distinguished from trophic cascade",
+        "Primary vs secondary succession keyed on soil",
+        "Species diversity: richness vs evenness, Shannon H, diversity->stability (hedged as correlation)"
+      ],
+      "ap_traps_inoculated": ["+/-/0 sign confusion (mutualism vs commensalism vs parasitism)", "fundamental vs realized niche", "Batesian vs Mullerian", "primary vs secondary succession (soil)", "keystone != most abundant", "richness vs evenness"],
+      "learning_checks": 6,
+      "post_writer_fix": "Audit flagged a 'no assignment/practice/portal next-action language' minor. Slot B edited 16_path narration ('Practice the Khan Academy ... problem sets', 'complete the Unit Eight assignment') to satisfy the AGENT_RECIPE concrete-Learn-Portal-action rule. No slide rebuild needed (narration-only). Score 73 -> 79.",
+      "audit_quality_score": 79,
+      "audit_verdict": "needs_review (driven solely by the by-design 'No MP4 found' major + 1 AP-naming note)"
+    }
+  ],
+  "halted": [],
+  "verification": {
+    "artifact_contract": "ALL required files present in both folders: _outline.json, _review_A/B/C.json, _review_A/B/C_v2.json, script.json, build_slides.py, learning_check.json, slides/*.png, intro_music.wav, outro_music.wav, contact-sheet.jpg",
+    "verify_fail_flag": 0,
+    "slide_count_equals_section_count": true,
+    "script_ids_match_outline_ids": true,
+    "all_scripts_parse_as_json": true,
+    "all_narration_within_85_word_cap": true,
+    "voice_all": "en-US-EmmaNeural",
+    "voice_rate_all": "-3%",
+    "banned_terms_check": "clean - no Cognia, US-accredited, UCSB, NJIT, (SIT), or the simplified-Chinese accreditation phrase in either script.json or build_slides.py",
+    "release_gate_note": "Both modules score 79 with verdict needs_revision. CALIBRATION: the already-uploaded shipped modules M10 (62) and M11 (63) ALSO gate to needs_revision and score LOWER. The blocking 'major' issue is 'No MP4 found', which is INTENTIONAL at generation stage per AUTO_PIPELINE.md (the Mac launchd builds MP4s downstream). needs_revision here is the normal generation-stage state, not a quality failure. The genuinely actionable minor (next-action language) was fixed."
+  },
+  "remaining_for_course": [
+    "ap-biology-module-14-ecosystems-energy (Unit 8 — trophic levels, 10% rule, GPP/NPP, carbon/nitrogen cycles)",
+    "ap-biology-module-15-ecosystems-advanced (phosphorus/water cycles, eutrophication, biomagnification, invasive species)",
+    "ap-biology-module-16-ecosystems-synthesis (AP exam format, science practices, cross-unit synthesis, study plan)"
+  ],
+  "deferred_this_run": {
+    "module": "ap-biology-module-14-ecosystems-energy",
+    "reason": "Folder was pre-created but intentionally left empty. Deferred to keep M12+M13 fully through the 2-round cascade within budget, per the SOP 'better few-verified than many-unreviewed'. The empty teaching-videos/ap-biology-module-14-ecosystems-energy/ folder is a resume marker for the next slot, not a halted module."
+  },
+  "throughput": "2 modules through the full 2-round 3-reviewer cascade (12 review JSON files total: 6 round-1 + 6 round-2) + writer + slide build + contact sheet. Peak parallel sub-agents: 6 (the round-1 and round-2 reviewer fan-outs). Matches the sanctioned 2026-05-19 slot B pace of 2 modules with the cascade fully honored.",
+  "constraints_respected": {
+    "no_youtube_api_calls": true,
+    "no_make_lesson_or_upload_lesson": true,
+    "no_git_push": true,
+    "lessons_manifest_untouched": true,
+    "no_regeneration_of_existing_modules": true,
+    "no_live_web_fetch": true,
+    "three_reviewer_cascade_used_for_every_module": true,
+    "no_skipped_reviewers": true,
+    "two_round_cascade_completed": true
+  },
+  "anomalies": [
+    "Slot A's 2026-05-21 AP Calc summary asserted the reference-doc-backed new-content backlog was EXHAUSTED. This was an oversight: AP Biology M12-M16 (Unit 8 Ecology) were genuinely missing, CED-backed, and unblocked. Slot B picked them up. Lesson for future slots: 'backlog exhausted' claims should be cross-checked against each course's prior remaining_for_course list before defaulting to audit-only work.",
+    "ap-biology-module-10-natural-selection-v2 is the recognized 'M10 V2 pilot' (ROADMAP 2026-05-19 Later 10, audit score 99) with a .cleaned marker, _review_*_v2pilot.json files, and a youtube key in script.json. It is a deliberate experiment, NOT a broken/stray folder. Left untouched.",
+    "Two _audit locations exist in the repo: root /_audit/<course>/ (where AP Biology history lives) and /teaching-videos/_audit/<course>/ (where slot A wrote the 2026-05-21 AP Calc cascade). This summary was written to the root location to sit alongside the biology plan it resumed. A future cleanup could consolidate to one location."
+  ],
+  "next_slot_recommendations": [
+    "Slot A (11pm CT) or next Slot B: resume the SAME 2026-05-18 AP Biology plan and generate M14 (folder already created, empty), then M15 and M16, each through the full 2-round 3-reviewer cascade against the Unit 8 CED. That completes AP Biology 16/16.",
+    "After AP Biology is complete, the reference-doc-backed backlog is truly exhausted (AP CS A and AP Psychology have script.json but NO CED reference doc, so Reviewer C cannot run; AP Calc is done). At that point a human must add references/<slug>-ced.md (e.g. ap-cs-a-ced.md, ap-psychology-ced.md) to unblock either retroactive cascades for those courses or new courses (AP Statistics, Geometry, Chemistry, US History, etc., which have prisma defs but no teaching-videos folders).",
+    "Human: action the 2 confirmed AP Calc errata from slot A (M4 -4/3 in section 09; M12 105/90 min in section 03) - both cheap YouTube-description corrections."
+  ]
+}

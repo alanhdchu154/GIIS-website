@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "skill": "classify an interaction by +/-/0 signs",
+      "question": "A tapeworm lives in a host's gut: the tapeworm benefits and the host is harmed. Give the sign pair and name the interaction. Could it be predation or herbivory by the signs alone?",
+      "answer": "+/- (parasitism). Predation and herbivory are also +/-, so the signs alone don't distinguish them; the difference is HOW one organism exploits the other (consuming whole prey vs eating plant tissue vs living on/in a host), not the sign.",
+      "misconception_tested": "thinking the +/- sign uniquely identifies one interaction, when predation, herbivory, and parasitism all share +/-"
+    },
+    {
+      "skill": "distinguish Batesian vs Mullerian mimicry",
+      "question": "A harmless hoverfly evolves the yellow-and-black stripes of a stinging wasp. Separately, several genuinely venomous snake species converge on the same red-and-yellow banding. Which case is Batesian and which is Mullerian, and why?",
+      "answer": "Hoverfly/wasp = Batesian: an undefended (palatable) species mimics a defended model; only the model is truly defended, so the mimic is a bluff (effectively parasitic). Multiple venomous snakes sharing a pattern = Mullerian: multiple defended species share one warning signal, so a predator learns it once and all benefit (effectively mutualistic).",
+      "misconception_tested": "reversing Batesian and Mullerian, or calling either one 'camouflage' (mimicry = resembling another organism, not blending into the background)"
+    },
+    {
+      "skill": "identify primary vs secondary succession from a scenario",
+      "question": "A wildfire burns a forest to the ground but leaves the soil intact, and grasses sprout within a year. A retreating glacier exposes bare rock that lichens slowly colonize over a century. Which is primary succession and which is secondary, and what is the dividing line?",
+      "answer": "The post-fire site is secondary succession (soil remains, so it is fast). The bare rock left by the glacier is primary succession (no soil; lichens and mosses are pioneers that build soil over centuries). The dividing line is the presence or absence of soil, NOT the type of disturbance.",
+      "misconception_tested": "keying succession type to the kind of disturbance instead of whether soil is present"
+    },
+    {
+      "skill": "identify a keystone species vs a merely-abundant species",
+      "question": "In a tide pool, a rare predatory sea star is far outnumbered by mussels and barnacles. Removing the sea star collapses the community into a mussel monoculture. Is the sea star or the abundant mussel the keystone species, and why?",
+      "answer": "The rare sea star is the keystone species. A keystone is defined by an effect on the community DISPROPORTIONATELY LARGE relative to its abundance, not by being the most abundant or largest organism. The mussel is abundant but not keystone.",
+      "misconception_tested": "equating 'keystone' with 'most common' or 'largest' rather than disproportionate impact"
+    },
+    {
+      "skill": "separate richness from evenness",
+      "question": "Community X has 10 species, but 91% of individuals belong to a single species. Community Y has 10 species each making up about 10% of individuals. They have identical species richness — which has higher evenness, and which is more diverse by the Shannon index?",
+      "answer": "Both have the same richness (10 species). Community Y has far higher evenness (abundances are nearly equal), so Y has the higher Shannon diversity index (H). Richness counts species; evenness measures how equal their abundances are; Shannon H combines both.",
+      "misconception_tested": "treating diversity as only a head-count of species while ignoring evenness"
+    },
+    {
+      "skill": "distinguish competitive exclusion from resource partitioning",
+      "question": "Several warbler species feed in the same spruce tree, but each forages in a different part of it and all coexist. Is this competitive exclusion or resource partitioning? What would Gause's principle predict if they used the EXACT same part of the tree?",
+      "answer": "This is resource partitioning — similar species coexist by using slightly different niches. If they used the exact same limiting resource, Gause's competitive exclusion principle predicts they could not coexist indefinitely; one would outcompete the other.",
+      "misconception_tested": "calling stable coexistence 'competitive exclusion' instead of recognizing partitioning as the escape hatch"
+    }
+  ]
+}

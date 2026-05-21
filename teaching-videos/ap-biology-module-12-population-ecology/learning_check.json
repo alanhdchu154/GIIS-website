@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "skill": "classify a limiting factor as density-dependent vs density-independent by mechanism",
+      "question": "A disease spreads faster and kills a larger fraction of a population as the population gets more crowded. Is this density-dependent or density-independent, and why?",
+      "answer": "Density-dependent — its per-capita effect rises with N (more individuals means more contact and faster transmission), so the factor intensifies as the population grows denser.",
+      "misconception_tested": "Classifying by memorized example bins instead of asking whether the per-capita effect changes with population size."
+    },
+    {
+      "skill": "identify exponential vs logistic growth from a described scenario",
+      "question": "A bacterial population is placed in a fresh nutrient broth with effectively unlimited food and no competitors, and it doubles every 20 minutes. Which growth model best fits, exponential or logistic?",
+      "answer": "Exponential growth (J-curve, dN/dt = rN) — resources are briefly unlimited and the population has just colonized, so growth accelerates without a carrying-capacity brake yet.",
+      "misconception_tested": "Defaulting to logistic because it is 'more realistic,' ignoring that the scenario specifies unlimited resources and fresh colonization."
+    },
+    {
+      "skill": "match a species/strategy to a survivorship curve type",
+      "question": "Oysters release millions of larvae, almost all of which die young, with only a tiny fraction surviving to adulthood. Which survivorship curve type and which life-history strategy is this?",
+      "answer": "Type III survivorship (steep early mortality, then it flattens) paired with an r-selected strategy (many offspring, little parental care).",
+      "misconception_tested": "Confusing Type III (early die-off, r-selected) with Type I (late mortality, K-selected), or treating curve type and strategy as unrelated."
+    },
+    {
+      "skill": "interpret carrying capacity K in the logistic model",
+      "question": "A deer population briefly rises above K, then declines back toward it over the next few years. Does exceeding K mean K was measured wrong?",
+      "answer": "No. K is the long-run level the environment can sustain, not a hard wall. Real populations can overshoot K and then oscillate or crash back toward it because the (K - N)/K term goes negative above K, slowing or reversing growth.",
+      "misconception_tested": "Treating K as an absolute ceiling that can never be crossed, rather than the settling level the population corrects toward."
+    },
+    {
+      "skill": "compute the sign of per-capita growth rate r including migration",
+      "question": "In a population, per-capita births = 0.10, deaths = 0.12, immigration = 0.05, emigration = 0.01 (per year). Is the population growing, shrinking, or stable?",
+      "answer": "Growing. r = (b - d) + (i - e) = (0.10 - 0.12) + (0.05 - 0.01) = -0.02 + 0.04 = +0.02, which is positive.",
+      "misconception_tested": "Using births minus deaths alone (which gives -0.02, falsely suggesting decline) and forgetting to add immigration minus emigration."
+    }
+  ]
+}

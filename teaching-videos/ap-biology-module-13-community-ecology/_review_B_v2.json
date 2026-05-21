@@ -1,0 +1,49 @@
+{
+  "reviewer": "B — Adversarial Student (round 2)",
+  "verdict": "pass",
+  "issues": [
+    {
+      "section_id": "05_signs_compare",
+      "severity": "pass",
+      "description": "Round-1 fix confirmed. The +/− sign heuristic ('once one species is +, read the second species') now explicitly carves out competition with a guardrail: 'if NEITHER species benefits (−/−), it's competition — not one of these three.' All six interactions are now classifiable; competition is no longer silently excluded by the trick. Mutualism +/+, commensalism +/0, parasitism +/− are crisply separated by the second-species sign.",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "07_niche_compare",
+      "severity": "pass",
+      "description": "Fundamental vs realized niche is crisp: realized = SUBSET of fundamental, shrunk by negative interactions (competition + predation), never expands. The 'competition expands a niche' wrong answer is explicitly flagged.",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "09_defenses_mimicry",
+      "severity": "pass",
+      "description": "Batesian (palatable mimics defended model → parasitic, +/−) vs Müllerian (multiple defended species share a pattern → mutualistic, +/+) is unambiguous, with the directionality cue 'undefended-copies-defended vs many-defended-share-a-signal.' Mimicry-vs-camouflage distinction (resembling an organism, not the background) is stated.",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "11_pause1_silence",
+      "severity": "pass",
+      "description": "Pause (10) and silence/answer slide (11) form a clean closed loop. Scenario A (undefended fly → wasp) = Batesian; Scenario B (multiple toxic butterflies → shared pattern) = Müllerian. Both answers given with one-sentence reasons that match the teaching slide. The two scenarios are mutually exclusive and the prompt is fully answerable from prior content.",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "12_keystone",
+      "severity": "pass",
+      "description": "Keystone defined by disproportionate IMPACT relative to abundance, explicitly NOT 'most abundant/largest.' Cleanly distinguished from trophic cascade: cascade is named as the MECHANISM/effect, not a synonym, and keystones can be mutualists/ecosystem engineers, not just top predators. Hook callback (Paine's Pisaster) lands.",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "13_succession_compare",
+      "severity": "pass",
+      "description": "Primary vs secondary succession keyed unambiguously on soil presence/absence, with the explicit line 'the dividing line is soil, not the disturbance.'",
+      "suggested_fix": "None."
+    },
+    {
+      "section_id": "14_diversity",
+      "severity": "pass",
+      "description": "Richness (number of species) and evenness (relative abundance) are distinct, combined by Shannon H, with the visual of identical-richness/different-evenness communities. Diversity-stability claim correctly hedged as a correlation.",
+      "suggested_fix": "None."
+    }
+  ],
+  "overall_assessment": "All seven round-1 concerns are resolved. The critical fix — competition (−/−) being orphaned by the +/− classification heuristic — is fixed with an explicit guardrail in 05 and the recap, so all six interaction signs are now classifiable. Sign trio (mutualism/commensalism/parasitism), niche subset relationship, Batesian/Müllerian directionality, the self-contained mimicry pause, keystone-vs-cascade, soil-keyed succession, and richness-vs-evenness are all unambiguous. No misconceptions or broken pauses remain. Ship it."
+}

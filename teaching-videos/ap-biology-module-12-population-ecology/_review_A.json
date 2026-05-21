@@ -1,0 +1,25 @@
+{
+  "reviewer": "A — Peer Subject-Matter Reviewer (Ecology PhD)",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "06_demography",
+      "severity": "note",
+      "description": "The equation 'r = (b − d) + (i − e)' is correct as a per-capita framework ONLY if b, d, i, e are interpreted as per-capita rates (per individual per unit time), not raw counts of individuals. The narration says 'births and immigration ADD individuals; deaths and emigration REMOVE them' and the recap (16) and traps (17) phrase it as computing 'the sign of r from b, d, i, e' — language that nudges students toward treating b/d/i/e as absolute numbers of individuals. With raw counts you get the total population change (dN/dt = B − D + I − E), not the per-capita rate r. The sign is the same either way, so no student will get a sign question wrong, but the conceptual distinction (per-capita vs total) is blurred.",
+      "suggested_fix": "Add one clarifying clause: state that b, d, i, e here are per-capita rates (births per individual, etc.), so r is the per-capita growth rate; the analogous equation in raw counts (B, D, I, E) gives the total change dN/dt = (B − D) + (I − E). Keep the sign rule as is."
+    },
+    {
+      "section_id": "07_exponential",
+      "severity": "note",
+      "description": "'Doubling time ≈ 70/r' is correct as the standard rule-of-70 approximation (ln2 ≈ 0.693), but as written it is dimensionally valid only when r is expressed as a percent per unit time (e.g., r = 0.05/yr → 5 → 70/5 = 14 yr). If a student plugs in r as a decimal (0.05) they get 1400, which is wrong by a factor of 100. The exact relationship is doubling time = ln2/r = 0.693/r when r is a decimal rate.",
+      "suggested_fix": "Clarify the units: 'doubling time ≈ 70 / (r expressed as a percent)', or equivalently 'doubling time ≈ 0.693/r when r is a decimal'. AP commonly presents it as 70/r with r as a percentage, so noting the percent convention is enough."
+    },
+    {
+      "section_id": "13_r_vs_k_compare",
+      "severity": "note",
+      "description": "Listing 'many fish' as a flat example of r-selected species is an oversimplification that is defensible for AP but biologically imprecise: many large, late-maturing fish (e.g., sharks, sturgeon, many groupers) are strongly K-selected. The outline already (correctly) frames r/K as a spectrum, so the blanket 'many fish = r-selected' slightly undercuts that nuance. Not a factual error for AP purposes — most teleosts with high fecundity and no parental care are r-leaning.",
+      "suggested_fix": "Optional: qualify to 'many small, fast-breeding fish' to stay consistent with the spectrum framing. Not required for AP correctness."
+    }
+  ],
+  "overall_assessment": "Scientifically sound for AP Biology. All four core equations are stated correctly: per-capita growth rate r = (b − d) + (i − e), exponential dN/dt = rN, logistic dN/dt = rN(K − N)/K, and the rule-of-70 doubling time. The conceptual content is accurate throughout: carrying capacity K is correctly described as the leveling-off / long-run-average level (not a hard wall) with overshoot acknowledged; the (K − N)/K term is walked through correctly; density-dependent (competition, disease, predation, waste, territoriality) vs density-independent (weather, fire, floods, volcanic eruptions, human disturbance) factors are classified correctly; the pause-slide answers (12) are right; r- vs K-selected traits and examples are correct and properly framed as a spectrum; survivorship Type I/II/III shapes are matched to the correct organisms and life-history strategies (Type I ↔ K-selected humans/large mammals, Type III ↔ r-selected oysters/fish/plants, Type II constant); and the 'matter cycles, energy flows (one-way, lost as heat, not recycled)' preview is accurate. No critical errors. The only flags are precision/units notes — chiefly that b/d/i/e should be understood as per-capita rates for r to be the per-capita rate, and that 70/r assumes r as a percentage — neither of which would cause a student to learn a false fact, but both worth a one-line clarification."
+}

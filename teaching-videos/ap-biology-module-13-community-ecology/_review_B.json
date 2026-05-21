@@ -1,0 +1,61 @@
+{
+  "reviewer": "B — Adversarial Student",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "04_interactions_table",
+      "severity": "note",
+      "description": "The table lists predation as '+/−' with the predator scored '+'. A sharp student notices the sign convention is keyed to a SPECIES POSITION, but the column headers are generic 'Species 1 | Species 2' with no rule for which species goes in which column. For commensalism (+/0) and parasitism (+/−) the order matters for reading the relationship, yet nothing tells the learner that 'the benefiting species is conventionally listed first.' A learner could write a parasite/host pair as '−/+' and think they got it wrong, or transpose mutualism's symmetric +/+ and assume order is always free. State the convention once: signs describe the EFFECT ON EACH SPECIES and the relationship is the same regardless of order, but for the asymmetric ones you must track WHICH organism gets which sign.",
+      "suggested_fix": "Add one line to the table caption: 'Each sign is the effect on that species. For asymmetric interactions (predation, parasitism, commensalism) make sure you assign the + to the organism that benefits — the relationship name doesn't change if you swap columns, but the signs must stay attached to the right organism.'"
+    },
+    {
+      "section_id": "05_signs_compare",
+      "severity": "minor",
+      "description": "This slide teaches the '+/0 vs +/+ vs +/−' contrast by holding the FIRST species at '+' and varying only the second: 'the only difference between these three is what happens to the SECOND species.' That framing is pedagogically clean but plants a subtle over-generalization: it implies a fixed reference organism that always benefits. It also silently EXCLUDES competition (−/−) from the comparison even though competition is the one interaction where NEITHER species is '+'. A student drilled on 'just read the second species' sign' can mis-handle competition, where reading only the second species (−) would not distinguish it from parasitism's second species (also −). The discriminator 'read the second species' sign' only works once you already know the first species is +.",
+      "suggested_fix": "Add a guardrail line: 'This second-species trick only applies when ONE species clearly benefits (+). If NEITHER benefits, you're looking at competition (−/−), not any of these three.' This keeps the heuristic from being mis-applied to competition."
+    },
+    {
+      "section_id": "07_niche_compare",
+      "severity": "minor",
+      "description": "The narration says the realized niche 'always fits INSIDE the fundamental niche — interactions shrink it, they never make it bigger,' and brands 'competition expanded a niche' as always wrong. That is the correct AP answer, but it is stated as an absolute that a careful student can over-generalize. The realized niche is shrunk by NEGATIVE interactions (competition, predation); POSITIVE interactions like mutualism or facilitation can let a species occupy conditions it could not tolerate alone, which is a real and tested nuance at higher levels. More importantly, the slide attributes the shrinking specifically to 'competition and other interactions' but the AP-correct one-word answer for what restricts the realized niche is COMPETITION (and predation) — listing 'other interactions' vaguely could let a student answer 'mutualism shrinks the realized niche,' which is wrong.",
+      "suggested_fix": "Specify the shrinking agents: 'The realized niche is what's left after NEGATIVE interactions — chiefly competition and predation — push the species out of part of its fundamental niche.' Drop the vague 'other interactions' or label them as negative interactions explicitly."
+    },
+    {
+      "section_id": "09_defenses_mimicry",
+      "severity": "minor",
+      "description": "The Batesian definition says a harmless species 'mimics a HARMFUL one (a bluff — only one is truly defended).' Strong but slightly loose: the model in Batesian mimicry need not be 'harmful' in the predator-injuring sense — it is UNPALATABLE/DEFENDED (toxic, foul-tasting, stinging). 'Harmful' reads as 'dangerous to the predator,' which conflates the wasp-sting case (genuinely harmful) with the far more common toxic/unpalatable-model case (harmful to eat, not to attack). Müllerian is correctly described as 'genuinely harmful,' so the parallel wording reinforces the 'harmful = dangerous' reading. A student may then wrongly exclude unpalatable-but-not-dangerous models (e.g., a foul-tasting butterfly) from counting as Müllerian/Batesian models. Also: the pause uses a stinging wasp (genuinely harmful) while the canonical models are toxic/unpalatable — the example set quietly narrows 'defended' to 'dangerous.'",
+      "suggested_fix": "Use 'defended (toxic, unpalatable, or dangerous)' instead of 'harmful' in both mimicry definitions, so the learner generalizes to bad-tasting models, not just stinging/poisonous ones."
+    },
+    {
+      "section_id": "09_defenses_mimicry",
+      "severity": "note",
+      "description": "Müllerian mimicry is described as 'multiple harmful species share the SAME warning pattern' via 'convergence' — correct — but the slide does not make explicit WHY this benefits all parties (the predator only needs to learn ONE pattern, so each species bears a smaller share of the predator's learning cost). The narration gestures at 'reinforces predator learning' but a student could walk away thinking Müllerian mimicry is just 'coincidental look-alikes' rather than mutualistic convergence that reduces per-species predation. This connects back to the +/+ logic — Müllerian mimicry is effectively MUTUALISTIC between the defended species, a satisfying cross-link the outline misses.",
+      "suggested_fix": "Add one sentence: 'Because the predator only has to learn the warning once, every defended species sharing the pattern pays a smaller price — Müllerian mimicry is effectively mutualistic (+/+) between the look-alikes, while Batesian is parasitic (the harmless mimic freeloads, +/−).'"
+    },
+    {
+      "section_id": "12_keystone",
+      "severity": "minor",
+      "description": "The keystone definition is correct (disproportionate impact, NOT abundance), but the slide pairs Paine's sea star (a true keystone PREDATOR) with the Yellowstone wolves under a single 'keystone' banner using the phrase 'work the same way from the top down — a trophic cascade.' This risks conflating two distinct (though related) concepts: 'keystone species' and 'trophic cascade.' A trophic cascade is the MECHANISM/effect; keystone is a designation. Not every trophic cascade involves a keystone, and not every keystone is a top predator (some are mutualists, ecosystem engineers, etc.). Presenting both top-down predator cases side by side can leave a student thinking 'keystone species = top predator that causes a trophic cascade,' which is an over-generalization (e.g., a keystone could be a pollinator or a beaver).",
+      "suggested_fix": "Add a clarifying line: 'Keystone is about disproportionate IMPACT, not about being a predator — keystones can also be mutualists or ecosystem engineers (e.g., beavers). A trophic cascade is one way that impact plays out, not a requirement.'"
+    },
+    {
+      "section_id": "08_predator_prey",
+      "severity": "note",
+      "description": "The graph and narration correctly show the predator lagging the prey, but a strong student knows the lynx-hare cycle is the most famous example AND the most contested causal story — the ~10-year cycle is now attributed substantially to hare food supply, plant defenses, and other factors, not purely to lynx predation as Lotka-Volterra implies. The outline presents Lotka-Volterra as if it cleanly 'predicts' the empirical lynx-hare data, which slightly overstates the model's explanatory power. AP only requires the basic out-of-phase oscillation, so this is a note, not a fault — but a one-clause hedge would model good scientific reasoning without adding exam burden.",
+      "suggested_fix": "Optional: add 'the model captures the oscillation pattern, though the real lynx-hare cycle also involves the hare's food supply, not predation alone' — keeps the AP-required takeaway while flagging that the fit isn't perfect."
+    },
+    {
+      "section_id": "14_diversity",
+      "severity": "note",
+      "description": "Richness and evenness are kept cleanly distinct (good), and the 'identical richness, different evenness' visual is exactly right. One over-generalization to watch: 'higher diversity generally → more stable ecosystem ... more productive ... more resistant to invasion' is hedged with 'generally,' which is appropriate, but stacking three positive consequences as a near-package can lead a student to treat 'high diversity ⇒ all good outcomes' as a law. The diversity-stability relationship is genuinely debated, and AP wants the correlation, not a guarantee. The 'generally' is doing real work here — make sure it survives into the slide text, not just the narration.",
+      "suggested_fix": "Ensure the slide TEXT (not only narration) keeps the hedge: 'Higher diversity is GENERALLY associated with more stability, productivity, and invasion resistance — a correlation, not a guarantee.'"
+    },
+    {
+      "section_id": "10_pause1",
+      "severity": "pass",
+      "description": "Pause question is well-constructed. Scenario A (harmless fly mimics stinging wasp) is unambiguously Batesian — only one defended. Scenario B (several toxic butterflies converge on one pattern) is unambiguously Müllerian — all defended. There is exactly one correct mapping, the discriminator (how many species are actually defended) is clean, and the silence slide (11_pause1_silence) resolves both with the correct reasoning and a memorable summary ('harmless-copies-harmful is Batesian; many-harmful-share-a-signal is Müllerian'). No fix needed.",
+      "suggested_fix": "None — the pause has a single correct answer and the resolution slide is clean."
+    }
+  ],
+  "overall_assessment": "Solid, well-sequenced outline that hits every flagged AP trap directly and the pause question is genuinely clean with a single correct answer and a crisp resolution. No misconception-creating errors, so verdict is MINOR, not critical. The recurring weakness is over-tight wording that invites over-generalization: (1) 'harmful' is used where 'defended/unpalatable' is meant in the mimicry section, quietly narrowing the concept to dangerous models; (2) the 'read the second species' sign' heuristic on slide 05 silently excludes competition and only works once you know the first species is +; (3) the realized niche is said to shrink from 'competition and other interactions' without specifying that POSITIVE interactions don't shrink it; (4) keystone and trophic cascade are blurred under one top-down-predator framing, risking the over-generalization 'keystone = top predator.' All are clarity-level, all have one-line fixes, and none would by themselves cost a careful student points — but tightening (1) and (2) would prevent the two most likely real misconceptions."
+}

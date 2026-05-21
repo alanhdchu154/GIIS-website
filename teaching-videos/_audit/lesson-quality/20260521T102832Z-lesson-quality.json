@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-05-21T10:28:32Z",
+  "repo_root": "/sessions/happy-serene-hawking/mnt/giis-website",
+  "summary": {
+    "lesson_count": 1,
+    "verdict_counts": {
+      "needs_review": 1
+    },
+    "issue_counts": {
+      "minor": 1,
+      "major": 1,
+      "note": 1
+    },
+    "avg_quality_score": 73,
+    "median_quality_score": 73,
+    "ready_count": 0,
+    "needs_review_count": 1,
+    "blocked_count": 0
+  },
+  "lessons": [
+    {
+      "slug": "ap-biology-module-13-community-ecology",
+      "path": "teaching-videos/ap-biology-module-13-community-ecology",
+      "verdict": "needs_review",
+      "quality_score": 73,
+      "issues": [
+        {
+          "severity": "minor",
+          "message": "No assignment/practice/portal next-action language."
+        },
+        {
+          "severity": "major",
+          "message": "No MP4 found."
+        },
+        {
+          "severity": "note",
+          "message": "AP course naming should be checked against Course Audit/authorization wording before public claims."
+        }
+      ],
+      "issue_counts": {
+        "minor": 1,
+        "major": 1,
+        "note": 1
+      },
+      "script": {
+        "course": "AP Biology",
+        "module": "Module 13: Community Ecology",
+        "voice": "en-US-EmmaNeural",
+        "voice_rate": "-3%",
+        "section_count": 16,
+        "word_count": 1107,
+        "estimated_minutes": 7.4,
+        "avg_words_per_section": 69.2,
+        "max_words_in_section": 87,
+        "long_sections": [],
+        "empty_sections": [],
+        "required_structure": {
+          "title": true,
+          "hook": true,
+          "overview": true,
+          "pause": true,
+          "recap": true,
+          "path": true
+        },
+        "pause_count": 1,
+        "silence_count": 1,
+        "has_worked_solution_after_pause": true,
+        "urls_in_narration": [],
+        "risky_claims": [],
+        "assignment_mentions": 0,
+        "misconception_mentions": 2
+      },
+      "assets": {
+        "slides_count": 16,
+        "audio_mp3_count": 0,
+        "audio_wav_count": 0,
+        "audio_file_count": 0,
+        "mp4_count": 0,
+        "has_mp4": false,
+        "mp4_files": [],
+        "has_transcript": false,
+        "has_intro_music": true,
+        "has_outro_music": true,
+        "is_cleaned_after_upload": false,
+        "slide_dimensions_sample": {
+          "1920x1080": 5
+        },
+        "missing_slides": [],
+        "extra_slides": [],
+        "missing_audio": [
+          "01_title",
+          "02_hook",
+          "03_overview",
+          "04_interactions_table",
+          "05_signs_compare",
+          "06_competitive_exclusion",
+          "07_niche_compare",
+          "08_predator_prey",
+          "09_defenses_mimicry",
+          "10_pause1",
+          "11_pause1_silence",
+          "12_keystone",
+          "13_succession_compare",
+          "14_diversity",
+          "15_recap",
+          "16_path"
+        ],
+        "slide_count_matches_sections": true,
+        "audio_count_matches_sections": false
+      },
+      "reviewers": {
+        "count": 6,
+        "verdicts": [
+          {
+            "file": "_review_A.json",
+            "reviewer": "A — Peer Subject-Matter Reviewer (Ecology PhD)",
+            "verdict": "minor"
+          },
+          {
+            "file": "_review_A_v2.json",
+            "reviewer": "A — Peer Subject-Matter Reviewer (round 2)",
+            "verdict": "pass"
+          },
+          {
+            "file": "_review_B.json",
+            "reviewer": "B — Adversarial Student",
+            "verdict": "minor"
+          },
+          {
+            "file": "_review_B_v2.json",
+            "reviewer": "B — Adversarial Student (round 2)",
+            "verdict": "pass"
+          },
+          {
+            "file": "_review_C.json",
+            "reviewer": "C — Citation Checker (anti-hallucination)",
+            "verdict": "minor"
+          },
+          {
+            "file": "_review_C_v2.json",
+            "reviewer": "C — Citation Checker (round 2)",
+            "verdict": "minor"
+          }
+        ],
+        "counts": {
+          "minor": 4,
+          "pass": 2
+        },
+        "has_phd_level": true,
+        "has_adversarial_student": true,
+        "has_citation_checker": true
+      },
+      "youtube": {
+        "video_id": null,
+        "url": null,
+        "privacy": null,
+        "playlist": null,
+        "uploaded_at": null
+      }
+    }
+  ]
+}

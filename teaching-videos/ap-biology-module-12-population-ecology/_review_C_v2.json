@@ -1,0 +1,21 @@
+{
+  "reviewer": "C — Citation Checker (round 2)",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "07_exponential / 16_recap / key_vocabulary",
+      "severity": "note",
+      "unsupported_claim": "Doubling time formula treated as 70/(r as a PERCENT), with worked example 'r = 5%/yr → doubling ≈ 70/5' and unit caveat distinguishing percent r from decimal r.",
+      "where_in_reference_it_is_missing": "Reference states only 'doubling time ≈ 70/r'. It does not specify percent-vs-decimal units, nor give the r = 5%/yr example.",
+      "suggested_fix": "The percent-vs-decimal clarification is a low-risk standard interpretation; the specific '5%/yr' worked number is an added example. Optionally drop the specific 5% figure to stay within reference."
+    },
+    {
+      "section_id": "06_demography",
+      "severity": "minor",
+      "unsupported_claim": "Raw-count form dN/dt = (B − D) + (I − E) and the per-capita-rate vs raw-count distinction (b/d/i/e as per-capita rates).",
+      "where_in_reference_it_is_missing": "Reference gives r = (b − d) + (i − e) but does not present the capital-letter raw-count equation or label b,d,i,e as per-capita rates.",
+      "suggested_fix": "Low-risk pedagogical elaboration consistent with the reference's r equation; acceptable. No change required."
+    }
+  ],
+  "overall_assessment": "No fabricated species, dates, or named entities. All dispersion types, growth equations, limiting-factor lists, r/K traits, survivorship examples, and the Unit 8 10–15% weighting match the reference exactly. The overshoot/oscillate language is explicitly permitted. Only added items are unit clarifications on the 70/r rule and a 5%/yr example, plus a standard raw-count restatement — all low-risk. Pass with minor notes."
+}
