@@ -1,6 +1,8 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-21 Slot C29（Admin progress data-flow split official transcript credits from Learn Portal credits；dry-run repair tool added for quiz/module/final completion gaps）
+> 最後更新：2026-05-21 Slot C30（Production API deployed on Lightsail；Learn Portal ModuleProgress backfilled；Hanxi credit correction applied）
+>
+> 前次：2026-05-21 Slot C29（Admin progress data-flow split official transcript credits from Learn Portal credits；dry-run repair tool added for quiz/module/final completion gaps）
 >
 > 前次：2026-05-21 Slot C28（Admin dashboard and common admin chrome simplified around key operating signals）
 >
@@ -120,6 +122,21 @@
 - ✅ **Completion repair dry-run tool**：新增 `server/scripts/repair-learn-completions-from-transcripts.js`，並在 `server/package.json` 加入 `npm run audit:learn-completions`（dry-run）與 `npm run repair:learn-completions`（apply）。工具會用 transcript letter grade 決定 target score，補缺失的 module quiz attempts、moduleProgress、midterm/final attempts、creditEarned，並寫 AuditLog；已存在 quiz attempt 的 moduleProgress 會使用既有 quiz `submittedAt` 作為 completion timestamp，避免把歷史完成時間全部寫成今天；預設不改資料。
 - ⚠️ **尚未對 DB 套用 completion repair**：本機沒有 Docker / PostgreSQL service（`docker` command unavailable；`localhost:5432` unreachable），所以只完成 code-level gate 與 dry-run 工具。正式補學生完成紀錄前，要確認要跑的是 production DB、staging DB，還是 local DB，且需 Alan 明確確認 `--apply`。
 - ✅ **驗證**：`node --check server/src/routes/students.js`、`node --check server/scripts/repair-learn-completions-from-transcripts.js`、`npm run audit:official-docs`、`npm run build` 全部通過。`npm run audit:learn-completions` 因本機 DB 未啟動而無法連線，未修改資料。
+
+---
+
+## ✅ Production API deploy + Learn Portal completion backfill（2026-05-21 Slot C30）
+
+> 目標：Alan 決定 production 才是真正要補齊學生資料的地方。本輪只做 targeted production repair，不 re-seed，不重建正式學籍資料。
+
+- ✅ **Lightsail access confirmed**：production API host 為 `api.genesisideas.school` / `54.163.81.228`，SSH 使用 `/Users/alanhdchu/Desktop/LightsailDefaultKey-us-east-1.pem`、user `ubuntu`。Repo path：`/home/ubuntu/GIIS-website`。PM2 process：`giis-api`。
+- ✅ **Production code deployed**：local commit `95db708d` pushed to GitHub；Lightsail fast-forward pulled `0a2f2b80 → 95db708d`；ran root/server `npm install`、`npx prisma generate`、`npm run db:push`。Prisma reported database already in sync.
+- ✅ **No production re-seed**：production DB already had 5 students, 40 semesters, 200 courseRows, 19 enrollments, 224 quizAttempts, 38 submitted examAttempts. Re-seed would be unsafe and unnecessary.
+- ✅ **Completion dry-run before apply**：`npm run audit:learn-completions` showed all 19 enrollments had no missing quiz modules, no missing exams, no missing `creditEarned`; only `ModuleProgress` rows were missing.
+- ✅ **ModuleProgress backfilled**：ran `npm run repair:learn-completions` on production. `moduleProgresses` count is now 224, matching existing quizAttempts. Existing quiz submitted timestamps were used as module completion timestamps.
+- ✅ **Hanxi targeted credit correction**：production DB had Hanxi Xiao G12 Spring `Behavioral Science` and `Social Psychology` at 1.0 credit each. Corrected only those two rows to 0.5 each; letter grades unchanged. Hanxi total credits changed 33 → 32, still graduation eligible. Wrote `AuditLog(action=transcript_credit_admin_correction)`.
+- ✅ **API restarted and verified**：`pm2 restart giis-api --update-env`; PM2 status online. `https://api.genesisideas.school/api/checkout/tiers` returns 200 JSON. Post-repair dry-run returns `enrollmentsToRepair: 0`.
+- ⚠️ **Frontend deploy note**：GitHub push is complete, but `https://genesisideas.school/` still served old Netlify bundle `main.49b0480e.js` at verification time. API is deployed; Admin UI changes may require Netlify auto-deploy to finish or manual Netlify deploy.
 
 ---
 
