@@ -1,0 +1,40 @@
+{
+  "reviewer": "B",
+  "role": "Adversarial Student",
+  "module": "ap-calculus-ab-module-4-contextual-applications",
+  "reference_basis": "learner-misconception analysis",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "02_hook",
+      "severity": "minor",
+      "description": "The hook states as a blanket truth that 'As the ladder flattens, the top speeds up' and the framing implies the top always outruns the base. A learner generalizes this to 'the top always moves faster than the base.' That is false near the start: when the ladder is near-vertical (x small, y large), dy/dt = -(x/y)(dx/dt) has magnitude < 1, so the top moves SLOWER than the base. The top only exceeds 1 ft/s after the 45-degree point (x > y).",
+      "fix": "Add a clause: 'It starts slower than the base and only overtakes it once the ladder passes 45 degrees, after which dy/dt grows without bound.' This preserves the 'speeds up' insight while killing the 'always faster than base' misconception."
+    },
+    {
+      "section": "09_related_rates_ladder",
+      "severity": "minor",
+      "description": "States the top 'is falling faster than the base is sliding' at the instant y=6 (|dy/dt|=1.33 > 1) but presents it as a property of the situation rather than of that specific instant. Combined with the hook, this cements the wrong belief that the top is always faster. The result is instant-specific, not universal.",
+      "fix": "Qualify it: 'At THIS instant (y=6, x=8), the top is falling at 1.33 ft/s, faster than the base, because the ladder is already past 45 degrees.'"
+    },
+    {
+      "section": "12_linearization",
+      "severity": "minor",
+      "description": "The linearization example computes L(4.1)=2.025 vs true 2.0248 and says 'stunningly close,' but never explains the over/under-estimate reasoning a learner needs. Because sqrt(x) is concave down (f''<0), the tangent line lies ABOVE the curve, so this is an OVERESTIMATE. Without this, a learner has no mental model for predicting whether any linearization is too high or too low, a frequently tested AP idea.",
+      "fix": "Add: 'And we can predict the direction of the error: since the square-root curve is concave down (f''<0), its tangent line sits above it, so our estimate is slightly too high. Concave up means the linear estimate is too low.'"
+    },
+    {
+      "section": "14_lhopital_trap",
+      "severity": "minor",
+      "description": "The trap example 'cosine x over one at x=0' is artificial and confusing: cos(x)/1 is the RESULT of applying L'Hospital to sin(x)/x, not a limit anyone would naturally pose, so it doesn't model the realistic error. The realistic, dangerous trap is applying L'Hospital to a NON-indeterminate form like (x+1)/(x+2) at x->0 (gives 1/2 correctly by substitution, but L'Hospital gives 1/1=1, a WRONG answer). The phrase 'even if you accidentally get the right answer' implies L'Hospital on a legal-looking-but-non-indeterminate form is merely procedurally illegal, when in fact it usually produces a wrong number.",
+      "fix": "Replace with a form where misuse yields a wrong answer: 'Take (x+1)/(x+3) as x->0. It equals 1/3 by direct substitution. But it's NOT 0/0, so L'Hospital does not apply, differentiating top and bottom would give 1/1 = 1, which is flat wrong. Misusing L'Hospital on a non-indeterminate form doesn't just break a rule, it gives the wrong answer.'"
+    },
+    {
+      "section": "13_lhopital_rule",
+      "severity": "minor",
+      "description": "Lumps '1 to the infinity' in with forms you 'rearrange algebraically into zero-over-zero or infinity-over-infinity.' Power-form indeterminates (1^inf, 0^0, inf^0) cannot be rearranged by simple algebra alone, you must take the natural log first, then exponentiate at the end. A learner may try to algebraically massage 1^inf directly into a fraction and stall.",
+      "fix": "Distinguish the two families: 'Products and differences (0*inf, inf-inf) you rewrite as a fraction; power forms (1^inf, 0^0, inf^0) you first take ln, evaluate that limit with L'Hospital, then exponentiate.'"
+    }
+  ],
+  "notes": "Math is numerically correct throughout, but the ladder hook over-generalizes 'faster than the base,' the linearization skips the concavity-based over/under-estimate model, and the L'Hospital trap uses an artificial example that understates how misuse produces genuinely wrong answers."
+}

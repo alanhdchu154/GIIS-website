@@ -1,0 +1,22 @@
+{
+  "reviewer": "A",
+  "role": "Peer Subject-Matter Reviewer (Math PhD)",
+  "module": "ap-calculus-ab-module-8-antiderivatives-substitution",
+  "reference_basis": "calculus subject expertise",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "17_complete_square",
+      "severity": "minor",
+      "description": "The substitution is spoken as 'u equals x-plus-one over two,' which is mathematically correct (u = (x+1)/2, giving the right final answer one-half arctan((x+1)/2)+C) but is acoustically ambiguous in narration; a listener could mishear it as u = x + 1/2, which is wrong. The derivation and final result are otherwise fully correct: (x+1)^2+4 = 4u^2+4, dx = 2 du, integral reduces to (1/2) integral 1/(u^2+1) du = (1/2) arctan((x+1)/2)+C.",
+      "fix": "Narrate explicitly as 'u equals the quantity x-plus-one, all divided by two' to remove the spoken ambiguity. No math change needed."
+    },
+    {
+      "section": "08_definite_no_C",
+      "severity": "minor",
+      "description": "Calling +C on a definite integral 'just noise' is a slight imprecision. The +C is not part of the definite-integral notation at all — F(b)-F(a) is a single number with no constant — so it is not that you optionally 'leave it off,' it is that it does not exist there. Conceptually fine for AB level, but the wording can leave students thinking it is an omitted-by-convention term rather than nonexistent.",
+      "fix": "Rephrase to: 'a definite integral evaluates to a single number, so there is no +C to write at all,' instead of 'leave it off — it's just noise.'"
+    }
+  ],
+  "notes": "Every numeric answer re-derived independently and confirmed correct (sections 8, 12, 14, 15, 16, 17); the only issues are minor wording/clarity points, no factual or arithmetic errors found."
+}

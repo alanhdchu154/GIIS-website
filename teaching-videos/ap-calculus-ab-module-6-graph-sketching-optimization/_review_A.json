@@ -1,0 +1,16 @@
+{
+  "reviewer": "A",
+  "role": "Peer Subject-Matter Reviewer (Math PhD)",
+  "module": "ap-calculus-ab-module-6-graph-sketching-optimization",
+  "reference_basis": "calculus subject expertise",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "16_path",
+      "severity": "minor",
+      "description": "The OpenStax Calculus Volume 1 reference is imprecise. Graph analysis / sketching f from f' and f'' (the bulk of this lesson, FUN 5.8-5.9) is OpenStax 4.5 (Derivatives and the Shape of a Graph), and applied optimization (5.10-5.11) is 4.7. Section 4.8 is L'Hopital's Rule, which is not in this module. Citing 'chapters four-point-seven through four-point-eight' omits the graph-sketching chapter (4.5) and points students to an off-topic chapter (4.8). Not a math error, but the study pointer mislabels the source chapters.",
+      "fix": "Change to 'OpenStax Calculus Volume One, sections four-point-five and four-point-seven' (4.5 for graph shape/sketching, 4.7 for applied optimization)."
+    }
+  ],
+  "notes": "All worked numerics re-derived and correct: rectangle-under-parabola critical point x=sqrt(4/3) with A approx 6.16, perimeter-40 square 10x10, implicit circle dy/dx=-x/y with correct horizontal/vertical tangent points; only a minor textbook-chapter citation imprecision remains."
+}

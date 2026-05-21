@@ -1,0 +1,28 @@
+{
+  "reviewer": "B",
+  "role": "Adversarial Student",
+  "module": "ap-calculus-ab-module-11-volumes-cross-sections-discs-washers",
+  "reference_basis": "learner-misconception analysis",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "09_disc_around_other_axis",
+      "severity": "minor",
+      "description": "The takeaway 'revolve around y equals k, shift every radius by k' is an overgeneralization that can seed a false rule. The real radius is the DISTANCE |curve - k|, which only equals 'curve + 1' here because k = -1. A learner who memorizes 'add/shift by k' will get the sign wrong when k is positive (e.g. y=2) or when the axis lies above the curve, exactly the situation in section 12. The worked radius (sqrt(x)+1) is correct; only the verbal rule is loose.",
+      "fix": "Phrase the rule as 'radius = distance from the curve to the axis = |curve value - k|', and note the sign depends on whether the axis is above or below the region. This is already stated correctly in sections 12 and 16, so align section 09 with that wording."
+    },
+    {
+      "section": "14_pause1",
+      "severity": "minor",
+      "description": "Mild prompt-vs-answer leading: the pause prompt asks 'Step one - disc or washer?' but Step two immediately says 'find outer and inner radii', presupposing the washer answer before the student decides. A learner could feel the question was rigged, or skip genuinely testing the disc-vs-washer judgment (the actual answer, washer, is resolved correctly in 15).",
+      "fix": "Make step two conditional, e.g. 'if it is a washer, find outer and inner radii; if it is a disc, find the single radius', so the decision in step one is real."
+    },
+    {
+      "section": "07_disc_setup",
+      "severity": "minor",
+      "description": "States the disc radius is 'the height of the function above the axis' without flagging that this only holds when the axis IS the x-axis. Right after, section 09 correctly shows the radius is the distance to a non-axis line. A learner anchoring on 'radius = function value' is the precise mistake section 16 warns against, so the unqualified phrasing in 07 mildly undercuts the later correction.",
+      "fix": "Add a clause: 'when revolving around the x-axis; in general the radius is the distance from the curve to the axis of revolution.'"
+    }
+  ],
+  "notes": "All five worked computations (volume 8, 8 pi, washer 2 pi/15, shifted setup, and pause answer 256 pi/5) are arithmetically correct and the washer square-then-subtract and semicircle diameter traps are handled well; the only soft spots are the over-tidy 'shift by k' rule and an unqualified 'radius = function value' that the lesson itself later corrects."
+}

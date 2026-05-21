@@ -1,6 +1,18 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-20 Slot C13（Frontend Transcript Export to PDF restored to Alan's 5/10 reference lineage；issue date now uses export day；seal made more formal）
+> 最後更新：2026-05-21 Slot A 11pm（AP Calculus AB retroactive 3-reviewer cascade — 把 M1 + M3-M12 共 11 個 module 補上完整 3-reviewer cascade，33 個 review JSON 全寫入並驗證通過。3 個 halted 到 `_review_failed/`：**M4** 確認算術錯（09 ladder 講「negative eight-thirds」其實應是 −4/3，連自己的 −1.33 都對不上）、**M12** 確認事實錯（03 講「兩節各 90 分鐘」，但 Section I 是 105 分、II 才 90 分，且和後面 04 的「3h15m total」自相矛盾）、**M7**（Reviewer B 過度標 critical，A/C 都判 minor，narration 經核對正確，只是漏講 monotonicity 條件與 lower-bound FTC 變體）。12 支全部已上 YouTube（broadcast-locked），所以**完全沒動 script.json**，改用 WHY.md 留 errata/re-record 給人類。重要發現：**有 reference doc 的課程內容已全部產完，backlog 耗盡** — 要產新課得先請人類補 `references/<slug>-ced.md`）
+>
+> 前次：2026-05-20 Slot C18（C17 cleaned transcript+diploma PDFs resent to principal；CC Alan and admissions）
+>
+> 前次：2026-05-20 Slot C17（Official seal background removed and diploma student-name highlight artifact fixed；PDF dry-run regenerated, not resent）
+>
+> 前次：2026-05-20 Slot C16（Corrected graduation transcript+diploma PDFs emailed to principal in five separate messages；CC Alan and admissions）
+>
+> 前次：2026-05-20 Slot C15（Graduation document package transcript generator aligned to verified Admin UI export lineage；dry-run regenerated PDFs, not emailed）
+>
+> 前次：2026-05-20 Slot C14（Actual Admin UI Export to PDF smoke-tested by browser download；frontend export is verified, server email package path still must not be treated as equivalent）
+>
+> 前次：2026-05-20 Slot C13（Frontend Transcript Export to PDF restored to Alan's 5/10 reference lineage；issue date now uses export day；seal made more formal）
 >
 > 前次：2026-05-20 Slot C12（Graduation PDFs rechecked；admin/student transcript downloads share one export path；parent transcript download is not implemented yet）
 >
@@ -234,6 +246,56 @@
 - ✅ **Title convention 保留**：右上仍使用 `President & Principal: Shiyu Zhang, Ph.D.`，符合目前 official-title convention。
 - ✅ **驗證**：`npm run build` 通過；`npm run audit:seniors` 通過。尚未 deploy，尚未重寄任何 PDF。
 
+### ✅ Actual Admin UI Export to PDF smoke test（2026-05-20 Slot C14）
+
+> 目標：照 Alan 要求，不再「想像 export to pdf download」，而是真的啟動 local site、登入 Admin、按 `Export to PDF`，確認 browser download 出來的 PDF 才是要信任的格式。
+
+- ✅ **真實 UI download 已完成**：local backend `http://localhost:4000` + frontend `http://localhost:3000` 啟動後，用 Admin session 進 `/admin/transcript/:studentId`，點擊 `Export to PDF`，Playwright browser download 成功存出 `server/tmp/ui-downloads/ui-Tao Zhang_Transcript.pdf`。
+- ✅ **Visual QA**：該 PDF render 成 `server/tmp/ui-downloads/ui-Tao-Zhang-Transcript.png`；抽查顯示為 1-page official transcript，右上 blue `OFFICIAL TRANSCRIPT` badge、`Transcript Date: 05/20/2026`、左下 gold seal、President & Principal signature block，符合 Alan 5/10 reference lineage + current-date requirement。
+- ⚠️ **重要分流**：`server/scripts/send-graduation-document-packages.js` 不是同一條 download path，仍有舊 template 風險，不能拿它產出的 attachments 假裝等於 Admin UI export。寄校長前必須修成 reuse/mirror verified UI export，或改用真實 UI export 批次下載附件。
+- ⚠️ **本機 senior seed blocker**：local `/api/students` 目前只有 Ben Wang / Tao Zhang / Alex Chen / Demo Student，沒有五位 2026 seniors；`cd server && npm run db:seed` 失敗於 `localhost:5432` unreachable，`npm run transcript-api:db-up` 又因本機沒有 Docker 失敗。因此本輪只能完成 UI export path smoke test，尚不能從 local UI 直接批次下載五位 senior documents。
+
+### ✅ Graduation document package generator aligned after UI export proof（2026-05-20 Slot C15）
+
+> 目標：修掉 C14 發現的分流風險。寄校長附件用的 transcript generator 不能再保留舊 gold-badge / gray-seal 版本，必須對齊已驗證的 Admin UI `Export to PDF` lineage。
+
+- ✅ **Server package transcript 對齊**：`server/scripts/send-graduation-document-packages.js` 的 transcript colors / badge / top rule / seal / signature block 改回 verified frontend lineage：`NAVY #2b3d6d`、`HEAD_BG #dce6f1`、blue `OFFICIAL TRANSCRIPT` badge、single navy rule、left gold seal、18/82 seal/signature layout。
+- ✅ **Student profile fields 補齊**：server package transcript 不再把 Birth Date / Gender / Parent / Address / Entry Date 全部印成 `—`；五位 seniors 的 official seed profile fields 已放入 package generator，避免寄出的 PDF 比 Admin UI 少資料。
+- ✅ **Issue date 保持 current date**：package transcript `Transcript Date` 與 certifying signature date 使用 `todayForPdf()`，本輪 dry-run 顯示 `05/20/2026`。
+- ✅ **Dry-run regenerated**：重新執行 `node scripts/send-graduation-document-packages.js`，產出五位 senior transcript + diploma 到 `server/tmp/graduation-documents/`；五份 transcript 全部是 1 page。
+- ✅ **Visual QA**：抽查 `server/tmp/graduation-documents/preview/yunfan-transcript-package-c14.png` 與 `yunfan-diploma-package-c14.png`。Transcript 已對齊 UI export 方向；diploma 維持 Admin/download formal layout。
+- ✅ **驗證**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過；`node --check server/src/lib/mailer.js` 通過；`npm run build` 通過。
+- ⚠️ **尚未寄信**：本輪只修 generator + dry-run regenerate，沒有執行 `--send`。Official documents 應等 Alan 最後確認後再寄。
+
+### ✅ Corrected graduation document PDFs emailed（2026-05-20 Slot C16）
+
+> 目標：Alan 確認 `Okay go ahead` 後，正式寄出五位 senior 的 corrected transcript + diploma PDF package 給校長。
+
+- ✅ **CC 行為修正**：`server/scripts/send-graduation-document-packages.js` 的 `GRADUATION_DOCUMENT_CC` 現在支援 comma-separated recipients；本輪正式寄送 CC `alanhdchu@genesisideas.school` 與 `admissions@genesisideas.school`。
+- ✅ **正式寄出**：執行 `GRADUATION_DOCUMENT_CC=alanhdchu@genesisideas.school,admissions@genesisideas.school node scripts/send-graduation-document-packages.js --send`。每位學生一封信，每封附 corrected transcript PDF + diploma PDF。
+- ✅ **Resend ids**：Ruwen Li `ca69145d-108e-4094-81af-9fda9b493dde`；Tao Zhang `0d7d0c1a-bdcb-4537-82ce-09d38db7f4e5`；Baoyi Lu `6db08321-cd15-42bb-88cb-3baa42a698da`；Yunfan Yang `ebccfd4a-354c-4846-b0d7-d9bd32d3870c`；Hanxi Xiao `eeb83efd-30b9-4d4e-b8dd-c1a7913bba59`。
+- ✅ **寄送前 gate**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過。PDFs 於寄送時重新 generate，輸出位置仍是 `server/tmp/graduation-documents/`。
+
+### ✅ Official document visual cleanup（2026-05-20 Slot C17）
+
+> 目標：Alan 指出 official seal 圖檔有白底/框線感、diploma 中央學生姓名後方有反白框；這會讓正式文件看起來不夠乾淨。
+
+- ✅ **Seal 去背**：新增 `src/img/transcript_seal_transparent.png`，以原 `transcript_seal.jpg` 做 alpha mask 去掉白/灰 studio background；不重畫 seal、不改校徽內容。
+- ✅ **Frontend exporters 改用透明 seal**：`src/components/pages/Transcript/transcriptPdf.js` 與 `src/components/pages/Diploma/DiplomaPage.js` 改引用透明 PNG。
+- ✅ **Server package 改用透明 seal**：`server/scripts/send-graduation-document-packages.js` 改用同一透明 PNG；diploma 底部 official seal wrapper 移除多餘 border/background，避免再次產生框。
+- ✅ **學生姓名反白 artifact 修正**：diploma 中央大學生姓名改為 transparent inline SVG text，避免 Chromium PDF 對 script font 產生文字背景框；frontend diploma 與 server package template 都已同步。
+- ✅ **PDF dry-run regenerated**：重新執行 `node scripts/send-graduation-document-packages.js`；五份 transcript 仍皆為 1 page。抽查 preview：`server/tmp/graduation-documents/preview/yunfan-diploma-no-name-box-c17.png` 與 `yunfan-transcript-no-seal-box-c17.png`。
+- ✅ **驗證**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過；`npm run build` 通過。
+- ⚠️ **尚未重寄**：C17 只修視覺與重新 dry-run PDF，沒有再次寄給校長。
+
+### ✅ Cleaned graduation documents resent（2026-05-20 Slot C18）
+
+> 目標：Alan 明確要求「重新寄出」後，用 C17 修過 seal 去背與 diploma 姓名反白 artifact 的版本，重新寄五位 senior PDF package。
+
+- ✅ **正式重寄**：執行 `GRADUATION_DOCUMENT_CC=alanhdchu@genesisideas.school,admissions@genesisideas.school node scripts/send-graduation-document-packages.js --send`。每位學生一封信，每封附更新後 transcript PDF + diploma PDF。
+- ✅ **Resend ids**：Ruwen Li `2fb06c05-158c-45d4-8056-091f2a17d382`；Tao Zhang `e3369e34-5df4-41dc-ad3b-32ea757a2695`；Baoyi Lu `1101889c-01fc-45a5-8742-0ed529d41f79`；Yunfan Yang `4353aafe-7a1e-4007-b165-73f9e1a52020`；Hanxi Xiao `9bba9e68-a9f4-49a8-94b4-4eb181905b6a`。
+- ✅ **寄送前 gate**：`node --check server/scripts/send-graduation-document-packages.js` 通過；`npm run audit:seniors` 通過。
+
 ---
 
 ## 🎯 CEEB 嚴審稽核 — 準備清單（2026-05-18）
@@ -269,6 +331,25 @@
 - ✅ Nav Admission dropdown 修：移除誤導性「FAQ」、Apply Now 改連到 `/apply` 而非 `/admission`
 - ✅ ScrollToTop 加 hash anchor 支援（讓 `/discovery#mission` 可實際捲到 mission section）
 - ✅ AboutPage / HandbookPage 加 `<Nav>` 元件（之前漏接）
+
+---
+
+## ✅ AP Calculus AB retroactive 3-reviewer cascade（2026-05-21 Slot A 11pm CT）
+
+> 跟 AP Bio 04:12Z 那次同一個 pattern：AP Calc AB 的 12 支 module 早就有 `script.json`（而且 12 支全部已上 YouTube），但只有 M2 在 disk 上有完整 `_review_A/B/C.json`。M1 + M3-M12 共 11 支缺 review cascade — 違反 artifact contract。本輪把它們補齊。選 AP Calc 是因為：(1) 它是唯一「有 script.json 但缺 review」又同時**有 CED reference doc** 的課（Reviewer C 反幻覺一定要有 reference）；(2) 有 reference 的新 module backlog 已經全部產完，沒有可以安全新生成的東西了。
+
+- ✅ **11 個 module × 3 reviewer 平行跑（分 4 波，每波 2-3 個 module）**：M1 Limits、M3 Composite/Implicit/Inverse、M4 Contextual Apps、M5 MVT/EVT、M6 Sketching/Optimization、M7 Riemann/FTC、M8 Antiderivatives/Sub、M9 Diff Eq、M10 Avg Value/Area、M11 Volumes、M12 Exam Synthesis。Reviewer A = Peer Math-PhD、B = Adversarial Student、C = Citation Checker（只能用 `references/ap-calc-ab-ced.md` 對應 unit 的行區）
+- ✅ **33 個 review JSON 全部寫入並通過驗證**（valid JSON + 路徑正確，verification_fail=0）
+- ✅ **完全沒動 script.json / build_slides.py / slides/**：12 支都 broadcast-locked（有 `youtube.video_id`），改 script 會讓 on-disk 跟 YouTube 影片 divergence — 遵守 AP Bio M4/M5/M6 的 precedent
+- 🟢 **8 個 kept-live（0 critical）**：M1、M3、M5、M6、M8、M9、M10、M11（都只有 minor，內容核對沒問題）
+- 🔴 **3 個 halted 到 `_review_failed/<slug>/WHY.md`**：
+  - **M4**（Reviewer A critical，已逐字核對 confirmed）：09_related_rates_ladder 講「dy/dt = negative eight-thirds」其實是 **−4/3**（= −1.33，連 narration 自己後面講的 −1.33 都對不上；−8/3 = −2.67）。真・算術錯。
+  - **M12**（Reviewer C + B 都 critical，已核對 confirmed）：03_overview 講「兩節各 ninety minutes」是錯的 — Section I (MC) 是 **105 分**、Section II (FRQ) 才 90 分，而且跟 04 正確講的「3h15m total」自相矛盾。另外 14_time_budget 有個 real-but-minor 的 Part A 計算機回收策略含糊。（B 第一個 04 'critical' 自己又推翻了 — false alarm。）
+  - **M7**（只有 Reviewer B critical；A/C 都 minor，低急迫）：narration 經核對**數學正確**，B 的 critical 其實是**漏講考點變體**（06 沒強調 monotonicity 要整個區間、沒給 concavity 版 trapezoid/midpoint 規則；13 沒給 lower-bound FTC 的負號變體），不是錯。WHY.md 已標明低急迫，留作下次 re-record 的 enhancement。
+- ✅ **Plan + Audit**：`teaching-videos/_audit/ap-calculus-ab/2026-05-21T04-08-35Z-retroactive-cascade-plan.json` + `...-summary.json`
+- 🟠 **給人類的兩個便宜 errata**（正確值在影片別處都已講過，所以一行 YouTube description 修正就夠）：M4「−4/3」、M12「Section I 105 分 / Section II 90 分」
+- ⚙️ **沒做**：沒 push、沒 call YouTube API、沒動 `public/data/lessons-manifest.json`、沒生新 module、沒 fetch live web
+- 🔧 **下個 Slot 重要 handoff**：**有 reference doc 的內容已全部產完**。要產新課（AP Statistics / Geometry / Chemistry / US History / Government / Economics …，這些都有 prisma course def 但沒有 teaching-videos folder），**需要人類先在 `references/<slug>-ced.md` 補 CED reference doc**（pipeline 不能 fetch web，Reviewer C 一定要 reference）。另外 AP CS A（M1-M10）和 AP Psych（M1-M16）也都有 script.json 但缺 review cascade — 一旦人類補上 `references/ap-cs-a-ced.md` / `references/ap-psychology-ced.md`，就能用同一個 retroactive pattern 補審。
 
 ---
 

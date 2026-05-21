@@ -1,0 +1,28 @@
+{
+  "reviewer": "C",
+  "role": "Citation Checker (anti-hallucination)",
+  "module": "ap-calculus-ab-module-10-average-value-area-between-curves",
+  "reference_basis": "references/ap-calc-ab-ced.md Unit 8a only",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "06_mvt_integrals",
+      "severity": "minor",
+      "description": "Names the 'Mean Value Theorem for Integrals' as a topic 'that goes with this' Unit 8 material. The terse reference (CHA 8.1-8.6) does not mention this theorem by name. Plausible standard elaboration but unsupported by the provided reference.",
+      "fix": "Acceptable as standard calculus background; if strict citation is required, note it is not explicitly listed in the Unit 8a CED topics provided."
+    },
+    {
+      "section": "06_mvt_integrals",
+      "severity": "minor",
+      "description": "Claim 'The AP exam will ask you to identify that crossing point' is an assertion about exam behavior not supported by the reference, which lists topics and traps but no such item.",
+      "fix": "Soften to a general statement (e.g., 'this is a common application') rather than a specific exam-content guarantee."
+    },
+    {
+      "section": "01_title",
+      "severity": "minor",
+      "description": "Claim 'some of the most common free response setups on the AP exam' is an exam-frequency assertion not corroborated by the reference (reference gives only 10-15% MC weighting, ~19-20 class periods).",
+      "fix": "Optional softening; not contradicted, just unverifiable against the provided reference."
+    }
+  ],
+  "notes": "No checkable number, name, date, or exam-percent in the narration contradicts the reference; the one explicit College Board citation (topic 8.3, accumulation/applied contexts) is correct, and remaining flags are exam-behavior assertions or theorem names merely absent from the terse reference."
+}

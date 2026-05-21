@@ -1,0 +1,9 @@
+{
+  "reviewer": "A",
+  "role": "Peer Subject-Matter Reviewer (Math PhD)",
+  "module": "ap-calculus-ab-module-11-volumes-cross-sections-discs-washers",
+  "reference_basis": "calculus subject expertise",
+  "verdict": "pass",
+  "issues": [],
+  "notes": "All formulas (squares s^2, equilateral triangle (sqrt3/4)s^2, semicircle pi/8 s^2 with s as diameter, disc pi*integral R^2, washer pi*integral(R^2-r^2) with the explicit warning against (R-r)^2, shift-by-k radii) and every re-derived numeric answer (8, 8pi, 2pi/15, 256pi/5) are correct, axis/variable pairing is right, and no BC-only arc length content appears."
+}

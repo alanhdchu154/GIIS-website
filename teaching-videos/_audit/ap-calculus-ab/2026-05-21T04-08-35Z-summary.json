@@ -1,0 +1,90 @@
+{
+  "run_id": "ap-calculus-ab-slot-A-retroactive-cascade-2026-05-21T04-08-35Z",
+  "run_type": "retroactive_review_cascade",
+  "slot": "A (11pm CT)",
+  "timestamp": "2026-05-21T04:08:35Z",
+  "course": "AP Calculus AB",
+  "course_slug": "ap-calculus-ab",
+  "reference_doc": "references/ap-calc-ab-ced.md",
+  "plan_file": "_audit/ap-calculus-ab/2026-05-21T04-08-35Z-retroactive-cascade-plan.json",
+  "why_this_run": "New-module backlog for reference-doc-backed courses is EXHAUSTED — every module of AP CS A (1-10), AP Psych (1-16), AP Bio (1-11), AP Calc AB (1-12) already has a committed script.json; idempotence forbids regeneration. The in-scope gap was the mandatory artifact-contract requirement that each module folder contain _review_A/B/C.json. AP Calc AB M1+M3-M12 had script.json but were missing those review files (only M2 had the full cascade on disk), and AP Calc is the only such course with a CED reference doc for the anti-hallucination Reviewer C. This run back-filled the 3-reviewer cascade, mirroring the sanctioned 2026-05-20T04:12Z AP Biology M4-M9 retroactive cascade.",
+  "broadcast_constraint": "All 12 AP Calc modules carry a youtube.video_id (verified). No script.json was edited. Critical findings were escalated to _review_failed/<slug>/WHY.md with the broadcast constraint and human options (errata vs re-record). No broadcast module was regenerated.",
+  "reviewers_spawned": 33,
+  "modules_cascaded": 11,
+  "review_files_written": 33,
+  "verification": {"all_33_review_files_present": true, "all_valid_json": true, "verification_fail_flag": 0},
+  "verdict_matrix": {
+    "ap-calculus-ab-module-1-limits": {"A": "minor", "B": "minor", "C": "minor", "outcome": "kept_live"},
+    "ap-calculus-ab-module-3-composite-implicit-inverse": {"A": "pass", "B": "minor", "C": "minor", "outcome": "kept_live"},
+    "ap-calculus-ab-module-4-contextual-applications": {"A": "critical", "B": "minor", "C": "minor", "outcome": "halted"},
+    "ap-calculus-ab-module-5-mvt-evt-derivative-tests": {"A": "pass", "B": "minor", "C": "pass", "outcome": "kept_live"},
+    "ap-calculus-ab-module-6-graph-sketching-optimization": {"A": "minor", "B": "minor", "C": "pass", "outcome": "kept_live"},
+    "ap-calculus-ab-module-7-riemann-sums-ftc": {"A": "minor", "B": "critical", "C": "minor", "outcome": "halted"},
+    "ap-calculus-ab-module-8-antiderivatives-substitution": {"A": "minor", "B": "minor", "C": "pass", "outcome": "kept_live"},
+    "ap-calculus-ab-module-9-differential-equations": {"A": "minor", "B": "minor", "C": "pass", "outcome": "kept_live"},
+    "ap-calculus-ab-module-10-average-value-area-between-curves": {"A": "pass", "B": "minor", "C": "minor", "outcome": "kept_live"},
+    "ap-calculus-ab-module-11-volumes-cross-sections-discs-washers": {"A": "pass", "B": "minor", "C": "pass", "outcome": "kept_live"},
+    "ap-calculus-ab-module-12-ap-exam-synthesis-frq-strategy": {"A": "minor", "B": "critical", "C": "critical", "outcome": "halted"}
+  },
+  "kept_live": [
+    "ap-calculus-ab-module-1-limits",
+    "ap-calculus-ab-module-3-composite-implicit-inverse",
+    "ap-calculus-ab-module-5-mvt-evt-derivative-tests",
+    "ap-calculus-ab-module-6-graph-sketching-optimization",
+    "ap-calculus-ab-module-8-antiderivatives-substitution",
+    "ap-calculus-ab-module-9-differential-equations",
+    "ap-calculus-ab-module-10-average-value-area-between-curves",
+    "ap-calculus-ab-module-11-volumes-cross-sections-discs-washers"
+  ],
+  "halted": [
+    {
+      "slug": "ap-calculus-ab-module-4-contextual-applications",
+      "flagged_by": "Reviewer A (Math PhD) — critical",
+      "issue": "CONFIRMED arithmetic error in section 09_related_rates_ladder: narration says 'dy/dt = negative eight-thirds' but correct value is -4/3 (= -1.33, which the narration also states). -8/3 = -2.67, contradicting its own decimal.",
+      "severity": "real_factual_error",
+      "broadcast": "uploaded (UhKPnybUhdU) — script not edited",
+      "human_action": "YouTube description errata now; re-record section 09 in next batch (patch script.json to 'negative four-thirds' first if re-recording)",
+      "why_md": "_review_failed/ap-calculus-ab-module-4-contextual-applications/WHY.md"
+    },
+    {
+      "slug": "ap-calculus-ab-module-7-riemann-sums-ftc",
+      "flagged_by": "Reviewer B (Adversarial Student) — critical; A=minor, C=minor",
+      "issue": "Low-urgency: narration verified mathematically CORRECT. B's criticals are OMISSIONS of exam-tested variants (whole-interval monotonicity qualifier in 06; concavity-based trapezoid/midpoint rule; variable-LOWER-bound FTC sign in 13), not false statements. The subject-matter PhD and citation checker both passed it as minor.",
+      "severity": "pedagogical_completeness_not_error",
+      "broadcast": "uploaded (tILIe138--k) — script not edited",
+      "human_action": "Optional: add lower-bound FTC variant + whole-interval qualifier on next re-record, or a one-line YouTube errata. No urgent action.",
+      "why_md": "_review_failed/ap-calculus-ab-module-7-riemann-sums-ftc/WHY.md"
+    },
+    {
+      "slug": "ap-calculus-ab-module-12-ap-exam-synthesis-frq-strategy",
+      "flagged_by": "Reviewer C (Citation) — critical AND Reviewer B — critical; A=minor",
+      "issue": "CONFIRMED factual error in section 03_overview: 'Two sections, ninety minutes each' — Section I (MC) is 105 min, Section II (FRQ) is 90 min; contradicts the correct '3h15m total' stated in 04. Also a real-but-strong-minor strategy ambiguity in 14_time_budget re the Part A calculator-collection boundary. (B's first 04 'critical' reconciled itself — false alarm.)",
+      "severity": "real_factual_error",
+      "broadcast": "uploaded (uTPv-VyklTw) — script not edited",
+      "human_action": "YouTube description errata now (correct '90 min each' -> 105/90); fix 03_overview + tighten 14_time_budget on next re-record",
+      "why_md": "_review_failed/ap-calculus-ab-module-12-ap-exam-synthesis-frq-strategy/WHY.md"
+    }
+  ],
+  "skipped": [
+    {"slug": "ap-calculus-ab-module-2-derivatives", "reason": "already had full _outline + _review_A/B/C on disk"}
+  ],
+  "residual_gaps": [
+    "ap-calculus-ab-module-1-limits has _review_A/B/C.json now but still lacks _outline.json (it never had one). Consistent with the AP Bio M4-M9 retroactive pattern (reviews target the script). A future run could back-derive an outline if the artifact contract requires it, but the QC value (3 reviewers vs the CED) is already captured."
+  ],
+  "new_modules_generated": 0,
+  "constraints_respected": {
+    "no_youtube_api_calls": true,
+    "no_git_push": true,
+    "lessons_manifest_untouched": true,
+    "no_regeneration_of_uploaded_modules": true,
+    "no_script_json_edits": true,
+    "three_reviewer_cascade_used_for_every_module": true,
+    "no_skipped_reviewers": true,
+    "no_live_web_fetch": true
+  },
+  "strategic_finding_for_human": "The reference-doc-backed NEW-content backlog is EXHAUSTED. To generate genuinely new courses (AP Statistics, Geometry, Chemistry, US History, Government, Economics, World History, etc. — all have prisma course defs under server/prisma/courses/ but NO teaching-videos folders), a human must add CED/reference docs at references/<slug>-ced.md, because the auto-pipeline is forbidden from fetching live web content and Reviewer C (anti-hallucination) strictly requires a reference. Additionally, AP CS A (M1-M10) and AP Psychology (M1-M16) already have script.json but LACK the _review_A/B/C cascade; they cannot be rigorously audited until reference docs exist for them (references/ap-cs-a-ced.md and references/ap-psychology-ced.md).",
+  "next_slot_recommendations": [
+    "Slot B (5am CT): nothing left to cascade for AP Calc (all 11 done + M2 pre-done). Best use of Slot B: (a) back-derive _outline.json for AP Calc M1 if the artifact contract demands it, OR (b) if a human has added references/ap-cs-a-ced.md, run the retroactive cascade for AP CS A M1-M10 (same pattern). Without a new reference doc, there is no further rigorous auto-work available — Slot B should produce an audit-only report rather than skip reviewers.",
+    "Human: (1) action the 2 confirmed errata (M4 -4/3, M12 105/90 min) — both are cheap YouTube-description corrections and the correct values are already spoken/written elsewhere in each video; (2) add CED reference docs for the next courses to unblock new generation."
+  ]
+}

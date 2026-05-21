@@ -1,0 +1,22 @@
+{
+  "reviewer": "A",
+  "role": "Peer Subject-Matter Reviewer (Math PhD)",
+  "module": "ap-calculus-ab-module-9-differential-equations",
+  "reference_basis": "calculus subject expertise",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "15_exponential_model",
+      "severity": "minor",
+      "description": "The list of phenomena governed by dy/dt = k*y -> y = y0*e^(kt) ends with 'Newton's law of cooling.' Newton's cooling is dT/dt = k(T - T_room), where the rate is proportional to the DIFFERENCE between the object and ambient temperature, not to the quantity itself. Its solution is T = T_room + (T0 - T_room)e^(kt), an exponential APPROACH to room temperature, not a pure y0*e^(kt). Lumping it with populations/decay/interest as 'all the same DNA' is imprecise and contradicts the lesson's own hook (02), which correctly describes cooling as driven by the temperature gap.",
+      "fix": "Either drop Newton's cooling from this proportional-to-itself list, or note it is the same family only after a substitution u = T - T_room, which converts it to du/dt = k*u; the cooling solution is T = T_room + (T0 - T_room)e^(kt)."
+    },
+    {
+      "section": "07_slope_field_visual",
+      "severity": "minor",
+      "description": "States the solution curves of dy/dx = x/y 'are hyperbolas.' From section 10 the family is y^2 - x^2 = C. This is a family of hyperbolas only for C != 0; for C = 0 it degenerates to the lines y = +-x, and these asymptote/separatrix lines are part of the visible slope-field picture. Calling them all 'hyperbolas' without the C=0 caveat is a small imprecision (the bigger family is the rectangular hyperbolas y^2 - x^2 = C).",
+      "fix": "Say the solution curves are the rectangular hyperbolas y^2 - x^2 = C (with the degenerate lines y = +-x when C = 0)."
+    }
+  ],
+  "notes": "Separation-of-variables algebra, +C ordering, and every re-derived numeric answer (sections 05, 10, 12, 14, 16: ln2/4) are correct, no BC-only Euler/logistic content is taught; only two minor imprecisions, the Newton's-cooling lumping being the more substantive."
+}

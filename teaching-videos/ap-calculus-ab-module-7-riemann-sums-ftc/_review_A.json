@@ -1,0 +1,22 @@
+{
+  "reviewer": "A",
+  "role": "Peer Subject-Matter Reviewer (Math PhD)",
+  "module": "ap-calculus-ab-module-7-riemann-sums-ftc",
+  "reference_basis": "calculus subject expertise",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section": "06_riemann_concavity",
+      "severity": "minor",
+      "description": "The section id labels this 'concavity', but the narrated content is entirely about monotonicity (increasing vs. decreasing), not concavity. The spoken over/under-estimate logic is mathematically correct (increasing: left under, right over; decreasing: left over, right under), so this is only a label/content mismatch, not a spoken error. Note that left/right over-under depends on monotonicity, whereas trapezoid vs. midpoint over-under depends on concavity — the lesson never states the concavity-based rule, which is fine for AB scope but the id is misleading.",
+      "fix": "Rename the section id to e.g. '06_riemann_monotonicity' so the id matches the (correct) monotonicity content. No change needed to narration."
+    },
+    {
+      "section": "06_riemann_concavity",
+      "severity": "minor",
+      "description": "'Midpoint usually beats both' is true in the typical AP setting (functions of consistent concavity) but is stated as a near-universal rule. For functions with inflection points or oscillation, midpoint is not guaranteed to beat left/right. The hedge 'usually' mostly covers this, so it is a minor imprecision rather than an error.",
+      "fix": "Optional: phrase as 'midpoint is usually the most accurate of the rectangle methods' to keep the appropriate hedge; current wording is acceptable."
+    }
+  ],
+  "notes": "All arithmetic re-derived (Sec10 ∢1→3 2x dx = 8 ✓; Sec12 ∢0→2 (3x²+1) dx = 10 ✓), both FTC parts and the chain-rule variant are stated correctly, and all five definite-integral properties and Riemann over/under-estimate rules are factually sound; only minor labeling/hedging imprecisions found."
+}
