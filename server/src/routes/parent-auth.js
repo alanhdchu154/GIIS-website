@@ -30,6 +30,18 @@ function hashToken(token) {
   return crypto.createHash('sha256').update(token).digest('hex');
 }
 
+async function recordPasswordResetEmail({ email, result }) {
+  await prisma.emailLog.create({
+    data: {
+      kind: 'password_reset_parent',
+      recipient: email,
+      providerId: result?.id || null,
+      status: result?.ok ? 'sent' : (result?.skipped ? 'skipped' : 'error'),
+      error: result?.error || result?.reason || '',
+    },
+  }).catch(() => null);
+}
+
 // POST /api/parent/login
 router.post('/login', async (req, res) => {
   const { email, password } = req.body || {};
@@ -63,12 +75,13 @@ router.post('/forgot-password', async (req, res) => {
         expiresAt: new Date(Date.now() + RESET_TOKEN_MINUTES * 60 * 1000),
       },
     });
-    await sendPasswordResetEmail({
+    const result = await sendPasswordResetEmail({
       email,
       role: 'parent',
       resetUrl: `${FRONTEND_URL}/reset-password?role=parent&token=${token}`,
       expiresMinutes: RESET_TOKEN_MINUTES,
     });
+    await recordPasswordResetEmail({ email, result });
   }
 
   res.json({ ok: true, message: 'If this email exists, a reset link has been sent.' });

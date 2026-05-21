@@ -298,6 +298,24 @@ export default function ParentDashboard({ language }) {
                 }
               </div>
 
+              {/* Official transcript */}
+              <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
+                <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 10px' }}>
+                  {isEn ? 'Official Records' : '正式文件'}
+                </p>
+                <p style={{ fontSize: 13, color: '#5c6578', margin: '0 0 14px', lineHeight: 1.55 }}>
+                  {isEn
+                    ? 'View or download the official transcript using the same locked format used by the school office.'
+                    : '查看或下载正式成绩单，格式与学校办公室使用的版本一致。'}
+                </p>
+                <Link
+                  to="/parent/transcript"
+                  style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '100%', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 16px', fontSize: 13.5, fontWeight: 800, textDecoration: 'none' }}
+                >
+                  {isEn ? 'View official transcript →' : '查看正式成绩单 →'}
+                </Link>
+              </div>
+
               {/* Subscription management */}
               <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
                 <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 14px' }}>

@@ -40,6 +40,38 @@ function transcriptStats(semesters) {
   };
 }
 
+function dateOnly(d) {
+  if (!d) return null;
+  try {
+    const dt = d instanceof Date ? d : new Date(d);
+    if (Number.isNaN(dt.getTime())) return null;
+    return dt.toISOString().slice(0, 10);
+  } catch {
+    return null;
+  }
+}
+
+function computeCurrentGrade(graduationDate, referenceDate = new Date()) {
+  if (!graduationDate) return null;
+  const graduationYear = new Date(graduationDate).getFullYear();
+  const month = referenceDate.getMonth() + 1;
+  const schoolYearEnd = month >= 9 ? referenceDate.getFullYear() + 1 : referenceDate.getFullYear();
+  const grade = 12 - (graduationYear - schoolYearEnd);
+  if (grade < 9 || grade > 12) return null;
+  return grade;
+}
+
+function serializeTranscriptStudent(student) {
+  const s = { ...student };
+  s.birthDate = dateOnly(student.birthDate);
+  s.entryDate = dateOnly(student.entryDate);
+  s.withdrawalDate = dateOnly(student.withdrawalDate);
+  s.graduationDate = dateOnly(student.graduationDate);
+  s.transcriptDate = dateOnly(student.transcriptDate);
+  s.currentGrade = computeCurrentGrade(student.graduationDate);
+  return s;
+}
+
 // GET /api/parent/me
 // Returns logged-in parent's linked student data: profile, enrollments, recent activity, GPA, credits.
 router.get('/me', async (req, res) => {
@@ -122,6 +154,38 @@ router.get('/me', async (req, res) => {
     recentActivity: events.slice(0, 10),
     subscription: activeSub || null,
   });
+});
+
+// GET /api/parent/transcript
+// Parent-safe official transcript data for the linked student.
+router.get('/transcript', async (req, res) => {
+  const auth = extractParentAuth(req);
+  if (!auth) return res.status(401).json({ error: 'Not authenticated' });
+
+  const student = await prisma.student.findUnique({
+    where: { id: auth.studentId },
+    include: {
+      semesters: {
+        orderBy: { sortOrder: 'asc' },
+        include: { courseRows: { orderBy: { sortOrder: 'asc' } } },
+      },
+    },
+  });
+
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const now = new Date();
+  (student.semesters || []).forEach((sem) => {
+    if (sem.releaseDate && new Date(sem.releaseDate) > now) {
+      sem.courseRows.forEach((row) => {
+        row.letterGrade = '';
+        row.weightedGpa = null;
+        row.unweightedGpa = null;
+      });
+    }
+  });
+
+  res.json({ student: serializeTranscriptStudent(student) });
 });
 
 module.exports = router;

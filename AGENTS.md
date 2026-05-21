@@ -75,6 +75,13 @@ This is non-negotiable. The roadmap stale = next agent makes wrong decisions.
 ### Demo, not just decoration
 - Whenever you build something visible to parents, ask: "Could a parent re-watch / re-open this and learn something new?" If yes, also wire it into the homepage flow (currently between Introduction and Pathways at the `id="demo"` anchor)
 
+### Official transcript / diploma format — locked
+- Official document visuals are part of school trust, not ordinary styling. Before changing transcript or diploma format, read `docs/official-document-format-contract.md`.
+- Run `npm run audit:official-docs` before sending or shipping official transcript/diploma changes.
+- Do not switch back to `src/img/transcript_seal.jpg`; use `src/img/transcript_seal_transparent.png`.
+- Keep transcript export and `server/scripts/send-graduation-document-packages.js` visually aligned.
+- Do not remove the diploma central-name SVG rendering unless Alan explicitly approves another no-highlight PDF-safe approach.
+
 ---
 
 ## 📁 Canonical paths
@@ -89,6 +96,8 @@ This is non-negotiable. The roadmap stale = next agent makes wrong decisions.
 | Real student transcript data | `server/prisma/seed.js` (Yunfan, Baoyi, Ruwen, Tao) |
 | Mobile CSS overrides | `src/components/pages/Learn/learn-mobile.css` |
 | Hero product screenshots | `src/img/Hero/` |
+| Official document visual contract | `docs/official-document-format-contract.md` |
+| Official document format audit | `tools/graduation/audit_official_document_formats.js` |
 
 ---
 

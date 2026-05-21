@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAdminSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
+import { AdminHeader, AdminPage } from './AdminChrome';
 
 const API = getApiBase();
 
@@ -38,24 +39,16 @@ export default function AdminProgressPage() {
   const neverActive = (students || []).filter((s) => s.daysInactive === null).length;
   const inactive14 = (students || []).filter((s) => s.daysInactive !== null && s.daysInactive >= 14).length;
   const active7 = (students || []).filter((s) => s.daysInactive !== null && s.daysInactive <= 6).length;
-  const totalCredits = (students || []).reduce((s, st) => s + st.creditsEarned, 0);
+  const totalOfficialCredits = (students || []).reduce((sum, st) => sum + (Number(st.officialCreditsEarned) || 0), 0);
+  const totalPortalCredits = (students || []).reduce((sum, st) => sum + (Number(st.portalCreditsEarned) || 0), 0);
+  const issueCount = (students || []).filter((s) => (s.consistency || []).length > 0).length;
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f4f6fa', fontFamily: 'Inter, sans-serif' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '32px 5% 80px' }}>
-
-        {/* Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '28px' }}>
-          <div>
-            <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 4px' }}>
-              Admin
-            </p>
-            <h1 style={{ fontSize: '24px', fontWeight: 800, color: '#1a1a2e', margin: 0 }}>Student Progress</h1>
-          </div>
-          <Link to="/admin" style={{ fontSize: '13px', color: '#2b3d6d', textDecoration: 'none', fontWeight: 600 }}>
-            ← Back to Students
-          </Link>
-        </div>
+    <AdminPage>
+        <AdminHeader
+          title="Student Progress"
+          subtitle="Focus on inactivity, credits, and students who need attention."
+        />
 
         {err && (
           <div style={{ background: '#ffebee', border: '1px solid #ef9a9a', borderRadius: '8px', padding: '12px 16px', color: '#b71c1c', marginBottom: '20px' }}>
@@ -71,7 +64,9 @@ export default function AdminProgressPage() {
               { label: 'Active (7d)', value: active7, color: '#1b5e20', bg: '#f1f8e9' },
               { label: 'Inactive 14d+', value: inactive14, color: '#b71c1c', bg: '#ffebee' },
               { label: 'Never Active', value: neverActive, color: '#b71c1c', bg: '#ffebee' },
-              { label: 'Total Credits Earned', value: totalCredits.toFixed(1), color: '#2b3d6d', bg: '#f0f4ff' },
+              { label: 'Official Credits', value: totalOfficialCredits.toFixed(1), color: '#2b3d6d', bg: '#f0f4ff' },
+              { label: 'Portal Credits', value: totalPortalCredits.toFixed(1), color: '#2e7d32', bg: '#f1f8e9' },
+              { label: 'Data Notes', value: issueCount, color: issueCount ? '#e65100' : '#64748b', bg: issueCount ? '#fff3e0' : '#fff' },
             ].map((s) => (
               <div key={s.label} style={{ background: s.bg, border: '1px solid #e0e6f0', borderRadius: '12px', padding: '16px 20px' }}>
                 <p style={{ fontSize: '10px', fontWeight: 700, color: '#888', textTransform: 'uppercase', letterSpacing: '1.5px', margin: '0 0 6px' }}>{s.label}</p>
@@ -90,7 +85,10 @@ export default function AdminProgressPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {students.map((s) => {
               const badge = activityLabel(s.daysInactive, s.lastActivity);
-              const pct = Math.min(100, (s.creditsEarned / 24) * 100);
+              const officialCredits = Number(s.officialCreditsEarned ?? s.creditsEarned) || 0;
+              const portalCredits = Number(s.portalCreditsEarned) || 0;
+              const pct = Math.min(100, (officialCredits / 24) * 100);
+              const modulePct = s.totalModules ? Math.min(100, (s.completedModules / s.totalModules) * 100) : 0;
               return (
                 <div key={s.id} style={{
                   background: '#fff', border: '1px solid #e0e6f0', borderRadius: '10px',
@@ -108,29 +106,42 @@ export default function AdminProgressPage() {
                   {/* Credits progress */}
                   <div style={{ minWidth: '140px', flex: '2' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                      <span style={{ fontSize: '11px', color: '#666' }}>Credits</span>
+                      <span style={{ fontSize: '11px', color: '#666' }}>Official credits</span>
                       <span style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d' }}>
-                        {s.creditsEarned % 1 === 0 ? s.creditsEarned : s.creditsEarned.toFixed(1)} / 24
+                        {officialCredits % 1 === 0 ? officialCredits : officialCredits.toFixed(1)} / 24
                       </span>
                     </div>
                     <div style={{ background: '#e8ecf5', borderRadius: '4px', height: '5px' }}>
                       <div style={{ width: `${pct}%`, background: '#2b3d6d', borderRadius: '4px', height: '100%', transition: 'width 0.3s' }} />
                     </div>
+                    <p style={{ margin: '5px 0 0', fontSize: '10px', color: '#777' }}>
+                      Learn Portal: {portalCredits % 1 === 0 ? portalCredits : portalCredits.toFixed(1)} credits
+                    </p>
                   </div>
 
                   {/* Courses */}
-                  <div style={{ minWidth: '100px', flex: '1', textAlign: 'center' }}>
+                  <div style={{ minWidth: '110px', flex: '1', textAlign: 'center' }}>
                     <p style={{ margin: 0, fontSize: '18px', fontWeight: 800, color: '#1a1a2e' }}>
-                      {s.inProgress}
+                      {s.completedModules}/{s.totalModules}
                     </p>
-                    <p style={{ margin: 0, fontSize: '10px', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>In Progress</p>
+                    <p style={{ margin: 0, fontSize: '10px', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>Modules</p>
+                    <div style={{ background: '#e8ecf5', borderRadius: '4px', height: '4px', marginTop: 5 }}>
+                      <div style={{ width: `${modulePct}%`, background: '#2e7d32', borderRadius: '4px', height: '100%' }} />
+                    </div>
                   </div>
 
                   <div style={{ minWidth: '80px', flex: '1', textAlign: 'center' }}>
                     <p style={{ margin: 0, fontSize: '18px', fontWeight: 800, color: '#2e7d32' }}>
-                      {s.completed}
+                      {s.submittedQuizzes}/{s.submittedExams}
                     </p>
-                    <p style={{ margin: 0, fontSize: '10px', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>Done</p>
+                    <p style={{ margin: 0, fontSize: '10px', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>Quiz / Exams</p>
+                  </div>
+
+                  <div style={{ minWidth: '110px', flex: '1', textAlign: 'center' }}>
+                    <p style={{ margin: 0, fontSize: '18px', fontWeight: 800, color: '#1a1a2e' }}>
+                      {s.completed}/{s.totalEnrollments}
+                    </p>
+                    <p style={{ margin: 0, fontSize: '10px', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>Courses Done</p>
                   </div>
 
                   {/* Last activity */}
@@ -146,6 +157,20 @@ export default function AdminProgressPage() {
                       {s.lastActivity ? fmt(s.lastActivity) : 'No activity yet'}
                     </p>
                   </div>
+
+                  {(s.consistency || []).length > 0 && (
+                    <div style={{
+                      flexBasis: '100%',
+                      background: '#fff8e1',
+                      border: '1px solid #ffe0a3',
+                      borderRadius: 8,
+                      padding: '8px 10px',
+                      color: '#6d4c00',
+                      fontSize: 12,
+                    }}>
+                      {(s.consistency || []).join(' ')}
+                    </div>
+                  )}
 
                   {/* Action */}
                   <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
@@ -169,7 +194,6 @@ export default function AdminProgressPage() {
             })}
           </div>
         )}
-      </div>
-    </div>
+    </AdminPage>
   );
 }

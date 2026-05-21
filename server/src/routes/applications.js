@@ -8,6 +8,19 @@ const { sendNewApplicationAlert, sendWelcomeEmail, sendRejectionEmail } = requir
 const prisma = new PrismaClient();
 const router = express.Router();
 
+async function recordEmailLog({ kind, recipient, studentId, result }) {
+  await prisma.emailLog.create({
+    data: {
+      kind,
+      recipient,
+      studentId: studentId || null,
+      providerId: result?.id || null,
+      status: result?.ok ? 'sent' : (result?.skipped ? 'skipped' : 'error'),
+      error: result?.error || result?.reason || '',
+    },
+  }).catch(() => null);
+}
+
 // POST /api/applications  — public, no auth required
 router.post('/', async (req, res) => {
   const { studentName, dob, gradeLevel, parentName, parentEmail, phone, notes,
@@ -167,12 +180,18 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
   const loginUrl = `${process.env.CORS_ORIGIN || 'https://genesisideas.school'}/parent/login`;
 
   // Auto-send welcome email with credentials
-  sendWelcomeEmail({
+  const welcomeResult = await sendWelcomeEmail({
     parentEmail: app.parentEmail,
     studentName: app.studentName,
     tempPassword,
     loginUrl,
     studentCode,
+  });
+  await recordEmailLog({
+    kind: 'welcome_parent_login',
+    recipient: app.parentEmail,
+    studentId: student.id,
+    result: welcomeResult,
   });
 
   res.json({

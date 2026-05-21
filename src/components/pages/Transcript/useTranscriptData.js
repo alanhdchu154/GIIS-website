@@ -11,7 +11,7 @@ function authHeaders(authToken) {
   return {};
 }
 
-export function useTranscriptData({ studentId, authToken, canEdit, canSave }) {
+export function useTranscriptData({ studentId, authToken, canEdit, canSave, loadUrl = null }) {
   const hasRemoteAccess = Boolean(studentId);
 
   const [profile, setProfile] = useState(null);
@@ -33,7 +33,7 @@ export function useTranscriptData({ studentId, authToken, canEdit, canSave }) {
     (async () => {
       setRemoteLoadError(null);
       try {
-        const r = await fetch(`${API_BASE}/api/students/${studentId}`, {
+        const r = await fetch(loadUrl || `${API_BASE}/api/students/${studentId}`, {
           credentials: 'include',
           headers: authHeaders(authToken),
         });
@@ -62,13 +62,14 @@ export function useTranscriptData({ studentId, authToken, canEdit, canSave }) {
         (s.semesters || []).forEach((sem) => {
           initials[sem.key] = courseApiToGradeRows(sem.courseRows);
         });
+        semesterRowsRef.current = initials;
         setSemesterInitialRows(initials);
       } catch (e) {
         if (!cancelled) setRemoteLoadError(e.message || 'Failed to load');
       }
     })();
     return () => { cancelled = true; };
-  }, [hasRemoteAccess, studentId, authToken]);
+  }, [hasRemoteAccess, studentId, authToken, loadUrl]);
 
   useEffect(() => {
     const total = Object.values(semesterGPAs).reduce(

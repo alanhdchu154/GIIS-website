@@ -18,6 +18,8 @@
     "email:weekly-report": "node scripts/send-weekly-report.js",
     "email:weekly-report:dry-run": "node scripts/send-weekly-report.js --dry-run",
     "smoke:student-lifecycle": "node scripts/smoke-student-lifecycle.js",
+    "audit:learn-completions": "node scripts/repair-learn-completions-from-transcripts.js",
+    "repair:learn-completions": "node scripts/repair-learn-completions-from-transcripts.js --apply",
     "postinstall": "node scripts/prisma-env.cjs generate",
     "test": "jest"
   },

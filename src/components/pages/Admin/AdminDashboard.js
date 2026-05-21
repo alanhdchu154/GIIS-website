@@ -19,6 +19,30 @@ const STATUS_BADGE = {
 
 const EMPTY_FORM = { name: '', email: '', password: '', parentEmail: '', birthDate: '', graduationDate: '', entryDate: '' };
 
+const pageStyle = {
+  minHeight: '100vh',
+  background: '#f4f6fa',
+  fontFamily: 'Inter, sans-serif',
+  padding: '24px 28px 80px',
+};
+
+const shellStyle = { maxWidth: 1240, margin: '0 auto' };
+const cardStyle = {
+  background: '#fff',
+  border: '1px solid #e3e8f2',
+  borderRadius: 8,
+  boxShadow: '0 10px 28px rgba(26,45,90,0.06)',
+};
+
+const ADMIN_NAV = [
+  { to: '/admin/progress', en: 'Progress', zh: '学习进度' },
+  { to: '/admin/documents', en: 'Documents', zh: '正式文件' },
+  { to: '/admin/courses', en: 'Courses', zh: '课程目录' },
+  { to: '/admin/email-logs', en: 'Email Logs', zh: '邮件记录' },
+  { to: '/admin/subscriptions', en: 'Billing', zh: '订阅' },
+  { to: '/admin/applications', en: 'Applications', zh: '申请' },
+];
+
 export default function AdminDashboard({ language }) {
   const isEn = language === 'en';
   const lang = isEn ? 'en' : 'zh';
@@ -116,34 +140,59 @@ export default function AdminDashboard({ language }) {
 
   if (!session) return null;
 
+  const counts = students.reduce((acc, student) => {
+    const status = getStudentStatus(student);
+    acc[status] = (acc[status] || 0) + 1;
+    if (!student.loginEmail) acc.noLogin += 1;
+    if (!student.parentGuardian && !student.parentEmail) acc.missingGuardian += 1;
+    return acc;
+  }, { enrolled: 0, graduated: 0, withdrawn: 0, noLogin: 0, missingGuardian: 0 });
+
   return (
-    <div className="container py-4">
+    <div style={pageStyle}>
+      <div style={shellStyle}>
       {/* Header */}
-      <div className="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+      <div className="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
         <div>
-          <h1 className="h4 mb-0">{isEn ? 'Students' : '学生列表'}</h1>
+          <p className="small fw-bold text-uppercase mb-1" style={{ color: '#2b3d6d', letterSpacing: 1.4 }}>Admin</p>
+          <h1 className="h3 mb-1">{isEn ? 'School Operations' : '学校营运后台'}</h1>
           <p className="text-muted small mb-0 mt-1">
             {isEn
-              ? 'Roster, profiles, and grade transcripts. Open a student to edit.'
-              : '学生列表、个资与成绩单。点击学生即可编辑。'}
+              ? 'Roster, records, billing, and parent-facing delivery status.'
+              : '学生名册、正式记录、收费与家长通知状态。'}
           </p>
         </div>
-        <div>
-          <Link to="/admin/progress" className="btn btn-outline-success btn-sm me-2">
-            {isEn ? 'Progress' : '学习进度'}
+        <div className="d-flex flex-wrap justify-content-end gap-2">
+          <button type="button" className="btn btn-primary btn-sm" onClick={openModal}>
+            {isEn ? '+ New student' : '＋ 新增学生'}
+          </button>
+          <Link to="/admin/progress" className="btn btn-outline-primary btn-sm">
+            {isEn ? 'Review progress' : '查看进度'}
           </Link>
-          <Link to="/admin/subscriptions" className="btn btn-outline-primary btn-sm me-2">
-            {isEn ? 'Subscriptions' : '订阅'}
-          </Link>
-          <Link to="/admin/applications" className="btn btn-outline-primary btn-sm me-2">
+          <Link to="/admin/applications" className="btn btn-outline-primary btn-sm">
             {isEn ? 'Applications' : '申请'}
-          </Link>
-          <Link to="/school-profile" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm me-2">
-            {isEn ? 'School Profile' : '学校简介'}
           </Link>
           <button
             type="button"
-            className="btn btn-outline-warning btn-sm me-2"
+            className="btn btn-outline-success btn-sm"
+            title="Send weekly progress digest to all parents with active subscriptions"
+            onClick={async () => {
+              if (!window.confirm('Send weekly progress email to all active parents now?')) return;
+              try {
+                const r = await fetch(`${API_BASE}/api/admin/weekly-report`, { method: 'POST', credentials: 'include' });
+                const d = await r.json();
+                if (!r.ok) throw new Error(d.error || 'Failed');
+                alert(`Weekly report sent: ${d.sent} emails sent, ${d.skipped} skipped.`);
+              } catch (e) {
+                alert(`Error: ${e.message}`);
+              }
+            }}
+          >
+            {isEn ? 'Send weekly report' : '发送周报'}
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-warning btn-sm"
             title={isEn ? 'End-to-end Stripe payment smoke test ($1 charged to your card, refundable)' : '端到端 Stripe 支付测试（刷你卡 $1，可退款）'}
             onClick={async () => {
               try {
@@ -162,40 +211,50 @@ export default function AdminDashboard({ language }) {
           >
             {isEn ? 'Stripe $1 test' : 'Stripe $1 测试'}
           </button>
-          <button
-            type="button"
-            className="btn btn-outline-success btn-sm me-2"
-            title="Send weekly progress digest to all parents with active subscriptions"
-            onClick={async () => {
-              if (!window.confirm('Send weekly progress email to all active parents now?')) return;
-              try {
-                const r = await fetch(`${API_BASE}/api/admin/weekly-report`, { method: 'POST', credentials: 'include' });
-                const d = await r.json();
-                if (!r.ok) throw new Error(d.error || 'Failed');
-                alert(`Weekly report sent: ${d.sent} emails sent, ${d.skipped} skipped.`);
-              } catch (e) {
-                alert(`Error: ${e.message}`);
-              }
-            }}
-          >
-            📧 Weekly report
-          </button>
-          <button type="button" className="btn btn-outline-secondary btn-sm me-2" onClick={logout}>
+          <button type="button" className="btn btn-outline-secondary btn-sm" onClick={logout}>
             {isEn ? 'Log out' : '登出'}
           </button>
-          <Link to="/" className="btn btn-link btn-sm">{isEn ? 'Site home' : '回到网站'}</Link>
         </div>
+      </div>
+
+      <div className="d-flex flex-wrap gap-2 mb-3">
+        {ADMIN_NAV.map((item) => (
+          <Link key={item.to} to={item.to} className="btn btn-sm btn-light border fw-semibold">
+            {item[lang]}
+          </Link>
+        ))}
+        <Link to="/school-profile" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-light border fw-semibold">
+          {isEn ? 'School Profile' : '学校简介'}
+        </Link>
+        <Link to="/" className="btn btn-sm btn-link">{isEn ? 'Site home' : '回到网站'}</Link>
       </div>
 
       {err && <div className="alert alert-warning py-2">{err}</div>}
 
-      <div className="d-flex align-items-center gap-2 mb-3 flex-wrap">
-        <button type="button" className="btn btn-primary" onClick={openModal}>
-          {isEn ? '+ New student' : '＋ 新增学生'}
-        </button>
+      <div className="row g-3 mb-3">
+        {[
+          { label: isEn ? 'Enrolled' : '在籍', value: counts.enrolled, tone: '#1b5e20' },
+          { label: isEn ? 'Graduated' : '毕业', value: counts.graduated, tone: '#0d47a1' },
+          { label: isEn ? 'No Login' : '未设登入', value: counts.noLogin, tone: counts.noLogin ? '#b71c1c' : '#64748b' },
+          { label: isEn ? 'Missing Guardian' : '缺监护资料', value: counts.missingGuardian, tone: counts.missingGuardian ? '#b71c1c' : '#64748b' },
+        ].map((metric) => (
+          <div className="col-6 col-lg-3" key={metric.label}>
+            <div style={{ ...cardStyle, padding: '14px 16px' }}>
+              <div className="small text-muted fw-bold text-uppercase" style={{ letterSpacing: 0.8 }}>{metric.label}</div>
+              <div className="h3 mb-0 fw-bold" style={{ color: metric.tone }}>{metric.value}</div>
+            </div>
+          </div>
+        ))}
+      </div>
 
+      <div style={{ ...cardStyle, padding: 14, marginBottom: 14 }}>
+        <div className="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+          <div>
+            <h2 className="h6 mb-1">{isEn ? 'Student Roster' : '学生名册'}</h2>
+            <p className="small text-muted mb-0">{isEn ? 'Open a record to manage accounts, courses, transcript, and diploma status.' : '进入学生记录即可管理帐号、选课、成绩单与毕业状态。'}</p>
+          </div>
         {/* Status filter tabs */}
-        <div className="btn-group ms-2" role="group">
+        <div className="btn-group" role="group">
           {[
             { key: 'all',      label: { en: 'All',      zh: '全部' } },
             { key: 'enrolled', label: { en: 'Enrolled', zh: '在籍' } },
@@ -217,6 +276,7 @@ export default function AdminDashboard({ language }) {
             );
           })}
         </div>
+        </div>
       </div>
 
       {loading ? (
@@ -226,20 +286,14 @@ export default function AdminDashboard({ language }) {
           ? students
           : students.filter((s) => getStudentStatus(s) === statusFilter);
         return (
-          <div className="table-responsive shadow-sm rounded border bg-white">
-            <table className="table table-sm table-hover align-middle mb-0">
-              <thead className="table-light">
+          <div className="table-responsive" style={cardStyle}>
+            <table className="table table-hover align-middle mb-0">
+              <thead style={{ background: '#f8fafc' }}>
                 <tr>
                   <th>{isEn ? 'Name' : '姓名'}</th>
                   <th>{isEn ? 'Status' : '状态'}</th>
-                  <th>{isEn ? 'ID' : '学号'}</th>
                   <th>{isEn ? 'Grade' : '年级'}</th>
-                  <th>{isEn ? 'Login email' : '登入信箱'}</th>
-                  <th>{isEn ? 'Birth' : '生日'}</th>
-                  <th>{isEn ? 'Location' : '地点'}</th>
-                  <th>{isEn ? 'Guardian' : '监护人'}</th>
-                  <th className="text-center">{isEn ? 'Semesters' : '学期数'}</th>
-                  <th>{isEn ? 'Updated' : '更新时间'}</th>
+                  <th>{isEn ? 'Account' : '帐号'}</th>
                   <th />
                 </tr>
               </thead>
@@ -249,31 +303,29 @@ export default function AdminDashboard({ language }) {
                   const badge = STATUS_BADGE[status];
                   return (
                     <tr key={s.id}>
-                      <td><strong>{s.name || '(unnamed)'}</strong></td>
+                      <td>
+                        <strong>{s.name || '(unnamed)'}</strong>
+                        <div className="text-muted small">
+                          <span style={{ fontFamily: 'monospace' }}>{s.studentCode || 'No ID'}</span>
+                          {s.parentGuardian ? ` · ${s.parentGuardian}` : ''}
+                        </div>
+                      </td>
                       <td>
                         <span className="badge" style={{ backgroundColor: badge.bg }}>
                           {badge.label[lang]}
                         </span>
                       </td>
                       <td className="text-nowrap">
-                        <span className="badge bg-secondary" style={{ fontFamily: 'monospace' }}>
-                          {s.studentCode || '—'}
-                        </span>
-                      </td>
-                      <td className="text-nowrap">
                         {s.currentGrade ? <span className="badge bg-primary">Grade {s.currentGrade}</span> : '—'}
                       </td>
-                      <td>{s.loginEmail || '—'}</td>
-                      <td>{s.birthDate || '—'}</td>
-                      <td>{[s.city, s.province].filter(Boolean).join(', ') || '—'}</td>
-                      <td className="small">{s.parentGuardian || '—'}</td>
-                      <td className="text-center">{s.semesterCount ?? 0}</td>
                       <td className="small text-nowrap">
-                        {s.updatedAt ? new Date(s.updatedAt).toLocaleString() : '—'}
+                        {s.loginEmail
+                          ? <span className="badge text-bg-light border">{isEn ? 'Login ready' : '可登入'}</span>
+                          : <span className="badge text-bg-danger">{isEn ? 'No login' : '未设帐号'}</span>}
                       </td>
                       <td className="text-end text-nowrap">
-                        <Link className="btn btn-sm btn-outline-primary me-1" to={`/admin/transcript/${s.id}`}>
-                          {isEn ? 'View & edit' : '检视／编辑'}
+                        <Link className="btn btn-sm btn-primary me-1" to={`/admin/transcript/${s.id}`}>
+                          {isEn ? 'Open' : '开启'}
                         </Link>
                         <Link
                           className="btn btn-sm btn-outline-secondary me-1"
@@ -298,7 +350,7 @@ export default function AdminDashboard({ language }) {
                 })}
                 {visible.length === 0 && (
                   <tr>
-                    <td colSpan={11} className="text-muted text-center py-4">
+                    <td colSpan={5} className="text-muted text-center py-4">
                       {statusFilter === 'all'
                         ? (isEn ? 'No students yet — create one above.' : '目前没有学生资料，请使用上方按钮新增。')
                         : (isEn ? 'No students in this category.' : '此分类没有学生。')}
@@ -433,6 +485,7 @@ export default function AdminDashboard({ language }) {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }

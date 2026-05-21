@@ -19,6 +19,9 @@ const AdminDashboard = lazy(() => import('./components/pages/Admin/AdminDashboar
 const AdminTranscriptPage = lazy(() => import('./components/pages/Admin/AdminTranscriptPage'));
 const AdminProgressPage = lazy(() => import('./components/pages/Admin/AdminProgressPage'));
 const AdminAuditTrailPage = lazy(() => import('./components/pages/Admin/AdminAuditTrailPage'));
+const AdminDocumentsPage = lazy(() => import('./components/pages/Admin/AdminDocumentsPage'));
+const AdminCoursesPage = lazy(() => import('./components/pages/Admin/AdminCoursesPage'));
+const AdminEmailLogsPage = lazy(() => import('./components/pages/Admin/AdminEmailLogsPage'));
 const CalendarPage = lazy(() => import('./components/pages/Calendar/CalendarPage'));
 const DiplomaPage = lazy(() => import('./components/pages/Diploma/DiplomaPage'));
 const SchoolProfilePage = lazy(() => import('./components/pages/SchoolProfile/SchoolProfilePage'));
@@ -51,6 +54,7 @@ const PricingPage = lazy(() => import('./components/pages/Pricing/PricingPage'))
 const ParentDashboardDemo = lazy(() => import('./components/pages/Parent/ParentDashboardDemo'));
 const ParentLogin = lazy(() => import('./components/pages/Parent/ParentLogin'));
 const ParentDashboard = lazy(() => import('./components/pages/Parent/ParentDashboard'));
+const ParentTranscriptPage = lazy(() => import('./components/pages/Parent/ParentTranscriptPage'));
 const AssignmentQueue = lazy(() => import('./components/pages/Admin/AssignmentQueue'));
 const ApplicationsQueue = lazy(() => import('./components/pages/Admin/ApplicationsQueue'));
 const AdminSubscriptionsPage = lazy(() => import('./components/pages/Admin/AdminSubscriptionsPage'));
@@ -130,6 +134,9 @@ function App() {
          <Route path="/admin" element={<AdminDashboard language={language} />} />
          <Route path="/admin/transcript/:studentId" element={<AdminTranscriptPage language={language} />} />
          <Route path="/admin/progress" element={<AdminProgressPage />} />
+         <Route path="/admin/documents" element={<AdminDocumentsPage />} />
+         <Route path="/admin/courses" element={<AdminCoursesPage />} />
+         <Route path="/admin/email-logs" element={<AdminEmailLogsPage />} />
         <Route path="/admin/students/:studentId/audit-trail" element={<AdminAuditTrailPage />} />
          <Route path="/calendar" element={<CalendarPage language={language} />} />
          {/* Pathways hub */}
@@ -163,6 +170,7 @@ function App() {
          <Route path="/parent/demo" element={<ParentDashboardDemo language={language} />} />
          <Route path="/parent/login" element={<ParentLogin language={language} />} />
          <Route path="/parent/dashboard" element={<ParentDashboard language={language} />} />
+         <Route path="/parent/transcript" element={<ParentTranscriptPage language={language} />} />
          <Route path="/admin/assignments" element={<AssignmentQueue />} />
          <Route path="/admin/applications" element={<ApplicationsQueue />} />
          <Route path="/admin/subscriptions" element={<AdminSubscriptionsPage />} />

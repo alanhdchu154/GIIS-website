@@ -1,0 +1,15 @@
+# Lesson auto-cleaned after successful YouTube upload
+# This folder no longer has slides/audio/mp4 — they're regenerable
+# from script.json + build_slides.py. Don't worry, the lesson is fine.
+
+cleaned_at:    2026-05-21T14:03:51+00:00
+video_id:      aTHS1I-luJE
+url:           https://youtu.be/aTHS1I-luJE
+title:         AP Biology — Module 13: Community Ecology
+upload_status: processed
+bytes_freed:   59339204
+
+# To rebuild this lesson locally (e.g. if YouTube ever takes the video down):
+#   python3 build_slides.py
+#   python3 ../../tools/lesson-video/make_lesson.py .
+# Then delete this .cleaned file and the youtube block in script.json.

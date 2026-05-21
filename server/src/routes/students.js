@@ -76,6 +76,12 @@ function computeCurrentGrade(graduationDate, referenceDate = new Date()) {
   return grade;
 }
 
+function decimalToNumber(value) {
+  if (value == null) return 0;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : 0;
+}
+
 function serializeStudent(student) {
   if (!student) return student;
   const s = { ...student };
@@ -210,20 +216,34 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
       studentCode: true,
       name: true,
       graduationDate: true,
+      semesters: {
+        select: {
+          courseRows: {
+            select: {
+              courseName: true,
+              credits: true,
+              letterGrade: true,
+            },
+          },
+        },
+      },
       enrollments: {
         select: {
+          completedModules: true,
           creditEarned: true,
-          course: { select: { credits: true } },
+          course: { select: { credits: true, _count: { select: { modules: true } } } },
+          moduleProgresses: {
+            select: { moduleOrder: true, moduleCompletedAt: true, lastActivityAt: true },
+            orderBy: { lastActivityAt: 'desc' },
+          },
           quizAttempts: {
-            select: { submittedAt: true },
+            select: { moduleOrder: true, submittedAt: true },
             orderBy: { submittedAt: 'desc' },
-            take: 1,
           },
           examAttempts: {
             where: { submittedAt: { not: null } },
-            select: { submittedAt: true },
+            select: { examType: true, submittedAt: true, passed: true },
             orderBy: { submittedAt: 'desc' },
-            take: 1,
           },
           assignments: {
             select: { updatedAt: true },
@@ -238,30 +258,81 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
   const now = new Date();
   const result = students.map((s) => {
     const enrollments = s.enrollments || [];
-    const creditsEarned = enrollments
+    const portalCreditsEarned = enrollments
       .filter((e) => e.creditEarned)
-      .reduce((sum, e) => sum + Number(e.course.credits), 0);
+      .reduce((sum, e) => sum + decimalToNumber(e.course.credits), 0);
+    const transcriptRows = (s.semesters || []).flatMap((sem) => sem.courseRows || []);
+    const officialCreditsEarned = transcriptRows
+      .filter((row) => row.courseName && row.letterGrade && decimalToNumber(row.credits) > 0)
+      .reduce((sum, row) => sum + decimalToNumber(row.credits), 0);
 
     const dates = [];
     for (const enr of enrollments) {
-      if (enr.quizAttempts[0]?.submittedAt) dates.push(new Date(enr.quizAttempts[0].submittedAt));
-      if (enr.examAttempts[0]?.submittedAt) dates.push(new Date(enr.examAttempts[0].submittedAt));
+      for (const attempt of enr.quizAttempts || []) {
+        if (attempt.submittedAt) dates.push(new Date(attempt.submittedAt));
+      }
+      for (const attempt of enr.examAttempts || []) {
+        if (attempt.submittedAt) dates.push(new Date(attempt.submittedAt));
+      }
       if (enr.assignments[0]?.updatedAt) dates.push(new Date(enr.assignments[0].updatedAt));
+      for (const progress of enr.moduleProgresses || []) {
+        if (progress.lastActivityAt) dates.push(new Date(progress.lastActivityAt));
+      }
     }
     const lastActivity = dates.length > 0 ? new Date(Math.max(...dates)) : null;
     const daysInactive = lastActivity
       ? Math.floor((now - lastActivity) / (1000 * 60 * 60 * 24))
       : null;
 
+    const totalModules = enrollments.reduce((sum, e) => sum + (e.course?._count?.modules || 0), 0);
+    const completedModules = enrollments.reduce((sum, e) => {
+      const completedFromArray = Array.isArray(e.completedModules) ? e.completedModules.length : 0;
+      const completedFromProgress = (e.moduleProgresses || []).filter((p) => p.moduleCompletedAt).length;
+      return sum + Math.max(completedFromArray, completedFromProgress);
+    }, 0);
+    const submittedQuizzes = enrollments.reduce((sum, e) => sum + (e.quizAttempts || []).length, 0);
+    const submittedExams = enrollments.reduce((sum, e) => sum + (e.examAttempts || []).length, 0);
+
+    const consistency = [];
+    if (officialCreditsEarned > 0 && enrollments.length === 0) {
+      consistency.push('Transcript has official credits but no Learn Portal enrollments.');
+    }
+    if (portalCreditsEarned > officialCreditsEarned + 0.1) {
+      consistency.push('Learn Portal earned credits are not fully posted to the official transcript.');
+    }
+    if (officialCreditsEarned > portalCreditsEarned + 3) {
+      consistency.push('Official transcript includes historical/import credits outside Learn Portal.');
+    }
+    const completedButMissingCredit = enrollments.filter((e) => {
+      const moduleCount = e.course?._count?.modules || 0;
+      const doneCount = Math.max(
+        Array.isArray(e.completedModules) ? e.completedModules.length : 0,
+        (e.moduleProgresses || []).filter((p) => p.moduleCompletedAt).length
+      );
+      const hasFinal = (e.examAttempts || []).some((a) => a.examType === 'final' && a.passed);
+      return !e.creditEarned && moduleCount > 0 && doneCount >= moduleCount && hasFinal;
+    }).length;
+    if (completedButMissingCredit > 0) {
+      consistency.push(`${completedButMissingCredit} completed Learn Portal course(s) are missing creditEarned.`);
+    }
+
     return {
       id: s.id,
       studentCode: s.studentCode,
       name: s.name,
       currentGrade: computeCurrentGrade(s.graduationDate),
-      creditsEarned,
+      creditsEarned: officialCreditsEarned,
+      officialCreditsEarned,
+      portalCreditsEarned,
       inProgress: enrollments.filter((e) => !e.creditEarned).length,
       completed: enrollments.filter((e) => e.creditEarned).length,
       totalEnrollments: enrollments.length,
+      totalModules,
+      completedModules,
+      submittedQuizzes,
+      submittedExams,
+      transcriptRows: transcriptRows.length,
+      consistency,
       lastActivity: lastActivity?.toISOString() ?? null,
       daysInactive,
     };

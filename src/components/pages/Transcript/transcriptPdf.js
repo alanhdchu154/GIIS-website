@@ -2,7 +2,7 @@ import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import logoSlogan from '../../../img/logo_slogan.png';
 import logo from '../../../img/logo_nobg.png';
-import sealImg from '../../../img/transcript_seal.jpg';
+import sealImg from '../../../img/transcript_seal_transparent.png';
 import { TRANSCRIPT_SEMESTER_KEYS } from './transcriptMappers.js';
 import { getAllSemesterStatuses, SEMESTER_STATUS } from './semesterStatus.js';
 

@@ -11,6 +11,11 @@ const CREDITS_REQUIRED = 24;
 const currentYear = getCurrentAcademicYear();
 const CEREMONY_DATE = currentYear.graduation?.ceremonyDate ?? null;
 const SPRING_END = currentYear.spring?.ends ?? null;
+const adminCardStyle = {
+  width: '100%',
+  borderColor: '#e2e8f0',
+  boxShadow: '0 10px 28px rgba(26, 45, 90, 0.06)',
+};
 
 function LoginSection({ studentId, isEn }) {
   const [loginEmail, setLoginEmail] = useState(null);
@@ -56,7 +61,7 @@ function LoginSection({ studentId, isEn }) {
   }
 
   return (
-    <div className="border rounded p-3 mb-3 bg-white" style={{ maxWidth: '520px' }}>
+    <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-1">
         <span className="fw-semibold small">{isEn ? 'Login Account' : '登入帐号'}</span>
         <button className="btn btn-sm btn-outline-secondary" onClick={() => { setShowForm((v) => !v); setMsg(''); }}>
@@ -184,7 +189,7 @@ function ParentEmailSection({ studentId, isEn }) {
   }
 
   return (
-    <div className="border rounded p-3 mb-3 bg-white" style={{ maxWidth: '520px' }}>
+    <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-1">
         <span className="fw-semibold small">{isEn ? 'Parent Portal Email' : '家长 Portal 邮箱'}</span>
         <button className="btn btn-sm btn-outline-secondary" onClick={() => { setEditing((v) => !v); setDraft(parentEmail || ''); setMsg(''); }}>
@@ -366,7 +371,7 @@ function EnrollmentManagerSection({ studentId, isEn }) {
   }
 
   return (
-    <div className="border rounded p-3 mb-3 bg-white" style={{ maxWidth: '820px' }}>
+    <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-2">
         <span className="fw-semibold small">{isEn ? 'Course Enrollment Manager' : '课程指派管理'}</span>
         <button className="btn btn-sm btn-outline-secondary" type="button" onClick={loadData} disabled={loading || saving}>
@@ -533,7 +538,7 @@ function GraduationSection({ studentId }) {
   const fmtDate = (d) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '—';
 
   if (!student) return (
-    <div className="border rounded p-3 mb-3 bg-white" style={{ maxWidth: '520px' }}>
+    <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <p className="small text-muted mb-0">Loading graduation info…</p>
     </div>
   );
@@ -547,7 +552,7 @@ function GraduationSection({ studentId }) {
   const pct = Math.min(100, (credits / CREDITS_REQUIRED) * 100);
 
   return (
-    <div className="border rounded p-3 mb-3 bg-white" style={{ maxWidth: '520px' }}>
+    <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-2">
         <span className="fw-semibold small">Graduation Eligibility</span>
         {isGraduated && (
@@ -627,53 +632,73 @@ export default function AdminTranscriptPage({ language }) {
   }
 
   return (
-    <div id="content">
+    <div id="content" style={{ background: '#f4f6fa', minHeight: '100vh' }}>
       <Helmet>
         <title>Admin — Transcript | Genesis of Ideas International School</title>
       </Helmet>
-      <div className="container-fluid py-2">
-        <p className="mb-2 d-flex gap-3 flex-wrap align-items-center">
-          <Link to="/admin">{copy.back}</Link>
-          {studentId ? (
-            <Link to={`/admin/students/${studentId}/audit-trail`} className="small">
-              {isEn ? 'View activity audit trail →' : '查看学习活动审计 →'}
-            </Link>
-          ) : null}
-        </p>
-        <div className="d-flex flex-wrap gap-2 align-items-center mb-2">
-          <span className="small text-muted">{copy.modeLabel}</span>
-          <div className="btn-group" role="group" aria-label="Transcript mode">
-            <button
-              type="button"
-              className={`btn btn-sm ${mode === 'view' ? 'btn-primary' : 'btn-outline-primary'}`}
-              onClick={() => setMode('view')}
-            >
-              {copy.view}
-            </button>
-            <button
-              type="button"
-              className={`btn btn-sm ${mode === 'edit' ? 'btn-primary' : 'btn-outline-primary'}`}
-              onClick={() => setMode('edit')}
-            >
-              {copy.edit}
-            </button>
+      <div className="container-fluid py-3">
+        <div className="mx-auto" style={{ maxWidth: '1480px' }}>
+          <div
+            className="border rounded bg-white p-3 mb-3 d-flex flex-wrap justify-content-between align-items-center gap-3"
+            style={{ borderColor: '#e2e8f0', boxShadow: '0 10px 28px rgba(26, 45, 90, 0.06)' }}
+          >
+            <div>
+              <div className="d-flex gap-3 flex-wrap align-items-center mb-1">
+                <Link to="/admin" className="small fw-semibold">{copy.back}</Link>
+                {studentId ? (
+                  <Link to={`/admin/students/${studentId}/audit-trail`} className="small fw-semibold">
+                    {isEn ? 'Activity audit trail →' : '学习活动审计 →'}
+                  </Link>
+                ) : null}
+              </div>
+              <h1 className="h5 mb-0">{isEn ? 'Admin Transcript Workspace' : '成绩单管理工作区'}</h1>
+            </div>
+
+            <div className="d-flex flex-wrap gap-2 align-items-center justify-content-end">
+              <span className="small text-muted">{copy.modeLabel}</span>
+              <div className="btn-group" role="group" aria-label="Transcript mode">
+                <button
+                  type="button"
+                  className={`btn btn-sm ${mode === 'view' ? 'btn-primary' : 'btn-outline-primary'}`}
+                  onClick={() => setMode('view')}
+                >
+                  {copy.view}
+                </button>
+                <button
+                  type="button"
+                  className={`btn btn-sm ${mode === 'edit' ? 'btn-primary' : 'btn-outline-primary'}`}
+                  onClick={() => setMode('edit')}
+                >
+                  {copy.edit}
+                </button>
+              </div>
+              <span className="small text-muted" style={{ maxWidth: 260 }}>
+                {mode === 'view' ? copy.hintView : copy.hintEdit}
+              </span>
+            </div>
           </div>
-          <span className="small text-muted">
-            {mode === 'view' ? copy.hintView : copy.hintEdit}
-          </span>
+
+          <div className="row g-3 align-items-start mb-3">
+            <div className="col-12 col-xl-4">
+              <div className="d-grid gap-3">
+                <LoginSection studentId={studentId} isEn={isEn} />
+                <ParentEmailSection studentId={studentId} isEn={isEn} />
+                <GraduationSection studentId={studentId} />
+              </div>
+            </div>
+            <div className="col-12 col-xl-8">
+              <EnrollmentManagerSection studentId={studentId} isEn={isEn} />
+            </div>
+          </div>
+
+          <TranscriptContent
+            language={language}
+            viewerRole="admin"
+            studentId={studentId}
+            mode={mode}
+            adminWorkspace
+          />
         </div>
-
-        <LoginSection studentId={studentId} isEn={isEn} />
-        <ParentEmailSection studentId={studentId} isEn={isEn} />
-        <EnrollmentManagerSection studentId={studentId} isEn={isEn} />
-        <GraduationSection studentId={studentId} />
-
-        <TranscriptContent
-          language={language}
-          viewerRole="admin"
-          studentId={studentId}
-          mode={mode}
-        />
       </div>
     </div>
   );

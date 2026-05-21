@@ -9,6 +9,7 @@ const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 const { QRCodeSVG } = require('qrcode.react');
 const { chromium } = require('playwright');
+const { PrismaClient } = require('@prisma/client');
 const { computeRowGpa } = require('../src/lib/gpa');
 const { sendGraduationDocumentPackage, ADMIN_EMAIL } = require('../src/lib/mailer');
 
@@ -17,23 +18,23 @@ const SEED_PATH = path.join(ROOT, 'server', 'prisma', 'seed.js');
 const OUT_DIR = path.join(ROOT, 'server', 'tmp', 'graduation-documents');
 const VERIFY_BASE = 'https://genesisideas.school/verify';
 
-const NAVY = '#1a2d5a';
+const NAVY = '#2b3d6d';
 const GOLD = '#b8962e';
-const HEAD_BG = '#e6edf7';
-const ALT_ROW = '#f4f7fc';
+const HEAD_BG = '#dce6f1';
+const ALT_ROW = '#f5f8fc';
 
 const ASSETS = {
   logo: path.join(ROOT, 'src', 'img', 'logo_nobg.png'),
   logoSlogan: path.join(ROOT, 'src', 'img', 'logo_slogan.png'),
-  seal: path.join(ROOT, 'src', 'img', 'transcript_seal.jpg'),
+  seal: path.join(ROOT, 'src', 'img', 'transcript_seal_transparent.png'),
 };
 
 const SENIORS = [
-  { code: '26-001', name: 'Ruwen Li', email: 'ruwen.li@genesisideas.school', semestersVar: 'ruwenLiSemesters', transcriptDate: '2026-03-02', graduationDate: '2026-06-30' },
-  { code: '26-002', name: 'Tao Zhang', email: 'tao.zhang@genesisideas.school', semestersVar: 'taoZhangSemesters', transcriptDate: '2026-04-23', graduationDate: '2026-06-30' },
-  { code: '26-003', name: 'Baoyi Lu', email: 'baoyi.lu@genesisideas.school', semestersVar: 'baoyiLuSemesters', transcriptDate: '2026-02-06', graduationDate: '2026-06-30' },
-  { code: '26-004', name: 'Yunfan Yang', email: 'yunfan.yang@genesisideas.school', semestersVar: 'yunfanYangSemesters', transcriptDate: '2026-02-06', graduationDate: '2026-06-30' },
-  { code: '26-005', name: 'Hanxi Xiao', email: 'hanxi.xiao@genesisideas.school', semestersVar: 'hanxiXiaoSemesters', transcriptDate: '2026-05-12', graduationDate: '2026-06-30' },
+  { code: '26-001', name: 'Ruwen Li', email: 'ruwen.li@genesisideas.school', gender: 'Female', birthDate: '2006-11-27', parentGuardian: 'Xiaojun Wu', address: "Unit 1802, Building 12, Baopo Apartment, Jing'an District", city: 'Shanghai', province: 'Shanghai', zipCode: '200000', entryDate: '2022-08-15', semestersVar: 'ruwenLiSemesters', transcriptDate: '2026-03-02', graduationDate: '2026-06-30' },
+  { code: '26-002', name: 'Tao Zhang', email: 'tao.zhang@genesisideas.school', gender: 'Male', birthDate: '2007-02-18', parentGuardian: 'Xiaoying Zhang', address: 'Room 601, No. 72, Lane 99, Jinhe Road', city: 'Shanghai', province: 'Shanghai', zipCode: '200120', entryDate: '2022-08-15', semestersVar: 'taoZhangSemesters', transcriptDate: '2026-04-23', graduationDate: '2026-06-30' },
+  { code: '26-003', name: 'Baoyi Lu', email: 'baoyi.lu@genesisideas.school', gender: 'Male', birthDate: '2007-12-25', parentGuardian: 'Kaiming Lu', address: 'No. 88 Huasheng Road', city: 'Cixi', province: 'Zhejiang', zipCode: '315300', entryDate: '2022-08-15', semestersVar: 'baoyiLuSemesters', transcriptDate: '2026-02-06', graduationDate: '2026-06-30' },
+  { code: '26-004', name: 'Yunfan Yang', email: 'yunfan.yang@genesisideas.school', gender: 'Female', birthDate: '2007-11-01', parentGuardian: 'Chunxiao Lu', address: 'Room 702, Building 9, Poly City Light, Liangxi District', city: 'Wuxi', province: 'Jiangsu', zipCode: '214000', entryDate: '2022-08-23', semestersVar: 'yunfanYangSemesters', transcriptDate: '2026-02-06', graduationDate: '2026-06-30' },
+  { code: '26-005', name: 'Hanxi Xiao', email: 'hanxi.xiao@genesisideas.school', gender: 'Female', birthDate: '2007-03-21', parentGuardian: 'Shuying Zhao', address: 'Building 10, Unit 702, Zhongbai Hubin No. 1, Zhujiajiao Town', city: 'Shanghai', province: 'Shanghai', zipCode: '201713', entryDate: '2022-08-15', semestersVar: 'hanxiXiaoSemesters', transcriptDate: '2026-05-12', graduationDate: '2026-06-30' },
 ];
 
 function assetDataUri(filePath) {
@@ -67,6 +68,10 @@ function dateDisplay(date) {
   return d.toLocaleDateString('en-US', { timeZone: 'UTC', month: '2-digit', day: '2-digit', year: 'numeric' });
 }
 
+function normalizeDateForPdf(date) {
+  return dateDisplay(date);
+}
+
 function ordinal(n) {
   const suffix = n % 10 === 1 && n !== 11 ? 'st' : n % 10 === 2 && n !== 12 ? 'nd' : n % 10 === 3 && n !== 13 ? 'rd' : 'th';
   return `${n}${suffix}`;
@@ -75,6 +80,50 @@ function ordinal(n) {
 function diplomaDate(date) {
   const d = new Date(`${String(date).slice(0, 10)}T00:00:00Z`);
   return `${ordinal(d.getUTCDate())} day of ${d.toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long' })}, A.D. ${d.getUTCFullYear()}`;
+}
+
+function parseCc(value) {
+  if (!value) return ADMIN_EMAIL;
+  const entries = String(value).split(',').map((item) => item.trim()).filter(Boolean);
+  return entries.length > 1 ? entries : entries[0] || ADMIN_EMAIL;
+}
+
+function recipientList(value) {
+  if (!value) return [];
+  return Array.isArray(value) ? value : [value];
+}
+
+async function recordIssueLog({ prisma, student, principalEmail, cc, result }) {
+  if (!prisma || !student || !result?.ok) return;
+  const dbStudent = await prisma.student.findUnique({
+    where: { studentCode: student.code },
+    select: { id: true },
+  }).catch(() => null);
+  const studentId = dbStudent?.id || null;
+  const providerId = result.id || null;
+  const recipient = [principalEmail, ...recipientList(cc)].filter(Boolean).join(', ');
+  await prisma.emailLog.create({
+    data: {
+      kind: 'official_graduation_documents',
+      recipient,
+      studentId,
+      providerId,
+      dedupeKey: providerId ? `official_graduation_documents:${providerId}` : undefined,
+      status: 'sent',
+    },
+  }).catch((err) => {
+    console.warn(`[graduation-documents] email log failed ${student.code}: ${err.message}`);
+  });
+  await prisma.auditLog.create({
+    data: {
+      action: 'official_documents_sent',
+      studentId,
+      actorRole: 'admin',
+      actorEmail: process.env.GRADUATION_DOCUMENT_ACTOR || 'script:send-graduation-document-packages',
+    },
+  }).catch((err) => {
+    console.warn(`[graduation-documents] audit log failed ${student.code}: ${err.message}`);
+  });
 }
 
 function loadSeedSemesters() {
@@ -217,10 +266,9 @@ function transcriptHtml(student, semesters) {
     .record .kicker { font-size: 6.5pt; color: #666; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5mm; }
     .record h1 { margin: 0 0 1.5mm; font-size: 16pt; line-height: 1.1; color: #1a1a2e; }
     .record .meta { font-size: 7pt; color: #444; }
-    .badge { display: inline-block; border: 2px solid ${GOLD}; color: ${NAVY}; font: 700 7.5pt Arial, sans-serif; padding: 2px 8px; letter-spacing: 1.5px; margin-bottom: 2mm; }
+    .badge { display: inline-block; border: 2px solid ${NAVY}; color: ${NAVY}; font: 700 7.5pt "Times New Roman", Times, serif; padding: 2px 6px; letter-spacing: 0.5px; margin-bottom: 2mm; }
     .rightmeta { font: 6.5pt Arial, sans-serif; color: #444; line-height: 1.6; text-align: right; }
-    .rule1 { border-top: 2.5px solid ${NAVY}; margin-top: 0; }
-    .rule2 { border-top: 1px solid rgba(184,150,46,0.5); margin-bottom: 2mm; }
+    .rule1 { border-top: 2px solid ${NAVY}; margin-top: 0; margin-bottom: 2mm; }
     .info { width: 100%; border-collapse: collapse; table-layout: fixed; margin-bottom: 2mm; }
     .info td { border: 0.5px solid #999; padding: 0.8mm 1.5mm; font: 6.5pt "Times New Roman", Times, serif; vertical-align: top; width: 25%; }
     .columns { position: relative; display: grid; grid-template-columns: 49% 2% 49%; }
@@ -238,9 +286,9 @@ function transcriptHtml(student, semesters) {
     .scale td { border: none; padding: 0; vertical-align: top; }
     .small-title { font: 700 5.5pt "Times New Roman", Times, serif; background: ${HEAD_BG}; border: 0.5px solid #999; border-bottom: none; padding: 1px 3px; }
     .scale table td { border: 0.5px solid #ccc; padding: 0.5px 2px; font-size: 5.5pt; text-align: center; }
-    .signature-block { width: 100%; border-collapse: collapse; margin-top: 4mm; }
+    .signature-block { width: 100%; border-collapse: collapse; margin-top: 3mm; margin-bottom: 1mm; }
     .signature-block td { border: none; padding: 0; }
-    .seal { width: 72px; height: 72px; object-fit: contain; display: block; margin: 0 auto; filter: grayscale(100%) opacity(0.42) contrast(110%) brightness(130%) drop-shadow(1.5px 1.5px 0px rgba(255,255,255,0.85)) drop-shadow(-1px -1px 1px rgba(60,60,90,0.55)); }
+    .seal { width: 62px; height: 62px; object-fit: contain; display: block; margin: 0 auto; filter: saturate(115%) contrast(106%) brightness(103%) drop-shadow(0 1px 2px rgba(120,90,20,0.22)); }
     .sig-title { font-size: 8pt; margin-bottom: 1px; }
     .sig-line { border-bottom: 1px solid #333; margin-bottom: 1mm; height: 10px; }
     .sig-note { font-size: 7pt; color: #333; margin-bottom: 3mm; text-align: right; }
@@ -265,16 +313,16 @@ function transcriptHtml(student, semesters) {
         <div class="rightmeta">FL School Code: 650<br>President &amp; Principal: Shiyu Zhang, Ph.D.<br>admissions@genesisideas.school</div>
       </div>
     </div>
-    <div class="rule1"></div><div class="rule2"></div>
+    <div class="rule1"></div>
     <table class="info">
       <tr>
-        <td>Name: ${escapeHtml(student.name)}</td><td>Birth Date: —</td><td>Gender: —</td><td>Parent/Guardian: —</td>
+        <td>Name: ${escapeHtml(student.name)}</td><td>Birth Date: ${escapeHtml(normalizeDateForPdf(student.birthDate))}</td><td>Gender: ${escapeHtml(student.gender || '—')}</td><td>Parent/Guardian: ${escapeHtml(student.parentGuardian || '—')}</td>
       </tr>
       <tr>
-        <td>Address: —</td><td>City: —</td><td>Province: —</td><td>Zip Code: —</td>
+        <td>Address: ${escapeHtml(student.address || '—')}</td><td>City: ${escapeHtml(student.city || '—')}</td><td>Province: ${escapeHtml(student.province || '—')}</td><td>Zip Code: ${escapeHtml(student.zipCode || '—')}</td>
       </tr>
       <tr>
-        <td>Entry Date: —</td><td>Withdrawal Date: —</td><td>Graduation Date: ${dateDisplay(student.graduationDate)}</td><td>Transcript Date: ${issueDate}</td>
+        <td>Entry Date: ${escapeHtml(normalizeDateForPdf(student.entryDate))}</td><td>Withdrawal Date: —</td><td>Graduation Date: ${dateDisplay(student.graduationDate)}</td><td>Transcript Date: ${issueDate}</td>
       </tr>
     </table>
     <div class="columns">
@@ -297,9 +345,8 @@ function transcriptHtml(student, semesters) {
       </td>
     </tr></table>
     <table class="signature-block"><tr>
-      <td style="width:25%;text-align:center;"><img class="seal" src="${sealUri}" alt="Official Seal" /></td>
-      <td style="width:15%;"></td>
-      <td style="width:60%;">
+      <td style="width:18%;text-align:center;vertical-align:middle;padding:0 2mm 0 0;"><img class="seal" src="${sealUri}" alt="Official Seal" /></td>
+      <td style="width:82%;vertical-align:top;padding:0;">
         <div class="sig-title">Official(s) Certifying Transcript:</div>
         <div class="sig-line"></div>
         <div class="sig-note">Signature</div>
@@ -386,6 +433,19 @@ function schoolSealSvg(size = 160) {
     </svg>`;
 }
 
+function studentNameSvg(name) {
+  const safeName = escapeHtml(name);
+  return `
+    <svg class="name-svg" viewBox="0 0 520 82" role="img" aria-label="${safeName}" style="width:5.05in;max-width:100%;height:0.78in;display:block;margin:0 auto 2px;overflow:visible;background:transparent">
+      <defs>
+        <filter id="studentNameShadow" x="-10%" y="-10%" width="120%" height="130%">
+          <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="rgba(184,150,46,0.25)"></feDropShadow>
+        </filter>
+      </defs>
+      <text x="260" y="52" text-anchor="middle" font-family="'Great Vibes', 'Pinyon Script', cursive" font-size="58" letter-spacing="2" fill="${NAVY}" filter="url(#studentNameShadow)">${safeName}</text>
+    </svg>`;
+}
+
 function diplomaHtml(student) {
   const classYear = new Date(`${student.graduationDate}T00:00:00Z`).getUTCFullYear();
   const verifyUrl = `${VERIFY_BASE}/${student.code}`;
@@ -416,7 +476,7 @@ function diplomaHtml(student) {
     .class { font-size: 8px; color: ${GOLD}; letter-spacing: 2px; margin-top: 6px; text-transform: uppercase; font-family: "Cinzel Decorative", "Cinzel", serif; }
     .divider { width: 2px; background: linear-gradient(to bottom, transparent, ${GOLD} 15%, ${GOLD} 85%, transparent); align-self: stretch; margin: 0 .28in; }
     .known { font-size: 12px; color: #5a3e2b; font-style: italic; margin: 0 0 4px; letter-spacing: .5px; line-height: 1.4; font-family: "Cormorant Garamond", Garamond, serif; }
-    .name { font-size: 52px; color: ${NAVY}; line-height: 1.05; margin: 0 0 2px; letter-spacing: 2px; text-shadow: 0 1px 2px rgba(184,150,46,.25); font-family: "Great Vibes", "Pinyon Script", cursive; }
+    .name-svg { background: transparent !important; box-shadow: none !important; }
     .underline { display: flex; align-items: center; gap: 8px; width: 90%; justify-content: center; margin: 0 auto 8px; }
     .underline .line { flex: 1; height: 1.5px; background: linear-gradient(to right, transparent, ${NAVY}); }
     .underline .line:last-child { background: linear-gradient(to left, transparent, ${NAVY}); }
@@ -433,8 +493,8 @@ function diplomaHtml(student) {
     .sig-line { border-top: 1.5px solid ${NAVY}; padding-top: 4px; margin-top: 2px; }
     .sig-name { font-size: 11px; color: ${NAVY}; font-weight: 600; font-style: italic; font-family: "Cormorant Garamond", serif; }
     .sig-title { font-size: 8px; color: #888; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; font-family: "Cinzel", serif; }
-    .center-seal { width: 90px; height: 90px; border-radius: 50%; overflow: hidden; border: 2.5px solid ${GOLD}; background: #faf6ed; margin: 0 16px; box-shadow: 0 0 0 1px rgba(184,150,46,0.25), inset 0 0 8px rgba(184,150,46,0.08); }
-    .center-seal img { width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; }
+    .center-seal { width: 90px; height: 90px; border-radius: 50%; overflow: visible; border: none; background: transparent; margin: 0 16px; box-shadow: none; }
+    .center-seal img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: normal; display: block; background: transparent; }
     .eligible { font-size: 8px; color: ${GOLD}; letter-spacing: 1.2px; margin-top: 10px; opacity: .8; }
     .eligible-row { display:flex; justify-content:space-between; align-items:flex-end; margin-top:10px; padding-top:4px; }
     .qr { flex:1; display:flex; justify-content:flex-end; align-items:flex-end; gap:6px; }
@@ -460,7 +520,7 @@ function diplomaHtml(student) {
         <div class="divider"></div>
         <div style="flex:1;">
           <p class="known">Be it known to all persons by these presents that</p>
-          <div class="name">${escapeHtml(student.name)}</div>
+          ${studentNameSvg(student.name)}
           <div class="underline"><span class="line"></span><span style="color:${GOLD};">✦</span><span class="line"></span></div>
           <p class="body">having fulfilled with distinction all requirements<br>prescribed for graduation from this institution, is hereby<br>awarded this</p>
           <div class="title">High School Diploma</div>
@@ -500,9 +560,10 @@ async function writePdf(page, html, filePath, options = {}) {
 async function main() {
   const sendMode = process.argv.includes('--send');
   const principalEmail = process.env.GRADUATION_DOCUMENT_TO || 'shiyu.zhang@genesisideas.school';
-  const cc = process.env.GRADUATION_DOCUMENT_CC || ADMIN_EMAIL;
+  const cc = parseCc(process.env.GRADUATION_DOCUMENT_CC);
   const semestersByName = loadSeedSemesters();
   fs.mkdirSync(OUT_DIR, { recursive: true });
+  const prisma = sendMode ? new PrismaClient() : null;
 
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1240, height: 1754 } });
@@ -542,6 +603,7 @@ async function main() {
         console.error(`[graduation-documents] failed ${student.code} ${student.name}:`, result);
         process.exitCode = 1;
       } else {
+        await recordIssueLog({ prisma, student: studentForEmail, principalEmail, cc, result });
         console.log(`[graduation-documents] sent ${student.code} ${student.name}: ${result.id || '(no provider id returned)'}`);
       }
     }
@@ -551,6 +613,7 @@ async function main() {
     }
   } finally {
     await browser.close();
+    if (prisma) await prisma.$disconnect();
   }
 }
 

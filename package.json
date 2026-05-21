@@ -36,6 +36,7 @@
     "normalize:answers": "node tools/pathway-quality/normalize_answer_keys.js",
     "audit:graduation": "node tools/graduation/audit_seed_graduation.js",
     "audit:seniors": "node tools/graduation/audit_senior_records.js",
+    "audit:official-docs": "node tools/graduation/audit_official_document_formats.js",
     "postinstall": "node -e \"const fs=require('fs'),f='node_modules/dompurify/dist/purify.es.mjs';try{let c=fs.readFileSync(f,'utf8');fs.writeFileSync(f,c.replace(/\\/\\/#\\s*sourceMappingURL=purify\\.es\\.mjs\\.map/,''));}catch(e){}\""
   },
   "eslintConfig": {

@@ -75,7 +75,7 @@ async function sendNewApplicationAlert({ studentName, gradeLevel, parentName, pa
  */
 async function sendWelcomeEmail({ parentEmail, studentName, tempPassword, loginUrl, studentCode }) {
   const subject = 'Your GIIS account is ready — complete your enrollment';
-  await send({
+  return send({
     to: parentEmail,
     subject,
     html: `

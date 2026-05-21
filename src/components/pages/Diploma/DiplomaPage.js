@@ -5,7 +5,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { getAdminSession, getStudentSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 import logoUrl from '../../../img/logo_nobg.png';
-import sealUrl from '../../../img/transcript_seal.jpg';
+import sealUrl from '../../../img/transcript_seal_transparent.png';
 
 const API = getApiBase();
 
@@ -249,18 +249,39 @@ function DiplomaDocument({ student, eligibleDate }) {
               Be it known to all persons by these presents that
             </p>
 
-            {/* Student name — the centerpiece */}
-            <div style={{
-              fontSize: '52px',
-              fontFamily: "'Great Vibes', 'Pinyon Script', cursive",
-              color: '#1a2d5a',
-              lineHeight: 1.05,
-              margin: '0px 0 2px',
-              letterSpacing: '2px',
-              textShadow: '0 1px 2px rgba(184,150,46,0.25)',
-            }}>
-              {student.name}
-            </div>
+            {/* Student name — SVG avoids Chromium PDF text-background artifacts. */}
+            <svg
+              viewBox="0 0 520 82"
+              role="img"
+              aria-label={student.name}
+              style={{
+                width: '5.05in',
+                maxWidth: '100%',
+                height: '0.78in',
+                display: 'block',
+                margin: '0 auto 2px',
+                overflow: 'visible',
+                background: 'transparent',
+              }}
+            >
+              <defs>
+                <filter id="studentNameShadow" x="-10%" y="-10%" width="120%" height="130%">
+                  <feDropShadow dx="0" dy="1" stdDeviation="1" floodColor="rgba(184,150,46,0.25)" />
+                </filter>
+              </defs>
+              <text
+                x="260"
+                y="52"
+                textAnchor="middle"
+                fontFamily="'Great Vibes', 'Pinyon Script', cursive"
+                fontSize="58"
+                letterSpacing="2"
+                fill="#1a2d5a"
+                filter="url(#studentNameShadow)"
+              >
+                {student.name}
+              </text>
+            </svg>
 
             {/* Decorative underline */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', width: '90%', justifyContent: 'center' }}>
@@ -328,15 +349,15 @@ function DiplomaDocument({ student, eligibleDate }) {
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', padding: '0 16px', paddingBottom: '0px' }}>
               <div style={{
                 width: '90px', height: '90px', borderRadius: '50%', overflow: 'hidden',
-                border: '2.5px solid #b8962e',
-                boxShadow: '0 0 0 1px rgba(184,150,46,0.25), inset 0 0 8px rgba(184,150,46,0.08)',
-                background: '#faf6ed',
+                border: 'none',
+                boxShadow: 'none',
+                background: 'transparent',
                 flexShrink: 0,
               }}>
                 <img
                   src={sealUrl}
                   alt="Official School Seal"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', mixBlendMode: 'multiply', display: 'block' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', mixBlendMode: 'normal', display: 'block', background: 'transparent' }}
                 />
               </div>
             </div>
