@@ -95,7 +95,7 @@ app.get('/health', (_req, res) => {
 
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 20,
+  max: Number(process.env.AUTH_RATE_LIMIT_MAX || 60),
   standardHeaders: true,
   legacyHeaders: false,
   validate: { xForwardedForHeader: false },
@@ -103,7 +103,10 @@ const authLimiter = rateLimit({
 });
 
 app.use('/api/auth', authLimiter, authRoutes);
-app.use('/api/parent', authLimiter, parentAuthRoutes);
+app.use('/api/parent/login', authLimiter);
+app.use('/api/parent/forgot-password', authLimiter);
+app.use('/api/parent/reset-password', authLimiter);
+app.use('/api/parent', parentAuthRoutes);
 app.use('/api/parent', parentDataRoutes);
 app.use('/api/students', studentRoutes);
 app.use('/api/courses', courseRoutes);

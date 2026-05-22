@@ -1,6 +1,8 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C39（Parent dashboard load loop fixed；persona audit tightened against loading/failed parent state）
+> 最後更新：2026-05-22 Slot C40（Auth rate limiting narrowed so parent dashboard data cannot lock out login flows）
+>
+> 前次：2026-05-22 Slot C39（Parent dashboard load loop fixed；persona audit tightened against loading/failed parent state）
 >
 > 前次：2026-05-22 Slot C38（Server GPA totals now handle Prisma Decimal values；production V1 smoke + persona audit passed）
 >
@@ -239,7 +241,15 @@
 - ✅ **Parent dashboard fixed**：Parent session 現在用 `useMemo(() => getParentSession(), [])` 穩定住；成功載入 `/api/parent/me` 後會清掉 stale error，不再因 repeated fetch 撞 429。
 - ✅ **Persona audit tightened**：`tools/persona-audit/audit_site.js` 現在把 `Failed to load data` / `加载失败` 視為 broken state；real parent dashboard 必須看到 `Credits Earned`/`已获学分` 與 GPA/transcript evidence，且不能還停在 Loading。
 - ✅ **Local verification**：`node --check tools/persona-audit/audit_site.js`、`npm run build`、`cd server && npm test -- --runInBand` 通過。
-- ⏳ **Production verification pending deploy**：下一步 push/deploy，等待 Netlify frontend bundle 更新後重跑 `npm run audit:personas`。這次 audit 若 parent dashboard 還是 loading/failed 會直接 fail，不再 false-pass。
+- ⚠️ **Follow-up found during production audit**：加嚴版 audit 先抓到另一個 blocker：old parent dashboard loop 把 production auth limiter 撞滿，導致 student/admin/parent login routes 全部 429。這不是 frontend fix 本身壞掉，而是 rate limit scope 太粗，升級到 Slot C40 修。
+
+## 🔧 Auth rate-limit scope hardening（2026-05-22 Slot C40）
+
+> 目標：避免 dashboard data polling 或 smoke tests 把整個 `/api/parent` auth limiter 撞滿，進而讓真學生、家長、admin 短時間無法登入。
+
+- ✅ **Parent data route no longer consumes auth login quota**：`server/src/index.js` 不再把 `authLimiter` 套在整個 `/api/parent` router。現在只限制 `/api/parent/login`、`/api/parent/forgot-password`、`/api/parent/reset-password`，`/api/parent/me` 不會因 dashboard refresh 消耗 login quota。
+- ✅ **Login smoke tolerance improved**：`AUTH_RATE_LIMIT_MAX` 可用 env 覆蓋，預設從 20/15min 提高到 60/15min。仍保留 brute-force 防線，但不會被一次 persona audit + frontend loop 這麼容易鎖死。
+- ⏳ **Production verification pending deploy**：下一步 push/deploy/restart API 後，auth limiter memory 會清空；再重跑加嚴版 `npm run audit:personas`，確認 student/admin/parent login 和 parent dashboard 都通過。
 
 ---
 
