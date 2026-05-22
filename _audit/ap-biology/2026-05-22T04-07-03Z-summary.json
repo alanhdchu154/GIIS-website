@@ -1,0 +1,128 @@
+{
+  "run_id": "ap-biology-slot-A-2026-05-22T04-07-03Z",
+  "run_type": "new_module_generation",
+  "slot": "A (11pm CT)",
+  "timestamp": "2026-05-22T04:07:03Z",
+  "course": "AP Biology",
+  "course_slug": "ap-biology",
+  "reference_doc": "references/ap-biology-ced.md (Unit 8 — Ecosystems and Energy Flow section)",
+  "plan_followed": "_audit/ap-biology/2026-05-22T04-07-03Z-plan.json (resumes the 2026-05-18 16-module plan at the M14 gap)",
+  "why_this_run": "Resume of the AP Biology 16-module plan. On entry: M1-M13 produced (M1-M9 post-hoc audited 2026-05-19; M10-M13 via full cascade), M14 folder pre-created but EMPTY (resume marker), M15/M16 absent. Today's Slot B (2026-05-21T10:30:03Z) explicitly recommended Slot A finish M14-M16 against the Unit 8 CED to reach 16/16. The 'do not add AP Bio until existing are audited' block is genuinely lifted (every prior module carries _review_A/B/C). AP CS A and AP Psychology remain blocked for the cascade (no CED reference doc -> Reviewer C cannot run); AP Calc AB is complete. So AP Biology Unit 8 was the only reference-doc-backed work available.",
+  "produced": [
+    "ap-biology-module-14-ecosystems-energy",
+    "ap-biology-module-15-ecosystems-advanced",
+    "ap-biology-module-16-ecosystems-synthesis"
+  ],
+  "produced_detail": [
+    {
+      "slug": "ap-biology-module-14-ecosystems-energy",
+      "title": "Module 14: Ecosystems and Energy Flow",
+      "cb_unit": "Unit 8 — Ecology (10-15%)",
+      "cb_topics": ["Trophic levels", "One-way energy flow vs matter cycling", "10% rule", "GPP vs NPP", "Ecological pyramids", "Carbon cycle", "Nitrogen cycle"],
+      "sections": 17,
+      "slides": 17,
+      "custom_slides": 5,
+      "learning_checks": 6,
+      "voice": "en-US-EmmaNeural",
+      "voice_rate": "-3%",
+      "review_cascade": {
+        "round_1": {"A": "minor", "B": "minor", "C": "minor"},
+        "round_2": {"A": "pass", "B": "pass", "C": "pass"},
+        "final_decision": "ship (round 2 unanimous pass; 0 critical)"
+      },
+      "round_1_fixes_applied": [
+        "12_pyramids: inverted aquatic biomass pyramid now explained via standing-crop-vs-turnover (rapid phytoplankton reproduction), not size alone (flagged by reviewers A and B)",
+        "07_energy_budget: producer-level energy explicitly labeled NPP (energy available to consumers) to remove GPP/NPP ambiguity (flagged by reviewer B)"
+      ],
+      "ap_traps_inoculated": ["energy flows / matter cycles (energy is not recycled)", "10% rule direction (10% up, 90% lost)", "NPP = GPP - producer respiration", "energy pyramid always upright but biomass/numbers can invert", "nitrogen fixation specifically means N2 -> ammonia", "decomposers act at every trophic level"],
+      "audit_quality_score": 79,
+      "audit_verdict": "needs_review (driven solely by the by-design 'No MP4 found' major + an AP-naming note)"
+    },
+    {
+      "slug": "ap-biology-module-15-ecosystems-advanced",
+      "title": "Module 15: Ecosystems — Advanced Applications",
+      "cb_unit": "Unit 8 — Ecology advanced (10-15%)",
+      "cb_topics": ["Water cycle", "Phosphorus cycle (no atmosphere, slow, limiting)", "Eutrophication & Gulf dead zone", "Biomagnification (DDT, mercury, PCBs)", "Climate change, ocean acidification, coral bleaching", "Habitat destruction, invasive species, overharvesting", "Light/dark bottle productivity investigation"],
+      "sections": 16,
+      "slides": 16,
+      "custom_slides": 7,
+      "learning_checks": 5,
+      "voice": "en-US-EmmaNeural",
+      "voice_rate": "-3%",
+      "review_cascade": {
+        "round_1": {"A": "minor", "B": "minor", "C": "minor"},
+        "round_2": {"A": "pass", "B": "pass", "C": "pass"},
+        "final_decision": "ship (round 2 unanimous pass; 0 critical)"
+      },
+      "round_1_fixes_applied": [
+        "08_biomagnification: magnification now attributed to TOXIN RETENTION (persistent/fat-soluble toxins not excreted, accumulating up the chain), NOT the 10% rule as cause; cleanly split from bioaccumulation (flagged by reviewers A and B — most important fix)",
+        "10_climate_acidification: coral bleaching now stated as primarily THERMAL (warming -> expel zooxanthellae); ocean acidification a SEPARATE CO2/calcification problem (flagged by A and C)",
+        "12_productivity_def: light/dark bottle now states the explicit equal-respiration assumption so GPP = NPP + respiration is derived, not asserted (flagged by A and B)"
+      ],
+      "light_dark_bottle_numbers": {"initial_DO_mg_L": 8, "light_bottle_mg_L": 10, "dark_bottle_mg_L": 5, "NPP_mg_L": 2, "respiration_mg_L": 3, "GPP_mg_L": 5, "verified_self_consistent": true},
+      "ap_traps_inoculated": ["phosphorus cycle has no atmospheric pool and is slow", "eutrophication kills via oxygen depletion not direct algal toxicity", "biomagnification (up the chain) vs bioaccumulation (within one organism)", "light bottle = NPP, dark = respiration, GPP = NPP + respiration", "ocean acidification (carbonic acid) distinct from warming"],
+      "post_audit_fix": "Audit flagged a 'No assignment/practice/portal next-action language' minor on 16_path. Edited narration (Drill->Practice; 'advanced problem set'->'advanced assignment') to satisfy the AGENT_RECIPE concrete-Learn-Portal-action rule. Narration-only, no slide rebuild. Re-audit issues cleared; score 73 -> 79.",
+      "audit_quality_score": 79,
+      "audit_verdict": "needs_review (driven solely by the by-design 'No MP4 found' major)"
+    },
+    {
+      "slug": "ap-biology-module-16-ecosystems-synthesis",
+      "title": "Module 16: AP Exam Synthesis & Review",
+      "cb_unit": "Capstone (all units)",
+      "cb_topics": ["Exam format (Section I 60 MCQ/90 min/50%; Section II 6 FRQ/90 min/50%)", "FRQ structure (2 long 8-10 pt, 4 short 4 pt)", "Scoring 1-5; 3+ for credit", "Six science practices", "Cross-unit AP traps", "Final 30-day study plan"],
+      "sections": 15,
+      "slides": 15,
+      "custom_slides": 5,
+      "learning_checks": 6,
+      "voice": "en-US-EmmaNeural",
+      "voice_rate": "-3%",
+      "review_cascade": {
+        "round_1": {"A": "pass", "B": "minor", "C": "pass"},
+        "final_decision": "ship (0 critical, <=1 minor in round 1 — no round 2 needed)"
+      },
+      "reviewer_B_guidance_honored": "Six science practices each given an actionable one-line gloss; FRQ technique made a usable read->identify-variables->evidence-based-claim method; 30-day study plan made specific (one timed practice exam -> weakest-unit review -> released-FRQ drills).",
+      "exam_format_numbers_exact": true,
+      "final_module": "15_path congratulates the student on finishing all 16 modules and points to a full timed practice exam + advisor review session (no 'Module 17').",
+      "ap_traps_inoculated": ["correlation vs causation in data FRQs", "connect molecular detail to ecological/evolutionary context", "10% rule misuse", "exponential vs logistic", "Hardy-Weinberg assumptions", "exam is ~50% data reasoning, not pure memorization"],
+      "audit_quality_score": 79,
+      "audit_verdict": "needs_review (driven solely by the by-design 'No MP4 found' major + an AP-naming note)"
+    }
+  ],
+  "halted": [],
+  "course_status_after_run": "AP Biology 16/16 modules produced (M1-M16). Course complete. Every module carries the 3-reviewer cascade (M1-M9 post-hoc audited; M10-M16 full generator->cascade->writer pipeline).",
+  "verification": {
+    "artifact_contract": "ALL required files present in all three folders: _outline.json, _review_A/B/C.json (+ _review_A/B/C_v2.json for M14 & M15 which went to round 2), script.json, build_slides.py, learning_check.json, slides/*.png, intro_music.wav, outro_music.wav, contact-sheet.jpg",
+    "verify_fail_flag": 0,
+    "slide_count_equals_section_count": true,
+    "script_ids_match_outline_ids": true,
+    "all_scripts_parse_as_json": true,
+    "all_narration_within_85_word_cap": true,
+    "voice_all": "en-US-EmmaNeural",
+    "voice_rate_all": "-3%",
+    "no_stray_mp4_mp3": true,
+    "banned_terms_check": "clean — no Cognia, US-accredited, accredited, UCSB, NJIT, (SIT), or the simplified-Chinese accreditation phrase in any script.json or build_slides.py",
+    "release_gate_note": "All three score 79 with verdict needs_revision. CALIBRATION: this is the normal generation-stage state — identical to already-shipped siblings M10 (62), M11 (63), M12/M13 (79). The blocking 'major' is 'No MP4 found', which is INTENTIONAL at generation stage per AUTO_PIPELINE.md (the Mac launchd builds MP4s downstream, clearing the major). None are 'blocked'. The one genuinely actionable minor (M15 next-action language) was fixed."
+  },
+  "remaining_for_course": [],
+  "throughput": "3 modules. M14 & M15 each through the full 2-round 3-reviewer cascade (12 review JSON files); M16 shipped on round 1 (pass/minor/pass). Total: 3 generators + 9 round-1 reviewers + 2 revisions + 6 round-2 reviewers + 3 writers + 1 narration-trim pass + 1 next-action fix. Peak parallel sub-agents: 6.",
+  "constraints_respected": {
+    "no_youtube_api_calls": true,
+    "no_make_lesson_or_upload_lesson": true,
+    "no_git_push": true,
+    "lessons_manifest_untouched": true,
+    "no_regeneration_of_existing_modules": true,
+    "no_live_web_fetch": true,
+    "three_reviewer_cascade_used_for_every_module": true,
+    "no_skipped_reviewers": true,
+    "two_round_cascade_completed_where_required": true
+  },
+  "anomalies": [
+    "audit_lessons.py intermittently reported the 'No MP4 found' major and sometimes an empty issues list across rapid back-to-back runs on the same lesson (likely a same-second output-file timestamp collision in teaching-videos/_audit/lesson-quality/). The release gate consistently reported needs_revision for all three (the by-design no-MP4 state), so this did not affect the conclusion. Future cleanup: have audit_lessons.py include a per-lesson suffix in its output filename to avoid collisions.",
+    "Two _audit locations still coexist: root /_audit/<course>/ (AP Biology run history, where this summary + plan live) and /teaching-videos/_audit/<course>/ (where the lesson-quality + release-gate tool outputs land). Carried forward from prior runs; a future cleanup could consolidate."
+  ],
+  "next_slot_recommendations": [
+    "AP Biology is now 16/16 complete. The reference-doc-backed generation backlog is genuinely exhausted: AP Calc AB done, AP Biology done; AP CS A and AP Psychology have no references/<slug>-ced.md so Reviewer C cannot run.",
+    "To unblock further auto-runs a human must add a CED reference doc (e.g. references/ap-cs-a-ced.md, references/ap-psychology-ced.md) — that enables either retroactive cascades for those courses' existing script.json content or fresh module generation. Alternatively add references for a brand-new course with prisma defs but no teaching-videos (AP Statistics, Geometry, Chemistry, US History, etc.).",
+    "Until a new reference exists, future slots should default to audit/QA-only work (e.g., the AP-course-naming note that recurs on every AP module's audit, or consolidating the two _audit locations) rather than generating un-citation-checkable content."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "reviewer": "B — Adversarial Student",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "07_frq_technique",
+      "severity": "minor",
+      "description": "Step 2 tells students to 'state a testable hypothesis' on EVERY FRQ, but real AP FRQs more often ask you to make a prediction, justify a claim, or design a test — many prompts already give the hypothesis or don't want one. Front-loading hypothesis-writing as the universal step 2 can cause a student to waste time writing an unrequested hypothesis instead of answering the actual task verb (PREDICT, JUSTIFY, DESCRIBE, EXPLAIN). The biggest FRQ point-loss is not answering the specific command term.",
+      "suggested_fix": "Reframe step 2 around the TASK VERB: 'identify exactly what the prompt asks you to do (predict / justify / describe / design / calculate) and do only that.' Keep hypothesis-writing as the move for design questions specifically, not as a blanket step."
+    },
+    {
+      "section_id": "07_frq_technique",
+      "severity": "note",
+      "description": "The CER 'reasoning that connects to the underlying biology' and 'connect molecular detail UP to ecological context' is good advice but the worked example (light intensity vs photosynthesis) never shows the upward connection it preaches — it stays purely at the leaf level. A student can't imitate a synthesis link they never see modeled.",
+      "suggested_fix": "Extend the worked example one sentence: e.g., '...and higher photosynthetic rate means more fixed carbon entering the food web / greater producer fitness,' so the 'connect up' move is actually demonstrated, not just asserted."
+    },
+    {
+      "section_id": "06_science_practices",
+      "severity": "note",
+      "description": "Each practice does get a concrete one-line gloss (this criterion passes). Minor accuracy flag: practice 5 is glossed only as 'apply statistics (chi-square, error bars).' The most testable stats skill — using the chi-square table / critical value to ACCEPT or REJECT a null hypothesis, and reading whether error bars OVERLAP to judge a significant difference — is the actual graded action and isn't stated. As written a student knows the names but not the decision rule.",
+      "suggested_fix": "Add the decision rule to the gloss: 'compute chi-square and compare to the critical value to reject/fail-to-reject the null; non-overlapping error bars suggest a real difference.'"
+    },
+    {
+      "section_id": "13_study_plan",
+      "severity": "minor",
+      "description": "Week 1 says 're-watch only the modules tied to your 3 weakest units,' but the diagnostic is ONE practice exam — a single test can't reliably rank 8 units (too few items per unit, luck/fatigue noise). A student could mis-diagnose and spend two weeks reviewing a unit they're actually fine on while ignoring a real gap that one bad section masked.",
+      "suggested_fix": "Tell students to triangulate: combine the practice-exam score breakdown with the topic-question MCQ counts AND their gut sense of shaky modules, rather than trusting a single exam's per-unit ranking. One line: 'one test is noisy per-unit — cross-check with your weakest-feeling topics.'"
+    },
+    {
+      "section_id": "11_pause1_silence",
+      "severity": "pass",
+      "description": "The pause reveal does produce a clean, imitable FRQ-safe sentence ('Dissolved phosphorus is positively correlated with algae density across the 30 lakes') and correctly specifies what a causal design needs (manipulate, replicate, control, dose-response). This teaches the intended discipline well.",
+      "suggested_fix": "No change needed."
+    },
+    {
+      "section_id": "15_path",
+      "severity": "pass",
+      "description": "Path slide ends on a concrete, schedulable next action (sit a full timed released/Khan exam under real conditions, then book a GIIS advisor review with the scored exam) — not vague cheerleading. Meets the GIIS concrete-next-action rule.",
+      "suggested_fix": "No change needed."
+    }
+  ],
+  "overall_assessment": "Pedagogically solid and unusually actionable for a review module — the six practices each have a concrete gloss, the FRQ section gives a real method with a worked example, the correlation/causation pause yields an imitable FRQ-safe sentence, the 30-day plan is dated and specific, and both recap and path slides end on a real assignment. Nothing here would mislead a student into a wrong fact. The only genuine risks are pedagogical, not factual: (1) the FRQ method's universal 'state a hypothesis' step 2 can pull students away from answering the actual command term, the single biggest FRQ point-loss; and (2) ranking 8 units off one noisy practice exam can mis-target the review. Both are minor, fixable with a sentence each. Verdict: minor."
+}

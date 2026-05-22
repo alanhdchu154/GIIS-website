@@ -1,0 +1,37 @@
+{
+  "reviewer": "B — Adversarial Student, round 2",
+  "verdict": "pass",
+  "issues": [
+    {
+      "section_id": "07_energy_budget",
+      "severity": "pass",
+      "description": "Round-1 fix LANDED. The producer level (10,000 kcal) is now explicitly labeled 'NPP — energy available to consumers, GPP minus producer respiration' in both the content_hint and the narration_seed ('that's NPP, the energy left after producers respire, so it's what consumers can actually access'). The GPP/NPP ambiguity is gone — a student now knows the 10,000 figure is the energy that actually enters the food chain, not gross fixation.",
+      "suggested_fix": "None needed."
+    },
+    {
+      "section_id": "12_pyramids",
+      "severity": "pass",
+      "description": "Round-1 fix LANDED and is genuinely explanatory, not just asserted. The slide now teaches the standing-crop-vs-turnover mechanism: biomass is defined as a 'standing crop — a snapshot of mass present at one instant,' then explains that fast-reproducing phytoplankton are eaten so quickly their standing biomass is small at any moment, yet their high productivity per unit biomass means they still supply MORE energy over time — which is exactly why the energy pyramid never inverts even when biomass does. The trap banner reinforces 'standing crop can invert, total productivity cannot.' A student can now reconstruct WHY, not just memorize THAT.",
+      "suggested_fix": "None needed."
+    },
+    {
+      "section_id": "09_pause1_silence",
+      "severity": "note",
+      "description": "The worked answer (50,000 -> 5,000 -> 500 kcal) is correct and the prompt correctly identifies secondary consumers as the 3rd trophic level. No error. Minor optional polish: the reminder note says 'Two steps up = x0.10 twice = x0.01' which is accurate, but a student could momentarily wonder why it's two steps and not three when the answer is the '3rd trophic level' — because producers are level 1 (the starting point). The narration handles this implicitly but a one-word label ('producers = level 1') would remove any flicker of doubt.",
+      "suggested_fix": "Optional: in 08_pause1/09_pause1_silence, label the chain endpoints with trophic-level numbers (Producers = L1, Primary = L2, Secondary = L3) so the '2 steps up' vs '3rd level' counting is visually self-evident."
+    },
+    {
+      "section_id": "06_ten_percent_rule",
+      "severity": "note",
+      "description": "Strong slide. The ~90% breakdown (heat from respiration, undigested feces, uneaten parts) is the correct AP framing. One pedagogical subtlety a sharp student might raise: the 10% rule is an APPROXIMATION/average (real ecological efficiencies range ~5-20%), and the slide states 'roughly 10%' / 'about ten percent' which is appropriately hedged. No fix required — flagging only to confirm the hedge survived. The link between this slide and 07's exact x0.10 math is clean.",
+      "suggested_fix": "None needed; the 'roughly/about' hedging is correctly present."
+    },
+    {
+      "section_id": "10_gpp_npp",
+      "severity": "note",
+      "description": "Correct and consistent with 07 and 11. NPP = GPP - producer respiration is boxed as the core equation, and 'Consumers eat NPP, not GPP' aligns with the now-fixed 07. No drift between the three NPP-related slides (07, 10, 11) — terminology is internally consistent across the module, which is important for not confusing the student.",
+      "suggested_fix": "None needed."
+    }
+  ],
+  "overall_assessment": "Both round-1 fixes genuinely landed and are explained well enough for a student to reconstruct the reasoning, not just recite a claim. 07_energy_budget unambiguously frames the producer figure as NPP; 12_pyramids now teaches the standing-crop-vs-turnover mechanism with a clear causal chain to why the energy pyramid alone can never invert. Re-scan found no remaining critical or minor pedagogical traps: energy-vs-matter, the 10% rule (correctly hedged as ~10%), GPP/NPP terminology, the three pyramids, and both biogeochemical cycles are accurate and internally consistent. The only items are optional polish notes (trophic-level numbering on the practice chain). This module is exam-faithful and ready. Verdict: pass."
+}

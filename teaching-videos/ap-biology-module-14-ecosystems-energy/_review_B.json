@@ -1,0 +1,43 @@
+{
+  "reviewer": "B — Adversarial Student",
+  "verdict": "minor",
+  "issues": [
+    {
+      "section_id": "07_energy_budget",
+      "severity": "minor",
+      "description": "The worked budget calls the 10,000 kcal 'Producers' energy and multiplies by 10% to consumers. But this conflates two ideas the module itself separates: producers don't pass their full captured energy up — consumers get NPP, not GPP. A sharp student who just learned NPP = GPP − producer respiration will ask 'is 10,000 kcal GPP or NPP?' If it's the energy producers fixed (GPP), the 10% rule should arguably be applied after producer respiration is removed. Leaving '10,000 kcal (producers)' undefined risks teaching that the 10% rule starts from GPP, contradicting slide 11.",
+      "suggested_fix": "Label the 10,000 kcal explicitly as 'energy at the producer trophic level (NPP)' or 'energy stored in producer biomass,' so the budget chain visibly starts from what consumers can actually access. One clause ties the 10% rule to NPP and prevents the GPP-vs-NPP contradiction."
+    },
+    {
+      "section_id": "12_pyramids",
+      "severity": "minor",
+      "description": "The inverted biomass pyramid is asserted with a mechanism ('small, fast-reproducing phytoplankton support more zooplankton biomass at any moment') but the crucial word is 'at any moment / standing crop.' A tested student must understand the inversion happens because biomass is a SNAPSHOT (standing crop) while the rapid turnover/high productivity of phytoplankton means they still produce more energy over time — the energy pyramid stays upright. The slide says 'at any moment' once but never explicitly contrasts standing biomass vs. turnover/productivity, which is the exact reasoning AP wants. Risk: student memorizes 'phytoplankton pyramid inverts' without grasping WHY energy doesn't.",
+      "suggested_fix": "Add one line distinguishing standing crop (a snapshot of biomass present now) from productivity over time: phytoplankton have low standing biomass but very high turnover, so they still supply more energy across time even though less mass exists at any instant — which is why the energy pyramid never inverts."
+    },
+    {
+      "section_id": "06_ten_percent_rule",
+      "severity": "note",
+      "description": "The ~90% loss breakdown lists heat (respiration), undigested material (feces), and uneaten parts. This is solid and concrete — good. Minor gap: it omits that not all biomass at a level is even consumed (some organisms die and go to decomposers rather than being eaten up the chain), which overlaps with 'uneaten parts' but a precise student may want death-to-decomposer flow named. Not a misconception, just completeness.",
+      "suggested_fix": "Optional: under 'uneaten parts,' add 'and organisms that die uneaten — their energy goes to decomposers, not up the chain.' Reinforces slide 04's 'decomposers at every level' point."
+    },
+    {
+      "section_id": "08_pause1",
+      "severity": "pass",
+      "description": "Pause question genuinely requires applying the 10% rule TWICE (producers → primary → secondary), not just once, so it tests whether the student can chain the rule rather than recall a single multiplication. The 'secondary consumer = 3rd trophic level' framing also quietly tests trophic-level counting. The worked answer (50,000 → 5,000 → 500) and the '×0.10 twice = ×0.01' reminder are correct and pedagogically strong.",
+      "suggested_fix": "No change needed. This is a well-designed pause question."
+    },
+    {
+      "section_id": "05_energy_vs_matter",
+      "severity": "pass",
+      "description": "The energy-vs-matter distinction is crisp: explicit one-way flow ending in heat, explicit 'never recycled,' and a trap-buster banner forbidding 'energy returns to producers.' A student is unlikely to walk away saying energy is recycled. Well done.",
+      "suggested_fix": "No change needed."
+    },
+    {
+      "section_id": "14_nitrogen_cycle",
+      "severity": "pass",
+      "description": "The five nitrogen steps are kept distinct with a named microbe for each, chemical formulas for each transformation, and a dedicated follow-up trap slide (15) contrasting fixation against the other four. The steps do not blur. Denitrification correctly flagged as anaerobic. Good sequencing.",
+      "suggested_fix": "No change needed."
+    }
+  ],
+  "overall_assessment": "Solid, exam-aware outline that pre-empts the classic traps (energy recycled, 90%-up inversion, GPP-vs-NPP, fixation overreach) with dedicated trap slides and concrete numbers. Two fixable pedagogy gaps keep it from a clean pass: (1) the energy-budget slide leaves '10,000 kcal producers' ambiguous between GPP and NPP, which can quietly undercut the NPP teaching; and (2) the inverted-biomass-pyramid relies on the phrase 'at any moment' without explicitly teaching the standing-crop-vs-turnover reasoning AP expects, so students may memorize the result without the mechanism. Neither teaches an outright falsehood, hence 'minor.' The pause question is genuinely well-constructed and the energy-vs-matter and nitrogen sections are exemplary."
+}

@@ -1,0 +1,55 @@
+{
+  "reviewer": "A — Peer Subject-Matter Reviewer (Ecology PhD), round 2",
+  "verdict": "pass",
+  "issues": [
+    {
+      "section_id": "08_biomagnification",
+      "severity": "pass",
+      "description": "Round-1 fix landed. Magnification is now correctly attributed to toxin RETENTION: DDT/mercury/PCBs are persistent and fat-soluble, not metabolized or excreted, so each consumer keeps the toxin from many contaminated prey while toxin-free biomass/energy is lost up the chain. The outline now explicitly cautions 'do NOT say the 10% energy rule causes magnification; energy loss is just why there's less biomass at the top.' Illustrative ~10x/step, ~1000x cumulative numbers are reasonable and labeled illustrative.",
+      "suggested_fix": "None required. Accurate."
+    },
+    {
+      "section_id": "09_bioaccum_compare",
+      "severity": "pass",
+      "description": "Bioaccumulation (within one organism over its lifetime) vs biomagnification (concentration increase across/between trophic levels) is now cleanly distinguished, with the correct note that both can occur simultaneously. Mechanistically sound.",
+      "suggested_fix": "None required."
+    },
+    {
+      "section_id": "10_climate_acidification",
+      "severity": "pass",
+      "description": "Round-1 fix landed. Coral bleaching is now correctly identified as PRIMARILY thermal: elevated sea-surface temperature stresses corals, which expel their symbiotic zooxanthellae and whiten. Ocean acidification is presented as a SEPARATE CO2 + H2O -> H2CO3 chemistry problem whose main harm is impaired calcification (calcium-carbonate skeletons/shells). The two CO2-linked impacts are explicitly told apart. Biologically accurate and CED-aligned.",
+      "suggested_fix": "Optional note: specific_examples line 61 ('heat and acidification stress cause corals to expel their symbiotic algae') still implies acidification drives bleaching/expulsion, which conflicts with the corrected primary-thermal framing in section 10. Tighten that example line to 'heat stress causes corals to expel zooxanthellae' to stay fully consistent. Not blocking."
+    },
+    {
+      "section_id": "12_productivity_def",
+      "severity": "pass",
+      "description": "Round-1 fix landed. The explicit assumption is now stated: respiration is assumed to occur at the SAME rate in the light and dark bottles. Because of that assumption the dark bottle's DO drop measures respiration alone and can be added back to the light bottle's NET change to recover gross production, yielding GPP = NPP + R. Light bottle correctly framed as NET (photosynthesis minus respiration) = NPP. Logic is correct and complete.",
+      "suggested_fix": "None required."
+    },
+    {
+      "section_id": "13_pause1",
+      "severity": "pass",
+      "description": "Data set and prompts are internally consistent: initial 8 mg/L, light 10 mg/L, dark 5 mg/L, with correct reminder formulas NPP = light - initial, R = initial - dark, GPP = NPP + R.",
+      "suggested_fix": "None required."
+    },
+    {
+      "section_id": "14_pause1_silence",
+      "severity": "pass",
+      "description": "Arithmetic re-verified and correct: NPP = 10 - 8 = +2 mg/L; R = 8 - 5 = 3 mg/L; GPP = 2 + 3 = 5 mg/L. Sanity check GPP (5) > NPP (2) is valid and the stated reasoning (gross is before respiration is subtracted) is sound.",
+      "suggested_fix": "None required."
+    },
+    {
+      "section_id": "05_phosphorus_def",
+      "severity": "pass",
+      "description": "Phosphorus cycle accurate: no atmospheric/gaseous pool, rock-weathering rate-limited, slow, frequently the limiting nutrient. Correct AP framing retained.",
+      "suggested_fix": "None required."
+    },
+    {
+      "section_id": "07_eutrophication",
+      "severity": "pass",
+      "description": "Eutrophication mechanism correct: nutrient runoff -> algal bloom -> die-off -> decomposer oxygen demand -> hypoxia/dead zone; fish die from oxygen loss, not algal poison and not CO2 depletion. Gulf/Mississippi attribution correct.",
+      "suggested_fix": "None required."
+    }
+  ],
+  "overall_assessment": "All three round-1 fixes have landed correctly and are scientifically accurate. (1) Biomagnification is now properly attributed to retention of persistent fat-soluble toxins rather than the 10% energy rule, and is cleanly distinguished from bioaccumulation. (2) Coral bleaching is correctly framed as primarily thermal (zooxanthellae expulsion under heat stress), with ocean acidification handled as a separate carbonic-acid/calcification problem. (3) The productivity section now states the equal-respiration assumption and derives GPP = NPP + R. The light/dark bottle arithmetic (initial 8, light 10, dark 5 -> NPP +2, R 3, GPP 5 mg/L) re-checks out exactly. No critical or new factual errors found. The only residual nit is one specific_examples line (61) that still loosely implies acidification causes bleaching, slightly inconsistent with the corrected section 10; a one-word tightening resolves it but is non-blocking. Verdict: pass."
+}
