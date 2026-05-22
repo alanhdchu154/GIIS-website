@@ -39,6 +39,104 @@ async function uniqueStudentLoginEmail(studentName) {
   return `${local}.${crypto.randomBytes(2).toString('hex')}@${domain}`;
 }
 
+async function applicationEnrollmentState(app) {
+  const student = await prisma.student.findFirst({
+    where: {
+      parentEmail: { equals: app.parentEmail, mode: 'insensitive' },
+      name: { equals: app.studentName, mode: 'insensitive' },
+    },
+    orderBy: { createdAt: 'desc' },
+    include: {
+      account: { select: { email: true, isActive: true, softLocked: true, lockReason: true } },
+      parentAccounts: { select: { email: true }, take: 1 },
+      subscriptions: { orderBy: { createdAt: 'desc' }, take: 3 },
+    },
+  });
+
+  const candidateEmails = [app.parentEmail];
+  if (student?.parentAccounts?.[0]?.email) candidateEmails.push(student.parentAccounts[0].email);
+  if (student?.account?.email) {
+    const parentLogin = parentLoginEmailForStudentEmail(student.account.email);
+    if (parentLogin) candidateEmails.push(parentLogin);
+  }
+
+  const subscriptions = await prisma.subscription.findMany({
+    where: {
+      OR: [
+        { purchaserEmail: { in: [...new Set(candidateEmails)] } },
+        ...(student?.id ? [{ studentId: student.id }] : []),
+      ],
+    },
+    orderBy: { createdAt: 'desc' },
+    take: 5,
+  });
+
+  const activeStatuses = new Set(['active', 'trialing', 'paid']);
+  const activeLinked = subscriptions.find((sub) => sub.studentId && student?.id && sub.studentId === student.id && activeStatuses.has(sub.status));
+  const activeUnlinked = subscriptions.find((sub) => !sub.studentId && activeStatuses.has(sub.status));
+  const latestSub = subscriptions[0] || null;
+
+  let code = app.status;
+  let label = app.status;
+  let action = '';
+  if (app.status === 'rejected') {
+    code = 'rejected';
+    label = 'Rejected';
+    action = 'No action';
+  } else if (app.status === 'pending') {
+    code = 'pending_review';
+    label = 'Pending review';
+    action = 'Review application';
+  } else if (!student && activeUnlinked) {
+    code = 'paid_unlinked';
+    label = 'Paid, needs account activation';
+    action = 'Activate account and link payment';
+  } else if (!app.accountsCreated || !student?.account || !student?.parentAccounts?.length) {
+    code = 'approved_unactivated';
+    label = 'Approved, accounts not created';
+    action = 'Create accounts';
+  } else if (activeLinked) {
+    code = 'active_paid';
+    label = 'Active paid enrollment';
+    action = 'Monitor progress';
+  } else if (activeUnlinked) {
+    code = 'paid_unlinked';
+    label = 'Paid, needs payment link';
+    action = 'Link payment';
+  } else {
+    code = 'accounts_created_unpaid';
+    label = 'Accounts created, unpaid';
+    action = 'Parent completes payment';
+  }
+
+  return {
+    code,
+    label,
+    action,
+    studentId: student?.id || null,
+    studentEmail: student?.account?.email || null,
+    parentLoginEmail: student?.parentAccounts?.[0]?.email || null,
+    subscriptionId: (activeLinked || activeUnlinked || latestSub)?.id || null,
+    subscriptionStatus: (activeLinked || activeUnlinked || latestSub)?.status || null,
+    paid: !!activeLinked,
+    paidUnlinked: !!activeUnlinked,
+  };
+}
+
+async function linkExistingSubscriptionsForApplication({ app, studentId, parentLoginEmail }) {
+  const emails = [...new Set([app.parentEmail, parentLoginEmail].filter(Boolean))];
+  if (!emails.length) return [];
+  const updated = await prisma.subscription.updateMany({
+    where: {
+      studentId: null,
+      purchaserEmail: { in: emails },
+      status: { in: ['active', 'trialing', 'paid'] },
+    },
+    data: { studentId },
+  });
+  return updated.count;
+}
+
 // POST /api/applications  — public, no auth required
 router.post('/', async (req, res) => {
   const { studentName, dob, gradeLevel, parentName, parentEmail, phone, notes,
@@ -93,7 +191,11 @@ router.get('/', authenticate, requireAdmin, async (req, res) => {
     orderBy: { createdAt: 'desc' },
     take: 200,
   });
-  res.json(apps);
+  const enriched = await Promise.all(apps.map(async (app) => ({
+    ...app,
+    enrollmentState: await applicationEnrollmentState(app),
+  })));
+  res.json(enriched);
 });
 
 // PATCH /api/applications/:id  — update status, rejectionReason, or adminNotes
@@ -202,6 +304,11 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     where: { id: app.id },
     data: { accountsCreated: true },
   });
+  const linkedSubscriptions = await linkExistingSubscriptionsForApplication({
+    app,
+    studentId: student.id,
+    parentLoginEmail,
+  });
 
   const loginUrl = `${process.env.CORS_ORIGIN || 'https://genesisideas.school'}/parent/login`;
 
@@ -235,6 +342,7 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     studentEmail: studentLoginEmail,
     studentPassword: DEFAULT_STUDENT_PASSWORD,
     tempPassword: DEFAULT_PARENT_PASSWORD,
+    linkedSubscriptions,
     loginUrl,
   });
 });

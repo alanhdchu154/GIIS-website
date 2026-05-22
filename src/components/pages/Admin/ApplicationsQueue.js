@@ -12,6 +12,15 @@ const STATUS_COLORS = {
   rejected: { bg: '#fce4ec', fg: '#c62828', label: 'Rejected' },
 };
 
+const ENROLLMENT_STATE_COLORS = {
+  pending_review: { bg: '#fff7ed', fg: '#c2410c' },
+  approved_unactivated: { bg: '#eff6ff', fg: '#1d4ed8' },
+  accounts_created_unpaid: { bg: '#fef3c7', fg: '#92400e' },
+  paid_unlinked: { bg: '#fde68a', fg: '#854d0e' },
+  active_paid: { bg: '#dcfce7', fg: '#166534' },
+  rejected: { bg: '#fee2e2', fg: '#991b1b' },
+};
+
 const REJECTION_REASONS = [
   { value: 'grade_mismatch',  label: 'Grade level mismatch',       detail: 'We currently serve Grades 9–12 only.' },
   { value: 'capacity_full',   label: 'Capacity full',              detail: 'We have reached our current enrollment limit.' },
@@ -194,6 +203,8 @@ export default function ApplicationsQueue() {
               ? <div style={{ background: '#fff', borderRadius: 12, padding: '40px 24px', textAlign: 'center', color: '#9aa0ad', fontSize: 14 }}>No applications found.</div>
               : items.map(app => {
                 const sc = STATUS_COLORS[app.status] || STATUS_COLORS.pending;
+                const es = app.enrollmentState || {};
+                const ec = ENROLLMENT_STATE_COLORS[es.code] || { bg: '#f1f5f9', fg: '#475569' };
                 return (
                   <div key={app.id} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e8ecf5', marginBottom: 12, overflow: 'hidden' }}>
 
@@ -204,6 +215,7 @@ export default function ApplicationsQueue() {
                           <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1d24' }}>{app.studentName}</span>
                           <span style={{ fontSize: 11, background: '#f0f4ff', color: '#2b3d6d', fontWeight: 700, borderRadius: 4, padding: '2px 7px' }}>{app.gradeLevel}</span>
                           <span style={{ fontSize: 11, background: sc.bg, color: sc.fg, fontWeight: 700, borderRadius: 4, padding: '2px 7px' }}>{sc.label}</span>
+                          {es.label && <span style={{ fontSize: 11, background: ec.bg, color: ec.fg, fontWeight: 800, borderRadius: 4, padding: '2px 7px' }}>{es.label}</span>}
                           {app.accountsCreated && <span style={{ fontSize: 11, background: '#e8f5e9', color: '#2e7d32', fontWeight: 700, borderRadius: 4, padding: '2px 7px' }}>Accounts ✓</span>}
                         </div>
                         <p style={{ fontSize: 12, color: '#5c6578', margin: '0 0 2px' }}>
@@ -234,6 +246,11 @@ export default function ApplicationsQueue() {
                             ['Parent Name', app.parentName],
                             ['Parent Email', app.parentEmail],
                             ['Phone', app.phone || '—'],
+                            ['Enrollment State', es.label || '—'],
+                            ['Next Action', es.action || '—'],
+                            ['Student Login', es.studentEmail || '—'],
+                            ['Parent Login', es.parentLoginEmail || '—'],
+                            ['Payment', es.subscriptionStatus ? `${es.subscriptionStatus}${es.paidUnlinked ? ' · unlinked' : ''}` : 'No payment yet'],
                           ].map(([k, v]) => (
                             <div key={k}>
                               <p style={{ fontSize: 10, fontWeight: 700, color: '#888', letterSpacing: '1px', textTransform: 'uppercase', margin: '0 0 4px' }}>{k}</p>
@@ -381,6 +398,7 @@ export default function ApplicationsQueue() {
               <div><strong>Parent Password:</strong> <code style={{ background: '#e8ecf5', padding: '2px 8px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>{credentials.parentPassword || credentials.tempPassword}</code></div>
               <div><strong>Student Login:</strong> {credentials.studentEmail || '—'}</div>
               <div><strong>Student Password:</strong> <code style={{ background: '#e8ecf5', padding: '2px 8px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>{credentials.studentPassword || '—'}</code></div>
+              <div><strong>Linked Payments:</strong> {credentials.linkedSubscriptions ?? 0}</div>
             </div>
 
             <div style={{ background: '#fffde7', border: '1px solid #f9a825', borderRadius: 8, padding: '10px 14px', fontSize: 12, color: '#5c4f00', marginBottom: 16 }}>

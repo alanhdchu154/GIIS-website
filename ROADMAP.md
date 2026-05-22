@@ -1,6 +1,8 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C36（Application activation now creates both student and deterministic parent login credentials）
+> 最後更新：2026-05-22 Slot C37（V1 lifecycle smoke + admin application enrollment/payment state added；production smoke pending deploy）
+>
+> 前次：2026-05-22 Slot C36（Application activation now creates both student and deterministic parent login credentials）
 >
 > 前次：2026-05-22 Slot C35（Deterministic parent login convention added: student email + `_parent`, default password `Parent2024!`）
 >
@@ -201,6 +203,18 @@
 - ✅ **驗證**：`node --check` 通過 `parentCredentials.js`、`mailer.js`、`applications.js`；`npm run build` 通過；`cd server && npm test -- --runInBand` 通過。
 - ✅ **Production deploy + smoke**：commit `e21b25df` 已 push；Lightsail `/home/ubuntu/GIIS-website` 已 fast-forward pull 並 `pm2 restart giis-api --update-env`。Production `npm run audit:parent-accounts` 仍為 5/5 already present；live `npm run audit:personas` 為 12 pass / 0 warn / 0 fail。
 - 🔧 **下一步**：把 application/payment state machine 做成 admin 可見狀態：`approved but unpaid`、`paid but unlinked`、`account created + welcome sent`。之後再把 `/apply` submit → payment link → welcome/account activation 的順序收成更少人工操作。
+
+## 🔧 V1 lifecycle smoke + application enrollment state（2026-05-22 Slot C37）
+
+> 目標：用「真學校 v1」標準測一條完整路線：new student application → account creation → parent/student login identity → payment link → course enrollment → module/quiz/midterm/final/assignment completion → 24-credit transcript eligibility → cleanup。這不是正式資料 seed，而是 production/staging 可重跑的 lifecycle smoke。
+
+- ✅ **Admin application state now shows the real operating gap**：`server/src/routes/applications.js` 的 `GET /api/applications` 現在回傳 `enrollmentState`，可區分 `pending_review`、`approved_unactivated`、`accounts_created_unpaid`、`paid_unlinked`、`active_paid`、`rejected`，並附 next action、student login、parent login、payment status。
+- ✅ **Activation links existing paid checkout rows**：`POST /api/applications/:id/activate` 會把同 parent contact email / deterministic parent login email 的 active/trialing/paid unlinked subscriptions 連到新 student，避免「已付款但帳號未 link」卡住。
+- ✅ **Applications Queue UI exposes enrollment/payment state**：`src/components/pages/Admin/ApplicationsQueue.js` 顯示 enrollment-state badge、next action、student login、parent login、payment status，以及 activate 後 linked payment count。Admin 不必去 DB 猜申請現在卡在哪。
+- ✅ **V1 lifecycle smoke script added**：新增 `server/scripts/v1-lifecycle-smoke.js`，`cd server && npm run smoke:v1-lifecycle:cleanup` 會建立 temporary `GIIS-V1-SMOKE` student/application/accounts/subscription/enrollments/module progress/quiz/final/assignment/24-credit transcript，驗證後自動刪除。
+- ✅ **Local verification**：`node --check server/src/routes/applications.js`、`node --check server/scripts/v1-lifecycle-smoke.js`、`npm run build`、`cd server && npm test -- --runInBand` 通過。Frontend syntax 由 CRA build 驗證；直接 `node --check` ES module page 不適用。
+- ⏳ **Production verification pending deploy**：下一步 push/deploy 後，在 Lightsail production 跑 `cd /home/ubuntu/GIIS-website/server && npm run smoke:v1-lifecycle:cleanup`，再跑 `npm run audit:personas`。若 production smoke 通過，這條可視為 v1-readiness gate 的一部分。
+- 🎨 **Visual/product review items captured for next pass**：public site 的 real-product screenshots 是正確方向，應持續避免 AI stock hero；下一階段要把 admissions funnel 做得更像 productized enrollment timeline，把 admin inline styling 收斂成 shared admin chrome，並讓 parent/student dashboard 的 progress evidence 更一眼可懂。
 
 ---
 
