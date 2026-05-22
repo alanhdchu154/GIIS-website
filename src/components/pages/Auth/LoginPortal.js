@@ -9,6 +9,18 @@ import styles from './LoginPortal.module.css';
 
 const API_BASE = getApiBase();
 
+async function readApiJson(response, fallbackMessage) {
+  const contentType = response.headers.get('content-type') || '';
+  if (!contentType.toLowerCase().includes('application/json')) {
+    throw new Error(fallbackMessage);
+  }
+  try {
+    return await response.json();
+  } catch {
+    throw new Error(fallbackMessage);
+  }
+}
+
 function emptyRegisterForm() {
   return {
     name: '',
@@ -71,7 +83,7 @@ export default function LoginPortal({ language }) {
         credentials: 'include',
         body: JSON.stringify({ email: loginEmail.trim(), password: loginPassword }),
       });
-      const data = await r.json().catch(() => ({}));
+      const data = await readApiJson(r, t.unexpectedApiResponse);
       if (!r.ok) throw new Error(data.error || t.loginFailed);
 
       if (data.role === 'admin' && data.admin) {
@@ -118,7 +130,7 @@ export default function LoginPortal({ language }) {
           zipCode: reg.zipCode.trim(),
         }),
       });
-      const data = await r.json().catch(() => ({}));
+      const data = await readApiJson(r, t.unexpectedApiResponse);
       if (!r.ok) throw new Error(data.error || t.registerFailed);
       setStudentSession(data.token, data.student);
       navigate('/transcript', { replace: true });

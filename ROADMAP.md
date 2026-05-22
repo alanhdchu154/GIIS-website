@@ -1,6 +1,14 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-21 Slot C30（Production API deployed on Lightsail；Learn Portal ModuleProgress backfilled；Hanxi credit correction applied）
+> 最後更新：2026-05-22 Slot C34（Persona route audit added for principal assistant, student, parent, and new-student flows）
+>
+> 前次：2026-05-22 Slot C33（Production API-base fallback and login wrong-response guards added；build passed；deploy still pending）
+>
+> 前次：2026-05-21 Slot C32（Live persona review found production frontend API-base/login blocker and next-version priorities）
+>
+> 前次：2026-05-21 Slot C31（Umi Command Center added for GIIS-wide orchestration, Claude Code handoffs, reviews, and school-level decisions）
+>
+> 前次：2026-05-21 Slot C30（Production API deployed on Lightsail；Learn Portal ModuleProgress backfilled；Hanxi credit correction applied）
 >
 > 前次：2026-05-21 Slot C29（Admin progress data-flow split official transcript credits from Learn Portal credits；dry-run repair tool added for quiz/module/final completion gaps）
 >
@@ -109,6 +117,60 @@
 4. 🔧 **Admin operating loop 下一段** — 部分完成：EmailLog status UI 已完成於 Slot C23，forgot-password delivery logging 已完成於 Slot C24；待做 official document DB-driven per-student issue/version workflow、manual transcript row source label、resend action。
 5. 🔧 **Stripe/apply/student creation 閉環** — 待做：payment success 自動 link student/parent、founder pricing 12-month lock 寫入資料、welcome email + login + next steps。
 6. 🔧 **Course content cleanup** — 待做：AP Bio M14-M16、AP CSA / AP Calc review failed / errata、course quality audit warn 逐步下降。
+
+---
+
+## ✅ Umi Command Center / Claude Code orchestration（2026-05-21 Slot C31）
+
+> 目標：把 Umi 定位成 GIIS 的 principal-assistant / project chief-of-staff layer。Alan 可以丟想法或混亂判斷給 Umi；Umi 負責整理成學校營運 priority、Claude Code handoff、品質審核與 roadmap 更新。這不是只管影片 pipeline，而是管整個 GIIS project 的協調與監督。
+
+- ✅ **新增 orchestration workspace**：`umi/README.md` 定義 Umi Command Center 的用途、operating model、review lens 與 safety rules。`ROADMAP.md` 仍是 canonical product source-of-truth；`umi/` 只管想法整理、handoff、review、decision notes。
+- ✅ **Alan inbox**：`umi/inbox.md` 用來收 Alan 的 raw thoughts，可以很亂；Umi 之後負責分類成 school / operations、parent trust、parent transparency、student results、engineering、content/video、finance/payment、admissions/sales。
+- ✅ **Active workload board**：`umi/workload.md` 只追少量 active items，避免 Alan 同時開太多平行線；目前記錄 Command Center 已建立，下一步是實戰使用而不是繼續加流程。
+- ✅ **Decision log**：`umi/decisions.md` 記錄 durable project decisions：Umi 是 GIIS-wide principal-assistant orchestration layer；Claude Code / implementation agents 是 workers；任何完成或新發現的重要工作仍必須回寫 `ROADMAP.md`。
+- ✅ **Worker handoff template**：`umi/handoffs/README.md` 提供 Claude Code task brief 模板，包含 context、goal、files、scope、acceptance criteria、Umi review notes，以及 standing rules。
+- ✅ **Umi review template**：`umi/reviews/README.md` 提供 reviewer 格式，優先檢查 parent trust、official record/payment safety、parent transparency、build/test correctness、maintainability。
+- 🔧 **下一步**：下一個實際 GIIS 任務應先丟進 Umi flow：Alan idea → `umi/inbox.md` / chat → Umi task shaping → bounded handoff → implementation → Umi review → `ROADMAP.md` update。不要先把它做成自動執行外部動作；等工作流穩定後再考慮 runner / CLI bridge。
+
+---
+
+## 🔎 Live persona review findings（2026-05-21 Slot C32）
+
+> 目標：用高中生、家長、校長助理 / admin 三個視角打開 live site 走一輪，判斷目前版本成熟度與下一版優先順序。本輪是 review / diagnosis，尚未修 code。
+
+- 🚨 **P0 production frontend blocker**：`https://genesisideas.school/` 仍 served old Netlify bundle `main.49b0480e.js`，且 production frontend build 沒有正確 `REACT_APP_API_URL=https://api.genesisideas.school`。結果 `/login` 學生/admin 登入卡在 `Signing in…`；`https://genesisideas.school/api/auth/login` 回 Netlify HTML，而真正 API `https://api.genesisideas.school/api/...` 正常。這會直接破壞 student/admin/parent trust，必須先修 Netlify env / deploy。
+- ⚠️ **Parent real portal gap**：production DB `ParentAccount=0`、`Subscription=0`、`EmailLog=0`。Public `/parent/demo` 很像 sample dashboard，但真家長登入還沒有 seed/activation/account path 可測；家長視角會覺得「demo 很漂亮，但我付錢後怎麼拿到帳號？」。
+- ✅ **Public trust foundation is strong**：首頁、Pricing、Pathways、School Profile 都已明確傳達 Florida-registered private school、24-credit framework、parent reports、Class of 2026 outcomes、official transcript/diploma。這已經不是 v0 landing page。
+- ⚠️ **Admissions conversion still brochure-like**：`/admission` 還是四步驟文字與文件清單，缺少「Apply → pay → parent/student account → first course」的 productized flow evidence。下一版應把 admissions 變成 operational funnel，而不是資訊頁。
+- ⚠️ **Student flow likely good behind login, but currently untestable from live frontend**：production API/DB 有 5 students、19 completed enrollments、224 quizAttempts、38 submitted exams、224 ModuleProgress；後端資料像真 LMS。但 live frontend API-base blocker 讓學生體驗無法進去。
+- 🎯 **Version judgment**：目前 backend/records/admin capability 像 `v0.8 Trust MVP`；public marketing 像 `v0.7`; live end-to-end customer experience 因 login/API base blocker 只能算 `v0.55`。到 `v1.0` 的定義應是：public apply/payment/login/parent visibility/official docs 全部能從 live site 一口氣走通。
+
+---
+
+## ✅ Production login/API-base hardening（2026-05-22 Slot C33）
+
+> 目標：修 Slot C32 找到的 live frontend API-base/login blocker。先做 code-level 防護，避免 production frontend 在 Netlify env 漏設時默默打到 `https://genesisideas.school/api/...` 並拿到 HTML。
+
+- ✅ **Production API fallback**：`src/config/apiBase.js` 現在在 production build 且 hostname 是 `genesisideas.school` / `www.genesisideas.school` 時，若 `REACT_APP_API_URL` 未設定，會 fallback 到 `https://api.genesisideas.school`。Netlify env 正確設定仍優先。
+- ✅ **Student/admin login wrong-response guard**：`src/components/pages/Auth/LoginPortal.js` 現在要求 auth API response 是 JSON；如果收到 Netlify HTML 或其他非 JSON response，會顯示明確 portal/API 錯誤，不會讓使用者以為自己帳密錯或卡住。
+- ✅ **Parent login wrong-response guard**：`src/components/pages/Parent/ParentLogin.js` 加上 missing API guard 與 non-JSON response guard，避免 parent portal 在 API-base 錯誤時只顯示 generic network error。
+- ✅ **Bilingual user-facing copy**：`src/i18n/siteStrings.js` 新增 student/admin login 的 abnormal server response 文案，避免把 infrastructure 問題包成普通 login failure。
+- ✅ **驗證**：`npm run build` 通過。只有既有 Browserslist outdated warning，未影響 build。
+- ⚠️ **Deploy still pending**：這輪只改 repo code，尚未執行 Netlify deploy / env verification。要讓 live site 生效，需要推送並確認 Netlify 最新 bundle 不再是舊 `main.49b0480e.js`，且 `/login` 實際呼叫 `https://api.genesisideas.school/api/auth/login`。
+
+## ✅ Persona route audit gate（2026-05-22 Slot C34）
+
+> 目標：每次更新後，用「校長助理 / admin、學生、家長、新生」四條路線檢查 live site 或指定環境有沒有崩。這是 trust / transparency / results 的 smoke gate，不取代完整 E2E，但要能抓到 production API-base、login 卡住、public funnel 空白、parent portal 入口破掉這類 P0。
+
+- ✅ **新增 persona audit script**：`tools/persona-audit/audit_site.js` + `npm run audit:personas`。預設測 `https://genesisideas.school` + `https://api.genesisideas.school`，也可用 `SITE_URL` / `API_URL` 指向 staging 或 local。
+- ✅ **New-student route**：檢查 homepage、pricing、admission、apply、pathways、school-profile 是否正常 render，並要求看到 Florida/private-school trust、pricing、application、pathway/credit 等 evidence。
+- ✅ **Parent route**：固定檢查 `/parent/demo`；若提供 `PARENT_EMAIL` / `PARENT_PASSWORD`，會再登入 `/parent/login` 並檢查 real dashboard。沒有 parent credentials 時列 warning，不讓整個 audit false-fail。
+- ✅ **Student route**：使用 seed senior account（預設 `hanxi.xiao@genesisideas.school`，密碼由 env 可覆蓋）登入 `/login`，確認能進 `/learn`，並抓 screenshot。
+- ✅ **Principal-assistant / admin route**：使用 admin account（env 可覆蓋）登入 `/login`，確認能進 `/admin` 與 `/admin/progress`，並抓 screenshot。
+- ✅ **Production API-base guard**：audit 會抓 live `main.*.js` bundle，確認 bundle 內含 `api.genesisideas.school`。這會直接抓出 Netlify deploy/env 漏設造成 `/login` 打到 same-origin `/api/...` 的舊問題。
+- ✅ **Netlify env hardening**：`netlify.toml` 現在明確設定 `REACT_APP_API_URL=https://api.genesisideas.school`，與 Slot C33 code fallback 雙保險。
+- ✅ **Live verification**：`npm run audit:personas` 已對 production 跑過：11 pass / 1 warn / 0 fail。通過 API health、production bundle API-base、new-student public funnel、student login → Learn Portal、admin login → dashboard/progress、parent demo。唯一 warning 是 production 尚未提供 `PARENT_EMAIL` / `PARENT_PASSWORD` 給 audit 跑 real parent login。
+- 🔧 **下一步**：把 `npm run audit:personas` 放進每次 deploy 後的手動 checklist；等 CI/CD 穩定後再升級成 GitHub Action / Netlify post-deploy smoke。audit 若在 live 上 fail，先看 blocker 是 deploy stale、API down、auth credentials drift，還是真的 UI regression。
 
 ---
 

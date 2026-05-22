@@ -7,6 +7,18 @@ import { getParentSession, setParentSession } from '../../../api/authStorage';
 
 const API = getApiBase();
 
+async function readApiJson(response, fallbackMessage) {
+  const contentType = response.headers.get('content-type') || '';
+  if (!contentType.toLowerCase().includes('application/json')) {
+    throw new Error(fallbackMessage);
+  }
+  try {
+    return await response.json();
+  } catch {
+    throw new Error(fallbackMessage);
+  }
+}
+
 export default function ParentLogin({ language }) {
   const isEn = language !== 'zh';
   const navigate = useNavigate();
@@ -23,6 +35,12 @@ export default function ParentLogin({ language }) {
   async function handleSubmit(e) {
     e.preventDefault();
     setError('');
+    if (!API) {
+      setError(isEn
+        ? 'API address is not configured. Please contact admissions@genesisideas.school.'
+        : '未设定 API 位址。请联系 admissions@genesisideas.school。');
+      return;
+    }
     setLoading(true);
     try {
       const res = await fetch(`${API}/api/parent/login`, {
@@ -31,12 +49,14 @@ export default function ParentLogin({ language }) {
         credentials: 'include',
         body: JSON.stringify({ email: email.trim().toLowerCase(), password }),
       });
-      const data = await res.json();
+      const data = await readApiJson(res, isEn
+        ? 'The parent portal reached the wrong server response. Please try again in a few minutes or contact admissions@genesisideas.school.'
+        : '家长入口收到异常的伺服器回应。请稍后再试，或联系 admissions@genesisideas.school。');
       if (!res.ok) { setError(data.error || 'Login failed'); return; }
       setParentSession({ studentId: data.studentId, email: email.trim().toLowerCase() });
       navigate('/parent/dashboard', { replace: true });
-    } catch {
-      setError(isEn ? 'Network error — please try again.' : '网络错误，请重试。');
+    } catch (e) {
+      setError(e.message || (isEn ? 'Network error — please try again.' : '网络错误，请重试。'));
     } finally {
       setLoading(false);
     }

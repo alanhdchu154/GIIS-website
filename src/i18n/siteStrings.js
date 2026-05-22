@@ -90,6 +90,9 @@ export function getAuthPageStrings(language) {
     loginFailed: en ? 'Login failed' : '登入失败',
     registerFailed: en ? 'Registration failed' : '注册失败',
     unexpectedLogin: en ? 'Unexpected response from server.' : '伺服器回应异常。',
+    unexpectedApiResponse: en
+      ? 'The school portal reached the wrong server response. Please try again in a few minutes or contact admissions@genesisideas.school.'
+      : '学校入口收到异常的伺服器回应。请稍后再试，或联系 admissions@genesisideas.school。',
     missingApiUrl: en
       ? 'API address is not configured. Set REACT_APP_API_URL, or run npm start (defaults to http://localhost:4000).'
       : '未设定 API 位址。请设定 REACT_APP_API_URL，或使用 npm start（预设 http://localhost:4000）。',
