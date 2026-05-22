@@ -1,6 +1,8 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C40（Auth rate limiting narrowed so parent dashboard data cannot lock out login flows）
+> 最後更新：2026-05-22 Slot C41（Parent persona audit loading assertion refined after dashboard content verification）
+>
+> 前次：2026-05-22 Slot C40（Auth rate limiting narrowed so parent dashboard data cannot lock out login flows）
 >
 > 前次：2026-05-22 Slot C39（Parent dashboard load loop fixed；persona audit tightened against loading/failed parent state）
 >
@@ -249,7 +251,15 @@
 
 - ✅ **Parent data route no longer consumes auth login quota**：`server/src/index.js` 不再把 `authLimiter` 套在整個 `/api/parent` router。現在只限制 `/api/parent/login`、`/api/parent/forgot-password`、`/api/parent/reset-password`，`/api/parent/me` 不會因 dashboard refresh 消耗 login quota。
 - ✅ **Login smoke tolerance improved**：`AUTH_RATE_LIMIT_MAX` 可用 env 覆蓋，預設從 20/15min 提高到 60/15min。仍保留 brute-force 防線，但不會被一次 persona audit + frontend loop 這麼容易鎖死。
-- ⏳ **Production verification pending deploy**：下一步 push/deploy/restart API 後，auth limiter memory 會清空；再重跑加嚴版 `npm run audit:personas`，確認 student/admin/parent login 和 parent dashboard 都通過。
+- ✅ **Production verification**：commit `b4fc6a51` 已 push/deploy 到 Lightsail，`pm2 restart giis-api --update-env` 後 production `npm run smoke:v1-lifecycle:cleanup` 通過；auth limiter memory 已隨 API restart 清空。
+- ⚠️ **Follow-up found during persona audit**：加嚴版 parent dashboard audit 已確認 student/admin login 通過，但 parent route 被 overly broad `Loading` assertion 擋下。Dashboard content 已被 assertion 找到，下一 slot 收斂 audit 判斷。
+
+## 🔧 Parent audit loading assertion refinement（2026-05-22 Slot C41）
+
+> 目標：保留 parent dashboard audit 對 `Failed to load data` / 真 loading shell 的防護，但不要因 dashboard 已載入後某個按鈕或 incidental text 含 `Loading…` 而 false-fail。
+
+- ✅ **Audit refined**：`tools/persona-audit/audit_site.js` 現在仍要求 parent dashboard 出現 `Parent Portal`、`Credits Earned`、GPA/transcript evidence；只有整個 body 還是 loading shell 時才報 `Parent dashboard is still on the loading shell`。
+- ✅ **Production verification**：加嚴版 `npm run audit:personas` 對 live site 通過：12 pass / 0 warn / 0 fail。Parent dashboard screenshot 已確認不再停在 loading，顯示 Hanxi parent view：32 credits、GPA 3.78、100% graduation progress、recent activity、official transcript link、subscription controls。
 
 ---
 

@@ -204,8 +204,13 @@ async function auditParent(page) {
   await clickSubmit(page);
   await waitForPath(page, /^\/parent\/dashboard\/?$/, 'Parent login');
   const body = await expectText(page, [/Parent Portal|家长面板/i, /Credits Earned|已获学分/i, /GPA|Transcript|成绩单/i], 'Parent dashboard');
-  if (/Loading…|Loading\.\.\.|加载中/.test(body)) {
-    throw new Error('Parent dashboard still shows loading state after data assertion.');
+  if (/^(Loading…|Loading\.\.\.|加载中…?)$/i.test(body.trim())) {
+    throw new Error('Parent dashboard is still on the loading shell after data assertion.');
+  }
+  await page.waitForTimeout(1000);
+  const stableBody = await page.locator('body').innerText({ timeout: TIMEOUT });
+  if (!/Credits Earned|已获学分/i.test(stableBody) || /^(Loading…|Loading\.\.\.|加载中…?)$/i.test(stableBody.trim())) {
+    throw new Error('Parent dashboard did not remain stable before screenshot.');
   }
   await screenshot(page, 'parent-dashboard');
   markPass('Parent route: real login to dashboard');
