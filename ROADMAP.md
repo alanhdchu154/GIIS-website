@@ -1,6 +1,6 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C38（Server GPA totals now handle Prisma Decimal values；V1 smoke requires computed GPA）
+> 最後更新：2026-05-22 Slot C38（Server GPA totals now handle Prisma Decimal values；production V1 smoke + persona audit passed）
 >
 > 前次：2026-05-22 Slot C37（V1 lifecycle smoke + admin application enrollment/payment state added；production smoke pending deploy）
 >
@@ -215,7 +215,7 @@
 - ✅ **Applications Queue UI exposes enrollment/payment state**：`src/components/pages/Admin/ApplicationsQueue.js` 顯示 enrollment-state badge、next action、student login、parent login、payment status，以及 activate 後 linked payment count。Admin 不必去 DB 猜申請現在卡在哪。
 - ✅ **V1 lifecycle smoke script added**：新增 `server/scripts/v1-lifecycle-smoke.js`，`cd server && npm run smoke:v1-lifecycle:cleanup` 會建立 temporary `GIIS-V1-SMOKE` student/application/accounts/subscription/enrollments/module progress/quiz/final/assignment/24-credit transcript，驗證後自動刪除。
 - ✅ **Local verification**：`node --check server/src/routes/applications.js`、`node --check server/scripts/v1-lifecycle-smoke.js`、`npm run build`、`cd server && npm test -- --runInBand` 通過。Frontend syntax 由 CRA build 驗證；直接 `node --check` ES module page 不適用。
-- ⏳ **Production verification pending deploy**：下一步 push/deploy 後，在 Lightsail production 跑 `cd /home/ubuntu/GIIS-website/server && npm run smoke:v1-lifecycle:cleanup`，再跑 `npm run audit:personas`。若 production smoke 通過，這條可視為 v1-readiness gate 的一部分。
+- ✅ **Production verification**：commit `cb5c7ece` 已 push/deploy 到 Lightsail，並跑過 `cd /home/ubuntu/GIIS-website/server && npm run smoke:v1-lifecycle:cleanup`。第一次 production smoke 通過且自動 cleanup，但暴露 GPA 顯示 `-` 的 Decimal handling gap，因此升級到 Slot C38。
 - 🎨 **Visual/product review items captured for next pass**：public site 的 real-product screenshots 是正確方向，應持續避免 AI stock hero；下一階段要把 admissions funnel 做得更像 productized enrollment timeline，把 admin inline styling 收斂成 shared admin chrome，並讓 parent/student dashboard 的 progress evidence 更一眼可懂。
 
 ## ✅ Server GPA Decimal handling（2026-05-22 Slot C38）
@@ -226,7 +226,8 @@
 - ✅ **Regression test added**：`server/src/lib/gpa.test.js` 新增 Decimal-like value case，避免 parent dashboard / weekly report / smoke script 再把 DB decimal GPA 算成空值。
 - ✅ **V1 smoke gate tightened**：`server/scripts/v1-lifecycle-smoke.js` 現在要求 transcript GPA 必須成功計算；只有 credits 滿 24 不再足夠。
 - ✅ **Local verification**：`node --check server/src/lib/gpa.js`、`node --check server/scripts/v1-lifecycle-smoke.js`、`cd server && npm test -- --runInBand`、`npm run build` 通過。
-- ⏳ **Production verification pending deploy**：下一步部署後重跑 `npm run smoke:v1-lifecycle:cleanup`，預期 transcript `weightedGpa` / `unweightedGpa` 不再是 `-`。
+- ✅ **Production verification**：commit `a3423316` 已 push/deploy 到 Lightsail；production `npm run smoke:v1-lifecycle:cleanup` 通過，建立並刪除 temporary `GIIS-V1-SMOKE` student。結果：4 enrollments、38 quiz attempts、8 exam attempts、4 graded assignments、38 moduleProgresses、24 transcript credits、GPA `3.68`、`gpaComputed=true`、`leftoverStudent=false`。
+- ✅ **Post-deploy persona audit**：`npm run audit:personas` 對 live site 通過：12 pass / 0 warn / 0 fail，包含 new-student public funnel、student login → Learn Portal、admin dashboard/progress、real parent login → dashboard。
 
 ---
 
