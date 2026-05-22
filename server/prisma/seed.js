@@ -5,6 +5,7 @@ const path = require('path');
 const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
 const { computeRowGpa } = require('../src/lib/gpa');
+const { DEFAULT_PARENT_PASSWORD, parentLoginEmailForStudentEmail } = require('../src/lib/parentCredentials');
 
 const prisma = new PrismaClient();
 
@@ -426,14 +427,16 @@ const hanxiXiaoSemesters = makeSemesters([
 ]);
 
 async function upsertStudentWithAccount({ email, password, studentCode, student, semestersCreate }) {
+  const normalizedEmail = email.toLowerCase();
+  const parentLoginEmail = parentLoginEmailForStudentEmail(normalizedEmail);
   const existing = await prisma.studentAccount.findUnique({
-    where: { email: email.toLowerCase() },
+    where: { email: normalizedEmail },
     include: { student: true },
   });
 
   if (existing) {
     await prisma.$transaction(async (tx) => {
-      await tx.studentAccount.delete({ where: { email: email.toLowerCase() } });
+      await tx.studentAccount.delete({ where: { email: normalizedEmail } });
       await tx.student.delete({ where: { id: existing.studentId } });
     });
     console.log(`Deleted existing student: ${email}`);
@@ -449,24 +452,36 @@ async function upsertStudentWithAccount({ email, password, studentCode, student,
   }
 
   const passwordHash = await bcrypt.hash(password, 12);
+  const parentPasswordHash = await bcrypt.hash(DEFAULT_PARENT_PASSWORD, 12);
 
   await prisma.$transaction(async (tx) => {
     const st = await tx.student.create({
       data: {
         ...student,
+        parentEmail: student.parentEmail || parentLoginEmail,
         studentCode,
         semesters: { create: semestersCreate },
       },
     });
     await tx.studentAccount.create({
       data: {
-        email: email.toLowerCase(),
+        email: normalizedEmail,
         passwordHash,
         studentId: st.id,
       },
     });
+    if (parentLoginEmail) {
+      await tx.parentAccount.create({
+        data: {
+          email: parentLoginEmail,
+          passwordHash: parentPasswordHash,
+          studentId: st.id,
+        },
+      });
+    }
   });
   console.log(`Seeded: ${email} / ${password}`);
+  if (parentLoginEmail) console.log(`  Parent: ${parentLoginEmail} / ${DEFAULT_PARENT_PASSWORD}`);
 }
 
 function collectCourseFiles(dir) {

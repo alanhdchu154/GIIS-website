@@ -3,6 +3,10 @@
 const fs = require('fs/promises');
 const path = require('path');
 const { chromium } = require('playwright');
+const {
+  DEFAULT_PARENT_PASSWORD,
+  parentLoginEmailForStudentEmail,
+} = require('../../server/src/lib/parentCredentials');
 
 const SITE_URL = trimSlash(process.env.SITE_URL || 'https://genesisideas.school');
 const API_URL = trimSlash(process.env.API_URL || 'https://api.genesisideas.school');
@@ -10,8 +14,8 @@ const STUDENT_EMAIL = process.env.STUDENT_EMAIL || 'hanxi.xiao@genesisideas.scho
 const STUDENT_PASSWORD = process.env.STUDENT_PASSWORD || 'Student2024!!';
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@genesisideas.school';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin';
-const PARENT_EMAIL = process.env.PARENT_EMAIL || '';
-const PARENT_PASSWORD = process.env.PARENT_PASSWORD || '';
+const PARENT_EMAIL = process.env.PARENT_EMAIL || parentLoginEmailForStudentEmail(STUDENT_EMAIL) || '';
+const PARENT_PASSWORD = process.env.PARENT_PASSWORD || DEFAULT_PARENT_PASSWORD;
 const RUN_AUTH = process.env.RUN_AUTH !== '0';
 const HEADLESS = process.env.HEADLESS !== '0';
 const TIMEOUT = Number(process.env.AUDIT_TIMEOUT_MS || 15000);

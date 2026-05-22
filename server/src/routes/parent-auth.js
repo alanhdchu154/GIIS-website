@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const { PrismaClient } = require('@prisma/client');
 const { sendPasswordResetEmail } = require('../lib/mailer');
+const { DEFAULT_PARENT_PASSWORD, parentLoginEmailForStudentEmail } = require('../lib/parentCredentials');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -130,21 +131,30 @@ router.post('/setup', async (req, res) => {
   try { payload = jwt.verify(token, process.env.JWT_SECRET); } catch { return res.status(401).json({ error: 'Invalid token' }); }
   if (payload.role !== 'admin') return res.status(403).json({ error: 'Admin only' });
 
-  const { studentId, email, password } = req.body || {};
-  if (!studentId || !email || !password) return res.status(400).json({ error: 'studentId, email, password required' });
-  if (password.length < 8) return res.status(400).json({ error: 'Password must be at least 8 characters' });
+  const { studentId } = req.body || {};
+  const requestedEmail = typeof req.body?.email === 'string' ? req.body.email.trim().toLowerCase() : '';
+  const requestedPassword = typeof req.body?.password === 'string' ? req.body.password : '';
+  if (!studentId) return res.status(400).json({ error: 'studentId required' });
 
-  const student = await prisma.student.findUnique({ where: { id: studentId } });
+  const student = await prisma.student.findUnique({
+    where: { id: studentId },
+    include: { account: { select: { email: true } } },
+  });
   if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const email = requestedEmail || parentLoginEmailForStudentEmail(student.account?.email);
+  const password = requestedPassword || DEFAULT_PARENT_PASSWORD;
+  if (!email) return res.status(400).json({ error: 'email required when student login email is unavailable' });
+  if (password.length < 8) return res.status(400).json({ error: 'Password must be at least 8 characters' });
 
   const passwordHash = await bcrypt.hash(password, 12);
   const account = await prisma.parentAccount.upsert({
-    where: { email: email.trim().toLowerCase() },
+    where: { email },
     update: { passwordHash, studentId },
-    create: { email: email.trim().toLowerCase(), passwordHash, studentId },
+    create: { email, passwordHash, studentId },
   });
 
-  res.json({ ok: true, id: account.id });
+  res.json({ ok: true, id: account.id, email });
 });
 
 module.exports = router;

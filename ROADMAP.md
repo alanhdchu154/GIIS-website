@@ -1,6 +1,8 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C34（Persona route audit added for principal assistant, student, parent, and new-student flows）
+> 最後更新：2026-05-22 Slot C35（Deterministic parent login convention added: student email + `_parent`, default password `Parent2024!`）
+>
+> 前次：2026-05-22 Slot C34（Persona route audit added for principal assistant, student, parent, and new-student flows）
 >
 > 前次：2026-05-22 Slot C33（Production API-base fallback and login wrong-response guards added；build passed；deploy still pending）
 >
@@ -171,6 +173,19 @@
 - ✅ **Netlify env hardening**：`netlify.toml` 現在明確設定 `REACT_APP_API_URL=https://api.genesisideas.school`，與 Slot C33 code fallback 雙保險。
 - ✅ **Live verification**：`npm run audit:personas` 已對 production 跑過：11 pass / 1 warn / 0 fail。通過 API health、production bundle API-base、new-student public funnel、student login → Learn Portal、admin login → dashboard/progress、parent demo。唯一 warning 是 production 尚未提供 `PARENT_EMAIL` / `PARENT_PASSWORD` 給 audit 跑 real parent login。
 - 🔧 **下一步**：把 `npm run audit:personas` 放進每次 deploy 後的手動 checklist；等 CI/CD 穩定後再升級成 GitHub Action / Netlify post-deploy smoke。audit 若在 live 上 fail，先看 blocker 是 deploy stale、API down、auth credentials drift，還是真的 UI regression。
+
+## ✅ Deterministic parent login convention（2026-05-22 Slot C35）
+
+> 目標：Alan 建議 parent account 不要每次人工想一組，而是用學生登入信箱推導：`student_local_part_parent@same_domain`，預設密碼 `Parent2024!`。這降低 admin 建帳成本，也讓 persona audit 可以固定跑 real parent login。
+
+- ✅ **Shared credential helper**：新增 `server/src/lib/parentCredentials.js`，集中定義 `parentLoginEmailForStudentEmail()` 與 `DEFAULT_PARENT_PASSWORD=Parent2024!`。
+- ✅ **Seed consistency**：`server/prisma/seed.js` 現在每個 seeded student 都會同時建立 deterministic parent account；若沒有真實 parent contact email，`Student.parentEmail` 會用 parent login alias 補上。
+- ✅ **Admin parent setup default**：`src/components/pages/Admin/AdminTranscriptPage.js` 的 Parent section 拆清楚「Parent Contact Email」與「Parent Portal Login」。Portal login 預設為學生信箱加 `_parent`，密碼預設 `Parent2024!`；建立/重設 parent login 不再把 login alias 強行寫成 contact email。
+- ✅ **Parent setup API default**：`POST /api/parent/setup` 現在只要提供 `studentId`，就可從 student account email 推導 parent login email，並使用預設密碼；仍可傳入自訂 email/password 覆蓋。
+- ✅ **Weekly report recipient safety**：`weeklyReportService` 現在優先寄 purchaser email / `Student.parentEmail`，再 fallback parent login account，避免 school-managed login alias 搶走真實家長收件地址。
+- ✅ **Repair tool**：新增 `server/scripts/ensure-parent-accounts.js`，`npm run audit:parent-accounts` dry-run、`npm run repair:parent-accounts` apply，可為既有學生補 deterministic parent accounts 並重設為預設密碼。
+- ✅ **Persona audit default**：`npm run audit:personas` 現在預設用 `hanxi.xiao_parent@genesisideas.school` / `Parent2024!` 跑 real parent login；不再需要手動傳 `PARENT_EMAIL` / `PARENT_PASSWORD` 才能測 parent route。
+- 🔧 **Production note**：code 已支援；若 production DB 尚未補 parent accounts，需在 Lightsail 跑 `cd server && npm run repair:parent-accounts`，再重跑 `npm run audit:personas`，確認 parent real login 也通過。
 
 ---
 

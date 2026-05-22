@@ -16,6 +16,14 @@ const adminCardStyle = {
   borderColor: '#e2e8f0',
   boxShadow: '0 10px 28px rgba(26, 45, 90, 0.06)',
 };
+const DEFAULT_PARENT_PASSWORD = 'Parent2024!';
+
+function parentLoginEmailForStudentEmail(studentEmail) {
+  const email = String(studentEmail || '').trim().toLowerCase();
+  const match = email.match(/^([^@\s]+)@([^@\s]+\.[^@\s]+)$/);
+  if (!match) return '';
+  return `${match[1]}_parent@${match[2]}`;
+}
 
 function LoginSection({ studentId, isEn }) {
   const [loginEmail, setLoginEmail] = useState(null);
@@ -98,9 +106,10 @@ function LoginSection({ studentId, isEn }) {
 
 function ParentEmailSection({ studentId, isEn }) {
   const [parentEmail, setParentEmail] = useState(null);
+  const [defaultParentLogin, setDefaultParentLogin] = useState('');
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState('');
-  const [accountForm, setAccountForm] = useState({ email: '', password: '' });
+  const [accountForm, setAccountForm] = useState({ email: '', password: DEFAULT_PARENT_PASSWORD });
   const [saving, setSaving] = useState(false);
   const [accountSaving, setAccountSaving] = useState(false);
   const [msg, setMsg] = useState('');
@@ -110,9 +119,15 @@ function ParentEmailSection({ studentId, isEn }) {
     fetch(`${API}/api/students/${studentId}`, { credentials: 'include' })
       .then((r) => r.json())
       .then((d) => {
-        const email = d.student?.parentEmail ?? '';
-        setParentEmail(email || null);
-        setAccountForm((f) => ({ ...f, email }));
+        const contactEmail = d.student?.parentEmail ?? '';
+        const generatedLogin = parentLoginEmailForStudentEmail(d.student?.loginEmail);
+        setParentEmail(contactEmail || null);
+        setDefaultParentLogin(generatedLogin);
+        setAccountForm((f) => ({
+          ...f,
+          email: generatedLogin || contactEmail || f.email,
+          password: f.password || DEFAULT_PARENT_PASSWORD,
+        }));
       })
       .catch(() => {});
   }, [studentId]);
@@ -136,7 +151,6 @@ function ParentEmailSection({ studentId, isEn }) {
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || 'Failed');
       setParentEmail(trimmed || null);
-      setAccountForm((f) => ({ ...f, email: trimmed || f.email }));
       setEditing(false);
       setMsg(isEn ? '✓ Parent email saved.' : '✓ 家长邮箱已储存。');
     } catch (err) {
@@ -160,15 +174,6 @@ function ParentEmailSection({ studentId, isEn }) {
     }
     setAccountSaving(true);
     try {
-      const profileRes = await fetch(`${API}/api/students/${studentId}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ parentEmail: email }),
-      });
-      const profileData = await profileRes.json().catch(() => ({}));
-      if (!profileRes.ok) throw new Error(profileData.error || 'Could not save parent email');
-
       const setupRes = await fetch(`${API}/api/parent/setup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -178,8 +183,7 @@ function ParentEmailSection({ studentId, isEn }) {
       const setupData = await setupRes.json().catch(() => ({}));
       if (!setupRes.ok) throw new Error(setupData.error || 'Could not create parent account');
 
-      setParentEmail(email);
-      setAccountForm({ email, password: '' });
+      setAccountForm({ email: setupData.email || email, password: DEFAULT_PARENT_PASSWORD });
       setAccountMsg(isEn ? '✓ Parent portal login created/reset.' : '✓ 家长 Portal 登入已建立／重设。');
     } catch (err) {
       setAccountMsg(err.message);
@@ -191,7 +195,7 @@ function ParentEmailSection({ studentId, isEn }) {
   return (
     <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-1">
-        <span className="fw-semibold small">{isEn ? 'Parent Portal Email' : '家长 Portal 邮箱'}</span>
+        <span className="fw-semibold small">{isEn ? 'Parent Contact Email' : '家长联络邮箱'}</span>
         <button className="btn btn-sm btn-outline-secondary" onClick={() => { setEditing((v) => !v); setDraft(parentEmail || ''); setMsg(''); }}>
           {editing ? (isEn ? 'Cancel' : '取消') : parentEmail ? (isEn ? 'Edit' : '编辑') : (isEn ? '+ Set email' : '＋ 设定邮箱')}
         </button>
@@ -199,13 +203,13 @@ function ParentEmailSection({ studentId, isEn }) {
       <p className="small text-muted mb-2">
         {parentEmail
           ? <><span className="badge bg-success me-1">✓</span>{parentEmail}</>
-          : <span className="text-warning fw-semibold">{isEn ? 'No parent email — parent cannot log in yet.' : '尚未设定家长邮箱，家长无法登入。'}</span>}
+          : <span className="text-warning fw-semibold">{isEn ? 'No parent contact email saved.' : '尚未储存家长联络邮箱。'}</span>}
       </p>
       {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
       {editing && (
         <form onSubmit={handleSave} className="mt-2">
           <div className="mb-2">
-            <label className="form-label small mb-1">{isEn ? 'Parent Email' : '家长邮箱'}</label>
+            <label className="form-label small mb-1">{isEn ? 'Parent Contact Email' : '家长联络邮箱'}</label>
             <input type="email" className="form-control form-control-sm" value={draft}
               onChange={(e) => setDraft(e.target.value)}
               placeholder="parent@example.com" autoFocus />
@@ -227,8 +231,13 @@ function ParentEmailSection({ studentId, isEn }) {
             className="form-control form-control-sm"
             value={accountForm.email}
             onChange={(e) => setAccountForm((f) => ({ ...f, email: e.target.value }))}
-            placeholder="parent@example.com"
+            placeholder={defaultParentLogin || 'student_parent@genesisideas.school'}
           />
+          <div className="form-text">
+            {isEn
+              ? `Default: student login + _parent. Default password: ${DEFAULT_PARENT_PASSWORD}`
+              : `预设：学生登入邮箱加 _parent。预设密码：${DEFAULT_PARENT_PASSWORD}`}
+          </div>
         </div>
         <div className="mb-2">
           <label className="form-label small mb-1">{isEn ? 'Temporary / New Password' : '临时／新密码'}</label>

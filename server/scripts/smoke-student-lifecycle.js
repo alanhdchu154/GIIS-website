@@ -4,13 +4,15 @@ require('../lib/resolveDatabaseUrl');
 const bcrypt = require('bcryptjs');
 const { PrismaClient } = require('@prisma/client');
 const { computeRowGpa } = require('../src/lib/gpa');
+const { DEFAULT_PARENT_PASSWORD, parentLoginEmailForStudentEmail } = require('../src/lib/parentCredentials');
 
 const prisma = new PrismaClient();
 
 const STUDENT_CODE = 'GIIS-SMOKE-20260519';
 const STUDENT_EMAIL = 'codex.smoke.student@genesisideas.school';
-const PARENT_EMAIL = 'codex.smoke.parent@genesisideas.school';
+const PARENT_EMAIL = parentLoginEmailForStudentEmail(STUDENT_EMAIL);
 const TEMP_PASSWORD = 'SmokeTest2026!';
+const PARENT_PASSWORD = DEFAULT_PARENT_PASSWORD;
 
 function dateOnly(value) {
   return new Date(`${value}T00:00:00.000Z`);
@@ -44,6 +46,7 @@ async function main() {
   }
 
   const passwordHash = await bcrypt.hash(TEMP_PASSWORD, 12);
+  const parentPasswordHash = await bcrypt.hash(PARENT_PASSWORD, 12);
   const gpas = computeRowGpa({
     courseName: course.name,
     courseType: course.type,
@@ -79,7 +82,7 @@ async function main() {
       parentAccounts: {
         create: {
           email: PARENT_EMAIL,
-          passwordHash,
+          passwordHash: parentPasswordHash,
         },
       },
       semesters: {
@@ -244,7 +247,8 @@ async function main() {
     credentials: {
       studentEmail: STUDENT_EMAIL,
       parentEmail: PARENT_EMAIL,
-      temporaryPassword: TEMP_PASSWORD,
+      studentPassword: TEMP_PASSWORD,
+      parentPassword: PARENT_PASSWORD,
     },
   };
 

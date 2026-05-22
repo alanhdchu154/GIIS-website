@@ -45,8 +45,8 @@ function validEmail(value) {
 function recipientForSubscription(sub) {
   return (
     validEmail(sub.purchaserEmail) ||
-    validEmail(sub.student?.parentAccounts?.[0]?.email) ||
     validEmail(sub.student?.parentEmail) ||
+    validEmail(sub.student?.parentAccounts?.[0]?.email) ||
     FALLBACK_PARENT_EMAIL
   );
 }
