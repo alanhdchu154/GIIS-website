@@ -1,8 +1,10 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C38（Server GPA totals now handle Prisma Decimal values；production V1 smoke + persona audit passed）
+> 最後更新：2026-05-22 Slot C39（Parent dashboard load loop fixed；persona audit tightened against loading/failed parent state）
 >
-> 前次：2026-05-22 Slot C37（V1 lifecycle smoke + admin application enrollment/payment state added；production smoke pending deploy）
+> 前次：2026-05-22 Slot C38（Server GPA totals now handle Prisma Decimal values；production V1 smoke + persona audit passed）
+>
+> 前次：2026-05-22 Slot C37（V1 lifecycle smoke + admin application enrollment/payment state added；production smoke verified）
 >
 > 前次：2026-05-22 Slot C36（Application activation now creates both student and deterministic parent login credentials）
 >
@@ -228,6 +230,16 @@
 - ✅ **Local verification**：`node --check server/src/lib/gpa.js`、`node --check server/scripts/v1-lifecycle-smoke.js`、`cd server && npm test -- --runInBand`、`npm run build` 通過。
 - ✅ **Production verification**：commit `a3423316` 已 push/deploy 到 Lightsail；production `npm run smoke:v1-lifecycle:cleanup` 通過，建立並刪除 temporary `GIIS-V1-SMOKE` student。結果：4 enrollments、38 quiz attempts、8 exam attempts、4 graded assignments、38 moduleProgresses、24 transcript credits、GPA `3.68`、`gpaComputed=true`、`leftoverStudent=false`。
 - ✅ **Post-deploy persona audit**：`npm run audit:personas` 對 live site 通過：12 pass / 0 warn / 0 fail，包含 new-student public funnel、student login → Learn Portal、admin dashboard/progress、real parent login → dashboard。
+
+## 🔧 Parent dashboard load stability（2026-05-22 Slot C39）
+
+> 目標：修 persona screenshot review 抓到的家長視角 P0：real parent dashboard 雖然 API `/api/parent/me` 回 200，但 frontend 反覆重新 fetch，最後撞到 rate limit 429，頁面變成 `Failed to load data.`。這會直接破壞家長 trust/transparency。
+
+- ✅ **Root cause found**：`src/components/pages/Parent/ParentDashboard.js` 每次 render 都重新執行 `getParentSession()` 產生新 object，`useEffect([session, load])` 因此持續重跑；成功 setData 後又觸發下一輪 fetch。
+- ✅ **Parent dashboard fixed**：Parent session 現在用 `useMemo(() => getParentSession(), [])` 穩定住；成功載入 `/api/parent/me` 後會清掉 stale error，不再因 repeated fetch 撞 429。
+- ✅ **Persona audit tightened**：`tools/persona-audit/audit_site.js` 現在把 `Failed to load data` / `加载失败` 視為 broken state；real parent dashboard 必須看到 `Credits Earned`/`已获学分` 與 GPA/transcript evidence，且不能還停在 Loading。
+- ✅ **Local verification**：`node --check tools/persona-audit/audit_site.js`、`npm run build`、`cd server && npm test -- --runInBand` 通過。
+- ⏳ **Production verification pending deploy**：下一步 push/deploy，等待 Netlify frontend bundle 更新後重跑 `npm run audit:personas`。這次 audit 若 parent dashboard 還是 loading/failed 會直接 fail，不再 false-pass。
 
 ---
 

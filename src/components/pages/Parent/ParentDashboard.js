@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
@@ -91,7 +91,7 @@ export default function ParentDashboard({ language }) {
   const [portalLoading, setPortalLoading] = useState(false);
   const [portalError, setPortalError] = useState(null);
 
-  const session = getParentSession();
+  const session = useMemo(() => getParentSession(), []);
 
   useEffect(() => {
     if (!session) { navigate('/parent/login', { replace: true }); return; }
@@ -102,6 +102,7 @@ export default function ParentDashboard({ language }) {
       const res = await fetch(`${API}/api/parent/me`, { credentials: 'include' });
       if (res.status === 401) { clearParentSession(); navigate('/parent/login', { replace: true }); return; }
       if (!res.ok) { setError(isEn ? 'Failed to load data.' : '加载失败。'); return; }
+      setError('');
       setData(await res.json());
     } catch {
       setError(isEn ? 'Network error.' : '网络错误。');

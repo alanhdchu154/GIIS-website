@@ -24,7 +24,7 @@ const OUT_DIR = process.env.AUDIT_SCREENSHOT_DIR || path.join('/private/tmp', `g
 const blockers = [];
 const warnings = [];
 const passes = [];
-const BROKEN_STATE_RE = /Signing in…|Signing in\.\.\.|API address is not configured|Something went wrong/i;
+const BROKEN_STATE_RE = /Signing in…|Signing in\.\.\.|API address is not configured|Something went wrong|Failed to load data|加载失败/i;
 
 function trimSlash(value) {
   return String(value).replace(/\/+$/, '');
@@ -203,7 +203,10 @@ async function auditParent(page) {
   await fillIfVisible(page, 'input[type="password"]', PARENT_PASSWORD);
   await clickSubmit(page);
   await waitForPath(page, /^\/parent\/dashboard\/?$/, 'Parent login');
-  await expectText(page, [/Parent Portal|家长面板|Credits|Progress|Transcript/i], 'Parent dashboard');
+  const body = await expectText(page, [/Parent Portal|家长面板/i, /Credits Earned|已获学分/i, /GPA|Transcript|成绩单/i], 'Parent dashboard');
+  if (/Loading…|Loading\.\.\.|加载中/.test(body)) {
+    throw new Error('Parent dashboard still shows loading state after data assertion.');
+  }
   await screenshot(page, 'parent-dashboard');
   markPass('Parent route: real login to dashboard');
 }
