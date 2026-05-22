@@ -104,4 +104,25 @@ describe('computeSemesterTotals', () => {
     expect(r.totalCredits).toBe(1.0);
     expect(r.weightedGPA).toBe('4.00');
   });
+
+  test('Prisma Decimal-like GPA values are counted', () => {
+    const rows = [
+      {
+        courseName: 'Biology',
+        credits: { toString: () => '1.0' },
+        weightedGpa: { toString: () => '4.0' },
+        unweightedGpa: { toString: () => '4.0' },
+      },
+      {
+        courseName: 'English',
+        credits: { toString: () => '1.0' },
+        weightedGpa: { toString: () => '3.7' },
+        unweightedGpa: { toString: () => '3.7' },
+      },
+    ];
+    const r = computeSemesterTotals(rows);
+    expect(r.totalCredits).toBe(2.0);
+    expect(r.weightedGPA).toBe('3.85');
+    expect(r.unweightedGPA).toBe('3.85');
+  });
 });

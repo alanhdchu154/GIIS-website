@@ -46,6 +46,12 @@ function computeRowGpa(row) {
   };
 }
 
+function finiteNumber(value) {
+  if (value === null || value === undefined || value === '') return null;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
+}
+
 /**
  * Semester totals from course rows (excluding empty course names).
  * @param {Array<{ courseName: string, credits: string|number, weightedGpa: number|null, unweightedGpa: number|null }>} rows
@@ -60,9 +66,9 @@ function computeSemesterTotals(rows) {
     const credits = parseFloat(String(row.credits ?? '')) || 0;
     if (credits <= 0) continue;
 
-    const w = row.weightedGpa;
-    const u = row.unweightedGpa;
-    if (Number.isFinite(w) && Number.isFinite(u)) {
+    const w = finiteNumber(row.weightedGpa);
+    const u = finiteNumber(row.unweightedGpa);
+    if (w !== null && u !== null) {
       totalWeighted += w * credits;
       totalUnweighted += u * credits;
       totalCredits += credits;

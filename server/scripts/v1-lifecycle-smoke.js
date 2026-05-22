@@ -259,6 +259,7 @@ async function main() {
   const totalCredits = gradedRows.reduce((sum, row) => sum + Number(row.credits || 0), 0);
   const totals = computeSemesterTotals(gradedRows);
   const completedEnrollments = refreshed.enrollments.filter((enr) => enr.creditEarned);
+  const gpaComputed = totals.unweightedGPA !== '-' && totals.weightedGPA !== '-';
   const completeAssessmentTrail = refreshed.enrollments.every((enr) => {
     const moduleCount = enr.course.modules.length;
     return moduleCount >= 3
@@ -270,7 +271,7 @@ async function main() {
   });
 
   const result = {
-    ok: totalCredits >= 24 && refreshed.subscriptions.some((sub) => sub.status === 'active') && completeAssessmentTrail,
+    ok: totalCredits >= 24 && gpaComputed && refreshed.subscriptions.some((sub) => sub.status === 'active') && completeAssessmentTrail,
     application: {
       id: application.id,
       status: application.status,
@@ -303,6 +304,7 @@ async function main() {
       totalCredits,
       unweightedGpa: totals.unweightedGPA,
       weightedGpa: totals.weightedGPA,
+      gpaComputed,
       graduationEligibleByCredits: totalCredits >= 24,
       transcriptDate: refreshed.transcriptDate?.toISOString().slice(0, 10),
       graduationDate: refreshed.graduationDate?.toISOString().slice(0, 10),
