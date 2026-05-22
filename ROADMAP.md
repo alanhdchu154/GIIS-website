@@ -1,6 +1,14 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C41（Parent persona audit loading assertion refined after dashboard content verification）
+> 最後更新：2026-05-22 Slot B 5am（QA 巡檢——這一棒沒有可做的正規產製工作，誠實只做查核。Slot A 11pm 已把 **AP Biology 收到 16/16**、有 reference doc 的 backlog 真的耗盡。我把四門 AP 課全部對 `server/prisma/courses` 的 course JSON（編號的 source of truth）和 3-reviewer cascade 檔案做了一次全 repo 盤點，**發現一個比 AP Bio M1-M9 更大的潛在退步**：**AP Computer Science A（M1-M10）和 AP Psychology（M1-M16）共 26 支影片完全沒有 `_review_A/B/C`，從沒跑過 cascade**，其中 **11 支已經上 YouTube、家長看得到**（AP CS A：M1-M6、M10；AP Psych：M1、M11、M12、M13）——直接踩到 CLAUDE.md 第一條「信任」。**為什麼沒當場修**：cascade 的 Reviewer C 規定只能拿 `references/<slug>-ced.md` 比對，而這兩門課**沒有 CED reference doc**，Reviewer C 跑不了；硬產或自己捏一份 reference 來假核對都會重演當初的退步，所以按 SOP 不硬幹。**好消息**：禁用詞掃描四門 AP 課全乾淨（無 Cognia／accredited／UCSB／NJIT／(SIT)／美国认证）；那個每支 AP 影片都會跳的「AP course naming」其實是 `audit_lessons.py` 284-285 行對任何「AP 」課程的固定提醒，不是瑕疵。順帶確認 AP Calc 的「JSON 14 單元 vs 12 資料夾」只是編號合併、內容其實全覆蓋，不是缺口。**人類請補一手**：加 `references/ap-cs-a-ced.md` 與 `references/ap-psychology-ced.md`，下一棒就能先對已上線的 11 支跑 post-hoc cascade（比照 5/19 對 AP Bio M1-M9 的做法），再談產新內容。產出 0 支模組（依規則正確），沒 push。詳見 `_audit/qa-review-coverage/HUMAN_ACTION.md` 與同資料夾 `2026-05-22T10-12-36Z-summary.json`）
+>
+> 前次：2026-05-22 Slot C44（Lesson manifest/course alignment audit added；wrong same-number video embeds guarded；AP CS A ArrayList pilot corrected to Module 10）
+>
+> 前次：2026-05-22 Slot C43（Umi-led lesson production split added；daily YouTube upload now filters by release-gate ready list；AP CS A ArrayList pilot handoff created, later corrected to Module 10）
+>
+> 前次：2026-05-22 Slot C42（YouTube upload review found healthy recent uploads but release gate is non-blocking and manifest/local/channel drift needs cleanup）
+>
+> 前次：2026-05-22 Slot C41（Parent persona audit loading assertion refined after dashboard content verification）
 >
 > 前次：2026-05-22 Slot C40（Auth rate limiting narrowed so parent dashboard data cannot lock out login flows）
 >
@@ -262,6 +270,48 @@
 
 - ✅ **Audit refined**：`tools/persona-audit/audit_site.js` 現在仍要求 parent dashboard 出現 `Parent Portal`、`Credits Earned`、GPA/transcript evidence；只有整個 body 還是 loading shell 時才報 `Parent dashboard is still on the loading shell`。
 - ✅ **Production verification**：加嚴版 `npm run audit:personas` 對 live site 通過：12 pass / 0 warn / 0 fail。Parent dashboard screenshot 已確認不再停在 loading，顯示 Hanxi parent view：32 credits、GPA 3.78、100% graduation progress、recent activity、official transcript link、subscription controls。
+
+---
+
+## ✅ Course/video alignment guard + syllabus pass（2026-05-22 Slot C44）
+
+> 目標：依 Alan 要求檢查 Learn Portal 每門課的 syllabus/module quality，並在 Umi-led lesson flow 開始前確認 CC 影片 pipeline 不會把錯 module 的影片掛到網站上。
+
+- ✅ **Course quality audit re-run**：`npm run audit:pathways` 通過，結果從 48 pass / 45 warn / 0 fail 改善為 49 pass / 44 warn / 0 fail（93 courses）。本輪先修 AP Computer Science A 的 weak objectives，讓 Module 1、8、9、10 的 objectives 更 measurable、更像真課綱。
+- ✅ **Critical course/video mismatch found**：AP CS A published course JSON 定義 Module 7 = `Constructors, Encapsulation & this`、Module 10 = `ArrayList`，但既有 `teaching-videos/ap-cs-a-module-7-arraylist/` 與 manifest/queue 把 ArrayList 當 M7。AP Calculus AB 也有大範圍 course JSON vs uploaded lesson manifest numbering drift。這不是文字小錯，會讓家長/學生在 Learn Portal 看到錯課影片。
+- ✅ **Wrong same-number embeds guarded**：`LessonVideoEmbed` 現在接收 current module title，並用 token overlap 檢查 manifest lesson title 是否與 published course module title 相容；不相容就不 render。這會優先保護 trust/transparency，避免「同一個 module number 但不同內容」的 stale YouTube manifest 誤掛到課程頁。
+- ✅ **Lesson manifest alignment audit added**：新增 `npm run audit:lesson-manifest` / `tools/youtube-upload/audit_manifest_alignment.js`。目前報告 50 lessons 中 12 warnings：AP CS A M5/M10 mismatched，AP Calculus AB M2-M12 多數 mismatched。這個 audit 是未來修 manifest/course mapping 的 source-of-truth checklist。
+- ✅ **AP CS A ArrayList pilot corrected**：刪除錯誤 M7 pilot handoff，改成 `umi/handoffs/2026-05-22-ap-cs-a-m10-arraylist-v2-pilot.md`。CC 下次應以 course JSON 為準，target `teaching-videos/ap-cs-a-module-10-arraylist-v2/`，舊 M7 folder 只能作 legacy reference，不能 upload / embed 成 M7。
+- ✅ **CC SOP updated**：`tools/lesson-video/AUTO_PIPELINE.md` 明確規定 lesson numbering source of truth 是 `server/prisma/courses/**/*.json`，不是既有 `teaching-videos/` folder name。
+- ✅ **驗證**：`node --check tools/youtube-upload/audit_manifest_alignment.js` 通過；`npm run audit:lesson-manifest` 通過並列出 12 個 alignment warnings；`npm run audit:pathways` 通過；`npm run build` 通過（只有既有 Browserslist stale warning）。
+- 🔧 **下一步**：先做 manifest/course reconciliation，尤其 AP Calculus AB 和 AP CS A uploaded lessons；在 mapping 修好前，網站會保守隱藏 title 不相容的影片，而不是錯播。
+
+---
+
+## 🔎 YouTube upload pipeline review（2026-05-22 Slot C42）
+
+> 目標：檢查 Claude Code / scheduled pipeline 這幾天 YouTube 上傳狀態，判斷是否有 quality gate、manifest、cleanup、auto-push 問題。這輪是 review / diagnosis，未改 pipeline code。
+
+- ✅ **近期上傳有實際進展**：`npm run yt:status` 顯示本地 queue 目前 52 uploaded、15 pending、3 no MP4、70 total。最近上傳包含 2026-05-21 AP Biology M12/M13、AP CS A M5/M6；2026-05-20 AP Biology M8/M9/M10 V2、AP CS A M4。
+- ⚠️ **Release gate is currently advisory only**：`lesson_release_gate.py --pending` 評估 15 支 pending，結果 ready 0 / needs_revision 15 / blocked 0。主要原因是 missing `transcript.txt`、missing `contact-sheet.jpg`、missing 3-reviewer artifacts、AP citation/source checker，且 score 多數低於 90。但 `tools/youtube-upload/daily.sh` 現在只是印出 gate report，仍會繼續 `yt_queue.py upload --max 4`，所以明天可能把 AP CS A M7-M9 或 AP Psych pending lessons 上傳出去，即使 gate 判 needs_revision。
+- ⚠️ **Manifest / channel / local script drift**：daily log 顯示 channel sync canonical lessons 是 50 + 1 non-lesson school intro；本地 `yt_queue.py` 因 trust local `script.json.youtube` 顯示 52 uploaded。差異來自 stale/local-only metadata，例如 AP Biology old M10 `ILFeGC54PBo` cleanup 找不到 channel video、AP Biology M2/M6 缺 `uploaded_at` / `privacy`、Algebra I M9 stale duplicate `bmyK05H8fFU` 曾被 sync 標為 duplicate。`public/data/lessons-manifest.json` 目前為 channel-derived 50 lessons。
+- ⚠️ **Fresh upload eventual-consistency gap**：AP CS A M6 本地 `script.json` 已有 `xQW0hpadLO4`，但目前 committed manifest 仍只有 AP CS A 6 lessons（M1-M5, M10），缺 M6。推測是 upload 後立刻跑 channel sync 時 YouTube uploads list 還沒完全反映新影片；下一次用 channel sync 應修正，或需要在 upload 後延遲 / retry sync。
+- ⚠️ **Auto-push reliability issue observed**：5/21 daily log 顯示上傳 4 支成功後，auto-push 因 `.git/HEAD.lock` 失敗。當前 `.git/HEAD.lock` / `.git/index.lock` 不存在，但 `daily.sh` 只防 `.git/index.lock`，沒有同樣處理 stale `HEAD.lock`。
+- 🔧 **建議下一步**：把 upload runner 改成強制消費 release gate 的 `ready_to_upload` 清單（或 gate fail 時 stop upload）；把 channel sync 設成 upload 後延遲 / retry，並避免 legacy `build_manifest.py` 覆蓋 channel-derived manifest；在 auto-push lock cleanup 同時處理 stale `HEAD.lock`；最後清理 stale local youtube blocks，讓 `yt_queue.py` 不再高估 uploaded count。
+
+---
+
+## ✅ Umi-led lesson pipeline split + upload gate hardening（2026-05-22 Slot C43）
+
+> 目標：把 lesson production 從「CC 自己產、自己審、自己上傳」改成 Umi owns teaching design/review，Claude Code owns production mechanics。先建立 AP CS A ArrayList V2 pilot，並阻止未過 release gate 的 pending videos 被 unattended daily job 上傳。
+
+- ✅ **Umi/CC role split written into SOP**：`tools/lesson-video/AUTO_PIPELINE.md` 新增 Umi-led production split：Umi 負責 lesson concept、scope、narration quality、misconception strategy、AP/content correctness judgement、parent-facing school quality、final release review；Claude Code 負責 repo mechanics、slides/render/transcript/contact sheet/audit/pipeline fixes/upload artifacts。
+- ✅ **AP CS A ArrayList V2 pilot handoff created**：初版 handoff 定義 ArrayList pilot 的教學 brief、section rhythm、scope、out-of-scope、acceptance criteria 與 Umi review notes。後續 Slot C44 發現 published course JSON 中 ArrayList 是 Module 10，因此正式 handoff 已更正為 `umi/handoffs/2026-05-22-ap-cs-a-m10-arraylist-v2-pilot.md`。核心教學 thesis：ArrayList is not just "array but bigger"; it is a resizable list object with method calls, shifting behavior, and removal/traversal traps。
+- ✅ **YouTube queue now supports release-gate filtering**：`tools/youtube-upload/yt_queue.py upload --gate-ready` 只會上傳 `teaching-videos/_audit/release-gate/latest-release-gate.json` 的 `ready_to_upload` lessons。若 gate 缺失或沒有 ready lessons，unattended upload 保守視為 0 allowed。
+- ✅ **Daily upload runner now uses the gate**：`tools/youtube-upload/daily.sh` 改為 `yt_queue.py upload --max 4 --privacy unlisted --gate-ready`。目前 dry-run 顯示 15 pending → 0 pending allowed by release gate，因此明天不會因為「有 MP4」就上傳未過審 AP CS A/AP Psych lessons。
+- ✅ **Git lock hardening**：`daily.sh` 的 stale lock cleanup 從只處理 `.git/index.lock` 擴充到 `.git/index.lock` + `.git/HEAD.lock`，對應 5/21 daily log 的 auto-push failure。
+- ✅ **驗證**：`python3 -m py_compile tools/youtube-upload/yt_queue.py tools/lesson-video/lesson_release_gate.py` 通過；`bash -n tools/youtube-upload/daily.sh` 通過；`python3 tools/youtube-upload/yt_queue.py upload --max 4 --privacy unlisted --gate-ready --dry-run` 顯示 15 → 0 且不會 upload。
+- 🔧 **下一步**：讓 CC 依 corrected handoff 重做/升級 AP CS A Module 10 ArrayList V2 artifact；Umi review `script.json` + `contact-sheet.jpg` + release gate 後，再批准 upload。之後再做 channel sync delayed/retry 與 stale local youtube block cleanup。
 
 ---
 

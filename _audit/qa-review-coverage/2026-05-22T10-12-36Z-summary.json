@@ -1,0 +1,72 @@
+{
+  "run_id": "qa-review-coverage-slot-B-2026-05-22T10-12-36Z",
+  "run_type": "qa_verification_only",
+  "slot": "B (5am CT)",
+  "timestamp": "2026-05-22T10:12:36Z",
+  "why_qa_only": "Slot A (2026-05-22T04:07:03Z) completed AP Biology 16/16, which exhausted the reference-doc-backed generation backlog. Independent verification this run confirms references/ contains CED docs ONLY for ap-biology (course complete) and ap-calc-ab (course complete). AP Computer Science A and AP Psychology have script.json content but NO references/<slug>-ced.md, so Reviewer C (citation checker, which ONLY compares against the reference doc) cannot run. Per AUTO_PIPELINE.md the cascade is the sole QC and must not be skipped; generating un-citation-checkable content would repeat the AP Bio M1-M9 regression. Therefore NO cascade-eligible generation work existed this run, and the sanctioned fallback (audit/QA-only) was executed.",
+  "produced": [],
+  "halted": [],
+  "verification_performed": [
+    "Confirmed Slot A's three new modules (AP Bio M14/M15/M16) each carry the full artifact set (_outline, _review_A/B/C, script.json, build_slides.py, learning_check.json, music) with slide count = section count (17/16/15).",
+    "Reconciled every AP-course teaching-videos folder against its server/prisma/courses course JSON (the source of truth for module numbering).",
+    "Ran a repo-wide 3-reviewer-cascade artifact-coverage audit across all four AP courses.",
+    "Scanned for youtube.video_id to determine which unreviewed modules are already live to parents.",
+    "Ran a banned-terms scan (Cognia / accredited / US-accredited / UCSB / NJIT / (SIT) / 美国认证) across all four AP courses' script.json + build_slides.py.",
+    "Identified the source of the recurring 'AP-naming' audit note."
+  ],
+  "review_coverage_matrix": {
+    "definition_of_covered": "folder carries _review_A.json AND _review_B.json AND _review_C.json",
+    "ap-biology": {
+      "course_json_modules": 16,
+      "teaching_videos": 16,
+      "cascade_covered": 16,
+      "status": "COMPLETE + fully cascade-covered (M1-M9 post-hoc audited 2026-05-19; M10-M16 full pipeline). Note: M4-M9 lack _outline.json by design of the post-hoc audit. ap-biology-module-10-natural-selection-v2 is the recognized V2 pilot using _review_*_v2pilot.json — intentional, left untouched."
+    },
+    "ap-calculus-ab": {
+      "course_json_modules": 14,
+      "teaching_videos": 12,
+      "cascade_covered": 12,
+      "status": "Content COMPLETE + fully cascade-covered (retroactive cascade 2026-05-21). The 12-folder set uses a consolidated breakdown of the 14-unit JSON syllabus (JSON M13 Diff Eq -> folder M9; JSON M14 Areas/Volumes/Cross-Sections -> folders M10+M11) plus an exam-synthesis module. All 14 JSON units are covered; the 14-vs-12 difference is numbering scheme, not a content gap.",
+      "human_decision_optional": "If folder numbering must match the published 14-module Learn Portal syllabus, that requires regenerating/renumbering existing (YouTube-locked) modules — out of scope for an unattended cascade run; flag only."
+    },
+    "ap-computer-science-a": {
+      "course_json_modules": 14,
+      "teaching_videos": 10,
+      "cascade_covered": 0,
+      "status": "LATENT REGRESSION: 0/10 modules carry the 3-reviewer cascade. Same unreviewed pattern AP Bio M1-M9 had before its 2026-05-19 post-hoc audit.",
+      "already_live_on_youtube": ["ap-cs-a-module-1-primitives", "ap-cs-a-module-2-using-objects", "ap-cs-a-module-3-booleans-if", "ap-cs-a-module-4-iteration", "ap-cs-a-module-5-writing-classes", "ap-cs-a-module-6-array", "ap-cs-a-module-10-recursion"],
+      "content_gap_vs_syllabus": "Missing JSON M14 'Sorting & Searching Algorithms'. (Folders consolidate JSON M5 Nested Loops into iteration, and JSON M7/M8 Constructors/Static into writing-classes.) Generation BLOCKED: no references/ap-cs-a-ced.md so Reviewer C cannot run."
+    },
+    "ap-psychology": {
+      "course_json_modules": 16,
+      "teaching_videos": 16,
+      "cascade_covered": 0,
+      "status": "LATENT REGRESSION: 0/16 modules carry the 3-reviewer cascade. Content coverage is complete (folder titles map to all 16 JSON units) but none were citation-checked.",
+      "already_live_on_youtube": ["ap-psych-module-1-history", "ap-psych-module-11-personality", "ap-psych-module-12-testing-intelligence", "ap-psych-module-13-abnormal"],
+      "generation_status": "Remediation BLOCKED: no references/ap-psychology-ced.md so Reviewer C cannot run."
+    }
+  },
+  "key_finding": "26 published/draft modules (AP CS A M1-M10 + AP Psychology M1-M16) carry NO 3-reviewer cascade artifacts. 11 of them are ALREADY LIVE on YouTube (7 AP CS A: M1-M6,M10; 4 AP Psychology: M1,M11,M12,M13) and therefore visible to paying parents without ever passing the only QC gate the pipeline has. This is the same class of regression as AP Bio M1-M9 but larger, and it directly touches CLAUDE.md's #1 goal (Trust).",
+  "banned_terms_scan": "CLEAN — no Cognia / accredited / US-accredited / UCSB / NJIT / (SIT) / 美国认证 in any script.json or build_slides.py across AP Biology, AP Calc AB, AP CS A, or AP Psychology.",
+  "ap_naming_note_explained": "The 'AP course naming should be checked against Course Audit/authorization wording' note recurring on every AP module's audit is emitted by tools/lesson-video/audit_lessons.py lines 284-285 for ANY course whose name contains 'ap '. It is a standing informational `note` (a reminder not to imply College Board authorization without verification), not a per-module defect. No content change warranted; the banned-terms scan already confirms no false accreditation/authorization claims in the narration.",
+  "blocked_for_generation": {
+    "reason": "Reference-doc-backed backlog genuinely exhausted. AP Calc AB + AP Biology complete and fully reviewed. AP CS A + AP Psychology need a human to add references/ap-cs-a-ced.md and references/ap-psychology-ced.md before either retroactive cascades (to clear the 26-module gap) or new-module generation (e.g. AP CS A Sorting & Searching) can run with Reviewer C.",
+    "alternatives_for_new_courses": "Courses with prisma defs but no teaching-videos and no CED (AP Statistics, Geometry, Chemistry, US History, AP Human Geography, etc.) also need a references/<slug>-ced.md first."
+  },
+  "constraints_respected": {
+    "no_youtube_api_calls": true,
+    "no_make_lesson_or_upload_lesson": true,
+    "no_git_push": true,
+    "lessons_manifest_untouched": true,
+    "no_regeneration_of_existing_modules": true,
+    "no_live_web_fetch": true,
+    "no_modules_generated_without_full_cascade": true,
+    "no_fabricated_reference_doc": true
+  },
+  "human_action_required": "See _audit/qa-review-coverage/HUMAN_ACTION.md",
+  "next_slot_recommendations": [
+    "Until a human adds references/ap-cs-a-ced.md and/or references/ap-psychology-ced.md, future slots have NO cascade-eligible work and should default to QA-only. Do NOT generate AP CS A / AP Psychology content without a CED — Reviewer C cannot run and it repeats the AP Bio M1-M9 regression.",
+    "PRIORITY for whoever adds a CED: AP Psychology and AP CS A both have LIVE unreviewed modules. Once a CED exists, run a post-hoc 3-reviewer cascade over the existing script.json content (mirroring the AP Bio M1-M9 remediation on 2026-05-19) BEFORE generating any new modules. For YouTube-locked modules, do not edit script.json — record errata to _review_failed/<slug>/WHY.md as the AP Calc M4/M12 precedent did.",
+    "Optional, low-risk: consolidate the two _audit locations (root /_audit/<course>/ vs /teaching-videos/_audit/<course>/) and add a per-lesson suffix to audit_lessons.py output filenames to avoid the same-second collision Slot A noted."
+  ]
+}
