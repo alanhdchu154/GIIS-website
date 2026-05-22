@@ -199,6 +199,7 @@
 - ✅ **Checkout linking improved**：`ParentDashboard` 開 Stripe Checkout 時會帶目前 parent login email，讓 webhook 可透過 `ParentAccount.email` 自動 link Subscription.studentId。
 - ✅ **Welcome page copy corrected**：`/welcome` 的 next steps 不再暗示「24 小時後才拿學生帳號」；改為若 admissions 已 activate，welcome email 已包含 parent/student credentials。
 - ✅ **驗證**：`node --check` 通過 `parentCredentials.js`、`mailer.js`、`applications.js`；`npm run build` 通過；`cd server && npm test -- --runInBand` 通過。
+- ✅ **Production deploy + smoke**：commit `e21b25df` 已 push；Lightsail `/home/ubuntu/GIIS-website` 已 fast-forward pull 並 `pm2 restart giis-api --update-env`。Production `npm run audit:parent-accounts` 仍為 5/5 already present；live `npm run audit:personas` 為 12 pass / 0 warn / 0 fail。
 - 🔧 **下一步**：把 application/payment state machine 做成 admin 可見狀態：`approved but unpaid`、`paid but unlinked`、`account created + welcome sent`。之後再把 `/apply` submit → payment link → welcome/account activation 的順序收成更少人工操作。
 
 ---
