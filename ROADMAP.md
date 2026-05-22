@@ -185,7 +185,7 @@
 - ✅ **Weekly report recipient safety**：`weeklyReportService` 現在優先寄 purchaser email / `Student.parentEmail`，再 fallback parent login account，避免 school-managed login alias 搶走真實家長收件地址。
 - ✅ **Repair tool**：新增 `server/scripts/ensure-parent-accounts.js`，`npm run audit:parent-accounts` dry-run、`npm run repair:parent-accounts` apply，可為既有學生補 deterministic parent accounts 並重設為預設密碼。
 - ✅ **Persona audit default**：`npm run audit:personas` 現在預設用 `hanxi.xiao_parent@genesisideas.school` / `Parent2024!` 跑 real parent login；不再需要手動傳 `PARENT_EMAIL` / `PARENT_PASSWORD` 才能測 parent route。
-- 🔧 **Production note**：code 已支援；若 production DB 尚未補 parent accounts，需在 Lightsail 跑 `cd server && npm run repair:parent-accounts`，再重跑 `npm run audit:personas`，確認 parent real login 也通過。
+- ✅ **Production repair + verification**：Lightsail 已拉到 commit `8a6f6f8b`，production dry-run 顯示 5 位學生需補 parent account，已執行 `cd server && npm run repair:parent-accounts` 並重啟 `giis-api`。最新 `npm run audit:personas` 對 live site 為 12 pass / 0 warn / 0 fail，包含 `hanxi.xiao_parent@genesisideas.school` / `Parent2024!` real parent login → dashboard。
 
 ---
 
