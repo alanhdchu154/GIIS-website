@@ -376,8 +376,11 @@ export default function ApplicationsQueue() {
             <div style={{ background: '#f4f6fa', borderRadius: 10, padding: '14px 18px', marginBottom: 16, fontSize: 13, lineHeight: 2 }}>
               <div><strong>Student Code:</strong> {credentials.studentCode}</div>
               <div><strong>Login URL:</strong> <a href={credentials.loginUrl} target="_blank" rel="noreferrer" style={{ color: '#1a73e8' }}>{credentials.loginUrl}</a></div>
-              <div><strong>Email:</strong> {credentials.parentEmail}</div>
-              <div><strong>Temp Password:</strong> <code style={{ background: '#e8ecf5', padding: '2px 8px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>{credentials.tempPassword}</code></div>
+              <div><strong>Parent Contact:</strong> {credentials.parentContactEmail || '—'}</div>
+              <div><strong>Parent Login:</strong> {credentials.parentLoginEmail || credentials.parentEmail}</div>
+              <div><strong>Parent Password:</strong> <code style={{ background: '#e8ecf5', padding: '2px 8px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>{credentials.parentPassword || credentials.tempPassword}</code></div>
+              <div><strong>Student Login:</strong> {credentials.studentEmail || '—'}</div>
+              <div><strong>Student Password:</strong> <code style={{ background: '#e8ecf5', padding: '2px 8px', borderRadius: 4, fontWeight: 700, fontSize: 14 }}>{credentials.studentPassword || '—'}</code></div>
             </div>
 
             <div style={{ background: '#fffde7', border: '1px solid #f9a825', borderRadius: 8, padding: '10px 14px', fontSize: 12, color: '#5c4f00', marginBottom: 16 }}>
@@ -387,13 +390,15 @@ export default function ApplicationsQueue() {
             <div style={{ background: '#f4f6fa', borderRadius: 8, padding: '12px 16px', fontFamily: 'monospace', fontSize: 12, whiteSpace: 'pre-wrap', marginBottom: 16, color: '#1a1d24', lineHeight: 1.7 }}>
 {`Subject: Your GIIS account is ready — next step
 
-Hi ${credentials.parentEmail ? credentials.parentEmail.split('@')[0] : ''},
+Hi ${(credentials.parentContactEmail || credentials.parentEmail) ? (credentials.parentContactEmail || credentials.parentEmail).split('@')[0] : ''},
 
 Your child's GIIS account has been created. Please log in to complete enrollment:
 
 Login: ${credentials.loginUrl}
-Email: ${credentials.parentEmail}
-Temp password: ${credentials.tempPassword}
+Parent Portal email: ${credentials.parentLoginEmail || credentials.parentEmail}
+Parent temp password: ${credentials.parentPassword || credentials.tempPassword}
+Student Portal email: ${credentials.studentEmail || ''}
+Student temp password: ${credentials.studentPassword || ''}
 
 After logging in, you'll see a button to complete payment and activate full access.
 
@@ -403,7 +408,7 @@ Welcome to GIIS!
 
             <div style={{ display: 'flex', gap: 10 }}>
               <button
-                onClick={() => copyToClipboard(`Subject: Your GIIS account is ready — next step\n\nHi ${credentials.parentEmail ? credentials.parentEmail.split('@')[0] : ''},\n\nYour child's GIIS account has been created. Please log in to complete enrollment:\n\nLogin: ${credentials.loginUrl}\nEmail: ${credentials.parentEmail}\nTemp password: ${credentials.tempPassword}\n\nAfter logging in, you'll see a button to complete payment and activate full access.\n\nWelcome to GIIS!\n— The GIIS Team`)}
+                onClick={() => copyToClipboard(`Subject: Your GIIS account is ready — next step\n\nHi ${(credentials.parentContactEmail || credentials.parentEmail) ? (credentials.parentContactEmail || credentials.parentEmail).split('@')[0] : ''},\n\nYour child's GIIS account has been created. Please log in to complete enrollment:\n\nLogin: ${credentials.loginUrl}\nParent Portal email: ${credentials.parentLoginEmail || credentials.parentEmail}\nParent temp password: ${credentials.parentPassword || credentials.tempPassword}\nStudent Portal email: ${credentials.studentEmail || ''}\nStudent temp password: ${credentials.studentPassword || ''}\n\nAfter logging in, you'll see a button to complete payment and activate full access.\n\nWelcome to GIIS!\n— The GIIS Team`)}
                 style={{ flex: 1, padding: '11px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
                 📋 Copy welcome email
               </button>

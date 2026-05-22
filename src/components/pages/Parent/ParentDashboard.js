@@ -139,7 +139,7 @@ export default function ParentDashboard({ language }) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
-        body: JSON.stringify({ planType: 'founders_monthly' }),
+        body: JSON.stringify({ planType: 'founders_monthly', email: session.email }),
       });
       const json = await res.json();
       if (!res.ok) { setPortalError(json.error || 'Could not start checkout.'); return; }

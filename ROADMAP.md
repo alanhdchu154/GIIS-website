@@ -1,6 +1,8 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C35（Deterministic parent login convention added: student email + `_parent`, default password `Parent2024!`）
+> 最後更新：2026-05-22 Slot C36（Application activation now creates both student and deterministic parent login credentials）
+>
+> 前次：2026-05-22 Slot C35（Deterministic parent login convention added: student email + `_parent`, default password `Parent2024!`）
 >
 > 前次：2026-05-22 Slot C34（Persona route audit added for principal assistant, student, parent, and new-student flows）
 >
@@ -186,6 +188,18 @@
 - ✅ **Repair tool**：新增 `server/scripts/ensure-parent-accounts.js`，`npm run audit:parent-accounts` dry-run、`npm run repair:parent-accounts` apply，可為既有學生補 deterministic parent accounts 並重設為預設密碼。
 - ✅ **Persona audit default**：`npm run audit:personas` 現在預設用 `hanxi.xiao_parent@genesisideas.school` / `Parent2024!` 跑 real parent login；不再需要手動傳 `PARENT_EMAIL` / `PARENT_PASSWORD` 才能測 parent route。
 - ✅ **Production repair + verification**：Lightsail 已拉到 commit `8a6f6f8b`，production dry-run 顯示 5 位學生需補 parent account，已執行 `cd server && npm run repair:parent-accounts` 並重啟 `giis-api`。最新 `npm run audit:personas` 對 live site 為 12 pass / 0 warn / 0 fail，包含 `hanxi.xiao_parent@genesisideas.school` / `Parent2024!` real parent login → dashboard。
+
+## ✅ Application activation account closure（2026-05-22 Slot C36）
+
+> 目標：修 admissions → account creation 的真缺口。原本 `/api/applications/:id/activate` 只建立 Student + ParentAccount，沒有建立 StudentAccount；也就是 admin activate 後，家長可能能登入，但學生沒有 Learn Portal 帳號。這會直接破壞「付錢後能不能上課」的信任。
+
+- ✅ **Activation now creates StudentAccount**：`server/src/routes/applications.js` 的 activate flow 現在會從 applicant student name 產生 school-managed student login email（例如 `student.name@genesisideas.school`，若重複則自動加 `.2` 等 suffix），並建立 `StudentAccount`。
+- ✅ **Deterministic parent login tied to student login**：activate flow 會用 student login email 推導 parent login email：`student.name_parent@genesisideas.school`，密碼 `Parent2024!`。`Application.parentEmail` 保留為真實 parent contact email / welcome-email recipient。
+- ✅ **Welcome email and admin modal show both credentials**：`server/src/lib/mailer.js`、`src/components/pages/Admin/ApplicationsQueue.js` 現在列出 Parent Portal email/password 與 Student Portal email/password，不再只顯示一組模糊的 temp password。
+- ✅ **Checkout linking improved**：`ParentDashboard` 開 Stripe Checkout 時會帶目前 parent login email，讓 webhook 可透過 `ParentAccount.email` 自動 link Subscription.studentId。
+- ✅ **Welcome page copy corrected**：`/welcome` 的 next steps 不再暗示「24 小時後才拿學生帳號」；改為若 admissions 已 activate，welcome email 已包含 parent/student credentials。
+- ✅ **驗證**：`node --check` 通過 `parentCredentials.js`、`mailer.js`、`applications.js`；`npm run build` 通過；`cd server && npm test -- --runInBand` 通過。
+- 🔧 **下一步**：把 application/payment state machine 做成 admin 可見狀態：`approved but unpaid`、`paid but unlinked`、`account created + welcome sent`。之後再把 `/apply` submit → payment link → welcome/account activation 的順序收成更少人工操作。
 
 ---
 

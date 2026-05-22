@@ -73,8 +73,20 @@ async function sendNewApplicationAlert({ studentName, gradeLevel, parentName, pa
  * Welcome email sent to parent when admin creates their accounts.
  * Replaces the manual copy-paste step.
  */
-async function sendWelcomeEmail({ parentEmail, studentName, tempPassword, loginUrl, studentCode }) {
+async function sendWelcomeEmail({
+  parentEmail,
+  studentName,
+  tempPassword,
+  loginUrl,
+  studentCode,
+  parentLoginEmail,
+  parentPassword,
+  studentLoginEmail,
+  studentPassword,
+}) {
   const subject = 'Your GIIS account is ready — complete your enrollment';
+  const parentPortalEmail = parentLoginEmail || parentEmail;
+  const parentPortalPassword = parentPassword || tempPassword;
   return send({
     to: parentEmail,
     subject,
@@ -90,8 +102,10 @@ async function sendWelcomeEmail({ parentEmail, studentName, tempPassword, loginU
 
     <div style="background:#f4f6fa;border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;line-height:2">
       <div><strong>Login URL:</strong> <a href="${loginUrl}" style="color:#1a73e8">${loginUrl}</a></div>
-      <div><strong>Email:</strong> ${parentEmail}</div>
-      <div><strong>Temporary password:</strong> <code style="background:#e8ecf5;padding:2px 8px;border-radius:4px;font-weight:700">${tempPassword}</code></div>
+      <div><strong>Parent Portal email:</strong> ${parentPortalEmail}</div>
+      <div><strong>Parent temporary password:</strong> <code style="background:#e8ecf5;padding:2px 8px;border-radius:4px;font-weight:700">${parentPortalPassword}</code></div>
+      ${studentLoginEmail ? `<div><strong>Student Portal email:</strong> ${studentLoginEmail}</div>` : ''}
+      ${studentPassword ? `<div><strong>Student temporary password:</strong> <code style="background:#e8ecf5;padding:2px 8px;border-radius:4px;font-weight:700">${studentPassword}</code></div>` : ''}
       <div><strong>Student code:</strong> ${studentCode}</div>
     </div>
 
@@ -104,7 +118,7 @@ async function sendWelcomeEmail({ parentEmail, studentName, tempPassword, loginU
   </div>
 </div>
     `.trim(),
-    text: `Welcome to GIIS!\n\nLog in to complete enrollment:\n${loginUrl}\nEmail: ${parentEmail}\nTemp password: ${tempPassword}\nStudent code: ${studentCode}`,
+    text: `Welcome to GIIS!\n\nLog in to complete enrollment:\n${loginUrl}\nParent Portal email: ${parentPortalEmail}\nParent temp password: ${parentPortalPassword}${studentLoginEmail ? `\nStudent Portal email: ${studentLoginEmail}` : ''}${studentPassword ? `\nStudent temp password: ${studentPassword}` : ''}\nStudent code: ${studentCode}`,
   });
 }
 

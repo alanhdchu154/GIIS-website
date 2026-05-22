@@ -146,8 +146,8 @@ export default function WelcomePage({ language }) {
       }}>
         {[
           {
-            en: 'Within 24 hours, you\'ll receive a welcome email from admissions@genesisideas.school with your student login credentials.',
-            zh: '24 小时内，你会收到 admissions@genesisideas.school 发出的欢迎信，附带学生登录凭据。',
+            en: 'If admissions has already activated your account, your parent and student login credentials are in the welcome email.',
+            zh: '如果招生办公室已经启用账号，你的家长与学生登录凭据会在欢迎信里。',
           },
           {
             en: 'A GIIS advisor will reach out to schedule a short onboarding call to help your child choose the right academic pathway.',
