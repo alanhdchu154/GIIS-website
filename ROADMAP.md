@@ -1,6 +1,8 @@
 # GIIS Platform — Product Roadmap
 
-> 最後更新：2026-05-22 Slot C41（Parent persona audit loading assertion refined after dashboard content verification）
+> 最後更新：2026-05-25 Slot C46（Homepage college-outcomes copy softened to family-reported outcomes；School Profile/About CEEB corrected to applied/pending while FL school code remains 650；frontend build passed；deployed via origin/main）
+>
+> 前次：2026-05-22 Slot C41（Parent persona audit loading assertion refined after dashboard content verification）
 >
 > 前次：2026-05-22 Slot C40（Auth rate limiting narrowed so parent dashboard data cannot lock out login flows）
 >

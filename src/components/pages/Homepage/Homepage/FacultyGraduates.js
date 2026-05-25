@@ -19,13 +19,13 @@ function FacultyGraduates({ language = 'en' }) {
     <section style={{ background: '#fff', padding: '72px 0', borderTop: '1px solid #e8ecf5', fontFamily: 'Inter, sans-serif' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
         <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
-          {isEn ? 'Proven Results' : '真实成果'}
+          {isEn ? 'Student Outcomes' : '学生成果'}
         </p>
         <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 800, color: '#1a1a2e', margin: '0 0 8px', lineHeight: 1.1 }}>
-          {isEn ? 'Our Graduates Have Been Accepted To' : '我们的毕业生已被以下院校录取'}
+          {isEn ? 'College Outcomes Reported by GIIS Families' : 'GIIS 家庭回报的升学成果'}
         </h2>
         <p style={{ fontSize: '14px', color: '#888', margin: '0 0 40px' }}>
-          {isEn ? 'US universities that have accepted GIIS graduates.' : '已接收 GIIS 毕业生的美国大学。'}
+          {isEn ? 'A snapshot of university offers shared with GIIS by graduating families.' : '毕业家庭向 GIIS 回报的大学录取成果摘要。'}
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center', justifyContent: 'flex-start' }}>
           {logos.map((logo, index) => (

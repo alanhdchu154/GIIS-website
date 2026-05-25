@@ -125,7 +125,7 @@ const SCHOOL = {
   registered: 'March 19, 2024',
   ein: '99-2175408',
   flCode: '650',
-  ceebCode: '650',
+  ceebStatus: 'Applied and pending',
   statute: 'Florida Statute 1002.42',
 };
 
@@ -372,7 +372,7 @@ export default function AboutPage({ language, toggleLanguage }) {
                 : `${SCHOOL.founded} 创办 · ${SCHOOL.registered} FL LLC 完成注册`}</div>
               <div><strong>EIN:</strong> {SCHOOL.ein}</div>
               <div><strong>{en ? 'FL school code' : 'FL 学校代码'}:</strong> {SCHOOL.flCode}</div>
-              <div><strong>{en ? 'CEEB code' : 'CEEB 代码'}:</strong> {SCHOOL.ceebCode}</div>
+              <div><strong>CEEB:</strong> {en ? SCHOOL.ceebStatus : '已申请，等待审核'}</div>
               <div><strong>{en ? 'Accreditation' : '认证'}:</strong> {en
                 ? 'Currently pursuing regional accreditation. Independent of any third-party accreditor.'
                 : '正在申请区域认证，目前为独立 Florida 注册私立学校。'}</div>

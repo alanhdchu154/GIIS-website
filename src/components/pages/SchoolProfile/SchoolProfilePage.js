@@ -41,7 +41,7 @@ const SCHOOL = {
   email: 'admissions@genesisideas.school',
   ein: '99-2175408',
   flSchoolCode: '650',
-  ceebCode: '650',
+  ceebStatus: 'Applied and pending',
   founded: '2022',
   registered: 'March 19, 2024',
   president: 'Shiyu Zhang, Ph.D.',
@@ -313,7 +313,7 @@ function ProfileDocument() {
         <div style={{ textAlign: 'right', fontSize: '8.5px', color: '#555', lineHeight: 1.7 }}>
           <div style={{ fontWeight: 700, color: NAVY, fontSize: '10px' }}>SCHOOL PROFILE</div>
           <div>Academic Year {currentYear - 1}–{currentYear}</div>
-          <div>CEEB Code: {SCHOOL.ceebCode}</div>
+          <div>CEEB: {SCHOOL.ceebStatus}</div>
           <div style={{ marginTop: '3px', fontSize: '7.5px', color: '#aaa' }}>
             Issued: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
           </div>
@@ -335,8 +335,9 @@ function ProfileDocument() {
             <br /><br />
             <em>Accreditation:</em> GIIS is an independent private school registered with the
             Florida DOE (Statute 1002.42), incorporated as a Florida LLC (EIN 99-2175408). The
-            school is in the process of pursuing regional accreditation. CEEB Code 650 has been
-            assigned by College Board. Transcripts are issued and certified by the school president.
+            school is in the process of pursuing regional accreditation. A CEEB code application
+            has been submitted to College Board and is currently pending. Transcripts are issued
+            and certified by the school president.
           </div>
           <table style={{ ...s.table, alignSelf: 'start' }}>
             <tbody>
@@ -346,7 +347,7 @@ function ProfileDocument() {
                 ['FL LLC Registered', SCHOOL.registered],
                 ['EIN', SCHOOL.ein],
                 ['FL School Code', SCHOOL.flSchoolCode],
-                ['CEEB Code', SCHOOL.ceebCode],
+                ['CEEB', SCHOOL.ceebStatus],
                 ['Grades', SCHOOL.gradeRange],
                 ['Enrollment', SCHOOL.enrollment],
                 ['President', SCHOOL.president],
