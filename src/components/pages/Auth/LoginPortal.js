@@ -175,8 +175,16 @@ export default function LoginPortal({ language }) {
                 className={tab === 'signin' ? styles.tabActive : styles.tab}
                 onClick={() => selectTab('signin')}
               >
-                {t.tabSignIn}
+                {isEn ? 'Student sign in' : '学生登入'}
               </button>
+              <Link
+                to="/parent/login"
+                role="tab"
+                aria-selected="false"
+                className={styles.tabLink}
+              >
+                {isEn ? 'Parent sign in' : '家长登入'}
+              </Link>
             </div>
 
             {err && (

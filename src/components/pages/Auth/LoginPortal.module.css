@@ -76,6 +76,27 @@
   background: rgba(255, 255, 255, 0.7);
 }
 
+.tabLink {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #5c6578;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tabLink:hover {
+  color: #2b3d6d;
+  background: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
 .tabActive {
   flex: 1;
   border: none;
