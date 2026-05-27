@@ -30,6 +30,12 @@ mkdir -p "$(dirname "$LOG")"
 REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO_ROOT"
 
+PAUSE_FILE="$REPO_ROOT/tools/lesson-video/PIPELINE_PAUSED.md"
+if [ -f "$PAUSE_FILE" ]; then
+  echo "GIIS lesson-build pipeline is paused by Alan. See $PAUSE_FILE"
+  exit 0
+fi
+
 # Pick the Python that has edge-tts + imageio-ffmpeg installed. Anaconda
 # default is /Users/alanhdchu/anaconda3/bin/python3, fall back to whatever
 # is on PATH.

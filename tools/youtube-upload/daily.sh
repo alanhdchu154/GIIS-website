@@ -15,6 +15,12 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO_ROOT"
 
+PAUSE_FILE="$REPO_ROOT/tools/lesson-video/PIPELINE_PAUSED.md"
+if [ -f "$PAUSE_FILE" ]; then
+  echo "GIIS YouTube upload pipeline is paused by Alan. See $PAUSE_FILE"
+  exit 0
+fi
+
 LOG="${HOME}/Library/Logs/giis-youtube-daily.log"
 mkdir -p "$(dirname "$LOG")"
 
@@ -52,7 +58,7 @@ export PATH="$(dirname "$PYTHON"):$PATH"   # so any `python3` calls inside also 
     || echo "  release gate reported issues; see teaching-videos/_audit/release-gate/latest-release-gate.json"
 
   echo
-  "$PYTHON" tools/youtube-upload/yt_queue.py upload --max 4 --privacy unlisted
+  "$PYTHON" tools/youtube-upload/yt_queue.py upload --max 4 --privacy unlisted --gate-ready
 
   # After upload, retry cleanup on any lesson that was uploaded earlier but
   # whose cleanup got blocked (most commonly: YouTube was still "processing"
@@ -90,12 +96,12 @@ except Exception: print('n')" 2>/dev/null)
   echo
   echo "─── auto-push if anything changed ───"
 
-  # Defend against stale .git/index.lock from a crashed previous run.
+  # Defend against stale git lock files from a crashed previous run.
   # If the lock file exists AND no live `git` process holds it AND the
   # file is older than 5 minutes, it's safe to remove. Skipping this
   # check used to make daily.sh fail with exit 128 every morning.
-  LOCK="$REPO_ROOT/.git/index.lock"
   SKIP_PUSH=""
+  for LOCK in "$REPO_ROOT/.git/index.lock" "$REPO_ROOT/.git/HEAD.lock"; do
   if [ -f "$LOCK" ]; then
     if pgrep -x git >/dev/null 2>&1; then
       echo "  another git process is running — skipping auto-push this run"
@@ -103,14 +109,15 @@ except Exception: print('n')" 2>/dev/null)
     else
       lock_age_sec=$(( $(date +%s) - $(stat -f %m "$LOCK" 2>/dev/null || echo 0) ))
       if [ "$lock_age_sec" -gt 300 ]; then
-        echo "  removing stale .git/index.lock (age ${lock_age_sec}s, no git process running)"
+        echo "  removing stale ${LOCK#$REPO_ROOT/} (age ${lock_age_sec}s, no git process running)"
         rm -f "$LOCK" || SKIP_PUSH="y"
       else
-        echo "  .git/index.lock is fresh (${lock_age_sec}s); skipping auto-push this run"
+        echo "  ${LOCK#$REPO_ROOT/} is fresh (${lock_age_sec}s); skipping auto-push this run"
         SKIP_PUSH="y"
       fi
     fi
   fi
+  done
 
   if [ "$SKIP_PUSH" = "y" ]; then
     echo "  (lock issue — see above; will retry on next run)"

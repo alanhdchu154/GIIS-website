@@ -232,10 +232,11 @@ export default function ModulePage({ language }) {
 
         {/* GIIS-recorded lecture (renders only when this module has been
             uploaded to YouTube — the manifest at /data/lessons-manifest.json
-            is the source of truth). Renders nothing for modules we haven't
-            produced yet, so this is safe to show across the whole curriculum. */}
+            is the source of truth). We also pass the current module title so
+            stale manifests cannot attach the wrong video to a same-numbered
+            but different module. */}
         {course?.name && mod?.order && (
-          <LessonVideoEmbed course={course.name} moduleNumber={mod.order} />
+          <LessonVideoEmbed course={course.name} moduleNumber={mod.order} moduleTitle={mod.title} />
         )}
 
         {/* Resources */}

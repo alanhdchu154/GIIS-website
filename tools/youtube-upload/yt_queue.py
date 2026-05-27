@@ -48,6 +48,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]   # giis-website/
 LESSONS_DIR = ROOT / "teaching-videos"
 UPLOAD_LESSON = Path(__file__).resolve().parent / "upload_lesson.py"
+APPROVED_READY_TO_UPLOAD = LESSONS_DIR / "_audit" / "release-gate" / "approved_ready_to_upload.json"
 
 # YouTube Data API v3 quota: 10,000 units/day. Each upload + thumbnail +
 # captions + playlist add ≈ 2,100 units. 4 uploads = 8,400 units, leaves
@@ -116,6 +117,27 @@ def scan() -> list[dict]:
         if info:
             out.append(info)
     return out
+
+
+def load_gate_ready_slugs(path: Path = APPROVED_READY_TO_UPLOAD) -> set[str]:
+    """Read the human-approved ready-to-upload list.
+
+    Missing/invalid approval output is treated as an empty ready set. That is
+    intentionally conservative for unattended uploads. The release gate can
+    nominate lessons, but upload requires this explicit human approval file.
+    """
+    try:
+        payload = json.loads(path.read_text())
+    except Exception:
+        return set()
+    if isinstance(payload, list):
+        return {str(row) for row in payload if row}
+    approved = payload.get("approved_ready_to_upload", payload.get("ready_to_upload", []))
+    return {
+        str(row.get("slug") if isinstance(row, dict) else row)
+        for row in approved
+        if (row.get("slug") if isinstance(row, dict) else row)
+    }
 
 
 # ─── output formatters ─────────────────────────────────────────────────
@@ -201,8 +223,19 @@ def run_upload(args):
         pending = [L for L in pending if _course_match(L["course"], args.course)]
         print(f"{DIM}filter `--course {args.course}`: {before} → {len(pending)} pending{RESET}")
 
+    if args.gate_ready:
+        before = len(pending)
+        approval_path = Path(args.approval_file) if args.approval_file else APPROVED_READY_TO_UPLOAD
+        ready_slugs = load_gate_ready_slugs(approval_path)
+        pending = [L for L in pending if L["dir"].name in ready_slugs]
+        print(f"{DIM}filter `--gate-ready`: {before} → {len(pending)} pending with human approval{RESET}")
+        if not ready_slugs:
+            print(f"{YELLOW}no approved_ready_to_upload lessons; refusing unattended upload{RESET}")
+
     if not pending:
-        if args.course:
+        if args.gate_ready:
+            print(f"{GREEN}Nothing pending has human upload approval.{RESET}")
+        elif args.course:
             print(f"{GREEN}Nothing pending matching `--course {args.course}`.{RESET}")
         else:
             print(f"{GREEN}Nothing pending. All rendered videos already uploaded.{RESET}")
@@ -278,6 +311,10 @@ def main():
                          "substring match against script.json `course`). "
                          "Examples: `--course psych` / `--course algebra` / "
                          "`--course \"AP Calculus\"`")
+    up.add_argument("--gate-ready", action="store_true",
+                    help="only upload lessons listed in the human approval file")
+    up.add_argument("--approval-file", default=None,
+                    help="override the approved_ready_to_upload.json path for --gate-ready")
 
     args = ap.parse_args()
 

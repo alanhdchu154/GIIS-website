@@ -125,6 +125,8 @@ def main() -> int:
     ap.add_argument("--course", help="Filter by course substring.")
     ap.add_argument("--min-score", type=int, default=90, help="Minimum audit score for auto-upload.")
     ap.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR))
+    ap.add_argument("--check", action="store_true",
+                    help="Evaluate and print results without writing latest-release-gate.json.")
     ap.add_argument("--require-contact-sheet", action=argparse.BooleanOptionalAction, default=True)
     ap.add_argument("--require-transcript", action=argparse.BooleanOptionalAction, default=True)
     ap.add_argument("--require-reviewers", action=argparse.BooleanOptionalAction, default=True)
@@ -169,19 +171,24 @@ def main() -> int:
         "all": rows,
     }
 
-    out_dir = Path(args.out_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
-    stamp = generated_at.replace(":", "").replace("-", "")
-    out_json = out_dir / f"{stamp}-release-gate.json"
-    out_json.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
-    latest = out_dir / "latest-release-gate.json"
-    latest.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+    out_json = None
+    if not args.check:
+        out_dir = Path(args.out_dir)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        stamp = generated_at.replace(":", "").replace("-", "")
+        out_json = out_dir / f"{stamp}-release-gate.json"
+        out_json.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+        latest = out_dir / "latest-release-gate.json"
+        latest.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
 
     print(f"[gate] evaluated: {len(rows)}")
     print(f"[gate] ready: {len(buckets['ready'])}")
     print(f"[gate] needs_revision: {len(buckets['needs_revision'])}")
     print(f"[gate] blocked: {len(buckets['blocked'])}")
-    print(f"[gate] json: {out_json.relative_to(ROOT)}")
+    if out_json:
+        print(f"[gate] json: {out_json.relative_to(ROOT)}")
+    else:
+        print("[gate] check mode: no files written")
     if buckets["needs_revision"]:
         print("[gate] first needs_revision:")
         for row in buckets["needs_revision"][:8]:

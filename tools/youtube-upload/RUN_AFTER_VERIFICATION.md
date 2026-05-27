@@ -7,7 +7,7 @@
 ## 0. Pre-flight check
 
 ```bash
-cd /Users/alanhdchu/GIIS/giis-website
+cd /Users/alanhdchu/giis-website
 
 # Confirm verification was actually accepted
 # Open https://www.youtube.com/account_advanced — should now say

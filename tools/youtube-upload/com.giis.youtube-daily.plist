@@ -37,7 +37,7 @@
 
   IMPORTANT
     Edit the WorkingDirectory below if your repo lives anywhere other than
-    /Users/alanhdchu/GIIS/giis-website.
+    /Users/alanhdchu/giis-website.
 -->
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -45,13 +45,17 @@
     <key>Label</key>
     <string>com.giis.youtube-daily</string>
 
+    <!-- Paused by Alan on 2026-05-22: do not auto-upload GIIS lesson videos. -->
+    <key>Disabled</key>
+    <true/>
+
     <key>WorkingDirectory</key>
-    <string>/Users/alanhdchu/GIIS/giis-website</string>
+    <string>/Users/alanhdchu/giis-website</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/alanhdchu/GIIS/giis-website/tools/youtube-upload/daily.sh</string>
+        <string>/Users/alanhdchu/giis-website/tools/youtube-upload/daily.sh</string>
     </array>
 
     <key>StartCalendarInterval</key>

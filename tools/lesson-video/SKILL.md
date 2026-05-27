@@ -23,7 +23,7 @@ Trigger on any of:
 **Where to run:** the user's Mac (the sandbox can't reach Microsoft's TTS endpoint).
 
 ```bash
-cd /Users/alanhdchu/GIIS/giis-website
+cd /Users/alanhdchu/giis-website
 pip install edge-tts imageio-ffmpeg          # one-time
 python3 tools/lesson-video/make_lesson.py teaching-videos/<lesson-folder>/
 ```
@@ -172,6 +172,6 @@ artifacts before YouTube upload. Do not treat "MP4 exists" as sufficient.
 
 ## Cross-references
 
-- Pilot lesson: `/Users/alanhdchu/GIIS/giis-website/teaching-videos/algebra-i-module-4-sample/` — copy this folder structure when starting a new module.
+- Pilot lesson: `/Users/alanhdchu/giis-website/teaching-videos/algebra-i-module-4-sample/` — copy this folder structure when starting a new module.
 - Roadmap section: see `ROADMAP.md` → "🎓 教學影片產線" for what's been produced and what's queued.
 - Legacy script: `synth_audio_local.py` inside each lesson folder is the original synth-only entry point. `make_lesson.py` supersedes it; keep the old file only for back-compat.

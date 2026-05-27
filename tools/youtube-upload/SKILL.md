@@ -1,13 +1,13 @@
 # YouTube upload skill
 
-> Upload a finished lesson MP4 to the GIIS YouTube channel via the YouTube Data API v3. Auto-builds title / description / chapters / captions / thumbnail from the lesson folder.
+> Upload a finished, human-approved lesson MP4 to the GIIS YouTube channel via the YouTube Data API v3. Auto-builds title / description / chapters / captions / thumbnail from the lesson folder.
 
 ## When to use
 
 Trigger on:
 - "upload to YouTube", "upload the lesson to YouTube", "publish the video"
 - "send Module 4 to YouTube"
-- After Claude finishes building+merging a lesson and the user wants it published
+- After Claude finishes building+merging a lesson, the release gate passes, and Alan explicitly wants it published
 
 ## Prerequisite (one-time)
 
@@ -24,16 +24,28 @@ If `client_secret.json` is missing, the script tells the user to run setup first
 
 For a single lesson:
 ```bash
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/<lesson-folder>/
+npm run audit:lesson-video-inventory
+python3 tools/lesson-video/lesson_release_gate.py --pending --check
+npm run yt:upload -- --gate-ready --dry-run
 ```
 
-This:
+Actual upload should use `--gate-ready` after the lesson appears in:
+
+```text
+teaching-videos/_audit/release-gate/approved_ready_to_upload.json
+```
+
+Direct `upload_lesson.py` calls also refuse unapproved lessons by default. The
+`--force-without-approval` flag is an emergency-only override and should not be
+used for normal production lessons.
+
+The uploader:
 1. Reads `script.json` for course + module name → builds the title.
 2. Builds a description with: course summary, "this is overview" disclaimer, learning-path reminder, school links, and **per-section chapter timestamps** (computed from audio durations).
 3. Picks `<folder>/<folder-with-underscores>.mp4` as the video.
 4. Attaches `subtitles.srt` as English captions.
 5. Sets `slides/01_title.png` as the thumbnail.
-6. Defaults privacy to `unlisted` (link-only) — switch to `--privacy public` when you actually want it discoverable.
+6. Defaults privacy to `unlisted` (link-only). Keep lessons unlisted unless Alan explicitly approves public discovery.
 
 ## Privacy defaults
 
@@ -41,7 +53,7 @@ This:
 - `private` — only invited Google accounts can watch.
 - `public` — searchable + appears on the channel.
 
-When publishing for real, recommend uploading as `unlisted` first, watching the video on YouTube to confirm rendering / chapters / captions look right, then flipping to `public` in YouTube Studio.
+When publishing for real, upload as `unlisted`, watch the video on YouTube to confirm rendering / chapters / captions, then decide separately whether anything should become public.
 
 ## Quota awareness
 
@@ -83,8 +95,9 @@ Trigger `playlist.py` on:
 
 ## Source-of-truth model
 
-**The YouTube channel is the source of truth, not local files.**
+**Course JSON is the lesson-planning source of truth. YouTube is only the live-video state.**
 
+`server/prisma/courses/**/*.json` controls course/module titles and sequencing.
 `sync_channel.py` queries the channel via API, parses every video title, and
 reconciles into:
   • `public/data/lessons-manifest.json` — what Learn Portal reads
@@ -95,13 +108,13 @@ in YouTube Studio, manual uploads, failed uploads where local state never
 got updated. Run `sync_channel.py --apply` any time to re-converge.
 
 `upload_lesson.py` calls `sync_channel.py --apply` automatically at the end
-of every upload — so the duplicate-detection runs continuously without manual
-intervention.
+of every upload, but upload itself should remain gated by the human approval
+file during the quality reset.
 
 For a scheduled cleanup (e.g. nightly), add to `crontab -e`:
 ```
 # 02:00 daily — reconcile YouTube channel state
-0 2 * * * cd /Users/alanhdchu/GIIS/giis-website && /usr/bin/python3 tools/youtube-upload/sync_channel.py --apply >> /tmp/giis-yt-sync.log 2>&1
+0 2 * * * cd /Users/alanhdchu/giis-website && /usr/bin/python3 tools/youtube-upload/sync_channel.py --apply >> /tmp/giis-yt-sync.log 2>&1
 ```
 
 ## Trigger phrases

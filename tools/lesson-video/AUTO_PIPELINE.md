@@ -18,6 +18,36 @@
 
 **Read this first. Do not deviate.**
 
+## Umi-led production split
+
+Umi is the GIIS principal-assistant / academic editor layer. Claude Code is the
+production engineer.
+
+For lesson work, do not treat "generate a lesson" as one monolithic AI task.
+Use this division:
+
+- **Umi owns** lesson concept, scope, narration quality, misconception strategy,
+  AP/content correctness judgement, parent-facing school quality, and final
+  release review.
+- **Claude Code owns** repository mechanics: reading course/reference files,
+  creating `script.json` and `build_slides.py` from an approved brief, rendering
+  slides/MP4/transcript/contact sheets, running audits, fixing deterministic
+  pipeline bugs, and preparing upload artifacts.
+
+If a handoff exists under `umi/handoffs/`, follow it before inventing a lesson
+from scratch. If the handoff conflicts with this file, stop and ask for
+clarification unless the handoff is stricter.
+
+The source of truth for lesson numbering is the course JSON under
+`server/prisma/courses/**/*.json`, not an existing `teaching-videos/` folder
+name. Before producing a lesson, read the course JSON, confirm the module
+`order` and `title`, and write the target folder/module metadata to match that
+published Learn Portal syllabus. If an older lesson folder uses a different
+numbering scheme, treat it as legacy reference material only.
+
+Unattended upload is only allowed for lessons that the release gate marks
+`ready_to_upload`. A rendered MP4 by itself is not permission to upload.
+
 In May 2026, a Cowork run produced AP Biology M1-M9 by **skipping the 3-reviewer
 cascade** — generator wrote outline, lesson writer wrote script.json directly,
 nobody verified the narration for factual errors or hallucinations. Alan

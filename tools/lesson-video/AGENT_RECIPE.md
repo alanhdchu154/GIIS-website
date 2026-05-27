@@ -178,7 +178,7 @@ prefix. Don't hardcode `/sessions/<some-id>/mnt/`. Either:
   ```
 
 File tools (Read/Write/Edit) always use the macOS path
-`/Users/alanhdchu/GIIS/giis-website/...`. Bash uses the sandbox path. Same
+`/Users/alanhdchu/giis-website/...`. Bash uses the sandbox path. Same
 underlying files, different filesystem views.
 
 Verify slide count (sandbox bash):

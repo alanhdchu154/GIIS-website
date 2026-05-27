@@ -13,6 +13,25 @@ from __future__ import annotations
 import argparse, json, sys, subprocess
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[2]
+APPROVED_READY_TO_UPLOAD = ROOT / "teaching-videos" / "_audit" / "release-gate" / "approved_ready_to_upload.json"
+
+
+def approved_slugs(path: Path = APPROVED_READY_TO_UPLOAD) -> set[str]:
+    try:
+        payload = json.loads(path.read_text())
+    except Exception:
+        return set()
+    if isinstance(payload, list):
+        return {str(row) for row in payload if row}
+    rows = payload.get("approved_ready_to_upload", payload.get("ready_to_upload", []))
+    return {
+        str(row.get("slug") if isinstance(row, dict) else row)
+        for row in rows
+        if (row.get("slug") if isinstance(row, dict) else row)
+    }
+
+
 def build_description(script: dict, lesson_dir: Path) -> str:
     course = script.get("course", "")
     module = script.get("module", "")
@@ -51,8 +70,14 @@ def build_description(script: dict, lesson_dir: Path) -> str:
         "  • Book an advisor check-in if anything is fuzzy",
         "",
         "Learn more about GIIS: https://genesisofideas.school",
-        "Founders pricing — first 100 students: https://genesisofideas.school/pricing",
+        "Enrollment options and advisor-supported plans: https://genesisofideas.school/pricing",
     ]
+    if "ap " in course.lower():
+        parts += [
+            "",
+            "AP note: this lesson supports AP exam preparation. GIIS does not claim "
+            "finalized AP authorization until College Board / CEEB review is confirmed.",
+        ]
     if chapters:
         parts += ["", "─── Chapters ───", *chapters]
     return "\n".join(parts)
@@ -110,6 +135,8 @@ def main():
     ap.add_argument("--no-cleanup", action="store_true",
                     help="after a successful upload, skip auto-deletion of local "
                          "slides/audio/mp4 (which is the default). Useful for debugging.")
+    ap.add_argument("--force-without-approval", action="store_true",
+                    help="emergency override: bypass approved_ready_to_upload.json")
     args = ap.parse_args()
 
     lesson = args.lesson_dir.resolve()
@@ -119,6 +146,12 @@ def main():
     if not script_path.exists():
         sys.exit(f"missing {script_path}")
     script = json.loads(script_path.read_text())
+
+    if not args.force_without_approval and lesson.name not in approved_slugs():
+        sys.exit(
+            "lesson is not in teaching-videos/_audit/release-gate/"
+            "approved_ready_to_upload.json; refusing upload"
+        )
 
     # Find the rendered MP4 (folder name with hyphens normalized to underscores).
     mp4 = lesson / f"{lesson.name.replace('-', '_')}.mp4"

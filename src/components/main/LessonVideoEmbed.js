@@ -13,10 +13,37 @@ import React, { useEffect, useState } from 'react';
  * Props:
  *   - course        string   e.g. "Algebra I" — must match script.json's "course"
  *   - moduleNumber  number   e.g. 4 — matches "Module 4: …"
+ *   - moduleTitle   string   expected course module title; guards against stale
+ *                            YouTube manifests with mismatched module numbering
  *   - className     string   optional wrapper class
  *   - showTitle     bool     default true; show "Watch the lesson" header
  */
-export default function LessonVideoEmbed({ course, moduleNumber, className = '', showTitle = true }) {
+function titleTokens(value) {
+  const stop = new Set([
+    'and', 'or', 'the', 'a', 'an', 'of', 'to', 'in', 'with', 'for', 'vs',
+    'module', 'ap', 'i', 'ii', 'iii',
+  ]);
+  return new Set(String(value || '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .split(/\s+/)
+    .filter((token) => token.length >= 3 && !stop.has(token)));
+}
+
+function titleLooksCompatible(expected, actual) {
+  if (!expected || !actual) return true;
+  const expectedTokens = titleTokens(expected);
+  const actualTokens = titleTokens(actual);
+  if (!expectedTokens.size || !actualTokens.size) return true;
+  let overlap = 0;
+  expectedTokens.forEach((token) => {
+    if (actualTokens.has(token)) overlap += 1;
+  });
+  return overlap / expectedTokens.size >= 0.3;
+}
+
+export default function LessonVideoEmbed({ course, moduleNumber, moduleTitle = '', className = '', showTitle = true }) {
   const [lesson, setLesson] = useState(null);
   const [error, setError] = useState(null);
 
@@ -28,13 +55,17 @@ export default function LessonVideoEmbed({ course, moduleNumber, className = '',
         if (cancelled) return;
         const list = manifest.by_course?.[course] || [];
         const match = list.find((l) => l.module_number === moduleNumber);
+        if (match && !titleLooksCompatible(moduleTitle, match.module_title)) {
+          setLesson(null);
+          return;
+        }
         setLesson(match || null);
       })
       .catch((e) => !cancelled && setError(e.message));
     return () => {
       cancelled = true;
     };
-  }, [course, moduleNumber]);
+  }, [course, moduleNumber, moduleTitle]);
 
   if (error || !lesson) return null;
 

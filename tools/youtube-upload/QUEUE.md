@@ -1,6 +1,8 @@
 # YouTube upload queue
 
-> **Daily morning ritual**: open terminal, run `npm run yt:status`, see what's pending, drink coffee, walk away. The scheduled job will upload up to 4 lessons at 9am automatically — you don't have to babysit it.
+> **Current rule**: lesson upload stays paused until the quality reset is complete.
+> A rendered MP4 is not upload-ready. Upload now requires release-gate review
+> plus an explicit human approval file.
 
 ---
 
@@ -20,23 +22,26 @@ Two commands:
 | Command | What it does | Safe to call repeatedly? |
 |---|---|---|
 | `npm run yt:status` | Print the queue — what's done, what's next, what's stuck | ✅ read-only |
-| `npm run yt:upload` | Upload up to 4 pending lessons (stays under YouTube API quota) | ⚠️ uses quota |
+| `npm run yt:upload` | Upload up to 4 pending lessons (stays under YouTube API quota) | ⚠️ uses quota; do not run while paused |
 
 ---
 
 ## Daily flow
 
-### Option A — let the schedule do it (recommended)
+### Option A — scheduled upload
 
-After one-time install (below), the Mac will automatically:
+This is disabled during the quality reset. After Alan explicitly approves a
+restart, the Mac can automatically:
 
 1. **09:00 every day** — wake up
 2. Print queue status to log
-3. Upload up to 4 pending lessons (≤ 8,400 quota units, well under the 10,000/day cap)
+3. Upload up to 4 pending lessons that appear in
+   `teaching-videos/_audit/release-gate/approved_ready_to_upload.json`
 4. Update each lesson's `script.json` with the new YouTube video id
 5. Refresh the manifest the Learn Portal reads
 
-You can ignore it for weeks. Whatever's pending gets uploaded 4-at-a-time on rolling days until done.
+Do not treat the schedule as "set and forget" until the approval gate has been
+stable for at least two weeks.
 
 ### Option B — manual
 
@@ -44,7 +49,10 @@ Mornings:
 
 ```bash
 npm run yt:status            # see what's pending
-npm run yt:upload            # upload up to 4 (default)
+npm run audit:lesson-video-inventory
+python3 tools/lesson-video/lesson_release_gate.py --pending --check
+npm run yt:upload -- --gate-ready --dry-run
+npm run yt:upload -- --gate-ready # only after Alan approves the approval file
 npm run yt:upload -- --max 2 # upload only 2 (save quota for the day)
 npm run yt:upload -- --dry-run     # just show what would happen
 ```
@@ -62,7 +70,7 @@ npm run yt:upload -- --privacy public
 ## One-time install (the daily schedule)
 
 ```bash
-# 1. Edit the plist if your repo lives anywhere other than /Users/alanhdchu/GIIS/giis-website
+# 1. Edit the plist if your repo lives anywhere other than /Users/alanhdchu/giis-website
 #    (search for that path in the file)
 nano tools/youtube-upload/com.giis.youtube-daily.plist
 
@@ -120,7 +128,14 @@ If you want to push more per day:
 
 ## What gets uploaded — exact contract
 
-For each lesson the runner picks:
+For each lesson the runner picks, all of this must be true first:
+
+1. `lesson_release_gate.py` classifies it as ready.
+2. A human adds it to
+   `teaching-videos/_audit/release-gate/approved_ready_to_upload.json`.
+3. `yt_queue.py upload --gate-ready` is used.
+
+Then the upload runner:
 
 1. Calls `upload_lesson.py <folder>` which:
    - reads `script.json` for title, module, course
@@ -132,6 +147,26 @@ For each lesson the runner picks:
    - adds the video to a playlist matching the `course` field (creates if missing — e.g. "AP Psychology")
 2. Writes the `youtube.video_id` block back into `script.json` so the lesson is now classified as uploaded
 3. Runs `sync_channel.py --apply` to refresh the manifest the Learn Portal `<LessonVideoEmbed>` component reads
+
+`upload_lesson.py` also checks the same approval file directly. That prevents
+manual one-off uploads from bypassing the quality gate.
+
+Example approval file:
+
+```json
+{
+  "approved_by": "Alan / Central Umi",
+  "approved_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "policy": "Human-visible ready_to_upload gate; no unattended upload from latest-release-gate.json",
+  "approved_ready_to_upload": [
+    {
+      "slug": "example-lesson-folder",
+      "classification": "keep",
+      "evidence": "release gate ready + reviewer cascade + contact sheet + learning check"
+    }
+  ]
+}
+```
 
 If any step fails (quota, OAuth expired, network), the runner aborts the rest of the day's batch rather than burning more quota on the same error. You'll see the failure in the log and can re-run manually after fixing.
 

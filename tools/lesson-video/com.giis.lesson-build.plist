@@ -35,7 +35,7 @@
 
   IMPORTANT
     Edit the WorkingDirectory below if your repo lives anywhere other than
-    /Users/alanhdchu/GIIS/giis-website.
+    /Users/alanhdchu/giis-website.
 
     Anaconda Python is hardcoded in daily_build.sh — edit there if your
     Python install lives elsewhere or you want a venv.
@@ -46,13 +46,17 @@
     <key>Label</key>
     <string>com.giis.lesson-build</string>
 
+    <!-- Paused by Alan on 2026-05-22: do not auto-build GIIS lesson videos. -->
+    <key>Disabled</key>
+    <true/>
+
     <key>WorkingDirectory</key>
-    <string>/Users/alanhdchu/GIIS/giis-website</string>
+    <string>/Users/alanhdchu/giis-website</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/alanhdchu/GIIS/giis-website/tools/lesson-video/daily_build.sh</string>
+        <string>/Users/alanhdchu/giis-website/tools/lesson-video/daily_build.sh</string>
     </array>
 
     <key>StartCalendarInterval</key>

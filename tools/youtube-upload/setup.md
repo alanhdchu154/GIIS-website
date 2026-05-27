@@ -78,7 +78,7 @@ This is what authorizes the script.
 6. Move the downloaded file:
    ```bash
    mv ~/Downloads/client_secret_*.json \
-      /Users/alanhdchu/GIIS/giis-website/tools/youtube-upload/client_secret.json
+      /Users/alanhdchu/giis-website/tools/youtube-upload/client_secret.json
    ```
 
 ## 6. Install Python dependencies
@@ -90,7 +90,7 @@ pip install google-api-python-client google-auth-oauthlib google-auth
 ## 7. First upload (interactive — only the first time)
 
 ```bash
-cd /Users/alanhdchu/GIIS/giis-website
+cd /Users/alanhdchu/giis-website
 python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4-sample/
 ```
 

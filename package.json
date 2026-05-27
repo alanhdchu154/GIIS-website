@@ -33,6 +33,8 @@
     "yt:status": "python3 tools/youtube-upload/yt_queue.py status",
     "yt:upload": "python3 tools/youtube-upload/yt_queue.py upload",
     "audit:pathways": "node tools/pathway-quality/audit_courses.js",
+    "audit:lesson-manifest": "node tools/youtube-upload/audit_manifest_alignment.js",
+    "audit:lesson-video-inventory": "node tools/lesson-video/audit_video_quality_inventory.js",
     "normalize:answers": "node tools/pathway-quality/normalize_answer_keys.js",
     "audit:graduation": "node tools/graduation/audit_seed_graduation.js",
     "audit:seniors": "node tools/graduation/audit_senior_records.js",
