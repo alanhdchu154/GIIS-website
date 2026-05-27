@@ -1,5 +1,23 @@
 # GIIS Platform — Product Roadmap
 
+> 最後更新：2026-05-27 External production test account created（production DB 已建立一組外部測試 student/parent account；student code `GIIS-TEST-WH30427`，enrolled in `English I`，active guided test subscription。Live API smoke passed：student login + `/api/me`、parent login + `/api/parent/me`。Live frontend smoke passed：student `/learn` 可見 English I，parent dashboard 可見 student/course/subscription。Credentials delivered directly to Alan in chat; do not store passwords in repo. No dirty worktree code deploy was performed because account creation required only production data write.）
+>
+> 前次：2026-05-27 Official records source-of-truth policy added（已畢業學生 records freeze：除非正式 correction / reissue 流程，不再回頭改已畢業學生的成績單或 Learn Portal evidence。未來所有 active/new students：transcript course rows 與 credits 必須從 `server/prisma/courses/**/*.json` / course catalog 拉，credits 以 catalog 為準；grades / completion evidence 以 Learn Portal assessments 為準，包括 module progress、quiz、exam、assignment、creditEarned。下一步是把這條 policy 做成 transcript generation / audit gate。）
+>
+> 前次：2026-05-27 Student Coordination System Phase 0-3（admin-only staff operating loop 已落地：新增 `StudentCareState` 與 append-only `StudentCareLog`；`/api/students/progress` 現在同時回傳 computed care signals、stored manual care state、display override、recent care logs；新增 admin APIs `GET/PATCH /api/students/:id/care-state` 與 `GET/POST /api/students/:id/care-logs`；單一學生 audit trail 納入 `care_log` events；`/admin/progress` 擴充為 Student Coordination console，含 needs-attention filters、risk/status/advisor/next-check-in、care editor、advisor note panel。Parent route safety smoke passed：`bodyInternal` 未出現在 `/api/parent/me`；local browser smoke passed。驗證：Prisma db push、server tests、pathway/graduation/senior audits、build、G9-G12 lifecycle care smoke。 本輪沒有 deploy，Phase 4 weekly snapshot / Phase 5 parent reassurance / Phase 6 transfer mapping 尚未做。）
+>
+> 前次：2026-05-26 LoginSession / care-signal foundation（把 caring operationalize 的第一塊地基補上：新增 `LoginSession` model，student/parent/admin login 會建立 session，authenticated requests heartbeat 更新 `lastSeenAt` / `durationSeconds`，logout 會寫 `endedAt`；Admin `/api/students/progress` 現在回傳 `lastLoginAt`、recent session count/duration，單一學生 audit trail 也納入 login/session timeline。local API smoke passed：student + parent session rows created，admin progress/audit-trail 可見；`npm test`、`audit:pathways`、`audit:graduation`、`audit:seniors` passed。）
+>
+> 前次：2026-05-26 G9-G12 synthetic lifecycle audit（新增 local-only `server/scripts/g9-g12-lifecycle-audit.js` 與 npm scripts：建立 `GIIS-LIFECYCLE-G9G12` synthetic G9 student，跑 8 semesters / 32 courses / 415 modules / 415 quizzes / 415 graded assignments / 64 exams / 30.5 credits；student login + parent login/API smoke passed；server tests passed；admissions-officer review flags：缺 2-credit world-language sequence、AP prep 最好搭配外部 AP scores、generated assignment 不能當真實學生作品；review note：`umi/reviews/2026-05-26-g9-g12-lifecycle-audit.md`。）
+>
+> 前次：2026-05-26 Lesson video quality reset hardening（Umi + cc second opinion 一致建議不要恢復 generation/build/upload。新增 `npm run audit:lesson-video-inventory`，盤點 70 folders / 50 visible / 29 full reviewer cascade / 26 AP CS A+AP Psychology missing reference packets；`lesson_release_gate.py --check` 可只讀檢查；`yt_queue.py --gate-ready` 與 `upload_lesson.py` 現在都要求 `approved_ready_to_upload.json` 人工核准清單；YouTube description pricing/AP wording 已保守化。pipeline 仍維持 paused。詳見 `umi/reviews/2026-05-26-lesson-video-quality-reset.md`。）
+>
+> 前次：2026-05-26 G10-G12 curriculum/pathway pass（延續 G9 pilot 標準，把 public catalog / pathway / Learn Portal grade metadata 對齊到 G10-G12；補強 weak objectives、thin assignments、estimated hours、無法作答的 answer-key 題；AP public wording 繼續維持 exam-preparation / College Board-aligned / pending review；`npm run audit:pathways` 已達 93 pass / 0 warn / 0 fail。）
+>
+> 最後更新：2026-05-25 Slot C45（Yunfan Yang production learning evidence repaired for school transcript support：35 missing assignment submissions/grades added across G12 Spring courses；student + parent login verified；no official email sent）
+>
+> 前次：2026-05-22 Emergency pause（依 Alan 指示，先暫停 GIIS lesson video pipeline，避免繼續花錢產出低品質或未審核內容。已停用 Claude Scheduled tasks：`giis-lesson-pipeline-daily`、`giis-lesson-pipeline-late`，並在兩個 SKILL.md 加上 hard pause gate；已 `bootout` 並 `disable` Mac LaunchAgents：`com.giis.lesson-build`、`com.giis.youtube-daily`，同時在 `~/Library/LaunchAgents/*.plist` 與 repo plist template 加 `Disabled=true`。新增 `tools/lesson-video/PIPELINE_PAUSED.md`，並讓 `daily_build.sh` / `tools/youtube-upload/daily.sh` 看到 pause file 就直接 exit 0。未刪除任何 lesson artifact、未呼叫 YouTube API、未修改 production data。恢復前需要先由 Central Umi / giis-producer 做 quality reset plan。）
+>
 > 最後更新：2026-05-22 Slot B 5am（QA 巡檢——這一棒沒有可做的正規產製工作，誠實只做查核。Slot A 11pm 已把 **AP Biology 收到 16/16**、有 reference doc 的 backlog 真的耗盡。我把四門 AP 課全部對 `server/prisma/courses` 的 course JSON（編號的 source of truth）和 3-reviewer cascade 檔案做了一次全 repo 盤點，**發現一個比 AP Bio M1-M9 更大的潛在退步**：**AP Computer Science A（M1-M10）和 AP Psychology（M1-M16）共 26 支影片完全沒有 `_review_A/B/C`，從沒跑過 cascade**，其中 **11 支已經上 YouTube、家長看得到**（AP CS A：M1-M6、M10；AP Psych：M1、M11、M12、M13）——直接踩到 CLAUDE.md 第一條「信任」。**為什麼沒當場修**：cascade 的 Reviewer C 規定只能拿 `references/<slug>-ced.md` 比對，而這兩門課**沒有 CED reference doc**，Reviewer C 跑不了；硬產或自己捏一份 reference 來假核對都會重演當初的退步，所以按 SOP 不硬幹。**好消息**：禁用詞掃描四門 AP 課全乾淨（無 Cognia／accredited／UCSB／NJIT／(SIT)／美国认证）；那個每支 AP 影片都會跳的「AP course naming」其實是 `audit_lessons.py` 284-285 行對任何「AP 」課程的固定提醒，不是瑕疵。順帶確認 AP Calc 的「JSON 14 單元 vs 12 資料夾」只是編號合併、內容其實全覆蓋，不是缺口。**人類請補一手**：加 `references/ap-cs-a-ced.md` 與 `references/ap-psychology-ced.md`，下一棒就能先對已上線的 11 支跑 post-hoc cascade（比照 5/19 對 AP Bio M1-M9 的做法），再談產新內容。產出 0 支模組（依規則正確），沒 push。詳見 `_audit/qa-review-coverage/HUMAN_ACTION.md` 與同資料夾 `2026-05-22T10-12-36Z-summary.json`）
 >
 > 前次：2026-05-22 Slot C44（Lesson manifest/course alignment audit added；wrong same-number video embeds guarded；AP CS A ArrayList pilot corrected to Module 10）
@@ -118,6 +136,59 @@
 >
 > The roadmap is the only persistent memory across sessions. If it's not here, the next agent won't know.
 > Full conventions live in [`CLAUDE.md`](./CLAUDE.md) — read once per session.
+
+---
+
+## 🔒 Official records source-of-truth policy（2026-05-27）
+
+> 這是 GIIS official records 的長期資料規則。後續 transcript automation、graduation audit、transfer mapping、Learn Portal repair 都要遵守。
+
+- **Graduated-student freeze**：已畢業學生的 transcript / diploma / Learn Portal evidence 預設不再修改。只有在正式 correction / reissue 流程中，經 admin 明確核准、留下 audit trail、必要時重新出具文件，才可以改。
+- **Future active/new students — course rows**：未來學生的 transcript course rows 應由 course catalog 產生，不再手工亂填 course name / credit。Source of truth 是 `server/prisma/courses/**/*.json` 以及 DB `Course` metadata。
+- **Future active/new students — credits**：課程 credit value 以 course catalog / `Course.credits` 為準。若是 transfer/import credit，必須另有 source label / evidence note，不可以偽裝成 current Learn Portal course。
+- **Future active/new students — grades**：學生 grade / completion evidence 以 Learn Portal assessment records 為準：`ModuleProgress`、`ModuleQuizAttempt`、`ExamAttempt`、`AssignmentSubmission`、`Enrollment.creditEarned`。Transcript 應該是 Learn Portal result 的 official projection，而不是另一套獨立成績來源。
+- **Open implementation item**：新增 transcript generation / audit gate，檢查 active/new students 是否滿足「catalog credits + Learn Portal grades」；已畢業 records 只報 warning，不自動 repair。
+
+---
+
+## ✅ G9 curriculum / pricing / transfer page upgrade（2026-05-26）
+
+> 目標：先用 Grade 9 當 pilot，把 Learn Portal 真實課程、public catalog、pricing signal、transfer-student admissions path、lesson-video restart gate 一次對齊，之後用同一 checklist 推 G10 / G11 / G12 / pathways。
+
+- ✅ **Active repo path aligned**：Central Umi / project coordination docs no longer reference stale `/Users/alanhdchu/giis-website`; active path is `/Users/alanhdchu/giis-website`.
+- ✅ **G9 Learn Portal source-of-truth pass**：以 `server/prisma/courses/**/*.json` 為準，修正 `algebra-i`、`biology`、`english-i-writing-focus`、`intro-communication`、`world-history` 的 audit warnings。這五門目前在 `npm run audit:pathways` 內皆為 pass。
+- ✅ **Public catalog alignment**：`CourseCatalog.js` 補上 real G9 foundation courses：`Digital Literacy`、`Introduction to Communication`，並把 AP 類 badge/copy 改成 AP exam-preparation / authorization-pending 口徑。
+- ✅ **Pricing repositioned**：`PricingPage.js` 從單一 $19.90 founders offer 改成三層：Self-Paced Founders $49/mo 或 $499/year、Guided $149/mo、Premium / College Pathway $299/mo；group pricing 改為 inquiry-based。
+- ✅ **Checkout tier mapping updated**：`server/src/routes/checkout.js` 新增 `self_paced_monthly`、`self_paced_annual`、`guided_monthly`、`premium_monthly`，並保留 `monthly` / `founders_monthly` legacy aliases 到 self-paced。
+- ✅ **Transfer-student path added**：新增 public `/transfer-students` page，說明 official records、credit mapping、placement/timeline、first-term validation、Florida private-school policy boundary；Admission dropdown、mobile nav、Admission page、Footer 都加入口。
+- ✅ **Video pipeline remains paused**：新增 `tools/lesson-video/QUALITY_RESET_PLAN.md`。重啟前必須補 AP CS A / AP Psychology reference packets、跑 post-hoc reviewer cascade、跑 `npm run audit:lesson-manifest`，並把 existing videos 分類 keep / errata / re-record / remove。
+- 🔧 **下一步**：跑 full verification：`npm run audit:pathways`、`npm run audit:lesson-manifest`、`npm run build`、browser smoke `/academics`、`/pathways`、`/pricing`、`/transfer-students`、至少 3 個 G9 `/learn/:slug/syllabus`。
+
+---
+
+## ✅ G10-G12 curriculum / pathway audit pass（2026-05-26）
+
+- ✅ **G10-G12 reviewed with same G9 standard**：從高中生角度檢查 sequence、module count、objectives、resources、assignments、quiz/exam answerability。
+- ✅ **Learn Portal grade metadata aligned**：把 public catalog / pathway 已排入 G10-G12 的 electives 與 AP-adjacent prep courses 補上或修正 `gradeLevel`，降低 catalog 和 portal 分裂。
+- ✅ **Course quality warnings cleared**：修正 weak objectives、thin assignments、低 estimated hours、以及沒有 options 卻只給 `A/B/C/D` 的 unusable answer keys。
+- ✅ **AP wording cleaned again**：public catalog / pathway 改成 `AP ... exam preparation`、`College Board-aligned`、`school review processes remain pending` 這類保守說法。
+- ✅ **Audit result**：`npm run audit:pathways` → `93 pass / 0 warn / 0 fail (93 courses)`。
+- 📝 **Internal report**：`umi/reviews/2026-05-26-g10-g12-catalog-learn-alignment.md` 記錄 review standard、grade-level alignment、student-learning judgment、next reusable checklist。
+
+---
+
+## ✅ Yunfan Yang transcript-support learning evidence repair（2026-05-25 Slot C45）
+
+> 目標：Yunfan Yang (`26-004`) 的成績單準備寄給外部學校前，補齊 production Learn Portal 中可被 admin audit trail 查看的一致學習軌跡：該上的 module、quiz、midterm/final、assignment、account/login、audit。
+
+- ✅ **Official transcript eligibility rechecked**：local seed audit 通過。`npm run audit:seniors` 顯示 Yunfan Yang PASS：31 credits、8 semesters、38 transcript rows、G12 Spring 3 courses released 2026-05-22；只有 Grade 11 Government/Economics 0.5 credit vs current catalog 1.0 的 historical/import variation warning，不是 current Learn Portal row。`npm run audit:graduation` 顯示 Yunfan 31 credits、UW 3.86、admin eligible、GIIS eligible。`npm run audit:official-docs` PASS。
+- ✅ **Production dry-run first**：production `node scripts/repair-learn-completions-from-transcripts.js --student=26-004` 回傳 `enrollmentsToRepair: 0`，表示 G12 Spring quiz/module progress/midterm/final/credit 已完整；parent account dry-run 顯示 `yunfan.yang_parent@genesisideas.school` already present。
+- ✅ **Assignment evidence gap repaired**：擴充 `server/scripts/repair-learn-completions-from-transcripts.js`，新增 opt-in `--assignments`，只在指定時建立 missing assignment submissions + grading feedback，並同步 `ModuleProgress.assignmentSubmittedAt` / `assignmentGradedAt`。production dry-run 顯示只會補 Yunfan 3 門 G12 Spring courses 的 35 份 missing assignments（English IV - Media & Analytical Writing 13、Media Psychology 11、Sports Management & Leadership 11），無 missing quiz/exam/progress/credit。已執行 `--student=26-004 --assignments --apply`。
+- ✅ **Post-repair verification**：production post dry-run 回傳 `planned: []` / `enrollmentsToRepair: 0`。直接查 production DB：Yunfan 3 courses、35 completed modules、35 quiz attempts、6 exam attempts、35 assignment submissions、35 graded assignments、35 assignment progress markers、3 creditsEarned。`senior-activity-audit.js --year=12` 修正 gradeLevel-only filter，現在會納入 G12 semesterLabel 的 open/elective courses；Yunfan 報表為 3 enrollments、113 estimated hours、35/35 quizzes passed、35/35 assignments graded、6/6 exams passed、gate PASS。
+- ✅ **Login/account checked**：production API login smoke：student `yunfan.yang@genesisideas.school` 回 200 role `student`；parent `yunfan.yang_parent@genesisideas.school` 回 200 並更新 parent `lastLoginAt`。注意：`StudentAccount` 目前沒有 `lastLoginAt` / `LoginLog` model，所以不能宣稱 student login history，只能宣稱 login was verified.
+- ✅ **Audit trail marker**：production `AuditLog` 新增 3 筆 `learn_portal_completion_repair`，actor `script:repair-learn-completions-from-transcripts --assignments`，對應三門 course assignment repair。
+- ✅ **Tooling fixed**：`tools/graduation/audit_seed_graduation.js` / `audit_senior_records.js` 的 VM require resolver 補上 `../src/lib/parentCredentials`，修復 seed audit 在目前 repo 版本的 module resolution error。`server/scripts/senior-activity-audit.js` 的 `--year=12` filter 也修正，避免漏算 open/elective G12 courses。
+- ⚠️ **No email sent**：本輪沒有執行 official transcript/diploma email send，也沒有呼叫 graduation document `--send`。下一步若要寄外部學校，先由 Alan 確認 recipient / CC / 是否只寄 transcript 或 transcript+diploma。
 
 ---
 
@@ -1321,7 +1392,7 @@
 - 📌 **此節原本的 audio 渲染指令備檔**（如果要重生）：
 
 ```bash
-cd /Users/alanhdchu/GIIS/giis-website
+cd /Users/alanhdchu/giis-website
 # 一次性安裝（如已裝可略）
 pip install edge-tts imageio-ffmpeg
 
@@ -1390,7 +1461,7 @@ done
 整支 AP Psych + AP Calc AB Module 1 一行 for-loop 全部產出 17 支 MP4（**~166 分鐘 lecture + AP Calc 6 分鐘 = 172 分鐘 content**）：
 
 ```bash
-cd /Users/alanhdchu/GIIS/giis-website
+cd /Users/alanhdchu/giis-website
 
 # 一次性裝置（之前若沒裝過）
 pip install edge-tts imageio-ffmpeg
