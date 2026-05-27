@@ -76,7 +76,7 @@
       "order": 5,
       "title": "Unit Circle & Radian Measure",
       "titleZh": "单位圆与弧度",
-      "objectives": "Convert between degrees and radians; locate reference angles; recall exact trig values from the unit circle; compute arc length and sector area.",
+      "objectives": "Convert between degrees and radians, locate reference angles, calculate exact trigonometric values from the unit circle, and apply radian measure to solve arc length and sector area problems.",
       "readingUrl": "https://openstax.org/books/precalculus-2e/pages/5-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 5.2: Unit Circle, Sine, and Cosine",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:unit-circle/v/unit-circle-definition-of-trig-functions-1",
@@ -85,7 +85,7 @@
       "video2Note": "Professor Leonard — Unit Circle and Radian Measure (Full Lecture)",
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:unit-circle/e/unit_circle",
       "practiceNote": "Khan Academy — Unit Circle Practice",
-      "assignment": "Convert 10 angles from degrees to radians and 10 from radians to degrees. Fill in all 16 standard unit circle points from memory. Compute arc length and sector area for 4 given circles.",
+      "assignment": "Convert 10 angles from degrees to radians and 10 from radians to degrees. Fill in all 16 standard unit circle points from memory, then compute arc length and sector area for 4 circles. Submit corrections for any missed unit-circle values with a one-sentence explanation of the quadrant or reference-angle rule used.",
       "estimatedHrs": 3.5
     },
     {
@@ -156,7 +156,7 @@
       "order": 10,
       "title": "Parametric Equations & Polar Coordinates",
       "titleZh": "参数方程与极坐标",
-      "objectives": "Graph parametric curves by eliminating the parameter; convert between rectangular and polar coordinates; graph polar equations; recognize common polar curves.",
+      "objectives": "Graph parametric curves by eliminating the parameter, convert between rectangular and polar coordinates, analyze common polar curves, and explain how parameter or angle changes affect the graph.",
       "readingUrl": "https://openstax.org/books/precalculus-2e/pages/8-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 8.6–8.7: Parametric Equations and Polar Coordinates",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:parametric/x9e81a4f98389efdf:parametric-equations-intro/v/parametric-equations-1",
@@ -165,7 +165,7 @@
       "video2Note": "Professor Leonard — Parametric Equations and Polar Coordinates",
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:polar-coordinates/x9e81a4f98389efdf:polar-coordinate-intro/e/polar-and-rectangular",
       "practiceNote": "Khan Academy — Polar and Rectangular Coordinates Practice",
-      "assignment": "Graph 4 parametric curves by hand and verify using Desmos. Convert 6 points from polar to rectangular and 6 from rectangular to polar. Identify and sketch 3 common polar curves (circle, cardioid, rose).",
+      "assignment": "Graph 4 parametric curves by hand and verify them using Desmos. Convert 6 points from polar to rectangular and 6 from rectangular to polar. Identify and sketch 3 common polar curves (circle, cardioid, rose), then write a short comparison explaining what each equation form makes easier to see.",
       "estimatedHrs": 4
     },
     {
@@ -204,7 +204,7 @@
       "order": 13,
       "title": "Probability & Combinatorics (Advanced)",
       "titleZh": "概率与组合数学（进阶）",
-      "objectives": "Count arrangements using permutations and combinations; expand binomials using the Binomial Theorem and Pascal's triangle; compute theoretical probability for multi-step experiments.",
+      "objectives": "Solve counting problems using permutations and combinations, expand binomials with the Binomial Theorem and Pascal's triangle, and calculate theoretical probabilities for multi-step experiments.",
       "readingUrl": "https://openstax.org/books/precalculus-2e/pages/11-introduction",
       "readingNote": "OpenStax Precalculus 2e — Ch 11.5–11.7: Counting, Binomial Theorem, Probability",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:combinations/v/combination-formula",
@@ -213,7 +213,7 @@
       "video2Note": "Professor Leonard — Combinatorics and the Binomial Theorem",
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:combinations/e/combinations_1",
       "practiceNote": "Khan Academy — Combinations Practice",
-      "assignment": "Solve 6 permutation and 6 combination problems. Expand 4 binomial expressions using the Binomial Theorem. Use Pascal's triangle to find a specific term in a binomial expansion. Solve 3 probability problems involving combinations.",
+      "assignment": "Solve 6 permutation and 6 combination problems, labeling when order matters. Expand 4 binomial expressions using the Binomial Theorem, use Pascal's triangle to find a specified term, and solve 3 probability problems involving combinations. For two problems, explain why a permutation or combination model is appropriate.",
       "estimatedHrs": 4
     },
     {

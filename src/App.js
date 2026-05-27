@@ -61,6 +61,7 @@ const AdminSubscriptionsPage = lazy(() => import('./components/pages/Admin/Admin
 const ApplyForm = lazy(() => import('./components/pages/Apply/ApplyForm'));
 const VerifyPage = lazy(() => import('./components/pages/Verify/VerifyPage'));
 const WelcomePage = lazy(() => import('./components/pages/Welcome/WelcomePage'));
+const TransferStudentsPage = lazy(() => import('./components/pages/TransferStudents/TransferStudentsPage'));
 
 const LANGUAGE_STORAGE_KEY = 'giis-language';
 
@@ -167,6 +168,7 @@ function App() {
          <Route path="/student-handbook" element={<Navigate to="/handbook" replace />} />
          <Route path="/profile" element={<ProfilePage language={language} />} />
          <Route path="/pricing" element={<PricingPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/transfer-students" element={<TransferStudentsPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/parent/demo" element={<ParentDashboardDemo language={language} />} />
          <Route path="/parent/login" element={<ParentLogin language={language} />} />
          <Route path="/parent/dashboard" element={<ParentDashboard language={language} />} />

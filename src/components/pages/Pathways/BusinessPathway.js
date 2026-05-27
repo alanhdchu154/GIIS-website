@@ -12,7 +12,7 @@ const META = {
   heroDescription: 'A 4-year pathway for students headed toward business, marketing, management, or entrepreneurship. You will learn how markets work, how consumers make decisions, how to build a brand, and how to lead teams — finishing with a real capstone brand launch project.',
   targets: ['Business Administration / Management', 'Marketing & Advertising', 'Entrepreneurship & Startups', 'International Business', 'Public Relations & Communications', 'Supply Chain & Operations'],
   collegeNote: 'Business schools at NYU Stern, UMich Ross, USC Marshall, and similar programs want to see evidence of business thinking — not just grades. This pathway gives you a structured four-year story: from business fundamentals through a senior brand launch project, with economics and statistics to show quantitative rigor.',
-  stats: [{ label: 'AP Courses', value: 1 }],
+  stats: [{ label: 'AP Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -51,7 +51,7 @@ const SCHEDULE = [
     { name: 'English III',               type: 'core',      credits: 1.0, dept: 'English Language Arts' },
     { name: 'Statistics',                type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Biology — Advanced',        type: 'core',      credits: 1.0, dept: 'Science' },
-    { name: 'AP Macroeconomics',         type: 'pathway',   credits: 1.0, courseId: 'biz-apmacro' },
+    { name: 'Macroeconomics exam preparation',         type: 'pathway',   credits: 1.0, courseId: 'biz-apmacro' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',  type: 'core',      credits: 1.0, dept: 'English Language Arts' },
@@ -64,7 +64,7 @@ const SCHEDULE = [
     { name: 'English IV — Writing & Communication', type: 'core', credits: 1.0, dept: 'English Language Arts' },
     { name: 'Calculus',                  type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Business Strategy',         type: 'pathway',   credits: 1.0, courseId: 'biz-strategy' },
-    { name: 'AP Statistics',             type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Strongly recommended for business analytics' },
+    { name: 'AP Statistics exam preparation',             type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Strongly recommended for business analytics' },
   ]},
   { grade: 12, term: 'Spring', courses: [
     { name: 'English IV — Advanced Composition', type: 'core', credits: 1.0, dept: 'English Language Arts' },
@@ -223,9 +223,9 @@ const COURSES = [
   },
   {
     id: 'biz-apmacro',
-    name: 'AP Macroeconomics',
+    name: 'Macroeconomics exam preparation',
     grade: 11, term: 'Fall', credits: 1.0,
-    description: 'College-level economics focused on the big picture — how national and global economies function. GDP, unemployment, inflation, fiscal policy, monetary policy, and international trade. This course prepares you for the AP exam and gives you the economic literacy needed for any business career.',
+    description: 'College-level economics focused on the big picture — how national and global economies function. GDP, unemployment, inflation, fiscal policy, monetary policy, and international trade. This course prepares you for the College Board AP exam and gives you the economic literacy needed for any business career.',
     syllabus: {
       objectives: [
         'Explain what GDP measures and its limitations as an economic indicator',
@@ -246,8 +246,8 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://www.youtube.com/watch?v=6_mfAOSaFEo', title: 'AP Macroeconomics — Full Course Review', channel: 'Heimler\'s History', note: 'The most popular AP Macro review channel — watch all episodes in order.' },
-      { url: 'https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics', title: 'AP Macroeconomics', channel: 'Khan Academy', note: 'Complete AP Macro curriculum with practice exercises — work through every unit.' },
+      { url: 'https://www.youtube.com/watch?v=6_mfAOSaFEo', title: 'Macroeconomics exam preparation — Full Course Review', channel: 'Heimler\'s History', note: 'The most popular AP Macro review channel — watch all episodes in order.' },
+      { url: 'https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics', title: 'Macroeconomics exam preparation', channel: 'Khan Academy', note: 'Complete AP Macro curriculum with practice exercises — work through every unit.' },
       { url: 'https://www.youtube.com/watch?v=d8uTB5XorBw', title: 'Economics — Crash Course', channel: 'Crash Course', note: 'Watch episodes 20–35 for macroeconomics topics. Clear, entertaining explanations.' },
       { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP Macro Resources', channel: 'College Board', note: 'Official FRQs and progress checks. Use throughout the year for exam prep.' },
     ],

@@ -4,7 +4,7 @@
   "nameZh": "社会科学研究方法",
   "credits": 1,
   "department": "Social Studies",
-  "type": "Core",
+  "type": "Elective",
   "description": "A core course introducing students to the philosophical foundations and practical tools of social science research — from developing research questions and reviewing literature to designing studies, collecting data, and communicating findings ethically and rigorously.",
   "isPublished": true,
   "modules": [
@@ -22,7 +22,7 @@
       "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/1-2-the-role-of-values-in-social-science-research/",
       "practiceNote": "Distinguish a scientific claim from a normative (values-based) claim using three examples from current events",
       "assignment": "Write a 350-word essay answering: What makes social science 'scientific'? Describe two ways that social science research differs from natural science research (e.g., the role of the researcher, studying humans who react to being observed), and two ways they are similar. Give one concrete example of a social science research question and explain what kind of evidence could answer it.",
-      "estimatedHrs": 2.5
+      "estimatedHrs": 3.5
     },
     {
       "order": 2,
@@ -38,7 +38,7 @@
       "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/2-2-inductive-and-deductive-reasoning/",
       "practiceNote": "Classify three social science studies as positivist, interpretivist, or critical and justify your classification",
       "assignment": "Choose a social issue you care about (poverty, gender inequality, school discipline, online bullying). In 350 words, explain how (1) a positivist researcher, (2) an interpretivist researcher, and (3) a critical theory researcher would each approach studying it differently — what assumptions each makes, what methods each would use, and what kind of answer each is seeking.",
-      "estimatedHrs": 2.5
+      "estimatedHrs": 3.5
     },
     {
       "order": 3,
@@ -54,7 +54,7 @@
       "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/3-2-informed-consent-and-confidentiality/",
       "practiceNote": "Evaluate a hypothetical study design for ethical issues (informed consent, deception, confidentiality, vulnerable populations)",
       "assignment": "Research either the Milgram obedience study (1963) or the Stanford Prison Experiment (1971). In 350 words: (1) summarize what the study involved, (2) identify at least three specific ethical violations using the Belmont Report's three principles, (3) explain what an IRB today would likely require before approving such a study, and (4) state whether you believe the knowledge gained justified the ethical costs.",
-      "estimatedHrs": 2.5
+      "estimatedHrs": 3.5
     },
     {
       "order": 4,
@@ -70,7 +70,7 @@
       "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/4-2-what-is-a-researchable-question/",
       "practiceNote": "Refine three poorly worded research questions (too broad, normative, or unanswerable) into strong, researchable social science questions",
       "assignment": "Identify a social phenomenon you want to understand better (e.g., social media use and teen mental health, income and voting behavior, peer pressure and academic performance). Write a 350-word essay that: (1) identifies your broad topic, (2) explains why it is important to study, (3) formulates one specific, researchable research question, (4) states a hypothesis, and (5) identifies the key independent and dependent variables.",
-      "estimatedHrs": 2.5
+      "estimatedHrs": 3.5
     },
     {
       "order": 5,
@@ -86,7 +86,7 @@
       "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/5-2-academic-sources-and-databases/",
       "practiceNote": "Search Google Scholar for 5 peer-reviewed articles on social media and adolescent well-being; annotate each with key findings and limitations",
       "assignment": "Select a social science topic from a previous module. Using Google Scholar or your school library database, find three peer-reviewed journal articles on that topic. Write a 350-word mini-literature review that: (1) synthesizes the main findings across the three articles, (2) identifies what they agree on, (3) identifies a gap or debate that remains unresolved, and (4) explains how your own potential research could contribute to filling that gap.",
-      "estimatedHrs": 3
+      "estimatedHrs": 4
     },
     {
       "order": 6,
@@ -102,7 +102,7 @@
       "practiceUrl": "https://open.lib.umn.edu/socialresearch/chapter/6-2-research-design-types/",
       "practiceNote": "Classify five study descriptions as cross-sectional, longitudinal, or panel designs and identify one strength of each",
       "assignment": "Design a quantitative study to answer this question: 'Do students who sleep at least 8 hours per night earn higher GPA than those who sleep less?' In 350 words: (1) describe your research design (cross-sectional or longitudinal), (2) define your operationalization of 'sleep hours' and 'academic performance,' (3) describe your sampling plan, (4) identify one internal validity threat and how you would control for it, and (5) explain to what population your results could be generalized.",
-      "estimatedHrs": 2.5
+      "estimatedHrs": 3.5
     },
     {
       "order": 7,
@@ -263,9 +263,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which of the following social science disciplines primarily studies the behavior of individuals and mental processes.\"",
       "options": null,
-      "answer": "C",
-      "explanation": "The correct answer is: C.",
-      "points": 1
+      "answer": "Psychology.",
+      "explanation": "Psychology focuses on individual behavior and mental processes, while sociology, economics, and political science use different primary lenses.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 2,
@@ -368,9 +369,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"research 'confidentiality' means that:.\"",
       "options": null,
-      "answer": "C",
-      "explanation": "The correct answer is: C.",
-      "points": 1
+      "answer": "Protecting participant identities and data so private information is not disclosed to unauthorized people.",
+      "explanation": "Confidentiality means data can be collected but must be stored and reported in ways that protect participants.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 4,
@@ -539,9 +541,10 @@
       "order": 5,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"'external validity' in social research refers to:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "The extent to which findings can generalize beyond the specific sample, setting, and study conditions.",
+      "explanation": "External validity asks whether results apply to other people, places, times, or situations.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 7,
@@ -588,9 +591,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"survey 'response bias' occurs when:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Participants answer inaccurately or systematically distort responses because of wording, social desirability, memory, or survey context.",
+      "explanation": "Response bias affects the accuracy of survey data even when the sample was selected well.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 8,
@@ -693,9 +697,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a case study research design in social science involves:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "An in-depth investigation of one person, group, event, organization, or setting using multiple sources of evidence.",
+      "explanation": "Case studies trade broad generalization for deep contextual understanding.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 10,
@@ -864,9 +869,10 @@
       "order": 5,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a correlation coefficient of r = +0.85 between two variables indicates:.\"",
       "options": null,
-      "answer": "C",
-      "explanation": "The correct answer is: C.",
-      "points": 1
+      "answer": "A strong positive linear relationship between the two variables.",
+      "explanation": "A positive coefficient near +1 indicates a strong direct association, not proof of causation.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 13,
@@ -913,9 +919,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"researcher 'reflexivity' in qualitative research requires the researcher to:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Examine how the researcher's identity, assumptions, role, and choices may influence data collection and interpretation.",
+      "explanation": "Reflexivity is especially important in qualitative research because the researcher is part of the interpretive process.",
+      "points": 1,
+      "type": "short"
     }
   ],
   "questions": [
@@ -1010,11 +1017,11 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
+      "type": "short",
       "question": "Simple random sampling is the preferred probability sampling method because:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "Every member of the population has a known and equal chance of selection.",
+      "explanation": "Simple random sampling reduces selection bias and supports statistical inference when implemented correctly.",
       "points": 1
     },
     {
@@ -1106,11 +1113,11 @@
     {
       "examType": "midterm",
       "order": 14,
-      "type": "fill",
+      "type": "short",
       "question": "A 'double-barreled' survey question is problematic because it:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "Asks about two issues at once, making it impossible to know which part the respondent is answering.",
+      "explanation": "Double-barreled questions create ambiguous data because agreement with one part may not mean agreement with the other.",
       "points": 1
     },
     {
@@ -1202,11 +1209,11 @@
     {
       "examType": "final",
       "order": 6,
-      "type": "fill",
+      "type": "short",
       "question": "A quasi-experimental study lacks which key element of a true experiment?",
       "options": null,
-      "answer": "C",
-      "explanation": "The correct answer is: C.",
+      "answer": "Random assignment to treatment and control conditions.",
+      "explanation": "Quasi-experiments can estimate effects, but without random assignment they are more vulnerable to confounding.",
       "points": 1
     },
     {
@@ -1300,11 +1307,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "fill",
+      "type": "short",
       "question": "The discussion section of a research report primarily serves to:",
       "options": null,
-      "answer": "C",
-      "explanation": "The correct answer is: C.",
+      "answer": "Interpret findings, connect them to the research question and prior literature, explain limitations, and suggest implications.",
+      "explanation": "The discussion explains what the results mean rather than simply repeating the data.",
       "points": 1
     },
     {
@@ -1398,11 +1405,11 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "fill",
+      "type": "short",
       "question": "The primary ethical requirement before beginning any data collection in research involving human participants is:",
       "options": null,
-      "answer": "C",
-      "explanation": "The correct answer is: C.",
+      "answer": "Informed consent and appropriate ethics review or approval before collecting data.",
+      "explanation": "Researchers must protect participants by explaining risks, voluntary participation, confidentiality, and consent before data collection.",
       "points": 1
     }
   ],

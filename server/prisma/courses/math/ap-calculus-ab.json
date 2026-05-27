@@ -5,7 +5,7 @@
   "credits": 1,
   "department": "Mathematics",
   "type": "AP",
-  "description": "A college-level differential and integral calculus course following the AP Calculus AB curriculum (College Board Course and Exam Description). Covers the eight Big Ideas: limits and continuity, differentiation, contextual and analytical applications of differentiation, integration and accumulation of change, differential equations, and applications of integration. Aligned to the AP exam administered each May. Students leaving this course are prepared for first-semester college calculus or to sit the AP exam for credit.",
+  "description": "AP Calculus AB exam preparation following the College Board Course and Exam Description. Students study limits, differentiation, applications of derivatives, integration, differential equations, and applications of integration while preparing for the College Board AP exam and first-semester college calculus expectations.",
   "isPublished": true,
   "modules": [
     {
@@ -156,7 +156,7 @@
       "order": 10,
       "title": "Antiderivatives & Riemann Sums",
       "titleZh": "反导数与黎曼和",
-      "objectives": "Compute antiderivatives of polynomial, exponential, and basic trig functions; understand Riemann sums (left, right, midpoint, trapezoidal) as approximations of accumulated change; recognize the definite integral as the limit of these sums.",
+      "objectives": "Calculate antiderivatives of polynomial, exponential, and basic trigonometric functions; approximate accumulated change with Riemann sums; and interpret the definite integral as a limit of those sums.",
       "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/5-1-approximating-areas",
       "readingNote": "OpenStax Calculus Vol. 1 — §5.1 Approximating Areas",
       "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-2/v/riemann-sums-and-integrals",
@@ -188,7 +188,7 @@
       "order": 12,
       "title": "Techniques of Integration: u-Substitution",
       "titleZh": "积分技巧：换元法",
-      "objectives": "Recognize when u-substitution applies (a function and a multiple of its derivative both appear); choose u correctly; transform the integral fully (including bounds for definite integrals); reverse-substitute when needed.",
+      "objectives": "Identify when u-substitution applies, choose an appropriate substitution, transform definite and indefinite integrals correctly, and verify results by differentiating when possible.",
       "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/5-5-substitution",
       "readingNote": "OpenStax Calculus Vol. 1 — §5.5 Substitution",
       "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-9/v/u-substitution",
@@ -220,7 +220,7 @@
       "order": 14,
       "title": "Areas, Volumes & Cross-Sections",
       "titleZh": "面积、体积与截面",
-      "objectives": "Compute area between two curves using vertical or horizontal slices; compute volumes of revolution by the disk and washer methods around horizontal and vertical axes; compute volumes of solids with known cross-sections (squares, semicircles, equilateral triangles).",
+      "objectives": "Calculate area between curves, volumes of revolution using disk and washer methods, and volumes of solids with known cross-sections using appropriate integral setup and notation.",
       "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/6-introduction",
       "readingNote": "OpenStax Calculus Vol. 1 — Ch 6: Applications of Integration",
       "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-applications-of-integration-new/ab-8-9/v/disc-method-around-x-axis",
@@ -1349,5 +1349,6 @@
       "explanation": "The derivative of sin x is cos x.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 12
 }

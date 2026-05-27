@@ -5,14 +5,14 @@
   "credits": 1,
   "department": "Science",
   "type": "AP",
-  "description": "AP Biology is a rigorous college-level course covering the core principles of modern biology, including the chemistry of life, cellular processes, genetics, evolution, and ecology. Students develop scientific reasoning skills through inquiry-based learning and prepare for the AP Biology exam.",
+  "description": "AP Biology exam preparation following the College Board Course and Exam Description. Students study chemistry of life, cellular processes, genetics, evolution, ecology, and scientific reasoning while preparing for the College Board AP Biology exam.",
   "isPublished": true,
   "modules": [
     {
       "order": 1,
       "title": "Chemistry of Life",
       "titleZh": "生命的化学基础",
-      "objectives": "Understand the chemical composition of living organisms, including the properties of water, carbon-based molecules, and the four macromolecules: carbohydrates, lipids, proteins, and nucleic acids.",
+      "objectives": "Analyze the chemical composition of living organisms, explain how water properties support life, compare major biological macromolecules, and connect molecular structure to biological function.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/2-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 2: The Chemical Foundation of Life — focus on sections 2.1-2.4 covering atomic structure, chemical bonds, water properties, and carbon chemistry.",
       "videoUrl": "https://www.youtube.com/watch?v=H8WJ2KENlK0",
@@ -236,7 +236,7 @@
       "order": 15,
       "title": "Ecosystems and Energy Flow — Advanced Applications",
       "titleZh": "生态系统与能量流动 — Advanced Applications",
-      "objectives": "In-depth case studies and real-world applications.",
+      "objectives": "Analyze ecosystem case studies using energy-flow models, trophic efficiency, population interactions, and disturbance data, then connect evidence to AP-style ecological reasoning.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption. (Advanced)",
       "videoUrl": "https://www.youtube.com/watch?v=b1L_TGfHLxQ",
@@ -245,14 +245,14 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/ecology/energy-flow-through-ecosystems",
       "practiceNote": "Khan Academy: Ecosystems and Energy — complete the ecological pyramid calculations and the biogeochemical cycle matching exercises. (AP Prep)",
-      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "assignment": "Choose one ecosystem case study involving disturbance, invasive species, or energy-flow disruption. Create a one-page model showing producers, consumers, decomposers, and energy transfer, then answer two AP-style free-response prompts using evidence from the model.",
       "estimatedHrs": 4
     },
     {
       "order": 16,
       "title": "Ecosystems and Energy Flow — Synthesis & Review",
       "titleZh": "生态系统与能量流动 — Synthesis & Review",
-      "objectives": "Comprehensive review and AP exam preparation strategies.",
+      "objectives": "Synthesize ecology, evolution, genetics, and cellular processes into AP-style explanations, identify remaining misconception areas, and practice timed free-response planning.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption. (Advanced)",
       "videoUrl": "https://www.youtube.com/watch?v=b1L_TGfHLxQ",
@@ -261,7 +261,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/ecology/energy-flow-through-ecosystems",
       "practiceNote": "Khan Academy: Ecosystems and Energy — complete the ecological pyramid calculations and the biogeochemical cycle matching exercises. (AP Prep)",
-      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "assignment": "Complete a timed AP-style ecology/evolution free-response set, then write an error analysis identifying two content gaps and one test-taking strategy to improve before the exam. Revise one response using the scoring guidelines.",
       "estimatedHrs": 4
     }
   ],

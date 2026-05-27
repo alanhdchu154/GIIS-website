@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
 import DemoEmbed from '../../main/DemoEmbed.js';
 import heroImg from '../../../img/Hero/transcript-screen.jpg';
@@ -135,6 +136,36 @@ export default function AdmissionMain({ language, toggleLanguage }) {
         showCtas={false}
       />
 
+      <div style={{ background: '#f4f6fa', padding: '44px 0', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 10%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap' }}>
+          <div style={{ maxWidth: '560px' }}>
+            <p style={{ color: '#2b3d6d', fontSize: '12px', fontWeight: 800, letterSpacing: '1.4px', textTransform: 'uppercase', margin: '0 0 8px' }}>
+              {isEn ? 'Transfer Students' : '转学生'}
+            </p>
+            <h2 style={{ margin: '0 0 8px', color: '#1a1a2e', fontSize: '28px', fontWeight: 800, lineHeight: 1.15 }}>
+              {isEn ? 'Already completed high school credits elsewhere?' : '已经在其他学校修过高中学分？'}
+            </h2>
+            <p style={{ margin: 0, color: '#555', fontSize: '14px', lineHeight: 1.7 }}>
+              {isEn
+                ? 'GIIS can review official records, map transferable credits, and estimate the shortest realistic graduation path.'
+                : 'GIIS 可以审核正式记录、对应可转学分，并估算最现实的毕业路径。'}
+            </p>
+          </div>
+          <Link to="/transfer-students" style={{
+            padding: '13px 22px',
+            borderRadius: '8px',
+            background: '#2b3d6d',
+            color: '#fff',
+            textDecoration: 'none',
+            fontWeight: 800,
+            fontSize: '14px',
+            whiteSpace: 'nowrap',
+          }}>
+            {isEn ? 'Transfer Guide →' : '查看转学说明 →'}
+          </Link>
+        </div>
+      </div>
+
       {/* Requirements */}
       <div style={{ background: '#fff', padding: '80px 0' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%', fontFamily: 'Inter, sans-serif' }}>
@@ -239,40 +270,33 @@ export default function AdmissionMain({ language, toggleLanguage }) {
           <h2 style={{ color: '#fff', fontSize: '56px', fontWeight: 800, lineHeight: 1, marginBottom: '12px' }}>
             {isEn ? 'TUITION' : '学费'}
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '17px', maxWidth: '560px', lineHeight: 1.7, marginBottom: '48px' }}>
+          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '17px', maxWidth: '620px', lineHeight: 1.7, marginBottom: '48px' }}>
             {isEn
-              ? 'Simple monthly subscription. Learn at your own pace — take the exam when you\'re ready. Pass = credit. No per-course fees, no hidden charges.'
-              : '简单订阅制。按自己的节奏学习，准备好了再考试。通过即得学分。无单课收费，无隐藏费用。'}
+              ? 'Choose the level of support your family actually needs. Self-paced students can start simply; transfer and college-pathway families can add advising, planning, and review.'
+              : '选择真正适合家庭需求的支持层级。自主学习学生可低门槛开始；转学或大学路径家庭可加入顾问、规划与审核支持。'}
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '48px' }}>
-            {/* Monthly */}
             <div style={{
               background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)',
               borderRadius: '14px', padding: '36px 32px',
             }}>
               <p style={{ color: 'rgba(213,168,54,1)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 16px' }}>
-                {isEn ? 'Founders Monthly' : '创校月付'}
+                {isEn ? 'Self-Paced Founders' : '自主学习创校方案'}
               </p>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '6px' }}>
-                <span style={{ color: '#fff', fontSize: '56px', fontWeight: 800, lineHeight: 1 }}>$19.90</span>
+                <span style={{ color: '#fff', fontSize: '56px', fontWeight: 800, lineHeight: 1 }}>$49</span>
                 <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '16px' }}>{isEn ? '/ month' : '/ 月'}</span>
               </div>
-              <p style={{ fontSize: '13px', margin: '0 0 6px' }}>
-                <span style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'line-through' }}>$199</span>
-                <span style={{ color: '#a5d6a7', fontWeight: 700, marginLeft: '8px' }}>
-                  {isEn ? '90% off' : '省 90%'}
-                </span>
-              </p>
               <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', margin: '0 0 24px' }}>
-                {isEn ? 'First 100 students · Locked for 12 months' : '限前 100 名学生 · 锁定 12 个月'}
+                {isEn ? '$499/year option available · limited founder lock' : '可选 $499/年 · 限量创校锁价'}
               </p>
               <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {[
-                  isEn ? 'Full access to all 8 pathways' : '全部 8 条路径无限访问',
-                  isEn ? 'Unlimited course exams' : '无限次课程考试',
-                  isEn ? 'Personalized course planning support' : '个性化课程规划支持',
-                  isEn ? 'Official US transcript' : '美国官方成绩单',
+                  isEn ? 'Course access and pacing tools' : '课程访问与学习进度工具',
+                  isEn ? 'GIIS transcript records' : 'GIIS 成绩单记录',
+                  isEn ? 'Parent dashboard' : '家长进度面板',
+                  isEn ? 'Best for independent learners' : '适合自主学习学生',
                 ].map((item) => (
                   <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.82)', fontSize: '14px' }}>
                     <span style={{ color: 'rgba(213,168,54,1)', fontSize: '16px', flexShrink: 0 }}>✓</span>
@@ -282,7 +306,6 @@ export default function AdmissionMain({ language, toggleLanguage }) {
               </ul>
             </div>
 
-            {/* Annual */}
             <div style={{
               background: 'rgba(213,168,54,0.12)',
               border: '2px solid rgba(213,168,54,1)',
@@ -294,30 +317,24 @@ export default function AdmissionMain({ language, toggleLanguage }) {
                 background: 'rgba(213,168,54,1)', color: '#1a1a2e',
                 fontSize: '11px', fontWeight: 800, padding: '3px 12px', borderRadius: '20px', letterSpacing: '0.5px',
               }}>
-                {isEn ? 'BEST VALUE' : '最划算'}
+                {isEn ? 'MOST POPULAR' : '最常用'}
               </div>
               <p style={{ color: 'rgba(213,168,54,1)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 16px' }}>
-                {isEn ? 'Founders Annual' : '创校年付'}
+                {isEn ? 'Guided' : '顾问指导方案'}
               </p>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '6px' }}>
-                <span style={{ color: '#fff', fontSize: '56px', fontWeight: 800, lineHeight: 1 }}>$199</span>
-                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '16px' }}>{isEn ? '/ year' : '/ 年'}</span>
+                <span style={{ color: '#fff', fontSize: '56px', fontWeight: 800, lineHeight: 1 }}>$149</span>
+                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '16px' }}>{isEn ? '/ month' : '/ 月'}</span>
               </div>
-              <p style={{ fontSize: '13px', margin: '0 0 6px' }}>
-                <span style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'line-through' }}>$1,799</span>
-                <span style={{ color: '#a5d6a7', fontWeight: 700, marginLeft: '8px' }}>
-                  {isEn ? '90% off · ~$16.6/mo' : '省 90% · 月均约 $16.60'}
-                </span>
-              </p>
               <p style={{ color: 'rgba(213,168,54,0.85)', fontSize: '12px', fontWeight: 600, margin: '0 0 24px' }}>
-                {isEn ? 'Save $40 vs monthly · Locked for 12 months' : '比月付节省 $40 · 锁定 12 个月'}
+                {isEn ? 'Monthly advisor check-in included' : '包含每月顾问 check-in'}
               </p>
               <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {[
-                  isEn ? 'Everything in monthly' : '包含所有月付内容',
-                  isEn ? 'Priority email support (24h)' : '优先邮件支持（24 小时内回复）',
-                  isEn ? 'US diploma upon completion' : '完成学业后颁发美国文凭',
-                  isEn ? 'Lock in $19.90/month rate for 12 months' : '锁定 $19.90/月，12 个月不涨价',
+                  isEn ? 'Everything in Self-Paced' : '包含自主学习方案内容',
+                  isEn ? 'Monthly advisor check-in' : '每月顾问 check-in',
+                  isEn ? 'Course planning support' : '课程规划支持',
+                  isEn ? 'Transfer-credit review' : '转学分审核支持',
                 ].map((item) => (
                   <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.82)', fontSize: '14px' }}>
                     <span style={{ color: 'rgba(213,168,54,1)', fontSize: '16px', flexShrink: 0 }}>✓</span>
@@ -328,14 +345,14 @@ export default function AdmissionMain({ language, toggleLanguage }) {
             </div>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.06)', borderRadius: '10px', padding: '20px 24px', maxWidth: '640px' }}>
+          <div style={{ background: 'rgba(255,255,255,0.06)', borderRadius: '10px', padding: '20px 24px', maxWidth: '700px' }}>
             <p style={{ margin: '0 0 6px', fontSize: '13px', fontWeight: 700, color: 'rgba(213,168,54,1)' }}>
-              {isEn ? '💡 How it works' : '💡 学费说明'}
+              {isEn ? 'How it works' : '学费说明'}
             </p>
             <p style={{ margin: 0, fontSize: '13px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>
               {isEn
-                ? 'Your subscription gives you full access to all course materials. Study at your own pace, then take the credit exam when ready. Dedicated students typically complete 1–2 credits per month. A full 24-credit diploma takes 1–4 years depending on entry grade.'
-                : '订阅后即可无限访问所有课程资料。按自己的节奏学习，准备好后参加学分考试。勤奋的学生每月通常可完成 1-2 个学分。根据入学年级，完整的 24 学分文凭通常需要 1-4 年。'}
+                ? 'Premium / College Pathway support is available at $299/month for families who need stronger advising, pathway planning, writing support, and application-facing structure. Group and partner pricing is handled by inquiry.'
+                : '需要更完整升学路径规划、写作支持与申请结构的家庭，可选择 $299/月 Premium / College Pathway。团体与合作机构价格以咨询为准。'}
             </p>
           </div>
         </div>
@@ -378,7 +395,7 @@ export default function AdmissionMain({ language, toggleLanguage }) {
               },
               {
                 q: { en: 'How is tuition structured?', zh: '学费如何计算？' },
-                a: { en: 'GIIS Founders pricing is $19.90/month (locked for 12 months, regular rate $199/month) or $199/year (regular $1,799). Limited to the first 100 enrolled students. Your subscription gives full access to all course materials. Study at your own pace and take credit exams when ready — no per-course fees.', zh: 'GIIS 创校价为月付 $19.90（锁定 12 个月，原价 $199/月）或年付 $199（原价 $1,799）。限前 100 名学生。订阅后即可无限访问所有课程资料，按自己节奏学习，准备好后参加学分考试，无单课收费。' },
+                a: { en: 'GIIS offers Self-Paced Founders at $49/month or $499/year, Guided at $149/month, and Premium / College Pathway at $299/month. Group pricing is inquiry-based. Payment happens after the enrollment path is clear.', zh: 'GIIS 提供 $49/月或 $499/年的自主学习创校方案、$149/月顾问指导方案，以及 $299/月 Premium / College Pathway。团体价格以咨询为准，付款会在入学路径确认后进行。' },
               },
               {
                 q: { en: 'Can I transfer credits from my previous school?', zh: '我可以转入之前学校的学分吗？' },

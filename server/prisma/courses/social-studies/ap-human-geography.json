@@ -5,7 +5,7 @@
   "credits": 1,
   "department": "Social Studies",
   "type": "AP",
-  "description": "A college-level course examining how humans shape and are shaped by their environments — exploring population patterns, cultural diffusion, political boundaries, urban systems, economic development, and the geographic tools used to analyze our world.",
+  "description": "AP Human Geography exam preparation following the College Board Course and Exam Description. Students examine population, culture, political organization, agriculture, development, urban systems, and geographic tools while preparing for the College Board AP exam.",
   "isPublished": true,
   "modules": [
     {
@@ -236,7 +236,7 @@
       "order": 15,
       "title": "Contemporary Human Geography Issues — Advanced Applications",
       "titleZh": "当代人文地理问题 — Advanced Applications",
-      "objectives": "In-depth case studies and real-world applications.",
+      "objectives": "Analyze contemporary human geography issues using spatial data, scale, place, diffusion, and human-environment interaction, then support claims with map or demographic evidence.",
       "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
       "readingNote": "OER World Regional Geography — Contemporary Issues chapter (Advanced)",
       "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes",
@@ -245,14 +245,14 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography",
       "practiceNote": "Complete a full AP Human Geography practice free-response question synthesizing population, culture, and development concepts (AP Prep)",
-      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "assignment": "Select one contemporary issue such as migration, urban inequality, food insecurity, or climate displacement. Build a two-map evidence set, write a 500-word spatial analysis, and include one AP-style claim-evidence-reasoning paragraph.",
       "estimatedHrs": 4
     },
     {
       "order": 16,
       "title": "Contemporary Human Geography Issues — Synthesis & Review",
       "titleZh": "当代人文地理问题 — Synthesis & Review",
-      "objectives": "Comprehensive review and AP exam preparation strategies.",
+      "objectives": "Synthesize the major AP Human Geography units, compare geographic models across regions, and practice timed free-response responses using precise geographic vocabulary.",
       "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/world-regional-geography-people-places-and-globalization",
       "readingNote": "OER World Regional Geography — Contemporary Issues chapter (Advanced)",
       "videoUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-2-population-and-migration-patterns-and-processes",
@@ -261,7 +261,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography",
       "practiceNote": "Complete a full AP Human Geography practice free-response question synthesizing population, culture, and development concepts (AP Prep)",
-      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "assignment": "Complete one mixed-unit AP-style free-response set under timed conditions. Score your response with a rubric, revise one paragraph for stronger geographic reasoning, and create a 20-term review sheet grouped by AP unit.",
       "estimatedHrs": 4
     }
   ],
@@ -311,9 +311,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"geographic scale in map analysis refers to:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "The level of spatial detail or area represented, such as local, regional, national, or global scale.",
+      "explanation": "Scale affects what patterns are visible and how geographic conclusions should be interpreted.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 2,
@@ -416,9 +417,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"countries like germany and japan, with sub-replacement fertility rates and aging populations, face which demographic challenge.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Population aging and possible population decline, creating pressure on labor forces and elder-care systems.",
+      "explanation": "Low fertility plus longer life expectancy increases the share of older residents and can shrink the working-age population.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 4,
@@ -560,15 +562,11 @@
       "moduleOrder": 6,
       "order": 3,
       "question": "The Green Revolution of the 1960s–1980s primarily achieved:",
-      "options": [
-        "A shift from commercial to subsistence farming in Asia",
-        "Introduction of high-yield crop varieties, irrigation, and fertilizers that dramatically increased food production",
-        "The elimination of pesticide use in global agriculture",
-        "Universal food security for all developing nations"
-      ],
-      "answer": "Introduction of high-yield crop varieties, irrigation, and fertilizers that dramatically increased food production",
-      "explanation": "The Green Revolution introduced high-yield wheat and rice varieties, synthetic fertilizers, irrigation, and pesticides — dramatically increasing food production in South Asia, Mexico, and parts of Southeast Asia.",
-      "points": 1
+      "options": null,
+      "answer": "Its benefits were uneven because inputs such as irrigation, fertilizer, capital, and infrastructure were not equally available.",
+      "explanation": "The Green Revolution raised yields in many places, but regions without capital and infrastructure benefited less.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 6,
@@ -587,9 +585,10 @@
       "order": 5,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a major criticism of the green revolution's impact in sub-saharan africa is that:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Green Revolution gains were uneven because many farmers lacked irrigation, fertilizer, credit, transportation, and political support needed to benefit from new seed technologies.",
+      "explanation": "In Sub-Saharan Africa, yield gains were limited where infrastructure, capital, and state support were weaker, so the Green Revolution did not benefit all regions equally.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 7,
@@ -636,9 +635,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"special economic zones (sezs) as used in china were designed to:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Attract foreign investment, expand export manufacturing, and test market-oriented economic policies in targeted areas.",
+      "explanation": "SEZs create special rules and incentives to concentrate trade, investment, and industrial growth.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 8,
@@ -741,9 +741,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"economic 'race to the bottom' in globalization refers to:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Competition among places to lower labor, tax, or environmental standards to attract mobile investment.",
+      "explanation": "Global firms can move production, so governments may weaken protections to compete for jobs and capital.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 10,
@@ -912,9 +913,10 @@
       "order": 5,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the gender gap in development is significant because research consistently shows that:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Improving women's education, health, and economic participation is strongly associated with broader development gains.",
+      "explanation": "Gender inequality affects fertility, income, health, education, and political participation, so it shapes overall development.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 13,
@@ -961,9 +963,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a significant ethical concern associated with widespread geographic data collection and gis use is:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Privacy and surveillance risks from collecting, mapping, and sharing location-based data about people and communities.",
+      "explanation": "GIS and location data can reveal sensitive patterns, so ethical use requires consent, security, and attention to harm.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 14,
@@ -1196,11 +1199,11 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
+      "type": "short",
       "question": "The Berlin Conference (1884–85) primarily affected Africa's political geography by:",
       "options": null,
-      "answer": "C",
-      "explanation": "The correct answer is: C.",
+      "answer": "Dividing African territory among European powers with little regard for existing ethnic, linguistic, or political boundaries.",
+      "explanation": "The conference formalized colonial claims and helped create borders that often ignored local geographies.",
       "points": 1
     },
     {
@@ -1292,11 +1295,11 @@
     {
       "examType": "midterm",
       "order": 14,
-      "type": "fill",
+      "type": "short",
       "question": "Which statement best describes the 'replacement fertility rate'?",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "The fertility level at which a population replaces itself over time, usually about 2.1 children per woman in many developed countries.",
+      "explanation": "Replacement fertility accounts for mortality and the sex ratio at birth; it is not exactly 2.0 in most populations.",
       "points": 1
     },
     {
@@ -1388,11 +1391,11 @@
     {
       "examType": "final",
       "order": 6,
-      "type": "fill",
+      "type": "short",
       "question": "Dependency theory attributes poverty in developing countries primarily to:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "Unequal global economic relationships that keep peripheral countries dependent on wealthier core countries.",
+      "explanation": "Dependency theory emphasizes historical and structural exploitation in the world economy.",
       "points": 1
     },
     {
@@ -1486,11 +1489,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "fill",
+      "type": "short",
       "question": "Transnational corporations (TNCs) most directly contribute to which geographic process?",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "Globalization through cross-border production networks, investment, labor flows, and commodity chains.",
+      "explanation": "TNCs organize economic activity across countries, connecting places through global production and markets.",
       "points": 1
     },
     {
@@ -1584,11 +1587,11 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "fill",
+      "type": "short",
       "question": "Which geographic concept best explains why Pacific Island nations like Kiribati face an existential threat from climate change?",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "Vulnerability, because low-lying island states are highly exposed and have limited capacity to adapt to sea-level rise.",
+      "explanation": "Climate risk depends on exposure, sensitivity, and adaptive capacity; low elevation makes sea-level rise existential for some islands.",
       "points": 1
     }
   ],

@@ -11,8 +11,8 @@ const META = {
   courseEmoji: '📈',
   heroDescription: 'A 4-year pathway for students drawn to economics, finance, public policy, or investment banking. You will study micro and macro economics at AP level, learn to analyze financial markets, model real data, and explore behavioral economics — the science of why people make the financial decisions they do.',
   targets: ['Economics / Applied Economics', 'Finance & Investment Banking', 'Public Policy & Government', 'Accounting & Financial Analysis', 'Actuarial Science', 'International Relations & Development'],
-  collegeNote: 'Two AP Economics courses, quantitative modeling, and a senior research thesis demonstrate the exact combination of analytical rigor and intellectual curiosity that top economics programs at LSE, UChicago, and Northwestern look for. Students in this pathway consistently outperform peers in introductory college economics.',
-  stats: [{ label: 'AP Courses', value: 2 }],
+  collegeNote: 'Economics exam preparation, quantitative modeling, and a senior research thesis demonstrate the exact combination of analytical rigor and intellectual curiosity that top economics programs at LSE, UChicago, and Northwestern look for.',
+  stats: [{ label: 'AP Prep Options', value: 2 }],
 };
 
 const SCHEDULE = [
@@ -38,28 +38,28 @@ const SCHEDULE = [
     { name: 'Chemistry',                  type: 'core',      credits: 1.0, dept: 'Science' },
     { name: 'U.S. History',              type: 'core',      credits: 0.5, dept: 'Social Studies' },
     { name: 'Macroeconomics',            type: 'pathway',   credits: 0.5, courseId: 'econ-macro' },
-    { name: 'AP Microeconomics',         type: 'supporting', credits: 1.0, dept: 'Economics', note: 'Take concurrently — strong foundation for AP exam' },
+    { name: 'Microeconomics exam preparation',         type: 'supporting', credits: 1.0, dept: 'Economics', note: 'Take concurrently — strong foundation for College Board AP exam' },
   ]},
   { grade: 10, term: 'Spring', courses: [
     { name: 'English II — Literature',    type: 'core',      credits: 1.0, dept: 'English Language Arts' },
     { name: 'Pre-Calculus',              type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Physics Fundamentals',      type: 'core',      credits: 1.0, dept: 'Science' },
     { name: 'World Politics',            type: 'core',      credits: 0.5, dept: 'Social Studies' },
-    { name: 'AP Macroeconomics',         type: 'pathway',   credits: 1.0, courseId: 'econ-apmacro' },
+    { name: 'Macroeconomics exam preparation',         type: 'pathway',   credits: 1.0, courseId: 'econ-apmacro' },
   ]},
   { grade: 11, term: 'Fall', courses: [
     { name: 'English III',               type: 'core',      credits: 1.0, dept: 'English Language Arts' },
     { name: 'Statistics',                type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Biology — Advanced',        type: 'core',      credits: 1.0, dept: 'Science' },
     { name: 'Financial Markets & Investing', type: 'pathway', credits: 0.5, courseId: 'econ-markets' },
-    { name: 'AP Statistics',             type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Essential for quantitative economics' },
+    { name: 'AP Statistics exam preparation',             type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Essential for quantitative economics' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',  type: 'core',      credits: 1.0, dept: 'English Language Arts' },
     { name: 'Trigonometry',              type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Physics — Mechanics',       type: 'core',      credits: 1.0, dept: 'Science' },
     { name: 'International Trade & Globalization', type: 'pathway', credits: 0.5, courseId: 'econ-trade' },
-    { name: 'US & World History (AP)',   type: 'supporting', credits: 0.5, dept: 'Social Studies' },
+    { name: 'U.S. & World History exam preparation', type: 'supporting', credits: 0.5, dept: 'Social Studies' },
   ]},
   { grade: 12, term: 'Fall', courses: [
     { name: 'English IV — Writing & Communication', type: 'core', credits: 1.0, dept: 'English Language Arts' },
@@ -99,7 +99,7 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://www.khanacademy.org/economics-finance-domain/ap-microeconomics', title: 'AP Microeconomics — Full Course', channel: 'Khan Academy', note: 'Complete microeconomics curriculum with interactive exercises. Work through every unit.' },
+      { url: 'https://www.khanacademy.org/economics-finance-domain/ap-microeconomics', title: 'Microeconomics exam preparation — Full Course', channel: 'Khan Academy', note: 'Complete microeconomics curriculum with interactive exercises. Work through every unit.' },
       { url: 'https://www.youtube.com/watch?v=aaukVfOqMCk', title: 'Microeconomics — Crash Course', channel: 'Crash Course', note: 'Watch episodes 1–10 of Crash Course Economics for the core microeconomics topics.' },
       { url: 'https://www.youtube.com/watch?v=u7xnIXeXMSk', title: 'Supply and Demand — Full Explanation', channel: 'Jacob Clifford (ACDC Economics)', note: 'The best single teacher for AP Economics on YouTube. Watch his supply and demand series.' },
       { url: 'https://www.youtube.com/watch?v=mUDOQ8DWNUQ', title: 'Market Failures Explained', channel: 'Marginal Revolution University', note: 'Clear video explanations of externalities and market failure from top economists.' },
@@ -152,7 +152,7 @@ const COURSES = [
     id: 'econ-macro',
     name: 'Macroeconomics',
     grade: 10, term: 'Fall', credits: 0.5,
-    description: 'Zoom out from individual markets to the entire economy. GDP, unemployment, inflation, business cycles, and central banking. Understand why recessions happen, how governments respond, and what the Fed does when the economy slows down. A required foundation before AP Macroeconomics.',
+    description: 'Zoom out from individual markets to the entire economy. GDP, unemployment, inflation, business cycles, and central banking. Understand why recessions happen, how governments respond, and what the Fed does when the economy slows down. A required foundation before Macroeconomics exam preparation.',
     syllabus: {
       objectives: [
         'Calculate GDP using the expenditure approach and interpret the result',
@@ -175,7 +175,7 @@ const COURSES = [
     resources: [
       { url: 'https://www.youtube.com/watch?v=PHe0bXAIuk0', title: 'How the Economic Machine Works — Ray Dalio', channel: 'Ray Dalio / Bridgewater', note: 'The most-watched economics explainer ever. Watch this first — 30 minutes that will change how you see the world.' },
       { url: 'https://www.youtube.com/watch?v=d8uTB5XorBw', title: 'Macroeconomics — Crash Course', channel: 'Crash Course', note: 'Episodes 19–30 cover the macro topics. Clear and entertaining.' },
-      { url: 'https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics', title: 'AP Macroeconomics — Khan Academy', channel: 'Khan Academy', note: 'Use for practice exercises on each topic. Highly interactive.' },
+      { url: 'https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics', title: 'Macroeconomics exam preparation — Khan Academy', channel: 'Khan Academy', note: 'Use for practice exercises on each topic. Highly interactive.' },
       { url: 'https://www.youtube.com/watch?v=6sNmJtoKDCo', title: 'The 2008 Financial Crisis Explained', channel: 'CNBC', note: 'A clear account of what caused the Great Recession — use for the Week 14–16 case study.' },
     ],
     quiz: [
@@ -187,9 +187,9 @@ const COURSES = [
   },
   {
     id: 'econ-apmacro',
-    name: 'AP Macroeconomics',
+    name: 'Macroeconomics exam preparation',
     grade: 10, term: 'Spring', credits: 1.0,
-    description: 'College-level macroeconomics with AP exam preparation. This course goes deeper than the introductory macro course — covering the full AD-AS model, the Phillips Curve, loanable funds market, foreign exchange markets, and complex policy analysis. Aim for a 4 or 5 on the AP exam.',
+    description: 'College-level macroeconomics with College Board AP exam preparation. This course goes deeper than the introductory macro course — covering the full AD-AS model, the Phillips Curve, loanable funds market, foreign exchange markets, and complex policy analysis. Aim for a 4 or 5 on the College Board AP exam.',
     syllabus: {
       objectives: [
         'Use the AD-AS model to analyze economic shocks and policy responses',
@@ -211,9 +211,9 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://www.youtube.com/watch?v=6_mfAOSaFEo', title: 'AP Macroeconomics Full Review', channel: 'Heimler\'s History', note: 'Watch Heimler\'s entire AP Macro playlist — it is the gold standard for AP exam prep.' },
-      { url: 'https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics', title: 'AP Macroeconomics', channel: 'Khan Academy', note: 'Complete AP Macro with exercises for every unit. Use the progress checks to prepare.' },
-      { url: 'https://www.youtube.com/c/ACDCLeadership', title: 'AP Economics — Jacob Clifford (ACDC Economics)', channel: 'ACDC Economics', note: 'Excellent AP Economics teacher. His AP Macro playlist covers every topic with practice problems.' },
+      { url: 'https://www.youtube.com/watch?v=6_mfAOSaFEo', title: 'Macroeconomics Exam Prep — Full Review', channel: 'Heimler\'s History', note: 'Watch Heimler\'s macroeconomics playlist for College Board AP exam preparation.' },
+      { url: 'https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics', title: 'Macroeconomics exam preparation', channel: 'Khan Academy', note: 'Complete AP Macro with exercises for every unit. Use the progress checks to prepare.' },
+      { url: 'https://www.youtube.com/c/ACDCLeadership', title: 'Economics Exam Prep — Jacob Clifford', channel: 'ACDC Economics', note: 'Clear economics review videos with practice problems for exam preparation.' },
       { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official Resources', channel: 'College Board', note: 'Official AP Macro progress checks, daily videos, and released FRQs. Essential for exam prep.' },
     ],
     quiz: [

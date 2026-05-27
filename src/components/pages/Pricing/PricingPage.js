@@ -6,48 +6,163 @@ import DemoEmbed from '../../main/DemoEmbed.js';
 
 const SCHOOL_EMAIL = 'admissions@genesisideas.school';
 
-const MONTHLY_FEATURES = [
-  { en: 'Full access to all 40+ courses', zh: '全部 40+ 门课程无限访问' },
-  { en: '8 academic pathway sequences', zh: '8 条完整学习路径' },
-  { en: 'Module quizzes, midterm & final exams', zh: '章节测验、期中与期末考试' },
-  { en: 'Personalized course planning support', zh: '个性化课程规划支持' },
-  { en: 'Official US high school transcript', zh: '美国官方成绩单' },
-  { en: 'US high school diploma upon graduation', zh: '毕业后颁发美国高中文凭' },
-  { en: 'Cancel anytime · 30-day full refund', zh: '随时取消 · 30 天无条件退款' },
+const TIERS = [
+  {
+    key: 'self-paced',
+    eyebrow: { en: 'Self-Paced Founders', zh: '自主学习创校方案' },
+    price: '$49',
+    cadence: { en: '/ month', zh: '/ 月' },
+    annual: { en: '$499/year available', zh: '可选 $499/年付' },
+    note: {
+      en: 'Best for motivated students who need a real school record and flexible pacing.',
+      zh: '适合自律学生：需要真实学校记录、弹性进度与清楚的学习轨迹。',
+    },
+    features: [
+      { en: 'Full access to GIIS Learn Portal courses', zh: '开放 GIIS Learn Portal 课程' },
+      { en: 'Module quizzes, assignments, midterm and final exams', zh: '章节测验、作业、期中与期末考试' },
+      { en: 'Parent dashboard and official transcript record', zh: '家长面板与正式成绩单记录' },
+      { en: '30-day full refund', zh: '30 天无条件退款' },
+    ],
+    cta: { en: 'Apply for Self-Paced', zh: '申请自主学习方案' },
+    highlighted: false,
+  },
+  {
+    key: 'guided',
+    eyebrow: { en: 'Guided', zh: '顾问指导方案' },
+    price: '$149',
+    cadence: { en: '/ month', zh: '/ 月' },
+    annual: { en: 'Most families start here', zh: '多数家庭适合从这里开始' },
+    note: {
+      en: 'Adds the human layer parents usually need: planning, review, and transfer-credit support.',
+      zh: '加入家长最需要的人为支持：选课规划、进度复盘与转学分审核。',
+    },
+    features: [
+      { en: 'Everything in Self-Paced', zh: '包含自主学习方案全部内容' },
+      { en: 'Monthly advisor check-in', zh: '每月顾问 check-in' },
+      { en: 'Course planning and pathway review', zh: '选课规划与 pathway 复盘' },
+      { en: 'Transfer-credit review for incoming students', zh: '转学生学分初审' },
+      { en: 'Parent progress review and next-step notes', zh: '家长进度解读与下一步建议' },
+    ],
+    cta: { en: 'Apply for Guided', zh: '申请顾问指导方案' },
+    highlighted: true,
+  },
+  {
+    key: 'premium',
+    eyebrow: { en: 'Premium / College Pathway', zh: '升学路径方案' },
+    price: '$299',
+    cadence: { en: '/ month', zh: '/ 月' },
+    annual: { en: 'For higher-touch planning', zh: '适合需要更密集规划的家庭' },
+    note: {
+      en: 'For families who want GIIS to actively shape the academic story behind the transcript.',
+      zh: '适合希望 GIIS 主动协助打造成绩单背后申请故事的家庭。',
+    },
+    features: [
+      { en: 'Everything in Guided', zh: '包含顾问指导方案全部内容' },
+      { en: 'Pathway planning for target majors', zh: '针对目标专业规划 pathway' },
+      { en: 'Writing and project portfolio guidance', zh: '写作与项目 portfolio 指导' },
+      { en: 'More frequent parent-facing planning support', zh: '更密集的家长端规划支持' },
+      { en: 'College-readiness framing without admissions guarantees', zh: '升学准备定位，但不承诺录取结果' },
+    ],
+    cta: { en: 'Apply for Premium', zh: '申请升学路径方案' },
+    highlighted: false,
+  },
 ];
 
 const FAQS = [
   {
-    q: { en: 'What if my child doesn\'t engage? Can we get a refund?', zh: '如果我的孩子不投入怎么办？可以退款吗？' },
+    q: { en: 'Why does GIIS offer multiple tiers?', zh: '为什么 GIIS 有多层方案？' },
     a: {
-      en: 'Yes — 30-day full refund, no questions asked. If within the first 30 days you decide GIIS isn\'t the right fit, email admissions@genesisideas.school and we refund the entire payment. We\'d rather have you spend $0 and walk away than have an unhappy family on the platform.',
-      zh: '可以——30 天内无条件全额退款。如果在前 30 天内你判断 GIIS 不合适，发邮件到 admissions@genesisideas.school 即可获得全额退款。我们宁可让你花 0 美元离开，也不希望平台上有不满意的家庭。',
+      en: 'The structure is meant to be honest about support needs: some students only need access and records, while transfer students and college-bound families usually need advisor support.',
+      zh: '这个结构是为了更诚实地区分支持需求：有些学生只需要课程与记录，但转学生与目标美国大学的家庭通常需要顾问支持。',
     },
   },
   {
-    q: { en: 'Do you have a group or family plan?', zh: '有团体方案或家庭方案吗？' },
+    q: { en: 'Do you still offer group pricing?', zh: '还有团体价格吗？' },
     a: {
-      en: 'Yes — $50/month for 3 to 5 students under one account. Intended for tutoring centers, school partners, or families with multiple high-schoolers. Email admissions@genesisideas.school to set one up.',
-      zh: '有——$50/月可涵盖 3 至 5 位学生，共用一个账户。适合补习机构、合作学校或家中有多位高中生的家庭。发邮件至 admissions@genesisideas.school 即可申请。',
+      en: 'Yes, but group pricing is handled by admissions instead of public checkout. Schools, tutoring centers, and multi-student families can email admissions for a seat-based quote.',
+      zh: '有，但团体价格改由招生团队评估，不再公开成低价按钮。学校、机构或多学生家庭可邮件联系招生团队取得 seat-based quote。',
     },
   },
   {
-    q: { en: 'What happens if I need to pause?', zh: '如果我需要暂停怎么办？' },
-    a: { en: 'Monthly subscribers can cancel and re-enroll at any time. To pause for a longer period (e.g., a semester abroad), email admissions@genesisideas.school.', zh: '月付用户可随时取消并重新注册。如需较长期暂停（例如出国一个学期），请发邮件至 admissions@genesisideas.school。' },
+    q: { en: 'Can transfer students join mid-year?', zh: '转学生可以中途加入吗？' },
+    a: {
+      en: 'Yes. GIIS reviews official transcripts, maps transferable credits to the 24-credit framework, and recommends the shortest realistic path to graduation.',
+      zh: '可以。GIIS 会审核正式成绩单，将可转学分对应到 24 学分毕业框架，并建议最现实的毕业路径。',
+    },
   },
   {
-    q: { en: 'Are there any additional fees?', zh: '还有其他费用吗？' },
-    a: { en: 'No. Your subscription covers everything — course content, exams, email support, and your official transcript. There are no per-course, per-exam, or setup fees.', zh: '没有。订阅费涵盖所有内容——课程资料、考试、邮件支持及官方成绩单。无单课费、考试费或开户费。' },
-  },
-  {
-    q: { en: 'How long does the full diploma program take?', zh: '完整文凭项目需要多长时间？' },
-    a: { en: 'Grade 9 entry: 4 years (24 credits). Grade 10–12 transfer: 1–3 years depending on transferable credits. Dedicated students typically earn 1–2 credits per month.', zh: '9 年级入学：4 年（24 学分）。10–12 年级转入：1–3 年，取决于可转入学分。用功的学生每月通常可完成 1–2 个学分。' },
-  },
-  {
-    q: { en: 'Do you offer financial assistance?', zh: '你们提供经济援助吗？' },
-    a: { en: 'We offer need-based scholarships for qualified students. Contact our admissions office to learn more about eligibility.', zh: '我们为符合条件的学生提供基于需要的奖学金。请联系招生办公室了解资格详情。' },
+    q: { en: 'What if my child does not engage?', zh: '如果孩子不投入怎么办？' },
+    a: {
+      en: 'Every plan includes a 30-day full refund. Guided and Premium plans add advisor visibility so parents can catch disengagement earlier.',
+      zh: '所有方案都有 30 天无条件退款。Guided 与 Premium 方案会加入顾问可见度，让家长更早发现孩子没有投入。',
+    },
   },
 ];
+
+function TierCard({ tier, isEn }) {
+  return (
+    <div style={{
+      background: '#fff',
+      border: tier.highlighted ? '2px solid #d5a836' : '1px solid #dfe5ef',
+      borderRadius: 8,
+      padding: '28px 24px',
+      boxShadow: tier.highlighted ? '0 14px 36px rgba(43,61,109,0.14)' : '0 4px 18px rgba(43,61,109,0.07)',
+      position: 'relative',
+    }}>
+      {tier.highlighted && (
+        <div style={{
+          position: 'absolute',
+          top: -13,
+          left: 20,
+          background: '#d5a836',
+          color: '#1a1a2e',
+          borderRadius: 14,
+          padding: '4px 12px',
+          fontSize: 11,
+          fontWeight: 800,
+          letterSpacing: 0.6,
+          textTransform: 'uppercase',
+        }}>
+          {isEn ? 'Recommended' : '推荐'}
+        </div>
+      )}
+      <p style={{ margin: '0 0 8px', color: '#2b3d6d', fontSize: 12, fontWeight: 800, letterSpacing: 1.4, textTransform: 'uppercase' }}>
+        {tier.eyebrow[isEn ? 'en' : 'zh']}
+      </p>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 4 }}>
+        <span style={{ fontSize: 46, lineHeight: 1, fontWeight: 850, color: '#1a1a2e' }}>{tier.price}</span>
+        <span style={{ color: '#777', fontSize: 15 }}>{tier.cadence[isEn ? 'en' : 'zh']}</span>
+      </div>
+      <p style={{ margin: '0 0 14px', color: '#1B6B3A', fontSize: 13, fontWeight: 750 }}>
+        {tier.annual[isEn ? 'en' : 'zh']}
+      </p>
+      <p style={{ minHeight: 70, margin: '0 0 18px', color: '#555', fontSize: 13, lineHeight: 1.65 }}>
+        {tier.note[isEn ? 'en' : 'zh']}
+      </p>
+      <ul style={{ margin: '0 0 24px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
+        {tier.features.map((feature) => (
+          <li key={feature.en} style={{ display: 'flex', gap: 9, color: '#333', fontSize: 13, lineHeight: 1.45 }}>
+            <span style={{ color: '#2b3d6d', fontWeight: 900 }}>✓</span>
+            <span>{feature[isEn ? 'en' : 'zh']}</span>
+          </li>
+        ))}
+      </ul>
+      <Link to="/apply" style={{
+        display: 'block',
+        textAlign: 'center',
+        textDecoration: 'none',
+        padding: '13px 16px',
+        borderRadius: 8,
+        background: tier.highlighted ? '#d5a836' : '#2b3d6d',
+        color: tier.highlighted ? '#1a1a2e' : '#fff',
+        fontWeight: 850,
+        fontSize: 14,
+      }}>
+        {tier.cta[isEn ? 'en' : 'zh']}
+      </Link>
+    </div>
+  );
+}
 
 export default function PricingPage({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
@@ -59,295 +174,148 @@ export default function PricingPage({ language, toggleLanguage }) {
         <meta
           name="description"
           content={isEn
-            ? 'GIIS Founders pricing: $19.90/month for the first 100 students (regular $199/month). Full access to all courses, course planning support, official US transcript, and diploma.'
-            : 'GIIS 创校价：限前 100 名学生 $19.90/月（原价 $199/月）。包含全部课程、课程规划支持、美国官方成绩单及文凭。'}
+            ? 'GIIS tuition tiers: self-paced, guided, and premium college pathway support for online US high school students.'
+            : 'GIIS 学费方案：自主学习、顾问指导与升学路径支持，适合线上美国高中学生。'}
         />
       </Helmet>
 
       <div className="row"><Nav language={language} toggleLanguage={toggleLanguage} /></div>
 
-      {/* Hero */}
-      <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #2b3d6d 100%)', padding: '80px 0 72px', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%', textAlign: 'center' }}>
-          <p style={{ color: 'rgba(213,168,54,1)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 14px' }}>
-            {isEn ? 'Founders Pricing · Limited' : '创校价 · 限量'}
+      <section style={{ background: 'linear-gradient(135deg, #172033 0%, #2b3d6d 100%)', padding: '74px 0 66px', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 6%', textAlign: 'center' }}>
+          <p style={{ color: '#d5a836', fontSize: 12, fontWeight: 850, letterSpacing: 1.8, textTransform: 'uppercase', margin: '0 0 14px' }}>
+            {isEn ? 'Tuition That Matches Support Level' : '学费依支持深度分层'}
           </p>
-          <h1 style={{ color: '#fff', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 800, lineHeight: 1.05, margin: '0 0 16px' }}>
-            {isEn ? 'First 100 students' : '前 100 名学生'}
-            <br />
-            <span style={{ color: 'rgba(213,168,54,1)' }}>
-              {isEn ? 'pay $19.90 / month.' : '月付 $19.90。'}
-            </span>
+          <h1 style={{ color: '#fff', fontSize: 'clamp(34px, 5vw, 58px)', lineHeight: 1.06, fontWeight: 850, margin: '0 0 16px' }}>
+            {isEn ? 'Choose how much guidance your child needs.' : '依孩子需要的支持程度选择方案。'}
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '17px', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
+          <p style={{ color: 'rgba(255,255,255,0.72)', maxWidth: 680, margin: '0 auto', lineHeight: 1.75, fontSize: 16 }}>
             {isEn
-              ? 'Lock in $19.90/month for 12 months — 90% off our regular $199/month rate. Full access to all 40+ courses, exams, official US transcript, and diploma.'
-              : '锁定 $19.90/月，12 个月不涨价 — 较正常 $199/月省 90%。包含全部 40+ 门课程、考试、美国官方成绩单与文凭。'}
+              ? 'Self-paced access stays affordable. Transfer students and college-bound families can add the advisor layer that makes the record easier to trust.'
+              : '自主学习仍保持可负担；转学生与目标美国大学的家庭，可以加入顾问层，让成绩单与学习路径更可信。'}
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* Show what they're paying for — product walkthrough */}
       <DemoEmbed
         language={language}
         variant="compact"
         background="#fff"
-        eyebrow={isEn ? 'What $19.90 unlocks' : '$19.90 解锁什么'}
-        headline={{
-          en: 'See the platform before you pay',
-          zh: '付费之前先看清楚平台',
-        }}
+        eyebrow={isEn ? 'Before You Choose A Plan' : '选择方案前'}
+        headline={{ en: 'See the platform your tuition unlocks', zh: '先看清楚学费对应的平台与服务' }}
         subline={{
-          en: '80 seconds inside the Learn Portal — every parent\'s 5-minute concern, answered in advance.',
-          zh: '80 秒看完学习平台 — 家长最常问的所有问题，先讲清楚。',
+          en: '80 seconds inside the Learn Portal, parent dashboard, and transcript workflow.',
+          zh: '80 秒看完 Learn Portal、家长面板与成绩单流程。',
         }}
         showCtas={false}
       />
 
-      {/* Pricing Cards */}
-      <div style={{ background: '#f4f6fa', padding: '60px 0', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 5%' }}>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', alignItems: 'start' }}>
-
-            {/* ── Founders Monthly ── */}
-            <div style={{
-              background: '#fff', borderRadius: '16px',
-              border: '2px solid rgba(213,168,54,1)',
-              padding: '40px 36px', position: 'relative',
-              boxShadow: '0 12px 36px rgba(43,61,109,0.14)',
-            }}>
-              <div style={{
-                position: 'absolute', top: '-14px', left: '28px',
-                background: 'rgba(213,168,54,1)', color: '#1a1a2e',
-                fontSize: '11px', fontWeight: 800, padding: '4px 14px',
-                borderRadius: '20px', letterSpacing: '0.5px',
-              }}>
-                {isEn ? 'FOUNDERS · 100 SEATS' : '创校价 · 限 100 名'}
-              </div>
-              <p style={{ margin: '0 0 6px', fontSize: '12px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase' }}>
-                {isEn ? 'Individual · 1 student' : '个人方案 · 1 位学生'}
-              </p>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', margin: '0 0 4px' }}>
-                <span style={{ fontSize: '56px', fontWeight: 800, color: '#1a1a2e', lineHeight: 1 }}>$19.90</span>
-                <span style={{ fontSize: '16px', color: '#888' }}>{isEn ? '/ month' : '/ 月'}</span>
-              </div>
-              <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#999' }}>
-                <span style={{ textDecoration: 'line-through', color: '#bbb' }}>$199</span>
-                <span style={{ color: '#1B6B3A', fontWeight: 700, marginLeft: '8px' }}>
-                  {isEn ? '90% off · locked 12 months' : '省 90% · 锁定 12 个月'}
-                </span>
-              </p>
-              <p style={{ margin: '0 0 24px', fontSize: '12px', color: '#aaa' }}>
-                {isEn ? 'Cancel anytime · 30-day full refund' : '随时取消 · 30 天无条件退款'}
-              </p>
-              <ul style={{ margin: '0 0 28px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {MONTHLY_FEATURES.map((f) => (
-                  <li key={f.en} style={{ display: 'flex', gap: '10px', fontSize: '14px', color: '#333' }}>
-                    <span style={{ color: '#2b3d6d', fontWeight: 700, flexShrink: 0 }}>✓</span>
-                    {isEn ? f.en : f.zh}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                to="/apply"
-                style={{
-                  display: 'block', width: '100%', textAlign: 'center', padding: '14px',
-                  background: 'rgba(213,168,54,1)', borderRadius: '10px',
-                  color: '#1a1a2e', fontWeight: 800, fontSize: '15px', textDecoration: 'none',
-                  boxShadow: '0 6px 18px rgba(213,168,54,0.3)', boxSizing: 'border-box',
-                }}>
-                {isEn ? 'Apply Now →' : '立即申请 →'}
-              </Link>
-            </div>
-
-            {/* ── Group Plan ── */}
-            <div style={{
-              background: '#fff', borderRadius: '16px',
-              border: '1px solid #e0e6f0',
-              padding: '40px 36px', position: 'relative',
-              boxShadow: '0 4px 20px rgba(43,61,109,0.08)',
-            }}>
-              <div style={{
-                position: 'absolute', top: '-14px', left: '28px',
-                background: '#2b3d6d', color: '#fff',
-                fontSize: '11px', fontWeight: 800, padding: '4px 14px',
-                borderRadius: '20px', letterSpacing: '0.5px',
-              }}>
-                {isEn ? 'FOR SCHOOLS & CENTERS' : '学校与机构'}
-              </div>
-              <p style={{ margin: '0 0 6px', fontSize: '12px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase' }}>
-                {isEn ? 'Group · 3–5 students' : '团体方案 · 3–5 位学生'}
-              </p>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', margin: '0 0 4px' }}>
-                <span style={{ fontSize: '56px', fontWeight: 800, color: '#1a1a2e', lineHeight: 1 }}>$50</span>
-                <span style={{ fontSize: '16px', color: '#888' }}>{isEn ? '/ month' : '/ 月'}</span>
-              </div>
-              <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#999' }}>
-                <span style={{ color: '#1B6B3A', fontWeight: 700 }}>
-                  {isEn ? '~$10–$16/student' : '折合每生约 $10–$16/月'}
-                </span>
-              </p>
-              <p style={{ margin: '0 0 24px', fontSize: '12px', color: '#aaa' }}>
-                {isEn ? 'One account · up to 5 seats · Cancel anytime' : '一个账户 · 最多 5 个学生 · 随时取消'}
-              </p>
-              <ul style={{ margin: '0 0 28px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {[
-                  { en: 'All features from Individual plan', zh: '包含个人方案所有权益' },
-                  { en: 'Up to 5 student seats under one account', zh: '最多 5 个学生账号共用一个账户' },
-                  { en: 'Suitable for tutoring centers, school cohorts, or families with multiple students', zh: '适合补习机构、学校团体或多子女家庭' },
-                  { en: 'Shared billing — one invoice per month', zh: '统一计费，每月一张发票' },
-                ].map((f) => (
-                  <li key={f.en} style={{ display: 'flex', gap: '10px', fontSize: '14px', color: '#333' }}>
-                    <span style={{ color: '#2b3d6d', fontWeight: 700, flexShrink: 0 }}>✓</span>
-                    {isEn ? f.en : f.zh}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                to="/apply"
-                style={{
-                  display: 'block', width: '100%', textAlign: 'center', padding: '14px',
-                  background: '#2b3d6d', borderRadius: '10px',
-                  color: '#fff', fontWeight: 800, fontSize: '15px', textDecoration: 'none',
-                  boxSizing: 'border-box',
-                }}>
-                {isEn ? 'Apply Now →' : '立即申请 →'}
-              </Link>
-            </div>
-
+      <section style={{ background: '#f4f6fa', padding: '58px 0', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 5%' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18, alignItems: 'stretch' }}>
+            {TIERS.map((tier) => <TierCard key={tier.key} tier={tier} isEn={isEn} />)}
           </div>
-
-          <p style={{ marginTop: '14px', textAlign: 'center', fontSize: '11px', color: '#aaa' }}>
-            {isEn ? 'Secure payment via Stripe · Cards, Apple Pay, Cash App' : 'Stripe 安全支付 · 信用卡、Apple Pay、Cash App'}
+          <p style={{ margin: '18px 0 0', color: '#777', textAlign: 'center', fontSize: 12, lineHeight: 1.6 }}>
+            {isEn
+              ? 'All plans start with an application review. Payment happens after the enrollment path is clear.'
+              : '所有方案先经过申请审核；确认入学路径后再付款。'}
           </p>
-
-          {/* Value note — how credits work */}
-          <div style={{ marginTop: '32px', background: '#fff', border: '1px solid #e0e6f0', borderRadius: '12px', padding: '20px 24px', display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
-            <span style={{ fontSize: '22px', flexShrink: 0 }}>💡</span>
-            <div>
-              <p style={{ margin: '0 0 4px', fontWeight: 700, fontSize: '14px', color: '#1a1a2e' }}>
-                {isEn ? 'How credits work' : '学分如何运作'}
-              </p>
-              <p style={{ margin: 0, fontSize: '13px', color: '#555', lineHeight: 1.7 }}>
-                {isEn
-                  ? 'Study each module at your own pace, then take the credit exam when ready. Pass (70%+) = 1 credit earned and added to your official transcript. A full 24-credit diploma takes 1–4 years depending on your entry grade level.'
-                  : '按自己节奏学习每个模块，准备好后参加学分考试。通过（70% 以上）即可获得 1 个学分并记入官方成绩单。完整的 24 学分文凭根据入学年级需要 1–4 年完成。'}
-              </p>
-            </div>
-          </div>
-
         </div>
-      </div>
+      </section>
 
-      {/* Compare with alternatives */}
-      <div style={{ background: '#fff', padding: '72px 0', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 5%' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#1a1a2e', marginBottom: '32px', textAlign: 'center' }}>
+      <section style={{ background: '#fff', padding: '68px 0', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 5%' }}>
+          <h2 style={{ margin: '0 0 28px', color: '#1a1a2e', fontSize: 30, fontWeight: 850, textAlign: 'center' }}>
             {isEn ? 'How We Compare' : '与其他选择对比'}
           </h2>
           <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
               <thead>
                 <tr>
-                  {[
-                    isEn ? '' : '',
-                    isEn ? 'GIIS' : 'GIIS',
-                    isEn ? 'Traditional Int\'l School' : '传统国际学校',
-                    isEn ? 'US Boarding School' : '美国寄宿学校',
-                  ].map((h, i) => (
-                    <th key={i} style={{
-                      padding: '12px 16px', textAlign: i === 0 ? 'left' : 'center',
+                  {[isEn ? 'Option' : '选项', 'GIIS Self-Paced', 'GIIS Guided', isEn ? 'Traditional international school' : '传统国际学校'].map((h, i) => (
+                    <th key={h} style={{
+                      padding: '13px 14px',
+                      textAlign: i === 0 ? 'left' : 'center',
                       borderBottom: '2px solid #e0e6f0',
-                      color: i === 1 ? '#2b3d6d' : '#888',
-                      fontWeight: 800, fontSize: i === 1 ? '15px' : '13px',
-                      background: i === 1 ? '#f0f4ff' : 'transparent',
+                      color: i === 1 || i === 2 ? '#2b3d6d' : '#777',
+                      background: i === 1 || i === 2 ? '#f0f4ff' : 'transparent',
                     }}>{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { label: isEn ? 'Cost / year' : '年费用', vals: [isEn ? '~$240 founders' : '~$240 创校价', '$15,000–30,000', '$50,000–80,000'] },
-                  { label: isEn ? 'US diploma' : '美国文凭', vals: ['✓', '✓', '✓'] },
-                  { label: isEn ? 'Learn from China' : '在中国就读', vals: ['✓', '✓', '✗'] },
-                  { label: isEn ? 'Flexible schedule' : '时间自由', vals: ['✓', '✗', '✗'] },
-                  { label: isEn ? 'Course planning support' : '课程规划支持', vals: ['✓', '✓', '✓'] },
-                  { label: isEn ? 'Pathway planning' : '专业方向规划', vals: ['✓', '△', '△'] },
-                ].map((row, ri) => (
-                  <tr key={ri} style={{ background: ri % 2 === 0 ? '#fafbff' : '#fff' }}>
-                    <td style={{ padding: '13px 16px', fontWeight: 600, color: '#444' }}>{row.label}</td>
-                    {row.vals.map((v, vi) => (
-                      <td key={vi} style={{
-                        padding: '13px 16px', textAlign: 'center',
-                        fontWeight: vi === 0 ? 800 : 500,
-                        color: vi === 0 ? '#2b3d6d' : (v === '✗' ? '#e53935' : '#333'),
-                        background: vi === 0 ? '#f0f4ff' : 'transparent',
-                      }}>{v}</td>
+                  { label: isEn ? 'Starting monthly cost' : '月费起点', vals: ['$49', '$149', '$1,250+'] },
+                  { label: isEn ? 'Official school record' : '正式学校记录', vals: ['✓', '✓', '✓'] },
+                  { label: isEn ? 'Advisor planning' : '顾问规划', vals: ['Email support', 'Monthly review', 'Varies'] },
+                  { label: isEn ? 'Transfer-credit review' : '转学分审核', vals: ['Basic', 'Included', 'Varies'] },
+                  { label: isEn ? 'Flexible online schedule' : '线上弹性进度', vals: ['✓', '✓', '△'] },
+                ].map((row) => (
+                  <tr key={row.label}>
+                    <td style={{ padding: '13px 14px', borderBottom: '1px solid #edf0f6', fontWeight: 700, color: '#333' }}>{row.label}</td>
+                    {row.vals.map((value, i) => (
+                      <td key={`${row.label}-${value}`} style={{
+                        padding: '13px 14px',
+                        borderBottom: '1px solid #edf0f6',
+                        textAlign: 'center',
+                        color: i < 2 ? '#2b3d6d' : '#555',
+                        background: i < 2 ? '#f8faff' : '#fff',
+                        fontWeight: i < 2 ? 750 : 500,
+                      }}>{value}</td>
                     ))}
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <p style={{ margin: '14px 0 0', color: '#888', fontSize: 12, lineHeight: 1.65 }}>
+            {isEn
+              ? 'Public comparisons are directional. GIIS is a Florida-registered private school and is pursuing longer-term trust signals separately from price.'
+              : '以上为方向性比较。GIIS 是 Florida 注册私立学校，价格之外的长期信任建设会另行推进。'}
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* FAQ */}
-      <div style={{ background: '#f4f6fa', padding: '72px 0', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ maxWidth: '780px', margin: '0 auto', padding: '0 5%' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#1a1a2e', marginBottom: '32px' }}>
+      <section style={{ background: '#f4f6fa', padding: '64px 0', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 5%' }}>
+          <h2 style={{ margin: '0 0 24px', color: '#1a1a2e', fontSize: 30, fontWeight: 850 }}>
             {isEn ? 'Pricing FAQ' : '收费常见问题'}
           </h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {FAQS.map((f, i) => (
-              <div key={i} style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: '12px', padding: '22px 24px' }}>
-                <p style={{ margin: '0 0 8px', fontWeight: 700, fontSize: '15px', color: '#1a1a2e' }}>
-                  {isEn ? f.q.en : f.q.zh}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {FAQS.map((item) => (
+              <div key={item.q.en} style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '20px 22px' }}>
+                <p style={{ margin: '0 0 8px', color: '#1a1a2e', fontWeight: 800, fontSize: 15 }}>
+                  {item.q[isEn ? 'en' : 'zh']}
                 </p>
-                <p style={{ margin: 0, fontSize: '13px', color: '#555', lineHeight: 1.7 }}>
-                  {isEn ? f.a.en : f.a.zh}
+                <p style={{ margin: 0, color: '#555', lineHeight: 1.7, fontSize: 13 }}>
+                  {item.a[isEn ? 'en' : 'zh']}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* CTA */}
-      <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #2b3d6d 100%)', padding: '72px 0', fontFamily: 'Inter, sans-serif', textAlign: 'center' }}>
-        <div style={{ maxWidth: '600px', margin: '0 auto', padding: '0 5%' }}>
-          <h2 style={{ color: '#fff', fontSize: '36px', fontWeight: 800, margin: '0 0 16px' }}>
-            {isEn ? 'Ready to get started?' : '准备好开始了吗？'}
+      <section style={{ background: 'linear-gradient(135deg, #172033 0%, #2b3d6d 100%)', padding: '68px 0', fontFamily: 'Inter, sans-serif', textAlign: 'center' }}>
+        <div style={{ maxWidth: 650, margin: '0 auto', padding: '0 5%' }}>
+          <h2 style={{ color: '#fff', fontSize: 34, fontWeight: 850, margin: '0 0 14px' }}>
+            {isEn ? 'Not sure which plan fits?' : '不确定该选哪一层？'}
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '16px', margin: '0 0 12px', lineHeight: 1.7 }}>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15, lineHeight: 1.7, margin: '0 0 26px' }}>
             {isEn
-              ? 'Contact our admissions team and we\'ll design the right academic plan for you.'
-              : '联系我们的招生团队，我们将为您量身制定学习计划。'}
+              ? 'Apply first. Admissions will review transfer credits, target timeline, and how much support your family realistically needs.'
+              : '先申请。招生团队会看转学分、目标毕业时间，以及家庭实际需要多少支持。'}
           </p>
-          <p style={{ margin: '0 0 32px', fontSize: '13px' }}>
-            <Link to="/parent/demo" style={{ color: '#d5a836', textDecoration: 'underline', fontWeight: 600 }}>
-              {isEn ? 'Or preview the parent dashboard you\'ll get →' : '或先预览家长面板长怎样 →'}
-            </Link>
-          </p>
-          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/admission" style={{
-              padding: '14px 32px', borderRadius: '10px',
-              background: 'rgba(213,168,54,1)', color: '#1a1a2e',
-              fontWeight: 800, fontSize: '15px', textDecoration: 'none',
-            }}>
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to="/apply" style={{ padding: '13px 28px', borderRadius: 8, background: '#d5a836', color: '#1a1a2e', fontWeight: 850, textDecoration: 'none' }}>
               {isEn ? 'Apply Now' : '立即申请'}
             </Link>
-            <a href={`mailto:${SCHOOL_EMAIL}`} style={{
-              padding: '14px 32px', borderRadius: '10px',
-              border: '2px solid rgba(255,255,255,0.3)', color: '#fff',
-              fontWeight: 700, fontSize: '15px', textDecoration: 'none',
-            }}>
-              {isEn ? 'Email Admissions' : '发送邮件'}
+            <a href={`mailto:${SCHOOL_EMAIL}`} style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', fontWeight: 750, textDecoration: 'none' }}>
+              {isEn ? 'Email Admissions' : '联系招生'}
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

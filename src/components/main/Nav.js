@@ -100,6 +100,9 @@ function Nav({ language, toggleLanguage }) {
                                 <li onClick={() => go('/admission')}>
                                     <Link to="/admission" onClick={e => e.preventDefault()}>{t.admission}</Link>
                                 </li>
+                                <li onClick={() => go('/transfer-students')}>
+                                    <Link to="/transfer-students" onClick={e => e.preventDefault()}>{isEn ? 'Transfer Students' : '转学生'}</Link>
+                                </li>
                                 <li onClick={() => go('/pricing')}>
                                     <Link to="/pricing" onClick={e => e.preventDefault()}>{isEn ? 'Tuition & Pricing' : '学费'}</Link>
                                 </li>

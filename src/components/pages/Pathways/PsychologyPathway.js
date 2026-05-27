@@ -11,7 +11,7 @@ const META = {
   courseEmoji: '🧠',
   heroDescription: 'A structured 4-year pathway for students interested in psychology, counseling, social work, neuroscience, or behavioral economics. Each course builds directly on the last — by graduation, you will have a college-level foundation and an original research paper.',
   targets: ['Psychology / Clinical Psychology', 'Counseling & Social Work', 'Neuroscience & Cognitive Science', 'Behavioral Economics', 'Education & Child Development'],
-  collegeNote: 'Completing this pathway demonstrates sustained academic commitment to your intended field. Your AP Psychology credit, Capstone research paper, Research Methods foundation, and the breadth of your 4-year course sequence tell a clear, compelling story to admissions committees.',
+  collegeNote: 'Completing this pathway demonstrates sustained academic commitment to your intended field. Psychology exam preparation, a capstone research paper, research methods, and the breadth of your 4-year course sequence tell a clear, compelling story to admissions committees.',
 };
 
 const SCHEDULE = [
@@ -52,7 +52,7 @@ const SCHEDULE = [
     { name: 'Statistics',                   type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Essential for research methods' },
     { name: 'Biology — Advanced',           type: 'core',      credits: 1.0, dept: 'Science' },
     { name: 'Economics',                    type: 'core',      credits: 1.0, dept: 'Social Studies' },
-    { name: 'AP Psychology',                type: 'pathway',   credits: 1.0, courseId: 'ap-psychology' },
+    { name: 'AP Psychology exam preparation',                type: 'pathway',   credits: 1.0, courseId: 'ap-psychology' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',     type: 'core',      credits: 1.0, dept: 'English Language Arts' },
@@ -63,7 +63,7 @@ const SCHEDULE = [
   ]},
   { grade: 12, term: 'Fall', courses: [
     { name: 'English IV — Writing & Comm.', type: 'core',      credits: 1.0, dept: 'English Language Arts' },
-    { name: 'AP Statistics',                type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Recommended for psych majors' },
+    { name: 'AP Statistics exam preparation',                type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Recommended for psych majors' },
     { name: 'Psychology Seminar / Capstone',type: 'pathway',   credits: 1.0, courseId: 'psych-capstone' },
     { name: 'Behavioral Science',           type: 'pathway',   credits: 0.5, courseId: 'behavioral-science' },
     { name: 'Ethics & Critical Thinking',   type: 'supporting', credits: 0.5, dept: 'Elective' },
@@ -228,10 +228,10 @@ const COURSES = [
   },
   {
     id: 'ap-psychology', grade: 11, term: 'Fall', credits: 1.0,
-    name: 'AP Psychology',
-    description: 'College-level psychology covering all major domains — biological bases, learning, memory, cognition, development, personality, abnormal behavior, treatment, and social psychology. Prepares students for the AP exam.',
+    name: 'AP Psychology exam preparation',
+    description: 'College-level psychology covering all major domains — biological bases, learning, memory, cognition, development, personality, abnormal behavior, treatment, and social psychology. Prepares students for the College Board AP exam.',
     syllabus: {
-      objectives: ['Master all AP Psychology content areas (College Board)', 'Analyze and evaluate psychological research', 'Apply concepts in AP free-response format', 'Demonstrate understanding of research ethics'],
+      objectives: ['Master all AP Psychology exam preparation content areas (College Board)', 'Analyze and evaluate psychological research', 'Apply concepts in AP free-response format', 'Demonstrate understanding of research ethics'],
       units: [
         { week: '1–2', topic: 'History, Approaches & Research Methods', desc: 'Schools of thought, research designs, statistical concepts, APA ethics.' },
         { week: '3–4', topic: 'Biological Bases of Behavior', desc: 'Neurons, neurotransmitters, endocrine system, brain structures, genetics.' },
@@ -247,7 +247,7 @@ const COURSES = [
     },
     resources: [
       { title: 'Crash Course Psychology — Full 40-Episode Playlist', channel: 'CrashCourse', url: 'https://www.youtube.com/results?search_query=crash+course+psychology+complete+playlist', note: 'Cover the full playlist — maps almost perfectly to AP content.' },
-      { title: 'AP Psychology — Full Course', channel: 'Khan Academy', url: 'https://www.khanacademy.org/science/ap-psychology', note: 'Free AP prep with progress tracking.' },
+      { title: 'AP Psychology exam preparation — Full Course', channel: 'Khan Academy', url: 'https://www.khanacademy.org/science/ap-psychology', note: 'Free AP prep with progress tracking.' },
       { title: 'AP FRQ Strategy', channel: 'Marco Learning', url: 'https://www.youtube.com/results?search_query=AP+psychology+free+response+tips+marco+learning', note: 'Critical for exam day — how to answer FRQs correctly.' },
       { title: 'AP Classroom', channel: 'College Board', url: 'https://apclassroom.collegeboard.org', note: 'Official practice questions and progress checks. Required.' },
     ],

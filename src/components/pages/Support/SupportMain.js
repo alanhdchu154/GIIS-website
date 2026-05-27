@@ -202,7 +202,7 @@ export default function SupportMain({ language, toggleLanguage }) {
               {[
                 { en: 'Course Catalog — browse all 40+ courses', zh: '课程目录 — 浏览全部 40+ 门课程', to: '/academics' },
                 { en: 'Apply Now — start enrollment', zh: '立即申请 — 开始入学流程', to: '/apply' },
-                { en: 'Pricing — $19.90/month Founders plan', zh: '价格 — $19.90/月 创校方案', to: '/pricing' },
+                { en: 'Pricing — Self-Paced, Guided, and Premium plans', zh: '价格 — 自主学习、顾问指导与 Premium 方案', to: '/pricing' },
                 { en: 'School Profile — Florida registration & credentials', zh: '学校简介 — 佛罗里达州注册资质', to: '/school-profile' },
                 { en: 'Student Handbook — policies & procedures', zh: '学生手册 — 校规与流程', to: '/handbook' },
               ].map(link => (

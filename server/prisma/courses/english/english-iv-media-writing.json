@@ -172,7 +172,7 @@
       "order": 11,
       "title": "Professional Writing",
       "titleZh": "职业写作",
-      "objectives": "Produce professional workplace documents including business emails, memos, cover letters, and resumes that communicate clearly and effectively.",
+      "objectives": "Write professional workplace documents including emails, memos, cover letters, and resumes, using clear purpose, appropriate format, concise language, and audience-aware tone.",
       "readingUrl": "https://openstax.org/books/writing-guide/pages/11-introduction",
       "readingNote": "OpenStax Writing Guide — Chapter 11: Professional Writing",
       "videoUrl": "https://www.khanacademy.org/humanities/grammar/writing-process/types-of-writing/v/professional-writing-formats",
@@ -263,9 +263,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"revising for argument development means primarily asking:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Whether each claim is supported, logically connected, and developed with enough evidence for the intended audience.",
+      "explanation": "Argument revision focuses on the strength and development of claims, not just grammar or surface edits.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 2,
@@ -368,9 +369,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the 'nut graf' in feature journalism is a paragraph that:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "A paragraph that explains the central point, stakes, and news value of a feature story.",
+      "explanation": "The nut graf tells readers why the story matters and what larger issue or angle the feature will develop.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 4,
@@ -539,9 +541,10 @@
       "order": 5,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the ethical principle of 'right of reply' in investigative journalism requires:.\"",
       "options": null,
-      "answer": "A",
-      "explanation": "The correct answer is: A.",
-      "points": 1
+      "answer": "Giving people or organizations criticized in a story a fair opportunity to respond before publication.",
+      "explanation": "Right of reply is an investigative journalism fairness practice that lets subjects respond to allegations or criticism.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 7,
@@ -588,9 +591,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"consistency in social media writing for an organization or cause means:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Maintaining a recognizable voice, visual style, posting purpose, and audience relationship across platforms.",
+      "explanation": "Consistency helps an organization sound trustworthy and recognizable while still adapting to each platform.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 8,
@@ -693,9 +697,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"sound cues in a podcast script are important because they:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "They guide timing, transitions, emphasis, mood, and production choices for the audio editor and performers.",
+      "explanation": "Podcast scripts are production documents; sound cues help the team build meaning through audio, not only words.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 10,
@@ -864,9 +869,10 @@
       "order": 5,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"growth in a writing portfolio is demonstrated by:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Revision evidence, increasing complexity, stronger audience awareness, and reflection on how the writer's craft changed over time.",
+      "explanation": "A strong portfolio shows development across drafts and pieces, not merely a collection of final products.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 13,
@@ -913,9 +919,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a pitch letter to a publication editor introduces:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "The story idea, why it fits the publication's audience, the writer's angle, and why the writer is prepared to produce it.",
+      "explanation": "A pitch letter persuades an editor that the idea is timely, relevant, feasible, and matched to the outlet.",
+      "points": 1,
+      "type": "short"
     }
   ],
   "questions": [
@@ -1010,11 +1017,11 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
+      "type": "short",
       "question": "Broadcast writing should use active voice because it:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "It is clearer and easier for listeners to process in real time.",
+      "explanation": "Broadcast audiences cannot reread a sentence, so active voice improves clarity, pace, and comprehension.",
       "points": 1
     },
     {
@@ -1106,11 +1113,11 @@
     {
       "examType": "midterm",
       "order": 14,
-      "type": "fill",
+      "type": "short",
       "question": "Portfolio curation means:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "Selecting and organizing pieces intentionally to show range, growth, and readiness for a specific audience.",
+      "explanation": "Curation is a rhetorical choice: the portfolio should tell a coherent story about the writer's abilities.",
       "points": 1
     },
     {
@@ -1202,11 +1209,11 @@
     {
       "examType": "final",
       "order": 6,
-      "type": "fill",
+      "type": "short",
       "question": "A publication submission plan for a capstone project demonstrates:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "That the writer understands audience, outlet fit, deadlines, formatting requirements, and revision steps beyond the classroom.",
+      "explanation": "A submission plan turns a school project into a real publication workflow with audience and editorial constraints.",
       "points": 1
     },
     {
@@ -1300,11 +1307,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "fill",
+      "type": "short",
       "question": "Sound cues in a podcast script direct the audio producer to:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "Add, fade, pause, layer, or adjust audio elements such as music, ambience, effects, and transitions.",
+      "explanation": "Sound cues are instructions for the production layer of the podcast, not decorative notes.",
       "points": 1
     },
     {
@@ -1398,11 +1405,11 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "fill",
+      "type": "short",
       "question": "A portfolio introduction provides value because it:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "It frames the writer's goals, growth, selected pieces, and intended audience before readers evaluate the work.",
+      "explanation": "The introduction helps readers understand why the pieces were chosen and how to read the portfolio as evidence of growth.",
       "points": 1
     }
   ],

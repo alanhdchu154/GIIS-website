@@ -9,10 +9,10 @@ const META = {
   subtitle: 'Build the systems that run the world.',
   emoji: '💻',
   courseEmoji: '💻',
-  heroDescription: 'A rigorous 4-year pathway for students aiming for top CS and engineering programs. From Python fundamentals to machine learning, you will graduate with a professional portfolio, AP CS credit, and the problem-solving mindset that colleges like MIT, CMU, and UC Berkeley look for.',
+  heroDescription: 'A rigorous 4-year pathway for students aiming for top CS and engineering programs. From Python fundamentals to machine learning, you will graduate with a professional portfolio, AP CS A exam preparation, and the problem-solving mindset that colleges like MIT, CMU, and UC Berkeley look for.',
   targets: ['Computer Science / Software Engineering', 'Data Science & AI / Machine Learning', 'Computer Engineering & Systems', 'Cybersecurity', 'Game Development', 'Robotics & Embedded Systems'],
-  collegeNote: 'AP Computer Science A, a completed software project portfolio, and a full 4-year progression from algorithms through machine learning signal deep commitment to admissions committees at top CS programs. Students who complete this pathway are well-positioned for CS, CE, or Data Science majors at selective universities.',
-  stats: [{ label: 'AP Courses', value: 1 }],
+  collegeNote: 'AP Computer Science A exam preparation, a completed software project portfolio, and a full 4-year progression from algorithms through machine learning signal deep commitment to admissions committees at top CS programs. Students who complete this pathway are well-positioned for CS, CE, or Data Science majors at selective universities.',
+  stats: [{ label: 'AP Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -51,14 +51,14 @@ const SCHEDULE = [
     { name: 'English III',               type: 'core',      credits: 1.0, dept: 'English Language Arts' },
     { name: 'Statistics',                type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Biology — Advanced',        type: 'core',      credits: 1.0, dept: 'Science' },
-    { name: 'AP Computer Science A',     type: 'pathway',   credits: 1.0, courseId: 'cs-apcs' },
+    { name: 'AP Computer Science A exam preparation',     type: 'pathway',   credits: 1.0, courseId: 'cs-apcs' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',  type: 'core',      credits: 1.0, dept: 'English Language Arts' },
     { name: 'Trigonometry',              type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Physics — Mechanics',       type: 'core',      credits: 1.0, dept: 'Science' },
     { name: 'Software Engineering',      type: 'pathway',   credits: 0.5, courseId: 'cs-swe' },
-    { name: 'AP Statistics',             type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Strongly recommended' },
+    { name: 'AP Statistics exam preparation',             type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Strongly recommended' },
   ]},
   { grade: 12, term: 'Fall', courses: [
     { name: 'English IV — Writing & Communication', type: 'core', credits: 1.0, dept: 'English Language Arts' },
@@ -228,16 +228,16 @@ const COURSES = [
   },
   {
     id: 'cs-apcs',
-    name: 'AP Computer Science A',
+    name: 'AP Computer Science A exam preparation',
     grade: 11, term: 'Fall', credits: 1.0,
-    description: 'College-level Java programming and object-oriented design. This is the standard CS AP exam that demonstrates college readiness. You will learn OOP principles (classes, inheritance, polymorphism), work with arrays and ArrayLists, and develop problem-solving skills tested in the AP exam in May.',
+    description: 'College-level Java programming and object-oriented design for students preparing for the College Board AP Computer Science A exam. You will learn OOP principles (classes, inheritance, polymorphism), work with arrays and ArrayLists, and develop problem-solving skills tested on the May exam.',
     syllabus: {
       objectives: [
         'Write and debug Java programs using correct syntax and OOP principles',
         'Design class hierarchies using inheritance and interfaces',
         'Work with arrays, ArrayLists, and 2D arrays',
         'Trace recursive algorithms and write recursive solutions',
-        'Achieve a score of 3 or higher on the AP CS A exam',
+        'Prepare for a score of 3 or higher on the College Board AP CS A exam',
       ],
       units: [
         { week: '1–3',   topic: 'Java Fundamentals',         desc: 'Primitive types, variables, operators, control flow — parallel to Python but with static typing.' },
@@ -252,8 +252,8 @@ const COURSES = [
     },
     resources: [
       { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP CS A Resources', channel: 'College Board', note: 'Official practice FRQs, progress checks, and AP Daily videos. Use this throughout the year.' },
-      { url: 'https://www.youtube.com/watch?v=A74TOX803D0', title: 'AP Computer Science A — Full Course', channel: 'Replit / APCS Academy', note: 'Complete AP CS A course covering every exam topic with practice problems.' },
-      { url: 'https://codehs.com/course/apjava', title: 'CodeHS AP Computer Science A', channel: 'CodeHS', note: 'Interactive Java programming environment with built-in AP CS A curriculum.' },
+      { url: 'https://www.youtube.com/watch?v=A74TOX803D0', title: 'AP Computer Science A exam preparation — Full Course', channel: 'Replit / APCS Academy', note: 'Complete AP CS A course covering every exam topic with practice problems.' },
+      { url: 'https://codehs.com/course/apjava', title: 'CodeHS AP Computer Science A exam preparation', channel: 'CodeHS', note: 'Interactive Java programming environment with built-in AP CS A curriculum.' },
       { url: 'https://www.youtube.com/watch?v=2Xa3Y4xz8_s', title: 'Java Inheritance and Polymorphism', channel: 'Coding with John', note: 'Clear explanation of OOP concepts — watch before the Inheritance unit.' },
     ],
     quiz: [

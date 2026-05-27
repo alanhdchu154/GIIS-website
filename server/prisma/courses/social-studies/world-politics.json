@@ -183,9 +183,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which of the following is a primary reason everyday citizens should care about international relations.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "International relations shape everyday security, prices, jobs, migration, rights, climate policy, and access to global goods.",
+      "explanation": "World politics is not only about diplomats; global decisions affect citizens through economics, security, rights, and environmental policy.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 2,
@@ -288,9 +289,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"constructivism in ir argues that state interests and identities are:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Socially constructed through ideas, norms, identities, and interactions rather than fixed only by material power.",
+      "explanation": "Constructivism argues that state interests and identities are shaped by shared meanings and norms.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 4,
@@ -459,9 +461,10 @@
       "order": 5,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the us-china trade war that escalated in 2018 primarily involved:.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Tariffs and retaliatory tariffs tied to trade imbalances, intellectual property disputes, and industrial policy competition.",
+      "explanation": "The 2018 escalation centered on tariff measures and broader conflict over trade practices and technology competition.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 7,
@@ -508,9 +511,10 @@
       "order": 4,
       "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which of the following best characterizes the international human rights regime's main weakness.\"",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
-      "points": 1
+      "answer": "Weak enforcement because compliance often depends on state consent, political will, and international pressure.",
+      "explanation": "International human rights norms are influential, but enforcement is limited when powerful states resist or institutions lack coercive authority.",
+      "points": 1,
+      "type": "short"
     },
     {
       "moduleOrder": 8,
@@ -659,11 +663,11 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
+      "type": "short",
       "question": "NATO's founding collective defense principle (Article 5) states that:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "An armed attack against one member is treated as an attack against all members.",
+      "explanation": "Article 5 is the core collective defense commitment of NATO.",
       "points": 1
     },
     {
@@ -755,11 +759,11 @@
     {
       "examType": "midterm",
       "order": 14,
-      "type": "fill",
+      "type": "short",
       "question": "A 'comparative advantage' in international trade means a country should specialize in goods:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "It can produce at a lower opportunity cost than other countries.",
+      "explanation": "Comparative advantage is about opportunity cost, not absolute productivity.",
       "points": 1
     },
     {
@@ -851,11 +855,11 @@
     {
       "examType": "final",
       "order": 6,
-      "type": "fill",
+      "type": "short",
       "question": "'Democratic backsliding' is best described as:",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "The gradual weakening of democratic institutions, rights, norms, and checks on power, often by elected leaders.",
+      "explanation": "Backsliding is usually incremental rather than a sudden military coup.",
       "points": 1
     },
     {
@@ -949,11 +953,11 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "fill",
+      "type": "short",
       "question": "Which framework best explains why states struggle to cooperate on controlling greenhouse gas emissions?",
       "options": null,
-      "answer": "B",
-      "explanation": "The correct answer is: B.",
+      "answer": "Collective action theory, especially the free-rider problem and tragedy of the commons.",
+      "explanation": "Climate mitigation creates shared benefits, so states may hope others bear the cost while they still benefit.",
       "points": 1
     },
     {
@@ -1047,13 +1051,13 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "fill",
+      "type": "short",
       "question": "Which approach to global problems would a liberal institutionalist most strongly advocate?",
       "options": null,
-      "answer": "C",
-      "explanation": "The correct answer is: C.",
+      "answer": "Building international institutions, rules, agreements, and monitoring systems that help states cooperate.",
+      "explanation": "Liberal institutionalists argue that institutions reduce uncertainty and make cooperation more likely.",
       "points": 1
     }
   ],
-  "gradeLevel": 11
+  "gradeLevel": 10
 }

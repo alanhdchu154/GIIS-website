@@ -5,7 +5,7 @@
   "credits": 1,
   "department": "Mathematics",
   "type": "AP",
-  "description": "A college-level statistics course following the AP curriculum. Students explore four major themes: Exploring Data (describing patterns and departures from patterns), Sampling and Experimentation (planning and conducting a study), Anticipating Patterns (probability and simulation), and Statistical Inference (estimating population parameters and testing hypotheses). Students develop skills to critically evaluate data and communicate conclusions clearly.",
+  "description": "AP Statistics exam preparation following the College Board Course and Exam Description. Students study exploring data, sampling and experimentation, probability and simulation, and statistical inference while preparing for the College Board AP Statistics exam.",
   "isPublished": true,
   "modules": [
     {
@@ -236,7 +236,7 @@
       "order": 15,
       "title": "Inference for Linear Regression — Advanced Applications",
       "titleZh": "线性回归的推断 — Advanced Applications",
-      "objectives": "In-depth case studies and real-world applications.",
+      "objectives": "Analyze linear regression inference problems by checking conditions, interpreting slope and interval estimates, evaluating residual evidence, and communicating conclusions in context.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/12-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 12: Linear Regression and Correlation Inference (Advanced)",
       "videoUrl": "https://www.khanacademy.org/math/ap-statistics/inference-slope/intro-inference-slope/v/introduction-inference-slope",
@@ -245,14 +245,14 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/inference-slope/inference-slope/e/confidence-interval-slope",
       "practiceNote": "Khan Academy — Confidence Interval for Slope (15 problems) (AP Prep)",
-      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "assignment": "Use a real two-variable dataset to fit a least-squares regression model. Create a scatterplot and residual plot, check inference conditions, compute or interpret a confidence interval for slope, and write one AP-style conclusion in context.",
       "estimatedHrs": 4
     },
     {
       "order": 16,
       "title": "Inference for Linear Regression — Synthesis & Review",
       "titleZh": "线性回归的推断 — Synthesis & Review",
-      "objectives": "Comprehensive review and AP exam preparation strategies.",
+      "objectives": "Synthesize AP Statistics topics across data exploration, study design, probability, and inference, then practice selecting the correct method under timed exam conditions.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/12-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 12: Linear Regression and Correlation Inference (Advanced)",
       "videoUrl": "https://www.khanacademy.org/math/ap-statistics/inference-slope/intro-inference-slope/v/introduction-inference-slope",
@@ -261,7 +261,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/inference-slope/inference-slope/e/confidence-interval-slope",
       "practiceNote": "Khan Academy — Confidence Interval for Slope (15 problems) (AP Prep)",
-      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "assignment": "Complete one mixed AP-style free-response set under timed conditions. For each problem, label the method used, conditions checked, and conclusion. Score the set with a rubric and revise the lowest-scoring response.",
       "estimatedHrs": 4
     }
   ],

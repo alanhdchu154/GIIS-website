@@ -12,7 +12,7 @@ const META = {
   heroDescription: 'A rigorous 4-year pathway for students targeting top engineering programs at universities like MIT, Stanford, Georgia Tech, and Purdue. From physics and design principles through thermodynamics and structural analysis, you will graduate with AP Physics credit, an engineering design portfolio, and the analytical foundation that engineering schools demand.',
   targets: ['Mechanical Engineering', 'Electrical Engineering', 'Civil & Structural Engineering', 'Aerospace Engineering', 'Chemical Engineering', 'Biomedical Engineering'],
   collegeNote: 'US engineering schools evaluate applicants on math depth (Calculus is essential), science breadth, and evidence of hands-on problem-solving. AP Physics is a major differentiator. This pathway is designed to signal rigorous STEM preparation and genuine engineering curiosity to competitive admissions committees.',
-  stats: [{ label: 'AP Courses', value: 1 }],
+  stats: [{ label: 'AP Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -51,14 +51,14 @@ const SCHEDULE = [
     { name: 'English III',                      type: 'core',       credits: 1.0, dept: 'English Language Arts' },
     { name: 'Statistics',                       type: 'core',       credits: 1.0, dept: 'Mathematics' },
     { name: 'Biology — Advanced',               type: 'core',       credits: 1.0, dept: 'Science' },
-    { name: 'AP Physics 1',                     type: 'pathway',    credits: 1.0, courseId: 'eng-apphysics' },
+    { name: 'Physics 1 exam preparation',                     type: 'pathway',    credits: 1.0, courseId: 'eng-apphysics' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',         type: 'core',       credits: 1.0, dept: 'English Language Arts' },
     { name: 'Trigonometry',                     type: 'core',       credits: 1.0, dept: 'Mathematics' },
     { name: 'Physics — Mechanics',              type: 'core',       credits: 1.0, dept: 'Science' },
     { name: 'Thermodynamics & Fluid Mechanics', type: 'pathway',    credits: 0.5, courseId: 'eng-thermo' },
-    { name: 'AP Statistics',                    type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Strongly recommended' },
+    { name: 'AP Statistics exam preparation',                    type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Strongly recommended' },
   ]},
   { grade: 12, term: 'Fall', courses: [
     { name: 'English IV — Writing & Communication', type: 'core',   credits: 1.0, dept: 'English Language Arts' },
@@ -227,9 +227,9 @@ const COURSES = [
   },
   {
     id: 'eng-apphysics',
-    name: 'AP Physics 1',
+    name: 'Physics 1 exam preparation',
     grade: 11, term: 'Fall', credits: 1.0,
-    description: 'AP Physics 1 is the single most important course for aspiring engineers — it provides the mathematical and conceptual framework for mechanics, energy, waves, and electrical phenomena that underpins every engineering discipline. Covering kinematics, Newton\'s laws, work and energy, rotational motion, oscillations, and waves at a college-algebra level, this course prepares students for the AP exam in May and for university-level physics and engineering courses. A score of 4 or 5 on AP Physics 1 is one of the strongest signals engineering admissions committees look for.',
+    description: 'Physics 1 exam preparation gives aspiring engineers the mathematical and conceptual framework for mechanics, energy, waves, and electrical phenomena. Covering kinematics, Newton\'s laws, work and energy, rotational motion, oscillations, and waves at a college-algebra level, this course prepares students for the College Board AP Physics 1 exam and for university-level physics and engineering courses.',
     syllabus: {
       objectives: [
         'Solve kinematics problems in 1-D and 2-D using equations of motion and graphical analysis',
@@ -250,9 +250,9 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP Physics 1 Resources', channel: 'College Board', note: 'Official AP Daily video lessons, progress checks, and released FRQs. Use from Day 1 of the course.' },
-      { url: 'https://www.khanacademy.org/science/ap-physics-1', title: 'AP Physics 1 — Khan Academy', channel: 'Khan Academy', note: 'Complete AP Physics 1 curriculum with videos and practice aligned to the AP exam units.' },
-      { url: 'https://www.youtube.com/c/flippingphysics', title: 'Flipping Physics — AP Physics 1 Playlist', channel: 'Flipping Physics', note: 'Every AP Physics 1 topic taught with clear worked examples and multiple-choice strategies — the best free AP Physics channel.' },
+      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official Physics 1 Resources', channel: 'College Board', note: 'Official AP Daily video lessons, progress checks, and released FRQs. Use throughout the course for exam preparation.' },
+      { url: 'https://www.khanacademy.org/science/ap-physics-1', title: 'Physics 1 exam preparation — Khan Academy', channel: 'Khan Academy', note: 'Complete Physics 1 exam preparation curriculum with videos and practice aligned to the College Board AP exam units.' },
+      { url: 'https://www.youtube.com/c/flippingphysics', title: 'Flipping Physics — Physics 1 exam preparation Playlist', channel: 'Flipping Physics', note: 'Every Physics 1 exam preparation topic taught with clear worked examples and multiple-choice strategies — the best free AP Physics channel.' },
       { url: 'https://phet.colorado.edu/en/simulations/filter?subjects=physics', title: 'PhET Interactive Simulations — Physics', channel: 'University of Colorado Boulder', note: 'Free, research-based physics simulations for projectile motion, forces, energy, waves, and more — use for every unit\'s lab component.' },
     ],
     quiz: [

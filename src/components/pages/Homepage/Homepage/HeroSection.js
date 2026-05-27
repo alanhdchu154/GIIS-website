@@ -95,7 +95,7 @@ function HeroSection({ language }) {
             )}
           </p>
 
-          {/* Founders pricing — strikethrough regular, highlight founders rate */}
+          {/* Multi-tier pricing — entry plan plus higher-touch advising options */}
           <p style={{
             fontSize: '14px',
             color: 'rgba(255,255,255,0.85)',
@@ -112,12 +112,12 @@ function HeroSection({ language }) {
               letterSpacing: '1px',
               textTransform: 'uppercase',
             }}>
-              {isEn ? 'Founders' : '创校价'}
+              {isEn ? 'From' : '起'}
             </span>
             <span>
-              <span style={{ color: '#d5a836', fontWeight: 800, fontSize: '18px' }}>$19.90</span>
+              <span style={{ color: '#d5a836', fontWeight: 800, fontSize: '18px' }}>$49</span>
               <span style={{ color: 'rgba(255,255,255,0.55)' }}>{isEn ? ' / month · ' : ' / 月 · '}</span>
-              <span style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'line-through' }}>$199</span>
+              <span style={{ color: 'rgba(255,255,255,0.62)' }}>{isEn ? 'guided plans available' : '可升级顾问方案'}</span>
             </span>
           </p>
           <p style={{
@@ -126,8 +126,8 @@ function HeroSection({ language }) {
             margin: '6px 0 0',
           }}>
             {isEn
-              ? 'First 100 students · Lock in this rate for 12 months · Cancel anytime'
-              : '限前 100 名学生 · 锁定 12 个月 · 随时取消'}
+              ? 'Self-paced, guided, and college-pathway support options'
+              : '自主学习、顾问指导、升学路径三种支持层级'}
           </p>
         </div>
 

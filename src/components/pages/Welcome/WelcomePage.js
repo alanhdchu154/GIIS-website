@@ -22,12 +22,28 @@ import { getParentSession } from '../../../api/authStorage';
 
 const PLAN_LABELS = {
   founders_monthly: {
-    en: 'Founders Monthly · $19.90/month',
-    zh: 'Founders 月付 · $19.90/月',
+    en: 'Self-Paced Founders · $49/month',
+    zh: '自主学习创校方案 · $49/月',
+  },
+  self_paced_monthly: {
+    en: 'Self-Paced Founders · $49/month',
+    zh: '自主学习创校方案 · $49/月',
+  },
+  self_paced_annual: {
+    en: 'Self-Paced Founders · $499/year',
+    zh: '自主学习创校方案 · $499/年',
+  },
+  guided_monthly: {
+    en: 'Guided · $149/month',
+    zh: '顾问指导方案 · $149/月',
+  },
+  premium_monthly: {
+    en: 'Premium / College Pathway · $299/month',
+    zh: 'Premium / College Pathway · $299/月',
   },
   group_monthly: {
-    en: 'Group Plan · $50/month (3–5 students)',
-    zh: '团体方案 · $50/月（3–5 位学生）',
+    en: 'Group Plan · inquiry-based',
+    zh: '团体方案 · 咨询报价',
   },
   live_test: {
     en: 'Live mode end-to-end test · $1',

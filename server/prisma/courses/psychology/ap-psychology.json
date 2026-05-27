@@ -5,7 +5,7 @@
   "credits": 1,
   "department": "Psychology",
   "type": "AP",
-  "description": "Comprehensive study of human behavior and mental processes aligned with the College Board AP Psychology curriculum. Topics span biological bases, sensation, perception, learning, memory, cognition, development, personality, disorders, and treatment, preparing students for the AP exam and college-level psychology.",
+  "description": "AP Psychology exam preparation aligned with the College Board Course and Exam Description. Students study behavior and mental processes across biological, cognitive, developmental, social, clinical, and research-methods domains while preparing for the College Board AP exam.",
   "isPublished": true,
   "modules": [
     {
@@ -236,7 +236,7 @@
       "order": 15,
       "title": "Treatment of Psychological Disorders — Advanced Applications",
       "titleZh": "心理障碍的治疗 — Advanced Applications",
-      "objectives": "In-depth case studies and real-world applications.",
+      "objectives": "Analyze treatment case studies by matching symptoms, diagnoses, therapeutic approaches, evidence quality, and ethical considerations in AP-style psychology scenarios.",
       "readingUrl": "https://openstax.org/books/psychology-2e/pages/16-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 16.1–16.5: Treatment of Disorders (Advanced)",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:introduction-to-treatment/v/treatment-of-psychological-disorders",
@@ -245,14 +245,14 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:psychological-therapies/e/psychological-therapies",
       "practiceNote": "Khan Academy — Psychological Therapies Practice (AP Prep)",
-      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "assignment": "Choose two treatment case studies. For each, identify the likely disorder, recommend an evidence-based therapy, explain why it fits the case, and answer one AP-style application prompt using vocabulary from the treatment unit.",
       "estimatedHrs": 4
     },
     {
       "order": 16,
       "title": "Treatment of Psychological Disorders — Synthesis & Review",
       "titleZh": "心理障碍的治疗 — Synthesis & Review",
-      "objectives": "Comprehensive review and AP exam preparation strategies.",
+      "objectives": "Analyze major AP Psychology domains, apply concepts across units, evaluate free-response accuracy, and write evidence-based explanations using operational definitions.",
       "readingUrl": "https://openstax.org/books/psychology-2e/pages/16-introduction",
       "readingNote": "OpenStax Psychology 2e — Ch 16.1–16.5: Treatment of Disorders (Advanced)",
       "videoUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:introduction-to-treatment/v/treatment-of-psychological-disorders",
@@ -261,7 +261,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-college-psychology/x2f5a736cf99e6b15:treatment-of-psychological-disorders/x2f5a736cf99e6b15:psychological-therapies/e/psychological-therapies",
       "practiceNote": "Khan Academy — Psychological Therapies Practice (AP Prep)",
-      "assignment": "Complete an in-depth analysis or practice AP-style free response questions on this topic.",
+      "assignment": "Complete a timed mixed-unit AP Psychology free-response set. Score your response with a rubric, revise one answer for clearer concept application, and create a final study plan listing your three weakest units and how you will review them.",
       "estimatedHrs": 4
     }
   ],
@@ -1557,5 +1557,5 @@
       "points": 1
     }
   ],
-  "gradeLevel": 12
+  "gradeLevel": 11
 }

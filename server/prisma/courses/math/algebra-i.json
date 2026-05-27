@@ -37,7 +37,7 @@
       "video2Note": "Professor Leonard — Order of Operations",
       "practiceUrl": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-factors-and-multiples/order-of-operations/e/order_of_operations",
       "practiceNote": "Khan Academy — Order of Operations Practice",
-      "assignment": "Create 5 multi-step expressions (with at least 4 operations each), solve them step by step showing every PEMDAS step.",
+      "assignment": "Create 5 multi-step expressions with at least 4 operations each. Solve each one step by step, label the PEMDAS rule used at every step, and write a short reflection explaining the most common mistake you had to avoid.",
       "estimatedHrs": 2.5
     },
     {
@@ -60,7 +60,7 @@
       "order": 4,
       "title": "Solving One-Step & Two-Step Equations",
       "titleZh": "一步与两步方程",
-      "objectives": "Use inverse operations to solve one-step and two-step linear equations; verify solutions.",
+      "objectives": "Solve one-step and two-step linear equations using inverse operations, explain why each operation preserves equality, and verify every solution by substitution.",
       "readingUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-introduction",
       "readingNote": "OpenStax Elementary Algebra 2e — Ch 2.1–2.2",
       "videoUrl": "https://www.khanacademy.org/math/algebra-basics/alg-basics-linear-equations-and-inequalities/alg-basics-one-step-equations/v/solving-one-step-equations",
@@ -69,7 +69,7 @@
       "video2Note": "Professor Leonard — Solving Linear Equations (Part 1)",
       "practiceUrl": "https://www.khanacademy.org/math/algebra-basics/alg-basics-linear-equations-and-inequalities/alg-basics-two-steps-equations-intro/e/linear_equations_2",
       "practiceNote": "Khan Academy — Two-Step Equation Practice",
-      "assignment": "Solve 15 equations (mix of one-step and two-step). Write a word problem whose solution requires a two-step equation.",
+      "assignment": "Solve 15 equations that mix one-step, two-step, fractions, and negative coefficients. For 5 selected problems, show a verification check by substituting the solution back into the original equation, then write one original word problem modeled by a two-step equation.",
       "estimatedHrs": 3.5
     },
     {
@@ -85,7 +85,7 @@
       "video2Note": "Professor Leonard — Solving Multi-Step Equations",
       "practiceUrl": "https://www.khanacademy.org/math/algebra-basics/alg-basics-linear-equations-and-inequalities/alg-basics-two-steps-equations-intro/e/linear_equations_3",
       "practiceNote": "Khan Academy — Variables on Both Sides",
-      "assignment": "Solve 10 multi-step equations. Rearrange 5 literal equations (e.g. solve A = lw for w; solve PV = nRT for T).",
+      "assignment": "Solve 10 multi-step equations with variables on both sides, parentheses, and fractions. Rearrange 5 literal equations such as A = lw and PV = nRT, and add one sentence for each explaining what the rearranged variable represents.",
       "estimatedHrs": 3.5
     },
     {
@@ -101,7 +101,7 @@
       "video2Note": "Professor Leonard — Linear Inequalities & Interval Notation",
       "practiceUrl": "https://www.khanacademy.org/math/algebra-basics/alg-basics-linear-equations-and-inequalities/inequalities-intro-alg/e/inequalities_in_one_variable_1",
       "practiceNote": "Khan Academy — Inequalities Practice",
-      "assignment": "Solve and graph 10 inequalities. Convert 5 graph solutions into interval notation and set-builder notation.",
+      "assignment": "Solve and graph 10 inequalities, including at least 3 that require reversing the inequality sign. Convert 5 graph solutions into interval notation and set-builder notation, then explain how the graph shows whether endpoints are included.",
       "estimatedHrs": 3
     },
     {
@@ -188,7 +188,7 @@
       "order": 12,
       "title": "Exponents & Polynomials",
       "titleZh": "指数与多项式",
-      "objectives": "Apply laws of exponents; classify polynomials; add, subtract, and multiply polynomials.",
+      "objectives": "Apply laws of exponents to simplify expressions, classify polynomials by degree and terms, and perform addition, subtraction, and multiplication of polynomials accurately.",
       "readingUrl": "https://openstax.org/books/elementary-algebra-2e/pages/6-introduction",
       "readingNote": "OpenStax Elementary Algebra 2e — Ch 6.1–6.3: Polynomials",
       "videoUrl": "https://www.khanacademy.org/math/algebra-basics/alg-basics-algebraic-expressions/alg-basics-exponent-properties/v/exponent-properties-involving-products",
@@ -204,7 +204,7 @@
       "order": 13,
       "title": "Factoring Polynomials",
       "titleZh": "多项式因式分解",
-      "objectives": "Factor out GCF; factor trinomials (leading coefficient = 1 and ≠ 1); use difference of squares and perfect square trinomials.",
+      "objectives": "Apply multiple factoring strategies to polynomials, including greatest common factor, trinomial factoring, difference of squares, and perfect square trinomials, then verify factors by expansion.",
       "readingUrl": "https://openstax.org/books/elementary-algebra-2e/pages/7-introduction",
       "readingNote": "OpenStax Elementary Algebra 2e — Ch 7.1–7.4: Factoring",
       "videoUrl": "https://www.khanacademy.org/math/algebra-basics/alg-basics-algebraic-expressions/alg-basics-factoring-polynomials/v/factoring-trinomials-with-a-leading-1-coefficient",
@@ -213,7 +213,7 @@
       "video2Note": "Professor Leonard — Factoring Polynomials Completely",
       "practiceUrl": "https://www.khanacademy.org/math/algebra-basics/alg-basics-algebraic-expressions/alg-basics-factoring-polynomials/e/factoring_polynomials_1",
       "practiceNote": "Khan Academy — Factoring Practice",
-      "assignment": "Factor 15 polynomials using all learned methods. Check each answer by re-expanding.",
+      "assignment": "Factor 15 polynomials using all learned methods. Label the strategy used for each problem, check each answer by re-expanding, and write two sentences explaining how you decided which factoring method to try first.",
       "estimatedHrs": 4
     },
     {

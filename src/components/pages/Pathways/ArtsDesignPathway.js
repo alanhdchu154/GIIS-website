@@ -12,7 +12,7 @@ const META = {
   heroDescription: 'A 4-year pathway for students pursuing fine arts, graphic design, architecture, film/animation, or user experience design. From visual fundamentals and art history through digital design and portfolio development, you will graduate with a strong creative portfolio and the critical thinking about aesthetics and design that programs at RISD, Parsons, UCLA Film, and MIT Architecture require.',
   targets: ['Fine Arts / Studio Art', 'Graphic Design & Visual Communication', 'Architecture & Spatial Design', 'Film, Animation & Digital Media', 'User Experience (UX) Design', 'Art History & Curation'],
   collegeNote: 'Art and design school admissions are portfolio-driven above all else. But selective programs like RISD, Parsons, and Yale Art also evaluate critical thinking, art history knowledge, and written articulation of creative choices. This pathway builds technical skills, aesthetic vocabulary, and the creative discipline that produces a competitive portfolio by Grade 12.',
-  stats: [{ label: 'AP Courses', value: 1 }],
+  stats: [{ label: 'AP Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -63,7 +63,7 @@ const SCHEDULE = [
     { name: 'English IV — Writing & Communication', type: 'core',    credits: 1.0, dept: 'English Language Arts' },
     { name: 'Calculus',                           type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Architecture & Spatial Design',      type: 'pathway',   credits: 0.5, courseId: 'art-architecture' },
-    { name: 'AP Studio Art: Drawing / 2-D Design', type: 'supporting', credits: 1.0, dept: 'Arts', note: 'Strongly recommended for portfolio-focused applicants' },
+    { name: 'Portfolio Art exam preparation', type: 'supporting', credits: 1.0, dept: 'Arts', note: 'Strongly recommended for portfolio-focused applicants' },
   ]},
   { grade: 12, term: 'Spring', courses: [
     { name: 'English IV — Advanced Composition',  type: 'core',      credits: 1.0, dept: 'English Language Arts' },
@@ -231,7 +231,7 @@ const COURSES = [
     id: 'art-aphist',
     name: 'AP Art History',
     grade: 11, term: 'Fall', credits: 1.0,
-    description: 'College-level art history covering 250 required works from prehistoric times to the present, drawn from every global tradition — not just the Western canon. Students develop the rigorous visual analysis and essay-writing skills tested on the AP exam, including formal analysis, contextual analysis, attribution, and cross-cultural comparison. A score of 3–5 on the AP exam signals college-ready art historical thinking to RISD, Parsons, and art history programs nationwide.',
+    description: 'College-level art history covering 250 required works from prehistoric times to the present, drawn from every global tradition — not just the Western canon. Students develop the rigorous visual analysis and essay-writing skills tested on the College Board AP exam, including formal analysis, contextual analysis, attribution, and cross-cultural comparison. A score of 3–5 on the College Board AP exam signals college-ready art historical thinking to RISD, Parsons, and art history programs nationwide.',
     syllabus: {
       objectives: [
         'Identify and analyze all 250 AP Art History required works by form, function, content, and context',

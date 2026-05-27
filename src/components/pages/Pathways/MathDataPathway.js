@@ -9,10 +9,10 @@ const META = {
   subtitle: 'Turn numbers into insight. Insight into impact.',
   emoji: '📐',
   courseEmoji: '📐',
-  heroDescription: 'A mathematically rigorous 4-year pathway for students targeting programs in Mathematics, Statistics, Data Science, or Actuarial Science. From proof-based mathematics through AP Statistics and machine learning foundations, you will graduate with the quantitative depth that top programs like MIT, CMU, and University of Chicago look for in math and data-focused majors.',
+  heroDescription: 'A mathematically rigorous 4-year pathway for students targeting programs in Mathematics, Statistics, Data Science, or Actuarial Science. From proof-based mathematics through AP Statistics exam preparation and machine learning foundations, you will graduate with the quantitative depth that top programs like MIT, CMU, and University of Chicago look for in math and data-focused majors.',
   targets: ['Mathematics / Applied Mathematics', 'Statistics & Actuarial Science', 'Data Science & Analytics', 'Quantitative Finance', 'Operations Research', 'Economics (Quantitative)'],
-  collegeNote: 'Math programs value students who have gone beyond calculus — proof writing, statistics, and discrete math are major differentiators. AP Statistics and a strong Calculus record are the baseline; students who add data science coursework and quantitative projects stand out significantly at competitive programs.',
-  stats: [{ label: 'AP Courses', value: 2 }],
+  collegeNote: 'Math programs value students who have gone beyond calculus — proof writing, statistics, and discrete math are major differentiators. AP Statistics exam preparation and a strong Calculus record are the baseline; students who add data science coursework and quantitative projects stand out significantly at competitive programs.',
+  stats: [{ label: 'AP Prep Options', value: 2 }],
 };
 
 const SCHEDULE = [
@@ -51,14 +51,14 @@ const SCHEDULE = [
     { name: 'English III',                   type: 'core',       credits: 1.0, dept: 'English Language Arts' },
     { name: 'Statistics',                    type: 'core',       credits: 1.0, dept: 'Mathematics' },
     { name: 'Biology — Advanced',            type: 'core',       credits: 1.0, dept: 'Science' },
-    { name: 'AP Statistics',                 type: 'pathway',    credits: 1.0, courseId: 'math-apstats' },
+    { name: 'AP Statistics exam preparation',                 type: 'pathway',    credits: 1.0, courseId: 'math-apstats' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',      type: 'core',       credits: 1.0, dept: 'English Language Arts' },
     { name: 'Trigonometry',                  type: 'core',       credits: 1.0, dept: 'Mathematics' },
     { name: 'Physics — Mechanics',           type: 'core',       credits: 1.0, dept: 'Science' },
     { name: 'Data Analysis with Python',     type: 'pathway',    credits: 0.5, courseId: 'math-data' },
-    { name: 'AP Calculus BC',                type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Strongly recommended' },
+    { name: 'Calculus BC exam preparation',  type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Strongly recommended' },
   ]},
   { grade: 12, term: 'Fall', courses: [
     { name: 'English IV — Writing & Communication', type: 'core', credits: 1.0, dept: 'English Language Arts' },
@@ -234,7 +234,7 @@ const COURSES = [
     id: 'math-stats1',
     name: 'Introduction to Statistics & Probability',
     grade: 10, term: 'Fall', credits: 0.5,
-    description: 'Data is everywhere — this course teaches you how to make sense of it. Students explore descriptive statistics, probability theory, and the logic of statistical inference. Emphasis is placed on building conceptual understanding before computation, preparing students for the full rigor of AP Statistics in Grade 11.',
+    description: 'Data is everywhere — this course teaches you how to make sense of it. Students explore descriptive statistics, probability theory, and the logic of statistical inference. Emphasis is placed on building conceptual understanding before computation, preparing students for the full rigor of AP Statistics exam preparation in Grade 11.',
     syllabus: {
       objectives: [
         'Calculate and interpret measures of center, spread, and shape for distributions',
@@ -251,7 +251,7 @@ const COURSES = [
         { week: '7–8',   topic: 'Discrete Probability Models',  desc: 'Random variables, expected value, variance. Binomial distribution: formula, mean, SD.' },
         { week: '9–10',  topic: 'The Normal Distribution',      desc: 'Bell curve, z-scores, empirical rule (68-95-99.7), normal probability calculations.' },
         { week: '11–12', topic: 'Sampling & Simulation',        desc: 'Random sampling, sampling variability, law of large numbers, simulation with dice/cards.' },
-        { week: '13–16', topic: 'Introduction to Inference',    desc: 'Sampling distributions, concept of a confidence interval, logic of hypothesis testing — preview of AP Statistics.' },
+        { week: '13–16', topic: 'Introduction to Inference',    desc: 'Sampling distributions, concept of a confidence interval, logic of hypothesis testing — preview of AP Statistics exam preparation.' },
       ],
     },
     resources: [
@@ -363,9 +363,9 @@ const COURSES = [
 
   {
     id: 'math-apstats',
-    name: 'AP Statistics',
+    name: 'AP Statistics exam preparation',
     grade: 11, term: 'Fall', credits: 1.0,
-    description: 'The college-level statistics course assessed by the AP exam in May. Students master the four major themes of AP Statistics: exploring data, sampling and experimentation, probability and simulation, and statistical inference. Strong conceptual reasoning — not just formula application — is required for success on the exam.',
+    description: 'College-level statistics for students preparing for the College Board AP Statistics exam in May. Students master four major themes: exploring data, sampling and experimentation, probability and simulation, and statistical inference. Strong conceptual reasoning — not just formula application — is required for success on the exam.',
     syllabus: {
       objectives: [
         'Describe and compare distributions of univariate and bivariate data using appropriate graphical and numerical summaries',
@@ -386,9 +386,9 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP Statistics Resources', channel: 'College Board', note: 'Official AP Daily videos, progress checks, and past free-response questions with scoring guidelines. This is required — use it throughout the year.' },
+      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP Statistics Resources', channel: 'College Board', note: 'Official AP Daily videos, progress checks, and past free-response questions with scoring guidelines. Use throughout the year for exam preparation.' },
       { url: 'https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9', title: 'StatQuest — Statistics Fundamentals Playlist', channel: 'StatQuest with Josh Starmer', note: 'Conceptual explanations of t-tests, p-values, confidence intervals, and regression that build true understanding rather than memorization.' },
-      { url: 'https://www.khanacademy.org/math/ap-statistics', title: 'AP Statistics — Khan Academy', channel: 'Khan Academy', note: 'Complete AP Statistics course with unit tests and practice questions aligned to the AP exam. Use the unit tests as chapter review.' },
+      { url: 'https://www.khanacademy.org/math/ap-statistics', title: 'AP Statistics exam preparation — Khan Academy', channel: 'Khan Academy', note: 'Complete AP Statistics exam preparation course with unit tests and practice questions aligned to the College Board AP exam. Use the unit tests as chapter review.' },
       { url: 'https://www.youtube.com/c/LecturioMedical/search?query=statistics', title: 'AP Stats with Josh — Review Videos', channel: 'Josh AP Statistics', note: 'Short AP Statistics review videos organized by topic. Ideal for reviewing specific exam topics before the May exam.' },
     ],
     quiz: [
@@ -401,7 +401,7 @@ const COURSES = [
           'The sample mean is 95% likely to be in this interval',
         ],
         ans: 1,
-        exp: 'This is the most commonly tested AP Statistics interpretation question. A confidence interval is a procedure — the "95%" refers to the long-run success rate of the method, not a probability about where the parameter lies for this specific interval. The parameter is fixed (not random); the interval varies from sample to sample.',
+        exp: 'This is a commonly tested AP Statistics interpretation question. A confidence interval is a procedure — the "95%" refers to the long-run success rate of the method, not a probability about where the parameter lies for this specific interval. The parameter is fixed (not random); the interval varies from sample to sample.',
       },
       {
         q: 'A researcher finds a correlation coefficient r = −0.85 between hours of sleep and number of errors on a task. What is the most accurate conclusion?',
@@ -454,7 +454,7 @@ const COURSES = [
     id: 'math-data',
     name: 'Data Analysis with Python',
     grade: 11, term: 'Spring', credits: 0.5,
-    description: 'The bridge between mathematical statistics and real-world data science. Students learn to load, clean, visualize, and analyze datasets using Python\'s core scientific stack: NumPy, pandas, and Matplotlib. By the end, students will have completed three independent data analyses on real datasets and can present findings using statistical reasoning learned in AP Statistics.',
+    description: 'The bridge between mathematical statistics and real-world data science. Students learn to load, clean, visualize, and analyze datasets using Python\'s core scientific stack: NumPy, pandas, and Matplotlib. By the end, students will have completed three independent data analyses on real datasets and can present findings using statistical reasoning learned in AP Statistics exam preparation.',
     syllabus: {
       objectives: [
         'Use pandas DataFrames to load, clean, filter, and reshape tabular data',
@@ -470,7 +470,7 @@ const COURSES = [
         { week: '6–7',   topic: 'Data Visualization',            desc: 'Matplotlib and Seaborn: histograms, scatter plots, box plots, heatmaps, subplots, styling for publication.' },
         { week: '8–9',   topic: 'Exploratory Data Analysis',     desc: 'Groupby, pivot tables, correlation matrices, identifying patterns and outliers. Full EDA on a Kaggle dataset.' },
         { week: '10–11', topic: 'Regression in Python',          desc: 'NumPy linear regression from scratch (normal equations), then scikit-learn LinearRegression. Residual analysis.' },
-        { week: '12–13', topic: 'Statistical Tests in Python',   desc: 'scipy.stats: t-tests, chi-square tests, p-values — connecting AP Statistics concepts to code.' },
+        { week: '12–13', topic: 'Statistical Tests in Python',   desc: 'scipy.stats: t-tests, chi-square tests, p-values — connecting AP Statistics exam preparation concepts to code.' },
         { week: '14–16', topic: 'Data Analysis Project',         desc: 'Students choose a dataset, form a research question, perform EDA, model, and write a 5-page analysis report with visualizations.' },
       ],
     },

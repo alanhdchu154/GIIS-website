@@ -12,7 +12,7 @@ const META = {
   heroDescription: 'A 4-year pathway for students interested in journalism, public relations, digital media, film production, or strategic communications. From writing and rhetoric through media theory and digital storytelling, you will graduate with a professional media portfolio and the communication skills that top programs at Northwestern, USC Annenberg, and NYU look for.',
   targets: ['Journalism & Mass Communication', 'Public Relations & Strategic Communication', 'Digital Media & Content Creation', 'Film & Television Production', 'Advertising & Marketing Communication', 'Media Studies & Communication Theory'],
   collegeNote: 'Communication programs are highly competitive and look for students who have both theoretical grounding and practical media creation experience. Strong writing samples, a media portfolio, and evidence of analytical thinking about media and society are what distinguish top applicants. This pathway builds all three.',
-  stats: [{ label: 'AP Courses', value: 1 }],
+  stats: [{ label: 'AP Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [

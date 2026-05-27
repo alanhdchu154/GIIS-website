@@ -22,6 +22,7 @@ const NAV_COLS = [
       { en: 'School Profile (PDF)', zh: '学校简介 (PDF)', to: '/school-profile' },
       { en: 'Student Handbook', zh: '学生手册', to: '/handbook' },
       { en: 'Admission', zh: '招生', to: '/admission' },
+      { en: 'Transfer Students', zh: '转学生入学', to: '/transfer-students' },
       { en: 'Tuition & Pricing', zh: '学费', to: '/pricing' },
       { en: 'Discovery', zh: '了解我们', to: '/discovery' },
       { en: 'Support', zh: '支持', to: '/support' },

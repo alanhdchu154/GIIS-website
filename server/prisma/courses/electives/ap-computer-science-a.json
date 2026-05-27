@@ -5,14 +5,14 @@
   "credits": 1,
   "department": "Technology",
   "type": "AP",
-  "description": "A college-level introduction to computer science using the Java programming language, following the AP Computer Science A curriculum (College Board Course and Exam Description). Covers primitive types, classes and objects, control flow, iteration, arrays and ArrayLists, 2D arrays, inheritance, polymorphism, recursion, and algorithm design. Aligned to the AP exam administered each May. Students leaving this course are prepared for first-semester college CS coursework or to sit the AP exam for credit.",
+  "description": "AP Computer Science A exam preparation following the College Board Course and Exam Description. Students learn Java programming, object-oriented design, arrays and ArrayLists, 2D arrays, inheritance, polymorphism, recursion, and algorithmic problem solving while preparing for the College Board AP exam and introductory college CS expectations.",
   "isPublished": true,
   "modules": [
     {
       "order": 1,
       "title": "Primitive Types & Variables",
       "titleZh": "基本类型与变量",
-      "objectives": "Declare and initialize variables of type int, double, boolean, and char; perform arithmetic with operator precedence; understand integer division vs. floating-point division; cast between numeric types; format console output with System.out.println.",
+      "objectives": "Write Java statements that declare, initialize, and update int, double, boolean, and char variables; trace arithmetic expressions with operator precedence; explain integer division vs. floating-point division; apply numeric casts safely; format console output with System.out.println.",
       "readingUrl": "https://runestone.academy/ns/books/published/csawesome/topic-1-1-primitive-types.html",
       "readingNote": "Runestone CSAwesome — Topic 1: Primitive Types",
       "videoUrl": "https://www.youtube.com/watch?v=eIrMbAQSU34",
@@ -124,7 +124,7 @@
       "order": 8,
       "title": "Static vs. Instance",
       "titleZh": "静态成员与实例成员",
-      "objectives": "Distinguish static (class-level) from instance (object-level) members; know when to use static (utility methods, counters, constants) vs. instance; access static members via ClassName.member; understand why main is static.",
+      "objectives": "Explain the difference between static class-level members and instance object-level members; apply static for constants, counters, and utility methods; access static members with ClassName.member; trace why main is static and why static methods cannot directly use instance fields.",
       "readingUrl": "https://runestone.academy/ns/books/published/csawesome/topic-5-7-static-variables-and-methods.html",
       "readingNote": "Runestone CSAwesome — Static Variables and Methods",
       "videoUrl": "https://www.youtube.com/watch?v=Eo_SWgEUtxY",
@@ -140,7 +140,7 @@
       "order": 9,
       "title": "Arrays (1D)",
       "titleZh": "一维数组",
-      "objectives": "Declare and initialize 1D arrays; access and modify elements via index; iterate with for and enhanced for-each loops; recognize ArrayIndexOutOfBoundsException; pass arrays to methods (reference semantics).",
+      "objectives": "Write and trace Java code that declares, initializes, indexes, and updates 1D arrays; iterate with for and enhanced for-each loops; identify ArrayIndexOutOfBoundsException causes; implement helper methods that receive arrays and demonstrate reference semantics.",
       "readingUrl": "https://runestone.academy/ns/books/published/csawesome/topic-6-1-arrays.html",
       "readingNote": "Runestone CSAwesome — Topic 6: Arrays",
       "videoUrl": "https://www.youtube.com/watch?v=NptnmWvkbTw",
@@ -156,7 +156,7 @@
       "order": 10,
       "title": "ArrayList",
       "titleZh": "动态数组 ArrayList",
-      "objectives": "Use the ArrayList class from java.util; add, remove, get, and set elements; iterate with for and for-each loops; understand the difference from primitive arrays (resizable, only holds objects, generic type parameter); convert between ArrayList and array.",
+      "objectives": "Implement Java programs that import and use ArrayList<E>; apply add, remove, get, set, and size correctly; trace index shifting after insertions and removals; compare ArrayList with primitive arrays; convert between ArrayList and array when an API requires it.",
       "readingUrl": "https://runestone.academy/ns/books/published/csawesome/topic-7-1-array-list.html",
       "readingNote": "Runestone CSAwesome — Topic 7: ArrayList",
       "videoUrl": "https://www.youtube.com/watch?v=BkadVQbHmAQ",
@@ -1349,5 +1349,6 @@
       "explanation": "Polymorphism depends on inheritance and overridden behavior.",
       "points": 1
     }
-  ]
+  ],
+  "gradeLevel": 11
 }

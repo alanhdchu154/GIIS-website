@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * IsGiisForYou — honest fit-check section on the homepage.
  *
- * The $19.90/month founders price triggers a "too cheap to be real" reaction
+ * The entry self-paced plan can still trigger a "too cheap to be real" reaction
  * in cautious Chinese parents. This section disarms that suspicion by
  * volunteering who GIIS is NOT for. Saying "not the right fit if…" out loud
  * is one of the highest trust-building moves available; cheaper to add than

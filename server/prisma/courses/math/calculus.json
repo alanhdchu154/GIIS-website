@@ -69,7 +69,7 @@
       "video2Note": "Professor Leonard — Basic Differentiation Rules",
       "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-5/e/power-rule",
       "practiceNote": "Khan Academy — Power Rule Practice (25 problems)",
-      "assignment": "Differentiate 15 functions using power, product, and quotient rules. Find the second derivative of 5 functions.",
+      "assignment": "Differentiate 15 functions using power, product, quotient, and chain-ready notation. For 5 of them, find the second derivative and explain what the first and second derivatives tell you about the original function. Submit a correction log for any rule-choice mistakes.",
       "estimatedHrs": 3.5
     },
     {
@@ -92,7 +92,7 @@
       "order": 6,
       "title": "Applications of Derivatives",
       "titleZh": "导数的应用：曲线分析",
-      "objectives": "Use the first and second derivative tests to find extrema; determine intervals of increase/decrease and concavity; sketch curves using derivative information.",
+      "objectives": "Analyze functions using the first and second derivative tests, calculate extrema and intervals of increase/decrease and concavity, and sketch curves from derivative information.",
       "readingUrl": "https://openstax.org/books/calculus-volume-1/pages/4-introduction",
       "readingNote": "OpenStax Calculus Volume 1 — Ch 4.3–4.5: Curve Sketching",
       "videoUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical-applications-new/ab-5-1/v/relative-maxima-and-minima",
@@ -149,7 +149,7 @@
       "video2Note": "Professor Leonard — Introduction to Integration (Riemann Sums)",
       "practiceUrl": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-2/e/left-and-right-riemann-sums",
       "practiceNote": "Khan Academy — Riemann Sums Practice (15 problems)",
-      "assignment": "Compute left, right, and midpoint Riemann sums with n=4 for 3 functions. Find antiderivatives of 10 basic functions.",
+      "assignment": "Compute left, right, and midpoint Riemann sums with n=4 for 3 functions, then compare the estimates to the exact antiderivative when possible. Find antiderivatives of 10 basic functions and write one paragraph explaining how accumulated area connects to the definite integral.",
       "estimatedHrs": 3.5
     },
     {

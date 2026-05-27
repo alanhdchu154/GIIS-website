@@ -34,7 +34,7 @@ const CATEGORIES = [
       {
         title: 'Mathematics & Data Science',
         titleZh: '数学与数据科学',
-        desc: 'Proof writing, discrete math, AP Statistics, linear algebra, and statistical modeling.',
+        desc: 'Proof writing, discrete math, AP Statistics exam preparation, linear algebra, and statistical modeling.',
         descZh: '数学证明、离散数学、AP 统计、线性代数与统计建模。',
         emoji: '📐', color: '#4527A0', to: '/pathways/math',
         targets: ['Mathematics', 'Statistics', 'Data Science', 'Actuarial Science'],
@@ -53,7 +53,7 @@ const CATEGORIES = [
       {
         title: 'Business & Marketing',
         titleZh: '商业与市场营销',
-        desc: 'Marketing, entrepreneurship, consumer behavior, AP Macroeconomics, and a brand launch capstone.',
+        desc: 'Marketing, entrepreneurship, consumer behavior, Macroeconomics exam preparation, and a brand launch capstone.',
         descZh: '市场营销、创业、消费者行为、AP 宏观经济学与品牌发布专题。',
         emoji: '📊', color: '#C84B0A', to: '/pathways/business',
         targets: ['Business Admin', 'Marketing', 'Entrepreneurship', 'International Business'],
@@ -82,7 +82,7 @@ const CATEGORIES = [
       {
         title: 'Psychology & Behavioral Science',
         titleZh: '心理学与行为科学',
-        desc: 'Behavior, cognition, social psychology, AP Psychology, and an original research capstone.',
+        desc: 'Behavior, cognition, social psychology, AP Psychology exam preparation, and an original research capstone.',
         descZh: '行为、认知、社会心理学、AP 心理学与原创研究专题。',
         emoji: '🧠', color: '#5b2c6f', to: '/pathways/psychology',
         targets: ['Psychology', 'Neuroscience', 'Social Work', 'Education'],

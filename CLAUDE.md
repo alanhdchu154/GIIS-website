@@ -2,6 +2,16 @@
 
 > Read this before doing **anything** in this repo.
 
+## Central Umi coordination
+
+This repo follows the global Central Umi coordination contract in `/Users/alanhdchu/.codex/AGENTS.md`.
+
+- Central Umi remains Alan's primary interface and cross-project coordinator.
+- `giis-producer` is the project manager for this repo, not a separate Umi persona.
+- Claude Code / cc is a senior technical worker for bounded implementation, review, debugging, content-alignment, and deployment-readiness tasks.
+- For substantial coding problems, prefer `cc-first` or `Split-work` after the read-only reconnaissance pass. Coding-heavy or cc-strong work should go to cc first to balance token usage and use the right agent for the job. Umi still owns scope, acceptance, and the final Alan-facing summary.
+- Project-local rules in this file control GIIS code behavior, claims, roadmap discipline, and production safety.
+
 ## 🎯 The single goal
 **Get parents to pay, and keep paying.** Every change should be evaluated against this lens — does it raise willingness to pay, or maintain trust after they've paid? If the answer is "neither," reconsider the priority.
 
@@ -42,11 +52,12 @@ This is non-negotiable. The roadmap stale = next agent makes wrong decisions.
 - UC Santa Barbara · The Ohio State University · UC Davis · Syracuse University · New Jersey Institute of Technology
 - Don't write "UCSB" / "NJIT" / "(SIT)" anywhere user-facing
 
-### Founders pricing
-- Public price: **$19.90/month** (regular $199/month)
-- Annual: **$199/year** (regular $1,799)
-- Frame: **"First 100 students · Locked for 12 months"**
-- This is a marketing positioning, not the long-term price. Stripe integration must respect the 12-month lock.
+### Multi-tier pricing
+- Self-Paced Founders: **$49/month** or **$499/year**
+- Guided: **$149/month**, includes monthly advisor check-in, course planning, transfer-credit review, and parent progress review
+- Premium / College Pathway: **$299/month**, includes higher-touch pathway planning, writing/project portfolio guidance, and college-readiness framing
+- Group pricing is inquiry-based; do not publish a low public group checkout price that undercuts the individual plans.
+- Stripe integration must keep legacy `founders_monthly` / `monthly` aliases mapped to the current self-paced plan until old checkout links are retired.
 
 ### Demo pipeline (`scripts/make-demo.mjs`)
 - Captions are source-of-truth in `public/demo/walkthrough.html` → `const CAPTIONS = [...]`. The make-demo script parses them. **Never hardcode captions in the script.**

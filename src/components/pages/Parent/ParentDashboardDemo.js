@@ -312,8 +312,8 @@ export default function ParentDashboardDemo({ language }) {
             </h2>
             <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.7)', margin: '0 0 24px', maxWidth: '520px', marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.6 }}>
               {isEn
-                ? 'Real teacher feedback. Weekly progress emails. Direct line to your child\'s advisor. From $19.90/month for the first 100 students.'
-                : '真人老师批改、每周进度邮件、与孩子顾问直接对话。前 100 名学生月付 $19.90。'}
+                ? 'Real teacher feedback. Weekly progress emails. Direct line to your child\'s advisor. Plans start at $49/month.'
+                : '真人老师批改、每周进度邮件、与孩子顾问直接对话。方案从 $49/月起。'}
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/admission" style={{

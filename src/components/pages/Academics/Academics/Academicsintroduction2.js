@@ -1,10 +1,10 @@
 import React from 'react';
 
 const AP_COURSES = [
-  { code: 'AP Statistics',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '数据分析与统计推论' } },
-  { code: 'AP Biology',         icon: '🧬', desc: { en: 'College-level life sciences', zh: '大学程度生命科学' } },
-  { code: 'AP Psychology',      icon: '🧠', desc: { en: 'Behavior & mental processes', zh: '行为与心理历程' } },
-  { code: 'AP Human Geography', icon: '🌏', desc: { en: 'Patterns of human society', zh: '人文地理与全球视野' } },
+  { code: 'AP Statistics exam preparation',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '数据分析与统计推论' } },
+  { code: 'AP Biology exam preparation',         icon: '🧬', desc: { en: 'College-level life sciences', zh: '大学程度生命科学' } },
+  { code: 'AP Psychology exam preparation',      icon: '🧠', desc: { en: 'Behavior & mental processes', zh: '行为与心理历程' } },
+  { code: 'AP Human Geography exam preparation', icon: '🌏', desc: { en: 'Patterns of human society', zh: '人文地理与全球视野' } },
 ];
 
 const PROGRAMS = [
@@ -32,8 +32,8 @@ const PROGRAMS = [
       zh: '在必修科目之外，GIIS 提供横跨 STEM、商业与艺术的 8 条学习路径。学生可建立一致且有深度的选课记录，展现出明确的学术方向——这正是美国大学申请审核最重视的要素。',
     },
     points: {
-      en: ['Psychology & Behavioral Science — from intro to AP Psychology & capstone', 'CS & Engineering — programming, data structures, AP CS A, and ML', 'Business & Marketing — entrepreneurship, marketing, consumer behavior', 'Economics & Finance — micro/macro economics, financial markets, 2 AP courses'],
-      zh: ['心理学与行为科学 — 从入门到 AP 心理学与研究专题', '计算机科学与工程 — 编程、数据结构、AP CS A 与机器学习', '商业与市场营销 — 创业、营销、消费者行为', '经济与金融 — 微观/宏观经济学、金融市场，含两门 AP 课程'],
+      en: ['Psychology & Behavioral Science — from intro courses to psychology exam prep and capstone', 'CS & Engineering — programming, data structures, Java exam prep, and ML', 'Business & Marketing — entrepreneurship, marketing, consumer behavior', 'Economics & Finance — micro/macro economics, financial markets, and advanced exam-prep options'],
+      zh: ['心理学与行为科学 — 从入门课程到心理学考试准备与研究专题', '计算机科学与工程 — 编程、数据结构、Java 考试准备与机器学习', '商业与市场营销 — 创业、营销、消费者行为', '经济与金融 — 微观/宏观经济学、金融市场与进阶考试准备选项'],
     },
   },
 ];
@@ -100,16 +100,16 @@ export default function Academicsintroduction2({ language }) {
         </div>
       </div>
 
-      {/* ── Section 2: AP COURSES ────────────────────────────────── */}
+      {/* ── Section 2: AP exam preparation ───────────────────────── */}
       <div style={{ background: '#2b3d6d', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
           <h2 style={{ fontSize: '60px', fontWeight: 800, color: '#fff', lineHeight: 1, marginBottom: '12px' }}>
-            {isEn ? 'AP COURSES' : 'AP 进阶课程'}
+            {isEn ? 'AP EXAM PREP' : 'AP 考试准备'}
           </h2>
           <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.7)', maxWidth: '580px', lineHeight: 1.7, marginBottom: '48px' }}>
             {isEn
-              ? 'AP (Advanced Placement) courses are college-level classes offered in high school. Strong AP performance — especially exam scores of 4 or 5 — is one of the most effective signals of academic readiness for competitive US universities.'
-              : 'AP（Advanced Placement）是高中阶段提供的大学程度课程。优异的 AP 成绩（尤其是 4 或 5 分）是向美国顶尖大学展示学术能力最有效的指标之一。'}
+              ? 'GIIS provides advanced coursework and resources for students preparing for College Board AP exams. While school review processes are pending, public materials should be read as exam-preparation support.'
+              : 'GIIS 为准备 College Board AP 考试的学生提供进阶课程与资源。在授权与 school-code 流程完成前，公开资料应理解为考试准备支持，而不是已完成 AP 课程授权的声明。'}
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
@@ -132,8 +132,8 @@ export default function Academicsintroduction2({ language }) {
 
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.45)', marginTop: '32px' }}>
             {isEn
-              ? 'AP exams are administered by the College Board each May. GIIS prepares students throughout the year with coursework aligned to the official AP curriculum framework.'
-              : 'AP 考试由 College Board 每年五月举办。GIIS 全年以对应官方 AP 课纲的课程为学生备考。'}
+              ? 'AP exams are administered by the College Board each May. GIIS uses College Board-aligned resources for preparation and keeps final transcript wording subject to approved school policy.'
+              : 'AP 考试由 College Board 每年五月举办。GIIS 使用对齐 College Board 的资源协助备考，最终成绩单用语以学校审核政策为准。'}
           </p>
         </div>
       </div>

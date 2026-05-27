@@ -105,8 +105,8 @@ function ParentDecisionStrip({ language }) {
     {
       title: isEn ? 'Lock the founders rate' : '锁定创校价格',
       body: isEn
-        ? '$19.90/month for the first 100 students, locked for 12 months. Apply first, pay when the enrollment path is clear.'
-        : '前 100 名学生 $19.90/月，锁定 12 个月。先申请，确认入学路径后再付款。',
+        ? 'Plans now start at $49/month, with guided and college-pathway support available after admissions reviews your child’s needs.'
+        : '方案从 $49/月起，并可在招生审核后选择顾问指导或升学路径支持。',
       to: '/pricing',
       cta: isEn ? 'Review tuition' : '查看学费',
     },

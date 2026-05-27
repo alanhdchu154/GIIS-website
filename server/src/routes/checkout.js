@@ -17,29 +17,54 @@ const FRONTEND_URL = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(
  * Add a new tier here + add the matching STRIPE_PRICE_* env var; no other changes needed.
  */
 const PRICE_TIERS = {
-  founders_monthly: {
-    priceId: process.env.STRIPE_PRICE_FOUNDERS_MONTHLY,
+  self_paced_monthly: {
+    priceId: process.env.STRIPE_PRICE_SELF_PACED_MONTHLY || process.env.STRIPE_PRICE_FOUNDERS_MONTHLY,
     mode: 'subscription',
     maxStudents: 1,
-    label: 'Founders Monthly · $19.90/mo',
+    label: 'Self-Paced Founders · $49/mo',
+    public: true,
+  },
+  self_paced_annual: {
+    priceId: process.env.STRIPE_PRICE_SELF_PACED_ANNUAL,
+    mode: 'subscription',
+    maxStudents: 1,
+    label: 'Self-Paced Founders Annual · $499/yr',
+    public: true,
+  },
+  guided_monthly: {
+    priceId: process.env.STRIPE_PRICE_GUIDED_MONTHLY,
+    mode: 'subscription',
+    maxStudents: 1,
+    label: 'Guided · $149/mo',
+    public: true,
+  },
+  premium_monthly: {
+    priceId: process.env.STRIPE_PRICE_PREMIUM_MONTHLY,
+    mode: 'subscription',
+    maxStudents: 1,
+    label: 'Premium / College Pathway · $299/mo',
+    public: true,
   },
   group_monthly: {
     priceId: process.env.STRIPE_PRICE_GROUP_MONTHLY,
     mode: 'subscription',
     maxStudents: 5,
-    label: 'Group (3-5 students) · $50/mo',
+    label: 'Group inquiry · 3-5 students',
+    public: false,
   },
   live_test: {
     priceId: process.env.STRIPE_PRICE_LIVE_TEST,
     mode: 'subscription',
     maxStudents: 1,
     label: 'Live mode end-to-end test · $1',
+    public: false,
   },
 };
 
-// Back-compat: front-end may still send the legacy "monthly" alias
+// Back-compat: front-end may still send legacy plan aliases.
 const LEGACY_ALIASES = {
-  monthly: 'founders_monthly',
+  monthly: 'self_paced_monthly',
+  founders_monthly: 'self_paced_monthly',
 };
 
 /**
@@ -136,6 +161,7 @@ router.get('/tiers', (_req, res) => {
       mode: tier.mode,
       maxStudents: tier.maxStudents,
       available: !!tier.priceId,
+      public: !!tier.public,
     };
   }
   res.json(out);
