@@ -77,9 +77,13 @@ async function auditOne(code) {
     return { code, found: false };
   }
 
-  // Year filter — gradeLevel on Course (9/10/11/12); if null treat as "open"
+  // Year filter — prefer explicit Course.gradeLevel, but open/elective courses
+  // can still belong to a G12 semester through semesterLabel.
   const enrollments = yearFilter
-    ? student.enrollments.filter((e) => e.course?.gradeLevel === yearFilter)
+    ? student.enrollments.filter((e) => (
+        e.course?.gradeLevel === yearFilter
+        || String(e.semesterLabel || '').includes(`Grade ${yearFilter}`)
+      ))
     : student.enrollments;
 
   let modulesCompleted = 0;

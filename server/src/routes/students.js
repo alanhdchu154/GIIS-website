@@ -8,6 +8,20 @@ const {
   requireStudentOrAdminForStudentParam,
 } = require('../middleware/auth');
 const { computeRowGpa } = require('../lib/gpa');
+const {
+  CARE_STATUSES,
+  RISK_LEVELS,
+  CARE_TIERS,
+  CARE_LOG_TYPES,
+  CARE_VISIBILITIES,
+  CARE_CHANNELS,
+  normalizeChoice,
+  parseOptionalDate,
+  computeCareSignals,
+  displayCareState,
+  serializeCareState,
+  serializeCareLog,
+} = require('../lib/studentCare');
 
 const dateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional().nullable();
 
@@ -252,6 +266,22 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
           },
         },
       },
+      loginSessions: {
+        select: {
+          role: true,
+          startedAt: true,
+          lastSeenAt: true,
+          endedAt: true,
+          durationSeconds: true,
+        },
+        orderBy: { lastSeenAt: 'desc' },
+        take: 20,
+      },
+      careState: true,
+      careLogs: {
+        orderBy: { createdAt: 'desc' },
+        take: 3,
+      },
     },
   });
 
@@ -279,6 +309,10 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
         if (progress.lastActivityAt) dates.push(new Date(progress.lastActivityAt));
       }
     }
+    for (const session of s.loginSessions || []) {
+      if (session.lastSeenAt) dates.push(new Date(session.lastSeenAt));
+      else if (session.startedAt) dates.push(new Date(session.startedAt));
+    }
     const lastActivity = dates.length > 0 ? new Date(Math.max(...dates)) : null;
     const daysInactive = lastActivity
       ? Math.floor((now - lastActivity) / (1000 * 60 * 60 * 24))
@@ -292,6 +326,12 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
     }, 0);
     const submittedQuizzes = enrollments.reduce((sum, e) => sum + (e.quizAttempts || []).length, 0);
     const submittedExams = enrollments.reduce((sum, e) => sum + (e.examAttempts || []).length, 0);
+    const recentLoginSessions = s.loginSessions || [];
+    const lastLoginAt = recentLoginSessions[0]?.lastSeenAt || recentLoginSessions[0]?.startedAt || null;
+    const recentSessionDurationSeconds = recentLoginSessions.reduce(
+      (sum, session) => sum + (Number(session.durationSeconds) || 0),
+      0
+    );
 
     const consistency = [];
     if (officialCreditsEarned > 0 && enrollments.length === 0) {
@@ -315,6 +355,18 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
     if (completedButMissingCredit > 0) {
       consistency.push(`${completedButMissingCredit} completed Learn Portal course(s) are missing creditEarned.`);
     }
+    const computedCare = computeCareSignals({
+      daysInactive,
+      consistency,
+      totalEnrollments: enrollments.length,
+      totalModules,
+      completedModules,
+      submittedQuizzes,
+      submittedExams,
+      lastReviewedAt: s.careState?.lastReviewedAt,
+      nextCheckInDueAt: s.careState?.nextCheckInDueAt,
+    }, now);
+    const displayCare = displayCareState(s.careState, computedCare);
 
     return {
       id: s.id,
@@ -331,10 +383,18 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
       completedModules,
       submittedQuizzes,
       submittedExams,
+      lastLoginAt: lastLoginAt ? new Date(lastLoginAt).toISOString() : null,
+      recentLoginSessionCount: recentLoginSessions.length,
+      recentSessionDurationSeconds,
+      recentSessionDurationMinutes: Math.round(recentSessionDurationSeconds / 60),
       transcriptRows: transcriptRows.length,
       consistency,
       lastActivity: lastActivity?.toISOString() ?? null,
       daysInactive,
+      careState: serializeCareState(s.careState),
+      careDisplay: displayCare,
+      computedCare,
+      recentCareLogs: (s.careLogs || []).map((log) => serializeCareLog(log)),
     };
   });
 
@@ -347,6 +407,108 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
   });
 
   res.json({ students: result });
+});
+
+router.get('/:id/care-state', authenticate, requireAdmin, async (req, res) => {
+  const student = await prisma.student.findUnique({
+    where: { id: req.params.id },
+    select: { id: true },
+  });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const careState = await prisma.studentCareState.findUnique({
+    where: { studentId: req.params.id },
+  });
+  res.json({ careState: serializeCareState(careState) });
+});
+
+router.patch('/:id/care-state', authenticate, requireAdmin, async (req, res) => {
+  const student = await prisma.student.findUnique({
+    where: { id: req.params.id },
+    select: { id: true },
+  });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const nextCheckInDueAt = parseOptionalDate(req.body?.nextCheckInDueAt);
+  const lastReviewedAt = parseOptionalDate(req.body?.lastReviewedAt);
+  if (nextCheckInDueAt === undefined) return res.status(400).json({ error: 'nextCheckInDueAt must be YYYY-MM-DD or ISO date' });
+  if (lastReviewedAt === undefined) return res.status(400).json({ error: 'lastReviewedAt must be YYYY-MM-DD or ISO date' });
+
+  const internalFlags = req.body?.internalFlags && typeof req.body.internalFlags === 'object' && !Array.isArray(req.body.internalFlags)
+    ? req.body.internalFlags
+    : {};
+
+  const data = {
+    advisorOwner: String(req.body?.advisorOwner || '').trim().slice(0, 200),
+    status: normalizeChoice(req.body?.status, CARE_STATUSES, 'active'),
+    riskLevel: normalizeChoice(req.body?.riskLevel, RISK_LEVELS, 'low'),
+    careTier: normalizeChoice(req.body?.careTier, CARE_TIERS, 'self_paced'),
+    manualOverride: req.body?.manualOverride === true,
+    lastReviewedAt,
+    nextCheckInDueAt,
+    currentGoal: String(req.body?.currentGoal || '').trim().slice(0, 1000),
+    internalFlags,
+  };
+
+  const careState = await prisma.studentCareState.upsert({
+    where: { studentId: req.params.id },
+    create: { studentId: req.params.id, ...data },
+    update: data,
+  });
+  await audit('care_state_update', req.params.id, req);
+  res.json({ careState: serializeCareState(careState) });
+});
+
+router.get('/:id/care-logs', authenticate, requireAdmin, async (req, res) => {
+  const student = await prisma.student.findUnique({
+    where: { id: req.params.id },
+    select: { id: true },
+  });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const logs = await prisma.studentCareLog.findMany({
+    where: { studentId: req.params.id },
+    orderBy: { createdAt: 'desc' },
+    take: Math.min(100, Math.max(1, Number(req.query.limit) || 50)),
+  });
+  res.json({ logs: logs.map((log) => serializeCareLog(log)) });
+});
+
+router.post('/:id/care-logs', authenticate, requireAdmin, async (req, res) => {
+  const student = await prisma.student.findUnique({
+    where: { id: req.params.id },
+    select: { id: true },
+  });
+  if (!student) return res.status(404).json({ error: 'Student not found' });
+
+  const followUpAt = parseOptionalDate(req.body?.followUpAt);
+  const resolvedAt = parseOptionalDate(req.body?.resolvedAt);
+  if (followUpAt === undefined) return res.status(400).json({ error: 'followUpAt must be YYYY-MM-DD or ISO date' });
+  if (resolvedAt === undefined) return res.status(400).json({ error: 'resolvedAt must be YYYY-MM-DD or ISO date' });
+
+  const visibility = normalizeChoice(req.body?.visibility, CARE_VISIBILITIES, 'internal');
+  const parentSummary = String(req.body?.parentSummary || '').trim().slice(0, 2000);
+  if (visibility === 'parent_safe' && !parentSummary) {
+    return res.status(400).json({ error: 'parentSummary is required for parent_safe logs' });
+  }
+
+  const log = await prisma.studentCareLog.create({
+    data: {
+      studentId: req.params.id,
+      type: normalizeChoice(req.body?.type, CARE_LOG_TYPES, 'advisor_note'),
+      visibility,
+      title: String(req.body?.title || '').trim().slice(0, 200),
+      bodyInternal: String(req.body?.bodyInternal || '').trim().slice(0, 10000),
+      parentSummary,
+      channel: normalizeChoice(req.body?.channel, CARE_CHANNELS, 'internal'),
+      outcome: String(req.body?.outcome || '').trim().slice(0, 2000),
+      followUpAt,
+      resolvedAt,
+      authorEmail: req.auth?.email || '',
+    },
+  });
+  await audit('care_log_create', req.params.id, req);
+  res.status(201).json({ log: serializeCareLog(log) });
 });
 
 /** Full student + nested transcript — admin or that student */
@@ -619,6 +781,28 @@ router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
     },
   });
 
+  const loginSessions = await prisma.loginSession.findMany({
+    where: { studentId },
+    orderBy: { startedAt: 'desc' },
+    take: 200,
+    select: {
+      id: true,
+      role: true,
+      email: true,
+      startedAt: true,
+      lastSeenAt: true,
+      endedAt: true,
+      durationSeconds: true,
+      lastPath: true,
+    },
+  });
+
+  const careLogs = await prisma.studentCareLog.findMany({
+    where: { studentId },
+    orderBy: { createdAt: 'desc' },
+    take: 200,
+  });
+
   // Flatten everything into a single timeline (one event per activity).
   const timeline = [];
 
@@ -731,6 +915,45 @@ router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
     });
   }
 
+  for (const session of loginSessions) {
+    timeline.push({
+      kind: 'login_session',
+      at: session.startedAt,
+      role: session.role,
+      email: session.email,
+      durationSeconds: session.durationSeconds,
+      endedAt: session.endedAt,
+      lastSeenAt: session.lastSeenAt,
+      lastPath: session.lastPath,
+    });
+    if (session.endedAt) {
+      timeline.push({
+        kind: 'logout',
+        at: session.endedAt,
+        role: session.role,
+        email: session.email,
+        durationSeconds: session.durationSeconds,
+      });
+    }
+  }
+
+  for (const log of careLogs) {
+    timeline.push({
+      kind: 'care_log',
+      at: log.createdAt,
+      type: log.type,
+      visibility: log.visibility,
+      title: log.title,
+      bodyInternal: log.bodyInternal,
+      parentSummary: log.parentSummary,
+      channel: log.channel,
+      outcome: log.outcome,
+      followUpAt: log.followUpAt,
+      resolvedAt: log.resolvedAt,
+      authorEmail: log.authorEmail,
+    });
+  }
+
   timeline.sort((a, b) => {
     const ta = a.at ? new Date(a.at).getTime() : 0;
     const tb = b.at ? new Date(b.at).getTime() : 0;
@@ -792,6 +1015,17 @@ router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
     }
   );
   totals.estimatedHrs = Number(totals.estimatedHrs.toFixed(1));
+  totals.loginSessions = loginSessions.length;
+  totals.sessionDurationSeconds = loginSessions.reduce(
+    (sum, session) => sum + (Number(session.durationSeconds) || 0),
+    0
+  );
+  totals.sessionDurationMinutes = Math.round(totals.sessionDurationSeconds / 60);
+  totals.lastLoginAt = loginSessions[0]?.startedAt?.toISOString() || null;
+  totals.lastSeenAt = loginSessions
+    .map((session) => session.lastSeenAt)
+    .filter(Boolean)
+    .sort((a, b) => new Date(b) - new Date(a))[0]?.toISOString() || null;
 
   res.json({
     student: {
@@ -803,6 +1037,8 @@ router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
     },
     totals,
     courses,
+    loginSessions,
+    careLogs: careLogs.map((log) => serializeCareLog(log)),
     timeline,
     generatedAt: new Date().toISOString(),
   });

@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const { PrismaClient } = require('@prisma/client');
 const { authenticate } = require('../middleware/auth');
 const { sendPasswordResetEmail } = require('../lib/mailer');
+const { createLoginSession, closeLoginSession } = require('../lib/sessionTracker');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -30,17 +31,17 @@ function setAuthCookie(res, token) {
   res.cookie(COOKIE_NAME, token, setCookieOptions());
 }
 
-function signAdminToken(admin) {
+function signAdminToken(admin, sessionId = null) {
   return jwt.sign(
-    { role: 'admin', adminId: admin.id, email: admin.email },
+    { role: 'admin', adminId: admin.id, email: admin.email, sessionId },
     process.env.JWT_SECRET,
     { expiresIn: '7d' }
   );
 }
 
-function signStudentToken(account) {
+function signStudentToken(account, sessionId = null) {
   return jwt.sign(
-    { role: 'student', studentId: account.studentId, email: account.email },
+    { role: 'student', studentId: account.studentId, email: account.email, sessionId },
     process.env.JWT_SECRET,
     { expiresIn: '7d' }
   );
@@ -136,7 +137,13 @@ router.post('/register', async (req, res) => {
       return { student: st, account: acc };
     });
 
-    const token = signStudentToken(account);
+    const session = await createLoginSession({
+      role: 'student',
+      email: account.email,
+      studentId: account.studentId,
+      req,
+    });
+    const token = signStudentToken(account, session?.id || null);
     setAuthCookie(res, token);
     return res.status(201).json({
       token,
@@ -166,7 +173,13 @@ router.post('/login', async (req, res) => {
     if (!ok) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
-    const token = signAdminToken(admin);
+    const session = await createLoginSession({
+      role: 'admin',
+      email: admin.email,
+      adminId: admin.id,
+      req,
+    });
+    const token = signAdminToken(admin, session?.id || null);
     setAuthCookie(res, token);
     return res.json({
       token,
@@ -188,7 +201,13 @@ router.post('/login', async (req, res) => {
     return res.status(401).json({ error: 'Invalid credentials' });
   }
 
-  const token = signStudentToken(account);
+  const session = await createLoginSession({
+    role: 'student',
+    email: account.email,
+    studentId: account.studentId,
+    req,
+  });
+  const token = signStudentToken(account, session?.id || null);
   const student = await prisma.student.findUnique({
     where: { id: account.studentId },
     select: { id: true, name: true },
@@ -253,7 +272,21 @@ router.post('/reset-password', async (req, res) => {
   res.json({ ok: true });
 });
 
-router.post('/logout', (_req, res) => {
+function extractLogoutPayload(req) {
+  const cookieToken = req.cookies?.[COOKIE_NAME];
+  const header = req.headers.authorization || '';
+  const token = cookieToken || (header.startsWith('Bearer ') ? header.slice(7) : null);
+  if (!token) return null;
+  try {
+    return jwt.verify(token, process.env.JWT_SECRET);
+  } catch {
+    return null;
+  }
+}
+
+router.post('/logout', async (req, res) => {
+  const payload = extractLogoutPayload(req);
+  await closeLoginSession(payload?.sessionId, req);
   res.clearCookie(COOKIE_NAME, { path: '/' });
   res.json({ ok: true });
 });

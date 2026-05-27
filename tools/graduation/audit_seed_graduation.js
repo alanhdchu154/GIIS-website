@@ -37,6 +37,7 @@ const sandbox = {
     if (id === '@prisma/client') return { PrismaClient: class { $disconnect() {} } };
     if (id === 'bcryptjs') return { hash: async () => '' };
     if (id === '../src/lib/gpa') return require(path.join(ROOT, 'server', 'src', 'lib', 'gpa'));
+    if (id === '../src/lib/parentCredentials') return require(path.join(ROOT, 'server', 'src', 'lib', 'parentCredentials'));
     return require(id);
   },
   __dirname: path.join(ROOT, 'server', 'prisma'),

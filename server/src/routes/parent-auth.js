@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const { PrismaClient } = require('@prisma/client');
 const { sendPasswordResetEmail } = require('../lib/mailer');
 const { DEFAULT_PARENT_PASSWORD, parentLoginEmailForStudentEmail } = require('../lib/parentCredentials');
+const { createLoginSession, closeLoginSession } = require('../lib/sessionTracker');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -19,9 +20,9 @@ function setCookieOptions() {
   return { httpOnly: true, sameSite: isProd ? 'none' : 'lax', secure: isProd, maxAge: COOKIE_MAX_AGE_MS, path: '/' };
 }
 
-function signParentToken(account) {
+function signParentToken(account, sessionId = null) {
   return jwt.sign(
-    { role: 'parent', parentId: account.id, email: account.email, studentId: account.studentId },
+    { role: 'parent', parentId: account.id, email: account.email, studentId: account.studentId, sessionId },
     process.env.JWT_SECRET,
     { expiresIn: '7d' }
   );
@@ -56,7 +57,14 @@ router.post('/login', async (req, res) => {
 
   await prisma.parentAccount.update({ where: { id: account.id }, data: { lastLoginAt: new Date() } });
 
-  const token = signParentToken(account);
+  const session = await createLoginSession({
+    role: 'parent',
+    email: account.email,
+    studentId: account.studentId,
+    parentAccountId: account.id,
+    req,
+  });
+  const token = signParentToken(account, session?.id || null);
   res.cookie(COOKIE_NAME, token, setCookieOptions());
   res.json({ ok: true, studentId: account.studentId });
 });
@@ -114,7 +122,21 @@ router.post('/reset-password', async (req, res) => {
 });
 
 // POST /api/parent/logout
-router.post('/logout', (_req, res) => {
+function extractParentLogoutPayload(req) {
+  const cookieToken = req.cookies?.[COOKIE_NAME];
+  const header = req.headers.authorization || '';
+  const token = cookieToken || (header.startsWith('Bearer ') ? header.slice(7) : null);
+  if (!token) return null;
+  try {
+    return jwt.verify(token, process.env.JWT_SECRET);
+  } catch {
+    return null;
+  }
+}
+
+router.post('/logout', async (req, res) => {
+  const payload = extractParentLogoutPayload(req);
+  await closeLoginSession(payload?.sessionId, req);
   res.clearCookie(COOKIE_NAME, { path: '/' });
   res.json({ ok: true });
 });

@@ -118,10 +118,10 @@ async function checkApiHealth(request) {
   if (!res.ok()) throw new Error(`API tiers returned ${res.status()}`);
   const json = await res.json();
   const text = JSON.stringify(json);
-  if (!text.includes('founders_monthly') && !text.includes('19.90')) {
-    throw new Error('API tiers JSON did not include founders pricing evidence.');
+  if (!text.includes('self_paced_monthly') || !text.includes('guided_monthly') || !text.includes('premium_monthly')) {
+    throw new Error('API tiers JSON did not include current multi-tier pricing evidence.');
   }
-  markPass('API health and founders pricing contract');
+  markPass('API health and multi-tier pricing contract');
 }
 
 async function checkProductionBundleApiBase(request) {
@@ -152,7 +152,7 @@ async function checkProductionBundleApiBase(request) {
 
 async function auditPublicFunnel(page) {
   await visit(page, '/', [/Florida-registered|Florida/i, /Parent|家长/i], 'New student route: homepage trust');
-  await visit(page, '/pricing', [/\$19\.90|19\.90/, /First 100|100/], 'New student route: pricing');
+  await visit(page, '/pricing', [/\$49|49\/mo|Self-Paced/i, /\$149|Guided/i, /\$299|Premium/i], 'New student route: pricing');
   await visit(page, '/admission', [/Apply|Admission|申请/i, /Parent|家长/i], 'New student route: admission');
   await visit(page, '/apply', [/Parent|Guardian|家长/i, /Student|学生/i], 'New student route: application form');
   await visit(page, '/pathways', [/Pathway|Credit|路径|学分/i], 'New student route: pathways');

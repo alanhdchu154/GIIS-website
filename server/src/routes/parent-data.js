@@ -2,6 +2,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const { PrismaClient } = require('@prisma/client');
 const { computeSemesterTotals } = require('../lib/gpa');
+const { touchLoginSession } = require('../lib/sessionTracker');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -13,7 +14,9 @@ function extractParentAuth(req) {
   if (!token) return null;
   try {
     const p = jwt.verify(token, process.env.JWT_SECRET);
-    return p.role === 'parent' ? p : null;
+    if (p.role !== 'parent') return null;
+    touchLoginSession(p.sessionId, req);
+    return p;
   } catch { return null; }
 }
 

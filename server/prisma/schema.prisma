@@ -12,6 +12,7 @@ model AdminUser {
   id           String   @id @default(cuid())
   email        String   @unique
   passwordHash String
+  loginSessions LoginSession[]
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 }
@@ -41,6 +42,9 @@ model Student {
   enrollments    Enrollment[]
   parentAccounts ParentAccount[]
   subscriptions  Subscription[]
+  loginSessions  LoginSession[]
+  careState      StudentCareState?
+  careLogs       StudentCareLog[]
 }
 
 /// Self-service student login (one account per student record).
@@ -253,8 +257,84 @@ model ParentAccount {
   passwordHash String
   studentId    String
   student      Student   @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  loginSessions LoginSession[]
   createdAt    DateTime  @default(now())
   lastLoginAt  DateTime?
+}
+
+/// Login/session history for student, parent, and admin users.
+/// Used for operational care signals: last seen, inactivity, and rough session duration.
+model LoginSession {
+  id              String         @id @default(cuid())
+  role            String /// "student" | "parent" | "admin"
+  email           String
+  studentId       String?
+  student         Student?       @relation(fields: [studentId], references: [id], onDelete: SetNull)
+  parentAccountId String?
+  parentAccount   ParentAccount? @relation(fields: [parentAccountId], references: [id], onDelete: SetNull)
+  adminId         String?
+  admin           AdminUser?     @relation(fields: [adminId], references: [id], onDelete: SetNull)
+  startedAt       DateTime       @default(now())
+  lastSeenAt      DateTime       @default(now())
+  endedAt         DateTime?
+  durationSeconds Int            @default(0)
+  ipAddress       String         @default("")
+  userAgent       String         @default("")
+  lastPath        String         @default("")
+
+  @@index([role])
+  @@index([email])
+  @@index([studentId])
+  @@index([parentAccountId])
+  @@index([adminId])
+  @@index([startedAt])
+  @@index([lastSeenAt])
+}
+
+/// Staff-only student coordination state. This is the current advisor-owned
+/// care snapshot; objective activity signals are still computed from platform data.
+model StudentCareState {
+  id               String   @id @default(cuid())
+  studentId        String   @unique
+  student          Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  advisorOwner     String   @default("")
+  status           String   @default("active") /// active | progressing | slowing_down | disengaging | intervention_needed | advisor_followup | parent_concern
+  riskLevel        String   @default("low") /// low | watch | concern | urgent
+  careTier         String   @default("self_paced") /// self_paced | guided | premium | transfer | graduation
+  manualOverride   Boolean  @default(false)
+  lastReviewedAt   DateTime?
+  nextCheckInDueAt DateTime?
+  currentGoal      String   @default("")
+  internalFlags    Json     @default("{}")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+/// Append-only advisor relationship memory. Internal bodies are admin-only;
+/// parent-safe summaries may be exposed later through parent routes.
+model StudentCareLog {
+  id            String   @id @default(cuid())
+  studentId     String
+  student       Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  type          String   @default("advisor_note") /// advisor_note | weekly_checkin | parent_contact | intervention | transfer_review | graduation_review
+  visibility    String   @default("internal") /// internal | parent_safe
+  title         String   @default("")
+  bodyInternal  String   @default("")
+  parentSummary String   @default("")
+  channel       String   @default("internal") /// email | phone | wechat | meeting | portal | internal
+  outcome       String   @default("")
+  followUpAt    DateTime?
+  resolvedAt    DateTime?
+  authorEmail   String   @default("")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([studentId])
+  @@index([type])
+  @@index([visibility])
+  @@index([followUpAt])
+  @@index([resolvedAt])
+  @@index([createdAt])
 }
 
 model PasswordResetToken {
@@ -302,8 +382,11 @@ model Application {
 ///   invoice.payment_failed           → status='past_due'
 ///
 /// planType options:
-///   founders_monthly   $19.90 / month recurring (1 student)
-///   group_monthly      $50    / month recurring (3-5 students; reseller / cohort)
+///   self_paced_monthly $49    / month recurring (1 student; legacy founders_monthly/monthly aliases map here)
+///   self_paced_annual  $499   / year recurring (1 student)
+///   guided_monthly     $149   / month recurring (advisor support)
+///   premium_monthly    $299   / month recurring (college-pathway support)
+///   group_monthly      inquiry-based legacy/internal cohort tier
 ///   live_test          $1     one-time (Alan's own end-to-end smoke test)
 model Subscription {
   id                      String    @id @default(cuid())

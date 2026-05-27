@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const { touchLoginSession } = require('../lib/sessionTracker');
 
 function extractToken(req) {
   // Cookie takes priority over Authorization header
@@ -20,18 +21,21 @@ function authenticate(req, res, next) {
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET);
     if (payload.role === 'student' && payload.studentId) {
-      req.auth = { role: 'student', studentId: payload.studentId, email: payload.email };
+      req.auth = { role: 'student', studentId: payload.studentId, email: payload.email, sessionId: payload.sessionId };
+      touchLoginSession(payload.sessionId, req);
       return next();
     }
     if (payload.role === 'admin' && payload.adminId) {
-      req.auth = { role: 'admin', adminId: payload.adminId, email: payload.email };
+      req.auth = { role: 'admin', adminId: payload.adminId, email: payload.email, sessionId: payload.sessionId };
       req.admin = { id: payload.adminId, email: payload.email };
+      touchLoginSession(payload.sessionId, req);
       return next();
     }
     // Legacy admin JWT (adminId only)
     if (payload.adminId) {
-      req.auth = { role: 'admin', adminId: payload.adminId, email: payload.email };
+      req.auth = { role: 'admin', adminId: payload.adminId, email: payload.email, sessionId: payload.sessionId };
       req.admin = { id: payload.adminId, email: payload.email };
+      touchLoginSession(payload.sessionId, req);
       return next();
     }
     return res.status(401).json({ error: 'Invalid token' });
