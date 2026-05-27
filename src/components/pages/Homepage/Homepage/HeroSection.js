@@ -86,11 +86,15 @@ function HeroSection({ language }) {
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.45)', margin: '0 0 24px' }}>
             {isEn ? (
               <>Already enrolled?{' '}
-                <Link to="/login" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>Sign in →</Link>
+                <Link to="/login" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>Student sign in</Link>
+                <span style={{ color: 'rgba(255,255,255,0.35)' }}> · </span>
+                <Link to="/parent/login" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>Parent portal →</Link>
               </>
             ) : (
               <>已登记？{' '}
-                <Link to="/login" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>登入 →</Link>
+                <Link to="/login" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>学生登入</Link>
+                <span style={{ color: 'rgba(255,255,255,0.35)' }}> · </span>
+                <Link to="/parent/login" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>家长入口 →</Link>
               </>
             )}
           </p>

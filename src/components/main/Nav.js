@@ -136,10 +136,16 @@ function Nav({ language, toggleLanguage }) {
                                     </button>
                                 </>
                             ) : (
-                                <Link to="/login" className={`btn btn-sm px-3 ${styles.topButton}`}
-                                    style={{ background: '#1a73e8', color: '#fff', borderRadius: 6, fontWeight: 600 }}>
-                                    {isEn ? 'Log In' : '登入'}
-                                </Link>
+                                <>
+                                    <Link to="/parent/login" className={`btn btn-link px-2 ${styles.topButton}`}
+                                        style={{ color: 'rgba(255,255,255,0.72)', fontWeight: 600 }}>
+                                        {isEn ? 'Parent' : '家长'}
+                                    </Link>
+                                    <Link to="/login" className={`btn btn-sm px-3 ${styles.topButton}`}
+                                        style={{ background: '#1a73e8', color: '#fff', borderRadius: 6, fontWeight: 600 }}>
+                                        {isEn ? 'Log In' : '登入'}
+                                    </Link>
+                                </>
                             )}
                             {toggleLanguage && (
                                 <button type="button" onClick={toggleLanguage} aria-label={t.langToggleAria}
@@ -272,6 +278,15 @@ function Nav({ language, toggleLanguage }) {
                             </li>
                         )}
                         {/* Not logged in */}
+                        {!isMobile && !studentSession && !parentSession && (
+                            <li className={styles.navItem} style={{ padding: '0 4px' }}>
+                                <Link to="/parent/login"
+                                    className={styles.topButton}
+                                    style={{ color: 'rgba(255,255,255,0.72)', fontWeight: 600, padding: '6px 10px', textDecoration: 'none', display: 'inline-block' }}>
+                                    {isEn ? 'Parent Portal' : '家长入口'}
+                                </Link>
+                            </li>
+                        )}
                         {!isMobile && !studentSession && !parentSession && (
                             <li className={styles.navItem} style={{ padding: '0 4px' }}>
                                 <Link to="/login"

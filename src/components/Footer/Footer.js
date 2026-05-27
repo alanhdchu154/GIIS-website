@@ -33,6 +33,7 @@ const NAV_COLS = [
     titleZh: '账户',
     links: [
       { en: 'Student Login', zh: '学生登录', to: '/login' },
+      { en: 'Parent Portal', zh: '家长入口', to: '/parent/login' },
       { en: 'Apply Now', zh: '立即申请', to: '/admission' },
     ],
   },
