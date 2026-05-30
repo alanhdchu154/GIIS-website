@@ -32,6 +32,8 @@
     "make-demo:merge": "node scripts/make-demo.mjs --merge-only",
     "yt:status": "python3 tools/youtube-upload/yt_queue.py status",
     "yt:upload": "python3 tools/youtube-upload/yt_queue.py upload",
+    "lesson:cc-foundation": "python3 tools/lesson-video/cc_foundation_worker.py",
+    "lesson:foundation-gate": "python3 tools/lesson-video/foundation_video_gate.py",
     "audit:pathways": "node tools/pathway-quality/audit_courses.js",
     "audit:lesson-manifest": "node tools/youtube-upload/audit_manifest_alignment.js",
     "audit:lesson-video-inventory": "node tools/lesson-video/audit_video_quality_inventory.js",

@@ -60,6 +60,7 @@ teaching-videos/*/_outline.failed
 # Auto-pipeline scratch — keep summaries (_audit/*-summary.json) tracked, ignore tmp/plans
 teaching-videos/*/_audit/*-plan.json
 teaching-videos/*/_audit/*.tmp
+umi/reviews/cc-runs/*.jsonl
 
 # FUSE filesystem orphan markers (from sandbox mount activity)
 .fuse_hidden*

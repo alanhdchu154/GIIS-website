@@ -71,3 +71,28 @@ Do not upload automatically.
 Next step is a human-visible approval decision. If approved, add this lesson to
 the approved ready-to-upload artifact and upload through the gated YouTube
 queue, not direct upload scripts.
+
+## Umi Video QA
+
+Reviewed on 2026-05-30 from the rendered MP4, contact sheet, transcript, and
+sampled video frames.
+
+Evidence:
+
+- MP4 exists: `algebra_i_module_9_slope_rate_change_v2.mp4`
+- Duration: 00:04:42.71
+- Video: 1920x1080 H.264, 30 fps
+- Audio: AAC mono, 22050 Hz
+- Transcript: 14 sections, 749 words
+- Sample frames show title, graph/rise-run, two-point slope, order trap, slope
+  types, rate-of-change, answer reveal, and final path slides.
+
+Judgment:
+
+- Content is appropriate for non-AP Algebra I foundation use.
+- No AP, College Board, Common App, accreditation, CEEB, or admissions claims.
+- The worked answer slides now show actual solution steps.
+- Slide 06 is the densest slide; acceptable for a pilot, but future cc runs
+  should keep trap/comparison slides less text-heavy.
+
+Umi status: approved for Alan-facing final review, not automatically uploaded.
