@@ -1,12 +1,20 @@
-# tools/youtube-upload — quickstart
+# tools/youtube-upload — gated upload quickstart
 
-Upload a finished lesson MP4 to the GIIS YouTube channel.
+Upload a reviewed, human-approved lesson MP4 to the GIIS YouTube channel.
 
 ```bash
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4-sample/
+python3 tools/youtube-upload/yt_queue.py upload --gate-ready --dry-run
+python3 tools/youtube-upload/yt_queue.py upload --gate-ready --max 1
 ```
 
-**First time using this?** Read `setup.md` — there's a one-time Google Cloud setup (~15 min). After that, every upload is one command.
+**First time using this?** Read `setup.md` — there's a one-time Google Cloud setup (~15 min).
+
+Rendered MP4 files are not enough. Lesson upload requires both:
+
+1. `lesson_release_gate.py` classifies the lesson as ready.
+2. A human adds the lesson to `teaching-videos/_audit/release-gate/approved_ready_to_upload.json`.
+
+Manual `upload_lesson.py` calls are still available for the queue runner, but normal operators should not bypass the approval file.
 
 ## What's in here
 
@@ -14,7 +22,8 @@ python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4
 |---|---|
 | `setup.md` | One-time setup walkthrough: YouTube channel + Google Cloud + OAuth |
 | `SKILL.md` | What Claude reads to know when/how to use this tool |
-| `upload_lesson.py` | Upload a whole lesson folder. Auto-builds title/description/chapters from `script.json`, attaches captions + thumbnail, and **adds the video to the course playlist** (creates the playlist if missing). Privacy defaults to `unlisted`. |
+| `yt_queue.py` | Gated upload queue. Use `upload --gate-ready` so only human-approved lessons upload. |
+| `upload_lesson.py` | Low-level whole-lesson uploader used by `yt_queue.py`. It also refuses unapproved lessons unless an emergency override is explicitly used. |
 | `upload_video.py` | Low-level: upload any MP4 with explicit title/description flags. Used by `upload_lesson.py` under the hood. |
 | `playlist.py` | Manage playlists — list / show / create / add / remove / reorder / delete. |
 | `client_secret.json` | Your Google OAuth credentials. **Never commit.** Already in `.gitignore`. |
@@ -25,23 +34,17 @@ python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4
 ### Uploading
 
 ```bash
-# Upload one lesson (default unlisted; auto-adds to "Algebra I" playlist)
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-1-variables/
+# Read-only queue status
+python3 tools/youtube-upload/yt_queue.py status
 
-# Make it public from the start
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-1-variables/ --privacy public
+# Show what human-approved lessons would upload
+python3 tools/youtube-upload/yt_queue.py upload --gate-ready --dry-run
 
-# Override the playlist (default = script.json's `course` field)
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/foo/ --playlist "Algebra I — Sample Lessons"
-
-# Don't add to any playlist
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/foo/ --no-playlist
-
-# Upload all 3 sample lessons (each goes into its course's playlist)
-for d in teaching-videos/algebra-i-module-{1-variables,7-functions,14-quadratics}/; do
-  python3 tools/youtube-upload/upload_lesson.py "$d"
-done
+# Upload at most one approved lesson
+python3 tools/youtube-upload/yt_queue.py upload --gate-ready --max 1 --privacy unlisted
 ```
+
+Do not use `upload_lesson.py --force-without-approval` except for an explicit emergency rollback/recovery decision by Alan / Central Umi.
 
 ### Playlist management
 
