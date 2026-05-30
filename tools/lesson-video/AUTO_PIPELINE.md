@@ -1,5 +1,10 @@
 # GIIS Lesson Auto-Pipeline (SOP for Cowork Scheduled Task)
 
+> 2026-05-30 status: AP lesson generation is deferred until GIIS has explicit
+> approval to make AP-facing claims. For current work, use
+> `FOUNDATION_VIDEO_PLAYBOOK.md` and a Umi-approved handoff under
+> `umi/handoffs/`. Do not run the old AP-oriented batch flow.
+
 > **You are the Cowork-scheduled Claude session triggered on a daily / weekly
 > cadence to generate new lesson content from College Board references.**
 >

@@ -1,0 +1,20 @@
+{
+  "reviewer": "Umi peer math reviewer",
+  "date": "2026-05-30",
+  "verdict": "pass",
+  "scope": "Algebra I foundation lesson content correctness",
+  "checked_against": [
+    "server/prisma/courses/math/algebra-i.json module 9",
+    "rendered contact-sheet.jpg",
+    "script.json"
+  ],
+  "findings": [
+    "Slope from graph and two-point slope are mathematically correct.",
+    "The lesson explicitly distinguishes positive, negative, zero, and undefined slope.",
+    "Rate of change is correctly framed as slope with units.",
+    "Pause answer slides show worked steps after the prompt slides."
+  ],
+  "release_notes": [
+    "Foundation math only; no AP or school-authorization claims."
+  ]
+}

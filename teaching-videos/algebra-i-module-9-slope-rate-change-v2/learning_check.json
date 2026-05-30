@@ -1,0 +1,36 @@
+{
+  "course": "Algebra I",
+  "module": "Module 9: Slope & Rate of Change",
+  "checks": [
+    {
+      "skill": "compute slope from two points",
+      "question": "Find the slope of the line through (2, 3) and (5, 12).",
+      "answer": "m = (12 − 3) / (5 − 2) = 9 / 3 = 3",
+      "misconception_tested": "reversed subtraction or mixed coordinates flipping the sign"
+    },
+    {
+      "skill": "read slope from a graph",
+      "question": "A line on a grid passes cleanly through (1, 1) and (5, 4). What is its slope?",
+      "answer": "rise = 3, run = 4, slope = 3/4",
+      "misconception_tested": "guessing slope visually instead of counting rise over run"
+    },
+    {
+      "skill": "distinguish zero slope from undefined slope",
+      "question": "A horizontal line and a vertical line — which has slope zero and which has undefined slope, and why?",
+      "answer": "Horizontal line has zero slope (rise = 0, so 0/run = 0). Vertical line has undefined slope (run = 0, division by zero is undefined).",
+      "misconception_tested": "treating zero slope and undefined slope as the same thing"
+    },
+    {
+      "skill": "interpret slope as rate of change",
+      "question": "A water tank starts at 50 L and after 6 hours has 32 L. What is the rate of change in L/hr, and what does the sign mean?",
+      "answer": "(32 − 50) / (6 − 0) = −18 / 6 = −3 L/hr. Negative means the tank is losing water.",
+      "misconception_tested": "treating rate of change as a separate topic from slope, or ignoring the negative sign"
+    },
+    {
+      "skill": "predict slope sign from a line direction",
+      "question": "Reading left to right, a line goes downhill. Is its slope positive, negative, zero, or undefined?",
+      "answer": "Negative — downhill from left to right means rise is negative while run is positive.",
+      "misconception_tested": "ignoring the direction and reporting only the steepness"
+    }
+  ]
+}

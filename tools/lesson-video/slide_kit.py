@@ -132,13 +132,38 @@ def resolve_theme(course: str) -> dict:
                 return theme
     return DEFAULT_THEME
 
+def _font_path(*candidates: str) -> str:
+    for candidate in candidates:
+        if Path(candidate).exists():
+            return candidate
+    return candidates[0]
+
+
 FONTS = {
-    "sans":      "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-    "sans_bold": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-    "serif":     "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
-    "serif_ital":"/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf",
-    "serif_bold":"/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
-    "mono":      "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf",
+    "sans": _font_path(
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/System/Library/Fonts/Supplemental/Arial.ttf",
+    ),
+    "sans_bold": _font_path(
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+    ),
+    "serif": _font_path(
+        "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
+        "/System/Library/Fonts/Supplemental/Georgia.ttf",
+    ),
+    "serif_ital": _font_path(
+        "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf",
+        "/System/Library/Fonts/Supplemental/Georgia Italic.ttf",
+    ),
+    "serif_bold": _font_path(
+        "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
+        "/System/Library/Fonts/Supplemental/Georgia Bold.ttf",
+    ),
+    "mono": _font_path(
+        "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf",
+        "/System/Library/Fonts/Supplemental/Courier New Bold.ttf",
+    ),
 }
 
 def font(name: str, size: int) -> ImageFont.FreeTypeFont:

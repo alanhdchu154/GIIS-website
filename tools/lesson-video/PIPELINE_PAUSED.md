@@ -19,3 +19,14 @@ Paused surfaces:
 
 Do not resume generation, build, upload, or auto-push for lesson videos until
 Alan explicitly re-enables the pipeline after a quality reset plan.
+
+## Foundation Exception
+
+As of 2026-05-30, AP work remains deferred. A single non-AP foundation lesson
+may be produced manually only when there is a Umi-approved handoff under
+`umi/handoffs/` and the work follows
+`tools/lesson-video/FOUNDATION_VIDEO_PLAYBOOK.md`.
+
+This exception allows a bounded draft/render/review cycle. It does not allow
+scheduled generation, scheduled build, scheduled upload, playlist edits, or
+`--force-without-approval`.

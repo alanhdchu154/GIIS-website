@@ -1,13 +1,18 @@
 # Lesson Video Quality Reset Plan
 
 Date: 2026-05-26
-Status: Pipeline remains paused
+Status: Pipeline remains paused; AP deferred; non-AP foundation pilots allowed only by Umi handoff
 
 ## Decision
 
 Do not restart lesson generation, local builds, YouTube upload, or auto-push yet.
 
 The pipeline was paused because quality gates found AP Computer Science A and AP Psychology videos without the required reviewer cascade, including videos already visible to families. Restarting before review would increase cost and trust risk.
+
+On 2026-05-30 Alan confirmed AP should not be the current focus because GIIS
+does not yet have Common App / AP-facing approval. The restart path is now:
+keep AP paused, use foundation courses for carefully gated V2 pilots, and
+return to AP only after approval and reference-packet review.
 
 ## Restart Gates
 
