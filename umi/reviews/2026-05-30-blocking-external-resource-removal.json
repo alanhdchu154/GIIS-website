@@ -1,0 +1,1184 @@
+{
+  "generatedAt": "2026-05-30T21:20:59.805Z",
+  "summary": {
+    "actions": 102,
+    "byHost": [
+      {
+        "host": "commonlit.org",
+        "count": 63
+      },
+      {
+        "host": "hbr.org",
+        "count": 8
+      },
+      {
+        "host": "noredink.com",
+        "count": 7
+      },
+      {
+        "host": "practiceit.cs.washington.edu",
+        "count": 6
+      },
+      {
+        "host": "apclassroom.collegeboard.org",
+        "count": 6
+      },
+      {
+        "host": "grammarly.com",
+        "count": 3
+      },
+      {
+        "host": "jstor.org",
+        "count": 3
+      },
+      {
+        "host": "docs.google.com",
+        "count": 1
+      },
+      {
+        "host": "slides.google.com",
+        "count": 1
+      },
+      {
+        "host": "drive.google.com",
+        "count": 1
+      },
+      {
+        "host": "canva.com",
+        "count": 1
+      },
+      {
+        "host": "criterion.com",
+        "count": 1
+      },
+      {
+        "host": "medium.com",
+        "count": 1
+      }
+    ]
+  },
+  "actions": [
+    {
+      "file": "server/prisma/courses/electives/ap-computer-science-a.json",
+      "course": "ap-computer-science-a",
+      "moduleOrder": 1,
+      "moduleTitle": "Primitive Types & Variables",
+      "field": "practiceUrl",
+      "host": "practiceit.cs.washington.edu",
+      "oldUrl": "https://practiceit.cs.washington.edu/",
+      "oldNote": "Practice-It — UW Java Self-Check (search 'BJP4 Chapter 2')",
+      "newNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/ap-computer-science-a.json",
+      "course": "ap-computer-science-a",
+      "moduleOrder": 6,
+      "moduleTitle": "Writing Classes & Methods",
+      "field": "practiceUrl",
+      "host": "practiceit.cs.washington.edu",
+      "oldUrl": "https://practiceit.cs.washington.edu/",
+      "oldNote": "Practice-It — BJP4 Chapter 3 Methods",
+      "newNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/ap-computer-science-a.json",
+      "course": "ap-computer-science-a",
+      "moduleOrder": 7,
+      "moduleTitle": "Constructors, Encapsulation & this",
+      "field": "practiceUrl",
+      "host": "practiceit.cs.washington.edu",
+      "oldUrl": "https://practiceit.cs.washington.edu/",
+      "oldNote": "Practice-It — BJP4 Chapter 8 Classes",
+      "newNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/ap-computer-science-a.json",
+      "course": "ap-computer-science-a",
+      "moduleOrder": 10,
+      "moduleTitle": "ArrayList",
+      "field": "practiceUrl",
+      "host": "practiceit.cs.washington.edu",
+      "oldUrl": "https://practiceit.cs.washington.edu/",
+      "oldNote": "Practice-It — BJP4 Chapter 10 ArrayLists",
+      "newNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/ap-computer-science-a.json",
+      "course": "ap-computer-science-a",
+      "moduleOrder": 12,
+      "moduleTitle": "Inheritance & Polymorphism",
+      "field": "practiceUrl",
+      "host": "practiceit.cs.washington.edu",
+      "oldUrl": "https://practiceit.cs.washington.edu/",
+      "oldNote": "Practice-It — BJP4 Chapter 9 Inheritance",
+      "newNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/ap-computer-science-a.json",
+      "course": "ap-computer-science-a",
+      "moduleOrder": 14,
+      "moduleTitle": "Sorting & Searching Algorithms",
+      "field": "practiceUrl",
+      "host": "practiceit.cs.washington.edu",
+      "oldUrl": "https://practiceit.cs.washington.edu/",
+      "oldNote": "Practice-It — BJP4 Chapter 13 Searching and Sorting",
+      "newNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "course": "business-strategy-writing",
+      "moduleOrder": 1,
+      "moduleTitle": "What Is Strategy?",
+      "field": "readingUrl",
+      "host": "hbr.org",
+      "oldUrl": "https://hbr.org/1996/11/what-is-strategy",
+      "oldNote": "Harvard Business Review — Michael Porter: What Is Strategy? (1996)",
+      "newNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "course": "business-strategy-writing",
+      "moduleOrder": 2,
+      "moduleTitle": "External Analysis",
+      "field": "readingUrl",
+      "host": "hbr.org",
+      "oldUrl": "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy",
+      "oldNote": "Harvard Business Review — Porter: The Five Competitive Forces That Shape Strategy (2008)",
+      "newNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "course": "business-strategy-writing",
+      "moduleOrder": 3,
+      "moduleTitle": "Internal Analysis",
+      "field": "readingUrl",
+      "host": "hbr.org",
+      "oldUrl": "https://hbr.org/1990/05/the-core-competence-of-the-corporation",
+      "oldNote": "Harvard Business Review — Prahalad & Hamel: The Core Competence of the Corporation (1990)",
+      "newNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "course": "business-strategy-writing",
+      "moduleOrder": 4,
+      "moduleTitle": "Competitive Advantage",
+      "field": "readingUrl",
+      "host": "hbr.org",
+      "oldUrl": "https://hbr.org/2004/10/blue-ocean-strategy",
+      "oldNote": "Harvard Business Review — Kim & Mauborgne: Blue Ocean Strategy (2004)",
+      "newNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "course": "business-strategy-writing",
+      "moduleOrder": 5,
+      "moduleTitle": "Corporate Strategy",
+      "field": "readingUrl",
+      "host": "hbr.org",
+      "oldUrl": "https://hbr.org/1987/05/the-state-of-strategy",
+      "oldNote": "Harvard Business Review — Corporate Strategy & Portfolio Analysis",
+      "newNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "course": "business-strategy-writing",
+      "moduleOrder": 6,
+      "moduleTitle": "Strategy Execution",
+      "field": "readingUrl",
+      "host": "hbr.org",
+      "oldUrl": "https://hbr.org/2005/10/the-office-of-strategy-management",
+      "oldNote": "Harvard Business Review — Kaplan & Norton: The Office of Strategy Management (2005)",
+      "newNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "course": "business-strategy-writing",
+      "moduleOrder": 7,
+      "moduleTitle": "Writing the Strategic Plan",
+      "field": "readingUrl",
+      "host": "hbr.org",
+      "oldUrl": "https://hbr.org/2000/07/having-trouble-with-your-strategy-then-map-it",
+      "oldNote": "Harvard Business Review — Kaplan & Norton: Having Trouble with Your Strategy? Then Map It (2000)",
+      "newNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "course": "business-strategy-writing",
+      "moduleOrder": 8,
+      "moduleTitle": "The Business Case",
+      "field": "readingUrl",
+      "host": "hbr.org",
+      "oldUrl": "https://hbr.org/2019/04/what-makes-a-good-business-case",
+      "oldNote": "Harvard Business Review — What Makes a Good Business Case? (2019)",
+      "newNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-technology-digital-literacy.json",
+      "course": "business-technology-digital-literacy",
+      "moduleOrder": 3,
+      "moduleTitle": "Word Processing & Document Design",
+      "field": "practiceUrl",
+      "host": "docs.google.com",
+      "oldUrl": "https://docs.google.com",
+      "oldNote": "Google Docs — Create a document using the provided template and practice formatting styles",
+      "newNote": "Removed after 2026-05-30 access audit: docs.google.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-technology-digital-literacy.json",
+      "course": "business-technology-digital-literacy",
+      "moduleOrder": 6,
+      "moduleTitle": "Presentations & Slide Design",
+      "field": "practiceUrl",
+      "host": "slides.google.com",
+      "oldUrl": "https://slides.google.com",
+      "oldNote": "Google Slides — Design a 5-slide pitch deck using a custom theme",
+      "newNote": "Removed after 2026-05-30 access audit: slides.google.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/electives/business-technology-digital-literacy.json",
+      "course": "business-technology-digital-literacy",
+      "moduleOrder": 7,
+      "moduleTitle": "Cloud Computing & Collaboration",
+      "field": "practiceUrl",
+      "host": "drive.google.com",
+      "oldUrl": "https://drive.google.com",
+      "oldNote": "Google Drive — Organize a shared folder, set permissions, and use version history",
+      "newNote": "Removed after 2026-05-30 access audit: drive.google.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "course": "english-i-writing-focus",
+      "moduleOrder": 1,
+      "moduleTitle": "Paragraph Writing",
+      "field": "practiceUrl",
+      "host": "noredink.com",
+      "oldUrl": "https://www.noredink.com",
+      "oldNote": "Complete the paragraph writing exercises on NoRedInk.",
+      "newNote": "Removed after 2026-05-30 access audit: noredink.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "course": "english-i-writing-focus",
+      "moduleOrder": 2,
+      "moduleTitle": "Narrative Essays",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org",
+      "oldNote": "Read a sample narrative and answer guided questions.",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "course": "english-i-writing-focus",
+      "moduleOrder": 4,
+      "moduleTitle": "Expository Essays",
+      "field": "practiceUrl",
+      "host": "noredink.com",
+      "oldUrl": "https://www.noredink.com",
+      "oldNote": "Complete the expository writing practice set.",
+      "newNote": "Removed after 2026-05-30 access audit: noredink.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "course": "english-i-writing-focus",
+      "moduleOrder": 8,
+      "moduleTitle": "Revision Strategies",
+      "field": "practiceUrl",
+      "host": "grammarly.com",
+      "oldUrl": "https://www.grammarly.com",
+      "oldNote": "Use Grammarly to revise and improve a sample paragraph.",
+      "newNote": "Removed after 2026-05-30 access audit: grammarly.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "course": "english-i-writing-focus",
+      "moduleOrder": 9,
+      "moduleTitle": "Grammar Foundations",
+      "field": "practiceUrl",
+      "host": "noredink.com",
+      "oldUrl": "https://www.noredink.com",
+      "oldNote": "Complete the grammar diagnostic and assigned practice exercises.",
+      "newNote": "Removed after 2026-05-30 access audit: noredink.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "course": "english-i-writing-focus",
+      "moduleOrder": 10,
+      "moduleTitle": "Sentence Variety",
+      "field": "practiceUrl",
+      "host": "noredink.com",
+      "oldUrl": "https://www.noredink.com",
+      "oldNote": "Complete the sentence combining exercises.",
+      "newNote": "Removed after 2026-05-30 access audit: noredink.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "course": "english-i-writing-focus",
+      "moduleOrder": 12,
+      "moduleTitle": "Reading Comprehension",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org",
+      "oldNote": "Read two assigned passages and answer the comprehension questions.",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "course": "english-i-writing-focus",
+      "moduleOrder": 13,
+      "moduleTitle": "Literary Analysis Basics",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org",
+      "oldNote": "Complete the literary analysis guided practice on CommonLit.",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 1,
+      "moduleTitle": "Reading Comprehension Strategies",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-tell-tale-heart",
+      "oldNote": "CommonLit — 'The Tell-Tale Heart' by Edgar Allan Poe (guided reading with questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 5,
+      "moduleTitle": "Narrative Writing",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-road-not-taken",
+      "oldNote": "CommonLit — 'The Road Not Taken' by Robert Frost (model for narrative perspective)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 6,
+      "moduleTitle": "Descriptive Writing",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-scarlet-ibis",
+      "oldNote": "CommonLit — 'The Scarlet Ibis' by James Hurst (model of descriptive language)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 7,
+      "moduleTitle": "Short Story Analysis",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-lottery",
+      "oldNote": "CommonLit — 'The Lottery' by Shirley Jackson (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 7,
+      "moduleTitle": "Short Story Analysis",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-gift-of-the-magi",
+      "oldNote": "CommonLit — 'The Gift of the Magi' by O. Henry (annotated with discussion questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 8,
+      "moduleTitle": "Poetry: Forms & Interpretation",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-road-not-taken",
+      "oldNote": "CommonLit — 'The Road Not Taken' by Robert Frost and 'O Captain! My Captain!' by Walt Whitman",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 9,
+      "moduleTitle": "Drama & Theater Texts",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/a-raisin-in-the-sun-act-i",
+      "oldNote": "CommonLit — Excerpt from 'A Raisin in the Sun' by Lorraine Hansberry (Act I)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 9,
+      "moduleTitle": "Drama & Theater Texts",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-miracle-worker",
+      "oldNote": "CommonLit — Excerpt from 'The Miracle Worker' by William Gibson",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "course": "english-i",
+      "moduleOrder": 10,
+      "moduleTitle": "Novel Study: Character & Theme",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/flowers-for-algernon",
+      "oldNote": "CommonLit — 'Flowers for Algernon' by Daniel Keyes (short story version, full text)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 1,
+      "moduleTitle": "Close Reading & Annotation",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-tell-tale-heart",
+      "oldNote": "CommonLit — 'The Tell-Tale Heart' by Edgar Allan Poe (annotate for tone, diction, and imagery)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 2,
+      "moduleTitle": "The Short Story: Craft & Technique",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-most-dangerous-game",
+      "oldNote": "CommonLit — 'The Most Dangerous Game' by Richard Connell (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 2,
+      "moduleTitle": "The Short Story: Craft & Technique",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-gift-of-the-magi",
+      "oldNote": "CommonLit — 'The Gift of the Magi' by O. Henry (model for irony and epiphany)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 3,
+      "moduleTitle": "World Poetry: Voice & Culture",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/mother-to-son",
+      "oldNote": "CommonLit — 'Mother to Son' by Langston Hughes and related world poetry selections",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 4,
+      "moduleTitle": "The Novel: Setting & Atmosphere",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-yellow-wallpaper",
+      "oldNote": "CommonLit — 'The Yellow Wallpaper' by Charlotte Perkins Gilman (model for symbolic setting)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 5,
+      "moduleTitle": "Character Psychology",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/flowers-for-algernon",
+      "oldNote": "CommonLit — 'Flowers for Algernon' by Daniel Keyes (model for complex character psychology)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 6,
+      "moduleTitle": "Theme & Universal Questions",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-lottery",
+      "oldNote": "CommonLit — 'The Lottery' by Shirley Jackson (rich text for examining multiple themes)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 8,
+      "moduleTitle": "Greek Mythology & Classical Allusion",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-myth-of-prometheus",
+      "oldNote": "CommonLit — The Myth of Prometheus (full text with guided questions on theme and symbolism)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 9,
+      "moduleTitle": "Drama: Greek Tragedy",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/oedipus-rex",
+      "oldNote": "CommonLit — Excerpts from 'Oedipus Rex' by Sophocles (guided reading with comprehension and analysis questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 10,
+      "moduleTitle": "The Bildungsroman",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-outsiders",
+      "oldNote": "CommonLit — Excerpt from 'The Outsiders' by S.E. Hinton (model for coming-of-age identity and belonging)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 11,
+      "moduleTitle": "Postcolonial Literature",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/things-fall-apart",
+      "oldNote": "CommonLit — Excerpt from 'Things Fall Apart' by Chinua Achebe (with guided analysis questions on culture and colonialism)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "course": "english-ii-literature",
+      "moduleOrder": 13,
+      "moduleTitle": "Satire & Social Commentary",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/a-modest-proposal",
+      "oldNote": "CommonLit — 'A Modest Proposal' by Jonathan Swift (foundational satirical text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 1,
+      "moduleTitle": "Literary Analysis Fundamentals",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-metamorphosis",
+      "oldNote": "CommonLit — 'The Metamorphosis' by Franz Kafka (excerpts with guided analysis questions on symbolism and theme)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 3,
+      "moduleTitle": "Tone, Mood & Style",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-raven",
+      "oldNote": "CommonLit — 'The Raven' by Edgar Allan Poe (analyzing diction and tone)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 4,
+      "moduleTitle": "World Literature: Short Fiction",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-necklace",
+      "oldNote": "CommonLit — 'The Necklace' by Guy de Maupassant (French); 'The Fun They Had' by Isaac Asimov; paired world fiction readings",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 4,
+      "moduleTitle": "World Literature: Short Fiction",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-fun-they-had",
+      "oldNote": "CommonLit — 'The Fun They Had' by Isaac Asimov (guided reading with annotation tools)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 5,
+      "moduleTitle": "World Literature: Poetry",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/still-i-rise",
+      "oldNote": "CommonLit — 'Still I Rise' by Maya Angelou and world poetry selections (speaker, tone, cultural context)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 6,
+      "moduleTitle": "The Novel: Conflict & Character",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/of-mice-and-men-chapter-1",
+      "oldNote": "CommonLit — Excerpt from 'Of Mice and Men' by John Steinbeck (conflict, round vs. flat characters)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 6,
+      "moduleTitle": "The Novel: Conflict & Character",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-most-dangerous-game",
+      "oldNote": "CommonLit — 'The Most Dangerous Game' by Richard Connell (protagonist/antagonist conflict analysis)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 9,
+      "moduleTitle": "Drama: Shakespeare Introduction",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/romeo-and-juliet-act-ii-scene-ii",
+      "oldNote": "CommonLit — Shakespeare's 'Romeo and Juliet' Act II, Scene ii (balcony scene with annotation tools)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 9,
+      "moduleTitle": "Drama: Shakespeare Introduction",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/sonnet-18",
+      "oldNote": "CommonLit — Shakespeare's Sonnet 18 ('Shall I compare thee to a summer's day?') with guided questions",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "course": "english-ii",
+      "moduleOrder": 10,
+      "moduleTitle": "Informational Texts & Nonfiction",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/i-have-a-dream",
+      "oldNote": "CommonLit — 'I Have a Dream' by Martin Luther King Jr. (analyzing rhetorical appeals and argument structure)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 2,
+      "moduleTitle": "American Poetry: From Whitman to the Beats",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/o-captain-my-captain",
+      "oldNote": "CommonLit — 'O Captain! My Captain!' by Walt Whitman (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 3,
+      "moduleTitle": "The American Novel: Identity & Society",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-great-gatsby-chapter-1",
+      "oldNote": "CommonLit — The Great Gatsby, Chapter 1 by F. Scott Fitzgerald (with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 4,
+      "moduleTitle": "Satire in American Literature",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/harrison-bergeron",
+      "oldNote": "CommonLit — 'Harrison Bergeron' by Kurt Vonnegut (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 5,
+      "moduleTitle": "The Short Story Tradition",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/a-good-man-is-hard-to-find",
+      "oldNote": "CommonLit — 'A Good Man Is Hard to Find' by Flannery O'Connor (with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 5,
+      "moduleTitle": "The Short Story Tradition",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-gift-of-the-magi",
+      "oldNote": "CommonLit — 'The Gift of the Magi' by O. Henry (annotated with discussion questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 6,
+      "moduleTitle": "Gender & Literature",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-yellow-wallpaper",
+      "oldNote": "CommonLit — 'The Yellow Wallpaper' by Charlotte Perkins Gilman (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 7,
+      "moduleTitle": "Race & Literature in America",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/i-too",
+      "oldNote": "CommonLit — 'I, Too' by Langston Hughes and selected Harlem Renaissance poems (with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 8,
+      "moduleTitle": "Dystopian Fiction",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/harrison-bergeron",
+      "oldNote": "CommonLit — 'Harrison Bergeron' by Kurt Vonnegut (revisit for dystopian conventions analysis)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 9,
+      "moduleTitle": "Magical Realism",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/a-very-old-man-with-enormous-wings",
+      "oldNote": "CommonLit — 'A Very Old Man with Enormous Wings' by Gabriel García Márquez (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 10,
+      "moduleTitle": "Memoir & Autobiographical Writing",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/i-know-why-the-caged-bird-sings",
+      "oldNote": "CommonLit — Excerpt from I Know Why the Caged Bird Sings by Maya Angelou (with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 11,
+      "moduleTitle": "Drama: Tragedy & Comedy",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/death-of-a-salesman-act-1",
+      "oldNote": "CommonLit — Excerpt from Death of a Salesman by Arthur Miller (Act 1, with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 12,
+      "moduleTitle": "Literary Journalism & Creative Nonfiction",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/slouching-towards-bethlehem",
+      "oldNote": "CommonLit — Excerpt from 'Slouching Towards Bethlehem' by Joan Didion (with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "course": "english-iii-literature",
+      "moduleOrder": 13,
+      "moduleTitle": "The Essay as Literature",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/notes-of-a-native-son",
+      "oldNote": "CommonLit — Excerpt from 'Notes of a Native Son' by James Baldwin (with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 1,
+      "moduleTitle": "American Literature: Colonial to Romantic",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/self-reliance",
+      "oldNote": "CommonLit — Excerpt from 'Self-Reliance' by Ralph Waldo Emerson (with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 1,
+      "moduleTitle": "American Literature: Colonial to Romantic",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/walden",
+      "oldNote": "CommonLit — Excerpt from 'Walden' by Henry David Thoreau (annotated with discussion questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 2,
+      "moduleTitle": "American Realism & Naturalism",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-story-of-an-hour",
+      "oldNote": "CommonLit — 'The Story of an Hour' by Kate Chopin (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 2,
+      "moduleTitle": "American Realism & Naturalism",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-open-boat",
+      "oldNote": "CommonLit — Excerpt from 'The Open Boat' by Stephen Crane (naturalism and determinism)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 3,
+      "moduleTitle": "The American Dream in Literature",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-great-gatsby-chapter-1",
+      "oldNote": "CommonLit — Excerpt from 'The Great Gatsby' Chapter 1 by F. Scott Fitzgerald",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 3,
+      "moduleTitle": "The American Dream in Literature",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/death-of-a-salesman-act-i",
+      "oldNote": "CommonLit — Excerpt from 'Death of a Salesman' Act I by Arthur Miller",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 5,
+      "moduleTitle": "Analyzing Non-Fiction & Speeches",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/i-have-a-dream",
+      "oldNote": "CommonLit — 'I Have a Dream' by Dr. Martin Luther King Jr. (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 8,
+      "moduleTitle": "The Harlem Renaissance",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-weary-blues",
+      "oldNote": "CommonLit — 'The Weary Blues' by Langston Hughes (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 8,
+      "moduleTitle": "The Harlem Renaissance",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/how-it-feels-to-be-colored-me",
+      "oldNote": "CommonLit — 'How It Feels to Be Colored Me' by Zora Neale Hurston",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 9,
+      "moduleTitle": "Modernist Literature",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/hills-like-white-elephants",
+      "oldNote": "CommonLit — 'Hills Like White Elephants' by Ernest Hemingway (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 12,
+      "moduleTitle": "Drama: American Theater",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/a-raisin-in-the-sun-act-i",
+      "oldNote": "CommonLit — 'A Raisin in the Sun' Act I by Lorraine Hansberry (full act with questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 13,
+      "moduleTitle": "Contemporary American Voices",
+      "field": "readingUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/everyday-use",
+      "oldNote": "CommonLit — 'Everyday Use' by Alice Walker (full text with guided questions)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 13,
+      "moduleTitle": "Contemporary American Voices",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org/en/texts/the-border-a-double-sonnet",
+      "oldNote": "CommonLit — 'The Border: A Double Sonnet' by Alberto Rios (immigration and identity)",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-advanced-composition.json",
+      "course": "english-iv-advanced-composition",
+      "moduleOrder": 2,
+      "moduleTitle": "AP Language: Rhetorical Analysis",
+      "field": "videoUrl",
+      "host": "apclassroom.collegeboard.org",
+      "oldUrl": "https://apclassroom.collegeboard.org/8/home",
+      "oldNote": "AP Classroom College Board — AP Language and Composition: Rhetorical Analysis Unit",
+      "newNote": "Removed after 2026-05-30 access audit: apclassroom.collegeboard.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-advanced-composition.json",
+      "course": "english-iv-advanced-composition",
+      "moduleOrder": 3,
+      "moduleTitle": "AP Language: Argumentation",
+      "field": "videoUrl",
+      "host": "apclassroom.collegeboard.org",
+      "oldUrl": "https://apclassroom.collegeboard.org/8/home",
+      "oldNote": "AP Classroom College Board — AP Language and Composition: Argumentation Unit",
+      "newNote": "Removed after 2026-05-30 access audit: apclassroom.collegeboard.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-advanced-composition.json",
+      "course": "english-iv-advanced-composition",
+      "moduleOrder": 4,
+      "moduleTitle": "AP Language: Synthesis Essay",
+      "field": "videoUrl",
+      "host": "apclassroom.collegeboard.org",
+      "oldUrl": "https://apclassroom.collegeboard.org/8/home",
+      "oldNote": "AP Classroom College Board — AP Language and Composition: Synthesis Essay Unit",
+      "newNote": "Removed after 2026-05-30 access audit: apclassroom.collegeboard.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-advanced-composition.json",
+      "course": "english-iv-advanced-composition",
+      "moduleOrder": 9,
+      "moduleTitle": "The Personal Statement (College App)",
+      "field": "practiceUrl",
+      "host": "apclassroom.collegeboard.org",
+      "oldUrl": "https://apclassroom.collegeboard.org/8/home",
+      "oldNote": "AP Classroom — AP Language: Narrative Techniques for Nonfiction Writing",
+      "newNote": "Removed after 2026-05-30 access audit: apclassroom.collegeboard.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 2,
+      "moduleTitle": "Close Reading",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org",
+      "oldNote": "Complete a close reading exercise on CommonLit.",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 3,
+      "moduleTitle": "Thesis Development",
+      "field": "practiceUrl",
+      "host": "noredink.com",
+      "oldUrl": "https://www.noredink.com",
+      "oldNote": "Practice writing and revising thesis statements.",
+      "newNote": "Removed after 2026-05-30 access audit: noredink.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 4,
+      "moduleTitle": "Literary Analysis",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org",
+      "oldNote": "Complete the literary analysis practice on CommonLit.",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 5,
+      "moduleTitle": "Textual Evidence",
+      "field": "practiceUrl",
+      "host": "noredink.com",
+      "oldUrl": "https://www.noredink.com",
+      "oldNote": "Complete the evidence integration exercises.",
+      "newNote": "Removed after 2026-05-30 access audit: noredink.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 9,
+      "moduleTitle": "Research Methods",
+      "field": "practiceUrl",
+      "host": "jstor.org",
+      "oldUrl": "https://www.jstor.org",
+      "oldNote": "Search JSTOR for peer-reviewed sources on your research topic.",
+      "newNote": "Removed after 2026-05-30 access audit: jstor.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 10,
+      "moduleTitle": "Writing Across Genres",
+      "field": "practiceUrl",
+      "host": "commonlit.org",
+      "oldUrl": "https://www.commonlit.org",
+      "oldNote": "Read texts in multiple genres and compare their conventions.",
+      "newNote": "Removed after 2026-05-30 access audit: commonlit.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 11,
+      "moduleTitle": "Style & Voice",
+      "field": "practiceUrl",
+      "host": "grammarly.com",
+      "oldUrl": "https://www.grammarly.com",
+      "oldNote": "Use Grammarly to analyze and improve the style of your writing.",
+      "newNote": "Removed after 2026-05-30 access audit: grammarly.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 12,
+      "moduleTitle": "Revision & Editing",
+      "field": "practiceUrl",
+      "host": "grammarly.com",
+      "oldUrl": "https://www.grammarly.com",
+      "oldNote": "Use Grammarly for a systematic grammar and style check.",
+      "newNote": "Removed after 2026-05-30 access audit: grammarly.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "course": "english-iv-analytical-writing",
+      "moduleOrder": 13,
+      "moduleTitle": "Synthesis Writing",
+      "field": "practiceUrl",
+      "host": "jstor.org",
+      "oldUrl": "https://www.jstor.org",
+      "oldNote": "Gather three sources on a topic and practice synthesizing their arguments.",
+      "newNote": "Removed after 2026-05-30 access audit: jstor.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-media-analytical-writing.json",
+      "course": "english-iv-media-analytical-writing",
+      "moduleOrder": 6,
+      "moduleTitle": "Analytical Essay Writing",
+      "field": "practiceUrl",
+      "host": "noredink.com",
+      "oldUrl": "https://www.noredink.com",
+      "oldNote": "Complete analytical writing exercises on NoRedInk.",
+      "newNote": "Removed after 2026-05-30 access audit: noredink.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-media-analytical-writing.json",
+      "course": "english-iv-media-analytical-writing",
+      "moduleOrder": 7,
+      "moduleTitle": "Research in the Digital Age",
+      "field": "practiceUrl",
+      "host": "jstor.org",
+      "oldUrl": "https://www.jstor.org",
+      "oldNote": "Practice searching academic databases for credible sources.",
+      "newNote": "Removed after 2026-05-30 access audit: jstor.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-media-analytical-writing.json",
+      "course": "english-iv-media-analytical-writing",
+      "moduleOrder": 10,
+      "moduleTitle": "Multimedia Presentation",
+      "field": "practiceUrl",
+      "host": "canva.com",
+      "oldUrl": "https://www.canva.com",
+      "oldNote": "Create a sample slide deck on Canva using design principles.",
+      "newNote": "Removed after 2026-05-30 access audit: canva.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-media-analytical-writing.json",
+      "course": "english-iv-media-analytical-writing",
+      "moduleOrder": 11,
+      "moduleTitle": "Film Analysis",
+      "field": "practiceUrl",
+      "host": "criterion.com",
+      "oldUrl": "https://www.criterion.com",
+      "oldNote": "Read a film essay on the Criterion Collection website.",
+      "newNote": "Removed after 2026-05-30 access audit: criterion.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-media-analytical-writing.json",
+      "course": "english-iv-media-analytical-writing",
+      "moduleOrder": 13,
+      "moduleTitle": "Publishing & Audience",
+      "field": "practiceUrl",
+      "host": "medium.com",
+      "oldUrl": "https://www.medium.com",
+      "oldNote": "Read examples of published essays on Medium to study audience-oriented writing.",
+      "newNote": "Removed after 2026-05-30 access audit: medium.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/math/ap-calculus-ab.json",
+      "course": "ap-calculus-ab",
+      "moduleOrder": 1,
+      "moduleTitle": "Limits & Continuity",
+      "field": "practiceUrl",
+      "host": "apclassroom.collegeboard.org",
+      "oldUrl": "https://apclassroom.collegeboard.org/8/home",
+      "oldNote": "AP Classroom — Unit 1 Personal Progress Check (FRQ + MCQ)",
+      "newNote": "Removed after 2026-05-30 access audit: apclassroom.collegeboard.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    },
+    {
+      "file": "server/prisma/courses/math/ap-calculus-ab.json",
+      "course": "ap-calculus-ab",
+      "moduleOrder": 14,
+      "moduleTitle": "Areas, Volumes & Cross-Sections",
+      "field": "practiceUrl",
+      "host": "apclassroom.collegeboard.org",
+      "oldUrl": "https://apclassroom.collegeboard.org/8/home",
+      "oldNote": "AP Classroom — Unit 8 Personal Progress Check (FRQ + MCQ)",
+      "newNote": "Removed after 2026-05-30 access audit: apclassroom.collegeboard.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added."
+    }
+  ]
+}

@@ -19,8 +19,8 @@
       "videoNote": "Bro Code — Java Tutorial for Beginners (variables and operators)",
       "video2Url": "https://www.codingbat.com/java/Warmup-1",
       "video2Note": "CodingBat — Warmup-1 Practice Problems",
-      "practiceUrl": "https://practiceit.cs.washington.edu/",
-      "practiceNote": "Practice-It — UW Java Self-Check (search 'BJP4 Chapter 2')",
+      "practiceUrl": "",
+      "practiceNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
       "assignment": "Write a Java program that converts a temperature from Celsius to Fahrenheit and from Fahrenheit to Celsius. The program should accept a number and a unit ('C' or 'F') from the user and print the conversion. Demonstrate that you understand integer vs. double division by testing 5/2 and 5.0/2 and explaining the difference in a code comment.",
       "estimatedHrs": 3.5
     },
@@ -99,8 +99,8 @@
       "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://practiceit.cs.washington.edu/",
-      "practiceNote": "Practice-It — BJP4 Chapter 3 Methods",
+      "practiceUrl": "",
+      "practiceNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
       "assignment": "Design a Rectangle class with width and height instance variables, a constructor, and methods getArea(), getPerimeter(), isSquare(), and scale(double factor). Write a separate driver class that creates three Rectangles and prints each one's area, perimeter, and whether it is a square.",
       "estimatedHrs": 4
     },
@@ -115,8 +115,8 @@
       "videoNote": "Baeldung — Encapsulation in Java",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://practiceit.cs.washington.edu/",
-      "practiceNote": "Practice-It — BJP4 Chapter 8 Classes",
+      "practiceUrl": "",
+      "practiceNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
       "assignment": "Refactor your Rectangle class from Module 6: make all instance variables private, add a no-arg constructor (default 1×1) and a two-arg constructor, validate inputs (no negative dimensions — throw IllegalArgumentException), and add a setWidth/setHeight pair that re-validates. Write tests that demonstrate the validation works.",
       "estimatedHrs": 3.5
     },
@@ -163,8 +163,8 @@
       "videoNote": "Oracle Javadoc — ArrayList API Reference",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://practiceit.cs.washington.edu/",
-      "practiceNote": "Practice-It — BJP4 Chapter 10 ArrayLists",
+      "practiceUrl": "",
+      "practiceNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
       "assignment": "Write a TodoList class backed by an ArrayList<String>. Methods: add(String task), removeAt(int index), markDone(int index) (which prepends '[X] '), printAll(). Write a driver that adds 5 tasks, marks 2 done, removes 1, and prints the list. Then convert the final list to a String[] and print its length.",
       "estimatedHrs": 3.5
     },
@@ -195,8 +195,8 @@
       "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://practiceit.cs.washington.edu/",
-      "practiceNote": "Practice-It — BJP4 Chapter 9 Inheritance",
+      "practiceUrl": "",
+      "practiceNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
       "assignment": "Build a small class hierarchy: Animal (parent) → Dog and Cat (children). Animal has name, age, and a speak() method that prints 'Some sound'. Dog overrides speak() to print 'Woof'; Cat to print 'Meow'. Write a driver that creates an Animal[] containing a Dog and a Cat, and loops through calling speak() — demonstrate polymorphism in action.",
       "estimatedHrs": 4
     },
@@ -227,8 +227,8 @@
       "videoNote": "Bro Code — Selection, Insertion, and Merge Sort",
       "video2Url": "https://www.youtube.com/watch?v=ZZuD6iUe3Pc",
       "video2Note": "MIT OpenCourseWare 6.006 — Binary Search Trees",
-      "practiceUrl": "https://practiceit.cs.washington.edu/",
-      "practiceNote": "Practice-It — BJP4 Chapter 13 Searching and Sorting",
+      "practiceUrl": "",
+      "practiceNote": "Removed after 2026-05-30 access audit: practiceit.cs.washington.edu may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
       "assignment": "Implement selectionSort, insertionSort, and binarySearch on int[] arrays. Write a driver that builds an array of 20 random ints, sorts it with each algorithm (verify all three give the same sorted result), then runs binarySearch on the sorted output for 5 different target values (3 in the array, 2 not in the array). Print the index returned (or -1).",
       "estimatedHrs": 4.5
     }
