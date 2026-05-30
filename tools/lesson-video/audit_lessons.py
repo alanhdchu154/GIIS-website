@@ -13,6 +13,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import re
@@ -49,6 +50,25 @@ RISKY_CLAIMS = [
     (re.compile(r"\bAP Course Audit\b|\bCollege Board approved\b", re.I), "AP authorization wording needs verification"),
 ]
 
+RISKY_VISUAL_UNICODE = {
+    "δ": "delta charge labels can render poorly in some slide fonts; prefer 'partial +' / 'partial -'",
+    "⁺": "superscript plus can render poorly in some slide fonts; prefer plain '+'.",
+    "⁻": "superscript minus can render poorly in some slide fonts; prefer plain '-'.",
+}
+
+EXPECTED_THEME_PREFIXES = [
+    (("Algebra", "Geometry", "Calculus", "Pre-Calculus", "Trigonometry",
+      "Statistics", "AP Statistics"), "math"),
+    (("Biology", "AP Biology", "Chemistry", "Physics", "Environmental"), "science"),
+    (("English", "Composition", "Academic Writing", "Communication", "Media"), "literature"),
+    (("History", "Government", "Geography", "Economics", "AP Human"), "social_studies"),
+    (("Psychology", "AP Psychology", "Cognitive", "Counseling", "Behavioral",
+      "Human Development"), "psychology"),
+    (("Health", "Athletic", "Sports", "Fitness", "Physical Education"), "pe_health"),
+    (("Computer Science", "AP Computer Science", "Programming", "Software",
+      "Java", "Python Programming", "Web Development"), "computer_science"),
+]
+
 
 def word_count(text: str) -> int:
     return len(re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?", text))
@@ -66,6 +86,47 @@ def display_path(path: Path) -> str:
         return str(path.relative_to(REPO_ROOT))
     except ValueError:
         return str(path)
+
+
+def sha256_file(path: Path) -> str | None:
+    try:
+        h = hashlib.sha256()
+        with path.open("rb") as f:
+            for chunk in iter(lambda: f.read(1024 * 1024), b""):
+                h.update(chunk)
+        return h.hexdigest()
+    except Exception:
+        return None
+
+
+def expected_theme_name(course: str | None) -> str:
+    course = course or ""
+    for prefixes, theme in EXPECTED_THEME_PREFIXES:
+        for prefix in prefixes:
+            if course.lower().startswith(prefix.lower()) or prefix.lower() in course.lower():
+                return theme
+    return "default"
+
+
+def section_category(section_id: str) -> str:
+    sid = section_id.lower()
+    checks = [
+        ("title", ("title",)),
+        ("hook", ("hook",)),
+        ("overview", ("overview", "game_plan", "plan")),
+        ("graph_visual", ("graph", "rise", "run")),
+        ("formula_or_equation", ("formula", "equation", "points", "two_point")),
+        ("trap_or_compare", ("trap", "compare", "wrong", "right")),
+        ("answer_reveal", ("answer", "solution", "silence")),
+        ("pause_prompt", ("pause",)),
+        ("application", ("world", "rate", "application", "case")),
+        ("recap", ("recap",)),
+        ("path", ("path", "next")),
+    ]
+    for category, needles in checks:
+        if any(needle in sid for needle in needles):
+            return category
+    return "content"
 
 
 def png_dimensions(path: Path) -> tuple[int, int] | None:
@@ -95,7 +156,7 @@ def find_lessons(args: argparse.Namespace) -> list[Path]:
     return lessons
 
 
-def collect_reviewer_verdicts(folder: Path) -> dict[str, Any]:
+def collect_reviewer_verdicts(folder: Path, script_sha: str | None = None) -> dict[str, Any]:
     verdicts: list[dict[str, str]] = []
     for path in sorted(folder.glob("_review*.json")):
         data = load_json(path)
@@ -103,12 +164,21 @@ def collect_reviewer_verdicts(folder: Path) -> dict[str, Any]:
             continue
         reviewer = str(data.get("reviewer") or path.stem)
         verdict = str(data.get("verdict") or "unknown").lower()
-        verdicts.append({"file": path.name, "reviewer": reviewer, "verdict": verdict})
+        reviewer_script_sha = data.get("script_sha")
+        verdicts.append({
+            "file": path.name,
+            "reviewer": reviewer,
+            "verdict": verdict,
+            "script_sha": str(reviewer_script_sha) if reviewer_script_sha else "",
+            "script_sha_matches": bool(script_sha and reviewer_script_sha == script_sha),
+        })
     counts = Counter(v["verdict"] for v in verdicts)
+    stale = [v["file"] for v in verdicts if script_sha and not v["script_sha_matches"]]
     return {
         "count": len(verdicts),
         "verdicts": verdicts,
         "counts": dict(counts),
+        "stale_or_unbound": stale,
         "has_phd_level": any("phd" in v["reviewer"].lower() or "peer" in v["reviewer"].lower()
                              for v in verdicts),
         "has_adversarial_student": any("student" in v["reviewer"].lower()
@@ -161,11 +231,13 @@ def inspect_script(folder: Path, script: dict[str, Any]) -> dict[str, Any]:
         text_blob,
         re.I,
     ))
+    visual_categories = sorted({section_category(sid) for sid in ids})
     return {
         "course": script.get("course"),
         "module": script.get("module"),
         "voice": script.get("voice"),
         "voice_rate": script.get("voice_rate"),
+        "script_sha": sha256_file(folder / "script.json"),
         "section_count": len(sections),
         "word_count": total_words,
         "estimated_minutes": round(total_words / TARGET_WPM, 1) if total_words else 0,
@@ -181,6 +253,8 @@ def inspect_script(folder: Path, script: dict[str, Any]) -> dict[str, Any]:
         "risky_claims": risky_claims,
         "assignment_mentions": assignment_mentions,
         "misconception_mentions": misconception_mentions,
+        "visual_categories": visual_categories,
+        "visual_category_count": len(visual_categories),
     }
 
 
@@ -204,6 +278,23 @@ def inspect_assets(folder: Path, section_ids: list[str]) -> dict[str, Any]:
         sid for sid in section_ids
         if not (audio_dir / f"{sid}.mp3").exists() and not (audio_dir / f"{sid}.wav").exists()
     ]
+    slide_sha = {
+        sid: sha256_file(slides_dir / f"{sid}.png")
+        for sid in section_ids
+        if (slides_dir / f"{sid}.png").exists()
+    }
+    identical_pause_answer_pairs = []
+    for idx, sid in enumerate(section_ids[:-1]):
+        lowered = sid.lower()
+        if "pause" not in lowered or lowered.endswith("_silence"):
+            continue
+        nxt = section_ids[idx + 1]
+        nlower = nxt.lower()
+        if not (nlower.endswith("_silence") or "answer" in nlower or "solution" in nlower):
+            continue
+        if slide_sha.get(sid) and slide_sha.get(sid) == slide_sha.get(nxt):
+            identical_pause_answer_pairs.append([sid, nxt])
+    style_manifest = load_json(folder / "style_manifest.json") or {}
     return {
         "slides_count": len(slides),
         "audio_mp3_count": len(audio_mp3),
@@ -220,12 +311,50 @@ def inspect_assets(folder: Path, section_ids: list[str]) -> dict[str, Any]:
         "missing_slides": missing_slides[:20],
         "extra_slides": extra_slides[:20],
         "missing_audio": missing_audio[:20],
+        "identical_pause_answer_pairs": identical_pause_answer_pairs,
+        "style_manifest": style_manifest,
         "slide_count_matches_sections": (not missing_slides and len(slides) >= len(section_ids)) or (folder / ".cleaned").exists(),
         "audio_count_matches_sections": audio_count >= len(section_ids) or (folder / ".cleaned").exists(),
     }
 
 
+def inspect_learning_checks(folder: Path) -> dict[str, Any]:
+    path = folder / "learning_check.json"
+    payload = load_json(path)
+    checks = payload.get("checks") if isinstance(payload, dict) else None
+    checks = checks if isinstance(checks, list) else []
+    missing_fields = []
+    for idx, check in enumerate(checks, 1):
+        if not isinstance(check, dict):
+            missing_fields.append(f"check {idx} is not an object")
+            continue
+        for field in ("skill", "question", "answer", "misconception_tested"):
+            if not str(check.get(field, "")).strip():
+                missing_fields.append(f"check {idx} missing {field}")
+    return {
+        "exists": path.exists(),
+        "count": len(checks),
+        "missing_fields": missing_fields[:10],
+    }
+
+
+def inspect_source_visual_risk(folder: Path) -> dict[str, Any]:
+    hits = []
+    for rel in ("build_slides.py", "script.json"):
+        path = folder / rel
+        try:
+            text = path.read_text()
+        except Exception:
+            continue
+        for char, note in RISKY_VISUAL_UNICODE.items():
+            if char in text:
+                hits.append({"file": rel, "char": char, "note": note})
+    return {"risky_unicode": hits}
+
+
 def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
+                 learning_checks: dict[str, Any],
+                 source_risk: dict[str, Any],
                  reviewers: dict[str, Any], youtube: dict[str, Any]) -> dict[str, Any]:
     issues: list[dict[str, str]] = []
 
@@ -249,6 +378,8 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
         add("major", "Pause section does not appear to have a paired worked-solution silence section.")
     if script_info["misconception_mentions"] == 0:
         add("minor", "No obvious misconception/trap language; add one common mistake or AP trap.")
+    if script_info["visual_category_count"] < 6:
+        add("minor", f"Only {script_info['visual_category_count']} slide categories detected; add more visual rhythm.")
     if script_info["assignment_mentions"] == 0:
         add("minor", "No assignment/practice/portal next-action language.")
     for claim in script_info["risky_claims"]:
@@ -260,12 +391,31 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
         add("major", f"Missing slide PNGs for sections: {assets['missing_slides']}")
     if assets["extra_slides"] and not assets["is_cleaned_after_upload"]:
         add("note", f"Extra slide PNGs not referenced by script.json: {assets['extra_slides'][:5]}")
+    if assets["identical_pause_answer_pairs"]:
+        add("major", f"Pause and answer slides are visually identical: {assets['identical_pause_answer_pairs'][:3]}")
+    style_manifest = assets.get("style_manifest") or {}
+    expected_theme = expected_theme_name(script_info.get("course"))
+    if not style_manifest and not assets["is_cleaned_after_upload"]:
+        add("major", "Missing style_manifest.json; cannot verify subject-specific visual theme.")
+    elif style_manifest:
+        actual_theme = style_manifest.get("theme_name")
+        if actual_theme != expected_theme:
+            add("major", f"Style theme mismatch: expected {expected_theme}, got {actual_theme}.")
     if not assets["audio_count_matches_sections"] and assets["has_mp4"]:
         add("minor", "Audio artifacts are incomplete even though MP4 exists; may be cleaned or partially generated.")
     if not assets["has_mp4"] and not assets["is_cleaned_after_upload"]:
         add("major", "No MP4 found.")
     if not assets["has_transcript"] and assets["has_mp4"]:
         add("minor", "No transcript.txt found for YouTube CC upload.")
+
+    if not learning_checks["exists"]:
+        add("major", "Missing learning_check.json.")
+    elif learning_checks["count"] < 3:
+        add("major", f"Only {learning_checks['count']} learning checks; require at least 3.")
+    if learning_checks["missing_fields"]:
+        add("major", f"Learning checks missing required fields: {learning_checks['missing_fields'][:5]}")
+    if source_risk["risky_unicode"]:
+        add("minor", f"Potentially fragile slide unicode: {source_risk['risky_unicode'][:5]}")
 
     if reviewers["count"] == 0:
         add("major", "No reviewer JSON found; needs PhD/adversarial/citation audit before auto-release.")
@@ -278,6 +428,8 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
             add("minor", "Reviewer set lacks citation/source checker.")
         if reviewers["counts"].get("critical"):
             add("critical", "At least one reviewer verdict is critical.")
+        if reviewers["stale_or_unbound"]:
+            add("major", f"Reviewer JSON is stale or not bound to current script_sha: {reviewers['stale_or_unbound'][:5]}")
         if reviewers["counts"].get("minor", 0) >= 2 and reviewers["counts"].get("pass", 0) == 0:
             add("minor", "Multiple minor reviewer verdicts; schedule content revision pass.")
 
@@ -320,15 +472,19 @@ def audit_lesson(folder: Path) -> dict[str, Any]:
     section_ids = [str(s.get("id", "")) for s in sections]
     script_info = inspect_script(folder, script)
     assets = inspect_assets(folder, section_ids)
-    reviewers = collect_reviewer_verdicts(folder)
+    learning_checks = inspect_learning_checks(folder)
+    source_risk = inspect_source_visual_risk(folder)
+    reviewers = collect_reviewer_verdicts(folder, script_info.get("script_sha"))
     youtube = script.get("youtube") or {}
-    score = score_lesson(script_info, assets, reviewers, youtube)
+    score = score_lesson(script_info, assets, learning_checks, source_risk, reviewers, youtube)
     return {
         "slug": folder.name,
         "path": display_path(folder),
         **score,
         "script": script_info,
         "assets": assets,
+        "learning_checks": learning_checks,
+        "source_risk": source_risk,
         "reviewers": reviewers,
         "youtube": {
             "video_id": youtube.get("video_id"),

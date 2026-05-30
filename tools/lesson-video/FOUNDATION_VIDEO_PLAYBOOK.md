@@ -117,7 +117,10 @@ A foundation lesson can move to upload review only when all are true:
 - `build_slides.py` renders without errors
 - `slides/*.png` count matches section count
 - `contact-sheet.jpg` exists and is readable
+- `style_manifest.json` exists and matches the course subject theme
 - `learning_check.json` has 3-6 checks
+- reviewer files are bound to the current `script.json` SHA
+- pause prompt and answer reveal slides are visually different
 - transcript exists after rendering
 - MP4 exists after rendering
 - `audit_lessons.py` reports pass or minor-only notes

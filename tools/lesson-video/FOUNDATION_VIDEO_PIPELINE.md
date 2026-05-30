@@ -55,7 +55,22 @@ The wrapper:
 - uses `stream-json` so progress appears while cc works
 - saves raw logs under `umi/reviews/cc-runs/`
 - enforces a timeout
+- restricts cc to file/read/edit/bash tools for this worker
 - passes a hard no-upload / no-AP contract
+
+## Gate V2
+
+As of 2026-05-30, the foundation gate also checks:
+
+- subject style manifest exists and matches the course theme
+- pause prompt and answer reveal slides are not visually identical
+- the lesson has enough visual/category rhythm
+- reviewer JSON is bound to the current `script.json` SHA
+- `learning_check.json` exists with required skill/question/answer/misconception fields
+- fragile unicode labels that often render poorly in slides are flagged
+
+`make_lesson.py` narrates answer-reveal sections when they contain text. Use
+`"silent": true` only when a section is intentionally silent.
 
 ## Gate Command
 

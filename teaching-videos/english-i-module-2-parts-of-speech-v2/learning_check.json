@@ -1,0 +1,36 @@
+{
+  "course": "English I",
+  "module": "Module 2: Parts of Speech & Grammar Foundations",
+  "checks": [
+    {
+      "skill": "identify the part of speech for each word in a sentence",
+      "question": "Label every word in this sentence: 'The clever fox quickly jumped over the lazy dog.'",
+      "answer": "The (article/adjective) · clever (adjective) · fox (noun) · quickly (adverb) · jumped (verb) · over (preposition) · the (article/adjective) · lazy (adjective) · dog (noun).",
+      "misconception_tested": "thinking a word's part of speech is fixed by the word itself rather than the job it does in the sentence"
+    },
+    {
+      "skill": "choose between adjective and adverb",
+      "question": "Pick the correct word: 'She speaks (clear / clearly) during the debate.' Explain your reasoning.",
+      "answer": "Clearly. The word modifies the verb 'speaks', and only adverbs can modify verbs. 'Clear' would modify a noun, e.g., 'a clear voice'.",
+      "misconception_tested": "confusing adjectives and adverbs by sound or familiarity instead of checking what the word modifies"
+    },
+    {
+      "skill": "recognize that the same word can be different parts of speech",
+      "question": "What part of speech is 'light' in each sentence? (a) 'a light backpack' (b) 'the light is on' (c) 'light the candle'",
+      "answer": "(a) adjective — describes 'backpack'; (b) noun — names a thing; (c) verb — shows action.",
+      "misconception_tested": "memorizing the label of a word in isolation instead of judging by its job in this sentence"
+    },
+    {
+      "skill": "explain what prepositions do",
+      "question": "Underline the preposition and explain its job: 'The book is on the desk before class.'",
+      "answer": "'on' and 'before' are prepositions. Prepositions show relationships — 'on' shows position (book in relation to desk), 'before' shows time (book/desk in relation to class).",
+      "misconception_tested": "treating prepositions as random small filler words instead of relationship words"
+    },
+    {
+      "skill": "use parts of speech as a revision tool",
+      "question": "Revise this weak sentence using a more specific noun and adjective: 'The thing was good.'",
+      "answer": "Many valid revisions; example: 'The argument was persuasive.' Replace the empty noun 'thing' with a specific noun and the tired adjective 'good' with a precise one.",
+      "misconception_tested": "memorizing labels without using them to improve sentences"
+    }
+  ]
+}

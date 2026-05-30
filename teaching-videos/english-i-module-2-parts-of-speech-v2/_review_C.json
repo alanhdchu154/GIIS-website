@@ -1,0 +1,15 @@
+{
+  "reviewer": "Umi citation/source checker",
+  "date": "2026-05-30",
+  "verdict": "pass",
+  "script_sha": "f8a871c77d9133bcf1e54013e526c24eb024a62bf8656cb60ffa2bbb559a9f91",
+  "scope": "source alignment and public-claims risk",
+  "checked_sources": [
+    "server/prisma/courses/english/english-i.json module 2"
+  ],
+  "findings": [
+    "The lesson matches English I Module 2 title and objectives.",
+    "No AP, Common App, accreditation, CEEB, or admissions claims appear.",
+    "No sourced or generated bitmap assets are used; visuals are deterministic slide elements."
+  ]
+}

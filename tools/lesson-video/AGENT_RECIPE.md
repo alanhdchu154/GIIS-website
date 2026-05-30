@@ -101,7 +101,7 @@ The `Deck` constructor auto-resolves the subject theme from `course` name:
 | Section 2 | hook (often `deck.custom(...)` or `deck.definition(...)`) | Real-world or surprising entry point |
 | Section 3 | `deck.overview(...)` | 3-bullet game plan with footnote |
 | Middle | `deck.equation(...)` / `deck.definition(...)` / `deck.custom(...)` | The actual teaching |
-| Roughly middle | `deck.pause(...)` + `deck.duplicate(<src>, "<N+1>_<src>_silence")` | One pause-and-try, duplicated for the answer-reveal section |
+| Roughly middle | `deck.pause(...)` + an answer-reveal slide | One pause-and-try, followed by a narrated worked solution |
 | One slide | `deck.compare(...)` | "Common trap" / wrong-vs-right column |
 | Second-to-last | `deck.recap(...)` | Bullet recap, optional assignment box |
 | Last | `deck.path(...)` | "How to actually master this module" with OpenStax / Khan / assignment / advisor steps and `next_text` pointing to the next module |
@@ -118,8 +118,9 @@ so they don't overflow at 80pt mono.
 - Don't read URLs aloud. Refer to resources by name ("OpenStax", "Khan
   Academy") rather than reading the URL.
 - For pause sections: in the `*_pause1` text, give the prompt + say
-  "Pause now. Solve it. Press play when you're ready."  In the
-  `*_pause1_silence` text, give the worked solution.
+  "Pause now. Solve it. Press play when you're ready." In the answer section,
+  give the worked solution. Do not set `"silent": true` unless the slide is
+  intentionally silent and has no teaching narration.
 - For title/hook/overview: hook the parent watcher too — Phase 1 goal
   is *"parents see their child is learning."*
 - Prefer misconception-first teaching:

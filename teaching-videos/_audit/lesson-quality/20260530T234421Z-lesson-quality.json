@@ -1,0 +1,468 @@
+{
+  "generated_at": "2026-05-30T23:44:21Z",
+  "repo_root": "/Users/alanhdchu/giis-website",
+  "summary": {
+    "lesson_count": 3,
+    "verdict_counts": {
+      "pass": 3
+    },
+    "issue_counts": {},
+    "avg_quality_score": 100,
+    "median_quality_score": 100,
+    "ready_count": 3,
+    "needs_review_count": 0,
+    "blocked_count": 0
+  },
+  "lessons": [
+    {
+      "slug": "algebra-i-module-9-slope-rate-change-v2",
+      "path": "teaching-videos/algebra-i-module-9-slope-rate-change-v2",
+      "verdict": "pass",
+      "quality_score": 100,
+      "issues": [],
+      "issue_counts": {},
+      "script": {
+        "course": "Algebra I",
+        "module": "Module 9: Slope & Rate of Change",
+        "voice": "en-US-AriaNeural",
+        "voice_rate": "-3%",
+        "script_sha": "8bd7428739815ed8973c3944cd9d343dd4f3b4e6c946505a032db688e960c1fe",
+        "section_count": 14,
+        "word_count": 730,
+        "estimated_minutes": 4.9,
+        "avg_words_per_section": 52.1,
+        "max_words_in_section": 72,
+        "long_sections": [],
+        "empty_sections": [],
+        "required_structure": {
+          "title": true,
+          "hook": true,
+          "overview": true,
+          "pause": true,
+          "recap": true,
+          "path": true
+        },
+        "pause_count": 2,
+        "silence_count": 2,
+        "has_worked_solution_after_pause": true,
+        "urls_in_narration": [],
+        "risky_claims": [],
+        "assignment_mentions": 3,
+        "misconception_mentions": 3,
+        "visual_categories": [
+          "answer_reveal",
+          "application",
+          "content",
+          "formula_or_equation",
+          "graph_visual",
+          "hook",
+          "overview",
+          "path",
+          "pause_prompt",
+          "recap",
+          "title",
+          "trap_or_compare"
+        ],
+        "visual_category_count": 12
+      },
+      "assets": {
+        "slides_count": 14,
+        "audio_mp3_count": 14,
+        "audio_wav_count": 14,
+        "audio_file_count": 14,
+        "mp4_count": 1,
+        "has_mp4": true,
+        "mp4_files": [
+          {
+            "file": "algebra_i_module_9_slope_rate_change_v2.mp4",
+            "mb": 7.0
+          }
+        ],
+        "has_transcript": true,
+        "has_intro_music": true,
+        "has_outro_music": true,
+        "is_cleaned_after_upload": false,
+        "slide_dimensions_sample": {
+          "1920x1080": 5
+        },
+        "missing_slides": [],
+        "extra_slides": [],
+        "missing_audio": [],
+        "identical_pause_answer_pairs": [],
+        "style_manifest": {
+          "course": "Algebra I",
+          "module_num": 9,
+          "theme_name": "math",
+          "accent": [
+            212,
+            166,
+            52
+          ],
+          "accent_light": [
+            224,
+            192,
+            96
+          ],
+          "background": [
+            250,
+            246,
+            236
+          ],
+          "card_background": [
+            244,
+            235,
+            215
+          ]
+        },
+        "slide_count_matches_sections": true,
+        "audio_count_matches_sections": true
+      },
+      "learning_checks": {
+        "exists": true,
+        "count": 5,
+        "missing_fields": []
+      },
+      "source_risk": {
+        "risky_unicode": []
+      },
+      "reviewers": {
+        "count": 3,
+        "verdicts": [
+          {
+            "file": "_review_A.json",
+            "reviewer": "Umi peer math reviewer",
+            "verdict": "pass",
+            "script_sha": "8bd7428739815ed8973c3944cd9d343dd4f3b4e6c946505a032db688e960c1fe",
+            "script_sha_matches": true
+          },
+          {
+            "file": "_review_B.json",
+            "reviewer": "Umi adversarial student reviewer",
+            "verdict": "pass",
+            "script_sha": "8bd7428739815ed8973c3944cd9d343dd4f3b4e6c946505a032db688e960c1fe",
+            "script_sha_matches": true
+          },
+          {
+            "file": "_review_C.json",
+            "reviewer": "Umi citation/source checker",
+            "verdict": "pass",
+            "script_sha": "8bd7428739815ed8973c3944cd9d343dd4f3b4e6c946505a032db688e960c1fe",
+            "script_sha_matches": true
+          }
+        ],
+        "counts": {
+          "pass": 3
+        },
+        "stale_or_unbound": [],
+        "has_phd_level": true,
+        "has_adversarial_student": true,
+        "has_citation_checker": true
+      },
+      "youtube": {
+        "video_id": null,
+        "url": null,
+        "privacy": null,
+        "playlist": null,
+        "uploaded_at": null
+      }
+    },
+    {
+      "slug": "english-i-module-2-parts-of-speech-v2",
+      "path": "teaching-videos/english-i-module-2-parts-of-speech-v2",
+      "verdict": "pass",
+      "quality_score": 100,
+      "issues": [],
+      "issue_counts": {},
+      "script": {
+        "course": "English I",
+        "module": "Module 2: Parts of Speech & Grammar Foundations",
+        "voice": "en-US-AndrewNeural",
+        "voice_rate": "-3%",
+        "script_sha": "f8a871c77d9133bcf1e54013e526c24eb024a62bf8656cb60ffa2bbb559a9f91",
+        "section_count": 14,
+        "word_count": 658,
+        "estimated_minutes": 4.4,
+        "avg_words_per_section": 47,
+        "max_words_in_section": 70,
+        "long_sections": [],
+        "empty_sections": [],
+        "required_structure": {
+          "title": true,
+          "hook": true,
+          "overview": true,
+          "pause": true,
+          "recap": true,
+          "path": true
+        },
+        "pause_count": 2,
+        "silence_count": 2,
+        "has_worked_solution_after_pause": true,
+        "urls_in_narration": [],
+        "risky_claims": [],
+        "assignment_mentions": 3,
+        "misconception_mentions": 3,
+        "visual_categories": [
+          "answer_reveal",
+          "content",
+          "hook",
+          "overview",
+          "path",
+          "pause_prompt",
+          "recap",
+          "title",
+          "trap_or_compare"
+        ],
+        "visual_category_count": 9
+      },
+      "assets": {
+        "slides_count": 14,
+        "audio_mp3_count": 14,
+        "audio_wav_count": 14,
+        "audio_file_count": 14,
+        "mp4_count": 1,
+        "has_mp4": true,
+        "mp4_files": [
+          {
+            "file": "english_i_module_2_parts_of_speech_v2.mp4",
+            "mb": 6.8
+          }
+        ],
+        "has_transcript": true,
+        "has_intro_music": true,
+        "has_outro_music": true,
+        "is_cleaned_after_upload": false,
+        "slide_dimensions_sample": {
+          "1920x1080": 5
+        },
+        "missing_slides": [],
+        "extra_slides": [],
+        "missing_audio": [],
+        "identical_pause_answer_pairs": [],
+        "style_manifest": {
+          "course": "English I",
+          "module_num": 2,
+          "theme_name": "literature",
+          "accent": [
+            172,
+            105,
+            50
+          ],
+          "accent_light": [
+            210,
+            160,
+            110
+          ],
+          "background": [
+            244,
+            235,
+            215
+          ],
+          "card_background": [
+            250,
+            246,
+            236
+          ]
+        },
+        "slide_count_matches_sections": true,
+        "audio_count_matches_sections": true
+      },
+      "learning_checks": {
+        "exists": true,
+        "count": 5,
+        "missing_fields": []
+      },
+      "source_risk": {
+        "risky_unicode": []
+      },
+      "reviewers": {
+        "count": 3,
+        "verdicts": [
+          {
+            "file": "_review_A.json",
+            "reviewer": "Umi peer English reviewer",
+            "verdict": "pass",
+            "script_sha": "f8a871c77d9133bcf1e54013e526c24eb024a62bf8656cb60ffa2bbb559a9f91",
+            "script_sha_matches": true
+          },
+          {
+            "file": "_review_B.json",
+            "reviewer": "Umi adversarial student reviewer",
+            "verdict": "pass",
+            "script_sha": "f8a871c77d9133bcf1e54013e526c24eb024a62bf8656cb60ffa2bbb559a9f91",
+            "script_sha_matches": true
+          },
+          {
+            "file": "_review_C.json",
+            "reviewer": "Umi citation/source checker",
+            "verdict": "pass",
+            "script_sha": "f8a871c77d9133bcf1e54013e526c24eb024a62bf8656cb60ffa2bbb559a9f91",
+            "script_sha_matches": true
+          }
+        ],
+        "counts": {
+          "pass": 3
+        },
+        "stale_or_unbound": [],
+        "has_phd_level": true,
+        "has_adversarial_student": true,
+        "has_citation_checker": true
+      },
+      "youtube": {
+        "video_id": null,
+        "url": null,
+        "privacy": null,
+        "playlist": null,
+        "uploaded_at": null
+      }
+    },
+    {
+      "slug": "biology-module-1-chemistry-of-life-v2",
+      "path": "teaching-videos/biology-module-1-chemistry-of-life-v2",
+      "verdict": "pass",
+      "quality_score": 100,
+      "issues": [],
+      "issue_counts": {},
+      "script": {
+        "course": "Biology",
+        "module": "Module 1: The Chemistry of Life",
+        "voice": "en-US-EmmaNeural",
+        "voice_rate": "-3%",
+        "script_sha": "13855f8957c2567487933eeec8e71367ee3da7470482d4f29bbece7f74c8a461",
+        "section_count": 14,
+        "word_count": 699,
+        "estimated_minutes": 4.7,
+        "avg_words_per_section": 49.9,
+        "max_words_in_section": 60,
+        "long_sections": [],
+        "empty_sections": [],
+        "required_structure": {
+          "title": true,
+          "hook": true,
+          "overview": true,
+          "pause": true,
+          "recap": true,
+          "path": true
+        },
+        "pause_count": 2,
+        "silence_count": 2,
+        "has_worked_solution_after_pause": true,
+        "urls_in_narration": [],
+        "risky_claims": [],
+        "assignment_mentions": 3,
+        "misconception_mentions": 2,
+        "visual_categories": [
+          "answer_reveal",
+          "content",
+          "hook",
+          "overview",
+          "path",
+          "pause_prompt",
+          "recap",
+          "title",
+          "trap_or_compare"
+        ],
+        "visual_category_count": 9
+      },
+      "assets": {
+        "slides_count": 14,
+        "audio_mp3_count": 14,
+        "audio_wav_count": 14,
+        "audio_file_count": 14,
+        "mp4_count": 1,
+        "has_mp4": true,
+        "mp4_files": [
+          {
+            "file": "biology_module_1_chemistry_of_life_v2.mp4",
+            "mb": 8.3
+          }
+        ],
+        "has_transcript": true,
+        "has_intro_music": true,
+        "has_outro_music": true,
+        "is_cleaned_after_upload": false,
+        "slide_dimensions_sample": {
+          "1920x1080": 5
+        },
+        "missing_slides": [],
+        "extra_slides": [],
+        "missing_audio": [],
+        "identical_pause_answer_pairs": [],
+        "style_manifest": {
+          "course": "Biology",
+          "module_num": 1,
+          "theme_name": "science",
+          "accent": [
+            40,
+            130,
+            130
+          ],
+          "accent_light": [
+            110,
+            180,
+            180
+          ],
+          "background": [
+            250,
+            246,
+            236
+          ],
+          "card_background": [
+            244,
+            235,
+            215
+          ]
+        },
+        "slide_count_matches_sections": true,
+        "audio_count_matches_sections": true
+      },
+      "learning_checks": {
+        "exists": true,
+        "count": 5,
+        "missing_fields": []
+      },
+      "source_risk": {
+        "risky_unicode": []
+      },
+      "reviewers": {
+        "count": 3,
+        "verdicts": [
+          {
+            "file": "_review_A.json",
+            "reviewer": "Umi peer science reviewer",
+            "verdict": "pass",
+            "script_sha": "13855f8957c2567487933eeec8e71367ee3da7470482d4f29bbece7f74c8a461",
+            "script_sha_matches": true
+          },
+          {
+            "file": "_review_B.json",
+            "reviewer": "Umi adversarial student reviewer",
+            "verdict": "pass",
+            "script_sha": "13855f8957c2567487933eeec8e71367ee3da7470482d4f29bbece7f74c8a461",
+            "script_sha_matches": true
+          },
+          {
+            "file": "_review_C.json",
+            "reviewer": "Umi citation/source checker",
+            "verdict": "pass",
+            "script_sha": "13855f8957c2567487933eeec8e71367ee3da7470482d4f29bbece7f74c8a461",
+            "script_sha_matches": true
+          }
+        ],
+        "counts": {
+          "pass": 3
+        },
+        "stale_or_unbound": [],
+        "has_phd_level": true,
+        "has_adversarial_student": true,
+        "has_citation_checker": true
+      },
+      "youtube": {
+        "video_id": null,
+        "url": null,
+        "privacy": null,
+        "playlist": null,
+        "uploaded_at": null
+      }
+    }
+  ]
+}

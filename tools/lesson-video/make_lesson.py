@@ -41,13 +41,15 @@ def need(pkg: str, import_name: str | None = None):
         sys.exit(f"error: missing dependency '{pkg}'.\n  fix:  pip install {pkg}")
 
 def _is_silence_section(section: dict) -> bool:
-    """Sections whose id ends with `_silence` (or whose text is empty) hold
-    an answer-reveal slide during which the student looks at the question
-    without narration. Edge-TTS can't synthesize empty text — it produces a
-    0-byte MP3 that crashes ffmpeg in merge_lesson.py. We detect these and
-    generate a fixed-duration silent WAV directly instead.
+    """Return True only for intentionally silent sections.
+
+    Older lesson ids often used a `_silence` suffix for answer-reveal slides,
+    but the AGENT_RECIPE tells writers to put the worked solution text there.
+    Treating every `_silence` id as muted made answer explanations disappear
+    from the MP4. Silence now requires either empty text or an explicit
+    `"silent": true` flag.
     """
-    if section["id"].endswith("_silence"):
+    if section.get("silent") is True:
         return True
     if not section.get("text", "").strip():
         return True
@@ -93,9 +95,9 @@ async def synth(folder: Path) -> int:
     timestamps from edge-tts anymore because Microsoft's upstream service
     stopped sending WordBoundary events in 2024.
 
-    Sections whose id ends with `_silence` (or have empty text) get a
-    3-second silent WAV instead of a TTS call — edge-tts can't handle
-    empty text and produces a 0-byte MP3 that crashes downstream ffmpeg.
+    Explicitly silent sections (`"silent": true`) or empty-text sections get a
+    3-second silent WAV instead of a TTS call — edge-tts can't handle empty
+    text and produces a 0-byte MP3 that crashes downstream ffmpeg.
 
     Idempotence: re-running only re-synthesizes MP3s that don't exist OR
     that exist but are 0 bytes (a clear failure marker from a prior crash).

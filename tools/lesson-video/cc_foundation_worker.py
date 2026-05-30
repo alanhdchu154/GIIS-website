@@ -122,8 +122,8 @@ def main() -> int:
         "--include-partial-messages",
         "--permission-mode",
         "bypassPermissions",
-        "--allowedTools",
-        "Read,Write,Edit,Bash",
+        "--tools",
+        "Read,Write,Edit,Bash,Grep,Glob",
         "--max-budget-usd",
         str(args.budget_usd),
     ]

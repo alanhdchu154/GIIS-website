@@ -1,0 +1,36 @@
+{
+  "course": "Biology",
+  "module": "Module 1: The Chemistry of Life",
+  "checks": [
+    {
+      "skill": "connect chemistry to biology",
+      "question": "Roughly 96% of the human body is made of just four elements. Name them and explain in one sentence why this is evidence that biology is chemistry.",
+      "answer": "Oxygen, carbon, hydrogen, and nitrogen. Living systems are built from the same atoms found elsewhere in nature — life is a particular arrangement of ordinary chemistry, not a separate kind of matter.",
+      "misconception_tested": "thinking chemistry is somehow separate from biology rather than the substrate biology runs on"
+    },
+    {
+      "skill": "match each macromolecule to its monomer and main function",
+      "question": "For each macromolecule, give the monomer and the main biological function: carbohydrate, lipid, protein, nucleic acid.",
+      "answer": "Carbohydrate: monomer is a monosaccharide (e.g., glucose); function is quick energy and plant structure. Lipid: built from fatty acids + glycerol; function is long-term energy storage and forming membranes. Protein: monomer is an amino acid; function is enzymes, structure, transport, and signaling. Nucleic acid: monomer is a nucleotide; function is storing and reading instructions (DNA and RNA).",
+      "misconception_tested": "memorizing macromolecule names without locking the monomer and function to each name"
+    },
+    {
+      "skill": "explain why water's polarity matters for life",
+      "question": "Water is polar. Give two consequences of that polarity that directly support life inside cells or whole organisms.",
+      "answer": "Examples include: water dissolves nutrients and ions so cells can move materials; water sticks to itself (cohesion) so plants can pull water upward; water absorbs heat slowly so body temperature stays stable; water can be a reactant in building or breaking polymers. Any two valid consequences are accepted.",
+      "misconception_tested": "thinking of water as a passive background liquid rather than an active life-supporting molecule"
+    },
+    {
+      "skill": "tell dehydration synthesis from hydrolysis by tracking water",
+      "question": "A cell joins two amino acids into a dipeptide and releases one water molecule. Is that dehydration synthesis or hydrolysis? Then: a digestive enzyme adds a water molecule to cut a starch into smaller sugars. Which is that?",
+      "answer": "Joining amino acids and releasing water = dehydration synthesis (building a polymer). Using water to split starch into sugars = hydrolysis (breaking a polymer). Rule: water released → build; water consumed → break.",
+      "misconception_tested": "confusing dehydration synthesis and hydrolysis because both involve water and a polymer"
+    },
+    {
+      "skill": "predict the direction of a polymer reaction from the chemistry",
+      "question": "An enzyme reaction shows H₂O on the reactant side of an arrow involving a long polymer. Will the polymer get longer or shorter? Justify your answer.",
+      "answer": "Shorter. Water on the reactant side means water is being consumed to split a bond, which is hydrolysis. Hydrolysis breaks a polymer into smaller pieces, so the chain gets shorter.",
+      "misconception_tested": "ignoring where the water sits in the equation when deciding whether a polymer is being built or broken"
+    }
+  ]
+}

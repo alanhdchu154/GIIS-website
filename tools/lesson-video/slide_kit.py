@@ -218,6 +218,26 @@ class Deck:
         self.accent_light = self.theme["accent_light"]
         self.bg = self.theme["bg"]
         self.card_bg = self.theme["card_bg"]
+        self._write_style_manifest()
+
+    def _write_style_manifest(self) -> None:
+        """Write a lightweight style manifest next to the slides folder."""
+        import json
+
+        def rgb(value):
+            return list(value)
+
+        manifest = {
+            "course": self.course,
+            "module_num": self.module_num,
+            "theme_name": self.theme.get("name", "default"),
+            "accent": rgb(self.accent),
+            "accent_light": rgb(self.accent_light),
+            "background": rgb(self.bg),
+            "card_background": rgb(self.card_bg),
+        }
+        target = self.output_dir.parent / "style_manifest.json"
+        target.write_text(json.dumps(manifest, indent=2) + "\n")
 
     # ── private: shared base ──
 
