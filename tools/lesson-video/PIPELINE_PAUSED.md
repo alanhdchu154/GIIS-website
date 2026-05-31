@@ -27,7 +27,7 @@ restart is the new foundation-first pipeline:
 
 - `tools/lesson-video/foundation_daily_orchestrator.py`
 - `tools/lesson-video/foundation_daily.sh`
-- `tools/lesson-video/com.giis.foundation-video-daily.plist`
+- Codex automation `~/.codex/automations/giis-foundation-video-daily/automation.toml`
 
 This pipeline is allowed because it is not the old AP-era batch generator. It
 must:

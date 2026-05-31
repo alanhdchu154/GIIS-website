@@ -119,7 +119,8 @@ college admissions claims in foundation lesson titles or descriptions.
 
 ## Daily Schedule
 
-- 11:00 CT: `foundation_daily.sh` runs through launchd.
+- 23:00 CT: Codex automation `giis-foundation-video-daily` calls
+  `bash tools/lesson-video/foundation_daily.sh`.
 - Max modules per day: 3.
 - Upload privacy: `unlisted`.
 - Upload path: `yt_queue.py upload --gate-ready --max 3 --privacy unlisted`.
@@ -127,6 +128,8 @@ college admissions claims in foundation lesson titles or descriptions.
   the orchestrator can commit/push manifest and lesson metadata.
 - The legacy `daily_build.sh` and `tools/youtube-upload/daily.sh` remain
   paused for new production.
+- Do not install a macOS LaunchAgent for this daily foundation pipeline unless
+  Alan explicitly asks for a system-level fallback.
 
 ## Acceptance Criteria
 

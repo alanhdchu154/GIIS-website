@@ -11,7 +11,8 @@ repeatably, while Umi remains the academic editor and release authority.
 This is the intended loop for every new foundation video:
 
 ```text
-23:00 CT foundation_daily_orchestrator.py
+23:00 CT Codex automation
+  -> call bash tools/lesson-video/foundation_daily.sh
   -> choose 2-3 non-AP foundation modules from server/prisma/courses/**/*.json
   -> verify module outline and free/usable resource URLs
   -> write source_packet.json + teaching_brief.md + visual_brief.md
@@ -68,6 +69,23 @@ The wrapper:
 - passes a hard no-upload / no-AP contract
 
 ## Daily Orchestrator
+
+Preferred scheduler: Codex automation.
+
+```text
+~/.codex/automations/giis-foundation-video-daily/automation.toml
+rrule = "FREQ=DAILY;BYHOUR=23;BYMINUTE=0;BYSECOND=0"
+```
+
+The automation's only scheduling job is to call the repo-owned runner:
+
+```bash
+bash tools/lesson-video/foundation_daily.sh
+```
+
+Keep the pipeline logic in this repository so changes can be reviewed,
+committed, and rolled back like normal code. Do not use a macOS LaunchAgent for
+normal foundation-video scheduling.
 
 Dry-run:
 
