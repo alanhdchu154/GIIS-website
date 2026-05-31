@@ -1,6 +1,78 @@
 {
-  "generated_at": "2026-05-31T02:29:48Z",
-  "source": "prune_failed_lessons",
-  "lessons": [],
-  "by_course": {}
+  "generated_at": "2026-05-31T04:20:53+00:00",
+  "source": "youtube-channel",
+  "by_course": {
+    "Algebra I": [
+      {
+        "course": "Algebra I",
+        "course_slug": "algebra-i",
+        "module_number": 3,
+        "module_title": "Properties of Real Numbers",
+        "youtube_id": "rnl1Tbx1a8E",
+        "url": "https://youtu.be/rnl1Tbx1a8E",
+        "embed_url": "https://www.youtube.com/embed/rnl1Tbx1a8E",
+        "published_at": "2026-05-31T04:20:26Z",
+        "lesson_dir": "algebra-i-module-3-properties-of-real-numbers-v2"
+      },
+      {
+        "course": "Algebra I",
+        "course_slug": "algebra-i",
+        "module_number": 9,
+        "module_title": "Slope & Rate of Change",
+        "youtube_id": "kIuIKiW8n2A",
+        "url": "https://youtu.be/kIuIKiW8n2A",
+        "embed_url": "https://www.youtube.com/embed/kIuIKiW8n2A",
+        "published_at": "2026-05-31T04:20:38Z",
+        "lesson_dir": "algebra-i-module-9-slope-rate-change-v2"
+      }
+    ],
+    "AP Computer Science A": [
+      {
+        "course": "AP Computer Science A",
+        "course_slug": "ap-computer-science-a",
+        "module_number": 6,
+        "module_title": "Array",
+        "youtube_id": "xQW0hpadLO4",
+        "url": "https://youtu.be/xQW0hpadLO4",
+        "embed_url": "https://www.youtube.com/embed/xQW0hpadLO4",
+        "published_at": "2026-05-21T14:06:14Z",
+        "lesson_dir": null
+      }
+    ]
+  },
+  "lessons": [
+    {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_number": 3,
+      "module_title": "Properties of Real Numbers",
+      "youtube_id": "rnl1Tbx1a8E",
+      "url": "https://youtu.be/rnl1Tbx1a8E",
+      "embed_url": "https://www.youtube.com/embed/rnl1Tbx1a8E",
+      "published_at": "2026-05-31T04:20:26Z",
+      "lesson_dir": "algebra-i-module-3-properties-of-real-numbers-v2"
+    },
+    {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_number": 9,
+      "module_title": "Slope & Rate of Change",
+      "youtube_id": "kIuIKiW8n2A",
+      "url": "https://youtu.be/kIuIKiW8n2A",
+      "embed_url": "https://www.youtube.com/embed/kIuIKiW8n2A",
+      "published_at": "2026-05-31T04:20:38Z",
+      "lesson_dir": "algebra-i-module-9-slope-rate-change-v2"
+    },
+    {
+      "course": "AP Computer Science A",
+      "course_slug": "ap-computer-science-a",
+      "module_number": 6,
+      "module_title": "Array",
+      "youtube_id": "xQW0hpadLO4",
+      "url": "https://youtu.be/xQW0hpadLO4",
+      "embed_url": "https://www.youtube.com/embed/xQW0hpadLO4",
+      "published_at": "2026-05-21T14:06:14Z",
+      "lesson_dir": null
+    }
+  ]
 }

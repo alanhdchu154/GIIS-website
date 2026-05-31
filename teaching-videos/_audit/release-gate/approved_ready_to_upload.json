@@ -1,21 +1,32 @@
 {
-  "generated_at": "2026-05-31T02:29:48Z",
-  "policy": "prune_failed_lessons_keep_ready_only",
+  "generated_at": "2026-05-31T04:20:25Z",
+  "policy": "foundation_daily_auto_approval_clean_pass_score_100",
   "approved_ready_to_upload": [
+    {
+      "slug": "algebra-i-module-3-properties-of-real-numbers-v2",
+      "path": "teaching-videos/algebra-i-module-3-properties-of-real-numbers-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 3: Properties of Real Numbers",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-05-31T04:20:25Z"
+    },
     {
       "slug": "algebra-i-module-9-slope-rate-change-v2",
       "classification": "foundation_v2_upload_candidate",
       "evidence": "new gate pass score 100; reviewer artifacts bound to script_sha; style_manifest math theme; Umi MP4/contact-sheet QA complete"
     },
     {
-      "slug": "english-i-module-2-parts-of-speech-v2",
-      "classification": "foundation_v2_upload_candidate",
-      "evidence": "new gate pass score 100; reviewer artifacts bound to script_sha; style_manifest literature theme; Umi contact-sheet/sample-frame QA complete"
-    },
-    {
       "slug": "biology-module-1-chemistry-of-life-v2",
       "classification": "foundation_v2_upload_candidate",
       "evidence": "new gate pass score 100; reviewer artifacts bound to script_sha; style_manifest science theme; Umi contact-sheet/sample-frame QA complete"
+    },
+    {
+      "slug": "english-i-module-2-parts-of-speech-v2",
+      "classification": "foundation_v2_upload_candidate",
+      "evidence": "new gate pass score 100; reviewer artifacts bound to script_sha; style_manifest literature theme; Umi contact-sheet/sample-frame QA complete"
     }
   ]
 }
