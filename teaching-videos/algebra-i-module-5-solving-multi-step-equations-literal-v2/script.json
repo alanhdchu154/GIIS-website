@@ -1,0 +1,80 @@
+{
+  "course": "Algebra I",
+  "module": "Module 5: Solving Multi-Step Equations & Literal Equations",
+  "voice": "en-US-AriaNeural",
+  "voice_rate": "-3%",
+  "intro_music_seconds": 3,
+  "outro_music_seconds": 3,
+  "sections": [
+    {
+      "id": "01_title",
+      "text": "Welcome back. Algebra One, Module Five — Multi-Step Equations and Literal Equations. Variables on both sides. Parentheses. Fractions. And then a different game — solving for a letter when the letter is not x. The same rule the whole way through — do the same move to both sides until the target variable is alone."
+    },
+    {
+      "id": "02_hook",
+      "text": "Distance equals rate times time. d equals r t. You know d and r — say a four-hundred-mile drive at fifty miles per hour — and you need t, the time. The variable you want is locked inside a product. Six minutes from now, you will flip that equation around in one move and read the time right off."
+    },
+    {
+      "id": "03_overview",
+      "text": "Game plan. First, multi-step equations — distribute through parentheses, clear fractions, move variable terms to one side, then solve. Second, the watch-your-signs trap when you distribute. Third, literal equations — same balance moves, but the target you isolate is a letter you chose, not always x."
+    },
+    {
+      "id": "04_concept",
+      "text": "The core idea is unchanged. An equation is a balanced scale. Same operation, both sides. What multi-step adds is cleanup. Distribute through parentheses. Multiply by the LCD to clear fractions. Move variable terms to one side, constants to the other. Then it is just a two-step equation in disguise."
+    },
+    {
+      "id": "05_compare",
+      "text": "The two killer mistakes. One — distributing only the first term. Two times the quantity x plus three is two x plus six, not two x plus three. Two — moving a variable from one side without doing the same move on the other side. You may shuffle variables, but you may not skip the matching move on the other side."
+    },
+    {
+      "id": "06_worked_distribute",
+      "text": "Solve two times the quantity x plus three equals four x minus two. Distribute first — two x plus six equals four x minus two. Subtract two x from both sides — six equals two x minus two. Add two to both sides — eight equals two x. Divide by two — x equals four. Verify by substitution."
+    },
+    {
+      "id": "07_worked_fractions",
+      "text": "Solve x over three plus two equals x over two minus one. Fractions slow you down — clear them. The LCD of three and two is six. Multiply every term by six. Two x plus twelve equals three x minus six. Subtract two x from both sides — twelve equals x minus six. Add six. Eighteen equals x. Multiplying by the LCD turns it back into two-step algebra."
+    },
+    {
+      "id": "08_pause1",
+      "text": "Your turn. Solve three times the quantity x minus one equals two x plus seven. Distribute the three first. Move the variable terms to one side. Verify when you have an answer. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "09_pause1_silence",
+      "text": "Time. Distribute — three x minus three equals two x plus seven. Subtract two x from both sides — x minus three equals seven. Add three to both sides — x equals ten. Verify — three times nine is twenty-seven, and two times ten plus seven is twenty-seven. Both sides match. Solved."
+    },
+    {
+      "id": "10_literal",
+      "text": "Now the new move. A literal equation. Every letter is a quantity, and you pick which one to isolate. Area equals length times width. A equals l w. Solve for l. Divide both sides by w. l equals A over w. Same idea with the gas law. P V equals n R T. Solve for T. Divide both sides by n R. T equals P V over n R."
+    },
+    {
+      "id": "11_pause2",
+      "text": "Your turn. Rearrange the circumference formula. C equals two pi r. Solve for r. Treat two pi as one number standing next to r, and use one move on both sides. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "12_pause2_silence",
+      "text": "Time. C equals two pi r. Divide both sides by two pi. r equals C over two pi. One sentence — r is the radius, the distance from the center of the circle to its edge, isolated from the circumference. That sentence is part of the rubric on your assignment."
+    },
+    {
+      "id": "13_application",
+      "text": "How the assignment uses this. Ten multi-step equations — variables on both sides, parentheses, fractions — with every move labeled. Then five literal equations like A equals l w and P V equals n R T, rearranged for a chosen letter. For each rearrangement, one sentence in plain English explaining what that letter represents."
+    },
+    {
+      "id": "14_recap",
+      "text": "Recap. Multi-step — distribute, clear fractions with the LCD, move variables to one side, then solve. Distribution is all-or-nothing — every term inside the parentheses. Literal equations use the same balance moves to isolate any letter, then one sentence in plain English to say what that letter is."
+    },
+    {
+      "id": "15_path",
+      "text": "Reminder — this video is the overview. To master multi-step and literal equations, do the rest. Read OpenStax Elementary Algebra chapter two, sections four and five. Run the Khan Academy practice on variables on both sides. Complete the assignment in your dashboard — ten multi-step plus five literal rearrangements with explanation sentences. Next up — Module Six — Linear Inequalities."
+    }
+  ],
+  "youtube": {
+    "video_id": "NX4umf_6b0g",
+    "url": "https://youtu.be/NX4umf_6b0g",
+    "embed_url": "https://www.youtube.com/embed/NX4umf_6b0g",
+    "studio_url": "https://studio.youtube.com/video/NX4umf_6b0g/edit",
+    "privacy": "unlisted",
+    "playlist": "Algebra I",
+    "playlist_id": "PLBdiOM21TW9Lp_thaHGpAXl1VhxeV2m-S",
+    "uploaded_at": "2026-05-31T12:24:35+00:00"
+  }
+}

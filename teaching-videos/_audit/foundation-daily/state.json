@@ -6,11 +6,11 @@
       "module_order": 1,
       "module_title": "Variables & Algebraic Expressions",
       "target_slug": "algebra-i-module-1-variables-algebraic-expressions-v2",
-      "status": "cc_blocked",
-      "updated_at": "2026-05-31T04:08:05Z",
+      "status": "approved",
+      "updated_at": "2026-05-31T04:34:27Z",
       "details": {
-        "returncode": 1,
-        "saw_tool_progress": true
+        "quality_score": 100,
+        "manual_rerun_repair": true
       },
       "attempts": 1
     },
@@ -20,11 +20,11 @@
       "module_order": 2,
       "module_title": "Order of Operations",
       "target_slug": "algebra-i-module-2-order-of-operations-v2",
-      "status": "cc_blocked",
-      "updated_at": "2026-05-31T04:13:41Z",
+      "status": "approved",
+      "updated_at": "2026-05-31T04:34:27Z",
       "details": {
-        "returncode": 1,
-        "saw_tool_progress": true
+        "quality_score": 100,
+        "manual_rerun_repair": true
       },
       "attempts": 1
     },
@@ -36,6 +36,45 @@
       "target_slug": "algebra-i-module-3-properties-of-real-numbers-v2",
       "status": "approved",
       "updated_at": "2026-05-31T04:20:25Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "algebra-i:M5": {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_order": 5,
+      "module_title": "Solving Multi-Step Equations & Literal Equations",
+      "target_slug": "algebra-i-module-5-solving-multi-step-equations-literal-v2",
+      "status": "approved",
+      "updated_at": "2026-05-31T12:10:11Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "algebra-i:M6": {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_order": 6,
+      "module_title": "Inequalities & Interval Notation",
+      "target_slug": "algebra-i-module-6-inequalities-interval-notation-v2",
+      "status": "approved",
+      "updated_at": "2026-05-31T12:17:09Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "algebra-i:M7": {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_order": 7,
+      "module_title": "Introduction to Functions",
+      "target_slug": "algebra-i-module-7-introduction-to-functions-v2",
+      "status": "approved",
+      "updated_at": "2026-05-31T12:24:12Z",
       "details": {
         "quality_score": 100
       },

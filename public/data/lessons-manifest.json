@@ -1,21 +1,30 @@
 {
-  "generated_at": "2026-05-31T04:22:08+00:00",
+  "generated_at": "2026-05-31T12:24:36+00:00",
   "source": "youtube-channel",
   "by_course": {
-    "Biology": [
-      {
-        "course": "Biology",
-        "course_slug": "biology",
-        "module_number": 1,
-        "module_title": "The Chemistry of Life",
-        "youtube_id": "JZln1AXPU24",
-        "url": "https://youtu.be/JZln1AXPU24",
-        "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
-        "published_at": "2026-05-31T04:20:45Z",
-        "lesson_dir": "biology-module-1-chemistry-of-life-v2"
-      }
-    ],
     "Algebra I": [
+      {
+        "course": "Algebra I",
+        "course_slug": "algebra-i",
+        "module_number": 1,
+        "module_title": "Variables & Algebraic Expressions",
+        "youtube_id": "LJwQCwKmmX4",
+        "url": "https://youtu.be/LJwQCwKmmX4",
+        "embed_url": "https://www.youtube.com/embed/LJwQCwKmmX4",
+        "published_at": "2026-05-31T04:34:56Z",
+        "lesson_dir": "algebra-i-module-1-variables-algebraic-expressions-v2"
+      },
+      {
+        "course": "Algebra I",
+        "course_slug": "algebra-i",
+        "module_number": 2,
+        "module_title": "Order of Operations",
+        "youtube_id": "xUxspucPUio",
+        "url": "https://youtu.be/xUxspucPUio",
+        "embed_url": "https://www.youtube.com/embed/xUxspucPUio",
+        "published_at": "2026-05-31T12:24:13Z",
+        "lesson_dir": "algebra-i-module-2-order-of-operations-v2"
+      },
       {
         "course": "Algebra I",
         "course_slug": "algebra-i",
@@ -30,6 +39,17 @@
       {
         "course": "Algebra I",
         "course_slug": "algebra-i",
+        "module_number": 4,
+        "module_title": "Solving One-Step & Two-Step Equations",
+        "youtube_id": "1xipgYrRHyc",
+        "url": "https://youtu.be/1xipgYrRHyc",
+        "embed_url": "https://www.youtube.com/embed/1xipgYrRHyc",
+        "published_at": "2026-05-31T12:24:20Z",
+        "lesson_dir": "algebra-i-module-4-solving-one-step-two-step-v2"
+      },
+      {
+        "course": "Algebra I",
+        "course_slug": "algebra-i",
         "module_number": 9,
         "module_title": "Slope & Rate of Change",
         "youtube_id": "kIuIKiW8n2A",
@@ -37,6 +57,19 @@
         "embed_url": "https://www.youtube.com/embed/kIuIKiW8n2A",
         "published_at": "2026-05-31T04:20:38Z",
         "lesson_dir": "algebra-i-module-9-slope-rate-change-v2"
+      }
+    ],
+    "Biology": [
+      {
+        "course": "Biology",
+        "course_slug": "biology",
+        "module_number": 1,
+        "module_title": "The Chemistry of Life",
+        "youtube_id": "JZln1AXPU24",
+        "url": "https://youtu.be/JZln1AXPU24",
+        "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
+        "published_at": "2026-05-31T04:20:45Z",
+        "lesson_dir": "biology-module-1-chemistry-of-life-v2"
       }
     ],
     "AP Computer Science A": [
@@ -55,15 +88,26 @@
   },
   "lessons": [
     {
-      "course": "Biology",
-      "course_slug": "biology",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
       "module_number": 1,
-      "module_title": "The Chemistry of Life",
-      "youtube_id": "JZln1AXPU24",
-      "url": "https://youtu.be/JZln1AXPU24",
-      "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
-      "published_at": "2026-05-31T04:20:45Z",
-      "lesson_dir": "biology-module-1-chemistry-of-life-v2"
+      "module_title": "Variables & Algebraic Expressions",
+      "youtube_id": "LJwQCwKmmX4",
+      "url": "https://youtu.be/LJwQCwKmmX4",
+      "embed_url": "https://www.youtube.com/embed/LJwQCwKmmX4",
+      "published_at": "2026-05-31T04:34:56Z",
+      "lesson_dir": "algebra-i-module-1-variables-algebraic-expressions-v2"
+    },
+    {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_number": 2,
+      "module_title": "Order of Operations",
+      "youtube_id": "xUxspucPUio",
+      "url": "https://youtu.be/xUxspucPUio",
+      "embed_url": "https://www.youtube.com/embed/xUxspucPUio",
+      "published_at": "2026-05-31T12:24:13Z",
+      "lesson_dir": "algebra-i-module-2-order-of-operations-v2"
     },
     {
       "course": "Algebra I",
@@ -79,6 +123,17 @@
     {
       "course": "Algebra I",
       "course_slug": "algebra-i",
+      "module_number": 4,
+      "module_title": "Solving One-Step & Two-Step Equations",
+      "youtube_id": "1xipgYrRHyc",
+      "url": "https://youtu.be/1xipgYrRHyc",
+      "embed_url": "https://www.youtube.com/embed/1xipgYrRHyc",
+      "published_at": "2026-05-31T12:24:20Z",
+      "lesson_dir": "algebra-i-module-4-solving-one-step-two-step-v2"
+    },
+    {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
       "module_number": 9,
       "module_title": "Slope & Rate of Change",
       "youtube_id": "kIuIKiW8n2A",
@@ -86,6 +141,17 @@
       "embed_url": "https://www.youtube.com/embed/kIuIKiW8n2A",
       "published_at": "2026-05-31T04:20:38Z",
       "lesson_dir": "algebra-i-module-9-slope-rate-change-v2"
+    },
+    {
+      "course": "Biology",
+      "course_slug": "biology",
+      "module_number": 1,
+      "module_title": "The Chemistry of Life",
+      "youtube_id": "JZln1AXPU24",
+      "url": "https://youtu.be/JZln1AXPU24",
+      "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
+      "published_at": "2026-05-31T04:20:45Z",
+      "lesson_dir": "biology-module-1-chemistry-of-life-v2"
     },
     {
       "course": "AP Computer Science A",

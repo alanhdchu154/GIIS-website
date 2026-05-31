@@ -1,7 +1,29 @@
 {
-  "generated_at": "2026-05-31T04:20:25Z",
+  "generated_at": "2026-05-31T12:24:12Z",
   "policy": "foundation_daily_auto_approval_clean_pass_score_100",
   "approved_ready_to_upload": [
+    {
+      "slug": "algebra-i-module-1-variables-algebraic-expressions-v2",
+      "path": "teaching-videos/algebra-i-module-1-variables-algebraic-expressions-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 1: Variables & Algebraic Expressions",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "Umi/Codex manual rerun gate repair",
+      "approved_at": "2026-05-31T04:34:27Z"
+    },
+    {
+      "slug": "algebra-i-module-2-order-of-operations-v2",
+      "path": "teaching-videos/algebra-i-module-2-order-of-operations-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 2: Order of Operations",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "Umi/Codex manual rerun gate repair",
+      "approved_at": "2026-05-31T04:34:27Z"
+    },
     {
       "slug": "algebra-i-module-3-properties-of-real-numbers-v2",
       "path": "teaching-videos/algebra-i-module-3-properties-of-real-numbers-v2",
@@ -12,6 +34,50 @@
       "verdict": "pass",
       "approved_by": "foundation_daily_orchestrator",
       "approved_at": "2026-05-31T04:20:25Z"
+    },
+    {
+      "slug": "algebra-i-module-4-solving-one-step-two-step-v2",
+      "path": "teaching-videos/algebra-i-module-4-solving-one-step-two-step-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 4: Solving One-Step & Two-Step Equations",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "Umi/Codex manual rerun gate repair",
+      "approved_at": "2026-05-31T04:45:12Z"
+    },
+    {
+      "slug": "algebra-i-module-5-solving-multi-step-equations-literal-v2",
+      "path": "teaching-videos/algebra-i-module-5-solving-multi-step-equations-literal-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 5: Solving Multi-Step Equations & Literal Equations",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-05-31T12:10:11Z"
+    },
+    {
+      "slug": "algebra-i-module-6-inequalities-interval-notation-v2",
+      "path": "teaching-videos/algebra-i-module-6-inequalities-interval-notation-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 6: Inequalities & Interval Notation",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-05-31T12:17:09Z"
+    },
+    {
+      "slug": "algebra-i-module-7-introduction-to-functions-v2",
+      "path": "teaching-videos/algebra-i-module-7-introduction-to-functions-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 7: Introduction to Functions",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-05-31T12:24:12Z"
     },
     {
       "slug": "algebra-i-module-9-slope-rate-change-v2",
