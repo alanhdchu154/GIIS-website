@@ -93,7 +93,8 @@ def lesson_reasons(audit: dict, args: argparse.Namespace) -> tuple[str, list[str
 
     if issue_counts.get("major", 0):
         reasons.append("major audit issue present")
-    if verdict not in {"pass", "pass_with_minor_notes"}:
+    acceptable_verdicts = {"pass", "pass_with_minor_notes"} if args.allow_minor_notes else {"pass"}
+    if verdict not in acceptable_verdicts:
         reasons.append(f"audit verdict is {verdict}")
     if score < args.min_score:
         reasons.append(f"quality score {score} < required {args.min_score}")
@@ -123,7 +124,7 @@ def main() -> int:
     ap.add_argument("paths", nargs="*", help="Lesson folders. Defaults to all lesson folders.")
     ap.add_argument("--pending", action="store_true", help="Only evaluate rendered lessons not yet uploaded.")
     ap.add_argument("--course", help="Filter by course substring.")
-    ap.add_argument("--min-score", type=int, default=90, help="Minimum audit score for auto-upload.")
+    ap.add_argument("--min-score", type=int, default=100, help="Minimum audit score for upload readiness.")
     ap.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR))
     ap.add_argument("--check", action="store_true",
                     help="Evaluate and print results without writing latest-release-gate.json.")
@@ -131,6 +132,8 @@ def main() -> int:
     ap.add_argument("--require-transcript", action=argparse.BooleanOptionalAction, default=True)
     ap.add_argument("--require-reviewers", action=argparse.BooleanOptionalAction, default=True)
     ap.add_argument("--require-ap-citation", action=argparse.BooleanOptionalAction, default=True)
+    ap.add_argument("--allow-minor-notes", action="store_true",
+                    help="Allow pass_with_minor_notes to enter ready bucket. Default requires a clean pass.")
     ap.add_argument("--fail-on-blocked", action="store_true")
     args = ap.parse_args()
 
@@ -162,6 +165,7 @@ def main() -> int:
             "require_transcript": args.require_transcript,
             "require_reviewers": args.require_reviewers,
             "require_ap_citation": args.require_ap_citation,
+            "allow_minor_notes": args.allow_minor_notes,
             "pending_only": args.pending,
         },
         "summary": {k: len(v) for k, v in buckets.items()} | {"total": len(rows)},

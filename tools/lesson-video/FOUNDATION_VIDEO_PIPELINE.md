@@ -1,24 +1,33 @@
 # Foundation Video Pipeline
 
 Date: 2026-05-30
-Status: active v0.1
+Status: active v0.2 daily foundation loop
 
 ## Goal
 
 Make Claude Code able to produce high-quality non-AP foundation videos
 repeatably, while Umi remains the academic editor and release authority.
 
-This is the intended loop:
+This is the intended loop for every new foundation video:
 
 ```text
-Umi chooses foundation module
-  -> Umi writes bounded handoff
+23:00 CT foundation_daily_orchestrator.py
+  -> choose 2-3 non-AP foundation modules from server/prisma/courses/**/*.json
+  -> verify module outline and free/usable resource URLs
+  -> write source_packet.json + teaching_brief.md + visual_brief.md
+  -> write a bounded cc handoff
   -> cc_foundation_worker.py runs Claude Code with streaming progress
-  -> foundation_video_gate.py verifies slides/contact sheet/audit/release gate
-  -> Umi reviews contact sheet + MP4
-  -> human-visible approval artifact
-  -> gated YouTube queue upload
+  -> foundation_video_gate.py renders/checks slides, MP4, transcript, contact sheet
+  -> lesson_release_gate.py requires clean pass / score 100
+  -> orchestrator writes approved_ready_to_upload.json
+  -> yt_queue.py upload --gate-ready --privacy unlisted
+  -> sync_channel.py --apply updates the Learn Portal manifest
 ```
+
+Alan selected fully automatic daily upload. In implementation terms this means
+"automatic after Umi/Codex approval artifact", not direct upload. If the
+approval artifact is missing, `yt_queue.py` and `upload_lesson.py` refuse the
+upload.
 
 ## Why Claude Code Felt Slow
 
@@ -58,6 +67,30 @@ The wrapper:
 - restricts cc to file/read/edit/bash tools for this worker
 - passes a hard no-upload / no-AP contract
 
+## Daily Orchestrator
+
+Dry-run:
+
+```bash
+npm run lesson:foundation-daily:dry-run
+```
+
+Full run:
+
+```bash
+python3 tools/lesson-video/foundation_daily_orchestrator.py \
+  --max-modules 3 \
+  --upload-max 3 \
+  --privacy unlisted \
+  --auto-commit
+```
+
+The orchestrator records retry/blocking state under
+`teaching-videos/_audit/foundation-daily/`. If Claude Code times out, returns
+non-zero, or produces no tool progress, the module is marked `cc_blocked` and
+will be prioritized for retry before new modules. After two failed attempts, it
+requires Umi repair instead of silent repetition.
+
 ## Gate V2
 
 As of 2026-05-30, the foundation gate also checks:
@@ -71,6 +104,13 @@ As of 2026-05-30, the foundation gate also checks:
 
 `make_lesson.py` narrates answer-reveal sections when they contain text. Use
 `"silent": true` only when a section is intentionally silent.
+
+Upload readiness defaults to a clean gate:
+
+- audit verdict must be `pass`
+- quality score must be 100
+- `pass_with_minor_notes` stays in revision unless an operator explicitly uses
+  `--allow-minor-notes`
 
 ## Gate Command
 
@@ -96,14 +136,15 @@ python3 -m venv /tmp/giis-video-venv
 
 ## Release Rule
 
-`ready` from `lesson_release_gate.py` means ready for Umi/Alan review, not
-automatic publication.
+`ready` from `lesson_release_gate.py` means ready for Umi/Codex approval. For
+the daily foundation loop, Umi/Codex approval is represented by an entry in
+`teaching-videos/_audit/release-gate/approved_ready_to_upload.json`.
 
 Upload still requires:
 
-- Umi review of the contact sheet and MP4
+- a clean foundation gate and release gate
+- Codex/Umi approval artifact
 - no AP / authorization-sensitive claims
-- human-visible approval artifact
 - gated queue upload
 
 Do not use direct upload scripts for normal operations.

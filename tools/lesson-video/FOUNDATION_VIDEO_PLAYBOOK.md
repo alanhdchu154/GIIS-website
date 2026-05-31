@@ -1,7 +1,7 @@
 # Foundation Lesson Video Playbook
 
 Date: 2026-05-30
-Status: active for manual, Umi-approved foundation pilots
+Status: active for daily Umi/Codex-approved foundation production
 
 ## Decision
 
@@ -13,9 +13,11 @@ The next video work should focus on non-controversial foundation courses:
 Algebra I, English I, Biology, World History, U.S. History, Government,
 Health, and Physical Education.
 
-This is not a full pipeline restart. The paused automation remains paused.
-Foundation videos may be produced one at a time from a Umi-approved handoff,
-then passed through the normal release gate before upload.
+This is a controlled foundation-only restart, not a return to the old AP-era
+batch pipeline. New foundation videos are produced by
+`foundation_daily_orchestrator.py`: Codex/Umi prepares the source packet and
+quality brief, Claude Code produces the lesson mechanics, then Codex/Umi runs
+the strict gate and writes the upload approval artifact.
 
 ## Umi / Claude Code Split
 
@@ -23,10 +25,13 @@ Umi owns:
 
 - course priority
 - lesson scope
+- source packet
+- free/usable resource check
 - teaching brief
+- visual brief
 - misconception strategy
 - parent-facing trust review
-- final upload approval
+- final upload approval artifact
 
 Claude Code owns:
 
@@ -47,6 +52,11 @@ Claude Code must not:
 - use `--force-without-approval`
 - invent school authorization, College Board, Common App, or accreditation claims
 - upload to YouTube without a Umi-approved `approved_ready_to_upload` artifact
+
+The daily orchestrator treats Claude Code as blocked if it times out, exits
+non-zero, or produces no tool progress. Blocked modules are retried before new
+modules, but after two failed attempts they require Umi repair rather than
+silent repetition.
 
 ## Naming Rules
 
@@ -107,11 +117,24 @@ college admissions claims in foundation lesson titles or descriptions.
 4. Biology / World History / U.S. History
    - reason: core foundation subjects with less AP-authorization risk
 
+## Daily Schedule
+
+- 11:00 CT: `foundation_daily.sh` runs through launchd.
+- Max modules per day: 3.
+- Upload privacy: `unlisted`.
+- Upload path: `yt_queue.py upload --gate-ready --max 3 --privacy unlisted`.
+- Website update: successful upload triggers `sync_channel.py --apply`, then
+  the orchestrator can commit/push manifest and lesson metadata.
+- The legacy `daily_build.sh` and `tools/youtube-upload/daily.sh` remain
+  paused for new production.
+
 ## Acceptance Criteria
 
 A foundation lesson can move to upload review only when all are true:
 
 - module title and order match the course JSON
+- source packet exists and cites the course JSON
+- required external resources are free/usable and not hard-blocking
 - no AP or authorization-sensitive wording
 - `script.json` sections match slide filenames
 - `build_slides.py` renders without errors
@@ -123,8 +146,8 @@ A foundation lesson can move to upload review only when all are true:
 - pause prompt and answer reveal slides are visually different
 - transcript exists after rendering
 - MP4 exists after rendering
-- `audit_lessons.py` reports pass or minor-only notes
-- `lesson_release_gate.py` marks the lesson ready
-- Umi adds it to the human-visible approval artifact
+- `audit_lessons.py` reports clean `pass`
+- `lesson_release_gate.py` marks the lesson ready with clean `pass` / score 100
+- Umi/Codex adds it to `approved_ready_to_upload.json`
 
 If any condition fails, leave the lesson in `needs_revision`.

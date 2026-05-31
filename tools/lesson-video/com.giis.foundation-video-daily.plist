@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GIIS foundation-video daily runner · launchd job. Runs daily at 23:00 local time. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.giis.foundation-video-daily</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/alanhdchu/giis-website</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/alanhdchu/giis-website/tools/lesson-video/foundation_daily.sh</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>23</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>LowPriorityIO</key>
+    <true/>
+    <key>Nice</key>
+    <integer>5</integer>
+
+    <key>StandardOutPath</key>
+    <string>/Users/alanhdchu/Library/Logs/giis-foundation-video-daily.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/alanhdchu/Library/Logs/giis-foundation-video-daily.err.log</string>
+</dict>
+</plist>

@@ -162,14 +162,15 @@ Visual targets:
 - contact-sheet must look readable at thumbnail size
 - no slide should depend on tiny paragraphs
 
-## Human Release Rule
+## Foundation Daily Release Rule
 
-Until this has been stable for at least two weeks, automatic upload should be
-"gate-approved but human-visible":
+For the foundation daily pipeline, automatic upload means gate-approved plus
+Codex/Umi approval artifact. The artifact is the control surface:
 
 ```text
-ready_to_upload.json -> Alan/Codex review -> yt_queue upload
+foundation gate pass + release gate pass -> approved_ready_to_upload.json -> yt_queue upload --gate-ready
 ```
 
-After the gate proves stable, `yt_queue.py upload` can consume only
-`ready_to_upload.json` automatically.
+`yt_queue.py` may upload automatically only from
+`approved_ready_to_upload.json`; direct upload or `--force-without-approval`
+is outside the normal workflow.

@@ -33,6 +33,8 @@
     "yt:status": "python3 tools/youtube-upload/yt_queue.py status",
     "yt:upload": "python3 tools/youtube-upload/yt_queue.py upload",
     "lesson:cc-foundation": "python3 tools/lesson-video/cc_foundation_worker.py",
+    "lesson:foundation-daily": "python3 tools/lesson-video/foundation_daily_orchestrator.py",
+    "lesson:foundation-daily:dry-run": "python3 tools/lesson-video/foundation_daily_orchestrator.py --dry-run --no-cc --no-upload --skip-network-check",
     "lesson:foundation-gate": "python3 tools/lesson-video/foundation_video_gate.py",
     "audit:pathways": "node tools/pathway-quality/audit_courses.js",
     "audit:lesson-manifest": "node tools/youtube-upload/audit_manifest_alignment.js",

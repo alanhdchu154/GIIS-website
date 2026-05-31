@@ -20,13 +20,28 @@ Paused surfaces:
 Do not resume generation, build, upload, or auto-push for lesson videos until
 Alan explicitly re-enables the pipeline after a quality reset plan.
 
-## Foundation Exception
+## Foundation Daily Reset
 
-As of 2026-05-30, AP work remains deferred. A single non-AP foundation lesson
-may be produced manually only when there is a Umi-approved handoff under
-`umi/handoffs/` and the work follows
-`tools/lesson-video/FOUNDATION_VIDEO_PLAYBOOK.md`.
+As of 2026-05-30, AP work remains deferred. The only automation allowed to
+restart is the new foundation-first pipeline:
 
-This exception allows a bounded draft/render/review cycle. It does not allow
-scheduled generation, scheduled build, scheduled upload, playlist edits, or
-`--force-without-approval`.
+- `tools/lesson-video/foundation_daily_orchestrator.py`
+- `tools/lesson-video/foundation_daily.sh`
+- `tools/lesson-video/com.giis.foundation-video-daily.plist`
+
+This pipeline is allowed because it is not the old AP-era batch generator. It
+must:
+
+- select only non-AP foundation modules
+- create a Umi/Codex source packet, teaching brief, and visual brief first
+- delegate bounded production work to Claude Code
+- require the strict foundation gate and release gate
+- write `approved_ready_to_upload.json` only for clean score-100 lessons
+- upload only through `yt_queue.py upload --gate-ready`
+- never use `upload_lesson.py --force-without-approval`
+
+The old paused surfaces remain paused:
+
+- Claude Scheduled tasks `giis-lesson-pipeline-daily` / `giis-lesson-pipeline-late`
+- Mac LaunchAgents `com.giis.lesson-build` / `com.giis.youtube-daily`
+- Local runners `daily_build.sh` / `tools/youtube-upload/daily.sh`
