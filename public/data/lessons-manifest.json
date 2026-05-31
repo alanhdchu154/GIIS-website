@@ -1,7 +1,20 @@
 {
-  "generated_at": "2026-05-31T04:20:53+00:00",
+  "generated_at": "2026-05-31T04:22:08+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "Biology": [
+      {
+        "course": "Biology",
+        "course_slug": "biology",
+        "module_number": 1,
+        "module_title": "The Chemistry of Life",
+        "youtube_id": "JZln1AXPU24",
+        "url": "https://youtu.be/JZln1AXPU24",
+        "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
+        "published_at": "2026-05-31T04:20:45Z",
+        "lesson_dir": "biology-module-1-chemistry-of-life-v2"
+      }
+    ],
     "Algebra I": [
       {
         "course": "Algebra I",
@@ -41,6 +54,17 @@
     ]
   },
   "lessons": [
+    {
+      "course": "Biology",
+      "course_slug": "biology",
+      "module_number": 1,
+      "module_title": "The Chemistry of Life",
+      "youtube_id": "JZln1AXPU24",
+      "url": "https://youtu.be/JZln1AXPU24",
+      "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
+      "published_at": "2026-05-31T04:20:45Z",
+      "lesson_dir": "biology-module-1-chemistry-of-life-v2"
+    },
     {
       "course": "Algebra I",
       "course_slug": "algebra-i",
