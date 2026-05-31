@@ -126,8 +126,8 @@ college admissions claims in foundation lesson titles or descriptions.
 - Upload path: `yt_queue.py upload --gate-ready --max 3 --privacy unlisted`.
 - Website update: successful upload triggers `sync_channel.py --apply`, then
   the orchestrator can commit/push manifest and lesson metadata.
-- The legacy `daily_build.sh` and `tools/youtube-upload/daily.sh` remain
-  paused for new production.
+- The legacy `daily_build.sh` and `tools/youtube-upload/daily.sh` wrappers were
+  removed; the foundation orchestrator calls the gated upload queue directly.
 - Do not install a macOS LaunchAgent for this daily foundation pipeline unless
   Alan explicitly asks for a system-level fallback.
 

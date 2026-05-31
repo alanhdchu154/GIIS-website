@@ -36,9 +36,9 @@ upload_video.py run from this folder), breaking urllib3 /
 google-auth-oauthlib imports with `AttributeError: module 'queue' has
 no attribute 'Queue'`.
 
-To schedule daily at 9:00 AM Pacific (after quota resets), see:
-  tools/youtube-upload/com.giis.youtube-daily.plist  (launchd, recommended)
-  tools/youtube-upload/daily.sh                       (cron-friendly wrapper)
+Scheduling:
+  Use Codex automation or the foundation daily orchestrator. Do not install a
+  macOS LaunchAgent for normal GIIS lesson uploads.
 """
 from __future__ import annotations
 import argparse, json, sys, subprocess, datetime, os

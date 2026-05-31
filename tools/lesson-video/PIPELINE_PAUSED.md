@@ -5,20 +5,19 @@ Paused by Alan on 2026-05-22.
 Reason: prevent additional spend and avoid producing or uploading low-quality,
 unreviewed, or misaligned lesson videos.
 
-Paused surfaces:
+Closed legacy surfaces:
 
 - Claude Scheduled tasks:
   - `giis-lesson-pipeline-daily`
   - `giis-lesson-pipeline-late`
-- Mac LaunchAgents:
+- Removed Mac LaunchAgents:
   - `com.giis.lesson-build`
   - `com.giis.youtube-daily`
-- Local runners:
+- Removed local runners:
   - `tools/lesson-video/daily_build.sh`
   - `tools/youtube-upload/daily.sh`
 
-Do not resume generation, build, upload, or auto-push for lesson videos until
-Alan explicitly re-enables the pipeline after a quality reset plan.
+Do not resume the old generation, build, upload, or auto-push surfaces.
 
 ## Foundation Daily Reset
 
@@ -40,8 +39,8 @@ must:
 - upload only through `yt_queue.py upload --gate-ready`
 - never use `upload_lesson.py --force-without-approval`
 
-The old paused surfaces remain paused:
+The old paused surfaces remain closed/removed:
 
 - Claude Scheduled tasks `giis-lesson-pipeline-daily` / `giis-lesson-pipeline-late`
 - Mac LaunchAgents `com.giis.lesson-build` / `com.giis.youtube-daily`
-- Local runners `daily_build.sh` / `tools/youtube-upload/daily.sh`
+- Removed local runners `daily_build.sh` / `tools/youtube-upload/daily.sh`
