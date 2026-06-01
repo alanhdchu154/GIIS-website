@@ -15,10 +15,8 @@ import Nav from '../../main/Nav';
  * Ph.D.). Any policy change must be reflected here within one school day.
  *
  * IMPORTANT — for Alan to review before sharing externally:
- *   - Section 4 (Assessment & Proctoring) describes the webcam proctoring
- *     model that is PLANNED (Sprint 5, backlog T-501-503). I wrote it in
- *     present tense for the policy framing, but verify that's accurate to
- *     ship today, or change to forward-looking language.
+ *   - Section 4 (Assessment) describes current assessment records and
+ *     integrity expectations without overclaiming planned proctoring features.
  *   - Section 9 (Appeals) lists Alan + Shiyu as the appeals panel — confirm
  *     that division of labor.
  *   - Section 7 (AI Use) — Alan is the AI lead; this is the area where the
@@ -225,8 +223,8 @@ export default function HandbookPage({ language, toggleLanguage }) {
           <Section id="academic">
             <SectionHeading {...SECTIONS[1]} language={language} />
             <P>{en
-              ? "The GIIS academic program is delivered through the GIIS Learn Portal, a proprietary online learning environment. Each course consists of 14 instructional modules with embedded quizzes, a midterm examination (15 questions), and a final examination (20 questions). Each course earns 1.0 credit when delivered as a full-year course, and 0.5 credit when delivered as a single-semester course. All instruction and assessment are conducted in English."
-              : 'GIIS 学术课程通过自建的 GIIS Learn Portal 在线平台进行。每门课程包含 14 个教学模块（含课中 quiz）、1 次期中考（15 题）与 1 次期末考（20 题）。整学年课程获 1.0 学分，单学期课程获 0.5 学分。所有教学与评量均以英文进行。'}</P>
+              ? "The GIIS academic program is delivered through the GIIS Learn Portal, a proprietary online learning environment. Each course consists of instructional modules with embedded quizzes, required module assignments, a midterm examination (15 questions), and a final examination (20 questions). Each course earns 1.0 credit when delivered as a full-year course, and 0.5 credit when delivered as a single-semester course. All instruction and assessment are conducted in English."
+              : 'GIIS 学术课程通过自建的 GIIS Learn Portal 在线平台进行。每门课程包含教学模块（含课中 quiz）、必交模块作业、1 次期中考（15 题）与 1 次期末考（20 题）。整学年课程获 1.0 学分，单学期课程获 0.5 学分。所有教学与评量均以英文进行。'}</P>
             <P><strong>{en ? 'Grading scale (unweighted, 4.0 system):' : '成绩等第对应（未加权，4.0 制）：'}</strong></P>
             <UL>
               <li>A+ / A (93–100): 4.0 GPA</li>
@@ -237,8 +235,8 @@ export default function HandbookPage({ language, toggleLanguage }) {
               <li>F (0–59): 0.0 · {en ? 'no credit awarded' : '不计学分'}</li>
             </UL>
             <P>{en
-              ? <>Credit is awarded only upon satisfactory completion of all modules, the midterm, and the final exam, with an overall course grade of 60% (D−) or higher. The GPA is calculated on an unweighted 4.0 scale at this time; weighting for Honors and Advanced coursework will be introduced once external course audits (where applicable) are complete.</>
-              : <>仅当学生完成全部模块、期中与期末考、且总成绩达 60%（D−）以上方可获得学分。目前 GPA 采用未加权 4.0 制；待 Honors 与 Advanced 课程之外部审核完成后，将引入加权计算方式。</>}</P>
+              ? <>Credit is awarded only upon satisfactory completion of all modules, submission of all required module assignments, a passed midterm, a passed final exam, and a weighted course grade of 70% (C−) or higher. The GPA is calculated on an unweighted 4.0 scale at this time; weighting for Honors and Advanced coursework will be introduced once external course audits (where applicable) are complete.</>
+              : <>仅当学生完成全部模块、提交全部必交模块作业、通过期中与期末考、且加权总成绩达 70%（C−）以上方可获得学分。目前 GPA 采用未加权 4.0 制；待 Honors 与 Advanced 课程之外部审核完成后，将引入加权计算方式。</>}</P>
           </Section>
 
           {/* §3 Graduation */}
@@ -267,21 +265,21 @@ export default function HandbookPage({ language, toggleLanguage }) {
               : 'GIIS 的总结性评量经过设计，以保证所发学分的可信度：'}</P>
             <UL>
               <li>{en
-                ? <><strong>Randomized question banks.</strong> Midterm and final exams draw from a question bank at least three times larger than the test length; each student receives a unique, randomly ordered question set with randomized answer-option ordering.</>
-                : <><strong>题库随机化。</strong>期中、期末考从至少为考题数 3 倍以上的题库中随机抽取，每位学生收到独立、顺序随机的题组（含选项顺序随机化）。</>}</li>
+                ? <><strong>Question-bank controls.</strong> Midterm and final exams draw from maintained course question banks. GIIS is continuing to expand randomized delivery and additional integrity controls as the Learn Portal matures.</>
+                : <><strong>题库管理。</strong>期中、期末考使用经维护的课程题库。GIIS 会随着 Learn Portal 成熟持续扩展随机出题与额外诚信控制。</>}</li>
               <li>{en
-                ? <><strong>Proctored sessions.</strong> Final examinations are administered as proctored online sessions. Students activate webcam and present a valid ID at exam start; periodic frame captures are stored for the integrity period defined in §11.</>
-                : <><strong>监考机制。</strong>期末考以线上监考方式进行：考生需开启 webcam、出示身份证明；考试期间将定期截取画面，依 §11 隐私政策规定期限保存。</>}</li>
+                ? <><strong>Identity and integrity review.</strong> GIIS may require identity checks, live review, or additional documentation for selected exams or flagged attempts before credit is finalized.</>
+                : <><strong>身份与诚信审查。</strong>GIIS 可在部分考试或异常考试记录中要求身份核验、人工审查或补充材料，完成后再确认学分。</>}</li>
               <li>{en
-                ? <><strong>Lockdown monitoring.</strong> The Learn Portal logs page focus, tab switches, and developer-tool activation during exams. Repeated infractions void that examination attempt.</>
-                : <><strong>页面监测。</strong>考试期间 Learn Portal 将记录页面失焦、切换标签页、开发者工具启用等行为。多次违规将使该次考试无效。</>}</li>
+                ? <><strong>Assessment audit trail.</strong> The Learn Portal records submitted answers, scores, timestamps, and review-relevant activity so staff can investigate irregularities.</>
+                : <><strong>评量审计记录。</strong>Learn Portal 会记录提交答案、分数、时间戳与审查相关活动，供学校调查异常情况。</>}</li>
               <li>{en
-                ? <><strong>Oral defense.</strong> Selected courses require a short oral defense recording in which the student explains a core concept; this is graded by faculty alongside the written exam.</>
-                : <><strong>口头答辩。</strong>部分课程要求录制 5 分钟左右的概念阐述影片，由任课教师与笔试成绩一并评分。</>}</li>
+                ? <><strong>Oral defense when needed.</strong> Selected courses or flagged assessments may require a short oral explanation or follow-up review by faculty.</>
+                : <><strong>必要时口头说明。</strong>部分课程或异常评量可要求学生提交简短口头说明，并由教师进行后续审查。</>}</li>
             </UL>
             <P>{en
-              ? 'Every assessment session — start time, end time, IP address, device fingerprint, completion duration, and any integrity events — is recorded in the student\'s audit trail (see §10).'
-              : '每次评量的开始时间、结束时间、IP、设备指纹、用时与诚信事件均完整记录于学生学习审计日志（详见 §10）。'}</P>
+              ? 'Every submitted quiz, midterm, final exam, and assignment review is part of the student learning record and audit trail (see §10).'
+              : '每次提交的 quiz、期中考、期末考与作业批改都会进入学生学习记录与审计记录（详见 §10）。'}</P>
           </Section>
 
           {/* §5 Integrity */}
@@ -399,7 +397,7 @@ export default function HandbookPage({ language, toggleLanguage }) {
               : 'GIIS 依据 Family Educational Rights and Privacy Act (FERPA) 之原则处理学生档案。虽然本校为私立机构、法律上不受 FERPA 直接约束，但仍主动遵循其精神。'}</P>
             <UL>
               <li>{en ? 'Personally identifiable student data is shared only with: enrolled parents/guardians, faculty assigned to the student, designated college admissions offices upon request, and law enforcement under valid legal process.' : '学生可辨识资料仅与下列对象共享：在册家长/监护人、被指派之任课教师、学生书面同意后之大学招生办、合法法律程序下之执法单位。'}</li>
-              <li>{en ? 'Proctoring video frames are retained for 12 months after the exam date and then deleted unless flagged for an active integrity review.' : '监考画面自考试日起保留 12 个月后删除，但若标记为待审之诚信案件则继续保留至案件结束。'}</li>
+              <li>{en ? 'Exam and assignment review records are retained as part of the student academic record unless a shorter retention period is required by law or approved school policy.' : '考试与作业审查记录作为学生学术记录保存，除非法律或学校批准政策要求更短保存期限。'}</li>
               <li>{en ? 'Academic transcripts and diploma records are retained permanently.' : '学术成绩单与文凭记录将永久保存。'}</li>
               <li>{en ? 'Parents and students 18+ may request a copy of their full academic record within 30 days of written request.' : '家长及年满 18 岁之学生可于书面请求后 30 日内取得完整学术档案副本。'}</li>
             </UL>

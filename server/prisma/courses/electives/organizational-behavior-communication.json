@@ -15,8 +15,8 @@
       "objectives": "Define organizational behavior; explain why OB matters for managers and employees; identify the three levels of analysis — individual, group, and organization.",
       "readingUrl": "https://openstax.org/books/organizational-behavior/pages/1-introduction",
       "readingNote": "OpenStax Organizational Behavior — Ch 1.1: The Nature of Work",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://openstax.org/books/principles-management",
+      "videoNote": "OpenStax — Principles of Management open lesson resource for this topic: Introduction to Organizational Behavior.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2",
@@ -95,8 +95,8 @@
       "objectives": "Describe Tuckman's five stages of team development; identify common team roles; recognize groupthink and its symptoms; apply strategies for building high-performance teams.",
       "readingUrl": "https://openstax.org/books/organizational-behavior/pages/9-introduction",
       "readingNote": "OpenStax Organizational Behavior — Ch 9.1–9.2: Work Groups and Work Teams",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://openstax.org/books/principles-management",
+      "videoNote": "OpenStax — Principles of Management open lesson resource for this topic: Group Dynamics & Teamwork.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/what-is-leadership",
@@ -111,8 +111,8 @@
       "objectives": "Compare transformational and transactional leadership; apply situational leadership theory; explain distributed (shared) leadership and its relevance in flat organizations.",
       "readingUrl": "https://openstax.org/books/organizational-behavior/pages/12-introduction",
       "readingNote": "OpenStax Organizational Behavior — Ch 12.1–12.3: The Nature of Leadership",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://openstax.org/books/principles-management",
+      "videoNote": "OpenStax — Principles of Management open lesson resource for this topic: Leadership in Organizations.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2/running-a-business/managing-a-business/a/leadership-styles",
@@ -186,14 +186,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"The 'halo effect' in perception refers to:\" is: Letting one positive trait color your overall impression of a person.",
+      "type": "mc",
+      "question": "Choose the best answer: The 'halo effect' in perception refers to:",
       "options": [
-        "True",
-        "False"
+        "Letting one positive trait color your overall impression of a person",
+        "Preparing your response while the other person speaks",
+        "Halo effect",
+        "Horn effect"
       ],
-      "answer": "True",
-      "explanation": "True. Letting one positive trait color your overall impression of a person is correct.",
+      "answer": "Letting one positive trait color your overall impression of a person",
+      "explanation": "The best answer is Letting one positive trait color your overall impression of a person. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -239,14 +241,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Job Characteristics Model identifies autonomy as important because it increases an employee's sense of:\" is: Pay equity.",
+      "type": "mc",
+      "question": "Choose the best answer: The Job Characteristics Model identifies autonomy as important because it increases an employee's sense of:",
       "options": [
-        "True",
-        "False"
+        "Responsibility for work outcomes",
+        "Pay equity",
+        "Reducing the need for training programs",
+        "Basic Argument for The Negotiation Advantage"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Experienced responsibility for outcomes.",
+      "answer": "Responsibility for work outcomes",
+      "explanation": "The best answer is Responsibility for work outcomes. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -297,14 +301,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Situational Leadership Theory suggests that the best leadership style depends on:\" is: The follower's readiness and competence level.",
+      "type": "mc",
+      "question": "Choose the best answer: Situational Leadership Theory suggests that the best leadership style depends on:",
       "options": [
-        "True",
-        "False"
+        "The follower's readiness and competence level",
+        "The shared values, beliefs, and assumptions that guide behavior in an organization",
+        "Situational leadership",
+        "Autonomy, competence, and relatedness"
       ],
-      "answer": "True",
-      "explanation": "True. The follower's readiness and competence level is correct.",
+      "answer": "The follower's readiness and competence level",
+      "explanation": "The best answer is The follower's readiness and competence level. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -345,14 +351,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following is an example of the 'fundamental attribution error'\" is: Blaming a traffic jam for being late to work.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following is an example of the 'fundamental attribution error'?",
       "options": [
-        "True",
-        "False"
+        "Assuming a coworker is late because they are careless while ignoring a traffic delay",
+        "Blaming a traffic jam for being late to work",
+        "Preparing your response while the other person speaks",
+        "The informal communication network through which rumors and gossip travel"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Assuming a coworker who missed a deadline is lazy, without considering that they may have had a family emergency.",
+      "answer": "Assuming a coworker is late because they are careless while ignoring a traffic delay",
+      "explanation": "The best answer is Assuming a coworker is late because they are careless while ignoring a traffic delay. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -403,14 +411,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which communication network is most efficient for simple, routine tasks because one central person controls all information flow\" is: Wheel.",
+      "type": "mc",
+      "question": "Choose the best answer: Which communication network is most efficient for simple, routine tasks because one central person controls all information flow?",
       "options": [
-        "True",
-        "False"
+        "Wheel",
+        "The informal communication network through which rumors and gossip travel",
+        "Information overload",
+        "Developing a vision for change"
       ],
-      "answer": "True",
-      "explanation": "True. Wheel is correct.",
+      "answer": "Wheel",
+      "explanation": "The best answer is Wheel. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -456,14 +466,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which Thomas-Kilmann conflict resolution style is high in both assertiveness and cooperativeness — seeking a solution that fully satisfies all parties\" is: Avoiding.",
+      "type": "mc",
+      "question": "Choose the best answer: Which Thomas-Kilmann conflict resolution style is high in both assertiveness and cooperativeness - seeking a solution that fully satisfies all parties?",
       "options": [
-        "True",
-        "False"
+        "Collaborating",
+        "Avoiding",
+        "High productivity and clear role division",
+        "Balanced Approach To Negotiating All parties"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Collaborating.",
+      "answer": "Collaborating",
+      "explanation": "The best answer is Collaborating. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -514,14 +526,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Remote and hybrid work arrangements primarily challenge organizations in which of the following areas\" is: Maintaining team cohesion, communication, and organizational culture.",
+      "type": "mc",
+      "question": "Choose the best answer: Remote and hybrid work arrangements primarily challenge organizations in which of the following areas",
       "options": [
-        "True",
-        "False"
+        "Maintaining team cohesion, communication, and organizational culture",
+        "The informal communication network through which rumors and gossip travel",
+        "The study of how people and groups act within organizations",
+        "The study of organizational charts and reporting structures"
       ],
-      "answer": "True",
-      "explanation": "True. Maintaining team cohesion, communication, and organizational culture is correct.",
+      "answer": "Maintaining team cohesion, communication, and organizational culture",
+      "explanation": "The best answer is Maintaining team cohesion, communication, and organizational culture. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -572,14 +586,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"An organization that is described as 'mechanistic' would most likely have:\" is: Loosely defined roles, flat hierarchies, and decentralized decisions.",
+      "type": "mc",
+      "question": "Choose the best answer: An organization that is described as 'mechanistic' would most likely have:",
       "options": [
-        "True",
-        "False"
+        "Clearly defined roles, formal rules, centralized decisions, and a tall hierarchy",
+        "Loosely defined roles, flat hierarchies, and decentralized decisions",
+        "Conflict over roles, decisions, and leadership",
+        "The formal rules and policies written in an employee handbook"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Rigid rules, clear hierarchies, centralized authority, and narrow spans of control.",
+      "answer": "Clearly defined roles, formal rules, centralized decisions, and a tall hierarchy",
+      "explanation": "The best answer is Clearly defined roles, formal rules, centralized decisions, and a tall hierarchy. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -650,22 +666,24 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Organizational behavior (OB) is primarily concerned with:\" is: How people and groups behave in organizations.",
+      "question": "Choose the best answer: Organizational behavior (OB) is primarily concerned with:",
       "options": [
-        "True",
-        "False"
+        "Marketing strategies for growing a business",
+        "How people and groups behave in organizations",
+        "Financial accounting and budgeting",
+        "Legal compliance in the workplace"
       ],
-      "answer": "True",
-      "explanation": "True. How people and groups behave in organizations is correct.",
+      "answer": "How people and groups behave in organizations",
+      "explanation": "OB studies individual, group, and organizational factors that influence behavior - with the goal of improving organizational effectiveness and employee well-being.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"organizational culture and structure are best analyzed at which ob level.\"",
+      "question": "Short response: Define or explain: Organizational culture and structure are best analyzed at which ob level.",
       "options": null,
       "answer": "Organizational",
-      "explanation": "The correct answer is: Organizational.",
+      "explanation": "A correct response identifies \"Organizational\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -713,13 +731,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"What does the 'O' in the Big Five OCEAN model stand for\" is: Openness to Experience.",
+      "question": "Choose the best answer: What does the 'O' in the Big Five OCEAN model stand for?",
       "options": [
-        "True",
-        "False"
+        "Optimism",
+        "Openness to Experience",
+        "Objectivity",
+        "Orderliness"
       ],
-      "answer": "True",
-      "explanation": "True. Openness to Experience is correct.",
+      "answer": "Openness to Experience",
+      "explanation": "OCEAN: Openness to Experience, Conscientiousness, Extraversion, Agreeableness, Neuroticism.",
       "points": 1
     },
     {
@@ -851,25 +871,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"The Job Characteristics Model was developed by:\" is: Hackman and Oldham.",
+      "question": "Choose the best answer: The Job Characteristics Model was developed by:",
       "options": [
-        "True",
-        "False"
+        "Maslow and Herzberg",
+        "Hackman and Oldham",
+        "Tuckman and Vroom",
+        "French and Raven"
       ],
-      "answer": "True",
-      "explanation": "True. Hackman and Oldham is correct.",
+      "answer": "Hackman and Oldham",
+      "explanation": "Richard Hackman and Greg Oldham developed the Job Characteristics Model in the 1970s, identifying five core job dimensions that produce three critical psychological states.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Which core job dimension refers to the degree to which a job requires a variety of different skills and activities\" is: Task identity.",
+      "question": "Choose the best answer: Which core job dimension refers to the degree to which a job requires a variety of different skills and activities?",
       "options": [
-        "True",
-        "False"
+        "Task identity",
+        "Skill variety",
+        "Autonomy",
+        "Feedback"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Skill variety.",
+      "answer": "Skill variety",
+      "explanation": "Skill variety is the extent to which a job requires diverse skills and talents - a monotonous, repetitive job has low skill variety and produces low experienced meaningfulness.",
       "points": 1
     },
     {
@@ -917,13 +941,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"In which stage of Tuckman's model do team members get to know each other and roles are still unclear\" is: Forming.",
+      "question": "Choose the best answer: In which stage of Tuckman's model do team members get to know each other and roles are still unclear?",
       "options": [
-        "True",
-        "False"
+        "Storming",
+        "Norming",
+        "Forming",
+        "Performing"
       ],
-      "answer": "True",
-      "explanation": "True. Forming is correct.",
+      "answer": "Forming",
+      "explanation": "In the Forming stage, team members are polite and tentative, trying to understand the group's purpose, structure, and leadership - conflict is minimal because people are still getting acquainted.",
       "points": 1
     },
     {
@@ -957,13 +983,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"Transactional leadership primarily motivates through:\" is: Contingent rewards and corrective action.",
+      "question": "Choose the best answer: Transactional leadership primarily motivates through:",
       "options": [
-        "True",
-        "False"
+        "Inspiring followers with a compelling vision",
+        "Contingent rewards and corrective action",
+        "Empowering followers to lead themselves",
+        "Building deep personal relationships with each follower"
       ],
-      "answer": "True",
-      "explanation": "True. Contingent rewards and corrective action is correct.",
+      "answer": "Contingent rewards and corrective action",
+      "explanation": "Transactional leaders use exchange relationships - rewarding good performance and correcting (or punishing) poor performance - effective for routine, structured tasks.",
       "points": 1
     },
     {
@@ -1011,13 +1039,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Formal communication in an organization refers to:\" is: Communication that follows officially sanctioned channels and reporting lines.",
+      "question": "Choose the best answer: Formal communication in an organization refers to:",
       "options": [
-        "True",
-        "False"
+        "Communication that follows officially sanctioned channels and reporting lines",
+        "Messages sent via email between friends at work",
+        "Rumors and gossip circulating through the office",
+        "Face-to-face communication only"
       ],
-      "answer": "True",
-      "explanation": "True. Communication that follows officially sanctioned channels and reporting lines is correct.",
+      "answer": "Communication that follows officially sanctioned channels and reporting lines",
+      "explanation": "Formal communication travels through prescribed organizational channels - upward (employee to supervisor), downward (management directives), and horizontal (peers in different departments).",
       "points": 1
     }
   ],

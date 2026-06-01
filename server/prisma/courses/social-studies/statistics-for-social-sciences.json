@@ -266,14 +266,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Operationalization refers to:\" is: Defining how an abstract concept will be measured in practice.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Operationalization refers to:",
       "options": [
-        "True",
-        "False"
+        "Defining how an abstract concept will be measured in practice",
+        "Choosing a topic without variables",
+        "Writing conclusions before collecting data",
+        "Removing all measurements from a study"
       ],
-      "answer": "True",
-      "explanation": "True. Defining how an abstract concept will be measured in practice is correct.",
+      "answer": "Defining how an abstract concept will be measured in practice",
+      "explanation": "The correct answer is: Defining how an abstract concept will be measured in practice.",
       "points": 1
     },
     {
@@ -319,14 +321,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"The interquartile range (IQR) is defined as:\" is: The range between the minimum and maximum.",
+      "type": "mc",
+      "question": "Which option best completes this statement? The interquartile range (IQR) is defined as:",
       "options": [
-        "True",
-        "False"
+        "The spread between the first quartile and the third quartile",
+        "The range between the minimum and maximum",
+        "The average distance from the mean",
+        "The most common value in a distribution"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Q3 minus Q1.",
+      "answer": "The spread between the first quartile and the third quartile",
+      "explanation": "The correct answer is: The spread between the first quartile and the third quartile.",
       "points": 1
     },
     {
@@ -377,14 +381,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"A z-score of -1.5 indicates that an observation is:\" is: 1.5 standard deviations below the mean.",
+      "type": "mc",
+      "question": "Which option best completes this statement? A z-score of -1.5 indicates that an observation is:",
       "options": [
-        "True",
-        "False"
+        "1.5 standard deviations below the mean",
+        "1.5 standard deviations above the mean",
+        "Equal to the median",
+        "Outside the dataset by definition"
       ],
-      "answer": "True",
-      "explanation": "True. 1.5 standard deviations below the mean is correct.",
+      "answer": "1.5 standard deviations below the mean",
+      "explanation": "The correct answer is: 1.5 standard deviations below the mean.",
       "points": 1
     },
     {
@@ -430,14 +436,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following is a ratio-level variable\" is: Religion (Catholic, Protestant, Other).",
+      "type": "mc",
+      "question": "In this course, which of the following is a ratio-level variable?",
       "options": [
-        "True",
-        "False"
+        "Annual income in dollars",
+        "Religion (Catholic, Protestant, Other)",
+        "Political party identification",
+        "Letter grade category"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Number of years of education.",
+      "answer": "Annual income in dollars",
+      "explanation": "The correct answer is: Annual income in dollars.",
       "points": 1
     },
     {
@@ -488,14 +496,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Spearman's rho is preferred over Pearson r when:\" is: Data are ordinal or not normally distributed.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Spearman's rho is preferred over Pearson r when:",
       "options": [
-        "True",
-        "False"
+        "Data are ordinal or not normally distributed",
+        "Both variables are perfectly interval and normal",
+        "The study has no ranked data",
+        "The researcher wants a frequency table only"
       ],
-      "answer": "True",
-      "explanation": "True. Data are ordinal or not normally distributed is correct.",
+      "answer": "Data are ordinal or not normally distributed",
+      "explanation": "The correct answer is: Data are ordinal or not normally distributed.",
       "points": 1
     },
     {
@@ -546,14 +556,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"A 95% confidence interval for a mean means:\" is: There is a 95% probability the true mean is in this specific interval.",
+      "type": "mc",
+      "question": "Which option best completes this statement? A 95% confidence interval for a mean means:",
       "options": [
-        "True",
-        "False"
+        "In repeated sampling, about 95% of intervals made this way would contain the true mean",
+        "There is a 95% probability the true mean is in this specific interval",
+        "95% of all individual observations must be inside the interval",
+        "The sample mean is exactly equal to the population mean"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: If we repeated sampling many times, 95% of the intervals constructed would contain the true mean.",
+      "answer": "In repeated sampling, about 95% of intervals made this way would contain the true mean",
+      "explanation": "The correct answer is: In repeated sampling, about 95% of intervals made this way would contain the true mean.",
       "points": 1
     },
     {
@@ -604,14 +616,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"The replication crisis in social science refers to:\" is: The widespread failure to reproduce many published study findings.",
+      "type": "mc",
+      "question": "Which option best completes this statement? The replication crisis in social science refers to:",
       "options": [
-        "True",
-        "False"
+        "The widespread difficulty of reproducing many published study findings",
+        "A ban on publishing repeated studies",
+        "The use of too many random samples",
+        "A rule that every study must have identical results"
       ],
-      "answer": "True",
-      "explanation": "True. The widespread failure to reproduce many published study findings is correct.",
+      "answer": "The widespread difficulty of reproducing many published study findings",
+      "explanation": "The correct answer is: The widespread difficulty of reproducing many published study findings.",
       "points": 1
     },
     {
@@ -662,14 +676,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Publication bias in social science means:\" is: Journals are biased against certain topics.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Publication bias in social science means:",
       "options": [
-        "True",
-        "False"
+        "Studies with significant or positive results are more likely to be published",
+        "Journals are biased against certain topics",
+        "Researchers may never publish null results",
+        "Only qualitative studies can be accepted"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Studies with significant results are more likely to be published than null results.",
+      "answer": "Studies with significant or positive results are more likely to be published",
+      "explanation": "The correct answer is: Studies with significant or positive results are more likely to be published.",
       "points": 1
     },
     {
@@ -752,7 +768,7 @@
     {
       "moduleOrder": 2,
       "order": 1,
-      "question": "Race (e.g., Asian, Black, White, Other) is an example of which level of measurement?",
+      "question": "When treated as survey categories, race (e.g., Asian, Black, White, Other) is an example of which level of measurement?",
       "options": [
         "Nominal",
         "Ordinal",
@@ -794,13 +810,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Race (e.g., Asian, Black, White, Other) is an example of which level of measurement\" is: Nominal.",
+      "question": "Race (e.g., Asian, Black, White, Other) is an example of which level of measurement?",
       "options": [
-        "True",
-        "False"
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
       ],
-      "answer": "True",
-      "explanation": "True. Nominal is correct.",
+      "answer": "Nominal",
+      "explanation": "The correct answer is: Nominal.",
       "points": 1
     },
     {
@@ -932,25 +950,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"In a dataset of {2, 3, 3, 4, 8}, the median is:\" is: 3.",
+      "question": "Which option best completes this statement? In a dataset of {2, 3, 3, 4, 8}, the median is:",
       "options": [
-        "True",
-        "False"
+        "3",
+        "3.5",
+        "4",
+        "8"
       ],
-      "answer": "True",
-      "explanation": "True. 3 is correct.",
+      "answer": "3",
+      "explanation": "The correct answer is: 3.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"The mode of a dataset is:\" is: The average of all values.",
+      "question": "Which option best completes this statement? The mode of a dataset is:",
       "options": [
-        "True",
-        "False"
+        "The average of all values",
+        "The middle value when sorted",
+        "The most frequently occurring value",
+        "The difference between max and min"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The most frequently occurring value.",
+      "answer": "The most frequently occurring value",
+      "explanation": "The correct answer is: The most frequently occurring value.",
       "points": 1
     },
     {
@@ -998,13 +1020,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"The probability of flipping a fair coin and getting heads is:\" is: 0.5.",
+      "question": "Which option best completes this statement? The probability of flipping a fair coin and getting heads is:",
       "options": [
-        "True",
-        "False"
+        "0.25",
+        "0.5",
+        "0.75",
+        "1.0"
       ],
-      "answer": "True",
-      "explanation": "True. 0.5 is correct.",
+      "answer": "0.5",
+      "explanation": "The correct answer is: 0.5.",
       "points": 1
     },
     {
@@ -1038,13 +1062,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"The normal distribution is sometimes called the 'bell curve' because:\" is: It is shaped symmetrically like a bell, with most data near the mean.",
+      "question": "Which option best completes this statement? The normal distribution is sometimes called the 'bell curve' because:",
       "options": [
-        "True",
-        "False"
+        "It was invented by Alexander Graham Bell",
+        "It is shaped symmetrically like a bell, with most data near the mean",
+        "Its area sums to the number of bells in a dataset",
+        "Data always follows this distribution"
       ],
-      "answer": "True",
-      "explanation": "True. It is shaped symmetrically like a bell, with most data near the mean is correct.",
+      "answer": "It is shaped symmetrically like a bell, with most data near the mean",
+      "explanation": "The correct answer is: It is shaped symmetrically like a bell, with most data near the mean.",
       "points": 1
     },
     {
@@ -1092,13 +1118,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"A scatterplot displaying a pattern from lower-left to upper-right indicates:\" is: A positive correlation.",
+      "question": "Which option best completes this statement? A scatterplot displaying a pattern from lower-left to upper-right indicates:",
       "options": [
-        "True",
-        "False"
+        "A negative correlation",
+        "No correlation",
+        "A positive correlation",
+        "A perfect correlation of 1.0"
       ],
-      "answer": "True",
-      "explanation": "True. A positive correlation is correct.",
+      "answer": "A positive correlation",
+      "explanation": "The correct answer is: A positive correlation.",
       "points": 1
     },
     {
@@ -1230,25 +1258,29 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "True or False: The answer to \"A confidence interval provides:\" is: A range of plausible values for the population parameter.",
+      "question": "Which option best completes this statement? A confidence interval provides:",
       "options": [
-        "True",
-        "False"
+        "The exact population parameter",
+        "A range of plausible values for the population parameter",
+        "The probability that the sample is representative",
+        "A single best-guess estimate with no uncertainty"
       ],
-      "answer": "True",
-      "explanation": "True. A range of plausible values for the population parameter is correct.",
+      "answer": "A range of plausible values for the population parameter",
+      "explanation": "The correct answer is: A range of plausible values for the population parameter.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "True or False: The answer to \"The margin of error in a poll is directly related to:\" is: The number of questions in the survey.",
+      "question": "Which option best completes this statement? The margin of error in a poll is directly related to:",
       "options": [
-        "True",
-        "False"
+        "The number of questions in the survey",
+        "The sample size — larger samples produce smaller margins of error",
+        "The political topic being studied",
+        "The response rate of the poll"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The sample size — larger samples produce smaller margins of error.",
+      "answer": "The sample size — larger samples produce smaller margins of error",
+      "explanation": "The correct answer is: The sample size — larger samples produce smaller margins of error.",
       "points": 1
     },
     {
@@ -1296,13 +1328,15 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "True or False: The answer to \"The null hypothesis (H₀) in social research typically states:\" is: That there is no effect or no difference.",
+      "question": "Which option best completes this statement? The null hypothesis (H₀) in social research typically states:",
       "options": [
-        "True",
-        "False"
+        "That the researcher's prediction is correct",
+        "That there is no effect or no difference",
+        "That the sample is biased",
+        "That results are statistically significant"
       ],
-      "answer": "True",
-      "explanation": "True. That there is no effect or no difference is correct.",
+      "answer": "That there is no effect or no difference",
+      "explanation": "The correct answer is: That there is no effect or no difference.",
       "points": 1
     },
     {
@@ -1336,13 +1370,15 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "True or False: The answer to \"An observational study differs from an experiment because:\" is: Researchers observe without manipulating variables, so causal inference is limited.",
+      "question": "Which option best completes this statement? An observational study differs from an experiment because:",
       "options": [
-        "True",
-        "False"
+        "It never uses statistics",
+        "Researchers observe without manipulating variables, so causal inference is limited",
+        "It always has a control group",
+        "The sample is always larger"
       ],
-      "answer": "True",
-      "explanation": "True. Researchers observe without manipulating variables, so causal inference is limited is correct.",
+      "answer": "Researchers observe without manipulating variables, so causal inference is limited",
+      "explanation": "The correct answer is: Researchers observe without manipulating variables, so causal inference is limited.",
       "points": 1
     }
   ],

@@ -13,7 +13,7 @@
       "title": "What Is Psychology?",
       "titleZh": "什么是心理学？",
       "objectives": "Define psychology; identify major theoretical perspectives; understand the history from Wundt to modern approaches; recognize psychology as a science.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e — Chapter 1: Introduction to Psychology",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/history-and-approaches-to-psychology-ap/history-of-psychology-ap/v/history-of-psychology",
       "videoNote": "Khan Academy — History of Psychology",
@@ -29,7 +29,7 @@
       "title": "Research Methods in Psychology",
       "titleZh": "心理学研究方法",
       "objectives": "Distinguish experimental, correlational, and descriptive research; identify variables; understand ethics in psychological research.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e — Chapter 2: Psychological Research",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/research-methods-and-statistics-ap/research-methods-ap/v/correlational-studies",
       "videoNote": "Khan Academy — Research Methods in Psychology",
@@ -45,7 +45,7 @@
       "title": "Biological Bases of Behavior",
       "titleZh": "行为的生物学基础",
       "objectives": "Describe neuron structure and function; identify key neurotransmitters and their effects; locate major brain structures and their roles.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/3-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e — Chapter 3: Biopsychology",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/biological-bases-of-behavior-ap/the-neuron-and-neural-firing-ap/v/neuron-3d-animation",
       "videoNote": "Khan Academy — The Neuron & Neural Firing",
@@ -61,7 +61,7 @@
       "title": "Sensation and Perception",
       "titleZh": "感觉与知觉",
       "objectives": "Distinguish sensation from perception; explain absolute and difference thresholds; describe Gestalt principles and depth cues.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/5-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e — Chapter 5: Sensation and Perception",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/sensation-and-perception-ap/vision-ap/v/how-we-see-vision-and-the-eye",
       "videoNote": "Khan Academy — Vision and the Eye",
@@ -77,7 +77,7 @@
       "title": "States of Consciousness",
       "titleZh": "意识状态",
       "objectives": "Describe sleep stages and their functions; explain theories of dreaming; understand how hypnosis and psychoactive drugs alter consciousness.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/4-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e — Chapter 4: States of Consciousness",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/states-of-consciousness-ap/sleep-ap/v/sleep-stages",
       "videoNote": "Khan Academy — Sleep Stages",
@@ -93,7 +93,7 @@
       "title": "Learning and Conditioning",
       "titleZh": "学习与条件作用",
       "objectives": "Explain classical and operant conditioning with examples; describe schedules of reinforcement; apply observational learning theory.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e — Chapter 6: Learning",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/learning-ap/classical-conditioning-ap/v/classical-conditioning-ivan-pavlov",
       "videoNote": "Khan Academy — Classical Conditioning",
@@ -109,7 +109,7 @@
       "title": "Memory",
       "titleZh": "记忆",
       "objectives": "Describe encoding, storage, and retrieval; compare short-term and long-term memory; explain forgetting and memory distortion.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/8-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e — Chapter 8: Memory",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/memory-ap/introduction-to-memory-ap/v/memory-encoding",
       "videoNote": "Khan Academy — Memory Encoding",
@@ -125,7 +125,7 @@
       "title": "Thinking and Intelligence",
       "titleZh": "思维与智力",
       "objectives": "Describe problem-solving strategies and cognitive biases; compare theories of intelligence; discuss the nature–nurture debate in intelligence.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e — Chapter 7: Thinking and Intelligence",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/cognition-ap/language-and-thought-ap/v/problem-solving-and-decision-making",
       "videoNote": "Khan Academy — Problem Solving and Decision Making",
@@ -186,14 +186,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Gestalt principle that states we tend to group nearby objects together is called:\" is: Proximity.",
+      "type": "mc",
+      "question": "Which option best completes this statement? The Gestalt principle that states we tend to group nearby objects together is called:",
       "options": [
-        "True",
-        "False"
+        "Proximity",
+        "Similarity",
+        "Closure",
+        "Figure-ground"
       ],
-      "answer": "True",
-      "explanation": "True. Proximity is correct.",
+      "answer": "Proximity",
+      "explanation": "The correct answer is: Proximity.",
       "points": 1
     },
     {
@@ -239,14 +241,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"According to the absolute threshold, a stimulus must be detectable __________ of the time.\" is: 100%.",
+      "type": "mc",
+      "question": "According to the absolute threshold, a stimulus must be detectable __________ of the time?",
       "options": [
-        "True",
-        "False"
+        "50%",
+        "100%",
+        "75%",
+        "0%"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 50%.",
+      "answer": "50%",
+      "explanation": "The correct answer is: 50%.",
       "points": 1
     },
     {
@@ -297,14 +301,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"George Miller found that short-term memory holds approximately __________ chunks of information.\" is: 7 ± 2.",
+      "type": "mc",
+      "question": "George Miller found that short-term memory holds approximately __________ chunks of information?",
       "options": [
-        "True",
-        "False"
+        "7 plus or minus 2",
+        "2 plus or minus 1",
+        "20 plus or minus 5",
+        "Unlimited chunks"
       ],
-      "answer": "True",
-      "explanation": "True. 7 ± 2 is correct.",
+      "answer": "7 plus or minus 2",
+      "explanation": "The correct answer is: 7 plus or minus 2.",
       "points": 1
     },
     {
@@ -350,14 +356,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Psychology is best defined as:\" is: The study of the brain's physical structure.",
+      "type": "mc",
+      "question": "On a final exam, psychology is best defined as:",
       "options": [
-        "True",
-        "False"
+        "The study of the brain's physical structure",
+        "The scientific study of behavior and mental processes",
+        "The treatment of mental illness",
+        "The study of human society"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The scientific study of behavior and mental processes.",
+      "answer": "The scientific study of behavior and mental processes",
+      "explanation": "The correct answer is: The scientific study of behavior and mental processes.",
       "points": 1
     },
     {
@@ -408,14 +416,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following is classified as a stimulant\" is: Caffeine.",
+      "type": "mc",
+      "question": "In this course, which of the following is classified as a stimulant?",
       "options": [
-        "True",
-        "False"
+        "Caffeine",
+        "Alcohol",
+        "Morphine",
+        "Melatonin"
       ],
-      "answer": "True",
-      "explanation": "True. Caffeine is correct.",
+      "answer": "Caffeine",
+      "explanation": "The correct answer is: Caffeine.",
       "points": 1
     },
     {
@@ -461,14 +471,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"According to Piaget, understanding that the amount of liquid does not change when poured into a different container is called:\" is: Object permanence.",
+      "type": "mc",
+      "question": "Which option best completes this statement? According to Piaget, understanding that the amount of liquid does not change when poured into a different container is called:",
       "options": [
-        "True",
-        "False"
+        "Conservation",
+        "Object permanence",
+        "Egocentrism",
+        "Assimilation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Conservation.",
+      "answer": "Conservation",
+      "explanation": "The correct answer is: Conservation.",
       "points": 1
     },
     {
@@ -574,14 +586,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Watson and Rayner's \"Little Albert\" experiment demonstrated:\" is: Operant conditioning in infants.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Watson and Rayner's \"Little Albert\" experiment demonstrated:",
       "options": [
-        "True",
-        "False"
+        "Classical conditioning of an emotional response",
+        "Operant conditioning in infants",
+        "Observational learning from a model",
+        "The stages of moral development"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Classical conditioning of fear in humans.",
+      "answer": "Classical conditioning of an emotional response",
+      "explanation": "The correct answer is: Classical conditioning of an emotional response.",
       "points": 1
     },
     {
@@ -662,22 +676,24 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Psychology is best defined as:\" is: The scientific study of behavior and mental processes.",
+      "question": "Which option best completes this statement? Psychology is best defined as:",
       "options": [
-        "True",
-        "False"
+        "The study of the brain's physical structure",
+        "The scientific study of behavior and mental processes",
+        "The treatment of mental illness",
+        "The study of human society"
       ],
-      "answer": "True",
-      "explanation": "True. The scientific study of behavior and mental processes is correct.",
+      "answer": "The scientific study of behavior and mental processes",
+      "explanation": "The correct answer is: The scientific study of behavior and mental processes.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"using positive reinforcement to encourage a child's good behavior is an example of which psychological perspective in practice.\"",
+      "question": "Short response: Define or explain: Using positive reinforcement to encourage a child's good behavior is an example of which psychological perspective in practice.",
       "options": null,
       "answer": "Behavioral",
-      "explanation": "The correct answer is: Behavioral.",
+      "explanation": "A correct response identifies \"Behavioral\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -725,13 +741,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"In an experiment, the variable the researcher manipulates is called the:\" is: Independent variable.",
+      "question": "Which option best completes this statement? In an experiment, the variable the researcher manipulates is called the:",
       "options": [
-        "True",
-        "False"
+        "Dependent variable",
+        "Control variable",
+        "Independent variable",
+        "Confounding variable"
       ],
-      "answer": "True",
-      "explanation": "True. Independent variable is correct.",
+      "answer": "Independent variable",
+      "explanation": "The correct answer is: Independent variable.",
       "points": 1
     },
     {
@@ -779,10 +797,10 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the limbic system is most associated with:.\"",
+      "question": "Short response: Complete this statement: The limbic system is most associated with...",
       "options": null,
       "answer": "Emotion and memory",
-      "explanation": "The correct answer is: Emotion and memory.",
+      "explanation": "A correct response identifies \"Emotion and memory\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -872,25 +890,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"Which sleep stage is characterized by rapid eye movement and vivid dreaming\" is: REM sleep.",
+      "question": "In this course, which sleep stage is characterized by rapid eye movement and vivid dreaming?",
       "options": [
-        "True",
-        "False"
+        "Stage 1",
+        "Stage 2",
+        "Slow-wave sleep",
+        "REM sleep"
       ],
-      "answer": "True",
-      "explanation": "True. REM sleep is correct.",
+      "answer": "REM sleep",
+      "explanation": "The correct answer is: REM sleep.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"According to Freud, the actual story and images of a dream represent the:\" is: Latent content.",
+      "question": "Which option best completes this statement? According to Freud, the actual story and images of a dream represent the:",
       "options": [
-        "True",
-        "False"
+        "Latent content",
+        "Manifest content",
+        "Symbolic meaning",
+        "Unconscious wish"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Manifest content.",
+      "answer": "Manifest content",
+      "explanation": "The correct answer is: Manifest content.",
       "points": 1
     },
     {
@@ -938,22 +960,24 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"In Pavlov's experiment, after conditioning the bell became a:\" is: Conditioned stimulus.",
+      "question": "Which option best completes this statement? In Pavlov's experiment, after conditioning the bell became a:",
       "options": [
-        "True",
-        "False"
+        "Unconditioned stimulus",
+        "Neutral stimulus",
+        "Conditioned stimulus",
+        "Unconditioned response"
       ],
-      "answer": "True",
-      "explanation": "True. Conditioned stimulus is correct.",
+      "answer": "Conditioned stimulus",
+      "explanation": "The correct answer is: Conditioned stimulus.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"taking aspirin to relieve a headache is an example of:.\"",
+      "question": "Short response: Define or explain: Taking aspirin to relieve a headache is an example of.",
       "options": null,
       "answer": "Negative reinforcement",
-      "explanation": "The correct answer is: Negative reinforcement.",
+      "explanation": "A correct response identifies \"Negative reinforcement\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -987,13 +1011,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"The three stages of memory processing in correct order are:\" is: Encoding → Storage → Retrieval.",
+      "question": "Which option best completes this statement? The three stages of memory processing in correct order are:",
       "options": [
-        "True",
-        "False"
+        "Storage → Encoding → Retrieval",
+        "Encoding → Storage → Retrieval",
+        "Retrieval → Encoding → Storage",
+        "Encoding → Retrieval → Storage"
       ],
-      "answer": "True",
-      "explanation": "True. Encoding → Storage → Retrieval is correct.",
+      "answer": "Encoding → Storage → Retrieval",
+      "explanation": "The correct answer is: Encoding → Storage → Retrieval.",
       "points": 1
     },
     {
@@ -1041,13 +1067,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Searching only for information that confirms existing beliefs is called:\" is: Confirmation bias.",
+      "question": "Which option best completes this statement? Searching only for information that confirms existing beliefs is called:",
       "options": [
-        "True",
-        "False"
+        "Functional fixedness",
+        "Hindsight bias",
+        "Confirmation bias",
+        "Availability heuristic"
       ],
-      "answer": "True",
-      "explanation": "True. Confirmation bias is correct.",
+      "answer": "Confirmation bias",
+      "explanation": "The correct answer is: Confirmation bias.",
       "points": 1
     }
   ],

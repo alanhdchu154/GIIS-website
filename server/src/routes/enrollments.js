@@ -27,11 +27,32 @@ function answerVariants(question) {
   return variants;
 }
 
+function isGenericShortResponseKey(question) {
+  const hasOptions = Array.isArray(question.options) && question.options.length > 0;
+  return !hasOptions && /^A complete response should answer this prompt directly:/i.test(String(question.answer || '').trim());
+}
+
+function isOpenResponseQuestion(question) {
+  const hasOptions = Array.isArray(question.options) && question.options.length > 0;
+  return !hasOptions && String(question.type || '').toLowerCase() === 'short';
+}
+
+function isSubstantiveShortResponse(value) {
+  const text = String(value || '').trim().replace(/\s+/g, ' ');
+  const words = text.split(/\s+/).filter(Boolean);
+  const lowEffort = /^(idk|i don't know|i do not know|none|no idea|n\/a|na|test|asdf|\.)$/i;
+  return text.length >= 30 && words.length >= 5 && !lowEffort.test(text);
+}
+
 function isCorrectAnswer(question, given) {
+  if (isOpenResponseQuestion(question) || isGenericShortResponseKey(question)) return isSubstantiveShortResponse(given);
   return answerVariants(question).has(normalizeAnswer(given));
 }
 
 function displayAnswer(question) {
+  if (isGenericShortResponseKey(question)) {
+    return 'A complete response should answer the prompt directly using course vocabulary, reasoning, and evidence from the module.';
+  }
   const answer = String(question.answer || '').trim();
   const letterIndex = /^[A-D]$/i.test(answer) ? answer.toUpperCase().charCodeAt(0) - 65 : -1;
   if (letterIndex >= 0 && Array.isArray(question.options) && question.options[letterIndex]) {
@@ -310,7 +331,7 @@ router.get('/', authenticate, requireStudent, async (req, res) => {
   const enrollments = await prisma.enrollment.findMany({
     where: { studentId: req.auth.studentId },
     include: {
-      course: { select: { slug: true, name: true, nameZh: true, credits: true, department: true, type: true, _count: { select: { modules: true } } } },
+      course: { select: { slug: true, name: true, nameZh: true, credits: true, department: true, type: true, gradeLevel: true, _count: { select: { modules: true } } } },
       quizAttempts: { select: { moduleOrder: true, score: true } },
       examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
     },
@@ -436,7 +457,13 @@ router.get('/:slug/grades', authenticate, requireStudent, async (req, res) => {
       title: mod.title,
       titleZh: mod.titleZh,
       quiz: attempt ? { score: Number(attempt.score), passed: attempt.passed, submittedAt: attempt.submittedAt } : null,
-      assignment: assignment ? { content: assignment.content, feedback: assignment.feedback, submittedAt: assignment.submittedAt } : null,
+      assignment: assignment ? {
+        content: assignment.content,
+        feedback: assignment.feedback,
+        score: assignment.score != null ? Number(assignment.score) : null,
+        submittedAt: assignment.submittedAt,
+        gradedAt: assignment.gradedAt,
+      } : null,
       progress: progress || null,
     };
   });
@@ -574,18 +601,30 @@ router.post('/:slug/assignment/:moduleOrder', authenticate, requireStudent, bloc
   const { content } = req.body || {};
   if (!moduleOrder || !content?.trim()) return res.status(400).json({ error: 'moduleOrder and content are required' });
 
-  const course = await prisma.course.findUnique({ where: { slug: req.params.slug }, select: { id: true } });
+  const course = await prisma.course.findUnique({
+    where: { slug: req.params.slug },
+    select: { id: true, modules: { select: { order: true } } },
+  });
   if (!course) return res.status(404).json({ error: 'Course not found' });
 
   const enrollment = await prisma.enrollment.findUnique({
     where: { studentId_courseId: { studentId: req.auth.studentId, courseId: course.id } },
+    include: { assignments: { select: { moduleOrder: true } } },
   });
   if (!enrollment) return res.status(404).json({ error: 'Not enrolled' });
 
+  const submittedAt = new Date();
   const submission = await prisma.assignmentSubmission.upsert({
     where: { enrollmentId_moduleOrder: { enrollmentId: enrollment.id, moduleOrder } },
-    update: { content: content.trim() },
-    create: { enrollmentId: enrollment.id, moduleOrder, content: content.trim() },
+    update: {
+      content: content.trim(),
+      submittedAt,
+      feedback: '',
+      score: null,
+      gradedAt: null,
+      gradedById: null,
+    },
+    create: { enrollmentId: enrollment.id, moduleOrder, content: content.trim(), submittedAt },
   });
   await touchModuleProgress(enrollment.id, moduleOrder, ['assignmentSubmittedAt'], submission.submittedAt);
 
@@ -608,6 +647,7 @@ router.post('/:slug/exam', authenticate, requireStudent, blockIfSoftLocked, asyn
     where: { studentId_courseId: { studentId: req.auth.studentId, courseId: course.id } },
     include: {
       quizAttempts: { select: { moduleOrder: true } },
+      assignments: { select: { moduleOrder: true } },
       examAttempts: { where: { examType }, orderBy: { startedAt: 'desc' }, take: 1 },
     },
   });
@@ -615,6 +655,7 @@ router.post('/:slug/exam', authenticate, requireStudent, blockIfSoftLocked, asyn
   if (enrollment.creditEarned) return res.status(409).json({ error: 'Credit already earned' });
 
   const submittedQuizModules = new Set(enrollment.quizAttempts.map((a) => a.moduleOrder));
+  const submittedAssignmentModules = new Set(enrollment.assignments.map((a) => a.moduleOrder));
   const totalModules = course.modules.length;
 
   if (examType === 'midterm') {
@@ -630,11 +671,16 @@ router.post('/:slug/exam', authenticate, requireStudent, blockIfSoftLocked, asyn
       if (!submittedQuizModules.has(i)) {
         return res.status(403).json({ error: `Complete all module quizzes before taking the final exam` });
       }
+      if (!submittedAssignmentModules.has(i)) {
+        return res.status(403).json({ error: `Submit all module assignments before taking the final exam` });
+      }
     }
     const midtermAttempt = await prisma.examAttempt.findFirst({
       where: { enrollmentId: enrollment.id, examType: 'midterm', submittedAt: { not: null } },
+      orderBy: { submittedAt: 'desc' },
     });
     if (!midtermAttempt) return res.status(403).json({ error: 'Complete the midterm exam before taking the final' });
+    if (!midtermAttempt.passed) return res.status(403).json({ error: 'Pass the midterm exam before taking the final' });
   }
 
   // 24h retake cooldown on failed attempts
@@ -671,6 +717,13 @@ router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, block
     where: { id: req.params.attemptId, enrollmentId: enrollment.id, submittedAt: null },
   });
   if (!attempt) return res.status(404).json({ error: 'Attempt not found or already submitted' });
+  if (attempt.examType === 'final') {
+    const submittedAssignmentModules = new Set(enrollment.assignments.map((a) => a.moduleOrder));
+    const missingAssignment = (course.modules || []).find((module) => !submittedAssignmentModules.has(module.order));
+    if (missingAssignment) {
+      return res.status(403).json({ error: 'Submit all module assignments before submitting the final exam' });
+    }
+  }
 
   const questions = await prisma.examQuestion.findMany({ where: { courseId: course.id, examType: attempt.examType } });
 
@@ -690,9 +743,27 @@ router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, block
     data: { submittedAt: new Date(), score, passed, answers },
   });
 
-  // Credit earned when final is passed (grade check happens separately; passing final = credit)
+  // Credit is awarded only when the final is passed and the weighted course grade meets the threshold.
   if (attempt.examType === 'final' && passed && !enrollment.creditEarned) {
-    await prisma.enrollment.update({ where: { id: enrollment.id }, data: { creditEarned: true, creditEarnedAt: new Date() } });
+    const attempts = await prisma.enrollment.findUnique({
+      where: { id: enrollment.id },
+      include: {
+        quizAttempts: true,
+        examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
+        course: { select: { modules: { select: { order: true } } } },
+      },
+    });
+    const midterm = attempts.examAttempts.find((a) => a.examType === 'midterm' && a.passed !== null) || null;
+    const final_ = attempts.examAttempts.find((a) => a.examType === 'final' && a.passed !== null) || null;
+    const grade = computeGrade({
+      quizAttempts: attempts.quizAttempts,
+      midterm,
+      final_,
+      totalModules: attempts.course.modules.length,
+    });
+    if (grade.weighted !== null && grade.weighted >= PASS_THRESHOLD) {
+      await prisma.enrollment.update({ where: { id: enrollment.id }, data: { creditEarned: true, creditEarnedAt: new Date() } });
+    }
   }
 
   res.json({ score: Math.round(score * 10) / 10, passed, earned, total, graded, examType: attempt.examType, attempt: updatedAttempt });
@@ -700,11 +771,16 @@ router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, block
 
 // ── Admin ─────────────────────────────────────────────────────────────────────
 
-// PATCH /api/enrollments/admin/:enrollmentId/assignment/:moduleOrder/feedback — teacher feedback
+// PATCH /api/enrollments/admin/:enrollmentId/assignment/:moduleOrder/feedback — legacy teacher feedback route
 router.patch('/admin/:enrollmentId/assignment/:moduleOrder/feedback', authenticate, requireAdmin, async (req, res) => {
   const moduleOrder = parseInt(req.params.moduleOrder, 10);
-  const { feedback } = req.body || {};
+  const { feedback, score } = req.body || {};
   if (!feedback?.trim()) return res.status(400).json({ error: 'feedback is required' });
+  if (score == null || score === '') return res.status(400).json({ error: 'score is required' });
+  const parsedScore = Number(score);
+  if (!Number.isFinite(parsedScore) || parsedScore < 0 || parsedScore > 100) {
+    return res.status(400).json({ error: 'score must be between 0 and 100' });
+  }
 
   const submission = await prisma.assignmentSubmission.findFirst({
     where: { enrollmentId: req.params.enrollmentId, moduleOrder },
@@ -713,7 +789,12 @@ router.patch('/admin/:enrollmentId/assignment/:moduleOrder/feedback', authentica
 
   const updated = await prisma.assignmentSubmission.update({
     where: { id: submission.id },
-    data: { feedback: feedback.trim(), gradedAt: submission.gradedAt || new Date() },
+    data: {
+      feedback: feedback.trim(),
+      score: parsedScore,
+      gradedAt: new Date(),
+      gradedById: req.auth.adminId,
+    },
   });
   await touchModuleProgress(req.params.enrollmentId, moduleOrder, ['assignmentGradedAt'], updated.gradedAt);
   res.json(updated);

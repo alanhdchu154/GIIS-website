@@ -63,8 +63,8 @@
       "objectives": "Describe the three stages of cell signaling: reception, transduction, and response. Explain how ligands bind to receptors and how signal transduction cascades amplify signals. Compare local and long-distance signaling.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/9-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 9: Cell Communication — read sections 9.1-9.4 on signaling molecules, cell-surface receptors, intracellular signal transduction, and cellular response.",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://www.khanacademy.org/science/ap-biology",
+      "videoNote": "Khan Academy — AP Biology course videos and lessons for this topic: Cell Communication.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/cell-communication-and-cell-cycle",
@@ -207,8 +207,8 @@
       "objectives": "Describe interspecific interactions including competition, predation, mutualism, commensalism, and parasitism. Explain community succession (primary and secondary). Describe species diversity and its importance for ecosystem stability.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/45-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 45: Population and Community Ecology — read sections 45.6-45.8 on species interactions, ecological succession, and biodiversity.",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://www.khanacademy.org/science/ap-biology",
+      "videoNote": "Khan Academy — AP Biology course videos and lessons for this topic: Community Ecology.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/ecology/community-ecology",
@@ -223,8 +223,8 @@
       "objectives": "Explain energy flow through ecosystems using trophic levels, food webs, and ecological pyramids. Describe the carbon and nitrogen biogeochemical cycles. Discuss how human activities disrupt ecosystem processes and contribute to climate change.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption.",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://www.khanacademy.org/science/ap-biology",
+      "videoNote": "Khan Academy — AP Biology course videos and lessons for this topic: Ecosystems and Energy Flow.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/ecology/energy-flow-through-ecosystems",
@@ -239,8 +239,8 @@
       "objectives": "Analyze ecosystem case studies using energy-flow models, trophic efficiency, population interactions, and disturbance data, then connect evidence to AP-style ecological reasoning.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption. (Advanced)",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://www.khanacademy.org/science/ap-biology",
+      "videoNote": "Khan Academy — AP Biology course videos and lessons for this topic: Ecosystems and Energy Flow — Advanced Applications.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/ecology/energy-flow-through-ecosystems",
@@ -255,8 +255,8 @@
       "objectives": "Synthesize ecology, evolution, genetics, and cellular processes into AP-style explanations, identify remaining misconception areas, and practice timed free-response planning.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption. (Advanced)",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://owl.purdue.edu/owl/",
+      "videoNote": "Purdue OWL — Open writing lesson resource for this topic: Ecosystems and Energy Flow — Synthesis & Review.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-biology/ecology/energy-flow-through-ecosystems",
@@ -311,13 +311,15 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "True or False: The answer to \"Which property of water allows it to act as a solvent for ionic compounds\" is: Its polar covalent bonds and hydrogen bonding.",
+      "question": "Which feature of water helps it dissolve many ionic compounds?",
       "options": [
-        "True",
-        "False"
+        "Nonpolar bonds between hydrogen and oxygen",
+        "Polar covalent bonds that create partial charges",
+        "A lack of attraction between water molecules",
+        "A low specific heat compared with most liquids"
       ],
-      "answer": "True",
-      "explanation": "True. Its polar covalent bonds and hydrogen bonding is correct.",
+      "answer": "Polar covalent bonds that create partial charges",
+      "explanation": "Water is polar: oxygen has a partial negative charge and hydrogens have partial positive charges. These partial charges surround and separate ions in solution.",
       "points": 1
     },
     {
@@ -379,13 +381,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "True or False: The answer to \"Which organelle is responsible for synthesizing proteins\" is: Ribosomes.",
+      "question": "Which cellular structure is the site of translation during protein synthesis?",
       "options": [
-        "True",
-        "False"
+        "Ribosome",
+        "Golgi apparatus",
+        "Mitochondrion",
+        "Lysosome"
       ],
-      "answer": "True",
-      "explanation": "True. Ribosomes is correct.",
+      "answer": "Ribosome",
+      "explanation": "Ribosomes read mRNA and assemble amino acids into polypeptide chains during translation.",
       "points": 1
     },
     {
@@ -433,25 +437,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "True or False: The answer to \"In osmosis, water moves from an area of:\" is: Low solute concentration to high solute concentration.",
+      "question": "Across a selectively permeable membrane, osmosis moves water toward the side with:",
       "options": [
-        "True",
-        "False"
+        "Lower solute concentration",
+        "Higher solute concentration",
+        "Lower temperature only",
+        "Equal solute concentration in all cases"
       ],
-      "answer": "True",
-      "explanation": "True. Low solute concentration to high solute concentration is correct.",
+      "answer": "Higher solute concentration",
+      "explanation": "Water moves by osmosis from the side with lower solute concentration toward the side with higher solute concentration.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "True or False: The answer to \"Which type of transport requires ATP\" is: Simple diffusion.",
+      "question": "Which transport process directly requires ATP to move substances across a membrane?",
       "options": [
-        "True",
-        "False"
+        "Simple diffusion",
+        "Osmosis",
+        "Facilitated diffusion through a channel",
+        "Active transport"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Active transport.",
+      "answer": "Active transport",
+      "explanation": "Active transport uses cellular energy, often ATP, to move substances against their concentration gradients.",
       "points": 1
     },
     {
@@ -513,13 +521,15 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "True or False: The answer to \"Which stage of cell signaling involves a ligand binding to a receptor\" is: Reception.",
+      "question": "In cell signaling, what stage occurs when a ligand binds to its receptor?",
       "options": [
-        "True",
-        "False"
+        "Reception",
+        "Transduction",
+        "Response",
+        "Termination"
       ],
-      "answer": "True",
-      "explanation": "True. Reception is correct.",
+      "answer": "Reception",
+      "explanation": "Reception is the first stage of many signaling pathways and begins when a signaling molecule binds to a receptor.",
       "points": 1
     },
     {
@@ -567,22 +577,24 @@
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"During which phase of the cell cycle does DNA replication occur\" is: S phase.",
+      "question": "During which phase of the cell cycle is DNA replicated?",
       "options": [
-        "True",
-        "False"
+        "G1 phase",
+        "S phase",
+        "G2 phase",
+        "M phase"
       ],
-      "answer": "True",
-      "explanation": "True. S phase is correct.",
+      "answer": "S phase",
+      "explanation": "DNA synthesis occurs during S phase, before the cell enters mitosis.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"how many chromosomes does a human somatic cell have after completing mitosis.\"",
+      "question": "Short response: How many chromosomes does a human somatic cell have after completing mitosis?",
       "options": null,
       "answer": "46",
-      "explanation": "The correct answer is: 46.",
+      "explanation": "A correct response identifies \"46\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -700,13 +712,15 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "True or False: The answer to \"DNA strands are described as antiparallel because:\" is: One strand runs 5' to 3' and the complementary strand runs 3' to 5'.",
+      "question": "What does it mean for the two strands of DNA to be antiparallel?",
       "options": [
-        "True",
-        "False"
+        "Both strands run 5 prime to 3 prime in the same direction",
+        "One strand runs 5 prime to 3 prime while the other runs 3 prime to 5 prime",
+        "The strands contain different genetic codes",
+        "The strands are held together by peptide bonds"
       ],
-      "answer": "True",
-      "explanation": "True. One strand runs 5' to 3' and the complementary strand runs 3' to 5' is correct.",
+      "answer": "One strand runs 5 prime to 3 prime while the other runs 3 prime to 5 prime",
+      "explanation": "DNA strands are antiparallel because their sugar-phosphate backbones run in opposite directions.",
       "points": 1
     },
     {
@@ -768,13 +782,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "True or False: The answer to \"Which enzyme synthesizes mRNA from a DNA template\" is: RNA polymerase.",
+      "question": "Which enzyme synthesizes mRNA using a DNA template?",
       "options": [
-        "True",
-        "False"
+        "DNA polymerase",
+        "RNA polymerase",
+        "Helicase",
+        "Ligase"
       ],
-      "answer": "True",
-      "explanation": "True. RNA polymerase is correct.",
+      "answer": "RNA polymerase",
+      "explanation": "RNA polymerase builds an RNA strand complementary to the DNA template during transcription.",
       "points": 1
     },
     {
@@ -822,25 +838,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"PCR (Polymerase Chain Reaction) amplifies DNA by:\" is: Cycling through denaturation, annealing, and extension steps.",
+      "question": "Which sequence of steps is repeated during PCR amplification?",
       "options": [
-        "True",
-        "False"
+        "Transcription, translation, folding",
+        "Denaturation, annealing, extension",
+        "Restriction, ligation, transformation",
+        "Replication, mitosis, cytokinesis"
       ],
-      "answer": "True",
-      "explanation": "True. Cycling through denaturation, annealing, and extension steps is correct.",
+      "answer": "Denaturation, annealing, extension",
+      "explanation": "PCR repeatedly separates DNA strands, allows primers to bind, and extends new DNA strands with a heat-stable polymerase.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "True or False: The answer to \"In gel electrophoresis, smaller DNA fragments:\" is: Travel less distance than larger fragments.",
+      "question": "During gel electrophoresis, how do smaller DNA fragments usually move compared with larger fragments?",
       "options": [
-        "True",
-        "False"
+        "They remain in the well",
+        "They travel a shorter distance",
+        "They travel farther through the gel",
+        "They move toward the negative electrode"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Travel farther from the well than larger fragments.",
+      "answer": "They travel farther through the gel",
+      "explanation": "Smaller DNA fragments pass more easily through the gel matrix and migrate farther from the wells.",
       "points": 1
     },
     {
@@ -902,13 +922,15 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "True or False: The answer to \"Which of the following is NOT a requirement for natural selection to occur\" is: Conscious choice by organisms to adapt.",
+      "question": "Which statement is NOT required for natural selection to occur?",
       "options": [
-        "True",
-        "False"
+        "Individuals vary in heritable traits",
+        "Some variants affect survival or reproduction",
+        "Organisms consciously choose traits they need",
+        "More offspring are produced than can survive"
       ],
-      "answer": "True",
-      "explanation": "True. Conscious choice by organisms to adapt is correct.",
+      "answer": "Organisms consciously choose traits they need",
+      "explanation": "Natural selection acts on heritable variation; organisms do not consciously choose adaptive traits.",
       "points": 1
     },
     {
@@ -956,13 +978,15 @@
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "True or False: The answer to \"Allopatric speciation occurs when:\" is: A geographic barrier separates a population, preventing gene flow.",
+      "question": "Which situation best describes allopatric speciation?",
       "options": [
-        "True",
-        "False"
+        "A geographic barrier separates populations and limits gene flow",
+        "Two populations merge into one randomly mating population",
+        "Individuals change traits because they need to survive",
+        "A single population remains connected by frequent migration"
       ],
-      "answer": "True",
-      "explanation": "True. A geographic barrier separates a population, preventing gene flow is correct.",
+      "answer": "A geographic barrier separates populations and limits gene flow",
+      "explanation": "Allopatric speciation can occur when geographic separation reduces gene flow long enough for populations to diverge.",
       "points": 1
     },
     {
@@ -1080,13 +1104,15 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "True or False: The answer to \"The competitive exclusion principle states that:\" is: Two species with identical niches cannot coexist in the same habitat.",
+      "question": "What does the competitive exclusion principle predict for two species with identical niches in the same habitat?",
       "options": [
-        "True",
-        "False"
+        "They will always form a mutualistic relationship",
+        "They cannot coexist indefinitely under the same limiting resources",
+        "They will immediately become one species",
+        "They will both increase without limit"
       ],
-      "answer": "True",
-      "explanation": "True. Two species with identical niches cannot coexist in the same habitat is correct.",
+      "answer": "They cannot coexist indefinitely under the same limiting resources",
+      "explanation": "If two species require the exact same limiting resources, one is expected to outcompete the other over time.",
       "points": 1
     },
     {
@@ -1148,13 +1174,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "True or False: The answer to \"The 10% rule in ecology states that:\" is: Only 10% of energy is transferred from one trophic level to the next.",
+      "question": "In ecosystem energy transfer, what does the 10 percent rule describe?",
       "options": [
-        "True",
-        "False"
+        "About 10 percent of energy transfers to the next trophic level",
+        "Only 10 percent of organisms reproduce each year",
+        "Producers use 10 percent of incoming sunlight for all biomass",
+        "Decomposers remove 10 percent of nutrients from ecosystems"
       ],
-      "answer": "True",
-      "explanation": "True. Only 10% of energy is transferred from one trophic level to the next is correct.",
+      "answer": "About 10 percent of energy transfers to the next trophic level",
+      "explanation": "Only a small fraction of energy, often approximated as 10 percent, is transferred from one trophic level to the next.",
       "points": 1
     },
     {
@@ -1291,14 +1319,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"When a cell is placed in a hypotonic solution, water will move:\" is: Into the cell by osmosis, causing the cell to swell.",
+      "type": "mc",
+      "question": "When an animal cell is placed in a hypotonic solution, what is the expected movement of water?",
       "options": [
-        "True",
-        "False"
+        "Water moves into the cell, causing it to swell",
+        "Water moves out of the cell, causing it to shrink",
+        "Water stops moving across the membrane",
+        "Solute leaves the cell by active transport only"
       ],
-      "answer": "True",
-      "explanation": "True. Into the cell by osmosis, causing the cell to swell is correct.",
+      "answer": "Water moves into the cell, causing it to swell",
+      "explanation": "A hypotonic solution has lower solute concentration outside the cell, so water enters by osmosis and the cell swells.",
       "points": 1
     },
     {
@@ -1344,14 +1374,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following best describes the role of the ribosome in gene expression\" is: It transcribes DNA into mRNA.",
+      "type": "mc",
+      "question": "What is the ribosome's role in gene expression?",
       "options": [
-        "True",
-        "False"
+        "It transcribes DNA into mRNA",
+        "It translates mRNA into a polypeptide",
+        "It replicates DNA before cell division",
+        "It splices introns from pre-mRNA"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: It serves as the site where mRNA is translated into protein.",
+      "answer": "It translates mRNA into a polypeptide",
+      "explanation": "Ribosomes carry out translation by matching mRNA codons with tRNA anticodons and forming peptide bonds.",
       "points": 1
     },
     {
@@ -1402,14 +1434,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Helicase's role in DNA replication is to:\" is: Unwind the double helix at the replication fork.",
+      "type": "mc",
+      "question": "What is the role of helicase during DNA replication?",
       "options": [
-        "True",
-        "False"
+        "Seal gaps between Okazaki fragments",
+        "Unwind the double helix at the replication fork",
+        "Add RNA primers to template strands",
+        "Proofread newly synthesized DNA bases"
       ],
-      "answer": "True",
-      "explanation": "True. Unwind the double helix at the replication fork is correct.",
+      "answer": "Unwind the double helix at the replication fork",
+      "explanation": "Helicase separates the DNA strands so each can serve as a template for replication.",
       "points": 1
     },
     {
@@ -1455,14 +1489,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"A population of beetles has 840 individuals. If p (frequency of allele A) = 0.3, what is the expected frequency of heterozygous individuals (2pq) under Hardy-Weinberg equilibrium\" is: 0.09.",
+      "type": "mc",
+      "question": "A beetle population has p = 0.3 for allele A. Under Hardy-Weinberg equilibrium, what is the expected heterozygote frequency?",
       "options": [
-        "True",
-        "False"
+        "0.09",
+        "0.21",
+        "0.42",
+        "0.49"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 0.42.",
+      "answer": "0.42",
+      "explanation": "If p = 0.3, then q = 0.7, so the heterozygote frequency is 2pq = 2(0.3)(0.7) = 0.42.",
       "points": 1
     },
     {
@@ -1513,14 +1549,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following correctly describes allopatric speciation\" is: Speciation due to geographic separation that prevents gene flow.",
+      "type": "mc",
+      "question": "Which statement correctly describes allopatric speciation?",
       "options": [
-        "True",
-        "False"
+        "Speciation caused by geographic separation that prevents gene flow",
+        "Speciation caused by identical niches in one panmictic population",
+        "Speciation that requires organisms to choose new traits",
+        "Speciation that happens only through hybridization"
       ],
-      "answer": "True",
-      "explanation": "True. Speciation due to geographic separation that prevents gene flow is correct.",
+      "answer": "Speciation caused by geographic separation that prevents gene flow",
+      "explanation": "Allopatric speciation occurs when geographic isolation reduces gene flow and separated populations diverge.",
       "points": 1
     },
     {
@@ -1571,14 +1609,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which observation by Darwin most directly supports the concept of natural selection\" is: All species are perfectly adapted to their environment.",
+      "type": "mc",
+      "question": "Which observation most directly supports natural selection?",
       "options": [
-        "True",
-        "False"
+        "Individuals in a population vary in heritable traits that affect survival and reproduction",
+        "All organisms in a species are identical",
+        "Acquired traits are always inherited by offspring",
+        "Species remain unchanged in every environment"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Individuals within a species vary in heritable traits, and some variants survive and reproduce better.",
+      "answer": "Individuals in a population vary in heritable traits that affect survival and reproduction",
+      "explanation": "Natural selection depends on heritable variation and differential reproductive success.",
       "points": 1
     },
     {
@@ -1629,14 +1669,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Bottleneck Effect is a type of genetic drift that occurs when:\" is: A population is drastically reduced in size by a catastrophic event.",
+      "type": "mc",
+      "question": "When does the bottleneck effect occur?",
       "options": [
-        "True",
-        "False"
+        "A population is drastically reduced in size by a random event",
+        "A few individuals colonize a new habitat",
+        "Natural selection favors both extreme phenotypes",
+        "Migration keeps allele frequencies constant"
       ],
-      "answer": "True",
-      "explanation": "True. A population is drastically reduced in size by a catastrophic event is correct.",
+      "answer": "A population is drastically reduced in size by a random event",
+      "explanation": "The bottleneck effect is genetic drift after a sharp population reduction, which can reduce genetic variation.",
       "points": 1
     },
     {
@@ -1687,14 +1729,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"During meiosis, genetic diversity is increased by:\" is: DNA replication errors only.",
+      "type": "mc",
+      "question": "Which processes increase genetic diversity during meiosis?",
       "options": [
-        "True",
-        "False"
+        "DNA replication errors only",
+        "Crossing over and independent assortment",
+        "Binary fission and budding",
+        "Transcription and translation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Crossing over (recombination) during prophase I and independent assortment of homologs.",
+      "answer": "Crossing over and independent assortment",
+      "explanation": "Crossing over during prophase I and independent assortment of homologous chromosomes create new allele combinations.",
       "points": 1
     },
     {

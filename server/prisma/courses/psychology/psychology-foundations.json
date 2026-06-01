@@ -13,7 +13,7 @@
       "title": "Introduction to Psychology",
       "titleZh": "心理学导论",
       "objectives": "Define psychology as a science, trace its historical roots, identify major theoretical perspectives, and describe career paths in the field.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 1",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/ap-history-of-psychology/v/history-of-psychology",
       "videoNote": "Khan Academy — History of Psychology",
@@ -29,7 +29,7 @@
       "title": "Brain & Nervous System",
       "titleZh": "大脑与神经系统",
       "objectives": "Describe the structure and function of neurons, explain synaptic transmission, and identify the roles of major brain regions in behavior and mental processes.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/3-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 3",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-biological-bases-behavior/ap-the-neuron-nervous-system/v/neuron-structure-and-function",
       "videoNote": "Khan Academy — Neuron Structure & Function",
@@ -45,7 +45,7 @@
       "title": "Sensation & Perception",
       "titleZh": "感觉与知觉",
       "objectives": "Distinguish sensation from perception, apply Weber's Law and signal detection theory, and explain key Gestalt principles and top-down vs. bottom-up processing.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/5-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 5",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-sensation-perception/ap-introduction-to-sensation-and-perception/v/introduction-to-sensation-and-perception",
       "videoNote": "Khan Academy — Sensation & Perception",
@@ -61,7 +61,7 @@
       "title": "States of Consciousness",
       "titleZh": "意识状态",
       "objectives": "Define consciousness, describe the stages of sleep and their functions, and explain the effects of psychoactive drugs on brain and behavior.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/4-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 4",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-states-of-consciousness/ap-sleep-stages/v/stages-of-sleep",
       "videoNote": "Khan Academy — Stages of Sleep",
@@ -77,7 +77,7 @@
       "title": "Learning Theories",
       "titleZh": "学习理论",
       "objectives": "Explain classical and operant conditioning with real-life examples, compare reinforcement schedules and their effects, and describe observational learning.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 6",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-learning/ap-classical-conditioning/v/classical-conditioning-introduction",
       "videoNote": "Khan Academy — Classical Conditioning",
@@ -93,7 +93,7 @@
       "title": "Memory Systems",
       "titleZh": "记忆系统",
       "objectives": "Describe the three-stage model of memory, explain encoding, storage, and retrieval processes, and identify common reasons for forgetting.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/8-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 8",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-cognition/ap-memory/v/memory-encoding",
       "videoNote": "Khan Academy — Memory Encoding",
@@ -109,7 +109,7 @@
       "title": "Thinking & Language",
       "titleZh": "思维与语言",
       "objectives": "Describe cognitive processes involved in problem-solving and decision-making, explain common cognitive biases and heuristics, and describe the relationship between language and thought.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 7",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-cognition/ap-language/v/language-and-thought",
       "videoNote": "Khan Academy — Language & Thought",
@@ -125,7 +125,7 @@
       "title": "Intelligence",
       "titleZh": "智力",
       "objectives": "Define intelligence, compare major theories including Spearman's g, Gardner's multiple intelligences, and Sternberg's triarchic theory, and evaluate the role of heredity and environment in intelligence.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-5",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 7.5 — Measuring Intelligence",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-cognition/ap-intelligence/v/introduction-to-intelligence",
       "videoNote": "Khan Academy — Introduction to Intelligence",
@@ -169,13 +169,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Which perspective focuses on unconscious drives and early childhood experiences as determinants of behavior\" is: Psychodynamic.",
+      "question": "Select the best answer: Which perspective focuses on unconscious drives and early childhood experiences as determinants of behavior?",
       "options": [
-        "True",
-        "False"
+        "Behavioral",
+        "Psychodynamic",
+        "Humanistic",
+        "Cognitive"
       ],
-      "answer": "True",
-      "explanation": "True. Psychodynamic is correct.",
+      "answer": "Psychodynamic",
+      "explanation": "The psychodynamic perspective, rooted in Freud's work, emphasizes unconscious processes and early life experiences.",
       "points": 1
     },
     {
@@ -223,13 +225,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Which part of the neuron receives incoming signals from other neurons\" is: Dendrites.",
+      "question": "Select the best answer: Which part of the neuron receives incoming signals from other neurons?",
       "options": [
-        "True",
-        "False"
+        "Axon",
+        "Myelin sheath",
+        "Dendrites",
+        "Terminal buttons"
       ],
-      "answer": "True",
-      "explanation": "True. Dendrites is correct.",
+      "answer": "Dendrites",
+      "explanation": "Dendrites are branch-like structures that receive incoming signals from other neurons.",
       "points": 1
     },
     {
@@ -361,25 +365,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"In classical conditioning, the neutral stimulus that comes to elicit a response after pairing is called the:\" is: Conditioned stimulus.",
+      "question": "Select the best answer: In classical conditioning, the neutral stimulus that comes to elicit a response after pairing is called the:?",
       "options": [
-        "True",
-        "False"
+        "Unconditioned stimulus",
+        "Conditioned stimulus",
+        "Unconditioned response",
+        "Conditioned response"
       ],
-      "answer": "True",
-      "explanation": "True. Conditioned stimulus is correct.",
+      "answer": "Conditioned stimulus",
+      "explanation": "After repeated pairings with the UCS, the neutral stimulus becomes the conditioned stimulus (CS).",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Thorndike's Law of Effect states that behaviors followed by satisfying consequences are:\" is: Extinguished.",
+      "question": "Which answer best completes this statement? Thorndike's Law of Effect states that behaviors followed by satisfying consequences are:",
       "options": [
-        "True",
-        "False"
+        "Extinguished",
+        "Generalized",
+        "More likely to recur",
+        "Negatively reinforced"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: More likely to recur.",
+      "answer": "More likely to recur",
+      "explanation": "The Law of Effect is the foundation of operant conditioning: rewarded behaviors increase in frequency.",
       "points": 1
     },
     {
@@ -427,13 +435,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"In Atkinson-Shiffrin's model, information that is not attended to is lost from:\" is: Sensory memory.",
+      "question": "Select the best answer: In Atkinson-Shiffrin's model, information that is not attended to is lost from:?",
       "options": [
-        "True",
-        "False"
+        "Long-term memory",
+        "Semantic memory",
+        "Sensory memory",
+        "Procedural memory"
       ],
-      "answer": "True",
-      "explanation": "True. Sensory memory is correct.",
+      "answer": "Sensory memory",
+      "explanation": "Sensory memory holds information briefly; without attention it decays and is never transferred to short-term memory.",
       "points": 1
     },
     {
@@ -467,13 +477,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"The tendency to search for information that confirms our existing beliefs is called:\" is: Confirmation bias.",
+      "question": "Which answer best completes this statement? The tendency to search for information that confirms our existing beliefs is called:",
       "options": [
-        "True",
-        "False"
+        "Availability heuristic",
+        "Confirmation bias",
+        "Framing effect",
+        "Anchoring bias"
       ],
-      "answer": "True",
-      "explanation": "True. Confirmation bias is correct.",
+      "answer": "Confirmation bias",
+      "explanation": "Confirmation bias leads people to favor information that supports their existing views and ignore contradictory evidence.",
       "points": 1
     },
     {
@@ -521,13 +533,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Spearman's 'g' factor refers to:\" is: A general underlying intelligence factor.",
+      "question": "Which answer best completes this statement? Spearman's 'g' factor refers to:",
       "options": [
-        "True",
-        "False"
+        "Genetic contribution to IQ",
+        "A general underlying intelligence factor",
+        "Grade-point average in school",
+        "Gifted and talented classification"
       ],
-      "answer": "True",
-      "explanation": "True. A general underlying intelligence factor is correct.",
+      "answer": "A general underlying intelligence factor",
+      "explanation": "Spearman's g is a general intelligence factor he believed underlies performance on all cognitive tasks.",
       "points": 1
     }
   ],
@@ -580,14 +594,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Sleep deprivation is most likely to impair which type of memory\" is: Declarative memory consolidation.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Sleep deprivation is most likely to impair which type of memory",
       "options": [
-        "True",
-        "False"
+        "Declarative memory consolidation",
+        "Reflexive withdrawal from pain",
+        "Visual transduction",
+        "Random assignment"
       ],
-      "answer": "True",
-      "explanation": "True. Declarative memory consolidation is correct.",
+      "answer": "Declarative memory consolidation",
+      "explanation": "Sleep is important for consolidating declarative memories such as facts and events.",
       "points": 1
     },
     {
@@ -638,14 +654,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Sternberg's triarchic theory divides intelligence into analytical, creative, and:\" is: Musical.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Sternberg's triarchic theory divides intelligence into analytical, creative, and:",
       "options": [
-        "True",
-        "False"
+        "Practical",
+        "Musical",
+        "Kinesthetic",
+        "General only"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Practical.",
+      "answer": "Practical",
+      "explanation": "Sternberg's triarchic theory includes analytical, creative, and practical intelligence.",
       "points": 1
     },
     {
@@ -696,14 +714,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Freud's defense mechanism of repression involves:\" is: Blocking threatening thoughts from conscious awareness.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Freud's defense mechanism of repression involves:",
       "options": [
-        "True",
-        "False"
+        "Blocking threatening thoughts or memories from conscious awareness",
+        "Creating acceptable excuses after the fact",
+        "Imitating a rewarded model",
+        "Changing schemas for new information"
       ],
-      "answer": "True",
-      "explanation": "True. Blocking threatening thoughts from conscious awareness is correct.",
+      "answer": "Blocking threatening thoughts or memories from conscious awareness",
+      "explanation": "Repression refers to keeping threatening material outside conscious awareness.",
       "points": 1
     },
     {
@@ -749,14 +769,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which research method allows researchers to establish cause-and-effect relationships\" is: Case study.",
+      "type": "mc",
+      "question": "Select the best answer: Which research method allows researchers to establish cause-and-effect relationships?",
       "options": [
-        "True",
-        "False"
+        "Experiment",
+        "Case study",
+        "Naturalistic observation",
+        "Correlational survey"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Experiment.",
+      "answer": "Experiment",
+      "explanation": "Experiments can support causal conclusions when variables are manipulated and confounds are controlled.",
       "points": 1
     },
     {
@@ -807,14 +829,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Spontaneous recovery in conditioning refers to:\" is: Reappearance of an extinguished response after a rest period.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Spontaneous recovery in conditioning refers to:",
       "options": [
-        "True",
-        "False"
+        "Reappearance of an extinguished response after a rest period",
+        "The first pairing of a CS and UCS",
+        "Immediate loss of all learned behavior",
+        "Using punishment to decrease behavior"
       ],
-      "answer": "True",
-      "explanation": "True. Reappearance of an extinguished response after a rest period is correct.",
+      "answer": "Reappearance of an extinguished response after a rest period",
+      "explanation": "Spontaneous recovery is the return of an extinguished response after time has passed.",
       "points": 1
     },
     {
@@ -865,14 +889,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which theory proposes that people compare themselves to others to evaluate their opinions and abilities\" is: Self-perception theory.",
+      "type": "mc",
+      "question": "Select the best answer: Which theory proposes that people compare themselves to others to evaluate their opinions and abilities?",
       "options": [
-        "True",
-        "False"
+        "Social comparison theory",
+        "Self-perception theory",
+        "Drive-reduction theory",
+        "Two-factor theory of emotion"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Social comparison theory.",
+      "answer": "Social comparison theory",
+      "explanation": "Social comparison theory explains how people evaluate themselves by comparing with others.",
       "points": 1
     },
     {
@@ -978,14 +1004,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Observational learning requires attention, retention, reproduction, and:\" is: Punishment.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Observational learning requires attention, retention, reproduction, and:",
       "options": [
-        "True",
-        "False"
+        "Motivation",
+        "Punishment",
+        "Extinction",
+        "Random assignment"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Motivation.",
+      "answer": "Motivation",
+      "explanation": "Bandura's observational learning model includes attention, retention, reproduction, and motivation.",
       "points": 1
     },
     {

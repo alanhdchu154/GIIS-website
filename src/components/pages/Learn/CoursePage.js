@@ -29,6 +29,7 @@ export default function CoursePage({ language }) {
   if (!course) return <div style={{ padding: '80px 10%', fontFamily: 'Inter', color: '#888' }}>{isEn ? 'Loading…' : '加载中…'}</div>;
 
   const submittedQuizSet = new Set((enrollment?.quizAttempts || []).map(a => a.moduleOrder));
+  const submittedAssignmentSet = new Set((enrollment?.assignments || []).map(a => a.moduleOrder));
   const totalModules = course.modules?.length || 0;
 
   // Lock logic: quiz submission gates next module
@@ -40,9 +41,10 @@ export default function CoursePage({ language }) {
   // Midterm unlocked when quizzes 1–MIDTERM_CUTOFF all submitted
   const midtermLocked = [...Array(MIDTERM_CUTOFF)].some((_, i) => !submittedQuizSet.has(i + 1));
   const midtermAttempt = (enrollment?.examAttempts || []).find(a => a.examType === 'midterm' && a.submittedAt);
+  const midtermPassed = midtermAttempt?.passed === true;
 
-  // Final unlocked when all quizzes submitted + midterm submitted
-  const finalLocked = [...Array(totalModules)].some((_, i) => !submittedQuizSet.has(i + 1)) || !midtermAttempt;
+  // Final unlocked when all quizzes and assignments are submitted and the midterm is passed.
+  const finalLocked = [...Array(totalModules)].some((_, i) => !submittedQuizSet.has(i + 1) || !submittedAssignmentSet.has(i + 1)) || !midtermPassed;
   const finalAttempt = (enrollment?.examAttempts || []).find(a => a.examType === 'final' && a.submittedAt);
 
   const quizAvg = enrollment?.quizAttempts?.length > 0
@@ -93,6 +95,9 @@ export default function CoursePage({ language }) {
                 {submittedQuizSet.size}/{totalModules} {isEn ? 'quizzes' : '测验'}
               </span>
             </div>
+            <span style={{ fontSize: '13px', fontWeight: 700, color: '#5c6578', background: '#f8f9fd', border: '1px solid #e0e6f0', padding: '4px 10px', borderRadius: '20px' }}>
+              {submittedAssignmentSet.size}/{totalModules} {isEn ? 'assignments submitted' : '作业已提交'}
+            </span>
             {gradeDisplay !== null && (
               <span style={{ fontSize: '14px', fontWeight: 800, color: '#2b3d6d', background: '#f0f4ff', padding: '4px 14px', borderRadius: '20px' }}>
                 {isEn ? 'Grade: ' : '成绩：'}{gradeDisplay}%
@@ -226,14 +231,15 @@ export default function CoursePage({ language }) {
               </p>
               {finalLocked && (() => {
                 const quizDone = [...Array(totalModules)].filter((_, i) => submittedQuizSet.has(i + 1)).length;
-                const steps = totalModules + 1; // all quizzes + midterm
-                const stepsDone = quizDone + (midtermAttempt ? 1 : 0);
+                const assignmentsDone = [...Array(totalModules)].filter((_, i) => submittedAssignmentSet.has(i + 1)).length;
+                const steps = (totalModules * 2) + 1; // all quizzes + all assignments + midterm
+                const stepsDone = quizDone + assignmentsDone + (midtermPassed ? 1 : 0);
                 return (
                   <>
                     <p style={{ margin: '3px 0 4px', fontSize: '11px', color: '#aaa' }}>
                       {isEn
-                        ? `${quizDone}/${totalModules} quizzes · midterm ${midtermAttempt ? '✓' : '✗'}`
-                        : `${quizDone}/${totalModules} 测验 · 期中 ${midtermAttempt ? '✓' : '✗'}`}
+                        ? `${quizDone}/${totalModules} quizzes · ${assignmentsDone}/${totalModules} assignments · midterm ${midtermPassed ? 'passed' : 'must pass'}`
+                        : `${quizDone}/${totalModules} 测验 · ${assignmentsDone}/${totalModules} 作业 · 期中${midtermPassed ? '已通过' : '需通过'}`}
                     </p>
                     <div style={{ background: '#e8ecf5', borderRadius: '4px', height: '4px', maxWidth: '180px' }}>
                       <div style={{ width: `${Math.round((stepsDone / steps) * 100)}%`, background: '#2b3d6d', borderRadius: '4px', height: '100%', transition: 'width 0.3s' }} />

@@ -13,7 +13,7 @@
       "title": "Introduction to Social Psychology",
       "titleZh": "社会心理学导论",
       "objectives": "Define social psychology, describe its scope and methods, and distinguish it from sociology and personality psychology.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/12-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 12",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-introduction-to-social-psychology/v/introduction-to-social-psychology",
       "videoNote": "Khan Academy — Intro to Social Psychology",
@@ -29,7 +29,7 @@
       "title": "Social Cognition",
       "titleZh": "社会认知",
       "objectives": "Explain how people think about others, describe attribution theory, identify cognitive biases in social judgment, and apply schema theory to social perception.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/12-1",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 12.1",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-social-cognition/v/social-cognition",
       "videoNote": "Khan Academy — Social Cognition",
@@ -45,7 +45,7 @@
       "title": "Self & Identity",
       "titleZh": "自我与身份认同",
       "objectives": "Describe self-concept, self-esteem, and self-efficacy; explain self-serving bias and social comparison theory; analyze how culture shapes self-construal.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/12-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 12.2",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-self-identity/v/self-identity",
       "videoNote": "Khan Academy — Self & Identity",
@@ -61,7 +61,7 @@
       "title": "Attitudes & Attitude Change",
       "titleZh": "态度与态度改变",
       "objectives": "Define attitudes and their components (ABC model), explain cognitive dissonance theory, and describe how attitudes relate to behavior.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/12-3",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 12.3",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-attitudes/v/attitudes",
       "videoNote": "Khan Academy — Attitudes",
@@ -77,7 +77,7 @@
       "title": "Persuasion",
       "titleZh": "说服",
       "objectives": "Explain the Elaboration Likelihood Model (ELM), distinguish central from peripheral routes to persuasion, and evaluate the effectiveness of persuasion techniques.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/12-3",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 12.3",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-persuasion/v/persuasion",
       "videoNote": "Khan Academy — Persuasion",
@@ -93,7 +93,7 @@
       "title": "Social Influence & Conformity",
       "titleZh": "社会影响与从众",
       "objectives": "Describe Asch's conformity studies, distinguish normative from informational social influence, and explain the factors that increase or decrease conformity.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/12-4",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 12.4",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-social-influence/v/social-influence",
       "videoNote": "Khan Academy — Social Influence & Conformity",
@@ -109,7 +109,7 @@
       "title": "Obedience",
       "titleZh": "服从",
       "objectives": "Summarize Milgram's obedience experiments and their findings, identify situational factors that promote obedience, and discuss ethical debates surrounding the research.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/12-4",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 12.4",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-obedience/v/obedience",
       "videoNote": "Khan Academy — Obedience",
@@ -125,7 +125,7 @@
       "title": "Group Dynamics",
       "titleZh": "群体动力",
       "objectives": "Explain social loafing, deindividuation, groupthink, and group polarization, and analyze how group structure influences decision making and performance.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/12-5",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 12.5",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-social-psychology/ap-group-dynamics/v/group-dynamics",
       "videoNote": "Khan Academy — Group Dynamics",
@@ -169,13 +169,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Social psychology is defined as the scientific study of how people's _____ are influenced by others.\" is: Thoughts, feelings, and behaviors.",
+      "question": "Which term correctly completes this statement? Social psychology is defined as the scientific study of how people's _____ are influenced by others",
       "options": [
-        "True",
-        "False"
+        "Genetics only",
+        "Thoughts, feelings, and behaviors",
+        "Unconscious drives",
+        "Biological processes"
       ],
-      "answer": "True",
-      "explanation": "True. Thoughts, feelings, and behaviors is correct.",
+      "answer": "Thoughts, feelings, and behaviors",
+      "explanation": "Social psychology examines how the actual, imagined, or implied presence of others influences thoughts, feelings, and behaviors.",
       "points": 1
     },
     {
@@ -223,13 +225,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"The fundamental attribution error involves:\" is: Overestimating dispositional causes of others' behavior.",
+      "question": "Which answer best completes this statement? The fundamental attribution error involves:",
       "options": [
-        "True",
-        "False"
+        "Overestimating situational causes of others' behavior",
+        "Overestimating dispositional causes of others' behavior",
+        "Underestimating the importance of our own actions",
+        "Attributing others' success to luck"
       ],
-      "answer": "True",
-      "explanation": "True. Overestimating dispositional causes of others' behavior is correct.",
+      "answer": "Overestimating dispositional causes of others' behavior",
+      "explanation": "The FAE is the tendency to attribute others' behavior to stable internal characteristics while underweighting situational factors.",
       "points": 1
     },
     {
@@ -361,25 +365,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"The central route to persuasion in the ELM involves:\" is: Careful evaluation of the message's arguments and evidence.",
+      "question": "Which answer best completes this statement? The central route to persuasion in the ELM involves:",
       "options": [
-        "True",
-        "False"
+        "Peripheral cues like attractiveness of the speaker",
+        "Careful evaluation of the message's arguments and evidence",
+        "Emotional appeals unrelated to the message content",
+        "Rapid, automatic attitude change"
       ],
-      "answer": "True",
-      "explanation": "True. Careful evaluation of the message's arguments and evidence is correct.",
+      "answer": "Careful evaluation of the message's arguments and evidence",
+      "explanation": "The central route involves active, thoughtful processing of the quality of arguments — it produces durable attitude change.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"The foot-in-the-door technique works because:\" is: People feel obligated to repay favors.",
+      "question": "Which answer best completes this statement? The foot-in-the-door technique works because:",
       "options": [
-        "True",
-        "False"
+        "People feel obligated to repay favors",
+        "Agreeing to small requests increases compliance with larger ones",
+        "Rejection of an initial request increases guilt",
+        "Authority figures compel compliance"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Agreeing to small requests increases compliance with larger ones.",
+      "answer": "Agreeing to small requests increases compliance with larger ones",
+      "explanation": "Foot-in-the-door exploits self-perception: after agreeing to a small request, people view themselves as cooperative and comply with larger follow-up requests.",
       "points": 1
     },
     {
@@ -427,13 +435,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"In Asch's conformity experiments, participants gave clearly wrong answers approximately what percentage of the time (across trials)\" is: 37%.",
+      "question": "Select the best answer: In Asch's conformity experiments, participants gave clearly wrong answers approximately what percentage of the time (across trials)?",
       "options": [
-        "True",
-        "False"
+        "3%",
+        "15%",
+        "37%",
+        "75%"
       ],
-      "answer": "True",
-      "explanation": "True. 37% is correct.",
+      "answer": "37%",
+      "explanation": "Asch's participants conformed to the incorrect group answer on approximately 37% of the critical trials.",
       "points": 1
     },
     {
@@ -467,13 +477,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"In Milgram's original experiment, approximately what percentage of participants delivered the maximum shock level (450V)\" is: 65%.",
+      "question": "Select the best answer: In Milgram's original experiment, approximately what percentage of participants delivered the maximum shock level (450V)?",
       "options": [
-        "True",
-        "False"
+        "15%",
+        "35%",
+        "50%",
+        "65%"
       ],
-      "answer": "True",
-      "explanation": "True. 65% is correct.",
+      "answer": "65%",
+      "explanation": "About 65% of Milgram's participants delivered the maximum shock level when instructed by the authority figure.",
       "points": 1
     },
     {
@@ -521,13 +533,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Social loafing refers to the tendency to:\" is: Exert less effort in a group when individual contributions are not identifiable.",
+      "question": "Which answer best completes this statement? Social loafing refers to the tendency to:",
       "options": [
-        "True",
-        "False"
+        "Work harder in groups than alone",
+        "Exert less effort in a group when individual contributions are not identifiable",
+        "Conform to group norms regarding work pace",
+        "Feel anxiety when working in public settings"
       ],
-      "answer": "True",
-      "explanation": "True. Exert less effort in a group when individual contributions are not identifiable is correct.",
+      "answer": "Exert less effort in a group when individual contributions are not identifiable",
+      "explanation": "Social loafing occurs when people free-ride in groups because their individual contribution is not identifiable or evaluated.",
       "points": 1
     }
   ],
@@ -580,14 +594,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"In Asch's conformity experiments, the presence of one social supporter who agreed with the participant:\" is: Greatly reduced conformity.",
+      "type": "mc",
+      "question": "Select the best answer: In Asch's conformity experiments, the presence of one social supporter who agreed with the participant:?",
       "options": [
-        "True",
-        "False"
+        "Greatly reduced conformity",
+        "Increased conformity to nearly 100%",
+        "Had no effect on responses",
+        "Eliminated the need for a control group"
       ],
-      "answer": "True",
-      "explanation": "True. Greatly reduced conformity is correct.",
+      "answer": "Greatly reduced conformity",
+      "explanation": "A supportive ally reduced pressure to conform in Asch-style conformity studies.",
       "points": 1
     },
     {
@@ -638,14 +654,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Milgram's obedience experiments showed that approximately ___% of participants went to the maximum shock level.\" is: 15.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Milgram's obedience experiments showed that approximately ___% of participants went to the maximum shock level",
       "options": [
-        "True",
-        "False"
+        "65%",
+        "15%",
+        "5%",
+        "100%"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 65.",
+      "answer": "65%",
+      "explanation": "In Milgram's original study, about 65% of participants continued to the maximum shock level.",
       "points": 1
     },
     {
@@ -696,14 +714,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Tajfel's Social Identity Theory explains in-group bias as resulting from:\" is: Deriving self-esteem from group membership and favoring the in-group.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Tajfel's Social Identity Theory explains in-group bias as resulting from:",
       "options": [
-        "True",
-        "False"
+        "Deriving self-esteem from group membership and favoring the in-group",
+        "Purely biological reflexes",
+        "Random sampling error",
+        "A lack of any group categories"
       ],
-      "answer": "True",
-      "explanation": "True. Deriving self-esteem from group membership and favoring the in-group is correct.",
+      "answer": "Deriving self-esteem from group membership and favoring the in-group",
+      "explanation": "Social Identity Theory links self-concept to group membership and helps explain in-group favoritism.",
       "points": 1
     },
     {
@@ -754,14 +774,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"The contact hypothesis (Allport) proposes that prejudice is reduced by contact that involves:\" is: Any type of interaction between groups.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? The contact hypothesis (Allport) proposes that prejudice is reduced by contact that involves:",
       "options": [
-        "True",
-        "False"
+        "Equal status, common goals, cooperation, and institutional support",
+        "Any type of interaction between groups",
+        "Competition without shared goals",
+        "Anonymous online conflict only"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Equal status, cooperative interaction under institutional support toward shared goals.",
+      "answer": "Equal status, common goals, cooperation, and institutional support",
+      "explanation": "Allport's contact hypothesis specifies conditions such as equal status, cooperation, shared goals, and support from authorities.",
       "points": 1
     },
     {
@@ -812,14 +834,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Diffusion of responsibility in the bystander effect means:\" is: Personal responsibility to help is diluted among multiple observers.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Diffusion of responsibility in the bystander effect means:",
       "options": [
-        "True",
-        "False"
+        "Personal responsibility to help is diluted among multiple observers",
+        "People always help faster in groups",
+        "Responsibility increases as group size grows",
+        "Only trained professionals notice emergencies"
       ],
-      "answer": "True",
-      "explanation": "True. Personal responsibility to help is diluted among multiple observers is correct.",
+      "answer": "Personal responsibility to help is diluted among multiple observers",
+      "explanation": "Diffusion of responsibility occurs when each bystander feels less individually responsible because others are present.",
       "points": 1
     },
     {
@@ -870,14 +894,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"Bandura's Bobo doll experiment demonstrated that aggression:\" is: Is entirely biologically determined.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Bandura's Bobo doll experiment demonstrated that aggression:",
       "options": [
-        "True",
-        "False"
+        "Can be learned through observing and imitating a model",
+        "Is entirely biologically determined",
+        "Cannot be influenced by social models",
+        "Requires direct reinforcement every time"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Can be learned by observing and imitating models.",
+      "answer": "Can be learned through observing and imitating a model",
+      "explanation": "Bandura's Bobo doll studies demonstrated observational learning and modeling of aggressive behavior.",
       "points": 1
     },
     {
@@ -928,14 +954,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Deindividuation is most likely to occur when people feel:\" is: Anonymous and part of a large group.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Deindividuation is most likely to occur when people feel:",
       "options": [
-        "True",
-        "False"
+        "Anonymous and part of a large group",
+        "Highly individually accountable",
+        "Isolated from any group",
+        "Carefully observed by a close friend"
       ],
-      "answer": "True",
-      "explanation": "True. Anonymous and part of a large group is correct.",
+      "answer": "Anonymous and part of a large group",
+      "explanation": "Deindividuation is more likely when anonymity and group immersion reduce self-awareness and accountability.",
       "points": 1
     },
     {
@@ -986,14 +1014,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Implicit Association Tests (IATs) measure:\" is: Explicit, consciously reported attitudes.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Implicit Association Tests (IATs) measure:",
       "options": [
-        "True",
-        "False"
+        "Implicit associations that may operate outside conscious self-report",
+        "Explicit, consciously reported attitudes",
+        "Only moral reasoning stage",
+        "Only clinical symptoms"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The speed of associations between concepts, reflecting implicit attitudes.",
+      "answer": "Implicit associations that may operate outside conscious self-report",
+      "explanation": "IATs are designed to assess automatic associations rather than only explicit self-reported attitudes.",
       "points": 1
     },
     {

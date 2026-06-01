@@ -133,7 +133,7 @@
       "video2Note": "StatQuest — Central Limit Theorem, Clearly Explained",
       "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/sampling-distribution-mean/e/finding-probability-sample-mean",
       "practiceNote": "Khan Academy — Probability of Sample Mean",
-      "assignment": "A population has mean 50 and SD 10. For samples of n = 25 and n = 100, compute the standard error, describe the shape of the sampling distribution, and find the probability that the sample mean exceeds 52.",
+      "assignment": "A population has mean 50 and SD 10. For samples of n = 25 and n = 100, compute the standard error, describe the shape of the sampling distribution, and find the probability that the sample mean exceeds 52. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3.5
     },
     {
@@ -165,7 +165,7 @@
       "video2Note": "Crash Course Statistics #26 — Confidence Intervals for Proportions",
       "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/estimating-confidence-ap/one-sample-z-interval-proportion/e/calculating-one-proportion-z-interval",
       "practiceNote": "Khan Academy — One-Proportion z-Interval Practice",
-      "assignment": "In a survey of 400 voters, 220 support a ballot measure. Construct a 99% confidence interval for the true proportion. Compute the margin of error. Then determine how large a sample is needed to achieve a margin of error of ±3% at 95% confidence.",
+      "assignment": "In a survey of 400 voters, 220 support a ballot measure. Construct a 99% confidence interval for the true proportion. Compute the margin of error. Then determine how large a sample is needed to achieve a margin of error of ±3% at 95% confidence. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3
     },
     {
@@ -181,7 +181,7 @@
       "video2Note": "StatQuest — Hypothesis Testing and p-Values, Clearly Explained",
       "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/tests-significance-ap/one-sample-t-test-mean/e/one-sample-t-test-for-mean",
       "practiceNote": "Khan Academy — One-Sample t-Test Practice",
-      "assignment": "A manufacturer claims its batteries last 500 hours on average. A sample of 25 batteries has a mean of 487 hours and SD of 30 hours. At α = 0.05, conduct a full one-sample t-test: state hypotheses, compute t-statistic and p-value, make a decision, and state a conclusion in context.",
+      "assignment": "A manufacturer claims its batteries last 500 hours on average. A sample of 25 batteries has a mean of 487 hours and SD of 30 hours. At α = 0.05, conduct a full one-sample t-test: state hypotheses, compute t-statistic and p-value, make a decision, and state a conclusion in context. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 4
     },
     {
@@ -197,7 +197,7 @@
       "video2Note": "StatQuest — Chi-Square Tests, Clearly Explained",
       "practiceUrl": "https://www.khanacademy.org/math/ap-statistics/chi-square-tests/chi-square-tests-for-relationships/e/chi-square-test-for-association-independence",
       "practiceNote": "Khan Academy — Chi-Square Test of Independence Practice",
-      "assignment": "A die is rolled 120 times. Expected count for each face is 20. Observed counts are: 1→18, 2→22, 3→17, 4→25, 5→19, 6→19. Conduct a full chi-square goodness-of-fit test at α = 0.05.",
+      "assignment": "A die is rolled 120 times. Expected count for each face is 20. Observed counts are: 1→18, 2→22, 3→17, 4→25, 5→19, 6→19. Conduct a full chi-square goodness-of-fit test at α = 0.05. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 4
     },
     {
@@ -282,14 +282,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"For the data set {3, 5, 7, 8, 12, 15, 20}, what is the IQR\" is: 10.",
+      "type": "mc",
+      "question": "What is the interquartile range (IQR) of the data set {3, 5, 7, 8, 12, 15, 20}?",
       "options": [
-        "True",
-        "False"
+        "5",
+        "8",
+        "10",
+        "12"
       ],
-      "answer": "True",
-      "explanation": "True. 10 is correct.",
+      "answer": "10",
+      "explanation": "Q1 is 5 and Q3 is 15, so the IQR is 15 - 5 = 10.",
       "points": 1
     },
     {
@@ -335,14 +337,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Events A and B are mutually exclusive. P(A) = 0.3 and P(B) = 0.4. What is P(A or B)\" is: 0.12.",
+      "type": "mc",
+      "question": "Events A and B are mutually exclusive. If P(A) = 0.3 and P(B) = 0.4, what is P(A or B)?",
       "options": [
-        "True",
-        "False"
+        "0.12",
+        "0.30",
+        "0.40",
+        "0.70"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 0.70.",
+      "answer": "0.70",
+      "explanation": "For mutually exclusive events, P(A or B) = P(A) + P(B) = 0.3 + 0.4 = 0.70.",
       "points": 1
     },
     {
@@ -393,14 +397,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Central Limit Theorem states that as sample size increases, the sampling distribution of the sample mean approaches:\" is: A normal distribution.",
+      "type": "mc",
+      "question": "According to the Central Limit Theorem, what shape does the sampling distribution of the sample mean approach as sample size increases?",
       "options": [
-        "True",
-        "False"
+        "A uniform distribution",
+        "A normal distribution",
+        "A bimodal distribution",
+        "The original population distribution exactly"
       ],
-      "answer": "True",
-      "explanation": "True. A normal distribution is correct.",
+      "answer": "A normal distribution",
+      "explanation": "The Central Limit Theorem says the sampling distribution of the sample mean approaches a normal distribution as sample size grows.",
       "points": 1
     },
     {
@@ -441,14 +447,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"In an observational study, the researcher:\" is: Assigns subjects to treatment groups.",
+      "type": "mc",
+      "question": "In an observational study, what does the researcher do?",
       "options": [
-        "True",
-        "False"
+        "Assigns subjects to treatment groups",
+        "Observes subjects without intervening",
+        "Changes the explanatory variable directly",
+        "Randomly assigns every participant to a control group"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Observes subjects without intervening.",
+      "answer": "Observes subjects without intervening",
+      "explanation": "In an observational study, the researcher observes existing conditions and does not impose treatments.",
       "points": 1
     },
     {
@@ -499,14 +507,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"A student scores at the 84th percentile on a normally distributed exam with mean 70 and SD 10. Approximately what is the student's score\" is: 80.",
+      "type": "mc",
+      "question": "A student scores at the 84th percentile on a normally distributed exam with mean 70 and standard deviation 10. Approximately what is the student's score?",
       "options": [
-        "True",
-        "False"
+        "70",
+        "74",
+        "80",
+        "84"
       ],
-      "answer": "True",
-      "explanation": "True. 80 is correct.",
+      "answer": "80",
+      "explanation": "The 84th percentile is about one standard deviation above the mean, so the score is approximately 70 + 10 = 80.",
       "points": 1
     },
     {
@@ -552,14 +562,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"As sample size increases, the standard error of the mean:\" is: Increases.",
+      "type": "mc",
+      "question": "As sample size increases, what happens to the standard error of the mean?",
       "options": [
-        "True",
-        "False"
+        "It decreases",
+        "It increases",
+        "It stays exactly the same",
+        "It becomes the population mean"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Decreases.",
+      "answer": "It decreases",
+      "explanation": "The standard error is σ/√n, so increasing n makes the standard error smaller.",
       "points": 1
     },
     {
@@ -610,14 +622,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"A Type II error occurs when the test:\" is: Fails to reject a false null hypothesis.",
+      "type": "mc",
+      "question": "Which situation describes a Type II error?",
       "options": [
-        "True",
-        "False"
+        "Rejecting a true null hypothesis",
+        "Failing to reject a false null hypothesis",
+        "Rejecting a false null hypothesis",
+        "Failing to reject a true null hypothesis"
       ],
-      "answer": "True",
-      "explanation": "True. Fails to reject a false null hypothesis is correct.",
+      "answer": "Failing to reject a false null hypothesis",
+      "explanation": "A Type II error occurs when the null hypothesis is false, but the test fails to reject it.",
       "points": 1
     },
     {
@@ -668,14 +682,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"If r² = 0.64 for a regression model, which statement is correct\" is: 64% of the variation in x is explained by y.",
+      "type": "mc",
+      "question": "If r² = 0.64 for a regression model predicting y from x, which statement is correct?",
       "options": [
-        "True",
-        "False"
+        "64% of the variation in y is explained by x",
+        "64% of the variation in x is explained by y",
+        "The correlation coefficient must be 0.64",
+        "The slope of the regression line is 0.64"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 64% of the variation in y is explained by x.",
+      "answer": "64% of the variation in y is explained by x",
+      "explanation": "The coefficient of determination describes the proportion of variation in the response variable y explained by the predictor x.",
       "points": 1
     },
     {
@@ -765,13 +781,15 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "True or False: The answer to \"Which of the following is a quantitative variable\" is: Height in inches.",
+      "question": "Which listed variable is quantitative rather than categorical?",
       "options": [
-        "True",
-        "False"
+        "Hair color",
+        "Zip code",
+        "Height in inches",
+        "Favorite subject"
       ],
-      "answer": "True",
-      "explanation": "True. Height in inches is correct.",
+      "answer": "Height in inches",
+      "explanation": "Height in inches is numerical and can be measured, so it is quantitative.",
       "points": 1
     },
     {
@@ -833,13 +851,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "True or False: The answer to \"A box plot displays which five summary statistics\" is: Min, Q1, Median, Q3, Max.",
+      "question": "Which five-number summary is displayed by a box plot?",
       "options": [
-        "True",
-        "False"
+        "Mean, median, mode, range, standard deviation",
+        "Minimum, Q1, median, Q3, maximum",
+        "Minimum, mean, median, mode, maximum",
+        "Q1, Q2, Q3, variance, range"
       ],
-      "answer": "True",
-      "explanation": "True. Min, Q1, Median, Q3, Max is correct.",
+      "answer": "Minimum, Q1, median, Q3, maximum",
+      "explanation": "A box plot displays the minimum, first quartile, median, third quartile, and maximum.",
       "points": 1
     },
     {
@@ -887,25 +907,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "True or False: The answer to \"Which measure of center is most affected by outliers\" is: Mean.",
+      "question": "Which measure of center changes the most when an outlier is added?",
       "options": [
-        "True",
-        "False"
+        "Mean",
+        "Median",
+        "Mode",
+        "Interquartile range"
       ],
-      "answer": "True",
-      "explanation": "True. Mean is correct.",
+      "answer": "Mean",
+      "explanation": "The mean uses every value, so extreme values can pull it upward or downward.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "True or False: The answer to \"Find the median of: 4, 7, 9, 12, 15.\" is: 7.",
+      "question": "What is the median of the data set 4, 7, 9, 12, 15?",
       "options": [
-        "True",
-        "False"
+        "7",
+        "9",
+        "10",
+        "12"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 9.",
+      "answer": "9",
+      "explanation": "The values are already ordered, and the middle value is 9.",
       "points": 1
     },
     {
@@ -967,10 +991,10 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"using the standard normal table, p(z < 1.96) ≈:.\"",
+      "question": "Short response: Define or explain: Using the standard normal table, p(z < 1.96) ≈.",
       "options": null,
       "answer": "0.975",
-      "explanation": "The correct answer is: 0.975.",
+      "explanation": "A correct response identifies \"0.975\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1046,13 +1070,15 @@
     {
       "moduleOrder": 5,
       "order": 6,
-      "question": "True or False: The answer to \"When flipping a fair coin, what is the probability of getting heads\" is: 0.5.",
+      "question": "For one flip of a fair coin, what is P(heads)?",
       "options": [
-        "True",
-        "False"
+        "0",
+        "0.25",
+        "0.5",
+        "1"
       ],
-      "answer": "True",
-      "explanation": "True. 0.5 is correct.",
+      "answer": "0.5",
+      "explanation": "A fair coin has two equally likely outcomes, so P(heads) = 1/2 = 0.5.",
       "points": 1
     },
     {
@@ -1100,22 +1126,24 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"P(A|B) is read as:\" is: The probability of A given B.",
+      "question": "How is P(A|B) read?",
       "options": [
-        "True",
-        "False"
+        "The probability of A and B",
+        "The probability of A given B",
+        "The probability of B given A",
+        "The probability of A or B"
       ],
-      "answer": "True",
-      "explanation": "True. The probability of A given B is correct.",
+      "answer": "The probability of A given B",
+      "explanation": "The vertical bar means \"given,\" so P(A|B) is read as the probability of A given B.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in a contingency table, if p(b|a) = p(b), the events a and b are:.\"",
+      "question": "Short response: Complete this statement: In a contingency table, if p(b|a) = p(b), the events a and b are...",
       "options": null,
       "answer": "Independent",
-      "explanation": "The correct answer is: Independent.",
+      "explanation": "A correct response identifies \"Independent\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1163,13 +1191,15 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "True or False: The answer to \"For a discrete probability distribution, all probabilities must be:\" is: Between 0 and 1 inclusive, and sum to 1.",
+      "question": "For a discrete probability distribution, what must be true of all probabilities?",
       "options": [
-        "True",
-        "False"
+        "They must be positive integers",
+        "They must be between 0 and 1 inclusive and sum to 1",
+        "They must all be equal",
+        "They must sum to the sample size"
       ],
-      "answer": "True",
-      "explanation": "True. Between 0 and 1 inclusive, and sum to 1 is correct.",
+      "answer": "They must be between 0 and 1 inclusive and sum to 1",
+      "explanation": "Valid probabilities cannot be below 0 or above 1, and the probabilities of all outcomes must total 1.",
       "points": 1
     },
     {
@@ -1231,13 +1261,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "True or False: The answer to \"The Central Limit Theorem applies when:\" is: n ≥ 30 (or the population is normal).",
+      "question": "When is the Central Limit Theorem commonly used for a sample mean?",
       "options": [
-        "True",
-        "False"
+        "Only when n = 1",
+        "When n ≥ 30 or the population is normal",
+        "Only when the population is uniform",
+        "When the sample has no variation"
       ],
-      "answer": "True",
-      "explanation": "True. n ≥ 30 (or the population is normal) is correct.",
+      "answer": "When n ≥ 30 or the population is normal",
+      "explanation": "A large sample size, often n ≥ 30, or a normal population supports using the normal model for the sample mean.",
       "points": 1
     },
     {
@@ -1285,25 +1317,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"When should you use a t-distribution instead of z for a confidence interval for a mean\" is: When population standard deviation is unknown.",
+      "question": "When should a t-distribution be used instead of z for a confidence interval for a mean?",
       "options": [
-        "True",
-        "False"
+        "When the population standard deviation is unknown",
+        "When the sample size is exactly 100",
+        "When the variable is categorical",
+        "When the confidence level is 50%"
       ],
-      "answer": "True",
-      "explanation": "True. When population standard deviation is unknown is correct.",
+      "answer": "When the population standard deviation is unknown",
+      "explanation": "The t-distribution is used for a mean when the population standard deviation is unknown and must be estimated from the sample.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "True or False: The answer to \"Degrees of freedom for a one-sample t-interval with n = 20 is:\" is: 20.",
+      "question": "What are the degrees of freedom for a one-sample t-interval with n = 20?",
       "options": [
-        "True",
-        "False"
+        "18",
+        "19",
+        "20",
+        "21"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 19.",
+      "answer": "19",
+      "explanation": "For a one-sample t-interval, degrees of freedom are n - 1, so 20 - 1 = 19.",
       "points": 1
     },
     {
@@ -1365,19 +1401,19 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a 95% confidence interval for a proportion is (0.42, 0.58). the point estimate is:.\"",
+      "question": "Short response: Complete this statement: A 95% confidence interval for a proportion is (0.42, 0.58). the point estimate is...",
       "options": null,
       "answer": "0.50",
-      "explanation": "The correct answer is: 0.50.",
+      "explanation": "A correct response identifies \"0.50\" and connects it to the module context.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 6,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"when no prior estimate of p is available, which value is used to conservatively calculate required sample size.\"",
+      "question": "Short response: When no prior estimate of p is available, which value is used to conservatively calculate required sample size?",
       "options": null,
       "answer": "p̂ = 0.50",
-      "explanation": "The correct answer is: p̂ = 0.50.",
+      "explanation": "A correct response identifies \"p̂ = 0.50\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1453,13 +1489,15 @@
     {
       "moduleOrder": 11,
       "order": 6,
-      "question": "True or False: The answer to \"The null hypothesis (H₀) typically states:\" is: There is no effect or no difference.",
+      "question": "What does the null hypothesis H₀ typically state?",
       "options": [
-        "True",
-        "False"
+        "There is no effect or no difference",
+        "The alternative hypothesis is proven",
+        "The sample mean is always zero",
+        "The p-value is always below alpha"
       ],
-      "answer": "True",
-      "explanation": "True. There is no effect or no difference is correct.",
+      "answer": "There is no effect or no difference",
+      "explanation": "The null hypothesis usually represents the default claim of no effect, no difference, or no change.",
       "points": 1
     },
     {
@@ -1507,22 +1545,24 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "True or False: The answer to \"The chi-square statistic is calculated as:\" is: Σ(O − E)² / E.",
+      "question": "What formula is used to calculate the chi-square statistic?",
       "options": [
-        "True",
-        "False"
+        "Σ(O − E)² / E",
+        "Σ(O + E) / E",
+        "Σ(O − E) / O",
+        "ΣE² / O"
       ],
-      "answer": "True",
-      "explanation": "True. Σ(O − E)² / E is correct.",
+      "answer": "Σ(O − E)² / E",
+      "explanation": "The chi-square statistic sums (observed minus expected) squared, divided by expected, across categories.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"for a one-proportion z-test with p₀ = 0.5, n = 100, and p̂ = 0.58, the z-statistic is:.\"",
+      "question": "Short response: Define or explain: For a one-proportion z-test with p₀ = 0.5, n = 100, and p̂ = 0.58, the z-statistic is.",
       "options": null,
       "answer": "1.6",
-      "explanation": "The correct answer is: 1.6.",
+      "explanation": "A correct response identifies \"1.6\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1570,13 +1610,15 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "True or False: The answer to \"Which value of r indicates the strongest linear relationship\" is: r = −0.85.",
+      "question": "Which correlation value indicates the strongest linear relationship?",
       "options": [
-        "True",
-        "False"
+        "r = −0.85",
+        "r = 0.72",
+        "r = 0.40",
+        "r = 0.10"
       ],
-      "answer": "True",
-      "explanation": "True. r = −0.85 is correct.",
+      "answer": "r = −0.85",
+      "explanation": "Strength depends on the absolute value of r; |−0.85| is the largest of the choices.",
       "points": 1
     },
     {
@@ -1638,13 +1680,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "True or False: The answer to \"A graph that uses 3D effects to exaggerate differences in a pie chart is an example of:\" is: A misleading graphic.",
+      "question": "A graph that uses 3D effects to exaggerate differences in a pie chart is an example of what?",
       "options": [
-        "True",
-        "False"
+        "A misleading graphic",
+        "A random sample",
+        "A confidence interval",
+        "A residual plot"
       ],
-      "answer": "True",
-      "explanation": "True. A misleading graphic is correct.",
+      "answer": "A misleading graphic",
+      "explanation": "3D effects can distort visual comparisons, making the graph misleading.",
       "points": 1
     }
   ],

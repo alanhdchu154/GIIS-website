@@ -13,7 +13,7 @@
       "title": "Introduction to Behavioral Science",
       "titleZh": "行为科学导论",
       "objectives": "Define behavioral science as an interdisciplinary field, identify its major subfields, and distinguish it from pure psychology or biology.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 1 — Introduction",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/ap-history-of-psychology/v/history-of-psychology",
       "videoNote": "Khan Academy — History of Psychology",
@@ -29,7 +29,7 @@
       "title": "Evolutionary Psychology",
       "titleZh": "进化心理学",
       "objectives": "Apply natural selection principles to explain evolved psychological mechanisms, evaluate the evolutionary basis of altruism, mate selection, and aggression.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/3-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 3 — Biological Bases",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-biological-bases-behavior/ap-the-neuron-nervous-system/v/neuron-structure-and-function",
       "videoNote": "Khan Academy — Biological Bases of Behavior",
@@ -45,7 +45,7 @@
       "title": "Behavioral Genetics",
       "titleZh": "行为遗传学",
       "objectives": "Explain heritability, distinguish between twin and adoption study methods, and evaluate the nature-nurture interaction in traits like intelligence and personality.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/3-1",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 3.1 — Genetics and Behavior",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-biological-bases-behavior/ap-the-neuron-nervous-system/v/neuron-structure-and-function",
       "videoNote": "Khan Academy — Genetics & Behavior",
@@ -61,7 +61,7 @@
       "title": "Classical Conditioning",
       "titleZh": "经典条件反射",
       "objectives": "Describe the principles of Pavlovian conditioning, explain acquisition, extinction, generalization, and discrimination, and apply conditioning to explain phobias and taste aversions.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 6 — Learning",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-learning/ap-classical-conditioning/v/classical-conditioning-introduction",
       "videoNote": "Khan Academy — Classical Conditioning",
@@ -77,7 +77,7 @@
       "title": "Operant Conditioning",
       "titleZh": "操作性条件反射",
       "objectives": "Distinguish positive and negative reinforcement from punishment, compare reinforcement schedules, explain shaping and chaining, and evaluate Skinner's contributions.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 6.2 — Operant Conditioning",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-learning/ap-operant-conditioning/v/operant-conditioning",
       "videoNote": "Khan Academy — Operant Conditioning",
@@ -93,7 +93,7 @@
       "title": "Cognitive-Behavioral Perspectives",
       "titleZh": "认知行为视角",
       "objectives": "Explain how cognitive processes mediate behavioral responses, describe cognitive distortions, and explain the ABC model used in cognitive-behavioral therapy.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/16-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 16 — Therapy",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-psychological-disorders-treatment/ap-treatment-of-psychological-disorders/v/biomedical-treatments",
       "videoNote": "Khan Academy — Psychological Treatments",
@@ -109,7 +109,7 @@
       "title": "Social Learning Theory",
       "titleZh": "社会学习理论",
       "objectives": "Describe Bandura's social learning theory, explain the role of modeling, vicarious reinforcement, and self-efficacy in behavior acquisition and maintenance.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-3",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 6.3 — Observational Learning",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-learning/ap-observational-learning/v/observational-learning",
       "videoNote": "Khan Academy — Observational Learning",
@@ -125,7 +125,7 @@
       "title": "Behavior Modification",
       "titleZh": "行为矫正",
       "objectives": "Apply reinforcement, punishment, token economies, and self-management strategies to design behavior change programs in educational and clinical settings.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 6.2 — Applied Behavior Principles",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-learning/ap-operant-conditioning/v/operant-conditioning",
       "videoNote": "Khan Academy — Operant Conditioning & Modification",
@@ -169,13 +169,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Behavioral science is best described as:\" is: An interdisciplinary field studying behavior through biology, psychology, and social science.",
+      "question": "Which answer best completes this statement? Behavioral science is best described as:",
       "options": [
-        "True",
-        "False"
+        "A subfield of medicine focused on drug therapy",
+        "An interdisciplinary field studying behavior through biology, psychology, and social science",
+        "The study of animal behavior only",
+        "A branch of computer science"
       ],
-      "answer": "True",
-      "explanation": "True. An interdisciplinary field studying behavior through biology, psychology, and social science is correct.",
+      "answer": "An interdisciplinary field studying behavior through biology, psychology, and social science",
+      "explanation": "Behavioral science integrates biology, psychology, sociology, and other fields to understand human and animal behavior.",
       "points": 1
     },
     {
@@ -223,13 +225,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Evolutionary psychology proposes that psychological mechanisms evolved because they:\" is: Increased reproductive success in ancestral environments.",
+      "question": "Which answer best completes this statement? Evolutionary psychology proposes that psychological mechanisms evolved because they:",
       "options": [
-        "True",
-        "False"
+        "Made life more interesting",
+        "Increased reproductive success in ancestral environments",
+        "Were taught by parents",
+        "Helped avoid all social conflict"
       ],
-      "answer": "True",
-      "explanation": "True. Increased reproductive success in ancestral environments is correct.",
+      "answer": "Increased reproductive success in ancestral environments",
+      "explanation": "Evolutionary psychology applies natural selection: psychological traits persisted because they improved survival and reproduction.",
       "points": 1
     },
     {
@@ -361,25 +365,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"Positive punishment involves:\" is: Adding an unpleasant stimulus to decrease behavior.",
+      "question": "Which answer best completes this statement? Positive punishment involves:",
       "options": [
-        "True",
-        "False"
+        "Adding a pleasant stimulus to increase behavior",
+        "Removing an unpleasant stimulus to increase behavior",
+        "Adding an unpleasant stimulus to decrease behavior",
+        "Removing a pleasant stimulus to decrease behavior"
       ],
-      "answer": "True",
-      "explanation": "True. Adding an unpleasant stimulus to decrease behavior is correct.",
+      "answer": "Adding an unpleasant stimulus to decrease behavior",
+      "explanation": "Positive punishment adds an aversive stimulus following a behavior, decreasing the likelihood of its recurrence.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Shaping uses:\" is: Punishment to eliminate behavior.",
+      "question": "Which answer best completes this statement? Shaping uses:",
       "options": [
-        "True",
-        "False"
+        "Punishment to eliminate behavior",
+        "Successive approximations to reinforce behaviors closer to the goal",
+        "Fixed-ratio schedules only",
+        "Classical conditioning principles"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Successive approximations to reinforce behaviors closer to the goal.",
+      "answer": "Successive approximations to reinforce behaviors closer to the goal",
+      "explanation": "Shaping reinforces progressively closer approximations to the target behavior until the full behavior is acquired.",
       "points": 1
     },
     {
@@ -427,13 +435,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Cognitive distortions, as identified in CBT, are:\" is: Habitual irrational thought patterns that contribute to negative emotions.",
+      "question": "Which answer best completes this statement? Cognitive distortions, as identified in CBT, are:",
       "options": [
-        "True",
-        "False"
+        "Accurate assessments of reality",
+        "Habitual irrational thought patterns that contribute to negative emotions",
+        "Biologically driven behaviors",
+        "Learned through observational learning only"
       ],
-      "answer": "True",
-      "explanation": "True. Habitual irrational thought patterns that contribute to negative emotions is correct.",
+      "answer": "Habitual irrational thought patterns that contribute to negative emotions",
+      "explanation": "Cognitive distortions (e.g., catastrophizing, all-or-nothing thinking) are inaccurate thoughts that maintain psychological distress.",
       "points": 1
     },
     {
@@ -467,13 +477,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"Vicarious reinforcement occurs when:\" is: A person increases a behavior after observing someone else being rewarded for it.",
+      "question": "Which answer best completes this statement? Vicarious reinforcement occurs when:",
       "options": [
-        "True",
-        "False"
+        "A person is directly rewarded for a behavior",
+        "A person increases a behavior after observing someone else being rewarded for it",
+        "Punishment follows a modeled behavior",
+        "Classical conditioning involves watching others"
       ],
-      "answer": "True",
-      "explanation": "True. A person increases a behavior after observing someone else being rewarded for it is correct.",
+      "answer": "A person increases a behavior after observing someone else being rewarded for it",
+      "explanation": "Vicarious reinforcement — seeing a model rewarded — increases the observer's likelihood of performing the same behavior.",
       "points": 1
     },
     {
@@ -521,13 +533,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"A token economy is based on which principle of operant conditioning\" is: Generalized conditioned reinforcement.",
+      "question": "Which answer best completes this statement? A token economy is based on which principle of operant conditioning",
       "options": [
-        "True",
-        "False"
+        "Classical conditioning",
+        "Generalized conditioned reinforcement",
+        "Punishment and avoidance",
+        "Spontaneous recovery"
       ],
-      "answer": "True",
-      "explanation": "True. Generalized conditioned reinforcement is correct.",
+      "answer": "Generalized conditioned reinforcement",
+      "explanation": "Tokens are generalized conditioned reinforcers — neutral stimuli paired with many backup reinforcers — making them broadly motivating.",
       "points": 1
     }
   ],
@@ -580,14 +594,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"In classical conditioning, extinction occurs when:\" is: The CS is repeatedly presented without the UCS.",
+      "type": "mc",
+      "question": "Select the best answer: In classical conditioning, extinction occurs when:?",
       "options": [
-        "True",
-        "False"
+        "The conditioned stimulus is repeatedly presented without the unconditioned stimulus",
+        "A behavior is rewarded every time it occurs",
+        "A neutral stimulus is first paired with a reflex",
+        "A response is strengthened by punishment"
       ],
-      "answer": "True",
-      "explanation": "True. The CS is repeatedly presented without the UCS is correct.",
+      "answer": "The conditioned stimulus is repeatedly presented without the unconditioned stimulus",
+      "explanation": "Extinction in classical conditioning occurs when the CS no longer predicts the UCS.",
       "points": 1
     },
     {
@@ -638,14 +654,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"A token economy is most effective when tokens are:\" is: Given on a fixed-interval schedule.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? A token economy is most effective when tokens are:",
       "options": [
-        "True",
-        "False"
+        "Delivered soon after target behaviors and exchangeable for meaningful backup reinforcers",
+        "Given on a fixed-interval schedule regardless of behavior",
+        "Never exchanged for backup reinforcers",
+        "Used only as punishment"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Backed by meaningful reinforcers (backup reinforcers) and given contingently.",
+      "answer": "Delivered soon after target behaviors and exchangeable for meaningful backup reinforcers",
+      "explanation": "Token economies work best when tokens are clearly tied to target behaviors and can be exchanged for valued backup reinforcers.",
       "points": 1
     },
     {
@@ -696,14 +714,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Attention Restoration Theory predicts that natural environments improve performance because they:\" is: Allow directed attention to recover through involuntary fascination.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Attention Restoration Theory predicts that natural environments improve performance because they:",
       "options": [
-        "True",
-        "False"
+        "Allow directed attention to recover through involuntary fascination",
+        "Eliminate the need for sleep",
+        "Increase cognitive load on purpose",
+        "Prevent all mind wandering"
       ],
-      "answer": "True",
-      "explanation": "True. Allow directed attention to recover through involuntary fascination is correct.",
+      "answer": "Allow directed attention to recover through involuntary fascination",
+      "explanation": "Attention Restoration Theory proposes that softly fascinating environments help directed attention recover.",
       "points": 1
     },
     {
@@ -754,14 +774,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"An evolutionary explanation for jealousy in romantic relationships proposes that it evolved to:\" is: Create conflict between partners.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? An evolutionary explanation for jealousy in romantic relationships proposes that it evolved to:",
       "options": [
-        "True",
-        "False"
+        "Protect valued relationships and reduce risk of partner loss in ancestral contexts",
+        "Create conflict between partners",
+        "Eliminate all social comparison",
+        "Prevent attachment formation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Protect paternity certainty and mate investment.",
+      "answer": "Protect valued relationships and reduce risk of partner loss in ancestral contexts",
+      "explanation": "Evolutionary accounts interpret jealousy as a possible mate-retention mechanism, not as a goal of creating conflict.",
       "points": 1
     },
     {
@@ -812,14 +834,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Cognitive behavioral approaches differ from pure behaviorism by emphasizing:\" is: The mediating role of thoughts and beliefs in behavior.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Cognitive behavioral approaches differ from pure behaviorism by emphasizing:",
       "options": [
-        "True",
-        "False"
+        "The mediating role of thoughts and beliefs in behavior",
+        "Only unconscious drives",
+        "Only inherited reflexes",
+        "The rejection of measurable behavior"
       ],
-      "answer": "True",
-      "explanation": "True. The mediating role of thoughts and beliefs in behavior is correct.",
+      "answer": "The mediating role of thoughts and beliefs in behavior",
+      "explanation": "CBT includes learning principles but also examines how thoughts and beliefs shape emotion and behavior.",
       "points": 1
     },
     {
@@ -870,14 +894,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"The reciprocity principle in consumer psychology means that:\" is: People copy what others buy.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? The reciprocity principle in consumer psychology means that:",
       "options": [
-        "True",
-        "False"
+        "People often feel pressure to return favors or concessions",
+        "People copy what others buy",
+        "People ignore all social influence",
+        "People choose randomly when prices change"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: People feel obligated to return a favor or gift.",
+      "answer": "People often feel pressure to return favors or concessions",
+      "explanation": "The reciprocity principle describes the tendency to respond to favors, gifts, or concessions with a return action.",
       "points": 1
     },
     {
@@ -928,14 +954,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Reciprocal determinism (Bandura) differs from strict behaviorism by recognizing that:\" is: Cognitive factors influence how the environment affects behavior.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Reciprocal determinism (Bandura) differs from strict behaviorism by recognizing that:",
       "options": [
-        "True",
-        "False"
+        "Behavior, personal factors, and environment influence each other",
+        "Only rewards matter",
+        "Cognition has no role in behavior",
+        "Environment never affects behavior"
       ],
-      "answer": "True",
-      "explanation": "True. Cognitive factors influence how the environment affects behavior is correct.",
+      "answer": "Behavior, personal factors, and environment influence each other",
+      "explanation": "Bandura's reciprocal determinism describes ongoing interaction among behavior, cognition/personal factors, and environment.",
       "points": 1
     },
     {
@@ -986,14 +1014,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Environmental enrichment studies in animals and humans suggest that complex, stimulating environments:\" is: Increase stress but not performance.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Environmental enrichment studies in animals and humans suggest that complex, stimulating environments:",
       "options": [
-        "True",
-        "False"
+        "Can support learning, adaptability, and cognitive development",
+        "Increase stress but not performance",
+        "Always reduce exploration",
+        "Have no relationship to behavior"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Promote brain development and cognitive performance.",
+      "answer": "Can support learning, adaptability, and cognitive development",
+      "explanation": "Enriched environments are commonly used to discuss how stimulation and complexity can support learning and adaptive behavior.",
       "points": 1
     },
     {

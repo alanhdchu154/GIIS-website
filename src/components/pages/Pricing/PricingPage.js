@@ -20,6 +20,7 @@ const TIERS = [
     features: [
       { en: 'Full access to GIIS Learn Portal courses', zh: '开放 GIIS Learn Portal 课程' },
       { en: 'Module quizzes, assignments, midterm and final exams', zh: '章节测验、作业、期中与期末考试' },
+      { en: 'Assignment feedback visible in the Learn Portal', zh: '作业批改反馈显示在学习平台' },
       { en: 'Parent dashboard and official transcript record', zh: '家长面板与正式成绩单记录' },
       { en: '30-day full refund', zh: '30 天无条件退款' },
     ],
@@ -95,6 +96,13 @@ const FAQS = [
     a: {
       en: 'Every plan includes a 30-day full refund. Guided and Premium plans add advisor visibility so parents can catch disengagement earlier.',
       zh: '所有方案都有 30 天无条件退款。Guided 与 Premium 方案会加入顾问可见度，让家长更早发现孩子没有投入。',
+    },
+  },
+  {
+    q: { en: 'Are assignments graded by a person?', zh: '作业会有人批改吗？' },
+    a: {
+      en: 'Yes. Students submit assignments in the Learn Portal as written work or a document link. A GIIS teacher or advisor reviews the submission, scores it out of 100, and leaves written feedback. Feedback appears in the student grade view and parent dashboard.',
+      zh: '会。学生在 Learn Portal 中提交文字作业或文件链接；GIIS 老师或顾问会审阅、按 100 分批改，并留下书面反馈。反馈会显示在学生成绩页与家长面板中。',
     },
   },
 ];

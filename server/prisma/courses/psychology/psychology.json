@@ -13,7 +13,7 @@
       "title": "What is Psychology?",
       "titleZh": "什么是心理学？",
       "objectives": "Define psychology, trace its history from philosophy to modern science, and identify major psychological perspectives and career paths.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 1",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/ap-history-of-psychology/v/history-of-psychology",
       "videoNote": "Khan Academy — History of Psychology",
@@ -29,7 +29,7 @@
       "title": "Research Methods",
       "titleZh": "研究方法",
       "objectives": "Describe the scientific method, distinguish experimental from correlational designs, and explain ethical principles in psychological research.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
       "videoNote": "Khan Academy — Research Methods",
@@ -45,7 +45,7 @@
       "title": "Biological Bases",
       "titleZh": "行为的生物基础",
       "objectives": "Describe neuron structure and function, identify major brain regions and their roles, and explain how genetics and the nervous system influence behavior.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/3-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 3",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-biological-bases-behavior/ap-the-neuron-nervous-system/v/neuron-structure-and-function",
       "videoNote": "Khan Academy — Neuron Structure & Function",
@@ -61,7 +61,7 @@
       "title": "Sensation & Perception",
       "titleZh": "感觉与知觉",
       "objectives": "Distinguish sensation from perception, apply Weber's Law and signal detection theory, and explain key principles of visual and auditory perception.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/5-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 5",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-sensation-perception/ap-introduction-to-sensation-and-perception/v/introduction-to-sensation-and-perception",
       "videoNote": "Khan Academy — Sensation & Perception",
@@ -77,7 +77,7 @@
       "title": "Learning & Conditioning",
       "titleZh": "学习与条件反射",
       "objectives": "Explain classical and operant conditioning with real examples, compare reinforcement schedules, and describe observational learning.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 6",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-learning/ap-classical-conditioning/v/classical-conditioning",
       "videoNote": "Khan Academy — Classical Conditioning",
@@ -93,7 +93,7 @@
       "title": "Memory",
       "titleZh": "记忆",
       "objectives": "Describe the stages of memory (encoding, storage, retrieval), distinguish types of long-term memory, and explain major causes of forgetting.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/8-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 8",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-memory/ap-encoding-and-storage/v/encoding-and-storage",
       "videoNote": "Khan Academy — Memory Encoding & Storage",
@@ -109,7 +109,7 @@
       "title": "Thinking & Language",
       "titleZh": "思维与语言",
       "objectives": "Describe key concepts in problem solving including heuristics and biases, explain theories of language acquisition, and evaluate the relationship between language and thought.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 7",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-cognition/ap-thinking/v/thinking-and-problem-solving",
       "videoNote": "Khan Academy — Thinking & Problem Solving",
@@ -117,7 +117,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/ap-psychology/ap-cognition/ap-thinking/e/thinking",
       "practiceNote": "Khan Academy — Thinking Practice",
-      "assignment": "Describe a recent decision you made using an example of at least two cognitive biases or heuristics (e.g., availability, anchoring, confirmation bias). Reflect on how these mental shortcuts may have helped or hindered you.",
+      "assignment": "Describe a recent decision you made using an example of at least two cognitive biases or heuristics (e.g., availability, anchoring, confirmation bias). Reflect on how these mental shortcuts may have helped or hindered you. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 2.5
     },
     {
@@ -125,7 +125,7 @@
       "title": "Intelligence",
       "titleZh": "智力",
       "objectives": "Compare major theories of intelligence (Spearman, Gardner, Sternberg), evaluate IQ testing, and analyze the influence of nature and nurture on intelligence.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-4",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 7.4",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-cognition/ap-intelligence/v/intelligence",
       "videoNote": "Khan Academy — Intelligence",
@@ -169,13 +169,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Psychology is best defined as the scientific study of:\" is: Behavior and mental processes.",
+      "question": "Which answer best completes this statement? Psychology is best defined as the scientific study of:",
       "options": [
-        "True",
-        "False"
+        "The brain and nervous system only",
+        "Behavior and mental processes",
+        "Unconscious drives and instincts",
+        "Social group behavior exclusively"
       ],
-      "answer": "True",
-      "explanation": "True. Behavior and mental processes is correct.",
+      "answer": "Behavior and mental processes",
+      "explanation": "Psychology is the scientific study of behavior (observable actions) and mental processes (thoughts, feelings, and perceptions).",
       "points": 1
     },
     {
@@ -223,13 +225,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"In a scientific experiment, the independent variable is:\" is: The variable that is manipulated by the researcher.",
+      "question": "Select the best answer: In a scientific experiment, the independent variable is:?",
       "options": [
-        "True",
-        "False"
+        "The variable that is measured as an outcome",
+        "The variable that is manipulated by the researcher",
+        "A variable that is held constant across conditions",
+        "The participant's baseline score"
       ],
-      "answer": "True",
-      "explanation": "True. The variable that is manipulated by the researcher is correct.",
+      "answer": "The variable that is manipulated by the researcher",
+      "explanation": "The independent variable is the factor the experimenter deliberately changes to observe its effect on the dependent variable.",
       "points": 1
     },
     {
@@ -361,25 +365,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"In classical conditioning, the unconditioned response (UCR) is:\" is: A natural, unlearned reaction to the UCS.",
+      "question": "Select the best answer: In classical conditioning, the unconditioned response (UCR) is:?",
       "options": [
-        "True",
-        "False"
+        "A learned response to the CS",
+        "A natural, unlearned reaction to the UCS",
+        "Any behavior emitted spontaneously",
+        "The pairing of the neutral stimulus with the UCS"
       ],
-      "answer": "True",
-      "explanation": "True. A natural, unlearned reaction to the UCS is correct.",
+      "answer": "A natural, unlearned reaction to the UCS",
+      "explanation": "The UCR is the unlearned, automatic response naturally triggered by the unconditioned stimulus before any conditioning occurs.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Positive reinforcement _____ a behavior by _____ a stimulus.\" is: Decreases; adding.",
+      "question": "Which term correctly completes this statement? Positive reinforcement _____ a behavior by _____ a stimulus",
       "options": [
-        "True",
-        "False"
+        "Decreases; adding",
+        "Increases; removing",
+        "Increases; adding",
+        "Decreases; removing"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Increases; adding.",
+      "answer": "Increases; adding",
+      "explanation": "Positive reinforcement increases the likelihood of a behavior by adding a pleasant consequence after the behavior occurs.",
       "points": 1
     },
     {
@@ -427,13 +435,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Short-term memory typically holds approximately how many items\" is: 7 ± 2.",
+      "question": "Which answer best completes this statement? Short-term memory typically holds approximately how many items",
       "options": [
-        "True",
-        "False"
+        "2–3",
+        "7 ± 2",
+        "15–20",
+        "Unlimited"
       ],
-      "answer": "True",
-      "explanation": "True. 7 ± 2 is correct.",
+      "answer": "7 ± 2",
+      "explanation": "George Miller's research showed that short-term memory holds approximately 7 (plus or minus 2) chunks of information.",
       "points": 1
     },
     {
@@ -467,13 +477,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"A heuristic is best described as:\" is: A mental shortcut that allows quick but sometimes inaccurate judgments.",
+      "question": "Which answer best completes this statement? A heuristic is best described as:",
       "options": [
-        "True",
-        "False"
+        "A guaranteed problem-solving algorithm",
+        "A mental shortcut that allows quick but sometimes inaccurate judgments",
+        "A logical, step-by-step procedure",
+        "A form of insight learning"
       ],
-      "answer": "True",
-      "explanation": "True. A mental shortcut that allows quick but sometimes inaccurate judgments is correct.",
+      "answer": "A mental shortcut that allows quick but sometimes inaccurate judgments",
+      "explanation": "Heuristics are efficient cognitive shortcuts that guide rapid judgments but can lead to systematic errors.",
       "points": 1
     },
     {
@@ -521,13 +533,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Spearman's 'g' factor refers to:\" is: A general factor underlying performance across diverse cognitive tasks.",
+      "question": "Which answer best completes this statement? Spearman's 'g' factor refers to:",
       "options": [
-        "True",
-        "False"
+        "Genetic determination of intelligence",
+        "A general factor underlying performance across diverse cognitive tasks",
+        "Group differences in intellectual ability",
+        "Genius-level cognitive performance"
       ],
-      "answer": "True",
-      "explanation": "True. A general factor underlying performance across diverse cognitive tasks is correct.",
+      "answer": "A general factor underlying performance across diverse cognitive tasks",
+      "explanation": "Spearman used factor analysis to identify g — a general intelligence factor that contributes to performance on all cognitive tasks.",
       "points": 1
     }
   ],
@@ -580,14 +594,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Transduction is the process by which sensory receptors:\" is: Convert physical energy into neural signals.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Transduction is the process by which sensory receptors:",
       "options": [
-        "True",
-        "False"
+        "Convert physical energy into neural signals",
+        "Store autobiographical memories",
+        "Release hormones into the bloodstream",
+        "Interpret dream symbols"
       ],
-      "answer": "True",
-      "explanation": "True. Convert physical energy into neural signals is correct.",
+      "answer": "Convert physical energy into neural signals",
+      "explanation": "Transduction converts sensory input such as light or sound into neural activity.",
       "points": 1
     },
     {
@@ -638,14 +654,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Gardner's theory of multiple intelligences proposes that intelligence:\" is: Is a single general ability (g).",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Gardner's theory of multiple intelligences proposes that intelligence:",
       "options": [
-        "True",
-        "False"
+        "Includes several relatively distinct abilities rather than only one general ability",
+        "Is a single general ability (g)",
+        "Can never be observed in behavior",
+        "Is identical to short-term memory capacity"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Consists of multiple distinct capacities.",
+      "answer": "Includes several relatively distinct abilities rather than only one general ability",
+      "explanation": "Gardner argued for multiple forms of intelligence, contrasting with theories centered mainly on a single general factor.",
       "points": 1
     },
     {
@@ -696,14 +714,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"The sympathetic nervous system prepares the body for:\" is: Fight or flight response.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? The sympathetic nervous system prepares the body for:",
       "options": [
-        "True",
-        "False"
+        "Fight-or-flight responses",
+        "Deep sleep only",
+        "Digest-and-rest recovery",
+        "Long-term memory storage"
       ],
-      "answer": "True",
-      "explanation": "True. Fight or flight response is correct.",
+      "answer": "Fight-or-flight responses",
+      "explanation": "The sympathetic nervous system prepares the body for arousal and emergency action.",
       "points": 1
     },
     {
@@ -754,14 +774,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Big Five personality trait of neuroticism refers to:\" is: Being warm and helpful.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? The Big Five personality trait of neuroticism refers to:",
       "options": [
-        "True",
-        "False"
+        "Emotional instability and tendency toward negative affect",
+        "Being warm and helpful",
+        "Preference for novelty and imagination",
+        "Being organized and dependable"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Emotional instability and tendency toward negative emotions.",
+      "answer": "Emotional instability and tendency toward negative affect",
+      "explanation": "Neuroticism concerns emotional reactivity and vulnerability to negative emotions.",
       "points": 1
     },
     {
@@ -812,14 +834,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"The diathesis-stress model proposes that disorders result from:\" is: An interaction between biological vulnerability and stress.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? The diathesis-stress model proposes that disorders result from:",
       "options": [
-        "True",
-        "False"
+        "An interaction between vulnerability and stress",
+        "Stress alone in every case",
+        "Only unconscious conflict",
+        "Only random chance"
       ],
-      "answer": "True",
-      "explanation": "True. An interaction between biological vulnerability and stress is correct.",
+      "answer": "An interaction between vulnerability and stress",
+      "explanation": "The diathesis-stress model combines predisposition or vulnerability with environmental stressors.",
       "points": 1
     },
     {
@@ -870,14 +894,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"Freud's defense mechanism of rationalization involves:\" is: Attributing unacceptable impulses to others.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Freud's defense mechanism of rationalization involves:",
       "options": [
-        "True",
-        "False"
+        "Creating acceptable explanations for behavior or feelings after the fact",
+        "Attributing unacceptable impulses to others",
+        "Returning to an earlier developmental pattern",
+        "Blocking threatening thoughts from awareness"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Creating logical-sounding justifications for unacceptable feelings or actions.",
+      "answer": "Creating acceptable explanations for behavior or feelings after the fact",
+      "explanation": "Rationalization justifies behavior with plausible reasons; projection attributes unwanted feelings to others.",
       "points": 1
     },
     {
@@ -983,14 +1009,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Systematic desensitization treats phobias by pairing:\" is: The feared stimulus with punishment.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Systematic desensitization treats phobias by pairing:",
       "options": [
-        "True",
-        "False"
+        "Gradual exposure to the feared stimulus with relaxation or coping responses",
+        "The feared stimulus with punishment",
+        "Dream interpretation with medication",
+        "Random sampling with survey items"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Relaxation with gradual exposure to the feared stimulus.",
+      "answer": "Gradual exposure to the feared stimulus with relaxation or coping responses",
+      "explanation": "Systematic desensitization pairs gradual exposure with relaxation or coping rather than punishment.",
       "points": 1
     },
     {

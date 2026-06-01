@@ -75,6 +75,65 @@ function serializeTranscriptStudent(student) {
   return s;
 }
 
+function daysBetween(start, end = new Date()) {
+  if (!start) return 0;
+  const startedAt = new Date(start);
+  if (Number.isNaN(startedAt.getTime())) return 0;
+  return Math.max(0, Math.floor((end.getTime() - startedAt.getTime()) / (24 * 3600 * 1000)));
+}
+
+function computePacing(enrollment, now = new Date()) {
+  const totalModules = Number(enrollment.course?._count?.modules || 0);
+  const completedModules = Array.isArray(enrollment.completedModules) ? enrollment.completedModules.length : 0;
+  if (enrollment.creditEarned || totalModules === 0) {
+    return { status: 'on_track', label: 'Complete', deltaModules: 0, expectedModules: totalModules };
+  }
+
+  const elapsedDays = daysBetween(enrollment.enrolledAt, now);
+  const expectedModules = Math.max(1, Math.min(totalModules, Math.floor((elapsedDays / (18 * 7)) * totalModules)));
+  const deltaModules = completedModules - expectedModules;
+  if (deltaModules <= -2) return { status: 'behind', label: `Behind ${Math.abs(deltaModules)} modules`, deltaModules, expectedModules };
+  if (deltaModules >= 2) return { status: 'ahead', label: `Ahead ${deltaModules} modules`, deltaModules, expectedModules };
+  return { status: 'on_track', label: 'On Track', deltaModules, expectedModules };
+}
+
+function computeWeeklyInsights(enrollment, now = new Date()) {
+  const since = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
+  const activeDays = new Set();
+  const moduleHours = new Map((enrollment.course?.modules || []).map((m) => [m.order, Number(m.estimatedHrs || 0)]));
+  let modulesCompleted = 0;
+
+  function countDate(value) {
+    if (!value) return false;
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime()) || date < since || date > now) return false;
+    activeDays.add(date.toISOString().slice(0, 10));
+    return true;
+  }
+
+  for (const p of enrollment.moduleProgresses || []) {
+    if (countDate(p.moduleCompletedAt)) modulesCompleted += 1;
+    countDate(p.readingCompletedAt);
+    countDate(p.videoCompletedAt);
+    countDate(p.supplementalVideoCompletedAt);
+    countDate(p.practiceCompletedAt);
+  }
+
+  const quizAttempts = (enrollment.quizAttempts || []).filter((q) => countDate(q.submittedAt)).length;
+  const assignmentSubmissions = (enrollment.assignments || []).filter((a) => countDate(a.submittedAt)).length;
+  const estimatedStudyHours = (enrollment.moduleProgresses || [])
+    .filter((p) => p.moduleCompletedAt && new Date(p.moduleCompletedAt) >= since && new Date(p.moduleCompletedAt) <= now)
+    .reduce((sum, p) => sum + (moduleHours.get(p.moduleOrder) || 0), 0);
+
+  return {
+    activeDays: activeDays.size,
+    modulesCompleted,
+    quizAttempts,
+    assignmentSubmissions,
+    estimatedStudyHours: Math.round(estimatedStudyHours * 10) / 10,
+  };
+}
+
 // GET /api/parent/me
 // Returns logged-in parent's linked student data: profile, enrollments, recent activity, GPA, credits.
 router.get('/me', async (req, res) => {
@@ -86,10 +145,20 @@ router.get('/me', async (req, res) => {
     include: {
       enrollments: {
         include: {
-          course: { select: { name: true, nameZh: true, slug: true, department: true, credits: true, _count: { select: { modules: true } } } },
-          examAttempts: { orderBy: { submittedAt: 'desc' }, take: 5 },
-          assignments: { orderBy: { updatedAt: 'desc' }, take: 5 },
-          quizAttempts: { orderBy: { submittedAt: 'desc' }, take: 5 },
+          course: {
+            select: {
+              name: true,
+              nameZh: true,
+              slug: true,
+              department: true,
+              credits: true,
+              modules: { select: { order: true, title: true, estimatedHrs: true } },
+              _count: { select: { modules: true } },
+            },
+          },
+          examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
+          assignments: { orderBy: { updatedAt: 'desc' } },
+          quizAttempts: { orderBy: { submittedAt: 'desc' } },
           moduleProgresses: { orderBy: { lastActivityAt: 'desc' }, take: 10 },
         },
         orderBy: { enrolledAt: 'desc' },
@@ -109,13 +178,30 @@ router.get('/me', async (req, res) => {
   const events = [];
   for (const enr of student.enrollments) {
     for (const a of enr.examAttempts) {
-      if (a.submittedAt) events.push({ type: 'exam', course: enr.course.name, score: a.score, passed: a.passed, at: a.submittedAt });
+      if (a.submittedAt) events.push({ type: 'exam', examType: a.examType, course: enr.course.name, score: a.score, passed: a.passed, at: a.submittedAt });
     }
     for (const q of enr.quizAttempts) {
       events.push({ type: 'quiz', course: enr.course.name, moduleOrder: q.moduleOrder, passed: q.passed, at: q.submittedAt });
     }
     for (const s of enr.assignments) {
-      events.push({ type: 'assignment', course: enr.course.name, moduleOrder: s.moduleOrder, hasFeedback: !!s.feedback, at: s.submittedAt });
+      events.push({
+        type: 'assignment',
+        course: enr.course.name,
+        moduleOrder: s.moduleOrder,
+        hasFeedback: !!s.feedback,
+        score: s.score != null ? Number(s.score) : null,
+        at: s.submittedAt,
+      });
+      if (s.gradedAt) {
+        events.push({
+          type: 'assignment_feedback',
+          course: enr.course.name,
+          moduleOrder: s.moduleOrder,
+          score: s.score != null ? Number(s.score) : null,
+          feedback: s.feedback || '',
+          at: s.gradedAt,
+        });
+      }
     }
     for (const p of enr.moduleProgresses || []) {
       const activityTypes = [
@@ -149,11 +235,41 @@ router.get('/me', async (req, res) => {
       totalEnrollments: student.enrollments.length,
       completed: stats.completed,
     },
-    enrollments: student.enrollments.map(e => ({
-      id: e.id, slug: e.course.slug, name: e.course.name, nameZh: e.course.nameZh,
-      department: e.course.department, credits: Number(e.course.credits),
-      completedModules: e.completedModules.length, totalModules: e.course._count.modules, creditEarned: e.creditEarned,
-    })),
+    enrollments: student.enrollments.map(e => {
+      const latestMidterm = e.examAttempts.find((attempt) => attempt.examType === 'midterm') || null;
+      const latestFinal = e.examAttempts.find((attempt) => attempt.examType === 'final') || null;
+      const submittedAssignments = e.assignments.length;
+      const reviewedAssignments = e.assignments.filter((assignment) => assignment.gradedAt).length;
+      const moduleTitles = new Map((e.course.modules || []).map((module) => [module.order, module.title]));
+      return {
+        id: e.id, slug: e.course.slug, name: e.course.name, nameZh: e.course.nameZh,
+        department: e.course.department, credits: Number(e.course.credits),
+        completedModules: e.completedModules.length, totalModules: e.course._count.modules, creditEarned: e.creditEarned,
+        pacing: computePacing(e),
+        weeklyInsights: computeWeeklyInsights(e),
+        assessment: {
+          quizzesSubmitted: e.quizAttempts.length,
+          quizzesPassed: e.quizAttempts.filter((attempt) => attempt.passed).length,
+          assignmentsSubmitted: submittedAssignments,
+          assignmentsReviewed: reviewedAssignments,
+          midterm: latestMidterm ? { score: Number(latestMidterm.score), passed: latestMidterm.passed, submittedAt: latestMidterm.submittedAt } : null,
+          final: latestFinal ? { score: Number(latestFinal.score), passed: latestFinal.passed, submittedAt: latestFinal.submittedAt } : null,
+        },
+        assignments: e.assignments
+          .slice()
+          .sort((a, b) => a.moduleOrder - b.moduleOrder)
+          .map((assignment) => ({
+            moduleOrder: assignment.moduleOrder,
+            moduleTitle: moduleTitles.get(assignment.moduleOrder) || null,
+            status: assignment.gradedAt ? 'reviewed' : 'submitted',
+            submittedAt: assignment.submittedAt,
+            gradedAt: assignment.gradedAt,
+            score: assignment.score != null ? Number(assignment.score) : null,
+            feedback: assignment.feedback || '',
+            contentPreview: String(assignment.content || '').slice(0, 220),
+          })),
+      };
+    }),
     recentActivity: events.slice(0, 10),
     subscription: activeSub || null,
   });

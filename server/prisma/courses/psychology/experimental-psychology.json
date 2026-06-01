@@ -13,7 +13,7 @@
       "title": "Science & the Scientific Method",
       "titleZh": "科学与科学方法",
       "objectives": "Describe the goals and characteristics of science, explain the steps of the scientific method, and distinguish science from pseudoscience.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
       "videoNote": "Khan Academy — Research Methods in Psychology",
@@ -29,7 +29,7 @@
       "title": "Research Ethics",
       "titleZh": "研究伦理",
       "objectives": "Explain the key principles of ethical research (informed consent, deception, debriefing, confidentiality), and evaluate landmark ethical violations in psychology.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-4",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2.4",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
       "videoNote": "Khan Academy — Ethics in Research",
@@ -45,7 +45,7 @@
       "title": "Observational Methods",
       "titleZh": "观察法",
       "objectives": "Distinguish between naturalistic and structured observation, describe participant vs. non-participant observation, and evaluate the strengths and limitations of observational research.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2.2",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
       "videoNote": "Khan Academy — Observational Research",
@@ -61,7 +61,7 @@
       "title": "Survey & Self-Report Methods",
       "titleZh": "调查与自我报告法",
       "objectives": "Explain the principles of effective survey design, identify common response biases, and compare open-ended and closed-ended question formats.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2.2",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
       "videoNote": "Khan Academy — Survey Methods",
@@ -77,7 +77,7 @@
       "title": "Correlational Research",
       "titleZh": "相关研究",
       "objectives": "Explain what a correlation coefficient measures, interpret scatter plots, and explain why correlation does not imply causation.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-3",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2.3",
       "videoUrl": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/introduction-to-scatterplots/v/constructing-a-scatter-plot",
       "videoNote": "Khan Academy — Correlation & Scatter Plots",
@@ -93,7 +93,7 @@
       "title": "Experimental Design",
       "titleZh": "实验设计",
       "objectives": "Identify the components of a true experiment, distinguish between between-subjects and within-subjects designs, and explain the importance of control groups.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-3",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2.3",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
       "videoNote": "Khan Academy — Experimental Design",
@@ -109,7 +109,7 @@
       "title": "Variables & Control",
       "titleZh": "变量与控制",
       "objectives": "Operationally define independent, dependent, and confounding variables, explain experimental control techniques, and recognize sources of bias.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-3",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2.3",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-history-approaches-study-design/research-methods-ap/v/research-methods",
       "videoNote": "Khan Academy — Variables in Research",
@@ -125,7 +125,7 @@
       "title": "Sampling Methods",
       "titleZh": "取样方法",
       "objectives": "Compare probability and non-probability sampling techniques, explain sampling error, and evaluate how sample characteristics affect generalizability.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/2-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 2.2",
       "videoUrl": "https://www.khanacademy.org/math/statistics-probability/designing-studies/sampling-methods-stats/v/techniques-for-random-sampling-and-avoiding-bias",
       "videoNote": "Khan Academy — Sampling Methods",
@@ -169,13 +169,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Which of the following is NOT a goal of psychological science\" is: Entertainment.",
+      "question": "Select the best answer: Which of the following is NOT a goal of psychological science?",
       "options": [
-        "True",
-        "False"
+        "Description",
+        "Explanation",
+        "Prediction",
+        "Entertainment"
       ],
-      "answer": "True",
-      "explanation": "True. Entertainment is correct.",
+      "answer": "Entertainment",
+      "explanation": "The four goals of psychology are description, explanation, prediction, and control/application — not entertainment.",
       "points": 1
     },
     {
@@ -223,13 +225,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Informed consent requires that participants:\" is: Are told enough about the study to make a voluntary decision to participate.",
+      "question": "Which answer best completes this statement? Informed consent requires that participants:",
       "options": [
-        "True",
-        "False"
+        "Are fully deceived about the study's purpose",
+        "Are told enough about the study to make a voluntary decision to participate",
+        "Cannot withdraw from a study once begun",
+        "Are paid for their participation"
       ],
-      "answer": "True",
-      "explanation": "True. Are told enough about the study to make a voluntary decision to participate is correct.",
+      "answer": "Are told enough about the study to make a voluntary decision to participate",
+      "explanation": "Informed consent is an ethical requirement that participants receive sufficient information about the study to decide whether to participate voluntarily.",
       "points": 1
     },
     {
@@ -361,25 +365,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"A correlation coefficient of +0.90 indicates:\" is: A strong positive relationship.",
+      "question": "Which answer best completes this statement? A correlation coefficient of +0.90 indicates:",
       "options": [
-        "True",
-        "False"
+        "A weak positive relationship",
+        "A strong negative relationship",
+        "A strong positive relationship",
+        "No relationship"
       ],
-      "answer": "True",
-      "explanation": "True. A strong positive relationship is correct.",
+      "answer": "A strong positive relationship",
+      "explanation": "Correlation coefficients close to +1.0 indicate a strong positive (direct) relationship between two variables.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"A third variable problem in correlational research means:\" is: Three variables must always be measured simultaneously.",
+      "question": "Which answer best completes this statement? A third variable problem in correlational research means:",
       "options": [
-        "True",
-        "False"
+        "A third variable directly causes both measured variables",
+        "Three variables must always be measured simultaneously",
+        "Correlations always involve three variables",
+        "Third variables are statistically controlled"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: A third variable directly causes both measured variables.",
+      "answer": "A third variable directly causes both measured variables",
+      "explanation": "The third-variable problem occurs when an unmeasured variable explains the observed correlation between two measured variables.",
       "points": 1
     },
     {
@@ -427,13 +435,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Random assignment in experiments is used to:\" is: Distribute individual differences evenly across experimental groups.",
+      "question": "Which answer best completes this statement? Random assignment in experiments is used to:",
       "options": [
-        "True",
-        "False"
+        "Select a representative sample from the population",
+        "Ensure all participants experience all conditions equally",
+        "Distribute individual differences evenly across experimental groups",
+        "Increase the size of the sample"
       ],
-      "answer": "True",
-      "explanation": "True. Distribute individual differences evenly across experimental groups is correct.",
+      "answer": "Distribute individual differences evenly across experimental groups",
+      "explanation": "Random assignment distributes participant characteristics randomly across conditions, making groups equivalent before the IV is manipulated.",
       "points": 1
     },
     {
@@ -467,13 +477,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"An operational definition specifies:\" is: How a variable will be measured or manipulated in a specific study.",
+      "question": "Which answer best completes this statement? An operational definition specifies:",
       "options": [
-        "True",
-        "False"
+        "The theoretical meaning of a construct",
+        "How a variable will be measured or manipulated in a specific study",
+        "The statistical analysis to be used",
+        "The ethical justification for the study"
       ],
-      "answer": "True",
-      "explanation": "True. How a variable will be measured or manipulated in a specific study is correct.",
+      "answer": "How a variable will be measured or manipulated in a specific study",
+      "explanation": "Operational definitions translate abstract constructs into concrete, measurable procedures used in a specific study.",
       "points": 1
     },
     {
@@ -521,13 +533,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"A simple random sample is one in which:\" is: Every member of the population has an equal chance of selection.",
+      "question": "Which answer best completes this statement? A simple random sample is one in which:",
       "options": [
-        "True",
-        "False"
+        "Every member of the population has an equal chance of selection",
+        "The sample is stratified by demographic groups",
+        "Participants are selected based on convenience",
+        "The researcher selects 'typical' members of the population"
       ],
-      "answer": "True",
-      "explanation": "True. Every member of the population has an equal chance of selection is correct.",
+      "answer": "Every member of the population has an equal chance of selection",
+      "explanation": "In simple random sampling, all members of the population have an equal and independent probability of being selected.",
       "points": 1
     }
   ],
@@ -580,14 +594,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Social desirability bias in surveys occurs when respondents:\" is: Answer in ways they believe are socially acceptable rather than truthfully.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Social desirability bias in surveys occurs when respondents:",
       "options": [
-        "True",
-        "False"
+        "Answer in ways they believe are socially acceptable rather than fully honest",
+        "Are randomly assigned to groups",
+        "Never understand the questions",
+        "Always report private behavior accurately"
       ],
-      "answer": "True",
-      "explanation": "True. Answer in ways they believe are socially acceptable rather than truthfully is correct.",
+      "answer": "Answer in ways they believe are socially acceptable rather than fully honest",
+      "explanation": "Social desirability bias occurs when people shape answers to look acceptable or favorable.",
       "points": 1
     },
     {
@@ -638,14 +654,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Stratified random sampling is used when researchers want to:\" is: Save time and resources.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Stratified random sampling is used when researchers want to:",
       "options": [
-        "True",
-        "False"
+        "Ensure important subgroups are represented in the sample",
+        "Save time and resources",
+        "Avoid all random selection",
+        "Measure only one participant"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Ensure proportional representation of key subgroups.",
+      "answer": "Ensure important subgroups are represented in the sample",
+      "explanation": "Stratified random sampling samples within defined subgroups so the sample reflects important population categories.",
       "points": 1
     },
     {
@@ -696,14 +714,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Inter-rater reliability is highest when two observers:\" is: Agree closely on their independent ratings of the same event.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Inter-rater reliability is highest when two observers:",
       "options": [
-        "True",
-        "False"
+        "Agree closely on their independent ratings of the same event",
+        "Use different definitions for each behavior",
+        "Change the rating scale after observing",
+        "Rate different events at different times"
       ],
-      "answer": "True",
-      "explanation": "True. Agree closely on their independent ratings of the same event is correct.",
+      "answer": "Agree closely on their independent ratings of the same event",
+      "explanation": "High inter-rater reliability means independent observers make similar ratings using the same criteria.",
       "points": 1
     },
     {
@@ -754,14 +774,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Effect size (Cohen's d) tells researchers:\" is: Whether a result is statistically significant.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Effect size (Cohen's d) tells researchers:",
       "options": [
-        "True",
-        "False"
+        "The size or magnitude of a difference in standardized units",
+        "Whether a result is statistically significant",
+        "The number of participants in the population",
+        "Whether the sample was random"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The practical magnitude of an effect.",
+      "answer": "The size or magnitude of a difference in standardized units",
+      "explanation": "Cohen's d describes the magnitude of a difference, which is separate from statistical significance.",
       "points": 1
     },
     {
@@ -812,14 +834,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"A Type II error (false negative) means:\" is: Failing to detect a real effect that exists.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? A Type II error (false negative) means:",
       "options": [
-        "True",
-        "False"
+        "Failing to detect a real effect that exists",
+        "Finding an effect when none exists",
+        "Using too many dependent variables",
+        "Publishing without peer review"
       ],
-      "answer": "True",
-      "explanation": "True. Failing to detect a real effect that exists is correct.",
+      "answer": "Failing to detect a real effect that exists",
+      "explanation": "A Type II error occurs when a study misses a true effect.",
       "points": 1
     },
     {
@@ -870,14 +894,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"HARKing undermines scientific integrity because it:\" is: Makes hypotheses more testable.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? HARKing undermines scientific integrity because it:",
       "options": [
-        "True",
-        "False"
+        "Presents hypotheses created after results as if they were predicted in advance",
+        "Makes hypotheses more testable",
+        "Requires public methods before data collection",
+        "Improves transparency by separating prediction from exploration"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Presents post-hoc findings as if they were a priori predictions.",
+      "answer": "Presents hypotheses created after results as if they were predicted in advance",
+      "explanation": "HARKing means hypothesizing after the results are known, which blurs prediction and post-hoc explanation.",
       "points": 1
     },
     {
@@ -928,14 +954,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Internal validity is best ensured by:\" is: Random assignment and experimental control of confounds.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Internal validity is best ensured by:",
       "options": [
-        "True",
-        "False"
+        "Random assignment and experimental control of confounds",
+        "A large number of survey questions only",
+        "Chronological literature review",
+        "Participant guesses about the hypothesis"
       ],
-      "answer": "True",
-      "explanation": "True. Random assignment and experimental control of confounds is correct.",
+      "answer": "Random assignment and experimental control of confounds",
+      "explanation": "Internal validity is strengthened when alternative explanations are controlled, often through random assignment and careful design.",
       "points": 1
     },
     {
@@ -986,14 +1014,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"The goal of peer review is to:\" is: Speed up publication of research.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? The goal of peer review is to:",
       "options": [
-        "True",
-        "False"
+        "Evaluate a study's quality, logic, and evidence before publication",
+        "Speed up publication of research",
+        "Guarantee that every conclusion is correct",
+        "Replace the need for replication"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Ensure research meets quality and ethical standards before publication.",
+      "answer": "Evaluate a study's quality, logic, and evidence before publication",
+      "explanation": "Peer review is a quality-control process, though it does not guarantee that a study is flawless.",
       "points": 1
     },
     {

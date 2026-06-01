@@ -169,22 +169,24 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"The four elements of the marketing mix are known as:\" is: Product, Price, Place, Promotion.",
+      "question": "Choose the best answer: The four elements of the marketing mix are known as:",
       "options": [
-        "True",
-        "False"
+        "People, Process, Physical evidence, Promotion",
+        "Product, Price, Place, Promotion",
+        "Planning, Pricing, Placement, Publicity",
+        "Product, Profit, Positioning, Promotion"
       ],
-      "answer": "True",
-      "explanation": "True. Product, Price, Place, Promotion is correct.",
+      "answer": "Product, Price, Place, Promotion",
+      "explanation": "The classic 4Ps of marketing - Product, Price, Place, and Promotion - form the foundational marketing mix that companies use to market their offerings.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which of the following is an example of a service rather than a physical product.\"",
+      "question": "Short response: Which of the following is an example of a service rather than a physical product?",
       "options": null,
       "answer": "A haircut",
-      "explanation": "The correct answer is: A haircut.",
+      "explanation": "A correct response identifies \"A haircut\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -232,13 +234,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Primary market research data is:\" is: Original data collected directly for a specific research purpose.",
+      "question": "Choose the best answer: Primary market research data is:",
       "options": [
-        "True",
-        "False"
+        "Data collected from government reports",
+        "Data already published by other organizations",
+        "Original data collected directly for a specific research purpose",
+        "Data from industry trade associations"
       ],
-      "answer": "True",
-      "explanation": "True. Original data collected directly for a specific research purpose is correct.",
+      "answer": "Original data collected directly for a specific research purpose",
+      "explanation": "Primary research involves gathering new data firsthand through surveys, interviews, focus groups, or observations - customized to the researcher's specific question.",
       "points": 1
     },
     {
@@ -370,25 +374,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"In the product life cycle, sales grow most rapidly during the:\" is: Growth stage.",
+      "question": "Choose the best answer: In the product life cycle, sales grow most rapidly during the:",
       "options": [
-        "True",
-        "False"
+        "Introduction stage",
+        "Growth stage",
+        "Maturity stage",
+        "Decline stage"
       ],
-      "answer": "True",
-      "explanation": "True. Growth stage is correct.",
+      "answer": "Growth stage",
+      "explanation": "During the growth stage, consumer awareness increases, sales rise rapidly, and new competitors enter the market attracted by profitability.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"The core product refers to:\" is: The physical features and packaging of a product.",
+      "question": "Choose the best answer: The core product refers to:",
       "options": [
-        "True",
-        "False"
+        "The physical features and packaging of a product",
+        "The fundamental benefit or problem-solving service the customer buys",
+        "The brand name and warranty",
+        "After-sales support"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The fundamental benefit or problem-solving service the customer buys.",
+      "answer": "The fundamental benefit or problem-solving service the customer buys",
+      "explanation": "The core product is the essential benefit - what the customer is really buying. A drill's core product is the hole, not the drill itself.",
       "points": 1
     },
     {
@@ -436,13 +444,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Cost-plus pricing sets the price by:\" is: Adding a markup to the total cost of producing the product.",
+      "question": "Choose the best answer: Cost-plus pricing sets the price by:",
       "options": [
-        "True",
-        "False"
+        "Matching competitors' prices exactly",
+        "Adding a markup to the total cost of producing the product",
+        "Charging what the customer is willing to pay",
+        "Setting price below competitors to gain market share"
       ],
-      "answer": "True",
-      "explanation": "True. Adding a markup to the total cost of producing the product is correct.",
+      "answer": "Adding a markup to the total cost of producing the product",
+      "explanation": "Cost-plus pricing = total cost + desired profit margin. It is simple and ensures costs are covered, but may ignore what customers value or what competitors charge.",
       "points": 1
     },
     {
@@ -476,13 +486,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"An intermediary in a distribution channel:\" is: Connects producers to consumers by performing distribution functions.",
+      "question": "Choose the best answer: An intermediary in a distribution channel:",
       "options": [
-        "True",
-        "False"
+        "Produces the finished product",
+        "Connects producers to consumers by performing distribution functions",
+        "Sets government price regulations",
+        "Manufactures raw materials"
       ],
-      "answer": "True",
-      "explanation": "True. Connects producers to consumers by performing distribution functions is correct.",
+      "answer": "Connects producers to consumers by performing distribution functions",
+      "explanation": "Intermediaries (wholesalers, retailers, agents) add value by performing functions like storage, transportation, promotion, and breaking bulk between producer and consumer.",
       "points": 1
     },
     {
@@ -530,13 +542,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Which element of the promotional mix involves mass communication through paid media\" is: Advertising.",
+      "question": "Choose the best answer: Which element of the promotional mix involves mass communication through paid media?",
       "options": [
-        "True",
-        "False"
+        "Personal selling",
+        "Public relations",
+        "Advertising",
+        "Sales promotion"
       ],
-      "answer": "True",
-      "explanation": "True. Advertising is correct.",
+      "answer": "Advertising",
+      "explanation": "Advertising is paid, non-personal mass communication through media such as TV, radio, print, digital, and outdoor - used to reach large audiences.",
       "points": 1
     }
   ],
@@ -589,14 +603,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Behavioral segmentation divides markets based on:\" is: Purchase behavior, usage rate, and brand loyalty.",
+      "type": "mc",
+      "question": "Choose the best answer: Behavioral segmentation divides markets based on:",
       "options": [
-        "True",
-        "False"
+        "Purchase behavior, usage rate, and brand loyalty",
+        "Purchase frequency and brand loyalty",
+        "Behavioral and psychographic segmentation using viewing data",
+        "Product usage rate"
       ],
-      "answer": "True",
-      "explanation": "True. Purchase behavior, usage rate, and brand loyalty is correct.",
+      "answer": "Purchase behavior, usage rate, and brand loyalty",
+      "explanation": "The best answer is Purchase behavior, usage rate, and brand loyalty. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -647,14 +663,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which promotional element is most effective for complex, high-value B2B sales\" is: Mass advertising.",
+      "type": "mc",
+      "question": "Choose the best answer: Which promotional element is most effective for complex, high-value B2B sales?",
       "options": [
-        "True",
-        "False"
+        "Personal selling",
+        "Mass advertising",
+        "Personal factor",
+        "Sales promotion"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Personal selling.",
+      "answer": "Personal selling",
+      "explanation": "The best answer is Personal selling. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -705,14 +723,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Brand loyalty is valuable to a company because loyal customers:\" is: Are less price-sensitive and generate repeat revenue.",
+      "type": "mc",
+      "question": "Choose the best answer: Brand loyalty is valuable to a company because loyal customers:",
       "options": [
-        "True",
-        "False"
+        "Are less price-sensitive and generate repeat revenue",
+        "Purchase frequency and brand loyalty",
+        "A large number of loyal customers who recommend the brand to others",
+        "Satisfied customers create word-of-mouth referrals and repeat purchases"
       ],
-      "answer": "True",
-      "explanation": "True. Are less price-sensitive and generate repeat revenue is correct.",
+      "answer": "Are less price-sensitive and generate repeat revenue",
+      "explanation": "The best answer is Are less price-sensitive and generate repeat revenue. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -763,14 +783,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following best describes relationship marketing\" is: Focusing exclusively on making single transactions.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following best describes relationship marketing?",
       "options": [
-        "True",
-        "False"
+        "Building long-term customer relationships and loyalty",
+        "Focusing exclusively on making single transactions",
+        "Set the marketing budget",
+        "The brand name and warranty"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Building long-term mutually beneficial relationships with customers.",
+      "answer": "Building long-term customer relationships and loyalty",
+      "explanation": "The best answer is Building long-term customer relationships and loyalty. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -821,14 +843,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following is considered unethical targeting in marketing\" is: Targeting elderly consumers with misleading high-pressure timeshare sales tactics.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following is considered unethical targeting in marketing?",
       "options": [
-        "True",
-        "False"
+        "Targeting elderly consumers with misleading high-pressure timeshare sales tactics",
+        "Set the marketing budget",
+        "Hire the right marketing team",
+        "Growing rapidly along with sales"
       ],
-      "answer": "True",
-      "explanation": "True. Targeting elderly consumers with misleading high-pressure timeshare sales tactics is correct.",
+      "answer": "Targeting elderly consumers with misleading high-pressure timeshare sales tactics",
+      "explanation": "The best answer is Targeting elderly consumers with misleading high-pressure timeshare sales tactics. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -879,14 +903,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"When a store like Walmart sells products under its own brand name (e.g., Great Value), this is called:\" is: Co-branding.",
+      "type": "mc",
+      "question": "Choose the best answer: When a store like Walmart sells products under its own brand name (e.g., Great Value), this is called:",
       "options": [
-        "True",
-        "False"
+        "Private-label or store-brand marketing",
+        "Co-branding",
+        "The brand name only",
+        "Private label branding"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Private label branding.",
+      "answer": "Private-label or store-brand marketing",
+      "explanation": "The best answer is Private-label or store-brand marketing. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -937,14 +963,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Cost-plus pricing guarantees coverage of costs but may fail because it:\" is: Ignores what customers value and what competitors charge.",
+      "type": "mc",
+      "question": "Choose the best answer: Cost-plus pricing guarantees coverage of costs but may fail because it:",
       "options": [
-        "True",
-        "False"
+        "Ignores what customers value and what competitors charge",
+        "Rapidly increasing sales and new competitors",
+        "Identify and satisfy customer needs more effectively than competitors",
+        "Satisfied customers create word-of-mouth referrals and repeat purchases"
       ],
-      "answer": "True",
-      "explanation": "True. Ignores what customers value and what competitors charge is correct.",
+      "answer": "Ignores what customers value and what competitors charge",
+      "explanation": "The best answer is Ignores what customers value and what competitors charge. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -995,14 +1023,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which consumer buying decision involves the LEAST deliberation\" is: Buying a house.",
+      "type": "mc",
+      "question": "Choose the best answer: Which consumer buying decision involves the LEAST deliberation?",
       "options": [
-        "True",
-        "False"
+        "Buying a routine low-cost convenience product",
+        "Buying a house",
+        "It occurs before the consumer makes a purchase decision",
+        "Adding a markup to the total cost of producing the product"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Grabbing a candy bar at checkout.",
+      "answer": "Buying a routine low-cost convenience product",
+      "explanation": "The best answer is Buying a routine low-cost convenience product. This checks the course concept directly.",
       "points": 1
     },
     {

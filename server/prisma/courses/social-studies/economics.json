@@ -266,14 +266,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"A price ceiling set below the equilibrium price causes:\" is: A shortage.",
+      "type": "mc",
+      "question": "Which option best completes this statement? A price ceiling set below the equilibrium price causes:",
       "options": [
-        "True",
-        "False"
+        "A shortage",
+        "A surplus",
+        "No change in quantity exchanged",
+        "A rightward shift of demand"
       ],
-      "answer": "True",
-      "explanation": "True. A shortage is correct.",
+      "answer": "A shortage",
+      "explanation": "The correct answer is: A shortage.",
       "points": 1
     },
     {
@@ -324,14 +326,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"GDP is best defined as:\" is: Total income earned by a country's citizens worldwide.",
+      "type": "mc",
+      "question": "Which option best completes this statement? GDP is best defined as:",
       "options": [
-        "True",
-        "False"
+        "The market value of final goods and services produced within a country during a given period",
+        "Total income earned by a country's citizens worldwide",
+        "The total value of stock market trades in a year",
+        "Government tax revenue minus transfer payments"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The total market value of all final goods and services produced within a country in a given year.",
+      "answer": "The market value of final goods and services produced within a country during a given period",
+      "explanation": "The correct answer is: The market value of final goods and services produced within a country during a given period.",
       "points": 1
     },
     {
@@ -382,14 +386,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"If the reserve requirement is 20%, the money multiplier is:\" is: 5.",
+      "type": "mc",
+      "question": "In this course, if the reserve requirement is 20%, the money multiplier is?",
       "options": [
-        "True",
-        "False"
+        "5",
+        "2",
+        "20",
+        "0.2"
       ],
-      "answer": "True",
-      "explanation": "True. 5 is correct.",
+      "answer": "5",
+      "explanation": "The correct answer is: 5.",
       "points": 1
     },
     {
@@ -430,14 +436,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"The law of supply states that, all else equal, as price rises:\" is: Quantity supplied falls.",
+      "type": "mc",
+      "question": "Which option best completes this statement? The law of supply states that, all else equal, as price rises:",
       "options": [
-        "True",
-        "False"
+        "Quantity supplied rises",
+        "Quantity supplied falls",
+        "Demand decreases",
+        "Supply disappears"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Quantity supplied rises.",
+      "answer": "Quantity supplied rises",
+      "explanation": "The correct answer is: Quantity supplied rises.",
       "points": 1
     },
     {
@@ -488,14 +496,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"A public good is defined as one that is:\" is: Non-excludable and non-rival in consumption.",
+      "type": "mc",
+      "question": "Which option best completes this statement? A public good is defined as one that is:",
       "options": [
-        "True",
-        "False"
+        "Non-excludable and non-rival in consumption",
+        "Excludable and rival in consumption",
+        "Provided only by private firms",
+        "Always free to produce"
       ],
-      "answer": "True",
-      "explanation": "True. Non-excludable and non-rival in consumption is correct.",
+      "answer": "Non-excludable and non-rival in consumption",
+      "explanation": "The correct answer is: Non-excludable and non-rival in consumption.",
       "points": 1
     },
     {
@@ -546,14 +556,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Fisher equation states that the nominal interest rate approximately equals:\" is: Inflation minus the real interest rate.",
+      "type": "mc",
+      "question": "Which option best completes this statement? The Fisher equation states that the nominal interest rate approximately equals:",
       "options": [
-        "True",
-        "False"
+        "The real interest rate plus the inflation rate",
+        "Inflation minus the real interest rate",
+        "The unemployment rate plus GDP growth",
+        "Government spending minus tax revenue"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The real interest rate plus expected inflation.",
+      "answer": "The real interest rate plus the inflation rate",
+      "explanation": "The correct answer is: The real interest rate plus the inflation rate.",
       "points": 1
     },
     {
@@ -659,14 +671,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Structural unemployment occurs when:\" is: Workers are between jobs during normal labor market transitions.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Structural unemployment occurs when:",
       "options": [
-        "True",
-        "False"
+        "Workers' skills or locations do not match available jobs",
+        "Workers are between jobs during normal labor market transitions",
+        "Inflation temporarily falls below zero",
+        "A central bank increases the money supply"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Workers' skills do not match the skills demanded by employers.",
+      "answer": "Workers' skills or locations do not match available jobs",
+      "explanation": "The correct answer is: Workers' skills or locations do not match available jobs.",
       "points": 1
     },
     {
@@ -732,13 +746,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Scarcity in economics means that:\" is: Resources are limited relative to unlimited wants.",
+      "question": "Which option best completes this statement? Scarcity in economics means that:",
       "options": [
-        "True",
-        "False"
+        "Only poor countries face resource limits",
+        "Resources are limited relative to unlimited wants",
+        "Goods are unavailable in the market",
+        "Only governments face budget constraints"
       ],
-      "answer": "True",
-      "explanation": "True. Resources are limited relative to unlimited wants is correct.",
+      "answer": "Resources are limited relative to unlimited wants",
+      "explanation": "The correct answer is: Resources are limited relative to unlimited wants.",
       "points": 1
     },
     {
@@ -786,13 +802,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"According to the law of demand, when the price of a good falls:\" is: Quantity demanded rises.",
+      "question": "Which option best completes this statement? According to the law of demand, when the price of a good falls:",
       "options": [
-        "True",
-        "False"
+        "Quantity demanded falls",
+        "Demand decreases",
+        "Quantity demanded rises",
+        "Supply decreases"
       ],
-      "answer": "True",
-      "explanation": "True. Quantity demanded rises is correct.",
+      "answer": "Quantity demanded rises",
+      "explanation": "The correct answer is: Quantity demanded rises.",
       "points": 1
     },
     {
@@ -924,25 +942,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"A negative externality results in market output that is:\" is: Above the socially optimal level.",
+      "question": "Which option best completes this statement? A negative externality results in market output that is:",
       "options": [
-        "True",
-        "False"
+        "Below the socially optimal level",
+        "At the socially optimal level",
+        "Above the socially optimal level",
+        "Determined solely by government"
       ],
-      "answer": "True",
-      "explanation": "True. Above the socially optimal level is correct.",
+      "answer": "Above the socially optimal level",
+      "explanation": "The correct answer is: Above the socially optimal level.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"A positive externality occurs when:\" is: A firm's production harms third parties.",
+      "question": "Which option best completes this statement? A positive externality occurs when:",
       "options": [
-        "True",
-        "False"
+        "A firm's production harms third parties",
+        "A transaction benefits third parties not involved in the exchange",
+        "Prices rise due to increased demand",
+        "The government subsidizes a monopoly"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: A transaction benefits third parties not involved in the exchange.",
+      "answer": "A transaction benefits third parties not involved in the exchange",
+      "explanation": "The correct answer is: A transaction benefits third parties not involved in the exchange.",
       "points": 1
     },
     {
@@ -990,13 +1012,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Which expenditure category is NOT included in the GDP expenditure approach\" is: Transfer payments such as welfare.",
+      "question": "In this course, which expenditure category is NOT included in the GDP expenditure approach?",
       "options": [
-        "True",
-        "False"
+        "Consumer spending (C)",
+        "Government purchases (G)",
+        "Transfer payments such as welfare",
+        "Net exports (NX)"
       ],
-      "answer": "True",
-      "explanation": "True. Transfer payments such as welfare is correct.",
+      "answer": "Transfer payments such as welfare",
+      "explanation": "The correct answer is: Transfer payments such as welfare.",
       "points": 1
     },
     {
@@ -1030,13 +1054,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"The four phases of the business cycle in order are:\" is: Expansion, peak, recession, trough.",
+      "question": "Which option best completes this statement? The four phases of the business cycle in order are:",
       "options": [
-        "True",
-        "False"
+        "Recession, trough, expansion, peak",
+        "Expansion, peak, recession, trough",
+        "Peak, expansion, trough, recession",
+        "Trough, recession, peak, expansion"
       ],
-      "answer": "True",
-      "explanation": "True. Expansion, peak, recession, trough is correct.",
+      "answer": "Expansion, peak, recession, trough",
+      "explanation": "The correct answer is: Expansion, peak, recession, trough.",
       "points": 1
     },
     {
@@ -1084,13 +1110,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Which of the following best describes M1 money supply\" is: Currency in circulation plus checking deposits.",
+      "question": "In this course, which of the following best describes M1 money supply?",
       "options": [
-        "True",
-        "False"
+        "All savings accounts and CDs",
+        "Currency in circulation plus checking deposits",
+        "Total government debt",
+        "The value of all financial assets"
       ],
-      "answer": "True",
-      "explanation": "True. Currency in circulation plus checking deposits is correct.",
+      "answer": "Currency in circulation plus checking deposits",
+      "explanation": "The correct answer is: Currency in circulation plus checking deposits.",
       "points": 1
     },
     {
@@ -1222,25 +1250,29 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "True or False: The answer to \"A country has a comparative advantage in a good when it can produce it at:\" is: A lower opportunity cost than other countries.",
+      "question": "Which option best completes this statement? A country has a comparative advantage in a good when it can produce it at:",
       "options": [
-        "True",
-        "False"
+        "Higher absolute output than any other country",
+        "A lower opportunity cost than other countries",
+        "The lowest monetary price globally",
+        "The fastest production speed"
       ],
-      "answer": "True",
-      "explanation": "True. A lower opportunity cost than other countries is correct.",
+      "answer": "A lower opportunity cost than other countries",
+      "explanation": "The correct answer is: A lower opportunity cost than other countries.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "True or False: The answer to \"A tariff is best defined as:\" is: A limit on the quantity of imports allowed.",
+      "question": "Which option best completes this statement? A tariff is best defined as:",
       "options": [
-        "True",
-        "False"
+        "A limit on the quantity of imports allowed",
+        "A tax on imported goods",
+        "A subsidy given to domestic exporters",
+        "A trade agreement between countries"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: A tax on imported goods.",
+      "answer": "A tax on imported goods",
+      "explanation": "The correct answer is: A tax on imported goods.",
       "points": 1
     },
     {
@@ -1288,13 +1320,15 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "True or False: The answer to \"If the dollar buys more euros than before, the dollar has:\" is: Appreciated against the euro.",
+      "question": "In this course, if the dollar buys more euros than before, the dollar has?",
       "options": [
-        "True",
-        "False"
+        "Depreciated against the euro",
+        "Appreciated against the euro",
+        "Remained stable",
+        "Been devalued by the Fed"
       ],
-      "answer": "True",
-      "explanation": "True. Appreciated against the euro is correct.",
+      "answer": "Appreciated against the euro",
+      "explanation": "The correct answer is: Appreciated against the euro.",
       "points": 1
     },
     {
@@ -1328,13 +1362,15 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "True or False: The answer to \"The Lorenz curve that bows further from the line of perfect equality indicates:\" is: More income inequality.",
+      "question": "Which option best completes this statement? The Lorenz curve that bows further from the line of perfect equality indicates:",
       "options": [
-        "True",
-        "False"
+        "Less income inequality",
+        "More income inequality",
+        "Perfect income equality",
+        "A higher GDP per capita"
       ],
-      "answer": "True",
-      "explanation": "True. More income inequality is correct.",
+      "answer": "More income inequality",
+      "explanation": "The correct answer is: More income inequality.",
       "points": 1
     }
   ],

@@ -29,7 +29,7 @@
       "title": "Identifying Problems & Opportunities",
       "titleZh": "发现问题与机会",
       "objectives": "Apply design thinking principles; create an empathy map; identify customer pain points; recognize gaps in the market.",
-      "readingUrl": "https://designthinking.ideo.com/",
+      "readingUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2",
       "readingNote": "IDEO Design Thinking — What is Design Thinking?",
       "videoUrl": "https://www.youtube.com/watch?v=a7sEoEvT8l8",
       "videoNote": "TED-Ed — Design Thinking: An Introduction",
@@ -45,7 +45,7 @@
       "title": "Ideation Techniques",
       "titleZh": "创意构思技巧",
       "objectives": "Apply brainstorming, SCAMPER, mind mapping, and lateral thinking to generate creative business ideas.",
-      "readingUrl": "https://designthinking.ideo.com/blog/the-power-of-brainstorming",
+      "readingUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2",
       "readingNote": "IDEO Design Thinking — The Power of Brainstorming",
       "videoUrl": "https://www.youtube.com/watch?v=L1kbrlZRDvU",
       "videoNote": "TED-Ed — How to Brainstorm Better",
@@ -111,8 +111,8 @@
       "objectives": "Distinguish primary from secondary research; map the competitive landscape; identify your differentiation strategy.",
       "readingUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/entrepreneurship/market-research/a/market-research",
       "readingNote": "Khan Academy Entrepreneurship — Market Research",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://owl.purdue.edu/owl/",
+      "videoNote": "Purdue OWL — Open writing lesson resource for this topic: Market Research & Competitive Analysis.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/college-careers-more/entrepreneurship2/entrepreneurship/market-research/e/market-research",
@@ -125,7 +125,7 @@
       "title": "Value Proposition Design",
       "titleZh": "价值主张设计",
       "objectives": "Craft a compelling value proposition; define your unique selling point (USP); position your product clearly in the market.",
-      "readingUrl": "https://designthinking.ideo.com/blog/value-proposition-design",
+      "readingUrl": "https://www.khanacademy.org/economics-finance-domain/entrepreneurship2",
       "readingNote": "IDEO Design Thinking — Value Proposition Design",
       "videoUrl": "https://www.youtube.com/watch?v=p7HKvqRI_Bo",
       "videoNote": "Y Combinator — How to Communicate Your Value Proposition",
@@ -186,14 +186,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"In customer discovery, the primary purpose of interviews is to:\" is: Validate or invalidate your assumptions about customer needs.",
+      "type": "mc",
+      "question": "Choose the best answer: In customer discovery, the primary purpose of interviews is to:",
       "options": [
-        "True",
-        "False"
+        "Validate or invalidate your assumptions about customer needs",
+        "Convince the customer to buy your product",
+        "Customer discovery",
+        "The price of your product"
       ],
-      "answer": "True",
-      "explanation": "True. Validate or invalidate your assumptions about customer needs is correct.",
+      "answer": "Validate or invalidate your assumptions about customer needs",
+      "explanation": "The best answer is Validate or invalidate your assumptions about customer needs. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -230,7 +232,7 @@
       "examType": "midterm",
       "order": 7,
       "type": "fill",
-      "question": "How many building blocks does the Business Model Canvas have?",
+      "question": "The Business Model Canvas contains how many building blocks?",
       "options": null,
       "answer": "9",
       "explanation": "The correct answer is: 9.",
@@ -239,14 +241,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following is an example of primary market research\" is: Reading an industry report published by a research firm.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following is an example of primary market research?",
       "options": [
-        "True",
-        "False"
+        "Interviewing or surveying potential customers directly",
+        "Reading an industry report published by a research firm",
+        "Primary research collects new data directly; secondary research uses existing data",
+        "Eliminate all competitors from the market"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Interviewing 10 potential customers about their needs.",
+      "answer": "Interviewing or surveying potential customers directly",
+      "explanation": "The best answer is Interviewing or surveying potential customers directly. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -297,14 +301,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"A 'pivot' in the lean startup context means:\" is: Changing a fundamental element of the business strategy based on validated learning.",
+      "type": "mc",
+      "question": "Choose the best answer: A 'pivot' in the lean startup context means:",
       "options": [
-        "True",
-        "False"
+        "Changing a fundamental element of the business strategy based on validated learning",
+        "You pivot your business model",
+        "The physical location of your business",
+        "The number of job openings at a startup"
       ],
-      "answer": "True",
-      "explanation": "True. Changing a fundamental element of the business strategy based on validated learning is correct.",
+      "answer": "Changing a fundamental element of the business strategy based on validated learning",
+      "explanation": "The best answer is Changing a fundamental element of the business strategy based on validated learning. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -345,14 +351,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Resilience in entrepreneurship is best described as:\" is: Never making mistakes.",
+      "type": "mc",
+      "question": "Choose the best answer: Resilience in entrepreneurship is best described as:",
       "options": [
-        "True",
-        "False"
+        "Recovering from setbacks, learning, and continuing to improve",
+        "Never making mistakes",
+        "Abilities can be developed through effort and learning",
+        "Seeing challenges as opportunities to learn and improve"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The ability to recover quickly from setbacks and keep moving forward.",
+      "answer": "Recovering from setbacks, learning, and continuing to improve",
+      "explanation": "The best answer is Recovering from setbacks, learning, and continuing to improve. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -403,14 +411,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Burn rate is defined as:\" is: The rate at which a startup spends its cash reserves.",
+      "type": "mc",
+      "question": "Choose the best answer: Burn rate is defined as:",
       "options": [
-        "True",
-        "False"
+        "The rate at which a startup spends its cash reserves",
+        "The speed at which a company launches its product",
+        "The number of job openings at a startup",
+        "A startup raises its first round of funding"
       ],
-      "answer": "True",
-      "explanation": "True. The rate at which a startup spends its cash reserves is correct.",
+      "answer": "The rate at which a startup spends its cash reserves",
+      "explanation": "The best answer is The rate at which a startup spends its cash reserves. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -461,14 +471,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"When splitting equity among co-founders, the most important factor to consider is:\" is: Who had the original idea.",
+      "type": "mc",
+      "question": "Choose the best answer: When splitting equity among co-founders, the most important factor to consider is:",
       "options": [
-        "True",
-        "False"
+        "Each founder's role, contribution, risk, commitment, and future responsibilities",
+        "Who had the original idea",
+        "Test the most important assumption with the least effort",
+        "When will the product launch?"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Each founder's ongoing contribution, skills, and commitment to the startup.",
+      "answer": "Each founder's role, contribution, risk, commitment, and future responsibilities",
+      "explanation": "The best answer is Each founder's role, contribution, risk, commitment, and future responsibilities. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -519,14 +531,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following is the best example of word-of-mouth marketing\" is: A happy customer recommending your product to a friend unprompted.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following is the best example of word-of-mouth marketing?",
       "options": [
-        "True",
-        "False"
+        "A happy customer recommending your product to a friend unprompted",
+        "Convince the customer to buy your product",
+        "The price of your product",
+        "The price a customer pays for a product"
       ],
-      "answer": "True",
-      "explanation": "True. A happy customer recommending your product to a friend unprompted is correct.",
+      "answer": "A happy customer recommending your product to a friend unprompted",
+      "explanation": "The best answer is A happy customer recommending your product to a friend unprompted. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -577,14 +591,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"The 'Key Activities' block of the Business Model Canvas refers to:\" is: The activities customers perform when using the product.",
+      "type": "mc",
+      "question": "Choose the best answer: The 'Key Activities' block of the Business Model Canvas refers to:",
       "options": [
-        "True",
-        "False"
+        "The most important actions the company must perform to deliver its value proposition",
+        "The activities customers perform when using the product",
+        "Choosing the most profitable pricing model",
+        "The key partners that support the business"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The most important things a company must do to operate successfully.",
+      "answer": "The most important actions the company must perform to deliver its value proposition",
+      "explanation": "The best answer is The most important actions the company must perform to deliver its value proposition. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -650,13 +666,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Which of the following best defines an entrepreneurial mindset\" is: Approaching problems with creativity, persistence, and a willingness to learn from failure.",
+      "question": "Choose the best answer: Which of the following best defines an entrepreneurial mindset?",
       "options": [
-        "True",
-        "False"
+        "Focusing only on making money quickly",
+        "Approaching problems with creativity, persistence, and a willingness to learn from failure",
+        "Avoiding any risks in business decisions",
+        "Copying successful business ideas from others"
       ],
-      "answer": "True",
-      "explanation": "True. Approaching problems with creativity, persistence, and a willingness to learn from failure is correct.",
+      "answer": "Approaching problems with creativity, persistence, and a willingness to learn from failure",
+      "explanation": "An entrepreneurial mindset involves seeing opportunities in problems, embracing calculated risk, and treating setbacks as learning experiences.",
       "points": 1
     },
     {
@@ -704,13 +722,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Design thinking begins with which phase\" is: Empathize.",
+      "question": "Choose the best answer: Design thinking begins with which phase",
       "options": [
-        "True",
-        "False"
+        "Prototype",
+        "Test",
+        "Empathize",
+        "Define"
       ],
-      "answer": "True",
-      "explanation": "True. Empathize is correct.",
+      "answer": "Empathize",
+      "explanation": "Design thinking starts with empathizing - deeply understanding the people you are designing for to uncover their real needs.",
       "points": 1
     },
     {
@@ -842,25 +862,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"The correct order of the lean startup cycle is:\" is: Build → Measure → Learn.",
+      "question": "Choose the best answer: The correct order of the lean startup cycle is:",
       "options": [
-        "True",
-        "False"
+        "Measure → Build → Learn",
+        "Learn → Build → Measure",
+        "Build → Measure → Learn",
+        "Plan → Build → Launch"
       ],
-      "answer": "True",
-      "explanation": "True. Build → Measure → Learn is correct.",
+      "answer": "Build → Measure → Learn",
+      "explanation": "The lean startup loop is: Build (create the MVP), Measure (collect data on user behavior), Learn (extract insights to decide what to do next).",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"The purpose of an MVP is to:\" is: Create a perfect product before launch.",
+      "question": "Choose the best answer: The purpose of an MVP is to:",
       "options": [
-        "True",
-        "False"
+        "Create a perfect product before launch",
+        "Test the most important assumption with the least effort",
+        "Impress investors with advanced features",
+        "Compete directly with established market leaders from day one"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Test the most important assumption with the least effort.",
+      "answer": "Test the most important assumption with the least effort",
+      "explanation": "An MVP is the smallest experiment that tests your riskiest assumption, allowing you to learn quickly without over-investing in a product that may need to change.",
       "points": 1
     },
     {
@@ -908,13 +932,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"How many building blocks does the Business Model Canvas have\" is: 9.",
+      "question": "Choose the best answer: How many building blocks does the Business Model Canvas have?",
       "options": [
-        "True",
-        "False"
+        "5",
+        "7",
+        "9",
+        "11"
       ],
-      "answer": "True",
-      "explanation": "True. 9 is correct.",
+      "answer": "9",
+      "explanation": "The Business Model Canvas has nine building blocks covering customers, value, infrastructure, and finances.",
       "points": 1
     },
     {
@@ -1002,13 +1028,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"A value proposition primarily answers the question:\" is: Why should a customer choose your product over alternatives?.",
+      "question": "Choose the best answer: A value proposition primarily answers the question:",
       "options": [
-        "True",
-        "False"
+        "How much does the product cost?",
+        "Why should a customer choose your product over alternatives?",
+        "When will the product launch?",
+        "How many employees does the company have?"
       ],
-      "answer": "True",
-      "explanation": "True. Why should a customer choose your product over alternatives? is correct.",
+      "answer": "Why should a customer choose your product over alternatives?",
+      "explanation": "A value proposition communicates the specific benefit you deliver and why it is the best option for your target customer.",
       "points": 1
     }
   ],

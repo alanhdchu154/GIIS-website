@@ -31,8 +31,8 @@
       "objectives": "Develop a content strategy; write value-driven blog content; create a 4-week content calendar.",
       "readingUrl": "https://academy.hubspot.com/courses/content-marketing",
       "readingNote": "HubSpot Academy — Content Marketing Certification (Lessons 1–3)",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Content Marketing.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/content-marketing",
@@ -53,7 +53,7 @@
       "video2Note": "Neil Patel — How Google's Algorithm Works (2024)",
       "practiceUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing",
       "practiceNote": "Google Digital Garage — Unit 6 Practice Quiz",
-      "assignment": "Pick a real or fictional product. Use Google's free tools (Google Trends, Search Console's keyword planner) to find 10 target keywords. For each, note the estimated intent (informational, navigational, transactional). Then audit the 'on-page SEO' of a given webpage using a checklist of at least 8 factors.",
+      "assignment": "Pick a real or fictional product. Use Google's free tools (Google Trends, Search Console's keyword planner) to find 10 target keywords. For each, note the estimated intent (informational, navigational, transactional). Then audit the 'on-page SEO' of a given webpage using a checklist of at least 8 factors. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3.5
     },
     {
@@ -63,8 +63,8 @@
       "objectives": "Design platform-specific strategies for Instagram, TikTok, LinkedIn, and X (Twitter); plan organic content and engagement tactics.",
       "readingUrl": "https://academy.hubspot.com/courses/social-media",
       "readingNote": "HubSpot Academy — Social Media Marketing Certification (Lessons 1–4)",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://open.lib.umn.edu/mediaandculture/",
+      "videoNote": "University of Minnesota Libraries — Media and Culture open lesson resource: Social Media Marketing.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/social-media",
@@ -79,8 +79,8 @@
       "objectives": "Build and segment an email list; write compelling email copy; understand open rates, click-through rates, and basic automation sequences.",
       "readingUrl": "https://academy.hubspot.com/courses/email-marketing",
       "readingNote": "HubSpot Academy — Email Marketing Certification (Lessons 1–4)",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Email Marketing.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/email-marketing",
@@ -95,8 +95,8 @@
       "objectives": "Explain how Google Search and Display Ads work; understand PPC, bidding strategies, and Quality Score.",
       "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing",
       "readingNote": "Google Digital Garage — Unit 14: Make Search Work for You (Paid Search)",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Paid Advertising: Google Ads.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing",
@@ -111,8 +111,8 @@
       "objectives": "Create Facebook/Instagram ad campaigns; select correct campaign objectives; define audience targeting; evaluate ad creative best practices.",
       "readingUrl": "https://academy.hubspot.com/courses/social-media",
       "readingNote": "HubSpot Academy — Social Media Marketing: Paid Social Lessons",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Paid Advertising: Social Ads.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/social-media",
@@ -127,8 +127,8 @@
       "objectives": "Distinguish influencer tiers (nano, micro, macro, mega); structure brand partnerships; measure influencer ROI. Students will analyze examples, explain the relevant concept in context, and create a short written or visual product that demonstrates mastery.",
       "readingUrl": "https://academy.hubspot.com/courses/content-marketing",
       "readingNote": "HubSpot Academy — Content Marketing: Influencer Marketing Module",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Influencer & Affiliate Marketing.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/content-marketing",
@@ -186,14 +186,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which SEO practice involves getting other reputable websites to link back to your site\" is: Off-page SEO (backlink building).",
+      "type": "mc",
+      "question": "Choose the best answer: Which SEO practice involves getting other reputable websites to link back to your site?",
       "options": [
-        "True",
-        "False"
+        "Off-page SEO (backlink building)",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting",
+        "A campaign goal with no measurable action or audience signal"
       ],
-      "answer": "True",
-      "explanation": "True. Off-page SEO (backlink building) is correct.",
+      "answer": "Off-page SEO (backlink building)",
+      "explanation": "The best answer is \"Off-page SEO (backlink building)\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -244,14 +246,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"In Google Ads, 'Quality Score' is primarily influenced by:\" is: Your total campaign budget.",
+      "type": "mc",
+      "question": "Choose the best answer: In Google Ads, 'Quality Score' is primarily influenced by:",
       "options": [
-        "True",
-        "False"
+        "Expected click-through rate, ad relevance, and landing page experience",
+        "Your total campaign budget",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Ad relevance, expected click-through rate, and landing page experience.",
+      "answer": "Expected click-through rate, ad relevance, and landing page experience",
+      "explanation": "The best answer is \"Expected click-through rate, ad relevance, and landing page experience\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -302,14 +306,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which metric measures the percentage of email recipients who opened your email\" is: Open rate.",
+      "type": "mc",
+      "question": "Choose the best answer: Which metric measures the percentage of email recipients who opened your email?",
       "options": [
-        "True",
-        "False"
+        "Open rate",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting",
+        "A campaign goal with no measurable action or audience signal"
       ],
-      "answer": "True",
-      "explanation": "True. Open rate is correct.",
+      "answer": "Open rate",
+      "explanation": "The best answer is \"Open rate\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -350,14 +356,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which stage of the marketing funnel is most associated with 'retargeting ads'\" is: Awareness.",
+      "type": "mc",
+      "question": "Choose the best answer: Which stage of the marketing funnel is most associated with 'retargeting ads'?",
       "options": [
-        "True",
-        "False"
+        "Consideration or conversion, when people have already shown interest",
+        "Awareness",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Consideration.",
+      "answer": "Consideration or conversion, when people have already shown interest",
+      "explanation": "The best answer is \"Consideration or conversion, when people have already shown interest\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -408,14 +416,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"An email automation 'welcome sequence' is typically triggered when:\" is: A new user joins your email list.",
+      "type": "mc",
+      "question": "Choose the best answer: An email automation 'welcome sequence' is typically triggered when:",
       "options": [
-        "True",
-        "False"
+        "A new user joins your email list",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting",
+        "A campaign goal with no measurable action or audience signal"
       ],
-      "answer": "True",
-      "explanation": "True. A new user joins your email list is correct.",
+      "answer": "A new user joins your email list",
+      "explanation": "The best answer is \"A new user joins your email list\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -466,14 +476,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"The 'Hook–Value–CTA' structure in short-form video marketing refers to:\" is: Hashtags, Views, and Conversions.",
+      "type": "mc",
+      "question": "Choose the best answer: The 'Hook–Value–CTA' structure in short-form video marketing refers to:",
       "options": [
-        "True",
-        "False"
+        "A strong opening, a useful message, and a clear call to action",
+        "Hashtags, Views, and Conversions",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Grabbing attention in 1–2 seconds, delivering useful content, then directing viewers to act.",
+      "answer": "A strong opening, a useful message, and a clear call to action",
+      "explanation": "The best answer is \"A strong opening, a useful message, and a clear call to action\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -524,14 +536,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"In an affiliate marketing program, the affiliate earns a commission when:\" is: A referred customer completes a desired action (e.g., a purchase).",
+      "type": "mc",
+      "question": "Choose the best answer: In an affiliate marketing program, the affiliate earns a commission when:",
       "options": [
-        "True",
-        "False"
+        "A referred customer completes a desired action (e.g., a purchase)",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting",
+        "A campaign goal with no measurable action or audience signal"
       ],
-      "answer": "True",
-      "explanation": "True. A referred customer completes a desired action (e.g., a purchase) is correct.",
+      "answer": "A referred customer completes a desired action (e.g., a purchase)",
+      "explanation": "The best answer is \"A referred customer completes a desired action (e.g., a purchase)\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -582,14 +596,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following best demonstrates 'community building' as part of online brand strategy\" is: Spending $10,000 on display ads per month.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following best demonstrates 'community building' as part of online brand strategy?",
       "options": [
-        "True",
-        "False"
+        "Encouraging two-way conversation and shared identity among customers or followers",
+        "Spending $10,000 on display ads per month",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Creating a branded Facebook Group where customers share tips and support each other.",
+      "answer": "Encouraging two-way conversation and shared identity among customers or followers",
+      "explanation": "The best answer is \"Encouraging two-way conversation and shared identity among customers or followers\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -660,13 +676,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Which of the following is a digital marketing channel\" is: Search engine advertising.",
+      "question": "Choose the best answer: Which of the following is a digital marketing channel?",
       "options": [
-        "True",
-        "False"
+        "Television commercial",
+        "Billboard advertisement",
+        "Search engine advertising",
+        "Newspaper print ad"
       ],
-      "answer": "True",
-      "explanation": "True. Search engine advertising is correct.",
+      "answer": "Search engine advertising",
+      "explanation": "Search engine advertising (e.g., Google Ads) is a digital channel. The others are traditional channels.",
       "points": 1
     },
     {
@@ -740,7 +758,7 @@
     {
       "moduleOrder": 3,
       "order": 2,
-      "question": "Which of the following is an example of 'on-page SEO'?",
+      "question": "Which action is an example of on-page SEO?",
       "options": [
         "Getting a backlink from a news website",
         "Writing an optimized title tag with a target keyword",
@@ -768,10 +786,10 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which tool, made by google, is most useful for discovering keyword ideas and search volume.\"",
+      "question": "Short response: Which tool, made by google, is most useful for discovering keyword ideas and search volume?",
       "options": null,
       "answer": "Google Keyword Planner",
-      "explanation": "The correct answer is: Google Keyword Planner.",
+      "explanation": "A correct response identifies \"Google Keyword Planner\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -873,13 +891,15 @@
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Email list segmentation improves marketing because it:\" is: Allows you to send fewer emails to save money.",
+      "question": "Choose the best answer: Email list segmentation improves marketing because it:",
       "options": [
-        "True",
-        "False"
+        "Allows marketers to send more relevant messages to groups with different interests or behaviors",
+        "Allows you to send fewer emails to save money",
+        "A tactic focused only on offline billboard placement",
+        "A message sent to every audience segment without targeting"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Enables sending more relevant, personalized messages to specific subscriber groups.",
+      "answer": "Allows marketers to send more relevant messages to groups with different interests or behaviors",
+      "explanation": "The best answer is \"Allows marketers to send more relevant messages to groups with different interests or behaviors\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -927,13 +947,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"In Google Ads, what does 'PPC' mean\" is: Pay-Per-Click.",
+      "question": "Choose the best answer: In Google Ads, what does 'PPC' mean?",
       "options": [
-        "True",
-        "False"
+        "Paid Per Campaign",
+        "Pay-Per-Click",
+        "Page Performance Check",
+        "Profit Per Conversion"
       ],
-      "answer": "True",
-      "explanation": "True. Pay-Per-Click is correct.",
+      "answer": "Pay-Per-Click",
+      "explanation": "PPC (Pay-Per-Click) is the Google Ads pricing model where advertisers are charged only when a user clicks on their ad.",
       "points": 1
     },
     {
@@ -967,13 +989,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"Which Facebook/Instagram campaign objective should you choose if your goal is to get people to buy a product on your website\" is: Conversions.",
+      "question": "Choose the best answer: Which Facebook/Instagram campaign objective should you choose if your goal is to get people to buy a product on your website?",
       "options": [
-        "True",
-        "False"
+        "Brand Awareness",
+        "Reach",
+        "Traffic",
+        "Conversions"
       ],
-      "answer": "True",
-      "explanation": "True. Conversions is correct.",
+      "answer": "Conversions",
+      "explanation": "The Conversions objective tells Facebook's algorithm to optimize delivery toward users most likely to complete a purchase or other conversion event.",
       "points": 1
     },
     {
@@ -1021,13 +1045,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"A 'nano-influencer' is typically defined as having:\" is: 1,000–10,000 followers.",
+      "question": "Choose the best answer: A 'nano-influencer' is typically defined as having:",
       "options": [
-        "True",
-        "False"
+        "1 million+ followers",
+        "100,000–500,000 followers",
+        "1,000–10,000 followers",
+        "Fewer than 100 followers"
       ],
-      "answer": "True",
-      "explanation": "True. 1,000–10,000 followers is correct.",
+      "answer": "1,000–10,000 followers",
+      "explanation": "Nano-influencers have 1K–10K followers, often within a very specific niche, and typically have extremely high engagement rates due to close community ties.",
       "points": 1
     }
   ],

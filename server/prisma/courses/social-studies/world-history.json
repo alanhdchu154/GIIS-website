@@ -186,14 +186,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which civilization built the Indus Valley cities of Mohenjo-daro and Harappa\" is: Harappan civilization.",
+      "type": "mc",
+      "question": "Which civilization built the Indus Valley cities of Mohenjo-daro and Harappa?",
       "options": [
-        "True",
-        "False"
+        "The Harappan civilization",
+        "The Roman Republic",
+        "The Olmec civilization",
+        "The Han dynasty"
       ],
-      "answer": "True",
-      "explanation": "True. Harappan civilization is correct.",
+      "answer": "The Harappan civilization",
+      "explanation": "Mohenjo-daro and Harappa were major cities of the Harappan, or Indus Valley, civilization.",
       "points": 1
     },
     {
@@ -239,14 +241,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Rome's transition from Republic to Empire was triggered largely by:\" is: An invasion from Carthage.",
+      "type": "mc",
+      "question": "Rome's transition from Republic to Empire was shaped most directly by:",
       "options": [
-        "True",
-        "False"
+        "An invasion from Carthage after the Punic Wars",
+        "Political conflict, civil wars, and the concentration of power in military leaders",
+        "The invention of democracy in Athens",
+        "The collapse of trade on the Silk Road"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Political instability and Julius Caesar's dictatorship.",
+      "answer": "Political conflict, civil wars, and the concentration of power in military leaders",
+      "explanation": "The late Republic was destabilized by internal conflict and civil wars, leading to rule by powerful leaders and eventually imperial government under Augustus.",
       "points": 1
     },
     {
@@ -297,14 +301,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Silk Road primarily facilitated:\" is: Trade and cultural exchange between East and West.",
+      "type": "mc",
+      "question": "The Silk Road primarily facilitated:",
       "options": [
-        "True",
-        "False"
+        "Trade and cultural exchange between East and West",
+        "The direct election of Roman emperors",
+        "The end of all regional conflicts",
+        "Ocean travel between Europe and the Americas"
       ],
-      "answer": "True",
-      "explanation": "True. Trade and cultural exchange between East and West is correct.",
+      "answer": "Trade and cultural exchange between East and West",
+      "explanation": "The Silk Road connected regions across Eurasia, moving goods, technologies, religions, and ideas along trade routes.",
       "points": 1
     },
     {
@@ -350,14 +356,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Agriculture first emerged independently in multiple regions including:\" is: Only the Fertile Crescent.",
+      "type": "mc",
+      "question": "Agriculture first emerged independently in multiple regions, including:",
       "options": [
-        "True",
-        "False"
+        "Only the Fertile Crescent",
+        "The Fertile Crescent, China, and Mesoamerica",
+        "Only ancient Rome and Greece",
+        "Only northern Europe"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The Fertile Crescent, China, and Mesoamerica.",
+      "answer": "The Fertile Crescent, China, and Mesoamerica",
+      "explanation": "Agriculture developed independently in several world regions rather than from a single origin point alone.",
       "points": 1
     },
     {
@@ -408,14 +416,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Pax Romana refers to:\" is: Two centuries of relative peace in the Roman Empire.",
+      "type": "mc",
+      "question": "The Pax Romana refers to:",
       "options": [
-        "True",
-        "False"
+        "Two centuries of relative peace and stability in the Roman Empire",
+        "The Roman defeat in the Punic Wars",
+        "The founding of the city of Rome",
+        "The collapse of the Western Roman Empire"
       ],
-      "answer": "True",
-      "explanation": "True. Two centuries of relative peace in the Roman Empire is correct.",
+      "answer": "Two centuries of relative peace and stability in the Roman Empire",
+      "explanation": "The Pax Romana is commonly used for the period of relative peace and stability across much of the Roman Empire after Augustus.",
       "points": 1
     },
     {
@@ -461,14 +471,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"The printing press, invented by Gutenberg around 1440, most directly:\" is: Caused the Black Death.",
+      "type": "mc",
+      "question": "The printing press, developed by Gutenberg around 1440, most directly helped:",
       "options": [
-        "True",
-        "False"
+        "Spread Renaissance and Reformation ideas more rapidly",
+        "Cause the Black Death in Europe",
+        "End all manuscript copying immediately",
+        "Create the first river-valley civilizations"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Spread ideas of the Renaissance and Reformation rapidly.",
+      "answer": "Spread Renaissance and Reformation ideas more rapidly",
+      "explanation": "Movable type made books and pamphlets easier to reproduce, helping ideas circulate to wider audiences.",
       "points": 1
     },
     {
@@ -574,14 +586,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Decolonization in the mid-20th century was primarily driven by:\" is: Economic agreements.",
+      "type": "mc",
+      "question": "Decolonization in the mid-20th century was driven most directly by:",
       "options": [
-        "True",
-        "False"
+        "Nationalist movements demanding independence",
+        "A single economic treaty signed by all empires",
+        "The creation of feudal manors",
+        "The invention of the printing press"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Nationalist movements demanding independence.",
+      "answer": "Nationalist movements demanding independence",
+      "explanation": "Anti-colonial nationalist movements, alongside weakened imperial powers and changing international pressure, helped drive decolonization.",
       "points": 1
     },
     {
@@ -716,13 +730,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"The first civilization emerged in:\" is: Mesopotamia (Sumer).",
+      "question": "Which region is commonly identified as the home of Sumer, one of the world's earliest civilizations?",
       "options": [
-        "True",
-        "False"
+        "Mesopotamia",
+        "Mesoamerica",
+        "The Andes",
+        "Northern Europe"
       ],
-      "answer": "True",
-      "explanation": "True. Mesopotamia (Sumer) is correct.",
+      "answer": "Mesopotamia",
+      "explanation": "Sumer developed in southern Mesopotamia, between the Tigris and Euphrates rivers.",
       "points": 1
     },
     {
@@ -854,25 +870,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"Rome's government before 27 BCE was a:\" is: Republic.",
+      "question": "Before 27 BCE, Rome's government was generally organized as a:",
       "options": [
-        "True",
-        "False"
+        "Republic",
+        "Feudal monarchy",
+        "Modern constitutional monarchy",
+        "Theocracy ruled by pharaohs"
       ],
-      "answer": "True",
-      "explanation": "True. Republic is correct.",
+      "answer": "Republic",
+      "explanation": "Before Augustus became Rome's first emperor, Rome was governed as a republic with elected offices and a Senate.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Julius Caesar was assassinated in:\" is: 100 BCE.",
+      "question": "Which year was Julius Caesar assassinated?",
       "options": [
-        "True",
-        "False"
+        "100 BCE",
+        "44 BCE",
+        "27 BCE",
+        "476 CE"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 44 BCE.",
+      "answer": "44 BCE",
+      "explanation": "Julius Caesar was assassinated on the Ides of March in 44 BCE.",
       "points": 1
     },
     {
@@ -920,22 +940,24 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Islam was founded by the Prophet Muhammad in:\" is: Mecca.",
+      "question": "Islam originated in the Arabian Peninsula through the teachings of Prophet Muhammad, first preached in:",
       "options": [
-        "True",
-        "False"
+        "Mecca",
+        "Rome",
+        "Athens",
+        "Chang'an"
       ],
-      "answer": "True",
-      "explanation": "True. Mecca is correct.",
+      "answer": "Mecca",
+      "explanation": "Islam began in western Arabia, where Muhammad first preached in Mecca before the Muslim community later migrated to Medina.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the word \"algebra\" comes from:.\"",
+      "question": "Short response: Define or explain: The word \"algebra\" comes from.",
       "options": null,
       "answer": "Arabic",
-      "explanation": "The correct answer is: Arabic.",
+      "explanation": "A correct response identifies \"Arabic\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -969,13 +991,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"In the feudal system, the lowest social class was:\" is: Serfs.",
+      "question": "In the medieval European feudal system, the lowest social class was generally:",
       "options": [
-        "True",
-        "False"
+        "Serfs",
+        "Lords",
+        "Knights",
+        "Monarchs"
       ],
-      "answer": "True",
-      "explanation": "True. Serfs is correct.",
+      "answer": "Serfs",
+      "explanation": "Serfs were peasants bound to the land and owed labor or dues to the lord of the manor.",
       "points": 1
     },
     {
@@ -1023,13 +1047,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Genghis Khan founded the Mongol Empire in approximately:\" is: 1206 CE.",
+      "question": "Around what year did Genghis Khan establish the Mongol Empire?",
       "options": [
-        "True",
-        "False"
+        "800 CE",
+        "1066 CE",
+        "1206 CE",
+        "1492 CE"
       ],
-      "answer": "True",
-      "explanation": "True. 1206 CE is correct.",
+      "answer": "1206 CE",
+      "explanation": "Temujin was proclaimed Genghis Khan in 1206 CE, marking the formation of the Mongol Empire.",
       "points": 1
     }
   ],

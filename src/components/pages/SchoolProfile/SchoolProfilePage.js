@@ -456,10 +456,11 @@ function ProfileDocument() {
           <div style={{ marginTop: '10px' }}>
             <div style={s.sectionTitle}>Assessment Structure</div>
             <div style={s.body}>
-              Each course consists of <strong>14 learning modules</strong> with embedded
+              Each course consists of <strong>learning modules</strong> with embedded
               quizzes, a <strong>midterm examination</strong> (15 questions), and a{' '}
               <strong>final examination</strong> (20 questions). Credit is awarded upon
-              satisfactory completion of all assessments with a passing score of 60% or above.
+              satisfactory completion of required assessments with a weighted course grade
+              of 70% or above.
             </div>
           </div>
         </div>

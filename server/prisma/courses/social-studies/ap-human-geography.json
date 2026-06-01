@@ -165,7 +165,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/humanities/ap-human-geography/unit-3-cultural-patterns-and-processes",
       "practiceNote": "Map the hearths and diffusion paths of Christianity, Islam, Hinduism, and Buddhism",
-      "assignment": "Pick one country with significant linguistic or religious diversity (India, Nigeria, Belgium, or Switzerland). In 350 words, describe: (1) the main languages or religions present and their geographic distribution, (2) how the state manages this diversity (official language policy, federalism, or religious accommodation), (3) a specific conflict or tension that arose from diversity, and (4) whether the geographic distribution of groups contributed to the conflict.",
+      "assignment": "Pick one country with significant linguistic or religious diversity (India, Nigeria, Belgium, or Switzerland). In 350 words, describe: (1) the main languages or religions present and their geographic distribution, (2) how the state manages this diversity (official language policy, federalism, or religious accommodation), (3) a specific conflict or tension that arose from diversity, and (4) whether the geographic distribution of groups contributed to the conflict. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3
     },
     {
@@ -297,19 +297,21 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Which type of location describes a place's position relative to other places (e.g., 'north of Chicago')\" is: B.",
+      "question": "Which type of location describes a place's position relative to other places, such as \"north of Chicago\"?",
       "options": [
-        "True",
-        "False"
+        "Relative location",
+        "Absolute location",
+        "Formal region",
+        "Site"
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "Relative location",
+      "explanation": "Relative location describes where a place is in relation to other places.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"geographic scale in map analysis refers to:.\"",
+      "question": "Short response: Define or explain: Geographic scale in map analysis refers to.",
       "options": null,
       "answer": "The level of spatial detail or area represented, such as local, regional, national, or global scale.",
       "explanation": "Scale affects what patterns are visible and how geographic conclusions should be interpreted.",
@@ -361,13 +363,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Arithmetic population density is calculated as:\" is: A.",
+      "question": "How is arithmetic population density calculated?",
       "options": [
-        "True",
-        "False"
+        "Total population divided by total land area",
+        "Total population divided by arable land area",
+        "Farmers divided by total farmland",
+        "Urban population divided by rural population"
       ],
-      "answer": "True",
-      "explanation": "True. A is correct.",
+      "answer": "Total population divided by total land area",
+      "explanation": "Arithmetic density uses total population and total land area.",
       "points": 1
     },
     {
@@ -415,7 +419,7 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"countries like germany and japan, with sub-replacement fertility rates and aging populations, face which demographic challenge.\"",
+      "question": "Short response: Define or explain: Countries like germany and japan, with sub-replacement fertility rates and aging populations, face which demographic challenge.",
       "options": null,
       "answer": "Population aging and possible population decline, creating pressure on labor forces and elder-care systems.",
       "explanation": "Low fertility plus longer life expectancy increases the share of older residents and can shrink the working-age population.",
@@ -425,7 +429,7 @@
     {
       "moduleOrder": 4,
       "order": 1,
-      "question": "The 'hearth' of a cultural trait refers to:",
+      "question": "Which statement best describes a cultural hearth?",
       "options": [
         "The location where a culture's religion originated",
         "The geographic origin point from which a cultural trait or practice spread",
@@ -509,25 +513,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"A 'geometric boundary' in political geography is one that:\" is: B.",
+      "question": "In political geography, what makes a boundary geometric?",
       "options": [
-        "True",
-        "False"
+        "It follows straight lines or latitude/longitude rather than physical or cultural features.",
+        "It follows a major river, mountain range, or coastline.",
+        "It separates groups based on a shared language or religion.",
+        "It is created only after a popular vote."
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "It follows straight lines or latitude/longitude rather than physical or cultural features.",
+      "explanation": "Geometric boundaries are drawn using straight lines or grid references, often ignoring physical and cultural patterns.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"'Centripetal forces' in a state are those that:\" is: Cause the state to break apart into smaller units.",
+      "question": "Which statement best describes centripetal forces within a state?",
       "options": [
-        "True",
-        "False"
+        "They unify people and strengthen national cohesion.",
+        "They cause a state to divide into smaller units.",
+        "They shift all political power to border regions.",
+        "They eliminate regional identity."
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: B.",
+      "answer": "They unify people and strengthen national cohesion.",
+      "explanation": "Centripetal forces pull a state together; centrifugal forces pull it apart.",
       "points": 1
     },
     {
@@ -571,19 +579,21 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Subsistence agriculture differs from commercial agriculture primarily in that:\" is: B.",
+      "question": "How does subsistence agriculture differ from commercial agriculture?",
       "options": [
-        "True",
-        "False"
+        "Subsistence farmers grow food primarily for their own consumption.",
+        "Subsistence farmers produce mainly for export markets.",
+        "Subsistence farming always uses more machinery than commercial farming.",
+        "Subsistence farming is limited to cash crops."
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "Subsistence farmers grow food primarily for their own consumption.",
+      "explanation": "Subsistence agriculture focuses on household or local survival needs rather than market sale.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a major criticism of the green revolution's impact in sub-saharan africa is that:.\"",
+      "question": "Short response: Complete this statement: A major criticism of the green revolution's impact in sub-saharan africa is that...",
       "options": null,
       "answer": "Green Revolution gains were uneven because many farmers lacked irrigation, fertilizer, credit, transportation, and political support needed to benefit from new seed technologies.",
       "explanation": "In Sub-Saharan Africa, yield gains were limited where infrastructure, capital, and state support were weaker, so the Green Revolution did not benefit all regions equally.",
@@ -621,19 +631,21 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"The Industrial Revolution began in which country in the late 18th century\" is: C.",
+      "question": "Where did the Industrial Revolution begin in the late 18th century?",
       "options": [
-        "True",
-        "False"
+        "Great Britain",
+        "Japan",
+        "Brazil",
+        "Russia"
       ],
-      "answer": "True",
-      "explanation": "True. C is correct.",
+      "answer": "Great Britain",
+      "explanation": "Great Britain industrialized first due to factors including coal, capital, labor, and access to markets.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"special economic zones (sezs) as used in china were designed to:.\"",
+      "question": "Short response: Define or explain: Special economic zones (sezs) as used in china were designed to.",
       "options": null,
       "answer": "Attract foreign investment, expand export manufacturing, and test market-oriented economic policies in targeted areas.",
       "explanation": "SEZs create special rules and incentives to concentrate trade, investment, and industrial growth.",
@@ -685,13 +697,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"The global population living in urban areas surpassed 50% for the first time around:\" is: C.",
+      "question": "Around what year did the global population living in urban areas first surpass 50%?",
       "options": [
-        "True",
-        "False"
+        "2008",
+        "1850",
+        "1920",
+        "1975"
       ],
-      "answer": "True",
-      "explanation": "True. C is correct.",
+      "answer": "2008",
+      "explanation": "Around 2008, more than half of the world's population lived in urban areas.",
       "points": 1
     },
     {
@@ -739,7 +753,7 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"economic 'race to the bottom' in globalization refers to:.\"",
+      "question": "Short response: Define or explain: Economic 'race to the bottom' in globalization refers to.",
       "options": null,
       "answer": "Competition among places to lower labor, tax, or environmental standards to attract mobile investment.",
       "explanation": "Global firms can move production, so governments may weaken protections to compete for jobs and capital.",
@@ -833,25 +847,29 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "True or False: The answer to \"Which geographic concept describes the unequal distribution of environmental hazards, with low-income and minority communities bearing disproportionate exposure\" is: B.",
+      "question": "Which geographic concept examines the unequal distribution of environmental hazards across communities?",
       "options": [
-        "True",
-        "False"
+        "Environmental justice",
+        "Site analysis",
+        "Urban primacy",
+        "Distance decay"
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "Environmental justice",
+      "explanation": "Environmental justice studies how environmental benefits and burdens are distributed, especially where vulnerable communities face disproportionate risk.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "True or False: The answer to \"The 'resource curse' (paradox of plenty) refers to:\" is: Countries with abundant resources that export too many goods, creating inflation.",
+      "question": "What does the resource curse, also called the paradox of plenty, describe?",
       "options": [
-        "True",
-        "False"
+        "Resource-rich countries may experience slower growth, conflict, or weak governance.",
+        "Resource-rich countries always develop faster than resource-poor countries.",
+        "Countries create inflation whenever they export too many manufactured goods.",
+        "Countries without natural resources cannot industrialize."
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: B.",
+      "answer": "Resource-rich countries may experience slower growth, conflict, or weak governance.",
+      "explanation": "The resource curse describes cases where natural-resource wealth does not translate into broad development.",
       "points": 1
     },
     {
@@ -899,19 +917,21 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "True or False: The answer to \"Modernization theory of development argues that all countries progress through similar stages and that:\" is: B.",
+      "question": "Which claim best represents modernization theory of development?",
       "options": [
-        "True",
-        "False"
+        "Traditional societies can develop by adopting capital, technology, and institutions associated with already-developed countries.",
+        "Underdevelopment is caused entirely by colonial extraction and unequal trade.",
+        "Development is impossible without rejecting industrialization.",
+        "Every country must specialize only in primary-sector exports."
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "Traditional societies can develop by adopting capital, technology, and institutions associated with already-developed countries.",
+      "explanation": "Modernization theory emphasizes staged development and adoption of institutions and technologies associated with industrialized economies.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the gender gap in development is significant because research consistently shows that:.\"",
+      "question": "Short response: Complete this statement: The gender gap in development is significant because research consistently shows that...",
       "options": null,
       "answer": "Improving women's education, health, and economic participation is strongly associated with broader development gains.",
       "explanation": "Gender inequality affects fertility, income, health, education, and political participation, so it shapes overall development.",
@@ -949,19 +969,21 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "True or False: The answer to \"Geographic Information Systems (GIS) are best described as:\" is: B.",
+      "question": "Which description best defines Geographic Information Systems (GIS)?",
       "options": [
-        "True",
-        "False"
+        "Computer-based tools that capture, store, analyze, and display spatial data in layers",
+        "Hand-drawn maps that show only political borders",
+        "Satellite images with no analytical data attached",
+        "A census method used only for rural populations"
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "Computer-based tools that capture, store, analyze, and display spatial data in layers",
+      "explanation": "GIS links spatial data to mapped layers so geographers can analyze patterns and relationships.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a significant ethical concern associated with widespread geographic data collection and gis use is:.\"",
+      "question": "Short response: Complete this statement: A significant ethical concern associated with widespread geographic data collection and gis use is...",
       "options": null,
       "answer": "Privacy and surveillance risks from collecting, mapping, and sharing location-based data about people and communities.",
       "explanation": "GIS and location data can reveal sensitive patterns, so ethical use requires consent, security, and attention to harm.",
@@ -1013,13 +1035,15 @@
     {
       "moduleOrder": 14,
       "order": 4,
-      "question": "True or False: The answer to \"Climate-driven migration refers to:\" is: B.",
+      "question": "What is climate-driven migration?",
       "options": [
-        "True",
-        "False"
+        "Movement caused by climate-related conditions that make places unsafe or economically unviable",
+        "Seasonal travel for tourism in warmer regions",
+        "Migration caused only by political borders changing",
+        "Movement from cities to suburbs because of lower housing costs"
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "Movement caused by climate-related conditions that make places unsafe or economically unviable",
+      "explanation": "Climate-driven migration includes movement linked to sea-level rise, drought, extreme weather, and other climate-related pressures.",
       "points": 1
     },
     {
@@ -1156,14 +1180,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"In the Demographic Transition Model, Stage 4 is characterized by:\" is: C.",
+      "type": "mc",
+      "question": "In the Demographic Transition Model, what characterizes Stage 4?",
       "options": [
-        "True",
-        "False"
+        "Low birth rates, low death rates, and slow or stable population growth",
+        "High birth rates, high death rates, and little population growth",
+        "High birth rates, falling death rates, and rapid population growth",
+        "Rising death rates caused by rapid industrialization"
       ],
-      "answer": "True",
-      "explanation": "True. C is correct.",
+      "answer": "Low birth rates, low death rates, and slow or stable population growth",
+      "explanation": "Stage 4 societies generally have low birth and death rates, so population growth slows or stabilizes.",
       "points": 1
     },
     {
@@ -1209,14 +1235,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Von Thünen's agricultural model predicts that which type of farming would occur closest to the central market city\" is: Extensive grain farming.",
+      "type": "mc",
+      "question": "In Von Thünen's agricultural model, which land use is expected closest to the central market city?",
       "options": [
-        "True",
-        "False"
+        "Dairy farming and market gardening",
+        "Extensive grain farming",
+        "Ranching",
+        "Forestry"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: C.",
+      "answer": "Dairy farming and market gardening",
+      "explanation": "Perishable and high-value products are closest to the market because transportation costs and spoilage matter most there.",
       "points": 1
     },
     {
@@ -1267,14 +1295,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Human Development Index (HDI) is a better measure than GDP per capita because it:\" is: B.",
+      "type": "mc",
+      "question": "Why is the Human Development Index often more informative than GDP per capita alone?",
       "options": [
-        "True",
-        "False"
+        "It includes health and education indicators along with income.",
+        "It measures only a country's military power.",
+        "It excludes income to focus only on population density.",
+        "It measures only the value of exports."
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "It includes health and education indicators along with income.",
+      "explanation": "HDI combines income, health, and education measures, giving a broader development picture than income alone.",
       "points": 1
     },
     {
@@ -1320,14 +1350,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which map projection preserves area (equal-area) at the cost of distorting shape\" is: Mercator.",
+      "type": "mc",
+      "question": "Which map projection type preserves area while distorting shape?",
       "options": [
-        "True",
-        "False"
+        "Equal-area projection",
+        "Mercator projection",
+        "Azimuthal equidistant projection",
+        "Conformal projection"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: C.",
+      "answer": "Equal-area projection",
+      "explanation": "Equal-area projections preserve relative area but must distort some other properties, such as shape.",
       "points": 1
     },
     {
@@ -1378,14 +1410,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"The 'Green Revolution' of the 1960s–70s primarily increased food production through:\" is: B.",
+      "type": "mc",
+      "question": "The Green Revolution of the 1960s-70s primarily increased food production through which change?",
       "options": [
-        "True",
-        "False"
+        "High-yield seeds, fertilizers, irrigation, and mechanized farming practices",
+        "A global shift away from wheat and rice production",
+        "The elimination of commercial agriculture",
+        "A return to only traditional subsistence farming"
       ],
-      "answer": "True",
-      "explanation": "True. B is correct.",
+      "answer": "High-yield seeds, fertilizers, irrigation, and mechanized farming practices",
+      "explanation": "Green Revolution gains came mainly from high-yield crop varieties plus inputs such as fertilizer and irrigation.",
       "points": 1
     },
     {
@@ -1431,14 +1465,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"Environmental justice as a geographic concept focuses on:\" is: Using courts to prosecute pollution by corporations.",
+      "type": "mc",
+      "question": "What does environmental justice focus on in geographic analysis?",
       "options": [
-        "True",
-        "False"
+        "Unequal exposure to environmental harms and unequal access to environmental benefits",
+        "Using courts as the only way to prosecute corporate pollution",
+        "Mapping only wilderness areas with no human population",
+        "Measuring climate zones without considering social patterns"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: B.",
+      "answer": "Unequal exposure to environmental harms and unequal access to environmental benefits",
+      "explanation": "Environmental justice connects environmental risk with social and spatial inequality.",
       "points": 1
     },
     {
@@ -1544,14 +1580,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Von Thünen model of agricultural land use assumes which central organizing principle\" is: Agricultural zones are determined primarily by soil type.",
+      "type": "mc",
+      "question": "Which central organizing principle does the Von Thünen model use to explain agricultural land use?",
       "options": [
-        "True",
-        "False"
+        "Transportation cost and distance from the market shape land-use zones.",
+        "Soil type alone determines all agricultural zones.",
+        "Political borders determine crop location.",
+        "Climate is identical across all locations."
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: B.",
+      "answer": "Transportation cost and distance from the market shape land-use zones.",
+      "explanation": "Von Thünen's model centers on the relationship between land rent, transportation cost, perishability, and distance from market.",
       "points": 1
     },
     {

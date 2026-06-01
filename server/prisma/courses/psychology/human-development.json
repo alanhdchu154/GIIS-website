@@ -13,7 +13,7 @@
       "title": "Theories of Development",
       "titleZh": "发展理论（皮亚杰、埃里克森、维果茨基）",
       "objectives": "Compare Piaget's cognitive stages, Erikson's psychosocial stages, and Vygotsky's sociocultural theory; evaluate each theory's contributions and limitations.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 9 — Development",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-developmental-psychology-challenge/ap-developmental-psychology/v/developmental-psychology",
       "videoNote": "Khan Academy — Developmental Psychology Overview",
@@ -29,7 +29,7 @@
       "title": "Prenatal Development & Birth",
       "titleZh": "产前发展与出生",
       "objectives": "Describe the three stages of prenatal development (germinal, embryonic, fetal), identify teratogens and their critical periods, and explain the birth process and its psychological dimensions.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-1",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 9.1 — Prenatal Development",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-developmental-psychology-challenge/ap-developmental-psychology/v/developmental-psychology",
       "videoNote": "Khan Academy — Prenatal Development",
@@ -45,7 +45,7 @@
       "title": "Infancy: Physical & Cognitive Development",
       "titleZh": "婴儿期：身体与认知发展",
       "objectives": "Describe major physical milestones of infancy, explain the development of sensory and motor abilities, and apply Piaget's sensorimotor stage including object permanence.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 9.2 — Infancy & Childhood",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-developmental-psychology-challenge/ap-developmental-psychology/v/developmental-psychology",
       "videoNote": "Khan Academy — Infant Cognitive Development",
@@ -61,7 +61,7 @@
       "title": "Infancy: Social & Emotional Development",
       "titleZh": "婴儿期：社会与情绪发展",
       "objectives": "Describe temperament types, explain Bowlby's attachment theory, distinguish secure from insecure attachment patterns, and describe the development of social referencing and basic emotions.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 9.2 — Social Development",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-developmental-psychology-challenge/ap-developmental-psychology/v/developmental-psychology",
       "videoNote": "Khan Academy — Attachment & Early Social Development",
@@ -77,7 +77,7 @@
       "title": "Early Childhood: Cognitive Development",
       "titleZh": "幼儿期：认知发展",
       "objectives": "Describe cognitive characteristics of the preoperational stage including symbolic thinking, egocentrism, and animism; explain theory of mind development and Vygotsky's ZPD in early education.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 9.2 — Early Childhood",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-developmental-psychology-challenge/ap-developmental-psychology/v/developmental-psychology",
       "videoNote": "Khan Academy — Preoperational Stage",
@@ -93,7 +93,7 @@
       "title": "Early Childhood: Social-Emotional Development",
       "titleZh": "幼儿期：社会情感发展",
       "objectives": "Describe Erikson's initiative vs. guilt stage, explain parenting styles (Baumrind) and their outcomes, and analyze the role of play in social-emotional development.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 9.2 — Parenting & Social Development",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-developmental-psychology-challenge/ap-developmental-psychology/v/developmental-psychology",
       "videoNote": "Khan Academy — Social Development in Early Childhood",
@@ -109,7 +109,7 @@
       "title": "Language Development",
       "titleZh": "语言发展",
       "objectives": "Trace the milestones of language development from cooing to complex syntax, evaluate nativist (Chomsky) vs. social-interactionist (Vygotsky) explanations, and explain bilingualism and critical periods.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 7.2 — Language",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-cognition/ap-language/v/language-and-thought",
       "videoNote": "Khan Academy — Language Development",
@@ -125,7 +125,7 @@
       "title": "Middle Childhood: School & Learning",
       "titleZh": "童年中期：学校与学习",
       "objectives": "Describe Piaget's concrete operational stage abilities (conservation, classification, seriation), apply Erikson's industry vs. inferiority stage, and explain the role of school, peers, and achievement motivation.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-2",
+      "readingUrl": "https://openstax.org/books/psychology-2e",
       "readingNote": "OpenStax Psychology 2e Ch 9.2 — Middle Childhood",
       "videoUrl": "https://www.khanacademy.org/science/ap-psychology/ap-developmental-psychology-challenge/ap-developmental-psychology/v/developmental-psychology",
       "videoNote": "Khan Academy — Middle Childhood Development",
@@ -169,13 +169,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Piaget's theory of cognitive development is best described as:\" is: A stage theory based on qualitatively different ways of thinking.",
+      "question": "Which answer best completes this statement? Piaget's theory of cognitive development is best described as:",
       "options": [
-        "True",
-        "False"
+        "A sociocultural theory of learning",
+        "A stage theory based on qualitatively different ways of thinking",
+        "A behavioral theory based on reinforcement",
+        "A nativist theory of language acquisition"
       ],
-      "answer": "True",
-      "explanation": "True. A stage theory based on qualitatively different ways of thinking is correct.",
+      "answer": "A stage theory based on qualitatively different ways of thinking",
+      "explanation": "Piaget proposed that children progress through four universal stages, each representing qualitatively different cognitive structures.",
       "points": 1
     },
     {
@@ -223,13 +225,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Teratogens are substances or agents that:\" is: Cause birth defects or developmental abnormalities.",
+      "question": "Which answer best completes this statement? Teratogens are substances or agents that:",
       "options": [
-        "True",
-        "False"
+        "Accelerate fetal development",
+        "Cause birth defects or developmental abnormalities",
+        "Support placental function",
+        "Only affect postnatal development"
       ],
-      "answer": "True",
-      "explanation": "True. Cause birth defects or developmental abnormalities is correct.",
+      "answer": "Cause birth defects or developmental abnormalities",
+      "explanation": "Teratogens (drugs, diseases, radiation) interfere with normal prenatal development and can cause structural or functional birth defects.",
       "points": 1
     },
     {
@@ -361,25 +365,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"Animism, typical of the preoperational stage, refers to children's belief that:\" is: Inanimate objects have feelings and intentions.",
+      "question": "Which answer best completes this statement? Animism, typical of the preoperational stage, refers to children's belief that:",
       "options": [
-        "True",
-        "False"
+        "Animals are superior to humans",
+        "Inanimate objects have feelings and intentions",
+        "Nature is random and purposeless",
+        "All living things die"
       ],
-      "answer": "True",
-      "explanation": "True. Inanimate objects have feelings and intentions is correct.",
+      "answer": "Inanimate objects have feelings and intentions",
+      "explanation": "Preoperational animism is the attribution of life and mental states to inanimate objects (e.g., 'the rock is angry').",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Theory of mind (ToM) refers to the ability to:\" is: Solve abstract math problems.",
+      "question": "Which answer best completes this statement? Theory of mind (ToM) refers to the ability to:",
       "options": [
-        "True",
-        "False"
+        "Solve abstract math problems",
+        "Understand that others have mental states different from one's own",
+        "Follow logical rules of classification",
+        "Use language to describe emotions"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Understand that others have mental states different from one's own.",
+      "answer": "Understand that others have mental states different from one's own",
+      "explanation": "ToM is the cognitive ability to attribute mental states (beliefs, desires, intentions) to others and understand they differ from one's own.",
       "points": 1
     },
     {
@@ -427,13 +435,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Baumrind's authoritative parenting style is characterized by:\" is: High demands combined with high warmth, explanations, and responsiveness.",
+      "question": "Which answer best completes this statement? Baumrind's authoritative parenting style is characterized by:",
       "options": [
-        "True",
-        "False"
+        "High demands, low warmth, and strict obedience",
+        "High demands combined with high warmth, explanations, and responsiveness",
+        "Low demands and high permissiveness",
+        "Uninvolved and neglectful caregiving"
       ],
-      "answer": "True",
-      "explanation": "True. High demands combined with high warmth, explanations, and responsiveness is correct.",
+      "answer": "High demands combined with high warmth, explanations, and responsiveness",
+      "explanation": "Authoritative parents set clear standards while being warm, responsive, and willing to explain rules — associated with best outcomes.",
       "points": 1
     },
     {
@@ -467,13 +477,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"Infants typically produce their first words around:\" is: 10–13 months.",
+      "question": "Which answer best completes this statement? Infants typically produce their first words around:",
       "options": [
-        "True",
-        "False"
+        "2–3 months",
+        "6 months",
+        "10–13 months",
+        "18–24 months"
       ],
-      "answer": "True",
-      "explanation": "True. 10–13 months is correct.",
+      "answer": "10–13 months",
+      "explanation": "First words — typically nouns referring to important people and objects — emerge around 10–13 months of age.",
       "points": 1
     },
     {
@@ -521,13 +533,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Conservation, mastered in the concrete operational stage, is the understanding that:\" is: Quantity remains constant despite changes in shape or arrangement.",
+      "question": "Which answer best completes this statement? Conservation, mastered in the concrete operational stage, is the understanding that:",
       "options": [
-        "True",
-        "False"
+        "Objects can be classified into categories",
+        "Two objects can be in the same place",
+        "Quantity remains constant despite changes in shape or arrangement",
+        "Actions can be performed in sequence"
       ],
-      "answer": "True",
-      "explanation": "True. Quantity remains constant despite changes in shape or arrangement is correct.",
+      "answer": "Quantity remains constant despite changes in shape or arrangement",
+      "explanation": "Conservation (Piaget) is the recognition that amount, number, or volume does not change when its appearance is altered.",
       "points": 1
     }
   ],
@@ -580,14 +594,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Disorganized attachment in infancy is most associated with:\" is: Frightening or frightened caregiver behavior and abuse.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Disorganized attachment in infancy is most associated with:",
       "options": [
-        "True",
-        "False"
+        "Frightening or frightened caregiver behavior and serious caregiving disruption",
+        "Consistently responsive caregiving",
+        "Advanced abstract reasoning",
+        "Earlier puberty timing"
       ],
-      "answer": "True",
-      "explanation": "True. Frightening or frightened caregiver behavior and abuse is correct.",
+      "answer": "Frightening or frightened caregiver behavior and serious caregiving disruption",
+      "explanation": "Disorganized attachment is associated in course concepts with frightening, frightened, or highly disrupted caregiving patterns.",
       "points": 1
     },
     {
@@ -638,14 +654,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Conservation of liquid quantity is mastered during Piaget's:\" is: Sensorimotor stage.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Conservation of liquid quantity is mastered during Piaget's:",
       "options": [
-        "True",
-        "False"
+        "Concrete operational stage",
+        "Sensorimotor stage",
+        "Preoperational stage",
+        "Formal operational stage only"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Concrete operational stage.",
+      "answer": "Concrete operational stage",
+      "explanation": "Conservation tasks are typically mastered during the concrete operational stage.",
       "points": 1
     },
     {
@@ -696,14 +714,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Generativity vs. stagnation (Erikson's 7th stage) centers on the question:\" is: Will I produce something of lasting value for future generations?.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Generativity vs. stagnation (Erikson's 7th stage) centers on the question:",
       "options": [
-        "True",
-        "False"
+        "Will I contribute to and guide future generations?",
+        "Can I trust my caregiver?",
+        "Can I solve abstract algebra?",
+        "Can I conserve liquid volume?"
       ],
-      "answer": "True",
-      "explanation": "True. Will I produce something of lasting value for future generations? is correct.",
+      "answer": "Will I contribute to and guide future generations?",
+      "explanation": "Generativity concerns contribution, care, and creating value for the next generation.",
       "points": 1
     },
     {
@@ -754,14 +774,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Accommodation in Piaget's theory involves:\" is: Fitting new information into existing schemas.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Accommodation in Piaget's theory involves:",
       "options": [
-        "True",
-        "False"
+        "Changing existing schemas to fit new information",
+        "Fitting new information into existing schemas",
+        "Imitating a model for reinforcement",
+        "Repeating a conditioned response after rest"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Modifying existing schemas to fit new information.",
+      "answer": "Changing existing schemas to fit new information",
+      "explanation": "Accommodation changes schemas; assimilation fits new experiences into schemas already in place.",
       "points": 1
     },
     {
@@ -812,14 +834,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Children with autism spectrum disorder typically show impaired:\" is: Theory of mind and social cognition.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Children with autism spectrum disorder typically show impaired:",
       "options": [
-        "True",
-        "False"
+        "Social communication and theory-of-mind related reasoning",
+        "Only liquid conservation",
+        "Only visual acuity",
+        "All forms of learning"
       ],
-      "answer": "True",
-      "explanation": "True. Theory of mind and social cognition is correct.",
+      "answer": "Social communication and theory-of-mind related reasoning",
+      "explanation": "Course-level descriptions often emphasize social communication and social-cognitive challenges; individual profiles vary.",
       "points": 1
     },
     {
@@ -865,14 +889,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"The secular trend in puberty refers to:\" is: Cultural differences in pubertal timing.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? The secular trend in puberty refers to:",
       "options": [
-        "True",
-        "False"
+        "Historical shifts, often toward earlier average pubertal timing",
+        "Cultural differences in pubertal timing",
+        "A sudden change in one child's height",
+        "The timing of infant first words"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: A historical trend toward earlier onset of puberty across generations.",
+      "answer": "Historical shifts, often toward earlier average pubertal timing",
+      "explanation": "The secular trend refers to population-level historical change in the timing of puberty.",
       "points": 1
     },
     {
@@ -923,14 +949,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Hospice care differs from hospital care for dying patients primarily in its emphasis on:\" is: Comfort, dignity, and quality of life rather than cure.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? Hospice care differs from hospital care for dying patients primarily in its emphasis on:",
       "options": [
-        "True",
-        "False"
+        "Comfort, dignity, family support, and quality of life rather than cure",
+        "Aggressive cure at all costs",
+        "Developmental testing only",
+        "Avoiding family involvement"
       ],
-      "answer": "True",
-      "explanation": "True. Comfort, dignity, and quality of life rather than cure is correct.",
+      "answer": "Comfort, dignity, family support, and quality of life rather than cure",
+      "explanation": "Hospice emphasizes comfort and quality of life when curative treatment is no longer the goal.",
       "points": 1
     },
     {
@@ -981,14 +1009,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"The strange situation experiment by Ainsworth involved observing infants in response to:\" is: New toys and problem tasks.",
+      "type": "mc",
+      "question": "Which answer best completes this statement? The strange situation experiment by Ainsworth involved observing infants in response to:",
       "options": [
-        "True",
-        "False"
+        "Separations and reunions with a caregiver in the presence of a stranger",
+        "New toys and problem tasks",
+        "A conservation-of-liquid task",
+        "A moral reasoning interview"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Brief separations from and reunions with their caregiver.",
+      "answer": "Separations and reunions with a caregiver in the presence of a stranger",
+      "explanation": "Ainsworth's Strange Situation assesses attachment behavior during separations, reunions, and stranger episodes.",
       "points": 1
     },
     {

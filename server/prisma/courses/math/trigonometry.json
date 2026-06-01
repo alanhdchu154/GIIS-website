@@ -13,7 +13,7 @@
       "title": "The Unit Circle",
       "titleZh": "单位圆",
       "objectives": "Define the unit circle; convert between degrees and radians; identify coordinates of standard angles (0°, 30°, 45°, 60°, 90°, and their multiples).",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 7.1: Angles",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:unit-circle/v/unit-circle-definition-of-trig-functions-1",
       "videoNote": "Khan Academy — Unit Circle Definition of Trig Functions",
@@ -29,7 +29,7 @@
       "title": "Trigonometric Functions",
       "titleZh": "三角函数的定义",
       "objectives": "Define sin, cos, tan, csc, sec, cot using the unit circle; evaluate trig functions at standard angles; understand the domain and range of each function.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 7.2–7.3: Trig Functions",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:trig-values-special-angles/v/trig-values-of-special-angles",
       "videoNote": "Khan Academy — Trig Values of Special Angles",
@@ -45,7 +45,7 @@
       "title": "Graphs of Trigonometric Functions",
       "titleZh": "三角函数的图像",
       "objectives": "Identify amplitude, period, phase shift, and vertical shift; graph y = A sin(Bx + C) + D and y = A cos(Bx + C) + D; sketch tan and cot graphs.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 8.1–8.2: Graphs of Trig Functions",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:amplitude/v/determining-the-amplitude-of-a-sinusoidal-function",
       "videoNote": "Khan Academy — Amplitude of Sinusoidal Functions",
@@ -61,7 +61,7 @@
       "title": "Trigonometric Identities",
       "titleZh": "三角恒等式",
       "objectives": "State and prove the Pythagorean, reciprocal, and quotient identities; use identities to simplify trig expressions and verify equations.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 9.1: Verifying Trigonometric Identities",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:trig-identities-intro/v/pythagorean-identity",
       "videoNote": "Khan Academy — Pythagorean Identity",
@@ -77,7 +77,7 @@
       "title": "Sum & Difference Formulas",
       "titleZh": "和差公式",
       "objectives": "Apply sum and difference identities for sine, cosine, and tangent; evaluate trig functions at non-standard angles using these formulas.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 9.2: Sum and Difference Identities",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:angle-addition/v/proof-angle-addition-cosine",
       "videoNote": "Khan Academy — Proof: Angle Addition for Cosine",
@@ -85,7 +85,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:angle-addition/e/sum-and-difference-formulas",
       "practiceNote": "Khan Academy — Sum and Difference Identities Practice (15 problems)",
-      "assignment": "Use sum/difference formulas to find exact values of sin(75°), cos(15°), tan(105°), and 5 more. Verify two identities using these formulas.",
+      "assignment": "Use sum/difference formulas to find exact values of sin(75°), cos(15°), tan(105°), and 5 more. Verify two identities using these formulas. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3
     },
     {
@@ -93,7 +93,7 @@
       "title": "Double-Angle & Half-Angle Formulas",
       "titleZh": "二倍角与半角公式",
       "objectives": "Derive and apply double-angle formulas for sin, cos, and tan; use half-angle formulas to find exact values; simplify expressions using power-reducing formulas.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/9-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 9.3: Double-Angle, Half-Angle, and Reduction Formulas",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:double-and-half-angle-identities/v/double-angle-formula",
       "videoNote": "Khan Academy — Double Angle Formula for Sine",
@@ -109,7 +109,7 @@
       "title": "Inverse Trigonometric Functions",
       "titleZh": "反三角函数",
       "objectives": "Define arcsin, arccos, and arctan with their restricted domains and ranges; evaluate inverse trig expressions; compose trig and inverse trig functions.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 8.3: Inverse Trigonometric Functions",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:inverse-trig/v/inverse-trig-functions",
       "videoNote": "Khan Academy — Intro to Arcsin, Arccos, Arctan",
@@ -125,7 +125,7 @@
       "title": "Right Triangle Trigonometry",
       "titleZh": "直角三角形三角学",
       "objectives": "Apply SOH-CAH-TOA to right triangles; find unknown sides and angles; solve real-world problems involving angles of elevation and depression.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 7.2: Right Triangle Trigonometry",
       "videoUrl": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/v/basic-trigonometry",
       "videoNote": "Khan Academy — Basic Trigonometry: SOH-CAH-TOA",
@@ -141,7 +141,7 @@
       "title": "Law of Sines",
       "titleZh": "正弦定理",
       "objectives": "State and derive the Law of Sines; apply it to solve ASA, AAS, and SSA (ambiguous case) triangles; determine the number of solutions in the ambiguous case.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.1: Law of Sines",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:law-of-sines/v/law-of-sines",
       "videoNote": "Khan Academy — Law of Sines",
@@ -157,7 +157,7 @@
       "title": "Law of Cosines",
       "titleZh": "余弦定理",
       "objectives": "State and derive the Law of Cosines; apply it to SAS and SSS triangles; find the area of a triangle using Heron's formula.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.2: Law of Cosines",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:law-of-cosines/v/law-of-cosines",
       "videoNote": "Khan Academy — Law of Cosines",
@@ -173,7 +173,7 @@
       "title": "Polar Coordinates",
       "titleZh": "极坐标",
       "objectives": "Convert between rectangular and polar coordinates; graph polar equations; identify common polar curves (roses, limacons, circles, spirals).",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.3: Polar Coordinates",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:polar-coordinates/x9e81a4f98389efdf:polar-coordinates/v/polar-coordinates-intro",
       "videoNote": "Khan Academy — Polar Coordinates Introduction",
@@ -189,7 +189,7 @@
       "title": "Vectors",
       "titleZh": "向量",
       "objectives": "Define vectors in component and magnitude-direction form; perform vector addition, subtraction, and scalar multiplication; compute dot products and find angles between vectors.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.8: Vectors",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors/x9e81a4f98389efdf:vectors-intro/v/intro-to-vectors-and-scalars",
       "videoNote": "Khan Academy — Intro to Vectors and Scalars",
@@ -205,7 +205,7 @@
       "title": "Complex Numbers in Trigonometric Form",
       "titleZh": "复数的三角形式",
       "objectives": "Write complex numbers in polar/trigonometric form; apply De Moivre's Theorem to find powers and roots of complex numbers.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 10.5: Polar Form of Complex Numbers",
       "videoUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:complex/x9e81a4f98389efdf:complex-mul-div-polar/v/multiplying-complex-numbers-in-polar-form",
       "videoNote": "Khan Academy — Complex Numbers in Polar Form",
@@ -213,7 +213,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:complex/x9e81a4f98389efdf:complex-mul-div-polar/e/multiply-complex-numbers-in-polar-form",
       "practiceNote": "Khan Academy — Multiply Complex Numbers in Polar Form (15 problems)",
-      "assignment": "Convert 6 complex numbers to polar form. Use De Moivre's Theorem to find the 4th power of 2 complex numbers and all cube roots of 2 complex numbers.",
+      "assignment": "Convert 6 complex numbers to polar form. Use De Moivre's Theorem to find the 4th power of 2 complex numbers and all cube roots of 2 complex numbers. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3.5
     },
     {
@@ -221,7 +221,7 @@
       "title": "Applications of Trigonometry",
       "titleZh": "三角函数的实际应用",
       "objectives": "Model periodic phenomena with sinusoidal functions; solve applied problems involving navigation, physics, engineering, and harmonic motion.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/8-introduction",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
       "readingNote": "OpenStax Algebra & Trigonometry 2e — Ch 8.1 Applications: Modeling with Sinusoidal Functions",
       "videoUrl": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:modeling-with-trig/v/trig-word-problem-modeling-daily-temperature",
       "videoNote": "Khan Academy — Modeling with Trig: Daily Temperature",
@@ -279,13 +279,15 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "True or False: The answer to \"How many radians are in 180 degrees\" is: pi.",
+      "question": "How many radians are equal to 180 degrees?",
       "options": [
-        "True",
-        "False"
+        "pi/2",
+        "pi",
+        "2pi",
+        "3pi"
       ],
-      "answer": "True",
-      "explanation": "True. pi is correct.",
+      "answer": "pi",
+      "explanation": "A half turn is 180 degrees, which equals pi radians.",
       "points": 1
     },
     {
@@ -490,19 +492,19 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"simplify: sec(theta) * sin(theta).\"",
+      "question": "Short response: Define or explain: Simplify: sec(theta) * sin(theta).",
       "options": null,
       "answer": "tan(theta)",
-      "explanation": "The correct answer is: tan(theta).",
+      "explanation": "A correct response identifies \"tan(theta)\" and connects it to the module context.",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 6,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which of the following equals 1 + tan^2(theta).\"",
+      "question": "Short response: Which of the following equals 1 + tan^2(theta)?",
       "options": null,
       "answer": "sec^2(theta)",
-      "explanation": "The correct answer is: sec^2(theta).",
+      "explanation": "A correct response identifies \"sec^2(theta)\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -644,10 +646,10 @@
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"use the double-angle formula to find cos(60) from cos(30) = sqrt(3)/2..\"",
+      "question": "Short response: Define or explain: Use the double-angle formula to find cos(60) from cos(30) = sqrt(3)/2.",
       "options": null,
       "answer": "1/2",
-      "explanation": "The correct answer is: 1/2.",
+      "explanation": "A correct response identifies \"1/2\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -716,10 +718,10 @@
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"simplify sin(arccos(x))..\"",
+      "question": "Short response: Define or explain: Simplify sin(arccos(x)).",
       "options": null,
       "answer": "sqrt(1 - x^2)",
-      "explanation": "The correct answer is: sqrt(1 - x^2).",
+      "explanation": "A correct response identifies \"sqrt(1 - x^2)\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -781,13 +783,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "True or False: The answer to \"In a right triangle, what does SOH stand for\" is: Sin = Opposite/Hypotenuse.",
+      "question": "In the SOH-CAH-TOA mnemonic, what does SOH represent?",
       "options": [
-        "True",
-        "False"
+        "sin(theta) = opposite / hypotenuse",
+        "sin(theta) = adjacent / hypotenuse",
+        "cos(theta) = opposite / hypotenuse",
+        "tan(theta) = opposite / adjacent"
       ],
-      "answer": "True",
-      "explanation": "True. Sin = Opposite/Hypotenuse is correct.",
+      "answer": "sin(theta) = opposite / hypotenuse",
+      "explanation": "SOH means sine equals opposite divided by hypotenuse.",
       "points": 1
     },
     {
@@ -835,25 +839,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"State the Law of Sines.\" is: a/sinA = b/sinB = c/sinC.",
+      "question": "Which equation correctly states the Law of Sines?",
       "options": [
-        "True",
-        "False"
+        "a/sin(A) = b/sin(B) = c/sin(C)",
+        "a^2 = b^2 + c^2 - 2bc cos(A)",
+        "sin(A)/a = cos(B)/b = tan(C)/c",
+        "a/b = cos(A)/cos(B)"
       ],
-      "answer": "True",
-      "explanation": "True. a/sinA = b/sinB = c/sinC is correct.",
+      "answer": "a/sin(A) = b/sin(B) = c/sin(C)",
+      "explanation": "The Law of Sines relates each side length to the sine of its opposite angle.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "True or False: The answer to \"In triangle ABC, A = 40 degrees, B = 75 degrees, a = 10. Find b (approximately).\" is: b = 7.0.",
+      "question": "In triangle ABC, A = 40 degrees, B = 75 degrees, and a = 10. What is b to the nearest tenth?",
       "options": [
-        "True",
-        "False"
+        "7.0",
+        "10.4",
+        "14.4",
+        "15.0"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: b = 14.4.",
+      "answer": "14.4",
+      "explanation": "By the Law of Sines, b/sin(75) = 10/sin(40), so b is approximately 14.4.",
       "points": 1
     },
     {
@@ -915,10 +923,10 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in a triangle with a = 5, b = 7, c = 8, what is cos(c).\"",
+      "question": "Short response: Complete this statement: In a triangle with a = 5, b = 7, c = 8, what is cos(c)...",
       "options": null,
       "answer": "1/7",
-      "explanation": "The correct answer is: 1/7.",
+      "explanation": "A correct response identifies \"1/7\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -994,13 +1002,15 @@
     {
       "moduleOrder": 11,
       "order": 6,
-      "question": "True or False: The answer to \"The polar point (3, pi/2) corresponds to which rectangular point\" is: (0, 3).",
+      "question": "Which rectangular point corresponds to the polar point (3, pi/2)?",
       "options": [
-        "True",
-        "False"
+        "(0, 3)",
+        "(3, 0)",
+        "(0, -3)",
+        "(-3, 0)"
       ],
-      "answer": "True",
-      "explanation": "True. (0, 3) is correct.",
+      "answer": "(0, 3)",
+      "explanation": "At angle pi/2, x = 3cos(pi/2) = 0 and y = 3sin(pi/2) = 3.",
       "points": 1
     },
     {
@@ -1069,10 +1079,10 @@
     {
       "moduleOrder": 12,
       "order": 6,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"find the unit vector in the direction of <3, 4>..\"",
+      "question": "Short response: Define or explain: Find the unit vector in the direction of <3, 4>.",
       "options": null,
       "answer": "<3/5, 4/5>",
-      "explanation": "The correct answer is: <3/5, 4/5>.",
+      "explanation": "A correct response identifies \"<3/5, 4/5>\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1120,13 +1130,15 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "True or False: The answer to \"Write 1 + i in polar form.\" is: sqrt(2)*(cos(pi/4) + i*sin(pi/4)).",
+      "question": "What is the polar form of 1 + i?",
       "options": [
-        "True",
-        "False"
+        "sqrt(2)*(cos(pi/4) + i*sin(pi/4))",
+        "sqrt(2)*(cos(3pi/4) + i*sin(3pi/4))",
+        "2*(cos(pi/4) + i*sin(pi/4))",
+        "sqrt(2)*(cos(pi/2) + i*sin(pi/2))"
       ],
-      "answer": "True",
-      "explanation": "True. sqrt(2)*(cos(pi/4) + i*sin(pi/4)) is correct.",
+      "answer": "sqrt(2)*(cos(pi/4) + i*sin(pi/4))",
+      "explanation": "The modulus is sqrt(1^2 + 1^2) = sqrt(2), and the argument is pi/4.",
       "points": 1
     },
     {
@@ -1197,13 +1209,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "True or False: The answer to \"A Ferris wheel with diameter 40 m completes one revolution in 30 seconds. What is the amplitude of the height function\" is: 20.",
+      "question": "A Ferris wheel has a diameter of 40 meters. What is the amplitude of its height function?",
       "options": [
-        "True",
-        "False"
+        "10 meters",
+        "20 meters",
+        "30 meters",
+        "40 meters"
       ],
-      "answer": "True",
-      "explanation": "True. 20 is correct.",
+      "answer": "20 meters",
+      "explanation": "The amplitude is the radius of the Ferris wheel, which is half of the 40-meter diameter.",
       "points": 1
     }
   ],
@@ -1256,14 +1270,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Simplify (sin^2(theta) - 1) / cos(theta).\" is: -cos(theta).",
+      "type": "mc",
+      "question": "Simplify (sin^2(theta) - 1) / cos(theta).",
       "options": [
-        "True",
-        "False"
+        "-cos(theta)",
+        "cos(theta)",
+        "-sin(theta)",
+        "tan(theta)"
       ],
-      "answer": "True",
-      "explanation": "True. -cos(theta) is correct.",
+      "answer": "-cos(theta)",
+      "explanation": "Since sin^2(theta) - 1 = -cos^2(theta), dividing by cos(theta) gives -cos(theta).",
       "points": 1
     },
     {
@@ -1309,14 +1325,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Evaluate arcsin(-sqrt(3)/2).\" is: -pi/6.",
+      "type": "mc",
+      "question": "Evaluate arcsin(-sqrt(3)/2).",
       "options": [
-        "True",
-        "False"
+        "-pi/6",
+        "-pi/3",
+        "pi/3",
+        "2pi/3"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: -pi/3.",
+      "answer": "-pi/3",
+      "explanation": "arcsin returns values in [-pi/2, pi/2], and sin(-pi/3) = -sqrt(3)/2.",
       "points": 1
     },
     {
@@ -1367,14 +1385,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"In triangle ABC, A = 35 degrees, B = 65 degrees, a = 12. Find b using Law of Sines.\" is: b = 18.9.",
+      "type": "mc",
+      "question": "In triangle ABC, A = 35 degrees, B = 65 degrees, and a = 12. What is b using the Law of Sines?",
       "options": [
-        "True",
-        "False"
+        "7.6",
+        "12.0",
+        "18.9",
+        "22.4"
       ],
-      "answer": "True",
-      "explanation": "True. b = 18.9 is correct.",
+      "answer": "18.9",
+      "explanation": "b = 12sin(65)/sin(35), which is approximately 18.9.",
       "points": 1
     },
     {
@@ -1425,14 +1445,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"In a triangle with sides a = 7, b = 8, c = 9, find the largest angle C.\" is: C = 82.8 degrees.",
+      "type": "mc",
+      "question": "In a triangle with sides a = 7, b = 8, and c = 9, what is angle C to the nearest tenth?",
       "options": [
-        "True",
-        "False"
+        "51.1 degrees",
+        "62.7 degrees",
+        "73.4 degrees",
+        "82.8 degrees"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: C = 73.4 degrees.",
+      "answer": "73.4 degrees",
+      "explanation": "By the Law of Cosines, cos(C) = (7^2 + 8^2 - 9^2)/(2*7*8), so C is about 73.4 degrees.",
       "points": 1
     },
     {
@@ -1483,14 +1505,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"A tide model: h(t) = 4sin(pi*t/6) + 5, where h is in feet and t in hours. What is the maximum water height\" is: 9 ft.",
+      "type": "mc",
+      "question": "For the tide model h(t) = 4sin(pi*t/6) + 5, what is the maximum water height?",
       "options": [
-        "True",
-        "False"
+        "4 ft",
+        "5 ft",
+        "9 ft",
+        "11 ft"
       ],
-      "answer": "True",
-      "explanation": "True. 9 ft is correct.",
+      "answer": "9 ft",
+      "explanation": "The sine term reaches a maximum of 1, so the maximum height is 4(1) + 5 = 9 ft.",
       "points": 1
     },
     {
@@ -1536,14 +1560,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"Two forces of 30 N and 40 N act at right angles. What is the magnitude of the resultant force\" is: 70 N.",
+      "type": "mc",
+      "question": "Two forces of 30 N and 40 N act at right angles. What is the magnitude of the resultant force?",
       "options": [
-        "True",
-        "False"
+        "10 N",
+        "50 N",
+        "60 N",
+        "70 N"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 50 N.",
+      "answer": "50 N",
+      "explanation": "The forces form a right triangle, so the resultant is sqrt(30^2 + 40^2) = 50 N.",
       "points": 1
     },
     {
@@ -1594,14 +1620,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"To prove sec(theta) - cos(theta) = sin(theta)*tan(theta), what is the key identity used\" is: sin^2 = 1 - cos^2.",
+      "type": "mc",
+      "question": "Which identity is the key step in proving sec(theta) - cos(theta) = sin(theta)*tan(theta)?",
       "options": [
-        "True",
-        "False"
+        "sin^2(theta) = 1 - cos^2(theta)",
+        "cos^2(theta) = 1 + sin^2(theta)",
+        "tan(theta) = cos(theta)/sin(theta)",
+        "sec(theta) = sin(theta)"
       ],
-      "answer": "True",
-      "explanation": "True. sin^2 = 1 - cos^2 is correct.",
+      "answer": "sin^2(theta) = 1 - cos^2(theta)",
+      "explanation": "Rewriting sec(theta) - cos(theta) as (1 - cos^2(theta))/cos(theta) uses sin^2(theta) = 1 - cos^2(theta).",
       "points": 1
     },
     {
@@ -1652,14 +1680,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"The graph of y = cos(x) is the same as y = sin(x) shifted by how much\" is: pi/4 to the left.",
+      "type": "mc",
+      "question": "The graph of y = cos(x) is the same as y = sin(x) shifted by how much?",
       "options": [
-        "True",
-        "False"
+        "pi/4 to the left",
+        "pi/2 to the left",
+        "pi/2 to the right",
+        "pi to the left"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: pi/2 to the left.",
+      "answer": "pi/2 to the left",
+      "explanation": "cos(x) = sin(x + pi/2), so the sine graph is shifted pi/2 units left.",
       "points": 1
     },
     {

@@ -311,22 +311,24 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "True or False: The answer to \"Which of the following is a categorical variable\" is: Favorite color.",
+      "question": "Which variable is categorical rather than quantitative?",
       "options": [
-        "True",
-        "False"
+        "Height in centimeters",
+        "Favorite color",
+        "Number of siblings",
+        "Time to finish a test"
       ],
-      "answer": "True",
-      "explanation": "True. Favorite color is correct.",
+      "answer": "Favorite color",
+      "explanation": "Favorite color places individuals into named groups and has no numerical measurement scale.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which graph is best for displaying a single quantitative variable for a small dataset.\"",
+      "question": "Short response: Which graph is best for displaying a single quantitative variable for a small dataset?",
       "options": null,
       "answer": "Dotplot",
-      "explanation": "The correct answer is: Dotplot.",
+      "explanation": "A correct response identifies \"Dotplot\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -388,13 +390,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "True or False: The answer to \"Which measure of center is most resistant to outliers\" is: Median.",
+      "question": "Which measure of center is most resistant to extreme outliers?",
       "options": [
-        "True",
-        "False"
+        "Mean",
+        "Median",
+        "Range",
+        "Standard deviation"
       ],
-      "answer": "True",
-      "explanation": "True. Median is correct.",
+      "answer": "Median",
+      "explanation": "The median depends on the middle position, so a few extreme values do not move it as much as they move the mean.",
       "points": 1
     },
     {
@@ -442,25 +446,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "True or False: The answer to \"A z-score of -2 means a value is:\" is: 2 SD below the mean.",
+      "question": "What does a z-score of -2 indicate?",
       "options": [
-        "True",
-        "False"
+        "The value is 2 standard deviations below the mean",
+        "The value is 2 units below zero",
+        "The value is twice the mean",
+        "The value is 2 standard deviations above the mean"
       ],
-      "answer": "True",
-      "explanation": "True. 2 SD below the mean is correct.",
+      "answer": "The value is 2 standard deviations below the mean",
+      "explanation": "A negative z-score is below the mean, and its magnitude gives the number of standard deviations from the mean.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "True or False: The answer to \"Which graph allows direct comparison of five-number summaries for two distributions\" is: Histogram.",
+      "question": "Which display is best for directly comparing five-number summaries of two distributions?",
       "options": [
-        "True",
-        "False"
+        "Parallel boxplots",
+        "Pie charts",
+        "A single histogram",
+        "A bar graph of counts"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Parallel boxplots.",
+      "answer": "Parallel boxplots",
+      "explanation": "Parallel boxplots show medians, quartiles, ranges, and possible outliers side by side for comparison.",
       "points": 1
     },
     {
@@ -522,10 +530,10 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"correlation does not imply:.\"",
+      "question": "Short response: Define or explain: Correlation does not imply.",
       "options": null,
       "answer": "Causation",
-      "explanation": "The correct answer is: Causation.",
+      "explanation": "A correct response identifies \"Causation\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -601,13 +609,15 @@
     {
       "moduleOrder": 5,
       "order": 6,
-      "question": "True or False: The answer to \"A simple random sample (SRS) ensures:\" is: Every individual has an equal chance of selection.",
+      "question": "What is a defining feature of a simple random sample?",
       "options": [
-        "True",
-        "False"
+        "Every individual receives the same treatment",
+        "Every individual has an equal chance of selection",
+        "Only volunteers are included",
+        "The population is divided into clusters first"
       ],
-      "answer": "True",
-      "explanation": "True. Every individual has an equal chance of selection is correct.",
+      "answer": "Every individual has an equal chance of selection",
+      "explanation": "In the basic description of an SRS, individuals are selected by chance so each individual has an equal chance to be chosen.",
       "points": 1
     },
     {
@@ -655,13 +665,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Two events A and B are independent if:\" is: P(A|B) = P(A).",
+      "question": "Which condition shows that events A and B are independent?",
       "options": [
-        "True",
-        "False"
+        "P(A|B) = P(A)",
+        "P(A and B) = 0",
+        "P(A or B) = 1",
+        "P(A) = P(B)"
       ],
-      "answer": "True",
-      "explanation": "True. P(A|B) = P(A) is correct.",
+      "answer": "P(A|B) = P(A)",
+      "explanation": "If knowing that B occurred does not change the probability of A, then A and B are independent.",
       "points": 1
     },
     {
@@ -718,22 +730,24 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "True or False: The answer to \"The expected value E(X) of a discrete random variable is:\" is: The sum of x_i * P(x_i) for all values.",
+      "question": "How is the expected value of a discrete random variable calculated?",
       "options": [
-        "True",
-        "False"
+        "Add all probabilities without using outcomes",
+        "Multiply each value by its probability and sum the products",
+        "Average the smallest and largest possible values",
+        "Choose the value with the highest probability"
       ],
-      "answer": "True",
-      "explanation": "True. The sum of x_i * P(x_i) for all values is correct.",
+      "answer": "Multiply each value by its probability and sum the products",
+      "explanation": "For a discrete random variable, E(X) is the sum of x_i times P(x_i) across all possible values.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"sd(ax) = .\"",
+      "question": "Short response: Define or explain: Sd(ax) =.",
       "options": null,
       "answer": "|a| * SD(X)",
-      "explanation": "The correct answer is: |a| * SD(X).",
+      "explanation": "A correct response identifies \"|a| * SD(X)\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -849,25 +863,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"The Central Limit Theorem states that for large n, the sampling distribution of x-bar is approximately:\" is: Normal.",
+      "question": "According to the Central Limit Theorem, for large n the sampling distribution of x-bar is approximately:",
       "options": [
-        "True",
-        "False"
+        "Uniform",
+        "Normal",
+        "Bimodal",
+        "Always skewed right"
       ],
-      "answer": "True",
-      "explanation": "True. Normal is correct.",
+      "answer": "Normal",
+      "explanation": "For sufficiently large samples, the sampling distribution of the sample mean is approximately normal under the usual conditions.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "True or False: The answer to \"The standard error of x-bar is:\" is: sigma / n.",
+      "question": "What is the standard error of x-bar when the population standard deviation is sigma and the sample size is n?",
       "options": [
-        "True",
-        "False"
+        "sigma / n",
+        "sigma / sqrt(n)",
+        "sqrt(n) / sigma",
+        "n / sigma"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: sigma / sqrt(n).",
+      "answer": "sigma / sqrt(n)",
+      "explanation": "The standard error of the sample mean is sigma divided by the square root of the sample size.",
       "points": 1
     },
     {
@@ -1008,13 +1026,15 @@
     {
       "moduleOrder": 11,
       "order": 6,
-      "question": "True or False: The answer to \"The null hypothesis H0 typically states:\" is: No effect or no difference.",
+      "question": "What does the null hypothesis usually state in a significance test?",
       "options": [
-        "True",
-        "False"
+        "There is no effect or no difference",
+        "The alternative hypothesis is definitely true",
+        "The sample statistic equals the p-value",
+        "The confidence level is 100 percent"
       ],
-      "answer": "True",
-      "explanation": "True. No effect or no difference is correct.",
+      "answer": "There is no effect or no difference",
+      "explanation": "The null hypothesis is the baseline claim, often stating no effect, no difference, or no association.",
       "points": 1
     },
     {
@@ -1062,22 +1082,24 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "True or False: The answer to \"For a two-sample t-test comparing means of two independent groups, H0 is typically:\" is: mu1 - mu2 = 0.",
+      "question": "For a two-sample t-test comparing independent means, what is the usual null hypothesis?",
       "options": [
-        "True",
-        "False"
+        "mu1 - mu2 = 0",
+        "p1 - p2 = 0",
+        "mu1 + mu2 = 1",
+        "sigma1 = sigma2 = 0"
       ],
-      "answer": "True",
-      "explanation": "True. mu1 - mu2 = 0 is correct.",
+      "answer": "mu1 - mu2 = 0",
+      "explanation": "The usual null hypothesis for two independent means states that the population mean difference is zero.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a conservative approximation for two-sample t degrees of freedom is:.\"",
+      "question": "Short response: Complete this statement: A conservative approximation for two-sample t degrees of freedom is...",
       "options": null,
       "answer": "min(n1-1, n2-1)",
-      "explanation": "The correct answer is: min(n1-1, n2-1).",
+      "explanation": "A correct response identifies \"min(n1-1, n2-1)\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1125,13 +1147,15 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "True or False: The answer to \"A chi-square goodness-of-fit test is used to:\" is: Test if observed categorical data fits a hypothesized distribution.",
+      "question": "What is the purpose of a chi-square goodness-of-fit test?",
       "options": [
-        "True",
-        "False"
+        "Test whether observed categorical counts fit a hypothesized distribution",
+        "Compare two population means",
+        "Estimate a regression slope",
+        "Measure the strength of a linear relationship"
       ],
-      "answer": "True",
-      "explanation": "True. Test if observed categorical data fits a hypothesized distribution is correct.",
+      "answer": "Test whether observed categorical counts fit a hypothesized distribution",
+      "explanation": "A goodness-of-fit test compares observed counts across categories with expected counts from a stated distribution.",
       "points": 1
     },
     {
@@ -1193,13 +1217,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "True or False: The answer to \"In regression inference, H0 for the slope is:\" is: beta = 0 (no linear relationship).",
+      "question": "In regression inference, what is the usual null hypothesis for the population slope?",
       "options": [
-        "True",
-        "False"
+        "beta = 0",
+        "beta = 1",
+        "r = 1",
+        "x-bar = y-bar"
       ],
-      "answer": "True",
-      "explanation": "True. beta = 0 (no linear relationship) is correct.",
+      "answer": "beta = 0",
+      "explanation": "The usual null hypothesis says the population slope is zero, meaning no linear relationship in the population.",
       "points": 1
     },
     {
@@ -1336,14 +1362,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"In a scatterplot, r = -0.95 indicates:\" is: A strong negative linear association.",
+      "type": "mc",
+      "question": "In a scatterplot, what does r = -0.95 indicate?",
       "options": [
-        "True",
-        "False"
+        "A strong negative linear association",
+        "A weak positive linear association",
+        "No linear association",
+        "A nonlinear association with positive slope"
       ],
-      "answer": "True",
-      "explanation": "True. A strong negative linear association is correct.",
+      "answer": "A strong negative linear association",
+      "explanation": "A correlation close to -1 indicates a strong negative linear association.",
       "points": 1
     },
     {
@@ -1389,14 +1417,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"15 independent Bernoulli trials, each with probability 0.4. Which distribution applies\" is: Geometric(p=0.4).",
+      "type": "mc",
+      "question": "Fifteen independent Bernoulli trials each have success probability 0.4. Which distribution models the number of successes?",
       "options": [
-        "True",
-        "False"
+        "Binomial(n=15, p=0.4)",
+        "Geometric(p=0.4)",
+        "Normal(mu=15, sigma=0.4)",
+        "Chi-square(df=15)"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Binomial(n=15, p=0.4).",
+      "answer": "Binomial(n=15, p=0.4)",
+      "explanation": "A fixed number of independent Bernoulli trials with the same success probability is modeled by a binomial distribution.",
       "points": 1
     },
     {
@@ -1447,14 +1477,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"In a boxplot, the box spans from:\" is: Q1 to Q3.",
+      "type": "mc",
+      "question": "In a boxplot, the box spans which part of the data?",
       "options": [
-        "True",
-        "False"
+        "Minimum to maximum",
+        "Mean to standard deviation",
+        "Q1 to Q3",
+        "Median to maximum"
       ],
-      "answer": "True",
-      "explanation": "True. Q1 to Q3 is correct.",
+      "answer": "Q1 to Q3",
+      "explanation": "The box in a boxplot extends from the first quartile to the third quartile.",
       "points": 1
     },
     {
@@ -1505,14 +1537,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"A 95% CI for mean test score is (72, 84). Which interpretation is correct\" is: 95% of students scored between 72 and 84.",
+      "type": "mc",
+      "question": "A 95 percent confidence interval for a population mean test score is (72, 84). Which interpretation is correct?",
       "options": [
-        "True",
-        "False"
+        "95 percent of students scored between 72 and 84",
+        "We are 95 percent confident the population mean score is between 72 and 84",
+        "The sample mean must be 95",
+        "There is a 95 percent chance the sample mean changes to 72"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: We are 95% confident the population mean score is between 72 and 84.",
+      "answer": "We are 95 percent confident the population mean score is between 72 and 84",
+      "explanation": "A confidence interval estimates a population parameter, not the percentage of individual observations in the interval.",
       "points": 1
     },
     {
@@ -1563,14 +1597,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"A Type I error in a medical test for a disease would be:\" is: Diagnosing a healthy person as sick.",
+      "type": "mc",
+      "question": "In a medical test for a disease, which situation is a Type I error?",
       "options": [
-        "True",
-        "False"
+        "Diagnosing a healthy person as sick",
+        "Diagnosing a sick person as healthy",
+        "Correctly diagnosing a sick person",
+        "Correctly diagnosing a healthy person"
       ],
-      "answer": "True",
-      "explanation": "True. Diagnosing a healthy person as sick is correct.",
+      "answer": "Diagnosing a healthy person as sick",
+      "explanation": "A Type I error rejects a true null hypothesis; in this context, it is a false positive diagnosis.",
       "points": 1
     },
     {
@@ -1616,14 +1652,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"X has mean 10 and SD 3. Y = 2X - 1. What are the mean and SD of Y\" is: Mean=21, SD=5.",
+      "type": "mc",
+      "question": "If X has mean 10 and standard deviation 3, and Y = 2X - 1, what are the mean and standard deviation of Y?",
       "options": [
-        "True",
-        "False"
+        "Mean = 21, SD = 5",
+        "Mean = 19, SD = 6",
+        "Mean = 20, SD = 3",
+        "Mean = 9, SD = 6"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Mean=19, SD=6.",
+      "answer": "Mean = 19, SD = 6",
+      "explanation": "For Y = 2X - 1, the mean is 2(10) - 1 = 19 and the standard deviation is |2| times 3 = 6.",
       "points": 1
     },
     {
@@ -1674,14 +1712,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"A paired t-test is conducted on:\" is: The differences (after - before) for each pair.",
+      "type": "mc",
+      "question": "A paired t-test is conducted on which values?",
       "options": [
-        "True",
-        "False"
+        "The differences within each matched pair",
+        "Two unrelated sample means only",
+        "The pooled count in each category",
+        "The original population standard deviations"
       ],
-      "answer": "True",
-      "explanation": "True. The differences (after - before) for each pair is correct.",
+      "answer": "The differences within each matched pair",
+      "explanation": "A paired t-test analyzes the within-pair differences, such as after minus before for each subject.",
       "points": 1
     },
     {
@@ -1732,14 +1772,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"In a residual plot for regression, residuals should:\" is: Show a clear upward trend.",
+      "type": "mc",
+      "question": "In a residual plot for regression inference, what pattern supports the linear model conditions?",
       "options": [
-        "True",
-        "False"
+        "A clear upward trend",
+        "Random scatter around zero with no clear pattern",
+        "Residuals all above zero",
+        "A steadily widening curve only"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Be randomly scattered around zero with no pattern.",
+      "answer": "Random scatter around zero with no clear pattern",
+      "explanation": "Residuals should be randomly scattered around zero with no systematic pattern and roughly constant spread.",
       "points": 1
     },
     {

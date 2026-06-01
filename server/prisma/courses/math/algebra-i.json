@@ -197,7 +197,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/math/algebra-basics/alg-basics-algebraic-expressions/alg-basics-exponent-properties/e/exponent_rules",
       "practiceNote": "Khan Academy — Exponent Rules Practice",
-      "assignment": "Classify 5 polynomials by degree and number of terms. Perform 5 additions, 5 subtractions, and 5 multiplications of polynomials.",
+      "assignment": "Classify 5 polynomials by degree and number of terms. Perform 5 additions, 5 subtractions, and 5 multiplications of polynomials. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3.5
     },
     {
@@ -282,14 +282,16 @@
     {
       "examType": "final",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Solve for x: 3x − 7 = 14.\" is: x = 7.",
+      "type": "mc",
+      "question": "What is the solution to 3x − 7 = 14?",
       "options": [
-        "True",
-        "False"
+        "x = 7",
+        "x = −7",
+        "x = 3",
+        "x = 21"
       ],
-      "answer": "True",
-      "explanation": "True. x = 7 is correct.",
+      "answer": "x = 7",
+      "explanation": "Add 7 to both sides to get 3x = 21, then divide by 3 to get x = 7.",
       "points": 1
     },
     {
@@ -335,14 +337,16 @@
     {
       "examType": "final",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following relations is a function\" is: {(1,2),(1,3),(2,4)}.",
+      "type": "mc",
+      "question": "Which relation is a function?",
       "options": [
-        "True",
-        "False"
+        "{(1,2),(1,3),(2,4)}",
+        "{(2,3),(3,3),(4,3)}",
+        "{(5,1),(5,2),(6,3)}",
+        "{(0,4),(0,5),(1,6)}"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: {(2,3),(3,3),(4,3)}.",
+      "answer": "{(2,3),(3,3),(4,3)}",
+      "explanation": "A relation is a function when each input has exactly one output; 2, 3, and 4 each appear once as inputs.",
       "points": 1
     },
     {
@@ -451,14 +455,16 @@
     {
       "examType": "final",
       "order": 16,
-      "type": "tf",
-      "question": "True or False: The answer to \"Factor: x² + 7x + 12.\" is: (x + 2)(x + 6).",
+      "type": "mc",
+      "question": "Which factorization of x² + 7x + 12 is correct?",
       "options": [
-        "True",
-        "False"
+        "(x + 3)(x + 4)",
+        "(x + 2)(x + 6)",
+        "(x − 3)(x − 4)",
+        "(x + 1)(x + 12)"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: (x + 3)(x + 4).",
+      "answer": "(x + 3)(x + 4)",
+      "explanation": "The factors must multiply to 12 and add to 7; 3 and 4 meet both conditions.",
       "points": 1
     },
     {
@@ -509,14 +515,16 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "tf",
-      "question": "True or False: The answer to \"A ball is thrown upward. Its height in feet is h(t) = −16t² + 48t + 4, where t is in seconds. What is the initial height of the ball\" is: 4 feet.",
+      "type": "mc",
+      "question": "For h(t) = −16t² + 48t + 4, what is the initial height of the ball?",
       "options": [
-        "True",
-        "False"
+        "4 feet",
+        "16 feet",
+        "48 feet",
+        "68 feet"
       ],
-      "answer": "True",
-      "explanation": "True. 4 feet is correct.",
+      "answer": "4 feet",
+      "explanation": "The initial height is h(0), so h(0) = 4.",
       "points": 2
     },
     {
@@ -562,14 +570,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which property justifies: 5(x + 2) = 5x + 10\" is: Commutative.",
+      "type": "mc",
+      "question": "Which property justifies 5(x + 2) = 5x + 10?",
       "options": [
-        "True",
-        "False"
+        "Distributive property",
+        "Commutative property",
+        "Associative property",
+        "Identity property"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Distributive.",
+      "answer": "Distributive property",
+      "explanation": "The factor 5 is multiplied by both terms inside the parentheses.",
       "points": 1
     },
     {
@@ -675,14 +685,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"A store sells pens for $2 each and notebooks for $5 each. Maria spends $31. She buys 3 notebooks. How many pens did she buy\" is: 7.",
+      "type": "mc",
+      "question": "A store sells pens for $2 each and notebooks for $5 each. Maria spends $31 and buys 3 notebooks. How many pens did she buy?",
       "options": [
-        "True",
-        "False"
+        "8",
+        "7",
+        "6",
+        "10"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 8.",
+      "answer": "8",
+      "explanation": "Three notebooks cost 3 × $5 = $15; $31 − $15 = $16 remains, and $16 ÷ $2 = 8 pens.",
       "points": 2
     },
     {
@@ -784,10 +796,10 @@
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in the expression 5y + 3, the coefficient of y is:.\"",
+      "question": "Short response: Complete this statement: In the expression 5y + 3, the coefficient of y is...",
       "options": null,
       "answer": "5",
-      "explanation": "The correct answer is: 5.",
+      "explanation": "A correct response identifies \"5\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -849,13 +861,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "True or False: The answer to \"Simplify: 2 + 3 × 4.\" is: 14.",
+      "question": "Simplify 2 + 3 × 4 using order of operations.",
       "options": [
-        "True",
-        "False"
+        "14",
+        "20",
+        "24",
+        "11"
       ],
-      "answer": "True",
-      "explanation": "True. 14 is correct.",
+      "answer": "14",
+      "explanation": "Multiply before adding: 3 × 4 = 12, and 2 + 12 = 14.",
       "points": 1
     },
     {
@@ -903,25 +917,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "True or False: The answer to \"Which property states a + b = b + a\" is: Commutative.",
+      "question": "Which equation shows the commutative property of addition?",
       "options": [
-        "True",
-        "False"
+        "a + b = b + a",
+        "(a + b) + c = a + (b + c)",
+        "a + 0 = a",
+        "a(b + c) = ab + ac"
       ],
-      "answer": "True",
-      "explanation": "True. Commutative is correct.",
+      "answer": "a + b = b + a",
+      "explanation": "The commutative property says changing the order of addends does not change the sum.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "True or False: The answer to \"Simplify using the distributive property: 4(x + 3).\" is: 4x + 3.",
+      "question": "After distributing 4 across x + 3, which expression is equivalent to 4(x + 3)?",
       "options": [
-        "True",
-        "False"
+        "4x + 12",
+        "4x + 3",
+        "x + 12",
+        "4x + 7"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 4x + 12.",
+      "answer": "4x + 12",
+      "explanation": "Distribute 4 to both terms: 4 · x + 4 · 3 = 4x + 12.",
       "points": 1
     },
     {
@@ -983,10 +1001,10 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"solve: x/3 + 1 = 4..\"",
+      "question": "Short response: Define or explain: Solve: x/3 + 1 = 4.",
       "options": null,
       "answer": "x = 9",
-      "explanation": "The correct answer is: x = 9.",
+      "explanation": "A correct response identifies \"x = 9\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1062,13 +1080,15 @@
     {
       "moduleOrder": 5,
       "order": 6,
-      "question": "True or False: The answer to \"Solve: 2(x + 3) = 14.\" is: x = 4.",
+      "question": "Solve 2(x + 3) = 14.",
       "options": [
-        "True",
-        "False"
+        "x = 4",
+        "x = 7",
+        "x = 2",
+        "x = 10"
       ],
-      "answer": "True",
-      "explanation": "True. x = 4 is correct.",
+      "answer": "x = 4",
+      "explanation": "Divide by 2 to get x + 3 = 7, then subtract 3 to get x = 4.",
       "points": 1
     },
     {
@@ -1116,22 +1136,24 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Solve: x + 4 > 9.\" is: x > 5.",
+      "question": "After subtracting 4 from both sides of x + 4 > 9, which inequality remains?",
       "options": [
-        "True",
-        "False"
+        "x > 5",
+        "x < 5",
+        "x > 13",
+        "x ≥ 5"
       ],
-      "answer": "True",
-      "explanation": "True. x > 5 is correct.",
+      "answer": "x > 5",
+      "explanation": "Subtracting 4 from both sides gives x > 5.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"solve: 3x − 2 ≥ 7..\"",
+      "question": "Short response: Define or explain: Solve: 3x − 2 ≥ 7.",
       "options": null,
       "answer": "x ≥ 3",
-      "explanation": "The correct answer is: x ≥ 3.",
+      "explanation": "A correct response identifies \"x ≥ 3\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1179,22 +1201,24 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "True or False: The answer to \"Which of the following is NOT a function\" is: {(1,2),(1,3),(2,4)}.",
+      "question": "Which relation is NOT a function?",
       "options": [
-        "True",
-        "False"
+        "{(1,2),(1,3),(2,4)}",
+        "{(1,2),(2,3),(3,4)}",
+        "{(2,5),(3,5),(4,5)}",
+        "{(−1,0),(0,0),(1,0)}"
       ],
-      "answer": "True",
-      "explanation": "True. {(1,2),(1,3),(2,4)} is correct.",
+      "answer": "{(1,2),(1,3),(2,4)}",
+      "explanation": "Input 1 is paired with two different outputs, so the relation is not a function.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if f(x) = x² + 1, what is the range for x ∈ {−2, 0, 2}.\"",
+      "question": "Short response: Complete this statement: If f(x) = x² + 1, what is the range for x ∈ {−2, 0, 2}...",
       "options": null,
       "answer": "{5, 1, 5}",
-      "explanation": "The correct answer is: {5, 1, 5}.",
+      "explanation": "A correct response identifies \"{5, 1, 5}\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1310,13 +1334,15 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"Find the slope between (1, 3) and (4, 9).\" is: 2.",
+      "question": "What is the slope of the line through (1, 3) and (4, 9)?",
       "options": [
-        "True",
-        "False"
+        "2",
+        "6",
+        "1/2",
+        "−2"
       ],
-      "answer": "True",
-      "explanation": "True. 2 is correct.",
+      "answer": "2",
+      "explanation": "Slope = (9 − 3) ÷ (4 − 1) = 6 ÷ 3 = 2.",
       "points": 1
     },
     {
@@ -1390,10 +1416,10 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a line perpendicular to y = 2x + 1 has slope:.\"",
+      "question": "Short response: Define or explain: A line perpendicular to y = 2x + 1 has slope.",
       "options": null,
       "answer": "−½",
-      "explanation": "The correct answer is: −½.",
+      "explanation": "A correct response identifies \"−½\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1523,13 +1549,15 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "True or False: The answer to \"Simplify: x³ × x⁴.\" is: x⁷.",
+      "question": "Simplify x³ × x⁴.",
       "options": [
-        "True",
-        "False"
+        "x⁷",
+        "x¹²",
+        "x",
+        "2x⁷"
       ],
-      "answer": "True",
-      "explanation": "True. x⁷ is correct.",
+      "answer": "x⁷",
+      "explanation": "When multiplying powers with the same base, add the exponents: 3 + 4 = 7.",
       "points": 1
     },
     {
@@ -1589,10 +1617,10 @@
     {
       "moduleOrder": 13,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"factor completely: 3x² + 6x..\"",
+      "question": "Short response: Define or explain: Factor completely: 3x² + 6x.",
       "options": null,
       "answer": "3x(x + 2)",
-      "explanation": "The correct answer is: 3x(x + 2).",
+      "explanation": "A correct response identifies \"3x(x + 2)\" and connects it to the module context.",
       "points": 1
     },
     {

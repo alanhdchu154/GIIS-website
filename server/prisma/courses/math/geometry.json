@@ -69,7 +69,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/math/geometry/hs-geo-congruence/hs-geo-triangles/e/angles_of_a_triangle",
       "practiceNote": "Khan Academy — Angles of a Triangle Practice",
-      "assignment": "Classify 8 triangles by both sides and angles. For each, find all missing angle measures using the Triangle Sum Theorem. Apply the Exterior Angle Theorem to 5 problems.",
+      "assignment": "Classify 8 triangles by both sides and angles. For each, find all missing angle measures using the Triangle Sum Theorem. Apply the Exterior Angle Theorem to 5 problems. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3
     },
     {
@@ -282,14 +282,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"The angles of a triangle are in the ratio 2:3:5. What is the measure of the largest angle\" is: 90°.",
+      "type": "mc",
+      "question": "The angles of a triangle are in the ratio 2:3:5. What is the measure of the largest angle?",
       "options": [
-        "True",
-        "False"
+        "36°",
+        "54°",
+        "90°",
+        "108°"
       ],
-      "answer": "True",
-      "explanation": "True. 90° is correct.",
+      "answer": "90°",
+      "explanation": "The ratio has 10 total parts, so each part is 18°. The largest angle is 5 parts, or 90°.",
       "points": 1
     },
     {
@@ -335,14 +337,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"In a 45-45-90 triangle, the legs each measure 7 cm. What is the length of the hypotenuse\" is: 7 cm.",
+      "type": "mc",
+      "question": "In a 45-45-90 triangle, the legs each measure 7 cm. What is the length of the hypotenuse?",
       "options": [
-        "True",
-        "False"
+        "7 cm",
+        "7√2 cm",
+        "14 cm",
+        "49 cm"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 7√2 cm.",
+      "answer": "7√2 cm",
+      "explanation": "In a 45-45-90 triangle, the hypotenuse equals a leg times √2, so the hypotenuse is 7√2 cm.",
       "points": 1
     },
     {
@@ -393,14 +397,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"A line segment has endpoints A(2, 3) and B(8, 11). What is the length of AB\" is: 10.",
+      "type": "mc",
+      "question": "A line segment has endpoints A(2, 3) and B(8, 11). What is the length of AB?",
       "options": [
-        "True",
-        "False"
+        "8",
+        "10",
+        "12",
+        "14"
       ],
-      "answer": "True",
-      "explanation": "True. 10 is correct.",
+      "answer": "10",
+      "explanation": "The horizontal change is 6 and the vertical change is 8, so the distance is √(6² + 8²) = 10.",
       "points": 1
     },
     {
@@ -441,14 +447,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following best describes a ray\" is: A set of all points in a plane equidistant from a center.",
+      "type": "mc",
+      "question": "Which description best defines a ray?",
       "options": [
-        "True",
-        "False"
+        "A part of a line with one endpoint that extends infinitely in one direction",
+        "A line segment with two endpoints and fixed length",
+        "A set of all points in a plane equidistant from a center",
+        "A flat surface that extends infinitely in all directions"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: A part of a line with one endpoint extending infinitely in one direction.",
+      "answer": "A part of a line with one endpoint that extends infinitely in one direction",
+      "explanation": "A ray begins at one endpoint and continues without end in one direction.",
       "points": 1
     },
     {
@@ -499,14 +507,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which congruence criterion works only for right triangles\" is: HL.",
+      "type": "mc",
+      "question": "Which triangle congruence criterion applies only to right triangles?",
       "options": [
-        "True",
-        "False"
+        "SSS",
+        "SAS",
+        "ASA",
+        "HL"
       ],
-      "answer": "True",
-      "explanation": "True. HL is correct.",
+      "answer": "HL",
+      "explanation": "The Hypotenuse-Leg criterion is specifically for proving right triangles congruent.",
       "points": 1
     },
     {
@@ -552,14 +562,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"A circle has a radius of 6 cm. What is the length of an arc intercepted by a central angle of 120°\" is: 2π cm.",
+      "type": "mc",
+      "question": "A circle has a radius of 6 cm. What is the length of an arc intercepted by a central angle of 120°?",
       "options": [
-        "True",
-        "False"
+        "2π cm",
+        "4π cm",
+        "6π cm",
+        "12π cm"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 4π cm.",
+      "answer": "4π cm",
+      "explanation": "The arc is 120/360 of the circumference. One third of 2π(6) is 4π cm.",
       "points": 1
     },
     {
@@ -665,14 +677,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"A sphere has a radius of 3 cm. What is its volume\" is: 12π cm³.",
+      "type": "mc",
+      "question": "A sphere has a radius of 3 cm. What is its volume?",
       "options": [
-        "True",
-        "False"
+        "12π cm³",
+        "18π cm³",
+        "27π cm³",
+        "36π cm³"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 36π cm³.",
+      "answer": "36π cm³",
+      "explanation": "The volume of a sphere is (4/3)πr³. With r = 3, the volume is (4/3)π(27) = 36π cm³.",
       "points": 1
     },
     {
@@ -710,7 +724,7 @@
     {
       "moduleOrder": 1,
       "order": 1,
-      "question": "Which undefined term has no size, shape, or dimension and is represented by a dot?",
+      "question": "Which undefined geometry term names an exact location represented by a dot?",
       "options": [
         "Line",
         "Plane",
@@ -752,19 +766,21 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "True or False: The answer to \"Which undefined term has no size, shape, or dimension and is represented by a dot\" is: Point.",
+      "question": "Which undefined term has no size, shape, or dimension and is represented by a dot?",
       "options": [
-        "True",
-        "False"
+        "Point",
+        "Line",
+        "Plane",
+        "Ray"
       ],
-      "answer": "True",
-      "explanation": "True. Point is correct.",
+      "answer": "Point",
+      "explanation": "A point identifies an exact location and has no size, shape, or dimension.",
       "points": 1
     },
     {
       "moduleOrder": 2,
       "order": 1,
-      "question": "Two angles whose measures sum to 90° are called:",
+      "question": "What term describes two angles whose measures add to 90°?",
       "options": [
         "Supplementary",
         "Vertical",
@@ -820,19 +836,21 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "True or False: The answer to \"Two angles whose measures sum to 90° are called:\" is: Complementary.",
+      "question": "Two angles whose measures sum to 90° are called:",
       "options": [
-        "True",
-        "False"
+        "Complementary angles",
+        "Supplementary angles",
+        "Vertical angles",
+        "Corresponding angles"
       ],
-      "answer": "True",
-      "explanation": "True. Complementary is correct.",
+      "answer": "Complementary angles",
+      "explanation": "Complementary angles have measures that add to 90°.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 1,
-      "question": "When parallel lines are cut by a transversal, corresponding angles are:",
+      "question": "For parallel lines cut by a transversal, what relationship do corresponding angles have?",
       "options": [
         "Supplementary",
         "Complementary",
@@ -874,25 +892,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "True or False: The answer to \"When parallel lines are cut by a transversal, corresponding angles are:\" is: Congruent.",
+      "question": "When parallel lines are cut by a transversal, corresponding angles are:",
       "options": [
-        "True",
-        "False"
+        "Congruent",
+        "Supplementary",
+        "Always right angles",
+        "Always adjacent"
       ],
-      "answer": "True",
-      "explanation": "True. Congruent is correct.",
+      "answer": "Congruent",
+      "explanation": "Corresponding angles formed by a transversal crossing parallel lines have equal measures.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "True or False: The answer to \"Alternate exterior angles are located:\" is: On the same side of the transversal, between the parallel lines.",
+      "question": "Where are alternate exterior angles located when two lines are cut by a transversal?",
       "options": [
-        "True",
-        "False"
+        "On opposite sides of the transversal, outside the two lines",
+        "On the same side of the transversal, between the two lines",
+        "On opposite sides of the transversal, between the two lines",
+        "At the same intersection only"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: On opposite sides of the transversal, outside the parallel lines.",
+      "answer": "On opposite sides of the transversal, outside the two lines",
+      "explanation": "Alternate exterior angles lie outside the two lines and on opposite sides of the transversal.",
       "points": 1
     },
     {
@@ -954,10 +976,10 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a triangle with one angle greater than 90° is classified as:.\"",
+      "question": "Short response: Complete this statement: A triangle with one angle greater than 90° is classified as...",
       "options": null,
       "answer": "Obtuse",
-      "explanation": "The correct answer is: Obtuse.",
+      "explanation": "A correct response identifies \"Obtuse\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1033,13 +1055,15 @@
     {
       "moduleOrder": 5,
       "order": 6,
-      "question": "True or False: The answer to \"The SSS congruence postulate requires:\" is: All three sides to be congruent.",
+      "question": "What must be true to use the SSS congruence postulate?",
       "options": [
-        "True",
-        "False"
+        "All three pairs of corresponding sides are congruent",
+        "Two sides and the included angle are congruent",
+        "Two angles and the included side are congruent",
+        "Only the hypotenuse and one leg are congruent"
       ],
-      "answer": "True",
-      "explanation": "True. All three sides to be congruent is correct.",
+      "answer": "All three pairs of corresponding sides are congruent",
+      "explanation": "SSS proves triangle congruence when all three pairs of corresponding sides match.",
       "points": 1
     },
     {
@@ -1087,37 +1111,39 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"The AA similarity criterion states two triangles are similar if:\" is: Two angles of one equal two angles of the other.",
+      "question": "The AA similarity criterion states that two triangles are similar if:",
       "options": [
-        "True",
-        "False"
+        "Two angles of one triangle are congruent to two angles of the other triangle",
+        "All three sides of the two triangles are equal in length",
+        "The triangles have the same perimeter",
+        "One side and one angle are congruent"
       ],
-      "answer": "True",
-      "explanation": "True. Two angles of one equal two angles of the other is correct.",
+      "answer": "Two angles of one triangle are congruent to two angles of the other triangle",
+      "explanation": "If two pairs of angles match, the third pair must also match, so the triangles are similar.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if two triangles are similar with a scale factor of 1:4, how do their areas compare.\"",
+      "question": "Short response: Complete this statement: If two triangles are similar with a scale factor of 1:4, how do their areas compare...",
       "options": null,
       "answer": "1:16",
-      "explanation": "The correct answer is: 1:16.",
+      "explanation": "A correct response identifies \"1:16\" and connects it to the module context.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 6,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a tree casts a 15 m shadow. nearby, a 2 m post casts a 3 m shadow. how tall is the tree.\"",
+      "question": "Short response: Complete this statement: A tree casts a 15 m shadow. nearby, a 2 m post casts a 3 m shadow. how tall is the tree...",
       "options": null,
       "answer": "10 m",
-      "explanation": "The correct answer is: 10 m.",
+      "explanation": "A correct response identifies \"10 m\" and connects it to the module context.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 1,
-      "question": "In a right triangle with legs a = 6 and b = 8, what is the hypotenuse?",
+      "question": "Using the Pythagorean Theorem, what is the hypotenuse when the legs are 6 and 8?",
       "options": [
         "12",
         "10",
@@ -1159,22 +1185,24 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "True or False: The answer to \"In a right triangle with legs a = 6 and b = 8, what is the hypotenuse\" is: 10.",
+      "question": "In a right triangle with legs a = 6 and b = 8, what is the hypotenuse?",
       "options": [
-        "True",
-        "False"
+        "10",
+        "12",
+        "14",
+        "48"
       ],
-      "answer": "True",
-      "explanation": "True. 10 is correct.",
+      "answer": "10",
+      "explanation": "By the Pythagorean Theorem, c = √(6² + 8²) = √100 = 10.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in a 30-60-90 triangle, the longer leg is 6√3. what is the shorter leg.\"",
+      "question": "Short response: Complete this statement: In a 30-60-90 triangle, the longer leg is 6√3. what is the shorter leg...",
       "options": null,
       "answer": "6",
-      "explanation": "The correct answer is: 6.",
+      "explanation": "A correct response identifies \"6\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1236,13 +1264,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "True or False: The answer to \"The sum of interior angles of a quadrilateral is:\" is: 360°.",
+      "question": "What is the sum of the interior angles of a quadrilateral?",
       "options": [
-        "True",
-        "False"
+        "180°",
+        "270°",
+        "360°",
+        "540°"
       ],
-      "answer": "True",
-      "explanation": "True. 360° is correct.",
+      "answer": "360°",
+      "explanation": "A quadrilateral can be divided into two triangles, so its interior angles sum to 2 × 180° = 360°.",
       "points": 1
     },
     {
@@ -1290,25 +1320,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"The distance from the center of a circle to any point on the circle is called the:\" is: Radius.",
+      "question": "What is the distance from the center of a circle to any point on the circle called?",
       "options": [
-        "True",
-        "False"
+        "Radius",
+        "Diameter",
+        "Chord",
+        "Secant"
       ],
-      "answer": "True",
-      "explanation": "True. Radius is correct.",
+      "answer": "Radius",
+      "explanation": "A radius is a segment from the center of a circle to a point on the circle.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "True or False: The answer to \"A central angle of 90° in a circle with radius 5 cm subtends an arc. What fraction of the circle's circumference is this arc\" is: 1/2.",
+      "question": "A central angle of 90° subtends an arc of what fraction of the circle's circumference?",
       "options": [
-        "True",
-        "False"
+        "1/8",
+        "1/4",
+        "1/2",
+        "3/4"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 1/4.",
+      "answer": "1/4",
+      "explanation": "A 90° central angle is 90/360 of the circle, which simplifies to 1/4.",
       "points": 1
     },
     {
@@ -1370,19 +1404,19 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which formula gives the area of a regular polygon with perimeter p and apothem a.\"",
+      "question": "Short response: Which formula gives the area of a regular polygon with perimeter p and apothem a?",
       "options": null,
       "answer": "A = ½Pa",
-      "explanation": "The correct answer is: A = ½Pa.",
+      "explanation": "A correct response identifies \"A = ½Pa\" and connects it to the module context.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 6,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a composite figure consists of a rectangle (5 × 4) with a semicircle (radius 2) on top. what is the area of the composite figure.\"",
+      "question": "Short response: Complete this statement: A composite figure consists of a rectangle (5 × 4) with a semicircle (radius 2) on top. what is the area of the composite figure...",
       "options": null,
       "answer": "20 + 2π",
-      "explanation": "The correct answer is: 20 + 2π.",
+      "explanation": "A correct response identifies \"20 + 2π\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1524,10 +1558,10 @@
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"two points on a circle are a(0, 0) and b(6, 0). what is the length of chord ab.\"",
+      "question": "Short response: Define or explain: Two points on a circle are a(0, 0) and b(6, 0). what is the length of chord ab.",
       "options": null,
       "answer": "6",
-      "explanation": "The correct answer is: 6.",
+      "explanation": "A correct response identifies \"6\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1584,22 +1618,24 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "True or False: The answer to \"A translation moves a point (3, −2) by the vector ⟨−4, 5⟩. Where does the point land\" is: (−1, 3).",
+      "question": "A translation moves the point (3, −2) by the vector ⟨−4, 5⟩. Where does the point land?",
       "options": [
-        "True",
-        "False"
+        "(−1, 3)",
+        "(7, 3)",
+        "(−1, −7)",
+        "(3, 5)"
       ],
-      "answer": "True",
-      "explanation": "True. (−1, 3) is correct.",
+      "answer": "(−1, 3)",
+      "explanation": "Add the vector components to the point: 3 + (−4) = −1 and −2 + 5 = 3.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which transformation preserves both size and shape (is an isometry).\"",
+      "question": "Short response: Which transformation preserves both size and shape (is an isometry)?",
       "options": null,
       "answer": "Rotation",
-      "explanation": "The correct answer is: Rotation.",
+      "explanation": "A correct response identifies \"Rotation\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1661,13 +1697,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "True or False: The answer to \"The hypothesis of the conditional statement 'If a shape is a square, then it has four equal sides' is:\" is: A shape is a square.",
+      "question": "What is the hypothesis of the conditional statement \"If a shape is a square, then it has four equal sides\"?",
       "options": [
-        "True",
-        "False"
+        "A shape is a square",
+        "It has four equal sides",
+        "A shape has four sides",
+        "A square has equal angles"
       ],
-      "answer": "True",
-      "explanation": "True. A shape is a square is correct.",
+      "answer": "A shape is a square",
+      "explanation": "The hypothesis is the \"if\" part of a conditional statement.",
       "points": 1
     }
   ],

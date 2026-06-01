@@ -117,7 +117,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiom/balancing-chemical-equations/e/balancing-chemical-equations-1",
       "practiceNote": "Khan Academy — Balancing Chemical Equations practice",
-      "assignment": "Balance the following equations and classify each reaction type: (1) H₂ + O₂ → H₂O, (2) CaCO₃ → CaO + CO₂, (3) Fe + CuSO₄ → FeSO₄ + Cu, (4) NaOH + HCl → NaCl + H₂O, (5) CH₄ + O₂ → CO₂ + H₂O.",
+      "assignment": "Balance the following equations and classify each reaction type: (1) H₂ + O₂ → H₂O, (2) CaCO₃ → CaO + CO₂, (3) Fe + CuSO₄ → FeSO₄ + Cu, (4) NaOH + HCl → NaCl + H₂O, (5) CH₄ + O₂ → CO₂ + H₂O. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3.5
     },
     {
@@ -149,7 +149,7 @@
       "video2Note": "Crash Course Chemistry #16 — Ideal Gas Laws",
       "practiceUrl": "https://www.khanacademy.org/science/chemistry/gases-and-kinetic-molecular-theory/ideal-gas-laws/e/ideal-gas-equation",
       "practiceNote": "Khan Academy — Ideal Gas Equation practice",
-      "assignment": "A gas occupies 3.0 L at 100 kPa. (a) Using Boyle's Law, find the new pressure if volume is compressed to 1.5 L. (b) Using Charles's Law, find the new volume at 600 K if originally at 300 K and 2.0 L. (c) Use the ideal gas law to find moles of gas at STP if volume is 22.4 L.",
+      "assignment": "A gas occupies 3.0 L at 100 kPa. (a) Using Boyle's Law, find the new pressure if volume is compressed to 1.5 L. (b) Using Charles's Law, find the new volume at 600 K if originally at 300 K and 2.0 L. (c) Use the ideal gas law to find moles of gas at STP if volume is 22.4 L. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
       "estimatedHrs": 3.5
     },
     {
@@ -282,14 +282,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"How many valence electrons does a sulfur (Group 16) atom have\" is: 6.",
+      "type": "mc",
+      "question": "How many valence electrons does a neutral sulfur atom in Group 16 have?",
       "options": [
-        "True",
-        "False"
+        "2",
+        "4",
+        "6",
+        "16"
       ],
-      "answer": "True",
-      "explanation": "True. 6 is correct.",
+      "answer": "6",
+      "explanation": "Sulfur is a main-group element in Group 16, so it has 6 valence electrons.",
       "points": 1
     },
     {
@@ -393,14 +395,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"The SI unit of temperature used in gas law calculations is:\" is: Kelvin.",
+      "type": "mc",
+      "question": "Which temperature unit should be used in gas law calculations such as PV = nRT?",
       "options": [
-        "True",
-        "False"
+        "Celsius",
+        "Fahrenheit",
+        "Kelvin",
+        "Percent"
       ],
-      "answer": "True",
-      "explanation": "True. Kelvin is correct.",
+      "answer": "Kelvin",
+      "explanation": "Gas law equations use absolute temperature, measured in Kelvin.",
       "points": 1
     },
     {
@@ -436,14 +440,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"According to Boyle's Law, if the pressure of a gas doubles at constant temperature, the volume:\" is: Doubles.",
+      "type": "mc",
+      "question": "At constant temperature, what happens to a gas sample's volume if its pressure doubles?",
       "options": [
-        "True",
-        "False"
+        "It doubles",
+        "It halves",
+        "It stays the same",
+        "It becomes four times larger"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Halves.",
+      "answer": "It halves",
+      "explanation": "Boyle's Law shows pressure and volume are inversely proportional at constant temperature.",
       "points": 1
     },
     {
@@ -494,14 +500,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"An endothermic reaction:\" is: Absorbs heat from the surroundings.",
+      "type": "mc",
+      "question": "What happens to heat energy during an endothermic reaction?",
       "options": [
-        "True",
-        "False"
+        "Heat is absorbed from the surroundings",
+        "Heat is released to the surroundings",
+        "No energy is exchanged",
+        "Heat is converted entirely into mass"
       ],
-      "answer": "True",
-      "explanation": "True. Absorbs heat from the surroundings is correct.",
+      "answer": "Heat is absorbed from the surroundings",
+      "explanation": "Endothermic reactions absorb heat from their surroundings.",
       "points": 1
     },
     {
@@ -552,14 +560,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"Alpha (α) particles consist of:\" is: One electron.",
+      "type": "mc",
+      "question": "What particles make up an alpha (α) particle?",
       "options": [
-        "True",
-        "False"
+        "One electron",
+        "One proton and one electron",
+        "Two protons and two neutrons",
+        "Two neutrons and one electron"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Two protons and two neutrons.",
+      "answer": "Two protons and two neutrons",
+      "explanation": "An alpha particle is the same as a helium nucleus: two protons and two neutrons.",
       "points": 1
     },
     {
@@ -610,14 +620,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Colligative properties depend on:\" is: The number of solute particles in solution.",
+      "type": "mc",
+      "question": "Colligative properties depend primarily on which feature of a solution?",
       "options": [
-        "True",
-        "False"
+        "The identity of the solvent only",
+        "The number of solute particles present",
+        "The color of the solute",
+        "The shape of the container"
       ],
-      "answer": "True",
-      "explanation": "True. The number of solute particles in solution is correct.",
+      "answer": "The number of solute particles present",
+      "explanation": "Colligative properties depend on how many solute particles are dissolved, not mainly on their identity.",
       "points": 1
     },
     {
@@ -668,14 +680,11 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Explain the concept of dynamic equilibrium. Use the reaction H₂ + I₂ ⇌ 2HI as an example and describe what happens at the molecular level when equilibrium is reached.\" is: At dynamic equilibrium, the forward and reverse reactions occur at equal rates so there is no net change in concentrations. For H₂ + I₂ ⇌ 2HI, HI molecules are forming and decomposing at the same rate; the system appears static but reactions continue at the molecular level..",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: At dynamic equilibrium, the forward and reverse reactions occur at equal rates so there is no net change in concentrations. For H₂ + I₂ ⇌ 2HI, HI molecules are forming and decomposing at the same rate; the system appears static but reactions continue at the molecular level..",
+      "type": "sa",
+      "question": "Explain dynamic equilibrium using H₂ + I₂ ⇌ 2HI. What is happening at the molecular level when equilibrium is reached?",
+      "options": null,
+      "answer": "At dynamic equilibrium, the forward and reverse reactions occur at equal rates, so concentrations show no net change. In H₂ + I₂ ⇌ 2HI, HI forms and decomposes at the same rate while molecular collisions and reactions continue.",
+      "explanation": "A complete response states that the forward and reverse rates are equal, concentrations have no net change, and reactions continue at the molecular level.",
       "points": 2
     },
     {
@@ -760,22 +769,24 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "True or False: The answer to \"Which state of matter has a definite volume but no definite shape\" is: Liquid.",
+      "question": "Which state of matter keeps a fixed volume but takes the shape of its container?",
       "options": [
-        "True",
-        "False"
+        "Solid",
+        "Liquid",
+        "Gas",
+        "Plasma"
       ],
-      "answer": "True",
-      "explanation": "True. Liquid is correct.",
+      "answer": "Liquid",
+      "explanation": "A liquid has a definite volume but no definite shape, so it takes the shape of its container.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"how many significant figures are in the measurement 4.050 g.\"",
+      "question": "Short response: How many significant figures are in the measurement 4.050 g?",
       "options": null,
       "answer": "4",
-      "explanation": "The correct answer is: 4.",
+      "explanation": "A correct response identifies \"4\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -837,13 +848,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "True or False: The answer to \"The particle in an atom with no electrical charge is the:\" is: Neutron.",
+      "question": "Which subatomic particle has no electrical charge?",
       "options": [
-        "True",
-        "False"
+        "Proton",
+        "Electron",
+        "Neutron",
+        "Ion"
       ],
-      "answer": "True",
-      "explanation": "True. Neutron is correct.",
+      "answer": "Neutron",
+      "explanation": "Neutrons are electrically neutral; protons are positive and electrons are negative.",
       "points": 1
     },
     {
@@ -891,25 +904,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "True or False: The answer to \"The Aufbau principle states that electrons fill orbitals:\" is: Starting from the lowest available energy level.",
+      "question": "According to the Aufbau principle, how do electrons occupy atomic orbitals?",
       "options": [
-        "True",
-        "False"
+        "They fill the highest-energy orbitals first",
+        "They fill the lowest available energy orbitals first",
+        "They avoid all paired orbitals",
+        "They enter orbitals in alphabetical order"
       ],
-      "answer": "True",
-      "explanation": "True. Starting from the lowest available energy level is correct.",
+      "answer": "They fill the lowest available energy orbitals first",
+      "explanation": "The Aufbau principle states that electrons occupy the lowest available energy orbitals before higher-energy orbitals.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "True or False: The answer to \"How many electrons can a 2p subshell hold\" is: 2.",
+      "question": "What is the maximum number of electrons that can occupy the 2p subshell?",
       "options": [
-        "True",
-        "False"
+        "2",
+        "4",
+        "6",
+        "8"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 6.",
+      "answer": "6",
+      "explanation": "A p subshell has three orbitals, and each orbital can hold two electrons, for a total of 6.",
       "points": 1
     },
     {
@@ -971,13 +988,15 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "True or False: The answer to \"Elements in the same group of the periodic table have the same number of:\" is: Valence electrons.",
+      "question": "For main-group elements, elements in the same periodic table group usually share which feature?",
       "options": [
-        "True",
-        "False"
+        "The same number of valence electrons",
+        "The same atomic mass",
+        "The same number of neutrons",
+        "The same number of occupied energy levels"
       ],
-      "answer": "True",
-      "explanation": "True. Valence electrons is correct.",
+      "answer": "The same number of valence electrons",
+      "explanation": "Main-group elements in the same group have the same number of valence electrons, which helps explain similar chemical behavior.",
       "points": 1
     },
     {
@@ -1025,22 +1044,24 @@
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"In an ionic bond, electrons are:\" is: Transferred from metal to nonmetal.",
+      "question": "What electron behavior best describes formation of an ionic bond?",
       "options": [
-        "True",
-        "False"
+        "Electrons are shared equally between two nonmetals",
+        "Electrons are transferred from a metal to a nonmetal",
+        "Electrons disappear from both atoms",
+        "Electrons are shared in a metallic lattice only"
       ],
-      "answer": "True",
-      "explanation": "True. Transferred from metal to nonmetal is correct.",
+      "answer": "Electrons are transferred from a metal to a nonmetal",
+      "explanation": "Ionic bonds form when electrons transfer, commonly from a metal atom to a nonmetal atom.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"the shape of a molecule with 4 bonding pairs and 0 lone pairs around the central atom is:.\"",
+      "question": "Short response: Complete this statement: The shape of a molecule with 4 bonding pairs and 0 lone pairs around the central atom is...",
       "options": null,
       "answer": "Tetrahedral",
-      "explanation": "The correct answer is: Tetrahedral.",
+      "explanation": "A correct response identifies \"Tetrahedral\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1158,13 +1179,15 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "True or False: The answer to \"A synthesis reaction has the general form:\" is: A + B → AB.",
+      "question": "Which general equation represents a synthesis reaction?",
       "options": [
-        "True",
-        "False"
+        "A + B → AB",
+        "AB → A + B",
+        "AB + C → AC + B",
+        "AB + CD → AD + CB"
       ],
-      "answer": "True",
-      "explanation": "True. A + B → AB is correct.",
+      "answer": "A + B → AB",
+      "explanation": "A synthesis reaction combines simpler substances to form one product.",
       "points": 1
     },
     {
@@ -1226,13 +1249,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "True or False: The answer to \"One mole of carbon-12 has a mass of:\" is: 12 g.",
+      "question": "What mass does one mole of carbon-12 atoms have?",
       "options": [
-        "True",
-        "False"
+        "6 g",
+        "12 g",
+        "18 g",
+        "24 g"
       ],
-      "answer": "True",
-      "explanation": "True. 12 g is correct.",
+      "answer": "12 g",
+      "explanation": "By definition, one mole of carbon-12 atoms has a mass of 12 grams.",
       "points": 1
     },
     {
@@ -1280,25 +1305,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"According to kinetic molecular theory, gas particles:\" is: Are in constant, random motion.",
+      "question": "According to kinetic molecular theory, how do gas particles move?",
       "options": [
-        "True",
-        "False"
+        "They remain fixed in a lattice",
+        "They move in constant, random motion",
+        "They move only when heated above boiling",
+        "They attract each other strongly at all times"
       ],
-      "answer": "True",
-      "explanation": "True. Are in constant, random motion is correct.",
+      "answer": "They move in constant, random motion",
+      "explanation": "Kinetic molecular theory describes gas particles as being in continuous, random motion.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "True or False: The answer to \"Boyle's Law states that at constant temperature, pressure and volume are:\" is: Directly proportional.",
+      "question": "At constant temperature, what relationship does Boyle's Law describe between pressure and volume?",
       "options": [
-        "True",
-        "False"
+        "Directly proportional",
+        "Inversely proportional",
+        "Equal at all times",
+        "Unrelated unless moles change"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Inversely proportional.",
+      "answer": "Inversely proportional",
+      "explanation": "Boyle's Law states that pressure and volume are inversely proportional when temperature and amount of gas are constant.",
       "points": 1
     },
     {
@@ -1360,13 +1389,15 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "True or False: The answer to \"Solubility of most solid solutes in water increases with:\" is: Increasing temperature.",
+      "question": "For most solid solutes dissolved in water, what happens to solubility as temperature increases?",
       "options": [
-        "True",
-        "False"
+        "Solubility usually increases",
+        "Solubility usually decreases",
+        "Solubility becomes zero",
+        "Solubility is never affected"
       ],
-      "answer": "True",
-      "explanation": "True. Increasing temperature is correct.",
+      "answer": "Solubility usually increases",
+      "explanation": "Most solid solutes become more soluble in water as temperature increases.",
       "points": 1
     },
     {
@@ -1414,22 +1445,24 @@
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "True or False: The answer to \"According to the Arrhenius definition, a base is a substance that produces ______ ions in water.\" is: OH⁻.",
+      "question": "According to the Arrhenius definition, which ion does a base produce in water?",
       "options": [
-        "True",
-        "False"
+        "H⁺",
+        "OH⁻",
+        "Na⁺",
+        "Cl⁻"
       ],
-      "answer": "True",
-      "explanation": "True. OH⁻ is correct.",
+      "answer": "OH⁻",
+      "explanation": "An Arrhenius base produces hydroxide ions, OH⁻, in aqueous solution.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if [h⁺] = 1 × 10⁻⁴ m, the ph is:.\"",
+      "question": "Short response: Complete this statement: If [h⁺] = 1 × 10⁻⁴ m, the ph is...",
       "options": null,
       "answer": "4",
-      "explanation": "The correct answer is: 4.",
+      "explanation": "A correct response identifies \"4\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1547,22 +1580,24 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "True or False: The answer to \"Increasing temperature generally increases the reaction rate because:\" is: It gives more particles enough energy to overcome the activation energy barrier.",
+      "question": "Why does increasing temperature usually increase the rate of a chemical reaction?",
       "options": [
-        "True",
-        "False"
+        "It gives more particles enough energy to overcome the activation energy barrier",
+        "It removes all collisions between particles",
+        "It lowers the concentration of every reactant to zero",
+        "It makes the equilibrium constant equal to one for every reaction"
       ],
-      "answer": "True",
-      "explanation": "True. It gives more particles enough energy to overcome the activation energy barrier is correct.",
+      "answer": "It gives more particles enough energy to overcome the activation energy barrier",
+      "explanation": "Higher temperature increases particle kinetic energy, so more collisions have enough energy to overcome activation energy.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"if kc >> 1, the equilibrium strongly favors:.\"",
+      "question": "Short response: Define or explain: If kc >> 1, the equilibrium strongly favors.",
       "options": null,
       "answer": "Products",
-      "explanation": "The correct answer is: Products.",
+      "explanation": "A correct response identifies \"Products\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1624,13 +1659,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "True or False: The answer to \"Beta (β) decay occurs when:\" is: A neutron converts to a proton and emits an electron.",
+      "question": "What happens during beta (β⁻) decay?",
       "options": [
-        "True",
-        "False"
+        "A neutron converts to a proton and emits an electron",
+        "A proton and neutron combine to form an alpha particle",
+        "A nucleus emits only visible light",
+        "Two electrons combine to form a neutron"
       ],
-      "answer": "True",
-      "explanation": "True. A neutron converts to a proton and emits an electron is correct.",
+      "answer": "A neutron converts to a proton and emits an electron",
+      "explanation": "In beta-minus decay, a neutron changes into a proton and an electron is emitted.",
       "points": 1
     }
   ],

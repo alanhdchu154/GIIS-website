@@ -15,8 +15,8 @@
       "objectives": "Identify hardware and software components; understand operating systems; manage files and folders; navigate the internet safely.",
       "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
       "readingNote": "Google Digital Garage — Digital Skills for Work: Module 1 (The Online World)",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet",
+      "videoNote": "Khan Academy — Computers and Internet lessons for this topic: Digital Literacy Foundations.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/computing/computer-science",
@@ -31,8 +31,8 @@
       "objectives": "Write professional emails using correct tone, structure, and etiquette; use CC, BCC, and Reply-All appropriately; understand professional messaging norms.",
       "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
       "readingNote": "Google Digital Garage — Digital Skills for Work: Email & Communication module",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet",
+      "videoNote": "Khan Academy — Computers and Internet lessons for this topic: Professional Email & Communication.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/computing/computers-and-internet",
@@ -47,12 +47,12 @@
       "objectives": "Use Google Docs or Microsoft Word to create, format, and style documents; apply headings, margins, spacing, and templates; produce a professional report.",
       "readingUrl": "https://learndigital.withgoogle.com/digitalgarage/course/digital-skills-for-work",
       "readingNote": "Google Digital Garage — Digital Skills for Work: Creating Documents",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://www.khanacademy.org/computing/computers-and-internet",
+      "videoNote": "Khan Academy — Computers and Internet lessons for this topic: Word Processing & Document Design.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "",
-      "practiceNote": "Removed after 2026-05-30 access audit: docs.google.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
+      "practiceUrl": "https://www.khanacademy.org/computing/computers-and-internet",
+      "practiceNote": "Khan Academy — Computers and Internet practice and review: Word Processing & Document Design.",
       "assignment": "Create a 2-page report on a technology topic of your choice. Apply: title, at least 3 heading levels, body text, bullet lists, a table, and page numbers. Use a consistent font and style throughout.",
       "estimatedHrs": 3
     },
@@ -99,8 +99,8 @@
       "videoNote": "GCFGlobal — PowerPoint 2016: Getting Started",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "",
-      "practiceNote": "Removed after 2026-05-30 access audit: slides.google.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
+      "practiceUrl": "https://www.khanacademy.org/computing/computers-and-internet",
+      "practiceNote": "Khan Academy — Computers and Internet practice and review: Presentations & Slide Design.",
       "assignment": "Create a 10-slide presentation on a business idea of your choice. Apply: title slide, agenda, 6 content slides, and a closing slide. Use consistent fonts, a color palette of 3 colors, and include at least 2 data visualizations.",
       "estimatedHrs": 3
     },
@@ -115,8 +115,8 @@
       "videoNote": "GCFGlobal — Google Drive: Getting Started",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "",
-      "practiceNote": "Removed after 2026-05-30 access audit: drive.google.com may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
+      "practiceUrl": "https://www.khanacademy.org/computing/computers-and-internet",
+      "practiceNote": "Khan Academy — Computers and Internet practice and review: Cloud Computing & Collaboration.",
       "assignment": "Set up a shared Google Drive folder simulating a team project. Create a shared Doc, Sheet, and Slides file. Practice using comments, suggestions mode, and version history. Write a one-page reflection on the benefits and challenges of cloud collaboration.",
       "estimatedHrs": 2.5
     },
@@ -186,14 +186,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which Google Docs feature allows you to see and restore a previous version of a document\" is: Version History.",
+      "type": "mc",
+      "question": "Choose the best answer: Which Google Docs feature allows you to see and restore a previous version of a document?",
       "options": [
-        "True",
-        "False"
+        "Version History",
+        "See who made changes and restore earlier versions of the document",
+        "Multiple users can edit the same document simultaneously and see each other's changes live",
+        "Delete all previous versions of a document"
       ],
-      "answer": "True",
-      "explanation": "True. Version History is correct.",
+      "answer": "Version History",
+      "explanation": "The best answer is Version History. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -239,14 +241,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following best describes cloud storage\" is: Files stored on a USB drive.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following best describes cloud storage?",
       "options": [
-        "True",
-        "False"
+        "Files stored on remote servers and accessed through the internet",
+        "Files stored on a USB drive",
+        "Files can be accessed and edited from any device with internet access",
+        "Cloud storage does not require an internet connection"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Files stored on remote servers accessible via the internet.",
+      "answer": "Files stored on remote servers and accessed through the internet",
+      "explanation": "The best answer is Files stored on remote servers and accessed through the internet. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -345,14 +349,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which component is the 'brain' of a computer that processes instructions\" is: RAM.",
+      "type": "mc",
+      "question": "Choose the best answer: Which component is the 'brain' of a computer that processes instructions?",
       "options": [
-        "True",
-        "False"
+        "CPU",
+        "RAM",
+        "Counts the number of cells in A1:A10 that contain numbers",
+        "A cell reference that stays fixed regardless of where the formula is copied"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: CPU.",
+      "answer": "CPU",
+      "explanation": "The best answer is CPU. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -403,14 +409,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"VLOOKUP in a spreadsheet is primarily used to:\" is: Look up a value in a column and return a related value from the same row.",
+      "type": "mc",
+      "question": "Choose the best answer: VLOOKUP in a spreadsheet is primarily used to:",
       "options": [
-        "True",
-        "False"
+        "Look up a value in a column and return a related value from the same row",
+        "To show the references and sources used",
+        "Multiple users can edit the same document simultaneously and see each other's changes live",
+        "Row B, Column 3"
       ],
-      "answer": "True",
-      "explanation": "True. Look up a value in a column and return a related value from the same row is correct.",
+      "answer": "Look up a value in a column and return a related value from the same row",
+      "explanation": "The best answer is Look up a value in a column and return a related value from the same row. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -456,14 +464,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"The SIFT method for evaluating online information stands for:\" is: Search, Identify, Find, Test.",
+      "type": "mc",
+      "question": "Choose the best answer: The SIFT method for evaluating online information stands for:",
       "options": [
-        "True",
-        "False"
+        "Stop, Investigate the source, Find better coverage, and Trace claims to the original source",
+        "Search, Identify, Find, Test",
+        "Edit and delete the file",
+        "To display the data and conclusions"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Stop, Investigate the source, Find better coverage, Trace claims.",
+      "answer": "Stop, Investigate the source, Find better coverage, and Trace claims to the original source",
+      "explanation": "The best answer is Stop, Investigate the source, Find better coverage, and Trace claims to the original source. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -514,14 +524,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"In project management, a Kanban board organizes tasks into columns such as:\" is: To Do, In Progress, Done.",
+      "type": "mc",
+      "question": "Choose the best answer: In project management, a Kanban board organizes tasks into columns such as:",
       "options": [
-        "True",
-        "False"
+        "To Do, In Progress, Done",
+        "Merge multiple sheets into one",
+        "Meeting Request — Project Kickoff — April 30",
+        "Hi"
       ],
-      "answer": "True",
-      "explanation": "True. To Do, In Progress, Done is correct.",
+      "answer": "To Do, In Progress, Done",
+      "explanation": "The best answer is To Do, In Progress, Done. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -572,14 +584,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"A pivot table in a spreadsheet is used to:\" is: Automatically delete duplicate rows.",
+      "type": "mc",
+      "question": "Choose the best answer: A pivot table in a spreadsheet is used to:",
       "options": [
-        "True",
-        "False"
+        "Summarize and analyze data by categories or fields",
+        "Automatically delete duplicate rows",
+        "To display the data and conclusions",
+        "To show the references and sources used"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Summarize, group, and analyze large datasets interactively.",
+      "answer": "Summarize and analyze data by categories or fields",
+      "explanation": "The best answer is Summarize and analyze data by categories or fields. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -650,22 +664,24 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Which of the following is an example of software\" is: Google Chrome browser.",
+      "question": "Choose the best answer: Which of the following is an example of software?",
       "options": [
-        "True",
-        "False"
+        "Printer",
+        "RAM chip",
+        "Google Chrome browser",
+        "Computer monitor"
       ],
-      "answer": "True",
-      "explanation": "True. Google Chrome browser is correct.",
+      "answer": "Google Chrome browser",
+      "explanation": "Software is a set of programs or instructions. Google Chrome is an application (software); the others are hardware.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which of the following is an input device.\"",
+      "question": "Short response: Which of the following is an input device?",
       "options": null,
       "answer": "Mouse",
-      "explanation": "The correct answer is: Mouse.",
+      "explanation": "A correct response identifies \"Mouse\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -713,13 +729,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Which greeting is most appropriate for a professional email to a potential employer\" is: Dear Mr. Kim,.",
+      "question": "Choose the best answer: Which greeting is most appropriate for a professional email to a potential employer?",
       "options": [
-        "True",
-        "False"
+        "Hey!",
+        "Yo boss,",
+        "Dear Mr. Kim,",
+        "What's up,"
       ],
-      "answer": "True",
-      "explanation": "True. Dear Mr. Kim, is correct.",
+      "answer": "Dear Mr. Kim,",
+      "explanation": "Professional emails use formal greetings. 'Dear [Title Last Name],' is the standard respectful opening.",
       "points": 1
     },
     {
@@ -767,10 +785,10 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which line spacing setting provides the most white space between lines, improving readability for longer documents.\"",
+      "question": "Short response: Which line spacing setting provides the most white space between lines, improving readability for longer documents?",
       "options": null,
       "answer": "Double (2.0)",
-      "explanation": "The correct answer is: Double (2.0).",
+      "explanation": "A correct response identifies \"Double (2.0)\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -860,25 +878,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"What does sorting data in a spreadsheet allow you to do\" is: Arrange data in ascending or descending order based on a column.",
+      "question": "Choose the best answer: What does sorting data in a spreadsheet allow you to do?",
       "options": [
-        "True",
-        "False"
+        "Delete duplicate rows automatically",
+        "Arrange data in ascending or descending order based on a column",
+        "Change the font of all cells",
+        "Merge multiple sheets into one"
       ],
-      "answer": "True",
-      "explanation": "True. Arrange data in ascending or descending order based on a column is correct.",
+      "answer": "Arrange data in ascending or descending order based on a column",
+      "explanation": "Sorting reorders rows based on values in a selected column, either from A to Z (ascending) or Z to A (descending).",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"What does a filter in a spreadsheet do\" is: Changes the color of cells based on value.",
+      "question": "Choose the best answer: What does a filter in a spreadsheet do?",
       "options": [
-        "True",
-        "False"
+        "Changes the color of cells based on value",
+        "Hides rows that do not meet specified criteria, making it easier to focus on relevant data",
+        "Removes all formulas from a range",
+        "Copies data to a new sheet"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Hides rows that do not meet specified criteria, making it easier to focus on relevant data.",
+      "answer": "Hides rows that do not meet specified criteria, making it easier to focus on relevant data",
+      "explanation": "Filters temporarily hide rows that don't match your criteria, allowing you to view and analyze a subset of your data.",
       "points": 1
     },
     {
@@ -926,13 +948,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Which of the following is a best practice for slide text\" is: Use bullet points with brief phrases, not full sentences.",
+      "question": "Choose the best answer: Which of the following is a best practice for slide text?",
       "options": [
-        "True",
-        "False"
+        "Include complete paragraphs so the audience can read everything",
+        "Use bullet points with brief phrases, not full sentences",
+        "Use 3 different fonts per slide for variety",
+        "Avoid using any text and rely only on images"
       ],
-      "answer": "True",
-      "explanation": "True. Use bullet points with brief phrases, not full sentences is correct.",
+      "answer": "Use bullet points with brief phrases, not full sentences",
+      "explanation": "Slides should support the speaker, not replace them. Brief bullet points keep slides clean and the audience focused on the presenter.",
       "points": 1
     },
     {
@@ -966,13 +990,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"Which of the following is a benefit of using cloud storage for team projects\" is: Files can be accessed and edited from any device with internet access.",
+      "question": "Choose the best answer: Which of the following is a benefit of using cloud storage for team projects?",
       "options": [
-        "True",
-        "False"
+        "Only one person can work on a file at a time",
+        "Files can be accessed and edited from any device with internet access",
+        "Files are permanently deleted after 30 days",
+        "Cloud storage does not require an internet connection"
       ],
-      "answer": "True",
-      "explanation": "True. Files can be accessed and edited from any device with internet access is correct.",
+      "answer": "Files can be accessed and edited from any device with internet access",
+      "explanation": "Cloud storage enables access from any internet-connected device, supporting remote collaboration and eliminating the need to email files back and forth.",
       "points": 1
     },
     {
@@ -1020,13 +1046,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Which Boolean search operator would you use to exclude a word from search results\" is: NOT.",
+      "question": "Choose the best answer: Which Boolean search operator would you use to exclude a word from search results?",
       "options": [
-        "True",
-        "False"
+        "AND",
+        "OR",
+        "NOT",
+        "WITH"
       ],
-      "answer": "True",
-      "explanation": "True. NOT is correct.",
+      "answer": "NOT",
+      "explanation": "The Boolean operator NOT (or a minus sign in Google) excludes terms from results. E.g., 'jaguar NOT car' returns results about the animal, not the vehicle.",
       "points": 1
     }
   ],

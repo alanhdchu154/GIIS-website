@@ -312,11 +312,16 @@ export default function LearnDashboard({ language }) {
   const spotlight = inProgress.find((e) => nextModule(e) !== null) || inProgress[0];
 
   // Determine student's current grade from semesterLabels
-  const currentGrade = myEnrollments.length > 0
-    ? Math.max(0, ...myEnrollments
-        .map(e => { const m = (e.semesterLabel || '').match(/Grade (\d+)/); return m ? parseInt(m[1]) : 0; })
-        .filter(Boolean))
-    : 0;
+  const currentGradeCandidates = myEnrollments
+    .flatMap(e => {
+      const m = (e.semesterLabel || '').match(/Grade (\d+)/);
+      return [
+        m ? parseInt(m[1], 10) : 0,
+        Number(e.course?.gradeLevel || 0),
+      ];
+    })
+    .filter(Boolean);
+  const currentGrade = currentGradeCandidates.length > 0 ? Math.max(...currentGradeCandidates) : 0;
 
   // Detect predominant pathway from enrollments
   const deptCount = {};
@@ -338,18 +343,20 @@ export default function LearnDashboard({ language }) {
     return true;
   });
 
-  // Recommended next courses: unenrolled courses in student's pathway, ordered by grade level
+  // Recommended next courses: keep primary suggestions at the student's grade/open level.
+  // Next-grade courses remain available in the broader catalog instead of feeling like a jump.
   const recommendedCourses = detectedPathway && allCourses
     ? allCourses
         .filter(c => {
           if (enrolledSlugs.has(c.slug)) return false;
           if (DEPT_TO_PATHWAY[c.department]?.label !== detectedPathway.label) return false;
           const gl = c.gradeLevel;
-          // Only show courses at or one grade above current; null gradeLevel = elective, always show
-          if (gl && currentGrade > 0 && gl > currentGrade + 1) return false;
-          return true;
+          return currentGrade === 0 || gl == null || gl === currentGrade;
         })
         .sort((a, b) => {
+          const aSameGrade = a.gradeLevel === currentGrade ? 0 : 1;
+          const bSameGrade = b.gradeLevel === currentGrade ? 0 : 1;
+          if (aSameGrade !== bSameGrade) return aSameGrade - bSameGrade;
           const ga = a.gradeLevel || 99;
           const gb = b.gradeLevel || 99;
           if (ga !== gb) return ga - gb;

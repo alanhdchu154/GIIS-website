@@ -13,7 +13,7 @@
       "title": "Understanding How You Learn",
       "titleZh": "了解自己的学习方式",
       "objectives": "Identify your preferred learning style; explain how memory works (encoding, storage, retrieval); understand the science of learning including spaced practice and interleaving.",
-      "readingUrl": "https://www.learner.org/series/discovering-psychology/learning/",
+      "readingUrl": "https://www.khanacademy.org/test-prep/mcat/processing-the-environment",
       "readingNote": "Learner.org — Discovering Psychology: Learning",
       "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/the-science-of-practice",
       "videoNote": "Khan Academy — The Science of Practice and Learning",
@@ -29,7 +29,7 @@
       "title": "Time Management & Scheduling",
       "titleZh": "时间管理与日程安排",
       "objectives": "Apply time management principles including prioritization and planning; use tools such as weekly planners and time-blocking; identify and eliminate common time-wasters.",
-      "readingUrl": "https://www.usu.edu/academic-support/study-skills/time-management",
+      "readingUrl": "https://www.usu.edu/academic-support/",
       "readingNote": "USU Academic Support — Time Management for Students",
       "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/how-to-create-a-study-schedule",
       "videoNote": "Khan Academy — Creating a Study Schedule",
@@ -45,7 +45,7 @@
       "title": "Goal Setting & Motivation",
       "titleZh": "目标设定与动力",
       "objectives": "Write SMART academic goals; distinguish intrinsic from extrinsic motivation; understand self-determination theory; create a personal motivation plan to sustain effort over time.",
-      "readingUrl": "https://www.learner.org/series/psychology-the-study-of-human-behavior/motivation/",
+      "readingUrl": "https://www.khanacademy.org/test-prep/mcat/processing-the-environment",
       "readingNote": "Learner.org — Psychology: Motivation",
       "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-growth-mindset/a/growth-mindset-introduction",
       "videoNote": "Khan Academy — Goal Setting and Motivation",
@@ -61,7 +61,7 @@
       "title": "Note-Taking Strategies",
       "titleZh": "笔记策略（康奈尔、大纲、思维导图）",
       "objectives": "Practice the Cornell, outline, and mind map note-taking methods; compare their effectiveness for different subjects and learning styles; develop active listening skills during lectures.",
-      "readingUrl": "https://www.usu.edu/academic-support/study-skills/note-taking",
+      "readingUrl": "https://www.usu.edu/academic-support/",
       "readingNote": "USU Academic Support — Note-Taking Strategies",
       "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/how-to-take-notes",
       "videoNote": "Khan Academy — How to Take Effective Notes",
@@ -77,7 +77,7 @@
       "title": "Active Reading Techniques",
       "titleZh": "主动阅读技巧",
       "objectives": "Apply the SQ3R reading method; annotate texts effectively; distinguish main ideas from supporting details; summarize and paraphrase complex academic texts.",
-      "readingUrl": "https://www.usu.edu/academic-support/study-skills/active-reading",
+      "readingUrl": "https://www.usu.edu/academic-support/",
       "readingNote": "USU Academic Support — Active Reading Strategies",
       "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/reading-strategies",
       "videoNote": "Khan Academy — Active Reading Strategies",
@@ -93,7 +93,7 @@
       "title": "Memory & Retention Strategies",
       "titleZh": "记忆与巩固策略",
       "objectives": "Explain the spacing effect and retrieval practice; use mnemonics and visualization techniques; create effective flashcard systems; apply the forgetting curve to optimize review schedules.",
-      "readingUrl": "https://www.learner.org/series/discovering-psychology/language-and-thinking/",
+      "readingUrl": "https://www.khanacademy.org/test-prep/mcat/processing-the-environment",
       "readingNote": "Learner.org — Discovering Psychology: Memory and Thinking",
       "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/spaced-practice",
       "videoNote": "Khan Academy — Spaced Practice and Memory",
@@ -109,7 +109,7 @@
       "title": "Test Preparation & Study Plans",
       "titleZh": "考试准备与学习计划",
       "objectives": "Create a structured study plan for an upcoming exam; identify what to study and in what order; use practice tests and self-assessment to guide preparation; avoid common cramming pitfalls.",
-      "readingUrl": "https://www.usu.edu/academic-support/study-skills/test-prep",
+      "readingUrl": "https://www.usu.edu/academic-support/",
       "readingNote": "USU Academic Support — Test Preparation Strategies",
       "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/how-to-prepare-for-tests",
       "videoNote": "Khan Academy — How to Prepare for Tests",
@@ -125,7 +125,7 @@
       "title": "Test-Taking Strategies",
       "titleZh": "应试策略",
       "objectives": "Apply strategies for multiple choice, short answer, and essay exams; manage time effectively during tests; identify common exam errors; use process of elimination and contextual clues.",
-      "readingUrl": "https://www.usu.edu/academic-support/study-skills/test-taking",
+      "readingUrl": "https://www.usu.edu/academic-support/",
       "readingNote": "USU Academic Support — Test-Taking Strategies",
       "videoUrl": "https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us/learnstorm-the-science-of-practice/a/test-taking-strategies",
       "videoNote": "Khan Academy — Test-Taking Strategies",
@@ -169,22 +169,24 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Spaced practice (distributed practice) is more effective than massed practice (cramming) because:\" is: It strengthens memory through repeated retrieval over time.",
+      "question": "Why is spaced practice generally more effective than cramming?",
       "options": [
-        "True",
-        "False"
+        "It strengthens memory through repeated retrieval over time",
+        "It removes the need to review difficult material",
+        "It works mainly by making study sessions longer",
+        "It depends on reading notes without testing recall"
       ],
-      "answer": "True",
-      "explanation": "True. It strengthens memory through repeated retrieval over time is correct.",
+      "answer": "It strengthens memory through repeated retrieval over time",
+      "explanation": "Distributed practice improves retention because students repeatedly retrieve and reinforce knowledge across time.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which study strategy is considered least effective by cognitive science research.\"",
+      "question": "Short response: Which study strategy is considered least effective by cognitive science research?",
       "options": null,
       "answer": "Highlighting and re-reading",
-      "explanation": "The correct answer is: Highlighting and re-reading.",
+      "explanation": "A correct response identifies \"Highlighting and re-reading\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -232,13 +234,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"The Eisenhower Matrix categorizes tasks by:\" is: Urgency and importance.",
+      "question": "The Eisenhower Matrix categorizes tasks by which two dimensions?",
       "options": [
-        "True",
-        "False"
+        "Urgency and importance",
+        "Difficulty and interest",
+        "Length and deadline",
+        "Cost and benefit"
       ],
-      "answer": "True",
-      "explanation": "True. Urgency and importance is correct.",
+      "answer": "Urgency and importance",
+      "explanation": "The matrix separates tasks by whether they are urgent and whether they are important.",
       "points": 1
     },
     {
@@ -370,25 +374,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"The SQ3R reading method stands for:\" is: Survey, Question, Read, Recite, Review.",
+      "question": "What does SQ3R stand for?",
       "options": [
-        "True",
-        "False"
+        "Survey, Question, Read, Recite, Review",
+        "Scan, Quote, Read, Revise, Rewrite",
+        "Summarize, Question, Record, Recite, Respond",
+        "Survey, Quiz, Read, Repeat, Reflect"
       ],
-      "answer": "True",
-      "explanation": "True. Survey, Question, Read, Recite, Review is correct.",
+      "answer": "Survey, Question, Read, Recite, Review",
+      "explanation": "SQ3R is an active reading process: Survey, Question, Read, Recite, and Review.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Annotation of a text while reading helps learning by:\" is: Making the book look more organized.",
+      "question": "How does annotating a text while reading most directly support learning?",
       "options": [
-        "True",
-        "False"
+        "It forces active engagement through marking, questioning, and connecting ideas",
+        "It makes the book look more organized without changing comprehension",
+        "It replaces the need to summarize after reading",
+        "It works only when every sentence is highlighted"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Forcing active engagement with the material through marking, questioning, and connecting ideas.",
+      "answer": "It forces active engagement through marking, questioning, and connecting ideas",
+      "explanation": "Effective annotation turns reading into active processing by requiring questions, notes, and connections.",
       "points": 1
     },
     {
@@ -436,13 +444,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Ebbinghaus's forgetting curve shows that without review, we forget approximately what percentage of new information within 24 hours\" is: 50–70%.",
+      "question": "According to Ebbinghaus's forgetting curve, about how much new information may be forgotten within 24 hours without review?",
       "options": [
-        "True",
-        "False"
+        "10-20%",
+        "25-35%",
+        "50-70%",
+        "90-100%"
       ],
-      "answer": "True",
-      "explanation": "True. 50–70% is correct.",
+      "answer": "50-70%",
+      "explanation": "The forgetting curve shows a steep early drop in retention, often summarized as losing roughly 50-70% without review.",
       "points": 1
     },
     {
@@ -476,13 +486,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"Cramming the night before an exam is ineffective for long-term learning primarily because:\" is: Massed practice creates little long-term retention compared to spaced practice.",
+      "question": "Why is cramming the night before an exam usually weak for long-term learning?",
       "options": [
-        "True",
-        "False"
+        "Massed practice creates little long-term retention compared to spaced practice",
+        "It always prevents students from answering questions correctly the next day",
+        "It is only useful for essay exams, not objective exams",
+        "It strengthens memory more than retrieval practice"
       ],
-      "answer": "True",
-      "explanation": "True. Massed practice creates little long-term retention compared to spaced practice is correct.",
+      "answer": "Massed practice creates little long-term retention compared to spaced practice",
+      "explanation": "Cramming may produce short-term familiarity, but spaced retrieval is stronger for durable learning.",
       "points": 1
     },
     {
@@ -530,13 +542,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"On a multiple-choice exam, when you are unsure of an answer, the best first strategy is:\" is: Eliminate obviously wrong answers and choose from the remaining options.",
+      "question": "On a multiple-choice exam, what is the best first strategy when you are unsure of an answer?",
       "options": [
-        "True",
-        "False"
+        "Eliminate obviously wrong answers and choose from the remaining options",
+        "Choose the longest answer without reading the prompt",
+        "Skip the question permanently",
+        "Change every uncertain answer at the end"
       ],
-      "answer": "True",
-      "explanation": "True. Eliminate obviously wrong answers and choose from the remaining options is correct.",
+      "answer": "Eliminate obviously wrong answers and choose from the remaining options",
+      "explanation": "Process of elimination improves the odds of selecting the correct answer when full certainty is not possible.",
       "points": 1
     }
   ],
@@ -589,14 +603,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"In Cornell notes, the cue column is used to:\" is: Write questions, keywords, and cues that prompt recall of the main notes.",
+      "type": "mc",
+      "question": "In Cornell notes, what is the cue column used for?",
       "options": [
-        "True",
-        "False"
+        "Writing questions, keywords, and cues that prompt recall of the main notes",
+        "Copying the lecture word for word",
+        "Recording only page numbers and dates",
+        "Listing unrelated homework tasks"
       ],
-      "answer": "True",
-      "explanation": "True. Write questions, keywords, and cues that prompt recall of the main notes is correct.",
+      "answer": "Writing questions, keywords, and cues that prompt recall of the main notes",
+      "explanation": "The cue column supports later review by prompting recall of the detailed notes.",
       "points": 1
     },
     {
@@ -647,14 +663,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"On a multiple choice test, the process of elimination is valuable because it:\" is: Guarantees you choose the correct answer.",
+      "type": "mc",
+      "question": "Why is process of elimination valuable on a multiple-choice test?",
       "options": [
-        "True",
-        "False"
+        "It increases the probability of selecting the correct answer from the remaining choices",
+        "It guarantees the correct answer even when all choices are unknown",
+        "It removes the need to read the question carefully",
+        "It works only when every option is obviously wrong"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Increases your probability of selecting the correct answer from the remaining choices.",
+      "answer": "It increases the probability of selecting the correct answer from the remaining choices",
+      "explanation": "Eliminating clearly wrong choices narrows the set of plausible answers and improves the odds of a correct selection.",
       "points": 1
     },
     {
@@ -705,14 +723,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"The Jigsaw method improves learning because it:\" is: Creates interdependence — each student must learn their section to teach others.",
+      "type": "mc",
+      "question": "Why does the Jigsaw method improve learning in a study group?",
       "options": [
-        "True",
-        "False"
+        "It creates interdependence because each student must learn one section well enough to teach others",
+        "It lets one student complete all of the group's learning for everyone",
+        "It replaces preparation with casual discussion",
+        "It requires every student to memorize the same paragraph silently"
       ],
-      "answer": "True",
-      "explanation": "True. Creates interdependence — each student must learn their section to teach others is correct.",
+      "answer": "It creates interdependence because each student must learn one section well enough to teach others",
+      "explanation": "Jigsaw learning gives each participant responsibility for mastering and teaching part of the material.",
       "points": 1
     },
     {
@@ -763,14 +783,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Interleaving different subjects or problem types during study sessions improves:\" is: Speed of memorization.",
+      "type": "mc",
+      "question": "Interleaving different subjects or problem types during study sessions most directly improves which skill?",
       "options": [
-        "True",
-        "False"
+        "Discriminating between concepts and applying the right approach in new situations",
+        "Memorizing one answer faster by repeating it continuously",
+        "Avoiding all mistakes during first exposure to content",
+        "Replacing practice tests with passive rereading"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Ability to discriminate between concepts and apply the right approach in new situations.",
+      "answer": "Discriminating between concepts and applying the right approach in new situations",
+      "explanation": "Interleaving helps students decide which strategy fits a problem instead of practicing one routine in isolation.",
       "points": 1
     },
     {
@@ -821,14 +843,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Grit research by Angela Duckworth suggests that the most significant predictor of long-term success is:\" is: Passion and perseverance sustained over time.",
+      "type": "mc",
+      "question": "In Angela Duckworth's grit research, grit is best described as:",
       "options": [
-        "True",
-        "False"
+        "Passion and perseverance sustained over time",
+        "Short bursts of effort only when a deadline is close",
+        "Avoiding difficult tasks to preserve confidence",
+        "High intelligence without consistent practice"
       ],
-      "answer": "True",
-      "explanation": "True. Passion and perseverance sustained over time is correct.",
+      "answer": "Passion and perseverance sustained over time",
+      "explanation": "Duckworth defines grit as sustained passion and perseverance for long-term goals.",
       "points": 1
     },
     {
@@ -879,14 +903,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"A student who reflects on their errors after each graded assignment demonstrates which skill\" is: Memorization.",
+      "type": "mc",
+      "question": "A student who reflects on errors after each graded assignment is demonstrating which skill?",
       "options": [
-        "True",
-        "False"
+        "Metacognition and growth mindset",
+        "Memorization only",
+        "Passive rereading",
+        "Task avoidance"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Metacognition and growth mindset.",
+      "answer": "Metacognition and growth mindset",
+      "explanation": "Reflecting on mistakes shows awareness of one's own learning process and a willingness to improve through feedback.",
       "points": 1
     },
     {
@@ -937,14 +963,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Self-determination theory argues that people are most intrinsically motivated when they feel:\" is: Autonomous, competent, and connected to others.",
+      "type": "mc",
+      "question": "Self-determination theory argues that intrinsic motivation is strongest when people feel:",
       "options": [
-        "True",
-        "False"
+        "Autonomous, competent, and connected to others",
+        "Pressured, isolated, and controlled by rewards",
+        "Busy, tired, and externally ranked",
+        "Dependent on constant reminders from others"
       ],
-      "answer": "True",
-      "explanation": "True. Autonomous, competent, and connected to others is correct.",
+      "answer": "Autonomous, competent, and connected to others",
+      "explanation": "Self-determination theory emphasizes autonomy, competence, and relatedness as core supports for intrinsic motivation.",
       "points": 1
     },
     {

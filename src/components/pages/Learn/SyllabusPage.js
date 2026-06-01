@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { getStudentSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 import Nav from '../../main/Nav.js';
+import { getAssignmentProfile } from './assignmentProfile';
 
 const API = getApiBase();
 
@@ -97,9 +98,9 @@ export default function SyllabusPage({ language }) {
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {[
-              { label: isEn ? 'Module Quizzes (14 total)' : '章节测验（共 14 次）', weight: '40%', color: '#2b3d6d', note: isEn ? 'One quiz per module, submitted once' : '每章一次，提交后不可重做' },
+              { label: isEn ? `Module Quizzes (${course.modules.length} total)` : `章节测验（共 ${course.modules.length} 次）`, weight: '40%', color: '#2b3d6d', note: isEn ? 'One quiz per module, submitted once' : '每章一次，提交后不可重做' },
               { label: isEn ? 'Midterm Exam' : '期中考试', weight: '30%', color: '#C84B0A', note: isEn ? 'Covers modules 1–7 · unlocked after all module 1–7 quizzes' : '涵盖模块 1–7 · 完成前7章测验后解锁' },
-              { label: isEn ? 'Final Exam' : '期末考试', weight: '30%', color: '#1B6B3A', note: isEn ? 'Covers all modules · unlocked after midterm' : '涵盖全部模块 · 通过期中考试后解锁' },
+              { label: isEn ? 'Final Exam' : '期末考试', weight: '30%', color: '#1B6B3A', note: isEn ? 'Covers all modules · unlocked after all quizzes, all assignments, and a passed midterm' : '涵盖全部模块 · 完成全部测验与作业并通过期中后解锁' },
             ].map(({ label, weight, color, note }) => (
               <div key={label} style={{ display: 'flex', alignItems: 'center', gap: '16px', background: '#fff', border: '1px solid #e0e6f0', borderLeft: `4px solid ${color}`, borderRadius: '10px', padding: '16px 20px' }}>
                 <div style={{ flex: 1 }}>
@@ -113,6 +114,16 @@ export default function SyllabusPage({ language }) {
           <p style={{ fontSize: '12px', color: '#aaa', marginTop: '10px' }}>
             {isEn ? 'Passing threshold: 70%. Exam retakes allowed after 24-hour cooldown.' : '及格线：70%。考试可在 24 小时后重考。'}
           </p>
+          <div style={{ marginTop: '14px', background: '#fff', border: '1px solid #e0e6f0', borderLeft: '4px solid #f57f17', borderRadius: '10px', padding: '16px 20px' }}>
+            <p style={{ margin: '0 0 5px', fontSize: '14px', fontWeight: 800, color: '#1a1a2e' }}>
+              {isEn ? 'Assignment Feedback Evidence' : '作业批改证据'}
+            </p>
+            <p style={{ margin: 0, fontSize: '12px', color: '#666', lineHeight: 1.65 }}>
+              {isEn
+                ? 'Each module includes a submitted assignment. Assignment scores are not part of the 40/30/30 transcript grade yet, but all assignments must be submitted before the final exam. Teachers or advisors score submitted work out of 100 and leave written feedback visible in the Learn Portal and parent dashboard.'
+                : '每个模块都有需提交的作业。作业分数目前尚未计入 40/30/30 的成绩单权重，但所有作业必须提交后才能参加期末考试。老师或顾问会按 100 分批改，并在 Learn Portal 与家长面板中显示书面反馈。'}
+            </p>
+          </div>
         </section>
 
         {/* Module list */}
@@ -163,12 +174,25 @@ export default function SyllabusPage({ language }) {
 
                   {/* Assignment */}
                   {mod.assignment && (
-                    <div>
-                      <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: 700, color: '#888', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        {isEn ? 'Assignment' : '作业'}
-                      </p>
-                      <p style={{ margin: 0, fontSize: '13px', color: '#444', lineHeight: 1.65 }}>{mod.assignment}</p>
-                    </div>
+                    (() => {
+                      const profile = getAssignmentProfile(mod.assignment);
+                      return (
+                        <div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 6 }}>
+                            <p style={{ margin: 0, fontSize: '11px', fontWeight: 700, color: '#888', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                              {isEn ? 'Assignment' : '作业'}
+                            </p>
+                            <span style={{ fontSize: 11, fontWeight: 800, color: '#8a6a14', background: '#fff8e1', border: '1px solid #ffe082', borderRadius: 999, padding: '2px 8px' }}>
+                              {isEn ? profile.label.en : profile.label.zh}
+                            </span>
+                          </div>
+                          <p style={{ margin: 0, fontSize: '13px', color: '#444', lineHeight: 1.65 }}>{mod.assignment}</p>
+                          <p style={{ margin: '6px 0 0', fontSize: '12px', color: '#777', lineHeight: 1.55 }}>
+                            {isEn ? profile.evidence.en : profile.evidence.zh}
+                          </p>
+                        </div>
+                      );
+                    })()
                   )}
                 </div>
               </div>

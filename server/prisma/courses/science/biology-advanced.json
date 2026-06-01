@@ -279,13 +279,15 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "True or False: The answer to \"The endosymbiotic theory is supported by which observation about mitochondria\" is: Mitochondria have their own circular DNA and ribosomes similar to bacteria.",
+      "question": "Which mitochondrial feature provides strong evidence for the endosymbiotic origin of mitochondria?",
       "options": [
-        "True",
-        "False"
+        "Mitochondria contain circular DNA and bacterial-like ribosomes",
+        "Mitochondria are surrounded by no membrane",
+        "Mitochondria store hereditary information in the nucleus only",
+        "Mitochondria synthesize cellulose for the cell wall"
       ],
-      "answer": "True",
-      "explanation": "True. Mitochondria have their own circular DNA and ribosomes similar to bacteria is correct.",
+      "answer": "Mitochondria contain circular DNA and bacterial-like ribosomes",
+      "explanation": "Mitochondria have their own circular DNA and ribosomes similar to bacteria, supporting the idea that they descended from bacterial endosymbionts.",
       "points": 1
     },
     {
@@ -347,13 +349,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "True or False: The answer to \"In enzyme kinetics, Km is defined as the substrate concentration at which:\" is: Reaction velocity equals half of Vmax.",
+      "question": "In Michaelis-Menten enzyme kinetics, what does Km represent?",
       "options": [
-        "True",
-        "False"
+        "The substrate concentration at which reaction velocity is half of Vmax",
+        "The maximum reaction velocity of the enzyme",
+        "The temperature at which the enzyme denatures",
+        "The pH at which the enzyme is inactive"
       ],
-      "answer": "True",
-      "explanation": "True. Reaction velocity equals half of Vmax is correct.",
+      "answer": "The substrate concentration at which reaction velocity is half of Vmax",
+      "explanation": "Km is the substrate concentration needed for the reaction to proceed at half of its maximum velocity.",
       "points": 1
     },
     {
@@ -401,25 +405,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "True or False: The answer to \"Thomas Hunt Morgan's experiments with Drosophila established that genes are:\" is: Located on chromosomes.",
+      "question": "What did Thomas Hunt Morgan's Drosophila experiments demonstrate about genes?",
       "options": [
-        "True",
-        "False"
+        "Genes are carried on chromosomes",
+        "Genes are made of protein instead of DNA",
+        "Genes assort independently of all chromosomes",
+        "Genes are inherited only through mitochondria"
       ],
-      "answer": "True",
-      "explanation": "True. Located on chromosomes is correct.",
+      "answer": "Genes are carried on chromosomes",
+      "explanation": "Morgan linked inheritance patterns in fruit flies to specific chromosomes, supporting the chromosomal theory of inheritance.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "True or False: The answer to \"The map distance between two genes is expressed in centimorgans (cM) where 1 cM equals:\" is: 10% recombination frequency.",
+      "question": "In genetic linkage mapping, what recombination frequency corresponds to 1 centimorgan?",
       "options": [
-        "True",
-        "False"
+        "1% recombination frequency",
+        "10% recombination frequency",
+        "50% recombination frequency",
+        "One base pair of physical distance"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 1% recombination frequency.",
+      "answer": "1% recombination frequency",
+      "explanation": "By convention, 1 centimorgan equals a 1% recombination frequency between two linked loci.",
       "points": 1
     },
     {
@@ -481,13 +489,15 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "True or False: The answer to \"Okazaki fragments are synthesized on the lagging strand because:\" is: DNA polymerase can only add nucleotides in the 5' to 3' direction.",
+      "question": "Why is the lagging strand synthesized as Okazaki fragments during DNA replication?",
       "options": [
-        "True",
-        "False"
+        "DNA polymerase can add nucleotides only in the 5' to 3' direction",
+        "Helicase opens the lagging strand only after replication is complete",
+        "The lagging strand lacks a complementary template",
+        "DNA ligase prevents continuous synthesis on both strands"
       ],
-      "answer": "True",
-      "explanation": "True. DNA polymerase can only add nucleotides in the 5' to 3' direction is correct.",
+      "answer": "DNA polymerase can add nucleotides only in the 5' to 3' direction",
+      "explanation": "Because DNA polymerases extend DNA only 5' to 3', the strand oriented away from the replication fork must be copied discontinuously.",
       "points": 1
     },
     {
@@ -535,13 +545,15 @@
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Post-translational modification by phosphorylation typically:\" is: Alters protein activity, localization, or interaction with other molecules.",
+      "question": "What is a common effect of phosphorylation as a post-translational modification?",
       "options": [
-        "True",
-        "False"
+        "It changes protein activity, location, or molecular interactions",
+        "It permanently removes the protein from the cell",
+        "It converts DNA directly into a protein",
+        "It prevents all protein folding from occurring"
       ],
-      "answer": "True",
-      "explanation": "True. Alters protein activity, localization, or interaction with other molecules is correct.",
+      "answer": "It changes protein activity, location, or molecular interactions",
+      "explanation": "Adding a phosphate group can alter a protein's shape, charge, activity, binding partners, or cellular location.",
       "points": 1
     },
     {
@@ -659,22 +671,24 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "True or False: The answer to \"Vestigial structures serve as evidence for evolution because they:\" is: Represent structures inherited from ancestors in which they were functional.",
+      "question": "Why are vestigial structures considered evidence for evolution?",
       "options": [
-        "True",
-        "False"
+        "They are inherited remnants of structures that were functional in ancestors",
+        "They prove that organisms never change over time",
+        "They are always fully functional in every modern species",
+        "They occur only in organisms with no common ancestry"
       ],
-      "answer": "True",
-      "explanation": "True. Represent structures inherited from ancestors in which they were functional is correct.",
+      "answer": "They are inherited remnants of structures that were functional in ancestors",
+      "explanation": "Vestigial structures make sense as modified remnants of ancestral traits, supporting descent with modification.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"analogous structures in distantly related organisms provide evidence for:.\"",
+      "question": "Short response: Define or explain: Analogous structures in distantly related organisms provide evidence for.",
       "options": null,
       "answer": "Convergent evolution",
-      "explanation": "The correct answer is: Convergent evolution.",
+      "explanation": "A correct response identifies \"Convergent evolution\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -736,13 +750,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "True or False: The answer to \"If the frequency of the recessive allele (q) in a population is 0.3, what is the frequency of the dominant allele (p)\" is: 0.7.",
+      "question": "If q = 0.3 in a two-allele Hardy-Weinberg model, what is p?",
       "options": [
-        "True",
-        "False"
+        "0.7",
+        "0.3",
+        "0.09",
+        "0.49"
       ],
-      "answer": "True",
-      "explanation": "True. 0.7 is correct.",
+      "answer": "0.7",
+      "explanation": "For two alleles, p + q = 1. If q = 0.3, then p = 1 - 0.3 = 0.7.",
       "points": 1
     },
     {
@@ -790,25 +806,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"Allopatric speciation requires:\" is: Geographic isolation preventing gene flow.",
+      "question": "Which condition is required for allopatric speciation?",
       "options": [
-        "True",
-        "False"
+        "Geographic isolation that limits gene flow between populations",
+        "Mating within the same population without barriers",
+        "Immediate hybrid fertility in every generation",
+        "Identical selection pressures in one shared habitat"
       ],
-      "answer": "True",
-      "explanation": "True. Geographic isolation preventing gene flow is correct.",
+      "answer": "Geographic isolation that limits gene flow between populations",
+      "explanation": "Allopatric speciation begins when a physical barrier separates populations and reduces gene flow long enough for divergence.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "True or False: The answer to \"Polyploidy as a mechanism of speciation is most common in:\" is: Mammals.",
+      "question": "Polyploidy is most often an important mechanism of speciation in which group?",
       "options": [
-        "True",
-        "False"
+        "Plants",
+        "Mammals",
+        "Birds",
+        "Cartilaginous fishes"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Plants.",
+      "answer": "Plants",
+      "explanation": "Polyploidy is especially common in plants, where whole-genome duplication can quickly create reproductive isolation.",
       "points": 1
     },
     {
@@ -870,13 +890,15 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "True or False: The answer to \"In a resting neuron, the membrane potential is approximately:\" is: −70 mV.",
+      "question": "What is the approximate resting membrane potential of a typical neuron?",
       "options": [
-        "True",
-        "False"
+        "−70 mV",
+        "0 mV",
+        "+30 mV",
+        "−10 mV"
       ],
-      "answer": "True",
-      "explanation": "True. −70 mV is correct.",
+      "answer": "−70 mV",
+      "explanation": "A typical resting neuron maintains an inside-negative membrane potential near −70 mV through ion gradients and selective permeability.",
       "points": 1
     },
     {
@@ -924,13 +946,15 @@
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "True or False: The answer to \"Steroid hormones differ from protein hormones in that steroid hormones:\" is: Bind to intracellular receptors and directly regulate transcription.",
+      "question": "How do steroid hormones typically act differently from protein hormones?",
       "options": [
-        "True",
-        "False"
+        "They bind intracellular receptors that regulate gene transcription",
+        "They remain outside the cell and bind only membrane receptors",
+        "They are stored as DNA sequences until needed",
+        "They cannot cross the plasma membrane because they are water-soluble"
       ],
-      "answer": "True",
-      "explanation": "True. Bind to intracellular receptors and directly regulate transcription is correct.",
+      "answer": "They bind intracellular receptors that regulate gene transcription",
+      "explanation": "Steroid hormones are lipid-soluble, so they can enter cells and bind receptors that directly influence transcription.",
       "points": 1
     },
     {
@@ -1048,13 +1072,15 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "True or False: The answer to \"Net primary productivity (NPP) is defined as:\" is: Gross primary productivity minus respiration losses by producers.",
+      "question": "How is net primary productivity (NPP) calculated?",
       "options": [
-        "True",
-        "False"
+        "Gross primary productivity minus producer respiration",
+        "Consumer biomass divided by producer biomass",
+        "Total ecosystem respiration plus decomposer activity",
+        "Gross primary productivity minus all consumer respiration"
       ],
-      "answer": "True",
-      "explanation": "True. Gross primary productivity minus respiration losses by producers is correct.",
+      "answer": "Gross primary productivity minus producer respiration",
+      "explanation": "NPP is the energy fixed by producers after subtracting the energy they use for their own respiration.",
       "points": 1
     },
     {
@@ -1116,13 +1142,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "True or False: The answer to \"The species-area relationship states that:\" is: The number of species increases with increasing area, typically following a power law.",
+      "question": "What does the species-area relationship predict?",
       "options": [
-        "True",
-        "False"
+        "Larger habitat areas generally support more species, often following a power-law curve",
+        "Species richness always decreases as habitat area increases",
+        "Habitat area has no relationship to species richness",
+        "Only ocean habitats follow biodiversity-area patterns"
       ],
-      "answer": "True",
-      "explanation": "True. The number of species increases with increasing area, typically following a power law is correct.",
+      "answer": "Larger habitat areas generally support more species, often following a power-law curve",
+      "explanation": "The species-area relationship describes the pattern that species richness tends to increase with sampled or protected area.",
       "points": 1
     }
   ],
@@ -1175,14 +1203,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following enzymes removes RNA primers and fills the gap with DNA during replication\" is: DNA polymerase I.",
+      "type": "mc",
+      "question": "During prokaryotic DNA replication, which enzyme removes RNA primers and replaces them with DNA?",
       "options": [
-        "True",
-        "False"
+        "DNA polymerase I",
+        "DNA ligase",
+        "Primase",
+        "Helicase"
       ],
-      "answer": "True",
-      "explanation": "True. DNA polymerase I is correct.",
+      "answer": "DNA polymerase I",
+      "explanation": "DNA polymerase I removes RNA primers using exonuclease activity and fills the resulting gaps with DNA.",
       "points": 1
     },
     {
@@ -1233,14 +1263,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"In a Hardy-Weinberg population where q = 0.4, the expected frequency of homozygous dominant individuals (AA) is:\" is: 0.16.",
+      "type": "mc",
+      "question": "In a Hardy-Weinberg population where q = 0.4, what is the expected frequency of homozygous dominant individuals (AA)?",
       "options": [
-        "True",
-        "False"
+        "0.36",
+        "0.16",
+        "0.48",
+        "0.40"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: 0.36.",
+      "answer": "0.36",
+      "explanation": "If q = 0.4, then p = 0.6. The homozygous dominant frequency is p^2 = 0.6^2 = 0.36.",
       "points": 1
     },
     {
@@ -1291,14 +1323,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which type of reproductive isolation prevents mating due to different habitat preferences within the same geographic area\" is: Ecological (habitat) isolation.",
+      "type": "mc",
+      "question": "Which reproductive barrier occurs when populations in the same region rarely mate because they use different habitats?",
       "options": [
-        "True",
-        "False"
+        "Ecological or habitat isolation",
+        "Mechanical isolation",
+        "Gametic isolation",
+        "Hybrid sterility"
       ],
-      "answer": "True",
-      "explanation": "True. Ecological (habitat) isolation is correct.",
+      "answer": "Ecological or habitat isolation",
+      "explanation": "Habitat isolation is a prezygotic barrier in which organisms occupy different microhabitats and therefore rarely encounter each other as mates.",
       "points": 1
     },
     {
@@ -1349,14 +1383,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following best describes the function of lysosomes\" is: Synthesize lipids for the plasma membrane.",
+      "type": "mc",
+      "question": "What is the primary function of lysosomes in eukaryotic cells?",
       "options": [
-        "True",
-        "False"
+        "Digest cellular debris and foreign material using hydrolytic enzymes",
+        "Synthesize lipids for the plasma membrane",
+        "Assemble ribosomal subunits in the nucleus",
+        "Store hereditary information as chromosomes"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Digest cellular debris and foreign material using hydrolytic enzymes.",
+      "answer": "Digest cellular debris and foreign material using hydrolytic enzymes",
+      "explanation": "Lysosomes contain hydrolytic enzymes that break down macromolecules, damaged organelles, and material taken into the cell.",
       "points": 1
     },
     {
@@ -1407,14 +1443,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"In the nitrogen cycle, denitrifying bacteria convert:\" is: NO₃⁻ into N₂.",
+      "type": "mc",
+      "question": "In the nitrogen cycle, what do denitrifying bacteria convert nitrate (NO₃⁻) into?",
       "options": [
-        "True",
-        "False"
+        "Nitrogen gas (N₂)",
+        "Ammonia (NH₃)",
+        "Glucose (C₆H₁₂O₆)",
+        "Phosphate (PO₄³⁻)"
       ],
-      "answer": "True",
-      "explanation": "True. NO₃⁻ into N₂ is correct.",
+      "answer": "Nitrogen gas (N₂)",
+      "explanation": "Denitrifying bacteria reduce nitrate to nitrogen gas, returning nitrogen from soil or water to the atmosphere.",
       "points": 1
     },
     {
@@ -1465,14 +1503,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"C4 photosynthesis reduces photorespiration by:\" is: Performing all photosynthesis at night.",
+      "type": "mc",
+      "question": "How does C4 photosynthesis reduce photorespiration?",
       "options": [
-        "True",
-        "False"
+        "By concentrating CO₂ near RuBisCO in bundle sheath cells",
+        "By performing all carbon fixation only at night",
+        "By eliminating RuBisCO from the Calvin cycle",
+        "By opening stomata only during freezing temperatures"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Concentrating CO₂ near RuBisCO in bundle sheath cells.",
+      "answer": "By concentrating CO₂ near RuBisCO in bundle sheath cells",
+      "explanation": "C4 plants spatially separate carbon fixation so CO₂ is concentrated around RuBisCO, reducing its oxygenase activity.",
       "points": 1
     },
     {
@@ -1523,14 +1563,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following correctly describes double fertilization in flowering plants\" is: One sperm fertilizes the egg (forming 2n embryo) and the other sperm fuses with two polar nuclei (forming 3n endosperm).",
+      "type": "mc",
+      "question": "Which statement correctly describes double fertilization in flowering plants?",
       "options": [
-        "True",
-        "False"
+        "One sperm fertilizes the egg to form a 2n embryo, while another fuses with two polar nuclei to form 3n endosperm",
+        "Two sperm fertilize the same egg to form a 4n embryo",
+        "One sperm fertilizes the egg and the second sperm is discarded before seed formation",
+        "Two eggs are fertilized to form two genetically identical embryos"
       ],
-      "answer": "True",
-      "explanation": "True. One sperm fertilizes the egg (forming 2n embryo) and the other sperm fuses with two polar nuclei (forming 3n endosperm) is correct.",
+      "answer": "One sperm fertilizes the egg to form a 2n embryo, while another fuses with two polar nuclei to form 3n endosperm",
+      "explanation": "Angiosperm double fertilization produces both the diploid embryo and the triploid nutritive endosperm tissue.",
       "points": 1
     },
     {
@@ -1581,14 +1623,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"The primary role of decomposers in biogeochemical cycles is to:\" is: Fix atmospheric nitrogen into ammonia.",
+      "type": "mc",
+      "question": "What is the primary role of decomposers in biogeochemical cycles?",
       "options": [
-        "True",
-        "False"
+        "They break down organic matter and return inorganic nutrients to the environment",
+        "They fix atmospheric nitrogen into ammonia as their main function",
+        "They convert sunlight directly into glucose",
+        "They prevent nutrients from moving between trophic levels"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Break down organic matter and return inorganic nutrients to the environment.",
+      "answer": "They break down organic matter and return inorganic nutrients to the environment",
+      "explanation": "Decomposers recycle nutrients by breaking down dead organisms and wastes, making inorganic nutrients available again.",
       "points": 1
     },
     {

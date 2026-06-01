@@ -63,8 +63,8 @@
       "objectives": "Define competitive advantage; compare cost leadership, differentiation, and focus strategies; explain Blue Ocean Strategy and how it differs from competing in existing market space.",
       "readingUrl": "",
       "readingNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://openstax.org/books/principles-management",
+      "videoNote": "OpenStax — Principles of Management open lesson resource for this topic: Competitive Advantage.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit",
@@ -79,8 +79,8 @@
       "objectives": "Explain diversification strategies and when they create vs destroy value; analyze vertical integration decisions; evaluate M&A rationale; apply portfolio analysis frameworks (BCG matrix).",
       "readingUrl": "",
       "readingNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://openstax.org/books/principles-management",
+      "videoNote": "OpenStax — Principles of Management open lesson resource for this topic: Corporate Strategy.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/mergers-acquisitions",
@@ -111,8 +111,8 @@
       "objectives": "Structure a complete strategic plan document; write a compelling executive summary; draft strategic objectives and initiatives; include a high-level financial projections overview.",
       "readingUrl": "",
       "readingNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://owl.purdue.edu/owl/",
+      "videoNote": "Purdue OWL — Open writing lesson resource for this topic: Writing the Strategic Plan.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/entrepreneur-and-small-biz-finance",
@@ -127,8 +127,8 @@
       "objectives": "Explain the purpose and structure of a business case; build a financial justification using ROI and payback period; conduct a risk analysis; write a clear recommendation section.",
       "readingUrl": "",
       "readingNote": "Removed after 2026-05-30 access audit: hbr.org may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://openstax.org/books/principles-management",
+      "videoNote": "OpenStax — Principles of Management open lesson resource for this topic: The Business Case.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial",
@@ -186,14 +186,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"The resource-based view of the firm argues that competitive advantage comes from:\" is: Possessing valuable, rare, inimitable, and non-substitutable resources.",
+      "type": "mc",
+      "question": "Choose the best answer: The resource-based view of the firm argues that competitive advantage comes from:",
       "options": [
-        "True",
-        "False"
+        "Possessing valuable, rare, inimitable, and non-substitutable resources",
+        "A plan that defines goals and how to achieve them over the long term",
+        "Internal capabilities and resources the company does exceptionally well",
+        "The sequence of activities that create value for the customer and generate profit"
       ],
-      "answer": "True",
-      "explanation": "True. Possessing valuable, rare, inimitable, and non-substitutable resources is correct.",
+      "answer": "Possessing valuable, rare, inimitable, and non-substitutable resources",
+      "explanation": "The best answer is Possessing valuable, rare, inimitable, and non-substitutable resources. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -244,14 +246,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which section of a strategic plan is read first and typically written last\" is: Strategic objectives.",
+      "type": "mc",
+      "question": "Choose the best answer: Which section of a strategic plan is read first and typically written last?",
       "options": [
-        "True",
-        "False"
+        "Executive Summary",
+        "Strategic objectives",
+        "Be written first and provide a detailed financial model",
+        "Executive Summary → Situation Analysis → Strategic Objectives → Initiatives → Financials"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Executive summary.",
+      "answer": "Executive Summary",
+      "explanation": "The best answer is Executive Summary. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -302,14 +306,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Return on Investment (ROI) is calculated as:\" is: (Net Benefit − Cost of Investment) / Cost of Investment × 100.",
+      "type": "mc",
+      "question": "Choose the best answer: Return on Investment (ROI) is calculated as:",
       "options": [
-        "True",
-        "False"
+        "(Net Benefit − Cost of Investment) / Cost of Investment × 100",
+        "Revenue, profit margins, return on investment, and economic value added",
+        "The time required for an investment to generate enough returns to recover its initial cost",
+        "Zero upfront investment required"
       ],
-      "answer": "True",
-      "explanation": "True. (Net Benefit − Cost of Investment) / Cost of Investment × 100 is correct.",
+      "answer": "(Net Benefit − Cost of Investment) / Cost of Investment × 100",
+      "explanation": "The best answer is (Net Benefit − Cost of Investment) / Cost of Investment × 100. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -350,14 +356,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Strategic intent, as defined by Hamel and Prahalad, refers to:\" is: A company's annual profit target.",
+      "type": "mc",
+      "question": "Choose the best answer: Strategic intent, as defined by Hamel and Prahalad, refers to:",
       "options": [
-        "True",
-        "False"
+        "An ambitious long-term aspiration that stretches the organization beyond current resources",
+        "A company's annual profit target",
+        "A plan that defines goals and how to achieve them over the long term",
+        "Internal capabilities and resources the company does exceptionally well"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: An obsessive, long-term ambition that stretches the organization beyond its current capabilities.",
+      "answer": "An ambitious long-term aspiration that stretches the organization beyond current resources",
+      "explanation": "The best answer is An ambitious long-term aspiration that stretches the organization beyond current resources. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -408,14 +416,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Cost leadership strategy is most effective when:\" is: Price-sensitive customers make purchase decisions primarily on cost.",
+      "type": "mc",
+      "question": "Choose the best answer: Cost leadership strategy is most effective when:",
       "options": [
-        "True",
-        "False"
+        "Price-sensitive customers make purchase decisions primarily on cost",
+        "Cost Leadership, Differentiation, and Focus",
+        "Produce goods at the lowest possible cost and pass savings to customers",
+        "Leadership"
       ],
-      "answer": "True",
-      "explanation": "True. Price-sensitive customers make purchase decisions primarily on cost is correct.",
+      "answer": "Price-sensitive customers make purchase decisions primarily on cost",
+      "explanation": "The best answer is Price-sensitive customers make purchase decisions primarily on cost. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -466,14 +476,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"In a business case, a risk matrix typically evaluates each identified risk by:\" is: Its financial cost alone.",
+      "type": "mc",
+      "question": "Choose the best answer: In a business case, a risk matrix typically evaluates each identified risk by:",
       "options": [
-        "True",
-        "False"
+        "Likelihood and impact",
+        "Its financial cost alone",
+        "Strategy and tactics mean the same thing in business",
+        "Adapts products and strategies to fit each local market"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Its likelihood of occurrence and its potential impact.",
+      "answer": "Likelihood and impact",
+      "explanation": "The best answer is Likelihood and impact. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -524,14 +536,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"Disruptive innovation, as defined by Clayton Christensen, typically begins by:\" is: Serving overlooked or low-end market segments with simpler, cheaper solutions.",
+      "type": "mc",
+      "question": "Choose the best answer: Disruptive innovation, as defined by Clayton Christensen, typically begins by:",
       "options": [
-        "True",
-        "False"
+        "Serving overlooked or low-end market segments with simpler, cheaper solutions",
+        "A new geographic market with the same product",
+        "Specific and measurable with a defined target",
+        "Low market growth and low relative market share"
       ],
-      "answer": "True",
-      "explanation": "True. Serving overlooked or low-end market segments with simpler, cheaper solutions is correct.",
+      "answer": "Serving overlooked or low-end market segments with simpler, cheaper solutions",
+      "explanation": "The best answer is Serving overlooked or low-end market segments with simpler, cheaper solutions. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -582,14 +596,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following is the best example of a 'Star' in the BCG Matrix\" is: A legacy product with stable sales in a stagnant market.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following is the best example of a 'Star' in the BCG Matrix?",
       "options": [
-        "True",
-        "False"
+        "A product with high market share in a high-growth market",
+        "A legacy product with stable sales in a stagnant market",
+        "A new geographic market with the same product",
+        "Low market growth and high relative market share"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: A new product in a fast-growing market where the company holds the leading share.",
+      "answer": "A product with high market share in a high-growth market",
+      "explanation": "The best answer is A product with high market share in a high-growth market. This checks the course concept directly.",
       "points": 1
     },
     {
@@ -660,13 +676,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Strategy is best defined as:\" is: A plan that defines goals and how to achieve them over the long term.",
+      "question": "Choose the best answer: Strategy is best defined as:",
       "options": [
-        "True",
-        "False"
+        "A detailed daily task list",
+        "A plan that defines goals and how to achieve them over the long term",
+        "A budget forecast for the next quarter",
+        "An employee performance review system"
       ],
-      "answer": "True",
-      "explanation": "True. A plan that defines goals and how to achieve them over the long term is correct.",
+      "answer": "A plan that defines goals and how to achieve them over the long term",
+      "explanation": "Strategy defines where an organization wants to go and the choices it makes to get there - it is directional, long-term, and involves trade-offs.",
       "points": 1
     },
     {
@@ -714,13 +732,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"In PESTLE analysis, rising inflation and interest rates would be classified under:\" is: Economic.",
+      "question": "Choose the best answer: In PESTLE analysis, rising inflation and interest rates would be classified under:",
       "options": [
-        "True",
-        "False"
+        "Political",
+        "Economic",
+        "Social",
+        "Technological"
       ],
-      "answer": "True",
-      "explanation": "True. Economic is correct.",
+      "answer": "Economic",
+      "explanation": "Inflation, interest rates, exchange rates, unemployment, and GDP growth are all Economic factors in the PESTLE framework.",
       "points": 1
     },
     {
@@ -852,25 +872,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"Related diversification occurs when a company expands into:\" is: Businesses that share strategic fit with existing operations.",
+      "question": "Choose the best answer: Related diversification occurs when a company expands into:",
       "options": [
-        "True",
-        "False"
+        "Businesses that share strategic fit with existing operations",
+        "Any industry with high growth potential regardless of connection",
+        "International markets for the first time",
+        "A joint venture with a direct competitor"
       ],
-      "answer": "True",
-      "explanation": "True. Businesses that share strategic fit with existing operations is correct.",
+      "answer": "Businesses that share strategic fit with existing operations",
+      "explanation": "Related diversification leverages shared capabilities, customers, technology, or distribution channels. Strategic fit allows synergies that can lower costs or increase revenue beyond what either business could achieve alone.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Backward vertical integration means a company:\" is: Moves into distributing and selling its products directly to consumers.",
+      "question": "Choose the best answer: Backward vertical integration means a company:",
       "options": [
-        "True",
-        "False"
+        "Moves into distributing and selling its products directly to consumers",
+        "Acquires or develops control over its input suppliers",
+        "Exits the market and outsources all production",
+        "Diversifies into an unrelated industry"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Acquires or develops control over its input suppliers.",
+      "answer": "Acquires or develops control over its input suppliers",
+      "explanation": "Backward integration moves 'upstream' in the supply chain toward raw materials or component suppliers. Forward integration moves 'downstream' toward distribution or retail.",
       "points": 1
     },
     {
@@ -918,13 +942,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"The most common reason strategies fail at the execution stage is:\" is: Poor alignment between strategy and day-to-day operations, incentives, and accountability.",
+      "question": "Choose the best answer: The most common reason strategies fail at the execution stage is:",
       "options": [
-        "True",
-        "False"
+        "The strategy was too innovative",
+        "Poor alignment between strategy and day-to-day operations, incentives, and accountability",
+        "Executives spent too much time planning",
+        "The strategy targeted too profitable a market"
       ],
-      "answer": "True",
-      "explanation": "True. Poor alignment between strategy and day-to-day operations, incentives, and accountability is correct.",
+      "answer": "Poor alignment between strategy and day-to-day operations, incentives, and accountability",
+      "explanation": "Research shows 60-90% of strategies fail in execution. The most common causes: employees don't understand the strategy, incentives don't align with it, and no one is accountable for results.",
       "points": 1
     },
     {
@@ -958,13 +984,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"The correct order of sections in a well-structured strategic plan is typically:\" is: Executive Summary → Situation Analysis → Strategic Objectives → Initiatives → Financials.",
+      "question": "Choose the best answer: The correct order of sections in a well-structured strategic plan is typically:",
       "options": [
-        "True",
-        "False"
+        "Financial projections → Executive Summary → Objectives → Initiatives",
+        "Executive Summary → Situation Analysis → Strategic Objectives → Initiatives → Financials",
+        "Initiatives → Objectives → Financial Projections → Executive Summary",
+        "Mission Statement → Tactics → Budget → Executive Summary"
       ],
-      "answer": "True",
-      "explanation": "True. Executive Summary → Situation Analysis → Strategic Objectives → Initiatives → Financials is correct.",
+      "answer": "Executive Summary → Situation Analysis → Strategic Objectives → Initiatives → Financials",
+      "explanation": "A strategic plan flows logically: executive summary (overview) → situation analysis (where we are) → strategic objectives (where we want to go) → initiatives (how we'll get there) → financial projections (what it will cost and return).",
       "points": 1
     },
     {
@@ -1012,13 +1040,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"The primary purpose of a business case document is to:\" is: Persuade decision-makers to approve a specific investment or course of action.",
+      "question": "Choose the best answer: The primary purpose of a business case document is to:",
       "options": [
-        "True",
-        "False"
+        "Provide a detailed history of the company's past decisions",
+        "Persuade decision-makers to approve a specific investment or course of action",
+        "Replace the annual strategic plan",
+        "Satisfy external audit requirements"
       ],
-      "answer": "True",
-      "explanation": "True. Persuade decision-makers to approve a specific investment or course of action is correct.",
+      "answer": "Persuade decision-makers to approve a specific investment or course of action",
+      "explanation": "A business case is a persuasive document that justifies why a particular investment or decision should be made, using evidence: problem analysis, solution options, financial justification, risk assessment, and a clear recommendation.",
       "points": 1
     }
   ],

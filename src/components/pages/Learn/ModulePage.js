@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getStudentSession } from '../../../api/authStorage';
@@ -6,15 +6,16 @@ import { getApiBase } from '../../../config/apiBase';
 import Nav from '../../main/Nav.js';
 import LessonVideoEmbed from '../../main/LessonVideoEmbed';
 import './learn-mobile.css';
+import { getAssignmentProfile } from './assignmentProfile';
 
 const API = getApiBase();
 
-function ResourceCard({ icon, label, url, note, completedAt, onComplete, marking, completeLabel }) {
+function ResourceCard({ icon, label, url, note, completedAt }) {
   if (!url) return null;
   const isDone = !!completedAt;
   return (
     <div style={{ display: 'flex', gap: '10px', alignItems: 'stretch', flexWrap: 'wrap' }}>
-      <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', flex: '1 1 360px' }}>
+      <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', flex: '1 1 100%' }}>
       <div style={{
         display: 'flex', alignItems: 'flex-start', gap: '12px',
         padding: '16px', background: '#f8f9fd', border: '1px solid #e0e6f0',
@@ -28,29 +29,16 @@ function ResourceCard({ icon, label, url, note, completedAt, onComplete, marking
           <p style={{ margin: 0, fontSize: '11px', fontWeight: 700, color: '#2b3d6d', textTransform: 'uppercase', letterSpacing: '1px' }}>{label}</p>
           <p style={{ margin: '3px 0 0', fontSize: '13px', color: '#444', lineHeight: 1.4 }}>{note || url}</p>
         </div>
-        <span style={{ marginLeft: 'auto', fontSize: '16px', color: '#aaa', flexShrink: 0 }}>↗</span>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px', flexShrink: 0 }}>
+          <span style={{ fontSize: '16px', color: '#aaa' }}>↗</span>
+          {isDone && (
+            <span style={{ fontSize: '10px', fontWeight: 800, color: '#1b5e20', background: '#e8f5e9', border: '1px solid #a5d6a7', borderRadius: '999px', padding: '2px 8px' }}>
+              Done
+            </span>
+          )}
+        </div>
       </div>
       </a>
-      <button
-        type="button"
-        onClick={onComplete}
-        disabled={isDone || marking}
-        style={{
-          flex: '0 0 auto',
-          minWidth: '128px',
-          padding: '12px 14px',
-          borderRadius: '8px',
-          border: `1px solid ${isDone ? '#a5d6a7' : '#c5d0f0'}`,
-          background: isDone ? '#e8f5e9' : '#fff',
-          color: isDone ? '#1b5e20' : '#2b3d6d',
-          fontSize: '12px',
-          fontWeight: 800,
-          cursor: isDone || marking ? 'default' : 'pointer',
-        }}
-        title={isDone ? new Date(completedAt).toLocaleString() : completeLabel}
-      >
-        {isDone ? 'Done' : marking ? 'Saving...' : completeLabel}
-      </button>
     </div>
   );
 }
@@ -65,12 +53,65 @@ function ScoreBadge({ score, passed }) {
   );
 }
 
+function ModuleLoadingState({ isEn, moduleOrder, courseName, inline = false }) {
+  const content = (
+    <div role="status" aria-live="polite" style={{
+      padding: inline ? '18px 22px' : '22px 24px',
+      background: '#fffaf2',
+      border: '1px solid #f4c36a',
+      borderRadius: '10px',
+      color: '#8a5a00',
+      fontSize: '14px',
+      fontWeight: 700,
+      lineHeight: 1.55,
+    }}>
+      <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#6f4600' }}>
+        {isEn ? `Switching to Module ${moduleOrder}...` : `正在切换到模块 ${moduleOrder}...`}
+      </p>
+      <p style={{ margin: 0, fontSize: '13px', color: '#8a5a00', fontWeight: 600 }}>
+        {isEn
+          ? `${courseName ? `${courseName} ` : ''}quiz, assignment, and resources are refreshing together.`
+          : `${courseName ? `${courseName} ` : ''}测验、作业与学习资源正在一起刷新。`}
+      </p>
+    </div>
+  );
+  if (inline) return content;
+  return (
+    <>
+      <div className="row"><Nav language={isEn ? 'en' : 'zh-CN'} /></div>
+      <div data-m="learn-page" style={{ maxWidth: '820px', margin: '0 auto', padding: '48px 5% 80px', fontFamily: 'Inter, sans-serif' }}>
+        {content}
+      </div>
+    </>
+  );
+}
+
+function modulePurpose({ course, mod, moduleOrder, isEn }) {
+  const title = isEn ? mod.title : (mod.titleZh || mod.title);
+  const courseName = isEn ? course?.name : (course?.nameZh || course?.name);
+  if (!title || !courseName) return '';
+
+  if (course?.department === 'English' || course?.department === 'English Language Arts') {
+    return isEn
+      ? `Why it matters: ${title} builds the reading and writing habits students reuse in later English, research, and college-readiness work.`
+      : `为什么重要：${title} 会成为后续英语、研究写作与大学准备任务的基础能力。`;
+  }
+  if (course?.department === 'Mathematics') {
+    return isEn
+      ? `Why it matters: these skills become working tools for later math, science, and data problems.`
+      : `为什么重要：这些技能会在后续数学、科学与数据题目中反复用到。`;
+  }
+  return isEn
+    ? `Why it matters: this module connects ${courseName} Module ${moduleOrder} to later coursework and stronger submitted work.`
+    : `为什么重要：本模块会衔接 ${courseName} 后续学习，并帮助你提交更完整的作业。`;
+}
+
 export default function ModulePage({ language }) {
   const isEn = language !== 'zh';
   const { slug, order } = useParams();
   const moduleOrder = parseInt(order, 10);
   const navigate = useNavigate();
-  const session = getStudentSession();
+  const [session] = useState(() => getStudentSession());
 
   const [mod, setMod] = useState(null);
   const [course, setCourse] = useState(null);
@@ -89,15 +130,38 @@ export default function ModulePage({ language }) {
   const [assigning, setAssigning] = useState(false);
   const [assignDone, setAssignDone] = useState(false);
   const [moduleProgress, setModuleProgress] = useState(null);
-  const [progressSaving, setProgressSaving] = useState('');
 
   const [error, setError] = useState('');
+  const [loadingModule, setLoadingModule] = useState(true);
+  const requestSeq = useRef(0);
 
-  const load = useCallback(() => {
+  function resetModuleState() {
+    setMod(null);
+    setQuizQuestions([]);
+    setPrevAttempt(null);
+    setQuizAnswers({});
+    setQuizResult(null);
+    setQuizPhase('idle');
+    setQuizSubmitting(false);
+    setAssignmentText('');
+    setPrevSubmission(null);
+    setAssigning(false);
+    setAssignDone(false);
+    setModuleProgress(null);
+    setError('');
+    setLoadingModule(true);
+  }
+
+  const load = useCallback((options = {}) => {
     if (!session) return;
-    fetch(`${API}/api/enrollments/${slug}`, { credentials: 'include' })
+    const seq = options.seq || ++requestSeq.current;
+    const signal = options.signal;
+    if (options.reset !== false) resetModuleState();
+
+    fetch(`${API}/api/enrollments/${slug}`, { credentials: 'include', signal })
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d) => {
+        if (signal?.aborted || seq !== requestSeq.current) return;
         setCourse(d.course);
         const m = (d.course?.modules || []).find((x) => x.order === moduleOrder);
         if (!m) { navigate(`/learn/${slug}`, { replace: true }); return; }
@@ -109,9 +173,13 @@ export default function ModulePage({ language }) {
           setPrevAttempt(qa);
           setQuizPhase('submitted');
           // Auto-load questions for review (backend returns correct answers when attempt exists)
-          fetch(`${API}/api/enrollments/${slug}/quiz/${moduleOrder}`, { credentials: 'include' })
+          fetch(`${API}/api/enrollments/${slug}/quiz/${moduleOrder}`, { credentials: 'include', signal })
             .then((r) => r.ok ? r.json() : {})
-            .then((qd) => { if (qd.questions?.length) setQuizQuestions(qd.questions); });
+            .then((qd) => {
+              if (signal?.aborted || seq !== requestSeq.current) return;
+              if (qd.questions?.length) setQuizQuestions(qd.questions);
+            })
+            .catch(() => {});
         }
 
         // assignment
@@ -119,13 +187,21 @@ export default function ModulePage({ language }) {
         if (as) { setPrevSubmission(as); setAssignmentText(as.content); }
         const progress = d.enrollment?.moduleProgresses?.find((p) => p.moduleOrder === moduleOrder);
         setModuleProgress(progress || null);
+        setLoadingModule(false);
       })
-      .catch(() => setError('Failed to load module'));
+      .catch((err) => {
+        if (err?.name === 'AbortError' || signal?.aborted || seq !== requestSeq.current) return;
+        setLoadingModule(false);
+        setError('Failed to load module');
+      });
   }, [slug, moduleOrder, session, navigate]);
 
   useEffect(() => {
     if (!session) { navigate('/login', { replace: true }); return; }
-    load();
+    const controller = new AbortController();
+    const seq = ++requestSeq.current;
+    load({ signal: controller.signal, seq });
+    return () => controller.abort();
   }, [session, navigate, load]);
 
   async function loadQuiz() {
@@ -149,7 +225,7 @@ export default function ModulePage({ language }) {
     if (!r.ok) { setError(d.error || 'Quiz submission failed'); return; }
     setQuizResult(d);
     setQuizPhase('submitted');
-    load(); // refresh enrollment (completedModules updated)
+    load({ reset: false }); // refresh enrollment (completedModules updated)
   }
 
   async function submitAssignment() {
@@ -162,30 +238,18 @@ export default function ModulePage({ language }) {
       body: JSON.stringify({ content: assignmentText }),
     });
     setAssigning(false);
-    if (r.ok) { const d = await r.json(); setPrevSubmission(d); setAssignDone(true); load(); }
-  }
-
-  async function markProgress(flag) {
-    setProgressSaving(flag);
-    const r = await fetch(`${API}/api/enrollments/${slug}/module/${moduleOrder}/progress`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({ [flag]: true }),
-    });
-    setProgressSaving('');
-    const d = await r.json().catch(() => ({}));
-    if (!r.ok) { setError(d.error || 'Progress update failed'); return; }
-    setModuleProgress(d);
+    if (r.ok) { const d = await r.json(); setPrevSubmission(d); setAssignDone(true); load({ reset: false }); }
   }
 
   if (!session) return null;
   if (error) return <div style={{ padding: '80px 10%', fontFamily: 'Inter', color: '#c62828' }}>{error}</div>;
-  if (!mod) return <div style={{ padding: '80px 10%', fontFamily: 'Inter', color: '#888' }}>{isEn ? 'Loading…' : '加载中…'}</div>;
+  if (!mod) return <ModuleLoadingState isEn={isEn} moduleOrder={moduleOrder} />;
 
   const totalModules = course?.modules?.length || 0;
   const quizAnsweredCount = Object.keys(quizAnswers).length;
   const quizAttempt = quizResult || prevAttempt;
+  const assignmentProfile = mod.assignment ? getAssignmentProfile(mod.assignment) : null;
+  const purpose = modulePurpose({ course, mod, moduleOrder, isEn });
 
   return (
     <>
@@ -227,9 +291,26 @@ export default function ModulePage({ language }) {
               {isEn ? 'Learning Objectives' : '学习目标'}
             </p>
             <p style={{ margin: 0, fontSize: '14px', color: '#333', lineHeight: 1.7 }}>{mod.objectives}</p>
+            {purpose && (
+              <p style={{ margin: '10px 0 0', fontSize: '13px', color: '#2b3d6d', lineHeight: 1.55, fontWeight: 700 }}>
+                {purpose}
+              </p>
+            )}
           </section>
         )}
 
+        {loadingModule && (
+          <div style={{ marginBottom: '32px' }}>
+            <ModuleLoadingState
+              isEn={isEn}
+              moduleOrder={moduleOrder}
+              courseName={isEn ? course?.name : (course?.nameZh || course?.name)}
+              inline
+            />
+          </div>
+        )}
+
+        {!loadingModule && (<>
         {/* GIIS-recorded lecture (renders only when this module has been
             uploaded to YouTube — the manifest at /data/lessons-manifest.json
             is the source of truth). We also pass the current module title so
@@ -251,9 +332,6 @@ export default function ModulePage({ language }) {
               url={mod.readingUrl}
               note={mod.readingNote}
               completedAt={moduleProgress?.readingCompletedAt}
-              onComplete={() => markProgress('readingCompleted')}
-              marking={progressSaving === 'readingCompleted'}
-              completeLabel={isEn ? 'Mark read' : '标记已读'}
             />
             <ResourceCard
               icon="▶️"
@@ -261,9 +339,6 @@ export default function ModulePage({ language }) {
               url={mod.videoUrl}
               note={mod.videoNote}
               completedAt={moduleProgress?.videoCompletedAt}
-              onComplete={() => markProgress('videoCompleted')}
-              marking={progressSaving === 'videoCompleted'}
-              completeLabel={isEn ? 'Mark watched' : '标记已看'}
             />
             {mod.video2Url && (
               <ResourceCard
@@ -272,9 +347,6 @@ export default function ModulePage({ language }) {
                 url={mod.video2Url}
                 note={mod.video2Note}
                 completedAt={moduleProgress?.supplementalVideoCompletedAt}
-                onComplete={() => markProgress('supplementalVideoCompleted')}
-                marking={progressSaving === 'supplementalVideoCompleted'}
-                completeLabel={isEn ? 'Mark watched' : '标记已看'}
               />
             )}
             <ResourceCard
@@ -283,9 +355,6 @@ export default function ModulePage({ language }) {
               url={mod.practiceUrl}
               note={mod.practiceNote}
               completedAt={moduleProgress?.practiceCompletedAt}
-              onComplete={() => markProgress('practiceCompleted')}
-              marking={progressSaving === 'practiceCompleted'}
-              completeLabel={isEn ? 'Mark done' : '标记完成'}
             />
           </div>
         </section>
@@ -299,6 +368,40 @@ export default function ModulePage({ language }) {
               </p>
               <p style={{ margin: 0, fontSize: '14px', color: '#333', lineHeight: 1.7 }}>{mod.assignment}</p>
             </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '10px', marginBottom: '14px' }}>
+              {[
+                {
+                  title: isEn ? 'Evidence type' : '作业类型',
+                  body: isEn ? assignmentProfile.label.en : assignmentProfile.label.zh,
+                },
+                {
+                  title: isEn ? 'How to submit' : '如何提交',
+                  body: isEn ? assignmentProfile.evidence.en : assignmentProfile.evidence.zh,
+                },
+                {
+                  title: isEn ? 'Who reviews it' : '谁来批改',
+                  body: isEn ? 'A GIIS teacher or advisor reviews submitted work from the admin grading queue.' : 'GIIS 老师或顾问会在后台批改队列中审阅提交内容。',
+                },
+                {
+                  title: isEn ? 'What is graded' : '评分依据',
+                  body: isEn ? assignmentProfile.rubricFocus.en : assignmentProfile.rubricFocus.zh,
+                },
+                {
+                  title: isEn ? 'Review target' : '批改时限',
+                  body: isEn ? 'Most assignments are reviewed within 5 business days; feedback appears here when graded.' : '多数作业会在 5 个工作日内批改，完成后反馈会显示在这里。',
+                },
+              ].map((item) => (
+                <div key={item.title} style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: '8px', padding: '12px 14px' }}>
+                  <p style={{ margin: '0 0 5px', fontSize: '11px', fontWeight: 800, color: '#2b3d6d', textTransform: 'uppercase', letterSpacing: '0.6px' }}>{item.title}</p>
+                  <p style={{ margin: 0, fontSize: '12px', color: '#555', lineHeight: 1.55 }}>{item.body}</p>
+                </div>
+              ))}
+            </div>
+            {prevSubmission?.score != null && (
+              <div style={{ padding: '12px 16px', background: '#f0f4ff', border: '1px solid #c5d0f0', borderRadius: '8px', marginBottom: '12px', fontSize: '13px', color: '#2b3d6d', fontWeight: 700 }}>
+                {isEn ? 'Assignment score: ' : '作业分数：'}{Math.round(Number(prevSubmission.score))}/100
+              </div>
+            )}
             {prevSubmission?.feedback && (
               <div style={{ padding: '14px 18px', background: '#e8f5e9', border: '1px solid #a5d6a7', borderRadius: '8px', marginBottom: '12px', fontSize: '13px', color: '#1b5e20' }}>
                 <strong>{isEn ? 'Teacher feedback: ' : '教师评语：'}</strong>{prevSubmission.feedback}
@@ -425,6 +528,13 @@ export default function ModulePage({ language }) {
                     ? (isEn ? '✓ Passed — next module unlocked!' : '✓ 通过！下一模块已解锁！')
                     : (isEn ? 'Keep reviewing and move on — your score is recorded.' : '继续复习，分数已记录，可以进行下一模块。')}
                 </p>
+                {!quizAttempt.passed && (
+                  <p style={{ margin: '8px 0 0', fontSize: '13px', color: '#8a5a00', lineHeight: 1.55 }}>
+                    {isEn
+                      ? 'Before the next quiz or exam, review this module\'s objectives and study resources, then rewrite the missed ideas in your own words.'
+                      : '进入下一次测验或考试前，建议先回看本模块学习目标与资源，并用自己的话整理答错的概念。'}
+                  </p>
+                )}
               </div>
 
               {/* Answer breakdown — works on first submit (quizResult) and on revisit (quizQuestions loaded) */}
@@ -498,6 +608,7 @@ export default function ModulePage({ language }) {
             </Link>
           ) : null}
         </div>
+        </>)}
       </div>
     </>
   );

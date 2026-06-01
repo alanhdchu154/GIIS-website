@@ -240,6 +240,13 @@ export default function GradesPage({ language }) {
           <ScorePill label={isEn ? 'Midterm' : '期中考试'} score={grade.midScore} weight={0.3} color='#C84B0A' />
           <ScorePill label={isEn ? 'Final Exam' : '期末考试'} score={grade.finalScore} weight={0.3} color='#1B6B3A' />
         </div>
+        <div style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 10, padding: '12px 16px', margin: '-24px 0 32px' }}>
+          <p style={{ margin: 0, fontSize: 12, lineHeight: 1.55, color: '#5c6578' }}>
+            {isEn
+              ? 'Assignment scores are recorded separately as learning evidence. They are not part of the 40/30/30 transcript grade yet, but every module assignment must be submitted before the final exam unlocks.'
+              : '作业分数会作为学习证据单独记录，目前尚未计入 40/30/30 成绩单权重；但每个模块作业都必须提交后，期末考试才会解锁。'}
+          </p>
+        </div>
 
         {/* ── Module Quizzes Table ── */}
         <section style={{ marginBottom: '40px' }}>
@@ -279,7 +286,16 @@ export default function GradesPage({ language }) {
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   {row.assignment
-                    ? <span style={{ fontSize: '11px', color: '#2e7d32', fontWeight: 700 }}>✓ {isEn ? 'Submitted' : '已提交'}</span>
+                    ? (
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3px' }}>
+                        <span style={{ fontSize: '11px', color: row.assignment.gradedAt ? '#2e7d32' : '#e65100', fontWeight: 700 }}>
+                          {row.assignment.gradedAt ? (isEn ? 'Reviewed' : '已批改') : (isEn ? 'Submitted' : '已提交')}
+                        </span>
+                        {row.assignment.score != null && (
+                          <span style={{ fontSize: '11px', color: '#2b3d6d', fontWeight: 700 }}>{Math.round(Number(row.assignment.score))}/100</span>
+                        )}
+                      </div>
+                    )
                     : <span style={{ fontSize: '11px', color: '#aaa' }}>—</span>}
                 </div>
                 <div style={{ textAlign: 'right' }}>

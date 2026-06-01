@@ -38,8 +38,8 @@ const SERVICES = [
     zh: { title: '大学申请支持', label: '你将获得', items: ['以大学申请为导向的选课策略', '申请时程与截止日期规划', '申请文书审阅（高四学年）', '学校简介与成绩单准备协助'] },
   },
   {
-    en: { title: 'Assignment Feedback', label: 'What you get', items: ['Written feedback on every submitted assignment', 'Scores visible in Learn Portal within 5 business days', 'Revision guidance when needed', 'Parent notified on graded assignments'] },
-    zh: { title: '作业批改与反馈', label: '你将获得', items: ['每份作业均附书面批改意见', '5 个工作日内成绩显示于学习平台', '需要时提供修改指引', '批改完成后通知家长'] },
+    en: { title: 'Assignment Feedback', label: 'What you get', items: ['Submit work as portal text, a Google Doc link, or a project link', 'Written feedback on every submitted assignment', 'Scores visible in Learn Portal within 5 business days', 'Parent dashboard shows graded work and full feedback'] },
+    zh: { title: '作业批改与反馈', label: '你将获得', items: ['可用平台文字、Google Doc 链接或项目链接提交作业', '每份作业均附书面批改意见', '5 个工作日内成绩显示于学习平台', '家长面板会显示已批改作业与完整反馈'] },
   },
   {
     en: { title: 'Wellbeing Counseling', label: 'What you get', items: ['Emotional support for online learners', 'Study habit and time management coaching', 'Referral to professional resources when needed', 'Confidential — separate from academic record'] },

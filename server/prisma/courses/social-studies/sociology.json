@@ -266,14 +266,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Informed consent in sociological research means:\" is: Participants agree to take part after being told the study's purpose and risks.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Informed consent in sociological research means:",
       "options": [
-        "True",
-        "False"
+        "Participants agree to take part after being told the study's purpose, risks, and rights",
+        "Participants are never told the study topic",
+        "Researchers may use data without permission",
+        "Participants must agree before risks are explained"
       ],
-      "answer": "True",
-      "explanation": "True. Participants agree to take part after being told the study's purpose and risks is correct.",
+      "answer": "Participants agree to take part after being told the study's purpose, risks, and rights",
+      "explanation": "The correct answer is: Participants agree to take part after being told the study's purpose, risks, and rights.",
       "points": 1
     },
     {
@@ -324,14 +326,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which agent of socialization is considered the most influential during early childhood\" is: Peer groups.",
+      "type": "mc",
+      "question": "In this course, which agent of socialization is considered the most influential during early childhood?",
       "options": [
-        "True",
-        "False"
+        "Family",
+        "Peer groups",
+        "The workplace",
+        "Political parties"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: The family.",
+      "answer": "Family",
+      "explanation": "The correct answer is: Family.",
       "points": 1
     },
     {
@@ -382,14 +386,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Socioeconomic status (SES) is typically measured by a combination of:\" is: Income, education, and occupational prestige.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Socioeconomic status (SES) is typically measured by a combination of:",
       "options": [
-        "True",
-        "False"
+        "Income, education, and occupational prestige",
+        "Age, height, and birthplace",
+        "Political party, religion, and language only",
+        "Family size and favorite media"
       ],
-      "answer": "True",
-      "explanation": "True. Income, education, and occupational prestige is correct.",
+      "answer": "Income, education, and occupational prestige",
+      "explanation": "The correct answer is: Income, education, and occupational prestige.",
       "points": 1
     },
     {
@@ -430,14 +436,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Symbolic interactionism is most focused on:\" is: Large-scale social structures and institutions.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Symbolic interactionism is most focused on:",
       "options": [
-        "True",
-        "False"
+        "Everyday interaction and the meanings people attach to symbols",
+        "Large-scale social structures and institutions",
+        "Biological inheritance as the only cause of behavior",
+        "Economic class conflict only"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Everyday face-to-face interactions and the meanings people attach to symbols.",
+      "answer": "Everyday interaction and the meanings people attach to symbols",
+      "explanation": "The correct answer is: Everyday interaction and the meanings people attach to symbols.",
       "points": 1
     },
     {
@@ -488,14 +496,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"A bureaucracy, as described by Max Weber, is characterized by:\" is: Hierarchical authority, written rules, specialized roles, and impersonality.",
+      "type": "mc",
+      "question": "Which option best completes this statement? A bureaucracy, as described by Max Weber, is characterized by:",
       "options": [
-        "True",
-        "False"
+        "Hierarchical authority, written rules, specialized roles, and impersonality",
+        "No formal rules or job roles",
+        "Decisions based only on personal relationships",
+        "Temporary groups with no authority structure"
       ],
-      "answer": "True",
-      "explanation": "True. Hierarchical authority, written rules, specialized roles, and impersonality is correct.",
+      "answer": "Hierarchical authority, written rules, specialized roles, and impersonality",
+      "explanation": "The correct answer is: Hierarchical authority, written rules, specialized roles, and impersonality.",
       "points": 1
     },
     {
@@ -546,14 +556,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"The 'glass ceiling' refers to:\" is: A transparent barrier in a factory for safety.",
+      "type": "mc",
+      "question": "Which option best completes this statement? The 'glass ceiling' refers to:",
       "options": [
-        "True",
-        "False"
+        "An informal barrier that limits advancement for women or marginalized groups",
+        "A transparent barrier in a factory for safety",
+        "A formal law requiring equal promotion rates",
+        "A classroom seating arrangement"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Invisible barriers that prevent women and minorities from advancing to top leadership positions.",
+      "answer": "An informal barrier that limits advancement for women or marginalized groups",
+      "explanation": "The correct answer is: An informal barrier that limits advancement for women or marginalized groups.",
       "points": 1
     },
     {
@@ -659,14 +671,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which concept describes the process by which religious influence declines in modern societies\" is: Fundamentalism.",
+      "type": "mc",
+      "question": "In this course, which concept describes the process by which religious influence declines in modern societies?",
       "options": [
-        "True",
-        "False"
+        "Secularization",
+        "Fundamentalism",
+        "Bureaucratization",
+        "Assimilation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Secularization.",
+      "answer": "Secularization",
+      "explanation": "The correct answer is: Secularization.",
       "points": 1
     },
     {
@@ -732,22 +746,24 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Sociology is best defined as:\" is: The scientific study of society, social behavior, and human groups.",
+      "question": "Which option best completes this statement? Sociology is best defined as:",
       "options": [
-        "True",
-        "False"
+        "The study of individual mental processes",
+        "The scientific study of society, social behavior, and human groups",
+        "The study of political systems and governments",
+        "The study of cultural artifacts and art"
       ],
-      "answer": "True",
-      "explanation": "True. The scientific study of society, social behavior, and human groups is correct.",
+      "answer": "The scientific study of society, social behavior, and human groups",
+      "explanation": "The correct answer is: The scientific study of society, social behavior, and human groups.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which sociologist is considered one of the founders of sociology and introduced the concept of 'anomie'.\"",
+      "question": "Short response: Which sociologist is considered one of the founders of sociology and introduced the concept of 'anomie'?",
       "options": null,
       "answer": "Emile Durkheim",
-      "explanation": "The correct answer is: Emile Durkheim.",
+      "explanation": "A correct response identifies \"Emile Durkheim\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -795,13 +811,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"A hypothesis in sociological research is:\" is: A testable prediction about the relationship between variables.",
+      "question": "Which option best completes this statement? A hypothesis in sociological research is:",
       "options": [
-        "True",
-        "False"
+        "A proven fact about social behavior",
+        "A testable prediction about the relationship between variables",
+        "A summary of findings after a study",
+        "A research technique used in fieldwork"
       ],
-      "answer": "True",
-      "explanation": "True. A testable prediction about the relationship between variables is correct.",
+      "answer": "A testable prediction about the relationship between variables",
+      "explanation": "The correct answer is: A testable prediction about the relationship between variables.",
       "points": 1
     },
     {
@@ -933,25 +951,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"A master status is:\" is: The social position that overrides all others and dominates how others see a person.",
+      "question": "Which option best completes this statement? A master status is:",
       "options": [
-        "True",
-        "False"
+        "The highest-ranked person in a social group",
+        "The social position that overrides all others and dominates how others see a person",
+        "Any status earned through achievement",
+        "A temporary role held for a short period"
       ],
-      "answer": "True",
-      "explanation": "True. The social position that overrides all others and dominates how others see a person is correct.",
+      "answer": "The social position that overrides all others and dominates how others see a person",
+      "explanation": "The correct answer is: The social position that overrides all others and dominates how others see a person.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Role conflict occurs when:\" is: A person fails to perform any of their roles.",
+      "question": "Which option best completes this statement? Role conflict occurs when:",
       "options": [
-        "True",
-        "False"
+        "A person fails to perform any of their roles",
+        "Two or more of a person's roles have incompatible demands",
+        "A social role disappears due to cultural change",
+        "A person takes on too many roles simultaneously"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Two or more of a person's roles have incompatible demands.",
+      "answer": "Two or more of a person's roles have incompatible demands",
+      "explanation": "The correct answer is: Two or more of a person's roles have incompatible demands.",
       "points": 1
     },
     {
@@ -999,13 +1021,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Deviance is defined sociologically as:\" is: Behavior that violates widely accepted social norms.",
+      "question": "Which option best completes this statement? Deviance is defined sociologically as:",
       "options": [
-        "True",
-        "False"
+        "Any behavior that is illegal",
+        "Behavior that violates widely accepted social norms",
+        "Actions that are harmful to individuals",
+        "Behavior that is unusual or rare"
       ],
-      "answer": "True",
-      "explanation": "True. Behavior that violates widely accepted social norms is correct.",
+      "answer": "Behavior that violates widely accepted social norms",
+      "explanation": "The correct answer is: Behavior that violates widely accepted social norms.",
       "points": 1
     },
     {
@@ -1039,22 +1063,24 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"Social stratification refers to:\" is: The layered ranking of groups in society based on access to wealth, power, and prestige.",
+      "question": "Which option best completes this statement? Social stratification refers to:",
       "options": [
-        "True",
-        "False"
+        "Individual differences in personality and ability",
+        "The layered ranking of groups in society based on access to wealth, power, and prestige",
+        "Geographic differences between regions of a country",
+        "Cultural differences between ethnic groups"
       ],
-      "answer": "True",
-      "explanation": "True. The layered ranking of groups in society based on access to wealth, power, and prestige is correct.",
+      "answer": "The layered ranking of groups in society based on access to wealth, power, and prestige",
+      "explanation": "The correct answer is: The layered ranking of groups in society based on access to wealth, power, and prestige.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which concept captures the total value of a person's assets minus debts.\"",
+      "question": "Short response: Which concept captures the total value of a person's assets minus debts?",
       "options": null,
       "answer": "Wealth",
-      "explanation": "The correct answer is: Wealth.",
+      "explanation": "A correct response identifies \"Wealth\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1102,13 +1128,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Race is considered a social construction because:\" is: The categories, meanings, and boundaries of race are created and changed by society, not biology.",
+      "question": "Which option best completes this statement? Race is considered a social construction because:",
       "options": [
-        "True",
-        "False"
+        "Racial categories are consistent across all human societies and history",
+        "Biological research has definitively identified distinct human races",
+        "The categories, meanings, and boundaries of race are created and changed by society, not biology",
+        "Race is determined purely by ancestry and genetics"
       ],
-      "answer": "True",
-      "explanation": "True. The categories, meanings, and boundaries of race are created and changed by society, not biology is correct.",
+      "answer": "The categories, meanings, and boundaries of race are created and changed by society, not biology",
+      "explanation": "The correct answer is: The categories, meanings, and boundaries of race are created and changed by society, not biology.",
       "points": 1
     },
     {
@@ -1240,25 +1268,29 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "True or False: The answer to \"A manifest function of education is:\" is: Transmitting academic knowledge and skills.",
+      "question": "Which option best completes this statement? A manifest function of education is:",
       "options": [
-        "True",
-        "False"
+        "Teaching students how to conform to social norms",
+        "Providing childcare so parents can work",
+        "Transmitting academic knowledge and skills",
+        "Creating social networks through peer interaction"
       ],
-      "answer": "True",
-      "explanation": "True. Transmitting academic knowledge and skills is correct.",
+      "answer": "Transmitting academic knowledge and skills",
+      "explanation": "The correct answer is: Transmitting academic knowledge and skills.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "True or False: The answer to \"A latent function of education is:\" is: Transmitting knowledge and literacy.",
+      "question": "Which option best completes this statement? A latent function of education is:",
       "options": [
-        "True",
-        "False"
+        "Transmitting knowledge and literacy",
+        "Providing a marriage market for young adults to meet potential partners",
+        "Awarding academic credentials for employment",
+        "Following a mandatory curriculum set by the government"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Providing a marriage market for young adults to meet potential partners.",
+      "answer": "Providing a marriage market for young adults to meet potential partners",
+      "explanation": "The correct answer is: Providing a marriage market for young adults to meet potential partners.",
       "points": 1
     },
     {
@@ -1306,13 +1338,15 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "True or False: The answer to \"Emile Durkheim argued that religion's primary social function is to:\" is: Create social cohesion and collective identity through shared rituals.",
+      "question": "Which option best completes this statement? Emile Durkheim argued that religion's primary social function is to:",
       "options": [
-        "True",
-        "False"
+        "Control individual behavior through fear of divine punishment",
+        "Create social cohesion and collective identity through shared rituals",
+        "Provide explanations for natural phenomena",
+        "Support the economic system by promoting a work ethic"
       ],
-      "answer": "True",
-      "explanation": "True. Create social cohesion and collective identity through shared rituals is correct.",
+      "answer": "Create social cohesion and collective identity through shared rituals",
+      "explanation": "The correct answer is: Create social cohesion and collective identity through shared rituals.",
       "points": 1
     },
     {
@@ -1346,13 +1380,15 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "True or False: The answer to \"Max Weber identified three types of legitimate authority. Traditional authority is based on:\" is: Long-standing customs and inherited positions (e.g., monarchy).",
+      "question": "Which option best completes this statement? Max Weber identified three types of legitimate authority. Traditional authority is based on:",
       "options": [
-        "True",
-        "False"
+        "Written laws and formal rules",
+        "The personal charisma and magnetism of a leader",
+        "Long-standing customs and inherited positions (e.g., monarchy)",
+        "Popular democratic elections"
       ],
-      "answer": "True",
-      "explanation": "True. Long-standing customs and inherited positions (e.g., monarchy) is correct.",
+      "answer": "Long-standing customs and inherited positions (e.g., monarchy)",
+      "explanation": "The correct answer is: Long-standing customs and inherited positions (e.g., monarchy).",
       "points": 1
     }
   ],

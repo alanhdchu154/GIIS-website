@@ -40,11 +40,14 @@ const PREVIEW = {
   },
   courses: [
     { dept: { en: 'Computer Science', zh: '计算机科学' }, code: 'CS', color: '#1565C0',
-      name: 'AP Computer Science A', meta: { en: 'Module 9 of 14 · Last activity 2 days ago', zh: '第 9 / 14 模块 · 2 天前最后活动' }, pct: 64 },
-    { dept: { en: 'Mathematics', zh: '数学' }, code: 'M', color: '#4527A0',
-      name: 'Calculus', meta: { en: 'Module 11 of 14 · Final exam ready', zh: '第 11 / 14 模块 · 期末考试已准备' }, pct: 79 },
+      name: 'AP Computer Science A', meta: { en: 'Module 9 of 14 · Last activity 2 days ago', zh: '第 9 / 14 模块 · 2 天前最后活动' }, pct: 64,
+      pace: { en: 'Behind 1 week', zh: '落后 1 周', kind: 'behind' } },
+    { dept: { en: 'English', zh: '英语' }, code: 'E', color: '#C84B0A',
+      name: 'English IV Portfolio Writing', meta: { en: 'Module 5 of 8 · Draft feedback received', zh: '第 5 / 8 模块 · 已收到草稿反馈' }, pct: 63,
+      pace: { en: 'On Track', zh: '进度正常', kind: 'on_track' } },
     { dept: { en: 'Economics', zh: '经济' }, code: 'EC', color: '#1B6B3A',
-      name: 'AP Microeconomics', meta: { en: 'Module 6 of 12 · Midterm passed (88%)', zh: '第 6 / 12 模块 · 期中通过 88%' }, pct: 50 },
+      name: 'AP Microeconomics', meta: { en: 'Module 6 of 12 · Midterm passed (88%)', zh: '第 6 / 12 模块 · 期中通过 88%' }, pct: 50,
+      pace: { en: 'On Track', zh: '进度正常', kind: 'on_track' } },
   ],
   activity: [
     { kind: 'green', icon: '✓', when: { en: 'May 7 · 2 days ago', zh: '5 月 7 日 · 2 天前' },
@@ -54,7 +57,11 @@ const PREVIEW = {
     { kind: 'feedback', icon: '📝', when: { en: 'May 6 · 3 days ago', zh: '5 月 6 日 · 3 天前' },
       lead: { en: 'Teacher feedback received on ', zh: '收到老师对 ' },
       bold: 'AP CS A — Module 8 assignment',
-      tail: { en: ' (95/100)', zh: ' 的反馈（95/100）' } },
+      tail: { en: ' (95/100)', zh: ' 的反馈（95/100）' },
+      feedback: {
+        en: 'Strength: clear loop logic and readable variable names. Correction: add one edge-case test for empty input. Next action: revise the test table before Module 9.',
+        zh: '优点：循环逻辑清楚，变量命名易读。订正：补一个空输入的边界测试。下一步：进入第 9 模块前更新测试表。',
+      } },
     { kind: 'blue', icon: '📖', when: { en: 'May 5 · 4 days ago', zh: '5 月 5 日 · 4 天前' },
       lead: { en: 'Completed ', zh: '完成 ' },
       bold: 'Module 6',
@@ -69,12 +76,12 @@ const PREVIEW = {
     zh: '"芸帆这周保持稳定的学习节奏，按计划在 6 月毕业。我们现在专注于他的大学申请文书草稿。他对工程科学路径的期末考已经准备充分。"',
   },
   upcoming: [
-    { day: { en: 'May', zh: '5月' }, num: 14, what: { en: 'AP Calculus AB Final', zh: 'AP 微积分 AB 期末考' },
-      sub: { en: 'Tuesday · 70% to pass', zh: '周二 · 70% 通过门槛' } },
-    { day: { en: 'May', zh: '5月' }, num: 21, what: { en: 'AP CS A — Module 10 due', zh: 'AP CS A 第 10 模块截止' },
+    { day: { en: 'MAY', zh: 'MAY' }, num: 21, what: { en: 'AP CS A — Module 10 due', zh: 'AP CS A 第 10 模块截止' },
       sub: { en: 'Tuesday · Project submission', zh: '周二 · 项目提交' } },
-    { day: { en: 'Jun', zh: '6月' }, num: 14, what: { en: 'Diploma eligibility', zh: '文凭达成日' },
+    { day: { en: 'JUN', zh: 'JUN' }, num: 14, what: { en: 'Diploma eligibility', zh: '文凭达成日' },
       sub: { en: '2 more credits needed', zh: '还差 2 学分' } },
+    { day: { en: 'JUN', zh: 'JUN' }, num: 18, what: { en: 'Advisor portfolio review', zh: '顾问作品集复盘' },
+      sub: { en: 'College writing checkpoint', zh: '大学写作检查点' } },
   ],
 };
 
@@ -115,8 +122,8 @@ export default function ParentDashboardDemo({ language }) {
         fontFamily: 'Inter, sans-serif',
       }}>
         {isEn
-          ? '★ PREVIEW — This is the dashboard parents will see after enrollment. Sample data shown.'
-          : '★ 预览 — 这是家长在入学后会看到的面板。下方为示例数据。'}
+          ? '★ SAMPLE PREVIEW — Demo data only. Live parent dashboards use the linked student’s actual enrollments, activity, and teacher feedback.'
+          : '★ 示例预览 — 下方仅为展示数据。正式家长面板会使用绑定学生的真实课程、学习活动与教师反馈。'}
       </div>
 
       <div style={{
@@ -182,7 +189,11 @@ export default function ParentDashboardDemo({ language }) {
                     {p.courses.length} {isEn ? 'courses' : '门'}
                   </span>
                 } />
-                {p.courses.map((c) => (
+                {p.courses.map((c) => {
+                  const pace = c.pace?.kind === 'behind'
+                    ? { bg: '#fff3e0', fg: '#b45309', border: '#f4c36a' }
+                    : { bg: '#e8f5e9', fg: '#2e7d32', border: '#a5d6a7' };
+                  return (
                   <div key={c.name} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto auto', gap: '14px', alignItems: 'center', padding: '14px 0', borderBottom: '1px solid #f0f2f8' }}>
                     <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: c.color, color: '#fff', fontWeight: 800, fontSize: '13px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{c.code}</div>
                     <div style={{ minWidth: 0 }}>
@@ -192,9 +203,44 @@ export default function ParentDashboardDemo({ language }) {
                     <div style={{ width: '80px', height: '6px', background: '#eef0f4', borderRadius: '999px', overflow: 'hidden' }}>
                       <div style={{ height: '100%', width: `${c.pct}%`, background: c.color, borderRadius: '999px' }} />
                     </div>
-                    <span style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', minWidth: '36px', textAlign: 'right' }}>{c.pct}%</span>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
+                      <span style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', minWidth: '36px', textAlign: 'right' }}>{c.pct}%</span>
+                      {c.pace && (
+                        <span style={{ fontSize: 9, fontWeight: 800, color: pace.fg, background: pace.bg, border: `1px solid ${pace.border}`, borderRadius: 999, padding: '2px 7px', whiteSpace: 'nowrap' }}>
+                          {c.pace[lang]}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                ))}
+                  );
+                })}
+              </div>
+
+              {/* Assessment evidence */}
+              <div style={card}>
+                <CardHead en="Assessment & Feedback" zh="评量与批改" isEn={isEn} right={
+                  <span style={{ fontSize: '12px', color: '#1B6B3A', fontWeight: 800 }}>
+                    {isEn ? 'Visible to parents' : '家长可见'}
+                  </span>
+                } />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px', marginBottom: 12 }}>
+                  {[
+                    { value: '40%', en: 'Module quizzes', zh: '章节测验' },
+                    { value: '30%', en: 'Midterm', zh: '期中考试' },
+                    { value: '30%', en: 'Final exam', zh: '期末考试' },
+                    { value: '5d', en: 'Feedback target', zh: '批改目标' },
+                  ].map((item) => (
+                    <div key={item.en} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 8, padding: '12px' }}>
+                      <p style={{ margin: '0 0 2px', fontSize: 20, fontWeight: 850, color: '#2b3d6d' }}>{item.value}</p>
+                      <p style={{ margin: 0, fontSize: 11, color: '#5c6578' }}>{isEn ? item.en : item.zh}</p>
+                    </div>
+                  ))}
+                </div>
+                <p style={{ fontSize: 13, color: '#5c6578', lineHeight: 1.6, margin: 0 }}>
+                  {isEn
+                    ? 'Students submit assignments inside the Learn Portal as written work or document links. Teachers review from the grading queue, score the work out of 100, and leave feedback that appears in the student and parent record.'
+                    : '学生在 Learn Portal 内提交文字作业或文件链接。老师在后台批改队列中审阅，按 100 分批改，并留下会显示在学生与家长记录中的反馈。'}
+                </p>
               </div>
 
               {/* Recent activity */}
@@ -209,6 +255,14 @@ export default function ParentDashboardDemo({ language }) {
                         <p style={{ margin: 0 }}>
                           {a.lead[lang]}<b style={{ color: '#1a1a2e' }}>{a.bold}</b>{a.tail[lang]}
                         </p>
+                        {a.feedback && (
+                          <div style={{ margin: '7px 0 2px', background: '#f1f8f2', border: '1px solid #cde8d1', borderRadius: 8, padding: '8px 10px' }}>
+                            <p style={{ margin: '0 0 3px', fontSize: 10, fontWeight: 800, color: '#2e7d32', textTransform: 'uppercase', letterSpacing: '0.7px' }}>
+                              {isEn ? 'Sample teacher feedback' : '教师评语示例'}
+                            </p>
+                            <p style={{ margin: 0, fontSize: 12, color: '#31543a', lineHeight: 1.45 }}>{a.feedback[lang]}</p>
+                          </div>
+                        )}
                         <p style={{ color: '#5c6578', fontSize: '11px', margin: '3px 0 0' }}>{a.when[lang]}</p>
                       </div>
                     </div>

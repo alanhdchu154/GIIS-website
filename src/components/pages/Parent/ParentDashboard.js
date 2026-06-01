@@ -29,7 +29,8 @@ function ActivityRow({ event, isEn }) {
   const colors = {
     exam: { bg: '#e8f5e9', fg: '#2e7d32', icon: '✓' },
     quiz: { bg: '#e3f2fd', fg: '#2b3d6d', icon: '📝' },
-    assignment: { bg: '#fff3e0', fg: '#e65100', icon: '📋' },
+    assignment: { bg: '#fff3e0', fg: '#e65100', icon: 'A' },
+    assignment_feedback: { bg: '#e8f5e9', fg: '#2e7d32', icon: 'F' },
     video: { bg: '#f3e5f5', fg: '#6a1b9a', icon: '▶' },
     supplemental_video: { bg: '#f3e5f5', fg: '#6a1b9a', icon: '▶' },
     reading: { bg: '#e0f2f1', fg: '#00695c', icon: 'R' },
@@ -44,16 +45,30 @@ function ActivityRow({ event, isEn }) {
       <div style={{ flex: 1 }}>
         <p style={{ margin: '0 0 2px', fontSize: 13, fontWeight: 600, color: '#1a1d24' }}>
           {event.course}
-          {event.type === 'exam' && (isEn ? ` — ${event.passed ? 'Passed' : 'Attempted'} final exam` : ` — ${event.passed ? '通过' : '参加'}期末考`)}
+          {event.type === 'exam' && (isEn
+            ? ` — ${event.passed ? 'Passed' : 'Attempted'} ${event.examType === 'midterm' ? 'midterm' : 'final'} exam`
+            : ` — ${event.passed ? '通过' : '参加'}${event.examType === 'midterm' ? '期中考' : '期末考'}`)}
           {event.type === 'quiz' && (isEn ? ` — Module ${event.moduleOrder} quiz` : ` — 第 ${event.moduleOrder} 模块测验`)}
-          {event.type === 'assignment' && (isEn ? ` — Module ${event.moduleOrder} assignment` : ` — 第 ${event.moduleOrder} 模块作业`)}
+          {event.type === 'assignment' && (isEn ? ` — Module ${event.moduleOrder} assignment submitted` : ` — 第 ${event.moduleOrder} 模块作业已提交`)}
+          {event.type === 'assignment_feedback' && (isEn ? ` — Module ${event.moduleOrder} assignment feedback` : ` — 第 ${event.moduleOrder} 模块作业已批改`)}
           {event.type === 'video' && (isEn ? ` — Module ${event.moduleOrder} video completed` : ` — 第 ${event.moduleOrder} 模块视频完成`)}
           {event.type === 'supplemental_video' && (isEn ? ` — Module ${event.moduleOrder} supplemental video completed` : ` — 第 ${event.moduleOrder} 模块补充视频完成`)}
           {event.type === 'reading' && (isEn ? ` — Module ${event.moduleOrder} reading completed` : ` — 第 ${event.moduleOrder} 模块阅读完成`)}
           {event.type === 'practice' && (isEn ? ` — Module ${event.moduleOrder} practice completed` : ` — 第 ${event.moduleOrder} 模块练习完成`)}
           {event.score != null && <span style={{ fontWeight: 400, color: '#5c6578' }}> ({Number(event.score).toFixed(0)}%)</span>}
           {event.type === 'assignment' && event.hasFeedback && <span style={{ color: '#2e7d32', fontWeight: 400 }}> {isEn ? '· Feedback received' : '· 已收到反馈'}</span>}
+          {event.type === 'assignment_feedback' && event.score != null && <span style={{ color: '#2e7d32', fontWeight: 400 }}> {isEn ? '· Reviewed work' : '· 已审阅作业'}</span>}
         </p>
+        {event.type === 'assignment_feedback' && event.feedback && (
+          <div style={{ margin: '6px 0 4px', background: '#f1f8f2', border: '1px solid #cde8d1', borderRadius: 8, padding: '8px 10px' }}>
+            <p style={{ margin: '0 0 3px', fontSize: 10, fontWeight: 800, color: '#2e7d32', textTransform: 'uppercase', letterSpacing: '0.7px' }}>
+              {isEn ? 'Teacher feedback' : '教师评语'}
+            </p>
+            <p style={{ margin: 0, fontSize: 12, color: '#31543a', lineHeight: 1.45 }}>
+              {event.feedback.length > 180 ? `${event.feedback.slice(0, 180)}...` : event.feedback}
+            </p>
+          </div>
+        )}
         <p style={{ margin: 0, fontSize: 11, color: '#9aa0ad' }}>
           {new Date(event.at).toLocaleDateString(isEn ? 'en-US' : 'zh-CN', { month: 'short', day: 'numeric' })}
         </p>
@@ -62,9 +77,17 @@ function ActivityRow({ event, isEn }) {
   );
 }
 
+function pacingStyle(status) {
+  if (status === 'behind') return { bg: '#fff3e0', fg: '#b45309', border: '#f4c36a' };
+  if (status === 'ahead') return { bg: '#e8f5e9', fg: '#2e7d32', border: '#a5d6a7' };
+  return { bg: '#f0f4ff', fg: '#2b3d6d', border: '#c5d0f0' };
+}
+
 function CourseBar({ enr, isEn }) {
   const color = DEPT_COLORS[enr.department] || '#2b3d6d';
   const pct = (enr.totalModules ?? 0) > 0 ? Math.round((enr.completedModules / enr.totalModules) * 100) : 0;
+  const pacing = enr.pacing || { status: 'on_track', label: isEn ? 'On Track' : '进度正常' };
+  const paceColors = pacingStyle(pacing.status);
   return (
     <div style={{ padding: '12px 0', borderBottom: '1px solid #f0f2f8' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
@@ -72,13 +95,123 @@ function CourseBar({ enr, isEn }) {
           <div style={{ width: 8, height: 8, borderRadius: '50%', background: color, flexShrink: 0 }} />
           <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1d24' }}>{isEn ? enr.name : (enr.nameZh || enr.name)}</span>
         </div>
-        <span style={{ fontSize: 12, color: enr.creditEarned ? '#2e7d32' : '#5c6578', fontWeight: enr.creditEarned ? 700 : 400 }}>
-          {enr.creditEarned ? (isEn ? '✓ Credit earned' : '✓ 已获学分') : `${enr.completedModules} / ${enr.totalModules ?? '?'} ${isEn ? 'modules' : '模块'}`}
-        </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+          {!enr.creditEarned && (
+            <span style={{ fontSize: 10, fontWeight: 800, color: paceColors.fg, background: paceColors.bg, border: `1px solid ${paceColors.border}`, borderRadius: 999, padding: '3px 8px' }}>
+              {isEn ? pacing.label : pacing.status === 'behind' ? `落后 ${Math.abs(pacing.deltaModules || 0)} 模块` : pacing.status === 'ahead' ? `领先 ${pacing.deltaModules || 0} 模块` : '进度正常'}
+            </span>
+          )}
+          <span style={{ fontSize: 12, color: enr.creditEarned ? '#2e7d32' : '#5c6578', fontWeight: enr.creditEarned ? 700 : 400 }}>
+            {enr.creditEarned ? (isEn ? '✓ Credit earned' : '✓ 已获学分') : `${enr.completedModules} / ${enr.totalModules ?? '?'} ${isEn ? 'modules' : '模块'}`}
+          </span>
+        </div>
       </div>
       <div style={{ height: 6, background: '#e8ecf5', borderRadius: 999, overflow: 'hidden' }}>
         <div style={{ height: '100%', width: `${pct}%`, background: color, borderRadius: 999, transition: 'width 0.4s' }} />
       </div>
+      {enr.assessment && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
+          {[
+            `${enr.assessment.quizzesSubmitted}/${enr.totalModules ?? '?'} ${isEn ? 'quizzes' : '测验'}`,
+            `${enr.assessment.assignmentsReviewed}/${enr.totalModules ?? '?'} ${isEn ? 'assignments reviewed' : '作业已批改'}`,
+            `${isEn ? 'Midterm' : '期中'}: ${enr.assessment.midterm ? `${Math.round(enr.assessment.midterm.score)}%` : (isEn ? 'pending' : '未完成')}`,
+            `${isEn ? 'Final' : '期末'}: ${enr.assessment.final ? `${Math.round(enr.assessment.final.score)}%` : (isEn ? 'pending' : '未完成')}`,
+          ].map((label) => (
+            <span key={label} style={{ fontSize: 10, fontWeight: 700, color: '#5c6578', background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 999, padding: '3px 8px' }}>
+              {label}
+            </span>
+          ))}
+        </div>
+      )}
+      {enr.weeklyInsights && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 6 }}>
+          {[
+            `${enr.weeklyInsights.activeDays} ${isEn ? 'active days' : '天有学习记录'}`,
+            `${enr.weeklyInsights.modulesCompleted} ${isEn ? 'modules completed' : '模块完成'}`,
+            `${enr.weeklyInsights.quizAttempts} ${isEn ? 'quizzes' : '次测验'}`,
+            `${enr.weeklyInsights.assignmentSubmissions} ${isEn ? 'assignments' : '份作业'}`,
+          ].map((label) => (
+            <span key={label} style={{ fontSize: 10, fontWeight: 700, color: '#5c6578', background: '#fff', border: '1px solid #e0e6f0', borderRadius: 999, padding: '3px 8px' }}>
+              {label}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function AssignmentHistory({ enrollments, isEn }) {
+  const rows = enrollments
+    .flatMap((enr) => (enr.assignments || []).map((assignment) => ({ ...assignment, course: isEn ? enr.name : (enr.nameZh || enr.name) })))
+    .sort((a, b) => new Date(b.gradedAt || b.submittedAt) - new Date(a.gradedAt || a.submittedAt));
+
+  return (
+    <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'baseline', marginBottom: 12 }}>
+        <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: 0 }}>
+          {isEn ? 'Assignments & Feedback' : '作业与批改反馈'}
+        </p>
+        <span style={{ fontSize: 11, color: '#5c6578' }}>
+          {isEn ? `${rows.length} submitted` : `已提交 ${rows.length} 份`}
+        </span>
+      </div>
+      {rows.length === 0 ? (
+        <p style={{ fontSize: 13, color: '#9aa0ad', margin: 0 }}>
+          {isEn ? 'No assignment submissions yet.' : '目前还没有作业提交记录。'}
+        </p>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {rows.slice(0, 8).map((assignment) => {
+            const reviewed = assignment.status === 'reviewed';
+            return (
+              <div key={`${assignment.course}-${assignment.moduleOrder}-${assignment.submittedAt}`} style={{ border: '1px solid #e0e6f0', borderRadius: 10, padding: '12px 14px', background: reviewed ? '#f8fcf9' : '#fffaf2' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, alignItems: 'flex-start' }}>
+                  <div>
+                    <p style={{ margin: '0 0 2px', fontSize: 13, fontWeight: 800, color: '#1a1d24' }}>
+                      {assignment.course} · {isEn ? `Module ${assignment.moduleOrder}` : `第 ${assignment.moduleOrder} 模块`}
+                    </p>
+                    {assignment.moduleTitle && (
+                      <p style={{ margin: 0, fontSize: 12, color: '#5c6578', lineHeight: 1.4 }}>{assignment.moduleTitle}</p>
+                    )}
+                  </div>
+                  <span style={{ flexShrink: 0, borderRadius: 999, padding: '4px 8px', fontSize: 10, fontWeight: 800, color: reviewed ? '#2e7d32' : '#9a5b00', background: reviewed ? '#e8f5e9' : '#fff3e0' }}>
+                    {reviewed ? (isEn ? 'Reviewed' : '已批改') : (isEn ? 'Submitted' : '已提交')}
+                  </span>
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 8 }}>
+                  <span style={{ fontSize: 11, color: '#5c6578' }}>
+                    {isEn ? 'Submitted' : '提交'}: {new Date(assignment.submittedAt).toLocaleDateString(isEn ? 'en-US' : 'zh-CN', { month: 'short', day: 'numeric' })}
+                  </span>
+                  {assignment.gradedAt && (
+                    <span style={{ fontSize: 11, color: '#5c6578' }}>
+                      {isEn ? 'Reviewed' : '批改'}: {new Date(assignment.gradedAt).toLocaleDateString(isEn ? 'en-US' : 'zh-CN', { month: 'short', day: 'numeric' })}
+                    </span>
+                  )}
+                  {assignment.score != null && (
+                    <span style={{ fontSize: 11, fontWeight: 800, color: '#2e7d32' }}>
+                      {Math.round(assignment.score)} / 100
+                    </span>
+                  )}
+                </div>
+                {assignment.feedback && (
+                  <div style={{ marginTop: 10, background: '#fff', border: '1px solid #dceee0', borderRadius: 8, padding: '9px 10px' }}>
+                    <p style={{ margin: '0 0 3px', fontSize: 10, fontWeight: 800, color: '#2e7d32', textTransform: 'uppercase', letterSpacing: '0.7px' }}>
+                      {isEn ? 'Reviewed by GIIS academic team' : 'GIIS 教学团队批改'}
+                    </p>
+                    <p style={{ margin: 0, fontSize: 12, color: '#31543a', lineHeight: 1.45 }}>{assignment.feedback}</p>
+                  </div>
+                )}
+                {!assignment.feedback && assignment.contentPreview && (
+                  <p style={{ margin: '8px 0 0', fontSize: 11, color: '#8a6a14', lineHeight: 1.45 }}>
+                    {isEn ? 'Submission preview' : '提交内容预览'}: {assignment.contentPreview}
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
@@ -180,6 +313,10 @@ export default function ParentDashboard({ language }) {
   const gradPct = Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100));
   const inProgress = enrollments.filter(e => !e.creditEarned);
   const completed = enrollments.filter(e => e.creditEarned);
+  const activitySignalCount = recentActivity.length + enrollments.reduce((sum, e) => (
+    sum + Number(e.completedModules || 0) + Number(e.assessment?.assignmentsSubmitted || 0) + Number(e.assessment?.quizzesSubmitted || 0)
+  ), 0);
+  const hasLimitedEvidence = activitySignalCount < 5;
 
   return (
     <>
@@ -225,6 +362,19 @@ export default function ParentDashboard({ language }) {
                 style={{ background: '#fff', color: '#b45309', fontWeight: 800, fontSize: 13, border: 'none', borderRadius: 8, padding: '10px 20px', cursor: portalLoading ? 'wait' : 'pointer', whiteSpace: 'nowrap', fontFamily: 'Inter, sans-serif' }}>
                 {portalLoading ? (isEn ? 'Loading…' : '加载中…') : (isEn ? 'Complete Enrollment →' : '完成报名 →')}
               </button>
+            </div>
+          )}
+
+          {hasLimitedEvidence && (
+            <div style={{ background: '#fffaf2', border: '1px solid #f4c36a', borderRadius: 12, padding: '13px 18px', marginBottom: 20, color: '#8a5a00' }}>
+              <p style={{ margin: '0 0 3px', fontSize: 12, fontWeight: 850, textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                {isEn ? 'Early account signal' : '新账号提醒'}
+              </p>
+              <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55 }}>
+                {isEn
+                  ? 'This dashboard is based only on recorded activity so far. Pacing and weekly patterns become more reliable after the student completes more quizzes, assignments, and modules.'
+                  : '这个面板只根据目前已有的学习记录显示。学生完成更多测验、作业与模块后，进度判断和每周趋势会更准确。'}
+              </p>
             </div>
           )}
 
@@ -282,6 +432,33 @@ export default function ParentDashboard({ language }) {
                   </details>
                 )}
               </div>
+
+              {/* Assessment assurance */}
+              <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
+                <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 12px' }}>
+                  {isEn ? 'Assessment Evidence' : '学习评量证据'}
+                </p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 10 }}>
+                  {[
+                    { value: '40%', label: isEn ? 'module quizzes' : '章节测验' },
+                    { value: '30%', label: isEn ? 'midterm exam' : '期中考试' },
+                    { value: '30%', label: isEn ? 'final exam' : '期末考试' },
+                    { value: '5d', label: isEn ? 'assignment review target' : '作业批改目标' },
+                  ].map((item) => (
+                    <div key={item.label} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 10, padding: '12px 14px' }}>
+                      <p style={{ margin: '0 0 2px', fontSize: 20, fontWeight: 800, color: '#2b3d6d' }}>{item.value}</p>
+                      <p style={{ margin: 0, fontSize: 11, color: '#5c6578', lineHeight: 1.35 }}>{item.label}</p>
+                    </div>
+                  ))}
+                </div>
+                <p style={{ fontSize: 12, color: '#5c6578', lineHeight: 1.55, margin: '12px 0 0' }}>
+                  {isEn
+                    ? 'Assignments are submitted in the Learn Portal as written work or a document link. A teacher or advisor reviews the work, scores it out of 100, and leaves written feedback visible to the student and parent. All module assignments must be submitted before the final exam.'
+                    : '作业在 Learn Portal 内提交，可直接贴文字或文件链接。老师或顾问会审阅作业、按 100 分批改，并留下学生与家长都能看到的书面反馈。所有模块作业必须提交后才能参加期末考试。'}
+                </p>
+              </div>
+
+              <AssignmentHistory enrollments={enrollments} isEn={isEn} />
 
             </div>
 

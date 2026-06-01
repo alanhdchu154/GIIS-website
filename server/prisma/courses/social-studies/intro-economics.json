@@ -13,7 +13,7 @@
       "title": "Scarcity & Economic Thinking",
       "titleZh": "稀缺性与经济思维",
       "objectives": "Define scarcity and explain why it is the central economic problem; distinguish between wants and needs; explain opportunity cost and the role of trade-offs in economic decision-making.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/1-introduction",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e",
       "readingNote": "OpenStax Principles of Economics 2e Ch 1 — What Is Economics?",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/basic-economic-concepts/introduction-to-economics/v/introduction-to-economics",
       "videoNote": "Khan Academy — Introduction to Economics",
@@ -29,7 +29,7 @@
       "title": "Supply & Demand Basics",
       "titleZh": "供求基础",
       "objectives": "State the law of demand and the law of supply; list the determinants of supply and demand; draw supply and demand curves and identify factors that shift each curve.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/3-introduction",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e",
       "readingNote": "OpenStax Principles of Economics 2e Ch 3 — Demand, Supply, and Equilibrium",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/supply-demand-equilibrium/demand-curve-tutorial/v/demand-curve-as-marginal-benefit-curve",
       "videoNote": "Khan Academy — Supply and Demand",
@@ -45,7 +45,7 @@
       "title": "Market Equilibrium & Price",
       "titleZh": "市场均衡与价格",
       "objectives": "Identify market equilibrium as the price where quantity supplied equals quantity demanded; predict the effects of supply and demand shifts on equilibrium price and quantity; explain surpluses and shortages.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/3-introduction",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e",
       "readingNote": "OpenStax Principles of Economics 2e Ch 3.3 — Changes in Equilibrium",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/supply-demand-equilibrium/market-equilibrium-tutorial/v/market-equilibrium",
       "videoNote": "Khan Academy — Market Equilibrium",
@@ -61,7 +61,7 @@
       "title": "Elasticity",
       "titleZh": "弹性",
       "objectives": "Define and calculate price elasticity of demand and supply; distinguish elastic from inelastic demand; explain how elasticity affects total revenue and the impact of taxes.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/5-introduction",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e",
       "readingNote": "OpenStax Principles of Economics 2e Ch 5 — Elasticity",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/elasticity-ap/price-elasticity-of-demand-ap/v/price-elasticity-of-demand",
       "videoNote": "Khan Academy — Price Elasticity of Demand",
@@ -77,7 +77,7 @@
       "title": "Consumer Choice & Utility",
       "titleZh": "消费者选择与效用",
       "objectives": "Define utility and marginal utility; apply the law of diminishing marginal utility; explain how consumers maximize utility by allocating spending across goods.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/6-introduction",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e",
       "readingNote": "OpenStax Principles of Economics 2e Ch 6.1 — Consumption Choices",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/ap-consumer-producer-surplus/ap-demand-curve-tutorial/v/marginal-utility",
       "videoNote": "Khan Academy — Marginal Utility",
@@ -93,7 +93,7 @@
       "title": "Production & Costs",
       "titleZh": "生产与成本",
       "objectives": "Distinguish fixed from variable costs and short-run from long-run production; calculate total cost, average total cost, and marginal cost; explain the relationship between production and costs.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/7-introduction",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e",
       "readingNote": "OpenStax Principles of Economics 2e Ch 7 — Cost and Industry Structure",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/production-cost-and-the-perfect-competition-model/production-and-costs/v/fixed-and-variable-costs",
       "videoNote": "Khan Academy — Fixed and Variable Costs",
@@ -109,7 +109,7 @@
       "title": "Types of Market Structures",
       "titleZh": "市场结构类型",
       "objectives": "Identify and compare the four main market structures — perfect competition, monopolistic competition, oligopoly, and monopoly — using characteristics such as number of sellers, product type, and barriers to entry.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/8-introduction",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e",
       "readingNote": "OpenStax Principles of Economics 2e Ch 8–10 — Market Structures",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/imperfect-competition/monopoly-tutorial/v/monopoly-basics",
       "videoNote": "Khan Academy — Market Structures Overview",
@@ -125,7 +125,7 @@
       "title": "Labor Markets",
       "titleZh": "劳动力市场",
       "objectives": "Explain how wages are determined by supply and demand in labor markets; analyze the effects of minimum wage laws; describe the role of unions and human capital in wage differences.",
-      "readingUrl": "https://openstax.org/books/principles-economics-2e/pages/14-introduction",
+      "readingUrl": "https://openstax.org/books/principles-economics-2e",
       "readingNote": "OpenStax Principles of Economics 2e Ch 14 — Labor Markets",
       "videoUrl": "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/factor-markets/labor-market-ap/v/labor-market",
       "videoNote": "Khan Academy — Labor Markets",
@@ -169,13 +169,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Scarcity in economics means that:\" is: Resources are limited relative to unlimited wants.",
+      "question": "Which option best completes this statement? Scarcity in economics means that:",
       "options": [
-        "True",
-        "False"
+        "All goods are very expensive",
+        "Resources are limited relative to unlimited wants",
+        "Only poor people face trade-offs",
+        "The government controls all resources"
       ],
-      "answer": "True",
-      "explanation": "True. Resources are limited relative to unlimited wants is correct.",
+      "answer": "Resources are limited relative to unlimited wants",
+      "explanation": "The correct answer is: Resources are limited relative to unlimited wants.",
       "points": 1
     },
     {
@@ -223,13 +225,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"The law of demand states that, all else equal:\" is: As price rises, quantity demanded falls.",
+      "question": "Which option best completes this statement? The law of demand states that, all else equal:",
       "options": [
-        "True",
-        "False"
+        "As price rises, quantity demanded rises",
+        "As price falls, quantity demanded falls",
+        "As price rises, quantity demanded falls",
+        "Price and demand are unrelated"
       ],
-      "answer": "True",
-      "explanation": "True. As price rises, quantity demanded falls is correct.",
+      "answer": "As price rises, quantity demanded falls",
+      "explanation": "The correct answer is: As price rises, quantity demanded falls.",
       "points": 1
     },
     {
@@ -277,10 +281,10 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"when demand increases and supply remains unchanged, equilibrium price will:.\"",
+      "question": "Short response: When demand increases and supply remains unchanged, equilibrium price will?",
       "options": null,
       "answer": "Rise",
-      "explanation": "The correct answer is: Rise.",
+      "explanation": "A correct response identifies \"Rise\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -370,25 +374,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"Marginal utility is the:\" is: Additional satisfaction from consuming one more unit.",
+      "question": "Which option best completes this statement? Marginal utility is the:",
       "options": [
-        "True",
-        "False"
+        "Total satisfaction from consuming a good",
+        "Additional satisfaction from consuming one more unit",
+        "Average satisfaction per unit consumed",
+        "Change in price per unit consumed"
       ],
-      "answer": "True",
-      "explanation": "True. Additional satisfaction from consuming one more unit is correct.",
+      "answer": "Additional satisfaction from consuming one more unit",
+      "explanation": "The correct answer is: Additional satisfaction from consuming one more unit.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"The law of diminishing marginal utility states that:\" is: Total utility eventually decreases with consumption.",
+      "question": "Which option best completes this statement? The law of diminishing marginal utility states that:",
       "options": [
-        "True",
-        "False"
+        "Total utility eventually decreases with consumption",
+        "Marginal utility increases as more units are consumed",
+        "As more units are consumed, each additional unit provides less additional satisfaction",
+        "Marginal utility is always constant"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: As more units are consumed, each additional unit provides less additional satisfaction.",
+      "answer": "As more units are consumed, each additional unit provides less additional satisfaction",
+      "explanation": "The correct answer is: As more units are consumed, each additional unit provides less additional satisfaction.",
       "points": 1
     },
     {
@@ -436,22 +444,24 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"Fixed costs are costs that:\" is: Do not change with output in the short run.",
+      "question": "Which option best completes this statement? Fixed costs are costs that:",
       "options": [
-        "True",
-        "False"
+        "Increase with output",
+        "Decrease with output",
+        "Do not change with output in the short run",
+        "Depend on the number of workers hired"
       ],
-      "answer": "True",
-      "explanation": "True. Do not change with output in the short run is correct.",
+      "answer": "Do not change with output in the short run",
+      "explanation": "The correct answer is: Do not change with output in the short run.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"in the short run, a firm cannot change its:.\"",
+      "question": "Short response: Define or explain: In the short run, a firm cannot change its.",
       "options": null,
       "answer": "Fixed inputs",
-      "explanation": "The correct answer is: Fixed inputs.",
+      "explanation": "A correct response identifies \"Fixed inputs\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -485,13 +495,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"Which market structure has the MOST competition\" is: Perfect competition.",
+      "question": "In this course, which market structure has the MOST competition?",
       "options": [
-        "True",
-        "False"
+        "Monopoly",
+        "Oligopoly",
+        "Monopolistic competition",
+        "Perfect competition"
       ],
-      "answer": "True",
-      "explanation": "True. Perfect competition is correct.",
+      "answer": "Perfect competition",
+      "explanation": "The correct answer is: Perfect competition.",
       "points": 1
     },
     {
@@ -539,13 +551,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"In a competitive labor market, the equilibrium wage is determined by:\" is: The intersection of labor supply and labor demand.",
+      "question": "Which option best completes this statement? In a competitive labor market, the equilibrium wage is determined by:",
       "options": [
-        "True",
-        "False"
+        "The government",
+        "The intersection of labor supply and labor demand",
+        "Unions alone",
+        "The largest employers"
       ],
-      "answer": "True",
-      "explanation": "True. The intersection of labor supply and labor demand is correct.",
+      "answer": "The intersection of labor supply and labor demand",
+      "explanation": "The correct answer is: The intersection of labor supply and labor demand.",
       "points": 1
     }
   ],
@@ -598,14 +612,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"Using the midpoint method, if price rises from $10 to $20 and quantity demanded falls from 100 to 80, PED =\" is: 0.33.",
+      "type": "mc",
+      "question": "Using the given information, what is the correct result? Using the midpoint method, if price rises from $10 to $20 and quantity demanded falls from 100 to 80, PED =",
       "options": [
-        "True",
-        "False"
+        "0.33",
+        "2.0",
+        "1.0",
+        "3.0"
       ],
-      "answer": "True",
-      "explanation": "True. 0.33 is correct.",
+      "answer": "0.33",
+      "explanation": "The correct answer is: 0.33.",
       "points": 1
     },
     {
@@ -651,14 +667,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following is a shift factor for SUPPLY (not a movement along supply)\" is: A change in the product's own price.",
+      "type": "mc",
+      "question": "In this course, which of the following is a shift factor for SUPPLY (not a movement along supply)?",
       "options": [
-        "True",
-        "False"
+        "A change in input costs",
+        "A change in the product's own price",
+        "A movement upward along the supply curve",
+        "A change in quantity supplied caused only by price"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Improved technology that lowers production costs.",
+      "answer": "A change in input costs",
+      "explanation": "The correct answer is: A change in input costs.",
       "points": 1
     },
     {
@@ -709,14 +727,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"The key characteristic distinguishing oligopoly from other market structures is:\" is: Strategic interdependence among a few dominant firms.",
+      "type": "mc",
+      "question": "Which option best completes this statement? The key characteristic distinguishing oligopoly from other market structures is:",
       "options": [
-        "True",
-        "False"
+        "Strategic interdependence among a few dominant firms",
+        "A very large number of price-taking firms",
+        "No barriers to entry and identical products",
+        "A single buyer with no sellers"
       ],
-      "answer": "True",
-      "explanation": "True. Strategic interdependence among a few dominant firms is correct.",
+      "answer": "Strategic interdependence among a few dominant firms",
+      "explanation": "The correct answer is: Strategic interdependence among a few dominant firms.",
       "points": 1
     },
     {
@@ -767,14 +787,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Deflation is defined as:\" is: A decrease in GDP.",
+      "type": "mc",
+      "question": "Which option best completes this statement? Deflation is defined as:",
       "options": [
-        "True",
-        "False"
+        "A sustained decrease in the overall price level",
+        "A decrease in GDP",
+        "A temporary increase in unemployment only",
+        "A rise in the money supply"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: A sustained decrease in the general price level.",
+      "answer": "A sustained decrease in the overall price level",
+      "explanation": "The correct answer is: A sustained decrease in the overall price level.",
       "points": 1
     },
     {
@@ -825,14 +847,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following would be considered expansionary monetary policy\" is: Lowering the federal funds rate.",
+      "type": "mc",
+      "question": "In this course, which of the following would be considered expansionary monetary policy?",
       "options": [
-        "True",
-        "False"
+        "Lowering the federal funds rate",
+        "Raising taxes during a recession",
+        "Reducing government spending",
+        "Increasing import tariffs"
       ],
-      "answer": "True",
-      "explanation": "True. Lowering the federal funds rate is correct.",
+      "answer": "Lowering the federal funds rate",
+      "explanation": "The correct answer is: Lowering the federal funds rate.",
       "points": 1
     },
     {
@@ -883,14 +907,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"If Country A has a comparative advantage in producing cars, it means:\" is: Country A produces cars using fewer total resources than any other country.",
+      "type": "mc",
+      "question": "In this course, if Country A has a comparative advantage in producing cars, it means?",
       "options": [
-        "True",
-        "False"
+        "Country A has a lower opportunity cost of producing cars than another country",
+        "Country A produces cars using fewer total resources than any other country",
+        "Country A has the highest absolute productivity in every good",
+        "Country A should stop trading with other countries"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Country A can produce cars at a lower opportunity cost than its trading partners.",
+      "answer": "Country A has a lower opportunity cost of producing cars than another country",
+      "explanation": "The correct answer is: Country A has a lower opportunity cost of producing cars than another country.",
       "points": 1
     },
     {
@@ -941,14 +967,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"A quota differs from a tariff in that a quota:\" is: Sets a physical limit on the quantity of imports.",
+      "type": "mc",
+      "question": "Which option best completes this statement? A quota differs from a tariff in that a quota:",
       "options": [
-        "True",
-        "False"
+        "Sets a physical limit on the quantity of imports",
+        "Raises revenue through a tax on imports",
+        "Eliminates all trade barriers",
+        "Applies only to exported services"
       ],
-      "answer": "True",
-      "explanation": "True. Sets a physical limit on the quantity of imports is correct.",
+      "answer": "Sets a physical limit on the quantity of imports",
+      "explanation": "The correct answer is: Sets a physical limit on the quantity of imports.",
       "points": 1
     },
     {
@@ -999,14 +1027,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which Federal Reserve tool is used MOST frequently to conduct monetary policy\" is: Changing the reserve requirement.",
+      "type": "mc",
+      "question": "In this course, which Federal Reserve tool is used MOST frequently to conduct monetary policy?",
       "options": [
-        "True",
-        "False"
+        "Open market operations",
+        "Changing the reserve requirement",
+        "Printing coins for the Treasury",
+        "Setting individual mortgage rates"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Open market operations (buying/selling bonds).",
+      "answer": "Open market operations",
+      "explanation": "The correct answer is: Open market operations.",
       "points": 1
     },
     {

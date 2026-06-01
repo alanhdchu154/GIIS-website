@@ -169,13 +169,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Which of the following best describes a strong research question\" is: A focused, arguable question that requires investigation and evidence.",
+      "question": "Choose the best answer: Which of the following best describes a strong research question?",
       "options": [
-        "True",
-        "False"
+        "A broad statement of fact that everyone already agrees with",
+        "A focused, arguable question that requires investigation and evidence",
+        "A question answered with a simple yes or no",
+        "A restatement of the paper's topic in question form"
       ],
-      "answer": "True",
-      "explanation": "True. A focused, arguable question that requires investigation and evidence is correct.",
+      "answer": "A focused, arguable question that requires investigation and evidence",
+      "explanation": "A strong research question is specific, debatable, and complex enough to require a sustained investigation through evidence.",
       "points": 1
     },
     {
@@ -223,13 +225,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"Boolean operators in database searching include which of the following terms\" is: AND, OR, NOT.",
+      "question": "Choose the best answer: Boolean operators in database searching include which of the following terms?",
       "options": [
-        "True",
-        "False"
+        "LIKE, SIMILAR, CLOSE",
+        "AND, OR, NOT",
+        "FIND, SEARCH, MATCH",
+        "WITH, NEAR, ABOUT"
       ],
-      "answer": "True",
-      "explanation": "True. AND, OR, NOT is correct.",
+      "answer": "AND, OR, NOT",
+      "explanation": "Boolean operators AND, OR, and NOT allow researchers to combine, expand, or exclude search terms to control the scope of database results.",
       "points": 1
     },
     {
@@ -361,25 +365,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"An annotated bibliography entry typically includes all of the following EXCEPT:\" is: A full reprint of the source's abstract.",
+      "question": "Choose the best answer: An annotated bibliography entry typically includes all of the following EXCEPT:",
       "options": [
-        "True",
-        "False"
+        "A complete citation in the required format",
+        "A summary of the source's content",
+        "An evaluation of the source's credibility",
+        "A full reprint of the source's abstract"
       ],
-      "answer": "True",
-      "explanation": "True. A full reprint of the source's abstract is correct.",
+      "answer": "A full reprint of the source's abstract",
+      "explanation": "Annotated bibliography entries include citation, summary, evaluation, and reflection in the student's own words—not a reprint of the original abstract.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"The evaluative component of an annotated bibliography entry asks the writer to:\" is: Copy the source's conclusions verbatim.",
+      "question": "Choose the best answer: The evaluative component of an annotated bibliography entry asks the writer to:",
       "options": [
-        "True",
-        "False"
+        "Judge the source's credibility, relevance, and usefulness for the research project",
+        "Copy the source's conclusions verbatim",
+        "A broad topic answerable by one quick fact",
+        "A copied paragraph with no source evaluation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Assess the source's credibility, bias, and usefulness for the research project.",
+      "answer": "Judge the source's credibility, relevance, and usefulness for the research project",
+      "explanation": "The best answer is \"Judge the source's credibility, relevance, and usefulness for the research project\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -427,13 +435,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"A strong thesis statement must be:\" is: An arguable claim that the paper will support with evidence.",
+      "question": "Choose the best answer: A strong thesis statement must be:",
       "options": [
-        "True",
-        "False"
+        "A question that the paper will attempt to answer",
+        "A statement of universally accepted fact",
+        "An arguable claim that the paper will support with evidence",
+        "A broad overview of the paper's topic"
       ],
-      "answer": "True",
-      "explanation": "True. An arguable claim that the paper will support with evidence is correct.",
+      "answer": "An arguable claim that the paper will support with evidence",
+      "explanation": "A thesis must be contestable—a claim that someone could disagree with—and the paper's purpose is to persuade the reader through evidence.",
       "points": 1
     },
     {
@@ -467,13 +477,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"A full-sentence outline differs from a topic outline in that a full-sentence outline:\" is: Expresses every entry as a complete sentence revealing the content of each section.",
+      "question": "Choose the best answer: A full-sentence outline differs from a topic outline in that a full-sentence outline:",
       "options": [
-        "True",
-        "False"
+        "Uses only Roman numerals for main sections",
+        "Expresses every entry as a complete sentence revealing the content of each section",
+        "Is used only for informal writing assignments",
+        "Lists topics without indicating how they relate to the thesis"
       ],
-      "answer": "True",
-      "explanation": "True. Expresses every entry as a complete sentence revealing the content of each section is correct.",
+      "answer": "Expresses every entry as a complete sentence revealing the content of each section",
+      "explanation": "Full-sentence outlines use complete sentences for every entry, forcing the writer to articulate the actual claim of each section rather than just a vague label.",
       "points": 1
     },
     {
@@ -521,13 +533,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"An effective introduction hook is designed to:\" is: Capture the reader's attention and create interest in the topic.",
+      "question": "Choose the best answer: An effective introduction hook is designed to:",
       "options": [
-        "True",
-        "False"
+        "State the thesis immediately before any context is provided",
+        "Provide a complete summary of the paper's argument",
+        "Capture the reader's attention and create interest in the topic",
+        "List all the sources the paper will use"
       ],
-      "answer": "True",
-      "explanation": "True. Capture the reader's attention and create interest in the topic is correct.",
+      "answer": "Capture the reader's attention and create interest in the topic",
+      "explanation": "An introduction hook—whether a striking statistic, anecdote, or provocative question—draws the reader in before establishing context and thesis.",
       "points": 1
     }
   ],
@@ -580,14 +594,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"To avoid plagiarism when paraphrasing, writers must:\" is: Restate the idea in their own words and sentence structure AND cite the source.",
+      "type": "mc",
+      "question": "Choose the best answer: To avoid plagiarism when paraphrasing, writers must:",
       "options": [
-        "True",
-        "False"
+        "Restate the idea in their own words and sentence structure AND cite the source",
+        "A broad topic answerable by one quick fact",
+        "A copied paragraph with no source evaluation",
+        "A draft change made only to fix spelling"
       ],
-      "answer": "True",
-      "explanation": "True. Restate the idea in their own words and sentence structure AND cite the source is correct.",
+      "answer": "Restate the idea in their own words and sentence structure AND cite the source",
+      "explanation": "The best answer is \"Restate the idea in their own words and sentence structure AND cite the source\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -638,14 +654,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"An effective introduction hook's primary purpose is to:\" is: Provide the complete argument of the paper upfront.",
+      "type": "mc",
+      "question": "Choose the best answer: An effective introduction hook's primary purpose is to:",
       "options": [
-        "True",
-        "False"
+        "Engage the reader and lead into the topic or problem",
+        "Provide the complete argument of the paper upfront",
+        "A broad topic answerable by one quick fact",
+        "A copied paragraph with no source evaluation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Engage the reader's interest before building context and thesis.",
+      "answer": "Engage the reader and lead into the topic or problem",
+      "explanation": "The best answer is \"Engage the reader and lead into the topic or problem\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -696,14 +714,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Specific, actionable peer feedback is best exemplified by which comment\" is: 'Your topic sentence in paragraph 3 does not connect to your thesis—try revising it to include the word \"equity\" to match your argument.'.",
+      "type": "mc",
+      "question": "Choose the best answer: Specific, actionable peer feedback is best exemplified by which comment?",
       "options": [
-        "True",
-        "False"
+        "'Your topic sentence in paragraph 3 does not connect to your thesis—try revising it to include the word \"equity\" to match your argument.'",
+        "A broad topic answerable by one quick fact",
+        "A copied paragraph with no source evaluation",
+        "A draft change made only to fix spelling"
       ],
-      "answer": "True",
-      "explanation": "True. 'Your topic sentence in paragraph 3 does not connect to your thesis—try revising it to include the word \"equity\" to match your argument.' is correct.",
+      "answer": "'Your topic sentence in paragraph 3 does not connect to your thesis—try revising it to include the word \"equity\" to match your argument.'",
+      "explanation": "The best answer is \"'Your topic sentence in paragraph 3 does not connect to your thesis—try revising it to include the word \"equity\" to match your argument.'\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -754,14 +774,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which of the following research questions is the strongest example of an arguable, focused question\" is: What is the history of social media?.",
+      "type": "mc",
+      "question": "Choose the best answer: Which of the following research questions is the strongest example of an arguable, focused question?",
       "options": [
-        "True",
-        "False"
+        "How does daily social media use affect high school students' sleep quality?",
+        "What is the history of social media",
+        "A broad topic answerable by one quick fact",
+        "A copied paragraph with no source evaluation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Should social media platforms be legally liable for algorithmic amplification of extremist content?.",
+      "answer": "How does daily social media use affect high school students' sleep quality?",
+      "explanation": "The best answer is \"How does daily social media use affect high school students' sleep quality?\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -812,14 +834,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"An annotated bibliography serves the research writing process by:\" is: Helping the writer critically engage with sources before drafting the paper.",
+      "type": "mc",
+      "question": "Choose the best answer: An annotated bibliography serves the research writing process by:",
       "options": [
-        "True",
-        "False"
+        "Helping the writer critically engage with sources before drafting the paper",
+        "A broad topic answerable by one quick fact",
+        "A copied paragraph with no source evaluation",
+        "A draft change made only to fix spelling"
       ],
-      "answer": "True",
-      "explanation": "True. Helping the writer critically engage with sources before drafting the paper is correct.",
+      "answer": "Helping the writer critically engage with sources before drafting the paper",
+      "explanation": "The best answer is \"Helping the writer critically engage with sources before drafting the paper\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -870,14 +894,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"The 'show, don't tell' principle in personal essay writing asks writers to:\" is: Prove their GPA and test scores using specific numbers.",
+      "type": "mc",
+      "question": "Choose the best answer: The 'show, don't tell' principle in personal essay writing asks writers to:",
       "options": [
-        "True",
-        "False"
+        "Use concrete scenes, actions, and sensory details instead of only abstract claims",
+        "Prove their GPA and test scores using specific numbers",
+        "A broad topic answerable by one quick fact",
+        "A copied paragraph with no source evaluation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Use narrative scenes and sensory details rather than abstract character claims.",
+      "answer": "Use concrete scenes, actions, and sensory details instead of only abstract claims",
+      "explanation": "The best answer is \"Use concrete scenes, actions, and sensory details instead of only abstract claims\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -983,14 +1009,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"A revision memo demonstrates which writing competency\" is: Ability to proofread for surface-level grammar errors.",
+      "type": "mc",
+      "question": "Choose the best answer: A revision memo demonstrates which writing competency?",
       "options": [
-        "True",
-        "False"
+        "Reflecting on revision choices and explaining how a draft changed",
+        "Ability to proofread for surface-level grammar errors",
+        "A broad topic answerable by one quick fact",
+        "A copied paragraph with no source evaluation"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Metacognitive awareness—the ability to reflect on and evaluate one's own writing process and choices.",
+      "answer": "Reflecting on revision choices and explaining how a draft changed",
+      "explanation": "The best answer is \"Reflecting on revision choices and explaining how a draft changed\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {

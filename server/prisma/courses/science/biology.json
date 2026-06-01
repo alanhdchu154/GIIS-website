@@ -282,14 +282,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"The net ATP yield from one glucose molecule in aerobic respiration is approximately:\" is: 30–32 ATP.",
+      "type": "mc",
+      "question": "The net ATP yield from one glucose molecule during aerobic respiration is approximately:",
       "options": [
-        "True",
-        "False"
+        "30–32 ATP",
+        "2 ATP",
+        "4 ATP",
+        "100 ATP"
       ],
-      "answer": "True",
-      "explanation": "True. 30–32 ATP is correct.",
+      "answer": "30–32 ATP",
+      "explanation": "Most biology courses use approximately 30–32 ATP as the net yield from aerobic respiration in eukaryotic cells.",
       "points": 1
     },
     {
@@ -335,14 +337,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"A prokaryotic cell differs from a eukaryotic cell in that it:\" is: Has mitochondria.",
+      "type": "mc",
+      "question": "A prokaryotic cell differs from a eukaryotic cell because it:",
       "options": [
-        "True",
-        "False"
+        "Lacks a membrane-bound nucleus",
+        "Has mitochondria",
+        "Contains chloroplasts",
+        "Stores DNA only in a nucleus"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Lacks a membrane-bound nucleus.",
+      "answer": "Lacks a membrane-bound nucleus",
+      "explanation": "Prokaryotes do not have a membrane-bound nucleus or other membrane-bound organelles.",
       "points": 1
     },
     {
@@ -393,14 +397,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Dominant alleles are represented by:\" is: Uppercase letters.",
+      "type": "mc",
+      "question": "Dominant alleles are conventionally represented by:",
       "options": [
-        "True",
-        "False"
+        "Uppercase letters",
+        "Lowercase letters",
+        "Greek letters only",
+        "Numbers"
       ],
-      "answer": "True",
-      "explanation": "True. Uppercase letters is correct.",
+      "answer": "Uppercase letters",
+      "explanation": "In standard genetics notation, dominant alleles are written with uppercase letters and recessive alleles with lowercase letters.",
       "points": 1
     },
     {
@@ -451,14 +457,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which bond holds the two strands of DNA together\" is: Ionic bonds.",
+      "type": "mc",
+      "question": "Which bonds hold the two strands of DNA together?",
       "options": [
-        "True",
-        "False"
+        "Hydrogen bonds",
+        "Ionic bonds",
+        "Peptide bonds",
+        "Glycosidic bonds"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Hydrogen bonds.",
+      "answer": "Hydrogen bonds",
+      "explanation": "Hydrogen bonds form between complementary base pairs and help hold the DNA strands together.",
       "points": 1
     },
     {
@@ -509,14 +517,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Darwin's theory of natural selection requires all EXCEPT:\" is: Intentional adaptation by individuals.",
+      "type": "mc",
+      "question": "Which statement is NOT a requirement of natural selection?",
       "options": [
-        "True",
-        "False"
+        "Individuals intentionally adapt because they need to",
+        "Individuals in a population vary",
+        "Some traits are heritable",
+        "Some variations affect survival or reproduction"
       ],
-      "answer": "True",
-      "explanation": "True. Intentional adaptation by individuals is correct.",
+      "answer": "Individuals intentionally adapt because they need to",
+      "explanation": "Natural selection acts on heritable variation; individuals do not intentionally change inherited traits because they need to.",
       "points": 1
     },
     {
@@ -562,14 +572,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"In an ecological food web, producers are typically:\" is: Herbivores.",
+      "type": "mc",
+      "question": "In an ecological food web, producers are typically:",
       "options": [
-        "True",
-        "False"
+        "Plants and photosynthetic organisms",
+        "Herbivores",
+        "Carnivores",
+        "Decomposers only"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Plants and photosynthetic organisms.",
+      "answer": "Plants and photosynthetic organisms",
+      "explanation": "Producers make their own food, usually by photosynthesis, and form the base of many food webs.",
       "points": 1
     },
     {
@@ -620,14 +632,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"The primary function of the cell membrane is:\" is: Regulating what enters and exits the cell.",
+      "type": "mc",
+      "question": "The primary function of the cell membrane is to:",
       "options": [
-        "True",
-        "False"
+        "Regulate what enters and exits the cell",
+        "Store genetic information",
+        "Make ribosomes",
+        "Produce all of the cell's ATP"
       ],
-      "answer": "True",
-      "explanation": "True. Regulating what enters and exits the cell is correct.",
+      "answer": "Regulate what enters and exits the cell",
+      "explanation": "The cell membrane is selectively permeable, helping control movement of materials into and out of the cell.",
       "points": 1
     },
     {
@@ -678,14 +692,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which organelle is responsible for protein synthesis\" is: Lysosome.",
+      "type": "mc",
+      "question": "Which organelle is responsible for protein synthesis?",
       "options": [
-        "True",
-        "False"
+        "Ribosome",
+        "Lysosome",
+        "Mitochondrion",
+        "Golgi apparatus"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Ribosome.",
+      "answer": "Ribosome",
+      "explanation": "Ribosomes translate mRNA into polypeptide chains during protein synthesis.",
       "points": 1
     },
     {
@@ -780,13 +796,15 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "True or False: The answer to \"Which element is the backbone of all organic molecules\" is: Carbon.",
+      "question": "Which element forms the backbone of organic molecules?",
       "options": [
-        "True",
-        "False"
+        "Carbon",
+        "Oxygen",
+        "Hydrogen",
+        "Nitrogen"
       ],
-      "answer": "True",
-      "explanation": "True. Carbon is correct.",
+      "answer": "Carbon",
+      "explanation": "Carbon can form four covalent bonds, allowing it to build the diverse structures of organic molecules.",
       "points": 1
     },
     {
@@ -848,13 +866,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "True or False: The answer to \"Which organelle contains the cell's genetic material\" is: Nucleus.",
+      "question": "Where is most eukaryotic genetic material stored?",
       "options": [
-        "True",
-        "False"
+        "Nucleus",
+        "Ribosome",
+        "Lysosome",
+        "Cell membrane"
       ],
-      "answer": "True",
-      "explanation": "True. Nucleus is correct.",
+      "answer": "Nucleus",
+      "explanation": "In eukaryotic cells, most DNA is housed inside the nucleus.",
       "points": 1
     },
     {
@@ -902,25 +922,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "True or False: The answer to \"The cell membrane is composed of a:\" is: Phospholipid bilayer.",
+      "question": "The cell membrane's phospholipid arrangement is best described as a:",
       "options": [
-        "True",
-        "False"
+        "Phospholipid bilayer",
+        "Single protein sheet",
+        "Cellulose wall",
+        "Nucleic acid chain"
       ],
-      "answer": "True",
-      "explanation": "True. Phospholipid bilayer is correct.",
+      "answer": "Phospholipid bilayer",
+      "explanation": "Cell membranes are built mainly from two layers of phospholipids with embedded proteins.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "True or False: The answer to \"Diffusion moves molecules:\" is: Against the concentration gradient.",
+      "question": "Diffusion moves molecules in which direction?",
       "options": [
-        "True",
-        "False"
+        "From high to low concentration",
+        "Against the concentration gradient",
+        "Only into the nucleus",
+        "Only when ATP is used"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: From high to low concentration.",
+      "answer": "From high to low concentration",
+      "explanation": "Diffusion is passive movement down a concentration gradient.",
       "points": 1
     },
     {
@@ -982,13 +1006,15 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "True or False: The answer to \"Glycolysis occurs in the:\" is: Cytoplasm.",
+      "question": "Where does glycolysis occur in the cell?",
       "options": [
-        "True",
-        "False"
+        "Cytoplasm",
+        "Mitochondrial matrix",
+        "Nucleus",
+        "Thylakoid membrane"
       ],
-      "answer": "True",
-      "explanation": "True. Cytoplasm is correct.",
+      "answer": "Cytoplasm",
+      "explanation": "Glycolysis takes place in the cytoplasm before later stages of respiration occur in the mitochondria.",
       "points": 1
     },
     {
@@ -1036,22 +1062,24 @@
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"The overall equation for photosynthesis shows:\" is: CO₂ + H₂O + light → glucose + O₂.",
+      "question": "In photosynthesis, carbon dioxide and water plus light energy are converted into:",
       "options": [
-        "True",
-        "False"
+        "Glucose and oxygen",
+        "Carbon dioxide and ATP only",
+        "Water and oxygen only",
+        "Protein and nitrogen"
       ],
-      "answer": "True",
-      "explanation": "True. CO₂ + H₂O + light → glucose + O₂ is correct.",
+      "answer": "Glucose and oxygen",
+      "explanation": "The overall photosynthesis equation can be summarized as CO₂ + H₂O + light → glucose + O₂.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 5,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which gas do plants absorb for photosynthesis.\"",
+      "question": "Short response: Which gas do plants absorb for photosynthesis?",
       "options": null,
       "answer": "Carbon dioxide",
-      "explanation": "The correct answer is: Carbon dioxide.",
+      "explanation": "A correct response identifies \"Carbon dioxide\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1169,13 +1197,15 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "True or False: The answer to \"Gregor Mendel conducted his genetics experiments on:\" is: Pea plants.",
+      "question": "Gregor Mendel conducted his classic genetics experiments using:",
       "options": [
-        "True",
-        "False"
+        "Pea plants",
+        "Fruit flies",
+        "Corn plants",
+        "Bacteria"
       ],
-      "answer": "True",
-      "explanation": "True. Pea plants is correct.",
+      "answer": "Pea plants",
+      "explanation": "Mendel studied inheritance patterns in pea plants, including traits such as flower color and seed shape.",
       "points": 1
     },
     {
@@ -1237,13 +1267,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "True or False: The answer to \"The base pairing rule in DNA is:\" is: A-T and G-C.",
+      "question": "Which DNA base-pairing rule is correct?",
       "options": [
-        "True",
-        "False"
+        "A-T and G-C",
+        "A-G and T-C",
+        "A-C and G-T",
+        "A-U and G-C"
       ],
-      "answer": "True",
-      "explanation": "True. A-T and G-C is correct.",
+      "answer": "A-T and G-C",
+      "explanation": "In DNA, adenine pairs with thymine, and guanine pairs with cytosine.",
       "points": 1
     },
     {
@@ -1291,25 +1323,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "True or False: The answer to \"The central dogma of molecular biology is:\" is: DNA → RNA → Protein.",
+      "question": "Which sequence best represents the central dogma of molecular biology?",
       "options": [
-        "True",
-        "False"
+        "DNA → RNA → Protein",
+        "Protein → RNA → DNA",
+        "RNA → DNA → Protein",
+        "DNA → Protein → RNA"
       ],
-      "answer": "True",
-      "explanation": "True. DNA → RNA → Protein is correct.",
+      "answer": "DNA → RNA → Protein",
+      "explanation": "The central dogma describes information flow from DNA to RNA to protein.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "True or False: The answer to \"Transcription occurs in the:\" is: Ribosome.",
+      "question": "Where does transcription of nuclear DNA occur in a eukaryotic cell?",
       "options": [
-        "True",
-        "False"
+        "Nucleus",
+        "Ribosome",
+        "Lysosome",
+        "Cell membrane"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Nucleus.",
+      "answer": "Nucleus",
+      "explanation": "In eukaryotic cells, transcription occurs in the nucleus before mRNA travels to ribosomes for translation.",
       "points": 1
     },
     {
@@ -1371,13 +1407,15 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "True or False: The answer to \"Darwin's book proposing evolution by natural selection was called:\" is: On the Origin of Species.",
+      "question": "Which book introduced Darwin's theory of evolution by natural selection?",
       "options": [
-        "True",
-        "False"
+        "On the Origin of Species",
+        "Principia Mathematica",
+        "The Double Helix",
+        "Silent Spring"
       ],
-      "answer": "True",
-      "explanation": "True. On the Origin of Species is correct.",
+      "answer": "On the Origin of Species",
+      "explanation": "Darwin published his theory of evolution by natural selection in On the Origin of Species.",
       "points": 1
     },
     {
@@ -1425,13 +1463,15 @@
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "True or False: The answer to \"The correct order of taxonomic hierarchy from broadest to most specific is:\" is: Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species.",
+      "question": "From broadest to most specific, what is the correct taxonomic hierarchy?",
       "options": [
-        "True",
-        "False"
+        "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species",
+        "Species, Genus, Family, Order, Class, Phylum, Kingdom, Domain",
+        "Kingdom, Domain, Phylum, Class, Order, Family, Genus, Species",
+        "Domain, Phylum, Kingdom, Class, Order, Family, Genus, Species"
       ],
-      "answer": "True",
-      "explanation": "True. Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species is correct.",
+      "answer": "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species",
+      "explanation": "Taxonomic levels move from the broad domain level down to the specific species level.",
       "points": 1
     },
     {
@@ -1549,13 +1589,15 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "True or False: The answer to \"The primary function of the respiratory system is:\" is: Gas exchange (O₂ in, CO₂ out).",
+      "question": "What is the primary function of the respiratory system?",
       "options": [
-        "True",
-        "False"
+        "Gas exchange: oxygen in and carbon dioxide out",
+        "Pumping blood through the body",
+        "Filtering wastes from blood",
+        "Producing digestive enzymes"
       ],
-      "answer": "True",
-      "explanation": "True. Gas exchange (O₂ in, CO₂ out) is correct.",
+      "answer": "Gas exchange: oxygen in and carbon dioxide out",
+      "explanation": "The respiratory system brings oxygen into the body and removes carbon dioxide.",
       "points": 1
     },
     {
@@ -1617,13 +1659,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "True or False: The answer to \"Producers in an ecosystem are:\" is: Organisms that make their own food via photosynthesis.",
+      "question": "Which description best fits producers in an ecosystem?",
       "options": [
-        "True",
-        "False"
+        "Organisms that make their own food, often through photosynthesis",
+        "Organisms that eat only herbivores",
+        "Organisms that break down all rocks",
+        "Animals that consume producers"
       ],
-      "answer": "True",
-      "explanation": "True. Organisms that make their own food via photosynthesis is correct.",
+      "answer": "Organisms that make their own food, often through photosynthesis",
+      "explanation": "Producers are autotrophs that supply energy to other organisms in an ecosystem.",
       "points": 1
     }
   ],

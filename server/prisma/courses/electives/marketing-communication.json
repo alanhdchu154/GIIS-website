@@ -15,8 +15,8 @@
       "objectives": "Define marketing and the marketing concept; trace the evolution of marketing from production to relationship era; distinguish marketing from advertising.",
       "readingUrl": "https://www.khanacademy.org/college-careers-more/career-content/career-content-creative-careers/career-content-marketing-advertising/a/what-is-marketing",
       "readingNote": "Khan Academy — What Is Marketing? (Career Content)",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: What Is Marketing?.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/marketing-fundamentals",
@@ -31,8 +31,8 @@
       "objectives": "Distinguish needs, wants, and demands; apply Maslow's hierarchy of needs to buying decisions; describe the consumer decision-making process; identify psychological factors influencing purchases.",
       "readingUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-producer-surplus/consumer-surplus-tutorial/a/consumer-surplus-review",
       "readingNote": "Khan Academy — Consumer Behavior & Decision Making",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Consumer Behavior.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/buyer-persona",
@@ -63,8 +63,8 @@
       "objectives": "Classify products by type; describe the product life cycle stages and their marketing implications; explain branding and packaging decisions.",
       "readingUrl": "https://www.khanacademy.org/college-careers-more/career-content/career-content-creative-careers/career-content-marketing-advertising/a/product-life-cycle",
       "readingNote": "Khan Academy — Product Life Cycle",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: The Marketing Mix: Product.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/marketing-fundamentals",
@@ -79,8 +79,8 @@
       "objectives": "Compare cost-plus, competitive, and value-based pricing strategies; explain psychological pricing tactics; analyze how price communicates brand positioning.",
       "readingUrl": "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit/average-costs-margin-rev/a/pricing-strategies-review",
       "readingNote": "Khan Academy — Pricing Strategies",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: The Marketing Mix: Price.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/marketing-fundamentals",
@@ -95,8 +95,8 @@
       "objectives": "Map direct vs. indirect distribution channels; describe the roles in a supply chain; explain the growth of e-commerce as a distribution channel.",
       "readingUrl": "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/economic-iondicators-and-the-business-cycle/gross-domestic-product-lesson/a/supply-chain-overview",
       "readingNote": "Khan Academy — Supply Chain & Distribution",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: The Marketing Mix: Place.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/marketing-fundamentals",
@@ -111,8 +111,8 @@
       "objectives": "Identify the five elements of the promotional mix; explain integrated marketing communications (IMC); compare advertising, PR, personal selling, and sales promotion.",
       "readingUrl": "https://www.khanacademy.org/college-careers-more/career-content/career-content-creative-careers/career-content-marketing-advertising/a/integrated-marketing-communications",
       "readingNote": "Khan Academy — Integrated Marketing Communications",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: The Marketing Mix: Promotion.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/marketing-fundamentals",
@@ -127,8 +127,8 @@
       "objectives": "Define brand equity and explain its value; analyze the components of brand identity (logo, voice, color, positioning); describe how brands build loyalty.",
       "readingUrl": "https://www.khanacademy.org/college-careers-more/career-content/career-content-creative-careers/career-content-marketing-advertising/a/branding-basics",
       "readingNote": "Khan Academy — Branding Basics",
-      "videoUrl": "",
-      "videoNote": "Removed after 2026-05-30 availability audit: previous YouTube resource was unavailable. Use the remaining reading/practice resources until a vetted replacement is added.",
+      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
+      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Branding & Brand Identity.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://academy.hubspot.com/courses/brand-voice",
@@ -186,14 +186,16 @@
     {
       "examType": "midterm",
       "order": 4,
-      "type": "tf",
-      "question": "True or False: The answer to \"A product is in the maturity stage of its life cycle. Which strategy is most appropriate\" is: Market penetration and product modifications to extend the life cycle.",
+      "type": "mc",
+      "question": "Choose the best answer: A product is in the maturity stage of its life cycle. Which strategy is most appropriate?",
       "options": [
-        "True",
-        "False"
+        "Market penetration and product modifications to extend the life cycle",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value",
+        "A channel choice unrelated to how customers buy"
       ],
-      "answer": "True",
-      "explanation": "True. Market penetration and product modifications to extend the life cycle is correct.",
+      "answer": "Market penetration and product modifications to extend the life cycle",
+      "explanation": "The best answer is \"Market penetration and product modifications to extend the life cycle\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -244,14 +246,16 @@
     {
       "examType": "midterm",
       "order": 8,
-      "type": "tf",
-      "question": "True or False: The answer to \"Pricing a product at $9.99 instead of $10.00 is an example of:\" is: Value-based pricing.",
+      "type": "mc",
+      "question": "Choose the best answer: Pricing a product at $9.99 instead of $10.00 is an example of:",
       "options": [
-        "True",
-        "False"
+        "Psychological pricing",
+        "Value-based pricing",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Psychological pricing (charm pricing).",
+      "answer": "Psychological pricing",
+      "explanation": "The best answer is \"Psychological pricing\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -302,14 +306,16 @@
     {
       "examType": "midterm",
       "order": 12,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which distribution channel is most common for fresh produce sold at a local farmers market\" is: Producer → Consumer.",
+      "type": "mc",
+      "question": "Choose the best answer: Which distribution channel is most common for fresh produce sold at a local farmers market?",
       "options": [
-        "True",
-        "False"
+        "Producer → Consumer",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value",
+        "A channel choice unrelated to how customers buy"
       ],
-      "answer": "True",
-      "explanation": "True. Producer → Consumer is correct.",
+      "answer": "Producer → Consumer",
+      "explanation": "The best answer is \"Producer → Consumer\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -350,14 +356,16 @@
     {
       "examType": "final",
       "order": 1,
-      "type": "tf",
-      "question": "True or False: The answer to \"Which era of marketing history focused on selling what the factory produced, regardless of customer needs\" is: Marketing era.",
+      "type": "mc",
+      "question": "Choose the best answer: Which era of marketing history focused on selling what the factory produced, regardless of customer needs?",
       "options": [
-        "True",
-        "False"
+        "The selling era",
+        "Marketing era",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Production era.",
+      "answer": "The selling era",
+      "explanation": "The best answer is \"The selling era\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -408,14 +416,16 @@
     {
       "examType": "final",
       "order": 5,
-      "type": "tf",
-      "question": "True or False: The answer to \"Value-based pricing sets price based on:\" is: How much the customer perceives the product is worth.",
+      "type": "mc",
+      "question": "Choose the best answer: Value-based pricing sets price based on:",
       "options": [
-        "True",
-        "False"
+        "How much the customer perceives the product is worth",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value",
+        "A channel choice unrelated to how customers buy"
       ],
-      "answer": "True",
-      "explanation": "True. How much the customer perceives the product is worth is correct.",
+      "answer": "How much the customer perceives the product is worth",
+      "explanation": "The best answer is \"How much the customer perceives the product is worth\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -466,14 +476,16 @@
     {
       "examType": "final",
       "order": 9,
-      "type": "tf",
-      "question": "True or False: The answer to \"SEO (Search Engine Optimization) is best described as:\" is: Paying Google to display your ad at the top of search results.",
+      "type": "mc",
+      "question": "Choose the best answer: SEO (Search Engine Optimization) is best described as:",
       "options": [
-        "True",
-        "False"
+        "Improving unpaid search visibility by optimizing website content, structure, and authority signals",
+        "Paying Google to display your ad at the top of search results",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Improving a website's organic ranking in search engine results.",
+      "answer": "Improving unpaid search visibility by optimizing website content, structure, and authority signals",
+      "explanation": "The best answer is \"Improving unpaid search visibility by optimizing website content, structure, and authority signals\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -524,14 +536,16 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "tf",
-      "question": "True or False: The answer to \"In rhetoric, 'logos' refers to persuasion through:\" is: Logic, data, and reasoned argument.",
+      "type": "mc",
+      "question": "Choose the best answer: In rhetoric, 'logos' refers to persuasion through:",
       "options": [
-        "True",
-        "False"
+        "Logic, data, and reasoned argument",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value",
+        "A channel choice unrelated to how customers buy"
       ],
-      "answer": "True",
-      "explanation": "True. Logic, data, and reasoned argument is correct.",
+      "answer": "Logic, data, and reasoned argument",
+      "explanation": "The best answer is \"Logic, data, and reasoned argument\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -582,14 +596,16 @@
     {
       "examType": "final",
       "order": 17,
-      "type": "tf",
-      "question": "True or False: The answer to \"Content marketing is best defined as:\" is: Paying influencers to endorse your product.",
+      "type": "mc",
+      "question": "Choose the best answer: Content marketing is best defined as:",
       "options": [
-        "True",
-        "False"
+        "Creating valuable, relevant content to attract and retain a defined audience",
+        "Paying influencers to endorse your product",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Creating and distributing valuable, relevant content to attract and retain a clearly defined audience.",
+      "answer": "Creating valuable, relevant content to attract and retain a defined audience",
+      "explanation": "The best answer is \"Creating valuable, relevant content to attract and retain a defined audience\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -655,22 +671,24 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "True or False: The answer to \"Which of the following is the best definition of marketing\" is: Creating value and communicating it to customers.",
+      "question": "Choose the best answer: Which of the following is the best definition of marketing?",
       "options": [
-        "True",
-        "False"
+        "Selling as many products as possible",
+        "Creating value and communicating it to customers",
+        "Designing attractive advertisements",
+        "Managing a company's finances"
       ],
-      "answer": "True",
-      "explanation": "True. Creating value and communicating it to customers is correct.",
+      "answer": "Creating value and communicating it to customers",
+      "explanation": "Marketing is about identifying and delivering value — not just selling or advertising.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"a company that surveys customers before developing a new product is practicing:.\"",
+      "question": "Short response: Complete this statement: A company that surveys customers before developing a new product is practicing...",
       "options": null,
       "answer": "Market orientation",
-      "explanation": "The correct answer is: Market orientation.",
+      "explanation": "A correct response identifies \"Market orientation\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -718,13 +736,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "True or False: The answer to \"According to Maslow, which need is at the base of the hierarchy\" is: Physiological.",
+      "question": "Choose the best answer: According to Maslow, which need is at the base of the hierarchy?",
       "options": [
-        "True",
-        "False"
+        "Safety",
+        "Esteem",
+        "Physiological",
+        "Self-actualization"
       ],
-      "answer": "True",
-      "explanation": "True. Physiological is correct.",
+      "answer": "Physiological",
+      "explanation": "Physiological needs (food, water, shelter) are the most basic and must be met before higher needs motivate behavior.",
       "points": 1
     },
     {
@@ -856,25 +876,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "True or False: The answer to \"Cost-plus pricing calculates price by:\" is: Adding a fixed markup percentage to the cost of production.",
+      "question": "Choose the best answer: Cost-plus pricing calculates price by:",
       "options": [
-        "True",
-        "False"
+        "Matching competitor prices exactly",
+        "Adding a fixed markup percentage to the cost of production",
+        "Setting price equal to perceived customer value",
+        "Charging the highest price the market will bear"
       ],
-      "answer": "True",
-      "explanation": "True. Adding a fixed markup percentage to the cost of production is correct.",
+      "answer": "Adding a fixed markup percentage to the cost of production",
+      "explanation": "Cost-plus pricing: price = cost + markup. Simple but ignores market demand and competition.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "True or False: The answer to \"Price skimming involves:\" is: Setting a low initial price to capture market share quickly.",
+      "question": "Choose the best answer: Price skimming involves:",
       "options": [
-        "True",
-        "False"
+        "Setting a high initial price and lowering it over time as demand changes",
+        "Setting a low initial price to capture market share quickly",
+        "A price based only on production cost with no customer context",
+        "A promotional tactic that ignores audience value"
       ],
-      "answer": "False",
-      "explanation": "False. The correct answer is: Setting a high initial price targeting early adopters, then lowering it over time.",
+      "answer": "Setting a high initial price and lowering it over time as demand changes",
+      "explanation": "The best answer is \"Setting a high initial price and lowering it over time as demand changes\" because it directly addresses the concept being assessed.",
       "points": 1
     },
     {
@@ -922,13 +946,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "True or False: The answer to \"An intermediary that buys products in bulk from manufacturers and sells them to retailers is called a:\" is: Wholesaler.",
+      "question": "Choose the best answer: An intermediary that buys products in bulk from manufacturers and sells them to retailers is called a:",
       "options": [
-        "True",
-        "False"
+        "Agent",
+        "Retailer",
+        "Consumer",
+        "Wholesaler"
       ],
-      "answer": "True",
-      "explanation": "True. Wholesaler is correct.",
+      "answer": "Wholesaler",
+      "explanation": "Wholesalers buy large quantities from producers and redistribute in smaller lots to retailers.",
       "points": 1
     },
     {
@@ -962,22 +988,24 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "True or False: The answer to \"The five elements of the promotional mix include advertising, PR, personal selling, sales promotion, and:\" is: Direct / digital marketing.",
+      "question": "Choose the best answer: The five elements of the promotional mix include advertising, PR, personal selling, sales promotion, and:",
       "options": [
-        "True",
-        "False"
+        "Product design",
+        "Direct / digital marketing",
+        "Supply chain management",
+        "Financial planning"
       ],
-      "answer": "True",
-      "explanation": "True. Direct / digital marketing is correct.",
+      "answer": "Direct / digital marketing",
+      "explanation": "The five elements of the promotional mix: advertising, PR, personal selling, sales promotion, and direct/digital marketing.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Fill in the blank: Complete: In the context of the topic, ___ refers to \"which promotional tool earns media coverage without paying for ad space.\"",
+      "question": "Short response: Which promotional tool earns media coverage without paying for ad space?",
       "options": null,
       "answer": "Public relations",
-      "explanation": "The correct answer is: Public relations.",
+      "explanation": "A correct response identifies \"Public relations\" and connects it to the module context.",
       "points": 1
     },
     {
@@ -1025,13 +1053,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "True or False: The answer to \"Brand equity is best defined as:\" is: The added value and premium customers associate with a brand name.",
+      "question": "Choose the best answer: Brand equity is best defined as:",
       "options": [
-        "True",
-        "False"
+        "The total revenue a brand generates annually",
+        "The added value and premium customers associate with a brand name",
+        "The number of products a brand sells",
+        "The design cost of a company's logo"
       ],
-      "answer": "True",
-      "explanation": "True. The added value and premium customers associate with a brand name is correct.",
+      "answer": "The added value and premium customers associate with a brand name",
+      "explanation": "High brand equity means consumers will choose and pay more for your product over an identical unbranded alternative.",
       "points": 1
     }
   ],
