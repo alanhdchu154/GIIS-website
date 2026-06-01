@@ -1,0 +1,24 @@
+{
+  "reviewer": "Umi peer math reviewer",
+  "date": "2026-05-31",
+  "verdict": "pass",
+  "scope": "Algebra I foundation lesson content correctness",
+  "checked_against": [
+    "server/prisma/courses/math/algebra-i.json module 10",
+    "rendered contact-sheet.jpg",
+    "script.json",
+    "learning_check.json"
+  ],
+  "findings": [
+    "The three linear-equation forms are introduced correctly: slope-intercept, point-slope, and standard form.",
+    "The point-slope worked example with slope 4 through (3, -2) correctly becomes y + 2 = 4(x - 3), preserving the inner negative sign.",
+    "Pause problem 1 correctly converts y - 1 = 3(x - 2) into y = 3x - 5.",
+    "The two-point example through (-1, 2) and (3, -6) correctly computes slope -2 and simplifies to y = -2x.",
+    "The standard-form conversion from y = (2/3)x + 4 correctly clears fractions and flips signs to produce 2x - 3y = -12.",
+    "Pause problem 2 correctly computes slope 4 through (1, -3) and (3, 5), then simplifies to y = 4x - 7."
+  ],
+  "release_notes": [
+    "Foundation math only; no AP, College Board, Common App, CEEB, accreditation, NCAA, or college-admissions claims."
+  ],
+  "script_sha": "66a9cd9a626b6b16f45c3ebad79ff955dcf55feb02fca189dc16b9ad960b4a4a"
+}
