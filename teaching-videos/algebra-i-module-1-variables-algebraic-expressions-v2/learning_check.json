@@ -1,0 +1,36 @@
+{
+  "course": "Algebra I",
+  "module": "Module 1: Variables & Algebraic Expressions",
+  "checks": [
+    {
+      "skill": "evaluate an expression by substitution",
+      "question": "Evaluate 2a + 6 when a = 5.",
+      "answer": "2(5) + 6 = 10 + 6 = 16",
+      "misconception_tested": "adding before multiplying, or forgetting to substitute the variable at all"
+    },
+    {
+      "skill": "name the parts of an expression",
+      "question": "In the expression 3x + 7, name the coefficient, the variable, and the constant.",
+      "answer": "Coefficient = 3, variable = x, constant = 7.",
+      "misconception_tested": "calling the constant a variable, or treating the coefficient and constant as the same kind of number"
+    },
+    {
+      "skill": "translate an English phrase into an algebraic expression",
+      "question": "Write '$10 less than three times the price p' as an algebraic expression.",
+      "answer": "3p − 10",
+      "misconception_tested": "copying word order to write 10 − 3p instead of recognizing 'less than' flips the subtraction"
+    },
+    {
+      "skill": "distinguish an expression from an equation",
+      "question": "Is 3x + 7 an expression or an equation, and why?",
+      "answer": "An expression — it combines variables, numbers, and operations but has no equals sign. An equation would need an = sign.",
+      "misconception_tested": "treating any string of math symbols as an equation regardless of whether an equals sign is present"
+    },
+    {
+      "skill": "interpret a variable as a placeholder for changing values",
+      "question": "Boba tea costs $6 per cup. Write an expression for the cost of x cups, then evaluate it for x = 3 and x = 5.",
+      "answer": "Expression: 6x. For x = 3, cost = 6(3) = $18. For x = 5, cost = 6(5) = $30.",
+      "misconception_tested": "thinking a variable is a fixed mystery number rather than a placeholder for many possible values"
+    }
+  ]
+}

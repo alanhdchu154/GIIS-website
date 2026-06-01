@@ -1,0 +1,36 @@
+{
+  "course": "Algebra I",
+  "module": "Module 5: Solving Multi-Step Equations & Literal Equations",
+  "checks": [
+    {
+      "skill": "distribute correctly across a parenthesis",
+      "question": "Expand 2(x + 3) and explain why 2x + 3 is wrong.",
+      "answer": "2(x + 3) = 2x + 6. The factor of 2 multiplies every term inside the parentheses — both the x and the 3. Writing 2x + 3 distributes the 2 only to the first term and leaves the 3 unmultiplied, which changes the value of the expression and breaks the equation.",
+      "misconception_tested": "distributing only to the first term inside the parentheses (the all-or-nothing rule)"
+    },
+    {
+      "skill": "solve an equation with variables on both sides and parentheses",
+      "question": "Solve 2(x + 3) = 4x − 2. Show every move.",
+      "answer": "2(x + 3) = 4x − 2 → distribute: 2x + 6 = 4x − 2 → subtract 2x from both sides: 6 = 2x − 2 → add 2 to both sides: 8 = 2x → divide by 2: x = 4. Verify: 2(4 + 3) = 14 and 4(4) − 2 = 14. ✓",
+      "misconception_tested": "moving an x term from one side without applying the matching subtraction to the other side"
+    },
+    {
+      "skill": "clear fractions in a multi-step equation using the LCD",
+      "question": "Solve x/3 + 2 = x/2 − 1 by clearing fractions first.",
+      "answer": "LCD of 3 and 2 is 6. Multiply every term by 6: 2x + 12 = 3x − 6. Subtract 2x from both sides: 12 = x − 6. Add 6 to both sides: x = 18. Verify: 18/3 + 2 = 8 and 18/2 − 1 = 8. ✓",
+      "misconception_tested": "multiplying only the fractional terms by the LCD and forgetting to scale the constants 2 and −1"
+    },
+    {
+      "skill": "rearrange a literal equation for a chosen variable",
+      "question": "Rearrange A = lw to solve for l, then rearrange PV = nRT to solve for T.",
+      "answer": "A = lw → divide both sides by w → l = A/w. PV = nRT → divide both sides by nR → T = PV/(nR). The balance rule is unchanged; the target is just a letter you picked rather than x.",
+      "misconception_tested": "treating literal equations as a different topic and trying to memorize each rearrangement instead of using the same balance moves to isolate the target letter"
+    },
+    {
+      "skill": "explain in plain English what a rearranged literal-equation variable represents",
+      "question": "After rearranging C = 2πr into r = C/(2π), write one sentence that states what r is.",
+      "answer": "r is the radius of the circle — the distance from the center of the circle to its edge — expressed in terms of the circumference C. The sentence is the rubric item: solving is not enough on its own; the assignment requires a plain-English statement of what the isolated letter means.",
+      "misconception_tested": "stopping at the algebra and skipping the one-sentence interpretation the assignment requires"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "course": "Algebra I",
+  "module": "Module 4: Solving One-Step & Two-Step Equations",
+  "voice": "en-US-AriaNeural",
+  "voice_rate": "-3%",
+  "intro_music_seconds": 3,
+  "outro_music_seconds": 3,
+  "sections": [
+    {
+      "id": "01_title",
+      "text": "Welcome back. Algebra One, Module Four — Solving One-Step and Two-Step Equations. This is the first time the variable stops being decoration and starts being a thing we actually find. The whole point — do the same move to both sides until the variable is alone."
+    },
+    {
+      "id": "02_hook",
+      "text": "You babysit for five dollars an hour. The family gives you a ten-dollar tip. Tonight you take home forty-five. How many hours did you work? Five times h plus ten equals forty-five. That equation has one unknown, and the next six minutes are about how to find it."
+    },
+    {
+      "id": "03_overview",
+      "text": "Game plan. First, the balance idea — every move you make to one side, you must make to the other. Second, one-step then two-step, with the reverse-PEMDAS order that matters. Third, always check by substitution — plug your answer back in and make sure both sides match."
+    },
+    {
+      "id": "04_balance",
+      "text": "An equation is a balanced scale. The left side equals the right side. If you add three to the left, you must add three to the right, or the scale tips. Same with subtracting, multiplying, or dividing. Doing the same operation to both sides is the only legal move."
+    },
+    {
+      "id": "05_onestep",
+      "text": "One-step equation — x plus seven equals twelve. The seven is in your way. Undo it with its inverse — subtract seven from both sides. x equals five. That is the entire algorithm — pick the inverse operation, apply it to both sides, isolate the variable."
+    },
+    {
+      "id": "06_twostep_equation",
+      "text": "Two-step equation — three x plus five equals twenty. Two things are blocking x. Undo them in reverse PEMDAS order — addition before multiplication. Subtract five from both sides — three x equals fifteen. Then divide both sides by three. x equals five. Always undo the outside layer first."
+    },
+    {
+      "id": "07_verify",
+      "text": "Always verify. Take your solution, substitute back into the original. Three times five plus five — that is fifteen plus five — equals twenty. Check. Substitution is the only way to know you solved it, not just moved symbols around. Five points of your assignment depend on showing this check."
+    },
+    {
+      "id": "08_trap",
+      "text": "The trap — undoing in the wrong order. With three x plus five equals twenty, students divide by three first and end up with x plus five-thirds equals twenty-thirds. The math is technically legal but the fractions wreck accuracy. Reverse PEMDAS — strip the addition first, then the multiplication."
+    },
+    {
+      "id": "09_pause1",
+      "text": "Your turn. Solve two x minus seven equals eleven. Use reverse PEMDAS — undo the subtraction first, then the coefficient. Then verify by plugging your answer back in. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "10_pause1_silence",
+      "text": "Time. Add seven to both sides — two x equals eighteen. Divide both sides by two — x equals nine. Verify — two times nine minus seven is eighteen minus seven is eleven. Check. That is the full skill — solve, then prove."
+    },
+    {
+      "id": "11_application",
+      "text": "How the assignment uses this. Fifteen equations mix one-step, two-step, fractions, and negative coefficients. For five of them you must show the verification step. Then you write one original word problem that becomes a two-step equation. The grade depends on showing each move, not just the answer."
+    },
+    {
+      "id": "12_pause2",
+      "text": "One more — solve x over four plus three equals negative two. There are two layers — a division and an addition. Reverse PEMDAS says subtract three first, then multiply by four. Watch the negatives. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "13_pause2_silence",
+      "text": "Time. Subtract three from both sides — x over four equals negative five. Multiply both sides by four — x equals negative twenty. Verify — negative twenty over four is negative five, plus three is negative two. Check. Negatives flip nothing about the strategy."
+    },
+    {
+      "id": "14_recap",
+      "text": "Recap. An equation balances — same operation on both sides. Reverse PEMDAS — undo addition or subtraction before multiplication or division. Always verify by substitution. Three rules, every linear equation you will meet this year."
+    },
+    {
+      "id": "15_path",
+      "text": "Reminder — this video is the overview. To master solving equations, do the rest. Read OpenStax Elementary Algebra chapter two, sections one and two. Run the Khan Academy two-step practice. Do the fifteen-equation assignment with verification steps. Next up — Module Five — Multi-Step Equations and Combining Like Terms."
+    }
+  ],
+  "youtube": {
+    "video_id": "1xipgYrRHyc",
+    "url": "https://youtu.be/1xipgYrRHyc",
+    "embed_url": "https://www.youtube.com/embed/1xipgYrRHyc",
+    "studio_url": "https://studio.youtube.com/video/1xipgYrRHyc/edit",
+    "privacy": "unlisted",
+    "playlist": "Algebra I",
+    "playlist_id": "PLBdiOM21TW9Lp_thaHGpAXl1VhxeV2m-S",
+    "uploaded_at": "2026-05-31T12:24:26+00:00"
+  }
+}

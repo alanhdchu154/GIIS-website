@@ -1,0 +1,18 @@
+{
+  "reviewer": "Umi adversarial student reviewer",
+  "date": "2026-05-30",
+  "verdict": "pass",
+  "scope": "student clarity and misconception check",
+  "findings": [
+    "Hook (babysitting story: 5h + 10 = 45) gives the student a concrete reason to care about isolating a variable before any formal vocabulary lands.",
+    "Balance slide explicitly states the only legal move — same operation, both sides — which is exactly the rule students forget when they 'move the 7 over' without naming what they did.",
+    "Trap slide (08) disarms the single most common two-step error: dividing by the coefficient before stripping the constant, which produces fraction soup. Both wrong-path and right-path arithmetic are shown side by side.",
+    "Pause #1 and Pause #2 both demand a substitution check, mirroring the assignment rubric. Answer-reveal slides label every move (add 7 / divide by 2 / verify) so students can self-grade.",
+    "Final path slide ends with a concrete Learn Portal next action: read OpenStax 2.1–2.2, run Khan Academy two-step practice, complete the dashboard's 15-equation + 5-verification + 1-word-problem assignment."
+  ],
+  "watch_points": [
+    "Slide 06 (two-step trace) and slide 11 (assignment box) are visually denser than the others; keep narration pace measured during recording so the student can read along.",
+    "Pause #2 uses negatives and a divisor; encourage advisors to flag a student who can solve it but cannot verbalize why subtracting 3 first preserves the equation."
+  ],
+  "script_sha": "603458190cbd3ad4249a418f49f17b0a6fc6eebc47deab487913506ede33a6db"
+}
