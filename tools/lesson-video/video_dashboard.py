@@ -67,6 +67,16 @@ def local_date(value: str | None) -> str | None:
     return parsed.astimezone(LOCAL_TZ).date().isoformat()
 
 
+def is_clean_pass(audit: dict[str, Any]) -> bool:
+    issue_counts = audit.get("issue_counts") or {}
+    return (
+        audit.get("verdict") == "pass"
+        and int(audit.get("quality_score") or 0) >= 100
+        and not issue_counts.get("critical")
+        and not issue_counts.get("major")
+    )
+
+
 def read_json(path: Path, default: Any) -> Any:
     try:
         return json.loads(path.read_text())
@@ -193,12 +203,11 @@ def lesson_rows() -> list[dict[str, Any]]:
         transcript = lesson_dir / "transcript.txt"
         yt = script.get("youtube") or {}
         manifest_row = manifest.get(slug) or {}
-        quality_row = quality.get(slug) or {}
-        quality_source = "snapshot" if quality_row else "live"
-        if not quality_row:
-            quality_row = audit_lesson(lesson_dir)
-            quality_row["_audit_generated_at"] = now_utc()
-            quality_row["_audit_file"] = None
+        snapshot_quality = quality.get(slug) or {}
+        quality_row = audit_lesson(lesson_dir)
+        quality_row["_audit_generated_at"] = now_utc()
+        quality_row["_audit_file"] = snapshot_quality.get("_audit_file")
+        quality_source = "live"
         approval_row = approvals.get(slug)
 
         video_id = yt.get("video_id") or manifest_row.get("youtube_id")
@@ -217,11 +226,14 @@ def lesson_rows() -> list[dict[str, Any]]:
             max(event_dates) if event_dates else None
         ) or approved_at or quality_row.get("_audit_generated_at") or filesystem_at
 
-        if video_id:
+        clean_pass = is_clean_pass(quality_row)
+        if video_id and clean_pass:
             status = "uploaded"
-        elif approval_row and mp4:
+        elif video_id:
+            status = "uploaded_needs_review"
+        elif approval_row and mp4 and clean_pass:
             status = "approved_pending_upload"
-        elif mp4 and quality_row.get("verdict") == "pass":
+        elif mp4 and clean_pass:
             status = "passed_not_approved"
         elif mp4:
             status = "needs_review"
@@ -281,7 +293,7 @@ def build_summary(rows: list[dict[str, Any]]) -> dict[str, Any]:
             bucket["uploaded"] += 1
         if row["status"] == "approved_pending_upload":
             bucket["approved_pending_upload"] += 1
-        if row["status"] in {"needs_review", "in_progress", "draft_no_mp4", "passed_not_approved"}:
+        if row["status"] in {"needs_review", "uploaded_needs_review", "in_progress", "draft_no_mp4", "passed_not_approved"}:
             bucket["needs_review"] += 1
     return {
         "total_lessons": total,
@@ -318,6 +330,7 @@ def build_payload() -> dict[str, Any]:
 def status_label(status: str) -> str:
     return {
         "uploaded": "Uploaded",
+        "uploaded_needs_review": "Uploaded, needs review",
         "approved_pending_upload": "Approved, not uploaded",
         "passed_not_approved": "Passed, not approved",
         "needs_review": "Needs review",
