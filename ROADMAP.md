@@ -49,6 +49,23 @@ Current evidence:
 - `npm run audit:pathways`: 93 pass / 0 warn / 0 fail.
 - `node tools/pathway-quality/audit_assessment_parent_trust.js --json`: 93
   pass / 0 warn / 0 fail.
+- `node tools/pathway-quality/audit_proofpoint_courses.js --check-urls --report _audit/proofpoint-course-qa.md`:
+  8 proof-point courses pass / 0 warn / 0 fail; 221 non-YouTube URLs checked /
+  0 bad.
+- Student feedback completion pass completed 2026-06-01: module switching,
+  English I resource gaps, same-grade recommendations, module motivation,
+  manual completion controls, quiz review guidance, parent pacing, demo
+  upcoming-date coherence, and Weekly Insights are all covered. Completion
+  evidence is recorded in
+  `umi/reviews/2026-06-01-student-feedback-completion-audit.md`.
+- Proof-point course QA started 2026-06-01: `npm run audit:proofpoints`
+  now gates the first 8 family-facing showcase courses (`algebra-i`,
+  `geometry`, `english-i`, `english-ii`, `biology`, `chemistry`,
+  `us-history`, `government`). Current result is 8 pass / 0 warn / 0 fail,
+  with a saved report at `_audit/proofpoint-course-qa.md`. The gate checks
+  stronger display criteria than `audit:pathways`: reading/video/practice URLs
+  and notes, no blocked-resource residue, substantial reviewable assignment
+  evidence, quiz/exam structure, and optional non-YouTube URL smoke.
 - Completed assessment/resource history is archived in
   `umi/reviews/2026-06-01-course-resource-assessment-summary.md`.
 
@@ -56,8 +73,9 @@ Next check:
 
 - Run resource/link audit before producing videos for a course cohort; treat
   YouTube automation 429s as a separate manual/browser spot-check lane.
-- Do a subject-matter spot check on priority courses before using the course
-  bank as a public proof point.
+- Continue proof-point course QA from the first 8 showcase courses into either
+  the next parent-visible cohort or deeper manual/browser review of the same 8,
+  especially YouTube playback and the first-module parent demo path.
 
 ### 3. Parent Trust / Admissions / Student Care
 
