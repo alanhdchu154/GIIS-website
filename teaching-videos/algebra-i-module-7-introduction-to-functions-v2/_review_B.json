@@ -1,0 +1,19 @@
+{
+  "reviewer": "Umi adversarial student reviewer",
+  "date": "2026-05-31",
+  "verdict": "pass",
+  "scope": "student clarity and misconception check",
+  "findings": [
+    "Hook (vending machine: press B4, get a granola bar every time) gives a student-visible reason for the one-input-one-output rule before any function notation lands, and contrasts a working vending machine with a broken one to show what 'not a function' actually feels like.",
+    "Concept slide (04) names the four words that the assignment will ask students to use — input, output, domain, range — and pairs them with a tidy mapping diagram so the words are anchored to a picture rather than a paragraph.",
+    "Compare slide (05) targets the dominant Algebra I notation misconception (f(x) read as f times x) head-on, using the same expression 2x + 3 in both columns so the student can see that substitution produces a single number while multiplication does not.",
+    "Worked examples (06 and 07) parallel two assignment skills: a clean linear evaluation at three inputs, and a quadratic case that demonstrates the legal-but-counterintuitive situation where g(3) = g(-3) = 5. The second example pre-empts the common student belief that a repeated output means the rule is broken.",
+    "Pause #1 covers evaluation end-to-end (substitute, simplify, name the output) and the answer reveal also names the domain and range as sets so the student can self-grade Part C of the dashboard assignment. Pause #2 covers function-vs-not-function classification with an offender-colored mapping diagram on the answer slide.",
+    "Final path slide ends with a concrete Learn Portal action: read OpenStax 3.5, run the Khan Academy evaluating-functions practice, and complete the 5-classify + 10-evaluate + domain/range dashboard assignment."
+  ],
+  "watch_points": [
+    "Slide 10 (domain/range table) carries two functions across multiple rows; pace narration so the student has time to read the rule before scanning across to the domain/range columns.",
+    "Slide 07 (quadratic example) is where a student who is just pattern-matching might still incorrectly conclude that g is not a function because the outputs repeat. Advisors should ask the student to state the rule in their own words and explain why the repeat is in the y-direction, not the x-direction."
+  ],
+  "script_sha": "44c475fd8bb936bd38ae9a87e444595149742acd16b46170dd090fe114d63346"
+}

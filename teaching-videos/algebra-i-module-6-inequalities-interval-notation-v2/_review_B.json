@@ -1,0 +1,19 @@
+{
+  "reviewer": "Umi adversarial student reviewer",
+  "date": "2026-05-31",
+  "verdict": "pass",
+  "scope": "student clarity and misconception check",
+  "findings": [
+    "Hook (4x ≤ 50 framed as a $50 snack budget at $4 each) gives a student-visible reason to want a range answer rather than a single x before any inequality vocabulary lands.",
+    "Concept slide (04) shows the four inequality symbols paired with the open/closed endpoint rule and demonstrates both an open circle (x < 3) and a closed dot (x ≥ 3) on a real number line side by side, so the bracket convention is anchored to a picture.",
+    "Compare slide (05) names the one misconception that breaks this whole module — forgetting to flip when dividing by a negative — and uses x = 0 as a concrete counterexample to show that the un-flipped answer x < −5 is wrong.",
+    "Worked examples (06 and 07) parallel the two assignment categories: a no-flip case (3x + 5 < 14) and a forced-flip case (−2x + 7 ≥ 1). Each example carries a labeled inverse operation, a number-line graph, and the matching interval, so a student can self-grade their own work.",
+    "Pause #1 covers the no-flip case end-to-end (solve → graph → interval) and the answer reveal explicitly states that infinity always uses a round bracket. Pause #2 covers the reverse direction (graph → interval and set-builder), which is exactly Part C of the dashboard assignment.",
+    "Final path slide ends with a concrete Learn Portal action: read OpenStax 2.7, run the Khan Academy inequalities practice, and complete the 10 solve-and-graph + 5 graph-to-interval dashboard assignment with per-graph endpoint sentences."
+  ],
+  "watch_points": [
+    "Slide 10 (translation table) packs four rows of inequality, interval, set-builder, and endpoint info; pace narration so the student has time to scan across each row before the next one is read.",
+    "Slide 07 (forced flip) is where a student who is just pattern-matching can still get the right final inequality by accident; advisors should ask the student to verbalize why the divisor was negative and what the flip preserves."
+  ],
+  "script_sha": "7cede5932a78ea139ff1d236e7a8fbe1d75202e37f635ea4357f9793c5ef7dde"
+}

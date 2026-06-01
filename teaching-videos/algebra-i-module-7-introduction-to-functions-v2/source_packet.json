@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-05-31T12:17:10Z",
+  "policy": "foundation_daily_v1",
+  "source_of_truth": "server/prisma/courses/math/algebra-i.json",
+  "target_slug": "algebra-i-module-7-introduction-to-functions-v2",
+  "course": {
+    "slug": "algebra-i",
+    "name": "Algebra I",
+    "department": "Mathematics",
+    "credits": 1,
+    "subject_area": "math"
+  },
+  "module": {
+    "order": 7,
+    "title": "Introduction to Functions",
+    "objectives": "Define a function; identify domain and range; evaluate functions; use function notation; distinguish functions from non-functions.",
+    "assignment": "Given 5 relations, determine if each is a function. Evaluate f(x) for 10 different inputs across 3 functions. State the domain and range of each.",
+    "estimatedHrs": 3.5
+  },
+  "resources": {
+    "refs": [
+      {
+        "key": "practiceUrl",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:intro-to-functions/e/functions_1",
+        "host": "khanacademy.org",
+        "note": "Khan Academy — Evaluating Functions",
+        "youtube_id": null,
+        "access_risk": "soft_risk",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      },
+      {
+        "key": "readingUrl",
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/3-introduction",
+        "host": "openstax.org",
+        "note": "OpenStax Elementary Algebra 2e — Ch 3.5: Relations & Functions",
+        "youtube_id": null,
+        "access_risk": "ok",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      },
+      {
+        "key": "video2Url",
+        "url": "https://www.youtube.com/watch?v=52tpYl2tTqk",
+        "host": "youtube.com",
+        "note": "Professor Leonard — Introduction to Functions",
+        "youtube_id": "52tpYl2tTqk",
+        "access_risk": "ok",
+        "availability": {
+          "id": "52tpYl2tTqk",
+          "ok": true,
+          "status": 200
+        }
+      },
+      {
+        "key": "videoUrl",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:intro-to-functions/v/what-is-a-function",
+        "host": "khanacademy.org",
+        "note": "Khan Academy — Introduction to Functions",
+        "youtube_id": null,
+        "access_risk": "soft_risk",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      "practiceUrl uses soft-risk host khanacademy.org: free nonprofit; practice/progress may require a free account",
+      "videoUrl uses soft-risk host khanacademy.org: free nonprofit; practice/progress may require a free account"
+    ]
+  },
+  "production_defaults": {
+    "voice": "en-US-AriaNeural",
+    "voice_rate": "-3%",
+    "target_minutes": "5-7",
+    "youtube_title": "GIIS Algebra I | Module 07: Introduction to Functions",
+    "privacy": "unlisted"
+  },
+  "teaching_blueprint": [
+    "title: course/module signal and parent-visible seriousness",
+    "hook: one concrete problem or surprising situation tied to the module",
+    "overview: three learning moves students will complete",
+    "concept: define the core idea in plain English",
+    "misconception: show the common wrong move before the correct one",
+    "worked example: trace the skill step by step",
+    "pause: student solves one short problem",
+    "answer reveal: narrated solution on a visually different slide",
+    "application: connect the idea to the course/module assignment",
+    "recap: 3-bullet memory aid",
+    "path: exact Learn Portal next action"
+  ],
+  "quality_bar": [
+    "Parent should feel this is a serious school lesson, not generic AI slides.",
+    "Every slide must have one claim or one learner action.",
+    "Use course-specific palette, voice, and visual rhythm.",
+    "Use deterministic diagrams for precise math/science/history evidence.",
+    "Do not read URLs aloud.",
+    "No AP, College Board, CEEB, accreditation, or admissions claims."
+  ]
+}
