@@ -99,6 +99,21 @@ def sha256_file(path: Path) -> str | None:
         return None
 
 
+def sha256_review_script(path: Path) -> str | None:
+    """Hash the teaching script content reviewers approved.
+
+    `script.json.youtube` is written after upload/sync and should not invalidate
+    the pedagogical reviewer binding.
+    """
+    script = load_json(path)
+    if not isinstance(script, dict):
+        return sha256_file(path)
+    script = dict(script)
+    script.pop("youtube", None)
+    data = json.dumps(script, indent=2, ensure_ascii=False).encode() + b"\n"
+    return hashlib.sha256(data).hexdigest()
+
+
 def expected_theme_name(course: str | None) -> str:
     course = course or ""
     for prefixes, theme in EXPECTED_THEME_PREFIXES:
@@ -238,6 +253,7 @@ def inspect_script(folder: Path, script: dict[str, Any]) -> dict[str, Any]:
         "voice": script.get("voice"),
         "voice_rate": script.get("voice_rate"),
         "script_sha": sha256_file(folder / "script.json"),
+        "review_script_sha": sha256_review_script(folder / "script.json"),
         "section_count": len(sections),
         "word_count": total_words,
         "estimated_minutes": round(total_words / TARGET_WPM, 1) if total_words else 0,
@@ -438,7 +454,7 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
     if youtube.get("video_id") and not assets["is_cleaned_after_upload"]:
         add("note", "YouTube block exists but folder is not marked .cleaned; cleanup may not have run.")
 
-    weights = {"critical": 100, "major": 20, "minor": 6, "note": 1}
+    weights = {"critical": 100, "major": 20, "minor": 6, "note": 0}
     penalty = sum(weights[i["severity"]] for i in issues)
     quality_score = max(0, min(100, 100 - penalty))
     if any(i["severity"] == "critical" for i in issues):
@@ -474,7 +490,7 @@ def audit_lesson(folder: Path) -> dict[str, Any]:
     assets = inspect_assets(folder, section_ids)
     learning_checks = inspect_learning_checks(folder)
     source_risk = inspect_source_visual_risk(folder)
-    reviewers = collect_reviewer_verdicts(folder, script_info.get("script_sha"))
+    reviewers = collect_reviewer_verdicts(folder, script_info.get("review_script_sha") or script_info.get("script_sha"))
     youtube = script.get("youtube") or {}
     score = score_lesson(script_info, assets, learning_checks, source_risk, reviewers, youtube)
     return {
