@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:30:35Z",
+  "generated_at": "2026-06-01T12:24:18Z",
   "policy": "foundation_daily_auto_approval_clean_pass_score_100",
   "approved_ready_to_upload": [
     {
@@ -34,6 +34,39 @@
       "verdict": "pass",
       "approved_by": "foundation_daily_orchestrator",
       "approved_at": "2026-06-01T04:28:21Z"
+    },
+    {
+      "slug": "algebra-i-module-12-exponents-polynomials-v2",
+      "path": "teaching-videos/algebra-i-module-12-exponents-polynomials-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 12: Exponents & Polynomials",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-01T12:09:05Z"
+    },
+    {
+      "slug": "algebra-i-module-13-factoring-polynomials-v2",
+      "path": "teaching-videos/algebra-i-module-13-factoring-polynomials-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 13: Factoring Polynomials",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-01T12:16:50Z"
+    },
+    {
+      "slug": "algebra-i-module-14-quadratic-equations-v2",
+      "path": "teaching-videos/algebra-i-module-14-quadratic-equations-v2",
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module": "Module 14: Quadratic Equations",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-01T12:24:18Z"
     },
     {
       "slug": "algebra-i-module-2-order-of-operations-v2",
