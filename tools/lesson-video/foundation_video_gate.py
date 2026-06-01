@@ -11,6 +11,17 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_VIDEO_VENV = Path.home() / ".cache" / "giis-video-pipeline-venv" / "bin" / "python"
+FALLBACK_VIDEO_VENV = Path("/tmp/giis-video-venv/bin/python")
+
+
+def default_python() -> str:
+    env_python = os.environ.get("GIIS_VIDEO_PYTHON")
+    candidates = [env_python, str(DEFAULT_VIDEO_VENV), str(FALLBACK_VIDEO_VENV), sys.executable]
+    for candidate in candidates:
+        if candidate and Path(candidate).exists():
+            return candidate
+    return sys.executable
 
 
 def run(cmd: list[str], *, cwd: Path = ROOT) -> None:
@@ -27,7 +38,7 @@ def newest_audit() -> Path | None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("lesson_folder", type=Path)
-    ap.add_argument("--python", default=sys.executable)
+    ap.add_argument("--python", default=default_python())
     ap.add_argument("--render-mp4", action="store_true")
     args = ap.parse_args()
 

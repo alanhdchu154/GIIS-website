@@ -43,6 +43,7 @@ Scheduling:
 from __future__ import annotations
 import argparse, json, sys, subprocess, datetime, os
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 # ─── paths ─────────────────────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parents[2]   # giis-website/
@@ -54,6 +55,9 @@ APPROVED_READY_TO_UPLOAD = LESSONS_DIR / "_audit" / "release-gate" / "approved_r
 # captions + playlist add ≈ 2,100 units. 4 uploads = 8,400 units, leaves
 # 1,600 for sync_channel.py reconciliation. Override with --max.
 DEFAULT_MAX_PER_DAY = 4
+DAILY_QUOTA_UNITS = 10_000
+ESTIMATED_UNITS_PER_UPLOAD = 2_100
+PACIFIC = ZoneInfo("America/Los_Angeles")
 
 # Quota resets at midnight Pacific Time. If you run after PT midnight
 # (e.g. 09:00 PT in the plist), the day's quota is fresh.
@@ -100,7 +104,7 @@ def classify_lesson(lesson_dir: Path) -> dict:
         "video_id": video_id,
         "course": script.get("course", "?"),
         "module": script.get("module", "?"),
-        "uploaded_at": yt.get("uploaded_at"),
+        "uploaded_at": yt.get("uploaded_at") or yt.get("published_at"),
         "url": yt.get("url"),
     }
 
@@ -185,6 +189,64 @@ def print_status_report(lessons: list[dict]):
             print(f"  {c:34s}  {GREEN}{bar_up}{YELLOW}{bar_pe}{GREY}{bar_nr}{RESET}  {up}/{total_c} uploaded · {pe} pending · {nr} no-mp4")
         print()
 
+
+def _parse_dt(raw: str | None) -> datetime.datetime | None:
+    if not raw:
+        return None
+    try:
+        parsed = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=datetime.timezone.utc)
+        return parsed
+    except ValueError:
+        return None
+
+
+def quota_estimate(lessons: list[dict]) -> dict:
+    """Conservative local estimate; YouTube API does not expose remaining quota here."""
+    today_pt = datetime.datetime.now(PACIFIC).date()
+    uploaded_today = []
+    for lesson in lessons:
+        if lesson.get("status") != "uploaded":
+            continue
+        uploaded_at = _parse_dt(lesson.get("uploaded_at"))
+        if uploaded_at and uploaded_at.astimezone(PACIFIC).date() == today_pt:
+            uploaded_today.append(lesson)
+    used = len(uploaded_today) * ESTIMATED_UNITS_PER_UPLOAD
+    remaining = max(DAILY_QUOTA_UNITS - used, 0)
+    return {
+        "date_pacific": today_pt.isoformat(),
+        "daily_quota_units": DAILY_QUOTA_UNITS,
+        "estimated_units_per_upload": ESTIMATED_UNITS_PER_UPLOAD,
+        "uploaded_today": uploaded_today,
+        "estimated_used_units": used,
+        "estimated_remaining_units": remaining,
+        "safe_full_uploads_remaining": remaining // ESTIMATED_UNITS_PER_UPLOAD,
+    }
+
+
+def print_quota_report(lessons: list[dict]) -> None:
+    estimate = quota_estimate(lessons)
+    by_status = {"uploaded": [], "pending": [], "not-ready": [], "broken-json": []}
+    for lesson in lessons:
+        by_status.setdefault(lesson["status"], []).append(lesson)
+
+    print(f"\n{BOLD}YouTube API quota estimate{RESET}")
+    print(f"{DIM}YouTube Data API does not expose exact remaining quota to this local script.{RESET}")
+    print(f"  Pacific date:              {estimate['date_pacific']}")
+    print(f"  Daily quota:               {estimate['daily_quota_units']:,} units")
+    print(f"  Estimated per upload:      ~{estimate['estimated_units_per_upload']:,} units")
+    print(f"  Uploaded today (local):    {len(estimate['uploaded_today'])}")
+    print(f"  Estimated used:            ~{estimate['estimated_used_units']:,} units")
+    print(f"  Estimated remaining:       ~{estimate['estimated_remaining_units']:,} units")
+    print(f"  Safe full uploads left:    {estimate['safe_full_uploads_remaining']}")
+    if estimate["uploaded_today"]:
+        print()
+        print(f"{BOLD}Uploaded today:{RESET}")
+        for lesson in estimate["uploaded_today"]:
+            print(f"  - {lesson.get('course')} / {lesson.get('module')}  {DIM}{lesson.get('video_id')}{RESET}")
+    print()
+
     # Pending list (the action queue)
     if by_status["pending"]:
         print(f"{BOLD}{YELLOW}Pending — these would be the next to upload (oldest folder first):{RESET}")
@@ -240,6 +302,23 @@ def run_upload(args):
         else:
             print(f"{GREEN}Nothing pending. All rendered videos already uploaded.{RESET}")
         return 0
+
+    if not args.ignore_quota_estimate:
+        estimate = quota_estimate(lessons)
+        safe_remaining = int(estimate["safe_full_uploads_remaining"])
+        if safe_remaining < args.max:
+            print(
+                f"{YELLOW}quota estimate: safe full uploads left today is {safe_remaining}; "
+                f"requested max is {args.max}.{RESET}"
+            )
+        if not args.dry_run:
+            args.max = min(args.max, safe_remaining)
+            if args.max <= 0:
+                print(
+                    f"{YELLOW}Refusing upload because the local quota estimate leaves "
+                    f"0 safe full uploads today. Use --ignore-quota-estimate to override.{RESET}"
+                )
+                return 0
 
     queue = pending[: args.max]
     print(f"\n{BOLD}YouTube upload run — {datetime.datetime.now().isoformat(timespec='seconds')}{RESET}")
@@ -298,6 +377,7 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     sp = sub.add_parser("status", help="Show the upload queue (read-only).")
+    sub.add_parser("quota", help="Estimate today's YouTube API quota usage.")
 
     up = sub.add_parser("upload", help="Upload up to --max pending lessons.")
     up.add_argument("--max", type=int, default=DEFAULT_MAX_PER_DAY,
@@ -315,11 +395,16 @@ def main():
                     help="only upload lessons listed in the human approval file")
     up.add_argument("--approval-file", default=None,
                     help="override the approved_ready_to_upload.json path for --gate-ready")
+    up.add_argument("--ignore-quota-estimate", action="store_true",
+                    help="override the local quota estimate and use --max as requested")
 
     args = ap.parse_args()
 
     if args.cmd == "status":
         print_status_report(scan())
+        return 0
+    if args.cmd == "quota":
+        print_quota_report(scan())
         return 0
     if args.cmd == "upload":
         return run_upload(args)

@@ -31,7 +31,12 @@ restart is the new foundation-first pipeline:
 This pipeline is allowed because it is not the old AP-era batch generator. It
 must:
 
+- default to Grade 9 before later grades unless Alan/Umi explicitly changes
+  `FOUNDATION_TARGET_GRADE`
 - select only non-AP foundation modules
+- review the course design before starting or continuing a course video series
+- repair safe structural course-design issues before producing videos; if the
+  course still fails review after repair, report the blocker and do not produce
 - create a Umi/Codex source packet, teaching brief, and visual brief first
 - delegate bounded production work to Claude Code
 - require the strict foundation gate and release gate

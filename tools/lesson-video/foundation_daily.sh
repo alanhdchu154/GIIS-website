@@ -2,6 +2,9 @@
 #
 # Daily foundation-video orchestrator.
 #
+# This is the Umi/Codex -> Claude Code -> Codex gate -> gated YouTube pipeline
+# for new non-AP foundation videos.
+#
 # Manual dry-run:
 #   bash tools/lesson-video/foundation_daily.sh --dry-run --no-cc --no-upload
 #
@@ -39,11 +42,12 @@ fi
   echo "  python: $PYTHON"
   echo
   "$PYTHON" tools/lesson-video/foundation_daily_orchestrator.py \
+    --target-grade "${FOUNDATION_TARGET_GRADE:-9}" \
     --max-modules "${FOUNDATION_MAX_MODULES:-3}" \
-    --upload-max "${FOUNDATION_UPLOAD_MAX:-3}" \
+    --upload-max "${FOUNDATION_UPLOAD_MAX:-4}" \
     --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}" \
-    --budget-usd "${FOUNDATION_CC_BUDGET_USD:-3}" \
-    --cc-timeout-seconds "${FOUNDATION_CC_TIMEOUT_SECONDS:-900}" \
+    --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}" \
+    --cc-timeout-seconds "${FOUNDATION_CC_TIMEOUT_SECONDS:-1800}" \
     --auto-commit \
     "$@"
 } 2>&1 | tee -a "$LOG"

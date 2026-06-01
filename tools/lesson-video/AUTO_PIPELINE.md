@@ -381,7 +381,7 @@ Per the operating decision (2026-05-13):
 - Expected modules per run if all approved: 12-16
 - Realistic with reviewer halts (~5-15% halt rate): 10-14 modules
 
-The active Codex automation caps foundation YouTube uploads at 3/day. Backlog is
+The active Codex automation caps foundation YouTube uploads at 4/day. Backlog is
 acceptable only when each candidate has passed the source review, strict gate,
 and approval artifact requirements.
 

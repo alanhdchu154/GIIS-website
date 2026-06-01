@@ -13,7 +13,8 @@ This is the intended loop for every new foundation video:
 ```text
 23:00 CT Codex automation
   -> call bash tools/lesson-video/foundation_daily.sh
-  -> choose 2-3 non-AP foundation modules from server/prisma/courses/**/*.json
+  -> choose 2-3 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
+  -> before a course series starts, run the course-design gate and safe repair
   -> verify module outline and free/usable resource URLs
   -> write source_packet.json + teaching_brief.md + visual_brief.md
   -> write a bounded cc handoff
@@ -97,8 +98,9 @@ Full run:
 
 ```bash
 python3 tools/lesson-video/foundation_daily_orchestrator.py \
+  --target-grade 9 \
   --max-modules 3 \
-  --upload-max 3 \
+  --upload-max 4 \
   --privacy unlisted \
   --auto-commit
 ```
@@ -108,6 +110,43 @@ The orchestrator records retry/blocking state under
 non-zero, or produces no tool progress, the module is marked `cc_blocked` and
 will be prioritized for retry before new modules. After two failed attempts, it
 requires Umi repair instead of silent repetition.
+
+## Course And Series Order
+
+The selector is deterministic, not random. The current default target grade is
+Grade 9. Within Grade 9, the core sequence starts:
+
+1. Algebra I
+2. English I
+3. Biology
+4. World History
+5. Physical Education
+6. Health & Wellness
+7. Digital Literacy
+
+After those, remaining Grade 9 courses are considered in the repository-owned
+sequence defined in `foundation_daily_orchestrator.py`.
+
+Before the first unfinished module in a course series is produced, the
+orchestrator writes/refreshes:
+
+```text
+teaching-videos/_audit/course-design/<course-slug>.json
+```
+
+The course-design gate checks that the course belongs to the target grade, is
+not AP/authorization-sensitive, has a reasonable module count for its credits,
+uses consecutive module order, and has module titles, objectives, assignments,
+resource URLs, and hour estimates.
+
+If the design is unreasonable, the orchestrator first attempts a conservative
+repo-owned repair before video production. Safe repairs include adding missing
+course descriptions, department metadata, module objectives, assignment prompts,
+and estimated hours. It does not invent external resource URLs, add/delete whole
+modules, change grade placement, reopen AP work, or resolve duplicate/blank
+module titles; those remain blocked and are reported for Alan/Umi review. After
+repair, the course is reviewed again and only proceeds if the second review
+passes.
 
 ## Gate V2
 

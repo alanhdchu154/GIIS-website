@@ -1,9 +1,25 @@
 #!/usr/bin/env python3
-"""Daily GIIS foundation-video orchestrator."""
+"""Daily GIIS foundation-video orchestrator.
+
+This is the Umi/Codex-owned layer for the foundation-video production loop:
+
+1. choose non-AP foundation modules from the published course JSON,
+2. verify module/resource viability,
+3. write a source packet + teaching/visual brief + bounded cc handoff,
+4. ask Claude Code to produce the lesson folder,
+5. run the foundation/release gates,
+6. write the approval artifact consumed by the gated YouTube queue,
+7. optionally upload and commit/push the manifest changes.
+
+The old AP-era daily build/upload loop stays legacy-paused for new production.
+This script is intentionally strict and only auto-approves clean score-100
+foundation lessons.
+"""
 from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import os
 import re
@@ -22,6 +38,7 @@ ROOT = Path(__file__).resolve().parents[2]
 COURSE_ROOT = ROOT / "server" / "prisma" / "courses"
 TEACHING_ROOT = ROOT / "teaching-videos"
 RUN_ROOT = TEACHING_ROOT / "_audit" / "foundation-daily"
+COURSE_DESIGN_ROOT = TEACHING_ROOT / "_audit" / "course-design"
 STATE_PATH = RUN_ROOT / "state.json"
 APPROVAL_PATH = TEACHING_ROOT / "_audit" / "release-gate" / "approved_ready_to_upload.json"
 HANDOFF_DIR = ROOT / "umi" / "handoffs"
@@ -35,18 +52,30 @@ sys.path.insert(0, str(ROOT / "tools" / "lesson-video"))
 from audit_lessons import audit_lesson  # noqa: E402
 
 
-FOUNDATION_PRIORITY = [
+DEFAULT_TARGET_GRADE = 9
+COURSE_DESIGN_POLICY_VERSION = "g9_course_design_gate_v2"
+
+GRADE_9_COURSE_SEQUENCE = [
     "algebra-i",
     "english-i",
     "biology",
     "world-history",
-    "us-history",
-    "american-government",
-    "government",
-    "health-wellness",
     "physical-education",
+    "health-wellness",
     "digital-literacy",
-    "introduction-to-communication",
+    "geography",
+    "environmental-science",
+    "geometry",
+    "english-i-writing",
+    "english-i-writing-focus",
+    "intro-communication",
+    "intro-psychology",
+    "human-development",
+    "health-nutrition",
+    "business-technology-digital-literacy",
+    "business-media-literacy",
+    "intro-business-economics",
+    "entrepreneurship-fundamentals",
 ]
 
 HARD_BLOCKING_HOSTS = {
@@ -68,6 +97,15 @@ SOFT_RISK_HOSTS = {
     "khanacademy.org": "free nonprofit; practice/progress may require a free account",
     "academy.hubspot.com": "free but login/certificate flow",
     "learndigital.withgoogle.com": "free but login/certificate flow",
+}
+
+DEFAULT_DEPARTMENT_BY_SUBJECT = {
+    "math": "Mathematics",
+    "science": "Science",
+    "literature": "English",
+    "social_studies": "Social Studies",
+    "health_pe": "Physical Education",
+    "general": "Electives",
 }
 
 
@@ -106,6 +144,10 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
 
 
+def file_sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def load_courses() -> list[tuple[Path, dict[str, Any]]]:
     courses = []
     for path in sorted(COURSE_ROOT.rglob("*.json")):
@@ -122,12 +164,29 @@ def is_ap_course(course: dict[str, Any]) -> bool:
     return bool(re.search(r"\bap\b|advanced placement|college board", text))
 
 
-def course_priority(course: dict[str, Any]) -> tuple[int, str]:
-    slug = str(course.get("slug") or "")
+def course_grade(course: dict[str, Any]) -> int | None:
     try:
-        return (FOUNDATION_PRIORITY.index(slug), slug)
+        return int(course.get("gradeLevel"))
+    except (TypeError, ValueError):
+        return None
+
+
+def grade_course_sequence(target_grade: int) -> list[str]:
+    if target_grade == 9:
+        return GRADE_9_COURSE_SEQUENCE
+    return []
+
+
+def course_priority(course: dict[str, Any], *, target_grade: int = DEFAULT_TARGET_GRADE) -> tuple[int, int, str]:
+    slug = str(course.get("slug") or "")
+    grade = course_grade(course)
+    grade_bucket = 0 if grade == target_grade else 1
+    sequence = grade_course_sequence(target_grade)
+    try:
+        sequence_index = sequence.index(slug)
     except ValueError:
-        return (len(FOUNDATION_PRIORITY) + 1, slug)
+        sequence_index = len(sequence) + 1
+    return (grade_bucket, sequence_index, slug)
 
 
 def target_slug(course: dict[str, Any], module: dict[str, Any]) -> str:
@@ -225,21 +284,249 @@ def resource_audit(module: dict[str, Any], *, network: bool, timeout: float) -> 
     return {"refs": checked_refs, "errors": errors, "warnings": warnings}
 
 
-def lesson_uploaded_or_visible(course: dict[str, Any], module: dict[str, Any], slug: str) -> bool:
+def course_design_path(course: dict[str, Any]) -> Path:
+    return COURSE_DESIGN_ROOT / f"{course.get('slug')}.json"
+
+
+def expected_module_range(course: dict[str, Any]) -> tuple[int, int]:
+    try:
+        credits = float(course.get("credits") or 0)
+    except (TypeError, ValueError):
+        credits = 0
+    if credits >= 0.95:
+        return (12, 16)
+    if credits >= 0.45:
+        return (6, 10)
+    return (1, 20)
+
+
+def course_design_review(course_file: Path, course: dict[str, Any], *, target_grade: int) -> dict[str, Any]:
+    modules = sorted(course.get("modules") or [], key=lambda m: int(m.get("order") or 0))
+    orders = [int(m.get("order") or 0) for m in modules]
+    expected_orders = list(range(1, len(modules) + 1))
+    min_modules, max_modules = expected_module_range(course)
+    errors: list[str] = []
+    warnings: list[str] = []
+
+    if is_ap_course(course):
+        errors.append("course is AP/authorization-sensitive; foundation video production is closed for AP")
+    if course_grade(course) != target_grade:
+        errors.append(f"course gradeLevel {course.get('gradeLevel')} does not match target grade {target_grade}")
+    if not course.get("name") or not course.get("slug"):
+        errors.append("course is missing name or slug")
+    if not course.get("description"):
+        errors.append("course is missing a description")
+    if not course.get("department"):
+        errors.append("course is missing department metadata")
+    if len(modules) < min_modules or len(modules) > max_modules:
+        errors.append(f"module count {len(modules)} is outside expected range {min_modules}-{max_modules} for {course.get('credits')} credits")
+    if orders != expected_orders:
+        errors.append(f"module orders must be consecutive 1..{len(modules)}; found {orders[:20]}")
+
+    seen_titles: set[str] = set()
+    module_checks = []
+    for module in modules:
+        order = int(module.get("order") or 0)
+        title = str(module.get("title") or "").strip()
+        module_errors = []
+        module_warnings = []
+        if not title:
+            module_errors.append("missing title")
+        title_key = title.lower()
+        if title_key and title_key in seen_titles:
+            module_errors.append(f"duplicate module title: {title}")
+        seen_titles.add(title_key)
+        for key in ("objectives", "assignment"):
+            if not str(module.get(key) or "").strip():
+                module_errors.append(f"missing {key}")
+        resource_keys = [
+            key for key, value in module.items()
+            if key.endswith("Url") and isinstance(value, str) and value.startswith(("http://", "https://"))
+        ]
+        if not resource_keys:
+            module_errors.append("missing external learning resource URL")
+        elif "readingUrl" not in resource_keys:
+            module_warnings.append("missing readingUrl")
+        if not module.get("estimatedHrs"):
+            module_errors.append("missing estimatedHrs")
+        if len(str(module.get("assignment") or "")) < 80:
+            module_warnings.append("assignment prompt is short; review for rigor")
+        for message in module_errors:
+            errors.append(f"module {order}: {message}")
+        for message in module_warnings:
+            warnings.append(f"module {order}: {message}")
+        module_checks.append({
+            "order": order,
+            "title": title,
+            "resource_url_count": len(resource_keys),
+            "errors": module_errors,
+            "warnings": module_warnings,
+        })
+
+    status = "pass" if not errors else "blocked"
+    return {
+        "generated_at": now_utc(),
+        "policy": COURSE_DESIGN_POLICY_VERSION,
+        "status": status,
+        "target_grade": target_grade,
+        "course": {
+            "name": course.get("name"),
+            "slug": course.get("slug"),
+            "department": course.get("department"),
+            "credits": course.get("credits"),
+            "gradeLevel": course.get("gradeLevel"),
+            "module_count": len(modules),
+            "source": str(course_file.relative_to(ROOT)),
+            "source_sha256": file_sha256(course_file),
+        },
+        "decision": "course design is reasonable for video-series production" if status == "pass" else "course design needs repair before video-series production",
+        "errors": errors,
+        "warnings": warnings,
+        "module_checks": module_checks,
+    }
+
+
+def default_course_description(course: dict[str, Any]) -> str:
+    name = str(course.get("name") or "This course")
+    area = subject_area(course)
+    area_label = DEFAULT_DEPARTMENT_BY_SUBJECT.get(area, "academic")
+    return (
+        f"{name} is a Grade {course.get('gradeLevel') or ''} {area_label} course "
+        "organized as a self-paced foundation sequence. Students build core "
+        "vocabulary, practice module skills, complete written assignments, and "
+        "prepare for later coursework through repeated review and application."
+    ).replace("Grade  ", "secondary")
+
+
+def default_module_objectives(course: dict[str, Any], module: dict[str, Any]) -> str:
+    title = str(module.get("title") or "this module")
+    return (
+        f"Explain the core ideas and vocabulary of {title}; apply the module skill "
+        "to guided examples; connect the concept to the course sequence; and "
+        "prepare evidence of understanding through practice and written work."
+    )
+
+
+def default_module_assignment(course: dict[str, Any], module: dict[str, Any]) -> str:
+    title = str(module.get("title") or "this module")
+    return (
+        f"Create a structured study response for {title}. Include: (1) a short "
+        "summary of the key concept, (2) vocabulary or formulas that matter, "
+        "(3) two worked examples or text-based evidence notes, (4) one common "
+        "mistake and how to avoid it, and (5) a short reflection explaining what "
+        "you still need to practice."
+    )
+
+
+def default_estimated_hours(course: dict[str, Any], module_count: int) -> int:
+    try:
+        credits = float(course.get("credits") or 0)
+    except (TypeError, ValueError):
+        credits = 0
+    total_hours = 72 if credits >= 0.95 else 36 if credits >= 0.45 else max(module_count * 3, 12)
+    return max(1, round(total_hours / max(module_count, 1)))
+
+
+def repair_course_design(course_file: Path, course: dict[str, Any], review: dict[str, Any], *, dry_run: bool) -> dict[str, Any]:
+    """Repair safe structural course-design issues before video production.
+
+    This deliberately avoids fabricating external resource URLs, changing AP or
+    grade placement, adding/deleting modules, or resolving duplicate/blank titles.
+    Those remain blocked because they need real academic judgment.
+    """
+    repaired = json.loads(json.dumps(course, ensure_ascii=False))
+    modules = repaired.get("modules") or []
+    changes: list[str] = []
+
+    if not repaired.get("description"):
+        repaired["description"] = default_course_description(repaired)
+        changes.append("added course description")
+    if not repaired.get("department"):
+        repaired["department"] = DEFAULT_DEPARTMENT_BY_SUBJECT.get(subject_area(repaired), "Electives")
+        changes.append("added department metadata")
+
+    default_hours = default_estimated_hours(repaired, len(modules))
+    for module in modules:
+        order = module.get("order")
+        title = module.get("title") or f"Module {order}"
+        if not str(module.get("objectives") or "").strip() and title:
+            module["objectives"] = default_module_objectives(repaired, module)
+            changes.append(f"module {order}: added objectives")
+        if not str(module.get("assignment") or "").strip() and title:
+            module["assignment"] = default_module_assignment(repaired, module)
+            changes.append(f"module {order}: added assignment")
+        if not module.get("estimatedHrs"):
+            module["estimatedHrs"] = default_hours
+            changes.append(f"module {order}: added estimatedHrs")
+
+    blocked_after_repair = [
+        message for message in review.get("errors") or []
+        if (
+            "missing a description" not in message
+            and "missing department metadata" not in message
+            and "missing objectives" not in message
+            and "missing assignment" not in message
+            and "missing estimatedHrs" not in message
+        )
+    ]
+    if changes and not dry_run:
+        write_json(course_file, repaired)
+    return {
+        "changed": bool(changes),
+        "changes": changes,
+        "blocked_after_repair": blocked_after_repair,
+        "course": repaired,
+    }
+
+
+def ensure_course_design_review(
+    course_file: Path,
+    course: dict[str, Any],
+    *,
+    target_grade: int,
+    dry_run: bool,
+    repair: bool,
+) -> dict[str, Any]:
+    path = course_design_path(course)
+    source_sha = file_sha256(course_file)
+    existing = read_json(path, {})
+    if (
+        existing.get("policy") == COURSE_DESIGN_POLICY_VERSION
+        and existing.get("target_grade") == target_grade
+        and ((existing.get("course") or {}).get("source_sha256") == source_sha)
+    ):
+        return existing
+    review = course_design_review(course_file, course, target_grade=target_grade)
+    repair_report = {"changed": False, "changes": [], "blocked_after_repair": []}
+    if repair and review.get("status") != "pass":
+        repair_report = repair_course_design(course_file, course, review, dry_run=dry_run)
+        if repair_report["changed"]:
+            print(
+                f"[course-design:repair{'-dry-run' if dry_run else ''}] "
+                f"{course.get('slug')} changes={len(repair_report['changes'])}",
+                flush=True,
+            )
+            course.clear()
+            course.update(repair_report["course"])
+            review = course_design_review(course_file, course, target_grade=target_grade)
+    review["repair"] = repair_report
+    if not dry_run:
+        write_json(path, review)
+        print(f"[course-design] wrote {path.relative_to(ROOT)} status={review['status']}", flush=True)
+    else:
+        print(f"[course-design:dry-run] {course.get('slug')} status={review['status']}", flush=True)
+    return review
+
+
+def lesson_complete_or_uploaded(course: dict[str, Any], module: dict[str, Any], slug: str) -> bool:
     folder = TEACHING_ROOT / slug
     script = read_json(folder / "script.json", {}) if folder.exists() else {}
     if (script.get("youtube") or {}).get("video_id"):
         return True
 
-    course_name = str(course.get("name") or "").lower()
-    module_title = str(module.get("title") or "").lower()
-    for existing in sorted(TEACHING_ROOT.glob("*-v2")):
-        existing_script = read_json(existing / "script.json", {})
-        if not existing_script:
-            continue
-        existing_course = str(existing_script.get("course") or "").lower()
-        existing_module = str(existing_script.get("module") or "").lower()
-        if existing_course == course_name and module_title and module_title in existing_module:
+    if folder.exists() and (folder / "script.json").exists():
+        ready, _, _ = gate_ready(folder)
+        if ready:
             return True
 
     manifest = read_json(ROOT / "public" / "data" / "lessons-manifest.json", {})
@@ -252,18 +539,21 @@ def lesson_uploaded_or_visible(course: dict[str, Any], module: dict[str, Any], s
     )
 
 
-def collect_candidates(*, include_other_foundation: bool = True) -> list[Candidate]:
+def collect_candidates(*, include_other_foundation: bool = True, target_grade: int = DEFAULT_TARGET_GRADE) -> list[Candidate]:
     out = []
-    for course_file, course in sorted(load_courses(), key=lambda row: course_priority(row[1])):
+    sequence = grade_course_sequence(target_grade)
+    for course_file, course in sorted(load_courses(), key=lambda row: course_priority(row[1], target_grade=target_grade)):
         if is_ap_course(course):
             continue
-        if not include_other_foundation and course.get("slug") not in FOUNDATION_PRIORITY:
+        if course_grade(course) != target_grade:
+            continue
+        if not include_other_foundation and course.get("slug") not in sequence:
             continue
         for module in sorted(course.get("modules") or [], key=lambda m: int(m.get("order") or 0)):
             if not module.get("title"):
                 continue
             slug = target_slug(course, module)
-            if lesson_uploaded_or_visible(course, module, slug):
+            if lesson_complete_or_uploaded(course, module, slug):
                 continue
             order = int(module.get("order") or 0)
             out.append(Candidate(course_file, course, module, slug, TEACHING_ROOT / slug, f"{course.get('slug')}:M{order}"))
@@ -578,6 +868,7 @@ def commit_and_push(approved_slugs: list[str]) -> int:
         "public/data/lessons-manifest.json",
         str(APPROVAL_PATH.relative_to(ROOT)),
         str(STATE_PATH.relative_to(ROOT)),
+        str(COURSE_DESIGN_ROOT.relative_to(ROOT)),
     ] + [f"teaching-videos/{slug}/script.json" for slug in approved_slugs]
     existing = [p for p in paths if (ROOT / p).exists()]
     if not existing:
@@ -595,18 +886,76 @@ def commit_and_push(approved_slugs: list[str]) -> int:
 def orchestrate(args: argparse.Namespace) -> int:
     state = load_state()
     selected = select_candidates(
-        collect_candidates(include_other_foundation=args.include_other_foundation),
+        collect_candidates(include_other_foundation=args.include_other_foundation, target_grade=args.target_grade),
         state,
         limit=max(args.max_modules * 4, args.max_modules),
     )
-    run_report = {"generated_at": now_utc(), "dry_run": args.dry_run, "selected": [], "approved": [], "blocked": [], "skipped": []}
+    run_report = {
+        "generated_at": now_utc(),
+        "dry_run": args.dry_run,
+        "target_grade": args.target_grade,
+        "course_sequence": grade_course_sequence(args.target_grade),
+        "selected": [],
+        "course_design": [],
+        "approved": [],
+        "blocked": [],
+        "skipped": [],
+    }
     approved_rows = []
+    reviewed_courses: dict[str, dict[str, Any]] = {}
+    blocked_courses: set[str] = set()
 
     production_count = 0
     for candidate in selected:
         if production_count >= args.max_modules:
             break
         print(f"\n[daily] candidate {candidate.target_slug}", flush=True)
+        course_slug = str(candidate.course.get("slug") or "")
+        if course_slug in blocked_courses:
+            run_report["skipped"].append({
+                "key": candidate.key,
+                "target_slug": candidate.target_slug,
+                "course": candidate.course.get("name"),
+                "module": candidate.module.get("title"),
+                "reason": "course_design_failed",
+            })
+            continue
+        design = reviewed_courses.get(course_slug)
+        if not design:
+            design = ensure_course_design_review(
+                candidate.course_file,
+                candidate.course,
+                target_grade=args.target_grade,
+                dry_run=args.dry_run,
+                repair=not args.no_course_design_repair,
+            )
+            reviewed_courses[course_slug] = design
+            run_report["course_design"].append({
+                "course": candidate.course.get("name"),
+                "course_slug": course_slug,
+                "status": design.get("status"),
+                "errors": design.get("errors") or [],
+                "warnings": design.get("warnings") or [],
+                "repair": design.get("repair") or {},
+                "path": str(course_design_path(candidate.course).relative_to(ROOT)),
+            })
+        if design.get("status") != "pass":
+            blocked_courses.add(course_slug)
+            print(f"[course-design:fail] {course_slug}: {design.get('errors')}", flush=True)
+            if not args.dry_run:
+                update_state_row(state, candidate, status="course_design_failed", details={
+                    "errors": design.get("errors") or [],
+                    "warnings": design.get("warnings") or [],
+                })
+            run_report["skipped"].append({
+                "key": candidate.key,
+                "target_slug": candidate.target_slug,
+                "course": candidate.course.get("name"),
+                "module": candidate.module.get("title"),
+                "reason": "course_design_failed",
+                "errors": design.get("errors") or [],
+            })
+            continue
         audit = resource_audit(candidate.module, network=not args.skip_network_check, timeout=args.url_timeout)
         packet = build_packet(candidate, audit)
         row = {
@@ -706,11 +1055,12 @@ def orchestrate(args: argparse.Namespace) -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Run the GIIS foundation video daily pipeline.")
+    ap.add_argument("--target-grade", type=int, default=DEFAULT_TARGET_GRADE)
     ap.add_argument("--max-modules", type=int, default=3)
-    ap.add_argument("--upload-max", type=int, default=3)
+    ap.add_argument("--upload-max", type=int, default=4)
     ap.add_argument("--privacy", choices=["unlisted", "private", "public"], default="unlisted")
-    ap.add_argument("--budget-usd", default="3")
-    ap.add_argument("--cc-timeout-seconds", type=int, default=900)
+    ap.add_argument("--budget-usd", default="10")
+    ap.add_argument("--cc-timeout-seconds", type=int, default=1800)
     ap.add_argument("--gate-timeout-seconds", type=int, default=1800)
     ap.add_argument("--url-timeout", type=float, default=8.0)
     ap.add_argument("--dry-run", action="store_true")
@@ -718,6 +1068,7 @@ def main() -> int:
     ap.add_argument("--no-gate", action="store_true")
     ap.add_argument("--no-upload", action="store_true")
     ap.add_argument("--skip-existing-approved-upload", action="store_true")
+    ap.add_argument("--no-course-design-repair", action="store_true")
     ap.add_argument("--auto-commit", action="store_true")
     ap.add_argument("--skip-network-check", action="store_true")
     ap.add_argument("--no-render-mp4", dest="render_mp4", action="store_false", default=True)

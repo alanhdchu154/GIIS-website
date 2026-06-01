@@ -121,9 +121,16 @@ college admissions claims in foundation lesson titles or descriptions.
 
 - 23:00 CT: Codex automation `giis-foundation-video-daily` calls
   `bash tools/lesson-video/foundation_daily.sh`.
+- Default target grade: Grade 9 (`FOUNDATION_TARGET_GRADE=9`).
+- Selection is deterministic: Grade 9 course sequence first, then module order;
+  failed modules may be retried before new work.
+- Before producing a course series, the orchestrator must write/pass
+  `teaching-videos/_audit/course-design/<course-slug>.json`.
+- If course design fails, run the built-in safe repair path, then review again.
+  Proceed only after the repaired course passes; report unresolved blockers.
 - Max modules per day: 3.
 - Upload privacy: `unlisted`.
-- Upload path: `yt_queue.py upload --gate-ready --max 3 --privacy unlisted`.
+- Upload path: `yt_queue.py upload --gate-ready --max 4 --privacy unlisted`.
 - Website update: successful upload triggers `sync_channel.py --apply`, then
   the orchestrator can commit/push manifest and lesson metadata.
 - The legacy `daily_build.sh` and `tools/youtube-upload/daily.sh` wrappers were
