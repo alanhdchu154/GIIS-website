@@ -62,6 +62,14 @@ teaching-videos/*/_audit/*-plan.json
 teaching-videos/*/_audit/*.tmp
 umi/reviews/cc-runs/*.jsonl
 
+# Lesson-video run snapshots are generated every gate/dashboard run. Commit
+# durable review notes or explicit release-gate artifacts instead.
+teaching-videos/_audit/dashboard/
+teaching-videos/_audit/foundation-daily/*-run.json
+teaching-videos/_audit/foundation-daily/latest-run.json
+teaching-videos/_audit/lesson-quality/*-lesson-quality.json
+teaching-videos/_audit/lesson-quality/*-lesson-quality.md
+
 # FUSE filesystem orphan markers (from sandbox mount activity)
 .fuse_hidden*
 
