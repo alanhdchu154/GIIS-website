@@ -79,6 +79,55 @@
         "quality_score": 100
       },
       "attempts": 1
+    },
+    "algebra-i:M8": {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_order": 8,
+      "module_title": "Graphing Linear Functions",
+      "target_slug": "algebra-i-module-8-graphing-linear-functions-v2",
+      "status": "approved",
+      "updated_at": "2026-06-01T04:12:21Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "algebra-i:M10": {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_order": 10,
+      "module_title": "Writing Linear Equations",
+      "target_slug": "algebra-i-module-10-writing-linear-equations-v2",
+      "status": "gate_failed",
+      "updated_at": "2026-06-01T04:20:20Z",
+      "details": {
+        "foundation_gate_rc": 0,
+        "release_gate_rc": 0,
+        "ready_reasons": [
+          "audit verdict is needs_review",
+          "quality score 80 < 100",
+          "missing PhD/peer reviewer",
+          "missing adversarial-student reviewer",
+          "missing citation/source reviewer"
+        ],
+        "quality_score": 80,
+        "verdict": "needs_review"
+      },
+      "attempts": 1
+    },
+    "algebra-i:M11": {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_order": 11,
+      "module_title": "Systems of Linear Equations",
+      "target_slug": "algebra-i-module-11-systems-of-linear-equations-v2",
+      "status": "approved",
+      "updated_at": "2026-06-01T04:28:21Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
     }
   }
 }

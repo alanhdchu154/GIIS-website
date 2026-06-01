@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T12:02:30Z",
+  "generated_at": "2026-06-01T04:01:53Z",
   "policy": "g9_course_design_gate_v2",
   "status": "pass",
   "target_grade": 9,
@@ -11,7 +11,7 @@
     "gradeLevel": 9,
     "module_count": 14,
     "source": "server/prisma/courses/math/algebra-i.json",
-    "source_sha256": "afca5b4e5632dd01601370eceb7e3d530705075d45d287b5573b4190b4b60f1e"
+    "source_sha256": "2b38556104bb320d6911e9a49cc92ae36f7a928119eb3372f941cd2942888f07"
   },
   "decision": "course design is reasonable for video-series production",
   "errors": [],
@@ -41,7 +41,7 @@
     {
       "order": 4,
       "title": "Solving One-Step & Two-Step Equations",
-      "resource_url_count": 4,
+      "resource_url_count": 3,
       "errors": [],
       "warnings": []
     },
