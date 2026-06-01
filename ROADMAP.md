@@ -44,93 +44,13 @@ Status: active watch.
 - Khan Academy may remain as a free nonprofit external resource, but it should
   not be the only required learning path when a student could get blocked.
 
-Assessment audit note, 2026-05-31:
+Current evidence:
 
-- Current course bank has 93 courses, 993 modules, 3,969 module quiz questions,
-  1,395 midterm questions, 1,860 final questions, and one assignment prompt per
-  module.
-- `node tools/pathway-quality/audit_courses.js --json` reports 93 pass / 0
-  warn / 0 fail. Required module reading, video, practice, assignment,
-  objectives, quiz, midterm, and final coverage is complete at the automated
-  course-audit level.
-- Assessment wording repair implemented: `tools/pathway-quality/repair_generated_assessment_wording.js`
-  removed 1,632 generated quiz/exam wording patterns across 91 course files and
-  resolved remaining letter-only answer claims so course questions no longer
-  expose "True or False: The answer to..." / "Fill in the blank: Complete..."
-  phrasing.
-- Parent-trust pass implemented: module pages now explain assignment
-  submission, reviewer ownership, rubric criteria, and 5-business-day review
-  target; admin assignment queue shows the same rubric and review-due status;
-  student grades and parent activity surfaces now expose assignment score /
-  feedback state; pricing/support/parent demo now answer whether assignments
-  are human-reviewed.
-- Multi-agent assessment workflow pass implemented: final exam now requires a
-  passed midterm, credit is awarded only when the final is passed and the
-  weighted course grade is at least 70, graded assignment resubmission clears
-  stale feedback/score and returns to the pending queue, admin assignment
-  reviews require written feedback plus a server-validated 0-100 score, admin
-  reviewers see the original assignment prompt and evidence type, parent
-  activity can show written feedback, and parent demo includes sample teacher
-  feedback.
-- Assignment evidence profiles implemented in student/admin surfaces so module
-  assignments are labeled as writing/reflection, research/evidence,
-  project/design, data/lab evidence, presentation/performance, practice/problem
-  set, or general learning evidence with matching submission guidance.
-- Assessment wording repair extended: the repair tool now also softens
-  generated-looking "Evaluate this answer claim..." phrasing into a student
-  response accuracy check; current dry-run reports 0 remaining repairs for the
-  targeted generated wording patterns.
-- Public assessment policy copy aligned: Handbook and School Profile now use
-  the 70% credit threshold that the Learn Portal enforces, avoid hardcoded
-  14-module claims, and describe current audit-trail / integrity review
-  controls without overclaiming planned webcam proctoring or randomized exam
-  delivery.
-- Parent-trust assessment audit added: `tools/pathway-quality/audit_assessment_parent_trust.js`
-  now checks generated wording residue, duplicate options, generic short-answer
-  keys, true/false-style response-check concentration, duplicate question text,
-  and weak assignment-evidence language. Current run is 93 pass / 0 warn / 0
-  fail; all old generated wording, duplicate-option failures, generic
-  short-answer keys, weak assignment-evidence warnings, response-check bridge
-  questions, and duplicate question text warnings are cleared.
-- Short-response grading fairness improved: generic rubric-backed open response
-  items now accept substantive student responses instead of requiring exact
-  string matches against a rubric sentence, while still surfacing the need for
-  subject-matter answer-key rewrites in the parent-trust audit.
-- Assignment policy tightened: assignments are submitted as free text/links and
-  require human review with written feedback plus a 0-100 score. Assignment
-  scores are not yet part of the 40/30/30 transcript-weighted grade, but every
-  module assignment must be submitted before the final exam unlocks.
-- Parent dashboard now includes a formal Assignments & Feedback section instead
-  of relying only on the recent activity feed. Parents can see submitted vs
-  reviewed status, score, dates, and full written feedback.
-- Subject rewrite batches completed for parent-visible core/foundation and
-  high-visibility math/science continuation courses, then extended across all
-  remaining non-AP, elective, PE/health, psychology, social-studies, English,
-  business, and AP-sensitive course JSON. All 93 courses now pass the
-  parent-trust assessment audit with response-check bridge questions and
-  duplicate question warnings cleared.
-- Rewrite queue added: `tools/pathway-quality/extract_assessment_rewrite_queue.js`
-  lists remaining response-check bridge questions by course priority; current
-  run reports 0 remaining courses.
-- Verified 2026-05-31: `node tools/pathway-quality/audit_assessment_parent_trust.js --json`
-  reports 93 pass / 0 warn / 0 fail, `node tools/pathway-quality/extract_assessment_rewrite_queue.js --json`
-  reports 0 remaining courses, `npm run audit:pathways` reports 93 pass / 0
-  warn / 0 fail, and `npm run build` compiles successfully with only the
-  existing Browserslist outdated warning.
-- Resource coverage pass completed 2026-05-31: filled missing `videoUrl` /
-  `practiceUrl` fields across the 40 warning courses, replacing empty or
-  previously removed resources with free/open Khan Academy, OpenStax, Purdue
-  OWL, HubSpot Academy, University of Minnesota open textbook, CFR, CDC/NIMH,
-  LOC, NATA/NSCA, TED, and similar stable resources. A non-YouTube smoke check
-  of 1,392 unique course resource URLs reported 0 bad URLs. YouTube direct
-  checks are intentionally treated separately because automated requests hit
-  Google/YouTube rate-limit pages even when browser access may still work.
-- Student feedback stability pass completed 2026-06-01: Learn module
-  navigation now resets stale quiz, assignment, progress, and loading state
-  during route changes; delayed prior-module responses are ignored; student
-  resources no longer expose manual "mark read/watched/done" controls; English I
-  assignment prompts were moved away from CommonLit/copyrighted-text
-  dependencies; parent pacing data is now available from `/api/parent/me`.
+- `npm run audit:pathways`: 93 pass / 0 warn / 0 fail.
+- `node tools/pathway-quality/audit_assessment_parent_trust.js --json`: 93
+  pass / 0 warn / 0 fail.
+- Completed assessment/resource history is archived in
+  `umi/reviews/2026-06-01-course-resource-assessment-summary.md`.
 
 Next check:
 

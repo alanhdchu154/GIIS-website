@@ -38,6 +38,14 @@ const PREVIEW = {
     inProgress: 3,
     creditsThisWeek: 1.0,
   },
+  weeklyInsights: {
+    activeDays: 4,
+    estimatedStudyHours: 4.2,
+    videoMinutes: 120,
+    modulesCompleted: 2,
+    quizAttempts: 3,
+    assignmentSubmissions: 2,
+  },
   courses: [
     { dept: { en: 'Computer Science', zh: '计算机科学' }, code: 'CS', color: '#1565C0',
       name: 'AP Computer Science A', meta: { en: 'Module 9 of 14 · Last activity 2 days ago', zh: '第 9 / 14 模块 · 2 天前最后活动' }, pct: 64,
@@ -182,6 +190,30 @@ export default function ParentDashboardDemo({ language }) {
                 </div>
               </div>
 
+              {/* Weekly insights */}
+              <div style={card}>
+                <CardHead en="Weekly Insights" zh="本周学习数据" isEn={isEn} right={
+                  <span style={{ fontSize: '12px', color: '#5c6578', fontWeight: 700 }}>
+                    {isEn ? 'Sample week' : '示例周'}
+                  </span>
+                } />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '10px' }}>
+                  {[
+                    { value: p.weeklyInsights.activeDays, en: 'Active days', zh: '学习天数' },
+                    { value: `${p.weeklyInsights.estimatedStudyHours}h`, en: 'Study time', zh: '学习时数' },
+                    { value: `${p.weeklyInsights.videoMinutes}m`, en: 'Lesson video', zh: '课堂影片' },
+                    { value: p.weeklyInsights.modulesCompleted, en: 'Modules done', zh: '完成模块' },
+                    { value: p.weeklyInsights.quizAttempts, en: 'Quiz attempts', zh: '测验记录' },
+                    { value: p.weeklyInsights.assignmentSubmissions, en: 'Assignments', zh: '提交作业' },
+                  ].map((item) => (
+                    <div key={item.en} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 8, padding: '12px' }}>
+                      <p style={{ margin: '0 0 2px', fontSize: 21, fontWeight: 850, color: '#2b3d6d' }}>{item.value}</p>
+                      <p style={{ margin: 0, fontSize: 11, color: '#5c6578' }}>{isEn ? item.en : item.zh}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {/* Active courses */}
               <div style={card}>
                 <CardHead en="Active Courses" zh="进行中课程" isEn={isEn} right={
@@ -193,6 +225,8 @@ export default function ParentDashboardDemo({ language }) {
                   const pace = c.pace?.kind === 'behind'
                     ? { bg: '#fff3e0', fg: '#b45309', border: '#f4c36a' }
                     : { bg: '#e8f5e9', fg: '#2e7d32', border: '#a5d6a7' };
+                  const progressColor = c.pace?.kind === 'behind' ? '#d97706' : c.color;
+                  const trackColor = c.pace?.kind === 'behind' ? '#fff3e0' : '#eef0f4';
                   return (
                   <div key={c.name} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto auto', gap: '14px', alignItems: 'center', padding: '14px 0', borderBottom: '1px solid #f0f2f8' }}>
                     <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: c.color, color: '#fff', fontWeight: 800, fontSize: '13px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{c.code}</div>
@@ -200,8 +234,8 @@ export default function ParentDashboardDemo({ language }) {
                       <p style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a2e', margin: '0 0 2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{c.name}</p>
                       <p style={{ fontSize: '12px', color: '#5c6578', margin: 0 }}>{c.meta[lang]}</p>
                     </div>
-                    <div style={{ width: '80px', height: '6px', background: '#eef0f4', borderRadius: '999px', overflow: 'hidden' }}>
-                      <div style={{ height: '100%', width: `${c.pct}%`, background: c.color, borderRadius: '999px' }} />
+                    <div style={{ width: '80px', height: '6px', background: trackColor, borderRadius: '999px', overflow: 'hidden' }}>
+                      <div style={{ height: '100%', width: `${c.pct}%`, background: progressColor, borderRadius: '999px' }} />
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
                       <span style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', minWidth: '36px', textAlign: 'right' }}>{c.pct}%</span>

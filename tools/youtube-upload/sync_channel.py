@@ -165,8 +165,12 @@ def main():
 
     # ── Apply: rewrite manifest from canonical ────────────────────────
     by_course: dict[str, list] = {}
+    skipped_without_local_folder: list[dict] = []
     for (course, num), v in canonical.items():
         lesson_dir = find_lesson_dir(course, num)
+        if not lesson_dir:
+            skipped_without_local_folder.append(v)
+            continue
         entry = {
             "course":         course,
             "course_slug":    re.sub(r"\s+", "-", course.lower()),
@@ -191,6 +195,10 @@ def main():
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
     print(f"[manifest] wrote  {MANIFEST_PATH.relative_to(REPO)}  ({len(manifest['lessons'])} lessons)")
+    if skipped_without_local_folder:
+        print(f"[manifest] skipped {len(skipped_without_local_folder)} channel lesson(s) without a local lesson folder")
+        for v in skipped_without_local_folder:
+            print(f"  SKIP   {v['video_id']}  {v['title']}")
 
     # ── Apply: reconcile script.json youtube blocks ───────────────────
     for (course, num), v in canonical.items():

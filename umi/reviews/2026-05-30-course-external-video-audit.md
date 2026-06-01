@@ -1,11 +1,11 @@
 # Course External Video / Link Audit
 
-Generated: 2026-06-01T01:52:29.049Z
+Generated: 2026-06-01T03:04:12.858Z
 
 ## Summary
 
 - Course files scanned: 93
-- External URL references: 3193 (1677 unique URLs)
+- External URL references: 3199 (1683 unique URLs)
 - Course YouTube references: 373 (285 unique video IDs)
 - Course YouTube confirmed broken/unavailable: 0 unique IDs / 0 course references
 - GIIS lesson manifest YouTube failures: 0 unique IDs / 0 lesson references
@@ -33,6 +33,7 @@ Generated: 2026-06-01T01:52:29.049Z
 | scholar.google.com | 8 |
 | writingcenter.unc.edu | 8 |
 | loc.gov | 8 |
+| gutenberg.org | 6 |
 | usu.edu | 5 |
 | nsca.com | 5 |
 | plainlanguage.gov | 4 |
@@ -43,7 +44,6 @@ Generated: 2026-06-01T01:52:29.049Z
 | cia.gov | 3 |
 | factcheck.org | 2 |
 | vocabulary.com | 2 |
-| procon.org | 2 |
 
 ## Login / Paid / Account Risk Hosts
 

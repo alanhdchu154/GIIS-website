@@ -102,6 +102,7 @@ function computeWeeklyInsights(enrollment, now = new Date()) {
   const activeDays = new Set();
   const moduleHours = new Map((enrollment.course?.modules || []).map((m) => [m.order, Number(m.estimatedHrs || 0)]));
   let modulesCompleted = 0;
+  let videoActivities = 0;
 
   function countDate(value) {
     if (!value) return false;
@@ -114,8 +115,8 @@ function computeWeeklyInsights(enrollment, now = new Date()) {
   for (const p of enrollment.moduleProgresses || []) {
     if (countDate(p.moduleCompletedAt)) modulesCompleted += 1;
     countDate(p.readingCompletedAt);
-    countDate(p.videoCompletedAt);
-    countDate(p.supplementalVideoCompletedAt);
+    if (countDate(p.videoCompletedAt)) videoActivities += 1;
+    if (countDate(p.supplementalVideoCompletedAt)) videoActivities += 1;
     countDate(p.practiceCompletedAt);
   }
 
@@ -130,6 +131,50 @@ function computeWeeklyInsights(enrollment, now = new Date()) {
     modulesCompleted,
     quizAttempts,
     assignmentSubmissions,
+    videoActivities,
+    estimatedStudyHours: Math.round(estimatedStudyHours * 10) / 10,
+  };
+}
+
+function computeStudentWeeklyInsights(enrollments, now = new Date()) {
+  const since = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
+  const activeDays = new Set();
+  let modulesCompleted = 0;
+  let quizAttempts = 0;
+  let assignmentSubmissions = 0;
+  let videoActivities = 0;
+  let estimatedStudyHours = 0;
+
+  function countDate(value) {
+    if (!value) return false;
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime()) || date < since || date > now) return false;
+    activeDays.add(date.toISOString().slice(0, 10));
+    return true;
+  }
+
+  for (const enrollment of enrollments || []) {
+    const moduleHours = new Map((enrollment.course?.modules || []).map((m) => [m.order, Number(m.estimatedHrs || 0)]));
+    for (const p of enrollment.moduleProgresses || []) {
+      if (countDate(p.moduleCompletedAt)) {
+        modulesCompleted += 1;
+        estimatedStudyHours += moduleHours.get(p.moduleOrder) || 0;
+      }
+      countDate(p.readingCompletedAt);
+      if (countDate(p.videoCompletedAt)) videoActivities += 1;
+      if (countDate(p.supplementalVideoCompletedAt)) videoActivities += 1;
+      countDate(p.practiceCompletedAt);
+    }
+    quizAttempts += (enrollment.quizAttempts || []).filter((q) => countDate(q.submittedAt)).length;
+    assignmentSubmissions += (enrollment.assignments || []).filter((a) => countDate(a.submittedAt)).length;
+  }
+
+  return {
+    activeDays: activeDays.size,
+    modulesCompleted,
+    quizAttempts,
+    assignmentSubmissions,
+    videoActivities,
     estimatedStudyHours: Math.round(estimatedStudyHours * 10) / 10,
   };
 }
@@ -159,7 +204,7 @@ router.get('/me', async (req, res) => {
           examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
           assignments: { orderBy: { updatedAt: 'desc' } },
           quizAttempts: { orderBy: { submittedAt: 'desc' } },
-          moduleProgresses: { orderBy: { lastActivityAt: 'desc' }, take: 10 },
+          moduleProgresses: { orderBy: { lastActivityAt: 'desc' } },
         },
         orderBy: { enrolledAt: 'desc' },
       },
@@ -235,6 +280,7 @@ router.get('/me', async (req, res) => {
       totalEnrollments: student.enrollments.length,
       completed: stats.completed,
     },
+    weeklyInsights: computeStudentWeeklyInsights(student.enrollments),
     enrollments: student.enrollments.map(e => {
       const latestMidterm = e.examAttempts.find((attempt) => attempt.examType === 'midterm') || null;
       const latestFinal = e.examAttempts.find((attempt) => attempt.examType === 'final') || null;

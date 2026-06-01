@@ -83,16 +83,55 @@ function pacingStyle(status) {
   return { bg: '#f0f4ff', fg: '#2b3d6d', border: '#c5d0f0' };
 }
 
+function formatHours(value) {
+  const hours = Number(value || 0);
+  return hours % 1 === 0 ? String(hours) : hours.toFixed(1);
+}
+
+function WeeklyInsightsCard({ insights, isEn }) {
+  const data = insights || {};
+  const items = [
+    { value: data.activeDays || 0, label: isEn ? 'active days' : '天有学习记录' },
+    { value: formatHours(data.estimatedStudyHours), label: isEn ? 'estimated study hours' : '预计学习小时' },
+    { value: data.modulesCompleted || 0, label: isEn ? 'modules completed' : '完成模块' },
+    { value: data.videoActivities || 0, label: isEn ? 'video activities' : '视频活动记录' },
+    { value: data.quizAttempts || 0, label: isEn ? 'quiz attempts' : '测验记录' },
+    { value: data.assignmentSubmissions || 0, label: isEn ? 'assignments submitted' : '提交作业' },
+  ];
+  return (
+    <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
+      <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 12px' }}>
+        {isEn ? 'Weekly Insights' : '本周学习数据'}
+      </p>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 10 }}>
+        {items.map((item) => (
+          <div key={item.label} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 10, padding: '12px 14px' }}>
+            <p style={{ margin: '0 0 2px', fontSize: 22, fontWeight: 850, color: '#2b3d6d' }}>{item.value}</p>
+            <p style={{ margin: 0, fontSize: 11, color: '#5c6578', lineHeight: 1.35 }}>{item.label}</p>
+          </div>
+        ))}
+      </div>
+      <p style={{ fontSize: 11, color: '#7a8495', lineHeight: 1.45, margin: '10px 0 0' }}>
+        {isEn
+          ? 'Study hours are estimated from completed module hours. External reading and video links are not treated as proof of learning unless the portal records an activity signal.'
+          : '学习时数以已完成模块的预计时数估算。外部阅读与影片链接不会被直接当成学习证明，除非系统有记录到对应活动。'}
+      </p>
+    </div>
+  );
+}
+
 function CourseBar({ enr, isEn }) {
   const color = DEPT_COLORS[enr.department] || '#2b3d6d';
   const pct = (enr.totalModules ?? 0) > 0 ? Math.round((enr.completedModules / enr.totalModules) * 100) : 0;
   const pacing = enr.pacing || { status: 'on_track', label: isEn ? 'On Track' : '进度正常' };
   const paceColors = pacingStyle(pacing.status);
+  const progressColor = pacing.status === 'behind' ? '#d97706' : pacing.status === 'ahead' ? '#2e7d32' : color;
+  const trackColor = pacing.status === 'behind' ? '#fff3e0' : '#e8ecf5';
   return (
     <div style={{ padding: '12px 0', borderBottom: '1px solid #f0f2f8' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <div style={{ width: 8, height: 8, borderRadius: '50%', background: color, flexShrink: 0 }} />
+          <div style={{ width: 8, height: 8, borderRadius: '50%', background: progressColor, flexShrink: 0 }} />
           <span style={{ fontSize: 13, fontWeight: 600, color: '#1a1d24' }}>{isEn ? enr.name : (enr.nameZh || enr.name)}</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
@@ -106,8 +145,8 @@ function CourseBar({ enr, isEn }) {
           </span>
         </div>
       </div>
-      <div style={{ height: 6, background: '#e8ecf5', borderRadius: 999, overflow: 'hidden' }}>
-        <div style={{ height: '100%', width: `${pct}%`, background: color, borderRadius: 999, transition: 'width 0.4s' }} />
+      <div style={{ height: 6, background: trackColor, borderRadius: 999, overflow: 'hidden' }}>
+        <div style={{ height: '100%', width: `${pct}%`, background: progressColor, borderRadius: 999, transition: 'width 0.4s' }} />
       </div>
       {enr.assessment && (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
@@ -128,6 +167,8 @@ function CourseBar({ enr, isEn }) {
           {[
             `${enr.weeklyInsights.activeDays} ${isEn ? 'active days' : '天有学习记录'}`,
             `${enr.weeklyInsights.modulesCompleted} ${isEn ? 'modules completed' : '模块完成'}`,
+            `${formatHours(enr.weeklyInsights.estimatedStudyHours)} ${isEn ? 'est. hours' : '预计小时'}`,
+            `${enr.weeklyInsights.videoActivities || 0} ${isEn ? 'video activities' : '视频活动'}`,
             `${enr.weeklyInsights.quizAttempts} ${isEn ? 'quizzes' : '次测验'}`,
             `${enr.weeklyInsights.assignmentSubmissions} ${isEn ? 'assignments' : '份作业'}`,
           ].map((label) => (
@@ -309,7 +350,7 @@ export default function ParentDashboard({ language }) {
     );
   }
 
-  const { student, stats, enrollments, recentActivity, subscription } = data;
+  const { student, stats, enrollments, recentActivity, subscription, weeklyInsights } = data;
   const gradPct = Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100));
   const inProgress = enrollments.filter(e => !e.creditEarned);
   const completed = enrollments.filter(e => e.creditEarned);
@@ -413,6 +454,8 @@ export default function ParentDashboard({ language }) {
                   </div>
                 </div>
               </div>
+
+              <WeeklyInsightsCard insights={weeklyInsights} isEn={isEn} />
 
               {/* Active courses */}
               <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
