@@ -1,0 +1,19 @@
+{
+  "reviewer": "Umi adversarial student reviewer",
+  "date": "2026-05-31",
+  "verdict": "pass",
+  "scope": "student clarity and misconception check",
+  "findings": [
+    "Hook (phone plan: $15/month + $0.10/text, plot total cost against number of texts) gives a parent-visible reason for the lesson before any Algebra notation appears. The (0, $15) y-intercept and the (100 texts, $25) callout let a student read the graph the way the recap promises — 'every point on the line answers a real question'.",
+    "Concept slide (04) anchors the abstract definition 'graph = every (x, y) that makes it true' to four explicit pairs, including one rejected pair (0, 9), so the student sees both membership and non-membership before being asked to graph anything themselves.",
+    "Three teaching methods (slides 05, 06, 09) are clearly numbered Method 1 / Method 2 / Method 3 in both narration and titles, so a student rewatching the video to find one method can scrub to the right slide without guessing.",
+    "Compare slide (10) targets the highest-frequency Algebra I graphing misconception head-on (swapping which variable to zero when finding an intercept) using the same equation 3x + 2y = 6 in both columns so the student sees that the wrong recipe lands on (0, 3), which is actually the correct y-intercept and therefore looks plausible — exactly the trap.",
+    "Pause #1 covers the table-of-values method end-to-end (substitute each x, write the four pairs, plot, recognize negative slope), and the answer reveal plots the same four pairs so the student can self-grade visually. Pause #2 covers the slope-intercept read-off (identify m and b, plot (0, b), use rise/run for a second point), and the answer reveal includes a rise/run staircase showing exactly how the second point (1, -2) was reached.",
+    "Final path slide ends with a concrete Learn Portal action: read OpenStax 3.2–3.3, practice graphing y = m x + b in Desmos for several m and b values, and complete the 8-equation dashboard assignment recording intercepts and slope sign for each."
+  ],
+  "watch_points": [
+    "Slide 05 (table of values with 2x + 1) presents the table and graph side by side; pace narration so the student has time to see each (x, y) pair land on the plotted line before the line is connected.",
+    "Slide 09 (slope-intercept) introduces a fractional slope m = 1/2 in the side example for the first time in the module; an advisor should check that students who only saw integer slopes on slides 05 and 08 understand 'rise 1, run 2' as a single step on the grid, not as two separate slope numbers."
+  ],
+  "script_sha": "71213c3d261ca0967a655da0538f5a645d59fbc6b489d77e1977d658ac42f9bb"
+}

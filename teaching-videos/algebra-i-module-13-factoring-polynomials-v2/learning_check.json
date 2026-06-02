@@ -1,0 +1,42 @@
+{
+  "course": "Algebra I",
+  "module": "Module 13: Factoring Polynomials",
+  "checks": [
+    {
+      "skill": "pull the greatest common factor before any other factoring move",
+      "question": "Factor 6 x^2 + 9 x completely. Show the GCF step explicitly.",
+      "answer": "Both terms share a factor of 3 x. Write 6 x^2 as (3 x)(2 x) and 9 x as (3 x)(3). Pull the GCF out: 6 x^2 + 9 x = 3 x (2 x + 3). Verify by distributing: 3 x (2 x) + 3 x (3) = 6 x^2 + 9 x.",
+      "misconception_tested": "factoring out only the numeric GCF (3) and leaving the shared variable x inside, writing 3 (2 x^2 + 3 x) instead of 3 x (2 x + 3)"
+    },
+    {
+      "skill": "factor a monic trinomial by finding two numbers with the required product and sum",
+      "question": "Factor x^2 + 7 x + 12. Show the factor-pair search.",
+      "answer": "List factor pairs of 12: (1, 12), (2, 6), (3, 4). Find the pair that adds to 7: 3 + 4 = 7. Therefore x^2 + 7 x + 12 = (x + 3)(x + 4). Verify by FOIL: x^2 + 4 x + 3 x + 12 = x^2 + 7 x + 12.",
+      "misconception_tested": "using a pair that multiplies to 7 and adds to 12 instead of the other way around, swapping the roles of b and c"
+    },
+    {
+      "skill": "recognize the difference-of-squares pattern and apply it",
+      "question": "Factor x^2 - 25. Identify the pattern by name before factoring.",
+      "answer": "Two terms with a minus sign between two perfect squares: x^2 and 5^2. This is the difference of squares pattern a^2 - b^2 = (a + b)(a - b). So x^2 - 25 = (x + 5)(x - 5). Verify: (x + 5)(x - 5) = x^2 - 5 x + 5 x - 25 = x^2 - 25.",
+      "misconception_tested": "trying to factor a sum of squares like x^2 + 25 with the same pattern, ignoring that the rule requires a minus sign between the two square terms"
+    },
+    {
+      "skill": "recognize a perfect square trinomial and collapse it to a squared binomial",
+      "question": "Factor x^2 + 6 x + 9. Justify why the perfect-square-trinomial pattern applies.",
+      "answer": "First term x^2 is a perfect square (x)^2. Last term 9 is a perfect square (3)^2. Middle term must equal 2 * x * 3 = 6 x — and it does. So a = x, b = 3, and x^2 + 6 x + 9 = (x + 3)^2. Verify: (x + 3)(x + 3) = x^2 + 3 x + 3 x + 9 = x^2 + 6 x + 9.",
+      "misconception_tested": "writing (x + 3)^2 as x^2 + 9 by dropping the 2 a b cross-product, or claiming any trinomial with two perfect-square outer terms is a perfect square without checking the middle term"
+    },
+    {
+      "skill": "apply multiple strategies in sequence — GCF first, then a special pattern",
+      "question": "Factor 4 x^2 - 36 completely. Show the GCF step before the pattern step.",
+      "answer": "GCF first: 4 divides both terms, so 4 x^2 - 36 = 4 (x^2 - 9). Now x^2 - 9 is a difference of squares: x^2 - 3^2 = (x + 3)(x - 3). Combine: 4 x^2 - 36 = 4 (x + 3)(x - 3). Verify: 4 (x^2 - 9) = 4 x^2 - 36.",
+      "misconception_tested": "jumping straight to the difference-of-squares pattern and writing (2 x + 6)(2 x - 6) without pulling the GCF first, missing that the answer is not fully factored"
+    },
+    {
+      "skill": "decide which factoring strategy to try first by reading the polynomial's signature",
+      "question": "Given a polynomial, what is the standard decision order for choosing a factoring strategy?",
+      "answer": "First, pull out the greatest common factor. Then count the terms. Two terms with a minus sign and both perfect squares is difference of squares. Three terms where the first and last are perfect squares and the middle is twice the product of their roots is a perfect square trinomial. Otherwise, for x^2 + b x + c, find two numbers that multiply to c and add to b. Always verify the result by re-expanding.",
+      "misconception_tested": "reaching for trinomial pair-search first on every problem, even when the polynomial is two-term, and skipping the GCF step that simplifies later work"
+    }
+  ]
+}

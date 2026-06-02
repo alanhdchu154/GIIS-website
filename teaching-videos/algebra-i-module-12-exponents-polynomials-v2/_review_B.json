@@ -1,0 +1,19 @@
+{
+  "reviewer": "Umi adversarial student reviewer",
+  "date": "2026-06-01",
+  "scope": "student clarity and misconception check",
+  "verdict": "pass",
+  "findings": [
+    "The hook uses a concrete garden-area scenario that gives students an immediate, visible reason to expand (x + 3)(x + 5) before any exponent or FOIL terminology appears.",
+    "The exponent-law table presents all five rules with a worked numeric example next to each rule, so a student can verify the rule and apply it in the same glance.",
+    "The classify slide separates 'how many terms' from 'what is the degree' into two cards and makes the named families - monomial, binomial, trinomial - obvious instead of buried in narration.",
+    "Both pause problems are solvable from material already shown, and each is followed by a visually distinct answer-reveal slide with the full algebra rather than just the final answer.",
+    "The (x + 3)^2 trap slide directly targets the most common Algebra I mistake of distributing the exponent term-by-term, with a side-by-side wrong / right column showing the 6 x cross-product that students drop.",
+    "The closing path slide gives students concrete Learn Portal next actions (OpenStax reading, Khan Academy practice, dashboard assignment, advisor check-in) rather than generic encouragement."
+  ],
+  "watch_points": [
+    "The exponent-law table on slide 5 packs five laws into one frame; narration must move slowly here and the contact-sheet thumbnail should be re-checked at small size.",
+    "Students who still think x^2 * x^3 = x^6 (multiplying instead of adding exponents) may need an advisor follow-up before Module 13 - factoring leans heavily on reversing the product law."
+  ],
+  "script_sha": "794b1157dd4f3463706229910c9b66143acd6b3b070e5af142789fd17a1be63b"
+}

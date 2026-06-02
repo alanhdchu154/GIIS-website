@@ -1,0 +1,21 @@
+{
+  "reviewer": "Umi adversarial student reviewer",
+  "date": "2026-06-01",
+  "verdict": "pass",
+  "scope": "student clarity and misconception check",
+  "findings": [
+    "The hook frames quadratic equations as last module's polynomials with an equals zero on the right, giving students an immediate mental hook before any new method terminology shows up.",
+    "The overview slide names exactly three solving methods (factoring, completing the square, quadratic formula) plus the discriminant, in the order a real student would try them.",
+    "The concept slide pairs standard form with the zero-product property on a single frame, making explicit that the property requires zero on the right and showing the bridge from factoring to solving.",
+    "Method-specific slides each show a worked example next to the recipe so a student who freezes on a step has a concrete trace to compare against.",
+    "Both pause problems are solvable from material already shown, and each is followed by a visually distinct answer-reveal slide that shows every algebra step rather than only the final answer.",
+    "The rearrange-first trap slide directly targets the most common Algebra I quadratic error - applying the zero-product property to a product that equals a nonzero number - and the wrong / right columns highlight standard form as the gating step.",
+    "The discriminant slide gives students a way to predict the outcome before solving, which both saves time and gives them a self-check signal when an answer disagrees with the predicted count.",
+    "The closing path slide gives students concrete Learn Portal next actions (OpenStax reading, Khan Academy practice, dashboard assignment, advisor check-in) rather than generic encouragement, and previews Module 15 (Graphing Quadratic Functions) as the natural next step."
+  ],
+  "watch_points": [
+    "Slide 6 (completing the square) packs six worked steps onto one frame; narration must move slowly and contact-sheet thumbnail should be re-checked at small size to confirm legibility.",
+    "Students who forget the +/- when square-rooting both sides will lose one solution silently. Flag for advisor follow-up before Module 15, where the two roots become the x-intercepts of the parabola."
+  ],
+  "script_sha": "67729124c06fd7ea266818089e74dc07397fe0ec90f2ef3129b0b77b2e2a632e"
+}

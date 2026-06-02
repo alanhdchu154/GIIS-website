@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-06-01T12:01:22Z",
+  "policy": "foundation_daily_v1",
+  "source_of_truth": "server/prisma/courses/math/algebra-i.json",
+  "target_slug": "algebra-i-module-12-exponents-polynomials-v2",
+  "course": {
+    "slug": "algebra-i",
+    "name": "Algebra I",
+    "department": "Mathematics",
+    "credits": 1,
+    "subject_area": "math"
+  },
+  "module": {
+    "order": 12,
+    "title": "Exponents & Polynomials",
+    "objectives": "Apply laws of exponents to simplify expressions, classify polynomials by degree and terms, and perform addition, subtraction, and multiplication of polynomials accurately.",
+    "assignment": "Classify 5 polynomials by degree and number of terms. Perform 5 additions, 5 subtractions, and 5 multiplications of polynomials. Submit your work as a document, image, or link showing the steps, evidence, and final response.",
+    "estimatedHrs": 3.5
+  },
+  "resources": {
+    "refs": [
+      {
+        "key": "practiceUrl",
+        "url": "https://www.khanacademy.org/math/algebra-basics/alg-basics-algebraic-expressions/alg-basics-exponent-properties/e/exponent_rules",
+        "host": "khanacademy.org",
+        "note": "Khan Academy — Exponent Rules Practice",
+        "youtube_id": null,
+        "access_risk": "soft_risk",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      },
+      {
+        "key": "readingUrl",
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/6-introduction",
+        "host": "openstax.org",
+        "note": "OpenStax Elementary Algebra 2e — Ch 6.1–6.3: Polynomials",
+        "youtube_id": null,
+        "access_risk": "ok",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      },
+      {
+        "key": "videoUrl",
+        "url": "https://www.khanacademy.org/math/algebra-basics/alg-basics-algebraic-expressions/alg-basics-exponent-properties/v/exponent-properties-involving-products",
+        "host": "khanacademy.org",
+        "note": "Khan Academy — Exponent Properties & Polynomials",
+        "youtube_id": null,
+        "access_risk": "soft_risk",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      "practiceUrl uses soft-risk host khanacademy.org: free nonprofit; practice/progress may require a free account",
+      "videoUrl uses soft-risk host khanacademy.org: free nonprofit; practice/progress may require a free account"
+    ]
+  },
+  "production_defaults": {
+    "voice": "en-US-AriaNeural",
+    "voice_rate": "-3%",
+    "target_minutes": "5-7",
+    "youtube_title": "GIIS Algebra I | Module 12: Exponents & Polynomials",
+    "privacy": "unlisted"
+  },
+  "teaching_blueprint": [
+    "title: course/module signal and parent-visible seriousness",
+    "hook: one concrete problem or surprising situation tied to the module",
+    "overview: three learning moves students will complete",
+    "concept: define the core idea in plain English",
+    "misconception: show the common wrong move before the correct one",
+    "worked example: trace the skill step by step",
+    "pause: student solves one short problem",
+    "answer reveal: narrated solution on a visually different slide",
+    "application: connect the idea to the course/module assignment",
+    "recap: 3-bullet memory aid",
+    "path: exact Learn Portal next action"
+  ],
+  "quality_bar": [
+    "Parent should feel this is a serious school lesson, not generic AI slides.",
+    "Every slide must have one claim or one learner action.",
+    "Use course-specific palette, voice, and visual rhythm.",
+    "Use deterministic diagrams for precise math/science/history evidence.",
+    "Do not read URLs aloud.",
+    "No AP, College Board, CEEB, accreditation, or admissions claims."
+  ]
+}

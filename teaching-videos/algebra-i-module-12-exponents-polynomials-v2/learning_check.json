@@ -1,0 +1,36 @@
+{
+  "course": "Algebra I",
+  "module": "Module 12: Exponents & Polynomials",
+  "checks": [
+    {
+      "skill": "simplify a product of monomials using the laws of exponents",
+      "question": "Simplify (2 x^2 y)(3 x^3 y^2). Show the coefficient multiplication and the exponent additions on each base.",
+      "answer": "Multiply the coefficients first: 2 times 3 is 6. For the x base, add the exponents: x^2 times x^3 is x^(2+3) = x^5. For the y base, add the exponents: y^1 times y^2 is y^(1+2) = y^3. The simplified expression is 6 x^5 y^3.",
+      "misconception_tested": "multiplying the exponents instead of adding them when the bases match, for example writing x^2 * x^3 = x^6 instead of x^5"
+    },
+    {
+      "skill": "classify a polynomial by degree and by number of terms",
+      "question": "Classify 4 x^3 - 2 x + 7 by its degree and by the number of terms. Name it.",
+      "answer": "There are three terms separated by + and - signs, so it is a trinomial. The largest exponent on the variable is 3, so the degree is 3. The polynomial is a cubic trinomial.",
+      "misconception_tested": "calling it a binomial because the constant 7 looks like it does not 'count', or calling it degree 1 because the smallest non-zero coefficient is on the x^1 term"
+    },
+    {
+      "skill": "add polynomials by combining like terms",
+      "question": "Compute (3 x^2 + 2 x - 5) + (x^2 + 4 x + 7). Show the like-term grouping step.",
+      "answer": "Group like terms: (3 x^2 + x^2) + (2 x + 4 x) + (-5 + 7). Combine each group: 4 x^2 + 6 x + 2. The exponents do not change; only the coefficients are added.",
+      "misconception_tested": "adding the exponents when combining like terms, for example writing 3 x^2 + x^2 = 4 x^4 instead of 4 x^2"
+    },
+    {
+      "skill": "subtract polynomials by distributing the minus sign",
+      "question": "Compute (5 x^2 + 3 x - 1) - (2 x^2 + x - 4). Show the sign-distribution step before combining like terms.",
+      "answer": "Distribute the minus across every term in the second polynomial: 5 x^2 + 3 x - 1 - 2 x^2 - x + 4. Then combine like terms: (5 x^2 - 2 x^2) + (3 x - x) + (-1 + 4) = 3 x^2 + 2 x + 3.",
+      "misconception_tested": "flipping the sign on only the first term of the second polynomial and leaving the other signs unchanged, for example writing 5 x^2 + 3 x - 1 - 2 x^2 + x - 4 instead of distributing the minus through every term"
+    },
+    {
+      "skill": "multiply two binomials using FOIL and recognize the square-of-a-sum trap",
+      "question": "Expand (x + 3)^2. Show the FOIL trace and explain why x^2 + 9 is the wrong answer.",
+      "answer": "Rewrite (x + 3)^2 as (x + 3)(x + 3) first. F: x * x = x^2. O: x * 3 = 3 x. I: 3 * x = 3 x. L: 3 * 3 = 9. Combine the like terms 3 x + 3 x = 6 x. The correct expansion is x^2 + 6 x + 9. The 'answer' x^2 + 9 is wrong because it drops the cross-product middle term that arises from multiplying the outer and inner pairs.",
+      "misconception_tested": "treating squaring as if it distributes term-by-term, writing (x + 3)^2 = x^2 + 9 and dropping the 6 x cross-product entirely"
+    }
+  ]
+}

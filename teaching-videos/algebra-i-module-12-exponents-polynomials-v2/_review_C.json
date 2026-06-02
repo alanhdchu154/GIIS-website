@@ -1,0 +1,19 @@
+{
+  "reviewer": "Umi citation/source checker",
+  "date": "2026-06-01",
+  "verdict": "pass",
+  "scope": "source alignment and public-claims risk",
+  "checked_sources": [
+    "server/prisma/courses/math/algebra-i.json module 12",
+    "OpenStax Elementary Algebra 2e Ch 6.1-6.3 reference listed in course JSON",
+    "Khan Academy Exponent Rules and Polynomial Properties practice and video references listed in course JSON"
+  ],
+  "findings": [
+    "Module title, order, objectives, and assignment all align with the published Algebra I course JSON for Module 12 (Exponents & Polynomials).",
+    "No AP, College Board, Common App, CEEB, accreditation, NCAA, or college-admissions claims appear in the lesson narration, slides, or metadata.",
+    "No sourced or generated bitmap images are used; the exponent-law table, classify cards, area-model rectangles, FOIL traces, and the (x + 3)^2 trap columns are all drawn deterministically in build_slides.py.",
+    "No URLs are read aloud in the narration; resources are referenced by name (OpenStax, Khan Academy).",
+    "Title and description guidance remains conservative and GIIS-owned; foundation-only framing matches the playbook."
+  ],
+  "script_sha": "794b1157dd4f3463706229910c9b66143acd6b3b070e5af142789fd17a1be63b"
+}
