@@ -43,6 +43,7 @@
     "lesson:video-dashboard:live": "node tools/lesson-video/dashboard_server.js",
     "audit:pathways": "node tools/pathway-quality/audit_courses.js",
     "audit:proofpoints": "node tools/pathway-quality/audit_proofpoint_courses.js",
+    "audit:showcase-all": "node tools/pathway-quality/audit_all_course_showcase_readiness.js",
     "audit:lesson-manifest": "node tools/youtube-upload/audit_manifest_alignment.js",
     "audit:lesson-video-inventory": "node tools/lesson-video/audit_video_quality_inventory.js",
     "normalize:answers": "node tools/pathway-quality/normalize_answer_keys.js",

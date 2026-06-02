@@ -107,6 +107,42 @@ const FAQS = [
   },
 ];
 
+const PROOF_POINTS = [
+  {
+    label: { en: 'Trust', zh: '学校可信度' },
+    title: { en: 'Start with the school record', zh: '先看学校记录' },
+    body: {
+      en: 'Review the school profile, Florida private-school registration language, 24-credit framework, transcript policies, and leadership information before choosing a plan.',
+      zh: '付款前先查看学校档案、Florida 私立学校注册说明、24 学分框架、成绩单政策与学校负责人信息。',
+    },
+    to: '/school-profile',
+    cta: { en: 'Verify school profile', zh: '验证学校档案' },
+    color: '#2b3d6d',
+  },
+  {
+    label: { en: 'Transparency', zh: '学习透明度' },
+    title: { en: 'Preview what parents see weekly', zh: '预览家长每周看到什么' },
+    body: {
+      en: 'The parent dashboard preview shows credits, GPA, active courses, recent activity, pacing flags, advisor notes, and assignment feedback in one place.',
+      zh: '家长面板预览会集中显示学分、GPA、进行中课程、近期活动、进度提醒、顾问留言与作业反馈。',
+    },
+    to: '/parent/demo',
+    cta: { en: 'Open parent preview', zh: '打开家长预览' },
+    color: '#1B6B3A',
+  },
+  {
+    label: { en: 'Results', zh: '学习成果' },
+    title: { en: 'Inspect the learning surface', zh: '检查真实学习界面' },
+    body: {
+      en: 'Showcase courses now expose module outlines, free required resources, assignments, quizzes, midterms, finals, and feedback evidence instead of hiding learning behind a checkout.',
+      zh: '展示课程会呈现模块大纲、免费必要资源、作业、测验、期中、期末与批改证据，不把学习质量藏在付款后。',
+    },
+    to: '/academics',
+    cta: { en: 'Browse academics', zh: '查看课程' },
+    color: '#C84B0A',
+  },
+];
+
 function TierCard({ tier, isEn }) {
   return (
     <div style={{
@@ -172,6 +208,65 @@ function TierCard({ tier, isEn }) {
   );
 }
 
+function ProofBeforePayment({ isEn }) {
+  return (
+    <section style={{ background: '#fff', padding: '62px 0 34px', fontFamily: 'Inter, sans-serif' }}>
+      <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 5%' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 20, flexWrap: 'wrap', marginBottom: 22 }}>
+          <div style={{ maxWidth: 690 }}>
+            <p style={{ color: '#b8962e', fontSize: 12, fontWeight: 850, letterSpacing: 1.7, textTransform: 'uppercase', margin: '0 0 9px' }}>
+              {isEn ? 'What Parents Can Verify' : '家长付款前可验证'}
+            </p>
+            <h2 style={{ margin: 0, color: '#1a1a2e', fontSize: 'clamp(26px, 3.2vw, 40px)', lineHeight: 1.12, fontWeight: 850 }}>
+              {isEn ? 'The plan only works if the evidence is visible.' : '家长愿意买单，前提是证据看得见。'}
+            </h2>
+          </div>
+          <Link to="/parent/demo" style={{
+            padding: '12px 20px',
+            borderRadius: 8,
+            border: '2px solid #2b3d6d',
+            color: '#2b3d6d',
+            fontWeight: 850,
+            textDecoration: 'none',
+            fontSize: 14,
+            whiteSpace: 'nowrap',
+          }}>
+            {isEn ? 'Preview dashboard' : '预览家长面板'}
+          </Link>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14 }}>
+          {PROOF_POINTS.map((item) => (
+            <div key={item.label.en} style={{
+              border: '1px solid #e2e7f0',
+              borderRadius: 8,
+              padding: '22px 20px 20px',
+              background: '#f8f9fc',
+              borderTop: `4px solid ${item.color}`,
+              minHeight: 244,
+              display: 'flex',
+              flexDirection: 'column',
+            }}>
+              <p style={{ margin: '0 0 10px', color: item.color, fontSize: 12, fontWeight: 850, letterSpacing: 1.2, textTransform: 'uppercase' }}>
+                {item.label[isEn ? 'en' : 'zh']}
+              </p>
+              <h3 style={{ margin: '0 0 10px', color: '#1a1a2e', fontSize: 20, lineHeight: 1.25, fontWeight: 850 }}>
+                {item.title[isEn ? 'en' : 'zh']}
+              </h3>
+              <p style={{ margin: '0 0 18px', color: '#4f5868', fontSize: 13, lineHeight: 1.7, flex: 1 }}>
+                {item.body[isEn ? 'en' : 'zh']}
+              </p>
+              <Link to={item.to} style={{ color: item.color, fontSize: 13, fontWeight: 850, textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                {item.cta[isEn ? 'en' : 'zh']} →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function PricingPage({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
 
@@ -218,6 +313,8 @@ export default function PricingPage({ language, toggleLanguage }) {
         showCtas={false}
       />
 
+      <ProofBeforePayment isEn={isEn} />
+
       <section style={{ background: '#f4f6fa', padding: '58px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 5%' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18, alignItems: 'stretch' }}>
@@ -237,7 +334,7 @@ export default function PricingPage({ language, toggleLanguage }) {
             {isEn ? 'How We Compare' : '与其他选择对比'}
           </h2>
           <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed', fontSize: 14 }}>
               <thead>
                 <tr>
                   {[isEn ? 'Option' : '选项', 'GIIS Self-Paced', 'GIIS Guided', isEn ? 'Traditional international school' : '传统国际学校'].map((h, i) => (
@@ -247,6 +344,7 @@ export default function PricingPage({ language, toggleLanguage }) {
                       borderBottom: '2px solid #e0e6f0',
                       color: i === 1 || i === 2 ? '#2b3d6d' : '#777',
                       background: i === 1 || i === 2 ? '#f0f4ff' : 'transparent',
+                      wordBreak: 'break-word',
                     }}>{h}</th>
                   ))}
                 </tr>
@@ -260,7 +358,7 @@ export default function PricingPage({ language, toggleLanguage }) {
                   { label: isEn ? 'Flexible online schedule' : '线上弹性进度', vals: ['✓', '✓', '△'] },
                 ].map((row) => (
                   <tr key={row.label}>
-                    <td style={{ padding: '13px 14px', borderBottom: '1px solid #edf0f6', fontWeight: 700, color: '#333' }}>{row.label}</td>
+                    <td style={{ padding: '13px 14px', borderBottom: '1px solid #edf0f6', fontWeight: 700, color: '#333', wordBreak: 'break-word' }}>{row.label}</td>
                     {row.vals.map((value, i) => (
                       <td key={`${row.label}-${value}`} style={{
                         padding: '13px 14px',
@@ -269,6 +367,7 @@ export default function PricingPage({ language, toggleLanguage }) {
                         color: i < 2 ? '#2b3d6d' : '#555',
                         background: i < 2 ? '#f8faff' : '#fff',
                         fontWeight: i < 2 ? 750 : 500,
+                        wordBreak: 'break-word',
                       }}>{value}</td>
                     ))}
                   </tr>

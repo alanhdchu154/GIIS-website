@@ -49,9 +49,15 @@ Current evidence:
 - `npm run audit:pathways`: 93 pass / 0 warn / 0 fail.
 - `node tools/pathway-quality/audit_assessment_parent_trust.js --json`: 93
   pass / 0 warn / 0 fail.
+- `npm run audit:showcase-all`: 93 pass / 0 warn / 0 fail. This gate covers
+  all 93 course JSON files for free/usable required resource URLs, removed or
+  login-gated placeholder residue, known bad resource IDs, subject-domain
+  resource mismatches, substantial reviewable assignment evidence, and
+  quiz/midterm/final structure. Report:
+  `_audit/all-course-showcase-readiness.md`.
 - `node tools/pathway-quality/audit_proofpoint_courses.js --check-urls --report _audit/proofpoint-course-qa.md`:
-  8 proof-point courses pass / 0 warn / 0 fail; 221 non-YouTube URLs checked /
-  0 bad.
+  8 proof-point courses pass / 0 warn / 0 fail; 220 non-YouTube URLs checked /
+  0 bad; 32 YouTube resources skipped by direct URL smoke.
 - Student feedback completion pass completed 2026-06-01: module switching,
   English I resource gaps, same-grade recommendations, module motivation,
   manual completion controls, quiz review guidance, parent pacing, demo
@@ -66,6 +72,21 @@ Current evidence:
   stronger display criteria than `audit:pathways`: reading/video/practice URLs
   and notes, no blocked-resource residue, substantial reviewable assignment
   evidence, quiz/exam structure, and optional non-YouTube URL smoke.
+- Browser and YouTube proof-point QA continued 2026-06-01: local Learn
+  walkthrough covered course/module-1/syllabus routes for the first 8 courses;
+  a focused re-check verified repaired English II, Geometry, and Chemistry
+  resource mismatches in the actual UI. Separate YouTube oEmbed spot-check
+  covered 32 / 32 current YouTube resources with 0 bad. Evidence is recorded in
+  `umi/reviews/2026-06-01-proofpoint-browser-youtube-audit.md`.
+- Desktop/mobile visual QA completed 2026-06-01 for the same first 8
+  proof-point courses: 50 route checks / 0 blockers across dashboard,
+  course, module-1, and syllabus surfaces at 1280 x 900 and 390 x 844.
+  Screenshots and metrics are saved under `_audit/proofpoint-visual-qa/`.
+- All-course showcase readiness pass completed 2026-06-01: 46 removed or empty
+  reading placeholders were replaced with open resources, 59 thin assignments
+  were expanded into reviewable student evidence artifacts, one mismatched
+  Business Ethics environmental resource was corrected, and the four newly
+  introduced shared resource URLs live-smoked with HTTP 200 responses.
 - Completed assessment/resource history is archived in
   `umi/reviews/2026-06-01-course-resource-assessment-summary.md`.
 
@@ -73,9 +94,11 @@ Next check:
 
 - Run resource/link audit before producing videos for a course cohort; treat
   YouTube automation 429s as a separate manual/browser spot-check lane.
-- Continue proof-point course QA from the first 8 showcase courses into either
-  the next parent-visible cohort or deeper manual/browser review of the same 8,
-  especially YouTube playback and the first-module parent demo path.
+- First proof-point cohort is ready for a local/staged parent demo, and all 93
+  courses now clear the static showcase-readiness gate. Continue with targeted
+  browser/visual spot-checks for the next parent-visible cohort and do a small
+  live YouTube playback spot-check immediately before any demo that depends on
+  external YouTube navigation.
 
 ### 3. Parent Trust / Admissions / Student Care
 

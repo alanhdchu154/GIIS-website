@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Footer.module.css';
 
 const SCHOOL_PHONE = '+1 (813) 501-5756';
 const SCHOOL_EMAIL = 'admissions@genesisideas.school';

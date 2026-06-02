@@ -1,9 +1,9 @@
 # Proof-Point Course QA
 
-Generated: 2026-06-01T03:08:16.684Z
+Generated: 2026-06-01T03:35:03.511Z
 
 Summary: 8 pass / 0 warn / 0 fail (8 courses)
-Non-YouTube URL smoke: 221 checked / 0 bad; YouTube resources skipped: 4.
+Non-YouTube URL smoke: 220 checked / 0 bad; YouTube resources skipped: 32.
 
 | Course | Modules | Quiz | Midterm | Final | Status |
 | --- | ---: | ---: | ---: | ---: | --- |

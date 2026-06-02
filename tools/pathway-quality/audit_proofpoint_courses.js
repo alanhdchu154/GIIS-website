@@ -16,6 +16,12 @@ const TARGETS = [
   { slug: 'government', file: 'server/prisma/courses/social-studies/government.json', label: 'Government' },
 ];
 
+const BLOCKED_RESOURCE_PATTERNS = [
+  { pattern: /aaFrAFZATKU/, reason: 'unrelated natural-number formula video previously appeared in Geometry Pythagorean module' },
+  { pattern: /KdxEAt91D7k/, reason: 'non-instructional sketch video previously appeared in Geometry solids module' },
+  { pattern: /SkMNREAMNvc/, reason: 'systems-of-equations video previously appeared in Algebra I one-step/two-step equations module' },
+];
+
 function issue(severity, code, message) {
   return { severity, code, message };
 }
@@ -104,10 +110,23 @@ function auditCourse(target) {
       if (!String(mod[noteField] || '').trim()) issues.push(issue('fail', 'missing_resource_note', `${moduleLabel} ${noteField} is missing.`));
       if (String(mod[field] || '').trim()) resourceUrls.push({ course: course.slug, module: mod.order, field, url: String(mod[field]).trim() });
     }
+    if (String(mod.video2Url || '').trim()) {
+      validateUrl(mod.video2Url, `${moduleLabel} video2Url`, issues);
+      if (!String(mod.video2Note || '').trim()) issues.push(issue('fail', 'missing_resource_note', `${moduleLabel} video2Note is missing.`));
+      resourceUrls.push({ course: course.slug, module: mod.order, field: 'video2Url', url: String(mod.video2Url).trim() });
+    }
 
     const moduleText = JSON.stringify(mod);
     if (/Removed after|commonlit\.org|noredink\.com|paid\/institutional|may require login/i.test(moduleText)) {
       issues.push(issue('fail', 'blocked_resource_residue', `${moduleLabel} still references removed or login-gated resources.`));
+    }
+    for (const blocked of BLOCKED_RESOURCE_PATTERNS) {
+      if (blocked.pattern.test(moduleText)) {
+        issues.push(issue('fail', 'blocked_proofpoint_resource', `${moduleLabel} references a known bad proof-point resource: ${blocked.reason}.`));
+      }
+    }
+    if (course.department === 'English' && /health-and-medicine|economics-finance-domain|Health and medicine|Economics and finance/i.test(moduleText)) {
+      issues.push(issue('fail', 'english_resource_domain_mismatch', `${moduleLabel} uses a subject-domain resource that does not fit English/literature practice.`));
     }
     if (!String(mod.objectives || '').trim() || String(mod.objectives || '').trim().length < 90) {
       issues.push(issue('fail', 'weak_objectives', `${moduleLabel} objectives are too thin for a proof-point course.`));
