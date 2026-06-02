@@ -1,7 +1,20 @@
 {
-  "generated_at": "2026-06-01T12:25:07+00:00",
+  "generated_at": "2026-06-02T12:15:23+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "English I": [
+      {
+        "course": "English I",
+        "course_slug": "english-i",
+        "module_number": 1,
+        "module_title": "Reading Comprehension Strategies",
+        "youtube_id": "6UKWODKPEQ0",
+        "url": "https://youtu.be/6UKWODKPEQ0",
+        "embed_url": "https://www.youtube.com/embed/6UKWODKPEQ0",
+        "published_at": "2026-06-02T12:15:07Z",
+        "lesson_dir": "english-i-module-1-reading-comprehension-strategies-v2"
+      }
+    ],
     "Algebra I": [
       {
         "course": "Algebra I",
@@ -72,6 +85,28 @@
       {
         "course": "Algebra I",
         "course_slug": "algebra-i",
+        "module_number": 7,
+        "module_title": "Introduction to Functions",
+        "youtube_id": "r58JYrGWttc",
+        "url": "https://youtu.be/r58JYrGWttc",
+        "embed_url": "https://www.youtube.com/embed/r58JYrGWttc",
+        "published_at": "2026-06-02T12:14:50Z",
+        "lesson_dir": "algebra-i-module-7-introduction-to-functions-v2"
+      },
+      {
+        "course": "Algebra I",
+        "course_slug": "algebra-i",
+        "module_number": 8,
+        "module_title": "Graphing Linear Functions",
+        "youtube_id": "g_jB7EgctnM",
+        "url": "https://youtu.be/g_jB7EgctnM",
+        "embed_url": "https://www.youtube.com/embed/g_jB7EgctnM",
+        "published_at": "2026-06-02T12:15:00Z",
+        "lesson_dir": "algebra-i-module-8-graphing-linear-functions-v2"
+      },
+      {
+        "course": "Algebra I",
+        "course_slug": "algebra-i",
         "module_number": 9,
         "module_title": "Slope & Rate of Change",
         "youtube_id": "kIuIKiW8n2A",
@@ -123,6 +158,17 @@
         "embed_url": "https://www.youtube.com/embed/ZA_14Y4ySXw",
         "published_at": "2026-06-01T12:24:42Z",
         "lesson_dir": "algebra-i-module-13-factoring-polynomials-v2"
+      },
+      {
+        "course": "Algebra I",
+        "course_slug": "algebra-i",
+        "module_number": 14,
+        "module_title": "Quadratic Equations",
+        "youtube_id": "sbtiPodwc_U",
+        "url": "https://youtu.be/sbtiPodwc_U",
+        "embed_url": "https://www.youtube.com/embed/sbtiPodwc_U",
+        "published_at": "2026-06-02T12:14:42Z",
+        "lesson_dir": "algebra-i-module-14-quadratic-equations-v2"
       }
     ],
     "Biology": [
@@ -140,6 +186,17 @@
     ]
   },
   "lessons": [
+    {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_number": 1,
+      "module_title": "Reading Comprehension Strategies",
+      "youtube_id": "6UKWODKPEQ0",
+      "url": "https://youtu.be/6UKWODKPEQ0",
+      "embed_url": "https://www.youtube.com/embed/6UKWODKPEQ0",
+      "published_at": "2026-06-02T12:15:07Z",
+      "lesson_dir": "english-i-module-1-reading-comprehension-strategies-v2"
+    },
     {
       "course": "Algebra I",
       "course_slug": "algebra-i",
@@ -209,6 +266,28 @@
     {
       "course": "Algebra I",
       "course_slug": "algebra-i",
+      "module_number": 7,
+      "module_title": "Introduction to Functions",
+      "youtube_id": "r58JYrGWttc",
+      "url": "https://youtu.be/r58JYrGWttc",
+      "embed_url": "https://www.youtube.com/embed/r58JYrGWttc",
+      "published_at": "2026-06-02T12:14:50Z",
+      "lesson_dir": "algebra-i-module-7-introduction-to-functions-v2"
+    },
+    {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_number": 8,
+      "module_title": "Graphing Linear Functions",
+      "youtube_id": "g_jB7EgctnM",
+      "url": "https://youtu.be/g_jB7EgctnM",
+      "embed_url": "https://www.youtube.com/embed/g_jB7EgctnM",
+      "published_at": "2026-06-02T12:15:00Z",
+      "lesson_dir": "algebra-i-module-8-graphing-linear-functions-v2"
+    },
+    {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
       "module_number": 9,
       "module_title": "Slope & Rate of Change",
       "youtube_id": "kIuIKiW8n2A",
@@ -260,6 +339,17 @@
       "embed_url": "https://www.youtube.com/embed/ZA_14Y4ySXw",
       "published_at": "2026-06-01T12:24:42Z",
       "lesson_dir": "algebra-i-module-13-factoring-polynomials-v2"
+    },
+    {
+      "course": "Algebra I",
+      "course_slug": "algebra-i",
+      "module_number": 14,
+      "module_title": "Quadratic Equations",
+      "youtube_id": "sbtiPodwc_U",
+      "url": "https://youtu.be/sbtiPodwc_U",
+      "embed_url": "https://www.youtube.com/embed/sbtiPodwc_U",
+      "published_at": "2026-06-02T12:14:42Z",
+      "lesson_dir": "algebra-i-module-14-quadratic-equations-v2"
     },
     {
       "course": "Biology",

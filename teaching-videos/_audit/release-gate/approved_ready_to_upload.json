@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T12:24:18Z",
+  "generated_at": "2026-06-02T12:14:19Z",
   "policy": "foundation_daily_auto_approval_clean_pass_score_100",
   "approved_ready_to_upload": [
     {
@@ -154,6 +154,17 @@
       "slug": "biology-module-1-chemistry-of-life-v2",
       "classification": "foundation_v2_upload_candidate",
       "evidence": "new gate pass score 100; reviewer artifacts bound to script_sha; style_manifest science theme; Umi contact-sheet/sample-frame QA complete"
+    },
+    {
+      "slug": "english-i-module-1-reading-comprehension-strategies-v2",
+      "path": "teaching-videos/english-i-module-1-reading-comprehension-strategies-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 1: Reading Comprehension Strategies",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "Umi/Codex duplicate-slug repair approval",
+      "approved_at": "2026-06-02T12:14:19Z"
     },
     {
       "slug": "english-i-module-2-parts-of-speech-v2",

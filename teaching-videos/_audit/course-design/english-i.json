@@ -1,0 +1,117 @@
+{
+  "generated_at": "2026-06-02T12:01:56Z",
+  "policy": "g9_course_design_gate_v2",
+  "status": "pass",
+  "target_grade": 9,
+  "course": {
+    "name": "English I",
+    "slug": "english-i",
+    "department": "English",
+    "credits": 1,
+    "gradeLevel": 9,
+    "module_count": 13,
+    "source": "server/prisma/courses/english/english-i.json",
+    "source_sha256": "c529baa00ce600f615c458711b21852ca477f8fc2940a17bd6fd1cc5c5e6e1dc"
+  },
+  "decision": "course design is reasonable for video-series production",
+  "errors": [],
+  "warnings": [],
+  "module_checks": [
+    {
+      "order": 1,
+      "title": "Reading Comprehension Strategies",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 2,
+      "title": "Parts of Speech & Grammar Foundations",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 3,
+      "title": "Sentence Structure & Syntax",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 4,
+      "title": "Vocabulary in Context & Word Study",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 5,
+      "title": "Narrative Writing",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 6,
+      "title": "Descriptive Writing",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 7,
+      "title": "Short Story Analysis",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 8,
+      "title": "Poetry: Forms & Interpretation",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 9,
+      "title": "Drama & Theater Texts",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 10,
+      "title": "Novel Study: Character & Theme",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 11,
+      "title": "Argumentative Writing & Evidence",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 12,
+      "title": "Expository & Informational Writing",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 13,
+      "title": "Research Skills & MLA Basics",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "repair": {
+    "changed": false,
+    "changes": [],
+    "blocked_after_repair": []
+  }
+}
