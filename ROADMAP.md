@@ -18,7 +18,7 @@ stabilizes.
 Status: active, Codex-managed, foundation-only.
 
 - Scheduler: `~/.codex/automations/giis-foundation-video-daily/automation.toml`
-- Time: 23:00 CT daily.
+- Time: 07:00 CT daily.
 - Repo runner: `bash tools/lesson-video/foundation_daily.sh`
 - Scope: non-AP foundation modules only.
 - Max upload volume: 4/day.
@@ -30,7 +30,7 @@ Status: active, Codex-managed, foundation-only.
 
 Next check:
 
-- After each 23:00 run, review selected modules, cc progress, gate result,
+- After each 07:00 run, review selected modules, cc progress, gate result,
   upload result, website manifest sync, and any `cc_blocked` report.
 
 ### 2. Course And Resource Quality

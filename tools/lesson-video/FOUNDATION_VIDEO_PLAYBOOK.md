@@ -119,7 +119,7 @@ college admissions claims in foundation lesson titles or descriptions.
 
 ## Daily Schedule
 
-- 23:00 CT: Codex automation `giis-foundation-video-daily` calls
+- 07:00 CT: Codex automation `giis-foundation-video-daily` calls
   `bash tools/lesson-video/foundation_daily.sh`.
 - Default target grade: Grade 9 (`FOUNDATION_TARGET_GRADE=9`).
 - Selection is deterministic: Grade 9 course sequence first, then module order;

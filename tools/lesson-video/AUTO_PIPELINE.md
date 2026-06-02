@@ -7,7 +7,7 @@
 >
 > Active daily path: the foundation-only Codex automation
 > `~/.codex/automations/giis-foundation-video-daily/automation.toml` calls
-> `bash tools/lesson-video/foundation_daily.sh` at 23:00 CT. Do not use the old
+> `bash tools/lesson-video/foundation_daily.sh` at 07:00 CT. Do not use the old
 > launchd downstream assumptions for new production.
 
 > **You are the Cowork-scheduled Claude session triggered on a daily / weekly
