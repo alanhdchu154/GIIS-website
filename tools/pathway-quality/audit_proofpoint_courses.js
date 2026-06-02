@@ -169,7 +169,7 @@ async function smokeCheckUrls(rows) {
   const checks = [];
   async function check(url, uses) {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000);
+    const timeout = setTimeout(() => controller.abort(), 25000);
     try {
       const res = await fetch(url, {
         method: 'GET',
@@ -189,8 +189,8 @@ async function smokeCheckUrls(rows) {
   }
 
   const entries = [...seen.entries()];
-  for (let index = 0; index < entries.length; index += 12) {
-    await Promise.all(entries.slice(index, index + 12).map(([url, uses]) => check(url, uses)));
+  for (let index = 0; index < entries.length; index += 8) {
+    await Promise.all(entries.slice(index, index + 8).map(([url, uses]) => check(url, uses)));
   }
 
   return {
@@ -228,7 +228,7 @@ function markdownReport(report) {
     for (const item of report.urlSmoke.bad) lines.push(`- ${item.status || item.error}: ${item.url}`);
   }
   lines.push('');
-  return `${lines.join('\n')}\n`;
+  return `${lines.join('\n').replace(/\n+$/, '')}\n`;
 }
 
 async function main() {

@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-01
+Last updated: 2026-06-02
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -55,6 +55,12 @@ Current evidence:
   resource mismatches, substantial reviewable assignment evidence, and
   quiz/midterm/final structure. Report:
   `_audit/all-course-showcase-readiness.md`.
+- `node tools/pathway-quality/audit_all_course_showcase_readiness.js --check-urls --check-youtube --report _audit/all-course-showcase-readiness.md`:
+  93 pass / 0 warn / 0 fail; 1,398 non-YouTube resource URLs checked / 0 bad;
+  282 YouTube oEmbed checks / 0 bad.
+- `npm run audit:showcase-browser -- --all-modules --base-url http://127.0.0.1:3000 --report _audit/all-course-browser-smoke-all-modules.md`:
+  2,358 pass / 0 fail across all 93 courses, checking course overview,
+  syllabus, and every module route on desktop and mobile.
 - `node tools/pathway-quality/audit_proofpoint_courses.js --check-urls --report _audit/proofpoint-course-qa.md`:
   8 proof-point courses pass / 0 warn / 0 fail; 220 non-YouTube URLs checked /
   0 bad; 32 YouTube resources skipped by direct URL smoke.
@@ -87,6 +93,15 @@ Current evidence:
   were expanded into reviewable student evidence artifacts, one mismatched
   Business Ethics environmental resource was corrected, and the four newly
   introduced shared resource URLs live-smoked with HTTP 200 responses.
+- All-course high-quality pass completed 2026-06-02: the all-course gate now
+  supports full live URL and YouTube checks, all 93 courses passed the live
+  resource audit, all 2,358 all-module browser smoke route checks passed, and a
+  React key warning in `CoursePage` was repaired so course overview pages render
+  cleanly under JSON-backed test data.
+- Student-blocking resource cleanup completed 2026-06-02: one unstable
+  Merriam-Webster required reading link was replaced with a Khan Academy
+  vocabulary-in-context lesson, and the repeated Purdue OWL generic exercises
+  entry was replaced with a more specific Purdue grammar exercises page.
 - Completed assessment/resource history is archived in
   `umi/reviews/2026-06-01-course-resource-assessment-summary.md`.
 
@@ -95,10 +110,10 @@ Next check:
 - Run resource/link audit before producing videos for a course cohort; treat
   YouTube automation 429s as a separate manual/browser spot-check lane.
 - First proof-point cohort is ready for a local/staged parent demo, and all 93
-  courses now clear the static showcase-readiness gate. Continue with targeted
-  browser/visual spot-checks for the next parent-visible cohort and do a small
-  live YouTube playback spot-check immediately before any demo that depends on
-  external YouTube navigation.
+  courses now clear static, live-resource, and browser route gates. Continue
+  with targeted screenshot-level visual QA for future parent-visible cohorts
+  and do a small live YouTube playback spot-check immediately before any demo
+  that depends on external YouTube navigation.
 
 ### 3. Parent Trust / Admissions / Student Care
 

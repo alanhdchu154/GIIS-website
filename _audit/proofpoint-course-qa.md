@@ -1,6 +1,6 @@
 # Proof-Point Course QA
 
-Generated: 2026-06-01T03:35:03.511Z
+Generated: 2026-06-02T03:13:20.529Z
 
 Summary: 8 pass / 0 warn / 0 fail (8 courses)
 Non-YouTube URL smoke: 220 checked / 0 bad; YouTube resources skipped: 32.
@@ -15,4 +15,3 @@ Non-YouTube URL smoke: 220 checked / 0 bad; YouTube resources skipped: 32.
 | Chemistry | 14 | 69 | 15 | 20 | pass |
 | U.S. History | 8 | 29 | 15 | 20 | pass |
 | Government | 13 | 48 | 15 | 20 | pass |
-

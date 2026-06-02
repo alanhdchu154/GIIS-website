@@ -249,7 +249,7 @@ async function smokeCheckUrls(rows) {
   const checks = [];
   async function check(url, uses) {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000);
+    const timeout = setTimeout(() => controller.abort(), 25000);
     try {
       const res = await fetch(url, {
         method: 'GET',
@@ -282,8 +282,8 @@ async function smokeCheckUrls(rows) {
   }
 
   const entries = [...seen.entries()];
-  for (let index = 0; index < entries.length; index += 24) {
-    await Promise.all(entries.slice(index, index + 24).map(([url, uses]) => check(url, uses)));
+  for (let index = 0; index < entries.length; index += 8) {
+    await Promise.all(entries.slice(index, index + 8).map(([url, uses]) => check(url, uses)));
   }
 
   return {
@@ -307,7 +307,7 @@ async function smokeCheckYouTube(rows) {
   const checks = [];
   async function check(id, uses) {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000);
+    const timeout = setTimeout(() => controller.abort(), 25000);
     const url = `https://www.youtube.com/oembed?url=${encodeURIComponent(`https://www.youtube.com/watch?v=${id}`)}&format=json`;
     try {
       const res = await fetch(url, {
@@ -338,8 +338,8 @@ async function smokeCheckYouTube(rows) {
   }
 
   const entries = [...seen.entries()];
-  for (let index = 0; index < entries.length; index += 24) {
-    await Promise.all(entries.slice(index, index + 24).map(([id, uses]) => check(id, uses)));
+  for (let index = 0; index < entries.length; index += 8) {
+    await Promise.all(entries.slice(index, index + 8).map(([id, uses]) => check(id, uses)));
   }
 
   return {
@@ -391,7 +391,7 @@ function markdownReport(report) {
     }
   }
   lines.push('');
-  return `${lines.join('\n')}\n`;
+  return `${lines.join('\n').replace(/\n+$/, '')}\n`;
 }
 
 async function main() {

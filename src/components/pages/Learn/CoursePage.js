@@ -127,7 +127,7 @@ export default function CoursePage({ language }) {
             const quizDone = submittedQuizSet.has(mod.order);
             const quizAttempt = (enrollment?.quizAttempts || []).find(a => a.moduleOrder === mod.order);
             return (
-              <div key={mod.id} style={{
+              <div key={mod.id || mod.order} style={{
                 display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap',
                 background: '#fff', border: `1px solid ${quizDone ? '#c8e6c9' : '#e0e6f0'}`,
                 borderRadius: '10px', padding: '14px 18px',
