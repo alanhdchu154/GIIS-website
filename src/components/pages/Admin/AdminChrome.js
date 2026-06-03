@@ -36,15 +36,10 @@ export const ADMIN_NAV_GROUPS = [
     ],
   },
   {
-    heading: { en: 'Admissions & Billing', zh: '招生与收费' },
+    heading: { en: 'Operations', zh: '营运' },
     items: [
-      { to: '/admin/applications', label: { en: 'Applications', zh: '申请' } },
+      { to: '/admin/applications', label: { en: 'Applications', zh: '招生申请' } },
       { to: '/admin/subscriptions', label: { en: 'Billing', zh: '订阅收费' } },
-    ],
-  },
-  {
-    heading: { en: 'System', zh: '系统' },
-    items: [
       { to: '/admin/email-logs', label: { en: 'Email Logs', zh: '邮件记录' } },
     ],
   },
