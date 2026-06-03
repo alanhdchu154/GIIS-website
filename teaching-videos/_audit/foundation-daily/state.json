@@ -167,6 +167,45 @@
         "quality_score": 100
       },
       "attempts": 1
+    },
+    "english-i:M3": {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_order": 3,
+      "module_title": "Sentence Structure & Syntax",
+      "target_slug": "english-i-module-3-sentence-structure-syntax-v2",
+      "status": "approved",
+      "updated_at": "2026-06-03T12:10:18Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "english-i:M4": {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_order": 4,
+      "module_title": "Vocabulary in Context & Word Study",
+      "target_slug": "english-i-module-4-vocabulary-in-context-word-study-v2",
+      "status": "approved",
+      "updated_at": "2026-06-03T12:19:03Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "english-i:M5": {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_order": 5,
+      "module_title": "Narrative Writing",
+      "target_slug": "english-i-module-5-narrative-writing-v2",
+      "status": "approved",
+      "updated_at": "2026-06-03T12:29:33Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
     }
   }
 }

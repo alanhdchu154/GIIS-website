@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T12:14:19Z",
+  "generated_at": "2026-06-03T12:29:33Z",
   "policy": "foundation_daily_auto_approval_clean_pass_score_100",
   "approved_ready_to_upload": [
     {
@@ -170,6 +170,39 @@
       "slug": "english-i-module-2-parts-of-speech-v2",
       "classification": "foundation_v2_upload_candidate",
       "evidence": "new gate pass score 100; reviewer artifacts bound to script_sha; style_manifest literature theme; Umi contact-sheet/sample-frame QA complete"
+    },
+    {
+      "slug": "english-i-module-3-sentence-structure-syntax-v2",
+      "path": "teaching-videos/english-i-module-3-sentence-structure-syntax-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 3: Sentence Structure & Syntax",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-03T12:10:18Z"
+    },
+    {
+      "slug": "english-i-module-4-vocabulary-in-context-word-study-v2",
+      "path": "teaching-videos/english-i-module-4-vocabulary-in-context-word-study-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 4: Vocabulary in Context & Word Study",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-03T12:19:03Z"
+    },
+    {
+      "slug": "english-i-module-5-narrative-writing-v2",
+      "path": "teaching-videos/english-i-module-5-narrative-writing-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 5: Narrative Writing",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-03T12:29:33Z"
     }
   ]
 }
