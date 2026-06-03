@@ -4,4 +4,10 @@
 
 [build.environment]
   CI = "false"
-  REACT_APP_API_URL = "https://api.genesisideas.school"
+  REACT_APP_API_URL = "https://genesisideas.school"
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://api.genesisideas.school/api/:splat"
+  status = 200
+  force = true
