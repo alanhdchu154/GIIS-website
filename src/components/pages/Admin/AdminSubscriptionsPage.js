@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAdminSession } from '../../../api/authStorage';
+import { AdminNav } from './AdminChrome';
 import { getApiBase } from '../../../config/apiBase';
 
 const API = getApiBase();
@@ -131,11 +132,9 @@ export default function AdminSubscriptionsPage() {
               Link Stripe purchases to student records so billing events can lock, unlock, or report the right account.
             </p>
           </div>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            <Link to="/admin" style={outlineButton}>Students</Link>
-            <Link to="/admin/applications" style={outlineButton}>Applications</Link>
-          </div>
         </div>
+
+        <AdminNav />
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 12, marginBottom: 18 }}>
           <Metric label="Total" value={summary.total || 0} />
@@ -256,13 +255,3 @@ function Metric({ label, value, warn }) {
 
 const th = { padding: '12px 14px', fontSize: 11, letterSpacing: 1, textTransform: 'uppercase' };
 const td = { padding: '14px', verticalAlign: 'top' };
-const outlineButton = {
-  color: '#2b3d6d',
-  border: '1.5px solid #d4d8e0',
-  borderRadius: 8,
-  padding: '8px 14px',
-  background: '#fff',
-  fontSize: 13,
-  fontWeight: 700,
-  textDecoration: 'none',
-};

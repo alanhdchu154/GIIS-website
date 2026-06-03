@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { AdminNav } from './AdminChrome';
 import { clearAdminSession, getAdminSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 
@@ -245,14 +246,13 @@ export default function AdminCoursesPage() {
           </p>
         </div>
         <div className="d-flex flex-wrap gap-2">
-          <Link to="/admin" className="btn btn-outline-secondary btn-sm">Students</Link>
-          <Link to="/admin/progress" className="btn btn-outline-secondary btn-sm">Progress</Link>
-          <Link to="/admin/documents" className="btn btn-outline-secondary btn-sm">Documents</Link>
           <button className="btn btn-outline-primary btn-sm" type="button" onClick={loadCourses} disabled={loading || Boolean(saving)}>
             Refresh
           </button>
         </div>
       </div>
+
+      <AdminNav />
 
       {err && <div className="alert alert-warning py-2">{err}</div>}
       {msg && <div className="alert alert-success py-2">{msg}</div>}

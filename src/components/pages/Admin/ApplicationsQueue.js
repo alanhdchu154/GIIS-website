@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
+import { AdminNav } from './AdminChrome';
 import { getAdminSession } from '../../../api/authStorage';
 
 const API = getApiBase();
@@ -172,11 +173,9 @@ export default function ApplicationsQueue() {
               <p style={{ fontSize: 11, fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 4px' }}>Admin</p>
               <h1 style={{ fontSize: 26, fontWeight: 800, margin: 0 }}>Applications</h1>
             </div>
-            <div style={{ display: 'flex', gap: 8 }}>
-              <Link to="/admin" style={{ fontSize: 13, color: '#2b3d6d', fontWeight: 600, textDecoration: 'none', padding: '8px 14px', border: '1.5px solid #d4d8e0', borderRadius: 8 }}>← Admin Home</Link>
-              <Link to="/admin/assignments" style={{ fontSize: 13, color: '#2b3d6d', fontWeight: 600, textDecoration: 'none', padding: '8px 14px', border: '1.5px solid #d4d8e0', borderRadius: 8 }}>Assignments</Link>
-            </div>
           </div>
+
+          <AdminNav />
 
           {/* Filter tabs */}
           <div style={{ display: 'flex', gap: 8, marginBottom: 20 }}>

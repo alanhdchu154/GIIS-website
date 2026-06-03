@@ -76,3 +76,7 @@ teaching-videos/_audit/lesson-quality/*-lesson-quality.md
 # Python bytecode (tools/youtube-upload/, tools/lesson-video/)
 __pycache__/
 *.pyc
+
+# AWS Lightsail SSH private key — never commit
+LightsailDefaultKey-us-east-1.pem
+*.pem

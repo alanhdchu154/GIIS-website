@@ -46,6 +46,11 @@ const studentProfileSchema = z.object({
 const prisma = new PrismaClient();
 const router = express.Router();
 
+// Florida 24-credit graduation framework (see CLAUDE.md). A student who has
+// earned at least this many official transcript credits has met the academic
+// graduation requirement, regardless of their (possibly future) graduation date.
+const GRADUATION_CREDIT_THRESHOLD = 24;
+
 function dateOnly(d) {
   if (!d) return null;
   try {
@@ -140,26 +145,40 @@ router.get('/', authenticate, requireAdmin, async (req, res) => {
         updatedAt: true,
         account: { select: { email: true } },
         _count: { select: { semesters: true } },
+        semesters: {
+          select: {
+            courseRows: { select: { courseName: true, credits: true, letterGrade: true } },
+          },
+        },
       },
     }),
   ]);
 
-  const students = list.map((s) => ({
-    id: s.id,
-    studentCode: s.studentCode ?? null,
-    name: s.name,
-    birthDate: dateOnly(s.birthDate),
-    gender: s.gender,
-    city: s.city,
-    province: s.province,
-    parentGuardian: s.parentGuardian,
-    graduationDate: dateOnly(s.graduationDate),
-    withdrawalDate: dateOnly(s.withdrawalDate),
-    currentGrade: computeCurrentGrade(s.graduationDate),
-    loginEmail: s.account?.email ?? null,
-    semesterCount: s._count.semesters,
-    updatedAt: s.updatedAt,
-  }));
+  const students = list.map((s) => {
+    const transcriptRows = (s.semesters || []).flatMap((sem) => sem.courseRows || []);
+    const creditsEarned = transcriptRows
+      .filter((row) => row.courseName && row.letterGrade && decimalToNumber(row.credits) > 0)
+      .reduce((sum, row) => sum + decimalToNumber(row.credits), 0);
+    return {
+      id: s.id,
+      studentCode: s.studentCode ?? null,
+      name: s.name,
+      birthDate: dateOnly(s.birthDate),
+      gender: s.gender,
+      city: s.city,
+      province: s.province,
+      parentGuardian: s.parentGuardian,
+      graduationDate: dateOnly(s.graduationDate),
+      withdrawalDate: dateOnly(s.withdrawalDate),
+      currentGrade: computeCurrentGrade(s.graduationDate),
+      loginEmail: s.account?.email ?? null,
+      semesterCount: s._count.semesters,
+      creditsEarned: Number(creditsEarned.toFixed(1)),
+      graduationCreditThreshold: GRADUATION_CREDIT_THRESHOLD,
+      meetsGraduationCredits: creditsEarned >= GRADUATION_CREDIT_THRESHOLD,
+      updatedAt: s.updatedAt,
+    };
+  });
 
   res.json({
     students,
