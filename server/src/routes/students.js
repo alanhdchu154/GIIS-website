@@ -7,7 +7,7 @@ const {
   requireAdmin,
   requireStudentOrAdminForStudentParam,
 } = require('../middleware/auth');
-const { computeRowGpa } = require('../lib/gpa');
+const { computeRowGpa, computeSemesterTotals } = require('../lib/gpa');
 const { ensureStudentMutable } = require('../lib/studentArchive');
 const {
   CARE_STATUSES,
@@ -50,6 +50,44 @@ const router = express.Router();
 // earned at least this many official transcript credits has met the academic
 // graduation requirement, regardless of their (possibly future) graduation date.
 const GRADUATION_CREDIT_THRESHOLD = 24;
+
+// Monthly recurring value per plan, in USD cents — used for the ops MRR line.
+// Annual plans are normalized to a monthly figure. Inquiry/test plans are 0.
+const PLAN_MRR_CENTS = {
+  self_paced_monthly: 4900,
+  monthly: 4900,
+  founders_monthly: 4900,
+  self_paced_annual: Math.round(49900 / 12),
+  guided_monthly: 14900,
+  premium_monthly: 29900,
+  group_monthly: 0,
+  live_test: 0,
+};
+
+const SUB_ACTIVE = ['active', 'trialing'];
+const SUB_PAYMENT_ISSUE = ['past_due', 'incomplete'];
+const INACTIVE_DAYS = 7;
+
+// Collapse a student's subscriptions into one operational status.
+function resolveSubscription(subs) {
+  if (!subs || subs.length === 0) return { state: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null };
+  const pick = (pred) => subs.find(pred);
+  const active = pick((s) => SUB_ACTIVE.includes(s.status));
+  if (active) {
+    return {
+      state: active.cancelAtPeriodEnd ? 'canceling' : 'active',
+      planType: active.planType,
+      mrrCents: PLAN_MRR_CENTS[active.planType] ?? 0,
+      canceling: !!active.cancelAtPeriodEnd,
+      currentPeriodEnd: active.currentPeriodEnd || null,
+    };
+  }
+  const issue = pick((s) => SUB_PAYMENT_ISSUE.includes(s.status));
+  if (issue) return { state: 'past_due', planType: issue.planType, mrrCents: 0, canceling: false, currentPeriodEnd: issue.currentPeriodEnd || null };
+  const churned = pick((s) => ['cancelled', 'canceled', 'refunded'].includes(s.status));
+  if (churned) return { state: 'churned', planType: churned.planType, mrrCents: 0, canceling: false, currentPeriodEnd: churned.currentPeriodEnd || null };
+  return { state: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null };
+}
 
 function dateOnly(d) {
   if (!d) return null;
@@ -427,6 +465,158 @@ router.get('/progress', authenticate, requireAdmin, async (req, res) => {
   });
 
   res.json({ students: result });
+});
+
+/**
+ * Ops cockpit summary — admin only.
+ *
+ * One call that powers the /admin roster as a daily command center:
+ *   - per-student operational signals (payment, last activity, ungraded work,
+ *     risk, next check-in, last parent contact, graduation readiness)
+ *   - action-strip counts (what needs attention today)
+ *   - revenue line (MRR, active vs at-risk)
+ *
+ * Built so the dashboard never has to fan out across billing/progress/grading.
+ */
+router.get('/ops-summary', authenticate, requireAdmin, async (req, res) => {
+  const now = new Date();
+  const today = dateOnly(now);
+
+  const [students, allSubs, assignmentsToGrade, applicationsPending] = await Promise.all([
+    prisma.student.findMany({
+      orderBy: { updatedAt: 'desc' },
+      select: {
+        id: true,
+        studentCode: true,
+        name: true,
+        gender: true,
+        parentGuardian: true,
+        parentEmail: true,
+        graduationDate: true,
+        withdrawalDate: true,
+        updatedAt: true,
+        account: { select: { email: true } },
+        semesters: { select: { courseRows: { select: { courseName: true, credits: true, letterGrade: true, weightedGpa: true, unweightedGpa: true } } } },
+        enrollments: {
+          select: {
+            assignments: { select: { gradedAt: true } },
+            moduleProgresses: { select: { lastActivityAt: true }, orderBy: { lastActivityAt: 'desc' }, take: 1 },
+            quizAttempts: { select: { submittedAt: true }, orderBy: { submittedAt: 'desc' }, take: 1 },
+            examAttempts: { where: { submittedAt: { not: null } }, select: { submittedAt: true }, orderBy: { submittedAt: 'desc' }, take: 1 },
+          },
+        },
+        loginSessions: { select: { lastSeenAt: true, startedAt: true }, orderBy: { lastSeenAt: 'desc' }, take: 1 },
+        subscriptions: { select: { status: true, planType: true, cancelAtPeriodEnd: true, currentPeriodEnd: true } },
+        careState: { select: { riskLevel: true, status: true, advisorOwner: true, nextCheckInDueAt: true } },
+        careLogs: { where: { type: 'parent_contact' }, select: { createdAt: true }, orderBy: { createdAt: 'desc' }, take: 1 },
+      },
+    }),
+    prisma.subscription.findMany({ select: { purchaserEmail: true, studentId: true, status: true, planType: true, cancelAtPeriodEnd: true, currentPeriodEnd: true } }),
+    prisma.assignmentSubmission.count({ where: { gradedAt: null } }),
+    prisma.application.count({ where: { status: 'pending' } }),
+  ]);
+
+  // Index unlinked subscriptions by purchaser email so a parent's payment still
+  // resolves even before an admin manually links it to the student record.
+  const subsByEmail = new Map();
+  for (const s of allSubs) {
+    if (!s.purchaserEmail) continue;
+    const key = s.purchaserEmail.trim().toLowerCase();
+    if (!subsByEmail.has(key)) subsByEmail.set(key, []);
+    subsByEmail.get(key).push(s);
+  }
+
+  let mrrCents = 0;
+  let activeCount = 0;
+  let atRiskCount = 0;
+
+  const list = students.map((s) => {
+    const status = s.withdrawalDate ? 'withdrawn' : (s.graduationDate && dateOnly(s.graduationDate) <= today ? 'graduated' : 'enrolled');
+
+    // Credits + GPA from the official transcript rows.
+    const rows = (s.semesters || []).flatMap((sem) => sem.courseRows || []);
+    const gradedRows = rows.filter((r) => r.courseName && r.letterGrade && decimalToNumber(r.credits) > 0);
+    const creditsEarned = gradedRows.reduce((sum, r) => sum + decimalToNumber(r.credits), 0);
+    const totals = computeSemesterTotals(gradedRows.map((r) => ({
+      courseName: r.courseName, credits: r.credits, weightedGpa: r.weightedGpa, unweightedGpa: r.unweightedGpa,
+    })));
+    const gpa = totals.unweightedGPA === '-' ? null : totals.unweightedGPA;
+
+    // Last activity across learning events + logins.
+    const candidates = [];
+    for (const e of s.enrollments || []) {
+      if (e.moduleProgresses[0]?.lastActivityAt) candidates.push(new Date(e.moduleProgresses[0].lastActivityAt));
+      if (e.quizAttempts[0]?.submittedAt) candidates.push(new Date(e.quizAttempts[0].submittedAt));
+      if (e.examAttempts[0]?.submittedAt) candidates.push(new Date(e.examAttempts[0].submittedAt));
+    }
+    if (s.loginSessions[0]?.lastSeenAt) candidates.push(new Date(s.loginSessions[0].lastSeenAt));
+    else if (s.loginSessions[0]?.startedAt) candidates.push(new Date(s.loginSessions[0].startedAt));
+    const lastActivity = candidates.length ? new Date(Math.max(...candidates.map((d) => d.getTime()))) : null;
+    const daysInactive = lastActivity ? Math.floor((now - lastActivity) / 86400000) : null;
+    const isInactive = status === 'enrolled' && (lastActivity === null || daysInactive >= INACTIVE_DAYS);
+
+    const ungradedCount = (s.enrollments || []).reduce((sum, e) => sum + (e.assignments || []).filter((a) => !a.gradedAt).length, 0);
+
+    // Subscription: prefer linked rows, fall back to purchaser-email match.
+    let subs = (s.subscriptions || []);
+    if (subs.length === 0 && s.parentEmail) subs = subsByEmail.get(s.parentEmail.trim().toLowerCase()) || [];
+    const sub = resolveSubscription(subs);
+    const paymentIssue = sub.state === 'past_due' || sub.state === 'canceling';
+    if (status !== 'withdrawn') {
+      if (sub.state === 'active') { activeCount += 1; mrrCents += sub.mrrCents; }
+      if (paymentIssue) atRiskCount += 1;
+    }
+
+    const nextCheckInDueAt = s.careState?.nextCheckInDueAt ? dateOnly(s.careState.nextCheckInDueAt) : null;
+    const followUpDue = !!(nextCheckInDueAt && nextCheckInDueAt <= today && status === 'enrolled');
+
+    return {
+      id: s.id,
+      studentCode: s.studentCode ?? null,
+      name: s.name,
+      gender: s.gender,
+      parentGuardian: s.parentGuardian,
+      graduationDate: dateOnly(s.graduationDate),
+      withdrawalDate: dateOnly(s.withdrawalDate),
+      currentGrade: computeCurrentGrade(s.graduationDate),
+      loginEmail: s.account?.email ?? null,
+      creditsEarned: Number(creditsEarned.toFixed(1)),
+      graduationCreditThreshold: GRADUATION_CREDIT_THRESHOLD,
+      meetsGraduationCredits: creditsEarned >= GRADUATION_CREDIT_THRESHOLD,
+      gpa,
+      // ops signals
+      subscriptionState: sub.state,
+      subscriptionPlan: sub.planType,
+      paymentIssue,
+      lastActivityAt: lastActivity ? lastActivity.toISOString() : null,
+      daysInactive,
+      isInactive,
+      ungradedCount,
+      riskLevel: s.careState?.riskLevel || null,
+      advisorOwner: s.careState?.advisorOwner || null,
+      nextCheckInDueAt,
+      followUpDue,
+      lastParentContactAt: s.careLogs[0]?.createdAt ? dateOnly(s.careLogs[0].createdAt) : null,
+    };
+  });
+
+  const enrolled = list.filter((s) => !s.withdrawalDate && !(s.graduationDate && s.graduationDate <= today));
+  const actionCounts = {
+    paymentIssues: list.filter((s) => s.paymentIssue && !s.withdrawalDate).length,
+    assignmentsToGrade,
+    applicationsPending,
+    inactive: enrolled.filter((s) => s.isInactive).length,
+    careFollowUpsDue: list.filter((s) => s.followUpDue).length,
+    noLogin: enrolled.filter((s) => !s.loginEmail).length,
+    graduationReady: enrolled.filter((s) => s.meetsGraduationCredits).length,
+  };
+
+  res.json({
+    students: list,
+    actionCounts,
+    revenue: { mrrCents, activeCount, atRiskCount },
+    generatedAt: now.toISOString(),
+  });
 });
 
 router.get('/:id/care-state', authenticate, requireAdmin, async (req, res) => {

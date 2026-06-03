@@ -28,6 +28,26 @@ const STATUS_BADGE = {
   withdrawn: { label: { en: 'Withdrawn', zh: '退学' },  bg: '#dc3545' },
 };
 
+const SUB_BADGE = {
+  active:    { label: { en: 'Active',    zh: '在订' },   bg: '#198754' },
+  canceling: { label: { en: 'Canceling', zh: '取消中' }, bg: '#fd7e14' },
+  past_due:  { label: { en: 'Past due',  zh: '逾期' },   bg: '#dc3545' },
+  churned:   { label: { en: 'Churned',   zh: '已流失' }, bg: '#6c757d' },
+  none:      { label: { en: 'No plan',   zh: '未付费' }, bg: '#adb5bd' },
+};
+
+const RISK_BADGE = {
+  watch:   { label: { en: 'Watch',   zh: '留意' }, bg: '#fd7e14' },
+  concern: { label: { en: 'Concern', zh: '关注' }, bg: '#dc3545' },
+  urgent:  { label: { en: 'Urgent',  zh: '紧急' }, bg: '#b71c1c' },
+};
+
+function lastActiveLabel(s, isEn) {
+  if (s.daysInactive == null) return { text: isEn ? 'Never' : '从未', tone: '#b71c1c' };
+  if (s.daysInactive === 0) return { text: isEn ? 'Today' : '今天', tone: '#1b7a3d' };
+  return { text: isEn ? `${s.daysInactive}d ago` : `${s.daysInactive}天前`, tone: s.daysInactive >= 7 ? '#b71c1c' : '#475467' };
+}
+
 const EMPTY_FORM = { name: '', email: '', password: '', parentEmail: '', birthDate: '', graduationDate: '', entryDate: '' };
 
 const pageStyle = {
@@ -74,6 +94,8 @@ export default function AdminDashboard({ language }) {
   const [deletingId, setDeletingId] = useState(null);
   const [gradConfirmId, setGradConfirmId] = useState(null);
   const [toolsOpen, setToolsOpen] = useState(false);
+  const [actionCounts, setActionCounts] = useState(null);
+  const [revenue, setRevenue] = useState(null);
 
   const navigate = useNavigate();
   const session = getAdminSession();
@@ -88,11 +110,13 @@ export default function AdminDashboard({ language }) {
   async function loadStudents() {
     setLoading(true);
     try {
-      const r = await fetch(`${API_BASE}/api/students`, { credentials: 'include' });
+      const r = await fetch(`${API_BASE}/api/students/ops-summary`, { credentials: 'include' });
       const data = await r.json().catch(() => ({}));
       if (r.status === 401) { clearAdminSession(); navigate('/login', { replace: true }); return; }
       if (!r.ok) throw new Error(data.error || (isEn ? 'Failed to load' : '载入失败'));
       setStudents(data.students || []);
+      setActionCounts(data.actionCounts || null);
+      setRevenue(data.revenue || null);
     } catch (e) {
       setErr(e.message);
     } finally {
@@ -183,14 +207,15 @@ export default function AdminDashboard({ language }) {
 
   if (!session) return null;
 
-  const counts = students.reduce((acc, student) => {
-    const status = getStudentStatus(student);
-    acc[status] = (acc[status] || 0) + 1;
-    if (isGraduationReady(student)) acc.gradReady += 1;
-    if (!student.loginEmail) acc.noLogin += 1;
-    if (!student.parentGuardian && !student.parentEmail) acc.missingGuardian += 1;
-    return acc;
-  }, { enrolled: 0, graduated: 0, withdrawn: 0, gradReady: 0, noLogin: 0, missingGuardian: 0 });
+  const actionItems = actionCounts ? [
+    { key: 'paymentIssues', icon: '💳', label: isEn ? 'Payment issues' : '付款异常', value: actionCounts.paymentIssues, tone: '#b71c1c', onClick: () => setStatusFilter('paymentIssue') },
+    { key: 'assignmentsToGrade', icon: '📝', label: isEn ? 'To grade' : '待批作业', value: actionCounts.assignmentsToGrade, tone: '#9a5b00', onClick: () => navigate('/admin/assignments') },
+    { key: 'applicationsPending', icon: '📥', label: isEn ? 'Applications' : '待审申请', value: actionCounts.applicationsPending, tone: '#0d47a1', onClick: () => navigate('/admin/applications') },
+    { key: 'inactive', icon: '😴', label: isEn ? 'Inactive 7d+' : '7天没上线', value: actionCounts.inactive, tone: '#b71c1c', onClick: () => setStatusFilter('inactive') },
+    { key: 'careFollowUpsDue', icon: '⏰', label: isEn ? 'Follow-ups due' : '跟进到期', value: actionCounts.careFollowUpsDue, tone: '#8a5a00', onClick: () => navigate('/admin/progress') },
+    { key: 'noLogin', icon: '🔑', label: isEn ? 'No login' : '没设登入', value: actionCounts.noLogin, tone: '#b71c1c', onClick: () => setStatusFilter('noLogin') },
+    { key: 'graduationReady', icon: '🎓', label: isEn ? 'Grad-ready' : '可确认毕业', value: actionCounts.graduationReady, tone: '#0d47a1', onClick: () => setStatusFilter('gradReady') },
+  ] : [];
 
   return (
     <div style={pageStyle}>
@@ -287,24 +312,36 @@ export default function AdminDashboard({ language }) {
 
       {err && <div className="alert alert-warning py-2">{err}</div>}
 
-      <div className="row g-3 mb-3">
-        {[
-          { label: isEn ? 'Enrolled' : '在籍', value: counts.enrolled, tone: '#1b5e20', filter: 'enrolled' },
-          { label: isEn ? 'Graduation-ready' : '已达毕业资格', value: counts.gradReady, tone: counts.gradReady ? '#8a5a00' : '#64748b', filter: 'gradReady', hint: isEn ? 'Met 24-credit framework' : '已修满 24 学分框架' },
-          { label: isEn ? 'Graduated' : '已毕业', value: counts.graduated, tone: '#0d47a1', filter: 'graduated' },
-          { label: isEn ? 'No login set' : '未设登入', value: counts.noLogin, tone: counts.noLogin ? '#b71c1c' : '#64748b' },
-        ].map((metric) => (
-          <div className="col-6 col-lg-3" key={metric.label}>
-            <div
-              style={{ ...cardStyle, padding: '14px 16px', cursor: metric.filter ? 'pointer' : 'default', outline: metric.filter === 'gradReady' && counts.gradReady ? '2px solid #ffce6a' : 'none' }}
-              onClick={metric.filter ? () => setStatusFilter(metric.filter) : undefined}
+      {/* Revenue line — the owner's at-a-glance money signal */}
+      {revenue && (
+        <div className="d-flex flex-wrap align-items-center gap-3 mb-2" style={{ fontSize: 14 }}>
+          <span>
+            <span className="text-muted">{isEn ? 'Monthly recurring' : '月经常性收入'}: </span>
+            <strong style={{ fontSize: 18 }}>${(revenue.mrrCents / 100).toLocaleString(undefined, { maximumFractionDigits: 0 })}</strong>
+          </span>
+          <span><span className="badge bg-success">{revenue.activeCount}</span> <span className="text-muted small">{isEn ? 'paying' : '在订'}</span></span>
+          {revenue.atRiskCount > 0 && (
+            <span><span className="badge bg-danger">{revenue.atRiskCount}</span> <span className="text-muted small">{isEn ? 'at risk' : '风险'}</span></span>
+          )}
+        </div>
+      )}
+
+      {/* Action strip — "what needs me today", each tile jumps to the work */}
+      <div className="d-flex flex-wrap gap-2 mb-3">
+        {actionItems.map((item) => {
+          const hot = item.value > 0;
+          return (
+            <button
+              key={item.key}
+              type="button"
+              onClick={item.onClick}
+              style={{ ...cardStyle, padding: '9px 14px', minWidth: 112, textAlign: 'left', cursor: 'pointer', border: hot ? `1px solid ${item.tone}55` : '1px solid #e8ecf2', background: hot ? '#fff' : '#fbfcfe' }}
             >
-              <div className="small text-muted fw-bold text-uppercase" style={{ letterSpacing: 0.8 }}>{metric.label}</div>
-              <div className="h3 mb-0 fw-bold" style={{ color: metric.tone }}>{metric.value}</div>
-              {metric.hint && <div className="text-muted" style={{ fontSize: 11, marginTop: 2 }}>{metric.hint}</div>}
-            </div>
-          </div>
-        ))}
+              <div style={{ fontSize: 11, color: '#5c6578', fontWeight: 700 }}>{item.icon} {item.label}</div>
+              <div style={{ fontSize: 22, fontWeight: 800, color: hot ? item.tone : '#aab2c0', lineHeight: 1.1 }}>{item.value}</div>
+            </button>
+          );
+        })}
       </div>
 
       <div style={{ ...cardStyle, padding: 14, marginBottom: 14 }}>
@@ -342,13 +379,31 @@ export default function AdminDashboard({ language }) {
         </div>
       </div>
 
+      {['paymentIssue', 'inactive', 'noLogin'].includes(statusFilter) && (
+        <div className="mb-2">
+          <span className="badge text-bg-light border" style={{ fontSize: 12, padding: '6px 10px' }}>
+            {isEn ? 'Filtered: ' : '筛选中：'}
+            {{ paymentIssue: isEn ? 'Payment issues' : '付款异常', inactive: isEn ? 'Inactive 7d+' : '7天没上线', noLogin: isEn ? 'No login' : '没设登入' }[statusFilter]}
+            <button type="button" className="btn btn-sm btn-link p-0 ms-2 text-decoration-none" style={{ fontSize: 12 }} onClick={() => setStatusFilter('all')}>
+              ✕ {isEn ? 'clear' : '清除'}
+            </button>
+          </span>
+        </div>
+      )}
+
       {loading ? (
         <p className="text-muted">{isEn ? 'Loading…' : '载入中…'}</p>
       ) : (() => {
+        const filterFns = {
+          gradReady: isGraduationReady,
+          paymentIssue: (s) => s.paymentIssue,
+          inactive: (s) => s.isInactive,
+          noLogin: (s) => !s.loginEmail,
+        };
         const visible = statusFilter === 'all'
           ? students
-          : statusFilter === 'gradReady'
-            ? students.filter(isGraduationReady)
+          : filterFns[statusFilter]
+            ? students.filter(filterFns[statusFilter])
             : students.filter((s) => getStudentStatus(s) === statusFilter);
         return (
           <div className="table-responsive" style={cardStyle}>
@@ -358,8 +413,10 @@ export default function AdminDashboard({ language }) {
                   <th>{isEn ? 'Name' : '姓名'}</th>
                   <th>{isEn ? 'Status' : '状态'}</th>
                   <th>{isEn ? 'Grade' : '年级'}</th>
-                  <th>{isEn ? 'Credits' : '学分'}</th>
-                  <th>{isEn ? 'Account' : '帐号'}</th>
+                  <th>{isEn ? 'Credits / GPA' : '学分 / GPA'}</th>
+                  <th>{isEn ? 'Paying' : '付费'}</th>
+                  <th>{isEn ? 'Last active' : '最后上线'}</th>
+                  <th>{isEn ? 'Needs action' : '待处理'}</th>
                   <th />
                 </tr>
               </thead>
@@ -408,20 +465,44 @@ export default function AdminDashboard({ language }) {
                             <span className="text-muted fw-normal">/{threshold}</span>
                           </span>
                         ) : '—'}
+                        {s.gpa != null && <span className="text-muted"> · {s.gpa}</span>}
+                      </td>
+                      <td className="text-nowrap">
+                        {(() => {
+                          const sub = SUB_BADGE[s.subscriptionState] || SUB_BADGE.none;
+                          return (
+                            <span
+                              className="badge"
+                              style={{ backgroundColor: sub.bg }}
+                              title={s.subscriptionPlan ? `${s.subscriptionState} · ${s.subscriptionPlan}` : (isEn ? 'No active subscription' : '无有效订阅')}
+                            >
+                              {sub.label[lang]}
+                            </span>
+                          );
+                        })()}
                       </td>
                       <td className="small text-nowrap">
-                        {s.loginEmail
-                          ? (
-                            <span
-                              className="badge text-bg-light border"
-                              title={isEn
-                                ? 'A student login account exists. This is separate from parent login.'
-                                : '已建立学生登入帐号；这不是家长帐号。'}
-                            >
-                              {isEn ? 'Student login enabled' : '学生帐号已启用'}
-                            </span>
-                          )
-                          : <span className="badge text-bg-danger">{isEn ? 'No login' : '未设帐号'}</span>}
+                        {status === 'enrolled'
+                          ? (() => { const la = lastActiveLabel(s, isEn); return <span style={{ color: la.tone, fontWeight: 600 }}>{la.text}</span>; })()
+                          : <span className="text-muted">—</span>}
+                      </td>
+                      <td className="small text-nowrap">
+                        {(() => {
+                          const chips = [];
+                          if (s.ungradedCount > 0) chips.push({ k: 'grade', bg: '#fff3e0', fg: '#9a5b00', t: isEn ? `${s.ungradedCount} to grade` : `${s.ungradedCount} 待批` });
+                          if (s.paymentIssue) chips.push({ k: 'pay', bg: '#fde8e8', fg: '#b71c1c', t: isEn ? 'Payment' : '付款' });
+                          if (s.followUpDue) chips.push({ k: 'follow', bg: '#fff3cd', fg: '#8a5a00', t: isEn ? 'Follow-up due' : '跟进到期' });
+                          if (!s.loginEmail && status === 'enrolled') chips.push({ k: 'login', bg: '#fde8e8', fg: '#b71c1c', t: isEn ? 'No login' : '没登入' });
+                          if (s.riskLevel && RISK_BADGE[s.riskLevel]) chips.push({ k: 'risk', bg: '#f3e8ff', fg: '#6a1b9a', t: RISK_BADGE[s.riskLevel].label[lang] });
+                          if (chips.length === 0) return <span className="text-muted">—</span>;
+                          return (
+                            <div className="d-flex flex-wrap gap-1">
+                              {chips.map((c) => (
+                                <span key={c.k} className="badge" style={{ background: c.bg, color: c.fg, border: `1px solid ${c.fg}33`, fontWeight: 700 }}>{c.t}</span>
+                              ))}
+                            </div>
+                          );
+                        })()}
                       </td>
                       <td className="text-end text-nowrap">
                         {gradReady && (
@@ -461,7 +542,7 @@ export default function AdminDashboard({ language }) {
                 })}
                 {visible.length === 0 && (
                   <tr>
-                    <td colSpan={6} className="text-muted text-center py-4">
+                    <td colSpan={8} className="text-muted text-center py-4">
                       {statusFilter === 'all'
                         ? (isEn ? 'No students yet — create one above.' : '目前没有学生资料，请使用上方按钮新增。')
                         : (isEn ? 'No students in this category.' : '此分类没有学生。')}
