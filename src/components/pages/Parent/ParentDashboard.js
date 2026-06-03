@@ -257,6 +257,72 @@ function AssignmentHistory({ enrollments, isEn }) {
   );
 }
 
+const CARE_TYPE_LABELS = {
+  advisor_note: { en: 'Advisor note', zh: '顾问留言' },
+  weekly_checkin: { en: 'Weekly check-in', zh: '每周关怀' },
+  parent_contact: { en: 'Parent contact', zh: '家长联系' },
+  intervention: { en: 'Support plan', zh: '辅导计划' },
+  transfer_review: { en: 'Transfer review', zh: '转学评估' },
+  graduation_review: { en: 'Graduation review', zh: '毕业评估' },
+};
+
+function AdvisorCard({ advisor, notes, isEn }) {
+  const list = notes || [];
+  const advisorName = advisor?.name;
+  const nextCheckIn = advisor?.nextCheckInDueAt;
+  // Hide entirely when the school hasn't assigned an advisor or shared anything yet,
+  // so we never show an empty promise to a paying parent.
+  if (!advisorName && !nextCheckIn && list.length === 0) return null;
+  const fmt = (d) => new Date(d).toLocaleDateString(isEn ? 'en-US' : 'zh-CN', { month: 'short', day: 'numeric' });
+  return (
+    <div style={{ background: 'linear-gradient(135deg,#1b6b3a 0%,#2e8b57 100%)', borderRadius: 14, padding: '20px 24px', color: '#fff' }}>
+      <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.7)', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 12px' }}>
+        {isEn ? 'From your advisor' : '来自你的升学顾问'}
+      </p>
+      {(advisorName || nextCheckIn) && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 18, marginBottom: list.length ? 14 : 0 }}>
+          {advisorName && (
+            <div>
+              <p style={{ margin: '0 0 2px', fontSize: 11, color: 'rgba(255,255,255,0.6)' }}>{isEn ? 'Advisor' : '负责顾问'}</p>
+              <p style={{ margin: 0, fontSize: 14, fontWeight: 800 }}>{advisorName}</p>
+            </div>
+          )}
+          {nextCheckIn && (
+            <div>
+              <p style={{ margin: '0 0 2px', fontSize: 11, color: 'rgba(255,255,255,0.6)' }}>{isEn ? 'Next check-in' : '下次关怀'}</p>
+              <p style={{ margin: 0, fontSize: 14, fontWeight: 800 }}>{fmt(nextCheckIn)}</p>
+            </div>
+          )}
+        </div>
+      )}
+      {list.length === 0 ? (
+        <p style={{ margin: 0, fontSize: 13, color: 'rgba(255,255,255,0.85)', lineHeight: 1.5 }}>
+          {isEn ? 'Your advisor will share progress notes and check-ins here.' : '顾问会在这里分享孩子的进度与关怀纪录。'}
+        </p>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {list.map((note) => {
+            const tl = CARE_TYPE_LABELS[note.type] || CARE_TYPE_LABELS.advisor_note;
+            return (
+              <div key={note.id} style={{ background: 'rgba(255,255,255,0.1)', borderRadius: 10, padding: '12px 14px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, alignItems: 'baseline', marginBottom: 4 }}>
+                  <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.6px', textTransform: 'uppercase', color: '#bff0cf' }}>{isEn ? tl.en : tl.zh}</span>
+                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)' }}>{fmt(note.at)}</span>
+                </div>
+                {note.title && <p style={{ margin: '0 0 3px', fontSize: 13.5, fontWeight: 800, color: '#fff' }}>{note.title}</p>}
+                <p style={{ margin: 0, fontSize: 13, color: 'rgba(255,255,255,0.9)', lineHeight: 1.5 }}>{note.summary}</p>
+                {note.followUpAt && (
+                  <p style={{ margin: '6px 0 0', fontSize: 11, color: 'rgba(255,255,255,0.6)' }}>{isEn ? 'Follow-up' : '后续跟进'}: {fmt(note.followUpAt)}</p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ParentDashboard({ language }) {
   const isEn = language !== 'zh';
   const navigate = useNavigate();
@@ -350,7 +416,7 @@ export default function ParentDashboard({ language }) {
     );
   }
 
-  const { student, stats, enrollments, recentActivity, subscription, weeklyInsights } = data;
+  const { student, stats, enrollments, recentActivity, subscription, weeklyInsights, advisor, advisorNotes } = data;
   const gradPct = Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100));
   const inProgress = enrollments.filter(e => !e.creditEarned);
   const completed = enrollments.filter(e => e.creditEarned);
@@ -507,6 +573,9 @@ export default function ParentDashboard({ language }) {
 
             {/* RIGHT */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+
+              {/* Advisor notes — the human voice + early warning the parent wants first */}
+              <AdvisorCard advisor={advisor} notes={advisorNotes} isEn={isEn} />
 
               {/* Recent activity */}
               <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>

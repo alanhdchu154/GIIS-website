@@ -269,6 +269,19 @@ router.get('/me', async (req, res) => {
     select: { status: true, planType: true, currentPeriodEnd: true, cancelAtPeriodEnd: true },
   });
 
+  // Advisor relationship: the assigned advisor + next check-in, plus parent-safe
+  // care notes the advisor has chosen to share. Internal notes are never exposed here.
+  const careState = await prisma.studentCareState.findUnique({
+    where: { studentId: auth.studentId },
+    select: { advisorOwner: true, nextCheckInDueAt: true },
+  });
+  const careLogs = await prisma.studentCareLog.findMany({
+    where: { studentId: auth.studentId, visibility: 'parent_safe' },
+    orderBy: { createdAt: 'desc' },
+    take: 10,
+    select: { id: true, type: true, title: true, parentSummary: true, channel: true, createdAt: true, followUpAt: true },
+  });
+
   res.json({
     student: {
       id: student.id, name: student.name, studentCode: student.studentCode,
@@ -318,6 +331,19 @@ router.get('/me', async (req, res) => {
     }),
     recentActivity: events.slice(0, 10),
     subscription: activeSub || null,
+    advisor: {
+      name: careState?.advisorOwner || null,
+      nextCheckInDueAt: careState?.nextCheckInDueAt ? careState.nextCheckInDueAt.toISOString() : null,
+    },
+    advisorNotes: careLogs.map((log) => ({
+      id: log.id,
+      type: log.type,
+      title: log.title || '',
+      summary: log.parentSummary || '',
+      channel: log.channel,
+      at: log.createdAt,
+      followUpAt: log.followUpAt ? log.followUpAt.toISOString() : null,
+    })),
   });
 });
 
