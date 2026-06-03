@@ -2,6 +2,7 @@ const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const { authenticate, requireAdmin } = require('../middleware/auth');
 const { profileAssignment } = require('../lib/assignmentProfile');
+const { isArchivedGraduationDate, sendArchivedResponse } = require('../lib/studentArchive');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -83,13 +84,16 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
     include: {
       enrollment: {
         include: {
-          student: { select: { id: true, name: true, parentEmail: true } },
+          student: { select: { id: true, name: true, parentEmail: true, graduationDate: true } },
           course: { select: { name: true } },
         },
       },
     },
   });
   if (!submission) return res.status(404).json({ error: 'Submission not found' });
+  if (isArchivedGraduationDate(submission.enrollment.student?.graduationDate)) {
+    return sendArchivedResponse(res, submission.enrollment.student.graduationDate);
+  }
 
   const updated = await prisma.assignmentSubmission.update({
     where: { id: req.params.id },

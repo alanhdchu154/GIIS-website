@@ -1,6 +1,7 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const { authenticate } = require('../middleware/auth');
+const { ensureStudentMutable } = require('../lib/studentArchive');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -56,6 +57,8 @@ router.get('/', authenticate, async (req, res) => {
 // PATCH /api/me — update editable fields
 router.patch('/', authenticate, async (req, res) => {
   if (req.auth.role !== 'student') return res.status(403).json({ error: 'Students only' });
+  const mutableStudent = await ensureStudentMutable(prisma, req.auth.studentId, res);
+  if (!mutableStudent) return;
 
   const data = {};
   for (const field of EDITABLE_FIELDS) {

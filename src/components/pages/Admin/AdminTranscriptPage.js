@@ -25,8 +25,17 @@ function parentLoginEmailForStudentEmail(studentEmail) {
   return `${match[1]}_parent@${match[2]}`;
 }
 
+function isArchivedGraduationDate(value) {
+  if (!value) return false;
+  const graduationDate = new Date(`${value}T00:00:00`);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return graduationDate <= today;
+}
+
 function LoginSection({ studentId, isEn }) {
   const [loginEmail, setLoginEmail] = useState(null);
+  const [isArchived, setIsArchived] = useState(false);
   const [form, setForm] = useState({ email: '', password: '' });
   const [saving, setSaving] = useState(false);
   const [msg, setMsg] = useState('');
@@ -37,6 +46,7 @@ function LoginSection({ studentId, isEn }) {
       .then((r) => r.json())
       .then((d) => {
         setLoginEmail(d.student?.loginEmail ?? null);
+        setIsArchived(isArchivedGraduationDate(d.student?.graduationDate));
         if (d.student?.loginEmail) setForm((f) => ({ ...f, email: d.student.loginEmail }));
       })
       .catch(() => {});
@@ -72,7 +82,12 @@ function LoginSection({ studentId, isEn }) {
     <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-1">
         <span className="fw-semibold small">{isEn ? 'Login Account' : '登入帐号'}</span>
-        <button className="btn btn-sm btn-outline-secondary" onClick={() => { setShowForm((v) => !v); setMsg(''); }}>
+        <button
+          className="btn btn-sm btn-outline-secondary"
+          onClick={() => { setShowForm((v) => !v); setMsg(''); }}
+          disabled={isArchived}
+          title={isArchived ? (isEn ? 'Archived graduate records cannot be modified.' : '已封存的毕业生资料不可修改。') : ''}
+        >
           {showForm ? (isEn ? 'Cancel' : '取消') : loginEmail ? (isEn ? 'Reset credentials' : '重设帐号') : (isEn ? '+ Set login' : '＋ 设定帐号')}
         </button>
       </div>
@@ -81,6 +96,11 @@ function LoginSection({ studentId, isEn }) {
           ? <><span className="badge bg-success me-1">✓</span>{loginEmail}</>
           : <span className="text-warning fw-semibold">{isEn ? 'No login set — student cannot sign in yet.' : '尚未设定帐号，学生无法登入。'}</span>}
       </p>
+      {isArchived && (
+        <p className="small text-muted mb-2">
+          {isEn ? 'Archived graduate record: credential changes are blocked.' : '毕业生资料已封存：登入帐号不可再修改。'}
+        </p>
+      )}
       {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
       {showForm && (
         <form onSubmit={handleSave} className="mt-2">
@@ -106,6 +126,7 @@ function LoginSection({ studentId, isEn }) {
 
 function ParentEmailSection({ studentId, isEn }) {
   const [parentEmail, setParentEmail] = useState(null);
+  const [isArchived, setIsArchived] = useState(false);
   const [defaultParentLogin, setDefaultParentLogin] = useState('');
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState('');
@@ -121,6 +142,7 @@ function ParentEmailSection({ studentId, isEn }) {
       .then((d) => {
         const contactEmail = d.student?.parentEmail ?? '';
         const generatedLogin = parentLoginEmailForStudentEmail(d.student?.loginEmail);
+        setIsArchived(isArchivedGraduationDate(d.student?.graduationDate));
         setParentEmail(contactEmail || null);
         setDefaultParentLogin(generatedLogin);
         setAccountForm((f) => ({
@@ -196,7 +218,12 @@ function ParentEmailSection({ studentId, isEn }) {
     <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-1">
         <span className="fw-semibold small">{isEn ? 'Parent Contact Email' : '家长联络邮箱'}</span>
-        <button className="btn btn-sm btn-outline-secondary" onClick={() => { setEditing((v) => !v); setDraft(parentEmail || ''); setMsg(''); }}>
+        <button
+          className="btn btn-sm btn-outline-secondary"
+          onClick={() => { setEditing((v) => !v); setDraft(parentEmail || ''); setMsg(''); }}
+          disabled={isArchived}
+          title={isArchived ? (isEn ? 'Archived graduate records cannot be modified.' : '已封存的毕业生资料不可修改。') : ''}
+        >
           {editing ? (isEn ? 'Cancel' : '取消') : parentEmail ? (isEn ? 'Edit' : '编辑') : (isEn ? '+ Set email' : '＋ 设定邮箱')}
         </button>
       </div>
@@ -205,6 +232,11 @@ function ParentEmailSection({ studentId, isEn }) {
           ? <><span className="badge bg-success me-1">✓</span>{parentEmail}</>
           : <span className="text-warning fw-semibold">{isEn ? 'No parent contact email saved.' : '尚未储存家长联络邮箱。'}</span>}
       </p>
+      {isArchived && (
+        <p className="small text-muted mb-2">
+          {isEn ? 'Archived graduate record: parent contact and parent login setup are blocked.' : '毕业生资料已封存：家长联络邮箱与家长帐号不可再修改。'}
+        </p>
+      )}
       {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
       {editing && (
         <form onSubmit={handleSave} className="mt-2">
@@ -256,7 +288,7 @@ function ParentEmailSection({ studentId, isEn }) {
           </div>
         </div>
         {accountMsg && <div className={`alert py-1 px-2 small mb-2 ${accountMsg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{accountMsg}</div>}
-        <button type="submit" className="btn btn-primary btn-sm" disabled={accountSaving}>
+        <button type="submit" className="btn btn-primary btn-sm" disabled={accountSaving || isArchived}>
           {accountSaving ? (isEn ? 'Saving…' : '储存中…') : (isEn ? 'Create / reset parent login' : '建立／重设家长登入')}
         </button>
       </form>
@@ -267,6 +299,7 @@ function ParentEmailSection({ studentId, isEn }) {
 function EnrollmentManagerSection({ studentId, isEn }) {
   const [courses, setCourses] = useState([]);
   const [enrollments, setEnrollments] = useState([]);
+  const [isArchived, setIsArchived] = useState(false);
   const [form, setForm] = useState({ courseId: '', semesterLabel: '' });
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -275,16 +308,20 @@ function EnrollmentManagerSection({ studentId, isEn }) {
   async function loadData() {
     setLoading(true);
     try {
-      const [courseRes, enrollmentRes] = await Promise.all([
+      const [courseRes, enrollmentRes, studentRes] = await Promise.all([
         fetch(`${API}/api/courses`, { credentials: 'include' }),
         fetch(`${API}/api/enrollments/admin/student/${studentId}`, { credentials: 'include' }),
+        fetch(`${API}/api/students/${studentId}`, { credentials: 'include' }),
       ]);
       const courseData = await courseRes.json().catch(() => []);
       const enrollmentData = await enrollmentRes.json().catch(() => []);
+      const studentData = await studentRes.json().catch(() => ({}));
       if (!courseRes.ok) throw new Error(courseData.error || 'Could not load courses');
       if (!enrollmentRes.ok) throw new Error(enrollmentData.error || 'Could not load enrollments');
+      if (!studentRes.ok) throw new Error(studentData.error || 'Could not load student record');
       setCourses(Array.isArray(courseData) ? courseData : []);
       setEnrollments(Array.isArray(enrollmentData) ? enrollmentData : []);
+      setIsArchived(isArchivedGraduationDate(studentData.student?.graduationDate));
     } catch (err) {
       setMsg(err.message);
     } finally {
@@ -395,7 +432,7 @@ function EnrollmentManagerSection({ studentId, isEn }) {
             className="form-select form-select-sm"
             value={form.courseId}
             onChange={(e) => setForm((f) => ({ ...f, courseId: e.target.value }))}
-            disabled={saving || loading}
+            disabled={saving || loading || isArchived}
           >
             <option value="">{isEn ? 'Choose course…' : '选择课程…'}</option>
             {availableCourses.map((course) => (
@@ -412,16 +449,23 @@ function EnrollmentManagerSection({ studentId, isEn }) {
             value={form.semesterLabel}
             onChange={(e) => setForm((f) => ({ ...f, semesterLabel: e.target.value }))}
             placeholder="G12 Spring"
-            disabled={saving}
+            disabled={saving || isArchived}
           />
         </div>
         <div className="col-md-3">
-          <button className="btn btn-primary btn-sm w-100" type="submit" disabled={saving || loading || !form.courseId}>
+          <button className="btn btn-primary btn-sm w-100" type="submit" disabled={saving || loading || isArchived || !form.courseId}>
             {saving ? (isEn ? 'Saving…' : '储存中…') : (isEn ? '+ Assign course' : '＋ 指派课程')}
           </button>
         </div>
       </form>
 
+      {isArchived && (
+        <div className="alert alert-info py-1 px-2 small mb-2">
+          {isEn
+            ? 'Archived graduate record: enrollment, module completion, and credit edits are blocked.'
+            : '毕业生资料已封存：课程、单元完成与学分资料不可再修改。'}
+        </div>
+      )}
       {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
 
       {loading ? (
@@ -462,7 +506,7 @@ function EnrollmentManagerSection({ studentId, isEn }) {
                             updateEnrollment(enrollment.id, { semesterLabel: e.target.value });
                           }
                         }}
-                        disabled={saving}
+                        disabled={saving || isArchived}
                       />
                     </td>
                     <td>
@@ -475,7 +519,7 @@ function EnrollmentManagerSection({ studentId, isEn }) {
                             updateEnrollment(enrollment.id, { completedModules: parseModules(e.target.value) });
                           }
                         }}
-                        disabled={saving}
+                        disabled={saving || isArchived}
                       />
                       <div className="text-muted" style={{ fontSize: '11px' }}>
                         {(enrollment.completedModules || []).length} / {moduleTotal || '—'} modules
@@ -488,7 +532,7 @@ function EnrollmentManagerSection({ studentId, isEn }) {
                           type="checkbox"
                           checked={!!enrollment.creditEarned}
                           onChange={(e) => updateEnrollment(enrollment.id, { creditEarned: e.target.checked })}
-                          disabled={saving}
+                          disabled={saving || isArchived}
                           id={`credit-${enrollment.id}`}
                         />
                         <label className="form-check-label small" htmlFor={`credit-${enrollment.id}`}>
@@ -497,7 +541,7 @@ function EnrollmentManagerSection({ studentId, isEn }) {
                       </div>
                     </td>
                     <td className="text-end">
-                      <button className="btn btn-sm btn-outline-danger" type="button" onClick={() => deleteEnrollment(enrollment)} disabled={saving}>
+                      <button className="btn btn-sm btn-outline-danger" type="button" onClick={() => deleteEnrollment(enrollment)} disabled={saving || isArchived}>
                         {isEn ? 'Remove' : '移除'}
                       </button>
                     </td>
@@ -558,13 +602,14 @@ function GraduationSection({ studentId }) {
       row.letterGrade && row.letterGrade.trim() ? s + Number(row.credits || 0) : s, 0), 0);
   const isEligible = credits >= CREDITS_REQUIRED;
   const isGraduated = !!student.graduationDate;
+  const isArchived = isArchivedGraduationDate(student.graduationDate);
   const pct = Math.min(100, (credits / CREDITS_REQUIRED) * 100);
 
   return (
     <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-2">
         <span className="fw-semibold small">Graduation Eligibility</span>
-        {isGraduated && (
+        {isGraduated && !isArchived && (
           <button className="btn btn-sm btn-outline-danger" onClick={() => patch(null)} disabled={saving}>
             Clear date
           </button>
@@ -596,11 +641,18 @@ function GraduationSection({ studentId }) {
       {/* Graduation status */}
       {isGraduated ? (
         <p className="small mb-2">
-          <span className="badge bg-success me-1">✓ Graduated</span>
+          <span className={`badge me-1 ${isArchived ? 'bg-primary' : 'bg-success'}`}>
+            {isArchived ? 'Graduated / Archived' : '✓ Graduated'}
+          </span>
           <span className="text-muted">{fmtDate(student.graduationDate)}</span>
         </p>
       ) : (
         <p className="small text-muted mb-2">Not yet marked as graduated.</p>
+      )}
+      {isArchived && (
+        <div className="alert alert-info py-1 px-2 small mb-2">
+          Academic records are archived. Backend edits to profile, transcript, enrollment, progress, quiz, assignment, and exam data are blocked.
+        </div>
       )}
 
       {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
@@ -626,6 +678,7 @@ export default function AdminTranscriptPage({ language }) {
   const { studentId } = useParams();
   const session = getAdminSession();
   const [mode, setMode] = useState('view'); // 'view' | 'edit'
+  const [isArchived, setIsArchived] = useState(false);
   const isEn = language === 'en';
   const copy = {
     back: isEn ? '← Back to student list' : '← 返回学生列表',
@@ -635,6 +688,21 @@ export default function AdminTranscriptPage({ language }) {
     hintView: isEn ? 'Use View for export/submission.' : '提交／汇出请用「检视」。',
     hintEdit: isEn ? 'Save only appears in Edit.' : '只有「编辑」才会显示储存。',
   };
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${API}/api/students/${studentId}`, { credentials: 'include' })
+      .then((r) => r.json())
+      .then((d) => {
+        if (!cancelled) setIsArchived(isArchivedGraduationDate(d.student?.graduationDate));
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [studentId]);
+
+  useEffect(() => {
+    if (isArchived && mode !== 'view') setMode('view');
+  }, [isArchived, mode]);
 
   if (!session) {
     return <Navigate to="/login" replace />;
@@ -677,15 +745,27 @@ export default function AdminTranscriptPage({ language }) {
                   type="button"
                   className={`btn btn-sm ${mode === 'edit' ? 'btn-primary' : 'btn-outline-primary'}`}
                   onClick={() => setMode('edit')}
+                  disabled={isArchived}
+                  title={isArchived ? (isEn ? 'Archived graduate records are view-only.' : '毕业生封存资料只能检视。') : ''}
                 >
                   {copy.edit}
                 </button>
               </div>
               <span className="small text-muted" style={{ maxWidth: 260 }}>
-                {mode === 'view' ? copy.hintView : copy.hintEdit}
+                {isArchived
+                  ? (isEn ? 'Archived graduate record: view-only.' : '毕业生资料已封存：只能检视。')
+                  : mode === 'view' ? copy.hintView : copy.hintEdit}
               </span>
             </div>
           </div>
+
+          {isArchived && (
+            <div className="alert alert-info py-2 px-3 small mb-3">
+              {isEn
+                ? 'This graduated student is archived. Backend writes to the academic record are blocked; transcript and audit views remain available.'
+                : '这位毕业生已封存。后端会阻挡学习与成绩资料修改；成绩单与审计纪录仍可检视。'}
+            </div>
+          )}
 
           <div className="row g-3 align-items-start mb-3">
             <div className="col-12 col-xl-4">
@@ -704,7 +784,7 @@ export default function AdminTranscriptPage({ language }) {
             language={language}
             viewerRole="admin"
             studentId={studentId}
-            mode={mode}
+            mode={isArchived ? 'view' : mode}
             adminWorkspace
           />
         </div>

@@ -7,13 +7,16 @@ const API_BASE = getApiBase();
 
 function getStudentStatus(s) {
   if (s.withdrawalDate) return 'withdrawn';
-  if (s.graduationDate && new Date(s.graduationDate) < new Date()) return 'graduated';
+  const graduationDate = s.graduationDate ? new Date(`${s.graduationDate}T00:00:00`) : null;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  if (graduationDate && graduationDate <= today) return 'graduated';
   return 'enrolled';
 }
 
 const STATUS_BADGE = {
   enrolled:  { label: { en: 'Enrolled',  zh: '在籍' },  bg: '#198754' },
-  graduated: { label: { en: 'Graduated', zh: '毕业' },  bg: '#0d6efd' },
+  graduated: { label: { en: 'Graduated / Archived', zh: '毕业／封存' },  bg: '#0d6efd' },
   withdrawn: { label: { en: 'Withdrawn', zh: '退学' },  bg: '#dc3545' },
 };
 
@@ -320,7 +323,16 @@ export default function AdminDashboard({ language }) {
                       </td>
                       <td className="small text-nowrap">
                         {s.loginEmail
-                          ? <span className="badge text-bg-light border">{isEn ? 'Login ready' : '可登入'}</span>
+                          ? (
+                            <span
+                              className="badge text-bg-light border"
+                              title={isEn
+                                ? 'A student login account exists. This is separate from parent login.'
+                                : '已建立学生登入帐号；这不是家长帐号。'}
+                            >
+                              {isEn ? 'Student login enabled' : '学生帐号已启用'}
+                            </span>
+                          )
                           : <span className="badge text-bg-danger">{isEn ? 'No login' : '未设帐号'}</span>}
                       </td>
                       <td className="text-end text-nowrap">

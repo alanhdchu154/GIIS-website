@@ -8,6 +8,7 @@ const {
   requireStudentOrAdminForStudentParam,
 } = require('../middleware/auth');
 const { computeRowGpa } = require('../lib/gpa');
+const { ensureStudentMutable } = require('../lib/studentArchive');
 const {
   CARE_STATUSES,
   RISK_LEVELS,
@@ -423,11 +424,8 @@ router.get('/:id/care-state', authenticate, requireAdmin, async (req, res) => {
 });
 
 router.patch('/:id/care-state', authenticate, requireAdmin, async (req, res) => {
-  const student = await prisma.student.findUnique({
-    where: { id: req.params.id },
-    select: { id: true },
-  });
-  if (!student) return res.status(404).json({ error: 'Student not found' });
+  const student = await ensureStudentMutable(prisma, req.params.id, res);
+  if (!student) return;
 
   const nextCheckInDueAt = parseOptionalDate(req.body?.nextCheckInDueAt);
   const lastReviewedAt = parseOptionalDate(req.body?.lastReviewedAt);
@@ -475,11 +473,8 @@ router.get('/:id/care-logs', authenticate, requireAdmin, async (req, res) => {
 });
 
 router.post('/:id/care-logs', authenticate, requireAdmin, async (req, res) => {
-  const student = await prisma.student.findUnique({
-    where: { id: req.params.id },
-    select: { id: true },
-  });
-  if (!student) return res.status(404).json({ error: 'Student not found' });
+  const student = await ensureStudentMutable(prisma, req.params.id, res);
+  if (!student) return;
 
   const followUpAt = parseOptionalDate(req.body?.followUpAt);
   const resolvedAt = parseOptionalDate(req.body?.resolvedAt);
@@ -577,6 +572,8 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
       }
     }
   }
+  const mutableStudent = await ensureStudentMutable(prisma, req.params.id, res);
+  if (!mutableStudent) return;
   try {
     const student = await prisma.student.update({
       where: { id: req.params.id },
@@ -595,8 +592,8 @@ router.put('/:id/login', authenticate, requireAdmin, async (req, res) => {
   if (!email || !password) return res.status(400).json({ error: 'email and password are required' });
   if (password.length < 8) return res.status(400).json({ error: 'password must be at least 8 characters' });
 
-  const student = await prisma.student.findUnique({ where: { id: req.params.id } });
-  if (!student) return res.status(404).json({ error: 'Student not found' });
+  const student = await ensureStudentMutable(prisma, req.params.id, res);
+  if (!student) return;
 
   const normalizedEmail = email.trim().toLowerCase();
   const existing = await prisma.studentAccount.findUnique({ where: { email: normalizedEmail } });
@@ -616,6 +613,8 @@ router.put('/:id/login', authenticate, requireAdmin, async (req, res) => {
 });
 
 router.delete('/:id', authenticate, requireAdmin, async (req, res) => {
+  const student = await ensureStudentMutable(prisma, req.params.id, res);
+  if (!student) return;
   try {
     await audit('student_delete', req.params.id, req);
     await prisma.student.delete({ where: { id: req.params.id } });
@@ -636,10 +635,8 @@ router.put('/:id/transcript', authenticate, requireAdmin, async (req, res) => {
     return res.status(400).json({ error: 'semesters array required' });
   }
 
-  const student = await prisma.student.findUnique({ where: { id: studentId } });
-  if (!student) {
-    return res.status(404).json({ error: 'Student not found' });
-  }
+  const student = await ensureStudentMutable(prisma, studentId, res);
+  if (!student) return;
   const existingSemesters = await prisma.semester.findMany({
     where: { studentId },
     select: { key: true, releaseDate: true },

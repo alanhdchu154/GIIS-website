@@ -1,6 +1,7 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const { authenticate, requireAdmin, blockIfSoftLocked } = require('../middleware/auth');
+const { ensureStudentMutable, ensureEnrollmentStudentMutable } = require('../lib/studentArchive');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -214,11 +215,8 @@ router.post('/admin/student/:studentId', authenticate, requireAdmin, async (req,
   const { courseId, slug, semesterLabel = '' } = req.body || {};
   if (!courseId && !slug) return res.status(400).json({ error: 'courseId or slug is required' });
 
-  const student = await prisma.student.findUnique({
-    where: { id: req.params.studentId },
-    select: { id: true },
-  });
-  if (!student) return res.status(404).json({ error: 'Student not found' });
+  const student = await ensureStudentMutable(prisma, req.params.studentId, res);
+  if (!student) return;
 
   const course = courseId
     ? await prisma.course.findUnique({ where: { id: courseId }, select: { id: true } })
@@ -281,6 +279,8 @@ router.patch('/admin/:enrollmentId', authenticate, requireAdmin, async (req, res
   }
 
   if (Object.keys(data).length === 0) return res.status(400).json({ error: 'No supported fields to update' });
+  const mutableEnrollment = await ensureEnrollmentStudentMutable(prisma, req.params.enrollmentId, res);
+  if (!mutableEnrollment) return;
 
   try {
     const enrollment = await prisma.enrollment.update({
@@ -318,6 +318,8 @@ router.patch('/admin/:enrollmentId', authenticate, requireAdmin, async (req, res
 });
 
 router.delete('/admin/:enrollmentId', authenticate, requireAdmin, async (req, res) => {
+  const mutableEnrollment = await ensureEnrollmentStudentMutable(prisma, req.params.enrollmentId, res);
+  if (!mutableEnrollment) return;
   try {
     await prisma.enrollment.delete({ where: { id: req.params.enrollmentId } });
     res.json({ ok: true });
@@ -352,6 +354,8 @@ router.get('/', authenticate, requireStudent, async (req, res) => {
 router.post('/', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
   const { slug } = req.body || {};
   if (!slug) return res.status(400).json({ error: 'slug is required' });
+  const student = await ensureStudentMutable(prisma, req.auth.studentId, res);
+  if (!student) return;
   const course = await prisma.course.findUnique({ where: { slug }, select: { id: true, isPublished: true } });
   if (!course || !course.isPublished) return res.status(404).json({ error: 'Course not found' });
   try {
@@ -404,6 +408,8 @@ router.post('/:slug/module/:moduleOrder/progress', authenticate, requireStudent,
   if (requested.length === 0) {
     return res.status(400).json({ error: 'At least one completion flag is required' });
   }
+  const student = await ensureStudentMutable(prisma, req.auth.studentId, res);
+  if (!student) return;
 
   const course = await prisma.course.findUnique({
     where: { slug: req.params.slug },
@@ -545,6 +551,8 @@ router.post('/:slug/quiz/:moduleOrder/submit', authenticate, requireStudent, blo
   if (!moduleOrder || !answers || typeof answers !== 'object') {
     return res.status(400).json({ error: 'moduleOrder and answers are required' });
   }
+  const student = await ensureStudentMutable(prisma, req.auth.studentId, res);
+  if (!student) return;
 
   const course = await prisma.course.findUnique({ where: { slug: req.params.slug }, select: { id: true, modules: { select: { order: true } } } });
   if (!course) return res.status(404).json({ error: 'Course not found' });
@@ -600,6 +608,8 @@ router.post('/:slug/assignment/:moduleOrder', authenticate, requireStudent, bloc
   const moduleOrder = parseInt(req.params.moduleOrder, 10);
   const { content } = req.body || {};
   if (!moduleOrder || !content?.trim()) return res.status(400).json({ error: 'moduleOrder and content are required' });
+  const student = await ensureStudentMutable(prisma, req.auth.studentId, res);
+  if (!student) return;
 
   const course = await prisma.course.findUnique({
     where: { slug: req.params.slug },
@@ -636,6 +646,8 @@ router.post('/:slug/assignment/:moduleOrder', authenticate, requireStudent, bloc
 router.post('/:slug/exam', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
   const { examType = 'final' } = req.body || {};
   if (examType !== 'midterm' && examType !== 'final') return res.status(400).json({ error: 'examType must be midterm or final' });
+  const student = await ensureStudentMutable(prisma, req.auth.studentId, res);
+  if (!student) return;
 
   const course = await prisma.course.findUnique({
     where: { slug: req.params.slug },
@@ -704,6 +716,8 @@ router.post('/:slug/exam', authenticate, requireStudent, blockIfSoftLocked, asyn
 router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
   const { answers } = req.body || {};
   if (!answers || typeof answers !== 'object') return res.status(400).json({ error: 'answers object required' });
+  const student = await ensureStudentMutable(prisma, req.auth.studentId, res);
+  if (!student) return;
 
   const course = await prisma.course.findUnique({ where: { slug: req.params.slug }, select: { id: true } });
   if (!course) return res.status(404).json({ error: 'Course not found' });
@@ -781,6 +795,8 @@ router.patch('/admin/:enrollmentId/assignment/:moduleOrder/feedback', authentica
   if (!Number.isFinite(parsedScore) || parsedScore < 0 || parsedScore > 100) {
     return res.status(400).json({ error: 'score must be between 0 and 100' });
   }
+  const mutableEnrollment = await ensureEnrollmentStudentMutable(prisma, req.params.enrollmentId, res);
+  if (!mutableEnrollment) return;
 
   const submission = await prisma.assignmentSubmission.findFirst({
     where: { enrollmentId: req.params.enrollmentId, moduleOrder },

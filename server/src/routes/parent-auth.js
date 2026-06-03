@@ -6,6 +6,7 @@ const { PrismaClient } = require('@prisma/client');
 const { sendPasswordResetEmail } = require('../lib/mailer');
 const { DEFAULT_PARENT_PASSWORD, parentLoginEmailForStudentEmail } = require('../lib/parentCredentials');
 const { createLoginSession, closeLoginSession } = require('../lib/sessionTracker');
+const { isArchivedGraduationDate, sendArchivedResponse } = require('../lib/studentArchive');
 
 const prisma = new PrismaClient();
 const router = express.Router();
@@ -163,6 +164,9 @@ router.post('/setup', async (req, res) => {
     include: { account: { select: { email: true } } },
   });
   if (!student) return res.status(404).json({ error: 'Student not found' });
+  if (isArchivedGraduationDate(student.graduationDate)) {
+    return sendArchivedResponse(res, student.graduationDate);
+  }
 
   const email = requestedEmail || parentLoginEmailForStudentEmail(student.account?.email);
   const password = requestedPassword || DEFAULT_PARENT_PASSWORD;
