@@ -529,10 +529,28 @@ def lesson_complete_or_uploaded(course: dict[str, Any], module: dict[str, Any], 
         if ready:
             return True
 
+    course_name = str(course.get("name") or "").strip().lower()
+    order = int(module.get("order") or 0)
+    module_prefix = f"module {order}:"
+    for existing in sorted(TEACHING_ROOT.iterdir()):
+        if existing == folder or not existing.is_dir() or existing.name.startswith("_"):
+            continue
+        existing_script = read_json(existing / "script.json", {})
+        if not existing_script:
+            continue
+        existing_course = str(existing_script.get("course") or "").strip().lower()
+        existing_module = str(existing_script.get("module") or "").strip().lower()
+        if existing_course != course_name or not existing_module.startswith(module_prefix):
+            continue
+        if (existing_script.get("youtube") or {}).get("video_id"):
+            return True
+        ready, _, _ = gate_ready(existing)
+        if ready:
+            return True
+
     manifest = read_json(ROOT / "public" / "data" / "lessons-manifest.json", {})
     lessons = manifest.get("lessons") or [row for rows in (manifest.get("by_course") or {}).values() for row in rows]
     course_slug = str(course.get("slug"))
-    order = int(module.get("order") or 0)
     return any(
         row.get("course_slug") == course_slug and int(row.get("module_number") or 0) == order
         for row in lessons
