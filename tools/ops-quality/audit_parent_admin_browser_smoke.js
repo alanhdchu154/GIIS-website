@@ -12,7 +12,7 @@ const ROUTES = [
   {
     name: 'parent dashboard',
     path: '/parent/dashboard',
-    expected: ["Alex's progress", 'Weekly Insights', 'Assessment Evidence', 'Recent Activity'],
+    expected: ["Alex's progress", 'Weekly Insights', 'Start Here', 'Assessment Evidence', 'Recent Activity'],
     endpointCaps: { '/api/parent/me': 2 },
   },
   {
@@ -24,8 +24,12 @@ const ROUTES = [
   {
     name: 'admin applications',
     path: '/admin/applications',
-    expected: ['Applications', 'Alex Rivera', 'Accounts'],
+    expected: ['Applications', 'Alex Rivera', 'Transfer Path Review', 'Within 1 school year', 'Accounts'],
     endpointCaps: { '/api/applications': 2 },
+    afterLoad: async (page) => {
+      await page.getByRole('button', { name: /^View$/ }).first().click();
+      await page.getByText('Transfer Path Review').waitFor({ state: 'visible', timeout: 5000 });
+    },
   },
   {
     name: 'admin assignments',
@@ -61,10 +65,10 @@ function parentPayload() {
     weeklyInsights: {
       activeDays: 4,
       estimatedStudyHours: 6.5,
-      modulesCompleted: 2,
-      videoActivities: 3,
-      quizAttempts: 2,
-      assignmentSubmissions: 1,
+      modulesCompleted: 0,
+      videoActivities: 1,
+      quizAttempts: 0,
+      assignmentSubmissions: 0,
     },
     advisor: { name: 'GIIS Advisor', nextCheckInDueAt: '2026-06-09T15:00:00.000Z' },
     advisorNotes: [{
@@ -80,24 +84,24 @@ function parentPayload() {
         name: 'English I',
         nameZh: '英语一',
         department: 'English',
-        completedModules: 2,
+        completedModules: 0,
         totalModules: 14,
         creditEarned: false,
         pacing: { status: 'on_track', label: 'On Track', deltaModules: 0 },
         assessment: {
-          quizzesSubmitted: 2,
-          assignmentsSubmitted: 1,
-          assignmentsReviewed: 1,
+          quizzesSubmitted: 0,
+          assignmentsSubmitted: 0,
+          assignmentsReviewed: 0,
           midterm: null,
           final: null,
         },
         weeklyInsights: {
-          activeDays: 4,
-          modulesCompleted: 2,
-          estimatedStudyHours: 6.5,
-          videoActivities: 3,
-          quizAttempts: 2,
-          assignmentSubmissions: 1,
+          activeDays: 1,
+          modulesCompleted: 0,
+          estimatedStudyHours: 0,
+          videoActivities: 1,
+          quizAttempts: 0,
+          assignmentSubmissions: 0,
         },
         assignments: [{
           moduleOrder: 1,
@@ -112,8 +116,7 @@ function parentPayload() {
       },
     ],
     recentActivity: [
-      { type: 'quiz', course: 'English I', moduleOrder: 2, score: 88, at: '2026-06-03T15:00:00.000Z' },
-      { type: 'assignment_feedback', course: 'English I', moduleOrder: 1, score: 92, feedback: 'Strong evidence and clear reflection.', at: '2026-06-02T15:00:00.000Z' },
+      { type: 'video', course: 'English I', moduleOrder: 1, at: '2026-06-03T15:00:00.000Z' },
     ],
   };
 }
@@ -164,7 +167,7 @@ function applicationsPayload() {
     parentName: 'Jordan Rivera',
     parentEmail: 'jordan@example.com',
     phone: '555-0100',
-    notes: 'Interested in transfer-credit review.',
+    notes: 'Transfer Path Review: credits=12-17; graduationTiming=1-year; transcriptAvailable=partial; concern=credits; Family Notes: Interested in transfer-credit review.',
     adminNotes: 'Needs transcript follow-up.',
     status: 'approved',
     accountsCreated: true,

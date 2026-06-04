@@ -1,7 +1,7 @@
 # Parent/Admin Browser Smoke QA
 
-Generated: 2026-06-04T04:51:02.043Z
-Base URL: http://localhost:3032
+Generated: 2026-06-04T17:30:31.182Z
+Base URL: http://localhost:3000
 
 Summary: 8 pass / 0 fail (8 route checks)
 

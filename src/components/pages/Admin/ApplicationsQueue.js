@@ -30,6 +30,98 @@ const REJECTION_REASONS = [
   { value: 'other',           label: 'Other',                      detail: '' },
 ];
 
+const TRANSFER_NOTE_LABELS = {
+  credits: {
+    '0-5': '0–5 credits',
+    '6-11': '6–11 credits',
+    '12-17': '12–17 credits',
+    '18-23': '18–23 credits',
+    '24+': '24+ credits',
+    'not provided': 'Not provided',
+  },
+  graduationTiming: {
+    asap: 'As soon as realistically possible',
+    '1-year': 'Within 1 school year',
+    '2-years': 'Within 2 school years',
+    'not-sure': 'Not sure yet',
+    'not provided': 'Not provided',
+  },
+  transcriptAvailable: {
+    yes: 'Transcript available',
+    partial: 'Partial records only',
+    'not-yet': 'Not yet',
+    'not provided': 'Not provided',
+  },
+  concern: {
+    credits: 'Will credits transfer?',
+    graduation: 'Can my child graduate on time?',
+    records: 'Will the school record be accepted?',
+    motivation: 'Will my child stay on track?',
+    'not provided': 'Not provided',
+  },
+};
+
+function labelTransferValue(field, value) {
+  const clean = String(value || 'not provided').trim();
+  return TRANSFER_NOTE_LABELS[field]?.[clean] || clean || 'Not provided';
+}
+
+function parseTransferReviewNotes(notes = '') {
+  const match = String(notes).match(
+    /^Transfer Path Review:\s*credits=(.*?);\s*graduationTiming=(.*?);\s*transcriptAvailable=(.*?);\s*concern=(.*?);\s*Family Notes:\s*(.*)$/s
+  );
+  if (!match) return null;
+  return {
+    credits: match[1].trim(),
+    graduationTiming: match[2].trim(),
+    transcriptAvailable: match[3].trim(),
+    concern: match[4].trim(),
+    familyNotes: match[5].trim(),
+  };
+}
+
+function TransferReviewPanel({ notes }) {
+  const review = parseTransferReviewNotes(notes);
+  if (!review) {
+    if (!notes) return null;
+    return (
+      <div style={{ background: '#f8f9fc', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: '#1a1d24', marginBottom: 14 }}>
+        <strong>Applicant notes:</strong> {notes}
+      </div>
+    );
+  }
+
+  const fields = [
+    ['Previous Credits', labelTransferValue('credits', review.credits)],
+    ['Graduation Timing', labelTransferValue('graduationTiming', review.graduationTiming)],
+    ['Transcript', labelTransferValue('transcriptAvailable', review.transcriptAvailable)],
+    ['Main Concern', labelTransferValue('concern', review.concern)],
+  ];
+
+  return (
+    <div style={{ background: '#f8fbff', border: '1px solid #cfe0f8', borderRadius: 10, padding: '13px 14px', marginBottom: 14 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 10, marginBottom: 10, flexWrap: 'wrap' }}>
+        <p style={{ margin: 0, fontSize: 11, fontWeight: 900, color: '#2b3d6d', letterSpacing: '1px', textTransform: 'uppercase' }}>Transfer Path Review</p>
+        <span style={{ fontSize: 11, color: '#5c6578' }}>Use this before approve / activate</span>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 10 }}>
+        {fields.map(([label, value]) => (
+          <div key={label} style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
+            <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 3px' }}>{label}</p>
+            <p style={{ fontSize: 12.5, color: '#1a1d24', margin: 0, lineHeight: 1.35 }}>{value}</p>
+          </div>
+        ))}
+      </div>
+      {review.familyNotes && review.familyNotes !== 'none' && (
+        <div style={{ marginTop: 10, background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
+          <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 3px' }}>Family Notes</p>
+          <p style={{ fontSize: 12.5, color: '#1a1d24', margin: 0, lineHeight: 1.45 }}>{review.familyNotes}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function rejectionEmailText(app, reason) {
   const detail = REJECTION_REASONS.find(r => r.value === reason)?.detail || '';
   return `Subject: Your GIIS Application — Update
@@ -258,11 +350,7 @@ export default function ApplicationsQueue() {
                           ))}
                         </div>
 
-                        {app.notes && (
-                          <div style={{ background: '#f8f9fc', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: '#1a1d24', marginBottom: 14 }}>
-                            <strong>Applicant notes:</strong> {app.notes}
-                          </div>
-                        )}
+                        <TransferReviewPanel notes={app.notes} />
 
                         {/* Rejection reason (if rejected) */}
                         {app.status === 'rejected' && app.rejectionReason && (

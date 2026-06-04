@@ -120,6 +120,60 @@ function WeeklyInsightsCard({ insights, isEn }) {
   );
 }
 
+function FirstWeekEvidenceCard({ isEn, subscription }) {
+  const isGuided = /guided|premium/i.test(subscription?.planType || '');
+  const items = [
+    {
+      title: isEn ? 'Today: start the next module' : '今天：开始下一个模块',
+      detail: isEn
+        ? 'The portal records module, reading, video, practice, quiz, and assignment signals as the student works.'
+        : '学生学习时，系统会记录模块、阅读、视频、练习、测验与作业信号。',
+    },
+    {
+      title: isEn ? 'This week: submit written work' : '本周：提交书面作业',
+      detail: isEn
+        ? 'Written assignments create the clearest evidence for parents because feedback appears here after review.'
+        : '书面作业是家长最容易看懂的学习证据，批改后反馈会显示在这里。',
+    },
+    {
+      title: isEn ? 'After review: parent-visible feedback' : '批改后：家长可见反馈',
+      detail: isEn
+        ? 'Scores, teacher comments, pacing, and official record links stay attached to this dashboard.'
+        : '分数、教师评语、进度与正式文件入口都会留在这个面板里。',
+    },
+  ];
+  return (
+    <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12, marginBottom: 12, flexWrap: 'wrap' }}>
+        <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: 0 }}>
+          {isEn ? 'Start Here · Week 1' : '从这里开始 · 第一周'}
+        </p>
+        <span style={{ fontSize: 11, fontWeight: 800, color: '#1b6b3a', background: '#e8f5e9', borderRadius: 999, padding: '4px 9px' }}>
+          {isGuided ? (isEn ? 'Advisor-supported' : '顾问支持') : (isEn ? 'Evidence plan' : '证据计划')}
+        </span>
+      </div>
+      <div style={{ display: 'grid', gap: 10 }}>
+        {items.map((item, index) => (
+          <div key={item.title} style={{ display: 'grid', gridTemplateColumns: '30px minmax(0, 1fr)', gap: 10, alignItems: 'flex-start' }}>
+            <div style={{ width: 30, height: 30, borderRadius: '50%', background: '#f0f4ff', color: '#2b3d6d', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 900 }}>
+              {index + 1}
+            </div>
+            <div>
+              <p style={{ margin: '0 0 2px', fontSize: 13, fontWeight: 850, color: '#1a1d24' }}>{item.title}</p>
+              <p style={{ margin: 0, fontSize: 12, color: '#5c6578', lineHeight: 1.5 }}>{item.detail}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p style={{ margin: '12px 0 0', fontSize: 11.5, color: '#7a8495', lineHeight: 1.5 }}>
+        {isEn
+          ? 'Early accounts may look quiet at first; GIIS treats recorded work, reviewed assignments, and official records as the evidence trail parents can rely on.'
+          : '新账号一开始可能记录较少；GIIS 会以系统记录、已批改作业与正式文件作为家长可以追踪的学习证据。'}
+      </p>
+    </div>
+  );
+}
+
 function CourseBar({ enr, isEn }) {
   const color = DEPT_COLORS[enr.department] || '#2b3d6d';
   const pct = (enr.totalModules ?? 0) > 0 ? Math.round((enr.completedModules / enr.totalModules) * 100) : 0;
@@ -522,6 +576,8 @@ export default function ParentDashboard({ language }) {
               </div>
 
               <WeeklyInsightsCard insights={weeklyInsights} isEn={isEn} />
+
+              {hasLimitedEvidence && <FirstWeekEvidenceCard isEn={isEn} subscription={subscription} />}
 
               {/* Active courses */}
               <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
