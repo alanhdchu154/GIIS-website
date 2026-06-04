@@ -206,6 +206,45 @@
         "quality_score": 100
       },
       "attempts": 1
+    },
+    "english-i:M6": {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_order": 6,
+      "module_title": "Descriptive Writing",
+      "target_slug": "english-i-module-6-descriptive-writing-v2",
+      "status": "approved",
+      "updated_at": "2026-06-04T12:14:40Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "english-i:M7": {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_order": 7,
+      "module_title": "Short Story Analysis",
+      "target_slug": "english-i-module-7-short-story-analysis-v2",
+      "status": "approved",
+      "updated_at": "2026-06-04T12:28:12Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "english-i:M8": {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_order": 8,
+      "module_title": "Poetry: Forms & Interpretation",
+      "target_slug": "english-i-module-8-poetry-forms-interpretation-v2",
+      "status": "approved",
+      "updated_at": "2026-06-04T12:38:45Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T12:29:33Z",
+  "generated_at": "2026-06-04T12:38:45Z",
   "policy": "foundation_daily_auto_approval_clean_pass_score_100",
   "approved_ready_to_upload": [
     {
@@ -188,6 +188,39 @@
       "verdict": "pass",
       "approved_by": "foundation_daily_orchestrator",
       "approved_at": "2026-06-03T12:29:33Z"
+    },
+    {
+      "slug": "english-i-module-6-descriptive-writing-v2",
+      "path": "teaching-videos/english-i-module-6-descriptive-writing-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 6: Descriptive Writing",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-04T12:14:40Z"
+    },
+    {
+      "slug": "english-i-module-7-short-story-analysis-v2",
+      "path": "teaching-videos/english-i-module-7-short-story-analysis-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 7: Short Story Analysis",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-04T12:28:12Z"
+    },
+    {
+      "slug": "english-i-module-8-poetry-forms-interpretation-v2",
+      "path": "teaching-videos/english-i-module-8-poetry-forms-interpretation-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 8: Poetry: Forms & Interpretation",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-04T12:38:45Z"
     }
   ]
 }
