@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-05-31
+Last updated: 2026-06-04
 
 This file is the current GIIS worker handoff, not a historical worklog. Older
 completed items were removed from the active board; use `ROADMAP.md` for the
@@ -12,7 +12,7 @@ project lane. Use git history only when old evidence is explicitly needed.
 
 - owner: Umi / Codex
 - mode: Split-work with Claude Code
-- schedule: Codex automation `giis-foundation-video-daily`, daily 23:00 CT
+- schedule: Codex automation `giis-foundation-video-daily`, daily 07:00 CT
 - runner: `bash tools/lesson-video/foundation_daily.sh`
 - scope: non-AP foundation modules only
 
@@ -28,6 +28,15 @@ Acceptance:
 - `approved_ready_to_upload.json` contains only clean approved lessons.
 - YouTube upload uses `yt_queue.py upload --gate-ready`.
 - Learn Portal manifest sync has no module-title mismatch.
+
+Current Umi note:
+
+- This handoff is intentionally narrow: monitor and repair the 07:00 CT
+  foundation run. Broader parent/admin stability and course-quality priorities
+  belong in `ROADMAP.md`.
+- If this file ever disagrees with `/Users/alanhdchu/umi-central/goals.md` on
+  schedule or priority, treat central goals as the escalation source and stop
+  before running the wrong automation.
 
 Stop conditions:
 

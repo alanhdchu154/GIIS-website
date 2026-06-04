@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-02
+Last updated: 2026-06-04
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -8,8 +8,10 @@ of a long completed-task scroll.
 
 ## Current Priority
 
-Keep the school trustworthy and operational while the foundation-video pipeline
-stabilizes.
+Keep the school trustworthy, operational, and parent-visible while the
+foundation-video pipeline stabilizes. The next phase is proof over volume:
+parents should see a serious school, a working dashboard, and course/video
+quality that feels intentionally designed.
 
 ## Active Lanes
 
@@ -32,6 +34,9 @@ Next check:
 
 - After each 07:00 run, review selected modules, cc progress, gate result,
   upload result, website manifest sync, and any `cc_blocked` report.
+- Monitor two consecutive 07:00 CT runs before expanding beyond the current
+  foundation cohort. Do not increase volume until cc output, release gate,
+  YouTube upload, and Learn Portal manifest sync all pass without manual rescue.
 
 ### 2. Course And Resource Quality
 
@@ -58,7 +63,7 @@ Current evidence:
 - `node tools/pathway-quality/audit_all_course_showcase_readiness.js --check-urls --check-youtube --report _audit/all-course-showcase-readiness.md`:
   93 pass / 0 warn / 0 fail; 1,398 non-YouTube resource URLs checked / 0 bad;
   282 YouTube oEmbed checks / 0 bad.
-- `npm run audit:showcase-browser -- --all-modules --base-url http://127.0.0.1:3000 --report _audit/all-course-browser-smoke-all-modules.md`:
+- `npm run audit:showcase-browser -- --base-url http://localhost:3030 --all-modules --report _audit/all-course-browser-smoke.md --json-report _audit/all-course-browser-smoke.json`:
   2,358 pass / 0 fail across all 93 courses, checking course overview,
   syllabus, and every module route on desktop and mobile.
 - `node tools/pathway-quality/audit_proofpoint_courses.js --check-urls --report _audit/proofpoint-course-qa.md`:
@@ -115,7 +120,30 @@ Next check:
   and do a small live YouTube playback spot-check immediately before any demo
   that depends on external YouTube navigation.
 
-### 3. Parent Trust / Admissions / Student Care
+### 3. Admin / Parent Runtime Stability
+
+Status: active watch.
+
+- Parent dashboard and admin queues are trust-critical runtime surfaces. A
+  broken parent dashboard damages transparency even if course data is correct.
+- Recent stability work fixed unstable session getter / repeated fetch patterns
+  in parent and admin surfaces. Keep this as an explicit lane so regressions do
+  not hide as one-off bugs.
+- Production backend deployment and verification remain separate from frontend
+  deploys. Do not claim graduated-student record freeze or admin workflow locks
+  are live until backend deploy and production smoke evidence exist.
+
+Next check:
+
+- Add a small regression guard for unstable session getter usage and repeated
+  fetch loops.
+- Add a focused browser smoke for `/parent/dashboard`, `/admin`,
+  `/admin/applications`, and `/admin/assignments` before the next parent-facing
+  production push.
+- Verify the backend deploy path for graduated-student archive/freeze behavior
+  before treating that policy as enforced in production.
+
+### 4. Parent Trust / Admissions / Student Care
 
 Status: maintain.
 
@@ -134,6 +162,10 @@ Next check:
 ## Paused / Closed
 
 - Old AP-era batch video generation is paused.
+- Old AP Biology / AP Calculus audit snapshots, AP-label cascade artifacts,
+  old AP/batch lesson quality snapshots, and the duplicate all-module browser
+  smoke report were removed from active repo state on 2026-06-04. Use git
+  history only if that historical evidence is explicitly needed.
 - Old macOS GIIS lesson LaunchAgents are removed:
   - `com.giis.lesson-build`
   - `com.giis.youtube-daily`
