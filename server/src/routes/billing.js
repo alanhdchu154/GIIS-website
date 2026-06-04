@@ -19,6 +19,22 @@ function extractParentAuth(req) {
   } catch { return null; }
 }
 
+function normalizedEmail(value) {
+  return value ? String(value).trim().toLowerCase() : '';
+}
+
+async function parentSubscriptionWhere(auth) {
+  const student = await prisma.student.findUnique({
+    where: { id: auth.studentId },
+    select: { parentEmail: true },
+  });
+  const emails = [...new Set([auth.email, student?.parentEmail].map(normalizedEmail).filter(Boolean))];
+  const or = [];
+  if (auth.studentId) or.push({ studentId: auth.studentId });
+  if (emails.length) or.push({ purchaserEmail: { in: emails } });
+  return or.length ? { OR: or } : {};
+}
+
 /**
  * POST /api/billing/portal
  * Authenticated: parent JWT required.
@@ -34,7 +50,10 @@ router.post('/portal', async (req, res) => {
   if (!auth) return res.status(401).json({ error: 'Not authenticated.' });
 
   const sub = await prisma.subscription.findFirst({
-    where: { purchaserEmail: auth.email, status: { in: ['active', 'past_due'] } },
+    where: {
+      ...(await parentSubscriptionWhere(auth)),
+      status: { in: ['active', 'past_due', 'trialing'] },
+    },
     orderBy: { createdAt: 'desc' },
   });
 

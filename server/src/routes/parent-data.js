@@ -179,6 +179,18 @@ function computeStudentWeeklyInsights(enrollments, now = new Date()) {
   };
 }
 
+function parentSubscriptionLookup({ auth, student }) {
+  const emails = [auth?.email, student?.parentEmail]
+    .filter(Boolean)
+    .map((email) => String(email).trim().toLowerCase())
+    .filter(Boolean);
+  const uniqueEmails = [...new Set(emails)];
+  const or = [];
+  if (auth?.studentId) or.push({ studentId: auth.studentId });
+  if (uniqueEmails.length) or.push({ purchaserEmail: { in: uniqueEmails } });
+  return or.length ? { OR: or } : {};
+}
+
 // GET /api/parent/me
 // Returns logged-in parent's linked student data: profile, enrollments, recent activity, GPA, credits.
 router.get('/me', async (req, res) => {
@@ -262,9 +274,12 @@ router.get('/me', async (req, res) => {
   }
   events.sort((a, b) => new Date(b.at) - new Date(a.at));
 
-  // Check subscription status by parent email
+  // Check subscription status by linked student first, then parent/contact emails.
   const activeSub = await prisma.subscription.findFirst({
-    where: { purchaserEmail: auth.email, status: { in: ['active', 'trialing'] } },
+    where: {
+      ...parentSubscriptionLookup({ auth, student }),
+      status: { in: ['active', 'trialing'] },
+    },
     orderBy: { createdAt: 'desc' },
     select: { status: true, planType: true, currentPeriodEnd: true, cancelAtPeriodEnd: true },
   });

@@ -5,8 +5,8 @@ const PILLARS = [
     icon: '🎓',
     titleEn: 'US High School Diploma',
     titleZh: '美国高中文凭',
-    bodyEn: 'GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the same standard recognized by US colleges for international student admissions.',
-    bodyZh: 'GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭，与美国私立高中标准一致，获美国大学国际生招生认可。',
+    bodyEn: 'GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework, with official records organized for admissions review.',
+    bodyZh: 'GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭，并以适合大学申请审核的方式整理正式记录。',
   },
   {
     icon: '🤖',

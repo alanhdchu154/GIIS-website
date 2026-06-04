@@ -280,6 +280,7 @@ export default function AdminDashboard({ language }) {
                         const r = await fetch(`${API_BASE}/api/checkout/create-session`, {
                           method: 'POST',
                           headers: { 'Content-Type': 'application/json' },
+                          credentials: 'include',
                           body: JSON.stringify({ planType: 'live_test' }),
                         });
                         const d = await r.json();

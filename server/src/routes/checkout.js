@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Stripe = require('stripe');
+const jwt = require('jsonwebtoken');
 const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
@@ -67,6 +68,19 @@ const LEGACY_ALIASES = {
   founders_monthly: 'self_paced_monthly',
 };
 
+function extractAdminAuth(req) {
+  const cookieToken = req.cookies?.giis_jwt;
+  const header = req.headers.authorization || '';
+  const token = cookieToken || (header.startsWith('Bearer ') ? header.slice(7) : null);
+  if (!token) return null;
+  try {
+    const payload = jwt.verify(token, process.env.JWT_SECRET);
+    return payload.role === 'admin' || payload.adminId ? payload : null;
+  } catch {
+    return null;
+  }
+}
+
 /**
  * POST /api/checkout/create-session
  * Body: { planType: string, email?: string }
@@ -83,6 +97,9 @@ router.post('/create-session', async (req, res) => {
   const tier = PRICE_TIERS[planType];
   if (!tier) {
     return res.status(400).json({ error: `Unknown planType: ${planType}` });
+  }
+  if (tier.public === false && !extractAdminAuth(req)) {
+    return res.status(403).json({ error: `"${planType}" is an internal plan and requires admin access.` });
   }
   if (!tier.priceId) {
     return res.status(500).json({

@@ -900,8 +900,8 @@ function RequirementBar({ language }) {
       </h3>
       <p style={{ fontSize: '13px', color: '#666', marginBottom: '16px' }}>
         {isEn
-          ? 'GIIS follows the Florida 24-credit graduation framework, the standard for Florida-registered private high schools issuing diplomas recognized by US colleges and universities.'
-          : 'GIIS 遵循 Florida 24 学分毕业框架，此为 Florida 注册私立高中颁发文凭的标准学制，被美国各大学认可。'}
+          ? 'GIIS follows the Florida 24-credit graduation framework used by Florida-registered private high schools, with diploma and transcript records organized for admissions review.'
+          : 'GIIS 遵循 Florida 注册私立高中使用的 24 学分毕业框架，并以适合大学申请审核的方式整理文凭与成绩单记录。'}
       </p>
       <p style={{ fontSize: '12px', color: '#7a3b3b', margin: '-6px 0 16px', lineHeight: 1.6 }}>
         {isEn

@@ -453,7 +453,7 @@ export default function ApplicationsQueue() {
             </div>
 
             <div style={{ background: '#f8f9fc', borderRadius: 8, padding: '10px 14px', fontSize: 12, color: '#5c6578', marginBottom: 20, lineHeight: 1.6 }}>
-              A rejection email template will be ready to copy after confirming.
+              Confirming only marks the application rejected. No rejection email is sent automatically; use the copy button after review.
             </div>
 
             <div style={{ display: 'flex', gap: 10 }}>
@@ -475,7 +475,7 @@ export default function ApplicationsQueue() {
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.55)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10000, fontFamily: 'Inter, sans-serif', padding: 24 }}>
           <div style={{ background: '#fff', borderRadius: 16, padding: '32px 36px', maxWidth: 540, width: '100%', boxShadow: '0 24px 64px rgba(0,0,0,0.25)' }}>
             <p style={{ fontSize: 11, fontWeight: 700, color: '#2e7d32', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 8px' }}>✓ Accounts Created</p>
-            <h2 style={{ fontSize: 22, fontWeight: 800, margin: '0 0 20px' }}>Send these credentials to the parent</h2>
+            <h2 style={{ fontSize: 22, fontWeight: 800, margin: '0 0 20px' }}>Account credentials created</h2>
 
             <div style={{ background: '#f4f6fa', borderRadius: 10, padding: '14px 18px', marginBottom: 16, fontSize: 13, lineHeight: 2 }}>
               <div><strong>Student Code:</strong> {credentials.studentCode}</div>
@@ -489,7 +489,7 @@ export default function ApplicationsQueue() {
             </div>
 
             <div style={{ background: '#fffde7', border: '1px solid #f9a825', borderRadius: 8, padding: '10px 14px', fontSize: 12, color: '#5c4f00', marginBottom: 16 }}>
-              The parent logs in, then completes payment to activate their account.
+              A welcome email is sent automatically when email delivery is configured. Use the fallback copy only if the email log shows skipped or failed delivery.
             </div>
 
             <div style={{ background: '#f4f6fa', borderRadius: 8, padding: '12px 16px', fontFamily: 'monospace', fontSize: 12, whiteSpace: 'pre-wrap', marginBottom: 16, color: '#1a1d24', lineHeight: 1.7 }}>
@@ -515,7 +515,7 @@ Welcome to GIIS!
               <button
                 onClick={() => copyToClipboard(`Subject: Your GIIS account is ready — next step\n\nHi ${(credentials.parentContactEmail || credentials.parentEmail) ? (credentials.parentContactEmail || credentials.parentEmail).split('@')[0] : ''},\n\nYour child's GIIS account has been created. Please log in to complete enrollment:\n\nLogin: ${credentials.loginUrl}\nParent Portal email: ${credentials.parentLoginEmail || credentials.parentEmail}\nParent temp password: ${credentials.parentPassword || credentials.tempPassword}\nStudent Portal email: ${credentials.studentEmail || ''}\nStudent temp password: ${credentials.studentPassword || ''}\n\nAfter logging in, you'll see a button to complete payment and activate full access.\n\nWelcome to GIIS!\n— The GIIS Team`)}
                 style={{ flex: 1, padding: '11px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
-                📋 Copy welcome email
+                📋 Copy fallback welcome email
               </button>
               <button onClick={() => setCredentials(null)}
                 style={{ padding: '11px 20px', borderRadius: 8, background: 'none', border: '1.5px solid #d4d8e0', color: '#5c6578', fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>

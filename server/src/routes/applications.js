@@ -3,10 +3,8 @@ const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const { authenticate, requireAdmin } = require('../middleware/auth');
-const { sendNewApplicationAlert, sendWelcomeEmail, sendRejectionEmail } = require('../lib/mailer');
+const { sendNewApplicationAlert, sendWelcomeEmail } = require('../lib/mailer');
 const {
-  DEFAULT_PARENT_PASSWORD,
-  DEFAULT_STUDENT_PASSWORD,
   parentLoginEmailForStudentEmail,
   studentLoginEmailForName,
 } = require('../lib/parentCredentials');
@@ -37,6 +35,10 @@ async function uniqueStudentLoginEmail(studentName) {
     if (!existing) return email;
   }
   return `${local}.${crypto.randomBytes(2).toString('hex')}@${domain}`;
+}
+
+function tempPassword(prefix) {
+  return `${prefix}-${crypto.randomBytes(9).toString('base64url')}`;
 }
 
 async function applicationEnrollmentState(app) {
@@ -226,16 +228,6 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
     data,
   });
 
-  // Auto-send rejection email when status changes to rejected
-  if (data.status === 'rejected') {
-    sendRejectionEmail({
-      parentEmail: app.parentEmail,
-      parentName: app.parentName,
-      studentName: app.studentName,
-      reason: app.rejectionReason,
-    });
-  }
-
   res.json({ ok: true, id: app.id, status: app.status });
 });
 
@@ -270,8 +262,10 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     return res.status(409).json({ error: `A parent account already exists for ${parentLoginEmail}.` });
   }
 
-  const studentPasswordHash = await bcrypt.hash(DEFAULT_STUDENT_PASSWORD, 12);
-  const parentPasswordHash = await bcrypt.hash(DEFAULT_PARENT_PASSWORD, 12);
+  const studentPassword = tempPassword('Student');
+  const parentPassword = tempPassword('Parent');
+  const studentPasswordHash = await bcrypt.hash(studentPassword, 12);
+  const parentPasswordHash = await bcrypt.hash(parentPassword, 12);
 
   // Create Student + ParentAccount in a transaction
   const student = await prisma.student.create({
@@ -316,13 +310,13 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
   const welcomeResult = await sendWelcomeEmail({
     parentEmail: app.parentEmail,
     studentName: app.studentName,
-    tempPassword: DEFAULT_PARENT_PASSWORD,
+    tempPassword: parentPassword,
     loginUrl,
     studentCode,
     parentLoginEmail,
-    parentPassword: DEFAULT_PARENT_PASSWORD,
+    parentPassword,
     studentLoginEmail,
-    studentPassword: DEFAULT_STUDENT_PASSWORD,
+    studentPassword,
   });
   await recordEmailLog({
     kind: 'welcome_parent_login',
@@ -338,10 +332,10 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     parentContactEmail: app.parentEmail,
     parentEmail: parentLoginEmail,
     parentLoginEmail,
-    parentPassword: DEFAULT_PARENT_PASSWORD,
+    parentPassword,
     studentEmail: studentLoginEmail,
-    studentPassword: DEFAULT_STUDENT_PASSWORD,
-    tempPassword: DEFAULT_PARENT_PASSWORD,
+    studentPassword,
+    tempPassword: parentPassword,
     linkedSubscriptions,
     loginUrl,
   });
