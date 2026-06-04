@@ -91,8 +91,8 @@ function ParentDecisionStrip({ language }) {
       body: isEn
         ? 'Read the school profile, Florida registration language, graduation framework, and official record policies before you apply.'
         : '申请前先查看学校档案、Florida 注册说明、毕业框架与正式学籍记录政策。',
-      to: '/school-profile',
-      cta: isEn ? 'Open school profile' : '查看学校档案',
+      to: '/trust-center',
+      cta: isEn ? 'Open Trust Center' : '打开信任中心',
     },
     {
       title: isEn ? 'Preview parent visibility' : '预览家长能看到什么',

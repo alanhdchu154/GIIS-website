@@ -115,8 +115,8 @@ const PROOF_POINTS = [
       en: 'Review the school profile, Florida private-school registration language, 24-credit framework, transcript policies, and leadership information before choosing a plan.',
       zh: '付款前先查看学校档案、Florida 私立学校注册说明、24 学分框架、成绩单政策与学校负责人信息。',
     },
-    to: '/school-profile',
-    cta: { en: 'Verify school profile', zh: '验证学校档案' },
+    to: '/trust-center',
+    cta: { en: 'Open Trust Center', zh: '打开信任中心' },
     color: '#2b3d6d',
   },
   {
@@ -360,7 +360,7 @@ export default function PricingPage({ language, toggleLanguage }) {
                   <tr key={row.label}>
                     <td style={{ padding: '13px 14px', borderBottom: '1px solid #edf0f6', fontWeight: 700, color: '#333', wordBreak: 'break-word' }}>{row.label}</td>
                     {row.vals.map((value, i) => (
-                      <td key={`${row.label}-${value}`} style={{
+                      <td key={`${row.label}-${i}-${value}`} style={{
                         padding: '13px 14px',
                         borderBottom: '1px solid #edf0f6',
                         textAlign: 'center',

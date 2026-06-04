@@ -2,18 +2,13 @@ import React from 'react';
 
 function FacultyGraduates({ language = 'en' }) {
   const isEn = language !== 'zh';
-
-  const importAll = (r) => {
-    let images = {};
-    r.keys().forEach((item) => { images[item.replace('./', '')] = r(item); });
-    return images;
-  };
-
-  const images = importAll(require.context('../../../../img/Homepage/SchoolLogo', false, /\.(png|jpe?g|svg)$/));
-  const logos = Object.entries(images).map(([key, value]) => ({
-    src: value,
-    alt: key.replace(/\..+$/, ''),
-  }));
+  const outcomes = [
+    'UC Santa Barbara',
+    'The Ohio State University',
+    'UC Davis',
+    'Syracuse University',
+    'New Jersey Institute of Technology',
+  ];
 
   return (
     <section style={{ background: '#fff', padding: '72px 0', borderTop: '1px solid #e8ecf5', fontFamily: 'Inter, sans-serif' }}>
@@ -24,28 +19,29 @@ function FacultyGraduates({ language = 'en' }) {
         <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 800, color: '#1a1a2e', margin: '0 0 8px', lineHeight: 1.1 }}>
           {isEn ? 'College Outcomes Reported by GIIS Families' : 'GIIS 家庭回报的升学成果'}
         </h2>
-        <p style={{ fontSize: '14px', color: '#888', margin: '0 0 40px' }}>
-          {isEn ? 'A snapshot of university offers shared with GIIS by graduating families.' : '毕业家庭向 GIIS 回报的大学录取成果摘要。'}
+        <p style={{ fontSize: '14px', color: '#667085', margin: '0 0 28px', maxWidth: '680px', lineHeight: 1.7 }}>
+          {isEn
+            ? 'Admissions outcomes reported to GIIS by graduating families. GIIS does not guarantee admission results.'
+            : '以下为毕业家庭向 GIIS 回报的升学成果。GIIS 不承诺大学录取结果。'}
         </p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center', justifyContent: 'flex-start' }}>
-          {logos.map((logo, index) => (
-            <div key={index} style={{
-              width: '120px', height: '72px',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              background: '#f8f9fd', border: '1px solid #e8ecf5',
-              borderRadius: '10px', padding: '10px',
-              transition: 'border-color 0.2s, box-shadow 0.2s',
-            }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = '#2b3d6d30'; e.currentTarget.style.boxShadow = '0 2px 10px rgba(43,61,109,0.08)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = '#e8ecf5'; e.currentTarget.style.boxShadow = 'none'; }}
-            >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                style={{ maxWidth: '100px', maxHeight: '52px', objectFit: 'contain', filter: 'grayscale(20%)' }}
-                loading="lazy"
-                decoding="async"
-              />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', alignItems: 'stretch' }}>
+          {outcomes.map((name) => (
+            <div key={name} style={{
+              minHeight: '74px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textAlign: 'center',
+              background: '#f8f9fd',
+              border: '1px solid #e8ecf5',
+              borderRadius: '8px',
+              padding: '14px 16px',
+              color: '#243152',
+              fontSize: '14px',
+              fontWeight: 750,
+              lineHeight: 1.35,
+            }}>
+              {name}
             </div>
           ))}
         </div>

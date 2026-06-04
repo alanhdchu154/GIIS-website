@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-06-04T05:55:18.797Z",
+  "base": "http://localhost:3033",
+  "results": [
+    {
+      "route": "/trust-center",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Trust Center | Genesis of Ideas International School",
+      "h1": "A serious school should be inspectable.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "sensitiveHits": []
+    },
+    {
+      "route": "/",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Home | Genesis of Ideas International School",
+      "h1": "A real US High School Diploma.From anywhere.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [
+        "net::ERR_ABORTED http://localhost:3033/demo/giis-demo.mp4"
+      ],
+      "sensitiveHits": []
+    },
+    {
+      "route": "/pricing",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Tuition & Pricing | Genesis of Ideas International School",
+      "h1": "Choose how much guidance your child needs.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [
+        "net::ERR_ABORTED http://localhost:3033/demo/giis-demo.mp4"
+      ],
+      "sensitiveHits": []
+    },
+    {
+      "route": "/trust-center",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Trust Center | Genesis of Ideas International School",
+      "h1": "A serious school should be inspectable.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "sensitiveHits": []
+    },
+    {
+      "route": "/",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Home | Genesis of Ideas International School",
+      "h1": "A real US High School Diploma.From anywhere.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [
+        "net::ERR_ABORTED http://localhost:3033/demo/giis-demo.mp4"
+      ],
+      "sensitiveHits": []
+    },
+    {
+      "route": "/pricing",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Tuition & Pricing | Genesis of Ideas International School",
+      "h1": "Choose how much guidance your child needs.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [
+        "net::ERR_ABORTED http://localhost:3033/demo/giis-demo.mp4"
+      ],
+      "sensitiveHits": []
+    }
+  ]
+}

@@ -151,6 +151,11 @@ Status: maintain.
 
 - Keep public-facing claims conservative around AP, CEEB, Common App,
   accreditation, school code, and college outcomes.
+- Trust Center added at `/trust-center` on 2026-06-04, with homepage,
+  pricing, and nav entry points routing parents to conservative proof around
+  legal status, records, course transparency, parent visibility, and student
+  outcomes. Browser smoke for `/trust-center`, `/`, and `/pricing` passed on
+  desktop and mobile: `_audit/trust-center-smoke.md`.
 - Student Coordination System Phase 0-3 is implemented locally; production
   deploy should still be treated as a separate deployment decision.
 - Official records policy remains: graduated-student records are frozen unless a
