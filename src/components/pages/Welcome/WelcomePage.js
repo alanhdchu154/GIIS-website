@@ -82,6 +82,63 @@ const FIRST_WEEK = [
   },
 ];
 
+function FirstWeekGrid({ isEn }) {
+  return (
+    <>
+      <h2 style={{
+        fontSize: '22px', fontWeight: 800, color: '#1a1a2e',
+        margin: '34px 0 16px', letterSpacing: '-0.01em',
+      }}>
+        {isEn ? 'Your first week at GIIS' : '加入 GIIS 的第一周'}
+      </h2>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 12 }}>
+        {FIRST_WEEK.map((item) => (
+          <div key={item.title.en} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 8, padding: '15px 16px' }}>
+            <p style={{ margin: '0 0 6px', color: '#2b3d6d', fontSize: 12, fontWeight: 850, letterSpacing: 1.2, textTransform: 'uppercase' }}>
+              {isEn ? item.title.en : item.title.zh}
+            </p>
+            <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.65 }}>
+              {isEn ? item.body.en : item.body.zh}
+            </p>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+function WelcomeLinks({ isEn }) {
+  return (
+    <div style={{
+      marginTop: '36px',
+      display: 'flex', gap: '12px', flexWrap: 'wrap',
+    }}>
+      <Link to="/parent/demo" style={{
+        padding: '12px 24px', borderRadius: '8px',
+        background: '#2b3d6d', color: '#fff',
+        fontWeight: 700, fontSize: '14px', textDecoration: 'none',
+      }}>
+        {isEn ? 'Preview parent dashboard' : '预览家长面板'}
+      </Link>
+      <Link to="/trust-center" style={{
+        padding: '12px 24px', borderRadius: '8px',
+        border: '2px solid #d4d8e0', color: '#2b3d6d',
+        fontWeight: 700, fontSize: '14px', textDecoration: 'none',
+      }}>
+        {isEn ? 'Open Trust Center' : '打开信任中心'}
+      </Link>
+      <Link to="/" style={{
+        padding: '12px 24px', borderRadius: '8px',
+        border: '2px solid #d4d8e0', color: '#2b3d6d',
+        fontWeight: 700, fontSize: '14px', textDecoration: 'none',
+      }}>
+        {isEn ? 'Back to home' : '回首页'}
+      </Link>
+    </div>
+  );
+}
+
 export default function WelcomePage({ language }) {
   const isEn = language !== 'zh';
   const [searchParams] = useSearchParams();
@@ -143,6 +200,8 @@ export default function WelcomePage({ language }) {
           </a>
           {isEn ? ' to confirm.' : ' 确认。'}
         </p>
+        <FirstWeekGrid isEn={isEn} />
+        <WelcomeLinks isEn={isEn} />
       </Shell>
     );
   }
@@ -226,25 +285,7 @@ export default function WelcomePage({ language }) {
         ))}
       </ol>
 
-      <h2 style={{
-        fontSize: '22px', fontWeight: 800, color: '#1a1a2e',
-        margin: '34px 0 16px', letterSpacing: '-0.01em',
-      }}>
-        {isEn ? 'Your first week at GIIS' : '加入 GIIS 的第一周'}
-      </h2>
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 12 }}>
-        {FIRST_WEEK.map((item) => (
-          <div key={item.title.en} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 8, padding: '15px 16px' }}>
-            <p style={{ margin: '0 0 6px', color: '#2b3d6d', fontSize: 12, fontWeight: 850, letterSpacing: 1.2, textTransform: 'uppercase' }}>
-              {isEn ? item.title.en : item.title.zh}
-            </p>
-            <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.65 }}>
-              {isEn ? item.body.en : item.body.zh}
-            </p>
-          </div>
-        ))}
-      </div>
+      <FirstWeekGrid isEn={isEn} />
 
       {!knownInDb && (
         <p style={{
@@ -263,32 +304,7 @@ export default function WelcomePage({ language }) {
         </p>
       )}
 
-      <div style={{
-        marginTop: '36px',
-        display: 'flex', gap: '12px', flexWrap: 'wrap',
-      }}>
-        <Link to="/parent/demo" style={{
-          padding: '12px 24px', borderRadius: '8px',
-          background: '#2b3d6d', color: '#fff',
-          fontWeight: 700, fontSize: '14px', textDecoration: 'none',
-        }}>
-          {isEn ? 'Preview parent dashboard' : '预览家长面板'}
-        </Link>
-        <Link to="/trust-center" style={{
-          padding: '12px 24px', borderRadius: '8px',
-          border: '2px solid #d4d8e0', color: '#2b3d6d',
-          fontWeight: 700, fontSize: '14px', textDecoration: 'none',
-        }}>
-          {isEn ? 'Open Trust Center' : '打开信任中心'}
-        </Link>
-        <Link to="/" style={{
-          padding: '12px 24px', borderRadius: '8px',
-          border: '2px solid #d4d8e0', color: '#2b3d6d',
-          fontWeight: 700, fontSize: '14px', textDecoration: 'none',
-        }}>
-          {isEn ? 'Back to home' : '回首页'}
-        </Link>
-      </div>
+      <WelcomeLinks isEn={isEn} />
     </Shell>
   );
 }
