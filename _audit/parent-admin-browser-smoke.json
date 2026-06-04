@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-06-04T04:51:02.043Z",
+  "baseUrl": "http://localhost:3032",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "name": "parent dashboard",
+      "path": "/parent/dashboard",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/parent/me": 2
+      }
+    },
+    {
+      "name": "admin dashboard",
+      "path": "/admin",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/students/ops-summary": 2
+      }
+    },
+    {
+      "name": "admin applications",
+      "path": "/admin/applications",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/applications": 2
+      }
+    },
+    {
+      "name": "admin assignments",
+      "path": "/admin/assignments",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/admin/assignments": 2
+      }
+    },
+    {
+      "name": "parent dashboard",
+      "path": "/parent/dashboard",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/parent/me": 2
+      }
+    },
+    {
+      "name": "admin dashboard",
+      "path": "/admin",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/students/ops-summary": 2
+      }
+    },
+    {
+      "name": "admin applications",
+      "path": "/admin/applications",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/applications": 2
+      }
+    },
+    {
+      "name": "admin assignments",
+      "path": "/admin/assignments",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/admin/assignments": 2
+      }
+    }
+  ]
+}

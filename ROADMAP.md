@@ -129,17 +129,19 @@ Status: active watch.
 - Recent stability work fixed unstable session getter / repeated fetch patterns
   in parent and admin surfaces. Keep this as an explicit lane so regressions do
   not hide as one-off bugs.
+- `src/api/authStorage.test.js` now locks stable session getter references for
+  admin, parent, and student sessions.
+- `npm run audit:ops-browser` now smokes `/parent/dashboard`, `/admin`,
+  `/admin/applications`, and `/admin/assignments` on desktop and mobile with
+  mocked API responses and repeated-fetch caps. Latest local result:
+  8 pass / 0 fail, saved in `_audit/parent-admin-browser-smoke.md`.
 - Production backend deployment and verification remain separate from frontend
   deploys. Do not claim graduated-student record freeze or admin workflow locks
   are live until backend deploy and production smoke evidence exist.
 
 Next check:
 
-- Add a small regression guard for unstable session getter usage and repeated
-  fetch loops.
-- Add a focused browser smoke for `/parent/dashboard`, `/admin`,
-  `/admin/applications`, and `/admin/assignments` before the next parent-facing
-  production push.
+- Keep `npm run audit:ops-browser` in the parent-facing predeploy checklist.
 - Verify the backend deploy path for graduated-student archive/freeze behavior
   before treating that policy as enforced in production.
 

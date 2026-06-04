@@ -164,7 +164,7 @@ export default function ApplicationsQueue() {
     <>
       <Helmet><title>Applications | GIIS Admin</title></Helmet>
 
-      <div style={{ fontFamily: 'Inter, sans-serif', background: '#f4f6fa', minHeight: '100vh', padding: '24px 28px 80px' }}>
+      <div className="giis-admin-page" style={{ fontFamily: 'Inter, sans-serif', background: '#f4f6fa', minHeight: '100vh', padding: '24px 28px 80px', overflowX: 'hidden' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
 
           {/* Header */}
@@ -178,7 +178,7 @@ export default function ApplicationsQueue() {
           <AdminNav />
 
           {/* Filter tabs */}
-          <div style={{ display: 'flex', gap: 8, marginBottom: 20 }}>
+          <div className="giis-admin-filter-tabs" style={{ display: 'flex', gap: 8, marginBottom: 20 }}>
             {[['pending', 'Pending'], ['approved', 'Approved'], ['rejected', 'Rejected'], ['', 'All']].map(([v, label]) => (
               <button key={v} onClick={() => setFilter(v)} style={{
                 padding: '7px 16px', borderRadius: 999, fontSize: 13, fontWeight: 700,

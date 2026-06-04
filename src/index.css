@@ -46,3 +46,26 @@ code {
   font-family: var(--giis-font-mono);
   font-size: 0.9em;
 }
+
+@media (max-width: 480px) {
+  .giis-admin-page {
+    padding: 18px 14px 64px !important;
+  }
+
+  .giis-admin-nav {
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .giis-admin-nav-group,
+  .giis-admin-filter-tabs {
+    flex-wrap: wrap;
+    min-width: 0;
+    row-gap: 6px;
+  }
+
+  .giis-admin-nav-group .btn,
+  .giis-admin-filter-tabs button {
+    white-space: normal;
+  }
+}

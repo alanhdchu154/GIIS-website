@@ -55,9 +55,9 @@ export function AdminNav({ lang = 'en' }) {
   const current = location?.pathname || '';
   const isActive = (to) => (to === '/admin' ? current === '/admin' : current.startsWith(to));
   return (
-    <nav className="d-flex flex-wrap align-items-center gap-3 mb-3">
+    <nav className="giis-admin-nav d-flex flex-wrap align-items-center gap-3 mb-3">
       {ADMIN_NAV_GROUPS.map((group) => (
-        <div key={group.heading.en} className="d-flex align-items-center gap-1">
+        <div key={group.heading.en} className="giis-admin-nav-group d-flex align-items-center gap-1">
           <span
             className="small text-uppercase fw-bold me-1"
             style={{ color: '#9aa3b8', letterSpacing: 0.6, fontSize: 11 }}

@@ -55,6 +55,7 @@ const pageStyle = {
   background: '#f4f6fa',
   fontFamily: 'Inter, sans-serif',
   padding: '24px 28px 80px',
+  overflowX: 'hidden',
 };
 
 const MENU_ITEM_STYLE = {
@@ -218,7 +219,7 @@ export default function AdminDashboard({ language }) {
   ] : [];
 
   return (
-    <div style={pageStyle}>
+    <div className="giis-admin-page" style={pageStyle}>
       <div style={shellStyle}>
       {/* Header */}
       <div className="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
