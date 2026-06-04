@@ -22,6 +22,7 @@ const AdminAuditTrailPage = lazy(() => import('./components/pages/Admin/AdminAud
 const AdminDocumentsPage = lazy(() => import('./components/pages/Admin/AdminDocumentsPage'));
 const AdminCoursesPage = lazy(() => import('./components/pages/Admin/AdminCoursesPage'));
 const AdminEmailLogsPage = lazy(() => import('./components/pages/Admin/AdminEmailLogsPage'));
+const AdminCalendarPage = lazy(() => import('./components/pages/Admin/AdminCalendarPage'));
 const CalendarPage = lazy(() => import('./components/pages/Calendar/CalendarPage'));
 const DiplomaPage = lazy(() => import('./components/pages/Diploma/DiplomaPage'));
 const SchoolProfilePage = lazy(() => import('./components/pages/SchoolProfile/SchoolProfilePage'));
@@ -138,6 +139,7 @@ function App() {
          <Route path="/admin/documents" element={<AdminDocumentsPage />} />
          <Route path="/admin/courses" element={<AdminCoursesPage />} />
          <Route path="/admin/email-logs" element={<AdminEmailLogsPage />} />
+         <Route path="/admin/calendar" element={<AdminCalendarPage />} />
         <Route path="/admin/students/:studentId/audit-trail" element={<AdminAuditTrailPage />} />
          <Route path="/calendar" element={<CalendarPage language={language} />} />
          {/* Pathways hub */}

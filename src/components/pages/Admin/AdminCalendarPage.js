@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import { getAdminSession } from '../../../api/authStorage';
+import { AdminNav } from './AdminChrome';
 import { ACADEMIC_YEARS, getCurrentAcademicYear } from '../../../config/schoolCalendar';
 
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -126,8 +126,9 @@ export default function AdminCalendarPage() {
             <p style={{ fontSize: '11px', fontWeight: 700, color: '#1a2d5a', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 4px' }}>Admin</p>
             <h1 style={{ fontSize: '24px', fontWeight: 800, color: '#1a1a2e', margin: 0 }}>Academic Calendar</h1>
           </div>
-          <Link to="/admin" style={{ fontSize: '13px', color: '#1a2d5a', textDecoration: 'none', fontWeight: 600 }}>← Back to Students</Link>
         </div>
+
+        <AdminNav />
 
         <div style={{ background: '#e8edf7', borderRadius: '8px', padding: '10px 16px', marginBottom: '24px', fontSize: '12px', color: '#444', lineHeight: 1.6 }}>
           <strong>Online async school</strong> — Portal is open 24/7. "Recess" periods are admin-only pauses (no new exams scheduled). Grades released = visible to students &amp; parents in the portal.
