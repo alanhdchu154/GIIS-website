@@ -191,7 +191,10 @@ export default function TransferStudentsPage({ language, toggleLanguage }) {
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
             <Link to="/apply" style={{ padding: '13px 28px', borderRadius: 8, background: '#d5a836', color: '#1a1a2e', textDecoration: 'none', fontWeight: 850 }}>
-              {isEn ? 'Start Application' : '开始申请'}
+              {isEn ? 'Request Path Review' : '申请路径评估'}
+            </Link>
+            <Link to="/trust-center" style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', textDecoration: 'none', fontWeight: 750 }}>
+              {isEn ? 'Open Trust Center' : '打开信任中心'}
             </Link>
             <a href={`mailto:${SCHOOL_EMAIL}`} style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', textDecoration: 'none', fontWeight: 750 }}>
               {isEn ? 'Email Admissions' : '联系招生'}

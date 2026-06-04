@@ -69,6 +69,10 @@ Current evidence:
 - `node tools/pathway-quality/audit_proofpoint_courses.js --check-urls --report _audit/proofpoint-course-qa.md`:
   8 proof-point courses pass / 0 warn / 0 fail; 220 non-YouTube URLs checked /
   0 bad; 32 YouTube resources skipped by direct URL smoke.
+- `npm run audit:parent-assessment-packet`: 8 proof-point courses pass / 0
+  fail. This generates `_audit/parent-assessment-sample-packet.md` and
+  `_audit/parent-assessment-sample-packet.json` with parent-facing samples for
+  assignment evidence, quiz, midterm, final, grading story, and rubric focus.
 - Student feedback completion pass completed 2026-06-01: module switching,
   English I resource gaps, same-grade recommendations, module motivation,
   manual completion controls, quiz review guidance, parent pacing, demo
@@ -107,6 +111,10 @@ Current evidence:
   Merriam-Webster required reading link was replaced with a Khan Academy
   vocabulary-in-context lesson, and the repeated Purdue OWL generic exercises
   entry was replaced with a more specific Purdue grammar exercises page.
+- Parent assessment proof packet completed 2026-06-04: the first 8
+  proof-point courses now have a generated parent/advisor packet showing one
+  reviewable assignment sample, quiz sample, midterm sample, final sample,
+  parent value statement, and rubric language per course.
 - Completed assessment/resource history is archived in
   `umi/reviews/2026-06-01-course-resource-assessment-summary.md`.
 
@@ -156,6 +164,12 @@ Status: maintain.
   legal status, records, course transparency, parent visibility, and student
   outcomes. Browser smoke for `/trust-center`, `/`, and `/pricing` passed on
   desktop and mobile: `_audit/trust-center-smoke.md`.
+- Transfer-family buyer journey implemented on 2026-06-04: Trust Center,
+  Admission, Transfer Students, Pricing, Apply, Parent Demo, Welcome, and Learn
+  Portal now route families through path review before payment and first-week
+  student/parent expectations after enrollment. Browser smoke:
+  `_audit/transfer-buyer-journey-smoke.md`; application payload smoke:
+  `_audit/transfer-application-payload-smoke.md`.
 - Student Coordination System Phase 0-3 is implemented locally; production
   deploy should still be treated as a separate deployment decision.
 - Official records policy remains: graduated-student records are frozen unless a

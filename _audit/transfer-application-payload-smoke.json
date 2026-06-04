@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-06-04T13:21:46.286Z",
+  "pass": true,
+  "captured": {
+    "studentName": "Transfer Student",
+    "dob": "2009-08-15",
+    "gradeLevel": "Grade 11",
+    "currentSchool": "Previous International School",
+    "targetUniversities": "UC Davis",
+    "preferredLanguage": "en",
+    "parentName": "Transfer Parent",
+    "parentEmail": "parent@example.com",
+    "phone": "+1 555 000 0000",
+    "notes": "Transfer Path Review: credits=12-17; graduationTiming=1-year; transcriptAvailable=yes; concern=credits; Family Notes: Has official transcript and math/science credits."
+  },
+  "expected": "Transfer Path Review: credits=12-17; graduationTiming=1-year; transcriptAvailable=yes; concern=credits; Family Notes: Has official transcript and math/science credits."
+}

@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-06-04T13:21:23.994Z",
+  "base": "http://localhost:3033",
+  "results": [
+    {
+      "route": "/trust-center",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Trust Center | Genesis of Ideas International School",
+      "h1": "A serious school should be inspectable.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/pricing",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Tuition & Pricing | Genesis of Ideas International School",
+      "h1": "Choose how much guidance your child needs.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [
+        "net::ERR_ABORTED http://localhost:3033/demo/giis-demo.mp4"
+      ],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/apply",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Transfer Path Review | Genesis of Ideas International School",
+      "h1": "Know the path before you pay.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/parent/demo",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Parent Dashboard Preview | Genesis of Ideas International School",
+      "h1": "Yunfan's progress this week杨芸帆",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/welcome",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Welcome to GIIS | Genesis of Ideas International School",
+      "h1": "You're in. 🎉",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/trust-center",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Trust Center | Genesis of Ideas International School",
+      "h1": "A serious school should be inspectable.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/pricing",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Tuition & Pricing | Genesis of Ideas International School",
+      "h1": "Choose how much guidance your child needs.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [
+        "net::ERR_ABORTED http://localhost:3033/demo/giis-demo.mp4"
+      ],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/apply",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Transfer Path Review | Genesis of Ideas International School",
+      "h1": "Know the path before you pay.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/parent/demo",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Parent Dashboard Preview | Genesis of Ideas International School",
+      "h1": "Yunfan's progress this week杨芸帆",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": []
+    },
+    {
+      "route": "/welcome",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Welcome to GIIS | Genesis of Ideas International School",
+      "h1": "You're in. 🎉",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": []
+    }
+  ]
+}

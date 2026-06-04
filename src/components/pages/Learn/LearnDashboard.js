@@ -107,6 +107,67 @@ function StatCard({ label, value, sub }) {
   );
 }
 
+function WeekOneStart({ isEn, spotlight }) {
+  const next = spotlight ? nextModule(spotlight) : null;
+  const moduleHref = spotlight
+    ? (next ? `/learn/${spotlight.course.slug}/module/${next}` : `/learn/${spotlight.course.slug}`)
+    : null;
+  const courseName = spotlight
+    ? (isEn ? spotlight.course.name : (spotlight.course.nameZh || spotlight.course.name))
+    : null;
+
+  return (
+    <section style={{
+      background: '#fff',
+      border: '1px solid #e0e6f0',
+      borderLeft: '5px solid #d5a836',
+      borderRadius: '12px',
+      padding: '20px 24px',
+      marginBottom: '28px',
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 18, flexWrap: 'wrap', marginBottom: 14 }}>
+        <div style={{ maxWidth: 620 }}>
+          <p style={{ fontSize: '11px', fontWeight: 800, color: '#8a6a14', letterSpacing: '1.7px', textTransform: 'uppercase', margin: '0 0 6px' }}>
+            {isEn ? 'Start Here · Week 1' : '从这里开始 · 第一周'}
+          </p>
+          <h2 style={{ fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 850, color: '#1a1a2e', margin: '0 0 6px', lineHeight: 1.16 }}>
+            {isEn ? 'Know exactly what to do first.' : '先知道第一步该做什么。'}
+          </h2>
+          <p style={{ fontSize: 13, color: '#5c6578', lineHeight: 1.65, margin: 0 }}>
+            {courseName
+              ? (isEn
+                  ? `Start with ${courseName}. Your parent can see activity, pacing, and feedback once you begin submitting work.`
+                  : `先从 ${courseName} 开始。你开始提交作业后，家长可以看到活动、进度与反馈。`)
+              : (isEn
+                  ? 'Choose the first course with your advisor, then begin Module 1 and submit the first assignment from the Learn Portal.'
+                  : '先和顾问确认第一门课，然后从第 1 模块开始，并在 Learn Portal 提交第一份作业。')}
+          </p>
+        </div>
+        {moduleHref && (
+          <Link to={moduleHref} style={{ background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 18px', fontSize: 13, fontWeight: 850, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            {isEn ? 'Open first task' : '打开第一项任务'}
+          </Link>
+        )}
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(185px, 1fr))', gap: 10 }}>
+        {[
+          { en: 'Open the next module', zh: '打开下一个模块' },
+          { en: 'Use the free required resources', zh: '使用免费必要资源' },
+          { en: 'Submit work or a document link', zh: '提交作业或文件链接' },
+          { en: 'Check teacher feedback before moving on', zh: '进入下一步前查看教师反馈' },
+        ].map((item, index) => (
+          <div key={item.en} style={{ background: '#f8f9fd', border: '1px solid #e8edf8', borderRadius: 8, padding: '12px 13px', display: 'flex', gap: 9, alignItems: 'flex-start' }}>
+            <span style={{ width: 22, height: 22, borderRadius: '50%', background: '#d5a836', color: '#1a1a2e', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 850, flexShrink: 0 }}>
+              {index + 1}
+            </span>
+            <span style={{ color: '#30384a', fontSize: 12, lineHeight: 1.45, fontWeight: 700 }}>{isEn ? item.en : item.zh}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function CourseCard({ enr, isEn }) {
   const total = enr.course._count?.modules || 14;
   const completed = passedModuleSet(enr).size;
@@ -418,6 +479,8 @@ export default function LearnDashboard({ language }) {
             <StatCard label={isEn ? 'In Progress' : '进行中'} value={inProgress.length} sub={isEn ? 'active courses' : '门进行中'} />
           </div>
         )}
+
+        <WeekOneStart isEn={isEn} spotlight={spotlight} />
 
         {/* Graduation banner */}
         {myEnrollments.length > 0 && (isGradEligible ? (

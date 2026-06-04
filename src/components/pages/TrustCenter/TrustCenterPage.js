@@ -104,6 +104,12 @@ const EVIDENCE = [
   },
 ];
 
+const TRANSFER_PROOF = [
+  { en: 'Previous credits are reviewed against the 24-credit framework.', zh: '既有学分会依 24 学分毕业框架审核。' },
+  { en: 'Graduation timing is estimated from evidence, not promised automatically.', zh: '毕业时间依据可验证证据估算，不自动承诺。' },
+  { en: 'Guided support is recommended when families need monthly accountability.', zh: '当家庭需要每月跟进时，通常建议 Guided 支持。' },
+];
+
 function pick(map, isEn) {
   return map[isEn ? 'en' : 'zh'];
 }
@@ -188,6 +194,49 @@ function TrustCenterPage({ language, toggleLanguage }) {
                 <Link to={step.to} style={inlineLink}>{pick(step.cta, isEn)} →</Link>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: '#fff', fontFamily: 'Inter, sans-serif', padding: '0 0 58px' }}>
+        <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 6%' }}>
+          <div style={{
+            border: '1px solid #e2e7f0',
+            borderLeft: '5px solid #d5a836',
+            borderRadius: 8,
+            padding: '24px 26px',
+            background: '#fffbef',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: 20,
+            alignItems: 'center',
+          }}>
+            <div>
+              <p style={{ margin: '0 0 9px', color: '#8a6a14', fontSize: 12, fontWeight: 850, letterSpacing: 1.5, textTransform: 'uppercase' }}>
+                {isEn ? 'Transfer Family Proof' : '转学生家庭验证'}
+              </p>
+              <h2 style={{ margin: '0 0 10px', color: '#1a1a2e', fontSize: 'clamp(22px, 3vw, 34px)', lineHeight: 1.14, fontWeight: 850 }}>
+                {isEn ? 'Do the path review before checkout.' : '先做路径评估，再进入付款。'}
+              </h2>
+              <p style={{ margin: 0, color: '#4f5868', fontSize: 14, lineHeight: 1.7 }}>
+                {isEn
+                  ? 'Transfer families should understand credit fit, graduation timing, and support level before choosing a tuition plan.'
+                  : '转学生家庭应在选择学费方案前，先看清楚学分对应、毕业时间与所需支持层级。'}
+              </p>
+            </div>
+            <div>
+              <ul style={{ margin: '0 0 16px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9 }}>
+                {TRANSFER_PROOF.map((item) => (
+                  <li key={item.en} style={{ display: 'flex', gap: 9, color: '#30384a', fontSize: 13, lineHeight: 1.55 }}>
+                    <span style={{ color: '#2b3d6d', fontWeight: 900 }}>✓</span>
+                    <span>{isEn ? item.en : item.zh}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link to="/apply" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 18px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
+                {isEn ? 'Request transfer path review' : '申请转学路径评估'}
+              </Link>
+            </div>
           </div>
         </div>
       </section>

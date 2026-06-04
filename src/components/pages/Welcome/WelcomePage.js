@@ -51,6 +51,37 @@ const PLAN_LABELS = {
   },
 };
 
+const FIRST_WEEK = [
+  {
+    title: { en: 'Advisor', zh: '顾问' },
+    body: {
+      en: 'Reviews the transfer path, confirms the first active courses, and leaves the next check-in note.',
+      zh: '审核转学路径，确认第一批进行中课程，并留下下一次 check-in 说明。',
+    },
+  },
+  {
+    title: { en: 'Student', zh: '学生' },
+    body: {
+      en: 'Logs into Learn Portal, starts the first module, and sees where assignments and feedback live.',
+      zh: '登录 Learn Portal，开始第一个模块，并看清楚作业与反馈在哪里。',
+    },
+  },
+  {
+    title: { en: 'Parent', zh: '家长' },
+    body: {
+      en: 'Uses the parent dashboard to see credits, GPA, activity, pacing, and advisor notes in one place.',
+      zh: '通过家长面板集中查看学分、GPA、活动、进度与顾问留言。',
+    },
+  },
+  {
+    title: { en: 'Record', zh: '学籍记录' },
+    body: {
+      en: 'Course progress, grades, and official-document workflow stay visible instead of becoming informal screenshots.',
+      zh: '课程进度、成绩与正式文件流程保持可见，不依赖临时截图。',
+    },
+  },
+];
+
 export default function WelcomePage({ language }) {
   const isEn = language !== 'zh';
   const [searchParams] = useSearchParams();
@@ -195,6 +226,26 @@ export default function WelcomePage({ language }) {
         ))}
       </ol>
 
+      <h2 style={{
+        fontSize: '22px', fontWeight: 800, color: '#1a1a2e',
+        margin: '34px 0 16px', letterSpacing: '-0.01em',
+      }}>
+        {isEn ? 'Your first week at GIIS' : '加入 GIIS 的第一周'}
+      </h2>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 12 }}>
+        {FIRST_WEEK.map((item) => (
+          <div key={item.title.en} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 8, padding: '15px 16px' }}>
+            <p style={{ margin: '0 0 6px', color: '#2b3d6d', fontSize: 12, fontWeight: 850, letterSpacing: 1.2, textTransform: 'uppercase' }}>
+              {isEn ? item.title.en : item.title.zh}
+            </p>
+            <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.65 }}>
+              {isEn ? item.body.en : item.body.zh}
+            </p>
+          </div>
+        ))}
+      </div>
+
       {!knownInDb && (
         <p style={{
           marginTop: '20px',
@@ -222,6 +273,13 @@ export default function WelcomePage({ language }) {
           fontWeight: 700, fontSize: '14px', textDecoration: 'none',
         }}>
           {isEn ? 'Preview parent dashboard' : '预览家长面板'}
+        </Link>
+        <Link to="/trust-center" style={{
+          padding: '12px 24px', borderRadius: '8px',
+          border: '2px solid #d4d8e0', color: '#2b3d6d',
+          fontWeight: 700, fontSize: '14px', textDecoration: 'none',
+        }}>
+          {isEn ? 'Open Trust Center' : '打开信任中心'}
         </Link>
         <Link to="/" style={{
           padding: '12px 24px', borderRadius: '8px',

@@ -11,10 +11,10 @@ const SCHOOL_EMAIL = 'admissions@genesisideas.school';
 const STEPS = [
   {
     num: '01',
-    title: { en: 'Submit Inquiry', zh: '提交申请意向' },
+    title: { en: 'Request Path Review', zh: '申请路径评估' },
     body: {
-      en: 'Contact our admissions office by email or phone to express your interest and receive an application packet.',
-      zh: '透过电子邮件或电话联系招生办公室，表达入学意向并索取申请资料。',
+      en: 'Submit the online form so admissions can review grade level, previous credits, graduation timing, and family concerns before payment.',
+      zh: '提交线上表格，让招生团队在付款前审核年级、既有学分、毕业时间与家庭顾虑。',
     },
   },
   {
@@ -37,8 +37,8 @@ const STEPS = [
     num: '04',
     title: { en: 'Enrollment', zh: '完成入学' },
     body: {
-      en: 'Receive your admissions decision and enrollment instructions. Welcome to GIIS!',
-      zh: '收到录取结果与入学指引，正式成为 GIIS 的一员！',
+      en: 'Choose the support level only after the student path is clear, then receive enrollment and onboarding instructions.',
+      zh: '确认学生路径后再选择支持方案，并收到入学与 onboarding 指引。',
     },
   },
 ];
@@ -151,7 +151,8 @@ export default function AdmissionMain({ language, toggleLanguage }) {
                 : 'GIIS 可以审核正式记录、对应可转学分，并估算最现实的毕业路径。'}
             </p>
           </div>
-          <Link to="/transfer-students" style={{
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          <Link to="/apply" style={{
             padding: '13px 22px',
             borderRadius: '8px',
             background: '#2b3d6d',
@@ -161,8 +162,21 @@ export default function AdmissionMain({ language, toggleLanguage }) {
             fontSize: '14px',
             whiteSpace: 'nowrap',
           }}>
-            {isEn ? 'Transfer Guide →' : '查看转学说明 →'}
+            {isEn ? 'Request Path Review →' : '申请路径评估 →'}
           </Link>
+          <Link to="/transfer-students" style={{
+            padding: '13px 22px',
+            borderRadius: '8px',
+            border: '2px solid #2b3d6d',
+            color: '#2b3d6d',
+            textDecoration: 'none',
+            fontWeight: 800,
+            fontSize: '14px',
+            whiteSpace: 'nowrap',
+          }}>
+            {isEn ? 'Transfer Guide' : '查看转学说明'}
+          </Link>
+          </div>
         </div>
       </div>
 
@@ -210,8 +224,8 @@ export default function AdmissionMain({ language, toggleLanguage }) {
           </h2>
           <p style={{ fontSize: '16px', color: '#555', maxWidth: '620px', lineHeight: 1.7, marginBottom: '44px' }}>
             {isEn
-              ? 'GIIS diplomas are issued under the Florida private school framework — the same legal basis used by US private high schools recognized by colleges nationwide.'
-              : 'GIIS 文凭依据 Florida 私立学校框架颁发，与全美大学所认可的美国私立高中具备相同的法律依据。'}
+              ? 'GIIS issues school records under the Florida private school framework. Families should review the school profile, transcript workflow, and transfer-credit policy before enrollment.'
+              : 'GIIS 依据 Florida 私立学校框架出具学校记录。家庭入学前应查看学校简介、成绩单流程与转学分政策。'}
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginBottom: '40px' }}>
@@ -228,8 +242,8 @@ export default function AdmissionMain({ language, toggleLanguage }) {
               },
               {
                 icon: '🎓',
-                title: { en: 'Accepted by US Universities', zh: '美国大学认可' },
-                body: { en: 'Class of 2026 graduates have been accepted to UC Santa Barbara, The Ohio State University, UC Davis, Syracuse University, and New Jersey Institute of Technology.', zh: '2026 届毕业生已获 UC Santa Barbara、俄亥俄州立大学、UC Davis、雪城大学（Syracuse University）及新泽西理工学院（New Jersey Institute of Technology）录取。' },
+                title: { en: 'Reported College Outcomes', zh: '家庭回报的升学成果' },
+                body: { en: 'Graduating families have reported offers from UC Santa Barbara, The Ohio State University, UC Davis, Syracuse University, and New Jersey Institute of Technology. GIIS does not guarantee admission results.', zh: '毕业家庭曾向 GIIS 回报来自 UC Santa Barbara、The Ohio State University、UC Davis、Syracuse University 及 New Jersey Institute of Technology 的录取结果。GIIS 不承诺录取。' },
               },
             ].map((item) => (
               <div key={item.icon} style={{
@@ -256,8 +270,8 @@ export default function AdmissionMain({ language, toggleLanguage }) {
               </p>
               <p style={{ margin: 0, fontSize: '13px', color: '#2e7d32', lineHeight: 1.7 }}>
                 {isEn
-                  ? 'Yunfan Yang accepted to UC Santa Barbara, The Ohio State University, and UC Davis (Kinesiology). Baoyi Lu accepted to Syracuse University and New Jersey Institute of Technology.'
-                  : '杨芸帆已获 UC Santa Barbara、俄亥俄州立大学、UC Davis（运动科学）录取。卢抱一已获雪城大学（Syracuse University）及新泽西理工学院（New Jersey Institute of Technology）录取。'}
+                ? 'Reported outcomes include UC Santa Barbara, The Ohio State University, UC Davis, Syracuse University, and New Jersey Institute of Technology. Admissions outcomes vary by student.'
+                : '家庭回报成果包括 UC Santa Barbara、The Ohio State University、UC Davis、Syracuse University 与 New Jersey Institute of Technology。升学结果因学生而异。'}
               </p>
             </div>
           </div>
@@ -317,7 +331,7 @@ export default function AdmissionMain({ language, toggleLanguage }) {
                 background: 'rgba(213,168,54,1)', color: '#1a1a2e',
                 fontSize: '11px', fontWeight: 800, padding: '3px 12px', borderRadius: '20px', letterSpacing: '0.5px',
               }}>
-                {isEn ? 'MOST POPULAR' : '最常用'}
+                {isEn ? 'TRANSFER DEFAULT' : '转学生默认'}
               </div>
               <p style={{ color: 'rgba(213,168,54,1)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 16px' }}>
                 {isEn ? 'Guided' : '顾问指导方案'}
@@ -327,7 +341,7 @@ export default function AdmissionMain({ language, toggleLanguage }) {
                 <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '16px' }}>{isEn ? '/ month' : '/ 月'}</span>
               </div>
               <p style={{ color: 'rgba(213,168,54,0.85)', fontSize: '12px', fontWeight: 600, margin: '0 0 24px' }}>
-                {isEn ? 'Monthly advisor check-in included' : '包含每月顾问 check-in'}
+                {isEn ? 'Monthly advisor check-in and transfer review included' : '包含每月顾问 check-in 与转学分审核'}
               </p>
               <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {[
@@ -382,8 +396,8 @@ export default function AdmissionMain({ language, toggleLanguage }) {
                 a: { en: 'A computer or tablet with a reliable internet connection. We recommend a laptop or desktop for the best experience. All course materials are accessed through a web browser — no special software required.', zh: '需要一台连接稳定网络的电脑或平板。我们建议使用笔记本或台式电脑以获得最佳体验。所有课程材料均通过网络浏览器访问，无需特殊软件。' },
               },
               {
-                q: { en: 'Is the diploma recognized by US universities?', zh: '这个文凭被美国大学认可吗？' },
-                a: { en: 'Yes. GIIS is a registered Florida private school issuing US high school diplomas under the Florida 24-credit graduation framework — the same standard followed by US private high schools. Our diploma is designed to be recognized by US colleges during international student admissions review.', zh: '是的。GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭——与美国私立高中标准一致。我们的文凭在美国大学国际学生申请审核中具备完整的学术效力。' },
+                q: { en: 'How should families understand the GIIS diploma?', zh: '家庭应如何理解 GIIS 文凭？' },
+                a: { en: 'GIIS is a Florida-registered private school and issues records under its published 24-credit framework. Colleges and receiving schools review each student record under their own policies, so families should review the school profile and transcript workflow before enrollment.', zh: 'GIIS 是 Florida 注册私立学校，并依据公开的 24 学分框架出具学校记录。大学与接收学校会依自身政策审核每位学生记录，因此家庭入学前应查看学校简介与成绩单流程。' },
               },
               {
                 q: { en: 'How long does the program take?', zh: '课程需要多长时间完成？' },

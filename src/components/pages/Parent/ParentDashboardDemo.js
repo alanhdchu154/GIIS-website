@@ -48,23 +48,29 @@ const PREVIEW = {
   },
   courses: [
     { dept: { en: 'Computer Science', zh: '计算机科学' }, code: 'CS', color: '#1565C0',
-      name: 'AP Computer Science A', meta: { en: 'Module 9 of 14 · Last activity 2 days ago', zh: '第 9 / 14 模块 · 2 天前最后活动' }, pct: 64,
+      name: 'Computer Science I', meta: { en: 'Module 9 of 14 · Last activity 2 days ago', zh: '第 9 / 14 模块 · 2 天前最后活动' }, pct: 64,
       pace: { en: 'Behind 1 week', zh: '落后 1 周', kind: 'behind' } },
     { dept: { en: 'English', zh: '英语' }, code: 'E', color: '#C84B0A',
       name: 'English IV Portfolio Writing', meta: { en: 'Module 5 of 8 · Draft feedback received', zh: '第 5 / 8 模块 · 已收到草稿反馈' }, pct: 63,
       pace: { en: 'On Track', zh: '进度正常', kind: 'on_track' } },
     { dept: { en: 'Economics', zh: '经济' }, code: 'EC', color: '#1B6B3A',
-      name: 'AP Microeconomics', meta: { en: 'Module 6 of 12 · Midterm passed (88%)', zh: '第 6 / 12 模块 · 期中通过 88%' }, pct: 50,
+      name: 'Economics', meta: { en: 'Module 6 of 12 · Midterm passed (88%)', zh: '第 6 / 12 模块 · 期中通过 88%' }, pct: 50,
       pace: { en: 'On Track', zh: '进度正常', kind: 'on_track' } },
+  ],
+  firstWeek: [
+    { en: 'Advisor confirms transfer-credit map', zh: '顾问确认转学分对应表' },
+    { en: 'Student starts the first active module', zh: '学生开始第一个进行中模块' },
+    { en: 'Parent sees login, pacing, and feedback location', zh: '家长看到登录、进度与反馈位置' },
+    { en: 'Next check-in note is visible in the dashboard', zh: '下一次 check-in 留言显示在家长面板' },
   ],
   activity: [
     { kind: 'green', icon: '✓', when: { en: 'May 7 · 2 days ago', zh: '5 月 7 日 · 2 天前' },
       lead: { en: 'Earned 1.0 credit · ', zh: '获得 1.0 学分 · ' },
-      bold: 'AP Calculus AB',
+      bold: 'Pre-Calculus',
       tail: { en: ' final exam passed (92%)', zh: ' 期末考通过 92%' } },
     { kind: 'feedback', icon: '📝', when: { en: 'May 6 · 3 days ago', zh: '5 月 6 日 · 3 天前' },
       lead: { en: 'Teacher feedback received on ', zh: '收到老师对 ' },
-      bold: 'AP CS A — Module 8 assignment',
+      bold: 'Computer Science I — Module 8 assignment',
       tail: { en: ' (95/100)', zh: ' 的反馈（95/100）' },
       feedback: {
         en: 'Strength: clear loop logic and readable variable names. Correction: add one edge-case test for empty input. Next action: revise the test table before Module 9.',
@@ -73,10 +79,10 @@ const PREVIEW = {
     { kind: 'blue', icon: '📖', when: { en: 'May 5 · 4 days ago', zh: '5 月 5 日 · 4 天前' },
       lead: { en: 'Completed ', zh: '完成 ' },
       bold: 'Module 6',
-      tail: { en: ' of AP Microeconomics', zh: ' AP 微观经济学' } },
+      tail: { en: ' of Economics', zh: ' Economics' } },
     { kind: 'gold', icon: '★', when: { en: 'May 3 · 6 days ago', zh: '5 月 3 日 · 6 天前' },
       lead: { en: 'Passed ', zh: '通过 ' },
-      bold: 'AP Microeconomics midterm',
+      bold: 'Economics midterm',
       tail: { en: ' with 88%', zh: '，分数 88%' } },
   ],
   advisorNote: {
@@ -84,12 +90,12 @@ const PREVIEW = {
     zh: '"芸帆这周保持稳定的学习节奏，按计划在 6 月毕业。我们现在专注于他的大学申请文书草稿。他对工程科学路径的期末考已经准备充分。"',
   },
   upcoming: [
-    { day: { en: 'MAY', zh: 'MAY' }, num: 21, what: { en: 'AP CS A — Module 10 due', zh: 'AP CS A 第 10 模块截止' },
+    { day: { en: 'MAY', zh: 'MAY' }, num: 21, what: { en: 'Computer Science I — Module 10 due', zh: 'Computer Science I 第 10 模块截止' },
       sub: { en: 'Tuesday · Project submission', zh: '周二 · 项目提交' } },
     { day: { en: 'JUN', zh: 'JUN' }, num: 14, what: { en: 'Diploma eligibility', zh: '文凭达成日' },
       sub: { en: '2 more credits needed', zh: '还差 2 学分' } },
     { day: { en: 'JUN', zh: 'JUN' }, num: 18, what: { en: 'Advisor portfolio review', zh: '顾问作品集复盘' },
-      sub: { en: 'College writing checkpoint', zh: '大学写作检查点' } },
+      sub: { en: 'Writing and project checkpoint', zh: '写作与项目检查点' } },
   ],
 };
 
@@ -187,6 +193,25 @@ export default function ParentDashboardDemo({ language }) {
                   <div style={{ height: '8px', background: 'rgba(255,255,255,0.12)', borderRadius: '999px', overflow: 'hidden' }}>
                     <div style={{ height: '100%', width: `${gradPct}%`, background: 'linear-gradient(to right, #d5a836, #ffce5b)', borderRadius: '999px' }} />
                   </div>
+                </div>
+              </div>
+
+              {/* Weekly insights */}
+              <div style={card}>
+                <CardHead en="First Week After Enrollment" zh="入学后第一周" isEn={isEn} right={
+                  <span style={{ fontSize: '12px', color: '#1B6B3A', fontWeight: 800 }}>
+                    {isEn ? 'What happens next' : '下一步'}
+                  </span>
+                } />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 10 }}>
+                  {p.firstWeek.map((item, index) => (
+                    <div key={item.en} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 8, padding: '13px 14px', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                      <span style={{ width: 24, height: 24, borderRadius: '50%', background: '#2b3d6d', color: '#fff', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 850, flexShrink: 0 }}>
+                        {index + 1}
+                      </span>
+                      <span style={{ fontSize: 13, color: '#30384a', lineHeight: 1.45, fontWeight: 650 }}>{item[lang]}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 

@@ -29,20 +29,20 @@ const TIERS = [
   },
   {
     key: 'guided',
-    eyebrow: { en: 'Guided', zh: '顾问指导方案' },
+    eyebrow: { en: 'Guided · Transfer Family Default', zh: '顾问指导 · 转学生家庭默认方案' },
     price: '$149',
     cadence: { en: '/ month', zh: '/ 月' },
-    annual: { en: 'Most families start here', zh: '多数家庭适合从这里开始' },
+    annual: { en: 'Recommended for transfer students', zh: '转学生家庭推荐' },
     note: {
-      en: 'Adds the human layer parents usually need: planning, review, and transfer-credit support.',
-      zh: '加入家长最需要的人为支持：选课规划、进度复盘与转学分审核。',
+      en: 'The right default when a family needs a credit review, a graduation timeline, and monthly human accountability.',
+      zh: '当家庭需要转学分审核、毕业时间规划与每月人为跟进时，这是最合适的默认方案。',
     },
     features: [
       { en: 'Everything in Self-Paced', zh: '包含自主学习方案全部内容' },
-      { en: 'Monthly advisor check-in', zh: '每月顾问 check-in' },
-      { en: 'Course planning and pathway review', zh: '选课规划与 pathway 复盘' },
-      { en: 'Transfer-credit review for incoming students', zh: '转学生学分初审' },
-      { en: 'Parent progress review and next-step notes', zh: '家长进度解读与下一步建议' },
+      { en: 'Transfer-credit review before the family pays', zh: '付款前完成转学分初审' },
+      { en: 'Realistic 24-credit graduation path', zh: '现实可行的 24 学分毕业路径' },
+      { en: 'Monthly advisor check-in and next-step notes', zh: '每月顾问 check-in 与下一步建议' },
+      { en: 'Parent progress review and early warning signals', zh: '家长进度解读与早期风险提醒' },
     ],
     cta: { en: 'Apply for Guided', zh: '申请顾问指导方案' },
     highlighted: true,
@@ -167,7 +167,7 @@ function TierCard({ tier, isEn }) {
           letterSpacing: 0.6,
           textTransform: 'uppercase',
         }}>
-          {isEn ? 'Recommended' : '推荐'}
+          {isEn ? 'Transfer default' : '转学生默认'}
         </div>
       )}
       <p style={{ margin: '0 0 8px', color: '#2b3d6d', fontSize: 12, fontWeight: 800, letterSpacing: 1.4, textTransform: 'uppercase' }}>
@@ -294,8 +294,8 @@ export default function PricingPage({ language, toggleLanguage }) {
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.72)', maxWidth: 680, margin: '0 auto', lineHeight: 1.75, fontSize: 16 }}>
             {isEn
-              ? 'Self-paced access stays affordable. Transfer students and college-bound families can add the advisor layer that makes the record easier to trust.'
-              : '自主学习仍保持可负担；转学生与目标美国大学的家庭，可以加入顾问层，让成绩单与学习路径更可信。'}
+              ? 'Self-paced access stays affordable. Transfer families should usually start with Guided so credits, graduation timing, and parent visibility are reviewed before payment.'
+              : '自主学习仍保持可负担；转学生家庭通常应从 Guided 开始，让学分、毕业时间与家长可见度在付款前先被审核清楚。'}
           </p>
         </div>
       </section>
@@ -314,6 +314,41 @@ export default function PricingPage({ language, toggleLanguage }) {
       />
 
       <ProofBeforePayment isEn={isEn} />
+
+      <section style={{ background: '#fff', padding: '20px 0 54px', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: 1020, margin: '0 auto', padding: '0 5%' }}>
+          <div style={{
+            border: '1px solid #e0e6f0',
+            borderLeft: '5px solid #d5a836',
+            borderRadius: 8,
+            padding: '22px 24px',
+            background: '#fffbef',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: 18,
+            alignItems: 'center',
+          }}>
+            <div>
+              <p style={{ margin: '0 0 8px', color: '#8a6a14', fontSize: 12, fontWeight: 850, letterSpacing: 1.5, textTransform: 'uppercase' }}>
+                {isEn ? 'Transfer Families' : '转学生家庭'}
+              </p>
+              <h2 style={{ margin: 0, color: '#1a1a2e', fontSize: 'clamp(22px, 3vw, 32px)', lineHeight: 1.15, fontWeight: 850 }}>
+                {isEn ? 'Start with the path review, not checkout.' : '先做路径评估，不要先付款。'}
+              </h2>
+            </div>
+            <div>
+              <p style={{ margin: '0 0 14px', color: '#4f5868', fontSize: 14, lineHeight: 1.7 }}>
+                {isEn
+                  ? 'Admissions should review previous credits, documents, and graduation timing before a family chooses a plan. Guided is the usual recommendation when the path is unclear or the student needs accountability.'
+                  : '招生团队应先审核既有学分、可提供文件与毕业时间，再让家庭选择方案。当路径不清楚或学生需要跟进时，Guided 通常是推荐选择。'}
+              </p>
+              <Link to="/apply" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 18px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
+                {isEn ? 'Request transfer path review' : '申请转学路径评估'}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section style={{ background: '#f4f6fa', padding: '58px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 5%' }}>
