@@ -115,6 +115,10 @@ Current evidence:
   proof-point courses now have a generated parent/advisor packet showing one
   reviewable assignment sample, quiz sample, midterm sample, final sample,
   parent value statement, and rubric language per course.
+- Public assessment proof preview added at `/assessment-proof` on 2026-06-04,
+  backed by `public/data/parent-assessment-proof.json` generated from the same
+  8-course packet. This gives families concrete assignment, quiz, midterm,
+  final, and rubric samples before applying.
 - Completed assessment/resource history is archived in
   `umi/reviews/2026-06-01-course-resource-assessment-summary.md`.
 
@@ -170,6 +174,8 @@ Status: maintain.
   student/parent expectations after enrollment. Browser smoke:
   `_audit/transfer-buyer-journey-smoke.md`; application payload smoke:
   `_audit/transfer-application-payload-smoke.md`.
+- Assessment proof preview is now linked from Trust Center, Pricing, and the
+  Resources menu so parents can inspect course evidence without logging in.
 - Student Coordination System Phase 0-3 is implemented locally; production
   deploy should still be treated as a separate deployment decision.
 - Official records policy remains: graduated-student records are frozen unless a

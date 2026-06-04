@@ -1,0 +1,652 @@
+{
+  "generatedAt": "2026-06-04T13:37:26.188Z",
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "fail": 0
+  },
+  "courses": [
+    {
+      "slug": "algebra-i",
+      "name": "Algebra I",
+      "department": "Mathematics",
+      "credits": 1,
+      "courseEvidence": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 71,
+        "midtermQuestions": 15,
+        "finalQuestions": 20
+      },
+      "gradingStory": {
+        "transcriptGrade": "Module quizzes 40%, midterm 30%, final exam 30%.",
+        "assignmentRole": "Assignments are reviewed separately as learning evidence and must be submitted before the final exam unlocks.",
+        "reviewTarget": "Teacher review should name one strength, one correction, and one next action."
+      },
+      "moduleSample": {
+        "order": 1,
+        "title": "Variables & Algebraic Expressions",
+        "objectives": "Define variables; write and evaluate algebraic expressions; apply the vocabulary of algebra.",
+        "assignment": "Write 10 real-life situations as algebraic expressions. Evaluate each expression for at least two different values of the variable. Submit a two-column table showing the situation, expression, substitutions, arithmetic steps, and final meaning in context. Finish with a 4–5 sentence reflection explaining which expression was hardest to model and why.",
+        "assignmentType": "Project / Design Work",
+        "expectedEvidence": "Student submits an artifact, plan, chart, model, or project link plus a short rationale.",
+        "rubricFocus": "Completeness, practical detail, prompt alignment, and design decisions.",
+        "parentValue": "Parents can see worked steps, correct use of procedures, and whether the student can explain the meaning of an answer."
+      },
+      "assessmentSamples": {
+        "quiz": {
+          "moduleOrder": 1,
+          "question": "Which of the following is an algebraic expression?",
+          "options": [
+            "2 + 3 = 5",
+            "4x − 7",
+            "x = 10",
+            "3 > 1"
+          ],
+          "answer": "4x − 7",
+          "explanation": "An algebraic expression contains variables and operations but no equals or inequality sign."
+        },
+        "midterm": {
+          "question": "Which expression represents \"7 less than twice a number n\"?",
+          "options": [
+            "2n − 7",
+            "7 − 2n",
+            "2(n − 7)",
+            "n − 14"
+          ],
+          "answer": "2n − 7",
+          "explanation": "\"Twice a number\" is 2n; \"7 less than\" means subtract 7 after."
+        },
+        "final": {
+          "question": "Which property is illustrated by the statement: 3(x + 4) = 3x + 12?",
+          "options": [
+            "Commutative Property",
+            "Associative Property",
+            "Distributive Property",
+            "Identity Property"
+          ],
+          "answer": "Distributive Property",
+          "explanation": "The Distributive Property states a(b + c) = ab + ac. Here 3 is distributed over (x + 4)."
+        }
+      },
+      "rubric": [
+        {
+          "label": "Completion",
+          "detail": "Addresses every required part of the prompt."
+        },
+        {
+          "label": "Accuracy",
+          "detail": "Uses correct concepts, calculations, sources, or course vocabulary."
+        },
+        {
+          "label": "Reasoning / Evidence",
+          "detail": "Explains the answer and supports claims with examples, data, or text evidence."
+        },
+        {
+          "label": "Clarity",
+          "detail": "Organized, readable, and submitted in a form parents can understand."
+        }
+      ],
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "slug": "geometry",
+      "name": "Geometry",
+      "department": "Mathematics",
+      "credits": 1,
+      "courseEvidence": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 74,
+        "midtermQuestions": 15,
+        "finalQuestions": 20
+      },
+      "gradingStory": {
+        "transcriptGrade": "Module quizzes 40%, midterm 30%, final exam 30%.",
+        "assignmentRole": "Assignments are reviewed separately as learning evidence and must be submitted before the final exam unlocks.",
+        "reviewTarget": "Teacher review should name one strength, one correction, and one next action."
+      },
+      "moduleSample": {
+        "order": 1,
+        "title": "Points, Lines & Planes",
+        "objectives": "Identify and describe points, lines, planes, segments, and rays; apply postulates about points, lines, and planes; measure and add segments and angles.",
+        "assignment": "Draw and label 5 different geometric figures using proper notation. For each figure, list all the points, lines, rays, and segments. Identify which undefined terms (point, line, plane) apply and state two postulates that apply to each figure.",
+        "assignmentType": "Practice / Problem Set",
+        "expectedEvidence": "Student submits worked steps, labeled diagrams, classifications, or completed practice artifacts.",
+        "rubricFocus": "Accuracy, shown work, corrections, and explanation of process.",
+        "parentValue": "Parents can see worked steps, correct use of procedures, and whether the student can explain the meaning of an answer."
+      },
+      "assessmentSamples": {
+        "quiz": {
+          "moduleOrder": 1,
+          "question": "Which undefined geometry term names an exact location represented by a dot?",
+          "options": [
+            "Line",
+            "Plane",
+            "Point",
+            "Segment"
+          ],
+          "answer": "Point",
+          "explanation": "A point has no length, width, or depth — it simply marks a location in space."
+        },
+        "midterm": {
+          "question": "Which of the following is an undefined term in geometry?",
+          "options": [
+            "Angle",
+            "Triangle",
+            "Point",
+            "Segment"
+          ],
+          "answer": "Point",
+          "explanation": "Point, line, and plane are the three undefined terms in Euclidean geometry — they are described but not formally defined."
+        },
+        "final": {
+          "question": "A coordinate proof: Points A(0, 0), B(6, 0), C(6, 4), and D(0, 4) form a quadrilateral. Use the distance formula to show that ABCD is a rectangle (all sides meet at right angles, opposite sides equal).",
+          "options": [],
+          "answer": "AB = 6, BC = 4, CD = 6, DA = 4; all adjacent sides are perpendicular (one is horizontal, one is vertical), confirming a rectangle.",
+          "explanation": "AB: √((6−0)²+(0−0)²)=6; BC: √((6−6)²+(4−0)²)=4; CD: √((0−6)²+(4−4)²)=6; DA: √((0−0)²+(0−4)²)=4. Opposite sides equal, adjacent sides perpendicular (slopes 0 and undefined) → rectangle."
+        }
+      },
+      "rubric": [
+        {
+          "label": "Completion",
+          "detail": "Addresses every required part of the prompt."
+        },
+        {
+          "label": "Accuracy",
+          "detail": "Uses correct concepts, calculations, sources, or course vocabulary."
+        },
+        {
+          "label": "Reasoning / Evidence",
+          "detail": "Explains the answer and supports claims with examples, data, or text evidence."
+        },
+        {
+          "label": "Clarity",
+          "detail": "Organized, readable, and submitted in a form parents can understand."
+        }
+      ],
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "slug": "english-i",
+      "name": "English I",
+      "department": "English",
+      "credits": 1,
+      "courseEvidence": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 50,
+        "midtermQuestions": 15,
+        "finalQuestions": 20
+      },
+      "gradingStory": {
+        "transcriptGrade": "Module quizzes 40%, midterm 30%, final exam 30%.",
+        "assignmentRole": "Assignments are reviewed separately as learning evidence and must be submitted before the final exam unlocks.",
+        "reviewTarget": "Teacher review should name one strength, one correction, and one next action."
+      },
+      "moduleSample": {
+        "order": 1,
+        "title": "Reading Comprehension Strategies",
+        "objectives": "Identify main idea and supporting details; make inferences from text; recognize common text structures; summarize literary and informational passages accurately.",
+        "assignment": "Read one short informational article from a free news, museum, library, or government education site and one short public-domain story from a source such as Project Gutenberg or a teacher-provided packet. For each: (1) write a one-paragraph summary in your own words, (2) identify the main idea and three supporting details, (3) make two inferences supported with text evidence, and (4) identify the text structure used.",
+        "assignmentType": "Research / Evidence Report",
+        "expectedEvidence": "Student submits sources, evidence notes, and a written explanation using course vocabulary.",
+        "rubricFocus": "Source credibility, evidence use, reasoning, citations or links, and clarity.",
+        "parentValue": "Parents can see reading evidence, written organization, revision readiness, and whether the student supports claims with text details."
+      },
+      "assessmentSamples": {
+        "quiz": {
+          "moduleOrder": 1,
+          "question": "What is the main idea of a passage?",
+          "options": [
+            "The first sentence of the passage",
+            "The most important point the author wants to convey",
+            "A specific detail that supports the author's argument",
+            "A quotation from an expert"
+          ],
+          "answer": "The most important point the author wants to convey",
+          "explanation": "The main idea is the central, overarching point of the passage — what the entire text is mostly about."
+        },
+        "midterm": {
+          "question": "Which strategy involves identifying what a text is mostly about, stated in one or two sentences?",
+          "options": [
+            "Inference",
+            "Summarizing",
+            "Identifying main idea",
+            "Analyzing text structure"
+          ],
+          "answer": "Identifying main idea",
+          "explanation": "The main idea is the central point of a passage, stated concisely. Summarizing covers the whole passage; inference draws conclusions not stated directly."
+        },
+        "final": {
+          "question": "Explain the difference between a metaphor and a simile. Give one original example of each.",
+          "options": [],
+          "answer": "A simile compares two things using 'like' or 'as' (e.g., 'Her voice was like music'). A metaphor states directly that one thing IS another without using 'like' or 'as' (e.g., 'Her voice was music to my ears').",
+          "explanation": "Both are figures of speech that make comparisons, but similes use 'like' or 'as' while metaphors make a direct identification between two unlike things."
+        }
+      },
+      "rubric": [
+        {
+          "label": "Completion",
+          "detail": "Addresses every required part of the prompt."
+        },
+        {
+          "label": "Accuracy",
+          "detail": "Uses correct concepts, calculations, sources, or course vocabulary."
+        },
+        {
+          "label": "Reasoning / Evidence",
+          "detail": "Explains the answer and supports claims with examples, data, or text evidence."
+        },
+        {
+          "label": "Clarity",
+          "detail": "Organized, readable, and submitted in a form parents can understand."
+        }
+      ],
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "slug": "english-ii",
+      "name": "English II",
+      "department": "English",
+      "credits": 1,
+      "courseEvidence": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20
+      },
+      "gradingStory": {
+        "transcriptGrade": "Module quizzes 40%, midterm 30%, final exam 30%.",
+        "assignmentRole": "Assignments are reviewed separately as learning evidence and must be submitted before the final exam unlocks.",
+        "reviewTarget": "Teacher review should name one strength, one correction, and one next action."
+      },
+      "moduleSample": {
+        "order": 1,
+        "title": "Literary Analysis Fundamentals",
+        "objectives": "Identify and analyze theme, symbolism, motif, and allegory in literary texts; understand and explain the author's purpose and how it shapes the text; support interpretations with textual evidence.",
+        "assignment": "Read a teacher-provided public-domain excerpt or a short open text selected from the linked literature resources. Identify: (1) the central theme and two pieces of textual evidence supporting it, (2) one symbol and explain what it represents, (3) one recurring motif and its significance, (4) whether the text is allegorical and, if so, what real-world concept the story represents, and (5) the author's purpose. Write a 400-word response integrating all five elements with quotations.",
+        "assignmentType": "Research / Evidence Report",
+        "expectedEvidence": "Student submits sources, evidence notes, and a written explanation using course vocabulary.",
+        "rubricFocus": "Source credibility, evidence use, reasoning, citations or links, and clarity.",
+        "parentValue": "Parents can see reading evidence, written organization, revision readiness, and whether the student supports claims with text details."
+      },
+      "assessmentSamples": {
+        "quiz": {
+          "moduleOrder": 1,
+          "question": "Which of the following best describes a theme in a literary work?",
+          "options": [
+            "A summary of the plot from beginning to end",
+            "The name of the main character",
+            "A universal message or insight about human experience conveyed by the text",
+            "The physical setting of the story"
+          ],
+          "answer": "A universal message or insight about human experience conveyed by the text",
+          "explanation": "Theme is the central idea or message — a statement about life, human nature, or society that the text communicates through its characters, conflicts, and events."
+        },
+        "midterm": {
+          "question": "A symbol in a literary text is best described as:",
+          "options": [
+            "A character's name that has a hidden meaning",
+            "An object, person, or event that represents something beyond its literal meaning",
+            "A comparison using 'like' or 'as'",
+            "The resolution of a conflict"
+          ],
+          "answer": "An object, person, or event that represents something beyond its literal meaning",
+          "explanation": "A symbol carries both a literal identity and a deeper representational meaning — for example, a broken mirror might symbolize shattered dreams."
+        },
+        "final": {
+          "question": "Explain the difference between tone and mood. Then, using a text you have studied this year, give one example of each and explain what specific language choices create them.",
+          "options": [],
+          "answer": "Tone is the author's attitude toward the subject (e.g., ironic, mournful, celebratory). Mood is the emotional atmosphere the reader experiences. Example from 'The Raven': Poe's tone is mournful and obsessive — created by diction choices like 'nevermore,' 'lost Lenore,' and 'bleak December.' The mood is one of dread and despair, created by the dark imagery of a raven in a dark room and repetitive refrain that makes the reader feel trapped alongside the narrator.",
+          "explanation": "Tone = writer's attitude (craft choice); Mood = reader's emotional response (effect). Both are produced primarily through diction, imagery, and syntax."
+        }
+      },
+      "rubric": [
+        {
+          "label": "Completion",
+          "detail": "Addresses every required part of the prompt."
+        },
+        {
+          "label": "Accuracy",
+          "detail": "Uses correct concepts, calculations, sources, or course vocabulary."
+        },
+        {
+          "label": "Reasoning / Evidence",
+          "detail": "Explains the answer and supports claims with examples, data, or text evidence."
+        },
+        {
+          "label": "Clarity",
+          "detail": "Organized, readable, and submitted in a form parents can understand."
+        }
+      ],
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "slug": "biology",
+      "name": "Biology",
+      "department": "Science",
+      "credits": 1,
+      "courseEvidence": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 66,
+        "midtermQuestions": 15,
+        "finalQuestions": 20
+      },
+      "gradingStory": {
+        "transcriptGrade": "Module quizzes 40%, midterm 30%, final exam 30%.",
+        "assignmentRole": "Assignments are reviewed separately as learning evidence and must be submitted before the final exam unlocks.",
+        "reviewTarget": "Teacher review should name one strength, one correction, and one next action."
+      },
+      "moduleSample": {
+        "order": 1,
+        "title": "The Chemistry of Life",
+        "objectives": "Describe how atoms, chemical bonds, water properties, and the four major macromolecules support living systems, then connect each molecule to its monomer and biological function.",
+        "assignment": "Build a concept map showing how each of the four macromolecules (carbohydrates, lipids, proteins, nucleic acids) relates to its monomer and main function. Include one food or biological example for each, label at least two chemical features or bonds, and write a 150-word explanation of why carbon-based molecules are central to living systems.",
+        "assignmentType": "Project / Design Work",
+        "expectedEvidence": "Student submits an artifact, plan, chart, model, or project link plus a short rationale.",
+        "rubricFocus": "Completeness, practical detail, prompt alignment, and design decisions.",
+        "parentValue": "Parents can see concept accuracy, diagrams or data evidence, and whether the student connects facts to scientific reasoning."
+      },
+      "assessmentSamples": {
+        "quiz": {
+          "moduleOrder": 1,
+          "question": "Lipids are primarily used for:",
+          "options": [
+            "Energy storage and membrane structure",
+            "Carrying genetic information",
+            "Catalyzing reactions",
+            "Building cell walls"
+          ],
+          "answer": "Energy storage and membrane structure",
+          "explanation": "The correct answer is: Energy storage and membrane structure."
+        },
+        "midterm": {
+          "question": "The net ATP yield from one glucose molecule during aerobic respiration is approximately:",
+          "options": [
+            "30–32 ATP",
+            "2 ATP",
+            "4 ATP",
+            "100 ATP"
+          ],
+          "answer": "30–32 ATP",
+          "explanation": "Most biology courses use approximately 30–32 ATP as the net yield from aerobic respiration in eukaryotic cells."
+        },
+        "final": {
+          "question": "Which bonds hold the two strands of DNA together?",
+          "options": [
+            "Hydrogen bonds",
+            "Ionic bonds",
+            "Peptide bonds",
+            "Glycosidic bonds"
+          ],
+          "answer": "Hydrogen bonds",
+          "explanation": "Hydrogen bonds form between complementary base pairs and help hold the DNA strands together."
+        }
+      },
+      "rubric": [
+        {
+          "label": "Completion",
+          "detail": "Addresses every required part of the prompt."
+        },
+        {
+          "label": "Accuracy",
+          "detail": "Uses correct concepts, calculations, sources, or course vocabulary."
+        },
+        {
+          "label": "Reasoning / Evidence",
+          "detail": "Explains the answer and supports claims with examples, data, or text evidence."
+        },
+        {
+          "label": "Clarity",
+          "detail": "Organized, readable, and submitted in a form parents can understand."
+        }
+      ],
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "slug": "chemistry",
+      "name": "Chemistry",
+      "department": "Science",
+      "credits": 1,
+      "courseEvidence": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 69,
+        "midtermQuestions": 15,
+        "finalQuestions": 20
+      },
+      "gradingStory": {
+        "transcriptGrade": "Module quizzes 40%, midterm 30%, final exam 30%.",
+        "assignmentRole": "Assignments are reviewed separately as learning evidence and must be submitted before the final exam unlocks.",
+        "reviewTarget": "Teacher review should name one strength, one correction, and one next action."
+      },
+      "moduleSample": {
+        "order": 2,
+        "title": "Atomic Structure",
+        "objectives": "Identify subatomic particles; calculate atomic number, mass number, and understand isotopes; describe the Bohr model.",
+        "assignment": "Using the periodic table, complete an atom profile for five different elements: list protons, neutrons (for the most common isotope), electrons, atomic number, and mass number. Submit a table with all calculations shown, one Bohr or electron-shell diagram for each element, and a short explanation of how atomic number and mass number reveal subatomic structure.",
+        "assignmentType": "Practice / Problem Set",
+        "expectedEvidence": "Student submits worked steps, labeled diagrams, classifications, or completed practice artifacts.",
+        "rubricFocus": "Accuracy, shown work, corrections, and explanation of process.",
+        "parentValue": "Parents can see concept accuracy, diagrams or data evidence, and whether the student connects facts to scientific reasoning."
+      },
+      "assessmentSamples": {
+        "quiz": {
+          "moduleOrder": 1,
+          "question": "Which state of matter keeps a fixed volume but takes the shape of its container?",
+          "options": [
+            "Solid",
+            "Liquid",
+            "Gas",
+            "Plasma"
+          ],
+          "answer": "Liquid",
+          "explanation": "A liquid has a definite volume but no definite shape, so it takes the shape of its container."
+        },
+        "midterm": {
+          "question": "How many valence electrons does a neutral sulfur atom in Group 16 have?",
+          "options": [
+            "2",
+            "4",
+            "6",
+            "16"
+          ],
+          "answer": "6",
+          "explanation": "Sulfur is a main-group element in Group 16, so it has 6 valence electrons."
+        },
+        "final": {
+          "question": "Explain dynamic equilibrium using H₂ + I₂ ⇌ 2HI. What is happening at the molecular level when equilibrium is reached?",
+          "options": [],
+          "answer": "At dynamic equilibrium, the forward and reverse reactions occur at equal rates, so concentrations show no net change. In H₂ + I₂ ⇌ 2HI, HI forms and decomposes at the same rate while molecular collisions and reactions continue.",
+          "explanation": "A complete response states that the forward and reverse rates are equal, concentrations have no net change, and reactions continue at the molecular level."
+        }
+      },
+      "rubric": [
+        {
+          "label": "Completion",
+          "detail": "Addresses every required part of the prompt."
+        },
+        {
+          "label": "Accuracy",
+          "detail": "Uses correct concepts, calculations, sources, or course vocabulary."
+        },
+        {
+          "label": "Reasoning / Evidence",
+          "detail": "Explains the answer and supports claims with examples, data, or text evidence."
+        },
+        {
+          "label": "Clarity",
+          "detail": "Organized, readable, and submitted in a form parents can understand."
+        }
+      ],
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "slug": "us-history",
+      "name": "U.S. History",
+      "department": "Social Studies",
+      "credits": 0.5,
+      "courseEvidence": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20
+      },
+      "gradingStory": {
+        "transcriptGrade": "Module quizzes 40%, midterm 30%, final exam 30%.",
+        "assignmentRole": "Assignments are reviewed separately as learning evidence and must be submitted before the final exam unlocks.",
+        "reviewTarget": "Teacher review should name one strength, one correction, and one next action."
+      },
+      "moduleSample": {
+        "order": 1,
+        "title": "Colonial America & the Road to Revolution",
+        "objectives": "Describe the settlement of the thirteen colonies; analyze colonial life and the causes of the American Revolution.",
+        "assignment": "Compare the economies and social structures of the New England, Middle, and Southern colonies. Submit a three-column comparison chart using at least two pieces of evidence per region, then write a 300-word explanation of which regional differences later contributed to conflicts in American history and why.",
+        "assignmentType": "Project / Design Work",
+        "expectedEvidence": "Student submits an artifact, plan, chart, model, or project link plus a short rationale.",
+        "rubricFocus": "Completeness, practical detail, prompt alignment, and design decisions.",
+        "parentValue": "Parents can see source use, historical or civic reasoning, and whether the student explains cause, evidence, and consequence."
+      },
+      "assessmentSamples": {
+        "quiz": {
+          "moduleOrder": 1,
+          "question": "The Jamestown settlement (1607) was founded primarily for:",
+          "options": [
+            "Religious freedom",
+            "Economic profit by the Virginia Company",
+            "Escaping political persecution",
+            "Military strategic purposes"
+          ],
+          "answer": "Economic profit by the Virginia Company",
+          "explanation": "The correct answer is: Economic profit by the Virginia Company."
+        },
+        "midterm": {
+          "question": "The Mayflower Compact (1620) is significant because it:",
+          "options": [
+            "Declared independence from Britain",
+            "Established the first written self-government agreement in the colonies",
+            "Created the House of Burgesses",
+            "Granted religious freedom to all colonists"
+          ],
+          "answer": "Established the first written self-government agreement in the colonies",
+          "explanation": "The correct answer is: Established the first written self-government agreement in the colonies."
+        },
+        "final": {
+          "question": "Describe the Marshall Plan and explain why it was both a humanitarian and a strategic Cold War decision for the United States.",
+          "options": [],
+          "answer": "The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards.",
+          "explanation": "The correct answer is: The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards.."
+        }
+      },
+      "rubric": [
+        {
+          "label": "Completion",
+          "detail": "Addresses every required part of the prompt."
+        },
+        {
+          "label": "Accuracy",
+          "detail": "Uses correct concepts, calculations, sources, or course vocabulary."
+        },
+        {
+          "label": "Reasoning / Evidence",
+          "detail": "Explains the answer and supports claims with examples, data, or text evidence."
+        },
+        {
+          "label": "Clarity",
+          "detail": "Organized, readable, and submitted in a form parents can understand."
+        }
+      ],
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "slug": "government",
+      "name": "Government",
+      "department": "Social Studies",
+      "credits": 1,
+      "courseEvidence": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 48,
+        "midtermQuestions": 15,
+        "finalQuestions": 20
+      },
+      "gradingStory": {
+        "transcriptGrade": "Module quizzes 40%, midterm 30%, final exam 30%.",
+        "assignmentRole": "Assignments are reviewed separately as learning evidence and must be submitted before the final exam unlocks.",
+        "reviewTarget": "Teacher review should name one strength, one correction, and one next action."
+      },
+      "moduleSample": {
+        "order": 2,
+        "title": "The U.S. Constitution",
+        "objectives": "Describe the Constitutional Convention; explain the structure of the Constitution; analyze the amendment process and federalism.",
+        "assignment": "Summarize the three main compromises made at the Constitutional Convention (Great Compromise, Three-Fifths Compromise, Commerce Compromise). Submit a three-row evidence chart explaining the issue, the compromise, who benefited, and how each shaped the structure of U.S. government. Finish with one paragraph evaluating which compromise had the longest-term consequence.",
+        "assignmentType": "Project / Design Work",
+        "expectedEvidence": "Student submits an artifact, plan, chart, model, or project link plus a short rationale.",
+        "rubricFocus": "Completeness, practical detail, prompt alignment, and design decisions.",
+        "parentValue": "Parents can see source use, historical or civic reasoning, and whether the student explains cause, evidence, and consequence."
+      },
+      "assessmentSamples": {
+        "quiz": {
+          "moduleOrder": 1,
+          "question": "According to John Locke, the primary purpose of government is to:",
+          "options": [
+            "Maintain order through fear",
+            "Protect natural rights of life, liberty, and property",
+            "Expand national territory",
+            "Control economic production"
+          ],
+          "answer": "Protect natural rights of life, liberty, and property",
+          "explanation": "The correct answer is: Protect natural rights of life, liberty, and property."
+        },
+        "midterm": {
+          "question": "The principle of popular sovereignty means that:",
+          "options": [
+            "The president has supreme authority",
+            "Government power derives from the consent of the governed",
+            "Congress can override any court decision",
+            "States have power over the federal government"
+          ],
+          "answer": "Government power derives from the consent of the governed",
+          "explanation": "The correct answer is: Government power derives from the consent of the governed."
+        },
+        "final": {
+          "question": "Compare the U.S. presidential system with a parliamentary system on two dimensions: how the executive is chosen and how the executive can be removed from office.",
+          "options": [],
+          "answer": "In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance.",
+          "explanation": "The correct answer is: In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance.."
+        }
+      },
+      "rubric": [
+        {
+          "label": "Completion",
+          "detail": "Addresses every required part of the prompt."
+        },
+        {
+          "label": "Accuracy",
+          "detail": "Uses correct concepts, calculations, sources, or course vocabulary."
+        },
+        {
+          "label": "Reasoning / Evidence",
+          "detail": "Explains the answer and supports claims with examples, data, or text evidence."
+        },
+        {
+          "label": "Clarity",
+          "detail": "Organized, readable, and submitted in a form parents can understand."
+        }
+      ],
+      "status": "pass",
+      "issues": []
+    }
+  ]
+}

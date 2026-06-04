@@ -25,8 +25,8 @@ const TRUST_STEPS = [
       en: 'Browse courses with module outlines, free required resources, assignments, quizzes, midterms, finals, and lesson previews before paying.',
       zh: '付款前即可浏览课程模块、免费必要资源、作业、测验、期中、期末与课程预览。',
     },
-    to: '/academics',
-    cta: { en: 'Browse academics', zh: '查看课程' },
+    to: '/assessment-proof',
+    cta: { en: 'See assessment proof', zh: '查看评量证据' },
   },
   {
     k: '03',

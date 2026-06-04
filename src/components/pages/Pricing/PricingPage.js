@@ -137,8 +137,8 @@ const PROOF_POINTS = [
       en: 'Showcase courses now expose module outlines, free required resources, assignments, quizzes, midterms, finals, and feedback evidence instead of hiding learning behind a checkout.',
       zh: '展示课程会呈现模块大纲、免费必要资源、作业、测验、期中、期末与批改证据，不把学习质量藏在付款后。',
     },
-    to: '/academics',
-    cta: { en: 'Browse academics', zh: '查看课程' },
+    to: '/assessment-proof',
+    cta: { en: 'See assessment proof', zh: '查看评量证据' },
     color: '#C84B0A',
   },
 ];

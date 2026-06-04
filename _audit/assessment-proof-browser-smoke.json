@@ -1,0 +1,166 @@
+{
+  "generatedAt": "2026-06-04T13:41:16.109Z",
+  "base": "http://localhost:3033",
+  "results": [
+    {
+      "route": "/trust-center",
+      "viewport": "desktop",
+      "status": 200,
+      "h1": "A serious school should be inspectable.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/pricing",
+      "viewport": "desktop",
+      "status": 200,
+      "h1": "Choose how much guidance your child needs.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [
+        "net::ERR_ABORTED http://localhost:3033/demo/giis-demo.mp4"
+      ],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/apply",
+      "viewport": "desktop",
+      "status": 200,
+      "h1": "Know the path before you pay.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/parent/demo",
+      "viewport": "desktop",
+      "status": 200,
+      "h1": "Yunfan's progress this week杨芸帆",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/welcome",
+      "viewport": "desktop",
+      "status": 200,
+      "h1": "You're in. 🎉",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/assessment-proof",
+      "viewport": "desktop",
+      "status": 200,
+      "h1": "Parents should see what students actually submit.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/trust-center",
+      "viewport": "mobile",
+      "status": 200,
+      "h1": "A serious school should be inspectable.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/pricing",
+      "viewport": "mobile",
+      "status": 200,
+      "h1": "Choose how much guidance your child needs.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [
+        "net::ERR_ABORTED http://localhost:3033/demo/giis-demo.mp4"
+      ],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/apply",
+      "viewport": "mobile",
+      "status": 200,
+      "h1": "Know the path before you pay.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/parent/demo",
+      "viewport": "mobile",
+      "status": 200,
+      "h1": "Yunfan's progress this week杨芸帆",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/welcome",
+      "viewport": "mobile",
+      "status": 200,
+      "h1": "You're in. 🎉",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    },
+    {
+      "route": "/assessment-proof",
+      "viewport": "mobile",
+      "status": 200,
+      "h1": "Parents should see what students actually submit.",
+      "pass": true,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failed": [],
+      "prohibitedHits": [],
+      "missingRequired": []
+    }
+  ]
+}

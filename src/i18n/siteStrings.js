@@ -43,12 +43,14 @@ export function getNavStrings(language) {
     dropdownResources: en
       ? [
           { label: 'Academic Advising', to: '/support' },
+          { label: 'Assessment Proof',  to: '/assessment-proof' },
           { label: 'Life Counseling',   to: '/support' },
           { label: 'Student Handbook',  to: '/handbook' },
           { label: 'Academic Calendar', to: '/calendar' },
         ]
       : [
           { label: '学业辅导',     to: '/support' },
+          { label: '评量证据',     to: '/assessment-proof' },
           { label: '生活辅导',     to: '/support' },
           { label: '学生与家庭手册', to: '/handbook' },
           { label: '学校日历',     to: '/calendar' },
