@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
@@ -40,7 +40,9 @@ export default function AssignmentQueue() {
   const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState('');
 
-  const session = getAdminSession();
+  // getAdminSession() returns a freshly-parsed object each call; memoize so it is a
+  // stable reference and does not retrigger the data-loading effect on every render.
+  const session = useMemo(() => getAdminSession(), []);
   useEffect(() => { if (!session) navigate('/admin/login', { replace: true }); }, [session, navigate]);
 
   const load = useCallback(async () => {
