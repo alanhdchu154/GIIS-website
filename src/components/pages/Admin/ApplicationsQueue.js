@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
@@ -71,9 +71,7 @@ export default function ApplicationsQueue() {
   const [rejectReason, setRejectReason] = useState('grade_mismatch');
   const [notesDraft, setNotesDraft] = useState({}); // { [appId]: string }
 
-  // Memoize: getAdminSession() returns a new object each call, which would otherwise
-  // retrigger the load effect every render (infinite fetch loop).
-  const session = useMemo(() => getAdminSession(), []);
+  const session = getAdminSession();
   useEffect(() => { if (!session) navigate('/admin/login', { replace: true }); }, [session, navigate]);
 
   const load = useCallback(async () => {
