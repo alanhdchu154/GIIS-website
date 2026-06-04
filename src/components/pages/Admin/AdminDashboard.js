@@ -319,7 +319,7 @@ export default function AdminDashboard({ language }) {
             <span className="text-muted">{isEn ? 'Monthly recurring' : '月经常性收入'}: </span>
             <strong style={{ fontSize: 18 }}>${(revenue.mrrCents / 100).toLocaleString(undefined, { maximumFractionDigits: 0 })}</strong>
           </span>
-          <span><span className="badge bg-success">{revenue.activeCount}</span> <span className="text-muted small">{isEn ? 'paying' : '在订'}</span></span>
+          <span><span className="badge bg-success">{revenue.activeCount}</span> <span className="text-muted small">{isEn ? 'active plans' : '有效方案'}</span></span>
           {revenue.atRiskCount > 0 && (
             <span><span className="badge bg-danger">{revenue.atRiskCount}</span> <span className="text-muted small">{isEn ? 'at risk' : '风险'}</span></span>
           )}

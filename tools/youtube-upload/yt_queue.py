@@ -44,6 +44,7 @@ from __future__ import annotations
 import argparse, json, sys, subprocess, datetime, os
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from approval_gate import approved_slugs
 
 # ─── paths ─────────────────────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parents[2]   # giis-website/
@@ -128,20 +129,9 @@ def load_gate_ready_slugs(path: Path = APPROVED_READY_TO_UPLOAD) -> set[str]:
 
     Missing/invalid approval output is treated as an empty ready set. That is
     intentionally conservative for unattended uploads. The release gate can
-    nominate lessons, but upload requires this explicit human approval file.
+    nominate lessons, but upload requires a complete clean-pass approval row.
     """
-    try:
-        payload = json.loads(path.read_text())
-    except Exception:
-        return set()
-    if isinstance(payload, list):
-        return {str(row) for row in payload if row}
-    approved = payload.get("approved_ready_to_upload", payload.get("ready_to_upload", []))
-    return {
-        str(row.get("slug") if isinstance(row, dict) else row)
-        for row in approved
-        if (row.get("slug") if isinstance(row, dict) else row)
-    }
+    return approved_slugs(path)
 
 
 # ─── output formatters ─────────────────────────────────────────────────

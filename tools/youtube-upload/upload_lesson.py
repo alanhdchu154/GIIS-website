@@ -12,24 +12,14 @@ as the thumbnail. Prints the YouTube URL when done.
 from __future__ import annotations
 import argparse, json, sys, subprocess
 from pathlib import Path
+from approval_gate import approved_slugs as load_approved_slugs
 
 ROOT = Path(__file__).resolve().parents[2]
 APPROVED_READY_TO_UPLOAD = ROOT / "teaching-videos" / "_audit" / "release-gate" / "approved_ready_to_upload.json"
 
 
 def approved_slugs(path: Path = APPROVED_READY_TO_UPLOAD) -> set[str]:
-    try:
-        payload = json.loads(path.read_text())
-    except Exception:
-        return set()
-    if isinstance(payload, list):
-        return {str(row) for row in payload if row}
-    rows = payload.get("approved_ready_to_upload", payload.get("ready_to_upload", []))
-    return {
-        str(row.get("slug") if isinstance(row, dict) else row)
-        for row in rows
-        if (row.get("slug") if isinstance(row, dict) else row)
-    }
+    return load_approved_slugs(path)
 
 
 def build_description(script: dict, lesson_dir: Path) -> str:

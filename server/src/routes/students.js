@@ -70,12 +70,13 @@ const INACTIVE_DAYS = 7;
 
 // Collapse a student's subscriptions into one operational status.
 function resolveSubscription(subs) {
-  if (!subs || subs.length === 0) return { state: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null };
+  if (!subs || subs.length === 0) return { id: null, state: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null };
   const pick = (pred) => subs.find(pred);
   const active = pick((s) => SUB_ACTIVE.includes(s.status));
   if (active) {
     return {
       state: active.cancelAtPeriodEnd ? 'canceling' : 'active',
+      id: active.id || null,
       planType: active.planType,
       mrrCents: PLAN_MRR_CENTS[active.planType] ?? 0,
       canceling: !!active.cancelAtPeriodEnd,
@@ -83,10 +84,10 @@ function resolveSubscription(subs) {
     };
   }
   const issue = pick((s) => SUB_PAYMENT_ISSUE.includes(s.status));
-  if (issue) return { state: 'past_due', planType: issue.planType, mrrCents: 0, canceling: false, currentPeriodEnd: issue.currentPeriodEnd || null };
+  if (issue) return { id: issue.id || null, state: 'past_due', planType: issue.planType, mrrCents: 0, canceling: false, currentPeriodEnd: issue.currentPeriodEnd || null };
   const churned = pick((s) => ['cancelled', 'canceled', 'refunded'].includes(s.status));
-  if (churned) return { state: 'churned', planType: churned.planType, mrrCents: 0, canceling: false, currentPeriodEnd: churned.currentPeriodEnd || null };
-  return { state: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null };
+  if (churned) return { id: churned.id || null, state: 'churned', planType: churned.planType, mrrCents: 0, canceling: false, currentPeriodEnd: churned.currentPeriodEnd || null };
+  return { id: null, state: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null };
 }
 
 function dateOnly(d) {
@@ -506,12 +507,12 @@ router.get('/ops-summary', authenticate, requireAdmin, async (req, res) => {
           },
         },
         loginSessions: { select: { lastSeenAt: true, startedAt: true }, orderBy: { lastSeenAt: 'desc' }, take: 1 },
-        subscriptions: { select: { status: true, planType: true, cancelAtPeriodEnd: true, currentPeriodEnd: true } },
+        subscriptions: { select: { id: true, status: true, planType: true, cancelAtPeriodEnd: true, currentPeriodEnd: true } },
         careState: { select: { riskLevel: true, status: true, advisorOwner: true, nextCheckInDueAt: true } },
         careLogs: { where: { type: 'parent_contact' }, select: { createdAt: true }, orderBy: { createdAt: 'desc' }, take: 1 },
       },
     }),
-    prisma.subscription.findMany({ select: { purchaserEmail: true, studentId: true, status: true, planType: true, cancelAtPeriodEnd: true, currentPeriodEnd: true } }),
+    prisma.subscription.findMany({ select: { id: true, purchaserEmail: true, studentId: true, status: true, planType: true, cancelAtPeriodEnd: true, currentPeriodEnd: true } }),
     prisma.assignmentSubmission.count({ where: { gradedAt: null } }),
     prisma.application.count({ where: { status: 'pending' } }),
   ]);
@@ -529,6 +530,8 @@ router.get('/ops-summary', authenticate, requireAdmin, async (req, res) => {
   let mrrCents = 0;
   let activeCount = 0;
   let atRiskCount = 0;
+  const countedRevenueSubs = new Set();
+  const countedRiskSubs = new Set();
 
   const list = students.map((s) => {
     const status = s.withdrawalDate ? 'withdrawn' : (s.graduationDate && dateOnly(s.graduationDate) <= today ? 'graduated' : 'enrolled');
@@ -563,8 +566,16 @@ router.get('/ops-summary', authenticate, requireAdmin, async (req, res) => {
     const sub = resolveSubscription(subs);
     const paymentIssue = sub.state === 'past_due' || sub.state === 'canceling';
     if (status !== 'withdrawn') {
-      if (sub.state === 'active') { activeCount += 1; mrrCents += sub.mrrCents; }
-      if (paymentIssue) atRiskCount += 1;
+      const subKey = sub.id ? `sub:${sub.id}` : null;
+      if (sub.state === 'active' && subKey && !countedRevenueSubs.has(subKey)) {
+        countedRevenueSubs.add(subKey);
+        activeCount += 1;
+        mrrCents += sub.mrrCents;
+      }
+      if (paymentIssue && subKey && !countedRiskSubs.has(subKey)) {
+        countedRiskSubs.add(subKey);
+        atRiskCount += 1;
+      }
     }
 
     const nextCheckInDueAt = s.careState?.nextCheckInDueAt ? dateOnly(s.careState.nextCheckInDueAt) : null;

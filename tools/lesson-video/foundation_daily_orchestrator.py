@@ -41,6 +41,7 @@ RUN_ROOT = TEACHING_ROOT / "_audit" / "foundation-daily"
 COURSE_DESIGN_ROOT = TEACHING_ROOT / "_audit" / "course-design"
 STATE_PATH = RUN_ROOT / "state.json"
 APPROVAL_PATH = TEACHING_ROOT / "_audit" / "release-gate" / "approved_ready_to_upload.json"
+LATEST_FOUNDATION_APPROVAL_PATH = TEACHING_ROOT / "_audit" / "release-gate" / "latest-foundation-approval.json"
 HANDOFF_DIR = ROOT / "umi" / "handoffs"
 CC_WORKER = ROOT / "tools" / "lesson-video" / "cc_foundation_worker.py"
 FOUNDATION_GATE = ROOT / "tools" / "lesson-video" / "foundation_video_gate.py"
@@ -846,22 +847,36 @@ def gate_ready(folder: Path) -> tuple[bool, dict[str, Any], list[str]]:
     return not reasons, audit, reasons
 
 
+def is_clean_approval_row(row: Any) -> bool:
+    if not isinstance(row, dict):
+        return False
+    required = ("slug", "path", "quality_score", "verdict", "approved_by", "approved_at")
+    if any(not row.get(field) for field in required):
+        return False
+    if row.get("verdict") != "pass":
+        return False
+    try:
+        return int(row.get("quality_score")) >= 100
+    except (TypeError, ValueError):
+        return False
+
+
 def append_approval(rows: list[dict[str, Any]]) -> None:
     existing = read_json(APPROVAL_PATH, {})
     existing_rows = existing.get("approved_ready_to_upload", existing.get("ready_to_upload", [])) if isinstance(existing, dict) else existing
     merged = {}
     for row in existing_rows or []:
-        if isinstance(row, str):
-            merged[row] = {"slug": row}
-        elif isinstance(row, dict) and row.get("slug"):
+        if is_clean_approval_row(row):
             merged[str(row["slug"])] = row
     for row in rows:
         merged[row["slug"]] = row
-    write_json(APPROVAL_PATH, {
+    payload = {
         "generated_at": now_utc(),
         "policy": "foundation_daily_auto_approval_clean_pass_score_100",
         "approved_ready_to_upload": sorted(merged.values(), key=lambda r: r.get("slug", "")),
-    })
+    }
+    write_json(APPROVAL_PATH, payload)
+    write_json(LATEST_FOUNDATION_APPROVAL_PATH, payload)
     print(f"[approval] wrote {APPROVAL_PATH.relative_to(ROOT)} ({len(rows)} new/updated)")
 
 
