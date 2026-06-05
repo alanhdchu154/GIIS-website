@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
 
-const SCHOOL_EMAIL = 'admissions@genesisideas.school';
-
 const REVIEW_STEPS = [
   {
     title: { en: 'Send official records', zh: '提交正式学籍记录' },
@@ -196,9 +194,9 @@ export default function TransferStudentsPage({ language, toggleLanguage }) {
             <Link to="/trust-center" style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', textDecoration: 'none', fontWeight: 750 }}>
               {isEn ? 'Open Trust Center' : '打开信任中心'}
             </Link>
-            <a href={`mailto:${SCHOOL_EMAIL}`} style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', textDecoration: 'none', fontWeight: 750 }}>
-              {isEn ? 'Email Admissions' : '联系招生'}
-            </a>
+            <Link to="/admission" style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', textDecoration: 'none', fontWeight: 750 }}>
+              {isEn ? 'Review admissions path' : '查看招生路径'}
+            </Link>
           </div>
         </div>
       </section>

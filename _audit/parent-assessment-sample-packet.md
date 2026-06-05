@@ -1,6 +1,6 @@
 # GIIS Parent Assessment Sample Packet
 
-Generated: 2026-06-04T19:21:35.642Z
+Generated: 2026-06-05T03:33:59.981Z
 
 Purpose: give parents and advisors concrete proof that GIIS courses include reviewable student work, quizzes, midterms, finals, and a visible grading story.
 

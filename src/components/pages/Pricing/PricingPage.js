@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
 import DemoEmbed from '../../main/DemoEmbed.js';
 
-const SCHOOL_EMAIL = 'admissions@genesisideas.school';
-
 const TIERS = [
   {
     key: 'self-paced',
@@ -468,9 +466,9 @@ export default function PricingPage({ language, toggleLanguage }) {
             <Link to="/apply" style={{ padding: '13px 28px', borderRadius: 8, background: '#d5a836', color: '#1a1a2e', fontWeight: 850, textDecoration: 'none' }}>
               {isEn ? 'Apply Now' : '立即申请'}
             </Link>
-            <a href={`mailto:${SCHOOL_EMAIL}`} style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', fontWeight: 750, textDecoration: 'none' }}>
-              {isEn ? 'Email Admissions' : '联系招生'}
-            </a>
+            <Link to="/admission" style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', fontWeight: 750, textDecoration: 'none' }}>
+              {isEn ? 'Review admissions path' : '查看招生路径'}
+            </Link>
           </div>
         </div>
       </section>

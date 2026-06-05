@@ -304,7 +304,7 @@ export default function AdmissionMain({ language, toggleLanguage }) {
             <span style={{ fontSize: '22px', flexShrink: 0 }}>🎉</span>
             <div>
               <p style={{ margin: '0 0 4px', fontWeight: 800, fontSize: '14px', color: '#1b5e20' }}>
-                {isEn ? 'Proven Results — Class of 2026' : '真实成果 · 2026 届'}
+                {isEn ? 'Reported Outcomes — Class of 2026' : '家庭回报成果 · 2026 届'}
               </p>
               <p style={{ margin: 0, fontSize: '13px', color: '#2e7d32', lineHeight: 1.7 }}>
                 {isEn

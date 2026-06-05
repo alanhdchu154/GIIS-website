@@ -18,11 +18,20 @@ const FILES = [
   'public/index.html',
   'src/components/Footer/Footer.js',
   'src/components/main/LessonPreview.js',
-  'src/components/pages/Discovery/Discovery/DiscoveryIntroduction2.js',
   ...collectJsFiles('src/components/pages/Homepage'),
   ...collectJsFiles('src/components/pages/Academics'),
+  ...collectJsFiles('src/components/pages/Admission'),
+  ...collectJsFiles('src/components/pages/Apply'),
+  ...collectJsFiles('src/components/pages/AssessmentProof'),
   ...collectJsFiles('src/components/pages/Discovery'),
+  ...collectJsFiles('src/components/pages/Handbook'),
+  ...collectJsFiles('src/components/pages/Parent'),
   ...collectJsFiles('src/components/pages/Pathways'),
+  ...collectJsFiles('src/components/pages/Pricing'),
+  ...collectJsFiles('src/components/pages/SchoolProfile'),
+  ...collectJsFiles('src/components/pages/TransferStudents'),
+  ...collectJsFiles('src/components/pages/TrustCenter'),
+  ...collectJsFiles('src/components/pages/Welcome'),
 ];
 
 const RULES = [
@@ -38,12 +47,22 @@ const RULES = [
   },
   {
     id: 'selective-admission-promise',
-    pattern: /well-positioned|colleges? like .*look for|programs? .*look for|top programs at|selective universities|top US universit|top US programs|US university admissions standards|world-class education|guaranteed admission|guaranteed acceptance/i,
+    pattern: /proven results|well-positioned|colleges? like .*look for|programs? .*look for|top programs at|selective universities|top US universit|top US programs|US university admissions standards|world-class education|guaranteed admission|guaranteed acceptance/i,
     message: 'Public pathway copy should describe evidence-building and advising support, not admissions advantage or outcomes.',
+  },
+  {
+    id: 'direct-admissions-mailto',
+    pattern: /mailto:\$\{?SCHOOL_EMAIL|mailto:admissions@genesisideas\.school/i,
+    paths: [
+      'src/components/pages/Pricing/PricingPage.js',
+      'src/components/pages/TransferStudents/TransferStudentsPage.js',
+    ],
+    message: 'Public admission/pricing CTAs should route through the application/admission flow instead of mailto buttons.',
   },
   {
     id: 'unsafe-school-claim',
     pattern: /US-accredited|Cognia|Common App approved|CEEB code 650/i,
+    allow: (line) => /not currently accredited|not accredited|未经过/.test(line),
     message: 'Public school-status claims must stay conservative and verified.',
   },
   {
@@ -63,6 +82,8 @@ for (const relPath of FILES) {
   lines.forEach((line, index) => {
     for (const rule of RULES) {
       if (!rule.pattern.test(line)) continue;
+      if (rule.paths && !rule.paths.includes(relPath)) continue;
+      if (rule.allow && rule.allow(line, relPath)) continue;
       issueCount += 1;
       console.log(`${relPath}:${index + 1} [${rule.id}] ${rule.message}`);
       console.log(`  ${line.trim()}`);
