@@ -60,6 +60,20 @@ function Nav({ language, toggleLanguage }) {
         setIsCollapsed(true);
     }
 
+    // Mobile menu mirrors the desktop dropdowns from the same siteStrings source,
+    // grouped into sections so it reads as a hierarchy instead of a flat wall.
+    const mobileSections = [
+        { header: t.about, items: t.dropdownAbout },
+        {
+            header: t.academics,
+            items: isEn
+                ? [{ label: 'Course Catalog', to: '/academics' }, { label: 'All Pathways', to: '/pathways' }]
+                : [{ label: '课程目录', to: '/academics' }, { label: '学习路径', to: '/pathways' }],
+        },
+        { header: t.admission, items: t.dropdownAdmission },
+        { header: t.resources, items: t.dropdownResources },
+    ];
+
     async function handleLogout() {
         const API = getApiBase();
         if (studentSession) {
@@ -86,29 +100,17 @@ function Nav({ language, toggleLanguage }) {
                     <>
                         <div className={`collapse navbar-collapse ${!isCollapsed ? 'show' : ''} ${styles.mobileMenu}`}>
                             <ul className={styles.mobileItems}>
-                                <li onClick={() => go('/discovery')}>
-                                    <Link to="/discovery" onClick={e => e.preventDefault()}>{t.about}</Link>
-                                </li>
-                                <li onClick={() => go('/academics')}>
-                                    <Link to="/academics" onClick={e => e.preventDefault()}>{t.academics}</Link>
-                                </li>
-                                <li onClick={() => go('/pathways')}>
-                                    <Link to="/pathways" onClick={e => e.preventDefault()}>
-                                        {isEn ? 'All Pathways' : '学习路径'}
-                                    </Link>
-                                </li>
-                                <li onClick={() => go('/admission')}>
-                                    <Link to="/admission" onClick={e => e.preventDefault()}>{t.admission}</Link>
-                                </li>
-                                <li onClick={() => go('/transfer-students')}>
-                                    <Link to="/transfer-students" onClick={e => e.preventDefault()}>{isEn ? 'Transfer Students' : '转学生'}</Link>
-                                </li>
-                                <li onClick={() => go('/pricing')}>
-                                    <Link to="/pricing" onClick={e => e.preventDefault()}>{isEn ? 'Tuition & Pricing' : '学费'}</Link>
-                                </li>
-                                <li onClick={() => go('/support')}>
-                                    <Link to="/support" onClick={e => e.preventDefault()}>{t.resources}</Link>
-                                </li>
+                                {mobileSections.map(sec => (
+                                    <React.Fragment key={sec.header}>
+                                        <li className={styles.mobileSectionHead}>{sec.header}</li>
+                                        {sec.items.map(item => (
+                                            <li key={`${item.to}-${item.label}`} className={styles.mobileSubItem}
+                                                onClick={() => go(item.to)}>
+                                                <Link to={item.to} onClick={e => e.preventDefault()}>{item.label}</Link>
+                                            </li>
+                                        ))}
+                                    </React.Fragment>
+                                ))}
                             </ul>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>

@@ -23,7 +23,7 @@ import { getUpcomingEvents, formatDate } from '../../../config/schoolCalendar';
 
 // Hardcoded preview data — Yunfan Yang from seed.js
 const PREVIEW = {
-  parent: { name: 'Yali Yang', initials: 'YL', email: 'yali.yang@example.com' },
+  parent: { name: 'Yali Yang', nameZh: '杨亚利', initials: 'YL', email: 'yali.yang@example.com' },
   student: {
     name: 'Yunfan Yang', nameZh: '杨芸帆',
     initials: 'YY',
@@ -169,10 +169,10 @@ export default function ParentDashboardDemo({ language }) {
 
           {/* Greeting */}
           <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 4px' }}>
-            {isEn ? `Hello ${p.parent.name}` : `您好，${p.parent.name}`}
+            {isEn ? `Hello ${p.parent.name}` : `您好，${p.parent.nameZh}`}
           </p>
           <h1 style={{ fontSize: '28px', fontWeight: 800, margin: '0 0 24px', letterSpacing: '-0.01em' }}>
-            {isEn ? `${p.student.name.split(' ')[0]}'s progress this week` : `${p.student.nameZh.charAt(0)}${p.student.nameZh.slice(1, 2)}本周进度`}
+            {isEn ? `${p.student.name.split(' ')[0]}'s progress this week` : `${p.student.nameZh.slice(1)}本周进度`}
             <span style={{ color: '#5c6578', fontWeight: 500, fontSize: '18px', marginLeft: '8px' }}>
               {isEn ? p.student.nameZh : ''}
             </span>

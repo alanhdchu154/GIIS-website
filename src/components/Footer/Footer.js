@@ -20,11 +20,14 @@ const NAV_COLS = [
     titleZh: '学校',
     links: [
       { en: 'About & Leadership', zh: '关于我们', to: '/about' },
+      { en: 'Trust Center', zh: '信任中心', to: '/trust-center' },
       { en: 'School Profile (PDF)', zh: '学校简介 (PDF)', to: '/school-profile' },
       { en: 'Student Handbook', zh: '学生手册', to: '/handbook' },
       { en: 'Admission', zh: '招生', to: '/admission' },
       { en: 'Transfer Students', zh: '转学生入学', to: '/transfer-students' },
       { en: 'Tuition & Pricing', zh: '学费', to: '/pricing' },
+      { en: 'Assessment Proof', zh: '评量证据', to: '/assessment-proof' },
+      { en: 'Parent Dashboard Preview', zh: '家长面板预览', to: '/parent/demo' },
       { en: 'Discovery', zh: '了解我们', to: '/discovery' },
       { en: 'Support', zh: '支持', to: '/support' },
     ],
@@ -35,7 +38,7 @@ const NAV_COLS = [
     links: [
       { en: 'Student Login', zh: '学生登录', to: '/login' },
       { en: 'Parent Portal', zh: '家长入口', to: '/parent/login' },
-      { en: 'Apply Now', zh: '立即申请', to: '/admission' },
+      { en: 'Apply Now', zh: '立即申请', to: '/apply' },
     ],
   },
 ];

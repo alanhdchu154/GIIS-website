@@ -15,45 +15,43 @@ export function getNavStrings(language) {
           { label: 'About GIIS',           to: '/discovery#about' },
           { label: 'Mission & Values',     to: '/discovery#mission' },
           { label: 'Leadership & Faculty', to: '/about' },
-          { label: 'Trust Center',          to: '/trust-center' },
           { label: 'School Profile (PDF)', to: '/school-profile' },
         ]
       : [
           { label: '关于 GIIS',     to: '/discovery#about' },
           { label: '使命与价值观',   to: '/discovery#mission' },
           { label: '学校领导与师资', to: '/about' },
-          { label: '信任中心',       to: '/trust-center' },
           { label: '学校简介 (PDF)', to: '/school-profile' },
         ],
     dropdownAdmission: en
       ? [
+          { label: 'Trust Center',       to: '/trust-center' },
           { label: 'Admission Overview', to: '/admission' },
           { label: 'Transfer Students',  to: '/transfer-students' },
-          { label: 'Apply Now',          to: '/apply' },
           { label: 'Tuition & Pricing',  to: '/pricing' },
-          { label: 'Trust Center',       to: '/trust-center' },
+          { label: 'Apply Now',          to: '/apply' },
         ]
       : [
+          { label: '信任中心',   to: '/trust-center' },
           { label: '招生概览',   to: '/admission' },
           { label: '转学生入学', to: '/transfer-students' },
-          { label: '立即申请',   to: '/apply' },
           { label: '学费与价格', to: '/pricing' },
-          { label: '信任中心',   to: '/trust-center' },
+          { label: '立即申请',   to: '/apply' },
         ],
     dropdownResources: en
       ? [
-          { label: 'Academic Advising', to: '/support' },
-          { label: 'Assessment Proof',  to: '/assessment-proof' },
-          { label: 'Life Counseling',   to: '/support' },
-          { label: 'Student Handbook',  to: '/handbook' },
-          { label: 'Academic Calendar', to: '/calendar' },
+          { label: 'Parent Dashboard Preview', to: '/parent/demo' },
+          { label: 'Assessment Proof',         to: '/assessment-proof' },
+          { label: 'Academic & Life Support',  to: '/support' },
+          { label: 'Student Handbook',         to: '/handbook' },
+          { label: 'Academic Calendar',        to: '/calendar' },
         ]
       : [
-          { label: '学业辅导',     to: '/support' },
-          { label: '评量证据',     to: '/assessment-proof' },
-          { label: '生活辅导',     to: '/support' },
+          { label: '家长面板预览',   to: '/parent/demo' },
+          { label: '评量证据',       to: '/assessment-proof' },
+          { label: '学业与生活支持', to: '/support' },
           { label: '学生与家庭手册', to: '/handbook' },
-          { label: '学校日历',     to: '/calendar' },
+          { label: '学校日历',       to: '/calendar' },
         ],
   };
 }
