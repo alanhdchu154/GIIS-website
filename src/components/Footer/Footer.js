@@ -11,6 +11,7 @@ const NAV_COLS = [
     titleZh: '学术',
     links: [
       { en: 'Academics Overview', zh: '学术概览', to: '/academics' },
+      { en: 'Lesson Library', zh: '课程库', to: '/lessons' },
       { en: 'Academic Pathways', zh: '学习路径', to: '/pathways' },
       { en: 'Course Catalog', zh: '课程目录', to: '/academics#course-catalog' },
     ],

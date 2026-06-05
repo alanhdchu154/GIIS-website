@@ -67,8 +67,8 @@ function Nav({ language, toggleLanguage }) {
         {
             header: t.academics,
             items: isEn
-                ? [{ label: 'Course Catalog', to: '/academics' }, { label: 'All Pathways', to: '/pathways' }]
-                : [{ label: '课程目录', to: '/academics' }, { label: '学习路径', to: '/pathways' }],
+                ? [{ label: 'Course Catalog', to: '/academics' }, { label: 'Lesson Library', to: '/lessons' }, { label: 'All Pathways', to: '/pathways' }]
+                : [{ label: '课程目录', to: '/academics' }, { label: '课程库', to: '/lessons' }, { label: '学习路径', to: '/pathways' }],
         },
         { header: t.admission, items: t.dropdownAdmission },
         { header: t.resources, items: t.dropdownResources },
@@ -174,6 +174,9 @@ function Nav({ language, toggleLanguage }) {
                             <div className={styles.megaMenu}>
                                 <Link to="/academics" className={styles.megaCatalogLink}>
                                     📋&nbsp;&nbsp;{isEn ? 'Course Catalog' : '课程目录'}
+                                </Link>
+                                <Link to="/lessons" className={styles.megaCatalogLink}>
+                                    ▶&nbsp;&nbsp;{isEn ? 'Lesson Library' : '课程库'}
                                 </Link>
                                 <p className={styles.megaSection}>
                                     {isEn ? 'PATHWAYS' : '学习路径'}
