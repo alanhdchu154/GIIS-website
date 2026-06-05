@@ -193,7 +193,27 @@ Status: maintain.
   `_audit/transfer-buyer-journey-smoke.md`; application payload smoke:
   `_audit/transfer-application-payload-smoke.md`.
 - Assessment proof preview is now linked from Trust Center, Pricing, and the
-  Resources menu so parents can inspect course evidence without logging in.
+  For Parents menu so parents can inspect course evidence without logging in.
+- Public Lesson Library added at `/lessons` on 2026-06-04: a browsable,
+  click-to-play library of every uploaded foundation lesson, reading the same
+  `public/data/lessons-manifest.json` as the Learn Portal with counts computed
+  live from the manifest (currently 23 lessons / 3 courses, growing with the
+  daily pipeline). Foundation (non-AP) framing only; bottom CTA leads with
+  Apply. Linked from the homepage `LessonPreview` and the nav/footer Academics
+  group.
+- Nav/footer conversion + IA pass on 2026-06-04: added a primary gold "Apply"
+  CTA on desktop and mobile and demoted Log In to a secondary link; renamed the
+  "Resources" menu to "For Parents" and consolidated the scattered trust
+  surfaces (Trust Center, Lesson Library, Assessment Proof, Parent Dashboard
+  Preview) under it; the mobile menu is now a grouped accordion sharing one
+  `siteStrings` source with desktop; the footer was regrouped to match
+  (For Parents + School & Admission columns). De-duplicated Trust Center.
+  Verified with a local production build plus desktop/mobile screenshots.
+- Dev billing safety on 2026-06-04: `.env.development` now uses the Stripe
+  `pk_test` key so local checkout never hits live billing. Note: only
+  `.env.development` is committed, so the production/CI build must inject
+  `REACT_APP_STRIPE_PUBLISHABLE_KEY` (pk_live) from the deploy environment —
+  verify this before relying on live checkout.
 - Public trust claim cleanup completed 2026-06-04 with cc collaboration:
   homepage, footer, academics, discovery, pathways, school profile, handbook,
   and public meta copy now avoid high-risk "top university", admissions
