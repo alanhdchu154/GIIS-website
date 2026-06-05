@@ -6,7 +6,7 @@ export function getNavStrings(language) {
     about:    en ? 'ABOUT'     : '关于我们',
     academics: en ? 'ACADEMICS' : '学术',
     admission: en ? 'ADMISSION' : '入学',
-    resources: en ? 'RESOURCES' : '资源',
+    resources: en ? 'FOR PARENTS' : '家长专区',
     langToggleAria: en ? 'Switch to Chinese' : 'Switch to English',
     /** Single entry: student portal (admin uses same page with admin credentials) */
     signIn: en ? 'Login' : '登入',
@@ -25,14 +25,12 @@ export function getNavStrings(language) {
         ],
     dropdownAdmission: en
       ? [
-          { label: 'Trust Center',       to: '/trust-center' },
           { label: 'Admission Overview', to: '/admission' },
           { label: 'Transfer Students',  to: '/transfer-students' },
           { label: 'Tuition & Pricing',  to: '/pricing' },
           { label: 'Apply Now',          to: '/apply' },
         ]
       : [
-          { label: '信任中心',   to: '/trust-center' },
           { label: '招生概览',   to: '/admission' },
           { label: '转学生入学', to: '/transfer-students' },
           { label: '学费与价格', to: '/pricing' },
@@ -40,15 +38,19 @@ export function getNavStrings(language) {
         ],
     dropdownResources: en
       ? [
-          { label: 'Parent Dashboard Preview', to: '/parent/demo' },
+          { label: 'Trust Center',             to: '/trust-center' },
+          { label: 'Lesson Library',           to: '/lessons' },
           { label: 'Assessment Proof',         to: '/assessment-proof' },
+          { label: 'Parent Dashboard Preview', to: '/parent/demo' },
           { label: 'Academic & Life Support',  to: '/support' },
           { label: 'Student Handbook',         to: '/handbook' },
           { label: 'Academic Calendar',        to: '/calendar' },
         ]
       : [
-          { label: '家长面板预览',   to: '/parent/demo' },
+          { label: '信任中心',       to: '/trust-center' },
+          { label: '课程库',         to: '/lessons' },
           { label: '评量证据',       to: '/assessment-proof' },
+          { label: '家长面板预览',   to: '/parent/demo' },
           { label: '学业与生活支持', to: '/support' },
           { label: '学生与家庭手册', to: '/handbook' },
           { label: '学校日历',       to: '/calendar' },

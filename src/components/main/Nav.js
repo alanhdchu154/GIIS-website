@@ -138,10 +138,16 @@ function Nav({ language, toggleLanguage }) {
                                     </button>
                                 </>
                             ) : (
-                                <Link to="/login" className={`btn btn-sm px-3 ${styles.topButton}`}
-                                    style={{ background: '#1a73e8', color: '#fff', borderRadius: 6, fontWeight: 600 }}>
-                                    {isEn ? 'Log In' : '登入'}
-                                </Link>
+                                <>
+                                    <Link to="/login" className={`btn btn-link px-2 ${styles.topButton}`}
+                                        style={{ color: 'rgba(255,255,255,0.8)' }}>
+                                        {isEn ? 'Log In' : '登入'}
+                                    </Link>
+                                    <Link to="/apply" className={`btn btn-sm px-3 ${styles.topButton}`}
+                                        style={{ background: '#d5a836', color: '#1a1a2e', borderRadius: 6, fontWeight: 800 }}>
+                                        {isEn ? 'Apply' : '立即申请'}
+                                    </Link>
+                                </>
                             )}
                             {toggleLanguage && (
                                 <button type="button" onClick={toggleLanguage} aria-label={t.langToggleAria}
@@ -213,9 +219,9 @@ function Nav({ language, toggleLanguage }) {
                             </ul>
                         </li>
 
-                        {/* RESOURCES */}
+                        {/* FOR PARENTS */}
                         <li className={styles.navItem}>
-                            <Link className={styles.navLink} to="/support">{t.resources}</Link>
+                            <Link className={styles.navLink} to="/trust-center">{t.resources}</Link>
                             <ul className={`${styles.dropdown} ${styles.dropdownRight}`}>
                                 {t.dropdownResources.map(item => (
                                     <li key={item.label}>
@@ -276,13 +282,18 @@ function Nav({ language, toggleLanguage }) {
                                 </button>
                             </li>
                         )}
-                        {/* Not logged in */}
+                        {/* Not logged in — Apply is the primary CTA, Log In is secondary */}
                         {!isMobile && !studentSession && !parentSession && (
-                            <li className={styles.navItem} style={{ padding: '0 4px' }}>
+                            <li className={styles.navItem} style={{ padding: '0 4px', display: 'flex', alignItems: 'center', gap: 6 }}>
                                 <Link to="/login"
                                     className={styles.topButton}
-                                    style={{ background: '#1a73e8', color: '#fff', borderRadius: 6, fontWeight: 600, padding: '6px 16px', textDecoration: 'none', display: 'inline-block' }}>
+                                    style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 600, padding: '6px 10px', textDecoration: 'none', display: 'inline-block' }}>
                                     {isEn ? 'Log In' : '登入'}
+                                </Link>
+                                <Link to="/apply"
+                                    className={styles.topButton}
+                                    style={{ background: '#d5a836', color: '#1a1a2e', borderRadius: 6, fontWeight: 800, padding: '7px 18px', textDecoration: 'none', display: 'inline-block' }}>
+                                    {isEn ? 'Apply' : '立即申请'}
                                 </Link>
                             </li>
                         )}
