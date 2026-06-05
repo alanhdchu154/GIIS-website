@@ -105,11 +105,16 @@ function Nav({ language, toggleLanguage }) {
                                     const open = openSection === sec.header;
                                     return (
                                         <React.Fragment key={sec.header}>
-                                            <li className={styles.mobileSectionHead}
-                                                onClick={() => setOpenSection(open ? null : sec.header)}
-                                                aria-expanded={open}>
-                                                {sec.header}
-                                                <span className={styles.mobileChevron} style={{ transform: open ? 'rotate(180deg)' : 'none' }}>⌄</span>
+                                            <li className={styles.mobileSectionHead}>
+                                                <button
+                                                    type="button"
+                                                    className={styles.mobileSectionButton}
+                                                    onClick={() => setOpenSection(open ? null : sec.header)}
+                                                    aria-expanded={open}
+                                                >
+                                                    <span>{sec.header}</span>
+                                                    <span className={styles.mobileChevron} style={{ transform: open ? 'rotate(180deg)' : 'none' }}>⌄</span>
+                                                </button>
                                             </li>
                                             {open && sec.items.map(item => (
                                                 <li key={`${item.to}-${item.label}`} className={styles.mobileSubItem}

@@ -265,10 +265,7 @@ html[lang="zh"] .mobileItems li {
 }
 
 .mobileSectionHead {
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px !important;
+    padding: 0 !important;
     font-size: 13px !important;
     font-weight: 800 !important;
     letter-spacing: 1.2px;
@@ -276,6 +273,23 @@ html[lang="zh"] .mobileItems li {
     color: #4a5168 !important;
     background: #fafbfc;
     cursor: pointer !important;
+}
+
+.mobileSectionButton {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+    text-align: left;
 }
 
 html[lang="zh"] .mobileSectionHead {
