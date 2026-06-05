@@ -30,13 +30,20 @@ const REJECTION_REASONS = [
   { value: 'other',           label: 'Other',                      detail: '' },
 ];
 
-const TRANSFER_NOTE_LABELS = {
-  credits: {
+const APPLICANT_TYPE_LABELS = {
+  new: 'New student',
+  transfer: 'Transfer student',
+  'not provided': 'Not provided',
+};
+
+const APPLICATION_NOTE_LABELS = {
+  previousCredits: {
     '0-5': '0–5 credits',
     '6-11': '6–11 credits',
     '12-17': '12–17 credits',
     '18-23': '18–23 credits',
     '24+': '24+ credits',
+    'not applicable': 'Not applicable',
     'not provided': 'Not provided',
   },
   graduationTiming: {
@@ -44,15 +51,18 @@ const TRANSFER_NOTE_LABELS = {
     '1-year': 'Within 1 school year',
     '2-years': 'Within 2 school years',
     'not-sure': 'Not sure yet',
+    'standard path': 'Standard new-student path',
     'not provided': 'Not provided',
   },
   transcriptAvailable: {
-    yes: 'Transcript available',
-    partial: 'Partial records only',
-    'not-yet': 'Not yet',
+    yes: 'Family says transcript can be provided',
+    partial: 'Family has partial records only',
+    'not-yet': 'Family does not have records yet',
+    'not applicable': 'Not applicable',
     'not provided': 'Not provided',
   },
   concern: {
+    'grade9-path': 'Which starting path fits my child?',
     credits: 'Will credits transfer?',
     graduation: 'Can my child graduate on time?',
     records: 'Will the school record be accepted?',
@@ -61,27 +71,46 @@ const TRANSFER_NOTE_LABELS = {
   },
 };
 
-function labelTransferValue(field, value) {
+function labelApplicationValue(field, value) {
   const clean = String(value || 'not provided').trim();
-  return TRANSFER_NOTE_LABELS[field]?.[clean] || clean || 'Not provided';
+  if (field === 'applicantType') return APPLICANT_TYPE_LABELS[clean] || clean || 'Not provided';
+  return APPLICATION_NOTE_LABELS[field]?.[clean] || clean || 'Not provided';
 }
 
-function parseTransferReviewNotes(notes = '') {
-  const match = String(notes).match(
+function parseApplicationReviewNotes(notes = '') {
+  const text = String(notes);
+  const current = text.match(
+    /^Applicant Review:\s*type=(.*?);\s*previousCredits=(.*?);\s*graduationTiming=(.*?);\s*transcriptAvailable=(.*?);\s*concern=(.*?);\s*Required Records:\s*(.*?);\s*Family Notes:\s*(.*)$/s
+  );
+  if (current) {
+    return {
+      applicantType: current[1].trim(),
+      previousCredits: current[2].trim(),
+      graduationTiming: current[3].trim(),
+      transcriptAvailable: current[4].trim(),
+      concern: current[5].trim(),
+      requiredRecords: current[6].trim(),
+      familyNotes: current[7].trim(),
+    };
+  }
+
+  const legacy = text.match(
     /^Transfer Path Review:\s*credits=(.*?);\s*graduationTiming=(.*?);\s*transcriptAvailable=(.*?);\s*concern=(.*?);\s*Family Notes:\s*(.*)$/s
   );
-  if (!match) return null;
+  if (!legacy) return null;
   return {
-    credits: match[1].trim(),
-    graduationTiming: match[2].trim(),
-    transcriptAvailable: match[3].trim(),
-    concern: match[4].trim(),
-    familyNotes: match[5].trim(),
+    applicantType: 'transfer',
+    previousCredits: legacy[1].trim(),
+    graduationTiming: legacy[2].trim(),
+    transcriptAvailable: legacy[3].trim(),
+    concern: legacy[4].trim(),
+    requiredRecords: 'Legacy transfer review note. Confirm official transcript or school report before final credit decision.',
+    familyNotes: legacy[5].trim(),
   };
 }
 
-function TransferReviewPanel({ notes }) {
-  const review = parseTransferReviewNotes(notes);
+function ApplicantReviewPanel({ notes }) {
+  const review = parseApplicationReviewNotes(notes);
   if (!review) {
     if (!notes) return null;
     return (
@@ -91,18 +120,28 @@ function TransferReviewPanel({ notes }) {
     );
   }
 
-  const fields = [
-    ['Previous Credits', labelTransferValue('credits', review.credits)],
-    ['Graduation Timing', labelTransferValue('graduationTiming', review.graduationTiming)],
-    ['Transcript', labelTransferValue('transcriptAvailable', review.transcriptAvailable)],
-    ['Main Concern', labelTransferValue('concern', review.concern)],
-  ];
+  const isTransfer = review.applicantType === 'transfer';
+  const transferNeedsRecordReview = isTransfer;
+  const fields = isTransfer
+    ? [
+        ['Applicant Type', labelApplicationValue('applicantType', review.applicantType)],
+        ['Previous Credits', labelApplicationValue('previousCredits', review.previousCredits)],
+        ['Graduation Timing', labelApplicationValue('graduationTiming', review.graduationTiming)],
+        ['Family Transcript Status', labelApplicationValue('transcriptAvailable', review.transcriptAvailable)],
+        ['Main Concern', labelApplicationValue('concern', review.concern)],
+      ]
+    : [
+        ['Applicant Type', labelApplicationValue('applicantType', review.applicantType)],
+        ['Path', labelApplicationValue('graduationTiming', review.graduationTiming)],
+        ['Transfer Transcript', labelApplicationValue('transcriptAvailable', review.transcriptAvailable)],
+        ['Main Concern', labelApplicationValue('concern', review.concern)],
+      ];
 
   return (
     <div style={{ background: '#f8fbff', border: '1px solid #cfe0f8', borderRadius: 10, padding: '13px 14px', marginBottom: 14 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 10, marginBottom: 10, flexWrap: 'wrap' }}>
-        <p style={{ margin: 0, fontSize: 11, fontWeight: 900, color: '#2b3d6d', letterSpacing: '1px', textTransform: 'uppercase' }}>Transfer Path Review</p>
-        <span style={{ fontSize: 11, color: '#5c6578' }}>Use this before approve / activate</span>
+        <p style={{ margin: 0, fontSize: 11, fontWeight: 900, color: '#2b3d6d', letterSpacing: '1px', textTransform: 'uppercase' }}>Application Path Review</p>
+        <span style={{ fontSize: 11, color: '#5c6578' }}>Confirm records before approve / activate</span>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 10 }}>
         {fields.map(([label, value]) => (
@@ -112,6 +151,20 @@ function TransferReviewPanel({ notes }) {
           </div>
         ))}
       </div>
+      {review.requiredRecords && (
+        <div style={{ marginTop: 10, background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
+          <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 3px' }}>Records Needed</p>
+          <p style={{ fontSize: 12.5, color: '#1a1d24', margin: 0, lineHeight: 1.45 }}>{review.requiredRecords}</p>
+        </div>
+      )}
+      {transferNeedsRecordReview && (
+        <div style={{ marginTop: 10, background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '9px 10px' }}>
+          <p style={{ fontSize: 9.5, fontWeight: 800, color: '#8a5a00', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 3px' }}>Admin Record Review Required</p>
+          <p style={{ fontSize: 12.5, color: '#5c4a12', margin: 0, lineHeight: 1.45 }}>
+            Family transcript status is self-reported. Approve only after official transcript or verifiable school records are received and reviewed. Partial records may support an estimate, not final transfer credit.
+          </p>
+        </div>
+      )}
       {review.familyNotes && review.familyNotes !== 'none' && (
         <div style={{ marginTop: 10, background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
           <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 3px' }}>Family Notes</p>
@@ -218,6 +271,16 @@ export default function ApplicationsQueue() {
     } finally { setSaving(''); }
   }
 
+  function approveApplication(app, appReview) {
+    if (appReview?.applicantType === 'transfer') {
+      const ok = window.confirm(
+        'Approve this transfer application only if official transcripts or verifiable school records have been received and reviewed. Family self-report is not record confirmation. Continue?'
+      );
+      if (!ok) return;
+    }
+    updateStatus(app.id, 'approved');
+  }
+
   async function activateApplication(id) {
     setSaving(id + 'activate');
     try {
@@ -296,6 +359,8 @@ export default function ApplicationsQueue() {
                 const sc = STATUS_COLORS[app.status] || STATUS_COLORS.pending;
                 const es = app.enrollmentState || {};
                 const ec = ENROLLMENT_STATE_COLORS[es.code] || { bg: '#f1f5f9', fg: '#475569' };
+                const appReview = parseApplicationReviewNotes(app.notes);
+                const transferNeedsRecordReview = appReview?.applicantType === 'transfer';
                 return (
                   <div key={app.id} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e8ecf5', marginBottom: 12, overflow: 'hidden' }}>
 
@@ -350,7 +415,7 @@ export default function ApplicationsQueue() {
                           ))}
                         </div>
 
-                        <TransferReviewPanel notes={app.notes} />
+                        <ApplicantReviewPanel notes={app.notes} />
 
                         {/* Rejection reason (if rejected) */}
                         {app.status === 'rejected' && app.rejectionReason && (
@@ -381,9 +446,9 @@ export default function ApplicationsQueue() {
                         {/* Action buttons */}
                         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                           {app.status === 'pending' && (<>
-                            <button onClick={() => updateStatus(app.id, 'approved')} disabled={!!saving}
+                            <button onClick={() => approveApplication(app, appReview)} disabled={!!saving}
                               style={{ padding: '8px 18px', borderRadius: 8, background: '#2e7d32', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
-                              ✓ Approve
+                              {transferNeedsRecordReview ? '✓ Approve after admin record review' : '✓ Approve'}
                             </button>
                             <button onClick={() => openRejectModal(app)} disabled={!!saving}
                               style={{ padding: '8px 18px', borderRadius: 8, background: '#c62828', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>

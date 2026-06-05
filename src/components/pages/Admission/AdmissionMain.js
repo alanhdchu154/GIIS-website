@@ -11,18 +11,18 @@ const SCHOOL_EMAIL = 'admissions@genesisideas.school';
 const STEPS = [
   {
     num: '01',
-    title: { en: 'Request Path Review', zh: '申请路径评估' },
+    title: { en: 'Identify Applicant Type', zh: '确认申请类型' },
     body: {
-      en: 'Submit the online form so admissions can review grade level, previous credits, graduation timing, and family concerns before payment.',
-      zh: '提交线上表格，让招生团队在付款前审核年级、既有学分、毕业时间与家庭顾虑。',
+      en: 'Tell us whether the student is starting fresh with GIIS or transferring completed high-school credits from another school.',
+      zh: '先确认学生是一般新生，还是已经在其他学校修过高中学分、需要转学审核。',
     },
   },
   {
     num: '02',
-    title: { en: 'Provide Documents', zh: '提交申请文件' },
+    title: { en: 'Provide the Right Records', zh: '提交对应资料' },
     body: {
-      en: 'Submit academic records, transcripts from previous schools, and any required supporting materials.',
-      zh: '提交过往学校的成绩单、在籍证明及其他所需辅助文件。',
+      en: 'New students provide basic identity information and recent school records if available. Transfer students provide transcripts or school reports for completed high-school terms.',
+      zh: '一般新生提交基本身份信息，以及可提供的近期学校记录；转学生提交已完成高中阶段课程的成绩单或学校报告。',
     },
   },
   {
@@ -43,11 +43,33 @@ const STEPS = [
   },
 ];
 
-const REQUIREMENTS = [
-  { icon: '📄', label: { en: 'Previous academic transcripts', zh: '过往成绩单' } },
-  { icon: '🎂', label: { en: 'Proof of age / birth certificate', zh: '出生证明文件' } },
-  { icon: '✍️', label: { en: 'Completed application form', zh: '填妥的申请表' } },
-  { icon: '💬', label: { en: 'Brief personal statement (optional)', zh: '个人陈述（选填）' } },
+const REQUIREMENT_GROUPS = [
+  {
+    title: { en: 'New Students', zh: '一般新生' },
+    note: {
+      en: 'For students starting high school with GIIS or without prior high-school credits to transfer.',
+      zh: '适合从 GIIS 开始高中，或没有需要转入高中学分的学生。',
+    },
+    items: [
+      { icon: '✍️', label: { en: 'Completed application form', zh: '填妥的申请表' } },
+      { icon: '🎂', label: { en: 'Proof of age / birth date', zh: '年龄或出生日期证明' } },
+      { icon: '🏫', label: { en: 'Current or most recent school information if available', zh: '可提供的目前或最近就读学校信息' } },
+      { icon: '📋', label: { en: 'Recent report card or placement record if available', zh: '可提供的近期成绩或分班记录' } },
+    ],
+  },
+  {
+    title: { en: 'Transfer Students', zh: '转学生' },
+    note: {
+      en: 'For students who already completed high-school courses elsewhere and want GIIS to review transferable credits.',
+      zh: '适合已经在其他学校修过高中课程，希望 GIIS 审核可转入学分的学生。',
+    },
+    items: [
+      { icon: '📄', label: { en: 'Official transcript or school report for completed high-school terms', zh: '已完成高中阶段课程的正式成绩单或学校报告' } },
+      { icon: '📚', label: { en: 'Course descriptions or syllabi if credits need review', zh: '需要审核学分时提供课程说明或 syllabus' } },
+      { icon: '🏫', label: { en: 'Previous school contact if verification is needed', zh: '必要时提供原学校联系方式供核验' } },
+      { icon: '🌐', label: { en: 'Translation if records are not in English or Chinese', zh: '非英文或中文文件需提供翻译' } },
+    ],
+  },
 ];
 
 export default function AdmissionMain({ language, toggleLanguage }) {
@@ -83,8 +105,8 @@ export default function AdmissionMain({ language, toggleLanguage }) {
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontFamily: 'Inter, sans-serif', fontSize: '18px', marginTop: '12px', maxWidth: '540px' }}>
             {isEn
-              ? 'Start your journey at Genesis of Ideas International School.'
-              : '开始你在艾迪尔国际学校的学习旅程。'}
+              ? 'A clear application path for new students and transfer students.'
+              : '让一般新生与转学生都看清楚自己的申请路径。'}
           </p>
         </div>
       </div>
@@ -150,6 +172,11 @@ export default function AdmissionMain({ language, toggleLanguage }) {
                 ? 'GIIS can review official records, map transferable credits, and estimate the shortest realistic graduation path.'
                 : 'GIIS 可以审核正式记录、对应可转学分，并估算最现实的毕业路径。'}
             </p>
+            <p style={{ margin: '8px 0 0', color: '#6b7280', fontSize: '13px', lineHeight: 1.65 }}>
+              {isEn
+                ? 'Starting Grade 9 with no prior high-school credits? Continue with the new-student application path below; no transfer transcript is required.'
+                : '如果是 9 年级一般新生、没有需要转入的高中学分，可以走下方一般新生申请路径，不需要转学成绩单。'}
+            </p>
           </div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           <Link to="/apply" style={{
@@ -189,26 +216,37 @@ export default function AdmissionMain({ language, toggleLanguage }) {
           <h2 style={{ fontSize: '48px', fontWeight: 800, lineHeight: 1, marginBottom: '40px' }}>
             {isEn ? "NEED TO PREPARE" : '所需文件'}
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '48px' }}>
-            {REQUIREMENTS.map((r) => (
-              <div key={r.label.en} style={{
-                display: 'flex', alignItems: 'flex-start', gap: '16px',
-                padding: '20px 24px',
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '48px' }}>
+            {REQUIREMENT_GROUPS.map((group) => (
+              <div key={group.title.en} style={{
                 border: '1px solid #e8e8e8',
-                borderRadius: '8px',
+                borderRadius: '12px',
                 background: '#fafafa',
+                padding: '24px',
               }}>
-                <span style={{ fontSize: '28px', flexShrink: 0 }}>{r.icon}</span>
-                <span style={{ fontSize: '15px', color: '#333', fontWeight: 500, lineHeight: 1.5 }}>
-                  {r.label[isEn ? 'en' : 'zh']}
-                </span>
+                <p style={{ color: '#2b3d6d', fontSize: '12px', fontWeight: 800, letterSpacing: '1.4px', textTransform: 'uppercase', margin: '0 0 8px' }}>
+                  {group.title[isEn ? 'en' : 'zh']}
+                </p>
+                <p style={{ fontSize: '13px', color: '#666', lineHeight: 1.65, margin: '0 0 18px' }}>
+                  {group.note[isEn ? 'en' : 'zh']}
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {group.items.map((r) => (
+                    <div key={r.label.en} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                      <span style={{ fontSize: '22px', flexShrink: 0 }}>{r.icon}</span>
+                      <span style={{ fontSize: '14px', color: '#333', fontWeight: 500, lineHeight: 1.5 }}>
+                        {r.label[isEn ? 'en' : 'zh']}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
           <p style={{ fontSize: '14px', color: '#888', maxWidth: '600px', lineHeight: 1.7 }}>
             {isEn
-              ? '* Requirements and deadlines may vary each term. Please contact our admissions office to confirm current requirements before applying.'
-              : '* 各学期的要求与截止日期可能有所调整。申请前请联系招生办公室确认最新资讯。'}
+              ? '* New students are not required to provide transfer transcripts unless they already completed high-school credits elsewhere. Admissions may request additional records when needed.'
+              : '* 一般新生不需要提交转学成绩单，除非已经在其他学校修过高中学分。招生团队可能视情况要求补充资料。'}
           </p>
         </div>
       </div>
@@ -402,6 +440,10 @@ export default function AdmissionMain({ language, toggleLanguage }) {
               {
                 q: { en: 'How long does the program take?', zh: '课程需要多长时间完成？' },
                 a: { en: 'Students typically enroll for 1–4 years depending on their grade level. Students joining in Grade 9 complete a full 4-year program. Students transferring in Grades 10–12 can earn the remaining credits needed for graduation.', zh: '学生通常根据年级就读1至4年。9年级入学的学生完成完整的4年课程。10-12年级转入的学生可修满毕业所需的剩余学分。' },
+              },
+              {
+                q: { en: 'Do all applicants need a transcript?', zh: '所有申请人都需要成绩单吗？' },
+                a: { en: 'No. New students starting high school with GIIS usually provide proof of age and current or most recent school information. Transfer transcripts are needed when the student has completed high-school credits elsewhere and wants GIIS to review them.', zh: '不是。一般新生通常提供年龄证明，以及目前或最近就读学校信息。只有学生已经在其他学校修过高中学分，并希望 GIIS 审核转入时，才需要转学成绩单。' },
               },
               {
                 q: { en: 'What support is available for students?', zh: '学生有哪些支持资源？' },
