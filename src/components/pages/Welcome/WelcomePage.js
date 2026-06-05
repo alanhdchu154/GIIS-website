@@ -55,8 +55,8 @@ const FIRST_WEEK = [
   {
     title: { en: 'Advisor', zh: '顾问' },
     body: {
-      en: 'Reviews the transfer path, confirms the first active courses, and leaves the next check-in note.',
-      zh: '审核转学路径，确认第一批进行中课程，并留下下一次 check-in 说明。',
+      en: 'Reviews the transfer path, confirms the first active courses, and prepares an advisor-approved parent note.',
+      zh: '审核转学路径，确认第一批进行中课程，并准备顾问审核后的家长留言。',
     },
   },
   {
@@ -69,15 +69,15 @@ const FIRST_WEEK = [
   {
     title: { en: 'Parent', zh: '家长' },
     body: {
-      en: 'Uses the parent dashboard to see credits, GPA, activity, pacing, and advisor notes in one place.',
-      zh: '通过家长面板集中查看学分、GPA、活动、进度与顾问留言。',
+      en: 'Uses the parent dashboard to see credits, GPA, activity, missing-work risk flags, next actions, and advisor-reviewed summaries in one place.',
+      zh: '通过家长面板集中查看学分、GPA、活动、缺交风险提醒、下一步与顾问审核摘要。',
     },
   },
   {
-    title: { en: 'Record', zh: '学籍记录' },
+    title: { en: 'Privacy', zh: '隐私边界' },
     body: {
-      en: 'Course progress, grades, and official-document workflow stay visible instead of becoming informal screenshots.',
-      zh: '课程进度、成绩与正式文件流程保持可见，不依赖临时截图。',
+      en: 'Parent-facing summaries are intentionally separate from private internal advisor notes and staff-only operational details.',
+      zh: '家长端摘要会刻意与内部顾问笔记、教务讨论和 staff-only 运营细节分开。',
     },
   },
 ];
@@ -256,12 +256,16 @@ export default function WelcomePage({ language }) {
             zh: '如果招生办公室已经启用账号，你的家长与学生登录凭据会在欢迎信里。',
           },
           {
-            en: 'A GIIS advisor will reach out to schedule a short onboarding call to help your child choose the right academic pathway.',
-            zh: 'GIIS 顾问会联系你，安排一次简短的入学通话，帮助你的孩子选择合适的学习路径。',
+            en: 'A GIIS advisor will reach out to schedule onboarding, confirm course planning, and review any transfer-credit questions.',
+            zh: 'GIIS 顾问会联系你安排入学沟通，确认课程规划，并审核转学分相关问题。',
           },
           {
-            en: 'Your child can start their first lesson immediately — visit /learn after logging in.',
-            zh: '你的孩子可以立即开始第一节课——登录后访问 /learn。',
+            en: 'Your child can start the first active module after login. The parent dashboard will show weekly progress, advisor-approved notes, missing-work flags, and one next action.',
+            zh: '学生登录后可以开始第一个进行中模块。家长面板会显示每周进度、顾问审核留言、缺交提醒与一个下一步。',
+          },
+          {
+            en: 'Private internal advisor notes are not shown to families. Parent summaries are reviewed before they appear in the dashboard.',
+            zh: '内部顾问笔记不会显示给家庭。家长端摘要会经过审核后再显示在面板中。',
           },
           {
             en: '30-day no-questions refund: if it\'s not the right fit within the first 30 days, email us and we\'ll refund in full.',

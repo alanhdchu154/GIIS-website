@@ -194,8 +194,21 @@ Status: maintain.
   `_audit/transfer-application-payload-smoke.md`.
 - Assessment proof preview is now linked from Trust Center, Pricing, and the
   Resources menu so parents can inspect course evidence without logging in.
+- Public trust claim cleanup completed 2026-06-04 with cc collaboration:
+  homepage, footer, academics, discovery, pathways, school profile, handbook,
+  and public meta copy now avoid high-risk "top university", admissions
+  advantage, AP authorization, AP Classroom, and stale lesson-preview claims.
+  New gate: `npm run audit:public-trust-claims` checks the public trust claim
+  surface, and homepage `LessonPreview` now reads approved video data from
+  `public/data/lessons-manifest.json` instead of a hardcoded YouTube ID.
 - Student Coordination System Phase 0-3 is implemented locally; production
   deploy should still be treated as a separate deployment decision.
+- Parent-safe reassurance layer added to public/demo surfaces on 2026-06-04:
+  Parent Demo, Welcome, Pricing, and Trust Center now show the Phase 5
+  expectation for weekly parent summaries, advisor-approved notes,
+  missing-work risk flags, next actions, and the privacy boundary that internal
+  advisor notes stay staff-only. This is public copy/demo positioning only, not
+  a backend schema or production care workflow deployment.
 - Official records policy remains: graduated-student records are frozen unless a
   formal correction/reissue path is approved.
 

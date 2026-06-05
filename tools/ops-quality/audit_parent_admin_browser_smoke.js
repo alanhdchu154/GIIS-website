@@ -24,11 +24,11 @@ const ROUTES = [
   {
     name: 'admin applications',
     path: '/admin/applications',
-    expected: ['Applications', 'Alex Rivera', 'Transfer Path Review', 'Within 1 school year', 'Accounts'],
+    expected: ['Applications', 'Alex Rivera', 'Application Path Review', 'Within 1 school year', 'Admin Record Review Required', 'Accounts'],
     endpointCaps: { '/api/applications': 2 },
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^View$/ }).first().click();
-      await page.getByText('Transfer Path Review').waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByText('Application Path Review').waitFor({ state: 'visible', timeout: 5000 });
     },
   },
   {

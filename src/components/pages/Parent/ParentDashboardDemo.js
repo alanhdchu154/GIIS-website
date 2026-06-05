@@ -61,8 +61,26 @@ const PREVIEW = {
     { en: 'Advisor confirms transfer-credit map', zh: '顾问确认转学分对应表' },
     { en: 'Student starts the first active module', zh: '学生开始第一个进行中模块' },
     { en: 'Parent sees login, pacing, and feedback location', zh: '家长看到登录、进度与反馈位置' },
-    { en: 'Next check-in note is visible in the dashboard', zh: '下一次 check-in 留言显示在家长面板' },
+    { en: 'Advisor-approved weekly summary is visible in the dashboard', zh: '顾问审核后的每周摘要显示在家长面板' },
   ],
+  careSnapshot: {
+    summary: {
+      en: 'Yunfan completed two modules, earned one credit, and stayed active on four days. Computer Science I needs attention because Module 10 is one week behind the current plan.',
+      zh: '芸帆完成了两个模块，获得 1.0 学分，并在四天内保持学习活动。Computer Science I 需要关注，因为第 10 模块比当前计划落后一周。',
+    },
+    risk: {
+      en: 'Missing-work risk flag: Computer Science I project checkpoint is due May 21.',
+      zh: '缺交风险提醒：Computer Science I 项目检查点将于 5 月 21 日截止。',
+    },
+    nextAction: {
+      en: 'Next action: submit the Module 10 planning table, then review the advisor note before the monthly check-in.',
+      zh: '下一步：提交第 10 模块规划表，并在每月 check-in 前阅读顾问留言。',
+    },
+    privacy: {
+      en: 'Parents see advisor-approved summaries only. Private internal advisor notes, staff deliberations, and operational risk details are not exposed in the parent dashboard.',
+      zh: '家长只会看到顾问审核后的摘要。内部顾问笔记、教务讨论与运营风险细节不会显示在家长面板中。',
+    },
+  },
   activity: [
     { kind: 'green', icon: '✓', when: { en: 'May 7 · 2 days ago', zh: '5 月 7 日 · 2 天前' },
       lead: { en: 'Earned 1.0 credit · ', zh: '获得 1.0 学分 · ' },
@@ -86,8 +104,8 @@ const PREVIEW = {
       tail: { en: ' with 88%', zh: '，分数 88%' } },
   ],
   advisorNote: {
-    en: '"Yunfan stayed consistent this week and is on track for June graduation. We\'re now focusing on his college essay drafts. He\'s well-prepared for the Engineering Science pathway final."',
-    zh: '"芸帆这周保持稳定的学习节奏，按计划在 6 月毕业。我们现在专注于他的大学申请文书草稿。他对工程科学路径的期末考已经准备充分。"',
+    en: '"Yunfan stayed consistent this week. He is currently on the June graduation plan if the remaining credits are completed as scheduled. We are focusing the next check-in on essay drafts and the Engineering Science pathway final."',
+    zh: '"芸帆这周保持稳定的学习节奏。如果剩余学分按计划完成，他目前仍在 6 月毕业路径上。下一次 check-in 会重点看申请文书草稿与工程科学路径期末考。"',
   },
   upcoming: [
     { day: { en: 'MAY', zh: 'MAY' }, num: 21, what: { en: 'Computer Science I — Module 10 due', zh: 'Computer Science I 第 10 模块截止' },
@@ -239,6 +257,38 @@ export default function ParentDashboardDemo({ language }) {
                 </div>
               </div>
 
+              {/* Parent-safe care summary */}
+              <div style={card}>
+                <CardHead en="Advisor-Reviewed Weekly Summary" zh="顾问审核的每周摘要" isEn={isEn} right={
+                  <span style={{ fontSize: '12px', color: '#1B6B3A', fontWeight: 800 }}>
+                    {isEn ? 'Parent-safe' : '家长可见'}
+                  </span>
+                } />
+                <p style={{ margin: '0 0 12px', color: '#30384a', fontSize: 14, lineHeight: 1.65 }}>
+                  {p.careSnapshot.summary[lang]}
+                </p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 10 }}>
+                  <CareItem
+                    label={isEn ? 'Risk flag' : '风险提醒'}
+                    body={p.careSnapshot.risk[lang]}
+                    tone="warning"
+                  />
+                  <CareItem
+                    label={isEn ? 'Next action' : '下一步'}
+                    body={p.careSnapshot.nextAction[lang]}
+                    tone="action"
+                  />
+                </div>
+                <div style={{ marginTop: 12, background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 8, padding: '12px 14px' }}>
+                  <p style={{ margin: '0 0 5px', color: '#2b3d6d', fontSize: 11, fontWeight: 850, letterSpacing: 1.1, textTransform: 'uppercase' }}>
+                    {isEn ? 'Privacy boundary' : '隐私边界'}
+                  </p>
+                  <p style={{ margin: 0, color: '#5c6578', fontSize: 12, lineHeight: 1.6 }}>
+                    {p.careSnapshot.privacy[lang]}
+                  </p>
+                </div>
+              </div>
+
               {/* Active courses */}
               <div style={card}>
                 <CardHead en="Active Courses" zh="进行中课程" isEn={isEn} right={
@@ -335,7 +385,7 @@ export default function ParentDashboardDemo({ language }) {
 
               {/* Advisor note */}
               <div style={{ ...sideCard, background: 'linear-gradient(135deg, #fffaeb 0%, #fff5d6 100%)', borderColor: '#d5a836' }}>
-                <Eyebrow en="Advisor Note" zh="顾问留言" isEn={isEn} color="#8a6a14" />
+                <Eyebrow en="Advisor-Approved Note" zh="顾问审核留言" isEn={isEn} color="#8a6a14" />
                 <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#1a1d24', margin: '0 0 12px', fontStyle: 'italic' }}>
                   {p.advisorNote[lang]}
                 </p>
@@ -395,12 +445,12 @@ export default function ParentDashboardDemo({ language }) {
 
               {/* Weekly digest */}
               <div style={{ ...sideCard, background: '#f0f4ff', borderColor: '#c5d0f0' }}>
-                <Eyebrow en="Weekly Email Digest" zh="每周邮件摘要" isEn={isEn} />
+                <Eyebrow en="Weekly Parent Summary" zh="每周家长摘要" isEn={isEn} />
                 <p style={{ fontSize: '13px', lineHeight: 1.55, margin: '0 0 8px' }}>
-                  {isEn ? <>You're subscribed to weekly Sunday digests at <b>{p.parent.email}</b>.</> : <>每周日定时收到摘要邮件至 <b>{p.parent.email}</b>。</>}
+                  {isEn ? <>You're subscribed to advisor-reviewed Sunday summaries at <b>{p.parent.email}</b>.</> : <>每周日定时收到顾问审核后的摘要邮件至 <b>{p.parent.email}</b>。</>}
                 </p>
                 <p style={{ fontSize: '12px', color: '#5c6578', margin: 0 }}>
-                  {isEn ? 'Last sent · May 5' : '上次发送 · 5 月 5 日'}
+                  {isEn ? 'Includes progress, missing-work flags, and one next action · Last sent May 5' : '包含进度、缺交提醒与一个下一步 · 上次发送 5 月 5 日'}
                 </p>
               </div>
 
@@ -425,8 +475,8 @@ export default function ParentDashboardDemo({ language }) {
             </h2>
             <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.7)', margin: '0 0 24px', maxWidth: '520px', marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.6 }}>
               {isEn
-                ? 'Real teacher feedback. Weekly progress emails. Direct line to your child\'s advisor. Plans start at $49/month.'
-                : '真人老师批改、每周进度邮件、与孩子顾问直接对话。方案从 $49/月起。'}
+                ? 'Teacher feedback, advisor-approved weekly summaries, missing-work flags, and a clear next action. Guided support is $149/month.'
+                : '教师批改、顾问审核的每周摘要、缺交风险提醒与明确下一步。Guided 支持为 $149/月。'}
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/admission" style={{
@@ -528,6 +578,22 @@ function CardHead({ en, zh, isEn, right }) {
         {isEn ? en : zh}
       </p>
       {right}
+    </div>
+  );
+}
+
+function CareItem({ label, body, tone }) {
+  const color = tone === 'warning' ? '#b45309' : '#1B6B3A';
+  const background = tone === 'warning' ? '#fff8e6' : '#f1f8f2';
+  const border = tone === 'warning' ? '#f4c36a' : '#cde8d1';
+  return (
+    <div style={{ background, border: `1px solid ${border}`, borderRadius: 8, padding: '12px 14px' }}>
+      <p style={{ margin: '0 0 5px', color, fontSize: 11, fontWeight: 850, letterSpacing: 1.1, textTransform: 'uppercase' }}>
+        {label}
+      </p>
+      <p style={{ margin: 0, color: '#30384a', fontSize: 13, lineHeight: 1.55 }}>
+        {body}
+      </p>
     </div>
   );
 }

@@ -253,8 +253,8 @@ export default function HandbookPage({ language, toggleLanguage }) {
               <li>{en ? 'Pathway, college-prep, arts, technology, personal finance, and free electives — 10 credits' : '专业方向、大学预备、艺术、科技、个人理财与自由选修 — 10 学分'}</li>
             </UL>
             <P>{en
-              ? 'Physical Education is not a GIIS graduation requirement because GIIS operates as an online school. World language study is recommended for students targeting selective universities, but it is not required for the GIIS diploma. The diploma is signed by the President & Principal, carries a unique student code, and is verifiable at /verify/{code} via QR code.'
-              : '由于 GIIS 为线上学校，体育课不列为 GIIS 毕业硬性要求。申请选择性大学的学生建议补充外语学习，但外语不是 GIIS 文凭的毕业门槛。文凭由 President & Principal 签署，每份附唯一学生代码与 QR 码，可通过 /verify/{code} 进行验证。'}</P>
+              ? 'Physical Education is not a GIIS graduation requirement because GIIS operates as an online school. World language study may be recommended during individualized college pathway planning, but it is not required for the GIIS diploma. The diploma is signed by the President & Principal, carries a unique student code, and is verifiable at /verify/{code} via QR code.'
+              : '由于 GIIS 为线上学校，体育课不列为 GIIS 毕业硬性要求。外语学习可在个别升学规划中进一步建议，但外语不是 GIIS 文凭的毕业门槛。文凭由 President & Principal 签署，每份附唯一学生代码与 QR 码，可通过 /verify/{code} 进行验证。'}</P>
           </Section>
 
           {/* §4 Assessment */}

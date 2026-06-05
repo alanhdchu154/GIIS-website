@@ -11,8 +11,8 @@ const META = {
   courseEmoji: '📊',
   heroDescription: 'A 4-year pathway for students headed toward business, marketing, management, or entrepreneurship. You will learn how markets work, how consumers make decisions, how to build a brand, and how to lead teams — finishing with a real capstone brand launch project.',
   targets: ['Business Administration / Management', 'Marketing & Advertising', 'Entrepreneurship & Startups', 'International Business', 'Public Relations & Communications', 'Supply Chain & Operations'],
-  collegeNote: 'Business schools at NYU Stern, UMich Ross, USC Marshall, and similar programs want to see evidence of business thinking — not just grades. This pathway gives you a structured four-year story: from business fundamentals through a senior brand launch project, with economics and statistics to show quantitative rigor.',
-  stats: [{ label: 'AP Prep Options', value: 1 }],
+  collegeNote: 'Business planning benefits from visible evidence of business thinking, not just grades. This pathway gives families a structured four-year record: business fundamentals, economics, statistics, and a senior brand-launch project that can support advising conversations.',
+  stats: [{ label: 'Exam Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -249,7 +249,7 @@ const COURSES = [
       { url: 'https://www.youtube.com/watch?v=6_mfAOSaFEo', title: 'Macroeconomics exam preparation — Full Course Review', channel: 'Heimler\'s History', note: 'The most popular AP Macro review channel — watch all episodes in order.' },
       { url: 'https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics', title: 'Macroeconomics exam preparation', channel: 'Khan Academy', note: 'Complete AP Macro curriculum with practice exercises — work through every unit.' },
       { url: 'https://www.youtube.com/watch?v=d8uTB5XorBw', title: 'Economics — Crash Course', channel: 'Crash Course', note: 'Watch episodes 20–35 for macroeconomics topics. Clear, entertaining explanations.' },
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP Macro Resources', channel: 'College Board', note: 'Official FRQs and progress checks. Use throughout the year for exam prep.' },
+      { url: 'https://apstudents.collegeboard.org/courses/ap-macroeconomics', title: 'AP Macroeconomics exam overview', channel: 'College Board', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
     ],
     quiz: [
       { q: 'What does GDP measure?', opts: ['A country\'s trade surplus', 'The total market value of all final goods and services produced within a country in a given year', 'The total wealth of all citizens', 'Government tax revenue'], ans: 1, exp: 'GDP (Gross Domestic Product) is the monetary value of all final goods and services produced within a country\'s borders in a year. It is the primary measure of economic output.' },

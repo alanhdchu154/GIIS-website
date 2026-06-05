@@ -13,13 +13,13 @@ function DiscoveryIntroduction({ language }) {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
         <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: '16px', lineHeight: 1.8, margin: 0 }}>
           {isEn
-            ? 'GIIS is a fully online, globally-minded high school dedicated to providing world-class education for Chinese students who aspire to study at top US universities. Our model breaks the geographical constraints of traditional schooling — students learn at their own pace, from anywhere.'
-            : 'GIIS 是一所完全在线的全球化高中，致力于为有志申请美国顶尖大学的中国学生提供世界一流的教育。我们的模式打破了传统教育的地理限制，让学生可以在任何地方、按自己的节奏学习。'}
+            ? 'GIIS is a fully online, globally-minded high school for families who need a clear, documented US high school pathway. Our model breaks the geographical constraints of traditional schooling — students learn at their own pace, from anywhere.'
+            : 'GIIS 是一所完全在线、面向全球家庭的高中，适合需要清楚、可记录美国高中学习路径的学生。我们的模式打破了传统教育的地理限制，让学生可以在任何地方、按自己的节奏学习。'}
         </p>
         <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: '16px', lineHeight: 1.8, margin: 0 }}>
           {isEn
-            ? 'Students graduate with a Florida-registered private school diploma, a strong GPA record, and a course transcript built around their target US university major — giving them a compelling application package.'
-            : '学生毕业时将获得佛罗里达州注册私立学校的文凭、优秀的 GPA 记录，以及围绕目标美国大学专业方向量身打造的成绩单，为申请提供有力支撑。'}
+            ? 'Students graduate with a Florida-registered private school diploma, an organized GPA record, and a course transcript built around their academic pathway — giving families a clearer record for transfer, advising, and future applications.'
+            : '学生毕业时将获得佛罗里达州注册私立学校的文凭、有组织的 GPA 记录，以及围绕学术方向整理的成绩单，便于家庭进行转学、升学规划与后续申请准备。'}
         </p>
       </div>
     </section>

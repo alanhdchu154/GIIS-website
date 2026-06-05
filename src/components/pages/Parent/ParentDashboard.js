@@ -377,6 +377,38 @@ function AdvisorCard({ advisor, notes, isEn }) {
   );
 }
 
+function ParentReassuranceCard({ isEn, subscription }) {
+  const isGuided = /guided|premium/i.test(subscription?.planType || '');
+  return (
+    <div style={{ background: '#f8fbff', borderRadius: 14, padding: '18px 20px', border: '1px solid #dce6f5' }}>
+      <p style={{ fontSize: 11, fontWeight: 800, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 10px' }}>
+        {isEn ? 'Parent-Safe Reassurance' : '家长安全摘要'}
+      </p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+        {[
+          {
+            en: isGuided ? 'Advisor-reviewed summaries appear here after check-ins.' : 'Progress summaries focus on recorded learning evidence.',
+            zh: isGuided ? '顾问 check-in 后，审核过的摘要会显示在这里。' : '进度摘要会聚焦系统记录到的学习证据。',
+          },
+          {
+            en: 'Missing-work risks and next actions are surfaced so the family can respond quickly.',
+            zh: '缺交风险与下一步会被清楚标出，方便家庭及时回应。',
+          },
+          {
+            en: 'Private advisor notes, staff deliberations, and operational details remain internal.',
+            zh: '内部顾问笔记、教务讨论与运营细节仍保持内部使用。',
+          },
+        ].map((item) => (
+          <div key={item.en} style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
+            <span style={{ color: '#1b6b3a', fontWeight: 900, fontSize: 13, lineHeight: 1.35 }}>✓</span>
+            <span style={{ color: '#3a4250', fontSize: 12.5, lineHeight: 1.5 }}>{isEn ? item.en : item.zh}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ParentDashboard({ language }) {
   const isEn = language !== 'zh';
   const navigate = useNavigate();
@@ -632,6 +664,8 @@ export default function ParentDashboard({ language }) {
 
               {/* Advisor notes — the human voice + early warning the parent wants first */}
               <AdvisorCard advisor={advisor} notes={advisorNotes} isEn={isEn} />
+
+              <ParentReassuranceCard isEn={isEn} subscription={subscription} />
 
               {/* Recent activity */}
               <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>

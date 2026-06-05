@@ -449,8 +449,8 @@ function ProfileDocument() {
           </table>
           <div style={{ ...s.body, marginTop: '8px', fontSize: '10px' }}>
             Physical Education is not required for the GIIS online diploma. World language
-            study is recommended for students targeting selective universities, but it is not
-            a GIIS diploma requirement.
+            study may be recommended during individualized college pathway planning, but it is
+            not a GIIS diploma requirement.
           </div>
 
           <div style={{ marginTop: '10px' }}>

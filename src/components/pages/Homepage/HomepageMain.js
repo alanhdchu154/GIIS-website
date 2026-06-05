@@ -296,8 +296,8 @@ function HomepageMain({ language, toggleLanguage }) {
         <meta
           name="description"
           content={isEn
-            ? 'Genesis of Ideas International School — Florida-registered online private high school with 8 academic pathways for Chinese students targeting top US universities.'
-            : '艾迪尔国际学校（Genesis of Ideas International School）— Florida 注册私立在线高中，提供 8 条学习路径，专为目标申请美国顶尖大学的中国学生设计。'}
+            ? 'Genesis of Ideas International School — Florida-registered online private high school with 8 academic pathways, parent-visible progress, and documented course records.'
+            : '艾迪尔国际学校（Genesis of Ideas International School）— Florida 注册私立在线高中，提供 8 条学习路径、家长可见进度与有记录的课程学习档案。'}
         />
       </Helmet>
 

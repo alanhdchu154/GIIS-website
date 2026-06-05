@@ -9,10 +9,10 @@ const META = {
   subtitle: 'Build the systems that run the world.',
   emoji: '💻',
   courseEmoji: '💻',
-  heroDescription: 'A rigorous 4-year pathway for students aiming for top CS and engineering programs. From Python fundamentals to machine learning, you will graduate with a professional portfolio, AP CS A exam preparation, and the problem-solving mindset that colleges like MIT, CMU, and UC Berkeley look for.',
+  heroDescription: 'A rigorous 4-year pathway for students building evidence toward CS and engineering programs. From Python fundamentals to machine learning, students develop a reviewable software portfolio, optional CS A exam preparation, and a disciplined problem-solving record for college advising.',
   targets: ['Computer Science / Software Engineering', 'Data Science & AI / Machine Learning', 'Computer Engineering & Systems', 'Cybersecurity', 'Game Development', 'Robotics & Embedded Systems'],
-  collegeNote: 'AP Computer Science A exam preparation, a completed software project portfolio, and a full 4-year progression from algorithms through machine learning signal deep commitment to admissions committees at top CS programs. Students who complete this pathway are well-positioned for CS, CE, or Data Science majors at selective universities.',
-  stats: [{ label: 'AP Prep Options', value: 1 }],
+  collegeNote: 'Optional Computer Science A exam preparation, a completed software project portfolio, and a full 4-year progression from algorithms through machine learning give advisors concrete evidence to discuss with families. This pathway supports CS, CE, or Data Science planning without promising admission outcomes.',
+  stats: [{ label: 'Exam Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -237,7 +237,7 @@ const COURSES = [
         'Design class hierarchies using inheritance and interfaces',
         'Work with arrays, ArrayLists, and 2D arrays',
         'Trace recursive algorithms and write recursive solutions',
-        'Prepare for a score of 3 or higher on the College Board AP CS A exam',
+        'Practice Java topics and free-response formats commonly tested on the AP CS A exam',
       ],
       units: [
         { week: '1–3',   topic: 'Java Fundamentals',         desc: 'Primitive types, variables, operators, control flow — parallel to Python but with static typing.' },
@@ -251,7 +251,7 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP CS A Resources', channel: 'College Board', note: 'Official practice FRQs, progress checks, and AP Daily videos. Use this throughout the year.' },
+      { url: 'https://apstudents.collegeboard.org/courses/ap-computer-science-a', title: 'AP Computer Science A exam overview', channel: 'College Board', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
       { url: 'https://www.youtube.com/watch?v=A74TOX803D0', title: 'AP Computer Science A exam preparation — Full Course', channel: 'Replit / APCS Academy', note: 'Complete AP CS A course covering every exam topic with practice problems.' },
       { url: 'https://codehs.com/course/apjava', title: 'CodeHS AP Computer Science A exam preparation', channel: 'CodeHS', note: 'Interactive Java programming environment with built-in AP CS A curriculum.' },
       { url: 'https://www.youtube.com/watch?v=2Xa3Y4xz8_s', title: 'Java Inheritance and Polymorphism', channel: 'Coding with John', note: 'Clear explanation of OOP concepts — watch before the Inheritance unit.' },

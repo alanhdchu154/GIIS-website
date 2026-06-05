@@ -5,15 +5,15 @@ const VALUES = [
     emoji: '🎯',
     titleEn: 'Personalized Learning',
     titleZh: '个性化学习',
-    bodyEn: 'Every student chooses their academic pathway based on their target US university major. Advisors track progress each semester to keep students on course.',
-    bodyZh: '每位学生根据目标美国大学专业选择学习路径，顾问每学期跟踪进度，确保学生始终方向明确。',
+    bodyEn: 'Every student chooses an academic pathway based on interests, prior credits, and graduation goals. Advisors track progress each semester to keep students on course.',
+    bodyZh: '每位学生会根据兴趣、既有学分与毕业目标选择学习路径，顾问每学期跟踪进度，确保学生始终方向明确。',
   },
   {
     emoji: '🌏',
     titleEn: 'International Perspective',
     titleZh: '国际视野',
-    bodyEn: 'Our curriculum is designed around US university admissions standards — building the academic profile that top US programs are looking for.',
-    bodyZh: '我们的课程围绕美国大学招生标准设计，帮助学生建立顶尖美国院校所期望的学术背景。',
+    bodyEn: 'Our curriculum is organized around transcript-ready coursework, assessment evidence, and parent-visible progress so families can understand what the student is actually completing.',
+    bodyZh: '我们的课程围绕可进入成绩单的课程、评估证据与家长可见的学习进度设计，让家庭能清楚了解学生实际完成了什么。',
   },
   {
     emoji: '📈',
@@ -26,7 +26,7 @@ const VALUES = [
 
 const MISSION_POINTS = [
   { en: 'Personalized advisor support every semester', zh: '每学期提供个性化顾问支持' },
-  { en: 'Curriculum built around US university admissions', zh: '课程围绕美国大学申请标准设计' },
+  { en: 'Curriculum built around transcript-ready evidence', zh: '课程围绕可记录的学习证据设计' },
   { en: 'Global citizens with a strong sense of responsibility', zh: '培养具有社会责任感的全球公民' },
   { en: 'Leadership and entrepreneurial spirit development', zh: '领导力与创业精神培养' },
 ];

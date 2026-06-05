@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T19:23:23.255Z",
+  "generatedAt": "2026-06-05T02:43:33.362Z",
   "baseUrl": "http://localhost:3000",
   "summary": {
     "total": 8,
@@ -14,7 +14,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/parent/me": 2
+        "/api/parent/me": 1
       }
     },
     {
@@ -24,7 +24,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/students/ops-summary": 2
+        "/api/students/ops-summary": 1
       }
     },
     {
@@ -34,7 +34,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications": 2
+        "/api/applications": 1
       }
     },
     {
@@ -44,7 +44,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/admin/assignments": 2
+        "/api/admin/assignments": 1
       }
     },
     {
@@ -54,7 +54,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/parent/me": 2
+        "/api/parent/me": 1
       }
     },
     {
@@ -64,7 +64,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/students/ops-summary": 2
+        "/api/students/ops-summary": 1
       }
     },
     {
@@ -74,7 +74,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications": 2
+        "/api/applications": 1
       }
     },
     {
@@ -84,7 +84,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/admin/assignments": 2
+        "/api/admin/assignments": 1
       }
     }
   ]

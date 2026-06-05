@@ -11,7 +11,7 @@ const META = {
   courseEmoji: '🧠',
   heroDescription: 'A structured 4-year pathway for students interested in psychology, counseling, social work, neuroscience, or behavioral economics. Each course builds directly on the last — by graduation, you will have a college-level foundation and an original research paper.',
   targets: ['Psychology / Clinical Psychology', 'Counseling & Social Work', 'Neuroscience & Cognitive Science', 'Behavioral Economics', 'Education & Child Development'],
-  collegeNote: 'Completing this pathway demonstrates sustained academic commitment to your intended field. Psychology exam preparation, a capstone research paper, research methods, and the breadth of your 4-year course sequence tell a clear, compelling story to admissions committees.',
+  collegeNote: 'Completing this pathway gives advisors evidence of sustained academic commitment to an intended field. Psychology exam preparation, a capstone research paper, research methods, and the breadth of the 4-year sequence support planning conversations without promising admissions outcomes.',
 };
 
 const SCHEDULE = [
@@ -249,7 +249,7 @@ const COURSES = [
       { title: 'Crash Course Psychology — Full 40-Episode Playlist', channel: 'CrashCourse', url: 'https://www.youtube.com/results?search_query=crash+course+psychology+complete+playlist', note: 'Cover the full playlist — maps almost perfectly to AP content.' },
       { title: 'AP Psychology exam preparation — Full Course', channel: 'Khan Academy', url: 'https://www.khanacademy.org/science/ap-psychology', note: 'Free AP prep with progress tracking.' },
       { title: 'AP FRQ Strategy', channel: 'Marco Learning', url: 'https://www.youtube.com/results?search_query=AP+psychology+free+response+tips+marco+learning', note: 'Critical for exam day — how to answer FRQs correctly.' },
-      { title: 'AP Classroom', channel: 'College Board', url: 'https://apclassroom.collegeboard.org', note: 'Official practice questions and progress checks. Required.' },
+      { title: 'AP Psychology exam overview', channel: 'College Board', url: 'https://apstudents.collegeboard.org/courses/ap-psychology', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
     ],
     quiz: [
       { q: 'Studying the hippocampus in memory formation reflects which perspective?', opts: ['Psychodynamic', 'Humanistic', 'Behavioral', 'Biological'], ans: 3, exp: 'The biological perspective examines how brain structures, genes, and neurochemistry influence behavior.' },

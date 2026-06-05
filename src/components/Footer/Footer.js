@@ -61,8 +61,8 @@ function Footer({ language }) {
           </p>
           <p style={{ margin: '0 0 20px', fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7 }}>
             {en
-              ? 'Florida-registered online high school for Chinese students targeting top US universities.'
-              : '面向中国学生的 Florida 注册在线高中，助力申请顶尖大学。'}
+              ? 'Florida-registered online high school with documented coursework, parent visibility, and student support.'
+              : 'Florida 注册在线高中，提供有记录的课程学习、家长可见进度与学生支持。'}
           </p>
           <span style={{
             display: 'inline-block', fontSize: '10px', fontWeight: 700,

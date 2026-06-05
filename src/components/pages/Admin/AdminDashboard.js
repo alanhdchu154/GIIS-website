@@ -103,7 +103,6 @@ export default function AdminDashboard({ language }) {
 
   useEffect(() => {
     if (!session) { navigate('/login', { replace: true }); return; }
-    if (!API_BASE) { setErr(isEn ? 'Missing REACT_APP_API_URL' : '缺少 REACT_APP_API_URL'); setLoading(false); return; }
     loadStudents();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

@@ -9,10 +9,10 @@ const META = {
   subtitle: 'Design, build, and solve the world\'s hardest problems.',
   emoji: '⚙️',
   courseEmoji: '⚙️',
-  heroDescription: 'A rigorous 4-year pathway for students targeting top engineering programs at universities like MIT, Stanford, Georgia Tech, and Purdue. From physics and design principles through thermodynamics and structural analysis, you will graduate with AP Physics credit, an engineering design portfolio, and the analytical foundation that engineering schools demand.',
+  heroDescription: 'A rigorous 4-year pathway for students building evidence toward engineering programs. From physics and design principles through thermodynamics and structural analysis, students develop an engineering design portfolio, optional Physics 1 exam preparation, and an analytical foundation for college advising.',
   targets: ['Mechanical Engineering', 'Electrical Engineering', 'Civil & Structural Engineering', 'Aerospace Engineering', 'Chemical Engineering', 'Biomedical Engineering'],
-  collegeNote: 'US engineering schools evaluate applicants on math depth (Calculus is essential), science breadth, and evidence of hands-on problem-solving. AP Physics is a major differentiator. This pathway is designed to signal rigorous STEM preparation and genuine engineering curiosity to competitive admissions committees.',
-  stats: [{ label: 'AP Prep Options', value: 1 }],
+  collegeNote: 'Engineering planning depends on math depth, science breadth, and evidence of hands-on problem-solving. Optional Physics 1 exam preparation can support outside exam goals, while the pathway record gives advisors concrete coursework and portfolio evidence to review with families.',
+  stats: [{ label: 'Exam Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -250,7 +250,7 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official Physics 1 Resources', channel: 'College Board', note: 'Official AP Daily video lessons, progress checks, and released FRQs. Use throughout the course for exam preparation.' },
+      { url: 'https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based', title: 'AP Physics 1 exam overview', channel: 'College Board', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
       { url: 'https://www.khanacademy.org/science/ap-physics-1', title: 'Physics 1 exam preparation — Khan Academy', channel: 'Khan Academy', note: 'Complete Physics 1 exam preparation curriculum with videos and practice aligned to the College Board AP exam units.' },
       { url: 'https://www.youtube.com/c/flippingphysics', title: 'Flipping Physics — Physics 1 exam preparation Playlist', channel: 'Flipping Physics', note: 'Every Physics 1 exam preparation topic taught with clear worked examples and multiple-choice strategies — the best free AP Physics channel.' },
       { url: 'https://phet.colorado.edu/en/simulations/filter?subjects=physics', title: 'PhET Interactive Simulations — Physics', channel: 'University of Colorado Boulder', note: 'Free, research-based physics simulations for projectile motion, forces, energy, waves, and more — use for every unit\'s lab component.' },

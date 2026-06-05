@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 /**
@@ -9,13 +9,12 @@ import { Link } from 'react-router-dom';
  * quality. The 80-second DemoEmbed sells the experience; LessonPreview sells
  * the actual product.
  *
- * Default lesson: Algebra I — Module 4 (One-Step & Two-Step Equations). Chosen
- * because the boba-shop hook is concrete, math is what Chinese parents
- * implicitly trust, and the pilot has been the most-viewed sample.
+ * Default lesson: Algebra I — Module 4 (One-Step & Two-Step Equations). The
+ * video URL is loaded from /data/lessons-manifest.json so the homepage stays
+ * aligned with the approved upload manifest.
  *
  * Props (all optional — defaults shown below):
  *   language       'en' | 'zh'  — required
- *   youtubeId      YouTube video ID (default: Algebra I M4)
  *   course         course name shown in pill (default: 'Algebra I')
  *   moduleNumber   integer (default: 4)
  *   moduleTitle    {en, zh}     — title of the lesson
@@ -23,7 +22,6 @@ import { Link } from 'react-router-dom';
  */
 function LessonPreview({
   language,
-  youtubeId = 'AMF3Wj4cycs',
   course = 'Algebra I',
   moduleNumber = 4,
   moduleTitle = {
@@ -36,6 +34,28 @@ function LessonPreview({
   },
 }) {
   const isEn = language !== 'zh';
+  const [lesson, setLesson] = useState(null);
+  const [manifestError, setManifestError] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/data/lessons-manifest.json')
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
+      .then((manifest) => {
+        if (cancelled) return;
+        const list = manifest.by_course?.[course] || [];
+        const match = list.find((item) => item.module_number === moduleNumber);
+        setLesson(match || null);
+      })
+      .catch((e) => {
+        if (!cancelled) setManifestError(e.message);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [course, moduleNumber]);
+
+  const displayedTitle = lesson?.module_title || (isEn ? moduleTitle.en : moduleTitle.zh);
 
   return (
     <section style={{
@@ -134,7 +154,7 @@ function LessonPreview({
               fontWeight: 600,
               color: '#1a1a2e',
             }}>
-              {isEn ? moduleTitle.en : moduleTitle.zh}
+              {displayedTitle}
             </span>
           </div>
 
@@ -147,21 +167,41 @@ function LessonPreview({
             overflow: 'hidden',
             background: '#000',
           }}>
-            <iframe
-              src={`https://www.youtube.com/embed/${youtubeId}?rel=0&modestbranding=1`}
-              title={`${course} — ${isEn ? moduleTitle.en : moduleTitle.zh}`}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{
+            {lesson?.embed_url ? (
+              <iframe
+                src={`${lesson.embed_url}?rel=0&modestbranding=1`}
+                title={`${course} — ${displayedTitle}`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                }}
+              />
+            ) : (
+              <div style={{
                 position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                border: 'none',
-              }}
-            />
+                inset: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 24,
+                color: '#d7dbe7',
+                fontSize: 14,
+                lineHeight: 1.6,
+                textAlign: 'center',
+                background: '#1a1a2e',
+              }}>
+                {manifestError
+                  ? (isEn ? 'Lesson preview is temporarily unavailable.' : '课程预览暂时无法载入。')
+                  : (isEn ? 'Loading the approved lesson preview...' : '正在载入已审核课程预览...')}
+              </div>
+            )}
           </div>
 
           {/* English disclosure — set correct expectation */}
@@ -173,8 +213,8 @@ function LessonPreview({
             lineHeight: 1.5,
           }}>
             {isEn
-              ? 'Lessons are taught in English with English captions. This is by design — students need English exposure for AP exams and US college applications.'
-              : '课程为英文授课，配英文字幕。这是刻意设计——学生需要充分的英文输入，才能应对 AP 考试与美国大学申请。'}
+              ? 'Lessons are taught in English with English captions. This is by design — students build academic English while completing regular coursework.'
+              : '课程为英文授课，配英文字幕。这是刻意设计——学生在完成日常课程的同时累积学术英文能力。'}
           </p>
         </div>
 

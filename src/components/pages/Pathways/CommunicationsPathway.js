@@ -9,10 +9,10 @@ const META = {
   subtitle: 'Tell stories that move people. Shape the conversation.',
   emoji: '📡',
   courseEmoji: '📡',
-  heroDescription: 'A 4-year pathway for students interested in journalism, public relations, digital media, film production, or strategic communications. From writing and rhetoric through media theory and digital storytelling, you will graduate with a professional media portfolio and the communication skills that top programs at Northwestern, USC Annenberg, and NYU look for.',
+  heroDescription: 'A 4-year pathway for students interested in journalism, public relations, digital media, film production, or strategic communications. From writing and rhetoric through media theory and digital storytelling, students build a professional media portfolio and reviewable communication evidence for college advising.',
   targets: ['Journalism & Mass Communication', 'Public Relations & Strategic Communication', 'Digital Media & Content Creation', 'Film & Television Production', 'Advertising & Marketing Communication', 'Media Studies & Communication Theory'],
-  collegeNote: 'Communication programs are highly competitive and look for students who have both theoretical grounding and practical media creation experience. Strong writing samples, a media portfolio, and evidence of analytical thinking about media and society are what distinguish top applicants. This pathway builds all three.',
-  stats: [{ label: 'AP Prep Options', value: 1 }],
+  collegeNote: 'Communication planning is strongest when families can see both theoretical grounding and practical media creation. Strong writing samples, a media portfolio, and evidence of analytical thinking about media and society give advisors concrete material to review.',
+  stats: [{ label: 'Exam Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -51,7 +51,7 @@ const SCHEDULE = [
     { name: 'English III',                      type: 'core',       credits: 1.0, dept: 'English Language Arts' },
     { name: 'Statistics',                       type: 'core',       credits: 1.0, dept: 'Mathematics' },
     { name: 'Biology — Advanced',               type: 'core',       credits: 1.0, dept: 'Science' },
-    { name: 'AP English Language & Composition', type: 'pathway',  credits: 1.0, courseId: 'comm-aplang' },
+    { name: 'English Language exam preparation', type: 'pathway',  credits: 1.0, courseId: 'comm-aplang' },
     { name: 'Business Research Methods',        type: 'supporting', credits: 0.5, dept: 'Social Studies', note: 'Recommended' },
   ]},
   { grade: 11, term: 'Spring', courses: [
@@ -151,7 +151,7 @@ const COURSES = [
     id: 'comm-rhetoric',
     name: 'Rhetoric & Persuasion',
     grade: 10, term: 'Fall', credits: 0.5,
-    description: 'The art of effective communication, traced from Aristotle\'s Greece to contemporary political speeches and viral advertising campaigns. Students study the classical rhetorical tradition — ethos, pathos, logos — and apply these frameworks to analyze and produce persuasive texts across multiple modes. This course is essential preparation for AP English Language & Composition.',
+    description: 'The art of effective communication, traced from Aristotle\'s Greece to contemporary political speeches and viral advertising campaigns. Students study the classical rhetorical tradition — ethos, pathos, logos — and apply these frameworks to analyze and produce persuasive texts across multiple modes. This course supports optional English Language exam preparation.',
     syllabus: {
       objectives: [
         'Identify and explain Aristotle\'s three appeals — ethos, pathos, and logos — in real-world texts',
@@ -223,7 +223,7 @@ const COURSES = [
   },
   {
     id: 'comm-aplang',
-    name: 'AP English Language & Composition',
+    name: 'English Language exam preparation',
     grade: 11, term: 'Fall', credits: 1.0,
     description: 'College-level composition and rhetorical analysis. The AP Language exam demands three distinct essay types — synthesis, rhetorical analysis, and argument — and this course prepares students to excel at all three. Students read a wide range of nonfiction prose, develop a flexible analytical vocabulary, and write under timed conditions throughout the year.',
     syllabus: {
@@ -232,7 +232,7 @@ const COURSES = [
         'Compose an evidence-based argument essay that develops a nuanced, defensible claim with well-chosen support',
         'Produce a synthesis essay that integrates at least three sources into a coherent original argument',
         'Read and annotate complex nonfiction prose for rhetorical purpose, audience, and stylistic choices',
-        'Achieve a score of 3 or higher on the AP English Language & Composition exam',
+        'Practice synthesis, rhetorical analysis, and argument essay formats used on the English Language exam',
       ],
       units: [
         { week: '1–3',   topic: 'Reading Rhetorically',            desc: 'Annotating nonfiction for purpose, audience, and tone. SOAPS(T) analysis (Subject, Occasion, Audience, Purpose, Speaker, Tone). Close reading of Thoreau, Baldwin, Didion, and Orwell to build a model for analytical thinking.' },
@@ -246,8 +246,8 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://www.khanacademy.org/humanities/ap-english-language', title: 'AP English Language & Composition — Khan Academy', channel: 'Khan Academy', note: 'Complete AP Lang course covering all three essay types with tutorials, worked examples, and practice questions. Use throughout the year.' },
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official College Board Resources', channel: 'College Board', note: 'Official AP Daily videos, progress checks, and released exam questions. Use for all timed simulations in Units 12–16.' },
+      { url: 'https://www.khanacademy.org/humanities/ap-english-language', title: 'AP English Language exam preparation — Khan Academy', channel: 'Khan Academy', note: 'Free tutorials, worked examples, and practice questions for optional exam-prep support.' },
+      { url: 'https://apstudents.collegeboard.org/courses/ap-english-language-and-composition', title: 'AP English Language exam overview', channel: 'College Board', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
       { url: 'https://www.youtube.com/watch?v=hMSbxTUNQqc', title: 'How to Write a Synthesis Essay — AP Lang', channel: 'Heimler\'s History', note: 'Step-by-step breakdown of the synthesis essay with annotated student examples scored on the AP rubric.' },
       { url: 'https://www.youtube.com/c/AndrewFord-APLang', title: 'AP Lang with Mr. Ford — Full Exam Prep', channel: 'Andrew Ford', note: 'Comprehensive AP Lang video series covering multiple choice strategies and all three essay types. Work through the rhetorical analysis playlist in Units 4–5.' },
     ],

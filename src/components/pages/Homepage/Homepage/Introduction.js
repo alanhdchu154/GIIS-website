@@ -13,8 +13,8 @@ const PILLARS = [
   },
   {
     icon: '🛤️',
-    en: { title: '8 Academic Pathways', body: '4-year elective sequences designed around the top US university majors chosen by Chinese international students — from CS and Engineering to Business, Psychology, and more.' },
-    zh: { title: '8 条学习路径', body: '围绕中国留学生最热门的美国大学申请专业方向，精心设计的四年选修课程路径，涵盖计算机、工程、商业、心理学等。' },
+    en: { title: '8 Academic Pathways', body: '4-year elective sequences with visible course plans, assignments, assessments, and portfolio evidence — from CS and Engineering to Business, Psychology, and more.' },
+    zh: { title: '8 条学习路径', body: '四年选修课程路径配有清楚的课程计划、作业、评估与作品证据，涵盖计算机、工程、商业、心理学等方向。' },
   },
   {
     icon: '🤖',
@@ -37,8 +37,8 @@ export default function Introduction({ language }) {
         </h2>
         <p style={{ fontSize: '17px', color: '#555', maxWidth: '640px', lineHeight: 1.7, margin: '0 0 52px' }}>
           {isEn
-            ? "GIIS is a fully online, Florida-registered private high school designed specifically for Chinese students targeting top US universities. We combine rigorous academics with personalized pathway planning and AI-powered learning tools."
-            : '艾迪尔国际学校是一所完全在线的 Florida 注册私立学校，专为目标申请美国顶尖大学的中国学生而设计，将严格的学术课程与个性化路径规划及 AI 学习工具相结合。'}
+            ? "GIIS is a fully online, Florida-registered private high school for families who want a documented, transparent US high school pathway. We combine rigorous academics with personalized pathway planning and AI-powered learning tools."
+            : '艾迪尔国际学校是一所完全在线的 Florida 注册私立学校，适合希望获得清楚、透明美国高中学习路径的家庭。我们将严格的学术课程与个性化路径规划及 AI 学习工具相结合。'}
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
           {PILLARS.map((p) => (

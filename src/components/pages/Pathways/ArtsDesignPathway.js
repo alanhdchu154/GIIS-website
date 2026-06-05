@@ -9,10 +9,10 @@ const META = {
   subtitle: 'Create beauty. Build meaning. Design the future.',
   emoji: '🎨',
   courseEmoji: '🎨',
-  heroDescription: 'A 4-year pathway for students pursuing fine arts, graphic design, architecture, film/animation, or user experience design. From visual fundamentals and art history through digital design and portfolio development, you will graduate with a strong creative portfolio and the critical thinking about aesthetics and design that programs at RISD, Parsons, UCLA Film, and MIT Architecture require.',
+  heroDescription: 'A 4-year pathway for students pursuing fine arts, graphic design, architecture, film/animation, or user experience design. From visual fundamentals and art history through digital design and portfolio development, students build a creative portfolio and written reflection evidence for college advising.',
   targets: ['Fine Arts / Studio Art', 'Graphic Design & Visual Communication', 'Architecture & Spatial Design', 'Film, Animation & Digital Media', 'User Experience (UX) Design', 'Art History & Curation'],
-  collegeNote: 'Art and design school admissions are portfolio-driven above all else. But selective programs like RISD, Parsons, and Yale Art also evaluate critical thinking, art history knowledge, and written articulation of creative choices. This pathway builds technical skills, aesthetic vocabulary, and the creative discipline that produces a competitive portfolio by Grade 12.',
-  stats: [{ label: 'AP Prep Options', value: 1 }],
+  collegeNote: 'Art and design planning is portfolio-driven above all else. This pathway builds technical skills, aesthetic vocabulary, art history context, and written articulation of creative choices so families and advisors can review portfolio readiness by Grade 12.',
+  stats: [{ label: 'Exam Prep Options', value: 1 }],
 };
 
 const SCHEDULE = [
@@ -50,7 +50,7 @@ const SCHEDULE = [
     { name: 'English III',                        type: 'core',      credits: 1.0, dept: 'English Language Arts' },
     { name: 'Statistics',                         type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Biology — Advanced',                 type: 'core',      credits: 1.0, dept: 'Science' },
-    { name: 'AP Art History',                     type: 'pathway',   credits: 1.0, courseId: 'art-aphist' },
+    { name: 'Art History exam preparation',       type: 'pathway',   credits: 1.0, courseId: 'art-aphist' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',           type: 'core',      credits: 1.0, dept: 'English Language Arts' },
@@ -116,7 +116,7 @@ const COURSES = [
     id: 'art-history1',
     name: 'Art History: Ancient to Renaissance',
     grade: 9, term: 'Spring', credits: 0.5,
-    description: 'A survey of Western and non-Western art from prehistoric cave paintings through the Italian Renaissance. Students examine works in their cultural and historical context, learning to analyze style, iconography, and artistic intent. Understanding this foundation is essential for AP Art History and for writing the kind of contextual artist statements that selective art programs expect.',
+    description: 'A survey of Western and non-Western art from prehistoric cave paintings through the Italian Renaissance. Students examine works in their cultural and historical context, learning to analyze style, iconography, and artistic intent. Understanding this foundation supports later Art History exam preparation and contextual artist statements.',
     syllabus: {
       objectives: [
         'Identify major works, artists, and stylistic conventions from Prehistoric through Renaissance periods',
@@ -155,7 +155,7 @@ const COURSES = [
     id: 'art-history2',
     name: 'Art History: Modern & Contemporary',
     grade: 10, term: 'Fall', credits: 0.5,
-    description: 'From Impressionism through today: the revolutions that shaped modern art and design. Students explore how and why artists broke from tradition — Monet\'s broken brushwork, Picasso\'s fractured planes, Warhol\'s commercial imagery, and Zaha Hadid\'s impossible architecture — connecting each movement to its social, technological, and philosophical context. This course directly prepares students for the AP Art History exam\'s content on modern and contemporary art.',
+    description: 'From Impressionism through today: the revolutions that shaped modern art and design. Students explore how and why artists broke from tradition — Monet\'s broken brushwork, Picasso\'s fractured planes, Warhol\'s commercial imagery, and Zaha Hadid\'s impossible architecture — connecting each movement to its social, technological, and philosophical context. This course supports later Art History exam preparation on modern and contemporary art.',
     syllabus: {
       objectives: [
         'Identify key works, artists, and characteristics of major modern and contemporary art movements',
@@ -229,16 +229,16 @@ const COURSES = [
 
   {
     id: 'art-aphist',
-    name: 'AP Art History',
+    name: 'Art History exam preparation',
     grade: 11, term: 'Fall', credits: 1.0,
-    description: 'College-level art history covering 250 required works from prehistoric times to the present, drawn from every global tradition — not just the Western canon. Students develop the rigorous visual analysis and essay-writing skills tested on the College Board AP exam, including formal analysis, contextual analysis, attribution, and cross-cultural comparison. A score of 3–5 on the College Board AP exam signals college-ready art historical thinking to RISD, Parsons, and art history programs nationwide.',
+    description: 'College-level art history covering major works from prehistoric times to the present, drawn from global traditions — not just the Western canon. Students develop rigorous visual analysis and essay-writing skills used in Art History exam preparation, including formal analysis, contextual analysis, attribution, and cross-cultural comparison.',
     syllabus: {
       objectives: [
-        'Identify and analyze all 250 AP Art History required works by form, function, content, and context',
-        'Write timed formal analysis essays using College Board\'s AP Art History rubric',
+        'Identify and analyze major Art History exam works by form, function, content, and context',
+        'Write timed formal analysis essays using published exam-style rubrics',
         'Compare works across global traditions using a consistent analytical framework',
         'Explain the relationship between artworks and their patronage, purpose, and original audience',
-        'Achieve a score of 3 or higher on the AP Art History exam',
+        'Practice art history exam timing, attribution, and essay organization',
       ],
       units: [
         { week: '1–3',   topic: 'Global Prehistory & Ancient Mediterranean', desc: 'AP required works from prehistoric Europe, ancient Near East, Egypt, Greece, and Rome. Image identification, dating strategies, and formal conventions of each culture. Long-essay question (LEQ) practice.' },
@@ -252,7 +252,7 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP Art History', channel: 'College Board', note: 'The official source for AP Art History practice questions, AP Daily videos, and the required image list. Use this every week.' },
+      { url: 'https://apstudents.collegeboard.org/courses/ap-art-history', title: 'AP Art History exam overview', channel: 'College Board', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
       { url: 'https://www.khanacademy.org/humanities/ap-art-history', title: 'AP Art History — Khan Academy', channel: 'Khan Academy', note: 'Khan Academy partners with College Board to provide video analysis of every required work. Essential — watch each video for all 250 required works.' },
       { url: 'https://smarthistory.org/ap-art-history/', title: 'Smarthistory — AP Art History', channel: 'Smarthistory', note: 'Scholarly essays on every AP required work, written by art historians. Provides the depth of analysis needed for long-essay questions.' },
       { url: 'https://www.youtube.com/c/TheArtAssignment', title: 'The Art Assignment', channel: 'PBS Digital Studios (YouTube)', note: 'Context-rich videos on modern and contemporary AP required works — particularly valuable for units 8–10 of the AP curriculum.' },

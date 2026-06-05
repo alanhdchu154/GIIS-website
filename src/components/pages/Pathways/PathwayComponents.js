@@ -394,7 +394,7 @@ export function PathwayPage({ meta, schedule, courses, language, toggleLanguage 
 
         {/* College note */}
         <div style={{ marginTop: 8, padding: '22px 26px', borderRadius: 12, background: `${color}08`, border: `1px solid ${color}25` }}>
-          <h3 style={{ margin: '0 0 8px', fontSize: 15, fontWeight: 700, color }}>College Application Advantage</h3>
+          <h3 style={{ margin: '0 0 8px', fontSize: 15, fontWeight: 700, color }}>College Planning Evidence</h3>
           <p style={{ margin: 0, fontSize: 13, color: '#555', lineHeight: 1.7 }}>{collegeNote}</p>
         </div>
       </div>

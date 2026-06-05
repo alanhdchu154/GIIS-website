@@ -9,10 +9,10 @@ const META = {
   subtitle: 'Understand markets. Master money. Shape policy.',
   emoji: '📈',
   courseEmoji: '📈',
-  heroDescription: 'A 4-year pathway for students drawn to economics, finance, public policy, or investment banking. You will study micro and macro economics at AP level, learn to analyze financial markets, model real data, and explore behavioral economics — the science of why people make the financial decisions they do.',
+  heroDescription: 'A 4-year pathway for students drawn to economics, finance, public policy, or investment analysis. Students study micro and macro economics, analyze financial markets, model real data, and explore behavioral economics — the science of why people make financial decisions.',
   targets: ['Economics / Applied Economics', 'Finance & Investment Banking', 'Public Policy & Government', 'Accounting & Financial Analysis', 'Actuarial Science', 'International Relations & Development'],
-  collegeNote: 'Economics exam preparation, quantitative modeling, and a senior research thesis demonstrate the exact combination of analytical rigor and intellectual curiosity that top economics programs at LSE, UChicago, and Northwestern look for.',
-  stats: [{ label: 'AP Prep Options', value: 2 }],
+  collegeNote: 'Economics exam preparation, quantitative modeling, and a senior research thesis create useful evidence for advising. The pathway is designed to show analytical rigor and curiosity through coursework, assessments, and research artifacts, not to promise specific admissions outcomes.',
+  stats: [{ label: 'Exam Prep Options', value: 2 }],
 };
 
 const SCHEDULE = [
@@ -214,7 +214,7 @@ const COURSES = [
       { url: 'https://www.youtube.com/watch?v=6_mfAOSaFEo', title: 'Macroeconomics Exam Prep — Full Review', channel: 'Heimler\'s History', note: 'Watch Heimler\'s macroeconomics playlist for College Board AP exam preparation.' },
       { url: 'https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics', title: 'Macroeconomics exam preparation', channel: 'Khan Academy', note: 'Complete AP Macro with exercises for every unit. Use the progress checks to prepare.' },
       { url: 'https://www.youtube.com/c/ACDCLeadership', title: 'Economics Exam Prep — Jacob Clifford', channel: 'ACDC Economics', note: 'Clear economics review videos with practice problems for exam preparation.' },
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official Resources', channel: 'College Board', note: 'Official AP Macro progress checks, daily videos, and released FRQs. Essential for exam prep.' },
+      { url: 'https://apstudents.collegeboard.org/courses/ap-macroeconomics', title: 'AP Macroeconomics exam overview', channel: 'College Board', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
     ],
     quiz: [
       { q: 'In the AD-AS model, a decrease in consumer confidence would most directly cause:', opts: ['SRAS to shift left', 'AD to shift right', 'AD to shift left', 'LRAS to shift right'], ans: 2, exp: 'Consumer confidence affects consumption (C), which is the largest component of AD. Lower confidence → less spending → AD shifts left → lower output and lower price level in the short run.' },

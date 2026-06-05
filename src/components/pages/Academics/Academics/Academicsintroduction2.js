@@ -14,12 +14,12 @@ const PROGRAMS = [
     title: { en: 'US Diploma Program', zh: '美国高中文凭课程' },
     tag: { en: '24 Credits · Florida Registered', zh: '24 学分 · Florida 注册私立学校' },
     body: {
-      en: 'GIIS is a registered Florida private school issuing US high school diplomas under a college-preparatory 24-credit graduation framework designed for online learners and US college admissions review.',
-      zh: 'GIIS 是在 Florida 注册的私立学校，依据面向线上学习与美国大学申请审核的 24 学分大学预备毕业框架颁发美国高中文凭。',
+      en: 'GIIS is a registered Florida private school issuing US high school diplomas under a 24-credit graduation framework designed for online learners, official records, and future application review.',
+      zh: 'GIIS 是在 Florida 注册的私立学校，依据面向线上学习、正式记录与后续申请审核的 24 学分毕业框架颁发美国高中文凭。',
     },
     points: {
-      en: ['English Language Arts — 4 credits', 'Mathematics — 4 credits', 'Science — 3 credits', 'Social Studies — 3 credits', 'Pathway & Electives — 10 credits', 'World language study is recommended for selective colleges'],
-      zh: ['英语语言艺术 — 4 学分', '数学 — 4 学分', '自然科学 — 3 学分', '社会科学 — 3 学分', '方向与选修 — 10 学分', '申请选择性大学时建议补充外语学习'],
+      en: ['English Language Arts — 4 credits', 'Mathematics — 4 credits', 'Science — 3 credits', 'Social Studies — 3 credits', 'Pathway & Electives — 10 credits', 'World language study may be recommended during individualized advising'],
+      zh: ['英语语言艺术 — 4 学分', '数学 — 4 学分', '自然科学 — 3 学分', '社会科学 — 3 学分', '方向与选修 — 10 学分', '外语学习可在个别升学规划中进一步建议'],
     },
   },
   {
@@ -28,8 +28,8 @@ const PROGRAMS = [
     title: { en: 'Elective Concentration Tracks', zh: '选修方向规划' },
     tag: { en: 'Tailored to College Major Goals', zh: '依申请方向量身规划' },
     body: {
-      en: 'Beyond core requirements, GIIS offers 8 academic pathways across STEM, Business, and the Arts. Students build a cohesive course history that demonstrates depth and direction — exactly what US admissions officers look for.',
-      zh: '在必修科目之外，GIIS 提供横跨 STEM、商业与艺术的 8 条学习路径。学生可建立一致且有深度的选课记录，展现出明确的学术方向——这正是美国大学申请审核最重视的要素。',
+      en: 'Beyond core requirements, GIIS offers 8 academic pathways across STEM, Business, and the Arts. Students build a cohesive course history with visible assignments, assessments, and portfolio evidence for family and advisor review.',
+      zh: '在必修科目之外，GIIS 提供横跨 STEM、商业与艺术的 8 条学习路径。学生可建立一致且有深度的选课记录，并留下作业、评估与作品证据，供家庭与顾问一起查看。',
     },
     points: {
       en: ['Psychology & Behavioral Science — from intro courses to psychology exam prep and capstone', 'CS & Engineering — programming, data structures, Java exam prep, and ML', 'Business & Marketing — entrepreneurship, marketing, consumer behavior', 'Economics & Finance — micro/macro economics, financial markets, and advanced exam-prep options'],
@@ -54,8 +54,8 @@ export default function Academicsintroduction2({ language }) {
           </h2>
           <p style={{ fontSize: '20px', color: '#555', maxWidth: '640px', lineHeight: 1.7, marginBottom: '56px' }}>
             {isEn
-              ? 'GIIS offers a US high school diploma program built on the Florida 24-credit framework, with 8 elective pathways designed specifically for Chinese students targeting US university admissions.'
-              : 'GIIS 提供以 Florida 24 学分框架为基础的美国高中文凭课程，并为目标申请美国大学的中国学生设计了 8 条专属选修路径。'}
+              ? 'GIIS offers a US high school diploma program built on the Florida 24-credit framework, with 8 elective pathways designed around transcript-ready coursework and visible student evidence.'
+              : 'GIIS 提供以 Florida 24 学分框架为基础的美国高中文凭课程，并提供 8 条围绕成绩单课程与学生学习证据设计的选修路径。'}
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>

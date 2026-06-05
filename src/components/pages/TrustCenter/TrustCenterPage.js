@@ -32,8 +32,8 @@ const TRUST_STEPS = [
     k: '03',
     title: { en: 'Preview parent visibility', zh: '预览家长可见度' },
     body: {
-      en: 'See the dashboard parents use to review credits, GPA, course progress, recent activity, assignment feedback, and advisor notes.',
-      zh: '预览家长如何查看学分、GPA、课程进度、近期活动、作业反馈与顾问留言。',
+      en: 'See the dashboard parents use to review credits, GPA, course progress, recent activity, assignment feedback, advisor-approved weekly summaries, missing-work flags, and next actions.',
+      zh: '预览家长如何查看学分、GPA、课程进度、近期活动、作业反馈、顾问审核的每周摘要、缺交提醒与下一步。',
     },
     to: '/parent/demo',
     cta: { en: 'Open parent preview', zh: '打开家长预览' },
@@ -108,6 +108,37 @@ const TRANSFER_PROOF = [
   { en: 'Previous credits are reviewed against the 24-credit framework.', zh: '既有学分会依 24 学分毕业框架审核。' },
   { en: 'Graduation timing is estimated from evidence, not promised automatically.', zh: '毕业时间依据可验证证据估算，不自动承诺。' },
   { en: 'Guided support is recommended when families need monthly accountability.', zh: '当家庭需要每月跟进时，通常建议 Guided 支持。' },
+];
+
+const CARE_VISIBILITY = [
+  {
+    title: { en: 'Weekly parent summary', zh: '每周家长摘要' },
+    body: {
+      en: 'Parents can see a plain-language summary of recent progress, pacing, and learning evidence instead of guessing from raw activity logs.',
+      zh: '家长会看到用清楚语言整理的近期进度、节奏与学习证据，不需要从原始活动记录里猜。',
+    },
+  },
+  {
+    title: { en: 'Advisor-reviewed note', zh: '顾问审核留言' },
+    body: {
+      en: 'Public family notes are reviewed before they appear, so the message stays practical, school-like, and focused on the student\'s next step.',
+      zh: '家庭可见留言会先经过审核，确保内容务实、像学校通知，并聚焦学生下一步。',
+    },
+  },
+  {
+    title: { en: 'Missing-work risk flag', zh: '缺交风险提醒' },
+    body: {
+      en: 'When a course needs attention, the dashboard can show the risk and the next action without exposing private staff deliberation.',
+      zh: '当某门课需要关注时，家长面板可以显示风险与下一步，但不会暴露内部教务讨论。',
+    },
+  },
+  {
+    title: { en: 'Private notes stay private', zh: '内部笔记不对外显示' },
+    body: {
+      en: 'Internal advisor notes, operational risk details, and staff-only coordination remain separate from parent-safe summaries.',
+      zh: '内部顾问笔记、运营风险细节与 staff-only 协调内容会与家长安全摘要分开。',
+    },
+  },
 ];
 
 function pick(map, isEn) {
@@ -258,6 +289,37 @@ function TrustCenterPage({ language, toggleLanguage }) {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: '#fff', fontFamily: 'Inter, sans-serif', padding: '62px 0' }}>
+        <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 6%' }}>
+          <div style={{ maxWidth: 800, marginBottom: 24 }}>
+            <p style={eyebrow}>{isEn ? 'After Enrollment Visibility' : '入学后的家长可见度'}</p>
+            <h2 style={sectionTitle}>{isEn ? 'Parents should know what is happening, without seeing private staff notes.' : '家长应该知道孩子发生了什么，但不需要看到内部教务笔记。'}</h2>
+            <p style={{ margin: '14px 0 0', color: '#4f5868', fontSize: 14, lineHeight: 1.75 }}>
+              {isEn
+                ? 'GIIS separates parent-safe reassurance from internal coordination. Families see progress, advisor-approved notes, missing-work risk flags, and one next action; private advisor notes remain staff-only.'
+                : 'GIIS 会把家长安全摘要与内部协调分开。家庭看到进度、顾问审核留言、缺交风险提醒与一个下一步；内部顾问笔记仍只供 staff 使用。'}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 14 }}>
+            {CARE_VISIBILITY.map((item) => (
+              <div key={item.title.en} style={{ ...proofCard, background: '#f8f9fc' }}>
+                <h3 style={{ margin: '0 0 9px', color: '#1a1a2e', fontSize: 18, lineHeight: 1.25, fontWeight: 850 }}>
+                  {pick(item.title, isEn)}
+                </h3>
+                <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.7 }}>
+                  {pick(item.body, isEn)}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 18 }}>
+            <Link to="/parent/demo" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '12px 20px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
+              {isEn ? 'Preview the parent reassurance layer' : '预览家长安心层'}
+            </Link>
           </div>
         </div>
       </section>

@@ -9,10 +9,10 @@ const META = {
   subtitle: 'Turn numbers into insight. Insight into impact.',
   emoji: '📐',
   courseEmoji: '📐',
-  heroDescription: 'A mathematically rigorous 4-year pathway for students targeting programs in Mathematics, Statistics, Data Science, or Actuarial Science. From proof-based mathematics through AP Statistics exam preparation and machine learning foundations, you will graduate with the quantitative depth that top programs like MIT, CMU, and University of Chicago look for in math and data-focused majors.',
+  heroDescription: 'A mathematically rigorous 4-year pathway for students building evidence toward Mathematics, Statistics, Data Science, or Actuarial Science programs. From proof-based mathematics through optional Statistics exam preparation and machine learning foundations, students graduate with a visible quantitative record for advising.',
   targets: ['Mathematics / Applied Mathematics', 'Statistics & Actuarial Science', 'Data Science & Analytics', 'Quantitative Finance', 'Operations Research', 'Economics (Quantitative)'],
-  collegeNote: 'Math programs value students who have gone beyond calculus — proof writing, statistics, and discrete math are major differentiators. AP Statistics exam preparation and a strong Calculus record are the baseline; students who add data science coursework and quantitative projects stand out significantly at competitive programs.',
-  stats: [{ label: 'AP Prep Options', value: 2 }],
+  collegeNote: 'Math and data programs value evidence beyond course names: proof writing, statistics, discrete math, and quantitative projects. Optional Statistics exam preparation and a strong Calculus record can support planning, but families should treat the pathway as evidence-building rather than an admissions promise.',
+  stats: [{ label: 'Exam Prep Options', value: 2 }],
 };
 
 const SCHEDULE = [
@@ -386,7 +386,7 @@ const COURSES = [
       ],
     },
     resources: [
-      { url: 'https://apclassroom.collegeboard.org/', title: 'AP Classroom — Official AP Statistics Resources', channel: 'College Board', note: 'Official AP Daily videos, progress checks, and past free-response questions with scoring guidelines. Use throughout the year for exam preparation.' },
+      { url: 'https://apstudents.collegeboard.org/courses/ap-statistics', title: 'AP Statistics exam overview', channel: 'College Board', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
       { url: 'https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9', title: 'StatQuest — Statistics Fundamentals Playlist', channel: 'StatQuest with Josh Starmer', note: 'Conceptual explanations of t-tests, p-values, confidence intervals, and regression that build true understanding rather than memorization.' },
       { url: 'https://www.khanacademy.org/math/ap-statistics', title: 'AP Statistics exam preparation — Khan Academy', channel: 'Khan Academy', note: 'Complete AP Statistics exam preparation course with unit tests and practice questions aligned to the College Board AP exam. Use the unit tests as chapter review.' },
       { url: 'https://www.youtube.com/c/LecturioMedical/search?query=statistics', title: 'AP Stats with Josh — Review Videos', channel: 'Josh AP Statistics', note: 'Short AP Statistics review videos organized by topic. Ideal for reviewing specific exam topics before the May exam.' },

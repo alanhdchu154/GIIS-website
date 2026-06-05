@@ -53,8 +53,8 @@ function AcademicsMain({ language, toggleLanguage }) {
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '17px', margin: 0, maxWidth: '520px', lineHeight: 1.65, fontFamily: 'Inter, sans-serif' }}>
             {isEn
-              ? 'Florida-registered private high school program with 8 academic pathways designed for Chinese students targeting top US universities.'
-              : '专为中国学生设计的 Florida 注册私立高中课程，提供 8 条针对美国顶尖大学申请的学习路径。'}
+              ? 'Florida-registered private high school program with 8 academic pathways, transcript-ready coursework, and parent-visible learning evidence.'
+              : 'Florida 注册私立高中课程，提供 8 条学习路径、可进入成绩单记录的课程与家长可见的学习证据。'}
           </p>
         </div>
       </div>
@@ -67,7 +67,7 @@ function AcademicsMain({ language, toggleLanguage }) {
         <AcademicsIntroduction language={language} />
       </div>
 
-      {/* ── Our Programs + AP Courses ─────────────────────────────────── */}
+      {/* ── Our Programs + Exam Prep Options ───────────────────────────── */}
       <div className="mt-0" id="programs">
         <AcademicsIntroduction2 language={language} />
       </div>
@@ -88,8 +88,8 @@ function AcademicsMain({ language, toggleLanguage }) {
               </h2>
               <p style={{ fontSize: '16px', color: '#555', maxWidth: '560px', lineHeight: 1.7, margin: 0 }}>
                 {isEn
-                  ? '8 four-year elective sequences built around the top US university majors for Chinese international students. Each course has a full syllabus, resources, and quizzes.'
-                  : '8 条围绕中国留学生最热门美国大学专业方向设计的四年选修课程序列，每门课程含大纲、资源与测验。'}
+                  ? '8 four-year elective sequences built around serious course planning, visible assignments, curated resources, and assessments families can inspect before enrollment.'
+                  : '8 条四年选修课程序列，围绕严肃选课规划、可查看作业、精选资源与入学前即可了解的评估设计。'}
               </p>
             </div>
             <Link to="/pathways" style={{
@@ -124,7 +124,7 @@ function AcademicsMain({ language, toggleLanguage }) {
                     {isEn ? p.title : p.titleZh}
                   </p>
                   <p style={{ margin: 0, fontSize: '10px', color: '#999', fontWeight: 500 }}>
-                    {p.ap} {isEn ? `AP Course${p.ap > 1 ? 's' : ''}` : `门 AP`}
+                    {p.ap} {isEn ? `Exam Prep Option${p.ap > 1 ? 's' : ''}` : `个考试准备选项`}
                   </p>
                 </div>
               </Link>

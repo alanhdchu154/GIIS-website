@@ -40,9 +40,9 @@ const TIERS = [
     features: [
       { en: 'Everything in Self-Paced', zh: '包含自主学习方案全部内容' },
       { en: 'Transfer-credit review before the family pays', zh: '付款前完成转学分初审' },
-      { en: 'Realistic 24-credit graduation path', zh: '现实可行的 24 学分毕业路径' },
-      { en: 'Monthly advisor check-in and next-step notes', zh: '每月顾问 check-in 与下一步建议' },
-      { en: 'Parent progress review and early warning signals', zh: '家长进度解读与早期风险提醒' },
+      { en: 'Course planning tied to a realistic 24-credit graduation path', zh: '围绕现实可行的 24 学分毕业路径做课程规划' },
+      { en: 'Monthly advisor check-in with advisor-approved next-step notes', zh: '每月顾问 check-in，并留下顾问审核的下一步建议' },
+      { en: 'Parent progress review with missing-work risk flags', zh: '家长进度解读，并标出缺交风险提醒' },
     ],
     cta: { en: 'Apply for Guided', zh: '申请顾问指导方案' },
     highlighted: true,
@@ -105,6 +105,20 @@ const FAQS = [
       zh: '会。学生在 Learn Portal 中提交文字作业或文件链接；GIIS 老师或顾问会审阅、按 100 分批改，并留下书面反馈。反馈会显示在学生成绩页与家长面板中。',
     },
   },
+  {
+    q: { en: 'What does the Guided $149 plan add after enrollment?', zh: 'Guided $149 入学后多了什么？' },
+    a: {
+      en: 'Guided adds a monthly advisor check-in, transfer-credit review, course planning, and parent progress review. Parent-facing notes are reviewed before publication and focus on progress, missing-work risks, and the next action.',
+      zh: 'Guided 包含每月顾问 check-in、转学分审核、课程规划与家长进度解读。家长端留言会先经过审核，重点放在进度、缺交风险与下一步。',
+    },
+  },
+  {
+    q: { en: 'Do parents see internal advisor notes?', zh: '家长会看到内部顾问笔记吗？' },
+    a: {
+      en: 'No. Families see parent-safe summaries, advisor-approved notes, learning evidence, and next actions. Private internal advisor notes and staff-only operational details are intentionally not exposed.',
+      zh: '不会。家庭看到的是家长安全摘要、顾问审核留言、学习证据与下一步。内部顾问笔记与 staff-only 运营细节不会对外显示。',
+    },
+  },
 ];
 
 const PROOF_POINTS = [
@@ -123,8 +137,8 @@ const PROOF_POINTS = [
     label: { en: 'Transparency', zh: '学习透明度' },
     title: { en: 'Preview what parents see weekly', zh: '预览家长每周看到什么' },
     body: {
-      en: 'The parent dashboard preview shows credits, GPA, active courses, recent activity, pacing flags, advisor notes, and assignment feedback in one place.',
-      zh: '家长面板预览会集中显示学分、GPA、进行中课程、近期活动、进度提醒、顾问留言与作业反馈。',
+      en: 'The parent dashboard preview shows credits, GPA, active courses, recent activity, missing-work risk flags, advisor-approved weekly summaries, next actions, and assignment feedback in one place.',
+      zh: '家长面板预览会集中显示学分、GPA、进行中课程、近期活动、缺交风险提醒、顾问审核的每周摘要、下一步与作业反馈。',
     },
     to: '/parent/demo',
     cta: { en: 'Open parent preview', zh: '打开家长预览' },
@@ -390,6 +404,8 @@ export default function PricingPage({ language, toggleLanguage }) {
                   { label: isEn ? 'Official school record' : '正式学校记录', vals: ['✓', '✓', '✓'] },
                   { label: isEn ? 'Advisor planning' : '顾问规划', vals: ['Email support', 'Monthly review', 'Varies'] },
                   { label: isEn ? 'Transfer-credit review' : '转学分审核', vals: ['Basic', 'Included', 'Varies'] },
+                  { label: isEn ? 'Parent progress review' : '家长进度解读', vals: ['Dashboard only', 'Monthly advisor-reviewed', 'Varies'] },
+                  { label: isEn ? 'Missing-work risk flags' : '缺交风险提醒', vals: ['Dashboard only', 'Included', 'Varies'] },
                   { label: isEn ? 'Flexible online schedule' : '线上弹性进度', vals: ['✓', '✓', '△'] },
                 ].map((row) => (
                   <tr key={row.label}>
