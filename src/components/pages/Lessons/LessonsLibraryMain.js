@@ -18,7 +18,6 @@ import Nav from '../../main/Nav.js';
  * AP / accredited / Common App claims on this surface.
  */
 
-const COURSE_ORDER = ['English I', 'Algebra I', 'Biology'];
 const YT_CHANNEL = 'https://www.youtube.com/@GenesisOfIdeasInternational';
 
 const NAVY = '#1a1a2e';
@@ -60,11 +59,9 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
   const courses = useMemo(() => {
     if (!byCourse) return [];
     const names = Object.keys(byCourse).filter((c) => (byCourse[c] || []).length);
-    names.sort((a, b) => {
-      const ia = COURSE_ORDER.indexOf(a);
-      const ib = COURSE_ORDER.indexOf(b);
-      return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || a.localeCompare(b);
-    });
+    // Lead with the fullest course so the first impression is the strongest;
+    // grows on its own as the daily pipeline fills out each course.
+    names.sort((a, b) => (byCourse[b].length - byCourse[a].length) || a.localeCompare(b));
     return names.map((name) => ({
       name,
       lessons: [...byCourse[name]].sort((a, b) => a.module_number - b.module_number),
@@ -150,8 +147,11 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
           {/* CTA */}
           {totalLessons > 0 && (
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginTop: 16 }}>
-              <Link to="/pricing" style={solidCta}>
-                {isEn ? 'See the full learning experience →' : '看看完整学习体验 →'}
+              <Link to="/apply" style={goldCta}>
+                {isEn ? 'Apply to enroll →' : '立即申请入学 →'}
+              </Link>
+              <Link to="/pricing" style={outlineCta}>
+                {isEn ? 'See plans & pricing' : '查看方案与价格'}
               </Link>
               <a href={YT_CHANNEL} target="_blank" rel="noopener noreferrer" style={outlineCta}>
                 {isEn ? 'Watch on YouTube →' : '在 YouTube 观看 →'}
@@ -250,15 +250,15 @@ function LessonCard({ lesson, isEn, onPlay }) {
   );
 }
 
-const solidCta = {
+const goldCta = {
   padding: '13px 28px',
   borderRadius: 10,
-  background: NAVY_2,
-  color: '#fff',
-  fontWeight: 700,
+  background: GOLD,
+  color: NAVY,
+  fontWeight: 800,
   fontSize: 14,
   textDecoration: 'none',
-  boxShadow: '0 4px 14px rgba(43, 61, 109, 0.25)',
+  boxShadow: '0 4px 14px rgba(213, 168, 54, 0.3)',
 };
 
 const outlineCta = {
