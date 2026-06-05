@@ -9,6 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 const Homepage = lazy(() => import('./components/pages/Homepage/HomepageMain'));
 const Discovery = lazy(() => import('./components/pages/Discovery/DiscoveryMain'));
 const Academics = lazy(() => import('./components/pages/Academics/AcademicsMain'));
+const LessonsLibrary = lazy(() => import('./components/pages/Lessons/LessonsLibraryMain'));
 const Admission = lazy(() => import('./components/pages/Admission/AdmissionMain'));
 const Support = lazy(() => import('./components/pages/Support/SupportMain'));
 const Transcript = lazy(() => import('./components/pages/Transcript/TranscriptMain'));
@@ -128,6 +129,7 @@ function App() {
          <Route path="/" element={<Homepage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/discovery" element={<Discovery language={language} toggleLanguage={toggleLanguage}  />} />
          <Route path="/academics" element={<Academics language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/lessons" element={<LessonsLibrary language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/admission" element={<Admission language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/support" element={<Support language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/transcript" element={<Transcript language={language}/>}/>

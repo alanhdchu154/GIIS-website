@@ -227,7 +227,7 @@ function LessonPreview({
           marginTop: '32px',
         }}>
           <Link
-            to="/academics"
+            to="/lessons"
             style={{
               padding: '13px 28px',
               borderRadius: '10px',
@@ -248,7 +248,7 @@ function LessonPreview({
               e.currentTarget.style.boxShadow = '0 4px 14px rgba(43, 61, 109, 0.25)';
             }}
           >
-            {isEn ? 'Browse all 40+ courses →' : '浏览全部 40+ 门课程 →'}
+            {isEn ? 'Browse the full lesson library →' : '浏览完整课程库 →'}
           </Link>
           <a
             href="https://www.youtube.com/@GenesisOfIdeasInternational"
