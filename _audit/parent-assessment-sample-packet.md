@@ -1,6 +1,6 @@
 # GIIS Parent Assessment Sample Packet
 
-Generated: 2026-06-04T13:37:26.188Z
+Generated: 2026-06-04T19:21:35.642Z
 
 Purpose: give parents and advisors concrete proof that GIIS courses include reviewable student work, quizzes, midterms, finals, and a visible grading story.
 
@@ -47,17 +47,17 @@ Rubric focus: Completeness, practical detail, prompt alignment, and design decis
 
 Quiz sample:
 
-Question: Which of the following is an algebraic expression?
-Options: 2 + 3 = 5 / 4x − 7 / x = 10 / 3 > 1
-Answer: 4x − 7
-Explanation: An algebraic expression contains variables and operations but no equals or inequality sign.
+Question: What is the value of 3x + 5 when x = 2?
+Options: 9 / 10 / 11 / 13
+Answer: 11
+Explanation: 3(2) + 5 = 6 + 5 = 11. The choice fits the prompt because it applies the central rule or concept from Variables & Algebraic Expressions.
 
 Midterm sample:
 
 Question: Which expression represents "7 less than twice a number n"?
 Options: 2n − 7 / 7 − 2n / 2(n − 7) / n − 14
 Answer: 2n − 7
-Explanation: "Twice a number" is 2n; "7 less than" means subtract 7 after.
+Explanation: "Twice a number" is 2n; "7 less than" means subtract 7 after. This reinforces the Algebra I midterm concepts idea behind the item instead of rewarding a surface-level guess.
 
 Final sample:
 
@@ -236,17 +236,17 @@ Rubric focus: Completeness, practical detail, prompt alignment, and design decis
 
 Quiz sample:
 
-Question: Lipids are primarily used for:
-Options: Energy storage and membrane structure / Carrying genetic information / Catalyzing reactions / Building cell walls
-Answer: Energy storage and membrane structure
-Explanation: The correct answer is: Energy storage and membrane structure.
+Question: Which element is the backbone of all organic molecules?
+Options: Oxygen / Nitrogen / Carbon / Hydrogen
+Answer: Carbon
+Explanation: The correct answer is: Carbon. It names the scientific relationship being tested and distinguishes it from related vocabulary.
 
 Midterm sample:
 
-Question: The net ATP yield from one glucose molecule during aerobic respiration is approximately:
-Options: 30–32 ATP / 2 ATP / 4 ATP / 100 ATP
-Answer: 30–32 ATP
-Explanation: Most biology courses use approximately 30–32 ATP as the net yield from aerobic respiration in eukaryotic cells.
+Question: Which macromolecule serves as the primary energy source for cells?
+Options: Proteins / Lipids / Carbohydrates / Nucleic acids
+Answer: Carbohydrates
+Explanation: The correct answer is: Carbohydrates. It connects the correct answer to Biology midterm concepts and separates it from plausible distractors.
 
 Final sample:
 
@@ -284,22 +284,22 @@ Rubric focus: Accuracy, shown work, corrections, and explanation of process.
 
 Quiz sample:
 
-Question: Which state of matter keeps a fixed volume but takes the shape of its container?
+Question: Which state of matter has a definite volume but no definite shape?
 Options: Solid / Liquid / Gas / Plasma
 Answer: Liquid
-Explanation: A liquid has a definite volume but no definite shape, so it takes the shape of its container.
+Explanation: The correct answer is: Liquid. Students need to recognize why Liquid matches the evidence in the question and why nearby options do not.
 
 Midterm sample:
 
-Question: How many valence electrons does a neutral sulfur atom in Group 16 have?
-Options: 2 / 4 / 6 / 16
-Answer: 6
-Explanation: Sulfur is a main-group element in Group 16, so it has 6 valence electrons.
+Question: Which of the following is a physical change?
+Options: Burning wood / Rusting iron / Melting ice / Digesting food
+Answer: Melting ice
+Explanation: The correct answer is: Melting ice. The choice fits the prompt because it applies the central rule or concept from Chemistry midterm concepts.
 
 Final sample:
 
 Question: Explain dynamic equilibrium using H₂ + I₂ ⇌ 2HI. What is happening at the molecular level when equilibrium is reached?
-Answer: At dynamic equilibrium, the forward and reverse reactions occur at equal rates, so concentrations show no net change. In H₂ + I₂ ⇌ 2HI, HI forms and decomposes at the same rate while molecular collisions and reactions continue.
+Answer: At dynamic equilibrium, the forward and reverse reactions occur at equal rates, so concentrations show no net change. In H₂ + I₂ ⇌ 2HI, HI forms and decomposes at the same rate while molecular collisions and reactions continue
 Explanation: A complete response states that the forward and reverse rates are equal, concentrations have no net change, and reactions continue at the molecular level.
 
 ### Review Rubric
@@ -334,7 +334,7 @@ Quiz sample:
 Question: The Jamestown settlement (1607) was founded primarily for:
 Options: Religious freedom / Economic profit by the Virginia Company / Escaping political persecution / Military strategic purposes
 Answer: Economic profit by the Virginia Company
-Explanation: The correct answer is: Economic profit by the Virginia Company.
+Explanation: The correct answer is: Economic profit by the Virginia Company. The explanation asks students to connect the answer with cause, evidence, or consequence rather than memorizing a term.
 
 Midterm sample:
 
@@ -346,7 +346,7 @@ Explanation: The correct answer is: Established the first written self-governmen
 Final sample:
 
 Question: Describe the Marshall Plan and explain why it was both a humanitarian and a strategic Cold War decision for the United States.
-Answer: The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards.
+Answer: The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards
 Explanation: The correct answer is: The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards..
 
 ### Review Rubric
@@ -385,15 +385,15 @@ Explanation: The correct answer is: Protect natural rights of life, liberty, and
 
 Midterm sample:
 
-Question: The principle of popular sovereignty means that:
-Options: The president has supreme authority / Government power derives from the consent of the governed / Congress can override any court decision / States have power over the federal government
-Answer: Government power derives from the consent of the governed
-Explanation: The correct answer is: Government power derives from the consent of the governed.
+Question: Which philosopher argued that people enter a social contract to escape the brutish 'state of nature'?
+Options: John Locke / Thomas Hobbes / Jean-Jacques Rousseau / Montesquieu
+Answer: Thomas Hobbes
+Explanation: The correct answer is: Thomas Hobbes. It connects the correct answer to Government midterm concepts and separates it from plausible distractors.
 
 Final sample:
 
 Question: Compare the U.S. presidential system with a parliamentary system on two dimensions: how the executive is chosen and how the executive can be removed from office.
-Answer: In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance.
+Answer: In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance
 Explanation: The correct answer is: In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance..
 
 ### Review Rubric

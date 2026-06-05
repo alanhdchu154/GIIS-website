@@ -261,7 +261,7 @@ export default function ExamPage({ language }) {
                     </div>
                   )}
 
-                  {q.type === 'short' && (
+                  {(q.type === 'short' || q.type === 'fill') && (
                     <input
                       type="text"
                       placeholder={isEn ? 'Type your answer…' : '输入答案…'}

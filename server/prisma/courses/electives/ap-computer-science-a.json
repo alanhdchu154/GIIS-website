@@ -14,7 +14,7 @@
       "titleZh": "基本类型与变量",
       "objectives": "Write Java statements that declare, initialize, and update int, double, boolean, and char variables; trace arithmetic expressions with operator precedence; explain integer division vs. floating-point division; apply numeric casts safely; format console output with System.out.println.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
-      "readingNote": "Runestone CSAwesome — Topic 1: Primitive Types",
+      "readingNote": "Khan Academy — AP Computer Science A overview and primitive types review",
       "videoUrl": "https://www.youtube.com/watch?v=eIrMbAQSU34",
       "videoNote": "Bro Code — Java Tutorial for Beginners (variables and operators)",
       "video2Url": "https://www.codingbat.com/java/Warmup-1",
@@ -30,9 +30,9 @@
       "titleZh": "使用对象：String、Math 与包装类",
       "objectives": "Distinguish primitive types from reference types; create String objects and call methods (length, substring, indexOf, equals, compareTo); use Math methods (sqrt, pow, abs, random); understand Integer and Double wrapper classes; recognize that Strings are immutable.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
-      "readingNote": "Runestone CSAwesome — Topic 2: Using Objects",
-      "videoUrl": "https://docs.oracle.com/javase/tutorial/java/data/strings.html",
-      "videoNote": "Oracle Java Tutorials — Strings",
+      "readingNote": "Khan Academy — AP Computer Science A using objects review",
+      "videoUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
+      "videoNote": "Khan Academy — AP Computer Science A using objects lessons",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/String-1",
@@ -46,9 +46,9 @@
       "titleZh": "布尔值与 if 语句",
       "objectives": "Write boolean expressions using comparison and logical operators (&&, ||, !); apply short-circuit evaluation; structure code with if, if-else, and else-if chains; understand the equals method vs. == for Strings.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
-      "readingNote": "Runestone CSAwesome — Topic 3: Boolean Expressions and if Statements",
-      "videoUrl": "https://www.codingbat.com/java/Logic-1",
-      "videoNote": "CodingBat — Logic-1 Practice Problems",
+      "readingNote": "Khan Academy — AP Computer Science A boolean expressions and conditionals review",
+      "videoUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
+      "videoNote": "Khan Academy — AP Computer Science A conditionals lessons",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/Logic-2",
@@ -62,9 +62,9 @@
       "titleZh": "迭代：while 与 for 循环",
       "objectives": "Write while loops with correct termination conditions; convert between while and for loops; write loops that count up, count down, and step by k; identify and avoid infinite loops; trace loop variables by hand.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
-      "readingNote": "Runestone CSAwesome — Topic 4: Iteration",
-      "videoUrl": "https://www.codingbat.com/java/Recursion-1",
-      "videoNote": "CodingBat — Recursion-1 (loops and self-similar patterns)",
+      "readingNote": "Khan Academy — AP Computer Science A iteration review",
+      "videoUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
+      "videoNote": "Khan Academy — AP Computer Science A iteration lessons",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/AP-1",
@@ -78,7 +78,7 @@
       "titleZh": "嵌套循环与循环模式",
       "objectives": "Write nested loops to traverse two-dimensional patterns; recognize the standard patterns: counter, accumulator, max/min, sentinel-controlled; understand loop complexity (single loop vs. nested) at an intuitive level.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
-      "readingNote": "Runestone CSAwesome — Nested Iteration Patterns",
+      "readingNote": "Khan Academy — AP Computer Science A nested iteration review",
       "videoUrl": "https://www.youtube.com/watch?v=8hly31xKli0",
       "videoNote": "MIT OpenCourseWare 6.0001 — Iteration (loop reasoning)",
       "video2Url": "",
@@ -245,7 +245,7 @@
         "4"
       ],
       "answer": "3",
-      "explanation": "Integer division drops the decimal part, so 7 / 2 evaluates to 3.",
+      "explanation": "Integer division drops the decimal part, so 7 / 2 evaluates to 3. Students need to recognize why 3 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -259,7 +259,7 @@
         "char score = 98.6;"
       ],
       "answer": "double score = 98.6;",
-      "explanation": "double stores floating-point decimal values.",
+      "explanation": "double stores floating-point decimal values. This reinforces the Primitive Types & Variables idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -273,7 +273,7 @@
         "Makes the code invalid"
       ],
       "answer": "Changes 5 to a floating-point value before division",
-      "explanation": "Casting 5 to double makes the division floating-point, producing 2.5.",
+      "explanation": "Casting 5 to double makes the division floating-point, producing 2.5. Students need to recognize why Changes 5 to a floating-point value before division matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -287,7 +287,7 @@
         "name.compareTo(\"Alan\") > 10"
       ],
       "answer": "name.equals(\"Alan\")",
-      "explanation": "equals compares String contents; == compares object references.",
+      "explanation": "equals compares String contents; == compares object references. The choice fits the prompt because it applies the central rule or concept from Using Objects: String, Math, and Wrapper Classes.",
       "points": 1
     },
     {
@@ -301,7 +301,7 @@
         "put"
       ],
       "answer": "com",
-      "explanation": "substring starts at index 0 and stops before index 3.",
+      "explanation": "substring starts at index 0 and stops before index 3. This reinforces the Using Objects: String, Math, and Wrapper Classes idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -315,7 +315,7 @@
         "They cannot call methods"
       ],
       "answer": "They are immutable",
-      "explanation": "String methods return new values; they do not change the original String.",
+      "explanation": "String methods return new values; they do not change the original String. It connects the correct answer to Using Objects: String, Math, and Wrapper Classes and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -329,7 +329,7 @@
         "10 <= x <= 20"
       ],
       "answer": "x >= 10 && x <= 20",
-      "explanation": "Java requires two comparisons joined by && for an inclusive range.",
+      "explanation": "Java requires two comparisons joined by && for an inclusive range. This reinforces the Booleans & if Statements idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -357,7 +357,7 @@
         "!="
       ],
       "answer": "!",
-      "explanation": "! reverses a boolean value. != means not equal.",
+      "explanation": "! reverses a boolean value. != means not equal. The choice fits the prompt because it applies the central rule or concept from Booleans & if Statements.",
       "points": 1
     },
     {
@@ -371,7 +371,7 @@
         "It never stops"
       ],
       "answer": "5",
-      "explanation": "i takes values 0, 1, 2, 3, and 4.",
+      "explanation": "i takes values 0, 1, 2, 3, and 4. This reinforces the Iteration: while and for Loops idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -399,7 +399,7 @@
         "The loop uses braces"
       ],
       "answer": "The loop variable is never updated toward stopping",
-      "explanation": "If the condition never changes toward false, the loop can run forever.",
+      "explanation": "If the condition never changes toward false, the loop can run forever. This reinforces the Iteration: while and for Loops idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -413,7 +413,7 @@
         "log n"
       ],
       "answer": "n squared",
-      "explanation": "The inner loop runs n times for each of n outer iterations.",
+      "explanation": "The inner loop runs n times for each of n outer iterations. Students need to recognize why n squared matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -441,7 +441,7 @@
         "Changing a package name"
       ],
       "answer": "Storing a running total or combined result",
-      "explanation": "An accumulator is updated repeatedly inside a loop.",
+      "explanation": "An accumulator is updated repeatedly inside a loop. This reinforces the Nested Loops & Loop Patterns idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -455,7 +455,7 @@
         "Import statements"
       ],
       "answer": "Parameters",
-      "explanation": "Parameters define inputs passed into a method.",
+      "explanation": "Parameters define inputs passed into a method. This reinforces the Writing Classes & Methods idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -469,7 +469,7 @@
         "The method must be private"
       ],
       "answer": "The method returns no value",
-      "explanation": "void methods perform actions but do not return a value.",
+      "explanation": "void methods perform actions but do not return a value. The choice fits the prompt because it applies the central rule or concept from Writing Classes & Methods.",
       "points": 1
     },
     {
@@ -483,7 +483,7 @@
         "To avoid classes"
       ],
       "answer": "To organize behavior into reusable named units",
-      "explanation": "Methods improve readability, reuse, testing, and decomposition.",
+      "explanation": "Methods improve readability, reuse, testing, and decomposition. This reinforces the Writing Classes & Methods idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -511,7 +511,7 @@
         "Start a loop"
       ],
       "answer": "Initialize a new object",
-      "explanation": "A constructor sets up instance variables when an object is created.",
+      "explanation": "A constructor sets up instance variables when an object is created. It connects the correct answer to Constructors, Encapsulation & this and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -525,7 +525,7 @@
         "When declaring arrays"
       ],
       "answer": "When a parameter name matches an instance variable name",
-      "explanation": "this.field refers to the current object field, avoiding ambiguity.",
+      "explanation": "this.field refers to the current object field, avoiding ambiguity. This reinforces the Constructors, Encapsulation & this idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -539,7 +539,7 @@
         "A local block only"
       ],
       "answer": "The class itself",
-      "explanation": "static members are shared at the class level.",
+      "explanation": "static members are shared at the class level. It connects the correct answer to Static vs. Instance and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -553,7 +553,7 @@
         "A student age unique to one student"
       ],
       "answer": "A shared constant like Math.PI",
-      "explanation": "Class-level constants or utility methods are common static uses.",
+      "explanation": "Class-level constants or utility methods are common static uses. It connects the correct answer to Static vs. Instance and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -567,7 +567,7 @@
         "It returns a boolean"
       ],
       "answer": "It must run before any object of the class is created",
-      "explanation": "The JVM can call main without first constructing an object.",
+      "explanation": "The JVM can call main without first constructing an object. Students need to recognize why It must run before any object of the class is created matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -581,7 +581,7 @@
         "No exception"
       ],
       "answer": "ArrayIndexOutOfBoundsException",
-      "explanation": "The last valid index is arr.length - 1.",
+      "explanation": "The last valid index is arr.length - 1. Students need to recognize why ArrayIndexOutOfBoundsException matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -595,7 +595,7 @@
         "The method cannot change elements"
       ],
       "answer": "A reference to the same array is passed",
-      "explanation": "Methods can modify the array elements through the shared reference.",
+      "explanation": "Methods can modify the array elements through the shared reference. This reinforces the Arrays (1D) idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -609,7 +609,7 @@
         "constructor loop"
       ],
       "answer": "enhanced for loop",
-      "explanation": "Enhanced for loops simplify reading each element without index logic.",
+      "explanation": "Enhanced for loops simplify reading each element without index logic. Students need to recognize why enhanced for loop matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -623,7 +623,7 @@
         "new String ArrayList names;"
       ],
       "answer": "ArrayList<String> names = new ArrayList<String>();",
-      "explanation": "ArrayList uses object types as generic parameters.",
+      "explanation": "ArrayList uses object types as generic parameters. The choice fits the prompt because it applies the central rule or concept from ArrayList.",
       "points": 1
     },
     {
@@ -637,7 +637,7 @@
         "read(i)"
       ],
       "answer": "get(i)",
-      "explanation": "get retrieves an element by index.",
+      "explanation": "get retrieves an element by index. It connects the correct answer to ArrayList and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -651,7 +651,7 @@
         "It cannot be looped over"
       ],
       "answer": "It can resize as elements are added or removed",
-      "explanation": "ArrayList is a resizable list backed by an array-like structure.",
+      "explanation": "ArrayList is a resizable list backed by an array-like structure. This reinforces the ArrayList idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -665,7 +665,7 @@
         "12"
       ],
       "answer": "3",
-      "explanation": "The first dimension is the number of rows.",
+      "explanation": "The first dimension is the number of rows. This reinforces the 2D Arrays idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -679,7 +679,7 @@
         "Binary order"
       ],
       "answer": "Row-major order",
-      "explanation": "Row-major traversal loops rows outside and columns inside.",
+      "explanation": "Row-major traversal loops rows outside and columns inside. The choice fits the prompt because it applies the central rule or concept from 2D Arrays.",
       "points": 1
     },
     {
@@ -693,7 +693,7 @@
         "They prevent all errors"
       ],
       "answer": "One loop controls rows and one controls columns",
-      "explanation": "A 2D grid has two dimensions, so two loop variables are usually needed.",
+      "explanation": "A 2D grid has two dimensions, so two loop variables are usually needed. Students need to recognize why One loop controls rows and one controls columns matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -707,7 +707,7 @@
         "implementsClass"
       ],
       "answer": "extends",
-      "explanation": "A subclass extends a superclass.",
+      "explanation": "A subclass extends a superclass. The choice fits the prompt because it applies the central rule or concept from Inheritance & Polymorphism.",
       "points": 1
     },
     {
@@ -721,7 +721,7 @@
         "A method runs without a name"
       ],
       "answer": "A subclass provides its own version of an inherited method",
-      "explanation": "Overriding supports polymorphic behavior.",
+      "explanation": "Overriding supports polymorphic behavior. Students need to recognize why A subclass provides its own version of an inherited method matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -749,7 +749,7 @@
         "A package statement"
       ],
       "answer": "A base case",
-      "explanation": "The base case ends the recursion.",
+      "explanation": "The base case ends the recursion. It connects the correct answer to Recursion and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -763,7 +763,7 @@
         "ArrayList only"
       ],
       "answer": "Call stack",
-      "explanation": "Each recursive call gets its own stack frame.",
+      "explanation": "Each recursive call gets its own stack frame. It connects the correct answer to Recursion and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -791,7 +791,7 @@
         "The code must be recursive"
       ],
       "answer": "The data must be sorted",
-      "explanation": "Binary search discards halves based on sorted order.",
+      "explanation": "Binary search discards halves based on sorted order. This reinforces the Sorting & Searching Algorithms idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -805,7 +805,7 @@
         "Bubble scan"
       ],
       "answer": "Merge sort",
-      "explanation": "Merge sort is a divide-and-conquer algorithm.",
+      "explanation": "Merge sort is a divide-and-conquer algorithm. Students need to recognize why Merge sort matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -819,7 +819,7 @@
         "O(n squared)"
       ],
       "answer": "O(log n)",
-      "explanation": "Each comparison cuts the remaining search space roughly in half.",
+      "explanation": "Each comparison cuts the remaining search space roughly in half. The choice fits the prompt because it applies the central rule or concept from Sorting & Searching Algorithms.",
       "points": 1
     }
   ],
@@ -836,7 +836,7 @@
         "4"
       ],
       "answer": "2",
-      "explanation": "Both operands are ints, so integer division truncates.",
+      "explanation": "Both operands are ints, so integer division truncates. It connects the correct answer to AP Computer Science A midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -851,7 +851,7 @@
         "equals(s, \"yes\")"
       ],
       "answer": "s.equals(\"yes\")",
-      "explanation": "equals compares String contents.",
+      "explanation": "equals compares String contents. It connects the correct answer to AP Computer Science A midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -866,7 +866,7 @@
         "It is invalid"
       ],
       "answer": "true",
-      "explanation": "true && false is false; !false is true.",
+      "explanation": "true && false is false; !false is true. Students need to recognize why true matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -881,7 +881,7 @@
         "compile-time only"
       ],
       "answer": "sentinel-controlled",
-      "explanation": "A sentinel value signals when input should stop.",
+      "explanation": "A sentinel value signals when input should stop. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A midterm concepts.",
       "points": 1
     },
     {
@@ -896,7 +896,7 @@
         "O(n squared)"
       ],
       "answer": "O(n squared)",
-      "explanation": "There are n rows times n columns.",
+      "explanation": "There are n rows times n columns. It connects the correct answer to AP Computer Science A midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -926,7 +926,7 @@
         "To force inheritance"
       ],
       "answer": "To protect object invariants",
-      "explanation": "Validation prevents objects from starting in invalid states.",
+      "explanation": "Validation prevents objects from starting in invalid states. This reinforces the AP Computer Science A midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -941,7 +941,7 @@
         "-1"
       ],
       "answer": "2",
-      "explanation": "String indexes start at 0: d=0, e=1, s=2.",
+      "explanation": "String indexes start at 0: d=0, e=1, s=2. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A midterm concepts.",
       "points": 1
     },
     {
@@ -956,7 +956,7 @@
         "They are always static"
       ],
       "answer": "They exist only within their declared scope",
-      "explanation": "Local variables live inside a method or block.",
+      "explanation": "Local variables live inside a method or block. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A midterm concepts.",
       "points": 1
     },
     {
@@ -971,7 +971,7 @@
         "12"
       ],
       "answer": "7",
-      "explanation": "x += 3 adds 3 to the current value.",
+      "explanation": "x += 3 adds 3 to the current value. Students need to recognize why 7 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -986,7 +986,7 @@
         "Making every field public"
       ],
       "answer": "Hiding internal state and exposing controlled methods",
-      "explanation": "Encapsulation controls access to object data.",
+      "explanation": "Encapsulation controls access to object data. It connects the correct answer to AP Computer Science A midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1001,7 +1001,7 @@
         "It must be private"
       ],
       "answer": "Same name, different parameter list",
-      "explanation": "Overloading is based on different signatures.",
+      "explanation": "Overloading is based on different signatures. Students need to recognize why Same name, different parameter list matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1016,7 +1016,7 @@
         "== for Strings"
       ],
       "answer": "&&",
-      "explanation": "&& is logical AND.",
+      "explanation": "&& is logical AND. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A midterm concepts.",
       "points": 1
     },
     {
@@ -1031,7 +1031,7 @@
         "111"
       ],
       "answer": "123",
-      "explanation": "i starts at 1 and runs while i <= 3.",
+      "explanation": "i starts at 1 and runs while i <= 3. This reinforces the AP Computer Science A midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1046,7 +1046,7 @@
         "result = d / n always"
       ],
       "answer": "if (d != 0) result = n / d;",
-      "explanation": "Check the denominator before division.",
+      "explanation": "Check the denominator before division. It connects the correct answer to AP Computer Science A midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1061,13 +1061,13 @@
         "method parameter"
       ],
       "answer": "static variable",
-      "explanation": "static belongs to the class, not each object.",
+      "explanation": "static belongs to the class, not each object. This reinforces the AP Computer Science A final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 2,
-      "question": "What is arr[0] in an array?",
+      "question": "In AP Computer Science A final concepts, what is arr[0] in an array?",
       "type": "mc",
       "options": [
         "The first element",
@@ -1076,7 +1076,7 @@
         "The type"
       ],
       "answer": "The first element",
-      "explanation": "Java arrays are zero-indexed.",
+      "explanation": "Java arrays are zero-indexed. Students need to recognize why The first element matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1091,7 +1091,7 @@
         "Sorts the list"
       ],
       "answer": "Removes the element at index 2",
-      "explanation": "With an int argument, remove deletes the item at that index.",
+      "explanation": "With an int argument, remove deletes the item at that index. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     },
     {
@@ -1106,7 +1106,7 @@
         "class"
       ],
       "answer": "row",
-      "explanation": "The first index is typically row.",
+      "explanation": "The first index is typically row. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     },
     {
@@ -1121,7 +1121,7 @@
         "static(...)"
       ],
       "answer": "super(...)",
-      "explanation": "super calls a superclass constructor.",
+      "explanation": "super calls a superclass constructor. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     },
     {
@@ -1136,7 +1136,7 @@
         "It is a compile error because Dog is not Animal"
       ],
       "answer": "Dog speak",
-      "explanation": "Dynamic dispatch chooses the runtime object method.",
+      "explanation": "Dynamic dispatch chooses the runtime object method. It connects the correct answer to AP Computer Science A final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1151,7 +1151,7 @@
         "It sorts the array"
       ],
       "answer": "It can lead to stack overflow",
-      "explanation": "Recursive calls keep adding stack frames until memory is exhausted.",
+      "explanation": "Recursive calls keep adding stack frames until memory is exhausted. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     },
     {
@@ -1166,13 +1166,13 @@
         "polymorphic search"
       ],
       "answer": "linear search",
-      "explanation": "Linear search scans sequentially.",
+      "explanation": "Linear search scans sequentially. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 9,
-      "question": "Selection sort repeatedly:",
+      "question": "In AP Computer Science A final concepts, Selection sort repeatedly:",
       "type": "mc",
       "options": [
         "selects the smallest remaining item and moves it into position",
@@ -1181,7 +1181,7 @@
         "requires a 2D array"
       ],
       "answer": "selects the smallest remaining item and moves it into position",
-      "explanation": "Selection sort grows a sorted region by selecting the next smallest.",
+      "explanation": "Selection sort grows a sorted region by selecting the next smallest. This reinforces the AP Computer Science A final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1196,7 +1196,7 @@
         "It must be sorted"
       ],
       "answer": "It stores Integer objects, not primitive int directly",
-      "explanation": "Generics require reference types; autoboxing bridges int and Integer.",
+      "explanation": "Generics require reference types; autoboxing bridges int and Integer. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     },
     {
@@ -1211,7 +1211,7 @@
         "It starts recursion"
       ],
       "answer": "It asks the compiler to verify a method overrides a superclass method",
-      "explanation": "@Override catches signature mistakes.",
+      "explanation": "@Override catches signature mistakes. It connects the correct answer to AP Computer Science A final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1226,7 +1226,7 @@
         "array access"
       ],
       "answer": "merge sort",
-      "explanation": "Merge sort divides and merges in O(n log n).",
+      "explanation": "Merge sort divides and merges in O(n log n). It connects the correct answer to AP Computer Science A final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1241,7 +1241,7 @@
         "It changes the array automatically"
       ],
       "answer": "It is faster on sorted large lists",
-      "explanation": "Binary search is O(log n) but requires sorted data.",
+      "explanation": "Binary search is O(log n) but requires sorted data. This reinforces the AP Computer Science A final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1256,7 +1256,7 @@
         "They are always static"
       ],
       "answer": "They can be accessed directly only inside the class",
-      "explanation": "private restricts direct access to the declaring class.",
+      "explanation": "private restricts direct access to the declaring class. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     },
     {
@@ -1271,7 +1271,7 @@
         "It should recurse forever"
       ],
       "answer": "1",
-      "explanation": "0! is 1 and commonly used as the base case.",
+      "explanation": "0! is 1 and commonly used as the base case. Students need to recognize why 1 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1286,7 +1286,7 @@
         "Sorted only"
       ],
       "answer": "Last in, first out",
-      "explanation": "A stack removes the most recently added item first.",
+      "explanation": "A stack removes the most recently added item first. This reinforces the AP Computer Science A final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1301,7 +1301,7 @@
         "last value"
       ],
       "answer": "number of rows",
-      "explanation": "The outer array length is the row count.",
+      "explanation": "The outer array length is the row count. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     },
     {
@@ -1316,7 +1316,7 @@
         "To replace all classes"
       ],
       "answer": "To process or modify a collection of related values",
-      "explanation": "Arrays group values so a method can work with all of them.",
+      "explanation": "Arrays group values so a method can work with all of them. It connects the correct answer to AP Computer Science A final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1346,7 +1346,7 @@
         "array bounds"
       ],
       "answer": "polymorphism",
-      "explanation": "Polymorphism depends on inheritance and overridden behavior.",
+      "explanation": "Polymorphism depends on inheritance and overridden behavior. The choice fits the prompt because it applies the central rule or concept from AP Computer Science A final concepts.",
       "points": 1
     }
   ],

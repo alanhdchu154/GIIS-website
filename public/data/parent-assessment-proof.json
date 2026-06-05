@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T13:37:26.188Z",
+  "generatedAt": "2026-06-04T19:21:35.642Z",
   "summary": {
     "total": 8,
     "pass": 8,
@@ -36,15 +36,15 @@
       "assessmentSamples": {
         "quiz": {
           "moduleOrder": 1,
-          "question": "Which of the following is an algebraic expression?",
+          "question": "What is the value of 3x + 5 when x = 2?",
           "options": [
-            "2 + 3 = 5",
-            "4x − 7",
-            "x = 10",
-            "3 > 1"
+            "9",
+            "10",
+            "11",
+            "13"
           ],
-          "answer": "4x − 7",
-          "explanation": "An algebraic expression contains variables and operations but no equals or inequality sign."
+          "answer": "11",
+          "explanation": "3(2) + 5 = 6 + 5 = 11. The choice fits the prompt because it applies the central rule or concept from Variables & Algebraic Expressions."
         },
         "midterm": {
           "question": "Which expression represents \"7 less than twice a number n\"?",
@@ -55,7 +55,7 @@
             "n − 14"
           ],
           "answer": "2n − 7",
-          "explanation": "\"Twice a number\" is 2n; \"7 less than\" means subtract 7 after."
+          "explanation": "\"Twice a number\" is 2n; \"7 less than\" means subtract 7 after. This reinforces the Algebra I midterm concepts idea behind the item instead of rewarding a surface-level guess."
         },
         "final": {
           "question": "Which property is illustrated by the statement: 3(x + 4) = 3x + 12?",
@@ -357,26 +357,26 @@
       "assessmentSamples": {
         "quiz": {
           "moduleOrder": 1,
-          "question": "Lipids are primarily used for:",
+          "question": "Which element is the backbone of all organic molecules?",
           "options": [
-            "Energy storage and membrane structure",
-            "Carrying genetic information",
-            "Catalyzing reactions",
-            "Building cell walls"
+            "Oxygen",
+            "Nitrogen",
+            "Carbon",
+            "Hydrogen"
           ],
-          "answer": "Energy storage and membrane structure",
-          "explanation": "The correct answer is: Energy storage and membrane structure."
+          "answer": "Carbon",
+          "explanation": "The correct answer is: Carbon. It names the scientific relationship being tested and distinguishes it from related vocabulary."
         },
         "midterm": {
-          "question": "The net ATP yield from one glucose molecule during aerobic respiration is approximately:",
+          "question": "Which macromolecule serves as the primary energy source for cells?",
           "options": [
-            "30–32 ATP",
-            "2 ATP",
-            "4 ATP",
-            "100 ATP"
+            "Proteins",
+            "Lipids",
+            "Carbohydrates",
+            "Nucleic acids"
           ],
-          "answer": "30–32 ATP",
-          "explanation": "Most biology courses use approximately 30–32 ATP as the net yield from aerobic respiration in eukaryotic cells."
+          "answer": "Carbohydrates",
+          "explanation": "The correct answer is: Carbohydrates. It connects the correct answer to Biology midterm concepts and separates it from plausible distractors."
         },
         "final": {
           "question": "Which bonds hold the two strands of DNA together?",
@@ -441,7 +441,7 @@
       "assessmentSamples": {
         "quiz": {
           "moduleOrder": 1,
-          "question": "Which state of matter keeps a fixed volume but takes the shape of its container?",
+          "question": "Which state of matter has a definite volume but no definite shape?",
           "options": [
             "Solid",
             "Liquid",
@@ -449,23 +449,23 @@
             "Plasma"
           ],
           "answer": "Liquid",
-          "explanation": "A liquid has a definite volume but no definite shape, so it takes the shape of its container."
+          "explanation": "The correct answer is: Liquid. Students need to recognize why Liquid matches the evidence in the question and why nearby options do not."
         },
         "midterm": {
-          "question": "How many valence electrons does a neutral sulfur atom in Group 16 have?",
+          "question": "Which of the following is a physical change?",
           "options": [
-            "2",
-            "4",
-            "6",
-            "16"
+            "Burning wood",
+            "Rusting iron",
+            "Melting ice",
+            "Digesting food"
           ],
-          "answer": "6",
-          "explanation": "Sulfur is a main-group element in Group 16, so it has 6 valence electrons."
+          "answer": "Melting ice",
+          "explanation": "The correct answer is: Melting ice. The choice fits the prompt because it applies the central rule or concept from Chemistry midterm concepts."
         },
         "final": {
           "question": "Explain dynamic equilibrium using H₂ + I₂ ⇌ 2HI. What is happening at the molecular level when equilibrium is reached?",
           "options": [],
-          "answer": "At dynamic equilibrium, the forward and reverse reactions occur at equal rates, so concentrations show no net change. In H₂ + I₂ ⇌ 2HI, HI forms and decomposes at the same rate while molecular collisions and reactions continue.",
+          "answer": "At dynamic equilibrium, the forward and reverse reactions occur at equal rates, so concentrations show no net change. In H₂ + I₂ ⇌ 2HI, HI forms and decomposes at the same rate while molecular collisions and reactions continue",
           "explanation": "A complete response states that the forward and reverse rates are equal, concentrations have no net change, and reactions continue at the molecular level."
         }
       },
@@ -528,7 +528,7 @@
             "Military strategic purposes"
           ],
           "answer": "Economic profit by the Virginia Company",
-          "explanation": "The correct answer is: Economic profit by the Virginia Company."
+          "explanation": "The correct answer is: Economic profit by the Virginia Company. The explanation asks students to connect the answer with cause, evidence, or consequence rather than memorizing a term."
         },
         "midterm": {
           "question": "The Mayflower Compact (1620) is significant because it:",
@@ -544,7 +544,7 @@
         "final": {
           "question": "Describe the Marshall Plan and explain why it was both a humanitarian and a strategic Cold War decision for the United States.",
           "options": [],
-          "answer": "The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards.",
+          "answer": "The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards",
           "explanation": "The correct answer is: The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards.."
         }
       },
@@ -610,20 +610,20 @@
           "explanation": "The correct answer is: Protect natural rights of life, liberty, and property."
         },
         "midterm": {
-          "question": "The principle of popular sovereignty means that:",
+          "question": "Which philosopher argued that people enter a social contract to escape the brutish 'state of nature'?",
           "options": [
-            "The president has supreme authority",
-            "Government power derives from the consent of the governed",
-            "Congress can override any court decision",
-            "States have power over the federal government"
+            "John Locke",
+            "Thomas Hobbes",
+            "Jean-Jacques Rousseau",
+            "Montesquieu"
           ],
-          "answer": "Government power derives from the consent of the governed",
-          "explanation": "The correct answer is: Government power derives from the consent of the governed."
+          "answer": "Thomas Hobbes",
+          "explanation": "The correct answer is: Thomas Hobbes. It connects the correct answer to Government midterm concepts and separates it from plausible distractors."
         },
         "final": {
           "question": "Compare the U.S. presidential system with a parliamentary system on two dimensions: how the executive is chosen and how the executive can be removed from office.",
           "options": [],
-          "answer": "In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance.",
+          "answer": "In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance",
           "explanation": "The correct answer is: In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance.."
         }
       },

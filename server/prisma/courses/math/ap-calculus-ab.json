@@ -245,7 +245,7 @@
         "the derivative is zero"
       ],
       "answer": "f(a) exists, the limit exists, and they are equal",
-      "explanation": "Continuity at a point requires all three conditions.",
+      "explanation": "Continuity at a point requires all three conditions. It connects the correct answer to Limits & Continuity and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -259,7 +259,7 @@
         "the graph is always smooth"
       ],
       "answer": "the left and right limits are different",
-      "explanation": "A jump occurs when the one-sided limits do not match.",
+      "explanation": "A jump occurs when the one-sided limits do not match. It connects the correct answer to Limits & Continuity and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -273,7 +273,7 @@
         "equals f(a)"
       ],
       "answer": "does not exist",
-      "explanation": "A two-sided limit exists only when both one-sided limits agree.",
+      "explanation": "A two-sided limit exists only when both one-sided limits agree. The choice fits the prompt because it applies the central rule or concept from Limits & Continuity.",
       "points": 1
     },
     {
@@ -287,7 +287,7 @@
         "taking an antiderivative"
       ],
       "answer": "factoring and canceling",
-      "explanation": "Algebraic simplification can remove a removable discontinuity.",
+      "explanation": "Algebraic simplification can remove a removable discontinuity. It connects the correct answer to Limit Laws & the Squeeze Theorem and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -315,7 +315,7 @@
         "A theorem about area"
       ],
       "answer": "A form like 0/0 that needs more analysis",
-      "explanation": "0/0 does not determine a limit by itself.",
+      "explanation": "0/0 does not determine a limit by itself. It highlights the operation, property, or model that makes the answer work in Limit Laws & the Squeeze Theorem.",
       "points": 1
     },
     {
@@ -329,7 +329,7 @@
         "the y-intercept"
       ],
       "answer": "instantaneous rate of change",
-      "explanation": "The derivative is the limit of average rates over shrinking intervals.",
+      "explanation": "The derivative is the limit of average rates over shrinking intervals. It connects the correct answer to Definition of the Derivative and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -343,7 +343,7 @@
         "a horizontal asymptote"
       ],
       "answer": "the derivative",
-      "explanation": "The derivative is the limit of the difference quotient as h approaches 0.",
+      "explanation": "The derivative is the limit of the difference quotient as h approaches 0. The reasoning points back to the procedure used in Definition of the Derivative, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -357,13 +357,13 @@
         "the area from 0 to a"
       ],
       "answer": "f'(a)",
-      "explanation": "The derivative value gives the tangent slope.",
+      "explanation": "The derivative value gives the tangent slope. This reinforces the Definition of the Derivative idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 1,
-      "question": "What is d/dx of x^5?",
+      "question": "In Basic Differentiation Rules, what is d/dx of x^5?",
       "options": [
         "5x^4",
         "x^4",
@@ -371,7 +371,7 @@
         "x^6/6"
       ],
       "answer": "5x^4",
-      "explanation": "The power rule gives n*x^(n-1).",
+      "explanation": "The power rule gives n*x^(n-1). The reasoning points back to the procedure used in Basic Differentiation Rules, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -385,7 +385,7 @@
         "FTC"
       ],
       "answer": "product rule",
-      "explanation": "The product rule is f prime g plus f g prime.",
+      "explanation": "The product rule is f prime g plus f g prime. Students need to recognize why product rule matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -399,7 +399,7 @@
         "undefined always"
       ],
       "answer": "0",
-      "explanation": "A constant has no rate of change.",
+      "explanation": "A constant has no rate of change. This reinforces the Basic Differentiation Rules idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -427,7 +427,7 @@
         "all terms are constants"
       ],
       "answer": "y is not isolated as a function of x",
-      "explanation": "Differentiate both sides with respect to x, treating y as a function of x.",
+      "explanation": "Differentiate both sides with respect to x, treating y as a function of x. Students need to recognize why y is not isolated as a function of x matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -441,13 +441,13 @@
         "dy/dx only"
       ],
       "answer": "2y dy/dx",
-      "explanation": "By the chain rule, derivative of y^2 is 2y times dy/dx.",
+      "explanation": "By the chain rule, derivative of y^2 is 2y times dy/dx. The reasoning points back to the procedure used in Chain Rule & Implicit Differentiation, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 1,
-      "question": "What is d/dx of sin x?",
+      "question": "In Derivatives of Trig, Exponential, & Logarithmic Functions, what is d/dx of sin x?",
       "options": [
         "cos x",
         "-sin x",
@@ -455,13 +455,13 @@
         "tan x"
       ],
       "answer": "cos x",
-      "explanation": "The derivative of sin x is cos x.",
+      "explanation": "The derivative of sin x is cos x. This reinforces the Derivatives of Trig, Exponential, & Logarithmic Functions idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 2,
-      "question": "What is d/dx of ln x?",
+      "question": "In Derivatives of Trig, Exponential, & Logarithmic Functions, what is d/dx of ln x?",
       "options": [
         "1/x",
         "x",
@@ -469,13 +469,13 @@
         "e^x"
       ],
       "answer": "1/x",
-      "explanation": "The natural log derivative is 1/x for x > 0.",
+      "explanation": "The natural log derivative is 1/x for x > 0. The choice fits the prompt because it applies the central rule or concept from Derivatives of Trig, Exponential, & Logarithmic Functions.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 3,
-      "question": "What is d/dx of e^(3x)?",
+      "question": "In Derivatives of Trig, Exponential, & Logarithmic Functions, what is d/dx of e^(3x)?",
       "options": [
         "3e^(3x)",
         "e^(3x)",
@@ -483,7 +483,7 @@
         "e^3"
       ],
       "answer": "3e^(3x)",
-      "explanation": "Use the chain rule: derivative of 3x is 3.",
+      "explanation": "Use the chain rule: derivative of 3x is 3. Students need to recognize why 3e^(3x) matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -497,7 +497,7 @@
         "Never"
       ],
       "answer": "After differentiating",
-      "explanation": "Substituting too early can erase changing quantities.",
+      "explanation": "Substituting too early can erase changing quantities. It highlights the operation, property, or model that makes the answer work in Related Rates.",
       "points": 1
     },
     {
@@ -511,7 +511,7 @@
         "a constant"
       ],
       "answer": "time",
-      "explanation": "Rates such as dx/dt or dV/dt describe change over time.",
+      "explanation": "Rates such as dx/dt or dV/dt describe change over time. The choice fits the prompt because it applies the central rule or concept from Related Rates.",
       "points": 1
     },
     {
@@ -525,7 +525,7 @@
         "They always equal zero"
       ],
       "answer": "They identify what rate the answer represents",
-      "explanation": "A numerical rate needs units like cm/s or m^3/min.",
+      "explanation": "A numerical rate needs units like cm/s or m^3/min. Students need to recognize why They identify what rate the answer represents matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -539,7 +539,7 @@
         "a polynomial only"
       ],
       "answer": "continuous on [a,b] and differentiable on (a,b)",
-      "explanation": "These are the standard hypotheses of MVT.",
+      "explanation": "These are the standard hypotheses of MVT. Students need to recognize why continuous on [a,b] and differentiable on (a,b) matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -553,7 +553,7 @@
         "jump discontinuity"
       ],
       "answer": "local maximum",
-      "explanation": "Increasing then decreasing indicates a local max.",
+      "explanation": "Increasing then decreasing indicates a local max. The reasoning points back to the procedure used in Mean Value Theorem & Curve Sketching, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -567,7 +567,7 @@
         "discontinuous"
       ],
       "answer": "concave up",
-      "explanation": "Positive second derivative means slopes are increasing.",
+      "explanation": "Positive second derivative means slopes are increasing. It connects the correct answer to Mean Value Theorem & Curve Sketching and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -581,7 +581,7 @@
         "a random table"
       ],
       "answer": "an objective function and constraints",
-      "explanation": "You maximize or minimize an objective subject to constraints.",
+      "explanation": "You maximize or minimize an objective subject to constraints. The choice fits the prompt because it applies the central rule or concept from Optimization Problems.",
       "points": 1
     },
     {
@@ -595,7 +595,7 @@
         "only at an inflection point"
       ],
       "answer": "at a critical point or endpoint",
-      "explanation": "Closed interval optimization checks critical points and endpoints.",
+      "explanation": "Closed interval optimization checks critical points and endpoints. The choice fits the prompt because it applies the central rule or concept from Optimization Problems.",
       "points": 1
     },
     {
@@ -609,13 +609,13 @@
         "It replaces constraints"
       ],
       "answer": "It restricts possible meaningful answers",
-      "explanation": "Real-world quantities often have boundaries such as positive length.",
+      "explanation": "Real-world quantities often have boundaries such as positive length. The choice fits the prompt because it applies the central rule or concept from Optimization Problems.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 1,
-      "question": "A left Riemann sum uses:",
+      "question": "In Antiderivatives & Riemann Sums, A left Riemann sum uses:",
       "options": [
         "left endpoints of subintervals",
         "right endpoints only",
@@ -623,7 +623,7 @@
         "zeros only"
       ],
       "answer": "left endpoints of subintervals",
-      "explanation": "The sample point in each subinterval is its left endpoint.",
+      "explanation": "The sample point in each subinterval is its left endpoint. It connects the correct answer to Antiderivatives & Riemann Sums and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -637,7 +637,7 @@
         "only an exponent"
       ],
       "answer": "accumulated change or signed area",
-      "explanation": "Integrals accumulate quantities over an interval.",
+      "explanation": "Integrals accumulate quantities over an interval. This reinforces the Antiderivatives & Riemann Sums idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -651,7 +651,7 @@
         "recursive calls"
       ],
       "answer": "trapezoids",
-      "explanation": "It averages left and right heights over each subinterval.",
+      "explanation": "It averages left and right heights over each subinterval. Students need to recognize why trapezoids matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -665,7 +665,7 @@
         "only implicit differentiation"
       ],
       "answer": "antiderivatives",
-      "explanation": "If F is an antiderivative of f, integral from a to b is F(b)-F(a).",
+      "explanation": "If F is an antiderivative of f, integral from a to b is F(b)-F(a). Students need to recognize why antiderivatives matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -693,7 +693,7 @@
         "A discontinuity"
       ],
       "answer": "A function defined by an integral with a variable limit",
-      "explanation": "It tracks accumulated area/change as the endpoint varies.",
+      "explanation": "It tracks accumulated area/change as the endpoint varies. This reinforces the Fundamental Theorem of Calculus idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -707,7 +707,7 @@
         "the graph color"
       ],
       "answer": "a composite expression and its derivative",
-      "explanation": "A good u makes du match another part of the integrand.",
+      "explanation": "A good u makes du match another part of the integrand. This reinforces the Techniques of Integration: u-Substitution idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -721,7 +721,7 @@
         "using product rule"
       ],
       "answer": "changing the bounds",
-      "explanation": "Bounds in x should be converted to bounds in u if staying in u-space.",
+      "explanation": "Bounds in x should be converted to bounds in u if staying in u-space. The reasoning points back to the procedure used in Techniques of Integration: u-Substitution, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -735,13 +735,13 @@
         "linear search"
       ],
       "answer": "the chain rule",
-      "explanation": "Substitution reverses the chain rule.",
+      "explanation": "Substitution reverses the chain rule. The choice fits the prompt because it applies the central rule or concept from Techniques of Integration: u-Substitution.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 1,
-      "question": "A slope field shows:",
+      "question": "In Differential Equations & Slope Fields, A slope field shows:",
       "options": [
         "short line segments representing dy/dx at points",
         "only exact solution formulas",
@@ -749,7 +749,7 @@
         "Riemann rectangles"
       ],
       "answer": "short line segments representing dy/dx at points",
-      "explanation": "Each segment shows the local slope of a differential equation.",
+      "explanation": "Each segment shows the local slope of a differential equation. Students need to recognize why short line segments representing dy/dx at points matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -763,7 +763,7 @@
         "ignore initial conditions"
       ],
       "answer": "put y terms with dy and x terms with dx",
-      "explanation": "Separation prepares both sides for integration.",
+      "explanation": "Separation prepares both sides for integration. It connects the correct answer to Differential Equations & Slope Fields and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -777,7 +777,7 @@
         "choose a sorting algorithm"
       ],
       "answer": "find the particular solution constant",
-      "explanation": "After solving generally, plug in the initial point to determine C.",
+      "explanation": "After solving generally, plug in the initial point to determine C. The choice fits the prompt because it applies the central rule or concept from Differential Equations & Slope Fields.",
       "points": 1
     },
     {
@@ -791,7 +791,7 @@
         "zero over the interval"
       ],
       "answer": "top minus bottom",
-      "explanation": "Vertical slices use upper function minus lower function.",
+      "explanation": "Vertical slices use upper function minus lower function. It highlights the operation, property, or model that makes the answer work in Areas, Volumes & Cross-Sections.",
       "points": 1
     },
     {
@@ -805,7 +805,7 @@
         "a derivative is constant"
       ],
       "answer": "a volume of revolution has a hole",
-      "explanation": "Washers subtract inner radius area from outer radius area.",
+      "explanation": "Washers subtract inner radius area from outer radius area. It highlights the operation, property, or model that makes the answer work in Areas, Volumes & Cross-Sections.",
       "points": 1
     },
     {
@@ -819,7 +819,7 @@
         "always pi r squared"
       ],
       "answer": "integral of cross-sectional area",
-      "explanation": "Volume accumulates slices: integrate A(x) dx.",
+      "explanation": "Volume accumulates slices: integrate A(x) dx. The reasoning points back to the procedure used in Areas, Volumes & Cross-Sections, which helps students check the calculation rather than guess from the options.",
       "points": 1
     }
   ],
@@ -836,7 +836,7 @@
         "No limit exists"
       ],
       "answer": "Continuity at x=2",
-      "explanation": "The limit exists and equals the function value.",
+      "explanation": "The limit exists and equals the function value. This reinforces the AP Calculus AB midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -851,7 +851,7 @@
         "infinity as a final finite value"
       ],
       "answer": "0/0",
-      "explanation": "0/0 is indeterminate.",
+      "explanation": "0/0 is indeterminate. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB midterm concepts.",
       "points": 1
     },
     {
@@ -866,13 +866,13 @@
         "-1 only"
       ],
       "answer": "0",
-      "explanation": "The interval width shrinks to zero.",
+      "explanation": "The interval width shrinks to zero. This reinforces the AP Calculus AB midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 4,
-      "question": "What is d/dx of 4x^3 - 2x?",
+      "question": "In AP Calculus AB midterm concepts, what is d/dx of 4x^3 - 2x?",
       "type": "mc",
       "options": [
         "12x^2 - 2",
@@ -881,7 +881,7 @@
         "x^4 - x^2"
       ],
       "answer": "12x^2 - 2",
-      "explanation": "Apply the power rule term by term.",
+      "explanation": "Apply the power rule term by term. This reinforces the AP Calculus AB midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -896,7 +896,7 @@
         "slope field"
       ],
       "answer": "chain rule",
-      "explanation": "It is a composite function.",
+      "explanation": "It is a composite function. The reasoning points back to the procedure used in AP Calculus AB midterm concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -911,13 +911,13 @@
         "dy/dx = 25"
       ],
       "answer": "2x + 2y dy/dx = 0",
-      "explanation": "Differentiate y^2 as 2y dy/dx.",
+      "explanation": "Differentiate y^2 as 2y dy/dx. The reasoning points back to the procedure used in AP Calculus AB midterm concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 7,
-      "question": "What is d/dx of cos x?",
+      "question": "In AP Calculus AB midterm concepts, what is d/dx of cos x?",
       "type": "mc",
       "options": [
         "-sin x",
@@ -926,7 +926,7 @@
         "-cos x"
       ],
       "answer": "-sin x",
-      "explanation": "The derivative of cos x is -sin x.",
+      "explanation": "The derivative of cos x is -sin x. Students need to recognize why -sin x matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -941,7 +941,7 @@
         "a limit law"
       ],
       "answer": "radius changing with respect to time",
-      "explanation": "The notation describes rate of change over time.",
+      "explanation": "The notation describes rate of change over time. It connects the correct answer to AP Calculus AB midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -956,7 +956,7 @@
         "zero always"
       ],
       "answer": "average rate of change",
-      "explanation": "Under the hypotheses, f prime(c) equals the secant slope.",
+      "explanation": "Under the hypotheses, f prime(c) equals the secant slope. Students need to recognize why average rate of change matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -971,7 +971,7 @@
         "discontinuous always"
       ],
       "answer": "decreasing",
-      "explanation": "A negative derivative means the function decreases.",
+      "explanation": "A negative derivative means the function decreases. It highlights the operation, property, or model that makes the answer work in AP Calculus AB midterm concepts.",
       "points": 1
     },
     {
@@ -1001,7 +1001,7 @@
         "domain only"
       ],
       "answer": "concavity",
-      "explanation": "The second derivative indicates concavity.",
+      "explanation": "The second derivative indicates concavity. Students need to recognize why concavity matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1016,7 +1016,7 @@
         "2x ln x"
       ],
       "answer": "2x/(x^2 + 1)",
-      "explanation": "Use chain rule: derivative of ln u is u prime/u.",
+      "explanation": "Use chain rule: derivative of ln u is u prime/u. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB midterm concepts.",
       "points": 1
     },
     {
@@ -1031,7 +1031,7 @@
         "an area"
       ],
       "answer": "a hole",
-      "explanation": "A factor cancellation can reveal a hole in the graph.",
+      "explanation": "A factor cancellation can reveal a hole in the graph. It highlights the operation, property, or model that makes the answer work in AP Calculus AB midterm concepts.",
       "points": 1
     },
     {
@@ -1046,7 +1046,7 @@
         "f+g only"
       ],
       "answer": "f'g + fg'",
-      "explanation": "Differentiate one factor at a time and add.",
+      "explanation": "Differentiate one factor at a time and add. It highlights the operation, property, or model that makes the answer work in AP Calculus AB midterm concepts.",
       "points": 1
     },
     {
@@ -1061,7 +1061,7 @@
         "critical points only"
       ],
       "answer": "right endpoints",
-      "explanation": "Right sums use the right endpoint of each subinterval.",
+      "explanation": "Right sums use the right endpoint of each subinterval. This reinforces the AP Calculus AB final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1076,7 +1076,7 @@
         "a discontinuity"
       ],
       "answer": "displacement",
-      "explanation": "Integrating velocity accumulates change in position.",
+      "explanation": "Integrating velocity accumulates change in position. This reinforces the AP Calculus AB final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1091,13 +1091,13 @@
         "integral f(x)dx"
       ],
       "answer": "f(x)",
-      "explanation": "Differentiating accumulation returns the integrand.",
+      "explanation": "Differentiating accumulation returns the integrand. It connects the correct answer to AP Calculus AB final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 4,
-      "question": "What is integral of 2x dx?",
+      "question": "In AP Calculus AB final concepts, what is integral of 2x dx?",
       "type": "mc",
       "options": [
         "x^2 + C",
@@ -1106,7 +1106,7 @@
         "x + C"
       ],
       "answer": "x^2 + C",
-      "explanation": "An antiderivative of 2x is x^2.",
+      "explanation": "An antiderivative of 2x is x^2. The reasoning points back to the procedure used in AP Calculus AB final concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1121,7 +1121,7 @@
         "curve sketching"
       ],
       "answer": "chain rule",
-      "explanation": "Substitution handles integrals of composite functions.",
+      "explanation": "Substitution handles integrals of composite functions. The reasoning points back to the procedure used in AP Calculus AB final concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1136,7 +1136,7 @@
         "dx"
       ],
       "answer": "x^2",
-      "explanation": "du = 2x dx appears in the integral.",
+      "explanation": "du = 2x dx appears in the integral. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
       "points": 1
     },
     {
@@ -1151,7 +1151,7 @@
         "no variables"
       ],
       "answer": "y-value",
-      "explanation": "The derivative formula uses y.",
+      "explanation": "The derivative formula uses y. It highlights the operation, property, or model that makes the answer work in AP Calculus AB final concepts.",
       "points": 1
     },
     {
@@ -1166,7 +1166,7 @@
         "y = x always"
       ],
       "answer": "(1/y) dy = x dx",
-      "explanation": "Separate y terms with dy and x terms with dx.",
+      "explanation": "Separate y terms with dy and x terms with dx. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
       "points": 1
     },
     {
@@ -1181,7 +1181,7 @@
         "zero because they intersect"
       ],
       "answer": "integral of x - x^2",
-      "explanation": "On [0,1], x is above x^2.",
+      "explanation": "On [0,1], x is above x^2. It connects the correct answer to AP Calculus AB final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1196,7 +1196,7 @@
         "top minus bottom only"
       ],
       "answer": "pi integral [f(x)]^2 dx",
-      "explanation": "Cross-sectional disks have area pi radius squared.",
+      "explanation": "Cross-sectional disks have area pi radius squared. It highlights the operation, property, or model that makes the answer work in AP Calculus AB final concepts.",
       "points": 1
     },
     {
@@ -1211,7 +1211,7 @@
         "x from y always"
       ],
       "answer": "inner radius squared from outer radius squared",
-      "explanation": "Washer area is pi(R^2 - r^2).",
+      "explanation": "Washer area is pi(R^2 - r^2). It highlights the operation, property, or model that makes the answer work in AP Calculus AB final concepts.",
       "points": 1
     },
     {
@@ -1226,7 +1226,7 @@
         "the graph is blue"
       ],
       "answer": "the integrand is positive",
-      "explanation": "F prime equals the integrand, so F increases where f is positive.",
+      "explanation": "F prime equals the integrand, so F increases where f is positive. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
       "points": 1
     },
     {
@@ -1241,7 +1241,7 @@
         "zeros only"
       ],
       "answer": "midpoints of subintervals",
-      "explanation": "Each rectangle height is sampled at the subinterval midpoint.",
+      "explanation": "Each rectangle height is sampled at the subinterval midpoint. This reinforces the AP Calculus AB final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1256,7 +1256,7 @@
         "jump discontinuity"
       ],
       "answer": "local minimum",
-      "explanation": "Decreasing then increasing indicates a local min.",
+      "explanation": "Decreasing then increasing indicates a local min. This reinforces the AP Calculus AB final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1286,7 +1286,7 @@
         "only a table"
       ],
       "answer": "a particular solution",
-      "explanation": "The initial condition determines the integration constant.",
+      "explanation": "The initial condition determines the integration constant. The reasoning points back to the procedure used in AP Calculus AB final concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1301,7 +1301,7 @@
         "a tangent equation"
       ],
       "answer": "net change",
-      "explanation": "This is the net change theorem.",
+      "explanation": "This is the net change theorem. It connects the correct answer to AP Calculus AB final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1316,7 +1316,7 @@
         "Implicit differentiation"
       ],
       "answer": "Fundamental Theorem of Calculus",
-      "explanation": "FTC connects accumulation and rates of change.",
+      "explanation": "FTC connects accumulation and rates of change. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
       "points": 1
     },
     {
@@ -1331,7 +1331,7 @@
         "using only endpoints"
       ],
       "answer": "integrating side(x)^2 dx",
-      "explanation": "Each slice area is the square of its side length.",
+      "explanation": "Each slice area is the square of its side length. It highlights the operation, property, or model that makes the answer work in AP Calculus AB final concepts.",
       "points": 1
     },
     {
@@ -1346,7 +1346,7 @@
         "1/x + C"
       ],
       "answer": "sin x + C",
-      "explanation": "The derivative of sin x is cos x.",
+      "explanation": "The derivative of sin x is cos x. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
       "points": 1
     }
   ],

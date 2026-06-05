@@ -246,7 +246,7 @@
         "10"
       ],
       "answer": "19",
-      "explanation": "g(3) = 9. f(9) = 2(9) + 1 = 19.",
+      "explanation": "g(3) = 9. f(9) = 2(9) + 1 = 19. The choice fits the prompt because it applies the central rule or concept from Pre-Calculus midterm concepts.",
       "points": 1
     },
     {
@@ -261,7 +261,7 @@
         "f⁻¹(x) = 2/(x − 3)"
       ],
       "answer": "f⁻¹(x) = 2x + 3",
-      "explanation": "Swap x and y: x = (y − 3)/2 → 2x = y − 3 → y = 2x + 3.",
+      "explanation": "Swap x and y: x = (y − 3)/2 → 2x = y − 3 → y = 2x + 3. The reasoning points back to the procedure used in Pre-Calculus midterm concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -283,7 +283,7 @@
       "examType": "midterm",
       "order": 4,
       "type": "mc",
-      "question": "Solve for x: log₂(x) = 5.",
+      "question": "In Pre-Calculus midterm concepts, Solve for x: log₂(x) = 5.",
       "options": [
         "x = 10",
         "x = 25",
@@ -291,7 +291,7 @@
         "x = 2^25"
       ],
       "answer": "x = 32",
-      "explanation": "log₂(x) = 5 means x = 2^5 = 32.",
+      "explanation": "log₂(x) = 5 means x = 2^5 = 32. Students need to recognize why x = 32 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -306,14 +306,14 @@
         "√3/2"
       ],
       "answer": "5",
-      "explanation": "sin 30° = opposite/hypotenuse = ½. Opposite = 10 × ½ = 5.",
+      "explanation": "sin 30° = opposite/hypotenuse = ½. Opposite = 10 × ½ = 5. This reinforces the Pre-Calculus midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 6,
       "type": "mc",
-      "question": "Convert 270° to radians.",
+      "question": "In Pre-Calculus midterm concepts, Convert 270° to radians.",
       "options": [
         "π/2",
         "3π/2",
@@ -321,7 +321,7 @@
         "3π/4"
       ],
       "answer": "3π/2",
-      "explanation": "270° × (π/180°) = 270π/180 = 3π/2.",
+      "explanation": "270° × (π/180°) = 270π/180 = 3π/2. It highlights the operation, property, or model that makes the answer work in Pre-Calculus midterm concepts.",
       "points": 1
     },
     {
@@ -346,7 +346,7 @@
         "sin²θ − cos²θ"
       ],
       "answer": "cos²θ − sin²θ",
-      "explanation": "One standard double-angle identity is cos(2θ) = cos²θ − sin²θ.",
+      "explanation": "One standard double-angle identity is cos(2θ) = cos²θ − sin²θ. The reasoning points back to the procedure used in Pre-Calculus midterm concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -361,7 +361,7 @@
         "x = π/6 and x = 5π/6"
       ],
       "answer": "x = π/4 and x = 3π/4",
-      "explanation": "sin(x) = √2/2 at x = π/4 (Q1) and x = π − π/4 = 3π/4 (Q2).",
+      "explanation": "sin(x) = √2/2 at x = π/4 (Q1) and x = π − π/4 = 3π/4 (Q2). It highlights the operation, property, or model that makes the answer work in Pre-Calculus midterm concepts.",
       "points": 1
     },
     {
@@ -376,7 +376,7 @@
         "sin B = 7/(10 sin 40°)"
       ],
       "answer": "sin B = (10 sin 40°)/7",
-      "explanation": "Law of Sines: a/sin A = b/sin B → sin B = b·sin A / a = (10 sin 40°)/7.",
+      "explanation": "Law of Sines: a/sin A = b/sin B → sin B = b·sin A / a = (10 sin 40°)/7. It connects the correct answer to Pre-Calculus midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -391,7 +391,7 @@
         "14"
       ],
       "answer": "2",
-      "explanation": "u · v = (3)(2) + (−1)(4) = 6 − 4 = 2.",
+      "explanation": "u · v = (3)(2) + (−1)(4) = 6 − 4 = 2. This reinforces the Pre-Calculus midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -406,7 +406,7 @@
         "3π"
       ],
       "answer": "2",
-      "explanation": "For y = a cos(bx), the period is 2π/|b|. Here b = π, so the period is 2.",
+      "explanation": "For y = a cos(bx), the period is 2π/|b|. Here b = π, so the period is 2. Students need to recognize why 2 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -415,7 +415,7 @@
       "type": "short",
       "question": "A function f has the graph shown. From the context, f is piecewise: f(x) = x + 2 for x < 1 and f(x) = 3 for x ≥ 1. State the domain, range, and evaluate f(0) + f(1).",
       "options": null,
-      "answer": "Domain: all real numbers; Range: (−∞, 3] ∪ {3} = (−∞, 3]; f(0) + f(1) = 2 + 3 = 5",
+      "answer": "Domain: all real numbers; Range: (−∞, 3] ∪ {3} = (−∞, 3]; f(0) + f(1) = 2 + 3 = 5.",
       "explanation": "f(0) = 0 + 2 = 2 (using first piece). f(1) = 3 (using second piece). Sum = 5. Range: x < 1 gives (−∞, 3) from x + 2; x ≥ 1 gives {3}. Combined range: (−∞, 3].",
       "points": 2
     },
@@ -425,7 +425,7 @@
       "type": "short",
       "question": "The loudness L (in decibels) of a sound is L = 10 log(I/I₀), where I₀ = 10⁻¹² W/m². A sound has intensity I = 10⁻⁴ W/m². Find L.",
       "options": null,
-      "answer": "L = 80 decibels",
+      "answer": "L = 80 decibels. A strong response should use Pre-Calculus midterm concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
       "explanation": "L = 10 log(10⁻⁴/10⁻¹²) = 10 log(10⁸) = 10 × 8 = 80 dB.",
       "points": 2
     },
@@ -435,7 +435,7 @@
       "type": "short",
       "question": "Verify the identity: (1 − cos²θ)/sinθ = sinθ.",
       "options": null,
-      "answer": "sin²θ/sinθ = sinθ",
+      "answer": "sin²θ/sinθ = sinθ. A strong response should use Pre-Calculus midterm concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
       "explanation": "By the Pythagorean identity, 1 − cos²θ = sin²θ. So (sin²θ)/sinθ = sinθ (for sinθ ≠ 0).",
       "points": 2
     },
@@ -451,7 +451,7 @@
         "All real numbers"
       ],
       "answer": "x ≤ −1 or x ≥ 1",
-      "explanation": "g(f(x)) = √(x² − 1), so x² − 1 must be nonnegative. Thus x ≤ −1 or x ≥ 1.",
+      "explanation": "g(f(x)) = √(x² − 1), so x² − 1 must be nonnegative. Thus x ≤ −1 or x ≥ 1. The reasoning points back to the procedure used in Pre-Calculus final concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -466,14 +466,14 @@
         "Up on left, down on right"
       ],
       "answer": "Down on left, down on right",
-      "explanation": "The leading term is −2x⁴ (negative, even degree), so f(x) → −∞ as x → ±∞.",
+      "explanation": "The leading term is −2x⁴ (negative, even degree), so f(x) → −∞ as x → ±∞. Students need to recognize why Down on left, down on right matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 3,
       "type": "mc",
-      "question": "Solve: 3^(2x−1) = 27.",
+      "question": "In Pre-Calculus final concepts, Solve: 3^(2x−1) = 27.",
       "options": [
         "x = 2",
         "x = 3/2",
@@ -481,7 +481,7 @@
         "x = 5/2"
       ],
       "answer": "x = 2",
-      "explanation": "27 = 3³, so 2x − 1 = 3 → 2x = 4 → x = 2.",
+      "explanation": "27 = 3³, so 2x − 1 = 3 → 2x = 4 → x = 2. This reinforces the Pre-Calculus final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -496,7 +496,7 @@
         "50 cos 65°"
       ],
       "answer": "50 tan 65°",
-      "explanation": "tan 65° = height/50 → height = 50 tan 65°.",
+      "explanation": "tan 65° = height/50 → height = 50 tan 65°. Students need to recognize why 50 tan 65° matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -509,7 +509,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. π/6 is correct.",
+      "explanation": "True. π/6 is correct. Students need to recognize why True matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -584,7 +584,7 @@
         "An ellipse"
       ],
       "answer": "A parabola",
-      "explanation": "Eliminate t: t = x/2, so y = (x/2)² = x²/4. This is a parabola.",
+      "explanation": "Eliminate t: t = x/2, so y = (x/2)² = x²/4. This is a parabola. It connects the correct answer to Pre-Calculus final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -599,7 +599,7 @@
         "(1, √3)"
       ],
       "answer": "(2, 2√3)",
-      "explanation": "x = 4cos(π/3) = 4(1/2) = 2. y = 4sin(π/3) = 4(√3/2) = 2√3.",
+      "explanation": "x = 4cos(π/3) = 4(1/2) = 2. y = 4sin(π/3) = 4(√3/2) = 2√3. It highlights the operation, property, or model that makes the answer work in Pre-Calculus final concepts.",
       "points": 1
     },
     {
@@ -639,7 +639,7 @@
         "512"
       ],
       "answer": "56",
-      "explanation": "C(8,3) = 8!/(3! × 5!) = (8 × 7 × 6)/(3 × 2 × 1) = 56.",
+      "explanation": "C(8,3) = 8!/(3! × 5!) = (8 × 7 × 6)/(3 × 2 × 1) = 56. This reinforces the Pre-Calculus final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -669,7 +669,7 @@
         "undefined"
       ],
       "answer": "6",
-      "explanation": "Factor: (x²−9)/(x−3) = (x+3)(x−3)/(x−3) = x+3. As x→3, limit = 3+3 = 6.",
+      "explanation": "Factor: (x²−9)/(x−3) = (x+3)(x−3)/(x−3) = x+3. As x→3, limit = 3+3 = 6. The reasoning points back to the procedure used in Pre-Calculus final concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -693,7 +693,7 @@
       "type": "short",
       "question": "Find the focus and directrix of the parabola y = (1/8)x².",
       "options": null,
-      "answer": "Focus: (0, 2); Directrix: y = −2",
+      "answer": "Focus: (0, 2); Directrix: y = −2. A strong response should use Pre-Calculus final concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
       "explanation": "Rewrite as x² = 8y. In form x² = 4py: 4p = 8 → p = 2. Focus is (0, p) = (0, 2) and directrix is y = −p = −2.",
       "points": 2
     },
@@ -713,7 +713,7 @@
       "type": "short",
       "question": "Describe the continuity of f(x) = (x² − 4)/(x − 2) at x = 2. Identify the type of discontinuity and redefine f(2) to make f continuous.",
       "options": null,
-      "answer": "Removable discontinuity at x = 2. Redefine f(2) = 4.",
+      "answer": "Removable discontinuity at x = 2. Redefine f(2) = 4. A strong response should use Pre-Calculus final concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
       "explanation": "f(x) = (x−2)(x+2)/(x−2) = x+2 for x ≠ 2. The limit as x→2 is 4, but f(2) is undefined. This is a removable discontinuity. Setting f(2) = 4 makes f continuous everywhere.",
       "points": 2
     }
@@ -730,7 +730,7 @@
         "x + 1"
       ],
       "answer": "3x + 13",
-      "explanation": "f(g(x)) = f(x+5) = 3(x+5) − 2 = 3x + 15 − 2 = 3x + 13.",
+      "explanation": "f(g(x)) = f(x+5) = 3(x+5) − 2 = 3x + 15 − 2 = 3x + 13. The reasoning points back to the procedure used in Functions: Review & Advanced Concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -758,7 +758,7 @@
         "all real numbers"
       ],
       "answer": "x ≥ 4",
-      "explanation": "The radicand must be non-negative: x − 4 ≥ 0 → x ≥ 4.",
+      "explanation": "The radicand must be non-negative: x − 4 ≥ 0 → x ≥ 4. It connects the correct answer to Functions: Review & Advanced Concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -772,7 +772,7 @@
         "3x − 7"
       ],
       "answer": "3x + 13",
-      "explanation": "f(g(x)) = f(x + 5) = 3(x + 5) − 2 = 3x + 13.",
+      "explanation": "f(g(x)) = f(x + 5) = 3(x + 5) − 2 = 3x + 13. This reinforces the Functions: Review & Advanced Concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -857,7 +857,7 @@
     {
       "moduleOrder": 3,
       "order": 1,
-      "question": "Simplify: log₃(27).",
+      "question": "In Exponential & Logarithmic Functions, Simplify: log₃(27).",
       "options": [
         "3",
         "9",
@@ -865,7 +865,7 @@
         "27"
       ],
       "answer": "3",
-      "explanation": "log₃(27) = log₃(3³) = 3.",
+      "explanation": "log₃(27) = log₃(3³) = 3. This reinforces the Exponential & Logarithmic Functions idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -879,7 +879,7 @@
         "Change-of-Base"
       ],
       "answer": "Product Rule",
-      "explanation": "The Product Rule: logₐ(MN) = logₐ M + logₐ N.",
+      "explanation": "The Product Rule: logₐ(MN) = logₐ M + logₐ N. Students need to recognize why Product Rule matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -893,13 +893,13 @@
         "x = e¹⁵"
       ],
       "answer": "x = ln 15",
-      "explanation": "Taking the natural log of both sides: ln(eˣ) = ln 15 → x = ln 15.",
+      "explanation": "Taking the natural log of both sides: ln(eˣ) = ln 15 → x = ln 15. The choice fits the prompt because it applies the central rule or concept from Exponential & Logarithmic Functions.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Simplify log₃(27).",
+      "question": "In Exponential & Logarithmic Functions, Simplify log₃(27).",
       "options": [
         "2",
         "3",
@@ -907,7 +907,7 @@
         "24"
       ],
       "answer": "3",
-      "explanation": "Since 3^3 = 27, log₃(27) = 3.",
+      "explanation": "Since 3^3 = 27, log₃(27) = 3. This reinforces the Exponential & Logarithmic Functions idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -921,7 +921,7 @@
         "Change of Base Formula"
       ],
       "answer": "Product Rule",
-      "explanation": "The product rule for logarithms says log(AB) = log A + log B.",
+      "explanation": "The product rule for logarithms says log(AB) = log A + log B. The choice fits the prompt because it applies the central rule or concept from Exponential & Logarithmic Functions.",
       "points": 1
     },
     {
@@ -935,7 +935,7 @@
         "12/5"
       ],
       "answer": "5/13",
-      "explanation": "Hypotenuse = √(25 + 144) = 13. sin = opposite/hypotenuse = 5/13.",
+      "explanation": "Hypotenuse = √(25 + 144) = 13. sin = opposite/hypotenuse = 5/13. The choice fits the prompt because it applies the central rule or concept from Right Triangle Trigonometry.",
       "points": 1
     },
     {
@@ -977,7 +977,7 @@
         "90°"
       ],
       "answer": "30°",
-      "explanation": "sin(30°) = 0.5, so sin⁻¹(0.5) = 30°.",
+      "explanation": "sin(30°) = 0.5, so sin⁻¹(0.5) = 30°. This reinforces the Right Triangle Trigonometry idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1009,7 +1009,7 @@
         "270°"
       ],
       "answer": "225°",
-      "explanation": "5π/4 × (180/π) = 5 × 45 = 225°.",
+      "explanation": "5π/4 × (180/π) = 5 × 45 = 225°. It connects the correct answer to Unit Circle & Radian Measure and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1023,7 +1023,7 @@
         "7π/6"
       ],
       "answer": "π/6",
-      "explanation": "7π/6 is in Q3. Reference angle = 7π/6 − π = π/6.",
+      "explanation": "7π/6 is in Q3. Reference angle = 7π/6 − π = π/6. It connects the correct answer to Unit Circle & Radian Measure and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1037,13 +1037,13 @@
         "(1/2, 1/2)"
       ],
       "answer": "(1/2, √3/2)",
-      "explanation": "At π/3 (60°): cos(60°) = 1/2, sin(60°) = √3/2. Coordinates: (1/2, √3/2).",
+      "explanation": "At π/3 (60°): cos(60°) = 1/2, sin(60°) = √3/2. Coordinates: (1/2, √3/2). The choice fits the prompt because it applies the central rule or concept from Unit Circle & Radian Measure.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Arc length formula is:",
+      "question": "In Unit Circle & Radian Measure, Arc length formula is:",
       "options": [
         "s = r + θ",
         "s = rθ",
@@ -1051,7 +1051,7 @@
         "s = θ/r"
       ],
       "answer": "s = rθ",
-      "explanation": "Arc length: s = rθ, where θ must be in radians and r is the radius.",
+      "explanation": "Arc length: s = rθ, where θ must be in radians and r is the radius. It connects the correct answer to Unit Circle & Radian Measure and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1065,7 +1065,7 @@
         "Quadrant IV"
       ],
       "answer": "Quadrant IV",
-      "explanation": "In Q4: x > 0 (cos positive), y < 0 (sin negative).",
+      "explanation": "In Q4: x > 0 (cos positive), y < 0 (sin negative). The reasoning points back to the procedure used in Unit Circle & Radian Measure, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1079,7 +1079,7 @@
         "315°"
       ],
       "answer": "225°",
-      "explanation": "Multiply by 180°/π: (5π/4)(180°/π) = 225°.",
+      "explanation": "Multiply by 180°/π: (5π/4)(180°/π) = 225°. Students need to recognize why 225° matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1093,7 +1093,7 @@
         "π"
       ],
       "answer": "π/2",
-      "explanation": "Period = 2π/|B| = 2π/4 = π/2.",
+      "explanation": "Period = 2π/|B| = 2π/4 = π/2. The reasoning points back to the procedure used in Graphs of Trig Functions, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1107,7 +1107,7 @@
         "π"
       ],
       "answer": "5",
-      "explanation": "Amplitude = |−5| = 5. It is always a positive value.",
+      "explanation": "Amplitude = |−5| = 5. It is always a positive value. It connects the correct answer to Graphs of Trig Functions and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1121,7 +1121,7 @@
         "π/4 downward"
       ],
       "answer": "π/4 to the right",
-      "explanation": "Replacing x with (x − π/4) shifts the graph π/4 units to the right.",
+      "explanation": "Replacing x with (x − π/4) shifts the graph π/4 units to the right. It highlights the operation, property, or model that makes the answer work in Graphs of Trig Functions.",
       "points": 1
     },
     {
@@ -1133,7 +1133,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. π/2 is correct.",
+      "explanation": "True. π/2 is correct. Students need to recognize why True matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1147,7 +1147,7 @@
         "tan²θ − 1 = sec²θ"
       ],
       "answer": "sin²θ + cos²θ = 1",
-      "explanation": "The fundamental Pythagorean identity is sin²θ + cos²θ = 1.",
+      "explanation": "The fundamental Pythagorean identity is sin²θ + cos²θ = 1. The choice fits the prompt because it applies the central rule or concept from Trig Identities & Equations.",
       "points": 1
     },
     {
@@ -1161,13 +1161,13 @@
         "tanx"
       ],
       "answer": "1",
-      "explanation": "1 − cos²x = sin²x by Pythagorean identity. So sin²x/sin²x = 1.",
+      "explanation": "1 − cos²x = sin²x by Pythagorean identity. So sin²x/sin²x = 1. It connects the correct answer to Trig Identities & Equations and separates it from plausible distractors.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "What is sin(A + B)?",
+      "question": "In Trig Identities & Equations, what is sin(A + B)?",
       "options": [
         "sinA cosB + cosA sinB",
         "sinA cosB − cosA sinB",
@@ -1175,7 +1175,7 @@
         "cosA cosB − sinA sinB"
       ],
       "answer": "sinA cosB + cosA sinB",
-      "explanation": "Sum formula: sin(A + B) = sinA cosB + cosA sinB.",
+      "explanation": "Sum formula: sin(A + B) = sinA cosB + cosA sinB. This reinforces the Trig Identities & Equations idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1189,7 +1189,7 @@
         "cos²θ − sin²θ = 1"
       ],
       "answer": "sin²θ + cos²θ = 1",
-      "explanation": "The fundamental Pythagorean identity is sin²θ + cos²θ = 1.",
+      "explanation": "The fundamental Pythagorean identity is sin²θ + cos²θ = 1. It connects the correct answer to Trig Identities & Equations and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1212,7 +1212,7 @@
         "SOHCAHTOA"
       ],
       "answer": "Law of Cosines",
-      "explanation": "The Law of Cosines is used for SAS and SSS cases in oblique triangles.",
+      "explanation": "The Law of Cosines is used for SAS and SSS cases in oblique triangles. Students need to recognize why Law of Cosines matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1240,7 +1240,7 @@
         "6√3"
       ],
       "answer": "12",
-      "explanation": "Area = ½ab sin C = ½(6)(8) sin 30° = ½(48)(0.5) = 12.",
+      "explanation": "Area = ½ab sin C = ½(6)(8) sin 30° = ½(48)(0.5) = 12. This reinforces the Law of Sines & Cosines idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1282,7 +1282,7 @@
         "25"
       ],
       "answer": "5",
-      "explanation": "|v| = √((-3)² + 4²) = √(9 + 16) = √25 = 5.",
+      "explanation": "|v| = √((-3)² + 4²) = √(9 + 16) = √25 = 5. It connects the correct answer to Vectors and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1310,7 +1310,7 @@
         "7"
       ],
       "answer": "13",
-      "explanation": "u · v = (2)(−1) + (5)(3) = −2 + 15 = 13.",
+      "explanation": "u · v = (2)(−1) + (5)(3) = −2 + 15 = 13. The choice fits the prompt because it applies the central rule or concept from Vectors.",
       "points": 1
     },
     {
@@ -1322,7 +1322,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. 5 is correct.",
+      "explanation": "True. 5 is correct. It highlights the operation, property, or model that makes the answer work in Vectors.",
       "points": 1
     },
     {
@@ -1336,7 +1336,7 @@
         "u · v = 1"
       ],
       "answer": "u · v = 0",
-      "explanation": "Orthogonal vectors have a dot product of zero.",
+      "explanation": "Orthogonal vectors have a dot product of zero. It connects the correct answer to Vectors and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1350,7 +1350,7 @@
         "A line"
       ],
       "answer": "A unit circle",
-      "explanation": "x² + y² = cos²t + sin²t = 1. This is the equation of a unit circle.",
+      "explanation": "x² + y² = cos²t + sin²t = 1. This is the equation of a unit circle. This reinforces the Parametric Equations & Polar Coordinates idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1392,7 +1392,7 @@
         "y = 2x − 1"
       ],
       "answer": "y = 2x − 5",
-      "explanation": "t = x − 1. Substitute: y = 2(x − 1) − 3 = 2x − 2 − 3 = 2x − 5.",
+      "explanation": "t = x − 1. Substitute: y = 2(x − 1) − 3 = 2x − 2 − 3 = 2x − 5. It highlights the operation, property, or model that makes the answer work in Parametric Equations & Polar Coordinates.",
       "points": 1
     },
     {
@@ -1415,7 +1415,7 @@
         "Downward"
       ],
       "answer": "Upward",
-      "explanation": "The form x² = 4py with p > 0 opens upward. Here 4p = 12 → p = 3 > 0.",
+      "explanation": "The form x² = 4py with p > 0 opens upward. Here 4p = 12 → p = 3 > 0. The choice fits the prompt because it applies the central rule or concept from Conic Sections (Advanced).",
       "points": 1
     },
     {
@@ -1429,7 +1429,7 @@
         "8"
       ],
       "answer": "8",
-      "explanation": "a² = 16 → a = 4. Major axis length = 2a = 8.",
+      "explanation": "a² = 16 → a = 4. Major axis length = 2a = 8. It highlights the operation, property, or model that makes the answer work in Conic Sections (Advanced).",
       "points": 1
     },
     {
@@ -1471,7 +1471,7 @@
         "(−6, 4)"
       ],
       "answer": "(−3, 2)",
-      "explanation": "(x+3)² + (y−2)² = 12 + 9 + 4 = 25. Center: (−3, 2), radius: 5.",
+      "explanation": "(x+3)² + (y−2)² = 12 + 9 + 4 = 25. Center: (−3, 2), radius: 5. It highlights the operation, property, or model that makes the answer work in Conic Sections (Advanced).",
       "points": 1
     },
     {
@@ -1499,7 +1499,7 @@
         "2"
       ],
       "answer": "4",
-      "explanation": "Common difference d = 11 − 7 = 4.",
+      "explanation": "Common difference d = 11 − 7 = 4. The reasoning points back to the procedure used in Sequences, Series & Mathematical Induction, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1513,7 +1513,7 @@
         "3¹⁰"
       ],
       "answer": "2 × 3⁹",
-      "explanation": "a₁ = 2, r = 3. aₙ = 2 × 3^(n−1). a₁₀ = 2 × 3⁹.",
+      "explanation": "a₁ = 2, r = 3. aₙ = 2 × 3^(n−1). a₁₀ = 2 × 3⁹. This reinforces the Sequences, Series & Mathematical Induction idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1527,7 +1527,7 @@
         "n²d/2"
       ],
       "answer": "n(a₁ + aₙ)/2",
-      "explanation": "Arithmetic series sum: Sₙ = n(a₁ + aₙ)/2.",
+      "explanation": "Arithmetic series sum: Sₙ = n(a₁ + aₙ)/2. The choice fits the prompt because it applies the central rule or concept from Sequences, Series & Mathematical Induction.",
       "points": 1
     },
     {
@@ -1541,7 +1541,7 @@
         "11"
       ],
       "answer": "4",
-      "explanation": "Each term increases by 4, so the common difference is 4.",
+      "explanation": "Each term increases by 4, so the common difference is 4. The choice fits the prompt because it applies the central rule or concept from Sequences, Series & Mathematical Induction.",
       "points": 1
     },
     {
@@ -1564,7 +1564,7 @@
         "10"
       ],
       "answer": "120",
-      "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120 (permutations of 5 distinct items).",
+      "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120 (permutations of 5 distinct items). This reinforces the Probability & Combinatorics (Advanced) idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1578,13 +1578,13 @@
         "90"
       ],
       "answer": "90",
-      "explanation": "Order matters (positions are distinct): P(10, 2) = 10 × 9 = 90.",
+      "explanation": "Order matters (positions are distinct): P(10, 2) = 10 × 9 = 90. This reinforces the Probability & Combinatorics (Advanced) idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "What is C(7, 3)?",
+      "question": "In Probability & Combinatorics (Advanced), what is C(7, 3)?",
       "options": [
         "21",
         "35",
@@ -1592,7 +1592,7 @@
         "210"
       ],
       "answer": "35",
-      "explanation": "C(7,3) = 7!/(3! × 4!) = (7 × 6 × 5)/(3 × 2 × 1) = 210/6 = 35.",
+      "explanation": "C(7,3) = 7!/(3! × 4!) = (7 × 6 × 5)/(3 × 2 × 1) = 210/6 = 35. It highlights the operation, property, or model that makes the answer work in Probability & Combinatorics (Advanced).",
       "points": 1
     },
     {
@@ -1606,7 +1606,7 @@
         "120"
       ],
       "answer": "120",
-      "explanation": "There are 5! arrangements, and 5! = 120.",
+      "explanation": "There are 5! arrangements, and 5! = 120. Students need to recognize why 120 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1634,7 +1634,7 @@
         "10"
       ],
       "answer": "9",
-      "explanation": "By direct substitution (polynomial): 2(4) + 1 = 9.",
+      "explanation": "By direct substitution (polynomial): 2(4) + 1 = 9. The choice fits the prompt because it applies the central rule or concept from Introduction to Limits.",
       "points": 1
     },
     {

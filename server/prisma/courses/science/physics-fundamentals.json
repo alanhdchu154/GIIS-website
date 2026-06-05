@@ -246,7 +246,7 @@
         "Pascal"
       ],
       "answer": "Newton",
-      "explanation": "The correct answer is: Newton.",
+      "explanation": "The correct answer is: Newton. It connects the correct answer to Physics Fundamentals midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -261,7 +261,7 @@
         "20 m/s²"
       ],
       "answer": "8 m/s²",
-      "explanation": "The correct answer is: 8 m/s².",
+      "explanation": "The correct answer is: 8 m/s². Students need to recognize why 8 m/s² matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -276,7 +276,7 @@
         "Neither component"
       ],
       "answer": "Horizontal component",
-      "explanation": "The correct answer is: Horizontal component.",
+      "explanation": "The correct answer is: Horizontal component. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -291,7 +291,7 @@
         "work ÷ distance"
       ],
       "answer": "mass × acceleration",
-      "explanation": "Newton's second law is Fnet = ma.",
+      "explanation": "Newton's second law is Fnet = ma. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -306,7 +306,7 @@
         "39.2 N"
       ],
       "answer": "39.2 N",
-      "explanation": "The correct answer is: 39.2 N.",
+      "explanation": "The correct answer is: 39.2 N. The choice fits the prompt because it applies the central rule or concept from Physics Fundamentals midterm concepts.",
       "points": 1
     },
     {
@@ -321,7 +321,7 @@
         "15 J"
       ],
       "answer": "100 J",
-      "explanation": "The correct answer is: 100 J.",
+      "explanation": "The correct answer is: 100 J. The explanation links the answer to the underlying process or evidence expected in Physics Fundamentals midterm concepts.",
       "points": 1
     },
     {
@@ -336,7 +336,7 @@
         "The object decelerates"
       ],
       "answer": "Only conservative forces act",
-      "explanation": "The correct answer is: Only conservative forces act.",
+      "explanation": "The correct answer is: Only conservative forces act. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -351,7 +351,7 @@
         "0.83 kg·m/s"
       ],
       "answer": "30 kg·m/s",
-      "explanation": "Momentum is p = mv = (5 kg)(6 m/s) = 30 kg·m/s.",
+      "explanation": "Momentum is p = mv = (5 kg)(6 m/s) = 30 kg·m/s. Students need to recognize why 30 kg·m/s matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -366,7 +366,7 @@
         "Neither"
       ],
       "answer": "Momentum only",
-      "explanation": "The correct answer is: Momentum only.",
+      "explanation": "The correct answer is: Momentum only. The choice fits the prompt because it applies the central rule or concept from Physics Fundamentals midterm concepts.",
       "points": 1
     },
     {
@@ -381,7 +381,7 @@
         "Force"
       ],
       "answer": "Speed",
-      "explanation": "The correct answer is: Speed.",
+      "explanation": "The correct answer is: Speed. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -396,14 +396,14 @@
         "1 m/s²"
       ],
       "answer": "9.8 m/s² downward",
-      "explanation": "The correct answer is: 9.8 m/s² downward.",
+      "explanation": "The correct answer is: 9.8 m/s² downward. The choice fits the prompt because it applies the central rule or concept from Physics Fundamentals midterm concepts.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 12,
       "type": "mc",
-      "question": "Power is defined as:",
+      "question": "In Physics Fundamentals midterm concepts, Power is defined as:",
       "options": [
         "work divided by time",
         "force divided by area",
@@ -411,7 +411,7 @@
         "energy times distance"
       ],
       "answer": "work divided by time",
-      "explanation": "Power measures the rate at which work is done or energy is transferred.",
+      "explanation": "Power measures the rate at which work is done or energy is transferred. Students need to recognize why work divided by time matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -420,7 +420,7 @@
       "type": "short-answer",
       "question": "A 4 kg object is pushed with a net force of 12 N. (a) Calculate its acceleration. (b) If it starts from rest, how far does it travel in 3 seconds? Show all work.",
       "options": null,
-      "answer": "(a) a = F/m = 12/4 = 3 m/s². (b) d = ½at² = ½(3)(9) = 13.5 m.",
+      "answer": "(a) a = F/m = 12/4 = 3 m/s². (b) d = ½at² = ½(3)(9) = 13.5 m",
       "explanation": "The correct answer is: (a) a = F/m = 12/4 = 3 m/s². (b) d = ½at² = ½(3)(9) = 13.5 m..",
       "points": 2
     },
@@ -430,7 +430,7 @@
       "type": "short-answer",
       "question": "Explain the difference between mass and weight. A 60 kg person stands on the Moon where g = 1.6 m/s². Calculate their weight on the Moon.",
       "options": null,
-      "answer": "Mass is the amount of matter (constant everywhere); weight is the gravitational force (W = mg, varies by location). Moon weight = 60 × 1.6 = 96 N.",
+      "answer": "Mass is the amount of matter (constant everywhere); weight is the gravitational force (W = mg, varies by location). Moon weight = 60 × 1.6 = 96 N",
       "explanation": "The correct answer is: Mass is the amount of matter (constant everywhere); weight is the gravitational force (W = mg, varies by location). Moon weight = 60 × 1.6 = 96 N..",
       "points": 2
     },
@@ -440,7 +440,7 @@
       "type": "short-answer",
       "question": "A 2 kg ball drops from a height of 20 m. Using conservation of energy, find its speed just before it hits the ground. (g = 10 m/s²)",
       "options": null,
-      "answer": "PE = mgh = 2 × 10 × 20 = 400 J. At ground: KE = 400 J = ½mv² → v = √(2×400/2) = √400 = 20 m/s.",
+      "answer": "PE = mgh = 2 × 10 × 20 = 400 J. At ground: KE = 400 J = ½mv² → v = √(2×400/2) = √400 = 20 m/s",
       "explanation": "The correct answer is: PE = mgh = 2 × 10 × 20 = 400 J. At ground: KE = 400 J = ½mv² → v = √(2×400/2) = √400 = 20 m/s..",
       "points": 2
     },
@@ -456,7 +456,7 @@
         "opposite the object's velocity"
       ],
       "answer": "toward the center of the circle",
-      "explanation": "Centripetal means center-seeking, so the acceleration points inward.",
+      "explanation": "Centripetal means center-seeking, so the acceleration points inward. It connects the correct answer to Physics Fundamentals final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -471,7 +471,7 @@
         "Decreases by four"
       ],
       "answer": "Decreases by four",
-      "explanation": "The correct answer is: Decreases by four.",
+      "explanation": "The correct answer is: Decreases by four. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -486,7 +486,7 @@
         "v = f + λ"
       ],
       "answer": "v = f × λ",
-      "explanation": "The correct answer is: v = f × λ.",
+      "explanation": "The correct answer is: v = f × λ. The explanation links the answer to the underlying process or evidence expected in Physics Fundamentals final concepts.",
       "points": 1
     },
     {
@@ -501,7 +501,7 @@
         "The frequency decreases"
       ],
       "answer": "The source moves toward you",
-      "explanation": "The correct answer is: The source moves toward you.",
+      "explanation": "The correct answer is: The source moves toward you. Students need to recognize why The source moves toward you matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -556,7 +556,7 @@
         "The product of all resistances"
       ],
       "answer": "The sum of all individual resistances",
-      "explanation": "The correct answer is: The sum of all individual resistances.",
+      "explanation": "The correct answer is: The sum of all individual resistances. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -586,7 +586,7 @@
         "Voltage is applied to a coil"
       ],
       "answer": "The magnetic flux through a circuit changes",
-      "explanation": "The correct answer is: The magnetic flux through a circuit changes.",
+      "explanation": "The correct answer is: The magnetic flux through a circuit changes. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -601,7 +601,7 @@
         "A magnetic wave"
       ],
       "answer": "Packets of energy called photons",
-      "explanation": "The correct answer is: Packets of energy called photons.",
+      "explanation": "The correct answer is: Packets of energy called photons. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -616,7 +616,7 @@
         "Becomes zero"
       ],
       "answer": "Increases toward infinity",
-      "explanation": "The correct answer is: Increases toward infinity.",
+      "explanation": "The correct answer is: Increases toward infinity. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -631,7 +631,7 @@
         "Electrons are converted directly into protons."
       ],
       "answer": "The products have less total mass than the original nucleus, and the mass difference becomes energy.",
-      "explanation": "In fission, mass defect is converted to energy according to E = mc².",
+      "explanation": "In fission, mass defect is converted to energy according to E = mc². The choice fits the prompt because it applies the central rule or concept from Physics Fundamentals final concepts.",
       "points": 1
     },
     {
@@ -661,7 +661,7 @@
         "Less than the source voltage"
       ],
       "answer": "Equal to the source voltage for each branch",
-      "explanation": "The correct answer is: Equal to the source voltage for each branch.",
+      "explanation": "The correct answer is: Equal to the source voltage for each branch. It connects the correct answer to Physics Fundamentals final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -691,7 +691,7 @@
         "independent of both charge size and distance"
       ],
       "answer": "proportional to the product of the charges and inversely proportional to the square of the distance",
-      "explanation": "Coulomb's law is F = k|q₁q₂|/r².",
+      "explanation": "Coulomb's law is F = k|q₁q₂|/r². The explanation links the answer to the underlying process or evidence expected in Physics Fundamentals final concepts.",
       "points": 1
     },
     {
@@ -700,7 +700,7 @@
       "type": "short-answer",
       "question": "A 1200 kg car moves at 30 m/s and brakes to a stop over 60 m. (a) Calculate the kinetic energy before braking. (b) Find the braking force exerted. Show all work.",
       "options": null,
-      "answer": "(a) KE = ½mv² = ½(1200)(900) = 540,000 J. (b) Work-energy: F × d = KE → F = 540,000 / 60 = 9,000 N.",
+      "answer": "(a) KE = ½mv² = ½(1200)(900) = 540,000 J. (b) Work-energy: F × d = KE → F = 540,000 / 60 = 9,000 N",
       "explanation": "The correct answer is: (a) KE = ½mv² = ½(1200)(900) = 540,000 J. (b) Work-energy: F × d = KE → F = 540,000 / 60 = 9,000 N..",
       "points": 2
     },
@@ -710,7 +710,7 @@
       "type": "short-answer",
       "question": "A circuit has a 9 V battery and two resistors: 3 Ω in series with 6 Ω. Calculate (a) total resistance, (b) current in the circuit, and (c) voltage drop across the 3 Ω resistor.",
       "options": null,
-      "answer": "(a) R_total = 3 + 6 = 9 Ω. (b) I = V/R = 9/9 = 1 A. (c) V₃ = I × 3 = 1 × 3 = 3 V.",
+      "answer": "(a) R_total = 3 + 6 = 9 Ω. (b) I = V/R = 9/9 = 1 A. (c) V₃ = I × 3 = 1 × 3 = 3 V",
       "explanation": "The correct answer is: (a) R_total = 3 + 6 = 9 Ω. (b) I = V/R = 9/9 = 1 A. (c) V₃ = I × 3 = 1 × 3 = 3 V..",
       "points": 2
     },
@@ -720,7 +720,7 @@
       "type": "short-answer",
       "question": "Describe the key difference between an elastic and an inelastic collision. Give one real-world example of each type and state which physical quantity is conserved in both cases.",
       "options": null,
-      "answer": "In elastic collisions, both momentum and kinetic energy are conserved (e.g., billiard balls). In inelastic collisions, momentum is conserved but kinetic energy is not — some is lost to heat/deformation (e.g., two clay balls sticking together). Momentum is conserved in both.",
+      "answer": "In elastic collisions, both momentum and kinetic energy are conserved (e.g., billiard balls). In inelastic collisions, momentum is conserved but kinetic energy is not — some is lost to heat/deformation (e.g., two clay balls sticking together). Momentum is conserved in both",
       "explanation": "The correct answer is: In elastic collisions, both momentum and kinetic energy are conserved (e.g., billiard balls). In inelastic collisions, momentum is conserved but kinetic energy is not — some is lost to heat/deformation (e.g., two clay balls sticking together). Momentum is conserved in both..",
       "points": 2
     }
@@ -737,7 +737,7 @@
         "6"
       ],
       "answer": "3",
-      "explanation": "The correct answer is: 3.",
+      "explanation": "The correct answer is: 3. The explanation links the answer to the underlying process or evidence expected in Measurement & Scientific Notation.",
       "points": 1
     },
     {
@@ -751,13 +751,13 @@
         "Displacement"
       ],
       "answer": "Displacement",
-      "explanation": "The correct answer is: Displacement.",
+      "explanation": "The correct answer is: Displacement. The explanation links the answer to the underlying process or evidence expected in Measurement & Scientific Notation.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "The SI unit of length is:",
+      "question": "In Measurement & Scientific Notation, The SI unit of length is:",
       "options": [
         "Foot",
         "Centimeter",
@@ -765,7 +765,7 @@
         "Inch"
       ],
       "answer": "Meter",
-      "explanation": "The correct answer is: Meter.",
+      "explanation": "The correct answer is: Meter. This reinforces the Measurement & Scientific Notation idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -793,7 +793,7 @@
         "Is measured in seconds"
       ],
       "answer": "Has both magnitude and direction",
-      "explanation": "The correct answer is: Has both magnitude and direction.",
+      "explanation": "The correct answer is: Has both magnitude and direction. The explanation links the answer to the underlying process or evidence expected in Kinematics: Motion in 1D.",
       "points": 1
     },
     {
@@ -807,7 +807,7 @@
         "Decelerating"
       ],
       "answer": "Moving at constant velocity or at rest",
-      "explanation": "The correct answer is: Moving at constant velocity or at rest.",
+      "explanation": "The correct answer is: Moving at constant velocity or at rest. The choice fits the prompt because it applies the central rule or concept from Kinematics: Motion in 1D.",
       "points": 1
     },
     {
@@ -821,7 +821,7 @@
         "9.8 m/s downward"
       ],
       "answer": "Zero",
-      "explanation": "The correct answer is: Zero.",
+      "explanation": "The correct answer is: Zero. The explanation links the answer to the underlying process or evidence expected in Kinematics: Motion in 1D.",
       "points": 1
     },
     {
@@ -835,7 +835,7 @@
         "Velocity is unknown"
       ],
       "answer": "Time is unknown",
-      "explanation": "The correct answer is: Time is unknown.",
+      "explanation": "The correct answer is: Time is unknown. The explanation links the answer to the underlying process or evidence expected in Kinematics: Motion in 1D.",
       "points": 1
     },
     {
@@ -849,7 +849,7 @@
         "ignores the starting and ending positions"
       ],
       "answer": "has both magnitude and direction",
-      "explanation": "Displacement is a vector from the starting point to the ending point.",
+      "explanation": "Displacement is a vector from the starting point to the ending point. Students need to recognize why has both magnitude and direction matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -863,7 +863,7 @@
         "Variable"
       ],
       "answer": "9.8 m/s² downward",
-      "explanation": "The correct answer is: 9.8 m/s² downward.",
+      "explanation": "The correct answer is: 9.8 m/s² downward. This reinforces the Kinematics: Motion in 2D idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -877,7 +877,7 @@
         "Thrown at 45° upward"
       ],
       "answer": "Dropped vertically from the same height",
-      "explanation": "The correct answer is: Dropped vertically from the same height.",
+      "explanation": "The correct answer is: Dropped vertically from the same height. It connects the correct answer to Kinematics: Motion in 2D and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -891,7 +891,7 @@
         "v / cos θ"
       ],
       "answer": "v cos θ",
-      "explanation": "The correct answer is: v cos θ.",
+      "explanation": "The correct answer is: v cos θ. It connects the correct answer to Kinematics: Motion in 2D and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -933,7 +933,7 @@
         "Gravitation"
       ],
       "answer": "Inertia",
-      "explanation": "The correct answer is: Inertia.",
+      "explanation": "The correct answer is: Inertia. It connects the correct answer to Newton's Laws of Motion and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -947,7 +947,7 @@
         "20 m/s²"
       ],
       "answer": "4 m/s²",
-      "explanation": "The correct answer is: 4 m/s².",
+      "explanation": "The correct answer is: 4 m/s². The choice fits the prompt because it applies the central rule or concept from Newton's Laws of Motion.",
       "points": 1
     },
     {
@@ -967,7 +967,7 @@
     {
       "moduleOrder": 4,
       "order": 4,
-      "question": "A free body diagram shows:",
+      "question": "In Newton's Laws of Motion, A free body diagram shows:",
       "options": [
         "The path of an object",
         "All forces acting on an object represented as arrows",
@@ -1003,7 +1003,7 @@
         "Zero"
       ],
       "answer": "The object's weight (if no vertical acceleration)",
-      "explanation": "The correct answer is: The object's weight (if no vertical acceleration).",
+      "explanation": "The correct answer is: The object's weight (if no vertical acceleration). It connects the correct answer to Forces: Friction, Tension & Gravity and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1017,7 +1017,7 @@
         "Twice"
       ],
       "answer": "Greater than or equal to",
-      "explanation": "The correct answer is: Greater than or equal to.",
+      "explanation": "The correct answer is: Greater than or equal to. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -1031,7 +1031,7 @@
         "Their temperatures"
       ],
       "answer": "Their masses and the distance between them",
-      "explanation": "The correct answer is: Their masses and the distance between them.",
+      "explanation": "The correct answer is: Their masses and the distance between them. It connects the correct answer to Forces: Friction, Tension & Gravity and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1051,7 +1051,7 @@
     {
       "moduleOrder": 6,
       "order": 1,
-      "question": "Kinetic energy depends on:",
+      "question": "In Work, Energy & Power, Kinetic energy depends on:",
       "options": [
         "Mass and height",
         "Mass and velocity squared",
@@ -1059,7 +1059,7 @@
         "Velocity and time"
       ],
       "answer": "Mass and velocity squared",
-      "explanation": "The correct answer is: Mass and velocity squared.",
+      "explanation": "The correct answer is: Mass and velocity squared. The explanation links the answer to the underlying process or evidence expected in Work, Energy & Power.",
       "points": 1
     },
     {
@@ -1073,7 +1073,7 @@
         "mv"
       ],
       "answer": "mgh",
-      "explanation": "The correct answer is: mgh.",
+      "explanation": "The correct answer is: mgh. The explanation links the answer to the underlying process or evidence expected in Work, Energy & Power.",
       "points": 1
     },
     {
@@ -1087,13 +1087,13 @@
         "Thermal energy"
       ],
       "answer": "Elastic potential energy",
-      "explanation": "The correct answer is: Elastic potential energy.",
+      "explanation": "The correct answer is: Elastic potential energy. This reinforces the Work, Energy & Power idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Work is defined as:",
+      "question": "In Work, Energy & Power, Work is defined as:",
       "options": [
         "Force times time",
         "Force times distance (in the direction of force)",
@@ -1101,7 +1101,7 @@
         "Energy divided by time"
       ],
       "answer": "Force times distance (in the direction of force)",
-      "explanation": "The correct answer is: Force times distance (in the direction of force).",
+      "explanation": "The correct answer is: Force times distance (in the direction of force). This reinforces the Work, Energy & Power idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1115,13 +1115,13 @@
         "10 J of work"
       ],
       "answer": "10,000 J of work",
-      "explanation": "The correct answer is: 10,000 J of work.",
+      "explanation": "The correct answer is: 10,000 J of work. The explanation links the answer to the underlying process or evidence expected in Work, Energy & Power.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 1,
-      "question": "Momentum is defined as:",
+      "question": "In Momentum & Impulse, Momentum is defined as:",
       "options": [
         "Mass times acceleration",
         "Mass times velocity",
@@ -1129,13 +1129,13 @@
         "Mass divided by velocity"
       ],
       "answer": "Mass times velocity",
-      "explanation": "The correct answer is: Mass times velocity.",
+      "explanation": "The correct answer is: Mass times velocity. The choice fits the prompt because it applies the central rule or concept from Momentum & Impulse.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 2,
-      "question": "Impulse equals:",
+      "question": "In Momentum & Impulse, Impulse equals:",
       "options": [
         "Force times distance",
         "Mass times acceleration",
@@ -1143,13 +1143,13 @@
         "Change in kinetic energy"
       ],
       "answer": "Force times time",
-      "explanation": "The correct answer is: Force times time.",
+      "explanation": "The correct answer is: Force times time. The choice fits the prompt because it applies the central rule or concept from Momentum & Impulse.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "In an elastic collision:",
+      "question": "In Momentum & Impulse, In an elastic collision:",
       "options": [
         "Only momentum is conserved",
         "Both momentum and kinetic energy are conserved",
@@ -1157,7 +1157,7 @@
         "Neither is conserved"
       ],
       "answer": "Both momentum and kinetic energy are conserved",
-      "explanation": "The correct answer is: Both momentum and kinetic energy are conserved.",
+      "explanation": "The correct answer is: Both momentum and kinetic energy are conserved. This reinforces the Momentum & Impulse idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1171,7 +1171,7 @@
         "acceleration times time"
       ],
       "answer": "mass times velocity",
-      "explanation": "Linear momentum is p = mv.",
+      "explanation": "Linear momentum is p = mv. Students need to recognize why mass times velocity matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1185,7 +1185,7 @@
         "In the direction of velocity"
       ],
       "answer": "Toward the center of the circle",
-      "explanation": "The correct answer is: Toward the center of the circle.",
+      "explanation": "The correct answer is: Toward the center of the circle. Students need to recognize why Toward the center of the circle matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1199,7 +1199,7 @@
         "Stays the same"
       ],
       "answer": "Quadruples",
-      "explanation": "The correct answer is: Quadruples.",
+      "explanation": "The correct answer is: Quadruples. Students need to recognize why Quadruples matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1241,7 +1241,7 @@
         "opposite the object's mass"
       ],
       "answer": "toward the center of the circle",
-      "explanation": "The net force causing circular motion points inward toward the center.",
+      "explanation": "The net force causing circular motion points inward toward the center. This reinforces the Circular Motion & Gravitation idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1255,7 +1255,7 @@
         "Period"
       ],
       "answer": "Wavelength",
-      "explanation": "The correct answer is: Wavelength.",
+      "explanation": "The correct answer is: Wavelength. It connects the correct answer to Waves & Sound and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1269,7 +1269,7 @@
         "Watts"
       ],
       "answer": "Hertz",
-      "explanation": "The correct answer is: Hertz.",
+      "explanation": "The correct answer is: Hertz. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -1283,7 +1283,7 @@
         "Surface waves"
       ],
       "answer": "Longitudinal (compression) waves",
-      "explanation": "The correct answer is: Longitudinal (compression) waves.",
+      "explanation": "The correct answer is: Longitudinal (compression) waves. Students need to recognize why Longitudinal (compression) waves matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1311,7 +1311,7 @@
         "joules"
       ],
       "answer": "hertz",
-      "explanation": "Frequency is the number of cycles per second, measured in hertz (Hz).",
+      "explanation": "Frequency is the number of cycles per second, measured in hertz (Hz). The choice fits the prompt because it applies the central rule or concept from Waves & Sound.",
       "points": 1
     },
     {
@@ -1325,7 +1325,7 @@
         "Is always greater than the angle of reflection"
       ],
       "answer": "Equals the angle of reflection",
-      "explanation": "The correct answer is: Equals the angle of reflection.",
+      "explanation": "The correct answer is: Equals the angle of reflection. Students need to recognize why Equals the angle of reflection matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1339,7 +1339,7 @@
         "Is completely reflected"
       ],
       "answer": "Slows down and bends toward the normal",
-      "explanation": "The correct answer is: Slows down and bends toward the normal.",
+      "explanation": "The correct answer is: Slows down and bends toward the normal. The explanation links the answer to the underlying process or evidence expected in Light & Optics.",
       "points": 1
     },
     {
@@ -1353,7 +1353,7 @@
         "Gamma rays"
       ],
       "answer": "Gamma rays",
-      "explanation": "The correct answer is: Gamma rays.",
+      "explanation": "The correct answer is: Gamma rays. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -1367,7 +1367,7 @@
         "At infinity only"
       ],
       "answer": "Beyond the focal length",
-      "explanation": "The correct answer is: Beyond the focal length.",
+      "explanation": "The correct answer is: Beyond the focal length. Students need to recognize why Beyond the focal length matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1387,7 +1387,7 @@
     {
       "moduleOrder": 11,
       "order": 1,
-      "question": "Like charges:",
+      "question": "In Electrostatics, Like charges:",
       "options": [
         "Attract each other",
         "Repel each other",
@@ -1395,7 +1395,7 @@
         "Cancel out"
       ],
       "answer": "Repel each other",
-      "explanation": "The correct answer is: Repel each other.",
+      "explanation": "The correct answer is: Repel each other. This reinforces the Electrostatics idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1409,7 +1409,7 @@
         "Quadruples"
       ],
       "answer": "Doubles",
-      "explanation": "The correct answer is: Doubles.",
+      "explanation": "The correct answer is: Doubles. This reinforces the Electrostatics idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1423,13 +1423,13 @@
         "A magnetic field"
       ],
       "answer": "The direction of force on a positive test charge",
-      "explanation": "The correct answer is: The direction of force on a positive test charge.",
+      "explanation": "The correct answer is: The direction of force on a positive test charge. It connects the correct answer to Electrostatics and separates it from plausible distractors.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "Like electric charges:",
+      "question": "In Electrostatics, Like electric charges:",
       "options": [
         "repel each other",
         "attract each other",
@@ -1437,7 +1437,7 @@
         "have no electric force between them"
       ],
       "answer": "repel each other",
-      "explanation": "Charges with the same sign repel, while opposite charges attract.",
+      "explanation": "Charges with the same sign repel, while opposite charges attract. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -1460,7 +1460,7 @@
         "Quadruples"
       ],
       "answer": "Halves",
-      "explanation": "The correct answer is: Halves.",
+      "explanation": "The correct answer is: Halves. It connects the correct answer to Electric Circuits and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1474,7 +1474,7 @@
         "Zero in some components"
       ],
       "answer": "The same throughout",
-      "explanation": "The correct answer is: The same throughout.",
+      "explanation": "The correct answer is: The same throughout. The explanation links the answer to the underlying process or evidence expected in Electric Circuits.",
       "points": 1
     },
     {
@@ -1488,7 +1488,7 @@
         "V × R"
       ],
       "answer": "I² × R",
-      "explanation": "The correct answer is: I² × R.",
+      "explanation": "The correct answer is: I² × R. The explanation links the answer to the underlying process or evidence expected in Electric Circuits.",
       "points": 1
     },
     {
@@ -1502,7 +1502,7 @@
         "Decreases total current"
       ],
       "answer": "Decreases total resistance",
-      "explanation": "The correct answer is: Decreases total resistance.",
+      "explanation": "The correct answer is: Decreases total resistance. The choice fits the prompt because it applies the central rule or concept from Electric Circuits.",
       "points": 1
     },
     {
@@ -1516,7 +1516,7 @@
         "Ohm"
       ],
       "answer": "Ohm",
-      "explanation": "The correct answer is: Ohm.",
+      "explanation": "The correct answer is: Ohm. The choice fits the prompt because it applies the central rule or concept from Electric Circuits.",
       "points": 1
     },
     {
@@ -1530,7 +1530,7 @@
         "Neither pole"
       ],
       "answer": "North pole",
-      "explanation": "The correct answer is: North pole.",
+      "explanation": "The correct answer is: North pole. It connects the correct answer to Magnetism & Electromagnetism and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1544,13 +1544,13 @@
         "The electron flow"
       ],
       "answer": "The surrounding magnetic field",
-      "explanation": "The correct answer is: The surrounding magnetic field.",
+      "explanation": "The correct answer is: The surrounding magnetic field. Students need to recognize why The surrounding magnetic field matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "An electric motor converts:",
+      "question": "In Magnetism & Electromagnetism, An electric motor converts:",
       "options": [
         "Mechanical energy to electrical energy",
         "Electrical energy to mechanical energy",
@@ -1558,7 +1558,7 @@
         "Light to electrical energy"
       ],
       "answer": "Electrical energy to mechanical energy",
-      "explanation": "The correct answer is: Electrical energy to mechanical energy.",
+      "explanation": "The correct answer is: Electrical energy to mechanical energy. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
       "points": 1
     },
     {
@@ -1595,7 +1595,7 @@
         "Dependent on the light source's speed"
       ],
       "answer": "Constant for all observers regardless of motion",
-      "explanation": "The correct answer is: Constant for all observers regardless of motion.",
+      "explanation": "The correct answer is: Constant for all observers regardless of motion. The choice fits the prompt because it applies the central rule or concept from Modern Physics Introduction.",
       "points": 1
     },
     {
@@ -1609,7 +1609,7 @@
         "Protons"
       ],
       "answer": "Photons",
-      "explanation": "The correct answer is: Photons.",
+      "explanation": "The correct answer is: Photons. The choice fits the prompt because it applies the central rule or concept from Modern Physics Introduction.",
       "points": 1
     },
     {
@@ -1623,7 +1623,7 @@
         "The outer shell electrons"
       ],
       "answer": "A dense central nucleus",
-      "explanation": "The correct answer is: A dense central nucleus.",
+      "explanation": "The correct answer is: A dense central nucleus. The explanation links the answer to the underlying process or evidence expected in Modern Physics Introduction.",
       "points": 1
     },
     {
@@ -1637,7 +1637,7 @@
         "Backward relative to a stationary clock"
       ],
       "answer": "Slower than a stationary clock",
-      "explanation": "The correct answer is: Slower than a stationary clock.",
+      "explanation": "The correct answer is: Slower than a stationary clock. This reinforces the Modern Physics Introduction idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {

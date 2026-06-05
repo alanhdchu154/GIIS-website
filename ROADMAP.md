@@ -73,6 +73,16 @@ Current evidence:
   fail. This generates `_audit/parent-assessment-sample-packet.md` and
   `_audit/parent-assessment-sample-packet.json` with parent-facing samples for
   assignment evidence, quiz, midterm, final, grading story, and rubric focus.
+- `npm run audit:assessment-polish`: 93 pass / 0 fail after the 2026-06-04
+  iterative polish pass. The first run found 1,737 full-corpus polish issues
+  across question context, multiple-choice explanations, and short-answer
+  scoring guidance; `npm run repair:assessment-polish` then strengthened 1,835
+  assessment fields across 91 course files. A follow-up iteration corrected the
+  repair rule so exact-match fill answers remain exact, cleaned 141 affected
+  fields, rendered `fill` items in the exam UI, removed duplicate punctuation
+  after quoted answers, replaced 1,285 old generic MC explanation tails plus 97
+  remaining placeholder course-concept explanations, and the final audit
+  returned 0 issues across all 7,224 questions.
 - Student feedback completion pass completed 2026-06-01: module switching,
   English I resource gaps, same-grade recommendations, module motivation,
   manual completion controls, quiz review guidance, parent pacing, demo
@@ -119,6 +129,14 @@ Current evidence:
   backed by `public/data/parent-assessment-proof.json` generated from the same
   8-course packet. This gives families concrete assignment, quiz, midterm,
   final, and rubric samples before applying.
+- Full assessment polish iteration completed 2026-06-04: all 93 courses were
+  scanned without sampling, thin multiple-choice explanations were expanded,
+  under-contextualized prompts were given course/module context, and short
+  response keys now include clearer scoring expectations where needed. A cc
+  follow-up review found exact-match fill-answer punctuation, non-rendered
+  `fill` exam items, and formulaic MC explanations; those blockers are now
+  covered by `npm run audit:assessment-polish` and the Learn exam UI renders
+  both `short` and `fill` text-answer items.
 - Completed assessment/resource history is archived in
   `umi/reviews/2026-06-01-course-resource-assessment-summary.md`.
 

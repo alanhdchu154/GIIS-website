@@ -261,7 +261,7 @@
         "SAT score"
       ],
       "answer": "Favorite genre of music",
-      "explanation": "Categorical variables represent groups or labels, not numerical measurements.",
+      "explanation": "Categorical variables represent groups or labels, not numerical measurements. It connects the correct answer to Statistics midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -291,7 +291,7 @@
         "12"
       ],
       "answer": "10",
-      "explanation": "Q1 is 5 and Q3 is 15, so the IQR is 15 - 5 = 10.",
+      "explanation": "Q1 is 5 and Q3 is 15, so the IQR is 15 - 5 = 10. This reinforces the Statistics midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -306,7 +306,7 @@
         "0.5"
       ],
       "answer": "2",
-      "explanation": "z = (80 − 70) / 5 = 10 / 5 = 2.",
+      "explanation": "z = (80 − 70) / 5 = 10 / 5 = 2. Students need to recognize why 2 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -346,7 +346,7 @@
         "0.70"
       ],
       "answer": "0.70",
-      "explanation": "For mutually exclusive events, P(A or B) = P(A) + P(B) = 0.3 + 0.4 = 0.70.",
+      "explanation": "For mutually exclusive events, P(A or B) = P(A) + P(B) = 0.3 + 0.4 = 0.70. The reasoning points back to the procedure used in Statistics midterm concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -361,7 +361,7 @@
         "No, because P(A) ≠ P(B)"
       ],
       "answer": "Yes, because P(A and B) = P(A)·P(B)",
-      "explanation": "P(A)·P(B) = 0.5 × 0.4 = 0.2 = P(A and B), so A and B are independent.",
+      "explanation": "P(A)·P(B) = 0.5 × 0.4 = 0.2 = P(A and B), so A and B are independent. This reinforces the Statistics midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -376,7 +376,7 @@
         "0.5"
       ],
       "answer": "4",
-      "explanation": "Expected value of a binomial: E(X) = np = 8 × 0.5 = 4.",
+      "explanation": "Expected value of a binomial: E(X) = np = 8 × 0.5 = 4. It highlights the operation, property, or model that makes the answer work in Statistics midterm concepts.",
       "points": 1
     },
     {
@@ -421,7 +421,7 @@
         "200"
       ],
       "answer": "2",
-      "explanation": "Standard error = σ / √n = 20 / √100 = 20 / 10 = 2.",
+      "explanation": "Standard error = σ / √n = 20 / √100 = 20 / 10 = 2. It connects the correct answer to Statistics midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -430,7 +430,7 @@
       "type": "short",
       "question": "A spinner is divided into 5 equal sections numbered 1 through 5. Define the sample space. Then calculate P(spinning an odd number) and P(spinning a number greater than 3).",
       "options": null,
-      "answer": "Sample space: {1, 2, 3, 4, 5}; P(odd) = 3/5; P(greater than 3) = 2/5",
+      "answer": "Sample space: {1, 2, 3, 4, 5}; P(odd) = 3/5; P(greater than 3) = 2/5. A strong response should use Statistics midterm concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
       "explanation": "Odd numbers: 1, 3, 5 → 3 out of 5 equally likely outcomes. Greater than 3: 4, 5 → 2 out of 5.",
       "points": 2
     },
@@ -541,7 +541,7 @@
         "0.45"
       ],
       "answer": "0.20",
-      "explanation": "Multiplication rule: P(A and B) = P(B|A) × P(A) = 0.4 × 0.5 = 0.20.",
+      "explanation": "Multiplication rule: P(A and B) = P(B|A) × P(A) = 0.4 × 0.5 = 0.20. The choice fits the prompt because it applies the central rule or concept from Statistics final concepts.",
       "points": 1
     },
     {
@@ -556,7 +556,7 @@
         "9"
       ],
       "answer": "4",
-      "explanation": "Var(X) = E(X²) − [E(X)]² = 13 − 9 = 4.",
+      "explanation": "Var(X) = E(X²) − [E(X)]² = 13 − 9 = 4. It highlights the operation, property, or model that makes the answer work in Statistics final concepts.",
       "points": 1
     },
     {
@@ -789,7 +789,7 @@
         "Favorite subject"
       ],
       "answer": "Height in inches",
-      "explanation": "Height in inches is numerical and can be measured, so it is quantitative.",
+      "explanation": "Height in inches is numerical and can be measured, so it is quantitative. The reasoning points back to the procedure used in Introduction to Data, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -887,13 +887,13 @@
         "12"
       ],
       "answer": "9",
-      "explanation": "Sorted list: 4, 7, 9, 12, 15. The middle value (3rd of 5) is 9.",
+      "explanation": "Sorted list: 4, 7, 9, 12, 15. The middle value (3rd of 5) is 9. It connects the correct answer to Descriptive Statistics: Center & Spread and separates it from plausible distractors.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 3,
-      "question": "The IQR is defined as:",
+      "question": "In Descriptive Statistics: Center & Spread, The IQR is defined as:",
       "options": [
         "Max − Min",
         "Q3 − Q1",
@@ -929,7 +929,7 @@
         "12"
       ],
       "answer": "9",
-      "explanation": "The values are already ordered, and the middle value is 9.",
+      "explanation": "The values are already ordered, and the middle value is 9. It highlights the operation, property, or model that makes the answer work in Descriptive Statistics: Center & Spread.",
       "points": 1
     },
     {
@@ -957,7 +957,7 @@
         "7"
       ],
       "answer": "10",
-      "explanation": "z = (x − μ)/σ → 1.0 = (85 − 75)/σ → σ = 10/1.0 = 10.",
+      "explanation": "z = (x − μ)/σ → 1.0 = (85 − 75)/σ → σ = 10/1.0 = 10. It highlights the operation, property, or model that makes the answer work in Normal Distribution.",
       "points": 1
     },
     {
@@ -1022,7 +1022,7 @@
         "They have equal probabilities"
       ],
       "answer": "They cannot both occur at the same time",
-      "explanation": "Mutually exclusive events have no outcomes in common; P(A and B) = 0.",
+      "explanation": "Mutually exclusive events have no outcomes in common; P(A and B) = 0. This reinforces the Probability Fundamentals idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1036,7 +1036,7 @@
         "0.07"
       ],
       "answer": "0.3",
-      "explanation": "Complement rule: P(not A) = 1 − P(A) = 1 − 0.7 = 0.3.",
+      "explanation": "Complement rule: P(not A) = 1 − P(A) = 1 − 0.7 = 0.3. It connects the correct answer to Probability Fundamentals and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1078,13 +1078,13 @@
         "1"
       ],
       "answer": "0.5",
-      "explanation": "A fair coin has two equally likely outcomes, so P(heads) = 1/2 = 0.5.",
+      "explanation": "A fair coin has two equally likely outcomes, so P(heads) = 1/2 = 0.5. The reasoning points back to the procedure used in Probability Fundamentals, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 1,
-      "question": "P(A|B) is read as:",
+      "question": "In Conditional Probability & Independence, P(A|B) is read as:",
       "options": [
         "The probability of A and B",
         "The probability of A given B",
@@ -1106,7 +1106,7 @@
         "0.40"
       ],
       "answer": "0.30",
-      "explanation": "P(A|B) = P(A and B) / P(B) = 0.12 / 0.4 = 0.30.",
+      "explanation": "P(A|B) = P(A and B) / P(B) = 0.12 / 0.4 = 0.30. It highlights the operation, property, or model that makes the answer work in Conditional Probability & Independence.",
       "points": 1
     },
     {
@@ -1126,7 +1126,7 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "How is P(A|B) read?",
+      "question": "In Conditional Probability & Independence, how is P(A|B) read?",
       "options": [
         "The probability of A and B",
         "The probability of A given B",
@@ -1297,7 +1297,7 @@
         "10"
       ],
       "answer": "19",
-      "explanation": "Degrees of freedom for a one-sample t-procedure: df = n − 1 = 20 − 1 = 19.",
+      "explanation": "Degrees of freedom for a one-sample t-procedure: df = n − 1 = 20 − 1 = 19. It highlights the operation, property, or model that makes the answer work in Confidence Intervals: Means.",
       "points": 1
     },
     {
@@ -1339,7 +1339,7 @@
         "21"
       ],
       "answer": "19",
-      "explanation": "For a one-sample t-interval, degrees of freedom are n - 1, so 20 - 1 = 19.",
+      "explanation": "For a one-sample t-interval, degrees of freedom are n - 1, so 20 - 1 = 19. This reinforces the Confidence Intervals: Means idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1353,7 +1353,7 @@
         "p̂ ± s"
       ],
       "answer": "z* × √(p̂(1−p̂)/n)",
-      "explanation": "Margin of error for a proportion: ME = z* × √(p̂(1−p̂)/n).",
+      "explanation": "Margin of error for a proportion: ME = z* × √(p̂(1−p̂)/n). This reinforces the Confidence Intervals: Proportions idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1367,7 +1367,7 @@
         "0.60"
       ],
       "answer": "0.40",
-      "explanation": "p̂ = 80/200 = 0.40.",
+      "explanation": "p̂ = 80/200 = 0.40. The reasoning points back to the procedure used in Confidence Intervals: Proportions, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1447,7 +1447,7 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "A Type I error is:",
+      "question": "In Hypothesis Testing: Means, A Type I error is:",
       "options": [
         "Failing to reject a false null hypothesis",
         "Rejecting a true null hypothesis",
@@ -1525,7 +1525,7 @@
         "6"
       ],
       "answer": "4",
-      "explanation": "df = number of categories − 1 = 5 − 1 = 4.",
+      "explanation": "df = number of categories − 1 = 5 − 1 = 4. The reasoning points back to the procedure used in Hypothesis Testing: Proportions & Chi-Square, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1590,13 +1590,13 @@
         "15"
       ],
       "answer": "11",
-      "explanation": "ŷ = 2(3) + 5 = 6 + 5 = 11.",
+      "explanation": "ŷ = 2(3) + 5 = 6 + 5 = 11. It highlights the operation, property, or model that makes the answer work in Linear Regression.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "A residual is defined as:",
+      "question": "In Linear Regression, A residual is defined as:",
       "options": [
         "ŷ − x",
         "y − ŷ",
@@ -1688,7 +1688,7 @@
         "A residual plot"
       ],
       "answer": "A misleading graphic",
-      "explanation": "3D effects can distort visual comparisons, making the graph misleading.",
+      "explanation": "3D effects can distort visual comparisons, making the graph misleading. This reinforces the Statistical Ethics & Real-World Applications idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     }
   ],

@@ -259,7 +259,7 @@
         "Cannot determine"
       ],
       "answer": "5",
-      "explanation": "By the sum limit law: lim [f(x) + g(x)] = lim f(x) + lim g(x) = 3 + 2 = 5.",
+      "explanation": "By the sum limit law: lim [f(x) + g(x)] = lim f(x) + lim g(x) = 3 + 2 = 5. The choice fits the prompt because it applies the central rule or concept from Limits.",
       "points": 1
     },
     {
@@ -273,7 +273,7 @@
         "Does not exist"
       ],
       "answer": "1",
-      "explanation": "lim (sin x)/x = 1 as x->0 is a fundamental limit in calculus.",
+      "explanation": "lim (sin x)/x = 1 as x->0 is a fundamental limit in calculus. The reasoning points back to the procedure used in Limits, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -285,7 +285,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. 4 is correct.",
+      "explanation": "True. 4 is correct. The reasoning points back to the procedure used in Limits, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -353,7 +353,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. f(a) defined, lim exists, lim = f(a) is correct.",
+      "explanation": "True. f(a) defined, lim exists, lim = f(a) is correct. It connects the correct answer to Continuity and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -367,7 +367,7 @@
         "lim [f(a) - f(h)] / a as h->0"
       ],
       "answer": "lim [f(a+h) - f(a)] / h as h->0",
-      "explanation": "The derivative is defined as f'(a) = lim_{h->0} [f(a+h) - f(a)] / h.",
+      "explanation": "The derivative is defined as f'(a) = lim_{h->0} [f(a+h) - f(a)] / h. Students need to recognize why lim [f(a+h) - f(a)] / h as h->0 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -395,7 +395,7 @@
         "x^2"
       ],
       "answer": "2x",
-      "explanation": "lim [(x+h)^2 - x^2]/h = lim [2xh + h^2]/h = lim [2x + h] = 2x as h->0.",
+      "explanation": "lim [(x+h)^2 - x^2]/h = lim [2xh + h^2]/h = lim [2x + h] = 2x as h->0. The reasoning points back to the procedure used in The Derivative: Definition, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -437,7 +437,7 @@
         "4x^5"
       ],
       "answer": "5x^4",
-      "explanation": "By the power rule, d/dx[x^n] = n*x^(n-1). So d/dx[x^5] = 5x^4.",
+      "explanation": "By the power rule, d/dx[x^n] = n*x^(n-1). So d/dx[x^5] = 5x^4. The choice fits the prompt because it applies the central rule or concept from Differentiation Rules.",
       "points": 1
     },
     {
@@ -451,7 +451,7 @@
         "12x^4 - 4x^2"
       ],
       "answer": "12x^3 - 4x",
-      "explanation": "d/dx[3x^4] = 12x^3, d/dx[-2x^2] = -4x, d/dx[7] = 0. So f'(x) = 12x^3 - 4x.",
+      "explanation": "d/dx[3x^4] = 12x^3, d/dx[-2x^2] = -4x, d/dx[7] = 0. So f'(x) = 12x^3 - 4x. It highlights the operation, property, or model that makes the answer work in Differentiation Rules.",
       "points": 1
     },
     {
@@ -465,7 +465,7 @@
         "f(x)*g(x)/(f'(x)+g'(x))"
       ],
       "answer": "f'(x)*g(x) + f(x)*g'(x)",
-      "explanation": "Product rule: d/dx[f*g] = f'*g + f*g'. (First times derivative of second plus second times derivative of first.)",
+      "explanation": "Product rule: d/dx[f*g] = f'*g + f*g'. (First times derivative of second plus second times derivative of first.).",
       "points": 1
     },
     {
@@ -479,7 +479,7 @@
         "-sin(x)"
       ],
       "answer": "cos(x)",
-      "explanation": "d/dx[sin(x)] = cos(x) is a fundamental derivative formula.",
+      "explanation": "d/dx[sin(x)] = cos(x) is a fundamental derivative formula. It highlights the operation, property, or model that makes the answer work in Differentiation Rules.",
       "points": 1
     },
     {
@@ -508,7 +508,7 @@
     {
       "moduleOrder": 5,
       "order": 2,
-      "question": "Find d/dx[sin(3x)].",
+      "question": "In The Chain Rule, Find d/dx[sin(3x)].",
       "options": [
         "cos(3x)",
         "3cos(3x)",
@@ -522,7 +522,7 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "Find d/dx[(x^2 + 1)^4].",
+      "question": "In The Chain Rule, Find d/dx[(x^2 + 1)^4].",
       "options": [
         "4(x^2+1)^3",
         "8x(x^2+1)^3",
@@ -530,13 +530,13 @@
         "8(x^2+1)^4"
       ],
       "answer": "8x(x^2+1)^3",
-      "explanation": "Chain rule: 4(x^2+1)^3 * d/dx[x^2+1] = 4(x^2+1)^3 * 2x = 8x(x^2+1)^3.",
+      "explanation": "Chain rule: 4(x^2+1)^3 * d/dx[x^2+1] = 4(x^2+1)^3 * 2x = 8x(x^2+1)^3. It connects the correct answer to The Chain Rule and separates it from plausible distractors.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "What is d/dx[e^(x^2)]?",
+      "question": "In The Chain Rule, what is d/dx[e^(x^2)]?",
       "options": [
         "e^(x^2)",
         "2x*e^(x^2)",
@@ -550,7 +550,7 @@
     {
       "moduleOrder": 5,
       "order": 5,
-      "question": "Find d/dx[ln(x^2 + 1)].",
+      "question": "In The Chain Rule, Find d/dx[ln(x^2 + 1)].",
       "options": [
         "1/(x^2+1)",
         "2x/(x^2+1)",
@@ -716,7 +716,7 @@
         "54pi cm^3/s"
       ],
       "answer": "72pi cm^3/s",
-      "explanation": "V = (4/3)pi*r^3, dV/dt = 4pi*r^2*(dr/dt) = 4pi*(9)*(2) = 72pi cm^3/s.",
+      "explanation": "V = (4/3)pi*r^3, dV/dt = 4pi*r^2*(dr/dt) = 4pi*(9)*(2) = 72pi cm^3/s. Students need to recognize why 72pi cm^3/s matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -772,7 +772,7 @@
         "108π cm^3/s"
       ],
       "answer": "72π cm^3/s",
-      "explanation": "Since V = (4/3)πr^3, dV/dt = 4πr^2 dr/dt = 4π(3)^2(2) = 72π cm^3/s.",
+      "explanation": "Since V = (4/3)πr^3, dV/dt = 4πr^2 dr/dt = 4π(3)^2(2) = 72π cm^3/s. It highlights the operation, property, or model that makes the answer work in Related Rates.",
       "points": 1
     },
     {
@@ -826,7 +826,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. x^3 + C is correct.",
+      "explanation": "True. x^3 + C is correct. Students need to recognize why True matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -868,7 +868,7 @@
         "12"
       ],
       "answer": "8",
-      "explanation": "Antiderivative is x^3. F(2) - F(0) = 8 - 0 = 8.",
+      "explanation": "Antiderivative is x^3. F(2) - F(0) = 8 - 0 = 8. Students need to recognize why 8 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -962,7 +962,7 @@
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "What is integral of 1/x dx?",
+      "question": "In Integration Techniques, what is integral of 1/x dx?",
       "options": [
         "x^(-2)/(-2) + C",
         "ln|x| + C",
@@ -998,7 +998,7 @@
         "u = x^4"
       ],
       "answer": "u = x^2 + 1",
-      "explanation": "The derivative of x^2 + 1 is 2x, which appears in the integrand.",
+      "explanation": "The derivative of x^2 + 1 is 2x, which appears in the integrand. It connects the correct answer to Integration Techniques and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1156,7 +1156,7 @@
         "No, it oscillates"
       ],
       "answer": "Yes, it converges to 0",
-      "explanation": "lim (1/n) = 0 as n -> infinity. The sequence converges to 0.",
+      "explanation": "lim (1/n) = 0 as n -> infinity. The sequence converges to 0. It highlights the operation, property, or model that makes the answer work in Sequences & Series Introduction.",
       "points": 1
     },
     {
@@ -1184,7 +1184,7 @@
         "Diverges"
       ],
       "answer": "2",
-      "explanation": "a = 1, r = 1/2. Sum = a/(1-r) = 1/(1-1/2) = 1/(1/2) = 2.",
+      "explanation": "a = 1, r = 1/2. Sum = a/(1-r) = 1/(1-1/2) = 1/(1/2) = 2. The choice fits the prompt because it applies the central rule or concept from Sequences & Series Introduction.",
       "points": 1
     },
     {
@@ -1198,7 +1198,7 @@
         "a_n is always an integer"
       ],
       "answer": "lim a_n = L for some finite L as n -> infinity",
-      "explanation": "A sequence converges if its terms approach a finite limit.",
+      "explanation": "A sequence converges if its terms approach a finite limit. This reinforces the Sequences & Series Introduction idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     }
   ],
@@ -1215,7 +1215,7 @@
         "9"
       ],
       "answer": "6",
-      "explanation": "(x^2-9)/(x-3) = (x+3)(x-3)/(x-3) = x+3. As x->3, the limit is 3+3=6.",
+      "explanation": "(x^2-9)/(x-3) = (x+3)(x-3)/(x-3) = x+3. As x->3, the limit is 3+3=6. The choice fits the prompt because it applies the central rule or concept from Calculus midterm concepts.",
       "points": 1
     },
     {
@@ -1245,7 +1245,7 @@
         "2x + 1"
       ],
       "answer": "2",
-      "explanation": "f'(x) = lim [(2(x+h)+1 - (2x+1))/h] = lim [2h/h] = lim 2 = 2.",
+      "explanation": "f'(x) = lim [(2(x+h)+1 - (2x+1))/h] = lim [2h/h] = lim 2 = 2. This reinforces the Calculus midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1267,7 +1267,7 @@
       "examType": "midterm",
       "order": 5,
       "type": "mc",
-      "question": "Find d/dx [(x^2)(sin(x))].",
+      "question": "In Calculus midterm concepts, Find d/dx [(x^2)(sin(x))].",
       "options": [
         "2x*cos(x)",
         "x^2*cos(x) + 2x*sin(x)",
@@ -1275,14 +1275,14 @@
         "x^2*sin(x) + 2x"
       ],
       "answer": "2x*sin(x) + x^2*cos(x)",
-      "explanation": "Product rule: (x^2)'*sin(x) + x^2*(sin(x))' = 2x*sin(x) + x^2*cos(x).",
+      "explanation": "Product rule: (x^2)'*sin(x) + x^2*(sin(x))' = 2x*sin(x) + x^2*cos(x). This reinforces the Calculus midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 6,
       "type": "mc",
-      "question": "Find d/dx [cos(x^3)].",
+      "question": "In Calculus midterm concepts, Find d/dx [cos(x^3)].",
       "options": [
         "-sin(x^3)",
         "-3x^2*sin(x^3)",
@@ -1330,7 +1330,7 @@
         "x = 4 only"
       ],
       "answer": "x = 2 and x = -2",
-      "explanation": "f'(x) = 3x^2 - 12 = 3(x^2-4) = 0 -> x = 2 and x = -2.",
+      "explanation": "f'(x) = 3x^2 - 12 = 3(x^2-4) = 0 -> x = 2 and x = -2. The choice fits the prompt because it applies the central rule or concept from Calculus midterm concepts.",
       "points": 1
     },
     {
@@ -1360,7 +1360,7 @@
         "12"
       ],
       "answer": "0",
-      "explanation": "v(t) = s'(t) = 3t^2 - 6t. v(2) = 3(4) - 6(2) = 12 - 12 = 0.",
+      "explanation": "v(t) = s'(t) = 3t^2 - 6t. v(2) = 3(4) - 6(2) = 12 - 12 = 0. It highlights the operation, property, or model that makes the answer work in Calculus midterm concepts.",
       "points": 1
     },
     {
@@ -1420,7 +1420,7 @@
         "25pi m^2/s"
       ],
       "answer": "30pi m^2/s",
-      "explanation": "A = pi*r^2. dA/dt = 2pi*r*(dr/dt) = 2pi*5*3 = 30pi m^2/s.",
+      "explanation": "A = pi*r^2. dA/dt = 2pi*r*(dr/dt) = 2pi*5*3 = 30pi m^2/s. This reinforces the Calculus midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1565,7 +1565,7 @@
         "sin(e^x) + C"
       ],
       "answer": "-cos(e^x) + C",
-      "explanation": "u = e^x, du = e^x dx. integral of sin(u) du = -cos(u) + C = -cos(e^x) + C.",
+      "explanation": "u = e^x, du = e^x dx. integral of sin(u) du = -cos(u) + C = -cos(e^x) + C. Students need to recognize why -cos(e^x) + C matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1595,14 +1595,14 @@
         "Diverges"
       ],
       "answer": "2",
-      "explanation": "a_n = 2 + 1/n. As n -> infinity, 1/n -> 0. So a_n -> 2.",
+      "explanation": "a_n = 2 + 1/n. As n -> infinity, 1/n -> 0. So a_n -> 2. This reinforces the Calculus final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 13,
       "type": "fill",
-      "question": "Find d/dx [tan(x^2 + 1)].",
+      "question": "In Calculus final concepts, Find d/dx [tan(x^2 + 1)].",
       "options": null,
       "answer": "2x*sec^2(x^2+1)",
       "explanation": "The correct answer is: 2x*sec^2(x^2+1).",
@@ -1620,7 +1620,7 @@
         "85 mph"
       ],
       "answer": "130 mph",
-      "explanation": "d/dt = sqrt(50^2 + 120^2) = sqrt(2500 + 14400) = sqrt(16900) = 130 mph.",
+      "explanation": "d/dt = sqrt(50^2 + 120^2) = sqrt(2500 + 14400) = sqrt(16900) = 130 mph. It highlights the operation, property, or model that makes the answer work in Calculus final concepts.",
       "points": 1
     },
     {
@@ -1635,7 +1635,7 @@
         "9"
       ],
       "answer": "2",
-      "explanation": "MVT guarantees c where f'(c) = (f(4)-f(0))/(4-0) = (9-1)/4 = 8/4 = 2.",
+      "explanation": "MVT guarantees c where f'(c) = (f(4)-f(0))/(4-0) = (9-1)/4 = 8/4 = 2. It connects the correct answer to Calculus final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1680,7 +1680,7 @@
         "40"
       ],
       "answer": "20",
-      "explanation": "P'(x) = -2x + 40 = 0 -> x = 20. P''(x) = -2 < 0 confirms a maximum.",
+      "explanation": "P'(x) = -2x + 40 = 0 -> x = 20. P''(x) = -2 < 0 confirms a maximum. This reinforces the Calculus final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {

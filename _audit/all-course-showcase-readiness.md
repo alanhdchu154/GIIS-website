@@ -1,10 +1,8 @@
 # All-Course Showcase Readiness QA
 
-Generated: 2026-06-02T03:12:09.482Z
+Generated: 2026-06-04T19:21:35.669Z
 
 Summary: 93 pass / 0 warn / 0 fail (93 courses)
-Non-YouTube URL smoke: 1398 checked / 0 bad.
-YouTube oEmbed smoke: 282 checked / 0 bad.
 
 | Course | Department | Modules | Quiz | Midterm | Final | Status |
 | --- | --- | ---: | ---: | ---: | ---: | --- |

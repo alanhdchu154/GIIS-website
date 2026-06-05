@@ -195,7 +195,7 @@
         "Delete all previous versions of a document"
       ],
       "answer": "Version History",
-      "explanation": "The best answer is Version History. This checks the course concept directly.",
+      "explanation": "The best answer is Version History. This reinforces the Business Technology & Digital Literacy midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -210,7 +210,7 @@
         "=COUNT(A1:A10)"
       ],
       "answer": "=SUM(A1:A10)",
-      "explanation": "=SUM(A1:A10) adds all numeric values in the range A1 through A10.",
+      "explanation": "=SUM(A1:A10) adds all numeric values in the range A1 through A10. It connects the correct answer to Business Technology & Digital Literacy midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -250,7 +250,7 @@
         "Cloud storage does not require an internet connection"
       ],
       "answer": "Files stored on remote servers and accessed through the internet",
-      "explanation": "The best answer is Files stored on remote servers and accessed through the internet. This checks the course concept directly.",
+      "explanation": "The best answer is Files stored on remote servers and accessed through the internet.",
       "points": 1
     },
     {
@@ -358,7 +358,7 @@
         "A cell reference that stays fixed regardless of where the formula is copied"
       ],
       "answer": "CPU",
-      "explanation": "The best answer is CPU. This checks the course concept directly.",
+      "explanation": "The best answer is CPU. The choice fits the prompt because it applies the central rule or concept from Business Technology & Digital Literacy final concepts.",
       "points": 1
     },
     {
@@ -418,7 +418,7 @@
         "Row B, Column 3"
       ],
       "answer": "Look up a value in a column and return a related value from the same row",
-      "explanation": "The best answer is Look up a value in a column and return a related value from the same row. This checks the course concept directly.",
+      "explanation": "The best answer is Look up a value in a column and return a related value from the same row.",
       "points": 1
     },
     {
@@ -473,7 +473,7 @@
         "To display the data and conclusions"
       ],
       "answer": "Stop, Investigate the source, Find better coverage, and Trace claims to the original source",
-      "explanation": "The best answer is Stop, Investigate the source, Find better coverage, and Trace claims to the original source. This checks the course concept directly.",
+      "explanation": "The best answer is Stop, Investigate the source, Find better coverage, and Trace claims to the original source.",
       "points": 1
     },
     {
@@ -533,7 +533,7 @@
         "Hi"
       ],
       "answer": "To Do, In Progress, Done",
-      "explanation": "The best answer is To Do, In Progress, Done. This checks the course concept directly.",
+      "explanation": "The best answer is To Do, In Progress, Done. This reinforces the Business Technology & Digital Literacy final concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -593,14 +593,14 @@
         "To show the references and sources used"
       ],
       "answer": "Summarize and analyze data by categories or fields",
-      "explanation": "The best answer is Summarize and analyze data by categories or fields. This checks the course concept directly.",
+      "explanation": "The best answer is Summarize and analyze data by categories or fields. The choice fits the prompt because it applies the central rule or concept from Business Technology & Digital Literacy final concepts.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 18,
       "type": "mc",
-      "question": "The gig economy refers to:",
+      "question": "In Business Technology & Digital Literacy final concepts, The gig economy refers to:",
       "options": [
         "Full-time employment at large corporations",
         "A market of short-term, freelance, or contract-based work enabled by digital platforms",
@@ -650,7 +650,7 @@
     {
       "moduleOrder": 1,
       "order": 2,
-      "question": "What does RAM stand for?",
+      "question": "In Digital Literacy Foundations, what does RAM stand for?",
       "options": [
         "Remote Access Memory",
         "Read-Only Access Module",
@@ -816,7 +816,7 @@
         "Finds the largest value in A1:A10"
       ],
       "answer": "Counts the number of cells in A1:A10 that contain numbers",
-      "explanation": "=COUNT counts only cells with numeric data in the specified range.",
+      "explanation": "=COUNT counts only cells with numeric data in the specified range. This reinforces the Spreadsheets: Basics idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {

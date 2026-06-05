@@ -245,7 +245,7 @@
         "3pi/2"
       ],
       "answer": "pi",
-      "explanation": "180 degrees = pi radians is the fundamental degree-radian conversion.",
+      "explanation": "180 degrees = pi radians is the fundamental degree-radian conversion. Students need to recognize why pi matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -259,7 +259,7 @@
         "(0, 1)"
       ],
       "answer": "(1/2, sqrt(3)/2)",
-      "explanation": "At 60 degrees, x = cos(60) = 1/2 and y = sin(60) = sqrt(3)/2.",
+      "explanation": "At 60 degrees, x = cos(60) = 1/2 and y = sin(60) = sqrt(3)/2. The reasoning points back to the procedure used in The Unit Circle, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -273,7 +273,7 @@
         "2pi"
       ],
       "answer": "3pi/2",
-      "explanation": "270 * (pi/180) = 270pi/180 = 3pi/2.",
+      "explanation": "270 * (pi/180) = 270pi/180 = 3pi/2. The choice fits the prompt because it applies the central rule or concept from The Unit Circle.",
       "points": 1
     },
     {
@@ -287,7 +287,7 @@
         "3pi"
       ],
       "answer": "pi",
-      "explanation": "A half turn is 180 degrees, which equals pi radians.",
+      "explanation": "A half turn is 180 degrees, which equals pi radians. It highlights the operation, property, or model that makes the answer work in The Unit Circle.",
       "points": 1
     },
     {
@@ -302,7 +302,7 @@
     {
       "moduleOrder": 2,
       "order": 1,
-      "question": "What is sin(pi/6)?",
+      "question": "In Trigonometric Functions, what is sin(pi/6)?",
       "options": [
         "sqrt(3)/2",
         "1/2",
@@ -310,7 +310,7 @@
         "1"
       ],
       "answer": "1/2",
-      "explanation": "sin(30 degrees) = sin(pi/6) = 1/2 from the unit circle.",
+      "explanation": "sin(30 degrees) = sin(pi/6) = 1/2 from the unit circle. It highlights the operation, property, or model that makes the answer work in Trigonometric Functions.",
       "points": 1
     },
     {
@@ -330,7 +330,7 @@
     {
       "moduleOrder": 2,
       "order": 3,
-      "question": "What is cos(pi)?",
+      "question": "In Trigonometric Functions, what is cos(pi)?",
       "options": [
         "0",
         "1",
@@ -364,7 +364,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. 1/2 is correct.",
+      "explanation": "True. 1/2 is correct. The reasoning points back to the procedure used in Trigonometric Functions, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -378,7 +378,7 @@
         "4pi"
       ],
       "answer": "pi",
-      "explanation": "The period of y = sin(Bx) is 2pi/B = 2pi/2 = pi.",
+      "explanation": "The period of y = sin(Bx) is 2pi/B = 2pi/2 = pi. This reinforces the Graphs of Trigonometric Functions idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -392,7 +392,7 @@
         "9"
       ],
       "answer": "3",
-      "explanation": "Amplitude is |A| = |-3| = 3. Amplitude is always positive.",
+      "explanation": "Amplitude is |A| = |-3| = 3. Amplitude is always positive. It connects the correct answer to Graphs of Trigonometric Functions and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -406,7 +406,7 @@
         "pi/4 upward"
       ],
       "answer": "pi/4 to the right",
-      "explanation": "y = sin(x - C) shifts the graph C units to the right. Here C = pi/4.",
+      "explanation": "y = sin(x - C) shifts the graph C units to the right. Here C = pi/4. Students need to recognize why pi/4 to the right matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -418,7 +418,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. pi is correct.",
+      "explanation": "True. pi is correct. The reasoning points back to the procedure used in Graphs of Trigonometric Functions, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -430,7 +430,7 @@
         "False"
       ],
       "answer": "False",
-      "explanation": "False. The correct answer is: 3.",
+      "explanation": "False. The correct answer is: 3. It highlights the operation, property, or model that makes the answer work in Graphs of Trigonometric Functions.",
       "points": 1
     },
     {
@@ -472,7 +472,7 @@
         "1/sin"
       ],
       "answer": "sin/cos",
-      "explanation": "By the quotient identity, tan(theta) = sin(theta) / cos(theta).",
+      "explanation": "By the quotient identity, tan(theta) = sin(theta) / cos(theta). Students need to recognize why sin/cos matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -486,7 +486,7 @@
         "cos^2(theta)"
       ],
       "answer": "sec^2(theta)",
-      "explanation": "Dividing sin^2 + cos^2 = 1 by cos^2 gives tan^2 + 1 = sec^2.",
+      "explanation": "Dividing sin^2 + cos^2 = 1 by cos^2 gives tan^2 + 1 = sec^2. It highlights the operation, property, or model that makes the answer work in Trigonometric Identities.",
       "points": 1
     },
     {
@@ -510,7 +510,7 @@
     {
       "moduleOrder": 5,
       "order": 1,
-      "question": "What is sin(A + B)?",
+      "question": "In Sum & Difference Formulas, what is sin(A + B)?",
       "options": [
         "sinA cosB - cosA sinB",
         "sinA cosB + cosA sinB",
@@ -518,7 +518,7 @@
         "cosA cosB + sinA sinB"
       ],
       "answer": "sinA cosB + cosA sinB",
-      "explanation": "The sum formula for sine is sin(A + B) = sinA cosB + cosA sinB.",
+      "explanation": "The sum formula for sine is sin(A + B) = sinA cosB + cosA sinB. It connects the correct answer to Sum & Difference Formulas and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -538,7 +538,7 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "What is cos(A - B)?",
+      "question": "In Sum & Difference Formulas, what is cos(A - B)?",
       "options": [
         "cosA cosB - sinA sinB",
         "cosA cosB + sinA sinB",
@@ -546,7 +546,7 @@
         "sinA cosB + cosA sinB"
       ],
       "answer": "cosA cosB + sinA sinB",
-      "explanation": "The difference formula for cosine is cos(A - B) = cosA cosB + sinA sinB.",
+      "explanation": "The difference formula for cosine is cos(A - B) = cosA cosB + sinA sinB. Students need to recognize why cosA cosB + sinA sinB matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -566,7 +566,7 @@
     {
       "moduleOrder": 5,
       "order": 5,
-      "question": "What is tan(A + B)?",
+      "question": "In Sum & Difference Formulas, what is tan(A + B)?",
       "options": [
         "(tanA + tanB)/(1 + tanA tanB)",
         "(tanA + tanB)/(1 - tanA tanB)",
@@ -574,7 +574,7 @@
         "tanA tanB - 1"
       ],
       "answer": "(tanA + tanB)/(1 - tanA tanB)",
-      "explanation": "The sum formula for tangent is tan(A + B) = (tanA + tanB)/(1 - tanA tanB).",
+      "explanation": "The sum formula for tangent is tan(A + B) = (tanA + tanB)/(1 - tanA tanB). The reasoning points back to the procedure used in Sum & Difference Formulas, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -586,7 +586,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. sinA cosB + cosA sinB is correct.",
+      "explanation": "True. sinA cosB + cosA sinB is correct. Students need to recognize why True matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -600,7 +600,7 @@
         "2cos^2 - 1"
       ],
       "answer": "2*sin*cos",
-      "explanation": "The double-angle formula: sin(2theta) = 2*sin(theta)*cos(theta).",
+      "explanation": "The double-angle formula: sin(2theta) = 2*sin(theta)*cos(theta). This reinforces the Double-Angle & Half-Angle Formulas idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -628,7 +628,7 @@
         "12/25"
       ],
       "answer": "24/25",
-      "explanation": "cos(theta) = 4/5 (QI). sin(2theta) = 2*(3/5)*(4/5) = 24/25.",
+      "explanation": "cos(theta) = 4/5 (QI). sin(2theta) = 2*(3/5)*(4/5) = 24/25. It highlights the operation, property, or model that makes the answer work in Double-Angle & Half-Angle Formulas.",
       "points": 1
     },
     {
@@ -640,7 +640,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. 2*sin*cos is correct.",
+      "explanation": "True. 2*sin*cos is correct. The choice fits the prompt because it applies the central rule or concept from Double-Angle & Half-Angle Formulas.",
       "points": 1
     },
     {
@@ -678,7 +678,7 @@
     {
       "moduleOrder": 7,
       "order": 2,
-      "question": "Evaluate arccos(-1).",
+      "question": "In Inverse Trigonometric Functions, Evaluate arccos(-1).",
       "options": [
         "0",
         "pi/2",
@@ -712,7 +712,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. [-pi/2, pi/2] is correct.",
+      "explanation": "True. [-pi/2, pi/2] is correct. The choice fits the prompt because it applies the central rule or concept from Inverse Trigonometric Functions.",
       "points": 1
     },
     {
@@ -749,7 +749,7 @@
         "10/sqrt(3) m"
       ],
       "answer": "5*sqrt(3) m",
-      "explanation": "Height = 10 * sin(60) = 10 * (sqrt(3)/2) = 5*sqrt(3) meters.",
+      "explanation": "Height = 10 * sin(60) = 10 * (sqrt(3)/2) = 5*sqrt(3) meters. The choice fits the prompt because it applies the central rule or concept from Right Triangle Trigonometry.",
       "points": 1
     },
     {
@@ -763,7 +763,7 @@
         "13/5"
       ],
       "answer": "5/13",
-      "explanation": "sin(theta) = opposite/hypotenuse = 5/13.",
+      "explanation": "sin(theta) = opposite/hypotenuse = 5/13. It highlights the operation, property, or model that makes the answer work in Right Triangle Trigonometry.",
       "points": 1
     },
     {
@@ -777,7 +777,7 @@
         "90 degrees"
       ],
       "answer": "45 degrees",
-      "explanation": "tan(theta) = 100/100 = 1, so theta = arctan(1) = 45 degrees.",
+      "explanation": "tan(theta) = 100/100 = 1, so theta = arctan(1) = 45 degrees. It highlights the operation, property, or model that makes the answer work in Right Triangle Trigonometry.",
       "points": 1
     },
     {
@@ -791,13 +791,13 @@
         "tan(theta) = opposite / adjacent"
       ],
       "answer": "sin(theta) = opposite / hypotenuse",
-      "explanation": "SOH means sine equals opposite divided by hypotenuse.",
+      "explanation": "SOH means sine equals opposite divided by hypotenuse. Students need to recognize why sin(theta) = opposite / hypotenuse matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 1,
-      "question": "State the Law of Sines.",
+      "question": "In Law of Sines, State the Law of Sines.",
       "options": [
         "a/sinA = b/sinB = c/sinC",
         "a^2 = b^2 + c^2 - 2bc*cosA",
@@ -861,7 +861,7 @@
         "15.0"
       ],
       "answer": "14.4",
-      "explanation": "By the Law of Sines, b/sin(75) = 10/sin(40), so b is approximately 14.4.",
+      "explanation": "By the Law of Sines, b/sin(75) = 10/sin(40), so b is approximately 14.4. The choice fits the prompt because it applies the central rule or concept from Law of Sines.",
       "points": 1
     },
     {
@@ -940,7 +940,7 @@
         "(-3, 0)"
       ],
       "answer": "(0, 3)",
-      "explanation": "x = 3*cos(pi/2) = 0; y = 3*sin(pi/2) = 3. So the point is (0, 3).",
+      "explanation": "x = 3*cos(pi/2) = 0; y = 3*sin(pi/2) = 3. So the point is (0, 3). Students need to recognize why (0, 3) matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -954,7 +954,7 @@
         "(3*sqrt(2), 5pi/4)"
       ],
       "answer": "(3*sqrt(2), 3pi/4)",
-      "explanation": "r = sqrt(9+9) = 3*sqrt(2). The point is in QII so theta = 3pi/4.",
+      "explanation": "r = sqrt(9+9) = 3*sqrt(2). The point is in QII so theta = 3pi/4. It connects the correct answer to Polar Coordinates and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -968,7 +968,7 @@
         "A rose curve"
       ],
       "answer": "A circle of radius 4 centered at the origin",
-      "explanation": "r = constant is a circle centered at the pole with the given radius.",
+      "explanation": "r = constant is a circle centered at the pole with the given radius. This reinforces the Polar Coordinates idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1010,7 +1010,7 @@
         "(-3, 0)"
       ],
       "answer": "(0, 3)",
-      "explanation": "At angle pi/2, x = 3cos(pi/2) = 0 and y = 3sin(pi/2) = 3.",
+      "explanation": "At angle pi/2, x = 3cos(pi/2) = 0 and y = 3sin(pi/2) = 3. This reinforces the Polar Coordinates idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1024,7 +1024,7 @@
         "sqrt(7)"
       ],
       "answer": "5",
-      "explanation": "|v| = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5.",
+      "explanation": "|v| = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5. It connects the correct answer to Vectors and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1038,7 +1038,7 @@
         "-5"
       ],
       "answer": "5",
-      "explanation": "<2,3> dot <4,-1> = 2*4 + 3*(-1) = 8 - 3 = 5.",
+      "explanation": "<2,3> dot <4,-1> = 2*4 + 3*(-1) = 8 - 3 = 5. It highlights the operation, property, or model that makes the answer work in Vectors.",
       "points": 1
     },
     {
@@ -1064,7 +1064,7 @@
         "False"
       ],
       "answer": "True",
-      "explanation": "True. 5 is correct.",
+      "explanation": "True. 5 is correct. Students need to recognize why True matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1088,7 +1088,7 @@
     {
       "moduleOrder": 13,
       "order": 1,
-      "question": "Write 1 + i in polar form.",
+      "question": "In Complex Numbers in Trigonometric Form, Write 1 + i in polar form.",
       "options": [
         "sqrt(2)*(cos(pi/4) + i*sin(pi/4))",
         "2*(cos(pi/4) + i*sin(pi/4))",
@@ -1096,7 +1096,7 @@
         "sqrt(2)*(cos(pi/3) + i*sin(pi/3))"
       ],
       "answer": "sqrt(2)*(cos(pi/4) + i*sin(pi/4))",
-      "explanation": "|1+i| = sqrt(2), arg(1+i) = arctan(1) = pi/4. So 1+i = sqrt(2)*cis(pi/4).",
+      "explanation": "|1+i| = sqrt(2), arg(1+i) = arctan(1) = pi/4. So 1+i = sqrt(2)*cis(pi/4). Students need to recognize why sqrt(2)*(cos(pi/4) + i*sin(pi/4)) matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1110,7 +1110,7 @@
         "r^n*(cos(theta/n) + i*sin(theta/n))"
       ],
       "answer": "r^n*(cos(n*theta) + i*sin(n*theta))",
-      "explanation": "De Moivre's Theorem: [r*cis(theta)]^n = r^n * cis(n*theta).",
+      "explanation": "De Moivre's Theorem: [r*cis(theta)]^n = r^n * cis(n*theta). The choice fits the prompt because it applies the central rule or concept from Complex Numbers in Trigonometric Form.",
       "points": 1
     },
     {
@@ -1138,7 +1138,7 @@
         "sqrt(2)*(cos(pi/2) + i*sin(pi/2))"
       ],
       "answer": "sqrt(2)*(cos(pi/4) + i*sin(pi/4))",
-      "explanation": "The modulus is sqrt(1^2 + 1^2) = sqrt(2), and the argument is pi/4.",
+      "explanation": "The modulus is sqrt(1^2 + 1^2) = sqrt(2), and the argument is pi/4. The choice fits the prompt because it applies the central rule or concept from Complex Numbers in Trigonometric Form.",
       "points": 1
     },
     {
@@ -1161,7 +1161,7 @@
         "30"
       ],
       "answer": "20",
-      "explanation": "Amplitude = radius = diameter/2 = 40/2 = 20 meters.",
+      "explanation": "Amplitude = radius = diameter/2 = 40/2 = 20 meters. It connects the correct answer to Applications of Trigonometry and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1189,7 +1189,7 @@
         "880 s"
       ],
       "answer": "1/440 s",
-      "explanation": "Period T = 1/frequency = 1/440 seconds.",
+      "explanation": "Period T = 1/frequency = 1/440 seconds. This reinforces the Applications of Trigonometry idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1234,7 +1234,7 @@
         "300 degrees"
       ],
       "answer": "150 degrees",
-      "explanation": "5pi/6 * (180/pi) = 5 * 30 = 150 degrees.",
+      "explanation": "5pi/6 * (180/pi) = 5 * 30 = 150 degrees. It connects the correct answer to Trigonometry midterm concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1264,7 +1264,7 @@
         "6pi"
       ],
       "answer": "4pi",
-      "explanation": "Period = 2pi/B = 2pi/(1/2) = 4pi.",
+      "explanation": "Period = 2pi/B = 2pi/(1/2) = 4pi. The choice fits the prompt because it applies the central rule or concept from Trigonometry midterm concepts.",
       "points": 1
     },
     {
@@ -1334,7 +1334,7 @@
         "2pi/3"
       ],
       "answer": "-pi/3",
-      "explanation": "arcsin returns values in [-pi/2, pi/2], and sin(-pi/3) = -sqrt(3)/2.",
+      "explanation": "arcsin returns values in [-pi/2, pi/2], and sin(-pi/3) = -sqrt(3)/2. It highlights the operation, property, or model that makes the answer work in Trigonometry midterm concepts.",
       "points": 1
     },
     {
@@ -1349,7 +1349,7 @@
         "24/7"
       ],
       "answer": "7/25",
-      "explanation": "Hypotenuse = sqrt(49 + 576) = sqrt(625) = 25. sin(theta) = 7/25.",
+      "explanation": "Hypotenuse = sqrt(49 + 576) = sqrt(625) = 25. sin(theta) = 7/25. Students need to recognize why 7/25 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1364,7 +1364,7 @@
         "-1"
       ],
       "answer": "1",
-      "explanation": "From 1 + cot^2 = csc^2, we get csc^2 - cot^2 = 1.",
+      "explanation": "From 1 + cot^2 = csc^2, we get csc^2 - cot^2 = 1. It highlights the operation, property, or model that makes the answer work in Trigonometry midterm concepts.",
       "points": 1
     },
     {
@@ -1379,7 +1379,7 @@
         "24/25"
       ],
       "answer": "119/169",
-      "explanation": "cos(2theta) = 1 - 2sin^2 = 1 - 2*(25/169) = 1 - 50/169 = 119/169.",
+      "explanation": "cos(2theta) = 1 - 2sin^2 = 1 - 2*(25/169) = 1 - 50/169 = 119/169. It highlights the operation, property, or model that makes the answer work in Trigonometry midterm concepts.",
       "points": 1
     },
     {
@@ -1394,7 +1394,7 @@
         "22.4"
       ],
       "answer": "18.9",
-      "explanation": "b = 12sin(65)/sin(35), which is approximately 18.9.",
+      "explanation": "b = 12sin(65)/sin(35), which is approximately 18.9. Students need to recognize why 18.9 matches the evidence in the question and why nearby options do not.",
       "points": 1
     },
     {
@@ -1409,7 +1409,7 @@
         "x = 2pi"
       ],
       "answer": "x = 0",
-      "explanation": "sin(0) = 0, so x = 0 is the x-intercept at the origin.",
+      "explanation": "sin(0) = 0, so x = 0 is the x-intercept at the origin. This reinforces the Trigonometry midterm concepts idea behind the item instead of rewarding a surface-level guess.",
       "points": 1
     },
     {
@@ -1476,7 +1476,7 @@
       "examType": "final",
       "order": 3,
       "type": "mc",
-      "question": "What is <2, 5> + <-3, 1>?",
+      "question": "In Trigonometry final concepts, what is <2, 5> + <-3, 1>?",
       "options": [
         "<1, 6>",
         "<-1, 6>",
@@ -1484,7 +1484,7 @@
         "<-1, 4>"
       ],
       "answer": "<-1, 6>",
-      "explanation": "<2+(-3), 5+1> = <-1, 6>.",
+      "explanation": "<2+(-3), 5+1> = <-1, 6>. The choice fits the prompt because it applies the central rule or concept from Trigonometry final concepts.",
       "points": 1
     },
     {
@@ -1499,7 +1499,7 @@
         "-8"
       ],
       "answer": "8i",
-      "explanation": "sqrt(3)+i = 2*cis(pi/6). Cubed: 2^3 * cis(3*pi/6) = 8*cis(pi/2) = 8i.",
+      "explanation": "sqrt(3)+i = 2*cis(pi/6). Cubed: 2^3 * cis(3*pi/6) = 8*cis(pi/2) = 8i. The reasoning points back to the procedure used in Trigonometry final concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1539,7 +1539,7 @@
         "x = pi/3 and 2pi/3"
       ],
       "answer": "x = pi/6 and 5pi/6",
-      "explanation": "sin(x) = 1/2. Solutions in [0, 2pi) are x = pi/6 and x = 5pi/6.",
+      "explanation": "sin(x) = 1/2. Solutions in [0, 2pi) are x = pi/6 and x = 5pi/6. The reasoning points back to the procedure used in Trigonometry final concepts, which helps students check the calculation rather than guess from the options.",
       "points": 1
     },
     {
@@ -1606,7 +1606,7 @@
       "examType": "final",
       "order": 12,
       "type": "mc",
-      "question": "What is arctan(-1)?",
+      "question": "In Trigonometry final concepts, what is arctan(-1)?",
       "options": [
         "-pi/4",
         "3pi/4",
@@ -1614,7 +1614,7 @@
         "-3pi/4"
       ],
       "answer": "-pi/4",
-      "explanation": "arctan(-1) = -pi/4 because tan(-pi/4) = -1 and -pi/4 is in (-pi/2, pi/2).",
+      "explanation": "arctan(-1) = -pi/4 because tan(-pi/4) = -1 and -pi/4 is in (-pi/2, pi/2). The choice fits the prompt because it applies the central rule or concept from Trigonometry final concepts.",
       "points": 1
     },
     {
@@ -1644,7 +1644,7 @@
         "12*sqrt(3)"
       ],
       "answer": "12",
-      "explanation": "Area = (1/2)*a*b*sin(C) = (1/2)*6*8*sin(30) = 24*(1/2) = 12.",
+      "explanation": "Area = (1/2)*a*b*sin(C) = (1/2)*6*8*sin(30) = 24*(1/2) = 12. The choice fits the prompt because it applies the central rule or concept from Trigonometry final concepts.",
       "points": 1
     },
     {
@@ -1659,7 +1659,7 @@
         "90 degrees"
       ],
       "answer": "45 degrees",
-      "explanation": "tan(theta) = 50/50 = 1, so theta = arctan(1) = 45 degrees.",
+      "explanation": "tan(theta) = 50/50 = 1, so theta = arctan(1) = 45 degrees. It connects the correct answer to Trigonometry final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
@@ -1674,7 +1674,7 @@
         "<0, 3>"
       ],
       "answer": "<4, 0>",
-      "explanation": "Projection of v onto u = (v dot u / |u|^2)*u = (4/1)*<1,0> = <4, 0>.",
+      "explanation": "Projection of v onto u = (v dot u / |u|^2)*u = (4/1)*<1,0> = <4, 0>. It highlights the operation, property, or model that makes the answer work in Trigonometry final concepts.",
       "points": 1
     },
     {
@@ -1689,7 +1689,7 @@
         "pi to the left"
       ],
       "answer": "pi/2 to the left",
-      "explanation": "cos(x) = sin(x + pi/2), so the sine graph is shifted pi/2 units left.",
+      "explanation": "cos(x) = sin(x + pi/2), so the sine graph is shifted pi/2 units left. It connects the correct answer to Trigonometry final concepts and separates it from plausible distractors.",
       "points": 1
     },
     {
