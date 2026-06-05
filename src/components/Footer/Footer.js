@@ -17,20 +17,27 @@ const NAV_COLS = [
     ],
   },
   {
-    titleEn: 'School',
-    titleZh: '学校',
+    titleEn: 'For Parents',
+    titleZh: '家长专区',
+    links: [
+      { en: 'Trust Center', zh: '信任中心', to: '/trust-center' },
+      { en: 'Assessment Proof', zh: '评量证据', to: '/assessment-proof' },
+      { en: 'Parent Dashboard Preview', zh: '家长面板预览', to: '/parent/demo' },
+      { en: 'Academic & Life Support', zh: '学业与生活支持', to: '/support' },
+      { en: 'Student Handbook', zh: '学生手册', to: '/handbook' },
+      { en: 'Academic Calendar', zh: '学校日历', to: '/calendar' },
+    ],
+  },
+  {
+    titleEn: 'School & Admission',
+    titleZh: '学校与招生',
     links: [
       { en: 'About & Leadership', zh: '关于我们', to: '/about' },
-      { en: 'Trust Center', zh: '信任中心', to: '/trust-center' },
       { en: 'School Profile (PDF)', zh: '学校简介 (PDF)', to: '/school-profile' },
-      { en: 'Student Handbook', zh: '学生手册', to: '/handbook' },
+      { en: 'Discovery', zh: '了解我们', to: '/discovery' },
       { en: 'Admission', zh: '招生', to: '/admission' },
       { en: 'Transfer Students', zh: '转学生入学', to: '/transfer-students' },
       { en: 'Tuition & Pricing', zh: '学费', to: '/pricing' },
-      { en: 'Assessment Proof', zh: '评量证据', to: '/assessment-proof' },
-      { en: 'Parent Dashboard Preview', zh: '家长面板预览', to: '/parent/demo' },
-      { en: 'Discovery', zh: '了解我们', to: '/discovery' },
-      { en: 'Support', zh: '支持', to: '/support' },
     ],
   },
   {
@@ -56,7 +63,7 @@ function Footer({ language }) {
       {/* Main grid */}
       <div style={{
         maxWidth: '1100px', margin: '0 auto', padding: '64px 10% 48px',
-        display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '40px',
+        display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr 1fr 1fr', gap: '36px',
       }}>
         {/* Brand column */}
         <div>

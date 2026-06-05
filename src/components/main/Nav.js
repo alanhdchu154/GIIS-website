@@ -41,6 +41,7 @@ function Nav({ language, toggleLanguage }) {
     const isEn = language !== 'zh';
     const [isNavSticky, setIsNavSticky] = useState(false);
     const [isCollapsed, setIsCollapsed] = useState(true);
+    const [openSection, setOpenSection] = useState(null);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
     const navigate = useNavigate();
 
@@ -100,17 +101,25 @@ function Nav({ language, toggleLanguage }) {
                     <>
                         <div className={`collapse navbar-collapse ${!isCollapsed ? 'show' : ''} ${styles.mobileMenu}`}>
                             <ul className={styles.mobileItems}>
-                                {mobileSections.map(sec => (
-                                    <React.Fragment key={sec.header}>
-                                        <li className={styles.mobileSectionHead}>{sec.header}</li>
-                                        {sec.items.map(item => (
-                                            <li key={`${item.to}-${item.label}`} className={styles.mobileSubItem}
-                                                onClick={() => go(item.to)}>
-                                                <Link to={item.to} onClick={e => e.preventDefault()}>{item.label}</Link>
+                                {mobileSections.map(sec => {
+                                    const open = openSection === sec.header;
+                                    return (
+                                        <React.Fragment key={sec.header}>
+                                            <li className={styles.mobileSectionHead}
+                                                onClick={() => setOpenSection(open ? null : sec.header)}
+                                                aria-expanded={open}>
+                                                {sec.header}
+                                                <span className={styles.mobileChevron} style={{ transform: open ? 'rotate(180deg)' : 'none' }}>⌄</span>
                                             </li>
-                                        ))}
-                                    </React.Fragment>
-                                ))}
+                                            {open && sec.items.map(item => (
+                                                <li key={`${item.to}-${item.label}`} className={styles.mobileSubItem}
+                                                    onClick={() => go(item.to)}>
+                                                    <Link to={item.to} onClick={e => e.preventDefault()}>{item.label}</Link>
+                                                </li>
+                                            ))}
+                                        </React.Fragment>
+                                    );
+                                })}
                             </ul>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>

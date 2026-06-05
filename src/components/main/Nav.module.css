@@ -265,25 +265,34 @@ html[lang="zh"] .mobileItems li {
 }
 
 .mobileSectionHead {
-    padding: 14px 24px 6px !important;
-    font-size: 12px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px !important;
+    font-size: 13px !important;
     font-weight: 800 !important;
     letter-spacing: 1.2px;
     text-transform: uppercase;
-    color: #8a90a2 !important;
-    border-bottom: none !important;
-    cursor: default !important;
+    color: #4a5168 !important;
     background: #fafbfc;
+    cursor: pointer !important;
 }
 
 html[lang="zh"] .mobileSectionHead {
-    font-size: 13px !important;
+    font-size: 15px !important;
     letter-spacing: 2px;
 }
 
 .mobileSectionHead:hover {
-    color: #8a90a2 !important;
-    background: #fafbfc !important;
+    color: rgba(43, 61, 109, 1) !important;
+    background: #f0f2f8 !important;
+}
+
+.mobileChevron {
+    font-size: 16px;
+    line-height: 1;
+    color: #9aa0b2;
+    transition: transform 0.18s ease;
 }
 
 .mobileSubItem {
