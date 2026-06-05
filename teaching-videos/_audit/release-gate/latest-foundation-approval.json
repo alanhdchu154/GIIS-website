@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T12:38:45Z",
+  "generated_at": "2026-06-05T12:30:56Z",
   "policy": "foundation_daily_auto_approval_clean_pass_score_100",
   "approved_ready_to_upload": [
     {
@@ -157,6 +157,28 @@
       "approved_at": "2026-06-02T12:14:19Z"
     },
     {
+      "slug": "english-i-module-10-novel-study-character-theme-v2",
+      "path": "teaching-videos/english-i-module-10-novel-study-character-theme-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 10: Novel Study: Character & Theme",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-05T12:21:23Z"
+    },
+    {
+      "slug": "english-i-module-11-argumentative-writing-evidence-v2",
+      "path": "teaching-videos/english-i-module-11-argumentative-writing-evidence-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 11: Argumentative Writing & Evidence",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-05T12:30:56Z"
+    },
+    {
       "slug": "english-i-module-3-sentence-structure-syntax-v2",
       "path": "teaching-videos/english-i-module-3-sentence-structure-syntax-v2",
       "course": "English I",
@@ -221,6 +243,17 @@
       "verdict": "pass",
       "approved_by": "foundation_daily_orchestrator",
       "approved_at": "2026-06-04T12:38:45Z"
+    },
+    {
+      "slug": "english-i-module-9-drama-theater-texts-v2",
+      "path": "teaching-videos/english-i-module-9-drama-theater-texts-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 9: Drama & Theater Texts",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-05T12:12:17Z"
     }
   ]
 }

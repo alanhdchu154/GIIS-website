@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T12:01:56Z",
+  "generated_at": "2026-06-05T12:02:40Z",
   "policy": "g9_course_design_gate_v2",
   "status": "pass",
   "target_grade": 9,
@@ -11,7 +11,7 @@
     "gradeLevel": 9,
     "module_count": 13,
     "source": "server/prisma/courses/english/english-i.json",
-    "source_sha256": "c529baa00ce600f615c458711b21852ca477f8fc2940a17bd6fd1cc5c5e6e1dc"
+    "source_sha256": "b30f6006008ae8df99615b149f9c18e1f9faca78f7e4907fb9c5f4bb71224979"
   },
   "decision": "course design is reasonable for video-series production",
   "errors": [],
