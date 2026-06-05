@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-04
+Last updated: 2026-06-05
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -223,6 +223,22 @@ Status: maintain.
   `public/data/lessons-manifest.json` instead of a hardcoded YouTube ID.
 - Student Coordination System Phase 0-3 is implemented locally; production
   deploy should still be treated as a separate deployment decision.
+- Parent results-loop verified end-to-end on 2026-06-05: a temporary marked
+  test student exercised the real `/api/parent/me` path (not the
+  `/parent/demo` mock) against the local DB. Real `ModuleProgress` drove the
+  weekly insights (2 modules completed / 7.5 study hours / pacing on-track),
+  an assigned advisor + next check-in showed, a `parent_safe` advisor note
+  rendered, and the matching internal note was correctly withheld (privacy
+  boundary intact). The production backend is confirmed live
+  (`/api/parent/me` returns 401, `/api/courses` returns 200). The test
+  student was deleted and verified gone; no test data or scripts were
+  committed. Conclusion: the retention/care loop is real, deployed software —
+  the remaining gap is operational data, not functionality. Seeds currently
+  populate 0 `ModuleProgress` / `StudentCareLog` / `StudentCareState`, so a
+  real (graduated) student's dashboard shows transcript/credits but empty
+  weekly activity and no advisor note until actively-enrolled students
+  generate progress and advisors write parent-safe notes via
+  `AdminProgressPage`.
 - Parent-safe reassurance layer added to public/demo surfaces on 2026-06-04:
   Parent Demo, Welcome, Pricing, and Trust Center now show the Phase 5
   expectation for weekly parent summaries, advisor-approved notes,
