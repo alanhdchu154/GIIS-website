@@ -284,6 +284,45 @@
         "quality_score": 100
       },
       "attempts": 1
+    },
+    "english-i:M12": {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_order": 12,
+      "module_title": "Expository & Informational Writing",
+      "target_slug": "english-i-module-12-expository-informational-writing-v2",
+      "status": "approved",
+      "updated_at": "2026-06-06T12:13:46Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "english-i:M13": {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_order": 13,
+      "module_title": "Research Skills & MLA Basics",
+      "target_slug": "english-i-module-13-research-skills-mla-basics-v2",
+      "status": "approved",
+      "updated_at": "2026-06-06T12:23:07Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
+    },
+    "biology:M2": {
+      "course": "Biology",
+      "course_slug": "biology",
+      "module_order": 2,
+      "module_title": "Cell Structure & Function",
+      "target_slug": "biology-module-2-cell-structure-function-v2",
+      "status": "approved",
+      "updated_at": "2026-06-06T12:32:34Z",
+      "details": {
+        "quality_score": 100
+      },
+      "attempts": 1
     }
   }
 }

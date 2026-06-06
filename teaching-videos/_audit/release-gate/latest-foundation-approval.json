@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T12:30:56Z",
+  "generated_at": "2026-06-06T12:32:34Z",
   "policy": "foundation_daily_auto_approval_clean_pass_score_100",
   "approved_ready_to_upload": [
     {
@@ -146,6 +146,17 @@
       "approved_at": "2026-06-01T04:12:21Z"
     },
     {
+      "slug": "biology-module-2-cell-structure-function-v2",
+      "path": "teaching-videos/biology-module-2-cell-structure-function-v2",
+      "course": "Biology",
+      "course_slug": "biology",
+      "module": "Module 2: Cell Structure & Function",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-06T12:32:34Z"
+    },
+    {
       "slug": "english-i-module-1-reading-comprehension-strategies-v2",
       "path": "teaching-videos/english-i-module-1-reading-comprehension-strategies-v2",
       "course": "English I",
@@ -177,6 +188,28 @@
       "verdict": "pass",
       "approved_by": "foundation_daily_orchestrator",
       "approved_at": "2026-06-05T12:30:56Z"
+    },
+    {
+      "slug": "english-i-module-12-expository-informational-writing-v2",
+      "path": "teaching-videos/english-i-module-12-expository-informational-writing-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 12: Expository & Informational Writing",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-06T12:13:46Z"
+    },
+    {
+      "slug": "english-i-module-13-research-skills-mla-basics-v2",
+      "path": "teaching-videos/english-i-module-13-research-skills-mla-basics-v2",
+      "course": "English I",
+      "course_slug": "english-i",
+      "module": "Module 13: Research Skills & MLA Basics",
+      "quality_score": 100,
+      "verdict": "pass",
+      "approved_by": "foundation_daily_orchestrator",
+      "approved_at": "2026-06-06T12:23:07Z"
     },
     {
       "slug": "english-i-module-3-sentence-structure-syntax-v2",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T12:31:29+00:00",
+  "generated_at": "2026-06-06T12:32:58+00:00",
   "source": "youtube-channel",
   "by_course": {
     "English I": [
@@ -123,6 +123,41 @@
         "embed_url": "https://www.youtube.com/embed/-OTX7o0m8RI",
         "published_at": "2026-06-05T12:31:04Z",
         "lesson_dir": "english-i-module-11-argumentative-writing-evidence-v2"
+      },
+      {
+        "course": "English I",
+        "course_slug": "english-i",
+        "module_number": 12,
+        "module_title": "Expository & Informational Writing",
+        "youtube_id": "wh0VNLAqp08",
+        "url": "https://youtu.be/wh0VNLAqp08",
+        "embed_url": "https://www.youtube.com/embed/wh0VNLAqp08",
+        "published_at": "2026-06-06T12:32:43Z",
+        "lesson_dir": "english-i-module-12-expository-informational-writing-v2"
+      }
+    ],
+    "Biology": [
+      {
+        "course": "Biology",
+        "course_slug": "biology",
+        "module_number": 1,
+        "module_title": "The Chemistry of Life",
+        "youtube_id": "JZln1AXPU24",
+        "url": "https://youtu.be/JZln1AXPU24",
+        "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
+        "published_at": "2026-05-31T04:20:45Z",
+        "lesson_dir": "biology-module-1-chemistry-of-life-v2"
+      },
+      {
+        "course": "Biology",
+        "course_slug": "biology",
+        "module_number": 2,
+        "module_title": "Cell Structure & Function",
+        "youtube_id": "SZvvvBHWQtc",
+        "url": "https://youtu.be/SZvvvBHWQtc",
+        "embed_url": "https://www.youtube.com/embed/SZvvvBHWQtc",
+        "published_at": "2026-06-06T12:32:35Z",
+        "lesson_dir": "biology-module-2-cell-structure-function-v2"
       }
     ],
     "Algebra I": [
@@ -280,19 +315,6 @@
         "published_at": "2026-06-02T12:14:42Z",
         "lesson_dir": "algebra-i-module-14-quadratic-equations-v2"
       }
-    ],
-    "Biology": [
-      {
-        "course": "Biology",
-        "course_slug": "biology",
-        "module_number": 1,
-        "module_title": "The Chemistry of Life",
-        "youtube_id": "JZln1AXPU24",
-        "url": "https://youtu.be/JZln1AXPU24",
-        "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
-        "published_at": "2026-05-31T04:20:45Z",
-        "lesson_dir": "biology-module-1-chemistry-of-life-v2"
-      }
     ]
   },
   "lessons": [
@@ -416,6 +438,39 @@
       "embed_url": "https://www.youtube.com/embed/-OTX7o0m8RI",
       "published_at": "2026-06-05T12:31:04Z",
       "lesson_dir": "english-i-module-11-argumentative-writing-evidence-v2"
+    },
+    {
+      "course": "English I",
+      "course_slug": "english-i",
+      "module_number": 12,
+      "module_title": "Expository & Informational Writing",
+      "youtube_id": "wh0VNLAqp08",
+      "url": "https://youtu.be/wh0VNLAqp08",
+      "embed_url": "https://www.youtube.com/embed/wh0VNLAqp08",
+      "published_at": "2026-06-06T12:32:43Z",
+      "lesson_dir": "english-i-module-12-expository-informational-writing-v2"
+    },
+    {
+      "course": "Biology",
+      "course_slug": "biology",
+      "module_number": 1,
+      "module_title": "The Chemistry of Life",
+      "youtube_id": "JZln1AXPU24",
+      "url": "https://youtu.be/JZln1AXPU24",
+      "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
+      "published_at": "2026-05-31T04:20:45Z",
+      "lesson_dir": "biology-module-1-chemistry-of-life-v2"
+    },
+    {
+      "course": "Biology",
+      "course_slug": "biology",
+      "module_number": 2,
+      "module_title": "Cell Structure & Function",
+      "youtube_id": "SZvvvBHWQtc",
+      "url": "https://youtu.be/SZvvvBHWQtc",
+      "embed_url": "https://www.youtube.com/embed/SZvvvBHWQtc",
+      "published_at": "2026-06-06T12:32:35Z",
+      "lesson_dir": "biology-module-2-cell-structure-function-v2"
     },
     {
       "course": "Algebra I",
@@ -570,17 +625,6 @@
       "embed_url": "https://www.youtube.com/embed/sbtiPodwc_U",
       "published_at": "2026-06-02T12:14:42Z",
       "lesson_dir": "algebra-i-module-14-quadratic-equations-v2"
-    },
-    {
-      "course": "Biology",
-      "course_slug": "biology",
-      "module_number": 1,
-      "module_title": "The Chemistry of Life",
-      "youtube_id": "JZln1AXPU24",
-      "url": "https://youtu.be/JZln1AXPU24",
-      "embed_url": "https://www.youtube.com/embed/JZln1AXPU24",
-      "published_at": "2026-05-31T04:20:45Z",
-      "lesson_dir": "biology-module-1-chemistry-of-life-v2"
     }
   ]
 }

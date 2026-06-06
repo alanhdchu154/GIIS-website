@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-06-06T12:23:07Z",
+  "policy": "g9_course_design_gate_v2",
+  "status": "pass",
+  "target_grade": 9,
+  "course": {
+    "name": "Biology",
+    "slug": "biology",
+    "department": "Science",
+    "credits": 1,
+    "gradeLevel": 9,
+    "module_count": 14,
+    "source": "server/prisma/courses/science/biology.json",
+    "source_sha256": "0f2e44e9ae529418c6b1fa0d0ca8feda1ed73f26b47e37f39f9f11627501d094"
+  },
+  "decision": "course design is reasonable for video-series production",
+  "errors": [],
+  "warnings": [],
+  "module_checks": [
+    {
+      "order": 1,
+      "title": "The Chemistry of Life",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 2,
+      "title": "Cell Structure & Function",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 3,
+      "title": "Cell Membrane & Transport",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 4,
+      "title": "Cellular Respiration",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 5,
+      "title": "Photosynthesis",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 6,
+      "title": "Cell Division: Mitosis & Meiosis",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 7,
+      "title": "Mendelian Genetics",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 8,
+      "title": "DNA Structure & Replication",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 9,
+      "title": "Gene Expression: Transcription & Translation",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 10,
+      "title": "Evolution & Natural Selection",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 11,
+      "title": "Diversity of Life & Classification",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 12,
+      "title": "Plant Biology",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 13,
+      "title": "Human Body Systems",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 14,
+      "title": "Ecology & Ecosystems",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "repair": {
+    "changed": false,
+    "changes": [],
+    "blocked_after_repair": []
+  }
+}
