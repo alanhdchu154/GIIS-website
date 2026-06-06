@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
 
 const API = getApiBase();
@@ -44,10 +44,32 @@ const CONCERNS = [
   { value: 'motivation', en: 'Will my child stay on track?', zh: '孩子能否坚持学习' },
 ];
 
+// Plan the family is considering. Carried over from the Pricing page via
+// ?plan=<key> so a parent who already chose a tier doesn't have to re-explain,
+// and admissions sees which support level the family self-selected.
+const PLAN_OPTIONS = [
+  { value: 'self-paced', en: 'Self-Paced · $49/mo', zh: '自主学习 · $49/月' },
+  { value: 'guided', en: 'Guided · $149/mo', zh: '顾问指导 · $149/月' },
+  { value: 'premium', en: 'Premium · $299/mo', zh: '升学路径 · $299/月' },
+  { value: 'not-sure', en: "Not sure yet — help me choose", zh: '还不确定，需要建议' },
+];
+const VALID_PLAN_KEYS = PLAN_OPTIONS.map((p) => p.value);
+const planLabelEn = (value) => {
+  const found = PLAN_OPTIONS.find((p) => p.value === value);
+  return found ? found.en : 'not provided';
+};
+
 export default function ApplyForm({ language }) {
   const isEn = language !== 'zh';
 
+  const [searchParams] = useSearchParams();
+  const initialPlan = (() => {
+    const p = (searchParams.get('plan') || '').toLowerCase();
+    return VALID_PLAN_KEYS.includes(p) ? p : '';
+  })();
+
   const [form, setForm] = useState({
+    interestedPlan: initialPlan,
     studentName: '',
     dob: '',
     gradeLevel: '',
@@ -77,6 +99,7 @@ export default function ApplyForm({ language }) {
       ? 'official transcript or school report for completed high-school terms; course descriptions if credits need review'
       : 'proof of age; current or most recent school information if available; recent report card or placement record if available';
     return [
+      ...(form.interestedPlan ? [`Interested Plan: ${planLabelEn(form.interestedPlan)}`] : []),
       `Applicant Review: type=${form.applicantType || 'not provided'}`,
       `previousCredits=${isTransfer ? (form.previousCredits || 'not provided') : 'not applicable'}`,
       `graduationTiming=${isTransfer ? (form.graduationTiming || 'not provided') : 'standard path'}`,
@@ -180,10 +203,16 @@ export default function ApplyForm({ language }) {
           <div style={{ maxWidth: 520, textAlign: 'center' }}>
             <div style={{ fontSize: 56, marginBottom: 20 }}>✓</div>
             <h1 style={{ fontSize: 28, fontWeight: 800, margin: '0 0 12px' }}>{successTitle}</h1>
-            <p style={{ fontSize: 16, color: '#5c6578', lineHeight: 1.7, margin: '0 0 28px' }}>
+            <p style={{ fontSize: 16, color: '#5c6578', lineHeight: 1.7, margin: '0 0 16px' }}>
               {successBody}
               <strong>{form.parentEmail}</strong>.
             </p>
+            {form.interestedPlan && (
+              <p style={{ fontSize: 14, color: '#2b3d6d', lineHeight: 1.6, margin: '0 0 28px', fontWeight: 700 }}>
+                {T('Plan of interest noted: ', '已记录考虑方案：')}
+                {T(planLabelEn(form.interestedPlan), PLAN_OPTIONS.find((p) => p.value === form.interestedPlan)?.zh || '')}
+              </p>
+            )}
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/" style={{ padding: '12px 24px', borderRadius: 10, background: '#2b3d6d', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
                 {T('Back to home', '返回首页')}
@@ -247,6 +276,41 @@ export default function ApplyForm({ language }) {
                 {serverError}
               </div>
             )}
+
+            <p style={{ fontSize: 12, fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 8px' }}>
+              {T('Plan You\'re Considering', '你考虑的方案')}
+            </p>
+            <p style={{ fontSize: 12.5, color: '#7b8496', margin: '0 0 12px', lineHeight: 1.6 }}>
+              {T(
+                'Optional — this just tells admissions where to start. You can still change plans after the path review.',
+                '选填——这只是让招生团队知道从哪里开始。路径评估后仍可更改方案。'
+              )}
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 24 }}>
+              {PLAN_OPTIONS.map((plan) => {
+                const selected = form.interestedPlan === plan.value;
+                return (
+                  <button
+                    type="button"
+                    key={plan.value}
+                    onClick={() => setForm((f) => ({ ...f, interestedPlan: selected ? '' : plan.value }))}
+                    style={{
+                      padding: '9px 14px',
+                      borderRadius: 999,
+                      border: `1.5px solid ${selected ? '#2b3d6d' : '#d4d8e0'}`,
+                      background: selected ? '#2b3d6d' : '#fff',
+                      color: selected ? '#fff' : '#5c6578',
+                      fontSize: 13,
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      fontFamily: 'Inter, sans-serif',
+                    }}
+                  >
+                    {T(plan.en, plan.zh)}
+                  </button>
+                );
+              })}
+            </div>
 
             <p style={{ fontSize: 12, fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 18px' }}>
               {T('Student Information', '学生信息')}

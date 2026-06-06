@@ -80,17 +80,18 @@ function labelApplicationValue(field, value) {
 function parseApplicationReviewNotes(notes = '') {
   const text = String(notes);
   const current = text.match(
-    /^Applicant Review:\s*type=(.*?);\s*previousCredits=(.*?);\s*graduationTiming=(.*?);\s*transcriptAvailable=(.*?);\s*concern=(.*?);\s*Required Records:\s*(.*?);\s*Family Notes:\s*(.*)$/s
+    /^(?:Interested Plan:\s*(.*?);\s*)?Applicant Review:\s*type=(.*?);\s*previousCredits=(.*?);\s*graduationTiming=(.*?);\s*transcriptAvailable=(.*?);\s*concern=(.*?);\s*Required Records:\s*(.*?);\s*Family Notes:\s*(.*)$/s
   );
   if (current) {
     return {
-      applicantType: current[1].trim(),
-      previousCredits: current[2].trim(),
-      graduationTiming: current[3].trim(),
-      transcriptAvailable: current[4].trim(),
-      concern: current[5].trim(),
-      requiredRecords: current[6].trim(),
-      familyNotes: current[7].trim(),
+      interestedPlan: (current[1] || '').trim(),
+      applicantType: current[2].trim(),
+      previousCredits: current[3].trim(),
+      graduationTiming: current[4].trim(),
+      transcriptAvailable: current[5].trim(),
+      concern: current[6].trim(),
+      requiredRecords: current[7].trim(),
+      familyNotes: current[8].trim(),
     };
   }
 
@@ -99,6 +100,7 @@ function parseApplicationReviewNotes(notes = '') {
   );
   if (!legacy) return null;
   return {
+    interestedPlan: '',
     applicantType: 'transfer',
     previousCredits: legacy[1].trim(),
     graduationTiming: legacy[2].trim(),
@@ -122,7 +124,7 @@ function ApplicantReviewPanel({ notes }) {
 
   const isTransfer = review.applicantType === 'transfer';
   const transferNeedsRecordReview = isTransfer;
-  const fields = isTransfer
+  const fields = (isTransfer
     ? [
         ['Applicant Type', labelApplicationValue('applicantType', review.applicantType)],
         ['Previous Credits', labelApplicationValue('previousCredits', review.previousCredits)],
@@ -135,7 +137,10 @@ function ApplicantReviewPanel({ notes }) {
         ['Path', labelApplicationValue('graduationTiming', review.graduationTiming)],
         ['Transfer Transcript', labelApplicationValue('transcriptAvailable', review.transcriptAvailable)],
         ['Main Concern', labelApplicationValue('concern', review.concern)],
-      ];
+      ]);
+  if (review.interestedPlan) {
+    fields.unshift(['Interested Plan', review.interestedPlan]);
+  }
 
   return (
     <div style={{ background: '#f8fbff', border: '1px solid #cfe0f8', borderRadius: 10, padding: '13px 14px', marginBottom: 14 }}>

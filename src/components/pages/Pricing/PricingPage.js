@@ -203,7 +203,7 @@ function TierCard({ tier, isEn }) {
           </li>
         ))}
       </ul>
-      <Link to="/apply" style={{
+      <Link to={`/apply?plan=${tier.key}`} style={{
         display: 'block',
         textAlign: 'center',
         textDecoration: 'none',
@@ -354,7 +354,7 @@ export default function PricingPage({ language, toggleLanguage }) {
                   ? 'Admissions should review previous credits, documents, and graduation timing before a family chooses a plan. Guided is the usual recommendation when the path is unclear or the student needs accountability.'
                   : '招生团队应先审核既有学分、可提供文件与毕业时间，再让家庭选择方案。当路径不清楚或学生需要跟进时，Guided 通常是推荐选择。'}
               </p>
-              <Link to="/apply" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 18px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
+              <Link to="/apply?plan=guided" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 18px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
                 {isEn ? 'Request transfer path review' : '申请转学路径评估'}
               </Link>
             </div>

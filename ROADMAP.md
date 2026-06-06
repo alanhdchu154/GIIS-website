@@ -255,6 +255,16 @@ Status: maintain.
   column. Plan/advisor framing kept truthful (Guided = monthly advisor check-in,
   Premium = higher-touch). `npm run audit:public-trust-claims` now also covers
   `src/components/pages/StudentLife` (44 files / pass); production build clean.
+- Conversion-funnel polish 2026-06-06: the Apply flow is now plan-aware. Pricing
+  tier buttons pass `/apply?plan=<self-paced|guided|premium>` (and the transfer
+  block passes `?plan=guided`); `ApplyForm` reads the param, shows an editable
+  "Plan You're Considering" selector, carries the choice to the success screen,
+  and folds it into the application `notes` (no backend/schema change — the POST
+  route only persists known fields). `ApplicationsQueue` now parses an optional
+  `Interested Plan:` prefix and surfaces it in the structured applicant panel so
+  admissions sees which tier the family self-selected. This closes the leak where
+  a parent who chose a plan on Pricing landed on a generic Apply form that
+  dropped the signal. Production build clean; public-trust audit 44/pass.
 - Official records policy remains: graduated-student records are frozen unless a
   formal correction/reissue path is approved.
 
