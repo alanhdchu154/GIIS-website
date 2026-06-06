@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * IsGiisForYou — honest fit-check section on the homepage.
@@ -274,6 +275,25 @@ export default function IsGiisForYou({ language }) {
             </>
           )}
         </p>
+
+        {/* Student-facing bridge — let the teenager picture their own week */}
+        <div style={{ textAlign: 'center', marginTop: '24px' }}>
+          <Link
+            to="/student-life"
+            style={{
+              display: 'inline-block',
+              padding: '12px 26px',
+              borderRadius: '8px',
+              border: '2px solid #2b3d6d',
+              color: '#2b3d6d',
+              textDecoration: 'none',
+              fontWeight: 800,
+              fontSize: '14px',
+            }}
+          >
+            {isEn ? "See a real student's week →" : '看看学生真实的一周 →'}
+          </Link>
+        </div>
       </div>
     </section>
   );

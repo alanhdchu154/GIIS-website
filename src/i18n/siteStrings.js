@@ -26,12 +26,14 @@ export function getNavStrings(language) {
     dropdownAdmission: en
       ? [
           { label: 'Admission Overview', to: '/admission' },
+          { label: 'A Student\'s Week',   to: '/student-life' },
           { label: 'Transfer Students',  to: '/transfer-students' },
           { label: 'Tuition & Pricing',  to: '/pricing' },
           { label: 'Apply Now',          to: '/apply' },
         ]
       : [
           { label: '招生概览',   to: '/admission' },
+          { label: '学生的一周', to: '/student-life' },
           { label: '转学生入学', to: '/transfer-students' },
           { label: '学费与价格', to: '/pricing' },
           { label: '立即申请',   to: '/apply' },

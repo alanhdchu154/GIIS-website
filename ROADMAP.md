@@ -245,6 +245,16 @@ Status: maintain.
   missing-work risk flags, next actions, and the privacy boundary that internal
   advisor notes stay staff-only. This is public copy/demo positioning only, not
   a backend schema or production care workflow deployment.
+- Prospective-student view added 2026-06-06: new public page at `/student-life`
+  ("A Student's Week" / 学生的一周) written in the student's voice to answer the
+  parent's quiet question "will my kid actually use this?" while staying honest
+  about the self-discipline self-paced learning needs. It routes back into the
+  conversion flow (Lesson Library, Parent Demo, Pathways, Pricing, Apply) rather
+  than opening a parallel IA lane. Linked from the homepage `IsGiisForYou`
+  fit-check, the Admission nav dropdown, and the footer School & Admission
+  column. Plan/advisor framing kept truthful (Guided = monthly advisor check-in,
+  Premium = higher-touch). `npm run audit:public-trust-claims` now also covers
+  `src/components/pages/StudentLife` (44 files / pass); production build clean.
 - Official records policy remains: graduated-student records are frozen unless a
   formal correction/reissue path is approved.
 

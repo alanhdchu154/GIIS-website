@@ -64,6 +64,7 @@ const ApplyForm = lazy(() => import('./components/pages/Apply/ApplyForm'));
 const VerifyPage = lazy(() => import('./components/pages/Verify/VerifyPage'));
 const WelcomePage = lazy(() => import('./components/pages/Welcome/WelcomePage'));
 const TransferStudentsPage = lazy(() => import('./components/pages/TransferStudents/TransferStudentsPage'));
+const StudentLifePage = lazy(() => import('./components/pages/StudentLife/StudentLifePage'));
 const TrustCenterPage = lazy(() => import('./components/pages/TrustCenter/TrustCenterPage'));
 const AssessmentProofPage = lazy(() => import('./components/pages/AssessmentProof/AssessmentProofPage'));
 
@@ -175,6 +176,7 @@ function App() {
          <Route path="/profile" element={<ProfilePage language={language} />} />
          <Route path="/pricing" element={<PricingPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/transfer-students" element={<TransferStudentsPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/student-life" element={<StudentLifePage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/trust-center" element={<TrustCenterPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/assessment-proof" element={<AssessmentProofPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/parent/demo" element={<ParentDashboardDemo language={language} />} />
