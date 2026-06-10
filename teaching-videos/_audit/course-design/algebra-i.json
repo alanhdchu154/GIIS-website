@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-06-01T04:01:53Z",
+  "policy": "g9_course_design_gate_v2",
+  "status": "pass",
+  "target_grade": 9,
+  "course": {
+    "name": "Algebra I",
+    "slug": "algebra-i",
+    "department": "Mathematics",
+    "credits": 1,
+    "gradeLevel": 9,
+    "module_count": 14,
+    "source": "server/prisma/courses/math/algebra-i.json",
+    "source_sha256": "2b38556104bb320d6911e9a49cc92ae36f7a928119eb3372f941cd2942888f07"
+  },
+  "decision": "course design is reasonable for video-series production",
+  "errors": [],
+  "warnings": [],
+  "module_checks": [
+    {
+      "order": 1,
+      "title": "Variables & Algebraic Expressions",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 2,
+      "title": "Order of Operations",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 3,
+      "title": "Properties of Real Numbers",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 4,
+      "title": "Solving One-Step & Two-Step Equations",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 5,
+      "title": "Solving Multi-Step Equations & Literal Equations",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 6,
+      "title": "Inequalities & Interval Notation",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 7,
+      "title": "Introduction to Functions",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 8,
+      "title": "Graphing Linear Functions",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 9,
+      "title": "Slope & Rate of Change",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 10,
+      "title": "Writing Linear Equations",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 11,
+      "title": "Systems of Linear Equations",
+      "resource_url_count": 4,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 12,
+      "title": "Exponents & Polynomials",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 13,
+      "title": "Factoring Polynomials",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "order": 14,
+      "title": "Quadratic Equations",
+      "resource_url_count": 3,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "repair": {
+    "changed": false,
+    "changes": [],
+    "blocked_after_repair": []
+  }
+}

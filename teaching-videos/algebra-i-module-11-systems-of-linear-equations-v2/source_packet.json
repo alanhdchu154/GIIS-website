@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-06-01T04:20:21Z",
+  "policy": "foundation_daily_v1",
+  "source_of_truth": "server/prisma/courses/math/algebra-i.json",
+  "target_slug": "algebra-i-module-11-systems-of-linear-equations-v2",
+  "course": {
+    "slug": "algebra-i",
+    "name": "Algebra I",
+    "department": "Mathematics",
+    "credits": 1,
+    "subject_area": "math"
+  },
+  "module": {
+    "order": 11,
+    "title": "Systems of Linear Equations",
+    "objectives": "Solve systems of equations by graphing, substitution, and elimination; interpret solutions (one, none, infinite).",
+    "assignment": "Solve 9 systems (3 by graphing, 3 by substitution, 3 by elimination). Write a word problem modeled by a system and solve it. Submit clearly labeled work for each method, identify the solution as an ordered pair, verify at least three solutions by substitution, and explain when each method is most efficient.",
+    "estimatedHrs": 4
+  },
+  "resources": {
+    "refs": [
+      {
+        "key": "practiceUrl",
+        "url": "https://www.khanacademy.org/math/algebra-basics/alg-basics-systems-of-equations/alg-basics-systems-of-eq-intro/e/systems_of_equations",
+        "host": "khanacademy.org",
+        "note": "Khan Academy — Systems of Equations Practice",
+        "youtube_id": null,
+        "access_risk": "soft_risk",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      },
+      {
+        "key": "readingUrl",
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/5-introduction",
+        "host": "openstax.org",
+        "note": "OpenStax Elementary Algebra 2e — Ch 5.1–5.3",
+        "youtube_id": null,
+        "access_risk": "ok",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      },
+      {
+        "key": "video2Url",
+        "url": "https://www.youtube.com/watch?v=nok99JOhcjo",
+        "host": "youtube.com",
+        "note": "Supplemental YouTube — Systems of Equations Worked Example",
+        "youtube_id": "nok99JOhcjo",
+        "access_risk": "ok",
+        "availability": {
+          "id": "nok99JOhcjo",
+          "ok": true,
+          "status": 200
+        }
+      },
+      {
+        "key": "videoUrl",
+        "url": "https://www.khanacademy.org/math/algebra-basics/alg-basics-systems-of-equations/alg-basics-systems-of-eq-intro/v/solving-linear-systems-by-graphing",
+        "host": "khanacademy.org",
+        "note": "Khan Academy — Systems of Equations (Introduction)",
+        "youtube_id": null,
+        "access_risk": "soft_risk",
+        "availability": {
+          "ok": true,
+          "status": 200
+        }
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      "practiceUrl uses soft-risk host khanacademy.org: free nonprofit; practice/progress may require a free account",
+      "videoUrl uses soft-risk host khanacademy.org: free nonprofit; practice/progress may require a free account"
+    ]
+  },
+  "production_defaults": {
+    "voice": "en-US-AriaNeural",
+    "voice_rate": "-3%",
+    "target_minutes": "5-7",
+    "youtube_title": "GIIS Algebra I | Module 11: Systems of Linear Equations",
+    "privacy": "unlisted"
+  },
+  "teaching_blueprint": [
+    "title: course/module signal and parent-visible seriousness",
+    "hook: one concrete problem or surprising situation tied to the module",
+    "overview: three learning moves students will complete",
+    "concept: define the core idea in plain English",
+    "misconception: show the common wrong move before the correct one",
+    "worked example: trace the skill step by step",
+    "pause: student solves one short problem",
+    "answer reveal: narrated solution on a visually different slide",
+    "application: connect the idea to the course/module assignment",
+    "recap: 3-bullet memory aid",
+    "path: exact Learn Portal next action"
+  ],
+  "quality_bar": [
+    "Parent should feel this is a serious school lesson, not generic AI slides.",
+    "Every slide must have one claim or one learner action.",
+    "Use course-specific palette, voice, and visual rhythm.",
+    "Use deterministic diagrams for precise math/science/history evidence.",
+    "Do not read URLs aloud.",
+    "No AP, College Board, CEEB, accreditation, or admissions claims."
+  ]
+}

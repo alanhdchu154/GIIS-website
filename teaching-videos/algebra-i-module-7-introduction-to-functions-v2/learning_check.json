@@ -1,0 +1,36 @@
+{
+  "course": "Algebra I",
+  "module": "Module 7: Introduction to Functions",
+  "checks": [
+    {
+      "skill": "evaluate a linear function at several inputs using substitution",
+      "question": "Given f(x) = 2x + 3, find f(0), f(1), and f(-2). Show the substitution for each.",
+      "answer": "f(0) = 2(0) + 3 = 0 + 3 = 3. f(1) = 2(1) + 3 = 2 + 3 = 5. f(-2) = 2(-2) + 3 = -4 + 3 = -1. Outputs: 3, 5, and -1 respectively. Each input was substituted in for x before simplifying.",
+      "misconception_tested": "reading f(x) as f times x, which would multiply the whole expression 2x + 3 by the input instead of substituting the input in for x"
+    },
+    {
+      "skill": "evaluate a quadratic function and recognize that different inputs can share an output",
+      "question": "Given g(x) = x^2 - 4, find g(3) and g(-3). Are the outputs the same? Does that mean g is not a function?",
+      "answer": "g(3) = 3^2 - 4 = 9 - 4 = 5. g(-3) = (-3)^2 - 4 = 9 - 4 = 5. The outputs are the same. That is allowed — a function may send two different inputs to the same output. What is forbidden is one input pointing at two different outputs.",
+      "misconception_tested": "thinking the function rule is broken whenever two different x-values produce the same f(x), confusing the y-direction with the x-direction"
+    },
+    {
+      "skill": "distinguish a relation that is a function from one that is not",
+      "question": "Relation A is { (1, 2), (2, 4), (3, 6) }. Relation B is { (1, 2), (1, 5), (2, 7) }. Which one is a function and why?",
+      "answer": "Relation A is a function: each input 1, 2, and 3 points at exactly one output. Relation B is not a function: the input 1 points at both 2 and 5, so the same x has two different y values. The check is to scan the x-column — if any x repeats with a different y, the relation is not a function.",
+      "misconception_tested": "checking the y-column for repeats instead of the x-column, then incorrectly flagging a valid function as broken because two inputs share an output"
+    },
+    {
+      "skill": "list the domain and range from a finite set of evaluations",
+      "question": "Using h(x) = 3x - 5 evaluated at x = -1, 0, and 2, state the domain and the range as sets.",
+      "answer": "h(-1) = 3(-1) - 5 = -8. h(0) = 3(0) - 5 = -5. h(2) = 3(2) - 5 = 1. Domain (inputs tested) = { -1, 0, 2 }. Range (outputs produced) = { -8, -5, 1 }. The domain is the x-values collected as a set; the range is the f(x)-values collected as a set.",
+      "misconception_tested": "swapping the domain and the range, or repeating values inside the set instead of listing each element once"
+    },
+    {
+      "skill": "explain function notation in plain English",
+      "question": "In one sentence, explain what f(2) means when f(x) = 2x + 3, and explain why f(2) is not f times 2.",
+      "answer": "f(2) means the output of the function f when the input is 2 — substitute 2 in for x in the rule and simplify, giving 2(2) + 3 = 7. The parentheses next to f do not mean multiplication; they mean apply the rule. f times 2 would multiply the whole expression 2x + 3 by 2 and would give a different answer that has nothing to do with evaluating the function.",
+      "misconception_tested": "treating the parentheses in f(x) as a multiplication symbol and therefore distributing the input across the rule instead of substituting the input in for the variable"
+    }
+  ]
+}

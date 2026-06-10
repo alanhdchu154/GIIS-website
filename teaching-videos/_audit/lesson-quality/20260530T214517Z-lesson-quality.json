@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-05-30T21:45:17Z",
+  "repo_root": "/Users/alanhdchu/giis-website",
+  "summary": {
+    "lesson_count": 1,
+    "verdict_counts": {
+      "pass": 1
+    },
+    "issue_counts": {},
+    "avg_quality_score": 100,
+    "median_quality_score": 100,
+    "ready_count": 1,
+    "needs_review_count": 0,
+    "blocked_count": 0
+  },
+  "lessons": [
+    {
+      "slug": "algebra-i-module-9-slope-rate-change-v2",
+      "path": "teaching-videos/algebra-i-module-9-slope-rate-change-v2",
+      "verdict": "pass",
+      "quality_score": 100,
+      "issues": [],
+      "issue_counts": {},
+      "script": {
+        "course": "Algebra I",
+        "module": "Module 9: Slope & Rate of Change",
+        "voice": "en-US-AriaNeural",
+        "voice_rate": "-3%",
+        "section_count": 14,
+        "word_count": 730,
+        "estimated_minutes": 4.9,
+        "avg_words_per_section": 52.1,
+        "max_words_in_section": 72,
+        "long_sections": [],
+        "empty_sections": [],
+        "required_structure": {
+          "title": true,
+          "hook": true,
+          "overview": true,
+          "pause": true,
+          "recap": true,
+          "path": true
+        },
+        "pause_count": 2,
+        "silence_count": 2,
+        "has_worked_solution_after_pause": true,
+        "urls_in_narration": [],
+        "risky_claims": [],
+        "assignment_mentions": 3,
+        "misconception_mentions": 3
+      },
+      "assets": {
+        "slides_count": 14,
+        "audio_mp3_count": 14,
+        "audio_wav_count": 14,
+        "audio_file_count": 14,
+        "mp4_count": 1,
+        "has_mp4": true,
+        "mp4_files": [
+          {
+            "file": "algebra_i_module_9_slope_rate_change_v2.mp4",
+            "mb": 6.1
+          }
+        ],
+        "has_transcript": true,
+        "has_intro_music": true,
+        "has_outro_music": true,
+        "is_cleaned_after_upload": false,
+        "slide_dimensions_sample": {
+          "1920x1080": 5
+        },
+        "missing_slides": [],
+        "extra_slides": [],
+        "missing_audio": [],
+        "slide_count_matches_sections": true,
+        "audio_count_matches_sections": true
+      },
+      "reviewers": {
+        "count": 3,
+        "verdicts": [
+          {
+            "file": "_review_A.json",
+            "reviewer": "Umi peer math reviewer",
+            "verdict": "pass"
+          },
+          {
+            "file": "_review_B.json",
+            "reviewer": "Umi adversarial student reviewer",
+            "verdict": "pass"
+          },
+          {
+            "file": "_review_C.json",
+            "reviewer": "Umi citation/source checker",
+            "verdict": "pass"
+          }
+        ],
+        "counts": {
+          "pass": 3
+        },
+        "has_phd_level": true,
+        "has_adversarial_student": true,
+        "has_citation_checker": true
+      },
+      "youtube": {
+        "video_id": null,
+        "url": null,
+        "privacy": null,
+        "playlist": null,
+        "uploaded_at": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "reviewer": "Umi citation/source checker",
+  "date": "2026-05-30",
+  "verdict": "pass",
+  "script_sha": "13855f8957c2567487933eeec8e71367ee3da7470482d4f29bbece7f74c8a461",
+  "scope": "source alignment and public-claims risk",
+  "checked_sources": [
+    "server/prisma/courses/science/biology.json module 1"
+  ],
+  "findings": [
+    "The lesson matches Biology Module 1 title and objectives.",
+    "No AP, College Board, Common App, accreditation, CEEB, or admissions claims appear.",
+    "No generated bitmap images are used; visuals are deterministic and foundation-level."
+  ]
+}

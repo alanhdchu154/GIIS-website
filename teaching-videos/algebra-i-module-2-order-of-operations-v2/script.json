@@ -1,0 +1,76 @@
+{
+  "course": "Algebra I",
+  "module": "Module 2: Order of Operations",
+  "voice": "en-US-AriaNeural",
+  "voice_rate": "-3%",
+  "intro_music_seconds": 3,
+  "outro_music_seconds": 3,
+  "sections": [
+    {
+      "id": "01_title",
+      "text": "Welcome back. Algebra One, Module Two — Order of Operations. PEMDAS is six letters, but it is the rule that decides every multi-step problem in math. Get this right, and the rest of algebra stays solvable."
+    },
+    {
+      "id": "02_hook",
+      "text": "Same expression: eight plus two times three. One friend types it left to right and gets thirty. Another follows the rule and gets fourteen. Same numbers, same operations, two different answers — and only one of them is correct. The order of operations is the tiebreaker."
+    },
+    {
+      "id": "03_overview",
+      "text": "Game plan. First, PEMDAS — what each letter actually means. Second, a worked example you can copy. Third, the trap that costs students the most points — multiplication and division share a level. Fourth, a real-world expression where PEMDAS protects your money. By the end, you read every expression in one direction."
+    },
+    {
+      "id": "04_pemdas",
+      "text": "PEMDAS gives you the order. Parentheses first — anything inside brackets. Then Exponents — powers and roots. Then Multiplication and Division — together, left to right. Then Addition and Subtraction — together, left to right. Same rule on every continent — BODMAS in some countries is the same idea, just renamed."
+    },
+    {
+      "id": "05_equation",
+      "text": "Evaluate eight plus two times the quantity three plus one, squared. Parentheses first — three plus one is four. Exponent next — four squared is sixteen. Multiplication before addition — two times sixteen is thirty-two. Finally, add — eight plus thirty-two is forty. One direction, no shortcuts."
+    },
+    {
+      "id": "06_trap",
+      "text": "The biggest trap is reading left to right like English. Five plus three times four does not give thirty-two. Multiplication ranks above addition every time — five plus three times four equals five plus twelve, which equals seventeen. Direction matters, but rank matters more."
+    },
+    {
+      "id": "07_pause1",
+      "text": "Your turn. Evaluate twenty minus two times the quantity three plus two. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "08_pause1_silence",
+      "text": "Time. Parentheses first — three plus two is five. Multiply next — two times five is ten. Finally subtract — twenty minus ten is ten. If you got ninety, you went left to right and multiplied eighteen by five — the exact trap we just named."
+    },
+    {
+      "id": "09_same_level",
+      "text": "PEMDAS hides a second trap. M and D are not a sequence — they are one rank, done left to right. Same for A and S. Twenty-four divided by four times two is not twenty-four over eight — it is six times two, which equals twelve. Read left to right within each level."
+    },
+    {
+      "id": "10_application",
+      "text": "Real life uses PEMDAS too. Your phone plan — twenty dollars a month plus ten cents per minute, and you used thirty minutes. The total is twenty plus zero point one zero times thirty. Multiply first — three dollars in minutes. Then add — twenty-three dollars. Drop the rule and the bill looks like six hundred."
+    },
+    {
+      "id": "11_pause2",
+      "text": "Last one. Evaluate ten plus two cubed times three minus four. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "12_pause2_silence",
+      "text": "Time. No parentheses, so start with the exponent — two cubed is eight. Multiplication next — eight times three is twenty-four. Now addition and subtraction left to right — ten plus twenty-four is thirty-four, thirty-four minus four is thirty. The answer is thirty."
+    },
+    {
+      "id": "13_recap",
+      "text": "Recap. PEMDAS — Parentheses, Exponents, Multiplication and Division together left to right, Addition and Subtraction together left to right. M and D share one rank, A and S share one rank. Read every expression once in PEMDAS order — every time."
+    },
+    {
+      "id": "14_path",
+      "text": "Reminder — this video is the overview. To actually master order of operations, do the rest. Read OpenStax Chapter one on order of operations. Run the Khan Academy practice set. Do the assignment in your Learn Portal dashboard — five multi-step expressions with every step labeled. Next up, Module Three — Properties of Real Numbers."
+    }
+  ],
+  "youtube": {
+    "video_id": "xUxspucPUio",
+    "url": "https://youtu.be/xUxspucPUio",
+    "embed_url": "https://www.youtube.com/embed/xUxspucPUio",
+    "studio_url": "https://studio.youtube.com/video/xUxspucPUio/edit",
+    "privacy": "unlisted",
+    "playlist": "Algebra I",
+    "playlist_id": "PLBdiOM21TW9Lp_thaHGpAXl1VhxeV2m-S",
+    "uploaded_at": "2026-05-31T12:24:18+00:00"
+  }
+}

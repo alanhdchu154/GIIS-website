@@ -1,0 +1,21 @@
+{
+  "reviewer": "Umi citation/source checker",
+  "date": "2026-05-31",
+  "verdict": "pass",
+  "scope": "source alignment and public-claims risk",
+  "checked_sources": [
+    "server/prisma/courses/math/algebra-i.json module 8",
+    "OpenStax Elementary Algebra 2e Ch 3.2–3.3 (Graph Linear Equations in Two Variables) reference listed in course JSON",
+    "Desmos Graphing Calculator practice reference listed in course JSON",
+    "Khan Academy — Graphing Linear Equations and Ordered Pair Solutions video references listed in course JSON"
+  ],
+  "findings": [
+    "Module title, order, and objective in script.json match the published Algebra I module 8 in server/prisma/courses/math/algebra-i.json: 'Graphing Linear Functions' with objectives covering table of values, x- and y-intercepts, slope-intercept form, and graph interpretation.",
+    "Assignment described in the lesson (graph 8 linear equations using Desmos or pencil/graph paper; for each one record the x-intercept, the y-intercept, and label the slope as positive, negative, zero, or undefined) matches the assignment string in the source packet and the course JSON exactly.",
+    "Resources referred to by name (OpenStax Elementary Algebra Ch 3.2–3.3, Desmos Graphing Calculator, Khan Academy graphing-linear-equations practice) match the resources listed in the course JSON and the source packet; no URLs are read aloud in narration.",
+    "No AP, College Board, Common App, CEEB, NCAA, accreditation, or admissions claims appear in lesson metadata, slide text, or narration. No script.json.youtube block is present, which is consistent with the foundation-only handoff.",
+    "No sourced or generated bitmap images are used. All precision visuals — coordinate planes, plotted points, intercept arrows, table-of-values plots, the rise/run staircases, and the slope-type comparison — are drawn deterministically in build_slides.py, so no assets_manifest.json is required.",
+    "Narration uses spoken-math phrasings ('y equals two x plus one', 'the point zero comma negative four', 'rise two and run one') instead of reading raw symbols, which keeps the audio track unambiguous when the slide is not visible. The phone-plan hook ($15 monthly + $0.10/text) is a generic illustrative example, not a claim about a specific carrier."
+  ],
+  "script_sha": "71213c3d261ca0967a655da0538f5a645d59fbc6b489d77e1977d658ac42f9bb"
+}

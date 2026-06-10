@@ -1,0 +1,20 @@
+{
+  "reviewer": "Umi citation/source checker",
+  "date": "2026-05-31",
+  "verdict": "pass",
+  "scope": "source alignment and public-claims risk",
+  "checked_sources": [
+    "server/prisma/courses/math/algebra-i.json module 5",
+    "OpenStax Elementary Algebra 2e Ch 2.4–2.5 (Use a General Strategy to Solve Linear Equations / Solve Equations with Variables on Both Sides) reference listed in course JSON",
+    "Khan Academy Variables on Both Sides practice reference listed in course JSON"
+  ],
+  "findings": [
+    "Module title, order, and objective in script.json match the published Algebra I module 5 in server/prisma/courses/math/algebra-i.json: 'Solving Multi-Step Equations & Literal Equations'.",
+    "Assignment described in the lesson (10 multi-step equations with variables on both sides, parentheses, and fractions; 5 literal-equation rearrangements such as A = lw and PV = nRT, each with one sentence explaining the rearranged variable) matches the assignment string in the source packet.",
+    "Literal-equation examples used (A = lw and PV = nRT) are exactly the examples named in the source-of-truth module assignment, so the lesson stays bound to the published course.",
+    "No AP, College Board, Common App, CEEB, NCAA, accreditation, or admissions claims appear in lesson metadata, slide text, or narration.",
+    "No sourced or generated bitmap images are used; all precision visuals (concept card, worked traces, literal-equation rearrangements, compare slide, pause answer reveals) are drawn deterministically in build_slides.py — no assets_manifest.json required.",
+    "Narration refers to OpenStax and Khan Academy by name and never reads a URL aloud."
+  ],
+  "script_sha": "5a0b2fc01d8fedd02a6755d16aeed5243cd21ac319e6bc0a1b348adcc1a1f24f"
+}

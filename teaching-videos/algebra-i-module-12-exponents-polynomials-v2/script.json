@@ -1,0 +1,84 @@
+{
+  "course": "Algebra I",
+  "module": "Module 12: Exponents & Polynomials",
+  "voice": "en-US-AriaNeural",
+  "voice_rate": "-3%",
+  "intro_music_seconds": 3,
+  "outro_music_seconds": 3,
+  "sections": [
+    {
+      "id": "01_title",
+      "text": "Welcome back. Algebra One, Module Twelve — exponents and polynomials. Today we learn the symbols algebra uses to talk about repeated multiplication, and the kind of expression that powers nearly every higher-math problem you will meet — the polynomial."
+    },
+    {
+      "id": "02_hook",
+      "text": "A rectangular garden is x plus three feet wide and x plus five feet long. How much area do you need to cover with mulch? That single question is a polynomial — two factors multiplied, written as one expression. By the end of this lesson you will expand it to x squared plus eight x plus fifteen."
+    },
+    {
+      "id": "03_overview",
+      "text": "Game plan. First, the laws of exponents — five rules that let you simplify any power expression in one line. Second, how to name a polynomial by its degree and its number of terms. Third, how to add, subtract, and multiply polynomials cleanly."
+    },
+    {
+      "id": "04_concept",
+      "text": "A polynomial is a sum of terms. Each term is a number times a variable raised to a whole-number power. The exponent decides the term's degree, the largest exponent decides the polynomial's degree, and the count of terms gives it its name."
+    },
+    {
+      "id": "05_exponent_laws",
+      "text": "Five laws. Same base, multiply — add the exponents. Same base, divide — subtract the exponents. Power of a power — multiply the exponents. Power of a product — distribute the exponent to every factor. Anything nonzero raised to the zero is one."
+    },
+    {
+      "id": "06_classify",
+      "text": "Naming a polynomial. Count the terms first — one term is a monomial, two is a binomial, three is a trinomial. Then read the largest exponent — that is the degree. So three x squared plus two x is a binomial of degree two."
+    },
+    {
+      "id": "07_pause1",
+      "text": "Your turn. Simplify the expression open paren two x squared y close paren times open paren three x cubed y squared close paren. Use the laws of exponents. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "08_pause1_silence",
+      "text": "Time. Multiply the coefficients — two times three is six. For the x terms, add the exponents — x squared times x cubed is x to the fifth. For the y terms, add the exponents — y times y squared is y cubed. The answer is six x to the fifth y cubed."
+    },
+    {
+      "id": "09_add_subtract",
+      "text": "Adding and subtracting polynomials is just combining like terms. Line up terms that share the same variable and the same exponent, then add or subtract their coefficients. The exponents themselves never change. Three x squared plus two x squared is five x squared. Three x squared plus two x stays as two terms."
+    },
+    {
+      "id": "10_multiply",
+      "text": "Multiplying polynomials is distribution. Every term in the first multiplies every term in the second. For two binomials, that is FOIL — first, outer, inner, last. Combine like terms at the end. So x plus three times x plus five becomes x squared plus five x plus three x plus fifteen, which simplifies to x squared plus eight x plus fifteen."
+    },
+    {
+      "id": "11_compare",
+      "text": "The classic trap. The square of a sum is not the sum of the squares. Open paren x plus three close paren squared is not x squared plus nine. You must multiply the binomial by itself and FOIL — the correct answer is x squared plus six x plus nine. The middle term comes from the cross-products, and forgetting it changes the polynomial entirely."
+    },
+    {
+      "id": "12_pause2",
+      "text": "Your turn. Multiply open paren two x plus one close paren times open paren x plus four close paren. Use distribution or FOIL. Combine any like terms. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "13_pause2_silence",
+      "text": "Time. First — two x times x is two x squared. Outer — two x times four is eight x. Inner — one times x is x. Last — one times four is four. Combine the like terms eight x and x to get nine x. The answer is two x squared plus nine x plus four."
+    },
+    {
+      "id": "14_application",
+      "text": "How the assignment uses this. Classify five polynomials by degree and by number of terms. Perform five additions, five subtractions, and five multiplications. Show every step of the work — not just the final answer. Submit a document, image, or link from your Learn Portal dashboard."
+    },
+    {
+      "id": "15_recap",
+      "text": "Recap. Five exponent laws — product, quotient, power of a power, power of a product, and zero exponent. Name a polynomial by counting terms and reading its degree. Add and subtract by combining like terms, never the exponents. Multiply by distributing every term, FOIL for binomials, and always combine like terms at the end."
+    },
+    {
+      "id": "16_path",
+      "text": "Reminder — this video is the overview. To actually master the module, do the rest. Read OpenStax Elementary Algebra chapters six point one through six point three. Practice on Khan Academy until exponent rules and polynomial multiplication feel routine. Complete the assignment in your Learn Portal dashboard. Next up — Module Thirteen — factoring polynomials."
+    }
+  ],
+  "youtube": {
+    "video_id": "XyEaB_UudWA",
+    "url": "https://youtu.be/XyEaB_UudWA",
+    "embed_url": "https://www.youtube.com/embed/XyEaB_UudWA",
+    "studio_url": "https://studio.youtube.com/video/XyEaB_UudWA/edit",
+    "privacy": "unlisted",
+    "playlist": "Algebra I",
+    "playlist_id": "PLBdiOM21TW9Lp_thaHGpAXl1VhxeV2m-S",
+    "uploaded_at": "2026-06-01T12:24:41+00:00"
+  }
+}

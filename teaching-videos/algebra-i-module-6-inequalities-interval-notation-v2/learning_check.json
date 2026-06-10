@@ -1,0 +1,36 @@
+{
+  "course": "Algebra I",
+  "module": "Module 6: Inequalities & Interval Notation",
+  "checks": [
+    {
+      "skill": "solve a linear inequality that does not require a sign flip",
+      "question": "Solve 3x + 5 < 14, graph the solution, and write it in interval notation.",
+      "answer": "3x + 5 < 14 → subtract 5 from both sides: 3x < 9 → divide both sides by +3 (no flip): x < 3. Graph: open circle at 3 with shading to the left. Interval: (−∞, 3). Both ends use round brackets because neither −∞ nor 3 is included.",
+      "misconception_tested": "marking the endpoint as included when the strict-inequality symbol calls for an open circle and a round bracket"
+    },
+    {
+      "skill": "apply the flip rule when dividing by a negative coefficient",
+      "question": "Solve −2x + 7 ≥ 1, graph the solution, and write it in interval notation.",
+      "answer": "−2x + 7 ≥ 1 → subtract 7 from both sides: −2x ≥ −6 → divide both sides by −2 AND flip ≥ to ≤: x ≤ 3. Graph: closed dot at 3 with shading to the left. Interval: (−∞, 3]. The 3 is included, so the right end uses a square bracket; −∞ always uses a round bracket.",
+      "misconception_tested": "dividing by a negative number without flipping the inequality, which gives the opposite half of the number line"
+    },
+    {
+      "skill": "verify the flip rule with a test value",
+      "question": "Without flipping, dividing −2x < 10 by −2 yields x < −5. Use x = 0 to show that this answer is wrong and explain the correct version.",
+      "answer": "Test x = 0 in the original: −2(0) = 0, and 0 < 10 is true, so x = 0 must be in the solution set. But 0 < −5 is false, so x < −5 cannot be right. Flipping the sign when dividing by −2 gives x > −5, and x = 0 satisfies 0 > −5 ✓. The flip is required whenever you multiply or divide both sides by a negative number.",
+      "misconception_tested": "trusting the algebra without checking that the resulting interval still contains values that satisfy the original inequality"
+    },
+    {
+      "skill": "translate between a number-line graph and interval notation",
+      "question": "A graph shows a closed dot at −2 with shading to the right. Write the solution in interval notation and in set-builder notation.",
+      "answer": "Closed dot at −2 means −2 is included, so the left end uses a square bracket. Shading to the right means every number greater than −2 is also in the solution. Interval: [−2, ∞). Set-builder: { x | x ≥ −2 }. Infinity always uses a round bracket because it can never be reached.",
+      "misconception_tested": "writing [−2, ∞] with a square bracket on ∞, treating infinity as a reachable endpoint"
+    },
+    {
+      "skill": "interpret the difference between open and closed endpoints in plain English",
+      "question": "Explain in one sentence what the bracket on the right end of (−∞, 3] tells you about the value 3.",
+      "answer": "The square bracket on 3 tells you that 3 itself is part of the solution — it satisfies the original ≤ comparison — which is the same information that a closed dot at 3 carries on the number-line graph. A round bracket on the right end would say the opposite: every number less than 3 works, but 3 itself does not.",
+      "misconception_tested": "treating brackets as cosmetic notation instead of as the carrier of the include/exclude information from the original inequality symbol"
+    }
+  ]
+}

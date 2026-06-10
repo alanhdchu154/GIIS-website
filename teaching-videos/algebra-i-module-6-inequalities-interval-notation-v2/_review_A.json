@@ -1,0 +1,23 @@
+{
+  "reviewer": "Umi peer math reviewer",
+  "date": "2026-05-31",
+  "verdict": "pass",
+  "scope": "Algebra I foundation lesson content correctness",
+  "checked_against": [
+    "server/prisma/courses/math/algebra-i.json module 6",
+    "rendered contact-sheet.jpg",
+    "script.json"
+  ],
+  "findings": [
+    "Module 6 objectives are covered end-to-end: solving linear inequalities (slides 06 and 07), graphing solutions on a number line with open/closed endpoint markers (slides 04, 06, 07, 11, 12), and writing solutions in interval notation alongside set-builder notation (slides 10 and 12).",
+    "Worked example 3x + 5 < 14 is traced correctly: subtract 5 from both sides to get 3x < 9, then divide both sides by +3 with no flip required, landing on x < 3. Graph shows an open circle at 3 with shading to the left; interval (−∞, 3) uses round brackets on both ends, which is correct because neither −∞ nor 3 is included.",
+    "Worked example −2x + 7 ≥ 1 is traced correctly: subtract 7 to get −2x ≥ −6, then divide by −2 AND flip ≥ to ≤, landing on x ≤ 3. Graph shows a closed dot at 3 with shading to the left; interval (−∞, 3] uses a square bracket on the included endpoint 3 and a round bracket on −∞.",
+    "Pause #1 (4x − 3 ≥ 17 → x ≥ 5; interval [5, ∞)) and Pause #2 (closed dot at −2, shading right → x ≥ −2; interval [−2, ∞); set-builder { x | x ≥ −2 }) are arithmetically correct, match their answer-reveal slides, and reinforce the rule that infinity always uses a round bracket.",
+    "Compare slide 05 correctly characterizes the flip rule by walking the same inequality −2x < 10 through both the wrong (kept-sign) and the right (flipped) paths and uses x = 0 as a test value to show that the un-flipped answer x < −5 excludes a value that satisfies the original inequality.",
+    "Interval translation table on slide 10 lists four canonical cases (x < 3, x ≤ 3, x > −2, x ≥ −2) with matching interval and set-builder notation, and the endpoint column reinforces the open-vs-closed bracket meaning."
+  ],
+  "release_notes": [
+    "Foundation math only; no AP, College Board, CEEB, accreditation, Common App, NCAA, or admissions claims appear anywhere in the lesson."
+  ],
+  "script_sha": "7cede5932a78ea139ff1d236e7a8fbe1d75202e37f635ea4357f9793c5ef7dde"
+}

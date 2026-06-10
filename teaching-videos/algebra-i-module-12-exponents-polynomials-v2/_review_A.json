@@ -1,0 +1,23 @@
+{
+  "reviewer": "Umi peer math reviewer",
+  "date": "2026-06-01",
+  "verdict": "pass",
+  "scope": "Algebra I foundation lesson content correctness",
+  "checked_against": [
+    "server/prisma/courses/math/algebra-i.json module 12",
+    "rendered contact-sheet.jpg",
+    "script.json"
+  ],
+  "findings": [
+    "All five stated exponent laws - product, quotient, power of a power, power of a product, and zero exponent - are stated correctly with valid worked examples (x^2 * x^3 = x^5, x^7 / x^4 = x^3, (x^2)^4 = x^8, (2 x)^3 = 8 x^3, 5^0 = 1).",
+    "The polynomial anatomy slide correctly identifies coefficient, variable, exponent, term, and constant on 3 x^2 + 2 x - 5, and correctly classifies it as a trinomial of degree 2.",
+    "Pause-and-try problem 1 (2 x^2 y)(3 x^3 y^2) correctly resolves to 6 x^5 y^3 by multiplying coefficients and adding exponents on like bases.",
+    "Pause-and-try problem 2 (2 x + 1)(x + 4) correctly resolves to 2 x^2 + 9 x + 4 by FOIL with the middle terms 8 x and x combining to 9 x.",
+    "The (x + 3)^2 trap slide correctly contrasts the wrong shortcut x^2 + 9 against the correct expansion x^2 + 6 x + 9 obtained by rewriting as (x + 3)(x + 3) and applying FOIL.",
+    "The area-model rectangle on the hook and multiply slides correctly partitions (x + 3)(x + 5) into x^2, 5 x, 3 x, and 15, summing to x^2 + 8 x + 15."
+  ],
+  "release_notes": [
+    "Foundation math only; no AP, College Board, Common App, CEEB, accreditation, NCAA, or college-admissions claims."
+  ],
+  "script_sha": "794b1157dd4f3463706229910c9b66143acd6b3b070e5af142789fd17a1be63b"
+}

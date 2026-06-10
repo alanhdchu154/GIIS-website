@@ -1,0 +1,84 @@
+{
+  "course": "Algebra I",
+  "module": "Module 10: Writing Linear Equations",
+  "voice": "en-US-AriaNeural",
+  "voice_rate": "-3%",
+  "intro_music_seconds": 3,
+  "outro_music_seconds": 3,
+  "sections": [
+    {
+      "id": "01_title",
+      "text": "Welcome back. Algebra One, Module Ten — writing linear equations. Today we go the other direction. Last module you turned an equation into a graph. Today you turn information about a line — a slope, a point, two points — into an equation in three different forms."
+    },
+    {
+      "id": "02_hook",
+      "text": "A pool starts with thirty inches of water and drains at two inches per hour. Write the depth as an equation. You have one point — at hour zero, depth is thirty — and one rate — minus two inches per hour. That is exactly enough to write one line. By the end of this lesson, you will know three ways to write it."
+    },
+    {
+      "id": "03_overview",
+      "text": "Game plan. Three forms — slope-intercept y equals m x plus b, point-slope y minus y-one equals m times the quantity x minus x-one, and standard form A x plus B y equals C. Same line, three costumes. We will pick the form that matches the information we have."
+    },
+    {
+      "id": "04_concept",
+      "text": "The big idea. Writing a linear equation means encoding what you know about a line into algebra. If you know the slope and the y-intercept, slope-intercept fits. If you know the slope and any single point, point-slope fits. If you need integer coefficients with no fractions, convert to standard form."
+    },
+    {
+      "id": "05_slope_intercept_eq",
+      "text": "Form one — slope-intercept. The line has slope two and y-intercept negative three. Plug them straight into y equals m x plus b. Replace m with two. Replace b with negative three. The equation is y equals two x minus three. No algebra needed — just substitution into the template."
+    },
+    {
+      "id": "06_point_slope_eq",
+      "text": "Form two — point-slope. Use this when you have a slope and a point that is not the y-intercept. Slope is four, point is three comma negative two. The template is y minus y-one equals m times the quantity x minus x-one. Plug in. You get y plus two equals four times the quantity x minus three."
+    },
+    {
+      "id": "07_pause1",
+      "text": "Your turn. The slope is three. The line passes through the point two comma one. Write the equation in point-slope form first. Then convert it to slope-intercept form. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "08_pause1_silence",
+      "text": "Time. Point-slope: y minus y-one equals m times the quantity x minus x-one. Slope three, point two comma one. Plug in. y minus one equals three times the quantity x minus two. Distribute the three. y minus one equals three x minus six. Add one to both sides. y equals three x minus five. Same line, two forms."
+    },
+    {
+      "id": "09_two_points_eq",
+      "text": "Given two points instead of a slope? Compute the slope first. The line goes through negative one comma two and three comma negative six. Slope equals rise over run — change in y over change in x. Negative six minus two is negative eight. Three minus negative one is four. Slope is negative two. Now use either point in point-slope, then simplify."
+    },
+    {
+      "id": "10_standard_form",
+      "text": "Form three — standard form. A x plus B y equals C, where A, B, and C are integers and A is not negative. Take y equals two-thirds x plus four. Multiply every term by three to clear the fraction. Three y equals two x plus twelve. Move the x term over. Negative two x plus three y equals twelve. Flip signs so A is positive. Two x minus three y equals negative twelve."
+    },
+    {
+      "id": "11_compare",
+      "text": "The trap. In point-slope, the template uses minus signs. If your point has a negative coordinate, you do not drop the minus — you keep it and let the two minuses give you a plus. Point three comma negative two with slope four becomes y minus negative two, which is y plus two. Dropping the inner minus gives the wrong line every time."
+    },
+    {
+      "id": "12_pause2",
+      "text": "Your turn. A line passes through one comma negative three and three comma five. Write its equation in slope-intercept form. Find the slope first, then use point-slope, then simplify all the way down. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "13_pause2_silence",
+      "text": "Time. Slope equals five minus negative three over three minus one — that is eight over two — slope four. Use point one comma negative three. Point-slope gives y plus three equals four times the quantity x minus one. Distribute. y plus three equals four x minus four. Subtract three from both sides. y equals four x minus seven. Done."
+    },
+    {
+      "id": "14_application",
+      "text": "How the assignment uses this. You will write the equation for ten lines from different starting information — slope plus point, two points, or parallel and perpendicular conditions. For each line, give all three forms — slope-intercept, point-slope, and standard — and a quick check using a substituted point or a graph."
+    },
+    {
+      "id": "15_recap",
+      "text": "Recap. Three forms — slope-intercept y equals m x plus b for slope plus y-intercept, point-slope for slope plus any point, standard for integer coefficients. Two points means compute the slope first, then use point-slope. Watch the inner sign — a negative coordinate flips to a plus inside the template, not a drop."
+    },
+    {
+      "id": "16_path",
+      "text": "Reminder — this video is the overview. To actually master writing linear equations, do the rest. Read OpenStax Elementary Algebra chapters four point one and four point two. Practice writing equations on Khan Academy until each form feels routine. Complete the ten-line assignment in your Learn Portal dashboard. Next up — Module Eleven — systems of linear equations."
+    }
+  ],
+  "youtube": {
+    "video_id": "mKziFCRLW8Q",
+    "url": "https://youtu.be/mKziFCRLW8Q",
+    "embed_url": "https://www.youtube.com/embed/mKziFCRLW8Q",
+    "studio_url": "https://studio.youtube.com/video/mKziFCRLW8Q/edit",
+    "privacy": "unlisted",
+    "playlist": "Algebra I",
+    "playlist_id": "PLBdiOM21TW9Lp_thaHGpAXl1VhxeV2m-S",
+    "uploaded_at": "2026-06-01T12:24:25+00:00"
+  }
+}

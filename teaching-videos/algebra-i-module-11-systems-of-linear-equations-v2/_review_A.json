@@ -1,0 +1,22 @@
+{
+  "reviewer": "Umi peer math reviewer",
+  "date": "2026-05-31",
+  "verdict": "pass",
+  "scope": "Algebra I foundation lesson content correctness",
+  "checked_against": [
+    "server/prisma/courses/math/algebra-i.json module 11",
+    "rendered contact-sheet.jpg",
+    "script.json"
+  ],
+  "findings": [
+    "All three methods - graphing, substitution, elimination - are mathematically correct and reach the same kind of ordered-pair solution.",
+    "Worked example (3, 7) by substitution and (3, 2) by elimination both verify when checked back into the original equations.",
+    "Pause-and-try problems (2, 4) and (4, 0) are correct and consistent with the narrated solutions on the answer-reveal slides.",
+    "The one / none / infinite case panel correctly maps slope-intercept relationships to false / always-true algebra outcomes.",
+    "The trap slide correctly emphasizes that every term must scale during elimination, not just the matching coefficient."
+  ],
+  "release_notes": [
+    "Foundation math only; no AP, College Board, Common App, CEEB, accreditation, NCAA, or college-admissions claims."
+  ],
+  "script_sha": "e43a13791d280875d773f1d42a530597cf75c1da2957c92bb6dac71080834e0c"
+}

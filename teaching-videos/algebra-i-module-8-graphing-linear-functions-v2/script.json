@@ -1,0 +1,80 @@
+{
+  "course": "Algebra I",
+  "module": "Module 8: Graphing Linear Functions",
+  "voice": "en-US-AriaNeural",
+  "voice_rate": "-3%",
+  "intro_music_seconds": 3,
+  "outro_music_seconds": 3,
+  "sections": [
+    {
+      "id": "01_title",
+      "text": "Welcome back. Algebra One, Module Eight — graphing linear functions. Today we turn an equation into a picture you can read at a glance. By the end you can graph a line three different ways and tell the slope, the x-intercept, and the y-intercept from any one of them."
+    },
+    {
+      "id": "02_hook",
+      "text": "Your phone plan charges fifteen dollars a month plus ten cents per text. Plot total cost against number of texts. The graph is a straight line — and every point on that line answers a real question. How much for one hundred texts? Look up at the line. That is what graphing a linear equation does."
+    },
+    {
+      "id": "03_overview",
+      "text": "Game plan. First, the table-of-values method — plug in x, compute y, plot the pairs. Second, the intercepts method — find where the line hits each axis. Third, slope-intercept form — y equals m x plus b reads off the slope and the y-intercept at a glance."
+    },
+    {
+      "id": "04_concept",
+      "text": "The big idea. The graph of a linear equation is the set of every x and y pair that makes the equation true. Plot enough true pairs and a clean straight line appears. Two points are enough to draw the line, but three or four catch arithmetic mistakes before you connect them."
+    },
+    {
+      "id": "05_table_graph",
+      "text": "Method one — table of values. Take y equals two x plus one. Pick four easy x values — negative one, zero, one, and two. Plug each into the rule. You get y values of negative one, one, three, and five. Plot the four pairs and connect them. The line passes right through every point."
+    },
+    {
+      "id": "06_intercepts_graph",
+      "text": "Method two — intercepts. The x-intercept is where the line crosses the x-axis, so set y to zero. The y-intercept is where it crosses the y-axis, so set x to zero. Take three x plus two y equals six. Setting y to zero gives x equals two. Setting x to zero gives y equals three. Two intercepts, one line."
+    },
+    {
+      "id": "07_pause1",
+      "text": "Your turn. Graph y equals negative x plus three using a table of values. Use the x values negative one, zero, one, and two. Find the y for each, write the pairs, and plot them. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "08_pause1_silence",
+      "text": "Time. The rule is y equals negative x plus three. At x equals negative one, y equals four. At x equals zero, y equals three. At x equals one, y equals two. At x equals two, y equals one. Plot the four pairs and connect them. The line slopes downhill — every one step right drops y by one — which matches the negative coefficient on x."
+    },
+    {
+      "id": "09_slope_intercept_equation",
+      "text": "Method three — slope-intercept form. Any equation written as y equals m x plus b tells you two things instantly. The b is the y-intercept — the point zero comma b. The m is the slope — rise over run. Plot b on the y-axis, then count m to find a second point. Two points, draw the line."
+    },
+    {
+      "id": "10_compare",
+      "text": "The trap. Students mix up x-intercept and y-intercept. To find an x-intercept you set y to zero, because every point on the x-axis has y equal to zero. To find a y-intercept you set x to zero. Same idea, opposite axis. Swap them and your line drifts to the wrong corner of the graph."
+    },
+    {
+      "id": "11_pause2",
+      "text": "Your turn. The equation is y equals two x minus four. Use slope-intercept form. Identify the slope and the y-intercept. Then plot the y-intercept and use the slope to land a second point. Pause now. Solve it. Press play when you are ready."
+    },
+    {
+      "id": "12_pause2_silence",
+      "text": "Time. Compare y equals two x minus four to y equals m x plus b. The slope m is two. The y-intercept b is negative four. Plot the point zero comma negative four on the y-axis. From there, rise two and run one to land at one comma negative two. Two points — draw the line. Positive slope, so it tilts uphill."
+    },
+    {
+      "id": "13_application",
+      "text": "How the assignment uses this. You will graph eight linear equations using Desmos or pencil and graph paper. For each one, write down the x-intercept, the y-intercept, and label the slope as positive, negative, zero, or undefined. Show the table or the intercept work — not just the picture."
+    },
+    {
+      "id": "14_recap",
+      "text": "Recap. The graph of a linear equation is every x and y pair that makes the equation true, and those pairs always line up. Three ways in — a table of values, the two intercepts, or slope-intercept form. Positive slope tilts up, negative tilts down, zero is flat, vertical is undefined."
+    },
+    {
+      "id": "15_path",
+      "text": "Reminder — this video is the overview. To actually master graphing, do the rest. Read OpenStax Elementary Algebra chapters three point two and three point three. Practice graphing y equals m x plus b in Desmos for several m and b values. Complete the eight-equation assignment in your Learn Portal dashboard. Next up — Module Nine — slope and rate of change."
+    }
+  ],
+  "youtube": {
+    "video_id": "g_jB7EgctnM",
+    "url": "https://youtu.be/g_jB7EgctnM",
+    "embed_url": "https://www.youtube.com/embed/g_jB7EgctnM",
+    "studio_url": "https://studio.youtube.com/video/g_jB7EgctnM/edit",
+    "privacy": "unlisted",
+    "playlist": "Algebra I",
+    "playlist_id": "PLBdiOM21TW9Lp_thaHGpAXl1VhxeV2m-S",
+    "uploaded_at": "2026-06-02T12:15:05+00:00"
+  }
+}

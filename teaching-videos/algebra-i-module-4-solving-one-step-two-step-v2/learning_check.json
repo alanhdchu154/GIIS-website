@@ -1,0 +1,36 @@
+{
+  "course": "Algebra I",
+  "module": "Module 4: Solving One-Step & Two-Step Equations",
+  "checks": [
+    {
+      "skill": "apply the balance rule (same operation on both sides)",
+      "question": "You have x + 7 = 12. Which operation isolates x, and why must you do it to both sides?",
+      "answer": "Subtract 7 from both sides — subtraction is the inverse of the addition that is blocking x. You must do it to both sides because the equation is a balanced scale; doing it to only one side would make the two sides unequal, so the resulting equation would no longer be true.",
+      "misconception_tested": "applying the inverse operation to only the side that has the variable and leaving the other side unchanged"
+    },
+    {
+      "skill": "solve a two-step equation using reverse PEMDAS",
+      "question": "Solve 3x + 5 = 20. List the operation used at each step.",
+      "answer": "3x + 5 = 20 → subtract 5 from both sides → 3x = 15 → divide both sides by 3 → x = 5. Reverse PEMDAS means undo the addition (the outer layer) before undoing the multiplication.",
+      "misconception_tested": "dividing by the coefficient first (which produces fractions like x + 5/3 = 20/3) instead of stripping the constant term first"
+    },
+    {
+      "skill": "verify a solution by substitution",
+      "question": "You solved 2x − 7 = 11 and got x = 9. Verify by substitution and state what 'verified' means.",
+      "answer": "Substitute x = 9 into the original: 2(9) − 7 = 18 − 7 = 11. Both sides equal 11, so the solution is verified. 'Verified' means the candidate solution actually makes the original equation true — moving symbols correctly is not the same as solving correctly until the substitution check passes.",
+      "misconception_tested": "treating the final algebra line as proof on its own and skipping the substitution check that the assignment requires"
+    },
+    {
+      "skill": "solve with negative coefficients and fractional structure",
+      "question": "Solve x/4 + 3 = −2 and verify.",
+      "answer": "Subtract 3 from both sides → x/4 = −5. Multiply both sides by 4 → x = −20. Verify: (−20)/4 + 3 = −5 + 3 = −2. ✓",
+      "misconception_tested": "flipping the sign of x at the wrong step or multiplying by 4 before subtracting 3, which scrambles the negatives"
+    },
+    {
+      "skill": "translate a real-world story into a two-step equation",
+      "question": "You earn $5 per hour babysitting plus a $10 tip and take home $45. Write the equation and solve for h.",
+      "answer": "5h + 10 = 45 → subtract 10 → 5h = 35 → divide by 5 → h = 7 hours. Verify: 5(7) + 10 = 35 + 10 = 45. ✓",
+      "misconception_tested": "writing 5h = 45 + 10 or 5(h + 10) = 45 because the student rushes the translation before identifying which quantity is fixed and which is per-hour"
+    }
+  ]
+}

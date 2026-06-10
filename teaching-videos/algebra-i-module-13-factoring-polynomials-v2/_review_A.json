@@ -1,0 +1,24 @@
+{
+  "reviewer": "Umi peer math reviewer",
+  "date": "2026-06-01",
+  "verdict": "pass",
+  "scope": "Algebra I foundation lesson content correctness",
+  "checked_against": [
+    "server/prisma/courses/math/algebra-i.json module 13",
+    "rendered contact-sheet.jpg",
+    "script.json"
+  ],
+  "findings": [
+    "All four stated factoring strategies - greatest common factor, monic trinomial pair-search, difference of squares, and perfect square trinomial - are stated correctly with valid worked examples (6 x^2 + 9 x = 3 x (2 x + 3); x^2 + 8 x + 15 = (x + 3)(x + 5); x^2 - 25 = (x + 5)(x - 5); x^2 + 6 x + 9 = (x + 3)^2).",
+    "The greatest-common-factor slide correctly decomposes 6 x^2 as (3 x)(2 x) and 9 x as (3 x)(3), identifying 3 x as the shared factor, and the distribution check 3 x (2 x) + 3 x (3) = 6 x^2 + 9 x is correct.",
+    "Pause-and-try problem 1 (x^2 + 7 x + 12) correctly factors to (x + 3)(x + 4) by selecting the 3-and-4 pair from the factor pairs of 12, and the FOIL verification x^2 + 4 x + 3 x + 12 = x^2 + 7 x + 12 lands correctly.",
+    "Pause-and-try problem 2 (4 x^2 - 36) correctly factors as 4 (x + 3)(x - 3) using a GCF pull of 4 followed by the difference-of-squares pattern on x^2 - 9.",
+    "The sum-of-squares trap slide correctly states that x^2 + 25 does not factor over the real numbers and that the difference-of-squares pattern requires a minus sign between the two perfect-square terms.",
+    "The trinomial sign-rules card correctly states the standard guidance: c > 0 and b > 0 give two positive numbers, c > 0 and b < 0 give two negative numbers, and c < 0 gives opposite signs.",
+    "Perfect-square-trinomial check 2 * x * 3 = 6 x correctly confirms the middle-term structure of x^2 + 6 x + 9 before collapsing to (x + 3)^2."
+  ],
+  "release_notes": [
+    "Foundation math only; no AP, College Board, Common App, CEEB, accreditation, NCAA, or college-admissions claims."
+  ],
+  "script_sha": "3bf522a9defc87c42e6a26a10442fecd3586d8c78c413a16ba34f4d6903ecb9e"
+}
