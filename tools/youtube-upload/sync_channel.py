@@ -66,10 +66,14 @@ def list_my_videos(yt):
             playlistId=uploads_pl, maxResults=50, pageToken=page,
         ).execute()
         for it in resp.get("items", []):
+            published_at = (
+                it.get("contentDetails", {}).get("videoPublishedAt")
+                or it.get("snippet", {}).get("publishedAt")
+            )
             yield {
                 "video_id":     it["contentDetails"]["videoId"],
                 "title":        it["snippet"]["title"],
-                "published_at": it["contentDetails"]["videoPublishedAt"],
+                "published_at": published_at,
             }
         page = resp.get("nextPageToken")
         if not page: break
@@ -93,6 +97,15 @@ def find_lesson_dir(course: str, module_num: int) -> Path | None:
         if int(m.group(1)) == module_num:
             return f.parent
     return None
+
+def lesson_key_from_script(doc: dict) -> tuple[str, int] | None:
+    course = doc.get("course")
+    if not course:
+        return None
+    m = re.match(r"\s*Module\s+(\d+)", doc.get("module", ""), re.IGNORECASE)
+    if not m:
+        return None
+    return (course, int(m.group(1)))
 
 # ─── main ──────────────────────────────────────────────────────────────
 
@@ -221,6 +234,23 @@ def main():
         }
         sj.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
         print(f"[script.json] {ld.name}  {old} → {v['video_id']}")
+
+    # If a local lesson has a youtube block but the channel no longer has a
+    # canonical lesson video for its (course, module), remove the stale local
+    # claim so dashboards do not show failed/deleted uploads as live.
+    for sj in LESSONS_DIR.glob("*/script.json"):
+        try:
+            doc = json.loads(sj.read_text())
+        except Exception:
+            continue
+        if not doc.get("youtube"):
+            continue
+        key = lesson_key_from_script(doc)
+        if not key or key in canonical:
+            continue
+        old = doc.pop("youtube", {}).get("video_id")
+        sj.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
+        print(f"[script.json] {sj.parent.name}  removed stale youtube video_id={old}")
 
 if __name__ == "__main__":
     main()
