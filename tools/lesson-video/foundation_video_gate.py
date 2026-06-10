@@ -26,7 +26,11 @@ def default_python() -> str:
 
 def run(cmd: list[str], *, cwd: Path = ROOT) -> None:
     print(f"[gate:run] {' '.join(cmd)}")
-    subprocess.run(cmd, cwd=cwd, check=True, stdin=subprocess.DEVNULL)
+    env = os.environ.copy()
+    lesson_tools = str(ROOT / "tools" / "lesson-video")
+    existing = env.get("PYTHONPATH")
+    env["PYTHONPATH"] = f"{lesson_tools}{os.pathsep}{existing}" if existing else lesson_tools
+    subprocess.run(cmd, cwd=cwd, check=True, stdin=subprocess.DEVNULL, env=env)
 
 
 def newest_audit() -> Path | None:

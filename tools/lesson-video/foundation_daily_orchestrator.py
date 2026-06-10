@@ -933,6 +933,12 @@ def update_state_row(state: dict[str, Any], candidate: Candidate, *, status: str
 
 
 def commit_and_push(approved_slugs: list[str]) -> int:
+    if TEACHING_ROOT.is_symlink():
+        print(
+            "[git] auto-commit skipped: teaching-videos is a symlink; "
+            "refusing to stage tracked lesson deletions"
+        )
+        return 0
     paths = [
         "public/data/lessons-manifest.json",
         str(APPROVAL_PATH.relative_to(ROOT)),
