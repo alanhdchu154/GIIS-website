@@ -107,6 +107,14 @@ def lesson_key_from_script(doc: dict) -> tuple[str, int] | None:
         return None
     return (course, int(m.group(1)))
 
+
+def video_exists(yt, video_id: str) -> bool:
+    try:
+        resp = yt.videos().list(id=video_id, part="id").execute()
+    except HttpError:
+        return False
+    return bool(resp.get("items"))
+
 # ─── main ──────────────────────────────────────────────────────────────
 
 def main():
@@ -220,18 +228,24 @@ def main():
         sj = ld / "script.json"
         try: doc = json.loads(sj.read_text())
         except Exception: continue
-        old = doc.get("youtube", {}).get("video_id")
-        if old == v["video_id"]:
-            continue   # already in sync
-        doc["youtube"] = {
+        current_youtube = doc.get("youtube") or {}
+        old = current_youtube.get("video_id")
+        next_youtube = {
             "video_id":    v["video_id"],
             "url":         f"https://youtu.be/{v['video_id']}",
             "embed_url":   f"https://www.youtube.com/embed/{v['video_id']}",
             "studio_url":  f"https://studio.youtube.com/video/{v['video_id']}/edit",
+            "privacy":     current_youtube.get("privacy") or "unlisted",
+            "playlist":    current_youtube.get("playlist") or course,
             "published_at": v["published_at"],
-            "synced_at":   manifest["generated_at"],
-            "playlist":    course,
+            "uploaded_at": current_youtube.get("uploaded_at") or v["published_at"],
+            "synced_at":   current_youtube.get("synced_at") or manifest["generated_at"],
         }
+        if current_youtube.get("playlist_id"):
+            next_youtube["playlist_id"] = current_youtube["playlist_id"]
+        if current_youtube == next_youtube:
+            continue   # already in sync
+        doc["youtube"] = next_youtube
         sj.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
         print(f"[script.json] {ld.name}  {old} → {v['video_id']}")
 
@@ -243,10 +257,18 @@ def main():
             doc = json.loads(sj.read_text())
         except Exception:
             continue
-        if not doc.get("youtube"):
+        youtube = doc.get("youtube") or {}
+        if not youtube:
             continue
         key = lesson_key_from_script(doc)
         if not key or key in canonical:
+            continue
+        old = youtube.get("video_id")
+        if old and video_exists(yt, old):
+            print(
+                f"[script.json] {sj.parent.name}  kept local youtube video_id={old} "
+                "(video exists; uploads playlist may be lagging)"
+            )
             continue
         old = doc.pop("youtube", {}).get("video_id")
         sj.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 import sys
@@ -42,11 +43,37 @@ def find_mp4(folder: Path) -> Path | None:
     return mp4s[0] if len(mp4s) == 1 else None
 
 
+def valid_mp4(path: Path | None) -> bool:
+    if not path or not path.exists():
+        return False
+    try:
+        result = subprocess.run(
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-show_entries",
+                "format=duration",
+                "-of",
+                "default=noprint_wrappers=1:nokey=1",
+                str(path),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        if result.returncode != 0:
+            return False
+        return float(result.stdout.strip()) > 0
+    except Exception:
+        return False
+
+
 def is_pending_upload(folder: Path) -> bool:
     script = load_json(folder / "script.json")
     if (script.get("youtube") or {}).get("video_id"):
         return False
-    return find_mp4(folder) is not None
+    return valid_mp4(find_mp4(folder))
 
 
 def discover_lessons(args: argparse.Namespace) -> list[Path]:
@@ -98,8 +125,11 @@ def lesson_reasons(audit: dict, args: argparse.Namespace) -> tuple[str, list[str
         reasons.append(f"audit verdict is {verdict}")
     if score < args.min_score:
         reasons.append(f"quality score {score} < required {args.min_score}")
+    mp4 = find_mp4(ROOT / audit["path"])
     if not assets.get("has_mp4"):
         reasons.append("missing MP4")
+    elif not valid_mp4(mp4):
+        reasons.append("invalid MP4 (ffprobe failed)")
     if args.require_transcript and not assets.get("has_transcript"):
         reasons.append("missing transcript.txt")
     if args.require_contact_sheet:

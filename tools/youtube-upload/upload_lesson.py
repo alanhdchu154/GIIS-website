@@ -22,6 +22,30 @@ def approved_slugs(path: Path = APPROVED_READY_TO_UPLOAD) -> set[str]:
     return load_approved_slugs(path)
 
 
+def valid_mp4(path: Path) -> bool:
+    try:
+        result = subprocess.run(
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-show_entries",
+                "format=duration",
+                "-of",
+                "default=noprint_wrappers=1:nokey=1",
+                str(path),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        if result.returncode != 0:
+            return False
+        return float(result.stdout.strip()) > 0
+    except Exception:
+        return False
+
+
 def build_description(script: dict, lesson_dir: Path) -> str:
     course = script.get("course", "")
     module = script.get("module", "")
@@ -151,6 +175,8 @@ def main():
         if len(candidates) != 1:
             sys.exit(f"can't find a single MP4 in {lesson} — render it first with make_lesson.py")
         mp4 = candidates[0]
+    if not valid_mp4(mp4):
+        sys.exit(f"invalid MP4 (ffprobe failed): {mp4}")
 
     title = f"{script.get('course','?')} — {script.get('module','?')}"
     description = build_description(script, lesson)

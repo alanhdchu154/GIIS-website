@@ -818,6 +818,40 @@ def run_checked(cmd: list[str], *, timeout: int | None = None) -> int:
     return subprocess.run(cmd, cwd=ROOT, stdin=subprocess.DEVNULL, timeout=timeout).returncode
 
 
+def find_mp4(folder: Path) -> Path | None:
+    canonical = folder / f"{folder.name.replace('-', '_')}.mp4"
+    if canonical.exists():
+        return canonical
+    mp4s = sorted(folder.glob("*.mp4"))
+    return mp4s[0] if len(mp4s) == 1 else None
+
+
+def valid_mp4(path: Path | None) -> bool:
+    if not path or not path.exists():
+        return False
+    try:
+        result = subprocess.run(
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-show_entries",
+                "format=duration",
+                "-of",
+                "default=noprint_wrappers=1:nokey=1",
+                str(path),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        if result.returncode != 0:
+            return False
+        return float(result.stdout.strip()) > 0
+    except Exception:
+        return False
+
+
 def gate_ready(folder: Path) -> tuple[bool, dict[str, Any], list[str]]:
     audit = audit_lesson(folder)
     reasons = []
@@ -830,6 +864,8 @@ def gate_ready(folder: Path) -> tuple[bool, dict[str, Any], list[str]]:
         reasons.append(f"quality score {audit.get('quality_score')} < 100")
     if not assets.get("has_mp4"):
         reasons.append("missing MP4")
+    elif not valid_mp4(find_mp4(folder)):
+        reasons.append("invalid MP4 (ffprobe failed)")
     if not assets.get("has_transcript"):
         reasons.append("missing transcript.txt")
     if not (folder / "contact-sheet.jpg").exists():
