@@ -165,6 +165,7 @@ function checkDocs() {
   const handoff = read('docs/admissions-payment-handoff-runbook.md');
   const sop = read('docs/admissions-consultation-response-sop.md');
   const checklist = read('docs/parent-sales-launch-checklist.md');
+  const dailyOperatorChecklist = read('docs/parent-sales-daily-operator-checklist.md');
   const decisions = readJson('docs/parent-sales-owner-decisions.json');
   const results = [];
 
@@ -188,6 +189,17 @@ function checkDocs() {
   results.push(checklistOk
     ? pass('launch-checklist-boundary', 'Launch checklist separates manual consultation sales from automated payment readiness.')
     : fail('launch-checklist-boundary', 'Launch checklist does not clearly separate manual sales from automated payment readiness.'));
+
+  const dailyOperatorChecklistOk = /Same-Day Owner Coverage/.test(dailyOperatorChecklist) &&
+    /lead-capture owner/.test(dailyOperatorChecklist) &&
+    /first-response owner/.test(dailyOperatorChecklist) &&
+    /WeChat follow-up owner/.test(dailyOperatorChecklist) &&
+    /manual Stripe owner/.test(dailyOperatorChecklist) &&
+    /End-Of-Day Closeout/.test(dailyOperatorChecklist) &&
+    /Stop Conditions/.test(dailyOperatorChecklist);
+  results.push(dailyOperatorChecklistOk
+    ? pass('daily-operator-checklist', 'Daily operator checklist gives same-day coverage rules for unresolved owner warnings.')
+    : fail('daily-operator-checklist', 'Daily operator checklist is missing same-day owner coverage rules.'));
 
   const manualPayment = decisions.manualPayment || {};
   if (String(manualPayment.stripeInvoiceOwner || '').trim() && manualPayment.authorizedByAlan === true) {

@@ -26,9 +26,11 @@ backend.
 
 Current sellable state: GIIS can start consultation-first outreach and
 transfer/new-student path reviews using the public proof path, response SOP,
-outreach packet, and manual payment handoff. This is not the same as fully
-automated checkout. Outreach days should run `npm run audit:sales-manual-ready`;
-automated Guided/Premium checkout stays blocked until
+outreach packet, daily operator checklist, and manual payment handoff. This is
+not the same as fully automated checkout. Outreach days should run
+`npm run audit:sales-manual-ready`; unresolved owner warnings must be covered by
+a same-day operator log outside git. Automated Guided/Premium checkout stays
+blocked until
 `npm run audit:sales-payment-live` returns 0 fail.
 
 ## Active Lanes
@@ -359,7 +361,7 @@ Status: reconciled locally; pending production deploy execution.
   application review on desktop/mobile against the mocked `/api/applications`
   endpoint.
 - Apply/sales readiness verification is green: `npm run audit:sales-launch`
-  25/25, `npm run audit:public-trust-claims`,
+  27/27, `npm run audit:public-trust-claims`,
   `CI=true npm test -- --watchAll=false`,
   `CI=true BUILD_PATH=/tmp/giis-build-apply-submit npm run build`, and
   `npm run audit:ops-browser -- --base-url http://localhost:3030` 22/0 against
@@ -393,8 +395,14 @@ Status: reconciled locally; pending production deploy execution.
   `docs/parent-sales-outreach-packet.md` and a sales-launch gate check. It gives
   admissions conservative first-message, WeChat, consultation call, follow-up,
   recordkeeping, and same-day stop-condition scripts for outreach days.
+- 2026-06-11 daily operator checklist added
+  `docs/parent-sales-daily-operator-checklist.md` plus
+  `docs/templates/parent-sales-daily-operator-log.md`. `audit:sales-launch`
+  gates both, and `audit:sales-manual-ready` now checks the same-day owner
+  coverage checklist so unresolved owner warnings have an explicit daily
+  operating path.
 - 2026-06-11 manual-sales readiness gate added
-  `npm run audit:sales-manual-ready`. Current production result is 8 pass / 4
+  `npm run audit:sales-manual-ready`. Current production result is 9 pass / 4
   warn / 0 fail with verdict `manual_sales_ready_with_recorded_warnings`: public
   proof path, Netlify form markup, admissions email fallback, SOP, and handoff
   docs pass; warnings remain for missing lead-capture owner, missing manual

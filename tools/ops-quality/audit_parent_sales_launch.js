@@ -27,6 +27,8 @@ const files = {
   paymentHandoff: read('docs/admissions-payment-handoff-runbook.md'),
   consultationSop: read('docs/admissions-consultation-response-sop.md'),
   outreachPacket: read('docs/parent-sales-outreach-packet.md'),
+  dailyOperatorChecklist: read('docs/parent-sales-daily-operator-checklist.md'),
+  dailyOperatorLogTemplate: read('docs/templates/parent-sales-daily-operator-log.md'),
 };
 
 const checks = [
@@ -244,6 +246,30 @@ const checks = [
       /Same-Day Stop Conditions/.test(files.outreachPacket) &&
       /parent-sales-owner-decisions\.json/.test(files.outreachPacket),
     message: 'Admissions must have a conservative outreach packet before starting active parent sales.',
+  },
+  {
+    id: 'parent-sales-daily-operator-checklist',
+    file: 'docs/parent-sales-daily-operator-checklist.md',
+    ok: /npm run audit:sales-manual-ready/.test(files.dailyOperatorChecklist) &&
+      /Same-Day Owner Coverage/.test(files.dailyOperatorChecklist) &&
+      /lead-capture owner/.test(files.dailyOperatorChecklist) &&
+      /first-response owner/.test(files.dailyOperatorChecklist) &&
+      /WeChat follow-up owner/.test(files.dailyOperatorChecklist) &&
+      /manual Stripe owner/.test(files.dailyOperatorChecklist) &&
+      /Do not send automated Guided\/Premium checkout links until/.test(files.dailyOperatorChecklist) &&
+      /End-Of-Day Closeout/.test(files.dailyOperatorChecklist) &&
+      /Stop Conditions/.test(files.dailyOperatorChecklist),
+    message: 'Admissions must have a same-day operator checklist before active outreach.',
+  },
+  {
+    id: 'parent-sales-daily-operator-log-template',
+    file: 'docs/templates/parent-sales-daily-operator-log.md',
+    ok: /Same-Day Owners/.test(files.dailyOperatorLogTemplate) &&
+      /Lead-capture owner/.test(files.dailyOperatorLogTemplate) &&
+      /Manual Stripe owner/.test(files.dailyOperatorLogTemplate) &&
+      /Inbox Checks/.test(files.dailyOperatorLogTemplate) &&
+      /Do not store parent names/.test(files.dailyOperatorLogTemplate),
+    message: 'Admissions must have a non-sensitive same-day operator log template.',
   },
 ];
 

@@ -10,7 +10,7 @@ backend payment/access launch.
 
 Local evidence is green:
 
-- `npm run audit:sales-launch` — 25/25 pass
+- `npm run audit:sales-launch` — 27/27 pass
 - `npm run audit:ops-browser -- --base-url http://localhost:3030` — 22 pass / 0 fail, including consultation, contact, and apply form submit success on desktop/mobile
 - `npm run audit:public-trust-claims` — 41 files pass
 - server Jest — 40/40 pass
@@ -20,6 +20,10 @@ Local evidence is green:
 - admissions payment handoff runbook —
   `docs/admissions-payment-handoff-runbook.md`
 - parent sales outreach packet — `docs/parent-sales-outreach-packet.md`
+- parent sales daily operator checklist —
+  `docs/parent-sales-daily-operator-checklist.md`
+- daily operator log template —
+  `docs/templates/parent-sales-daily-operator-log.md`
 - local production-proof smoke command available:
   `npm run audit:sales-live -- --base-url http://localhost:3030` — 8/8 pass
 - payment-launch live gate available:
@@ -27,7 +31,7 @@ Local evidence is green:
   production; this must pass before treating automated Guided/Premium checkout
   and Stripe webhook handling as ready.
 - manual-sales readiness gate available:
-  `npm run audit:sales-manual-ready` — currently 8 pass / 4 warn / 0 fail in
+  `npm run audit:sales-manual-ready` — currently 9 pass / 4 warn / 0 fail in
   production. Verdict: `manual_sales_ready_with_recorded_warnings`.
 
 ## Current Production Status
@@ -96,6 +100,9 @@ This is enough to begin outreach and consultations because families can now see:
   document requests, and plan recommendations
 - a conservative outreach packet for first messages, WeChat, consultation call
   flow, follow-up templates, same-day stop conditions, and owner review items
+- a same-day operator checklist and non-sensitive log template so temporary
+  lead-capture / response / WeChat / manual Stripe coverage can be recorded
+  outside git before outreach starts
 
 ## What Frontend-Only Does Not Prove
 
@@ -222,3 +229,8 @@ owners instead of silently treating the launch as operationally complete.
 Use `docs/parent-sales-outreach-packet.md` for outreach days. It contains the
 conservative first-message scripts, WeChat short reply, consultation call flow,
 follow-up templates, recordkeeping checklist, and same-day stop conditions.
+
+Use `docs/parent-sales-daily-operator-checklist.md` before the first outreach
+message each day. If permanent owners are still blank in
+`docs/parent-sales-owner-decisions.json`, a same-day owner must be recorded in a
+filled operator log outside git before outreach starts.

@@ -190,6 +190,12 @@ Local commits (oldest→newest):
   recordkeeping, and same-day stop-condition scripts. `audit:sales-launch` now
   gates the packet so active outreach cannot drift into payment pressure,
   guaranteed outcomes, or unowned lead capture.
+- daily operator checklist — `docs/parent-sales-daily-operator-checklist.md`
+  and `docs/templates/parent-sales-daily-operator-log.md` give same-day coverage
+  rules for lead capture, first response, WeChat, principal escalation, manual
+  Stripe ownership, end-of-day closeout, and stop conditions. `audit:sales-launch`
+  gates both files; `audit:sales-manual-ready` checks the same-day coverage
+  checklist.
 
 Codex next actions (do in order):
 
@@ -240,7 +246,7 @@ passes 14/0. Conflict closeout verification on 2026-06-11 is green:
 `CI=true BUILD_PATH=/tmp/giis-build-conflict-check npm run build`, and
 `git diff --check`.
 Apply/sales readiness verification on 2026-06-11 is green:
-`npm run audit:sales-launch` 25/25, `npm run audit:public-trust-claims`,
+`npm run audit:sales-launch` 27/27, `npm run audit:public-trust-claims`,
 `CI=true npm test -- --watchAll=false`,
 `CI=true BUILD_PATH=/tmp/giis-build-apply-submit npm run build`, and
 `npm run audit:ops-browser -- --base-url http://localhost:3030` 22/0 against
@@ -268,7 +274,7 @@ manual Stripe Dashboard invoice/payment link only after path review, receipt and
 Stripe IDs recorded outside git, and portal activation after fit plus payment
 are both clear. `npm run audit:sales-launch` now gates the handoff doc.
 Manual-sales readiness gate added: `npm run audit:sales-manual-ready` currently
-returns 8 pass / 4 warn / 0 fail in production with verdict
+returns 9 pass / 4 warn / 0 fail in production with verdict
 `manual_sales_ready_with_recorded_warnings`. Warnings: Netlify email
 notification/lead owner cannot be verified from repo, manual Stripe owner is
 not assigned, first-response/WeChat owners are not assigned, and automated
@@ -305,7 +311,7 @@ approval.
   principal = sole face; graduate names = initial + surname (real data);
   weekly report = admin review before send.
 - verification: production public proof smoke is 8/8; static sales launch audit
-  is 25/25; public trust claims audit is 41/41. Outstanding: Netlify form
+  is 27/27; public trust claims audit is 41/41. Outstanding: Netlify form
   notification config or daily submissions owner; `npm run
   audit:sales-payment-live` is still 2 pass / 1 warn / 4 fail; backend
   weekly-report/payment deploy requires the Lightsail runbook.

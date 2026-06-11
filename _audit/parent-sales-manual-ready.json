@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T15:03:15.163Z",
+  "generatedAt": "2026-06-11T15:09:05.594Z",
   "baseUrl": "https://genesisideas.school",
   "apiUrl": "https://api.genesisideas.school",
   "summary": {
-    "total": 12,
-    "pass": 8,
+    "total": 13,
+    "pass": 9,
     "warn": 4,
     "fail": 0
   },
@@ -28,7 +28,7 @@
       "status": "pass",
       "message": "Static parent sales launch gate passes.",
       "details": {
-        "stdout": "Parent sales launch audit passed: 25/25 checks."
+        "stdout": "Parent sales launch audit passed: 27/27 checks."
       }
     },
     {
@@ -86,6 +86,12 @@
       "id": "launch-checklist-boundary",
       "status": "pass",
       "message": "Launch checklist separates manual consultation sales from automated payment readiness.",
+      "details": {}
+    },
+    {
+      "id": "daily-operator-checklist",
+      "status": "pass",
+      "message": "Daily operator checklist gives same-day coverage rules for unresolved owner warnings.",
       "details": {}
     },
     {
