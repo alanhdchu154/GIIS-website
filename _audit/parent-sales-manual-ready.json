@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-06-11T13:53:25.598Z",
+  "baseUrl": "https://genesisideas.school",
+  "apiUrl": "https://api.genesisideas.school",
+  "summary": {
+    "total": 10,
+    "pass": 8,
+    "warn": 2,
+    "fail": 0
+  },
+  "verdict": "manual_sales_ready_with_recorded_warnings",
+  "results": [
+    {
+      "id": "production-proof-path",
+      "status": "pass",
+      "message": "Production public proof path passes live smoke.",
+      "details": {
+        "baseUrl": "https://genesisideas.school",
+        "summary": {
+          "total": 8,
+          "pass": 8,
+          "fail": 0
+        }
+      }
+    },
+    {
+      "id": "static-sales-launch",
+      "status": "pass",
+      "message": "Static parent sales launch gate passes.",
+      "details": {
+        "stdout": "Parent sales launch audit passed: 24/24 checks."
+      }
+    },
+    {
+      "id": "production-contact-form-markup",
+      "status": "pass",
+      "message": "Production homepage includes Netlify contact form markup.",
+      "details": {
+        "url": "https://genesisideas.school/",
+        "status": 200
+      }
+    },
+    {
+      "id": "production-consultation-form-markup",
+      "status": "pass",
+      "message": "Production consultation page includes Netlify consultation form markup.",
+      "details": {
+        "url": "https://genesisideas.school/consultation",
+        "status": 200
+      }
+    },
+    {
+      "id": "consultation-email-fallback",
+      "status": "pass",
+      "message": "Consultation page exposes admissions email fallback.",
+      "details": {
+        "url": "https://genesisideas.school/consultation"
+      }
+    },
+    {
+      "id": "netlify-notification-unverified",
+      "status": "warn",
+      "message": "Netlify form email notifications cannot be verified from this repo; confirm notification or daily submissions owner before relying on inbound leads.",
+      "details": {
+        "forms": [
+          "consultation",
+          "contact"
+        ],
+        "inbox": "admissions@genesisideas.school"
+      }
+    },
+    {
+      "id": "manual-payment-handoff-doc",
+      "status": "pass",
+      "message": "Manual payment handoff runbook is present and conservative.",
+      "details": {}
+    },
+    {
+      "id": "consultation-response-sop",
+      "status": "pass",
+      "message": "Consultation response SOP is present and conservative.",
+      "details": {}
+    },
+    {
+      "id": "launch-checklist-boundary",
+      "status": "pass",
+      "message": "Launch checklist separates manual consultation sales from automated payment readiness.",
+      "details": {}
+    },
+    {
+      "id": "payment-automation-boundary",
+      "status": "warn",
+      "message": "Automated payment is not ready; manual sales may proceed only through the admissions payment handoff.",
+      "details": {
+        "summary": {
+          "total": 7,
+          "pass": 2,
+          "warn": 1,
+          "fail": 4
+        },
+        "failures": [
+          "guided_monthly-configured",
+          "premium_monthly-configured",
+          "direct-api-health",
+          "stripe-webhook-fail-closed"
+        ]
+      }
+    }
+  ]
+}

@@ -377,6 +377,12 @@ Status: reconciled locally; pending production deploy execution.
   `docs/admissions-payment-handoff-runbook.md` and a sales-launch gate check.
   This lets GIIS start selling through consultation/path review while keeping
   automated Guided/Premium checkout blocked until the payment-live gate passes.
+- 2026-06-11 manual-sales readiness gate added
+  `npm run audit:sales-manual-ready`. Current production result is 8 pass / 2
+  warn / 0 fail with verdict `manual_sales_ready_with_recorded_warnings`: public
+  proof path, Netlify form markup, admissions email fallback, SOP, and handoff
+  docs pass; warnings remain for unverifiable Netlify notifications and blocked
+  payment automation. Evidence: `_audit/parent-sales-manual-ready.md`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -404,6 +410,9 @@ Next check:
 - Until automated checkout is green, use the manual payment handoff runbook:
   payment only after path review, authorized Stripe Dashboard invoice/payment
   link only, and portal activation after fit plus payment are both clear.
+- Run `npm run audit:sales-manual-ready` before outreach days. Outreach can
+  proceed when it has 0 fail, provided the Netlify submissions owner and manual
+  Stripe invoice/payment-link owner are assigned.
 
 ### 6. Parent Conversion & Retention Phases
 

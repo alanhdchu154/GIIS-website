@@ -10,7 +10,7 @@ backend payment/access launch.
 
 Local evidence is green:
 
-- `npm run audit:sales-launch` — 23/23 pass
+- `npm run audit:sales-launch` — 24/24 pass
 - `npm run audit:ops-browser -- --base-url http://localhost:3030` — 22 pass / 0 fail, including consultation, contact, and apply form submit success on desktop/mobile
 - `npm run audit:public-trust-claims` — 41 files pass
 - server Jest — 40/40 pass
@@ -25,6 +25,9 @@ Local evidence is green:
   `npm run audit:sales-payment-live` — currently 2 pass / 1 warn / 4 fail in
   production; this must pass before treating automated Guided/Premium checkout
   and Stripe webhook handling as ready.
+- manual-sales readiness gate available:
+  `npm run audit:sales-manual-ready` — currently 8 pass / 2 warn / 0 fail in
+  production. Verdict: `manual_sales_ready_with_recorded_warnings`.
 
 ## Current Production Status
 
@@ -196,3 +199,13 @@ Until then, use `docs/admissions-payment-handoff-runbook.md` for the manual
 payment fallback: payment only after path review, Stripe Dashboard invoice or
 payment link only from an authorized GIIS operator, receipt/Stripe ID recorded
 outside git, and portal activation only after fit plus payment are both clear.
+
+Daily operator check while automated payment remains gated:
+
+```bash
+npm run audit:sales-manual-ready
+```
+
+Start outreach only when this returns 0 fail. Current warnings are acceptable
+only if Alan has assigned a daily Netlify submissions owner and an authorized
+manual Stripe invoice/payment-link owner.
