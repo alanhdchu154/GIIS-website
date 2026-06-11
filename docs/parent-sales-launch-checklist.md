@@ -10,7 +10,7 @@ backend payment/access launch.
 
 Local evidence is green:
 
-- `npm run audit:sales-launch` — 36/36 pass
+- `npm run audit:sales-launch` — 37/37 pass
 - `npm run audit:ops-browser -- --base-url http://localhost:3030` — 22 pass / 0 fail, including consultation, contact, and apply form submit success on desktop/mobile
 - `npm run audit:public-trust-claims` — 41 files pass
 - server Jest — 40/40 pass
@@ -50,6 +50,10 @@ Local evidence is green:
   `npm run sales:operator-log -- --owner Alan --checked yes --manual-stripe-authorized yes`
   — writes a non-sensitive starter log outside git and prints the matching
   `sales:launch-mode` command.
+- guarded sales-day starter available:
+  `npm run sales:start-day -- --owner Alan --checked yes --manual-stripe-authorized yes`
+  — refuses to start without explicit owner/check/authorization flags, writes
+  the operator log outside git, then runs `sales:launch-mode`.
 - one-command same-day go/no-go gate available:
   `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
   — expected verdict today is `manual_sales_go_with_payment_boundary` until
@@ -341,6 +345,16 @@ This writes to the system temp directory by default and refuses to write inside
 the repo. Use a real same-day owner name only after that person has agreed to
 cover lead capture, response, WeChat follow-up, and manual Stripe handoff for
 the day.
+
+For the safest one-command daily start, run:
+
+```bash
+npm run sales:start-day -- --owner Alan --checked yes --manual-stripe-authorized yes
+```
+
+This command refuses to start if the owner, inbox-check confirmation, or Alan
+manual Stripe authorization flag is missing. It generates the outside-git log
+and immediately runs the launch-mode gate.
 
 The readiness gate supports a same-day operator log:
 

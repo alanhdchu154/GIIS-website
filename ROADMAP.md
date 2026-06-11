@@ -50,6 +50,10 @@ stays blocked until `npm run audit:sales-payment-live` returns 0 fail.
 Use `npm run sales:operator-log -- --owner <same-day-owner> --checked yes
 --manual-stripe-authorized yes` to generate the daily operator log outside git
 after the owner has explicitly agreed to cover that day.
+The safest daily start command is `npm run sales:start-day -- --owner
+<same-day-owner> --checked yes --manual-stripe-authorized yes`; it refuses to
+start without those explicit flags, writes the outside-git log, and runs
+launch-mode.
 The current single-command operating gate is `npm run sales:launch-mode --
 --operator-log /path/to/operator-log.md`; with sanitized same-day operator
 coverage it returns `manual_sales_go_with_payment_boundary`, and without
@@ -61,7 +65,8 @@ capture, response, WeChat, and manual Stripe ownership.
 Latest production frontend verification after `285f86d7`: `audit:sales-live`
 is 8/8, `audit:parent-journey` is 7/7, generated same-day operator-log
 `sales:launch-mode` returns `manual_sales_go_with_payment_boundary`, and static
-`audit:sales-launch` is 36/36 after adding the operator-log generator gate.
+`audit:sales-launch` is 37/37 after adding the guarded `sales:start-day`
+command.
 
 ## Active Lanes
 
@@ -494,6 +499,10 @@ Status: reconciled locally; pending production deploy execution.
   command so outreach days do not depend on hand-copying the template.
   Production smoke after push verified the generated log can drive
   `sales:launch-mode` to `manual_sales_go_with_payment_boundary`.
+- 2026-06-11 guarded sales-day starter added `npm run sales:start-day`. It
+  requires explicit `--owner`, `--checked yes`, and
+  `--manual-stripe-authorized yes`, generates the outside-git operator log, and
+  immediately runs `sales:launch-mode`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -538,6 +547,9 @@ Next check:
   <same-day-owner> --checked yes --manual-stripe-authorized yes` after the
   owner has explicitly agreed to cover lead capture, response, WeChat, and
   manual Stripe handoff for that day.
+- Prefer `npm run sales:start-day -- --owner <same-day-owner> --checked yes
+  --manual-stripe-authorized yes` for an outreach day because it generates the
+  log and immediately runs the go/no-go gate.
 - Prefer `npm run sales:launch-mode -- --operator-log /path/to/operator-log.md`
   as the Alan-facing daily operating command because it also verifies the
   parent journey and permanent owner-decision state before giving the allowed

@@ -34,6 +34,7 @@ const files = {
   dailyOperatorChecklist: read('docs/parent-sales-daily-operator-checklist.md'),
   dailyOperatorLogTemplate: read('docs/templates/parent-sales-daily-operator-log.md'),
   operatorLogGenerator: read('tools/ops-quality/generate_parent_sales_operator_log.js'),
+  startDayGate: read('tools/ops-quality/start_parent_sales_day.js'),
   readyTodayGate: read('tools/ops-quality/audit_parent_sales_ready_today.js'),
   ownerDecisionGate: read('tools/ops-quality/audit_parent_sales_owner_decisions.js'),
   launchModeGate: read('tools/ops-quality/audit_parent_sales_launch_mode.js'),
@@ -331,6 +332,17 @@ const checks = [
       /Do not store parent names/.test(files.operatorLogGenerator) &&
       /sales:launch-mode -- --operator-log/.test(files.operatorLogGenerator),
     message: 'Admissions must have a safe command to generate same-day operator logs outside git.',
+  },
+  {
+    id: 'parent-sales-start-day-command',
+    file: 'tools/ops-quality/start_parent_sales_day.js',
+    ok: /sales:start-day/.test(files.packageJson) &&
+      /Refusing to start a sales day without explicit same-day owner coverage/.test(files.startDayGate) &&
+      /--owner NAME/.test(files.startDayGate) &&
+      /--checked yes/.test(files.startDayGate) &&
+      /--manual-stripe-authorized yes/.test(files.startDayGate) &&
+      /audit_parent_sales_launch_mode\.js/.test(files.startDayGate),
+    message: 'Admissions must have a guarded one-command sales-day starter.',
   },
   {
     id: 'parent-sales-ready-today-gate',

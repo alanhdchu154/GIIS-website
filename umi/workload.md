@@ -17,6 +17,9 @@ evidence is explicitly needed.
 
 Next action:
 
+- Prefer the guarded daily command:
+  `npm run sales:start-day -- --owner <same-day-owner> --checked yes --manual-stripe-authorized yes`.
+  It generates the outside-git operator log and immediately runs launch-mode.
 - Generate the same-day operator log outside git with
   `npm run sales:operator-log -- --owner <same-day-owner> --checked yes --manual-stripe-authorized yes`
   only after that person agrees to cover lead capture, response, WeChat, and
@@ -39,8 +42,11 @@ Current Umi note:
 - 2026-06-11 `sales:operator-log` now creates the same-day operator log outside
   git and refuses repo paths, reducing the risk of committing parent/payment
   operational notes.
-- Static sales-launch is 36/36 after adding the operator-log generator contract
-  check.
+- 2026-06-11 `sales:start-day` now wraps operator-log generation plus
+  launch-mode and refuses to start without explicit owner, inbox-check, and
+  manual Stripe authorization flags.
+- Static sales-launch is 37/37 after adding the guarded sales-day starter
+  contract check.
 
 Acceptance:
 
