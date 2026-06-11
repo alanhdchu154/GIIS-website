@@ -359,13 +359,12 @@ Status: reconciled locally; pending production deploy execution.
   static production build passed 8/8 with
   `npm run audit:sales-live -- --base-url http://localhost:3030`; report:
   `_audit/parent-sales-live-smoke.md`.
-- Current production is not sales-launch ready yet: on 2026-06-11,
+- Production public proof path is live: on 2026-06-11, after pushing
+  `f984e651` to GitHub `origin/main` and letting Netlify deploy,
   `npm run audit:sales-live -- --base-url https://genesisideas.school` returned
-  3 pass / 5 fail because the live site is still missing the new
-  consultation-first homepage hero, `/consultation` intake copy/fields,
-  `/apply` pre-submit expectation panel, Trust Center consultation CTA copy, and
-  `/graduates` proof page copy. Evidence:
-  `_audit/parent-sales-live-production-smoke.md`.
+  8 pass / 0 fail for `/`, `/consultation`, `/apply`, `/pricing`,
+  `/trust-center`, `/graduates`, `/parent/demo`, and `/assessment-proof`.
+  Evidence: `_audit/parent-sales-live-production-smoke.md`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -381,19 +380,12 @@ Next check:
 - Keep the expanded browser/predeploy smoke green for the new parent-conversion
   routes and normal ops surfaces.
 - Execute the production payment deploy runbook before production backend deploy.
-- Decide whether to push all local commits together or split frontend-safe
-  changes from backend-runtime changes. Frontend-only Netlify deploy is safe for
-  `/consultation` and `/graduates`, but backend payment/weekly-report behavior
-  is not live until the Lightsail runbook is complete.
-- Before frontend-only deploy, configure Netlify `consultation` and `contact`
-  form notifications to `admissions@genesisideas.school` and test one
-  submission for each form after deploy.
-- After frontend-only deploy, run
-  `npm run audit:sales-live -- --base-url https://genesisideas.school`. This
-  proves only the public parent proof path; backend payment/webhook and weekly
-  report APIs still require the Lightsail runbook.
-- Until the production sales-live smoke returns 8/8, do not treat the public
-  site as ready for parent outreach.
+- Configure Netlify `consultation` and `contact` form notifications to
+  `admissions@genesisideas.school`, or assign a daily manual Netlify submissions
+  check before relying on inbound leads.
+- Treat the 8/8 production sales-live smoke as proof of the public parent proof
+  path only; backend payment/webhook and weekly report APIs still require the
+  Lightsail runbook.
 
 ### 6. Parent Conversion & Retention Phases
 

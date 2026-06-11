@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T05:09:56.704Z",
+  "generatedAt": "2026-06-11T12:26:11.169Z",
   "baseUrl": "https://genesisideas.school",
   "summary": {
     "total": 8,
-    "pass": 3,
-    "fail": 5
+    "pass": 8,
+    "fail": 0
   },
   "results": [
     {
@@ -19,15 +19,9 @@
       ],
       "url": "https://genesisideas.school/",
       "status": 200,
-      "title": "Genesis of Ideas International School",
-      "ok": false,
-      "errors": [
-        "Missing text: Book a Free Consultation",
-        "Missing text: Talk to the school before you apply.",
-        "Missing text: No payment is collected until the enrollment path is reviewed.",
-        "Missing text: Before You Pay",
-        "Missing text: Open Trust Center"
-      ]
+      "title": "Online US High School Diploma — Genesis of Ideas International School",
+      "ok": true,
+      "errors": []
     },
     {
       "path": "/consultation",
@@ -41,15 +35,9 @@
       ],
       "url": "https://genesisideas.school/consultation",
       "status": 200,
-      "title": "Page not found | Genesis of Ideas International School",
-      "ok": false,
-      "errors": [
-        "Missing text: Talk to the school before you decide.",
-        "Missing text: Book a free consultation",
-        "Missing text: Student situation",
-        "Missing text: Transcript available?",
-        "Missing text: Desired start timing"
-      ]
+      "title": "Book a Consultation | Genesis of Ideas International School",
+      "ok": true,
+      "errors": []
     },
     {
       "path": "/apply",
@@ -65,11 +53,8 @@
       "url": "https://genesisideas.school/apply",
       "status": 200,
       "title": "Application Path Review | Genesis of Ideas International School",
-      "ok": false,
-      "errors": [
-        "Missing text: Before You Submit",
-        "Missing text: After You Submit"
-      ]
+      "ok": true,
+      "errors": []
     },
     {
       "path": "/pricing",
@@ -98,10 +83,8 @@
       "url": "https://genesisideas.school/trust-center",
       "status": 200,
       "title": "Trust Center | Genesis of Ideas International School",
-      "ok": false,
-      "errors": [
-        "Missing text: Talk to the principal first"
-      ]
+      "ok": true,
+      "errors": []
     },
     {
       "path": "/graduates",
@@ -114,14 +97,9 @@
       ],
       "url": "https://genesisideas.school/graduates",
       "status": 200,
-      "title": "Page not found | Genesis of Ideas International School",
-      "ok": false,
-      "errors": [
-        "Missing text: Four students. Four years. Four transcripts you can trace.",
-        "Missing text: Reported offers",
-        "Missing text: UC Santa Barbara",
-        "Missing text: GIIS does not guarantee admission results"
-      ]
+      "title": "Graduate Stories | Genesis of Ideas International School",
+      "ok": true,
+      "errors": []
     },
     {
       "path": "/parent/demo",

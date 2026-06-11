@@ -22,20 +22,25 @@ Local evidence is green:
 
 ## Current Production Status
 
-Production is not launch-ready yet. On 2026-06-11, the current live site smoke
-returned 3 pass / 5 fail with:
+Production public proof path is live. On 2026-06-11, after pushing
+`f984e651` to GitHub `origin/main` and allowing Netlify to deploy,
+the live site smoke returned 8 pass / 0 fail for:
 
-- `/` missing the new consultation-first hero and no-payment-before-review copy
-- `/consultation` missing the new consultation intake page copy and fields
-- `/apply` missing the new pre-submit expectation panel
-- `/trust-center` missing the principal consultation CTA copy
-- `/graduates` missing the new graduate story proof page copy
+- `/`
+- `/consultation`
+- `/apply`
+- `/pricing`
+- `/trust-center`
+- `/graduates`
+- `/parent/demo`
+- `/assessment-proof`
 
 Evidence: `_audit/parent-sales-live-production-smoke.md`.
 
-Do not start parent outreach from the production URL until a frontend deploy
-completes and `npm run audit:sales-live -- --base-url https://genesisideas.school`
-returns 8/8 pass.
+This proves the public parent proof path only. Before relying on inbound leads,
+configure Netlify notifications for the `consultation` and `contact` forms to
+`admissions@genesisideas.school`, or assign a daily owner to check Netlify form
+submissions manually.
 
 ## What Can Launch First
 

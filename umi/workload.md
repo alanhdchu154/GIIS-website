@@ -232,14 +232,14 @@ the static production build, including consultation, contact, and apply form
 submit success on desktop/mobile.
 Production-proof smoke verification on 2026-06-11 is green locally:
 `CI=true BUILD_PATH=/tmp/giis-build-homepage-sales npm run build` and
-`npm run audit:sales-live -- --base-url http://localhost:3030` 8/8. Use the
-same command with `https://genesisideas.school` after Netlify deploy.
-Current production is not sales-launch ready: the 2026-06-11 production
-sales-live smoke returned 3/8, with missing new homepage consultation-first
-copy, `/consultation`, `/apply`, Trust Center consultation CTA, and
-`/graduates` proof-page copy. Evidence:
-`_audit/parent-sales-live-production-smoke.md`. Do not start outreach from the
-live URL until a frontend deploy completes and production smoke returns 8/8.
+`npm run audit:sales-live -- --base-url http://localhost:3030` 8/8.
+Production public proof path is also green: after pushing `f984e651` to GitHub
+`origin/main` and letting Netlify deploy on 2026-06-11,
+`npm run audit:sales-live -- --base-url https://genesisideas.school` returned
+8/8. Evidence: `_audit/parent-sales-live-production-smoke.md`. Remaining
+lead-capture ops: configure Netlify `consultation` and `contact` form
+notifications to `admissions@genesisideas.school`, or assign a daily owner to
+check Netlify submissions manually.
 cc review note: a bounded `claude -p` review-only pass was attempted for the
 admissions sales-ops diff on 2026-06-11, but it produced no output and was
 stopped. Treat this as a cc timeout, not approval.
