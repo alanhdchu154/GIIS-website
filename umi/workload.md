@@ -1,10 +1,11 @@
 # Umi Workload
 
-Last updated: 2026-06-04
+Last updated: 2026-06-11
 
-This file is the current GIIS worker handoff, not a historical worklog. Older
+This file is the current GIIS active Codex / cc worker handoff, not a historical worklog. Older
 completed items were removed from the active board; use `ROADMAP.md` for the
-project lane. Use git history only when old evidence is explicitly needed.
+durable project lane. Use `umi/reviews/`, reports, or git history when old
+evidence is explicitly needed.
 
 ## Active Handoff
 
@@ -18,8 +19,8 @@ project lane. Use git history only when old evidence is explicitly needed.
 
 Next action:
 
-- After the next scheduled run, review selected modules, cc logs, gate output,
-  upload result, and website manifest sync.
+- After each scheduled run, review selected modules, cc logs, gate output,
+  upload result, website manifest sync, and generated artifact cleanup needs.
 
 Acceptance:
 
@@ -34,6 +35,51 @@ Current Umi note:
 - This handoff is intentionally narrow: monitor and repair the 07:00 CT
   foundation run. Broader parent/admin stability and course-quality priorities
   belong in `ROADMAP.md`.
+- 2026-06-09 local storage note: `teaching-videos/` is active on T9 via symlink
+  to `/Volumes/T9-Active/Projects/giis-website/teaching-videos`.
+  `lesson_release_gate.py` can read the symlinked Biology Module 3 folder.
+  Caveat: git tracks files under `teaching-videos/`, so `git status` may show
+  mass deletions caused by the symlink. Do not stage or commit those deletions;
+  see `/Users/alanhdchu/umi-central/docs/local_storage_layout.md`.
+- 2026-06-05 check: the 07:00 CT run uploaded English I Modules 9/10/11, pushed
+  the automation commit, and post-run release gate / manifest alignment / build
+  checks were green. The next local hygiene issue is generated video review and
+  build artifacts, not upload recovery.
+- 2026-06-05 hygiene follow-up: `.gitignore` now suppresses clearly
+  regenerable review artifacts (`_review_*.json`, contact sheets, learning
+  checks, source/style packets, briefs, transcripts). Remaining untracked
+  `build_slides.py` files and daily `umi/handoffs/*.md` match historically
+  tracked file types. `umi/decisions.md` now records them as durable
+  source/evidence to track, not generated noise to ignore.
+- 2026-06-06 check: the 07:00 CT run produced/uploaded English I Modules 12/13
+  and Biology Module 2, then synced the English I Module 13 manifest. Current
+  verification is green: `lesson_release_gate.py --check` evaluated 29 ready /
+  0 blocked, manifest alignment returned 0 warnings across 29 lessons, and
+  `npm run build` compiled successfully. Remaining hygiene is to keep the new
+  `build_slides.py` and dated handoffs tracked as durable source/evidence.
+- 2026-06-09 check: Biology Module 3: Cell Membrane & Transport V2 now exists
+  as a local foundation-video draft under
+  `teaching-videos/biology-module-3-cell-membrane-transport-v2/`, with MP4,
+  transcript, contact sheet, reviewer JSON, learning check, source packet, and
+  style manifest. Fresh local verification: `lesson_release_gate.py --check`
+  returned ready 1 / blocked 0, and `foundation_video_gate.py` returned pass
+  with score 100. Do not treat it as externally complete until review approval,
+  gated upload / manifest sync if desired, and git hygiene are handled.
+- 2026-06-10 check: the 07:00 CT run selected Biology Modules 4/5/6. The
+  orchestrator approved Module 6 and marked Modules 4/5 `gate_failed`, but a
+  follow-up targeted rerun of `foundation_video_gate.py --render-mp4` passed for
+  both Modules 4 and 5 with score 100 and release-ready checks. Current global
+  verification is green: `lesson_release_gate.py --check` evaluated 33 ready /
+  0 blocked and manifest alignment returned 0 warnings across 33 lessons. The
+  next action is deploy hygiene, not raw video recovery: local `main` is ahead
+  of `origin/main` after rebase, with cc hardening commits, T9 video untrack,
+  Parent Conversion A-D, and handoff docs. Backend/Prisma/webhook risk now has
+  a runbook and one signature-handling blocker fixed; production still needs
+  DB/env/Lightsail execution before backend deploy.
+- New cc work should be written as a bounded handoff in `umi/handoffs/` when it
+  needs more than this daily monitor. Include Umi first look, pass type, current
+  change set, open questions for cc, review breadth, allowed changes, and
+  expected worker report.
 - If this file ever disagrees with `/Users/alanhdchu/umi-central/goals.md` on
   schedule or priority, treat central goals as the escalation source and stop
   before running the wrong automation.
@@ -45,6 +91,184 @@ Stop conditions:
   style manifest.
 - AP / College Board / CEEB / accreditation-sensitive claims.
 - any attempt to use `upload_lesson.py --force-without-approval`.
+
+### cc hardening session 2026-06-10 — reconciled, pending production deploy
+
+- owner: Codex (cc executed; Codex to reconcile + deploy)
+- mode: cc-first implementation, Codex-reviewed/rebased locally
+- status: local `main` is ahead of `origin/main`, NOT pushed. Pushing `main`
+  to GitHub automatically triggers the Netlify frontend deploy, but does not
+  deploy/restart the Lightsail backend.
+- 2026-06-10 Codex resolution: rebased onto origin, resolved the
+  `foundation_daily_orchestrator.py` symlink/manifest conflict, removed tracked
+  `teaching-videos/*` artifacts from the git index, restored
+  `teaching-videos` as an ignored T9 symlink, committed Parent Conversion A-D,
+  and committed daily foundation-video handoff docs. Do not deploy the backend
+  stack until the production payment deploy runbook is executed.
+
+Local commits (oldest→newest):
+
+- `aa0e85c2` backend hardening — Stripe webhook fail-closed when
+  `STRIPE_WEBHOOK_SECRET` unset in prod; webhook idempotency via new
+  `ProcessedStripeEvent` model; CSRF (cookies SameSite none→lax, API is
+  same-origin via Netlify proxy); CORS refuses credentialed wildcard in prod;
+  rate-limit applications/checkout/verify + auth limiter 60→20; constant-time
+  login (dummy bcrypt) for admin/student/parent; shared PrismaClient singleton
+  `server/src/lib/prisma.js` (was 19 per-module pools); fix `GET
+  /api/students/audit` shadowed by `/:id`; paid-but-unlinked subscription alert
+  (system AuditLog row + `/api/subscriptions` `unlinkedPaid` count).
+- `1d0aea31` frontend — fix Apply form remount-on-keystroke (only enrollment
+  path was unusable); remove dead ImgSlider + Discovery/FacultyGraduates + its
+  banned SchoolLogo university logos; shrink seal assets ~5MB; About avatar alt
+  + homepage SEO title; admin "Paid · Unlinked" metric/banner.
+- `4cce630a` CI — `quality-gates` job (audit:public-trust-claims,
+  staged-artifacts, pathways) + non-blocking npm audit; pin Node 20
+  (`.nvmrc` + Netlify `NODE_VERSION` + root `engines`).
+- `d4e5a70f` **pipeline fix** — `foundation_daily_orchestrator.commit_and_push`
+  used to `return 0` for the whole commit when `teaching-videos` is a symlink,
+  so `public/data/lessons-manifest.json` (main repo, read by the site) stopped
+  syncing → uploaded YouTube videos never appeared on the site. Now the symlink
+  branch stages/commits ONLY the manifest by exact path (never the on-T9 lesson
+  tree).
+- `ae6a7cb9` cruft — remove unreferenced tracked assets ~4MB (`src/img/logo.png`,
+  `src/img/Homepage/StuPhoto/`, `public/img/Logo.jpg`).
+- `0c943bad` git hygiene — stop tracking `teaching-videos/*`; T9 symlink is
+  ignored and website state stays in `public/data/lessons-manifest.json`.
+- `e53b176c` parent conversion — consultation, graduate stories, admin-reviewed
+  weekly report flow, advisor weekly SOP, and weekly-report backend send guard.
+- `38cd767e` docs — track daily foundation-video handoffs.
+- `0576b116` docs — update GIIS conflict-resolution status.
+- `dae3023a` docs — record post-rebase verification.
+- payment deploy readiness — fixed Stripe webhook verification mode so a
+  configured signing secret with a missing `stripe-signature` rejects instead
+  of parsing unsigned JSON; added
+  `docs/production-payment-deploy-runbook.md`,
+  `umi/reviews/2026-06-11-payment-deploy-readiness.md`, and deploy/env docs.
+- sales-launch readiness — added `npm run audit:sales-launch` and
+  `docs/parent-sales-launch-checklist.md` so the frontend proof path and backend
+  payment deploy gates stay separate.
+- conflict closeout — added `npm run audit:sales-launch` to GitHub CI
+  `quality-gates`, updated the CI comment, and classified the local commit
+  stack in `docs/parent-sales-launch-checklist.md`.
+- admissions sales-ops pass — enriched `/consultation` intake fields, added
+  `docs/admissions-consultation-response-sop.md`, and expanded
+  `audit:sales-launch` so Netlify field alignment plus the response SOP are
+  gated before launch.
+- apply-path clarity pass — `/apply` now explains new-student vs transfer
+  records before submission, says admissions reviews within one business day,
+  links to consultation fallback, and keeps no-payment-before-review visible.
+  Browser smoke now covers `/apply` on desktop and mobile.
+- production-proof smoke pass — added `npm run audit:sales-live` for the
+  frontend-only deploy check. It validates `/`, `/consultation`, `/apply`,
+  `/pricing`, `/trust-center`, `/graduates`, `/parent/demo`, and
+  `/assessment-proof` against a provided base URL.
+- homepage sales hardening — changed the homepage hero to lead with free
+  consultation, added no-payment-before-review copy, linked Trust Center from
+  the first viewport, and expanded the local sales gates to catch homepage
+  regressions before deploy.
+- consultation form reliability — `/consultation` now treats Netlify submit
+  failures as errors instead of showing the success state, exposes submitting
+  and retry/error states, and `audit:ops-browser` includes a desktop/mobile
+  consultation submit success flow.
+- homepage contact form reliability — the footer inquiry form now has the same
+  success-only-on-OK behavior, the hidden Netlify contact form includes the
+  `pathway` field, and `audit:ops-browser` includes a desktop/mobile contact
+  submit success flow.
+- apply submit reliability — `/apply` now handles non-JSON API failures safely,
+  and `audit:ops-browser` includes a desktop/mobile transfer application submit
+  success flow against the mocked `/api/applications` endpoint.
+
+Codex next actions (do in order):
+
+1. Decide frontend-only vs full backend deploy. Current Umi recommendation:
+   frontend-only Netlify first, then backend payment/access in a separate
+   Lightsail window.
+2. **Before frontend-only deploy**: configure the Netlify `consultation` and
+   `contact` form notifications to `admissions@genesisideas.school`, then test
+   one submit for each form after deploy.
+3. Assign consultation response ownership: first response, WeChat follow-up,
+   and principal escalation for red-flag requests.
+4. **After frontend-only deploy**: run
+   `npm run audit:sales-live -- --base-url https://genesisideas.school` and
+   treat 8/8 pass as the public proof-path acceptance gate.
+5. **Before backend deploy**: follow
+   `docs/production-payment-deploy-runbook.md`: production DB backup,
+   `npm run db:push`, `ProcessedStripeEvent` table verification, explicit
+   `STRIPE_WEBHOOK_SECRET` and `CORS_ORIGIN`, no
+   `ALLOW_UNVERIFIED_STRIPE_WEBHOOK=1`, Lightsail restart, Stripe webhook smoke.
+
+Still open / not done (cc deliberately did not):
+
+- checkout/auth route tests (need supertest + DB/mock).
+- CRA→Vite migration (large; changes build chain, `REACT_APP_`→`import.meta.env`,
+  index.html, Netlify) — schedule as its own scoped task.
+- Local-only regenerable dirs awaiting owner OK to clear: `demo-output/` (135M,
+  `npm run make-demo`), `server/tmp/` (25M graduation PDFs).
+
+Verification at handoff: `npm run build` green, server Jest green,
+`prisma validate` green, all touched files `node --check`/`py_compile` clean.
+Codex post-rebase verification before payment-readiness patch: full server Jest
+36/36 pass,
+`audit:public-trust-claims` 41 files pass, production build passes with
+`BUILD_PATH=/tmp/giis-build-final`, and expanded parent/admin browser smoke
+passes 14/0 across `/consultation`, `/graduates`, `/parent/dashboard`,
+`/admin`, `/admin/applications`, `/admin/assignments`, and
+`/admin/weekly-report`. Payment deploy readiness verification on 2026-06-11:
+full server Jest 40/40, `npx prisma validate`, `audit:public-trust-claims` 41
+files pass, production build passes with
+`BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded ops-browser smoke
+passes 14/0. Conflict closeout verification on 2026-06-11 is green:
+`npm run audit:sales-launch`, `npm run audit:public-trust-claims`,
+`npm run audit:staged-artifacts`, `npm run audit:pathways`,
+`CI=true npm test -- --watchAll=false`,
+`CI=true BUILD_PATH=/tmp/giis-build-conflict-check npm run build`, and
+`git diff --check`.
+Apply/sales readiness verification on 2026-06-11 is green:
+`npm run audit:sales-launch` 23/23, `npm run audit:public-trust-claims`,
+`CI=true npm test -- --watchAll=false`,
+`CI=true BUILD_PATH=/tmp/giis-build-apply-submit npm run build`, and
+`npm run audit:ops-browser -- --base-url http://localhost:3030` 22/0 against
+the static production build, including consultation, contact, and apply form
+submit success on desktop/mobile.
+Production-proof smoke verification on 2026-06-11 is green locally:
+`CI=true BUILD_PATH=/tmp/giis-build-homepage-sales npm run build` and
+`npm run audit:sales-live -- --base-url http://localhost:3030` 8/8. Use the
+same command with `https://genesisideas.school` after Netlify deploy.
+Current production is not sales-launch ready: the 2026-06-11 production
+sales-live smoke returned 3/8, with missing new homepage consultation-first
+copy, `/consultation`, `/apply`, Trust Center consultation CTA, and
+`/graduates` proof-page copy. Evidence:
+`_audit/parent-sales-live-production-smoke.md`. Do not start outreach from the
+live URL until a frontend deploy completes and production smoke returns 8/8.
+cc review note: a bounded `claude -p` review-only pass was attempted for the
+admissions sales-ops diff on 2026-06-11, but it produced no output and was
+stopped. Treat this as a cc timeout, not approval.
+
+### Parent-conversion Phases A–D 2026-06-10 — committed locally, pending deploy
+
+- owner: cc-cowork (executed with Alan live approval); Codex to review diff
+- status: committed locally as `e53b176c`, NOT pushed / NOT deployed.
+- scope: see `ROADMAP.md` lane 6 status block. Files: new
+  `src/components/pages/Consultation/ConsultationPage.js`,
+  `src/components/pages/Graduates/GraduateStoriesPage.js`,
+  `src/components/pages/Admin/AdminWeeklyReportPage.js`; edited `src/App.js`,
+  `public/index.html` (new Netlify `consultation` form),
+  `src/i18n/siteStrings.js`, `PricingPage.js`, `TrustCenterPage.js`,
+  `AdmissionMain.js`, `SuccessStories.js` (initial+surname names),
+  `AdminDashboard.js`, `AdminProgressPage.js`,
+  `server/src/lib/weeklyReportService.js`, `server/src/lib/mailer.js`,
+  `server/src/routes/weekly-report.js`.
+- Alan decisions on record: consultation = in-site form to admissions inbox;
+  principal = sole face; graduate names = initial + surname (real data);
+  weekly report = admin review before send.
+- verification: build green (BUILD_PATH=/tmp in sandbox), trust-claims audit
+  41 pass, server jest 40/40, expanded ops-browser smoke 14/0 incl.
+  `/consultation`, `/graduates`, and `/admin/weekly-report`. Outstanding:
+  Netlify form notification config for `consultation` at deploy.
+- Codex review fix: `server/src/routes/weekly-report.js` now rejects
+  non-dry-run sends unless a non-empty selected `studentIds` list is provided,
+  and `force` requires an explicit `confirmForce: "resend_this_week"` guard.
+  Added `server/src/routes/weekly-report.test.js`; targeted Jest passes.
 
 ## Paused
 

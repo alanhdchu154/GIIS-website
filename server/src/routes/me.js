@@ -1,9 +1,8 @@
 const express = require('express');
-const { PrismaClient } = require('@prisma/client');
 const { authenticate } = require('../middleware/auth');
 const { ensureStudentMutable } = require('../lib/studentArchive');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 const EDITABLE_FIELDS = ['name', 'gender', 'parentGuardian', 'address', 'city', 'province', 'zipCode'];

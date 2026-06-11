@@ -44,7 +44,7 @@ export default function AdminSubscriptionsPage() {
   const session = getAdminSession();
   const [status, setStatus] = useState('all');
   const [subscriptions, setSubscriptions] = useState([]);
-  const [summary, setSummary] = useState({ total: 0, byStatus: {}, unlinked: 0 });
+  const [summary, setSummary] = useState({ total: 0, byStatus: {}, unlinked: 0, unlinkedPaid: 0 });
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [savingId, setSavingId] = useState('');
@@ -81,7 +81,7 @@ export default function AdminSubscriptionsPage() {
       if (!subsRes.ok) throw new Error(subsData.error || 'Failed to load subscriptions');
       if (!studentsRes.ok) throw new Error(studentsData.error || 'Failed to load students');
       setSubscriptions(subsData.subscriptions || []);
-      setSummary(subsData.summary || { total: 0, byStatus: {}, unlinked: 0 });
+      setSummary(subsData.summary || { total: 0, byStatus: {}, unlinked: 0, unlinkedPaid: 0 });
       setStudents(studentsData.students || []);
     } catch (err) {
       setError(err.message);
@@ -141,7 +141,13 @@ export default function AdminSubscriptionsPage() {
           <Metric label="Active" value={summary.byStatus?.active || 0} />
           <Metric label="Past Due" value={summary.byStatus?.past_due || 0} />
           <Metric label="Unlinked" value={summary.unlinked || 0} warn={(summary.unlinked || 0) > 0} />
+          <Metric label="Paid · Unlinked" value={summary.unlinkedPaid || 0} warn={(summary.unlinkedPaid || 0) > 0} />
         </div>
+        {(summary.unlinkedPaid || 0) > 0 && (
+          <div style={{ background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 13, color: '#5c4a12' }}>
+            ⚠️ {summary.unlinkedPaid} paid subscription{(summary.unlinkedPaid || 0) > 1 ? 's' : ''} {(summary.unlinkedPaid || 0) > 1 ? 'are' : 'is'} not linked to a student — the parent has paid but no student account is being activated. Link {(summary.unlinkedPaid || 0) > 1 ? 'them' : 'it'} below.
+          </div>
+        )}
 
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
           {STATUSES.map((s) => (

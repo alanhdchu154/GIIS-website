@@ -934,11 +934,23 @@ def update_state_row(state: dict[str, Any], candidate: Candidate, *, status: str
 
 def commit_and_push(approved_slugs: list[str]) -> int:
     if TEACHING_ROOT.is_symlink():
-        print(
-            "[git] auto-commit skipped: teaching-videos is a symlink; "
-            "refusing to stage tracked lesson deletions"
+        # teaching-videos lives on an external volume (T9) and is intentionally not
+        # tracked here. The lesson artifacts must NOT be staged (that would commit
+        # mass deletions of the old tracked tree), but the website manifest lives in
+        # the main repo and must still be committed/pushed so the site reflects newly
+        # uploaded videos. Stage ONLY the manifest by exact path.
+        manifest = "public/data/lessons-manifest.json"
+        if not (ROOT / manifest).exists():
+            print("[git] manifest missing; nothing to commit (teaching-videos is a symlink)")
+            return 0
+        run_checked(["git", "add", "--", manifest])
+        if subprocess.run(["git", "diff", "--cached", "--quiet", "--", manifest], cwd=ROOT).returncode == 0:
+            print("[git] no manifest changes to commit (teaching-videos is a symlink)")
+            return 0
+        rc = run_checked(
+            ["git", "commit", "-m", f"auto: sync lessons manifest {dt.datetime.now().date().isoformat()}", "--", manifest]
         )
-        return 0
+        return rc if rc else run_checked(["git", "push"])
     paths = [
         "public/data/lessons-manifest.json",
         str(APPROVAL_PATH.relative_to(ROOT)),

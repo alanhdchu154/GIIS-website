@@ -1,7 +1,6 @@
 const express = require('express');
 const { z } = require('zod');
 const bcrypt = require('bcryptjs');
-const { PrismaClient } = require('@prisma/client');
 const {
   authenticate,
   requireAdmin,
@@ -43,7 +42,7 @@ const studentProfileSchema = z.object({
   transcriptDate: dateSchema,
 });
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 // Florida 24-credit graduation framework (see CLAUDE.md). A student who has
@@ -726,6 +725,41 @@ router.post('/:id/care-logs', authenticate, requireAdmin, async (req, res) => {
   res.status(201).json({ log: serializeCareLog(log) });
 });
 
+/**
+ * Audit log feed (admin). MUST be registered before `/:id` — otherwise Express
+ * matches `/audit` against `/:id` (id="audit") and this never runs.
+ */
+router.get('/audit', authenticate, requireAdmin, async (req, res) => {
+  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+  const limit = Math.min(100, Math.max(1, parseInt(req.query.limit, 10) || 50));
+  const studentId = req.query.studentId || undefined;
+
+  const where = studentId ? { studentId } : {};
+  const [total, logs] = await Promise.all([
+    prisma.auditLog.count({ where }),
+    prisma.auditLog.findMany({
+      where,
+      orderBy: { createdAt: 'desc' },
+      skip: (page - 1) * limit,
+      take: limit,
+      select: {
+        id: true,
+        action: true,
+        studentId: true,
+        actorRole: true,
+        actorEmail: true,
+        createdAt: true,
+        student: { select: { name: true } },
+      },
+    }),
+  ]);
+
+  res.json({
+    logs,
+    pagination: { page, limit, total, totalPages: Math.ceil(total / limit) },
+  });
+});
+
 /** Full student + nested transcript — admin or that student */
 router.get('/:id', authenticate, requireStudentOrAdminForStudentParam, async (req, res) => {
   const isAdmin = req.auth?.role === 'admin';
@@ -1262,35 +1296,4 @@ router.get('/:id/audit-trail', authenticate, requireAdmin, async (req, res) => {
 });
 
 /** Audit log — admin only */
-router.get('/audit', authenticate, requireAdmin, async (req, res) => {
-  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
-  const limit = Math.min(100, Math.max(1, parseInt(req.query.limit, 10) || 50));
-  const studentId = req.query.studentId || undefined;
-
-  const where = studentId ? { studentId } : {};
-  const [total, logs] = await Promise.all([
-    prisma.auditLog.count({ where }),
-    prisma.auditLog.findMany({
-      where,
-      orderBy: { createdAt: 'desc' },
-      skip: (page - 1) * limit,
-      take: limit,
-      select: {
-        id: true,
-        action: true,
-        studentId: true,
-        actorRole: true,
-        actorEmail: true,
-        createdAt: true,
-        student: { select: { name: true } },
-      },
-    }),
-  ]);
-
-  res.json({
-    logs,
-    pagination: { page, limit, total, totalPages: Math.ceil(total / limit) },
-  });
-});
-
 module.exports = router;

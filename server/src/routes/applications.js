@@ -1,5 +1,4 @@
 const express = require('express');
-const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const { authenticate, requireAdmin } = require('../middleware/auth');
@@ -9,7 +8,7 @@ const {
   studentLoginEmailForName,
 } = require('../lib/parentCredentials');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 async function recordEmailLog({ kind, recipient, studentId, result }) {

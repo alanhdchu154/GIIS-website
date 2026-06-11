@@ -250,25 +250,9 @@ export default function AdminDashboard({ language }) {
               <>
                 <div onClick={() => setToolsOpen(false)} style={{ position: 'fixed', inset: 0, zIndex: 1040 }} />
                 <div style={{ position: 'absolute', right: 0, top: '112%', zIndex: 1041, minWidth: 240, background: '#fff', border: '1px solid #e3e8f2', borderRadius: 8, boxShadow: '0 8px 24px rgba(26,45,90,0.15)', padding: 6 }}>
-                  <button
-                    type="button"
-                    style={MENU_ITEM_STYLE}
-                    title="Send weekly progress digest to all parents with active subscriptions"
-                    onClick={async () => {
-                      setToolsOpen(false);
-                      if (!window.confirm(isEn ? 'Send weekly progress email to all active parents now?' : '现在发送周报给所有在订家长？')) return;
-                      try {
-                        const r = await fetch(`${API_BASE}/api/admin/weekly-report`, { method: 'POST', credentials: 'include' });
-                        const d = await r.json();
-                        if (!r.ok) throw new Error(d.error || 'Failed');
-                        alert(`Weekly report sent: ${d.sent} emails sent, ${d.skipped} skipped.`);
-                      } catch (e) {
-                        alert(`Error: ${e.message}`);
-                      }
-                    }}
-                  >
-                    {isEn ? '📧 Send weekly parent report' : '📧 发送家长周报'}
-                  </button>
+                  <Link to="/admin/weekly-report" style={MENU_ITEM_STYLE} onClick={() => setToolsOpen(false)}>
+                    {isEn ? '📧 Weekly parent report (review & send)' : '📧 家长周报（审核后发送）'}
+                  </Link>
                   <button
                     type="button"
                     style={MENU_ITEM_STYLE}

@@ -25,20 +25,23 @@ export function getNavStrings(language) {
         ],
     dropdownAdmission: en
       ? [
-          { label: 'Admission Overview', to: '/admission' },
-          { label: 'Transfer Students',  to: '/transfer-students' },
-          { label: 'Tuition & Pricing',  to: '/pricing' },
-          { label: 'Apply Now',          to: '/apply' },
+          { label: 'Admission Overview',     to: '/admission' },
+          { label: 'Transfer Students',      to: '/transfer-students' },
+          { label: 'Tuition & Pricing',      to: '/pricing' },
+          { label: 'Book a Consultation',    to: '/consultation' },
+          { label: 'Apply Now',              to: '/apply' },
         ]
       : [
           { label: '招生概览',   to: '/admission' },
           { label: '转学生入学', to: '/transfer-students' },
           { label: '学费与价格', to: '/pricing' },
+          { label: '预约咨询',   to: '/consultation' },
           { label: '立即申请',   to: '/apply' },
         ],
     dropdownResources: en
       ? [
           { label: 'Trust Center',             to: '/trust-center' },
+          { label: 'Graduate Stories',         to: '/graduates' },
           { label: 'Lesson Library',           to: '/lessons' },
           { label: 'Assessment Proof',         to: '/assessment-proof' },
           { label: 'Parent Dashboard Preview', to: '/parent/demo' },
@@ -48,6 +51,7 @@ export function getNavStrings(language) {
         ]
       : [
           { label: '信任中心',       to: '/trust-center' },
+          { label: '毕业生足迹',     to: '/graduates' },
           { label: '课程库',         to: '/lessons' },
           { label: '评量证据',       to: '/assessment-proof' },
           { label: '家长面板预览',   to: '/parent/demo' },

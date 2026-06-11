@@ -1,13 +1,63 @@
 {
-  "generatedAt": "2026-06-05T03:34:58.269Z",
-  "baseUrl": "http://localhost:3000",
+  "generatedAt": "2026-06-11T11:40:54.311Z",
+  "baseUrl": "http://localhost:3030",
   "summary": {
-    "total": 8,
-    "pass": 8,
+    "total": 22,
+    "pass": 22,
     "fail": 0
   },
   "checks": [
     {
+      "name": "consultation",
+      "path": "/consultation",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "consultation submit",
+      "path": "/consultation",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "homepage contact submit",
+      "path": "/",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "graduate stories",
+      "path": "/graduates",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "apply",
+      "path": "/apply",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "apply submit",
+      "path": "/apply",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/applications": 1
+      }
+    },
+    {
       "name": "parent dashboard",
       "path": "/parent/dashboard",
       "viewport": "desktop",
@@ -48,6 +98,66 @@
       }
     },
     {
+      "name": "admin weekly report",
+      "path": "/admin/weekly-report",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/admin/weekly-report": 1
+      }
+    },
+    {
+      "name": "consultation",
+      "path": "/consultation",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "consultation submit",
+      "path": "/consultation",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "homepage contact submit",
+      "path": "/",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "graduate stories",
+      "path": "/graduates",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "apply",
+      "path": "/apply",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "apply submit",
+      "path": "/apply",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/applications": 1
+      }
+    },
+    {
       "name": "parent dashboard",
       "path": "/parent/dashboard",
       "viewport": "mobile",
@@ -85,6 +195,16 @@
       "issues": [],
       "endpointCounts": {
         "/api/admin/assignments": 1
+      }
+    },
+    {
+      "name": "admin weekly report",
+      "path": "/admin/weekly-report",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/admin/weekly-report": 1
       }
     }
   ]

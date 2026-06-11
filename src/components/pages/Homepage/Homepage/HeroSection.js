@@ -76,13 +76,27 @@ function HeroSection({ language }) {
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '14px' }}>
-            <Link to="/apply" style={ctaPrimary}>
-              {isEn ? 'Start Your Application →' : '开始申请 →'}
+            <Link to="/consultation" style={ctaPrimary}>
+              {isEn ? 'Book a Free Consultation →' : '预约免费咨询 →'}
             </Link>
-            <a href="#demo" style={ctaSecondary}>
+            <Link to="/apply" style={ctaSecondary}>
+              {isEn ? 'Start Your Application' : '开始申请'}
+            </Link>
+          </div>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.62)', lineHeight: 1.5, margin: '0 0 10px' }}>
+            {isEn
+              ? 'Talk to the school before you apply. No payment is collected until the enrollment path is reviewed.'
+              : '申请前先和学校确认路径。招生审核完成前不会收取学费。'}
+          </p>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.52)', margin: '0 0 14px' }}>
+            <a href="#demo" style={{ color: 'rgba(255,255,255,0.72)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>
               {isEn ? 'Watch the 80-sec tour' : '观看 80 秒导览'}
             </a>
-          </div>
+            <span style={{ margin: '0 8px' }}>·</span>
+            <Link to="/trust-center" style={{ color: 'rgba(255,255,255,0.72)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>
+              {isEn ? 'Open Trust Center' : '打开信任中心'}
+            </Link>
+          </p>
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.45)', margin: '0 0 24px' }}>
             {isEn ? (
               <>Already enrolled?{' '}

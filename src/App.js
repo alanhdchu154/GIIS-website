@@ -60,12 +60,15 @@ const ParentTranscriptPage = lazy(() => import('./components/pages/Parent/Parent
 const AssignmentQueue = lazy(() => import('./components/pages/Admin/AssignmentQueue'));
 const ApplicationsQueue = lazy(() => import('./components/pages/Admin/ApplicationsQueue'));
 const AdminSubscriptionsPage = lazy(() => import('./components/pages/Admin/AdminSubscriptionsPage'));
+const AdminWeeklyReportPage = lazy(() => import('./components/pages/Admin/AdminWeeklyReportPage'));
 const ApplyForm = lazy(() => import('./components/pages/Apply/ApplyForm'));
 const VerifyPage = lazy(() => import('./components/pages/Verify/VerifyPage'));
 const WelcomePage = lazy(() => import('./components/pages/Welcome/WelcomePage'));
 const TransferStudentsPage = lazy(() => import('./components/pages/TransferStudents/TransferStudentsPage'));
 const TrustCenterPage = lazy(() => import('./components/pages/TrustCenter/TrustCenterPage'));
 const AssessmentProofPage = lazy(() => import('./components/pages/AssessmentProof/AssessmentProofPage'));
+const ConsultationPage = lazy(() => import('./components/pages/Consultation/ConsultationPage'));
+const GraduateStoriesPage = lazy(() => import('./components/pages/Graduates/GraduateStoriesPage'));
 
 const LANGUAGE_STORAGE_KEY = 'giis-language';
 
@@ -176,6 +179,8 @@ function App() {
          <Route path="/pricing" element={<PricingPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/transfer-students" element={<TransferStudentsPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/trust-center" element={<TrustCenterPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/consultation" element={<ConsultationPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/graduates" element={<GraduateStoriesPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/assessment-proof" element={<AssessmentProofPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/parent/demo" element={<ParentDashboardDemo language={language} />} />
          <Route path="/parent/login" element={<ParentLogin language={language} />} />
@@ -184,6 +189,7 @@ function App() {
          <Route path="/admin/assignments" element={<AssignmentQueue />} />
          <Route path="/admin/applications" element={<ApplicationsQueue />} />
          <Route path="/admin/subscriptions" element={<AdminSubscriptionsPage />} />
+         <Route path="/admin/weekly-report" element={<AdminWeeklyReportPage />} />
          <Route path="/apply" element={<ApplyForm language={language} />} />
          <Route path="/welcome" element={<WelcomePage language={language} />} />
          <Route path="/verify/:code" element={<VerifyPage />} />

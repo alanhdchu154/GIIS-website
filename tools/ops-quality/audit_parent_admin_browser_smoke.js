@@ -10,6 +10,124 @@ const DEFAULT_JSON_REPORT = path.join(ROOT, '_audit', 'parent-admin-browser-smok
 
 const ROUTES = [
   {
+    name: 'consultation',
+    path: '/consultation',
+    expected: [
+      'Talk to the school before you decide.',
+      'Shiyu Zhang, Ph.D.',
+      'What a consultation covers',
+      'Book a free consultation',
+      'Request consultation',
+    ],
+  },
+  {
+    name: 'consultation submit',
+    path: '/consultation',
+    expected: [
+      'Request received',
+      'We will reach out within one business day',
+      'Trust Center',
+      'Parent dashboard preview',
+    ],
+    afterLoad: async (page) => {
+      await page.route('**/', async (route) => {
+        if (route.request().method() === 'POST') {
+          return route.fulfill({ status: 200, contentType: 'text/plain', body: 'ok' });
+        }
+        return route.fallback();
+      });
+      const app = page.locator('#root');
+      await app.locator('input[name="parentName"]').fill('Jordan Rivera');
+      await app.locator('input[name="email"]').fill('jordan@example.com');
+      await app.locator('input[name="parentWeChat"]').fill('giis-parent');
+      await app.locator('select[name="studentGrade"]').selectOption('10');
+      await app.locator('select[name="studentSituation"]').selectOption('transfer');
+      await app.locator('select[name="transcriptAvailable"]').selectOption('partial');
+      await app.locator('select[name="desiredStart"]').selectOption('this-month');
+      await app.locator('select[name="preferredTime"]').selectOption('weekday-evening');
+      await app.locator('textarea[name="message"]').fill('We need a transfer-credit review before deciding.');
+      await page.getByRole('button', { name: /Request consultation/ }).click();
+      await page.getByText('Request received').waitFor({ state: 'visible', timeout: 5000 });
+    },
+  },
+  {
+    name: 'homepage contact submit',
+    path: '/',
+    expected: [
+      "We'll be in touch!",
+      'Thank you for your inquiry',
+    ],
+    afterLoad: async (page) => {
+      await page.route('**/', async (route) => {
+        if (route.request().method() === 'POST') {
+          return route.fulfill({ status: 200, contentType: 'text/plain', body: 'ok' });
+        }
+        return route.fallback();
+      });
+      const app = page.locator('#root');
+      await app.locator('input[name="studentName"]').fill('Alex Rivera');
+      await app.locator('select[name="grade"]').selectOption('10');
+      await app.locator('select[name="pathway"]').selectOption('CS & Engineering');
+      await app.locator('input[name="parentWeChat"]').fill('giis-parent');
+      await app.locator('input[name="email"]').fill('jordan@example.com');
+      await app.locator('textarea[name="message"]').fill('We want to understand tuition and transfer timing.');
+      await page.getByRole('button', { name: /Submit Inquiry/ }).click();
+      await page.getByText("We'll be in touch!").waitFor({ state: 'visible', timeout: 5000 });
+    },
+  },
+  {
+    name: 'graduate stories',
+    path: '/graduates',
+    expected: [
+      'Four students. Four years. Four transcripts you can trace.',
+      'Y. Yang',
+      'Reported offers',
+      'UC Santa Barbara',
+      'GIIS does not guarantee admission results',
+    ],
+  },
+  {
+    name: 'apply',
+    path: '/apply',
+    expected: [
+      'Know the right path before you pay.',
+      'Before You Submit',
+      'After You Submit',
+      'New student',
+      'Transfer student',
+      'No payment is collected here',
+    ],
+  },
+  {
+    name: 'apply submit',
+    path: '/apply',
+    expected: [
+      'Transfer Path Review received',
+      'Admissions will review',
+      'jordan@example.com',
+      'Open Trust Center',
+    ],
+    endpointCaps: { '/api/applications': 1 },
+    afterLoad: async (page) => {
+      await page.getByLabel('Student Full Name').fill('Alex Rivera');
+      await page.getByLabel('Date of Birth').fill('2010-09-01');
+      await page.getByLabel('Grade Level').selectOption('Grade 10');
+      await page.getByLabel('Current or Most Recent School').fill('Current Online School');
+      await page.getByLabel('Target Universities').fill('UC Davis');
+      await page.locator('input[name="applicantType"][value="transfer"]').check();
+      await page.getByLabel('Previous credits estimate').selectOption('12-17');
+      await page.getByLabel('Transcript available?').selectOption('partial');
+      await page.getByLabel('Desired graduation timing').selectOption('1-year');
+      await page.getByLabel('Main family concern').selectOption('credits');
+      await page.getByLabel('Parent Full Name').fill('Jordan Rivera');
+      await page.getByLabel('Parent Email').fill('jordan@example.com');
+      await page.getByLabel('Phone').fill('555-0100');
+      await page.getByLabel('Anything else we should know?').fill('Interested in transfer-credit review.');
+      await page.getByRole('button', { name: /Request Application Review/ }).click();
+      await page.getByText('Transfer Path Review received').waitFor({ state: 'visible', timeout: 5000 });
+    },
+  },
+  {
     name: 'parent dashboard',
     path: '/parent/dashboard',
     expected: ["Alex's progress", 'Weekly Insights', 'Start Here', 'Assessment Evidence', 'Recent Activity'],
@@ -39,6 +157,16 @@ const ROUTES = [
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^(Grade|View \/ Edit)$/ }).first().click();
       await page.getByText('GIIS review rubric').waitFor({ state: 'visible', timeout: 5000 });
+    },
+  },
+  {
+    name: 'admin weekly report',
+    path: '/admin/weekly-report',
+    expected: ['Weekly Parent Report', 'Review each draft', 'Alex Rivera', 'Quiet week', 'Advisor note'],
+    endpointCaps: { '/api/admin/weekly-report': 2 },
+    afterLoad: async (page) => {
+      await page.getByText('Alex Rivera').waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByText('Quiet week').waitFor({ state: 'visible', timeout: 5000 });
     },
   },
 ];
@@ -204,6 +332,42 @@ function assignmentsPayload() {
   }];
 }
 
+function weeklyReportPayload() {
+  return {
+    week: '2026-06-08',
+    sent: 0,
+    skipped: 1,
+    errors: 0,
+    details: {
+      sent: [],
+      skipped: [{
+        email: 'jordan@example.com',
+        studentId: 'student-ops-1',
+        reason: 'dry_run',
+        dedupeKey: 'weekly_report:student-ops-1:2026-06-08',
+        payload: {
+          parentEmail: 'jordan@example.com',
+          studentName: 'Alex Rivera',
+          creditsEarned: 5.5,
+          gpa: '3.80',
+          gradPercent: 23,
+          weeklyActivity: {
+            modulesCompleted: 0,
+            estimatedStudyHours: 0,
+            activeDays: 0,
+          },
+          advisorNote: {
+            title: 'Weekly progress check',
+            summary: 'Alex should restart English I Module 2 this week and submit the reading response by Friday.',
+            date: '2026-06-03T15:00:00.000Z',
+          },
+        },
+      }],
+      errors: [],
+    },
+  };
+}
+
 async function installMocks(page, endpointCounts) {
   await page.route('**/api/**', async (route) => {
     const url = new URL(route.request().url());
@@ -214,6 +378,7 @@ async function installMocks(page, endpointCounts) {
     if (endpoint === '/api/students/ops-summary') return route.fulfill(json(opsSummaryPayload()));
     if (endpoint === '/api/applications') return route.fulfill(json(applicationsPayload()));
     if (endpoint === '/api/admin/assignments') return route.fulfill(json(assignmentsPayload()));
+    if (endpoint === '/api/admin/weekly-report') return route.fulfill(json(weeklyReportPayload()));
     if (endpoint === '/api/parent/logout' || endpoint === '/api/auth/logout') return route.fulfill(json({ ok: true }));
     if (endpoint === '/api/billing/portal') return route.fulfill(json({ url: 'https://billing.example.test/session' }));
     if (endpoint === '/api/checkout/create-session') return route.fulfill(json({ url: 'https://checkout.example.test/session' }));

@@ -34,17 +34,13 @@ yarn-error.log*
 demo-output/
 
 # Local T9 teaching-video mount. On Alan's workstation this path may be a
-# symlink to /Volumes/T9-Active; ignore that symlink/file while allowing tracked
-# repo lesson metadata to remain versioned in normal checkouts.
+# symlink to /Volumes/T9-Active; keep lesson artifacts out of git and publish
+# website state through public/data/lessons-manifest.json.
 /teaching-videos
-!/teaching-videos/
-!/teaching-videos/**/
 
-# Teaching videos: keep source-of-truth files in git (script.json,
-# build_slides.py, .cleaned breadcrumb). Ignore regenerable artifacts
-# (slides PNGs, audio MP3s, MP4 renders, WAV, SRT) — those can be rebuilt
-# from script.json + build_slides.py. Cleanup after YouTube upload keeps
-# folders slim. See tools/youtube-upload/cleanup_lesson.py.
+# Teaching-video artifacts stay on the T9-backed local mount. These patterns are
+# retained for older/non-symlink checkouts and to keep generated outputs out of
+# accidental commits. The website-facing durable state is the lesson manifest.
 teaching-videos/*/slides/
 teaching-videos/*/audio/
 teaching-videos/*/audio/*.words.json

@@ -9,15 +9,20 @@ This repo follows the global Central Umi coordination contract in `/Users/alanhd
 - Central Umi remains Alan's primary interface and cross-project coordinator.
 - `giis-producer` is the project manager for this repo, not a separate Umi persona.
 - Claude Code / cc is a senior technical worker for bounded implementation, review, debugging, content-alignment, and deployment-readiness tasks.
-- Read `/Users/alanhdchu/umi-central/goals.md` before local planning. The central `giis-website` row is the v0.1 / weekly / daily routing layer; this repo's `ROADMAP.md` is local evidence/history, and `umi/workload.md` is one scoped worker handoff.
+- Read `/Users/alanhdchu/umi-central/goals.md` before local planning. The central `giis-website` row is the v0.1 / weekly / daily routing layer; this repo's `umi/workload.md` is the active Codex/cc handoff and `ROADMAP.md` is concise durable direction.
+- GIIS mainly uses `ROADMAP.md` rather than `WORKLOG.md`. If a worklog-like active note exists, keep it to today / last few days of current evidence and clean completed/stale items. Use `ROADMAP.md` for brief completed milestones, current lanes, future work, priorities, and non-goals.
 - If the central daily goal conflicts with `ROADMAP.md` or `umi/workload.md`, pause and escalate to `giis-producer` / Central Umi instead of reconciling silently.
 - For substantial coding problems, prefer `cc-first` or `Split-work` after the read-only reconnaissance pass. Coding-heavy or cc-strong work should go to cc first to balance token usage and use the right agent for the job. Umi still owns scope, acceptance, and the final Alan-facing summary.
+- For deep engineering work, use a code-capable Claude Code surface such as Alan's VS Code Claude Code workflow or an equivalent code-mode CLI session with the correct repo cwd, current diff/status, scoped files, verification commands, and stop conditions. Default to the latest Opus alias (`model: opus` or `--model opus`); use Sonnet only for explicitly cheap/scouting passes. Do not treat cc-cowork/advisor chat as the primary executor for implementation, debugging, tests, diff review, or deep repo inspection.
 - For assigned implementation, debugging, tests, refactor cleanup, repo-local docs, or other cc-strong execution tasks, cc has edit access from the first pass inside the allowed scope. Codex/Umi reviews the diff and accepts/rejects/revises before treating it as done.
 - Do not require a numeric token/budget cap by default for cc. Use bounded scope, allowed files, expected output, and stop conditions; ask for a hard cap only if extra paid usage is enabled, external paid services are involved, Alan requests one, or the task is too broad to checkpoint safely.
-- Prevent cc timeout by assigning one-pass tasks with exact allowed files and commands. Do not ask cc to run watch mode, long dev servers, full generation jobs, broad eval/browser suites, or full test suites unless explicitly scoped. If cc times out or the root cause is outside scope, stop and report a narrower retry instead of silently deciding or editing broadly.
+- Prevent cc timeout by assigning one-pass tasks with exact allowed files and commands. Do not ask cc to run watch mode, long dev servers, full generation jobs, broad eval/browser suites, or full test suites unless explicitly scoped. If cc times out, returns no output, stalls, or needs broader scope, record the attempted repo/cwd, model target, prompt shape, allowed tools/files, elapsed time, partial output, and whether files may have changed. Stop the worker, inspect `git status` / relevant diffs if edits may have happened, narrow to one smaller code-mode pass, and retry once when safe. If retry fails, report the specific blocker instead of silently deciding, editing broadly, or treating timeout as approval.
 - Translate Alan's shorthand into repo terms before assigning cc. First identify the current GIIS goal, `ROADMAP.md` lane, changed files, likely course/video/student-care directories, and whether cc should do all-current-diff alignment review, targeted file review, diagnosis, implementation, or verification.
+- For bug-hunt or alignment questions, cc should get a findings-first review pass over current git diff/status, `ROADMAP.md`, current goals, and relevant adjacent files. Do not over-narrow review to only the files Codex already suspects; let cc find regressions, missing tests, stale assumptions, and scope drift before implementation.
+- Preserve cc's independent review value. When Alan asks for broad "is this aligned / what changed / what problems do you see" feedback, Umi should first scout the repo, then hand cc the current change set, candidate directories, and open questions. Ask cc for top findings, recommended direction, and whether implementation should happen now, wait, or be narrowed.
 - Time-aware continuity applies. Old `ROADMAP.md` entries, deployment notes, and lesson-video reports are historical evidence. When Alan asks about today, now, recently, or resumes an old thread, anchor to the current date/time and read current roadmap/repo/production-safe evidence before answering as current.
 - Project-local rules in this file control GIIS code behavior, claims, roadmap discipline, and production safety.
+- For local storage moves, read `/Users/alanhdchu/umi-central/docs/local_storage_layout.md` first. GIIS `teaching-videos/` is active on T9 via symlink: `/Users/alanhdchu/giis-website/teaching-videos` -> `/Volumes/T9-Active/Projects/giis-website/teaching-videos`. The release gate can read the symlinked tree, but git has a caveat: this repo tracks files under `teaching-videos/`, so `git status` may report many of them as deleted. Do not stage or commit those mass deletions. If normal git tracking of lesson-video source files is needed, restore a real directory or redesign the artifact move more narrowly.
 
 ## 🎯 The single goal
 **Get parents to pay, and keep paying.** Every change should be evaluated against this lens — does it raise willingness to pay, or maintain trust after they've paid? If the answer is "neither," reconsider the priority.
@@ -42,7 +47,7 @@ Any new feature or change should reduce friction on at least one of these three.
 
 **AFTER you finish any task:**
 1. Update the smallest source of truth that actually changed.
-2. Use `ROADMAP.md` for current local GIIS lanes and durable local evidence.
+2. Use `ROADMAP.md` for brief completed milestones, current local GIIS lanes, future work, priorities, and non-goals.
 3. Use `umi/workload.md` only for one active worker handoff.
 4. Let Central Umi update `goals.md`, `dispatch.md`, or `status.md` when cross-project priority changes.
 5. Do not dump completed history back into the active roadmap.
@@ -96,6 +101,12 @@ The goal is a clean routing chain, not a giant task diary.
 
 ### Demo, not just decoration
 - Whenever you build something visible to parents, ask: "Could a parent re-watch / re-open this and learn something new?" If yes, also wire it into the homepage flow (currently between Introduction and Pathways at the `id="demo"` anchor)
+
+### Frontend deploy routing — GitHub push triggers Netlify
+- For this repo, pushing local `main` to GitHub `origin/main` automatically triggers the Netlify frontend deploy for `genesisideas.school`.
+- Treat `git push origin main` as the frontend deploy action. Do not describe Netlify as a separate manual deploy step unless Alan explicitly changes the hosting setup.
+- Because push equals frontend deploy, run the sales/public trust/build/browser gates before pushing when parent-facing surfaces changed.
+- This does not restart or deploy the Lightsail backend. Backend/API/Prisma changes still require the separate Lightsail/payment deploy runbook.
 
 ### Official transcript / diploma format — locked
 - Official document visuals are part of school trust, not ordinary styling. Before changing transcript or diploma format, read `docs/official-document-format-contract.md`.

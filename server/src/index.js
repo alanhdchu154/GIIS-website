@@ -45,12 +45,21 @@ if (process.env.TRUST_PROXY === '1' || process.env.TRUST_PROXY === 'true') {
 const port = Number(process.env.PORT) || 4000;
 
 const corsOrigin = process.env.CORS_ORIGIN || '';
-if (!corsOrigin || corsOrigin === '*') {
+const corsWildcard = !corsOrigin || corsOrigin === '*';
+// Reflecting any Origin (origin: true) together with credentials: true lets ANY
+// website make authenticated cross-origin requests using a logged-in parent/admin
+// cookie. Refuse to start in production unless an explicit allow-list is set.
+if (corsWildcard) {
+  if (process.env.NODE_ENV === 'production') {
+    console.error('[fatal] CORS_ORIGIN must be an explicit frontend URL (or comma list) in production — refusing to start with credentialed wildcard CORS.');
+    console.error('      e.g. CORS_ORIGIN=https://genesisideas.school');
+    process.exit(1);
+  }
   console.warn('[warn] CORS_ORIGIN is not set or is "*". Set it to your frontend URL in production (e.g. https://genesisideas.school).');
 }
 app.use(
   cors({
-    origin: !corsOrigin || corsOrigin === '*'
+    origin: corsWildcard
       ? true
       : corsOrigin.split(',').map((s) => s.trim()),
     credentials: true,
@@ -95,7 +104,21 @@ app.get('/health', (_req, res) => {
 
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: Number(process.env.AUTH_RATE_LIMIT_MAX || 60),
+  // Lowered default from 60 → 20: 60/15min across many accounts allows password
+  // spraying. Still overridable per-deploy via AUTH_RATE_LIMIT_MAX.
+  max: Number(process.env.AUTH_RATE_LIMIT_MAX || 20),
+  standardHeaders: true,
+  legacyHeaders: false,
+  validate: { xForwardedForHeader: false },
+  message: { error: 'Too many requests, please try again later.' },
+});
+
+// Limiter for public, abusable write/cost/enumeration endpoints:
+// applications (writes DB + emails admin per submit), checkout (creates Stripe
+// sessions — cost + abuse), verify (public student-code enumeration).
+const publicWriteLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: Number(process.env.PUBLIC_RATE_LIMIT_MAX || 30),
   standardHeaders: true,
   legacyHeaders: false,
   validate: { xForwardedForHeader: false },
@@ -113,9 +136,9 @@ app.use('/api/courses', courseRoutes);
 app.use('/api/enrollments', enrollmentRoutes);
 app.use('/api/me', meRoutes);
 app.use('/api/admin/assignments', adminAssignmentsRoutes);
-app.use('/api/applications', applicationsRoutes);
-app.use('/api/verify', verifyRoutes);
-app.use('/api/checkout', checkoutRoutes);
+app.use('/api/applications', publicWriteLimiter, applicationsRoutes);
+app.use('/api/verify', publicWriteLimiter, verifyRoutes);
+app.use('/api/checkout', publicWriteLimiter, checkoutRoutes);
 app.use('/api/subscriptions', subscriptionsRoutes);
 app.use('/api/billing', billingRoutes);
 app.use('/api/admin/weekly-report', weeklyReportRoutes);

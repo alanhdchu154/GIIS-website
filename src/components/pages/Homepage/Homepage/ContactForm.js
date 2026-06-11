@@ -33,17 +33,29 @@ const CONTACT_INFO = [
 export default function ContactForm({ language = 'en' }) {
   const isEn = language === 'en';
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
+    setIsSubmitting(true);
+    setSubmitError('');
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(new FormData(form)).toString(),
     })
-      .then(() => setSubmitted(true))
-      .catch(() => setSubmitted(true));
+      .then((response) => {
+        if (!response.ok) throw new Error(`Netlify form submit failed: ${response.status}`);
+        setSubmitted(true);
+      })
+      .catch(() => {
+        setSubmitError(isEn
+          ? 'We could not submit the inquiry just now. Please try again, or email admissions@genesisideas.school directly.'
+          : '刚刚未能成功提交咨询。请再试一次，或直接发送邮件至 admissions@genesisideas.school。');
+      })
+      .finally(() => setIsSubmitting(false));
   }
 
   return (
@@ -177,17 +189,35 @@ export default function ContactForm({ language = 'en' }) {
                   </div>
                 </div>
 
-                <button type="submit" style={{
+                {submitError ? (
+                  <div role="alert" style={{
+                    marginTop: '18px',
+                    padding: '12px 14px',
+                    borderRadius: '8px',
+                    background: '#fff4f2',
+                    border: '1px solid #f1c3bb',
+                    color: '#8a2d20',
+                    fontSize: '13px',
+                    lineHeight: 1.55,
+                    fontWeight: 650,
+                  }}>
+                    {submitError}
+                  </div>
+                ) : null}
+
+                <button type="submit" disabled={isSubmitting} style={{
                   marginTop: '20px', width: '100%', padding: '14px',
-                  background: 'rgba(43,61,109,1)', color: '#fff',
+                  background: isSubmitting ? '#5f6678' : 'rgba(43,61,109,1)', color: '#fff',
                   border: 'none', borderRadius: '8px', fontSize: '15px', fontWeight: 700,
-                  cursor: 'pointer', transition: 'background 0.15s',
+                  cursor: isSubmitting ? 'wait' : 'pointer', transition: 'background 0.15s',
                   fontFamily: 'Inter, sans-serif',
                 }}
-                  onMouseEnter={e => e.currentTarget.style.background = '#1a1a2e'}
-                  onMouseLeave={e => e.currentTarget.style.background = 'rgba(43,61,109,1)'}
+                  onMouseEnter={e => { if (!isSubmitting) e.currentTarget.style.background = '#1a1a2e'; }}
+                  onMouseLeave={e => { if (!isSubmitting) e.currentTarget.style.background = 'rgba(43,61,109,1)'; }}
                 >
-                  {isEn ? 'Submit Inquiry →' : '提交咨询 →'}
+                  {isSubmitting
+                    ? (isEn ? 'Submitting inquiry...' : '正在提交...')
+                    : (isEn ? 'Submit Inquiry →' : '提交咨询 →')}
                 </button>
 
                 <p style={{ fontSize: '11px', color: '#aaa', textAlign: 'center', margin: '12px 0 0', lineHeight: 1.5 }}>

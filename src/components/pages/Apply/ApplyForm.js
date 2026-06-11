@@ -44,6 +44,26 @@ const CONCERNS = [
   { value: 'motivation', en: 'Will my child stay on track?', zh: '孩子能否坚持学习' },
 ];
 
+// Hoisted to module scope: defining these inside ApplyForm made `Field` a new
+// component reference on every render, remounting every input and dropping focus
+// after a single keystroke (the only enrollment path was effectively unusable).
+function Field({ label, children, err, hint }) {
+  return (
+    <label style={{ display: 'block', marginBottom: 18 }}>
+      <span style={{ fontSize: 12, fontWeight: 700, color: '#5c6578', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{label}</span>
+      {hint && <span style={{ fontSize: 11, color: '#9aa0ad', marginLeft: 6 }}>{hint}</span>}
+      {children}
+      {err && <span style={{ display: 'block', fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{err}</span>}
+    </label>
+  );
+}
+
+const inputStyle = (hasErr) => ({
+  display: 'block', width: '100%', marginTop: 6, padding: '10px 12px',
+  border: `1.5px solid ${hasErr ? '#fca5a5' : '#d4d8e0'}`, borderRadius: 8,
+  fontSize: 14, fontFamily: 'Inter, sans-serif', outline: 'none', boxSizing: 'border-box',
+});
+
 export default function ApplyForm({ language }) {
   const isEn = language !== 'zh';
 
@@ -129,7 +149,7 @@ export default function ApplyForm({ language }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
       if (!res.ok) { setServerError(data.error || (isEn ? 'Submission failed. Please try again.' : '提交失败，请重试。')); return; }
       setSubmitted(true);
     } catch {
@@ -140,23 +160,6 @@ export default function ApplyForm({ language }) {
   }
 
   const T = (en, zh) => isEn ? en : zh;
-
-  function Field({ label, children, err, hint }) {
-    return (
-      <label style={{ display: 'block', marginBottom: 18 }}>
-        <span style={{ fontSize: 12, fontWeight: 700, color: '#5c6578', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{label}</span>
-        {hint && <span style={{ fontSize: 11, color: '#9aa0ad', marginLeft: 6 }}>{hint}</span>}
-        {children}
-        {err && <span style={{ display: 'block', fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{err}</span>}
-      </label>
-    );
-  }
-
-  const inputStyle = (hasErr) => ({
-    display: 'block', width: '100%', marginTop: 6, padding: '10px 12px',
-    border: `1.5px solid ${hasErr ? '#fca5a5' : '#d4d8e0'}`, borderRadius: 8,
-    fontSize: 14, fontFamily: 'Inter, sans-serif', outline: 'none', boxSizing: 'border-box',
-  });
 
   const isTransferApplicant = form.applicantType === 'transfer';
   const successTitle = isTransferApplicant
@@ -240,6 +243,35 @@ export default function ApplyForm({ language }) {
               </div>
             ))}
           </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 14, marginBottom: 18 }}>
+            <div style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: 10, padding: '16px 18px' }}>
+              <p style={{ margin: '0 0 7px', color: '#2b3d6d', fontSize: 11, fontWeight: 900, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                {T('Before You Submit', '提交前请确认')}
+              </p>
+              <p style={{ margin: 0, color: '#4f5868', fontSize: 12.5, lineHeight: 1.65 }}>
+                {T(
+                  'New students can apply with basic school information. Transfer students should be ready to provide transcripts or school reports before final credit decisions.',
+                  '一般新生可先用基本学校信息申请。转学生应准备成绩单或学校报告；最终转学分判断需等正式记录审核。'
+                )}
+              </p>
+            </div>
+            <div style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: 10, padding: '16px 18px' }}>
+              <p style={{ margin: '0 0 7px', color: '#2b3d6d', fontSize: 11, fontWeight: 900, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                {T('After You Submit', '提交后会发生什么')}
+              </p>
+              <p style={{ margin: '0 0 9px', color: '#4f5868', fontSize: 12.5, lineHeight: 1.65 }}>
+                {T(
+                  'Admissions reviews the path within one business day, asks for missing records if needed, and recommends Self-Paced, Guided, or Premium before payment.',
+                  '招生团队会在一个工作日内审核路径，必要时要求补充资料，并在付款前建议 Self-Paced、Guided 或 Premium。'
+                )}
+              </p>
+              <Link to="/consultation" style={{ color: '#2b3d6d', fontSize: 12.5, fontWeight: 800, textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                {T('Prefer to talk first? Book a consultation.', '想先聊聊？预约免费咨询。')}
+              </Link>
+            </div>
+          </div>
+
           <form onSubmit={handleSubmit} style={{ background: '#fff', borderRadius: 16, padding: '36px 32px', boxShadow: '0 8px 32px rgba(0,0,0,0.06)', border: '1px solid #e8ecf5' }}>
 
             {serverError && (
@@ -256,7 +288,7 @@ export default function ApplyForm({ language }) {
               <input type="text" value={form.studentName} onChange={set('studentName')} placeholder={T('e.g. Yunfan Yang', '例：杨芸帆')} style={inputStyle(errors.studentName)} />
             </Field>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
               <Field label={T('Date of Birth', '出生日期')} err={errors.dob}>
                 <input type="date" value={form.dob} onChange={set('dob')} style={inputStyle(errors.dob)} />
               </Field>
@@ -325,7 +357,7 @@ export default function ApplyForm({ language }) {
 
             {isTransferApplicant ? (
               <>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
                   <Field label={T('Previous credits estimate', '已修学分估计')} err={errors.previousCredits}>
                     <select value={form.previousCredits} onChange={set('previousCredits')} style={inputStyle(errors.previousCredits)}>
                       <option value="">{T('Select…', '请选择…')}</option>

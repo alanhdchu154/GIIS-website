@@ -1,11 +1,10 @@
 const express = require('express');
 const path = require('path');
 const { execFile } = require('child_process');
-const { PrismaClient } = require('@prisma/client');
 const { authenticate, requireAdmin } = require('../middleware/auth');
 const { ADMIN_EMAIL, ADMISSIONS_EMAIL } = require('../lib/mailer');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 const ROOT = path.resolve(__dirname, '..', '..', '..');
 const PACKAGE_SCRIPT = path.join(ROOT, 'server', 'scripts', 'send-graduation-document-packages.js');

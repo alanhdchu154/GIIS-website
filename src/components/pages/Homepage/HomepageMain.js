@@ -292,7 +292,9 @@ function HomepageMain({ language, toggleLanguage }) {
   return (
     <>
       <Helmet>
-        <title>{isEn ? 'Home' : '首页'} | Genesis of Ideas International School</title>
+        <title>{isEn
+          ? 'Online US High School Diploma — Genesis of Ideas International School'
+          : '美式在线高中文凭 | 艾迪尔国际学校 Genesis of Ideas International School'}</title>
         <meta
           name="description"
           content={isEn

@@ -163,11 +163,34 @@ async function sendRejectionEmail({ parentEmail, parentName, studentName, reason
  * Weekly progress digest sent to a parent.
  * Call once per parent; build the data before calling.
  */
-async function sendWeeklyProgressEmail({ parentEmail, studentName, creditsEarned, gpa, inProgressCourses, completedCount, gradPercent, dashboardUrl }) {
+async function sendWeeklyProgressEmail({ parentEmail, studentName, creditsEarned, gpa, inProgressCourses, completedCount, gradPercent, weeklyActivity = null, advisorNote = null, dashboardUrl }) {
   const subject = `${studentName}'s weekly progress — GIIS`;
+  const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const courseList = inProgressCourses.length
-    ? inProgressCourses.map(c => `<li style="margin-bottom:6px"><strong>${c.name}</strong> — ${c.completedModules}/${c.totalModules} modules</li>`).join('')
+    ? inProgressCourses.map(c => `<li style="margin-bottom:6px"><strong>${esc(c.name)}</strong> — ${c.completedModules}/${c.totalModules} modules</li>`).join('')
     : '<li style="color:#9aa0ad">No active courses.</li>';
+
+  const activityBlock = weeklyActivity ? `
+    <p style="font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;margin:0 0 10px">This Week</p>
+    <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap">
+      ${[
+        ['Modules Done', weeklyActivity.modulesCompleted],
+        ['Study Hours (est.)', weeklyActivity.estimatedStudyHours],
+        ['Active Days', weeklyActivity.activeDays],
+        ['Quiz Attempts', weeklyActivity.quizAttempts],
+      ].map(([label, val]) => `
+        <div style="flex:1;min-width:100px;background:#f8f5ec;border-radius:8px;padding:14px 16px;text-align:center">
+          <p style="font-size:11px;font-weight:700;color:#8a6d1f;letter-spacing:1px;text-transform:uppercase;margin:0 0 4px">${label}</p>
+          <p style="font-size:22px;font-weight:800;margin:0;color:#1a1a2e">${val}</p>
+        </div>`).join('')}
+    </div>` : '';
+
+  const advisorBlock = advisorNote && advisorNote.summary ? `
+    <div style="background:#f4f6fa;border-left:4px solid #d5a836;border-radius:0 8px 8px 0;padding:16px 18px;margin:0 0 24px">
+      <p style="font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;margin:0 0 6px">From the Advisor</p>
+      ${advisorNote.title ? `<p style="font-size:14px;font-weight:700;color:#1a1a2e;margin:0 0 6px">${esc(advisorNote.title)}</p>` : ''}
+      <p style="font-size:14px;line-height:1.7;color:#3a3f4c;margin:0">${esc(advisorNote.summary)}</p>
+    </div>` : '';
 
   return send({
     to: parentEmail,
@@ -194,6 +217,10 @@ async function sendWeeklyProgressEmail({ parentEmail, studentName, creditsEarned
         </div>`).join('')}
     </div>
 
+    ${activityBlock}
+
+    ${advisorBlock}
+
     <p style="font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;margin:0 0 10px">Active Courses</p>
     <ul style="padding-left:20px;font-size:14px;line-height:1.8;margin:0 0 24px">${courseList}</ul>
 
@@ -204,7 +231,7 @@ async function sendWeeklyProgressEmail({ parentEmail, studentName, creditsEarned
   </div>
 </div>
     `.trim(),
-    text: `${studentName}'s weekly progress\nCredits: ${creditsEarned}/24 · GPA: ${gpa ?? '—'} · Graduation: ${gradPercent}%\n\nView dashboard: ${dashboardUrl}`,
+    text: `${studentName}'s weekly progress\nCredits: ${creditsEarned}/24 · GPA: ${gpa ?? '—'} · Graduation: ${gradPercent}%${weeklyActivity ? `\nThis week: ${weeklyActivity.modulesCompleted} modules · ${weeklyActivity.estimatedStudyHours} study hours · ${weeklyActivity.activeDays} active days` : ''}${advisorNote && advisorNote.summary ? `\n\nFrom the advisor: ${advisorNote.summary}` : ''}\n\nView dashboard: ${dashboardUrl}`,
   });
 }
 

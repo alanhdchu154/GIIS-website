@@ -191,6 +191,9 @@ function TrustCenterPage({ language, toggleLanguage }) {
               <Link to="/school-profile" style={secondaryDarkLink}>
                 {isEn ? 'Read school profile' : '查看学校简介'}
               </Link>
+              <Link to="/consultation" style={secondaryDarkLink}>
+                {isEn ? 'Talk to the principal first' : '先和校长聊聊'}
+              </Link>
             </div>
           </div>
 

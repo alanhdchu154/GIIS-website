@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const STUDENTS = [
   {
-    name: 'Yunfan Yang',
-    nameZh: '杨芸帆',
+    name: 'Y. Yang',
+    nameZh: '杨同学',
     initials: 'YY',
     color: '#1B6B3A',
     bg: '#f0f9f4',
@@ -21,8 +21,8 @@ const STUDENTS = [
     years: { en: '4-year program · Grade 9–12', zh: '4年项目 · 9–12年级' },
   },
   {
-    name: 'Baoyi Lu',
-    nameZh: '卢抱一',
+    name: 'B. Lu',
+    nameZh: '卢同学',
     initials: 'BL',
     color: '#1565C0',
     bg: '#f0f4ff',
@@ -167,6 +167,15 @@ export default function SuccessStories({ language }) {
               </div>
             </div>
           ))}
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '28px' }}>
+          <Link to="/graduates" style={{
+            display: 'inline-block', padding: '12px 26px', borderRadius: '8px',
+            border: '2px solid #2b3d6d', color: '#2b3d6d',
+            fontWeight: 800, fontSize: '14px', textDecoration: 'none',
+          }}>
+            {isEn ? 'See full graduate trajectories →' : '查看完整毕业生足迹 →'}
+          </Link>
         </div>
       </div>
 

@@ -1,0 +1,158 @@
+{
+  "generatedAt": "2026-06-11T05:09:56.704Z",
+  "baseUrl": "https://genesisideas.school",
+  "summary": {
+    "total": 8,
+    "pass": 3,
+    "fail": 5
+  },
+  "results": [
+    {
+      "path": "/",
+      "name": "homepage",
+      "expected": [
+        "Book a Free Consultation",
+        "Talk to the school before you apply.",
+        "No payment is collected until the enrollment path is reviewed.",
+        "Before You Pay",
+        "Open Trust Center"
+      ],
+      "url": "https://genesisideas.school/",
+      "status": 200,
+      "title": "Genesis of Ideas International School",
+      "ok": false,
+      "errors": [
+        "Missing text: Book a Free Consultation",
+        "Missing text: Talk to the school before you apply.",
+        "Missing text: No payment is collected until the enrollment path is reviewed.",
+        "Missing text: Before You Pay",
+        "Missing text: Open Trust Center"
+      ]
+    },
+    {
+      "path": "/consultation",
+      "name": "consultation",
+      "expected": [
+        "Talk to the school before you decide.",
+        "Book a free consultation",
+        "Student situation",
+        "Transcript available?",
+        "Desired start timing"
+      ],
+      "url": "https://genesisideas.school/consultation",
+      "status": 200,
+      "title": "Page not found | Genesis of Ideas International School",
+      "ok": false,
+      "errors": [
+        "Missing text: Talk to the school before you decide.",
+        "Missing text: Book a free consultation",
+        "Missing text: Student situation",
+        "Missing text: Transcript available?",
+        "Missing text: Desired start timing"
+      ]
+    },
+    {
+      "path": "/apply",
+      "name": "apply",
+      "expected": [
+        "Know the right path before you pay.",
+        "Before You Submit",
+        "After You Submit",
+        "New student",
+        "Transfer student",
+        "No payment is collected here"
+      ],
+      "url": "https://genesisideas.school/apply",
+      "status": 200,
+      "title": "Application Path Review | Genesis of Ideas International School",
+      "ok": false,
+      "errors": [
+        "Missing text: Before You Submit",
+        "Missing text: After You Submit"
+      ]
+    },
+    {
+      "path": "/pricing",
+      "name": "pricing",
+      "expected": [
+        "Start with the path review, not checkout.",
+        "$149",
+        "Transfer Family Default",
+        "Apply first"
+      ],
+      "url": "https://genesisideas.school/pricing",
+      "status": 200,
+      "title": "Tuition & Pricing | Genesis of Ideas International School",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "path": "/trust-center",
+      "name": "trust center",
+      "expected": [
+        "Trust Center",
+        "Talk to the principal first",
+        "Florida-registered private school",
+        "24-credit framework"
+      ],
+      "url": "https://genesisideas.school/trust-center",
+      "status": 200,
+      "title": "Trust Center | Genesis of Ideas International School",
+      "ok": false,
+      "errors": [
+        "Missing text: Talk to the principal first"
+      ]
+    },
+    {
+      "path": "/graduates",
+      "name": "graduate stories",
+      "expected": [
+        "Four students. Four years. Four transcripts you can trace.",
+        "Reported offers",
+        "UC Santa Barbara",
+        "GIIS does not guarantee admission results"
+      ],
+      "url": "https://genesisideas.school/graduates",
+      "status": 200,
+      "title": "Page not found | Genesis of Ideas International School",
+      "ok": false,
+      "errors": [
+        "Missing text: Four students. Four years. Four transcripts you can trace.",
+        "Missing text: Reported offers",
+        "Missing text: UC Santa Barbara",
+        "Missing text: GIIS does not guarantee admission results"
+      ]
+    },
+    {
+      "path": "/parent/demo",
+      "name": "parent demo",
+      "expected": [
+        "Sample Preview",
+        "Yunfan's progress this week",
+        "Guided support is $149/month",
+        "Weekly Insights",
+        "Assessment & Feedback"
+      ],
+      "url": "https://genesisideas.school/parent/demo",
+      "status": 200,
+      "title": "Parent Dashboard Preview | Genesis of Ideas International School",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "path": "/assessment-proof",
+      "name": "assessment proof",
+      "expected": [
+        "Assessment Proof",
+        "Assignment",
+        "Quiz",
+        "Midterm"
+      ],
+      "url": "https://genesisideas.school/assessment-proof",
+      "status": 200,
+      "title": "Assessment Proof | Genesis of Ideas International School",
+      "ok": true,
+      "errors": []
+    }
+  ]
+}

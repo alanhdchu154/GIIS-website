@@ -203,6 +203,18 @@ export default function AdmissionMain({ language, toggleLanguage }) {
           }}>
             {isEn ? 'Transfer Guide' : '查看转学说明'}
           </Link>
+          <Link to="/consultation" style={{
+            padding: '13px 22px',
+            borderRadius: '8px',
+            border: '2px solid #2b3d6d',
+            color: '#2b3d6d',
+            textDecoration: 'none',
+            fontWeight: 800,
+            fontSize: '14px',
+            whiteSpace: 'nowrap',
+          }}>
+            {isEn ? 'Book a Free Consultation' : '预约免费咨询'}
+          </Link>
           </div>
         </div>
       </div>

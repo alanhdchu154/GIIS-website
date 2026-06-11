@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Stripe = require('stripe');
-const { PrismaClient } = require('@prisma/client');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
 
 /** Number of consecutive invoice.payment_failed events before we soft-lock the student (T-103). */
@@ -24,26 +23,85 @@ const SOFT_LOCK_THRESHOLD = 2;
  *                                       soft-lock student when failures ≥ SOFT_LOCK_THRESHOLD (T-103)
  *   charge.refunded                   → status = 'refunded', deactivate linked student (T-102)
  *
- * In dev, STRIPE_WEBHOOK_SECRET may be empty; we skip signature verification and parse
- * raw body directly. NEVER do this in production — Stripe explicitly warns about it.
+ * In dev, STRIPE_WEBHOOK_SECRET may be empty only when
+ * ALLOW_UNVERIFIED_STRIPE_WEBHOOK=1; then we parse raw body directly.
+ * NEVER do this in production — Stripe explicitly warns about it.
  */
+function resolveWebhookVerificationMode({
+  webhookSecret,
+  signature,
+  nodeEnv = process.env.NODE_ENV,
+  allowUnverifiedFlag = process.env.ALLOW_UNVERIFIED_STRIPE_WEBHOOK,
+} = {}) {
+  // Fail CLOSED if the signing secret is missing. Without it, anyone who can POST
+  // to this endpoint could forge checkout.session.completed (grant free access) or
+  // charge.refunded (deactivate a paying student). The unverified path is only
+  // allowed in non-production and only when explicitly opted in via
+  // ALLOW_UNVERIFIED_STRIPE_WEBHOOK=1.
+  const allowUnverified = nodeEnv !== 'production' && allowUnverifiedFlag === '1';
+  if (!webhookSecret) {
+    if (!allowUnverified) {
+      return {
+        ok: false,
+        status: 500,
+        message: 'Webhook signing secret not configured.',
+        log: 'STRIPE_WEBHOOK_SECRET is not set — refusing to process unverified events.',
+      };
+    }
+    return { ok: true, mode: 'unverified-dev' };
+  }
+
+  if (!signature) {
+    return {
+      ok: false,
+      status: 400,
+      message: 'Webhook signature missing.',
+      log: 'Stripe signature header missing — refusing to process unsigned event.',
+    };
+  }
+
+  return { ok: true, mode: 'signed' };
+}
+
 router.post('/', async (req, res) => {
   if (!stripe) return res.status(500).send('Stripe not configured.');
 
   const sig = req.headers['stripe-signature'];
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  const verification = resolveWebhookVerificationMode({ webhookSecret, signature: sig });
+  if (!verification.ok) {
+    console.error(`[webhook] ${verification.log}`);
+    return res.status(verification.status).send(verification.message);
+  }
 
   let event;
   try {
-    if (webhookSecret && sig) {
+    if (verification.mode === 'signed') {
       event = stripe.webhooks.constructEvent(req.body, sig, webhookSecret);
     } else {
       event = JSON.parse(req.body.toString());
-      console.warn('[webhook] No STRIPE_WEBHOOK_SECRET — skipping signature verification (DEV ONLY)');
+      console.warn('[webhook] No STRIPE_WEBHOOK_SECRET — skipping signature verification (DEV ONLY, ALLOW_UNVERIFIED_STRIPE_WEBHOOK=1)');
     }
   } catch (err) {
     console.error('[webhook] Signature verification failed:', err.message);
     return res.status(400).send(`Webhook Error: ${err.message}`);
+  }
+
+  // Idempotency / replay protection. Stripe retries for up to 3 days and can
+  // deliver duplicates; processing an event twice would (e.g.) double-increment
+  // paymentFailureCount and soft-lock a student who only failed once. A DB error
+  // here returns 500 so Stripe retries rather than us processing blind.
+  if (event.id) {
+    try {
+      const seen = await prisma.processedStripeEvent.findUnique({ where: { eventId: event.id } });
+      if (seen) {
+        console.log(`[webhook] Duplicate event ${event.id} (${event.type}) — already processed, skipping.`);
+        return res.json({ received: true, duplicate: true });
+      }
+    } catch (dedupeErr) {
+      console.error('[webhook] Idempotency check failed:', dedupeErr.message);
+      return res.status(500).json({ error: 'Idempotency check failed.' });
+    }
   }
 
   try {
@@ -73,8 +131,20 @@ router.post('/', async (req, res) => {
   } catch (handlerErr) {
     // Returning 500 makes Stripe retry up to 3 days. Only do this for transient errors;
     // for permanent failures (bad data), log and return 200 so we don't get stuck.
+    // NOTE: we deliberately do NOT record the event below on this path, so a retry
+    // gets a fresh attempt rather than being skipped as a duplicate.
     console.error('[webhook] Handler error:', handlerErr.message, handlerErr.stack);
     return res.status(500).json({ error: 'Webhook handler failed.' });
+  }
+
+  // Record only after successful handling so a transient failure above can be retried.
+  // create() (not upsert) + ignore unique races from a concurrent duplicate delivery.
+  if (event.id) {
+    await prisma.processedStripeEvent
+      .create({ data: { eventId: event.id, type: event.type } })
+      .catch((e) => {
+        if (e.code !== 'P2002') console.error('[webhook] Failed to record processed event:', e.message);
+      });
   }
 
   res.json({ received: true });
@@ -163,11 +233,31 @@ async function findStudentForPurchaserEmail(email) {
   return null;
 }
 
+// Subscription states where money has actually moved — an unlinked subscription in
+// one of these means a parent paid but no student is being activated, which needs a
+// human to link it in /admin/subscriptions.
+const MONEY_MOVED_STATES = ['active', 'paid', 'trialing', 'past_due'];
+
 async function autoLinkSubscriptionByEmail(subscriptionRecord) {
   if (!subscriptionRecord || subscriptionRecord.studentId) return subscriptionRecord;
   const studentId = await findStudentForPurchaserEmail(subscriptionRecord.purchaserEmail);
   if (!studentId) {
     console.warn(`[webhook] subscription ${subscriptionRecord.id} has no matching student for ${subscriptionRecord.purchaserEmail}`);
+    // Surface to admins via the audit feed (GET /api/students/audit) so a paid-but-
+    // unlinked subscription is visible, not just buried in server logs. Only alert when
+    // money moved (skip incomplete/abandoned checkouts). Never let this break the webhook.
+    if (MONEY_MOVED_STATES.includes(subscriptionRecord.status)) {
+      await prisma.auditLog
+        .create({
+          data: {
+            action: 'subscription_unlinked',
+            studentId: null,
+            actorRole: 'system',
+            actorEmail: subscriptionRecord.purchaserEmail || 'unknown',
+          },
+        })
+        .catch((e) => console.error('[webhook] failed to record unlinked-subscription alert:', e.message));
+    }
     return subscriptionRecord;
   }
 
@@ -410,3 +500,4 @@ async function handleChargeRefunded(charge) {
 }
 
 module.exports = router;
+module.exports.resolveWebhookVerificationMode = resolveWebhookVerificationMode;

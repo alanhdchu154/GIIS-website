@@ -1,10 +1,9 @@
 const express = require('express');
-const { PrismaClient } = require('@prisma/client');
 const { authenticate, requireAdmin } = require('../middleware/auth');
 const { profileAssignment } = require('../lib/assignmentProfile');
 const { isArchivedGraduationDate, sendArchivedResponse } = require('../lib/studentArchive');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 function submissionPayload(row) {

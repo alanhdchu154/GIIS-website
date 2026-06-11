@@ -15,8 +15,6 @@
     "react-helmet-async": "^3.0.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -49,6 +47,8 @@
     "audit:showcase-all": "node tools/pathway-quality/audit_all_course_showcase_readiness.js",
     "audit:showcase-browser": "node tools/pathway-quality/audit_all_course_browser_smoke.js",
     "audit:ops-browser": "node tools/ops-quality/audit_parent_admin_browser_smoke.js",
+    "audit:sales-launch": "node tools/ops-quality/audit_parent_sales_launch.js",
+    "audit:sales-live": "node tools/ops-quality/audit_parent_sales_live.js",
     "audit:public-trust-claims": "node tools/public-trust/audit_public_trust_claims.js",
     "audit:staged-artifacts": "node tools/public-trust/audit_staged_artifacts.js",
     "audit:lesson-manifest": "node tools/youtube-upload/audit_manifest_alignment.js",
@@ -81,5 +81,8 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "playwright": "^1.45.0"
+  },
+  "engines": {
+    "node": ">=20 <21"
   }
 }

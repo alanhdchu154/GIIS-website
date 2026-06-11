@@ -2,15 +2,18 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-const { PrismaClient } = require('@prisma/client');
 const { authenticate } = require('../middleware/auth');
 const { sendPasswordResetEmail } = require('../lib/mailer');
 const { createLoginSession, closeLoginSession } = require('../lib/sessionTracker');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 const MIN_PASSWORD = 8;
+// Constant-time guard against login user-enumeration: when no account exists we
+// still run one bcrypt compare against this throwaway hash so a missing email
+// takes the same time as a wrong password for an existing one.
+const DUMMY_PASSWORD_HASH = '$2a$12$LsgLu90JTgGrKhKvqYUMrOXhJ9colrRW8xKvzb8PtTSdT2TLMa2q6';
 const COOKIE_NAME = 'giis_jwt';
 const COOKIE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 const RESET_TOKEN_MINUTES = 60;
@@ -20,7 +23,12 @@ function setCookieOptions() {
   const isProd = process.env.NODE_ENV === 'production' || process.env.TRUST_PROXY === '1';
   return {
     httpOnly: true,
-    sameSite: isProd ? 'none' : 'lax',
+    // 'lax' (not 'none') is the CSRF defense: it stops the auth cookie from being
+    // sent on cross-site POST/fetch, so a forged request from another origin can't
+    // act as the logged-in user. Safe here because the browser reaches the API
+    // same-origin (Netlify proxies /api/*) — and api.genesisideas.school is the
+    // same site (shared eTLD+1) regardless — so first-party requests still carry it.
+    sameSite: 'lax',
     secure: isProd,
     maxAge: COOKIE_MAX_AGE_MS,
     path: '/',
@@ -190,6 +198,9 @@ router.post('/login', async (req, res) => {
 
   const account = await prisma.studentAccount.findUnique({ where: { email } });
   if (!account) {
+    // Run a dummy compare so a non-existent email is indistinguishable (by timing)
+    // from a wrong password on a real account.
+    await bcrypt.compare(password, DUMMY_PASSWORD_HASH);
     return res.status(401).json({ error: 'Invalid credentials' });
   }
   if (account.isActive === false) {

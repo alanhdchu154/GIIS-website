@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-05
+Last updated: 2026-06-11
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -12,6 +12,16 @@ Keep the school trustworthy, operational, and parent-visible while the
 foundation-video pipeline stabilizes. The next phase is proof over volume:
 parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
+
+Current 2026-06-11 risk: the repo conflict is resolved and local `main` is ahead
+of `origin/main`, but the stack is still not a blind deploy. Backend hardening
+includes a Prisma schema change, so backend deploy must be paired with a
+production DB backup, `db:push` / table verification, Stripe webhook env checks,
+and Lightsail restart/smoke. The parent sales-launch gate is now part of GitHub
+CI and includes the homepage consultation-first path, so a future push should
+fail early if the public proof path regresses. Pushing local `main` to GitHub
+`origin/main` automatically triggers the Netlify frontend deploy for
+`genesisideas.school`; it does not deploy/restart the Lightsail backend.
 
 ## Active Lanes
 
@@ -34,9 +44,19 @@ Next check:
 
 - After each 07:00 run, review selected modules, cc progress, gate result,
   upload result, website manifest sync, and any `cc_blocked` report.
+- Before any push/deploy, finish browser/predeploy smoke, review the backend
+  hardening and Prisma/webhook changes, and separate safe frontend/pipeline
+  changes from Lightsail/db work if needed.
 - Monitor two consecutive 07:00 CT runs before expanding beyond the current
   foundation cohort. Do not increase volume until cc output, release gate,
   YouTube upload, and Learn Portal manifest sync all pass without manual rescue.
+- 2026-06-10 current lane: Biology Modules 4/5/6 were selected. M6 was approved
+  by automation; M4/M5 failed the orchestrator gate initially but passed targeted
+  `foundation_video_gate.py --render-mp4` reruns with score 100. Current checks
+  report release gate 33 ready / 0 blocked and manifest alignment 0 warnings
+  across 33 lessons. The remaining risk is no longer raw video recovery or
+  branch divergence; it is safe review of the pending cc hardening stack before
+  push/backend deploy.
 
 ### 2. Course And Resource Quality
 
@@ -161,19 +181,33 @@ Status: active watch.
   not hide as one-off bugs.
 - `src/api/authStorage.test.js` now locks stable session getter references for
   admin, parent, and student sessions.
-- `npm run audit:ops-browser` now smokes `/parent/dashboard`, `/admin`,
-  `/admin/applications`, and `/admin/assignments` on desktop and mobile with
-  mocked API responses and repeated-fetch caps. Latest local result:
-  8 pass / 0 fail, saved in `_audit/parent-admin-browser-smoke.md`.
+- `npm run audit:ops-browser` now smokes `/consultation`, `/graduates`,
+  `/apply`, `/parent/dashboard`, `/admin`, `/admin/applications`,
+  `/admin/assignments`, and `/admin/weekly-report` on desktop and mobile with
+  mocked API responses and repeated-fetch caps. Latest local result: 16 pass /
+  0 fail, saved in `_audit/parent-admin-browser-smoke.md`.
 - Production backend deployment and verification remain separate from frontend
   deploys. Do not claim graduated-student record freeze or admin workflow locks
   are live until backend deploy and production smoke evidence exist.
+- cc hardening session on 2026-06-10 adds important backend safety work locally:
+  Stripe webhook fail-closed behavior, webhook idempotency via
+  `ProcessedStripeEvent`, stricter CORS/CSRF/rate-limit behavior, constant-time
+  auth checks, PrismaClient singleton use, audit-route ordering, and paid-but
+  unlinked subscription visibility. Codex review on 2026-06-11 found and fixed
+  a webhook signature blocker: a configured `STRIPE_WEBHOOK_SECRET` with missing
+  `stripe-signature` now rejects instead of falling back to unverified JSON.
+  This is still **not production accepted yet** because the Prisma schema/table
+  must be deployed safely before live webhooks use the new code.
 
 Next check:
 
 - Keep `npm run audit:ops-browser` in the parent-facing predeploy checklist.
 - Verify the backend deploy path for graduated-student archive/freeze behavior
   before treating that policy as enforced in production.
+- Before accepting the cc backend hardening stack: complete the production
+  sequence in `docs/production-payment-deploy-runbook.md`: DB backup, explicit
+  Stripe/CORS env, `npm run db:push`, `ProcessedStripeEvent` table verification,
+  Lightsail restart, health/checkout/admin/Stripe webhook smoke.
 
 ### 4. Parent Trust / Admissions / Student Care
 
@@ -252,6 +286,194 @@ Next check:
 
 - Before any production deploy, run the normal build/audit/smoke checklist and
   verify the public copy does not overclaim.
+
+### 5. cc Hardening / Git Hygiene
+
+Status: reconciled locally; pending production deploy execution.
+
+- Local `main` was rebased onto `origin/main` on 2026-06-10 and remains ahead of
+  `origin/main`. Do not push blindly because the stack still contains backend
+  runtime/payment changes.
+- Useful local commits include backend security/payment hardening, Apply form
+  stability, admin subscription alerting, CI quality gates / Node 20 pinning,
+  a symlink-aware lesson manifest sync fix, unreferenced image cleanup,
+  `teaching-videos/` untracking for the T9 mount, Parent Conversion A-D, and
+  foundation-video handoff docs.
+- The symlink-aware manifest fix is important because `teaching-videos/` may be
+  mounted on T9 while `public/data/lessons-manifest.json` must still be staged
+  and committed in the repo for the website to update.
+- The T9 `teaching-videos/` storage move is now resolved in source control:
+  tracked `teaching-videos/*` files were removed from the git index, the local
+  path is restored as an ignored symlink, and website-facing video state remains
+  in `public/data/lessons-manifest.json`.
+- 2026-06-11 payment deploy review added
+  `docs/production-payment-deploy-runbook.md`, updated
+  `server/DEPLOY-LIGHTSAIL.md`, expanded `server/.env.example`, and fixed the
+  Stripe webhook verification mode so unsigned events are rejected whenever a
+  signing secret is configured. Evidence:
+  `umi/reviews/2026-06-11-payment-deploy-readiness.md`.
+- 2026-06-11 sales-launch readiness added `npm run audit:sales-launch`
+  and `docs/parent-sales-launch-checklist.md`. The recommendation
+  is a two-step launch: frontend proof path first, then backend payment/access
+  deploy in a controlled Lightsail window.
+- 2026-06-11 conflict closeout added `npm run audit:sales-launch` to the GitHub
+  `quality-gates` job and classified the local commit stack in
+  `docs/parent-sales-launch-checklist.md` so frontend proof deploy and backend
+  Lightsail rollout stay operationally separate.
+- 2026-06-11 admissions sales-ops pass added richer `/consultation` intake
+  fields (`studentSituation`, `transcriptAvailable`, `desiredStart`) plus
+  `docs/admissions-consultation-response-sop.md`. `npm run audit:sales-launch`
+  now gates the SOP and Netlify hidden-form field alignment.
+- 2026-06-11 apply-path clarity pass added a pre-submit expectation panel on
+  `/apply`: new-student vs transfer-student records, one-business-day
+  admissions review, consultation fallback, and no payment before plan review.
+  Browser smoke now includes `/apply` on desktop and mobile.
+- 2026-06-11 homepage sales hardening changed the hero CTA to consultation
+  first, added no-payment-before-review copy, linked Trust Center from the first
+  viewport, and expanded the static sales-launch gate so homepage regressions
+  fail CI.
+- 2026-06-11 consultation form reliability pass changed `/consultation` so a
+  failed Netlify submit no longer displays the success state. The form now has
+  submitting, success, and retry/error states, and `npm run audit:ops-browser`
+  fills and submits the consultation form on desktop/mobile with a mocked
+  successful Netlify response.
+- 2026-06-11 homepage contact form reliability pass applied the same lead
+  capture safety to the footer inquiry form, added the missing Netlify hidden
+  `pathway` field, and expanded `npm run audit:ops-browser` to submit the
+  contact form on desktop/mobile.
+- 2026-06-11 apply submit reliability pass now parses non-JSON API failures
+  safely and expands `npm run audit:ops-browser` to submit a transfer
+  application review on desktop/mobile against the mocked `/api/applications`
+  endpoint.
+- Apply/sales readiness verification is green: `npm run audit:sales-launch`
+  23/23, `npm run audit:public-trust-claims`,
+  `CI=true npm test -- --watchAll=false`,
+  `CI=true BUILD_PATH=/tmp/giis-build-apply-submit npm run build`, and
+  `npm run audit:ops-browser -- --base-url http://localhost:3030` 22/0 against
+  the static production build, including consultation, contact, and apply form
+  submit success.
+- 2026-06-11 production-proof smoke added `npm run audit:sales-live`, which
+  checks the public parent proof path (`/`, `/consultation`, `/apply`,
+  `/pricing`, `/trust-center`, `/graduates`, `/parent/demo`,
+  `/assessment-proof`) against a provided base URL. Local proof against the
+  static production build passed 8/8 with
+  `npm run audit:sales-live -- --base-url http://localhost:3030`; report:
+  `_audit/parent-sales-live-smoke.md`.
+- Current production is not sales-launch ready yet: on 2026-06-11,
+  `npm run audit:sales-live -- --base-url https://genesisideas.school` returned
+  3 pass / 5 fail because the live site is still missing the new
+  consultation-first homepage hero, `/consultation` intake copy/fields,
+  `/apply` pre-submit expectation panel, Trust Center consultation CTA copy, and
+  `/graduates` proof page copy. Evidence:
+  `_audit/parent-sales-live-production-smoke.md`.
+- Local verification after the payment-readiness patch is green: server Jest
+  40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
+  build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
+  `npm run audit:ops-browser` 14 pass / 0 fail.
+- Conflict closeout verification is also green: `npm run audit:sales-launch`,
+  `npm run audit:public-trust-claims`, `npm run audit:staged-artifacts`,
+  `npm run audit:pathways`, `CI=true npm test -- --watchAll=false`,
+  `CI=true BUILD_PATH=/tmp/giis-build-conflict-check npm run build`, and
+  `git diff --check`.
+
+Next check:
+
+- Keep the expanded browser/predeploy smoke green for the new parent-conversion
+  routes and normal ops surfaces.
+- Execute the production payment deploy runbook before production backend deploy.
+- Decide whether to push all local commits together or split frontend-safe
+  changes from backend-runtime changes. Frontend-only Netlify deploy is safe for
+  `/consultation` and `/graduates`, but backend payment/weekly-report behavior
+  is not live until the Lightsail runbook is complete.
+- Before frontend-only deploy, configure Netlify `consultation` and `contact`
+  form notifications to `admissions@genesisideas.school` and test one
+  submission for each form after deploy.
+- After frontend-only deploy, run
+  `npm run audit:sales-live -- --base-url https://genesisideas.school`. This
+  proves only the public parent proof path; backend payment/webhook and weekly
+  report APIs still require the Lightsail runbook.
+- Until the production sales-live smoke returns 8/8, do not treat the public
+  site as ready for parent outreach.
+
+### 6. Parent Conversion & Retention Phases
+
+Status: implemented locally; pending push/deploy sequencing.
+
+Rationale: site functionality is largely sufficient; the gap to "parents pay
+and keep paying" is live evidence and human touch around payment. Phases in
+priority order:
+
+- **Phase A — Consultation touchpoint (pre-payment human).** In-site
+  consultation booking form (reuse/extend the existing contact form) that
+  reaches the admission inbox and is visible to admin, fronted by Shiyu
+  Zhang, Ph.D., President & Principal. Linked from Pricing, Trust Center,
+  and Admission. Bilingual.
+- **Phase B — Student outcomes stories (proof of results).** Public page
+  with graduate trajectories using pseudonyms + real course/credit/
+  acceptance data from `server/prisma/seed.js`. Full university names only;
+  conservative claims.
+- **Phase C — Weekly parent report (push, not pull).** Server-generated
+  weekly draft per student (modules completed, study hours, pacing,
+  parent_safe advisor note); admin reviews and sends via existing email
+  infra. No auto-send.
+- **Phase D — Advisor weekly SOP surface.** Lightweight admin checklist:
+  per active student, review progress / write one parent_safe note / set
+  risk flag. Feeds Phase C content.
+
+Non-goals for this lane: no push/deploy (branch reconciliation is lane 5),
+no AP/accreditation claims, no new public group pricing, no auto-send email
+without admin review. Acquisition/traffic work is acknowledged as the
+upstream bottleneck but lives outside this repo.
+
+2026-06-10 status — Phases A–D implemented and committed locally (NOT pushed,
+NOT deployed):
+
+- Phase A: `/consultation` page (Shiyu Zhang intro, Netlify form
+  `consultation` registered in `public/index.html`, bilingual). Entry links:
+  nav Admission dropdown, Pricing CTA, Trust Center hero, Admission CTA.
+  The form now captures student situation, transcript availability, desired
+  start timing, preferred contact window, and parent contact fields. Netlify
+  dashboard must have a form notification → admissions inbox configured at
+  deploy time.
+- Phase B: `/graduates` page with real Class of 2026 trajectories from
+  `server/prisma/seed.js` shown as initial+surname (Y. Yang / B. Lu / R. Li /
+  T. Zhang per Alan). Homepage `SuccessStories` names shortened to match. No
+  AP strings on the public page; offers labeled "reported"; no guarantees.
+- Phase C: weekly report service enriched with trailing-7-day activity and
+  latest parent_safe advisor note; `studentIds` filter added; email template
+  extended (escaped). New `/admin/weekly-report` review page (dry-run drafts,
+  per-student select, send). AdminDashboard blind-send menu item replaced
+  with link to review page. Codex review then patched the backend route so
+  non-dry-run sends require a non-empty selected `studentIds` list; empty admin
+  POSTs can no longer trigger all-family sends.
+- Phase D: AdminProgressPage weekly-ritual banner, `no_parent_note_week`
+  filter + summary card linking the SOP to the weekly report.
+
+Verification: frontend production build compiled successfully with
+`BUILD_PATH=/tmp/giis-build-final`; `audit:public-trust-claims` 41 files pass;
+Codex targeted check on the weekly-report route guard passes:
+`npm test -- weekly-report.test.js --runInBand`. Expanded parent/admin browser
+smoke also passes: `npm run audit:ops-browser` returned 14 pass / 0 fail across
+`/consultation`, `/graduates`, `/parent/dashboard`, `/admin`,
+`/admin/applications`, `/admin/assignments`, and `/admin/weekly-report`.
+Payment-readiness follow-up on 2026-06-11 added webhook signature tests; full
+server Jest now passes 40/40.
+
+Codex next actions:
+
+1. Review whether frontend-safe changes can push/deploy before backend runtime
+   changes. Frontend deploys via Netlify; Phase C server changes
+   (`weeklyReportService`, mailer, weekly-report route) ride the Lightsail
+   backend deploy path together with the pending hardening stack.
+2. At deploy time: configure the Netlify form notification for the new
+   `consultation` form → admissions inbox, and verify the existing `contact`
+   form notification still works.
+3. Assign the first-response owner for the consultation SOP: who replies within
+   one business day, who handles WeChat follow-up, and when the principal
+   reviews red-flag requests.
+4. After deploy: smoke-submit the consultation form once, dry-run the weekly
+   report on production, and confirm the SuccessStories/graduates
+   initial+surname format renders correctly in both languages.
 
 ## Paused / Closed
 

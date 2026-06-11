@@ -1,9 +1,8 @@
 const express = require('express');
 const { z } = require('zod');
-const { PrismaClient } = require('@prisma/client');
 const { authenticate, requireAdmin } = require('../middleware/auth');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 /**
@@ -62,15 +61,20 @@ router.get('/', authenticate, requireAdmin, async (req, res) => {
       : null,
   }));
 
+  // States where money actually moved — must mirror MONEY_MOVED_STATES in webhooks-stripe.js.
+  const MONEY_MOVED = ['active', 'paid', 'trialing', 'past_due'];
+
   // Summary counts for the page header
   const summary = subs.reduce(
     (acc, s) => {
       acc.total += 1;
       acc.byStatus[s.status] = (acc.byStatus[s.status] || 0) + 1;
       if (!s.studentId) acc.unlinked += 1;
+      // The actionable alert: a parent paid but no student is linked/activated.
+      if (!s.studentId && MONEY_MOVED.includes(s.status)) acc.unlinkedPaid += 1;
       return acc;
     },
-    { total: 0, byStatus: {}, unlinked: 0 }
+    { total: 0, byStatus: {}, unlinked: 0, unlinkedPaid: 0 }
   );
 
   res.json({ subscriptions: rows, summary });

@@ -1,9 +1,8 @@
 const express = require('express');
-const { PrismaClient } = require('@prisma/client');
 const { authenticate, requireAdmin, blockIfSoftLocked } = require('../middleware/auth');
 const { ensureStudentMutable, ensureEnrollmentStudentMutable } = require('../lib/studentArchive');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 const PASS_THRESHOLD = 70;

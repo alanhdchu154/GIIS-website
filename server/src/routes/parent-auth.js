@@ -2,23 +2,26 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-const { PrismaClient } = require('@prisma/client');
 const { sendPasswordResetEmail } = require('../lib/mailer');
 const { DEFAULT_PARENT_PASSWORD, parentLoginEmailForStudentEmail } = require('../lib/parentCredentials');
 const { createLoginSession, closeLoginSession } = require('../lib/sessionTracker');
 const { isArchivedGraduationDate, sendArchivedResponse } = require('../lib/studentArchive');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 const COOKIE_NAME = 'giis_parent_jwt';
+// Constant-time guard against login user-enumeration (see auth.js).
+const DUMMY_PASSWORD_HASH = '$2a$12$LsgLu90JTgGrKhKvqYUMrOXhJ9colrRW8xKvzb8PtTSdT2TLMa2q6';
 const COOKIE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 const RESET_TOKEN_MINUTES = 60;
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'https://genesisideas.school').split(',')[0].trim();
 
 function setCookieOptions() {
   const isProd = process.env.NODE_ENV === 'production' || process.env.TRUST_PROXY === '1';
-  return { httpOnly: true, sameSite: isProd ? 'none' : 'lax', secure: isProd, maxAge: COOKIE_MAX_AGE_MS, path: '/' };
+  // 'lax' (not 'none') blocks the cookie on cross-site POST/fetch — the CSRF defense.
+  // Safe because API requests are same-origin via the Netlify /api proxy (see auth.js).
+  return { httpOnly: true, sameSite: 'lax', secure: isProd, maxAge: COOKIE_MAX_AGE_MS, path: '/' };
 }
 
 function signParentToken(account, sessionId = null) {
@@ -51,7 +54,10 @@ router.post('/login', async (req, res) => {
   if (!email || !password) return res.status(400).json({ error: 'email and password required' });
 
   const account = await prisma.parentAccount.findUnique({ where: { email: email.trim().toLowerCase() } });
-  if (!account) return res.status(401).json({ error: 'Invalid email or password' });
+  if (!account) {
+    await bcrypt.compare(password, DUMMY_PASSWORD_HASH);
+    return res.status(401).json({ error: 'Invalid email or password' });
+  }
 
   const ok = await bcrypt.compare(password, account.passwordHash);
   if (!ok) return res.status(401).json({ error: 'Invalid email or password' });

@@ -129,12 +129,12 @@ const SCHOOL = {
   statute: 'Florida Statute 1002.42',
 };
 
-function Avatar({ initials, photo, color = NAVY }) {
+function Avatar({ initials, photo, name, color = NAVY }) {
   if (photo) {
     return (
       <img
         src={photo}
-        alt={initials}
+        alt={name || initials}
         style={{
           width: 168, height: 168, borderRadius: '50%', objectFit: 'cover',
           border: `4px solid ${GOLD}`, boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
@@ -182,7 +182,7 @@ function LeaderCard({ leader, language, accentLeft = true }) {
       }} />
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
-        <Avatar initials={leader.initials} photo={leader.photo} />
+        <Avatar initials={leader.initials} photo={leader.photo} name={en ? leader.nameEn : leader.nameZh} />
         <div style={{ textAlign: 'center' }}>
           <div style={{ fontSize: 22, fontWeight: 700, color: NAVY, fontFamily: "'Georgia', serif" }}>
             {en ? leader.nameEn : leader.nameZh}

@@ -71,10 +71,9 @@ async function blockIfSoftLocked(req, res, next) {
   if (req.auth?.role === 'admin') return next();
   if (req.auth?.role !== 'student') return next();
   try {
-    // Lazily import Prisma so middleware loads cleanly without DB during tests.
-    const { PrismaClient } = require('@prisma/client');
-    const prisma = req.app.locals._prismaForLockCheck ||
-      (req.app.locals._prismaForLockCheck = new PrismaClient());
+    // Lazily import the shared Prisma singleton so this middleware loads cleanly
+    // without a DB during tests, and avoids opening yet another connection pool.
+    const prisma = require('../lib/prisma');
     const account = await prisma.studentAccount.findUnique({
       where: { studentId: req.auth.studentId },
       select: { isActive: true, softLocked: true, lockReason: true },

@@ -1,10 +1,9 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const { PrismaClient } = require('@prisma/client');
 const { computeSemesterTotals } = require('../lib/gpa');
 const { touchLoginSession } = require('../lib/sessionTracker');
 
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma');
 const router = express.Router();
 
 function extractParentAuth(req) {

@@ -1,8 +1,7 @@
-const { PrismaClient } = require('@prisma/client');
 const { sendWeeklyProgressEmail, FALLBACK_PARENT_EMAIL, ADMISSIONS_EMAIL } = require('./mailer');
 const { computeSemesterTotals } = require('./gpa');
 
-const prisma = new PrismaClient();
+const prisma = require('./prisma');
 
 const GRAD_CREDITS = 24;
 const SITE = (process.env.CORS_ORIGIN || 'https://genesisideas.school').split(',')[0].trim();
@@ -51,10 +50,55 @@ function recipientForSubscription(sub) {
   );
 }
 
-async function runWeeklyReports({ dryRun = false, force = false, now = new Date() } = {}) {
+/**
+ * Weekly activity over the trailing 7 days, mirroring the parent-dashboard
+ * weekly insights (modules completed, estimated study hours, active days).
+ */
+function computeWeeklyActivity(enrollments, now = new Date()) {
+  const since = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
+  const activeDays = new Set();
+  let modulesCompleted = 0;
+  let quizAttempts = 0;
+  let estimatedStudyHours = 0;
+
+  function countDate(value) {
+    if (!value) return false;
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime()) || date < since || date > now) return false;
+    activeDays.add(date.toISOString().slice(0, 10));
+    return true;
+  }
+
+  for (const enrollment of enrollments || []) {
+    const moduleHours = new Map((enrollment.course?.modules || []).map((m) => [m.order, Number(m.estimatedHrs || 0)]));
+    for (const p of enrollment.moduleProgresses || []) {
+      if (countDate(p.moduleCompletedAt)) {
+        modulesCompleted += 1;
+        estimatedStudyHours += moduleHours.get(p.moduleOrder) || 0;
+      }
+      countDate(p.readingCompletedAt);
+      countDate(p.videoCompletedAt);
+      countDate(p.practiceCompletedAt);
+    }
+    quizAttempts += (enrollment.quizAttempts || []).filter((q) => countDate(q.submittedAt)).length;
+  }
+
+  return {
+    activeDays: activeDays.size,
+    modulesCompleted,
+    quizAttempts,
+    estimatedStudyHours: Math.round(estimatedStudyHours * 10) / 10,
+  };
+}
+
+async function runWeeklyReports({ dryRun = false, force = false, studentIds = null, now = new Date() } = {}) {
   const currentWeek = weekKey(now);
+  const subWhere = { status: { in: ['active', 'trialing'] }, studentId: { not: null } };
+  if (Array.isArray(studentIds) && studentIds.length > 0) {
+    subWhere.studentId = { in: studentIds.map(String) };
+  }
   const activeSubs = await prisma.subscription.findMany({
-    where: { status: { in: ['active', 'trialing'] }, studentId: { not: null } },
+    where: subWhere,
     include: {
       student: {
         include: {
@@ -65,7 +109,17 @@ async function runWeeklyReports({ dryRun = false, force = false, now = new Date(
           },
           enrollments: {
             include: {
-              course: { select: { name: true, nameZh: true, credits: true, _count: { select: { modules: true } } } },
+              course: {
+                select: {
+                  name: true,
+                  nameZh: true,
+                  credits: true,
+                  _count: { select: { modules: true } },
+                  modules: { select: { order: true, estimatedHrs: true } },
+                },
+              },
+              moduleProgresses: true,
+              quizAttempts: { select: { submittedAt: true } },
             },
             orderBy: { enrolledAt: 'desc' },
           },
@@ -102,6 +156,25 @@ async function runWeeklyReports({ dryRun = false, force = false, now = new Date(
         totalModules: e.course._count.modules,
       }));
 
+    const weeklyActivity = computeWeeklyActivity(student.enrollments, now);
+
+    // Latest advisor note the advisor explicitly marked parent-safe.
+    // Internal notes are never included in parent email.
+    const advisorNoteLog = await prisma.studentCareLog
+      .findFirst({
+        where: { studentId: student.id, visibility: 'parent_safe' },
+        orderBy: { createdAt: 'desc' },
+        select: { title: true, parentSummary: true, createdAt: true },
+      })
+      .catch(() => null);
+    const advisorNote = advisorNoteLog && advisorNoteLog.parentSummary
+      ? {
+          title: advisorNoteLog.title || '',
+          summary: advisorNoteLog.parentSummary,
+          date: advisorNoteLog.createdAt,
+        }
+      : null;
+
     const payload = {
       parentEmail: recipient,
       studentName: student.name,
@@ -110,6 +183,8 @@ async function runWeeklyReports({ dryRun = false, force = false, now = new Date(
       inProgressCourses: inProgress,
       completedCount: stats.completedCount,
       gradPercent: Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100)),
+      weeklyActivity,
+      advisorNote,
       dashboardUrl: `${SITE}/parent/dashboard`,
     };
 

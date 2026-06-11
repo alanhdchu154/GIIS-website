@@ -469,6 +469,9 @@ export default function PricingPage({ language, toggleLanguage }) {
             <Link to="/admission" style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', fontWeight: 750, textDecoration: 'none' }}>
               {isEn ? 'Review admissions path' : '查看招生路径'}
             </Link>
+            <Link to="/consultation" style={{ padding: '13px 28px', borderRadius: 8, border: '2px solid rgba(255,255,255,0.3)', color: '#fff', fontWeight: 750, textDecoration: 'none' }}>
+              {isEn ? 'Book a free consultation' : '预约免费咨询'}
+            </Link>
           </div>
         </div>
       </section>

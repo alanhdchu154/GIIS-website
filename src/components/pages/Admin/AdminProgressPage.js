@@ -56,6 +56,15 @@ function isDue(iso) {
   return !Number.isNaN(date.getTime()) && date < new Date();
 }
 
+function hasParentNoteThisWeek(student) {
+  const since = Date.now() - 7 * 24 * 3600 * 1000;
+  return (student.recentCareLogs || []).some((log) => {
+    if (log.visibility !== 'parent_safe') return false;
+    const created = new Date(log.createdAt).getTime();
+    return Number.isFinite(created) && created >= since;
+  });
+}
+
 function isNeedsAttention(student) {
   const risk = student.careDisplay?.riskLevel;
   const status = student.careDisplay?.status;
@@ -182,6 +191,7 @@ export default function AdminProgressPage() {
     if (filter === 'no_advisor_review') return !student.careState?.lastReviewedAt;
     if (filter === 'parent_concern') return student.careDisplay?.status === 'parent_concern' || (student.recentCareLogs || []).some((log) => log.type === 'parent_contact');
     if (filter === 'intervention_due') return isDue(student.careState?.nextCheckInDueAt) || student.careDisplay?.status === 'intervention_needed';
+    if (filter === 'no_parent_note_week') return !hasParentNoteThisWeek(student);
     return true;
   });
 
@@ -191,6 +201,7 @@ export default function AdminProgressPage() {
     urgent: (students || []).filter((student) => student.careDisplay?.riskLevel === 'urgent').length,
     noReview: (students || []).filter((student) => !student.careState?.lastReviewedAt).length,
     due: (students || []).filter((student) => isDue(student.careState?.nextCheckInDueAt)).length,
+    noParentNoteWeek: (students || []).filter((student) => !hasParentNoteThisWeek(student)).length,
   };
 
   function updateCareDraft(key, value) {
@@ -274,6 +285,40 @@ export default function AdminProgressPage() {
       )}
 
       {students && (
+        <div style={{
+          background: '#fdf9ef', border: '1px solid #ead9a8', borderRadius: 10,
+          padding: '14px 18px', marginBottom: 16,
+          display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap',
+        }}>
+          <div style={{ flex: 1, minWidth: 280 }}>
+            <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 850, color: '#8a6d1f', textTransform: 'uppercase', letterSpacing: 0.8 }}>
+              Weekly ritual · ~5 min per student
+            </p>
+            <p style={{ margin: 0, fontSize: 13.5, color: '#4a4633', lineHeight: 1.6 }}>
+              ① Review progress → ② write one <strong>parent-safe</strong> note per active student → ③ send the weekly report.
+              {summary.noParentNoteWeek > 0
+                ? ` ${summary.noParentNoteWeek} student${summary.noParentNoteWeek === 1 ? '' : 's'} still need${summary.noParentNoteWeek === 1 ? 's' : ''} a parent-safe note this week.`
+                : ' All students have a parent-safe note this week — ready to send.'}
+            </p>
+          </div>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <button
+              onClick={() => setFilter('no_parent_note_week')}
+              style={{ border: '1px solid #b8962e', background: '#fff', color: '#8a6d1f', borderRadius: 8, padding: '9px 14px', fontSize: 12.5, fontWeight: 800, cursor: 'pointer' }}
+            >
+              Show students missing a note
+            </button>
+            <Link
+              to="/admin/weekly-report"
+              style={{ border: 'none', background: '#1a2d5a', color: '#fff', borderRadius: 8, padding: '9px 14px', fontSize: 12.5, fontWeight: 800, textDecoration: 'none' }}
+            >
+              📧 Review & send weekly report →
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {students && (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 10, marginBottom: 16 }}>
           {[
             ['Total', summary.total],
@@ -281,6 +326,7 @@ export default function AdminProgressPage() {
             ['Urgent', summary.urgent],
             ['No advisor review', summary.noReview],
             ['Check-in due', summary.due],
+            ['No parent note (7d)', summary.noParentNoteWeek],
           ].map(([name, value]) => (
             <div key={name} style={{ border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff', padding: '12px 14px' }}>
               <p style={{ margin: '0 0 4px', color: '#64748b', fontSize: 11, fontWeight: 800, textTransform: 'uppercase' }}>{name}</p>
@@ -297,6 +343,7 @@ export default function AdminProgressPage() {
           ['no_advisor_review', 'No advisor review'],
           ['parent_concern', 'Parent concern'],
           ['intervention_due', 'Intervention due'],
+          ['no_parent_note_week', 'No parent note (7d)'],
           ['all', 'All students'],
         ].map(([id, name]) => (
           <button

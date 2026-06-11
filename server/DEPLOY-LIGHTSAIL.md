@@ -2,6 +2,11 @@
 
 This server is a plain Node.js + Express + Prisma app. **PostgreSQL** is required (same as local Docker).
 
+For the current parent-payment stack, read
+`docs/production-payment-deploy-runbook.md` before touching production. That
+runbook is the source of truth for Stripe webhook / Prisma / Lightsail
+sequencing.
+
 ## Architecture (typical)
 
 | Piece | Options on Lightsail |
@@ -20,6 +25,9 @@ Keep the database **private**: only allow the API security group / localhost to 
 3. Set a strong **`JWT_SECRET`** (e.g. `openssl rand -hex 32`).
 4. Set **`CORS_ORIGIN`** to your live site, e.g. `https://genesisideas.school` (comma-separated if multiple).
 5. If the API is behind the Lightsail load balancer or nginx with HTTPS, set **`TRUST_PROXY=1`**.
+6. Set **`STRIPE_SECRET_KEY`** and **`STRIPE_WEBHOOK_SECRET`** before enabling
+   production checkout/webhooks. Never set `ALLOW_UNVERIFIED_STRIPE_WEBHOOK=1`
+   in production.
 
 ## First deploy (schema)
 
@@ -38,12 +46,39 @@ npx prisma generate
 # For a brand-new production database, `migrate deploy` will create tables based on committed migrations.
 npm run db:push
 
-# Optional demo admin + demo students (avoid in production if undesired)
+# Optional demo admin + demo students (development only; do not run against
+# current production or live-like graduate/student records)
 npm run db:seed
 npm start
 ```
 
-For ongoing changes, use **Prisma migrations** (`migrate dev` / `migrate deploy`) instead of `db push` once you are past early prototyping.
+For ongoing changes, prefer **Prisma migrations** (`migrate dev` /
+`migrate deploy`) instead of `db push` once migrations are committed. This repo
+currently still has no committed migration history, so production schema updates
+must be handled deliberately with a backup + `npm run db:push`; see
+`docs/production-payment-deploy-runbook.md`.
+
+## Current Payment-Safe Deploy Checklist
+
+Before deploying payment/webhook changes:
+
+1. Back up production Postgres.
+2. Confirm production env:
+   - `NODE_ENV=production`
+   - `CORS_ORIGIN=https://genesisideas.school`
+   - `STRIPE_SECRET_KEY=sk_live_...`
+   - `STRIPE_WEBHOOK_SECRET=whsec_...`
+   - no `ALLOW_UNVERIFIED_STRIPE_WEBHOOK=1`
+3. Run `npm run db:push` from `server/` to create additive schema such as
+   `ProcessedStripeEvent`.
+4. Verify:
+   `psql "$DATABASE_URL" -c "select to_regclass('\"ProcessedStripeEvent\"');"`
+5. Restart the single production API process.
+6. Smoke:
+   - `curl -fsS https://api.genesisideas.school/health`
+   - `curl -fsS https://genesisideas.school/api/checkout/tiers`
+   - signed Stripe Dashboard test event returns 200
+   - unsigned webhook requests are rejected
 
 ## Frontend (CRA)
 
