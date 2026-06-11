@@ -52,8 +52,9 @@ Local evidence is green:
 ## Current Production Status
 
 Production public proof path is live. On 2026-06-11, after pushing
-`f984e651` to GitHub `origin/main` and allowing Netlify to deploy,
-the live site smoke returned 8 pass / 0 fail for:
+`65ea0ceb` to GitHub `origin/main` and allowing Netlify to deploy,
+the live site smoke returned 8 pass / 0 fail and the parent journey acceptance
+gate returned 7 pass / 0 fail. The live smoke covers:
 
 - `/`
 - `/consultation`
@@ -64,7 +65,9 @@ the live site smoke returned 8 pass / 0 fail for:
 - `/parent/demo`
 - `/assessment-proof`
 
-Evidence: `_audit/parent-sales-live-production-smoke.md`.
+Buyer-readiness evidence: `npm run audit:parent-journey -- --base-url
+https://genesisideas.school` checks school status, learning evidence, parent
+visibility, pricing, applicant requirements, and contact-path answers.
 
 This proves the public parent proof path only. Before relying on inbound leads,
 configure Netlify notifications for the `consultation` and `contact` forms to

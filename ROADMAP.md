@@ -47,6 +47,8 @@ days should run `npm run sales:ready-today -- --operator-log
 same-day operator log outside git. Expected current verdict is
 `manual_sales_go_with_payment_boundary`. Automated Guided/Premium checkout
 stays blocked until `npm run audit:sales-payment-live` returns 0 fail.
+Latest production frontend verification after `65ea0ceb`: `audit:sales-live`
+is 8/8 and `audit:parent-journey` is 7/7.
 
 ## Active Lanes
 
@@ -456,7 +458,9 @@ Status: reconciled locally; pending production deploy execution.
   that `/apply` only showed "official transcripts or verifiable school records"
   after selecting transfer; the fixed copy now shows that requirement in the
   static Before You Submit panel. Local production build verification passed
-  7/7 with `--base-url http://localhost:3037`.
+  7/7 with `--base-url http://localhost:3037`; after push/deploy,
+  production verification also passed 7/7 with `--base-url
+  https://genesisideas.school`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded

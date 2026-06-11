@@ -320,9 +320,10 @@ approval.
   should return `manual_sales_go_with_payment_boundary` until automated payment
   is fixed. New buyer-readiness check: `npm run audit:parent-journey` validates
   whether the parent path answers status, learning, parent visibility, pricing,
-  applicant requirements, and contact questions; local production build is 7/7
-  after making the Apply page's transfer-record requirement visible before
-  interaction. Outstanding: Netlify form notification config or permanent daily
+  applicant requirements, and contact questions; local production build and
+  production site are both 7/7 after making the Apply page's transfer-record
+  requirement visible before interaction. Outstanding: Netlify form notification
+  config or permanent daily
   submissions owner; `npm run audit:sales-payment-live` is still blocked by
   missing Guided/Premium Stripe price IDs and direct API health/webhook
   reachability. Read-only Lightsail check found local API health green on
