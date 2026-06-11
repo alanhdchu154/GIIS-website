@@ -57,6 +57,7 @@
     "audit:parent-journey": "node tools/ops-quality/audit_parent_journey_acceptance.js",
     "audit:production-api-proxy": "node tools/ops-quality/audit_production_api_proxy.js",
     "audit:production-payment-env": "node tools/ops-quality/audit_production_payment_env.js",
+    "sales:operator-log": "node tools/ops-quality/generate_parent_sales_operator_log.js",
     "sales:ready-today": "node tools/ops-quality/audit_parent_sales_ready_today.js",
     "sales:launch-mode": "node tools/ops-quality/audit_parent_sales_launch_mode.js",
     "audit:public-trust-claims": "node tools/public-trust/audit_public_trust_claims.js",

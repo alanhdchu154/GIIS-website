@@ -17,6 +17,10 @@ evidence is explicitly needed.
 
 Next action:
 
+- Generate the same-day operator log outside git with
+  `npm run sales:operator-log -- --owner <same-day-owner> --checked yes --manual-stripe-authorized yes`
+  only after that person agrees to cover lead capture, response, WeChat, and
+  manual Stripe handoff for the day.
 - Before outreach or sales-day decisions, run
   `npm run sales:launch-mode -- --operator-log /path/to/operator-log.md`.
 - If no same-day operator log exists and permanent owner decisions are still
@@ -32,7 +36,11 @@ Current Umi note:
   operator log returns `manual_sales_go_with_payment_boundary`; automated
   checkout remains blocked by Guided/Premium Stripe price IDs and
   `api.genesisideas.school` HTTPS/webhook failures.
-- Static sales-launch is 35/35 after adding the launch-mode contract check.
+- 2026-06-11 `sales:operator-log` now creates the same-day operator log outside
+  git and refuses repo paths, reducing the risk of committing parent/payment
+  operational notes.
+- Static sales-launch is 36/36 after adding the operator-log generator contract
+  check.
 
 Acceptance:
 

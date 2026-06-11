@@ -33,6 +33,7 @@ const files = {
   outreachPacket: read('docs/parent-sales-outreach-packet.md'),
   dailyOperatorChecklist: read('docs/parent-sales-daily-operator-checklist.md'),
   dailyOperatorLogTemplate: read('docs/templates/parent-sales-daily-operator-log.md'),
+  operatorLogGenerator: read('tools/ops-quality/generate_parent_sales_operator_log.js'),
   readyTodayGate: read('tools/ops-quality/audit_parent_sales_ready_today.js'),
   ownerDecisionGate: read('tools/ops-quality/audit_parent_sales_owner_decisions.js'),
   launchModeGate: read('tools/ops-quality/audit_parent_sales_launch_mode.js'),
@@ -321,6 +322,15 @@ const checks = [
       /Inbox Checks/.test(files.dailyOperatorLogTemplate) &&
       /Do not store parent names/.test(files.dailyOperatorLogTemplate),
     message: 'Admissions must have a non-sensitive same-day operator log template.',
+  },
+  {
+    id: 'parent-sales-operator-log-generator',
+    file: 'tools/ops-quality/generate_parent_sales_operator_log.js',
+    ok: /sales:operator-log/.test(files.packageJson) &&
+      /Refusing to write an operator log inside the repo/.test(files.operatorLogGenerator) &&
+      /Do not store parent names/.test(files.operatorLogGenerator) &&
+      /sales:launch-mode -- --operator-log/.test(files.operatorLogGenerator),
+    message: 'Admissions must have a safe command to generate same-day operator logs outside git.',
   },
   {
     id: 'parent-sales-ready-today-gate',
