@@ -1,6 +1,6 @@
 # Parent Sales Live Smoke QA
 
-Generated: 2026-06-11T14:04:19.541Z
+Generated: 2026-06-11T14:09:40.798Z
 Base URL: https://genesisideas.school
 
 Summary: 8 pass / 0 fail (8 route checks)

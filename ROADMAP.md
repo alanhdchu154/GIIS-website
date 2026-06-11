@@ -24,6 +24,13 @@ local `main` to GitHub `origin/main` automatically triggers the Netlify frontend
 deploy for `genesisideas.school`; it does not deploy/restart the Lightsail
 backend.
 
+Current sellable state: GIIS can start consultation-first outreach and
+transfer/new-student path reviews using the public proof path, response SOP,
+outreach packet, and manual payment handoff. This is not the same as fully
+automated checkout. Outreach days should run `npm run audit:sales-manual-ready`;
+automated Guided/Premium checkout stays blocked until
+`npm run audit:sales-payment-live` returns 0 fail.
+
 ## Active Lanes
 
 ### 1. Foundation Video Daily Pipeline
@@ -352,7 +359,7 @@ Status: reconciled locally; pending production deploy execution.
   application review on desktop/mobile against the mocked `/api/applications`
   endpoint.
 - Apply/sales readiness verification is green: `npm run audit:sales-launch`
-  23/23, `npm run audit:public-trust-claims`,
+  25/25, `npm run audit:public-trust-claims`,
   `CI=true npm test -- --watchAll=false`,
   `CI=true BUILD_PATH=/tmp/giis-build-apply-submit npm run build`, and
   `npm run audit:ops-browser -- --base-url http://localhost:3030` 22/0 against
@@ -382,6 +389,10 @@ Status: reconciled locally; pending production deploy execution.
   `docs/admissions-payment-handoff-runbook.md` and a sales-launch gate check.
   This lets GIIS start selling through consultation/path review while keeping
   automated Guided/Premium checkout blocked until the payment-live gate passes.
+- 2026-06-11 parent sales outreach packet added
+  `docs/parent-sales-outreach-packet.md` and a sales-launch gate check. It gives
+  admissions conservative first-message, WeChat, consultation call, follow-up,
+  recordkeeping, and same-day stop-condition scripts for outreach days.
 - 2026-06-11 manual-sales readiness gate added
   `npm run audit:sales-manual-ready`. Current production result is 8 pass / 4
   warn / 0 fail with verdict `manual_sales_ready_with_recorded_warnings`: public

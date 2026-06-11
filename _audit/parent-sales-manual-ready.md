@@ -1,6 +1,6 @@
 # Parent Sales Manual Readiness QA
 
-Generated: 2026-06-11T14:04:21.189Z
+Generated: 2026-06-11T15:03:15.163Z
 Base URL: https://genesisideas.school
 API URL: https://api.genesisideas.school
 
@@ -10,7 +10,7 @@ Summary: 8 pass / 4 warn / 0 fail (12 checks)
 | Check | Status | Notes |
 | --- | --- | --- |
 | production-proof-path | pass | Production public proof path passes live smoke.<br><code>{"baseUrl":"https://genesisideas.school","summary":{"total":8,"pass":8,"fail":0}}</code> |
-| static-sales-launch | pass | Static parent sales launch gate passes.<br><code>{"stdout":"Parent sales launch audit passed: 24/24 checks."}</code> |
+| static-sales-launch | pass | Static parent sales launch gate passes.<br><code>{"stdout":"Parent sales launch audit passed: 25/25 checks."}</code> |
 | production-contact-form-markup | pass | Production homepage includes Netlify contact form markup.<br><code>{"url":"https://genesisideas.school/","status":200}</code> |
 | production-consultation-form-markup | pass | Production consultation page includes Netlify consultation form markup.<br><code>{"url":"https://genesisideas.school/consultation","status":200}</code> |
 | consultation-email-fallback | pass | Consultation page exposes admissions email fallback.<br><code>{"url":"https://genesisideas.school/consultation"}</code> |

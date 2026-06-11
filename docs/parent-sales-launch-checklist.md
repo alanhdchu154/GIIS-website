@@ -10,7 +10,7 @@ backend payment/access launch.
 
 Local evidence is green:
 
-- `npm run audit:sales-launch` — 24/24 pass
+- `npm run audit:sales-launch` — 25/25 pass
 - `npm run audit:ops-browser -- --base-url http://localhost:3030` — 22 pass / 0 fail, including consultation, contact, and apply form submit success on desktop/mobile
 - `npm run audit:public-trust-claims` — 41 files pass
 - server Jest — 40/40 pass
@@ -19,6 +19,7 @@ Local evidence is green:
 - admissions consultation response SOP — `docs/admissions-consultation-response-sop.md`
 - admissions payment handoff runbook —
   `docs/admissions-payment-handoff-runbook.md`
+- parent sales outreach packet — `docs/parent-sales-outreach-packet.md`
 - local production-proof smoke command available:
   `npm run audit:sales-live -- --base-url http://localhost:3030` — 8/8 pass
 - payment-launch live gate available:
@@ -93,6 +94,8 @@ This is enough to begin outreach and consultations because families can now see:
   records before submission
 - an internal response flow for turning consultations into path review,
   document requests, and plan recommendations
+- a conservative outreach packet for first messages, WeChat, consultation call
+  flow, follow-up templates, same-day stop conditions, and owner review items
 
 ## What Frontend-Only Does Not Prove
 
@@ -215,3 +218,7 @@ Alan-facing owner decisions are tracked in
 `docs/parent-sales-owner-decisions.json`. Leave blank/false values blank until
 Alan confirms them; the manual readiness gate will keep warning on missing
 owners instead of silently treating the launch as operationally complete.
+
+Use `docs/parent-sales-outreach-packet.md` for outreach days. It contains the
+conservative first-message scripts, WeChat short reply, consultation call flow,
+follow-up templates, recordkeeping checklist, and same-day stop conditions.

@@ -185,6 +185,11 @@ Local commits (oldest→newest):
 - apply submit reliability — `/apply` now handles non-JSON API failures safely,
   and `audit:ops-browser` includes a desktop/mobile transfer application submit
   success flow against the mocked `/api/applications` endpoint.
+- parent sales outreach packet — `docs/parent-sales-outreach-packet.md` gives
+  admissions conservative first-message, WeChat, consultation call, follow-up,
+  recordkeeping, and same-day stop-condition scripts. `audit:sales-launch` now
+  gates the packet so active outreach cannot drift into payment pressure,
+  guaranteed outcomes, or unowned lead capture.
 
 Codex next actions (do in order):
 
@@ -196,10 +201,13 @@ Codex next actions (do in order):
    one submit for each form after deploy.
 3. Assign consultation response ownership: first response, WeChat follow-up,
    and principal escalation for red-flag requests.
-4. **After frontend-only deploy**: run
+4. Use `docs/parent-sales-outreach-packet.md` on outreach days, after
+   `npm run audit:sales-manual-ready` returns 0 fail or warnings are explicitly
+   covered by same-day owner assignments.
+5. **After frontend-only deploy**: run
    `npm run audit:sales-live -- --base-url https://genesisideas.school` and
    treat 8/8 pass as the public proof-path acceptance gate.
-5. **Before backend deploy**: follow
+6. **Before backend deploy**: follow
    `docs/production-payment-deploy-runbook.md`: production DB backup,
    `npm run db:push`, `ProcessedStripeEvent` table verification, explicit
    `STRIPE_WEBHOOK_SECRET` and `CORS_ORIGIN`, no
@@ -232,7 +240,7 @@ passes 14/0. Conflict closeout verification on 2026-06-11 is green:
 `CI=true BUILD_PATH=/tmp/giis-build-conflict-check npm run build`, and
 `git diff --check`.
 Apply/sales readiness verification on 2026-06-11 is green:
-`npm run audit:sales-launch` 23/23, `npm run audit:public-trust-claims`,
+`npm run audit:sales-launch` 25/25, `npm run audit:public-trust-claims`,
 `CI=true npm test -- --watchAll=false`,
 `CI=true BUILD_PATH=/tmp/giis-build-apply-submit npm run build`, and
 `npm run audit:ops-browser -- --base-url http://localhost:3030` 22/0 against
@@ -297,7 +305,7 @@ approval.
   principal = sole face; graduate names = initial + surname (real data);
   weekly report = admin review before send.
 - verification: production public proof smoke is 8/8; static sales launch audit
-  is 23/23; public trust claims audit is 41/41. Outstanding: Netlify form
+  is 25/25; public trust claims audit is 41/41. Outstanding: Netlify form
   notification config or daily submissions owner; `npm run
   audit:sales-payment-live` is still 2 pass / 1 warn / 4 fail; backend
   weekly-report/payment deploy requires the Lightsail runbook.

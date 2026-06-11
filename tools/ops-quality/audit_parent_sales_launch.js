@@ -26,6 +26,7 @@ const files = {
   paymentRunbook: read('docs/production-payment-deploy-runbook.md'),
   paymentHandoff: read('docs/admissions-payment-handoff-runbook.md'),
   consultationSop: read('docs/admissions-consultation-response-sop.md'),
+  outreachPacket: read('docs/parent-sales-outreach-packet.md'),
 };
 
 const checks = [
@@ -229,6 +230,20 @@ const checks = [
       /Do not promise admission outcomes/.test(files.consultationSop) &&
       /After-Call Checklist/.test(files.consultationSop),
     message: 'Admissions must have a conservative response SOP before starting parent sales.',
+  },
+  {
+    id: 'parent-sales-outreach-packet',
+    file: 'docs/parent-sales-outreach-packet.md',
+    ok: /npm run audit:sales-manual-ready/.test(files.outreachPacket) &&
+      /Do not send automated Guided\/Premium checkout links until/.test(files.outreachPacket) &&
+      /Payment only after path\s+review/.test(files.outreachPacket) &&
+      /No guaranteed admission/.test(files.outreachPacket) &&
+      /Florida-registered private school/.test(files.outreachPacket) &&
+      /24-credit graduation framework/.test(files.outreachPacket) &&
+      /Transfer Family/.test(files.outreachPacket) &&
+      /Same-Day Stop Conditions/.test(files.outreachPacket) &&
+      /parent-sales-owner-decisions\.json/.test(files.outreachPacket),
+    message: 'Admissions must have a conservative outreach packet before starting active parent sales.',
   },
 ];
 

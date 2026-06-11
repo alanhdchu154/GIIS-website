@@ -1,6 +1,6 @@
 # Parent Sales Payment Live QA
 
-Generated: 2026-06-11T14:03:13.371Z
+Generated: 2026-06-11T14:08:18.066Z
 Base URL: https://genesisideas.school
 API URL: https://api.genesisideas.school
 
