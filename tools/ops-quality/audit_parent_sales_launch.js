@@ -24,6 +24,7 @@ const files = {
   parentDemo: read('src/components/pages/Parent/ParentDashboardDemo.js'),
   publicIndex: read('public/index.html'),
   paymentRunbook: read('docs/production-payment-deploy-runbook.md'),
+  paymentHandoff: read('docs/admissions-payment-handoff-runbook.md'),
   consultationSop: read('docs/admissions-consultation-response-sop.md'),
 };
 
@@ -208,6 +209,16 @@ const checks = [
       /Frontend-only Netlify deploy may happen/.test(files.paymentRunbook) &&
       /do not tell parents/i.test(files.paymentRunbook),
     message: 'Payment runbook must separate frontend launch from backend payment safety.',
+  },
+  {
+    id: 'payment-handoff-runbook',
+    file: 'docs/admissions-payment-handoff-runbook.md',
+    ok: /Manual Payment Fallback/.test(files.paymentHandoff) &&
+      /Payment is requested only after the enrollment path is clear/.test(files.paymentHandoff) &&
+      /Do not send an automated Guided\/Premium checkout link/.test(files.paymentHandoff) &&
+      /30-day refund policy applies/.test(files.paymentHandoff) &&
+      /Alan Review Items/.test(files.paymentHandoff),
+    message: 'Admissions must have a conservative manual payment handoff while automated Guided/Premium checkout is gated.',
   },
   {
     id: 'consultation-response-sop',

@@ -373,6 +373,10 @@ Status: reconciled locally; pending production deploy execution.
   `https://api.genesisideas.school/health` is unreachable, and the Stripe
   webhook endpoint is not reachable over HTTPS. Evidence:
   `_audit/parent-sales-payment-live.md`.
+- 2026-06-11 manual admissions payment handoff added
+  `docs/admissions-payment-handoff-runbook.md` and a sales-launch gate check.
+  This lets GIIS start selling through consultation/path review while keeping
+  automated Guided/Premium checkout blocked until the payment-live gate passes.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -397,6 +401,9 @@ Next check:
 - Before sending any Guided or Premium checkout link, fix production Stripe
   price env (`STRIPE_PRICE_GUIDED_MONTHLY`, `STRIPE_PRICE_PREMIUM_MONTHLY`) and
   make `npm run audit:sales-payment-live` pass.
+- Until automated checkout is green, use the manual payment handoff runbook:
+  payment only after path review, authorized Stripe Dashboard invoice/payment
+  link only, and portal activation after fit plus payment are both clear.
 
 ### 6. Parent Conversion & Retention Phases
 

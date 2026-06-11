@@ -246,6 +246,11 @@ returns 2 pass / 1 warn / 4 fail because Guided `$149/month` and Premium
 price ID, `https://api.genesisideas.school/health` is unreachable, and the
 Stripe webhook endpoint is not reachable over HTTPS. Evidence:
 `_audit/parent-sales-payment-live.md`.
+Manual sellable path added: `docs/admissions-payment-handoff-runbook.md`
+defines the conservative fallback for selling through consultation/path review:
+manual Stripe Dashboard invoice/payment link only after path review, receipt and
+Stripe IDs recorded outside git, and portal activation after fit plus payment
+are both clear. `npm run audit:sales-launch` now gates the handoff doc.
 cc review notes: a bounded `claude -p` review-only pass was attempted for the
 admissions sales-ops diff on 2026-06-11, but it produced no output and was
 stopped. A second bounded review-only pass for

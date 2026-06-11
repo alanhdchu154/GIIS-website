@@ -17,6 +17,8 @@ Local evidence is green:
 - `npx prisma validate` — pass
 - production build — pass with `BUILD_PATH=/tmp/giis-build-apply-submit`
 - admissions consultation response SOP — `docs/admissions-consultation-response-sop.md`
+- admissions payment handoff runbook —
+  `docs/admissions-payment-handoff-runbook.md`
 - local production-proof smoke command available:
   `npm run audit:sales-live -- --base-url http://localhost:3030` — 8/8 pass
 - payment-launch live gate available:
@@ -189,3 +191,8 @@ Use a three-step launch:
 GIIS can start selling through consultation and path review now, but should not
 send automated Guided/Premium checkout links until `npm run
 audit:sales-payment-live` returns 0 fail.
+
+Until then, use `docs/admissions-payment-handoff-runbook.md` for the manual
+payment fallback: payment only after path review, Stripe Dashboard invoice or
+payment link only from an authorized GIIS operator, receipt/Stripe ID recorded
+outside git, and portal activation only after fit plus payment are both clear.
