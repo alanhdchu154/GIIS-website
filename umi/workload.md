@@ -240,14 +240,28 @@ Production public proof path is also green: after pushing `f984e651` to GitHub
 lead-capture ops: configure Netlify `consultation` and `contact` form
 notifications to `admissions@genesisideas.school`, or assign a daily owner to
 check Netlify submissions manually.
-cc review note: a bounded `claude -p` review-only pass was attempted for the
+Payment automation is not ready: `npm run audit:sales-payment-live` currently
+returns 2 pass / 1 warn / 4 fail because Guided `$149/month` and Premium
+`$299/month` have no production Stripe price IDs, Self-Paced annual has no
+price ID, `https://api.genesisideas.school/health` is unreachable, and the
+Stripe webhook endpoint is not reachable over HTTPS. Evidence:
+`_audit/parent-sales-payment-live.md`.
+cc review notes: a bounded `claude -p` review-only pass was attempted for the
 admissions sales-ops diff on 2026-06-11, but it produced no output and was
-stopped. Treat this as a cc timeout, not approval.
+stopped. A second bounded review-only pass for
+`audit_parent_sales_payment_live.js`, the payment runbook, launch checklist,
+roadmap, and workload was attempted from `/Users/alanhdchu/GIIS/giis-website`
+on 2026-06-11 with default Claude CLI model; it produced no output after about
+80 seconds, was killed, and changed no files. Treat both as cc timeouts, not
+approval.
 
-### Parent-conversion Phases A–D 2026-06-10 — committed locally, pending deploy
+### Parent-conversion Phases A–D 2026-06-10 — frontend live, backend gated
 
 - owner: cc-cowork (executed with Alan live approval); Codex to review diff
-- status: committed locally as `e53b176c`, NOT pushed / NOT deployed.
+- status: frontend proof surfaces were pushed and deployed through Netlify in
+  `f984e651` / `5bfb9cdf`; production public proof smoke is 8/8. Backend
+  weekly-report/payment pieces are not accepted as live until the Lightsail
+  runbook and payment-live gate pass.
 - scope: see `ROADMAP.md` lane 6 status block. Files: new
   `src/components/pages/Consultation/ConsultationPage.js`,
   `src/components/pages/Graduates/GraduateStoriesPage.js`,
@@ -261,10 +275,11 @@ stopped. Treat this as a cc timeout, not approval.
 - Alan decisions on record: consultation = in-site form to admissions inbox;
   principal = sole face; graduate names = initial + surname (real data);
   weekly report = admin review before send.
-- verification: build green (BUILD_PATH=/tmp in sandbox), trust-claims audit
-  41 pass, server jest 40/40, expanded ops-browser smoke 14/0 incl.
-  `/consultation`, `/graduates`, and `/admin/weekly-report`. Outstanding:
-  Netlify form notification config for `consultation` at deploy.
+- verification: production public proof smoke is 8/8; static sales launch audit
+  is 23/23; public trust claims audit is 41/41. Outstanding: Netlify form
+  notification config or daily submissions owner; `npm run
+  audit:sales-payment-live` is still 2 pass / 1 warn / 4 fail; backend
+  weekly-report/payment deploy requires the Lightsail runbook.
 - Codex review fix: `server/src/routes/weekly-report.js` now rejects
   non-dry-run sends unless a non-empty selected `studentIds` list is provided,
   and `force` requires an explicit `confirmForce: "resend_this_week"` guard.

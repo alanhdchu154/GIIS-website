@@ -19,6 +19,10 @@ Local evidence is green:
 - admissions consultation response SOP — `docs/admissions-consultation-response-sop.md`
 - local production-proof smoke command available:
   `npm run audit:sales-live -- --base-url http://localhost:3030` — 8/8 pass
+- payment-launch live gate available:
+  `npm run audit:sales-payment-live` — currently 2 pass / 1 warn / 4 fail in
+  production; this must pass before treating automated Guided/Premium checkout
+  and Stripe webhook handling as ready.
 
 ## Current Production Status
 
@@ -41,6 +45,21 @@ This proves the public parent proof path only. Before relying on inbound leads,
 configure Netlify notifications for the `consultation` and `contact` forms to
 `admissions@genesisideas.school`, or assign a daily owner to check Netlify form
 submissions manually.
+
+Payment automation is not launch-ready yet. Current production
+`npm run audit:sales-payment-live` evidence shows:
+
+- Self-Paced `$49/month` has a production Stripe price configured.
+- Guided `$149/month` is visible in pricing but has no production Stripe price
+  configured.
+- Premium `$299/month` is visible in pricing but has no production Stripe price
+  configured.
+- Self-Paced annual is listed but has no production Stripe price configured.
+- `https://api.genesisideas.school/health` is not reachable.
+- `https://api.genesisideas.school/api/webhooks/stripe` is not reachable for
+  HTTPS webhook smoke.
+
+Evidence: `_audit/parent-sales-payment-live.md`.
 
 ## What Can Launch First
 
@@ -74,16 +93,19 @@ This is enough to begin outreach and consultations because families can now see:
 
 Do not claim these are production-live until Lightsail backend deploy completes:
 
+- automated Guided / Premium Stripe checkout
 - weekly parent report send/review API
 - Stripe webhook idempotency
 - new paid-but-unlinked subscription alerting
 - stricter production CORS startup behavior
 - production `ProcessedStripeEvent` table
+- direct HTTPS API health at `https://api.genesisideas.school`
 
 ## Commit Stack Classification
 
-Local `main` is ahead of `origin/main`. Pushing it to GitHub `origin/main` will
-trigger Netlify frontend deployment, but it will not automatically restart the
+Local `main` has already been pushed to `origin/main`, triggering Netlify and
+publishing the public proof path. Future pushes to GitHub `origin/main` will
+trigger Netlify frontend deployment, but will not automatically restart the
 Lightsail API.
 
 Frontend / proof-path relevant:
@@ -117,21 +139,14 @@ Lightsail runbook is executed.
 
 ## Alan Review Items
 
-Before frontend-only deploy:
+Before relying on inbound lead capture:
 
-- Confirm Netlify should receive the current local `main` stack even though it
-  also contains backend code not yet deployed on Lightsail.
 - Configure Netlify notifications for forms `consultation` and `contact` to
   `admissions@genesisideas.school`.
 - Confirm who owns first response, WeChat follow-up, and principal escalation
   for consultation requests.
-- After deploy, submit one test consultation form and one test contact form;
-  confirm both emails arrive.
-- Run `npm run audit:sales-live -- --base-url https://genesisideas.school` and
-  confirm 8/8 public proof routes pass in production.
-- Spot-check `/consultation`, `/apply`, `/graduates`, `/pricing`,
-  `/trust-center`, and `/parent/demo` in production if the live smoke flags a
-  copy or rendering mismatch.
+- Submit one test consultation form and one test contact form; confirm both
+  emails arrive or that Netlify submissions are checked daily.
 
 Important: `audit:sales-live` proves only the public parent proof path. It does
 not prove Lightsail backend payment/webhook changes or weekly-report APIs.
@@ -149,17 +164,28 @@ Before backend/payment deploy:
   - `STRIPE_PRICE_PREMIUM_MONTHLY`
   - `CORS_ORIGIN=https://genesisideas.school`
   - no `ALLOW_UNVERIFIED_STRIPE_WEBHOOK=1`
+- Add production Stripe prices/env for:
+  - `STRIPE_PRICE_GUIDED_MONTHLY`
+  - `STRIPE_PRICE_PREMIUM_MONTHLY`
+  - optional: `STRIPE_PRICE_SELF_PACED_ANNUAL`
+- Restore/verify HTTPS reachability for `https://api.genesisideas.school`.
 - Run production DB backup and `npm run db:push`.
 - Verify `ProcessedStripeEvent` exists.
 - Restart the Lightsail API and run production smoke.
 - Send signed and unsigned Stripe webhook test events.
+- Run `npm run audit:sales-payment-live` and require 0 fail.
 
 ## Current Recommendation
 
-Use a two-step launch:
+Use a three-step launch:
 
-1. Push/deploy frontend proof path first so admissions can start conversations.
-2. Deploy backend payment/access changes in a separate controlled window.
+1. Public proof path is already live; admissions can start conversations and
+   transfer path reviews.
+2. Configure lead notifications or a daily Netlify submissions owner so no
+   parent inquiry is missed.
+3. Fix Stripe price env + HTTPS API/webhook readiness, then deploy backend
+   payment/access changes in a separate controlled Lightsail window.
 
-This lets GIIS start selling through consultation and path review without
-pretending that the new backend payment safety behavior is already live.
+GIIS can start selling through consultation and path review now, but should not
+send automated Guided/Premium checkout links until `npm run
+audit:sales-payment-live` returns 0 fail.

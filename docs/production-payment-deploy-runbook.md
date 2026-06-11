@@ -27,8 +27,13 @@ Do not deploy the backend until all are true:
 - production database has a fresh backup
 - production `server/.env` has `STRIPE_SECRET_KEY`
 - production `server/.env` has `STRIPE_WEBHOOK_SECRET`
+- production `server/.env` has `STRIPE_PRICE_GUIDED_MONTHLY`
+- production `server/.env` has `STRIPE_PRICE_PREMIUM_MONTHLY`
 - production `server/.env` has explicit `CORS_ORIGIN=https://genesisideas.school`
 - production `server/.env` does not use `ALLOW_UNVERIFIED_STRIPE_WEBHOOK=1`
+- `https://api.genesisideas.school/health` is reachable over HTTPS
+- `https://api.genesisideas.school/api/webhooks/stripe` is reachable over HTTPS
+  and rejects unsigned requests
 - production database has the `ProcessedStripeEvent` table
 - API restart is followed by health, checkout, webhook, and admin subscription
   smoke checks
@@ -43,7 +48,7 @@ the production database.
    ```bash
    pwd
    git status --short
-   grep -E 'NODE_ENV|CORS_ORIGIN|DATABASE_URL|STRIPE_WEBHOOK_SECRET|ALLOW_UNVERIFIED_STRIPE_WEBHOOK' server/.env
+   grep -E 'NODE_ENV|CORS_ORIGIN|DATABASE_URL|STRIPE_SECRET_KEY|STRIPE_WEBHOOK_SECRET|STRIPE_PRICE_|ALLOW_UNVERIFIED_STRIPE_WEBHOOK' server/.env
    ```
 
    Stop if `DATABASE_URL` points anywhere other than the intended production
@@ -105,6 +110,15 @@ the production database.
    curl -fsS https://api.genesisideas.school/health
    curl -fsS https://genesisideas.school/api/checkout/tiers
    ```
+
+   Then run the production payment-readiness gate from the repo:
+
+   ```bash
+   npm run audit:sales-payment-live
+   ```
+
+   Expected before sending checkout links: 0 fail. A failing result means the
+   public proof path may be live, but automated payment launch is not ready.
 
    Then verify in browser:
 

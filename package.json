@@ -49,6 +49,7 @@
     "audit:ops-browser": "node tools/ops-quality/audit_parent_admin_browser_smoke.js",
     "audit:sales-launch": "node tools/ops-quality/audit_parent_sales_launch.js",
     "audit:sales-live": "node tools/ops-quality/audit_parent_sales_live.js",
+    "audit:sales-payment-live": "node tools/ops-quality/audit_parent_sales_payment_live.js",
     "audit:public-trust-claims": "node tools/public-trust/audit_public_trust_claims.js",
     "audit:staged-artifacts": "node tools/public-trust/audit_staged_artifacts.js",
     "audit:lesson-manifest": "node tools/youtube-upload/audit_manifest_alignment.js",

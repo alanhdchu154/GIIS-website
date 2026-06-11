@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-06-11T13:40:44.344Z",
+  "baseUrl": "https://genesisideas.school",
+  "apiUrl": "https://api.genesisideas.school",
+  "summary": {
+    "total": 7,
+    "pass": 2,
+    "warn": 1,
+    "fail": 4
+  },
+  "results": [
+    {
+      "id": "proxy-checkout-tiers",
+      "status": "pass",
+      "message": "Public checkout tiers endpoint is reachable through the production site proxy.",
+      "details": {
+        "url": "https://genesisideas.school/api/checkout/tiers",
+        "status": 200
+      }
+    },
+    {
+      "id": "self_paced_monthly-configured",
+      "status": "pass",
+      "message": "Self-Paced $49/month has a production Stripe price configured.",
+      "details": {
+        "key": "self_paced_monthly",
+        "tier": {
+          "label": "Self-Paced Founders · $49/mo",
+          "mode": "subscription",
+          "maxStudents": 1,
+          "available": true,
+          "public": true
+        }
+      }
+    },
+    {
+      "id": "guided_monthly-configured",
+      "status": "fail",
+      "message": "Guided $149/month is visible in pricing but has no Stripe price configured in production.",
+      "details": {
+        "key": "guided_monthly",
+        "tier": {
+          "label": "Guided · $149/mo",
+          "mode": "subscription",
+          "maxStudents": 1,
+          "available": false,
+          "public": true
+        }
+      }
+    },
+    {
+      "id": "premium_monthly-configured",
+      "status": "fail",
+      "message": "Premium $299/month is visible in pricing but has no Stripe price configured in production.",
+      "details": {
+        "key": "premium_monthly",
+        "tier": {
+          "label": "Premium / College Pathway · $299/mo",
+          "mode": "subscription",
+          "maxStudents": 1,
+          "available": false,
+          "public": true
+        }
+      }
+    },
+    {
+      "id": "self-paced-annual-configured",
+      "status": "warn",
+      "message": "Self-Paced annual is listed but has no production Stripe price configured.",
+      "details": {
+        "key": "self_paced_annual",
+        "tier": {
+          "label": "Self-Paced Founders Annual · $499/yr",
+          "mode": "subscription",
+          "maxStudents": 1,
+          "available": false,
+          "public": true
+        }
+      }
+    },
+    {
+      "id": "direct-api-health",
+      "status": "fail",
+      "message": "Direct API health endpoint is not reachable over HTTPS.",
+      "details": {
+        "url": "https://api.genesisideas.school/health",
+        "error": "fetch failed",
+        "cause": "connect ECONNREFUSED 54.163.81.228:443",
+        "code": "ECONNREFUSED"
+      }
+    },
+    {
+      "id": "stripe-webhook-fail-closed",
+      "status": "fail",
+      "message": "Stripe webhook endpoint is not reachable over HTTPS.",
+      "details": {
+        "url": "https://api.genesisideas.school/api/webhooks/stripe",
+        "error": "fetch failed",
+        "cause": "connect ECONNREFUSED 54.163.81.228:443",
+        "code": "ECONNREFUSED"
+      }
+    }
+  ]
+}

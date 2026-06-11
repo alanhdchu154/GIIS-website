@@ -13,15 +13,16 @@ foundation-video pipeline stabilizes. The next phase is proof over volume:
 parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
 
-Current 2026-06-11 risk: the repo conflict is resolved and local `main` is ahead
-of `origin/main`, but the stack is still not a blind deploy. Backend hardening
-includes a Prisma schema change, so backend deploy must be paired with a
-production DB backup, `db:push` / table verification, Stripe webhook env checks,
-and Lightsail restart/smoke. The parent sales-launch gate is now part of GitHub
-CI and includes the homepage consultation-first path, so a future push should
-fail early if the public proof path regresses. Pushing local `main` to GitHub
-`origin/main` automatically triggers the Netlify frontend deploy for
-`genesisideas.school`; it does not deploy/restart the Lightsail backend.
+Current 2026-06-11 risk: the public parent proof path is live on Netlify and
+passes production smoke, but automated payment launch is not ready yet. Guided
+and Premium are visible in pricing but their production Stripe price IDs are
+missing, and `https://api.genesisideas.school` is not reachable for direct
+health/webhook checks. Backend hardening includes a Prisma schema change, so
+backend deploy must be paired with a production DB backup, `db:push` / table
+verification, Stripe webhook env checks, and Lightsail restart/smoke. Pushing
+local `main` to GitHub `origin/main` automatically triggers the Netlify frontend
+deploy for `genesisideas.school`; it does not deploy/restart the Lightsail
+backend.
 
 ## Active Lanes
 
@@ -365,6 +366,13 @@ Status: reconciled locally; pending production deploy execution.
   8 pass / 0 fail for `/`, `/consultation`, `/apply`, `/pricing`,
   `/trust-center`, `/graduates`, `/parent/demo`, and `/assessment-proof`.
   Evidence: `_audit/parent-sales-live-production-smoke.md`.
+- 2026-06-11 payment-launch live gate added `npm run audit:sales-payment-live`.
+  Current production result is 2 pass / 1 warn / 4 fail: Self-Paced monthly is
+  configured, but Guided `$149/month` and Premium `$299/month` have no
+  production Stripe price IDs, Self-Paced annual has no price ID, direct
+  `https://api.genesisideas.school/health` is unreachable, and the Stripe
+  webhook endpoint is not reachable over HTTPS. Evidence:
+  `_audit/parent-sales-payment-live.md`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -386,10 +394,13 @@ Next check:
 - Treat the 8/8 production sales-live smoke as proof of the public parent proof
   path only; backend payment/webhook and weekly report APIs still require the
   Lightsail runbook.
+- Before sending any Guided or Premium checkout link, fix production Stripe
+  price env (`STRIPE_PRICE_GUIDED_MONTHLY`, `STRIPE_PRICE_PREMIUM_MONTHLY`) and
+  make `npm run audit:sales-payment-live` pass.
 
 ### 6. Parent Conversion & Retention Phases
 
-Status: implemented locally; pending push/deploy sequencing.
+Status: public frontend live; payment/backend operations still gated.
 
 Rationale: site functionality is largely sufficient; the gap to "parents pay
 and keep paying" is live evidence and human touch around payment. Phases in
