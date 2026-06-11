@@ -43,7 +43,7 @@ fi
   echo
   "$PYTHON" tools/lesson-video/foundation_daily_orchestrator.py \
     --target-grade "${FOUNDATION_TARGET_GRADE:-9}" \
-    --max-modules "${FOUNDATION_MAX_MODULES:-3}" \
+    --max-modules "${FOUNDATION_MAX_MODULES:-4}" \
     --upload-max "${FOUNDATION_UPLOAD_MAX:-4}" \
     --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}" \
     --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}" \

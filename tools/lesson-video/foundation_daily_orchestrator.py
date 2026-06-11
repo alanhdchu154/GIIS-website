@@ -1143,7 +1143,7 @@ def orchestrate(args: argparse.Namespace) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description="Run the GIIS foundation video daily pipeline.")
     ap.add_argument("--target-grade", type=int, default=DEFAULT_TARGET_GRADE)
-    ap.add_argument("--max-modules", type=int, default=3)
+    ap.add_argument("--max-modules", type=int, default=4)
     ap.add_argument("--upload-max", type=int, default=4)
     ap.add_argument("--privacy", choices=["unlisted", "private", "public"], default="unlisted")
     ap.add_argument("--budget-usd", default="10")
