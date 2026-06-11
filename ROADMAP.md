@@ -28,9 +28,10 @@ Current sellable state: GIIS can start consultation-first outreach and
 transfer/new-student path reviews using the public proof path, response SOP,
 outreach packet, daily operator checklist, and manual payment handoff. This is
 not the same as fully automated checkout. Outreach days should run
-`npm run audit:sales-manual-ready`; unresolved owner warnings must be covered by
-a same-day operator log outside git using `--operator-log`. Automated
-Guided/Premium checkout stays blocked until
+`npm run sales:ready-today -- --operator-log /path/to/operator-log.md`;
+unresolved owner warnings must be covered by a same-day operator log outside
+git. Expected current verdict is `manual_sales_go_with_payment_boundary`.
+Automated Guided/Premium checkout stays blocked until
 `npm run audit:sales-payment-live` returns 0 fail.
 
 ## Active Lanes
@@ -398,11 +399,13 @@ Status: reconciled locally; pending production deploy execution.
 - 2026-06-11 daily operator checklist added
   `docs/parent-sales-daily-operator-checklist.md` plus
   `docs/templates/parent-sales-daily-operator-log.md`. `audit:sales-launch`
-  gates both, and `audit:sales-manual-ready -- --operator-log /path/to/log.md`
-  can validate same-day lead-capture, response, WeChat, and Alan-authorized
-  manual Stripe coverage without committing sensitive lead data. Sanitized
-  operator-log smoke returned 13 pass / 1 warn / 0 fail; the remaining warning
-  is automated payment readiness.
+  gates both. `sales:ready-today -- --operator-log /path/to/log.md` is now the
+  one-command outreach-day go/no-go; it validates same-day lead-capture,
+  response, WeChat, and Alan-authorized manual Stripe coverage without
+  committing sensitive lead data, then reports whether the day is manual-sales
+  ready or fully payment-ready. Expected current verdict is
+  `manual_sales_go_with_payment_boundary`; automated payment readiness remains
+  the only allowed warning boundary.
 - 2026-06-11 manual-sales readiness gate added
   `npm run audit:sales-manual-ready`. Current production result is 9 pass / 4
   warn / 0 fail with verdict `manual_sales_ready_with_recorded_warnings`: public
@@ -439,9 +442,9 @@ Next check:
 - Until automated checkout is green, use the manual payment handoff runbook:
   payment only after path review, authorized Stripe Dashboard invoice/payment
   link only, and portal activation after fit plus payment are both clear.
-- Run `npm run audit:sales-manual-ready` before outreach days. Outreach can
-  proceed when it has 0 fail, provided the warnings in
-  `docs/parent-sales-owner-decisions.json` are consciously owned for that day.
+- Run `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
+  before outreach days. Outreach can proceed only when it returns
+  `manual_sales_go_with_payment_boundary` or `full_sales_ready`.
 
 ### 6. Parent Conversion & Retention Phases
 

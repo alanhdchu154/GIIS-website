@@ -314,10 +314,15 @@ approval.
   principal = sole face; graduate names = initial + surname (real data);
   weekly report = admin review before send.
 - verification: production public proof smoke is 8/8; static sales launch audit
-  is 27/27; public trust claims audit is 41/41. Outstanding: Netlify form
-  notification config or daily submissions owner; `npm run
-  audit:sales-payment-live` is still 2 pass / 1 warn / 4 fail; backend
-  weekly-report/payment deploy requires the Lightsail runbook.
+  is 27/27 before the one-command same-day gate and 28/28 after it lands;
+  public trust claims audit is 41/41. Outreach-day readiness should use
+  `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`, which
+  should return `manual_sales_go_with_payment_boundary` until automated payment
+  is fixed. Outstanding: Netlify form notification config or permanent daily
+  submissions owner; `npm run audit:sales-payment-live` is still blocked by
+  missing Guided/Premium Stripe price IDs and direct API health/webhook
+  reachability; backend weekly-report/payment deploy requires the Lightsail
+  runbook.
 - Codex review fix: `server/src/routes/weekly-report.js` now rejects
   non-dry-run sends unless a non-empty selected `studentIds` list is provided,
   and `force` requires an explicit `confirmForce: "resend_this_week"` guard.

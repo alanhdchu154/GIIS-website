@@ -29,6 +29,8 @@ const files = {
   outreachPacket: read('docs/parent-sales-outreach-packet.md'),
   dailyOperatorChecklist: read('docs/parent-sales-daily-operator-checklist.md'),
   dailyOperatorLogTemplate: read('docs/templates/parent-sales-daily-operator-log.md'),
+  readyTodayGate: read('tools/ops-quality/audit_parent_sales_ready_today.js'),
+  packageJson: read('package.json'),
 };
 
 const checks = [
@@ -271,6 +273,17 @@ const checks = [
       /Inbox Checks/.test(files.dailyOperatorLogTemplate) &&
       /Do not store parent names/.test(files.dailyOperatorLogTemplate),
     message: 'Admissions must have a non-sensitive same-day operator log template.',
+  },
+  {
+    id: 'parent-sales-ready-today-gate',
+    file: 'tools/ops-quality/audit_parent_sales_ready_today.js',
+    ok: /operator-log-required/.test(files.readyTodayGate) &&
+      /manual_sales_go_with_payment_boundary/.test(files.readyTodayGate) &&
+      /full_sales_ready/.test(files.readyTodayGate) &&
+      /audit_parent_sales_manual_ready\.js/.test(files.readyTodayGate) &&
+      /audit_parent_sales_payment_live\.js/.test(files.readyTodayGate) &&
+      /sales:ready-today/.test(files.packageJson),
+    message: 'Admissions must have a one-command same-day sales go/no-go gate.',
   },
 ];
 

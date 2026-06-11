@@ -39,6 +39,10 @@ Local evidence is green:
   `npm run audit:sales-manual-ready -- --operator-log /path/to/operator-log.md`
   — smoke-tested with a sanitized `/tmp` log at 13 pass / 1 warn / 0 fail.
   The remaining warning is automated payment readiness.
+- one-command same-day go/no-go gate available:
+  `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
+  — expected verdict today is `manual_sales_go_with_payment_boundary` until
+  `npm run audit:sales-payment-live` has 0 fail.
 
 ## Current Production Status
 
@@ -109,6 +113,8 @@ This is enough to begin outreach and consultations because families can now see:
 - a same-day operator checklist and non-sensitive log template so temporary
   lead-capture / response / WeChat / manual Stripe coverage can be recorded
   outside git before outreach starts
+- a one-command same-day go/no-go gate:
+  `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
 
 ## What Frontend-Only Does Not Prove
 

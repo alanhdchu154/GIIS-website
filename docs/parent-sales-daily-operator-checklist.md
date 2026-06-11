@@ -12,12 +12,17 @@ unauthorized person.
 Run these before sending outreach or relying on inbound leads:
 
 ```bash
-npm run audit:sales-manual-ready
-npm run audit:sales-launch
+npm run sales:ready-today -- --operator-log /path/to/operator-log.md
 ```
 
-Proceed only when `audit:sales-manual-ready` has 0 fail. Warnings are allowed
-only when a same-day temporary owner is recorded in the operator log.
+Proceed only when `sales:ready-today` returns one of these verdicts:
+
+- `manual_sales_go_with_payment_boundary`
+- `full_sales_ready`
+
+If the verdict is `manual_sales_go_with_payment_boundary`, outreach and
+consultation-first manual sales may proceed, but automated Guided/Premium
+checkout links are still blocked.
 
 Use this template for the daily log:
 
@@ -46,7 +51,7 @@ You can prove same-day coverage to the readiness gate with a filled operator
 log:
 
 ```bash
-npm run audit:sales-manual-ready -- --operator-log /path/to/operator-log.md
+npm run sales:ready-today -- --operator-log /path/to/operator-log.md
 ```
 
 The log may contain internal owner names, so keep filled logs outside git unless
