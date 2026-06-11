@@ -252,12 +252,13 @@ manual Stripe Dashboard invoice/payment link only after path review, receipt and
 Stripe IDs recorded outside git, and portal activation after fit plus payment
 are both clear. `npm run audit:sales-launch` now gates the handoff doc.
 Manual-sales readiness gate added: `npm run audit:sales-manual-ready` currently
-returns 8 pass / 2 warn / 0 fail in production with verdict
+returns 8 pass / 4 warn / 0 fail in production with verdict
 `manual_sales_ready_with_recorded_warnings`. Warnings: Netlify email
-notification cannot be verified from repo, and automated payment remains
-blocked. This is sufficient for consultation/path-review selling only if Alan
-assigns a daily Netlify submissions owner and an authorized manual Stripe
-invoice/payment-link owner.
+notification/lead owner cannot be verified from repo, manual Stripe owner is
+not assigned, first-response/WeChat owners are not assigned, and automated
+payment remains blocked. This is sufficient for consultation/path-review
+selling only if Alan consciously assigns or personally covers those owner
+warnings for the day.
 cc review notes: a bounded `claude -p` review-only pass was attempted for the
 admissions sales-ops diff on 2026-06-11, but it produced no output and was
 stopped. A second bounded review-only pass for

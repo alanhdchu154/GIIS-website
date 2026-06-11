@@ -28,6 +28,10 @@ function read(relPath) {
   return fs.readFileSync(path.join(ROOT, relPath), 'utf8');
 }
 
+function readJson(relPath) {
+  return JSON.parse(read(relPath));
+}
+
 function pass(id, message, details = {}) {
   return { id, status: 'pass', message, details };
 }
@@ -136,10 +140,24 @@ async function checkLeadCaptureMarkup() {
     }));
   }
 
-  results.push(warn('netlify-notification-unverified', 'Netlify form email notifications cannot be verified from this repo; confirm notification or daily submissions owner before relying on inbound leads.', {
-    forms: ['consultation', 'contact'],
-    inbox: 'admissions@genesisideas.school',
-  }));
+  const decisions = readJson('docs/parent-sales-owner-decisions.json');
+  const leadCapture = decisions.netlifyLeadCapture || {};
+  const hasNotification = leadCapture.notificationConfirmed === true;
+  const hasDailyOwner = Boolean(String(leadCapture.dailySubmissionsOwner || '').trim());
+  if (hasNotification || hasDailyOwner) {
+    results.push(pass('lead-capture-owner', 'Lead capture owner or Netlify notification is recorded.', {
+      notificationConfirmed: hasNotification,
+      notificationInbox: leadCapture.notificationInbox,
+      dailySubmissionsOwner: leadCapture.dailySubmissionsOwner,
+      dailyCheckCadence: leadCapture.dailyCheckCadence,
+    }));
+  } else {
+    results.push(warn('lead-capture-owner', 'Netlify form email notifications cannot be verified from this repo, and no daily submissions owner is recorded yet.', {
+      forms: ['consultation', 'contact'],
+      inbox: leadCapture.notificationInbox || 'admissions@genesisideas.school',
+      decisionFile: 'docs/parent-sales-owner-decisions.json',
+    }));
+  }
   return results;
 }
 
@@ -147,6 +165,7 @@ function checkDocs() {
   const handoff = read('docs/admissions-payment-handoff-runbook.md');
   const sop = read('docs/admissions-consultation-response-sop.md');
   const checklist = read('docs/parent-sales-launch-checklist.md');
+  const decisions = readJson('docs/parent-sales-owner-decisions.json');
   const results = [];
 
   const handoffOk = /Minimum Sellable Flow/.test(handoff) &&
@@ -169,6 +188,33 @@ function checkDocs() {
   results.push(checklistOk
     ? pass('launch-checklist-boundary', 'Launch checklist separates manual consultation sales from automated payment readiness.')
     : fail('launch-checklist-boundary', 'Launch checklist does not clearly separate manual sales from automated payment readiness.'));
+
+  const manualPayment = decisions.manualPayment || {};
+  if (String(manualPayment.stripeInvoiceOwner || '').trim() && manualPayment.authorizedByAlan === true) {
+    results.push(pass('manual-stripe-owner', 'Manual Stripe invoice/payment-link owner is recorded and Alan-authorized.', {
+      stripeInvoiceOwner: manualPayment.stripeInvoiceOwner,
+      invoiceNamingConvention: manualPayment.invoiceNamingConvention,
+      receiptRecordLocation: manualPayment.receiptRecordLocation,
+    }));
+  } else {
+    results.push(warn('manual-stripe-owner', 'Manual Stripe invoice/payment-link owner is not fully assigned yet.', {
+      stripeInvoiceOwner: manualPayment.stripeInvoiceOwner || '',
+      authorizedByAlan: manualPayment.authorizedByAlan === true,
+      decisionFile: 'docs/parent-sales-owner-decisions.json',
+    }));
+  }
+
+  const responseOwnership = decisions.responseOwnership || {};
+  if (String(responseOwnership.firstResponseOwner || '').trim() && String(responseOwnership.wechatFollowUpOwner || '').trim()) {
+    results.push(pass('response-owners', 'First response and WeChat follow-up owners are recorded.', responseOwnership));
+  } else {
+    results.push(warn('response-owners', 'First response or WeChat follow-up owner is not fully assigned yet.', {
+      firstResponseOwner: responseOwnership.firstResponseOwner || '',
+      wechatFollowUpOwner: responseOwnership.wechatFollowUpOwner || '',
+      principalEscalationOwner: responseOwnership.principalEscalationOwner || '',
+      decisionFile: 'docs/parent-sales-owner-decisions.json',
+    }));
+  }
 
   return results;
 }

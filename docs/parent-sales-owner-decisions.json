@@ -1,0 +1,24 @@
+{
+  "lastUpdated": "2026-06-11",
+  "netlifyLeadCapture": {
+    "notificationConfirmed": false,
+    "notificationInbox": "admissions@genesisideas.school",
+    "dailySubmissionsOwner": "",
+    "dailyCheckCadence": "daily"
+  },
+  "manualPayment": {
+    "stripeInvoiceOwner": "",
+    "authorizedByAlan": false,
+    "invoiceNamingConvention": "GIIS-{studentLast}-{plan}-{YYYYMM}",
+    "receiptRecordLocation": "outside-git admissions tracker"
+  },
+  "responseOwnership": {
+    "firstResponseOwner": "",
+    "wechatFollowUpOwner": "",
+    "principalEscalationOwner": "Shiyu Zhang, Ph.D."
+  },
+  "backendPaymentLaunch": {
+    "deployWindow": "",
+    "requiresSalesPaymentLiveZeroFail": true
+  }
+}

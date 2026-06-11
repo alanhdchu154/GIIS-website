@@ -131,6 +131,8 @@ After payment:
 
 ## Alan Review Items
 
+Record these decisions in `docs/parent-sales-owner-decisions.json`.
+
 - Who is authorized to create manual Stripe invoices/payment links?
 - Which inbox receives Netlify `consultation` and `contact` notifications?
 - Who checks Netlify submissions daily until email notifications are confirmed?

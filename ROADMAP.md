@@ -378,11 +378,12 @@ Status: reconciled locally; pending production deploy execution.
   This lets GIIS start selling through consultation/path review while keeping
   automated Guided/Premium checkout blocked until the payment-live gate passes.
 - 2026-06-11 manual-sales readiness gate added
-  `npm run audit:sales-manual-ready`. Current production result is 8 pass / 2
+  `npm run audit:sales-manual-ready`. Current production result is 8 pass / 4
   warn / 0 fail with verdict `manual_sales_ready_with_recorded_warnings`: public
   proof path, Netlify form markup, admissions email fallback, SOP, and handoff
-  docs pass; warnings remain for unverifiable Netlify notifications and blocked
-  payment automation. Evidence: `_audit/parent-sales-manual-ready.md`.
+  docs pass; warnings remain for missing lead-capture owner, missing manual
+  Stripe owner, missing response/WeChat owners, and blocked payment automation.
+  Evidence: `_audit/parent-sales-manual-ready.md`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -411,8 +412,8 @@ Next check:
   payment only after path review, authorized Stripe Dashboard invoice/payment
   link only, and portal activation after fit plus payment are both clear.
 - Run `npm run audit:sales-manual-ready` before outreach days. Outreach can
-  proceed when it has 0 fail, provided the Netlify submissions owner and manual
-  Stripe invoice/payment-link owner are assigned.
+  proceed when it has 0 fail, provided the warnings in
+  `docs/parent-sales-owner-decisions.json` are consciously owned for that day.
 
 ### 6. Parent Conversion & Retention Phases
 

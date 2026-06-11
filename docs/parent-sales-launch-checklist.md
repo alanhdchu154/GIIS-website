@@ -26,7 +26,7 @@ Local evidence is green:
   production; this must pass before treating automated Guided/Premium checkout
   and Stripe webhook handling as ready.
 - manual-sales readiness gate available:
-  `npm run audit:sales-manual-ready` — currently 8 pass / 2 warn / 0 fail in
+  `npm run audit:sales-manual-ready` — currently 8 pass / 4 warn / 0 fail in
   production. Verdict: `manual_sales_ready_with_recorded_warnings`.
 
 ## Current Production Status
@@ -206,6 +206,12 @@ Daily operator check while automated payment remains gated:
 npm run audit:sales-manual-ready
 ```
 
-Start outreach only when this returns 0 fail. Current warnings are acceptable
-only if Alan has assigned a daily Netlify submissions owner and an authorized
-manual Stripe invoice/payment-link owner.
+Start outreach only when this returns 0 fail. Current warnings mean the public
+proof path and manual handoff are technically ready, but Alan still needs to
+assign lead-capture, first-response, WeChat follow-up, and manual Stripe owner
+decisions before outreach is operationally complete.
+
+Alan-facing owner decisions are tracked in
+`docs/parent-sales-owner-decisions.json`. Leave blank/false values blank until
+Alan confirms them; the manual readiness gate will keep warning on missing
+owners instead of silently treating the launch as operationally complete.

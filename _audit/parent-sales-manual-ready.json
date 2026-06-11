@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-11T13:53:25.598Z",
+  "generatedAt": "2026-06-11T13:59:25.968Z",
   "baseUrl": "https://genesisideas.school",
   "apiUrl": "https://api.genesisideas.school",
   "summary": {
-    "total": 10,
+    "total": 12,
     "pass": 8,
-    "warn": 2,
+    "warn": 4,
     "fail": 0
   },
   "verdict": "manual_sales_ready_with_recorded_warnings",
@@ -58,15 +58,16 @@
       }
     },
     {
-      "id": "netlify-notification-unverified",
+      "id": "lead-capture-owner",
       "status": "warn",
-      "message": "Netlify form email notifications cannot be verified from this repo; confirm notification or daily submissions owner before relying on inbound leads.",
+      "message": "Netlify form email notifications cannot be verified from this repo, and no daily submissions owner is recorded yet.",
       "details": {
         "forms": [
           "consultation",
           "contact"
         ],
-        "inbox": "admissions@genesisideas.school"
+        "inbox": "admissions@genesisideas.school",
+        "decisionFile": "docs/parent-sales-owner-decisions.json"
       }
     },
     {
@@ -86,6 +87,27 @@
       "status": "pass",
       "message": "Launch checklist separates manual consultation sales from automated payment readiness.",
       "details": {}
+    },
+    {
+      "id": "manual-stripe-owner",
+      "status": "warn",
+      "message": "Manual Stripe invoice/payment-link owner is not fully assigned yet.",
+      "details": {
+        "stripeInvoiceOwner": "",
+        "authorizedByAlan": false,
+        "decisionFile": "docs/parent-sales-owner-decisions.json"
+      }
+    },
+    {
+      "id": "response-owners",
+      "status": "warn",
+      "message": "First response or WeChat follow-up owner is not fully assigned yet.",
+      "details": {
+        "firstResponseOwner": "",
+        "wechatFollowUpOwner": "",
+        "principalEscalationOwner": "Shiyu Zhang, Ph.D.",
+        "decisionFile": "docs/parent-sales-owner-decisions.json"
+      }
     },
     {
       "id": "payment-automation-boundary",
