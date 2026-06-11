@@ -48,6 +48,10 @@ Local evidence is green:
   `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
   — expected verdict today is `manual_sales_go_with_payment_boundary` until
   `npm run audit:sales-payment-live` has 0 fail.
+- permanent owner-decision gate available:
+  `npm run audit:sales-owner-decisions` — currently 0 pass / 1 warn / 3 fail
+  with verdict `alan_review_required_for_permanent_sales_owners`. This is the
+  Alan review list for replacing same-day operator logs with permanent owners.
 
 ## Current Production Status
 
@@ -287,6 +291,16 @@ Alan-facing owner decisions are tracked in
 `docs/parent-sales-owner-decisions.json`. Leave blank/false values blank until
 Alan confirms them; the manual readiness gate will keep warning on missing
 owners instead of silently treating the launch as operationally complete.
+
+To see only the permanent owner gaps Alan needs to review, run:
+
+```bash
+npm run audit:sales-owner-decisions
+```
+
+Current expected output is `alan_review_required_for_permanent_sales_owners`
+until lead capture, first response, WeChat follow-up, and manual Stripe
+ownership are assigned or Netlify notifications are confirmed.
 
 Use `docs/parent-sales-outreach-packet.md` for outreach days. It contains the
 conservative first-message scripts, WeChat short reply, consultation call flow,

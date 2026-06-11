@@ -34,7 +34,9 @@ const files = {
   dailyOperatorChecklist: read('docs/parent-sales-daily-operator-checklist.md'),
   dailyOperatorLogTemplate: read('docs/templates/parent-sales-daily-operator-log.md'),
   readyTodayGate: read('tools/ops-quality/audit_parent_sales_ready_today.js'),
+  ownerDecisionGate: read('tools/ops-quality/audit_parent_sales_owner_decisions.js'),
   parentJourneyAcceptance: read('tools/ops-quality/audit_parent_journey_acceptance.js'),
+  ownerDecisions: read('docs/parent-sales-owner-decisions.json'),
   packageJson: read('package.json'),
 };
 
@@ -329,6 +331,17 @@ const checks = [
       /audit_parent_sales_payment_live\.js/.test(files.readyTodayGate) &&
       /sales:ready-today/.test(files.packageJson),
     message: 'Admissions must have a one-command same-day sales go/no-go gate.',
+  },
+  {
+    id: 'parent-sales-owner-decisions-gate',
+    file: 'tools/ops-quality/audit_parent_sales_owner_decisions.js',
+    ok: /alan_review_required_for_permanent_sales_owners/.test(files.ownerDecisionGate) &&
+      /permanent_manual_sales_owners_ready/.test(files.ownerDecisionGate) &&
+      /manual-payment-owner/.test(files.ownerDecisionGate) &&
+      /lead-capture-owner/.test(files.ownerDecisionGate) &&
+      /audit:sales-owner-decisions/.test(files.packageJson) &&
+      /netlifyLeadCapture/.test(files.ownerDecisions),
+    message: 'Admissions must have a repeatable Alan review gate for permanent sales-owner decisions.',
   },
   {
     id: 'parent-journey-acceptance-gate',

@@ -52,6 +52,7 @@
     "audit:sales-payment-live": "node tools/ops-quality/audit_parent_sales_payment_live.js",
     "audit:sales-manual-ready": "node tools/ops-quality/audit_parent_sales_manual_ready.js",
     "audit:sales-ready-today": "node tools/ops-quality/audit_parent_sales_ready_today.js",
+    "audit:sales-owner-decisions": "node tools/ops-quality/audit_parent_sales_owner_decisions.js",
     "audit:parent-journey": "node tools/ops-quality/audit_parent_journey_acceptance.js",
     "audit:production-api-proxy": "node tools/ops-quality/audit_production_api_proxy.js",
     "audit:production-payment-env": "node tools/ops-quality/audit_production_payment_env.js",

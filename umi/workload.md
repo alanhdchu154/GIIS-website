@@ -322,8 +322,11 @@ approval.
   whether the parent path answers status, learning, parent visibility, pricing,
   applicant requirements, and contact questions; local production build and
   production site are both 7/7 after making the Apply page's transfer-record
-  requirement visible before interaction. Outstanding: Netlify form notification
-  config or permanent daily
+  requirement visible before interaction. New permanent owner-decision gate:
+  `npm run audit:sales-owner-decisions` currently returns 0 pass / 1 warn / 3
+  fail with verdict `alan_review_required_for_permanent_sales_owners`; this is
+  the Alan review list for lead capture, response/WeChat, and manual Stripe
+  ownership. Outstanding: Netlify form notification config or permanent daily
   submissions owner; `npm run audit:sales-payment-live` is still blocked by
   missing Guided/Premium Stripe price IDs and direct API health/webhook
   reachability. Read-only Lightsail check found local API health green on

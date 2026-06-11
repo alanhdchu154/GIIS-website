@@ -47,6 +47,10 @@ days should run `npm run sales:ready-today -- --operator-log
 same-day operator log outside git. Expected current verdict is
 `manual_sales_go_with_payment_boundary`. Automated Guided/Premium checkout
 stays blocked until `npm run audit:sales-payment-live` returns 0 fail.
+Permanent owner decisions are tracked by
+`npm run audit:sales-owner-decisions`; current expected verdict is
+`alan_review_required_for_permanent_sales_owners` until Alan confirms lead
+capture, response, WeChat, and manual Stripe ownership.
 Latest production frontend verification after `65ea0ceb`: `audit:sales-live`
 is 8/8 and `audit:parent-journey` is 7/7.
 
@@ -461,6 +465,13 @@ Status: reconciled locally; pending production deploy execution.
   7/7 with `--base-url http://localhost:3037`; after push/deploy,
   production verification also passed 7/7 with `--base-url
   https://genesisideas.school`.
+- 2026-06-11 owner-decision gate added
+  `npm run audit:sales-owner-decisions`. It reads
+  `docs/parent-sales-owner-decisions.json` and produces an Alan review list for
+  permanent operational ownership. Current result is 0 pass / 1 warn / 3 fail:
+  lead-capture owner, response/WeChat owners, and manual Stripe owner are still
+  unassigned; backend payment deploy window remains a warning while automated
+  checkout is gated.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -501,6 +512,10 @@ Next check:
 - Run `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
   before outreach days. Outreach can proceed only when it returns
   `manual_sales_go_with_payment_boundary` or `full_sales_ready`.
+- Run `npm run audit:sales-owner-decisions` before replacing same-day operator
+  logs with permanent ownership. Do not treat permanent sales operations as
+  complete until lead capture, response/WeChat, and manual Stripe owner checks
+  pass.
 
 ### 6. Parent Conversion & Retention Phases
 
