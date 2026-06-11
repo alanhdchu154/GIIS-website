@@ -1,7 +1,7 @@
 # Parent Sales Live Smoke QA
 
-Generated: 2026-06-11T05:08:28.126Z
-Base URL: http://localhost:3030
+Generated: 2026-06-11T14:04:19.541Z
+Base URL: https://genesisideas.school
 
 Summary: 8 pass / 0 fail (8 route checks)
 

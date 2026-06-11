@@ -76,6 +76,14 @@ Current Umi note:
   Parent Conversion A-D, and handoff docs. Backend/Prisma/webhook risk now has
   a runbook and one signature-handling blocker fixed; production still needs
   DB/env/Lightsail execution before backend deploy.
+- 2026-06-11 check: the 07:00 CT run produced durable handoffs for Biology
+  Modules 7/8/9. Fresh verification is green: `lesson_release_gate.py --check`
+  evaluated 36 ready / 0 blocked, and manifest alignment returned 0 warnings
+  across 36 lessons. Keep these handoffs as durable evidence. Current git
+  hygiene risk: 205 tracked `teaching-videos/*` paths still show as deleted
+  because the active video tree lives on the T9 symlink; do not stage those
+  deletions blindly. If the project intentionally untracks them, do it as a
+  reviewed git hygiene change with roadmap/decision evidence.
 - New cc work should be written as a bounded handoff in `umi/handoffs/` when it
   needs more than this daily monitor. Include Umi first look, pass type, current
   change set, open questions for cc, review breadth, allowed changes, and

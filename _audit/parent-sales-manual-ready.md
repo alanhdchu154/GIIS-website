@@ -1,6 +1,6 @@
 # Parent Sales Manual Readiness QA
 
-Generated: 2026-06-11T13:59:25.968Z
+Generated: 2026-06-11T14:04:21.189Z
 Base URL: https://genesisideas.school
 API URL: https://api.genesisideas.school
 

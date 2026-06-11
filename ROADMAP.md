@@ -58,6 +58,11 @@ Next check:
   across 33 lessons. The remaining risk is no longer raw video recovery or
   branch divergence; it is safe review of the pending cc hardening stack before
   push/backend deploy.
+- 2026-06-11 current lane: Biology Modules 7/8/9 have dated durable handoffs.
+  Current checks report release gate 36 ready / 0 blocked and manifest alignment
+  0 warnings across 36 lessons. Foundation video is green; the active blocker is
+  sales/payment owner readiness and backend/API/payment deploy readiness, not
+  lesson-video recovery.
 
 ### 2. Course And Resource Quality
 
