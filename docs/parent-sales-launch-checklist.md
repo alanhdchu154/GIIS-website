@@ -10,7 +10,7 @@ backend payment/access launch.
 
 Local evidence is green:
 
-- `npm run audit:sales-launch` — 32/32 pass
+- `npm run audit:sales-launch` — 33/33 pass
 - `npm run audit:ops-browser -- --base-url http://localhost:3030` — 22 pass / 0 fail, including consultation, contact, and apply form submit success on desktop/mobile
 - `npm run audit:public-trust-claims` — 41 files pass
 - server Jest — 40/40 pass
@@ -26,6 +26,11 @@ Local evidence is green:
   `docs/templates/parent-sales-daily-operator-log.md`
 - local production-proof smoke command available:
   `npm run audit:sales-live -- --base-url http://localhost:3030` — 8/8 pass
+- parent journey acceptance command available:
+  `npm run audit:parent-journey -- --base-url http://localhost:3030` — 7/7
+  pass against the current production build. This checks that a parent can
+  answer school status, learning evidence, parent visibility, pricing,
+  applicant requirements, and contact-path questions before outreach.
 - payment-launch live gate available:
   `npm run audit:sales-payment-live` — currently 2 pass / 1 warn / 4 fail in
   production; this must pass before treating automated Guided/Premium checkout
@@ -244,6 +249,16 @@ Use a three-step launch:
    parent inquiry is missed.
 3. Fix Stripe price env + HTTPS API/webhook readiness, then deploy backend
    payment/access changes in a separate controlled Lightsail window.
+
+After every frontend deploy, also run:
+
+```bash
+npm run audit:parent-journey -- --base-url https://genesisideas.school
+```
+
+This is the buyer-readiness check. `audit:sales-live` proves key routes render;
+`audit:parent-journey` proves those routes answer the parent questions that
+drive willingness to pay.
 
 GIIS can start selling through consultation and path review now, but should not
 send automated Guided/Premium checkout links until `npm run

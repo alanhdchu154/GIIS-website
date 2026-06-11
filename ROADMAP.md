@@ -38,12 +38,15 @@ checks, and Lightsail restart/smoke. Pushing local `main` to GitHub
 Current sellable state: GIIS can start consultation-first outreach and
 transfer/new-student path reviews using the public proof path, response SOP,
 outreach packet, daily operator checklist, and manual payment handoff. This is
-not the same as fully automated checkout. Outreach days should run
-`npm run sales:ready-today -- --operator-log /path/to/operator-log.md`;
-unresolved owner warnings must be covered by a same-day operator log outside
-git. Expected current verdict is `manual_sales_go_with_payment_boundary`.
-Automated Guided/Premium checkout stays blocked until
-`npm run audit:sales-payment-live` returns 0 fail.
+not the same as fully automated checkout. Parent-facing proof is now gated by
+`npm run audit:parent-journey`, which verifies the live/local path answers the
+core buyer questions: school status, learning evidence, parent visibility,
+recommended price tier, applicant requirements, and human contact. Outreach
+days should run `npm run sales:ready-today -- --operator-log
+/path/to/operator-log.md`; unresolved owner warnings must be covered by a
+same-day operator log outside git. Expected current verdict is
+`manual_sales_go_with_payment_boundary`. Automated Guided/Premium checkout
+stays blocked until `npm run audit:sales-payment-live` returns 0 fail.
 
 ## Active Lanes
 
@@ -445,6 +448,15 @@ Status: reconciled locally; pending production deploy execution.
   The embedded production proof smoke now retries once to reduce false-red
   failures from short Netlify edge stale windows. Evidence:
   `_audit/parent-sales-manual-ready.md`.
+- 2026-06-11 parent journey acceptance gate added
+  `npm run audit:parent-journey`. It browser-checks the parent decision route
+  for seven buyer questions: homepage decision path, legal status proof,
+  learning evidence, parent visibility, Guided pricing default, new/transfer
+  applicant requirements, and human contact. The first production run exposed
+  that `/apply` only showed "official transcripts or verifiable school records"
+  after selecting transfer; the fixed copy now shows that requirement in the
+  static Before You Submit panel. Local production build verification passed
+  7/7 with `--base-url http://localhost:3037`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -466,6 +478,9 @@ Next check:
 - Treat the 8/8 production sales-live smoke as proof of the public parent proof
   path only; backend payment/webhook and weekly report APIs still require the
   Lightsail runbook.
+- After each frontend deploy, run `npm run audit:parent-journey -- --base-url
+  https://genesisideas.school` to verify the parent can answer the buyer
+  questions before outreach traffic is sent.
 - Before sending any Guided or Premium checkout link, fix production Stripe
   price env (`STRIPE_PRICE_GUIDED_MONTHLY`, `STRIPE_PRICE_PREMIUM_MONTHLY`) and
   make `npm run audit:sales-payment-live` pass.

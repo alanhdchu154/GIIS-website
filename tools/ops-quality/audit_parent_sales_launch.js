@@ -34,6 +34,7 @@ const files = {
   dailyOperatorChecklist: read('docs/parent-sales-daily-operator-checklist.md'),
   dailyOperatorLogTemplate: read('docs/templates/parent-sales-daily-operator-log.md'),
   readyTodayGate: read('tools/ops-quality/audit_parent_sales_ready_today.js'),
+  parentJourneyAcceptance: read('tools/ops-quality/audit_parent_journey_acceptance.js'),
   packageJson: read('package.json'),
 };
 
@@ -328,6 +329,16 @@ const checks = [
       /audit_parent_sales_payment_live\.js/.test(files.readyTodayGate) &&
       /sales:ready-today/.test(files.packageJson),
     message: 'Admissions must have a one-command same-day sales go/no-go gate.',
+  },
+  {
+    id: 'parent-journey-acceptance-gate',
+    file: 'tools/ops-quality/audit_parent_journey_acceptance.js',
+    ok: /Florida-registered private school/.test(files.parentJourneyAcceptance) &&
+      /Transfer Family Default/.test(files.parentJourneyAcceptance) &&
+      /Parents see advisor-approved summaries only/.test(files.parentJourneyAcceptance) &&
+      /official transcripts or verifiable school records/.test(files.parentJourneyAcceptance) &&
+      /audit:parent-journey/.test(files.packageJson),
+    message: 'Admissions must have a browser gate for the parent pre-payment decision journey.',
   },
 ];
 

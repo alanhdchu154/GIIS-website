@@ -251,8 +251,8 @@ export default function ApplyForm({ language }) {
               </p>
               <p style={{ margin: 0, color: '#4f5868', fontSize: 12.5, lineHeight: 1.65 }}>
                 {T(
-                  'New students can apply with basic school information. Transfer students should be ready to provide transcripts or school reports before final credit decisions.',
-                  '一般新生可先用基本学校信息申请。转学生应准备成绩单或学校报告；最终转学分判断需等正式记录审核。'
+                  'New students can apply with basic school information. Transfer students should be ready to provide official transcripts or verifiable school records before final credit decisions.',
+                  '一般新生可先用基本学校信息申请。转学生应准备正式成绩单或可验证学校记录；最终转学分判断需等正式记录审核。'
                 )}
               </p>
             </div>
