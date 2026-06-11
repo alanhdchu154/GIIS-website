@@ -283,7 +283,7 @@ function buildNextActions(results) {
       'production_api_https_unreachable',
       'Restore HTTPS reachability for api.genesisideas.school before automated checkout or Stripe webhooks are treated as live.',
       apiUnreachable.map((result) => result.id),
-      'docs/production-api-proxy-repair.md',
+      'Run `npm run audit:production-api-proxy`, then follow docs/production-api-proxy-repair.md',
     );
   }
 

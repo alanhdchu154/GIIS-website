@@ -6,6 +6,16 @@ Use this when `npm run audit:sales-payment-live` reports that
 `https://api.genesisideas.school` is unreachable or that the Stripe webhook
 endpoint cannot be reached over HTTPS.
 
+Start with the read-only audit:
+
+```bash
+npm run audit:production-api-proxy
+```
+
+This command checks DNS, external HTTPS reachability, local API health on
+Lightsail, nginx listeners, nginx host routing, PM2 status, and stale upstream
+ports. It does not edit production files.
+
 ## Current Evidence
 
 Read-only production inspection on 2026-06-11 found:
@@ -15,7 +25,9 @@ Read-only production inspection on 2026-06-11 found:
 - Node API: `node /home/ubuntu/GIIS-website/server/src/index.js`.
 - API port: Node listens on `*:4000`.
 - Local API health on the server: `http://127.0.0.1:4000/health` returns 200.
-- Nginx: listens on port 80, but not on port 443.
+- Nginx runtime: listens on port 80, but not on port 443.
+- Nginx config: contains Certbot-managed `listen 443 ssl` lines, but the active
+  nginx listener is not currently bound to `443`.
 - Nginx host health: `Host: api.genesisideas.school` over port 80 returns 502.
 - Nginx config evidence: API server block proxies to `http://127.0.0.1:8080`,
   while the actual API listens on `4000`.
@@ -90,6 +102,12 @@ data changes.
    npm run audit:sales-payment-live
    ```
 
+   Also rerun the focused proxy audit:
+
+   ```bash
+   npm run audit:production-api-proxy
+   ```
+
 Unsigned webhook requests should return a 4xx response. A 2xx unsigned webhook
 response is unsafe and blocks automated payment launch.
 
@@ -102,4 +120,3 @@ Stop and roll back the nginx config backup if:
 - the webhook endpoint returns 2xx for an unsigned request,
 - parent/admin login behavior changes unexpectedly,
 - Stripe signed test event does not return 200 after webhook secret is checked.
-

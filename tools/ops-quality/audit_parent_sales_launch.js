@@ -26,6 +26,7 @@ const files = {
   paymentRunbook: read('docs/production-payment-deploy-runbook.md'),
   stripeLivePriceSetup: read('docs/stripe-live-price-setup.md'),
   productionApiProxyRepair: read('docs/production-api-proxy-repair.md'),
+  productionApiProxyAudit: read('tools/ops-quality/audit_production_api_proxy.js'),
   paymentHandoff: read('docs/admissions-payment-handoff-runbook.md'),
   consultationSop: read('docs/admissions-consultation-response-sop.md'),
   outreachPacket: read('docs/parent-sales-outreach-packet.md'),
@@ -236,6 +237,16 @@ const checks = [
       /sudo nginx -t/.test(files.productionApiProxyRepair) &&
       /Unsigned webhook requests should return a 4xx response/.test(files.productionApiProxyRepair),
     message: 'Production API proxy repair doc must explain the nginx/HTTPS blocker and webhook fail-closed smoke.',
+  },
+  {
+    id: 'production-api-proxy-audit',
+    file: 'tools/ops-quality/audit_production_api_proxy.js',
+    ok: /GIIS_LIGHTSAIL_HOST/.test(files.productionApiProxyAudit) &&
+      /external-webhook-fail-closed/.test(files.productionApiProxyAudit) &&
+      /server-listens-443/.test(files.productionApiProxyAudit) &&
+      /server-api-root-proxy-port/.test(files.productionApiProxyAudit) &&
+      /audit:production-api-proxy/.test(files.packageJson),
+    message: 'Production API proxy audit must provide a read-only repeatable check for API HTTPS/nginx repair.',
   },
   {
     id: 'payment-handoff-runbook',

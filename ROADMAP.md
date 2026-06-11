@@ -19,8 +19,9 @@ and Premium are visible in pricing but their production Stripe price IDs are
 missing, and `https://api.genesisideas.school` is not reachable for direct
 health/webhook checks. Read-only Lightsail inspection found PM2 `giis-api`
 online and local API health passing on port `4000`, but nginx proxies
-`api.genesisideas.school` to `127.0.0.1:8080` and does not listen on `443`;
-repair is documented in `docs/production-api-proxy-repair.md`. Backend
+`api.genesisideas.school` to `127.0.0.1:8080` and has no active `443` listener;
+repair is documented in `docs/production-api-proxy-repair.md` and checked by
+`npm run audit:production-api-proxy`. Backend
 hardening includes a Prisma schema change, so backend deploy must be paired
 with a production DB backup, `db:push` / table verification, Stripe webhook env
 checks, and Lightsail restart/smoke. Pushing local `main` to GitHub
@@ -396,8 +397,9 @@ Status: reconciled locally; pending production deploy execution.
 - 2026-06-11 production API proxy diagnosis added
   `docs/production-api-proxy-repair.md`: local API health passes on Lightsail
   at `127.0.0.1:4000`, but nginx proxies the API host to `127.0.0.1:8080` and
-  does not listen on `443`. This blocks direct API health and Stripe webhook
-  smoke until nginx/SSL is repaired.
+  has no active `443` listener. `npm run audit:production-api-proxy` gives a
+  repeatable read-only check; current result is 7 pass / 0 warn / 5 fail. This
+  blocks direct API health and Stripe webhook smoke until nginx/SSL is repaired.
 - 2026-06-11 Stripe live price setup doc added
   `docs/stripe-live-price-setup.md` for the required live Price IDs:
   Self-Paced monthly/annual, Guided monthly, and Premium monthly.
@@ -454,7 +456,8 @@ Next check:
   make `npm run audit:sales-payment-live` pass.
 - Before sending any automated checkout link, repair nginx/SSL for
   `api.genesisideas.school` so `/health` returns 200 over HTTPS and unsigned
-  webhook smoke returns 4xx.
+  webhook smoke returns 4xx. Use `npm run audit:production-api-proxy` before and
+  after repair.
 - Until automated checkout is green, use the manual payment handoff runbook:
   payment only after path review, authorized Stripe Dashboard invoice/payment
   link only, and portal activation after fit plus payment are both clear.

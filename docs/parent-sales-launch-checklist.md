@@ -91,6 +91,7 @@ Read-only Lightsail inspection on 2026-06-11 narrowed the API blocker:
 
 Repair doc: `docs/production-api-proxy-repair.md`.
 Stripe live price doc: `docs/stripe-live-price-setup.md`.
+Read-only proxy audit: `npm run audit:production-api-proxy`.
 
 ## What Can Launch First
 
@@ -209,6 +210,8 @@ Before backend/payment deploy:
 - Restore/verify HTTPS reachability for `https://api.genesisideas.school`.
   Current production evidence points to nginx/SSL repair, not missing API route
   code.
+  Start with `npm run audit:production-api-proxy`; current result is 7 pass /
+  0 warn / 5 fail until nginx/SSL is repaired.
 - Run production DB backup and `npm run db:push`.
 - Verify `ProcessedStripeEvent` exists.
 - Restart the Lightsail API and run production smoke.

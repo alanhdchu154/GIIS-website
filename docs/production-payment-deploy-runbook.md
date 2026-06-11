@@ -43,6 +43,8 @@ Related setup docs:
 - `docs/stripe-live-price-setup.md` for live Stripe Price IDs.
 - `docs/production-api-proxy-repair.md` for nginx / HTTPS repair when
   `api.genesisideas.school` is unreachable.
+- `npm run audit:production-api-proxy` for a read-only proxy/HTTPS preflight
+  before and after nginx repair.
 
 ## Safe Sequence
 
