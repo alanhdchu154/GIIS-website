@@ -58,9 +58,10 @@ Permanent owner decisions are tracked by
 `npm run audit:sales-owner-decisions`; current expected verdict is
 `alan_review_required_for_permanent_sales_owners` until Alan confirms lead
 capture, response, WeChat, and manual Stripe ownership.
-Latest production frontend verification after `f7fa6158`: `audit:sales-live`
-is 8/8, `audit:parent-journey` is 7/7, and static `audit:sales-launch` is
-36/36 after adding the operator-log generator gate.
+Latest production frontend verification after `285f86d7`: `audit:sales-live`
+is 8/8, `audit:parent-journey` is 7/7, generated same-day operator-log
+`sales:launch-mode` returns `manual_sales_go_with_payment_boundary`, and static
+`audit:sales-launch` is 36/36 after adding the operator-log generator gate.
 
 ## Active Lanes
 
@@ -491,6 +492,8 @@ Status: reconciled locally; pending production deploy execution.
   writes the daily operator log to an outside-git path by default, refuses repo
   paths, and prints the matching `sales:launch-mode -- --operator-log ...`
   command so outreach days do not depend on hand-copying the template.
+  Production smoke after push verified the generated log can drive
+  `sales:launch-mode` to `manual_sales_go_with_payment_boundary`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded

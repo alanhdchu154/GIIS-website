@@ -67,9 +67,10 @@ Local evidence is green:
 ## Current Production Status
 
 Production public proof path is live. On 2026-06-11, after pushing
-`da63e2fb` to GitHub `origin/main` and allowing Netlify to deploy,
-the live site smoke returned 8 pass / 0 fail and the parent journey acceptance
-gate returned 7 pass / 0 fail. The live smoke covers:
+`285f86d7` to GitHub `origin/main` and allowing Netlify to deploy, the live site
+smoke returned 8 pass / 0 fail, the parent journey acceptance gate returned 7
+pass / 0 fail, and generated same-day operator-log launch mode returned
+`manual_sales_go_with_payment_boundary`. The live smoke covers:
 
 - `/`
 - `/consultation`
