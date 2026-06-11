@@ -10,7 +10,7 @@ backend payment/access launch.
 
 Local evidence is green:
 
-- `npm run audit:sales-launch` — 27/27 pass
+- `npm run audit:sales-launch` — 32/32 pass
 - `npm run audit:ops-browser -- --base-url http://localhost:3030` — 22 pass / 0 fail, including consultation, contact, and apply form submit success on desktop/mobile
 - `npm run audit:public-trust-claims` — 41 files pass
 - server Jest — 40/40 pass
@@ -92,6 +92,22 @@ Read-only Lightsail inspection on 2026-06-11 narrowed the API blocker:
 Repair doc: `docs/production-api-proxy-repair.md`.
 Stripe live price doc: `docs/stripe-live-price-setup.md`.
 Read-only proxy audit: `npm run audit:production-api-proxy`.
+Read-only payment env audit: `npm run audit:production-payment-env`.
+
+Read-only production env inspection on 2026-06-11 found:
+
+- `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `CORS_ORIGIN`, `DATABASE_URL`,
+  and `JWT_SECRET` are present without printing values.
+- `STRIPE_PRICE_GUIDED_MONTHLY` is missing.
+- `STRIPE_PRICE_PREMIUM_MONTHLY` is missing.
+- `STRIPE_PRICE_SELF_PACED_ANNUAL` is missing.
+- `STRIPE_PRICE_SELF_PACED_MONTHLY` is missing but legacy
+  `STRIPE_PRICE_FOUNDERS_MONTHLY` is present.
+- `ProcessedStripeEvent` table is missing in production DB.
+
+Current env audit: 15 pass / 5 warn / 3 fail. The extra warning confirms
+`DATABASE_URL` points to localhost; this is acceptable only if production
+Postgres is intentionally running on the Lightsail instance.
 
 ## What Can Launch First
 

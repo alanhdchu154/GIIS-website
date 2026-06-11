@@ -326,7 +326,10 @@ approval.
   `443` listener for `api.genesisideas.school`; repair is documented in
   `docs/production-api-proxy-repair.md` and checked by `npm run
   audit:production-api-proxy` (current result: 7 pass / 0 warn / 5 fail).
-  Backend weekly-report/payment deploy requires the Lightsail runbook.
+  Production env/DB preflight is now `npm run audit:production-payment-env`
+  (current result: 15 pass / 5 warn / 3 fail: missing Guided/Premium price IDs,
+  localhost production DB warning, and missing `ProcessedStripeEvent`). Backend
+  weekly-report/payment deploy requires the Lightsail runbook.
 - Codex review fix: `server/src/routes/weekly-report.js` now rejects
   non-dry-run sends unless a non-empty selected `studentIds` list is provided,
   and `force` requires an explicit `confirmForce: "resend_this_week"` guard.

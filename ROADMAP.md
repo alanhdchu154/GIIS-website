@@ -21,7 +21,14 @@ health/webhook checks. Read-only Lightsail inspection found PM2 `giis-api`
 online and local API health passing on port `4000`, but nginx proxies
 `api.genesisideas.school` to `127.0.0.1:8080` and has no active `443` listener;
 repair is documented in `docs/production-api-proxy-repair.md` and checked by
-`npm run audit:production-api-proxy`. Backend
+`npm run audit:production-api-proxy`. Read-only payment env inspection is now
+available as `npm run audit:production-payment-env`; current result is 15 pass /
+5 warn / 3 fail. Guided/Premium Stripe price IDs and `ProcessedStripeEvent` are
+missing; Self-Paced monthly still uses the legacy Founders fallback, annual
+pricing is not configured, production `DATABASE_URL` points to localhost, and
+the production repo has local dirty files. The localhost DB warning is
+acceptable only if Postgres is intentionally hosted on the Lightsail instance.
+Backend
 hardening includes a Prisma schema change, so backend deploy must be paired
 with a production DB backup, `db:push` / table verification, Stripe webhook env
 checks, and Lightsail restart/smoke. Pushing local `main` to GitHub
@@ -403,6 +410,14 @@ Status: reconciled locally; pending production deploy execution.
 - 2026-06-11 Stripe live price setup doc added
   `docs/stripe-live-price-setup.md` for the required live Price IDs:
   Self-Paced monthly/annual, Guided monthly, and Premium monthly.
+- 2026-06-11 production payment env audit added
+  `npm run audit:production-payment-env`. Current result is 15 pass / 5 warn /
+  3 fail: live Stripe secret/webhook secret/CORS/DATABASE/JWT are present
+  without printing values, but Guided and Premium live price IDs are missing,
+  Self-Paced monthly still relies on the legacy Founders fallback, Self-Paced
+  annual is missing, production `DATABASE_URL` points to localhost, `NODE_ENV`
+  is not in `.env` (may be PM2-level), production repo has dirty files, and
+  production DB lacks `ProcessedStripeEvent`.
 - 2026-06-11 manual admissions payment handoff added
   `docs/admissions-payment-handoff-runbook.md` and a sales-launch gate check.
   This lets GIIS start selling through consultation/path review while keeping
@@ -454,6 +469,9 @@ Next check:
 - Before sending any Guided or Premium checkout link, fix production Stripe
   price env (`STRIPE_PRICE_GUIDED_MONTHLY`, `STRIPE_PRICE_PREMIUM_MONTHLY`) and
   make `npm run audit:sales-payment-live` pass.
+- Before accepting live Stripe webhooks as reliable, back up production DB,
+  run the server `npm run db:push`, and make
+  `npm run audit:production-payment-env` show `ProcessedStripeEvent` present.
 - Before sending any automated checkout link, repair nginx/SSL for
   `api.genesisideas.school` so `/health` returns 200 over HTTPS and unsigned
   webhook smoke returns 4xx. Use `npm run audit:production-api-proxy` before and

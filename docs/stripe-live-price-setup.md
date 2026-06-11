@@ -40,9 +40,13 @@ checkout links are retired. New production config should set
 Run:
 
 ```bash
+npm run audit:production-payment-env
 npm run audit:sales-payment-live
 ```
 
 Expected before automated checkout: Guided, Premium, and Self-Paced monthly all
 pass. Self-Paced annual should also pass before promoting the annual plan.
 
+`audit:production-payment-env` should have 0 fail. It may warn that Self-Paced
+monthly is using the legacy `STRIPE_PRICE_FOUNDERS_MONTHLY` fallback until the
+new explicit `STRIPE_PRICE_SELF_PACED_MONTHLY` value is added.

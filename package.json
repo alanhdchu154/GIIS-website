@@ -53,6 +53,7 @@
     "audit:sales-manual-ready": "node tools/ops-quality/audit_parent_sales_manual_ready.js",
     "audit:sales-ready-today": "node tools/ops-quality/audit_parent_sales_ready_today.js",
     "audit:production-api-proxy": "node tools/ops-quality/audit_production_api_proxy.js",
+    "audit:production-payment-env": "node tools/ops-quality/audit_production_payment_env.js",
     "sales:ready-today": "node tools/ops-quality/audit_parent_sales_ready_today.js",
     "audit:public-trust-claims": "node tools/public-trust/audit_public_trust_claims.js",
     "audit:staged-artifacts": "node tools/public-trust/audit_staged_artifacts.js",

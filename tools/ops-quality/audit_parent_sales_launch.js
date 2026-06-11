@@ -27,6 +27,7 @@ const files = {
   stripeLivePriceSetup: read('docs/stripe-live-price-setup.md'),
   productionApiProxyRepair: read('docs/production-api-proxy-repair.md'),
   productionApiProxyAudit: read('tools/ops-quality/audit_production_api_proxy.js'),
+  productionPaymentEnvAudit: read('tools/ops-quality/audit_production_payment_env.js'),
   paymentHandoff: read('docs/admissions-payment-handoff-runbook.md'),
   consultationSop: read('docs/admissions-consultation-response-sop.md'),
   outreachPacket: read('docs/parent-sales-outreach-packet.md'),
@@ -247,6 +248,16 @@ const checks = [
       /server-api-root-proxy-port/.test(files.productionApiProxyAudit) &&
       /audit:production-api-proxy/.test(files.packageJson),
     message: 'Production API proxy audit must provide a read-only repeatable check for API HTTPS/nginx repair.',
+  },
+  {
+    id: 'production-payment-env-audit',
+    file: 'tools/ops-quality/audit_production_payment_env.js',
+    ok: /STRIPE_PRICE_GUIDED_MONTHLY/.test(files.productionPaymentEnvAudit) &&
+      /ProcessedStripeEvent/.test(files.productionPaymentEnvAudit) &&
+      /ALLOW_UNVERIFIED_STRIPE_WEBHOOK/.test(files.productionPaymentEnvAudit) &&
+      /audit:production-payment-env/.test(files.packageJson) &&
+      /secret values/.test(files.productionPaymentEnvAudit),
+    message: 'Production payment env audit must provide a read-only check without printing secret values.',
   },
   {
     id: 'payment-handoff-runbook',

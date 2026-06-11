@@ -45,6 +45,8 @@ Related setup docs:
   `api.genesisideas.school` is unreachable.
 - `npm run audit:production-api-proxy` for a read-only proxy/HTTPS preflight
   before and after nginx repair.
+- `npm run audit:production-payment-env` for a read-only production `.env` /
+  `ProcessedStripeEvent` preflight without printing secret values.
 
 ## Safe Sequence
 
@@ -61,6 +63,17 @@ the production database.
 
    Stop if `DATABASE_URL` points anywhere other than the intended production
    Postgres database.
+
+   From the local repo, run the read-only preflight before editing:
+
+   ```bash
+   npm run audit:production-payment-env
+   npm run audit:production-api-proxy
+   ```
+
+   These commands must not print secret values. They should identify missing
+   env variables, missing `ProcessedStripeEvent`, stale nginx upstreams, and
+   HTTPS listener problems.
 
 2. Back up production Postgres.
 
