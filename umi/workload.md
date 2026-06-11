@@ -9,6 +9,39 @@ evidence is explicitly needed.
 
 ## Active Handoff
 
+### Parent Sales Launch Mode
+
+- owner: Umi / Codex
+- mode: Umi-first with bounded cc review when code changes touch sales gates
+- priority: current parent-sales operating boundary
+
+Next action:
+
+- Before outreach or sales-day decisions, run
+  `npm run sales:launch-mode -- --operator-log /path/to/operator-log.md`.
+- If no same-day operator log exists and permanent owner decisions are still
+  blank, treat `not_ready` as expected and record the missing Alan review items
+  instead of bypassing the gate.
+- Keep automated Guided/Premium checkout blocked until
+  `npm run audit:sales-payment-live` returns 0 fail.
+
+Current Umi note:
+
+- 2026-06-11 launch-mode gate is in place. Verified behavior: no operator log
+  plus missing permanent owners returns `not_ready`; a sanitized same-day
+  operator log returns `manual_sales_go_with_payment_boundary`; automated
+  checkout remains blocked by Guided/Premium Stripe price IDs and
+  `api.genesisideas.school` HTTPS/webhook failures.
+- Static sales-launch is 35/35 after adding the launch-mode contract check.
+
+Acceptance:
+
+- Public proof path and parent journey remain green on production.
+- Same-day owner coverage or permanent owner decisions are present before
+  active outreach.
+- Manual payment handoff is used only after path review.
+- No automated checkout link is sent until payment-live is green.
+
 ### Foundation Video Daily Monitor
 
 - owner: Umi / Codex

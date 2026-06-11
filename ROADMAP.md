@@ -47,12 +47,17 @@ days should run `npm run sales:ready-today -- --operator-log
 same-day operator log outside git. Expected current verdict is
 `manual_sales_go_with_payment_boundary`. Automated Guided/Premium checkout
 stays blocked until `npm run audit:sales-payment-live` returns 0 fail.
+The current single-command operating gate is `npm run sales:launch-mode --
+--operator-log /path/to/operator-log.md`; with sanitized same-day operator
+coverage it returns `manual_sales_go_with_payment_boundary`, and without
+same-day/permanent owner coverage it returns `not_ready`.
 Permanent owner decisions are tracked by
 `npm run audit:sales-owner-decisions`; current expected verdict is
 `alan_review_required_for_permanent_sales_owners` until Alan confirms lead
 capture, response, WeChat, and manual Stripe ownership.
-Latest production frontend verification after `65ea0ceb`: `audit:sales-live`
-is 8/8 and `audit:parent-journey` is 7/7.
+Latest production frontend verification after `f7fa6158`: `audit:sales-live`
+is 8/8, `audit:parent-journey` is 7/7, and static `audit:sales-launch` is
+35/35 after adding the launch-mode gate.
 
 ## Active Lanes
 
@@ -472,6 +477,13 @@ Status: reconciled locally; pending production deploy execution.
   lead-capture owner, response/WeChat owners, and manual Stripe owner are still
   unassigned; backend payment deploy window remains a warning while automated
   checkout is gated.
+- 2026-06-11 launch-mode gate added `npm run sales:launch-mode`. It combines
+  static sales-launch, production sales-live, parent journey acceptance,
+  permanent owner decisions, optional same-day operator coverage, and payment
+  live readiness into one operating mode. Verified current behavior: no operator
+  log plus missing permanent owners returns `not_ready`; a sanitized same-day
+  operator log returns `manual_sales_go_with_payment_boundary`; automated
+  checkout remains blocked by payment-live failures.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -512,6 +524,10 @@ Next check:
 - Run `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
   before outreach days. Outreach can proceed only when it returns
   `manual_sales_go_with_payment_boundary` or `full_sales_ready`.
+- Prefer `npm run sales:launch-mode -- --operator-log /path/to/operator-log.md`
+  as the Alan-facing daily operating command because it also verifies the
+  parent journey and permanent owner-decision state before giving the allowed
+  sales mode.
 - Run `npm run audit:sales-owner-decisions` before replacing same-day operator
   logs with permanent ownership. Do not treat permanent sales operations as
   complete until lead capture, response/WeChat, and manual Stripe owner checks

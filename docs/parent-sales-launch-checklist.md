@@ -10,7 +10,7 @@ backend payment/access launch.
 
 Local evidence is green:
 
-- `npm run audit:sales-launch` — 33/33 pass
+- `npm run audit:sales-launch` — 35/35 pass
 - `npm run audit:ops-browser -- --base-url http://localhost:3030` — 22 pass / 0 fail, including consultation, contact, and apply form submit success on desktop/mobile
 - `npm run audit:public-trust-claims` — 41 files pass
 - server Jest — 40/40 pass
@@ -48,6 +48,11 @@ Local evidence is green:
   `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
   — expected verdict today is `manual_sales_go_with_payment_boundary` until
   `npm run audit:sales-payment-live` has 0 fail.
+- one-command launch-mode gate available:
+  `npm run sales:launch-mode -- --operator-log /path/to/operator-log.md`
+  — expected current verdict with same-day owner coverage is
+  `manual_sales_go_with_payment_boundary`. Without same-day coverage or
+  permanent owners, it returns `not_ready`.
 - permanent owner-decision gate available:
   `npm run audit:sales-owner-decisions` — currently 0 pass / 1 warn / 3 fail
   with verdict `alan_review_required_for_permanent_sales_owners`. This is the
@@ -56,7 +61,7 @@ Local evidence is green:
 ## Current Production Status
 
 Production public proof path is live. On 2026-06-11, after pushing
-`65ea0ceb` to GitHub `origin/main` and allowing Netlify to deploy,
+`f7fa6158` to GitHub `origin/main` and allowing Netlify to deploy,
 the live site smoke returned 8 pass / 0 fail and the parent journey acceptance
 gate returned 7 pass / 0 fail. The live smoke covers:
 
@@ -72,6 +77,14 @@ gate returned 7 pass / 0 fail. The live smoke covers:
 Buyer-readiness evidence: `npm run audit:parent-journey -- --base-url
 https://genesisideas.school` checks school status, learning evidence, parent
 visibility, pricing, applicant requirements, and contact-path answers.
+
+One-command launch-mode evidence: `npm run sales:launch-mode -- --operator-log
+/path/to/operator-log.md` combines the production public proof path, parent
+journey acceptance, permanent owner-decision status, same-day operator coverage,
+and automated payment live gate into one allowed action. Current verified mode
+with a sanitized same-day operator log is
+`manual_sales_go_with_payment_boundary`: outreach and manual payment handoff may
+proceed, but automated Guided/Premium checkout remains blocked.
 
 This proves the public parent proof path only. Before relying on inbound leads,
 configure Netlify notifications for the `consultation` and `contact` forms to
@@ -325,3 +338,20 @@ With a filled same-day operator log, the manual readiness gate can treat
 lead-capture, first-response, WeChat follow-up, and Alan-authorized manual
 Stripe coverage as covered for that day. Without a log or permanent owner
 decisions, those items remain warnings by design.
+
+For the single Alan-facing go/no-go line, run:
+
+```bash
+npm run sales:launch-mode -- --operator-log /path/to/operator-log.md
+```
+
+Use the result as the operating boundary:
+
+- `not_ready`: do not start active outreach.
+- `manual_sales_go_with_payment_boundary`: outreach/path review/manual payment
+  handoff may proceed for the day; no automated checkout links.
+- `permanent_manual_sales_ready_with_payment_boundary`: permanent owners are
+  recorded, so daily operator logs are no longer required; no automated checkout
+  links.
+- `full_sales_ready`: payment-live is green; automated checkout may proceed
+  only under the production payment runbook.

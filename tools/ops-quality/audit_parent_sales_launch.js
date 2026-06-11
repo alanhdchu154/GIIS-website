@@ -35,6 +35,7 @@ const files = {
   dailyOperatorLogTemplate: read('docs/templates/parent-sales-daily-operator-log.md'),
   readyTodayGate: read('tools/ops-quality/audit_parent_sales_ready_today.js'),
   ownerDecisionGate: read('tools/ops-quality/audit_parent_sales_owner_decisions.js'),
+  launchModeGate: read('tools/ops-quality/audit_parent_sales_launch_mode.js'),
   parentJourneyAcceptance: read('tools/ops-quality/audit_parent_journey_acceptance.js'),
   ownerDecisions: read('docs/parent-sales-owner-decisions.json'),
   packageJson: read('package.json'),
@@ -342,6 +343,17 @@ const checks = [
       /audit:sales-owner-decisions/.test(files.packageJson) &&
       /netlifyLeadCapture/.test(files.ownerDecisions),
     message: 'Admissions must have a repeatable Alan review gate for permanent sales-owner decisions.',
+  },
+  {
+    id: 'parent-sales-launch-mode-gate',
+    file: 'tools/ops-quality/audit_parent_sales_launch_mode.js',
+    ok: /manual_sales_go_with_payment_boundary/.test(files.launchModeGate) &&
+      /permanent_manual_sales_ready_with_payment_boundary/.test(files.launchModeGate) &&
+      /full_sales_ready/.test(files.launchModeGate) &&
+      /canAutomatedCheckout/.test(files.launchModeGate) &&
+      /audit:sales-launch-mode/.test(files.packageJson) &&
+      /sales:launch-mode/.test(files.packageJson),
+    message: 'Admissions must have one command that reports the current allowed sales launch mode.',
   },
   {
     id: 'parent-journey-acceptance-gate',
