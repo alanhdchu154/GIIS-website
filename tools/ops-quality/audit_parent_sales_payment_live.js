@@ -191,12 +191,14 @@ function writeReports(results) {
     warn: results.filter((r) => r.status === 'warn').length,
     fail: results.filter((r) => r.status === 'fail').length,
   };
+  const nextActions = buildNextActions(results);
   const payload = {
     generatedAt: new Date().toISOString(),
     baseUrl: BASE_URL,
     apiUrl: API_URL,
     summary,
     results,
+    nextActions,
   };
   fs.writeFileSync(JSON_REPORT, `${JSON.stringify(payload, null, 2)}\n`);
 
@@ -209,15 +211,105 @@ function writeReports(results) {
     '',
     `Summary: ${summary.pass} pass / ${summary.warn} warn / ${summary.fail} fail (${summary.total} checks)`,
     '',
+    '## Operator Next Actions',
+    '',
+  ];
+  if (nextActions.length) {
+    for (const action of nextActions) {
+      lines.push(`- **${action.kind}**: ${action.message}`);
+      lines.push(`  - Evidence: ${action.evidence.join(', ')}`);
+      lines.push(`  - Runbook: ${action.runbook}`);
+    }
+  } else {
+    lines.push('- No operator action is required by this gate.');
+  }
+  lines.push(
+    '',
     '| Check | Status | Notes |',
     '| --- | --- | --- |',
-  ];
+  );
   for (const result of results) {
     const details = result.details ? JSON.stringify(result.details).replace(/\|/g, '/') : '';
     lines.push(`| ${result.id} | ${result.status} | ${result.message}${details ? `<br><code>${details}</code>` : ''} |`);
   }
   fs.writeFileSync(REPORT, `${lines.join('\n')}\n`);
   return summary;
+}
+
+function buildNextActions(results) {
+  const actions = [];
+  const ids = new Set();
+
+  function add(id, kind, message, evidence, runbook) {
+    if (ids.has(id)) return;
+    ids.add(id);
+    actions.push({ id, kind, message, evidence, runbook });
+  }
+
+  const failures = results.filter((result) => result.status === 'fail');
+  const missingPrices = failures.filter((result) => /_monthly-configured$|price-configured$/.test(result.id));
+  if (missingPrices.length) {
+    const keys = missingPrices
+      .map((result) => result.details?.key)
+      .filter(Boolean);
+    add(
+      'missing-stripe-live-prices',
+      'missing_stripe_live_prices',
+      `Create or locate the live Stripe Price objects and add the matching price IDs to production server/.env: ${keys.join(', ')}.`,
+      missingPrices.map((result) => result.id),
+      'docs/stripe-live-price-setup.md',
+    );
+  }
+
+  const annualWarning = results.find((result) => result.id === 'self-paced-annual-configured' && result.status === 'warn');
+  if (annualWarning) {
+    add(
+      'missing-self-paced-annual-price',
+      'missing_optional_stripe_live_price',
+      'Self-Paced annual is visible in checkout tiers but has no live Stripe price ID. Add it before promoting annual checkout.',
+      [annualWarning.id],
+      'docs/stripe-live-price-setup.md',
+    );
+  }
+
+  const apiUnreachable = failures.filter((result) => {
+    const code = result.details?.code || result.details?.cause || result.details?.error || '';
+    return ['direct-api-health', 'stripe-webhook-fail-closed'].includes(result.id) &&
+      /ECONNREFUSED|ENOTFOUND|ETIMEDOUT|fetch failed/i.test(String(code));
+  });
+  if (apiUnreachable.length) {
+    add(
+      'production-api-https-unreachable',
+      'production_api_https_unreachable',
+      'Restore HTTPS reachability for api.genesisideas.school before automated checkout or Stripe webhooks are treated as live.',
+      apiUnreachable.map((result) => result.id),
+      'docs/production-api-proxy-repair.md',
+    );
+  }
+
+  const unhealthyApi = failures.find((result) => result.id === 'direct-api-health' && !apiUnreachable.includes(result));
+  if (unhealthyApi) {
+    add(
+      'production-api-health-unhealthy',
+      'production_api_unhealthy',
+      'The API endpoint is reachable but did not return healthy; inspect PM2 logs and production env before restart.',
+      [unhealthyApi.id],
+      'docs/production-payment-deploy-runbook.md',
+    );
+  }
+
+  const webhookOpen = failures.find((result) => result.id === 'stripe-webhook-fail-closed' && !apiUnreachable.includes(result));
+  if (webhookOpen) {
+    add(
+      'stripe-webhook-not-fail-closed',
+      'stripe_webhook_not_fail_closed',
+      'The webhook endpoint is reachable but does not reject unsigned requests; stop automated payment launch and repair webhook signature config.',
+      [webhookOpen.id],
+      'docs/production-payment-deploy-runbook.md',
+    );
+  }
+
+  return actions;
 }
 
 (async () => {

@@ -17,12 +17,15 @@ Current 2026-06-11 risk: the public parent proof path is live on Netlify and
 passes production smoke, but automated payment launch is not ready yet. Guided
 and Premium are visible in pricing but their production Stripe price IDs are
 missing, and `https://api.genesisideas.school` is not reachable for direct
-health/webhook checks. Backend hardening includes a Prisma schema change, so
-backend deploy must be paired with a production DB backup, `db:push` / table
-verification, Stripe webhook env checks, and Lightsail restart/smoke. Pushing
-local `main` to GitHub `origin/main` automatically triggers the Netlify frontend
-deploy for `genesisideas.school`; it does not deploy/restart the Lightsail
-backend.
+health/webhook checks. Read-only Lightsail inspection found PM2 `giis-api`
+online and local API health passing on port `4000`, but nginx proxies
+`api.genesisideas.school` to `127.0.0.1:8080` and does not listen on `443`;
+repair is documented in `docs/production-api-proxy-repair.md`. Backend
+hardening includes a Prisma schema change, so backend deploy must be paired
+with a production DB backup, `db:push` / table verification, Stripe webhook env
+checks, and Lightsail restart/smoke. Pushing local `main` to GitHub
+`origin/main` automatically triggers the Netlify frontend deploy for
+`genesisideas.school`; it does not deploy/restart the Lightsail backend.
 
 Current sellable state: GIIS can start consultation-first outreach and
 transfer/new-student path reviews using the public proof path, response SOP,
@@ -387,7 +390,17 @@ Status: reconciled locally; pending production deploy execution.
   production Stripe price IDs, Self-Paced annual has no price ID, direct
   `https://api.genesisideas.school/health` is unreachable, and the Stripe
   webhook endpoint is not reachable over HTTPS. Evidence:
-  `_audit/parent-sales-payment-live.md`.
+  `_audit/parent-sales-payment-live.md`. The gate now emits operator
+  `nextActions[]` that map failures to Stripe live price setup or production
+  API proxy repair.
+- 2026-06-11 production API proxy diagnosis added
+  `docs/production-api-proxy-repair.md`: local API health passes on Lightsail
+  at `127.0.0.1:4000`, but nginx proxies the API host to `127.0.0.1:8080` and
+  does not listen on `443`. This blocks direct API health and Stripe webhook
+  smoke until nginx/SSL is repaired.
+- 2026-06-11 Stripe live price setup doc added
+  `docs/stripe-live-price-setup.md` for the required live Price IDs:
+  Self-Paced monthly/annual, Guided monthly, and Premium monthly.
 - 2026-06-11 manual admissions payment handoff added
   `docs/admissions-payment-handoff-runbook.md` and a sales-launch gate check.
   This lets GIIS start selling through consultation/path review while keeping
@@ -439,6 +452,9 @@ Next check:
 - Before sending any Guided or Premium checkout link, fix production Stripe
   price env (`STRIPE_PRICE_GUIDED_MONTHLY`, `STRIPE_PRICE_PREMIUM_MONTHLY`) and
   make `npm run audit:sales-payment-live` pass.
+- Before sending any automated checkout link, repair nginx/SSL for
+  `api.genesisideas.school` so `/health` returns 200 over HTTPS and unsigned
+  webhook smoke returns 4xx.
 - Until automated checkout is green, use the manual payment handoff runbook:
   payment only after path review, authorized Stripe Dashboard invoice/payment
   link only, and portal activation after fit plus payment are both clear.

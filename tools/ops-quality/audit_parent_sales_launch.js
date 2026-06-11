@@ -24,6 +24,8 @@ const files = {
   parentDemo: read('src/components/pages/Parent/ParentDashboardDemo.js'),
   publicIndex: read('public/index.html'),
   paymentRunbook: read('docs/production-payment-deploy-runbook.md'),
+  stripeLivePriceSetup: read('docs/stripe-live-price-setup.md'),
+  productionApiProxyRepair: read('docs/production-api-proxy-repair.md'),
   paymentHandoff: read('docs/admissions-payment-handoff-runbook.md'),
   consultationSop: read('docs/admissions-consultation-response-sop.md'),
   outreachPacket: read('docs/parent-sales-outreach-packet.md'),
@@ -211,9 +213,29 @@ const checks = [
     file: 'docs/production-payment-deploy-runbook.md',
     ok: /ProcessedStripeEvent/.test(files.paymentRunbook) &&
       /STRIPE_WEBHOOK_SECRET/.test(files.paymentRunbook) &&
+      /docs\/stripe-live-price-setup\.md/.test(files.paymentRunbook) &&
+      /docs\/production-api-proxy-repair\.md/.test(files.paymentRunbook) &&
       /Frontend-only Netlify deploy may happen/.test(files.paymentRunbook) &&
       /do not tell parents/i.test(files.paymentRunbook),
     message: 'Payment runbook must separate frontend launch from backend payment safety.',
+  },
+  {
+    id: 'stripe-live-price-setup',
+    file: 'docs/stripe-live-price-setup.md',
+    ok: /STRIPE_PRICE_GUIDED_MONTHLY/.test(files.stripeLivePriceSetup) &&
+      /STRIPE_PRICE_PREMIUM_MONTHLY/.test(files.stripeLivePriceSetup) &&
+      /STRIPE_PRICE_SELF_PACED_MONTHLY/.test(files.stripeLivePriceSetup) &&
+      /Do not commit `server\/\.env`/.test(files.stripeLivePriceSetup),
+    message: 'Stripe live price setup doc must list required public plan price IDs and secret boundaries.',
+  },
+  {
+    id: 'production-api-proxy-repair',
+    file: 'docs/production-api-proxy-repair.md',
+    ok: /api\.genesisideas\.school/.test(files.productionApiProxyRepair) &&
+      /proxy_pass http:\/\/127\.0\.0\.1:4000/.test(files.productionApiProxyRepair) &&
+      /sudo nginx -t/.test(files.productionApiProxyRepair) &&
+      /Unsigned webhook requests should return a 4xx response/.test(files.productionApiProxyRepair),
+    message: 'Production API proxy repair doc must explain the nginx/HTTPS blocker and webhook fail-closed smoke.',
   },
   {
     id: 'payment-handoff-runbook',

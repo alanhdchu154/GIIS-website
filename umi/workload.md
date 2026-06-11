@@ -321,8 +321,11 @@ approval.
   is fixed. Outstanding: Netlify form notification config or permanent daily
   submissions owner; `npm run audit:sales-payment-live` is still blocked by
   missing Guided/Premium Stripe price IDs and direct API health/webhook
-  reachability; backend weekly-report/payment deploy requires the Lightsail
-  runbook.
+  reachability. Read-only Lightsail check found local API health green on
+  `127.0.0.1:4000`, but nginx proxies to `127.0.0.1:8080` and has no active
+  `443` listener for `api.genesisideas.school`; repair is documented in
+  `docs/production-api-proxy-repair.md`. Backend weekly-report/payment deploy
+  requires the Lightsail runbook.
 - Codex review fix: `server/src/routes/weekly-report.js` now rejects
   non-dry-run sends unless a non-empty selected `studentIds` list is provided,
   and `force` requires an explicit `confirmForce: "resend_this_week"` guard.

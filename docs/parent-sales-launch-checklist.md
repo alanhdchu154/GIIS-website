@@ -81,6 +81,17 @@ Payment automation is not launch-ready yet. Current production
 
 Evidence: `_audit/parent-sales-payment-live.md`.
 
+Read-only Lightsail inspection on 2026-06-11 narrowed the API blocker:
+
+- PM2 `giis-api` is online.
+- `http://127.0.0.1:4000/health` returns 200 on the server.
+- nginx listens on port 80 but not port 443.
+- nginx currently proxies `api.genesisideas.school` to `127.0.0.1:8080`,
+  while the API listens on `4000`.
+
+Repair doc: `docs/production-api-proxy-repair.md`.
+Stripe live price doc: `docs/stripe-live-price-setup.md`.
+
 ## What Can Launch First
 
 Frontend-only Netlify deploy can launch the pre-payment proof path:
@@ -196,6 +207,8 @@ Before backend/payment deploy:
   - `STRIPE_PRICE_PREMIUM_MONTHLY`
   - optional: `STRIPE_PRICE_SELF_PACED_ANNUAL`
 - Restore/verify HTTPS reachability for `https://api.genesisideas.school`.
+  Current production evidence points to nginx/SSL repair, not missing API route
+  code.
 - Run production DB backup and `npm run db:push`.
 - Verify `ProcessedStripeEvent` exists.
 - Restart the Lightsail API and run production smoke.

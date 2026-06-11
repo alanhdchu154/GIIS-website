@@ -38,6 +38,12 @@ Do not deploy the backend until all are true:
 - API restart is followed by health, checkout, webhook, and admin subscription
   smoke checks
 
+Related setup docs:
+
+- `docs/stripe-live-price-setup.md` for live Stripe Price IDs.
+- `docs/production-api-proxy-repair.md` for nginx / HTTPS repair when
+  `api.genesisideas.school` is unreachable.
+
 ## Safe Sequence
 
 Run these from the Lightsail server or another trusted machine that can reach
