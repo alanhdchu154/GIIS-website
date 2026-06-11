@@ -29,8 +29,8 @@ transfer/new-student path reviews using the public proof path, response SOP,
 outreach packet, daily operator checklist, and manual payment handoff. This is
 not the same as fully automated checkout. Outreach days should run
 `npm run audit:sales-manual-ready`; unresolved owner warnings must be covered by
-a same-day operator log outside git. Automated Guided/Premium checkout stays
-blocked until
+a same-day operator log outside git using `--operator-log`. Automated
+Guided/Premium checkout stays blocked until
 `npm run audit:sales-payment-live` returns 0 fail.
 
 ## Active Lanes
@@ -398,16 +398,20 @@ Status: reconciled locally; pending production deploy execution.
 - 2026-06-11 daily operator checklist added
   `docs/parent-sales-daily-operator-checklist.md` plus
   `docs/templates/parent-sales-daily-operator-log.md`. `audit:sales-launch`
-  gates both, and `audit:sales-manual-ready` now checks the same-day owner
-  coverage checklist so unresolved owner warnings have an explicit daily
-  operating path.
+  gates both, and `audit:sales-manual-ready -- --operator-log /path/to/log.md`
+  can validate same-day lead-capture, response, WeChat, and Alan-authorized
+  manual Stripe coverage without committing sensitive lead data. Sanitized
+  operator-log smoke returned 13 pass / 1 warn / 0 fail; the remaining warning
+  is automated payment readiness.
 - 2026-06-11 manual-sales readiness gate added
   `npm run audit:sales-manual-ready`. Current production result is 9 pass / 4
   warn / 0 fail with verdict `manual_sales_ready_with_recorded_warnings`: public
   proof path, Netlify form markup, admissions email fallback, SOP, and handoff
   docs pass; warnings remain for missing lead-capture owner, missing manual
   Stripe owner, missing response/WeChat owners, and blocked payment automation.
-  Evidence: `_audit/parent-sales-manual-ready.md`.
+  The embedded production proof smoke now retries once to reduce false-red
+  failures from short Netlify edge stale windows. Evidence:
+  `_audit/parent-sales-manual-ready.md`.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded

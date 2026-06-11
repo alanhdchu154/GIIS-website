@@ -15,6 +15,7 @@ Date:
 - WeChat follow-up owner:
 - Principal escalation owner: Shiyu Zhang, Ph.D.
 - Manual Stripe owner:
+- Manual Stripe authorized by Alan (yes/no):
 - Receipt / Stripe ID record location:
 
 ## Inbox Checks

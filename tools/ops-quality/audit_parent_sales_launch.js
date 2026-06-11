@@ -267,6 +267,7 @@ const checks = [
     ok: /Same-Day Owners/.test(files.dailyOperatorLogTemplate) &&
       /Lead-capture owner/.test(files.dailyOperatorLogTemplate) &&
       /Manual Stripe owner/.test(files.dailyOperatorLogTemplate) &&
+      /Manual Stripe authorized by Alan \(yes\/no\)/.test(files.dailyOperatorLogTemplate) &&
       /Inbox Checks/.test(files.dailyOperatorLogTemplate) &&
       /Do not store parent names/.test(files.dailyOperatorLogTemplate),
     message: 'Admissions must have a non-sensitive same-day operator log template.',

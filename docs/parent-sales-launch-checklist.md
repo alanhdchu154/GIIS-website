@@ -33,6 +33,12 @@ Local evidence is green:
 - manual-sales readiness gate available:
   `npm run audit:sales-manual-ready` — currently 9 pass / 4 warn / 0 fail in
   production. Verdict: `manual_sales_ready_with_recorded_warnings`.
+  The embedded production proof smoke retries once to avoid failing an outreach
+  day on a short Netlify edge stale window.
+- same-day operator-log readiness mode available:
+  `npm run audit:sales-manual-ready -- --operator-log /path/to/operator-log.md`
+  — smoke-tested with a sanitized `/tmp` log at 13 pass / 1 warn / 0 fail.
+  The remaining warning is automated payment readiness.
 
 ## Current Production Status
 
@@ -234,3 +240,18 @@ Use `docs/parent-sales-daily-operator-checklist.md` before the first outreach
 message each day. If permanent owners are still blank in
 `docs/parent-sales-owner-decisions.json`, a same-day owner must be recorded in a
 filled operator log outside git before outreach starts.
+
+The readiness gate supports a same-day operator log:
+
+```bash
+npm run audit:sales-manual-ready -- --operator-log /path/to/operator-log.md
+```
+
+Use this only for non-sensitive same-day owner coverage. Do not commit filled
+logs that include parent names, emails, payment links, student records, or
+Stripe IDs.
+
+With a filled same-day operator log, the manual readiness gate can treat
+lead-capture, first-response, WeChat follow-up, and Alan-authorized manual
+Stripe coverage as covered for that day. Without a log or permanent owner
+decisions, those items remain warnings by design.

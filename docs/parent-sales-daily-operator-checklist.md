@@ -37,9 +37,20 @@ Before outreach starts, write down:
 - principal escalation owner: default is Shiyu Zhang, Ph.D.,
 - manual Stripe owner: who is authorized by Alan to create invoice/payment
   links,
+- manual Stripe authorized by Alan: yes/no,
 - payment record location: where receipt/Stripe IDs are recorded outside git.
 
 If any of these cannot be covered, do not start outreach that day.
+
+You can prove same-day coverage to the readiness gate with a filled operator
+log:
+
+```bash
+npm run audit:sales-manual-ready -- --operator-log /path/to/operator-log.md
+```
+
+The log may contain internal owner names, so keep filled logs outside git unless
+Alan explicitly approves committing a sanitized version.
 
 ## Lead Inbox Check
 

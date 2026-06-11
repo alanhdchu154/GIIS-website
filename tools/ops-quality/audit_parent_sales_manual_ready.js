@@ -23,6 +23,7 @@ const BASE_URL = normalizeBaseUrl(argValue('--base-url', 'https://genesisideas.s
 const API_URL = normalizeBaseUrl(argValue('--api-url', 'https://api.genesisideas.school'));
 const REPORT = argValue('--report', DEFAULT_REPORT);
 const JSON_REPORT = argValue('--json-report', DEFAULT_JSON_REPORT);
+const OPERATOR_LOG = argValue('--operator-log', '');
 
 function read(relPath) {
   return fs.readFileSync(path.join(ROOT, relPath), 'utf8');
@@ -30,6 +31,58 @@ function read(relPath) {
 
 function readJson(relPath) {
   return JSON.parse(read(relPath));
+}
+
+function readFileFromArg(filePath) {
+  if (!filePath) return '';
+  const resolved = path.isAbsolute(filePath) ? filePath : path.resolve(ROOT, filePath);
+  return fs.readFileSync(resolved, 'utf8');
+}
+
+function operatorField(markdown, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = markdown.match(new RegExp(`^-\\s*${escaped}:\\s*(.+?)\\s*$`, 'im'));
+  return match ? match[1].trim() : '';
+}
+
+function isFilled(value) {
+  const normalized = String(value || '').trim().toLowerCase();
+  return Boolean(normalized) && !['n/a', 'na', 'none', 'no', 'false', 'tbd', 'todo', '-'].includes(normalized);
+}
+
+function isYes(value) {
+  return /^(yes|y|true|confirmed|approved)$/i.test(String(value || '').trim());
+}
+
+function loadOperatorCoverage() {
+  if (!OPERATOR_LOG) return { provided: false };
+  const markdown = readFileFromArg(OPERATOR_LOG);
+  const fields = {
+    leadCaptureOwner: operatorField(markdown, 'Lead-capture owner'),
+    firstResponseOwner: operatorField(markdown, 'First-response owner'),
+    wechatFollowUpOwner: operatorField(markdown, 'WeChat follow-up owner'),
+    manualStripeOwner: operatorField(markdown, 'Manual Stripe owner'),
+    manualStripeAuthorized: operatorField(markdown, 'Manual Stripe authorized by Alan (yes/no)'),
+    receiptLocation: operatorField(markdown, 'Receipt / Stripe ID record location'),
+    consultationChecked: operatorField(markdown, 'Netlify consultation submissions checked'),
+    contactChecked: operatorField(markdown, 'Netlify contact submissions checked'),
+    admissionsInboxChecked: operatorField(markdown, 'Admissions inbox checked'),
+  };
+  const coverage = {
+    provided: true,
+    path: OPERATOR_LOG,
+    leadCapture: isFilled(fields.leadCaptureOwner) &&
+      isYes(fields.consultationChecked) &&
+      isYes(fields.contactChecked) &&
+      isYes(fields.admissionsInboxChecked),
+    response: isFilled(fields.firstResponseOwner) && isFilled(fields.wechatFollowUpOwner),
+    manualPayment: isFilled(fields.manualStripeOwner) &&
+      isYes(fields.manualStripeAuthorized) &&
+      isFilled(fields.receiptLocation),
+    fieldsPresent: Object.fromEntries(Object.entries(fields).map(([key, value]) => [key, isFilled(value)])),
+  };
+  coverage.valid = coverage.leadCapture && coverage.response && coverage.manualPayment;
+  return coverage;
 }
 
 function pass(id, message, details = {}) {
@@ -59,25 +112,41 @@ async function fetchText(url) {
 }
 
 async function checkProductionProofPath() {
-  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'giis-manual-ready-'));
-  const report = path.join(tmp, 'sales-live.md');
-  const jsonReport = path.join(tmp, 'sales-live.json');
-  const run = runNodeScript('tools/ops-quality/audit_parent_sales_live.js', [
-    '--base-url', BASE_URL,
-    '--report', report,
-    '--json-report', jsonReport,
-  ]);
-  if (run.status !== 0) {
-    return fail('production-proof-path', 'Production public proof path is not passing live smoke.', {
-      baseUrl: BASE_URL,
+  const attempts = [];
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'giis-manual-ready-'));
+    const report = path.join(tmp, 'sales-live.md');
+    const jsonReport = path.join(tmp, 'sales-live.json');
+    const run = runNodeScript('tools/ops-quality/audit_parent_sales_live.js', [
+      '--base-url', BASE_URL,
+      '--report', report,
+      '--json-report', jsonReport,
+    ]);
+    let payload = null;
+    if (fs.existsSync(jsonReport)) {
+      payload = JSON.parse(fs.readFileSync(jsonReport, 'utf8'));
+    }
+    attempts.push({
+      attempt,
+      status: run.status,
+      summary: payload ? payload.summary : null,
       stdout: run.stdout.trim().slice(0, 1000),
       stderr: run.stderr.trim().slice(0, 1000),
     });
+    if (run.status === 0 && payload) {
+      return pass('production-proof-path', 'Production public proof path passes live smoke.', {
+        baseUrl: BASE_URL,
+        summary: payload.summary,
+        attempts: attempt,
+      });
+    }
+    if (attempt < 2) {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+    }
   }
-  const payload = JSON.parse(fs.readFileSync(jsonReport, 'utf8'));
-  return pass('production-proof-path', 'Production public proof path passes live smoke.', {
+  return fail('production-proof-path', 'Production public proof path is not passing live smoke after retry.', {
     baseUrl: BASE_URL,
-    summary: payload.summary,
+    attempts,
   });
 }
 
@@ -141,15 +210,17 @@ async function checkLeadCaptureMarkup() {
   }
 
   const decisions = readJson('docs/parent-sales-owner-decisions.json');
+  const operatorCoverage = loadOperatorCoverage();
   const leadCapture = decisions.netlifyLeadCapture || {};
   const hasNotification = leadCapture.notificationConfirmed === true;
   const hasDailyOwner = Boolean(String(leadCapture.dailySubmissionsOwner || '').trim());
-  if (hasNotification || hasDailyOwner) {
+  if (hasNotification || hasDailyOwner || operatorCoverage.leadCapture) {
     results.push(pass('lead-capture-owner', 'Lead capture owner or Netlify notification is recorded.', {
       notificationConfirmed: hasNotification,
       notificationInbox: leadCapture.notificationInbox,
-      dailySubmissionsOwner: leadCapture.dailySubmissionsOwner,
+      dailySubmissionsOwner: hasDailyOwner ? 'recorded' : '',
       dailyCheckCadence: leadCapture.dailyCheckCadence,
+      sameDayOperatorLog: operatorCoverage.leadCapture ? 'covered' : '',
     }));
   } else {
     results.push(warn('lead-capture-owner', 'Netlify form email notifications cannot be verified from this repo, and no daily submissions owner is recorded yet.', {
@@ -167,6 +238,7 @@ function checkDocs() {
   const checklist = read('docs/parent-sales-launch-checklist.md');
   const dailyOperatorChecklist = read('docs/parent-sales-daily-operator-checklist.md');
   const decisions = readJson('docs/parent-sales-owner-decisions.json');
+  const operatorCoverage = loadOperatorCoverage();
   const results = [];
 
   const handoffOk = /Minimum Sellable Flow/.test(handoff) &&
@@ -201,12 +273,28 @@ function checkDocs() {
     ? pass('daily-operator-checklist', 'Daily operator checklist gives same-day coverage rules for unresolved owner warnings.')
     : fail('daily-operator-checklist', 'Daily operator checklist is missing same-day owner coverage rules.'));
 
+  if (operatorCoverage.provided) {
+    results.push(operatorCoverage.valid
+      ? pass('operator-log-coverage', 'Same-day operator log covers lead capture, response, WeChat, and manual Stripe ownership without committing sensitive lead data.', {
+        leadCapture: operatorCoverage.leadCapture,
+        response: operatorCoverage.response,
+        manualPayment: operatorCoverage.manualPayment,
+      })
+      : fail('operator-log-coverage', 'Operator log was provided but is missing required same-day coverage fields.', {
+        leadCapture: operatorCoverage.leadCapture,
+        response: operatorCoverage.response,
+        manualPayment: operatorCoverage.manualPayment,
+        fieldsPresent: operatorCoverage.fieldsPresent,
+      }));
+  }
+
   const manualPayment = decisions.manualPayment || {};
-  if (String(manualPayment.stripeInvoiceOwner || '').trim() && manualPayment.authorizedByAlan === true) {
+  if ((String(manualPayment.stripeInvoiceOwner || '').trim() && manualPayment.authorizedByAlan === true) || operatorCoverage.manualPayment) {
     results.push(pass('manual-stripe-owner', 'Manual Stripe invoice/payment-link owner is recorded and Alan-authorized.', {
-      stripeInvoiceOwner: manualPayment.stripeInvoiceOwner,
+      stripeInvoiceOwner: manualPayment.stripeInvoiceOwner ? 'recorded' : '',
       invoiceNamingConvention: manualPayment.invoiceNamingConvention,
       receiptRecordLocation: manualPayment.receiptRecordLocation,
+      sameDayOperatorLog: operatorCoverage.manualPayment ? 'covered' : '',
     }));
   } else {
     results.push(warn('manual-stripe-owner', 'Manual Stripe invoice/payment-link owner is not fully assigned yet.', {
@@ -217,8 +305,13 @@ function checkDocs() {
   }
 
   const responseOwnership = decisions.responseOwnership || {};
-  if (String(responseOwnership.firstResponseOwner || '').trim() && String(responseOwnership.wechatFollowUpOwner || '').trim()) {
-    results.push(pass('response-owners', 'First response and WeChat follow-up owners are recorded.', responseOwnership));
+  if ((String(responseOwnership.firstResponseOwner || '').trim() && String(responseOwnership.wechatFollowUpOwner || '').trim()) || operatorCoverage.response) {
+    results.push(pass('response-owners', 'First response and WeChat follow-up owners are recorded.', {
+      firstResponseOwner: responseOwnership.firstResponseOwner ? 'recorded' : '',
+      wechatFollowUpOwner: responseOwnership.wechatFollowUpOwner ? 'recorded' : '',
+      principalEscalationOwner: responseOwnership.principalEscalationOwner || '',
+      sameDayOperatorLog: operatorCoverage.response ? 'covered' : '',
+    }));
   } else {
     results.push(warn('response-owners', 'First response or WeChat follow-up owner is not fully assigned yet.', {
       firstResponseOwner: responseOwnership.firstResponseOwner || '',

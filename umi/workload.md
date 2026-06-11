@@ -194,8 +194,10 @@ Local commits (oldest→newest):
   and `docs/templates/parent-sales-daily-operator-log.md` give same-day coverage
   rules for lead capture, first response, WeChat, principal escalation, manual
   Stripe ownership, end-of-day closeout, and stop conditions. `audit:sales-launch`
-  gates both files; `audit:sales-manual-ready` checks the same-day coverage
-  checklist.
+  gates both files; `audit:sales-manual-ready -- --operator-log /path/to/log.md`
+  can validate a filled same-day operator log without committing sensitive lead
+  data. Sanitized `/tmp` operator-log smoke returned 13 pass / 1 warn / 0 fail;
+  the remaining warning is automated payment readiness.
 
 Codex next actions (do in order):
 
@@ -278,9 +280,10 @@ returns 9 pass / 4 warn / 0 fail in production with verdict
 `manual_sales_ready_with_recorded_warnings`. Warnings: Netlify email
 notification/lead owner cannot be verified from repo, manual Stripe owner is
 not assigned, first-response/WeChat owners are not assigned, and automated
-payment remains blocked. This is sufficient for consultation/path-review
-selling only if Alan consciously assigns or personally covers those owner
-warnings for the day.
+payment remains blocked. The embedded production proof smoke retries once to
+reduce false-red results from short Netlify edge stale windows. This is
+sufficient for consultation/path-review selling only if Alan consciously assigns
+or personally covers those owner warnings for the day.
 cc review notes: a bounded `claude -p` review-only pass was attempted for the
 admissions sales-ops diff on 2026-06-11, but it produced no output and was
 stopped. A second bounded review-only pass for
