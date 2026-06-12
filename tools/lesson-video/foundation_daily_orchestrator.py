@@ -1129,7 +1129,10 @@ def orchestrate(args: argparse.Namespace) -> int:
         append_approval(approved_rows)
     should_run_upload_queue = approved_rows or not args.skip_existing_approved_upload
     if should_run_upload_queue and not args.no_upload and not args.dry_run:
-        upload_rc = run_checked([sys.executable, str(YT_QUEUE), "upload", "--gate-ready", "--max", str(args.upload_max), "--privacy", args.privacy])
+        upload_cmd = [sys.executable, str(YT_QUEUE), "upload", "--gate-ready", "--max", str(args.upload_max), "--privacy", args.privacy]
+        if args.ignore_upload_quota_estimate:
+            upload_cmd.append("--ignore-quota-estimate")
+        upload_rc = run_checked(upload_cmd)
         if upload_rc == 0:
             run_checked([sys.executable, str(SYNC_CHANNEL), "--apply"])
             if args.auto_commit:
@@ -1154,6 +1157,7 @@ def main() -> int:
     ap.add_argument("--no-cc", action="store_true")
     ap.add_argument("--no-gate", action="store_true")
     ap.add_argument("--no-upload", action="store_true")
+    ap.add_argument("--ignore-upload-quota-estimate", action="store_true")
     ap.add_argument("--skip-existing-approved-upload", action="store_true")
     ap.add_argument("--no-course-design-repair", action="store_true")
     ap.add_argument("--auto-commit", action="store_true")

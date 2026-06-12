@@ -43,11 +43,12 @@ fi
   echo
   "$PYTHON" tools/lesson-video/foundation_daily_orchestrator.py \
     --target-grade "${FOUNDATION_TARGET_GRADE:-9}" \
-    --max-modules "${FOUNDATION_MAX_MODULES:-8}" \
-    --upload-max "${FOUNDATION_UPLOAD_MAX:-8}" \
+    --max-modules "${FOUNDATION_MAX_MODULES:-11}" \
+    --upload-max "${FOUNDATION_UPLOAD_MAX:-11}" \
     --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}" \
     --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}" \
     --cc-timeout-seconds "${FOUNDATION_CC_TIMEOUT_SECONDS:-1800}" \
+    --ignore-upload-quota-estimate \
     --auto-commit \
     "$@"
 } 2>&1 | tee -a "$LOG"
