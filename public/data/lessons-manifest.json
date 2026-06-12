@@ -1,7 +1,31 @@
 {
-  "generated_at": "2026-06-12T14:31:40+00:00",
+  "generated_at": "2026-06-12T14:35:43+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "World History": [
+      {
+        "course": "World History",
+        "course_slug": "world-history",
+        "module_number": 1,
+        "module_title": "Early Humans & the Neolithic Revolution",
+        "youtube_id": "nt2EQM89Hms",
+        "url": "https://youtu.be/nt2EQM89Hms",
+        "embed_url": "https://www.youtube.com/embed/nt2EQM89Hms",
+        "published_at": "2026-06-12T14:31:31Z",
+        "lesson_dir": "world-history-module-1-early-humans-the-neolithic-revolution-v2"
+      },
+      {
+        "course": "World History",
+        "course_slug": "world-history",
+        "module_number": 2,
+        "module_title": "Ancient Mesopotamia & Egypt",
+        "youtube_id": "jpNDXqSNY9M",
+        "url": "https://youtu.be/jpNDXqSNY9M",
+        "embed_url": "https://www.youtube.com/embed/jpNDXqSNY9M",
+        "published_at": "2026-06-12T14:35:27Z",
+        "lesson_dir": "world-history-module-2-ancient-mesopotamia-egypt-v2"
+      }
+    ],
     "Biology": [
       {
         "course": "Biology",
@@ -461,6 +485,28 @@
     ]
   },
   "lessons": [
+    {
+      "course": "World History",
+      "course_slug": "world-history",
+      "module_number": 1,
+      "module_title": "Early Humans & the Neolithic Revolution",
+      "youtube_id": "nt2EQM89Hms",
+      "url": "https://youtu.be/nt2EQM89Hms",
+      "embed_url": "https://www.youtube.com/embed/nt2EQM89Hms",
+      "published_at": "2026-06-12T14:31:31Z",
+      "lesson_dir": "world-history-module-1-early-humans-the-neolithic-revolution-v2"
+    },
+    {
+      "course": "World History",
+      "course_slug": "world-history",
+      "module_number": 2,
+      "module_title": "Ancient Mesopotamia & Egypt",
+      "youtube_id": "jpNDXqSNY9M",
+      "url": "https://youtu.be/jpNDXqSNY9M",
+      "embed_url": "https://www.youtube.com/embed/jpNDXqSNY9M",
+      "published_at": "2026-06-12T14:35:27Z",
+      "lesson_dir": "world-history-module-2-ancient-mesopotamia-egypt-v2"
+    },
     {
       "course": "Biology",
       "course_slug": "biology",
