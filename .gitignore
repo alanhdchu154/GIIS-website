@@ -79,6 +79,7 @@ teaching-videos/*/visual_brief.md
 teaching-videos/*/_audit/*-plan.json
 teaching-videos/*/_audit/*.tmp
 umi/reviews/cc-runs/*.jsonl
+umi/handoffs/*foundation-video*.md
 
 # Lesson-video run snapshots are generated every gate/dashboard run. Commit
 # durable review notes or explicit release-gate artifacts instead.
