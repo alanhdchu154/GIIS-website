@@ -67,10 +67,13 @@ Permanent owner decisions are tracked by
 `npm run audit:sales-owner-decisions`; current expected verdict is
 `alan_review_required_for_permanent_sales_owners` until Alan confirms lead
 capture, response, WeChat, and manual Stripe ownership.
-Latest production frontend verification after `b6293adc`: `audit:sales-live`
-is 8/8, `audit:parent-journey` is 7/7, and guarded same-day start returns
-`manual_sales_go_with_payment_boundary`. Local static `audit:sales-launch` is
-expected to be 38/38 after adding admin manual payment verification.
+Latest production frontend verification after the Manual Review Sales Mode
+push: `audit:sales-live` is 8/8, `audit:parent-journey` is 7/7,
+`audit:sales-manual-ready -- --operator-log /tmp/...` is 13 pass / 1 warn /
+0 fail, and guarded same-day start returns
+`manual_sales_go_with_payment_boundary`. The remaining warning is the expected
+automated-payment boundary. Local static `audit:sales-launch` is 38/38 after
+adding admin manual payment verification.
 
 ## Active Lanes
 
@@ -463,14 +466,16 @@ Status: reconciled locally; pending production deploy execution.
   ready or fully payment-ready. Expected current verdict is
   `manual_sales_go_with_payment_boundary`; automated payment readiness remains
   the only allowed warning boundary.
-- 2026-06-11 manual-sales readiness gate added
-  `npm run audit:sales-manual-ready`. Current production result is 9 pass / 4
-  warn / 0 fail with verdict `manual_sales_ready_with_recorded_warnings`: public
-  proof path, Netlify form markup, admissions email fallback, SOP, and handoff
-  docs pass; warnings remain for missing lead-capture owner, missing manual
-  Stripe owner, missing response/WeChat owners, and blocked payment automation.
-  The embedded production proof smoke now retries once to reduce false-red
-  failures from short Netlify edge stale windows. Evidence:
+- 2026-06-11 manual-sales readiness gate added and aligned to Manual Review
+  Sales Mode. With a sanitized same-day operator log, current production result
+  is 13 pass / 1 warn / 0 fail with verdict
+  `manual_sales_ready_with_recorded_warnings`: public proof path, Netlify form
+  markup, admissions email fallback, SOP, handoff docs, daily operator checklist,
+  owner coverage, and admin `Record Manual Payment` boundaries pass. The
+  remaining warning is blocked automated payment readiness. Without same-day
+  operator coverage, missing permanent owners remain expected warnings. The
+  embedded production proof smoke retries once to reduce false-red failures from
+  short Netlify edge stale windows. Evidence:
   `_audit/parent-sales-manual-ready.md`.
 - 2026-06-11 parent journey acceptance gate added
   `npm run audit:parent-journey`. It browser-checks the parent decision route
@@ -506,7 +511,9 @@ Status: reconciled locally; pending production deploy execution.
 - 2026-06-11 guarded sales-day starter added `npm run sales:start-day`. It
   requires explicit `--owner`, `--checked yes`, and
   `--manual-stripe-authorized yes`, generates the outside-git operator log, and
-  immediately runs `sales:launch-mode`.
+  immediately runs `sales:launch-mode`. Current smoke with a sanitized `/tmp`
+  log returns `manual_sales_go_with_payment_boundary`: outreach and reviewed
+  manual payment handoff may proceed; automated checkout remains blocked.
 - 2026-06-11 Manual Review Sales Mode is now the official v1 sellable flow:
   approved applications can record a reviewed manual Stripe invoice/payment-link
   reference from `/admin/applications`, creating an active `Subscription` using

@@ -242,9 +242,11 @@ function checkDocs() {
   const results = [];
 
   const handoffOk = /Minimum Sellable Flow/.test(handoff) &&
-    /Manual Payment Fallback/.test(handoff) &&
+    /Manual Review Sales Mode/.test(handoff) &&
+    /Record Manual Payment/.test(handoff) &&
     /Payment is requested only after the enrollment path is clear/.test(handoff) &&
-    /not a shortcut around the admissions/.test(handoff);
+    /not a shortcut around the admissions/.test(handoff) &&
+    /Automated checkout and Stripe webhook automation remain a later\s+backend launch phase/s.test(handoff);
   results.push(handoffOk
     ? pass('manual-payment-handoff-doc', 'Manual payment handoff runbook is present and conservative.')
     : fail('manual-payment-handoff-doc', 'Manual payment handoff runbook is missing required conservative boundaries.'));
@@ -256,8 +258,11 @@ function checkDocs() {
     ? pass('consultation-response-sop', 'Consultation response SOP is present and conservative.')
     : fail('consultation-response-sop', 'Consultation response SOP is missing required conservative boundaries.'));
 
-  const checklistOk = /GIIS can start selling through consultation and path review now/.test(checklist) &&
-    /should not\s+send automated Guided\/Premium checkout links until `npm run\s+audit:sales-payment-live` returns 0 fail/s.test(checklist);
+  const checklistOk = /Manual Review Sales Mode/.test(checklist) &&
+    /Payment automation is not required for Manual Review Sales Mode v1/.test(checklist) &&
+    /Record Manual Payment/.test(checklist) &&
+    /automated Guided \/ Premium Stripe checkout/.test(checklist) &&
+    /audit:sales-payment-live.*0 fail/s.test(checklist);
   results.push(checklistOk
     ? pass('launch-checklist-boundary', 'Launch checklist separates manual consultation sales from automated payment readiness.')
     : fail('launch-checklist-boundary', 'Launch checklist does not clearly separate manual sales from automated payment readiness.'));

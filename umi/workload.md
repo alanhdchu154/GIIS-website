@@ -53,8 +53,13 @@ Current Umi note:
   applications can record a reviewed manual Stripe invoice/payment-link
   reference as an active `Subscription` before account activation. Automated
   checkout remains Phase 2.
-- Static sales-launch is expected to be 38/38 after adding the admin manual
-  payment verification contract check.
+- Static sales-launch is 38/38 after adding the admin manual payment
+  verification contract check.
+- Follow-up verification: `audit:sales-manual-ready -- --operator-log /tmp/...`
+  returns 13 pass / 1 warn / 0 fail, and `sales:start-day -- --owner Alan
+  --checked yes --manual-stripe-authorized yes` returns
+  `manual_sales_go_with_payment_boundary`. The remaining warning is automated
+  payment readiness, not a blocker for reviewed manual sales.
 
 Acceptance:
 
@@ -332,15 +337,13 @@ defines the conservative fallback for selling through consultation/path review:
 manual Stripe Dashboard invoice/payment link only after path review, receipt and
 Stripe IDs recorded outside git, and portal activation after fit plus payment
 are both clear. `npm run audit:sales-launch` now gates the handoff doc.
-Manual-sales readiness gate added: `npm run audit:sales-manual-ready` currently
-returns 9 pass / 4 warn / 0 fail in production with verdict
-`manual_sales_ready_with_recorded_warnings`. Warnings: Netlify email
-notification/lead owner cannot be verified from repo, manual Stripe owner is
-not assigned, first-response/WeChat owners are not assigned, and automated
-payment remains blocked. The embedded production proof smoke retries once to
-reduce false-red results from short Netlify edge stale windows. This is
-sufficient for consultation/path-review selling only if Alan consciously assigns
-or personally covers those owner warnings for the day.
+Manual-sales readiness gate added and aligned to Manual Review Sales Mode:
+`npm run audit:sales-manual-ready -- --operator-log /path/to/operator-log.md`
+currently returns 13 pass / 1 warn / 0 fail in production with verdict
+`manual_sales_ready_with_recorded_warnings`. The remaining warning is automated
+payment readiness. This is sufficient for consultation/path-review selling when
+Alan or a same-day operator consciously covers lead capture, first response,
+WeChat follow-up, and manual Stripe handoff for the day.
 cc review notes: a bounded `claude -p` review-only pass was attempted for the
 admissions sales-ops diff on 2026-06-11, but it produced no output and was
 stopped. A second bounded review-only pass for
