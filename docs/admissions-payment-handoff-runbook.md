@@ -2,13 +2,15 @@
 
 Last updated: 2026-06-11
 
-Purpose: let admissions start selling through consultation and transfer-path
-review even while automated Guided/Premium checkout is gated by
-`npm run audit:sales-payment-live`.
+Purpose: define Manual Review Sales Mode, the official v1 sales flow for GIIS:
+consultation / application review first, manual Stripe payment second, admin
+payment verification third, and account activation after fit plus payment are
+both clear.
 
 This runbook is for the human handoff after a family has already seen the public
 proof path and GIIS has reviewed fit. It is not a shortcut around the admissions
-review, Stripe readiness gate, or backend Lightsail deploy runbook.
+review. Automated checkout and Stripe webhook automation remain a later
+backend launch phase.
 
 ## Launch Boundary
 
@@ -22,6 +24,9 @@ Current public status:
 
 Current payment boundary:
 
+- Manual Review Sales Mode is launchable without `api.genesisideas.school`
+  HTTPS/webhook readiness because the admin records the verified Stripe evidence
+  directly in the application queue.
 - Automated Guided/Premium checkout is not launch-ready until
   `npm run audit:sales-payment-live` returns 0 fail.
 - Do not send an automated Guided/Premium checkout link while production
@@ -46,9 +51,10 @@ Current payment boundary:
 6. Admin marks the application approved and activates accounts only after
    payment status and enrollment decision are both recorded.
 
-## Manual Payment Fallback
+## Manual Review Sales Mode
 
-Use this only until the automated payment gate passes.
+This is the official v1 payment flow until automated checkout is deliberately
+enabled.
 
 Allowed:
 
@@ -118,15 +124,19 @@ Before payment:
 After payment:
 
 - Save receipt/payment link evidence outside git.
-- Record Stripe customer/subscription/invoice ID in the admissions tracker or
-  admin notes.
+- In `/admin/applications`, open the approved application and use
+  **Record Manual Payment** with the selected plan, Stripe Dashboard invoice or
+  payment-link reference, payment method, and any internal note.
+- The admin action creates an active `Subscription` record using the existing
+  backend model and appends a `Manual Payment Verified` audit line to the
+  application admin notes.
 - Approve the application only when fit and payment are both clear.
 - Use admin application activation to create student and parent accounts.
 - If a Stripe `Subscription` row exists but is unlinked, link it from
   `/admin/subscriptions`.
-- If payment was manual and no subscription row exists yet, do not claim
-  automatic subscription status is linked; record it for the backend/payment
-  deploy follow-up.
+- If accounts are created after the manual payment, activation links the
+  existing paid record to the student. If accounts already exist, the manual
+  payment action links the record when the student can be matched.
 - Send `/welcome`, student login, parent login, and first-week expectations.
 
 ## Alan Review Items

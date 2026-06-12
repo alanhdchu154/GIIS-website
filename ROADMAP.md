@@ -14,12 +14,15 @@ parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
 
 Current 2026-06-11 risk: the public parent proof path is live on Netlify and
-passes production smoke, but automated payment launch is not ready yet. Guided
-and Premium are visible in pricing but their production Stripe price IDs are
-missing, and `https://api.genesisideas.school` is not reachable for direct
-health/webhook checks. Read-only Lightsail inspection found PM2 `giis-api`
-online and local API health passing on port `4000`, but nginx proxies
-`api.genesisideas.school` to `127.0.0.1:8080` and has no active `443` listener;
+passes production smoke. Automated payment launch is not ready yet, but it is
+no longer the launch blocker for sellable v1 because GIIS is using Manual
+Review Sales Mode: apply/consult, path review, manual Stripe invoice/payment
+link, admin payment verification, then account activation. Guided and Premium
+are visible in pricing but their production Stripe price IDs are missing, and
+`https://api.genesisideas.school` is not reachable for direct health/webhook
+checks. Read-only Lightsail inspection found PM2 `giis-api` online and local API
+health passing on port `4000`, but nginx proxies `api.genesisideas.school` to
+`127.0.0.1:8080` and has no active `443` listener;
 repair is documented in `docs/production-api-proxy-repair.md` and checked by
 `npm run audit:production-api-proxy`. Read-only payment env inspection is now
 available as `npm run audit:production-payment-env`; current result is 15 pass /
@@ -37,12 +40,14 @@ checks, and Lightsail restart/smoke. Pushing local `main` to GitHub
 
 Current sellable state: GIIS can start consultation-first outreach and
 transfer/new-student path reviews using the public proof path, response SOP,
-outreach packet, daily operator checklist, and manual payment handoff. This is
-not the same as fully automated checkout. Parent-facing proof is now gated by
-`npm run audit:parent-journey`, which verifies the live/local path answers the
-core buyer questions: school status, learning evidence, parent visibility,
-recommended price tier, applicant requirements, and human contact. Outreach
-days should run `npm run sales:ready-today -- --operator-log
+outreach packet, daily operator checklist, Manual Review Sales Mode, and admin
+manual payment verification. This is not the same as fully automated checkout.
+Payment API failures block automated checkout only; reviewed manual sales can
+proceed when same-day/permanent owner coverage is present. Parent-facing proof
+is now gated by `npm run audit:parent-journey`, which verifies the live/local
+path answers the core buyer questions: school status, learning evidence, parent
+visibility, recommended price tier, applicant requirements, and human contact.
+Outreach days should run `npm run sales:ready-today -- --operator-log
 /path/to/operator-log.md`; unresolved owner warnings must be covered by a
 same-day operator log outside git. Expected current verdict is
 `manual_sales_go_with_payment_boundary`. Automated Guided/Premium checkout
@@ -62,11 +67,10 @@ Permanent owner decisions are tracked by
 `npm run audit:sales-owner-decisions`; current expected verdict is
 `alan_review_required_for_permanent_sales_owners` until Alan confirms lead
 capture, response, WeChat, and manual Stripe ownership.
-Latest production frontend verification after `285f86d7`: `audit:sales-live`
-is 8/8, `audit:parent-journey` is 7/7, generated same-day operator-log
-`sales:launch-mode` returns `manual_sales_go_with_payment_boundary`, and static
-`audit:sales-launch` is 37/37 after adding the guarded `sales:start-day`
-command.
+Latest production frontend verification after `b6293adc`: `audit:sales-live`
+is 8/8, `audit:parent-journey` is 7/7, and guarded same-day start returns
+`manual_sales_go_with_payment_boundary`. Local static `audit:sales-launch` is
+expected to be 38/38 after adding admin manual payment verification.
 
 ## Active Lanes
 
@@ -503,6 +507,11 @@ Status: reconciled locally; pending production deploy execution.
   requires explicit `--owner`, `--checked yes`, and
   `--manual-stripe-authorized yes`, generates the outside-git operator log, and
   immediately runs `sales:launch-mode`.
+- 2026-06-11 Manual Review Sales Mode is now the official v1 sellable flow:
+  approved applications can record a reviewed manual Stripe invoice/payment-link
+  reference from `/admin/applications`, creating an active `Subscription` using
+  the existing backend model and appending a `Manual Payment Verified` audit line
+  before account activation.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -537,9 +546,10 @@ Next check:
   `api.genesisideas.school` so `/health` returns 200 over HTTPS and unsigned
   webhook smoke returns 4xx. Use `npm run audit:production-api-proxy` before and
   after repair.
-- Until automated checkout is green, use the manual payment handoff runbook:
+- Until automated checkout is green, use Manual Review Sales Mode:
   payment only after path review, authorized Stripe Dashboard invoice/payment
-  link only, and portal activation after fit plus payment are both clear.
+  link only, `/admin/applications` **Record Manual Payment**, and portal
+  activation after fit plus payment are both clear.
 - Run `npm run sales:ready-today -- --operator-log /path/to/operator-log.md`
   before outreach days. Outreach can proceed only when it returns
   `manual_sales_go_with_payment_boundary` or `full_sales_ready`.

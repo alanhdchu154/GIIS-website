@@ -71,6 +71,24 @@ const APPLICATION_NOTE_LABELS = {
   },
 };
 
+const MANUAL_PAYMENT_PLANS = {
+  self_paced_monthly: { label: 'Self-Paced Founders · $49/month', amountCents: 4900 },
+  self_paced_annual: { label: 'Self-Paced Founders · $499/year', amountCents: 49900 },
+  guided_monthly: { label: 'Guided · $149/month', amountCents: 14900 },
+  premium_monthly: { label: 'Premium / College Pathway · $299/month', amountCents: 29900 },
+};
+
+const MANUAL_PAYMENT_METHODS = {
+  manual_stripe_invoice: 'Manual Stripe invoice',
+  manual_stripe_payment_link: 'Manual Stripe payment link',
+  stripe_dashboard_invoice: 'Stripe Dashboard invoice',
+  stripe_dashboard_payment_link: 'Stripe Dashboard payment link',
+};
+
+function money(cents) {
+  return `$${(Number(cents || 0) / 100).toFixed(2)}`;
+}
+
 function labelApplicationValue(field, value) {
   const clean = String(value || 'not provided').trim();
   if (field === 'applicantType') return APPLICANT_TYPE_LABELS[clean] || clean || 'Not provided';
@@ -213,6 +231,13 @@ export default function ApplicationsQueue() {
   const [toast, setToast] = useState('');
   const [credentials, setCredentials] = useState(null);
   const [rejectModal, setRejectModal] = useState(null); // { appId, parentName, studentName }
+  const [manualPaymentModal, setManualPaymentModal] = useState(null);
+  const [manualPaymentDraft, setManualPaymentDraft] = useState({
+    planType: 'guided_monthly',
+    paymentMethod: 'manual_stripe_invoice',
+    paymentReference: '',
+    note: '',
+  });
   const [rejectReason, setRejectReason] = useState('grade_mismatch');
   const [notesDraft, setNotesDraft] = useState({}); // { [appId]: string }
 
@@ -295,6 +320,56 @@ export default function ApplicationsQueue() {
     } finally { setSaving(''); }
   }
 
+  function openManualPayment(app) {
+    setManualPaymentModal(app);
+    setManualPaymentDraft({
+      planType: 'guided_monthly',
+      paymentMethod: 'manual_stripe_invoice',
+      paymentReference: '',
+      note: '',
+    });
+  }
+
+  async function recordManualPayment() {
+    if (!manualPaymentModal) return;
+    const plan = MANUAL_PAYMENT_PLANS[manualPaymentDraft.planType];
+    const reference = manualPaymentDraft.paymentReference.trim();
+    if (!reference) {
+      showToast('Payment reference is required');
+      return;
+    }
+    const ok = window.confirm(
+      `Record ${plan.label} as manually paid for ${manualPaymentModal.studentName}? Confirm only after path review is complete and Stripe evidence exists.`
+    );
+    if (!ok) return;
+
+    setSaving(manualPaymentModal.id + 'manual-payment');
+    try {
+      const res = await fetch(`${API}/api/applications/${manualPaymentModal.id}/manual-payment`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          planType: manualPaymentDraft.planType,
+          amountCents: plan.amountCents,
+          paymentMethod: manualPaymentDraft.paymentMethod,
+          paymentReference: reference,
+          note: manualPaymentDraft.note,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        showToast(data.error || 'Manual payment failed');
+        return;
+      }
+      showToast(data.linkedToStudent ? 'Payment recorded and linked' : 'Payment recorded');
+      setManualPaymentModal(null);
+      load();
+    } finally {
+      setSaving('');
+    }
+  }
+
   function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(
       () => showToast('Copied to clipboard'),
@@ -357,11 +432,12 @@ export default function ApplicationsQueue() {
               ? <div style={{ background: '#fff', borderRadius: 12, padding: '40px 24px', textAlign: 'center', color: '#9aa0ad', fontSize: 14 }}>No applications found.</div>
               : items.map(app => {
                 const sc = STATUS_COLORS[app.status] || STATUS_COLORS.pending;
-                const es = app.enrollmentState || {};
-                const ec = ENROLLMENT_STATE_COLORS[es.code] || { bg: '#f1f5f9', fg: '#475569' };
-                const appReview = parseApplicationReviewNotes(app.notes);
-                const transferNeedsRecordReview = appReview?.applicantType === 'transfer';
-                return (
+	                const es = app.enrollmentState || {};
+	                const ec = ENROLLMENT_STATE_COLORS[es.code] || { bg: '#f1f5f9', fg: '#475569' };
+	                const appReview = parseApplicationReviewNotes(app.notes);
+	                const transferNeedsRecordReview = appReview?.applicantType === 'transfer';
+	                const hasPaidRecord = !!(es.paid || es.paidUnlinked);
+	                return (
                   <div key={app.id} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e8ecf5', marginBottom: 12, overflow: 'hidden' }}>
 
                     {/* Card header row */}
@@ -456,15 +532,31 @@ export default function ApplicationsQueue() {
                             </button>
                           </>)}
 
-                          {app.status === 'approved' && !app.accountsCreated && (
-                            <button onClick={() => activateApplication(app.id)} disabled={saving === app.id + 'activate'}
-                              style={{ padding: '8px 20px', borderRadius: 8, background: '#1a73e8', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
-                              {saving === app.id + 'activate' ? 'Creating…' : '🔑 Create Accounts'}
-                            </button>
-                          )}
-                          {app.status === 'approved' && app.accountsCreated && (
-                            <span style={{ fontSize: 12, color: '#2e7d32', fontWeight: 700, padding: '8px 0' }}>✓ Accounts created</span>
-                          )}
+	                          {app.status === 'approved' && !hasPaidRecord && (
+	                            <button onClick={() => openManualPayment(app)} disabled={!!saving}
+	                              style={{ padding: '8px 18px', borderRadius: 8, background: '#7c3aed', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
+	                              Record Manual Payment
+	                            </button>
+	                          )}
+
+	                          {app.status === 'approved' && !app.accountsCreated && hasPaidRecord && (
+	                            <button onClick={() => activateApplication(app.id)} disabled={saving === app.id + 'activate'}
+	                              style={{ padding: '8px 20px', borderRadius: 8, background: '#1a73e8', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
+	                              {saving === app.id + 'activate' ? 'Creating…' : '🔑 Create Accounts'}
+	                            </button>
+	                          )}
+	                          {app.status === 'approved' && !app.accountsCreated && !hasPaidRecord && (
+	                            <span style={{ fontSize: 12, color: '#92400e', fontWeight: 700, padding: '8px 0' }}>Record payment before account activation</span>
+	                          )}
+	                          {app.status === 'approved' && app.accountsCreated && (
+	                            <span style={{ fontSize: 12, color: '#2e7d32', fontWeight: 700, padding: '8px 0' }}>✓ Accounts created</span>
+	                          )}
+	                          {app.status === 'approved' && app.accountsCreated && !hasPaidRecord && (
+	                            <button onClick={() => openManualPayment(app)} disabled={!!saving}
+	                              style={{ padding: '8px 18px', borderRadius: 8, background: '#7c3aed', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
+	                              Record Manual Payment
+	                            </button>
+	                          )}
 
                           <button onClick={() => copyToClipboard(app.parentEmail)}
                             style={{ padding: '8px 14px', borderRadius: 8, background: 'none', border: '1.5px solid #d4d8e0', color: '#2b3d6d', fontWeight: 600, fontSize: 12, cursor: 'pointer' }}>
@@ -570,7 +662,7 @@ Parent temp password: ${credentials.parentPassword || credentials.tempPassword}
 Student Portal email: ${credentials.studentEmail || ''}
 Student temp password: ${credentials.studentPassword || ''}
 
-After logging in, you'll see a button to complete payment and activate full access.
+	${(credentials.linkedSubscriptions || 0) > 0 ? 'Payment has been recorded. After logging in, you will see the parent dashboard and first-week instructions.' : 'After logging in, please wait for admissions to confirm payment before full course access.'}
 
 Welcome to GIIS!
 — The GIIS Team`}
@@ -578,7 +670,7 @@ Welcome to GIIS!
 
             <div style={{ display: 'flex', gap: 10 }}>
               <button
-                onClick={() => copyToClipboard(`Subject: Your GIIS account is ready — next step\n\nHi ${(credentials.parentContactEmail || credentials.parentEmail) ? (credentials.parentContactEmail || credentials.parentEmail).split('@')[0] : ''},\n\nYour child's GIIS account has been created. Please log in to complete enrollment:\n\nLogin: ${credentials.loginUrl}\nParent Portal email: ${credentials.parentLoginEmail || credentials.parentEmail}\nParent temp password: ${credentials.parentPassword || credentials.tempPassword}\nStudent Portal email: ${credentials.studentEmail || ''}\nStudent temp password: ${credentials.studentPassword || ''}\n\nAfter logging in, you'll see a button to complete payment and activate full access.\n\nWelcome to GIIS!\n— The GIIS Team`)}
+	                onClick={() => copyToClipboard(`Subject: Your GIIS account is ready — next step\n\nHi ${(credentials.parentContactEmail || credentials.parentEmail) ? (credentials.parentContactEmail || credentials.parentEmail).split('@')[0] : ''},\n\nYour child's GIIS account has been created. Please log in to complete enrollment:\n\nLogin: ${credentials.loginUrl}\nParent Portal email: ${credentials.parentLoginEmail || credentials.parentEmail}\nParent temp password: ${credentials.parentPassword || credentials.tempPassword}\nStudent Portal email: ${credentials.studentEmail || ''}\nStudent temp password: ${credentials.studentPassword || ''}\n\n${(credentials.linkedSubscriptions || 0) > 0 ? 'Payment has been recorded. After logging in, you will see the parent dashboard and first-week instructions.' : 'After logging in, please wait for admissions to confirm payment before full course access.'}\n\nWelcome to GIIS!\n— The GIIS Team`)}
                 style={{ flex: 1, padding: '11px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
                 📋 Copy fallback welcome email
               </button>
@@ -589,7 +681,90 @@ Welcome to GIIS!
             </div>
           </div>
         </div>
-      )}
-    </>
-  );
-}
+	      )}
+
+	      {/* Manual payment modal */}
+	      {manualPaymentModal && (
+	        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.55)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10000, fontFamily: 'Inter, sans-serif', padding: 24 }}>
+	          <div style={{ background: '#fff', borderRadius: 16, padding: '28px 32px', maxWidth: 560, width: '100%', boxShadow: '0 24px 64px rgba(0,0,0,0.25)' }}>
+	            <p style={{ fontSize: 11, fontWeight: 800, color: '#7c3aed', letterSpacing: 1.4, textTransform: 'uppercase', margin: '0 0 8px' }}>Manual Review Sales Mode</p>
+	            <h2 style={{ fontSize: 21, fontWeight: 800, margin: '0 0 6px' }}>Record manual payment</h2>
+	            <p style={{ fontSize: 13, color: '#5c6578', margin: '0 0 18px', lineHeight: 1.5 }}>
+	              {manualPaymentModal.studentName} · {manualPaymentModal.parentEmail}. Use this only after application/path review and after Stripe evidence exists.
+	            </p>
+
+	            <div style={{ display: 'grid', gap: 12 }}>
+	              <label style={fieldLabel}>
+	                Plan
+	                <select
+	                  value={manualPaymentDraft.planType}
+	                  onChange={(e) => setManualPaymentDraft(prev => ({ ...prev, planType: e.target.value }))}
+	                  style={fieldControl}
+	                >
+	                  {Object.entries(MANUAL_PAYMENT_PLANS).map(([value, plan]) => (
+	                    <option key={value} value={value}>{plan.label}</option>
+	                  ))}
+	                </select>
+	              </label>
+	              <div style={{ background: '#f8f9fc', border: '1px solid #e0e6f0', borderRadius: 8, padding: '10px 12px', fontSize: 13, color: '#1a1d24' }}>
+	                Amount to record: <strong>{money(MANUAL_PAYMENT_PLANS[manualPaymentDraft.planType].amountCents)}</strong>
+	              </div>
+	              <label style={fieldLabel}>
+	                Payment method
+	                <select
+	                  value={manualPaymentDraft.paymentMethod}
+	                  onChange={(e) => setManualPaymentDraft(prev => ({ ...prev, paymentMethod: e.target.value }))}
+	                  style={fieldControl}
+	                >
+	                  {Object.entries(MANUAL_PAYMENT_METHODS).map(([value, label]) => (
+	                    <option key={value} value={value}>{label}</option>
+	                  ))}
+	                </select>
+	              </label>
+	              <label style={fieldLabel}>
+	                Stripe reference
+	                <input
+	                  value={manualPaymentDraft.paymentReference}
+	                  onChange={(e) => setManualPaymentDraft(prev => ({ ...prev, paymentReference: e.target.value }))}
+	                  placeholder="Invoice, payment link, receipt, or Dashboard reference"
+	                  style={fieldControl}
+	                />
+	              </label>
+	              <label style={fieldLabel}>
+	                Internal note
+	                <textarea
+	                  value={manualPaymentDraft.note}
+	                  onChange={(e) => setManualPaymentDraft(prev => ({ ...prev, note: e.target.value }))}
+	                  placeholder="Optional: consultation date, records received, plan reason"
+	                  rows={2}
+	                  style={{ ...fieldControl, resize: 'vertical' }}
+	                />
+	              </label>
+	            </div>
+
+	            <div style={{ background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '10px 12px', fontSize: 12, color: '#5c4a12', marginTop: 16, lineHeight: 1.5 }}>
+	              This creates an active manual subscription record. It does not send a Stripe link, charge a card, or bypass the application review.
+	            </div>
+
+	            <div style={{ display: 'flex', gap: 10, marginTop: 18 }}>
+	              <button
+	                onClick={recordManualPayment}
+	                disabled={!!saving}
+	                style={{ flex: 1, padding: '11px', borderRadius: 8, background: '#7c3aed', color: '#fff', fontWeight: 800, fontSize: 14, border: 'none', cursor: 'pointer' }}>
+	                {saving ? 'Recording…' : 'Confirm Payment Recorded'}
+	              </button>
+	              <button
+	                onClick={() => setManualPaymentModal(null)}
+	                style={{ padding: '11px 20px', borderRadius: 8, background: 'none', border: '1.5px solid #d4d8e0', color: '#5c6578', fontWeight: 800, fontSize: 14, cursor: 'pointer' }}>
+	                Cancel
+	              </button>
+	            </div>
+	          </div>
+	        </div>
+	      )}
+	    </>
+	  );
+	}
+
+const fieldLabel = { display: 'grid', gap: 6, fontSize: 11, fontWeight: 800, color: '#5c6578', letterSpacing: 0.8, textTransform: 'uppercase' };
+const fieldControl = { width: '100%', boxSizing: 'border-box', border: '1.5px solid #d4d8e0', borderRadius: 8, padding: '9px 11px', fontSize: 13, color: '#1a1d24', fontFamily: 'Inter, sans-serif' };

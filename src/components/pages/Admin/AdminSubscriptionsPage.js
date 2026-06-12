@@ -129,7 +129,7 @@ export default function AdminSubscriptionsPage() {
             <p style={{ fontSize: 11, fontWeight: 800, color: '#2b3d6d', letterSpacing: 1.5, textTransform: 'uppercase', margin: '0 0 4px' }}>Admin</p>
             <h1 style={{ fontSize: 28, fontWeight: 800, margin: 0 }}>Subscriptions</h1>
             <p style={{ fontSize: 13, color: '#5c6578', margin: '6px 0 0' }}>
-              Link Stripe purchases to student records so billing events can lock, unlock, or report the right account.
+              Link Stripe purchases and manual payment records to student records so billing events and admissions handoffs point to the right account.
             </p>
           </div>
         </div>

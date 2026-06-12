@@ -142,7 +142,7 @@ const ROUTES = [
   {
     name: 'admin applications',
     path: '/admin/applications',
-    expected: ['Applications', 'Alex Rivera', 'Application Path Review', 'Within 1 school year', 'Admin Record Review Required', 'Accounts'],
+    expected: ['Applications', 'Alex Rivera', 'Application Path Review', 'Within 1 school year', 'Admin Record Review Required', 'Record Manual Payment', 'Record payment before account activation'],
     endpointCaps: { '/api/applications': 2 },
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^View$/ }).first().click();
@@ -298,17 +298,22 @@ function applicationsPayload() {
     notes: 'Transfer Path Review: credits=12-17; graduationTiming=1-year; transcriptAvailable=partial; concern=credits; Family Notes: Interested in transfer-credit review.',
     adminNotes: 'Needs transcript follow-up.',
     status: 'approved',
-    accountsCreated: true,
+    accountsCreated: false,
     createdAt: '2026-06-01T15:00:00.000Z',
     enrollmentState: {
-      code: 'active_paid',
-      label: 'Active paid',
-      action: 'Monitor progress',
+      code: 'approved_unactivated',
+      label: 'Approved, accounts not created',
+      action: 'Record payment, then create accounts',
       studentEmail: 'alex@example.com',
       parentLoginEmail: 'alex_parent@example.com',
-      subscriptionStatus: 'active',
+      subscriptionStatus: null,
     },
   }];
+}
+
+function isIgnoredConsoleError(message) {
+  return /favicon|ResizeObserver/i.test(message) ||
+    /Permissions policy violation: compute-pressure is not allowed/i.test(message);
 }
 
 function assignmentsPayload() {
@@ -424,7 +429,7 @@ async function checkRoute(context, baseUrl, routeSpec, viewportName) {
       issues.push(`horizontal overflow: scrollWidth ${metrics.scrollWidth}, viewport ${metrics.width}`);
     }
 
-    const materialErrors = errors.filter((message) => !/favicon|ResizeObserver/i.test(message));
+    const materialErrors = errors.filter((message) => !isIgnoredConsoleError(message));
     if (materialErrors.length) issues.push(`console/page errors: ${materialErrors.slice(0, 3).join(' | ')}`);
 
     for (const [endpoint, max] of Object.entries(routeSpec.endpointCaps || {})) {

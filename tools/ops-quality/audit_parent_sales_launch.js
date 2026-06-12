@@ -22,6 +22,8 @@ const files = {
   consultation: read('src/components/pages/Consultation/ConsultationPage.js'),
   graduates: read('src/components/pages/Graduates/GraduateStoriesPage.js'),
   parentDemo: read('src/components/pages/Parent/ParentDashboardDemo.js'),
+  applicationsQueue: read('src/components/pages/Admin/ApplicationsQueue.js'),
+  applicationsRoute: read('server/src/routes/applications.js'),
   publicIndex: read('public/index.html'),
   paymentRunbook: read('docs/production-payment-deploy-runbook.md'),
   stripeLivePriceSetup: read('docs/stripe-live-price-setup.md'),
@@ -268,12 +270,26 @@ const checks = [
   {
     id: 'payment-handoff-runbook',
     file: 'docs/admissions-payment-handoff-runbook.md',
-    ok: /Manual Payment Fallback/.test(files.paymentHandoff) &&
+    ok: /Manual Review Sales Mode/.test(files.paymentHandoff) &&
       /Payment is requested only after the enrollment path is clear/.test(files.paymentHandoff) &&
+      /Record Manual Payment/.test(files.paymentHandoff) &&
       /Do not send an automated Guided\/Premium checkout link/.test(files.paymentHandoff) &&
       /30-day refund policy applies/.test(files.paymentHandoff) &&
       /Alan Review Items/.test(files.paymentHandoff),
     message: 'Admissions must have a conservative manual payment handoff while automated Guided/Premium checkout is gated.',
+  },
+  {
+    id: 'admin-manual-payment-flow',
+    file: 'server/src/routes/applications.js + src/components/pages/Admin/ApplicationsQueue.js',
+    ok: /\/:id\/manual-payment/.test(files.applicationsRoute) &&
+      /Application must be approved after path review before payment can be recorded/.test(files.applicationsRoute) &&
+      /manual:\$\{reference\}/.test(files.applicationsRoute) &&
+      /status: 'active'/.test(files.applicationsRoute) &&
+      /Manual Payment Verified/.test(files.applicationsRoute) &&
+      /Record Manual Payment/.test(files.applicationsQueue) &&
+      /paymentReference/.test(files.applicationsQueue) &&
+      /Record payment before account activation/.test(files.applicationsQueue),
+    message: 'Admin must be able to record reviewed manual payment before account activation without automated checkout.',
   },
   {
     id: 'consultation-response-sop',

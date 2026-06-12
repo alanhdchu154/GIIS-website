@@ -10,7 +10,7 @@ backend payment/access launch.
 
 Local evidence is green:
 
-- `npm run audit:sales-launch` — 37/37 pass
+- `npm run audit:sales-launch` — 38/38 pass
 - `npm run audit:ops-browser -- --base-url http://localhost:3030` — 22 pass / 0 fail, including consultation, contact, and apply form submit success on desktop/mobile
 - `npm run audit:public-trust-claims` — 41 files pass
 - server Jest — 40/40 pass
@@ -19,6 +19,9 @@ Local evidence is green:
 - admissions consultation response SOP — `docs/admissions-consultation-response-sop.md`
 - admissions payment handoff runbook —
   `docs/admissions-payment-handoff-runbook.md`
+- admin manual payment verification flow —
+  `/admin/applications` approved applications can record reviewed manual Stripe
+  invoice/payment-link evidence before account activation
 - parent sales outreach packet — `docs/parent-sales-outreach-packet.md`
 - parent sales daily operator checklist —
   `docs/parent-sales-daily-operator-checklist.md`
@@ -71,9 +74,9 @@ Local evidence is green:
 ## Current Production Status
 
 Production public proof path is live. On 2026-06-11, after pushing
-`285f86d7` to GitHub `origin/main` and allowing Netlify to deploy, the live site
+`b6293adc` to GitHub `origin/main` and allowing Netlify to deploy, the live site
 smoke returned 8 pass / 0 fail, the parent journey acceptance gate returned 7
-pass / 0 fail, and generated same-day operator-log launch mode returned
+pass / 0 fail, and guarded same-day start / generated operator-log launch mode returned
 `manual_sales_go_with_payment_boundary`. The live smoke covers:
 
 - `/`
@@ -102,7 +105,7 @@ configure Netlify notifications for the `consultation` and `contact` forms to
 `admissions@genesisideas.school`, or assign a daily owner to check Netlify form
 submissions manually.
 
-Payment automation is not launch-ready yet. Current production
+Payment automation is not required for Manual Review Sales Mode v1. Current production
 `npm run audit:sales-payment-live` evidence shows:
 
 - Self-Paced `$49/month` has a production Stripe price configured.
@@ -272,14 +275,15 @@ Before backend/payment deploy:
 
 ## Current Recommendation
 
-Use a three-step launch:
+Use a three-step v1 launch:
 
 1. Public proof path is already live; admissions can start conversations and
    transfer path reviews.
 2. Configure lead notifications or a daily Netlify submissions owner so no
    parent inquiry is missed.
-3. Fix Stripe price env + HTTPS API/webhook readiness, then deploy backend
-   payment/access changes in a separate controlled Lightsail window.
+3. Use Manual Review Sales Mode: application/path review, manual Stripe
+   invoice/payment link, admin **Record Manual Payment**, then account
+   activation.
 
 After every frontend deploy, also run:
 
@@ -291,14 +295,16 @@ This is the buyer-readiness check. `audit:sales-live` proves key routes render;
 `audit:parent-journey` proves those routes answer the parent questions that
 drive willingness to pay.
 
-GIIS can start selling through consultation and path review now, but should not
-send automated Guided/Premium checkout links until `npm run
-audit:sales-payment-live` returns 0 fail.
+GIIS can start selling through consultation and path review now. The v1 payment
+flow is manual-reviewed, so payment API failures block only automated checkout,
+not reviewed manual sales. Do not send automated Guided/Premium checkout links
+until `npm run audit:sales-payment-live` returns 0 fail.
 
 Until then, use `docs/admissions-payment-handoff-runbook.md` for the manual
-payment fallback: payment only after path review, Stripe Dashboard invoice or
+payment mode: payment only after path review, Stripe Dashboard invoice or
 payment link only from an authorized GIIS operator, receipt/Stripe ID recorded
-outside git, and portal activation only after fit plus payment are both clear.
+outside git, `/admin/applications` **Record Manual Payment** completed, and
+portal activation only after fit plus payment are both clear.
 
 Daily operator check while automated payment remains gated:
 
@@ -381,7 +387,8 @@ Use the result as the operating boundary:
 
 - `not_ready`: do not start active outreach.
 - `manual_sales_go_with_payment_boundary`: outreach/path review/manual payment
-  handoff may proceed for the day; no automated checkout links.
+  handoff may proceed for the day; use admin manual payment verification; no
+  automated checkout links.
 - `permanent_manual_sales_ready_with_payment_boundary`: permanent owners are
   recorded, so daily operator logs are no longer required; no automated checkout
   links.

@@ -11,6 +11,20 @@ const {
 const prisma = require('../lib/prisma');
 const router = express.Router();
 
+const MANUAL_PAYMENT_PLANS = {
+  self_paced_monthly: { label: 'Self-Paced Founders', amountCents: 4900, months: 1 },
+  self_paced_annual: { label: 'Self-Paced Founders Annual', amountCents: 49900, months: 12 },
+  guided_monthly: { label: 'Guided', amountCents: 14900, months: 1 },
+  premium_monthly: { label: 'Premium / College Pathway', amountCents: 29900, months: 1 },
+};
+
+const MANUAL_PAYMENT_METHODS = new Set([
+  'manual_stripe_invoice',
+  'manual_stripe_payment_link',
+  'stripe_dashboard_invoice',
+  'stripe_dashboard_payment_link',
+]);
+
 async function recordEmailLog({ kind, recipient, studentId, result }) {
   await prisma.emailLog.create({
     data: {
@@ -38,6 +52,43 @@ async function uniqueStudentLoginEmail(studentName) {
 
 function tempPassword(prefix) {
   return `${prefix}-${crypto.randomBytes(9).toString('base64url')}`;
+}
+
+function addMonths(date, months) {
+  const next = new Date(date);
+  next.setMonth(next.getMonth() + months);
+  return next;
+}
+
+function money(cents) {
+  return `$${(Number(cents || 0) / 100).toFixed(2)}`;
+}
+
+function normalizeReference(value) {
+  return String(value || '')
+    .trim()
+    .replace(/\s+/g, ' ')
+    .slice(0, 120);
+}
+
+function manualCheckoutSessionId(reference) {
+  return `manual:${reference}`;
+}
+
+function appendAdminNote(existing, line) {
+  const clean = String(existing || '').trim();
+  return clean ? `${clean}\n${line}` : line;
+}
+
+async function findStudentForApplication(app) {
+  return prisma.student.findFirst({
+    where: {
+      parentEmail: { equals: app.parentEmail, mode: 'insensitive' },
+      name: { equals: app.studentName, mode: 'insensitive' },
+    },
+    orderBy: { createdAt: 'desc' },
+    select: { id: true, name: true, studentCode: true },
+  });
 }
 
 async function applicationEnrollmentState(app) {
@@ -137,6 +188,116 @@ async function linkExistingSubscriptionsForApplication({ app, studentId, parentL
   });
   return updated.count;
 }
+
+/**
+ * POST /api/applications/:id/manual-payment  — admin only
+ * Records a manually verified Stripe Dashboard invoice/payment-link payment.
+ *
+ * This is the official v1 sales mode while automated checkout/webhook launch is
+ * gated: apply/consult -> admin review -> manual Stripe payment -> record paid
+ * -> activate/link accounts.
+ */
+router.post('/:id/manual-payment', authenticate, requireAdmin, async (req, res) => {
+  const app = await prisma.application.findUnique({ where: { id: req.params.id } });
+  if (!app) return res.status(404).json({ error: 'Application not found.' });
+  if (app.status !== 'approved') {
+    return res.status(400).json({ error: 'Application must be approved after path review before payment can be recorded.' });
+  }
+
+  const planType = String(req.body?.planType || '').trim();
+  const plan = MANUAL_PAYMENT_PLANS[planType];
+  if (!plan) {
+    return res.status(400).json({ error: `planType must be one of: ${Object.keys(MANUAL_PAYMENT_PLANS).join(', ')}` });
+  }
+
+  const amountCents = req.body?.amountCents == null ? plan.amountCents : Number(req.body.amountCents);
+  if (!Number.isInteger(amountCents) || amountCents !== plan.amountCents) {
+    return res.status(400).json({ error: `${plan.label} manual payment amount must be ${money(plan.amountCents)}.` });
+  }
+
+  const paymentMethod = String(req.body?.paymentMethod || 'manual_stripe_invoice').trim();
+  if (!MANUAL_PAYMENT_METHODS.has(paymentMethod)) {
+    return res.status(400).json({ error: `paymentMethod must be one of: ${[...MANUAL_PAYMENT_METHODS].join(', ')}` });
+  }
+
+  const paymentReference = normalizeReference(req.body?.paymentReference);
+  if (!paymentReference) {
+    return res.status(400).json({ error: 'paymentReference is required. Use the Stripe invoice, payment link, receipt, or dashboard reference.' });
+  }
+
+  const checkoutSessionId = manualCheckoutSessionId(paymentReference);
+  const existing = await prisma.subscription.findUnique({
+    where: { stripeCheckoutSessionId: checkoutSessionId },
+    select: { id: true, purchaserEmail: true, status: true },
+  });
+  if (existing) {
+    return res.status(409).json({ error: 'This manual payment reference is already recorded.', subscriptionId: existing.id });
+  }
+
+  const student = await findStudentForApplication(app);
+  const now = new Date();
+  const adminEmail = req.auth?.email || 'admin';
+  const note = normalizeReference(req.body?.note);
+  const auditLine = [
+    `Manual Payment Verified (${now.toISOString().slice(0, 10)})`,
+    `plan=${planType}`,
+    `amount=${money(amountCents)}`,
+    `method=${paymentMethod}`,
+    `reference=${paymentReference}`,
+    `verifiedBy=${adminEmail}`,
+    note ? `note=${note}` : '',
+  ].filter(Boolean).join('; ');
+
+  const result = await prisma.$transaction(async (tx) => {
+    const subscription = await tx.subscription.create({
+      data: {
+        purchaserEmail: app.parentEmail,
+        planType,
+        maxStudents: 1,
+        status: 'active',
+        amountTotal: amountCents,
+        currentPeriodEnd: addMonths(now, plan.months),
+        stripeCheckoutSessionId: checkoutSessionId,
+        studentId: student?.id || null,
+      },
+    });
+
+    const updatedApp = await tx.application.update({
+      where: { id: app.id },
+      data: { adminNotes: appendAdminNote(app.adminNotes, `${auditLine}; subscriptionId=${subscription.id}`) },
+    });
+
+    if (student?.id) {
+      await tx.auditLog.create({
+        data: {
+          action: 'manual_payment_verified',
+          studentId: student.id,
+          actorRole: 'admin',
+          actorEmail: adminEmail,
+        },
+      }).catch(() => null);
+    }
+
+    return { subscription, updatedApp };
+  });
+
+  const enrollmentState = await applicationEnrollmentState(result.updatedApp);
+  res.status(201).json({
+    ok: true,
+    subscription: {
+      id: result.subscription.id,
+      purchaserEmail: result.subscription.purchaserEmail,
+      planType: result.subscription.planType,
+      status: result.subscription.status,
+      amountTotal: result.subscription.amountTotal,
+      currentPeriodEnd: result.subscription.currentPeriodEnd,
+      studentId: result.subscription.studentId,
+      stripeCheckoutSessionId: result.subscription.stripeCheckoutSessionId,
+    },
+    linkedToStudent: !!result.subscription.studentId,
+    enrollmentState,
+  });
+});
 
 // POST /api/applications  — public, no auth required
 router.post('/', async (req, res) => {

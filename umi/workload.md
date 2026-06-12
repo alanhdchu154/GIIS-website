@@ -26,6 +26,10 @@ Next action:
   manual Stripe handoff for the day.
 - Before outreach or sales-day decisions, run
   `npm run sales:launch-mode -- --operator-log /path/to/operator-log.md`.
+- For paid enrollments in v1, use `/admin/applications` **Record Manual
+  Payment** after the application/path review is approved and Stripe Dashboard
+  evidence exists; then create accounts. Do not wait for automated checkout to
+  be green before using this reviewed manual flow.
 - If no same-day operator log exists and permanent owner decisions are still
   blank, treat `not_ready` as expected and record the missing Alan review items
   instead of bypassing the gate.
@@ -45,8 +49,12 @@ Current Umi note:
 - 2026-06-11 `sales:start-day` now wraps operator-log generation plus
   launch-mode and refuses to start without explicit owner, inbox-check, and
   manual Stripe authorization flags.
-- Static sales-launch is 37/37 after adding the guarded sales-day starter
-  contract check.
+- 2026-06-11 Manual Review Sales Mode is now the official v1 sales path: approved
+  applications can record a reviewed manual Stripe invoice/payment-link
+  reference as an active `Subscription` before account activation. Automated
+  checkout remains Phase 2.
+- Static sales-launch is expected to be 38/38 after adding the admin manual
+  payment verification contract check.
 
 Acceptance:
 
@@ -54,6 +62,8 @@ Acceptance:
 - Same-day owner coverage or permanent owner decisions are present before
   active outreach.
 - Manual payment handoff is used only after path review.
+- Paid access is recorded in the backend via admin manual payment verification
+  before account activation.
 - No automated checkout link is sent until payment-live is green.
 
 ### Foundation Video Daily Monitor
