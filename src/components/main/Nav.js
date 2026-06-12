@@ -72,6 +72,7 @@ function Nav({ language, toggleLanguage }) {
                 : [{ label: '课程目录', to: '/academics' }, { label: '课程库', to: '/lessons' }, { label: '学习路径', to: '/pathways' }],
         },
         { header: t.admission, items: t.dropdownAdmission },
+        { header: t.students, items: t.dropdownStudents },
         { header: t.resources, items: t.dropdownResources },
     ];
 
@@ -226,6 +227,18 @@ function Nav({ language, toggleLanguage }) {
                             <Link className={styles.navLink} to="/admission">{t.admission}</Link>
                             <ul className={styles.dropdown}>
                                 {t.dropdownAdmission.map(item => (
+                                    <li key={item.label}>
+                                        <Link to={item.to} style={{ color: 'inherit', textDecoration: 'none' }}>{item.label}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+
+                        {/* FOR STUDENTS */}
+                        <li className={styles.navItem}>
+                            <Link className={styles.navLink} to="/welcome">{t.students}</Link>
+                            <ul className={styles.dropdown}>
+                                {t.dropdownStudents.map(item => (
                                     <li key={item.label}>
                                         <Link to={item.to} style={{ color: 'inherit', textDecoration: 'none' }}>{item.label}</Link>
                                     </li>

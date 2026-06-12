@@ -79,6 +79,11 @@ export function AdminNav({ lang = 'en' }) {
           })}
         </div>
       ))}
+      <div className="ms-auto d-flex align-items-center">
+        <Link to="/" className="btn btn-sm btn-outline-secondary fw-semibold">
+          {lang === 'zh' ? '回到网站首页' : 'Public site'}
+        </Link>
+      </div>
     </nav>
   );
 }

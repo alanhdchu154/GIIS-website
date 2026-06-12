@@ -6,6 +6,7 @@ export function getNavStrings(language) {
     about:    en ? 'ABOUT'     : '关于我们',
     academics: en ? 'ACADEMICS' : '学术',
     admission: en ? 'ADMISSION' : '入学',
+    students: en ? 'FOR STUDENTS' : '学生专区',
     resources: en ? 'FOR PARENTS' : '家长专区',
     langToggleAria: en ? 'Switch to Chinese' : 'Switch to English',
     /** Single entry: student portal (admin uses same page with admin credentials) */
@@ -25,39 +26,52 @@ export function getNavStrings(language) {
         ],
     dropdownAdmission: en
       ? [
-          { label: 'Admission Overview',     to: '/admission' },
+          { label: 'New Student Path',       to: '/admission' },
           { label: 'Transfer Students',      to: '/transfer-students' },
           { label: 'Tuition & Pricing',      to: '/pricing' },
           { label: 'Book a Consultation',    to: '/consultation' },
           { label: 'Apply Now',              to: '/apply' },
         ]
       : [
-          { label: '招生概览',   to: '/admission' },
+          { label: '一般新生路径', to: '/admission' },
           { label: '转学生入学', to: '/transfer-students' },
           { label: '学费与价格', to: '/pricing' },
           { label: '预约咨询',   to: '/consultation' },
           { label: '立即申请',   to: '/apply' },
         ],
-    dropdownResources: en
+    dropdownStudents: en
       ? [
-          { label: 'Trust Center',             to: '/trust-center' },
-          { label: 'Graduate Stories',         to: '/graduates' },
+          { label: 'Start Here / Week 1',      to: '/welcome' },
+          { label: 'Learn Portal',             to: '/learn' },
           { label: 'Lesson Library',           to: '/lessons' },
-          { label: 'Assessment Proof',         to: '/assessment-proof' },
-          { label: 'Parent Dashboard Preview', to: '/parent/demo' },
-          { label: 'Academic & Life Support',  to: '/support' },
           { label: 'Student Handbook',         to: '/handbook' },
+          { label: 'Academic & Life Support',  to: '/support' },
           { label: 'Academic Calendar',        to: '/calendar' },
         ]
       : [
-          { label: '信任中心',       to: '/trust-center' },
-          { label: '毕业生足迹',     to: '/graduates' },
+          { label: '第一周开始',     to: '/welcome' },
+          { label: '学习入口',       to: '/learn' },
           { label: '课程库',         to: '/lessons' },
-          { label: '评量证据',       to: '/assessment-proof' },
-          { label: '家长面板预览',   to: '/parent/demo' },
+          { label: '学生手册',       to: '/handbook' },
           { label: '学业与生活支持', to: '/support' },
-          { label: '学生与家庭手册', to: '/handbook' },
           { label: '学校日历',       to: '/calendar' },
+        ],
+    dropdownResources: en
+      ? [
+          { label: 'Trust Center',             to: '/trust-center' },
+          { label: 'Parent Dashboard Preview', to: '/parent/demo' },
+          { label: 'Assessment Proof',         to: '/assessment-proof' },
+          { label: 'Graduate Stories',         to: '/graduates' },
+          { label: 'Tuition & Pricing',        to: '/pricing' },
+          { label: 'Refund Policy',            to: '/refund-policy' },
+        ]
+      : [
+          { label: '信任中心',       to: '/trust-center' },
+          { label: '家长面板预览',   to: '/parent/demo' },
+          { label: '评量证据',       to: '/assessment-proof' },
+          { label: '毕业生足迹',     to: '/graduates' },
+          { label: '学费与价格',     to: '/pricing' },
+          { label: '退款政策',       to: '/refund-policy' },
         ],
   };
 }

@@ -217,6 +217,85 @@ export default function AdminDashboard({ language }) {
     { key: 'graduationReady', icon: '🎓', label: isEn ? 'Grad-ready' : '可确认毕业', value: actionCounts.graduationReady, tone: '#0d47a1', onClick: () => setStatusFilter('gradReady') },
   ] : [];
 
+  const departmentSections = [
+    {
+      key: 'admissions',
+      title: isEn ? 'Admissions & Path Review' : '招生与路径审核',
+      desc: isEn
+        ? 'Review new-student and transfer-student applications before any payment conversation.'
+        : '先审核一般新生与转学生路径，再进入收费讨论。',
+      metric: actionCounts ? actionCounts.applicationsPending : null,
+      metricLabel: isEn ? 'pending' : '待审',
+      primary: isEn ? 'Open applications' : '进入申请审核',
+      onClick: () => navigate('/admin/applications'),
+    },
+    {
+      key: 'records',
+      title: isEn ? 'Student Records' : '学生记录',
+      desc: isEn
+        ? 'Roster, login status, transcript, graduation readiness, and archived records.'
+        : '名册、登入状态、成绩单、毕业资格与封存记录。',
+      metric: students.length,
+      metricLabel: isEn ? 'students' : '学生',
+      primary: isEn ? 'Review roster' : '查看名册',
+      onClick: () => setStatusFilter('all'),
+    },
+    {
+      key: 'academics',
+      title: isEn ? 'Academic Delivery' : '教务交付',
+      desc: isEn
+        ? 'Courses, assignments, grading queue, official documents, and school calendar.'
+        : '课程、作业批改、正式文件与学校日历。',
+      metric: actionCounts ? actionCounts.assignmentsToGrade : null,
+      metricLabel: isEn ? 'to grade' : '待批',
+      primary: isEn ? 'Open assignments' : '进入作业批改',
+      onClick: () => navigate('/admin/assignments'),
+      links: [
+        { label: isEn ? 'Courses' : '课程', to: '/admin/courses' },
+        { label: isEn ? 'Documents' : '文件', to: '/admin/documents' },
+        { label: isEn ? 'Calendar' : '校历', to: '/admin/calendar' },
+      ],
+    },
+    {
+      key: 'parent-care',
+      title: isEn ? 'Parent Care' : '家长关怀',
+      desc: isEn
+        ? 'Progress review, advisor notes, weekly parent reports, and follow-up risk.'
+        : '学习进度、advisor note、家长周报与跟进风险。',
+      metric: actionCounts ? actionCounts.careFollowUpsDue : null,
+      metricLabel: isEn ? 'due' : '到期',
+      primary: isEn ? 'Open care queue' : '进入关怀队列',
+      onClick: () => navigate('/admin/progress'),
+      links: [{ label: isEn ? 'Weekly report' : '家长周报', to: '/admin/weekly-report' }],
+    },
+    {
+      key: 'billing',
+      title: isEn ? 'Billing & Access' : '收费与权限',
+      desc: isEn
+        ? 'Subscription status, manual payment verification, payment issues, and account activation.'
+        : '订阅状态、人工付款确认、付款异常与账号启用。',
+      metric: actionCounts ? actionCounts.paymentIssues : null,
+      metricLabel: isEn ? 'issues' : '异常',
+      primary: isEn ? 'Open billing' : '进入收费管理',
+      onClick: () => navigate('/admin/subscriptions'),
+    },
+    {
+      key: 'ops',
+      title: isEn ? 'School Operations' : '学校运营',
+      desc: isEn
+        ? 'Email logs, public school profile, and lower-frequency operating tools.'
+        : '邮件记录、学校简介与低频运营工具。',
+      metric: revenue ? revenue.activeCount : null,
+      metricLabel: isEn ? 'active plans' : '有效方案',
+      primary: isEn ? 'Open email logs' : '查看邮件记录',
+      onClick: () => navigate('/admin/email-logs'),
+      links: [
+        { label: isEn ? 'School profile' : '学校简介', to: '/school-profile' },
+        { label: isEn ? 'Public site' : '网站首页', to: '/' },
+      ],
+    },
+  ];
+
   return (
     <div className="giis-admin-page" style={pageStyle}>
       <div style={shellStyle}>
@@ -224,14 +303,17 @@ export default function AdminDashboard({ language }) {
       <div className="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
         <div>
           <p className="small fw-bold text-uppercase mb-1" style={{ color: '#2b3d6d', letterSpacing: 1.4 }}>Admin</p>
-          <h1 className="h3 mb-1">{isEn ? 'School Operations' : '学校营运后台'}</h1>
+          <h1 className="h3 mb-1">{isEn ? 'Admin Home' : '校务后台首页'}</h1>
           <p className="text-muted small mb-0 mt-1">
             {isEn
-              ? 'Roster, records, billing, and parent-facing delivery status.'
-              : '学生名册、正式记录、收费与家长通知状态。'}
+              ? 'Start with the department you need, then drill into the detailed queue.'
+              : '先选择要处理的部门，再进入具体队列。'}
           </p>
         </div>
         <div className="d-flex flex-wrap justify-content-end gap-2 align-items-start">
+          <Link to="/" className="btn btn-outline-secondary btn-sm">
+            {isEn ? 'Public site' : '回到首页'}
+          </Link>
           <button type="button" className="btn btn-primary btn-sm" onClick={openModal}>
             {isEn ? '+ New student' : '＋ 新增学生'}
           </button>
@@ -279,9 +361,6 @@ export default function AdminDashboard({ language }) {
                   <Link to="/school-profile" target="_blank" rel="noopener noreferrer" style={MENU_ITEM_STYLE} onClick={() => setToolsOpen(false)}>
                     {isEn ? '🏫 School Profile' : '🏫 学校简介'}
                   </Link>
-                  <Link to="/" style={MENU_ITEM_STYLE} onClick={() => setToolsOpen(false)}>
-                    {isEn ? '🌐 Public site home' : '🌐 回到网站首页'}
-                  </Link>
                 </div>
               </>
             )}
@@ -310,6 +389,79 @@ export default function AdminDashboard({ language }) {
           )}
         </div>
       )}
+
+      <section style={{ ...cardStyle, padding: 18, marginBottom: 14 }}>
+        <div className="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+          <div>
+            <h2 className="h5 mb-1">{isEn ? 'Departments' : '部门入口'}</h2>
+            <p className="small text-muted mb-0">
+              {isEn
+                ? 'Pick the work area first; daily queues and student records stay below for quick triage.'
+                : '先选工作区域；每日待办和学生名册仍保留在下方，方便快速处理。'}
+            </p>
+          </div>
+          <span className="badge text-bg-light border">
+            {isEn ? 'Manual review sales mode' : '人工审核开卖模式'}
+          </span>
+        </div>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: 12,
+          }}
+        >
+          {departmentSections.map((section) => {
+            const metricHot = typeof section.metric === 'number' && section.metric > 0;
+            return (
+              <div
+                key={section.key}
+                style={{
+                  border: '1px solid #e3e8f2',
+                  borderRadius: 8,
+                  padding: 14,
+                  background: '#fbfcfe',
+                  minHeight: 178,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  gap: 12,
+                }}
+              >
+                <div>
+                  <div className="d-flex justify-content-between align-items-start gap-2">
+                    <h3 className="h6 mb-1">{section.title}</h3>
+                    {typeof section.metric === 'number' && (
+                      <span
+                        className="badge"
+                        style={{
+                          background: metricHot ? '#fff3cd' : '#eef2f7',
+                          color: metricHot ? '#8a5a00' : '#5c6578',
+                          border: `1px solid ${metricHot ? '#ffce6a' : '#d6deea'}`,
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {section.metric} {section.metricLabel}
+                      </span>
+                    )}
+                  </div>
+                  <p className="small text-muted mb-0">{section.desc}</p>
+                </div>
+                <div>
+                  <button type="button" className="btn btn-sm btn-dark fw-semibold me-2 mb-2" onClick={section.onClick}>
+                    {section.primary}
+                  </button>
+                  {section.links?.map((link) => (
+                    <Link key={link.to} to={link.to} className="btn btn-sm btn-light border fw-semibold me-2 mb-2">
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
       {/* Action strip — "what needs me today", each tile jumps to the work */}
       <div className="d-flex flex-wrap gap-2 mb-3">

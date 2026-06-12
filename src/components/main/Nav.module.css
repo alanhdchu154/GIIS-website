@@ -17,7 +17,7 @@
     display: flex !important;
     align-items: center !important;
     margin-left: auto !important;
-    gap: 4px;
+    gap: 2px;
 }
 
 .navItem {
@@ -26,7 +26,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 0 20px;
+    padding: 0 15px;
     font-family: Inter, sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -39,15 +39,23 @@ html[lang="zh"] .navItem {
 
 @media (max-width: 1200px) {
     .navItem {
+        font-size: 14px;
+        padding: 0 9px;
+    }
+
+    html[lang="zh"] .navItem {
         font-size: 16px;
-        padding: 0 14px;
     }
 }
 
 @media (max-width: 992px) {
     .navItem {
+        font-size: 13px;
+        padding: 0 7px;
+    }
+
+    html[lang="zh"] .navItem {
         font-size: 15px;
-        padding: 0 10px;
     }
 }
 

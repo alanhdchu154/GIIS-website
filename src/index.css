@@ -68,4 +68,8 @@ code {
   .giis-admin-filter-tabs button {
     white-space: normal;
   }
+
+  .giis-admin-nav .ms-auto {
+    margin-left: 0 !important;
+  }
 }
