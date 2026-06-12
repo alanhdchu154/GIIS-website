@@ -128,9 +128,9 @@ college admissions claims in foundation lesson titles or descriptions.
   `teaching-videos/_audit/course-design/<course-slug>.json`.
 - If course design fails, run the built-in safe repair path, then review again.
   Proceed only after the repaired course passes; report unresolved blockers.
-- Max modules per day: 3.
+- Max modules per day: 8 during the current upload-cap trial.
 - Upload privacy: `unlisted`.
-- Upload path: `yt_queue.py upload --gate-ready --max 4 --privacy unlisted`.
+- Upload path: `yt_queue.py upload --gate-ready --max 8 --privacy unlisted`.
 - Website update: successful upload triggers `sync_channel.py --apply`, then
   the orchestrator can commit/push manifest and lesson metadata.
 - The legacy `daily_build.sh` and `tools/youtube-upload/daily.sh` wrappers were

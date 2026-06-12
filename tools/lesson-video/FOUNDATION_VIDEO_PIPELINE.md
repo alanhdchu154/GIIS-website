@@ -99,8 +99,8 @@ Full run:
 ```bash
 python3 tools/lesson-video/foundation_daily_orchestrator.py \
   --target-grade 9 \
-  --max-modules 4 \
-  --upload-max 4 \
+  --max-modules 8 \
+  --upload-max 8 \
   --privacy unlisted \
   --auto-commit
 ```

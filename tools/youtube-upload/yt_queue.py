@@ -11,8 +11,8 @@ Two jobs:
   • `upload`  — picks up to N pending lessons (oldest folder first) and
                 runs upload_lesson.py on each. Designed to be called once
                 per day after the YouTube Data API quota resets at midnight
-                Pacific. Each lesson burns ~2,100 quota units, default
-                --max=4 stays comfortably under the 10,000/day cap with
+                Pacific. Each lesson uses an estimated ~1,200 general-quota
+                units; default --max=8 is the current GIIS trial cap with
                 headroom for `sync_channel.py` reconciliation.
 
 How a lesson is classified:
@@ -25,8 +25,8 @@ How a lesson is classified:
 
 Usage:
   python3 tools/youtube-upload/yt_queue.py status
-  python3 tools/youtube-upload/yt_queue.py upload --max 4
-  python3 tools/youtube-upload/yt_queue.py upload --max 4 --privacy unlisted
+  python3 tools/youtube-upload/yt_queue.py upload --max 8
+  python3 tools/youtube-upload/yt_queue.py upload --max 8 --privacy unlisted
   python3 tools/youtube-upload/yt_queue.py upload --dry-run
 
 NOTE: this file is intentionally NOT named `queue.py` — that would shadow
@@ -52,17 +52,18 @@ LESSONS_DIR = ROOT / "teaching-videos"
 UPLOAD_LESSON = Path(__file__).resolve().parent / "upload_lesson.py"
 APPROVED_READY_TO_UPLOAD = LESSONS_DIR / "_audit" / "release-gate" / "approved_ready_to_upload.json"
 
-# YouTube Data API v3 quota: 10,000 units/day. Each upload + thumbnail +
-# captions + playlist add ≈ 2,100 units. 4 uploads = 8,400 units, leaves
-# 1,600 for sync_channel.py reconciliation. Override with --max.
-DEFAULT_MAX_PER_DAY = 4
+# YouTube Data API v3 quota: 10,000 units/day. The upload call has its own
+# daily bucket, while transcript, thumbnail, playlist, and sync calls consume
+# the general quota. Use a conservative per-lesson estimate so 8/day can be
+# tested without ignoring quota protection.
+DEFAULT_MAX_PER_DAY = 8
 DAILY_QUOTA_UNITS = 10_000
-ESTIMATED_UNITS_PER_UPLOAD = 2_100
+ESTIMATED_UNITS_PER_UPLOAD = 1_200
 PACIFIC = ZoneInfo("America/Los_Angeles")
 
 # Quota resets at midnight Pacific Time. If you run after PT midnight
 # (e.g. 09:00 PT in the plist), the day's quota is fresh.
-QUOTA_NOTE = "10,000 units/day (resets at midnight Pacific). ~2,100 units per lesson upload."
+QUOTA_NOTE = "10,000 units/day (resets at midnight Pacific). ~1,200 estimated general-quota units per lesson upload."
 
 
 # ─── lesson scanning ───────────────────────────────────────────────────
