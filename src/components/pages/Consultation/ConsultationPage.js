@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import AdmissionsHandoffReceipt from '../../main/AdmissionsHandoffReceipt.js';
 import Nav from '../../main/Nav.js';
 
 const NAVY = '#1a1a2e';
@@ -57,21 +57,24 @@ const START_WINDOWS = [
 function ConsultationPage({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
   const [submitted, setSubmitted] = useState(false);
+  const [submittedContact, setSubmittedContact] = useState({ email: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
+    const formData = new FormData(form);
     setIsSubmitting(true);
     setSubmitError('');
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString(),
+      body: new URLSearchParams(formData).toString(),
     })
       .then((response) => {
         if (!response.ok) throw new Error(`Netlify form submit failed: ${response.status}`);
+        setSubmittedContact({ email: String(formData.get('email') || '') });
         setSubmitted(true);
       })
       .catch(() => {
@@ -181,22 +184,12 @@ function ConsultationPage({ language, toggleLanguage }) {
           {/* Right: booking form */}
           <div style={{ background: '#fff', borderRadius: 16, padding: '34px 30px', boxShadow: '0 16px 50px rgba(16,24,42,0.10)', border: '1px solid #e6e8ee' }}>
             {submitted ? (
-              <div style={{ textAlign: 'center', padding: '46px 0' }}>
-                <p style={{ fontSize: 46, margin: '0 0 14px' }}>✅</p>
-                <h3 style={{ fontSize: 21, fontWeight: 850, color: NAVY, margin: '0 0 10px' }}>
-                  {isEn ? 'Request received' : '已收到您的预约'}
-                </h3>
-                <p style={{ fontSize: 14, color: '#555', lineHeight: 1.7, margin: '0 0 22px' }}>
-                  {isEn
-                    ? 'We will reach out within one business day to confirm a time. While you wait, you can inspect the school yourself:'
-                    : '我们会在一个工作日内与您联系并确认时间。等待期间，您可以先自行检查这所学校：'}
-                </p>
-                <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-                  <Link to="/trust-center" style={smallBtn}>{isEn ? 'Trust Center' : '信任中心'}</Link>
-                  <Link to="/lessons" style={smallBtn}>{isEn ? 'Lesson Library' : '课程影片库'}</Link>
-                  <Link to="/parent/demo" style={smallBtn}>{isEn ? 'Parent dashboard preview' : '家长面板预览'}</Link>
-                </div>
-              </div>
+              <AdmissionsHandoffReceipt
+                language={language}
+                kind="consultation"
+                parentEmail={submittedContact.email}
+                embedded
+              />
             ) : (
               <form
                 name="consultation"
@@ -345,17 +338,6 @@ const inputStyle = {
   boxSizing: 'border-box',
   outline: 'none',
   background: '#fafafa',
-};
-
-const smallBtn = {
-  display: 'inline-block',
-  padding: '9px 16px',
-  borderRadius: 8,
-  border: `1.5px solid ${NAVY}`,
-  color: NAVY,
-  textDecoration: 'none',
-  fontSize: 13,
-  fontWeight: 800,
 };
 
 export default ConsultationPage;

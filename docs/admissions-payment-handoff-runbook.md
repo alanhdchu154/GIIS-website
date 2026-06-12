@@ -112,6 +112,21 @@ accounts and send the first-week welcome instructions.
 Best,
 GIIS Admissions
 
+## Public Receipt Alignment
+
+The public `/apply` and `/consultation` success states should remain aligned
+with this manual review process. They should say:
+
+- the request was received,
+- admissions reviews the path within one business day,
+- families should prepare records relevant to the path,
+- no payment is collected before review,
+- payment link or invoice comes only after plan recommendation.
+
+Do not replace this receipt with a generic thank-you message, and do not imply
+that automated checkout is available for Guided or Premium until the payment
+live gate has 0 fail.
+
 ## Admin Handoff Checklist
 
 Before payment:

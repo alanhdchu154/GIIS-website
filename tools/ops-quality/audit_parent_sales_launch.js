@@ -15,6 +15,7 @@ const files = {
   homeHero: read('src/components/pages/Homepage/Homepage/HeroSection.js'),
   contact: read('src/components/pages/Homepage/Homepage/ContactForm.js'),
   apply: read('src/components/pages/Apply/ApplyForm.js'),
+  admissionsReceipt: read('src/components/main/AdmissionsHandoffReceipt.js'),
   navStrings: read('src/i18n/siteStrings.js'),
   pricing: read('src/components/pages/Pricing/PricingPage.js'),
   trust: read('src/components/pages/TrustCenter/TrustCenterPage.js'),
@@ -133,6 +134,28 @@ const checks = [
       /!res\.ok/.test(files.apply) &&
       /setSubmitted\(true\)/.test(files.apply),
     message: 'Apply form must submit to applications API, parse errors safely, and only show success after an OK response.',
+  },
+  {
+    id: 'admissions-handoff-receipt',
+    file: 'src/components/main/AdmissionsHandoffReceipt.js + src/components/pages/Apply/ApplyForm.js + src/components/pages/Consultation/ConsultationPage.js',
+    ok: /Admissions Handoff Receipt/.test(files.admissionsReceipt) &&
+      /Received/.test(files.admissionsReceipt) &&
+      /Admissions review/.test(files.admissionsReceipt) &&
+      /Records request/.test(files.admissionsReceipt) &&
+      /Plan recommendation/.test(files.admissionsReceipt) &&
+      /Payment after review/.test(files.admissionsReceipt) &&
+      /Records preparation/.test(files.admissionsReceipt) &&
+      /within one business day/.test(files.admissionsReceipt) &&
+      /No payment before review/.test(files.admissionsReceipt) &&
+      /Open Trust Center/.test(files.admissionsReceipt) &&
+      /Preview Parent Dashboard/.test(files.admissionsReceipt) &&
+      /Review Pricing/.test(files.admissionsReceipt) &&
+      /Email Admissions/.test(files.admissionsReceipt) &&
+      /AdmissionsHandoffReceipt/.test(files.apply) &&
+      /kind=\{isTransferApplicant \? 'transfer' : 'new'\}/.test(files.apply) &&
+      /AdmissionsHandoffReceipt/.test(files.consultation) &&
+      /kind="consultation"/.test(files.consultation),
+    message: 'Apply and consultation success states must show a formal admissions handoff receipt with records preparation, Trust Center fallback, and no-payment-before-review boundary.',
   },
   {
     id: 'pricing-no-public-checkout-call',

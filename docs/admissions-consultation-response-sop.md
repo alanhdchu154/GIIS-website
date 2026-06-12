@@ -12,6 +12,10 @@ official transcript policy.
 - First response: within one business day.
 - Tone: calm, school-like, not pushy.
 - Default next step: schedule a 15-20 minute consultation before payment.
+- Public receipt expectation: after a family submits `/apply` or
+  `/consultation`, the website should show an Admissions Handoff Receipt that
+  explains received status, admissions review, records preparation, plan
+  recommendation, and payment after review.
 - Default recommended plan for transfer families: Guided at `$149/month` when
   credit review, pacing, parent accountability, or graduation timing is unclear.
 - Do not send a Stripe checkout link until the enrollment path is clear.
@@ -88,6 +92,18 @@ Action:
    clear.
 8. Agree on the next action: apply, send documents, schedule follow-up, or
    decline fit.
+
+## Public Receipt Follow-Up
+
+When replying to a family who just submitted the public form, mirror the public
+receipt language:
+
+- confirm that the request was received,
+- remind them that admissions responds within one business day,
+- list the records preparation items relevant to the path,
+- state that no payment is requested before review,
+- give one clear next action: send records, choose a meeting window, or wait for
+  the admissions reply.
 
 ## Plan Recommendation Rules
 

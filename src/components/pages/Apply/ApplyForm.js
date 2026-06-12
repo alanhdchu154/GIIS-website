@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
+import AdmissionsHandoffReceipt from '../../main/AdmissionsHandoffReceipt';
 import EnrollmentRoadmap from '../../main/EnrollmentRoadmap';
 
 const API = getApiBase();
@@ -163,44 +164,15 @@ export default function ApplyForm({ language }) {
   const T = (en, zh) => isEn ? en : zh;
 
   const isTransferApplicant = form.applicantType === 'transfer';
-  const successTitle = isTransferApplicant
-    ? T('Transfer Path Review received', '转学路径评估已收到')
-    : T('Application Path Review received', '入学路径评估已收到');
-  const successBody = isTransferApplicant
-    ? T(
-        "Admissions will review the student's credits, graduation timing, and support level before payment. You'll hear from us at ",
-        '招生团队会先评估学生学分、毕业时间与所需支持层级，再进入付款。我们会通过以下邮箱联系你：'
-      )
-    : T(
-        "Admissions will review the student's grade level, learning needs, and support level before payment. You'll hear from us at ",
-        '招生团队会先评估学生年级、学习需求与所需支持层级，再进入付款。我们会通过以下邮箱联系你：'
-      );
-
   if (submitted) {
     return (
       <>
         <Helmet><title>{T('Apply', '申请入学')} | GIIS</title></Helmet>
-        <div style={{ minHeight: 'calc(100vh - 70px)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f6fa', padding: '40px 20px', fontFamily: 'Inter, sans-serif' }}>
-          <div style={{ maxWidth: 520, textAlign: 'center' }}>
-            <div style={{ fontSize: 56, marginBottom: 20 }}>✓</div>
-            <h1 style={{ fontSize: 28, fontWeight: 800, margin: '0 0 12px' }}>{successTitle}</h1>
-            <p style={{ fontSize: 16, color: '#5c6578', lineHeight: 1.7, margin: '0 0 28px' }}>
-              {successBody}
-              <strong>{form.parentEmail}</strong>.
-            </p>
-            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/" style={{ padding: '12px 24px', borderRadius: 10, background: '#2b3d6d', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
-                {T('Back to home', '返回首页')}
-              </Link>
-              <Link to="/pricing" style={{ padding: '12px 24px', borderRadius: 10, border: '2px solid #d4d8e0', color: '#2b3d6d', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
-                {T('View pricing', '查看价格')}
-              </Link>
-              <Link to="/trust-center" style={{ padding: '12px 24px', borderRadius: 10, border: '2px solid #d4d8e0', color: '#2b3d6d', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
-                {T('Open Trust Center', '打开信任中心')}
-              </Link>
-            </div>
-          </div>
-        </div>
+        <AdmissionsHandoffReceipt
+          language={language}
+          kind={isTransferApplicant ? 'transfer' : 'new'}
+          parentEmail={form.parentEmail}
+        />
       </>
     );
   }

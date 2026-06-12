@@ -308,6 +308,10 @@ Status: maintain.
   Students, Trust Center, and Apply. It makes the general new-student path and
   transfer-student path visibly different, clarifies required records and credit
   review timing, and keeps the payment boundary after human path review.
+- Admissions Handoff Receipt added on 2026-06-12 for `/apply` and
+  `/consultation` success states. Families now see received status, one-business
+  day admissions review, records preparation, plan recommendation, and the
+  no-payment-before-review boundary immediately after submitting.
 - Dev billing safety on 2026-06-04: `.env.development` now uses the Stripe
   `pk_test` key so local checkout never hits live billing. Note: only
   `.env.development` is committed, so the production/CI build must inject
