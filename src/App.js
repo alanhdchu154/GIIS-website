@@ -69,6 +69,7 @@ const TrustCenterPage = lazy(() => import('./components/pages/TrustCenter/TrustC
 const AssessmentProofPage = lazy(() => import('./components/pages/AssessmentProof/AssessmentProofPage'));
 const ConsultationPage = lazy(() => import('./components/pages/Consultation/ConsultationPage'));
 const GraduateStoriesPage = lazy(() => import('./components/pages/Graduates/GraduateStoriesPage'));
+const RefundPolicyPage = lazy(() => import('./components/pages/RefundPolicy/RefundPolicyPage'));
 
 const LANGUAGE_STORAGE_KEY = 'giis-language';
 
@@ -182,6 +183,7 @@ function App() {
          <Route path="/consultation" element={<ConsultationPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/graduates" element={<GraduateStoriesPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/assessment-proof" element={<AssessmentProofPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/refund-policy" element={<RefundPolicyPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/parent/demo" element={<ParentDashboardDemo language={language} />} />
          <Route path="/parent/login" element={<ParentLogin language={language} />} />
          <Route path="/parent/dashboard" element={<ParentDashboard language={language} />} />

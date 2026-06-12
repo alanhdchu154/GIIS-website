@@ -42,6 +42,7 @@ const files = {
   launchModeGate: read('tools/ops-quality/audit_parent_sales_launch_mode.js'),
   parentJourneyAcceptance: read('tools/ops-quality/audit_parent_journey_acceptance.js'),
   ownerDecisions: read('docs/parent-sales-owner-decisions.json'),
+  refundPolicy: read('src/components/pages/RefundPolicy/RefundPolicyPage.js'),
   packageJson: read('package.json'),
 };
 
@@ -85,6 +86,12 @@ const checks = [
     message: 'Application path review must be routable before frontend launch.',
   },
   {
+    id: 'route-refund-policy',
+    file: 'src/App.js',
+    ok: /path="\/refund-policy"/.test(files.app) && /RefundPolicyPage/.test(files.app),
+    message: 'Refund policy must be routable before parent payment conversations.',
+  },
+  {
     id: 'nav-consultation',
     file: 'src/i18n/siteStrings.js',
     ok: /Book a Consultation/.test(files.navStrings) && /预约咨询/.test(files.navStrings) && /to: '\/consultation'/.test(files.navStrings),
@@ -102,7 +109,8 @@ const checks = [
     ok: /Payment happens after the enrollment path is clear/.test(files.pricing) &&
       /Start with the path review, not checkout/.test(files.pricing) &&
       /to="\/apply"/.test(files.pricing) &&
-      /to="\/consultation"/.test(files.pricing),
+      /to="\/consultation"/.test(files.pricing) &&
+      /to="\/refund-policy"/.test(files.pricing),
     message: 'Pricing must route families to application/consultation before checkout.',
   },
   {
@@ -192,8 +200,20 @@ const checks = [
   {
     id: 'trust-links-consultation',
     file: 'src/components/pages/TrustCenter/TrustCenterPage.js',
-    ok: /to="\/consultation"/.test(files.trust) && /Talk to the principal first/.test(files.trust),
+    ok: /to="\/consultation"/.test(files.trust) &&
+      /Talk to the principal first/.test(files.trust) &&
+      /to: '\/refund-policy'/.test(files.trust),
     message: 'Trust Center must offer a human consultation path.',
+  },
+  {
+    id: 'refund-policy-public-proof',
+    file: 'src/components/pages/RefundPolicy/RefundPolicyPage.js + docs/admissions-payment-handoff-runbook.md',
+    ok: /30-day refund policy/.test(files.refundPolicy) &&
+      /admissions@genesisideas\.school/.test(files.refundPolicy) &&
+      /Payment happens after review/.test(files.refundPolicy) &&
+      /does not promise transfer-credit approval/.test(files.refundPolicy) &&
+      /https:\/\/genesisideas\.school\/refund-policy/.test(files.paymentHandoff),
+    message: 'Refund policy must be public, conservative, and linked from manual payment handoff.',
   },
   {
     id: 'admission-links-consultation',

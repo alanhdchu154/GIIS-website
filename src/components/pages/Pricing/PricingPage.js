@@ -92,8 +92,8 @@ const FAQS = [
   {
     q: { en: 'What if my child does not engage?', zh: '如果孩子不投入怎么办？' },
     a: {
-      en: 'Every plan includes a 30-day full refund. Guided and Premium plans add advisor visibility so parents can catch disengagement earlier.',
-      zh: '所有方案都有 30 天无条件退款。Guided 与 Premium 方案会加入顾问可见度，让家长更早发现孩子没有投入。',
+      en: 'Every plan includes a 30-day full refund. Guided and Premium plans add advisor visibility so parents can catch disengagement earlier. The written refund policy is available before payment.',
+      zh: '所有方案都有 30 天全额退款。Guided 与 Premium 方案会加入顾问可见度，让家长更早发现孩子没有投入；书面退款政策可在付款前阅读。',
     },
   },
   {
@@ -371,6 +371,10 @@ export default function PricingPage({ language, toggleLanguage }) {
             {isEn
               ? 'All plans start with an application review. Payment happens after the enrollment path is clear.'
               : '所有方案先经过申请审核；确认入学路径后再付款。'}
+            {' '}
+            <Link to="/refund-policy" style={{ color: '#2b3d6d', fontWeight: 800, textDecoration: 'underline', textUnderlineOffset: 3 }}>
+              {isEn ? 'Read the 30-day refund policy.' : '阅读 30 天退款政策。'}
+            </Link>
           </p>
         </div>
       </section>

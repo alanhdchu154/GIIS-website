@@ -64,16 +64,18 @@ The current single-command operating gate is `npm run sales:launch-mode --
 coverage it returns `manual_sales_go_with_payment_boundary`, and without
 same-day/permanent owner coverage it returns `not_ready`.
 Permanent owner decisions are tracked by
-`npm run audit:sales-owner-decisions`; current expected verdict is
-`alan_review_required_for_permanent_sales_owners` until Alan confirms lead
-capture, response, WeChat, and manual Stripe ownership.
+`npm run audit:sales-owner-decisions`; current verdict is
+`permanent_manual_sales_owners_ready` after recording Alan as interim owner for
+lead capture, first response, WeChat follow-up, and manual Stripe handoff.
 Latest production frontend verification after the Manual Review Sales Mode
 push: `audit:sales-live` is 8/8, `audit:parent-journey` is 7/7,
+`audit:sales-manual-ready` is 12 pass / 1 warn / 0 fail without a same-day log,
 `audit:sales-manual-ready -- --operator-log /tmp/...` is 13 pass / 1 warn /
-0 fail, and guarded same-day start returns
-`manual_sales_go_with_payment_boundary`. The remaining warning is the expected
-automated-payment boundary. Local static `audit:sales-launch` is 38/38 after
-adding admin manual payment verification.
+0 fail, and `sales:launch-mode` returns
+`permanent_manual_sales_ready_with_payment_boundary`. The remaining warning is
+the expected automated-payment boundary. Local static `audit:sales-launch` is
+40/40 after adding admin manual payment verification and the public refund
+policy gate.
 
 ## Active Lanes
 
@@ -491,10 +493,10 @@ Status: reconciled locally; pending production deploy execution.
 - 2026-06-11 owner-decision gate added
   `npm run audit:sales-owner-decisions`. It reads
   `docs/parent-sales-owner-decisions.json` and produces an Alan review list for
-  permanent operational ownership. Current result is 0 pass / 1 warn / 3 fail:
-  lead-capture owner, response/WeChat owners, and manual Stripe owner are still
-  unassigned; backend payment deploy window remains a warning while automated
-  checkout is gated.
+  permanent operational ownership. Current result is 3 pass / 1 warn / 0 fail:
+  Alan is recorded as interim owner for lead capture, first response, WeChat
+  follow-up, and manual Stripe handoff; backend payment deploy window remains a
+  warning while automated checkout is gated.
 - 2026-06-11 launch-mode gate added `npm run sales:launch-mode`. It combines
   static sales-launch, production sales-live, parent journey acceptance,
   permanent owner decisions, optional same-day operator coverage, and payment
@@ -519,6 +521,15 @@ Status: reconciled locally; pending production deploy execution.
   reference from `/admin/applications`, creating an active `Subscription` using
   the existing backend model and appending a `Manual Payment Verified` audit line
   before account activation.
+- 2026-06-11 public refund policy added at `/refund-policy`, linked from
+  Pricing, Trust Center, and the admissions payment handoff. This makes the
+  30-day refund promise visible before payment and gateable by
+  `npm run audit:sales-launch`.
+- 2026-06-11 bounded cc review found no audit-script correctness bugs and
+  agreed automated checkout must remain gated behind live Stripe price IDs,
+  nginx/SSL repair for `api.genesisideas.school`, production DB backup/db push,
+  and webhook verification. cc cautioned that owner fields should not be filled
+  with fake names; current repo state records Alan only as an interim owner.
 - Local verification after the payment-readiness patch is green: server Jest
   40/40, `npx prisma validate`, `npm run audit:public-trust-claims`, production
   build with `BUILD_PATH=/tmp/giis-build-payment-ready`, and expanded
@@ -572,9 +583,11 @@ Next check:
   parent journey and permanent owner-decision state before giving the allowed
   sales mode.
 - Run `npm run audit:sales-owner-decisions` before replacing same-day operator
-  logs with permanent ownership. Do not treat permanent sales operations as
-  complete until lead capture, response/WeChat, and manual Stripe owner checks
-  pass.
+  logs with permanent ownership. Current interim ownership passes, but replace
+  Alan-as-interim with named admissions/ops owners once the team is ready.
+- Keep `/refund-policy` linked from payment-facing copy. If refund wording
+  changes, update Pricing, Trust Center, and
+  `docs/admissions-payment-handoff-runbook.md` together.
 
 ### 6. Parent Conversion & Retention Phases
 

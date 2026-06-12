@@ -33,6 +33,10 @@ Next action:
 - If no same-day operator log exists and permanent owner decisions are still
   blank, treat `not_ready` as expected and record the missing Alan review items
   instead of bypassing the gate.
+- Permanent owner decisions now record Alan as interim owner for lead capture,
+  first response, WeChat follow-up, and manual Stripe handoff. This lets the
+  manual sales lane run without a same-day `/tmp` operator log, while still
+  keeping automated checkout blocked.
 - Keep automated Guided/Premium checkout blocked until
   `npm run audit:sales-payment-live` returns 0 fail.
 
@@ -60,6 +64,16 @@ Current Umi note:
   --checked yes --manual-stripe-authorized yes` returns
   `manual_sales_go_with_payment_boundary`. The remaining warning is automated
   payment readiness, not a blocker for reviewed manual sales.
+- Permanent-owner verification: `audit:sales-owner-decisions` returns 3 pass /
+  1 warn / 0 fail, and `sales:launch-mode` without an operator log returns
+  `permanent_manual_sales_ready_with_payment_boundary`.
+- Public refund policy is now part of the parent payment trust path:
+  `/refund-policy` is linked from Pricing, Trust Center, and the admissions
+  payment handoff; `audit:sales-launch` gates it.
+- cc review agreed the remaining checkout blockers require external Stripe /
+  Lightsail production action and should stay gated. It also recommended the
+  next safe trust tasks: GIIS-branded manual payment receipt, stronger bilingual
+  coverage for conversion pages, and eventual roadmap/workload trim.
 
 Acceptance:
 
@@ -70,6 +84,7 @@ Acceptance:
 - Paid access is recorded in the backend via admin manual payment verification
   before account activation.
 - No automated checkout link is sent until payment-live is green.
+- Refund policy remains public and linked before payment.
 
 ### Foundation Video Daily Monitor
 

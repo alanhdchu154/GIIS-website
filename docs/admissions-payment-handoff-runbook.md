@@ -69,7 +69,7 @@ Allowed:
   - parent email,
   - plan,
   - consultation/path-review date,
-  - "30-day refund policy applies",
+  - "30-day refund policy applies: https://genesisideas.school/refund-policy",
   - "Enrollment path reviewed before payment".
 
 Not allowed:
@@ -100,7 +100,8 @@ This recommendation is based on:
 - support reason: `{support_reason}`.
 
 Payment is requested only after this review. GIIS also provides a 30-day refund
-policy if the family decides the fit is not right.
+policy if the family decides the fit is not right:
+https://genesisideas.school/refund-policy
 
 Payment link:
 `{stripe_invoice_or_payment_link}`

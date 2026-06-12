@@ -42,11 +42,11 @@ const TRUST_STEPS = [
     k: '04',
     title: { en: 'Understand tuition before checkout', zh: '付款前看清楚学费' },
     body: {
-      en: 'Compare self-paced, guided, and college-pathway support. Every plan includes a 30-day full refund.',
-      zh: '比较自主学习、顾问指导与升学路径支持。所有方案均包含 30 天全额退款。',
+      en: 'Compare self-paced, guided, and college-pathway support, then read the written 30-day refund policy before payment.',
+      zh: '比较自主学习、顾问指导与升学路径支持，并在付款前阅读书面 30 天退款政策。',
     },
-    to: '/pricing',
-    cta: { en: 'Review tuition', zh: '查看学费' },
+    to: '/refund-policy',
+    cta: { en: 'Read refund policy', zh: '阅读退款政策' },
   },
 ];
 
