@@ -296,6 +296,39 @@ export default function AdminDashboard({ language }) {
     },
   ];
 
+  const transferReviewSteps = [
+    {
+      title: isEn ? '1. Application received' : '1. 收到申请',
+      detail: isEn
+        ? 'Confirm whether the family is new-student or transfer-student before discussing payment.'
+        : '先确认家庭是一般新生还是转学生，再讨论付款。',
+    },
+    {
+      title: isEn ? '2. Transcript / credits' : '2. 成绩单 / 学分',
+      detail: isEn
+        ? 'Check prior transcript availability, likely credits, missing requirements, and record risk.'
+        : '检查原校成绩单、可能可转学分、缺少要求与正式记录风险。',
+    },
+    {
+      title: isEn ? '3. Graduation timing' : '3. 毕业时间',
+      detail: isEn
+        ? 'Estimate whether the desired timeline is realistic under the 24-credit framework.'
+        : '判断目标毕业时间在 24 学分框架下是否现实。',
+    },
+    {
+      title: isEn ? '4. Consultation before payment' : '4. 先咨询再付款',
+      detail: isEn
+        ? 'Use manual review sales mode: path review first, then invoice/payment link only after fit is clear.'
+        : '走人工审核开卖模式：先路径审核，确认适合后才发 invoice / payment link。',
+    },
+    {
+      title: isEn ? '5. Welcome + logins' : '5. Welcome + 账号',
+      detail: isEn
+        ? 'Activate student and parent access after payment is verified, then send the first-week path.'
+        : '付款确认后启用学生与家长入口，再发送第一周学习路径。',
+    },
+  ];
+
   return (
     <div className="giis-admin-page" style={pageStyle}>
       <div style={shellStyle}>
@@ -389,6 +422,63 @@ export default function AdminDashboard({ language }) {
           )}
         </div>
       )}
+
+      <section
+        style={{
+          ...cardStyle,
+          padding: 18,
+          marginBottom: 14,
+          borderLeft: '5px solid #2b3d6d',
+        }}
+      >
+        <div className="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
+          <div>
+            <p className="small fw-bold text-uppercase mb-1" style={{ color: '#2b3d6d', letterSpacing: 1 }}>
+              {isEn ? 'Primary sales workflow' : '主要招生流程'}
+            </p>
+            <h2 className="h5 mb-1">{isEn ? 'Transfer Family Review' : '转学生家庭审核'}</h2>
+            <p className="small text-muted mb-0">
+              {isEn
+                ? 'The clearest sellable path is a human-reviewed transfer plan: credits, timeline, parent visibility, then payment.'
+                : '目前最清楚、最能让家长买单的路径是人工审核转学计划：学分、时间线、家长可见度，然后才付款。'}
+            </p>
+          </div>
+          <div className="d-flex flex-wrap gap-2">
+            <Link to="/admin/applications" className="btn btn-sm btn-dark fw-semibold">
+              {isEn ? 'Review applications' : '审核申请'}
+            </Link>
+            <Link to="/transfer-students" className="btn btn-sm btn-light border fw-semibold">
+              {isEn ? 'Public transfer page' : '转学生页面'}
+            </Link>
+            <Link to="/consultation" className="btn btn-sm btn-light border fw-semibold">
+              {isEn ? 'Consultation page' : '咨询页面'}
+            </Link>
+          </div>
+        </div>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))',
+            gap: 10,
+          }}
+        >
+          {transferReviewSteps.map((step) => (
+            <div
+              key={step.title}
+              style={{
+                border: '1px solid #e3e8f2',
+                borderRadius: 8,
+                background: '#fbfcfe',
+                padding: 12,
+                minHeight: 116,
+              }}
+            >
+              <h3 className="small fw-bold mb-1" style={{ color: '#1a2a52' }}>{step.title}</h3>
+              <p className="small text-muted mb-0">{step.detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section style={{ ...cardStyle, padding: 18, marginBottom: 14 }}>
         <div className="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">

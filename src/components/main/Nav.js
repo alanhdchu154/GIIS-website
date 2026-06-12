@@ -64,16 +64,16 @@ function Nav({ language, toggleLanguage }) {
     // Mobile menu mirrors the desktop dropdowns from the same siteStrings source,
     // grouped into sections so it reads as a hierarchy instead of a flat wall.
     const mobileSections = [
-        { header: t.about, items: t.dropdownAbout },
+        { header: t.trustCenter, items: t.dropdownTrust },
         {
             header: t.academics,
             items: isEn
-                ? [{ label: 'Course Catalog', to: '/academics' }, { label: 'Lesson Library', to: '/lessons' }, { label: 'All Pathways', to: '/pathways' }]
-                : [{ label: '课程目录', to: '/academics' }, { label: '课程库', to: '/lessons' }, { label: '学习路径', to: '/pathways' }],
+                ? [{ label: 'Course Catalog', to: '/academics' }, { label: 'Lesson Library', to: '/lessons' }, { label: 'All Pathways', to: '/pathways' }, { label: 'Academic Calendar', to: '/calendar' }]
+                : [{ label: '课程目录', to: '/academics' }, { label: '课程库', to: '/lessons' }, { label: '学习路径', to: '/pathways' }, { label: '学校日历', to: '/calendar' }],
         },
         { header: t.admission, items: t.dropdownAdmission },
-        { header: t.students, items: t.dropdownStudents },
         { header: t.resources, items: t.dropdownResources },
+        { header: t.students, items: t.dropdownStudents },
     ];
 
     async function handleLogout() {
@@ -177,11 +177,11 @@ function Nav({ language, toggleLanguage }) {
 
                 <div className="collapse navbar-collapse">
                     <ul className={`navbar-nav ${styles.desktopNav}`}>
-                        {/* ABOUT */}
+                        {/* TRUST CENTER */}
                         <li className={styles.navItem}>
-                            <Link className={styles.navLink} to="/discovery">{t.about}</Link>
+                            <Link className={styles.navLink} to="/trust-center">{t.trustCenter}</Link>
                             <ul className={styles.dropdown}>
-                                {t.dropdownAbout.map(item => (
+                                {t.dropdownTrust.map(item => (
                                     <li key={item.label}>
                                         <Link to={item.to} style={{ color: 'inherit', textDecoration: 'none' }}>{item.label}</Link>
                                     </li>
@@ -198,6 +198,9 @@ function Nav({ language, toggleLanguage }) {
                                 </Link>
                                 <Link to="/lessons" className={styles.megaCatalogLink}>
                                     ▶&nbsp;&nbsp;{isEn ? 'Lesson Library' : '课程库'}
+                                </Link>
+                                <Link to="/calendar" className={styles.megaCatalogLink}>
+                                    🗓&nbsp;&nbsp;{isEn ? 'Academic Calendar' : '学校日历'}
                                 </Link>
                                 <p className={styles.megaSection}>
                                     {isEn ? 'PATHWAYS' : '学习路径'}
@@ -234,11 +237,11 @@ function Nav({ language, toggleLanguage }) {
                             </ul>
                         </li>
 
-                        {/* FOR STUDENTS */}
+                        {/* PARENT VIEW */}
                         <li className={styles.navItem}>
-                            <Link className={styles.navLink} to="/welcome">{t.students}</Link>
-                            <ul className={styles.dropdown}>
-                                {t.dropdownStudents.map(item => (
+                            <Link className={styles.navLink} to="/trust-center">{t.resources}</Link>
+                            <ul className={`${styles.dropdown} ${styles.dropdownRight}`}>
+                                {t.dropdownResources.map(item => (
                                     <li key={item.label}>
                                         <Link to={item.to} style={{ color: 'inherit', textDecoration: 'none' }}>{item.label}</Link>
                                     </li>
@@ -246,11 +249,11 @@ function Nav({ language, toggleLanguage }) {
                             </ul>
                         </li>
 
-                        {/* FOR PARENTS */}
+                        {/* STUDENT PORTAL */}
                         <li className={styles.navItem}>
-                            <Link className={styles.navLink} to="/trust-center">{t.resources}</Link>
+                            <Link className={styles.navLink} to="/welcome">{t.students}</Link>
                             <ul className={`${styles.dropdown} ${styles.dropdownRight}`}>
-                                {t.dropdownResources.map(item => (
+                                {t.dropdownStudents.map(item => (
                                     <li key={item.label}>
                                         <Link to={item.to} style={{ color: 'inherit', textDecoration: 'none' }}>{item.label}</Link>
                                     </li>

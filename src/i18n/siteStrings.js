@@ -3,31 +3,35 @@
 export function getNavStrings(language) {
   const en = language === 'en';
   return {
-    about:    en ? 'ABOUT'     : '关于我们',
+    trustCenter: en ? 'TRUST CENTER' : '信任中心',
     academics: en ? 'ACADEMICS' : '学术',
-    admission: en ? 'ADMISSION' : '入学',
-    students: en ? 'FOR STUDENTS' : '学生专区',
-    resources: en ? 'FOR PARENTS' : '家长专区',
+    admission: en ? 'ADMISSIONS' : '入学路径',
+    students: en ? 'STUDENT PORTAL' : '学生入口',
+    resources: en ? 'PARENT VIEW' : '家长视角',
     langToggleAria: en ? 'Switch to Chinese' : 'Switch to English',
     /** Single entry: student portal (admin uses same page with admin credentials) */
     signIn: en ? 'Login' : '登入',
-    dropdownAbout: en
+    dropdownTrust: en
       ? [
-          { label: 'About GIIS',           to: '/discovery#about' },
-          { label: 'Mission & Values',     to: '/discovery#mission' },
-          { label: 'Leadership & Faculty', to: '/about' },
-          { label: 'School Profile (PDF)', to: '/school-profile' },
+          { label: 'School Status',         to: '/trust-center' },
+          { label: 'School Profile',        to: '/school-profile' },
+          { label: 'Assessment Proof',      to: '/assessment-proof' },
+          { label: 'Graduate Stories',      to: '/graduates' },
+          { label: 'Refund Policy',         to: '/refund-policy' },
+          { label: 'Leadership & Faculty',  to: '/about' },
         ]
       : [
-          { label: '关于 GIIS',     to: '/discovery#about' },
-          { label: '使命与价值观',   to: '/discovery#mission' },
+          { label: '学校状态',       to: '/trust-center' },
+          { label: '学校简介',       to: '/school-profile' },
+          { label: '评量证据',       to: '/assessment-proof' },
+          { label: '毕业生足迹',     to: '/graduates' },
+          { label: '退款政策',       to: '/refund-policy' },
           { label: '学校领导与师资', to: '/about' },
-          { label: '学校简介 (PDF)', to: '/school-profile' },
         ],
     dropdownAdmission: en
       ? [
           { label: 'New Student Path',       to: '/admission' },
-          { label: 'Transfer Students',      to: '/transfer-students' },
+          { label: 'Transfer Path Review',   to: '/transfer-students' },
           { label: 'Tuition & Pricing',      to: '/pricing' },
           { label: 'Book a Consultation',    to: '/consultation' },
           { label: 'Apply Now',              to: '/apply' },
@@ -43,35 +47,33 @@ export function getNavStrings(language) {
       ? [
           { label: 'Start Here / Week 1',      to: '/welcome' },
           { label: 'Learn Portal',             to: '/learn' },
+          { label: 'Student Login',            to: '/login' },
           { label: 'Lesson Library',           to: '/lessons' },
           { label: 'Student Handbook',         to: '/handbook' },
           { label: 'Academic & Life Support',  to: '/support' },
-          { label: 'Academic Calendar',        to: '/calendar' },
         ]
       : [
           { label: '第一周开始',     to: '/welcome' },
           { label: '学习入口',       to: '/learn' },
+          { label: '学生登入',       to: '/login' },
           { label: '课程库',         to: '/lessons' },
           { label: '学生手册',       to: '/handbook' },
           { label: '学业与生活支持', to: '/support' },
-          { label: '学校日历',       to: '/calendar' },
         ],
     dropdownResources: en
       ? [
-          { label: 'Trust Center',             to: '/trust-center' },
           { label: 'Parent Dashboard Preview', to: '/parent/demo' },
+          { label: 'Weekly Progress Review',   to: '/parent/demo' },
+          { label: 'Academic & Life Support',  to: '/support' },
           { label: 'Assessment Proof',         to: '/assessment-proof' },
-          { label: 'Graduate Stories',         to: '/graduates' },
           { label: 'Tuition & Pricing',        to: '/pricing' },
-          { label: 'Refund Policy',            to: '/refund-policy' },
         ]
       : [
-          { label: '信任中心',       to: '/trust-center' },
           { label: '家长面板预览',   to: '/parent/demo' },
+          { label: '每周进度回顾',   to: '/parent/demo' },
+          { label: '学业与生活支持', to: '/support' },
           { label: '评量证据',       to: '/assessment-proof' },
-          { label: '毕业生足迹',     to: '/graduates' },
           { label: '学费与价格',     to: '/pricing' },
-          { label: '退款政策',       to: '/refund-policy' },
         ],
   };
 }

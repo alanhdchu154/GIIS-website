@@ -238,9 +238,10 @@ Status: active watch.
   mocked API responses and repeated-fetch caps. Latest local result: 22 pass /
   0 fail, saved in `_audit/parent-admin-browser-smoke.md`.
 - Admin home IA was tightened on 2026-06-12: `/admin` now starts with a
-  department hub (Admissions, Student Records, Academic Delivery, Parent Care,
-  Billing, School Operations) before the daily action strip and roster, and the
-  shared admin nav exposes a visible public-site return path.
+  transfer-family review workflow, then a department hub (Admissions, Student
+  Records, Academic Delivery, Parent Care, Billing, School Operations), then the
+  daily action strip and roster. The shared admin nav exposes a visible
+  public-site return path.
 - Production backend deployment and verification remain separate from frontend
   deploys. Do not claim graduated-student record freeze or admin workflow locks
   are live until backend deploy and production smoke evidence exist.
@@ -298,11 +299,11 @@ Status: maintain.
   `siteStrings` source with desktop; the footer was regrouped to match
   (For Parents + School & Admission columns). De-duplicated Trust Center.
   Verified with a local production build plus desktop/mobile screenshots.
-- Public nav IA was tightened again on 2026-06-12: Admission now separates
-  general new-student and transfer-student paths, a top-level For Students menu
-  owns Week 1 / Learn Portal / lessons / handbook / support / calendar, and
-  For Parents is limited to parent proof surfaces such as Trust Center, Parent
-  Demo, Assessment Proof, graduate stories, pricing, and refund policy.
+- Public nav IA was tightened again on 2026-06-12 into a parent decision path:
+  Trust Center, Academics, Admissions, Parent View, Student Portal. Admissions
+  separates general new-student and transfer path review; Parent View owns
+  parent-visible proof and progress-preview surfaces; Student Portal owns Week
+  1 / Learn Portal / login / lessons / handbook / support.
 - Dev billing safety on 2026-06-04: `.env.development` now uses the Stripe
   `pk_test` key so local checkout never hits live billing. Note: only
   `.env.development` is committed, so the production/CI build must inject
