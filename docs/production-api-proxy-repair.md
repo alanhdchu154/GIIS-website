@@ -51,10 +51,15 @@ data changes.
 2. Back up nginx config before editing.
 
    ```bash
+   sudo mkdir -p /etc/nginx/backups
    sudo cp /etc/nginx/sites-enabled/default \
-     "/etc/nginx/sites-enabled/default.$(date +%Y%m%d-%H%M%S).bak"
+     "/etc/nginx/backups/default.$(date +%Y%m%d-%H%M%S).bak"
    sudo nginx -T > "/tmp/nginx-before-$(date +%Y%m%d-%H%M%S).txt"
    ```
+
+   Do not place `.bak` files under `sites-enabled/`; this nginx install includes
+   every file in that directory, so a backup there can create duplicate server
+   blocks and make `nginx -t` fail.
 
 3. Change the API proxy upstream from port `8080` to port `4000`.
 

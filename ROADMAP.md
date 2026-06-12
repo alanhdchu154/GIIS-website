@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-11
+Last updated: 2026-06-12
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -13,29 +13,21 @@ foundation-video pipeline stabilizes. The next phase is proof over volume:
 parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
 
-Current 2026-06-11 risk: the public parent proof path is live on Netlify and
-passes production smoke. Automated payment launch is not ready yet, but it is
-no longer the launch blocker for sellable v1 because GIIS is using Manual
-Review Sales Mode: apply/consult, path review, manual Stripe invoice/payment
-link, admin payment verification, then account activation. Guided and Premium
-are visible in pricing but their production Stripe price IDs are missing, and
-`https://api.genesisideas.school` is not reachable for direct health/webhook
-checks. Read-only Lightsail inspection found PM2 `giis-api` online and local API
-health passing on port `4000`, but nginx proxies `api.genesisideas.school` to
-`127.0.0.1:8080` and has no active `443` listener;
-repair is documented in `docs/production-api-proxy-repair.md` and checked by
-`npm run audit:production-api-proxy`. Read-only payment env inspection is now
-available as `npm run audit:production-payment-env`; current result is 15 pass /
-5 warn / 3 fail. Guided/Premium Stripe price IDs and `ProcessedStripeEvent` are
-missing; Self-Paced monthly still uses the legacy Founders fallback, annual
-pricing is not configured, production `DATABASE_URL` points to localhost, and
-the production repo has local dirty files. The localhost DB warning is
-acceptable only if Postgres is intentionally hosted on the Lightsail instance.
-Backend
-hardening includes a Prisma schema change, so backend deploy must be paired
-with a production DB backup, `db:push` / table verification, Stripe webhook env
-checks, and Lightsail restart/smoke. Pushing local `main` to GitHub
-`origin/main` automatically triggers the Netlify frontend deploy for
+Current 2026-06-12 risk: the public parent proof path is live on Netlify and
+passes production smoke, and the production API/backend is reachable again.
+Lightsail nginx now proxies `api.genesisideas.school` to the live API on port
+`4000`, listens on HTTPS `443`, and `npm run audit:production-api-proxy` is 12
+pass / 0 warn / 0 fail. The backend was fast-forwarded to `origin/main`,
+production Postgres was backed up, `db:push` added `ProcessedStripeEvent`, PM2
+`giis-api` was restarted, and unsigned Stripe webhook requests now fail closed
+with 400. Production course resources were synced from JSON, and English I
+assignments were targeted-synced to remove CommonLit / fixed copyrighted-text
+residue from the student-facing flow. Automated payment launch is still not
+ready because Guided and Premium production Stripe price IDs are missing, but
+this is no longer an API availability blocker. Manual Review Sales Mode remains
+the sellable v1 path: apply/consult, path review, manual Stripe invoice/payment
+link, admin payment verification, then account activation. Pushing local `main`
+to GitHub `origin/main` automatically triggers the Netlify frontend deploy for
 `genesisideas.school`; it does not deploy/restart the Lightsail backend.
 
 Current sellable state: GIIS can start consultation-first outreach and
@@ -448,6 +440,15 @@ Status: reconciled locally; pending production deploy execution.
   has no active `443` listener. `npm run audit:production-api-proxy` gives a
   repeatable read-only check; current result is 7 pass / 0 warn / 5 fail. This
   blocks direct API health and Stripe webhook smoke until nginx/SSL is repaired.
+- 2026-06-12 production API repair closeout: nginx backups now belong under
+  `/etc/nginx/backups` rather than `sites-enabled/`, the API host proxies to
+  `127.0.0.1:4000`, nginx listens on `443`, `npm run audit:production-api-proxy`
+  is 12 pass / 0 warn / 0 fail, unsigned webhook smoke returns 400, and
+  `npm run audit:sales-payment-live` is down to 4 pass / 1 warn / 2 fail with
+  the remaining failures limited to missing Guided/Premium Stripe live price IDs.
+  The same repair also synced production course resource URLs from JSON,
+  targeted-synced English I assignments, and replaced ProCon resource references
+  with stable Purdue OWL alternatives.
 - 2026-06-11 Stripe live price setup doc added
   `docs/stripe-live-price-setup.md` for the required live Price IDs:
   Self-Paced monthly/annual, Guided monthly, and Premium monthly.
