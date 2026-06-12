@@ -36,10 +36,12 @@ function emptyRegisterForm() {
   };
 }
 
-export default function LoginPortal({ language }) {
+export default function LoginPortal({ language, portalRole = 'student' }) {
   const t = getAuthPageStrings(language);
   const navigate = useNavigate();
   const [, setSearchParams] = useSearchParams();
+  const isEn = language === 'en';
+  const isAdminPortal = portalRole === 'admin';
 
   const tabFromUrl = 'signin'; // registration is admin-only; self-register is disabled
   const [tab, setTab] = useState(tabFromUrl);
@@ -91,6 +93,9 @@ export default function LoginPortal({ language }) {
         navigate('/admin', { replace: true });
         return;
       }
+      if (isAdminPortal) {
+        throw new Error(isEn ? 'This account is not an admin account.' : '此帐号不是管理员帐号。');
+      }
       if (data.role === 'student' && data.student) {
         setStudentSession(data.token, data.student);
         navigate('/learn', { replace: true });
@@ -141,13 +146,13 @@ export default function LoginPortal({ language }) {
     }
   }
 
-  const isEn = language === 'en';
-
   return (
     <div id="content">
       <Helmet>
         <title>
-          {isEn ? 'Student portal — Sign in' : '学生专区 — 登入'}
+          {isAdminPortal
+            ? (isEn ? 'Admin portal — Sign in' : '管理员后台 — 登入')
+            : (isEn ? 'Student portal — Sign in' : '学生专区 — 登入')}
           {' | Genesis of Ideas International School'}
         </title>
       </Helmet>
@@ -161,13 +166,17 @@ export default function LoginPortal({ language }) {
               decoding="async"
             />
             <h1 id="portal-title" className={styles.title}>
-              {t.portalTitle}
+              {isAdminPortal ? (isEn ? 'School admin portal' : '学校管理员后台') : t.portalTitle}
             </h1>
-            <p className={styles.subtitle}>{t.portalSubtitle}</p>
+            <p className={styles.subtitle}>
+              {isAdminPortal
+                ? (isEn ? 'Sign in to review applications, payments, student records, and school operations.' : '登入以审核申请、付款、学生记录与学校运营。')
+                : t.portalSubtitle}
+            </p>
           </header>
 
           <div className={styles.card}>
-            <div className={styles.tabs} role="tablist" aria-label={t.tablistAria}>
+            <div className={styles.tabs} role="tablist" aria-label={isAdminPortal ? (isEn ? 'Admin sign-in options' : '管理员登入选项') : t.tablistAria}>
               <button
                 type="button"
                 role="tab"
@@ -175,16 +184,18 @@ export default function LoginPortal({ language }) {
                 className={tab === 'signin' ? styles.tabActive : styles.tab}
                 onClick={() => selectTab('signin')}
               >
-                {isEn ? 'Student sign in' : '学生登入'}
+                {isAdminPortal ? (isEn ? 'Admin sign in' : '管理员登入') : (isEn ? 'Student sign in' : '学生登入')}
               </button>
-              <Link
-                to="/parent/login"
-                role="tab"
-                aria-selected="false"
-                className={styles.tabLink}
-              >
-                {isEn ? 'Parent sign in' : '家长登入'}
-              </Link>
+              {!isAdminPortal && (
+                <Link
+                  to="/parent/login"
+                  role="tab"
+                  aria-selected="false"
+                  className={styles.tabLink}
+                >
+                  {isEn ? 'Parent sign in' : '家长登入'}
+                </Link>
+              )}
             </div>
 
             {err && (
@@ -195,7 +206,11 @@ export default function LoginPortal({ language }) {
 
             {tab === 'signin' && (
               <form className={styles.formBody} onSubmit={submitLogin} noValidate>
-                <p className="small text-muted mb-3">{t.signInBlurb}</p>
+                <p className="small text-muted mb-3">
+                  {isAdminPortal
+                    ? (isEn ? 'Use your GIIS admin account. Student and parent accounts should use their own portals.' : '请使用 GIIS 管理员帐号。学生与家长帐号应使用各自入口。')
+                    : t.signInBlurb}
+                </p>
                 <div className="mb-3">
                   <label className={styles.label} htmlFor="portal-email">
                     {t.email}
@@ -228,7 +243,7 @@ export default function LoginPortal({ language }) {
                   {loading ? t.signingIn : t.signInCta}
                 </button>
                 <p className="small text-center mb-0 mt-3">
-                  <Link to="/reset-password?role=student">
+                  <Link to={isAdminPortal ? '/reset-password?role=admin' : '/reset-password?role=student'}>
                     {isEn ? 'Forgot password?' : '忘记密码？'}
                   </Link>
                 </p>
@@ -391,7 +406,9 @@ export default function LoginPortal({ language }) {
           </div>
 
           <p className={styles.back}>
-            <Link to="/">← {t.backHome}</Link>
+            <Link to={isAdminPortal ? '/login' : '/'}>
+              {isAdminPortal ? (isEn ? '← Student portal' : '← 学生入口') : `← ${t.backHome}`}
+            </Link>
           </p>
         </div>
       </section>

@@ -1,6 +1,5 @@
-import { Navigate } from 'react-router-dom';
+import LoginPortal from '../Auth/LoginPortal';
 
-/** Bookmarks to /admin/login land on the unified student portal (admin uses same form). */
-export default function AdminLogin() {
-  return <Navigate to="/login" replace />;
+export default function AdminLogin({ language }) {
+  return <LoginPortal language={language} portalRole="admin" />;
 }

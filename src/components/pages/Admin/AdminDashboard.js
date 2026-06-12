@@ -102,7 +102,7 @@ export default function AdminDashboard({ language }) {
   const session = getAdminSession();
 
   useEffect(() => {
-    if (!session) { navigate('/login', { replace: true }); return; }
+    if (!session) { navigate('/admin/login', { replace: true }); return; }
     loadStudents();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -112,7 +112,7 @@ export default function AdminDashboard({ language }) {
     try {
       const r = await fetch(`${API_BASE}/api/students/ops-summary`, { credentials: 'include' });
       const data = await r.json().catch(() => ({}));
-      if (r.status === 401) { clearAdminSession(); navigate('/login', { replace: true }); return; }
+      if (r.status === 401) { clearAdminSession(); navigate('/admin/login', { replace: true }); return; }
       if (!r.ok) throw new Error(data.error || (isEn ? 'Failed to load' : '载入失败'));
       setStudents(data.students || []);
       setActionCounts(data.actionCounts || null);

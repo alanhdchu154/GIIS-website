@@ -140,7 +140,7 @@ function App() {
          <Route path="/login" element={<LoginPortal language={language} />} />
          <Route path="/reset-password" element={<ResetPasswordPage language={language} />} />
          <Route path="/register" element={<Navigate to="/login?tab=register" replace />} />
-         <Route path="/admin/login" element={<AdminLogin />} />
+         <Route path="/admin/login" element={<AdminLogin language={language} />} />
          <Route path="/admin" element={<AdminDashboard language={language} />} />
          <Route path="/admin/transcript/:studentId" element={<AdminTranscriptPage language={language} />} />
          <Route path="/admin/progress" element={<AdminProgressPage />} />
