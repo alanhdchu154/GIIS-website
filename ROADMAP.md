@@ -304,6 +304,10 @@ Status: maintain.
   separates general new-student and transfer path review; Parent View owns
   parent-visible proof and progress-preview surfaces; Student Portal owns Week
   1 / Learn Portal / login / lessons / handbook / support.
+- Enrollment roadmap added on 2026-06-12 across homepage, Admission, Transfer
+  Students, Trust Center, and Apply. It makes the general new-student path and
+  transfer-student path visibly different, clarifies required records and credit
+  review timing, and keeps the payment boundary after human path review.
 - Dev billing safety on 2026-06-04: `.env.development` now uses the Stripe
   `pk_test` key so local checkout never hits live billing. Note: only
   `.env.development` is committed, so the production/CI build must inject

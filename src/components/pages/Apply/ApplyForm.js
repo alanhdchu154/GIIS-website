@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
+import EnrollmentRoadmap from '../../main/EnrollmentRoadmap';
 
 const API = getApiBase();
 
@@ -230,20 +231,10 @@ export default function ApplyForm({ language }) {
         </div>
       </div>
 
+      <EnrollmentRoadmap language={language} variant="compact" />
+
       <div style={{ background: '#f4f6fa', padding: '48px 24px 80px', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12, marginBottom: 18 }}>
-            {[
-              { en: '1. Choose applicant type', zh: '1. 选择申请类型' },
-              { en: '2. GIIS reviews records', zh: '2. GIIS 审核资料' },
-              { en: '3. Choose support level', zh: '3. 选择支持方案' },
-            ].map((item) => (
-              <div key={item.en} style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '13px 14px', fontSize: 12, color: '#2b3d6d', fontWeight: 800, textAlign: 'center' }}>
-                {T(item.en, item.zh)}
-              </div>
-            ))}
-          </div>
-
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 14, marginBottom: 18 }}>
             <div style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: 10, padding: '16px 18px' }}>
               <p style={{ margin: '0 0 7px', color: '#2b3d6d', fontSize: 11, fontWeight: 900, letterSpacing: '1px', textTransform: 'uppercase' }}>

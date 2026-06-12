@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
+import EnrollmentRoadmap from '../../main/EnrollmentRoadmap.js';
 
 const REVIEW_STEPS = [
   {
@@ -115,6 +116,8 @@ export default function TransferStudentsPage({ language, toggleLanguage }) {
         </div>
       </section>
 
+      <EnrollmentRoadmap language={language} focus="transfer" />
+
       <section style={{ background: '#fff', padding: '64px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 1060, margin: '0 auto', padding: '0 6%' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
@@ -124,7 +127,10 @@ export default function TransferStudentsPage({ language, toggleLanguage }) {
       </section>
 
       <section style={{ background: '#f4f6fa', padding: '64px 0', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ maxWidth: 1040, margin: '0 auto', padding: '0 6%', display: 'grid', gridTemplateColumns: 'minmax(260px, 0.9fr) minmax(280px, 1.1fr)', gap: 34 }}>
+        <div
+          className="transfer-prep-grid"
+          style={{ maxWidth: 1040, margin: '0 auto', padding: '0 6%', display: 'grid', gridTemplateColumns: 'minmax(260px, 0.9fr) minmax(280px, 1.1fr)', gap: 34 }}
+        >
           <div>
             <p style={{ color: '#2b3d6d', fontSize: 12, fontWeight: 850, letterSpacing: 1.4, textTransform: 'uppercase', margin: '0 0 10px' }}>
               {isEn ? 'What To Prepare' : '需要准备什么'}
@@ -140,9 +146,9 @@ export default function TransferStudentsPage({ language, toggleLanguage }) {
           </div>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
             {DOCUMENTS.map((doc) => (
-              <li key={doc.en} style={{ background: '#fff', border: '1px solid #dfe5ef', borderRadius: 8, padding: '14px 16px', display: 'flex', gap: 10, color: '#333', fontSize: 14, lineHeight: 1.55 }}>
+              <li key={doc.en} style={{ background: '#fff', border: '1px solid #dfe5ef', borderRadius: 8, padding: '14px 16px', display: 'flex', gap: 10, color: '#333', fontSize: 14, lineHeight: 1.55, minWidth: 0 }}>
                 <span style={{ color: '#2b3d6d', fontWeight: 900 }}>✓</span>
-                <span>{doc[isEn ? 'en' : 'zh']}</span>
+                <span style={{ minWidth: 0 }}>{doc[isEn ? 'en' : 'zh']}</span>
               </li>
             ))}
           </ul>
@@ -200,6 +206,13 @@ export default function TransferStudentsPage({ language, toggleLanguage }) {
           </div>
         </div>
       </section>
+      <style>{`
+        @media (max-width: 760px) {
+          .transfer-prep-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

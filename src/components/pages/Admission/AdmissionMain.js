@@ -3,45 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
 import DemoEmbed from '../../main/DemoEmbed.js';
+import EnrollmentRoadmap from '../../main/EnrollmentRoadmap.js';
 import heroImg from '../../../img/Hero/transcript-screen.jpg';
 
 const SCHOOL_PHONE = '+1 (813) 501-5756';
 const SCHOOL_EMAIL = 'admissions@genesisideas.school';
-
-const STEPS = [
-  {
-    num: '01',
-    title: { en: 'Identify Applicant Type', zh: '确认申请类型' },
-    body: {
-      en: 'Tell us whether the student is starting fresh with GIIS or transferring completed high-school credits from another school.',
-      zh: '先确认学生是一般新生，还是已经在其他学校修过高中学分、需要转学审核。',
-    },
-  },
-  {
-    num: '02',
-    title: { en: 'Provide the Right Records', zh: '提交对应资料' },
-    body: {
-      en: 'New students provide basic identity information and recent school records if available. Transfer students provide transcripts or school reports for completed high-school terms.',
-      zh: '一般新生提交基本身份信息，以及可提供的近期学校记录；转学生提交已完成高中阶段课程的成绩单或学校报告。',
-    },
-  },
-  {
-    num: '03',
-    title: { en: 'Interview & Assessment', zh: '面谈与学力评估' },
-    body: {
-      en: 'Complete a brief interview or placement discussion so we can design the right academic path for you.',
-      zh: '进行简短的面谈或学力评估，让我们为你规划最合适的学习方向。',
-    },
-  },
-  {
-    num: '04',
-    title: { en: 'Enrollment', zh: '完成入学' },
-    body: {
-      en: 'Choose the support level only after the student path is clear, then receive enrollment and onboarding instructions.',
-      zh: '确认学生路径后再选择支持方案，并收到入学与 onboarding 指引。',
-    },
-  },
-];
 
 const REQUIREMENT_GROUPS = [
   {
@@ -111,35 +77,7 @@ export default function AdmissionMain({ language, toggleLanguage }) {
         </div>
       </div>
 
-      {/* Step-by-step process */}
-      <div style={{ background: 'rgba(43,61,109,1)', padding: '80px 0', borderBottom: '8px solid rgba(213,168,54,1)' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%', fontFamily: 'Inter, sans-serif' }}>
-          <h2 style={{ color: '#fff', fontSize: '56px', fontWeight: 800, lineHeight: 1, marginBottom: '48px' }}>
-            {isEn ? 'HOW TO APPLY' : '申请流程'}
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
-            {STEPS.map((s) => (
-              <div key={s.num} style={{
-                background: 'rgba(255,255,255,0.07)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                borderTop: '4px solid rgba(213,168,54,1)',
-                borderRadius: '10px',
-                padding: '28px 24px',
-              }}>
-                <div style={{ fontSize: '40px', fontWeight: 800, color: 'rgba(213,168,54,0.6)', lineHeight: 1, marginBottom: '16px' }}>
-                  {s.num}
-                </div>
-                <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#fff', marginBottom: '10px' }}>
-                  {s.title[isEn ? 'en' : 'zh']}
-                </h3>
-                <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, margin: 0 }}>
-                  {s.body[isEn ? 'en' : 'zh']}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <EnrollmentRoadmap language={language} />
 
       {/* Product walkthrough — show what your child will actually experience */}
       <DemoEmbed

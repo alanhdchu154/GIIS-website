@@ -8,6 +8,7 @@ import Introduction from './Homepage/Introduction';
 import IsGiisForYou from './Homepage/IsGiisForYou';
 import DemoEmbed from '../../main/DemoEmbed';
 import LessonPreview from '../../main/LessonPreview';
+import EnrollmentRoadmap from '../../main/EnrollmentRoadmap';
 import FacultyGraduates from './Homepage/FacultyGraduates.js';
 import ContactForm from './Homepage/ContactForm';
 import SuccessStories from './Homepage/SuccessStories';
@@ -317,6 +318,9 @@ function HomepageMain({ language, toggleLanguage }) {
 
       {/* Parent purchase decision path */}
       <ParentDecisionStrip language={language} />
+
+      {/* New student vs transfer student enrollment roadmap */}
+      <EnrollmentRoadmap language={language} />
 
       {/* Sample weekly digest — makes parent visibility concrete before payment */}
       <WeeklyReportPreview language={language} />

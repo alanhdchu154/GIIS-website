@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
+import EnrollmentRoadmap from '../../main/EnrollmentRoadmap.js';
 import dashboardScreen from '../../../img/Hero/dashboard-screen.jpg';
 import moduleScreen from '../../../img/Hero/module-screen.jpg';
 import transcriptScreen from '../../../img/Hero/transcript-screen.jpg';
@@ -231,6 +232,8 @@ function TrustCenterPage({ language, toggleLanguage }) {
           </div>
         </div>
       </section>
+
+      <EnrollmentRoadmap language={language} variant="compact" />
 
       <section style={{ background: '#fff', fontFamily: 'Inter, sans-serif', padding: '0 0 58px' }}>
         <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 6%' }}>
