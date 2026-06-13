@@ -1,7 +1,86 @@
 {
-  "generated_at": "2026-06-13T01:12:07+00:00",
+  "generated_at": "2026-06-13T15:00:21+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "Health & Wellness": [
+      {
+        "course": "Health & Wellness",
+        "course_slug": "health-&-wellness",
+        "module_number": 1,
+        "module_title": "Dimensions of Wellness",
+        "youtube_id": "1XpZSl9_z8k",
+        "url": "https://youtu.be/1XpZSl9_z8k",
+        "embed_url": "https://www.youtube.com/embed/1XpZSl9_z8k",
+        "published_at": "2026-06-13T14:59:16Z",
+        "lesson_dir": "health-wellness-module-1-dimensions-of-wellness-v2"
+      },
+      {
+        "course": "Health & Wellness",
+        "course_slug": "health-&-wellness",
+        "module_number": 2,
+        "module_title": "Physical Wellness & Exercise",
+        "youtube_id": "mkOOZpP1HXM",
+        "url": "https://youtu.be/mkOOZpP1HXM",
+        "embed_url": "https://www.youtube.com/embed/mkOOZpP1HXM",
+        "published_at": "2026-06-13T14:59:25Z",
+        "lesson_dir": "health-wellness-module-2-physical-wellness-exercise-v2"
+      },
+      {
+        "course": "Health & Wellness",
+        "course_slug": "health-&-wellness",
+        "module_number": 3,
+        "module_title": "Nutritional Wellness",
+        "youtube_id": "Pq6jqsl5tpo",
+        "url": "https://youtu.be/Pq6jqsl5tpo",
+        "embed_url": "https://www.youtube.com/embed/Pq6jqsl5tpo",
+        "published_at": "2026-06-13T14:59:33Z",
+        "lesson_dir": "health-wellness-module-3-nutritional-wellness-v2"
+      },
+      {
+        "course": "Health & Wellness",
+        "course_slug": "health-&-wellness",
+        "module_number": 4,
+        "module_title": "Mental & Emotional Health",
+        "youtube_id": "4kEIbzqntmY",
+        "url": "https://youtu.be/4kEIbzqntmY",
+        "embed_url": "https://www.youtube.com/embed/4kEIbzqntmY",
+        "published_at": "2026-06-13T14:59:42Z",
+        "lesson_dir": "health-wellness-module-4-mental-emotional-health-v2"
+      },
+      {
+        "course": "Health & Wellness",
+        "course_slug": "health-&-wellness",
+        "module_number": 5,
+        "module_title": "Stress Management",
+        "youtube_id": "tk44CgkUh58",
+        "url": "https://youtu.be/tk44CgkUh58",
+        "embed_url": "https://www.youtube.com/embed/tk44CgkUh58",
+        "published_at": "2026-06-13T14:59:50Z",
+        "lesson_dir": "health-wellness-module-5-stress-management-v2"
+      },
+      {
+        "course": "Health & Wellness",
+        "course_slug": "health-&-wellness",
+        "module_number": 6,
+        "module_title": "Sleep & Recovery",
+        "youtube_id": "GuugoOhRG7M",
+        "url": "https://youtu.be/GuugoOhRG7M",
+        "embed_url": "https://www.youtube.com/embed/GuugoOhRG7M",
+        "published_at": "2026-06-13T14:59:58Z",
+        "lesson_dir": "health-wellness-module-6-sleep-recovery-v2"
+      },
+      {
+        "course": "Health & Wellness",
+        "course_slug": "health-&-wellness",
+        "module_number": 7,
+        "module_title": "Social Health & Relationships",
+        "youtube_id": "WDKww4KRNWk",
+        "url": "https://youtu.be/WDKww4KRNWk",
+        "embed_url": "https://www.youtube.com/embed/WDKww4KRNWk",
+        "published_at": "2026-06-13T15:00:05Z",
+        "lesson_dir": "health-wellness-module-7-social-health-relationships-v2"
+      }
+    ],
     "Physical Education": [
       {
         "course": "Physical Education",
@@ -641,6 +720,83 @@
     ]
   },
   "lessons": [
+    {
+      "course": "Health & Wellness",
+      "course_slug": "health-&-wellness",
+      "module_number": 1,
+      "module_title": "Dimensions of Wellness",
+      "youtube_id": "1XpZSl9_z8k",
+      "url": "https://youtu.be/1XpZSl9_z8k",
+      "embed_url": "https://www.youtube.com/embed/1XpZSl9_z8k",
+      "published_at": "2026-06-13T14:59:16Z",
+      "lesson_dir": "health-wellness-module-1-dimensions-of-wellness-v2"
+    },
+    {
+      "course": "Health & Wellness",
+      "course_slug": "health-&-wellness",
+      "module_number": 2,
+      "module_title": "Physical Wellness & Exercise",
+      "youtube_id": "mkOOZpP1HXM",
+      "url": "https://youtu.be/mkOOZpP1HXM",
+      "embed_url": "https://www.youtube.com/embed/mkOOZpP1HXM",
+      "published_at": "2026-06-13T14:59:25Z",
+      "lesson_dir": "health-wellness-module-2-physical-wellness-exercise-v2"
+    },
+    {
+      "course": "Health & Wellness",
+      "course_slug": "health-&-wellness",
+      "module_number": 3,
+      "module_title": "Nutritional Wellness",
+      "youtube_id": "Pq6jqsl5tpo",
+      "url": "https://youtu.be/Pq6jqsl5tpo",
+      "embed_url": "https://www.youtube.com/embed/Pq6jqsl5tpo",
+      "published_at": "2026-06-13T14:59:33Z",
+      "lesson_dir": "health-wellness-module-3-nutritional-wellness-v2"
+    },
+    {
+      "course": "Health & Wellness",
+      "course_slug": "health-&-wellness",
+      "module_number": 4,
+      "module_title": "Mental & Emotional Health",
+      "youtube_id": "4kEIbzqntmY",
+      "url": "https://youtu.be/4kEIbzqntmY",
+      "embed_url": "https://www.youtube.com/embed/4kEIbzqntmY",
+      "published_at": "2026-06-13T14:59:42Z",
+      "lesson_dir": "health-wellness-module-4-mental-emotional-health-v2"
+    },
+    {
+      "course": "Health & Wellness",
+      "course_slug": "health-&-wellness",
+      "module_number": 5,
+      "module_title": "Stress Management",
+      "youtube_id": "tk44CgkUh58",
+      "url": "https://youtu.be/tk44CgkUh58",
+      "embed_url": "https://www.youtube.com/embed/tk44CgkUh58",
+      "published_at": "2026-06-13T14:59:50Z",
+      "lesson_dir": "health-wellness-module-5-stress-management-v2"
+    },
+    {
+      "course": "Health & Wellness",
+      "course_slug": "health-&-wellness",
+      "module_number": 6,
+      "module_title": "Sleep & Recovery",
+      "youtube_id": "GuugoOhRG7M",
+      "url": "https://youtu.be/GuugoOhRG7M",
+      "embed_url": "https://www.youtube.com/embed/GuugoOhRG7M",
+      "published_at": "2026-06-13T14:59:58Z",
+      "lesson_dir": "health-wellness-module-6-sleep-recovery-v2"
+    },
+    {
+      "course": "Health & Wellness",
+      "course_slug": "health-&-wellness",
+      "module_number": 7,
+      "module_title": "Social Health & Relationships",
+      "youtube_id": "WDKww4KRNWk",
+      "url": "https://youtu.be/WDKww4KRNWk",
+      "embed_url": "https://www.youtube.com/embed/WDKww4KRNWk",
+      "published_at": "2026-06-13T15:00:05Z",
+      "lesson_dir": "health-wellness-module-7-social-health-relationships-v2"
+    },
     {
       "course": "Physical Education",
       "course_slug": "physical-education",
