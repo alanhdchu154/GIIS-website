@@ -120,7 +120,7 @@ college admissions claims in foundation lesson titles or descriptions.
 
 ## Daily Schedule
 
-- 07:00 CT: Codex automation `giis-foundation-video-daily` calls
+- 02:00 / 11:00 / 19:00 CT: Codex automation `giis-foundation-video-daily` calls
   `bash tools/lesson-video/foundation_daily.sh`.
 - Default target grade: Grade 9 (`FOUNDATION_TARGET_GRADE=9`).
 - Selection is deterministic: Grade 9 course sequence first, then module order;
@@ -129,9 +129,10 @@ college admissions claims in foundation lesson titles or descriptions.
   `teaching-videos/_audit/course-design/<course-slug>.json`.
 - If course design fails, run the built-in safe repair path, then review again.
   Proceed only after the repaired course passes; report unresolved blockers.
-- Max modules per day: 20 during the current upload-cap trial.
+- Max modules/uploads per run: 7 during the split-batch upload-cap trial.
+- Intended daily ceiling: 21 unless Alan changes it.
 - Upload privacy: `unlisted`.
-- Upload path: `yt_queue.py upload --gate-ready --max 20 --privacy unlisted`.
+- Upload path: `yt_queue.py upload --gate-ready --max 7 --privacy unlisted`.
 - The local quota estimate is conservative and the daily runner may override it
   during the trial. Stop only for a true video upload/channel-limit error.
 - If transcript/caption upload alone hits `quotaExceeded` after the video,

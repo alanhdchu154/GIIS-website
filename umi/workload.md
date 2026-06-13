@@ -90,9 +90,10 @@ Acceptance:
 
 - owner: Umi / Codex
 - mode: Split-work with Claude Code
-- schedule: Codex automation `giis-foundation-video-daily`, daily 07:00 CT
+- schedule: Codex automation `giis-foundation-video-daily`, daily 02:00 / 11:00 / 19:00 CT
 - runner: `bash tools/lesson-video/foundation_daily.sh`
 - scope: non-AP foundation modules only
+- batch size: max 7 modules / 7 uploads per run
 
 Next action:
 
@@ -109,8 +110,8 @@ Acceptance:
 
 Current Umi note:
 
-- This handoff is intentionally narrow: monitor and repair the 07:00 CT
-  foundation run. Broader parent/admin stability and course-quality priorities
+- This handoff is intentionally narrow: monitor and repair the split-batch
+  foundation runs. Broader parent/admin stability and course-quality priorities
   belong in `ROADMAP.md`.
 - 2026-06-09 local storage note: `teaching-videos/` is active on T9 via symlink
   to `/Volumes/T9-Active/Projects/giis-website/teaching-videos`.

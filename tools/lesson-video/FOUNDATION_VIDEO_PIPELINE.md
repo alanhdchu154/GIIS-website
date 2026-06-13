@@ -11,9 +11,9 @@ repeatably, while Umi remains the academic editor and release authority.
 This is the intended loop for every new foundation video:
 
 ```text
-07:00 CT Codex automation
+02:00 / 11:00 / 19:00 CT Codex automation
   -> call bash tools/lesson-video/foundation_daily.sh
-  -> choose up to 20 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
+  -> choose up to 7 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
   -> verify module outline and free/usable resource URLs
   -> attach Learn Portal Expert Lens as video-safe big idea/watch-for/transfer guidance
@@ -78,13 +78,13 @@ Preferred scheduler: Codex automation.
 
 ```text
 ~/.codex/automations/giis-foundation-video-daily/automation.toml
-rrule = "FREQ=DAILY;BYHOUR=7;BYMINUTE=0;BYSECOND=0"
+rrule = "FREQ=DAILY;BYHOUR=2,11,19;BYMINUTE=0;BYSECOND=0"
 ```
 
 The automation's only scheduling job is to call the repo-owned runner:
 
 ```bash
-bash tools/lesson-video/foundation_daily.sh
+FOUNDATION_MAX_MODULES=7 FOUNDATION_UPLOAD_MAX=7 bash tools/lesson-video/foundation_daily.sh
 ```
 
 Keep the pipeline logic in this repository so changes can be reviewed,
@@ -102,8 +102,8 @@ Full run:
 ```bash
 python3 tools/lesson-video/foundation_daily_orchestrator.py \
   --target-grade 9 \
-  --max-modules 20 \
-  --upload-max 20 \
+  --max-modules 7 \
+  --upload-max 7 \
   --privacy unlisted \
   --auto-commit
 ```
@@ -239,10 +239,13 @@ Do not use direct upload scripts for normal operations.
 
 ## Upload-Cap Trial
 
-As of the 2026-06-12 local probe, the repo default is 20 modules/day and 20
-video uploads/day. The local API quota estimate is intentionally conservative;
-the daily runner passes `--ignore-upload-quota-estimate` so a stale local
-estimate does not silently cap the trial at a lower number.
+As of the 2026-06-13 split-batch adjustment, the Codex automation runs three
+smaller batches per day: max 7 modules and 7 uploads per run, with an intended
+ceiling of 21 videos/day unless Alan changes it. This replaces the single
+20-module run because cc became unreliable around the eighth consecutive module.
+The local API quota estimate is intentionally conservative; the daily runner
+passes `--ignore-upload-quota-estimate` so a stale local estimate does not
+silently cap the trial at a lower number.
 
 If YouTube returns a true video upload limit such as `uploadLimitExceeded` or a
 "daily upload limit reached" error, stop the queue and report the last
