@@ -1,7 +1,75 @@
 {
-  "generated_at": "2026-06-13T15:01:30+00:00",
+  "generated_at": "2026-06-13T18:40:23+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "Digital Literacy": [
+      {
+        "course": "Digital Literacy",
+        "course_slug": "digital-literacy",
+        "module_number": 1,
+        "module_title": "Introduction to Digital Literacy",
+        "youtube_id": "xwEnWVJdZrk",
+        "url": "https://youtu.be/xwEnWVJdZrk",
+        "embed_url": "https://www.youtube.com/embed/xwEnWVJdZrk",
+        "published_at": "2026-06-13T18:39:27Z",
+        "lesson_dir": "digital-literacy-module-1-introduction-to-digital-literacy-v2"
+      },
+      {
+        "course": "Digital Literacy",
+        "course_slug": "digital-literacy",
+        "module_number": 2,
+        "module_title": "Navigating the Internet Safely",
+        "youtube_id": "1UhItBFwku4",
+        "url": "https://youtu.be/1UhItBFwku4",
+        "embed_url": "https://www.youtube.com/embed/1UhItBFwku4",
+        "published_at": "2026-06-13T18:39:36Z",
+        "lesson_dir": "digital-literacy-module-2-navigating-the-internet-safely-v2"
+      },
+      {
+        "course": "Digital Literacy",
+        "course_slug": "digital-literacy",
+        "module_number": 3,
+        "module_title": "Evaluating Online Information",
+        "youtube_id": "B8xfdVJWq-Q",
+        "url": "https://youtu.be/B8xfdVJWq-Q",
+        "embed_url": "https://www.youtube.com/embed/B8xfdVJWq-Q",
+        "published_at": "2026-06-13T18:39:44Z",
+        "lesson_dir": "digital-literacy-module-3-evaluating-online-information-v2"
+      },
+      {
+        "course": "Digital Literacy",
+        "course_slug": "digital-literacy",
+        "module_number": 4,
+        "module_title": "Online Privacy & Data",
+        "youtube_id": "on-bcDnLPi8",
+        "url": "https://youtu.be/on-bcDnLPi8",
+        "embed_url": "https://www.youtube.com/embed/on-bcDnLPi8",
+        "published_at": "2026-06-13T18:39:52Z",
+        "lesson_dir": "digital-literacy-module-4-online-privacy-data-v2"
+      },
+      {
+        "course": "Digital Literacy",
+        "course_slug": "digital-literacy",
+        "module_number": 5,
+        "module_title": "Cybersecurity Fundamentals",
+        "youtube_id": "DA_J9a2hMqE",
+        "url": "https://youtu.be/DA_J9a2hMqE",
+        "embed_url": "https://www.youtube.com/embed/DA_J9a2hMqE",
+        "published_at": "2026-06-13T18:39:59Z",
+        "lesson_dir": "digital-literacy-module-5-cybersecurity-fundamentals-v2"
+      },
+      {
+        "course": "Digital Literacy",
+        "course_slug": "digital-literacy",
+        "module_number": 6,
+        "module_title": "Productivity Software: Docs, Sheets, Slides",
+        "youtube_id": "WJbuzTBoG_s",
+        "url": "https://youtu.be/WJbuzTBoG_s",
+        "embed_url": "https://www.youtube.com/embed/WJbuzTBoG_s",
+        "published_at": "2026-06-13T18:40:07Z",
+        "lesson_dir": "digital-literacy-module-6-productivity-software-docs-sheets-slides-v2"
+      }
+    ],
     "Health & Wellness": [
       {
         "course": "Health & Wellness",
@@ -731,6 +799,72 @@
     ]
   },
   "lessons": [
+    {
+      "course": "Digital Literacy",
+      "course_slug": "digital-literacy",
+      "module_number": 1,
+      "module_title": "Introduction to Digital Literacy",
+      "youtube_id": "xwEnWVJdZrk",
+      "url": "https://youtu.be/xwEnWVJdZrk",
+      "embed_url": "https://www.youtube.com/embed/xwEnWVJdZrk",
+      "published_at": "2026-06-13T18:39:27Z",
+      "lesson_dir": "digital-literacy-module-1-introduction-to-digital-literacy-v2"
+    },
+    {
+      "course": "Digital Literacy",
+      "course_slug": "digital-literacy",
+      "module_number": 2,
+      "module_title": "Navigating the Internet Safely",
+      "youtube_id": "1UhItBFwku4",
+      "url": "https://youtu.be/1UhItBFwku4",
+      "embed_url": "https://www.youtube.com/embed/1UhItBFwku4",
+      "published_at": "2026-06-13T18:39:36Z",
+      "lesson_dir": "digital-literacy-module-2-navigating-the-internet-safely-v2"
+    },
+    {
+      "course": "Digital Literacy",
+      "course_slug": "digital-literacy",
+      "module_number": 3,
+      "module_title": "Evaluating Online Information",
+      "youtube_id": "B8xfdVJWq-Q",
+      "url": "https://youtu.be/B8xfdVJWq-Q",
+      "embed_url": "https://www.youtube.com/embed/B8xfdVJWq-Q",
+      "published_at": "2026-06-13T18:39:44Z",
+      "lesson_dir": "digital-literacy-module-3-evaluating-online-information-v2"
+    },
+    {
+      "course": "Digital Literacy",
+      "course_slug": "digital-literacy",
+      "module_number": 4,
+      "module_title": "Online Privacy & Data",
+      "youtube_id": "on-bcDnLPi8",
+      "url": "https://youtu.be/on-bcDnLPi8",
+      "embed_url": "https://www.youtube.com/embed/on-bcDnLPi8",
+      "published_at": "2026-06-13T18:39:52Z",
+      "lesson_dir": "digital-literacy-module-4-online-privacy-data-v2"
+    },
+    {
+      "course": "Digital Literacy",
+      "course_slug": "digital-literacy",
+      "module_number": 5,
+      "module_title": "Cybersecurity Fundamentals",
+      "youtube_id": "DA_J9a2hMqE",
+      "url": "https://youtu.be/DA_J9a2hMqE",
+      "embed_url": "https://www.youtube.com/embed/DA_J9a2hMqE",
+      "published_at": "2026-06-13T18:39:59Z",
+      "lesson_dir": "digital-literacy-module-5-cybersecurity-fundamentals-v2"
+    },
+    {
+      "course": "Digital Literacy",
+      "course_slug": "digital-literacy",
+      "module_number": 6,
+      "module_title": "Productivity Software: Docs, Sheets, Slides",
+      "youtube_id": "WJbuzTBoG_s",
+      "url": "https://youtu.be/WJbuzTBoG_s",
+      "embed_url": "https://www.youtube.com/embed/WJbuzTBoG_s",
+      "published_at": "2026-06-13T18:40:07Z",
+      "lesson_dir": "digital-literacy-module-6-productivity-software-docs-sheets-slides-v2"
+    },
     {
       "course": "Health & Wellness",
       "course_slug": "health-&-wellness",
