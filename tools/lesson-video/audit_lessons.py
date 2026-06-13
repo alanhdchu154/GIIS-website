@@ -46,6 +46,9 @@ REQUIRED_ID_HINTS = {
 RISKY_CLAIMS = [
     (re.compile(r"\bCognia\b|\baccredited\b|US-accredited", re.I), "Accreditation claim risk"),
     (re.compile(r"\bguaranteed admission\b|\bguarantee[sd]?\s+(admission|acceptance|result|college|university)\b", re.I), "Guarantee claim risk"),
+    (re.compile(r"\bguaranteed\s+transfer\s+credit\b|\bguarantee[sd]?\s+credit\b", re.I), "Transfer-credit guarantee claim risk"),
+    (re.compile(r"\bcollege\s+credit\b", re.I), "College-credit wording needs support"),
+    (re.compile(r"\bCommon\s+App\b|\bF-?1\b|\bNCAA\b", re.I), "Authorization/admissions pathway wording needs support"),
     (re.compile(r"\brecognized by US universities\b", re.I), "Recognition wording needs support"),
     (re.compile(r"\bAP Course Audit\b|\bCollege Board approved\b", re.I), "AP authorization wording needs verification"),
 ]
@@ -54,6 +57,14 @@ RISKY_VISUAL_UNICODE = {
     "δ": "delta charge labels can render poorly in some slide fonts; prefer 'partial +' / 'partial -'",
     "⁺": "superscript plus can render poorly in some slide fonts; prefer plain '+'.",
     "⁻": "superscript minus can render poorly in some slide fonts; prefer plain '-'.",
+}
+
+EXPERT_LENS_STOPWORDS = {
+    "about", "above", "after", "again", "against", "also", "because", "before",
+    "being", "between", "course", "every", "from", "have", "into", "lesson",
+    "make", "more", "module", "must", "should", "that", "their", "there",
+    "these", "this", "through", "using", "when", "where", "which", "while",
+    "with", "without", "work", "works", "students", "student",
 }
 
 EXPECTED_THEME_PREFIXES = [
@@ -202,6 +213,151 @@ def collect_reviewer_verdicts(folder: Path, script_sha: str | None = None) -> di
         "has_citation_checker": any("citation" in v["reviewer"].lower()
                                     or "source" in v["reviewer"].lower()
                                     for v in verdicts),
+        "has_expert_lens_alignment": any("expert_lens" in v["file"].lower()
+                                         or "expert lens" in v["reviewer"].lower()
+                                         or "lens" in v["reviewer"].lower()
+                                         for v in verdicts),
+        "has_independent_second_pass": any("independent" in v["file"].lower()
+                                           or "second_pass" in v["reviewer"].lower()
+                                           or "independent" in v["reviewer"].lower()
+                                           for v in verdicts),
+        "has_source_alignment": any("source_alignment" in v["file"].lower()
+                                    or "source alignment" in v["reviewer"].lower()
+                                    for v in verdicts),
+    }
+
+
+def expert_lens_tokens(text: str) -> set[str]:
+    words = re.findall(r"[a-z0-9]+(?:[-'][a-z0-9]+)?", str(text).lower())
+    return {w for w in words if len(w) >= 4 and w not in EXPERT_LENS_STOPWORDS}
+
+
+def inspect_expert_lens(folder: Path, script: dict[str, Any]) -> dict[str, Any]:
+    packet = load_json(folder / "source_packet.json")
+    if not isinstance(packet, dict):
+        return {
+            "present": False,
+            "facets": {},
+            "facets_missing": ["insight", "watchFor", "transfer"],
+            "error": "Missing source_packet.json",
+        }
+    lens = packet.get("expert_lens")
+    if not isinstance(lens, dict):
+        return {
+            "present": False,
+            "facets": {},
+            "facets_missing": ["insight", "watchFor", "transfer"],
+            "error": "Missing expert_lens in source_packet.json",
+        }
+
+    sections = script.get("sections") or []
+    review = load_json(folder / "_review_expert_lens.json")
+    review = review if isinstance(review, dict) else {}
+    review_verdict = str(review.get("verdict") or "").lower()
+    section_tokens = []
+    for section in sections:
+        sid = str(section.get("id") or "")
+        tokens = expert_lens_tokens(f"{sid} {section.get('text') or ''}")
+        section_tokens.append((sid, tokens))
+
+    facets: dict[str, Any] = {}
+    missing: list[str] = []
+    for key in ("insight", "watchFor", "transfer"):
+        tokens = expert_lens_tokens(str(lens.get(key) or ""))
+        best_sid = ""
+        best_overlap: list[str] = []
+        for sid, tokens_in_section in section_tokens:
+            overlap = sorted(tokens & tokens_in_section)
+            if len(overlap) > len(best_overlap):
+                best_sid = sid
+                best_overlap = overlap
+        required_overlap = 1 if len(tokens) <= 3 else 2
+        review_sections = review.get(f"{key}_sections") or []
+        if key == "watchFor" and not review_sections:
+            review_sections = review.get("watch_for_sections") or []
+        satisfied_by_review = (
+            review_verdict in {"pass", "minor"}
+            and isinstance(review_sections, list)
+            and any(str(section_id).strip() for section_id in review_sections)
+        )
+        satisfied = len(best_overlap) >= required_overlap or satisfied_by_review
+        if not satisfied:
+            missing.append(key)
+        facets[key] = {
+            "satisfied": satisfied,
+            "satisfied_by_review": satisfied_by_review,
+            "best_section": best_sid,
+            "overlap": best_overlap[:8],
+            "review_sections": review_sections[:8] if isinstance(review_sections, list) else [],
+            "required_overlap": required_overlap,
+            "lens_token_count": len(tokens),
+        }
+
+    return {
+        "present": True,
+        "source": packet.get("expert_lens", {}).get("source"),
+        "family": packet.get("expert_lens", {}).get("family"),
+        "video_safety_notes": packet.get("expert_lens", {}).get("video_safety_notes") or [],
+        "facets": facets,
+        "facets_satisfied": [k for k, v in facets.items() if v.get("satisfied")],
+        "facets_missing": missing,
+    }
+
+
+def source_label_present(label: str, haystack: str) -> bool:
+    label = str(label or "").strip()
+    if not label:
+        return False
+    if re.search(re.escape(label), haystack, flags=re.IGNORECASE):
+        return True
+    tokens = expert_lens_tokens(label)
+    if not tokens:
+        return False
+    haystack_tokens = expert_lens_tokens(haystack)
+    return bool(tokens & haystack_tokens)
+
+
+def inspect_source_alignment(folder: Path, script: dict[str, Any]) -> dict[str, Any]:
+    packet = load_json(folder / "source_packet.json")
+    if not isinstance(packet, dict):
+        return {
+            "present": False,
+            "labels_checked": [],
+            "labels_visible": [],
+            "labels_missing": [],
+            "error": "Missing source_packet.json",
+        }
+    alignment = packet.get("source_alignment")
+    if not isinstance(alignment, dict):
+        return {
+            "present": False,
+            "labels_checked": [],
+            "labels_visible": [],
+            "labels_missing": [],
+            "error": "Missing source_alignment in source_packet.json",
+        }
+    sources = alignment.get("required_visible_sources") or []
+    build_text = ""
+    try:
+        build_text = (folder / "build_slides.py").read_text()
+    except Exception:
+        pass
+    sections = script.get("sections") or []
+    narration_text = "\n".join(str(section.get("text") or "") for section in sections)
+    combined = f"{build_text}\n{narration_text}"
+    checked = [str(source.get("label") or "").strip() for source in sources if source.get("label")]
+    visible = [label for label in checked if source_label_present(label, build_text)]
+    visible_anywhere = [label for label in checked if source_label_present(label, combined)]
+    missing = [label for label in checked if label not in visible]
+    raw_urls = re.findall(r"https?://\S+|www\.\S+", narration_text)
+    return {
+        "present": True,
+        "policy": alignment.get("policy"),
+        "labels_checked": checked,
+        "labels_visible": visible,
+        "labels_visible_anywhere": visible_anywhere,
+        "labels_missing": missing,
+        "raw_urls_in_narration": raw_urls,
     }
 
 
@@ -371,7 +527,10 @@ def inspect_source_visual_risk(folder: Path) -> dict[str, Any]:
 def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
                  learning_checks: dict[str, Any],
                  source_risk: dict[str, Any],
-                 reviewers: dict[str, Any], youtube: dict[str, Any]) -> dict[str, Any]:
+                 reviewers: dict[str, Any],
+                 expert_lens: dict[str, Any],
+                 source_alignment: dict[str, Any],
+                 youtube: dict[str, Any]) -> dict[str, Any]:
     issues: list[dict[str, str]] = []
 
     def add(severity: str, message: str):
@@ -393,7 +552,7 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
     if not script_info["has_worked_solution_after_pause"]:
         add("major", "Pause section does not appear to have a paired worked-solution silence section.")
     if script_info["misconception_mentions"] == 0:
-        add("minor", "No obvious misconception/trap language; add one common mistake or AP trap.")
+        add("minor", "No obvious misconception/trap language; add one common mistake or common trap.")
     if script_info["visual_category_count"] < 6:
         add("minor", f"Only {script_info['visual_category_count']} slide categories detected; add more visual rhythm.")
     if script_info["assignment_mentions"] == 0:
@@ -433,6 +592,27 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
     if source_risk["risky_unicode"]:
         add("minor", f"Potentially fragile slide unicode: {source_risk['risky_unicode'][:5]}")
 
+    if not expert_lens.get("present"):
+        add("major", str(expert_lens.get("error") or "Missing Expert Lens in source_packet.json."))
+    else:
+        missing_facets = expert_lens.get("facets_missing") or []
+        if len(missing_facets) >= 2:
+            add("major", f"Expert Lens facets missing from narration: {missing_facets}")
+        elif len(missing_facets) == 1:
+            add("minor", f"Expert Lens facet missing from narration: {missing_facets[0]}")
+
+    if not source_alignment.get("present"):
+        add("major", str(source_alignment.get("error") or "Missing source_alignment in source_packet.json."))
+    else:
+        checked_labels = source_alignment.get("labels_checked") or []
+        visible_labels = source_alignment.get("labels_visible") or []
+        if checked_labels and not visible_labels:
+            add("major", f"No required source label appears visibly in build_slides.py: {checked_labels}")
+        elif len(visible_labels) < min(1, len(checked_labels)):
+            add("minor", "Source alignment has fewer visible labels than expected.")
+        if source_alignment.get("raw_urls_in_narration"):
+            add("minor", "Narration contains raw URLs while source alignment requires source names only.")
+
     if reviewers["count"] == 0:
         add("major", "No reviewer JSON found; needs PhD/adversarial/citation audit before auto-release.")
     else:
@@ -442,6 +622,12 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
             add("minor", "Reviewer set lacks adversarial-student clarity check.")
         if not reviewers["has_citation_checker"]:
             add("minor", "Reviewer set lacks citation/source checker.")
+        if not reviewers.get("has_expert_lens_alignment"):
+            add("minor", "Reviewer set lacks Expert Lens alignment review.")
+        if not reviewers.get("has_independent_second_pass"):
+            add("minor", "Reviewer set lacks independent second-pass review.")
+        if not reviewers.get("has_source_alignment"):
+            add("minor", "Reviewer set lacks source-alignment review.")
         if reviewers["counts"].get("critical"):
             add("critical", "At least one reviewer verdict is critical.")
         if reviewers["stale_or_unbound"]:
@@ -491,8 +677,10 @@ def audit_lesson(folder: Path) -> dict[str, Any]:
     learning_checks = inspect_learning_checks(folder)
     source_risk = inspect_source_visual_risk(folder)
     reviewers = collect_reviewer_verdicts(folder, script_info.get("review_script_sha") or script_info.get("script_sha"))
+    expert_lens = inspect_expert_lens(folder, script)
+    source_alignment = inspect_source_alignment(folder, script)
     youtube = script.get("youtube") or {}
-    score = score_lesson(script_info, assets, learning_checks, source_risk, reviewers, youtube)
+    score = score_lesson(script_info, assets, learning_checks, source_risk, reviewers, expert_lens, source_alignment, youtube)
     return {
         "slug": folder.name,
         "path": display_path(folder),
@@ -502,6 +690,8 @@ def audit_lesson(folder: Path) -> dict[str, Any]:
         "learning_checks": learning_checks,
         "source_risk": source_risk,
         "reviewers": reviewers,
+        "expert_lens": expert_lens,
+        "source_alignment": source_alignment,
         "youtube": {
             "video_id": youtube.get("video_id"),
             "url": youtube.get("url"),

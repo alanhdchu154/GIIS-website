@@ -32,6 +32,13 @@ Hard constraints:
 - Do not upload to YouTube.
 - Do not edit playlists.
 - Do not add a script.json.youtube block.
+- Do not create or edit `_review_independent_pass.json` or
+  `_review_source_alignment.json`; the separate independent reviewer wrapper
+  owns those files after production.
+- Do not run broad filesystem searches such as `find /`, `find /Users`, or
+  `find /Volumes` to locate Python packages. Use repo-relative paths and the
+  pipeline Python environment; if an import/path issue blocks verification, stop
+  and report the exact command instead of scanning the whole machine.
 - Keep changes scoped to the target lesson folder unless a mechanical pipeline
   bug blocks the work.
 - If blocked, stop and report the blocker instead of broad edits.

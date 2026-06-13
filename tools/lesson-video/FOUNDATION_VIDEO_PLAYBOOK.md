@@ -26,6 +26,7 @@ Umi owns:
 - course priority
 - lesson scope
 - source packet
+- Learn Portal Expert Lens alignment
 - free/usable resource check
 - teaching brief
 - visual brief
@@ -149,6 +150,11 @@ A foundation lesson can move to upload review only when all are true:
 
 - module title and order match the course JSON
 - source packet exists and cites the course JSON
+- source packet includes video-safe Expert Lens guidance
+- source packet includes visible source-alignment guidance
+- concept/worked example, misconception/pause, and application/path visibly use
+  the Expert Lens big idea, watch-for risk, and transfer guidance
+- at least one required source label from the packet is visible on-slide
 - required external resources are free/usable and not hard-blocking
 - no AP or authorization-sensitive wording
 - `script.json` sections match slide filenames
@@ -158,6 +164,12 @@ A foundation lesson can move to upload review only when all are true:
 - `style_manifest.json` exists and matches the course subject theme
 - `learning_check.json` has 3-6 checks
 - reviewer files are bound to the current `script.json` SHA
+- `_review_expert_lens.json` identifies the sections that satisfy the
+  big idea, watch-for risk, and transfer guidance
+- `_review_independent_pass.json` is written by the separate second-pass
+  reviewer, not the production worker
+- `_review_source_alignment.json` confirms visible source labels and reading
+  alignment
 - pause prompt and answer reveal slides are visually different
 - transcript exists after rendering
 - MP4 exists after rendering

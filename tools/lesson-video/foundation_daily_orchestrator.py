@@ -44,10 +44,12 @@ APPROVAL_PATH = TEACHING_ROOT / "_audit" / "release-gate" / "approved_ready_to_u
 LATEST_FOUNDATION_APPROVAL_PATH = TEACHING_ROOT / "_audit" / "release-gate" / "latest-foundation-approval.json"
 HANDOFF_DIR = ROOT / "umi" / "handoffs"
 CC_WORKER = ROOT / "tools" / "lesson-video" / "cc_foundation_worker.py"
+CC_REVIEWER = ROOT / "tools" / "lesson-video" / "cc_independent_video_reviewer.py"
 FOUNDATION_GATE = ROOT / "tools" / "lesson-video" / "foundation_video_gate.py"
 RELEASE_GATE = ROOT / "tools" / "lesson-video" / "lesson_release_gate.py"
 YT_QUEUE = ROOT / "tools" / "youtube-upload" / "yt_queue.py"
 SYNC_CHANNEL = ROOT / "tools" / "youtube-upload" / "sync_channel.py"
+EXPERT_LENS_BRIDGE = ROOT / "tools" / "lesson-video" / "expert_lens_packet.js"
 
 sys.path.insert(0, str(ROOT / "tools" / "lesson-video"))
 from audit_lessons import audit_lesson  # noqa: E402
@@ -526,9 +528,10 @@ def lesson_complete_or_uploaded(course: dict[str, Any], module: dict[str, Any], 
         return True
 
     if folder.exists() and (folder / "script.json").exists():
-        ready, _, _ = gate_ready(folder)
-        if ready:
-            return True
+        # A ready local folder is not complete until it is either uploaded or
+        # carried into the approval artifact. The orchestrator can approve it
+        # without rerunning cc, so keep it selectable.
+        pass
 
     course_name = str(course.get("name") or "").strip().lower()
     order = int(module.get("order") or 0)
@@ -544,9 +547,6 @@ def lesson_complete_or_uploaded(course: dict[str, Any], module: dict[str, Any], 
         if existing_course != course_name or not existing_module.startswith(module_prefix):
             continue
         if (existing_script.get("youtube") or {}).get("video_id"):
-            return True
-        ready, _, _ = gate_ready(existing)
-        if ready:
             return True
 
     manifest = read_json(ROOT / "public" / "data" / "lessons-manifest.json", {})
@@ -626,15 +626,127 @@ def voice_for_subject(area: str) -> str:
     }.get(area, "en-US-AriaNeural")
 
 
+def expert_lens_for(candidate: Candidate) -> dict[str, Any]:
+    """Return the same Expert Lens shown in the Learn Portal.
+
+    The Learn Portal owns the lens logic in JavaScript. The video pipeline calls
+    that helper through a small Node bridge so parent-facing syllabus guidance
+    and lesson-video production cannot drift into two separate standards.
+    """
+    order = int(candidate.module.get("order") or 0)
+    rel_course = str(candidate.course_file.relative_to(ROOT))
+    proc = subprocess.run(
+        ["node", str(EXPERT_LENS_BRIDGE), rel_course, str(order)],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError((proc.stderr or proc.stdout or "expert lens lookup failed").strip())
+    lens = json.loads(proc.stdout)
+    for key in ("insight", "watchFor", "transfer"):
+        if not str(lens.get(key) or "").strip():
+            raise RuntimeError(f"expert lens missing {key} for {candidate.key}")
+    return sanitize_expert_lens_for_video(lens)
+
+
+def video_safe_lens_text(value: str) -> str:
+    text = str(value or "")
+    replacements = [
+        (r"\bAP\s+Computer\s+Science\b", "advanced computer science"),
+        (r"\bAP\s+Human\s+Geography\b", "advanced geography"),
+        (r"\bAP[-\s]+level\b", "advanced"),
+        (r"\bAP\b", "advanced coursework"),
+    ]
+    for pattern, replacement in replacements:
+        text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
+    return text
+
+
+def sanitize_expert_lens_for_video(lens: dict[str, Any]) -> dict[str, Any]:
+    clean = dict(lens)
+    changed = False
+    for key in ("insight", "watchFor", "transfer"):
+        before = str(clean.get(key) or "")
+        after = video_safe_lens_text(before)
+        clean[key] = after
+        changed = changed or after != before
+    if changed:
+        clean["video_safety_notes"] = [
+            "Authorization-sensitive pathway wording was softened for the foundation video handoff."
+        ]
+    return clean
+
+
+def source_label_for_ref(ref: dict[str, Any]) -> str:
+    note = str(ref.get("note") or "").strip()
+    if note:
+        for sep in (" — ", " - ", ":"):
+            if sep in note:
+                label = note.split(sep, 1)[0].strip()
+                if label:
+                    return label
+        first_words = " ".join(note.split()[:3]).strip()
+        if ref.get("key") == "readingUrl" and first_words:
+            return first_words
+    host = str(ref.get("host") or "").removeprefix("www.")
+    known = {
+        "khanacademy.org": "Khan Academy",
+        "openstax.org": "OpenStax",
+        "cdc.gov": "CDC",
+        "nih.gov": "NIH",
+        "nimh.nih.gov": "NIMH",
+        "nida.nih.gov": "NIDA",
+        "apa.org": "APA",
+        "samhsa.gov": "SAMHSA",
+        "youtube.com": "Assigned video",
+    }
+    return known.get(host, host or "Assigned source")
+
+
+def source_alignment_from_audit(audit: dict[str, Any]) -> dict[str, Any]:
+    refs = audit.get("refs") or []
+    visible_sources: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for key in ("readingUrl", "practiceUrl", "videoUrl"):
+        for ref in refs:
+            if ref.get("key") != key:
+                continue
+            label = source_label_for_ref(ref)
+            dedupe_key = f"{key}:{label.lower()}"
+            if dedupe_key in seen:
+                continue
+            seen.add(dedupe_key)
+            visible_sources.append({
+                "key": key,
+                "label": label,
+                "host": ref.get("host"),
+                "note": ref.get("note") or "",
+                "visibility_requirement": "show this source label on at least one concept, application, recap, or path slide; do not show or read the raw URL",
+            })
+    return {
+        "policy": "visible_source_alignment_v1",
+        "required_visible_sources": visible_sources[:2],
+        "all_sources": visible_sources,
+        "requirements": [
+            "At least one required source label must be visible on-slide, not only in narration.",
+            "The path/next-action slide should name the assigned reading or practice source.",
+            "Do not display raw URLs in the video.",
+        ],
+    }
+
+
 def build_packet(candidate: Candidate, audit: dict[str, Any]) -> dict[str, Any]:
     course = candidate.course
     module = candidate.module
     area = subject_area(course)
     title = module.get("title")
     order = int(module.get("order") or 0)
+    expert_lens = expert_lens_for(candidate)
+    source_alignment = source_alignment_from_audit(audit)
     return {
         "generated_at": now_utc(),
-        "policy": "foundation_daily_v1",
+        "policy": "foundation_daily_v2_expert_lens",
         "source_of_truth": str(candidate.course_file.relative_to(ROOT)),
         "target_slug": candidate.target_slug,
         "course": {
@@ -651,6 +763,8 @@ def build_packet(candidate: Candidate, audit: dict[str, Any]) -> dict[str, Any]:
             "assignment": module.get("assignment"),
             "estimatedHrs": module.get("estimatedHrs"),
         },
+        "expert_lens": expert_lens,
+        "source_alignment": source_alignment,
         "resources": audit,
         "production_defaults": {
             "voice": voice_for_subject(area),
@@ -674,6 +788,7 @@ def build_packet(candidate: Candidate, audit: dict[str, Any]) -> dict[str, Any]:
         ],
         "quality_bar": [
             "Parent should feel this is a serious school lesson, not generic AI slides.",
+            "Use the Expert Lens as the lesson's intellectual spine: Big idea -> concept/worked example, Watch for -> misconception/pause, Transfer -> application/path.",
             "Every slide must have one claim or one learner action.",
             "Use course-specific palette, voice, and visual rhythm.",
             "Use deterministic diagrams for precise math/science/history evidence.",
@@ -686,13 +801,34 @@ def build_packet(candidate: Candidate, audit: dict[str, Any]) -> dict[str, Any]:
 def render_teaching_brief(packet: dict[str, Any]) -> str:
     course = packet["course"]
     module = packet["module"]
+    lens = packet["expert_lens"]
+    source_alignment = packet.get("source_alignment") or {}
     refs = packet["resources"]["refs"]
+    required_sources = source_alignment.get("required_visible_sources") or []
     return "\n".join([
         f"# Teaching Brief: {course['name']} Module {module['order']} - {module['title']}",
         "",
         f"Source: `{packet['source_of_truth']}`",
         f"Objectives: {module.get('objectives') or 'N/A'}",
         f"Assignment tie-in: {module.get('assignment') or 'N/A'}",
+        "",
+        "## Expert Lens",
+        "",
+        f"- Big idea: {lens['insight']}",
+        f"- Watch for: {lens['watchFor']}",
+        f"- Transfer: {lens['transfer']}",
+        "",
+        "Use this as the lesson's intellectual spine. The concept/worked example should make the big idea visible, the misconception/pause should test the watch-for risk, and the application/path should show the transfer without overclaiming.",
+        "",
+        "## Source Alignment",
+        "",
+        "Required visible source labels:",
+        *([
+            f"- {source['label']} ({source['key']}): {source.get('note') or source.get('host')}"
+            for source in required_sources
+        ] or ["- No required visible source labels were available; explain source limitations in the review artifact."]),
+        "",
+        "At least one required source label must appear on-slide in the concept, application, recap, or path section. Do not display or narrate raw URLs.",
         "",
         "## Required Lesson Spine",
         "",
@@ -712,6 +848,13 @@ def render_teaching_brief(packet: dict[str, Any]) -> str:
 def render_visual_brief(packet: dict[str, Any]) -> str:
     course = packet["course"]
     area = course["subject_area"]
+    lens = packet["expert_lens"]
+    source_alignment = packet.get("source_alignment") or {}
+    source_labels = ", ".join(
+        source.get("label", "")
+        for source in source_alignment.get("required_visible_sources", [])
+        if source.get("label")
+    ) or "the assigned reading/practice source"
     palette_note = {
         "math": "warm gold accents, graphs/equations/number-line objects, calm high-contrast layouts",
         "science": "teal/green accents, clean diagrams, cause-effect and scale visuals",
@@ -726,10 +869,21 @@ def render_visual_brief(packet: dict[str, Any]) -> str:
     Subject area: {area}
     Direction: {palette_note}
 
+    Expert Lens:
+    - Big idea: {lens['insight']}
+    - Watch for: {lens['watchFor']}
+    - Transfer: {lens['transfer']}
+
+    Source alignment:
+    - Show a small, readable source label on at least one concept/application/path slide: {source_labels}.
+    - Use source names, not raw URLs.
+
     Requirements:
     - Contact sheet must look varied at thumbnail size.
     - Pause and answer reveal slides must be visually distinct.
     - Use diagrams/tables/worked examples instead of decorative card grids.
+    - Visuals must make the Expert Lens inspectable, not just decorative.
+    - Source labels must be visible enough for a parent to see what the lesson aligns to.
     - Generated images are allowed only for low-precision hooks or thumbnails.
     - Precision content must be deterministic in build_slides.py.
     """)
@@ -738,6 +892,12 @@ def render_visual_brief(packet: dict[str, Any]) -> str:
 def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
     course = packet["course"]
     module = packet["module"]
+    lens = packet["expert_lens"]
+    source_alignment = packet.get("source_alignment") or {}
+    required_sources = "\n".join(
+        f"    - {source.get('label')} ({source.get('key')}): {source.get('note') or source.get('host')}"
+        for source in source_alignment.get("required_visible_sources", [])
+    ) or "    - No required source labels found; write the source review as blocked."
     return textwrap.dedent(f"""\
     # Foundation Video Production Handoff
 
@@ -766,8 +926,44 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
     ## Required Output
 
     Produce a complete V2 lesson folder: `script.json`, `build_slides.py`, slides,
-    `contact-sheet.jpg`, `style_manifest.json`, `learning_check.json`, reviewer
-    JSON files bound to the current script SHA, music files, MP4, and transcript.
+    `contact-sheet.jpg`, `style_manifest.json`, `learning_check.json`, standard
+    production reviewer JSON files bound to the current script SHA,
+    `_review_expert_lens.json`, music files, MP4, and transcript. Do not write
+    `_review_independent_pass.json` or `_review_source_alignment.json`; those
+    are written by the separate independent reviewer wrapper after production.
+
+    ## Expert Lens Contract
+
+    The lesson must visibly use the Learn Portal Expert Lens:
+
+    - Big idea: {lens['insight']}
+    - Watch for: {lens['watchFor']}
+    - Transfer: {lens['transfer']}
+
+    Requirements:
+    - Put the big idea into the concept/worked-example spine.
+    - Turn the watch-for item into the misconception and/or pause-check trap.
+    - Use the transfer item in the application/path slide without making career,
+      admissions, accreditation, AP, or outcome guarantees.
+    - Reviewer A must explicitly assess Expert Lens alignment.
+    - Reviewer B must test whether the watch-for misconception would still fool a student.
+    - Reviewer C must flag any unsupported source, credential, health, legal, or outcome claim.
+    - Write `_review_expert_lens.json` with `reviewer`, `verdict`,
+      `script_sha`, `insight_sections`, `watchFor_sections`, and
+      `transfer_sections`.
+
+    ## Visible Source Alignment Contract
+
+    Required source labels:
+{required_sources}
+
+    Requirements:
+    - Put at least one required source label visibly on a concept, application,
+      recap, or path slide.
+    - Use source names, not raw URLs.
+    - The path slide should tell the student which assigned reading/practice
+      source to use next.
+    - Do not imply the source endorses GIIS or guarantees outcomes.
 
     Use `tools/lesson-video/AGENT_RECIPE.md`, `QUALITY_FLOW.md`, and
     `FOUNDATION_VIDEO_PLAYBOOK.md`.
@@ -880,6 +1076,12 @@ def gate_ready(folder: Path) -> tuple[bool, dict[str, Any], list[str]]:
         reasons.append("missing adversarial-student reviewer")
     if not reviewers.get("has_citation_checker"):
         reasons.append("missing citation/source reviewer")
+    if not reviewers.get("has_expert_lens_alignment"):
+        reasons.append("missing Expert Lens alignment reviewer")
+    if not reviewers.get("has_independent_second_pass"):
+        reasons.append("missing independent second-pass reviewer")
+    if not reviewers.get("has_source_alignment"):
+        reasons.append("missing source-alignment reviewer")
     return not reasons, audit, reasons
 
 
@@ -914,6 +1116,20 @@ def append_approval(rows: list[dict[str, Any]]) -> None:
     write_json(APPROVAL_PATH, payload)
     write_json(LATEST_FOUNDATION_APPROVAL_PATH, payload)
     print(f"[approval] wrote {APPROVAL_PATH.relative_to(ROOT)} ({len(rows)} new/updated)")
+
+
+def approval_row(candidate: Candidate, lesson_audit: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "slug": candidate.target_slug,
+        "path": str(candidate.target_dir.relative_to(ROOT)),
+        "course": candidate.course.get("name"),
+        "course_slug": candidate.course.get("slug"),
+        "module": f"Module {candidate.module.get('order')}: {candidate.module.get('title')}",
+        "quality_score": lesson_audit.get("quality_score"),
+        "verdict": lesson_audit.get("verdict"),
+        "approved_by": "foundation_daily_orchestrator",
+        "approved_at": now_utc(),
+    }
 
 
 def update_state_row(state: dict[str, Any], candidate: Candidate, *, status: str, details: dict[str, Any]) -> None:
@@ -1043,6 +1259,21 @@ def orchestrate(args: argparse.Namespace) -> int:
                 "errors": design.get("errors") or [],
             })
             continue
+
+        if candidate.target_dir.exists() and (candidate.target_dir / "script.json").exists():
+            ready, lesson_audit, reasons = gate_ready(candidate.target_dir)
+            if ready:
+                approved = approval_row(candidate, lesson_audit)
+                approved_rows.append(approved)
+                run_report["approved"].append(approved)
+                if not args.dry_run:
+                    update_state_row(state, candidate, status="approved", details={
+                        "quality_score": lesson_audit.get("quality_score"),
+                        "source": "existing_gate_ready",
+                    })
+                print(f"[ready-existing] {candidate.target_slug} score={lesson_audit.get('quality_score')}", flush=True)
+                continue
+
         audit = resource_audit(candidate.module, network=not args.skip_network_check, timeout=args.url_timeout)
         packet = build_packet(candidate, audit)
         row = {
@@ -1082,6 +1313,20 @@ def orchestrate(args: argparse.Namespace) -> int:
         else:
             print("[cc] skipped by --no-cc")
 
+        if not args.no_independent_review and not args.no_cc:
+            rc, saw_tool = run_stream([
+                sys.executable, str(CC_REVIEWER), str(candidate.target_dir.relative_to(ROOT)),
+                "--budget-usd", str(args.review_budget_usd),
+                "--timeout-seconds", str(args.review_timeout_seconds),
+            ], timeout=args.review_timeout_seconds + 30)
+            if rc != 0 or not saw_tool:
+                details = {"returncode": rc, "saw_tool_progress": saw_tool}
+                update_state_row(state, candidate, status="review_blocked", details=details)
+                run_report["blocked"].append({**row, "reason": "independent_review_blocked", **details})
+                continue
+        elif args.no_independent_review:
+            print("[independent-review] skipped by --no-independent-review")
+
         if args.no_gate:
             print("[gate] skipped by --no-gate")
             continue
@@ -1104,17 +1349,7 @@ def orchestrate(args: argparse.Namespace) -> int:
             run_report["blocked"].append({**row, "reason": "gate_failed", **details})
             continue
 
-        approved = {
-            "slug": candidate.target_slug,
-            "path": str(candidate.target_dir.relative_to(ROOT)),
-            "course": candidate.course.get("name"),
-            "course_slug": candidate.course.get("slug"),
-            "module": f"Module {candidate.module.get('order')}: {candidate.module.get('title')}",
-            "quality_score": lesson_audit.get("quality_score"),
-            "verdict": lesson_audit.get("verdict"),
-            "approved_by": "foundation_daily_orchestrator",
-            "approved_at": now_utc(),
-        }
+        approved = approval_row(candidate, lesson_audit)
         approved_rows.append(approved)
         run_report["approved"].append(approved)
         update_state_row(state, candidate, status="approved", details={"quality_score": lesson_audit.get("quality_score")})
@@ -1151,10 +1386,13 @@ def main() -> int:
     ap.add_argument("--privacy", choices=["unlisted", "private", "public"], default="unlisted")
     ap.add_argument("--budget-usd", default="10")
     ap.add_argument("--cc-timeout-seconds", type=int, default=1800)
+    ap.add_argument("--review-budget-usd", type=float, default=2)
+    ap.add_argument("--review-timeout-seconds", type=int, default=420)
     ap.add_argument("--gate-timeout-seconds", type=int, default=1800)
     ap.add_argument("--url-timeout", type=float, default=8.0)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-cc", action="store_true")
+    ap.add_argument("--no-independent-review", action="store_true")
     ap.add_argument("--no-gate", action="store_true")
     ap.add_argument("--no-upload", action="store_true")
     ap.add_argument("--ignore-upload-quota-estimate", action="store_true")

@@ -14,6 +14,9 @@ teaching-videos/<slug>/
 │   └── ...
 ├── contact-sheet.jpg    # visual QA sheet of all slides
 ├── learning_check.json  # 3-6 checks for the lesson's real learning goals
+├── _review_expert_lens.json # section-level alignment to source_packet expert_lens
+├── _review_independent_pass.json # second-pass review from a separate reviewer run
+├── _review_source_alignment.json # visible source-label and reading-alignment review
 ├── assets_manifest.json # required if any sourced/generated image is used
 ├── intro_music.wav      # copy from tools/lesson-video/intro_music.wav
 └── outro_music.wav      # copy from tools/lesson-video/outro_music.wav
@@ -126,6 +129,42 @@ so they don't overflow at 80pt mono.
 - Prefer misconception-first teaching:
   concept → common wrong idea → worked trace/example → pause → correction.
 - Every lesson must end with a concrete Learn Portal action, not generic encouragement.
+
+## Expert Lens contract
+
+When `source_packet.json` contains `expert_lens`, treat it as required:
+
+- `insight` belongs in the concept and worked-example spine.
+- `watchFor` becomes the misconception, compare, or pause-check trap.
+- `transfer` belongs in the application/path slide, without career,
+  admissions, accreditation, AP, or outcome guarantees.
+
+Write `_review_expert_lens.json` after `script.json` is final. Bind it to the
+current review script SHA and list the section IDs that satisfy each facet:
+
+```json
+{
+  "reviewer": "expert_lens_alignment",
+  "verdict": "pass",
+  "script_sha": "<review_script_sha>",
+  "insight_sections": ["04_concept", "06_worked_example"],
+  "watchFor_sections": ["05_common_trap", "07_pause"],
+  "transfer_sections": ["10_application", "12_path"]
+}
+```
+
+## Visible source alignment
+
+When `source_packet.json` contains `source_alignment`, at least one required
+source label must appear as on-slide text in `build_slides.py`, preferably on a
+concept, application, recap, or path slide. Use source names such as
+`OpenStax`, `Khan Academy`, `CDC`, or the source label from the packet. Do not
+display or narrate raw URLs.
+
+The production worker may write `_review_expert_lens.json`, but the independent
+second-pass wrapper writes `_review_independent_pass.json` and
+`_review_source_alignment.json` after production. Do not fake those files inside
+the first production pass.
 
 ## Visual and asset rules
 

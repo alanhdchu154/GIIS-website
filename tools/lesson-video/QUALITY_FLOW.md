@@ -108,6 +108,35 @@ For A/B lesson tests, measure:
 - student willingness to keep watching
 - parent perception of seriousness/trust
 
+### Expert Lens
+
+For foundation videos, the source packet includes the Learn Portal Expert Lens.
+Treat it as the academic spine:
+
+- big idea -> concept and worked example
+- watch-for risk -> misconception and pause check
+- transfer -> application and next Learn Portal action
+
+Do not copy authorization-sensitive pathway claims into the public video. The
+video handoff may use the academic direction, but must keep foundation wording
+conservative.
+
+### Source Alignment
+
+Foundation videos must show at least one assigned source label on-slide. This
+is a parent-trust signal: families should be able to see that the lesson aligns
+to a real reading, practice source, or assigned video without hearing raw URLs.
+The source label should appear in `build_slides.py` on a concept, application,
+recap, or path slide.
+
+### Independent Second Pass
+
+The production worker does not provide the final academic review. After the
+lesson is produced, a separate reviewer run writes
+`_review_independent_pass.json` and `_review_source_alignment.json`. This pass
+may approve, mark minor notes, request revision, or block, but it must not
+repair the lesson.
+
 ## Release Gate
 
 A lesson is uploadable only if all are true:
@@ -122,6 +151,8 @@ A lesson is uploadable only if all are true:
   - PhD/peer reviewer
   - adversarial student reviewer
   - citation/source checker
+- reviewer notes explicitly evaluate Expert Lens alignment
+- independent second-pass and source-alignment reviewer artifacts exist
 - AP lessons must have citation/source reviewer pass or minor-only with an
   explicit reference-packet note
 

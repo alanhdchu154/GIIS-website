@@ -48,6 +48,8 @@ fi
     --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}" \
     --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}" \
     --cc-timeout-seconds "${FOUNDATION_CC_TIMEOUT_SECONDS:-1800}" \
+    --review-budget-usd "${FOUNDATION_REVIEW_BUDGET_USD:-2}" \
+    --review-timeout-seconds "${FOUNDATION_REVIEW_TIMEOUT_SECONDS:-420}" \
     --ignore-upload-quota-estimate \
     --auto-commit \
     "$@"

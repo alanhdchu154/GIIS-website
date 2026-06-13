@@ -101,6 +101,12 @@ def reviewer_gate(audit: dict, *, require_reviewers: bool) -> list[str]:
         missing.append("missing adversarial-student reviewer")
     if not reviewers.get("has_citation_checker"):
         missing.append("missing citation/source reviewer")
+    if not reviewers.get("has_expert_lens_alignment"):
+        missing.append("missing Expert Lens alignment reviewer")
+    if not reviewers.get("has_independent_second_pass"):
+        missing.append("missing independent second-pass reviewer")
+    if not reviewers.get("has_source_alignment"):
+        missing.append("missing source-alignment reviewer")
     return missing
 
 

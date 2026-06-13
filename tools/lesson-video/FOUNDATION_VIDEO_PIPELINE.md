@@ -16,9 +16,12 @@ This is the intended loop for every new foundation video:
   -> choose up to 20 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
   -> verify module outline and free/usable resource URLs
+  -> attach Learn Portal Expert Lens as video-safe big idea/watch-for/transfer guidance
+  -> attach source_alignment for visible source labels and reading alignment
   -> write source_packet.json + teaching_brief.md + visual_brief.md
   -> write a bounded cc handoff
   -> cc_foundation_worker.py runs Claude Code with streaming progress
+  -> cc_independent_video_reviewer.py runs a separate second-pass review
   -> foundation_video_gate.py renders/checks slides, MP4, transcript, contact sheet
   -> lesson_release_gate.py requires clean pass / score 100
   -> orchestrator writes approved_ready_to_upload.json
@@ -168,6 +171,34 @@ Upload readiness defaults to a clean gate:
 - quality score must be 100
 - `pass_with_minor_notes` stays in revision unless an operator explicitly uses
   `--allow-minor-notes`
+
+## Expert Lens Contract
+
+Each new foundation source packet includes the same Expert Lens family used by
+the Learn Portal syllabus UI:
+
+- big idea: the concept/worked-example spine must make this visible
+- watch for: the misconception or pause-check must test this risk
+- transfer: the application/path slide may use this connection only without
+  career, admissions, accreditation, AP, or outcome guarantees
+
+The orchestrator softens authorization-sensitive pathway wording in the video
+packet. This keeps the Learn Portal's academic guidance and the public video
+handoff aligned without letting foundation videos make claims that belong in a
+separate approval track.
+
+## Independent Review And Source Alignment
+
+After production, a separate reviewer invocation writes:
+
+- `_review_independent_pass.json`
+- `_review_source_alignment.json`
+
+This reviewer is not allowed to repair the lesson. It can only pass, mark
+minor issues, request revision, or block. The release gate also scans
+`build_slides.py` for required source labels from `source_packet.source_alignment`.
+At least one required source label must be visible on a slide; narration should
+use source names and avoid raw URLs.
 
 ## Gate Command
 
