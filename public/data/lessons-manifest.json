@@ -1,7 +1,42 @@
 {
-  "generated_at": "2026-06-12T22:36:37+00:00",
+  "generated_at": "2026-06-13T00:11:08+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "Physical Education": [
+      {
+        "course": "Physical Education",
+        "course_slug": "physical-education",
+        "module_number": 1,
+        "module_title": "Introduction to Physical Fitness",
+        "youtube_id": "zR7DqMSoKn4",
+        "url": "https://youtu.be/zR7DqMSoKn4",
+        "embed_url": "https://www.youtube.com/embed/zR7DqMSoKn4",
+        "published_at": "2026-06-13T00:10:37Z",
+        "lesson_dir": "physical-education-module-1-introduction-to-physical-fitness-v2"
+      },
+      {
+        "course": "Physical Education",
+        "course_slug": "physical-education",
+        "module_number": 2,
+        "module_title": "The FITT Principle",
+        "youtube_id": "M8qIWD5sw4A",
+        "url": "https://youtu.be/M8qIWD5sw4A",
+        "embed_url": "https://www.youtube.com/embed/M8qIWD5sw4A",
+        "published_at": "2026-06-13T00:10:45Z",
+        "lesson_dir": "physical-education-module-2-the-fitt-principle-v2"
+      },
+      {
+        "course": "Physical Education",
+        "course_slug": "physical-education",
+        "module_number": 3,
+        "module_title": "Cardiovascular Endurance",
+        "youtube_id": "ZHuhHz_jS4s",
+        "url": "https://youtu.be/ZHuhHz_jS4s",
+        "embed_url": "https://www.youtube.com/embed/ZHuhHz_jS4s",
+        "published_at": "2026-06-13T00:10:52Z",
+        "lesson_dir": "physical-education-module-3-cardiovascular-endurance-v2"
+      }
+    ],
     "World History": [
       {
         "course": "World History",
@@ -540,6 +575,39 @@
     ]
   },
   "lessons": [
+    {
+      "course": "Physical Education",
+      "course_slug": "physical-education",
+      "module_number": 1,
+      "module_title": "Introduction to Physical Fitness",
+      "youtube_id": "zR7DqMSoKn4",
+      "url": "https://youtu.be/zR7DqMSoKn4",
+      "embed_url": "https://www.youtube.com/embed/zR7DqMSoKn4",
+      "published_at": "2026-06-13T00:10:37Z",
+      "lesson_dir": "physical-education-module-1-introduction-to-physical-fitness-v2"
+    },
+    {
+      "course": "Physical Education",
+      "course_slug": "physical-education",
+      "module_number": 2,
+      "module_title": "The FITT Principle",
+      "youtube_id": "M8qIWD5sw4A",
+      "url": "https://youtu.be/M8qIWD5sw4A",
+      "embed_url": "https://www.youtube.com/embed/M8qIWD5sw4A",
+      "published_at": "2026-06-13T00:10:45Z",
+      "lesson_dir": "physical-education-module-2-the-fitt-principle-v2"
+    },
+    {
+      "course": "Physical Education",
+      "course_slug": "physical-education",
+      "module_number": 3,
+      "module_title": "Cardiovascular Endurance",
+      "youtube_id": "ZHuhHz_jS4s",
+      "url": "https://youtu.be/ZHuhHz_jS4s",
+      "embed_url": "https://www.youtube.com/embed/ZHuhHz_jS4s",
+      "published_at": "2026-06-13T00:10:52Z",
+      "lesson_dir": "physical-education-module-3-cardiovascular-endurance-v2"
+    },
     {
       "course": "World History",
       "course_slug": "world-history",
