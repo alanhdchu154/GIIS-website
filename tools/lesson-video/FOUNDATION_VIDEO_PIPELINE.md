@@ -1,7 +1,7 @@
 # Foundation Video Pipeline
 
-Date: 2026-05-30
-Status: active v0.2 daily foundation loop
+Date: 2026-06-12
+Status: active v0.3 daily foundation loop
 
 ## Goal
 
@@ -13,7 +13,7 @@ This is the intended loop for every new foundation video:
 ```text
 07:00 CT Codex automation
   -> call bash tools/lesson-video/foundation_daily.sh
-  -> choose 2-3 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
+  -> choose up to 20 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
   -> verify module outline and free/usable resource URLs
   -> write source_packet.json + teaching_brief.md + visual_brief.md
@@ -99,8 +99,8 @@ Full run:
 ```bash
 python3 tools/lesson-video/foundation_daily_orchestrator.py \
   --target-grade 9 \
-  --max-modules 8 \
-  --upload-max 8 \
+  --max-modules 20 \
+  --upload-max 20 \
   --privacy unlisted \
   --auto-commit
 ```
@@ -205,3 +205,17 @@ Upload still requires:
 - gated queue upload
 
 Do not use direct upload scripts for normal operations.
+
+## Upload-Cap Trial
+
+As of the 2026-06-12 local probe, the repo default is 20 modules/day and 20
+video uploads/day. The local API quota estimate is intentionally conservative;
+the daily runner passes `--ignore-upload-quota-estimate` so a stale local
+estimate does not silently cap the trial at a lower number.
+
+If YouTube returns a true video upload limit such as `uploadLimitExceeded` or a
+"daily upload limit reached" error, stop the queue and report the last
+successful upload count. If only transcript/caption upload returns
+`quotaExceeded` after the video, thumbnail, and playlist succeed, count the
+video as uploaded and report the caption as a retry item for the next quota
+window.

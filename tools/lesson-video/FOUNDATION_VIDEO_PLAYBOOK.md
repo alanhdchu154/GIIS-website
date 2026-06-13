@@ -1,6 +1,6 @@
 # Foundation Lesson Video Playbook
 
-Date: 2026-05-30
+Date: 2026-06-12
 Status: active for daily Umi/Codex-approved foundation production
 
 ## Decision
@@ -128,9 +128,14 @@ college admissions claims in foundation lesson titles or descriptions.
   `teaching-videos/_audit/course-design/<course-slug>.json`.
 - If course design fails, run the built-in safe repair path, then review again.
   Proceed only after the repaired course passes; report unresolved blockers.
-- Max modules per day: 8 during the current upload-cap trial.
+- Max modules per day: 20 during the current upload-cap trial.
 - Upload privacy: `unlisted`.
-- Upload path: `yt_queue.py upload --gate-ready --max 8 --privacy unlisted`.
+- Upload path: `yt_queue.py upload --gate-ready --max 20 --privacy unlisted`.
+- The local quota estimate is conservative and the daily runner may override it
+  during the trial. Stop only for a true video upload/channel-limit error.
+- If transcript/caption upload alone hits `quotaExceeded` after the video,
+  thumbnail, and playlist succeed, treat the video as uploaded and retry the
+  caption in a later quota window.
 - Website update: successful upload triggers `sync_channel.py --apply`, then
   the orchestrator can commit/push manifest and lesson metadata.
 - The legacy `daily_build.sh` and `tools/youtube-upload/daily.sh` wrappers were

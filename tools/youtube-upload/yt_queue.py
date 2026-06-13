@@ -25,8 +25,8 @@ How a lesson is classified:
 
 Usage:
   python3 tools/youtube-upload/yt_queue.py status
-  python3 tools/youtube-upload/yt_queue.py upload --max 8
-  python3 tools/youtube-upload/yt_queue.py upload --max 8 --privacy unlisted
+  python3 tools/youtube-upload/yt_queue.py upload --max 20
+  python3 tools/youtube-upload/yt_queue.py upload --max 20 --privacy unlisted
   python3 tools/youtube-upload/yt_queue.py upload --dry-run
 
 NOTE: this file is intentionally NOT named `queue.py` — that would shadow

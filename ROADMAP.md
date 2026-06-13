@@ -79,12 +79,16 @@ Status: active, Codex-managed, foundation-only.
 - Time: 07:00 CT daily.
 - Repo runner: `bash tools/lesson-video/foundation_daily.sh`
 - Scope: non-AP foundation modules only.
-- Max upload volume: 4/day.
+- Max upload volume: 20/day during the current upload-cap trial.
 - Upload rule: only `yt_queue.py upload --gate-ready`; never
   `upload_lesson.py --force-without-approval`.
 - Required gate: clean pass, score 100, MP4, transcript, contact sheet,
   reviewers, learning check, style manifest, and
   `approved_ready_to_upload.json`.
+- Current quota behavior: the local estimate is conservative; the pipeline may
+  ignore it during the trial. Stop only on a true video upload/channel-limit
+  error. Transcript/caption-only `quotaExceeded` after a successful video upload
+  should be reported as a retry item, not as a failed video upload.
 
 Next check:
 
@@ -93,9 +97,9 @@ Next check:
 - Before any push/deploy, finish browser/predeploy smoke, review the backend
   hardening and Prisma/webhook changes, and separate safe frontend/pipeline
   changes from Lightsail/db work if needed.
-- Monitor two consecutive 07:00 CT runs before expanding beyond the current
-  foundation cohort. Do not increase volume until cc output, release gate,
-  YouTube upload, and Learn Portal manifest sync all pass without manual rescue.
+- Monitor the 20/day trial before expanding to 25/day. Do not increase volume
+  unless cc output, release gate, YouTube upload, and Learn Portal manifest sync
+  all pass without manual rescue.
 - 2026-06-10 current lane: Biology Modules 4/5/6 were selected. M6 was approved
   by automation; M4/M5 failed the orchestrator gate initially but passed targeted
   `foundation_video_gate.py --render-mp4` reruns with score 100. Current checks

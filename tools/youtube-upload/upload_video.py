@@ -190,8 +190,8 @@ def main():
         vid = upload(args.video, args.title, description, tags, args.privacy)
     except HttpError as e:
         if b"quotaExceeded" in (e.content or b""):
-            sys.exit("error: daily upload quota exceeded (default = 6 videos/day).\n"
-                     "  Wait until tomorrow OR request a quota increase in GCP console.")
+            sys.exit("error: YouTube video upload quota exceeded.\n"
+                     "  Wait for the next quota window OR request a quota increase in GCP console.")
         raise
 
     if args.thumbnail:
