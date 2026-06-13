@@ -11,7 +11,7 @@ repeatably, while Umi remains the academic editor and release authority.
 This is the intended loop for every new foundation video:
 
 ```text
-02:00 / 11:00 / 19:00 CT Codex automation
+02:15 / 12:15 / 19:15 CT Codex automation
   -> call bash tools/lesson-video/foundation_daily.sh
   -> choose up to 7 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
@@ -78,7 +78,7 @@ Preferred scheduler: Codex automation.
 
 ```text
 ~/.codex/automations/giis-foundation-video-daily/automation.toml
-rrule = "FREQ=DAILY;BYHOUR=2,11,19;BYMINUTE=0;BYSECOND=0"
+rrule = "FREQ=DAILY;BYHOUR=2,12,19;BYMINUTE=15;BYSECOND=0"
 ```
 
 The automation's only scheduling job is to call the repo-owned runner:

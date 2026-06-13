@@ -90,7 +90,7 @@ Acceptance:
 
 - owner: Umi / Codex
 - mode: Split-work with Claude Code
-- schedule: Codex automation `giis-foundation-video-daily`, daily 02:00 / 11:00 / 19:00 CT
+- schedule: Codex automation `giis-foundation-video-daily`, daily 02:15 / 12:15 / 19:15 CT
 - runner: `bash tools/lesson-video/foundation_daily.sh`
 - scope: non-AP foundation modules only
 - batch size: max 7 modules / 7 uploads per run
