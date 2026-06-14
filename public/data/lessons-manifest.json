@@ -1,7 +1,20 @@
 {
-  "generated_at": "2026-06-13T18:40:44+00:00",
+  "generated_at": "2026-06-14T02:11:54+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "Environmental Science": [
+      {
+        "course": "Environmental Science",
+        "course_slug": "environmental-science",
+        "module_number": 1,
+        "module_title": "Introduction to Environmental Science",
+        "youtube_id": "1YSE7cMzaec",
+        "url": "https://youtu.be/1YSE7cMzaec",
+        "embed_url": "https://www.youtube.com/embed/1YSE7cMzaec",
+        "published_at": "2026-06-14T02:10:49Z",
+        "lesson_dir": "environmental-science-module-1-introduction-to-environmental-science-v2"
+      }
+    ],
     "Digital Literacy": [
       {
         "course": "Digital Literacy",
@@ -79,6 +92,17 @@
         "embed_url": "https://www.youtube.com/embed/IFuuzdZiR0M",
         "published_at": "2026-06-13T18:40:15Z",
         "lesson_dir": "digital-literacy-module-7-digital-communication-netiquette-v2"
+      },
+      {
+        "course": "Digital Literacy",
+        "course_slug": "digital-literacy",
+        "module_number": 8,
+        "module_title": "Digital Research Skills",
+        "youtube_id": "MxAUT-ZO8qw",
+        "url": "https://youtu.be/MxAUT-ZO8qw",
+        "embed_url": "https://www.youtube.com/embed/MxAUT-ZO8qw",
+        "published_at": "2026-06-14T02:10:40Z",
+        "lesson_dir": "digital-literacy-module-8-digital-research-skills-v2"
       }
     ],
     "Health & Wellness": [
@@ -811,6 +835,17 @@
   },
   "lessons": [
     {
+      "course": "Environmental Science",
+      "course_slug": "environmental-science",
+      "module_number": 1,
+      "module_title": "Introduction to Environmental Science",
+      "youtube_id": "1YSE7cMzaec",
+      "url": "https://youtu.be/1YSE7cMzaec",
+      "embed_url": "https://www.youtube.com/embed/1YSE7cMzaec",
+      "published_at": "2026-06-14T02:10:49Z",
+      "lesson_dir": "environmental-science-module-1-introduction-to-environmental-science-v2"
+    },
+    {
       "course": "Digital Literacy",
       "course_slug": "digital-literacy",
       "module_number": 1,
@@ -886,6 +921,17 @@
       "embed_url": "https://www.youtube.com/embed/IFuuzdZiR0M",
       "published_at": "2026-06-13T18:40:15Z",
       "lesson_dir": "digital-literacy-module-7-digital-communication-netiquette-v2"
+    },
+    {
+      "course": "Digital Literacy",
+      "course_slug": "digital-literacy",
+      "module_number": 8,
+      "module_title": "Digital Research Skills",
+      "youtube_id": "MxAUT-ZO8qw",
+      "url": "https://youtu.be/MxAUT-ZO8qw",
+      "embed_url": "https://www.youtube.com/embed/MxAUT-ZO8qw",
+      "published_at": "2026-06-14T02:10:40Z",
+      "lesson_dir": "digital-literacy-module-8-digital-research-skills-v2"
     },
     {
       "course": "Health & Wellness",
