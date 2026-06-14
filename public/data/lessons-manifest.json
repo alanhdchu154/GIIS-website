@@ -1,7 +1,20 @@
 {
-  "generated_at": "2026-06-14T02:11:54+00:00",
+  "generated_at": "2026-06-14T04:28:32+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "Geography": [
+      {
+        "course": "Geography",
+        "course_slug": "geography",
+        "module_number": 1,
+        "module_title": "Introduction to Geography",
+        "youtube_id": "VW0z3byatVE",
+        "url": "https://youtu.be/VW0z3byatVE",
+        "embed_url": "https://www.youtube.com/embed/VW0z3byatVE",
+        "published_at": "2026-06-14T04:28:01Z",
+        "lesson_dir": "geography-module-1-introduction-to-geography-v2"
+      }
+    ],
     "Environmental Science": [
       {
         "course": "Environmental Science",
@@ -13,6 +26,39 @@
         "embed_url": "https://www.youtube.com/embed/1YSE7cMzaec",
         "published_at": "2026-06-14T02:10:49Z",
         "lesson_dir": "environmental-science-module-1-introduction-to-environmental-science-v2"
+      },
+      {
+        "course": "Environmental Science",
+        "course_slug": "environmental-science",
+        "module_number": 2,
+        "module_title": "Ecosystems & Biomes",
+        "youtube_id": "zTl_UQq9U9g",
+        "url": "https://youtu.be/zTl_UQq9U9g",
+        "embed_url": "https://www.youtube.com/embed/zTl_UQq9U9g",
+        "published_at": "2026-06-14T04:27:40Z",
+        "lesson_dir": "environmental-science-module-2-ecosystems-biomes-v2"
+      },
+      {
+        "course": "Environmental Science",
+        "course_slug": "environmental-science",
+        "module_number": 3,
+        "module_title": "Population Ecology",
+        "youtube_id": "EYBkOvz4aSs",
+        "url": "https://youtu.be/EYBkOvz4aSs",
+        "embed_url": "https://www.youtube.com/embed/EYBkOvz4aSs",
+        "published_at": "2026-06-14T04:27:47Z",
+        "lesson_dir": "environmental-science-module-3-population-ecology-v2"
+      },
+      {
+        "course": "Environmental Science",
+        "course_slug": "environmental-science",
+        "module_number": 4,
+        "module_title": "Biodiversity & Conservation",
+        "youtube_id": "6GEvtF1pYbo",
+        "url": "https://youtu.be/6GEvtF1pYbo",
+        "embed_url": "https://www.youtube.com/embed/6GEvtF1pYbo",
+        "published_at": "2026-06-14T04:27:55Z",
+        "lesson_dir": "environmental-science-module-4-biodiversity-conservation-v2"
       }
     ],
     "Digital Literacy": [
@@ -835,6 +881,17 @@
   },
   "lessons": [
     {
+      "course": "Geography",
+      "course_slug": "geography",
+      "module_number": 1,
+      "module_title": "Introduction to Geography",
+      "youtube_id": "VW0z3byatVE",
+      "url": "https://youtu.be/VW0z3byatVE",
+      "embed_url": "https://www.youtube.com/embed/VW0z3byatVE",
+      "published_at": "2026-06-14T04:28:01Z",
+      "lesson_dir": "geography-module-1-introduction-to-geography-v2"
+    },
+    {
       "course": "Environmental Science",
       "course_slug": "environmental-science",
       "module_number": 1,
@@ -844,6 +901,39 @@
       "embed_url": "https://www.youtube.com/embed/1YSE7cMzaec",
       "published_at": "2026-06-14T02:10:49Z",
       "lesson_dir": "environmental-science-module-1-introduction-to-environmental-science-v2"
+    },
+    {
+      "course": "Environmental Science",
+      "course_slug": "environmental-science",
+      "module_number": 2,
+      "module_title": "Ecosystems & Biomes",
+      "youtube_id": "zTl_UQq9U9g",
+      "url": "https://youtu.be/zTl_UQq9U9g",
+      "embed_url": "https://www.youtube.com/embed/zTl_UQq9U9g",
+      "published_at": "2026-06-14T04:27:40Z",
+      "lesson_dir": "environmental-science-module-2-ecosystems-biomes-v2"
+    },
+    {
+      "course": "Environmental Science",
+      "course_slug": "environmental-science",
+      "module_number": 3,
+      "module_title": "Population Ecology",
+      "youtube_id": "EYBkOvz4aSs",
+      "url": "https://youtu.be/EYBkOvz4aSs",
+      "embed_url": "https://www.youtube.com/embed/EYBkOvz4aSs",
+      "published_at": "2026-06-14T04:27:47Z",
+      "lesson_dir": "environmental-science-module-3-population-ecology-v2"
+    },
+    {
+      "course": "Environmental Science",
+      "course_slug": "environmental-science",
+      "module_number": 4,
+      "module_title": "Biodiversity & Conservation",
+      "youtube_id": "6GEvtF1pYbo",
+      "url": "https://youtu.be/6GEvtF1pYbo",
+      "embed_url": "https://www.youtube.com/embed/6GEvtF1pYbo",
+      "published_at": "2026-06-14T04:27:55Z",
+      "lesson_dir": "environmental-science-module-4-biodiversity-conservation-v2"
     },
     {
       "course": "Digital Literacy",
