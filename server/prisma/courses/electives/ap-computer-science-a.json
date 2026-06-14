@@ -21,14 +21,14 @@
       "video2Note": "CodingBat — Warmup-1 Practice Problems",
       "practiceUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "practiceNote": "Khan Academy — AP Computer Science A practice for this unit: Primitive Types & Variables.",
-      "assignment": "Write a Java program that converts a temperature from Celsius to Fahrenheit and from Fahrenheit to Celsius. The program should accept a number and a unit ('C' or 'F') from the user and print the conversion. Demonstrate that you understand integer vs. double division by testing 5/2 and 5.0/2 and explaining the difference in a code comment.",
+      "assignment": "Write a Java program that converts a temperature from Celsius to Fahrenheit and from Fahrenheit to Celsius. The program should accept a number and a unit ('C' or 'F') from the user and print the conversion. Demonstrate that you understand integer vs. double division by testing 5/2 and 5.0/2 and explaining the difference in a code comment. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Primitive Types & Variables module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3.5
     },
     {
       "order": 2,
       "title": "Using Objects: String, Math, and Wrapper Classes",
       "titleZh": "使用对象：String、Math 与包装类",
-      "objectives": "Distinguish primitive types from reference types; create String objects and call methods (length, substring, indexOf, equals, compareTo); use Math methods (sqrt, pow, abs, random); understand Integer and Double wrapper classes; recognize that Strings are immutable.",
+      "objectives": "Distinguish primitive types from reference types; create String objects and call methods (length, substring, indexOf, equals, compareTo); use Math methods (sqrt, pow, abs, random); understand Integer and Double wrapper classes; recognize that Strings are immutable. Students will use vocabulary, models, and evidence to interpret examples, support scientific explanations, and connect the concept to the module assignment.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Khan Academy — AP Computer Science A using objects review",
       "videoUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
@@ -36,8 +36,8 @@
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/String-1",
-      "practiceNote": "CodingBat — String-1 (15 problems)",
-      "assignment": "Write a program that takes a person's full name as a single String ('First Last' format) and prints: their initials, the length of the last name only, the name in uppercase, and whether the first name comes before the last name alphabetically. Use only String methods — no array splitting yet.",
+      "practiceNote": "CodingBat — String-1 (15 problems) — for independent practice on Using Objects: String, Math, and Wrapper Classes before submitting the assignment",
+      "assignment": "Write a program that takes a person's full name as a single String ('First Last' format) and prints: their initials, the length of the last name only, the name in uppercase, and whether the first name comes before the last name alphabetically. Use only String methods — no array splitting yet. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Using Objects: String, Math, and Wrapper Classes module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -53,7 +53,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/Logic-2",
       "practiceNote": "CodingBat — Logic-2 (boolean reasoning, 12 problems)",
-      "assignment": "Write a program that classifies a triangle given three side lengths. Output 'equilateral', 'isosceles', 'scalene', or 'not a triangle' based on the rules (each side less than the sum of the other two). Include three test cases that exercise each branch and one that tests the 'not a triangle' case.",
+      "assignment": "Write a program that classifies a triangle given three side lengths. Output 'equilateral', 'isosceles', 'scalene', or 'not a triangle' based on the rules (each side less than the sum of the other two). Include three test cases that exercise each branch and one that tests the 'not a triangle' case. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Booleans & if Statements module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -69,14 +69,14 @@
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/AP-1",
       "practiceNote": "CodingBat — AP-1 (loops and arrays, 15 problems)",
-      "assignment": "Write three loop programs: (1) print the multiplication table from 1 to 10, (2) compute the sum of all even numbers from 2 to N where N is given, (3) print the digits of an integer in reverse order using a while loop with division and modulus. Include trace tables for the first two iterations of each.",
+      "assignment": "Write three loop programs: (1) print the multiplication table from 1 to 10, (2) compute the sum of all even numbers from 2 to N where N is given, (3) print the digits of an integer in reverse order using a while loop with division and modulus. Include trace tables for the first two iterations of each. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Iteration: while and for Loops module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3.5
     },
     {
       "order": 5,
       "title": "Nested Loops & Loop Patterns",
       "titleZh": "嵌套循环与循环模式",
-      "objectives": "Write nested loops to traverse two-dimensional patterns; recognize the standard patterns: counter, accumulator, max/min, sentinel-controlled; understand loop complexity (single loop vs. nested) at an intuitive level.",
+      "objectives": "Write nested loops to traverse two-dimensional patterns; recognize the standard patterns: counter, accumulator, max/min, sentinel-controlled; understand loop complexity (single loop vs. nested) at an intuitive level. Students will use vocabulary, models, and evidence to interpret examples, support scientific explanations, and connect the concept to the module assignment.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Khan Academy — AP Computer Science A nested iteration review",
       "videoUrl": "https://www.youtube.com/watch?v=8hly31xKli0",
@@ -85,14 +85,14 @@
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/AP-1",
       "practiceNote": "CodingBat — AP-1 (loops and arrays mixed)",
-      "assignment": "Write three nested-loop programs: (1) print a right-angled triangle of asterisks of height N, (2) print a multiplication table grid 1..10 × 1..10 with neat column alignment, (3) given a 2D pattern of letters as a String[][], find the most common letter. Add a comment estimating how many comparisons each program does for input N or grid size G.",
+      "assignment": "Write three nested-loop programs: (1) print a right-angled triangle of asterisks of height N, (2) print a multiplication table grid 1..10 × 1..10 with neat column alignment, (3) given a 2D pattern of letters as a String[][], find the most common letter. Add a comment estimating how many comparisons each program does for input N or grid size G. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Nested Loops & Loop Patterns module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3.5
     },
     {
       "order": 6,
       "title": "Writing Classes & Methods",
       "titleZh": "编写类与方法",
-      "objectives": "Define a class with instance variables and methods; pass parameters and return values correctly; understand method signatures and overloading; document methods with concise comments and parameter descriptions.",
+      "objectives": "Define a class with instance variables and methods; pass parameters and return values correctly; understand method signatures and overloading; document methods with concise comments and parameter descriptions. Students will use vocabulary, models, and evidence to interpret examples, support scientific explanations, and connect the concept to the module assignment.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Runestone CSAwesome — Topic 5: Writing Classes",
       "videoUrl": "https://owl.purdue.edu/owl/",
@@ -101,7 +101,7 @@
       "video2Note": "",
       "practiceUrl": "https://owl.purdue.edu/owl_exercises/grammar_exercises/index.html",
       "practiceNote": "Purdue OWL — Open writing and grammar exercises: Writing Classes & Methods.",
-      "assignment": "Design a Rectangle class with width and height instance variables, a constructor, and methods getArea(), getPerimeter(), isSquare(), and scale(double factor). Write a separate driver class that creates three Rectangles and prints each one's area, perimeter, and whether it is a square.",
+      "assignment": "Design a Rectangle class with width and height instance variables, a constructor, and methods getArea(), getPerimeter(), isSquare(), and scale(double factor). Write a separate driver class that creates three Rectangles and prints each one's area, perimeter, and whether it is a square. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Writing Classes & Methods module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 4
     },
     {
@@ -112,12 +112,12 @@
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Runestone CSAwesome — Constructors and Encapsulation",
       "videoUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
-      "videoNote": "Baeldung — Encapsulation in Java",
+      "videoNote": "Baeldung — Encapsulation in Java — for a visual explanation of Constructors, Encapsulation & this before guided practice",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "practiceNote": "Khan Academy — AP Computer Science A practice for this unit: Constructors, Encapsulation & this.",
-      "assignment": "Refactor your Rectangle class from Module 6: make all instance variables private, add a no-arg constructor (default 1×1) and a two-arg constructor, validate inputs (no negative dimensions — throw IllegalArgumentException), and add a setWidth/setHeight pair that re-validates. Write tests that demonstrate the validation works.",
+      "assignment": "Refactor your Rectangle class from Module 6: make all instance variables private, add a no-arg constructor (default 1×1) and a two-arg constructor, validate inputs (no negative dimensions — throw IllegalArgumentException), and add a setWidth/setHeight pair that re-validates. Write tests that demonstrate the validation works. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Constructors, Encapsulation & this module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3.5
     },
     {
@@ -133,7 +133,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/AP-1",
       "practiceNote": "CodingBat — AP-1 problems involving counters",
-      "assignment": "Add a static class variable 'rectanglesCreated' to your Rectangle class that tracks how many Rectangle objects have been instantiated. Add a static method getRectangleCount(). Demonstrate from a driver: create 5 Rectangles, then print getRectangleCount() — it should be 5. Explain in a comment why this variable cannot be an instance variable.",
+      "assignment": "Add a static class variable 'rectanglesCreated' to your Rectangle class that tracks how many Rectangle objects have been instantiated. Add a static method getRectangleCount(). Demonstrate from a driver: create 5 Rectangles, then print getRectangleCount() — it should be 5. Explain in a comment why this variable cannot be an instance variable. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Static vs. Instance module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -144,12 +144,12 @@
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Runestone CSAwesome — Topic 6: Arrays",
       "videoUrl": "https://www.youtube.com/watch?v=NptnmWvkbTw",
-      "videoNote": "Bro Code — 1D Arrays in Java",
+      "videoNote": "Bro Code — 1D Arrays in Java — for a visual explanation of Arrays (1D) before guided practice",
       "video2Url": "https://www.codingbat.com/java/Array-1",
-      "video2Note": "CodingBat — Array-1 (15 problems)",
+      "video2Note": "CodingBat — Array-1 (15 problems) — for a visual explanation of Arrays (1D) before guided practice",
       "practiceUrl": "https://www.codingbat.com/java/Array-2",
       "practiceNote": "CodingBat — Array-2 (loops + arrays, 15 problems)",
-      "assignment": "Write four methods that operate on an int[] array: (1) sum, (2) max, (3) reverse (in place), (4) countAbove(int threshold). Write a driver that creates an array, prints it, calls each method, and prints results. Explain in a comment why reverse modifies the original array but sum returns a new value.",
+      "assignment": "Write four methods that operate on an int[] array: (1) sum, (2) max, (3) reverse (in place), (4) countAbove(int threshold). Write a driver that creates an array, prints it, calls each method, and prints results. Explain in a comment why reverse modifies the original array but sum returns a new value. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Arrays (1D) module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3.5
     },
     {
@@ -165,14 +165,14 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "practiceNote": "Khan Academy — AP Computer Science A practice for this unit: ArrayList.",
-      "assignment": "Write a TodoList class backed by an ArrayList<String>. Methods: add(String task), removeAt(int index), markDone(int index) (which prepends '[X] '), printAll(). Write a driver that adds 5 tasks, marks 2 done, removes 1, and prints the list. Then convert the final list to a String[] and print its length.",
+      "assignment": "Write a TodoList class backed by an ArrayList<String>. Methods: add(String task), removeAt(int index), markDone(int index) (which prepends '[X] '), printAll(). Write a driver that adds 5 tasks, marks 2 done, removes 1, and prints the list. Then convert the final list to a String[] and print its length. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the ArrayList module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3.5
     },
     {
       "order": 11,
       "title": "2D Arrays",
       "titleZh": "二维数组",
-      "objectives": "Declare and initialize 2D arrays with [rows][cols]; iterate with nested loops in row-major order; understand 2D arrays as arrays of arrays (jagged arrays possible); apply to grid problems (game boards, image pixels, matrices).",
+      "objectives": "Declare and initialize 2D arrays with [rows][cols]; iterate with nested loops in row-major order; understand 2D arrays as arrays of arrays (jagged arrays possible); apply to grid problems (game boards, image pixels, matrices). Students will use vocabulary, models, and evidence to interpret examples, support scientific explanations, and connect the concept to the module assignment.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Runestone CSAwesome — Topic 8: 2D Arrays",
       "videoUrl": "https://www.youtube.com/watch?v=8hly31xKli0",
@@ -181,14 +181,14 @@
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/AP-1",
       "practiceNote": "CodingBat — AP-1 problems involving grids",
-      "assignment": "Implement a Tic-Tac-Toe board as char[3][3]. Write methods: printBoard(), placeMove(int row, int col, char player), isWinner(char player), and isFull(). Demonstrate with a driver that simulates a complete game (alternating X and O) until someone wins or the board is full.",
+      "assignment": "Implement a Tic-Tac-Toe board as char[3][3]. Write methods: printBoard(), placeMove(int row, int col, char player), isWinner(char player), and isFull(). Demonstrate with a driver that simulates a complete game (alternating X and O) until someone wins or the board is full. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the 2D Arrays module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 4
     },
     {
       "order": 12,
       "title": "Inheritance & Polymorphism",
       "titleZh": "继承与多态",
-      "objectives": "Define subclasses with extends; call super() in constructors; override methods (with @Override); use polymorphism (a parent reference holding a child object); understand the relationship between Object class and all other classes; cast safely with instanceof.",
+      "objectives": "Define subclasses with extends; call super() in constructors; override methods (with @Override); use polymorphism (a parent reference holding a child object); understand the relationship between Object class and all other classes; cast safely with instanceof. Students will use vocabulary, models, and evidence to interpret examples, support scientific explanations, and connect the concept to the module assignment.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Runestone CSAwesome — Topic 9: Inheritance",
       "videoUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
@@ -197,7 +197,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "practiceNote": "Khan Academy — AP Computer Science A practice for this unit: Inheritance & Polymorphism.",
-      "assignment": "Build a small class hierarchy: Animal (parent) → Dog and Cat (children). Animal has name, age, and a speak() method that prints 'Some sound'. Dog overrides speak() to print 'Woof'; Cat to print 'Meow'. Write a driver that creates an Animal[] containing a Dog and a Cat, and loops through calling speak() — demonstrate polymorphism in action.",
+      "assignment": "Build a small class hierarchy: Animal (parent) → Dog and Cat (children). Animal has name, age, and a speak() method that prints 'Some sound'. Dog overrides speak() to print 'Woof'; Cat to print 'Meow'. Write a driver that creates an Animal[] containing a Dog and a Cat, and loops through calling speak() — demonstrate polymorphism in action. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Inheritance & Polymorphism module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 4
     },
     {
@@ -208,19 +208,19 @@
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Runestone CSAwesome — Topic 10: Recursion",
       "videoUrl": "https://www.youtube.com/watch?v=B0NtAFf4bvU",
-      "videoNote": "Bro Code — Recursion Visualized",
+      "videoNote": "Bro Code — Recursion Visualized — for a visual explanation of Recursion before guided practice",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://www.codingbat.com/java/Recursion-1",
       "practiceNote": "CodingBat — Recursion-1 (15 problems)",
-      "assignment": "Implement these methods recursively: factorial(int n), fibonacci(int n), sumDigits(int n), and palindromeCheck(String s). For at least one method, draw a call stack diagram showing every recursive call for an input of 4. Compare runtime intuitively (which one would be slow on n=40 and why).",
+      "assignment": "Implement these methods recursively: factorial(int n), fibonacci(int n), sumDigits(int n), and palindromeCheck(String s). For at least one method, draw a call stack diagram showing every recursive call for an input of 4. Compare runtime intuitively (which one would be slow on n=40 and why). Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Recursion module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 4
     },
     {
       "order": 14,
       "title": "Sorting & Searching Algorithms",
       "titleZh": "排序与搜索算法",
-      "objectives": "Implement and trace selection sort, insertion sort, and merge sort; implement linear search and binary search; understand the requirement that binary search needs sorted input; recognize O(n²) vs. O(n log n) vs. O(log n) at an intuitive level.",
+      "objectives": "Implement and trace selection sort, insertion sort, and merge sort; implement linear search and binary search; understand the requirement that binary search needs sorted input; recognize O(n²) vs. O(n log n) vs. O(log n) at an intuitive level. Students will use vocabulary, models, and evidence to interpret examples, support scientific explanations, and connect the concept to the module assignment.",
       "readingUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "readingNote": "Runestone CSAwesome — Topic 11: Sorting and Searching",
       "videoUrl": "https://www.youtube.com/watch?v=ROalU379l3U",
@@ -229,7 +229,7 @@
       "video2Note": "MIT OpenCourseWare 6.006 — Binary Search Trees",
       "practiceUrl": "https://www.khanacademy.org/computing/ap-computer-science-a",
       "practiceNote": "Khan Academy — AP Computer Science A practice for this unit: Sorting & Searching Algorithms.",
-      "assignment": "Implement selectionSort, insertionSort, and binarySearch on int[] arrays. Write a driver that builds an array of 20 random ints, sorts it with each algorithm (verify all three give the same sorted result), then runs binarySearch on the sorted output for 5 different target values (3 in the array, 2 not in the array). Print the index returned (or -1).",
+      "assignment": "Implement selectionSort, insertionSort, and binarySearch on int[] arrays. Write a driver that builds an array of 20 random ints, sorts it with each algorithm (verify all three give the same sorted result), then runs binarySearch on the sorted output for 5 different target values (3 in the array, 2 not in the array). Print the index returned (or -1). Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Sorting & Searching Algorithms module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 4.5
     }
   ],

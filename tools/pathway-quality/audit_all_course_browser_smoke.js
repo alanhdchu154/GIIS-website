@@ -144,6 +144,7 @@ async function checkRoute(page, baseUrl, course, targetPath, viewportName) {
     if (targetPath.endsWith('/syllabus')) {
       if (!titleText.includes(course.name)) issues.push(`syllabus h1 does not include course name "${course.name}"`);
       if (!bodyText.includes('Learning Objectives')) issues.push('syllabus missing learning objectives text');
+      if (!bodyText.includes('Expert Lens')) issues.push('syllabus missing expert lens text');
     } else if (targetPath.includes('/module/')) {
       const moduleOrder = Number(targetPath.match(/\/module\/(\d+)/)?.[1]);
       const expectedModule = (course.modules || []).find((mod) => Number(mod.order) === moduleOrder);
@@ -151,6 +152,7 @@ async function checkRoute(page, baseUrl, course, targetPath, viewportName) {
         issues.push(`module h1 does not include module ${moduleOrder} title "${expectedModule.title}"`);
       }
       if (!bodyText.includes('Learning Objectives')) issues.push('module page missing learning objectives');
+      if (!bodyText.includes('Expert Lens')) issues.push('module page missing expert lens');
       if (!bodyText.includes('Assignment')) issues.push('module page missing assignment section');
     } else {
       if (!titleText.includes(course.name)) issues.push(`course h1 does not include course name "${course.name}"`);

@@ -1,6 +1,6 @@
 # All-Course Showcase Readiness QA
 
-Generated: 2026-06-05T03:34:08.637Z
+Generated: 2026-06-14T20:33:23.777Z
 
 Summary: 93 pass / 0 warn / 0 fail (93 courses)
 

@@ -1,0 +1,2069 @@
+{
+  "generatedAt": "2026-06-14T20:33:16.435Z",
+  "summary": {
+    "total": 93,
+    "pass": 93,
+    "warn": 0,
+    "fail": 0,
+    "metrics": {
+      "failIssues": 0,
+      "warnIssues": 0,
+      "modules": 993,
+      "assignments": 993,
+      "quizQuestions": 3969,
+      "midtermQuestions": 1395,
+      "finalQuestions": 1860,
+      "mcQuestions": 6733,
+      "shortQuestions": 299,
+      "fillQuestions": 192
+    }
+  },
+  "courses": [
+    {
+      "file": "server/prisma/courses/psychology/abnormal-psychology.json",
+      "slug": "abnormal-psychology",
+      "name": "Abnormal Psychology",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 42,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 75,
+        "shortQuestions": 0,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/academic-writing.json",
+      "slug": "academic-writing",
+      "name": "Academic Writing",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/algebra-i.json",
+      "slug": "algebra-i",
+      "name": "Algebra I",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 71,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 96,
+        "shortQuestions": 1,
+        "fillQuestions": 9
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/algebra-ii.json",
+      "slug": "algebra-ii",
+      "name": "Algebra II",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 74,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 93,
+        "shortQuestions": 5,
+        "fillQuestions": 11
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/science/ap-biology.json",
+      "slug": "ap-biology",
+      "name": "AP Biology",
+      "department": "Science",
+      "status": "pass",
+      "metrics": {
+        "modules": 16,
+        "assignments": 16,
+        "quizQuestions": 72,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 104,
+        "shortQuestions": 0,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/ap-calculus-ab.json",
+      "slug": "ap-calculus-ab",
+      "name": "AP Calculus AB",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 42,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 77,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/ap-computer-science-a.json",
+      "slug": "ap-computer-science-a",
+      "name": "AP Computer Science A",
+      "department": "Technology",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 42,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 77,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/ap-human-geography.json",
+      "slug": "ap-human-geography",
+      "name": "AP Human Geography",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 16,
+        "assignments": 16,
+        "quizQuestions": 64,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 86,
+        "shortQuestions": 13,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/ap-psychology.json",
+      "slug": "ap-psychology",
+      "name": "AP Psychology",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 16,
+        "assignments": 16,
+        "quizQuestions": 59,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 89,
+        "shortQuestions": 0,
+        "fillQuestions": 5
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/ap-statistics.json",
+      "slug": "ap-statistics",
+      "name": "AP Statistics",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 16,
+        "assignments": 16,
+        "quizQuestions": 77,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 104,
+        "shortQuestions": 0,
+        "fillQuestions": 8
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/pe/athletic-training.json",
+      "slug": "athletic-training",
+      "name": "Athletic Training",
+      "department": "Physical Education",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 63,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/behavioral-science.json",
+      "slug": "behavioral-science",
+      "name": "Behavioral Science",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/science/biology.json",
+      "slug": "biology",
+      "name": "Biology",
+      "department": "Science",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 66,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 98,
+        "shortQuestions": 0,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/science/biology-advanced.json",
+      "slug": "biology-advanced",
+      "name": "Biology Advanced",
+      "department": "Science",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 66,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 100,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/business-ethics-critical-thinking.json",
+      "slug": "business-ethics-critical-thinking",
+      "name": "Business Ethics & Critical Thinking",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 5,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/business-law.json",
+      "slug": "business-law",
+      "name": "Business Law",
+      "department": "Business",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 41,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 75,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/business-management-entrepreneurship.json",
+      "slug": "business-management-entrepreneurship",
+      "name": "Business Management or Entrepreneurship",
+      "department": "Business",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 31,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 61,
+        "shortQuestions": 0,
+        "fillQuestions": 5
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/business-media-literacy.json",
+      "slug": "business-media-literacy",
+      "name": "Business Media Literacy",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 61,
+        "shortQuestions": 3,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/business-research-methods.json",
+      "slug": "business-research-methods",
+      "name": "Business Research Methods",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 49,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 76,
+        "shortQuestions": 6,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/business-strategy-writing.json",
+      "slug": "business-strategy-writing",
+      "name": "Business Strategy & Writing",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 60,
+        "shortQuestions": 4,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/business-technology-digital-literacy.json",
+      "slug": "business-technology-digital-literacy",
+      "name": "Business Technology & Digital Literacy",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 31,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 58,
+        "shortQuestions": 4,
+        "fillQuestions": 4
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/business-writing.json",
+      "slug": "business-writing",
+      "name": "Business Writing",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 58,
+        "shortQuestions": 5,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/calculus.json",
+      "slug": "calculus",
+      "name": "Calculus",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 72,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 96,
+        "shortQuestions": 0,
+        "fillQuestions": 11
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/science/chemistry.json",
+      "slug": "chemistry",
+      "name": "Chemistry",
+      "department": "Science",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 69,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 93,
+        "shortQuestions": 6,
+        "fillQuestions": 5
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/cognitive-psychology.json",
+      "slug": "cognitive-psychology",
+      "name": "Cognitive Psychology",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/college-research-writing.json",
+      "slug": "college-research-writing",
+      "name": "College Research & Writing",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 63,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/communication-studies.json",
+      "slug": "communication-studies",
+      "name": "Communication Studies",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/corporate-finance.json",
+      "slug": "corporate-finance",
+      "name": "Corporate Finance",
+      "department": "Business",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 41,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 74,
+        "shortQuestions": 0,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/counseling-mental-health.json",
+      "slug": "counseling-mental-health",
+      "name": "Counseling & Mental Health Studies",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 41,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 74,
+        "shortQuestions": 0,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/digital-literacy.json",
+      "slug": "digital-literacy",
+      "name": "Digital Literacy",
+      "department": "Technology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/digital-marketing.json",
+      "slug": "digital-marketing",
+      "name": "Digital Marketing",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 60,
+        "shortQuestions": 3,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/digital-media-society.json",
+      "slug": "digital-media-society",
+      "name": "Digital Media & Society",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 45,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 70,
+        "shortQuestions": 10,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/economics.json",
+      "slug": "economics",
+      "name": "Economics",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 76,
+        "shortQuestions": 5,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/economics-advanced.json",
+      "slug": "economics-advanced",
+      "name": "Economics Advanced",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 48,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 80,
+        "shortQuestions": 0,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/economics-seminar.json",
+      "slug": "economics-seminar",
+      "name": "Economics Seminar",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 76,
+        "shortQuestions": 5,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-i.json",
+      "slug": "english-i",
+      "name": "English I",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 50,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 77,
+        "shortQuestions": 4,
+        "fillQuestions": 4
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing.json",
+      "slug": "english-i-writing",
+      "name": "English I - Writing",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 74,
+        "shortQuestions": 6,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-i-writing-focus.json",
+      "slug": "english-i-writing-focus",
+      "name": "English I - Writing Focus",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 48,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 81,
+        "shortQuestions": 0,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii.json",
+      "slug": "english-ii",
+      "name": "English II",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 76,
+        "shortQuestions": 5,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-ii-literature.json",
+      "slug": "english-ii-literature",
+      "name": "English II - Literature",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 78,
+        "shortQuestions": 4,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "slug": "english-iii",
+      "name": "English III",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 78,
+        "shortQuestions": 4,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii-literature.json",
+      "slug": "english-iii-literature",
+      "name": "English III - Literature",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 78,
+        "shortQuestions": 4,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-advanced-composition.json",
+      "slug": "english-iv-advanced-composition",
+      "name": "English IV - Advanced Composition",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 78,
+        "shortQuestions": 4,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-analytical-writing.json",
+      "slug": "english-iv-analytical-writing",
+      "name": "English IV - Analytical Writing",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 82,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-media-analytical-writing.json",
+      "slug": "english-iv-media-analytical-writing",
+      "name": "English IV - Media & Analytical Writing",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 82,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-media-writing.json",
+      "slug": "english-iv-media-writing",
+      "name": "English IV - Advanced Composition / Media Writing",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 54,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 77,
+        "shortQuestions": 12,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-writing.json",
+      "slug": "english-iv-writing",
+      "name": "English IV - Writing & Communication",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 78,
+        "shortQuestions": 4,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/entrepreneurship-fundamentals.json",
+      "slug": "entrepreneurship-fundamentals",
+      "name": "Entrepreneurship Fundamentals",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 58,
+        "shortQuestions": 5,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/science/environmental-science.json",
+      "slug": "environmental-science",
+      "name": "Environmental Science",
+      "department": "Science",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 66,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 94,
+        "shortQuestions": 4,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/ethics-critical-thinking.json",
+      "slug": "ethics-critical-thinking",
+      "name": "Ethics & Critical Thinking",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/experimental-psychology.json",
+      "slug": "experimental-psychology",
+      "name": "Experimental Psychology",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/pe/fitness-leadership.json",
+      "slug": "fitness-leadership",
+      "name": "Fitness Leadership",
+      "department": "Physical Education",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/geography.json",
+      "slug": "geography",
+      "name": "Geography",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 62,
+        "shortQuestions": 2,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/geometry.json",
+      "slug": "geometry",
+      "name": "Geometry",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 74,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 92,
+        "shortQuestions": 4,
+        "fillQuestions": 13
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/global-economics-politics.json",
+      "slug": "global-economics-politics",
+      "name": "Global Economics & Politics",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 5,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/government.json",
+      "slug": "government",
+      "name": "Government",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 48,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 78,
+        "shortQuestions": 4,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/pe/health-nutrition.json",
+      "slug": "health-nutrition",
+      "name": "Health and Nutrition",
+      "department": "Physical Education",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/pe/health-wellness.json",
+      "slug": "health-wellness",
+      "name": "Health & Wellness",
+      "department": "Physical Education",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/human-development.json",
+      "slug": "human-development",
+      "name": "Human Development",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 63,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/intro-business-economics.json",
+      "slug": "intro-business-economics",
+      "name": "Introduction to Business & Economics",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 58,
+        "shortQuestions": 6,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/intro-communication.json",
+      "slug": "intro-communication",
+      "name": "Introduction to Communication",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/intro-economics.json",
+      "slug": "intro-economics",
+      "name": "Introduction to Economics",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 31,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 63,
+        "shortQuestions": 0,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/intro-psychology.json",
+      "slug": "intro-psychology",
+      "name": "Introduction to Psychology",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 32,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 60,
+        "shortQuestions": 0,
+        "fillQuestions": 7
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/leadership-communication.json",
+      "slug": "leadership-communication",
+      "name": "Leadership Communication",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 60,
+        "shortQuestions": 4,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/marketing-basics.json",
+      "slug": "marketing-basics",
+      "name": "Marketing Basics",
+      "department": "Business",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/marketing-communication.json",
+      "slug": "marketing-communication",
+      "name": "Marketing & Communication",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 31,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 5,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/media-psychology.json",
+      "slug": "media-psychology",
+      "name": "Media Psychology",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 40,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 75,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/media-society.json",
+      "slug": "media-society",
+      "name": "Media & Society",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/media-studies.json",
+      "slug": "media-studies",
+      "name": "Media Studies",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/organizational-behavior-communication.json",
+      "slug": "organizational-behavior-communication",
+      "name": "Organizational Behavior & Communication",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 58,
+        "shortQuestions": 4,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/personal-finance-applied-economics.json",
+      "slug": "personal-finance-applied-economics",
+      "name": "Personal Finance / Applied Economics",
+      "department": "Business",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 41,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 73,
+        "shortQuestions": 0,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/pe/physical-education.json",
+      "slug": "physical-education",
+      "name": "Physical Education",
+      "department": "Physical Education",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/science/physics-fundamentals.json",
+      "slug": "physics-fundamentals",
+      "name": "Physics Fundamentals",
+      "department": "Science",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 67,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 93,
+        "shortQuestions": 6,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/science/physics-mechanics.json",
+      "slug": "physics-mechanics",
+      "name": "Physics - Mechanics",
+      "department": "Science",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 68,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 97,
+        "shortQuestions": 0,
+        "fillQuestions": 6
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/pre-calculus.json",
+      "slug": "pre-calculus",
+      "name": "Pre-Calculus",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 71,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 92,
+        "shortQuestions": 6,
+        "fillQuestions": 8
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/principles-of-marketing.json",
+      "slug": "principles-of-marketing",
+      "name": "Principles of Marketing",
+      "department": "Electives",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 4,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/psychology.json",
+      "slug": "psychology",
+      "name": "Psychology",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 63,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/psychology-foundations.json",
+      "slug": "psychology-foundations",
+      "name": "Psychology Foundations",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 61,
+        "shortQuestions": 0,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/psychology-seminar-capstone.json",
+      "slug": "psychology-seminar-capstone",
+      "name": "Psychology Seminar / Capstone",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 40,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 75,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/public-speaking.json",
+      "slug": "public-speaking",
+      "name": "Public Speaking",
+      "department": "English",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/research-methods-social-science.json",
+      "slug": "research-methods-social-science",
+      "name": "Research Methods in Social Science",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 54,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 77,
+        "shortQuestions": 12,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/psychology/social-psychology.json",
+      "slug": "social-psychology",
+      "name": "Social Psychology",
+      "department": "Psychology",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/sociology.json",
+      "slug": "sociology",
+      "name": "Sociology",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 49,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 76,
+        "shortQuestions": 5,
+        "fillQuestions": 3
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/pe/sports-management-basics.json",
+      "slug": "sports-management-basics",
+      "name": "Sports Management Basics",
+      "department": "Business",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/pe/sports-management-leadership.json",
+      "slug": "sports-management-leadership",
+      "name": "Sports Management & Leadership",
+      "department": "Business",
+      "status": "pass",
+      "metrics": {
+        "modules": 11,
+        "assignments": 11,
+        "quizQuestions": 41,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 74,
+        "shortQuestions": 0,
+        "fillQuestions": 2
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/pe/sports-psychology.json",
+      "slug": "sports-psychology",
+      "name": "Sports Psychology",
+      "department": "Physical Education",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/statistics.json",
+      "slug": "statistics",
+      "name": "Statistics",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 70,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 95,
+        "shortQuestions": 3,
+        "fillQuestions": 7
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/statistics-for-social-sciences.json",
+      "slug": "statistics-for-social-sciences",
+      "name": "Statistics for Social Sciences",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 13,
+        "assignments": 13,
+        "quizQuestions": 47,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 78,
+        "shortQuestions": 3,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/electives/study-skills.json",
+      "slug": "study-skills",
+      "name": "Study Skills",
+      "department": "Elective",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 64,
+        "shortQuestions": 0,
+        "fillQuestions": 1
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/math/trigonometry.json",
+      "slug": "trigonometry",
+      "name": "Trigonometry",
+      "department": "Mathematics",
+      "status": "pass",
+      "metrics": {
+        "modules": 14,
+        "assignments": 14,
+        "quizQuestions": 75,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 97,
+        "shortQuestions": 0,
+        "fillQuestions": 13
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/us-history.json",
+      "slug": "us-history",
+      "name": "U.S. History",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 29,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 5,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/world-history.json",
+      "slug": "world-history",
+      "name": "World History",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 30,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 60,
+        "shortQuestions": 0,
+        "fillQuestions": 5
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    },
+    {
+      "file": "server/prisma/courses/social-studies/world-politics.json",
+      "slug": "world-politics",
+      "name": "World Politics",
+      "department": "Social Studies",
+      "status": "pass",
+      "metrics": {
+        "modules": 8,
+        "assignments": 8,
+        "quizQuestions": 33,
+        "midtermQuestions": 15,
+        "finalQuestions": 20,
+        "mcQuestions": 59,
+        "shortQuestions": 9,
+        "fillQuestions": 0
+      },
+      "issueCounts": {
+        "fail": 0,
+        "warn": 0
+      },
+      "issues": []
+    }
+  ]
+}

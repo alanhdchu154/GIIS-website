@@ -1,6 +1,6 @@
 # All-Course Browser Smoke QA
 
-Generated: 2026-06-02T03:23:56.682Z
+Generated: 2026-06-14T20:39:32.524Z
 Base URL: http://localhost:3030
 
 Summary: 2358 pass / 0 fail (2358 route checks)

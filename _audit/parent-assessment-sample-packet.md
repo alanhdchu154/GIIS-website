@@ -1,6 +1,6 @@
 # GIIS Parent Assessment Sample Packet
 
-Generated: 2026-06-05T03:33:59.981Z
+Generated: 2026-06-14T20:33:23.716Z
 
 Purpose: give parents and advisors concrete proof that GIIS courses include reviewable student work, quizzes, midterms, finals, and a visible grading story.
 
@@ -37,7 +37,7 @@ Module 1: Variables & Algebraic Expressions
 
 Assignment type: Project / Design Work
 
-Prompt: Write 10 real-life situations as algebraic expressions. Evaluate each expression for at least two different values of the variable. Submit a two-column table showing the situation, expression, substitutions, arithmetic steps, and final meaning in context. Finish with a 4–5 sentence reflection explaining which expression was hardest to model and why.
+Prompt: Write 10 real-life situations as algebraic expressions. Evaluate each expression for at least two different values of the variable. Submit a two-column table showing the situation, expression, substitutions, arithmetic steps, and final meaning in context. Finish with a 4–5 sentence reflection explaining which expression was hardest to model and why. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Variables & Algebraic Expressions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.
 
 Expected evidence: Student submits an artifact, plan, chart, model, or project link plus a short rationale.
 
@@ -83,13 +83,13 @@ Parent value: Parents can see worked steps, correct use of procedures, and wheth
 
 Module 1: Points, Lines & Planes
 
-Assignment type: Practice / Problem Set
+Assignment type: Research / Evidence Report
 
-Prompt: Draw and label 5 different geometric figures using proper notation. For each figure, list all the points, lines, rays, and segments. Identify which undefined terms (point, line, plane) apply and state two postulates that apply to each figure.
+Prompt: Draw and label 5 different geometric figures using proper notation. For each figure, list all the points, lines, rays, and segments. Identify which undefined terms (point, line, plane) apply and state two postulates that apply to each figure. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Points, Lines & Planes module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.
 
-Expected evidence: Student submits worked steps, labeled diagrams, classifications, or completed practice artifacts.
+Expected evidence: Student submits sources, evidence notes, and a written explanation using course vocabulary.
 
-Rubric focus: Accuracy, shown work, corrections, and explanation of process.
+Rubric focus: Source credibility, evidence use, reasoning, citations or links, and clarity.
 
 ### Assessment Samples
 
@@ -132,7 +132,7 @@ Module 1: Reading Comprehension Strategies
 
 Assignment type: Research / Evidence Report
 
-Prompt: Read one short informational article from a free news, museum, library, or government education site and one short public-domain story from a source such as Project Gutenberg or a teacher-provided packet. For each: (1) write a one-paragraph summary in your own words, (2) identify the main idea and three supporting details, (3) make two inferences supported with text evidence, and (4) identify the text structure used.
+Prompt: Read one short informational article from a free news, museum, library, or government education site and one short public-domain story from a source such as Project Gutenberg or a teacher-provided packet. For each: (1) write a one-paragraph summary in your own words, (2) identify the main idea and three supporting details, (3) make two inferences supported with text evidence, and (4) identify the text structure used. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: drafts, annotations, quotations, analysis, or revised writing from the Reading Comprehension Strategies module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.
 
 Expected evidence: Student submits sources, evidence notes, and a written explanation using course vocabulary.
 
@@ -179,7 +179,7 @@ Module 1: Literary Analysis Fundamentals
 
 Assignment type: Research / Evidence Report
 
-Prompt: Read a teacher-provided public-domain excerpt or a short open text selected from the linked literature resources. Identify: (1) the central theme and two pieces of textual evidence supporting it, (2) one symbol and explain what it represents, (3) one recurring motif and its significance, (4) whether the text is allegorical and, if so, what real-world concept the story represents, and (5) the author's purpose. Write a 400-word response integrating all five elements with quotations.
+Prompt: Read a teacher-provided public-domain excerpt or a short open text selected from the linked literature resources. Identify: (1) the central theme and two pieces of textual evidence supporting it, (2) one symbol and explain what it represents, (3) one recurring motif and its significance, (4) whether the text is allegorical and, if so, what real-world concept the story represents, and (5) the author's purpose. Write a 400-word response integrating all five elements with quotations. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: drafts, annotations, quotations, analysis, or revised writing from the Literary Analysis Fundamentals module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.
 
 Expected evidence: Student submits sources, evidence notes, and a written explanation using course vocabulary.
 
@@ -224,13 +224,13 @@ Parent value: Parents can see concept accuracy, diagrams or data evidence, and w
 
 Module 1: The Chemistry of Life
 
-Assignment type: Project / Design Work
+Assignment type: Data / Lab Evidence
 
-Prompt: Build a concept map showing how each of the four macromolecules (carbohydrates, lipids, proteins, nucleic acids) relates to its monomer and main function. Include one food or biological example for each, label at least two chemical features or bonds, and write a 150-word explanation of why carbon-based molecules are central to living systems.
+Prompt: Build a concept map showing how each of the four macromolecules (carbohydrates, lipids, proteins, nucleic acids) relates to its monomer and main function. Include one food or biological example for each, label at least two chemical features or bonds, and write a 150-word explanation of why carbon-based molecules are central to living systems. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the The Chemistry of Life module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.
 
-Expected evidence: Student submits an artifact, plan, chart, model, or project link plus a short rationale.
+Expected evidence: Student submits observations, calculations, data, or interview notes with a short interpretation.
 
-Rubric focus: Completeness, practical detail, prompt alignment, and design decisions.
+Rubric focus: Data quality, method clarity, accuracy, and evidence-based conclusion.
 
 ### Assessment Samples
 
@@ -270,15 +270,15 @@ Parent value: Parents can see concept accuracy, diagrams or data evidence, and w
 
 ### Assignment Sample
 
-Module 2: Atomic Structure
+Module 1: Matter & Measurement
 
-Assignment type: Practice / Problem Set
+Assignment type: Data / Lab Evidence
 
-Prompt: Using the periodic table, complete an atom profile for five different elements: list protons, neutrons (for the most common isotope), electrons, atomic number, and mass number. Submit a table with all calculations shown, one Bohr or electron-shell diagram for each element, and a short explanation of how atomic number and mass number reveal subatomic structure.
+Prompt: Collect five household items and classify each as solid, liquid, or gas. For each, identify one physical property and one chemical property. Express one measurement using correct SI units and significant figures. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Matter & Measurement module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.
 
-Expected evidence: Student submits worked steps, labeled diagrams, classifications, or completed practice artifacts.
+Expected evidence: Student submits observations, calculations, data, or interview notes with a short interpretation.
 
-Rubric focus: Accuracy, shown work, corrections, and explanation of process.
+Rubric focus: Data quality, method clarity, accuracy, and evidence-based conclusion.
 
 ### Assessment Samples
 
@@ -299,7 +299,7 @@ Explanation: The correct answer is: Melting ice. The choice fits the prompt beca
 Final sample:
 
 Question: Explain dynamic equilibrium using H₂ + I₂ ⇌ 2HI. What is happening at the molecular level when equilibrium is reached?
-Answer: At dynamic equilibrium, the forward and reverse reactions occur at equal rates, so concentrations show no net change. In H₂ + I₂ ⇌ 2HI, HI forms and decomposes at the same rate while molecular collisions and reactions continue
+Answer: At dynamic equilibrium, the forward and reverse reactions occur at equal rates, so concentrations show no net change. In H₂ + I₂ ⇌ 2HI, HI forms and decomposes at the same rate while molecular collisions and reactions continue.
 Explanation: A complete response states that the forward and reverse rates are equal, concentrations have no net change, and reactions continue at the molecular level.
 
 ### Review Rubric
@@ -321,7 +321,7 @@ Module 1: Colonial America & the Road to Revolution
 
 Assignment type: Project / Design Work
 
-Prompt: Compare the economies and social structures of the New England, Middle, and Southern colonies. Submit a three-column comparison chart using at least two pieces of evidence per region, then write a 300-word explanation of which regional differences later contributed to conflicts in American history and why.
+Prompt: Compare the economies and social structures of the New England, Middle, and Southern colonies. Submit a three-column comparison chart using at least two pieces of evidence per region, then write a 300-word explanation of which regional differences later contributed to conflicts in American history and why. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: sources, evidence, examples, maps, timelines, or analysis from the Colonial America & the Road to Revolution module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.
 
 Expected evidence: Student submits an artifact, plan, chart, model, or project link plus a short rationale.
 
@@ -346,7 +346,7 @@ Explanation: The correct answer is: Established the first written self-governmen
 Final sample:
 
 Question: Describe the Marshall Plan and explain why it was both a humanitarian and a strategic Cold War decision for the United States.
-Answer: The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards
+Answer: The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards.
 Explanation: The correct answer is: The Marshall Plan (1948) provided over $13 billion in U.S. economic aid to rebuild war-devastated Western European nations after WWII. Humanitarianly, it fed starving populations and rebuilt destroyed infrastructure. Strategically, the U.S. feared that economic desperation would make Western European nations vulnerable to communist political movements and Soviet influence — as had already occurred in Eastern Europe. By rebuilding strong, prosperous democracies, the U.S. created stable trading partners and reliable Cold War allies, while demonstrating that capitalism and democracy could outperform communism at improving living standards..
 
 ### Review Rubric
@@ -364,15 +364,15 @@ Parent value: Parents can see source use, historical or civic reasoning, and whe
 
 ### Assignment Sample
 
-Module 2: The U.S. Constitution
+Module 1: Foundations of Government
 
-Assignment type: Project / Design Work
+Assignment type: Research / Evidence Report
 
-Prompt: Summarize the three main compromises made at the Constitutional Convention (Great Compromise, Three-Fifths Compromise, Commerce Compromise). Submit a three-row evidence chart explaining the issue, the compromise, who benefited, and how each shaped the structure of U.S. government. Finish with one paragraph evaluating which compromise had the longest-term consequence.
+Prompt: Compare Hobbes, Locke, and Rousseau on two dimensions: the nature of humans in the state of nature and the ideal form of government. Which philosopher most influenced American democracy and why? Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: sources, evidence, examples, maps, timelines, or analysis from the Foundations of Government module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.
 
-Expected evidence: Student submits an artifact, plan, chart, model, or project link plus a short rationale.
+Expected evidence: Student submits sources, evidence notes, and a written explanation using course vocabulary.
 
-Rubric focus: Completeness, practical detail, prompt alignment, and design decisions.
+Rubric focus: Source credibility, evidence use, reasoning, citations or links, and clarity.
 
 ### Assessment Samples
 
@@ -393,7 +393,7 @@ Explanation: The correct answer is: Thomas Hobbes. It connects the correct answe
 Final sample:
 
 Question: Compare the U.S. presidential system with a parliamentary system on two dimensions: how the executive is chosen and how the executive can be removed from office.
-Answer: In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance
+Answer: In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance.
 Explanation: The correct answer is: In the U.S. presidential system, the president is elected separately by voters (via the Electoral College) for a fixed four-year term and can only be removed through the impeachment process (House impeaches, Senate convicts with two-thirds vote). In a parliamentary system, the prime minister is chosen by the legislature — typically the leader of the majority party — and can be removed through a vote of no confidence at any time, allowing more flexible and responsive governance..
 
 ### Review Rubric

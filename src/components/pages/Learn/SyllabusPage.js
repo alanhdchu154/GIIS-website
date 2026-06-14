@@ -5,8 +5,10 @@ import { getStudentSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 import Nav from '../../main/Nav.js';
 import { getAssignmentProfile } from './assignmentProfile';
+import expertLensHelpers from './syllabusExpertLens';
 
 const API = getApiBase();
+const { getExpertLens } = expertLensHelpers;
 
 function ResourceLink({ url, note }) {
   if (!url) return null;
@@ -133,6 +135,9 @@ export default function SyllabusPage({ language }) {
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {course.modules.map((mod) => (
+              (() => {
+                const lens = getExpertLens(course, mod);
+                return (
               <div key={mod.order} style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: '12px', overflow: 'hidden' }}>
                 {/* Module header */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px', background: '#f8f9fd', borderBottom: '1px solid #e0e6f0' }}>
@@ -156,6 +161,24 @@ export default function SyllabusPage({ language }) {
                         {isEn ? 'Learning Objectives' : '学习目标'}
                       </p>
                       <p style={{ margin: 0, fontSize: '13px', color: '#444', lineHeight: 1.65 }}>{mod.objectives}</p>
+                    </div>
+                  )}
+
+                  {/* Expert lens */}
+                  {lens && (
+                    <div style={{ borderLeft: '3px solid #7a4f16', paddingLeft: '12px' }}>
+                      <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: 800, color: '#7a4f16', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        {isEn ? 'Expert Lens' : '专家视角'}
+                      </p>
+                      <p style={{ margin: '0 0 5px', fontSize: '13px', color: '#3f3528', lineHeight: 1.65 }}>
+                        <strong>{isEn ? 'Big idea: ' : '核心判断：'}</strong>{lens.insight}
+                      </p>
+                      <p style={{ margin: '0 0 5px', fontSize: '13px', color: '#5c5142', lineHeight: 1.65 }}>
+                        <strong>{isEn ? 'Watch for: ' : '常见误区：'}</strong>{lens.watchFor}
+                      </p>
+                      <p style={{ margin: 0, fontSize: '13px', color: '#5c5142', lineHeight: 1.65 }}>
+                        <strong>{isEn ? 'Transfer: ' : '迁移应用：'}</strong>{lens.transfer}
+                      </p>
                     </div>
                   )}
 
@@ -196,6 +219,8 @@ export default function SyllabusPage({ language }) {
                   )}
                 </div>
               </div>
+                );
+              })()
             ))}
           </div>
         </section>

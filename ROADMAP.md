@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-12
+Last updated: 2026-06-13
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -75,11 +75,16 @@ policy gate.
 
 Status: active, Codex-managed, foundation-only.
 
-- Scheduler: `~/.codex/automations/giis-foundation-video-daily/automation.toml`
-- Time: 07:00 CT daily.
+- Scheduler:
+  `~/.codex/automations/giis-foundation-video-split-batch/automation.toml`
+- Time: 02:15 / 07:15 / 12:15 CT via one consolidated producer cron job.
+- Monitor dashboard:
+  `~/.codex/automations/giis-video-upload-monitor-dashboard/automation.toml`
+  runs at 20:00 CT and is the main Alan-facing video status thread.
 - Repo runner: `bash tools/lesson-video/foundation_daily.sh`
 - Scope: non-AP foundation modules only.
-- Max upload volume: 20/day during the current upload-cap trial.
+- Max upload volume: 7/run, intended ceiling 21/day during the current
+  split-batch upload-cap trial.
 - Upload rule: only `yt_queue.py upload --gate-ready`; never
   `upload_lesson.py --force-without-approval`.
 - Required gate: clean pass, score 100, MP4, transcript, contact sheet,
@@ -92,14 +97,16 @@ Status: active, Codex-managed, foundation-only.
 
 Next check:
 
-- After each 07:00 run, review selected modules, cc progress, gate result,
+- After each scheduled run, review selected modules, cc progress, gate result,
   upload result, website manifest sync, and any `cc_blocked` report.
+- At 20:00 CT, review the generated upload dashboard, queue status, release
+  gate totals, and manifest alignment from the monitor thread.
 - Before any push/deploy, finish browser/predeploy smoke, review the backend
   hardening and Prisma/webhook changes, and separate safe frontend/pipeline
   changes from Lightsail/db work if needed.
-- Monitor the 20/day trial before expanding to 25/day. Do not increase volume
-  unless cc output, release gate, YouTube upload, and Learn Portal manifest sync
-  all pass without manual rescue.
+- Monitor the split-batch 7/run trial before expanding per-run volume. Do not
+  increase volume unless cc output, release gate, YouTube upload, and Learn
+  Portal manifest sync all pass without manual rescue.
 - 2026-06-10 current lane: Biology Modules 4/5/6 were selected. M6 was approved
   by automation; M4/M5 failed the orchestrator gate initially but passed targeted
   `foundation_video_gate.py --render-mp4` reruns with score 100. Current checks
@@ -158,6 +165,40 @@ Current evidence:
   after quoted answers, replaced 1,285 old generic MC explanation tails plus 97
   remaining placeholder course-concept explanations, and the final audit
   returned 0 issues across all 7,224 questions.
+- `npm run audit:assessment-homework-full-review -- --strict`: 93 pass / 0
+  warn / 0 fail across all 93 courses after the 2026-06-13 teacher-polish pass,
+  covering 993 module assignments, 3,969 quiz questions, 1,395 midterm
+  questions, and 1,860 final questions. The pass added explicit
+  `Submit`/`Include`/`Evaluation` expectations to all 993 assignments,
+  normalized 169 open-question metadata fields so exact-fill and open-response
+  grading behave intentionally, and rewrote all 85 two-option True/False items
+  into stronger four-option diagnostic questions. Follow-up checks report 0
+  two-option items, 0 True/False prompts, 0 answer-not-in-options cases, and 0
+  answer-key strings polluted with explanation tails.
+- `npm run audit:module-syllabus-full-review -- --strict`: 93 pass / 0 warn /
+  0 fail across all 93 courses after the 2026-06-13 syllabus-polish and expert
+  lens pass, covering 993 modules, 3,242 resource links, 993 expert-lens
+  sections, and 3,279 estimated module hours.
+  The first strict pass found 2 fail / 642 warn: two too-thin learning
+  objectives plus many objectives/resource notes that were usable but not yet
+  parent-readable at a highest-standard syllabus level. `npm run
+  repair:module-syllabus-full-review` strengthened 339 learning objectives,
+  294 resource notes, clarified 9 terse module titles, and raised Geography's
+  0.5-credit module hours from 16 to 18. The final gate verifies every syllabus
+  has parent-readable metadata, contiguous module sequence, estimated hours,
+  measurable objectives, expert-lens guidance, required resources, structured
+  assignment evidence, and quiz/exam coverage. The expert lens appears on
+  syllabus and module pages as three non-credential-claim sections: `Big idea`,
+  `Watch for`, and `Transfer`, so families see discipline-level judgment
+  without GIIS making unsupported "PhD-authored" claims. Reports:
+  `_audit/module-syllabus-full-review.md` and
+  `_audit/module-syllabus-full-review.json`. Follow-up all-module browser
+  smoke against the production build also passed:
+  `npm run audit:showcase-browser -- --base-url http://localhost:3030
+  --all-modules --report _audit/all-course-browser-smoke.md --json-report
+  _audit/all-course-browser-smoke.json`: 2,358 pass / 0 fail across desktop
+  and mobile course overview, syllabus, and module routes; this browser gate
+  now fails if syllabus/module pages do not render `Expert Lens`.
 - Student feedback completion pass completed 2026-06-01: module switching,
   English I resource gaps, same-grade recommendations, module motivation,
   manual completion controls, quiz review guidance, parent pacing, demo

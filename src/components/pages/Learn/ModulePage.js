@@ -7,8 +7,10 @@ import Nav from '../../main/Nav.js';
 import LessonVideoEmbed from '../../main/LessonVideoEmbed';
 import './learn-mobile.css';
 import { getAssignmentProfile } from './assignmentProfile';
+import expertLensHelpers from './syllabusExpertLens';
 
 const API = getApiBase();
+const { getExpertLens } = expertLensHelpers;
 
 function ResourceCard({ icon, label, url, note, completedAt }) {
   if (!url) return null;
@@ -250,6 +252,7 @@ export default function ModulePage({ language }) {
   const quizAttempt = quizResult || prevAttempt;
   const assignmentProfile = mod.assignment ? getAssignmentProfile(mod.assignment) : null;
   const purpose = modulePurpose({ course, mod, moduleOrder, isEn });
+  const lens = getExpertLens(course, mod);
 
   return (
     <>
@@ -295,6 +298,22 @@ export default function ModulePage({ language }) {
               <p style={{ margin: '10px 0 0', fontSize: '13px', color: '#2b3d6d', lineHeight: 1.55, fontWeight: 700 }}>
                 {purpose}
               </p>
+            )}
+            {lens && (
+              <div style={{ marginTop: '14px', paddingTop: '12px', borderTop: '1px solid #c5d0f0' }}>
+                <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: 800, color: '#7a4f16', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                  {isEn ? 'Expert Lens' : '专家视角'}
+                </p>
+                <p style={{ margin: '0 0 5px', fontSize: '13px', color: '#3f3528', lineHeight: 1.6 }}>
+                  <strong>{isEn ? 'Big idea: ' : '核心判断：'}</strong>{lens.insight}
+                </p>
+                <p style={{ margin: '0 0 5px', fontSize: '13px', color: '#5c5142', lineHeight: 1.6 }}>
+                  <strong>{isEn ? 'Watch for: ' : '常见误区：'}</strong>{lens.watchFor}
+                </p>
+                <p style={{ margin: 0, fontSize: '13px', color: '#5c5142', lineHeight: 1.6 }}>
+                  <strong>{isEn ? 'Transfer: ' : '迁移应用：'}</strong>{lens.transfer}
+                </p>
+              </div>
             )}
           </section>
         )}
