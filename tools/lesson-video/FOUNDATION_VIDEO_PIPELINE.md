@@ -45,9 +45,8 @@ Observed on 2026-05-30:
   this repo.
 - `claude mcp list` showed Netlify failing to connect and Stripe needing auth,
   so health checks can be slower than normal generation.
-- The project local settings had a stale additional directory pointing at the
-  old `/Users/alanhdchu/GIIS/giis-website/.git` path. It now points at
-  `/Users/alanhdchu/giis-website/.git`.
+- The project local settings had a stale additional directory. It now points at
+  the canonical repo git directory: `/Users/alanhdchu/giis-website/.git`.
 
 The fix is to run cc through a streaming wrapper and keep every assignment
 bounded to one handoff and one module.

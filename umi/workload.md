@@ -369,7 +369,7 @@ cc review notes: a bounded `claude -p` review-only pass was attempted for the
 admissions sales-ops diff on 2026-06-11, but it produced no output and was
 stopped. A second bounded review-only pass for
 `audit_parent_sales_payment_live.js`, the payment runbook, launch checklist,
-roadmap, and workload was attempted from `/Users/alanhdchu/GIIS/giis-website`
+roadmap, and workload was attempted from `/Users/alanhdchu/giis-website`
 on 2026-06-11 with default Claude CLI model; it produced no output after about
 80 seconds, was killed, and changed no files. Treat both as cc timeouts, not
 approval.
