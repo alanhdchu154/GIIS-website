@@ -97,6 +97,8 @@ Acceptance:
 - runner: `bash tools/lesson-video/foundation_daily.sh`
 - scope: non-AP foundation modules only
 - batch size: max 7 modules / 7 uploads per run
+- cc guardrails: `FOUNDATION_CC_BUDGET_USD=10` production and
+  `FOUNDATION_REVIEW_BUDGET_USD=3` independent review per module
 
 Next action:
 

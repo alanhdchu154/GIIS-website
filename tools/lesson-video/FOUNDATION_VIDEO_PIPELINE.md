@@ -251,6 +251,10 @@ As of the 2026-06-13 split-batch adjustment, three Codex cron jobs run smaller
 batches each day: max 7 modules and 7 uploads per run, with an intended ceiling
 of 21 videos/day unless Alan changes it. This replaces the single 20-module run
 because cc became unreliable around the eighth consecutive module.
+The cron jobs use `FOUNDATION_CC_BUDGET_USD=10` and
+`FOUNDATION_REVIEW_BUDGET_USD=3`. Those values are local guardrails for stuck
+Claude Code work, not YouTube quota; do not lower them just because a module
+reports an estimated dollar cost under Alan's monthly-plan usage.
 The local API quota estimate is intentionally conservative; the daily runner
 passes `--ignore-upload-quota-estimate` so a stale local estimate does not
 silently cap the trial at a lower number.
