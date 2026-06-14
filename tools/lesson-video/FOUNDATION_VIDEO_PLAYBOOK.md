@@ -122,9 +122,9 @@ college admissions claims in foundation lesson titles or descriptions.
 
 - 02:15 CT: Codex cron `giis-foundation-video-split-batch-early` calls
   `bash tools/lesson-video/foundation_daily.sh`.
-- 12:15 CT: Codex cron `giis-foundation-video-split-batch` calls
+- 10:15 CT: Codex cron `giis-foundation-video-split-batch` calls
   `bash tools/lesson-video/foundation_daily.sh`.
-- 19:15 CT: Codex cron `giis-foundation-video-split-batch-evening` calls
+- 18:15 CT: Codex cron `giis-foundation-video-split-batch-evening` calls
   `bash tools/lesson-video/foundation_daily.sh`.
 - Keep these as three weekly-all-days, single-time cron jobs; do not collapse
   them back into one multi-hour daily RRULE.

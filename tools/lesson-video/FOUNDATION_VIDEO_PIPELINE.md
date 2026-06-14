@@ -11,7 +11,7 @@ repeatably, while Umi remains the academic editor and release authority.
 This is the intended loop for every new foundation video:
 
 ```text
-02:15 / 12:15 / 19:15 CT split Codex cron automations
+02:15 / 10:15 / 18:15 CT split Codex cron automations
   -> call bash tools/lesson-video/foundation_daily.sh
   -> choose up to 7 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
@@ -83,10 +83,10 @@ weekly-all-days single-time schedules.
 rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=2;BYMINUTE=15;BYSECOND=0"
 
 ~/.codex/automations/giis-foundation-video-split-batch/automation.toml
-rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=12;BYMINUTE=15;BYSECOND=0"
+rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=10;BYMINUTE=15;BYSECOND=0"
 
 ~/.codex/automations/giis-foundation-video-split-batch-evening/automation.toml
-rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=19;BYMINUTE=15;BYSECOND=0"
+rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=18;BYMINUTE=15;BYSECOND=0"
 ```
 
 Each automation's only scheduling job is to call the repo-owned runner:

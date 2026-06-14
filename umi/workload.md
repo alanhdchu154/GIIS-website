@@ -92,8 +92,8 @@ Acceptance:
 - mode: Split-work with Claude Code
 - schedule: three Codex cron jobs, all weekly-all-days single-time schedules:
   `giis-foundation-video-split-batch-early` at 02:15 CT,
-  `giis-foundation-video-split-batch` at 12:15 CT, and
-  `giis-foundation-video-split-batch-evening` at 19:15 CT
+  `giis-foundation-video-split-batch` at 10:15 CT, and
+  `giis-foundation-video-split-batch-evening` at 18:15 CT
 - runner: `bash tools/lesson-video/foundation_daily.sh`
 - scope: non-AP foundation modules only
 - batch size: max 7 modules / 7 uploads per run
