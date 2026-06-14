@@ -1,0 +1,13 @@
+# GIIS local Python tooling dependencies.
+#
+# Install with:
+#   bash tools/bootstrap_python_tools.sh
+#
+# Keep this as the single manifest for lesson-video, demo voiceover, and
+# YouTube upload Python modules. Avoid one-off `pip install ...` fixes.
+Pillow
+edge-tts
+imageio-ffmpeg
+google-api-python-client
+google-auth-oauthlib
+google-auth

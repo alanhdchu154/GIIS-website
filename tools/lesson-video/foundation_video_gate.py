@@ -12,12 +12,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_VIDEO_VENV = Path.home() / ".cache" / "giis-video-pipeline-venv" / "bin" / "python"
-FALLBACK_VIDEO_VENV = Path("/tmp/giis-video-venv/bin/python")
 
 
 def default_python() -> str:
     env_python = os.environ.get("GIIS_VIDEO_PYTHON")
-    candidates = [env_python, str(DEFAULT_VIDEO_VENV), str(FALLBACK_VIDEO_VENV), sys.executable]
+    candidates = [env_python, str(DEFAULT_VIDEO_VENV), sys.executable]
     for candidate in candidates:
         if candidate and Path(candidate).exists():
             return candidate

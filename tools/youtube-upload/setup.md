@@ -18,7 +18,7 @@ tools/youtube-upload/
 
 After setup, uploading the Module 4 sample becomes:
 ```bash
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4-sample/
+bash tools/giis_python.sh tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4-sample/
 ```
 
 ---
@@ -84,14 +84,14 @@ This is what authorizes the script.
 ## 6. Install Python dependencies
 
 ```bash
-pip install google-api-python-client google-auth-oauthlib google-auth
+npm run tools:python:bootstrap
 ```
 
 ## 7. First upload (interactive — only the first time)
 
 ```bash
 cd /Users/alanhdchu/giis-website
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4-sample/
+bash tools/giis_python.sh tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4-sample/
 ```
 
 What happens:
@@ -108,19 +108,19 @@ What happens:
 
 Upload one lesson (default privacy = `unlisted` so the link is shareable but the video doesn't show in search):
 ```bash
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-1-variables/
+bash tools/giis_python.sh tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-1-variables/
 ```
 
 Upload all three sample lessons in order:
 ```bash
 for d in teaching-videos/algebra-i-module-{1-variables,7-functions,14-quadratics}/; do
-  python3 tools/youtube-upload/upload_lesson.py "$d"
+  bash tools/giis_python.sh tools/youtube-upload/upload_lesson.py "$d"
 done
 ```
 
 Make a video public:
 ```bash
-python3 tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4-sample/ --privacy public
+bash tools/giis_python.sh tools/youtube-upload/upload_lesson.py teaching-videos/algebra-i-module-4-sample/ --privacy public
 ```
 
 ---

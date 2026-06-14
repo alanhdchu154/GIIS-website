@@ -3,8 +3,8 @@
 Upload a reviewed, human-approved lesson MP4 to the GIIS YouTube channel.
 
 ```bash
-python3 tools/youtube-upload/yt_queue.py upload --gate-ready --dry-run
-python3 tools/youtube-upload/yt_queue.py upload --gate-ready --max 1
+npm run yt:upload -- --gate-ready --dry-run
+npm run yt:upload -- --gate-ready --max 1
 ```
 
 **First time using this?** Read `setup.md` — there's a one-time Google Cloud setup (~15 min).
@@ -35,13 +35,13 @@ Manual `upload_lesson.py` calls are still available for the queue runner, but no
 
 ```bash
 # Read-only queue status
-python3 tools/youtube-upload/yt_queue.py status
+npm run yt:status
 
 # Show what human-approved lessons would upload
-python3 tools/youtube-upload/yt_queue.py upload --gate-ready --dry-run
+npm run yt:upload -- --gate-ready --dry-run
 
 # Upload at most one approved lesson
-python3 tools/youtube-upload/yt_queue.py upload --gate-ready --max 1 --privacy unlisted
+npm run yt:upload -- --gate-ready --max 1 --privacy unlisted
 ```
 
 Do not use `upload_lesson.py --force-without-approval` except for an explicit emergency rollback/recovery decision by Alan / Central Umi.
@@ -50,24 +50,24 @@ Do not use `upload_lesson.py --force-without-approval` except for an explicit em
 
 ```bash
 # List all playlists on the channel
-python3 tools/youtube-upload/playlist.py list
+bash tools/giis_python.sh tools/youtube-upload/playlist.py list
 
 # List the videos in one playlist (by name OR ID)
-python3 tools/youtube-upload/playlist.py show "Algebra I"
+bash tools/giis_python.sh tools/youtube-upload/playlist.py show "Algebra I"
 
 # Create a playlist explicitly (uploads auto-create too)
-python3 tools/youtube-upload/playlist.py create "Algebra I — Full Course" \
+bash tools/giis_python.sh tools/youtube-upload/playlist.py create "Algebra I — Full Course" \
     --description "Lecture videos for the 14-module Algebra I curriculum." \
     --privacy public
 
 # Add specific videos by ID
-python3 tools/youtube-upload/playlist.py add "Algebra I" O7VGTGNhBGA dQw4w9WgXcQ
+bash tools/giis_python.sh tools/youtube-upload/playlist.py add "Algebra I" O7VGTGNhBGA dQw4w9WgXcQ
 
 # Reorder a playlist alphabetically by video title
-python3 tools/youtube-upload/playlist.py reorder "Algebra I"
+bash tools/giis_python.sh tools/youtube-upload/playlist.py reorder "Algebra I"
 
 # Delete a playlist (asks for confirmation)
-python3 tools/youtube-upload/playlist.py delete "Test Playlist"
+bash tools/giis_python.sh tools/youtube-upload/playlist.py delete "Test Playlist"
 ```
 
 ## Quota

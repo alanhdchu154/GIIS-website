@@ -17,19 +17,26 @@ LOG="${HOME}/Library/Logs/giis-foundation-video-daily.log"
 mkdir -p "$(dirname "$LOG")"
 
 PYTHON_CANDIDATES=(
+  "${GIIS_PYTHON:-}"
   "${HOME}/.cache/giis-video-pipeline-venv/bin/python"
   "/opt/homebrew/bin/python3"
   "$(command -v python3 || true)"
 )
 PYTHON=""
 for p in "${PYTHON_CANDIDATES[@]}"; do
-  if [ -n "$p" ] && [ -x "$p" ]; then
+  if [ -n "$p" ] && [ -x "$p" ] && "$p" - <<'PY' >/dev/null 2>&1
+import importlib.util
+mods = ["PIL", "edge_tts", "imageio_ffmpeg", "googleapiclient", "google_auth_oauthlib", "google.auth.transport.requests"]
+raise SystemExit(0 if all(importlib.util.find_spec(m) for m in mods) else 1)
+PY
+  then
     PYTHON="$p"
     break
   fi
 done
 if [ -z "$PYTHON" ]; then
-  echo "ERROR: no python3 found" | tee -a "$LOG"
+  echo "ERROR: no GIIS Python environment found with required modules" | tee -a "$LOG"
+  echo "Run once: bash tools/bootstrap_python_tools.sh" | tee -a "$LOG"
   exit 1
 fi
 

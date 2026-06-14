@@ -57,7 +57,7 @@ bounded to one handoff and one module.
 Use:
 
 ```bash
-python3 tools/lesson-video/cc_foundation_worker.py \
+npm run lesson:cc-foundation -- \
   umi/handoffs/2026-05-30-foundation-video-v2-pilot.md \
   --target teaching-videos/algebra-i-module-9-slope-rate-change-v2 \
   --budget-usd 3 \
@@ -108,12 +108,7 @@ npm run lesson:foundation-daily:dry-run
 Full run:
 
 ```bash
-python3 tools/lesson-video/foundation_daily_orchestrator.py \
-  --target-grade 9 \
-  --max-modules 7 \
-  --upload-max 7 \
-  --privacy unlisted \
-  --auto-commit
+npm run lesson:foundation-daily
 ```
 
 The orchestrator records retry/blocking state under
@@ -213,21 +208,15 @@ use source names and avoid raw URLs.
 Use:
 
 ```bash
-python3 tools/lesson-video/foundation_video_gate.py \
-  teaching-videos/algebra-i-module-9-slope-rate-change-v2 \
-  --render-mp4
+npm run lesson:foundation-gate -- teaching-videos/algebra-i-module-9-slope-rate-change-v2 --render-mp4
 ```
 
-If local Python lacks Pillow / edge-tts / imageio-ffmpeg, create a temporary
-venv:
+If local Python lacks Pillow / edge-tts / imageio-ffmpeg or YouTube API
+packages, use the shared GIIS Python toolchain:
 
 ```bash
-python3 -m venv /tmp/giis-video-venv
-/tmp/giis-video-venv/bin/python -m pip install Pillow edge-tts imageio-ffmpeg
-/tmp/giis-video-venv/bin/python tools/lesson-video/foundation_video_gate.py \
-  teaching-videos/algebra-i-module-9-slope-rate-change-v2 \
-  --render-mp4 \
-  --python /tmp/giis-video-venv/bin/python
+npm run tools:python:bootstrap
+npm run lesson:foundation-gate -- teaching-videos/algebra-i-module-9-slope-rate-change-v2 --render-mp4
 ```
 
 ## Release Rule

@@ -22,7 +22,7 @@
  *   Requirements:
  *     - Node 18+ (for fetch & playwright)
  *     - playwright + chromium  (npx playwright install chromium)
- *     - python3 with edge-tts  (pip3 install edge-tts)
+ *     - GIIS Python tools venv  (npm run tools:python:bootstrap)
  *     - ffmpeg + ffprobe       (brew install ffmpeg  /  conda install -c conda-forge ffmpeg)
  */
 
@@ -34,10 +34,15 @@ import {
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { homedir } from 'node:os';
 
 // ─────────── paths ───────────
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
+const GIIS_PYTHON = process.env.GIIS_PYTHON
+  || (existsSync(resolve(homedir(), '.cache/giis-video-pipeline-venv/bin/python'))
+    ? resolve(homedir(), '.cache/giis-video-pipeline-venv/bin/python')
+    : 'python3');
 const HTML_PATH = resolve(ROOT, 'public/demo/walkthrough.html');
 const OUT_DIR = resolve(ROOT, 'demo-output');
 const CACHE_DIR = resolve(OUT_DIR, '_cache');
@@ -162,9 +167,9 @@ async def main():
 asyncio.run(main())
 `);
 
-  const r = spawnSync('python3', [synthScript], { encoding: 'utf8' });
+  const r = spawnSync(GIIS_PYTHON, [synthScript], { encoding: 'utf8' });
   if (r.stdout?.includes('MISSING_EDGE_TTS') || r.stderr?.includes('MISSING_EDGE_TTS')) {
-    die(`edge-tts not installed.\n  pip3 install edge-tts`);
+    die(`edge-tts not installed for ${GIIS_PYTHON}.\n  npm run tools:python:bootstrap`);
   }
   if (r.status !== 0) die(`edge-tts synth failed:\n${r.stderr}`);
   process.stdout.write(r.stdout || '');

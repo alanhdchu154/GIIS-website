@@ -5,8 +5,9 @@ REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO_ROOT"
 
 PYTHON_CANDIDATES=(
+  "${GIIS_PYTHON:-}"
   "${HOME}/.cache/giis-video-pipeline-venv/bin/python"
-  "/Users/alanhdchu/anaconda3/bin/python3"
+  "/opt/homebrew/bin/python3"
   "$(command -v python3 || true)"
 )
 
@@ -14,6 +15,17 @@ PYTHON=""
 for candidate in "${PYTHON_CANDIDATES[@]}"; do
   if [ -n "$candidate" ] && [ -x "$candidate" ]; then
     if "$candidate" - <<'PY' >/dev/null 2>&1
+import importlib.util
+for module in [
+    "PIL",
+    "edge_tts",
+    "imageio_ffmpeg",
+    "googleapiclient",
+    "google_auth_oauthlib",
+    "google.auth.transport.requests",
+]:
+    if importlib.util.find_spec(module) is None:
+        raise SystemExit(1)
 import googleapiclient.discovery
 import google_auth_oauthlib.flow
 import google.auth.transport.requests
@@ -26,8 +38,8 @@ PY
 done
 
 if [ -z "$PYTHON" ]; then
-  echo "ERROR: no Python environment has the YouTube API packages." >&2
-  echo "Expected: google-api-python-client google-auth-oauthlib google-auth" >&2
+  echo "ERROR: no GIIS Python environment has required video/YouTube packages." >&2
+  echo "Run once: bash tools/bootstrap_python_tools.sh" >&2
   exit 1
 fi
 
@@ -69,7 +81,7 @@ case "$DRY_RUN" in
   0)
     if [ "$SYNC_AFTER" -eq 1 ]; then
       "$PYTHON" tools/youtube-upload/sync_channel.py --apply
-      python3 tools/lesson-video/video_dashboard.py
+      "$PYTHON" tools/lesson-video/video_dashboard.py
     else
       echo "[upload-approved] --no-sync: skipping channel sync/dashboard refresh"
     fi

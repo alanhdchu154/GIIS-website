@@ -39,7 +39,7 @@ It plays automatically. The ↻ button replays. Or open the file directly withou
 ```bash
 npm install                              # adds playwright as devDependency
 npx playwright install chromium          # downloads headless Chromium (~150 MB)
-pip3 install edge-tts                    # neural TTS (same engine teaching-videos/ uses)
+npm run tools:python:bootstrap           # edge-tts + GIIS Python toolchain
 brew install ffmpeg                      # OR: conda install -c conda-forge ffmpeg
 ```
 
@@ -157,7 +157,7 @@ npm run make-demo:merge       # remux MP4 with the new audio
 
 **`✗ Couldn't find ffmpeg / ffprobe`** — install via `conda install -c conda-forge ffmpeg` or `brew install ffmpeg`. Already installed elsewhere? `export PATH="<that_dir>:$PATH"` then re-run.
 
-**`✗ edge-tts not installed`** — `pip3 install edge-tts`. If you have multiple Pythons, make sure the one on `PATH` (the one `python3` resolves to) has it.
+**`✗ edge-tts not installed`** — run `npm run tools:python:bootstrap`. If you have multiple Pythons, set `GIIS_PYTHON=/path/to/python` before running the demo.
 
 **Voiceover sounds wrong / has a different accent** — change the voice in `CAPTIONS`. Run `edge-tts --list-voices | grep en-` to see options.
 
