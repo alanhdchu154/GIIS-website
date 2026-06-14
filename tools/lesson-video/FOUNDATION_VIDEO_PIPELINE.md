@@ -1,7 +1,7 @@
 # Foundation Video Pipeline
 
-Date: 2026-06-12
-Status: active v0.3 daily foundation loop
+Date: 2026-06-14
+Status: active v0.4 split-batch foundation loop
 
 ## Goal
 
@@ -11,7 +11,7 @@ repeatably, while Umi remains the academic editor and release authority.
 This is the intended loop for every new foundation video:
 
 ```text
-02:15 / 10:15 / 18:15 CT split Codex cron automations
+02:15 / 07:15 / 12:15 CT consolidated Codex producer automation
   -> call bash tools/lesson-video/foundation_daily.sh
   -> choose up to 7 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
@@ -73,22 +73,18 @@ The wrapper:
 
 ## Daily Orchestrator
 
-Preferred scheduler: Codex automations. Use three single-time cron jobs rather
-than one multi-hour daily RRULE; the Codex cron runner is more reliable with
-weekly-all-days single-time schedules.
+Preferred scheduler: Codex automations. Use one consolidated producer cron for
+the three split-batch runs, plus a separate read-mostly dashboard monitor.
 
 ```text
-~/.codex/automations/giis-foundation-video-split-batch-early/automation.toml
-rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=2;BYMINUTE=15;BYSECOND=0"
-
 ~/.codex/automations/giis-foundation-video-split-batch/automation.toml
-rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=10;BYMINUTE=15;BYSECOND=0"
+rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=2,7,12;BYMINUTE=15;BYSECOND=0"
 
-~/.codex/automations/giis-foundation-video-split-batch-evening/automation.toml
-rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=18;BYMINUTE=15;BYSECOND=0"
+~/.codex/automations/giis-video-upload-monitor-dashboard/automation.toml
+rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=20;BYMINUTE=0;BYSECOND=0"
 ```
 
-Each automation's only scheduling job is to call the repo-owned runner:
+The producer automation's only scheduling job is to call the repo-owned runner:
 
 ```bash
 FOUNDATION_MAX_MODULES=7 FOUNDATION_UPLOAD_MAX=7 bash tools/lesson-video/foundation_daily.sh
@@ -235,10 +231,12 @@ Do not use direct upload scripts for normal operations.
 
 ## Upload-Cap Trial
 
-As of the 2026-06-13 split-batch adjustment, three Codex cron jobs run smaller
-batches each day: max 7 modules and 7 uploads per run, with an intended ceiling
-of 21 videos/day unless Alan changes it. This replaces the single 20-module run
-because cc became unreliable around the eighth consecutive module.
+As of the 2026-06-14 automation consolidation, one Codex producer cron runs
+three smaller batches each day: max 7 modules and 7 uploads per run, with an
+intended ceiling of 21 videos/day unless Alan changes it. A separate 20:00 CT
+dashboard monitor is read-mostly and should not produce or upload videos. This
+replaces the older three-automation split-batch setup and the earlier single
+20-module run because cc became unreliable around the eighth consecutive module.
 The cron jobs use `FOUNDATION_CC_BUDGET_USD=10` and
 `FOUNDATION_REVIEW_BUDGET_USD=3`. Those values are local guardrails for stuck
 Claude Code work, not YouTube quota; do not lower them just because a module
