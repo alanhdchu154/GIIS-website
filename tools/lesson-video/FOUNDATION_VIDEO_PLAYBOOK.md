@@ -120,8 +120,14 @@ college admissions claims in foundation lesson titles or descriptions.
 
 ## Daily Schedule
 
-- 02:15 / 12:15 / 19:15 CT: Codex automation `giis-foundation-video-daily` calls
+- 02:15 CT: Codex cron `giis-foundation-video-split-batch-early` calls
   `bash tools/lesson-video/foundation_daily.sh`.
+- 12:15 CT: Codex cron `giis-foundation-video-split-batch` calls
+  `bash tools/lesson-video/foundation_daily.sh`.
+- 19:15 CT: Codex cron `giis-foundation-video-split-batch-evening` calls
+  `bash tools/lesson-video/foundation_daily.sh`.
+- Keep these as three weekly-all-days, single-time cron jobs; do not collapse
+  them back into one multi-hour daily RRULE.
 - Default target grade: Grade 9 (`FOUNDATION_TARGET_GRADE=9`).
 - Selection is deterministic: Grade 9 course sequence first, then module order;
   failed modules may be retried before new work.

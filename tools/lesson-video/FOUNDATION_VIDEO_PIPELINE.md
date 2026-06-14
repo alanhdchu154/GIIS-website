@@ -11,7 +11,7 @@ repeatably, while Umi remains the academic editor and release authority.
 This is the intended loop for every new foundation video:
 
 ```text
-02:15 / 12:15 / 19:15 CT Codex automation
+02:15 / 12:15 / 19:15 CT split Codex cron automations
   -> call bash tools/lesson-video/foundation_daily.sh
   -> choose up to 7 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
@@ -74,14 +74,22 @@ The wrapper:
 
 ## Daily Orchestrator
 
-Preferred scheduler: Codex automation.
+Preferred scheduler: Codex automations. Use three single-time cron jobs rather
+than one multi-hour daily RRULE; the Codex cron runner is more reliable with
+weekly-all-days single-time schedules.
 
 ```text
-~/.codex/automations/giis-foundation-video-daily/automation.toml
-rrule = "FREQ=DAILY;BYHOUR=2,12,19;BYMINUTE=15;BYSECOND=0"
+~/.codex/automations/giis-foundation-video-split-batch-early/automation.toml
+rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=2;BYMINUTE=15;BYSECOND=0"
+
+~/.codex/automations/giis-foundation-video-split-batch/automation.toml
+rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=12;BYMINUTE=15;BYSECOND=0"
+
+~/.codex/automations/giis-foundation-video-split-batch-evening/automation.toml
+rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=19;BYMINUTE=15;BYSECOND=0"
 ```
 
-The automation's only scheduling job is to call the repo-owned runner:
+Each automation's only scheduling job is to call the repo-owned runner:
 
 ```bash
 FOUNDATION_MAX_MODULES=7 FOUNDATION_UPLOAD_MAX=7 bash tools/lesson-video/foundation_daily.sh
@@ -239,10 +247,10 @@ Do not use direct upload scripts for normal operations.
 
 ## Upload-Cap Trial
 
-As of the 2026-06-13 split-batch adjustment, the Codex automation runs three
-smaller batches per day: max 7 modules and 7 uploads per run, with an intended
-ceiling of 21 videos/day unless Alan changes it. This replaces the single
-20-module run because cc became unreliable around the eighth consecutive module.
+As of the 2026-06-13 split-batch adjustment, three Codex cron jobs run smaller
+batches each day: max 7 modules and 7 uploads per run, with an intended ceiling
+of 21 videos/day unless Alan changes it. This replaces the single 20-module run
+because cc became unreliable around the eighth consecutive module.
 The local API quota estimate is intentionally conservative; the daily runner
 passes `--ignore-upload-quota-estimate` so a stale local estimate does not
 silently cap the trial at a lower number.
