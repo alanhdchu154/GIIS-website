@@ -1,7 +1,53 @@
 {
-  "generated_at": "2026-06-15T01:59:00+00:00",
+  "generated_at": "2026-06-15T03:49:05+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "Geometry": [
+      {
+        "course": "Geometry",
+        "course_slug": "geometry",
+        "module_number": 1,
+        "module_title": "Points, Lines & Planes",
+        "youtube_id": "7TUrybpyMMU",
+        "url": "https://youtu.be/7TUrybpyMMU",
+        "embed_url": "https://www.youtube.com/embed/7TUrybpyMMU",
+        "published_at": "2026-06-15T03:48:20Z",
+        "lesson_dir": "geometry-module-1-points-lines-planes-v2"
+      },
+      {
+        "course": "Geometry",
+        "course_slug": "geometry",
+        "module_number": 2,
+        "module_title": "Angle Relationships",
+        "youtube_id": "rhjfQXTIXWk",
+        "url": "https://youtu.be/rhjfQXTIXWk",
+        "embed_url": "https://www.youtube.com/embed/rhjfQXTIXWk",
+        "published_at": "2026-06-15T03:48:28Z",
+        "lesson_dir": "geometry-module-2-angle-relationships-v2"
+      },
+      {
+        "course": "Geometry",
+        "course_slug": "geometry",
+        "module_number": 3,
+        "module_title": "Parallel Lines & Transversals",
+        "youtube_id": "fBONbvt7sWw",
+        "url": "https://youtu.be/fBONbvt7sWw",
+        "embed_url": "https://www.youtube.com/embed/fBONbvt7sWw",
+        "published_at": "2026-06-15T03:48:37Z",
+        "lesson_dir": "geometry-module-3-parallel-lines-transversals-v2"
+      },
+      {
+        "course": "Geometry",
+        "course_slug": "geometry",
+        "module_number": 4,
+        "module_title": "Triangles: Classification & Properties",
+        "youtube_id": "o9ipz6-jb7M",
+        "url": "https://youtu.be/o9ipz6-jb7M",
+        "embed_url": "https://www.youtube.com/embed/o9ipz6-jb7M",
+        "published_at": "2026-06-15T03:48:45Z",
+        "lesson_dir": "geometry-module-4-triangles-classification-properties-v2"
+      }
+    ],
     "Environmental Science": [
       {
         "course": "Environmental Science",
@@ -123,6 +169,39 @@
         "embed_url": "https://www.youtube.com/embed/h-YaO0omcx0",
         "published_at": "2026-06-15T01:58:05Z",
         "lesson_dir": "environmental-science-module-11-renewable-energy-v2"
+      },
+      {
+        "course": "Environmental Science",
+        "course_slug": "environmental-science",
+        "module_number": 12,
+        "module_title": "Pollution: Types & Sources",
+        "youtube_id": "h8UkymmXW2g",
+        "url": "https://youtu.be/h8UkymmXW2g",
+        "embed_url": "https://www.youtube.com/embed/h8UkymmXW2g",
+        "published_at": "2026-06-15T03:47:55Z",
+        "lesson_dir": "environmental-science-module-12-pollution-types-sources-v2"
+      },
+      {
+        "course": "Environmental Science",
+        "course_slug": "environmental-science",
+        "module_number": 13,
+        "module_title": "Waste Management & Circular Economy",
+        "youtube_id": "1X5-DEZ-JM0",
+        "url": "https://youtu.be/1X5-DEZ-JM0",
+        "embed_url": "https://www.youtube.com/embed/1X5-DEZ-JM0",
+        "published_at": "2026-06-15T03:48:03Z",
+        "lesson_dir": "environmental-science-module-13-waste-management-circular-economy-v2"
+      },
+      {
+        "course": "Environmental Science",
+        "course_slug": "environmental-science",
+        "module_number": 14,
+        "module_title": "Sustainability & Environmental Solutions",
+        "youtube_id": "cUWERILcOJ4",
+        "url": "https://youtu.be/cUWERILcOJ4",
+        "embed_url": "https://www.youtube.com/embed/cUWERILcOJ4",
+        "published_at": "2026-06-15T03:48:11Z",
+        "lesson_dir": "environmental-science-module-14-sustainability-environmental-solutions-v2"
       }
     ],
     "Geography": [
@@ -1035,6 +1114,50 @@
   },
   "lessons": [
     {
+      "course": "Geometry",
+      "course_slug": "geometry",
+      "module_number": 1,
+      "module_title": "Points, Lines & Planes",
+      "youtube_id": "7TUrybpyMMU",
+      "url": "https://youtu.be/7TUrybpyMMU",
+      "embed_url": "https://www.youtube.com/embed/7TUrybpyMMU",
+      "published_at": "2026-06-15T03:48:20Z",
+      "lesson_dir": "geometry-module-1-points-lines-planes-v2"
+    },
+    {
+      "course": "Geometry",
+      "course_slug": "geometry",
+      "module_number": 2,
+      "module_title": "Angle Relationships",
+      "youtube_id": "rhjfQXTIXWk",
+      "url": "https://youtu.be/rhjfQXTIXWk",
+      "embed_url": "https://www.youtube.com/embed/rhjfQXTIXWk",
+      "published_at": "2026-06-15T03:48:28Z",
+      "lesson_dir": "geometry-module-2-angle-relationships-v2"
+    },
+    {
+      "course": "Geometry",
+      "course_slug": "geometry",
+      "module_number": 3,
+      "module_title": "Parallel Lines & Transversals",
+      "youtube_id": "fBONbvt7sWw",
+      "url": "https://youtu.be/fBONbvt7sWw",
+      "embed_url": "https://www.youtube.com/embed/fBONbvt7sWw",
+      "published_at": "2026-06-15T03:48:37Z",
+      "lesson_dir": "geometry-module-3-parallel-lines-transversals-v2"
+    },
+    {
+      "course": "Geometry",
+      "course_slug": "geometry",
+      "module_number": 4,
+      "module_title": "Triangles: Classification & Properties",
+      "youtube_id": "o9ipz6-jb7M",
+      "url": "https://youtu.be/o9ipz6-jb7M",
+      "embed_url": "https://www.youtube.com/embed/o9ipz6-jb7M",
+      "published_at": "2026-06-15T03:48:45Z",
+      "lesson_dir": "geometry-module-4-triangles-classification-properties-v2"
+    },
+    {
       "course": "Environmental Science",
       "course_slug": "environmental-science",
       "module_number": 1,
@@ -1154,6 +1277,39 @@
       "embed_url": "https://www.youtube.com/embed/h-YaO0omcx0",
       "published_at": "2026-06-15T01:58:05Z",
       "lesson_dir": "environmental-science-module-11-renewable-energy-v2"
+    },
+    {
+      "course": "Environmental Science",
+      "course_slug": "environmental-science",
+      "module_number": 12,
+      "module_title": "Pollution: Types & Sources",
+      "youtube_id": "h8UkymmXW2g",
+      "url": "https://youtu.be/h8UkymmXW2g",
+      "embed_url": "https://www.youtube.com/embed/h8UkymmXW2g",
+      "published_at": "2026-06-15T03:47:55Z",
+      "lesson_dir": "environmental-science-module-12-pollution-types-sources-v2"
+    },
+    {
+      "course": "Environmental Science",
+      "course_slug": "environmental-science",
+      "module_number": 13,
+      "module_title": "Waste Management & Circular Economy",
+      "youtube_id": "1X5-DEZ-JM0",
+      "url": "https://youtu.be/1X5-DEZ-JM0",
+      "embed_url": "https://www.youtube.com/embed/1X5-DEZ-JM0",
+      "published_at": "2026-06-15T03:48:03Z",
+      "lesson_dir": "environmental-science-module-13-waste-management-circular-economy-v2"
+    },
+    {
+      "course": "Environmental Science",
+      "course_slug": "environmental-science",
+      "module_number": 14,
+      "module_title": "Sustainability & Environmental Solutions",
+      "youtube_id": "cUWERILcOJ4",
+      "url": "https://youtu.be/cUWERILcOJ4",
+      "embed_url": "https://www.youtube.com/embed/cUWERILcOJ4",
+      "published_at": "2026-06-15T03:48:11Z",
+      "lesson_dir": "environmental-science-module-14-sustainability-environmental-solutions-v2"
     },
     {
       "course": "Geography",
