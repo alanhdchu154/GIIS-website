@@ -940,6 +940,20 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
     `_review_independent_pass.json` or `_review_source_alignment.json`; those
     are written by the separate independent reviewer wrapper after production.
 
+    Required production reviewer JSON files:
+    - `_review_A.json` with reviewer containing `peer` or `PhD`, verdict
+      `pass`, current `script_sha`, and math/content correctness findings.
+    - `_review_B.json` with reviewer containing `student` or `adversarial`,
+      verdict `pass`, current `script_sha`, and student-clarity /
+      misconception findings.
+    - `_review_C.json` with reviewer containing `citation` or `source`,
+      verdict `pass`, current `script_sha`, source-label findings, raw-URL
+      check, and public-claims risk check.
+
+    These three files are not release approval. They are the production-time
+    reviewer set required by `audit_lessons.py`; the independent wrapper still
+    owns `_review_independent_pass.json` and `_review_source_alignment.json`.
+
     ## Expert Lens Contract
 
     The lesson must visibly use the Learn Portal Expert Lens:

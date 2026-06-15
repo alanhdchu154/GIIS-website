@@ -43,9 +43,11 @@ LESSONS_DIR   = REPO / "teaching-videos"
 MANIFEST_PATH = REPO / "public" / "data" / "lessons-manifest.json"
 
 # Title pattern — matches:  "Algebra I — Module 4: Solving One-Step…"
-# Accepts —, –, or -- as the dash; flexible whitespace.
+# Accepts —, –, or -- as the course/module separator; flexible whitespace.
+# Do not treat a single hyphen as a separator because course names such as
+# "English I - Writing" legitimately contain one.
 TITLE_RE = re.compile(
-    r"^\s*(?P<course>[^—–\-]+?)\s*[—–]+\s*Module\s+(?P<num>\d+)\s*[:：]\s*(?P<title>.+?)\s*$",
+    r"^\s*(?P<course>.+?)\s*(?:[—–]|--)\s*Module\s+(?P<num>\d+)\s*[:：]\s*(?P<title>.+?)\s*$",
     re.UNICODE,
 )
 
@@ -97,6 +99,10 @@ def find_lesson_dir(course: str, module_num: int) -> Path | None:
         if int(m.group(1)) == module_num:
             return f.parent
     return None
+
+
+def slugify(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
 
 def lesson_key_from_script(doc: dict) -> tuple[str, int] | None:
     course = doc.get("course")
@@ -194,7 +200,7 @@ def main():
             continue
         entry = {
             "course":         course,
-            "course_slug":    re.sub(r"\s+", "-", course.lower()),
+            "course_slug":    slugify(course),
             "module_number":  num,
             "module_title":   v["_mod_title"],
             "youtube_id":     v["video_id"],
