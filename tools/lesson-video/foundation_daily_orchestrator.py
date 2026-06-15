@@ -1005,11 +1005,25 @@ def run_stream(cmd: list[str], *, cwd: Path = ROOT, timeout: int | None = None) 
     proc = subprocess.Popen(cmd, cwd=cwd, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
     assert proc.stdout is not None
     saw_tool_progress = False
+    saw_success_result = False
     try:
         for line in proc.stdout:
             if "[cc:tool]" in line:
                 saw_tool_progress = True
+            if "[cc:result] status=success" in line or "[cc-review:result] status=success" in line:
+                saw_success_result = True
             print(line, end="", flush=True)
+            if saw_success_result:
+                break
+        if saw_success_result and proc.poll() is None:
+            proc.terminate()
+        if saw_success_result:
+            try:
+                proc.wait(timeout=10)
+            except subprocess.TimeoutExpired:
+                proc.kill()
+                proc.wait()
+            return 0, saw_tool_progress
         return proc.wait(timeout=timeout), saw_tool_progress
     except subprocess.TimeoutExpired:
         proc.terminate()

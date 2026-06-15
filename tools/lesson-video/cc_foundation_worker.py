@@ -179,12 +179,18 @@ def main() -> int:
                     if obj.get("type") == "result" and obj.get("subtype") == "success" and not obj.get("is_error"):
                         success_result = True
                     print_event(obj)
+                    if success_result:
+                        break
                 except json.JSONDecodeError:
                     print(line, end="", flush=True)
-        rc = proc.wait(timeout=args.timeout_seconds)
+        if success_result and proc.poll() is None:
+            proc.terminate()
+        rc = proc.wait(timeout=10 if success_result else args.timeout_seconds)
         if rate_limited and not success_result:
             print("\n[cc:rate-limit] Claude Code session limit reached; stop this batch and retry after reset.", flush=True)
             return CC_RATE_LIMIT_RC
+        if success_result:
+            return 0
         return rc
     except subprocess.TimeoutExpired:
         proc.terminate()

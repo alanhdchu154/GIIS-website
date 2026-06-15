@@ -204,15 +204,26 @@ def main() -> int:
     proc.stdin.close()
 
     try:
+        success_result = False
         with log_path.open("w", encoding="utf-8") as log:
             for line in proc.stdout:
                 log.write(line)
                 log.flush()
                 try:
-                    print_event(json.loads(line))
+                    obj = json.loads(line)
+                    if obj.get("type") == "result" and obj.get("subtype") == "success" and not obj.get("is_error"):
+                        success_result = True
+                    print_event(obj)
+                    if success_result:
+                        break
                 except json.JSONDecodeError:
                     print(line, end="", flush=True)
-        return proc.wait(timeout=args.timeout_seconds)
+        if success_result and proc.poll() is None:
+            proc.terminate()
+        rc = proc.wait(timeout=10 if success_result else args.timeout_seconds)
+        if success_result:
+            return 0
+        return rc
     except subprocess.TimeoutExpired:
         proc.terminate()
         print(f"\n[cc-review:timeout] killed after {args.timeout_seconds}s", file=sys.stderr)
