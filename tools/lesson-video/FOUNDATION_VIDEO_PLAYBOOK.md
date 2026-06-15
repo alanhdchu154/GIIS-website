@@ -136,6 +136,10 @@ college admissions claims in foundation lesson titles or descriptions.
   Proceed only after the repaired course passes; report unresolved blockers.
 - Max modules/uploads per run: 7 during the split-batch upload-cap trial.
 - Intended daily ceiling: 21 unless Alan changes it.
+- Claude Code model routing: foundation video production is repetitive
+  mechanics and should default to `FOUNDATION_CC_MODEL=sonnet`; the independent
+  second-pass/source-alignment review is release judgment and should default to
+  `FOUNDATION_REVIEW_MODEL=opus`.
 - Claude Code guardrails: production budget is `FOUNDATION_CC_BUDGET_USD=10`
   per module and independent-review budget is `FOUNDATION_REVIEW_BUDGET_USD=3`.
   These are local stop conditions, not YouTube quota; keep them high enough for

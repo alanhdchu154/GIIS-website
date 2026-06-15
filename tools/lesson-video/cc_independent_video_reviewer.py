@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -150,6 +151,7 @@ def print_event(obj: dict) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("target", type=Path)
+    ap.add_argument("--model", default=os.environ.get("FOUNDATION_REVIEW_MODEL", "opus"))
     ap.add_argument("--budget-usd", default="2")
     ap.add_argument("--timeout-seconds", type=int, default=420)
     ap.add_argument("--dry-run", action="store_true")
@@ -179,12 +181,14 @@ def main() -> int:
         "--include-partial-messages",
         "--permission-mode",
         "bypassPermissions",
+        "--model",
+        str(args.model),
         "--tools",
         "Read,Write,Grep,Glob,Bash",
         "--max-budget-usd",
         str(args.budget_usd),
     ]
-    print(f"[cc-review:start] log={log_path}", flush=True)
+    print(f"[cc-review:start] model={args.model} log={log_path}", flush=True)
     proc = subprocess.Popen(
         cmd,
         cwd=ROOT,

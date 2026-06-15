@@ -47,6 +47,7 @@ CC_WORKER = ROOT / "tools" / "lesson-video" / "cc_foundation_worker.py"
 CC_REVIEWER = ROOT / "tools" / "lesson-video" / "cc_independent_video_reviewer.py"
 FOUNDATION_GATE = ROOT / "tools" / "lesson-video" / "foundation_video_gate.py"
 RELEASE_GATE = ROOT / "tools" / "lesson-video" / "lesson_release_gate.py"
+PARENT_TRUST_AUDIT = ROOT / "tools" / "lesson-video" / "parent_trust_video_audit.py"
 YT_QUEUE = ROOT / "tools" / "youtube-upload" / "yt_queue.py"
 SYNC_CHANNEL = ROOT / "tools" / "youtube-upload" / "sync_channel.py"
 EXPERT_LENS_BRIDGE = ROOT / "tools" / "lesson-video" / "expert_lens_packet.js"
@@ -57,6 +58,7 @@ from audit_lessons import audit_lesson  # noqa: E402
 
 DEFAULT_TARGET_GRADE = 9
 COURSE_DESIGN_POLICY_VERSION = "g9_course_design_gate_v2"
+CC_RATE_LIMIT_RC = 75
 
 GRADE_9_COURSE_SEQUENCE = [
     "algebra-i",
@@ -657,6 +659,12 @@ def video_safe_lens_text(value: str) -> str:
         (r"\bAP\s+Human\s+Geography\b", "advanced geography"),
         (r"\bAP[-\s]+level\b", "advanced"),
         (r"\bAP\b", "advanced coursework"),
+        (r"\bcollege-level\s+STEM\s+work\b", "evidence-based science work"),
+        (r"\bcollege-level\s+science\s+work\b", "evidence-based science work"),
+        (r"\bcollege-level\s+science\s+course\b", "foundational science course"),
+        (r"\bcollege-level\b", "foundational"),
+        (r"\bcareer-ready\b", "real-world"),
+        (r"\bcollege-ready\b", "prepared for future coursework"),
     ]
     for pattern, replacement in replacements:
         text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
@@ -1014,6 +1022,14 @@ def run_checked(cmd: list[str], *, timeout: int | None = None) -> int:
     return subprocess.run(cmd, cwd=ROOT, stdin=subprocess.DEVNULL, timeout=timeout).returncode
 
 
+def run_parent_trust_audit(approved_rows: list[dict[str, Any]]) -> int:
+    paths = [str(row.get("path") or "") for row in approved_rows if row.get("path")]
+    if not paths:
+        return 0
+    report_name = f"{today_stamp()}-foundation-parent-trust"
+    return run_checked([sys.executable, str(PARENT_TRUST_AUDIT), "--report-name", report_name, *paths])
+
+
 def find_mp4(folder: Path) -> Path | None:
     canonical = folder / f"{folder.name.replace('-', '_')}.mp4"
     if canonical.exists():
@@ -1302,13 +1318,18 @@ def orchestrate(args: argparse.Namespace) -> int:
             rc, saw_tool = run_stream([
                 sys.executable, str(CC_WORKER), str(handoff),
                 "--target", str(candidate.target_dir.relative_to(ROOT)),
+                "--model", str(args.cc_model),
                 "--budget-usd", str(args.budget_usd),
                 "--timeout-seconds", str(args.cc_timeout_seconds),
             ], timeout=args.cc_timeout_seconds + 30)
             if rc != 0 or not saw_tool:
                 details = {"returncode": rc, "saw_tool_progress": saw_tool}
                 update_state_row(state, candidate, status="cc_blocked", details=details)
-                run_report["blocked"].append({**row, "reason": "cc_blocked", **details})
+                reason = "cc_rate_limited" if rc == CC_RATE_LIMIT_RC else "cc_blocked"
+                run_report["blocked"].append({**row, "reason": reason, **details})
+                if rc == CC_RATE_LIMIT_RC:
+                    print("[cc:rate-limit] stopping batch before selecting more modules", flush=True)
+                    break
                 continue
         else:
             print("[cc] skipped by --no-cc")
@@ -1316,6 +1337,7 @@ def orchestrate(args: argparse.Namespace) -> int:
         if not args.no_independent_review and not args.no_cc:
             rc, saw_tool = run_stream([
                 sys.executable, str(CC_REVIEWER), str(candidate.target_dir.relative_to(ROOT)),
+                "--model", str(args.review_model),
                 "--budget-usd", str(args.review_budget_usd),
                 "--timeout-seconds", str(args.review_timeout_seconds),
             ], timeout=args.review_timeout_seconds + 30)
@@ -1360,6 +1382,20 @@ def orchestrate(args: argparse.Namespace) -> int:
         write_json(RUN_ROOT / f"{stamp}-run.json", run_report)
         write_json(RUN_ROOT / "latest-run.json", run_report)
 
+    if approved_rows and not args.dry_run and not args.no_parent_trust_audit:
+        parent_trust_rc = run_parent_trust_audit(approved_rows)
+        if parent_trust_rc != 0:
+            run_report["blocked"].append({
+                "reason": "parent_trust_audit_failed",
+                "approved_slugs": [row.get("slug") for row in approved_rows],
+            })
+            write_json(RUN_ROOT / f"{stamp}-run.json", run_report)
+            write_json(RUN_ROOT / "latest-run.json", run_report)
+            print("[parent-trust] FIX_FIRST; stopping before approval artifact/upload", flush=True)
+            return parent_trust_rc
+    elif args.no_parent_trust_audit:
+        print("[parent-trust] skipped by --no-parent-trust-audit")
+
     if approved_rows and not args.dry_run:
         append_approval(approved_rows)
     should_run_upload_queue = approved_rows or not args.skip_existing_approved_upload
@@ -1384,8 +1420,10 @@ def main() -> int:
     ap.add_argument("--max-modules", type=int, default=20)
     ap.add_argument("--upload-max", type=int, default=20)
     ap.add_argument("--privacy", choices=["unlisted", "private", "public"], default="unlisted")
+    ap.add_argument("--cc-model", default=os.environ.get("FOUNDATION_CC_MODEL", "sonnet"))
     ap.add_argument("--budget-usd", default="10")
     ap.add_argument("--cc-timeout-seconds", type=int, default=1800)
+    ap.add_argument("--review-model", default=os.environ.get("FOUNDATION_REVIEW_MODEL", "opus"))
     ap.add_argument("--review-budget-usd", type=float, default=2)
     ap.add_argument("--review-timeout-seconds", type=int, default=420)
     ap.add_argument("--gate-timeout-seconds", type=int, default=1800)
@@ -1395,6 +1433,7 @@ def main() -> int:
     ap.add_argument("--no-independent-review", action="store_true")
     ap.add_argument("--no-gate", action="store_true")
     ap.add_argument("--no-upload", action="store_true")
+    ap.add_argument("--no-parent-trust-audit", action="store_true")
     ap.add_argument("--ignore-upload-quota-estimate", action="store_true")
     ap.add_argument("--skip-existing-approved-upload", action="store_true")
     ap.add_argument("--no-course-design-repair", action="store_true")

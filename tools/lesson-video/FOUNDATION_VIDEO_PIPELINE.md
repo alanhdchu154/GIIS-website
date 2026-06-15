@@ -107,7 +107,11 @@ npm run lesson:foundation-daily
 ```
 
 The orchestrator records retry/blocking state under
-`teaching-videos/_audit/foundation-daily/`. If Claude Code times out, returns
+`teaching-videos/_audit/foundation-daily/`. Foundation lesson production is
+repetitive mechanics and defaults to `FOUNDATION_CC_MODEL=sonnet`; the separate
+independent release/source-alignment review defaults to
+`FOUNDATION_REVIEW_MODEL=opus` because it is parent-facing judgment. If Claude
+Code times out, returns
 non-zero, or produces no tool progress, the module is marked `cc_blocked` and
 will be prioritized for retry before new modules. After two failed attempts, it
 requires Umi repair instead of silent repetition.
@@ -237,7 +241,8 @@ intended ceiling of 21 videos/day unless Alan changes it. A separate 20:00 CT
 dashboard monitor is read-mostly and should not produce or upload videos. This
 replaces the older three-automation split-batch setup and the earlier single
 20-module run because cc became unreliable around the eighth consecutive module.
-The cron jobs use `FOUNDATION_CC_BUDGET_USD=10` and
+The cron jobs use `FOUNDATION_CC_MODEL=sonnet`,
+`FOUNDATION_REVIEW_MODEL=opus`, `FOUNDATION_CC_BUDGET_USD=10` and
 `FOUNDATION_REVIEW_BUDGET_USD=3`. Those values are local guardrails for stuck
 Claude Code work, not YouTube quota; do not lower them just because a module
 reports an estimated dollar cost under Alan's monthly-plan usage.

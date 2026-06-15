@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -18,6 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 LOG_DIR = ROOT / "umi" / "reviews" / "cc-runs"
+CC_RATE_LIMIT_RC = 75
 
 
 def build_prompt(handoff: Path, target: str | None) -> str:
@@ -98,10 +100,22 @@ def print_event(obj: dict) -> None:
         )
 
 
+def is_rate_limit_event(obj: dict) -> bool:
+    if obj.get("type") == "rate_limit_event":
+        return True
+    if obj.get("error") == "rate_limit":
+        return True
+    if obj.get("api_error_status") == 429:
+        return True
+    result = obj.get("result")
+    return isinstance(result, str) and "hit your session limit" in result.lower()
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("handoff", type=Path)
     ap.add_argument("--target", default=None)
+    ap.add_argument("--model", default=os.environ.get("FOUNDATION_CC_MODEL", "sonnet"))
     ap.add_argument("--budget-usd", default="3")
     ap.add_argument("--timeout-seconds", type=int, default=900)
     ap.add_argument("--dry-run", action="store_true")
@@ -129,13 +143,15 @@ def main() -> int:
         "--include-partial-messages",
         "--permission-mode",
         "bypassPermissions",
+        "--model",
+        str(args.model),
         "--tools",
         "Read,Write,Edit,Bash,Grep,Glob",
         "--max-budget-usd",
         str(args.budget_usd),
     ]
 
-    print(f"[cc:start] log={log_path}", flush=True)
+    print(f"[cc:start] model={args.model} log={log_path}", flush=True)
     proc = subprocess.Popen(
         cmd,
         cwd=ROOT,
@@ -151,15 +167,25 @@ def main() -> int:
     proc.stdin.close()
 
     try:
+        rate_limited = False
+        success_result = False
         with log_path.open("w", encoding="utf-8") as log:
             for line in proc.stdout:
                 log.write(line)
                 log.flush()
                 try:
-                    print_event(json.loads(line))
+                    obj = json.loads(line)
+                    rate_limited = rate_limited or is_rate_limit_event(obj)
+                    if obj.get("type") == "result" and obj.get("subtype") == "success" and not obj.get("is_error"):
+                        success_result = True
+                    print_event(obj)
                 except json.JSONDecodeError:
                     print(line, end="", flush=True)
-        return proc.wait(timeout=args.timeout_seconds)
+        rc = proc.wait(timeout=args.timeout_seconds)
+        if rate_limited and not success_result:
+            print("\n[cc:rate-limit] Claude Code session limit reached; stop this batch and retry after reset.", flush=True)
+            return CC_RATE_LIMIT_RC
+        return rc
     except subprocess.TimeoutExpired:
         proc.terminate()
         print(f"\n[cc:timeout] killed after {args.timeout_seconds}s", file=sys.stderr)
