@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-15
+Last updated: 2026-06-16
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -78,6 +78,14 @@ verification passed `audit:public-trust-claims`, `audit:sales-launch`,
 http://localhost:3030`, mobile 390px browser smoke on homepage / Trust Center /
 Pricing / Apply, and `npm run build`. The only warning remains the expected
 automated-payment boundary.
+2026-06-16 school operations gate added `npm run school:ops-report` as the
+single daily operator snapshot across production API proxy, parent sales smoke,
+parent journey, manual sales readiness, automated payment boundary, lesson
+manifest alignment, release gate, video dashboard, and lesson-video inventory.
+Current expected verdict is still `manual_sales_go_with_payment_boundary`:
+manual sales can run through reviewed application/consultation handoff, while
+automated Guided/Premium checkout remains blocked by missing live Stripe Price
+IDs.
 
 ## Active Lanes
 
