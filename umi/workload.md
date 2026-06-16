@@ -151,11 +151,12 @@ Current Umi note:
   covers `/learn` on desktop/mobile and passes 24/24.
 - Frontend deploy freshness is now part of `school:ops-report` through
   `npm run audit:frontend-deploy`. Netlify public metadata now shows production
-  deploy `935fdde0` ready on branch `main`, connected to
-  `https://github.com/alanhdchu154/GIIS-website`; GitHub CI is green for the
-  same SHA. Asset hashes may differ from a local build, but the deploy freshness
-  audit treats the current published commit as the primary signal and leaves
-  asset differences as diagnostics. Production behavior gates pass:
+  deploys ready on branch `main`, connected to
+  `https://github.com/alanhdchu154/GIIS-website`, with the published commit
+  matching the then-current `origin/main`; GitHub CI is green for the same SHA.
+  Asset hashes may differ from a local build, but the deploy freshness audit
+  treats the current published commit as the primary signal and leaves asset
+  differences as diagnostics. Production behavior gates pass:
   `audit:frontend-deploy` `production_deploy_matches_origin_main`,
   `audit:conversion-bilingual` 7/7, parent journey 7/7, and
   `school:ops-report` has no frontend-deploy warning with the

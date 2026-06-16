@@ -24,13 +24,13 @@ reason to bypass the normal deployment path.
 
 Recovered healthy pattern from later on 2026-06-16:
 
-- GitHub `HEAD` and `origin/main`: `935fdde0` or newer
+- GitHub `HEAD` and `origin/main`: same SHA
 - GitHub Actions CI for that SHA: success
 - Netlify public site metadata: published production deploy `ready`, branch
   `main`, commit matching current `origin/main`
 - Verdict from `npm run audit:frontend-deploy`:
   `production_deploy_matches_origin_main`
-- Latest verified production deploy: Netlify site `giis`,
+- Healthy example from the repair window: Netlify site `giis`,
   `repo_url=https://github.com/alanhdchu154/GIIS-website`, deploy title
   `Align public AI copy with human review boundary`, commit
   `935fdde0d444621841957d5aa18b2fee5b6d8fe6`, published at
@@ -38,6 +38,9 @@ Recovered healthy pattern from later on 2026-06-16:
 
 If a future incident repeats the stale pattern, repair the auto-deploy chain
 instead of switching to a local-folder deploy.
+
+Use the live `audit:frontend-deploy` report, not the example SHA above, as the
+source of truth for the latest verified production deploy.
 
 ## Auto-Deploy Contract
 
