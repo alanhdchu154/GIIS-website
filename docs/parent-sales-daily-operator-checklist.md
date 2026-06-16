@@ -1,6 +1,6 @@
 # Parent Sales Daily Operator Checklist
 
-Last updated: 2026-06-11
+Last updated: 2026-06-16
 
 Purpose: make an outreach day operational even while permanent owner decisions
 are still pending. This checklist is for same-day coverage. It does not
@@ -9,7 +9,25 @@ unauthorized person.
 
 ## Start-Of-Day Gate
 
-Run these before sending outreach or relying on inbound leads:
+Run the school operations snapshot before sending outreach, relying on inbound
+leads, discussing payment, or asking a family to submit records:
+
+```bash
+npm run school:ops-report -- --report /tmp/giis-school-ops-daily.md --json-report /tmp/giis-school-ops-daily.json
+```
+
+Proceed with manual sales only when the school ops verdict is:
+
+- `manual_sales_go_with_payment_boundary`
+- `automated_payment_ready`
+
+If the verdict is `manual_sales_go_with_payment_boundary`, outreach and
+consultation-first manual sales may proceed, but automated Guided/Premium
+checkout links are still blocked.
+
+Use the same-day readiness gate when the daily owner is not already recorded in
+`docs/parent-sales-owner-decisions.json`, or whenever the operator needs a fresh
+outside-git owner log:
 
 ```bash
 npm run sales:ready-today -- --operator-log /path/to/operator-log.md
@@ -19,10 +37,6 @@ Proceed only when `sales:ready-today` returns one of these verdicts:
 
 - `manual_sales_go_with_payment_boundary`
 - `full_sales_ready`
-
-If the verdict is `manual_sales_go_with_payment_boundary`, outreach and
-consultation-first manual sales may proceed, but automated Guided/Premium
-checkout links are still blocked.
 
 Use this template for the daily log:
 
@@ -70,8 +84,9 @@ Check these channels:
 Do not rely only on email forwarding until Netlify form notifications are
 confirmed.
 
-Use the dry-run lead-capture verifier before the first outreach day or after a
-form/deploy change:
+The school ops snapshot already runs the dry-run lead-capture verifier. Run it
+directly before the first outreach day, after a form/deploy change, or when the
+daily report points at lead-capture:
 
 ```bash
 npm run lead-capture:test -- --report /tmp/giis-lead-capture.md --json-report /tmp/giis-lead-capture.json

@@ -49,6 +49,10 @@ Current Umi note:
   local hidden forms, production form registration, and test payload shape
   without sending an external submission. Use `--confirm-submit` only when an
   operator is ready to verify Netlify submissions and admissions inbox delivery.
+- `docs/parent-sales-daily-operator-checklist.md` and
+  `docs/templates/parent-sales-daily-operator-log.md` now start from
+  `school:ops-report`, so the daily operator sees full school ops status before
+  using narrower same-day owner or sales-launch commands.
 - Lesson-video `needs_revision` rows are older quality debt under the current
   gate, not upload failure. Do not force upload to make the number go down.
 

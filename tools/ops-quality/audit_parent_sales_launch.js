@@ -383,21 +383,27 @@ const checks = [
   {
     id: 'parent-sales-daily-operator-checklist',
     file: 'docs/parent-sales-daily-operator-checklist.md',
-    ok: /npm run audit:sales-manual-ready/.test(files.dailyOperatorChecklist) &&
+    ok: /npm run school:ops-report/.test(files.dailyOperatorChecklist) &&
+      /school ops verdict/.test(files.dailyOperatorChecklist) &&
+      /manual_sales_go_with_payment_boundary/.test(files.dailyOperatorChecklist) &&
+      /npm run audit:sales-manual-ready/.test(files.dailyOperatorChecklist) &&
       /Same-Day Owner Coverage/.test(files.dailyOperatorChecklist) &&
       /lead-capture owner/.test(files.dailyOperatorChecklist) &&
       /first-response owner/.test(files.dailyOperatorChecklist) &&
       /WeChat follow-up owner/.test(files.dailyOperatorChecklist) &&
       /manual Stripe owner/.test(files.dailyOperatorChecklist) &&
+      /school ops snapshot already runs the dry-run lead-capture verifier/.test(files.dailyOperatorChecklist) &&
       /Do not send automated Guided\/Premium checkout links until/.test(files.dailyOperatorChecklist) &&
       /End-Of-Day Closeout/.test(files.dailyOperatorChecklist) &&
       /Stop Conditions/.test(files.dailyOperatorChecklist),
-    message: 'Admissions must have a same-day operator checklist before active outreach.',
+    message: 'Admissions must start daily outreach from the school ops snapshot and keep same-day owner coverage explicit.',
   },
   {
     id: 'parent-sales-daily-operator-log-template',
     file: 'docs/templates/parent-sales-daily-operator-log.md',
-    ok: /Same-Day Owners/.test(files.dailyOperatorLogTemplate) &&
+    ok: /npm run school:ops-report/.test(files.dailyOperatorLogTemplate) &&
+      /npm run lead-capture:test/.test(files.dailyOperatorLogTemplate) &&
+      /Same-Day Owners/.test(files.dailyOperatorLogTemplate) &&
       /Lead-capture owner/.test(files.dailyOperatorLogTemplate) &&
       /Manual Stripe owner/.test(files.dailyOperatorLogTemplate) &&
       /Manual Stripe authorized by Alan \(yes\/no\)/.test(files.dailyOperatorLogTemplate) &&

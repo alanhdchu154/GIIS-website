@@ -93,6 +93,10 @@ Lead capture also has a dry-run verifier: `npm run lead-capture:test` checks
 local hidden forms, production form registration, and test payload shape without
 sending an external submission; only `--confirm-submit` sends a test lead that
 must be verified in Netlify and the admissions inbox.
+The daily operator checklist and outside-git log template now start from
+`school:ops-report`, so admissions/admin operators see the full school ops
+snapshot before opening outreach, lead follow-up, records requests, or manual
+payment discussion.
 Manual payment now has a parent-facing receipt copy in the admin application
 queue after **Record Manual Payment** succeeds. The receipt is GIIS-branded,
 includes the Stripe/manual reference and refund-policy link, and is guarded by

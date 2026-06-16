@@ -4,9 +4,11 @@ Date:
 
 ## Gate Results
 
+- `npm run school:ops-report`:
 - `npm run audit:sales-manual-ready`:
 - `npm run audit:sales-launch`:
 - `npm run audit:sales-payment-live` (only needed before automated checkout):
+- `npm run lead-capture:test` dry-run verdict:
 
 ## Same-Day Owners
 
