@@ -43,6 +43,8 @@ const files = {
   ownerDecisionGate: read('tools/ops-quality/audit_parent_sales_owner_decisions.js'),
   launchModeGate: read('tools/ops-quality/audit_parent_sales_launch_mode.js'),
   parentJourneyAcceptance: read('tools/ops-quality/audit_parent_journey_acceptance.js'),
+  leadCaptureVerifier: read('tools/ops-quality/verify_netlify_lead_capture.js'),
+  schoolOpsReport: read('tools/ops-quality/generate_school_ops_report.js'),
   ownerDecisions: read('docs/parent-sales-owner-decisions.json'),
   refundPolicy: read('src/components/pages/RefundPolicy/RefundPolicyPage.js'),
   packageJson: read('package.json'),
@@ -444,6 +446,17 @@ const checks = [
       /audit:sales-owner-decisions/.test(files.packageJson) &&
       /netlifyLeadCapture/.test(files.ownerDecisions),
     message: 'Admissions must have a repeatable Alan review gate for permanent sales-owner decisions.',
+  },
+  {
+    id: 'school-ops-lead-capture-dry-run',
+    file: 'tools/ops-quality/generate_school_ops_report.js + tools/ops-quality/verify_netlify_lead_capture.js',
+    ok: /netlify-lead-capture/.test(files.schoolOpsReport) &&
+      /verify_netlify_lead_capture\.js/.test(files.schoolOpsReport) &&
+      /leadCaptureDryRun/.test(files.schoolOpsReport) &&
+      /Lead capture dry-run/.test(files.schoolOpsReport) &&
+      /dry_run_ready_for_test_submission/.test(files.leadCaptureVerifier) &&
+      /--confirm-submit/.test(files.leadCaptureVerifier),
+    message: 'School ops report must verify lead-capture dry-run health while keeping real test submissions explicit.',
   },
   {
     id: 'parent-sales-launch-mode-gate',

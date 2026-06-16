@@ -184,6 +184,7 @@ function buildReport() {
   const salesLive = auditJson('sales-live', 'tools/ops-quality/audit_parent_sales_live.js');
   const frontendDeploy = auditJson('frontend-deploy-freshness', 'tools/ops-quality/audit_frontend_deploy_freshness.js');
   const parentJourney = auditJson('parent-journey', 'tools/ops-quality/audit_parent_journey_acceptance.js');
+  const leadCaptureDryRun = auditJson('netlify-lead-capture', 'tools/ops-quality/verify_netlify_lead_capture.js');
   const ownerDecisions = auditJson('sales-owner-decisions', 'tools/ops-quality/audit_parent_sales_owner_decisions.js');
   const manualReady = auditJson('sales-manual-ready', 'tools/ops-quality/audit_parent_sales_manual_ready.js');
   const paymentLive = auditJson('sales-payment-live', 'tools/ops-quality/audit_parent_sales_payment_live.js', true);
@@ -199,6 +200,8 @@ function buildReport() {
     frontendDeployVerdict: frontendDeploy.data?.verdict || 'unknown',
     frontendDeployDetails: findResult(frontendDeploy.data, 'frontend-deploy-freshness'),
     parentJourney: summarizeAudit(parentJourney.data),
+    leadCaptureDryRun: summarizeAudit(leadCaptureDryRun.data),
+    leadCaptureDryRunVerdict: leadCaptureDryRun.data?.verdict || 'unknown',
     ownerDecisions: summarizeAudit(ownerDecisions.data),
     ownerSummary: ownerSummary(ownerDecisions.data),
     manualReady: summarizeAudit(manualReady.data),
@@ -218,6 +221,7 @@ function buildReport() {
     salesSignals.productionApi.fail,
     salesSignals.salesLive.fail,
     salesSignals.parentJourney.fail,
+    salesSignals.leadCaptureDryRun.fail,
     Math.max(salesSignals.ownerDecisions.fail, salesSignals.ownerSummary.manualRequiredFail),
     salesSignals.manualReady.fail,
     Number(manifestSummary.warnings || 0),
@@ -259,6 +263,7 @@ function buildReport() {
       salesLive.result,
       frontendDeploy.result,
       parentJourney.result,
+      leadCaptureDryRun.result,
       ownerDecisions.result,
       manualReady.result,
       paymentLive.result,
@@ -316,11 +321,22 @@ function buildNextActions(verdict, salesSignals, releaseGate, dashboardSummary, 
       reference: 'docs/parent-sales-owner-decisions.json',
     });
   }
+  if (salesSignals.leadCaptureDryRun.fail > 0) {
+    actions.push({
+      owner: 'Umi / Netlify operator',
+      priority: 'lead-capture',
+      action: 'Lead-capture dry-run failed; fix Netlify hidden forms, production form registration, or submit payloads before relying on inbound leads.',
+      reference: 'npm run lead-capture:test',
+    });
+  }
   if (!salesSignals.ownerSummary.notificationConfirmed) {
+    const dryRunStatus = salesSignals.leadCaptureDryRun.fail > 0
+      ? 'dry-run is failing'
+      : `dry-run verdict: ${salesSignals.leadCaptureDryRunVerdict}`;
     actions.push({
       owner: 'Admissions operator',
       priority: 'lead-capture',
-      action: 'Netlify consultation/contact notifications are not confirmed; the recorded daily submissions owner must manually check Netlify submissions and admissions inbox before relying on inbound leads. Use `npm run lead-capture:test` for a dry-run verifier before any confirmed test submission.',
+      action: `Netlify consultation/contact notifications are not confirmed; the recorded daily submissions owner must manually check Netlify submissions and admissions inbox before relying on inbound leads (${dryRunStatus}). Use \`npm run lead-capture:test -- --confirm-submit --form all\` only when an operator is ready to verify actual delivery.`,
       reference: 'docs/parent-sales-daily-operator-checklist.md',
     });
   }
@@ -358,6 +374,7 @@ function renderMarkdown(report) {
       ['Sales live smoke', s.salesLive.pass, s.salesLive.warn, s.salesLive.fail, resultStatus(s.salesLive)],
       ['Frontend deploy freshness', s.frontendDeploy.pass, s.frontendDeploy.warn, s.frontendDeploy.fail, s.frontendDeployVerdict],
       ['Parent journey', s.parentJourney.pass, s.parentJourney.warn, s.parentJourney.fail, resultStatus(s.parentJourney)],
+      ['Lead capture dry-run', s.leadCaptureDryRun.pass, s.leadCaptureDryRun.warn, s.leadCaptureDryRun.fail, s.leadCaptureDryRunVerdict],
       ['Owner decisions', s.ownerDecisions.pass, s.ownerDecisions.warn, s.ownerDecisions.fail, s.ownerVerdict],
       ['Manual sales ready', s.manualReady.pass, s.manualReady.warn, s.manualReady.fail, s.manualReadyVerdict],
       ['Payment live', s.paymentLive.pass, s.paymentLive.warn, s.paymentLive.fail, resultStatus(s.paymentLive)],
