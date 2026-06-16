@@ -287,6 +287,80 @@ function ProofBeforePayment({ isEn }) {
   );
 }
 
+function TransferPathReviewCallout({ isEn }) {
+  return (
+    <section style={{ background: '#fff', padding: '34px 0 22px', fontFamily: 'Inter, sans-serif' }}>
+      <div style={{ maxWidth: 1020, margin: '0 auto', padding: '0 5%' }}>
+        <div style={{
+          border: '1px solid #e0e6f0',
+          borderLeft: '5px solid #d5a836',
+          borderRadius: 8,
+          padding: '22px 24px',
+          background: '#fffbef',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+          gap: 18,
+          alignItems: 'center',
+        }}>
+          <div>
+            <p style={{ margin: '0 0 8px', color: '#8a6a14', fontSize: 12, fontWeight: 850, letterSpacing: 1.5, textTransform: 'uppercase' }}>
+              {isEn ? 'Transfer Families' : '转学生家庭'}
+            </p>
+            <h2 style={{ margin: 0, color: '#1a1a2e', fontSize: 'clamp(22px, 3vw, 32px)', lineHeight: 1.15, fontWeight: 850 }}>
+              {isEn ? 'Start with the path review, not checkout.' : '先做路径评估，不要先付款。'}
+            </h2>
+          </div>
+          <div>
+            <p style={{ margin: '0 0 14px', color: '#4f5868', fontSize: 14, lineHeight: 1.7 }}>
+              {isEn
+                ? 'Admissions should review previous credits, documents, and graduation timing before a family chooses a plan. Guided is the usual recommendation when the path is unclear or the student needs accountability.'
+                : '招生团队应先审核既有学分、可提供文件与毕业时间，再让家庭选择方案。当路径不清楚或学生需要跟进时，Guided 通常是推荐选择。'}
+            </p>
+            <Link to="/apply" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 18px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
+              {isEn ? 'Request transfer path review' : '申请转学路径评估'}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PricingTiersSection({ isEn }) {
+  return (
+    <section style={{ background: '#f4f6fa', padding: '36px 0 58px', fontFamily: 'Inter, sans-serif' }}>
+      <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 5%' }}>
+        <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto 24px' }}>
+          <p style={{ margin: '0 0 8px', color: '#b8962e', fontSize: 12, fontWeight: 850, letterSpacing: 1.7, textTransform: 'uppercase' }}>
+            {isEn ? 'Choose After Review' : '审核后再选择'}
+          </p>
+          <h2 style={{ margin: '0 0 10px', color: '#1a1a2e', fontSize: 'clamp(26px, 3.3vw, 40px)', lineHeight: 1.12, fontWeight: 850 }}>
+            {isEn ? 'Three levels, one honest starting point.' : '三种支持层级，一个诚实起点。'}
+          </h2>
+          <p style={{ margin: 0, color: '#5c6578', fontSize: 14, lineHeight: 1.7 }}>
+            {isEn
+              ? 'Families can compare tuition immediately, but payment still waits until the enrollment path is reviewed.'
+              : '家庭可以先比较学费，但付款仍要等入学路径审核清楚后再进行。'}
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18, alignItems: 'stretch' }}>
+          {TIERS.map((tier) => <TierCard key={tier.key} tier={tier} isEn={isEn} />)}
+        </div>
+        <p style={{ margin: '18px 0 0', color: '#777', textAlign: 'center', fontSize: 12, lineHeight: 1.6 }}>
+          {isEn
+            ? 'All plans start with an application review. Payment happens after the enrollment path is clear.'
+            : '所有方案先经过申请审核；确认入学路径后再付款。'}
+          {' '}
+          <Link to="/refund-policy" style={{ color: '#2b3d6d', fontWeight: 800, textDecoration: 'underline', textUnderlineOffset: 3 }}>
+            {isEn ? 'Read the 30-day refund policy.' : '阅读 30 天退款政策。'}
+          </Link>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PricingPage({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
 
@@ -317,8 +391,38 @@ export default function PricingPage({ language, toggleLanguage }) {
               ? 'Self-paced access stays affordable. Transfer families should usually start with Guided so credits, graduation timing, and parent visibility are reviewed before payment.'
               : '自主学习仍保持可负担；转学生家庭通常应从 Guided 开始，让学分、毕业时间与家长可见度在付款前先被审核清楚。'}
           </p>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))',
+            gap: 10,
+            maxWidth: 790,
+            margin: '26px auto 0',
+          }}>
+            {[
+              { en: 'Path review before payment', zh: '先审核路径，再付款' },
+              { en: 'Guided $149/month transfer default', zh: 'Guided $149/月，转学生默认' },
+              { en: '30-day full refund window', zh: '30 天全额退款窗口' },
+            ].map((item) => (
+              <div key={item.en} style={{
+                border: '1px solid rgba(255,255,255,0.2)',
+                borderRadius: 8,
+                background: 'rgba(255,255,255,0.08)',
+                color: '#fff',
+                padding: '12px 14px',
+                fontSize: 13,
+                lineHeight: 1.35,
+                fontWeight: 800,
+              }}>
+                {item[isEn ? 'en' : 'zh']}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      <TransferPathReviewCallout isEn={isEn} />
+
+      <PricingTiersSection isEn={isEn} />
 
       <DemoEmbed
         language={language}
@@ -336,58 +440,6 @@ export default function PricingPage({ language, toggleLanguage }) {
       <ProofBeforePayment isEn={isEn} />
 
       <StudentExperiencePreview language={language} variant="compact" />
-
-      <section style={{ background: '#fff', padding: '20px 0 54px', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ maxWidth: 1020, margin: '0 auto', padding: '0 5%' }}>
-          <div style={{
-            border: '1px solid #e0e6f0',
-            borderLeft: '5px solid #d5a836',
-            borderRadius: 8,
-            padding: '22px 24px',
-            background: '#fffbef',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: 18,
-            alignItems: 'center',
-          }}>
-            <div>
-              <p style={{ margin: '0 0 8px', color: '#8a6a14', fontSize: 12, fontWeight: 850, letterSpacing: 1.5, textTransform: 'uppercase' }}>
-                {isEn ? 'Transfer Families' : '转学生家庭'}
-              </p>
-              <h2 style={{ margin: 0, color: '#1a1a2e', fontSize: 'clamp(22px, 3vw, 32px)', lineHeight: 1.15, fontWeight: 850 }}>
-                {isEn ? 'Start with the path review, not checkout.' : '先做路径评估，不要先付款。'}
-              </h2>
-            </div>
-            <div>
-              <p style={{ margin: '0 0 14px', color: '#4f5868', fontSize: 14, lineHeight: 1.7 }}>
-                {isEn
-                  ? 'Admissions should review previous credits, documents, and graduation timing before a family chooses a plan. Guided is the usual recommendation when the path is unclear or the student needs accountability.'
-                  : '招生团队应先审核既有学分、可提供文件与毕业时间，再让家庭选择方案。当路径不清楚或学生需要跟进时，Guided 通常是推荐选择。'}
-              </p>
-              <Link to="/apply" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 18px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
-                {isEn ? 'Request transfer path review' : '申请转学路径评估'}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ background: '#f4f6fa', padding: '58px 0', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 5%' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18, alignItems: 'stretch' }}>
-            {TIERS.map((tier) => <TierCard key={tier.key} tier={tier} isEn={isEn} />)}
-          </div>
-          <p style={{ margin: '18px 0 0', color: '#777', textAlign: 'center', fontSize: 12, lineHeight: 1.6 }}>
-            {isEn
-              ? 'All plans start with an application review. Payment happens after the enrollment path is clear.'
-              : '所有方案先经过申请审核；确认入学路径后再付款。'}
-            {' '}
-            <Link to="/refund-policy" style={{ color: '#2b3d6d', fontWeight: 800, textDecoration: 'underline', textUnderlineOffset: 3 }}>
-              {isEn ? 'Read the 30-day refund policy.' : '阅读 30 天退款政策。'}
-            </Link>
-          </p>
-        </div>
-      </section>
 
       <section style={{ background: '#fff', padding: '68px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 5%' }}>
