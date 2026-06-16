@@ -32,14 +32,19 @@ Current Umi note:
 
 - 2026-06-16 daily gate result: `manual_sales_go_with_payment_boundary`.
   Included signals: production API proxy 12 pass / 0 fail, sales live 8 pass /
-  0 fail, parent journey 7 pass / 0 fail, manual sales ready 12 pass / 1 warn /
-  0 fail, payment live 4 pass / 1 warn / 2 fail, lesson manifest 129 lessons /
-  0 warnings, release gate 76 ready / 60 needs revision / 0 blocked, video
-  dashboard 136 lessons / 129 uploaded / 4 pending upload, inventory 136
-  folders / 129 visible / 136 MP4.
+  0 fail, parent journey 7 pass / 0 fail, owner decisions 3 pass / 1 warn / 0
+  fail, manual sales ready 12 pass / 1 warn / 0 fail, payment live 4 pass / 1
+  warn / 2 fail, lesson manifest 129 lessons / 0 warnings, release gate 76
+  ready / 60 needs revision / 0 blocked, video dashboard 136 lessons / 129
+  uploaded / 4 pending upload, inventory 136 folders / 129 visible / 136 MP4.
 - The two payment-live failures are the expected automated-checkout blockers:
   missing live Stripe Price IDs for Guided and Premium. Self-Paced annual is an
   optional warning.
+- Netlify `consultation` / `contact` notifications are not confirmed in
+  `docs/parent-sales-owner-decisions.json`; `school:ops-report` now emits a
+  `lead-capture` next action reminding the recorded daily submissions owner to
+  manually check Netlify submissions and admissions inbox before relying on
+  inbound leads.
 - Lesson-video `needs_revision` rows are older quality debt under the current
   gate, not upload failure. Do not force upload to make the number go down.
 

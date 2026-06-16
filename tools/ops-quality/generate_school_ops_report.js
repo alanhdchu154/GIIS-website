@@ -160,10 +160,30 @@ function paymentActions(paymentData) {
   }));
 }
 
+function findResult(data, id) {
+  return (data?.results || []).find((item) => item.id === id) || null;
+}
+
+function ownerSummary(ownerData) {
+  const leadCapture = findResult(ownerData, 'lead-capture-owner');
+  const backendPayment = findResult(ownerData, 'backend-payment-launch-window');
+  return {
+    verdict: ownerData?.verdict || 'unknown',
+    manualRequiredFail: Number(ownerData?.summary?.manualRequiredFail || 0),
+    notificationConfirmed: Boolean(leadCapture?.details?.notificationConfirmed),
+    notificationInbox: leadCapture?.details?.notificationInbox || '',
+    dailySubmissionsOwner: leadCapture?.details?.dailySubmissionsOwner || '',
+    dailyCheckCadence: leadCapture?.details?.dailyCheckCadence || '',
+    backendPaymentStatus: backendPayment?.status || '',
+    backendPaymentMissing: backendPayment?.details?.missing || [],
+  };
+}
+
 function buildReport() {
   const productionApi = auditJson('production-api-proxy', 'tools/ops-quality/audit_production_api_proxy.js');
   const salesLive = auditJson('sales-live', 'tools/ops-quality/audit_parent_sales_live.js');
   const parentJourney = auditJson('parent-journey', 'tools/ops-quality/audit_parent_journey_acceptance.js');
+  const ownerDecisions = auditJson('sales-owner-decisions', 'tools/ops-quality/audit_parent_sales_owner_decisions.js');
   const manualReady = auditJson('sales-manual-ready', 'tools/ops-quality/audit_parent_sales_manual_ready.js');
   const paymentLive = auditJson('sales-payment-live', 'tools/ops-quality/audit_parent_sales_payment_live.js', true);
   const manifest = manifestAudit();
@@ -175,8 +195,11 @@ function buildReport() {
     productionApi: summarizeAudit(productionApi.data),
     salesLive: summarizeAudit(salesLive.data),
     parentJourney: summarizeAudit(parentJourney.data),
+    ownerDecisions: summarizeAudit(ownerDecisions.data),
+    ownerSummary: ownerSummary(ownerDecisions.data),
     manualReady: summarizeAudit(manualReady.data),
     paymentLive: summarizeAudit(paymentLive.data),
+    ownerVerdict: ownerDecisions.data?.verdict || 'unknown',
     manualReadyVerdict: manualReady.data?.verdict || 'unknown',
     paymentActionItems: paymentActions(paymentLive.data),
   };
@@ -191,6 +214,7 @@ function buildReport() {
     salesSignals.productionApi.fail,
     salesSignals.salesLive.fail,
     salesSignals.parentJourney.fail,
+    Math.max(salesSignals.ownerDecisions.fail, salesSignals.ownerSummary.manualRequiredFail),
     salesSignals.manualReady.fail,
     Number(manifestSummary.warnings || 0),
     releaseSummary.blocked,
@@ -230,6 +254,7 @@ function buildReport() {
       productionApi.result,
       salesLive.result,
       parentJourney.result,
+      ownerDecisions.result,
       manualReady.result,
       paymentLive.result,
       manifest.result,
@@ -266,6 +291,22 @@ function buildNextActions(verdict, salesSignals, releaseGate, dashboardSummary, 
       reference: 'docs/stripe-live-price-setup.md',
     });
   }
+  if (salesSignals.ownerSummary.manualRequiredFail > 0) {
+    actions.push({
+      owner: 'Admissions operator',
+      priority: 'owner-coverage',
+      action: 'Manual-sales owner coverage is incomplete; assign lead capture, first response, WeChat follow-up, and manual Stripe ownership before outreach.',
+      reference: 'docs/parent-sales-owner-decisions.json',
+    });
+  }
+  if (!salesSignals.ownerSummary.notificationConfirmed) {
+    actions.push({
+      owner: 'Admissions operator',
+      priority: 'lead-capture',
+      action: 'Netlify consultation/contact notifications are not confirmed; the recorded daily submissions owner must manually check Netlify submissions and admissions inbox before relying on inbound leads.',
+      reference: 'docs/parent-sales-daily-operator-checklist.md',
+    });
+  }
   if (Number(dashboardSummary.pending_upload || 0) > 0 || Number(inventory.uploadCandidateAfterHumanApproval || 0) > 0) {
     actions.push({
       owner: 'Foundation video automation',
@@ -299,8 +340,10 @@ function renderMarkdown(report) {
       ['Production API proxy', s.productionApi.pass, s.productionApi.warn, s.productionApi.fail, resultStatus(s.productionApi)],
       ['Sales live smoke', s.salesLive.pass, s.salesLive.warn, s.salesLive.fail, resultStatus(s.salesLive)],
       ['Parent journey', s.parentJourney.pass, s.parentJourney.warn, s.parentJourney.fail, resultStatus(s.parentJourney)],
+      ['Owner decisions', s.ownerDecisions.pass, s.ownerDecisions.warn, s.ownerDecisions.fail, s.ownerVerdict],
       ['Manual sales ready', s.manualReady.pass, s.manualReady.warn, s.manualReady.fail, s.manualReadyVerdict],
       ['Payment live', s.paymentLive.pass, s.paymentLive.warn, s.paymentLive.fail, resultStatus(s.paymentLive)],
+      ['Lead notifications', s.ownerSummary.notificationConfirmed ? 'confirmed' : 'manual check', '', '', s.ownerSummary.notificationInbox || 'not recorded'],
     ]),
     '',
     '## Learning And Lesson Video',
