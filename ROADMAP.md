@@ -164,6 +164,12 @@ access, records, parent-visible progress, and assignment feedback, while
 recurring advisor planning/review is added by Guided or Premium. The bilingual
 conversion smoke also guards `/discovery` and `/about` mobile overflow so the
 mission/leadership trust path stays readable on phones.
+Homepage and Academics AI/technology copy now follows the Trust Center
+human-review boundary: software or AI-assisted tools may help staff organize
+lessons, progress signals, drafts, and review queues, but public pages should
+not promise adaptive AI learning, automatic personalization, or "optimal pace"
+progress for every student. `audit:sales-launch` and
+`audit:public-trust-claims` guard against drifting back to those claims.
 
 ## Active Lanes
 

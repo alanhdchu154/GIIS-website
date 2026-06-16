@@ -17,9 +17,9 @@ const PILLARS = [
     zh: { title: '8 条学习路径', body: '四年选修课程路径配有清楚的课程计划、作业、评估与作品证据，涵盖计算机、工程、商业、心理学等方向。' },
   },
   {
-    icon: '🤖',
-    en: { title: 'AI-Enhanced Learning', body: 'AI tools are integrated throughout the curriculum to create personalized, adaptive learning experiences — making coursework more engaging and helping every student progress at their optimal pace.' },
-    zh: { title: 'AI 赋能学习', body: '人工智能工具全程融入课程，为每位学生提供个性化、自适应的学习体验，让课程更具吸引力，帮助每位学生以最佳节奏进步。' },
+    icon: '🧭',
+    en: { title: 'Human-Reviewed Learning Tools', body: 'GIIS uses software and AI-assisted tools to help staff organize lessons, progress signals, drafts, and review queues. Teachers or advisors still review student work, records, and family-facing summaries.' },
+    zh: { title: '人工审核的学习工具', body: 'GIIS 会使用软件与 AI 辅助工具协助 staff 整理课程、进度讯号、草稿与审核队列；学生作业、正式记录与家长可见摘要仍由教师或顾问审核。' },
   },
 ];
 
@@ -37,8 +37,8 @@ export default function Introduction({ language }) {
         </h2>
         <p style={{ fontSize: '17px', color: '#555', maxWidth: '640px', lineHeight: 1.7, margin: '0 0 52px' }}>
           {isEn
-            ? "GIIS is a fully online, Florida-registered private high school for families who want a documented, transparent US high school pathway. We combine rigorous academics with personalized pathway planning and AI-powered learning tools."
-            : '艾迪尔国际学校是一所完全在线的 Florida 注册私立学校，适合希望获得清楚、透明美国高中学习路径的家庭。我们将严格的学术课程与个性化路径规划及 AI 学习工具相结合。'}
+            ? "GIIS is a fully online, Florida-registered private high school for families who want a documented, transparent US high school pathway. We combine rigorous academics with visible pathway planning, parent-facing progress evidence, and human-reviewed learning tools."
+            : '艾迪尔国际学校是一所完全在线的 Florida 注册私立学校，适合希望获得清楚、透明美国高中学习路径的家庭。我们将严格的学术课程、清楚的路径规划、家长可见学习证据与人工审核的学习工具相结合。'}
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
           {PILLARS.map((p) => (

@@ -189,6 +189,11 @@ Current Umi note:
   every-student/every-semester benefit; say it is added through Guided/Premium
   when the family chooses more human accountability. `/about` leadership cards
   also have a mobile overflow guard through `audit:conversion-bilingual`.
+- Homepage and Academics AI/technology copy follow the Trust Center boundary:
+  describe software or AI-assisted tools as staff workflow support, not as
+  adaptive AI learning, automatic personalization, or guaranteed optimal pace
+  for every student. Guarded by `audit:sales-launch` and
+  `audit:public-trust-claims`.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

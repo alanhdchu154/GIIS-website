@@ -13,6 +13,8 @@ const files = {
   app: read('src/App.js'),
   homeMain: read('src/components/pages/Homepage/HomepageMain.js'),
   homeHero: read('src/components/pages/Homepage/Homepage/HeroSection.js'),
+  homeIntro: read('src/components/pages/Homepage/Homepage/Introduction.js'),
+  academicsIntro: read('src/components/pages/Academics/Academics/Academicsintroduction.js'),
   contact: read('src/components/pages/Homepage/Homepage/ContactForm.js'),
   apply: read('src/components/pages/Apply/ApplyForm.js'),
   admissionsReceipt: read('src/components/main/AdmissionsHandoffReceipt.js'),
@@ -72,6 +74,17 @@ const checks = [
       /to: '\/pricing'/.test(files.homeMain) &&
       /to="\/apply"/.test(files.homeMain),
     message: 'Homepage must expose the parent decision path: trust, parent visibility, pricing, then apply.',
+  },
+  {
+    id: 'public-ai-human-review-boundary',
+    file: 'src/components/pages/Homepage/Homepage/Introduction.js + src/components/pages/Academics/Academics/Academicsintroduction.js',
+    ok: /Human-Reviewed Learning Tools/.test(files.homeIntro) &&
+      /human-reviewed learning tools/.test(files.homeIntro) &&
+      /Teachers or advisors still review student work, records, and family-facing summaries/.test(files.homeIntro) &&
+      /Technology-Supported, Human-Reviewed/.test(files.academicsIntro) &&
+      /grades, credits, records, and family-facing summaries stay human-reviewed/.test(files.academicsIntro) &&
+      !/adaptive learning experiences|optimal pace|AI-powered learning tools|AI tools are integrated throughout/i.test(`${files.homeIntro}\n${files.academicsIntro}`),
+    message: 'Homepage and Academics AI/technology copy must match the human-reviewed Trust Center boundary.',
   },
   {
     id: 'route-consultation',

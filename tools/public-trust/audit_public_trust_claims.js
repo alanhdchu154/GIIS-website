@@ -71,6 +71,11 @@ const RULES = [
     pattern: /AP Prep Options|AP Course(?:s)?|门 AP|AP exams and US college applications/i,
     message: 'Public pathway/homepage copy should use conservative exam-prep wording, not AP-course or admissions framing.',
   },
+  {
+    id: 'ai-adaptive-overclaim',
+    pattern: /AI tools are integrated throughout|AI-powered learning tools|adaptive learning experiences|optimal pace|AI 驱动的沉浸式学习|AI 赋能学习|适应性的学习体验|最佳节奏进步/i,
+    message: 'Public AI/technology copy must describe software-assisted, human-reviewed support rather than adaptive or automated learning promises.',
+  },
 ];
 
 let issueCount = 0;

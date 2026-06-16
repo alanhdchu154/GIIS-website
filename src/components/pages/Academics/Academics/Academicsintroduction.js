@@ -9,11 +9,11 @@ const PILLARS = [
     bodyZh: 'GIIS 是在 Florida 注册的私立学校，依据 Florida 24 学分毕业框架颁发美国高中文凭，并以适合大学申请审核的方式整理正式记录。',
   },
   {
-    icon: '🤖',
-    titleEn: 'Immersive Learning with AI',
-    titleZh: 'AI 驱动的沉浸式学习',
-    bodyEn: 'By integrating AI and cutting-edge technologies into teaching, we create adaptive learning experiences that make the curriculum more engaging and interactive for every student.',
-    bodyZh: '通过将 AI 与前沿科技整合进教学，我们为每位学生打造更具互动性与适应性的学习体验。',
+    icon: '🧭',
+    titleEn: 'Technology-Supported, Human-Reviewed',
+    titleZh: '科技辅助，人工审核',
+    bodyEn: 'Online lessons, quizzes, assignments, and progress signals are organized with software support. AI-assisted tools may help staff prepare or review workflow, but grades, credits, records, and family-facing summaries stay human-reviewed.',
+    bodyZh: '线上课程、测验、作业与进度讯号会通过软件系统整理；AI 辅助工具可协助 staff 准备或审核流程，但成绩、学分、正式记录与家长可见摘要仍需人工审核。',
   },
   {
     icon: '🎯',
