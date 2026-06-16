@@ -115,7 +115,7 @@ async function main() {
   const message = comparison.status === 'pass'
     ? 'Production HTML references the same static JS/CSS assets as the local production build.'
     : expectedExists
-      ? 'Production HTML does not reference the same static JS/CSS assets as the local production build; Netlify deploy or edge propagation may be stale.'
+      ? 'Production HTML does not reference the same static JS/CSS assets as the local production build; GitHub main push should auto-trigger Netlify production, so inspect the Netlify GitHub integration, build trigger, and production deploy state.'
       : 'Local build/index.html is missing; run npm run build before using this freshness check as deploy evidence.';
 
   const payload = {

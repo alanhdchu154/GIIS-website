@@ -279,9 +279,12 @@ const checks = [
     ok: /audit:frontend-deploy/.test(files.netlifyFrontendRepair) &&
       /giis\.netlify\.app/.test(files.netlifyFrontendRepair) &&
       /production_asset_mismatch/.test(files.netlifyFrontendRepair) &&
-      /Do not deploy an unreviewed local\s+folder/.test(files.netlifyFrontendRepair) &&
+      /git push origin main -> Netlify production deploy/.test(files.netlifyFrontendRepair) &&
+      /GitHub integration/.test(files.netlifyFrontendRepair) &&
+      /webhook\/app install/.test(files.netlifyFrontendRepair) &&
+      /Do not deploy an unreviewed\s+local folder/.test(files.netlifyFrontendRepair) &&
       /Do not send automated checkout links/.test(files.netlifyFrontendRepair),
-    message: 'Netlify frontend repair runbook must define stale-deploy diagnosis, dashboard checks, and payment boundaries.',
+    message: 'Netlify frontend repair runbook must define auto-deploy contract, stale-deploy diagnosis, dashboard checks, and payment boundaries.',
   },
   {
     id: 'stripe-live-price-setup',

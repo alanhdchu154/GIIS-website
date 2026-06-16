@@ -298,11 +298,14 @@ function buildNextActions(verdict, salesSignals, releaseGate, dashboardSummary, 
   }
   if (salesSignals.frontendDeploy.warn > 0 || salesSignals.frontendDeploy.fail > 0) {
     const message = salesSignals.frontendDeployDetails?.message || 'Production frontend assets do not match the local production build.';
+    const autoDeployAction = message.includes('GitHub main push should auto-trigger Netlify production')
+      ? ' Confirm the Netlify production branch is main and review deploy status before claiming the latest pushed frontend changes are live.'
+      : ' GitHub main push should auto-trigger Netlify production; inspect the Netlify GitHub integration, production branch, build trigger, and deploy status before claiming the latest pushed frontend changes are live.';
     actions.push({
       owner: 'Umi / Netlify operator',
       priority: 'frontend-deploy',
-      action: `${message} Recheck Netlify deploy status before claiming the latest pushed frontend changes are live.`,
-      reference: 'netlify.toml',
+      action: `${message}${autoDeployAction}`,
+      reference: 'docs/netlify-frontend-deploy-repair.md',
     });
   }
   if (salesSignals.ownerSummary.manualRequiredFail > 0) {

@@ -143,8 +143,11 @@ Current Umi note:
   `npm run audit:frontend-deploy`. Current production still serves
   `static/js/main.d36b323b.js` while the local post-push build expects
   `static/js/main.5bab1c36.js`, so do not claim the latest Chinese conversion
-  changes are live until Netlify deploy status is rechecked. This is a warning,
-  not a manual-sales blocker. Follow
+  changes are live until Netlify deploy status is rechecked. GitHub `main` push
+  should auto-trigger Netlify production, so stale production means inspect the
+  Netlify GitHub integration, branch/build trigger, and production deploy
+  status instead of treating manual local deploy as the normal path. This is a
+  warning, not a manual-sales blocker. Follow
   `docs/netlify-frontend-deploy-repair.md`; `audit:sales-launch` now guards the
   runbook.
 - cc review agreed the remaining checkout blockers require external Stripe /

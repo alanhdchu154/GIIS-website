@@ -296,8 +296,10 @@ npm run audit:parent-journey -- --base-url https://genesisideas.school
 asset references as the reviewed local production build. `audit:sales-live`
 proves key routes render; `audit:parent-journey` proves those routes answer the
 parent questions that drive willingness to pay. If production is still serving
-an older bundle after a push, follow
-`docs/netlify-frontend-deploy-repair.md`.
+an older bundle after a push, treat it as a Netlify auto-deploy integration,
+build-trigger, or production deploy-state failure and follow
+`docs/netlify-frontend-deploy-repair.md`. Do not replace the reviewed
+`origin/main` deploy path with an unreviewed local folder deploy.
 
 GIIS can start selling through consultation and path review now. The v1 payment
 flow is manual-reviewed, so payment API failures block only automated checkout,
