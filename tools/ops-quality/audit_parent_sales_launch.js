@@ -520,6 +520,14 @@ const checks = [
     message: 'School ops report must verify lead-capture dry-run health while keeping real test submissions explicit.',
   },
   {
+    id: 'school-ops-parent-journey-retry',
+    file: 'tools/ops-quality/generate_school_ops_report.js',
+    ok: /auditJsonWithRetry\('parent-journey'/.test(files.schoolOpsReport) &&
+      /retrySuperseded/.test(files.schoolOpsReport) &&
+      /RETRIED_FAIL/.test(files.schoolOpsReport),
+    message: 'School ops report should retry a single transient parent-journey fetch failure while preserving the failed attempt in the report.',
+  },
+  {
     id: 'parent-sales-launch-mode-gate',
     file: 'tools/ops-quality/audit_parent_sales_launch_mode.js',
     ok: /manual_sales_go_with_payment_boundary/.test(files.launchModeGate) &&

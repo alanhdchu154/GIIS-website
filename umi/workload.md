@@ -192,6 +192,12 @@ Current Umi note:
   adaptive AI learning, automatic personalization, or guaranteed optimal pace
   for every student. Guarded by `audit:sales-launch` and
   `audit:public-trust-claims`.
+- `school:ops-report` now retries the production parent-journey gate once if
+  the first fetch fails. This prevents a short Netlify edge/deploy-settling
+  miss on `/consultation` from creating a false `not_ready` day, while still
+  preserving the failed attempt as `RETRIED_FAIL` and blocking outreach if the
+  retry also fails. Latest post-patch run returned
+  `manual_sales_go_with_payment_boundary` with parent journey 7/7.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

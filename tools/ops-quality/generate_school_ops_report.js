@@ -54,6 +54,7 @@ function auditJson(label, script, allowFailure = false) {
   const result = run(label, 'node', [script, '--report', reportPath, '--json-report', jsonPath], { allowFailure });
   return {
     result,
+    attempts: [result],
     data: readJson(jsonPath, {
       generatedAt: new Date().toISOString(),
       summary: { total: 0, pass: 0, warn: 0, fail: result.status === 0 ? 0 : 1 },
@@ -63,10 +64,32 @@ function auditJson(label, script, allowFailure = false) {
   };
 }
 
+function auditJsonWithRetry(label, script, { retries = 1, allowFailure = false } = {}) {
+  const first = auditJson(label, script, allowFailure);
+  const attempts = [...first.attempts];
+  let current = first;
+
+  for (let index = 1; index <= retries && summarizeAudit(current.data).fail > 0; index += 1) {
+    attempts[attempts.length - 1] = {
+      ...attempts[attempts.length - 1],
+      retrySuperseded: true,
+    };
+    current = auditJson(`${label}-retry${index}`, script, allowFailure);
+    attempts.push(...current.attempts);
+  }
+
+  return {
+    result: current.result,
+    attempts,
+    data: current.data,
+  };
+}
+
 function manifestAudit() {
   const result = run('lesson-manifest', 'node', ['tools/youtube-upload/audit_manifest_alignment.js', '--json']);
   return {
     result,
+    attempts: [result],
     data: readJsonFromStdout(result.stdout, {
       summary: { total_lessons: 0, warnings: 1 },
       issues: [],
@@ -87,6 +110,7 @@ function releaseGate() {
   const output = result.output;
   return {
     result,
+    attempts: [result],
     data: {
       evaluated: numberMatch(output, /evaluated:\s+(\d+)/),
       ready: numberMatch(output, /ready:\s+(\d+)/),
@@ -104,7 +128,7 @@ function videoDashboard() {
     jsonPath,
     '--no-html',
   ]);
-  return { result, data: readJson(jsonPath, {}) };
+  return { result, attempts: [result], data: readJson(jsonPath, {}) };
 }
 
 function videoInventory() {
@@ -112,6 +136,7 @@ function videoInventory() {
   const output = result.output;
   return {
     result,
+    attempts: [result],
     data: {
       folders: numberMatch(output, /Video quality inventory:\s+(\d+)\s+folders/),
       visible: numberMatch(output, /,\s+(\d+)\s+visible/),
@@ -183,7 +208,7 @@ function buildReport() {
   const productionApi = auditJson('production-api-proxy', 'tools/ops-quality/audit_production_api_proxy.js');
   const salesLive = auditJson('sales-live', 'tools/ops-quality/audit_parent_sales_live.js');
   const frontendDeploy = auditJson('frontend-deploy-freshness', 'tools/ops-quality/audit_frontend_deploy_freshness.js');
-  const parentJourney = auditJson('parent-journey', 'tools/ops-quality/audit_parent_journey_acceptance.js');
+  const parentJourney = auditJsonWithRetry('parent-journey', 'tools/ops-quality/audit_parent_journey_acceptance.js');
   const leadCaptureDryRun = auditJson('netlify-lead-capture', 'tools/ops-quality/verify_netlify_lead_capture.js');
   const ownerDecisions = auditJson('sales-owner-decisions', 'tools/ops-quality/audit_parent_sales_owner_decisions.js');
   const manualReady = auditJson('sales-manual-ready', 'tools/ops-quality/audit_parent_sales_manual_ready.js');
@@ -259,24 +284,25 @@ function buildReport() {
       inventory: inventorySummary,
     },
     commandResults: [
-      productionApi.result,
-      salesLive.result,
-      frontendDeploy.result,
-      parentJourney.result,
-      leadCaptureDryRun.result,
-      ownerDecisions.result,
-      manualReady.result,
-      paymentLive.result,
-      manifest.result,
-      gate.result,
-      dashboard.result,
-      inventory.result,
+      ...productionApi.attempts,
+      ...salesLive.attempts,
+      ...frontendDeploy.attempts,
+      ...parentJourney.attempts,
+      ...leadCaptureDryRun.attempts,
+      ...ownerDecisions.attempts,
+      ...manualReady.attempts,
+      ...paymentLive.attempts,
+      ...manifest.attempts,
+      ...gate.attempts,
+      ...dashboard.attempts,
+      ...inventory.attempts,
     ].map((item) => ({
       label: item.label,
       command: item.command,
       status: item.status,
       ok: item.ok,
       allowedFailure: item.allowedFailure,
+      retrySuperseded: Boolean(item.retrySuperseded),
       error: item.error,
     })),
     nextActions: buildNextActions(verdict, salesSignals, releaseSummary, dashboardSummary, inventorySummary),
@@ -416,6 +442,7 @@ function renderMarkdown(report) {
 }
 
 function commandOutcome(item) {
+  if (item.retrySuperseded) return 'RETRIED_FAIL';
   if (item.allowedFailure) return 'EXPECTED_FAIL';
   return item.ok ? 'PASS' : 'FAIL';
 }

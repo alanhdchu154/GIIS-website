@@ -171,6 +171,12 @@ lessons, progress signals, drafts, and review queues, but public pages should
 not promise adaptive AI learning, automatic personalization, or "optimal pace"
 progress for every student. `audit:sales-launch` and
 `audit:public-trust-claims` guard against drifting back to those claims.
+School ops now retries the production parent-journey gate once before marking
+the daily report `not_ready`. This is only for short Netlify edge/deploy
+settling or transient fetch failures: the failed first attempt is preserved in
+the command results as `RETRIED_FAIL`, and a second failure still blocks the
+manual sales day. The latest clean run after this hardening returned
+`manual_sales_go_with_payment_boundary` with parent journey 7/7.
 
 ## Active Lanes
 
