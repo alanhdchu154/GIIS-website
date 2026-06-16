@@ -104,6 +104,12 @@ Status: active, Codex-managed, foundation-only.
   ignore it during the trial. Stop only on a true video upload/channel-limit
   error. Transcript/caption-only `quotaExceeded` after a successful video upload
   should be reported as a retry item, not as a failed video upload.
+- 2026-06-15 dashboard WIP cleanup: `tools/lesson-video/video_dashboard.py`
+  now reports course/grade production-plan coverage from
+  `server/prisma/courses/**/*.json`, uses America/Chicago upload dates for
+  daily grouping, labels AP modules as deferred in the plan note, and uses a
+  configurable target pace (`FOUNDATION_DASHBOARD_TARGET_PER_DAY`, default
+  21/day) aligned with the split-batch 7 x 3 trial.
 
 Next check:
 
