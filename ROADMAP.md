@@ -103,6 +103,13 @@ parent-reading layer while preserving the official English profile/PDF body,
 and `npm run audit:conversion-bilingual` guards Trust Center, Pricing, Apply,
 School Profile, and Refund Policy in Chinese mode. Local production-build smoke
 passed 5/5.
+The daily school-ops gate now also checks frontend deploy freshness:
+`npm run audit:frontend-deploy` compares the local production build asset
+references with live Netlify HTML. Current production still serves
+`static/js/main.d36b323b.js` while the local post-push build expects
+`static/js/main.5bab1c36.js`, so the latest Chinese conversion trust-path push
+is not yet live on Netlify. This is a frontend deploy warning, not a reason to
+send automated checkout links or to block reviewed manual sales.
 
 ## Active Lanes
 

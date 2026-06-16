@@ -182,6 +182,7 @@ function ownerSummary(ownerData) {
 function buildReport() {
   const productionApi = auditJson('production-api-proxy', 'tools/ops-quality/audit_production_api_proxy.js');
   const salesLive = auditJson('sales-live', 'tools/ops-quality/audit_parent_sales_live.js');
+  const frontendDeploy = auditJson('frontend-deploy-freshness', 'tools/ops-quality/audit_frontend_deploy_freshness.js');
   const parentJourney = auditJson('parent-journey', 'tools/ops-quality/audit_parent_journey_acceptance.js');
   const ownerDecisions = auditJson('sales-owner-decisions', 'tools/ops-quality/audit_parent_sales_owner_decisions.js');
   const manualReady = auditJson('sales-manual-ready', 'tools/ops-quality/audit_parent_sales_manual_ready.js');
@@ -194,6 +195,9 @@ function buildReport() {
   const salesSignals = {
     productionApi: summarizeAudit(productionApi.data),
     salesLive: summarizeAudit(salesLive.data),
+    frontendDeploy: summarizeAudit(frontendDeploy.data),
+    frontendDeployVerdict: frontendDeploy.data?.verdict || 'unknown',
+    frontendDeployDetails: findResult(frontendDeploy.data, 'frontend-deploy-freshness'),
     parentJourney: summarizeAudit(parentJourney.data),
     ownerDecisions: summarizeAudit(ownerDecisions.data),
     ownerSummary: ownerSummary(ownerDecisions.data),
@@ -253,6 +257,7 @@ function buildReport() {
     commandResults: [
       productionApi.result,
       salesLive.result,
+      frontendDeploy.result,
       parentJourney.result,
       ownerDecisions.result,
       manualReady.result,
@@ -289,6 +294,15 @@ function buildNextActions(verdict, salesSignals, releaseGate, dashboardSummary, 
       priority: 'payment',
       action: 'Create or locate missing live Stripe Price IDs for Guided and Premium before treating automated checkout as live.',
       reference: 'docs/stripe-live-price-setup.md',
+    });
+  }
+  if (salesSignals.frontendDeploy.warn > 0 || salesSignals.frontendDeploy.fail > 0) {
+    const message = salesSignals.frontendDeployDetails?.message || 'Production frontend assets do not match the local production build.';
+    actions.push({
+      owner: 'Umi / Netlify operator',
+      priority: 'frontend-deploy',
+      action: `${message} Recheck Netlify deploy status before claiming the latest pushed frontend changes are live.`,
+      reference: 'netlify.toml',
     });
   }
   if (salesSignals.ownerSummary.manualRequiredFail > 0) {
@@ -339,6 +353,7 @@ function renderMarkdown(report) {
       ['Area', 'Pass', 'Warn', 'Fail', 'Status'],
       ['Production API proxy', s.productionApi.pass, s.productionApi.warn, s.productionApi.fail, resultStatus(s.productionApi)],
       ['Sales live smoke', s.salesLive.pass, s.salesLive.warn, s.salesLive.fail, resultStatus(s.salesLive)],
+      ['Frontend deploy freshness', s.frontendDeploy.pass, s.frontendDeploy.warn, s.frontendDeploy.fail, s.frontendDeployVerdict],
       ['Parent journey', s.parentJourney.pass, s.parentJourney.warn, s.parentJourney.fail, resultStatus(s.parentJourney)],
       ['Owner decisions', s.ownerDecisions.pass, s.ownerDecisions.warn, s.ownerDecisions.fail, s.ownerVerdict],
       ['Manual sales ready', s.manualReady.pass, s.manualReady.warn, s.manualReady.fail, s.manualReadyVerdict],

@@ -139,6 +139,12 @@ Current Umi note:
   English School Profile, and `npm run audit:conversion-bilingual` checks
   Trust Center, Pricing, Apply, School Profile, and Refund Policy in Chinese
   mode. Local production-build smoke passed 5/5.
+- Frontend deploy freshness is now part of `school:ops-report` through
+  `npm run audit:frontend-deploy`. Current production still serves
+  `static/js/main.d36b323b.js` while the local post-push build expects
+  `static/js/main.5bab1c36.js`, so do not claim the latest Chinese conversion
+  changes are live until Netlify deploy status is rechecked. This is a warning,
+  not a manual-sales blocker.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;
