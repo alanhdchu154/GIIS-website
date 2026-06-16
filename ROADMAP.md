@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-13
+Last updated: 2026-06-15
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -68,6 +68,16 @@ push: `audit:sales-live` is 8/8, `audit:parent-journey` is 7/7,
 the expected automated-payment boundary. Local static `audit:sales-launch` is
 40/40 after adding admin manual payment verification and the public refund
 policy gate.
+2026-06-15 website parent/student clarity pass: homepage, Trust Center, Pricing,
+and admissions handoff now explain the student weekly learning rhythm, first
+week after enrollment, support-level fit review, and refund/payment safety net
+without changing the manual-review payment boundary. Local production-build
+verification passed `audit:public-trust-claims`, `audit:sales-launch`,
+`audit:parent-journey -- --base-url http://localhost:3030`, `audit:sales-live
+-- --base-url http://localhost:3030`, `audit:sales-manual-ready -- --base-url
+http://localhost:3030`, mobile 390px browser smoke on homepage / Trust Center /
+Pricing / Apply, and `npm run build`. The only warning remains the expected
+automated-payment boundary.
 
 ## Active Lanes
 

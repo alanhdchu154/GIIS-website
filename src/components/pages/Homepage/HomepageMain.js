@@ -9,6 +9,7 @@ import IsGiisForYou from './Homepage/IsGiisForYou';
 import DemoEmbed from '../../main/DemoEmbed';
 import LessonPreview from '../../main/LessonPreview';
 import EnrollmentRoadmap from '../../main/EnrollmentRoadmap';
+import StudentExperiencePreview from '../../main/StudentExperiencePreview';
 import FacultyGraduates from './Homepage/FacultyGraduates.js';
 import ContactForm from './Homepage/ContactForm';
 import SuccessStories from './Homepage/SuccessStories';
@@ -340,6 +341,9 @@ function HomepageMain({ language, toggleLanguage }) {
 
       {/* A real full-length lesson — proves teaching quality before they pay */}
       <LessonPreview language={language} />
+
+      {/* Student-side clarity — what the first week and a normal week feel like */}
+      <StudentExperiencePreview language={language} />
 
       {/* 8 Pathways showcase */}
       <HomepagePathways language={language} />

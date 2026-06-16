@@ -65,6 +65,30 @@ const RECORDS = {
   ],
 };
 
+const SAFETY_POINTS = [
+  {
+    title: { en: 'First week is a fit check', zh: '第一周也是适配检查' },
+    body: {
+      en: 'If the student is not opening modules, submitting evidence, or understanding the workload, admissions should revisit the plan early.',
+      zh: '如果学生没有打开模块、提交学习证据，或不理解学习量，招生团队应尽早重新评估方案。',
+    },
+  },
+  {
+    title: { en: 'Support level can be reviewed', zh: '支持层级可重新评估' },
+    body: {
+      en: 'Families can ask whether Self-Paced, Guided, or Premium is still the right level before the next billing decision.',
+      zh: '家庭可在下一次计费决定前询问 Self-Paced、Guided 或 Premium 是否仍适合。',
+    },
+  },
+  {
+    title: { en: 'Refund policy stays written', zh: '退款政策保留书面记录' },
+    body: {
+      en: 'The 30-day refund policy is public and should be read before payment, especially when a student is new to online learning.',
+      zh: '30 天退款政策是公开书面政策，尤其适合第一次尝试线上学习的学生家庭在付款前阅读。',
+    },
+  },
+];
+
 function pick(value, isEn) {
   return value[isEn ? 'en' : 'zh'];
 }
@@ -183,6 +207,27 @@ export default function AdmissionsHandoffReceipt({
                   : '对于转学生，可转学分只有在正式成绩单或可核验学校记录审核后才会最终确认。'}
               </p>
             </div>
+          </div>
+
+          <div style={{ marginTop: 18, border: '1px solid #dbe4f0', borderRadius: 8, background: '#f8f9fc', padding: '18px 18px' }}>
+            <p style={{ color: '#2b3d6d', fontSize: 12, fontWeight: 900, letterSpacing: 1.2, textTransform: 'uppercase', margin: '0 0 12px' }}>
+              {isEn ? 'If It Is Not Working' : '如果开始后不合适'}
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 12 }}>
+              {SAFETY_POINTS.map((item) => (
+                <div key={item.title.en} style={{ background: '#fff', border: '1px solid #e1e7f0', borderRadius: 8, padding: '14px 14px' }}>
+                  <h2 style={{ color: '#1a1a2e', fontSize: 14.5, lineHeight: 1.25, margin: '0 0 7px', fontWeight: 850 }}>
+                    {pick(item.title, isEn)}
+                  </h2>
+                  <p style={{ color: '#5c6578', fontSize: 12, lineHeight: 1.6, margin: 0 }}>
+                    {pick(item.body, isEn)}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <Link to="/refund-policy" style={{ display: 'inline-block', marginTop: 14, color: '#2b3d6d', fontSize: 12.5, fontWeight: 850, textDecoration: 'underline', textUnderlineOffset: 3 }}>
+              {isEn ? 'Read the written refund policy' : '阅读书面退款政策'} →
+            </Link>
           </div>
 
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 22 }}>

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Nav from '../../main/Nav.js';
 import DemoEmbed from '../../main/DemoEmbed.js';
+import StudentExperiencePreview from '../../main/StudentExperiencePreview.js';
 
 const TIERS = [
   {
@@ -115,6 +116,13 @@ const FAQS = [
     a: {
       en: 'No. Families see parent-safe summaries, advisor-approved notes, learning evidence, and next actions. Private internal advisor notes and staff-only operational details are intentionally not exposed.',
       zh: '不会。家庭看到的是家长安全摘要、顾问审核留言、学习证据与下一步。内部顾问笔记与 staff-only 运营细节不会对外显示。',
+    },
+  },
+  {
+    q: { en: 'What if the support level is wrong after we start?', zh: '如果开始后发现支持层级不合适怎么办？' },
+    a: {
+      en: 'Email admissions before the next billing decision. GIIS can review whether the student should stay Self-Paced, move into Guided support, or reduce support after the family understands the tradeoff. The written 30-day refund policy remains available for new reviewed enrollments.',
+      zh: '请在下一次计费决定前联系招生邮箱。GIIS 可以重新评估学生应继续 Self-Paced、转入 Guided，或在家长理解取舍后降低支持层级。完成审核后入学的新家庭仍可查看书面 30 天退款政策。',
     },
   },
 ];
@@ -326,6 +334,8 @@ export default function PricingPage({ language, toggleLanguage }) {
       />
 
       <ProofBeforePayment isEn={isEn} />
+
+      <StudentExperiencePreview language={language} variant="compact" />
 
       <section style={{ background: '#fff', padding: '20px 0 54px', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 1020, margin: '0 auto', padding: '0 5%' }}>
