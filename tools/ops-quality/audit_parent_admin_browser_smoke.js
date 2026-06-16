@@ -128,6 +128,19 @@ const ROUTES = [
     },
   },
   {
+    name: 'student learn portal login',
+    path: '/learn',
+    expected: [
+      'Student Learn Portal',
+      'Continue the next active module',
+      'Submit assignments and review feedback',
+      'Check grades, credits, and transcript progress',
+      'Accounts are activated after the enrollment path is reviewed',
+      'Request path review',
+      'Parent sign in',
+    ],
+  },
+  {
     name: 'parent dashboard',
     path: '/parent/dashboard',
     expected: ["Alex's progress", 'Weekly Insights', 'Start Here', 'Assessment Evidence', 'Recent Activity'],

@@ -152,7 +152,7 @@ export default function LoginPortal({ language, portalRole = 'student' }) {
         <title>
           {isAdminPortal
             ? (isEn ? 'Admin portal — Sign in' : '管理员后台 — 登入')
-            : (isEn ? 'Student portal — Sign in' : '学生专区 — 登入')}
+            : (isEn ? 'Student Learn Portal — Sign in' : '学生学习入口 — 登入')}
           {' | Genesis of Ideas International School'}
         </title>
       </Helmet>
@@ -165,6 +165,9 @@ export default function LoginPortal({ language, portalRole = 'student' }) {
               className={styles.logo}
               decoding="async"
             />
+            {!isAdminPortal && (
+              <p className={styles.eyebrow}>{t.portalEyebrow}</p>
+            )}
             <h1 id="portal-title" className={styles.title}>
               {isAdminPortal ? (isEn ? 'School admin portal' : '学校管理员后台') : t.portalTitle}
             </h1>
@@ -175,101 +178,119 @@ export default function LoginPortal({ language, portalRole = 'student' }) {
             </p>
           </header>
 
-          <div className={styles.card}>
-            <div className={styles.tabs} role="tablist" aria-label={isAdminPortal ? (isEn ? 'Admin sign-in options' : '管理员登入选项') : t.tablistAria}>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={tab === 'signin'}
-                className={tab === 'signin' ? styles.tabActive : styles.tab}
-                onClick={() => selectTab('signin')}
-              >
-                {isAdminPortal ? (isEn ? 'Admin sign in' : '管理员登入') : (isEn ? 'Student sign in' : '学生登入')}
-              </button>
-              {!isAdminPortal && (
-                <Link
-                  to="/parent/login"
+          <div className={isAdminPortal ? styles.singleColumn : styles.portalGrid}>
+            {!isAdminPortal && (
+              <aside className={styles.infoPanel} aria-label={isEn ? 'Student portal overview' : '学生入口说明'}>
+                <h2>{t.portalSupportTitle}</h2>
+                <ul>
+                  {t.portalHighlights.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <p className={styles.activationNote}>{t.portalActivationNote}</p>
+                <div className={styles.accessLinks}>
+                  <span>{t.portalNeedAccess}</span>
+                  <Link to="/apply">{t.portalApplyCta}</Link>
+                  <Link to="/consultation">{t.portalConsultCta}</Link>
+                </div>
+              </aside>
+            )}
+
+            <div className={styles.card}>
+              <div className={styles.tabs} role="tablist" aria-label={isAdminPortal ? (isEn ? 'Admin sign-in options' : '管理员登入选项') : t.tablistAria}>
+                <button
+                  type="button"
                   role="tab"
-                  aria-selected="false"
-                  className={styles.tabLink}
+                  aria-selected={tab === 'signin'}
+                  className={tab === 'signin' ? styles.tabActive : styles.tab}
+                  onClick={() => selectTab('signin')}
                 >
-                  {isEn ? 'Parent sign in' : '家长登入'}
-                </Link>
-              )}
-            </div>
-
-            {err && (
-              <div className="alert alert-danger py-2 mx-3" role="alert">
-                {err}
-              </div>
-            )}
-
-            {tab === 'signin' && (
-              <form className={styles.formBody} onSubmit={submitLogin} noValidate>
-                <p className="small text-muted mb-3">
-                  {isAdminPortal
-                    ? (isEn ? 'Use your GIIS admin account. Student and parent accounts should use their own portals.' : '请使用 GIIS 管理员帐号。学生与家长帐号应使用各自入口。')
-                    : t.signInBlurb}
-                </p>
-                <div className="mb-3">
-                  <label className={styles.label} htmlFor="portal-email">
-                    {t.email}
-                  </label>
-                  <input
-                    id="portal-email"
-                    type="email"
-                    className="form-control"
-                    value={loginEmail}
-                    onChange={(e) => setLoginEmail(e.target.value)}
-                    autoComplete="username"
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <label className={styles.label} htmlFor="portal-password">
-                    {t.password}
-                  </label>
-                  <input
-                    id="portal-password"
-                    type="password"
-                    className="form-control"
-                    value={loginPassword}
-                    onChange={(e) => setLoginPassword(e.target.value)}
-                    autoComplete="current-password"
-                    required
-                  />
-                </div>
-                <button type="submit" className={styles.submitBtn} disabled={loading}>
-                  {loading ? t.signingIn : t.signInCta}
+                  {isAdminPortal ? (isEn ? 'Admin sign in' : '管理员登入') : (isEn ? 'Student sign in' : '学生登入')}
                 </button>
-                <p className="small text-center mb-0 mt-3">
-                  <Link to={isAdminPortal ? '/reset-password?role=admin' : '/reset-password?role=student'}>
-                    {isEn ? 'Forgot password?' : '忘记密码？'}
+                {!isAdminPortal && (
+                  <Link
+                    to="/parent/login"
+                    role="tab"
+                    aria-selected="false"
+                    className={styles.tabLink}
+                  >
+                    {isEn ? 'Parent sign in' : '家长登入'}
                   </Link>
-                </p>
-              </form>
-            )}
+                )}
+              </div>
 
-            {tab === 'register' && (
-              <form className={styles.formBody} onSubmit={submitRegister} noValidate>
-                <p className="small text-muted mb-2">{t.registerBlurb}</p>
-                <p className="small text-muted mb-3">{t.registerRequiredNote}</p>
+              {err && (
+                <div className="alert alert-danger py-2 mx-3" role="alert">
+                  {err}
+                </div>
+              )}
 
-                <div className="row g-2">
-                  <div className="col-md-6">
-                    <label className={styles.label} htmlFor="reg-name">
-                      {t.displayName} *
+              {tab === 'signin' && (
+                <form className={styles.formBody} onSubmit={submitLogin} noValidate>
+                  <p className="small text-muted mb-3">
+                    {isAdminPortal
+                      ? (isEn ? 'Use your GIIS admin account. Student and parent accounts should use their own portals.' : '请使用 GIIS 管理员帐号。学生与家长帐号应使用各自入口。')
+                      : t.signInBlurb}
+                  </p>
+                  <div className="mb-3">
+                    <label className={styles.label} htmlFor="portal-email">
+                      {t.email}
                     </label>
                     <input
-                      id="reg-name"
-                      type="text"
+                      id="portal-email"
+                      type="email"
                       className="form-control"
-                      value={reg.name}
-                      onChange={(e) => setRegField('name', e.target.value)}
-                      autoComplete="name"
+                      value={loginEmail}
+                      onChange={(e) => setLoginEmail(e.target.value)}
+                      autoComplete="username"
                       required
                     />
                   </div>
+                  <div className="mb-3">
+                    <label className={styles.label} htmlFor="portal-password">
+                      {t.password}
+                    </label>
+                    <input
+                      id="portal-password"
+                      type="password"
+                      className="form-control"
+                      value={loginPassword}
+                      onChange={(e) => setLoginPassword(e.target.value)}
+                      autoComplete="current-password"
+                      required
+                    />
+                  </div>
+                  <button type="submit" className={styles.submitBtn} disabled={loading}>
+                    {loading ? t.signingIn : t.signInCta}
+                  </button>
+                  <p className="small text-center mb-0 mt-3">
+                    <Link to={isAdminPortal ? '/reset-password?role=admin' : '/reset-password?role=student'}>
+                      {isEn ? 'Forgot password?' : '忘记密码？'}
+                    </Link>
+                  </p>
+                </form>
+              )}
+
+              {tab === 'register' && (
+                <form className={styles.formBody} onSubmit={submitRegister} noValidate>
+                  <p className="small text-muted mb-2">{t.registerBlurb}</p>
+                  <p className="small text-muted mb-3">{t.registerRequiredNote}</p>
+
+                  <div className="row g-2">
+                    <div className="col-md-6">
+                      <label className={styles.label} htmlFor="reg-name">
+                        {t.displayName} *
+                      </label>
+                      <input
+                        id="reg-name"
+                        type="text"
+                        className="form-control"
+                        value={reg.name}
+                        onChange={(e) => setRegField('name', e.target.value)}
+                        autoComplete="name"
+                        required
+                      />
+                    </div>
                   <div className="col-md-6">
                     <label className={styles.label} htmlFor="reg-birth">
                       {t.birthDate} *
@@ -403,6 +424,7 @@ export default function LoginPortal({ language, portalRole = 'student' }) {
                 </button>
               </form>
             )}
+          </div>
           </div>
 
           <p className={styles.back}>

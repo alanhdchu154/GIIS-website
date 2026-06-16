@@ -255,37 +255,49 @@ function CourseCard({ enr, isEn }) {
   );
 }
 
-function useEnrollments() {
+function useEnrollments(enabled = true) {
   const [enrollments, setEnrollments] = useState(null);
   const reload = () => {
+    if (!enabled) {
+      setEnrollments([]);
+      return;
+    }
     fetch(`${API}/api/enrollments`, { credentials: 'include' })
       .then((r) => (r.ok ? r.json() : null))
       .then((d) => setEnrollments(d || []))
       .catch(() => setEnrollments([]));
   };
-  useEffect(reload, []);
+  useEffect(reload, [enabled]);
   return { enrollments, reload };
 }
 
-function useProfile() {
+function useProfile(enabled = true) {
   const [profile, setProfile] = useState(null);
   useEffect(() => {
+    if (!enabled) {
+      setProfile(null);
+      return;
+    }
     fetch(`${API}/api/me`, { credentials: 'include' })
       .then((r) => r.ok ? r.json() : null)
       .then((d) => setProfile(d))
       .catch(() => {});
-  }, []);
+  }, [enabled]);
   return profile;
 }
 
-function useCourses() {
+function useCourses(enabled = true) {
   const [courses, setCourses] = useState(null);
   useEffect(() => {
+    if (!enabled) {
+      setCourses([]);
+      return;
+    }
     fetch(`${API}/api/courses`)
       .then((r) => r.ok ? r.json() : [])
       .then((d) => setCourses(Array.isArray(d) ? d : []))
       .catch(() => setCourses([]));
-  }, []);
+  }, [enabled]);
   return courses;
 }
 
@@ -293,9 +305,10 @@ export default function LearnDashboard({ language }) {
   const isEn = language !== 'zh';
   const navigate = useNavigate();
   const session = getStudentSession();
-  const { enrollments, reload } = useEnrollments();
-  const allCourses = useCourses();
-  const profile = useProfile();
+  const hasSession = Boolean(session);
+  const { enrollments, reload } = useEnrollments(hasSession);
+  const allCourses = useCourses(hasSession);
+  const profile = useProfile(hasSession);
   const [enrolling, setEnrolling] = useState(null);
   const [enrollErr, setEnrollErr] = useState('');
   const [pathwayFilter, setPathwayFilter] = useState(null); // null = auto-detect

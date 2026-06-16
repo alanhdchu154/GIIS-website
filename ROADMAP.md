@@ -103,16 +103,23 @@ parent-reading layer while preserving the official English profile/PDF body,
 and `npm run audit:conversion-bilingual` guards Trust Center, Pricing, Apply,
 School Profile, and Refund Policy in Chinese mode. Local production-build smoke
 passed 5/5.
+2026-06-16 Student Learn Portal entry pass: `/learn` / `/login` now explains
+what enrolled students can do after sign-in (continue modules, submit work,
+review feedback, and check grades/credits/transcript progress), links
+not-yet-activated families back to path review / admissions consultation, and
+keeps parent sign-in visibly separate. The unauthenticated Learn Dashboard no
+longer fires student API requests before redirecting to sign-in, so the entry
+surface is cleaner for students and for browser smoke.
 The daily school-ops gate now also checks frontend deploy freshness:
 `npm run audit:frontend-deploy` now treats Netlify's published production
 deploy commit as the primary freshness signal and keeps local-vs-Netlify asset
 hash differences as diagnostics. On 2026-06-16, Netlify public metadata showed
-production deploy `529f4a8c` ready on branch `main`; production behavior gates
+production deploy `4dca99b6` ready on branch `main`; production behavior gates
 passed (`audit:frontend-deploy` `production_deploy_matches_origin_main`,
-`audit:conversion-bilingual` 5/5, parent journey 7/7, sales live 8/8), and
-`school:ops-report` had no frontend-deploy warning. The latest Chinese
-conversion trust path is verified live. If a future push shows an older
-published commit or failing behavior gates, follow
+`audit:conversion-bilingual` 5/5, parent journey 7/7, and `school:ops-report`
+with `manual_sales_go_with_payment_boundary`). The latest Chinese conversion
+trust path and School Profile mobile overflow fix are verified live. If a
+future push shows an older published commit or failing behavior gates, follow
 `docs/netlify-frontend-deploy-repair.md`; do not use an unreviewed local folder
 deploy.
 
@@ -332,9 +339,9 @@ Status: active watch.
   admin, parent, and student sessions.
 - `npm run audit:ops-browser` now smokes `/consultation`, `/graduates`,
   `/apply`, `/parent/dashboard`, `/admin`, `/admin/applications`,
-  `/admin/assignments`, and `/admin/weekly-report` on desktop and mobile with
-  mocked API responses and repeated-fetch caps. Latest local result: 22 pass /
-  0 fail, saved in `_audit/parent-admin-browser-smoke.md`.
+  `/admin/assignments`, `/admin/weekly-report`, and the unauthenticated
+  `/learn` student-entry surface on desktop and mobile with mocked API
+  responses and repeated-fetch caps. Latest local result: 24 pass / 0 fail.
 - Admin home IA was tightened on 2026-06-12: `/admin` now starts with a
   transfer-family review workflow, then a department hub (Admissions, Student
   Records, Academic Delivery, Parent Care, Billing, School Operations), then the

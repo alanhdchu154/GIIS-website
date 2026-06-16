@@ -81,16 +81,35 @@ export function getNavStrings(language) {
 export function getAuthPageStrings(language) {
   const en = language === 'en';
   return {
-    portalTitle: en ? 'Student portal' : '学生专区',
+    portalTitle: en ? 'Student Learn Portal' : '学生学习入口',
     portalSubtitle: en
-      ? 'Sign in or create an account to access your transcript.'
-      : '登入或注册帐号以使用线上成绩单。',
+      ? 'Open your courses, module work, grades, transcript, and advisor updates in one place.'
+      : '登入后查看课程、模块任务、成绩、成绩单与顾问更新。',
+    portalEyebrow: en ? 'For enrolled GIIS families' : '已入学家庭入口',
+    portalSupportTitle: en ? 'After sign-in, students can:' : '登入后学生可以：',
+    portalHighlights: en
+      ? [
+          'Continue the next active module',
+          'Submit assignments and review feedback',
+          'Check grades, credits, and transcript progress',
+        ]
+      : [
+          '继续下一项学习模块',
+          '提交作业并查看反馈',
+          '查看成绩、学分与成绩单进度',
+        ],
+    portalActivationNote: en
+      ? 'Accounts are activated after the enrollment path is reviewed and payment is recorded by the school.'
+      : '帐号会在入学路径审核完成、学校记录付款后启用。',
+    portalNeedAccess: en ? 'Need access?' : '还没有帐号？',
+    portalApplyCta: en ? 'Request path review' : '申请路径审核',
+    portalConsultCta: en ? 'Talk to admissions' : '联系招生咨询',
     tabSignIn: en ? 'Sign in' : '登入',
     tabRegister: en ? 'Register' : '注册',
-    tablistAria: en ? 'Sign in or register' : '登入或注册',
+    tablistAria: en ? 'Student and parent sign-in options' : '学生与家长登入选项',
     signInBlurb: en
-      ? 'Sign in with the email and password you used when you registered.'
-      : '请使用注册时的电子邮件与密码登入。',
+      ? 'Use the student email and password activated by GIIS after enrollment review.'
+      : '请使用 GIIS 在入学审核后启用的学生电子邮件与密码登入。',
     signInCta: en ? 'Sign in' : '登入',
     registerBlurb: en
       ? 'Enter the same information that appears on your official transcript header (name, birth date, guardian, address).'

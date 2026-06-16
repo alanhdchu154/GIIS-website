@@ -139,16 +139,22 @@ Current Umi note:
   English School Profile, and `npm run audit:conversion-bilingual` checks
   Trust Center, Pricing, Apply, School Profile, and Refund Policy in Chinese
   mode. Local production-build smoke passed 5/5.
+- Student Learn Portal entry now explains the post-sign-in workflow for enrolled
+  students, keeps parent sign-in separate, and routes not-yet-activated
+  families back to path review / admissions consultation. The unauthenticated
+  Learn Dashboard no longer fires student API requests before redirecting to
+  sign-in. Local `audit:ops-browser -- --base-url http://localhost:3042` now
+  covers `/learn` on desktop/mobile and passes 24/24.
 - Frontend deploy freshness is now part of `school:ops-report` through
   `npm run audit:frontend-deploy`. Netlify public metadata now shows production
-  deploy `529f4a8c` ready on branch `main`; asset hashes differ from the local
+  deploy `4dca99b6` ready on branch `main`; asset hashes differ from the local
   build, but the deploy freshness audit treats the current published commit as
   the primary signal and leaves asset differences as diagnostics. Production
   behavior gates pass: `audit:frontend-deploy`
   `production_deploy_matches_origin_main`, `audit:conversion-bilingual` 5/5,
-  parent journey 7/7, sales live 8/8, and `school:ops-report` has no
-  frontend-deploy warning. The latest Chinese conversion trust path is verified
-  live.
+  parent journey 7/7, and `school:ops-report` has no frontend-deploy warning
+  with the manual-sales/payment-boundary verdict. The latest Chinese conversion
+  trust path and School Profile mobile overflow fix are verified live.
   Future stale-commit or behavior-gate failure should follow
   `docs/netlify-frontend-deploy-repair.md`; never deploy an unreviewed local
   folder.
