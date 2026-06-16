@@ -120,13 +120,17 @@ college admissions claims in foundation lesson titles or descriptions.
 
 ## Daily Schedule
 
-- 02:15 / 07:15 / 12:15 CT: Codex cron
-  `giis-foundation-video-split-batch` calls
-  `bash tools/lesson-video/foundation_daily.sh`.
-- 20:00 CT: Codex cron `giis-video-upload-monitor-dashboard` runs read-mostly
-  status checks and dashboard reporting.
-- Keep production and monitoring separate: the 20:00 monitor should not create
-  modules, upload videos, or repair lesson artifacts.
+- Current Codex automation: `GIIS_影片_pipeline`, stored under
+  `~/.codex/automations/giis-foundation-video-split-batch/automation.toml`,
+  runs as one hourly heartbeat in the fixed `GIIS_影片_producer` chat.
+- 03:00 / 08:00 CT: producer slots call
+  `FOUNDATION_MAX_MODULES=10 FOUNDATION_UPLOAD_MAX=10 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus FOUNDATION_CC_BUDGET_USD=10 FOUNDATION_REVIEW_BUDGET_USD=3 bash tools/lesson-video/foundation_daily.sh`.
+- 12:00 / 17:00 CT: check queue, release gate, manifest alignment, and today's
+  successful non-AP foundation upload count. If the count is below 20, run one
+  bounded catch-up batch with `min(gap, 10)` modules/uploads, then update the
+  dashboard.
+- Outside 03/08/12/17 CT, the heartbeat should skip heavy work and not read
+  repo state, run git/npm/Python/cc, or touch files.
 - Default target grade: Grade 9 (`FOUNDATION_TARGET_GRADE=9`).
 - Selection is deterministic: Grade 9 course sequence first, then module order;
   failed modules may be retried before new work.
@@ -134,8 +138,10 @@ college admissions claims in foundation lesson titles or descriptions.
   `teaching-videos/_audit/course-design/<course-slug>.json`.
 - If course design fails, run the built-in safe repair path, then review again.
   Proceed only after the repaired course passes; report unresolved blockers.
-- Max modules/uploads per run: 7 during the split-batch upload-cap trial.
-- Intended daily ceiling: 21 unless Alan changes it.
+- Max modules/uploads per producer run: 10.
+- Intended daily target: about 20 uploaded non-AP foundation lessons when gates
+  remain clean. Do not chase this number by forcing weak lessons through the
+  quality gate.
 - Claude Code model routing: foundation video production is repetitive
   mechanics and should default to `FOUNDATION_CC_MODEL=sonnet`; the independent
   second-pass/source-alignment review is release judgment and should default to

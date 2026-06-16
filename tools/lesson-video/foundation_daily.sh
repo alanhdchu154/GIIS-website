@@ -52,14 +52,14 @@ fi
   echo
   "$PYTHON" tools/lesson-video/foundation_daily_orchestrator.py \
     --target-grade "${FOUNDATION_TARGET_GRADE:-9}" \
-    --max-modules "${FOUNDATION_MAX_MODULES:-7}" \
-    --upload-max "${FOUNDATION_UPLOAD_MAX:-7}" \
+    --max-modules "${FOUNDATION_MAX_MODULES:-10}" \
+    --upload-max "${FOUNDATION_UPLOAD_MAX:-10}" \
     --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}" \
     --cc-model "${FOUNDATION_CC_MODEL:-sonnet}" \
     --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}" \
     --cc-timeout-seconds "${FOUNDATION_CC_TIMEOUT_SECONDS:-1800}" \
     --review-model "${FOUNDATION_REVIEW_MODEL:-opus}" \
-    --review-budget-usd "${FOUNDATION_REVIEW_BUDGET_USD:-2}" \
+    --review-budget-usd "${FOUNDATION_REVIEW_BUDGET_USD:-3}" \
     --review-timeout-seconds "${FOUNDATION_REVIEW_TIMEOUT_SECONDS:-420}" \
     --ignore-upload-quota-estimate \
     --auto-commit \

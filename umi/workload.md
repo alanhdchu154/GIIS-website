@@ -147,16 +147,16 @@ Current Umi note:
   covers `/learn` on desktop/mobile and passes 24/24.
 - Frontend deploy freshness is now part of `school:ops-report` through
   `npm run audit:frontend-deploy`. Netlify public metadata now shows production
-  deploy `357003c9` ready on branch `main`; GitHub CI is green for the same
+  deploy `0df20648` ready on branch `main`; GitHub CI is green for the same
   SHA. Asset hashes may differ from a local build, but the deploy freshness
   audit treats the current published commit as the primary signal and leaves
   asset differences as diagnostics. Production behavior gates pass:
   `audit:frontend-deploy` `production_deploy_matches_origin_main`,
-  `audit:conversion-bilingual` 5/5, parent journey 7/7, `audit:ops-browser`
-  24/24, and `school:ops-report` has no frontend-deploy warning with the
-  manual-sales/payment-boundary verdict. The latest Student Learn Portal entry,
-  Chinese conversion trust path, and School Profile mobile overflow fix are
-  verified live.
+  `audit:conversion-bilingual` 5/5, parent journey 7/7, and
+  `school:ops-report` has no frontend-deploy warning with the
+  manual-sales/payment-boundary verdict. The latest Pricing first-fold, Student
+  Learn Portal entry, Chinese conversion trust path, and School Profile mobile
+  overflow fix are verified live.
   Future stale-commit or behavior-gate failure should follow
   `docs/netlify-frontend-deploy-repair.md`; never deploy an unreviewed local
   folder.
@@ -181,13 +181,14 @@ Acceptance:
 
 - owner: Umi / Codex
 - mode: Split-work with Claude Code
-- schedule: one consolidated Codex producer automation,
-  `giis-foundation-video-split-batch`, runs at 02:15 / 07:15 / 12:15 CT.
-  The separate read-mostly dashboard monitor,
-  `giis-video-upload-monitor-dashboard`, runs at 20:00 CT.
+- schedule: one unified Codex heartbeat, `GIIS_影片_pipeline`, attached to the
+  `GIIS_影片_producer` chat. It wakes hourly and gates internally: 03:00 /
+  08:00 CT produce up to 10 modules/uploads each; 12:00 / 17:00 CT check for
+  missed target, run bounded catch-up if needed, and update the dashboard.
 - runner: `bash tools/lesson-video/foundation_daily.sh`
 - scope: non-AP foundation modules only
-- batch size: max 7 modules / 7 uploads per run
+- batch size: max 10 modules / 10 uploads per producer run; catch-up stays
+  bounded and must not force weak lessons through the gate
 - cc guardrails: `FOUNDATION_CC_BUDGET_USD=10` production and
   `FOUNDATION_REVIEW_BUDGET_USD=3` independent review per module
 
@@ -206,8 +207,8 @@ Acceptance:
 
 Current Umi note:
 
-- This handoff is intentionally narrow: monitor and repair the split-batch
-  foundation runs. Broader parent/admin stability and course-quality priorities
+- This handoff is intentionally narrow: monitor and repair the unified
+  foundation pipeline. Broader parent/admin stability and course-quality priorities
   belong in `ROADMAP.md`.
 - 2026-06-16 current daily report: 136 lesson folders, 129 visible/uploaded
   lessons, 4 pending upload, release gate 76 ready / 60 needs_revision / 0

@@ -114,15 +114,16 @@ The daily school-ops gate now also checks frontend deploy freshness:
 `npm run audit:frontend-deploy` now treats Netlify's published production
 deploy commit as the primary freshness signal and keeps local-vs-Netlify asset
 hash differences as diagnostics. On 2026-06-16, Netlify public metadata showed
-production deploy `357003c9` ready on branch `main`; GitHub CI was green for
+production deploy `0df20648` ready on branch `main`; GitHub CI was green for
 the same SHA, and production behavior gates passed (`audit:frontend-deploy`
 `production_deploy_matches_origin_main`, `audit:conversion-bilingual` 5/5,
-parent journey 7/7, `audit:ops-browser` 24/24, and `school:ops-report` with
-`manual_sales_go_with_payment_boundary`). The latest Student Learn Portal entry,
-Chinese conversion trust path, and School Profile mobile overflow fix are
-verified live. If a future push shows an older published commit or failing
-behavior gates, follow `docs/netlify-frontend-deploy-repair.md`; do not use an
-unreviewed local folder deploy.
+parent journey 7/7, and `school:ops-report` with
+`manual_sales_go_with_payment_boundary`). The latest Pricing first-fold,
+Student Learn Portal entry, Chinese conversion trust path, and School Profile
+mobile overflow fix are verified live. If a future push shows an older
+published commit or failing behavior gates, follow
+`docs/netlify-frontend-deploy-repair.md`; do not use an unreviewed local folder
+deploy.
 
 ## Active Lanes
 
@@ -132,14 +133,16 @@ Status: active, Codex-managed, foundation-only.
 
 - Scheduler:
   `~/.codex/automations/giis-foundation-video-split-batch/automation.toml`
-- Time: 02:15 / 07:15 / 12:15 CT via one consolidated producer cron job.
-- Monitor dashboard:
-  `~/.codex/automations/giis-video-upload-monitor-dashboard/automation.toml`
-  runs at 20:00 CT and is the main Alan-facing video status thread.
+- App-facing automation: `GIIS_影片_pipeline`, posting in
+  `GIIS_影片_producer`.
+- Time: one hourly Codex heartbeat with internal gates:
+  - 03:00 / 08:00 CT: producer runs, up to 10 modules/uploads each.
+  - 12:00 / 17:00 CT: check for missed daily target, run bounded catch-up if
+    needed, and update the dashboard in the same chat.
 - Repo runner: `bash tools/lesson-video/foundation_daily.sh`
 - Scope: non-AP foundation modules only.
-- Max upload volume: 7/run, intended ceiling 21/day during the current
-  split-batch upload-cap trial.
+- Target upload volume: about 20/day when gates stay clean; do not chase volume
+  by forcing weak lessons through the quality gate.
 - Upload rule: only `yt_queue.py upload --gate-ready`; never
   `upload_lesson.py --force-without-approval`.
 - Required gate: clean pass, score 100, MP4, transcript, contact sheet,
@@ -153,21 +156,22 @@ Status: active, Codex-managed, foundation-only.
   now reports course/grade production-plan coverage from
   `server/prisma/courses/**/*.json`, uses America/Chicago upload dates for
   daily grouping, labels AP modules as deferred in the plan note, and uses a
-  configurable target pace (`FOUNDATION_DASHBOARD_TARGET_PER_DAY`, default
-  21/day) aligned with the split-batch 7 x 3 trial.
+  configurable target pace (`FOUNDATION_DASHBOARD_TARGET_PER_DAY`, default now
+  aligned to the roughly 20/day foundation target).
 
 Next check:
 
 - After each scheduled run, review selected modules, cc progress, gate result,
   upload result, website manifest sync, and any `cc_blocked` report.
-- At 20:00 CT, review the generated upload dashboard, queue status, release
-  gate totals, and manifest alignment from the monitor thread.
+- At 12:00 / 17:00 CT, review the generated upload dashboard, queue status,
+  release gate totals, and manifest alignment from the same
+  `GIIS_影片_producer` thread.
 - Before any push/deploy, finish browser/predeploy smoke, review the backend
   hardening and Prisma/webhook changes, and separate safe frontend/pipeline
   changes from Lightsail/db work if needed.
-- Monitor the split-batch 7/run trial before expanding per-run volume. Do not
-  increase volume unless cc output, release gate, YouTube upload, and Learn
-  Portal manifest sync all pass without manual rescue.
+- Monitor the 10/run morning producer slots before increasing daily pace. Do not
+  expand volume unless cc output, release gate, YouTube upload, and Learn Portal
+  manifest sync all pass without manual rescue.
 - 2026-06-10 current lane: Biology Modules 4/5/6 were selected. M6 was approved
   by automation; M4/M5 failed the orchestrator gate initially but passed targeted
   `foundation_video_gate.py --render-mp4` reruns with score 100. Current checks

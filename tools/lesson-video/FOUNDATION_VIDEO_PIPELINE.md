@@ -1,7 +1,7 @@
 # Foundation Video Pipeline
 
-Date: 2026-06-14
-Status: active v0.4 split-batch foundation loop
+Date: 2026-06-16
+Status: active v0.5 unified foundation pipeline
 
 ## Goal
 
@@ -11,9 +11,9 @@ repeatably, while Umi remains the academic editor and release authority.
 This is the intended loop for every new foundation video:
 
 ```text
-02:15 / 07:15 / 12:15 CT consolidated Codex producer automation
+03:00 / 08:00 CT producer slots in the unified `GIIS_影片_pipeline` heartbeat
   -> call bash tools/lesson-video/foundation_daily.sh
-  -> choose up to 7 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
+  -> choose up to 10 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
   -> verify module outline and free/usable resource URLs
   -> attach Learn Portal Expert Lens as video-safe big idea/watch-for/transfer guidance
@@ -73,22 +73,28 @@ The wrapper:
 
 ## Daily Orchestrator
 
-Preferred scheduler: Codex automations. Use one consolidated producer cron for
-the three split-batch runs, plus a separate read-mostly dashboard monitor.
+Preferred scheduler: Codex automations. Use one unified heartbeat attached to
+the fixed project chat `GIIS_影片_producer`; do not create separate producer and
+dashboard chats.
 
 ```text
 ~/.codex/automations/giis-foundation-video-split-batch/automation.toml
-rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=2,7,12;BYMINUTE=15;BYSECOND=0"
-
-~/.codex/automations/giis-video-upload-monitor-dashboard/automation.toml
-rrule = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=20;BYMINUTE=0;BYSECOND=0"
+app name = "GIIS_影片_pipeline"
+target chat = "GIIS_影片_producer"
+rrule = hourly heartbeat with prompt-level gates:
+  03:00 / 08:00 CT -> producer, up to 10 modules/uploads
+  12:00 / 17:00 CT -> check gaps, bounded catch-up if below target, dashboard
 ```
 
-The producer automation's only scheduling job is to call the repo-owned runner:
+The producer slots call the repo-owned runner:
 
 ```bash
-FOUNDATION_MAX_MODULES=7 FOUNDATION_UPLOAD_MAX=7 bash tools/lesson-video/foundation_daily.sh
+FOUNDATION_MAX_MODULES=10 FOUNDATION_UPLOAD_MAX=10 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus bash tools/lesson-video/foundation_daily.sh
 ```
+
+The noon / late-afternoon slots should read the queue/dashboard first. If the
+day is below the target and the gap is real, run one bounded catch-up pass rather
+than forcing low-quality lessons through the gate.
 
 Keep the pipeline logic in this repository so changes can be reviewed,
 committed, and rolled back like normal code. Do not use a macOS LaunchAgent for
@@ -235,12 +241,13 @@ Do not use direct upload scripts for normal operations.
 
 ## Upload-Cap Trial
 
-As of the 2026-06-14 automation consolidation, one Codex producer cron runs
-three smaller batches each day: max 7 modules and 7 uploads per run, with an
-intended ceiling of 21 videos/day unless Alan changes it. A separate 20:00 CT
-dashboard monitor is read-mostly and should not produce or upload videos. This
-replaces the older three-automation split-batch setup and the earlier single
-20-module run because cc became unreliable around the eighth consecutive module.
+As of the 2026-06-16 automation consolidation, one Codex heartbeat runs the
+whole daily loop in the fixed `GIIS_影片_producer` chat: 03:00 / 08:00 CT
+producer slots, max 10 modules and 10 uploads per producer run, plus 12:00 /
+17:00 CT gap checks, bounded catch-up if useful, and dashboard updates. The
+intended pace is about 20 videos/day when quality gates stay clean. This
+replaces the separate dashboard automation and the older 7 x 3 split-batch
+framing.
 The cron jobs use `FOUNDATION_CC_MODEL=sonnet`,
 `FOUNDATION_REVIEW_MODEL=opus`, `FOUNDATION_CC_BUDGET_USD=10` and
 `FOUNDATION_REVIEW_BUDGET_USD=3`. Those values are local guardrails for stuck
