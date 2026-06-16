@@ -97,6 +97,12 @@ Manual payment now has a parent-facing receipt copy in the admin application
 queue after **Record Manual Payment** succeeds. The receipt is GIIS-branded,
 includes the Stripe/manual reference and refund-policy link, and is guarded by
 the parent sales launch audit plus parent/admin browser smoke.
+Chinese-language conversion coverage now includes the School Profile trust
+path: `/school-profile` receives the current language, shows a Chinese
+parent-reading layer while preserving the official English profile/PDF body,
+and `npm run audit:conversion-bilingual` guards Trust Center, Pricing, Apply,
+School Profile, and Refund Policy in Chinese mode. Local production-build smoke
+passed 5/5.
 
 ## Active Lanes
 

@@ -134,10 +134,16 @@ Current Umi note:
   GIIS-branded receipt text with plan, amount, Stripe reference, subscription
   record, and refund-policy link. It is guarded by `audit:sales-launch` and the
   parent/admin browser smoke.
+- Chinese conversion trust path now has a guard: `/school-profile` receives
+  language state and shows a Chinese parent-reading layer for the official
+  English School Profile, and `npm run audit:conversion-bilingual` checks
+  Trust Center, Pricing, Apply, School Profile, and Refund Policy in Chinese
+  mode. Local production-build smoke passed 5/5.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
-  payment receipt is now handled; remaining safe trust tasks are stronger
-  bilingual coverage for conversion pages and eventual roadmap/workload trim.
+  payment receipt and the first bilingual conversion guard are now handled;
+  remaining safe trust tasks are continued roadmap/workload trim and any
+  parent/student questions found during live outreach.
 
 Acceptance:
 

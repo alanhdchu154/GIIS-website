@@ -491,9 +491,43 @@ function ProfileDocument() {
   );
 }
 
-export default function SchoolProfilePage() {
+const pageIntro = {
+  en: {
+    eyebrow: 'Parent verification document',
+    title: 'School Profile',
+    body: 'This English school profile is the official GIIS reference for school status, grading, calendar, graduation framework, and contact information. GIIS is a Florida-registered private school; accreditation and CEEB status are described conservatively inside the profile.',
+    download: 'Download PDF',
+    downloading: 'Generating PDF...',
+    toolbar: 'School Profile - GIIS',
+  },
+  zh: {
+    eyebrow: '家长核验文件',
+    title: 'School Profile 学校简介',
+    body: '下方英文文件是 GIIS 对外使用的正式 School Profile，包含学校注册状态、评分制度、校历、24 学分毕业框架与联系方式。GIIS 是 Florida 注册私立学校；认证与 CEEB 状态会在文件中以保守方式说明。中文说明只协助家长阅读，不取代英文正式文件。',
+    download: '下载 PDF',
+    downloading: '正在生成 PDF...',
+    toolbar: 'School Profile - GIIS',
+  },
+};
+
+const introWrapStyle = {
+  background: '#f7f3e8',
+  borderBottom: '1px solid rgba(26,45,90,0.16)',
+  fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  padding: '22px 24px',
+};
+
+const introInnerStyle = {
+  maxWidth: '920px',
+  margin: '0 auto',
+  color: '#1d2742',
+};
+
+export default function SchoolProfilePage({ language = 'en' }) {
   const ref = useRef(null);
   const [downloading, setDownloading] = useState(false);
+  const isZh = language === 'zh';
+  const intro = isZh ? pageIntro.zh : pageIntro.en;
 
   async function handleDownload() {
     if (!ref.current) return;
@@ -520,7 +554,7 @@ export default function SchoolProfilePage() {
   return (
     <>
       <Helmet>
-        <title>School Profile | Genesis of Ideas International School</title>
+        <title>{intro.title} | Genesis of Ideas International School</title>
       </Helmet>
 
       {/* Toolbar */}
@@ -529,7 +563,7 @@ export default function SchoolProfilePage() {
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         fontFamily: 'Inter, sans-serif', gap: '16px', flexWrap: 'wrap',
       }}>
-        <span style={{ fontSize: '14px', fontWeight: 600 }}>School Profile — GIIS</span>
+        <span style={{ fontSize: '14px', fontWeight: 600 }}>{intro.toolbar}</span>
         <button
           onClick={handleDownload}
           disabled={downloading}
@@ -539,9 +573,23 @@ export default function SchoolProfilePage() {
             opacity: downloading ? 0.7 : 1,
           }}
         >
-          {downloading ? 'Generating PDF…' : '⬇ Download PDF'}
+          {downloading ? intro.downloading : intro.download}
         </button>
       </div>
+
+      <section style={introWrapStyle} aria-label={intro.title}>
+        <div style={introInnerStyle}>
+          <div style={{ color: GOLD, fontSize: '12px', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '6px' }}>
+            {intro.eyebrow}
+          </div>
+          <h1 style={{ margin: '0 0 8px', color: NAVY, fontSize: '28px', lineHeight: 1.15 }}>
+            {intro.title}
+          </h1>
+          <p style={{ margin: 0, maxWidth: '780px', fontSize: '15px', lineHeight: 1.65 }}>
+            {intro.body}
+          </p>
+        </div>
+      </section>
 
       {/* Preview */}
       <div style={{ background: '#2a2a2a', minHeight: '100vh', padding: '40px 16px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>

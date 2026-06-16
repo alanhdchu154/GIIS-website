@@ -54,6 +54,7 @@
     "audit:showcase-all": "node tools/pathway-quality/audit_all_course_showcase_readiness.js",
     "audit:showcase-browser": "node tools/pathway-quality/audit_all_course_browser_smoke.js",
     "audit:ops-browser": "node tools/ops-quality/audit_parent_admin_browser_smoke.js",
+    "audit:conversion-bilingual": "node tools/ops-quality/audit_conversion_bilingual_smoke.js",
     "audit:sales-launch": "node tools/ops-quality/audit_parent_sales_launch.js",
     "audit:sales-live": "node tools/ops-quality/audit_parent_sales_live.js",
     "audit:sales-payment-live": "node tools/ops-quality/audit_parent_sales_payment_live.js",

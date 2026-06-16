@@ -169,7 +169,7 @@ function App() {
          <Route path="/learn/:slug/grades" element={<GradesPage language={language} />} />
          <Route path="/learn/:slug/syllabus" element={<SyllabusPage language={language} />} />
          <Route path="/diploma/:studentId" element={<DiplomaPage language={language} />} />
-        <Route path="/school-profile" element={<SchoolProfilePage />} />
+        <Route path="/school-profile" element={<SchoolProfilePage language={language} />} />
          <Route path="/about" element={<AboutPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/about/principal" element={<Navigate to="/about" replace />} />
          <Route path="/about/leadership" element={<Navigate to="/about" replace />} />
