@@ -504,20 +504,23 @@ Status: reconciled locally; pending production deploy execution.
   `/trust-center`, `/graduates`, `/parent/demo`, and `/assessment-proof`.
   Evidence: `_audit/parent-sales-live-production-smoke.md`.
 - 2026-06-11 payment-launch live gate added `npm run audit:sales-payment-live`.
-  Current production result is 2 pass / 1 warn / 4 fail: Self-Paced monthly is
-  configured, but Guided `$149/month` and Premium `$299/month` have no
-  production Stripe price IDs, Self-Paced annual has no price ID, direct
-  `https://api.genesisideas.school/health` is unreachable, and the Stripe
-  webhook endpoint is not reachable over HTTPS. Evidence:
-  `_audit/parent-sales-payment-live.md`. The gate now emits operator
+  Historical 2026-06-11 production result was 2 pass / 1 warn / 4 fail:
+  Self-Paced monthly was configured, but Guided `$149/month` and Premium
+  `$299/month` had no production Stripe price IDs, Self-Paced annual had no
+  price ID, direct `https://api.genesisideas.school/health` was unreachable,
+  and the Stripe webhook endpoint was not reachable over HTTPS. Later
+  production API repair reduced the current blocker to Stripe price IDs; use
+  the current priority section or `npm run school:ops-report` for today's
+  status. Evidence: `_audit/parent-sales-payment-live.md`. The gate now emits operator
   `nextActions[]` that map failures to Stripe live price setup or production
   API proxy repair.
 - 2026-06-11 production API proxy diagnosis added
   `docs/production-api-proxy-repair.md`: local API health passes on Lightsail
   at `127.0.0.1:4000`, but nginx proxies the API host to `127.0.0.1:8080` and
   has no active `443` listener. `npm run audit:production-api-proxy` gives a
-  repeatable read-only check; current result is 7 pass / 0 warn / 5 fail. This
-  blocks direct API health and Stripe webhook smoke until nginx/SSL is repaired.
+  repeatable read-only check; historical 2026-06-11 result was 7 pass / 0 warn
+  / 5 fail. This blocked direct API health and Stripe webhook smoke until the
+  2026-06-12 nginx/SSL repair.
 - 2026-06-12 production API repair closeout: nginx backups now belong under
   `/etc/nginx/backups` rather than `sites-enabled/`, the API host proxies to
   `127.0.0.1:4000`, nginx listens on `443`, `npm run audit:production-api-proxy`
@@ -707,8 +710,8 @@ no AP/accreditation claims, no new public group pricing, no auto-send email
 without admin review. Acquisition/traffic work is acknowledged as the
 upstream bottleneck but lives outside this repo.
 
-2026-06-10 status — Phases A–D implemented and committed locally (NOT pushed,
-NOT deployed):
+2026-06-10 historical status — Phases A–D implemented and committed locally
+at that time (then not yet pushed/deployed):
 
 - Phase A: `/consultation` page (Shiyu Zhang intro, Netlify form
   `consultation` registered in `public/index.html`, bilingual). Entry links:
