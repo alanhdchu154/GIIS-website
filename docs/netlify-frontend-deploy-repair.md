@@ -24,12 +24,17 @@ reason to bypass the normal deployment path.
 
 Recovered healthy pattern from later on 2026-06-16:
 
-- GitHub `HEAD` and `origin/main`: `357003c9` or newer
+- GitHub `HEAD` and `origin/main`: `8a5ae1b0` or newer
 - GitHub Actions CI for that SHA: success
 - Netlify public site metadata: published production deploy `ready`, branch
   `main`, commit matching current `origin/main`
 - Verdict from `npm run audit:frontend-deploy`:
   `production_deploy_matches_origin_main`
+- Latest verified production deploy: Netlify site `giis`,
+  `repo_url=https://github.com/alanhdchu154/GIIS-website`, deploy title
+  `Clarify module assignment before moving on`, commit
+  `8a5ae1b06abbc3798369a2d1c935621c21320d7b`, published at
+  `2026-06-16T22:38:03.753Z`
 
 If a future incident repeats the stale pattern, repair the auto-deploy chain
 instead of switching to a local-folder deploy.
@@ -83,6 +88,10 @@ Expected healthy state:
   current.
 - `npm run audit:frontend-deploy` reports
   `production_matches_local_build` or `production_deploy_matches_origin_main`.
+- A blank `gh api repos/.../hooks` / `[]` result does not by itself prove
+  Netlify is disconnected; Netlify's GitHub App integration may not appear as a
+  classic repo webhook. Use Netlify deploy metadata, deploy history, and site
+  linkage as the primary integration evidence.
 
 ## Netlify Dashboard Checks
 

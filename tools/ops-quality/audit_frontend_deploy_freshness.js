@@ -116,6 +116,8 @@ function writeReports(payload) {
   fs.writeFileSync(JSON_REPORT, `${JSON.stringify(payload, null, 2)}\n`);
 
   const result = payload.results[0];
+  const deploy = payload.netlifyDeploy || {};
+  const site = payload.netlifySite || {};
   const lines = [
     '# Frontend Deploy Freshness',
     '',
@@ -123,8 +125,21 @@ function writeReports(payload) {
     `Base URL: ${payload.baseUrl}`,
     `Expected index: ${payload.expectedIndex}`,
     `Expected git sha: ${payload.expectedGitSha || 'unknown'}`,
-    `Netlify deploy sha: ${payload.netlifyDeploy?.commit_ref || 'unknown'}`,
+    `Netlify deploy sha: ${deploy.commit_ref || 'unknown'}`,
     `Verdict: ${payload.verdict}`,
+    '',
+    '## Netlify Published Deploy',
+    '',
+    `- Site: ${site.name || 'unknown'}`,
+    `- Custom domain: ${site.custom_domain || 'unknown'}`,
+    `- Repo URL: ${site.repo_url || 'unknown'}`,
+    `- Admin URL: ${site.admin_url || 'unknown'}`,
+    `- Deploy state: ${deploy.state || 'unknown'}`,
+    `- Deploy branch: ${deploy.branch || 'unknown'}`,
+    `- Deploy title: ${deploy.title || 'unknown'}`,
+    `- Published at: ${deploy.published_at || 'unknown'}`,
+    `- Skipped: ${deploy.skipped == null ? 'no' : deploy.skipped}`,
+    `- Locked: ${deploy.locked == null ? 'no' : deploy.locked}`,
     '',
     '## Asset Comparison',
     '',
@@ -163,6 +178,14 @@ async function main() {
     expectedGitSha,
     verdict: comparison.verdict,
     summary: comparison.summary,
+    netlifySite: netlifySite ? {
+      name: netlifySite.name || '',
+      id: netlifySite.id || netlifySite.site_id || '',
+      custom_domain: netlifySite.custom_domain || '',
+      ssl_url: netlifySite.ssl_url || '',
+      admin_url: netlifySite.admin_url || '',
+      repo_url: netlifySite.repo_url || '',
+    } : null,
     netlifyDeploy: netlifySite?.published_deploy ? {
       id: netlifySite.published_deploy.id || '',
       state: netlifySite.published_deploy.state || '',
