@@ -117,11 +117,15 @@ async function checkApiHealth(request) {
   const res = await request.get(`${API_URL}/api/checkout/tiers`, { timeout: TIMEOUT });
   if (!res.ok()) throw new Error(`API tiers returned ${res.status()}`);
   const json = await res.json();
+  assertTierEvidence(json, 'API tiers JSON');
+  markPass('API health and multi-tier pricing contract');
+}
+
+function assertTierEvidence(json, label) {
   const text = JSON.stringify(json);
   if (!text.includes('self_paced_monthly') || !text.includes('guided_monthly') || !text.includes('premium_monthly')) {
-    throw new Error('API tiers JSON did not include current multi-tier pricing evidence.');
+    throw new Error(`${label} did not include current multi-tier pricing evidence.`);
   }
-  markPass('API health and multi-tier pricing contract');
 }
 
 async function checkProductionBundleApiBase(request) {
@@ -137,17 +141,36 @@ async function checkProductionBundleApiBase(request) {
     .map((file) => new URL(file, SITE_URL).toString());
   if (!jsFiles.length) throw new Error('asset-manifest.json did not list JS bundles.');
 
-  const hits = [];
+  const directApiHits = [];
+  const sameOriginHits = [];
+  const relativeApiHits = [];
   for (const jsUrl of jsFiles) {
     const scriptRes = await request.get(jsUrl, { timeout: TIMEOUT });
     if (!scriptRes.ok()) continue;
     const bundle = await scriptRes.text();
-    if (bundle.includes('api.genesisideas.school')) hits.push(path.basename(jsUrl));
+    const basename = path.basename(jsUrl);
+    if (bundle.includes('api.genesisideas.school')) directApiHits.push(basename);
+    if (bundle.includes('https://genesisideas.school')) sameOriginHits.push(basename);
+    if (bundle.includes('/api/')) relativeApiHits.push(basename);
   }
-  if (!hits.length) {
-    throw new Error(`No production JS asset contains api.genesisideas.school. Checked ${jsFiles.length} JS files.`);
+  const usesDirectApiHost = directApiHits.length > 0;
+  const usesSameOriginProxy = sameOriginHits.length > 0 && relativeApiHits.length > 0;
+  if (!usesDirectApiHost && !usesSameOriginProxy) {
+    throw new Error(
+      `No production JS asset contains a recognized API base. Checked ${jsFiles.length} JS files; expected direct api.genesisideas.school or same-origin /api proxy evidence.`,
+    );
   }
-  markPass(`Production frontend API-base bundle check (${hits.slice(0, 3).join(', ')})`);
+
+  if (usesSameOriginProxy) {
+    const proxyRes = await request.get(`${SITE_URL}/api/checkout/tiers`, { timeout: TIMEOUT });
+    if (!proxyRes.ok()) throw new Error(`Same-origin /api/checkout/tiers returned ${proxyRes.status()}`);
+    assertTierEvidence(await proxyRes.json(), 'Same-origin API proxy tiers JSON');
+  }
+
+  const evidence = usesDirectApiHost
+    ? `direct API host: ${directApiHits.slice(0, 3).join(', ')}`
+    : `same-origin /api proxy: ${sameOriginHits.slice(0, 3).join(', ')}`;
+  markPass(`Production frontend API-base bundle check (${evidence})`);
 }
 
 async function auditPublicFunnel(page) {

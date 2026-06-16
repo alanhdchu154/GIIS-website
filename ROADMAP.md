@@ -138,6 +138,13 @@ use published deploy metadata plus behavior gates before calling production
 stale. If a future push shows an older published commit or failing behavior
 gates, follow `docs/netlify-frontend-deploy-repair.md`; do not use an
 unreviewed local folder deploy.
+The persona audit now recognizes the current production frontend API shape:
+Netlify builds with same-origin `https://genesisideas.school` and proxies
+`/api/*` to the Lightsail API. `npm run audit:personas` verifies either direct
+`api.genesisideas.school` bundle evidence or same-origin `/api` proxy evidence,
+then confirms `/api/checkout/tiers` returns the current multi-tier pricing
+contract. This prevents a false admin-ops blocker when the deployment is
+healthy.
 
 ## Active Lanes
 

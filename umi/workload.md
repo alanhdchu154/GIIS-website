@@ -167,6 +167,12 @@ Current Umi note:
   Future stale-commit or behavior-gate failure should follow
   `docs/netlify-frontend-deploy-repair.md`; never deploy an unreviewed local
   folder.
+- Persona audit production API-base verification now accepts the intended
+  same-origin `/api` Netlify proxy shape and checks `/api/checkout/tiers` for
+  current tier evidence, instead of falsely requiring every production bundle to
+  contain `api.genesisideas.school`. Latest public-mode run:
+  `RUN_AUTH=0 npm run audit:personas` is 10 pass / 2 intentional auth-skip warn
+  / 0 fail.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;
