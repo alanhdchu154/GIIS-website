@@ -151,22 +151,19 @@ Current Umi note:
   covers `/learn` on desktop/mobile and passes 24/24.
 - Frontend deploy freshness is now part of `school:ops-report` through
   `npm run audit:frontend-deploy`. Netlify public metadata now shows production
-  deploy `8a5ae1b0` ready on branch `main`, connected to
+  deploy `935fdde0` ready on branch `main`, connected to
   `https://github.com/alanhdchu154/GIIS-website`; GitHub CI is green for the
   same SHA. Asset hashes may differ from a local build, but the deploy freshness
   audit treats the current published commit as the primary signal and leaves
   asset differences as diagnostics. Production behavior gates pass:
   `audit:frontend-deploy` `production_deploy_matches_origin_main`,
-  `audit:conversion-bilingual` 5/5, parent journey 7/7, and
+  `audit:conversion-bilingual` 7/7, parent journey 7/7, and
   `school:ops-report` has no frontend-deploy warning with the
-  manual-sales/payment-boundary verdict. The latest Pricing first-fold, Student
-  Learn Portal entry, module-assignment reminder, Chinese conversion trust path,
-  and School Profile mobile overflow fix are verified live. Current production
-  lazy chunk `/static/js/4806.852b44a5.chunk.js` contains the module-assignment
-  reminder copy, confirming the latest student-facing Learn change is served.
-  Future stale-commit or behavior-gate failure should follow
-  `docs/netlify-frontend-deploy-repair.md`; never deploy an unreviewed local
-  folder.
+  manual-sales/payment-boundary verdict. The latest parent-facing AI/software
+  boundary, support-by-plan boundary, Admissions/Discovery support wording, and
+  mobile trust-path fixes are verified live. Future stale-commit or
+  behavior-gate failure should follow `docs/netlify-frontend-deploy-repair.md`;
+  never deploy an unreviewed local folder.
 - Persona audit production API-base verification now accepts the intended
   same-origin `/api` Netlify proxy shape and checks `/api/checkout/tiers` for
   current tier evidence, instead of falsely requiring every production bundle to

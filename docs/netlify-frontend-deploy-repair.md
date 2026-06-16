@@ -24,7 +24,7 @@ reason to bypass the normal deployment path.
 
 Recovered healthy pattern from later on 2026-06-16:
 
-- GitHub `HEAD` and `origin/main`: `8a5ae1b0` or newer
+- GitHub `HEAD` and `origin/main`: `935fdde0` or newer
 - GitHub Actions CI for that SHA: success
 - Netlify public site metadata: published production deploy `ready`, branch
   `main`, commit matching current `origin/main`
@@ -32,9 +32,9 @@ Recovered healthy pattern from later on 2026-06-16:
   `production_deploy_matches_origin_main`
 - Latest verified production deploy: Netlify site `giis`,
   `repo_url=https://github.com/alanhdchu154/GIIS-website`, deploy title
-  `Clarify module assignment before moving on`, commit
-  `8a5ae1b06abbc3798369a2d1c935621c21320d7b`, published at
-  `2026-06-16T22:38:03.753Z`
+  `Align public AI copy with human review boundary`, commit
+  `935fdde0d444621841957d5aa18b2fee5b6d8fe6`, published at
+  `2026-06-16T23:25:15.334Z`
 
 If a future incident repeats the stale pattern, repair the auto-deploy chain
 instead of switching to a local-folder deploy.

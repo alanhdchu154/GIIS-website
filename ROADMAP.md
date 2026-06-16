@@ -125,19 +125,19 @@ The daily school-ops gate now also checks frontend deploy freshness:
 `npm run audit:frontend-deploy` now treats Netlify's published production
 deploy commit as the primary freshness signal and keeps local-vs-Netlify asset
 hash differences as diagnostics. On 2026-06-16, Netlify public metadata showed
-production deploy `8a5ae1b0` ready on branch `main`, connected to
+production deploy `935fdde0` ready on branch `main`, connected to
 `https://github.com/alanhdchu154/GIIS-website`; GitHub CI was green for the
 same SHA, and production behavior gates passed (`audit:frontend-deploy`
-`production_deploy_matches_origin_main`, `audit:conversion-bilingual` 5/5,
+`production_deploy_matches_origin_main`, `audit:conversion-bilingual` 7/7,
 parent journey 7/7, and `school:ops-report` with
-`manual_sales_go_with_payment_boundary`). The latest Pricing first-fold,
-Student Learn Portal entry, module-assignment reminder, Chinese conversion
-trust path, and School Profile mobile overflow fix are verified live. Netlify
-may produce different local-vs-production asset hashes for the same commit, so
-use published deploy metadata plus behavior gates before calling production
-stale. If a future push shows an older published commit or failing behavior
-gates, follow `docs/netlify-frontend-deploy-repair.md`; do not use an
-unreviewed local folder deploy.
+`manual_sales_go_with_payment_boundary`). The latest parent-facing AI/software
+boundary, support-by-plan boundary, Admissions/Discovery support wording, and
+mobile trust-path fixes are verified live. Netlify may produce different
+local-vs-production asset hashes for the same commit, so use published deploy
+metadata plus behavior gates before calling production stale. If a future push
+shows an older published commit or failing behavior gates, follow
+`docs/netlify-frontend-deploy-repair.md`; do not use an unreviewed local folder
+deploy.
 The persona audit now recognizes the current production frontend API shape:
 Netlify builds with same-origin `https://genesisideas.school` and proxies
 `/api/*` to the Lightsail API. `npm run audit:personas` verifies either direct
