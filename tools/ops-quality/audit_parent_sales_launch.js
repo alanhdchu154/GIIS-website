@@ -232,6 +232,15 @@ const checks = [
     message: 'Trust Center must offer a human consultation path.',
   },
   {
+    id: 'trust-ai-software-boundary',
+    file: 'src/components/pages/TrustCenter/TrustCenterPage.js',
+    ok: /AI \/ Software Boundary/.test(files.trust) &&
+      /AI\/software-assisted/.test(files.trust) &&
+      /does not automatically change grades, credits, official records, payment status/.test(files.trust) &&
+      /human-reviewed/.test(files.trust),
+    message: 'Trust Center must explain the AI/software-assisted vs human-reviewed decision boundary.',
+  },
+  {
     id: 'refund-policy-public-proof',
     file: 'src/components/pages/RefundPolicy/RefundPolicyPage.js + docs/admissions-payment-handoff-runbook.md',
     ok: /30-day refund policy/.test(files.refundPolicy) &&

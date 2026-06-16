@@ -42,6 +42,8 @@ const CHECKS = [
       '24-credit graduation framework',
       'CEEB status: applied and pending',
       'Official transcript workflow',
+      'AI / Software Boundary',
+      'School decisions still need review',
       'Talk to the principal first',
     ],
   },

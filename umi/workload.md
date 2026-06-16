@@ -173,6 +173,11 @@ Current Umi note:
   contain `api.genesisideas.school`. Latest public-mode run:
   `RUN_AUTH=0 npm run audit:personas` is 10 pass / 2 intentional auth-skip warn
   / 0 fail.
+- Trust Center now has a parent-facing AI/software boundary: tools may help
+  organize progress signals, drafts, lesson workflow, and review queues, but
+  grades, credits, official records, payment status, and family-facing advisor
+  summaries stay human-reviewed. Guarded by `audit:sales-launch` and
+  `audit:parent-journey`.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

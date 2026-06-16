@@ -145,6 +145,13 @@ Netlify builds with same-origin `https://genesisideas.school` and proxies
 then confirms `/api/checkout/tiers` returns the current multi-tier pricing
 contract. This prevents a false admin-ops blocker when the deployment is
 healthy.
+Trust Center now includes an AI/software boundary for parent transparency:
+software or AI-assisted tooling may help organize progress signals, drafts,
+lesson workflow, and review queues, but automation does not automatically
+change grades, credits, official records, payment status, or family-facing
+advisor summaries. `audit:sales-launch` and `audit:parent-journey` guard this
+boundary so transparency does not drift while the school keeps using internal
+automation safely.
 
 ## Active Lanes
 

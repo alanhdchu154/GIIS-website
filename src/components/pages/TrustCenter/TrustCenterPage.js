@@ -143,6 +143,30 @@ const CARE_VISIBILITY = [
   },
 ];
 
+const REVIEW_BOUNDARY = [
+  {
+    title: { en: 'Software can organize signals', zh: '系统可以整理讯号' },
+    body: {
+      en: 'GIIS may use software or AI-assisted tools to organize progress signals, drafts, lesson workflow, and internal review queues.',
+      zh: 'GIIS 可使用软件或 AI 辅助工具整理学习进度讯号、草稿、课程制作流程与内部审核队列。',
+    },
+  },
+  {
+    title: { en: 'People review school decisions', zh: '学校决定由人员审核' },
+    body: {
+      en: 'Automation does not automatically change grades, credits, official records, payment status, or family-facing advisor summaries.',
+      zh: '自动化不会自动更改成绩、学分、正式记录、付款状态，或家长可见的顾问摘要。',
+    },
+  },
+  {
+    title: { en: 'Parents see reviewed information', zh: '家长看到审核后的资讯' },
+    body: {
+      en: 'Family-visible notes, missing-work concerns, and next actions are kept practical and human-reviewed before they affect the parent trust path.',
+      zh: '家长可见留言、缺交风险与下一步行动，会保持务实，并在影响家长信任路径前经过人工审核。',
+    },
+  },
+];
+
 function pick(map, isEn) {
   return map[isEn ? 'en' : 'zh'];
 }
@@ -329,6 +353,32 @@ function TrustCenterPage({ language, toggleLanguage }) {
             <Link to="/parent/demo" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '12px 20px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
               {isEn ? 'Preview the parent reassurance layer' : '预览家长安心层'}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: '#f4f6fa', fontFamily: 'Inter, sans-serif', padding: '62px 0' }}>
+        <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 6%' }}>
+          <div style={{ maxWidth: 820, marginBottom: 24 }}>
+            <p style={eyebrow}>{isEn ? 'AI / Software Boundary' : 'AI / 软件边界'}</p>
+            <h2 style={sectionTitle}>{isEn ? 'Tools can help the school operate. School decisions still need review.' : '工具可以帮助学校运作；学校决定仍需要审核。'}</h2>
+            <p style={{ margin: '14px 0 0', color: '#4f5868', fontSize: 14, lineHeight: 1.75 }}>
+              {isEn
+                ? 'GIIS is transparent about automation: AI/software-assisted work may help staff organize learning evidence, but student records, family-facing summaries, and payment activation stay human-reviewed.'
+                : 'GIIS 会清楚说明自动化边界：AI / 软件辅助可协助 staff 整理学习证据，但学生记录、家长可见摘要与付款启用仍需人工审核。'}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 14 }}>
+            {REVIEW_BOUNDARY.map((item) => (
+              <div key={item.title.en} style={{ ...proofCard, background: '#fff' }}>
+                <h3 style={{ margin: '0 0 9px', color: '#1a1a2e', fontSize: 18, lineHeight: 1.25, fontWeight: 850 }}>
+                  {pick(item.title, isEn)}
+                </h3>
+                <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.7 }}>
+                  {pick(item.body, isEn)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
