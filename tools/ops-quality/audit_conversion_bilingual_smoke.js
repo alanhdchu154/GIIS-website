@@ -43,6 +43,7 @@ const ROUTES = [
   {
     name: 'school profile zh reading layer',
     path: '/school-profile',
+    mobileNoOverflow: true,
     expected: [
       '家长核验文件',
       'School Profile 学校简介',
@@ -92,11 +93,42 @@ async function runRoute(page, baseUrl, route) {
   }
   const text = await pageText(page);
   const missing = route.expected.filter((needle) => !text.includes(needle));
+  const layout = route.mobileNoOverflow
+    ? await inspectMobileLayout(page, baseUrl, route.path)
+    : { ok: true, errors: [] };
   return {
     name: route.name,
     path: route.path,
-    status: missing.length ? 'fail' : 'pass',
+    status: missing.length || !layout.ok ? 'fail' : 'pass',
     missing,
+    layoutErrors: layout.errors,
+  };
+}
+
+async function inspectMobileLayout(page, baseUrl, routePath) {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(new URL(routePath, baseUrl).toString(), { waitUntil: 'domcontentloaded' });
+  await page.locator('body').waitFor({ state: 'visible', timeout: 8000 });
+  try {
+    await page.waitForFunction(
+      (expected) => expected.every((needle) => document.body?.innerText.includes(needle)),
+      ROUTES.find((route) => route.path === routePath)?.expected || [],
+      { timeout: 10000 },
+    );
+  } catch {
+    // Text failures are reported by the main route check.
+  }
+  const overflow = await page.evaluate(() => ({
+    scrollWidth: document.documentElement.scrollWidth,
+    clientWidth: document.documentElement.clientWidth,
+  }));
+  await page.setViewportSize({ width: 1280, height: 900 });
+  const hasHorizontalOverflow = overflow.scrollWidth > overflow.clientWidth + 2;
+  return {
+    ok: !hasHorizontalOverflow,
+    errors: hasHorizontalOverflow
+      ? [`mobile horizontal overflow: ${overflow.scrollWidth}px > ${overflow.clientWidth}px`]
+      : [],
   };
 }
 
@@ -136,6 +168,7 @@ async function main() {
     ...results.flatMap((result) => [
       `- ${result.status.toUpperCase()} ${result.name} (${result.path})`,
       ...(result.missing.length ? result.missing.map((item) => `  - missing: ${item}`) : []),
+      ...(result.layoutErrors?.length ? result.layoutErrors.map((item) => `  - layout: ${item}`) : []),
     ]),
     '',
   ];

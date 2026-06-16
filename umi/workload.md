@@ -141,11 +141,14 @@ Current Umi note:
   mode. Local production-build smoke passed 5/5.
 - Frontend deploy freshness is now part of `school:ops-report` through
   `npm run audit:frontend-deploy`. Netlify public metadata now shows production
-  deploy `1410b77c` ready on branch `main`; asset hashes differ from the local
+  deploy `529f4a8c` ready on branch `main`; asset hashes differ from the local
   build, but the deploy freshness audit treats the current published commit as
   the primary signal and leaves asset differences as diagnostics. Production
-  behavior gates pass: `audit:conversion-bilingual` 5/5, parent journey 7/7,
-  sales live 8/8. The latest Chinese conversion trust path is verified live.
+  behavior gates pass: `audit:frontend-deploy`
+  `production_deploy_matches_origin_main`, `audit:conversion-bilingual` 5/5,
+  parent journey 7/7, sales live 8/8, and `school:ops-report` has no
+  frontend-deploy warning. The latest Chinese conversion trust path is verified
+  live.
   Future stale-commit or behavior-gate failure should follow
   `docs/netlify-frontend-deploy-repair.md`; never deploy an unreviewed local
   folder.

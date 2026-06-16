@@ -107,10 +107,12 @@ The daily school-ops gate now also checks frontend deploy freshness:
 `npm run audit:frontend-deploy` now treats Netlify's published production
 deploy commit as the primary freshness signal and keeps local-vs-Netlify asset
 hash differences as diagnostics. On 2026-06-16, Netlify public metadata showed
-production deploy `1410b77c` ready on branch `main`; production behavior gates
-then passed (`audit:conversion-bilingual` 5/5, parent journey 7/7, sales live
-8/8). The latest Chinese conversion trust path is verified live. If a future
-push shows an older published commit or failing behavior gates, follow
+production deploy `529f4a8c` ready on branch `main`; production behavior gates
+passed (`audit:frontend-deploy` `production_deploy_matches_origin_main`,
+`audit:conversion-bilingual` 5/5, parent journey 7/7, sales live 8/8), and
+`school:ops-report` had no frontend-deploy warning. The latest Chinese
+conversion trust path is verified live. If a future push shows an older
+published commit or failing behavior gates, follow
 `docs/netlify-frontend-deploy-repair.md`; do not use an unreviewed local folder
 deploy.
 

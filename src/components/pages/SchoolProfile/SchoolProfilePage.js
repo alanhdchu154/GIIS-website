@@ -523,6 +523,25 @@ const introInnerStyle = {
   color: '#1d2742',
 };
 
+const previewWrapStyle = {
+  background: '#2a2a2a',
+  minHeight: '100vh',
+  padding: '40px 16px',
+  display: 'flex',
+  justifyContent: 'flex-start',
+  alignItems: 'flex-start',
+  overflowX: 'auto',
+  maxWidth: '100vw',
+  boxSizing: 'border-box',
+};
+
+const profilePaperWrapStyle = {
+  width: 'max-content',
+  margin: '0 auto',
+  flex: '0 0 auto',
+  boxShadow: '0 12px 60px rgba(0,0,0,0.55)',
+};
+
 export default function SchoolProfilePage({ language = 'en' }) {
   const ref = useRef(null);
   const [downloading, setDownloading] = useState(false);
@@ -592,8 +611,8 @@ export default function SchoolProfilePage({ language = 'en' }) {
       </section>
 
       {/* Preview */}
-      <div style={{ background: '#2a2a2a', minHeight: '100vh', padding: '40px 16px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
-        <div ref={ref} style={{ boxShadow: '0 12px 60px rgba(0,0,0,0.55)' }}>
+      <div style={previewWrapStyle}>
+        <div ref={ref} style={profilePaperWrapStyle}>
           <ProfileDocument />
         </div>
       </div>
