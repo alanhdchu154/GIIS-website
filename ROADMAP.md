@@ -109,7 +109,9 @@ references with live Netlify HTML. Current production still serves
 `static/js/main.d36b323b.js` while the local post-push build expects
 `static/js/main.5bab1c36.js`, so the latest Chinese conversion trust-path push
 is not yet live on Netlify. This is a frontend deploy warning, not a reason to
-send automated checkout links or to block reviewed manual sales.
+send automated checkout links or to block reviewed manual sales. The repair
+path is documented in `docs/netlify-frontend-deploy-repair.md` and guarded by
+`npm run audit:sales-launch`.
 
 ## Active Lanes
 

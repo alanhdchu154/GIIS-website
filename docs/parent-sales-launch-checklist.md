@@ -288,12 +288,16 @@ Use a three-step v1 launch:
 After every frontend deploy, also run:
 
 ```bash
+npm run audit:frontend-deploy -- --base-url https://genesisideas.school
 npm run audit:parent-journey -- --base-url https://genesisideas.school
 ```
 
-This is the buyer-readiness check. `audit:sales-live` proves key routes render;
-`audit:parent-journey` proves those routes answer the parent questions that
-drive willingness to pay.
+`audit:frontend-deploy` proves production Netlify is serving the same static
+asset references as the reviewed local production build. `audit:sales-live`
+proves key routes render; `audit:parent-journey` proves those routes answer the
+parent questions that drive willingness to pay. If production is still serving
+an older bundle after a push, follow
+`docs/netlify-frontend-deploy-repair.md`.
 
 GIIS can start selling through consultation and path review now. The v1 payment
 flow is manual-reviewed, so payment API failures block only automated checkout,

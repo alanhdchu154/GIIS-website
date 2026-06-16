@@ -27,6 +27,7 @@ const files = {
   applicationsRoute: read('server/src/routes/applications.js'),
   publicIndex: read('public/index.html'),
   paymentRunbook: read('docs/production-payment-deploy-runbook.md'),
+  netlifyFrontendRepair: read('docs/netlify-frontend-deploy-repair.md'),
   stripeLivePriceSetup: read('docs/stripe-live-price-setup.md'),
   productionApiProxyRepair: read('docs/production-api-proxy-repair.md'),
   productionApiProxyAudit: read('tools/ops-quality/audit_production_api_proxy.js'),
@@ -271,6 +272,16 @@ const checks = [
       /Frontend-only Netlify deploy may happen/.test(files.paymentRunbook) &&
       /do not tell parents/i.test(files.paymentRunbook),
     message: 'Payment runbook must separate frontend launch from backend payment safety.',
+  },
+  {
+    id: 'netlify-frontend-deploy-repair',
+    file: 'docs/netlify-frontend-deploy-repair.md',
+    ok: /audit:frontend-deploy/.test(files.netlifyFrontendRepair) &&
+      /giis\.netlify\.app/.test(files.netlifyFrontendRepair) &&
+      /production_asset_mismatch/.test(files.netlifyFrontendRepair) &&
+      /Do not deploy an unreviewed local\s+folder/.test(files.netlifyFrontendRepair) &&
+      /Do not send automated checkout links/.test(files.netlifyFrontendRepair),
+    message: 'Netlify frontend repair runbook must define stale-deploy diagnosis, dashboard checks, and payment boundaries.',
   },
   {
     id: 'stripe-live-price-setup',
