@@ -6,9 +6,9 @@ older frontend bundle.
 
 This runbook is frontend-only. It does not deploy or restart the Lightsail API.
 
-## Current Evidence Pattern
+## Evidence Pattern
 
-Known stale pattern on 2026-06-16:
+Historical stale pattern from 2026-06-16:
 
 - GitHub `origin/main`: `94bc251d` or newer
 - GitHub checks for `94bc251d`: build and server-smoke passed
@@ -17,10 +17,22 @@ Known stale pattern on 2026-06-16:
 - Verdict from `npm run audit:frontend-deploy`:
   `production_asset_mismatch`
 
-This means the latest reviewed frontend code is pushed, CI is green, and
-production Netlify is still serving an older bundle. That is an abnormal
-Netlify auto-deploy failure or stale production deploy state, not the normal
-deployment path.
+That pattern means the latest reviewed frontend code is pushed, CI is green, and
+production Netlify is still serving an older commit or bundle. Treat it as an
+abnormal Netlify auto-deploy failure or stale production deploy state, not as a
+reason to bypass the normal deployment path.
+
+Recovered healthy pattern from later on 2026-06-16:
+
+- GitHub `HEAD` and `origin/main`: `357003c9` or newer
+- GitHub Actions CI for that SHA: success
+- Netlify public site metadata: published production deploy `ready`, branch
+  `main`, commit matching current `origin/main`
+- Verdict from `npm run audit:frontend-deploy`:
+  `production_deploy_matches_origin_main`
+
+If a future incident repeats the stale pattern, repair the auto-deploy chain
+instead of switching to a local-folder deploy.
 
 ## Auto-Deploy Contract
 
@@ -47,20 +59,24 @@ From the repo:
 git status --short --branch
 git rev-parse --short HEAD
 git rev-parse --short origin/main
+test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
 npm run build
 npm run audit:frontend-deploy -- --base-url https://genesisideas.school
 curl -L -s https://genesisideas.school | rg -o 'static/js/main\.[^" ]+\.js|static/css/main\.[^" ]+\.css'
 curl -L -s https://giis.netlify.app | rg -o 'static/js/main\.[^" ]+\.js|static/css/main\.[^" ]+\.css'
 gh run list --branch main --limit 5
 gh api repos/alanhdchu154/GIIS-website/hooks --jq '.[] | {id,name,active,events}'
+node -e "const https=require('https');https.get('https://api.netlify.com/api/v1/sites/genesisideas.school',r=>{let b='';r.on('data',c=>b+=c);r.on('end',()=>{const j=JSON.parse(b);const d=j.published_deploy||{};console.log({site:j.name,domain:j.custom_domain,state:d.state,branch:d.branch,commit:d.commit_ref,title:d.title,published_at:d.published_at,skipped:d.skipped,locked:d.locked});});});"
 ```
 
 Expected healthy state:
 
 - `HEAD` equals `origin/main`.
-- Netlify public site metadata reports the published production deploy is the
-  current `origin/main` commit on branch `main`, or local `build/index.html`
-  asset refs match production HTML asset refs.
+- GitHub Actions for the current `origin/main` commit are successful.
+- Netlify public site metadata reports the published production deploy is
+  `ready`, unlocked, unskipped, on branch `main`, and its commit is the current
+  `origin/main`; or local `build/index.html` asset refs match production HTML
+  asset refs.
 - If Netlify and local asset filenames differ, verify production behavior with
   the parent-facing gates below before treating it as stale. Netlify build
   output can differ from a local build even when the published deploy commit is
@@ -80,10 +96,10 @@ Confirm:
   `react-scripts build`.
 - Publish directory is `build`.
 - Node version is `20` or matches `netlify.toml`.
-- The latest production deploy includes commit `94bc251d` or the current
-  `origin/main`.
-- Recent deploys for `23f2d65b`, `10bdb5e2`, `94bc251d`, or newer commits are
-  present, or their absence is explained by a repaired GitHub integration.
+- The latest production deploy includes the current reviewed `origin/main`
+  commit.
+- Recent deploys for pushed `main` commits are present, or their absence is
+  explained by a repaired GitHub integration.
 - No deploy for the current commit is failed, skipped, canceled, locked behind
   deploy previews, or stuck in building/pending state.
 - Auto publishing is enabled for the production branch.

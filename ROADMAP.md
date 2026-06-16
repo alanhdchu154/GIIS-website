@@ -114,14 +114,15 @@ The daily school-ops gate now also checks frontend deploy freshness:
 `npm run audit:frontend-deploy` now treats Netlify's published production
 deploy commit as the primary freshness signal and keeps local-vs-Netlify asset
 hash differences as diagnostics. On 2026-06-16, Netlify public metadata showed
-production deploy `4dca99b6` ready on branch `main`; production behavior gates
-passed (`audit:frontend-deploy` `production_deploy_matches_origin_main`,
-`audit:conversion-bilingual` 5/5, parent journey 7/7, and `school:ops-report`
-with `manual_sales_go_with_payment_boundary`). The latest Chinese conversion
-trust path and School Profile mobile overflow fix are verified live. If a
-future push shows an older published commit or failing behavior gates, follow
-`docs/netlify-frontend-deploy-repair.md`; do not use an unreviewed local folder
-deploy.
+production deploy `357003c9` ready on branch `main`; GitHub CI was green for
+the same SHA, and production behavior gates passed (`audit:frontend-deploy`
+`production_deploy_matches_origin_main`, `audit:conversion-bilingual` 5/5,
+parent journey 7/7, `audit:ops-browser` 24/24, and `school:ops-report` with
+`manual_sales_go_with_payment_boundary`). The latest Student Learn Portal entry,
+Chinese conversion trust path, and School Profile mobile overflow fix are
+verified live. If a future push shows an older published commit or failing
+behavior gates, follow `docs/netlify-frontend-deploy-repair.md`; do not use an
+unreviewed local folder deploy.
 
 ## Active Lanes
 

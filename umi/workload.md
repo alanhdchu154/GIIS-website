@@ -147,14 +147,16 @@ Current Umi note:
   covers `/learn` on desktop/mobile and passes 24/24.
 - Frontend deploy freshness is now part of `school:ops-report` through
   `npm run audit:frontend-deploy`. Netlify public metadata now shows production
-  deploy `4dca99b6` ready on branch `main`; asset hashes differ from the local
-  build, but the deploy freshness audit treats the current published commit as
-  the primary signal and leaves asset differences as diagnostics. Production
-  behavior gates pass: `audit:frontend-deploy`
-  `production_deploy_matches_origin_main`, `audit:conversion-bilingual` 5/5,
-  parent journey 7/7, and `school:ops-report` has no frontend-deploy warning
-  with the manual-sales/payment-boundary verdict. The latest Chinese conversion
-  trust path and School Profile mobile overflow fix are verified live.
+  deploy `357003c9` ready on branch `main`; GitHub CI is green for the same
+  SHA. Asset hashes may differ from a local build, but the deploy freshness
+  audit treats the current published commit as the primary signal and leaves
+  asset differences as diagnostics. Production behavior gates pass:
+  `audit:frontend-deploy` `production_deploy_matches_origin_main`,
+  `audit:conversion-bilingual` 5/5, parent journey 7/7, `audit:ops-browser`
+  24/24, and `school:ops-report` has no frontend-deploy warning with the
+  manual-sales/payment-boundary verdict. The latest Student Learn Portal entry,
+  Chinese conversion trust path, and School Profile mobile overflow fix are
+  verified live.
   Future stale-commit or behavior-gate failure should follow
   `docs/netlify-frontend-deploy-repair.md`; never deploy an unreviewed local
   folder.
