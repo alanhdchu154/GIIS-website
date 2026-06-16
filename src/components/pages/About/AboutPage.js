@@ -163,6 +163,7 @@ function LeaderCard({ leader, language, accentLeft = true }) {
   const en = language !== 'zh';
   return (
     <article
+      className="giis-about-leader-article"
       style={{
         background: '#fff',
         border: '1px solid #e7e2d4',
@@ -260,9 +261,18 @@ function ResponsiveStyle() {
     <style>{`
       @media (max-width: 760px) {
         .giis-about-leader-card {
+          min-width: 0 !important;
+        }
+        .giis-about-leader-article {
           grid-template-columns: 1fr !important;
           padding: 24px !important;
           gap: 20px !important;
+        }
+        .giis-about-leader-article a,
+        .giis-about-leader-article span,
+        .giis-about-leader-article p,
+        .giis-about-leader-article li {
+          overflow-wrap: anywhere;
         }
         .giis-about-hero h1 {
           font-size: 32px !important;

@@ -5,8 +5,8 @@ const VALUES = [
     emoji: '🎯',
     titleEn: 'Personalized Learning',
     titleZh: '个性化学习',
-    bodyEn: 'Every student chooses an academic pathway based on interests, prior credits, and graduation goals. Advisors track progress each semester to keep students on course.',
-    bodyZh: '每位学生会根据兴趣、既有学分与毕业目标选择学习路径，顾问每学期跟踪进度，确保学生始终方向明确。',
+    bodyEn: 'Each reviewed enrollment starts from a pathway-aware course sequence based on interests, prior credits, and graduation goals. Guided and Premium families add recurring advisor review when they need more human accountability.',
+    bodyZh: '每个已审核入学家庭会从符合兴趣、既有学分与毕业目标的课程顺序开始；需要更多人工跟进时，Guided 与 Premium 家庭可加入定期顾问审核。',
   },
   {
     emoji: '🌏',
@@ -25,7 +25,7 @@ const VALUES = [
 ];
 
 const MISSION_POINTS = [
-  { en: 'Personalized advisor support every semester', zh: '每学期提供个性化顾问支持' },
+  { en: 'Pathway-aware course sequence, with advisor review by plan', zh: '按学习路径安排课程顺序，并依方案加入顾问审核' },
   { en: 'Curriculum built around transcript-ready evidence', zh: '课程围绕可记录的学习证据设计' },
   { en: 'Global citizens with a strong sense of responsibility', zh: '培养具有社会责任感的全球公民' },
   { en: 'Leadership and entrepreneurial spirit development', zh: '领导力与创业精神培养' },
@@ -77,8 +77,8 @@ function DiscoveryIntroduction2({ language }) {
               </h2>
               <p style={{ fontSize: '15px', color: '#555', lineHeight: 1.8, margin: 0 }}>
                 {isEn
-                  ? "GIIS's mission is to inspire potential and cultivate the next generation of leaders. We prioritize individual student development through personalized guidance and abundant learning resources, creating an environment where every student can thrive."
-                  : 'GIIS 的使命是启发潜能、培育新一代领袖。我们通过个性化指导和丰富的学习资源，优先关注每位学生的个人发展，打造一个让每个人都能蓬勃成长的环境。'}
+                  ? "GIIS's mission is to inspire potential and cultivate the next generation of leaders. We prioritize individual student development through clear learning resources, reviewable coursework, parent-visible progress, and advisor support matched to the family's chosen plan."
+                  : 'GIIS 的使命是启发潜能、培育新一代领袖。我们通过清楚的学习资源、可审核的课程作业、家长可见进度，以及符合家庭所选方案的顾问支持，优先关注学生发展。'}
               </p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>

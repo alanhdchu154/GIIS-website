@@ -158,6 +158,12 @@ feedback, while Guided adds monthly advisor planning/review and Premium adds
 higher-touch pathway, writing, portfolio, and college-readiness planning. The
 sales-launch audit guards this boundary so Self-Paced is not accidentally
 presented as full advisor or college-pathway support.
+The same support-by-plan boundary now extends to Admissions FAQ and Discovery
+mission copy: public pages should say reviewed enrollments receive course
+access, records, parent-visible progress, and assignment feedback, while
+recurring advisor planning/review is added by Guided or Premium. The bilingual
+conversion smoke also guards `/discovery` and `/about` mobile overflow so the
+mission/leadership trust path stays readable on phones.
 
 ## Active Lanes
 

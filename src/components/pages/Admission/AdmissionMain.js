@@ -397,7 +397,7 @@ export default function AdmissionMain({ language, toggleLanguage }) {
               },
               {
                 q: { en: 'What support is available for students?', zh: '学生有哪些支持资源？' },
-                a: { en: 'Every student receives personalized guidance from our admissions team to build their course plan and pathway. Our team monitors learning progress and provides feedback on assignments. Students can reach us at any time by email at admissions@genesisideas.school.', zh: '每位学生都能获得招生团队的个性化指导，协助规划课程与学习路径。我们的团队会持续追踪学习进度，并对作业提供反馈。学生可随时通过邮件 admissions@genesisideas.school 联系我们。' },
+                a: { en: 'All reviewed enrollments receive course access, records, assignment feedback, and parent-visible progress. Guided adds monthly advisor planning, transfer-credit review, and parent progress interpretation; Premium adds higher-touch pathway, writing, portfolio, and college-readiness planning.', zh: '所有已审核入学家庭都会获得课程访问、记录、作业反馈与家长可见进度。Guided 加入每月顾问规划、转学分审核与家长进度解读；Premium 加入更高触达的路径、写作、作品集与升学准备规划。' },
               },
               {
                 q: { en: 'How is tuition structured?', zh: '学费如何计算？' },

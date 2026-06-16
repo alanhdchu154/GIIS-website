@@ -41,6 +41,28 @@ const ROUTES = [
     ],
   },
   {
+    name: 'discovery zh support tier boundary',
+    path: '/discovery',
+    mobileNoOverflow: true,
+    expected: [
+      '核心价值观',
+      '每个已审核入学家庭会从符合兴趣、既有学分与毕业目标的课程顺序开始',
+      'Guided 与 Premium 家庭可加入定期顾问审核',
+      '符合家庭所选方案的顾问支持',
+    ],
+  },
+  {
+    name: 'about zh leadership mobile',
+    path: '/about',
+    mobileNoOverflow: true,
+    expected: [
+      '关于 GIIS · 学校领导',
+      '艾迪尔国际学校背后的人',
+      'Florida Statute 1002.42',
+      '章诗雨 博士',
+    ],
+  },
+  {
     name: 'school profile zh reading layer',
     path: '/school-profile',
     mobileNoOverflow: true,

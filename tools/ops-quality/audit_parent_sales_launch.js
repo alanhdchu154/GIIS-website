@@ -20,6 +20,7 @@ const files = {
   pricing: read('src/components/pages/Pricing/PricingPage.js'),
   trust: read('src/components/pages/TrustCenter/TrustCenterPage.js'),
   admission: read('src/components/pages/Admission/AdmissionMain.js'),
+  discovery: read('src/components/pages/Discovery/Discovery/DiscoveryIntroduction2.js'),
   consultation: read('src/components/pages/Consultation/ConsultationPage.js'),
   graduates: read('src/components/pages/Graduates/GraduateStoriesPage.js'),
   support: read('src/components/pages/Support/SupportMain.js'),
@@ -256,6 +257,25 @@ const checks = [
     file: 'src/components/pages/Admission/AdmissionMain.js',
     ok: /to="\/consultation"/.test(files.admission) && /Book a Free Consultation/.test(files.admission),
     message: 'Admission page must expose consultation alongside apply/transfer paths.',
+  },
+  {
+    id: 'admission-support-tier-boundary',
+    file: 'src/components/pages/Admission/AdmissionMain.js',
+    ok: /All reviewed enrollments receive course access, records, assignment feedback, and parent-visible progress/.test(files.admission) &&
+      /Guided adds monthly advisor planning, transfer-credit review, and parent progress interpretation/.test(files.admission) &&
+      /Premium adds higher-touch pathway, writing, portfolio, and college-readiness planning/.test(files.admission) &&
+      !/Every student receives personalized guidance/.test(files.admission),
+    message: 'Admission FAQ must describe support by plan instead of implying all students receive full advisor planning.',
+  },
+  {
+    id: 'discovery-support-tier-boundary',
+    file: 'src/components/pages/Discovery/Discovery/DiscoveryIntroduction2.js',
+    ok: /pathway-aware course sequence/.test(files.discovery) &&
+      /Guided and Premium families add recurring advisor review/.test(files.discovery) &&
+      /advisor support matched to the family's chosen plan/.test(files.discovery) &&
+      !/Personalized advisor support every semester/.test(files.discovery) &&
+      !/Advisors track progress each semester/.test(files.discovery),
+    message: 'Discovery page must not imply every plan includes recurring advisor support.',
   },
   {
     id: 'graduates-conservative',

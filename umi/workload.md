@@ -184,6 +184,11 @@ Current Umi note:
   higher-touch pathway, writing, project portfolio, and college-readiness
   planning. Do not reintroduce "Included with every plan" language for full
   advisor or college-pathway support.
+- Admissions FAQ and Discovery mission copy follow the same support-by-plan
+  boundary. Do not describe recurring advisor review as a universal
+  every-student/every-semester benefit; say it is added through Guided/Premium
+  when the family chooses more human accountability. `/about` leadership cards
+  also have a mobile overflow guard through `audit:conversion-bilingual`.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;
