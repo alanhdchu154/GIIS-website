@@ -93,6 +93,10 @@ Lead capture also has a dry-run verifier: `npm run lead-capture:test` checks
 local hidden forms, production form registration, and test payload shape without
 sending an external submission; only `--confirm-submit` sends a test lead that
 must be verified in Netlify and the admissions inbox.
+Manual payment now has a parent-facing receipt copy in the admin application
+queue after **Record Manual Payment** succeeds. The receipt is GIIS-branded,
+includes the Stripe/manual reference and refund-policy link, and is guarded by
+the parent sales launch audit plus parent/admin browser smoke.
 
 ## Active Lanes
 

@@ -317,6 +317,8 @@ const checks = [
       /Payment is requested only after the enrollment path is clear/.test(files.paymentHandoff) &&
       /Record Manual Payment/.test(files.paymentHandoff) &&
       /Do not send an automated Guided\/Premium checkout link/.test(files.paymentHandoff) &&
+      /Manual Payment Receipt/.test(files.paymentHandoff) &&
+      /GIIS-branded receipt copy/.test(files.paymentHandoff) &&
       /30-day refund policy applies/.test(files.paymentHandoff) &&
       /Alan Review Items/.test(files.paymentHandoff),
     message: 'Admissions must have a conservative manual payment handoff while automated Guided/Premium checkout is gated.',
@@ -331,6 +333,10 @@ const checks = [
       /Manual Payment Verified/.test(files.applicationsRoute) &&
       /Record Manual Payment/.test(files.applicationsQueue) &&
       /paymentReference/.test(files.applicationsQueue) &&
+      /manualPaymentReceiptText/.test(files.applicationsQueue) &&
+      /GIIS payment receipt/.test(files.applicationsQueue) &&
+      /Refund policy: https:\/\/genesisideas\.school\/refund-policy/.test(files.applicationsQueue) &&
+      /does not promise credit transfer/.test(files.applicationsQueue) &&
       /Record payment before account activation/.test(files.applicationsQueue),
     message: 'Admin must be able to record reviewed manual payment before account activation without automated checkout.',
   },

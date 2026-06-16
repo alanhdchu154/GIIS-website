@@ -129,10 +129,15 @@ Current Umi note:
 - Public refund policy is now part of the parent payment trust path:
   `/refund-policy` is linked from Pricing, Trust Center, and the admissions
   payment handoff; `audit:sales-launch` gates it.
+- Manual payment receipt copy is now part of the admin payment closeout: after
+  **Record Manual Payment** succeeds, `/admin/applications` shows a
+  GIIS-branded receipt text with plan, amount, Stripe reference, subscription
+  record, and refund-policy link. It is guarded by `audit:sales-launch` and the
+  parent/admin browser smoke.
 - cc review agreed the remaining checkout blockers require external Stripe /
-  Lightsail production action and should stay gated. It also recommended the
-  next safe trust tasks: GIIS-branded manual payment receipt, stronger bilingual
-  coverage for conversion pages, and eventual roadmap/workload trim.
+  Lightsail production action and should stay gated. The GIIS-branded manual
+  payment receipt is now handled; remaining safe trust tasks are stronger
+  bilingual coverage for conversion pages and eventual roadmap/workload trim.
 
 Acceptance:
 

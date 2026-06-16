@@ -24,10 +24,10 @@ const ROUTES = [
     name: 'consultation submit',
     path: '/consultation',
     expected: [
-      'Request received',
-      'We will reach out within one business day',
+      'Consultation request received',
+      'Admissions will reach out within one business day',
       'Trust Center',
-      'Parent dashboard preview',
+      'Preview Parent Dashboard',
     ],
     afterLoad: async (page) => {
       await page.route('**/', async (route) => {
@@ -47,7 +47,7 @@ const ROUTES = [
       await app.locator('select[name="preferredTime"]').selectOption('weekday-evening');
       await app.locator('textarea[name="message"]').fill('We need a transfer-credit review before deciding.');
       await page.getByRole('button', { name: /Request consultation/ }).click();
-      await page.getByText('Request received').waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByText('Consultation request received').waitFor({ state: 'visible', timeout: 5000 });
     },
   },
   {
@@ -142,11 +142,27 @@ const ROUTES = [
   {
     name: 'admin applications',
     path: '/admin/applications',
-    expected: ['Applications', 'Alex Rivera', 'Application Path Review', 'Within 1 school year', 'Admin Record Review Required', 'Record Manual Payment', 'Record payment before account activation'],
+    expected: [
+      'Applications',
+      'Alex Rivera',
+      'Application Path Review',
+      'Within 1 school year',
+      'Admin Record Review Required',
+      'Record Manual Payment',
+      'Record payment before account activation',
+      'Copy family payment receipt',
+      'GIIS payment receipt',
+      'Refund policy: https://genesisideas.school/refund-policy',
+    ],
     endpointCaps: { '/api/applications': 2 },
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^View$/ }).first().click();
       await page.getByText('Application Path Review').waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByRole('button', { name: /^Record Manual Payment$/ }).click();
+      await page.locator('input[placeholder="Invoice, payment link, receipt, or Dashboard reference"]').fill('in_manual_smoke_123');
+      page.once('dialog', async (dialog) => dialog.accept());
+      await page.getByRole('button', { name: /^Confirm Payment Recorded$/ }).click();
+      await page.getByText('Copy family payment receipt').waitFor({ state: 'visible', timeout: 5000 });
     },
   },
   {
@@ -381,6 +397,27 @@ async function installMocks(page, endpointCounts) {
 
     if (endpoint === '/api/parent/me') return route.fulfill(json(parentPayload()));
     if (endpoint === '/api/students/ops-summary') return route.fulfill(json(opsSummaryPayload()));
+    if (endpoint === '/api/applications/app-1/manual-payment') {
+      return route.fulfill(json({
+        ok: true,
+        subscription: {
+          id: 'sub_manual_smoke_1',
+          purchaserEmail: 'jordan@example.com',
+          planType: 'guided_monthly',
+          status: 'active',
+          amountTotal: 14900,
+          currentPeriodEnd: '2026-07-16T15:00:00.000Z',
+          studentId: null,
+          stripeCheckoutSessionId: 'manual:in_manual_smoke_123',
+        },
+        linkedToStudent: false,
+        enrollmentState: {
+          code: 'paid_unlinked',
+          label: 'Payment recorded, link account',
+          action: 'Create accounts or link payment',
+        },
+      }, 201));
+    }
     if (endpoint === '/api/applications') return route.fulfill(json(applicationsPayload()));
     if (endpoint === '/api/admin/assignments') return route.fulfill(json(assignmentsPayload()));
     if (endpoint === '/api/admin/weekly-report') return route.fulfill(json(weeklyReportPayload()));

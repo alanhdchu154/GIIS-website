@@ -153,7 +153,31 @@ After payment:
 - If accounts are created after the manual payment, activation links the
   existing paid record to the student. If accounts already exist, the manual
   payment action links the record when the student can be matched.
+- Copy the GIIS payment receipt from the admin payment-record confirmation and
+  send it to the parent only after Stripe evidence is verified. Keep the Stripe
+  reference and receipt/payment ID in the outside-git admissions tracker.
 - Send `/welcome`, student login, parent login, and first-week expectations.
+
+## Manual Payment Receipt
+
+The admin payment-record flow provides a GIIS-branded receipt copy after the
+manual payment is recorded. The receipt should include:
+
+- Genesis Innovation International School,
+- Florida-registered private school,
+- date recorded,
+- student and parent/guardian,
+- parent email,
+- selected plan,
+- amount recorded,
+- payment method,
+- Stripe reference,
+- GIIS subscription record,
+- refund policy link.
+
+Do not use the receipt to promise credit transfer, accreditation completion, AP
+authorization, CEEB issuance, or college admission outcomes. It confirms the
+manual payment record only.
 
 ## Alan Review Items
 

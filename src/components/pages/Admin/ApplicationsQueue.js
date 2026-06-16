@@ -89,6 +89,39 @@ function money(cents) {
   return `$${(Number(cents || 0) / 100).toFixed(2)}`;
 }
 
+function todayReceiptDate() {
+  return new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+
+function manualPaymentReceiptText(receipt) {
+  if (!receipt) return '';
+  const { app, draft, subscription } = receipt;
+  return `Subject: GIIS payment receipt - ${app.studentName}
+
+Genesis Innovation International School
+Florida-registered private school
+Payment receipt
+
+Date recorded: ${todayReceiptDate()}
+Student: ${app.studentName}
+Parent/guardian: ${app.parentName}
+Parent email: ${app.parentEmail}
+Plan: ${draft.planLabel}
+Amount recorded: ${money(draft.amountCents)}
+Payment method: ${draft.paymentMethodLabel}
+Stripe reference: ${draft.paymentReference}
+GIIS subscription record: ${subscription?.id || 'recorded in admin system'}
+
+This payment was recorded after GIIS admissions/path review. Student and parent portal access is activated after both enrollment fit and payment status are clear.
+
+Refund policy: https://genesisideas.school/refund-policy
+
+If anything in this receipt looks incorrect, please reply to admissions@genesisideas.school.
+
+Best,
+GIIS Admissions`;
+}
+
 function labelApplicationValue(field, value) {
   const clean = String(value || 'not provided').trim();
   if (field === 'applicantType') return APPLICANT_TYPE_LABELS[clean] || clean || 'Not provided';
@@ -232,6 +265,7 @@ export default function ApplicationsQueue() {
   const [credentials, setCredentials] = useState(null);
   const [rejectModal, setRejectModal] = useState(null); // { appId, parentName, studentName }
   const [manualPaymentModal, setManualPaymentModal] = useState(null);
+  const [manualPaymentReceipt, setManualPaymentReceipt] = useState(null);
   const [manualPaymentDraft, setManualPaymentDraft] = useState({
     planType: 'guided_monthly',
     paymentMethod: 'manual_stripe_invoice',
@@ -334,6 +368,13 @@ export default function ApplicationsQueue() {
     if (!manualPaymentModal) return;
     const plan = MANUAL_PAYMENT_PLANS[manualPaymentDraft.planType];
     const reference = manualPaymentDraft.paymentReference.trim();
+    const receiptDraft = {
+      ...manualPaymentDraft,
+      paymentReference: reference,
+      amountCents: plan.amountCents,
+      planLabel: plan.label,
+      paymentMethodLabel: MANUAL_PAYMENT_METHODS[manualPaymentDraft.paymentMethod],
+    };
     if (!reference) {
       showToast('Payment reference is required');
       return;
@@ -363,6 +404,12 @@ export default function ApplicationsQueue() {
         return;
       }
       showToast(data.linkedToStudent ? 'Payment recorded and linked' : 'Payment recorded');
+      setManualPaymentReceipt({
+        app: manualPaymentModal,
+        draft: receiptDraft,
+        subscription: data.subscription,
+        linkedToStudent: data.linkedToStudent,
+      });
       setManualPaymentModal(null);
       load();
     } finally {
@@ -682,6 +729,37 @@ Welcome to GIIS!
           </div>
         </div>
 	      )}
+
+      {/* Manual payment receipt modal */}
+      {manualPaymentReceipt && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.55)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10000, fontFamily: 'Inter, sans-serif', padding: 24 }}>
+          <div style={{ background: '#fff', borderRadius: 16, padding: '28px 32px', maxWidth: 620, width: '100%', boxShadow: '0 24px 64px rgba(0,0,0,0.25)' }}>
+            <p style={{ fontSize: 11, fontWeight: 800, color: '#166534', letterSpacing: 1.4, textTransform: 'uppercase', margin: '0 0 8px' }}>Payment Recorded</p>
+            <h2 style={{ fontSize: 21, fontWeight: 800, margin: '0 0 6px' }}>Copy family payment receipt</h2>
+            <p style={{ fontSize: 13, color: '#5c6578', margin: '0 0 14px', lineHeight: 1.5 }}>
+              Send this only after Stripe evidence is verified. Keep the Stripe reference in the outside-git admissions tracker.
+            </p>
+            <div style={{ background: '#f4f6fa', borderRadius: 8, padding: '12px 16px', fontFamily: 'monospace', fontSize: 12, whiteSpace: 'pre-wrap', marginBottom: 16, color: '#1a1d24', lineHeight: 1.7, maxHeight: '45vh', overflow: 'auto' }}>
+              {manualPaymentReceiptText(manualPaymentReceipt)}
+            </div>
+            <div style={{ background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '10px 12px', fontSize: 12, color: '#5c4a12', marginBottom: 16, lineHeight: 1.5 }}>
+              This receipt confirms a manual payment record. It does not promise credit transfer, accreditation completion, AP authorization, CEEB issuance, or college admission outcomes.
+            </div>
+            <div style={{ display: 'flex', gap: 10 }}>
+              <button
+                onClick={() => copyToClipboard(manualPaymentReceiptText(manualPaymentReceipt))}
+                style={{ flex: 1, padding: '11px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 800, fontSize: 13, border: 'none', cursor: 'pointer' }}>
+                Copy payment receipt
+              </button>
+              <button
+                onClick={() => setManualPaymentReceipt(null)}
+                style={{ padding: '11px 20px', borderRadius: 8, background: 'none', border: '1.5px solid #d4d8e0', color: '#5c6578', fontWeight: 800, fontSize: 13, cursor: 'pointer' }}>
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
 	      {/* Manual payment modal */}
 	      {manualPaymentModal && (
