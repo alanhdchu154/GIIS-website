@@ -48,7 +48,7 @@ const PREVIEW = {
   },
   courses: [
     { dept: { en: 'Computer Science', zh: '计算机科学' }, code: 'CS', color: '#1565C0',
-      name: 'Computer Science I', meta: { en: 'Module 9 of 14 · Last activity 2 days ago', zh: '第 9 / 14 模块 · 2 天前最后活动' }, pct: 64,
+      name: 'Computer Science I', meta: { en: 'Module 9 of 14 · Last activity in sample week', zh: '第 9 / 14 模块 · 示例周内最近活动' }, pct: 64,
       pace: { en: 'Behind 1 week', zh: '落后 1 周', kind: 'behind' } },
     { dept: { en: 'English', zh: '英语' }, code: 'E', color: '#C84B0A',
       name: 'English IV Portfolio Writing', meta: { en: 'Module 5 of 8 · Draft feedback received', zh: '第 5 / 8 模块 · 已收到草稿反馈' }, pct: 63,
@@ -69,8 +69,8 @@ const PREVIEW = {
       zh: '芸帆完成了两个模块，获得 1.0 学分，并在四天内保持学习活动。Computer Science I 需要关注，因为第 10 模块比当前计划落后一周。',
     },
     risk: {
-      en: 'Missing-work risk flag: Computer Science I project checkpoint is due May 21.',
-      zh: '缺交风险提醒：Computer Science I 项目检查点将于 5 月 21 日截止。',
+      en: 'Missing-work risk flag: Computer Science I project checkpoint is due at the next weekly checkpoint.',
+      zh: '缺交风险提醒：Computer Science I 项目检查点将在下一次每周检查时到期。',
     },
     nextAction: {
       en: 'Next action: submit the Module 10 planning table, then review the advisor note before the monthly check-in.',
@@ -82,11 +82,11 @@ const PREVIEW = {
     },
   },
   activity: [
-    { kind: 'green', icon: '✓', when: { en: 'May 7 · 2 days ago', zh: '5 月 7 日 · 2 天前' },
+    { kind: 'green', icon: '✓', when: { en: 'Sample week · Day 5', zh: '示例周 · 第 5 天' },
       lead: { en: 'Earned 1.0 credit · ', zh: '获得 1.0 学分 · ' },
       bold: 'Pre-Calculus',
       tail: { en: ' final exam passed (92%)', zh: ' 期末考通过 92%' } },
-    { kind: 'feedback', icon: '📝', when: { en: 'May 6 · 3 days ago', zh: '5 月 6 日 · 3 天前' },
+    { kind: 'feedback', icon: '📝', when: { en: 'Sample week · Day 4', zh: '示例周 · 第 4 天' },
       lead: { en: 'Teacher feedback received on ', zh: '收到老师对 ' },
       bold: 'Computer Science I — Module 8 assignment',
       tail: { en: ' (95/100)', zh: ' 的反馈（95/100）' },
@@ -94,25 +94,25 @@ const PREVIEW = {
         en: 'Strength: clear loop logic and readable variable names. Correction: add one edge-case test for empty input. Next action: revise the test table before Module 9.',
         zh: '优点：循环逻辑清楚，变量命名易读。订正：补一个空输入的边界测试。下一步：进入第 9 模块前更新测试表。',
       } },
-    { kind: 'blue', icon: '📖', when: { en: 'May 5 · 4 days ago', zh: '5 月 5 日 · 4 天前' },
+    { kind: 'blue', icon: '📖', when: { en: 'Sample week · Day 3', zh: '示例周 · 第 3 天' },
       lead: { en: 'Completed ', zh: '完成 ' },
       bold: 'Module 6',
       tail: { en: ' of Economics', zh: ' Economics' } },
-    { kind: 'gold', icon: '★', when: { en: 'May 3 · 6 days ago', zh: '5 月 3 日 · 6 天前' },
+    { kind: 'gold', icon: '★', when: { en: 'Sample week · Day 1', zh: '示例周 · 第 1 天' },
       lead: { en: 'Passed ', zh: '通过 ' },
       bold: 'Economics midterm',
       tail: { en: ' with 88%', zh: '，分数 88%' } },
   ],
   advisorNote: {
-    en: '"Yunfan stayed consistent this week. He is currently on the June graduation plan if the remaining credits are completed as scheduled. We are focusing the next check-in on essay drafts and the Engineering Science pathway final."',
-    zh: '"芸帆这周保持稳定的学习节奏。如果剩余学分按计划完成，他目前仍在 6 月毕业路径上。下一次 check-in 会重点看申请文书草稿与工程科学路径期末考。"',
+    en: '"Yunfan stayed consistent this week. He remains on the target graduation plan if the remaining credits are completed as scheduled. We are focusing the next check-in on essay drafts and the Engineering Science pathway final."',
+    zh: '"芸帆这周保持稳定的学习节奏。如果剩余学分按计划完成，他目前仍在目标毕业路径上。下一次 check-in 会重点看申请文书草稿与工程科学路径期末考。"',
   },
   upcoming: [
-    { day: { en: 'MAY', zh: 'MAY' }, num: 21, what: { en: 'Computer Science I — Module 10 due', zh: 'Computer Science I 第 10 模块截止' },
-      sub: { en: 'Tuesday · Project submission', zh: '周二 · 项目提交' } },
-    { day: { en: 'JUN', zh: 'JUN' }, num: 14, what: { en: 'Diploma eligibility', zh: '文凭达成日' },
+    { day: { en: 'NEXT', zh: '下次' }, num: 1, what: { en: 'Computer Science I — Module 10 due', zh: 'Computer Science I 第 10 模块截止' },
+      sub: { en: 'Next checkpoint · Project submission', zh: '下一次检查 · 项目提交' } },
+    { day: { en: 'PLAN', zh: '计划' }, num: 2, what: { en: 'Diploma eligibility', zh: '文凭达成日' },
       sub: { en: '2 more credits needed', zh: '还差 2 学分' } },
-    { day: { en: 'JUN', zh: 'JUN' }, num: 18, what: { en: 'Advisor portfolio review', zh: '顾问作品集复盘' },
+    { day: { en: 'PLAN', zh: '计划' }, num: 3, what: { en: 'Advisor portfolio review', zh: '顾问作品集复盘' },
       sub: { en: 'Writing and project checkpoint', zh: '写作与项目检查点' } },
   ],
 };
@@ -354,7 +354,7 @@ export default function ParentDashboardDemo({ language }) {
 
               {/* Recent activity */}
               <div style={card}>
-                <CardHead en="Recent Activity" zh="最近动态" isEn={isEn} right={<span style={{ fontSize: '11px', color: '#888' }}>{isEn ? 'May 2 → May 8' : '5/2 → 5/8'}</span>} />
+                <CardHead en="Recent Activity" zh="最近动态" isEn={isEn} right={<span style={{ fontSize: '11px', color: '#888' }}>{isEn ? 'Sample week' : '示例周'}</span>} />
                 {p.activity.map((a, i) => {
                   const c = BADGE_COLORS[a.kind];
                   return (
@@ -393,7 +393,7 @@ export default function ParentDashboardDemo({ language }) {
                   <div style={{ width: '30px', height: '30px', borderRadius: '50%', background: '#2b3d6d', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '11px' }}>SZ</div>
                   <div>
                     <div style={{ color: '#1a1d24' }}><b>Shiyu Zhang, Ph.D.</b></div>
-                    <div>{isEn ? 'President & Principal · 5 days ago' : 'President & Principal · 5 天前'}</div>
+                    <div>{isEn ? 'President & Principal · sample week' : 'President & Principal · 示例周'}</div>
                   </div>
                 </div>
               </div>
@@ -450,7 +450,7 @@ export default function ParentDashboardDemo({ language }) {
                   {isEn ? <>You're subscribed to advisor-reviewed Sunday summaries at <b>{p.parent.email}</b>.</> : <>每周日定时收到顾问审核后的摘要邮件至 <b>{p.parent.email}</b>。</>}
                 </p>
                 <p style={{ fontSize: '12px', color: '#5c6578', margin: 0 }}>
-                  {isEn ? 'Includes progress, missing-work flags, and one next action · Last sent May 5' : '包含进度、缺交提醒与一个下一步 · 上次发送 5 月 5 日'}
+                  {isEn ? 'Includes progress, missing-work flags, and one next action · Sample weekly digest' : '包含进度、缺交提醒与一个下一步 · 每周摘要示例'}
                 </p>
               </div>
 

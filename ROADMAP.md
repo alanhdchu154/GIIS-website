@@ -107,6 +107,10 @@ parent-reading layer while preserving the official English profile/PDF body,
 and `npm run audit:conversion-bilingual` guards Trust Center, Pricing, Apply,
 School Profile, and Refund Policy in Chinese mode. Local production-build smoke
 passed 5/5.
+The public parent dashboard demo now uses date-neutral sample-week labels for
+activity, advisor notes, upcoming items, and weekly digests instead of stale
+May/June dates; `audit:sales-launch` guards this so the proof surface does not
+look abandoned.
 2026-06-16 Student Learn Portal entry pass: `/learn` / `/login` now explains
 what enrolled students can do after sign-in (continue modules, submit work,
 review feedback, and check grades/credits/transcript progress), links

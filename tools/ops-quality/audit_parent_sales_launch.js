@@ -261,8 +261,9 @@ const checks = [
     file: 'src/components/pages/Parent/ParentDashboardDemo.js',
     ok: /Guided support is \$149\/month/.test(files.parentDemo) &&
       /to="\/pricing"/.test(files.parentDemo) &&
-      /to="\/admission"/.test(files.parentDemo),
-    message: 'Parent demo must connect transparency proof to admission/pricing.',
+      /to="\/admission"/.test(files.parentDemo) &&
+      !/\b(May|MAY|June|JUN)\b|days ago|Last sent|5 月|天前/.test(files.parentDemo),
+    message: 'Parent demo must connect transparency proof to admission/pricing without stale sample dates.',
   },
   {
     id: 'payment-runbook',
