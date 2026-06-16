@@ -70,10 +70,49 @@ function enrollmentPayload(moduleOrder) {
   };
 }
 
+function enrollmentPayloadMissingAssignment() {
+  return {
+    course: { name: 'English I', nameZh: '英语一', department: 'English', modules },
+    enrollment: {
+      quizAttempts: [{ moduleOrder: 1, score: 85, passed: true, answers: {} }],
+      assignments: [],
+      moduleProgresses: [],
+    },
+  };
+}
+
 function JumpToModuleThree() {
   const navigate = useNavigate();
   return <button onClick={() => navigate('/learn/english-i/module/3')}>Jump to module 3</button>;
 }
+
+test('reminds students to submit the module assignment before moving on', async () => {
+  global.fetch = jest.fn((url) => {
+    const target = String(url);
+    if (target.includes('/api/enrollments/english-i/quiz/1')) {
+      return response({
+        questions: [{ id: 'q1', question: 'Sample quiz question', answer: 'A', explanation: 'Because.', points: 1 }],
+      });
+    }
+    if (target.includes('/api/enrollments/english-i')) return response(enrollmentPayloadMissingAssignment());
+    return response({});
+  });
+
+  render(
+    <HelmetProvider>
+      <MemoryRouter initialEntries={['/learn/english-i/module/1']}>
+        <Routes>
+          <Route path="/learn/:slug/module/:order" element={<ModulePage language="en" />} />
+        </Routes>
+      </MemoryRouter>
+    </HelmetProvider>
+  );
+
+  expect(await screen.findByText('Reading Comprehension Strategies')).toBeInTheDocument();
+  expect(await screen.findByText(/Before moving on:/)).toBeInTheDocument();
+  expect(screen.getByText(/this assignment is still missing/i)).toBeInTheDocument();
+  expect(screen.getByText(/Next Module/)).toBeInTheDocument();
+});
 
 test('does not show stale quiz or assignment content after a fast module switch', async () => {
   const slowOldQuiz = deferredResponse({

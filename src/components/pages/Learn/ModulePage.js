@@ -253,6 +253,8 @@ export default function ModulePage({ language }) {
   const assignmentProfile = mod.assignment ? getAssignmentProfile(mod.assignment) : null;
   const purpose = modulePurpose({ course, mod, moduleOrder, isEn });
   const lens = getExpertLens(course, mod);
+  const hasAssignment = !!mod.assignment;
+  const assignmentMissing = hasAssignment && !prevSubmission;
 
   return (
     <>
@@ -606,6 +608,23 @@ export default function ModulePage({ language }) {
         </section>
 
         {/* Navigation */}
+        {quizAttempt && assignmentMissing && (
+          <div style={{
+            margin: '0 0 18px',
+            padding: '14px 16px',
+            background: '#fff8e1',
+            border: '1px solid #f4c36a',
+            borderRadius: '10px',
+            color: '#6f4600',
+            fontSize: '13px',
+            lineHeight: 1.55,
+          }}>
+            <strong>{isEn ? 'Before moving on: ' : '进入下一模块前：'}</strong>
+            {isEn
+              ? 'the quiz unlocks the next module, but this assignment is still missing. Submit your work or a document link so your teacher can review it and your parent can see feedback.'
+              : '测验会解锁下一模块，但本模块作业还未提交。请提交作业内容或文件链接，方便老师批改，也让家长看到反馈。'}
+          </div>
+        )}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', paddingTop: '24px', borderTop: '1px solid #e0e6f0' }}>
           {moduleOrder > 1 ? (
             <Link to={`/learn/${slug}/module/${moduleOrder - 1}`} style={{ fontSize: '14px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none', padding: '10px 20px', border: '2px solid #2b3d6d', borderRadius: '8px' }}>

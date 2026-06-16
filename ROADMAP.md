@@ -118,6 +118,9 @@ not-yet-activated families back to path review / admissions consultation, and
 keeps parent sign-in visibly separate. The unauthenticated Learn Dashboard no
 longer fires student API requests before redirecting to sign-in, so the entry
 surface is cleaner for students and for browser smoke.
+The module page now warns students after a quiz when the module assignment is
+still missing: quizzes may unlock the next module, but submitted work is needed
+for teacher review, parent-visible feedback, and final course completion.
 The daily school-ops gate now also checks frontend deploy freshness:
 `npm run audit:frontend-deploy` now treats Netlify's published production
 deploy commit as the primary freshness signal and keeps local-vs-Netlify asset
