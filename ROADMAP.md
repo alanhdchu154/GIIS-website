@@ -104,18 +104,15 @@ and `npm run audit:conversion-bilingual` guards Trust Center, Pricing, Apply,
 School Profile, and Refund Policy in Chinese mode. Local production-build smoke
 passed 5/5.
 The daily school-ops gate now also checks frontend deploy freshness:
-`npm run audit:frontend-deploy` compares the local production build asset
-references with live Netlify HTML. Current production still serves
-`static/js/main.d36b323b.js` while the local post-push build expects
-`static/js/main.5bab1c36.js`, so the latest Chinese conversion trust-path push
-is not yet live on Netlify. Because GitHub `main` push is supposed to trigger
-the Netlify production deploy automatically, this stale bundle should be
-treated as an auto-deploy integration/build-trigger/deploy-state failure to
-inspect, not as the normal manual deployment path. This is a frontend deploy
-warning, not a reason to send automated checkout links or to block reviewed
-manual sales. The repair path is documented in
-`docs/netlify-frontend-deploy-repair.md` and guarded by
-`npm run audit:sales-launch`.
+`npm run audit:frontend-deploy` now treats Netlify's published production
+deploy commit as the primary freshness signal and keeps local-vs-Netlify asset
+hash differences as diagnostics. On 2026-06-16, Netlify public metadata showed
+production deploy `1410b77c` ready on branch `main`; production behavior gates
+then passed (`audit:conversion-bilingual` 5/5, parent journey 7/7, sales live
+8/8). The latest Chinese conversion trust path is verified live. If a future
+push shows an older published commit or failing behavior gates, follow
+`docs/netlify-frontend-deploy-repair.md`; do not use an unreviewed local folder
+deploy.
 
 ## Active Lanes
 

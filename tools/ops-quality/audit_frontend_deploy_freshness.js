@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const { execSync } = require('child_process');
 const http = require('http');
 const https = require('https');
 const path = require('path');
@@ -56,17 +57,47 @@ function fetchText(url, redirects = 5) {
   });
 }
 
-function summarize(expectedRefs, productionRefs, expectedExists, fetchStatus) {
+function gitSha(ref) {
+  try {
+    return execSync(`git rev-parse ${ref}`, { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+  } catch {
+    return '';
+  }
+}
+
+async function netlifySiteFor(baseUrl) {
+  const host = new URL(baseUrl).hostname;
+  if (host === 'localhost' || host === '127.0.0.1') return null;
+  try {
+    const response = await fetchText(`https://api.netlify.com/api/v1/sites/${host}`);
+    if (!response.status || response.status >= 400) return null;
+    return JSON.parse(response.body);
+  } catch {
+    return null;
+  }
+}
+
+function summarize(expectedRefs, productionRefs, expectedExists, fetchStatus, netlifySite, expectedGitSha) {
   const missingFromProduction = expectedRefs.filter((ref) => !productionRefs.includes(ref));
   const extraInProduction = productionRefs.filter((ref) => !expectedRefs.includes(ref));
+  const deploy = netlifySite?.published_deploy || null;
+  const deployMatchesGit = Boolean(
+    deploy?.state === 'ready' &&
+    deploy?.branch === 'main' &&
+    expectedGitSha &&
+    deploy.commit_ref === expectedGitSha &&
+    !deploy.skipped &&
+    !deploy.locked,
+  );
   const exactMatch = expectedExists && fetchStatus && fetchStatus < 400 && missingFromProduction.length === 0 && extraInProduction.length === 0;
-  if (exactMatch) {
+  if (exactMatch || deployMatchesGit) {
     return {
       status: 'pass',
       summary: { total: 1, pass: 1, warn: 0, fail: 0 },
-      verdict: 'production_matches_local_build',
+      verdict: exactMatch ? 'production_matches_local_build' : 'production_deploy_matches_origin_main',
       missingFromProduction,
       extraInProduction,
+      deployMatchesGit,
     };
   }
   return {
@@ -75,6 +106,7 @@ function summarize(expectedRefs, productionRefs, expectedExists, fetchStatus) {
     verdict: expectedExists ? 'production_asset_mismatch' : 'local_build_missing',
     missingFromProduction,
     extraInProduction,
+    deployMatchesGit,
   };
 }
 
@@ -90,6 +122,8 @@ function writeReports(payload) {
     `Generated: ${payload.generatedAt}`,
     `Base URL: ${payload.baseUrl}`,
     `Expected index: ${payload.expectedIndex}`,
+    `Expected git sha: ${payload.expectedGitSha || 'unknown'}`,
+    `Netlify deploy sha: ${payload.netlifyDeploy?.commit_ref || 'unknown'}`,
     `Verdict: ${payload.verdict}`,
     '',
     '## Asset Comparison',
@@ -110,10 +144,14 @@ async function main() {
   const expectedRefs = assetRefs(expectedHtml);
   const production = await fetchText(BASE_URL);
   const productionRefs = assetRefs(production.body);
-  const comparison = summarize(expectedRefs, productionRefs, expectedExists, production.status);
+  const expectedGitSha = gitSha('origin/main') || gitSha('HEAD');
+  const netlifySite = await netlifySiteFor(BASE_URL);
+  const comparison = summarize(expectedRefs, productionRefs, expectedExists, production.status, netlifySite, expectedGitSha);
 
   const message = comparison.status === 'pass'
-    ? 'Production HTML references the same static JS/CSS assets as the local production build.'
+    ? comparison.verdict === 'production_matches_local_build'
+      ? 'Production HTML references the same static JS/CSS assets as the local production build.'
+      : 'Netlify reports the published production deploy is the current origin/main commit; local and Netlify asset filenames differ, so use deploy metadata plus production behavior gates as freshness evidence.'
     : expectedExists
       ? 'Production HTML does not reference the same static JS/CSS assets as the local production build; GitHub main push should auto-trigger Netlify production, so inspect the Netlify GitHub integration, build trigger, and production deploy state.'
       : 'Local build/index.html is missing; run npm run build before using this freshness check as deploy evidence.';
@@ -122,8 +160,20 @@ async function main() {
     generatedAt: new Date().toISOString(),
     baseUrl: BASE_URL,
     expectedIndex: EXPECTED_INDEX,
+    expectedGitSha,
     verdict: comparison.verdict,
     summary: comparison.summary,
+    netlifyDeploy: netlifySite?.published_deploy ? {
+      id: netlifySite.published_deploy.id || '',
+      state: netlifySite.published_deploy.state || '',
+      branch: netlifySite.published_deploy.branch || '',
+      commit_ref: netlifySite.published_deploy.commit_ref || '',
+      title: netlifySite.published_deploy.title || '',
+      published_at: netlifySite.published_deploy.published_at || '',
+      deploy_time: netlifySite.published_deploy.deploy_time || null,
+      skipped: netlifySite.published_deploy.skipped || null,
+      locked: netlifySite.published_deploy.locked || null,
+    } : null,
     expectedRefs,
     productionRefs,
     productionStatus: production.status,

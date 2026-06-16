@@ -292,12 +292,14 @@ npm run audit:frontend-deploy -- --base-url https://genesisideas.school
 npm run audit:parent-journey -- --base-url https://genesisideas.school
 ```
 
-`audit:frontend-deploy` proves production Netlify is serving the same static
-asset references as the reviewed local production build. `audit:sales-live`
-proves key routes render; `audit:parent-journey` proves those routes answer the
-parent questions that drive willingness to pay. If production is still serving
-an older bundle after a push, treat it as a Netlify auto-deploy integration,
-build-trigger, or production deploy-state failure and follow
+`audit:frontend-deploy` proves production Netlify either serves the same static
+asset references as the reviewed local production build or reports that the
+published production deploy is the current `origin/main` commit. Netlify asset
+filenames can differ from a local build, so `audit:sales-live`,
+`audit:conversion-bilingual`, and `audit:parent-journey` are the behavior gates
+that prove families can see the current trust/payment path. If production is
+still serving an older commit after a push, treat it as a Netlify auto-deploy
+integration, build-trigger, or production deploy-state failure and follow
 `docs/netlify-frontend-deploy-repair.md`. Do not replace the reviewed
 `origin/main` deploy path with an unreviewed local folder deploy.
 

@@ -140,16 +140,15 @@ Current Umi note:
   Trust Center, Pricing, Apply, School Profile, and Refund Policy in Chinese
   mode. Local production-build smoke passed 5/5.
 - Frontend deploy freshness is now part of `school:ops-report` through
-  `npm run audit:frontend-deploy`. Current production still serves
-  `static/js/main.d36b323b.js` while the local post-push build expects
-  `static/js/main.5bab1c36.js`, so do not claim the latest Chinese conversion
-  changes are live until Netlify deploy status is rechecked. GitHub `main` push
-  should auto-trigger Netlify production, so stale production means inspect the
-  Netlify GitHub integration, branch/build trigger, and production deploy
-  status instead of treating manual local deploy as the normal path. This is a
-  warning, not a manual-sales blocker. Follow
-  `docs/netlify-frontend-deploy-repair.md`; `audit:sales-launch` now guards the
-  runbook.
+  `npm run audit:frontend-deploy`. Netlify public metadata now shows production
+  deploy `1410b77c` ready on branch `main`; asset hashes differ from the local
+  build, but the deploy freshness audit treats the current published commit as
+  the primary signal and leaves asset differences as diagnostics. Production
+  behavior gates pass: `audit:conversion-bilingual` 5/5, parent journey 7/7,
+  sales live 8/8. The latest Chinese conversion trust path is verified live.
+  Future stale-commit or behavior-gate failure should follow
+  `docs/netlify-frontend-deploy-repair.md`; never deploy an unreviewed local
+  folder.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

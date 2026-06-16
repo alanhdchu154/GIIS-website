@@ -81,6 +81,15 @@ async function pageText(page) {
 async function runRoute(page, baseUrl, route) {
   await page.goto(new URL(route.path, baseUrl).toString(), { waitUntil: 'domcontentloaded' });
   await page.locator('body').waitFor({ state: 'visible', timeout: 8000 });
+  try {
+    await page.waitForFunction(
+      (expected) => expected.every((needle) => document.body?.innerText.includes(needle)),
+      route.expected,
+      { timeout: 10000 },
+    );
+  } catch {
+    // Keep the failure useful: read the current page text and report missing strings below.
+  }
   const text = await pageText(page);
   const missing = route.expected.filter((needle) => !text.includes(needle));
   return {

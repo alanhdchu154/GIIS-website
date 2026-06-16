@@ -58,9 +58,15 @@ gh api repos/alanhdchu154/GIIS-website/hooks --jq '.[] | {id,name,active,events}
 Expected healthy state:
 
 - `HEAD` equals `origin/main`.
-- Local `build/index.html` asset refs match production HTML asset refs.
+- Netlify public site metadata reports the published production deploy is the
+  current `origin/main` commit on branch `main`, or local `build/index.html`
+  asset refs match production HTML asset refs.
+- If Netlify and local asset filenames differ, verify production behavior with
+  the parent-facing gates below before treating it as stale. Netlify build
+  output can differ from a local build even when the published deploy commit is
+  current.
 - `npm run audit:frontend-deploy` reports
-  `production_matches_local_build`.
+  `production_matches_local_build` or `production_deploy_matches_origin_main`.
 
 ## Netlify Dashboard Checks
 
@@ -112,7 +118,8 @@ npm run school:ops-report -- --report /tmp/giis-school-ops-after-netlify.md --js
 
 Success criteria:
 
-- Frontend deploy freshness matches the local production build.
+- Frontend deploy freshness matches the local production build or Netlify
+  reports the published production deploy is the current `origin/main` commit.
 - Chinese conversion smoke passes in production.
 - Parent journey passes in production.
 - `school:ops-report` remains `manual_sales_go_with_payment_boundary` or a
