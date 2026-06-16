@@ -152,6 +152,12 @@ change grades, credits, official records, payment status, or family-facing
 advisor summaries. `audit:sales-launch` and `audit:parent-journey` guard this
 boundary so transparency does not drift while the school keeps using internal
 automation safely.
+The Support page now matches the current tuition tiers: all reviewed
+enrollments get Learn Portal access, records, and submitted-assignment
+feedback, while Guided adds monthly advisor planning/review and Premium adds
+higher-touch pathway, writing, portfolio, and college-readiness planning. The
+sales-launch audit guards this boundary so Self-Paced is not accidentally
+presented as full advisor or college-pathway support.
 
 ## Active Lanes
 

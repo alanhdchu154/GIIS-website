@@ -8,13 +8,13 @@ const ADVISOR_EMAIL = 'admissions@genesisideas.school';
 const JOURNEY = [
   {
     step: '01',
-    en: { title: 'Onboarding Call', body: 'Within 48 hours of enrollment, your advisor schedules a 20-minute call to understand your child\'s goals, review any transfer credits, and map out a 4-year course plan.' },
-    zh: { title: '入学通话', body: '入学后 48 小时内，顾问会安排一次 20 分钟通话，了解孩子的学习目标、审核转学分，并规划四年选课路径。' },
+    en: { title: 'Enrollment Setup', body: 'After the application/path review is approved, GIIS confirms the first active courses, login access, records needed, and the recommended support level before payment is finalized.' },
+    zh: { title: '入学设定', body: '申请或路径审核通过后，GIIS 会确认首批课程、登入权限、所需记录，以及付款前建议的支持层级。' },
   },
   {
     step: '02',
-    en: { title: 'Personalized Course Plan', body: 'You receive a written course plan aligned to one of GIIS\'s 8 academic pathways — with AP and elective recommendations matched to target universities.' },
-    zh: { title: '个性化课程规划', body: '顾问提供书面选课计划，对应 GIIS 八大学习路径，AP 课程与选修建议均依据目标大学量身制定。' },
+    en: { title: 'Right-Sized Course Plan', body: 'Self-Paced students can follow the reviewed course sequence. Guided and Premium families add advisor planning, transfer-credit review, and parent progress interpretation.' },
+    zh: { title: '合适的课程规划', body: '自主学习学生可依审核后的课程顺序学习；Guided 与 Premium 家庭会加入顾问规划、转学分审核与家长进度解读。' },
   },
   {
     step: '03',
@@ -23,27 +23,27 @@ const JOURNEY = [
   },
   {
     step: '04',
-    en: { title: 'Ongoing Check-ins', body: 'Monthly advisor check-ins track credit progress, address challenges early, and update the course plan as college application priorities shift.' },
-    zh: { title: '持续进度追踪', body: '每月顾问确认学分进度，提早处理学习挑战，并随大学申请方向调整选课计划。' },
+    en: { title: 'Ongoing Review When Needed', body: 'Guided adds monthly advisor check-ins. Premium adds higher-touch pathway, writing, project portfolio, and college-readiness planning when the family needs more support.' },
+    zh: { title: '按需要持续跟进', body: 'Guided 加入每月顾问 check-in；Premium 在家庭需要更高支持时，加入更密集的路径、写作、项目作品集与升学准备规划。' },
   },
 ];
 
 const SERVICES = [
   {
-    en: { title: 'Academic Advising', label: 'What you get', items: ['4-year written course plan', 'AP + elective recommendations', 'Monthly progress check-in', 'Pathway alignment with target universities'] },
-    zh: { title: '学业辅导', label: '你将获得', items: ['书面四年选课计划', 'AP 与选修课程建议', '每月学习进度确认', '学习路径与目标大学对齐'] },
+    en: { title: 'Core Learn Portal', tier: 'All reviewed enrollments', label: 'Included foundation', items: ['Course access after account activation', 'Module lessons, quizzes, assignments, midterm, and final', 'Written feedback on submitted assignments', 'Parent dashboard visibility for progress and graded work'] },
+    zh: { title: '核心学习平台', tier: '所有已审核入学家庭', label: '基础包含', items: ['账号启用后的课程访问', '模块课程、测验、作业、期中与期末', '已提交作业的书面反馈', '家长面板可查看进度与已批改作业'] },
   },
   {
-    en: { title: 'College Application Support', label: 'What you get', items: ['Course selection strategy for college apps', 'Timeline and deadline planning', 'Application essay review (senior year)', 'School profile + transcript preparation'] },
-    zh: { title: '大学申请支持', label: '你将获得', items: ['以大学申请为导向的选课策略', '申请时程与截止日期规划', '申请文书审阅（高四学年）', '学校简介与成绩单准备协助'] },
+    en: { title: 'Guided Advisor Support', tier: 'Guided · $149/month', label: 'Added for accountability', items: ['Monthly advisor check-in', 'Course planning and transfer-credit review', 'Advisor-approved parent progress review', 'Next-step notes focused on pacing and missing-work risk'] },
+    zh: { title: 'Guided 顾问支持', tier: 'Guided · $149/月', label: '为持续跟进而增加', items: ['每月顾问 check-in', '课程规划与转学分审核', '顾问审核后的家长进度解读', '聚焦节奏与缺交风险的下一步建议'] },
   },
   {
-    en: { title: 'Assignment Feedback', label: 'What you get', items: ['Submit work as portal text, a Google Doc link, or a project link', 'Written feedback on every submitted assignment', 'Scores visible in Learn Portal within 5 business days', 'Parent dashboard shows graded work and full feedback'] },
-    zh: { title: '作业批改与反馈', label: '你将获得', items: ['可用平台文字、Google Doc 链接或项目链接提交作业', '每份作业均附书面批改意见', '5 个工作日内成绩显示于学习平台', '家长面板会显示已批改作业与完整反馈'] },
+    en: { title: 'Premium College Pathway', tier: 'Premium · $299/month', label: 'Higher-touch planning', items: ['Everything in Guided', 'More frequent parent-facing planning support', 'Writing and project portfolio guidance', 'College-readiness framing without admissions guarantees'] },
+    zh: { title: 'Premium 升学路径', tier: 'Premium · $299/月', label: '更高触达规划', items: ['包含 Guided 全部内容', '更密集的家长端规划支持', '写作与项目作品集指导', '升学准备定位，但不承诺录取结果'] },
   },
   {
-    en: { title: 'Wellbeing Counseling', label: 'What you get', items: ['Emotional support for online learners', 'Study habit and time management coaching', 'Referral to professional resources when needed', 'Confidential — separate from academic record'] },
-    zh: { title: '身心健康辅导', label: '你将获得', items: ['针对线上学习者的情绪支持', '学习习惯与时间管理指导', '需要时转介专业资源', '保密处理，不纳入学术记录'] },
+    en: { title: 'Student Care Routing', tier: 'Support boundary', label: 'How concerns are handled', items: ['Study-habit and time-management concerns can be surfaced to staff', 'Parents see reviewed, practical next actions', 'Private staff notes stay separate from family summaries', 'Clinical or emergency support is referred to appropriate outside resources'] },
+    zh: { title: '学生关怀转介', tier: '支持边界', label: '如何处理关切', items: ['学习习惯与时间管理问题可提交给 staff 关注', '家长看到审核后的务实下一步', '内部 staff 笔记与家庭摘要分开', '临床或紧急支持会转介适当外部资源'] },
   },
 ];
 
@@ -74,8 +74,8 @@ export default function SupportMain({ language, toggleLanguage }) {
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 17, lineHeight: 1.7, margin: '0 0 32px', maxWidth: 580 }}>
             {T(
-              'Every GIIS student gets a named advisor, a written course plan, and real feedback on every assignment. Here\'s exactly what that looks like.',
-              '每位 GIIS 学生都有专属顾问、书面选课计划，以及每份作业的真实批改意见。以下是具体内容。'
+              'Every reviewed enrollment gets course access, records, and assignment feedback. Advisor planning is added through Guided and Premium when the family needs more human accountability.',
+              '每个已审核入学家庭都会获得课程访问、记录与作业反馈；当家庭需要更多人工跟进时，Guided 与 Premium 会加入顾问规划。'
             )}
           </p>
           <a href={`mailto:${ADVISOR_EMAIL}?subject=${encodeURIComponent(T('Questions about student support', '关于学生支持的问题'))}`}
@@ -115,16 +115,17 @@ export default function SupportMain({ language, toggleLanguage }) {
       <div style={{ background: '#f4f6fa', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px' }}>
           <p style={{ fontSize: 12, fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
-            {T('Included with every plan', '每个方案均已包含')}
+            {T('Support by plan', '各方案支持范围')}
           </p>
           <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, color: '#1a1a2e', margin: '0 0 40px', letterSpacing: '-0.01em' }}>
-            {T('What you actually get', '你实际会拿到的')}
+            {T('What families can expect', '家庭可以期待什么')}
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: 20 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 20 }}>
             {SERVICES.map((s) => {
               const t = isEn ? s.en : s.zh;
               return (
                 <div key={t.title} style={{ background: '#fff', borderRadius: 14, padding: '28px 28px', border: '1px solid #e8ecf5', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                  <p style={{ fontSize: 11, fontWeight: 800, color: '#8a6a14', letterSpacing: '1.2px', textTransform: 'uppercase', margin: '0 0 8px' }}>{t.tier}</p>
                   <h3 style={{ fontSize: 17, fontWeight: 800, color: '#1a1a2e', margin: '0 0 16px' }}>{t.title}</h3>
                   <p style={{ fontSize: 10, fontWeight: 700, color: '#9aa0ad', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 10px' }}>{t.label}</p>
                   <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
@@ -159,11 +160,11 @@ export default function SupportMain({ language, toggleLanguage }) {
               )}
             </p>
           </div>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', flexShrink: 0 }}>
-            <Link to="/parent/demo" style={{ background: 'rgba(213,168,54,1)', color: '#1a1a2e', padding: '12px 22px', borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', flex: '1 1 260px', minWidth: 0 }}>
+            <Link to="/parent/demo" style={{ flex: '1 1 150px', textAlign: 'center', background: 'rgba(213,168,54,1)', color: '#1a1a2e', padding: '12px 22px', borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
               {T('Preview parent view →', '预览家长视角 →')}
             </Link>
-            <Link to="/login" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1.5px solid rgba(255,255,255,0.25)', padding: '12px 22px', borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+            <Link to="/login" style={{ flex: '1 1 150px', textAlign: 'center', background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1.5px solid rgba(255,255,255,0.25)', padding: '12px 22px', borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
               {T('Student login →', '学生登入 →')}
             </Link>
           </div>
@@ -173,7 +174,7 @@ export default function SupportMain({ language, toggleLanguage }) {
       {/* Contact */}
       <div style={{ background: '#fff', padding: '72px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: 32 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: 32 }}>
             <div>
               <p style={{ fontSize: 12, fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
                 {T('Talk to an advisor', '与顾问交流')}

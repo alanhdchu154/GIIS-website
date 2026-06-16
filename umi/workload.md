@@ -178,6 +178,12 @@ Current Umi note:
   grades, credits, official records, payment status, and family-facing advisor
   summaries stay human-reviewed. Guarded by `audit:sales-launch` and
   `audit:parent-journey`.
+- Support page tier boundary is now aligned with pricing: Self-Paced/all
+  reviewed enrollments get Learn Portal access, records, and submitted-work
+  feedback; Guided adds monthly advisor planning/review; Premium adds
+  higher-touch pathway, writing, project portfolio, and college-readiness
+  planning. Do not reintroduce "Included with every plan" language for full
+  advisor or college-pathway support.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

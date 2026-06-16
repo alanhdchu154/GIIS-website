@@ -29,6 +29,7 @@ const FILES = [
   ...collectJsFiles('src/components/pages/Pathways'),
   ...collectJsFiles('src/components/pages/Pricing'),
   ...collectJsFiles('src/components/pages/SchoolProfile'),
+  ...collectJsFiles('src/components/pages/Support'),
   ...collectJsFiles('src/components/pages/TransferStudents'),
   ...collectJsFiles('src/components/pages/TrustCenter'),
   ...collectJsFiles('src/components/pages/Welcome'),

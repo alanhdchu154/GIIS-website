@@ -22,6 +22,7 @@ const files = {
   admission: read('src/components/pages/Admission/AdmissionMain.js'),
   consultation: read('src/components/pages/Consultation/ConsultationPage.js'),
   graduates: read('src/components/pages/Graduates/GraduateStoriesPage.js'),
+  support: read('src/components/pages/Support/SupportMain.js'),
   parentDemo: read('src/components/pages/Parent/ParentDashboardDemo.js'),
   applicationsQueue: read('src/components/pages/Admin/ApplicationsQueue.js'),
   applicationsRoute: read('server/src/routes/applications.js'),
@@ -273,6 +274,17 @@ const checks = [
       /to="\/admission"/.test(files.parentDemo) &&
       !/\b(May|MAY|June|JUN)\b|days ago|Last sent|5 月|天前/.test(files.parentDemo),
     message: 'Parent demo must connect transparency proof to admission/pricing without stale sample dates.',
+  },
+  {
+    id: 'support-tier-boundary',
+    file: 'src/components/pages/Support/SupportMain.js',
+    ok: /Support by plan/.test(files.support) &&
+      /All reviewed enrollments/.test(files.support) &&
+      /Guided · \$149\/month/.test(files.support) &&
+      /Premium · \$299\/month/.test(files.support) &&
+      /Advisor planning is added through Guided and Premium/.test(files.support) &&
+      !/Included with every plan/.test(files.support),
+    message: 'Support page must not imply every plan includes full advisor/college-pathway support.',
   },
   {
     id: 'payment-runbook',
