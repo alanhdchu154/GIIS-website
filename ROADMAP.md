@@ -89,6 +89,10 @@ remains blocked by missing live Stripe Price IDs. The same report now surfaces
 unconfirmed Netlify `consultation` / `contact` notifications as a lead-capture
 next action, so the recorded daily submissions owner must manually check
 Netlify submissions and the admissions inbox until notifications are confirmed.
+Lead capture also has a dry-run verifier: `npm run lead-capture:test` checks
+local hidden forms, production form registration, and test payload shape without
+sending an external submission; only `--confirm-submit` sends a test lead that
+must be verified in Netlify and the admissions inbox.
 
 ## Active Lanes
 

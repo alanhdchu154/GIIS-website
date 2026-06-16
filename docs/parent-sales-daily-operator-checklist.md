@@ -70,6 +70,26 @@ Check these channels:
 Do not rely only on email forwarding until Netlify form notifications are
 confirmed.
 
+Use the dry-run lead-capture verifier before the first outreach day or after a
+form/deploy change:
+
+```bash
+npm run lead-capture:test -- --report /tmp/giis-lead-capture.md --json-report /tmp/giis-lead-capture.json
+```
+
+Dry run checks local hidden forms, production form registration, and the test
+payload shape. It does not send an external form submission. Only run the real
+test when an operator is ready to confirm the Netlify submission and admissions
+inbox delivery:
+
+```bash
+npm run lead-capture:test -- --confirm-submit --form all --report /tmp/giis-lead-capture.md --json-report /tmp/giis-lead-capture.json
+```
+
+After a confirmed submit, check both Netlify form submissions and
+`admissions@genesisideas.school`. Keep the test submission marked as a test lead
+and do not count it as a parent inquiry.
+
 ## Response SLA
 
 - Same day when possible.

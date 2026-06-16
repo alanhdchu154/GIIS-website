@@ -45,6 +45,10 @@ Current Umi note:
   `lead-capture` next action reminding the recorded daily submissions owner to
   manually check Netlify submissions and admissions inbox before relying on
   inbound leads.
+- `npm run lead-capture:test` is the dry-run verifier for this gap. It checks
+  local hidden forms, production form registration, and test payload shape
+  without sending an external submission. Use `--confirm-submit` only when an
+  operator is ready to verify Netlify submissions and admissions inbox delivery.
 - Lesson-video `needs_revision` rows are older quality debt under the current
   gate, not upload failure. Do not force upload to make the number go down.
 

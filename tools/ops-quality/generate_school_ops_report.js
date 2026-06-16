@@ -303,7 +303,7 @@ function buildNextActions(verdict, salesSignals, releaseGate, dashboardSummary, 
     actions.push({
       owner: 'Admissions operator',
       priority: 'lead-capture',
-      action: 'Netlify consultation/contact notifications are not confirmed; the recorded daily submissions owner must manually check Netlify submissions and admissions inbox before relying on inbound leads.',
+      action: 'Netlify consultation/contact notifications are not confirmed; the recorded daily submissions owner must manually check Netlify submissions and admissions inbox before relying on inbound leads. Use `npm run lead-capture:test` for a dry-run verifier before any confirmed test submission.',
       reference: 'docs/parent-sales-daily-operator-checklist.md',
     });
   }

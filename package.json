@@ -65,6 +65,7 @@
     "audit:production-api-proxy": "node tools/ops-quality/audit_production_api_proxy.js",
     "audit:production-payment-env": "node tools/ops-quality/audit_production_payment_env.js",
     "school:ops-report": "node tools/ops-quality/generate_school_ops_report.js",
+    "lead-capture:test": "node tools/ops-quality/verify_netlify_lead_capture.js",
     "sales:operator-log": "node tools/ops-quality/generate_parent_sales_operator_log.js",
     "sales:start-day": "node tools/ops-quality/start_parent_sales_day.js",
     "sales:ready-today": "node tools/ops-quality/audit_parent_sales_ready_today.js",
