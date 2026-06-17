@@ -108,11 +108,11 @@ const PREVIEW = {
     zh: '"芸帆这周保持稳定的学习节奏。如果剩余学分按计划完成，他目前仍在目标毕业路径上。下一次 check-in 会重点看申请文书草稿与工程科学路径期末考。"',
   },
   upcoming: [
-    { day: { en: 'NEXT', zh: '下次' }, num: 1, what: { en: 'Computer Science I — Module 10 due', zh: 'Computer Science I 第 10 模块截止' },
+    { tone: 'next', tag: { en: 'Next', zh: '下一步' }, what: { en: 'Computer Science I — Module 10 due', zh: 'Computer Science I 第 10 模块截止' },
       sub: { en: 'Next checkpoint · Project submission', zh: '下一次检查 · 项目提交' } },
-    { day: { en: 'PLAN', zh: '计划' }, num: 2, what: { en: 'Diploma eligibility', zh: '文凭达成日' },
+    { tone: 'plan', tag: { en: 'On plan', zh: '计划中' }, what: { en: 'Diploma eligibility', zh: '文凭达成日' },
       sub: { en: '2 more credits needed', zh: '还差 2 学分' } },
-    { day: { en: 'PLAN', zh: '计划' }, num: 3, what: { en: 'Advisor portfolio review', zh: '顾问作品集复盘' },
+    { tone: 'plan', tag: { en: 'On plan', zh: '计划中' }, what: { en: 'Advisor portfolio review', zh: '顾问作品集复盘' },
       sub: { en: 'Writing and project checkpoint', zh: '写作与项目检查点' } },
   ],
 };
@@ -409,18 +409,30 @@ export default function ParentDashboardDemo({ language }) {
               {/* Upcoming */}
               <div style={sideCard}>
                 <Eyebrow en="Upcoming" zh="近期重点" isEn={isEn} />
-                {p.upcoming.map((u, i) => (
-                  <div key={i} style={{ display: 'flex', gap: '12px', padding: '10px 0', borderBottom: i < p.upcoming.length - 1 ? '1px solid #f0f2f8' : 'none', fontSize: '13px' }}>
-                    <div style={{ flexShrink: 0, width: '60px', textAlign: 'center', background: '#f0f4ff', borderRadius: '6px', padding: '6px' }}>
-                      <div style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '1px', textTransform: 'uppercase' }}>{u.day[lang]}</div>
-                      <div style={{ fontSize: '18px', fontWeight: 800, color: '#1a1a2e', lineHeight: 1, marginTop: '2px' }}>{u.num}</div>
+                {p.upcoming.map((u, i) => {
+                  const next = u.tone === 'next';
+                  return (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: i < p.upcoming.length - 1 ? '1px solid #f0f2f8' : 'none', fontSize: '13px' }}>
+                      <div style={{
+                        flexShrink: 0,
+                        minWidth: '64px',
+                        textAlign: 'center',
+                        background: next ? '#2b3d6d' : '#eef2fb',
+                        color: next ? '#fff' : '#2b3d6d',
+                        border: next ? '1px solid #2b3d6d' : '1px solid #d7e0f4',
+                        borderRadius: '999px',
+                        padding: '5px 10px',
+                        fontSize: '11px',
+                        fontWeight: 800,
+                        letterSpacing: '0.4px',
+                      }}>{u.tag[lang]}</div>
+                      <div>
+                        <div style={{ fontWeight: 600 }}>{u.what[lang]}</div>
+                        <div style={{ fontWeight: 400, color: '#5c6578', fontSize: '11px', marginTop: '2px' }}>{u.sub[lang]}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div style={{ fontWeight: 600 }}>{u.what[lang]}</div>
-                      <div style={{ fontWeight: 400, color: '#5c6578', fontSize: '11px', marginTop: '2px' }}>{u.sub[lang]}</div>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               {/* Quick links */}
