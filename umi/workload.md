@@ -165,6 +165,11 @@ Current Umi note:
   mobile trust-path fixes are verified live. Future stale-commit or
   behavior-gate failure should follow `docs/netlify-frontend-deploy-repair.md`;
   never deploy an unreviewed local folder.
+- `audit:frontend-deploy` now also checks Netlify site linkage when public
+  metadata is available: expected repo
+  `https://github.com/alanhdchu154/GIIS-website` and expected branch `main`.
+  A repo/branch mismatch is a Netlify auto-deploy integration issue to repair
+  before claiming the latest pushed frontend is live.
 - Persona audit production API-base verification now accepts the intended
   same-origin `/api` Netlify proxy shape and checks `/api/checkout/tiers` for
   current tier evidence, instead of falsely requiring every production bundle to

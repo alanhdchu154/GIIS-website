@@ -139,6 +139,11 @@ metadata plus behavior gates before calling production stale. If a future push
 shows an older published commit or failing behavior gates, follow
 `docs/netlify-frontend-deploy-repair.md`; do not use an unreviewed local folder
 deploy.
+The freshness audit now also treats Netlify site linkage as deploy evidence:
+when public Netlify metadata is available, it verifies the site is still linked
+to `https://github.com/alanhdchu154/GIIS-website` and production branch `main`.
+A repo or branch mismatch is a Netlify integration problem even if static asset
+filenames happen to match.
 The persona audit now recognizes the current production frontend API shape:
 Netlify builds with same-origin `https://genesisideas.school` and proxies
 `/api/*` to the Lightsail API. `npm run audit:personas` verifies either direct

@@ -21,8 +21,14 @@ function normalizeBaseUrl(value) {
 
 const BASE_URL = normalizeBaseUrl(argValue('--base-url', 'https://genesisideas.school'));
 const EXPECTED_INDEX = argValue('--expected-index', path.join(ROOT, 'build', 'index.html'));
+const EXPECTED_REPO_URL = argValue('--expected-repo-url', 'https://github.com/alanhdchu154/GIIS-website');
+const EXPECTED_BRANCH = argValue('--expected-branch', 'main');
 const REPORT = argValue('--report', DEFAULT_REPORT);
 const JSON_REPORT = argValue('--json-report', DEFAULT_JSON_REPORT);
+
+function normalizeRepoUrl(value) {
+  return String(value || '').trim().replace(/\.git$/, '').toLowerCase();
+}
 
 function assetRefs(html) {
   const refs = new Set();
@@ -81,16 +87,24 @@ function summarize(expectedRefs, productionRefs, expectedExists, fetchStatus, ne
   const missingFromProduction = expectedRefs.filter((ref) => !productionRefs.includes(ref));
   const extraInProduction = productionRefs.filter((ref) => !expectedRefs.includes(ref));
   const deploy = netlifySite?.published_deploy || null;
+  const hasNetlifyMetadata = Boolean(netlifySite);
+  const repoMatchesExpected = !hasNetlifyMetadata ||
+    !EXPECTED_REPO_URL ||
+    normalizeRepoUrl(netlifySite.repo_url) === normalizeRepoUrl(EXPECTED_REPO_URL);
+  const branchMatchesExpected = !hasNetlifyMetadata ||
+    !EXPECTED_BRANCH ||
+    deploy?.branch === EXPECTED_BRANCH;
+  const siteLinkageHealthy = repoMatchesExpected && branchMatchesExpected;
   const deployMatchesGit = Boolean(
     deploy?.state === 'ready' &&
-    deploy?.branch === 'main' &&
+    branchMatchesExpected &&
     expectedGitSha &&
     deploy.commit_ref === expectedGitSha &&
     !deploy.skipped &&
     !deploy.locked,
   );
   const exactMatch = expectedExists && fetchStatus && fetchStatus < 400 && missingFromProduction.length === 0 && extraInProduction.length === 0;
-  if (exactMatch || deployMatchesGit) {
+  if ((exactMatch || deployMatchesGit) && siteLinkageHealthy) {
     return {
       status: 'pass',
       summary: { total: 1, pass: 1, warn: 0, fail: 0 },
@@ -98,15 +112,19 @@ function summarize(expectedRefs, productionRefs, expectedExists, fetchStatus, ne
       missingFromProduction,
       extraInProduction,
       deployMatchesGit,
+      repoMatchesExpected,
+      branchMatchesExpected,
     };
   }
   return {
     status: 'warn',
     summary: { total: 1, pass: 0, warn: 1, fail: 0 },
-    verdict: expectedExists ? 'production_asset_mismatch' : 'local_build_missing',
+    verdict: !siteLinkageHealthy ? 'netlify_site_linkage_mismatch' : expectedExists ? 'production_asset_mismatch' : 'local_build_missing',
     missingFromProduction,
     extraInProduction,
     deployMatchesGit,
+    repoMatchesExpected,
+    branchMatchesExpected,
   };
 }
 
@@ -125,6 +143,8 @@ function writeReports(payload) {
     `Base URL: ${payload.baseUrl}`,
     `Expected index: ${payload.expectedIndex}`,
     `Expected git sha: ${payload.expectedGitSha || 'unknown'}`,
+    `Expected repo URL: ${payload.expectedRepoUrl || 'unknown'}`,
+    `Expected branch: ${payload.expectedBranch || 'unknown'}`,
     `Netlify deploy sha: ${deploy.commit_ref || 'unknown'}`,
     `Verdict: ${payload.verdict}`,
     '',
@@ -140,6 +160,8 @@ function writeReports(payload) {
     `- Published at: ${deploy.published_at || 'unknown'}`,
     `- Skipped: ${deploy.skipped == null ? 'no' : deploy.skipped}`,
     `- Locked: ${deploy.locked == null ? 'no' : deploy.locked}`,
+    `- Repo matches expected: ${payload.netlifyLinkage.repoMatchesExpected ? 'yes' : 'no'}`,
+    `- Branch matches expected: ${payload.netlifyLinkage.branchMatchesExpected ? 'yes' : 'no'}`,
     '',
     '## Asset Comparison',
     '',
@@ -165,8 +187,10 @@ async function main() {
 
   const message = comparison.status === 'pass'
     ? comparison.verdict === 'production_matches_local_build'
-      ? 'Production HTML references the same static JS/CSS assets as the local production build.'
-      : 'Netlify reports the published production deploy is the current origin/main commit; local and Netlify asset filenames differ, so use deploy metadata plus production behavior gates as freshness evidence.'
+      ? 'Production HTML references the same static JS/CSS assets as the local production build, and Netlify metadata is linked to the expected repo and branch when available.'
+      : 'Netlify reports the published production deploy is the current origin/main commit on the expected repo and branch; local and Netlify asset filenames differ, so use deploy metadata plus production behavior gates as freshness evidence.'
+    : comparison.verdict === 'netlify_site_linkage_mismatch'
+      ? 'Netlify site metadata does not match the expected GitHub repo or production branch; inspect the Netlify GitHub integration, site repo linkage, and production branch before claiming the latest pushed frontend changes are live.'
     : expectedExists
       ? 'Production HTML does not reference the same static JS/CSS assets as the local production build; GitHub main push should auto-trigger Netlify production, so inspect the Netlify GitHub integration, build trigger, and production deploy state.'
       : 'Local build/index.html is missing; run npm run build before using this freshness check as deploy evidence.';
@@ -175,6 +199,8 @@ async function main() {
     generatedAt: new Date().toISOString(),
     baseUrl: BASE_URL,
     expectedIndex: EXPECTED_INDEX,
+    expectedRepoUrl: EXPECTED_REPO_URL,
+    expectedBranch: EXPECTED_BRANCH,
     expectedGitSha,
     verdict: comparison.verdict,
     summary: comparison.summary,
@@ -197,6 +223,10 @@ async function main() {
       skipped: netlifySite.published_deploy.skipped || null,
       locked: netlifySite.published_deploy.locked || null,
     } : null,
+    netlifyLinkage: {
+      repoMatchesExpected: comparison.repoMatchesExpected,
+      branchMatchesExpected: comparison.branchMatchesExpected,
+    },
     expectedRefs,
     productionRefs,
     productionStatus: production.status,
@@ -213,6 +243,8 @@ async function main() {
       details: {
         missingFromProduction: comparison.missingFromProduction,
         extraInProduction: comparison.extraInProduction,
+        repoMatchesExpected: comparison.repoMatchesExpected,
+        branchMatchesExpected: comparison.branchMatchesExpected,
       },
     }],
   };

@@ -70,6 +70,7 @@ git rev-parse --short origin/main
 test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
 npm run build
 npm run audit:frontend-deploy -- --base-url https://genesisideas.school
+npm run audit:frontend-deploy -- --base-url https://genesisideas.school --expected-repo-url https://github.com/alanhdchu154/GIIS-website --expected-branch main
 curl -L -s https://genesisideas.school | rg -o 'static/js/main\.[^" ]+\.js|static/css/main\.[^" ]+\.css'
 curl -L -s https://giis.netlify.app | rg -o 'static/js/main\.[^" ]+\.js|static/css/main\.[^" ]+\.css'
 gh run list --branch main --limit 5
@@ -85,6 +86,10 @@ Expected healthy state:
   `ready`, unlocked, unskipped, on branch `main`, and its commit is the current
   `origin/main`; or local `build/index.html` asset refs match production HTML
   asset refs.
+- `audit:frontend-deploy` also reports that the Netlify site metadata is linked
+  to expected repo `https://github.com/alanhdchu154/GIIS-website` and expected
+  branch `main` when that metadata is available. A repo or branch mismatch means
+  inspect site linkage before claiming GitHub push auto-deploy is healthy.
 - If Netlify and local asset filenames differ, verify production behavior with
   the parent-facing gates below before treating it as stale. Netlify build
   output can differ from a local build even when the published deploy commit is
