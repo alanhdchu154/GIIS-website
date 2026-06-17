@@ -141,6 +141,29 @@ const ROUTES = [
     ],
   },
   {
+    name: 'student course assignment status',
+    path: '/learn/english-i',
+    expected: [
+      'English I',
+      'Reading Closely',
+      'Quiz complete',
+      'Assignment needed',
+      'Submit work',
+      '0/2 assignments submitted',
+      'Final Exam',
+    ],
+    endpointCaps: { '/api/enrollments/english-i': 1 },
+    beforeNavigate: async (page) => {
+      await page.addInitScript(() => {
+        window.localStorage.setItem('giis_student_info', JSON.stringify({
+          id: 'student-ops-1',
+          email: 'alex@example.com',
+          name: 'Alex Rivera',
+        }));
+      });
+    },
+  },
+  {
     name: 'parent dashboard',
     path: '/parent/dashboard',
     expected: ["Alex's progress", 'Weekly Insights', 'Start Here', 'Assessment Evidence', 'Recent Activity'],
@@ -402,6 +425,27 @@ function weeklyReportPayload() {
   };
 }
 
+function studentCoursePayload() {
+  return {
+    course: {
+      name: 'English I',
+      nameZh: '英语一',
+      department: 'English',
+      type: 'College Prep',
+      description: 'A foundational course for reading, writing, and evidence-based responses.',
+      modules: [
+        { id: 'm1', order: 1, title: 'Reading Closely', titleZh: '细读', estimatedHrs: 3 },
+        { id: 'm2', order: 2, title: 'Writing Clearly', titleZh: '清晰写作', estimatedHrs: 3 },
+      ],
+    },
+    enrollment: {
+      quizAttempts: [{ moduleOrder: 1, score: 88, passed: true, submittedAt: '2026-06-03T15:00:00.000Z' }],
+      assignments: [],
+      examAttempts: [],
+    },
+  };
+}
+
 async function installMocks(page, endpointCounts) {
   await page.route('**/api/**', async (route) => {
     const url = new URL(route.request().url());
@@ -434,6 +478,7 @@ async function installMocks(page, endpointCounts) {
     if (endpoint === '/api/applications') return route.fulfill(json(applicationsPayload()));
     if (endpoint === '/api/admin/assignments') return route.fulfill(json(assignmentsPayload()));
     if (endpoint === '/api/admin/weekly-report') return route.fulfill(json(weeklyReportPayload()));
+    if (endpoint === '/api/enrollments/english-i') return route.fulfill(json(studentCoursePayload()));
     if (endpoint === '/api/parent/logout' || endpoint === '/api/auth/logout') return route.fulfill(json({ ok: true }));
     if (endpoint === '/api/billing/portal') return route.fulfill(json({ url: 'https://billing.example.test/session' }));
     if (endpoint === '/api/checkout/create-session') return route.fulfill(json({ url: 'https://checkout.example.test/session' }));
@@ -453,6 +498,7 @@ async function checkRoute(context, baseUrl, routeSpec, viewportName) {
   page.on('pageerror', onPageError);
   page.on('console', onConsole);
   await installMocks(page, endpointCounts);
+  if (routeSpec.beforeNavigate) await routeSpec.beforeNavigate(page);
 
   const issues = [];
   try {

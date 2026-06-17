@@ -125,28 +125,53 @@ export default function CoursePage({ language }) {
           {(course.modules || []).map((mod) => {
             const locked = isModuleLocked(mod.order);
             const quizDone = submittedQuizSet.has(mod.order);
+            const assignmentDone = submittedAssignmentSet.has(mod.order);
+            const assignmentNeeded = quizDone && !assignmentDone;
             const quizAttempt = (enrollment?.quizAttempts || []).find(a => a.moduleOrder === mod.order);
+            const rowBorder = assignmentNeeded ? '#f4c36a' : quizDone ? '#c8e6c9' : '#e0e6f0';
+            const markerBg = assignmentNeeded ? '#fff8e1' : quizDone ? '#e8f5e9' : locked ? '#f0f0f0' : '#f0f4ff';
+            const markerColor = assignmentNeeded ? '#8a5a00' : quizDone ? '#2e7d32' : locked ? '#aaa' : '#2b3d6d';
             return (
               <div key={mod.id || mod.order} style={{
                 display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap',
-                background: '#fff', border: `1px solid ${quizDone ? '#c8e6c9' : '#e0e6f0'}`,
+                background: '#fff', border: `1px solid ${rowBorder}`,
                 borderRadius: '10px', padding: '14px 18px',
                 opacity: locked ? 0.45 : 1,
               }}>
                 <div style={{
                   width: '34px', height: '34px', borderRadius: '50%', flexShrink: 0,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  background: quizDone ? '#e8f5e9' : locked ? '#f0f0f0' : '#f0f4ff',
+                  background: markerBg,
                   fontSize: '14px', fontWeight: 800,
-                  color: quizDone ? '#2e7d32' : locked ? '#aaa' : '#2b3d6d',
+                  color: markerColor,
                 }}>
-                  {quizDone ? '✓' : locked ? '🔒' : mod.order}
+                  {assignmentNeeded ? '!' : quizDone ? '✓' : locked ? '🔒' : mod.order}
                 </div>
                 <div style={{ flex: 1 }}>
                   <p style={{ margin: 0, fontWeight: 700, fontSize: '14px', color: locked ? '#aaa' : '#1a1a2e' }}>
                     {isEn ? mod.title : (mod.titleZh || mod.title)}
                   </p>
                   <p style={{ margin: '2px 0 0', fontSize: '11px', color: '#999' }}>~{mod.estimatedHrs}h</p>
+                  {quizDone && (
+                    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '7px' }}>
+                      <span style={{ fontSize: '10px', fontWeight: 800, color: '#2e7d32', background: '#e8f5e9', padding: '2px 8px', borderRadius: '20px' }}>
+                        {isEn ? 'Quiz complete' : '测验已完成'}
+                      </span>
+                      <span style={{
+                        fontSize: '10px',
+                        fontWeight: 800,
+                        color: assignmentDone ? '#2e7d32' : '#8a5a00',
+                        background: assignmentDone ? '#e8f5e9' : '#fff8e1',
+                        border: `1px solid ${assignmentDone ? '#a5d6a7' : '#f4c36a'}`,
+                        padding: '2px 8px',
+                        borderRadius: '20px',
+                      }}>
+                        {assignmentDone
+                          ? (isEn ? 'Assignment submitted' : '作业已提交')
+                          : (isEn ? 'Assignment needed' : '需要提交作业')}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
                   {quizAttempt && (
@@ -159,7 +184,9 @@ export default function CoursePage({ language }) {
                       fontSize: '12px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none',
                       padding: '5px 12px', border: '2px solid #2b3d6d', borderRadius: '6px',
                     }}>
-                      {quizDone ? (isEn ? 'Review' : '回顾') : (isEn ? 'Start →' : '开始 →')}
+                      {assignmentNeeded
+                        ? (isEn ? 'Submit work →' : '提交作业 →')
+                        : quizDone ? (isEn ? 'Review' : '回顾') : (isEn ? 'Start →' : '开始 →')}
                     </Link>
                   )}
                 </div>

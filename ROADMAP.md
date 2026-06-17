@@ -193,6 +193,13 @@ verdict, and the daily log template includes a Lead-Capture Delivery
 Verification section so Netlify notification/inbox confirmation cannot be
 silently hand-waved. This does not send test submissions and does not change the
 manual-only payment boundary.
+2026-06-16 student course clarity pass: the logged-in course page now separates
+quiz progress from assignment submission at the module-row level. A student who
+passes a quiz but has not submitted the module assignment sees `Assignment
+needed` and a `Submit work` action instead of a simple completed-looking row.
+`audit:ops-browser` now covers the mocked `/learn/english-i` course page on
+desktop and mobile so this student-next-step cue stays visible without
+horizontal overflow.
 
 ## Active Lanes
 

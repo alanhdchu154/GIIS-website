@@ -210,6 +210,11 @@ Current Umi note:
   lead-capture dry-run verdict, and a Lead-Capture Delivery Verification
   section so operators keep manually checking Netlify submissions until real
   notification/inbox delivery is confirmed.
+- Student course clarity pass: `/learn/:slug` now shows quiz completion and
+  assignment submission as separate module-row signals. If a quiz is complete
+  but the assignment is missing, students see `Assignment needed` and a
+  `Submit work` action instead of a completed-looking row. `audit:ops-browser`
+  now guards the mocked `/learn/english-i` course page on desktop and mobile.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;
