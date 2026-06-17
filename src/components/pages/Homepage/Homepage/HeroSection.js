@@ -9,7 +9,7 @@ import dashboardScreen from '../../../../img/Hero/dashboard-screen.jpg';
  *   LEFT  — eyebrow + bilingual headline + sub + CTAs
  *   RIGHT — real Learn Portal dashboard screenshot (browser-chrome framed)
  *
- * Below: a single-row trust strip (Florida-registered · 24-credit diploma · Class of 2026 · real teacher feedback).
+ * Below: a single-row trust strip (Florida-registered · 24-credit diploma · family-reported outcomes · parent visibility).
  */
 function HeroSection({ language }) {
   const isEn = language === 'en';
@@ -219,8 +219,12 @@ function HeroSection({ language }) {
           <div style={trustBlock}>
             <span style={{ fontSize: '28px' }}>🎓</span>
             <div>
-              <p style={trustLabel}>{isEn ? 'Class of 2026' : '2026 届录取'}</p>
-              <p style={trustValue}>UC Santa Barbara · The Ohio State University · UC Davis · Syracuse University · New Jersey Institute of Technology</p>
+              <p style={trustLabel}>{isEn ? 'Family-reported outcomes' : '家庭回报成果'}</p>
+              <p style={trustValue}>
+                {isEn
+                  ? 'Reported offers include UC Santa Barbara, The Ohio State University, UC Davis, Syracuse University, and New Jersey Institute of Technology'
+                  : '家庭回报成果包括 UC Santa Barbara、The Ohio State University、UC Davis、Syracuse University 与 New Jersey Institute of Technology'}
+              </p>
             </div>
           </div>
 

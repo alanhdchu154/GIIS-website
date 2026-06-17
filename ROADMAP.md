@@ -177,6 +177,14 @@ settling or transient fetch failures: the failed first attempt is preserved in
 the command results as `RETRIED_FAIL`, and a second failure still blocks the
 manual sales day. The latest clean run after this hardening returned
 `manual_sales_go_with_payment_boundary` with parent journey 7/7.
+2026-06-16 visual trust pass: the global masthead now constrains the
+`logo_slogan.png` banner instead of letting the original 1468x206 image dominate
+the first viewport. Homepage desktop now keeps the formal school mark while
+showing more of the real Learn Portal screenshot and consultation CTA; mobile
+stays compact with no horizontal overflow. The homepage hero outcome proof now
+uses family-reported wording for Class of 2026 college results, and Pricing's
+Self-Paced comparison says `Email admissions access` instead of vague `Email
+support`. `audit:sales-launch` guards both copy boundaries.
 
 ## Active Lanes
 

@@ -198,6 +198,12 @@ Current Umi note:
   preserving the failed attempt as `RETRIED_FAIL` and blocking outreach if the
   retry also fails. Latest post-patch run returned
   `manual_sales_go_with_payment_boundary` with parent journey 7/7.
+- Visual trust pass: the global masthead is now constrained so the school logo
+  remains formal without consuming as much first-viewport space, homepage
+  outcome proof uses family-reported wording, and Pricing's Self-Paced
+  comparison says `Email admissions access` instead of vague `Email support`.
+  Local Playwright screenshots for homepage, pricing, consultation, and learn
+  desktop/mobile showed 0 horizontal overflow.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

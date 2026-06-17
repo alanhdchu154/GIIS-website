@@ -11,6 +11,7 @@ function read(relPath) {
 
 const files = {
   app: read('src/App.js'),
+  headerCss: read('src/components/Header/Header.module.css'),
   homeMain: read('src/components/pages/Homepage/HomepageMain.js'),
   homeHero: read('src/components/pages/Homepage/Homepage/HeroSection.js'),
   homeIntro: read('src/components/pages/Homepage/Homepage/Introduction.js'),
@@ -74,6 +75,22 @@ const checks = [
       /to: '\/pricing'/.test(files.homeMain) &&
       /to="\/apply"/.test(files.homeMain),
     message: 'Homepage must expose the parent decision path: trust, parent visibility, pricing, then apply.',
+  },
+  {
+    id: 'homepage-family-reported-outcomes',
+    file: 'src/components/pages/Homepage/Homepage/HeroSection.js',
+    ok: /Family-reported outcomes/.test(files.homeHero) &&
+      /Reported offers include/.test(files.homeHero) &&
+      !/Class of 2026'/.test(files.homeHero),
+    message: 'Homepage hero outcome proof must use conservative family-reported wording instead of ambiguous direct placement claims.',
+  },
+  {
+    id: 'global-masthead-compact',
+    file: 'src/components/Header/Header.module.css',
+    ok: /max-height:\s*132px/.test(files.headerCss) &&
+      /max-height:\s*48px/.test(files.headerCss) &&
+      /object-fit:\s*contain/.test(files.headerCss),
+    message: 'Global masthead must constrain the large logo asset so first-viewport trust proof and CTAs remain visible.',
   },
   {
     id: 'public-ai-human-review-boundary',
@@ -180,6 +197,13 @@ const checks = [
     file: 'src/components/pages/Pricing/PricingPage.js',
     ok: !/create-session|checkout\/create-session|window\.location|stripe/i.test(files.pricing),
     message: 'Public pricing page must not directly start Stripe checkout before path review.',
+  },
+  {
+    id: 'pricing-self-paced-human-access',
+    file: 'src/components/pages/Pricing/PricingPage.js',
+    ok: /Email admissions access/.test(files.pricing) &&
+      !/Email support/.test(files.pricing),
+    message: 'Self-Paced pricing comparison should describe concrete admissions access instead of vague low-trust support wording.',
   },
   {
     id: 'consultation-netlify-form',

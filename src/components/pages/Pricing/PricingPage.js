@@ -466,7 +466,7 @@ export default function PricingPage({ language, toggleLanguage }) {
                 {[
                   { label: isEn ? 'Starting monthly cost' : '月费起点', vals: ['$49', '$149', '$1,250+'] },
                   { label: isEn ? 'Official school record' : '正式学校记录', vals: ['✓', '✓', '✓'] },
-                  { label: isEn ? 'Advisor planning' : '顾问规划', vals: ['Email support', 'Monthly review', 'Varies'] },
+                  { label: isEn ? 'Advisor planning' : '顾问规划', vals: ['Email admissions access', 'Monthly review', 'Varies'] },
                   { label: isEn ? 'Transfer-credit review' : '转学分审核', vals: ['Basic', 'Included', 'Varies'] },
                   { label: isEn ? 'Parent progress review' : '家长进度解读', vals: ['Dashboard only', 'Monthly advisor-reviewed', 'Varies'] },
                   { label: isEn ? 'Missing-work risk flags' : '缺交风险提醒', vals: ['Dashboard only', 'Included', 'Varies'] },
