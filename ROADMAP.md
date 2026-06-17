@@ -226,6 +226,12 @@ published lessons remain visible during quality review and revision. Families
 also see that credit evidence happens inside Learn Portal through recorded
 module work, assignments, exams, and teacher/advisor review. The sales-launch
 and live-sales audits now guard this boundary.
+2026-06-16 parent dashboard preview polish: `/parent/demo` now separates the
+weekly progress heading from the bilingual student identity line, so mobile and
+desktop no longer visually concatenate `week` with the Chinese student name.
+The parent-journey audit now guards the explicit `Student preview: Yunfan Yang ·
+杨芸帆` identity text, and local production-build screenshots confirmed no
+horizontal overflow on the preview page.
 
 ## Active Lanes
 

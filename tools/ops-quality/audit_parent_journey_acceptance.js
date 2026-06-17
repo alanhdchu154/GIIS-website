@@ -66,6 +66,7 @@ const CHECKS = [
     path: '/parent/demo',
     evidence: [
       'SAMPLE PREVIEW',
+      'Student preview: Yunfan Yang · 杨芸帆',
       'Weekly Insights',
       'Assessment & Feedback',
       'Missing-work risk flag',

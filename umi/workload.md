@@ -235,6 +235,11 @@ Current Umi note:
   under quality review/revision, and credits depend on Learn Portal activity,
   assignments, exams, and teacher/advisor review. Do not imply every course or
   AP topic is already complete from the public video library.
+- Parent dashboard preview polish: `/parent/demo` now keeps the weekly-progress
+  H1 separate from the bilingual student identity line (`Student preview:
+  Yunfan Yang · 杨芸帆`) so mobile does not visually concatenate English and
+  Chinese text. Keep this as a parent-proof surface, not a generic marketing
+  page.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;
