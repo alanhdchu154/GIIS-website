@@ -70,10 +70,34 @@ export default function AdminWeeklyReportPage() {
     });
   }
 
+  const selectedDrafts = drafts.filter((draft) => selected.has(draft.studentId));
+  const quietWeekCount = drafts.filter((draft) => {
+    const wa = draft.payload?.weeklyActivity;
+    return wa && wa.modulesCompleted === 0 && wa.activeDays === 0;
+  }).length;
+  const missingNoteCount = drafts.filter((draft) => !draft.payload?.advisorNote).length;
+  const selectedQuietWeekCount = selectedDrafts.filter((draft) => {
+    const wa = draft.payload?.weeklyActivity;
+    return wa && wa.modulesCompleted === 0 && wa.activeDays === 0;
+  }).length;
+  const selectedMissingNoteCount = selectedDrafts.filter((draft) => !draft.payload?.advisorNote).length;
+
   async function sendSelected() {
     const ids = Array.from(selected);
     if (ids.length === 0) return;
-    if (!window.confirm(`Send the weekly report to ${ids.length} famil${ids.length === 1 ? 'y' : 'ies'} now?`)) return;
+    const warnings = [];
+    if (selectedQuietWeekCount > 0) {
+      warnings.push(`${selectedQuietWeekCount} selected draft${selectedQuietWeekCount === 1 ? '' : 's'} show a quiet week.`);
+    }
+    if (selectedMissingNoteCount > 0) {
+      warnings.push(`${selectedMissingNoteCount} selected draft${selectedMissingNoteCount === 1 ? '' : 's'} have no parent-safe advisor note.`);
+    }
+    const confirmText = [
+      `Send the weekly report to ${ids.length} famil${ids.length === 1 ? 'y' : 'ies'} now?`,
+      ...warnings,
+      'Only send after reviewing the family-facing draft.',
+    ].join('\n');
+    if (!window.confirm(confirmText)) return;
     setSending(true);
     setError('');
     try {
@@ -120,6 +144,39 @@ export default function AdminWeeklyReportPage() {
               {sending ? 'Sending…' : `📧 Send to ${selected.size} selected`}
             </button>
           </div>
+        </div>
+
+        <div style={{ background: '#fff', border: '1px solid #dfe6f2', borderRadius: 12, padding: '16px 18px', marginBottom: 16 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: 14, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 360px' }}>
+              <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 850, color: '#2b3d6d', textTransform: 'uppercase', letterSpacing: 0.8 }}>
+                Review checklist
+              </p>
+              <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.55, color: '#3a3f4c' }}>
+                Read the family-facing draft before sending. Confirm credits, GPA, weekly activity, quiet-week context, and parent-safe advisor note. Internal staff notes and operational risk details should stay out of this email.
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(92px, 1fr))', gap: 8, flex: '0 1 320px' }}>
+              {[
+                ['Selected', selected.size],
+                ['Quiet weeks', quietWeekCount],
+                ['No note', missingNoteCount],
+                ['Already sent', alreadySent.length],
+              ].map(([label, value]) => (
+                <div key={label} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
+                  <p style={{ margin: '0 0 1px', fontSize: 10, fontWeight: 850, color: '#8a93a6', textTransform: 'uppercase', letterSpacing: 0.5 }}>{label}</p>
+                  <p style={{ margin: 0, fontSize: 18, fontWeight: 850, color: '#1a1a2e' }}>{value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          {(selectedQuietWeekCount > 0 || selectedMissingNoteCount > 0) && (
+            <div style={{ marginTop: 12, background: '#fffaf2', border: '1px solid #f4d58b', borderRadius: 8, padding: '9px 11px', color: '#8a5a00', fontSize: 12.5, lineHeight: 1.45 }}>
+              Selected family-facing draft needs extra review:
+              {selectedQuietWeekCount > 0 && ` ${selectedQuietWeekCount} quiet week${selectedQuietWeekCount === 1 ? '' : 's'}.`}
+              {selectedMissingNoteCount > 0 && ` ${selectedMissingNoteCount} without a parent-safe advisor note.`}
+            </div>
+          )}
         </div>
 
         {error && (

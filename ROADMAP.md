@@ -211,6 +211,12 @@ in both the student Learn Portal and parent dashboard after save. The grading
 panel prompts reviewers to write one strength, one correction, and one next
 action, keeping submitted-work review useful to students and trustworthy to
 parents.
+2026-06-16 weekly parent report admin guard: `/admin/weekly-report` now shows a
+review checklist before sending family-facing drafts, including selected count,
+quiet-week count, missing parent-safe advisor note count, and already-sent
+count. The send confirmation now calls out selected quiet weeks or missing
+parent-safe notes, reinforcing that weekly reports are reviewed school
+communications, not automatic unchecked emails.
 
 ## Active Lanes
 

@@ -224,6 +224,11 @@ Current Umi note:
   feedback as family-visible and prompts reviewers to include one strength, one
   correction, and one next action before saving feedback that appears to the
   student and parent.
+- Weekly report admin guard: `/admin/weekly-report` now shows a review
+  checklist before sending family-facing drafts and highlights selected quiet
+  weeks or drafts without a parent-safe advisor note in the send confirmation.
+  Keep this boundary: weekly parent emails are reviewed school
+  communications, not unchecked automation.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

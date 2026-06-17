@@ -215,11 +215,11 @@ const ROUTES = [
   {
     name: 'admin weekly report',
     path: '/admin/weekly-report',
-    expected: ['Weekly Parent Report', 'Review each draft', 'Alex Rivera', 'Quiet week', 'Advisor note'],
+    expected: ['Weekly Parent Report', 'Review each draft', 'Review checklist', 'family-facing draft', 'parent-safe advisor note', 'Alex Rivera', 'Quiet week', 'Advisor note'],
     endpointCaps: { '/api/admin/weekly-report': 2 },
     afterLoad: async (page) => {
       await page.getByText('Alex Rivera').waitFor({ state: 'visible', timeout: 5000 });
-      await page.getByText('Quiet week').waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByText('Quiet week — review before sending', { exact: true }).waitFor({ state: 'visible', timeout: 5000 });
     },
   },
 ];
