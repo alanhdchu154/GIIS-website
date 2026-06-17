@@ -33,6 +33,15 @@ outside-git owner log:
 npm run sales:ready-today -- --operator-log /path/to/operator-log.md
 ```
 
+For an active outreach day, prefer the guarded starter. It runs the full school
+ops report first, refuses unsafe school-ops verdicts, writes the outside-git
+operator log with the school-ops and lead-capture dry-run verdicts copied in,
+then runs launch-mode:
+
+```bash
+npm run sales:start-day -- --owner Alan --checked yes --manual-stripe-authorized yes
+```
+
 Proceed only when `sales:ready-today` returns one of these verdicts:
 
 - `manual_sales_go_with_payment_boundary`
@@ -104,6 +113,8 @@ npm run lead-capture:test -- --confirm-submit --form all --report /tmp/giis-lead
 After a confirmed submit, check both Netlify form submissions and
 `admissions@genesisideas.school`. Keep the test submission marked as a test lead
 and do not count it as a parent inquiry.
+Fill the Lead-Capture Delivery Verification section in the operator log before
+removing the daily manual Netlify submissions check.
 
 ## Response SLA
 

@@ -185,6 +185,14 @@ stays compact with no horizontal overflow. The homepage hero outcome proof now
 uses family-reported wording for Class of 2026 college results, and Pricing's
 Self-Paced comparison says `Email admissions access` instead of vague `Email
 support`. `audit:sales-launch` guards both copy boundaries.
+2026-06-16 start-day ops hardening: `npm run sales:start-day` now runs the full
+`school:ops-report` first and refuses to open a sales day unless the school ops
+verdict allows manual outreach or automated payment. The generated outside-git
+operator log now copies in the school-ops verdict and lead-capture dry-run
+verdict, and the daily log template includes a Lead-Capture Delivery
+Verification section so Netlify notification/inbox confirmation cannot be
+silently hand-waved. This does not send test submissions and does not change the
+manual-only payment boundary.
 
 ## Active Lanes
 

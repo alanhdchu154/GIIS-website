@@ -27,6 +27,15 @@ Date:
 - Admissions inbox checked:
 - WeChat checked:
 
+## Lead-Capture Delivery Verification
+
+- Real Netlify test submission run:
+- Netlify consultation test submission confirmed:
+- Netlify contact test submission confirmed:
+- Admissions inbox notification received:
+- Notifications safe to rely on without manual Netlify check (yes/no):
+- Operator initials / checked time:
+
 ## Lead Summary
 
 - New leads:

@@ -204,6 +204,12 @@ Current Umi note:
   comparison says `Email admissions access` instead of vague `Email support`.
   Local Playwright screenshots for homepage, pricing, consultation, and learn
   desktop/mobile showed 0 horizontal overflow.
+- Start-day ops hardening: `sales:start-day` now runs `school:ops-report`
+  before generating the same-day operator log or launch-mode gate, and refuses
+  unsafe school-ops verdicts. Generated logs include the school-ops verdict,
+  lead-capture dry-run verdict, and a Lead-Capture Delivery Verification
+  section so operators keep manually checking Netlify submissions until real
+  notification/inbox delivery is confirmed.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

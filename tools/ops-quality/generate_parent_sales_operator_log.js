@@ -16,7 +16,14 @@ function hasArg(name) {
 }
 
 function todayIso() {
-  return new Date().toISOString().slice(0, 10);
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Chicago',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+  const value = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${value.year}-${value.month}-${value.day}`;
 }
 
 function safeSlug(value) {
@@ -42,19 +49,25 @@ function buildLog({
   manualStripeAuthorized,
   receiptLocation,
   checked,
+  schoolOpsVerdict,
+  leadCaptureDryRunVerdict,
+  leadCaptureConfirmSubmit,
   newLeads,
   tomorrowOwner,
 }) {
   const checkedValue = yesOrBlank(checked);
+  const confirmSubmitValue = leadCaptureConfirmSubmit || 'not run';
   return `# Parent Sales Daily Operator Log
 
 Date: ${date}
 
 ## Gate Results
 
+- \`npm run school:ops-report\`: ${schoolOpsVerdict}
 - \`npm run audit:sales-manual-ready\`:
 - \`npm run audit:sales-launch\`:
 - \`npm run audit:sales-payment-live\` (only needed before automated checkout):
+- \`npm run lead-capture:test\` dry-run verdict: ${leadCaptureDryRunVerdict}
 
 ## Same-Day Owners
 
@@ -72,6 +85,15 @@ Date: ${date}
 - Netlify contact submissions checked: ${checkedValue}
 - Admissions inbox checked: ${checkedValue}
 - WeChat checked: ${checkedValue}
+
+## Lead-Capture Delivery Verification
+
+- Real Netlify test submission run: ${confirmSubmitValue}
+- Netlify consultation test submission confirmed:
+- Netlify contact test submission confirmed:
+- Admissions inbox notification received:
+- Notifications safe to rely on without manual Netlify check (yes/no):
+- Operator initials / checked time:
 
 ## Lead Summary
 
@@ -120,6 +142,9 @@ Options:
   --manual-stripe-authorized yes       fill Alan authorization field
   --receipt-location TEXT              default: outside-git admissions tracker
   --checked yes                        mark same-day inbox checks as yes
+  --school-ops-verdict TEXT            copy from npm run school:ops-report
+  --lead-capture-dry-run-verdict TEXT  copy from npm run lead-capture:test
+  --lead-capture-confirm-submit TEXT   e.g. not run, submitted_verify_delivery
   --new-leads NUMBER                   default: 0
   --tomorrow-owner NAME
   --out-dir PATH                       default: system temp dir
@@ -149,6 +174,9 @@ Filled logs should stay outside git when they include owners or operational data
     manualStripeAuthorized: argValue('--manual-stripe-authorized', ''),
     receiptLocation: argValue('--receipt-location', 'outside-git admissions tracker'),
     checked: argValue('--checked', ''),
+    schoolOpsVerdict: argValue('--school-ops-verdict', ''),
+    leadCaptureDryRunVerdict: argValue('--lead-capture-dry-run-verdict', ''),
+    leadCaptureConfirmSubmit: argValue('--lead-capture-confirm-submit', ''),
     newLeads: argValue('--new-leads', '0'),
     tomorrowOwner: argValue('--tomorrow-owner', ''),
   });

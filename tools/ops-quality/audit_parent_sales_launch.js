@@ -487,6 +487,8 @@ const checks = [
       /Manual Stripe owner/.test(files.dailyOperatorLogTemplate) &&
       /Manual Stripe authorized by Alan \(yes\/no\)/.test(files.dailyOperatorLogTemplate) &&
       /Inbox Checks/.test(files.dailyOperatorLogTemplate) &&
+      /Lead-Capture Delivery Verification/.test(files.dailyOperatorLogTemplate) &&
+      /Notifications safe to rely on without manual Netlify check/.test(files.dailyOperatorLogTemplate) &&
       /Do not store parent names/.test(files.dailyOperatorLogTemplate),
     message: 'Admissions must have a non-sensitive same-day operator log template.',
   },
@@ -495,6 +497,9 @@ const checks = [
     file: 'tools/ops-quality/generate_parent_sales_operator_log.js',
     ok: /sales:operator-log/.test(files.packageJson) &&
       /Refusing to write an operator log inside the repo/.test(files.operatorLogGenerator) &&
+      /npm run school:ops-report/.test(files.operatorLogGenerator) &&
+      /npm run lead-capture:test/.test(files.operatorLogGenerator) &&
+      /Lead-Capture Delivery Verification/.test(files.operatorLogGenerator) &&
       /Do not store parent names/.test(files.operatorLogGenerator) &&
       /sales:launch-mode -- --operator-log/.test(files.operatorLogGenerator),
     message: 'Admissions must have a safe command to generate same-day operator logs outside git.',
@@ -507,6 +512,8 @@ const checks = [
       /--owner NAME/.test(files.startDayGate) &&
       /--checked yes/.test(files.startDayGate) &&
       /--manual-stripe-authorized yes/.test(files.startDayGate) &&
+      /generate_school_ops_report\.js/.test(files.startDayGate) &&
+      /School operations gate does not allow starting a sales day/.test(files.startDayGate) &&
       /audit_parent_sales_launch_mode\.js/.test(files.startDayGate),
     message: 'Admissions must have a guarded one-command sales-day starter.',
   },
