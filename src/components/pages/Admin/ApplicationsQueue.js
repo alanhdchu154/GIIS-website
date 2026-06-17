@@ -692,6 +692,19 @@ export default function ApplicationsQueue() {
               <div><strong>Linked Payments:</strong> {credentials.linkedSubscriptions ?? 0}</div>
             </div>
 
+            <div style={{ background: '#eef6ff', border: '1px solid #2b3d6d', borderRadius: 10, padding: '13px 16px', marginBottom: 16 }}>
+              <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 800, color: '#2b3d6d', letterSpacing: '0.8px', textTransform: 'uppercase' }}>⚠ Required next step</p>
+              <p style={{ margin: '0 0 10px', fontSize: 13, color: '#26324f', lineHeight: 1.55 }}>
+                Accounts exist but this student is <strong>not enrolled in any course yet</strong>. Enroll them now, otherwise the parent dashboard will look empty on first login.
+              </p>
+              <button
+                onClick={() => { const sid = credentials.studentId; setCredentials(null); navigate(`/admin/transcript/${sid}`); }}
+                disabled={!credentials.studentId}
+                style={{ padding: '9px 16px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 800, fontSize: 13, border: 'none', cursor: credentials.studentId ? 'pointer' : 'not-allowed', opacity: credentials.studentId ? 1 : 0.5 }}>
+                Enroll in courses →
+              </button>
+            </div>
+
             <div style={{ background: '#fffde7', border: '1px solid #f9a825', borderRadius: 8, padding: '10px 14px', fontSize: 12, color: '#5c4f00', marginBottom: 16 }}>
               A welcome email is sent automatically when email delivery is configured. Use the fallback copy only if the email log shows skipped or failed delivery.
             </div>
