@@ -204,11 +204,12 @@ const ROUTES = [
   {
     name: 'admin assignments',
     path: '/admin/assignments',
-    expected: ['Assignment Queue', 'Alex Rivera', 'GIIS review rubric'],
+    expected: ['Assignment Queue', 'Alex Rivera', 'GIIS review rubric', 'Family-visible feedback', 'Strength', 'Correction', 'Next action'],
     endpointCaps: { '/api/admin/assignments': 2 },
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^(Grade|View \/ Edit)$/ }).first().click();
       await page.getByText('GIIS review rubric').waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByText('Family-visible feedback').waitFor({ state: 'visible', timeout: 5000 });
     },
   },
   {

@@ -204,12 +204,30 @@ export default function AssignmentQueue() {
                           {item.assignmentProfile?.rubricFocus || 'Use the score for learning quality, not just completion.'} Feedback should name one strength, one correction, and one next action.
                         </p>
                       </div>
+                      <div style={{ background: '#f0f4ff', border: '1px solid #c5d0f0', borderRadius: 8, padding: '12px 14px', marginTop: 12 }}>
+                        <p style={{ fontSize: 12, fontWeight: 800, color: '#2b3d6d', letterSpacing: '1px', textTransform: 'uppercase', margin: '0 0 8px' }}>Family-visible feedback</p>
+                        <p style={{ margin: '0 0 8px', fontSize: 12, color: '#3d4a63', lineHeight: 1.55 }}>
+                          This note appears in the student Learn Portal and parent dashboard after you save it. Keep it specific, calm, and actionable.
+                        </p>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: 8 }}>
+                          {[
+                            ['Strength', 'Name one thing the student did well.'],
+                            ['Correction', 'Name one concept, source, or habit to fix.'],
+                            ['Next action', 'Tell the student exactly what to do next.'],
+                          ].map(([label, detail]) => (
+                            <div key={label} style={{ background: '#fff', border: '1px solid #dbe5fb', borderRadius: 7, padding: '9px 10px' }}>
+                              <p style={{ margin: '0 0 3px', fontSize: 12, fontWeight: 800, color: '#1a1d24' }}>{label}</p>
+                              <p style={{ margin: 0, fontSize: 11, color: '#5c6578', lineHeight: 1.45 }}>{detail}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                       <div style={{ display: 'grid', gridTemplateColumns: '1fr 120px', gap: 12, marginTop: 16 }}>
                         <div>
                           <p style={{ fontSize: 12, fontWeight: 700, color: '#888', letterSpacing: '1px', textTransform: 'uppercase', margin: '0 0 6px' }}>Feedback</p>
                           <textarea
                             value={feedback} onChange={e => setFeedback(e.target.value)} rows={4}
-                            placeholder="Write feedback for the student…"
+                            placeholder={'Strength: ...\nCorrection: ...\nNext action: ...'}
                             style={{ width: '100%', padding: '10px 12px', border: '1.5px solid #d4d8e0', borderRadius: 8, fontSize: 13, fontFamily: 'Inter, sans-serif', resize: 'vertical', boxSizing: 'border-box' }}
                           />
                         </div>

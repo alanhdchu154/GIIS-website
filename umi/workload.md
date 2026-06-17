@@ -215,6 +215,10 @@ Current Umi note:
   but the assignment is missing, students see `Assignment needed` and a
   `Submit work` action instead of a completed-looking row. `audit:ops-browser`
   now guards the mocked `/learn/english-i` course page on desktop and mobile.
+- Assignment review clarity pass: `/admin/assignments` now labels grading
+  feedback as family-visible and prompts reviewers to include one strength, one
+  correction, and one next action before saving feedback that appears to the
+  student and parent.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

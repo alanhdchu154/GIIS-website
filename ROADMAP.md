@@ -200,6 +200,12 @@ needed` and a `Submit work` action instead of a simple completed-looking row.
 `audit:ops-browser` now covers the mocked `/learn/english-i` course page on
 desktop and mobile so this student-next-step cue stays visible without
 horizontal overflow.
+2026-06-16 assignment review clarity pass: the admin Assignment Queue now labels
+grading feedback as family-visible, because the same written feedback appears
+in both the student Learn Portal and parent dashboard after save. The grading
+panel prompts reviewers to write one strength, one correction, and one next
+action, keeping submitted-work review useful to students and trustworthy to
+parents.
 
 ## Active Lanes
 
