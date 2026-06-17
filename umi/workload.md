@@ -229,6 +229,12 @@ Current Umi note:
   weeks or drafts without a parent-safe advisor note in the send confirmation.
   Keep this boundary: weekly parent emails are reviewed school
   communications, not unchecked automation.
+- Lesson Library trust boundary: `/lessons` should remain a parent proof
+  surface for foundation lessons, while saying clearly that the library is
+  still growing, new releases go through the gate, older visible lessons remain
+  under quality review/revision, and credits depend on Learn Portal activity,
+  assignments, exams, and teacher/advisor review. Do not imply every course or
+  AP topic is already complete from the public video library.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;

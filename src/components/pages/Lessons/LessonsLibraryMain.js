@@ -7,7 +7,7 @@ import Nav from '../../main/Nav.js';
  * LessonsLibraryMain — public "What We Teach" lesson library.
  *
  * A prospective (non-paying) parent's strongest trust signal is a real,
- * growing library of actual lessons. This page reads the same
+ * growing library of reviewed published lessons. This page reads the same
  * /data/lessons-manifest.json the Learn Portal uses (built by
  * tools/youtube-upload/build_manifest.py) and lays every uploaded lesson out
  * by course, with a click-to-play modal. Counts are computed from the manifest
@@ -80,8 +80,8 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
         <meta
           name="description"
           content={isEn
-            ? 'Watch real GIIS lessons before you enroll: the actual videos current students learn from, organized by course and growing every week.'
-            : '入学前先看真实课堂：在读学生正在学习的课程影片，按课程分类，每周持续新增。'}
+            ? 'Watch reviewed GIIS foundation lessons before you enroll: published lesson videos organized by course and connected to the Learn Portal evidence trail.'
+            : '入学前先看 GIIS 已审核发布的基础课程影片：按课程分类，并与 Learn Portal 的学习证据流程相连。'}
         />
       </Helmet>
 
@@ -98,8 +98,8 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
           </h1>
           <p style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', color: 'rgba(255,255,255,0.78)', maxWidth: 620, margin: '0 auto 26px', lineHeight: 1.65 }}>
             {isEn
-              ? 'These are the actual lessons our students learn from — not a trailer. Browse them before you decide. New lessons are added every week.'
-              : '这些就是在读学生正在学习的真实课程，不是预告片。你可以在决定前自由浏览。课程每周持续新增。'}
+              ? 'Browse reviewed published lessons before you decide. The library is foundation-first and grows as lessons pass the school release gate.'
+              : '决定前可以先看已审核发布的课程影片。课程库以基础课程为主，并在课程通过学校发布审核后持续增长。'}
           </p>
           {totalLessons > 0 && (
             <div style={{ display: 'inline-flex', gap: 28, flexWrap: 'wrap', justifyContent: 'center', padding: '16px 26px', background: 'rgba(255,255,255,0.06)', borderRadius: 14, border: '1px solid rgba(255,255,255,0.12)' }}>
@@ -114,6 +114,34 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
       {/* Body */}
       <section style={{ background: '#f4f6fb', fontFamily: 'Inter, sans-serif', padding: '52px 0 72px', minHeight: 320 }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 6%' }}>
+          <div style={{ background: '#fff', border: '1px solid #dfe6f2', borderRadius: 12, padding: '16px 18px', marginBottom: 32, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 12 }}>
+            {[
+              {
+                title: isEn ? 'Reviewed release path' : '发布审核路径',
+                body: isEn
+                  ? 'New lesson releases go through the GIIS release gate. Older published lessons remain visible while the school continues quality review and revision.'
+                  : '新发布课程会经过 GIIS 发布审核。较早上线的影片会继续保留，同时学校持续做质量复查与修订。',
+              },
+              {
+                title: isEn ? 'Foundation library, still growing' : '基础课程库，持续增长',
+                body: isEn
+                  ? 'The public library shows available foundation lessons. It is not a promise that every course, AP topic, or future module is already complete.'
+                  : '公开课程库展示已上线的基础课程影片，并不表示每门课程、AP 主题或未来模块都已经完成。',
+              },
+              {
+                title: isEn ? 'Learning proof happens inside Learn Portal' : '学习证据在 Learn Portal 完成',
+                body: isEn
+                  ? 'Watching a video is only one step; credits depend on recorded module work, assignments, exams, and teacher/advisor review.'
+                  : '看影片只是学习的一部分；学分取决于系统记录的模块学习、作业、考试与教师/顾问审核。',
+              },
+            ].map((item) => (
+              <div key={item.title} style={{ background: '#f8f9fd', border: '1px solid #e8edf8', borderRadius: 8, padding: '13px 14px' }}>
+                <p style={{ margin: '0 0 5px', fontSize: 12, fontWeight: 850, color: NAVY_2 }}>{item.title}</p>
+                <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.55, color: '#4c5568' }}>{item.body}</p>
+              </div>
+            ))}
+          </div>
+
           {error && (
             <p style={{ textAlign: 'center', color: '#7a8294' }}>
               {isEn ? 'The lesson library is temporarily unavailable. Please try again shortly.' : '课程库暂时无法载入，请稍后再试。'}
@@ -148,7 +176,7 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
           {totalLessons > 0 && (
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginTop: 16 }}>
               <Link to="/apply" style={goldCta}>
-                {isEn ? 'Apply to enroll →' : '立即申请入学 →'}
+                {isEn ? 'Request enrollment review →' : '申请入学路径审核 →'}
               </Link>
               <Link to="/pricing" style={outlineCta}>
                 {isEn ? 'See plans & pricing' : '查看方案与价格'}
@@ -209,7 +237,9 @@ function Stat({ n, label, small }) {
 
 function LessonCard({ lesson, isEn, onPlay }) {
   const [hover, setHover] = useState(false);
+  const [thumbFailed, setThumbFailed] = useState(false);
   const img = thumb(lesson.youtube_id);
+  const showImg = img && !thumbFailed;
   return (
     <button
       type="button"
@@ -231,8 +261,20 @@ function LessonCard({ lesson, isEn, onPlay }) {
       }}
     >
       <div style={{ position: 'relative', width: '100%', aspectRatio: '16 / 9', background: '#000' }}>
-        {img && (
-          <img src={img} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+        {showImg ? (
+          <img
+            src={img}
+            alt=""
+            loading="lazy"
+            onError={() => setThumbFailed(true)}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        ) : (
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #1a1a2e 0%, #2b3d6d 58%, #6B1F2A 100%)', display: 'flex', alignItems: 'flex-end', padding: 14 }}>
+            <span style={{ color: 'rgba(255,255,255,0.86)', fontSize: 12, fontWeight: 800, lineHeight: 1.35 }}>
+              {isEn ? `Module ${lesson.module_number}` : `第 ${lesson.module_number} 模块`} · GIIS
+            </span>
+          </div>
         )}
         <span style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: hover ? 'rgba(0,0,0,0.22)' : 'rgba(0,0,0,0.10)', transition: 'background 0.15s' }}>
           <span style={{ width: 46, height: 46, borderRadius: '50%', background: 'rgba(255,255,255,0.92)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6B1F2A', fontSize: 18, paddingLeft: 3 }}>▶</span>

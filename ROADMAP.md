@@ -217,6 +217,15 @@ quiet-week count, missing parent-safe advisor note count, and already-sent
 count. The send confirmation now calls out selected quiet weeks or missing
 parent-safe notes, reinforcing that weekly reports are reviewed school
 communications, not automatic unchecked emails.
+2026-06-16 lesson library trust boundary: `/lessons` now frames the public
+video library as a reviewed release path for foundation lessons that is still
+growing, not a promise that every course, AP topic, or future module is
+complete. Because the current release gate still tracks older visible lessons
+that need revision, the page says new releases go through the gate while older
+published lessons remain visible during quality review and revision. Families
+also see that credit evidence happens inside Learn Portal through recorded
+module work, assignments, exams, and teacher/advisor review. The sales-launch
+and live-sales audits now guard this boundary.
 
 ## Active Lanes
 

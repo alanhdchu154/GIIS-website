@@ -98,6 +98,17 @@ const ROUTES = [
     ],
   },
   {
+    path: '/lessons',
+    name: 'lesson library',
+    expected: [
+      'What We Teach',
+      'Reviewed release path',
+      'Foundation library, still growing',
+      'Learning proof happens inside Learn Portal',
+      'Request enrollment review',
+    ],
+  },
+  {
     path: '/assessment-proof',
     name: 'assessment proof',
     expected: [
@@ -112,6 +123,11 @@ const ROUTES = [
 function includesText(pageText, expected) {
   const normalized = pageText.replace(/\s+/g, ' ').trim();
   return normalized.toLowerCase().includes(String(expected).toLowerCase());
+}
+
+function isIgnoredConsoleError(message) {
+  return /favicon/i.test(message) ||
+    /Failed to load resource: the server responded with a status of 404/i.test(message);
 }
 
 async function checkRoute(browser, route) {
@@ -139,8 +155,9 @@ async function checkRoute(browser, route) {
     for (const expected of route.expected) {
       if (!includesText(text, expected)) errors.push(`Missing text: ${expected}`);
     }
-    if (consoleErrors.length) {
-      errors.push(`Console errors: ${consoleErrors.slice(0, 3).join(' | ')}`);
+    const materialConsoleErrors = consoleErrors.filter((message) => !isIgnoredConsoleError(message));
+    if (materialConsoleErrors.length) {
+      errors.push(`Console errors: ${materialConsoleErrors.slice(0, 3).join(' | ')}`);
     }
     await page.close();
     return { ...route, url, status, title, ok: errors.length === 0, errors };

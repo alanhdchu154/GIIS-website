@@ -28,6 +28,7 @@ const files = {
   graduates: read('src/components/pages/Graduates/GraduateStoriesPage.js'),
   support: read('src/components/pages/Support/SupportMain.js'),
   parentDemo: read('src/components/pages/Parent/ParentDashboardDemo.js'),
+  lessonsLibrary: read('src/components/pages/Lessons/LessonsLibraryMain.js'),
   applicationsQueue: read('src/components/pages/Admin/ApplicationsQueue.js'),
   applicationsRoute: read('server/src/routes/applications.js'),
   publicIndex: read('public/index.html'),
@@ -331,6 +332,17 @@ const checks = [
       /to="\/admission"/.test(files.parentDemo) &&
       !/\b(May|MAY|June|JUN)\b|days ago|Last sent|5 月|天前/.test(files.parentDemo),
     message: 'Parent demo must connect transparency proof to admission/pricing without stale sample dates.',
+  },
+  {
+    id: 'lesson-library-quality-boundary',
+    file: 'src/components/pages/Lessons/LessonsLibraryMain.js',
+    ok: /Reviewed release path/.test(files.lessonsLibrary) &&
+      /Foundation library, still growing/.test(files.lessonsLibrary) &&
+      /Learning proof happens inside Learn Portal/.test(files.lessonsLibrary) &&
+      /Older published lessons remain visible while the school continues quality review and revision/.test(files.lessonsLibrary) &&
+      /not a promise that every course, AP topic, or future module is already complete/.test(files.lessonsLibrary) &&
+      /credits depend on recorded module work, assignments, exams, and teacher\/advisor review/.test(files.lessonsLibrary),
+    message: 'Lesson Library must show real lesson proof without hiding current review/revision posture, implying every course/AP topic is complete, or saying video watching alone earns credit.',
   },
   {
     id: 'support-tier-boundary',
