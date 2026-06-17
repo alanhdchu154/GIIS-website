@@ -1,0 +1,29 @@
+.giis-progress-layout,
+.giis-progress-student-row,
+.giis-progress-side-panel {
+  min-width: 0;
+}
+
+@media (max-width: 820px) {
+  .giis-progress-layout.has-selection {
+    grid-template-columns: 1fr !important;
+  }
+
+  .giis-progress-student-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .giis-progress-side-panel {
+    position: static !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .giis-progress-side-panel > div,
+  .giis-progress-side-panel label,
+  .giis-progress-side-panel textarea,
+  .giis-progress-side-panel input,
+  .giis-progress-side-panel select {
+    max-width: 100%;
+  }
+}

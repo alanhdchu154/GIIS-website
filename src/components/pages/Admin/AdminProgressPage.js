@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { getAdminSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 import { AdminHeader, AdminPage } from './AdminChrome';
+import './admin-progress.css';
 
 const API = getApiBase();
 
@@ -368,13 +369,17 @@ export default function AdminProgressPage() {
       {!students ? (
         <p style={{ color: '#888', padding: '40px 0', textAlign: 'center' }}>Loading...</p>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: selected ? 'minmax(0, 1.25fr) minmax(360px, 0.75fr)' : '1fr', gap: 16, alignItems: 'start' }}>
+        <div
+          className={`giis-progress-layout ${selected ? 'has-selection' : ''}`}
+          style={{ display: 'grid', gridTemplateColumns: selected ? 'minmax(0, 1.25fr) minmax(360px, 0.75fr)' : '1fr', gap: 16, alignItems: 'start' }}
+        >
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {filteredStudents.map((student) => {
               const risk = riskStyle(student.careDisplay?.riskLevel);
               const active = selectedId === student.id;
               return (
                 <button
+                  className="giis-progress-student-row"
                   key={student.id}
                   onClick={() => setSelectedId(student.id)}
                   style={{
@@ -427,7 +432,7 @@ export default function AdminProgressPage() {
           </div>
 
           {selected && (
-            <aside style={{ position: 'sticky', top: 16, border: '1px solid #d9e2ef', borderRadius: 10, background: '#fff', padding: 16 }}>
+            <aside className="giis-progress-side-panel" style={{ position: 'sticky', top: 16, border: '1px solid #d9e2ef', borderRadius: 10, background: '#fff', padding: 16 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, marginBottom: 14 }}>
                 <div>
                   <h2 style={{ margin: 0, fontSize: 18, color: '#0f172a' }}>{selected.name}</h2>

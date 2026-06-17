@@ -176,6 +176,25 @@ const ROUTES = [
     endpointCaps: { '/api/students/ops-summary': 2 },
   },
   {
+    name: 'admin progress care',
+    path: '/admin/progress',
+    expected: [
+      'Student Coordination',
+      'Weekly ritual',
+      'Show students missing a note',
+      'Alex Rivera',
+      'Parent-safe summary',
+      'Recent advisor memory',
+      'Alex should restart English I Module 2',
+    ],
+    endpointCaps: { '/api/students/progress': 2, '/api/students/student-ops-1/care-logs': 2 },
+    afterLoad: async (page) => {
+      await page.getByText('Alex Rivera').waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByText('Alex Rivera').click();
+      await page.getByText('Recent advisor memory').waitFor({ state: 'visible', timeout: 5000 });
+    },
+  },
+  {
     name: 'admin applications',
     path: '/admin/applications',
     expected: [
@@ -336,6 +355,47 @@ function opsSummaryPayload() {
   };
 }
 
+function progressPayload() {
+  return {
+    students: [{
+      id: 'student-ops-1',
+      name: 'Alex Rivera',
+      studentCode: 'GIIS-OPS-001',
+      currentGrade: 10,
+      daysInactive: 8,
+      lastLoginAt: null,
+      careState: {
+        advisorOwner: 'GIIS Advisor',
+        status: 'advisor_followup',
+        riskLevel: 'watch',
+        careTier: 'guided',
+        lastReviewedAt: null,
+        nextCheckInDueAt: '2026-06-10T15:00:00.000Z',
+        currentGoal: 'Submit English I Module 2 response.',
+      },
+      careDisplay: { status: 'advisor_followup', riskLevel: 'watch' },
+      computedCare: { flags: ['No advisor review recorded.', 'No parent-safe note this week.'] },
+      recentCareLogs: [],
+    }],
+  };
+}
+
+function careLogsPayload() {
+  return {
+    logs: [{
+      id: 'care-log-1',
+      type: 'weekly_checkin',
+      channel: 'portal',
+      visibility: 'parent_safe',
+      title: 'Weekly check-in',
+      bodyInternal: 'Student needs Module 2 follow-up.',
+      parentSummary: 'Alex should restart English I Module 2 and submit the reading response by Friday.',
+      createdAt: '2026-06-10T15:00:00.000Z',
+      followUpAt: '2026-06-18T15:00:00.000Z',
+    }],
+  };
+}
+
 function applicationsPayload() {
   return [{
     id: 'app-1',
@@ -455,6 +515,8 @@ async function installMocks(page, endpointCounts) {
 
     if (endpoint === '/api/parent/me') return route.fulfill(json(parentPayload()));
     if (endpoint === '/api/students/ops-summary') return route.fulfill(json(opsSummaryPayload()));
+    if (endpoint === '/api/students/progress') return route.fulfill(json(progressPayload()));
+    if (endpoint === '/api/students/student-ops-1/care-logs') return route.fulfill(json(careLogsPayload()));
     if (endpoint === '/api/applications/app-1/manual-payment') {
       return route.fulfill(json({
         ok: true,

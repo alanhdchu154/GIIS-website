@@ -232,6 +232,13 @@ desktop no longer visually concatenate `week` with the Chinese student name.
 The parent-journey audit now guards the explicit `Student preview: Yunfan Yang ·
 杨芸帆` identity text, and local production-build screenshots confirmed no
 horizontal overflow on the preview page.
+2026-06-16 admin progress mobile ops pass: `/admin/progress` now has a mobile
+layout guard for the Progress & Care workflow. Selecting a student on phone
+width no longer forces a 360px side panel next to the student list; the student
+row and care panel stack into a single-column workflow for writing parent-safe
+notes and reviewing advisor follow-up. `audit:ops-browser` now covers
+`/admin/progress` on desktop and mobile, including selecting a student, loading
+recent advisor memory, and enforcing no horizontal overflow.
 
 ## Active Lanes
 

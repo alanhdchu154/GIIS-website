@@ -240,6 +240,12 @@ Current Umi note:
   Yunfan Yang · 杨芸帆`) so mobile does not visually concatenate English and
   Chinese text. Keep this as a parent-proof surface, not a generic marketing
   page.
+- Admin Progress & Care mobile guard: `/admin/progress` now stacks the selected
+  student care panel below the list on phone-width screens instead of forcing a
+  side panel that causes horizontal overflow. `audit:ops-browser` covers this
+  route on desktop/mobile, including selecting a student and loading recent
+  advisor memory. Keep this page focused on the weekly ritual: review progress,
+  write one parent-safe note, then send the weekly report.
 - cc review agreed the remaining checkout blockers require external Stripe /
   Lightsail production action and should stay gated. The GIIS-branded manual
   payment receipt and the first bilingual conversion guard are now handled;
