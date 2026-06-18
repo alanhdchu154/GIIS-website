@@ -157,9 +157,13 @@ current review script SHA and list the section IDs that satisfy each facet:
 
 When `source_packet.json` contains `source_alignment`, at least one required
 source label must appear as on-slide text in `build_slides.py`, preferably on a
-concept, application, recap, or path slide. Use source names such as
-`OpenStax`, `Khan Academy`, `CDC`, or the source label from the packet. Do not
-display or narrate raw URLs.
+concept, application, recap, or path slide. Use textbook or official
+institutional source names such as `OpenStax`, `CDC`, `NIH`, `NIMH`, `APA`, or
+the safe source label from the packet. Do not display or narrate raw URLs. Do
+not direct students to external practice platforms or third-party videos from
+the narration or path slide; use textbook review questions and the Learn Portal
+assignment as the next action unless Alan/Umi explicitly approves another
+resource.
 
 The production worker may write `_review_expert_lens.json`, but the independent
 second-pass wrapper writes `_review_independent_pass.json` and

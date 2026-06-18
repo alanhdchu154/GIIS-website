@@ -28,7 +28,7 @@ HARD_PATTERNS: list[tuple[str, re.Pattern[str], str]] = [
     ("outcome_guarantee", re.compile(r"\b(guarantee[sd]?|ensures?|will get|proven to)\b", re.I), "possible outcome guarantee"),
     ("real_student_name", re.compile(r"\b(Yunfan|Baoyi|Ruwen|Tao|Hanxi|Xiao)\b", re.I), "real student/person name in lesson text"),
     ("raw_url", re.compile(r"https?://|www\.|[a-z0-9-]+\.(?:com|org|net)/", re.I), "raw URL visible or spoken"),
-    ("payment_claim", re.compile(r"\$[0-9]|Stripe|checkout|invoice|refund|tuition", re.I), "payment/pricing wording inside lesson"),
+    ("payment_claim", re.compile(r"\$[0-9]|\b(?:Stripe|checkout|invoice|refund|tuition)\b", re.I), "payment/pricing wording inside lesson"),
     ("credential_claim", re.compile(r"\b(Ph\.D\.|doctor-authored|teacher-certified|expert-authored)\b", re.I), "unsupported credential/authority wording"),
 ]
 

@@ -712,6 +712,23 @@ def source_label_for_ref(ref: dict[str, Any]) -> str:
     return known.get(host, host or "Assigned source")
 
 
+def source_ref_allowed_for_video(ref: dict[str, Any]) -> bool:
+    """Return whether a resource should be named inside the produced video.
+
+    Course JSON may include helpful external practice/video links for a student
+    portal, but foundation lesson videos should not send students to external
+    practice platforms or third-party videos. Keep video-visible source labels
+    to textbooks and official institutional/government references.
+    """
+    host = str(ref.get("host") or "").removeprefix("www.").lower()
+    key = str(ref.get("key") or "")
+    if key == "readingUrl":
+        return True
+    if host in {"openstax.org", "cdc.gov", "nih.gov", "nimh.nih.gov", "nida.nih.gov", "apa.org", "samhsa.gov"}:
+        return True
+    return False
+
+
 def source_alignment_from_audit(audit: dict[str, Any]) -> dict[str, Any]:
     refs = audit.get("refs") or []
     visible_sources: list[dict[str, Any]] = []
@@ -719,6 +736,8 @@ def source_alignment_from_audit(audit: dict[str, Any]) -> dict[str, Any]:
     for key in ("readingUrl", "practiceUrl", "videoUrl"):
         for ref in refs:
             if ref.get("key") != key:
+                continue
+            if not source_ref_allowed_for_video(ref):
                 continue
             label = source_label_for_ref(ref)
             dedupe_key = f"{key}:{label.lower()}"
@@ -738,7 +757,7 @@ def source_alignment_from_audit(audit: dict[str, Any]) -> dict[str, Any]:
         "all_sources": visible_sources,
         "requirements": [
             "At least one required source label must be visible on-slide, not only in narration.",
-            "The path/next-action slide should name the assigned reading or practice source.",
+            "The path/next-action slide should name the assigned textbook/official source and the Learn Portal assignment; do not direct students to external practice platforms or external videos.",
             "Do not display raw URLs in the video.",
         ],
     }
@@ -837,6 +856,7 @@ def render_teaching_brief(packet: dict[str, Any]) -> str:
         ] or ["- No required visible source labels were available; explain source limitations in the review artifact."]),
         "",
         "At least one required source label must appear on-slide in the concept, application, recap, or path section. Do not display or narrate raw URLs.",
+        "Do not send students to external practice platforms or third-party videos from the narration or path slide; use textbook review questions and the Learn Portal assignment as the next action.",
         "",
         "## Required Lesson Spine",
         "",
@@ -983,8 +1003,10 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
     - Put at least one required source label visibly on a concept, application,
       recap, or path slide.
     - Use source names, not raw URLs.
-    - The path slide should tell the student which assigned reading/practice
-      source to use next.
+    - The path slide should tell the student which assigned textbook/official
+      source and Learn Portal assignment to use next.
+    - Do not direct students to external practice platforms or third-party
+      videos from the narration or path slide.
     - Do not imply the source endorses GIIS or guarantees outcomes.
 
     Use `tools/lesson-video/AGENT_RECIPE.md`, `QUALITY_FLOW.md`, and
