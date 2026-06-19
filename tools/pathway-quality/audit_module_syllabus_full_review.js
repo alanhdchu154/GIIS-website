@@ -11,7 +11,7 @@ const DEFAULT_JSON = path.join(ROOT, '_audit', 'module-syllabus-full-review.json
 const STRICT = process.argv.includes('--strict');
 
 const ACTION_VERBS = /\b(analyze|apply|argue|calculate|check|classify|compare|complete|connect|construct|create|define|demonstrate|describe|design|determine|differentiate|document|draft|evaluate|explain|identify|interpret|justify|model|predict|research|revise|show|solve|summarize|support|trace|use|write)\b/gi;
-const BLOCKED_RE = /(commonlit\.org|noredink\.com|hbr\.org|may require login|paid\/institutional|Removed after)/i;
+const BLOCKED_RE = /(commonlit\.org|khanacademy\.org|noredink\.com|hbr\.org|may require login|paid\/institutional|Removed after)/i;
 const PLACEHOLDER_RE = /\b(TBD|placeholder|coming soon|example\.com|lorem ipsum)\b/i;
 const RESOURCE_NOTE_GENERIC_RE = /^(reading|video|practice|lesson|article|exercise|worksheet|resource|tutorial)$/i;
 const ASSIGNMENT_STRUCTURE_RE = /\bSubmit:.*\bInclude:.*\bEvaluation:/is;

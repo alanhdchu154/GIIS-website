@@ -1,0 +1,116 @@
+{
+  "generatedAt": "2026-06-18T14:47:04.820Z",
+  "summary": {
+    "dryRun": false,
+    "files": 93,
+    "actions": 10,
+    "byHost": [
+      {
+        "host": "text-residue",
+        "count": 10
+      }
+    ]
+  },
+  "actions": [
+    {
+      "file": "server/prisma/courses/electives/college-research-writing.json",
+      "course": "college-research-writing",
+      "moduleOrder": 2,
+      "moduleTitle": "Library & Database Research",
+      "field": "assignment",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Using an academic database (JSTOR, Google Scholar, or ProQuest), conduct a search related to your research question from Module 1. Find five peer-reviewed articles. Record the search terms used and write a 200-word reflection on what made your search effective. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: drafts, annotations, quotations, analysis, or revised writing from the Library & Database Research module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iii.json",
+      "course": "english-iii",
+      "moduleOrder": 13,
+      "moduleTitle": "Contemporary American Voices",
+      "field": "assignment",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Read 'Everyday Use' by Alice Walker, 'The Border: A Double Sonnet' by Alberto Rios, and one additional 21st-century text of your choice from CommonLit featuring a diverse American voice. Write a 450-word essay: (1) Identify a common theme across all three texts related to identity, heritage, or belonging. (2) Analyze how each author uses a specific literary technique — dialogue, imagery, form, or irony — to explore that theme. (3) Discuss whose stories have historically been centered in American literature and what is gained by expanding that canon. Include at least two quotes from each of two works. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: drafts, annotations, quotations, analysis, or revised writing from the Contemporary American Voices module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective."
+    },
+    {
+      "file": "server/prisma/courses/english/english-iv-advanced-composition.json",
+      "course": "english-iv-advanced-composition",
+      "moduleOrder": 6,
+      "moduleTitle": "Academic Research: Advanced",
+      "field": "assignment",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Select a topic of your choice for your Module 13 research paper. (1) Write a focused research question and explain how it differs from a topic. (2) Locate three peer-reviewed articles using Google Scholar or JSTOR — screenshot the database search and record your search terms. (3) For each article, complete a source evaluation form: title, author credentials, publication, date, relevance, bias assessment using lateral reading. (4) Write a preliminary thesis statement based on what you have found so far. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: drafts, annotations, quotations, analysis, or revised writing from the Academic Research: Advanced module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective."
+    },
+    {
+      "file": "server/prisma/courses/math/algebra-i.json",
+      "course": "algebra-i",
+      "moduleOrder": 1,
+      "moduleTitle": "Variables & Algebraic Expressions",
+      "field": "video2Note",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Khan Academy — Evaluating Algebraic Expressions with Exponents"
+    },
+    {
+      "file": "server/prisma/courses/math/algebra-i.json",
+      "course": "algebra-i",
+      "moduleOrder": 8,
+      "moduleTitle": "Graphing Linear Functions",
+      "field": "video2Note",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Khan Academy — Ordered Pair Solutions to Linear Equations"
+    },
+    {
+      "file": "server/prisma/courses/math/algebra-i.json",
+      "course": "algebra-i",
+      "moduleOrder": 9,
+      "moduleTitle": "Slope & Rate of Change",
+      "field": "video2Note",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Khan Academy — Finding Slope from a Graph"
+    },
+    {
+      "file": "server/prisma/courses/math/geometry.json",
+      "course": "geometry",
+      "moduleOrder": 3,
+      "moduleTitle": "Parallel Lines & Transversals",
+      "field": "video2Note",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Khan Academy — Angles Formed by Parallel Lines and Transversals"
+    },
+    {
+      "file": "server/prisma/courses/math/geometry.json",
+      "course": "geometry",
+      "moduleOrder": 5,
+      "moduleTitle": "Congruent Triangles",
+      "field": "video2Note",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Khan Academy — Congruent Triangles and SSS"
+    },
+    {
+      "file": "server/prisma/courses/math/geometry.json",
+      "course": "geometry",
+      "moduleOrder": 12,
+      "moduleTitle": "Coordinate Geometry",
+      "field": "video2Note",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Khan Academy — Distance Formula in Analytic Geometry"
+    },
+    {
+      "file": "server/prisma/courses/science/ap-biology.json",
+      "course": "ap-biology",
+      "moduleOrder": 3,
+      "moduleTitle": "Membrane Transport",
+      "field": "video2Note",
+      "host": "text-residue",
+      "oldUrl": "",
+      "oldNote": "Khan Academy: Osmosis — detailed explanation of osmosis with hypertonic, hypotonic, and isotonic solution examples."
+    }
+  ]
+}

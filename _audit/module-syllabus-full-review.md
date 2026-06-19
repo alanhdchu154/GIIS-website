@@ -1,6 +1,6 @@
 # Module Syllabus Full Review
 
-Generated: 2026-06-14T20:33:16.426Z
+Generated: 2026-06-19T03:20:52.090Z
 
 Summary: 93 pass / 0 warn / 0 fail (93 courses)
 Coverage: 993 modules, 993 assignments, 3242 resource links, 993 expert-lens sections, 3279 estimated hours.

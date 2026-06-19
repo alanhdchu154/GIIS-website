@@ -5,7 +5,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const COURSE_DIR = path.join(ROOT, 'server', 'prisma', 'courses');
-const OUT_PATH = path.join(ROOT, 'umi', 'reviews', '2026-05-30-blocking-external-resource-removal.json');
+const OUT_PATH = path.join(ROOT, 'umi', 'reviews', 'latest-blocking-external-resource-removal.json');
 const DRY_RUN = process.argv.includes('--dry-run');
 
 const BLOCKING_HOSTS = new Set([
@@ -18,6 +18,7 @@ const BLOCKING_HOSTS = new Set([
   'grammarly.com',
   'hbr.org',
   'jstor.org',
+  'khanacademy.org',
   'medium.com',
   'noredink.com',
   'practiceit.cs.washington.edu',
@@ -30,6 +31,8 @@ const URL_FIELDS = [
   'video2Url',
   'practiceUrl',
 ];
+
+const BLOCKING_TEXT_RE = /\b(Khan Academy|khanacademy\.org|CommonLit|NoRedInk|JSTOR|HBR|Criterion|AP Classroom)\b/i;
 
 function walkJson(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -49,7 +52,26 @@ function hostOf(url) {
 }
 
 function noteFor(host) {
-  return `Removed after 2026-05-30 access audit: ${host} may require login, permission, or paid/institutional access. Use the remaining resources until a vetted open replacement is added.`;
+  if (host === 'khanacademy.org') {
+    return 'GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.';
+  }
+  return 'GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; the removed external resource may require login, permission, or paid/institutional access.';
+}
+
+function cleanTextResidue(value, field) {
+  const text = String(value || '');
+  if (!BLOCKING_TEXT_RE.test(text)) return text;
+  if (/assignment/i.test(field)) {
+    return text
+      .replace(/,\s*and one additional 21st-century text of your choice from CommonLit featuring a diverse American voice/i, ', and one additional teacher-provided or public-domain contemporary text featuring a diverse American voice')
+      .replace(/\bJSTOR,\s*/gi, '')
+      .replace(/\s*or ProQuest\b/gi, '')
+      .replace(/\busing Google Scholar or JSTOR\b/gi, 'using Google Scholar or an open scholarly source')
+      .replace(/\bJSTOR\b/gi, 'an open scholarly source')
+      .replace(/\bCommonLit\b/gi, 'a teacher-provided reading')
+      .replace(/\bKhan Academy\b/gi, 'the GIIS Learn Portal');
+  }
+  return 'GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.';
 }
 
 function main() {
@@ -76,8 +98,24 @@ function main() {
           oldUrl: url,
           oldNote: mod[noteField] || '',
         });
-        mod[field] = '';
+        mod[field] = 'https://genesisideas.school/learn';
         if (Object.prototype.hasOwnProperty.call(mod, noteField)) mod[noteField] = noteFor(host);
+      }
+      for (const [field, value] of Object.entries(mod)) {
+        if (typeof value !== 'string' || !BLOCKING_TEXT_RE.test(value)) continue;
+        const next = cleanTextResidue(value, field);
+        if (next === value) continue;
+        actions.push({
+          file: path.relative(ROOT, file),
+          course: course.slug,
+          moduleOrder: mod.order,
+          moduleTitle: mod.title,
+          field,
+          host: 'text-residue',
+          oldUrl: '',
+          oldNote: value,
+        });
+        mod[field] = next;
       }
     }
     if (!DRY_RUN) fs.writeFileSync(file, `${JSON.stringify(course, null, 2)}\n`);

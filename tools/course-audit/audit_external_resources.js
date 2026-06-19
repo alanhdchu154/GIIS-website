@@ -24,7 +24,7 @@ const RISK_HOSTS = {
   'practiceit.cs.washington.edu': 'account/deprecated access risk',
   'academy.hubspot.com': 'free but login/certification flow',
   'learndigital.withgoogle.com': 'free but login/certificate flow',
-  'khanacademy.org': 'free nonprofit, not paid, but practice/progress may require a free account',
+  'khanacademy.org': 'external practice/progress platform; do not make it a required GIIS path',
 };
 
 function walkJson(dir, out = []) {
@@ -291,7 +291,8 @@ async function main() {
     })), ['course', 'module', 'id', 'status', 'url', 'title'])
     : 'No manifest YouTube failures.\n';
   md += `\n\n## Notes\n\n`;
-  md += `- Khan Academy links are classified as free nonprofit external resources, not paid courses. Some Khan practice/progress features may ask students to sign in with a free account.\n`;
+  md += `- Khan Academy is classified as a disallowed required GIIS path: free nonprofit content may be useful as optional background, but GIIS course documents and videos should not route required learning or practice through Khan.\n`;
+  md += `- TED/TED-Ed can be acceptable as free enrichment when the specific resource is relevant and not used as a required external practice platform.\n`;
   md += `- YouTube failures are checked in two passes: oEmbed first, then watch-page playability status for oEmbed failures.\n`;
   md += `- This audit checks availability and access risk; it does not watch every minute for content quality.\n`;
 
