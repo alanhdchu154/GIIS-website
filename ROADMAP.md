@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-16
+Last updated: 2026-06-18
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -12,6 +12,35 @@ Keep the school trustworthy, operational, and parent-visible while the
 foundation-video pipeline stabilizes. The next phase is proof over volume:
 parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
+
+2026-06-18 evening lesson-video strategy update: G9 foundation videos are
+complete enough for the current parent-trust proof path, and Alan approved
+resuming the unified Codex automation as a 40-capacity trial. Current evidence:
+the no-caption/no-thumbnail/no-playlist/no-sync run reached 39 successful
+non-AP foundation uploads on the 2026-06-18 America/Chicago local date without
+hitting a true video upload/channel limit. The active heartbeat now runs
+producer slots at 03:00 / 08:00 / 13:00 / 18:00 CT, each capped at 10
+modules/uploads, and a 20:00 CT dashboard/count/top-up lane that tops up only to
+40. Same-day capacity counts must use local `teaching-videos/**/script.json`
+YouTube fields converted to America/Chicago local date; the public lesson
+manifest can lag real uploads and is sync/reconciliation evidence, not the
+capacity source of truth. Standard YouTube captions remain a
+quality/accessibility backlog, not a daily production blocker. Playlist/channel
+organization is the first reconciliation priority after video capacity, but it
+should run as a separate bounded lane. Do not force weak lessons through the
+quality gate: upload only through `yt_queue.py upload --gate-ready`.
+
+2026-06-18 syllabus/resource/teacher-voice policy update: the video pipeline
+now treats required course resources as part of the production gate. Course
+series still run a syllabus/module design review before production, and all 93
+course JSON files now pass the strict module-syllabus audit. Required
+student-facing course paths should not route learning or practice through Khan
+Academy or paid/login-gated external platforms; those links were normalized to
+the GIIS Learn Portal path. TED/TED-Ed-style free enrichment can remain when
+relevant and not used as required external practice. Voice routing is
+course/subject-specific (math, science, English, social studies, psychology,
+computer/technology, business, health/PE) so videos do not all sound like the
+same teacher.
 
 Current 2026-06-12 risk: the public parent proof path is live on Netlify and
 passes production smoke, and the production API/backend is reachable again.
@@ -244,20 +273,21 @@ recent advisor memory, and enforcing no horizontal overflow.
 
 ### 1. Foundation Video Daily Pipeline
 
-Status: active, Codex-managed, foundation-only.
+Status: active 40-capacity trial, Codex-managed, foundation-only.
 
 - Scheduler:
   `~/.codex/automations/giis-foundation-video-split-batch/automation.toml`
 - App-facing automation: `GIIS_影片_pipeline`, posting in
-  `GIIS_影片_producer`.
-- Time: one hourly Codex heartbeat with internal gates:
-  - 03:00 / 08:00 CT: producer runs, up to 10 modules/uploads each.
-  - 12:00 / 17:00 CT: check for missed daily target, run bounded catch-up if
-    needed, and update the dashboard in the same chat.
+  `GIIS_影片_producer`, active as a 40-capacity trial.
+- Time is one hourly Codex heartbeat with internal gates:
+  - 03:00 / 08:00 / 13:00 / 18:00 CT: producer runs, up to 10
+    modules/uploads each.
+  - 20:00 CT: check same-day artifact-backed uploads, run one bounded top-up
+    to 40 if needed, and update the dashboard in the same chat.
 - Repo runner: `bash tools/lesson-video/foundation_daily.sh`
 - Scope: non-AP foundation modules only.
-- Target upload volume: about 20/day when gates stay clean; do not chase volume
-  by forcing weak lessons through the quality gate.
+- Current experimental target is 40/day when gates stay clean. Do not chase
+  volume by forcing weak lessons through the quality gate.
 - Upload rule: only `yt_queue.py upload --gate-ready`; never
   `upload_lesson.py --force-without-approval`.
 - Required gate: clean pass, score 100, MP4, transcript, contact sheet,
@@ -271,16 +301,21 @@ Status: active, Codex-managed, foundation-only.
   now reports course/grade production-plan coverage from
   `server/prisma/courses/**/*.json`, uses America/Chicago upload dates for
   daily grouping, labels AP modules as deferred in the plan note, and uses a
-  configurable target pace (`FOUNDATION_DASHBOARD_TARGET_PER_DAY`, default now
-  aligned to the roughly 20/day foundation target).
+  configurable target pace (`FOUNDATION_DASHBOARD_TARGET_PER_DAY`; the active
+  automation target is the 40/day capacity trial).
 
 Next check:
 
-- After each scheduled run, review selected modules, cc progress, gate result,
-  upload result, website manifest sync, and any `cc_blocked` report.
-- At 12:00 / 17:00 CT, review the generated upload dashboard, queue status,
-  release gate totals, and manifest alignment from the same
-  `GIIS_影片_producer` thread.
+- Verify the active automation fires only at the approved 03/08/13/18/20 CT
+  gates and skips all other hours without reading repo state.
+- Keep `npm run lesson:pipeline-lanes` as the first read-only decision report,
+  but do not treat its old 19:10 stop-at-G9 recommendation as current policy;
+  Alan later approved the 40-capacity trial.
+- During each producer/top-up slot, review selected modules, cc progress, gate
+  result, upload result, same-day artifact-backed count, website manifest sync,
+  and any `cc_blocked` report.
+- Keep old `needs_revision` quality debt separate from current producer
+  failures unless it blocks a current upload or parent-facing trust surface.
 - Before any push/deploy, finish browser/predeploy smoke, review the backend
   hardening and Prisma/webhook changes, and separate safe frontend/pipeline
   changes from Lightsail/db work if needed.
@@ -308,8 +343,9 @@ Status: active watch.
 - Keep required student resources free/usable.
 - Broken YouTube links and hard-blocking external resources should stay out of
   required module flow.
-- Khan Academy may remain as a free nonprofit external resource, but it should
-  not be the only required learning path when a student could get blocked.
+- 2026-06-18 policy: required course paths should not route students through
+  Khan Academy or paid/login-gated external practice platforms. Free enrichment
+  such as TED/TED-Ed can remain when relevant and not used as required practice.
 
 Current evidence:
 
@@ -413,10 +449,10 @@ Current evidence:
   resource audit, all 2,358 all-module browser smoke route checks passed, and a
   React key warning in `CoursePage` was repaired so course overview pages render
   cleanly under JSON-backed test data.
-- Student-blocking resource cleanup completed 2026-06-02: one unstable
-  Merriam-Webster required reading link was replaced with a Khan Academy
-  vocabulary-in-context lesson, and the repeated Purdue OWL generic exercises
-  entry was replaced with a more specific Purdue grammar exercises page.
+- Student-blocking resource cleanup completed 2026-06-02 as historical context.
+  Its Khan replacement policy is superseded by the 2026-06-18 resource policy:
+  required paths should stay on GIIS Learn Portal, official/open resources, or
+  non-required enrichment, not Khan as required practice.
 - Parent assessment proof packet completed 2026-06-04: the first 8
   proof-point courses now have a generated parent/advisor packet showing one
   reviewable assignment sample, quiz sample, midterm sample, final sample,
@@ -512,8 +548,7 @@ Status: maintain.
 - Public Lesson Library added at `/lessons` on 2026-06-04: a browsable,
   click-to-play library of every uploaded foundation lesson, reading the same
   `public/data/lessons-manifest.json` as the Learn Portal with counts computed
-  live from the manifest (currently 23 lessons / 3 courses, growing with the
-  daily pipeline). Foundation (non-AP) framing only; bottom CTA leads with
+  live from the manifest. Foundation (non-AP) framing only; bottom CTA leads with
   Apply. Linked from the homepage `LessonPreview` and the nav/footer Academics
   group.
 - Nav/footer conversion + IA pass on 2026-06-04: added a primary gold "Apply"
@@ -590,12 +625,12 @@ Status: reconciled locally; pending production deploy execution.
   runtime/payment changes.
 - Useful local commits include backend security/payment hardening, Apply form
   stability, admin subscription alerting, CI quality gates / Node 20 pinning,
-  a symlink-aware lesson manifest sync fix, unreferenced image cleanup,
+  manifest-only commit protection for T9-backed lesson artifacts, unreferenced image cleanup,
   `teaching-videos/` untracking for the T9 mount, Parent Conversion A-D, and
   foundation-video handoff docs.
-- The symlink-aware manifest fix is important because `teaching-videos/` may be
-  mounted on T9 while `public/data/lessons-manifest.json` must still be staged
-  and committed in the repo for the website to update.
+- Manifest-only commit protection is important because `teaching-videos/` lives
+  on T9 while `public/data/lessons-manifest.json` must still be staged and
+  committed in the repo for the website to update.
 - The T9 `teaching-videos/` storage move is now resolved in source control:
   tracked `teaching-videos/*` files were removed from the git index, the local
   path is restored as an ignored symlink, and website-facing video state remains

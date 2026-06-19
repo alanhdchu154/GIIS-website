@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-06-16
+Last updated: 2026-06-18
 
 This file is the current GIIS active Codex / cc worker handoff, not a historical worklog. Older
 completed items were removed from the active board; use `ROADMAP.md` for the
@@ -30,13 +30,40 @@ Next action:
 
 Current Umi note:
 
-- 2026-06-16 daily gate result: `manual_sales_go_with_payment_boundary`.
-  Included signals: production API proxy 12 pass / 0 fail, sales live 8 pass /
-  0 fail, parent journey 7 pass / 0 fail, owner decisions 3 pass / 1 warn / 0
-  fail, manual sales ready 12 pass / 1 warn / 0 fail, payment live 4 pass / 1
-  warn / 2 fail, lesson manifest 129 lessons / 0 warnings, release gate 76
-  ready / 60 needs revision / 0 blocked, video dashboard 136 lessons / 129
-  uploaded / 4 pending upload, inventory 136 folders / 129 visible / 136 MP4.
+- 2026-06-18 20:32 CT video automation update: Alan later approved resuming the
+  unified Codex `GIIS_影片_pipeline` as a video-first 40/day capacity trial,
+  superseding the earlier 18:26 pause / 19:10 stop-at-G9 recommendation.
+  Current automation status is `ACTIVE`; producer slots are 03:00 / 08:00 /
+  13:00 / 18:00 CT, each capped at 10 modules/uploads, and the 20:00 CT lane
+  does dashboard/count/top-up only to 40. Same-day count source is local
+  `teaching-videos/**/script.json` YouTube fields converted to
+  America/Chicago; public manifest can lag and is reconciliation evidence.
+- 2026-06-18 pipeline-lane split: use `npm run lesson:pipeline-lanes` as the
+  first read-only decision check before touching videos. It separates producer,
+  upload, quality-debt, and reconciliation lanes so pending videos or old
+  `needs_revision` rows do not automatically distort the current producer
+  signal.
+- 2026-06-18 routing refresh: the 2026-06-16 daily gate result remains useful
+  historical evidence, but its exact lesson/video counts are not active truth.
+  Start from `npm run school:ops-report`, then refresh lesson counts from the
+  current lesson-video audits/dashboard before reporting them.
+- Current video policy: daily video upload success is the primary KPI. Standard
+  captions, thumbnails, playlists, manifest/channel sync, and cleanup are
+  reconciliation/backlog work unless the operator explicitly requests full
+  upload follow-ups.
+- 2026-06-18 14:10 CT video blocker resolution: the two no-MP4 lessons were
+  caused by Edge TTS `NoAudioReceived` for `en-US-DavisNeural`, not by cc or
+  YouTube video-insert quota. Business / finance / entrepreneurship /
+  marketing videos now route to `en-US-RogerNeural`, and `make_lesson.py` has a
+  known-broken-voice fallback. Entrepreneurship Fundamentals M1 uploaded as
+  `rnDmCwWoWSM`; Introduction to Business & Economics M8 uploaded as
+  `05VIqhyL6UQ`. Current queue evidence after dashboard refresh:
+  192 uploaded / 0 pending / 0 no-MP4 / 192 total, with 32 uploads on
+  2026-06-18 CT. Captions/playlists/sync remain reconciliation work.
+- Current course-resource policy: required course paths should not route
+  students through Khan Academy or paid/login-gated external practice platforms.
+  Use GIIS Learn Portal / official / open resources for required paths; TED/
+  TED-Ed-style enrichment can remain when relevant and not required practice.
 - The two payment-live failures are the expected automated-checkout blockers:
   missing live Stripe Price IDs for Guided and Premium. Self-Paced annual is an
   optional warning.
@@ -267,21 +294,32 @@ Acceptance:
 
 - owner: Umi / Codex
 - mode: Split-work with Claude Code
+- status: active 40-capacity trial after Alan's later 2026-06-18 approval. The
+  earlier 18:26 speed/ROI pause and 19:10 stop-at-G9 review are historical
+  evidence, not the current automation state.
 - schedule: one unified Codex heartbeat, `GIIS_影片_pipeline`, attached to the
   `GIIS_影片_producer` chat. It wakes hourly and gates internally: 03:00 /
-  08:00 CT produce up to 10 modules/uploads each; 12:00 / 17:00 CT check for
-  missed target, run bounded catch-up if needed, and update the dashboard.
+  08:00 / 13:00 / 18:00 CT produce up to 10 modules/uploads each; 20:00 CT
+  checks same-day artifact-backed count, runs bounded top-up if needed, and
+  updates the dashboard.
 - runner: `bash tools/lesson-video/foundation_daily.sh`
 - scope: non-AP foundation modules only
 - batch size: max 10 modules / 10 uploads per producer run; catch-up stays
   bounded and must not force weak lessons through the gate
-- cc guardrails: `FOUNDATION_CC_BUDGET_USD=10` production and
-  `FOUNDATION_REVIEW_BUDGET_USD=3` independent review per module
+- cc guardrails: bounded scope, named commands, model routing
+  (`FOUNDATION_CC_MODEL=sonnet`, `FOUNDATION_REVIEW_MODEL=opus`), and stop
+  conditions. Do not require a default USD budget cap unless pay-as-you-go or
+  another external paid service is enabled.
 
 Next action:
 
+- Let the approved 40-capacity automation run only inside the 03/08/13/18/20 CT
+  gates. Use `npm run lesson:pipeline-lanes` for quick read-only lane status
+  and `npm run lesson:pipeline-lanes -- --refresh-gate` only when a fresh full
+  release-gate debt count is worth the local runtime.
 - After each scheduled run, review selected modules, cc logs, gate output,
-  upload result, website manifest sync, and generated artifact cleanup needs.
+  upload result, same-day artifact-backed count, website manifest sync, and
+  generated artifact cleanup needs.
 
 Acceptance:
 
@@ -296,17 +334,18 @@ Current Umi note:
 - This handoff is intentionally narrow: monitor and repair the unified
   foundation pipeline. Broader parent/admin stability and course-quality priorities
   belong in `ROADMAP.md`.
-- 2026-06-16 current daily report: 136 lesson folders, 129 visible/uploaded
-  lessons, 4 pending upload, release gate 76 ready / 60 needs_revision / 0
-  blocked, manifest alignment 129 lessons / 0 warnings. Let the gated producer
-  continue; do not force upload and do not treat older `needs_revision` quality
-  debt as an upload emergency.
+- 2026-06-16 daily report counts are historical only. Refresh current lesson
+  counts from the latest audit/dashboard before reporting them. Let the gated
+  producer continue; do not force upload and do not treat older
+  `needs_revision` quality debt as an upload emergency.
 - 2026-06-09 local storage note: `teaching-videos/` is active on T9 via symlink
   to `/Volumes/T9-Active/Projects/giis-website/teaching-videos`.
   `lesson_release_gate.py` can read the symlinked Biology Module 3 folder.
-  Caveat: git tracks files under `teaching-videos/`, so `git status` may show
-  mass deletions caused by the symlink. Do not stage or commit those deletions;
-  see `/Users/alanhdchu/umi-central/docs/local_storage_layout.md`.
+  2026-06-18 refresh: the old mass-deletion caveat is resolved. `git ls-files
+  teaching-videos` reports 0 tracked paths and `git status --short --
+  teaching-videos` is clean. Keep pipeline code symlink-aware and avoid staging
+  T9 artifacts directly; manifest state remains the repo-tracked source for
+  website-facing video availability.
 - 2026-06-05 check: the 07:00 CT run uploaded English I Modules 9/10/11, pushed
   the automation commit, and post-run release gate / manifest alignment / build
   checks were green. The next local hygiene issue is generated video review and
@@ -339,10 +378,10 @@ Current Umi note:
   Modules 7/8/9. Fresh verification is green: `lesson_release_gate.py --check`
   evaluated 36 ready / 0 blocked, and manifest alignment returned 0 warnings
   across 36 lessons. Keep these handoffs as durable evidence. Current git
-  hygiene risk: 205 tracked `teaching-videos/*` paths still show as deleted
-  because the active video tree lives on the T9 symlink; do not stage those
-  deletions blindly. If the project intentionally untracks them, do it as a
-  reviewed git hygiene change with roadmap/decision evidence.
+  hygiene risk has since been closed: `teaching-videos/*` paths were untracked
+  as a reviewed git hygiene change, and the active video tree now stays on the
+  T9 symlink while `public/data/lessons-manifest.json` carries website-facing
+  state.
 - New cc work should be written as a bounded handoff in `umi/handoffs/` when it
   needs more than this daily monitor. Include Umi first look, pass type, current
   change set, open questions for cc, review breadth, allowed changes, and
