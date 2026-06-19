@@ -41,7 +41,7 @@ USAGE
         items=[
             ("✓",  "Watch this lesson",    "(done!)"),
             ("1.", "Read OpenStax Ch 1.1", "Use the Language of Algebra"),
-            ("2.", "Khan Academy practice", "20 problems · Writing Algebraic Expressions"),
+            ("2.", "GIIS Learn Portal practice", "teacher-reviewed module problems"),
             ("3.", "Assignment in dashboard", "10 real-life situations as expressions"),
             ("4.", "Advisor check-in", "Book a session if anything feels fuzzy"),
         ],

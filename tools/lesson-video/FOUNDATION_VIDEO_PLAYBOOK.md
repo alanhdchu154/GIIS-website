@@ -1,7 +1,7 @@
 # Foundation Lesson Video Playbook
 
-Date: 2026-06-12
-Status: active for daily Umi/Codex-approved foundation production
+Date: 2026-06-18
+Status: active 40-capacity video-first trial
 
 ## Decision
 
@@ -122,14 +122,19 @@ college admissions claims in foundation lesson titles or descriptions.
 
 - Current Codex automation: `GIIS_影片_pipeline`, stored under
   `~/.codex/automations/giis-foundation-video-split-batch/automation.toml`,
-  runs as one hourly heartbeat in the fixed `GIIS_影片_producer` chat.
-- 03:00 / 08:00 CT: producer slots call
+  is active as a 40-capacity trial as of 2026-06-18.
+- Before resuming, run the read-only lane report:
+  `npm run lesson:pipeline-lanes`.
+- The automation runs as one hourly heartbeat in the fixed
+  `GIIS_影片_producer` chat.
+- 03:00 / 08:00 / 13:00 / 18:00 CT producer slots call
   `FOUNDATION_MAX_MODULES=10 FOUNDATION_UPLOAD_MAX=10 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus FOUNDATION_CC_BUDGET_USD=10 FOUNDATION_REVIEW_BUDGET_USD=3 bash tools/lesson-video/foundation_daily.sh`.
-- 12:00 / 17:00 CT: check queue, release gate, manifest alignment, and today's
-  successful non-AP foundation upload count. If the count is below 20, run one
-  bounded catch-up batch with `min(gap, 10)` modules/uploads, then update the
-  dashboard.
-- Outside 03/08/12/17 CT, the heartbeat should skip heavy work and not read
+- 20:00 CT checks queue, pending release gate, manifest alignment, dashboard,
+  and today's successful non-AP foundation upload count from local
+  `teaching-videos/**/script.json` YouTube fields. If the count is below 40,
+  run one bounded top-up batch with `min(gap, 10)` modules/uploads, then update
+  the dashboard.
+- Outside 03/08/13/18/20 CT, the heartbeat should skip heavy work and not read
   repo state, run git/npm/Python/cc, or touch files.
 - Default target grade: Grade 9 (`FOUNDATION_TARGET_GRADE=9`).
 - Selection is deterministic: Grade 9 course sequence first, then module order;
@@ -139,9 +144,9 @@ college admissions claims in foundation lesson titles or descriptions.
 - If course design fails, run the built-in safe repair path, then review again.
   Proceed only after the repaired course passes; report unresolved blockers.
 - Max modules/uploads per producer run: 10.
-- Intended daily target: about 20 uploaded non-AP foundation lessons when gates
-  remain clean. Do not chase this number by forcing weak lessons through the
-  quality gate.
+- Current experimental daily target: 40 uploaded non-AP foundation lessons when
+  gates remain clean. Do not chase this number by forcing weak lessons through
+  the quality gate.
 - Claude Code model routing: foundation video production is repetitive
   mechanics and should default to `FOUNDATION_CC_MODEL=sonnet`; the independent
   second-pass/source-alignment review is release judgment and should default to
@@ -163,6 +168,21 @@ college admissions claims in foundation lesson titles or descriptions.
   removed; the foundation orchestrator calls the gated upload queue directly.
 - Do not install a macOS LaunchAgent for this daily foundation pipeline unless
   Alan explicitly asks for a system-level fallback.
+
+## Lane Split During 40-Capacity Trial
+
+During the 40-capacity trial, keep video production separate from reconciliation
+and quality-debt work. Choose one lane:
+
+- Producer lane: new video creation and gate-ready upload in the approved
+  03/08/13/18 CT video-first slots.
+- Upload lane: already rendered and approved pending videos, bounded/manual
+  when needed.
+- Quality-debt lane: old `needs_revision` repair, small batches only.
+- Reconciliation lane: captions, thumbnails, playlists, manifest/channel sync,
+  and cleanup after quota reset or when explicitly scheduled. Playlist/channel
+  organization is the first reconciliation priority; standard captions remain
+  backlog unless Alan authorizes a caption slot.
 
 ## Acceptance Criteria
 

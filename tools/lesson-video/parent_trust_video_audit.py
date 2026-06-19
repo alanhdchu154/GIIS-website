@@ -80,6 +80,35 @@ def public_text_blocks(folder: Path) -> list[dict[str, str]]:
 def is_contextual_false_positive(kind: str, match: str, context: str) -> bool:
     lowered = context.lower()
     token = match.lower()
+    if kind == "payment_claim":
+        school_payment_context = (
+            "giis" in lowered
+            or "genesis" in lowered
+            or "enroll" in lowered
+            or "tuition" in lowered
+            or "checkout" in lowered
+            or "invoice" in lowered
+            or "refund" in lowered
+            or "stripe" in lowered
+            or "pricing" in lowered
+            or "payment" in lowered
+        )
+        business_math_context = (
+            "revenue" in lowered
+            or "cost" in lowered
+            or "price" in lowered
+            or "finance" in lowered
+            or "market" in lowered
+            or "business" in lowered
+            or "profit" in lowered
+            or "budget" in lowered
+            or "loan" in lowered
+            or "interest" in lowered
+            or "balance" in lowered
+            or "pairs" in lowered
+        )
+        if token.startswith("$") and business_math_context and not school_payment_context:
+            return True
     if kind == "outcome_guarantee" and token.startswith("guarantee"):
         math_context = (
             "angle" in lowered

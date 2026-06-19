@@ -33,6 +33,10 @@ from pathlib import Path
 
 DEFAULT_VOICE = "en-US-AriaNeural"
 DEFAULT_RATE  = "-3%"
+VOICE_FALLBACKS = {
+    "en-US-DavisNeural": "en-US-RogerNeural",
+    "en-US-TonyNeural": "en-US-EricNeural",
+}
 
 def need(pkg: str, import_name: str | None = None):
     try:
@@ -86,6 +90,29 @@ def _generate_silence(audio_dir: Path, section_id: str, seconds: float = 3.0):
     )
 
 
+def _fallback_voice(voice: str) -> str:
+    return VOICE_FALLBACKS.get(voice, DEFAULT_VOICE)
+
+
+async def _save_tts(text: str, voice: str, rate: str, mp3: Path) -> str:
+    import edge_tts
+
+    try:
+        await edge_tts.Communicate(text, voice, rate=rate).save(str(mp3))
+        return voice
+    except Exception as exc:
+        if exc.__class__.__name__ != "NoAudioReceived":
+            raise
+        fallback = _fallback_voice(voice)
+        if fallback == voice:
+            raise
+        if mp3.exists() and mp3.stat().st_size == 0:
+            mp3.unlink()
+        print(f"    [voice-fallback] {voice} produced no audio; retrying {fallback}")
+        await edge_tts.Communicate(text, fallback, rate=rate).save(str(mp3))
+        return fallback
+
+
 async def synth(folder: Path) -> int:
     """Generate one MP3 per section that doesn't already have one. Returns
     the number of NEW MP3s written.
@@ -129,8 +156,9 @@ async def synth(folder: Path) -> int:
             _generate_silence(audio, s["id"])
         else:
             print(f"  [tts]  {mp3.name}")
-            comm = edge_tts.Communicate(s["text"], voice, rate=rate)
-            await comm.save(str(mp3))
+            used_voice = await _save_tts(s["text"], voice, rate, mp3)
+            if used_voice != voice:
+                print(f"    [voice-fallback-ok] {mp3.name} voice={used_voice}")
         fresh += 1
     print(f"[synth] {fresh} new file(s); {len(script['sections']) - fresh} cached")
     return fresh

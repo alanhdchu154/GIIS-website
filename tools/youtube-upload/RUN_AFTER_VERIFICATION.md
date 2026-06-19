@@ -106,7 +106,7 @@ python3 tools/youtube-upload/upload_video.py \
     public/demo/giis-demo.mp4 \
     --title "Welcome to Genesis of Ideas International — a Florida-registered US high school" \
     --description-file tools/youtube-upload/_descriptions/school-intro.txt \
-    --tags "GIIS,Genesis of Ideas International,online high school,Florida high school,US diploma,private school,Khan Academy,homeschool,distance learning,AP,SAT" \
+    --tags "GIIS,Genesis of Ideas International,online high school,Florida high school,US diploma,private school,foundation lesson,distance learning" \
     --privacy public \
     --thumbnail public/demo/giis-demo-poster.jpg
 ```

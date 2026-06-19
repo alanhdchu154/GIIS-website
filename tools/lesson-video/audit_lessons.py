@@ -59,6 +59,11 @@ RISKY_VISUAL_UNICODE = {
     "⁻": "superscript minus can render poorly in some slide fonts; prefer plain '-'.",
 }
 
+EXTERNAL_LEARNING_PLATFORM_RE = re.compile(
+    r"\b(Khan Academy|Crash Course|CommonLit|IXL|Quizlet|Edpuzzle|Coursera|Udemy|CK-12)\b",
+    re.I,
+)
+
 EXPERT_LENS_STOPWORDS = {
     "about", "above", "after", "again", "against", "also", "because", "before",
     "being", "between", "course", "every", "from", "have", "into", "lesson",
@@ -350,6 +355,16 @@ def inspect_source_alignment(folder: Path, script: dict[str, Any]) -> dict[str, 
     visible_anywhere = [label for label in checked if source_label_present(label, combined)]
     missing = [label for label in checked if label not in visible]
     raw_urls = re.findall(r"https?://\S+|www\.\S+", narration_text)
+    external_platform_refs = []
+    for rel, text in (("build_slides.py", build_text), ("script.json narration", narration_text)):
+        for match in EXTERNAL_LEARNING_PLATFORM_RE.finditer(text):
+            start = max(0, match.start() - 80)
+            end = min(len(text), match.end() + 120)
+            external_platform_refs.append({
+                "file": rel,
+                "match": match.group(0),
+                "context": re.sub(r"\s+", " ", text[start:end]).strip(),
+            })
     return {
         "present": True,
         "policy": alignment.get("policy"),
@@ -358,6 +373,7 @@ def inspect_source_alignment(folder: Path, script: dict[str, Any]) -> dict[str, 
         "labels_visible_anywhere": visible_anywhere,
         "labels_missing": missing,
         "raw_urls_in_narration": raw_urls,
+        "external_platform_refs": external_platform_refs[:10],
     }
 
 
@@ -612,6 +628,8 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
             add("minor", "Source alignment has fewer visible labels than expected.")
         if source_alignment.get("raw_urls_in_narration"):
             add("minor", "Narration contains raw URLs while source alignment requires source names only.")
+        if source_alignment.get("external_platform_refs"):
+            add("major", "Video-visible lesson text directs or labels external learning platforms; use textbook/official sources plus the Learn Portal assignment.")
 
     if reviewers["count"] == 0:
         add("major", "No reviewer JSON found; needs PhD/adversarial/citation audit before auto-release.")
@@ -630,6 +648,12 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
             add("minor", "Reviewer set lacks source-alignment review.")
         if reviewers["counts"].get("critical"):
             add("critical", "At least one reviewer verdict is critical.")
+        blocking_verdicts = [
+            v for v in reviewers.get("verdicts", [])
+            if v.get("verdict") in {"needs_revision", "fail", "failed", "block", "blocked"}
+        ]
+        if blocking_verdicts:
+            add("major", f"Reviewer JSON contains blocking verdicts: {[v['file'] for v in blocking_verdicts[:5]]}")
         if reviewers["stale_or_unbound"]:
             add("major", f"Reviewer JSON is stale or not bound to current script_sha: {reviewers['stale_or_unbound'][:5]}")
         if reviewers["counts"].get("minor", 0) >= 2 and reviewers["counts"].get("pass", 0) == 0:

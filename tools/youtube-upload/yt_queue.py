@@ -276,6 +276,7 @@ def run_upload(args):
         pending = [L for L in pending if _course_match(L["course"], args.course)]
         print(f"{DIM}filter `--course {args.course}`: {before} → {len(pending)} pending{RESET}")
 
+    approval_path = None
     if args.gate_ready:
         before = len(pending)
         approval_path = Path(args.approval_file) if args.approval_file else APPROVED_READY_TO_UPLOAD
@@ -329,6 +330,18 @@ def run_upload(args):
         print(f"\n{BOLD}─── uploading: {L['module']} ───{RESET}")
         cmd = [sys.executable, str(UPLOAD_LESSON), str(L["dir"]),
                "--privacy", args.privacy]
+        if approval_path:
+            cmd.extend(["--approval-file", str(approval_path)])
+        if args.no_captions:
+            cmd.append("--no-captions")
+        if args.no_thumbnail:
+            cmd.append("--no-thumbnail")
+        if args.no_playlist:
+            cmd.append("--no-playlist")
+        if args.no_sync:
+            cmd.append("--no-sync")
+        if args.no_cleanup:
+            cmd.append("--no-cleanup")
         # stdin=DEVNULL — same reasoning as merge_lesson/make_lesson:
         # upload_lesson eventually invokes ffmpeg/youtube libs that may
         # try to read stdin. Don't let them touch ours.
@@ -388,6 +401,16 @@ def main():
                     help="override the approved_ready_to_upload.json path for --gate-ready")
     up.add_argument("--ignore-quota-estimate", action="store_true",
                     help="override the local quota estimate and use --max as requested")
+    up.add_argument("--no-captions", action="store_true",
+                    help="skip transcript/SRT caption upload; useful for upload-capacity trials")
+    up.add_argument("--no-thumbnail", action="store_true",
+                    help="skip thumbnail upload; useful when preserving quota for video inserts")
+    up.add_argument("--no-playlist", action="store_true",
+                    help="skip playlist add/create calls")
+    up.add_argument("--no-sync", action="store_true",
+                    help="skip sync_channel.py after each upload")
+    up.add_argument("--no-cleanup", action="store_true",
+                    help="keep local artifacts after upload")
 
     args = ap.parse_args()
 

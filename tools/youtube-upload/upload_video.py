@@ -161,7 +161,7 @@ def main():
     ap.add_argument("--description", help="short description; OR use --description-file")
     ap.add_argument("--description-file", type=Path,
                     help="path to a .txt file with the full description (recommended)")
-    ap.add_argument("--tags", default="GIIS,Algebra,high school,math,Khan Academy,private school,Florida,online school",
+    ap.add_argument("--tags", default="GIIS,high school,foundation lesson,private school,Florida,online school",
                     help="comma-separated tags")
     ap.add_argument("--privacy", default="unlisted",
                     choices=["public", "unlisted", "private"],

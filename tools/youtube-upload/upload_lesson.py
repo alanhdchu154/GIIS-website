@@ -6,8 +6,10 @@ Usage:
        [--privacy unlisted|private|public]
 
 Reads the lesson's `script.json` to auto-generate title, description, and tags.
-Uploads the rendered MP4 + attaches the SRT captions + sets the title slide
-as the thumbnail. Prints the YouTube URL when done.
+Uploads the rendered MP4 and saves the YouTube identity as soon as YouTube
+returns `VIDEO_ID`. Captions, thumbnails, playlists, manifest sync, and cleanup
+are optional follow-ups because the daily foundation pipeline prioritizes video
+upload capacity first.
 """
 from __future__ import annotations
 import argparse, json, sys, subprocess
@@ -78,8 +80,8 @@ def build_description(script: dict, lesson_dir: Path) -> str:
         "(F.S. 1002.42). Real classroom lectures from our 24-credit US diploma curriculum.",
         "",
         "This video is the lecture / overview. To master this module:",
-        "  • Read the assigned OpenStax chapter",
-        "  • Work the Khan Academy practice set",
+        "  • Read the assigned textbook or course resource",
+        "  • Work the module practice in the GIIS Learn Portal",
         "  • Complete the dashboard assignment",
         "  • Book an advisor check-in if anything is fuzzy",
         "",
@@ -146,11 +148,15 @@ def main():
                          "default: use the script.json `course` field, e.g. 'Algebra I'.")
     ap.add_argument("--no-playlist", action="store_true",
                     help="skip playlist auto-add even if --playlist or course field is set")
+    ap.add_argument("--no-sync", action="store_true",
+                    help="skip sync_channel.py after upload; useful when quota is reserved for videos")
     ap.add_argument("--no-cleanup", action="store_true",
                     help="after a successful upload, skip auto-deletion of local "
                          "slides/audio/mp4 (which is the default). Useful for debugging.")
     ap.add_argument("--force-without-approval", action="store_true",
                     help="emergency override: bypass approved_ready_to_upload.json")
+    ap.add_argument("--approval-file", type=Path, default=APPROVED_READY_TO_UPLOAD,
+                    help="approved_ready_to_upload.json path to check before upload")
     args = ap.parse_args()
 
     lesson = args.lesson_dir.resolve()
@@ -161,10 +167,9 @@ def main():
         sys.exit(f"missing {script_path}")
     script = json.loads(script_path.read_text())
 
-    if not args.force_without_approval and lesson.name not in approved_slugs():
+    if not args.force_without_approval and lesson.name not in approved_slugs(args.approval_file):
         sys.exit(
-            "lesson is not in teaching-videos/_audit/release-gate/"
-            "approved_ready_to_upload.json; refusing upload"
+            f"lesson is not in {args.approval_file}; refusing upload"
         )
 
     # Find the rendered MP4 (folder name with hyphens normalized to underscores).
@@ -217,16 +222,11 @@ def main():
     if not video_id:
         return
 
-    # Add to course playlist (auto-creates).
-    playlist_id = None
-    if not args.no_playlist:
-        playlist_name = args.playlist or script.get("course")
-        if playlist_name:
-            playlist_id = add_to_playlist(playlist_name, video_id, args.privacy)
-
-    # Persist the YouTube identity back into script.json so the lesson is the
-    # source of truth (Learn Portal reads from here via the manifest builder).
     import datetime
+    uploaded_at = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+
+    # Persist the YouTube identity immediately. Playlist/sync/cleanup are
+    # best-effort follow-ups and may hit quota after the video upload succeeds.
     script["youtube"] = {
         "video_id":    video_id,
         "url":         f"https://youtu.be/{video_id}",
@@ -234,17 +234,31 @@ def main():
         "studio_url":  f"https://studio.youtube.com/video/{video_id}/edit",
         "privacy":     args.privacy,
         "playlist":    args.playlist or script.get("course"),
-        "playlist_id": playlist_id,
-        "uploaded_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
+        "playlist_id": None,
+        "uploaded_at": uploaded_at,
     }
     script_path.write_text(json.dumps(script, indent=2, ensure_ascii=False) + "\n")
     print(f"[script.json] saved youtube.video_id = {video_id}")
+
+    # Add to course playlist (auto-creates).
+    playlist_id = None
+    if not args.no_playlist:
+        playlist_name = args.playlist or script.get("course")
+        if playlist_name:
+            try:
+                playlist_id = add_to_playlist(playlist_name, video_id, args.privacy)
+            except Exception as e:
+                print(f"[playlist] skipped after upload: {e}")
+        if playlist_id:
+            script["youtube"]["playlist_id"] = playlist_id
+            script_path.write_text(json.dumps(script, indent=2, ensure_ascii=False) + "\n")
 
     # Reconcile against the live YouTube channel — handles duplicates from
     # re-uploads, manual deletes, and pulls the canonical state into the
     # manifest the Learn Portal reads. Cheap (~5 quota units when no dups).
     here = Path(__file__).resolve().parent
-    subprocess.run([sys.executable, str(here / "sync_channel.py"), "--apply"], check=False)
+    if not args.no_sync:
+        subprocess.run([sys.executable, str(here / "sync_channel.py"), "--apply"], check=False)
 
     # Auto-cleanup local artifacts (slides/, audio/, *.mp4, *.wav, etc.) now
     # that the video is verifiably live on YouTube. Saves 15-210MB per lesson

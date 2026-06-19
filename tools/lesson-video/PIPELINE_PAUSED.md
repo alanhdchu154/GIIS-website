@@ -1,6 +1,51 @@
 # GIIS Lesson Video Pipeline Paused
 
-Paused by Alan on 2026-05-22.
+## 2026-06-18 Pause And Resume
+
+Alan paused the unified Codex lesson-video automation on 2026-06-18 because the
+pipeline was becoming slower than its current trust value. This is intentional,
+not an upload outage. Later the same evening, Alan approved resuming the unified
+Codex automation as a video-first 40/day capacity trial. Therefore this section
+is historical context, not the current scheduler state.
+
+Historical hold state:
+
+- Codex automation: `GIIS_影片_pipeline` /
+  `giis-foundation-video-split-batch`
+- Status then: `PAUSED` in
+  `~/.codex/automations/giis-foundation-video-split-batch/automation.toml`
+- Current status after later approval: `ACTIVE` 40-capacity trial in the same
+  automation TOML
+- Production scope on hold: Grade 10 auto-expansion, starting with Algebra II
+- Last queue snapshot at pause: 199 uploaded, 6 pending Algebra II videos,
+  0 no-MP4, 205 total
+- Captions, thumbnails, playlists, manifest/channel sync, and cleanup are
+  reconciliation backlog, not video-upload blockers
+
+Before making future producer/catch-up changes, run:
+
+```bash
+npm run lesson:pipeline-lanes
+```
+
+Use the lane report to choose one bounded lane:
+
+- Producer lane: create new modules only after the speed/ROI decision is made.
+- Upload lane: manually review and upload already approved pending videos only
+  when they improve parent/CEEB trust.
+- Quality-debt lane: repair old `needs_revision` lessons in small batches,
+  separate from new production.
+- Reconciliation lane: captions, thumbnails, playlists, and manifest/channel
+  sync after quota reset or when explicitly scheduled.
+
+Do not change the active 40-capacity schedule just because pending videos or
+old quality-debt rows exist.
+
+## Legacy Pause - 2026-05-22
+
+Alan's earlier pause closed the old AP-era / launchd-style video surfaces. It
+is historical context for why only the later foundation-first pipeline was ever
+allowed to restart.
 
 Reason: prevent additional spend and avoid producing or uploading low-quality,
 unreviewed, or misaligned lesson videos.

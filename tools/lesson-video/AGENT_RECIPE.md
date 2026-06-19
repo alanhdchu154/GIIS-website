@@ -64,6 +64,8 @@ Voice mapping by subject (from SKILL.md):
 - English → `en-US-AndrewNeural`
 - Social Studies → `en-US-ChristopherNeural`
 - Psychology → `en-US-BrianNeural`
+- Business / Finance / Entrepreneurship / Marketing → `en-US-RogerNeural`
+- Computer Science / Digital Literacy / Technology → `en-US-GuyNeural`
 
 Rate: always `"-3%"` unless told otherwise.
 
@@ -107,7 +109,7 @@ The `Deck` constructor auto-resolves the subject theme from `course` name:
 | Roughly middle | `deck.pause(...)` + an answer-reveal slide | One pause-and-try, followed by a narrated worked solution |
 | One slide | `deck.compare(...)` | "Common trap" / wrong-vs-right column |
 | Second-to-last | `deck.recap(...)` | Bullet recap, optional assignment box |
-| Last | `deck.path(...)` | "How to actually master this module" with OpenStax / Khan / assignment / advisor steps and `next_text` pointing to the next module |
+| Last | `deck.path(...)` | "How to actually master this module" with the assigned textbook/official/free enrichment source, GIIS Learn Portal assignment, and advisor steps; do not route required practice through Khan or paid/login-gated platforms |
 
 For CS modules: use `deck.equation()` for Java code snippets (the equation
 method uses the `mono` font which renders code well). Each line tuple is
@@ -118,8 +120,8 @@ so they don't overflow at 80pt mono.
 
 - Conversational, like a teacher speaking — not slide-reading.
 - 2–4 sentences per section. Target ~25–65 words; hard max 85 words unless a reviewer explicitly approves the exception.
-- Don't read URLs aloud. Refer to resources by name ("OpenStax", "Khan
-  Academy") rather than reading the URL.
+- Don't read URLs aloud. Refer to resources by name ("OpenStax", "GIIS Learn
+  Portal", "TED-Ed") rather than reading the URL.
 - For pause sections: in the `*_pause1` text, give the prompt + say
   "Pause now. Solve it. Press play when you're ready." In the answer section,
   give the worked solution. Do not set `"silent": true` unless the slide is

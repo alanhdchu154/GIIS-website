@@ -1,21 +1,31 @@
 # Foundation Video Pipeline
 
-Date: 2026-06-16
-Status: active v0.5 unified foundation pipeline
+Date: 2026-06-18
+Status: active 40-capacity video-first trial
 
 ## Goal
 
 Make Claude Code able to produce high-quality non-AP foundation videos
 repeatably, while Umi remains the academic editor and release authority.
 
+The unified daily automation is active as of the 2026-06-18 40-capacity update.
+Before changing cadence or running reconciliation work, start with the read-only
+lane report:
+
+```bash
+npm run lesson:pipeline-lanes
+```
+
 This is the intended loop for every new foundation video:
 
 ```text
-03:00 / 08:00 CT producer slots in the unified `GIIS_影片_pipeline` heartbeat
+03:00 / 08:00 / 13:00 / 18:00 CT producer slots in the unified `GIIS_影片_pipeline` heartbeat
   -> call bash tools/lesson-video/foundation_daily.sh
-  -> choose up to 10 Grade 9 non-AP foundation modules from server/prisma/courses/**/*.json
+  -> choose up to 10 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
-  -> verify module outline and free/usable resource URLs
+  -> verify module outline and resource policy: no required Khan / paid /
+     login-gated external practice path; TED/TED-Ed may be accepted as free
+     enrichment when relevant
   -> attach Learn Portal Expert Lens as video-safe big idea/watch-for/transfer guidance
   -> attach source_alignment for visible source labels and reading alignment
   -> write source_packet.json + teaching_brief.md + visual_brief.md
@@ -77,13 +87,18 @@ Preferred scheduler: Codex automations. Use one unified heartbeat attached to
 the fixed project chat `GIIS_影片_producer`; do not create separate producer and
 dashboard chats.
 
+Current state: the unified heartbeat is active as a 40-capacity trial. Producer
+slots run at 03:00 / 08:00 / 13:00 / 18:00 CT, and the 20:00 CT lane updates
+the dashboard, counts artifact-backed same-day uploads, and runs one bounded
+top-up only if the day is below 40.
+
 ```text
 ~/.codex/automations/giis-foundation-video-split-batch/automation.toml
 app name = "GIIS_影片_pipeline"
 target chat = "GIIS_影片_producer"
 rrule = hourly heartbeat with prompt-level gates:
-  03:00 / 08:00 CT -> producer, up to 10 modules/uploads
-  12:00 / 17:00 CT -> check gaps, bounded catch-up if below target, dashboard
+  03:00 / 08:00 / 13:00 / 18:00 CT -> producer, up to 10 modules/uploads
+  20:00 CT -> dashboard, artifact-backed count, bounded top-up to 40
 ```
 
 The producer slots call the repo-owned runner:
@@ -92,9 +107,11 @@ The producer slots call the repo-owned runner:
 FOUNDATION_MAX_MODULES=10 FOUNDATION_UPLOAD_MAX=10 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus bash tools/lesson-video/foundation_daily.sh
 ```
 
-The noon / late-afternoon slots should read the queue/dashboard first. If the
-day is below the target and the gap is real, run one bounded catch-up pass rather
-than forcing low-quality lessons through the gate.
+The 20:00 slot should read the queue/dashboard first. If the day is below the
+40-capacity target and the gap is real, run one bounded top-up pass rather than
+forcing low-quality lessons through the gate. Same-day capacity should be
+counted from local `teaching-videos/**/script.json` YouTube fields; the public
+manifest can lag and should be treated as reconciliation evidence.
 
 Keep the pipeline logic in this repository so changes can be reviewed,
 committed, and rolled back like normal code. Do not use a macOS LaunchAgent for
@@ -111,6 +128,9 @@ Full run:
 ```bash
 npm run lesson:foundation-daily
 ```
+
+Full runs are allowed only through the approved video-first cadence or a bounded
+manual lane after a fresh lane report.
 
 The orchestrator records retry/blocking state under
 `teaching-videos/_audit/foundation-daily/`. Foundation lesson production is
@@ -241,13 +261,15 @@ Do not use direct upload scripts for normal operations.
 
 ## Upload-Cap Trial
 
-As of the 2026-06-16 automation consolidation, one Codex heartbeat runs the
-whole daily loop in the fixed `GIIS_影片_producer` chat: 03:00 / 08:00 CT
-producer slots, max 10 modules and 10 uploads per producer run, plus 12:00 /
-17:00 CT gap checks, bounded catch-up if useful, and dashboard updates. The
-intended pace is about 20 videos/day when quality gates stay clean. This
-replaces the separate dashboard automation and the older 7 x 3 split-batch
-framing.
+The upload-cap trial is active as of 2026-06-18. The daily runner should test
+40/day video-first capacity while preserving quality gates.
+
+As of the 2026-06-18 40-capacity update, one Codex heartbeat runs the whole
+daily loop in the fixed `GIIS_影片_producer` chat: 03:00 / 08:00 / 13:00 /
+18:00 CT producer slots, max 10 modules and 10 uploads per producer run, plus a
+20:00 CT dashboard/count/top-up lane. The experimental pace is 40 videos/day
+when quality gates stay clean. This replaces the separate dashboard automation
+and the older 7 x 3 split-batch framing.
 The cron jobs use `FOUNDATION_CC_MODEL=sonnet`,
 `FOUNDATION_REVIEW_MODEL=opus`, `FOUNDATION_CC_BUDGET_USD=10` and
 `FOUNDATION_REVIEW_BUDGET_USD=3`. Those values are local guardrails for stuck
@@ -263,3 +285,11 @@ successful upload count. If only transcript/caption upload returns
 `quotaExceeded` after the video, thumbnail, and playlist succeed, count the
 video as uploaded and report the caption as a retry item for the next quota
 window.
+
+As of 2026-06-18, the default producer upload phase is video-first:
+`yt_queue.py` is called with no captions, thumbnails, playlist mutation,
+per-upload sync, or cleanup follow-up. This protects the daily video limit test
+from general-quota tasks. Standard captions, playlist membership, thumbnails,
+manifest/channel sync, and cleanup are reconciliation work for a later quota
+window. Use `--full-upload-followups` only when intentionally running the full
+metadata/caption path instead of a video-capacity run.

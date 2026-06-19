@@ -86,6 +86,7 @@ GRADE_9_COURSE_SEQUENCE = [
 HARD_BLOCKING_HOSTS = {
     "apclassroom.collegeboard.org": "restricted AP Classroom / College Board login",
     "commonlit.org": "classroom/login flow likely required",
+    "khanacademy.org": "external practice/progress platform; do not make it a required GIIS path",
     "noredink.com": "paid school product risk",
     "jstor.org": "institutional login/paywall risk",
     "hbr.org": "paywall/subscription risk",
@@ -99,7 +100,6 @@ HARD_BLOCKING_HOSTS = {
 }
 
 SOFT_RISK_HOSTS = {
-    "khanacademy.org": "free nonprofit; practice/progress may require a free account",
     "academy.hubspot.com": "free but login/certificate flow",
     "learndigital.withgoogle.com": "free but login/certificate flow",
 }
@@ -609,9 +609,15 @@ def subject_area(course: dict[str, Any]) -> str:
         return "math"
     if any(word in text for word in ["biology", "chemistry", "physics", "science"]):
         return "science"
+    if any(word in text for word in ["computer", "programming", "digital literacy", "technology"]):
+        return "computer_science"
     if any(word in text for word in ["english", "literature", "composition", "writing"]):
         return "literature"
-    if any(word in text for word in ["history", "government", "civics", "economics", "social"]):
+    if any(word in text for word in ["psychology", "sociology"]):
+        return "psychology"
+    if any(word in text for word in ["business", "marketing", "finance", "entrepreneur", "media literacy"]):
+        return "business"
+    if any(word in text for word in ["history", "government", "civics", "economics", "geography", "social"]):
         return "social_studies"
     if any(word in text for word in ["health", "physical", "pe", "sports"]):
         return "health_pe"
@@ -624,6 +630,9 @@ def voice_for_subject(area: str) -> str:
         "science": "en-US-EmmaNeural",
         "literature": "en-US-AndrewNeural",
         "social_studies": "en-US-ChristopherNeural",
+        "psychology": "en-US-BrianNeural",
+        "computer_science": "en-US-GuyNeural",
+        "business": "en-US-RogerNeural",
         "health_pe": "en-US-JennyNeural",
     }.get(area, "en-US-AriaNeural")
 
@@ -701,6 +710,8 @@ def source_label_for_ref(ref: dict[str, Any]) -> str:
     known = {
         "khanacademy.org": "Khan Academy",
         "openstax.org": "OpenStax",
+        "ted.com": "TED",
+        "ed.ted.com": "TED-Ed",
         "cdc.gov": "CDC",
         "nih.gov": "NIH",
         "nimh.nih.gov": "NIMH",
@@ -722,9 +733,11 @@ def source_ref_allowed_for_video(ref: dict[str, Any]) -> bool:
     """
     host = str(ref.get("host") or "").removeprefix("www.").lower()
     key = str(ref.get("key") or "")
+    if host in HARD_BLOCKING_HOSTS:
+        return False
     if key == "readingUrl":
         return True
-    if host in {"openstax.org", "cdc.gov", "nih.gov", "nimh.nih.gov", "nida.nih.gov", "apa.org", "samhsa.gov"}:
+    if host in {"openstax.org", "ted.com", "ed.ted.com", "cdc.gov", "nih.gov", "nimh.nih.gov", "nida.nih.gov", "apa.org", "samhsa.gov"}:
         return True
     return False
 
@@ -1217,17 +1230,17 @@ def update_state_row(state: dict[str, Any], candidate: Candidate, *, status: str
 def commit_and_push(approved_slugs: list[str]) -> int:
     if TEACHING_ROOT.is_symlink():
         # teaching-videos lives on an external volume (T9) and is intentionally not
-        # tracked here. The lesson artifacts must NOT be staged (that would commit
-        # mass deletions of the old tracked tree), but the website manifest lives in
+        # tracked here. The lesson artifacts must NOT be staged directly from the
+        # external artifact tree, but the website manifest lives in
         # the main repo and must still be committed/pushed so the site reflects newly
         # uploaded videos. Stage ONLY the manifest by exact path.
         manifest = "public/data/lessons-manifest.json"
         if not (ROOT / manifest).exists():
-            print("[git] manifest missing; nothing to commit (teaching-videos is a symlink)")
+            print("[git] manifest missing; nothing to commit (T9-backed teaching-videos ignored)")
             return 0
         run_checked(["git", "add", "--", manifest])
         if subprocess.run(["git", "diff", "--cached", "--quiet", "--", manifest], cwd=ROOT).returncode == 0:
-            print("[git] no manifest changes to commit (teaching-videos is a symlink)")
+            print("[git] no manifest changes to commit (T9-backed teaching-videos ignored)")
             return 0
         rc = run_checked(
             ["git", "commit", "-m", f"auto: sync lessons manifest {dt.datetime.now().date().isoformat()}", "--", manifest]
@@ -1263,6 +1276,9 @@ def orchestrate(args: argparse.Namespace) -> int:
         "generated_at": now_utc(),
         "dry_run": args.dry_run,
         "target_grade": args.target_grade,
+        "upload_strategy": "video_first_no_caption_thumbnail_playlist_sync_cleanup"
+        if not args.full_upload_followups
+        else "full_upload_with_caption_thumbnail_playlist_sync_cleanup",
         "course_sequence": grade_course_sequence(args.target_grade),
         "selected": [],
         "course_design": [],
@@ -1453,8 +1469,10 @@ def orchestrate(args: argparse.Namespace) -> int:
         upload_cmd = [sys.executable, str(YT_QUEUE), "upload", "--gate-ready", "--max", str(args.upload_max), "--privacy", args.privacy]
         if args.ignore_upload_quota_estimate:
             upload_cmd.append("--ignore-quota-estimate")
+        if not args.full_upload_followups:
+            upload_cmd.extend(["--no-captions", "--no-thumbnail", "--no-playlist", "--no-sync", "--no-cleanup"])
         upload_rc = run_checked(upload_cmd)
-        if upload_rc == 0:
+        if upload_rc == 0 and args.full_upload_followups:
             run_checked([sys.executable, str(SYNC_CHANNEL), "--apply"])
             if args.auto_commit:
                 return commit_and_push([row["slug"] for row in approved_rows])
@@ -1487,6 +1505,14 @@ def main() -> int:
     ap.add_argument("--ignore-upload-quota-estimate", action="store_true")
     ap.add_argument("--skip-existing-approved-upload", action="store_true")
     ap.add_argument("--no-course-design-repair", action="store_true")
+    ap.add_argument(
+        "--full-upload-followups",
+        action="store_true",
+        help=(
+            "upload captions, thumbnails, playlists, per-upload sync, and cleanup. "
+            "Default is video-first upload so captions/metadata reconciliation cannot cap daily video volume."
+        ),
+    )
     ap.add_argument("--auto-commit", action="store_true")
     ap.add_argument("--skip-network-check", action="store_true")
     ap.add_argument("--no-render-mp4", dest="render_mp4", action="store_false", default=True)

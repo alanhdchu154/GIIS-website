@@ -123,7 +123,8 @@ school (different teacher per class) rather than one robot reading everything.
 | Psychology (Foundations, AP Psych, Cognitive, etc.)   | `en-US-BrianNeural`         | Thoughtful + warm. Psych needs "I'm listening carefully" tone. |
 | PE / Health (Athletic, Health & Wellness, Sports Mgmt)| `en-US-JennyNeural`         | Coach energy. "Let's move." |
 | Computer Science (AP CS A, Programming, Software Eng.)| `en-US-GuyNeural`           | Academic authority. Same voice as walkthrough Pathway scene — continuity. Distinct from Math's Aria. |
-| Electives / Business (default)                         | `en-US-AriaNeural`          | Safe default when none of the above fits. |
+| Business / Entrepreneurship / Finance / Marketing      | `en-US-RogerNeural`         | Practical, professional classroom tone; keeps business courses distinct from math and avoids currently unreliable Davis voice synthesis. |
+| Electives (default)                                    | `en-US-AriaNeural`          | Safe default when none of the above fits. |
 
 **Rate**: stay at `-3%` for instructional clarity unless the user requests faster/slower.
 
