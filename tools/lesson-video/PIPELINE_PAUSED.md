@@ -19,8 +19,9 @@ Historical hold state:
 - Production scope on hold: Grade 10 auto-expansion, starting with Algebra II
 - Last queue snapshot at pause: 199 uploaded, 6 pending Algebra II videos,
   0 no-MP4, 205 total
-- Captions, thumbnails, playlists, manifest/channel sync, and cleanup are
-  reconciliation backlog, not video-upload blockers
+- Captions, thumbnails, manifest/channel sync, and cleanup are reconciliation
+  backlog, not video-upload blockers; playlist membership is part of normal
+  daily uploads after the 2026-06-19 policy update.
 
 Before making future producer/catch-up changes, run:
 
@@ -35,8 +36,9 @@ Use the lane report to choose one bounded lane:
   when they improve parent/CEEB trust.
 - Quality-debt lane: repair old `needs_revision` lessons in small batches,
   separate from new production.
-- Reconciliation lane: captions, thumbnails, playlists, and manifest/channel
-  sync after quota reset or when explicitly scheduled.
+- Reconciliation lane: captions, thumbnails, and manifest/channel sync after
+  quota reset or when explicitly scheduled. Playlist backfill is only for
+  historical gaps.
 
 Do not change the active 40-capacity schedule just because pending videos or
 old quality-debt rows exist.

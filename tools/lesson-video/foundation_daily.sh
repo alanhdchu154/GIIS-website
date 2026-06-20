@@ -51,7 +51,7 @@ fi
   echo "  review model:${FOUNDATION_REVIEW_MODEL:-opus}"
   echo
   "$PYTHON" tools/lesson-video/foundation_daily_orchestrator.py \
-    --target-grade "${FOUNDATION_TARGET_GRADE:-9}" \
+    --target-grade "${FOUNDATION_TARGET_GRADE:-10}" \
     --max-modules "${FOUNDATION_MAX_MODULES:-10}" \
     --upload-max "${FOUNDATION_UPLOAD_MAX:-10}" \
     --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}" \

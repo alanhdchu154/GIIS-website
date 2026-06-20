@@ -222,7 +222,7 @@ def classify_lanes(
         "producer": {
             "status": "hold" if paused else "available",
             "reason": "automation is paused for speed/ROI review" if paused else "automation is not paused",
-            "next_action": "do not start new Grade 10 production until ROI is approved",
+            "next_action": "continue the bounded Grade 10 video-first trial when queue is empty or below target",
         },
         "upload": {
             "status": "manual-only" if pending else "empty",

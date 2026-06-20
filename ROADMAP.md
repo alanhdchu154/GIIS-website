@@ -13,22 +13,34 @@ foundation-video pipeline stabilizes. The next phase is proof over volume:
 parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
 
-2026-06-18 evening lesson-video strategy update: G9 foundation videos are
+2026-06-19 evening lesson-video strategy update: G9 foundation videos are
 complete enough for the current parent-trust proof path, and Alan approved
 resuming the unified Codex automation as a 40-capacity trial. Current evidence:
-the no-caption/no-thumbnail/no-playlist/no-sync run reached 39 successful
-non-AP foundation uploads on the 2026-06-18 America/Chicago local date without
+the no-caption/no-thumbnail/no-sync run reached 40 successful
+non-AP foundation uploads on the 2026-06-19 America/Chicago local date without
 hitting a true video upload/channel limit. The active heartbeat now runs
 producer slots at 03:00 / 08:00 / 13:00 / 18:00 CT, each capped at 10
 modules/uploads, and a 20:00 CT dashboard/count/top-up lane that tops up only to
 40. Same-day capacity counts must use local `teaching-videos/**/script.json`
 YouTube fields converted to America/Chicago local date; the public lesson
 manifest can lag real uploads and is sync/reconciliation evidence, not the
-capacity source of truth. Standard YouTube captions remain a
-quality/accessibility backlog, not a daily production blocker. Playlist/channel
-organization is the first reconciliation priority after video capacity, but it
-should run as a separate bounded lane. Do not force weak lessons through the
-quality gate: upload only through `yt_queue.py upload --gate-ready`.
+capacity source of truth. Playlist membership is now part of normal daily
+upload hygiene, so daily producer/top-up uploads should still skip captions,
+thumbnails, manifest sync, and cleanup, but should not skip playlist add/create.
+The 20:00 workflow can run playlist reconciliation for historical gaps or failed
+per-upload playlist adds. Standard YouTube captions remain a quality/accessibility
+backlog, not a daily production blocker; use leftover end-of-day quota for
+captions only after the 40-video target and playlist hygiene are satisfied. Do
+not force weak lessons through the quality gate: upload only through
+`yt_queue.py upload --gate-ready`.
+
+2026-06-20 runner correction: the active foundation wrapper now defaults to
+Grade 10 (`FOUNDATION_TARGET_GRADE=10`) for the upload-cap trial because Grade
+9 is complete. A producer slot should generate the next Grade 10 lesson after
+any bounded existing-ready catch-up, rather than silently falling back to a
+completed Grade 9 queue. Existing gate-ready lessons count against the run's
+module cap so rescue/top-up runs stay bounded and do not create false next
+module blockers.
 
 2026-06-18 syllabus/resource/teacher-voice policy update: the video pipeline
 now treats required course resources as part of the production gate. Course

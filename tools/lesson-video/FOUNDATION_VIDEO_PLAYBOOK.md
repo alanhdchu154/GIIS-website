@@ -136,9 +136,9 @@ college admissions claims in foundation lesson titles or descriptions.
   the dashboard.
 - Outside 03/08/13/18/20 CT, the heartbeat should skip heavy work and not read
   repo state, run git/npm/Python/cc, or touch files.
-- Default target grade: Grade 9 (`FOUNDATION_TARGET_GRADE=9`).
-- Selection is deterministic: Grade 9 course sequence first, then module order;
-  failed modules may be retried before new work.
+- Default target grade: Grade 10 (`FOUNDATION_TARGET_GRADE=10`) for the active
+  upload-cap trial. Selection is deterministic by grade course sequence, then
+  module order; failed modules may be retried before new work.
 - Before producing a course series, the orchestrator must write/pass
   `teaching-videos/_audit/course-design/<course-slug>.json`.
 - If course design fails, run the built-in safe repair path, then review again.
@@ -176,13 +176,17 @@ and quality-debt work. Choose one lane:
 
 - Producer lane: new video creation and gate-ready upload in the approved
   03/08/13/18 CT video-first slots.
+- Active default target: Grade 10. Grade 9 is complete for the current local
+  uploaded queue, so normal automation should not fall back to Grade 9 unless
+  `FOUNDATION_TARGET_GRADE=9` is intentionally set for a repair/retry pass.
 - Upload lane: already rendered and approved pending videos, bounded/manual
   when needed.
 - Quality-debt lane: old `needs_revision` repair, small batches only.
-- Reconciliation lane: captions, thumbnails, playlists, manifest/channel sync,
-  and cleanup after quota reset or when explicitly scheduled. Playlist/channel
-  organization is the first reconciliation priority; standard captions remain
-  backlog unless Alan authorizes a caption slot.
+- Reconciliation lane: captions, thumbnails, manifest/channel sync, and cleanup
+  after quota reset or when explicitly scheduled. Playlist membership is part
+  of normal daily uploads; separate playlist backfill is only for historical
+  gaps. Standard captions remain backlog unless Alan authorizes a caption slot
+  or the end-of-day workflow has spare quota after video/playlist work.
 
 ## Acceptance Criteria
 

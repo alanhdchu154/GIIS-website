@@ -33,6 +33,7 @@
     "yt:status": "bash tools/giis_python.sh tools/youtube-upload/yt_queue.py status",
     "yt:quota": "bash tools/youtube-upload/upload_approved_sync.sh --quota",
     "yt:upload": "bash tools/giis_python.sh tools/youtube-upload/yt_queue.py upload",
+    "yt:reconcile-playlists": "bash tools/giis_python.sh tools/youtube-upload/reconcile_playlists.py",
     "yt:upload-approved": "bash tools/youtube-upload/upload_approved_sync.sh --no-sync",
     "yt:upload-approved:sync": "bash tools/youtube-upload/upload_approved_sync.sh",
     "lesson:cc-foundation": "bash tools/giis_python.sh tools/lesson-video/cc_foundation_worker.py",

@@ -1276,7 +1276,7 @@ def orchestrate(args: argparse.Namespace) -> int:
         "generated_at": now_utc(),
         "dry_run": args.dry_run,
         "target_grade": args.target_grade,
-        "upload_strategy": "video_first_no_caption_thumbnail_playlist_sync_cleanup"
+        "upload_strategy": "video_first_no_caption_thumbnail_sync_cleanup_with_playlist"
         if not args.full_upload_followups
         else "full_upload_with_caption_thumbnail_playlist_sync_cleanup",
         "course_sequence": grade_course_sequence(args.target_grade),
@@ -1354,6 +1354,10 @@ def orchestrate(args: argparse.Namespace) -> int:
                         "source": "existing_gate_ready",
                     })
                 print(f"[ready-existing] {candidate.target_slug} score={lesson_audit.get('quality_score')}", flush=True)
+                # Existing gate-ready lessons still consume this run's bounded
+                # module slot; otherwise a catch-up upload can unexpectedly
+                # probe or block a second module after satisfying max-modules.
+                production_count += 1
                 continue
 
         audit = resource_audit(candidate.module, network=not args.skip_network_check, timeout=args.url_timeout)
@@ -1470,7 +1474,7 @@ def orchestrate(args: argparse.Namespace) -> int:
         if args.ignore_upload_quota_estimate:
             upload_cmd.append("--ignore-quota-estimate")
         if not args.full_upload_followups:
-            upload_cmd.extend(["--no-captions", "--no-thumbnail", "--no-playlist", "--no-sync", "--no-cleanup"])
+            upload_cmd.extend(["--no-captions", "--no-thumbnail", "--no-sync", "--no-cleanup"])
         upload_rc = run_checked(upload_cmd)
         if upload_rc == 0 and args.full_upload_followups:
             run_checked([sys.executable, str(SYNC_CHANNEL), "--apply"])
@@ -1509,8 +1513,9 @@ def main() -> int:
         "--full-upload-followups",
         action="store_true",
         help=(
-            "upload captions, thumbnails, playlists, per-upload sync, and cleanup. "
-            "Default is video-first upload so captions/metadata reconciliation cannot cap daily video volume."
+            "upload captions, thumbnails, per-upload sync, and cleanup. "
+            "Default is video-first upload with playlist adds, while captions/thumbnail/sync/cleanup "
+            "stay off so reconciliation work cannot cap daily video volume."
         ),
     )
     ap.add_argument("--auto-commit", action="store_true")

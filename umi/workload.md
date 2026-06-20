@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-06-18
+Last updated: 2026-06-20
 
 This file is the current GIIS active Codex / cc worker handoff, not a historical worklog. Older
 completed items were removed from the active board; use `ROADMAP.md` for the
@@ -30,6 +30,17 @@ Next action:
 
 Current Umi note:
 
+- 2026-06-20 10:36 CT runner fix: the daily foundation wrapper now defaults to
+  `FOUNDATION_TARGET_GRADE=10` because Grade 9 is complete for the current
+  upload-cap trial. This fixes the 08:00 miss pattern where the automation
+  could wake, find no Grade 9 production candidates, and only handle existing
+  upload-ready work instead of generating the next Grade 10 lesson. Existing
+  gate-ready lessons now count against the run's `--max-modules` cap, so a
+  one-module catch-up does not approve/upload one lesson and then unexpectedly
+  probe or block the next candidate. Current queue after verification is English
+  II Literature M3 pending upload and M4 present without MP4; the next producer
+  slot should handle them under the Grade 10 default rather than falling back to
+  Grade 9.
 - 2026-06-18 20:32 CT video automation update: Alan later approved resuming the
   unified Codex `GIIS_影片_pipeline` as a video-first 40/day capacity trial,
   superseding the earlier 18:26 pause / 19:10 stop-at-G9 recommendation.

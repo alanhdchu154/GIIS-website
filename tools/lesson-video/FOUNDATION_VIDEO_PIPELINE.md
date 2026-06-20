@@ -268,8 +268,11 @@ As of the 2026-06-18 40-capacity update, one Codex heartbeat runs the whole
 daily loop in the fixed `GIIS_影片_producer` chat: 03:00 / 08:00 / 13:00 /
 18:00 CT producer slots, max 10 modules and 10 uploads per producer run, plus a
 20:00 CT dashboard/count/top-up lane. The experimental pace is 40 videos/day
-when quality gates stay clean. This replaces the separate dashboard automation
-and the older 7 x 3 split-batch framing.
+when quality gates stay clean. The active producer default is now Grade 10
+because Grade 9 has already reached the local uploaded queue target; override
+with `FOUNDATION_TARGET_GRADE` only for an intentional grade-specific run. This
+replaces the separate dashboard automation and the older 7 x 3 split-batch
+framing.
 The cron jobs use `FOUNDATION_CC_MODEL=sonnet`,
 `FOUNDATION_REVIEW_MODEL=opus`, `FOUNDATION_CC_BUDGET_USD=10` and
 `FOUNDATION_REVIEW_BUDGET_USD=3`. Those values are local guardrails for stuck
@@ -286,10 +289,11 @@ successful upload count. If only transcript/caption upload returns
 video as uploaded and report the caption as a retry item for the next quota
 window.
 
-As of 2026-06-18, the default producer upload phase is video-first:
-`yt_queue.py` is called with no captions, thumbnails, playlist mutation,
-per-upload sync, or cleanup follow-up. This protects the daily video limit test
-from general-quota tasks. Standard captions, playlist membership, thumbnails,
+As of 2026-06-19, the default producer upload phase is video-first with course
+playlist membership: `yt_queue.py` is called with no captions, thumbnails,
+per-upload sync, or cleanup follow-up, but playlist add/create remains on.
+This keeps daily video organization usable without letting caption or thumbnail
+quota cap the video upload target. Standard captions, thumbnails,
 manifest/channel sync, and cleanup are reconciliation work for a later quota
 window. Use `--full-upload-followups` only when intentionally running the full
 metadata/caption path instead of a video-capacity run.
