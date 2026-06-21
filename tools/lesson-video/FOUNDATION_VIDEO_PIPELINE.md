@@ -145,7 +145,10 @@ requires Umi repair instead of silent repetition.
 ## Course And Series Order
 
 The selector is deterministic, not random. The current default target grade is
-Grade 9. Within Grade 9, the core sequence starts:
+Grade 10 because Grade 9 has already reached the local uploaded queue target
+for the active upload-cap trial. Use `FOUNDATION_TARGET_GRADE=9` only for an
+intentional Grade 9 repair/retry pass. Within a target grade, the core sequence
+starts:
 
 1. Algebra I
 2. English I
@@ -155,8 +158,8 @@ Grade 9. Within Grade 9, the core sequence starts:
 6. Health & Wellness
 7. Digital Literacy
 
-After those, remaining Grade 9 courses are considered in the repository-owned
-sequence defined in `foundation_daily_orchestrator.py`.
+After those, remaining courses in the target grade are considered in the
+repository-owned sequence defined in `foundation_daily_orchestrator.py`.
 
 Before the first unfinished module in a course series is produced, the
 orchestrator writes/refreshes:

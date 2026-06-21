@@ -42,6 +42,13 @@ completed Grade 9 queue. Existing gate-ready lessons count against the run's
 module cap so rescue/top-up runs stay bounded and do not create false next
 module blockers.
 
+2026-06-21 source-of-truth alignment: `FOUNDATION_VIDEO_PIPELINE.md` now matches
+the Grade 10 trial policy above. Current T9 evidence remains healthy:
+`teaching-videos` is symlinked to
+`/Volumes/T9-Active/Projects/giis-website/teaching-videos`, inventory/release
+gates pass, and generated lesson-video artifacts should stay off git. Separate
+dirty producer-code changes still need cc/Alan acceptance before commit.
+
 2026-06-18 syllabus/resource/teacher-voice policy update: the video pipeline
 now treats required course resources as part of the production gate. Course
 series still run a syllabus/module design review before production, and all 93
