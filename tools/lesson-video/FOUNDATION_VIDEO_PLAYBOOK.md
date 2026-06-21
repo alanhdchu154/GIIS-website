@@ -155,8 +155,17 @@ college admissions claims in foundation lesson titles or descriptions.
   per module and independent-review budget is `FOUNDATION_REVIEW_BUDGET_USD=3`.
   These are local stop conditions, not YouTube quota; keep them high enough for
   heavier science lessons while still bounding stuck modules.
+- Throughput guardrail: ten modules is a slot cap, not a guaranteed fill.
+  Recent Grade 10 runs show fresh production usually costs about 7-14 minutes
+  per lesson plus about 1-2 minutes for the independent Opus review. If Claude
+  Code reports the five-hour session limit, stop the batch and resume after the
+  displayed reset instead of selecting more modules.
+- T9 symlink guardrail: `teaching-videos/` lives on T9. Every generated
+  `build_slides.py` must use the handoff's robust `slide_kit` bootstrap; do not
+  use `Path(__file__).resolve().parents[...]`, which resolves through
+  `/Volumes/T9-Active` and can make `slide_kit` disappear.
 - Upload privacy: `unlisted`.
-- Upload path: `yt_queue.py upload --gate-ready --max 7 --privacy unlisted`.
+- Upload path: `yt_queue.py upload --gate-ready --max <FOUNDATION_UPLOAD_MAX> --privacy unlisted`.
 - The local quota estimate is conservative and the daily runner may override it
   during the trial. Stop only for a true video upload/channel-limit error.
 - If transcript/caption upload alone hits `quotaExceeded` after the video,

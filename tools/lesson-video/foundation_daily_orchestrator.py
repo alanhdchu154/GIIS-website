@@ -56,9 +56,41 @@ sys.path.insert(0, str(ROOT / "tools" / "lesson-video"))
 from audit_lessons import audit_lesson  # noqa: E402
 
 
-DEFAULT_TARGET_GRADE = 9
+DEFAULT_TARGET_GRADE = 10
 COURSE_DESIGN_POLICY_VERSION = "g9_course_design_gate_v2"
 CC_RATE_LIMIT_RC = 75
+BUILD_SLIDES_BOOTSTRAP = '''\
+import os
+import sys
+from pathlib import Path
+
+
+def _find_slide_kit() -> str | None:
+    """Find tools/lesson-video even when teaching-videos is a T9 symlink."""
+    for raw_path in sys.path:
+        if raw_path and (Path(raw_path) / "slide_kit.py").exists():
+            return None
+
+    here = Path(os.path.abspath(__file__)).parent
+    for _ in range(12):
+        candidate = here / "tools" / "lesson-video"
+        if (candidate / "slide_kit.py").exists():
+            return str(candidate)
+        parent = here.parent
+        if parent == here:
+            break
+        here = parent
+
+    fallback = Path.home() / "giis-website" / "tools" / "lesson-video"
+    if (fallback / "slide_kit.py").exists():
+        return str(fallback)
+    return None
+
+
+_slide_kit_dir = _find_slide_kit()
+if _slide_kit_dir:
+    sys.path.insert(0, _slide_kit_dir)
+'''
 
 GRADE_9_COURSE_SEQUENCE = [
     "algebra-i",
@@ -987,6 +1019,20 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
     reviewer set required by `audit_lessons.py`; the independent wrapper still
     owns `_review_independent_pass.json` and `_review_source_alignment.json`.
 
+    ## `build_slides.py` Bootstrap Contract
+
+    `teaching-videos/` is a symlink to T9 storage, so do not use
+    `Path(__file__).resolve().parents[...]` to find the repo root. It resolves
+    through `/Volumes/T9-Active` and breaks `slide_kit` imports. Start
+    `build_slides.py` with this exact bootstrap, then import from `slide_kit`:
+
+    ```python
+{textwrap.indent(BUILD_SLIDES_BOOTSTRAP.rstrip(), "    ")}
+    ```
+
+    Use repo-relative assets through the discovered `slide_kit` path or the
+    lesson cwd. Do not run broad filesystem searches to locate `slide_kit`.
+
     ## Expert Lens Contract
 
     The lesson must visibly use the Learn Portal Expert Lens:
@@ -1054,25 +1100,11 @@ def run_stream(cmd: list[str], *, cwd: Path = ROOT, timeout: int | None = None) 
     proc = subprocess.Popen(cmd, cwd=cwd, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
     assert proc.stdout is not None
     saw_tool_progress = False
-    saw_success_result = False
     try:
         for line in proc.stdout:
             if "[cc:tool]" in line:
                 saw_tool_progress = True
-            if "[cc:result] status=success" in line or "[cc-review:result] status=success" in line:
-                saw_success_result = True
             print(line, end="", flush=True)
-            if saw_success_result:
-                break
-        if saw_success_result and proc.poll() is None:
-            proc.terminate()
-        if saw_success_result:
-            try:
-                proc.wait(timeout=10)
-            except subprocess.TimeoutExpired:
-                proc.kill()
-                proc.wait()
-            return 0, saw_tool_progress
         return proc.wait(timeout=timeout), saw_tool_progress
     except subprocess.TimeoutExpired:
         proc.terminate()
@@ -1414,7 +1446,11 @@ def orchestrate(args: argparse.Namespace) -> int:
             if rc != 0 or not saw_tool:
                 details = {"returncode": rc, "saw_tool_progress": saw_tool}
                 update_state_row(state, candidate, status="review_blocked", details=details)
-                run_report["blocked"].append({**row, "reason": "independent_review_blocked", **details})
+                reason = "cc_rate_limited" if rc == CC_RATE_LIMIT_RC else "independent_review_blocked"
+                run_report["blocked"].append({**row, "reason": reason, **details})
+                if rc == CC_RATE_LIMIT_RC:
+                    print("[cc-review:rate-limit] stopping batch before selecting more modules", flush=True)
+                    break
                 continue
         elif args.no_independent_review:
             print("[independent-review] skipped by --no-independent-review")

@@ -142,6 +142,21 @@ non-zero, or produces no tool progress, the module is marked `cc_blocked` and
 will be prioritized for retry before new modules. After two failed attempts, it
 requires Umi repair instead of silent repetition.
 
+Throughput note from the 2026-06-20/21 Grade 10 trial: a normal production
+worker can take roughly 7-14 minutes per lesson, and the Opus second-pass review
+adds roughly 1-2 minutes. A `FOUNDATION_MAX_MODULES=10` slot is therefore a cap,
+not a promise that ten brand-new videos will finish before a Claude Code
+five-hour session bucket fills. If Claude Code emits a five-hour session limit
+event, the wrapper must return code 75 and the orchestrator must stop selecting
+new modules until the reset.
+
+T9 storage note: `teaching-videos/` is symlinked to T9. Generated
+`build_slides.py` files must not use `Path(__file__).resolve().parents[...]` to
+find `tools/lesson-video`, because that resolves through `/Volumes/T9-Active`
+and breaks `slide_kit` imports. The daily handoff includes the required robust
+bootstrap; keep using that template instead of letting each worker rediscover
+the path fix.
+
 ## Course And Series Order
 
 The selector is deterministic, not random. The current default target grade is

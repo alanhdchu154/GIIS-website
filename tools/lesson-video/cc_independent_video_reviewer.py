@@ -18,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 LOG_DIR = ROOT / "umi" / "reviews" / "cc-runs"
+CC_RATE_LIMIT_RC = 75
 
 sys.path.insert(0, str(ROOT / "tools" / "lesson-video"))
 from audit_lessons import sha256_review_script  # noqa: E402
@@ -148,6 +149,17 @@ def print_event(obj: dict) -> None:
         )
 
 
+def is_rate_limit_event(obj: dict) -> bool:
+    if obj.get("type") == "rate_limit_event":
+        return True
+    if obj.get("error") == "rate_limit":
+        return True
+    if obj.get("api_error_status") == 429:
+        return True
+    result = obj.get("result")
+    return isinstance(result, str) and "hit your session limit" in result.lower()
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("target", type=Path)
@@ -204,6 +216,7 @@ def main() -> int:
     proc.stdin.close()
 
     try:
+        rate_limited = False
         success_result = False
         with log_path.open("w", encoding="utf-8") as log:
             for line in proc.stdout:
@@ -211,6 +224,7 @@ def main() -> int:
                 log.flush()
                 try:
                     obj = json.loads(line)
+                    rate_limited = rate_limited or is_rate_limit_event(obj)
                     if obj.get("type") == "result" and obj.get("subtype") == "success" and not obj.get("is_error"):
                         success_result = True
                     print_event(obj)
@@ -221,6 +235,12 @@ def main() -> int:
         if success_result and proc.poll() is None:
             proc.terminate()
         rc = proc.wait(timeout=10 if success_result else args.timeout_seconds)
+        if rate_limited and not success_result:
+            print(
+                "\n[cc-review:rate-limit] Claude Code session limit reached; stop this batch and retry after reset.",
+                flush=True,
+            )
+            return CC_RATE_LIMIT_RC
         if success_result:
             return 0
         return rc
