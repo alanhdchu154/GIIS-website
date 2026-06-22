@@ -150,6 +150,16 @@ five-hour session bucket fills. If Claude Code emits a five-hour session limit
 event, the wrapper must return code 75 and the orchestrator must stop selecting
 new modules until the reset.
 
+Physics throughput note from the 2026-06-21 M9/M10 run: the slow part is often
+worker planning and bespoke PIL diagram code, not YouTube upload or image-model
+generation. Physics handoffs now include a fast path and should prefer
+`tools/lesson-video/physics_slide_kit.py` for data-first Physics slide
+templates, plus `tools/lesson-video/physics_diagrams.py` for lower-level arrows,
+sine waves, wave-property labels, Doppler wavefronts, interference panels,
+circular-motion diagrams, and worked-example rows. Use custom PIL only for
+module-specific annotations. Normal workers should not open global playbooks
+unless a gate result conflicts with the handoff.
+
 T9 storage note: `teaching-videos/` is symlinked to T9. Generated
 `build_slides.py` files must not use `Path(__file__).resolve().parents[...]` to
 find `tools/lesson-video`, because that resolves through `/Volumes/T9-Active`

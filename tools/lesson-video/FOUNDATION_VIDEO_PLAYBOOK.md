@@ -160,6 +160,13 @@ college admissions claims in foundation lesson titles or descriptions.
   per lesson plus about 1-2 minutes for the independent Opus review. If Claude
   Code reports the five-hour session limit, stop the batch and resume after the
   displayed reset instead of selecting more modules.
+- Physics diagram guardrail: use `tools/lesson-video/physics_slide_kit.py` for
+  data-first Physics slide templates and `tools/lesson-video/physics_diagrams.py`
+  before writing custom PIL geometry for common physics visuals. The helpers
+  cover labeled arrows, sine waves, wave-property labels, Doppler wavefronts,
+  interference panels, circular-motion diagrams, and worked-example rows.
+  Physics workers should read the handoff/packet/briefs first and open global
+  playbooks only as fallback when a gate result conflicts with the handoff.
 - T9 symlink guardrail: `teaching-videos/` lives on T9. Every generated
   `build_slides.py` must use the handoff's robust `slide_kit` bootstrap; do not
   use `Path(__file__).resolve().parents[...]`, which resolves through

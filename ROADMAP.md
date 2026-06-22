@@ -49,6 +49,103 @@ the Grade 10 trial policy above. Current T9 evidence remains healthy:
 gates pass, and generated lesson-video artifacts should stay off git. Separate
 dirty producer-code changes still need cc/Alan acceptance before commit.
 
+2026-06-21 03:00 CT producer evidence: the first post-fix Grade 10 producer
+slot uploaded 10/10 non-AP foundation lessons with playlist membership:
+Marketing & Communication M2-M8 and Physics Fundamentals M1-M3. Artifact-backed
+same-day count is 10/40; queue status is 280 uploaded / 0 pending / 0 no-MP4;
+pending release gate is 0; manifest alignment is 0 warnings. Producer slots
+still skip manifest sync, so same-day manifest count can lag real uploads.
+
+2026-06-21 Physics throughput optimization: M9/M10-style Physics modules were
+slow mainly because each worker cold-started the full production strategy and
+rewrote bespoke deterministic PIL diagrams, not because of YouTube upload or AI
+image generation. Future Physics handoffs now include a Worker Fast Path and
+point workers to reusable `physics_slide_kit.py` / `physics_diagrams.py`
+helpers, so common formula cards, worked traces, waves, Doppler, interference,
+circular-motion diagrams, and arrows should be data-first instead of recreated
+from scratch. Upload should remain serial even if future 03:00/08:00 production
+uses multiple workers.
+
+2026-06-21 09:45 CT progress refresh: the 08:00 producer slot is still active,
+currently working on Physics Fundamentals M11. The slot has produced seven
+gate-ready pending Physics lessons (M4-M10), with queue status 280 uploaded /
+7 pending / 0 no-MP4 and pending release gate 7 ready / 0 blocked. Today's
+artifact-backed uploaded count remains 10/40 because those seven are ready but
+not uploaded yet; same-day upload count should only increase after `yt_queue.py
+upload --gate-ready` writes YouTube IDs into each local `script.json`.
+
+2026-06-21 10:34 CT Alan-directed producer restart: no active
+`foundation_daily` / `cc_foundation_worker` / `yt_queue` process was safely
+identifiable, so the 08:00 slot had already ended or cleared. The manual
+bounded restart ran the standard video-first command with the new Physics fast
+path available. It reused eight existing ready Physics lessons (M4-M11),
+repaired the partial/no-MP4 M12 Electric Circuits lesson to gate score 100, and
+uploaded 9/9 approved lessons with playlist membership and no failures:
+Physics M4-M12. Artifact-backed same-day count is now 19/40. Queue status is
+289 uploaded / 1 pending / 0 no-MP4 / 290 total; the only pending lesson is
+Physics M13 Magnetism & Electromagnetism, blocked by the release gate at score
+64 because of dense narration (`pass_with_minor_notes`), not upload quota or
+playlist failure. Manifest alignment remains 0 warnings, and the dashboard was
+updated. Follow-up: split/compress M13 dense sections before the next upload
+attempt; also fix the upstream Physics Expert Lens data hygiene noted by the
+reviewer because it still contains biology-flavored transfer wording.
+
+2026-06-21 15:41 CT 13:00 producer evidence: the scheduled producer completed
+without overlap, repaired/uploaded Physics M13, and uploaded five Pre-Calculus
+lessons with playlist membership: Pre-Calculus M1, M3, M5, M6, and M7. The run
+produced 6/6 successful uploads and 0 failed uploads; no `quotaExceeded` or
+playlist failure appeared. Artifact-backed same-day count is now 25/40. Queue
+status is 295 uploaded / 4 pending / 0 no-MP4 / 299 total, dashboard is updated,
+and manifest alignment remains 0 warnings. The four pending lessons are gate
+backlog, not upload blockers: Physics M14 score 94, Pre-Calculus M2 score 64,
+Pre-Calculus M4 score 88, and Pre-Calculus M8 score 64. The Pre-Calculus lane
+shows the same throughput issue Alan asked about: math workers still spend too
+much time cold-reading helpers and hand-coding diagrams, and dense first drafts
+often fail the strict score-100 gate. Follow-up before the 18:00/20:00 lanes:
+add a Pre-Calculus/math fast path that mirrors the Physics helper pattern,
+starts from passed M5/M6/M7 modules, uses T9-safe shell/Python writes instead of
+large parallel Write-tool calls, and enforces a lower narration budget before
+rendering.
+
+2026-06-21 19:03 CT 18:00 producer evidence: the scheduled producer started
+without overlap and focused on quality-gate backlog. Physics M14 remained
+blocked at score 94 because the worker would not trim without a fresh review
+cycle. Pre-Calculus M2 was repaired from score 64 to 100, re-reviewed by Opus,
+and uploaded. Pre-Calculus M4 remained blocked at score 88 after review because
+two sections still exceed the strict word limit. Pre-Calculus M8 was repaired
+from score 64 to 100 and re-reviewed by Opus, but the producer was stopped
+before upload because the gate reused cached audio and the MP4 still showed the
+old ~9.6 min runtime after the script trim. Codex cleared only M8's generated
+audio/MP4 cache, reran `foundation_video_gate.py --render-mp4`, confirmed 11
+fresh TTS files and a new ~7.1 min MP4, then approved/uploaded M2 and M8 through
+`yt_queue.py upload --gate-ready` with playlist membership. 18:00 upload result:
+2 uploaded / 0 failed, no `quotaExceeded`. Artifact-backed same-day count is
+now 27/40. Queue status is 297 uploaded / 2 pending / 0 no-MP4 / 299 total;
+pending release gate has 0 ready and 2 needs_revision (Physics M14 score 94,
+Pre-Calculus M4 score 88); manifest alignment remains 0 warnings; dashboard was
+updated. Manifest same-day count remains 0 because producer slots skip manifest
+sync. Follow-up: make the orchestrator invalidate audio/MP4 cache when
+`script.json` changes before a render, and add the Pre-Calculus/math fast path
+so workers do not repeatedly rediscover word-count and review-SHA rules.
+
+2026-06-21 20:08 CT dashboard/top-up evidence: the 20:00 lane refreshed queue,
+pending gate, manifest alignment, and artifact-backed same-day count before
+top-up. Count was 27/40, so gap=13 and the lane correctly ran one bounded
+top-up with max 10 modules/uploads. The top-up selected Physics M14 first, but
+Claude Code returned a session-limit/rate-limit event with no tool progress;
+the orchestrator stopped selection before any new modules and the gated upload
+queue found no approved pending lessons. No additional uploads happened in this
+20:00 invocation, leaving the final same-day artifact-backed count at 27/40 and
+remaining gap 13. Queue remains 297 uploaded / 2 pending / 0 no-MP4 / 299 total.
+Pending release gate remains 0 ready and 2 needs_revision: Physics M14 score 94
+and Pre-Calculus M4 score 88. Manifest alignment remains 0 warnings; manifest
+same-day count remains 0 because manifest sync was not part of producer slots.
+Playlist reconciliation ran with `--apply`: all 29 course playlists reported
+missing=0, `items_to_add=[]`, quota estimate 0. Dashboard was updated after
+top-up/reconciliation. Next action after the Claude Code reset is a narrow
+repair pass for M14/M4 or the next Grade 10 module; do not force either
+score<100 backlog lesson through upload.
+
 2026-06-18 syllabus/resource/teacher-voice policy update: the video pipeline
 now treats required course resources as part of the production gate. Course
 series still run a syllabus/module design review before production, and all 93

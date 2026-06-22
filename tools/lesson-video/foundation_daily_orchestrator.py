@@ -962,6 +962,79 @@ def render_visual_brief(packet: dict[str, Any]) -> str:
     """)
 
 
+def render_physics_helper_contract(course_name: str) -> str:
+    if "physics" not in course_name.lower():
+        return ""
+    return textwrap.dedent("""\
+    ## Physics Diagram Helper Contract
+
+    For Physics Fundamentals modules, do not rebuild common precision diagrams
+    from scratch unless the helper cannot express the concept. After the
+    `slide_kit` import, prefer the data-first Physics wrapper and deterministic
+    diagram helpers, which live in the same directory as `slide_kit.py`:
+
+    ```python
+    from physics_slide_kit import PhysicsSlides
+    from physics_diagrams import (
+        arrow,
+        draw_circular_motion_diagram,
+        draw_doppler_wavefronts,
+        draw_interference_panel,
+        draw_sine_wave,
+        draw_step_rows,
+        draw_wave_property_diagram,
+    )
+
+    physics = PhysicsSlides(deck)
+    ```
+
+    Prefer `physics.concept_cards`, `physics.formula_cards`,
+    `physics.worked_trace`, `physics.answer_trace`,
+    `physics.modeling_pause`, `physics.application_grid`,
+    `physics.wave_properties`, `physics.doppler_diagram`,
+    `physics.interference_diagram`, and `physics.circular_motion_diagram`
+    before writing custom geometry.
+
+    Use lower-level helpers for custom annotations:
+    - waves / wavelength / amplitude: `draw_sine_wave` or `draw_wave_property_diagram`
+    - Doppler sketches: `draw_doppler_wavefronts`
+    - interference/cancellation: `draw_interference_panel`
+    - circular motion / orbit force diagrams: `draw_circular_motion_diagram`
+    - worked example rows: `draw_step_rows`
+    - labeled force/vector arrows: `arrow`
+
+    Keep custom PIL code only for module-specific details. This should make
+    `build_slides.py` mostly deck calls, text, numeric values, and 1-2 custom
+    callbacks instead of hundreds of lines of repeated geometry. If a helper is
+    not enough, compose it with small custom annotations; do not copy a previous
+    module's entire `build_slides.py`.
+
+    To reduce production latency, read at most one nearby completed Physics
+    lesson as a reference. Do not scan many old generated `build_slides.py`
+    files unless the gate fails and you need a specific pattern.
+    """)
+
+
+FOUNDATION_WORKER_FAST_PATH = """\
+## Worker Fast Path
+
+This handoff is the production contract. For normal production, do not open
+global playbooks or broad-scan old generated lessons. Read only:
+
+1. this handoff,
+2. `source_packet.json`,
+3. `teaching_brief.md`,
+4. `visual_brief.md`,
+5. one nearby completed lesson only when a local formatting example is needed.
+
+Open `tools/lesson-video/AGENT_RECIPE.md`, `QUALITY_FLOW.md`, or
+`FOUNDATION_VIDEO_PLAYBOOK.md` only if the gate behavior conflicts with this
+handoff or a required field is ambiguous. Keep the lesson to one coherent
+5-7 minute foundation video; do not spend time inventing decorative systems,
+searching the repo broadly, or re-deriving the common production contract.
+"""
+
+
 def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
     course = packet["course"]
     module = packet["module"]
@@ -971,6 +1044,8 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
         f"    - {source.get('label')} ({source.get('key')}): {source.get('note') or source.get('host')}"
         for source in source_alignment.get("required_visible_sources", [])
     ) or "    - No required source labels found; write the source review as blocked."
+    physics_helper_contract = render_physics_helper_contract(course["name"]).rstrip()
+    physics_helper_section = f"\n\n{textwrap.indent(physics_helper_contract, '    ')}" if physics_helper_contract else ""
     return textwrap.dedent(f"""\
     # Foundation Video Production Handoff
 
@@ -1033,6 +1108,9 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
     Use repo-relative assets through the discovered `slide_kit` path or the
     lesson cwd. Do not run broad filesystem searches to locate `slide_kit`.
 
+{textwrap.indent(FOUNDATION_WORKER_FAST_PATH.rstrip(), "    ")}
+{physics_helper_section}
+
     ## Expert Lens Contract
 
     The lesson must visibly use the Learn Portal Expert Lens:
@@ -1068,8 +1146,8 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
       videos from the narration or path slide.
     - Do not imply the source endorses GIIS or guarantees outcomes.
 
-    Use `tools/lesson-video/AGENT_RECIPE.md`, `QUALITY_FLOW.md`, and
-    `FOUNDATION_VIDEO_PLAYBOOK.md`.
+    The common production rules are summarized in this handoff. Use the global
+    docs only as fallback if a local gate result conflicts with this handoff.
 
     ## Verification
 
