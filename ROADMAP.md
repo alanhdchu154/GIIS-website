@@ -146,6 +146,26 @@ top-up/reconciliation. Next action after the Claude Code reset is a narrow
 repair pass for M14/M4 or the next Grade 10 module; do not force either
 score<100 backlog lesson through upload.
 
+2026-06-22 03:59 CT producer evidence: the scheduled producer started without
+overlap after the Claude Code reset and repaired/uploaded the two remaining
+2026-06-21 strict-gate backlog lessons plus two new Pre-Calculus lessons.
+Uploaded with playlist membership and 0 failed uploads: Physics M14
+(`ofhyJmgstLs`), Pre-Calculus M4 (`MzLogEbW25k`), Pre-Calculus M9
+(`fObjLE9BYXA`), and Pre-Calculus M10 (`iN33duMrtbE`). Artifact-backed
+same-day count for 2026-06-22 is 4/40. Queue status is 301 uploaded /
+0 pending / 0 no-MP4 / 301 total; pending release gate is 0; manifest
+alignment remains 0 warnings; dashboard was updated. Codex stopped the
+producer before upload when M10 showed the same stale-audio signature as the
+previous M8 issue (trimmed script but cached audio and an overlong MP4). It
+cleared generated audio/MP4/transcript cache for M14 and M10, reran
+`foundation_video_gate.py --render-mp4`, confirmed fresh TTS
+(M14: 12 new / 0 cached; M10: 11 new / 0 cached), then wrote the clean-pass
+approval artifact and uploaded through `yt_queue.py upload --gate-ready`.
+Follow-up: fix the orchestrator so any `script.json` change invalidates
+section audio/MP4 before render; M10 also confirms Pre-Calculus still needs a
+reusable math slide helper because hand-coded parametric/polar visuals consumed
+most of the slot.
+
 2026-06-18 syllabus/resource/teacher-voice policy update: the video pipeline
 now treats required course resources as part of the production gate. Course
 series still run a syllabus/module design review before production, and all 93
