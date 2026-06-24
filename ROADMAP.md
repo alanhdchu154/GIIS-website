@@ -14,7 +14,7 @@ quality that feels intentionally designed.
 
 ## Current Lesson-Video State
 
-### Business Ethics & Critical Thinking
+### 2026-06-24 08:00 CT Producer Slot
 
 - Academic Writing M7-M8 uploaded at the 2026-06-24 03:00 CT slot:
   - M7 `qI-Zm9CWrYI`
@@ -24,23 +24,30 @@ quality that feels intentionally designed.
   Ethics URLs were labeled as MIT OpenCourseWare readings.
 - The course JSON labels were repaired to OpenStax Business Ethics across the
   eight Business Ethics modules.
-- Business Ethics M2 reached pre-render readiness:
-  - `script.json`: 11 sections / 875 words
-  - slides/contact sheet generated
-  - three learning checks
-  - reviewer A/B/C pass
-  - expert-lens pass
-  - OpenStax source alignment visible on slides 04 and 10
-  - no raw URLs, AP claims, or accreditation claims
-- Current gate status: `needs_review` only because MP4 is missing, which is
-  expected before orchestrator TTS/MP4.
+- Business Ethics M1-M8 are now uploaded and in the course playlist:
+  - M1 `qkQ6apyz4Vs`
+  - M2 `2XlmcWbGrBQ`
+  - M3 `qD78x47mX0k`
+  - M4 `bbZn-y5bxxQ`
+  - M5 `Q9fcg34m1HU`
+  - M6 `4gC_815uLQ4`
+  - M7 `Ny5u5G-KfDM`
+  - M8 `eOYe7psDt1E`
+- Business Research Methods M2 uploaded: `Km6JYWu7R9A`.
+- Today's artifact-backed upload count is 11 for 2026-06-24 CT.
+- Dashboard/build/manifest checks passed after the run:
+  - `npm run lesson:video-dashboard`
+  - `npm run build`
+  - `node tools/youtube-upload/audit_manifest_alignment.js`
+  - `git diff --check`
 
 Next action:
 
-1. Let the orchestrator complete Business Ethics M2 TTS/MP4.
-2. Run independent review/source-alignment review.
+1. Leave Business Research Methods M1 unuploaded until parent-trust wording and
+   `_review_source_alignment.json` are repaired cleanly.
+2. At the next producer slot, continue deterministic Grade 11 sequence from
+   Business Research Methods, without treating "no repair material" as a stop.
 3. Upload only through `yt_queue.py upload --gate-ready`.
-4. Rerun Business Ethics M1 repair/review before upload.
 
 ## Durable Lesson-Video Rules
 

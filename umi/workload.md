@@ -6,7 +6,7 @@ This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
 old slot evidence.
 
-## Active Handoff: Business Ethics Video Gate
+## Active Handoff: Business Research Methods M1 Repair Then Continue
 
 - owner: GIIS lesson-video worker / Codex / Claude Code
 - repo: `/Users/alanhdchu/giis-website`
@@ -20,12 +20,16 @@ old slot evidence.
 
 ## Objective
 
-Finish the current Business Ethics lesson-video lane safely:
+Repair the one remaining Business Research Methods M1 blocker, then continue
+normal Grade 11 foundation production:
 
-1. Complete Business Ethics M2 TTS/MP4.
-2. Run independent review and source-alignment review.
-3. Upload only if release gates pass.
-4. Repair/review Business Ethics M1 before any upload.
+1. Remove or rewrite the M1 hook wording that parent-trust flags as
+   `payment_claim`.
+2. Regenerate MP4/transcript after script edits.
+3. Rerun Opus independent review/source-alignment review.
+4. Upload only if release gate and parent-trust audit pass.
+5. Continue the deterministic Grade 11 sequence; do not stop merely because no
+   "repair backlog" exists.
 
 ## Current Evidence
 
@@ -35,14 +39,15 @@ Finish the current Business Ethics lesson-video lane safely:
 - Academic Writing is now 8/8 uploaded.
 - Business Ethics source labels were repaired from stale MIT OCW labels to
   OpenStax Business Ethics labels.
-- Business Ethics M2 is pre-render ready:
-  - script, slides, contact sheet
-  - three learning checks
-  - reviewer A/B/C pass
-  - expert-lens pass
-  - OpenStax source alignment visible
-- M2 release gate is still `needs_review` only because MP4 is missing, expected
-  before the orchestrator render stage.
+- 2026-06-24 08:00 CT slot uploaded 9 more lessons:
+  - Business Ethics M1-M8 are now 8/8 uploaded.
+  - Business Research Methods M2 uploaded.
+- Today's artifact-backed CT count is 11.
+- Business Research Methods M1 has MP4 but is not uploaded:
+  - parent-trust audit still flags the hook wording as `payment_claim`.
+  - `_review_source_alignment.json` remained stale after an Opus wrapper run hit
+    `Claude Code session limit reached`.
+- Queue status after the slot: 361 uploaded, 1 pending, 0 no-MP4.
 
 ## Constraints
 
@@ -67,7 +72,7 @@ before upload:
 
 - Any source mismatch remains.
 - Required resources are paid/login-gated or mislabeled.
-- cc session limit or review failure leaves approval artifacts missing.
+- cc session limit or review failure leaves approval artifacts missing or stale.
 - A command would stage generated media, T9 artifacts, secrets, or deploy-facing
   frontend changes outside the scoped task.
 
