@@ -13,6 +13,18 @@ foundation-video pipeline stabilizes. The next phase is proof over volume:
 parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
 
+2026-06-24 08:20 CT Business Ethics source-label repair and M2 pre-render:
+the course JSON source mismatch was narrowed and repaired by replacing the
+stale MIT OpenCourseWare reading labels with OpenStax Business Ethics labels
+for all eight Business Ethics modules while keeping the existing OpenStax
+reading URL. JSON syntax validates. Business Ethics M2 (Logical Fallacies) then
+reached pre-render readiness: script is 11 sections / 875 words, slides and
+contact sheet were generated, three learning checks exist, reviewer A/B/C and
+expert-lens reviews passed, source alignment is visible on slides 04 and 10,
+and there are no raw URLs or AP/accreditation claims. Gate audit remains
+`needs_review` only because MP4 is missing, which is expected at this handoff
+stage; orchestrator still owns TTS/MP4 and independent review/upload.
+
 2026-06-24 03:45 CT producer evidence: the scheduled producer resumed after
 the Claude Code reset, auto-advanced from Grade 10 to Grade 11, completed
 Academic Writing M7-M8, manually restored the clean score-100 approval artifact
