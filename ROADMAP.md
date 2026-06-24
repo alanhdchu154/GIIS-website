@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-18
+Last updated: 2026-06-23
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -12,6 +12,102 @@ Keep the school trustworthy, operational, and parent-visible while the
 foundation-video pipeline stabilizes. The next phase is proof over volume:
 parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
+
+2026-06-23 05:50 CT 03:00 producer evidence: the scheduled producer resumed
+from the Social Psychology M3 partial and completed the full 10-module batch.
+Parent-trust verdict was `TRUST_READY`; uploads ran only through
+`yt_queue.py upload --gate-ready` with playlist membership, no captions,
+thumbnails, manifest sync, or cleanup, and finished 10 uploaded / 0 failed:
+Social Psychology M3 (`UPaQz-2ahNs`), M4 (`VG-Yv8lrjHI`), M5
+(`0NKV7NNeVuA`), M6 (`AeAGXFQtGlM`), M7 (`4Diepmyc28g`), M8
+(`nVbAdhL-4m4`), Sports Psychology M1 (`sfhBC3Cmz5Y`), M2
+(`uKN7sl0ue0o`), M3 (`bI9OQ2pzPG8`), and M4 (`dpxejrEY56k`). The producer also
+created the `Sports Psychology` playlist and added all four Sports Psychology
+uploads. Artifact-backed same-day count for 2026-06-23 is 10/40. Post-checks:
+queue is 325 uploaded / 0 pending / 0 no-MP4 / 325 total; pending release gate
+is 0; manifest alignment is 0 warnings across 306 manifest lessons; dashboard
+was updated. Pipeline evidence is mixed-positive: pre-render handoff,
+script-change render-cache invalidation, final-gate MP4 reuse, and
+resource-failed quarantine all worked; however, throughput is still below the
+40/day target because multiple workers still write over-dense first drafts and
+each module spends too much time rereading shared context. Immediate follow-up
+landed after the run: the generated worker handoff now treats first-draft
+density as a hard rule (`avg <= 80`, section `<= 100`, within the release-gate
+buffer) and tells workers to read only one nearby completed lesson instead of
+re-scouting broad context for every module.
+
+2026-06-23 09:06 CT 08:00 producer evidence: the scheduled producer ran after
+a clean overlap preflight and uploaded 3/3 approved lessons with playlist
+membership and 0 failed uploads: Sports Psychology M5 (`Xoa-xHPCBVU`), M7
+(`RrGjUhDAIX4`), and M8 (`gZf8Mwowmmk`). Sports Psychology M6 was skipped by
+the required-resource gate because `open.lib.umn.edu` returned 403, so the
+resource-failure quarantine worked and the slot moved on. U.S. History M1 was
+produced and rendered cleanly (density avg 78.2 / max 89, MP4 ~6.9 min) but
+did not upload because the Opus independent review hit the Claude Code session
+limit before writing `_review_independent_pass.json` /
+`_review_source_alignment.json`; the release gate remains score 88
+`pass_with_minor_notes`, missing independent second-pass reviewer. Today's
+artifact-backed count is now 13/40. Post-checks: queue is 328 uploaded /
+1 pending / 0 no-MP4 / 329 total; pending release gate is 1 needs_revision
+(U.S. History M1) and 0 blocked; manifest alignment is 0 warnings across
+306 manifest lessons; dashboard was updated. Pipeline signal: the new density
+guardrail is working better (M5 self-trimmed before handoff; M7/M8/US History
+M1 reached clean density without orchestrator repair), but fresh-course worker
+startup/reference reading still consumed too much time and review session limit
+stopped the batch before it could approve U.S. History M1.
+
+2026-06-23 15:28 CT 13:00 producer evidence: the scheduled producer resumed
+the U.S. History lane, unblocked M1 after Opus review recovered, produced and
+uploaded U.S. History M1-M8 with playlist membership, and finished 8 uploaded /
+0 failed: M1 (`UyHIA-Q2amA`), M2 (`v5b41cansjU`), M3 (`aiwPPH-XrVI`), M4
+(`V_hNeNoBEOA`), M5 (`CXZc94omSG0`), M6 (`ywWklTznNHk`), M7
+(`LMuKDnkKHDY`), and M8 (`kPtbdhdazpg`). Today's artifact-backed count is now
+21/40. Post-checks: queue is 336 uploaded / 0 pending / 2 no-MP4 / 338 total;
+pending release gate is 0; manifest alignment is 0 warnings across 306
+manifest lessons; dashboard was updated. Two pipeline fixes landed during the
+run: `parent_trust_video_audit.py` now ignores statehood/history uses of
+`admission` such as Missouri/Maine state admission, and `audit_lessons.py` now
+maps World Politics / social studies courses to the `social_studies` theme
+instead of incorrectly expecting `default`. Remaining backlog: World Politics
+M1-M2 were produced but stopped at no-MP4/pre-render state because the theme bug
+was found mid-batch; rerun after the fix should render/review them. Efficiency
+signal: density guardrails worked (including M8 self-trim to avg 80.0), and
+Opus review was stable, but the batch took over two hours because each worker
+still rereads slide/gate/reference context; next refinement should template or
+cache the production format and upload smaller ready batches earlier so
+artifact-backed daily count does not wait for a long 10-module production pass.
+
+2026-06-23 19:49 CT 18:00 producer evidence: the scheduled producer rendered,
+Opus-reviewed, parent-trust approved, and uploaded World Politics M1-M8 with
+playlist membership, finishing 8 uploaded / 0 failed: M1 (`Y5vC88PVqGQ`), M2
+(`w_CEVxQsHYQ`), M3 (`IYYkD_t2w-k`), M4 (`sfD5h_HRHqc`), M5
+(`s-tR2a5GFSE`), M6 (`IKlhWn8rynU`), M7 (`JJUhd-ebWDs`), and M8
+(`dcLE8_mpMnY`). Today's artifact-backed count is now 29/40. Post-checks:
+queue is 344 uploaded / 0 pending / 0 no-MP4 / 344 total; pending release gate
+is 0; manifest alignment is 0 warnings across 306 manifest lessons; dashboard
+was updated. Pipeline signal: the social-studies theme and parent-trust false
+positive fixes held, all World Politics lessons reached score 100 before upload,
+and playlist create/add succeeded. Remaining throughput blocker is still Sonnet
+worker startup/scouting latency, especially M6/M8; narration density is now
+healthy (roughly 73-76 avg words/section on later modules), so the next
+refinement should reduce repeated gate/slide/reference reading or allow smaller
+ready-batch uploads earlier.
+
+2026-06-23 20:10 CT dashboard/top-up correction: Alan correctly flagged that
+an empty pending upload queue is not a reason to stop production. The 20:00
+workflow facts remain: today's count was 29/40, queue was 344 uploaded /
+0 pending / 0 no-MP4 / 344 total, pending release gate was 0, manifest
+alignment was 0 warnings, playlist reconciliation was clean, and the dashboard
+was refreshed. The real blocker was an orchestrator selection bug: the wrapper
+kept requesting Grade 10, and when Grade 10 had no selectable unfinished
+modules, the run fell through to `yt_queue.py upload --gate-ready` instead of
+continuing to the next grade. The runner now defaults to grade auto-advance:
+when the requested grade has no selectable candidates, it continues with the
+next higher grade that has non-AP foundation modules; use
+`FOUNDATION_AUTO_ADVANCE_GRADE=0` only for intentional same-grade repair runs.
+Dry-run verification shows Grade 10 has 9 theoretical but 0 selectable
+candidates, then auto-advances to Grade 11 with 186 selectable candidates,
+starting with Academic Writing M1-M3.
 
 2026-06-19 evening lesson-video strategy update: G9 foundation videos are
 complete enough for the current parent-trust proof path, and Alan approved
@@ -165,6 +261,102 @@ Follow-up: fix the orchestrator so any `script.json` change invalidates
 section audio/MP4 before render; M10 also confirms Pre-Calculus still needs a
 reusable math slide helper because hand-coded parametric/polar visuals consumed
 most of the slot.
+
+2026-06-22 14:52 CT 13:00 producer evidence: the scheduled producer started
+without overlap, but Codex intentionally stopped it before the automatic upload
+phase after repeated strict-gate density failures. Clean-pass lessons were
+approved and uploaded manually through `yt_queue.py upload --gate-ready` with
+playlist membership and 0 failed uploads: Pre-Calculus M12 (`sZvLWSi1_qU`),
+Pre-Calculus M13 (`AkRraDjXoaU`), and Psychology Foundations M1
+(`-p2tFzlDHPA`). Before uploading, Codex cleared M13 generated audio/MP4 cache
+because the worker trimmed `script.json` after the first render; rerunning
+`foundation_video_gate.py --render-mp4` produced 11 fresh TTS files, 0 cached
+audio, and score 100. Artifact-backed same-day count is now 7/40. Queue status
+is 304 uploaded / 5 pending / 0 no-MP4 / 309 total; pending release gate has
+0 ready and 5 needs_revision: Pre-Calculus M11 score 64, Pre-Calculus M14
+score 64, Psychology Foundations M2 score 64, Psychology Foundations M3 score
+82, and Psychology Foundations M4 score 52 with missing independent review
+because the run was stopped before that reviewer. Manifest alignment remains
+0 warnings and the dashboard was updated. There was no `quotaExceeded` or
+playlist failure. Follow-up: add a pre-review density/word-budget repair loop
+so Sonnet trims long sections before spending Opus review time, and fix
+audio/MP4 cache invalidation whenever `script.json` changes.
+
+2026-06-22 15:55 CT pipeline recovery: Codex/Umi added the pre-review density
+repair path and script-change render-cache invalidation that the 13:00 slot
+exposed. New helper `cc_density_repair.py` runs bounded Sonnet edits on
+`script.json` plus production review SHA refresh before Opus review; the
+orchestrator now runs a pre-review gate, routes minor-only narration-density
+failures through that helper, clears stale independent/source-alignment reviews
+after script changes, and invalidates generated audio/MP4/transcript cache
+before re-rendering. Manual recovery then repaired and uploaded all five
+remaining needs_revision drafts through `yt_queue.py upload --gate-ready`:
+Pre-Calculus M11 (`0DWFvo_E1IA`), Pre-Calculus M14 (`Y86-QbTfv3A`),
+Psychology Foundations M2 (`E0DvlBoTpyI`), Psychology Foundations M3
+(`1TDGOkMtPTw`), and Psychology Foundations M4 (`cMrR_ung3Us`). The local
+quota estimator blocked after M11, but bounded upload with
+`--ignore-quota-estimate` succeeded for the remaining four and YouTube did not
+return `quotaExceeded`. Artifact-backed same-day count is now 12/40. Queue
+status is 309 uploaded / 0 pending / 0 no-MP4 / 309 total; pending release gate
+is 0; manifest alignment is 0 warnings across 306 manifest lessons; dashboard
+was updated. Follow-up: let the next scheduled producer slot exercise the new
+orchestrator path on fresh modules instead of relying on manual recovery, and
+watch whether the local quota estimate should be recalibrated for the 40-capacity
+trial.
+
+2026-06-22 17:02 CT pipeline slimming update: the orchestrator now avoids
+spending TTS/MP4 render work before deterministic script/slide preflight is
+clean. The new order is production -> script/slide preflight without MP4 render
+-> density repair if the only substantive blocker is narration density ->
+release-candidate render -> independent review -> final gate. Final gate reruns
+reuse current MP4/transcript when the script hash and render outputs are
+current, instead of blindly rerunning `make_lesson.py`. This keeps the same
+score-100/reviewer/source-alignment/upload approval policy while reducing the
+old render -> repair -> rerender loop. Verification: `python3 -m py_compile`
+for the touched pipeline scripts, import-level pre-render blocker checks, dry
+run with `--no-cc --no-upload --max-modules 1 --skip-network-check
+--no-course-design-repair`, and `git diff --check`.
+
+2026-06-22 17:52 CT five-video slimmed-pipeline test: Alan requested a fresh
+5-video normal-scenario simulation after the slimming update. Codex stopped the
+older pre-slimming 10-video batch, then ran the updated pipeline with a 5-module
+cap. Result: 5/5 uploaded with playlist membership and 0 upload failures:
+Psychology Foundations M5 (`JAjUntxs_n4`), M6 (`MCAFpQzjgTE`), M7
+(`L7n6chvW59I`), M8 (`MHfT9UPBzJU`), and Social Psychology M1
+(`zSIoATbt_NE`). Artifact-backed same-day count is now 17/40. Queue status is
+314 uploaded / 0 pending / 0 no-MP4 / 314 total; pending release gate is 0;
+manifest alignment remains 0 warnings; dashboard was updated. Efficiency did
+improve in the specific places the new pipeline targeted: density repair ran
+before Opus review on M8 and Social Psychology M1, script-change cache
+invalidation forced fresh TTS/MP4 when needed, and final gates reused current
+MP4/transcript instead of rerendering. Problems found: Public Speaking modules
+are blocked by `open.lib.umn.edu` 403 resource checks, resource-failed
+candidates can still waste selection time, and the orchestrator does not yet
+fully recover when a human/manual script edit causes stale independent reviews
+and stale render cache outside the density-repair path. Parent-trust also
+caught admissions-adjacent wording in M8; Codex removed the admissions/GPA
+slide/narration language, rerendered M8 with 11 fresh TTS files, reran Opus
+review and parent-trust audit, then uploaded through the gated queue.
+
+2026-06-22 18:20 CT producer evidence: before the scheduled 18:00 producer,
+Codex patched the two issues found in the 5-video simulation. Resource-failed
+candidates are now quarantined after one failed resource check, so the
+Public Speaking `open.lib.umn.edu` 403 modules no longer consume the producer
+window; existing lesson folders now reconcile script hash drift by clearing
+stale independent reviews and stale render cache before release checks. A
+network dry-run confirmed the next usable candidate moved to Social Psychology
+M2 instead of Public Speaking. The 18:00 producer then produced/reviewed and
+uploaded Social Psychology M2 (`yZU3ci2mIwA`) with playlist membership and no
+upload failure. The slot stopped safely after Claude Code hit a session-limit
+event while starting Social Psychology M3; M3 currently has only draft source
+files (`script.json`, `build_slides.py`, briefs/source packet) and no MP4.
+Artifact-backed same-day count is now 18/40. Queue status is 315 uploaded /
+0 pending / 1 no-MP4 / 316 total; pending release gate is 0; manifest
+alignment remains 0 warnings; dashboard was updated. Follow-up after reset:
+resume from Social Psychology M3. Codex also updated the generated worker
+handoff template so future `cc_foundation_worker.py` jobs are pre-render only:
+workers run `foundation_video_gate.py` without `--render-mp4`, and the
+orchestrator owns TTS/MP4/transcript after script preflight and density repair.
 
 2026-06-18 syllabus/resource/teacher-voice policy update: the video pipeline
 now treats required course resources as part of the production gate. Course

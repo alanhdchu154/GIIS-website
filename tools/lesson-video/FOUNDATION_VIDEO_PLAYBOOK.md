@@ -136,9 +136,13 @@ college admissions claims in foundation lesson titles or descriptions.
   the dashboard.
 - Outside 03/08/13/18/20 CT, the heartbeat should skip heavy work and not read
   repo state, run git/npm/Python/cc, or touch files.
-- Default target grade: Grade 10 (`FOUNDATION_TARGET_GRADE=10`) for the active
-  upload-cap trial. Selection is deterministic by grade course sequence, then
-  module order; failed modules may be retried before new work.
+- Requested target grade: Grade 10 (`FOUNDATION_TARGET_GRADE=10`) for the
+  active upload-cap trial. The runner defaults to auto-advance: if the
+  requested grade has no selectable unfinished modules, continue with the next
+  higher grade that has non-AP foundation candidates. Set
+  `FOUNDATION_AUTO_ADVANCE_GRADE=0` only for a bounded repair pass that must
+  stay on the requested grade. Selection is deterministic by grade course
+  sequence, then module order; failed modules may be retried before new work.
 - Before producing a course series, the orchestrator must write/pass
   `teaching-videos/_audit/course-design/<course-slug>.json`.
 - If course design fails, run the built-in safe repair path, then review again.
@@ -173,6 +177,23 @@ college admissions claims in foundation lesson titles or descriptions.
   `/Volumes/T9-Active` and can make `slide_kit` disappear.
 - Upload privacy: `unlisted`.
 - Upload path: `yt_queue.py upload --gate-ready --max <FOUNDATION_UPLOAD_MAX> --privacy unlisted`.
+- Density repair: after production and before TTS/MP4 render or independent
+  Opus review, the orchestrator now runs a script/slide preflight gate. If the
+  only real blocker is dense narration, `cc_density_repair.py` gets one bounded
+  Sonnet pass to trim `script.json` under the hard section limits. Any script
+  change clears stale independent review files and invalidates generated
+  audio/MP4/transcript cache. The release-candidate render then happens once,
+  and final gate reruns reuse current MP4/transcript when the script hash and
+  render outputs are current.
+- Worker handoff scope: normal `cc_foundation_worker.py` handoffs are now
+  pre-render only. Workers create `script.json`, deterministic slides,
+  `contact-sheet.jpg`, `style_manifest.json`, `learning_check.json`, and
+  production reviewer JSON, then run `foundation_video_gate.py` without
+  `--render-mp4`. The orchestrator owns TTS/MP4/transcript after preflight and
+  density repair.
+- Resource failures: required-resource 403/timeout failures should be marked
+  `resource_failed` and skipped after one failed resource check in the current
+  state, rather than retried repeatedly inside the same producer window.
 - The local quota estimate is conservative and the daily runner may override it
   during the trial. Stop only for a true video upload/channel-limit error.
 - If transcript/caption upload alone hits `quotaExceeded` after the video,
@@ -192,9 +213,12 @@ and quality-debt work. Choose one lane:
 
 - Producer lane: new video creation and gate-ready upload in the approved
   03/08/13/18 CT video-first slots.
-- Active default target: Grade 10. Grade 9 is complete for the current local
+- Active requested target: Grade 10. Grade 9 is complete for the current local
   uploaded queue, so normal automation should not fall back to Grade 9 unless
-  `FOUNDATION_TARGET_GRADE=9` is intentionally set for a repair/retry pass.
+  `FOUNDATION_TARGET_GRADE=9 FOUNDATION_AUTO_ADVANCE_GRADE=0` is intentionally
+  set for a repair/retry pass. When Grade 10 has no selectable unfinished
+  modules, normal automation should continue with Grade 11 rather than stop at
+  an empty upload queue.
 - Upload lane: already rendered and approved pending videos, bounded/manual
   when needed.
 - Quality-debt lane: old `needs_revision` repair, small batches only.

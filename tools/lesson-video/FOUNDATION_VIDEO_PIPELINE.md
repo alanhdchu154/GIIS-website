@@ -31,8 +31,15 @@ This is the intended loop for every new foundation video:
   -> write source_packet.json + teaching_brief.md + visual_brief.md
   -> write a bounded cc handoff
   -> cc_foundation_worker.py runs Claude Code with streaming progress
-  -> cc_independent_video_reviewer.py runs a separate second-pass review
+     and produces pre-render lesson artifacts only
+  -> foundation_video_gate.py runs a script/slide preflight without MP4 render
+  -> cc_density_repair.py trims dense narration once when the only real blocker
+     is word budget, before TTS/MP4 work is spent
   -> foundation_video_gate.py renders/checks slides, MP4, transcript, contact sheet
+     only after deterministic script/slide preflight is clean
+  -> cc_independent_video_reviewer.py runs a separate second-pass review
+  -> foundation_video_gate.py reruns final checks while reusing current
+     MP4/transcript when the script hash and render outputs are current
   -> lesson_release_gate.py requires clean pass / score 100
   -> orchestrator writes approved_ready_to_upload.json
   -> yt_queue.py upload --gate-ready --privacy unlisted
@@ -107,6 +114,12 @@ The producer slots call the repo-owned runner:
 FOUNDATION_MAX_MODULES=10 FOUNDATION_UPLOAD_MAX=10 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus bash tools/lesson-video/foundation_daily.sh
 ```
 
+The wrapper defaults to grade auto-advance. If the requested target grade has no
+selectable unfinished modules, the orchestrator continues with the next higher
+grade that has non-AP foundation candidates. Use
+`FOUNDATION_AUTO_ADVANCE_GRADE=0` only for an intentional repair pass that must
+stay on the requested grade.
+
 The 20:00 slot should read the queue/dashboard first. If the day is below the
 40-capacity target and the gap is real, run one bounded top-up pass rather than
 forcing low-quality lessons through the gate. Same-day capacity should be
@@ -142,6 +155,11 @@ non-zero, or produces no tool progress, the module is marked `cc_blocked` and
 will be prioritized for retry before new modules. After two failed attempts, it
 requires Umi repair instead of silent repetition.
 
+Resource checks are fail-fast for required course resources. A module that
+fails with `resource_failed` is quarantined after one failed resource check for
+the current run state, so a blocked source such as a persistent 403 does not
+consume the whole producer window while later usable modules wait.
+
 Throughput note from the 2026-06-20/21 Grade 10 trial: a normal production
 worker can take roughly 7-14 minutes per lesson, and the Opus second-pass review
 adds roughly 1-2 minutes. A `FOUNDATION_MAX_MODULES=10` slot is therefore a cap,
@@ -169,9 +187,11 @@ the path fix.
 
 ## Course And Series Order
 
-The selector is deterministic, not random. The current default target grade is
+The selector is deterministic, not random. The current requested target grade is
 Grade 10 because Grade 9 has already reached the local uploaded queue target
-for the active upload-cap trial. Use `FOUNDATION_TARGET_GRADE=9` only for an
+for the active upload-cap trial. The runner auto-advances to the next higher
+grade when the requested grade has no selectable unfinished modules. Use
+`FOUNDATION_TARGET_GRADE=9` plus `FOUNDATION_AUTO_ADVANCE_GRADE=0` only for an
 intentional Grade 9 repair/retry pass. Within a target grade, the core sequence
 starts:
 
@@ -227,6 +247,25 @@ Upload readiness defaults to a clean gate:
 - quality score must be 100
 - `pass_with_minor_notes` stays in revision unless an operator explicitly uses
   `--allow-minor-notes`
+
+As of 2026-06-22, the daily orchestrator runs a script/slide preflight before
+spending TTS/MP4 render work or the independent Opus review. If the draft has
+only narration-density minor issues plus expected pre-render media/reviewer
+gaps, it runs one bounded Sonnet density-repair pass through
+`cc_density_repair.py` before rendering. The repair worker may trim
+`script.json` and refresh production review SHAs, but it must not edit slides,
+audio, MP4, YouTube metadata, or independent review files. When `script.json`
+changes, the orchestrator removes stale independent review files and clears
+generated audio/MP4/transcript cache. Final gate reruns reuse the current
+MP4/transcript when the script hash and render outputs are current.
+
+New production handoffs are intentionally pre-render only: the worker creates
+`script.json`, deterministic slides, `contact-sheet.jpg`, `style_manifest.json`,
+`learning_check.json`, and production reviewer JSON. It should run
+`foundation_video_gate.py` without `--render-mp4`. The orchestrator performs the
+first TTS/MP4/transcript render only after preflight and any density repair are
+clean. This keeps Claude Code session time from being spent on renders that a
+later density pass would invalidate.
 
 ## Expert Lens Contract
 

@@ -44,6 +44,7 @@ APPROVAL_PATH = TEACHING_ROOT / "_audit" / "release-gate" / "approved_ready_to_u
 LATEST_FOUNDATION_APPROVAL_PATH = TEACHING_ROOT / "_audit" / "release-gate" / "latest-foundation-approval.json"
 HANDOFF_DIR = ROOT / "umi" / "handoffs"
 CC_WORKER = ROOT / "tools" / "lesson-video" / "cc_foundation_worker.py"
+CC_DENSITY_REPAIR = ROOT / "tools" / "lesson-video" / "cc_density_repair.py"
 CC_REVIEWER = ROOT / "tools" / "lesson-video" / "cc_independent_video_reviewer.py"
 FOUNDATION_GATE = ROOT / "tools" / "lesson-video" / "foundation_video_gate.py"
 RELEASE_GATE = ROOT / "tools" / "lesson-video" / "lesson_release_gate.py"
@@ -53,7 +54,7 @@ SYNC_CHANNEL = ROOT / "tools" / "youtube-upload" / "sync_channel.py"
 EXPERT_LENS_BRIDGE = ROOT / "tools" / "lesson-video" / "expert_lens_packet.js"
 
 sys.path.insert(0, str(ROOT / "tools" / "lesson-video"))
-from audit_lessons import audit_lesson  # noqa: E402
+from audit_lessons import audit_lesson, sha256_review_script  # noqa: E402
 
 
 DEFAULT_TARGET_GRADE = 10
@@ -613,6 +614,61 @@ def collect_candidates(*, include_other_foundation: bool = True, target_grade: i
     return out
 
 
+def foundation_grades() -> list[int]:
+    grades = {
+        grade
+        for _, course in load_courses()
+        if not is_ap_course(course)
+        for grade in [course_grade(course)]
+        if grade is not None
+    }
+    return sorted(grades)
+
+
+def resolve_target_grade(
+    *,
+    requested_grade: int,
+    include_other_foundation: bool,
+    state: dict[str, Any],
+    auto_advance: bool,
+) -> tuple[int, list[Candidate], list[Candidate], list[dict[str, Any]]]:
+    attempts: list[dict[str, Any]] = []
+    candidates = collect_candidates(
+        include_other_foundation=include_other_foundation,
+        target_grade=requested_grade,
+    )
+    selected = select_candidates(candidates, state, limit=len(candidates))
+    attempts.append({
+        "grade": requested_grade,
+        "candidate_count": len(candidates),
+        "selectable_count": len(selected),
+    })
+    if selected or not auto_advance:
+        return requested_grade, candidates, selected, attempts
+
+    for grade in foundation_grades():
+        if grade <= requested_grade:
+            continue
+        candidates = collect_candidates(
+            include_other_foundation=include_other_foundation,
+            target_grade=grade,
+        )
+        selected = select_candidates(candidates, state, limit=len(candidates))
+        attempts.append({
+            "grade": grade,
+            "candidate_count": len(candidates),
+            "selectable_count": len(selected),
+        })
+        if selected:
+            print(
+                f"[daily] requested target grade {requested_grade} has no selectable candidates; "
+                f"auto-advancing to grade {grade}",
+                flush=True,
+            )
+            return grade, candidates, selected, attempts
+    return requested_grade, [], [], attempts
+
+
 def load_state() -> dict[str, Any]:
     return read_json(STATE_PATH, {"modules": {}})
 
@@ -623,13 +679,22 @@ def save_state(state: dict[str, Any]) -> None:
 
 def select_candidates(candidates: list[Candidate], state: dict[str, Any], *, limit: int) -> list[Candidate]:
     by_key = {candidate.key: candidate for candidate in candidates}
+    quarantined_resource_failures = {
+        key
+        for key, row in (state.get("modules") or {}).items()
+        if row.get("status") == "resource_failed" and int(row.get("attempts") or 1) >= 1
+    }
     selected_keys = []
     for key, row in sorted((state.get("modules") or {}).items()):
-        if key in by_key and row.get("status") in {"cc_blocked", "gate_failed", "resource_failed"} and int(row.get("attempts") or 0) < 2:
+        if key in quarantined_resource_failures:
+            continue
+        if key in by_key and row.get("status") in {"cc_blocked", "gate_failed"} and int(row.get("attempts") or 0) < 2:
             selected_keys.append(key)
     for candidate in candidates:
         if len(selected_keys) >= limit:
             break
+        if candidate.key in quarantined_resource_failures:
+            continue
         if candidate.key not in selected_keys:
             selected_keys.append(candidate.key)
     return [by_key[key] for key in selected_keys[:limit] if key in by_key]
@@ -1070,15 +1135,27 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
     - Do not add `script.json.youtube`.
     - Do not make AP, College Board, CEEB, accreditation, Common App, NCAA, or admissions claims.
     - Keep changes scoped to the target lesson folder unless a mechanical pipeline bug blocks production.
+    - Treat narration density as a first-draft hard gate, not a later cleanup:
+      target 11-13 sections, total narration around 850-1050 words, average
+      <= 80 words/section, and every single section <= 100 words. The release
+      gate permits up to average 85 / section 105, but your first draft should
+      stay below that buffer so Umi does not need a density-repair pass.
+    - Minimize repeated context exploration. Read the handoff, source packet,
+      teaching brief, visual brief, and at most one nearby completed lesson as
+      reference. Do not re-scout broad repo docs or multiple old lessons unless
+      a gate failure proves the local handoff is insufficient.
 
     ## Required Output
 
-    Produce a complete V2 lesson folder: `script.json`, `build_slides.py`, slides,
-    `contact-sheet.jpg`, `style_manifest.json`, `learning_check.json`, standard
-    production reviewer JSON files bound to the current script SHA,
-    `_review_expert_lens.json`, music files, MP4, and transcript. Do not write
-    `_review_independent_pass.json` or `_review_source_alignment.json`; those
-    are written by the separate independent reviewer wrapper after production.
+    Produce a complete pre-render V2 lesson folder: `script.json`,
+    `build_slides.py`, slides, `contact-sheet.jpg`, `style_manifest.json`,
+    `learning_check.json`, standard production reviewer JSON files bound to the
+    current script SHA, and `_review_expert_lens.json`. Do not render audio,
+    MP4, or transcript inside the worker handoff. The orchestrator owns
+    TTS/MP4/transcript after script/slide preflight and density repair. Do not
+    write `_review_independent_pass.json` or `_review_source_alignment.json`;
+    those are written by the separate independent reviewer wrapper after
+    production.
 
     Required production reviewer JSON files:
     - `_review_A.json` with reviewer containing `peer` or `PhD`, verdict
@@ -1151,13 +1228,19 @@ def render_handoff(candidate: Candidate, packet: dict[str, Any]) -> str:
 
     ## Verification
 
+    Before running the gates, self-check section word counts and fix
+    `script.json` plus reviewer `script_sha` values immediately if any section
+    is above 100 words or the average is above 80 words/section. Do not report a
+    handoff as complete while expecting Umi to trim ordinary narration density.
+
     ```bash
-    python3 tools/lesson-video/foundation_video_gate.py teaching-videos/{candidate.target_slug} --render-mp4
+    python3 tools/lesson-video/foundation_video_gate.py teaching-videos/{candidate.target_slug}
     python3 tools/lesson-video/lesson_release_gate.py teaching-videos/{candidate.target_slug} --check
     ```
 
-    Stop and report if blocked. A draft is not uploadable until Umi/Codex writes
-    the approval artifact.
+    Stop and report if blocked. Do not add `--render-mp4` here unless Umi/Codex
+    explicitly asks for a manual recovery render. A draft is not uploadable
+    until Umi/Codex writes the approval artifact.
     """)
 
 
@@ -1180,7 +1263,7 @@ def run_stream(cmd: list[str], *, cwd: Path = ROOT, timeout: int | None = None) 
     saw_tool_progress = False
     try:
         for line in proc.stdout:
-            if "[cc:tool]" in line:
+            if "[cc:tool]" in line or ":tool]" in line:
                 saw_tool_progress = True
             print(line, end="", flush=True)
         return proc.wait(timeout=timeout), saw_tool_progress
@@ -1201,6 +1284,234 @@ def run_parent_trust_audit(approved_rows: list[dict[str, Any]]) -> int:
         return 0
     report_name = f"{today_stamp()}-foundation-parent-trust"
     return run_checked([sys.executable, str(PARENT_TRUST_AUDIT), "--report-name", report_name, *paths])
+
+
+def script_sha(folder: Path) -> str | None:
+    path = folder / "script.json"
+    if not path.exists():
+        return None
+    return file_sha256(path)
+
+
+def render_cache_marker(folder: Path) -> Path:
+    return folder / ".rendered_script_sha256"
+
+
+def generated_render_paths(folder: Path) -> list[Path]:
+    paths: list[Path] = []
+    audio_dir = folder / "audio"
+    if audio_dir.exists():
+        paths.extend(p for p in audio_dir.iterdir() if p.is_file())
+    paths.extend(folder.glob("*.mp4"))
+    for name in ("master_audio.wav", "transcript.txt", "subtitles.srt", "slides_concat.txt"):
+        paths.append(folder / name)
+    return paths
+
+
+def invalidate_render_cache_if_needed(folder: Path, *, reason: str, force: bool = False) -> bool:
+    """Delete audio/MP4 derivatives when script.json is newer or hash changed."""
+    current_sha = script_sha(folder)
+    if not current_sha:
+        return False
+    marker = render_cache_marker(folder)
+    marker_sha = marker.read_text().strip() if marker.exists() else ""
+    generated = [p for p in generated_render_paths(folder) if p.exists()]
+    script_path = folder / "script.json"
+    script_mtime = script_path.stat().st_mtime
+    stale_by_mtime = any(p.stat().st_mtime < script_mtime for p in generated)
+    stale_by_marker = bool(marker_sha and marker_sha != current_sha)
+    should_clear = force or stale_by_mtime or stale_by_marker
+    if not should_clear:
+        return False
+    removed = 0
+    for path in generated:
+        try:
+            path.unlink()
+            removed += 1
+        except FileNotFoundError:
+            pass
+    print(
+        f"[render-cache] cleared {removed} generated file(s) for {folder.name}: {reason}",
+        flush=True,
+    )
+    return True
+
+
+def mark_render_cache_current(folder: Path) -> None:
+    current_sha = script_sha(folder)
+    if current_sha:
+        render_cache_marker(folder).write_text(current_sha + "\n")
+
+
+def render_outputs_ready(folder: Path) -> bool:
+    return valid_mp4(find_mp4(folder)) and (folder / "transcript.txt").exists()
+
+
+def run_foundation_gate(
+    folder: Path,
+    *,
+    render_mp4: bool,
+    timeout: int | None,
+    reason: str,
+) -> int:
+    gate_cmd = [sys.executable, str(FOUNDATION_GATE), str(folder)]
+    if render_mp4:
+        cache_cleared = invalidate_render_cache_if_needed(folder, reason=reason)
+        if cache_cleared or not render_outputs_ready(folder):
+            gate_cmd.append("--render-mp4")
+        else:
+            print(f"[render-cache] reusing current MP4/transcript for {folder.name}: {reason}", flush=True)
+    rc = run_checked(gate_cmd, timeout=timeout)
+    if rc == 0 and render_mp4 and render_outputs_ready(folder):
+        mark_render_cache_current(folder)
+    return rc
+
+
+def issue_messages(audit: dict[str, Any], *, severities: set[str] | None = None) -> list[str]:
+    messages = []
+    for issue in audit.get("issues") or []:
+        if severities and issue.get("severity") not in severities:
+            continue
+        messages.append(str(issue.get("message") or ""))
+    return messages
+
+
+def is_density_issue(message: str) -> bool:
+    lowered = message.lower()
+    return (
+        "average section is" in lowered
+        or (" is " in lowered and " words; consider splitting the slide" in lowered)
+    )
+
+
+def is_pre_review_missing_reviewer_issue(message: str) -> bool:
+    lowered = message.lower()
+    return (
+        "independent second-pass review" in lowered
+        or "source-alignment review" in lowered
+    )
+
+
+def should_run_density_repair(audit: dict[str, Any]) -> bool:
+    if any((issue.get("severity") in {"critical", "major"}) for issue in audit.get("issues") or []):
+        return False
+    return any(is_density_issue(message) for message in issue_messages(audit, severities={"minor"}))
+
+
+def is_pre_render_expected_issue(message: str) -> bool:
+    lowered = message.lower()
+    return (
+        "no mp4 found" in lowered
+        or "missing mp4" in lowered
+        or "no transcript.txt found" in lowered
+        or "missing transcript.txt" in lowered
+        or is_pre_review_missing_reviewer_issue(message)
+    )
+
+
+def pre_render_blockers(audit: dict[str, Any], *, ignore_density: bool) -> list[str]:
+    blockers: list[str] = []
+    for issue in audit.get("issues") or []:
+        severity = issue.get("severity")
+        message = str(issue.get("message") or "")
+        if severity in {"note"}:
+            continue
+        if is_pre_render_expected_issue(message):
+            continue
+        if ignore_density and is_density_issue(message):
+            continue
+        if severity in {"critical", "major", "minor"}:
+            blockers.append(message)
+    return blockers
+
+
+def should_run_density_repair_pre_render(audit: dict[str, Any]) -> bool:
+    if not any(is_density_issue(message) for message in issue_messages(audit, severities={"minor"})):
+        return False
+    return not pre_render_blockers(audit, ignore_density=True)
+
+
+def ready_for_render(audit: dict[str, Any]) -> tuple[bool, list[str]]:
+    blockers = pre_render_blockers(audit, ignore_density=False)
+    return not blockers, blockers
+
+
+def ready_for_independent_review(audit: dict[str, Any]) -> tuple[bool, list[str]]:
+    blockers = []
+    for issue in audit.get("issues") or []:
+        severity = issue.get("severity")
+        message = str(issue.get("message") or "")
+        if severity in {"critical", "major"}:
+            blockers.append(message)
+            continue
+        if severity == "minor" and not is_pre_review_missing_reviewer_issue(message):
+            blockers.append(message)
+    return not blockers, blockers
+
+
+def refresh_production_review_shas(folder: Path) -> None:
+    """Keep production reviewer files bound after a script-only density repair."""
+    script_path = folder / "script.json"
+    if not script_path.exists():
+        return
+    review_sha = sha256_review_script(script_path)
+    for name in ("_review_A.json", "_review_B.json", "_review_C.json", "_review_expert_lens.json"):
+        path = folder / name
+        payload = read_json(path, None)
+        if not isinstance(payload, dict):
+            continue
+        payload["script_sha"] = review_sha
+        payload["density_repair_note"] = "script-only narration density repair refreshed this SHA"
+        write_json(path, payload)
+
+
+def clear_independent_reviews(folder: Path, *, reason: str) -> None:
+    removed = 0
+    for name in ("_review_independent_pass.json", "_review_source_alignment.json"):
+        path = folder / name
+        if path.exists():
+            path.unlink()
+            removed += 1
+    if removed:
+        print(f"[independent-review] cleared {removed} stale file(s) for {folder.name}: {reason}", flush=True)
+
+
+def review_script_sha(folder: Path) -> str | None:
+    script_path = folder / "script.json"
+    if not script_path.exists():
+        return None
+    return sha256_review_script(script_path)
+
+
+def independent_reviews_current(folder: Path) -> bool:
+    current_sha = review_script_sha(folder)
+    if not current_sha:
+        return True
+    for name in ("_review_independent_pass.json", "_review_source_alignment.json"):
+        path = folder / name
+        payload = read_json(path, None)
+        if isinstance(payload, dict) and payload.get("script_sha") != current_sha:
+            return False
+    return True
+
+
+def reconcile_existing_lesson_artifacts(folder: Path, *, reason: str) -> None:
+    """Fail closed when script.json drifts after a prior review/render cycle."""
+    if not (folder / "script.json").exists():
+        return
+    if not independent_reviews_current(folder):
+        clear_independent_reviews(folder, reason=f"{reason}: script hash drift")
+    invalidate_render_cache_if_needed(folder, reason=f"{reason}: script hash drift")
+
+
+def run_density_repair(args: argparse.Namespace, folder: Path, *, attempt: int) -> tuple[int, bool]:
+    return run_stream([
+        sys.executable, str(CC_DENSITY_REPAIR), str(folder.relative_to(ROOT)),
+        "--model", str(args.cc_model),
+        "--budget-usd", str(args.density_repair_budget_usd),
+        "--timeout-seconds", str(args.density_repair_timeout_seconds),
+        "--attempt", str(attempt),
+    ], timeout=args.density_repair_timeout_seconds + 30)
 
 
 def find_mp4(folder: Path) -> Path | None:
@@ -1333,7 +1644,7 @@ def update_state_row(state: dict[str, Any], candidate: Candidate, *, status: str
         "updated_at": now_utc(),
         "details": details,
     })
-    if status in {"cc_blocked", "gate_failed", "approved"}:
+    if status in {"cc_blocked", "gate_failed", "approved", "resource_failed"}:
         row["attempts"] = int(row.get("attempts") or 0) + 1
 
 
@@ -1377,19 +1688,25 @@ def commit_and_push(approved_slugs: list[str]) -> int:
 
 def orchestrate(args: argparse.Namespace) -> int:
     state = load_state()
-    selected = select_candidates(
-        collect_candidates(include_other_foundation=args.include_other_foundation, target_grade=args.target_grade),
-        state,
-        limit=max(args.max_modules * 4, args.max_modules),
+    requested_target_grade = args.target_grade
+    target_grade, candidates, selected, grade_attempts = resolve_target_grade(
+        requested_grade=requested_target_grade,
+        include_other_foundation=args.include_other_foundation,
+        state=state,
+        auto_advance=args.auto_advance_grade,
     )
+    args.target_grade = target_grade
     run_report = {
         "generated_at": now_utc(),
         "dry_run": args.dry_run,
-        "target_grade": args.target_grade,
+        "requested_target_grade": requested_target_grade,
+        "target_grade": target_grade,
+        "auto_advance_grade": args.auto_advance_grade,
+        "grade_attempts": grade_attempts,
         "upload_strategy": "video_first_no_caption_thumbnail_sync_cleanup_with_playlist"
         if not args.full_upload_followups
         else "full_upload_with_caption_thumbnail_playlist_sync_cleanup",
-        "course_sequence": grade_course_sequence(args.target_grade),
+        "course_sequence": grade_course_sequence(target_grade),
         "selected": [],
         "course_design": [],
         "approved": [],
@@ -1453,6 +1770,7 @@ def orchestrate(args: argparse.Namespace) -> int:
             continue
 
         if candidate.target_dir.exists() and (candidate.target_dir / "script.json").exists():
+            reconcile_existing_lesson_artifacts(candidate.target_dir, reason="existing lesson preflight")
             ready, lesson_audit, reasons = gate_ready(candidate.target_dir)
             if ready:
                 approved = approval_row(candidate, lesson_audit)
@@ -1514,6 +1832,106 @@ def orchestrate(args: argparse.Namespace) -> int:
         else:
             print("[cc] skipped by --no-cc")
 
+        pre_review_gate_rc = 0
+        if not args.no_gate:
+            pre_review_gate_rc = run_foundation_gate(
+                candidate.target_dir,
+                render_mp4=False,
+                timeout=args.gate_timeout_seconds,
+                reason="script preflight gate",
+            )
+            pre_audit = audit_lesson(candidate.target_dir)
+            for attempt in range(1, args.density_repair_attempts + 1):
+                if pre_review_gate_rc != 0 or not should_run_density_repair_pre_render(pre_audit) or args.no_cc:
+                    break
+                print(
+                    f"[density-repair] {candidate.target_slug} "
+                    f"attempt={attempt} score={pre_audit.get('quality_score')}",
+                    flush=True,
+                )
+                repair_rc, repair_saw_tool = run_density_repair(args, candidate.target_dir, attempt=attempt)
+                if repair_rc != 0 or not repair_saw_tool:
+                    details = {
+                        "returncode": repair_rc,
+                        "saw_tool_progress": repair_saw_tool,
+                        "quality_score": pre_audit.get("quality_score"),
+                    }
+                    update_state_row(state, candidate, status="density_repair_blocked", details=details)
+                    reason = "cc_rate_limited" if repair_rc == CC_RATE_LIMIT_RC else "density_repair_blocked"
+                    run_report["blocked"].append({**row, "reason": reason, **details})
+                    if repair_rc == CC_RATE_LIMIT_RC:
+                        print("[density-repair:rate-limit] stopping batch before selecting more modules", flush=True)
+                        break
+                    break
+                refresh_production_review_shas(candidate.target_dir)
+                clear_independent_reviews(candidate.target_dir, reason="script changed during density repair")
+                invalidate_render_cache_if_needed(
+                    candidate.target_dir,
+                    reason="script changed during density repair",
+                    force=True,
+                )
+                pre_review_gate_rc = run_foundation_gate(
+                    candidate.target_dir,
+                    render_mp4=False,
+                    timeout=args.gate_timeout_seconds,
+                    reason="post-density-repair script preflight gate",
+                )
+                pre_audit = audit_lesson(candidate.target_dir)
+            if any(
+                item.get("target_slug") == candidate.target_slug and str(item.get("reason", "")).startswith("density_repair")
+                for item in run_report["blocked"]
+            ):
+                if repair_rc == CC_RATE_LIMIT_RC:
+                    break
+                continue
+            if pre_review_gate_rc != 0:
+                details = {
+                    "foundation_gate_rc": pre_review_gate_rc,
+                    "quality_score": pre_audit.get("quality_score"),
+                    "verdict": pre_audit.get("verdict"),
+                }
+                update_state_row(state, candidate, status="gate_failed", details=details)
+                run_report["blocked"].append({**row, "reason": "pre_review_gate_failed", **details})
+                continue
+            ok_for_render, render_blockers = ready_for_render(pre_audit)
+            if not ok_for_render:
+                details = {
+                    "ready_reasons": render_blockers,
+                    "quality_score": pre_audit.get("quality_score"),
+                    "verdict": pre_audit.get("verdict"),
+                }
+                update_state_row(state, candidate, status="gate_failed", details=details)
+                run_report["blocked"].append({**row, "reason": "pre_render_gate_failed", **details})
+                continue
+            render_gate_rc = run_foundation_gate(
+                candidate.target_dir,
+                render_mp4=args.render_mp4,
+                timeout=args.gate_timeout_seconds,
+                reason="release-candidate render gate",
+            )
+            pre_audit = audit_lesson(candidate.target_dir)
+            if render_gate_rc != 0:
+                details = {
+                    "foundation_gate_rc": render_gate_rc,
+                    "quality_score": pre_audit.get("quality_score"),
+                    "verdict": pre_audit.get("verdict"),
+                }
+                update_state_row(state, candidate, status="gate_failed", details=details)
+                run_report["blocked"].append({**row, "reason": "render_gate_failed", **details})
+                continue
+            ok_for_review, pre_review_blockers = ready_for_independent_review(pre_audit)
+            if not ok_for_review and not args.no_independent_review:
+                details = {
+                    "ready_reasons": pre_review_blockers,
+                    "quality_score": pre_audit.get("quality_score"),
+                    "verdict": pre_audit.get("verdict"),
+                }
+                update_state_row(state, candidate, status="gate_failed", details=details)
+                run_report["blocked"].append({**row, "reason": "pre_review_gate_failed", **details})
+                continue
+        elif args.no_gate:
+            print("[pre-review-gate] skipped by --no-gate")
+
         if not args.no_independent_review and not args.no_cc:
             rc, saw_tool = run_stream([
                 sys.executable, str(CC_REVIEWER), str(candidate.target_dir.relative_to(ROOT)),
@@ -1537,10 +1955,12 @@ def orchestrate(args: argparse.Namespace) -> int:
             print("[gate] skipped by --no-gate")
             continue
 
-        gate_cmd = [sys.executable, str(FOUNDATION_GATE), str(candidate.target_dir)]
-        if args.render_mp4:
-            gate_cmd.append("--render-mp4")
-        gate_rc = run_checked(gate_cmd, timeout=args.gate_timeout_seconds)
+        gate_rc = run_foundation_gate(
+            candidate.target_dir,
+            render_mp4=args.render_mp4,
+            timeout=args.gate_timeout_seconds,
+            reason="final release gate",
+        )
         release_rc = run_checked([sys.executable, str(RELEASE_GATE), str(candidate.target_dir), "--check"])
         ready, lesson_audit, reasons = gate_ready(candidate.target_dir)
         if gate_rc != 0 or release_rc != 0 or not ready:
@@ -1603,6 +2023,15 @@ def orchestrate(args: argparse.Namespace) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description="Run the GIIS foundation video daily pipeline.")
     ap.add_argument("--target-grade", type=int, default=DEFAULT_TARGET_GRADE)
+    ap.add_argument(
+        "--auto-advance-grade",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help=(
+            "when the requested target grade has no unfinished candidates, "
+            "continue with the next higher grade that has non-AP foundation modules"
+        ),
+    )
     ap.add_argument("--max-modules", type=int, default=10)
     ap.add_argument("--upload-max", type=int, default=10)
     ap.add_argument("--privacy", choices=["unlisted", "private", "public"], default="unlisted")
@@ -1612,11 +2041,15 @@ def main() -> int:
     ap.add_argument("--review-model", default=os.environ.get("FOUNDATION_REVIEW_MODEL", "opus"))
     ap.add_argument("--review-budget-usd", type=float, default=3)
     ap.add_argument("--review-timeout-seconds", type=int, default=420)
+    ap.add_argument("--density-repair-attempts", type=int, default=1)
+    ap.add_argument("--density-repair-budget-usd", type=float, default=3)
+    ap.add_argument("--density-repair-timeout-seconds", type=int, default=600)
     ap.add_argument("--gate-timeout-seconds", type=int, default=1800)
     ap.add_argument("--url-timeout", type=float, default=8.0)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-cc", action="store_true")
     ap.add_argument("--no-independent-review", action="store_true")
+    ap.add_argument("--no-density-repair", dest="density_repair_attempts", action="store_const", const=0)
     ap.add_argument("--no-gate", action="store_true")
     ap.add_argument("--no-upload", action="store_true")
     ap.add_argument("--no-parent-trust-audit", action="store_true")

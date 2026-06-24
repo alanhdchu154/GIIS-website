@@ -126,6 +126,29 @@ def is_contextual_false_positive(kind: str, match: str, context: str) -> bool:
             or "outcome" in lowered
         )
         return math_context and not sensitive_context
+    if kind == "admissions_claim" and token.startswith("admission"):
+        statehood_context = (
+            "missouri" in lowered
+            or "maine" in lowered
+            or "statehood" in lowered
+            or "slave state" in lowered
+            or "free state" in lowered
+            or "union" in lowered
+            or "senate balance" in lowered
+        )
+        school_admissions_context = (
+            "giis" in lowered
+            or "genesis" in lowered
+            or "student" in lowered
+            or "applicant" in lowered
+            or "college" in lowered
+            or "university" in lowered
+            or "f-1" in lowered
+            or "i-20" in lowered
+            or "common app" in lowered
+            or "transfer credit" in lowered
+        )
+        return statehood_context and not school_admissions_context
     return False
 
 

@@ -40,6 +40,26 @@ if [ -z "$PYTHON" ]; then
   exit 1
 fi
 
+ORCHESTRATOR_ARGS=(
+  tools/lesson-video/foundation_daily_orchestrator.py
+  --target-grade "${FOUNDATION_TARGET_GRADE:-10}"
+  --max-modules "${FOUNDATION_MAX_MODULES:-10}"
+  --upload-max "${FOUNDATION_UPLOAD_MAX:-10}"
+  --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}"
+  --cc-model "${FOUNDATION_CC_MODEL:-sonnet}"
+  --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}"
+  --cc-timeout-seconds "${FOUNDATION_CC_TIMEOUT_SECONDS:-1800}"
+  --review-model "${FOUNDATION_REVIEW_MODEL:-opus}"
+  --review-budget-usd "${FOUNDATION_REVIEW_BUDGET_USD:-3}"
+  --review-timeout-seconds "${FOUNDATION_REVIEW_TIMEOUT_SECONDS:-420}"
+  --ignore-upload-quota-estimate
+  --auto-commit
+)
+if [ "${FOUNDATION_AUTO_ADVANCE_GRADE:-1}" != "0" ]; then
+  ORCHESTRATOR_ARGS+=(--auto-advance-grade)
+fi
+ORCHESTRATOR_ARGS+=("$@")
+
 {
   echo
   echo "════════════════════════════════════════════════════════════════════"
@@ -50,18 +70,5 @@ fi
   echo "  cc model:    ${FOUNDATION_CC_MODEL:-sonnet}"
   echo "  review model:${FOUNDATION_REVIEW_MODEL:-opus}"
   echo
-  "$PYTHON" tools/lesson-video/foundation_daily_orchestrator.py \
-    --target-grade "${FOUNDATION_TARGET_GRADE:-10}" \
-    --max-modules "${FOUNDATION_MAX_MODULES:-10}" \
-    --upload-max "${FOUNDATION_UPLOAD_MAX:-10}" \
-    --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}" \
-    --cc-model "${FOUNDATION_CC_MODEL:-sonnet}" \
-    --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}" \
-    --cc-timeout-seconds "${FOUNDATION_CC_TIMEOUT_SECONDS:-1800}" \
-    --review-model "${FOUNDATION_REVIEW_MODEL:-opus}" \
-    --review-budget-usd "${FOUNDATION_REVIEW_BUDGET_USD:-3}" \
-    --review-timeout-seconds "${FOUNDATION_REVIEW_TIMEOUT_SECONDS:-420}" \
-    --ignore-upload-quota-estimate \
-    --auto-commit \
-    "$@"
+  "$PYTHON" "${ORCHESTRATOR_ARGS[@]}"
 } 2>&1 | tee -a "$LOG"
