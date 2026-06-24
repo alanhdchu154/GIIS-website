@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-06-23
+Last updated: 2026-06-24
 
 This file is the current execution roadmap. Historical slot logs were removed
 from the active repo state so daily work starts from current priorities instead
@@ -12,6 +12,27 @@ Keep the school trustworthy, operational, and parent-visible while the
 foundation-video pipeline stabilizes. The next phase is proof over volume:
 parents should see a serious school, a working dashboard, and course/video
 quality that feels intentionally designed.
+
+2026-06-24 03:45 CT producer evidence: the scheduled producer resumed after
+the Claude Code reset, auto-advanced from Grade 10 to Grade 11, completed
+Academic Writing M7-M8, manually restored the clean score-100 approval artifact
+after stopping the batch, and uploaded both through
+`yt_queue.py upload --gate-ready` with playlist membership and no captions,
+thumbnails, manifest sync, or cleanup: M7 (`qI-Zm9CWrYI`) and M8
+(`ELX3loeOYjA`). Academic Writing is now 8/8 uploaded. Today's 2026-06-24
+artifact-backed count is 2/40. The run was deliberately stopped after Opus
+review caught a real parent-trust blocker in Business Ethics & Critical
+Thinking M1: `server/prisma/courses/electives/business-ethics-critical-thinking.json`
+uses `https://openstax.org/books/business-ethics` but labels multiple modules as
+MIT OpenCourseWare readings. The same mismatch is already visible in M2
+source packets, so continuing the course would produce repeat source-alignment
+failures. Post-checks: queue is 352 uploaded / 1 pending / 0 no-MP4 / 353
+total; pending release gate is 1 needs_revision (Business Ethics M1); manifest
+alignment is 0 warnings across 306 manifest lessons; dashboard was updated.
+Next action before more Business Ethics production: repair or replace the
+course reading labels/URLs, regenerate affected source packets/artifacts, and
+rerun review. This is a real source-alignment blocker, not "no material to
+top up."
 
 2026-06-23 05:50 CT 03:00 producer evidence: the scheduled producer resumed
 from the Social Psychology M3 partial and completed the full 10-module batch.
