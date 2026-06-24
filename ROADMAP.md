@@ -109,6 +109,24 @@ Dry-run verification shows Grade 10 has 9 theoretical but 0 selectable
 candidates, then auto-advances to Grade 11 with 186 selectable candidates,
 starting with Academic Writing M1-M3.
 
+2026-06-23 21:36 CT Alan-directed top-up rerun evidence: after the
+auto-advance fix, the bounded 10-module run correctly advanced from requested
+Grade 10 to Grade 11 and selected Academic Writing. It produced, rendered,
+Opus-reviewed, parent-trust approved, and uploaded Academic Writing M1-M6 with
+playlist membership, finishing 6 uploaded / 0 failed: M1 (`PdpeNMj_sM4`), M2
+(`5yS1eSicPOM`), M3 (`jbOyszA9ndA`), M4 (`fvJ_c63uQ0I`), M5 (`6zG7jNqEdEs`),
+and M6 (`9qKxK4565Bo`). The run stopped safely at M7 because Claude Code
+reported a session limit (`returncode 75`) after tool progress, so the
+orchestrator did not select more modules and uploaded only the six score-100
+approved lessons. Today's artifact-backed count is now 35/40. Post-checks:
+queue is 350 uploaded / 0 pending / 1 no-MP4 / 351 total, pending release gate
+is 0, manifest alignment is 0 warnings across 306 manifest lessons, and the
+dashboard was updated. Efficiency signal: Academic Writing M1-M6 all reached
+score 100 without orchestrator density repair; Sonnet worker time was roughly
+7-11 minutes per completed module, with one self-trim on M5. The remaining
+throughput blocker is now Claude Code session capacity plus repeated per-module
+reference/API reading, not empty queue handling or YouTube quota.
+
 2026-06-19 evening lesson-video strategy update: G9 foundation videos are
 complete enough for the current parent-trust proof path, and Alan approved
 resuming the unified Codex automation as a 40-capacity trial. Current evidence:
