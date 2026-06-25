@@ -11,7 +11,12 @@ const resend = RESEND_KEY
   ? new Resend(RESEND_KEY)
   : null;
 
-const FROM = process.env.RESEND_FROM_EMAIL || 'GIIS Admissions <admissions@genesisideas.school>';
+// NOTE: the FROM address domain must be VERIFIED in Resend. Only the
+// `updates.genesisideas.school` subdomain is verified; the root
+// `genesisideas.school` is NOT, so sending from `@genesisideas.school` returns
+// 403 "domain not verified". Default to the verified subdomain; override via
+// RESEND_FROM_EMAIL once the root domain is also verified.
+const FROM = process.env.RESEND_FROM_EMAIL || 'GIIS Admissions <admissions@updates.genesisideas.school>';
 const ADMIN_EMAIL = 'alanhdchu@genesisideas.school';
 const ADMISSIONS_EMAIL = 'admissions@genesisideas.school';
 const FALLBACK_PARENT_EMAIL = 'admin@genesisideas.school';

@@ -99,3 +99,9 @@ __pycache__/
 # AWS Lightsail SSH private key — never commit
 LightsailDefaultKey-us-east-1.pem
 *.pem
+
+# ops/ box monitor — server-side secrets & runtime files (never commit)
+ops/box-monitor.env
+ops/recipients.txt
+ops/monitor.log
+ops/.monitor-state

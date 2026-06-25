@@ -1,0 +1,16 @@
+[Unit]
+Description=GIIS box monitor web (status page + recipient manager)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Environment=MONITOR_WEB_PORT=8770
+Environment=STATUS_JSON=/var/www/status/status.json
+Environment=RECIPIENTS_FILE=/home/ubuntu/ops/recipients.txt
+ExecStart=/usr/bin/python3 /home/ubuntu/ops/monitor-web/server.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
