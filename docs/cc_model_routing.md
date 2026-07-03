@@ -5,20 +5,24 @@ Synced: 2026-07-03. Central remains the master; edit Central first, then
 re-sync here. This local copy exists so `docs/cc_model_routing.md` references in
 `AGENTS.md` and `CLAUDE.md` resolve inside this repo for VS Code Claude Code.
 
-Use Claude Code model aliases for routine handoffs, not hard-coded version
-names. Local Claude Code accepts an alias such as `sonnet` or `opus`, or a full
-model name. The current official Anthropic model migration docs identify the new
-Sonnet line as `claude-sonnet-5`; Anthropic's Opus page identifies the current
-strong Opus API model as `claude-opus-4-8`. GIIS should still route cc work with
-aliases by default:
+Use Claude Code model aliases for routine handoffs when the alias is confirmed,
+and use the full model ID when a newly restored model does not yet have a local
+alias. Local Claude Code accepts an alias such as `sonnet` or `opus`, or a full
+model name. The current official Anthropic docs identify Fable 5 as
+`claude-fable-5`, the Sonnet line as `claude-sonnet-5`, and the current
+Opus-class line as `claude-opus-4-8`. GIIS should route cc work this way:
 
 - `--model sonnet`: latest Sonnet line, currently the Sonnet 5 line. Use this
   for most code-mode production mechanics.
 - `--model opus`: latest available Opus-class line in Claude Code. Use this for
-  judgment-heavy or high-risk work.
+  judgment-heavy or high-risk work when Fable is unnecessary or unsuitable.
+- `--model claude-fable-5`: Fable 5 full model ID. Use only for
+  highest-capability ambitious long-horizon work after local access is
+  confirmed and retention/safeguard constraints are acceptable.
 
 Only pin a full model ID when debugging a migration/regression, reproducing an
-old result, or a project runbook explicitly requires a full API model name.
+old result, a project runbook explicitly requires a full API model name, or a
+newly restored model such as Fable 5 is not yet reachable by a short alias.
 
 Goal: spend the strongest model where judgment matters, and keep routine work on
 the cheaper/faster model.
@@ -32,9 +36,10 @@ the cheaper/faster model.
 | Routine implementation | Sonnet alias | small scoped UI/code edits, config/docs updates, adding tests for known behavior, straightforward refactor |
 | Verification / test triage | Sonnet first | run bounded checks, summarize failures, identify likely owner/file; escalate if root cause is unclear |
 | Independent bug-hunt review | Opus alias | current diff alignment, regression hunting, missing-test review, high-risk correctness review |
-| Root-cause diagnosis | Opus when non-obvious | runtime stall, data corruption, privacy leak, flaky state machine, cross-file behavior |
+| Root-cause diagnosis | Opus when non-obvious; Fable only for highest-stakes long-horizon diagnosis | runtime stall, data corruption, privacy leak, flaky state machine, cross-file behavior |
 | Architecture / protocol / security | Opus alias | privacy boundaries, payment/deploy risk, agent memory semantics, benchmark validity, external claims |
 | Research / paper claim boundary | Opus alias | evidence matrix, synthetic-vs-real validation, reviewer-premortem, academic/public claim safety |
+| Ambitious long-running / broad migration | Fable if access confirmed and constraints acceptable; otherwise Opus | large migrations, complex multi-day implementation, cross-repo transformations, long-running autonomous coding |
 | Long generation / watch / broad suites | avoid by default | split the task; use explicit stop conditions before choosing any model |
 
 ## GIIS Project Bias
@@ -45,6 +50,10 @@ the cheaper/faster model.
 - Use `--model opus` for independent release judgment, parent trust,
   payment/deploy risk, public school claims, broad bug-hunt review, and
   sales-readiness decisions.
+- Use `--model claude-fable-5` only for unusually ambitious GIIS long-horizon
+  work such as large cross-module migrations or multi-day autonomous
+  implementation, after confirming local access and retention/safeguard
+  acceptability. Do not use Fable for ordinary lesson-video production.
 - The foundation lesson-video pipeline encodes this split directly:
   `FOUNDATION_CC_MODEL=sonnet` for bounded production/render mechanics and
   `FOUNDATION_REVIEW_MODEL=opus` for independent source-alignment and
@@ -54,9 +63,9 @@ the cheaper/faster model.
 
 Every non-trivial cc handoff should state:
 
-- model target: `sonnet` or `opus`, written as an alias unless there is a
-  concrete reason to pin a full model ID
-- why that model is appropriate
+- model target: `sonnet`, `opus`, or `claude-fable-5`
+- why that model is appropriate, including Fable access/retention/safeguard
+  acceptance if Fable is selected
 - pass type: scouting, implementation, verification, bug-hunt, architecture,
   protocol/privacy, research/paper, cleanup, docs, release review, or
   parent-trust review
