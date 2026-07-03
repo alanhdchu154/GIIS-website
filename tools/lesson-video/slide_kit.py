@@ -97,7 +97,7 @@ THEMES = [
         {"name": "science",
          "accent": TEAL, "accent_light": TEAL_LIGHT,
          "bg": CREAM,    "card_bg": PARCHMENT}),
-    (("English", "Composition", "Academic Writing", "Communication", "Media"),
+    (("English", "Composition", "Academic Writing", "Business Writing", "Communication", "Media"),
         {"name": "literature",
          "accent": SEPIA, "accent_light": SEPIA_LIGHT,
          "bg": PARCHMENT, "card_bg": CREAM}),

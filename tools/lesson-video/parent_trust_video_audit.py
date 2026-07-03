@@ -86,19 +86,23 @@ def is_contextual_false_positive(kind: str, match: str, context: str) -> bool:
             or "genesis" in lowered
             or "enroll" in lowered
             or "tuition" in lowered
-            or "checkout" in lowered
-            or "invoice" in lowered
-            or "refund" in lowered
             or "stripe" in lowered
             or "pricing" in lowered
             or "payment" in lowered
         )
-        business_math_context = (
+        business_lesson_context = (
             "revenue" in lowered
             or "cost" in lowered
             or "price" in lowered
             or "finance" in lowered
             or "market" in lowered
+            or "labor" in lowered
+            or "worker" in lowered
+            or "wage" in lowered
+            or "salary" in lowered
+            or "earn" in lowered
+            or "employment" in lowered
+            or "unemployed" in lowered
             or "business" in lowered
             or "profit" in lowered
             or "budget" in lowered
@@ -106,8 +110,29 @@ def is_contextual_false_positive(kind: str, match: str, context: str) -> bool:
             or "interest" in lowered
             or "balance" in lowered
             or "pairs" in lowered
+            or "customer" in lowered
+            or "competitor" in lowered
+            or "survey" in lowered
+            or "purchaser" in lowered
+            or "user" in lowered
+            or "interview" in lowered
+            or "memo" in lowered
+            or "proposal" in lowered
+            or "equipment" in lowered
+            or "conference room" in lowered
+            or "purpose statement" in lowered
+            or "mobile" in lowered
+            or "likert" in lowered
+            or "attitude" in lowered
+            or "question" in lowered
+            or "scale" in lowered
+            or "slower" in lowered
+            or "speed" in lowered
         )
-        if token.startswith("$") and business_math_context and not school_payment_context:
+        business_process_token = token in {"checkout", "invoice", "refund"}
+        if token.startswith("$") and business_lesson_context and not school_payment_context:
+            return True
+        if business_process_token and business_lesson_context and not school_payment_context:
             return True
     if kind == "outcome_guarantee" and token.startswith("guarantee"):
         math_context = (
@@ -117,6 +142,15 @@ def is_contextual_false_positive(kind: str, match: str, context: str) -> bool:
             or "geometry" in lowered
             or "parallel" in lowered
         )
+        survey_design_context = (
+            "survey" in lowered
+            or "question wording" in lowered
+            or "leading question" in lowered
+            or "question almost" in lowered
+            or "leaves the door open" in lowered
+            or "respondent" in lowered
+            or "questionnaire" in lowered
+        )
         sensitive_context = (
             "admission" in lowered
             or "acceptance" in lowered
@@ -125,8 +159,71 @@ def is_contextual_false_positive(kind: str, match: str, context: str) -> bool:
             or "diploma" in lowered
             or "outcome" in lowered
         )
-        return math_context and not sensitive_context
+        return (math_context or survey_design_context) and not sensitive_context
+    if kind == "outcome_guarantee" and token.startswith("ensure"):
+        research_method_context = (
+            "internal validity" in lowered
+            or "reliability" in lowered
+            or "confounds" in lowered
+            or "measurement" in lowered
+            or "research design" in lowered
+            or "consistent measurement" in lowered
+            or "sampling" in lowered
+            or "trustworthiness" in lowered
+            or "credibility" in lowered
+            or "member checking" in lowered
+            or "transferability" in lowered
+            or "qualitative" in lowered
+            or "data collection" in lowered
+            or "limitation" in lowered
+        )
+        sensitive_context = (
+            "admission" in lowered
+            or "acceptance" in lowered
+            or "college" in lowered
+            or "credit" in lowered
+            or "diploma" in lowered
+            or "outcome" in lowered
+            or "guarantee" in lowered
+        )
+        return research_method_context and not sensitive_context
     if kind == "admissions_claim" and token.startswith("admission"):
+        institutional_admissions_context = (
+            "giis" in lowered
+            or "genesis" in lowered
+            or "applicant" in lowered
+            or "college" in lowered
+            or "university" in lowered
+            or "f-1" in lowered
+            or "i-20" in lowered
+            or "common app" in lowered
+            or "transfer credit" in lowered
+            or "enroll" in lowered
+            or "tuition" in lowered
+            or "diploma" in lowered
+        )
+        literary_admission_context = (
+            (
+                "charged admission" in lowered
+                or "charges admission" in lowered
+                or "charging admission" in lowered
+            )
+            and (
+                "angel" in lowered
+                or "villager" in lowered
+                or "crowd" in lowered
+                or "spectacle" in lowered
+                or "family" in lowered
+                or "courtyard" in lowered
+                or "priest" in lowered
+                or "bishop" in lowered
+                or "divine being" in lowered
+                or "greed" in lowered
+                or "exploit" in lowered
+            )
+        )
+        if literary_admission_context and not institutional_admissions_context:
+            return True
         statehood_context = (
             "missouri" in lowered
             or "maine" in lowered

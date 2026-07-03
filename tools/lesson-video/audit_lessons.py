@@ -75,8 +75,9 @@ EXPERT_LENS_STOPWORDS = {
 EXPECTED_THEME_PREFIXES = [
     (("Algebra", "Geometry", "Calculus", "Pre-Calculus", "Trigonometry",
       "Statistics", "AP Statistics"), "math"),
-    (("Biology", "AP Biology", "Chemistry", "Physics", "Environmental"), "science"),
-    (("English", "Composition", "Academic Writing", "Communication", "Media"), "literature"),
+    (("Biology", "AP Biology", "Chemistry", "Physics", "Environmental",
+      "Research Methods"), "science"),
+    (("English", "Composition", "Academic Writing", "Business Writing", "Communication", "Media"), "literature"),
     (("History", "Government", "Geography", "Economics", "AP Human",
       "World Politics", "World History", "Politics", "Sociology",
       "Social Studies"), "social_studies"),
