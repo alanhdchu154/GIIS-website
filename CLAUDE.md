@@ -31,6 +31,8 @@ This repo follows the global Central Umi coordination contract in `/Users/alanhd
 - After meaningful GIIS work, update `/Users/alanhdchu/umi-central/ai/HANDOFF.md` before marking the task complete.
 - After every meaningful cc/Codex loop, run the source-of-truth sync gate: active worker task -> `umi/workload.md`, local durable state -> `ROADMAP.md`, cross-project risk or Alan attention -> Central Umi files. Do not let a VS Code cc chat or Codex chat be the only record of an accepted result, changed blocker, or next action.
 - If Alan works directly in a GIIS project-lead conversation, align Central Umi immediately for sales/payment/deploy decisions, production risk, public-claim changes, external actions, or priority shifts; align at end of turn when `ROADMAP.md`, `umi/workload.md`, blocker, risk, or next action changes.
+- Avoid duplicated operating rules. Central docs are the canonical source for cross-project policy; this file should reference them and add only GIIS-specific exceptions.
+- Treat `node_modules`, `server/node_modules`, `build`, `demo-output`, `server/tmp`, `.pytest_cache`, and `__pycache__` as rebuildable cache, not automatic cleanup. Keep them during active producer/runtime work unless a scoped cleanup/reset is intentional. Do not use broad `git clean -xfd`, and do not treat T9 lesson videos, OAuth tokens, generated release evidence, or production data as cache.
 
 ## 🎯 The single goal
 **Get parents to pay, and keep paying.** Every change should be evaluated against this lens — does it raise willingness to pay, or maintain trust after they've paid? If the answer is "neither," reconsider the priority.
