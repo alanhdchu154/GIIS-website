@@ -102,6 +102,9 @@ function Nav({ language, toggleLanguage }) {
                     <>
                         <div className={`collapse navbar-collapse ${!isCollapsed ? 'show' : ''} ${styles.mobileMenu}`}>
                             <ul className={styles.mobileItems}>
+                                <li className={styles.mobileTopLink} onClick={() => go('/pricing')}>
+                                    <Link to="/pricing" onClick={e => e.preventDefault()}>{t.pricing}</Link>
+                                </li>
                                 {mobileSections.map(sec => {
                                     const open = openSection === sec.header;
                                     return (
@@ -235,6 +238,11 @@ function Nav({ language, toggleLanguage }) {
                                     </li>
                                 ))}
                             </ul>
+                        </li>
+
+                        {/* PRICING */}
+                        <li className={styles.navItem}>
+                            <Link className={styles.navLink} to="/pricing">{t.pricing}</Link>
                         </li>
 
                         {/* PARENT VIEW */}

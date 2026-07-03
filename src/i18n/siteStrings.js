@@ -6,6 +6,7 @@ export function getNavStrings(language) {
     trustCenter: en ? 'TRUST CENTER' : '信任中心',
     academics: en ? 'ACADEMICS' : '学术',
     admission: en ? 'ADMISSIONS' : '入学路径',
+    pricing: en ? 'PRICING' : '价格',
     students: en ? 'STUDENT PORTAL' : '学生入口',
     resources: en ? 'PARENT VIEW' : '家长视角',
     langToggleAria: en ? 'Switch to Chinese' : 'Switch to English',

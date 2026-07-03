@@ -213,8 +213,8 @@ function LessonPreview({
             lineHeight: 1.5,
           }}>
             {isEn
-              ? 'Lessons are taught in English with English captions. This is by design — students build academic English while completing regular coursework.'
-              : '课程为英文授课，配英文字幕。这是刻意设计——学生在完成日常课程的同时累积学术英文能力。'}
+              ? 'Lessons are taught in English. Captions are being added as a separate quality pass, so use the YouTube player captions when they are available.'
+              : '课程以英文授课。字幕会作为独立质量流程逐步补上；若 YouTube 播放器显示可用字幕，请以播放器字幕为准。'}
           </p>
         </div>
 

@@ -323,8 +323,19 @@ html[lang="zh"] .mobileSectionHead {
     font-weight: 500 !important;
 }
 
+.mobileTopLink {
+    background: #fff9ea;
+    color: #2b3d6d !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+}
+
 html[lang="zh"] .mobileSubItem {
     font-size: 17px !important;
+}
+
+html[lang="zh"] .mobileTopLink {
+    font-size: 18px !important;
 }
 
 .topButton {

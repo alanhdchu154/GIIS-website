@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-07-03 15:20 CDT
+Last updated: 2026-07-03 16:40 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
@@ -17,7 +17,7 @@ old slot evidence.
 - priority: medium (no live production blocker; quality/trust hardening)
 - time anchor: 2026-07-03
 - time-aware continuity acknowledged?: yes
-- state: READY FOR CODEX
+- state: P2/P4/P5 implemented by Codex; P1/P3 remain pending
 
 ## Objective
 
@@ -26,19 +26,54 @@ and T9-mount "problems" were ruled out as physical (Alan away from home, T9 not
 carried), not systemic. Five real items remain, ranked. Full write-up mirrored
 in the session scratchpad `system-optimization-backlog.md`.
 
+## Codex Implementation: 2026-07-03 16:40 CT
+
+Completed now:
+
+- P2 playlist retry/backoff: `tools/youtube-upload/upload_lesson.py` now retries
+  transient playlist insert failures (`aborted`, backend/rate-limit, 429/5xx)
+  with bounded 2s / 5s / 10s backoff before leaving reconciliation as the
+  fallback.
+- P4 captions honesty: `src/components/main/LessonPreview.js` no longer claims
+  every lesson has English captions. It now says lessons are taught in English
+  and captions are a separate quality pass, with YouTube player captions used
+  when available.
+- P5 pricing nav: `src/components/main/Nav.js`, `Nav.module.css`, and
+  `src/i18n/siteStrings.js` add a top-level Pricing link on desktop and a direct
+  Pricing entry in the mobile menu.
+
+Verification:
+
+- `python3 -m py_compile tools/youtube-upload/upload_lesson.py`
+- `npm run audit:sales-launch` -> 53/53 pass
+- `npm run build` -> pass, Browserslist warning only
+- local static server on `http://localhost:3030`
+- `npm run audit:conversion-bilingual -- --base-url http://localhost:3030` ->
+  7/7 pass
+- `npm run audit:parent-journey -- --base-url http://localhost:3030` -> 7/7 pass
+- `npm run audit:sales-live -- --base-url http://localhost:3030` -> 9/9 pass
+- Playwright desktop/mobile smoke: Pricing link visible; no horizontal overflow
+
+Remaining:
+
+- P1 semantic parent-trust redesign remains pending; this needs an Opus-level
+  fixture and policy design rather than another keyword carve-out.
+- P3 roadmap/workload archive cleanup remains pending and still needs Alan
+  confirmation before large deletions.
+
 ### System
 
-- P1 (Opus) — `tools/lesson-video/parent_trust_video_audit.py` is a keyword
+- P1 pending (Opus) — `tools/lesson-video/parent_trust_video_audit.py` is a keyword
   blocklist that keeps false-positiving on normal instructional wording (>=8
   manual carve-outs in the logs). Move final verdict to semantic judgment at the
   Opus review stage; keep keywords as recall only; back it with a versioned
   pass/block fixture set instead of ad-hoc patches.
-- P2 (Sonnet) — YouTube playlist add "The operation was aborted" recurs every
+- P2 done (Sonnet) — YouTube playlist add "The operation was aborted" recurs every
   batch and is fixed after the fact by `reconcile-playlists --apply`. Build
   bounded retry + backoff into the upload/playlist-insert path in
   `tools/youtube-upload/yt_queue.py`; fall through to reconcile only on
   exhaustion.
-- P3 (Sonnet) — ROADMAP (~1150 lines) and this workload violate the CLAUDE.md
+- P3 pending (Sonnet) — ROADMAP (~1150 lines) and this workload violate the CLAUDE.md
   slim rule. Run the archival rule already written there: slot history to
   `docs/archive/`, keep ROADMAP to current lanes + brief milestones +
   future/priorities/non-goals, keep workload to the single active handoff.
@@ -46,13 +81,13 @@ in the session scratchpad `system-optimization-backlog.md`.
 
 ### Parent-facing (do first — user-angle)
 
-- P4 (Opus call, Sonnet edit) — `src/components/main/LessonPreview.js:216-217`
+- P4 done (Opus call, Sonnet edit) — `src/components/main/LessonPreview.js:216-217`
   claims lessons have "English captions ... by design", but the upload pipeline
   runs `--no-captions` and captions are permanent backlog. Visible broken
   promise on a bilingual/Chinese-parent audience. Verify current state, then
   either caption the videos (at minimum enable + QA YouTube auto-captions) OR
   soften the copy until captions exist. Do not let copy run ahead of capability.
-- P5 (Sonnet, one-line) — `/pricing` is well built but has NO entry in the main
+- P5 done (Sonnet, one-line) — `/pricing` is well built but has NO entry in the main
   nav (`src/components/main/Nav.js`); parents reach it only via CTAs. Add a
   Pricing link (EN + zh). Highest leverage-to-effort ratio in this list.
 

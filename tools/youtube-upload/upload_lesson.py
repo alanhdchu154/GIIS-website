@@ -12,12 +12,13 @@ are optional follow-ups because the daily foundation pipeline prioritizes video
 upload capacity first.
 """
 from __future__ import annotations
-import argparse, json, sys, subprocess
+import argparse, json, sys, subprocess, time
 from pathlib import Path
 from approval_gate import approved_slugs as load_approved_slugs
 
 ROOT = Path(__file__).resolve().parents[2]
 APPROVED_READY_TO_UPLOAD = ROOT / "teaching-videos" / "_audit" / "release-gate" / "approved_ready_to_upload.json"
+PLAYLIST_INSERT_BACKOFF_SECONDS = (2, 5, 10)
 
 
 def approved_slugs(path: Path = APPROVED_READY_TO_UPLOAD) -> set[str]:
@@ -98,6 +99,21 @@ def build_description(script: dict, lesson_dir: Path) -> str:
         parts += ["", "─── Chapters ───", *chapters]
     return "\n".join(parts)
 
+
+def transient_playlist_error(exc) -> bool:
+    status = getattr(getattr(exc, "resp", None), "status", None)
+    try:
+        reason = exc._get_reason() or ""
+    except Exception:
+        reason = str(exc)
+    lowered = reason.lower()
+    return (
+        status in {429, 500, 502, 503, 504}
+        or "aborted" in lowered
+        or "backend" in lowered
+        or "rate limit" in lowered
+    )
+
 def add_to_playlist(playlist_name: str, video_id: str, privacy: str):
     """Find the named playlist on the channel, creating it if missing,
     then add the video. Defers all auth to upload_video.get_creds()."""
@@ -129,11 +145,20 @@ def add_to_playlist(playlist_name: str, video_id: str, privacy: str):
 
     body = {"snippet": {"playlistId": pid,
                          "resourceId": {"kind": "youtube#video", "videoId": video_id}}}
-    try:
-        yt.playlistItems().insert(part="snippet", body=body).execute()
-        print(f"[playlist] added  {video_id}  →  '{playlist_name}'")
-    except HttpError as e:
-        print(f"[playlist] add failed: {e._get_reason()}")
+    for attempt in range(len(PLAYLIST_INSERT_BACKOFF_SECONDS) + 1):
+        try:
+            yt.playlistItems().insert(part="snippet", body=body).execute()
+            suffix = f" after retry {attempt}" if attempt else ""
+            print(f"[playlist] added  {video_id}  →  '{playlist_name}'{suffix}")
+            break
+        except HttpError as e:
+            reason = e._get_reason()
+            if not transient_playlist_error(e) or attempt == len(PLAYLIST_INSERT_BACKOFF_SECONDS):
+                print(f"[playlist] add failed: {reason}; reconcile-playlists can repair later")
+                break
+            wait = PLAYLIST_INSERT_BACKOFF_SECONDS[attempt]
+            print(f"[playlist] add retry {attempt + 1} after transient error: {reason}; waiting {wait}s")
+            time.sleep(wait)
     return pid
 
 def main():
