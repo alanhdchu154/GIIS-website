@@ -35,7 +35,12 @@ This repo follows the global Central Umi coordination contract in `/Users/alanhd
   screenshots, typography, palette, bilingual layout, and no-stock-photo rules.
   It does not override public-claim, official-document, or production safety
   gates.
-- After meaningful GIIS work, update `/Users/alanhdchu/umi-central/ai/HANDOFF.md` before marking the task complete.
+- After meaningful GIIS work, Central Umi / Codex updates
+  `/Users/alanhdchu/umi-central/ai/HANDOFF.md` before marking the task complete.
+  Claude Code / cc may read that file for executive context, but cc reports
+  task output through `umi/workload.md`, `umi/reports/`, or the requested worker
+  report; cc should not treat Central handoff as its active communication
+  channel.
 - After every meaningful cc/Codex loop, run the source-of-truth sync gate: active worker task -> `umi/workload.md`, local durable state -> `ROADMAP.md`, cross-project risk or Alan attention -> Central Umi files. Do not let a VS Code cc chat or Codex chat be the only record of an accepted result, changed blocker, or next action.
 - File placement rule: active worker assignments, retry prompts, model choices,
   stop conditions, and temporary cc/Codex task packets belong in
