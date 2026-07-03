@@ -37,6 +37,10 @@ This repo follows the global Central Umi coordination contract in `/Users/alanhd
   gates.
 - After meaningful GIIS work, update `/Users/alanhdchu/umi-central/ai/HANDOFF.md` before marking the task complete.
 - After every meaningful cc/Codex loop, run the source-of-truth sync gate: active worker task -> `umi/workload.md`, local durable state -> `ROADMAP.md`, cross-project risk or Alan attention -> Central Umi files. Do not let a VS Code cc chat or Codex chat be the only record of an accepted result, changed blocker, or next action.
+- File placement rule: active worker assignments, retry prompts, model choices,
+  stop conditions, and temporary cc/Codex task packets belong in
+  `umi/workload.md`, not in `AGENTS.md`, `CLAUDE.md`, `ROADMAP.md`, or Central
+  `ai/HANDOFF.md`.
 - If Alan works directly in a GIIS project-lead conversation, align Central Umi immediately for sales/payment/deploy decisions, production risk, public-claim changes, external actions, or priority shifts; align at end of turn when `ROADMAP.md`, `umi/workload.md`, blocker, risk, or next action changes.
 - For local storage moves, read `/Users/alanhdchu/umi-central/docs/local_storage_layout.md` first. GIIS `teaching-videos/` is active on T9 via symlink: `/Users/alanhdchu/giis-website/teaching-videos` -> `/Volumes/T9-Active/Projects/giis-website/teaching-videos`. The release gate reads the symlinked tree, and `teaching-videos/` is intentionally ignored/untracked in git. Do not force-add lesson-video source files, generated media, audit snapshots, or approval state; publish website-visible video state through `public/data/lessons-manifest.json`.
 
