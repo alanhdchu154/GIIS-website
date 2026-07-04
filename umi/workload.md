@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-07-03 16:28 CDT
+Last updated: 2026-07-04 05:29 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
@@ -28,17 +28,19 @@ history has been moved out of this active handoff.
 
 ## Current Lesson-Video State
 
-Alan's 2026-07-03 top-up requests are complete. The 20:00 CT dashboard/top-up
-lane brought the day from 30 to 40 uploaded lessons. Current durable state is
-in `ROADMAP.md`; detailed slot evidence is archived in
+Alan's 2026-07-04 03:00 CT video request is complete. The bounded foundation
+runner generated Trigonometry M5-M14, all 10 passed parent-trust/release gates,
+and all 10 uploaded unlisted through `yt_queue.py upload --gate-ready`. Current
+durable state is in `ROADMAP.md`; detailed prior slot evidence is archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`.
 
-Current snapshot from the completed top-up:
+Current snapshot from the completed run:
 
-- queue 512 uploaded / 0 pending / 0 no-MP4
+- queue 522 uploaded / 0 pending / 0 no-MP4
 - pending release gate 0 ready / 0 needs_revision / 0 blocked
-- dashboard 512 lessons / 511 MP4 / 512 uploaded / pending_upload=0
-- public manifest 488 lessons / 0 alignment warnings
+- dashboard 522 lessons / 521 MP4 / 522 uploaded / pending_upload=0
+- public manifest 488 lessons / 0 alignment warnings; upload ran with
+  `--no-sync`, so manifest/channel sync remains reconciliation
 - captions remain backlog and must not be promised as universally available
 
 ## Codex Implementation: 2026-07-03

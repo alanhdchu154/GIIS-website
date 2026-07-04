@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-03 16:28 CDT
+Last updated: 2026-07-04 05:29 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -26,7 +26,7 @@ quality that feels intentionally designed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-03 22:30 CDT.
+Last refreshed: 2026-07-04 05:29 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -35,18 +35,19 @@ and older pre-slim history is in
 
 Current operating state:
 
-- Alan's 2026-07-03 20:00 CT dashboard/top-up lane is complete: the day moved
-  from 30 to 40 uploaded lessons after a final 10-video batch.
-- Latest 10 uploaded: Statistics M9-M14 and Trigonometry M1-M4.
-- Queue: 512 uploaded / 0 pending / 0 no-MP4.
+- Alan's 2026-07-04 03:00 CT producer slot is complete: 10 Trigonometry
+  lessons were generated, passed parent-trust/release gates, and uploaded
+  unlisted.
+- Latest 10 uploaded: Trigonometry M5-M14.
+- Queue: 522 uploaded / 0 pending / 0 no-MP4.
 - Pending release gate: 0 ready / 0 needs_revision / 0 blocked.
-- Dashboard: 512 lessons / 511 MP4 / 512 uploaded / pending_upload=0.
-- Public manifest sync wrote `public/data/lessons-manifest.json` with 488
-  manifest lessons and 0 alignment warnings.
+- Dashboard: 522 lessons / 521 MP4 / 522 uploaded / pending_upload=0.
+- Public manifest remains at 488 manifest lessons with 0 alignment warnings;
+  the approved upload path used `--no-sync`, so manifest/channel sync remains
+  reconciliation work rather than an upload blocker.
 - No active producer, uploader, or reviewer process remained after the final
   run.
-- The previous Statistics playlist `aborted` error was a transient playlist-add
-  issue, not a true YouTube upload/channel limit.
+- No YouTube upload/channel limit appeared.
 
 Current interpretation:
 
