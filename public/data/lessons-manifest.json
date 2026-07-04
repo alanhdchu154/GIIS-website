@@ -1,7 +1,53 @@
 {
-  "generated_at": "2026-07-03T20:16:19+00:00",
+  "generated_at": "2026-07-04T03:29:25+00:00",
   "source": "youtube-channel",
   "by_course": {
+    "Trigonometry": [
+      {
+        "course": "Trigonometry",
+        "course_slug": "trigonometry",
+        "module_number": 1,
+        "module_title": "The Unit Circle",
+        "youtube_id": "1hTtjoQ9ubM",
+        "url": "https://youtu.be/1hTtjoQ9ubM",
+        "embed_url": "https://www.youtube.com/embed/1hTtjoQ9ubM",
+        "published_at": "2026-07-04T03:28:37Z",
+        "lesson_dir": "trigonometry-module-1-the-unit-circle-v2"
+      },
+      {
+        "course": "Trigonometry",
+        "course_slug": "trigonometry",
+        "module_number": 2,
+        "module_title": "Trigonometric Functions",
+        "youtube_id": "Pa_BfARrS3s",
+        "url": "https://youtu.be/Pa_BfARrS3s",
+        "embed_url": "https://www.youtube.com/embed/Pa_BfARrS3s",
+        "published_at": "2026-07-04T03:28:43Z",
+        "lesson_dir": "trigonometry-module-2-trigonometric-functions-v2"
+      },
+      {
+        "course": "Trigonometry",
+        "course_slug": "trigonometry",
+        "module_number": 3,
+        "module_title": "Graphs of Trigonometric Functions",
+        "youtube_id": "Q-l6GcRViTY",
+        "url": "https://youtu.be/Q-l6GcRViTY",
+        "embed_url": "https://www.youtube.com/embed/Q-l6GcRViTY",
+        "published_at": "2026-07-04T03:28:46Z",
+        "lesson_dir": "trigonometry-module-3-graphs-of-trigonometric-functions-v2"
+      },
+      {
+        "course": "Trigonometry",
+        "course_slug": "trigonometry",
+        "module_number": 4,
+        "module_title": "Trigonometric Identities",
+        "youtube_id": "uBsv8_hQLEY",
+        "url": "https://youtu.be/uBsv8_hQLEY",
+        "embed_url": "https://www.youtube.com/embed/uBsv8_hQLEY",
+        "published_at": "2026-07-04T03:28:51Z",
+        "lesson_dir": "trigonometry-module-4-trigonometric-identities-v2"
+      }
+    ],
     "Statistics": [
       {
         "course": "Statistics",
@@ -5426,6 +5472,50 @@
     ]
   },
   "lessons": [
+    {
+      "course": "Trigonometry",
+      "course_slug": "trigonometry",
+      "module_number": 1,
+      "module_title": "The Unit Circle",
+      "youtube_id": "1hTtjoQ9ubM",
+      "url": "https://youtu.be/1hTtjoQ9ubM",
+      "embed_url": "https://www.youtube.com/embed/1hTtjoQ9ubM",
+      "published_at": "2026-07-04T03:28:37Z",
+      "lesson_dir": "trigonometry-module-1-the-unit-circle-v2"
+    },
+    {
+      "course": "Trigonometry",
+      "course_slug": "trigonometry",
+      "module_number": 2,
+      "module_title": "Trigonometric Functions",
+      "youtube_id": "Pa_BfARrS3s",
+      "url": "https://youtu.be/Pa_BfARrS3s",
+      "embed_url": "https://www.youtube.com/embed/Pa_BfARrS3s",
+      "published_at": "2026-07-04T03:28:43Z",
+      "lesson_dir": "trigonometry-module-2-trigonometric-functions-v2"
+    },
+    {
+      "course": "Trigonometry",
+      "course_slug": "trigonometry",
+      "module_number": 3,
+      "module_title": "Graphs of Trigonometric Functions",
+      "youtube_id": "Q-l6GcRViTY",
+      "url": "https://youtu.be/Q-l6GcRViTY",
+      "embed_url": "https://www.youtube.com/embed/Q-l6GcRViTY",
+      "published_at": "2026-07-04T03:28:46Z",
+      "lesson_dir": "trigonometry-module-3-graphs-of-trigonometric-functions-v2"
+    },
+    {
+      "course": "Trigonometry",
+      "course_slug": "trigonometry",
+      "module_number": 4,
+      "module_title": "Trigonometric Identities",
+      "youtube_id": "uBsv8_hQLEY",
+      "url": "https://youtu.be/uBsv8_hQLEY",
+      "embed_url": "https://www.youtube.com/embed/uBsv8_hQLEY",
+      "published_at": "2026-07-04T03:28:51Z",
+      "lesson_dir": "trigonometry-module-4-trigonometric-identities-v2"
+    },
     {
       "course": "Statistics",
       "course_slug": "statistics",

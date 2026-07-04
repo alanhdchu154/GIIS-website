@@ -26,7 +26,7 @@ quality that feels intentionally designed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-03 15:20 CDT.
+Last refreshed: 2026-07-03 22:30 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -35,12 +35,13 @@ and older pre-slim history is in
 
 Current operating state:
 
-- Alan's 2026-07-03 10-video top-up request is complete: 6 earlier uploads plus
-  the final Statistics M5-M8 batch.
-- Queue: 502 uploaded / 0 pending / 0 no-MP4.
+- Alan's 2026-07-03 20:00 CT dashboard/top-up lane is complete: the day moved
+  from 30 to 40 uploaded lessons after a final 10-video batch.
+- Latest 10 uploaded: Statistics M9-M14 and Trigonometry M1-M4.
+- Queue: 512 uploaded / 0 pending / 0 no-MP4.
 - Pending release gate: 0 ready / 0 needs_revision / 0 blocked.
-- Dashboard: 502 lessons / 501 MP4 / 502 uploaded / pending_upload=0.
-- Public manifest sync wrote `public/data/lessons-manifest.json` with 484
+- Dashboard: 512 lessons / 511 MP4 / 512 uploaded / pending_upload=0.
+- Public manifest sync wrote `public/data/lessons-manifest.json` with 488
   manifest lessons and 0 alignment warnings.
 - No active producer, uploader, or reviewer process remained after the final
   run.

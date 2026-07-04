@@ -28,16 +28,17 @@ history has been moved out of this active handoff.
 
 ## Current Lesson-Video State
 
-Alan's 2026-07-03 10-video top-up request is complete. Current durable state is
+Alan's 2026-07-03 top-up requests are complete. The 20:00 CT dashboard/top-up
+lane brought the day from 30 to 40 uploaded lessons. Current durable state is
 in `ROADMAP.md`; detailed slot evidence is archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`.
 
 Current snapshot from the completed top-up:
 
-- queue 502 uploaded / 0 pending / 0 no-MP4
+- queue 512 uploaded / 0 pending / 0 no-MP4
 - pending release gate 0 ready / 0 needs_revision / 0 blocked
-- dashboard 502 lessons / 501 MP4 / 502 uploaded / pending_upload=0
-- public manifest 484 lessons / 0 alignment warnings
+- dashboard 512 lessons / 511 MP4 / 512 uploaded / pending_upload=0
+- public manifest 488 lessons / 0 alignment warnings
 - captions remain backlog and must not be promised as universally available
 
 ## Codex Implementation: 2026-07-03
