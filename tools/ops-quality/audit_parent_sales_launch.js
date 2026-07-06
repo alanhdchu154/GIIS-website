@@ -216,7 +216,11 @@ const checks = [
       /studentSituation/.test(files.consultation) &&
       /transcriptAvailable/.test(files.consultation) &&
       /desiredStart/.test(files.consultation) &&
-      /preferredTime/.test(files.consultation),
+      /preferredTime/.test(files.consultation) &&
+      /consultationPayload/.test(files.consultation) &&
+      /leadSummary/.test(files.consultation) &&
+      /parent_name/.test(files.consultation) &&
+      /student_grade/.test(files.consultation),
     message: 'Consultation page must submit the Netlify consultation form fields.',
   },
   {
@@ -232,7 +236,7 @@ const checks = [
   {
     id: 'consultation-hidden-form',
     file: 'public/index.html',
-    ok: /<form name="consultation"[\s\S]*data-netlify="true"[\s\S]*form-name[\s\S]*bot-field[\s\S]*parentName[\s\S]*studentSituation[\s\S]*transcriptAvailable[\s\S]*desiredStart[\s\S]*preferredTime[\s\S]*<\/form>/.test(files.publicIndex),
+    ok: /<form name="consultation"[\s\S]*data-netlify="true"[\s\S]*form-name[\s\S]*bot-field[\s\S]*parentName[\s\S]*parent_name[\s\S]*studentSituation[\s\S]*student_situation[\s\S]*transcriptAvailable[\s\S]*transcript_available[\s\S]*desiredStart[\s\S]*desired_start[\s\S]*preferredTime[\s\S]*preferred_time[\s\S]*leadSummary[\s\S]*<\/form>/.test(files.publicIndex),
     message: 'Netlify needs a hidden consultation form in public/index.html.',
   },
   {
@@ -244,7 +248,11 @@ const checks = [
       /studentName/.test(files.contact) &&
       /parentWeChat/.test(files.contact) &&
       /name="pathway"/.test(files.contact) &&
-      /name="grade"/.test(files.contact),
+      /name="grade"/.test(files.contact) &&
+      /contactPayload/.test(files.contact) &&
+      /leadSummary/.test(files.contact) &&
+      /student_name/.test(files.contact) &&
+      /parent_wechat/.test(files.contact),
     message: 'Homepage contact form must submit the Netlify contact form fields.',
   },
   {
@@ -260,7 +268,7 @@ const checks = [
   {
     id: 'contact-hidden-form',
     file: 'public/index.html',
-    ok: /<form name="contact"[\s\S]*data-netlify="true"[\s\S]*form-name[\s\S]*bot-field[\s\S]*studentName[\s\S]*parentWeChat[\s\S]*email[\s\S]*pathway[\s\S]*grade[\s\S]*message[\s\S]*<\/form>/.test(files.publicIndex),
+    ok: /<form name="contact"[\s\S]*data-netlify="true"[\s\S]*form-name[\s\S]*bot-field[\s\S]*studentName[\s\S]*parentWeChat[\s\S]*parent_wechat[\s\S]*email[\s\S]*contact_email[\s\S]*pathway[\s\S]*pathway_interest[\s\S]*grade[\s\S]*grade_level[\s\S]*student_name[\s\S]*leadSummary[\s\S]*message[\s\S]*<\/form>/.test(files.publicIndex),
     message: 'Netlify needs a hidden contact form whose fields match the homepage contact form.',
   },
   {

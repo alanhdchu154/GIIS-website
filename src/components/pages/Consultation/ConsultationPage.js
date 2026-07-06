@@ -54,6 +54,56 @@ const START_WINDOWS = [
   { v: 'planning-ahead', en: 'Planning ahead', zh: '提前规划' },
 ];
 
+const REQUIRED_FIELDS = [
+  'parentName',
+  'email',
+  'studentGrade',
+  'studentSituation',
+  'transcriptAvailable',
+  'desiredStart',
+  'preferredTime',
+];
+
+function formValue(formData, name) {
+  return String(formData.get(name) || '').trim();
+}
+
+function consultationPayload(formData) {
+  const payload = new URLSearchParams(formData);
+  const parentName = formValue(formData, 'parentName');
+  const email = formValue(formData, 'email');
+  const parentWeChat = formValue(formData, 'parentWeChat');
+  const studentGrade = formValue(formData, 'studentGrade');
+  const studentSituation = formValue(formData, 'studentSituation');
+  const transcriptAvailable = formValue(formData, 'transcriptAvailable');
+  const desiredStart = formValue(formData, 'desiredStart');
+  const preferredTime = formValue(formData, 'preferredTime');
+  const message = formValue(formData, 'message');
+  const aliases = {
+    parent_name: parentName,
+    parent_email: email,
+    parent_wechat: parentWeChat,
+    student_grade: studentGrade,
+    student_situation: studentSituation,
+    transcript_available: transcriptAvailable,
+    desired_start: desiredStart,
+    preferred_time: preferredTime,
+    leadSummary: [
+      `Parent: ${parentName}`,
+      `Email: ${email}`,
+      `WeChat: ${parentWeChat || '(not provided)'}`,
+      `Grade: ${studentGrade}`,
+      `Situation: ${studentSituation}`,
+      `Transcript: ${transcriptAvailable}`,
+      `Start: ${desiredStart}`,
+      `Preferred time: ${preferredTime}`,
+      `Message: ${message || '(none)'}`,
+    ].join('\n'),
+  };
+  Object.entries(aliases).forEach(([key, value]) => payload.set(key, value));
+  return payload;
+}
+
 function ConsultationPage({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
   const [submitted, setSubmitted] = useState(false);
@@ -65,12 +115,19 @@ function ConsultationPage({ language, toggleLanguage }) {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
+    const missing = REQUIRED_FIELDS.filter((field) => !formValue(formData, field));
+    if (missing.length) {
+      setSubmitError(isEn
+        ? 'Please complete the required fields before submitting.'
+        : '请先填写所有必填项目再提交。');
+      return;
+    }
     setIsSubmitting(true);
     setSubmitError('');
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
+      body: consultationPayload(formData).toString(),
     })
       .then((response) => {
         if (!response.ok) throw new Error(`Netlify form submit failed: ${response.status}`);
@@ -199,6 +256,15 @@ function ConsultationPage({ language, toggleLanguage }) {
                 onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="consultation" />
+                <input type="hidden" name="parent_name" />
+                <input type="hidden" name="parent_email" />
+                <input type="hidden" name="parent_wechat" />
+                <input type="hidden" name="student_grade" />
+                <input type="hidden" name="student_situation" />
+                <input type="hidden" name="transcript_available" />
+                <input type="hidden" name="desired_start" />
+                <input type="hidden" name="preferred_time" />
+                <input type="hidden" name="leadSummary" />
                 <p hidden><label>Do not fill: <input name="bot-field" /></label></p>
 
                 <h3 style={{ fontSize: 20, fontWeight: 850, color: NAVY, margin: '0 0 6px' }}>

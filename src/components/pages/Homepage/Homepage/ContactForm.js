@@ -30,6 +30,39 @@ const CONTACT_INFO = [
   { icon: '💬', labelEn: 'WeChat', labelZh: '微信', value: 'Contact us for WeChat ID', hrefZh: '联系我们获取微信号' },
 ];
 
+const REQUIRED_FIELDS = ['studentName', 'grade', 'parentWeChat', 'email'];
+
+function formValue(formData, name) {
+  return String(formData.get(name) || '').trim();
+}
+
+function contactPayload(formData) {
+  const payload = new URLSearchParams(formData);
+  const studentName = formValue(formData, 'studentName');
+  const grade = formValue(formData, 'grade');
+  const pathway = formValue(formData, 'pathway');
+  const parentWeChat = formValue(formData, 'parentWeChat');
+  const email = formValue(formData, 'email');
+  const message = formValue(formData, 'message');
+  const aliases = {
+    student_name: studentName,
+    grade_level: grade,
+    pathway_interest: pathway,
+    parent_wechat: parentWeChat,
+    contact_email: email,
+    leadSummary: [
+      `Student: ${studentName}`,
+      `Grade: ${grade}`,
+      `Pathway: ${pathway}`,
+      `Email: ${email}`,
+      `WeChat: ${parentWeChat}`,
+      `Message: ${message || '(none)'}`,
+    ].join('\n'),
+  };
+  Object.entries(aliases).forEach(([key, value]) => payload.set(key, value));
+  return payload;
+}
+
 export default function ContactForm({ language = 'en' }) {
   const isEn = language === 'en';
   const [submitted, setSubmitted] = useState(false);
@@ -39,12 +72,20 @@ export default function ContactForm({ language = 'en' }) {
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
+    const formData = new FormData(form);
+    const missing = REQUIRED_FIELDS.filter((field) => !formValue(formData, field));
+    if (missing.length) {
+      setSubmitError(isEn
+        ? 'Please complete the required fields before submitting.'
+        : '请先填写所有必填项目再提交。');
+      return;
+    }
     setIsSubmitting(true);
     setSubmitError('');
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString(),
+      body: contactPayload(formData).toString(),
     })
       .then((response) => {
         if (!response.ok) throw new Error(`Netlify form submit failed: ${response.status}`);
@@ -136,6 +177,12 @@ export default function ContactForm({ language = 'en' }) {
                 onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="student_name" />
+                <input type="hidden" name="grade_level" />
+                <input type="hidden" name="pathway_interest" />
+                <input type="hidden" name="parent_wechat" />
+                <input type="hidden" name="contact_email" />
+                <input type="hidden" name="leadSummary" />
                 <p hidden><label>Do not fill: <input name="bot-field" /></label></p>
 
                 <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#1a1a2e', margin: '0 0 24px' }}>
