@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-05 21:35 CDT
+Last updated: 2026-07-05 22:51 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -26,7 +26,7 @@ quality that feels intentionally designed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-05 20:19 CDT.
+Last refreshed: 2026-07-05 22:51 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -38,13 +38,19 @@ Current operating state:
 - Alan approved scoped cleanup of root cwd-drift artifacts on 2026-07-05. The
   blocking root `slides/` / `style_manifest.json` artifacts were removed, and
   the 08:09 CT bounded runner resumed through the approved foundation path.
-- Alan's 2026-07-05 18:01 CT producer/upload run is complete: 10 lessons were
-  generated, passed release gates, passed parent-trust, and uploaded unlisted
-  through `yt_queue.py upload --gate-ready`.
-- Latest 10 uploaded: Calculus M7-M14 and College Research & Writing M1-M2.
-  Video IDs: `dXLnLx7xf8Q`, `IgQJ55kaj8c`, `X7lBuHCmcnE`,
-  `B8YqMnbdxzM`, `s_Pl4iv-48E`, `hIk6IMxdGMw`, `NbmhXtxUb64`,
-  `0-oSRIzDh74`, `oAnavnxqjmg`, `pvtVSA5ni6Y`.
+- Alan's 2026-07-05 20:00 CT top-up lane is complete: it reused the approved
+  foundation path after the 18:01 CT run, found 10 existing gate-ready lessons,
+  reran parent-trust after a targeted audit false-positive fix, wrote the
+  approval artifact, and uploaded all 10 unlisted through
+  `yt_queue.py upload --gate-ready`.
+- Latest 10 uploaded: College Research & Writing M3-M8 and Economics Advanced
+  M1-M4. Video IDs: `N0htezaYzJ0`, `vPZvS29eB3M`, `1FNGyfFfmrA`,
+  `5RtXG9QCpy4`, `a1m8NwEzWfc`, `AiC-3xTM8jk`, `_oZeVP0Rpvo`,
+  `WkxOGnIRc50`, `foFqzEBCg38`, `dD6fr0L0wBU`.
+- Earlier same-day 18:01 CT run uploaded Calculus M7-M14 and College Research
+  & Writing M1-M2. Video IDs: `dXLnLx7xf8Q`, `IgQJ55kaj8c`,
+  `X7lBuHCmcnE`, `B8YqMnbdxzM`, `s_Pl4iv-48E`, `hIk6IMxdGMw`,
+  `NbmhXtxUb64`, `0-oSRIzDh74`, `oAnavnxqjmg`, `pvtVSA5ni6Y`.
 - Earlier same-day 13:03 CT run uploaded Business Strategy & Writing M5-M8 and
   Calculus M1-M6. Video IDs: `2X0XLtGkljg`, `NsfQ85bdbaE`,
   `BT7-yzM2T2w`, `zD9HBJFQE3g`, `f7FHILNMTeo`, `tPBwQ3yUQmo`,
@@ -53,15 +59,21 @@ Current operating state:
   Strategy & Writing M1-M4. Video IDs: `ME9mtpULuOM`, `8fcmToZ3LHQ`,
   `hsdmgVuZsko`, `xUDSc8MGKXo`, `elKcNR3_gls`, `ngBmgZeqAFE`,
   `NWP5v2HJMmk`, `Pk3_uuXqh0I`, `YJYWwmjB_7A`, `0-WSaSVIGm4`.
-- Queue: 562 uploaded / 0 pending / 0 no-MP4.
+- Queue: 572 uploaded / 0 pending / 0 no-MP4.
 - Pending release gate: 0 ready / 0 needs_revision / 0 blocked.
-- Same-day artifact-backed uploads: 30 on 2026-07-05 CT.
+- Same-day artifact-backed uploads: 40 on 2026-07-05 CT.
 - Public manifest remains at 488 manifest lessons with 0 alignment warnings;
   the approved upload path used `--no-sync`, so manifest/channel sync remains
   reconciliation work rather than an upload blocker.
 - No active producer, uploader, or reviewer process remained after the final
   run.
 - No YouTube upload/channel limit appeared.
+- Parent-trust audit was tightened again on 2026-07-05 after the Economics
+  Advanced batch exposed false positives: economics money examples such as
+  MR/MC, demand schedules, budget lines, fixed/variable cost, and firm/consumer
+  quantities are now allowed as instruction when not school-facing; `AP` is
+  allowed only in Average Product / marginal product economics context. The
+  rerun returned `TRUST_READY` for all 10.
 - Abnormal Psychology is still skipped by the course-design guard because its
   current module count is 11, outside the expected 12-16 range for a 1-credit
   course. This is a future course-design cleanup item, not an upload blocker.

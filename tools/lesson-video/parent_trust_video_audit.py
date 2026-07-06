@@ -152,6 +152,18 @@ def classify_hard_candidate(kind: str, match: str, context: str) -> dict[str, st
     if kind == "real_student_name":
         return block("real student/person names do not belong in public lessons")
     if kind == "ap_authorization_claim":
+        economics_ap_context = contains_any(
+            lowered,
+            (
+                "average product",
+                "marginal product",
+                "total product",
+                "diminishing marginal returns",
+                "production theory",
+            ),
+        )
+        if token == "ap" and economics_ap_context and not school_context and not admissions_context:
+            return allow("AP is Average Product in economics instruction, not Advanced Placement")
         ap_style_context = (
             "ap-style" in lowered
             or "ap style" in lowered
@@ -213,9 +225,32 @@ def classify_hard_candidate(kind: str, match: str, context: str) -> dict[str, st
                     "price",
                     "finance",
                     "market",
+                    "demand",
+                    "demand curve",
+                    "demand schedule",
                     "labor",
                     "worker",
                     "wage",
+                    "income",
+                    "consumer",
+                    "budget line",
+                    "good x",
+                    "good y",
+                    "indifference",
+                    "monopolist",
+                    "monopoly",
+                    "firm",
+                    "fixed cost",
+                    "variable cost",
+                    "total cost",
+                    "total revenue",
+                    "marginal cost",
+                    "marginal revenue",
+                    "mr",
+                    "mc",
+                    "unit",
+                    "units",
+                    "quantity",
                     "salary",
                     "earn",
                     "employment",

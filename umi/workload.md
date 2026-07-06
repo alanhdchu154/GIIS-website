@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-07-05 21:35 CDT
+Last updated: 2026-07-05 22:51 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
@@ -29,22 +29,23 @@ focused worker task.
 
 ## Current Lesson-Video State
 
-Alan's 2026-07-05 18:01 CT producer/upload slot is complete. The bounded
-foundation runner generated Calculus M7-M14 and College Research & Writing
-M1-M2, all 10 passed release gates and parent-trust, and all 10 uploaded
-unlisted through `yt_queue.py upload --gate-ready`. Current durable state is in
-`ROADMAP.md`; detailed prior slot evidence is archived in
+Alan's 2026-07-05 20:00 CT top-up lane is complete. The bounded foundation
+runner found 10 existing gate-ready lessons from the 18:01/20:00 work,
+reran parent-trust after a targeted audit false-positive fix, wrote the
+approval artifact, and uploaded all 10 unlisted through
+`yt_queue.py upload --gate-ready`. Current durable state is in `ROADMAP.md`;
+detailed prior slot evidence is archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`.
 
 Current snapshot from the completed run:
 
-- 2026-07-05 20:15-20:16 CT upload run: 10 uploaded / 0 failed / 0 still
+- 2026-07-05 22:50-22:51 CT upload run: 10 uploaded / 0 failed / 0 still
   pending.
-- latest uploaded video IDs: `dXLnLx7xf8Q`, `IgQJ55kaj8c`, `X7lBuHCmcnE`,
-  `B8YqMnbdxzM`, `s_Pl4iv-48E`, `hIk6IMxdGMw`, `NbmhXtxUb64`,
-  `0-oSRIzDh74`, `oAnavnxqjmg`, `pvtVSA5ni6Y`
-- same-day uploaded count is now 30 on 2026-07-05 CT
-- queue 562 uploaded / 0 pending / 0 no-MP4
+- latest uploaded video IDs: `N0htezaYzJ0`, `vPZvS29eB3M`, `1FNGyfFfmrA`,
+  `5RtXG9QCpy4`, `a1m8NwEzWfc`, `AiC-3xTM8jk`, `_oZeVP0Rpvo`,
+  `WkxOGnIRc50`, `foFqzEBCg38`, `dD6fr0L0wBU`
+- same-day uploaded count is now 40 on 2026-07-05 CT
+- queue 572 uploaded / 0 pending / 0 no-MP4
 - pending release gate 0 ready / 0 needs_revision / 0 blocked
 - public manifest 488 lessons / 0 alignment warnings; upload ran with
   `--no-sync`, so manifest/channel sync remains reconciliation
@@ -57,6 +58,11 @@ Current snapshot from the completed run:
   after Alan's scoped cleanup approval. Root artifacts reappeared during the
   18:01 CT run and were removed again after upload. Do not stage generated
   lesson-video media or T9 artifacts.
+- Parent-trust audit false positives fixed for this top-up: economics money
+  examples in MR/MC, demand schedules, budget lines, firm costs, and unit/price
+  calculations are allowed only as instructional context when not school-facing;
+  `AP` is allowed in Average Product / marginal product economics context, not
+  as Advanced Placement authorization.
 - Parent-trust audit redesign: `tools/lesson-video/parent_trust_video_audit.py`
   now treats keyword hits as recall candidates, classifies them through a local
   semantic BLOCK/ALLOW judge, and runs versioned fixtures before auditing
