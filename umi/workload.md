@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-07-04 05:29 CDT
+Last updated: 2026-07-05 21:35 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
@@ -17,31 +17,80 @@ old slot evidence.
 - priority: medium (no live production blocker; quality/trust hardening)
 - time anchor: 2026-07-03
 - time-aware continuity acknowledged?: yes
-- state: P2/P3/P4/P5 implemented by Codex; P1 remains pending
+- state: P1/P2/P3/P4/P5 implemented by Codex; no active cc blocker remains
 
 ## Objective
 
 cc ran a read-only system + parent-facing review at Alan's request. CC-quota and
 T9-mount "problems" were ruled out as physical/contextual rather than systemic.
-The actionable backlog is now narrowed to parent-trust audit redesign; completed
-history has been moved out of this active handoff.
+The actionable backlog from this pass has been implemented. Completed history
+has been moved out of this active handoff; use this file only for the next
+focused worker task.
 
 ## Current Lesson-Video State
 
-Alan's 2026-07-04 03:00 CT video request is complete. The bounded foundation
-runner generated Trigonometry M5-M14, all 10 passed parent-trust/release gates,
-and all 10 uploaded unlisted through `yt_queue.py upload --gate-ready`. Current
-durable state is in `ROADMAP.md`; detailed prior slot evidence is archived in
+Alan's 2026-07-05 18:01 CT producer/upload slot is complete. The bounded
+foundation runner generated Calculus M7-M14 and College Research & Writing
+M1-M2, all 10 passed release gates and parent-trust, and all 10 uploaded
+unlisted through `yt_queue.py upload --gate-ready`. Current durable state is in
+`ROADMAP.md`; detailed prior slot evidence is archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`.
 
 Current snapshot from the completed run:
 
-- queue 522 uploaded / 0 pending / 0 no-MP4
+- 2026-07-05 20:15-20:16 CT upload run: 10 uploaded / 0 failed / 0 still
+  pending.
+- latest uploaded video IDs: `dXLnLx7xf8Q`, `IgQJ55kaj8c`, `X7lBuHCmcnE`,
+  `B8YqMnbdxzM`, `s_Pl4iv-48E`, `hIk6IMxdGMw`, `NbmhXtxUb64`,
+  `0-oSRIzDh74`, `oAnavnxqjmg`, `pvtVSA5ni6Y`
+- same-day uploaded count is now 30 on 2026-07-05 CT
+- queue 562 uploaded / 0 pending / 0 no-MP4
 - pending release gate 0 ready / 0 needs_revision / 0 blocked
-- dashboard 522 lessons / 521 MP4 / 522 uploaded / pending_upload=0
 - public manifest 488 lessons / 0 alignment warnings; upload ran with
   `--no-sync`, so manifest/channel sync remains reconciliation
 - captions remain backlog and must not be promised as universally available
+- Abnormal Psychology is a future cleanup item: course-design guard skipped it
+  because 11 modules is outside the expected 12-16 range for a 1-credit course.
+- Business Law is a future cleanup item: course-design guard skipped it because
+  11 modules is outside the expected 12-16 range for a 1-credit course.
+- Dirty risk resolved: root `slides/` / `style_manifest.json` were removed
+  after Alan's scoped cleanup approval. Root artifacts reappeared during the
+  18:01 CT run and were removed again after upload. Do not stage generated
+  lesson-video media or T9 artifacts.
+- Parent-trust audit redesign: `tools/lesson-video/parent_trust_video_audit.py`
+  now treats keyword hits as recall candidates, classifies them through a local
+  semantic BLOCK/ALLOW judge, and runs versioned fixtures before auditing
+  lessons. It still blocks accreditation, AP/College Board authorization,
+  admissions/visa/credit, payment/enrollment, credential, raw URL, real-person,
+  and true outcome-guarantee risk.
+
+## Codex Implementation: 2026-07-05 Parent-Trust Audit Redesign
+
+Completed:
+
+- Replaced `is_contextual_false_positive` growth with
+  `classify_hard_candidate(kind, match, context)`, which returns structured
+  `{verdict, claimType, quote, reason}` decisions.
+- Kept keyword patterns as recall. Hard findings are now BLOCK decisions;
+  instructional ALLOW decisions move to `ignored_findings` with the reason and
+  full semantic decision.
+- Added Chinese `美国认证` accreditation detection via Unicode escape.
+- Added versioned fixtures at
+  `tools/lesson-video/tests/parent_trust_fixtures.json`, seeded with historical
+  allow cases and real must-block public-claim cases.
+- Added `tools/lesson-video/tests/test_parent_trust_video_audit.py`.
+- Added `--check-fixtures-only`; normal audit runs fixture regression first and
+  exits with code 2 if the policy fixtures fail.
+
+Verification:
+
+- `python3 -m py_compile tools/lesson-video/parent_trust_video_audit.py tools/lesson-video/tests/test_parent_trust_video_audit.py`
+- `python3 tools/lesson-video/tests/test_parent_trust_video_audit.py` -> 3 tests
+  pass
+- `python3 tools/lesson-video/parent_trust_video_audit.py --check-fixtures-only`
+  -> fixture regression checks passed
+- `python3 tools/lesson-video/parent_trust_video_audit.py --out-dir /tmp/giis-parent-trust-smoke --report-name recent-smoke teaching-videos/calculus-module-13-introduction-to-differential-equations-v2 teaching-videos/college-research-writing-module-2-library-database-research-v2`
+  -> `TRUST_READY` for 2 lessons
 
 ## Codex Implementation: 2026-07-03
 
@@ -74,18 +123,10 @@ Verification already completed for P2/P4/P5:
 
 ## Remaining Work
 
-### P1 Pending: Parent-Trust Audit Redesign
-
-`tools/lesson-video/parent_trust_video_audit.py` is still too keyword-driven and
-keeps false-positiving on normal instructional wording. This should be a small
-Opus-level design/implementation pass:
-
-- Move final verdict toward semantic judgment at the independent review stage.
-- Keep keywords as recall/signals, not automatic final blockers.
-- Add a versioned pass/block fixture set so future fixes are not ad-hoc carve
-  outs.
-- Preserve strict blocking for actual GIIS payment, tuition, Stripe,
-  accreditation, AP, admissions, and outcome-guarantee claims.
+No active cc handoff remains from this backlog. Optional future hardening:
+connect the independent Opus reviewer JSON more directly into the parent-trust
+audit report, but the current deterministic fixture-backed gate is sufficient
+for the next foundation-video run.
 
 ### Verified Good / No Action
 

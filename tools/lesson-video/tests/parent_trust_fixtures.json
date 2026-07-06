@@ -1,0 +1,114 @@
+{
+  "must_allow": [
+    {
+      "label": "literary_charged_admission",
+      "text": "The villagers charged admission to see the angel in the courtyard, revealing greed and exploitation.",
+      "context": "English literature analysis of a fictional crowd scene.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "research_internal_validity",
+      "text": "Random assignment helps ensure internal validity by reducing confounds in the research design.",
+      "context": "Research methods lesson about experimental controls.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "research_reliability",
+      "text": "Using the same protocol helps ensure reliability and consistent measurement across observers.",
+      "context": "Research methods lesson about measurement quality.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "qualitative_trustworthiness",
+      "text": "Member checking helps ensure trustworthiness and credibility in qualitative data collection.",
+      "context": "Research methods lesson about qualitative validity.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "survey_leading_question",
+      "text": "The question almost guarantees a yes because the wording tells the respondent which answer sounds better.",
+      "context": "Survey design lesson about leading questions.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "business_checkout_user",
+      "text": "A checkout survey can ask whether a user found the mobile process slower than expected.",
+      "context": "Business research lesson about customer interviews and Likert scales.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "labor_wage_dollars",
+      "text": "If a worker earns $18 per hour, the business can compare labor cost with expected revenue.",
+      "context": "Economics lesson about labor markets, wages, and revenue.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "function_root_guarantee",
+      "text": "Continuity and opposite-sign outputs guarantee a root by the Intermediate Value Theorem.",
+      "context": "Calculus lesson about functions, roots, and continuity.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "vertical_asymptote",
+      "text": "The denominator approaching zero guarantees a vertical asymptote in this rational function.",
+      "context": "Algebra and calculus lesson about function behavior.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "ap_style_task",
+      "text": "This AP-style close-reading task asks students to analyze diction and syntax.",
+      "context": "English III lesson describing an instructional style task, not an official AP course.",
+      "expect": "ALLOW"
+    }
+  ],
+  "must_block": [
+    {
+      "label": "cognia_accredited",
+      "text": "GIIS is accredited by Cognia and is a US-accredited private school.",
+      "context": "School marketing claim.",
+      "expect": "BLOCK"
+    },
+    {
+      "label": "chinese_accredited",
+      "text": "GIIS \u662f\u7f8e\u56fd\u8ba4\u8bc1\u5b66\u6821.",
+      "context": "Chinese school marketing claim.",
+      "expect": "BLOCK"
+    },
+    {
+      "label": "tuition_uc_guarantee",
+      "text": "GIIS tuition guarantees a UC seat for your child.",
+      "context": "School payment and outcome claim.",
+      "expect": "BLOCK"
+    },
+    {
+      "label": "pay_to_enroll",
+      "text": "Pay $299 through Stripe checkout to enroll at GIIS now.",
+      "context": "School enrollment payment call to action.",
+      "expect": "BLOCK"
+    },
+    {
+      "label": "ap_credit_diploma",
+      "text": "AP credit counts toward the GIIS diploma.",
+      "context": "School authorization claim.",
+      "expect": "BLOCK"
+    },
+    {
+      "label": "graduation_guarantee",
+      "text": "We guarantee your child graduates and gets accepted to college.",
+      "context": "Student outcome guarantee.",
+      "expect": "BLOCK"
+    },
+    {
+      "label": "i20_f1_claim",
+      "text": "GIIS provides I-20 support for F-1 students.",
+      "context": "School admissions and visa claim.",
+      "expect": "BLOCK"
+    },
+    {
+      "label": "common_app_transfer_credit",
+      "text": "This course appears on the Common App and guarantees transfer credit.",
+      "context": "Admissions and credit claim.",
+      "expect": "BLOCK"
+    }
+  ]
+}

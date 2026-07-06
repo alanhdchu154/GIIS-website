@@ -18,10 +18,11 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 TEACHING_ROOT = ROOT / "teaching-videos"
 DEFAULT_OUT_DIR = TEACHING_ROOT / "_audit" / "parent-trust"
+FIXTURE_PATH = ROOT / "tools" / "lesson-video" / "tests" / "parent_trust_fixtures.json"
 
 
 HARD_PATTERNS: list[tuple[str, re.Pattern[str], str]] = [
-    ("accreditation_claim", re.compile(r"\b(Cognia|accredited|US-accredited)\b", re.I), "unsupported accreditation wording"),
+    ("accreditation_claim", re.compile(r"\b(Cognia|accredited|US-accredited)\b|\u7f8e\u56fd\u8ba4\u8bc1", re.I), "unsupported accreditation wording"),
     ("ap_authorization_claim", re.compile(r"\b(AP|Advanced Placement|College Board)\b", re.I), "AP/College Board wording in foundation content"),
     ("school_code_claim", re.compile(r"\b(CEEB|school code)\b", re.I), "authorization-sensitive school-code wording"),
     ("admissions_claim", re.compile(r"\b(Common App|NCAA|F-?1|I-20|admissions?|college credit|transfer credit)\b", re.I), "admissions or authorization-sensitive wording"),
@@ -77,131 +78,245 @@ def public_text_blocks(folder: Path) -> list[dict[str, str]]:
     return blocks
 
 
-def is_contextual_false_positive(kind: str, match: str, context: str) -> bool:
+def contains_any(text: str, needles: tuple[str, ...]) -> bool:
+    return any(needle in text for needle in needles)
+
+
+def classify_hard_candidate(kind: str, match: str, context: str) -> dict[str, str]:
+    """Classify a keyword hit as a real parent-trust block or instructional use.
+
+    Keyword patterns are recall only. This function is the deterministic local
+    judge used before the independent Opus reviewer output is available to the
+    audit script. It intentionally blocks ambiguous school-facing claims.
+    """
     lowered = context.lower()
     token = match.lower()
-    if kind == "payment_claim":
-        school_payment_context = (
-            "giis" in lowered
-            or "genesis" in lowered
-            or "enroll" in lowered
-            or "tuition" in lowered
-            or "stripe" in lowered
-            or "pricing" in lowered
-            or "payment" in lowered
+    school_context = contains_any(
+        lowered,
+        (
+            "giis",
+            "genesis",
+            "our school",
+            "the school",
+            "enroll",
+            "apply",
+            "tuition",
+            "stripe",
+            "payment",
+            "diploma",
+            "student account",
+            "parent account",
+        ),
+    )
+    admissions_context = contains_any(
+        lowered,
+        (
+            "college",
+            "university",
+            "applicant",
+            "admissions",
+            "acceptance",
+            "common app",
+            "transfer credit",
+            "college credit",
+            "f-1",
+            "i-20",
+            "visa",
+        ),
+    )
+
+    def allow(reason: str) -> dict[str, str]:
+        return {
+            "verdict": "ALLOW",
+            "claimType": kind,
+            "quote": match,
+            "reason": reason,
+        }
+
+    def block(reason: str) -> dict[str, str]:
+        return {
+            "verdict": "BLOCK",
+            "claimType": kind,
+            "quote": match,
+            "reason": reason,
+        }
+
+    if kind == "accreditation_claim":
+        return block("unsupported accreditation wording is never instructional")
+    if kind == "school_code_claim":
+        return block("school-code wording is authorization-sensitive")
+    if kind == "credential_claim":
+        return block("credential or authority wording needs explicit approval")
+    if kind == "raw_url":
+        return block("raw URL should not appear in public lesson text")
+    if kind == "real_student_name":
+        return block("real student/person names do not belong in public lessons")
+    if kind == "ap_authorization_claim":
+        ap_style_context = (
+            "ap-style" in lowered
+            or "ap style" in lowered
+            or "style task" in lowered
+            or "close-reading task" in lowered
         )
+        regulated_ap_context = contains_any(
+            lowered,
+            (
+                "college board",
+                "advanced placement",
+                "ap credit",
+                "official ap",
+                "approved ap",
+                "ap course",
+                "ap authorization",
+                "counts toward",
+                "diploma",
+            ),
+        )
+        negated_ap_context = contains_any(
+            lowered,
+            (
+                "not an official ap",
+                "not an ap course",
+                "not a college board",
+                "not college board",
+                "not authorization",
+                "not an authorization",
+            ),
+        )
+        if ap_style_context and (not regulated_ap_context or negated_ap_context) and not school_context:
+            return allow("AP-style describes an instructional task style, not authorization")
+        return block("AP or College Board wording is authorization-sensitive")
+    if kind == "payment_claim":
+        explicit_school_payment = school_context and contains_any(
+            lowered,
+            (
+                "pay",
+                "price",
+                "pricing",
+                "tuition",
+                "stripe",
+                "checkout",
+                "invoice",
+                "refund",
+                "enroll",
+                "$",
+            ),
+        )
+        if explicit_school_payment:
+            return block("payment or enrollment wording refers to GIIS")
         business_lesson_context = (
-            "revenue" in lowered
-            or "cost" in lowered
-            or "price" in lowered
-            or "finance" in lowered
-            or "market" in lowered
-            or "labor" in lowered
-            or "worker" in lowered
-            or "wage" in lowered
-            or "salary" in lowered
-            or "earn" in lowered
-            or "employment" in lowered
-            or "unemployed" in lowered
-            or "business" in lowered
-            or "profit" in lowered
-            or "budget" in lowered
-            or "loan" in lowered
-            or "interest" in lowered
-            or "balance" in lowered
-            or "pairs" in lowered
-            or "customer" in lowered
-            or "competitor" in lowered
-            or "survey" in lowered
-            or "purchaser" in lowered
-            or "user" in lowered
-            or "interview" in lowered
-            or "memo" in lowered
-            or "proposal" in lowered
-            or "equipment" in lowered
-            or "conference room" in lowered
-            or "purpose statement" in lowered
-            or "mobile" in lowered
-            or "likert" in lowered
-            or "attitude" in lowered
-            or "question" in lowered
-            or "scale" in lowered
-            or "slower" in lowered
-            or "speed" in lowered
+            contains_any(
+                lowered,
+                (
+                    "revenue",
+                    "cost",
+                    "price",
+                    "finance",
+                    "market",
+                    "labor",
+                    "worker",
+                    "wage",
+                    "salary",
+                    "earn",
+                    "employment",
+                    "unemployed",
+                    "business",
+                    "profit",
+                    "budget",
+                    "loan",
+                    "interest",
+                    "balance",
+                    "pairs",
+                    "customer",
+                    "competitor",
+                    "survey",
+                    "purchaser",
+                    "user",
+                    "interview",
+                    "memo",
+                    "proposal",
+                    "equipment",
+                    "conference room",
+                    "purpose statement",
+                    "mobile",
+                    "likert",
+                    "attitude",
+                    "question",
+                    "scale",
+                    "slower",
+                    "speed",
+                ),
+            )
         )
         business_process_token = token in {"checkout", "invoice", "refund"}
-        if token.startswith("$") and business_lesson_context and not school_payment_context:
-            return True
-        if business_process_token and business_lesson_context and not school_payment_context:
-            return True
+        if token.startswith("$") and business_lesson_context and not school_context:
+            return allow("money amount is part of business/economics instruction")
+        if business_process_token and business_lesson_context and not school_context:
+            return allow("checkout/invoice/refund is part of business process instruction")
+        return block("payment/pricing wording is ambiguous or school-facing")
     if kind == "outcome_guarantee" and token.startswith("guarantee"):
         math_context = (
-            "angle" in lowered
-            or "equation" in lowered
-            or "equal" in lowered
-            or "geometry" in lowered
-            or "parallel" in lowered
+            contains_any(
+                lowered,
+                (
+                    "angle",
+                    "equation",
+                    "equal",
+                    "geometry",
+                    "parallel",
+                    "function",
+                    "root",
+                    "continuity",
+                    "continuous",
+                    "intermediate value theorem",
+                    "vertical asymptote",
+                    "opposite-sign outputs",
+                ),
+            )
         )
         survey_design_context = (
-            "survey" in lowered
-            or "question wording" in lowered
-            or "leading question" in lowered
-            or "question almost" in lowered
-            or "leaves the door open" in lowered
-            or "respondent" in lowered
-            or "questionnaire" in lowered
+            contains_any(
+                lowered,
+                (
+                    "survey",
+                    "question wording",
+                    "leading question",
+                    "question almost",
+                    "leaves the door open",
+                    "respondent",
+                    "questionnaire",
+                ),
+            )
         )
-        sensitive_context = (
-            "admission" in lowered
-            or "acceptance" in lowered
-            or "college" in lowered
-            or "credit" in lowered
-            or "diploma" in lowered
-            or "outcome" in lowered
-        )
-        return (math_context or survey_design_context) and not sensitive_context
+        if (math_context or survey_design_context) and not school_context and not admissions_context:
+            return allow("guarantee is instructional math/research wording")
+        return block("guarantee wording may imply a student or school outcome")
     if kind == "outcome_guarantee" and token.startswith("ensure"):
         research_method_context = (
-            "internal validity" in lowered
-            or "reliability" in lowered
-            or "confounds" in lowered
-            or "measurement" in lowered
-            or "research design" in lowered
-            or "consistent measurement" in lowered
-            or "sampling" in lowered
-            or "trustworthiness" in lowered
-            or "credibility" in lowered
-            or "member checking" in lowered
-            or "transferability" in lowered
-            or "qualitative" in lowered
-            or "data collection" in lowered
-            or "limitation" in lowered
+            contains_any(
+                lowered,
+                (
+                    "internal validity",
+                    "reliability",
+                    "confounds",
+                    "measurement",
+                    "research design",
+                    "consistent measurement",
+                    "sampling",
+                    "trustworthiness",
+                    "credibility",
+                    "member checking",
+                    "transferability",
+                    "qualitative",
+                    "data collection",
+                    "limitation",
+                ),
+            )
         )
-        sensitive_context = (
-            "admission" in lowered
-            or "acceptance" in lowered
-            or "college" in lowered
-            or "credit" in lowered
-            or "diploma" in lowered
-            or "outcome" in lowered
-            or "guarantee" in lowered
-        )
-        return research_method_context and not sensitive_context
+        if research_method_context and not school_context and not admissions_context:
+            return allow("ensure is research-methods quality-control wording")
+        return block("ensure wording may imply a student or school outcome")
     if kind == "admissions_claim" and token.startswith("admission"):
-        institutional_admissions_context = (
-            "giis" in lowered
-            or "genesis" in lowered
-            or "applicant" in lowered
-            or "college" in lowered
-            or "university" in lowered
-            or "f-1" in lowered
-            or "i-20" in lowered
-            or "common app" in lowered
-            or "transfer credit" in lowered
-            or "enroll" in lowered
-            or "tuition" in lowered
-            or "diploma" in lowered
-        )
         literary_admission_context = (
             (
                 "charged admission" in lowered
@@ -222,31 +337,62 @@ def is_contextual_false_positive(kind: str, match: str, context: str) -> bool:
                 or "exploit" in lowered
             )
         )
-        if literary_admission_context and not institutional_admissions_context:
-            return True
+        if literary_admission_context and not school_context and not admissions_context:
+            return allow("admission means entrance fee in a literary story context")
         statehood_context = (
-            "missouri" in lowered
-            or "maine" in lowered
-            or "statehood" in lowered
-            or "slave state" in lowered
-            or "free state" in lowered
-            or "union" in lowered
-            or "senate balance" in lowered
+            contains_any(
+                lowered,
+                (
+                    "missouri",
+                    "maine",
+                    "statehood",
+                    "slave state",
+                    "free state",
+                    "union",
+                    "senate balance",
+                ),
+            )
         )
-        school_admissions_context = (
-            "giis" in lowered
-            or "genesis" in lowered
-            or "student" in lowered
-            or "applicant" in lowered
-            or "college" in lowered
-            or "university" in lowered
-            or "f-1" in lowered
-            or "i-20" in lowered
-            or "common app" in lowered
-            or "transfer credit" in lowered
-        )
-        return statehood_context and not school_admissions_context
-    return False
+        if statehood_context and not school_context and not admissions_context:
+            return allow("admission refers to historical statehood, not school admissions")
+    if kind == "admissions_claim":
+        return block("admissions or transfer-credit wording is authorization-sensitive")
+    return block("keyword hit needs review and is blocked by default")
+
+
+def scan_text_block(text: str, source: str, section: str) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
+    hard: list[dict[str, Any]] = []
+    soft: list[dict[str, Any]] = []
+    ignored: list[dict[str, Any]] = []
+    for kind, pattern, message in HARD_PATTERNS:
+        for match in pattern.finditer(text):
+            context = text[max(0, match.start() - 90): match.end() + 90].replace("\n", " ")
+            decision = classify_hard_candidate(kind, match.group(0), context)
+            row = {
+                "kind": kind,
+                "message": message,
+                "match": match.group(0),
+                "source": source,
+                "section": section,
+                "context": context,
+                "semantic_decision": decision,
+            }
+            if decision["verdict"] == "ALLOW":
+                ignored.append({**row, "reason": decision["reason"]})
+            else:
+                hard.append(row)
+    for kind, pattern, message in SOFT_PATTERNS:
+        for match in pattern.finditer(text):
+            context = text[max(0, match.start() - 90): match.end() + 90].replace("\n", " ")
+            soft.append({
+                "kind": kind,
+                "message": message,
+                "match": match.group(0),
+                "source": source,
+                "section": section,
+                "context": context,
+            })
+    return hard, soft, ignored
 
 
 def scan_patterns(folder: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
@@ -254,34 +400,43 @@ def scan_patterns(folder: Path) -> tuple[list[dict[str, Any]], list[dict[str, An
     soft: list[dict[str, Any]] = []
     ignored: list[dict[str, Any]] = []
     for block in public_text_blocks(folder):
-        text = block["text"]
-        for kind, pattern, message in HARD_PATTERNS:
-            for match in pattern.finditer(text):
-                context = text[max(0, match.start() - 90): match.end() + 90].replace("\n", " ")
-                row = {
-                    "kind": kind,
-                    "message": message,
-                    "match": match.group(0),
-                    "source": block["source"],
-                    "section": block["section"],
-                    "context": context,
-                }
-                if is_contextual_false_positive(kind, match.group(0), context):
-                    ignored.append({**row, "reason": "contextual_math_or_science_use"})
-                else:
-                    hard.append(row)
-        for kind, pattern, message in SOFT_PATTERNS:
-            for match in pattern.finditer(text):
-                context = text[max(0, match.start() - 90): match.end() + 90].replace("\n", " ")
-                soft.append({
-                    "kind": kind,
-                    "message": message,
-                    "match": match.group(0),
-                    "source": block["source"],
-                    "section": block["section"],
-                    "context": context,
-                })
+        block_hard, block_soft, block_ignored = scan_text_block(
+            block["text"],
+            block["source"],
+            block["section"],
+        )
+        hard.extend(block_hard)
+        soft.extend(block_soft)
+        ignored.extend(block_ignored)
     return hard, soft, ignored
+
+
+def run_fixture_checks(path: Path = FIXTURE_PATH) -> list[str]:
+    fixtures = load_json(path)
+    if not isinstance(fixtures, dict):
+        return [f"fixture file missing or invalid: {rel(path)}"]
+    failures: list[str] = []
+    for group, expected in (("must_allow", "ALLOW"), ("must_block", "BLOCK")):
+        entries = fixtures.get(group)
+        if not isinstance(entries, list):
+            failures.append(f"{group} must be a list in {rel(path)}")
+            continue
+        for idx, entry in enumerate(entries):
+            if not isinstance(entry, dict):
+                failures.append(f"{group}[{idx}] must be an object")
+                continue
+            text = str(entry.get("text") or "")
+            context = str(entry.get("context") or text)
+            label = str(entry.get("label") or f"{group}[{idx}]")
+            scan_input = f"{context} {text}".strip()
+            hard, _soft, ignored = scan_text_block(scan_input, "fixture", label)
+            if expected == "ALLOW" and hard:
+                details = "; ".join(f"{row['kind']}={row['match']}" for row in hard)
+                failures.append(f"{label}: expected ALLOW, got BLOCK ({details})")
+            if expected == "BLOCK" and not hard:
+                ignored_details = "; ".join(f"{row['kind']}={row['match']}" for row in ignored)
+                failures.append(f"{label}: expected BLOCK, got ALLOW ({ignored_details or 'no hard hit'})")
+    return failures
 
 
 def reviewer_status(folder: Path) -> dict[str, Any]:
@@ -407,7 +562,23 @@ def main() -> int:
     parser.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR))
     parser.add_argument("--report-name", default=None)
     parser.add_argument("--json", action="store_true", help="Print JSON payload to stdout.")
+    parser.add_argument("--skip-fixture-check", action="store_true", help="Skip parent-trust policy fixture regression checks.")
+    parser.add_argument("--check-fixtures-only", action="store_true", help="Run fixture regression checks and exit.")
     args = parser.parse_args()
+
+    if not args.skip_fixture_check:
+        fixture_failures = run_fixture_checks()
+        if fixture_failures:
+            print("[parent-trust] fixture regression failure:")
+            for failure in fixture_failures:
+                print(f"- {failure}")
+            return 2
+        if args.check_fixtures_only:
+            print("[parent-trust] fixture regression checks passed")
+            return 0
+    elif args.check_fixtures_only:
+        print("[parent-trust] fixture regression checks skipped")
+        return 0
 
     lessons = [audit_folder(path) for path in discover(args.paths)]
     verdict = "TRUST_READY" if all(row["verdict"] == "TRUST_READY" for row in lessons) else "FIX_FIRST"

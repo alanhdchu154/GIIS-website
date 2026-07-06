@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-04 05:29 CDT
+Last updated: 2026-07-05 21:35 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -26,7 +26,7 @@ quality that feels intentionally designed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-04 05:29 CDT.
+Last refreshed: 2026-07-05 20:19 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -35,19 +35,43 @@ and older pre-slim history is in
 
 Current operating state:
 
-- Alan's 2026-07-04 03:00 CT producer slot is complete: 10 Trigonometry
-  lessons were generated, passed parent-trust/release gates, and uploaded
-  unlisted.
-- Latest 10 uploaded: Trigonometry M5-M14.
-- Queue: 522 uploaded / 0 pending / 0 no-MP4.
+- Alan approved scoped cleanup of root cwd-drift artifacts on 2026-07-05. The
+  blocking root `slides/` / `style_manifest.json` artifacts were removed, and
+  the 08:09 CT bounded runner resumed through the approved foundation path.
+- Alan's 2026-07-05 18:01 CT producer/upload run is complete: 10 lessons were
+  generated, passed release gates, passed parent-trust, and uploaded unlisted
+  through `yt_queue.py upload --gate-ready`.
+- Latest 10 uploaded: Calculus M7-M14 and College Research & Writing M1-M2.
+  Video IDs: `dXLnLx7xf8Q`, `IgQJ55kaj8c`, `X7lBuHCmcnE`,
+  `B8YqMnbdxzM`, `s_Pl4iv-48E`, `hIk6IMxdGMw`, `NbmhXtxUb64`,
+  `0-oSRIzDh74`, `oAnavnxqjmg`, `pvtVSA5ni6Y`.
+- Earlier same-day 13:03 CT run uploaded Business Strategy & Writing M5-M8 and
+  Calculus M1-M6. Video IDs: `2X0XLtGkljg`, `NsfQ85bdbaE`,
+  `BT7-yzM2T2w`, `zD9HBJFQE3g`, `f7FHILNMTeo`, `tPBwQ3yUQmo`,
+  `u8CaK1j0bDA`, `FmlVO2i_epg`, `tAQi_WwzaSU`, `Ufq8DoGKNRQ`.
+- Earlier same-day 08:09 CT run uploaded Behavioral Science M3-M8 and Business
+  Strategy & Writing M1-M4. Video IDs: `ME9mtpULuOM`, `8fcmToZ3LHQ`,
+  `hsdmgVuZsko`, `xUDSc8MGKXo`, `elKcNR3_gls`, `ngBmgZeqAFE`,
+  `NWP5v2HJMmk`, `Pk3_uuXqh0I`, `YJYWwmjB_7A`, `0-WSaSVIGm4`.
+- Queue: 562 uploaded / 0 pending / 0 no-MP4.
 - Pending release gate: 0 ready / 0 needs_revision / 0 blocked.
-- Dashboard: 522 lessons / 521 MP4 / 522 uploaded / pending_upload=0.
+- Same-day artifact-backed uploads: 30 on 2026-07-05 CT.
 - Public manifest remains at 488 manifest lessons with 0 alignment warnings;
   the approved upload path used `--no-sync`, so manifest/channel sync remains
   reconciliation work rather than an upload blocker.
 - No active producer, uploader, or reviewer process remained after the final
   run.
 - No YouTube upload/channel limit appeared.
+- Abnormal Psychology is still skipped by the course-design guard because its
+  current module count is 11, outside the expected 12-16 range for a 1-credit
+  course. This is a future course-design cleanup item, not an upload blocker.
+- Business Law is also skipped by the course-design guard because its current
+  module count is 11, outside the expected 12-16 range for a 1-credit course.
+  This is a future course-design cleanup item, not an upload blocker.
+- Repo root cwd-drift artifacts are currently clean after scoped cleanup; root
+  `slides/` / `style_manifest.json` reappeared during the 18:01 CT run and were
+  removed after upload. Do not stage generated lesson-video media or T9
+  artifacts.
 
 Current interpretation:
 
@@ -81,6 +105,9 @@ Current interpretation:
 ## Parent Trust / Sales Boundary
 
 - Parent-facing trust matters more than automation volume.
+- Lesson-video parent-trust audit now runs fixture regression before lesson
+  audits and classifies keyword hits as semantic BLOCK/ALLOW decisions instead
+  of adding one-off false-positive branches.
 - Manual Review Sales Mode is the v1 sales path:
   reviewed applications can use reviewed manual Stripe invoice/payment-link
   evidence before account activation.
