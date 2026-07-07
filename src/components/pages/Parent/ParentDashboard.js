@@ -25,18 +25,73 @@ function StatCard({ label, value, sub }) {
   );
 }
 
+function courseModuleTotals(enrollments = []) {
+  return new Map(enrollments.map((enr) => [enr.name, enr.totalModules || null]));
+}
+
+function aggregateRecentActivity(events = [], enrollments = []) {
+  const totals = courseModuleTotals(enrollments);
+  const grouped = new Map();
+  const passthrough = [];
+
+  for (const event of events) {
+    const day = new Date(event.at).toISOString().slice(0, 10);
+    if (!['quiz', 'assignment', 'video', 'supplemental_video', 'reading', 'practice'].includes(event.type)) {
+      passthrough.push(event);
+      continue;
+    }
+    const key = `${event.type}:${event.course}:${day}`;
+    const existing = grouped.get(key) || {
+      ...event,
+      type: `${event.type}_group`,
+      count: 0,
+      moduleOrders: [],
+      totalModules: totals.get(event.course),
+      at: event.at,
+    };
+    existing.count += 1;
+    if (event.moduleOrder) existing.moduleOrders.push(event.moduleOrder);
+    if (new Date(event.at) > new Date(existing.at)) existing.at = event.at;
+    grouped.set(key, existing);
+  }
+
+  return [...passthrough, ...grouped.values()]
+    .sort((a, b) => new Date(b.at) - new Date(a.at))
+    .slice(0, 10);
+}
+
 function ActivityRow({ event, isEn }) {
   const colors = {
     exam: { bg: '#e8f5e9', fg: '#2e7d32', icon: '✓' },
     quiz: { bg: '#e3f2fd', fg: '#2b3d6d', icon: '📝' },
+    quiz_group: { bg: '#e3f2fd', fg: '#2b3d6d', icon: '📝' },
     assignment: { bg: '#fff3e0', fg: '#e65100', icon: 'A' },
+    assignment_group: { bg: '#fff3e0', fg: '#e65100', icon: 'A' },
     assignment_feedback: { bg: '#e8f5e9', fg: '#2e7d32', icon: 'F' },
     video: { bg: '#f3e5f5', fg: '#6a1b9a', icon: '▶' },
+    video_group: { bg: '#f3e5f5', fg: '#6a1b9a', icon: '▶' },
     supplemental_video: { bg: '#f3e5f5', fg: '#6a1b9a', icon: '▶' },
+    supplemental_video_group: { bg: '#f3e5f5', fg: '#6a1b9a', icon: '▶' },
     reading: { bg: '#e0f2f1', fg: '#00695c', icon: 'R' },
+    reading_group: { bg: '#e0f2f1', fg: '#00695c', icon: 'R' },
     practice: { bg: '#ede7f6', fg: '#4527a0', icon: 'P' },
+    practice_group: { bg: '#ede7f6', fg: '#4527a0', icon: 'P' },
   };
   const c = colors[event.type] || colors.quiz;
+  const moduleOrders = [...new Set(event.moduleOrders || [])].sort((a, b) => a - b);
+  const moduleSummary = String(event.count || moduleOrders.length || 0);
+  const latestModule = moduleOrders.length ? Math.max(...moduleOrders) : null;
+  const latestModuleText = latestModule
+    ? (isEn ? `, latest Module ${latestModule}` : `，最新第 ${latestModule} 模块`)
+    : '';
+  const groupedLabels = {
+    quiz_group: isEn ? `${moduleSummary} module ${moduleSummary === '1' ? 'quiz' : 'quizzes'} today${latestModuleText}` : `今天 ${moduleSummary} 次模块测验${latestModuleText}`,
+    assignment_group: isEn ? `${moduleSummary} assignment${moduleSummary === '1' ? '' : 's'} submitted today${latestModuleText}` : `今天提交 ${moduleSummary} 份作业${latestModuleText}`,
+    video_group: isEn ? `${moduleSummary} module video${moduleSummary === '1' ? '' : 's'} completed today${latestModuleText}` : `今天完成 ${moduleSummary} 个模块视频${latestModuleText}`,
+    supplemental_video_group: isEn ? `${moduleSummary} supplemental video${moduleSummary === '1' ? '' : 's'} completed today${latestModuleText}` : `今天完成 ${moduleSummary} 个补充视频${latestModuleText}`,
+    reading_group: isEn ? `${moduleSummary} reading step${moduleSummary === '1' ? '' : 's'} completed today${latestModuleText}` : `今天完成 ${moduleSummary} 个阅读步骤${latestModuleText}`,
+    practice_group: isEn ? `${moduleSummary} practice step${moduleSummary === '1' ? '' : 's'} completed today${latestModuleText}` : `今天完成 ${moduleSummary} 个练习步骤${latestModuleText}`,
+  };
   return (
     <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', padding: '10px 0', borderBottom: '1px solid #f0f2f8' }}>
       <div style={{ width: 28, height: 28, borderRadius: '50%', background: c.bg, color: c.fg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, flexShrink: 0 }}>
@@ -45,6 +100,7 @@ function ActivityRow({ event, isEn }) {
       <div style={{ flex: 1 }}>
         <p style={{ margin: '0 0 2px', fontSize: 13, fontWeight: 600, color: '#1a1d24' }}>
           {event.course}
+          {groupedLabels[event.type] && ` — ${groupedLabels[event.type]}`}
           {event.type === 'exam' && (isEn
             ? ` — ${event.passed ? 'Passed' : 'Attempted'} ${event.examType === 'midterm' ? 'midterm' : 'final'} exam`
             : ` — ${event.passed ? '通过' : '参加'}${event.examType === 'midterm' ? '期中考' : '期末考'}`)}
@@ -90,31 +146,33 @@ function formatHours(value) {
 
 function WeeklyInsightsCard({ insights, isEn }) {
   const data = insights || {};
+  const assignmentSummary = data.overdueAssignments == null
+    ? `${data.assignmentSubmissions || 0} ${isEn ? 'submitted' : '已提交'} · ${isEn ? 'overdue tracking not active' : '逾期追踪尚未启用'}`
+    : `${data.assignmentSubmissions || 0} ${isEn ? 'submitted' : '已提交'} · ${data.overdueAssignments || 0} ${isEn ? 'overdue' : '逾期'}`;
   const items = [
-    { value: data.activeDays || 0, label: isEn ? 'active days' : '天有学习记录' },
-    { value: formatHours(data.estimatedStudyHours), label: isEn ? 'estimated study hours' : '预计学习小时' },
-    { value: data.modulesCompleted || 0, label: isEn ? 'modules completed' : '完成模块' },
-    { value: data.videoActivities || 0, label: isEn ? 'video activities' : '视频活动记录' },
-    { value: data.quizAttempts || 0, label: isEn ? 'quiz attempts' : '测验记录' },
-    { value: data.assignmentSubmissions || 0, label: isEn ? 'assignments submitted' : '提交作业' },
+    { label: isEn ? 'Study Time' : '学习时长', value: `${formatHours(data.estimatedStudyHours)} ${isEn ? 'hours' : '小时'}` },
+    { label: isEn ? 'Completed' : '已完成', value: `${data.modulesCompleted || 0} ${isEn ? 'modules' : '模块'}` },
+    { label: isEn ? 'Assignments' : '作业', value: assignmentSummary },
+    { label: isEn ? 'Quiz Average' : '测验平均', value: data.quizAverage == null ? (isEn ? 'No quizzes yet' : '暂无测验') : `${Math.round(data.quizAverage)}%` },
+    { label: isEn ? 'Next Deadline' : '下个截止', value: data.nextDeadline?.label || (isEn ? 'No deadline posted yet' : '尚未发布截止日期') },
   ];
   return (
     <div style={{ background: '#fff', borderRadius: 14, padding: '20px 24px', border: '1px solid #e8ecf5' }}>
       <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 12px' }}>
-        {isEn ? 'Weekly Insights' : '本周学习数据'}
+        {isEn ? 'This Week' : '本周学习摘要'}
       </p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 10 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(130px, 0.8fr) minmax(0, 1.2fr)', border: '1px solid #e0e6f0', borderRadius: 10, overflow: 'hidden' }}>
         {items.map((item) => (
-          <div key={item.label} style={{ background: '#f8f9fd', border: '1px solid #e0e6f0', borderRadius: 10, padding: '12px 14px' }}>
-            <p style={{ margin: '0 0 2px', fontSize: 22, fontWeight: 850, color: '#2b3d6d' }}>{item.value}</p>
-            <p style={{ margin: 0, fontSize: 11, color: '#5c6578', lineHeight: 1.35 }}>{item.label}</p>
-          </div>
+          <React.Fragment key={item.label}>
+            <div style={{ background: '#f8f9fd', borderBottom: '1px solid #e0e6f0', padding: '10px 12px', fontSize: 12, fontWeight: 800, color: '#2b3d6d' }}>{item.label}</div>
+            <div style={{ background: '#fff', borderBottom: '1px solid #e0e6f0', padding: '10px 12px', fontSize: 12.5, fontWeight: 650, color: '#1a1d24', lineHeight: 1.4 }}>{item.value}</div>
+          </React.Fragment>
         ))}
       </div>
       <p style={{ fontSize: 11, color: '#7a8495', lineHeight: 1.45, margin: '10px 0 0' }}>
         {isEn
-          ? 'Study hours are estimated from completed module hours. External reading and video links are not treated as proof of learning unless the portal records an activity signal.'
-          : '学习时数以已完成模块的预计时数估算。外部阅读与影片链接不会被直接当成学习证明，除非系统有记录到对应活动。'}
+          ? 'Study hours are estimated from completed module hours. Overdue and deadline fields appear only when GIIS has posted due-date data in the portal.'
+          : '学习时数以已完成模块的预计时数估算。逾期与截止日期只有在 GIIS 已发布 due-date 数据时才会显示。'}
       </p>
     </div>
   );
@@ -232,6 +290,30 @@ function CourseBar({ enr, isEn }) {
           ))}
         </div>
       )}
+    </div>
+  );
+}
+
+function PacingLegend({ isEn }) {
+  const items = [
+    { status: 'ahead', en: 'Ahead', zh: '超前' },
+    { status: 'on_track', en: 'On Schedule', zh: '进度正常' },
+    { status: 'behind', en: 'Behind', zh: '落后' },
+  ];
+  return (
+    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', margin: '10px 0 2px' }}>
+      {items.map((item) => {
+        const style = pacingStyle(item.status);
+        return (
+          <span key={item.status} style={{ display: 'inline-flex', alignItems: 'center', gap: 5, border: `1px solid ${style.border}`, background: style.bg, color: style.fg, borderRadius: 999, padding: '4px 8px', fontSize: 10.5, fontWeight: 800 }}>
+            <span style={{ width: 7, height: 7, borderRadius: '50%', background: style.fg }} />
+            {isEn ? item.en : item.zh}
+          </span>
+        );
+      })}
+      <span style={{ fontSize: 10.5, color: '#7a8495', alignSelf: 'center' }}>
+        {isEn ? 'Based on expected weekly module pace' : '依据每周预计模块进度'}
+      </span>
     </div>
   );
 }
@@ -506,6 +588,7 @@ export default function ParentDashboard({ language }) {
   const gradPct = Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100));
   const inProgress = enrollments.filter(e => !e.creditEarned);
   const completed = enrollments.filter(e => e.creditEarned);
+  const visibleActivity = aggregateRecentActivity(recentActivity, enrollments);
   const activitySignalCount = recentActivity.length + enrollments.reduce((sum, e) => (
     sum + Number(e.completedModules || 0) + Number(e.assessment?.assignmentsSubmitted || 0) + Number(e.assessment?.quizzesSubmitted || 0)
   ), 0);
@@ -592,7 +675,11 @@ export default function ParentDashboard({ language }) {
                 </div>
                 <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 18 }}>
                   <StatCard label={isEn ? 'Credits Earned' : '已获学分'} value={stats.creditsEarned.toFixed(1)} sub={`/ ${GRAD_CREDITS} ${isEn ? 'to graduate' : '毕业学分'}`} />
-                  <StatCard label="GPA · UW" value={stats.gpa ?? '—'} sub={isEn ? '4.0 scale' : '4.0 制'} />
+                  <StatCard
+                    label="GPA · UW"
+                    value={stats.gpa ?? <span style={{ fontSize: 15, lineHeight: 1.2 }}>{isEn ? 'No GPA yet' : '暂无 GPA'}</span>}
+                    sub={stats.gpa ? (isEn ? '4.0 scale' : '4.0 制') : (isEn ? 'Appears after official transcript grades are released' : '正式成绩单成绩发布后显示')}
+                  />
                   <StatCard label={isEn ? 'In Progress' : '进行中'} value={inProgress.length} sub={isEn ? 'courses' : '门课'} />
                   <StatCard label={isEn ? 'Completed' : '已完成'} value={completed.length} sub={isEn ? 'courses' : '门课'} />
                 </div>
@@ -616,6 +703,7 @@ export default function ParentDashboard({ language }) {
                 <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 4px' }}>
                   {isEn ? `Active Courses — ${inProgress.length}` : `进行中课程 — ${inProgress.length}`}
                 </p>
+                {inProgress.length > 0 && <PacingLegend isEn={isEn} />}
                 {inProgress.length === 0
                   ? <p style={{ fontSize: 13, color: '#9aa0ad', margin: '12px 0 0' }}>{isEn ? 'No active courses.' : '暂无进行中课程。'}</p>
                   : inProgress.map(e => <CourseBar key={e.id} enr={e} isEn={isEn} />)
@@ -672,9 +760,9 @@ export default function ParentDashboard({ language }) {
                 <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 12px' }}>
                   {isEn ? 'Recent Activity' : '最近活动'}
                 </p>
-                {recentActivity.length === 0
+                {visibleActivity.length === 0
                   ? <p style={{ fontSize: 13, color: '#9aa0ad' }}>{isEn ? 'No activity yet.' : '暂无活动记录。'}</p>
-                  : recentActivity.map((ev, i) => <ActivityRow key={i} event={ev} isEn={isEn} />)
+                  : visibleActivity.map((ev, i) => <ActivityRow key={`${ev.type}-${ev.course}-${ev.at}-${i}`} event={ev} isEn={isEn} />)
                 }
               </div>
 

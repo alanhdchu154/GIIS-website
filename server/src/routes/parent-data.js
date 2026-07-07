@@ -102,6 +102,7 @@ function computeWeeklyInsights(enrollment, now = new Date()) {
   const moduleHours = new Map((enrollment.course?.modules || []).map((m) => [m.order, Number(m.estimatedHrs || 0)]));
   let modulesCompleted = 0;
   let videoActivities = 0;
+  const quizScores = [];
 
   function countDate(value) {
     if (!value) return false;
@@ -119,7 +120,11 @@ function computeWeeklyInsights(enrollment, now = new Date()) {
     countDate(p.practiceCompletedAt);
   }
 
-  const quizAttempts = (enrollment.quizAttempts || []).filter((q) => countDate(q.submittedAt)).length;
+  const quizAttempts = (enrollment.quizAttempts || []).filter((q) => {
+    const counted = countDate(q.submittedAt);
+    if (counted && q.score != null) quizScores.push(Number(q.score));
+    return counted;
+  }).length;
   const assignmentSubmissions = (enrollment.assignments || []).filter((a) => countDate(a.submittedAt)).length;
   const estimatedStudyHours = (enrollment.moduleProgresses || [])
     .filter((p) => p.moduleCompletedAt && new Date(p.moduleCompletedAt) >= since && new Date(p.moduleCompletedAt) <= now)
@@ -130,6 +135,11 @@ function computeWeeklyInsights(enrollment, now = new Date()) {
     modulesCompleted,
     quizAttempts,
     assignmentSubmissions,
+    overdueAssignments: null,
+    quizAverage: quizScores.length
+      ? Math.round((quizScores.reduce((sum, score) => sum + score, 0) / quizScores.length) * 10) / 10
+      : null,
+    nextDeadline: null,
     videoActivities,
     estimatedStudyHours: Math.round(estimatedStudyHours * 10) / 10,
   };
@@ -143,6 +153,7 @@ function computeStudentWeeklyInsights(enrollments, now = new Date()) {
   let assignmentSubmissions = 0;
   let videoActivities = 0;
   let estimatedStudyHours = 0;
+  const quizScores = [];
 
   function countDate(value) {
     if (!value) return false;
@@ -164,7 +175,11 @@ function computeStudentWeeklyInsights(enrollments, now = new Date()) {
       if (countDate(p.supplementalVideoCompletedAt)) videoActivities += 1;
       countDate(p.practiceCompletedAt);
     }
-    quizAttempts += (enrollment.quizAttempts || []).filter((q) => countDate(q.submittedAt)).length;
+    quizAttempts += (enrollment.quizAttempts || []).filter((q) => {
+      const counted = countDate(q.submittedAt);
+      if (counted && q.score != null) quizScores.push(Number(q.score));
+      return counted;
+    }).length;
     assignmentSubmissions += (enrollment.assignments || []).filter((a) => countDate(a.submittedAt)).length;
   }
 
@@ -173,6 +188,11 @@ function computeStudentWeeklyInsights(enrollments, now = new Date()) {
     modulesCompleted,
     quizAttempts,
     assignmentSubmissions,
+    overdueAssignments: null,
+    quizAverage: quizScores.length
+      ? Math.round((quizScores.reduce((sum, score) => sum + score, 0) / quizScores.length) * 10) / 10
+      : null,
+    nextDeadline: null,
     videoActivities,
     estimatedStudyHours: Math.round(estimatedStudyHours * 10) / 10,
   };
@@ -343,7 +363,7 @@ router.get('/me', async (req, res) => {
           })),
       };
     }),
-    recentActivity: events.slice(0, 10),
+    recentActivity: events.slice(0, 25),
     subscription: activeSub || null,
     advisor: {
       name: careState?.advisorOwner || null,

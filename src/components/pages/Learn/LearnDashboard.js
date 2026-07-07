@@ -107,6 +107,14 @@ function StatCard({ label, value, sub }) {
   );
 }
 
+function courseTypeLabel(type, isEn) {
+  const t = String(type || '').toLowerCase();
+  if (t === 'core') return isEn ? 'Core required' : '核心必修';
+  if (t === 'ap') return isEn ? 'Exam prep' : '考试准备';
+  if (t === 'elective') return isEn ? 'Elective' : '选修';
+  return type || (isEn ? 'Course' : '课程');
+}
+
 function WeekOneStart({ isEn, spotlight }) {
   const next = spotlight ? nextModule(spotlight) : null;
   const moduleHref = spotlight
@@ -415,6 +423,14 @@ export default function LearnDashboard({ language }) {
     if (enrolledSlugs.has(c.slug)) return false;
     if (activePathwayFilter !== 'All' && DEPT_TO_PATHWAY[c.department]?.label !== activePathwayFilter) return false;
     return true;
+  }).sort((a, b) => {
+    const gradeA = a.gradeLevel || 99;
+    const gradeB = b.gradeLevel || 99;
+    if (gradeA !== gradeB) return gradeA - gradeB;
+    const pathwayA = DEPT_TO_PATHWAY[a.department]?.label || '';
+    const pathwayB = DEPT_TO_PATHWAY[b.department]?.label || '';
+    if (pathwayA !== pathwayB) return pathwayA.localeCompare(pathwayB);
+    return a.name.localeCompare(b.name);
   });
 
   // Recommended next courses: keep primary suggestions at the student's grade/open level.
@@ -484,11 +500,17 @@ export default function LearnDashboard({ language }) {
             <StatCard label="GPA"
               value={
                 <span style={{ display: 'flex', alignItems: 'baseline', gap: '10px', flexWrap: 'wrap' }}>
-                  <span>{fmt2(overallGPAs.weighted) ?? '—'}<span style={{ fontSize: '11px', fontWeight: 600, color: '#888', marginLeft: '3px' }}>W</span></span>
-                  <span style={{ fontSize: '18px', fontWeight: 700, color: '#555' }}>{fmt2(overallGPAs.unweighted) ?? '—'}<span style={{ fontSize: '11px', fontWeight: 600, color: '#aaa', marginLeft: '3px' }}>UW</span></span>
+                  {overallGPAs.weighted || overallGPAs.unweighted ? (
+                    <>
+                      <span>{fmt2(overallGPAs.weighted)}<span style={{ fontSize: '11px', fontWeight: 600, color: '#888', marginLeft: '3px' }}>W</span></span>
+                      <span style={{ fontSize: '18px', fontWeight: 700, color: '#555' }}>{fmt2(overallGPAs.unweighted)}<span style={{ fontSize: '11px', fontWeight: 600, color: '#aaa', marginLeft: '3px' }}>UW</span></span>
+                    </>
+                  ) : (
+                    <span style={{ fontSize: '16px', lineHeight: 1.2 }}>{isEn ? 'No GPA yet' : '暂无 GPA'}</span>
+                  )}
                 </span>
               }
-              sub={isEn ? '4.0 scale' : '4.0 制'} />
+              sub={overallGPAs.weighted || overallGPAs.unweighted ? (isEn ? '4.0 scale' : '4.0 制') : (isEn ? 'Appears after graded courses' : '有正式成绩后显示')} />
             <StatCard label={isEn ? 'In Progress' : '进行中'} value={inProgress.length} sub={isEn ? 'active courses' : '门进行中'} />
           </div>
         )}
@@ -782,6 +804,22 @@ export default function LearnDashboard({ language }) {
               </Link>
             )}
           </div>
+          <div style={{
+            background: '#f8f9fd',
+            border: '1px solid #dfe6f3',
+            borderRadius: '10px',
+            padding: '12px 14px',
+            margin: '12px 0 14px',
+          }}>
+            <p style={{ margin: '0 0 6px', fontSize: '12px', fontWeight: 850, color: '#2b3d6d' }}>
+              {isEn ? 'How to choose courses' : '如何选择课程'}
+            </p>
+            <p style={{ margin: 0, fontSize: '12px', color: '#5c6578', lineHeight: 1.55 }}>
+              {isEn
+                ? 'Start with courses at your current grade level. Core required courses support graduation; electives add interest or portfolio evidence; pathway badges show courses that fit a four-year direction. Open the full pathway when you need the recommended order.'
+                : '先从当前年级的课程开始。核心必修支持毕业；选修课用于兴趣或作品集证据；学习方向标签表示这门课适合某个四年路径。需要先后顺序时，请打开完整路径查看。'}
+            </p>
+          </div>
 
           {/* Pathway filter */}
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '16px', marginTop: '10px' }}>
@@ -805,7 +843,7 @@ export default function LearnDashboard({ language }) {
               {catalogCourses.map((c) => {
                 const color = DEPT_COLORS[c.department] || '#2b3d6d';
                 const pathway = DEPT_TO_PATHWAY[c.department];
-                const gradeOk = c.gradeLevel == null || currentGrade === 0 || c.gradeLevel >= currentGrade;
+                const gradeOk = c.gradeLevel == null || currentGrade === 0 || c.gradeLevel <= currentGrade;
                 const gradeLocked = !gradeOk;
                 return (
                   <div key={c.slug} style={{
@@ -831,13 +869,18 @@ export default function LearnDashboard({ language }) {
                             G{c.gradeLevel}+
                           </span>
                         )}
-                        <span style={{ fontSize: '9px', background: '#f0f2f8', color: '#2b3d6d', padding: '2px 7px', borderRadius: '20px', fontWeight: 600 }}>{c.type}</span>
+                        <span style={{ fontSize: '9px', background: '#f0f2f8', color: '#2b3d6d', padding: '2px 7px', borderRadius: '20px', fontWeight: 600 }}>{courseTypeLabel(c.type, isEn)}</span>
                       </div>
                     </div>
                     <h3 style={{ fontSize: '14px', fontWeight: 700, color: gradeLocked ? '#bbb' : '#1a1a2e', margin: '4px 0 3px', flex: 1 }}>
                       {isEn ? c.name : (c.nameZh || c.name)}
                     </h3>
                     <p style={{ fontSize: '11px', color: '#666', lineHeight: 1.5, margin: '0 0 12px', minHeight: '32px' }}>{c.description}</p>
+                    <p style={{ fontSize: '10.5px', color: '#7a8495', lineHeight: 1.45, margin: '0 0 10px' }}>
+                      {isEn
+                        ? `${courseTypeLabel(c.type, isEn)} · ${c.gradeLevel ? `recommended for Grade ${c.gradeLevel}+` : 'open grade placement'}${pathway ? ` · ${pathway.label} sequence` : ''}`
+                        : `${courseTypeLabel(c.type, isEn)} · ${c.gradeLevel ? `建议 ${c.gradeLevel} 年级以上` : '开放年级安排'}${pathway ? ` · ${pathway.label} 路径` : ''}`}
+                    </p>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <span style={{ fontSize: '11px', color: '#888' }}>
                         {c.credits} {isEn ? 'cr' : '学分'} · {c._count?.modules || 0} {isEn ? 'modules' : '模块'}

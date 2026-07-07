@@ -166,7 +166,7 @@ const ROUTES = [
   {
     name: 'parent dashboard',
     path: '/parent/dashboard',
-    expected: ["Alex's progress", 'Weekly Insights', 'Start Here', 'Assessment Evidence', 'Recent Activity'],
+    expected: ["Alex's progress", 'This Week', 'Start Here', 'Assessment Evidence', 'Recent Activity'],
     endpointCaps: { '/api/parent/me': 2 },
   },
   {

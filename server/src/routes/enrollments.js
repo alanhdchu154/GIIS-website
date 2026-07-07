@@ -701,13 +701,24 @@ router.post('/:slug/exam', authenticate, requireStudent, blockIfSoftLocked, asyn
     if (hrs < 24) return res.status(429).json({ error: 'Wait 24 hours before retaking this exam' });
   }
 
-  const attempt = await prisma.examAttempt.create({ data: { enrollmentId: enrollment.id, examType } });
-
   const questions = await prisma.examQuestion.findMany({
     where: { courseId: course.id, examType },
     orderBy: { order: 'asc' },
     select: { id: true, order: true, question: true, type: true, options: true, points: true },
   });
+  const brokenQuestions = questions.filter((question) => (
+    question.type === 'mc' && (!Array.isArray(question.options) || question.options.length === 0)
+  ));
+  if (questions.length === 0 || brokenQuestions.length > 0) {
+    return res.status(409).json({
+      error: questions.length === 0
+        ? 'Exam setup incomplete: no questions are available.'
+        : `Exam setup incomplete: ${brokenQuestions.length} multiple-choice question(s) are missing answer choices.`,
+      brokenQuestionOrders: brokenQuestions.map((question) => question.order),
+    });
+  }
+
+  const attempt = await prisma.examAttempt.create({ data: { enrollmentId: enrollment.id, examType } });
 
   res.status(201).json({ attemptId: attempt.id, examType, questions });
 });

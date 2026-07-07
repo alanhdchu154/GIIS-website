@@ -181,6 +181,11 @@ export function ScheduleGrid({ schedule, color, onCourseClick }) {
           </div>
         ))}
       </div>
+      <div style={{ background: '#f8f9fd', border: '1px solid #e4e8f0', borderRadius: 8, padding: '10px 12px', marginBottom: 14 }}>
+        <p style={{ margin: 0, fontSize: 12, color: '#4f5a6f', lineHeight: 1.55 }}>
+          Read each grade-and-term card from top to bottom. Core Required courses support the diploma plan; Pathway courses build the major direction; Recommended courses are electives or supporting courses that strengthen the pathway. When a course is clickable, open it to see its syllabus, resources, and quiz sample before enrolling.
+        </p>
+      </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
         {schedule.map(({ grade, term, courses }) => {
           const totalCr = courses.reduce((s, c) => s + c.credits, 0);
@@ -205,6 +210,9 @@ export function ScheduleGrid({ schedule, color, onCourseClick }) {
                         </span>
                         <span style={{ fontSize: 11, color: s.color, opacity: 0.7, flexShrink: 0 }}>{c.credits}cr</span>
                       </div>
+                      <p style={{ margin: '3px 0 0', fontSize: 10, color: s.color, opacity: 0.75, lineHeight: 1.3 }}>
+                        Step {i + 1} · {styles[c.type]?.label || 'Course'} · Grade {grade} {term}
+                      </p>
                       {c.note && <p style={{ margin: '3px 0 0', fontSize: 10, color: s.color, opacity: 0.7, lineHeight: 1.3 }}>{c.note}</p>}
                       {c.dept && c.type !== 'pathway' && <p style={{ margin: '2px 0 0', fontSize: 10, color: s.color, opacity: 0.6 }}>{c.dept}</p>}
                     </div>

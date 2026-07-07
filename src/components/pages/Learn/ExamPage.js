@@ -7,6 +7,12 @@ import Nav from '../../main/Nav.js';
 
 const API = getApiBase();
 
+function isAnswerableQuestion(question) {
+  if (!question) return false;
+  if (question.type === 'mc') return Array.isArray(question.options) && question.options.length > 0;
+  return question.type === 'short' || question.type === 'fill';
+}
+
 export default function ExamPage({ language }) {
   const isEn = language !== 'zh';
   const { slug } = useParams();
@@ -80,7 +86,13 @@ export default function ExamPage({ language }) {
     });
     const d = await r.json().catch(() => ({}));
     if (!r.ok) {
-      setError(d.error || 'Could not start exam');
+      if (Array.isArray(d.brokenQuestionOrders) && d.brokenQuestionOrders.length > 0) {
+        setError(isEn
+          ? `This exam needs GIIS review before you start. Question ${d.brokenQuestionOrders.join(', ')} ${d.brokenQuestionOrders.length > 1 ? 'are' : 'is'} missing answer choices. Please contact support or your advisor.`
+          : `这份考试需要 GIIS 先检查后才能开始。第 ${d.brokenQuestionOrders.join('、')} 题缺少答案选项。请联系 support 或你的顾问。`);
+      } else {
+        setError(d.error || 'Could not start exam');
+      }
       return;
     }
     setAttemptId(d.attemptId);
@@ -117,7 +129,13 @@ export default function ExamPage({ language }) {
 
   if (!session) return null;
 
-  const answeredCount = Object.keys(answers).length;
+  const answerableQuestions = questions.filter(isAnswerableQuestion);
+  const unanswerableQuestions = questions.filter((q) => !isAnswerableQuestion(q));
+  const answeredCount = answerableQuestions.filter((q) => {
+    const value = answers[q.id];
+    return value != null && String(value).trim() !== '';
+  }).length;
+  const canSubmit = unanswerableQuestions.length === 0 && answeredCount >= answerableQuestions.length;
   const cooldownRemaining = submittedAt
     ? Math.max(0, submittedAt.getTime() + 24 * 3600 * 1000 - Date.now())
     : 0;
@@ -220,9 +238,18 @@ export default function ExamPage({ language }) {
                 {isEn ? (examType === 'midterm' ? 'Midterm Exam' : 'Final Exam') : (examType === 'midterm' ? '期中考试' : '期末考试')}
               </h1>
               <span style={{ fontSize: '13px', color: '#888', fontWeight: 600 }}>
-                {answeredCount}/{questions.length} {isEn ? 'answered' : '已作答'}
+                {answeredCount}/{answerableQuestions.length} {isEn ? 'answered' : '已作答'}
               </span>
             </div>
+
+            {unanswerableQuestions.length > 0 && (
+              <div style={{ padding: '14px 16px', background: '#fff3e0', border: '1px solid #ffcc80', borderRadius: '10px', marginBottom: '18px', color: '#9a5b00', fontSize: '13px', lineHeight: 1.55 }}>
+                <strong>{isEn ? 'Exam setup needs review.' : '考试设置需要检查。'}</strong>{' '}
+                {isEn
+                  ? `${unanswerableQuestions.length} multiple-choice question${unanswerableQuestions.length > 1 ? 's are' : ' is'} missing answer choices, so this exam cannot be submitted safely. Please contact GIIS support or your advisor.`
+                  : `有 ${unanswerableQuestions.length} 道选择题缺少选项，因此暂时不能安全提交。请联系 GIIS support 或你的顾问。`}
+              </div>
+            )}
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '40px' }}>
               {questions.map((q, i) => (
@@ -237,7 +264,7 @@ export default function ExamPage({ language }) {
                     {q.question}
                   </p>
 
-                  {q.type === 'mc' && q.options && (
+                  {q.type === 'mc' && Array.isArray(q.options) && q.options.length > 0 && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                       {q.options.map((opt) => (
                         <label key={opt} style={{
@@ -261,6 +288,14 @@ export default function ExamPage({ language }) {
                     </div>
                   )}
 
+                  {q.type === 'mc' && (!Array.isArray(q.options) || q.options.length === 0) && (
+                    <div style={{ background: '#fff3e0', border: '1px solid #ffcc80', borderRadius: '8px', padding: '10px 12px', color: '#9a5b00', fontSize: '13px', lineHeight: 1.5 }}>
+                      {isEn
+                        ? 'Answer choices are missing for this question. GIIS needs to repair the exam setup before you submit.'
+                        : '这道题缺少答案选项。GIIS 需要先修复考试设置，之后再提交。'}
+                    </div>
+                  )}
+
                   {(q.type === 'short' || q.type === 'fill') && (
                     <input
                       type="text"
@@ -281,18 +316,18 @@ export default function ExamPage({ language }) {
             <div style={{ textAlign: 'center' }}>
               <button
                 onClick={submitExam}
-                disabled={submitting || answeredCount < questions.length}
+                disabled={submitting || !canSubmit}
                 style={{
                   fontSize: '16px', fontWeight: 700, color: '#fff',
-                  background: answeredCount < questions.length ? '#aaa' : '#2b3d6d',
-                  border: 'none', borderRadius: '8px', padding: '14px 40px', cursor: answeredCount < questions.length ? 'not-allowed' : 'pointer',
+                  background: !canSubmit ? '#aaa' : '#2b3d6d',
+                  border: 'none', borderRadius: '8px', padding: '14px 40px', cursor: !canSubmit ? 'not-allowed' : 'pointer',
                 }}
               >
                 {submitting ? (isEn ? 'Submitting…' : '提交中…') : (isEn ? 'Submit Exam' : '提交考试')}
               </button>
-              {answeredCount < questions.length && (
+              {unanswerableQuestions.length === 0 && answeredCount < answerableQuestions.length && (
                 <p style={{ fontSize: '12px', color: '#888', marginTop: '8px' }}>
-                  {isEn ? `Please answer all ${questions.length} questions before submitting.` : `请回答全部 ${questions.length} 道题后再提交。`}
+                  {isEn ? `Please answer all ${answerableQuestions.length} questions before submitting.` : `请回答全部 ${answerableQuestions.length} 道题后再提交。`}
                 </p>
               )}
             </div>
