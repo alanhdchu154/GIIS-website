@@ -61,6 +61,26 @@ function displayAnswer(question) {
   return answer;
 }
 
+function multipleChoiceSetupIssue(question, { requireAnswer = false } = {}) {
+  const isMultipleChoice = String(question.type || 'mc').toLowerCase() === 'mc'
+    || Array.isArray(question.options);
+  if (!isMultipleChoice) return null;
+  const options = Array.isArray(question.options)
+    ? question.options.map((option) => String(option ?? '').trim())
+    : [];
+  if (options.length < 2 || options.some((option) => !option)) {
+    return 'missing_options';
+  }
+  if (requireAnswer && !displayAnswer(question)) return 'missing_answer';
+  if (requireAnswer && !options.includes(displayAnswer(question))) return 'answer_not_in_options';
+  return null;
+}
+
+function stripAnswerFields(question) {
+  const { answer, explanation, ...safeQuestion } = question;
+  return safeQuestion;
+}
+
 const MODULE_PROGRESS_FIELDS = new Set([
   'readingCompletedAt',
   'videoCompletedAt',
@@ -534,13 +554,24 @@ router.get('/:slug/quiz/:moduleOrder', authenticate, requireStudent, async (req,
     where: { courseId: course.id, moduleOrder },
     orderBy: { order: 'asc' },
     select: {
-      id: true, order: true, question: true, options: true, points: true,
-      ...(hasAttempt ? { answer: true, explanation: true } : {}),
+      id: true, order: true, question: true, options: true, points: true, answer: true, explanation: true,
     },
   });
+  const brokenQuestions = questions.filter((question) => multipleChoiceSetupIssue(question, { requireAnswer: hasAttempt }));
+  if (questions.length === 0 || brokenQuestions.length > 0) {
+    return res.status(409).json({
+      error: questions.length === 0
+        ? 'Quiz setup incomplete: no questions are available.'
+        : `Quiz setup incomplete: ${brokenQuestions.length} multiple-choice question(s) need GIIS review.`,
+      brokenQuestionOrders: brokenQuestions.map((question) => question.order),
+    });
+  }
 
   const attempt = enrollment.quizAttempts[0] || null;
-  res.json({ questions, attempt: attempt ? { score: Number(attempt.score), passed: attempt.passed, submittedAt: attempt.submittedAt, answers: attempt.answers } : null });
+  res.json({
+    questions: hasAttempt ? questions : questions.map(stripAnswerFields),
+    attempt: attempt ? { score: Number(attempt.score), passed: attempt.passed, submittedAt: attempt.submittedAt, answers: attempt.answers } : null,
+  });
 });
 
 // POST /api/enrollments/:slug/quiz/:moduleOrder/submit — submit quiz answers
@@ -568,7 +599,15 @@ router.post('/:slug/quiz/:moduleOrder/submit', authenticate, requireStudent, blo
   }
 
   const questions = await prisma.moduleQuizQuestion.findMany({ where: { courseId: course.id, moduleOrder } });
-  if (questions.length === 0) return res.status(404).json({ error: 'No quiz found for this module' });
+  const brokenQuestions = questions.filter((question) => multipleChoiceSetupIssue(question, { requireAnswer: true }));
+  if (questions.length === 0 || brokenQuestions.length > 0) {
+    return res.status(409).json({
+      error: questions.length === 0
+        ? 'Quiz setup incomplete: no questions are available.'
+        : `Quiz setup incomplete: ${brokenQuestions.length} multiple-choice question(s) need GIIS review.`,
+      brokenQuestionOrders: brokenQuestions.map((question) => question.order),
+    });
+  }
 
   let earned = 0, total = 0;
   const graded = questions.map((q) => {
@@ -704,23 +743,21 @@ router.post('/:slug/exam', authenticate, requireStudent, blockIfSoftLocked, asyn
   const questions = await prisma.examQuestion.findMany({
     where: { courseId: course.id, examType },
     orderBy: { order: 'asc' },
-    select: { id: true, order: true, question: true, type: true, options: true, points: true },
+    select: { id: true, order: true, question: true, type: true, options: true, answer: true, points: true },
   });
-  const brokenQuestions = questions.filter((question) => (
-    question.type === 'mc' && (!Array.isArray(question.options) || question.options.length === 0)
-  ));
+  const brokenQuestions = questions.filter((question) => multipleChoiceSetupIssue(question, { requireAnswer: true }));
   if (questions.length === 0 || brokenQuestions.length > 0) {
     return res.status(409).json({
       error: questions.length === 0
         ? 'Exam setup incomplete: no questions are available.'
-        : `Exam setup incomplete: ${brokenQuestions.length} multiple-choice question(s) are missing answer choices.`,
+        : `Exam setup incomplete: ${brokenQuestions.length} multiple-choice question(s) need GIIS review.`,
       brokenQuestionOrders: brokenQuestions.map((question) => question.order),
     });
   }
 
   const attempt = await prisma.examAttempt.create({ data: { enrollmentId: enrollment.id, examType } });
 
-  res.status(201).json({ attemptId: attempt.id, examType, questions });
+  res.status(201).json({ attemptId: attempt.id, examType, questions: questions.map(stripAnswerFields) });
 });
 
 router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
@@ -734,6 +771,7 @@ router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, block
 
   const enrollment = await prisma.enrollment.findUnique({
     where: { studentId_courseId: { studentId: req.auth.studentId, courseId: course.id } },
+    include: { assignments: { select: { moduleOrder: true } } },
   });
   if (!enrollment) return res.status(404).json({ error: 'Not enrolled' });
 
@@ -750,6 +788,15 @@ router.post('/:slug/exam/:attemptId/submit', authenticate, requireStudent, block
   }
 
   const questions = await prisma.examQuestion.findMany({ where: { courseId: course.id, examType: attempt.examType } });
+  const brokenQuestions = questions.filter((question) => multipleChoiceSetupIssue(question, { requireAnswer: true }));
+  if (questions.length === 0 || brokenQuestions.length > 0) {
+    return res.status(409).json({
+      error: questions.length === 0
+        ? 'Exam setup incomplete: no questions are available.'
+        : `Exam setup incomplete: ${brokenQuestions.length} multiple-choice question(s) need GIIS review.`,
+      brokenQuestionOrders: brokenQuestions.map((question) => question.order),
+    });
+  }
 
   let earned = 0, total = 0;
   const graded = questions.map((q) => {

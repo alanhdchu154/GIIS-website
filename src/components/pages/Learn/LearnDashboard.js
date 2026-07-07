@@ -320,6 +320,10 @@ export default function LearnDashboard({ language }) {
   const [enrolling, setEnrolling] = useState(null);
   const [enrollErr, setEnrollErr] = useState('');
   const [pathwayFilter, setPathwayFilter] = useState(null); // null = auto-detect
+  const [courseSearch, setCourseSearch] = useState('');
+  const [courseTypeFilter, setCourseTypeFilter] = useState('all');
+  const [courseReadinessFilter, setCourseReadinessFilter] = useState('ready');
+  const [showExploreCatalog, setShowExploreCatalog] = useState(false);
   const [expandedSems, setExpandedSems] = useState(new Set());
 
   function toggleSem(sem) {
@@ -422,6 +426,20 @@ export default function LearnDashboard({ language }) {
   const catalogCourses = (allCourses || []).filter((c) => {
     if (enrolledSlugs.has(c.slug)) return false;
     if (activePathwayFilter !== 'All' && DEPT_TO_PATHWAY[c.department]?.label !== activePathwayFilter) return false;
+    if (courseTypeFilter !== 'all' && String(c.type || '').toLowerCase() !== courseTypeFilter) return false;
+    if (courseReadinessFilter === 'ready' && currentGrade > 0 && c.gradeLevel != null && c.gradeLevel > currentGrade) return false;
+    const query = courseSearch.trim().toLowerCase();
+    if (query) {
+      const haystack = [
+        c.name,
+        c.nameZh,
+        c.department,
+        c.type,
+        c.description,
+        DEPT_TO_PATHWAY[c.department]?.label,
+      ].filter(Boolean).join(' ').toLowerCase();
+      if (!haystack.includes(query)) return false;
+    }
     return true;
   }).sort((a, b) => {
     const gradeA = a.gradeLevel || 99;
@@ -454,6 +472,7 @@ export default function LearnDashboard({ language }) {
         })
         .slice(0, 4)
     : [];
+  const showExplore = showExploreCatalog || recommendedCourses.length === 0;
 
   return (
     <>
@@ -587,17 +606,22 @@ export default function LearnDashboard({ language }) {
           </div>
         )}
 
-        {/* Recommended Next Courses */}
+        {/* Course Plan */}
         {recommendedCourses.length > 0 && (
           <section style={{ marginBottom: '40px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
               <div>
                 <p style={{ margin: '0 0 2px', fontSize: '11px', fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
-                  {isEn ? `Recommended · ${detectedPathway.label} Pathway` : `推荐课程 · ${detectedPathway.label}`}
+                  {isEn ? `Course Plan · ${detectedPathway.label} Pathway` : `课程计划 · ${detectedPathway.label}`}
                 </p>
                 <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#1a1a2e', margin: 0 }}>
-                  {isEn ? 'Your Next Courses' : '你的下一步'}
+                  {isEn ? 'Suggested Next Courses' : '建议的下一步课程'}
                 </h2>
+                <p style={{ fontSize: '12px', color: '#5c6578', margin: '5px 0 0', lineHeight: 1.45 }}>
+                  {isEn
+                    ? 'Suggested from your current course pattern and grade level. Advisor-reviewed plans may override this list.'
+                    : '根据你目前的课程方向和年级自动建议。正式顾问审核的学习计划可优先于此列表。'}
+                </p>
               </div>
               {detectedPathway && (
                 <Link to={`/pathways/${detectedPathway.slug}`} style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none' }}>
@@ -617,7 +641,7 @@ export default function LearnDashboard({ language }) {
                       <span style={{ fontSize: '10px', fontWeight: 700, color, textTransform: 'uppercase', letterSpacing: '1px' }}>{c.department}</span>
                       <div style={{ display: 'flex', gap: '4px' }}>
                         {c.gradeLevel && <span style={{ fontSize: '9px', background: '#f0f2f8', color: '#2b3d6d', padding: '2px 6px', borderRadius: '20px', fontWeight: 600 }}>G{c.gradeLevel}</span>}
-                        {c.type === 'AP' && <span style={{ fontSize: '9px', background: '#fff3e0', color: '#e65100', padding: '2px 6px', borderRadius: '20px', fontWeight: 700 }}>AP</span>}
+                        <span style={{ fontSize: '9px', background: '#f0f2f8', color: '#2b3d6d', padding: '2px 6px', borderRadius: '20px', fontWeight: 600 }}>{courseTypeLabel(c.type, isEn)}</span>
                       </div>
                     </div>
                     <h3 style={{ fontSize: '14px', fontWeight: 700, color: '#1a1a2e', margin: '4px 0 2px', flex: 1, lineHeight: 1.3 }}>
@@ -625,6 +649,11 @@ export default function LearnDashboard({ language }) {
                     </h3>
                     <p style={{ fontSize: '11px', color: '#888', margin: '0 0 10px' }}>
                       {c.credits} {isEn ? 'cr' : '学分'} · {c._count?.modules || 0} {isEn ? 'modules' : '模块'}
+                    </p>
+                    <p style={{ fontSize: '10.5px', color: '#5c6578', lineHeight: 1.45, margin: '0 0 10px' }}>
+                      {isEn
+                        ? `${courseTypeLabel(c.type, isEn)} in your detected pathway. Check the full pathway if you need exact sequence.`
+                        : `属于当前检测到的学习方向。需要具体先后顺序时请查看完整路径。`}
                     </p>
                     <button onClick={() => enroll(c.slug)} disabled={enrolling === c.slug} style={{
                       fontSize: '12px', fontWeight: 700, color: '#fff',
@@ -787,22 +816,42 @@ export default function LearnDashboard({ language }) {
           )}
         </section>
 
-        {/* Enroll in More Courses — with pathway labels */}
+        {/* Explore Other Courses — secondary to the course plan */}
         <section>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
             <div>
               <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#1a1a2e', margin: '0 0 2px' }}>
-                {isEn ? 'Enroll in More Courses' : '新增课程'}
+                {isEn ? 'Explore Other Courses' : '探索其他课程'}
               </h2>
               <p style={{ fontSize: '12px', color: '#888', margin: 0 }}>
-                {isEn ? `${(allCourses || []).filter(c => !enrolledSlugs.has(c.slug)).length} courses available` : `${(allCourses || []).filter(c => !enrolledSlugs.has(c.slug)).length} 门可选`}
+                {isEn
+                  ? `${(allCourses || []).filter(c => !enrolledSlugs.has(c.slug)).length} available outside your current enrollments`
+                  : `${(allCourses || []).filter(c => !enrolledSlugs.has(c.slug)).length} 门可探索课程`}
               </p>
             </div>
-            {detectedPathway && (
+            <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
+              <button
+                type="button"
+                onClick={() => setShowExploreCatalog((value) => !value)}
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 800,
+                  color: '#fff',
+                  background: '#2b3d6d',
+                  border: 'none',
+                  borderRadius: '7px',
+                  padding: '8px 14px',
+                  cursor: 'pointer',
+                }}
+              >
+                {showExplore ? (isEn ? 'Hide catalog' : '收起目录') : (isEn ? 'Show catalog' : '展开目录')}
+              </button>
+              {detectedPathway && (
               <Link to={`/pathways/${detectedPathway.slug}`} style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none' }}>
                 {isEn ? `View ${detectedPathway.label} Pathway →` : `查看 ${detectedPathway.label} 路径 →`}
               </Link>
-            )}
+              )}
+            </div>
           </div>
           <div style={{
             background: '#f8f9fd',
@@ -816,27 +865,70 @@ export default function LearnDashboard({ language }) {
             </p>
             <p style={{ margin: 0, fontSize: '12px', color: '#5c6578', lineHeight: 1.55 }}>
               {isEn
-                ? 'Start with courses at your current grade level. Core required courses support graduation; electives add interest or portfolio evidence; pathway badges show courses that fit a four-year direction. Open the full pathway when you need the recommended order.'
-                : '先从当前年级的课程开始。核心必修支持毕业；选修课用于兴趣或作品集证据；学习方向标签表示这门课适合某个四年路径。需要先后顺序时，请打开完整路径查看。'}
+                ? 'Use the course plan above first. This catalog is for exploring alternatives, electives, or future options. Keep grade-ready on unless an advisor tells you to look ahead.'
+                : '请先使用上方课程计划。这里用于探索替代课程、选修课或未来选项。除非顾问建议提前规划，否则建议保持“当前可读”筛选。'}
             </p>
           </div>
 
-          {/* Pathway filter */}
-          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '16px', marginTop: '10px' }}>
-            {availablePathways.map((p) => (
-              <button key={p} onClick={() => setPathwayFilter(p)} style={{
-                fontSize: '11px', fontWeight: 600, padding: '4px 12px', borderRadius: '20px', cursor: 'pointer',
-                background: activePathwayFilter === p ? '#1a1a2e' : '#f0f2f8',
-                color: activePathwayFilter === p ? '#fff' : '#444', border: 'none',
-              }}>{p}</button>
-            ))}
-          </div>
+          {showExplore && (
+            <>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+                gap: '10px',
+                margin: '14px 0 12px',
+              }}>
+                <input
+                  value={courseSearch}
+                  onChange={(event) => setCourseSearch(event.target.value)}
+                  placeholder={isEn ? 'Search course, department, or pathway' : '搜索课程、学科或路径'}
+                  aria-label={isEn ? 'Search courses' : '搜索课程'}
+                  style={{ border: '1px solid #dfe6f3', borderRadius: '7px', padding: '8px 10px', fontSize: '12px' }}
+                />
+                <select
+                  value={courseTypeFilter}
+                  onChange={(event) => setCourseTypeFilter(event.target.value)}
+                  aria-label={isEn ? 'Course type' : '课程类型'}
+                  style={{ border: '1px solid #dfe6f3', borderRadius: '7px', padding: '8px 10px', fontSize: '12px', background: '#fff' }}
+                >
+                  <option value="all">{isEn ? 'All types' : '全部类型'}</option>
+                  <option value="core">{isEn ? 'Core required' : '核心必修'}</option>
+                  <option value="elective">{isEn ? 'Elective' : '选修'}</option>
+                  <option value="ap">{isEn ? 'Exam prep' : '考试准备'}</option>
+                </select>
+                <select
+                  value={courseReadinessFilter}
+                  onChange={(event) => setCourseReadinessFilter(event.target.value)}
+                  aria-label={isEn ? 'Grade readiness' : '年级筛选'}
+                  style={{ border: '1px solid #dfe6f3', borderRadius: '7px', padding: '8px 10px', fontSize: '12px', background: '#fff' }}
+                >
+                  <option value="ready">{isEn ? 'Grade-ready only' : '当前可读'}</option>
+                  <option value="all">{isEn ? 'Include future grades' : '包含未来年级'}</option>
+                </select>
+              </div>
+
+              {/* Pathway filter */}
+              <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '16px', marginTop: '10px' }}>
+                {availablePathways.map((p) => (
+                  <button key={p} onClick={() => setPathwayFilter(p)} style={{
+                    fontSize: '11px', fontWeight: 600, padding: '4px 12px', borderRadius: '20px', cursor: 'pointer',
+                    background: activePathwayFilter === p ? '#1a1a2e' : '#f0f2f8',
+                    color: activePathwayFilter === p ? '#fff' : '#444', border: 'none',
+                  }}>{p}</button>
+                ))}
+              </div>
+            </>
+          )}
 
           {enrollErr && <p style={{ color: '#c62828', marginBottom: '12px', fontSize: '14px' }}>{enrollErr}</p>}
 
-          {catalogCourses.length === 0 ? (
+          {!showExplore ? (
+            <p style={{ color: '#888', fontSize: '13px', padding: '8px 0 0' }}>
+              {isEn ? 'Open the catalog when you want to browse beyond the suggested course plan.' : '需要查看课程计划以外的课程时，可展开目录。'}
+            </p>
+          ) : catalogCourses.length === 0 ? (
             <p style={{ color: '#888', fontSize: '13px', padding: '20px 0' }}>
-              {isEn ? 'No more courses in this department.' : '该分类暂无更多课程。'}
+              {isEn ? 'No courses match these filters.' : '没有符合筛选条件的课程。'}
             </p>
           ) : (
             <div data-m="course-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))', gap: '12px' }}>

@@ -509,6 +509,8 @@ async function seedCourses() {
       if (existing._count.enrollments > 0) {
         // Course has active enrollments — update metadata + questions in place to avoid FK violation
         await prisma.course.update({ where: { slug: meta.slug }, data: meta });
+        await prisma.examQuestion.deleteMany({ where: { courseId: existing.id } });
+        await prisma.examQuestion.createMany({ data: (questions || []).map(q => ({ ...q, courseId: existing.id })) });
         await prisma.moduleQuizQuestion.deleteMany({ where: { courseId: existing.id } });
         await prisma.moduleQuizQuestion.createMany({ data: cleanQuizQuestions.map(q => ({ ...q, courseId: existing.id })) });
         console.log(`Updated (enrolled): ${meta.name} (${modules.length} modules, ${(questions || []).length} exam q, ${cleanQuizQuestions.length} quiz q)`);

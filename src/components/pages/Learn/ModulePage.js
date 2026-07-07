@@ -208,8 +208,17 @@ export default function ModulePage({ language }) {
 
   async function loadQuiz() {
     const r = await fetch(`${API}/api/enrollments/${slug}/quiz/${moduleOrder}`, { credentials: 'include' });
-    const d = await r.json();
-    setQuizQuestions(d.questions || []);
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) {
+      setError(d.error || 'Quiz setup needs GIIS review before students can submit.');
+      return;
+    }
+    if (!Array.isArray(d.questions) || d.questions.length === 0) {
+      setError('Quiz setup needs GIIS review before students can submit.');
+      return;
+    }
+    setError('');
+    setQuizQuestions(d.questions);
     if (d.attempt) { setPrevAttempt(d.attempt); setQuizPhase('submitted'); }
     else setQuizPhase('answering');
   }
