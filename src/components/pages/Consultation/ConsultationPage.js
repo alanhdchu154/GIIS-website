@@ -79,28 +79,17 @@ function consultationPayload(formData) {
   const desiredStart = formValue(formData, 'desiredStart');
   const preferredTime = formValue(formData, 'preferredTime');
   const message = formValue(formData, 'message');
-  const aliases = {
-    parent_name: parentName,
-    parent_email: email,
-    parent_wechat: parentWeChat,
-    student_grade: studentGrade,
-    student_situation: studentSituation,
-    transcript_available: transcriptAvailable,
-    desired_start: desiredStart,
-    preferred_time: preferredTime,
-    leadSummary: [
-      `Parent: ${parentName}`,
-      `Email: ${email}`,
-      `WeChat: ${parentWeChat || '(not provided)'}`,
-      `Grade: ${studentGrade}`,
-      `Situation: ${studentSituation}`,
-      `Transcript: ${transcriptAvailable}`,
-      `Start: ${desiredStart}`,
-      `Preferred time: ${preferredTime}`,
-      `Message: ${message || '(none)'}`,
-    ].join('\n'),
-  };
-  Object.entries(aliases).forEach(([key, value]) => payload.set(key, value));
+  payload.set('leadSummary', [
+    `Parent: ${parentName}`,
+    `Email: ${email}`,
+    `WeChat: ${parentWeChat || '(not provided)'}`,
+    `Grade: ${studentGrade}`,
+    `Situation: ${studentSituation}`,
+    `Transcript: ${transcriptAvailable}`,
+    `Start: ${desiredStart}`,
+    `Preferred time: ${preferredTime}`,
+    `Message: ${message || '(none)'}`,
+  ].join('\n'));
   return payload;
 }
 
@@ -114,7 +103,15 @@ function ConsultationPage({ language, toggleLanguage }) {
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setSubmitError(isEn
+        ? 'Please complete the required fields before submitting.'
+        : '请先填写所有必填项目再提交。');
+      return;
+    }
     const formData = new FormData(form);
+    if (formValue(formData, 'bot-field')) return;
     const missing = REQUIRED_FIELDS.filter((field) => !formValue(formData, field));
     if (missing.length) {
       setSubmitError(isEn
@@ -256,14 +253,6 @@ function ConsultationPage({ language, toggleLanguage }) {
                 onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="consultation" />
-                <input type="hidden" name="parent_name" />
-                <input type="hidden" name="parent_email" />
-                <input type="hidden" name="parent_wechat" />
-                <input type="hidden" name="student_grade" />
-                <input type="hidden" name="student_situation" />
-                <input type="hidden" name="transcript_available" />
-                <input type="hidden" name="desired_start" />
-                <input type="hidden" name="preferred_time" />
                 <input type="hidden" name="leadSummary" />
                 <p hidden><label>Do not fill: <input name="bot-field" /></label></p>
 

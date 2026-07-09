@@ -44,22 +44,14 @@ function contactPayload(formData) {
   const parentWeChat = formValue(formData, 'parentWeChat');
   const email = formValue(formData, 'email');
   const message = formValue(formData, 'message');
-  const aliases = {
-    student_name: studentName,
-    grade_level: grade,
-    pathway_interest: pathway,
-    parent_wechat: parentWeChat,
-    contact_email: email,
-    leadSummary: [
-      `Student: ${studentName}`,
-      `Grade: ${grade}`,
-      `Pathway: ${pathway}`,
-      `Email: ${email}`,
-      `WeChat: ${parentWeChat}`,
-      `Message: ${message || '(none)'}`,
-    ].join('\n'),
-  };
-  Object.entries(aliases).forEach(([key, value]) => payload.set(key, value));
+  payload.set('leadSummary', [
+    `Student: ${studentName}`,
+    `Grade: ${grade}`,
+    `Pathway: ${pathway}`,
+    `Email: ${email}`,
+    `WeChat: ${parentWeChat}`,
+    `Message: ${message || '(none)'}`,
+  ].join('\n'));
   return payload;
 }
 
@@ -72,7 +64,15 @@ export default function ContactForm({ language = 'en' }) {
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setSubmitError(isEn
+        ? 'Please complete the required fields before submitting.'
+        : '请先填写所有必填项目再提交。');
+      return;
+    }
     const formData = new FormData(form);
+    if (formValue(formData, 'bot-field')) return;
     const missing = REQUIRED_FIELDS.filter((field) => !formValue(formData, field));
     if (missing.length) {
       setSubmitError(isEn
@@ -177,11 +177,6 @@ export default function ContactForm({ language = 'en' }) {
                 onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="student_name" />
-                <input type="hidden" name="grade_level" />
-                <input type="hidden" name="pathway_interest" />
-                <input type="hidden" name="parent_wechat" />
-                <input type="hidden" name="contact_email" />
                 <input type="hidden" name="leadSummary" />
                 <p hidden><label>Do not fill: <input name="bot-field" /></label></p>
 
