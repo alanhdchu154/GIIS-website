@@ -199,21 +199,34 @@ def classify_hard_candidate(kind: str, match: str, context: str) -> dict[str, st
             return allow("AP-style describes an instructional task style, not authorization")
         return block("AP or College Board wording is authorization-sensitive")
     if kind == "payment_claim":
-        explicit_school_payment = school_context and contains_any(
+        instructional_tuition_context = (
+            token == "tuition"
+            and contains_any(lowered, ("externality", "subsidy", "private benefit", "social benefit", "college education"))
+            and not contains_any(lowered, ("giis", "genesis", "our school", "the school", "enroll", "apply", "stripe", "checkout"))
+        )
+        if instructional_tuition_context:
+            return allow("tuition is part of an economics externality example, not GIIS pricing")
+        school_payment_wording = contains_any(
             lowered,
             (
                 "pay",
                 "price",
                 "pricing",
+                "cost ",
+                "costs",
                 "tuition",
                 "stripe",
                 "checkout",
                 "invoice",
                 "refund",
                 "enroll",
-                "$",
+                "subscription",
+                "monthly",
+                "yearly",
+                "plan",
             ),
         )
+        explicit_school_payment = school_context and school_payment_wording
         if explicit_school_payment:
             return block("payment or enrollment wording refers to GIIS")
         business_lesson_context = (
@@ -224,6 +237,29 @@ def classify_hard_candidate(kind: str, match: str, context: str) -> dict[str, st
                     "cost",
                     "price",
                     "finance",
+                    "fiscal policy",
+                    "monetary policy",
+                    "central bank",
+                    "fed",
+                    "federal reserve",
+                    "bonds",
+                    "government bonds",
+                    "stimulus",
+                    "multiplier",
+                    "real gdp",
+                    "nominal gdp",
+                    "inflation",
+                    "bank reserves",
+                    "reserve requirement",
+                    "money supply",
+                    "federal funds rate",
+                    "borrowing costs",
+                    "externality",
+                    "subsidy",
+                    "public goods",
+                    "trade",
+                    "tariff",
+                    "college education",
                     "market",
                     "demand",
                     "demand curve",
@@ -256,6 +292,14 @@ def classify_hard_candidate(kind: str, match: str, context: str) -> dict[str, st
                     "employment",
                     "unemployed",
                     "business",
+                    "behavioral economics",
+                    "prospect theory",
+                    "loss aversion",
+                    "anchoring",
+                    "framing",
+                    "subscription framing",
+                    "free trial",
+                    "software company",
                     "profit",
                     "budget",
                     "loan",
@@ -284,7 +328,7 @@ def classify_hard_candidate(kind: str, match: str, context: str) -> dict[str, st
             )
         )
         business_process_token = token in {"checkout", "invoice", "refund"}
-        if token.startswith("$") and business_lesson_context and not school_context:
+        if token.startswith("$") and business_lesson_context and not explicit_school_payment:
             return allow("money amount is part of business/economics instruction")
         if business_process_token and business_lesson_context and not school_context:
             return allow("checkout/invoice/refund is part of business process instruction")
@@ -325,6 +369,32 @@ def classify_hard_candidate(kind: str, match: str, context: str) -> dict[str, st
         )
         if (math_context or survey_design_context) and not school_context and not admissions_context:
             return allow("guarantee is instructional math/research wording")
+        economics_anti_guarantee_context = contains_any(
+            lowered,
+                (
+                    "carbon tax",
+                    "cap-and-trade",
+                    "emissions",
+                    "emission cap",
+                    "permits",
+                    "polluting",
+                    "environmental economics",
+                    "quantity",
+                    "does not guarantee",
+                    "not guarantee",
+                    "not a guaranteed",
+                "no guarantee",
+                "game does not guarantee",
+                "transmission mechanism",
+                "risk judgments",
+                "dominant strategy",
+                "nash equilibrium",
+                "cooperate",
+                "competition",
+            ),
+        )
+        if economics_anti_guarantee_context and not school_context and not admissions_context:
+            return allow("guarantee wording is negated economics instruction, not a student outcome promise")
         return block("guarantee wording may imply a student or school outcome")
     if kind == "outcome_guarantee" and token.startswith("ensure"):
         research_method_context = (

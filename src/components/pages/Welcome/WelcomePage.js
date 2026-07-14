@@ -206,7 +206,7 @@ export default function WelcomePage({ language }) {
     );
   }
 
-  const { paymentStatus, email, planType, knownInDb } = state.data;
+  const { paymentStatus, planType, knownInDb } = state.data;
   const planLabel = PLAN_LABELS[planType]?.[isEn ? 'en' : 'zh'] || planType;
   const isPaid = paymentStatus === 'paid' || paymentStatus === 'no_payment_required';
 
@@ -236,7 +236,9 @@ export default function WelcomePage({ language }) {
         <p style={{ margin: 0, fontSize: '14px', color: '#1a3024', lineHeight: 1.7 }}>
           {isEn ? 'You purchased: ' : '你购买的方案：'}<b>{planLabel}</b>
           <br />
-          {isEn ? 'Receipt sent to: ' : '收据已发送至：'}<b>{email}</b>
+          {isEn
+            ? 'Stripe sends the receipt to the email used at checkout.'
+            : 'Stripe 会将收据发送至结账时使用的电子邮箱。'}
         </p>
       </div>
 

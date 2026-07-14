@@ -18,6 +18,8 @@ from __future__ import annotations
 import argparse, json, re, wave
 from pathlib import Path
 
+from manifest_order import canonical_manifest_rows
+
 REPO = Path(__file__).resolve().parents[2]
 LESSONS_DIR = REPO / "teaching-videos"
 OUT_PATH = REPO / "public" / "data" / "lessons-manifest.json"
@@ -75,12 +77,7 @@ def collect() -> dict:
             "uploaded_at":    yt.get("uploaded_at"),
             "privacy":        yt.get("privacy", "unlisted"),
         })
-    # Group by course → ordered list of modules
-    by_course: dict[str, list] = {}
-    for L in lessons:
-        by_course.setdefault(L["course"], []).append(L)
-    for course in by_course:
-        by_course[course].sort(key=lambda x: x["module_number"] or 0)
+    by_course, lessons = canonical_manifest_rows(lessons)
     return {
         "generated_at": __import__("datetime").datetime.now(
             __import__("datetime").timezone.utc).isoformat(timespec="seconds"),

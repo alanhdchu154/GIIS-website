@@ -25,6 +25,9 @@ REPORT_DIR = TEACHING_ROOT / "_audit" / "prune-failed-lessons"
 sys.path.insert(0, str(ROOT / "tools" / "lesson-video"))
 from audit_lessons import audit_lesson  # noqa: E402
 
+sys.path.insert(0, str(ROOT / "tools" / "youtube-upload"))
+from manifest_order import canonical_manifest_rows  # noqa: E402
+
 
 def read_json(path: Path, default: Any) -> Any:
     try:
@@ -74,13 +77,15 @@ def manifest_lessons(manifest: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def rebuild_manifest(kept: list[dict[str, Any]], generated_at: str) -> dict[str, Any]:
-    by_course: dict[str, list[dict[str, Any]]] = {}
-    for row in sorted(kept, key=lambda r: (r.get("course") or "", int(r.get("module_number") or 0), r.get("module_title") or "")):
-        by_course.setdefault(str(row.get("course") or "Unknown"), []).append(row)
+    normalized = [
+        {**row, "course": str(row.get("course") or "Unknown")}
+        for row in kept
+    ]
+    by_course, lessons = canonical_manifest_rows(normalized)
     return {
         "generated_at": generated_at,
         "source": "prune_failed_lessons",
-        "lessons": kept,
+        "lessons": lessons,
         "by_course": by_course,
     }
 

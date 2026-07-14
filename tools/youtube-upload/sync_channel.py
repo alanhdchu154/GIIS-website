@@ -34,6 +34,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from upload_video import get_creds  # noqa: E402
+from manifest_order import canonical_manifest_rows  # noqa: E402
 
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
@@ -191,9 +192,11 @@ def main():
             print(f"[delete-FAIL] {v['video_id']}  {e._get_reason()}")
 
     # ── Apply: rewrite manifest from canonical ────────────────────────
-    by_course: dict[str, list] = {}
+    manifest_entries: list[dict] = []
     skipped_without_local_folder: list[dict] = []
-    for (course, num), v in canonical.items():
+    for (course, num), v in sorted(
+        canonical.items(), key=lambda item: (item[0][0].casefold(), item[0][1])
+    ):
         lesson_dir = find_lesson_dir(course, num)
         if not lesson_dir:
             skipped_without_local_folder.append(v)
@@ -209,15 +212,15 @@ def main():
             "published_at":   v["published_at"],
             "lesson_dir":     lesson_dir.name if lesson_dir else None,
         }
-        by_course.setdefault(course, []).append(entry)
-    for course in by_course:
-        by_course[course].sort(key=lambda x: x["module_number"])
+        manifest_entries.append(entry)
+
+    by_course, lessons = canonical_manifest_rows(manifest_entries)
 
     manifest = {
         "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "source":       "youtube-channel",
         "by_course":    by_course,
-        "lessons":      [v for items in by_course.values() for v in items],
+        "lessons":      lessons,
     }
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")

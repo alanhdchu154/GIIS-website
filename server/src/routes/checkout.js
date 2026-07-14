@@ -7,6 +7,16 @@ const prisma = require('../lib/prisma');
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(',')[0].trim();
 
+function checkoutSessionSummary(session, knownInDb) {
+  return {
+    status: session.status,
+    paymentStatus: session.payment_status,
+    planType: session.metadata?.planType,
+    maxStudents: Number(session.metadata?.maxStudents || 1),
+    knownInDb,
+  };
+}
+
 /**
  * The single source of truth for what's purchasable through Stripe Checkout.
  *
@@ -149,15 +159,7 @@ router.get('/session/:id', async (req, res) => {
     const sub = await prisma.subscription.findUnique({
       where: { stripeCheckoutSessionId: session.id },
     });
-    res.json({
-      status: session.status,             // 'open' | 'complete' | 'expired'
-      paymentStatus: session.payment_status, // 'paid' | 'unpaid' | 'no_payment_required'
-      email: session.customer_email,
-      planType: session.metadata?.planType,
-      maxStudents: Number(session.metadata?.maxStudents || 1),
-      amountTotal: session.amount_total,
-      knownInDb: !!sub,
-    });
+    res.json(checkoutSessionSummary(session, !!sub));
   } catch (err) {
     console.error('[checkout] retrieve session error:', err.message);
     res.status(404).json({ error: 'Session not found.' });
@@ -185,3 +187,4 @@ router.get('/tiers', (_req, res) => {
 
 module.exports = router;
 module.exports.PRICE_TIERS = PRICE_TIERS;  // exposed for webhook handler to read tier config
+module.exports.checkoutSessionSummary = checkoutSessionSummary;

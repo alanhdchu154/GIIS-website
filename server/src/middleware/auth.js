@@ -94,10 +94,11 @@ async function blockIfSoftLocked(req, res, next) {
     }
     return next();
   } catch (err) {
-    // If lock check fails, fail OPEN (let the request through) and log loudly.
-    // We never want a transient DB blip to lock out paying parents.
-    console.error('[auth] blockIfSoftLocked check failed (failing open):', err.message);
-    return next();
+    console.error('[auth] blockIfSoftLocked check failed (failing closed):', err.message);
+    return res.status(503).json({
+      error: 'Account status could not be verified. Please try again.',
+      code: 'account_status_unavailable',
+    });
   }
 }
 
