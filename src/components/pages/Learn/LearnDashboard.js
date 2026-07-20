@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import { getStudentSession } from '../../../api/authStorage';
@@ -265,18 +265,25 @@ function CourseCard({ enr, isEn }) {
 
 function useEnrollments(enabled = true) {
   const [enrollments, setEnrollments] = useState(null);
-  const reload = () => {
+  const reload = useCallback(() => {
     if (!enabled) {
       setEnrollments([]);
-      return;
+      return Promise.resolve([]);
     }
-    fetch(`${API}/api/enrollments`, { credentials: 'include' })
+    return fetch(`${API}/api/enrollments`, { credentials: 'include' })
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => setEnrollments(d || []))
-      .catch(() => setEnrollments([]));
-  };
-  useEffect(reload, [enabled]);
-  return { enrollments, reload };
+      .then((d) => {
+        const next = Array.isArray(d) ? d : [];
+        setEnrollments(next);
+        return next;
+      })
+      .catch(() => {
+        setEnrollments([]);
+        return [];
+      });
+  }, [enabled]);
+  useEffect(() => { reload(); }, [reload]);
+  return { enrollments, setEnrollments, reload };
 }
 
 function useProfile(enabled = true) {
@@ -314,11 +321,12 @@ export default function LearnDashboard({ language }) {
   const navigate = useNavigate();
   const session = getStudentSession();
   const hasSession = Boolean(session);
-  const { enrollments, reload } = useEnrollments(hasSession);
+  const { enrollments, setEnrollments, reload } = useEnrollments(hasSession);
   const allCourses = useCourses(hasSession);
   const profile = useProfile(hasSession);
   const [enrolling, setEnrolling] = useState(null);
   const [enrollErr, setEnrollErr] = useState('');
+  const [enrollSuccess, setEnrollSuccess] = useState(null);
   const [pathwayFilter, setPathwayFilter] = useState(null); // null = auto-detect
   const [courseSearch, setCourseSearch] = useState('');
   const [courseTypeFilter, setCourseTypeFilter] = useState('all');
@@ -341,6 +349,7 @@ export default function LearnDashboard({ language }) {
   async function enroll(slug) {
     setEnrolling(slug);
     setEnrollErr('');
+    setEnrollSuccess(null);
     try {
       const r = await fetch(`${API}/api/enrollments`, {
         method: 'POST',
@@ -348,11 +357,25 @@ export default function LearnDashboard({ language }) {
         credentials: 'include',
         body: JSON.stringify({ slug }),
       });
+      const d = await r.json().catch(() => ({}));
       if (!r.ok) {
-        const d = await r.json().catch(() => ({}));
         setEnrollErr(d.error || 'Enrollment failed');
       } else {
-        reload();
+        if (d?.course?.slug) {
+          setEnrollments((previous) => {
+            const list = Array.isArray(previous) ? previous : [];
+            const withoutDuplicate = list.filter((item) => item.course?.slug !== d.course.slug);
+            return [d, ...withoutDuplicate];
+          });
+          setEnrollSuccess({
+            slug: d.course.slug,
+            name: isEn ? d.course.name : (d.course.nameZh || d.course.name),
+            already: Boolean(d.alreadyEnrolled),
+          });
+          setShowExploreCatalog(false);
+          setCourseSearch('');
+        }
+        await reload();
       }
     } catch {
       setEnrollErr('Network error');
@@ -535,6 +558,45 @@ export default function LearnDashboard({ language }) {
         )}
 
         <WeekOneStart isEn={isEn} spotlight={spotlight} />
+
+        {enrollSuccess && (
+          <div style={{
+            background: '#f4faf6',
+            border: '1px solid #cde8d1',
+            borderLeft: '5px solid #1B6B3A',
+            borderRadius: 10,
+            padding: '14px 16px',
+            marginBottom: 24,
+            display: 'flex',
+            justifyContent: 'space-between',
+            gap: 14,
+            alignItems: 'center',
+            flexWrap: 'wrap',
+          }}>
+            <div>
+              <p style={{ margin: '0 0 3px', color: '#1B6B3A', fontSize: 12, fontWeight: 850, letterSpacing: 1.1, textTransform: 'uppercase' }}>
+                {enrollSuccess.already ? (isEn ? 'Already enrolled' : '已在你的课程中') : (isEn ? 'Course added' : '课程已加入')}
+              </p>
+              <p style={{ margin: 0, color: '#263b2b', fontSize: 13, lineHeight: 1.55, fontWeight: 650 }}>
+                {isEn
+                  ? `${enrollSuccess.name} now appears in My Courses. No sign-out or refresh is needed.`
+                  : `${enrollSuccess.name} 已出现在「我的课程」。不需要退出或重新登录。`}
+              </p>
+            </div>
+            <Link to={`/learn/${enrollSuccess.slug}`} style={{
+              background: '#1B6B3A',
+              color: '#fff',
+              borderRadius: 7,
+              padding: '9px 14px',
+              fontSize: 12,
+              fontWeight: 850,
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+            }}>
+              {isEn ? 'Open course' : '打开课程'}
+            </Link>
+          </div>
+        )}
 
         {/* Graduation banner */}
         {myEnrollments.length > 0 && (isGradEligible ? (

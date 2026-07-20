@@ -1,12 +1,5 @@
 import React from 'react';
 
-const AP_COURSES = [
-  { code: 'AP Statistics exam preparation',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '数据分析与统计推论' } },
-  { code: 'AP Biology exam preparation',         icon: '🧬', desc: { en: 'College-level life sciences', zh: '大学程度生命科学' } },
-  { code: 'AP Psychology exam preparation',      icon: '🧠', desc: { en: 'Behavior & mental processes', zh: '行为与心理历程' } },
-  { code: 'AP Human Geography exam preparation', icon: '🌏', desc: { en: 'Patterns of human society', zh: '人文地理与全球视野' } },
-];
-
 const PROGRAMS = [
   {
     id: 'diploma',
@@ -43,7 +36,7 @@ export default function Academicsintroduction2({ language }) {
 
   return (
     <>
-      {/* ── Section 1: OUR PROGRAMS ─────────────────────────────── */}
+      {/* ── Curriculum structure ────────────────────────────────── */}
       <div style={{ padding: '80px 0 60px', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
           <p style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
@@ -97,44 +90,6 @@ export default function Academicsintroduction2({ language }) {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* ── Section 2: AP exam preparation ───────────────────────── */}
-      <div style={{ background: '#2b3d6d', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
-          <h2 style={{ fontSize: '60px', fontWeight: 800, color: '#fff', lineHeight: 1, marginBottom: '12px' }}>
-            {isEn ? 'AP EXAM PREP' : 'AP 考试准备'}
-          </h2>
-          <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.7)', maxWidth: '580px', lineHeight: 1.7, marginBottom: '48px' }}>
-            {isEn
-              ? 'GIIS provides advanced coursework and resources for students preparing for College Board AP exams. While school review processes are pending, public materials should be read as exam-preparation support.'
-              : 'GIIS 为准备 College Board AP 考试的学生提供进阶课程与资源。在授权与 school-code 流程完成前，公开资料应理解为考试准备支持，而不是已完成 AP 课程授权的声明。'}
-          </p>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
-            {AP_COURSES.map((ap) => (
-              <div key={ap.code} style={{
-                background: 'rgba(255,255,255,0.08)',
-                border: '1px solid rgba(255,255,255,0.15)',
-                borderRadius: '10px',
-                padding: '28px 24px',
-                borderTop: '4px solid rgba(213,168,54,1)',
-              }}>
-                <div style={{ fontSize: '32px', marginBottom: '12px' }}>{ap.icon}</div>
-                <h4 style={{ fontSize: '18px', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>{ap.code}</h4>
-                <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.6)', margin: 0, lineHeight: 1.5 }}>
-                  {ap.desc[isEn ? 'en' : 'zh']}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.45)', marginTop: '32px' }}>
-            {isEn
-              ? 'AP exams are administered by the College Board each May. GIIS uses College Board-aligned resources for preparation and keeps final transcript wording subject to approved school policy.'
-              : 'AP 考试由 College Board 每年五月举办。GIIS 使用对齐 College Board 的资源协助备考，最终成绩单用语以学校审核政策为准。'}
-          </p>
         </div>
       </div>
     </>

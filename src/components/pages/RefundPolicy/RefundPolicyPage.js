@@ -24,8 +24,8 @@ const POLICY_POINTS = [
       zh: '付款发生在路径审核之后',
     },
     body: {
-      en: 'GIIS should request payment only after the student path, support level, and transfer-record needs are reviewed. The refund policy is not a substitute for that review.',
-      zh: 'GIIS 应在学生路径、支持层级与转学记录需求审核后才请求付款。退款政策不能取代入学路径审核。',
+      en: 'GIIS should request payment only after the student path, support level, and transfer-record needs are reviewed. The refund policy is not an admission guarantee.',
+      zh: 'GIIS 应在学生路径、支持层级与转学记录需求审核后才请求付款。退款政策不代表入学保证。',
     },
   },
   {
@@ -143,7 +143,7 @@ function RefundPolicyPage({ language, toggleLanguage }) {
               {isEn ? 'Manual Review Sales Mode' : '人工审核付款模式'}
             </p>
             <h2 style={{ margin: '0 0 10px', color: '#1a1a2e', fontSize: 'clamp(22px, 3vw, 32px)', lineHeight: 1.15, fontWeight: 850 }}>
-              {isEn ? 'Refund confidence does not replace admissions review.' : '退款保障不能取代入学审核。'}
+              {isEn ? 'The refund policy is not an admission guarantee.' : '退款政策不代表入学保证。'}
             </h2>
             <p style={{ margin: '0 0 18px', color: '#4f5868', fontSize: 14, lineHeight: 1.75 }}>
               {isEn

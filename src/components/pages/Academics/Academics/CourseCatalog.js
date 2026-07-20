@@ -699,17 +699,6 @@ const COURSE_DETAILS = {
   },
 };
 
-const PATHWAYS = [
-  { title: 'CS & Engineering',     color: '#1565C0', emoji: '💻', to: '/pathways/cs',             zh: '计算机科学' },
-  { title: 'Engineering Science',  color: '#B71C1C', emoji: '⚙️', to: '/pathways/engineering',    zh: '工程科学' },
-  { title: 'Math & Data Science',  color: '#4527A0', emoji: '📐', to: '/pathways/math',           zh: '数学与数据科学' },
-  { title: 'Business & Marketing', color: '#C84B0A', emoji: '📊', to: '/pathways/business',       zh: '商业与市场营销' },
-  { title: 'Economics & Finance',  color: '#1B6B3A', emoji: '📈', to: '/pathways/economics',      zh: '经济与金融' },
-  { title: 'Psychology',           color: '#5b2c6f', emoji: '🧠', to: '/pathways/psychology',    zh: '心理学' },
-  { title: 'Communications',       color: '#E65100', emoji: '📡', to: '/pathways/communications', zh: '传播与媒体' },
-  { title: 'Arts & Design',        color: '#6A1B9A', emoji: '🎨', to: '/pathways/arts',           zh: '艺术与设计' },
-];
-
 const DEPARTMENTS = [
   {
     id: 'english',
@@ -999,10 +988,65 @@ function CourseRow({ course, color, isEn }) {
   );
 }
 
+function courseMatchesFilters(course, query, typeFilter, gradeFilter) {
+  const detail = COURSE_DETAILS[course.name];
+  const normalizedQuery = query.trim().toLowerCase();
+  if (typeFilter !== 'all' && course.type !== typeFilter) return false;
+  if (gradeFilter !== 'all' && course.grade !== gradeFilter) return false;
+  if (!normalizedQuery) return true;
+  const haystack = [
+    course.name,
+    course.type,
+    course.grade,
+    course.term,
+    detail?.desc,
+    ...(detail?.topics || []),
+    ...(detail?.resources || []).map((resource) => resource.title),
+  ].filter(Boolean).join(' ').toLowerCase();
+  return haystack.includes(normalizedQuery);
+}
+
+function CourseGroup({ grade, courses, color, isEn, defaultOpen }) {
+  if (courses.length === 0) return null;
+  return (
+    <details open={defaultOpen} style={{ marginBottom: '12px', border: '1px solid #e8edf8', borderRadius: 8, overflow: 'hidden', background: '#fff' }}>
+      <summary style={{
+        cursor: 'pointer',
+        padding: '12px 14px',
+        background: '#f8f9fd',
+        color,
+        fontSize: 12,
+        fontWeight: 850,
+        letterSpacing: 1,
+        textTransform: 'uppercase',
+      }}>
+        {isEn ? `Grade ${grade}` : `${grade} 年级`} <span style={{ color: '#8a90a2', fontWeight: 700, textTransform: 'none', letterSpacing: 0 }}>({courses.length})</span>
+      </summary>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: '10px 12px 12px' }}>
+        {courses.map((c) => (
+          <CourseRow key={c.name} course={c} color={color} isEn={isEn} />
+        ))}
+      </div>
+    </details>
+  );
+}
+
 export default function CourseCatalog({ language }) {
   const isEn = language !== 'zh';
   const [activeId, setActiveId] = useState('english');
+  const [query, setQuery] = useState('');
+  const [typeFilter, setTypeFilter] = useState('all');
+  const [gradeFilter, setGradeFilter] = useState('all');
   const active = DEPARTMENTS.find((d) => d.id === activeId);
+  const hasFilters = Boolean(query.trim()) || typeFilter !== 'all' || gradeFilter !== 'all';
+  const sourceDepartments = hasFilters ? DEPARTMENTS : (active ? [active] : []);
+  const filteredDepartments = sourceDepartments
+    .map((dept) => ({
+      ...dept,
+      courses: dept.courses.filter((course) => courseMatchesFilters(course, query, typeFilter, gradeFilter)),
+    }))
+    .filter((dept) => dept.courses.length > 0);
+  const filteredCount = filteredDepartments.reduce((sum, dept) => sum + dept.courses.length, 0);
 
   return (
     <section style={{ padding: '80px 0 60px', fontFamily: 'Inter, sans-serif' }}>
@@ -1015,6 +1059,43 @@ export default function CourseCatalog({ language }) {
         </h2>
 
         <RequirementBar language={language} />
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))',
+          gap: 10,
+          marginBottom: 24,
+        }}>
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder={isEn ? 'Search course, topic, resource, or term' : '搜索课程、主题、资源或学期'}
+            aria-label={isEn ? 'Search courses' : '搜索课程'}
+            style={{ border: '1px solid #dfe6f3', borderRadius: 8, padding: '10px 12px', fontSize: 13 }}
+          />
+          <select
+            value={typeFilter}
+            onChange={(event) => setTypeFilter(event.target.value)}
+            aria-label={isEn ? 'Course type filter' : '课程类型筛选'}
+            style={{ border: '1px solid #dfe6f3', borderRadius: 8, padding: '10px 12px', fontSize: 13, background: '#fff' }}
+          >
+            <option value="all">{isEn ? 'All types' : '全部类型'}</option>
+            <option value="Core">{isEn ? 'Core' : '必修'}</option>
+            <option value="Elective">{isEn ? 'Elective' : '选修'}</option>
+            <option value="AP">{isEn ? 'AP prep' : 'AP 准备'}</option>
+          </select>
+          <select
+            value={gradeFilter}
+            onChange={(event) => setGradeFilter(event.target.value)}
+            aria-label={isEn ? 'Grade filter' : '年级筛选'}
+            style={{ border: '1px solid #dfe6f3', borderRadius: 8, padding: '10px 12px', fontSize: 13, background: '#fff' }}
+          >
+            <option value="all">{isEn ? 'All grades' : '全部年级'}</option>
+            {['9','10','11','12','11–12'].map((grade) => (
+              <option key={grade} value={grade}>{isEn ? `Grade ${grade}` : `${grade} 年级`}</option>
+            ))}
+          </select>
+        </div>
 
         <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
           {/* Sidebar */}
@@ -1038,83 +1119,66 @@ export default function CourseCatalog({ language }) {
           </div>
 
           {/* Course list */}
-          {active && (
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ borderLeft: `4px solid ${active.color}`, paddingLeft: '20px', marginBottom: '20px' }}>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
-                  <h3 style={{ fontSize: '22px', fontWeight: 700, margin: 0, color: active.color }}>
-                    {active.label[isEn ? 'en' : 'zh']}
-                  </h3>
-                  <span style={{ fontSize: '13px', color: '#888', fontWeight: 500 }}>
-                    {active.required[isEn ? 'en' : 'zh']}
-                  </span>
-                </div>
-                <p style={{ fontSize: '13px', color: '#666', margin: '8px 0 0', lineHeight: 1.6 }}>
-                  {active.note[isEn ? 'en' : 'zh']}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            {hasFilters && (
+              <div style={{ border: '1px solid #dfe6f3', borderRadius: 8, padding: '12px 14px', background: '#f8f9fd', marginBottom: 16 }}>
+                <p style={{ margin: 0, color: '#2b3d6d', fontSize: 13, fontWeight: 800 }}>
+                  {isEn ? `${filteredCount} matching courses` : `${filteredCount} 门符合条件的课程`}
                 </p>
-                {/* hint if courses have details */}
-                {active.courses.some(c => COURSE_DETAILS[c.name]) && (
-                  <p style={{ fontSize: '11px', color: '#aaa', margin: '6px 0 0', fontStyle: 'italic' }}>
-                    {isEn ? '↓ Click a course to see topics and resources.' : '↓ 点击课程查看内容大纲与学习资源'}
-                  </p>
-                )}
               </div>
+            )}
 
-              {['9','10','11','12','11–12'].map((grade) => {
-                const coursesInGrade = active.courses.filter((c) => c.grade === grade);
-                if (coursesInGrade.length === 0) return null;
-                return (
-                  <div key={grade} style={{ marginBottom: '20px' }}>
-                    <p style={{ fontSize: '11px', fontWeight: 700, color: '#aaa', letterSpacing: '1px', textTransform: 'uppercase', margin: '0 0 8px' }}>
-                      {isEn ? `Grade ${grade}` : `${grade} 年级`}
-                    </p>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      {coursesInGrade.map((c) => (
-                        <CourseRow key={c.name} course={c} color={active.color} isEn={isEn} />
-                      ))}
-                    </div>
+            {filteredDepartments.length === 0 && (
+              <p style={{ color: '#777', fontSize: 14, padding: '18px 0' }}>
+                {isEn ? 'No courses match these filters.' : '没有符合筛选条件的课程。'}
+              </p>
+            )}
+
+            {filteredDepartments.map((dept) => (
+              <div key={dept.id} style={{ marginBottom: hasFilters ? 28 : 0 }}>
+                <div style={{ borderLeft: `4px solid ${dept.color}`, paddingLeft: '20px', marginBottom: '20px' }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
+                    <h3 style={{ fontSize: '22px', fontWeight: 700, margin: 0, color: dept.color }}>
+                      {dept.label[isEn ? 'en' : 'zh']}
+                    </h3>
+                    <span style={{ fontSize: '13px', color: '#888', fontWeight: 500 }}>
+                      {dept.required[isEn ? 'en' : 'zh']}
+                    </span>
                   </div>
-                );
-              })}
-            </div>
-          )}
-        </div>
-
-        {/* Pathways grid */}
-        <div style={{ marginTop: 56 }}>
-          <h3 style={{ fontSize: 22, fontWeight: 800, margin: '0 0 6px', color: '#1a1a2e' }}>
-            {isEn ? 'Academic Pathways' : '学习方向'}
-          </h3>
-          <p style={{ fontSize: 13, color: '#666', margin: '0 0 20px', lineHeight: 1.6 }}>
-            {isEn
-              ? 'Choose a 4-year pathway to see full schedules, syllabi, curated resources, and interactive quizzes for every pathway course.'
-              : '选择一个 4 年学习路径，查看完整课程安排、大纲、精选资源与互动测验。'}
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
-            {PATHWAYS.map((p) => (
-              <Link key={p.to} to={p.to} style={{ textDecoration: 'none' }}>
-                <div style={{
-                  padding: '22px 20px',
-                  borderRadius: 10,
-                  background: `${p.color}10`,
-                  border: `1px solid ${p.color}30`,
-                  transition: 'box-shadow 0.2s',
-                  cursor: 'pointer',
-                }}
-                  onMouseEnter={e => e.currentTarget.style.boxShadow = `0 4px 16px ${p.color}30`}
-                  onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
-                >
-                  <div style={{ fontSize: 28, marginBottom: 8 }}>{p.emoji}</div>
-                  <p style={{ margin: 0, fontSize: 15, fontWeight: 700, color: p.color }}>
-                    {isEn ? p.title : p.zh}
+                  <p style={{ fontSize: '13px', color: '#666', margin: '8px 0 0', lineHeight: 1.6 }}>
+                    {dept.note[isEn ? 'en' : 'zh']}
                   </p>
-                  <p style={{ margin: '4px 0 0', fontSize: 12, color: '#888' }}>
-                    {isEn ? 'View 4-year pathway →' : '查看完整路径 →'}
-                  </p>
+                  {dept.courses.some(c => COURSE_DETAILS[c.name]) && (
+                    <p style={{ fontSize: '11px', color: '#aaa', margin: '6px 0 0', fontStyle: 'italic' }}>
+                      {isEn ? 'Open a grade group, then click a course to see topics and resources.' : '展开年级分类后，点击课程可查看内容大纲与学习资源。'}
+                    </p>
+                  )}
                 </div>
-              </Link>
+
+                {['9','10','11','12','11–12'].map((grade, index) => (
+                  <CourseGroup
+                    key={`${dept.id}-${grade}`}
+                    grade={grade}
+                    courses={dept.courses.filter((c) => c.grade === grade)}
+                    color={dept.color}
+                    isEn={isEn}
+                    defaultOpen={hasFilters || index === 0}
+                  />
+                ))}
+              </div>
             ))}
           </div>
+        </div>
+
+        <div style={{ marginTop: 44, border: '1px solid #e0e6f0', borderRadius: 8, padding: '18px 20px', background: '#f8f9fd', display: 'flex', justifyContent: 'space-between', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+          <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.6 }}>
+            {isEn
+              ? 'Need the four-year sequence view? Use the pathway page instead of browsing the full catalog.'
+              : '需要查看四年完整顺序？请使用学习路径页面，而不是在完整目录里慢慢找。'}
+          </p>
+          <Link to="/pathways" style={{ flexShrink: 0, padding: '10px 18px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontSize: 13, fontWeight: 800, textDecoration: 'none' }}>
+            {isEn ? 'Compare all pathways →' : '查看全部路径 →'}
+          </Link>
         </div>
       </div>
     </section>

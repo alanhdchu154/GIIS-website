@@ -94,6 +94,7 @@ function CourseProofCard({ course, isEn }) {
 export default function AssessmentProofPage({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
   const [packet, setPacket] = useState(null);
+  const [expandedCourses, setExpandedCourses] = useState(new Set());
 
   useEffect(() => {
     let cancelled = false;
@@ -109,7 +110,18 @@ export default function AssessmentProofPage({ language, toggleLanguage }) {
   }, []);
 
   const courses = packet?.courses || [];
+  const featuredCourses = courses.slice(0, 2);
+  const collapsedCourses = courses.slice(2);
   const summary = useMemo(() => packet?.summary || { pass: 0, fail: 0, total: 0 }, [packet]);
+
+  function toggleCourse(slug) {
+    setExpandedCourses((previous) => {
+      const next = new Set(previous);
+      if (next.has(slug)) next.delete(slug);
+      else next.add(slug);
+      return next;
+    });
+  }
 
   return (
     <>
@@ -181,8 +193,56 @@ export default function AssessmentProofPage({ language, toggleLanguage }) {
               {isEn ? 'Assessment proof data is not available yet.' : '评量证据资料暂时不可用。'}
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 18 }}>
-              {courses.map((course) => <CourseProofCard key={course.slug} course={course} isEn={isEn} />)}
+            <div style={{ display: 'grid', gap: 18 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 18 }}>
+                {featuredCourses.map((course) => <CourseProofCard key={course.slug} course={course} isEn={isEn} />)}
+              </div>
+
+              {collapsedCourses.length > 0 && (
+                <div style={{ border: '1px solid #dfe5ef', borderRadius: 8, background: '#f8f9fd', padding: '16px 18px' }}>
+                  <p style={{ margin: '0 0 10px', color: '#2b3d6d', fontSize: 12, fontWeight: 850, letterSpacing: 1.2, textTransform: 'uppercase' }}>
+                    {isEn ? 'More proof-point courses' : '更多代表课程'}
+                  </p>
+                  <p style={{ margin: '0 0 14px', color: '#4f5868', fontSize: 13, lineHeight: 1.65 }}>
+                    {isEn
+                      ? `The first two courses are expanded for quick review. Open any of the remaining ${collapsedCourses.length} courses when you want to inspect the same assignment, quiz, midterm, final, and rubric evidence.`
+                      : `前两门课程已完整展开，方便快速查看。其余 ${collapsedCourses.length} 门可按需展开，查看同样的作业、测验、期中、期末与评分证据。`}
+                  </p>
+                  <div style={{ display: 'grid', gap: 10 }}>
+                    {collapsedCourses.map((course) => {
+                      const open = expandedCourses.has(course.slug);
+                      return (
+                        <div key={course.slug} style={{ border: `1px solid ${open ? '#2b3d6d' : '#e2e7f0'}`, borderRadius: 8, background: '#fff', overflow: 'hidden' }}>
+                          <button
+                            type="button"
+                            onClick={() => toggleCourse(course.slug)}
+                            style={{
+                              width: '100%',
+                              border: 'none',
+                              background: open ? '#f0f4ff' : '#fff',
+                              padding: '13px 15px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
+                              gap: 12,
+                              cursor: 'pointer',
+                              textAlign: 'left',
+                            }}
+                          >
+                            <span style={{ color: '#1a1a2e', fontSize: 14, fontWeight: 850, lineHeight: 1.35 }}>
+                              {open ? '▾' : '▸'} {course.name}
+                            </span>
+                            <span style={{ color: '#667085', fontSize: 12, fontWeight: 700, flexShrink: 0 }}>
+                              {course.courseEvidence.modules} {isEn ? 'modules' : '模块'}
+                            </span>
+                          </button>
+                          {open && <CourseProofCard course={course} isEn={isEn} />}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

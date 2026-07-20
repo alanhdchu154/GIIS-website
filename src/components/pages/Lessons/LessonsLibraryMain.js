@@ -33,6 +33,7 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
   const [byCourse, setByCourse] = useState(null);
   const [error, setError] = useState(null);
   const [active, setActive] = useState(null); // { course, lesson }
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     let cancelled = false;
@@ -58,17 +59,36 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
 
   const courses = useMemo(() => {
     if (!byCourse) return [];
+    const normalizedQuery = query.trim().toLowerCase();
     const names = Object.keys(byCourse).filter((c) => (byCourse[c] || []).length);
     // Lead with the fullest course so the first impression is the strongest;
     // grows on its own as the daily pipeline fills out each course.
     names.sort((a, b) => (byCourse[b].length - byCourse[a].length) || a.localeCompare(b));
-    return names.map((name) => ({
-      name,
-      lessons: [...byCourse[name]].sort((a, b) => a.module_number - b.module_number),
-    }));
-  }, [byCourse]);
+    return names
+      .map((name) => {
+        const lessons = [...byCourse[name]]
+          .sort((a, b) => a.module_number - b.module_number)
+          .filter((lesson) => {
+            if (!normalizedQuery) return true;
+            const haystack = [
+              name,
+              lesson.module_number,
+              lesson.module_title,
+              lesson.youtube_title,
+            ].filter(Boolean).join(' ').toLowerCase();
+            return haystack.includes(normalizedQuery);
+          });
+        return { name, lessons };
+      })
+      .filter((course) => course.lessons.length);
+  }, [byCourse, query]);
 
   const totalLessons = useMemo(
+    () => Object.values(byCourse || {}).reduce((sum, lessons) => sum + (lessons || []).length, 0),
+    [byCourse],
+  );
+
+  const filteredLessonCount = useMemo(
     () => courses.reduce((sum, c) => sum + c.lessons.length, 0),
     [courses],
   );
@@ -151,15 +171,43 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
             <p style={{ textAlign: 'center', color: '#7a8294' }}>{isEn ? 'Loading lessons…' : '正在载入课程…'}</p>
           )}
 
-          {courses.map((course) => (
-            <div key={course.name} style={{ marginBottom: 44 }}>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 18, flexWrap: 'wrap' }}>
-                <h2 style={{ fontSize: 22, fontWeight: 800, color: NAVY, margin: 0, letterSpacing: '-0.01em' }}>{course.name}</h2>
-                <span style={{ fontSize: 13, fontWeight: 700, color: '#8a90a2' }}>
-                  {isEn ? `${course.lessons.length} lessons` : `${course.lessons.length} 节课`}
-                </span>
-              </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(232px, 1fr))', gap: 18 }}>
+          {byCourse && (
+            <div style={{ marginBottom: 24 }}>
+              <input
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={isEn ? 'Search course or lesson title' : '搜索课程或影片标题'}
+                aria-label={isEn ? 'Search lessons' : '搜索课程影片'}
+                style={{ width: '100%', boxSizing: 'border-box', border: '1px solid #dfe6f2', borderRadius: 10, padding: '12px 14px', fontSize: 14 }}
+              />
+              {query.trim() && (
+                <p style={{ margin: '8px 0 0', color: '#7a8294', fontSize: 12.5 }}>
+                  {isEn ? `${filteredLessonCount} matching lessons` : `${filteredLessonCount} 节符合条件的课程`}
+                </p>
+              )}
+            </div>
+          )}
+
+          {byCourse && courses.length === 0 && (
+            <p style={{ textAlign: 'center', color: '#7a8294' }}>
+              {isEn ? 'No lessons match that search.' : '没有符合搜索条件的课程影片。'}
+            </p>
+          )}
+
+          {courses.map((course, index) => (
+            <details key={course.name} open={Boolean(query.trim()) || index < 2} style={{ marginBottom: 16, border: '1px solid #dfe6f2', borderRadius: 10, background: '#fff', overflow: 'hidden' }}>
+              <summary style={{
+                cursor: 'pointer',
+                padding: '16px 18px',
+                background: '#fff',
+                color: NAVY,
+                fontSize: 18,
+                fontWeight: 850,
+                letterSpacing: '-0.01em',
+              }}>
+                {course.name} <span style={{ fontSize: 13, fontWeight: 750, color: '#8a90a2' }}>{isEn ? `(${course.lessons.length} lessons)` : `(${course.lessons.length} 节课)`}</span>
+              </summary>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(232px, 1fr))', gap: 18, padding: '0 18px 20px' }}>
                 {course.lessons.map((lesson) => (
                   <LessonCard
                     key={lesson.youtube_id || lesson.module_number}
@@ -169,7 +217,7 @@ function LessonsLibraryMain({ language, toggleLanguage }) {
                   />
                 ))}
               </div>
-            </div>
+            </details>
           ))}
 
           {/* CTA */}

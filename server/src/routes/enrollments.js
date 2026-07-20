@@ -180,6 +180,31 @@ function computeGrade({ quizAttempts, midterm, final_, totalModules }) {
   };
 }
 
+const STUDENT_ENROLLMENT_INCLUDE = {
+  course: {
+    select: {
+      slug: true,
+      name: true,
+      nameZh: true,
+      credits: true,
+      department: true,
+      type: true,
+      gradeLevel: true,
+      _count: { select: { modules: true } },
+    },
+  },
+  quizAttempts: { select: { moduleOrder: true, score: true } },
+  examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
+};
+
+function enrichStudentEnrollment(enr) {
+  const totalModules = enr.course?._count?.modules || 0;
+  const midterm = (enr.examAttempts || []).find((a) => a.examType === 'midterm' && a.passed !== null);
+  const final_ = (enr.examAttempts || []).find((a) => a.examType === 'final' && a.passed !== null);
+  const grade = computeGrade({ quizAttempts: enr.quizAttempts || [], midterm, final_, totalModules });
+  return { ...enr, grade };
+}
+
 // ── List / enroll ─────────────────────────────────────────────────────────────
 
 router.get('/admin/all', authenticate, requireAdmin, async (req, res) => {
@@ -351,21 +376,11 @@ router.delete('/admin/:enrollmentId', authenticate, requireAdmin, async (req, re
 router.get('/', authenticate, requireStudent, async (req, res) => {
   const enrollments = await prisma.enrollment.findMany({
     where: { studentId: req.auth.studentId },
-    include: {
-      course: { select: { slug: true, name: true, nameZh: true, credits: true, department: true, type: true, gradeLevel: true, _count: { select: { modules: true } } } },
-      quizAttempts: { select: { moduleOrder: true, score: true } },
-      examAttempts: { where: { submittedAt: { not: null } }, orderBy: { submittedAt: 'desc' } },
-    },
+    include: STUDENT_ENROLLMENT_INCLUDE,
     orderBy: { enrolledAt: 'desc' },
   });
 
-  const enriched = enrollments.map((enr) => {
-    const totalModules = enr.course._count.modules;
-    const midterm = enr.examAttempts.find((a) => a.examType === 'midterm' && a.passed !== null);
-    const final_ = enr.examAttempts.find((a) => a.examType === 'final' && a.passed !== null);
-    const grade = computeGrade({ quizAttempts: enr.quizAttempts, midterm, final_, totalModules });
-    return { ...enr, grade };
-  });
+  const enriched = enrollments.map(enrichStudentEnrollment);
 
   res.json(enriched);
 });
@@ -380,11 +395,18 @@ router.post('/', authenticate, requireStudent, blockIfSoftLocked, async (req, re
   try {
     const enrollment = await prisma.enrollment.create({
       data: { studentId: req.auth.studentId, courseId: course.id },
-      include: { course: { select: { slug: true, name: true } } },
+      include: STUDENT_ENROLLMENT_INCLUDE,
     });
-    res.status(201).json(enrollment);
+    res.status(201).json(enrichStudentEnrollment(enrollment));
   } catch (e) {
-    if (e.code === 'P2002') return res.status(409).json({ error: 'Already enrolled' });
+    if (e.code === 'P2002') {
+      const existing = await prisma.enrollment.findUnique({
+        where: { studentId_courseId: { studentId: req.auth.studentId, courseId: course.id } },
+        include: STUDENT_ENROLLMENT_INCLUDE,
+      });
+      if (existing) return res.status(200).json({ ...enrichStudentEnrollment(existing), alreadyEnrolled: true });
+      return res.status(409).json({ error: 'Already enrolled' });
+    }
     throw e;
   }
 });

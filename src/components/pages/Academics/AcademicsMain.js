@@ -18,6 +18,13 @@ const PATHWAYS = [
   { title: 'Arts & Design',         titleZh: '艺术与设计',       color: '#6A1B9A', emoji: '🎨', to: '/pathways/arts',           ap: 1 },
 ];
 
+const AP_COURSES = [
+  { code: 'AP Statistics exam preparation',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '数据分析与统计推论' } },
+  { code: 'AP Biology exam preparation',         icon: '🧬', desc: { en: 'College-level life sciences', zh: '大学程度生命科学' } },
+  { code: 'AP Psychology exam preparation',      icon: '🧠', desc: { en: 'Behavior & mental processes', zh: '行为与心理历程' } },
+  { code: 'AP Human Geography exam preparation', icon: '🌏', desc: { en: 'Patterns of human society', zh: '人文地理与全球视野' } },
+];
+
 function AcademicsMain({ language, toggleLanguage }) {
   const isEn = language !== 'zh';
 
@@ -67,12 +74,12 @@ function AcademicsMain({ language, toggleLanguage }) {
         <AcademicsIntroduction language={language} />
       </div>
 
-      {/* ── Our Programs + Exam Prep Options ───────────────────────────── */}
+      {/* ── Our Programs ───────────────────────────────────────────────── */}
       <div className="mt-0" id="programs">
         <AcademicsIntroduction2 language={language} />
       </div>
 
-      {/* ── 10 Pathway Showcase ──────────────────────────────────────── */}
+      {/* ── Pathway Showcase ──────────────────────────────────────────── */}
       <div style={{ background: '#f4f6fb', padding: '80px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
           <p style={{ fontSize: '12px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
@@ -130,6 +137,47 @@ function AcademicsMain({ language, toggleLanguage }) {
               </Link>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* ── Exam Prep Options ─────────────────────────────────────────── */}
+      <div style={{ background: '#2b3d6d', padding: '72px 0', fontFamily: 'Inter, sans-serif' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
+          <p style={{ fontSize: '12px', fontWeight: 800, color: '#d5a836', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
+            {isEn ? 'Exam Prep Inside Pathways' : '路径内的考试准备'}
+          </p>
+          <h2 style={{ fontSize: 'clamp(32px, 5vw, 56px)', fontWeight: 800, color: '#fff', lineHeight: 1.04, margin: '0 0 12px' }}>
+            {isEn ? 'AP exam preparation is an option, not the whole pathway.' : 'AP 考试准备是选项，不是整条路径。'}
+          </h2>
+          <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.72)', maxWidth: '700px', lineHeight: 1.75, margin: '0 0 34px' }}>
+            {isEn
+              ? 'Students usually choose a pathway first. Exam-preparation courses can then support specific goals while school review and school-code processes remain described conservatively.'
+              : '学生通常先确定学习路径，再按目标选择考试准备课程。在授权与 school-code 流程完成前，公开资料保持保守表述。'}
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+            {AP_COURSES.map((ap) => (
+              <div key={ap.code} style={{
+                background: 'rgba(255,255,255,0.08)',
+                border: '1px solid rgba(255,255,255,0.15)',
+                borderRadius: '8px',
+                padding: '24px 22px',
+                borderTop: '4px solid rgba(213,168,54,1)',
+              }}>
+                <div style={{ fontSize: '30px', marginBottom: '12px' }}>{ap.icon}</div>
+                <h4 style={{ fontSize: '17px', fontWeight: 750, color: '#fff', margin: '0 0 8px', lineHeight: 1.3 }}>{ap.code}</h4>
+                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5 }}>
+                  {ap.desc[isEn ? 'en' : 'zh']}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.48)', margin: '28px 0 0', lineHeight: 1.65 }}>
+            {isEn
+              ? 'AP exams are administered by the College Board each May. GIIS uses College Board-aligned resources for preparation and keeps final transcript wording subject to approved school policy.'
+              : 'AP 考试由 College Board 每年五月举办。GIIS 使用对齐 College Board 的资源协助备考，最终成绩单用语以学校审核政策为准。'}
+          </p>
         </div>
       </div>
 

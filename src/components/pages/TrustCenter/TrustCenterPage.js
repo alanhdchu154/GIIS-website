@@ -328,13 +328,13 @@ function TrustCenterPage({ language, toggleLanguage }) {
 
       <section style={{ background: '#fff', fontFamily: 'Inter, sans-serif', padding: '62px 0' }}>
         <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 6%' }}>
-          <div style={{ maxWidth: 800, marginBottom: 24 }}>
-            <p style={eyebrow}>{isEn ? 'After Enrollment Visibility' : '入学后的家长可见度'}</p>
-            <h2 style={sectionTitle}>{isEn ? 'Parents should know what is happening, without seeing private staff notes.' : '家长应该知道孩子发生了什么，但不需要看到内部教务笔记。'}</h2>
+          <div style={{ maxWidth: 830, marginBottom: 24 }}>
+            <p style={eyebrow}>{isEn ? 'Parent Visibility + Product Evidence' : '家长可见度与产品证据'}</p>
+            <h2 style={sectionTitle}>{isEn ? 'After enrollment, families should see the school operating.' : '入学后，家长应该看得见学校正在运作。'}</h2>
             <p style={{ margin: '14px 0 0', color: '#4f5868', fontSize: 14, lineHeight: 1.75 }}>
               {isEn
-                ? 'GIIS separates parent-safe reassurance from internal coordination. Families see progress, advisor-approved notes, missing-work risk flags, and one next action; private advisor notes remain staff-only.'
-                : 'GIIS 会把家长安全摘要与内部协调分开。家庭看到进度、顾问审核留言、缺交风险提醒与一个下一步；内部顾问笔记仍只供 staff 使用。'}
+                ? 'GIIS separates parent-safe reassurance from internal coordination. Families see progress, advisor-approved notes, missing-work risk flags, next actions, and product evidence such as the portal, modules, transcript workflow, and diploma verification path.'
+                : 'GIIS 会把家长安全摘要与内部协调分开。家庭看到进度、顾问审核留言、缺交风险提醒、下一步，以及学习平台、课程模块、成绩单流程与毕业证验证路径等真实产品证据。'}
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 14 }}>
@@ -353,6 +353,22 @@ function TrustCenterPage({ language, toggleLanguage }) {
             <Link to="/parent/demo" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '12px 20px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
               {isEn ? 'Preview the parent reassurance layer' : '预览家长安心层'}
             </Link>
+          </div>
+
+          <div style={{ marginTop: 34, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(245px, 1fr))', gap: 16 }}>
+            {EVIDENCE.map((item) => (
+              <div key={item.title.en} style={{ border: '1px solid #e2e7f0', borderRadius: 8, overflow: 'hidden', background: '#fff' }}>
+                <img src={item.image} alt={pick(item.title, isEn)} style={{ width: '100%', aspectRatio: '16 / 10', objectFit: 'cover', display: 'block', borderBottom: '1px solid #e2e7f0' }} />
+                <div style={{ padding: '17px 18px 19px' }}>
+                  <h3 style={{ margin: '0 0 8px', color: '#1a1a2e', fontSize: 18, fontWeight: 850 }}>
+                    {pick(item.title, isEn)}
+                  </h3>
+                  <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.7 }}>
+                    {pick(item.body, isEn)}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -377,30 +393,6 @@ function TrustCenterPage({ language, toggleLanguage }) {
                 <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.7 }}>
                   {pick(item.body, isEn)}
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ background: '#fff', fontFamily: 'Inter, sans-serif', padding: '64px 0' }}>
-        <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 6%' }}>
-          <div style={{ maxWidth: 780, marginBottom: 26 }}>
-            <p style={eyebrow}>{isEn ? 'Visible Product Evidence' : '看得见的产品证据'}</p>
-            <h2 style={sectionTitle}>{isEn ? 'Parents are buying an operating school, not a promise.' : '家长买的是正在运作的学校，不是一句承诺。'}</h2>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(245px, 1fr))', gap: 16 }}>
-            {EVIDENCE.map((item) => (
-              <div key={item.title.en} style={{ border: '1px solid #e2e7f0', borderRadius: 8, overflow: 'hidden', background: '#fff' }}>
-                <img src={item.image} alt={pick(item.title, isEn)} style={{ width: '100%', aspectRatio: '16 / 10', objectFit: 'cover', display: 'block', borderBottom: '1px solid #e2e7f0' }} />
-                <div style={{ padding: '17px 18px 19px' }}>
-                  <h3 style={{ margin: '0 0 8px', color: '#1a1a2e', fontSize: 18, fontWeight: 850 }}>
-                    {pick(item.title, isEn)}
-                  </h3>
-                  <p style={{ margin: 0, color: '#4f5868', fontSize: 13, lineHeight: 1.7 }}>
-                    {pick(item.body, isEn)}
-                  </p>
-                </div>
               </div>
             ))}
           </div>

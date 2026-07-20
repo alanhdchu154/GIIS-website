@@ -5,6 +5,15 @@ import { ACADEMIC_YEARS, getCurrentAcademicYear } from '../../../config/schoolCa
 const TODAY = new Date().toISOString().slice(0, 10);
 const SOON_CUTOFF = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
 
+const EVENT_STYLE = {
+  term: { bg: '#eef3ff', color: '#1a2d5a', border: '#cbd8f0', weight: 800 },
+  exam: { bg: '#fff4e6', color: '#9a4d00', border: '#f1cc95', weight: 850 },
+  grades: { bg: '#eef8f0', color: '#1b5e20', border: '#bde2c4', weight: 800 },
+  transcript: { bg: '#f4efff', color: '#5b2c6f', border: '#d7c7f0', weight: 800 },
+  graduation: { bg: '#fffbf0', color: '#8a6a14', border: '#e8d5a0', weight: 850 },
+  recess: { bg: '#f8f9fc', color: '#667085', border: '#d0d7e8', weight: 650 },
+};
+
 function fmt(iso) {
   if (!iso) return '—';
   const [y, m, d] = iso.split('-').map(Number);
@@ -12,23 +21,49 @@ function fmt(iso) {
   return `${months[m-1]} ${d}, ${y}`;
 }
 
-function DateRow({ label, iso, accent = '#1a2d5a' }) {
+function compactDate(iso) {
+  return String(iso || '').replaceAll('-', '');
+}
+
+function classify(label) {
+  const text = String(label || '').toLowerCase();
+  if (text.includes('final') || text.includes('exam')) return 'exam';
+  if (text.includes('grade')) return 'grades';
+  if (text.includes('transcript')) return 'transcript';
+  if (text.includes('ceremony') || text.includes('diploma')) return 'graduation';
+  return 'term';
+}
+
+function googleCalendarUrl(year) {
+  const start = compactDate(year.startsOn);
+  const end = compactDate(year.endsOn);
+  const text = encodeURIComponent(`GIIS Academic Year ${year.label}`);
+  const details = encodeURIComponent('GIIS term dates, grade release windows, transcript issuance, and graduation milestones. Confirm exact student deadlines in the Learn Portal.');
+  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${start}/${end}&details=${details}`;
+}
+
+function DateRow({ label, iso, accent = '#1a2d5a', kind }) {
   if (!iso) return null;
   const past = iso < TODAY;
   const soon = !past && iso <= SOON_CUTOFF;
+  const style = EVENT_STYLE[kind || classify(label)] || EVENT_STYLE.term;
   return (
     <div style={{
       display: 'flex', justifyContent: 'space-between', alignItems: 'center',
       padding: '6px 0', borderBottom: '1px solid #f0f2f5',
       opacity: past ? 0.45 : 1,
+      gap: 12,
     }}>
-      <span style={{ fontSize: '13.5px', color: '#444' }}>{label}</span>
+      <span style={{ fontSize: '13.5px', color: past ? '#777' : '#30384a', fontWeight: style.weight }}>{label}</span>
       <span style={{
-        fontSize: '13px', fontWeight: soon ? 700 : 500,
-        color: soon ? '#1b5e20' : past ? '#aaa' : accent,
-        background: soon ? '#e8f5e9' : 'transparent',
-        padding: soon ? '2px 10px' : '0',
+        fontSize: '13px',
+        fontWeight: style.weight,
+        color: soon ? '#1b5e20' : past ? '#888' : (style.color || accent),
+        background: soon ? '#e8f5e9' : style.bg,
+        border: `1px solid ${soon ? '#a5d6a7' : style.border}`,
+        padding: '2px 10px',
         borderRadius: '20px',
+        whiteSpace: 'nowrap',
       }}>
         {fmt(iso)}{soon ? '  — upcoming' : ''}
       </span>
@@ -45,8 +80,8 @@ function TermBlock({ term, accent }) {
       </div>
       <DateRow label="Term opens" iso={term.starts} accent={accent} />
       <DateRow label="Term closes · finals due" iso={term.ends} accent={accent} />
-      <DateRow label="Grades released to portal" iso={term.gradesReleased} accent={accent} />
-      <DateRow label="Official transcript issued" iso={term.transcriptIssued} accent={accent} />
+      <DateRow label="Grades released to portal" iso={term.gradesReleased} accent={accent} kind="grades" />
+      <DateRow label="Official transcript issued" iso={term.transcriptIssued} accent={accent} kind="transcript" />
       {(term.keyDates || []).map((k) => (
         <DateRow key={k.date} label={k.label} iso={k.date} accent={accent} />
       ))}
@@ -119,8 +154,8 @@ function YearCard({ year, isCurrent, language }) {
               <div style={{ fontSize: '11px', fontWeight: 700, color: '#b8962e', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>
                 {isEn ? 'Graduation' : '毕业典礼'} · {year.graduation.classLabel}
               </div>
-              <DateRow label={isEn ? 'Ceremony · diploma valid' : '典礼 · 毕业证书生效'} iso={year.graduation.ceremonyDate} accent="#b8962e" />
-              <DateRow label={isEn ? 'Physical diploma mailed' : '纸质毕业证书邮寄'} iso={year.graduation.physicalMailed} accent="#b8962e" />
+              <DateRow label={isEn ? 'Ceremony · diploma valid' : '典礼 · 毕业证书生效'} iso={year.graduation.ceremonyDate} accent="#b8962e" kind="graduation" />
+              <DateRow label={isEn ? 'Physical diploma mailed' : '纸质毕业证书邮寄'} iso={year.graduation.physicalMailed} accent="#b8962e" kind="graduation" />
             </div>
           )}
         </div>
@@ -151,6 +186,23 @@ export default function CalendarPage({ language }) {
                 ? 'GIIS is a fully online, asynchronous school — the learning portal is open 24/7, year-round. The calendar below defines term dates, grade release windows, and official transcript issuance dates.'
                 : '创想国际学校为全线上异步制学校，学习平台全年 24/7 开放。以下日历定义了学期日期、成绩公布及官方成绩单发放时间。'}
             </p>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 20 }}>
+              <button
+                type="button"
+                onClick={() => window.print()}
+                style={{ border: 'none', borderRadius: 8, background: '#d5a836', color: '#1a2d5a', padding: '10px 16px', fontSize: 13, fontWeight: 850, cursor: 'pointer' }}
+              >
+                {isEn ? 'Print / Save PDF' : '打印 / 存成 PDF'}
+              </button>
+              <a
+                href={googleCalendarUrl(currentYear)}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ border: '1.5px solid rgba(255,255,255,0.38)', borderRadius: 8, color: '#fff', padding: '9px 16px', fontSize: 13, fontWeight: 800, textDecoration: 'none' }}
+              >
+                {isEn ? 'Add current year to Google Calendar' : '加入 Google Calendar'}
+              </a>
+            </div>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import { getStudentSession, clearStudentSession } from '../../../api/authStorage';
@@ -46,15 +46,55 @@ export default function ProfilePage({ language }) {
 
   const studentId = session?.student?.id;
 
-  useEffect(() => {
-    if (!studentId) { navigate('/login', { replace: true }); return; }
+  const profileErrorMessage = useCallback((status, data = {}) => {
+    if (status === 401) {
+      return isEn
+        ? 'Your session expired. Please sign in again.'
+        : '登录状态已过期，请重新登录。';
+    }
+    if (status === 404) {
+      return isEn
+        ? 'The student profile is not linked yet. Please contact admissions.'
+        : '学生档案尚未完成关联，请联系招生团队。';
+    }
+    return data.error || (isEn ? 'Profile could not be loaded. Please try again.' : '档案暂时无法载入，请稍后再试。');
+  }, [isEn]);
+
+  const loadProfile = useCallback(async () => {
+    if (!studentId) {
+      navigate('/login', { replace: true });
+      return;
+    }
+    setError('');
     const token = localStorage.getItem('giis_student_token');
     const headers = token ? { Authorization: `Bearer ${token}` } : {};
-    fetch(`${API}/api/me`, { credentials: 'include', headers })
-      .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(d => { setProfile(d); setForm(d); })
-      .catch(() => setError('Failed to load profile'));
-  }, [studentId, navigate]);
+    try {
+      const r = await fetch(`${API}/api/me`, { credentials: 'include', headers });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) {
+        if (r.status === 401) {
+          clearStudentSession();
+          setError(profileErrorMessage(r.status, data));
+          setTimeout(() => navigate('/login', { replace: true }), 600);
+          return;
+        }
+        setError(profileErrorMessage(r.status, data));
+        return;
+      }
+      setProfile(data);
+      setForm(data);
+    } catch {
+      setError(isEn ? 'Network error while loading profile.' : '载入档案时网络异常。');
+    }
+  }, [isEn, navigate, profileErrorMessage, studentId]);
+
+  useEffect(() => { loadProfile(); }, [loadProfile]);
+
+  useEffect(() => {
+    const onFocus = () => loadProfile();
+    window.addEventListener('focus', onFocus);
+    return () => window.removeEventListener('focus', onFocus);
+  }, [loadProfile]);
 
   function setField(key, val) { setForm(p => ({ ...p, [key]: val })); }
 
@@ -89,7 +129,30 @@ export default function ProfilePage({ language }) {
   }
 
   if (!studentId) return null;
-  if (error) return <div style={{ padding: '80px 10%', fontFamily: 'Inter', color: '#c62828' }}>{error}</div>;
+  if (error) return (
+    <>
+      <div className="row"><Nav language={language} /></div>
+      <div style={{ padding: '80px 10%', fontFamily: 'Inter, sans-serif', color: '#1a1a2e', maxWidth: 760 }}>
+        <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 850, color: '#c62828', letterSpacing: 1.4, textTransform: 'uppercase' }}>
+          {isEn ? 'Profile needs attention' : '档案需要处理'}
+        </p>
+        <h1 style={{ margin: '0 0 12px', fontSize: 30, lineHeight: 1.15 }}>{error}</h1>
+        <p style={{ margin: '0 0 18px', color: '#5c6578', fontSize: 14, lineHeight: 1.65 }}>
+          {isEn
+            ? 'Your courses may still be available from the Learn Portal. If this repeats after signing in again, contact admissions with your student email.'
+            : '你的课程可能仍可从 Learn Portal 打开。如果重新登录后仍出现此问题，请用学生邮箱联系招生团队。'}
+        </p>
+        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          <button type="button" onClick={loadProfile} style={{ fontSize: 13, fontWeight: 800, color: '#fff', background: '#2b3d6d', border: 'none', borderRadius: 8, padding: '10px 16px', cursor: 'pointer' }}>
+            {isEn ? 'Try again' : '重新载入'}
+          </button>
+          <Link to="/learn" style={{ fontSize: 13, fontWeight: 800, color: '#2b3d6d', border: '2px solid #2b3d6d', borderRadius: 8, padding: '8px 16px', textDecoration: 'none' }}>
+            {isEn ? 'Back to courses' : '回到课程'}
+          </Link>
+        </div>
+      </div>
+    </>
+  );
   if (!profile) return <div style={{ padding: '80px 10%', fontFamily: 'Inter', color: '#888' }}>{isEn ? 'Loading…' : '加载中…'}</div>;
 
   const enrollments = profile.enrollments || [];
