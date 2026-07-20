@@ -21,10 +21,6 @@ function fmt(iso) {
   return `${months[m-1]} ${d}, ${y}`;
 }
 
-function compactDate(iso) {
-  return String(iso || '').replaceAll('-', '');
-}
-
 function classify(label) {
   const text = String(label || '').toLowerCase();
   if (text.includes('final') || text.includes('exam')) return 'exam';
@@ -32,14 +28,6 @@ function classify(label) {
   if (text.includes('transcript')) return 'transcript';
   if (text.includes('ceremony') || text.includes('diploma')) return 'graduation';
   return 'term';
-}
-
-function googleCalendarUrl(year) {
-  const start = compactDate(year.startsOn);
-  const end = compactDate(year.endsOn);
-  const text = encodeURIComponent(`GIIS Academic Year ${year.label}`);
-  const details = encodeURIComponent('GIIS term dates, grade release windows, transcript issuance, and graduation milestones. Confirm exact student deadlines in the Learn Portal.');
-  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${start}/${end}&details=${details}`;
 }
 
 function DateRow({ label, iso, accent = '#1a2d5a', kind }) {
@@ -194,14 +182,6 @@ export default function CalendarPage({ language }) {
               >
                 {isEn ? 'Print / Save PDF' : '打印 / 存成 PDF'}
               </button>
-              <a
-                href={googleCalendarUrl(currentYear)}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ border: '1.5px solid rgba(255,255,255,0.38)', borderRadius: 8, color: '#fff', padding: '9px 16px', fontSize: 13, fontWeight: 800, textDecoration: 'none' }}
-              >
-                {isEn ? 'Add current year to Google Calendar' : '加入 Google Calendar'}
-              </a>
             </div>
           </div>
         </div>
