@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-07-20 11:26 CDT
+Last updated: 2026-07-20 13:24 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
@@ -56,10 +56,56 @@ cc cross-checked every item in the tester's QA doc against this working tree.
   duplicate safe to delete blind. Needs the tester to point at the exact screen
   before a targeted edit.
 
-CRITICAL: all fixes are in the working tree only. cc committed them locally on
-2026-07-20 (no push). They are NOT live on `genesisideas.school` until pushed
-(= Netlify deploy). The tester's issues will still reproduce in production until
-then.
+STATUS 2026-07-20: cc committed the fixes in 4 logical commits and PUSHED to
+`origin/main` (commit `d2dbb087`) at Alan's request — Netlify deploy triggered;
+allow a few minutes to propagate. DB re-seed for the 9 course-JSON module-12
+additions was intentionally SKIPPED (Alan chose skip): full `db:seed` does
+`course.delete`+recreate, 8 of the 9 courses have a live enrollment, and
+`Enrollment->Course` is Restrict — so a full seed would error / risk the paying
+students' data. The module-12 JSON change already clears its real target (the
+video course-design guard reads JSON, not the DB), so no re-seed is needed. Live
+DB was left untouched. If enrolled students should later see module 12 in the
+Learn Portal, use a surgical CourseModule upsert (order 12 only, no delete),
+never the full seed.
+
+FOLLOW-UP 2026-07-20: Netlify deploy of `d2dbb087` confirmed live (state ready,
+published, 22 assets changed). Alan then decided the calendar "Add to Google
+Calendar" export was a confusing half-measure (single year-span all-day event,
+milestones only in the description) and asked to remove it. cc removed the link
++ unused `googleCalendarUrl`/`compactDate` helpers, kept "Print / Save PDF",
+build passed, committed (`547ef5ca`) and pushed.
+
+## Completed: 2026-07-20 12:02-13:24 CT 5-Cap Run: Psychology M9-M12 + Sports M1 Uploaded
+
+The 12:00 CT two-hour / 5-cap heartbeat ran the approved path:
+`FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+lesson:foundation-daily`. It did not start a duplicate producer/upload and did
+not use any force approval/upload path.
+
+- produced/reviewed to ready: Psychology Seminar / Capstone M9 APA Writing
+  Style, M10 Data Collection Methods, M11 Statistical Analysis for Psychology,
+  M12 Capstone Presentation & Research Reflection, and Sports Management &
+  Leadership M1 Leadership Theories in Sport
+- final release gate: all five reached score 100 / ready
+- parent-trust: `TRUST_READY` for all five
+- approval/upload path: orchestrator wrote
+  `teaching-videos/_audit/release-gate/approved_ready_to_upload.json`, then
+  `yt_queue.py upload --gate-ready --max 5 --privacy unlisted`
+- result: 5 unlisted uploaded / 0 failed / 0 pending
+- video IDs: Psychology M9 `fREcl4LN4wA`, M10 `3OZ5EDpq7vY`, M11
+  `RdfCGBBikNs`, M12 `5YJLlvoKcwk`, Sports Management M1 `_jZ7QIx0a4w`
+- playlist: Psychology M9-M12 added to `Psychology Seminar / Capstone`;
+  uploader created `Sports Management & Leadership` playlist `PLNAhuCd5rVXs`
+  and added M1 after one transient playlist-add retry
+- final queue evidence: 765 uploaded / 0 pending / 0 no-MP4 / 765 total
+- pending release gate: 0 ready / 0 needs_revision / 0 blocked
+- manifest alignment: 0 warnings across 577 lessons
+- no producer/upload process remained after the run
+- this was not a YouTube upload/channel limit; conservative local quota
+  estimate now reports 10 local uploads today and 0 safe full uploads left
+- current 2026-07-20 CT total is 10 uploaded
+- dirty risk remains: root cwd-drift `slides/` and `style_manifest.json`
+  reappeared untracked; do not broad-stage them.
 
 ## Completed: 2026-07-20 10:03-11:26 CT 5-Cap Run: Psychology M4-M8 Uploaded
 
