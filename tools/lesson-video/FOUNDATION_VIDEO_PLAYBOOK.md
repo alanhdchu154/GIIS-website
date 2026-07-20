@@ -125,17 +125,15 @@ college admissions claims in foundation lesson titles or descriptions.
   is active as a 40-capacity trial as of 2026-06-18.
 - Before resuming, run the read-only lane report:
   `npm run lesson:pipeline-lanes`.
-- The automation runs as one hourly heartbeat in the fixed
+- The automation runs as one two-hour heartbeat in the fixed
   `GIIS_影片_producer` chat.
-- 03:00 / 08:00 / 13:00 / 18:00 CT producer slots call
-  `FOUNDATION_MAX_MODULES=10 FOUNDATION_UPLOAD_MAX=10 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus FOUNDATION_CC_BUDGET_USD=10 FOUNDATION_REVIEW_BUDGET_USD=3 bash tools/lesson-video/foundation_daily.sh`.
-- 20:00 CT checks queue, pending release gate, manifest alignment, dashboard,
+- Every two-hour producer/top-up slot calls
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus FOUNDATION_CC_BUDGET_USD=10 FOUNDATION_REVIEW_BUDGET_USD=3 bash tools/lesson-video/foundation_daily.sh`.
+- Each slot checks queue, pending release gate, manifest alignment, dirty risk,
   and today's successful non-AP foundation upload count from local
-  `teaching-videos/**/script.json` YouTube fields. If the count is below 40,
-  run one bounded top-up batch with `min(gap, 10)` modules/uploads, then update
-  the dashboard.
-- Outside 03/08/13/18/20 CT, the heartbeat should skip heavy work and not read
-  repo state, run git/npm/Python/cc, or touch files.
+  `teaching-videos/**/script.json` YouTube fields before acting. If there is no
+  safe gate-ready upload and no useful production candidate, return
+  `DONT_NOTIFY`.
 - Requested target grade: Grade 10 (`FOUNDATION_TARGET_GRADE=10`) for the
   active upload-cap trial. The runner defaults to auto-advance: if the
   requested grade has no selectable unfinished modules, continue with the next

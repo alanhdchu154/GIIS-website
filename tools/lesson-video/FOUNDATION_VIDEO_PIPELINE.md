@@ -19,9 +19,9 @@ npm run lesson:pipeline-lanes
 This is the intended loop for every new foundation video:
 
 ```text
-03:00 / 08:00 / 13:00 / 18:00 CT producer slots in the unified `GIIS_影片_pipeline` heartbeat
+Every two hours in the unified `GIIS_影片_pipeline` heartbeat
   -> call bash tools/lesson-video/foundation_daily.sh
-  -> choose up to 10 non-AP foundation modules from server/prisma/courses/**/*.json
+  -> choose up to 5 non-AP foundation modules from server/prisma/courses/**/*.json
   -> before a course series starts, run the course-design gate and safe repair
   -> verify module outline and resource policy: no required Khan / paid /
      login-gated external practice path; TED/TED-Ed may be accepted as free
@@ -94,24 +94,22 @@ Preferred scheduler: Codex automations. Use one unified heartbeat attached to
 the fixed project chat `GIIS_影片_producer`; do not create separate producer and
 dashboard chats.
 
-Current state: the unified heartbeat is active as a 40-capacity trial. Producer
-slots run at 03:00 / 08:00 / 13:00 / 18:00 CT, and the 20:00 CT lane updates
-the dashboard, counts artifact-backed same-day uploads, and runs one bounded
-top-up only if the day is below 40.
+Current state: the unified heartbeat is active on a two-hour cadence. Each
+heartbeat is a producer/top-up window capped at 5 modules/uploads, after the
+usual no-overlap, release-gate, parent-trust, and upload-safety checks.
 
 ```text
 ~/.codex/automations/giis-foundation-video-split-batch/automation.toml
 app name = "GIIS_影片_pipeline"
 target chat = "GIIS_影片_producer"
-rrule = hourly heartbeat with prompt-level gates:
-  03:00 / 08:00 / 13:00 / 18:00 CT -> producer, up to 10 modules/uploads
-  20:00 CT -> dashboard, artifact-backed count, bounded top-up to 40
+rrule = two-hour heartbeat:
+  every 2 hours -> producer/top-up, up to 5 modules/uploads
 ```
 
 The producer slots call the repo-owned runner:
 
 ```bash
-FOUNDATION_MAX_MODULES=10 FOUNDATION_UPLOAD_MAX=10 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus bash tools/lesson-video/foundation_daily.sh
+FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 FOUNDATION_CC_MODEL=sonnet FOUNDATION_REVIEW_MODEL=opus bash tools/lesson-video/foundation_daily.sh
 ```
 
 The wrapper defaults to grade auto-advance. If the requested target grade has no
@@ -120,11 +118,11 @@ grade that has non-AP foundation candidates. Use
 `FOUNDATION_AUTO_ADVANCE_GRADE=0` only for an intentional repair pass that must
 stay on the requested grade.
 
-The 20:00 slot should read the queue/dashboard first. If the day is below the
-40-capacity target and the gap is real, run one bounded top-up pass rather than
-forcing low-quality lessons through the gate. Same-day capacity should be
-counted from local `teaching-videos/**/script.json` YouTube fields; the public
-manifest can lag and should be treated as reconciliation evidence.
+Every two-hour slot should read the queue/dashboard first. If there is no safe
+gate-ready upload and no useful production candidate, return `DONT_NOTIFY`
+rather than forcing low-quality lessons through the gate. Same-day capacity
+should be counted from local `teaching-videos/**/script.json` YouTube fields;
+the public manifest can lag and should be treated as reconciliation evidence.
 
 Keep the pipeline logic in this repository so changes can be reviewed,
 committed, and rolled back like normal code. Do not use a macOS LaunchAgent for

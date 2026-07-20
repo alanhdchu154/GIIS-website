@@ -43,8 +43,8 @@ fi
 ORCHESTRATOR_ARGS=(
   tools/lesson-video/foundation_daily_orchestrator.py
   --target-grade "${FOUNDATION_TARGET_GRADE:-10}"
-  --max-modules "${FOUNDATION_MAX_MODULES:-10}"
-  --upload-max "${FOUNDATION_UPLOAD_MAX:-10}"
+  --max-modules "${FOUNDATION_MAX_MODULES:-5}"
+  --upload-max "${FOUNDATION_UPLOAD_MAX:-5}"
   --privacy "${FOUNDATION_UPLOAD_PRIVACY:-unlisted}"
   --cc-model "${FOUNDATION_CC_MODEL:-sonnet}"
   --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}"

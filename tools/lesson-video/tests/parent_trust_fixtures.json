@@ -37,9 +37,21 @@
       "expect": "ALLOW"
     },
     {
+      "label": "working_capital_supplier_invoice",
+      "text": "Your supplier sends an invoice: pay within thirty days, or pay within ten days and take a two-percent discount.",
+      "context": "Corporate finance lesson about working capital, invoice terms, supplier discounts, and line of credit interest.",
+      "expect": "ALLOW"
+    },
+    {
       "label": "labor_wage_dollars",
       "text": "If a worker earns $18 per hour, the business can compare labor cost with expected revenue.",
       "context": "Economics lesson about labor markets, wages, and revenue.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "investment_portfolio_dollars",
+      "text": "A hypothetical $10,000 portfolio can be allocated across stocks, bonds, real estate funds, and cash equivalents based on risk tolerance and time horizon.",
+      "context": "Personal finance lesson about diversification, asset classes, risk-return tradeoff, and portfolio allocation.",
       "expect": "ALLOW"
     },
     {
@@ -52,6 +64,12 @@
       "label": "vertical_asymptote",
       "text": "The denominator approaching zero guarantees a vertical asymptote in this rational function.",
       "context": "Algebra and calculus lesson about function behavior.",
+      "expect": "ALLOW"
+    },
+    {
+      "label": "negated_outcome_guarantee_finance",
+      "text": "A scarcity mindset and an abundance mindset shape decisions differently. Neither guarantees an outcome.",
+      "context": "Personal finance lesson about mindset and decision-making, not school marketing.",
       "expect": "ALLOW"
     },
     {
