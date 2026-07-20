@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-12 09:40 CDT
+Last updated: 2026-07-20 11:26 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -32,7 +32,7 @@ Server tests: 43 passed; frontend tests: 16 passed; production build passed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-12 09:15 CDT.
+Last refreshed: 2026-07-20 11:26 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -41,6 +41,425 @@ and older pre-slim history is in
 
 Current operating state:
 
+- 2026-07-20 10:03-11:26 CT approved 5-cap heartbeat completed with 5
+  uploads and cleared Psychology Seminar / Capstone M4-M8. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active and no
+  force approval/upload path was used. M4 Cross-Cultural Psychology, M5
+  Positive Psychology & Well-Being, M6 Applied Psychology Careers, M7 Research
+  Design Review, and M8 Literature Review Skills reached final release gate
+  score 100. Parent-trust initially stopped on M5 wording containing
+  `guarantees lasting happiness`; Codex changed it to non-guarantee wording
+  (`automatically creates lasting happiness`), rerendered/reviewed M5 through
+  the normal orchestrator path, and the 5-lesson recheck returned
+  `TRUST_READY`. Uploaded 5 unlisted videos with 0 failures: M4
+  `U5eAvCvMXgQ`, M5 `xV5cl6hRJTU`, M6 `tMbWOPhJaRc`, M7 `vDQQoh54y5c`, M8
+  `ohJhnUhCuCU`. All five were added to the `Psychology Seminar / Capstone`
+  playlist. Queue is now 760 uploaded / 0 pending / 0 no-MP4 / 760 total;
+  pending release gate is 0/0/0; manifest alignment remains clean: 0 warnings
+  across 577 lessons. No producer/upload process remained after the run. This
+  was not a YouTube upload/channel limit. Current 2026-07-20 CT total is
+  5 uploaded. Dirty risk remains: existing website UX/course/pipeline WIP plus
+  root cwd-drift `slides/` and `style_manifest.json` must not be broad-staged.
+- 2026-07-17 12:02 CT approved 5-cap heartbeat attempted the next safe
+  producer slot through `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm
+  run lesson:foundation-daily`. The runner auto-advanced to Grade 12 and
+  selected Psychology Seminar / Capstone M4 Cross-Cultural Psychology, but
+  Claude Code immediately returned a session-limit stop after reading the
+  handoff. The orchestrator stopped the batch before selecting more modules and
+  the gate-ready uploader found 0 approved pending items. No MP4, approval row,
+  or upload was created; no duplicate producer/upload remained active. Queue
+  remains 755 uploaded / 0 pending / 0 no-MP4 / 755 total; pending release gate
+  remains 0/0/0; manifest alignment remains clean: 0 warnings across
+  577 lessons. This is a Claude Code session/tool blocker, not a YouTube
+  upload/channel limit or parent-trust issue. Smallest next action: after
+  Claude Code session reset, let the next two-hour heartbeat retry Psychology
+  Seminar / Capstone M4 through the normal gated path; do not force approval or
+  upload.
+- 2026-07-17 10:02-11:41 CT approved 5-cap run completed with 5 uploads and
+  advanced from Personal Finance / Applied Economics into Psychology Seminar /
+  Capstone. The run stayed on `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5
+  npm run lesson:foundation-daily`; no duplicate producer/upload was active and
+  no force approval/upload path was used. Personal Finance M11 Housing & Real
+  Estate, M12 Capstone: Personal Financial Plan, and Psychology Seminar /
+  Capstone M1-M3 all produced or rendered, passed independent/source review,
+  reached final release gate score 100, and passed parent-trust as
+  `TRUST_READY`. Uploaded 5 unlisted videos with 0 failures: Personal Finance
+  M11 `M38vvdj7ONQ`, Personal Finance M12 `BpUmXOfh65c`, Psychology M1
+  `6Znwc1QQKZY`, Psychology M2 `dZIZzvQ-jJ0`, Psychology M3 `iWCaFw8DzXw`.
+  The uploader created the `Psychology Seminar / Capstone` playlist and added
+  M1-M3; Personal Finance M11-M12 were added to the existing playlist. Queue is
+  now 755 uploaded / 0 pending / 0 no-MP4 / 755 total; pending release gate is
+  0/0/0; manifest alignment remains clean: 0 warnings across 577 lessons. No
+  producer/upload process remained after the run. This was not a YouTube
+  upload/channel limit. Current 2026-07-17 CT total is now 10 uploaded.
+- 2026-07-17 08:16-09:31 CT approved 5-cap run completed with 5 uploads and
+  cleared Personal Finance / Applied Economics M6-M10. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active and no
+  force approval/upload path was used. M6 Stock Market Basics, M7 Bonds,
+  Mutual Funds & ETFs, M8 Retirement Planning (401k, IRA), M9 Taxes & Filing
+  Basics, and M10 Insurance (Health, Auto, Life) reached final release gate
+  score 100. Parent-trust initially stopped on M7 finance wording
+  (`no guaranteed payout but historically higher long-run returns`); Codex
+  changed the lesson wording to "long-run return potential that is never
+  promised," rerendered/reviewed M7 through the normal orchestrator path, and
+  the 5-lesson recheck returned `TRUST_READY`. Uploaded 5 unlisted videos with
+  0 failures: M6 `HOjrsc7TZvA`, M7 `uNsAjpxQgQY`, M8 `kI2tOmAsF9Y`,
+  M9 `RI_MkyMB5n8`, M10 `PEotSgupR4Q`. All five were added to the `Personal
+  Finance / Applied Economics` playlist. Queue is now 750 uploaded /
+  0 pending / 0 no-MP4 / 750 total; pending release gate is 0/0/0; manifest
+  alignment remains clean: 0 warnings across 577 lessons. No producer/upload
+  process remained after the run. This was not a YouTube upload/channel limit.
+  Current 2026-07-17 CT total is 5 uploaded.
+- 2026-07-16 20:25 CT approved run selected Personal Finance / Applied
+  Economics M6, but its cc worker stalled beyond the configured 1800-second
+  limit during Claude API retries. Central Umi terminated only the stale Claude
+  child at 22:49 CT; the worker/orchestrator chain exited cleanly and logged a
+  Claude Code session-limit stop. No MP4, approval, or upload was created. The
+  gate-ready uploader found nothing approved, and fresh queue evidence remains
+  745 uploaded / 0 pending / 0 no-MP4. Resume M6 only through the next approved
+  heartbeat after session reset; do not force approval/upload.
+- 2026-07-16 14:01-14:34 CT approved 5-cap run completed with 5 uploads and
+  cleared the Personal Finance / Applied Economics retry lane. The run stayed
+  on `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active. M1-M2
+  were accepted as existing ready lessons. M3 completed the missing
+  independent/source review after the prior session-limit blocker and reached
+  final release gate score 100. M4 Credit, Debt & Credit Scores and M5
+  Introduction to Investing produced/rendered/reviewed to final gate score
+  100. Parent-trust initially stopped on M5 investment dollar examples as
+  `payment_claim`; Codex tightened the audit classifier and fixture coverage
+  for educational investment/portfolio dollar examples, fixture regression
+  passed, and the 5-lesson recheck returned `TRUST_READY`. Uploaded 5 unlisted
+  videos with 0 failures: M1 `utCAkk0BScU`, M2 `PFw1L2Xkjzc`,
+  M3 `QaKYOUyQg18`, M4 `Ns_0MWlShW0`, M5 `ngfr9Pzx0GI`. The uploader created
+  the `Personal Finance / Applied Economics` playlist `PLXTmQGow1tFA`; M1
+  needed one transient playlist-add retry and then all five were added. Queue
+  is now 745 uploaded / 0 pending / 0 no-MP4 / 745 total; pending release gate
+  is 0/0/0; manifest alignment remains clean: 0 warnings across 577 lessons.
+  No producer/upload process remained after the run. This was not a YouTube
+  upload/channel limit. Current 2026-07-16 CT total is now 22 uploaded.
+- 2026-07-16 10:01-11:55 CT approved 5-cap run completed with 1 upload and
+  1 retry item. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active. Media
+  Psychology M12 produced/rendered, passed independent/source review, final
+  release gate score 100, parent-trust `TRUST_READY`, approval row, and
+  unlisted YouTube upload with 0 failures. Video ID: `VvFIbebNL8I`; Media
+  Psychology is now 12/12 uploaded. The runner then started Personal Finance /
+  Applied Economics M1 after course-design pass, but Claude Code hit a session
+  limit after writing script/reviewer/learning-check files and before
+  `build_slides.py`/slides/MP4 were completed, so the batch stopped cleanly.
+  Queue is now 740 uploaded / 0 pending / 1 no-MP4 / 741 total; the no-MP4
+  item is `personal-finance-applied-economics-module-1-financial-goal-setting-mindset-v2`.
+  Pending release gate is 0/0/0 because the retry item is no-MP4, not pending;
+  direct check on M1 is needs_revision with audit score 8. Manifest alignment
+  remains clean: 0 warnings across 577 lessons. No producer/upload process
+  remained after the run. This was not a YouTube upload/channel limit. Current
+  2026-07-16 CT total is now 17 uploaded. Smallest next action after Claude
+  Code reset: let the next approved heartbeat finish M1 slides/contact
+  sheet/MP4/independent review, then upload through the gate-ready path.
+- 2026-07-16 08:02-09:17 CT approved 5-cap run completed. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active. The
+  orchestrator auto-advanced to Media Psychology M7-M11. All 5 produced or
+  rendered, passed independent/source review, final release gate score 100,
+  parent-trust `TRUST_READY`, approval rows, and unlisted YouTube upload with
+  0 failures. Video IDs: M7 `ltmtmcvAHE0`, M8 `Hr8bVqQt66M`, M9
+  `y3kCTHNegVU`, M10 `BeKcSBbNiS8`, M11 `98MuKqBIMxM`. Media Psychology is
+  now 11/11 uploaded. Queue is now 739 uploaded / 0 pending / 0 no-MP4 /
+  739 total; pending release gate is 0/0/0; manifest alignment remains clean:
+  0 warnings across 577 lessons. No producer/upload process remained after the
+  run. This was not a YouTube upload/channel limit. Current 2026-07-16 CT
+  total is now 16 uploaded. Non-blocking quality note: M7-M11 reviewers again
+  noted the upstream `source_packet.expert_lens.family` is technology/CS-worded
+  for Media Psychology, but each lesson translated the lens into psychology
+  terms and had no required fixes.
+- 2026-07-16 06:01-06:40 CT approved 5-cap run completed and cleared the
+  Media Psychology batch. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active. Media
+  Psychology M2-M6 rendered or reused clean MP4s, passed source/independent
+  review path sufficiently for final release gate score 100 and parent-trust
+  `TRUST_READY`, then uploaded unlisted with 0 failures. Video IDs: M2
+  `6d7OiO1tEA8`, M3 `TqGKgPVizPQ`, M4 `C-4XLqiBSJk`, M5 `OBD7Y_KfAlk`, M6
+  `X4WEGjwtud4`. Media Psychology is now 6/6 uploaded. Queue is now
+  734 uploaded / 0 pending / 0 no-MP4 / 734 total; pending release gate is
+  0/0/0; manifest alignment remains clean: 0 warnings across 577 lessons. No
+  producer/upload process remained after the run. This was not a YouTube
+  upload/channel limit. Current 2026-07-16 CT total is now 11 uploaded. Quality
+  caveat: M6's independent reviewer flagged a post-upload style-rule issue in
+  the slide bio (`UCSB class of 2028` should be `UC Santa Barbara class of
+  2028` or a placeholder). The final gate and parent-trust allowed upload, but
+  the abbreviation is real policy debt; do not delete/reupload automatically
+  without Alan deciding replacement is worth it.
+- 2026-07-16 04:02-04:17 CT approved 5-cap retry advanced the Media
+  Psychology batch and uploaded 1. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active. Media
+  Psychology M1 rendered MP4/transcript, passed Opus independent/source review
+  despite a non-blocking upstream expert-lens family note, final release gate
+  score 100, parent-trust `TRUST_READY`, approval row, and unlisted upload
+  with 0 failures. Video ID: `W22EkYY10aY`; the uploader also created the
+  `Media Psychology` playlist (`PLNO6BC0qYxbM`) and added M1. M2 rendered MP4
+  but stopped at the Opus independent-review stage because Claude Code hit a
+  session limit; M3-M5 still have pre-render artifacts only. Queue is now
+  729 uploaded / 1 pending / 3 no-MP4 / 733 total; Media Psychology is
+  1 uploaded / 1 pending / 3 no-MP4. Pending release gate is 0 ready /
+  1 needs_revision / 0 blocked: M2 has `pass_with_minor_notes` score 88 and is
+  missing independent second-pass review. Manifest alignment remains clean:
+  0 warnings across 577 lessons. No producer/upload process remained after the
+  run. This was not a YouTube upload/channel limit. Current 2026-07-16 CT total
+  is now 6 uploaded.
+- 2026-07-16 02:03-02:49 CT approved 5-cap run completed with generation
+  progress but no uploads. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily` and did not start a duplicate producer/upload.
+  Digital Media & Society M1-M12 were skipped by resource fetch failures
+  against `open.lib.umn.edu` (403), then the orchestrator generated Media
+  Psychology M1-M5 pre-render artifacts. All five remain `no MP4` because the
+  handoff-stage folders need the orchestrator TTS/MP4 render plus independent
+  pass/source-alignment wrapper files before release gate can reach ready.
+  During M1 the worker fixed a narrow shared theme resolver bug in
+  `slide_kit.py` and `audit_lessons.py`: psychology now resolves before
+  literature so `Media Psychology` no longer gets the literature theme via the
+  word `Media`; sanity check confirmed `Digital Media & Society` still resolves
+  to literature and Counseling still resolves to psychology. Upload path found
+  0 gate-ready pending items, so 0 uploaded / 0 failed. Queue is now
+  728 uploaded / 0 pending / 5 no-MP4 / 733 total; pending release gate is
+  0/0/0; manifest alignment remains clean: 0 warnings across 577 lessons. No
+  producer/upload process remained after the run. This was not a YouTube
+  upload/channel limit. Current 2026-07-16 CT total remains 5 uploaded.
+- 2026-07-16 00:01-01:11 CT approved 5-cap run completed. The orchestrator
+  auto-advanced from Grade 10 to Grade 12 and finished Counseling & Mental
+  Health M8-M12 through the approved `FOUNDATION_MAX_MODULES=5
+  FOUNDATION_UPLOAD_MAX=5 npm run lesson:foundation-daily` path. All 5
+  rendered, passed Opus independent/source review, final release gate score
+  100, parent-trust `TRUST_READY`, approval rows, and unlisted YouTube upload
+  with 0 failures. Video IDs: M8 `lIFINCze3Ow`, M9 `UTVwQ9D0TVo`,
+  M10 `VkUrkaSVI7k`, M11 `K_oLaQITqUo`, M12 `ZxjtObklpsQ`. Counseling &
+  Mental Health is now 12/12 uploaded. Queue is now 728 uploaded /
+  0 pending / 0 no-MP4 / 728 total; pending release gate is 0/0/0; manifest
+  alignment remains clean: 0 warnings across 577 lessons. No producer/upload
+  process remained after the run. This was not a YouTube upload/channel limit.
+  Current 2026-07-16 CT total is 5 uploaded.
+- 2026-07-15 22:01-23:09 CT approved 5-cap run completed and cleared the
+  prior retry item. Counseling & Mental Health M2 regenerated its prior
+  zero-byte/stale TTS segment and rendered cleanly; M4-M7 also produced or
+  rendered, passed Opus independent/source review, final release gate score
+  100, and parent-trust. M7 initially hit a parent-trust hard stop because the
+  crisis-response misconception example used `It will get better`; Codex
+  narrowed the fix to the M7 script/slide example (`Try to stay positive`),
+  regenerated the stale `05_misconception` audio/MP4/transcript, refreshed
+  review SHA bindings, reran gate to score 100, and parent-trust returned
+  `TRUST_READY` for the full 5-lesson batch. Uploaded 5 unlisted videos with
+  0 failures: Counseling M2 `SslhML4fnjc`, M4 `sZCruQt4W_w`, M5
+  `wIOVveWdMiE`, M6 `fk9znClHzHg`, and M7 `1mmfsoQUwe0`. Queue is now
+  723 uploaded / 0 pending / 0 no-MP4 / 723 total; pending release gate is
+  0/0/0; manifest alignment remains clean: 0 warnings across 577 lessons. No
+  producer/upload process remained after the run. This was not a YouTube
+  upload/channel limit. Same-day CT total is now 28 uploaded.
+- 2026-07-15 20:01-21:10 CT approved 5-cap run completed with a partial
+  upload success and one transient TTS retry item. Codex stayed on the
+  approved `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5
+  npm run lesson:foundation-daily` path. Uploaded 4 unlisted videos with
+  0 upload failures: Abnormal Psychology M11 `9_BfBn3cNKk`, Abnormal
+  Psychology M12 `PqCm1i73p8E`, Counseling & Mental Health M1 `0XZU3VvEBqs`,
+  and Counseling & Mental Health M3 `sFKwjhrgWjY`. Abnormal Psychology is now
+  12/12 uploaded. Counseling M2 produced pre-render artifacts, but MP4 render
+  hit an Edge TTS websocket connection timeout while synthesizing section 04;
+  it remains the single `no MP4` retry item and was not uploaded. Queue is now
+  718 uploaded / 0 pending / 1 no-MP4 / 719 total; pending release gate is
+  0/0/0; manifest alignment remains clean: 0 warnings across 577 lessons. No
+  producer/upload process remained after the run. This was not a YouTube
+  upload/channel limit.
+- 2026-07-15 18:29-19:34 CT second 5-cap big run completed through the
+  approved `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5
+  npm run lesson:foundation-daily` path. Abnormal Psychology M6-M10 produced,
+  rendered, passed Opus independent/source review, final release gate score
+  100, parent-trust `TRUST_READY`, approval rows, and unlisted YouTube upload
+  with 0 failures. Video IDs: M6 `mYKIYf5hW4E`, M7 `w-VUjwN3h3A`,
+  M8 `TS2t4rOZ1m4`, M9 `FUtiySPIfv4`, M10 `CFFS4ZAI05k`. Queue is now
+  714 uploaded / 0 pending / 0 no-MP4; pending release gate is 0/0/0;
+  manifest alignment remains clean: 0 warnings across 577 lessons. No
+  producer/upload process remained after the run. Abnormal Psychology is now
+  10/10 uploaded.
+- 2026-07-15 17:12-18:26 CT course-design unblock and 5-cap big run
+  completed. Codex added real 12th modules to all seven blocked 1-credit /
+  11-module Grade 12 candidates: Abnormal Psychology, Counseling & Mental
+  Health, Digital Media & Society, Media Psychology, Personal Finance & Applied
+  Economics, Psychology Seminar Capstone, and Sports Management & Leadership.
+  Direct course-design review now passes for all seven. Then Codex ran the
+  approved `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5
+  npm run lesson:foundation-daily` path end-to-end. Abnormal Psychology M1-M5
+  produced, rendered, passed Opus independent/source review, final release gate
+  score 100, parent-trust `TRUST_READY`, approval rows, and unlisted YouTube
+  upload with 0 failures. Video IDs: M1 `QM0g3oVYCes`, M2 `0VORdiHVJzE`,
+  M3 `DxfgBsKrUZU`, M4 `EcFBRitEddQ`, M5 `yVUfwAMy1PM`. Queue is now
+  709 uploaded / 0 pending / 0 no-MP4; pending release gate is 0/0/0;
+  manifest alignment remains clean: 0 warnings across 577 lessons. No
+  producer/upload process remained after the run.
+- 2026-07-15 16:29 CT first two-hour / 5-cap producer check ran through the
+  approved `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5
+  npm run lesson:foundation-daily` path. Result: 0 produced / 0 uploaded /
+  0 failed. Queue stayed 704 uploaded / 0 pending / 0 no-MP4; pending release
+  gate stayed 0 ready / 0 needs_revision / 0 blocked; manifest alignment stayed
+  clean: 0 warnings across 577 lessons. The blocker is course design, not
+  upload: the next seven grade-12 candidates are 1-credit courses with only
+  11 modules, outside the required 12-16 range. Built-in safe repair does not
+  add/delete modules, so the smallest next action is a bounded course-design
+  repair lane for one course, likely Abnormal Psychology first, before the next
+  producer can create more videos.
+- 2026-07-15 13:00 CT approved foundation run completed the held Corporate
+  Finance M11 repair. The orchestrator cleared stale reviewer/render cache,
+  regenerated MP4/transcript, Opus independent/source review passed, final
+  release gate returned ready, parent-trust returned `TRUST_READY`, and
+  `yt_queue.py upload --gate-ready` uploaded M11 unlisted with 0 failures.
+  Video ID: `O1NNSzZ9ykw`. Current queue evidence is 704 uploaded /
+  0 pending / 0 no-MP4; pending release gate is 0 ready / 0 needs_revision /
+  0 blocked; manifest alignment remains clean: 0 warnings across 577 lessons.
+  No producer/upload process remained after the run. Dirty risk remains:
+  root cwd-drift `slides/` and `style_manifest.json`, Business Law/Corporate
+  Finance course JSONs, parent-trust audit code/fixture changes, and generated
+  T9 media should not be broad-staged.
+- 2026-07-15 08:00 CT approved foundation run produced Corporate Finance M9,
+  M10, and M12, repaired the parent-trust false positive that treated supplier
+  invoice terms as GIIS payment wording, reran fixtures and parent-trust to
+  `TRUST_READY`, wrote approval rows, and uploaded all 3 unlisted through
+  `yt_queue.py upload --gate-ready`. Video IDs: M9 `O8IA0Y4ikAg`, M10
+  `ptUS0Wd_PbA`, M12 `qiNQujccb14`. Corporate Finance M11 was correctly held:
+  the independent reviewer caught a bond-price narration error; the script was
+  fixed to the correct 4% yield price (~$1,162), but M11 still needs a fresh
+  independent/source-alignment review before it can pass release gate. Current
+  queue evidence is 703 uploaded / 1 pending / 0 no-MP4; pending release gate
+  is 0 ready / 1 needs_revision / 0 blocked; manifest alignment remains clean:
+  0 warnings across 577 lessons. Dirty risk remains: root cwd-drift `slides/`
+  and `style_manifest.json`, Business Law/Corporate Finance course JSONs,
+  parent-trust audit code/fixture changes, and generated T9 media should not be
+  broad-staged.
+- 2026-07-15 03:00 CT follow-up repaired the prior cc-limit stop and completed
+  Corporate Finance M4-M8 through the approved foundation path. Parent-trust
+  audit returned `TRUST_READY` for all 5, release gates passed cleanly, and
+  `yt_queue.py upload --gate-ready --max 5` uploaded all 5 unlisted with
+  0 failures. Current queue evidence is 700 uploaded / 0 pending / 0 no-MP4;
+  pending release gate is 0 ready / 0 needs_revision / 0 blocked; manifest
+  alignment remains clean: 0 warnings across 577 lessons. No producer/upload
+  process remained after the run. Dirty risk remains: root cwd-drift `slides/`
+  and `style_manifest.json`, plus Business Law and Corporate Finance course
+  JSON/doc changes, should not be broad-staged.
+- Latest 5 uploaded: Corporate Finance M4-M8. Video IDs: `HbMmR01j-Pw`,
+  `XKue3VHkHiQ`, `vg2EVsTVyRM`, `E7TC9dihtEY`, `hwWv9Hm7wbQ`.
+- Alan asked to push another 10 after the 21:34 CT Business Law top-up. Codex
+  completed a bounded follow-up through the approved foundation path: Business
+  Law M11-M12 and Corporate Finance M1-M3 uploaded unlisted through
+  `yt_queue.py upload --gate-ready`. Corporate Finance M3 first had a wrong
+  path-slide next-module label (`Capital Budgeting` instead of `Risk &
+  Return`); Codex patched the generated slide text, reran MP4/foundation gate,
+  ran Opus independent/source review, and release gate returned ready before
+  upload. Result for this follow-up: 5 uploaded / 0 failed / 0 pending. Current
+  same-day count is 48 uploaded on 2026-07-14 CT. Current queue evidence is
+  695 uploaded / 0 pending / 0 no-MP4; pending release gate is 0 ready /
+  0 needs_revision / 0 blocked; manifest alignment remains clean: 0 warnings
+  across 577 lessons. The run stopped before reaching 10 because Claude Code
+  reported a session limit while starting Corporate Finance M4; M4 has only the
+  packet/brief files and is not renderable yet. This is not a YouTube
+  upload/channel limit. Dirty risk remains: untracked root cwd-drift `slides/`
+  and `style_manifest.json`, plus Business Law and Corporate Finance course
+  JSON repairs, should not be broad-staged.
+- Latest 5 uploaded: Business Law M11-M12 and Corporate Finance M1-M3. Video
+  IDs: `Nl4doU8yYlI`, `XFJ6lu2xerM`, `INq2SmpZWA4`, `uuKW7q_93Ak`,
+  `CFCIXqp_XFg`.
+- Alan asked to move another 10 forward after the 18:00 course-design stop.
+  Codex repaired the bounded course-design blocker for Business Law by adding a
+  12th ethics/compliance module to the course JSON, then reran the approved
+  foundation path with `FOUNDATION_MAX_MODULES=10` and `FOUNDATION_UPLOAD_MAX=10`.
+  The run produced Business Law M1-M10, passed parent-trust as `TRUST_READY`,
+  wrote clean approval rows, and uploaded all 10 unlisted through
+  `yt_queue.py upload --gate-ready`. Result: 10 uploaded / 0 failed /
+  0 still pending. Current same-day count is 43 uploaded on 2026-07-14 CT.
+  Current queue evidence is 690 uploaded / 0 pending / 0 no-MP4, gate-ready
+  dry-run shows 0 approved pending, and manifest alignment remains clean:
+  0 warnings across 577 lessons. Captions, thumbnails, sync, and cleanup remain
+  separate reconciliation/backlog work. Dirty risk: untracked root cwd-drift
+  `slides/` and `style_manifest.json` reappeared and were not deleted in this
+  run; do not stage them or generated T9 media.
+- Latest 10 uploaded: Business Law M1-M10. Video IDs: `ZCs0tthVftw`,
+  `2_ZCjefjN0M`, `PHnOQ_5j4Mo`, `d4-lJEr0N0U`, `WK3A73YSe7o`,
+  `4JWMisZPvXs`, `kGmAa8Y6lOs`, `NRiVtzmCJ-w`, `V-wZIM-Nj1Q`,
+  `RO8ddWfNzAE`.
+- The 2026-07-14 18:00 CT approved foundation run started cleanly through
+  `npm run lesson:foundation-daily`, found no active duplicate producer/upload,
+  and did not upload anything because no gate-ready lesson was produced. Grade
+  10 had no selectable unfinished candidates; grade auto-advance reached
+  grade 12, where the next available courses are blocked by the course-design
+  guard as 11-module / 1-credit courses outside the expected 12-16-module
+  shape. Result: 0 produced / 0 uploaded / 0 failed. Current queue evidence is
+  still 680 uploaded / 0 pending / 0 no-MP4, gate-ready dry-run shows 0
+  approved pending, and manifest alignment remains clean: 0 warnings across
+  577 lessons. Smallest next action is a bounded course-design repair/selection
+  lane before another producer can reach the 40-video target.
+- The 2026-07-14 13:00 CT approved foundation run completed the remaining
+  Statistics for Social Sciences modules M11-M13, passed parent-trust as
+  `TRUST_READY`, wrote clean approval rows, and uploaded all 3 unlisted through
+  `yt_queue.py upload --gate-ready` with video-first settings. Result:
+  3 uploaded / 0 failed / 0 still pending. Current same-day count is 33
+  uploaded on 2026-07-14 CT. Current queue evidence is 680 uploaded /
+  0 pending / 0 no-MP4, gate-ready dry-run shows 0 approved pending, and
+  manifest alignment remains clean: 0 warnings across 577 lessons. Captions,
+  thumbnails, sync, and cleanup remain separate reconciliation/backlog work.
+- Latest 3 uploaded: Statistics for Social Sciences M11-M13. Video IDs:
+  `4RglrcdbF6Q`, `xC7jAs6RDUw`, `0RefO27bw6w`.
+- The 2026-07-14 08:00 CT approved foundation run auto-advanced to Statistics
+  for Social Sciences, produced M1-M10, passed parent-trust as `TRUST_READY`,
+  wrote clean approval rows, and uploaded all 10 unlisted through
+  `yt_queue.py upload --gate-ready` with video-first settings. Result:
+  10 uploaded / 0 failed / 0 still pending. Current same-day count is 30
+  uploaded on 2026-07-14 CT. Current queue evidence is 677 uploaded /
+  0 pending / 0 no-MP4, pending release gate 0 ready / 0 needs_revision /
+  0 blocked, and manifest alignment remains clean: 0 warnings across
+  577 lessons. Captions, thumbnails, sync, and cleanup remain separate
+  reconciliation/backlog work.
+- Latest 10 uploaded: Statistics for Social Sciences M1-M10. Video IDs:
+  `fx3zFkhiC54`, `qvREpxBTwKg`, `mSh2eq5hQh4`, `Co3_n5zKNDU`,
+  `ehsmg29ReEg`, `J3FLexn_d5Q`, `YqLC9W0rVKY`, `Ba3_XkwSVLs`,
+  `Uxzi9JfJvYo`, `wwqK9tva2oI`.
+- Dirty risk handled: root cwd-drift `slides/` and `style_manifest.json`
+  reappeared during the Statistics producer and were removed after confirming
+  no producer/upload process was active. Do not stage generated lesson-video
+  media or T9 artifacts.
+- The 2026-07-14 03:00 CT approved foundation run produced Sociology M4-M13
+  and uploaded all 10 unlisted through the gate-ready queue path. The run first
+  stopped before upload on a parent-trust hard finding in Sociology M7 because
+  the hypothetical example said `cannot afford tuition`; Codex rewrote that to
+  `cannot afford college costs`, regenerated the M7 section 06 TTS/MP4,
+  refreshed the review SHA bindings, reran parent-trust to `TRUST_READY`, wrote
+  clean-pass approval rows, and uploaded via `yt_queue.py upload --gate-ready`
+  with video-first settings. Result: 10 uploaded / 0 failed / 0 still pending.
+  Current queue evidence is 667 uploaded / 0 pending / 0 no-MP4, pending
+  release gate 0 ready / 0 needs_revision / 0 blocked, and manifest alignment
+  remains clean: 0 warnings across 577 lessons. Captions, thumbnails, sync, and
+  cleanup remain separate reconciliation/backlog work.
+- Latest 10 uploaded: Sociology M10-M13 and M4-M9. Video IDs:
+  `Fw-E93Z7YZg`, `0t1gO9ht8Ds`, `Z2PD9TftkUs`, `A3aYNebaOL8`,
+  `oV3gPrwDga4`, `7qt6d6nRPtc`, `UunssyG72lo`, `LCNWiJZDtEI`,
+  `5CtnSWT1iko`, `Gnk3S5Q3mEg`.
+- Alan asked Codex to fix the stopped 10-video batch and continue uploading.
+  The 2026-07-13 late run had produced Organizational Behavior &
+  Communication M2-M8 and Sociology M1-M3, but parent-trust blocked before
+  approval/upload. Codex repaired the hard findings (`always`/guarantee-like
+  wording in OB M2 and `admissions clerk` in OB M5), refreshed stale TTS/MP4
+  caches through the orchestrator path, reran parent-trust to `TRUST_READY`,
+  wrote `approved_ready_to_upload.json`, and uploaded all 10 unlisted through
+  `yt_queue.py upload --gate-ready`; result: 10 uploaded / 0 failed. Current
+  queue evidence is 657 uploaded / 0 pending / 0 no-MP4, pending release gate
+  0 ready / 0 needs_revision / 0 blocked, and manifest alignment remains clean:
+  0 warnings across 577 lessons. The upload used the video-first lane
+  (captions/thumbnail/sync/cleanup deferred).
+- Latest 10 uploaded: Organizational Behavior & Communication M2-M8 and
+  Sociology M1-M3. Video IDs: `T7Wd21neEjo`, `pArSmGnNBAs`,
+  `lEC_zE1v1Ic`, `VFaimFI9Lec`, `d0M_1AI_9CQ`, `kESudedTS5I`,
+  `gyfeGrXAZ1U`, `UlMZp9aICUs`, `_LRMZQYe48Q`, `Mgz_jjTvwSc`.
 - Manifest generation now uses one canonical ordering helper across channel
   sync, local manifest build, and failed-lesson pruning. Courses sort
   alphabetically and modules sort numerically, so routine uploads no longer
@@ -236,30 +655,34 @@ Current operating state:
 - Corporate Finance, Counseling & Mental Health, and Digital Media & Society
   are also future course-design cleanup items for the same 11-module /
   1-credit guard.
-- Repo root cwd-drift artifacts are currently clean after scoped cleanup; root
-  `slides/` / `style_manifest.json` reappeared during the 18:01 CT run and were
-  removed after upload. Do not stage generated lesson-video media or T9
-  artifacts.
+- Repo root cwd-drift artifacts are dirty again after the 2026-07-17 10:02 run:
+  root `slides/` and `style_manifest.json` are untracked. Do not stage generated
+  lesson-video media, T9 artifacts, or these root artifacts into an unrelated
+  commit; clean only in a scoped cleanup window.
 
 Current interpretation:
 
-- The video queue is clean, but that does not mean no production work exists.
-  Future work should be selected from parent trust, course quality, and Alan's
-  explicit production requests rather than volume-chasing.
+- The 2026-07-17 10:02 CT two-hour / 5-cap run cleared Personal Finance /
+  Applied Economics M11-M12 and Psychology Seminar / Capstone M1-M3 through
+  final gate, parent-trust, approval, and unlisted upload.
+- Current queue evidence after that run is 755 uploaded / 0 pending /
+  0 no-MP4 / 755 total; pending release gate is 0/0/0. Manifest alignment is
+  0 warnings across 577 lessons. This was not a YouTube upload/channel limit.
 - Standard captions remain backlog under current policy. Do not promise captions
   on parent-facing pages until they are actually available and QA'd.
 - T9 lesson media is active via the `teaching-videos/` symlink and must not be
   staged or force-added.
-- Next lesson-video action: repair or regenerate Geometry M7 so the release
-  gate returns to ready; then upload only through `yt_queue.py upload
-  --gate-ready`. The English IV old AP-language slug duplicate is archived and
-  is no longer the active upload blocker.
+- Next lesson-video action: wait for the next two-hour heartbeat to select the
+  next safe Grade 12 candidate; continue using only
+  `yt_queue.py upload --gate-ready` after clean release/parent-trust gates.
 
 ## Durable Lesson-Video Rules
 
-- Daily producer slots are 03:00 / 08:00 / 13:00 / 18:00 CT, each capped at 10
+- Lesson-video producer/top-up cadence is every 2 hours, each capped at 5
   modules/uploads.
-- The 20:00 CT lane is dashboard/count/top-up only to 40.
+- As of 2026-07-15 14:57 CT, the Codex automation RRULE and the repo runner
+  default both use this cadence/cap: `FREQ=HOURLY;INTERVAL=2` and
+  `FOUNDATION_MAX_MODULES=5` / `FOUNDATION_UPLOAD_MAX=5`.
 - Same-day count source is local `teaching-videos/**/script.json` YouTube fields
   converted to America/Chicago local date.
 - The public manifest can lag; it is reconciliation evidence, not the capacity
