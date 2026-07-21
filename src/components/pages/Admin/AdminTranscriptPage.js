@@ -33,6 +33,119 @@ function isArchivedGraduationDate(value) {
   return graduationDate <= today;
 }
 
+const PAYMENT_PLANS = [
+  { value: '', label: { en: '— no plan —', zh: '— 无方案 —' } },
+  { value: 'self_paced', label: { en: 'Self-Paced ($49/mo)', zh: '自主 ($49/月)' } },
+  { value: 'guided', label: { en: 'Guided ($149/mo)', zh: 'Guided ($149/月)' } },
+  { value: 'premium', label: { en: 'Premium ($299/mo)', zh: 'Premium ($299/月)' } },
+  { value: 'group', label: { en: 'Group (inquiry)', zh: '团体 (询价)' } },
+];
+
+// Manual-review billing: admin records how far the student is paid through. This
+// is the source of truth for "paid?" in manual sales mode — not Stripe status.
+function PaymentSection({ studentId, isEn }) {
+  const [data, setData] = useState(null); // { paidThroughDate, paymentPlan, paymentNote }
+  const [form, setForm] = useState({ paidThroughDate: '', paymentPlan: '', paymentNote: '' });
+  const [editing, setEditing] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [msg, setMsg] = useState('');
+
+  useEffect(() => {
+    fetch(`${API}/api/students/${studentId}`, { credentials: 'include' })
+      .then((r) => r.json())
+      .then((d) => {
+        const p = {
+          paidThroughDate: d.student?.paidThroughDate || '',
+          paymentPlan: d.student?.paymentPlan || '',
+          paymentNote: d.student?.paymentNote || '',
+        };
+        setData(p);
+        setForm(p);
+      })
+      .catch(() => {});
+  }, [studentId]);
+
+  const today = new Date().toISOString().slice(0, 10);
+  const paidThrough = data?.paidThroughDate || '';
+  const isPaid = paidThrough && paidThrough >= today;
+
+  async function handleSave(e) {
+    e.preventDefault();
+    setMsg('');
+    setSaving(true);
+    try {
+      const r = await fetch(`${API}/api/students/${studentId}/payment`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          paidThroughDate: form.paidThroughDate || '',
+          paymentPlan: form.paymentPlan || '',
+          paymentNote: form.paymentNote || '',
+        }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || 'Failed');
+      const p = { paidThroughDate: d.paidThroughDate || '', paymentPlan: d.paymentPlan || '', paymentNote: d.paymentNote || '' };
+      setData(p);
+      setForm(p);
+      setEditing(false);
+      setMsg(isEn ? '✓ Payment updated.' : '✓ 缴费已更新。');
+    } catch (err) {
+      setMsg(err.message);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <div className="border rounded p-3 bg-white" style={adminCardStyle}>
+      <div className="d-flex justify-content-between align-items-center mb-1">
+        <span className="fw-semibold small">{isEn ? 'Payment (manual review)' : '缴费（人工审核）'}</span>
+        <button className="btn btn-sm btn-outline-secondary" onClick={() => { setEditing((v) => !v); setMsg(''); }}>
+          {editing ? (isEn ? 'Cancel' : '取消') : (isEn ? 'Record payment' : '记一笔缴费')}
+        </button>
+      </div>
+      <p className="small mb-2">
+        {paidThrough
+          ? (isPaid
+              ? <><span className="badge bg-success me-1">{isEn ? 'Paid' : '已缴'}</span>{isEn ? 'through' : '至'} {paidThrough}</>
+              : <><span className="badge bg-danger me-1">{isEn ? 'Overdue' : '逾期'}</span>{isEn ? 'lapsed' : '已过期'} {paidThrough}</>)
+          : <span className="text-warning fw-semibold">{isEn ? 'No payment recorded.' : '尚未记录缴费。'}</span>}
+        {data?.paymentPlan ? <span className="text-muted"> · {PAYMENT_PLANS.find((p) => p.value === data.paymentPlan)?.label[isEn ? 'en' : 'zh'] || data.paymentPlan}</span> : null}
+      </p>
+      {data?.paymentNote ? <p className="small text-muted mb-2" style={{ whiteSpace: 'pre-wrap' }}>{data.paymentNote}</p> : null}
+      {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
+      {editing && (
+        <form onSubmit={handleSave} className="mt-2">
+          <div className="mb-2">
+            <label className="form-label small mb-1">{isEn ? 'Paid through' : '缴费至'}</label>
+            <input type="date" className="form-control form-control-sm" value={form.paidThroughDate}
+              onChange={(e) => setForm((f) => ({ ...f, paidThroughDate: e.target.value }))} />
+            <div className="form-text small">{isEn ? 'Leave blank to clear. Paid = this date is today or later.' : '留空即清除。此日期 ≥ 今天即视为已缴。'}</div>
+          </div>
+          <div className="mb-2">
+            <label className="form-label small mb-1">{isEn ? 'Plan' : '方案'}</label>
+            <select className="form-select form-select-sm" value={form.paymentPlan}
+              onChange={(e) => setForm((f) => ({ ...f, paymentPlan: e.target.value }))}>
+              {PAYMENT_PLANS.map((p) => <option key={p.value} value={p.value}>{p.label[isEn ? 'en' : 'zh']}</option>)}
+            </select>
+          </div>
+          <div className="mb-2">
+            <label className="form-label small mb-1">{isEn ? 'Note (method, amount, invoice #)' : '备注（方式、金额、发票号）'}</label>
+            <input type="text" className="form-control form-control-sm" value={form.paymentNote}
+              onChange={(e) => setForm((f) => ({ ...f, paymentNote: e.target.value }))}
+              placeholder={isEn ? 'e.g. Stripe link paid 7/21, $149' : '例：Stripe link 7/21 已付 $149'} maxLength={500} />
+          </div>
+          <button type="submit" className="btn btn-primary btn-sm" disabled={saving}>
+            {saving ? (isEn ? 'Saving…' : '储存中…') : (isEn ? 'Save' : '储存')}
+          </button>
+        </form>
+      )}
+    </div>
+  );
+}
+
 function LoginSection({ studentId, isEn }) {
   const [loginEmail, setLoginEmail] = useState(null);
   const [isArchived, setIsArchived] = useState(false);
@@ -772,6 +885,7 @@ export default function AdminTranscriptPage({ language }) {
               <div className="d-grid gap-3">
                 <LoginSection studentId={studentId} isEn={isEn} />
                 <ParentEmailSection studentId={studentId} isEn={isEn} />
+                <PaymentSection studentId={studentId} isEn={isEn} />
                 <GraduationSection studentId={studentId} />
               </div>
             </div>

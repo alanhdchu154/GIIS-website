@@ -67,26 +67,66 @@ const SUB_ACTIVE = ['active', 'trialing'];
 const SUB_PAYMENT_ISSUE = ['past_due', 'incomplete'];
 const INACTIVE_DAYS = 7;
 
-// Collapse a student's subscriptions into one operational status.
-function resolveSubscription(subs) {
-  if (!subs || subs.length === 0) return { id: null, state: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null };
+// Monthly-equivalent cents for a manual plan tier (Student.paymentPlan values).
+const MANUAL_PLAN_MRR_CENTS = {
+  self_paced: 4900,
+  guided: 14900,
+  premium: 29900,
+  group: 0,
+};
+
+const NO_PAYMENT = { id: null, state: 'none', source: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null, paidThroughDate: null };
+
+// Collapse a student's Stripe subscriptions into one operational status.
+// `today` is an ISO date string (YYYY-MM-DD); a subscription whose status is
+// still "active" but whose currentPeriodEnd has lapsed (renewal never synced)
+// is treated as a payment issue rather than a false green.
+function resolveSubscription(subs, today) {
+  if (!subs || subs.length === 0) return { ...NO_PAYMENT };
   const pick = (pred) => subs.find(pred);
   const active = pick((s) => SUB_ACTIVE.includes(s.status));
   if (active) {
-    return {
-      state: active.cancelAtPeriodEnd ? 'canceling' : 'active',
-      id: active.id || null,
-      planType: active.planType,
-      mrrCents: PLAN_MRR_CENTS[active.planType] ?? 0,
-      canceling: !!active.cancelAtPeriodEnd,
-      currentPeriodEnd: active.currentPeriodEnd || null,
-    };
+    const periodEnd = dateOnly(active.currentPeriodEnd);
+    const expired = periodEnd && today && periodEnd < today;
+    if (!expired) {
+      return {
+        state: active.cancelAtPeriodEnd ? 'canceling' : 'active',
+        id: active.id || null,
+        source: 'stripe',
+        planType: active.planType,
+        mrrCents: PLAN_MRR_CENTS[active.planType] ?? 0,
+        canceling: !!active.cancelAtPeriodEnd,
+        currentPeriodEnd: active.currentPeriodEnd || null,
+        paidThroughDate: null,
+      };
+    }
+    return { id: active.id || null, state: 'past_due', source: 'stripe', planType: active.planType, mrrCents: 0, canceling: false, currentPeriodEnd: active.currentPeriodEnd || null, paidThroughDate: null };
   }
   const issue = pick((s) => SUB_PAYMENT_ISSUE.includes(s.status));
-  if (issue) return { id: issue.id || null, state: 'past_due', planType: issue.planType, mrrCents: 0, canceling: false, currentPeriodEnd: issue.currentPeriodEnd || null };
+  if (issue) return { id: issue.id || null, state: 'past_due', source: 'stripe', planType: issue.planType, mrrCents: 0, canceling: false, currentPeriodEnd: issue.currentPeriodEnd || null, paidThroughDate: null };
   const churned = pick((s) => ['cancelled', 'canceled', 'refunded'].includes(s.status));
-  if (churned) return { id: churned.id || null, state: 'churned', planType: churned.planType, mrrCents: 0, canceling: false, currentPeriodEnd: churned.currentPeriodEnd || null };
-  return { id: null, state: 'none', planType: null, mrrCents: 0, canceling: false, currentPeriodEnd: null };
+  if (churned) return { id: churned.id || null, state: 'churned', source: 'stripe', planType: churned.planType, mrrCents: 0, canceling: false, currentPeriodEnd: churned.currentPeriodEnd || null, paidThroughDate: null };
+  return { ...NO_PAYMENT };
+}
+
+// Roster payment state. Manual-review billing (admin-set paidThroughDate) is the
+// source of truth when present; otherwise fall back to Stripe subscription state.
+function resolvePayment(student, subs, today) {
+  if (student && student.paidThroughDate) {
+    const through = dateOnly(student.paidThroughDate);
+    const paid = !!(through && today && through >= today);
+    return {
+      state: paid ? 'active' : 'past_due',
+      id: null,
+      source: 'manual',
+      planType: student.paymentPlan || null,
+      mrrCents: paid ? (MANUAL_PLAN_MRR_CENTS[student.paymentPlan] ?? 0) : 0,
+      canceling: false,
+      currentPeriodEnd: null,
+      paidThroughDate: through,
+    };
+  }
+  return resolveSubscription(subs, today);
 }
 
 function dateOnly(d) {
@@ -494,6 +534,8 @@ router.get('/ops-summary', authenticate, requireAdmin, async (req, res) => {
         parentEmail: true,
         graduationDate: true,
         withdrawalDate: true,
+        paidThroughDate: true,
+        paymentPlan: true,
         updatedAt: true,
         account: { select: { email: true } },
         semesters: { select: { courseRows: { select: { courseName: true, credits: true, letterGrade: true, weightedGpa: true, unweightedGpa: true } } } },
@@ -562,7 +604,7 @@ router.get('/ops-summary', authenticate, requireAdmin, async (req, res) => {
     // Subscription: prefer linked rows, fall back to purchaser-email match.
     let subs = (s.subscriptions || []);
     if (subs.length === 0 && s.parentEmail) subs = subsByEmail.get(s.parentEmail.trim().toLowerCase()) || [];
-    const sub = resolveSubscription(subs);
+    const sub = resolvePayment(s, subs, today);
     const paymentIssue = sub.state === 'past_due' || sub.state === 'canceling';
     if (status !== 'withdrawn') {
       const subKey = sub.id ? `sub:${sub.id}` : null;
@@ -597,6 +639,8 @@ router.get('/ops-summary', authenticate, requireAdmin, async (req, res) => {
       // ops signals
       subscriptionState: sub.state,
       subscriptionPlan: sub.planType,
+      paymentSource: sub.source,
+      paidThroughDate: sub.paidThroughDate,
       paymentIssue,
       lastActivityAt: lastActivity ? lastActivity.toISOString() : null,
       daysInactive,
@@ -785,6 +829,9 @@ router.get('/:id', authenticate, requireStudentOrAdminForStudentParam, async (re
   const serialized = serializeStudent(student);
   if (isAdmin) {
     serialized.loginEmail = student.account?.email ?? null;
+    serialized.paidThroughDate = student.paidThroughDate ? dateOnly(student.paidThroughDate) : null;
+    serialized.paymentPlan = student.paymentPlan || '';
+    serialized.paymentNote = student.paymentNote || '';
   }
   res.json({ student: serialized });
 });
@@ -882,6 +929,50 @@ router.delete('/:id', authenticate, requireAdmin, async (req, res) => {
  * Replace entire transcript: semesters + course rows.
  * Body: { semesters: [ { key, sortOrder?, courseRows: [ { courseName, courseType, credits, letterGrade } ] } ] }
  */
+// Manual-review billing: admin records a student's paid-through date, plan, and
+// note. This is the source of truth for "is this student currently paid" in
+// manual sales mode (paid == paidThroughDate set and >= today).
+router.put('/:id/payment', authenticate, requireAdmin, async (req, res) => {
+  const exists = await prisma.student.findUnique({ where: { id: req.params.id }, select: { id: true } });
+  if (!exists) return res.status(404).json({ error: 'Student not found' });
+
+  const data = {};
+
+  if ('paidThroughDate' in req.body) {
+    const raw = req.body.paidThroughDate;
+    if (raw == null || String(raw).trim() === '') {
+      data.paidThroughDate = null; // clear
+    } else {
+      const d = parseDateOnly(raw);
+      if (!d) return res.status(400).json({ error: 'paidThroughDate must be YYYY-MM-DD' });
+      data.paidThroughDate = d;
+    }
+  }
+
+  if ('paymentPlan' in req.body) {
+    const VALID_PLANS = ['self_paced', 'guided', 'premium', 'group', ''];
+    const plan = String(req.body.paymentPlan || '');
+    if (!VALID_PLANS.includes(plan)) return res.status(400).json({ error: 'Invalid paymentPlan' });
+    data.paymentPlan = plan || null;
+  }
+
+  if ('paymentNote' in req.body) {
+    data.paymentNote = String(req.body.paymentNote || '').slice(0, 500);
+  }
+
+  const updated = await prisma.student.update({
+    where: { id: req.params.id },
+    data,
+    select: { id: true, paidThroughDate: true, paymentPlan: true, paymentNote: true },
+  });
+  res.json({
+    id: updated.id,
+    paidThroughDate: dateOnly(updated.paidThroughDate),
+    paymentPlan: updated.paymentPlan || '',
+    paymentNote: updated.paymentNote || '',
+  });
+});
+
 router.put('/:id/transcript', authenticate, requireAdmin, async (req, res) => {
   const studentId = req.params.id;
   const semestersInput = req.body?.semesters;
