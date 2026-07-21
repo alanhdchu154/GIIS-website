@@ -165,6 +165,58 @@ function renderMarkdown(md) {
   });
 }
 
+// Condensed data-entry card for the registrar — the 4-step flow to put a G12
+// transfer student's prior grades into the system. The full policy is below.
+function TransferQuickCard() {
+  const GPA = [
+    ['A / A+', '4.0'], ['A-', '3.7'], ['B+', '3.3'], ['B', '3.0'], ['B-', '2.7'],
+    ['C+', '2.3'], ['C', '2.0'], ['C-', '1.7'], ['D+', '1.3'], ['D', '1.0'], ['F', '0.0'],
+  ];
+  const step = { margin: '0 0 10px', lineHeight: 1.6, color: '#22303f' };
+  const num = { display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 22, height: 22, borderRadius: '50%', background: '#2b3d6d', color: '#fff', fontSize: 12, fontWeight: 800, marginRight: 8, verticalAlign: 'middle' };
+  return (
+    <div style={{ background: '#f4f7fc', border: '1px solid #cfdcef', borderRadius: 10, padding: '22px 26px', maxWidth: 960, marginBottom: 20 }}>
+      <div style={{ fontSize: 13, fontWeight: 850, letterSpacing: 1, textTransform: 'uppercase', color: '#2b3d6d', marginBottom: 4 }}>
+        Quick Entry Card
+      </div>
+      <h3 style={{ margin: '0 0 14px', color: '#1a2d5a', fontSize: 19, fontWeight: 850 }}>
+        Put a transfer student's prior grades into the system
+      </h3>
+      <p style={step}><span style={num}>1</span><strong>Get records first.</strong> Official transcript per prior term. No official record → preliminary estimate only; do not promise credits or a graduation date.</p>
+      <p style={step}><span style={num}>2</span><strong>Evaluate each course</strong> (academic reviewer + principal sign-off): map to a GIIS subject, decide <em>credit&nbsp;+&nbsp;GPA</em> / <em>credit only</em> / <em>conditional</em> / <em>reject</em>, convert grade to the GIIS scale.</p>
+      <p style={step}><span style={num}>3</span><strong>Create the account</strong> — Admin Dashboard → <strong>+ New student</strong>: name, Grade&nbsp;12, <strong>Entry Date</strong> (transfer date), Graduation Date, then set login.</p>
+      <p style={step}><span style={num}>4</span><strong>Enter transfer credit</strong> — open <code style={{ background: '#e6edf7', padding: '1px 5px', borderRadius: 4 }}>/admin/transcript/[student]</code>, add a semester <strong>"Transfer Credit — Prior School"</strong>, one row per accepted course, then Save.</p>
+      <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', marginTop: 8 }}>
+        <div style={{ flex: '1 1 300px' }}>
+          <p style={{ margin: '0 0 6px', fontWeight: 800, color: '#1a2d5a', fontSize: 14 }}>Row entry rule</p>
+          <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13.5, lineHeight: 1.65, color: '#33404f' }}>
+            <li><strong>Credit + GPA:</strong> fill course name, credits, <strong>letter grade</strong>.</li>
+            <li><strong>Credit only</strong> (Pass/Credit, or no reliable scale): fill name + credits, <strong>leave grade blank</strong> — counts toward 24 credits, not GPA.</li>
+          </ul>
+          <p style={{ margin: '12px 0 6px', fontWeight: 800, color: '#8a1c1c', fontSize: 14 }}>Never</p>
+          <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13.5, lineHeight: 1.65, color: '#33404f' }}>
+            <li>Copy the prior school's cumulative GPA — course by course only.</li>
+            <li>Promise a graduation date before records are reviewed.</li>
+          </ul>
+        </div>
+        <div style={{ flex: '0 0 auto' }}>
+          <p style={{ margin: '0 0 6px', fontWeight: 800, color: '#1a2d5a', fontSize: 14 }}>GIIS GPA scale</p>
+          <table style={{ borderCollapse: 'collapse', fontSize: 12.5 }}>
+            <tbody>
+              {GPA.map(([g, v]) => (
+                <tr key={g}>
+                  <td style={{ border: '1px solid #d7deea', padding: '2px 10px', color: '#33404f' }}>{g}</td>
+                  <td style={{ border: '1px solid #d7deea', padding: '2px 10px', textAlign: 'right', fontWeight: 700, color: '#1a2d5a' }}>{v}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function AdminTransferSopPage() {
   const navigate = useNavigate();
   const session = getAdminSession();
@@ -205,7 +257,11 @@ export default function AdminTransferSopPage() {
         title="Transfer Credit & GPA SOP"
         subtitle="Internal operating policy — admin access only. Do not publish the full SOP publicly."
       />
+      <TransferQuickCard />
       <div style={{ background: '#fff', border: '1px solid #e2e7f0', borderRadius: 10, padding: '28px 30px', maxWidth: 960 }}>
+        <div style={{ fontSize: 13, fontWeight: 850, letterSpacing: 1, textTransform: 'uppercase', color: '#7a8294', marginBottom: 14 }}>
+          Full SOP
+        </div>
         {loading && <p style={{ color: '#7a8294' }}>Loading SOP…</p>}
         {err && <p style={{ color: '#b0342d' }}>{err}</p>}
         {!loading && !err && renderMarkdown(markdown)}
