@@ -1,12 +1,24 @@
 # Umi Workload
 
-Last updated: 2026-07-21 16:41 CDT
+Last updated: 2026-07-21 16:53 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
 old slot evidence.
 
 ## Active: Lesson-Video Producer — 42 Active Modules To Full Readiness
+
+2026-07-21 16:53 CT page/production audit found and fixed a public manifest
+lag. Netlify/frontend deploy was fresh, but `/data/lessons-manifest.json` was
+still the 2026-07-08 channel-sync snapshot with 577 visible lessons, so today's
+Media & Society/Public Speaking/Sports Psychology uploads were not visible on
+the public Lesson Library/Learn embeds. Root cause: `sync_channel.py` parsed
+`Course — Module N: Title` but not `Course — Module N — Title`. Parser fixed,
+hidden/unpublished course JSON is now excluded from public manifest rebuilds,
+and the manifest was refreshed from YouTube channel state to 768 visible
+lessons. AP public count remains 0. Verify production after the commit/push
+with `/data/lessons-manifest.json` showing 768 lessons and Media & Society
+M1-M8 IDs.
 
 2026-07-21 16:38 CT course-source cleanup completed. AP courses are hidden
 with `isPublished:false`; duplicate/legacy no-grade courses are hidden rather

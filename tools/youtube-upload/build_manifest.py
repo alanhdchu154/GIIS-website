@@ -34,8 +34,8 @@ def _module_number(module: str) -> int | None:
     return int(m.group(1)) if m else None
 
 def _module_title(module: str) -> str:
-    """Drop the 'Module N:' prefix from the module field."""
-    return re.sub(r"^\s*Module\s+\d+:\s*", "", module, flags=re.IGNORECASE).strip()
+    """Drop the 'Module N:' or 'Module N —' prefix from the module field."""
+    return re.sub(r"^\s*Module\s+\d+\s*(?::|：|[—–]|--)\s*", "", module, flags=re.IGNORECASE).strip()
 
 def _total_duration(folder: Path, sections: list[dict]) -> float | None:
     audio = folder / "audio"

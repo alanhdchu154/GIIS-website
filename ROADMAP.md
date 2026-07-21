@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-21 16:41 CDT
+Last updated: 2026-07-21 16:53 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -32,7 +32,7 @@ Server tests: 43 passed; frontend tests: 16 passed; production build passed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-21 16:41 CDT.
+Last refreshed: 2026-07-21 16:53 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -41,6 +41,20 @@ and older pre-slim history is in
 
 Current operating state:
 
+- 2026-07-21 16:53 CT live page audit found the frontend deploy itself was
+  fresh, but the public lesson manifest was stale: production and local
+  `/data/lessons-manifest.json` both still showed the 2026-07-08
+  channel-sync snapshot with 577 visible lessons and did not include today's
+  Media & Society/Public Speaking/Sports Psychology uploads. Root cause:
+  `sync_channel.py` only parsed `Course — Module N: Title`, while recent
+  uploads use `Course — Module N — Title`, so many uploaded videos were treated
+  as non-lesson extras. Fixed parser support for dash-separated titles, kept
+  hidden/unpublished course JSON out of public manifest, refreshed the manifest
+  from the YouTube channel to 768 visible lessons, and verified AP public count
+  stays 0. New Media & Society M1-M8, Public Speaking M1-M8, and Sports
+  Psychology M6 are present in the manifest. Verified: manifest alignment
+  0 warnings across 768 lessons, video inventory 768 visible / 26 still hidden
+  upload-candidates, parser unit tests pass, and `npm run build` passed.
 - 2026-07-21 16:38 CT course-source cleanup narrowed the real active
   lesson-video backlog. The former 92-module no-grade/AP-looking backlog was
   not all legitimate production work: AP source courses are now hidden with

@@ -4,7 +4,8 @@
 The YouTube channel is the source of truth. This tool:
 
   1. Queries the channel for every video the authenticated account uploaded.
-  2. Parses each title with the pattern `<Course> — Module <N>: <Title>`.
+  2. Parses each title with the pattern `<Course> — Module <N>: <Title>` or
+     `<Course> — Module <N> — <Title>`.
   3. For each (course, module-number) group:
        • exactly 1 video  → canonical, no action
        • >1 video         → DUPLICATE: keep the newest publishedAt, delete the rest
@@ -43,12 +44,14 @@ REPO          = Path(__file__).resolve().parents[2]
 LESSONS_DIR   = REPO / "teaching-videos"
 MANIFEST_PATH = REPO / "public" / "data" / "lessons-manifest.json"
 
-# Title pattern — matches:  "Algebra I — Module 4: Solving One-Step…"
+# Title pattern — matches:
+#   "Algebra I — Module 4: Solving One-Step…"
+#   "Algebra I — Module 4 — Solving One-Step…"
 # Accepts —, –, or -- as the course/module separator; flexible whitespace.
 # Do not treat a single hyphen as a separator because course names such as
 # "English I - Writing" legitimately contain one.
 TITLE_RE = re.compile(
-    r"^\s*(?P<course>.+?)\s*(?:[—–]|--)\s*Module\s+(?P<num>\d+)\s*[:：]\s*(?P<title>.+?)\s*$",
+    r"^\s*(?P<course>.+?)\s*(?:[—–]|--)\s*Module\s+(?P<num>\d+)\s*(?::|：|[—–]|--)\s*(?P<title>.+?)\s*$",
     re.UNICODE,
 )
 
@@ -89,6 +92,22 @@ def parse_title(t: str):
             int(m.group("num")),
             m.group("title").strip())
 
+def load_course_visibility() -> dict[str, bool]:
+    """Return course visibility keyed by slug and display name."""
+    out: dict[str, bool] = {}
+    course_dir = REPO / "server" / "prisma" / "courses"
+    for file in course_dir.glob("**/*.json"):
+        try:
+            course = json.loads(file.read_text())
+        except Exception:
+            continue
+        visible = course.get("isPublished") is not False
+        if course.get("slug"):
+            out[str(course["slug"])] = visible
+        if course.get("name"):
+            out[str(course["name"])] = visible
+    return out
+
 def find_lesson_dir(course: str, module_num: int) -> Path | None:
     """Best-effort match folder by reading every script.json's course+module."""
     for f in LESSONS_DIR.glob("*/script.json"):
@@ -100,6 +119,20 @@ def find_lesson_dir(course: str, module_num: int) -> Path | None:
         if int(m.group(1)) == module_num:
             return f.parent
     return None
+
+def local_lesson_is_public(lesson_dir: Path, visibility: dict[str, bool]) -> bool:
+    """Use the local course JSON policy to keep hidden/AP/deferred courses off the public manifest."""
+    try:
+        doc = json.loads((lesson_dir / "script.json").read_text())
+    except Exception:
+        return False
+    course_slug = doc.get("course_slug")
+    course_name = doc.get("course")
+    if course_slug in visibility:
+        return visibility[course_slug]
+    if course_name in visibility:
+        return visibility[course_name]
+    return True
 
 
 def slugify(value: str) -> str:
@@ -132,6 +165,7 @@ def main():
     apply = args.apply
 
     yt = yt_client()
+    visibility = load_course_visibility()
     print(f"[sync] querying channel uploads…")
     videos = list(list_my_videos(yt))
     print(f"[sync] {len(videos)} video(s) on channel")
@@ -194,12 +228,16 @@ def main():
     # ── Apply: rewrite manifest from canonical ────────────────────────
     manifest_entries: list[dict] = []
     skipped_without_local_folder: list[dict] = []
+    skipped_unpublished_local_course: list[dict] = []
     for (course, num), v in sorted(
         canonical.items(), key=lambda item: (item[0][0].casefold(), item[0][1])
     ):
         lesson_dir = find_lesson_dir(course, num)
         if not lesson_dir:
             skipped_without_local_folder.append(v)
+            continue
+        if not local_lesson_is_public(lesson_dir, visibility):
+            skipped_unpublished_local_course.append(v)
             continue
         entry = {
             "course":         course,
@@ -228,6 +266,10 @@ def main():
     if skipped_without_local_folder:
         print(f"[manifest] skipped {len(skipped_without_local_folder)} channel lesson(s) without a local lesson folder")
         for v in skipped_without_local_folder:
+            print(f"  SKIP   {v['video_id']}  {v['title']}")
+    if skipped_unpublished_local_course:
+        print(f"[manifest] skipped {len(skipped_unpublished_local_course)} unpublished/hidden local course lesson(s)")
+        for v in skipped_unpublished_local_course:
             print(f"  SKIP   {v['video_id']}  {v['title']}")
 
     # ── Apply: reconcile script.json youtube blocks ───────────────────
