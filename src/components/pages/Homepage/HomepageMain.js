@@ -174,9 +174,9 @@ function WeeklyReportPreview({ language }) {
     { label: isEn ? 'Completed' : '已完成', value: isEn ? '18 courses' : '18 门课程' },
   ];
   const courses = [
-    { name: 'AP Computer Science A', progress: '9 / 14', pct: 64, color: '#1565c0' },
+    { name: 'Digital Literacy', progress: '9 / 14', pct: 64, color: '#1565c0' },
     { name: 'Calculus', progress: '11 / 14', pct: 79, color: '#4527a0' },
-    { name: 'AP Microeconomics', progress: '6 / 12', pct: 50, color: '#1b6b3a' },
+    { name: 'Economics Seminar', progress: '6 / 12', pct: 50, color: '#1b6b3a' },
   ];
 
   return (

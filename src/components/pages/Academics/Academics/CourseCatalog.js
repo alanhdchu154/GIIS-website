@@ -34,10 +34,10 @@ const COURSE_DETAILS = {
     ],
   },
   'English III': {
-    desc: 'Advanced analysis of American literature and rhetoric. Students read canonical American texts, write research-backed argumentative essays, and develop the writing skills required for AP and college-level work.',
-    topics: ['American literature and cultural context', 'AP-style argument essays', 'Rhetorical analysis of primary sources', 'Extended research essay (5–8 pages)', 'Revision for clarity, style, and voice'],
+    desc: 'Advanced analysis of American literature and rhetoric. Students read canonical American texts, write research-backed argumentative essays, and develop the writing skills required for college-level work.',
+    topics: ['American literature and cultural context', 'Evidence-based argument essays', 'Rhetorical analysis of primary sources', 'Extended research essay (5-8 pages)', 'Revision for clarity, style, and voice'],
     resources: [
-      { title: 'Khan Academy — AP English Language', url: 'https://www.khanacademy.org/test-prep/ap-english-language' },
+      { title: 'Khan Academy — Reading & Writing', url: 'https://www.khanacademy.org/test-prep/sat/sat-reading-writing-practice' },
       { title: 'Crash Course — US History & Literature', url: 'https://www.youtube.com/c/crashcourse' },
       { title: 'Purdue OWL — Argumentative Essays', url: 'https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html' },
     ],
@@ -163,9 +163,9 @@ const COURSE_DETAILS = {
   },
   'English III — Literature': {
     desc: 'Focuses on American literary traditions from colonial era through contemporary works. Students read canonical American texts alongside contemporary voices, writing argumentative essays about how literature reflects American history and values.',
-    topics: ['American literary movements: Romanticism, Realism, Modernism', 'Canonical authors (Fitzgerald, Steinbeck, Morrison)', 'Primary source and historical context analysis', 'AP-style literary analysis essays', 'Research-backed literary argument'],
+    topics: ['American literary movements: Romanticism, Realism, Modernism', 'Canonical authors (Fitzgerald, Steinbeck, Morrison)', 'Primary source and historical context analysis', 'College-prep literary analysis essays', 'Research-backed literary argument'],
     resources: [
-      { title: 'Khan Academy — AP English Literature', url: 'https://www.khanacademy.org/test-prep/ap-english-literature' },
+      { title: 'Purdue OWL — Literary Analysis', url: 'https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/literary_analysis.html' },
       { title: 'Library of Congress Digital Collections', url: 'https://www.loc.gov/collections/' },
       { title: 'Crash Course Literature', url: 'https://www.youtube.com/playlist?list=PL8dPuuaLjXtOeEc9ME62zTfqc0h6Pe8vb' },
     ],
@@ -199,16 +199,6 @@ const COURSE_DETAILS = {
       { title: 'Desmos Graphing Calculator', url: 'https://www.desmos.com/calculator' },
     ],
   },
-  'AP Statistics exam preparation': {
-    desc: 'AP Statistics exam preparation covering data analysis, probability, sampling distributions, and statistical inference. Students use College Board-aligned resources while final course-record wording remains subject to school review status.',
-    topics: ['Exploring data: graphical displays and summary statistics', 'Designing studies: sampling and experimental design', 'Probability and simulation', 'Sampling distributions and the Central Limit Theorem', 'Statistical inference: confidence intervals and hypothesis tests'],
-    resources: [
-      { title: 'Khan Academy — AP Statistics', url: 'https://www.khanacademy.org/math/ap-statistics' },
-      { title: 'College Board — AP Statistics exam overview', url: 'https://apstudents.collegeboard.org/courses/ap-statistics' },
-      { title: 'StatQuest with Josh Starmer', url: 'https://www.youtube.com/c/joshstarmer' },
-    ],
-  },
-
   // ── Science ───────────────────────────────────────────────────────────────
   'Environmental Science': {
     desc: "Examines Earth's ecosystems, natural resources, and human environmental impact. Covers ecology, biogeochemical cycles, climate science, pollution, and sustainability — an excellent foundation for environmental engineering or biology programs.",
@@ -220,30 +210,21 @@ const COURSE_DETAILS = {
     ],
   },
   'Biology — Advanced': {
-    desc: 'Extends Biology with university-preparatory content in cell biology, molecular genetics, biotechnology, and physiology. Students engage with scientific literature and conduct virtual lab investigations in preparation for AP Biology.',
+    desc: 'Extends Biology with university-preparatory content in cell biology, molecular genetics, biotechnology, and physiology. Students engage with scientific literature and conduct virtual lab investigations for advanced science readiness.',
     topics: ['Cell signaling and membrane transport', 'Gene expression and regulation', 'Biotechnology: PCR, CRISPR, gel electrophoresis', 'Human physiology: organ systems in depth', 'Introduction to reading scientific literature'],
     resources: [
       { title: 'HHMI BioInteractive', url: 'https://www.biointeractive.org/' },
-      { title: 'Khan Academy — AP Biology', url: 'https://www.khanacademy.org/science/ap-biology' },
+      { title: 'Khan Academy — Biology', url: 'https://www.khanacademy.org/science/biology' },
       { title: 'Crash Course Biology', url: 'https://www.youtube.com/playlist?list=PL3EED4C1D684D3ADF' },
     ],
   },
   'Physics — Mechanics': {
-    desc: "A calculus-preparatory course in classical mechanics. Students explore Newton's laws, energy, momentum, rotation, and simple harmonic motion using algebraic and trigonometric models — ideal preparation for AP Physics.",
+    desc: "A calculus-preparatory course in classical mechanics. Students explore Newton's laws, energy, momentum, rotation, and simple harmonic motion using algebraic and trigonometric models for college-prep physics readiness.",
     topics: ['Projectile motion and vectors', "Newton's Laws in multiple dimensions", 'Work, energy, and conservation laws', 'Momentum and impulse', 'Rotational motion and torque'],
     resources: [
-      { title: 'Khan Academy — AP Physics 1 exam prep', url: 'https://www.khanacademy.org/science/ap-physics-1' },
+      { title: 'Khan Academy — Physics', url: 'https://www.khanacademy.org/science/physics' },
       { title: 'Crash Course Physics', url: 'https://www.youtube.com/playlist?list=PL8dPuuaLjXtN0ge7yDk_UA0ldZJdhwkoV' },
       { title: 'The Physics Classroom', url: 'https://www.physicsclassroom.com/' },
-    ],
-  },
-  'AP Biology exam preparation': {
-    desc: 'College Board-aligned AP Biology exam preparation covering biology topics from biochemistry to ecology. Students use AP-style scientific reasoning, virtual lab work, and free-response practice while school review processes remain pending.',
-    topics: ['Biochemistry and macromolecules', 'Cell structure, membrane transport, and signaling', 'Cellular energetics: photosynthesis and respiration', 'Heredity, genetics, and gene expression', 'Ecology, evolution, and natural selection'],
-    resources: [
-      { title: 'Khan Academy — AP Biology', url: 'https://www.khanacademy.org/science/ap-biology' },
-      { title: 'Bozeman Science — AP Biology', url: 'https://www.youtube.com/c/bozeman_science' },
-      { title: 'College Board — AP Biology', url: 'https://apstudents.collegeboard.org/courses/ap-biology' },
     ],
   },
 
@@ -302,25 +283,6 @@ const COURSE_DETAILS = {
       { title: 'TED-Ed — Social Science', url: 'https://www.youtube.com/c/TEDEducation' },
     ],
   },
-  'AP Human Geography exam preparation': {
-    desc: 'College Board-aligned AP Human Geography exam preparation covering population, migration, cultural patterns, political organization, agriculture, urban geography, and economic development.',
-    topics: ['Geographic skills and spatial analysis', 'Population and migration patterns', 'Cultural patterns and processes', 'Political geography and geopolitics', 'Urban land use and economic development'],
-    resources: [
-      { title: 'Khan Academy — AP Human Geography', url: 'https://www.khanacademy.org/test-prep/ap-human-geography' },
-      { title: 'College Board — AP Human Geography', url: 'https://apstudents.collegeboard.org/courses/ap-human-geography' },
-      { title: 'Crash Course — Geography', url: 'https://www.youtube.com/playlist?list=PL8dPuuaLjXtO85Sl24rSiClEnbo6bhz2e' },
-    ],
-  },
-  'AP Psychology exam preparation': {
-    desc: 'College Board-aligned AP Psychology exam preparation covering history and approaches, research methods, biological bases of behavior, cognition, development, personality, social psychology, and psychological disorders.',
-    topics: ['History of psychology and major theoretical approaches', 'Research methods and ethical considerations', 'Biological bases of behavior: brain and nervous system', 'Cognition: memory, learning, language, and thinking', 'Social psychology, personality, and psychological disorders'],
-    resources: [
-      { title: 'Khan Academy — AP Psychology', url: 'https://www.khanacademy.org/test-prep/ap-psychology' },
-      { title: 'Crash Course — Psychology', url: 'https://www.youtube.com/playlist?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6' },
-      { title: 'College Board — AP Psychology', url: 'https://apstudents.collegeboard.org/courses/ap-psychology' },
-    ],
-  },
-
   // ── Health & PE ───────────────────────────────────────────────────────────
   'Physical Education': {
     desc: 'Introduces the principles of physical fitness, movement, and lifetime wellness. In the online format, students track personal fitness goals, design workout plans, and reflect on physical activity through a structured fitness journal.',
@@ -726,8 +688,8 @@ const DEPARTMENTS = [
     required: { en: '4 credits required', zh: '必修 4 学分' },
     color: '#1a5276',
     note: {
-      en: 'Algebra I and Geometry are required in Grade 9. Students progress through Pre-Calculus in Grade 10, then choose advanced tracks such as Statistics, Trigonometry, Calculus, or AP exam preparation in Grades 11–12.',
-      zh: '9 年级必修代数 I 与几何，10 年级进入预微积分，11–12 年级可选进阶路径（统计、三角、微积分或 AP 考试准备）。',
+      en: 'Algebra I and Geometry are required in Grade 9. Students progress through Pre-Calculus in Grade 10, then choose advanced tracks such as Statistics, Trigonometry, and Calculus in Grades 11-12.',
+      zh: '9 年级必修代数 I 与几何，10 年级进入预微积分，11-12 年级可选进阶路径（统计、三角、微积分）。',
     },
     courses: [
       { name: 'Algebra I',    type: 'Core', credits: '1.0', grade: '9',     term: 'Fall' },
@@ -737,7 +699,6 @@ const DEPARTMENTS = [
       { name: 'Statistics',   type: 'Core', credits: '1.0', grade: '11',    term: 'Fall' },
       { name: 'Trigonometry', type: 'Core', credits: '1.0', grade: '11',    term: 'Spring' },
       { name: 'Calculus',     type: 'Core', credits: '1.0', grade: '12',    term: 'Fall' },
-      { name: 'AP Statistics exam preparation', type: 'AP',  credits: '1.0', grade: '11–12', term: 'Fall/Spring' },
     ],
   },
   {
@@ -746,8 +707,8 @@ const DEPARTMENTS = [
     required: { en: '3 credits required', zh: '必修 3 学分' },
     color: '#1e8449',
     note: {
-      en: 'Biology is required in Grade 9. Students complete Chemistry and Physics in Grade 10, with advanced science and AP exam-preparation options available in Grades 11–12.',
-      zh: '9 年级必修生物，10 年级修化学与物理，11–12 年级可选进阶科学与 AP 考试准备课程。',
+      en: 'Biology is required in Grade 9. Students complete Chemistry and Physics in Grade 10, with advanced science options available in Grades 11-12.',
+      zh: '9 年级必修生物，10 年级修化学与物理，11-12 年级可选进阶科学课程。',
     },
     courses: [
       { name: 'Biology',              type: 'Core', credits: '1.0', grade: '9',     term: 'Fall' },
@@ -756,7 +717,6 @@ const DEPARTMENTS = [
       { name: 'Physics Fundamentals', type: 'Core', credits: '1.0', grade: '10',    term: 'Spring' },
       { name: 'Biology — Advanced',   type: 'Core', credits: '1.0', grade: '11',    term: 'Fall' },
       { name: 'Physics — Mechanics',  type: 'Core', credits: '1.0', grade: '11',    term: 'Spring' },
-      { name: 'AP Biology exam preparation', type: 'AP',   credits: '1.0', grade: '11–12', term: 'Fall/Spring' },
     ],
   },
   {
@@ -765,8 +725,8 @@ const DEPARTMENTS = [
     required: { en: '3 credits required', zh: '必修 3 学分' },
     color: '#7a3b3b',
     note: {
-      en: 'Covers U.S. and world history, geography, government, and economics. Advanced students may choose AP exam-preparation coursework where the course record and current review status are clearly disclosed.',
-      zh: '涵盖美国与世界历史、地理、政府与经济学。进阶学生可选择 AP 考试准备课程，但课程记录与当前授权状态必须清楚说明。',
+      en: 'Covers U.S. and world history, geography, government, economics, and senior social-science coursework with clear transcript-ready course records.',
+      zh: '涵盖美国与世界历史、地理、政府、经济学与高年级社会科学课程，并保持清晰的成绩单课程记录。',
     },
     courses: [
       { name: 'World History',      type: 'Core', credits: '0.5', grade: '9',     term: 'Fall' },
@@ -777,8 +737,6 @@ const DEPARTMENTS = [
       { name: 'Economics',          type: 'Core', credits: '1.0', grade: '11',    term: 'Fall/Spring' },
       { name: 'Economics Seminar',  type: 'Core', credits: '1.0', grade: '12',    term: 'Fall' },
       { name: 'Sociology',          type: 'Core', credits: '1.0', grade: '12',    term: 'Spring' },
-      { name: 'AP Human Geography exam preparation', type: 'AP',   credits: '1.0', grade: '11–12', term: 'Spring' },
-      { name: 'AP Psychology exam preparation',      type: 'AP',   credits: '1.0', grade: '11',    term: 'Fall' },
     ],
   },
   {
@@ -831,15 +789,14 @@ const DEPARTMENTS = [
     required: { en: 'Elective credits', zh: '选修学分' },
     color: '#5b2c6f',
     note: {
-      en: 'Psychology is offered as an elective track from Grade 9, with AP Psychology exam preparation available in Grade 11. Students can build a full concentration through cognitive, social, and applied psychology courses.',
-      zh: '心理学从 9 年级开始提供选修，11 年级可选 AP 心理学。学生可通过认知、社会与应用心理学课程建立完整的学习方向。',
+      en: 'Psychology is offered as an elective track from Grade 9. Students can build a full concentration through cognitive, social, research, and applied psychology courses.',
+      zh: '心理学从 9 年级开始提供选修。学生可通过认知、社会、研究与应用心理学课程建立完整的学习方向。',
     },
     courses: [
       { name: 'Introduction to Psychology',        type: 'Elective', credits: '0.5', grade: '9',    term: 'Fall' },
       { name: 'Human Development',                 type: 'Elective', credits: '0.5', grade: '9',    term: 'Spring' },
       { name: 'Psychology Foundations',            type: 'Elective', credits: '0.5', grade: '10',   term: 'Fall' },
       { name: 'Social Psychology',                 type: 'Elective', credits: '0.5', grade: '10',   term: 'Spring' },
-      { name: 'AP Psychology exam preparation',    type: 'AP',       credits: '1.0', grade: '11',   term: 'Fall' },
       { name: 'Cognitive Psychology',              type: 'Elective', credits: '0.5', grade: '11',   term: 'Spring' },
       { name: 'Experimental Psychology',           type: 'Elective', credits: '0.5', grade: '11',   term: 'Spring' },
       { name: 'Psychology Seminar / Capstone',     type: 'Core',     credits: '1.0', grade: '12',   term: 'Fall' },
@@ -876,7 +833,6 @@ const DEPARTMENTS = [
 
 const TYPE_BADGE = {
   Core:    { bg: '#2b3d6d', label: { en: 'Core',    zh: '必修' } },
-  AP:      { bg: '#8b0000', label: { en: 'AP Prep',  zh: 'AP 准备'  } },
   Elective:{ bg: '#5a5a5a', label: { en: 'Elective', zh: '选修' } },
 };
 
@@ -891,11 +847,6 @@ function RequirementBar({ language }) {
         {isEn
           ? 'GIIS follows the Florida 24-credit graduation framework used by Florida-registered private high schools, with diploma and transcript records organized for admissions review.'
           : 'GIIS 遵循 Florida 注册私立高中使用的 24 学分毕业框架，并以适合大学申请审核的方式整理文凭与成绩单记录。'}
-      </p>
-      <p style={{ fontSize: '12px', color: '#7a3b3b', margin: '-6px 0 16px', lineHeight: 1.6 }}>
-        {isEn
-          ? 'AP-labeled coursework is presented as AP exam preparation while school review and school-code processes are pending; final transcript wording follows school policy.'
-          : 'AP 相关课程目前以 AP 考试准备方式呈现；课程授权与 school-code 流程完成前，最终成绩单用语以学校审核政策为准。'}
       </p>
       <div style={{ display: 'flex', height: '12px', borderRadius: '6px', overflow: 'hidden', marginBottom: '12px' }}>
         {GRAD_REQUIREMENTS.map((r) => (
@@ -1082,7 +1033,6 @@ export default function CourseCatalog({ language }) {
             <option value="all">{isEn ? 'All types' : '全部类型'}</option>
             <option value="Core">{isEn ? 'Core' : '必修'}</option>
             <option value="Elective">{isEn ? 'Elective' : '选修'}</option>
-            <option value="AP">{isEn ? 'AP prep' : 'AP 准备'}</option>
           </select>
           <select
             value={gradeFilter}
@@ -1091,7 +1041,7 @@ export default function CourseCatalog({ language }) {
             style={{ border: '1px solid #dfe6f3', borderRadius: 8, padding: '10px 12px', fontSize: 13, background: '#fff' }}
           >
             <option value="all">{isEn ? 'All grades' : '全部年级'}</option>
-            {['9','10','11','12','11–12'].map((grade) => (
+            {['9','10','11','12'].map((grade) => (
               <option key={grade} value={grade}>{isEn ? `Grade ${grade}` : `${grade} 年级`}</option>
             ))}
           </select>

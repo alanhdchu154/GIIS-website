@@ -1,10 +1,98 @@
 # Umi Workload
 
-Last updated: 2026-07-20 13:24 CDT
+Last updated: 2026-07-21 16:41 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
 old slot evidence.
+
+## Active: Lesson-Video Producer — 42 Active Modules To Full Readiness
+
+2026-07-21 16:38 CT course-source cleanup completed. AP courses are hidden
+with `isPublished:false`; duplicate/legacy no-grade courses are hidden rather
+than hard-deleted because production DB rows still exist; transitional
+English/elective variants are hidden until a real pathway need is confirmed.
+Public Academics/Homepage AP course framing was removed. The old 92-module
+no-grade/AP-looking bucket should not be treated as active video production
+work.
+
+Surgical DB metadata sync was applied for the same 18-course set and verified
+with a targeted 0-change dry-run. It updated only `isPublished`/`gradeLevel`;
+it did not touch enrollments, progress, grades, modules, exams, or quiz
+questions.
+
+Current active published backlog:
+
+- Grade 11 Biology Advanced: 14 modules.
+- Grade 11 Physics - Mechanics: 14 modules.
+- Grade 12 Digital Media & Society: 12 modules.
+- Grade 12 English IV - Writing & Communication: modules 6 and 13.
+
+Next action: run the normal approved foundation producer in 5-cap batches,
+starting with Grade 11 Biology Advanced / Physics - Mechanics. After Grade 11
+is clear, run Grade 12 Digital Media & Society and the two English IV modules.
+Do not produce AP videos unless Alan explicitly reopens AP policy. Do not
+hard-delete hidden legacy course JSON until there is a DB-safe cleanup plan.
+Detailed plan: `docs/lesson-video-readiness-plan.md`.
+
+Verified now: targeted DB metadata dry-run 0 remaining changes;
+`node server/scripts/audit-course-question-integrity.js` 0 issues; `npm run
+audit:lesson-manifest -- --quiet` 0 warnings; queue status 793 uploaded /
+0 pending / 0 no-MP4; Grade 11/12 dry-runs select only the 42 active modules;
+`npm run build` passed.
+
+## Previous: Lesson-Video Producer — Next Two-Hour Safe Top-Up
+
+2026-07-21 14:01-16:28 CT heartbeat completed the approved primary 5-cap pass
+and one optional second 5-cap top-up after fresh re-checks stayed clean. The
+runner used only `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+lesson:foundation-daily`; uploads stayed on `yt_queue.py upload --gate-ready`.
+It produced, final-gated, parent-trust-audited, and uploaded 8 Media & Society
+videos with 0 failures: M1 `tzc8wGHDiAw`, M2 `03Kp7uXMrgQ`, M3
+`gqs3sDyNAoI`, M4 `FPCXzeRjI0M`, M5 `b5u3nc8Lfog`, M6 `CswHKcz2mvY`, M7
+`v5Lgd-vp9rs`, and M8 `6MPxhoslAAg`.
+
+Post-run evidence: no producer/upload process remains; queue is 793 uploaded /
+0 pending / 0 no-MP4; pending release gate is 0/0/0; manifest alignment is
+clean with 0 warnings across 577 lessons. Today local CT total is 17 uploaded
+videos. No true YouTube upload/channel limit appeared.
+
+Next action: at the next two-hour heartbeat, refresh the usual small evidence
+set and run the same primary 5-cap path only if safe candidates exist. Do not
+run a third pass from this heartbeat; total completed here was 8/10 because
+only three safe candidates remained after the first five.
+
+2026-07-21 10:37 CT recovery/update: the apparent "no candidates" state was a
+selector/gate false negative, not an exhausted curriculum. Codex fixed the
+pipeline root causes and ran only the approved video-first path:
+`FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+lesson:foundation-daily`.
+
+- root-cause fixes now in the dirty worktree: `open.lib.umn.edu` 403 fetch
+  checks are retried instead of permanently quarantining candidates; existing
+  lesson artifacts can be rendered/reviewed/released through the orchestrator;
+  render/review cache invalidates on `build_slides.py` / `style_manifest.json`
+  changes; Public Speaking now maps to the literature theme in both audit and
+  slide generation; the independent reviewer wrapper now enforces timeout while
+  waiting for quiet streaming output.
+- uploaded today in this recovery: 9 unlisted videos / 0 upload failures.
+  Public Speaking M1 `OtbHkuYR3uo`, M2 `vkv-S4FXsZw`, M3 `KhDkoMRS-dQ`, M4
+  `PcKFGSErzKE`, M5 `POpTobbh3aY`, M6 `tyGv3rvLWxM`, M7 `8cpRKxVMN78`, M8
+  `Tn5VjgSOiHI`; Sports Psychology M6 `CpKQqO2GOds`.
+- queue after recovery: 785 uploaded / 0 pending / 0 no-MP4 / 785 total;
+  pending release gate: 0 ready / 0 needs_revision / 0 blocked; manifest
+  alignment: 0 warnings across 577 lessons; no producer/upload/reviewer
+  process remained active; no true YouTube upload/channel limit appeared.
+- current candidate state: Grade 10 now has 0 selectable candidates. Fresh
+  dry-run auto-advances to Grade 11 and selects Media & Society M1-M5 as the
+  next safe 5-cap batch.
+- next action: next two-hour heartbeat should run the primary 5-cap pass on
+  Media & Society M1-M5, then optionally one second 5-cap top-up only if the
+  first pass exits cleanly and fresh gates still show safe work; do not force
+  unsafe work or bypass approval/upload gates.
+- dirty risk: pipeline code/docs are modified; unrelated transfer-credit SOP
+  files remain untracked; root `slides/` and `style_manifest.json` are
+  untracked cwd-drift. Do not broad-stage.
 
 ## cc Review Findings: 2026-07-20 Uncommitted Diff (needs Codex/Alan action)
 

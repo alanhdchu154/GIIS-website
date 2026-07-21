@@ -8,21 +8,21 @@ import AcademicsIntroduction2 from './Academics/Academicsintroduction2.js';
 import CourseCatalog from './Academics/CourseCatalog.js';
 
 const PATHWAYS = [
-  { title: 'CS & Engineering',      titleZh: '计算机科学',       color: '#1565C0', emoji: '💻', to: '/pathways/cs',             ap: 1 },
-  { title: 'Engineering Science',   titleZh: '工程科学',         color: '#B71C1C', emoji: '⚙️', to: '/pathways/engineering',    ap: 1 },
-  { title: 'Math & Data Science',   titleZh: '数学与数据科学',   color: '#4527A0', emoji: '📐', to: '/pathways/math',           ap: 2 },
-  { title: 'Business & Marketing',  titleZh: '商业与市场营销',   color: '#C84B0A', emoji: '📊', to: '/pathways/business',       ap: 1 },
-  { title: 'Economics & Finance',   titleZh: '经济与金融',       color: '#1B6B3A', emoji: '📈', to: '/pathways/economics',     ap: 2 },
-  { title: 'Psychology',            titleZh: '心理学',           color: '#5b2c6f', emoji: '🧠', to: '/pathways/psychology',    ap: 1 },
-  { title: 'Communications',        titleZh: '传播与媒体',       color: '#E65100', emoji: '📡', to: '/pathways/communications', ap: 1 },
-  { title: 'Arts & Design',         titleZh: '艺术与设计',       color: '#6A1B9A', emoji: '🎨', to: '/pathways/arts',           ap: 1 },
+  { title: 'CS & Engineering',      titleZh: '计算机科学',       color: '#1565C0', emoji: '💻', to: '/pathways/cs',             focus: 'Portfolio + coding labs', focusZh: '作品集 + 编程实验' },
+  { title: 'Engineering Science',   titleZh: '工程科学',         color: '#B71C1C', emoji: '⚙️', to: '/pathways/engineering',    focus: 'Applied science sequence', focusZh: '应用科学序列' },
+  { title: 'Math & Data Science',   titleZh: '数学与数据科学',   color: '#4527A0', emoji: '📐', to: '/pathways/math',           focus: 'Calculus + statistics', focusZh: '微积分 + 统计' },
+  { title: 'Business & Marketing',  titleZh: '商业与市场营销',   color: '#C84B0A', emoji: '📊', to: '/pathways/business',       focus: 'Market research projects', focusZh: '市场研究项目' },
+  { title: 'Economics & Finance',   titleZh: '经济与金融',       color: '#1B6B3A', emoji: '📈', to: '/pathways/economics',     focus: 'Economics seminar', focusZh: '经济学研讨课' },
+  { title: 'Psychology',            titleZh: '心理学',           color: '#5b2c6f', emoji: '🧠', to: '/pathways/psychology',    focus: 'Research + capstone', focusZh: '研究 + 毕业项目' },
+  { title: 'Communications',        titleZh: '传播与媒体',       color: '#E65100', emoji: '📡', to: '/pathways/communications', focus: 'Digital media evidence', focusZh: '数字媒体成果' },
+  { title: 'Arts & Design',         titleZh: '艺术与设计',       color: '#6A1B9A', emoji: '🎨', to: '/pathways/arts',           focus: 'Studio portfolio', focusZh: '艺术作品集' },
 ];
 
-const AP_COURSES = [
-  { code: 'AP Statistics exam preparation',      icon: '∑', desc: { en: 'Data analysis & inference', zh: '数据分析与统计推论' } },
-  { code: 'AP Biology exam preparation',         icon: '🧬', desc: { en: 'College-level life sciences', zh: '大学程度生命科学' } },
-  { code: 'AP Psychology exam preparation',      icon: '🧠', desc: { en: 'Behavior & mental processes', zh: '行为与心理历程' } },
-  { code: 'AP Human Geography exam preparation', icon: '🌏', desc: { en: 'Patterns of human society', zh: '人文地理与全球视野' } },
+const ADVANCED_COURSES = [
+  { code: 'Statistics',              icon: '∑', desc: { en: 'Data analysis, inference, and research literacy', zh: '数据分析、统计推论与研究素养' } },
+  { code: 'Biology - Advanced',      icon: '🧬', desc: { en: 'Upper-level life science for science-track students', zh: '面向科学方向学生的高阶生命科学' } },
+  { code: 'Psychology Seminar / Capstone', icon: '🧠', desc: { en: 'Research writing and senior psychology evidence', zh: '研究写作与高年级心理学成果' } },
+  { code: 'Digital Media & Society', icon: '📡', desc: { en: 'Media literacy, communication, and digital-culture analysis', zh: '媒体素养、传播与数字文化分析' } },
 ];
 
 function AcademicsMain({ language, toggleLanguage }) {
@@ -131,7 +131,7 @@ function AcademicsMain({ language, toggleLanguage }) {
                     {isEn ? p.title : p.titleZh}
                   </p>
                   <p style={{ margin: 0, fontSize: '10px', color: '#999', fontWeight: 500 }}>
-                    {p.ap} {isEn ? `Exam Prep Option${p.ap > 1 ? 's' : ''}` : `个考试准备选项`}
+                    {isEn ? p.focus : p.focusZh}
                   </p>
                 </div>
               </Link>
@@ -140,34 +140,34 @@ function AcademicsMain({ language, toggleLanguage }) {
         </div>
       </div>
 
-      {/* ── Exam Prep Options ─────────────────────────────────────────── */}
+      {/* ── Advanced Coursework ───────────────────────────────────────── */}
       <div style={{ background: '#2b3d6d', padding: '72px 0', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10%' }}>
           <p style={{ fontSize: '12px', fontWeight: 800, color: '#d5a836', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 10px' }}>
-            {isEn ? 'Exam Prep Inside Pathways' : '路径内的考试准备'}
+            {isEn ? 'Advanced Coursework Inside Pathways' : '路径内的进阶课程'}
           </p>
           <h2 style={{ fontSize: 'clamp(32px, 5vw, 56px)', fontWeight: 800, color: '#fff', lineHeight: 1.04, margin: '0 0 12px' }}>
-            {isEn ? 'AP exam preparation is an option, not the whole pathway.' : 'AP 考试准备是选项，不是整条路径。'}
+            {isEn ? 'A pathway is built around evidence, not a course label.' : '学习路径看重成果证据，而不只是课程名称。'}
           </h2>
           <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.72)', maxWidth: '700px', lineHeight: 1.75, margin: '0 0 34px' }}>
             {isEn
-              ? 'Students usually choose a pathway first. Exam-preparation courses can then support specific goals while school review and school-code processes remain described conservatively.'
-              : '学生通常先确定学习路径，再按目标选择考试准备课程。在授权与 school-code 流程完成前，公开资料保持保守表述。'}
+              ? 'Students choose a pathway first, then build transcript-ready coursework, visible assignments, quizzes, and portfolio evidence that families can inspect throughout the year.'
+              : '学生先确定学习路径，再通过可进入成绩单的课程、可查看作业、测验与作品集成果，让家长全年都能看见学习进展。'}
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
-            {AP_COURSES.map((ap) => (
-              <div key={ap.code} style={{
+            {ADVANCED_COURSES.map((course) => (
+              <div key={course.code} style={{
                 background: 'rgba(255,255,255,0.08)',
                 border: '1px solid rgba(255,255,255,0.15)',
                 borderRadius: '8px',
                 padding: '24px 22px',
                 borderTop: '4px solid rgba(213,168,54,1)',
               }}>
-                <div style={{ fontSize: '30px', marginBottom: '12px' }}>{ap.icon}</div>
-                <h4 style={{ fontSize: '17px', fontWeight: 750, color: '#fff', margin: '0 0 8px', lineHeight: 1.3 }}>{ap.code}</h4>
+                <div style={{ fontSize: '30px', marginBottom: '12px' }}>{course.icon}</div>
+                <h4 style={{ fontSize: '17px', fontWeight: 750, color: '#fff', margin: '0 0 8px', lineHeight: 1.3 }}>{course.code}</h4>
                 <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5 }}>
-                  {ap.desc[isEn ? 'en' : 'zh']}
+                  {course.desc[isEn ? 'en' : 'zh']}
                 </p>
               </div>
             ))}
@@ -175,8 +175,8 @@ function AcademicsMain({ language, toggleLanguage }) {
 
           <p style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.48)', margin: '28px 0 0', lineHeight: 1.65 }}>
             {isEn
-              ? 'AP exams are administered by the College Board each May. GIIS uses College Board-aligned resources for preparation and keeps final transcript wording subject to approved school policy.'
-              : 'AP 考试由 College Board 每年五月举办。GIIS 使用对齐 College Board 的资源协助备考，最终成绩单用语以学校审核政策为准。'}
+              ? 'Course placement and transcript wording are reviewed by the school before a student starts the pathway, especially for transfer students or advanced learners.'
+              : '课程安排与成绩单用语会在学生开始路径前由学校审核，尤其适用于转学生或进阶学习者。'}
           </p>
         </div>
       </div>

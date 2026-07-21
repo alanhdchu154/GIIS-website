@@ -6,7 +6,7 @@
   "department": "Elective",
   "type": "Elective",
   "description": "A practical course developing the habits, strategies, and mindset needed for academic success, including time management, note-taking, memory techniques, test preparation, and building a growth mindset.",
-  "isPublished": true,
+  "isPublished": false,
   "modules": [
     {
       "order": 1,
@@ -1082,5 +1082,5 @@
       "points": 1
     }
   ],
-  "gradeLevel": null
+  "gradeLevel": 9
 }

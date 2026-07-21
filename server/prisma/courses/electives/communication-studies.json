@@ -6,7 +6,7 @@
   "department": "English",
   "type": "Elective",
   "description": "An elective course exploring the theory and practice of human communication across interpersonal, group, organizational, and mass media contexts.",
-  "isPublished": true,
+  "isPublished": false,
   "modules": [
     {
       "order": 1,
@@ -1087,5 +1087,5 @@
       "points": 1
     }
   ],
-  "gradeLevel": null
+  "gradeLevel": 12
 }

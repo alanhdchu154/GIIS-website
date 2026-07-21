@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-20 11:26 CDT
+Last updated: 2026-07-21 16:41 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -32,7 +32,7 @@ Server tests: 43 passed; frontend tests: 16 passed; production build passed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-20 11:26 CDT.
+Last refreshed: 2026-07-21 16:41 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -41,6 +41,149 @@ and older pre-slim history is in
 
 Current operating state:
 
+- 2026-07-21 16:38 CT course-source cleanup narrowed the real active
+  lesson-video backlog. The former 92-module no-grade/AP-looking backlog was
+  not all legitimate production work: AP source courses are now hidden with
+  `isPublished:false`; clear duplicate/legacy no-grade courses are also
+  hidden rather than hard-deleted because DB rows still exist; transitional
+  English/elective variants are hidden until an advisor/student pathway need is
+  confirmed. Public Academics/Homepage AP course framing was removed in favor
+  of advanced coursework/pathway evidence language. Current active published
+  missing modules are now 42 total: Biology Advanced M1-M14, Physics -
+  Mechanics M1-M14, Digital Media & Society M1-M12, and English IV - Writing &
+  Communication M6/M13. A surgical DB metadata sync then aligned only the 18
+  touched course rows' `isPublished`/`gradeLevel` fields, without touching
+  enrollments, progress, grades, modules, exams, or quiz questions. Detailed
+  acceptance plan: `docs/lesson-video-readiness-plan.md`. Verified:
+  course/question integrity 0 issues, targeted DB metadata dry-run 0 remaining
+  changes, manifest alignment 0 warnings, queue 793 uploaded / 0 pending /
+  0 no-MP4, Grade 11 and Grade 12 dry-runs select only the 42 active modules,
+  and `npm run build` passed.
+- 2026-07-21 14:01-16:28 CT approved heartbeat recovered after the earlier
+  Claude reset wait and completed the primary 5-cap plus optional second top-up
+  within the 10-cap rule. It produced, final-gated, parent-trust-audited, and
+  uploaded all 8 remaining safe Media & Society candidates with 0 failures:
+  M1 `tzc8wGHDiAw`, M2 `03Kp7uXMrgQ`, M3 `gqs3sDyNAoI`, M4 `FPCXzeRjI0M`,
+  M5 `b5u3nc8Lfog`, M6 `CswHKcz2mvY`, M7 `v5Lgd-vp9rs`, and M8
+  `6MPxhoslAAg`. Queue is now 793 uploaded / 0 pending / 0 no-MP4 /
+  793 total; pending release gate is 0/0/0; manifest alignment remains clean:
+  0 warnings across 577 lessons. No producer/upload process remains, and no
+  true YouTube upload/channel limit appeared. 2026-07-21 CT total is now
+  17 uploaded videos.
+- 2026-07-21 09:07-10:37 CT recovery run resolved the false "no candidates"
+  lesson-video state and uploaded 9 videos through the approved video-first
+  path. Root causes fixed in the dirty worktree: `open.lib.umn.edu` 403 fetch
+  checks no longer permanently quarantine candidates; existing artifacts can be
+  rendered/reviewed/released through the orchestrator; render/review cache now
+  notices `build_slides.py` and theme/source artifact changes; Public Speaking
+  uses the literature theme consistently; and the independent reviewer wrapper
+  now enforces timeout during quiet streaming output. Uploaded unlisted with
+  0 failures: Public Speaking M1 `OtbHkuYR3uo`, M2 `vkv-S4FXsZw`, M3
+  `KhDkoMRS-dQ`, M4 `PcKFGSErzKE`, M5 `POpTobbh3aY`, M6 `tyGv3rvLWxM`, M7
+  `8cpRKxVMN78`, M8 `Tn5VjgSOiHI`, and Sports Psychology M6 `CpKQqO2GOds`.
+  Queue is now 785 uploaded / 0 pending / 0 no-MP4 / 785 total; pending
+  release gate is 0/0/0; manifest alignment remains clean: 0 warnings across
+  577 lessons. No producer/upload/reviewer process remained after the run and
+  no true YouTube upload/channel limit appeared. Fresh dry-run shows Grade 10
+  fully clear and auto-advances to Grade 11 Media & Society M1-M5 for the next
+  5-cap batch. Dirty risk remains: pipeline code/docs are modified, unrelated
+  transfer-credit SOP files are untracked, and root `slides/` /
+  `style_manifest.json` cwd-drift must not be broad-staged.
+- 2026-07-20 21:03 CT routing update: Alan asked for the two-hour heartbeat to
+  treat 5 modules/uploads as the normal target, with an optional second 5 if
+  time and safe candidates remain. The automation TOML prompt, pipeline docs,
+  playbook, workload, Central status, and automation registry now say: run one
+  approved 5-cap pass first; if it exits cleanly, no producer/upload remains,
+  no true YouTube upload/channel limit appeared, and fresh pending-gate/dry-run
+  evidence still shows safe work, run one additional identical 5-cap top-up
+  pass. Total per heartbeat cap is 10. This does not force unsafe work: fewer
+  than 5 candidates, quality/parent-trust blockers, overlap, dirty-state risk,
+  or true YouTube upload/channel limits stop the run.
+- 2026-07-20 18:00-18:55 CT approved 5-cap heartbeat completed the remaining
+  Sports Management & Leadership lane with 4 uploads. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active and no
+  force approval/upload path was used. M9 Community Relations & Social
+  Responsibility, M10 Crisis Management in Sport, M11 Sport Innovation &
+  Technology, and M12 Capstone: Sport Leadership Portfolio reached final
+  release gate score 100, passed parent-trust, and uploaded unlisted with
+  0 failures: M9 `LOIv0kQPceY`, M10 `MmOXcAjFBpU`, M11 `wsDpnqMbraQ`, M12
+  `AbPAf3yXgmc`. Queue is now 776 uploaded / 0 pending / 0 no-MP4 /
+  776 total; pending release gate is 0/0/0; manifest alignment remains clean:
+  0 warnings across 577 lessons. No producer/upload process remained after the
+  run. This was not a YouTube upload/channel limit. Current 2026-07-20 CT total
+  is 21 uploaded. Post-run dry-run shows no selectable candidates in Grades
+  10, 11, or 12, so the next heartbeat should return `DONT_NOTIFY` unless a
+  new safe candidate appears or a reconciliation/blocker needs attention.
+  Dirty risk remains: root `slides/` and `style_manifest.json` are untracked
+  cwd-drift and must not be broad-staged.
+- 2026-07-20 16:03-17:08 CT approved 5-cap heartbeat completed with 5
+  uploads and recovered the prior Sports Management & Leadership M4 blocker.
+  The run stayed on `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active and no
+  force approval/upload path was used. M4 Organizational Culture & Team
+  Building, M5 Conflict Resolution in Sport Organizations, M6 Decision-Making
+  in Sport Management, M7 Diversity, Equity & Inclusion in Sport, and M8
+  Financial Strategy for Sport Organizations reached final release gate score
+  100. Parent-trust first stopped M8 on a false-positive literal
+  `not guaranteed revenue` phrase; Codex changed it to `not secured revenue`,
+  regenerated M8 audio/MP4 through the orchestrator path, reran independent
+  review, and the 5-lesson parent-trust audit returned `TRUST_READY`. Uploaded
+  5 unlisted videos with 0 failures: M4 `6Bz-XipbIjY`, M5 `xVR4RtSKT-s`,
+  M6 `lTA_DRPbyeQ`, M7 `fRXk0iYSc5w`, M8 `QGxZX99qdCo`. All five were added
+  to the `Sports Management & Leadership` playlist. Queue is now 772 uploaded /
+  0 pending / 0 no-MP4 / 772 total; pending release gate is 0/0/0; manifest
+  alignment remains clean: 0 warnings across 577 lessons. No producer/upload
+  process remained after the run. This was not a YouTube upload/channel limit.
+  Current 2026-07-20 CT total is 17 uploaded. Post-run dry-run shows 4
+  selectable candidates remain, Sports Management & Leadership M9-M12, with
+  course design still passing. Dirty risk remains: root `slides/` and
+  `style_manifest.json` are untracked cwd-drift and must not be broad-staged.
+- 2026-07-20 14:03-14:55 CT approved 5-cap heartbeat advanced the Sports
+  Management & Leadership lane through the approved
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily` path. The first M2 attempt hit a Claude/socket
+  interruption after writing pre-render artifacts; Codex made one bounded
+  approved-run retry, which completed M2, then produced M3. M2 Transformational
+  Leadership and M3 Strategic Planning for Sport Organizations reached final
+  release gate score 100, passed parent-trust as `TRUST_READY`, and uploaded
+  unlisted with 0 failures through `yt_queue.py upload --gate-ready --max 5
+  --privacy unlisted`: M2 `86RiNVtDIuM`, M3 `F6SeBSZtpV0`. Both were added to
+  the `Sports Management & Leadership` playlist. The run then selected M4
+  Organizational Culture & Team Building, but Claude Code returned a
+  session-limit stop after tool progress and only script/source/brief artifacts
+  exist; M4 is now no-MP4 / `cc_blocked` attempt 1. Queue is 767 uploaded /
+  0 pending / 1 no-MP4 / 768 total; pending release gate is 0/0/0; direct M4
+  gate is needs_revision score 0; manifest alignment remains clean: 0 warnings
+  across 577 lessons. No producer/upload process remained after the run. This
+  was not a YouTube upload/channel limit. Current 2026-07-20 CT total is
+  12 uploaded. Post-run dry-run shows 9 selectable Grade 12 candidates remain,
+  M4-M12 of Sports Management & Leadership, with course design still passing.
+  Smallest next action: next heartbeat resumes M4 through the same approved
+  runner after Claude reset; do not force approval/upload or broad-stage root
+  `slides/` / `style_manifest.json`.
+- 2026-07-20 12:02-13:24 CT approved 5-cap heartbeat completed with 5
+  uploads and finished Psychology Seminar / Capstone M9-M12 before starting
+  Sports Management & Leadership. The run stayed on
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`; no duplicate producer/upload was active and no
+  force approval/upload path was used. Psychology M9 APA Writing Style, M10
+  Data Collection Methods, M11 Statistical Analysis for Psychology, M12
+  Capstone Presentation & Research Reflection, and Sports Management M1
+  Leadership Theories in Sport reached final release gate score 100 and passed
+  parent-trust as `TRUST_READY`. Uploaded 5 unlisted videos with 0 failures:
+  Psychology M9 `fREcl4LN4wA`, M10 `3OZ5EDpq7vY`, M11 `RdfCGBBikNs`, M12
+  `5YJLlvoKcwk`, and Sports Management M1 `_jZ7QIx0a4w`. Psychology M9-M12
+  were added to the `Psychology Seminar / Capstone` playlist; the uploader
+  created `Sports Management & Leadership` playlist `PLNAhuCd5rVXs`, then
+  added M1 after one transient playlist-add retry. Queue is now 765 uploaded /
+  0 pending / 0 no-MP4 / 765 total; pending release gate is 0/0/0; manifest
+  alignment remains clean: 0 warnings across 577 lessons. No producer/upload
+  process remained after the run. This was not a YouTube upload/channel limit,
+  though the conservative local quota estimate now shows 10 uploads today and
+  0 safe full uploads left. Current 2026-07-20 CT total is 10 uploaded. Dirty
+  risk remains: root cwd-drift `slides/` and `style_manifest.json` are
+  untracked again and must not be broad-staged.
 - 2026-07-20 10:03-11:26 CT approved 5-cap heartbeat completed with 5
   uploads and cleared Psychology Seminar / Capstone M4-M8. The run stayed on
   `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
