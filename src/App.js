@@ -21,6 +21,7 @@ const AdminTranscriptPage = lazy(() => import('./components/pages/Admin/AdminTra
 const AdminProgressPage = lazy(() => import('./components/pages/Admin/AdminProgressPage'));
 const AdminAuditTrailPage = lazy(() => import('./components/pages/Admin/AdminAuditTrailPage'));
 const AdminDocumentsPage = lazy(() => import('./components/pages/Admin/AdminDocumentsPage'));
+const AdminTransferSopPage = lazy(() => import('./components/pages/Admin/AdminTransferSopPage'));
 const AdminCoursesPage = lazy(() => import('./components/pages/Admin/AdminCoursesPage'));
 const AdminEmailLogsPage = lazy(() => import('./components/pages/Admin/AdminEmailLogsPage'));
 const AdminCalendarPage = lazy(() => import('./components/pages/Admin/AdminCalendarPage'));
@@ -145,6 +146,7 @@ function App() {
          <Route path="/admin/transcript/:studentId" element={<AdminTranscriptPage language={language} />} />
          <Route path="/admin/progress" element={<AdminProgressPage />} />
          <Route path="/admin/documents" element={<AdminDocumentsPage />} />
+         <Route path="/admin/transfer-sop" element={<AdminTransferSopPage />} />
          <Route path="/admin/courses" element={<AdminCoursesPage />} />
          <Route path="/admin/email-logs" element={<AdminEmailLogsPage />} />
          <Route path="/admin/calendar" element={<AdminCalendarPage />} />

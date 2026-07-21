@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const { execFile } = require('child_process');
 const { authenticate, requireAdmin } = require('../middleware/auth');
@@ -33,6 +34,20 @@ function runPackageScript({ send, actorEmail }) {
     });
   });
 }
+
+// Admin-only: serve the internal Transfer Credit & GPA SOP. Kept behind
+// requireAdmin so the internal reviewer logic / red flags never ship in the
+// public frontend bundle. Parent-facing language lives only in the SOP's
+// Appendix C/D, which may be quoted on public pages separately.
+router.get('/transfer-sop', authenticate, requireAdmin, async (_req, res) => {
+  try {
+    const sopPath = path.join(ROOT, 'docs', 'transfer-credit-gpa-sop.md');
+    const markdown = fs.readFileSync(sopPath, 'utf8');
+    res.json({ markdown, title: 'Transfer Credit & GPA Conversion SOP' });
+  } catch (e) {
+    res.status(404).json({ error: 'Transfer SOP document not found on server.' });
+  }
+});
 
 router.get('/logs', authenticate, requireAdmin, async (_req, res) => {
   const [emails, audits] = await Promise.all([

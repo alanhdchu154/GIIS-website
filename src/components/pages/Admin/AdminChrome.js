@@ -33,6 +33,7 @@ export const ADMIN_NAV_GROUPS = [
       { to: '/admin/courses', label: { en: 'Courses', zh: '课程' } },
       { to: '/admin/assignments', label: { en: 'Assignments', zh: '作业批改' } },
       { to: '/admin/documents', label: { en: 'Documents', zh: '正式文件' } },
+      { to: '/admin/transfer-sop', label: { en: 'Transfer SOP', zh: '转学分政策' } },
       { to: '/admin/calendar', label: { en: 'Calendar', zh: '校历' } },
     ],
   },
