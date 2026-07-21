@@ -24,21 +24,29 @@ function isReleased(semester, now = new Date()) {
 }
 
 function transcriptStats(semesters) {
-  const releasedRows = (semesters || [])
+  const namedRows = (semesters || [])
     .filter((semester) => isReleased(semester))
     .flatMap((semester) => semester.courseRows || [])
-    .filter((row) => row.courseName && row.letterGrade && String(row.letterGrade).trim());
+    .filter((row) => row.courseName && String(row.courseName).trim());
 
-  const creditsEarned = releasedRows.reduce((sum, row) => sum + Number(row.credits || 0), 0);
-  const gpaRows = releasedRows.filter(
-    (row) => Number.isFinite(Number(row.weightedGpa)) && Number.isFinite(Number(row.unweightedGpa))
-  );
-  const totals = computeSemesterTotals(gpaRows);
+  // Credits count for every completed course row with positive credits, including
+  // "credit only" transfer rows that carry accepted credit but no convertible
+  // letter grade (per the transfer-credit SOP: credit-only courses still count
+  // toward the 24-credit graduation framework). Requiring a letterGrade here used
+  // to silently drop those transfer credits.
+  const creditsEarned = namedRows.reduce((sum, row) => sum + (Number(row.credits) || 0), 0);
+
+  // GPA: computeSemesterTotals already excludes rows without a convertible grade
+  // (null weighted/unweighted), so credit-only rows correctly do not affect GPA.
+  const totals = computeSemesterTotals(namedRows);
+
+  // "Completed" reflects graded courses (rows carrying a usable letter grade).
+  const gradedRows = namedRows.filter((row) => row.letterGrade && String(row.letterGrade).trim());
 
   return {
     creditsEarned,
     gpa: totals.unweightedGPA === '-' ? null : totals.unweightedGPA,
-    completed: releasedRows.length,
+    completed: gradedRows.length,
   };
 }
 
