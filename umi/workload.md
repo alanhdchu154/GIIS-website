@@ -6,7 +6,7 @@ This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
 old slot evidence.
 
-## Codex Acceptance Review: Billing CI Fix Ready To Push
+## Codex Acceptance Review: Billing CI Fix Shipped
 
 Codex accepted the manual-billing / transfer-credit direction and confirmed the
 commits are on `main` / `origin/main`, but did not accept the claim that the
@@ -32,8 +32,10 @@ centralizes the GIIS `America/Chicago` business date for the access gate.
 
 Verification passed on both the dirty worktree and a temporary clean worktree
 containing only the staged patch: server suite 7 suites / 47 tests, frontend
-build, and `git diff --check`. This CI fix is ready for scoped commit/push. The
-remaining parent-dashboard / roster payment-state WIP should stay separate.
+build, and `git diff --check`. Commit `ca26de1a` (`Stabilize payment access CI
+smoke`) is pushed to `origin/main`; GitHub Actions run `29929032018` completed
+successfully with both `build` and `server-smoke` green. The remaining
+parent-dashboard / roster payment-state WIP should stay separate.
 
 ## cc Shipped 2026-07-21: Manual Billing + Transfer-Credit + Access Gating
 
