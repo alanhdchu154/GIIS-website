@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-21 17:12 CDT
+Last updated: 2026-07-22 09:15 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -32,7 +32,7 @@ Server tests: 43 passed; frontend tests: 16 passed; production build passed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-21 17:12 CDT.
+Last refreshed: 2026-07-22 09:15 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -41,6 +41,111 @@ and older pre-slim history is in
 
 Current operating state:
 
+- 2026-07-22 09:15 CT current-state audit confirms the remaining active
+  lesson-video backlog is 4 modules: Digital Media & Society M11-M12 and
+  English IV - Writing & Communication M6/M13. Grades 9, 10, and 11 dry-runs
+  return 0 candidates; Grade 12 dry-run returns exactly those 4 candidates.
+  Queue is 831 uploaded / 0 pending / 0 no-MP4. Codex also repaired the
+  YouTube channel manifest sync/parser so recent title formats such as
+  `Course — 14: Title` and `Course — 14` are included. The public manifest is
+  now rebuilt to 816 visible lessons with AP/hidden courses still excluded,
+  Biology Advanced 14/14 visible, Physics - Mechanics 14/14 visible, Digital
+  Media & Society 10/12 visible, and English IV - Writing & Communication
+  11/13 visible. Verified: manifest alignment 0 warnings across 816 lessons,
+  video inventory 816 visible / 15 hidden upload-candidates, parser tests pass,
+  and `npm run build` passed. Needs commit/push and production confirmation.
+- 2026-07-22 08:48-08:50 CT heartbeat attempted the approved 5-cap path for
+  the final 4 safe candidates: Digital Media & Society M11-M12 and English IV
+  - Writing & Communication M6/M13. Claude Code hit the session limit while
+  reading references for DMS M11, before production artifacts were written. DMS
+  M11 currently has only `source_packet.json`, `teaching_brief.md`, and
+  `visual_brief.md`; it is not release-ready. Queue remains 831 uploaded /
+  0 pending / 0 no-MP4 / 831 total; pending release gate is 0/0/0; manifest
+  alignment remains clean with 0 warnings across 768 lessons; no producer/upload
+  process remains; no true YouTube upload/channel limit appeared. 2026-07-22 CT
+  upload-run total remains 23 videos. Smallest next action after Claude resets:
+  rerun the approved 5-cap path for the remaining 4 modules; do not force a
+  fifth and do not treat the DMS M11 brief-only folder as release-ready.
+- 2026-07-22 02:45-03:39 CT heartbeat completed the approved primary 5-cap
+  pass but only 3 safe Grade 11 candidates existed. Physics - Mechanics
+  M12-M14 reached final release gate score 100, passed parent-trust as
+  `TRUST_READY`, and uploaded unlisted with 0 failures: M12 `1vpUHBO2Ujs`,
+  M13 `cSnxLz0U9Mo`, and M14 `KOQDzWKp6Yo`. Queue is now 821 uploaded /
+  0 pending / 0 no-MP4 / 821 total; pending release gate is 0/0/0; manifest
+  alignment remains clean with 0 warnings across 768 lessons; no
+  producer/upload process remains; no true YouTube upload/channel limit
+  appeared. The optional second 5-cap top-up began after clean rechecks and
+  safely auto-advanced to Grade 12 Digital Media & Society M1-M5, but Claude
+  Code hit a session limit before DMS M1 production artifacts were written.
+  DMS M1 currently has only `source_packet.json`, `teaching_brief.md`, and
+  `visual_brief.md`; uploader found 0 gate-ready pending items. 2026-07-22 CT
+  upload-run total is now 13 videos. Active missing backlog is now 14 modules:
+  Digital Media & Society M1-M12 and English IV - Writing & Communication
+  M6/M13. Next action after Claude resets: rerun the approved 5-cap path
+  starting with DMS M1-M5; do not bypass gate-ready upload.
+- 2026-07-22 00:02-02:41 CT heartbeat completed the approved primary 5-cap
+  pass plus one optional second 5-cap top-up through
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily`. Physics - Mechanics M2-M11 all reached final
+  release gate score 100, passed parent-trust as `TRUST_READY`, and uploaded
+  unlisted with 0 failures: M2 `KB5kjx6stso`, M3 `6wgelrX_-os`, M4
+  `7RCvPtqdQJE`, M5 `vpqaXlXgk7Y`, M6 `VsW9fgJeQ38`, M7 `C7RBOrx28Mw`,
+  M8 `-eK57GVBnuM`, M9 `GLxR3x7jRuE`, M10 `fS8iT1uO8V8`, and M11
+  `8Ksk_iJ5g5w`. Queue is now 818 uploaded / 0 pending / 0 no-MP4 /
+  818 total; pending release gate is 0/0/0; manifest alignment is clean with
+  0 warnings across 768 lessons; no producer/upload process remains; no true
+  YouTube upload/channel limit appeared. 2026-07-22 CT upload-run total is
+  10 videos. Fresh dry-run now selects only 3 remaining Grade 11 candidates:
+  Physics M12-M14. The active missing backlog is now 17 modules: Physics -
+  Mechanics M12-M14, Digital Media & Society M1-M12, and English IV - Writing
+  & Communication M6/M13. Do not force a 5-count when only 3 safe candidates
+  exist.
+- 2026-07-21 22:02-22:06 CT heartbeat retried the approved 5-cap path after
+  confirming no duplicate producer/upload process, queue 808 uploaded /
+  0 pending / 1 no-MP4, pending gate 0/0/0, manifest alignment 0 warnings, and
+  5 safe dry-run candidates. Physics - Mechanics M2 rendered a new MP4 and
+  moved from no-MP4 to pending, with audit verdict `pass_with_minor_notes` and
+  score 94. It was not uploaded because the release gate still requires score
+  100 and an independent second-pass reviewer, and Claude Code hit the session
+  limit during the reviewer stage. The gate-ready uploader found 0 human-
+  approved pending items. Current queue is 808 uploaded / 1 pending /
+  0 no-MP4 / 809 total; pending release gate is 0 ready / 1 needs_revision /
+  0 blocked; no producer/upload process remains; no true YouTube upload/channel
+  limit appeared. Do not run the optional second pass until Claude resets and
+  M2 can clear review/gate through the approved path.
+- 2026-07-21 20:29-21:40 CT approved heartbeat started a new 5-cap pass. A
+  visible-quality issue in Biology Advanced M14's path slide (`Next up: Module
+  15`) was caught before upload; Codex stopped the run, repaired the slide to
+  `Course wrap-up: submit Module 14 work`, and resumed only through the
+  approved `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily` path. Biology Advanced M13-M14 and Physics -
+  Mechanics M1 then reached final release gate score 100, passed parent-trust
+  as `TRUST_READY`, and uploaded unlisted with 0 failures: Biology Advanced
+  M13 `UU263ZBhjnM`, M14 `-2mGzWyIu9Y`, Physics M1 `6Ll4Hn1104k`. Claude Code
+  then hit a session limit while Physics M2 was still pre-render, so the batch
+  stopped before selecting more modules and no optional second pass ran. Queue
+  is now 808 uploaded / 0 pending / 1 no-MP4 / 809 total; pending release gate
+  is 0/0/0; direct Physics M2 gate is needs_revision score 34 because it has
+  only pre-render artifacts; manifest alignment remains clean with 0 warnings
+  across 768 lessons; no producer/upload process remains; no true YouTube
+  upload/channel limit appeared. 2026-07-21 CT upload-run total is now
+  33 videos. Next action after Claude reset: rerun the approved 5-cap path to
+  resume Physics M2, then continue Physics M3-M6 if safe.
+- 2026-07-21 18:01-20:24 CT approved heartbeat completed the primary 5-cap
+  pass plus one optional second 5-cap top-up through the approved
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily` path. Biology Advanced M3-M12 all reached final
+  release gate score 100, passed parent-trust as `TRUST_READY`, and uploaded
+  unlisted with 0 failures: M3 `2JalKf_5GS4`, M4 `ji1O3BMiOYo`, M5
+  `wgjRTBZf79k`, M6 `vMMC3-EHqgs`, M7 `QJKMf6xUnes`, M8 `qV_aDReeMPM`, M9
+  `Oi0UqHpX9Js`, M10 `Xt5N9Qs2j0Y`, M11 `kj1-i3-iE4g`, and M12
+  `9yf4Ci4FFOs`. Queue is now 805 uploaded / 0 pending / 0 no-MP4; pending
+  release gate is 0/0/0; manifest alignment is clean with 0 warnings across
+  768 lessons; no producer/upload process remains; no true YouTube
+  upload/channel limit appeared. 2026-07-21 CT upload-run total is now
+  30 videos. Post-run dry-run selects Biology Advanced M13-M14 plus Physics -
+  Mechanics M1-M3 next; Grade 11 has 16 selectable safe candidates. Do not run
+  a third pass from this heartbeat.
 - 2026-07-21 16:31-17:12 CT approved heartbeat ran the normal
   `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
   lesson:foundation-daily` path. Biology Advanced M1 and M2 were produced,
@@ -81,9 +186,13 @@ Current operating state:
   English/elective variants are hidden until an advisor/student pathway need is
   confirmed. Public Academics/Homepage AP course framing was removed in favor
   of advanced coursework/pathway evidence language. Current active published
-  missing modules are now 42 total: Biology Advanced M1-M14, Physics -
-  Mechanics M1-M14, Digital Media & Society M1-M12, and English IV - Writing &
-  Communication M6/M13. A surgical DB metadata sync then aligned only the 18
+  missing modules were 42 total before the 18:01 CT Biology Advanced top-up:
+  Biology Advanced M1-M14, Physics - Mechanics M1-M14, Digital Media & Society
+  M1-M12, and English IV - Writing & Communication M6/M13. After the 20:29 CT
+  top-up uploaded Biology Advanced M13-M14 and Physics - Mechanics M1, the
+  active missing backlog is 27 modules: Physics - Mechanics M2-M14, Digital
+  Media & Society M1-M12, and English IV - Writing & Communication M6/M13. A
+  surgical DB metadata sync then aligned only the 18
   touched course rows' `isPublished`/`gradeLevel` fields, without touching
   enrollments, progress, grades, modules, exams, or quiz questions. Detailed
   acceptance plan: `docs/lesson-video-readiness-plan.md`. Verified:
@@ -837,18 +946,23 @@ Current operating state:
 
 Current interpretation:
 
-- The 2026-07-17 10:02 CT two-hour / 5-cap run cleared Personal Finance /
-  Applied Economics M11-M12 and Psychology Seminar / Capstone M1-M3 through
-  final gate, parent-trust, approval, and unlisted upload.
-- Current queue evidence after that run is 755 uploaded / 0 pending /
-  0 no-MP4 / 755 total; pending release gate is 0/0/0. Manifest alignment is
-  0 warnings across 577 lessons. This was not a YouTube upload/channel limit.
+- The 2026-07-22 06:00-08:45 CT heartbeat completed the approved primary
+  5-cap pass plus the optional second 5-cap top-up. Digital Media & Society
+  M1-M10 reached final release gate score 100, passed parent-trust as
+  `TRUST_READY`, and uploaded unlisted with 0 failures. M9's parent-trust
+  false-positive wording was repaired from "minimum wage guarantee(s)" to
+  wage-protection language before re-render/upload; Digital Media theme
+  handling was kept consistent with the existing literature/sepia course style.
+- Current queue evidence after that run is 831 uploaded / 0 pending /
+  0 no-MP4 / 831 total; pending release gate is 0/0/0. Manifest alignment is
+  0 warnings across 768 lessons. This was not a YouTube upload/channel limit.
 - Standard captions remain backlog under current policy. Do not promise captions
   on parent-facing pages until they are actually available and QA'd.
 - T9 lesson media is active via the `teaching-videos/` symlink and must not be
   staged or force-added.
-- Next lesson-video action: wait for the next two-hour heartbeat to select the
-  next safe Grade 12 candidate; continue using only
+- Next lesson-video action: wait for the next two-hour heartbeat to process the
+  last 4 safe candidates: Digital Media & Society M11-M12 and English IV -
+  Writing & Communication M6/M13. Continue using only
   `yt_queue.py upload --gate-ready` after clean release/parent-trust gates.
 
 ## Durable Lesson-Video Rules

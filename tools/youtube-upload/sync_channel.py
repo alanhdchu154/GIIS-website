@@ -47,11 +47,13 @@ MANIFEST_PATH = REPO / "public" / "data" / "lessons-manifest.json"
 # Title pattern — matches:
 #   "Algebra I — Module 4: Solving One-Step…"
 #   "Algebra I — Module 4 — Solving One-Step…"
+#   "Biology Advanced — 14: Conservation Biology"
+#   "Physics - Mechanics — 14"
 # Accepts —, –, or -- as the course/module separator; flexible whitespace.
 # Do not treat a single hyphen as a separator because course names such as
 # "English I - Writing" legitimately contain one.
 TITLE_RE = re.compile(
-    r"^\s*(?P<course>.+?)\s*(?:[—–]|--)\s*Module\s+(?P<num>\d+)\s*(?::|：|[—–]|--)\s*(?P<title>.+?)\s*$",
+    r"^\s*(?P<course>.+?)\s*(?:[—–]|--)\s*(?:Module\s+)?(?P<num>\d+)(?:\s*(?::|：|[—–]|--)\s*(?P<title>.+?))?\s*$",
     re.UNICODE,
 )
 
@@ -90,7 +92,56 @@ def parse_title(t: str):
     if not m: return None
     return (m.group("course").strip(),
             int(m.group("num")),
-            m.group("title").strip())
+            (m.group("title") or "").strip())
+
+def script_module_number(doc: dict) -> int | None:
+    for key in ("module_number", "moduleNumber", "module_order", "moduleOrder"):
+        value = doc.get(key)
+        if value is not None:
+            try:
+                return int(value)
+            except (TypeError, ValueError):
+                pass
+    module = doc.get("module")
+    if isinstance(module, int):
+        return module
+    m = re.match(r"\s*(?:Module\s+)?(\d+)", str(module or ""), re.IGNORECASE)
+    return int(m.group(1)) if m else None
+
+def script_module_title(doc: dict, module_num: int) -> str:
+    module = doc.get("module")
+    if isinstance(module, str):
+        title = re.sub(r"^\s*(?:Module\s+)?\d+\s*(?::|：|[—–]|--)\s*", "", module, flags=re.IGNORECASE).strip()
+        if title and title != module:
+            return title
+
+    course_slug = doc.get("course_slug")
+    if course_slug:
+        course_file = next((REPO / "server" / "prisma" / "courses").glob(f"**/{course_slug}.json"), None)
+        if course_file:
+            try:
+                course = json.loads(course_file.read_text())
+                for module_row in course.get("modules") or []:
+                    if int(module_row.get("order")) == int(module_num):
+                        return str(module_row.get("title") or "").strip()
+            except Exception:
+                pass
+    course_name = doc.get("course")
+    if course_name:
+        for course_file in (REPO / "server" / "prisma" / "courses").glob("**/*.json"):
+            try:
+                course = json.loads(course_file.read_text())
+            except Exception:
+                continue
+            if course.get("name") != course_name:
+                continue
+            for module_row in course.get("modules") or []:
+                try:
+                    if int(module_row.get("order")) == int(module_num):
+                        return str(module_row.get("title") or "").strip()
+                except (TypeError, ValueError):
+                    continue
+    return ""
 
 def load_course_visibility() -> dict[str, bool]:
     """Return course visibility keyed by slug and display name."""
@@ -114,9 +165,7 @@ def find_lesson_dir(course: str, module_num: int) -> Path | None:
         try: d = json.loads(f.read_text())
         except Exception: continue
         if d.get("course") != course: continue
-        m = re.match(r"\s*Module\s+(\d+)", d.get("module", ""), re.IGNORECASE)
-        if not m: continue
-        if int(m.group(1)) == module_num:
+        if script_module_number(d) == module_num:
             return f.parent
     return None
 
@@ -134,6 +183,15 @@ def local_lesson_is_public(lesson_dir: Path, visibility: dict[str, bool]) -> boo
         return visibility[course_name]
     return True
 
+def local_module_title(lesson_dir: Path, module_num: int, fallback: str) -> str:
+    if fallback:
+        return fallback
+    try:
+        doc = json.loads((lesson_dir / "script.json").read_text())
+    except Exception:
+        return fallback
+    return script_module_title(doc, module_num) or fallback
+
 
 def slugify(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
@@ -142,10 +200,10 @@ def lesson_key_from_script(doc: dict) -> tuple[str, int] | None:
     course = doc.get("course")
     if not course:
         return None
-    m = re.match(r"\s*Module\s+(\d+)", doc.get("module", ""), re.IGNORECASE)
-    if not m:
+    module_num = script_module_number(doc)
+    if module_num is None:
         return None
-    return (course, int(m.group(1)))
+    return (course, module_num)
 
 
 def video_exists(yt, video_id: str) -> bool:
@@ -239,11 +297,12 @@ def main():
         if not local_lesson_is_public(lesson_dir, visibility):
             skipped_unpublished_local_course.append(v)
             continue
+        module_title = local_module_title(lesson_dir, num, v["_mod_title"])
         entry = {
             "course":         course,
             "course_slug":    slugify(course),
             "module_number":  num,
-            "module_title":   v["_mod_title"],
+            "module_title":   module_title,
             "youtube_id":     v["video_id"],
             "url":            f"https://youtu.be/{v['video_id']}",
             "embed_url":      f"https://www.youtube.com/embed/{v['video_id']}",
