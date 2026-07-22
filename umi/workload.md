@@ -65,7 +65,7 @@ deployed. Key pieces for Codex:
 - Do NOT hand-build a Stripe recurring pipeline yet; manual billing is
   intentional for current scale. Stripe stays a payment rail only.
 
-## Active: Lesson-Video Producer — Final 4 Uploaded, Manifest Ready To Push
+## Active: Lesson-Video Producer — Closed, Production Manifest Confirmed
 
 2026-07-22 12:25 CT manifest reconciliation completed after the final 4
 uploads. `sync_channel.py --apply` rebuilt `public/data/lessons-manifest.json`
@@ -74,9 +74,11 @@ Digital Media & Society 12/12 visible, English IV - Writing & Communication
 13/13 visible, Physics - Mechanics 14/14 visible, and 0 blank lesson titles.
 Verification passed: manifest alignment 0 warnings across 820 lessons, video
 inventory 835 folders / 820 visible / 833 with MP4 / 15 hidden upload-candidates,
-and `npm run build`. Smallest next action: scoped commit/push of
-`public/data/lessons-manifest.json`, `ROADMAP.md`, and `umi/workload.md`, then
-confirm production `/lessons` browser search finds the final four modules.
+and `npm run build`. Commit `ff155d35` was pushed to `origin/main`; production
+`/data/lessons-manifest.json` reports 820 lessons, and browser search on
+`/lessons` finds `Digital Journalism`,
+`Digital Citizenship & Civic Responsibility`, `Public Speaking & Presentation`,
+and `Editing & Publishing`. Lesson-video public website visibility is closed.
 
 2026-07-22 10:01-11:11 CT heartbeat completed the approved 5-cap path for the
 final 4 safe candidates:

@@ -48,8 +48,10 @@ Current operating state:
   13/13 visible, Physics - Mechanics 14/14 visible, and 0 blank lesson titles.
   Verified: manifest alignment 0 warnings across 820 lessons, video inventory
   835 folders / 820 visible / 833 with MP4 / 15 hidden upload-candidates, and
-  `npm run build` passed. Needs scoped commit/push plus production `/lessons`
-  browser confirmation before calling the public website fully closed.
+  `npm run build` passed. Commit `ff155d35` was pushed to `origin/main`;
+  production `/data/lessons-manifest.json` reports 820 lessons, and browser
+  search on `/lessons` finds the final four modules. Lesson-video public
+  website visibility is closed.
 - 2026-07-22 10:01-11:11 CT heartbeat completed the approved 5-cap path for
   the final 4 safe candidates. Digital Media & Society M11-M12 and English IV
   - Writing & Communication M6/M13 reached final release gate score 100,
