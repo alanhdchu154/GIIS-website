@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-07-22 09:25 CDT
+Last updated: 2026-07-22 09:35 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
@@ -61,7 +61,7 @@ deployed. Key pieces for Codex:
 
 ## Active: Lesson-Video Producer — 4 Active Modules Left, Manifest Rebuilt
 
-2026-07-22 09:15-09:25 CT current-state audit confirms the active missing
+2026-07-22 09:15-09:35 CT current-state audit confirms the active missing
 lesson-video backlog is exactly 4 Grade 12 modules:
 
 - Digital Media & Society M11 `Digital Journalism`
@@ -80,10 +80,17 @@ Communication 11/13 visible. Verification passed: manifest alignment 0 warnings
 across 816 lessons, video inventory 816 visible / 15 hidden upload-candidates,
 parser tests, `py_compile`, `npm run build`, and `git diff --check`.
 
-Smallest next action: commit/push the scoped manifest/parser repair so Netlify
-can publish the 816-lesson manifest, then confirm production freshness. After
-Claude resets, rerun the approved 5-cap path for the remaining 4 modules; do
-not force a fifth and do not treat any brief-only folder as a release artifact.
+Commit `26873221` (`Sync latest lesson manifest and parser`) was pushed to
+`origin/main`; Netlify production now serves the 816-lesson manifest. Browser
+check on `/lessons` shows `816 lessons online` and search finds
+`Conservation Biology`, `Waves & Sound Basics`, and `Digital Revolution`.
+GitHub CI build job passed, but `server-smoke` remains red in
+`server/src/middleware/auth.test.js` with the known payment/access test WIP;
+handle that as a separate scoped commit, not as lesson-video manifest work.
+
+Smallest next action after Claude resets: rerun the approved 5-cap path for
+the remaining 4 modules; do not force a fifth and do not treat any brief-only
+folder as a release artifact.
 
 2026-07-22 08:48-08:50 CT heartbeat attempted the approved 5-cap path for the
 final 4 safe candidates: Digital Media & Society M11-M12 and English IV -

@@ -41,7 +41,7 @@ and older pre-slim history is in
 
 Current operating state:
 
-- 2026-07-22 09:15 CT current-state audit confirms the remaining active
+- 2026-07-22 09:35 CT current-state audit confirms the remaining active
   lesson-video backlog is 4 modules: Digital Media & Society M11-M12 and
   English IV - Writing & Communication M6/M13. Grades 9, 10, and 11 dry-runs
   return 0 candidates; Grade 12 dry-run returns exactly those 4 candidates.
@@ -53,7 +53,12 @@ Current operating state:
   Media & Society 10/12 visible, and English IV - Writing & Communication
   11/13 visible. Verified: manifest alignment 0 warnings across 816 lessons,
   video inventory 816 visible / 15 hidden upload-candidates, parser tests pass,
-  and `npm run build` passed. Needs commit/push and production confirmation.
+  `py_compile`, and `npm run build` passed. Commit `26873221` was pushed to
+  `origin/main`; Netlify production now serves the 816-lesson manifest, and
+  browser search on `/lessons` finds `Conservation Biology`,
+  `Waves & Sound Basics`, and `Digital Revolution`. GitHub CI build job passed;
+  `server-smoke` remains red in `server/src/middleware/auth.test.js` with the
+  known payment/access test WIP and should be fixed in a separate scoped commit.
 - 2026-07-22 08:48-08:50 CT heartbeat attempted the approved 5-cap path for
   the final 4 safe candidates: Digital Media & Society M11-M12 and English IV
   - Writing & Communication M6/M13. Claude Code hit the session limit while
