@@ -584,7 +584,8 @@ export default function ParentDashboard({ language }) {
     );
   }
 
-  const { student, stats, enrollments, recentActivity, subscription, weeklyInsights, advisor, advisorNotes } = data;
+  const { student, stats, enrollments, recentActivity, subscription, payment, weeklyInsights, advisor, advisorNotes } = data;
+  const isPaid = (payment && payment.state === 'active') || !!subscription;
   const gradPct = Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100));
   const inProgress = enrollments.filter(e => !e.creditEarned);
   const completed = enrollments.filter(e => e.creditEarned);
@@ -621,8 +622,20 @@ export default function ParentDashboard({ language }) {
             </button>
           </div>
 
+          {/* Tuition paid-through status (manual-review or Stripe billing) */}
+          {isPaid && payment?.paidThroughDate && (
+            <div style={{ background: '#eef8f0', border: '1px solid #bde2c4', borderRadius: 12, padding: '12px 20px', marginBottom: 20, display: 'flex', alignItems: 'center', gap: 10 }}>
+              <span style={{ background: '#1b5e20', color: '#fff', fontSize: 11, fontWeight: 800, borderRadius: 20, padding: '3px 10px' }}>
+                {isEn ? 'Paid' : '已缴'}
+              </span>
+              <span style={{ fontSize: 13.5, color: '#1b5e20', fontWeight: 600 }}>
+                {isEn ? `Tuition paid through ${payment.paidThroughDate}.` : `学费已缴至 ${payment.paidThroughDate}。`}
+              </span>
+            </div>
+          )}
+
           {/* Enrollment pending banner */}
-          {!subscription && (
+          {!isPaid && (
             <div style={{ background: 'linear-gradient(90deg, #b45309, #d97706)', borderRadius: 12, padding: '16px 24px', marginBottom: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
               <div>
                 <p style={{ fontSize: 14, fontWeight: 800, color: '#fff', margin: '0 0 2px' }}>

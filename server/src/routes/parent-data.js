@@ -373,6 +373,21 @@ router.get('/me', async (req, res) => {
     }),
     recentActivity: events.slice(0, 25),
     subscription: activeSub || null,
+    // Parent-facing payment status. Manual-review billing (admin-set
+    // paidThroughDate) is the source of truth when present; otherwise fall back
+    // to Stripe, treating a lapsed period as past_due rather than a false green.
+    payment: (() => {
+      const today = new Date().toISOString().slice(0, 10);
+      if (student.paidThroughDate) {
+        const through = new Date(student.paidThroughDate).toISOString().slice(0, 10);
+        return { source: 'manual', state: through >= today ? 'active' : 'past_due', paidThroughDate: through, plan: student.paymentPlan || null };
+      }
+      if (activeSub) {
+        const end = activeSub.currentPeriodEnd ? new Date(activeSub.currentPeriodEnd).toISOString().slice(0, 10) : null;
+        return { source: 'stripe', state: (!end || end >= today) ? 'active' : 'past_due', paidThroughDate: end, plan: activeSub.planType || null };
+      }
+      return { source: 'none', state: 'none', paidThroughDate: null, plan: null };
+    })(),
     advisor: {
       name: careState?.advisorOwner || null,
       nextCheckInDueAt: careState?.nextCheckInDueAt ? careState.nextCheckInDueAt.toISOString() : null,
