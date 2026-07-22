@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-22 09:15 CDT
+Last updated: 2026-07-22 12:25 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -32,7 +32,7 @@ Server tests: 43 passed; frontend tests: 16 passed; production build passed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-22 09:15 CDT.
+Last refreshed: 2026-07-22 12:25 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -41,6 +41,31 @@ and older pre-slim history is in
 
 Current operating state:
 
+- 2026-07-22 12:25 CT manifest reconciliation completed after the final 4
+  uploads. `sync_channel.py --apply` rebuilt `public/data/lessons-manifest.json`
+  to 820 visible lessons, with AP/hidden courses still excluded (`ap: 0`),
+  Digital Media & Society 12/12 visible, English IV - Writing & Communication
+  13/13 visible, Physics - Mechanics 14/14 visible, and 0 blank lesson titles.
+  Verified: manifest alignment 0 warnings across 820 lessons, video inventory
+  835 folders / 820 visible / 833 with MP4 / 15 hidden upload-candidates, and
+  `npm run build` passed. Needs scoped commit/push plus production `/lessons`
+  browser confirmation before calling the public website fully closed.
+- 2026-07-22 10:01-11:11 CT heartbeat completed the approved 5-cap path for
+  the final 4 safe candidates. Digital Media & Society M11-M12 and English IV
+  - Writing & Communication M6/M13 reached final release gate score 100,
+  passed parent-trust as `TRUST_READY`, and uploaded unlisted with 0 failures:
+  DMS M11 `9DHyE2i79ck`, DMS M12 `1Agu7A7-fBU`, English IV M13
+  `UjWJ4Z2VRlM`, and English IV M6 `sG-G2N9rdHA`. Queue is now
+  835 uploaded / 0 pending / 0 no-MP4 / 835 total; pending gate is 0/0/0; fresh
+  dry-run returns 0 candidates across grades 10-12; no producer/upload process
+  remains; no true YouTube upload/channel limit appeared. Manifest alignment
+  remains clean with 0 warnings across 816 visible lessons, but the upload run
+  used `--no-sync`, so Learn Portal/public manifest is still at 816 visible
+  lessons and video inventory reports 19 hidden upload-candidates. Smallest
+  next action is a separate manifest/dashboard reconciliation when public
+  changes are allowed. Dirty caution: the M13 worker reported overwriting the
+  already-untracked root `slides/` and `style_manifest.json`; do not broad-stage
+  or clean them inside the heartbeat.
 - 2026-07-22 09:35 CT current-state audit confirms the remaining active
   lesson-video backlog is 4 modules: Digital Media & Society M11-M12 and
   English IV - Writing & Communication M6/M13. Grades 9, 10, and 11 dry-runs

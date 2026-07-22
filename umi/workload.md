@@ -1,6 +1,6 @@
 # Umi Workload
 
-Last updated: 2026-07-22 09:36 CDT
+Last updated: 2026-07-22 12:25 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
@@ -65,18 +65,54 @@ deployed. Key pieces for Codex:
 - Do NOT hand-build a Stripe recurring pipeline yet; manual billing is
   intentional for current scale. Stripe stays a payment rail only.
 
-## Active: Lesson-Video Producer — 4 Active Modules Left, Manifest Rebuilt
+## Active: Lesson-Video Producer — Final 4 Uploaded, Manifest Ready To Push
 
-2026-07-22 09:15-09:35 CT current-state audit confirms the active missing
-lesson-video backlog is exactly 4 Grade 12 modules:
+2026-07-22 12:25 CT manifest reconciliation completed after the final 4
+uploads. `sync_channel.py --apply` rebuilt `public/data/lessons-manifest.json`
+to 820 visible lessons, with AP/hidden courses still excluded (`ap: 0`),
+Digital Media & Society 12/12 visible, English IV - Writing & Communication
+13/13 visible, Physics - Mechanics 14/14 visible, and 0 blank lesson titles.
+Verification passed: manifest alignment 0 warnings across 820 lessons, video
+inventory 835 folders / 820 visible / 833 with MP4 / 15 hidden upload-candidates,
+and `npm run build`. Smallest next action: scoped commit/push of
+`public/data/lessons-manifest.json`, `ROADMAP.md`, and `umi/workload.md`, then
+confirm production `/lessons` browser search finds the final four modules.
 
-- Digital Media & Society M11 `Digital Journalism`
-- Digital Media & Society M12 `Digital Citizenship & Civic Responsibility`
-- English IV - Writing & Communication M6 `Public Speaking & Presentation`
-- English IV - Writing & Communication M13 `Editing & Publishing`
+2026-07-22 10:01-11:11 CT heartbeat completed the approved 5-cap path for the
+final 4 safe candidates:
 
-Grades 9, 10, and 11 dry-runs return 0 candidates; Grade 12 dry-run returns
-only those 4. Queue is 831 uploaded / 0 pending / 0 no-MP4 / 831 total. Codex
+- Digital Media & Society M11 `Digital Journalism` -> `9DHyE2i79ck`
+- Digital Media & Society M12 `Digital Citizenship & Civic Responsibility` ->
+  `1Agu7A7-fBU`
+- English IV - Writing & Communication M13 `Editing & Publishing` ->
+  `UjWJ4Z2VRlM`
+- English IV - Writing & Communication M6 `Public Speaking & Presentation` ->
+  `sG-G2N9rdHA`
+
+All four reached final release gate score 100, passed parent-trust as
+`TRUST_READY`, and uploaded unlisted with 0 failures through
+`yt_queue.py upload --gate-ready`. Queue is now 835 uploaded / 0 pending /
+0 no-MP4 / 835 total; pending release gate is 0/0/0; a fresh dry-run returns
+0 candidates across grades 10-12; no producer/upload process remains; no true
+YouTube upload/channel limit appeared. 2026-07-22 CT upload-run total is now
+27 videos.
+
+Manifest caveat: the upload run used `--no-sync`, so Learn Portal/public
+manifest is still the 816-visible-lesson build from the 09:15-09:35 CT
+reconciliation. `npm run audit:lesson-manifest` is clean with 0 warnings across
+816 visible lessons, but `npm run audit:lesson-video-inventory` now reports
+835 folders, 816 visible, 833 with MP4, and 19 hidden upload-candidates. The
+smallest next action is a separate manifest/dashboard reconciliation when
+public changes are allowed; do not claim the final 4 are visible on `/lessons`
+yet.
+
+Dirty caution: the M13 worker reported overwriting the already-untracked root
+`slides/` and `style_manifest.json` with module 13 data while keeping the T9
+lesson folder correct. Do not broad-stage or clean those files inside the video
+heartbeat; handle them in a scoped worktree hygiene pass.
+
+2026-07-22 09:15-09:35 CT current-state audit confirmed the active missing
+lesson-video backlog was exactly 4 Grade 12 modules, and Codex
 also repaired the YouTube channel manifest sync/parser so recent title formats
 such as `Course — 14: Title` and `Course — 14` are included. Local public
 manifest is rebuilt to 816 visible lessons with AP/hidden courses still
