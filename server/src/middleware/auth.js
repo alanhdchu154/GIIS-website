@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { touchLoginSession } = require('../lib/sessionTracker');
+const { schoolDateOnly } = require('../lib/schoolDate');
 
 function extractToken(req) {
   // Cookie takes priority over Authorization header
@@ -74,16 +75,10 @@ async function blockIfSoftLocked(req, res, next) {
     // Lazily import the shared Prisma singleton so this middleware loads cleanly
     // without a DB during tests, and avoids opening yet another connection pool.
     const prisma = require('../lib/prisma');
-    const [account, student] = await Promise.all([
-      prisma.studentAccount.findUnique({
-        where: { studentId: req.auth.studentId },
-        select: { isActive: true, softLocked: true, lockReason: true },
-      }),
-      prisma.student.findUnique({
-        where: { id: req.auth.studentId },
-        select: { paidThroughDate: true },
-      }),
-    ]);
+    const account = await prisma.studentAccount.findUnique({
+      where: { studentId: req.auth.studentId },
+      select: { isActive: true, softLocked: true, lockReason: true },
+    });
     if (!account?.isActive) {
       return res.status(403).json({
         error: 'Account deactivated',
@@ -98,12 +93,16 @@ async function blockIfSoftLocked(req, res, next) {
         lockReason: account.lockReason,
       });
     }
+    const student = await prisma.student.findUnique({
+      where: { id: req.auth.studentId },
+      select: { paidThroughDate: true },
+    });
     // Manual-review billing: if an admin-set paid-through date exists and has
     // lapsed, gate new work exactly like a soft-lock (read access elsewhere stays
     // open). Students with no paidThroughDate (e.g. Stripe-billed) are unaffected.
     if (student?.paidThroughDate) {
       const through = new Date(student.paidThroughDate).toISOString().slice(0, 10);
-      const today = new Date().toISOString().slice(0, 10);
+      const today = schoolDateOnly();
       if (through < today) {
         return res.status(402).json({
           error: 'Account access limited — payment period has lapsed',

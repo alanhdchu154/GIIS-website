@@ -1,12 +1,12 @@
 # Umi Workload
 
-Last updated: 2026-07-22 09:35 CDT
+Last updated: 2026-07-22 09:36 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
 old slot evidence.
 
-## Codex Acceptance Review: Billing Rollout Needs One Scoped Follow-Up
+## Codex Acceptance Review: Billing CI Fix Ready To Push
 
 Codex accepted the manual-billing / transfer-credit direction and confirmed the
 commits are on `main` / `origin/main`, but did not accept the claim that the
@@ -20,16 +20,20 @@ handoff:
    can expire a date-only payment at 19:00/18:00 local time instead of at the
    end of the GIIS business day.
 
-The existing focused middleware test also failed because its Prisma mock did
-not include the new `student.findUnique` call. Codex prepared a local, unpushed
-seven-file fix: canonical parent `payment.state`, shared
-`America/Chicago` school-date handling across admin/parent/write-gate paths,
-updated middleware mocks and paid-through cases, and school-date boundary
-tests. Verification now passes: 2 suites / 6 tests; `git diff --check` is the
-remaining pre-commit check. Production remains yellow until Alan approves a
-scoped commit/push plus the normal Netlify frontend and Lightsail backend
-deploy verification. No DB migration or production-data mutation is needed
-for this follow-up.
+The recurring GitHub `server-smoke` failure was isolated to
+`server/src/middleware/auth.test.js`, not a real database outage. Committed
+`auth.js` queried `studentAccount` and `student` together, while the test only
+mocked `studentAccount`; the artificial `database unavailable` rejection could
+surface as an unhandled Jest crash. The durable fix is scoped: `blockIfSoftLocked`
+now validates account state before looking up manual paid-through state, the
+Prisma mock covers both models, and a regression assertion confirms a failed
+account lookup does not also touch the student/payment lookup. `schoolDateOnly`
+centralizes the GIIS `America/Chicago` business date for the access gate.
+
+Verification passed on both the dirty worktree and a temporary clean worktree
+containing only the staged patch: server suite 7 suites / 47 tests, frontend
+build, and `git diff --check`. This CI fix is ready for scoped commit/push. The
+remaining parent-dashboard / roster payment-state WIP should stay separate.
 
 ## cc Shipped 2026-07-21: Manual Billing + Transfer-Credit + Access Gating
 

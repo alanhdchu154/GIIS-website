@@ -1,7 +1,9 @@
-const mockFindUnique = jest.fn();
+const mockAccountFindUnique = jest.fn();
+const mockStudentFindUnique = jest.fn();
 
 jest.mock('../lib/prisma', () => ({
-  studentAccount: { findUnique: mockFindUnique },
+  studentAccount: { findUnique: mockAccountFindUnique },
+  student: { findUnique: mockStudentFindUnique },
 }));
 
 const { blockIfSoftLocked } = require('./auth');
@@ -18,6 +20,7 @@ describe('blockIfSoftLocked', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    mockStudentFindUnique.mockResolvedValue({ paidThroughDate: null });
     consoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
   });
 
@@ -29,7 +32,7 @@ describe('blockIfSoftLocked', () => {
     const req = { auth: { role: 'student', studentId: 'student-1' } };
     const res = responseDouble();
     const next = jest.fn();
-    mockFindUnique.mockRejectedValue(new Error('database unavailable'));
+    mockAccountFindUnique.mockRejectedValue(new Error('database unavailable'));
 
     await blockIfSoftLocked(req, res, next);
 
@@ -39,13 +42,45 @@ describe('blockIfSoftLocked', () => {
       error: 'Account status could not be verified. Please try again.',
       code: 'account_status_unavailable',
     });
+    expect(mockStudentFindUnique).not.toHaveBeenCalled();
   });
 
   test('allows an active unlocked student account', async () => {
     const req = { auth: { role: 'student', studentId: 'student-1' } };
     const res = responseDouble();
     const next = jest.fn();
-    mockFindUnique.mockResolvedValue({ isActive: true, softLocked: false, lockReason: '' });
+    mockAccountFindUnique.mockResolvedValue({ isActive: true, softLocked: false, lockReason: '' });
+
+    await blockIfSoftLocked(req, res, next);
+
+    expect(next).toHaveBeenCalledTimes(1);
+    expect(res.status).not.toHaveBeenCalled();
+  });
+
+  test('blocks new work when the manual paid-through date has lapsed', async () => {
+    const req = { auth: { role: 'student', studentId: 'student-1' } };
+    const res = responseDouble();
+    const next = jest.fn();
+    mockAccountFindUnique.mockResolvedValue({ isActive: true, softLocked: false, lockReason: '' });
+    mockStudentFindUnique.mockResolvedValue({ paidThroughDate: new Date('2000-01-01T00:00:00.000Z') });
+
+    await blockIfSoftLocked(req, res, next);
+
+    expect(next).not.toHaveBeenCalled();
+    expect(res.status).toHaveBeenCalledWith(402);
+    expect(res.json).toHaveBeenCalledWith({
+      error: 'Account access limited — payment period has lapsed',
+      code: 'payment_lapsed',
+      lockReason: 'payment_past_due',
+    });
+  });
+
+  test('allows new work while the manual paid-through date is current', async () => {
+    const req = { auth: { role: 'student', studentId: 'student-1' } };
+    const res = responseDouble();
+    const next = jest.fn();
+    mockAccountFindUnique.mockResolvedValue({ isActive: true, softLocked: false, lockReason: '' });
+    mockStudentFindUnique.mockResolvedValue({ paidThroughDate: new Date('2999-12-31T00:00:00.000Z') });
 
     await blockIfSoftLocked(req, res, next);
 
