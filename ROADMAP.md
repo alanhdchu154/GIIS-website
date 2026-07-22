@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-Last updated: 2026-07-21 16:53 CDT
+Last updated: 2026-07-21 17:12 CDT
 
 This file is the current execution roadmap. Historical slot logs are archived in
 `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`,
@@ -32,7 +32,7 @@ Server tests: 43 passed; frontend tests: 16 passed; production build passed.
 
 ## Current Lesson-Video State
 
-Last refreshed: 2026-07-21 16:53 CDT.
+Last refreshed: 2026-07-21 17:12 CDT.
 
 Detailed slot-by-slot lesson-video evidence from 2026-06-24 through 2026-07-03
 is archived in `docs/archive/ROADMAP_DETAIL_2026-07-03-lesson-video-slots.md`
@@ -41,6 +41,24 @@ and older pre-slim history is in
 
 Current operating state:
 
+- 2026-07-21 16:31-17:12 CT approved heartbeat ran the normal
+  `FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+  lesson:foundation-daily` path. Biology Advanced M1 and M2 were produced,
+  final-gated, parent-trust-audited, and uploaded unlisted with 0 upload
+  failures: M1 `BwwjCiVat1I`, M2 `W8eotP1WYYQ`. The same upload run also
+  uploaded the previously gate-ready Global Economics & Politics M2
+  `1xh58EFNWB0`. Biology Advanced M3 rendered and has
+  `_review_independent_pass.json`, but the batch stopped on Claude Code
+  session limit before `_review_source_alignment.json` was written, so it
+  remains pending and is not gate-ready. Current evidence: no producer/upload
+  process remains; queue is 795 uploaded / 1 pending / 0 no-MP4; pending
+  release gate is 0 ready / 1 needs_revision / 0 blocked; manifest alignment is
+  clean with 0 warnings across 768 lessons. No true YouTube upload/channel
+  limit appeared. 2026-07-21 CT upload-run total is now 20 videos. Next action:
+  after Claude resets, rerun the approved 5-cap heartbeat path; fresh dry-run
+  selects Biology Advanced M3-M7, with M3 first needing the missing independent
+  source-alignment review through the orchestrator. Do not bypass gate-ready
+  upload.
 - 2026-07-21 16:53 CT live page audit found the frontend deploy itself was
   fresh, but the public lesson manifest was stale: production and local
   `/data/lessons-manifest.json` both still showed the 2026-07-08
@@ -859,8 +877,27 @@ Current interpretation:
 - Manual Review Sales Mode is the v1 sales path:
   reviewed applications can use reviewed manual Stripe invoice/payment-link
   evidence before account activation.
-- Automated Guided/Premium checkout remains blocked until live Stripe Price IDs
-  and payment gates are green.
+- Manual-review billing is now the source of truth for "is a student paid"
+  (2026-07-21). Admin sets `Student.paidThroughDate` + `paymentPlan` +
+  `paymentNote` on the student page (`PUT /api/students/:id/payment`); paid ==
+  `paidThroughDate >= today`. The roster badge, the parent dashboard
+  ("Tuition paid through <date>"), and access-gating all key off this field.
+  Stripe stays a payment RAIL only; its recurring lifecycle is not trusted for
+  status until webhook sync is verified. A Stripe subscription that reads
+  "active" but whose `currentPeriodEnd` has lapsed is now surfaced as a payment
+  issue, not a false green.
+- Access-gating: `blockIfSoftLocked` blocks new work (enroll, module progress,
+  quiz/assignment/exam) when `paidThroughDate` has lapsed; READ stays open
+  (student can still see past/completed courses). Date-driven at request time,
+  no cron. Students with no `paidThroughDate` (Stripe/unset) are unaffected.
+- Transfer credit: enter accepted prior courses as `CourseRow` rows in a
+  "Transfer Credit — Prior School" semester; credit-only courses leave the grade
+  blank (count toward the 24-credit framework, excluded from GPA). Admin SOP +
+  quick-entry card live at `/admin/transfer-sop`. The whole G12-transfer + manual
+  billing + access flow was E2E-tested on production 2026-07-21 (test data
+  cleaned).
+- Automated Guided/Premium Stripe checkout remains blocked until live Stripe
+  Price IDs and payment gates are green.
 - `git push origin main` is the Netlify frontend deploy action for
   `genesisideas.school`; do not push casually.
 

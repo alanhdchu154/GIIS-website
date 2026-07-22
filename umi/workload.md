@@ -1,12 +1,64 @@
 # Umi Workload
 
-Last updated: 2026-07-21 16:53 CDT
+Last updated: 2026-07-21 17:12 CDT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
 old slot evidence.
 
+## cc Shipped 2026-07-21: Manual Billing + Transfer-Credit + Access Gating
+
+cc built, deployed (Netlify + Lightsail), and E2E-tested (test data cleaned) a
+manual-review billing + G12 transfer flow. All commits on `main`, both tiers
+deployed. Key pieces for Codex:
+
+- Manual billing is the source of truth for "paid": `Student.paidThroughDate` +
+  `paymentPlan` + `paymentNote` (schema migrated via `db:push`). Admin sets them
+  on the student page via `PUT /api/students/:id/payment`. Paid ==
+  `paidThroughDate >= today`.
+- Roster payment state (`students.js` resolvePayment) prefers the manual field
+  over Stripe. A Stripe sub that says "active" but whose `currentPeriodEnd`
+  lapsed is now surfaced as past_due, not a false green.
+- Access gating: `middleware/auth.js blockIfSoftLocked` also blocks write
+  actions when `paidThroughDate` lapsed (read stays open). Date-driven, no cron;
+  students with no paidThroughDate unaffected.
+- Parent dashboard shows a `payment` object ("Tuition paid through <date>");
+  the "complete payment" nudge now keys off real paid state.
+- Transfer credit uses `CourseRow` rows in a "Transfer Credit — Prior School"
+  semester; credit-only = blank grade (counts for credit, excluded from GPA —
+  `transcriptStats`/`computeSemesterTotals` fix). Admin SOP + quick-entry card at
+  `/admin/transfer-sop` (served from an admin-only backend endpoint).
+- E2E verified twice on production: create student → transfer credit (15 cr,
+  3.61 GPA) → 3 views → pay (write allowed) → unpay (read 200 / write 402) →
+  parent sees past_due → graduate (24 cr, 3.70 GPA) → cleanup 0 residual.
+- Do NOT hand-build a Stripe recurring pipeline yet; manual billing is
+  intentional for current scale. Stripe stays a payment rail only.
+
 ## Active: Lesson-Video Producer — 42 Active Modules To Full Readiness
+
+2026-07-21 16:31-17:12 CT heartbeat ran the approved primary 5-cap path:
+`FOUNDATION_MAX_MODULES=5 FOUNDATION_UPLOAD_MAX=5 npm run
+lesson:foundation-daily`. It produced Biology Advanced M1-M3. M1 and M2 passed
+final release and parent-trust gates and uploaded unlisted with 0 failures:
+M1 `BwwjCiVat1I`, M2 `W8eotP1WYYQ`. The upload run also picked the existing
+gate-ready Global Economics & Politics M2 and uploaded it as `1xh58EFNWB0`.
+
+The batch stopped before M4 because Claude Code reported a session limit while
+the M3 independent review stage was finishing. M3 has MP4 and
+`_review_independent_pass.json`, but is missing `_review_source_alignment.json`;
+pending release gate therefore reports 0 ready / 1 needs_revision / 0 blocked.
+Do not force-upload M3. Smallest next action after Claude reset: rerun the
+approved 5-cap heartbeat path or let the orchestrator complete M3's missing
+source-alignment reviewer, then upload only through `yt_queue.py upload
+--gate-ready`.
+
+Current post-run evidence: no producer/upload process remains; queue is
+795 uploaded / 1 pending / 0 no-MP4; manifest alignment is clean with 0 warnings
+across 768 lessons; no true YouTube upload/channel limit appeared. 2026-07-21
+CT upload-run total is now 20 videos. Fresh dry-run selects Biology Advanced
+M3-M7 next, with M3 as the first incomplete gate item. Dirty risk remains
+scoped: pipeline code/docs are modified and transfer-credit SOP files are
+untracked; do not broad-stage.
 
 2026-07-21 16:53 CT page/production audit found and fixed a public manifest
 lag. Netlify/frontend deploy was fresh, but `/data/lessons-manifest.json` was
