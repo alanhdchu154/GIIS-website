@@ -294,6 +294,16 @@ export default function GradesPage({ language }) {
                         {row.assignment.score != null && (
                           <span style={{ fontSize: '11px', color: '#2b3d6d', fontWeight: 700 }}>{Math.round(Number(row.assignment.score))}/100</span>
                         )}
+                        {row.assignment.feedback && (
+                          <details style={{ maxWidth: 160 }}>
+                            <summary style={{ fontSize: 11, color: '#2b3d6d', cursor: 'pointer', fontWeight: 700 }}>
+                              {isEn ? 'Feedback' : '查看反馈'}
+                            </summary>
+                            <p style={{ margin: '4px 0 0', fontSize: 11, color: '#475467', lineHeight: 1.45, textAlign: 'left', overflowWrap: 'anywhere' }}>
+                              {row.assignment.feedback}
+                            </p>
+                          </details>
+                        )}
                       </div>
                     )
                     : <span style={{ fontSize: '11px', color: '#aaa' }}>—</span>}

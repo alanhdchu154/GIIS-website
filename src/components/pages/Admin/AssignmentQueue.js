@@ -29,7 +29,8 @@ function reviewStatus(submittedAt, gradedAt) {
   return { label: `${5 - ageDays}d target`, color: '#e65100' };
 }
 
-export default function AssignmentQueue() {
+export default function AssignmentQueue({ language = 'en' }) {
+  const lang = language === 'zh' ? 'zh' : 'en';
   const navigate = useNavigate();
   const [filter, setFilter] = useState('false'); // 'false' = pending, 'true' = graded, '' = all
   const [items, setItems] = useState([]);
@@ -107,7 +108,7 @@ export default function AssignmentQueue() {
             </div>
           </div>
 
-          <AdminNav />
+          <AdminNav lang={lang} />
 
           {/* Filter tabs */}
           <div className="giis-admin-filter-tabs" style={{ display: 'flex', gap: 8, marginBottom: 20 }}>

@@ -21,9 +21,15 @@ export const adminCardStyle = {
 // the back office reads as "what am I trying to do" rather than a flat list of links.
 export const ADMIN_NAV_GROUPS = [
   {
+    heading: { en: 'Home', zh: '首页' },
+    items: [
+      { to: '/admin', label: { en: 'Overview', zh: '总览' } },
+      { to: '/admin/roster', label: { en: 'Roster', zh: '名册' } },
+    ],
+  },
+  {
     heading: { en: 'Students', zh: '学生' },
     items: [
-      { to: '/admin', label: { en: 'Roster', zh: '名册' } },
       { to: '/admin/progress', label: { en: 'Progress & Care', zh: '进度与关怀' } },
     ],
   },
@@ -89,7 +95,8 @@ export function AdminNav({ lang = 'en' }) {
   );
 }
 
-export function AdminHeader({ title, subtitle, actions = null, lang = 'en' }) {
+export function AdminHeader({ title, subtitle, actions = null, lang = 'en', language, toggleLanguage }) {
+  const resolvedLang = language === 'zh' || lang === 'zh' ? 'zh' : 'en';
   return (
     <>
       <div className="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
@@ -98,9 +105,16 @@ export function AdminHeader({ title, subtitle, actions = null, lang = 'en' }) {
           <h1 className="h3 mb-1">{title}</h1>
           {subtitle && <p className="text-muted small mb-0">{subtitle}</p>}
         </div>
-        {actions && <div className="d-flex flex-wrap justify-content-end gap-2">{actions}</div>}
+        <div className="d-flex flex-wrap justify-content-end gap-2">
+          {toggleLanguage && (
+            <button type="button" className="btn btn-sm btn-outline-secondary fw-semibold" onClick={toggleLanguage}>
+              {resolvedLang === 'zh' ? 'English' : '中文'}
+            </button>
+          )}
+          {actions}
+        </div>
       </div>
-      <AdminNav lang={lang} />
+      <AdminNav lang={resolvedLang} />
     </>
   );
 }

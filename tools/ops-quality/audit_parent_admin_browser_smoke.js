@@ -152,7 +152,7 @@ const ROUTES = [
       '0/2 assignments submitted',
       'Final Exam',
     ],
-    endpointCaps: { '/api/enrollments/english-i': 1 },
+    endpointCaps: { '/api/enrollments/english-i': 2 },
     beforeNavigate: async (page) => {
       await page.addInitScript(() => {
         window.localStorage.setItem('giis_student_info', JSON.stringify({
@@ -170,16 +170,22 @@ const ROUTES = [
     endpointCaps: { '/api/parent/me': 2 },
   },
   {
-    name: 'admin dashboard',
+    name: 'admin overview',
     path: '/admin',
-    expected: ['School Operations', 'Student Roster', 'Monthly recurring', 'Alex Rivera'],
+    expected: ['Admin Overview', 'School Operations', 'Student Records', 'Billing & Access', 'Roster alerts'],
+    endpointCaps: { '/api/students/ops-summary': 2 },
+  },
+  {
+    name: 'admin roster',
+    path: '/admin/roster',
+    expected: ['Student Roster', 'Monthly recurring', 'Alex Rivera', 'GIIS-OPS-001'],
     endpointCaps: { '/api/students/ops-summary': 2 },
   },
   {
     name: 'admin progress care',
     path: '/admin/progress',
     expected: [
-      'Student Coordination',
+      'Progress & Care',
       'Weekly ritual',
       'Show students missing a note',
       'Alex Rivera',
@@ -209,7 +215,7 @@ const ROUTES = [
       'GIIS payment receipt',
       'Refund policy: https://genesisideas.school/refund-policy',
     ],
-    endpointCaps: { '/api/applications': 2 },
+    endpointCaps: { '/api/applications': 3 },
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^View$/ }).first().click();
       await page.getByText('Application Path Review').waitFor({ state: 'visible', timeout: 5000 });

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAdminSession } from '../../../api/authStorage';
-import { AdminNav } from './AdminChrome';
+import { AdminHeader, AdminPage } from './AdminChrome';
 import { getApiBase } from '../../../config/apiBase';
 
 const API = getApiBase();
@@ -39,7 +39,9 @@ function badgeStyle(status) {
   };
 }
 
-export default function AdminSubscriptionsPage() {
+export default function AdminSubscriptionsPage({ language = 'en', toggleLanguage }) {
+  const isEn = language === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const session = getAdminSession();
   const [status, setStatus] = useState('all');
@@ -121,31 +123,26 @@ export default function AdminSubscriptionsPage() {
   if (!session) return null;
 
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif', background: '#f4f6fa', minHeight: '100vh', padding: '24px 28px 80px' }}>
+    <AdminPage>
       <Helmet><title>Subscriptions | GIIS Admin</title></Helmet>
       <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, flexWrap: 'wrap', marginBottom: 22 }}>
-          <div>
-            <p style={{ fontSize: 11, fontWeight: 800, color: '#2b3d6d', letterSpacing: 1.5, textTransform: 'uppercase', margin: '0 0 4px' }}>Admin</p>
-            <h1 style={{ fontSize: 28, fontWeight: 800, margin: 0 }}>Subscriptions</h1>
-            <p style={{ fontSize: 13, color: '#5c6578', margin: '6px 0 0' }}>
-              Link Stripe purchases and manual payment records to student records so billing events and admissions handoffs point to the right account.
-            </p>
-          </div>
-        </div>
-
-        <AdminNav />
+        <AdminHeader
+          language={language}
+          toggleLanguage={toggleLanguage}
+          title={T('Billing', '订阅收费')}
+          subtitle={T('Link Stripe purchases and manual payment records to student records so billing and admissions point to the right account.', '把 Stripe 付款与人工付款记录连到学生档案，让收费与招生 handoff 指向正确账号。')}
+        />
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 12, marginBottom: 18 }}>
-          <Metric label="Total" value={summary.total || 0} />
-          <Metric label="Active" value={summary.byStatus?.active || 0} />
-          <Metric label="Past Due" value={summary.byStatus?.past_due || 0} />
-          <Metric label="Unlinked" value={summary.unlinked || 0} warn={(summary.unlinked || 0) > 0} />
-          <Metric label="Paid · Unlinked" value={summary.unlinkedPaid || 0} warn={(summary.unlinkedPaid || 0) > 0} />
+          <Metric label={T('Total', '总数')} value={summary.total || 0} />
+          <Metric label={T('Active', '有效')} value={summary.byStatus?.active || 0} />
+          <Metric label={T('Past Due', '逾期')} value={summary.byStatus?.past_due || 0} />
+          <Metric label={T('Unlinked', '未连结')} value={summary.unlinked || 0} warn={(summary.unlinked || 0) > 0} />
+          <Metric label={T('Paid · Unlinked', '已付 · 未连结')} value={summary.unlinkedPaid || 0} warn={(summary.unlinkedPaid || 0) > 0} />
         </div>
         {(summary.unlinkedPaid || 0) > 0 && (
           <div style={{ background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 13, color: '#5c4a12' }}>
-            ⚠️ {summary.unlinkedPaid} paid subscription{(summary.unlinkedPaid || 0) > 1 ? 's' : ''} {(summary.unlinkedPaid || 0) > 1 ? 'are' : 'is'} not linked to a student — the parent has paid but no student account is being activated. Link {(summary.unlinkedPaid || 0) > 1 ? 'them' : 'it'} below.
+            {T(`${summary.unlinkedPaid} paid subscription${(summary.unlinkedPaid || 0) > 1 ? 's are' : ' is'} not linked to a student — the parent has paid but no student account is being activated.`, `${summary.unlinkedPaid} 笔已付款订阅尚未连到学生，家长已付款但学生账号还不会被启用。`)}
           </div>
         )}
 
@@ -183,12 +180,12 @@ export default function AdminSubscriptionsPage() {
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
                 <thead>
                   <tr style={{ background: '#f8f9fc', color: '#5c6578', textAlign: 'left' }}>
-                    <th style={th}>Purchaser</th>
-                    <th style={th}>Plan</th>
-                    <th style={th}>Status</th>
-                    <th style={th}>Amount</th>
-                    <th style={th}>Period End</th>
-                    <th style={th}>Linked Student</th>
+                    <th style={th}>{T('Purchaser', '付款人')}</th>
+                    <th style={th}>{T('Plan', '方案')}</th>
+                    <th style={th}>{T('Status', '状态')}</th>
+                    <th style={th}>{T('Amount', '金额')}</th>
+                    <th style={th}>{T('Period End', '有效至')}</th>
+                    <th style={{ ...th, minWidth: 300 }}>{T('Linked Student', '连结学生')}</th>
                     <th style={th}>Stripe IDs</th>
                   </tr>
                 </thead>
@@ -212,14 +209,19 @@ export default function AdminSubscriptionsPage() {
                       <td style={td}>{dateShort(sub.currentPeriodEnd)}</td>
                       <td style={td}>
                         {sub.student && (
-                          <div style={{ marginBottom: 8 }}>
+                          <div style={{ marginBottom: 8, maxWidth: 300 }}>
                             <Link to={`/admin/transcript/${sub.student.id}`} style={{ color: '#2b3d6d', fontWeight: 800, textDecoration: 'none' }}>
                               {sub.student.name}
                             </Link>
-                            <div style={{ color: '#5c6578', fontSize: 11 }}>
-                              {sub.student.studentCode || 'No code'} · {sub.student.loginEmail || 'No login'}
-                              {sub.student.softLocked ? ` · locked: ${sub.student.lockReason || 'yes'}` : ''}
-                            </div>
+                            <details style={{ marginTop: 3 }}>
+                              <summary style={{ color: '#5c6578', fontSize: 11, cursor: 'pointer' }}>
+                                {sub.student.studentCode || T('No code', '无编号')}{sub.student.softLocked ? ` · ${T('locked', '锁定')}` : ''}
+                              </summary>
+                              <div style={{ color: '#5c6578', fontSize: 11, marginTop: 4, overflowWrap: 'anywhere' }}>
+                                {sub.student.loginEmail || T('No login', '无登入')}
+                                {sub.student.softLocked ? ` · ${sub.student.lockReason || 'yes'}` : ''}
+                              </div>
+                            </details>
                           </div>
                         )}
                         <select
@@ -246,7 +248,7 @@ export default function AdminSubscriptionsPage() {
         </div>
       </div>
       {toast && <div style={{ position: 'fixed', right: 24, bottom: 24, background: '#1a1a2e', color: '#fff', borderRadius: 8, padding: '10px 16px', fontSize: 13, fontWeight: 700 }}>{toast}</div>}
-    </div>
+    </AdminPage>
   );
 }
 

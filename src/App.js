@@ -16,6 +16,7 @@ const Transcript = lazy(() => import('./components/pages/Transcript/TranscriptMa
 const LoginPortal = lazy(() => import('./components/pages/Auth/LoginPortal'));
 const ResetPasswordPage = lazy(() => import('./components/pages/Auth/ResetPasswordPage'));
 const AdminLogin = lazy(() => import('./components/pages/Admin/AdminLogin'));
+const AdminHomePage = lazy(() => import('./components/pages/Admin/AdminHomePage'));
 const AdminDashboard = lazy(() => import('./components/pages/Admin/AdminDashboard'));
 const AdminTranscriptPage = lazy(() => import('./components/pages/Admin/AdminTranscriptPage'));
 const AdminProgressPage = lazy(() => import('./components/pages/Admin/AdminProgressPage'));
@@ -142,15 +143,16 @@ function App() {
          <Route path="/reset-password" element={<ResetPasswordPage language={language} />} />
          <Route path="/register" element={<Navigate to="/login?tab=register" replace />} />
          <Route path="/admin/login" element={<AdminLogin language={language} />} />
-         <Route path="/admin" element={<AdminDashboard language={language} />} />
+         <Route path="/admin" element={<AdminHomePage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/roster" element={<AdminDashboard language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/admin/transcript/:studentId" element={<AdminTranscriptPage language={language} />} />
-         <Route path="/admin/progress" element={<AdminProgressPage />} />
-         <Route path="/admin/documents" element={<AdminDocumentsPage />} />
-         <Route path="/admin/transfer-sop" element={<AdminTransferSopPage />} />
-         <Route path="/admin/courses" element={<AdminCoursesPage />} />
-         <Route path="/admin/email-logs" element={<AdminEmailLogsPage />} />
-         <Route path="/admin/calendar" element={<AdminCalendarPage />} />
-        <Route path="/admin/students/:studentId/audit-trail" element={<AdminAuditTrailPage />} />
+         <Route path="/admin/progress" element={<AdminProgressPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/documents" element={<AdminDocumentsPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/transfer-sop" element={<AdminTransferSopPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/courses" element={<AdminCoursesPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/email-logs" element={<AdminEmailLogsPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/calendar" element={<AdminCalendarPage language={language} toggleLanguage={toggleLanguage} />} />
+        <Route path="/admin/students/:studentId/audit-trail" element={<AdminAuditTrailPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/calendar" element={<CalendarPage language={language} />} />
          {/* Pathways hub */}
          <Route path="/pathways" element={<PathwaysHub language={language} toggleLanguage={toggleLanguage} />} />
@@ -190,10 +192,10 @@ function App() {
          <Route path="/parent/login" element={<ParentLogin language={language} />} />
          <Route path="/parent/dashboard" element={<ParentDashboard language={language} />} />
          <Route path="/parent/transcript" element={<ParentTranscriptPage language={language} />} />
-         <Route path="/admin/assignments" element={<AssignmentQueue />} />
-         <Route path="/admin/applications" element={<ApplicationsQueue />} />
-         <Route path="/admin/subscriptions" element={<AdminSubscriptionsPage />} />
-         <Route path="/admin/weekly-report" element={<AdminWeeklyReportPage />} />
+         <Route path="/admin/assignments" element={<AssignmentQueue language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/applications" element={<ApplicationsQueue language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/subscriptions" element={<AdminSubscriptionsPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/weekly-report" element={<AdminWeeklyReportPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/apply" element={<ApplyForm language={language} />} />
          <Route path="/welcome" element={<WelcomePage language={language} />} />
          <Route path="/verify/:code" element={<VerifyPage />} />

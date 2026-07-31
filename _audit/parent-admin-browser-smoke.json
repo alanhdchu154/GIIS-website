@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-11T14:05:38.195Z",
+  "generatedAt": "2026-07-31T14:38:06.451Z",
   "baseUrl": "http://localhost:3000",
   "summary": {
-    "total": 22,
-    "pass": 22,
+    "total": 30,
+    "pass": 30,
     "fail": 0
   },
   "checks": [
@@ -58,23 +58,62 @@
       }
     },
     {
+      "name": "student learn portal login",
+      "path": "/learn",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "student course assignment status",
+      "path": "/learn/english-i",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/enrollments/english-i": 2
+      }
+    },
+    {
       "name": "parent dashboard",
       "path": "/parent/dashboard",
       "viewport": "desktop",
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/parent/me": 1
+        "/api/parent/me": 2
       }
     },
     {
-      "name": "admin dashboard",
+      "name": "admin overview",
       "path": "/admin",
       "viewport": "desktop",
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/students/ops-summary": 1
+        "/api/students/ops-summary": 2
+      }
+    },
+    {
+      "name": "admin roster",
+      "path": "/admin/roster",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/students/ops-summary": 2
+      }
+    },
+    {
+      "name": "admin progress care",
+      "path": "/admin/progress",
+      "viewport": "desktop",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/students/progress": 2,
+        "/api/students/student-ops-1/care-logs": 1
       }
     },
     {
@@ -84,7 +123,8 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications": 1
+        "/api/applications": 3,
+        "/api/applications/app-1/manual-payment": 1
       }
     },
     {
@@ -94,7 +134,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/admin/assignments": 1
+        "/api/admin/assignments": 2
       }
     },
     {
@@ -104,7 +144,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/admin/weekly-report": 1
+        "/api/admin/weekly-report": 2
       }
     },
     {
@@ -158,23 +198,62 @@
       }
     },
     {
+      "name": "student learn portal login",
+      "path": "/learn",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {}
+    },
+    {
+      "name": "student course assignment status",
+      "path": "/learn/english-i",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/enrollments/english-i": 2
+      }
+    },
+    {
       "name": "parent dashboard",
       "path": "/parent/dashboard",
       "viewport": "mobile",
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/parent/me": 1
+        "/api/parent/me": 2
       }
     },
     {
-      "name": "admin dashboard",
+      "name": "admin overview",
       "path": "/admin",
       "viewport": "mobile",
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/students/ops-summary": 1
+        "/api/students/ops-summary": 2
+      }
+    },
+    {
+      "name": "admin roster",
+      "path": "/admin/roster",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/students/ops-summary": 2
+      }
+    },
+    {
+      "name": "admin progress care",
+      "path": "/admin/progress",
+      "viewport": "mobile",
+      "status": "pass",
+      "issues": [],
+      "endpointCounts": {
+        "/api/students/progress": 2,
+        "/api/students/student-ops-1/care-logs": 1
       }
     },
     {
@@ -184,7 +263,8 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications": 1
+        "/api/applications": 3,
+        "/api/applications/app-1/manual-payment": 1
       }
     },
     {
@@ -194,7 +274,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/admin/assignments": 1
+        "/api/admin/assignments": 2
       }
     },
     {
@@ -204,7 +284,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/admin/weekly-report": 1
+        "/api/admin/weekly-report": 2
       }
     }
   ]

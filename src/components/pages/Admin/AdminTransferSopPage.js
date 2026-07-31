@@ -165,6 +165,23 @@ function renderMarkdown(md) {
   });
 }
 
+function markdownSections(md) {
+  const lines = String(md || '').replace(/\r\n/g, '\n').split('\n');
+  const sections = [];
+  let current = { title: 'Overview', body: [] };
+  lines.forEach((line) => {
+    const h2 = line.match(/^##\s+(.+)$/);
+    if (h2) {
+      if (current.body.join('\n').trim()) sections.push(current);
+      current = { title: h2[1], body: [] };
+      return;
+    }
+    current.body.push(line);
+  });
+  if (current.body.join('\n').trim()) sections.push(current);
+  return sections;
+}
+
 // Condensed data-entry card for the registrar — the 4-step flow to put a G12
 // transfer student's prior grades into the system. The full policy is below.
 function TransferQuickCard() {
@@ -217,7 +234,9 @@ function TransferQuickCard() {
   );
 }
 
-export default function AdminTransferSopPage() {
+export default function AdminTransferSopPage({ language = 'en', toggleLanguage }) {
+  const isEn = language === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const session = getAdminSession();
   const [loading, setLoading] = useState(true);
@@ -254,17 +273,36 @@ export default function AdminTransferSopPage() {
   return (
     <AdminPage>
       <AdminHeader
-        title="Transfer Credit & GPA SOP"
-        subtitle="Internal operating policy — admin access only. Do not publish the full SOP publicly."
+        language={language}
+        toggleLanguage={toggleLanguage}
+        title={T('Transfer Credit & GPA SOP', '转学分与 GPA SOP')}
+        subtitle={T('Internal operating policy — admin access only. Do not publish the full SOP publicly.', '内部操作政策，仅限 admin。不要把完整 SOP 公开发布。')}
       />
       <TransferQuickCard />
       <div style={{ background: '#fff', border: '1px solid #e2e7f0', borderRadius: 10, padding: '28px 30px', maxWidth: 960 }}>
         <div style={{ fontSize: 13, fontWeight: 850, letterSpacing: 1, textTransform: 'uppercase', color: '#7a8294', marginBottom: 14 }}>
-          Full SOP
+          {T('Full SOP', '完整 SOP')}
         </div>
-        {loading && <p style={{ color: '#7a8294' }}>Loading SOP…</p>}
+        {loading && <p style={{ color: '#7a8294' }}>{T('Loading SOP…', '载入 SOP…')}</p>}
         {err && <p style={{ color: '#b0342d' }}>{err}</p>}
-        {!loading && !err && renderMarkdown(markdown)}
+        {!loading && !err && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {markdownSections(markdown).map((section, index) => (
+              <details
+                key={`${section.title}-${index}`}
+                open={index === 0}
+                style={{ border: '1px solid #e2e7f0', borderRadius: 8, background: '#fbfcfe' }}
+              >
+                <summary style={{ cursor: 'pointer', padding: '12px 14px', fontWeight: 850, color: '#1a2d5a' }}>
+                  {section.title}
+                </summary>
+                <div style={{ borderTop: '1px solid #e2e7f0', padding: '16px 18px', background: '#fff' }}>
+                  {renderMarkdown(section.body.join('\n'))}
+                </div>
+              </details>
+            ))}
+          </div>
+        )}
       </div>
     </AdminPage>
   );

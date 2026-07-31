@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { clearAdminSession, getAdminSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
-import { AdminNav } from './AdminChrome';
+import { AdminHeader } from './AdminChrome';
 
 const API_BASE = getApiBase();
 
@@ -80,7 +80,7 @@ const cardStyle = {
   boxShadow: '0 10px 28px rgba(26,45,90,0.06)',
 };
 
-export default function AdminDashboard({ language }) {
+export default function AdminDashboard({ language, toggleLanguage }) {
   const isEn = language === 'en';
   const lang = isEn ? 'en' : 'zh';
 
@@ -95,7 +95,6 @@ export default function AdminDashboard({ language }) {
   const [deletingId, setDeletingId] = useState(null);
   const [gradConfirmId, setGradConfirmId] = useState(null);
   const [toolsOpen, setToolsOpen] = useState(false);
-  const [actionCounts, setActionCounts] = useState(null);
   const [revenue, setRevenue] = useState(null);
 
   const navigate = useNavigate();
@@ -115,7 +114,6 @@ export default function AdminDashboard({ language }) {
       if (r.status === 401) { clearAdminSession(); navigate('/admin/login', { replace: true }); return; }
       if (!r.ok) throw new Error(data.error || (isEn ? 'Failed to load' : '载入失败'));
       setStudents(data.students || []);
-      setActionCounts(data.actionCounts || null);
       setRevenue(data.revenue || null);
     } catch (e) {
       setErr(e.message);
@@ -207,143 +205,16 @@ export default function AdminDashboard({ language }) {
 
   if (!session) return null;
 
-  const actionItems = actionCounts ? [
-    { key: 'paymentIssues', icon: '💳', label: isEn ? 'Payment issues' : '付款异常', value: actionCounts.paymentIssues, tone: '#b71c1c', onClick: () => setStatusFilter('paymentIssue') },
-    { key: 'assignmentsToGrade', icon: '📝', label: isEn ? 'To grade' : '待批作业', value: actionCounts.assignmentsToGrade, tone: '#9a5b00', onClick: () => navigate('/admin/assignments') },
-    { key: 'applicationsPending', icon: '📥', label: isEn ? 'Applications' : '待审申请', value: actionCounts.applicationsPending, tone: '#0d47a1', onClick: () => navigate('/admin/applications') },
-    { key: 'inactive', icon: '😴', label: isEn ? 'Inactive 7d+' : '7天没上线', value: actionCounts.inactive, tone: '#b71c1c', onClick: () => setStatusFilter('inactive') },
-    { key: 'careFollowUpsDue', icon: '⏰', label: isEn ? 'Follow-ups due' : '跟进到期', value: actionCounts.careFollowUpsDue, tone: '#8a5a00', onClick: () => navigate('/admin/progress') },
-    { key: 'noLogin', icon: '🔑', label: isEn ? 'No login' : '没设登入', value: actionCounts.noLogin, tone: '#b71c1c', onClick: () => setStatusFilter('noLogin') },
-    { key: 'graduationReady', icon: '🎓', label: isEn ? 'Grad-ready' : '可确认毕业', value: actionCounts.graduationReady, tone: '#0d47a1', onClick: () => setStatusFilter('gradReady') },
-  ] : [];
-
-  const departmentSections = [
-    {
-      key: 'admissions',
-      title: isEn ? 'Admissions & Path Review' : '招生与路径审核',
-      desc: isEn
-        ? 'Review new-student and transfer-student applications before any payment conversation.'
-        : '先审核一般新生与转学生路径，再进入收费讨论。',
-      metric: actionCounts ? actionCounts.applicationsPending : null,
-      metricLabel: isEn ? 'pending' : '待审',
-      primary: isEn ? 'Open applications' : '进入申请审核',
-      onClick: () => navigate('/admin/applications'),
-    },
-    {
-      key: 'records',
-      title: isEn ? 'Student Records' : '学生记录',
-      desc: isEn
-        ? 'Roster, login status, transcript, graduation readiness, and archived records.'
-        : '名册、登入状态、成绩单、毕业资格与封存记录。',
-      metric: students.length,
-      metricLabel: isEn ? 'students' : '学生',
-      primary: isEn ? 'Review roster' : '查看名册',
-      onClick: () => setStatusFilter('all'),
-    },
-    {
-      key: 'academics',
-      title: isEn ? 'Academic Delivery' : '教务交付',
-      desc: isEn
-        ? 'Courses, assignments, grading queue, official documents, and school calendar.'
-        : '课程、作业批改、正式文件与学校日历。',
-      metric: actionCounts ? actionCounts.assignmentsToGrade : null,
-      metricLabel: isEn ? 'to grade' : '待批',
-      primary: isEn ? 'Open assignments' : '进入作业批改',
-      onClick: () => navigate('/admin/assignments'),
-      links: [
-        { label: isEn ? 'Courses' : '课程', to: '/admin/courses' },
-        { label: isEn ? 'Documents' : '文件', to: '/admin/documents' },
-        { label: isEn ? 'Calendar' : '校历', to: '/admin/calendar' },
-      ],
-    },
-    {
-      key: 'parent-care',
-      title: isEn ? 'Parent Care' : '家长关怀',
-      desc: isEn
-        ? 'Progress review, advisor notes, weekly parent reports, and follow-up risk.'
-        : '学习进度、advisor note、家长周报与跟进风险。',
-      metric: actionCounts ? actionCounts.careFollowUpsDue : null,
-      metricLabel: isEn ? 'due' : '到期',
-      primary: isEn ? 'Open care queue' : '进入关怀队列',
-      onClick: () => navigate('/admin/progress'),
-      links: [{ label: isEn ? 'Weekly report' : '家长周报', to: '/admin/weekly-report' }],
-    },
-    {
-      key: 'billing',
-      title: isEn ? 'Billing & Access' : '收费与权限',
-      desc: isEn
-        ? 'Subscription status, manual payment verification, payment issues, and account activation.'
-        : '订阅状态、人工付款确认、付款异常与账号启用。',
-      metric: actionCounts ? actionCounts.paymentIssues : null,
-      metricLabel: isEn ? 'issues' : '异常',
-      primary: isEn ? 'Open billing' : '进入收费管理',
-      onClick: () => navigate('/admin/subscriptions'),
-    },
-    {
-      key: 'ops',
-      title: isEn ? 'School Operations' : '学校运营',
-      desc: isEn
-        ? 'Email logs, public school profile, and lower-frequency operating tools.'
-        : '邮件记录、学校简介与低频运营工具。',
-      metric: revenue ? revenue.activeCount : null,
-      metricLabel: isEn ? 'active plans' : '有效方案',
-      primary: isEn ? 'Open email logs' : '查看邮件记录',
-      onClick: () => navigate('/admin/email-logs'),
-      links: [
-        { label: isEn ? 'School profile' : '学校简介', to: '/school-profile' },
-        { label: isEn ? 'Public site' : '网站首页', to: '/' },
-      ],
-    },
-  ];
-
-  const transferReviewSteps = [
-    {
-      title: isEn ? '1. Application received' : '1. 收到申请',
-      detail: isEn
-        ? 'Confirm whether the family is new-student or transfer-student before discussing payment.'
-        : '先确认家庭是一般新生还是转学生，再讨论付款。',
-    },
-    {
-      title: isEn ? '2. Transcript / credits' : '2. 成绩单 / 学分',
-      detail: isEn
-        ? 'Check prior transcript availability, likely credits, missing requirements, and record risk.'
-        : '检查原校成绩单、可能可转学分、缺少要求与正式记录风险。',
-    },
-    {
-      title: isEn ? '3. Graduation timing' : '3. 毕业时间',
-      detail: isEn
-        ? 'Estimate whether the desired timeline is realistic under the 24-credit framework.'
-        : '判断目标毕业时间在 24 学分框架下是否现实。',
-    },
-    {
-      title: isEn ? '4. Consultation before payment' : '4. 先咨询再付款',
-      detail: isEn
-        ? 'Use manual review sales mode: path review first, then invoice/payment link only after fit is clear.'
-        : '走人工审核开卖模式：先路径审核，确认适合后才发 invoice / payment link。',
-    },
-    {
-      title: isEn ? '5. Welcome + logins' : '5. Welcome + 账号',
-      detail: isEn
-        ? 'Activate student and parent access after payment is verified, then send the first-week path.'
-        : '付款确认后启用学生与家长入口，再发送第一周学习路径。',
-    },
-  ];
-
   return (
     <div className="giis-admin-page" style={pageStyle}>
       <div style={shellStyle}>
-      {/* Header */}
-      <div className="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
-        <div>
-          <p className="small fw-bold text-uppercase mb-1" style={{ color: '#2b3d6d', letterSpacing: 1.4 }}>Admin</p>
-          <h1 className="h3 mb-1">{isEn ? 'Admin Home' : '校务后台首页'}</h1>
-          <p className="text-muted small mb-0 mt-1">
-            {isEn
-              ? 'Start with the department you need, then drill into the detailed queue.'
-              : '先选择要处理的部门，再进入具体队列。'}
-          </p>
-        </div>
-        <div className="d-flex flex-wrap justify-content-end gap-2 align-items-start">
+      <AdminHeader
+        language={language}
+        toggleLanguage={toggleLanguage}
+        title={isEn ? 'Student Roster' : '学生名册'}
+        subtitle={isEn ? 'Manage records, login status, transcript access, payment state, and graduation readiness.' : '管理学生记录、登入状态、成绩单、付款状态与毕业资格。'}
+        actions={(
+          <>
           <Link to="/" className="btn btn-outline-secondary btn-sm">
             {isEn ? 'Public site' : '回到首页'}
           </Link>
@@ -402,10 +273,9 @@ export default function AdminDashboard({ language }) {
           <button type="button" className="btn btn-outline-secondary btn-sm" onClick={logout}>
             {isEn ? 'Log out' : '登出'}
           </button>
-        </div>
-      </div>
-
-      <AdminNav lang={lang} />
+          </>
+        )}
+      />
 
       {err && <div className="alert alert-warning py-2">{err}</div>}
 
@@ -422,154 +292,6 @@ export default function AdminDashboard({ language }) {
           )}
         </div>
       )}
-
-      <section
-        style={{
-          ...cardStyle,
-          padding: 18,
-          marginBottom: 14,
-          borderLeft: '5px solid #2b3d6d',
-        }}
-      >
-        <div className="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
-          <div>
-            <p className="small fw-bold text-uppercase mb-1" style={{ color: '#2b3d6d', letterSpacing: 1 }}>
-              {isEn ? 'Primary sales workflow' : '主要招生流程'}
-            </p>
-            <h2 className="h5 mb-1">{isEn ? 'Transfer Family Review' : '转学生家庭审核'}</h2>
-            <p className="small text-muted mb-0">
-              {isEn
-                ? 'The clearest sellable path is a human-reviewed transfer plan: credits, timeline, parent visibility, then payment.'
-                : '目前最清楚、最能让家长买单的路径是人工审核转学计划：学分、时间线、家长可见度，然后才付款。'}
-            </p>
-          </div>
-          <div className="d-flex flex-wrap gap-2">
-            <Link to="/admin/applications" className="btn btn-sm btn-dark fw-semibold">
-              {isEn ? 'Review applications' : '审核申请'}
-            </Link>
-            <Link to="/transfer-students" className="btn btn-sm btn-light border fw-semibold">
-              {isEn ? 'Public transfer page' : '转学生页面'}
-            </Link>
-            <Link to="/consultation" className="btn btn-sm btn-light border fw-semibold">
-              {isEn ? 'Consultation page' : '咨询页面'}
-            </Link>
-          </div>
-        </div>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))',
-            gap: 10,
-          }}
-        >
-          {transferReviewSteps.map((step) => (
-            <div
-              key={step.title}
-              style={{
-                border: '1px solid #e3e8f2',
-                borderRadius: 8,
-                background: '#fbfcfe',
-                padding: 12,
-                minHeight: 116,
-              }}
-            >
-              <h3 className="small fw-bold mb-1" style={{ color: '#1a2a52' }}>{step.title}</h3>
-              <p className="small text-muted mb-0">{step.detail}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ ...cardStyle, padding: 18, marginBottom: 14 }}>
-        <div className="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
-          <div>
-            <h2 className="h5 mb-1">{isEn ? 'Departments' : '部门入口'}</h2>
-            <p className="small text-muted mb-0">
-              {isEn
-                ? 'Pick the work area first; daily queues and student records stay below for quick triage.'
-                : '先选工作区域；每日待办和学生名册仍保留在下方，方便快速处理。'}
-            </p>
-          </div>
-          <span className="badge text-bg-light border">
-            {isEn ? 'Manual review sales mode' : '人工审核开卖模式'}
-          </span>
-        </div>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: 12,
-          }}
-        >
-          {departmentSections.map((section) => {
-            const metricHot = typeof section.metric === 'number' && section.metric > 0;
-            return (
-              <div
-                key={section.key}
-                style={{
-                  border: '1px solid #e3e8f2',
-                  borderRadius: 8,
-                  padding: 14,
-                  background: '#fbfcfe',
-                  minHeight: 178,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  gap: 12,
-                }}
-              >
-                <div>
-                  <div className="d-flex justify-content-between align-items-start gap-2">
-                    <h3 className="h6 mb-1">{section.title}</h3>
-                    {typeof section.metric === 'number' && (
-                      <span
-                        className="badge"
-                        style={{
-                          background: metricHot ? '#fff3cd' : '#eef2f7',
-                          color: metricHot ? '#8a5a00' : '#5c6578',
-                          border: `1px solid ${metricHot ? '#ffce6a' : '#d6deea'}`,
-                          whiteSpace: 'nowrap',
-                        }}
-                      >
-                        {section.metric} {section.metricLabel}
-                      </span>
-                    )}
-                  </div>
-                  <p className="small text-muted mb-0">{section.desc}</p>
-                </div>
-                <div>
-                  <button type="button" className="btn btn-sm btn-dark fw-semibold me-2 mb-2" onClick={section.onClick}>
-                    {section.primary}
-                  </button>
-                  {section.links?.map((link) => (
-                    <Link key={link.to} to={link.to} className="btn btn-sm btn-light border fw-semibold me-2 mb-2">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Action strip — "what needs me today", each tile jumps to the work */}
-      <div className="d-flex flex-wrap gap-2 mb-3">
-        {actionItems.map((item) => {
-          const hot = item.value > 0;
-          return (
-            <button
-              key={item.key}
-              type="button"
-              onClick={item.onClick}
-              style={{ ...cardStyle, padding: '9px 14px', minWidth: 112, textAlign: 'left', cursor: 'pointer', border: hot ? `1px solid ${item.tone}55` : '1px solid #e8ecf2', background: hot ? '#fff' : '#fbfcfe' }}
-            >
-              <div style={{ fontSize: 11, color: '#5c6578', fontWeight: 700 }}>{item.icon} {item.label}</div>
-              <div style={{ fontSize: 22, fontWeight: 800, color: hot ? item.tone : '#aab2c0', lineHeight: 1.1 }}>{item.value}</div>
-            </button>
-          );
-        })}
-      </div>
 
       <div style={{ ...cardStyle, padding: 14, marginBottom: 14 }}>
         <div className="d-flex align-items-center justify-content-between gap-3 flex-wrap">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { getAdminSession } from '../../../api/authStorage';
-import { AdminNav } from './AdminChrome';
+import { AdminHeader, AdminPage } from './AdminChrome';
 import { ACADEMIC_YEARS, getCurrentAcademicYear } from '../../../config/schoolCalendar';
 
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -57,8 +57,8 @@ function TermCard({ term, accent = '#1a2d5a' }) {
   );
 }
 
-function YearCard({ year, isCurrent }) {
-  return (
+function YearCard({ year, isCurrent, T }) {
+  const card = (
     <div style={{
       background: '#fff',
       border: `1.5px solid ${isCurrent ? '#1a2d5a' : '#e0e6f0'}`,
@@ -72,7 +72,7 @@ function YearCard({ year, isCurrent }) {
           {year.label}
           {isCurrent && (
             <span style={{ fontSize: '11px', fontWeight: 700, background: '#1a2d5a', color: '#fff', padding: '2px 8px', borderRadius: '10px', marginLeft: '10px', verticalAlign: 'middle' }}>
-              CURRENT
+              {T('CURRENT', 'CURRENT')}
             </span>
           )}
         </h2>
@@ -110,34 +110,47 @@ function YearCard({ year, isCurrent }) {
       </div>
     </div>
   );
+  if (isCurrent) return card;
+  return (
+    <details style={{ marginBottom: 12 }}>
+      <summary style={{ cursor: 'pointer', fontWeight: 800, color: '#1a2d5a', padding: '10px 4px' }}>
+        {year.label}
+      </summary>
+      {card}
+    </details>
+  );
 }
 
-export default function AdminCalendarPage() {
+export default function AdminCalendarPage({ language = 'en', toggleLanguage }) {
+  const isEn = language === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const session = getAdminSession();
   if (!session) return <Navigate to="/admin/login" replace />;
 
   const currentYear = getCurrentAcademicYear();
+  const orderedYears = [...ACADEMIC_YEARS].sort((a, b) => {
+    if (a.label === currentYear.label) return -1;
+    if (b.label === currentYear.label) return 1;
+    return String(b.label).localeCompare(String(a.label));
+  });
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f4f6fa', fontFamily: 'Inter, sans-serif' }}>
-      <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '32px 5% 80px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '28px', flexWrap: 'wrap', gap: '12px' }}>
-          <div>
-            <p style={{ fontSize: '11px', fontWeight: 700, color: '#1a2d5a', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 4px' }}>Admin</p>
-            <h1 style={{ fontSize: '24px', fontWeight: 800, color: '#1a1a2e', margin: 0 }}>Academic Calendar</h1>
-          </div>
-        </div>
-
-        <AdminNav />
-
+    <AdminPage>
+      <div style={{ maxWidth: '1000px' }}>
+        <AdminHeader
+          language={language}
+          toggleLanguage={toggleLanguage}
+          title={T('Academic Calendar', '校历')}
+          subtitle={T('Current academic year first; older and future calendars stay collapsed until needed.', '当前学年置顶，其他年份预设收合。')}
+        />
         <div style={{ background: '#e8edf7', borderRadius: '8px', padding: '10px 16px', marginBottom: '24px', fontSize: '12px', color: '#444', lineHeight: 1.6 }}>
-          <strong>Online async school</strong> — Portal is open 24/7. "Recess" periods are admin-only pauses (no new exams scheduled). Grades released = visible to students &amp; parents in the portal.
+          <strong>{T('Online async school', '线上非同步学校')}</strong> — {T('Portal is open 24/7. "Recess" periods are admin-only pauses (no new exams scheduled). Grades released = visible to students and parents in the portal.', 'Portal 24/7 开放。「Recess」是 admin-only pause（不排新考试）。Grades released 代表学生与家长 portal 可见。')}
         </div>
 
-        {[...ACADEMIC_YEARS].reverse().map((year) => (
-          <YearCard key={year.label} year={year} isCurrent={year.label === currentYear.label} />
+        {orderedYears.map((year) => (
+          <YearCard key={year.label} year={year} isCurrent={year.label === currentYear.label} T={T} />
         ))}
       </div>
-    </div>
+    </AdminPage>
   );
 }

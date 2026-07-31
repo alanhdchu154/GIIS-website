@@ -20,7 +20,17 @@ function outputSummary(text) {
   return lines.slice(-14).join('\n');
 }
 
-export default function AdminDocumentsPage() {
+function extractPdfLines(text) {
+  return String(text || '')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => /\.pdf\b/i.test(line))
+    .slice(-8);
+}
+
+export default function AdminDocumentsPage({ language = 'en', toggleLanguage }) {
+  const isEn = language === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const session = getAdminSession();
   const [loading, setLoading] = useState(true);
@@ -60,7 +70,7 @@ export default function AdminDocumentsPage() {
 
   async function runAction(kind) {
     const isSend = kind === 'send';
-    if (isSend && !window.confirm('Send corrected transcript + diploma PDF packages to the principal now, CC Alan and admissions?')) {
+    if (isSend && !window.confirm(T('Email corrected transcript + diploma PDF packages to the principal now, CC Alan and admissions?', '现在要把修正后的成绩单 + 毕业证书 PDF package 寄给 Principal，并 CC Alan 与 admissions 吗？'))) {
       return;
     }
     setRunning(kind);
@@ -88,11 +98,13 @@ export default function AdminDocumentsPage() {
   return (
     <AdminPage>
       <AdminHeader
-        title="Official Documents"
-        subtitle="Generate, send, and audit official transcript + diploma packages."
+        language={language}
+        toggleLanguage={toggleLanguage}
+        title={T('Official Documents', '正式文件')}
+        subtitle={T('Preview, send, and audit official transcript + diploma packages.', '预览、寄送并稽核正式成绩单与毕业证书 packages。')}
         actions={(
           <button className="btn btn-outline-primary btn-sm" type="button" onClick={loadLogs} disabled={loading || running}>
-            Refresh
+            {T('Refresh', '重新整理')}
           </button>
         )}
       />
@@ -105,12 +117,12 @@ export default function AdminDocumentsPage() {
             <div className="card-body">
               <div className="d-flex justify-content-between align-items-start gap-3 mb-2">
                 <div>
-                  <h2 className="h6 mb-1">Class of 2026 Package</h2>
+                  <h2 className="h6 mb-1">{T('Class of 2026 Package', '2026 届正式文件 Package')}</h2>
                   <p className="text-muted small mb-0">
-                    Produces five official transcript + diploma PDF packages using the locked format contract.
+                    {T('Produces five official transcript + diploma PDF packages using the locked format contract.', '依照锁定格式合约产生五份正式成绩单 + 毕业证书 PDF package。')}
                   </p>
                 </div>
-                <span className="badge bg-success">Locked</span>
+                <span className="badge bg-success">{T('Locked', '格式锁定')}</span>
               </div>
               <div className="d-flex flex-wrap gap-2 mt-3">
                 <button
@@ -119,7 +131,7 @@ export default function AdminDocumentsPage() {
                   disabled={Boolean(running)}
                   onClick={() => runAction('dry-run')}
                 >
-                  {running === 'dry-run' ? 'Generating…' : 'Generate dry-run PDFs'}
+                  {running === 'dry-run' ? T('Generating…', '产生中…') : T('Preview PDFs (dry run)', '预览 PDFs（dry run）')}
                 </button>
                 <button
                   type="button"
@@ -127,11 +139,11 @@ export default function AdminDocumentsPage() {
                   disabled={Boolean(running)}
                   onClick={() => runAction('send')}
                 >
-                  {running === 'send' ? 'Sending…' : 'Send to principal'}
+                  {running === 'send' ? T('Sending…', '寄送中…') : T('Email official package to principal', '寄正式 package 给 Principal')}
                 </button>
               </div>
               <p className="small text-muted mt-3 mb-0">
-                Send action CCs Alan and admissions, and writes EmailLog + AuditLog records.
+                {T('Email action CCs Alan and admissions, and writes EmailLog + AuditLog records.', '寄送动作会 CC Alan 与 admissions，并写入 EmailLog + AuditLog。')}
               </p>
             </div>
           </div>
@@ -139,13 +151,35 @@ export default function AdminDocumentsPage() {
         <div className="col-lg-7">
           <div className="card shadow-sm h-100">
             <div className="card-body">
-              <h2 className="h6 mb-2">Last Run Output</h2>
+              <h2 className="h6 mb-2">{T('Latest Browser Run', '最近一次执行')}</h2>
               {lastRun ? (
-                <pre className="small bg-light border rounded p-3 mb-0" style={{ maxHeight: 220, overflow: 'auto', whiteSpace: 'pre-wrap' }}>
-                  {outputSummary(`${lastRun.stdout || ''}\n${lastRun.stderr || ''}`)}
-                </pre>
+                <div>
+                  <div className="d-flex flex-wrap gap-2 mb-3">
+                    <span className={`badge ${lastRun.ok === false ? 'bg-warning text-dark' : 'bg-success'}`}>
+                      {lastRun.ok === false ? T('Needs review', '需要检查') : T('Completed', '已完成')}
+                    </span>
+                    <span className="badge text-bg-light border">
+                      {extractPdfLines(`${lastRun.stdout || ''}\n${lastRun.stderr || ''}`).length} PDF {T('references found', '路径')}
+                    </span>
+                  </div>
+                  {extractPdfLines(`${lastRun.stdout || ''}\n${lastRun.stderr || ''}`).length > 0 ? (
+                    <ul className="small mb-3" style={{ paddingLeft: 18 }}>
+                      {extractPdfLines(`${lastRun.stdout || ''}\n${lastRun.stderr || ''}`).map((line) => (
+                        <li key={line} style={{ marginBottom: 4, wordBreak: 'break-word' }}>{line}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-muted small mb-3">{T('No PDF filenames were detected in the latest output.', '最近输出中没有侦测到 PDF 档名。')}</p>
+                  )}
+                  <details>
+                    <summary className="small fw-semibold" style={{ cursor: 'pointer' }}>{T('Show technical output', '显示技术输出')}</summary>
+                    <pre className="small bg-light border rounded p-3 mt-2 mb-0" style={{ maxHeight: 180, overflow: 'auto', whiteSpace: 'pre-wrap' }}>
+                      {outputSummary(`${lastRun.stdout || ''}\n${lastRun.stderr || ''}`)}
+                    </pre>
+                  </details>
+                </div>
               ) : (
-                <p className="text-muted small mb-0">No run in this browser session yet.</p>
+                <p className="text-muted small mb-0">{T('No run in this browser session yet.', '这个浏览器 session 尚未执行。')}</p>
               )}
             </div>
           </div>

@@ -53,7 +53,7 @@ function StatCard({ label, value, color = '#2b3d6d', bg = '#fff' }) {
   );
 }
 
-function TimelineRow({ event }) {
+function TimelineRow({ event, lang = 'en' }) {
   const meta = KIND_LABEL[event.kind] || KIND_LABEL.admin_action;
   let summary = '';
   if (event.kind === 'module_complete') {
@@ -86,7 +86,7 @@ function TimelineRow({ event }) {
       <div style={{ fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', fontSize: 12, color: '#444' }}>{fmtDateTime(event.at)}</div>
       <div>
         <span style={{ fontSize: 11, fontWeight: 700, color: meta.color, background: meta.bg, padding: '3px 8px', borderRadius: 6 }}>
-          {meta.en}
+          {meta[lang] || meta.en}
         </span>
       </div>
       <div style={{ fontSize: 13, color: '#1a1a2e' }}>{summary}</div>
@@ -120,7 +120,8 @@ function CourseRow({ c }) {
   );
 }
 
-export default function AdminAuditTrailPage() {
+export default function AdminAuditTrailPage({ language = 'en' }) {
+  const lang = language === 'zh' ? 'zh' : 'en';
   const { studentId } = useParams();
   const navigate = useNavigate();
   const session = getAdminSession();
@@ -205,10 +206,10 @@ export default function AdminAuditTrailPage() {
           </div>
           <div style={{ display: 'flex', gap: 8 }}>
             <Link to={`/admin/transcript/${s.id}`} style={{ fontSize: 13, color: '#2b3d6d', textDecoration: 'none', fontWeight: 600, padding: '8px 14px', border: '1px solid #d0d6e3', borderRadius: 8, background: '#fff' }}>
-              View Transcript
+              {lang === 'zh' ? '查看成绩单' : 'View Transcript'}
             </Link>
             <button onClick={exportPdf} disabled={exporting} style={{ fontSize: 13, color: '#fff', fontWeight: 700, padding: '8px 16px', border: 'none', borderRadius: 8, background: exporting ? '#888' : '#1a2d5a', cursor: exporting ? 'wait' : 'pointer' }}>
-              {exporting ? 'Exporting…' : 'Export PDF'}
+              {exporting ? (lang === 'zh' ? '汇出中…' : 'Exporting…') : (lang === 'zh' ? '汇出 PDF' : 'Export PDF')}
             </button>
           </div>
         </div>
@@ -273,7 +274,7 @@ export default function AdminAuditTrailPage() {
             <div style={{ padding: '24px 0', color: '#888', fontSize: 13 }}>No activity recorded.</div>
           ) : (
             <div>
-              {filteredTimeline.map((e, i) => <TimelineRow key={i} event={e} />)}
+              {filteredTimeline.map((e, i) => <TimelineRow key={i} event={e} lang={lang} />)}
             </div>
           )}
 

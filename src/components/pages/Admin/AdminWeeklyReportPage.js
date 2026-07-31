@@ -12,7 +12,8 @@ const API = getApiBase();
  * Flow: load dry-run drafts → admin reviews each student's payload →
  * sends only the selected students. Nothing is emailed without review here.
  */
-export default function AdminWeeklyReportPage() {
+export default function AdminWeeklyReportPage({ language = 'en' }) {
+  const lang = language === 'zh' ? 'zh' : 'en';
   const navigate = useNavigate();
   const session = getAdminSession();
   const [loading, setLoading] = useState(true);
@@ -121,7 +122,7 @@ export default function AdminWeeklyReportPage() {
   return (
     <div style={{ background: '#f4f6fa', minHeight: '100vh', fontFamily: 'Inter, sans-serif' }}>
       <Helmet><title>Weekly Parent Report | GIIS Admin</title></Helmet>
-      <AdminNav />
+      <AdminNav lang={lang} />
 
       <div style={{ maxWidth: 1080, margin: '0 auto', padding: '28px 4% 60px' }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 14, marginBottom: 18 }}>

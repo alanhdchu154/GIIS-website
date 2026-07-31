@@ -135,7 +135,9 @@ function NoteLog({ logs }) {
   );
 }
 
-export default function AdminProgressPage() {
+export default function AdminProgressPage({ language = 'en', toggleLanguage }) {
+  const isEn = language === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const session = getAdminSession();
   const [students, setStudents] = useState(null);
@@ -275,8 +277,10 @@ export default function AdminProgressPage() {
   return (
     <AdminPage>
       <AdminHeader
-        title="Student Coordination"
-        subtitle="Staff-first view of risk, advisor continuity, and next action."
+        language={language}
+        toggleLanguage={toggleLanguage}
+        title={T('Progress & Care', '进度与关怀')}
+        subtitle={T('Staff-first view of risk, advisor continuity, and next action.', '给校务人员看的风险、advisor 连续性与下一步行动总览。')}
       />
 
       {err && (
@@ -293,13 +297,13 @@ export default function AdminProgressPage() {
         }}>
           <div style={{ flex: 1, minWidth: 280 }}>
             <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 850, color: '#8a6d1f', textTransform: 'uppercase', letterSpacing: 0.8 }}>
-              Weekly ritual · ~5 min per student
+              {T('Weekly ritual · ~5 min per student', '每周流程 · 每位学生约 5 分钟')}
             </p>
             <p style={{ margin: 0, fontSize: 13.5, color: '#4a4633', lineHeight: 1.6 }}>
-              ① Review progress → ② write one <strong>parent-safe</strong> note per active student → ③ send the weekly report.
+              {T('Review progress, write one parent-safe note per active student, then send the weekly report.', '检查进度、为每位在籍学生写一则 parent-safe note，然后发送家长周报。')}
               {summary.noParentNoteWeek > 0
-                ? ` ${summary.noParentNoteWeek} student${summary.noParentNoteWeek === 1 ? '' : 's'} still need${summary.noParentNoteWeek === 1 ? 's' : ''} a parent-safe note this week.`
-                : ' All students have a parent-safe note this week — ready to send.'}
+                ? T(` ${summary.noParentNoteWeek} student${summary.noParentNoteWeek === 1 ? '' : 's'} still need${summary.noParentNoteWeek === 1 ? 's' : ''} a parent-safe note this week.`, ` 本周还有 ${summary.noParentNoteWeek} 位学生需要 parent-safe note。`)
+                : T(' All students have a parent-safe note this week — ready to send.', ' 所有学生本周都有 parent-safe note，可以准备发送。')}
             </p>
           </div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
@@ -307,13 +311,13 @@ export default function AdminProgressPage() {
               onClick={() => setFilter('no_parent_note_week')}
               style={{ border: '1px solid #b8962e', background: '#fff', color: '#8a6d1f', borderRadius: 8, padding: '9px 14px', fontSize: 12.5, fontWeight: 800, cursor: 'pointer' }}
             >
-              Show students missing a note
+              {T('Show students missing a note', '显示缺 note 的学生')}
             </button>
             <Link
               to="/admin/weekly-report"
               style={{ border: 'none', background: '#1a2d5a', color: '#fff', borderRadius: 8, padding: '9px 14px', fontSize: 12.5, fontWeight: 800, textDecoration: 'none' }}
             >
-              📧 Review & send weekly report →
+              {T('Review & send weekly report', '审核并发送家长周报')} →
             </Link>
           </div>
         </div>
@@ -322,12 +326,12 @@ export default function AdminProgressPage() {
       {students && (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 10, marginBottom: 16 }}>
           {[
-            ['Total', summary.total],
-            ['Needs attention', summary.needsAttention],
-            ['Urgent', summary.urgent],
-            ['No advisor review', summary.noReview],
-            ['Check-in due', summary.due],
-            ['No parent note (7d)', summary.noParentNoteWeek],
+            [T('Total', '总数'), summary.total],
+            [T('Needs attention', '需要注意'), summary.needsAttention],
+            [T('Urgent', '紧急'), summary.urgent],
+            [T('No advisor review', '未 review'), summary.noReview],
+            [T('Check-in due', '跟进到期'), summary.due],
+            [T('No parent note (7d)', '7 天无家长 note'), summary.noParentNoteWeek],
           ].map(([name, value]) => (
             <div key={name} style={{ border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff', padding: '12px 14px' }}>
               <p style={{ margin: '0 0 4px', color: '#64748b', fontSize: 11, fontWeight: 800, textTransform: 'uppercase' }}>{name}</p>
@@ -339,13 +343,13 @@ export default function AdminProgressPage() {
 
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
         {[
-          ['needs_attention', 'Needs attention'],
-          ['no_recent_login', 'No recent login'],
-          ['no_advisor_review', 'No advisor review'],
-          ['parent_concern', 'Parent concern'],
-          ['intervention_due', 'Intervention due'],
-          ['no_parent_note_week', 'No parent note (7d)'],
-          ['all', 'All students'],
+          ['needs_attention', T('Needs attention', '需要注意')],
+          ['no_recent_login', T('No recent login', '近期未登入')],
+          ['no_advisor_review', T('No advisor review', '未 advisor review')],
+          ['parent_concern', T('Parent concern', '家长关注')],
+          ['intervention_due', T('Intervention due', '需要介入')],
+          ['no_parent_note_week', T('No parent note (7d)', '7 天无家长 note')],
+          ['all', T('All students', '所有学生')],
         ].map(([id, name]) => (
           <button
             key={id}

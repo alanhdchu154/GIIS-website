@@ -254,7 +254,8 @@ function timeAgo(iso) {
   return `${Math.floor(h / 24)}d ago`;
 }
 
-export default function ApplicationsQueue() {
+export default function ApplicationsQueue({ language = 'en' }) {
+  const lang = language === 'zh' ? 'zh' : 'en';
   const navigate = useNavigate();
   const [filter, setFilter] = useState('pending');
   const [items, setItems] = useState([]);
@@ -452,7 +453,7 @@ export default function ApplicationsQueue() {
             </div>
           </div>
 
-          <AdminNav />
+          <AdminNav lang={lang} />
 
           {/* Filter tabs */}
           <div className="giis-admin-filter-tabs" style={{ display: 'flex', gap: 8, marginBottom: 20 }}>

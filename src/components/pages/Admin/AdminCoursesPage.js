@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AdminNav } from './AdminChrome';
+import { AdminHeader, AdminPage } from './AdminChrome';
 import { clearAdminSession, getAdminSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 
@@ -54,7 +54,9 @@ function normalizeCoursePayload(form) {
   };
 }
 
-export default function AdminCoursesPage() {
+export default function AdminCoursesPage({ language = 'en', toggleLanguage }) {
+  const isEn = language === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const session = getAdminSession();
   const [courses, setCourses] = useState([]);
@@ -67,6 +69,7 @@ export default function AdminCoursesPage() {
   const [saving, setSaving] = useState('');
   const [err, setErr] = useState('');
   const [msg, setMsg] = useState('');
+  const [expandedModules, setExpandedModules] = useState(() => new Set());
 
   useEffect(() => {
     if (!session) {
@@ -117,6 +120,7 @@ export default function AdminCoursesPage() {
       if (!r.ok) throw new Error(data.error || 'Failed to load course');
       setCourse(data);
       setCourseForm(toForm(data));
+      setExpandedModules(new Set());
     } catch (e) {
       setErr(e.message);
     } finally {
@@ -184,7 +188,7 @@ export default function AdminCoursesPage() {
     setErr('');
     setMsg('');
     if (!newModuleForm.order || !newModuleForm.title.trim()) {
-      setErr('Module order and title are required.');
+      setErr(T('Module order and title are required.', 'Module 顺序与标题为必填。'));
       return;
     }
     setSaving('module');
@@ -203,7 +207,7 @@ export default function AdminCoursesPage() {
       const data = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(data.error || 'Could not add module');
       setNewModuleForm(EMPTY_MODULE);
-      setMsg(`Added module ${data.order}.`);
+      setMsg(T(`Added module ${data.order}.`, `已新增 Module ${data.order}。`));
       await Promise.all([loadCourses(), loadCourse(selectedSlug)]);
     } catch (e2) {
       setErr(e2.message);
@@ -234,25 +238,30 @@ export default function AdminCoursesPage() {
     }
   }
 
+  function toggleModule(moduleId) {
+    setExpandedModules((prev) => {
+      const next = new Set(prev);
+      if (next.has(moduleId)) next.delete(moduleId);
+      else next.add(moduleId);
+      return next;
+    });
+  }
+
   if (!session) return null;
 
   return (
-    <div className="container py-4">
-      <div className="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
-        <div>
-          <h1 className="h4 mb-1">Course Catalog</h1>
-          <p className="text-muted small mb-0">
-            Edit course metadata and module outlines without touching seed files.
-          </p>
-        </div>
-        <div className="d-flex flex-wrap gap-2">
+    <AdminPage>
+      <AdminHeader
+        language={language}
+        toggleLanguage={toggleLanguage}
+        title={T('Course Catalog', '课程目录')}
+        subtitle={T('Edit course metadata and module outlines without touching seed files.', '在后台编辑课程资讯与 Module 大纲，不需要直接改 seed files。')}
+        actions={(
           <button className="btn btn-outline-primary btn-sm" type="button" onClick={loadCourses} disabled={loading || Boolean(saving)}>
-            Refresh
+            {T('Refresh', '重新整理')}
           </button>
-        </div>
-      </div>
-
-      <AdminNav />
+        )}
+      />
 
       {err && <div className="alert alert-warning py-2">{err}</div>}
       {msg && <div className="alert alert-success py-2">{msg}</div>}
@@ -261,9 +270,9 @@ export default function AdminCoursesPage() {
         <div className="col-lg-4">
           <div className="card shadow-sm mb-3">
             <div className="card-body">
-              <h2 className="h6 mb-3">Courses</h2>
+              <h2 className="h6 mb-3">{T('Courses', '课程')}</h2>
               {loading ? (
-                <p className="text-muted small mb-0">Loading…</p>
+                <p className="text-muted small mb-0">{T('Loading…', '载入中…')}</p>
               ) : (
                 <div className="list-group" style={{ maxHeight: 520, overflow: 'auto' }}>
                   {courses.map((item) => (
@@ -276,11 +285,11 @@ export default function AdminCoursesPage() {
                       <div className="d-flex justify-content-between gap-2">
                         <span className="fw-semibold">{item.name}</span>
                         <span className={`badge ${item.isPublished ? 'bg-success' : 'bg-secondary'}`}>
-                          {item.isPublished ? 'Live' : 'Draft'}
+                          {item.isPublished ? T('Live', '上线') : T('Draft', '草稿')}
                         </span>
                       </div>
                       <div className="small opacity-75">
-                        {item.department} · {Number(item.credits).toFixed(1)} cr · {item._count?.modules || 0} modules
+                        {item.department} · {Number(item.credits).toFixed(1)} {T('cr', '学分')} · {item._count?.modules || 0} {T('modules', '模块')} · {item._count?.enrollments || 0} {T('students', '学生')}
                       </div>
                     </button>
                   ))}
@@ -291,7 +300,7 @@ export default function AdminCoursesPage() {
 
           <div className="card shadow-sm">
             <div className="card-body">
-              <h2 className="h6 mb-3">New Course</h2>
+              <h2 className="h6 mb-3">{T('New Course', '新增课程')}</h2>
               <form onSubmit={createCourse}>
                 <input className="form-control form-control-sm mb-2" placeholder="slug" value={newCourseForm.slug} onChange={(e) => setNewCourseForm((f) => ({ ...f, slug: e.target.value }))} />
                 <input className="form-control form-control-sm mb-2" placeholder="Course name" value={newCourseForm.name} onChange={(e) => setNewCourseForm((f) => ({ ...f, name: e.target.value }))} />
@@ -304,7 +313,7 @@ export default function AdminCoursesPage() {
                   </div>
                 </div>
                 <button className="btn btn-primary btn-sm w-100" type="submit" disabled={saving === 'create-course'}>
-                  {saving === 'create-course' ? 'Creating…' : 'Create draft course'}
+                  {saving === 'create-course' ? T('Creating…', '建立中…') : T('Create draft course', '建立草稿课程')}
                 </button>
               </form>
             </div>
@@ -324,42 +333,42 @@ export default function AdminCoursesPage() {
                     <div>
                       <h2 className="h5 mb-1">{course.name}</h2>
                       <p className="text-muted small mb-0">
-                        {course.slug} · {course._count?.enrollments || 0} enrollments · {course._count?.questions || 0} exam questions
+                        {course.slug} · {course._count?.enrollments || 0} {T('enrollments', '修课学生')} · {course._count?.questions || 0} {T('exam questions', '考试题')}
                       </p>
                     </div>
                     <span className={`badge ${courseForm.isPublished ? 'bg-success' : 'bg-secondary'}`}>
-                      {courseForm.isPublished ? 'Published' : 'Draft'}
+                      {courseForm.isPublished ? T('Published', '已发布') : T('Draft', '草稿')}
                     </span>
                   </div>
 
                   <form onSubmit={saveCourse}>
                     <div className="row g-2">
                       <div className="col-md-7">
-                        <label className="form-label small">Name</label>
+                        <label className="form-label small">{T('Name', '名称')}</label>
                         <input className="form-control form-control-sm" value={courseForm.name} onChange={(e) => setCourseForm((f) => ({ ...f, name: e.target.value }))} />
                       </div>
                       <div className="col-md-5">
-                        <label className="form-label small">Chinese name</label>
+                        <label className="form-label small">{T('Chinese name', '中文名称')}</label>
                         <input className="form-control form-control-sm" value={courseForm.nameZh} onChange={(e) => setCourseForm((f) => ({ ...f, nameZh: e.target.value }))} />
                       </div>
                       <div className="col-md-3">
-                        <label className="form-label small">Credits</label>
+                        <label className="form-label small">{T('Credits', '学分')}</label>
                         <input className="form-control form-control-sm" value={courseForm.credits} onChange={(e) => setCourseForm((f) => ({ ...f, credits: e.target.value }))} />
                       </div>
                       <div className="col-md-3">
-                        <label className="form-label small">Department</label>
+                        <label className="form-label small">{T('Department', '科别')}</label>
                         <input className="form-control form-control-sm" value={courseForm.department} onChange={(e) => setCourseForm((f) => ({ ...f, department: e.target.value }))} />
                       </div>
                       <div className="col-md-3">
-                        <label className="form-label small">Type</label>
+                        <label className="form-label small">{T('Type', '类型')}</label>
                         <input className="form-control form-control-sm" value={courseForm.type} onChange={(e) => setCourseForm((f) => ({ ...f, type: e.target.value }))} />
                       </div>
                       <div className="col-md-3">
-                        <label className="form-label small">Grade</label>
+                        <label className="form-label small">{T('Grade', '年级')}</label>
                         <input className="form-control form-control-sm" value={courseForm.gradeLevel} onChange={(e) => setCourseForm((f) => ({ ...f, gradeLevel: e.target.value }))} placeholder="9-12 or blank" />
                       </div>
                       <div className="col-12">
-                        <label className="form-label small">Description</label>
+                        <label className="form-label small">{T('Description', '简介')}</label>
                         <textarea className="form-control form-control-sm" rows="3" value={courseForm.description} onChange={(e) => setCourseForm((f) => ({ ...f, description: e.target.value }))} />
                       </div>
                     </div>
@@ -367,10 +376,10 @@ export default function AdminCoursesPage() {
                     <div className="d-flex justify-content-between align-items-center gap-3 mt-3">
                       <div className="form-check">
                         <input className="form-check-input" type="checkbox" id="publish-course" checked={courseForm.isPublished} onChange={(e) => setCourseForm((f) => ({ ...f, isPublished: e.target.checked }))} />
-                        <label className="form-check-label small" htmlFor="publish-course">Published in Learn Portal</label>
+                        <label className="form-check-label small" htmlFor="publish-course">{T('Published in Learn Portal', '显示在 Learn Portal')}</label>
                       </div>
                       <button className="btn btn-primary btn-sm" type="submit" disabled={saving === 'course'}>
-                        {saving === 'course' ? 'Saving…' : 'Save course'}
+                        {saving === 'course' ? T('Saving…', '储存中…') : T('Save course', '储存课程')}
                       </button>
                     </div>
                   </form>
@@ -379,40 +388,55 @@ export default function AdminCoursesPage() {
 
               <div className="card shadow-sm">
                 <div className="card-body">
-                  <h2 className="h6 mb-3">Modules</h2>
+                  <div className="d-flex justify-content-between align-items-end gap-2 flex-wrap mb-3">
+                    <div>
+                      <h2 className="h6 mb-1">{T('Modules', 'Modules')}</h2>
+                      <p className="text-muted small mb-0">{T('Collapsed by default so staff can scan the course before editing.', '预设收合，方便先扫完整门课再展开编辑。')}</p>
+                    </div>
+                    <span className="badge text-bg-light border">{course.modules?.length || 0} {T('modules', '模块')}</span>
+                  </div>
                   <form onSubmit={addModule} className="row g-2 align-items-end mb-3">
                     <div className="col-md-2">
-                      <label className="form-label small">Order</label>
+                      <label className="form-label small">{T('Order', '顺序')}</label>
                       <input className="form-control form-control-sm" value={newModuleForm.order} onChange={(e) => setNewModuleForm((f) => ({ ...f, order: e.target.value }))} />
                     </div>
                     <div className="col-md-6">
-                      <label className="form-label small">Title</label>
+                      <label className="form-label small">{T('Title', '标题')}</label>
                       <input className="form-control form-control-sm" value={newModuleForm.title} onChange={(e) => setNewModuleForm((f) => ({ ...f, title: e.target.value }))} />
                     </div>
                     <div className="col-md-2">
-                      <label className="form-label small">Hours</label>
+                      <label className="form-label small">{T('Hours', '小时')}</label>
                       <input className="form-control form-control-sm" value={newModuleForm.estimatedHrs} onChange={(e) => setNewModuleForm((f) => ({ ...f, estimatedHrs: e.target.value }))} />
                     </div>
                     <div className="col-md-2">
-                      <button className="btn btn-outline-primary btn-sm w-100" type="submit" disabled={saving === 'module'}>
-                        Add
+                      <button className="btn btn-primary btn-sm w-100 fw-semibold" type="submit" disabled={saving === 'module'}>
+                        {saving === 'module' ? T('Adding…', '新增中…') : T('+ New Module', '+ 新增 Module')}
                       </button>
                     </div>
                   </form>
 
-                  <div className="table-responsive">
-                    <table className="table table-sm align-middle">
-                      <thead>
-                        <tr>
-                          <th style={{ width: 72 }}>Order</th>
-                          <th>Outline</th>
-                          <th style={{ width: 110 }}>Hours</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {(course.modules || []).map((mod) => (
-                          <tr key={mod.id}>
-                            <td>
+                  <div className="d-flex flex-column gap-2">
+                    {(course.modules || []).map((mod) => {
+                      const expanded = expandedModules.has(mod.id);
+                      return (
+                        <section key={mod.id} className="border rounded bg-white">
+                          <button
+                            type="button"
+                            className="w-100 btn btn-light d-flex justify-content-between align-items-center gap-3 text-start"
+                            aria-expanded={expanded}
+                            onClick={() => toggleModule(mod.id)}
+                            style={{ borderRadius: 8, padding: '10px 12px' }}
+                          >
+                            <span className="fw-semibold text-truncate">
+                              {expanded ? '▼' : '▶'} {T('Module', 'Module')} {mod.order}: {mod.title || T('Untitled', '未命名')}
+                            </span>
+                            <span className="text-muted small text-nowrap">{mod.estimatedHrs ?? 3}h</span>
+                          </button>
+                          {expanded && (
+                            <div className="p-3 border-top">
+                              <div className="row g-2">
+                                <div className="col-md-2">
+                                  <label className="form-label small">{T('Order', '顺序')}</label>
                               <input
                                 className="form-control form-control-sm"
                                 defaultValue={mod.order}
@@ -421,52 +445,60 @@ export default function AdminCoursesPage() {
                                   if (Number.isInteger(next) && next !== mod.order) updateModule(mod.id, { order: next });
                                 }}
                               />
-                            </td>
-                            <td>
+                                </div>
+                                <div className="col-md-8">
+                                  <label className="form-label small">{T('Title', '标题')}</label>
                               <input
-                                className="form-control form-control-sm mb-1"
+                                className="form-control form-control-sm"
                                 defaultValue={mod.title}
                                 onBlur={(e) => {
                                   if (e.target.value !== mod.title) updateModule(mod.id, { title: e.target.value });
                                 }}
                               />
+                                </div>
+                                <div className="col-md-2">
+                                  <label className="form-label small">{T('Hours', '小时')}</label>
+                                  <input
+                                    className="form-control form-control-sm"
+                                    defaultValue={String(mod.estimatedHrs ?? '')}
+                                    onBlur={(e) => {
+                                      if (e.target.value !== String(mod.estimatedHrs ?? '')) updateModule(mod.id, { estimatedHrs: e.target.value || '3' });
+                                    }}
+                                  />
+                                </div>
+                                <div className="col-12">
+                                  <label className="form-label small">{T('Objectives', '学习目标')}</label>
                               <textarea
-                                className="form-control form-control-sm mb-1"
+                                className="form-control form-control-sm"
                                 rows="2"
                                 defaultValue={mod.objectives || ''}
-                                placeholder="Objectives"
+                                placeholder={T('Objectives', '学习目标')}
                                 onBlur={(e) => {
                                   if (e.target.value !== (mod.objectives || '')) updateModule(mod.id, { objectives: e.target.value });
                                 }}
                               />
+                                </div>
+                                <div className="col-12">
+                                  <label className="form-label small">{T('Assignment / evidence', '作业 / 学习证据')}</label>
                               <textarea
                                 className="form-control form-control-sm"
                                 rows="2"
                                 defaultValue={mod.assignment || ''}
-                                placeholder="Assignment / evidence"
+                                placeholder={T('Assignment / evidence', '作业 / 学习证据')}
                                 onBlur={(e) => {
                                   if (e.target.value !== (mod.assignment || '')) updateModule(mod.id, { assignment: e.target.value });
                                 }}
                               />
-                            </td>
-                            <td>
-                              <input
-                                className="form-control form-control-sm"
-                                defaultValue={String(mod.estimatedHrs ?? '')}
-                                onBlur={(e) => {
-                                  if (e.target.value !== String(mod.estimatedHrs ?? '')) updateModule(mod.id, { estimatedHrs: e.target.value || '3' });
-                                }}
-                              />
-                            </td>
-                          </tr>
-                        ))}
-                        {(course.modules || []).length === 0 && (
-                          <tr>
-                            <td colSpan={3} className="text-muted text-center py-3">No modules yet.</td>
-                          </tr>
-                        )}
-                      </tbody>
-                    </table>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </section>
+                      );
+                    })}
+                    {(course.modules || []).length === 0 && (
+                      <div className="text-muted text-center py-3 border rounded">{T('No modules yet.', '还没有 modules。')}</div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -474,6 +506,6 @@ export default function AdminCoursesPage() {
           )}
         </div>
       </div>
-    </div>
+    </AdminPage>
   );
 }

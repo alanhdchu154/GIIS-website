@@ -22,7 +22,9 @@ function statusClass(status) {
   return 'bg-secondary';
 }
 
-export default function AdminEmailLogsPage() {
+export default function AdminEmailLogsPage({ language = 'en', toggleLanguage }) {
+  const isEn = language === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const session = getAdminSession();
   const [kind, setKind] = useState('all');
@@ -68,10 +70,12 @@ export default function AdminEmailLogsPage() {
   return (
     <AdminPage>
       <AdminHeader
-        title="Email Logs"
-        subtitle="Operational delivery trail for weekly reports, official documents, and other school emails."
+        language={language}
+        toggleLanguage={toggleLanguage}
+        title={T('Email Logs', '邮件记录')}
+        subtitle={T('Operational delivery trail for weekly reports, official documents, and other school emails.', '家长周报、正式文件与学校邮件的发送记录。')}
         actions={(
-          <button type="button" className="btn btn-outline-primary btn-sm" onClick={loadLogs} disabled={loading}>Refresh</button>
+          <button type="button" className="btn btn-outline-primary btn-sm" onClick={loadLogs} disabled={loading}>{T('Refresh', '重新整理')}</button>
         )}
       />
 
