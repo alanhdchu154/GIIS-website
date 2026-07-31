@@ -215,9 +215,6 @@ export default function AdminDashboard({ language, toggleLanguage }) {
         subtitle={isEn ? 'Manage records, login status, transcript access, payment state, and graduation readiness.' : '管理学生记录、登入状态、成绩单、付款状态与毕业资格。'}
         actions={(
           <>
-          <Link to="/" className="btn btn-outline-secondary btn-sm">
-            {isEn ? 'Public site' : '回到首页'}
-          </Link>
           <button type="button" className="btn btn-primary btn-sm" onClick={openModal}>
             {isEn ? '+ New student' : '＋ 新增学生'}
           </button>

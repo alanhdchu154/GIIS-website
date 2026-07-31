@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getAdminSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
+import { AdminHeader, AdminPage } from './AdminChrome';
 
 const API = getApiBase();
 
@@ -120,8 +121,10 @@ function CourseRow({ c }) {
   );
 }
 
-export default function AdminAuditTrailPage({ language = 'en' }) {
+export default function AdminAuditTrailPage({ language = 'en', toggleLanguage }) {
   const lang = language === 'zh' ? 'zh' : 'en';
+  const isEn = lang === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const { studentId } = useParams();
   const navigate = useNavigate();
   const session = getAdminSession();
@@ -188,23 +191,22 @@ export default function AdminAuditTrailPage({ language = 'en' }) {
 
   if (!session) return null;
   if (err) {
-    return <div style={{ padding: 40, color: '#b71c1c' }}>{err} · <Link to="/admin">Back</Link></div>;
+    return <AdminPage><div style={{ color: '#b71c1c' }}>{err} · <Link to="/admin">{T('Back', '返回')}</Link></div></AdminPage>;
   }
-  if (!data) return <div style={{ padding: 40, color: '#888' }}>Loading…</div>;
+  if (!data) return <AdminPage><div style={{ color: '#888' }}>{T('Loading…', '载入中…')}</div></AdminPage>;
 
   const s = data.student;
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f4f6fa', fontFamily: 'Inter, sans-serif' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '32px 5% 80px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, marginBottom: 20 }}>
-          <div>
-            <p style={{ fontSize: 11, fontWeight: 700, color: '#2b3d6d', letterSpacing: 2, textTransform: 'uppercase', margin: '0 0 4px' }}>Admin · Audit Trail</p>
-            <h1 style={{ fontSize: 24, fontWeight: 800, color: '#1a1a2e', margin: 0 }}>
-              {s.name} <span style={{ fontSize: 14, fontWeight: 500, color: '#888' }}>· {s.studentCode}</span>
-            </h1>
-          </div>
-          <div style={{ display: 'flex', gap: 8 }}>
+    <AdminPage>
+      <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+        <AdminHeader
+          language={language}
+          toggleLanguage={toggleLanguage}
+          title={T('Audit Trail', '学习记录稽核')}
+          subtitle={`${s.name}${s.studentCode ? ` · ${s.studentCode}` : ''}`}
+          actions={(
+            <div style={{ display: 'flex', gap: 8 }}>
             <Link to={`/admin/transcript/${s.id}`} style={{ fontSize: 13, color: '#2b3d6d', textDecoration: 'none', fontWeight: 600, padding: '8px 14px', border: '1px solid #d0d6e3', borderRadius: 8, background: '#fff' }}>
               {lang === 'zh' ? '查看成绩单' : 'View Transcript'}
             </Link>
@@ -212,41 +214,42 @@ export default function AdminAuditTrailPage({ language = 'en' }) {
               {exporting ? (lang === 'zh' ? '汇出中…' : 'Exporting…') : (lang === 'zh' ? '汇出 PDF' : 'Export PDF')}
             </button>
           </div>
-        </div>
+          )}
+        />
 
         <div id="audit-trail-print-root" style={{ background: '#fff', borderRadius: 12, padding: '20px 24px', border: '1px solid #e0e6f0' }}>
           {/* Identity block */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 20, paddingBottom: 16, borderBottom: '1px solid #e8ebf2' }}>
-            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>Student Code</div><div style={{ fontSize: 14, fontWeight: 600 }}>{s.studentCode || '—'}</div></div>
-            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>Login Email</div><div style={{ fontSize: 14, fontWeight: 600 }}>{s.loginEmail || '—'}</div></div>
-            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>Entry Date</div><div style={{ fontSize: 14, fontWeight: 600 }}>{fmtDate(s.entryDate)}</div></div>
-            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>Graduation</div><div style={{ fontSize: 14, fontWeight: 600 }}>{fmtDate(s.graduationDate)}</div></div>
-            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>Generated</div><div style={{ fontSize: 14, fontWeight: 600 }}>{fmtDateTime(data.generatedAt)}</div></div>
+            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>{T('Student Code', '学生编号')}</div><div style={{ fontSize: 14, fontWeight: 600 }}>{s.studentCode || '—'}</div></div>
+            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>{T('Login Email', '登入邮箱')}</div><div style={{ fontSize: 14, fontWeight: 600 }}>{s.loginEmail || '—'}</div></div>
+            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>{T('Entry Date', '入学日期')}</div><div style={{ fontSize: 14, fontWeight: 600 }}>{fmtDate(s.entryDate)}</div></div>
+            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>{T('Graduation', '毕业')}</div><div style={{ fontSize: 14, fontWeight: 600 }}>{fmtDate(s.graduationDate)}</div></div>
+            <div><div style={{ fontSize: 10, color: '#888', textTransform: 'uppercase', letterSpacing: 1.2 }}>{T('Generated', '产生时间')}</div><div style={{ fontSize: 14, fontWeight: 600 }}>{fmtDateTime(data.generatedAt)}</div></div>
           </div>
 
           {/* Summary stats */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 10, marginBottom: 22 }}>
-            <StatCard label="Est. Hours" value={`${data.totals.estimatedHrs}h`} color="#1a2d5a" />
-            <StatCard label="Modules Done" value={data.totals.modulesCompleted} />
-            <StatCard label="Quiz Passed" value={`${data.totals.quizPassed} / ${data.totals.quizAttempts}`} />
-            <StatCard label="Assignments" value={`${data.totals.assignmentsGraded} / ${data.totals.assignments}`} />
-            <StatCard label="Exams Passed" value={`${data.totals.examsPassed} / ${data.totals.exams}`} />
-            <StatCard label="Courses" value={data.courses.length} />
+            <StatCard label={T('Est. Hours', '估计小时')} value={`${data.totals.estimatedHrs}h`} color="#1a2d5a" />
+            <StatCard label={T('Modules Done', '完成模块')} value={data.totals.modulesCompleted} />
+            <StatCard label={T('Quiz Passed', '通过小测')} value={`${data.totals.quizPassed} / ${data.totals.quizAttempts}`} />
+            <StatCard label={T('Assignments', '作业')} value={`${data.totals.assignmentsGraded} / ${data.totals.assignments}`} />
+            <StatCard label={T('Exams Passed', '通过考试')} value={`${data.totals.examsPassed} / ${data.totals.exams}`} />
+            <StatCard label={T('Courses', '课程')} value={data.courses.length} />
           </div>
 
           {/* Per-course table */}
-          <h2 style={{ fontSize: 15, fontWeight: 700, color: '#1a1a2e', margin: '0 0 12px' }}>Course breakdown</h2>
+          <h2 style={{ fontSize: 15, fontWeight: 700, color: '#1a1a2e', margin: '0 0 12px' }}>{T('Course breakdown', '课程明细')}</h2>
           <div style={{ overflowX: 'auto', marginBottom: 24 }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
               <thead>
                 <tr style={{ background: '#f4f6fa', textAlign: 'left' }}>
-                  <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1 }}>Course</th>
-                  <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>Modules</th>
-                  <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>Est. Hrs</th>
+                  <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1 }}>{T('Course', '课程')}</th>
+                  <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>{T('Modules', '模块')}</th>
+                  <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>{T('Est. Hrs', '估计小时')}</th>
                   <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>Quiz P/T</th>
                   <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>Asg G/T</th>
                   <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>Exam P/T</th>
-                  <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>Credit</th>
+                  <th style={{ padding: '10px 8px', fontSize: 11, fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: 1, textAlign: 'center' }}>{T('Credit', '学分')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -257,21 +260,21 @@ export default function AdminAuditTrailPage({ language = 'en' }) {
 
           {/* Timeline */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-            <h2 style={{ fontSize: 15, fontWeight: 700, color: '#1a1a2e', margin: 0 }}>Activity timeline</h2>
+            <h2 style={{ fontSize: 15, fontWeight: 700, color: '#1a1a2e', margin: 0 }}>{T('Activity timeline', '学习活动时间线')}</h2>
             <select value={filter} onChange={(e) => setFilter(e.target.value)} style={{ fontSize: 12, padding: '5px 8px', border: '1px solid #d0d6e3', borderRadius: 6 }}>
-              <option value="all">All events ({data.timeline.length})</option>
-              <option value="quiz_attempt">Quiz only</option>
-              <option value="assignment_submit">Assignments only</option>
-              <option value="exam_attempt">Exams only</option>
-              <option value="module_complete">Module completions</option>
-              <option value="video_complete">Videos only</option>
-              <option value="reading_complete">Readings only</option>
-              <option value="practice_complete">Practice only</option>
-              <option value="admin_action">Admin actions</option>
+              <option value="all">{T(`All events (${data.timeline.length})`, `全部记录（${data.timeline.length}）`)}</option>
+              <option value="quiz_attempt">{T('Quiz only', '只看小测')}</option>
+              <option value="assignment_submit">{T('Assignments only', '只看作业')}</option>
+              <option value="exam_attempt">{T('Exams only', '只看考试')}</option>
+              <option value="module_complete">{T('Module completions', '模块完成')}</option>
+              <option value="video_complete">{T('Videos only', '只看视频')}</option>
+              <option value="reading_complete">{T('Readings only', '只看阅读')}</option>
+              <option value="practice_complete">{T('Practice only', '只看练习')}</option>
+              <option value="admin_action">{T('Admin actions', '管理记录')}</option>
             </select>
           </div>
           {filteredTimeline.length === 0 ? (
-            <div style={{ padding: '24px 0', color: '#888', fontSize: 13 }}>No activity recorded.</div>
+            <div style={{ padding: '24px 0', color: '#888', fontSize: 13 }}>{T('No activity recorded.', '没有学习活动记录。')}</div>
           ) : (
             <div>
               {filteredTimeline.map((e, i) => <TimelineRow key={i} event={e} lang={lang} />)}
@@ -279,13 +282,15 @@ export default function AdminAuditTrailPage({ language = 'en' }) {
           )}
 
           <p style={{ marginTop: 22, fontSize: 11, color: '#888', lineHeight: 1.6 }}>
-            This audit trail is generated from the GIIS Learn platform database. "Estimated hours" sums
+            {T('This audit trail is generated from the GIIS Learn platform database. "Estimated hours" sums', '这份学习记录稽核来自 GIIS Learn 平台数据库。「估计小时」加总')}
             <code style={{ background: '#f4f6fa', padding: '1px 4px', borderRadius: 3, margin: '0 3px' }}>CourseModule.estimatedHrs</code>
-            for each completed module — it is an upper bound, not measured session time. Video, reading, and
-            practice completion timestamps are first-completion records from the Learn Portal.
+            {T(
+              'for each completed module; it is an upper bound, not measured session time. Video, reading, and practice completion timestamps are first-completion records from the Learn Portal.',
+              '每个已完成模块；它是上限估计，不是实际登入时长。视频、阅读与练习完成时间为 Learn Portal 的第一次完成记录。',
+            )}
           </p>
         </div>
       </div>
-    </div>
+    </AdminPage>
   );
 }

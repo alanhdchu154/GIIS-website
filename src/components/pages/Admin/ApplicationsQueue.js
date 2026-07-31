@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
-import { AdminNav } from './AdminChrome';
+import { AdminHeader, AdminPage } from './AdminChrome';
 import { getAdminSession } from '../../../api/authStorage';
 
 const API = getApiBase();
@@ -254,8 +254,10 @@ function timeAgo(iso) {
   return `${Math.floor(h / 24)}d ago`;
 }
 
-export default function ApplicationsQueue({ language = 'en' }) {
+export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const lang = language === 'zh' ? 'zh' : 'en';
+  const isEn = lang === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const [filter, setFilter] = useState('pending');
   const [items, setItems] = useState([]);
@@ -442,22 +444,26 @@ export default function ApplicationsQueue({ language = 'en' }) {
     <>
       <Helmet><title>Applications | GIIS Admin</title></Helmet>
 
-      <div className="giis-admin-page" style={{ fontFamily: 'Inter, sans-serif', background: '#f4f6fa', minHeight: '100vh', padding: '24px 28px 80px', overflowX: 'hidden' }}>
+      <AdminPage>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
-
-          {/* Header */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
-            <div>
-              <p style={{ fontSize: 11, fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 4px' }}>Admin</p>
-              <h1 style={{ fontSize: 26, fontWeight: 800, margin: 0 }}>Applications</h1>
-            </div>
-          </div>
-
-          <AdminNav lang={lang} />
+          <AdminHeader
+            language={language}
+            toggleLanguage={toggleLanguage}
+            title={T('Applications', '招生申请')}
+            subtitle={T(
+              'Review family inquiries, record manual payment evidence, and activate accounts only after review.',
+              '审核家庭申请、记录人工付款证据，并在审核完成后启用帐号。',
+            )}
+          />
 
           {/* Filter tabs */}
           <div className="giis-admin-filter-tabs" style={{ display: 'flex', gap: 8, marginBottom: 20 }}>
-            {[['pending', 'Pending'], ['approved', 'Approved'], ['rejected', 'Rejected'], ['', 'All']].map(([v, label]) => (
+            {[
+              ['pending', T('Pending', '待审核')],
+              ['approved', T('Approved', '已通过')],
+              ['rejected', T('Rejected', '未通过')],
+              ['', T('All', '全部')],
+            ].map(([v, label]) => (
               <button key={v} onClick={() => setFilter(v)} style={{
                 padding: '7px 16px', borderRadius: 999, fontSize: 13, fontWeight: 700,
                 background: filter === v ? '#2b3d6d' : '#fff',
@@ -469,15 +475,15 @@ export default function ApplicationsQueue({ language = 'en' }) {
               </button>
             ))}
             <span style={{ fontSize: 13, color: '#9aa0ad', alignSelf: 'center', marginLeft: 4 }}>
-              {loading ? '…' : `${items.length} item${items.length !== 1 ? 's' : ''}`}
+              {loading ? '…' : T(`${items.length} item${items.length !== 1 ? 's' : ''}`, `${items.length} 笔`)}
             </span>
           </div>
 
           {/* Application cards */}
           {loading
-            ? <p style={{ color: '#9aa0ad', fontSize: 14 }}>Loading…</p>
+            ? <p style={{ color: '#9aa0ad', fontSize: 14 }}>{T('Loading…', '载入中…')}</p>
             : items.length === 0
-              ? <div style={{ background: '#fff', borderRadius: 12, padding: '40px 24px', textAlign: 'center', color: '#9aa0ad', fontSize: 14 }}>No applications found.</div>
+              ? <div style={{ background: '#fff', borderRadius: 12, padding: '40px 24px', textAlign: 'center', color: '#9aa0ad', fontSize: 14 }}>{T('No applications found.', '没有找到申请。')}</div>
               : items.map(app => {
                 const sc = STATUS_COLORS[app.status] || STATUS_COLORS.pending;
 	                const es = app.enrollmentState || {};
@@ -506,7 +512,7 @@ export default function ApplicationsQueue({ language = 'en' }) {
                       </div>
                       <button onClick={() => setExpanded(expanded === app.id ? null : app.id)}
                         style={{ padding: '7px 14px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: 'none', fontSize: 13, fontWeight: 600, color: '#2b3d6d', cursor: 'pointer' }}>
-                        {expanded === app.id ? 'Close' : 'View'}
+                        {expanded === app.id ? T('Close', '收起') : T('View', '查看')}
                       </button>
                     </div>
 
@@ -626,7 +632,7 @@ export default function ApplicationsQueue({ language = 'en' }) {
               })
           }
         </div>
-      </div>
+      </AdminPage>
 
       {/* Toast */}
       {toast && (

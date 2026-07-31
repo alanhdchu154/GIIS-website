@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
-import { AdminNav } from './AdminChrome';
+import { AdminHeader, AdminPage } from './AdminChrome';
 import { getAdminSession } from '../../../api/authStorage';
 
 const API = getApiBase();
@@ -29,8 +29,10 @@ function reviewStatus(submittedAt, gradedAt) {
   return { label: `${5 - ageDays}d target`, color: '#e65100' };
 }
 
-export default function AssignmentQueue({ language = 'en' }) {
+export default function AssignmentQueue({ language = 'en', toggleLanguage }) {
   const lang = language === 'zh' ? 'zh' : 'en';
+  const isEn = lang === 'en';
+  const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const [filter, setFilter] = useState('false'); // 'false' = pending, 'true' = graded, '' = all
   const [items, setItems] = useState([]);
@@ -97,22 +99,25 @@ export default function AssignmentQueue({ language = 'en' }) {
     <>
       <Helmet><title>Assignment Queue | GIIS Admin</title></Helmet>
 
-      <div className="giis-admin-page" style={{ fontFamily: 'Inter, sans-serif', background: '#f4f6fa', minHeight: '100vh', padding: '24px 28px 80px', overflowX: 'hidden' }}>
+      <AdminPage>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
-
-          {/* Header */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
-            <div>
-              <p style={{ fontSize: 11, fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 4px' }}>Admin</p>
-              <h1 style={{ fontSize: 26, fontWeight: 800, margin: 0 }}>Assignment Queue</h1>
-            </div>
-          </div>
-
-          <AdminNav lang={lang} />
+          <AdminHeader
+            language={language}
+            toggleLanguage={toggleLanguage}
+            title={T('Assignment Queue', '作业批改')}
+            subtitle={T(
+              'Review submitted module assignments and publish feedback parents can see.',
+              '批改学生提交的模块作业，并发布家长可见反馈。',
+            )}
+          />
 
           {/* Filter tabs */}
           <div className="giis-admin-filter-tabs" style={{ display: 'flex', gap: 8, marginBottom: 20 }}>
-            {[['false', 'Pending'], ['true', 'Graded'], ['', 'All']].map(([v, label]) => (
+            {[
+              ['false', T('Pending', '待批改')],
+              ['true', T('Graded', '已批改')],
+              ['', T('All', '全部')],
+            ].map(([v, label]) => (
               <button key={v} onClick={() => setFilter(v)} style={{
                 padding: '7px 16px', borderRadius: 999, fontSize: 13, fontWeight: 700,
                 background: filter === v ? '#2b3d6d' : '#fff',
@@ -124,16 +129,16 @@ export default function AssignmentQueue({ language = 'en' }) {
               </button>
             ))}
             <span style={{ fontSize: 13, color: '#9aa0ad', alignSelf: 'center', marginLeft: 4 }}>
-              {loading ? '…' : `${items.length} item${items.length !== 1 ? 's' : ''}`}
+              {loading ? '…' : T(`${items.length} item${items.length !== 1 ? 's' : ''}`, `${items.length} 笔`)}
             </span>
           </div>
 
           {/* List */}
           {loading
-            ? <p style={{ color: '#9aa0ad', fontSize: 14 }}>Loading…</p>
+            ? <p style={{ color: '#9aa0ad', fontSize: 14 }}>{T('Loading…', '载入中…')}</p>
             : items.length === 0
               ? <div style={{ background: '#fff', borderRadius: 12, padding: '40px 24px', textAlign: 'center', color: '#9aa0ad', fontSize: 14 }}>
-                  {filter === 'false' ? 'No pending submissions 🎉' : 'No submissions found.'}
+                  {filter === 'false' ? T('No pending submissions', '目前没有待批改作业') : T('No submissions found.', '没有找到作业提交。')}
                 </div>
               : items.map(item => (
                 <div key={item.id} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e8ecf5', marginBottom: 12, overflow: 'hidden' }}>
@@ -170,7 +175,7 @@ export default function AssignmentQueue({ language = 'en' }) {
                     </div>
                     <button onClick={() => { setExpanded(expanded === item.id ? null : item.id); setFeedback(item.feedback || ''); setScore(item.score != null ? String(item.score) : ''); }}
                       style={{ padding: '7px 14px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: 'none', fontSize: 13, fontWeight: 600, color: '#2b3d6d', cursor: 'pointer' }}>
-                      {expanded === item.id ? 'Close' : item.gradedAt ? 'View / Edit' : 'Grade'}
+                      {expanded === item.id ? T('Close', '收起') : item.gradedAt ? T('View / Edit', '查看 / 修改') : T('Grade', '批改')}
                     </button>
                   </div>
 
@@ -244,7 +249,7 @@ export default function AssignmentQueue({ language = 'en' }) {
                       <button
                         onClick={() => submitGrade(item.id)} disabled={saving || !feedback.trim() || score === ''}
                         style={{ marginTop: 12, padding: '10px 20px', borderRadius: 8, background: saving || !feedback.trim() || score === '' ? '#9baac8' : '#2b3d6d', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: saving || !feedback.trim() || score === '' ? 'not-allowed' : 'pointer' }}>
-                        {saving ? 'Saving…' : 'Submit Grade'}
+                        {saving ? T('Saving…', '储存中…') : T('Submit Grade', '提交评分')}
                       </button>
                     </div>
                   )}
@@ -252,7 +257,7 @@ export default function AssignmentQueue({ language = 'en' }) {
               ))
           }
         </div>
-      </div>
+      </AdminPage>
 
       {toast && (
         <div style={{ position: 'fixed', bottom: 24, right: 24, background: '#1a1a2e', color: '#fff', padding: '12px 20px', borderRadius: 10, fontSize: 13, fontWeight: 600, fontFamily: 'Inter, sans-serif', zIndex: 9999 }}>
